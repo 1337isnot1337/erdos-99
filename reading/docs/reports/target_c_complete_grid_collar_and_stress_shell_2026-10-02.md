@@ -51,11 +51,11 @@ promotes those extractions or closes any other C-II source branch.
 
 Let a triangle-free unit-separated source contain all the points
 
-$$
+```math
 \mathcal G=\{p_{00}+iu+jv:0\le i\le a,\ 0\le j\le b\},
 \quad |u|=|v|=1,\quad |u\cdot v|<1/2,
 \tag{G}
-$$
+```
 
 with integer `a,b>=2`.
 
@@ -70,9 +70,9 @@ The circles can intersect only if `|w|<=2`. The Gram bound gives
 `i^2+j^2<=8`. Up to simultaneous sign and exchange of the basis vectors,
 the possible differences are
 
-$$
+```math
 u,\ v,\ u+v,\ u-v,\ 2u,\ 2v,\ 2u-v,\ u-2v. \tag{12}
-$$
+```
 
 For completeness, the two mixed vectors of type `(2,1)` have squared
 length `5+4c>4`; `(2,-2)` has square `8-8c>4`; and all other vectors in
@@ -91,10 +91,10 @@ has form `p=w/2+z`, with `z perpendicular w` and `|z|^2=1-L/4`.
 The grid points `u,u-v` are `w/2+/-v/2`, and are both occupied in the
 coordinate rectangle. At least one is at squared distance
 
-$$
+```math
 \min\{|z-v/2|^2,|z+v/2|^2\}
 \le |z|^2+1/4=c<1/2<1.
-$$
+```
 
 Neither candidate can equal `p`, since its squared distance to the other
 port is `2-2c>1`. Unit separation is contradicted. The `u-2v` case is
@@ -123,20 +123,20 @@ Thus at most one exterior neighbor exists. QED.
 Consider any normalized actual KKT stress. Use the pressure report's
 interior row stresses `g_j` and interior column stresses `h_i`, and put
 
-$$
+```math
 G_u=\sum_{j=1}^{b-1}g_j,\qquad
 G_v=\sum_{i=1}^{a-1}h_i,\qquad s=|u\times v|.
-$$
+```
 
 ### Theorem G3
 
 The sum `I_nc` of contact coefficients on all noncorner grid/exterior
 ports satisfies
 
-$$
+```math
 \boxed{I_{\rm nc}\le {4s\over\sqrt3}(G_u+G_v),
 \qquad aG_u+bG_v\le D^2.} \tag{13}
-$$
+```
 
 At a bottom noncorner vertex, projection of equilibrium perpendicular to
 `u` gives `alpha_port |w.Ju|=h_i s`. The outward port makes an angle
@@ -157,10 +157,10 @@ angular gaps exceed `pi/3`. A grid corner already has two grid neighbors,
 so its at most three exterior contacts add at most `3D`. Consequently
 the **entire** interface coefficient mass satisfies
 
-$$
+```math
 \boxed{I\le {4s\over\sqrt3}(G_u+G_v)+12D
 \le {4sD^2\over\sqrt3\min(a,b)}+12D.} \tag{14}
-$$
+```
 
 For a complete grid of linear side lengths, `I=O(D)`, without any
 individual positive multiplier floor. If both grid sums are `o(D)`,
@@ -174,9 +174,9 @@ upper bound on transmission, not a lower bound on load entering the grid.
 For every `d>=0`, the number of actual diameter endpoints at distance at
 most `d` from `conv(G)` is at most
 
-$$
+```math
 \boxed{16\sqrt{2Dd}+16d+20.} \tag{15}
-$$
+```
 
 Proof. An actual diameter endpoint is extreme in the full source hull.
 Any such endpoint in `conv(G)` must be one of its four corners, since all
@@ -194,9 +194,9 @@ contacts; it is not a degree-one leaf theorem or an infinite-chart bound.
 
 For any `b_0>=64` actual diameter endpoints, put
 
-$$
+```math
 d_*={b_0^2\over16384(D+b_0)}.
-$$
+```
 
 More than `b_0/2` have distance greater than `d_*` from the entire grid
 hull. Indeed (15) at `d_*` is at most
@@ -214,20 +214,20 @@ weak mass `M>=1/3+delta`, `delta>0`, and projective shore angle
 than `epsilon_D` from both grid directions, where `epsilon_D -> 0`.
 That theorem gives
 
-$$
+```math
 \sum_{e\ {\rm bad}}\alpha_e\ge(\delta-o(1))D^2. \tag{16}
-$$
+```
 
 For an actual complete grid with `a,b>=cD`, every internal contact is in
 one of its two unit directions; the port coefficients sum to `O(D)` by
 (14). Therefore
 
-$$
+```math
 \boxed{
 \sum_{\substack{e\ {\rm bad}\\
 \text{both endpoints outside }\mathcal G}}\alpha_e
 \ge(\delta-o(1))D^2.} \tag{17}
-$$
+```
 
 There are at least `(delta-o(1))D` such actual exterior contacts, by
 `alpha_e<=D`. This is a weighted exterior obstruction, not an assertion
@@ -245,10 +245,10 @@ equilibrium force the left side of (17) to be `o(D^2)`. That is false.
 For every sufficiently large odd integer `N_s`, there is a unit-separated
 triangle-free source `P` of diameter `D`, with
 
-$$
+```math
 |P|={\pi D^2\over2\sqrt3}+O(D),\qquad
 R(P)=D/2+O(D^{-1}),
-$$
+```
 
 containing a complete actual unit grid with both sides `Omega(D)`, whose
 actual normalized KKT stress has **all** contact stress on an exterior
@@ -260,12 +260,12 @@ are proved nonglobal, not potential disproofs of Level I.
 
 Proof. Take a regular odd `N_s`-gon of side length one, with
 
-$$
+```math
 t={\pi\over2N_s},\quad
 R={1\over2\sin(2t)},\quad
 D=2R\cos t={1\over2\sin t}.
 \tag{18}
-$$
+```
 
 Its contacts are exactly its cyclic sides. Its actual diameter edges join
 index `j` to `j+(N_s-1)/2`; they form one odd cycle, because the step and
@@ -290,22 +290,22 @@ A central rectangle of linear side lengths lies inside radius `R-4`.
 The centered lattice cells have area `s=sin(pi/3+1/D)` and radius at most
 one. Their union gives the two elementary counting bounds
 
-$$
+```math
 {\pi(R-5)^2\over s}\le N_{\rm core}
 \le {\pi(R-3)^2\over s},
-$$
+```
 
 so the stated leading population follows, since `s=sqrt3/2+O(1/D)`.
 
 The shell stress matrix has Fourier eigenvalues
 
-$$
+```math
 \lambda_k={4\over N_s}
 \left(D^2\sin^2{\pi k\over N_s}
 -\sin^2{\pi hk\over N_s}\right),
 \quad h=(N_s-1)/2.
 \tag{19}
-$$
+```
 
 They vanish for `k=0,1,N_s-1`. For other modes,
 `sin^2(pi k/N_s)>=sin^2(2pi/N_s)` and
@@ -324,10 +324,10 @@ Finally, this is not just an unclassified numerical survivor. Let
 `R^2-D^2/4=1/(16cos^2t)<1/8`, whence `R<D/2+1/(8D)`.
 For `D>=10`, the weaker upper cell bound gives
 
-$$
+```math
 |P|< {\pi\over a_0}(D^2/4-2D+5)+\pi D
 < {\pi(D-1)^2\over4a_0}. \tag{20}
-$$
+```
 
 The last difference is at least
 `pi[(3/(2a_0)-1)D-19/(4a_0)]>0` for `D>=10`.

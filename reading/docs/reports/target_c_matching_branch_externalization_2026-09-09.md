@@ -27,25 +27,25 @@ Assume the audited/report-level post-ZF stack and suppose the **full actual diam
 
 Moreover the pure rhombic core can contain at most
 
-$$
+```math
 \frac{\pi^2}{16}D^2+O(D)
-$$
+```
 
 vertices. Since a global minimum-diameter source has
 
-$$
+```math
 \frac n{D^2}\to\Delta:=\frac\pi{2\sqrt3},
-$$
+```
 
 every unbounded matching-branch counterexample would therefore require at least
 
-$$
+```math
 \boxed{
 \left(\frac\pi{2\sqrt3}-\frac{\pi^2}{16}\right)D^2-o(D^2)
 =0.2900494070\ldots D^2-o(D^2)
 }
 \tag{MB.1}
-$$
+```
 
 contact-isolated source points **outside** the force hull.
 
@@ -57,62 +57,62 @@ Thus a perfect-matching diameter graph is no longer a diffuse topology. It is an
 
 Use the notation of the exact defect-ledger report:
 
-$$
+```math
 d_H=q-h,
 \qquad
 s_Z=e+h-(2v-2),
-$$
+```
 
 and
 
-$$
+```math
 x_B=b-q,
 \qquad
 g_F=\sum_{F\text{ exceptional}}(\deg F-5),
-$$
+```
 
 where `b` is the outer contact-face boundary-walk length and `f` is the number of bounded nonquadrilateral contact faces.
 
 ZT proves
 
-$$
+```math
 \boxed{
 q=x_B+f+g_F+2d_H+2s_Z,
 }
 \tag{1.1}
-$$
+```
 
 with every term on the right nonnegative.
 
 If the full diameter graph is a perfect matching, then
 
-$$
+```math
 h=\frac q2,
 \qquad
 d_H=q-h=\frac q2.
 \tag{1.2}
-$$
+```
 
 Substitute into (1.1):
 
-$$
+```math
 q=x_B+f+g_F+q+2s_Z.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 x_B=f=g_F=s_Z=0.}
 \tag{1.3}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{b=q,\qquad Q=0.}
 \tag{1.4}
-$$
+```
 
 ---
 
@@ -120,49 +120,49 @@ $$
 
 Let
 
-$$
+```math
 b_1,\ldots,b_q
-$$
+```
 
 be the force-hull vertices in cyclic order. C42 puts all of them on the outer contact-face walk.
 
 Partition the outer walk into the `q` consecutive subwalks from a distinguished occurrence of `b_i` to the next distinguished occurrence of `b_{i+1}`. Let their edge counts be `L_i`. Every contact edge has Euclidean length one, so
 
-$$
+```math
 L_i\ge |b_{i+1}-b_i|.
 \tag{2.1}
-$$
+```
 
 Unit separation gives
 
-$$
+```math
 |b_{i+1}-b_i|\ge1.
 \tag{2.2}
-$$
+```
 
 Summing,
 
-$$
+```math
 q=b=\sum_iL_i
 \ge\sum_i|b_{i+1}-b_i|
 =\operatorname{per}(F)
 \ge q.
 \tag{2.3}
-$$
+```
 
 Thus equality holds everywhere. Hence for every `i`,
 
-$$
+```math
 \boxed{L_i=|b_{i+1}-b_i|=1.}
 \tag{2.4}
-$$
+```
 
 So each subwalk consists of the single unit contact edge `b_i b_{i+1}`. The outer-face walk is the simple force-hull cycle itself. In particular
 
-$$
+```math
 \boxed{\operatorname{per}(F)=q.}
 \tag{2.5}
-$$
+```
 
 There is no bridge excursion or repeated outer visit.
 
@@ -178,25 +178,25 @@ All bounded faces are rhombi. C49 excludes additional source points from every b
 
 Alternatively, in OP notation the bounded faces tile the entire force hull because the outer boundary is exactly `partial F`. Thus
 
-$$
+```math
 A_{bnd}=\operatorname{area}(F),
 \qquad H_{OP}=0.
-$$
+```
 
 OP gives
 
-$$
+```math
 Z_{in}\le\frac{2}{\sqrt3}H_{OP}=0.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 A\setminus V(C)\subseteq\mathbb R^2\setminus F.
 }
 \tag{3.1}
-$$
+```
 
 Every non-core source point in the matching branch is an external C65 rattler.
 
@@ -206,47 +206,47 @@ Every non-core source point in the matching branch is an external C65 rattler.
 
 DT gives
 
-$$
+```math
 T=\frac{b+Q}{2}+2f.
-$$
+```
 
 Using (1.3)-(1.4),
 
-$$
+```math
 \boxed{T=\frac q2.}
 \tag{4.1}
-$$
+```
 
 But the diameter graph is a perfect matching, so
 
-$$
+```math
 \boxed{h=\frac q2=T.}
 \tag{4.2}
-$$
+```
 
 Thus the matching branch saturates the ZF train/diameter row count exactly.
 
 For a pure rhombic disk let `R` be the number of rhombi. DT's train-crossing graph is simple and triangle-free, has `T` vertices and exactly `R` edges. Mantel therefore gives
 
-$$
+```math
 \boxed{R\le\frac{T^2}{4}=\frac{q^2}{16}.}
 \tag{4.3}
-$$
+```
 
 Euler for a pure rhombic disk gives
 
-$$
+```math
 \boxed{v=R+T+1.}
 \tag{4.4}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 v\le\frac{q^2}{16}+\frac q2+1.}
 \tag{4.5}
-$$
+```
 
 ---
 
@@ -254,40 +254,40 @@ $$
 
 Since the force hull is a convex body of diameter `D`, every closed curve containing a diameter pair has length at least `2D`; in particular
 
-$$
+```math
 \operatorname{per}(F)\ge2D.
-$$
+```
 
 Together with (2.5),
 
-$$
+```math
 \boxed{q\ge2D.}
 \tag{5.1}
-$$
+```
 
 The ordinary convex perimeter-diameter inequality gives
 
-$$
+```math
 q=\operatorname{per}(F)\le\pi D.
 \tag{5.2}
-$$
+```
 
 Thus the matching branch automatically strengthens the general post-ZF terminal lower bound `q>=D` to
 
-$$
+```math
 2D\le q\le\pi D.
-$$
+```
 
 For the core-size upper bound we need only the upper endpoint. Insert (5.2) into (4.5):
 
-$$
+```math
 \boxed{
 \limsup\frac v{D^2}
 \le\frac{\pi^2}{16}
 =0.6168502750\ldots.
 }
 \tag{5.3}
-$$
+```
 
 ---
 
@@ -295,24 +295,24 @@ $$
 
 The canonical strict translated-lattice upper bound and finite Oler lower bound imply for global minimizers
 
-$$
+```math
 \boxed{
 \frac n{D^2}\to
 \Delta:=\frac\pi{2\sqrt3}
 =0.9068996821\ldots.
 }
 \tag{6.1}
-$$
+```
 
 Let
 
-$$
+```math
 Z_{ext}:=n-v.
-$$
+```
 
 By Section 3 all these non-core points lie outside `F`. Equations (5.3)-(6.1) give
 
-$$
+```math
 \begin{aligned}
 \liminf\frac{Z_{ext}}{D^2}
 &\ge
@@ -324,7 +324,7 @@ $$
 }
 \end{aligned}
 \tag{6.2}
-$$
+```
 
 This proves MB.1.
 
@@ -355,69 +355,69 @@ It is false that an equilateral convex polygon whose diameter graph is a perfect
 
 For an exact six-vertex family, choose
 
-$$
+```math
 \frac\pi6<a<\frac\pi2,
 \qquad b=\frac{2\pi}{3}-a.
-$$
+```
 
 Let the six successive unit edge directions be
 
-$$
+```math
 0,\ a,\ \frac{2\pi}{3},\ \frac{2\pi}{3}+a,\ rac{4\pi}{3},\ rac{4\pi}{3}+a.
 \tag{8.1}
-$$
+```
 
 The turning gaps alternate `a,b,a,b,a,b`, all strictly between zero and `pi`, and the two triples of edge vectors separately sum to zero. Hence these edges form a strict convex equilateral hexagon.
 
 The two-step diagonal lengths alternate
 
-$$
+```math
 2\cos\frac a2,
 \qquad
 2\cos\frac b2.
 \tag{8.2}
-$$
+```
 
 Every opposite-index three-step diagonal has the same length
 
-$$
+```math
 D(a)=2\cos\frac{|a-\pi/3|}{2}.
 \tag{8.3}
-$$
+```
 
 For
 
-$$
+```math
 \frac\pi6<a<\frac\pi2,
-$$
+```
 
 both inequalities
 
-$$
+```math
 |a-\pi/3|<a,
 \qquad
 |a-\pi/3|<b
-$$
+```
 
 hold. Since cosine decreases on the relevant interval, (8.3) is strictly larger than both values in (8.2). Thus the full diameter graph is exactly the three opposite-index chords, a perfect crossing matching. Every nonedge length is greater than one, so the contact graph is exactly the six-cycle.
 
 The polygon is centrally symmetric iff opposite edge vectors are negatives. For the first and fourth edge this requires
 
-$$
+```math
 \frac{2\pi}{3}+a=\pi,
-$$
+```
 
 i.e.
 
-$$
+```math
 a=\frac\pi3.
-$$
+```
 
 Therefore every parameter
 
-$$
+```math
 a\in(\pi/6,\pi/2)\setminus\{\pi/3\}
-$$
+```
 
 gives a strict convex unit-edge polygon with a perfect-matching diameter graph that is **not** centrally symmetric.
 
@@ -456,13 +456,10 @@ The matching branch now asks for a quantitatively specific external theorem:
 > **Matching-shell exclusion.** A triangle-free global minimum-diameter source cannot consist of a post-ZF pure-rhombic matching core together with at least
 > 
 
-$$
-
+```math
 > \left(\frac\pi{2\sqrt3}-\frac{\pi^2}{16}-o(1)\right)D^2
 > 
-$$
-
-
+```
 > fully inactive source points outside that core's convex hull.
 
 Potential inputs unavailable to generic convex geometry are:

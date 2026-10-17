@@ -29,38 +29,38 @@ All five checks pass.  The exact companion scripts also pass unchanged.
 Let the dominant orbit have total mass `W` and crossing mass `E`, and let the remaining
 orbit mass be `R=A-W`.  With
 
-$$
+```math
 \delta={W^2\over4}-E,
-$$
+```
 
 the note uses
 
-$$
+```math
 {A^2\over4}-\Delta_2-\delta
 ={A^2-W^2\over4}-\sum_{r\ne r_*}E_r.
-$$
+```
 
 Since each other orbit obeys `E_r<=M_r^2/4` and
 `sum M_r=R`,
 
-$$
+```math
 \sum_{r\ne r_*}E_r
 \le {1\over4}\sum M_r^2
 \le {R^2\over4}.
-$$
+```
 
 Also `A^2-W^2=R(2W+R)`.  Therefore
 
-$$
+```math
 {A^2\over4}-\Delta_2-\delta
 \ge {R(2W+R)-R^2\over4}={RW\over2}\ge0.
-$$
+```
 
 Thus
 
-$$
+```math
 \delta\le {A^2\over4}-\Delta_2
-$$
+```
 
 is in the correct direction.  No unproved additivity of Mantel deficits is used.
 
@@ -68,55 +68,55 @@ is in the correct direction.  No unproved additivity of Mantel deficits is used.
 
 Write the three dominant phase-window populations as
 
-$$
+```math
 C\ge U\ge V\ge0,
-$$
+```
 
 and define the missing center-leaf pair masses
 
-$$
+```math
 x=CU-e(C,U),\qquad y=CV-e(C,V).
-$$
+```
 
 Let `e_UV=e(U,V)`.  For every actual `UV` crossing, triangle-freeness says that the
 center neighborhoods of its two endpoints are disjoint.  Hence
 
-$$
+```math
 \deg_C(u)+\deg_C(v)\le C.
-$$
+```
 
 Summing over all `UV` edges gives
 
-$$
+```math
 C e_{UV}
 \le \sum_{uv\in E(U,V)}
 \bigl[(C-\deg_Cu)+(C-\deg_Cv)\bigr].
-$$
+```
 
 Each missing-center count at a vertex of `U` is repeated at most `V` times, and each
 such count at a vertex of `V` at most `U` times.  Therefore
 
-$$
+```math
 \boxed{C e_{UV}\le Vx+Uy.}
-$$
+```
 
 With
 
-$$
+```math
 a=1-{V\over C},\qquad b=1-{U\over C},
-$$
+```
 
 and
 
-$$
+```math
 h=C(U+V)-E=x+y-e_{UV},
-$$
+```
 
 this yields exactly
 
-$$
+```math
 \boxed{ax+by\le h.}
-$$
+```
 
 This is the theorem's key new correlation.  It is occurrence-safe because the crossing
 graph vertices are complete stopped trains and strict rhombi are its simple edges.
@@ -126,42 +126,42 @@ graph vertices are complete stopped trains and strict rhombi are its simple edge
 For one leaf `L` with missing-pair mass `m`, the previously audited opposite-corner
 mechanism uses
 
-$$
+```math
 F(C,L,m)=C+L-6\sqrt m.
-$$
+```
 
 The theorem takes the positive weighted average with weights `a,b`.  Cauchy--Schwarz
 and the previous section give
 
-$$
+```math
 {a\sqrt x+b\sqrt y\over a+b}
 \le \sqrt{{h\over a+b}}.
-$$
+```
 
 Put `L=U+V=W-C`.  Direct algebra gives
 
-$$
+```math
 {aU+bV\over a+b}
 ={CL-2UV\over2C-L}.
-$$
+```
 
 Because `UV<=L^2/4`,
 
-$$
+```math
 {CL-2UV\over2C-L}
 \ge {CL-L^2/2\over2C-L}={L\over2}.
-$$
+```
 
 The denominator is positive on the certified domain: the atomic deficit gives
 `C=W/2+z` with `|z|<0.045`, while `W>1.9025`, so `3C-W>0` by a wide margin.
 Consequently
 
-$$
+```math
 \boxed{
 \max(F_U,F_V)
 \ge {W+C\over2}-6\sqrt{h\,{C\over3C-W}}.
 }
-$$
+```
 
 No simultaneous worst-case choice of the two leaf deficits is made.
 
@@ -169,27 +169,27 @@ No simultaneous worst-case choice of the two leaf deficits is made.
 
 Set `C=W/2+z`.  The lower bound becomes
 
-$$
+```math
 {3W\over4}+{z\over2}
 -6\sqrt{(d_0-z^2){W+2z\over W+6z}}.
-$$
+```
 
 The verifier covers `[-0.045,0.045]`; the actual domain is strictly smaller because
 `0.045^2>d_0`.
 
 For `z<0`,
 
-$$
+```math
 R(W,z)={W+2z\over W+6z}
-$$
+```
 
 has
 
-$$
+```math
 \partial_W R={4z\over(W+6z)^2}<0,
 \qquad
 \partial_z R={-4W\over(W+6z)^2}<0.
-$$
+```
 
 Thus replacing `W` by its lower bound and `z` by the left endpoint gives an **upper**
 bound on the loss factor, exactly as the script does.  For `z>=0`, `R<=1`, also as
@@ -198,10 +198,10 @@ choices are safe.
 
 The exact-Fraction grid certifies
 
-$$
+```math
 \max(F_U,F_V)>1.15618192450409\ldots
 >{2\over\sqrt3}+0.00148138\ldots .
-$$
+```
 
 The worst interval is `[-0.00585,-0.00580]`. The square-root routine rounds upward,
 so the sign is not floating-point dependent. The later hardening commit `17e08323`
@@ -214,9 +214,9 @@ the original verifier without changing the certified margin.
 For the selected center-leaf pair write `p=sqrt(m)`.  The certified effective degree
 sum satisfies
 
-$$
+```math
 C+L-6p>{2\over\sqrt3}.
-$$
+```
 
 The verifier separately proves `C<2/sqrt(3)`, hence `L>6p`.  It also bounds every
 selected `p` by `(A-2/sqrt(3))/6` and proves the uniform lower bound `C>5p`.
@@ -229,11 +229,11 @@ not silently assume an exact biclique.
 
 The claim
 
-$$
+```math
 \liminf {T_R\over D}\ge2\sqrt{\Delta_2}+0.0021,
 \qquad
 \liminf {\sigma_R\over D}\ge0.0042
-$$
+```
 
 is not obtained by deleting singleton trains from an already-selected all-train pair.
 It uses the same argument on the strict-rhombus crossing graph itself.  This transfer
@@ -253,11 +253,11 @@ proof-only status.
 
 The companion exact-rational script checks the new endpoint
 
-$$
+```math
 t_0=C_{146}+0.0017279,
 \qquad
 \delta_0=0.002837775.
-$$
+```
 
 At the endpoint it certifies the Section-171 feasibility function is negative by more
 than `2.5e-5`, while its `delta` derivative stays above `142` throughout the feasible
@@ -274,20 +274,20 @@ uses both leaves through a weighted minimax bound.
 
 The current proof-only consequences that may safely be propagated are therefore
 
-$$
+```math
 \liminf {T-q/2\over D}\ge2\sqrt{\Delta_2}+0.0021,
-$$
+```
 
-$$
+```math
 \liminf {\sigma_R\over D}\ge0.0042,
-$$
+```
 
 and
 
-$$
+```math
 \liminf {q-k\over D}
 \ge {4\over9}(\pi+\sqrt{\Delta_2})+0.0017279.
-$$
+```
 
 This is a real quantitative advance, but it is not C-II closure.  The remaining task
 is still a source-level incompatibility between the now very tight low-`t` endpoint

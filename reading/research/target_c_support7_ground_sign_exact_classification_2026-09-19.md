@@ -23,18 +23,18 @@ Consequently the previous ground-only exclusions are complete: there is no stron
 
 Let
 
-$$
+```math
 \theta_1<\theta_2<\cdots<\theta_7<\theta_1+\pi,
 \qquad
 u_i=(\cos\theta_i,\sin\theta_i),
-$$
+```
 
 and let `P` be the size-three sign class. The ground equilibrium is
 
-$$
+```math
 \sum_{i\in P}u_i=\sum_{i\notin P}u_i.
 \tag{1.1}
-$$
+```
 
 The previously certified pivot/matching obstruction excludes exactly
 
@@ -53,12 +53,12 @@ The exact constructive certificate in this note realizes every one of the remain
 
 Therefore
 
-$$
+```math
 \boxed{
 \text{open semicircle: exactly }21/35\text{ ground }3+4\text{ sign patterns are realizable.}
 }
 \tag{1.2}
-$$
+```
 
 Equivalently, the fourteen pivot/matching exclusions are the complete ground-only order classification for an arbitrary open semicircle.
 
@@ -66,10 +66,10 @@ Equivalently, the fourteen pivot/matching exclusions are the complete ground-onl
 
 At the support-seven `H6` endpoint the ground hull cone satisfies
 
-$$
+```math
 \theta_7-\theta_1<\frac{2\pi}{3}.
 \tag{2.1}
-$$
+```
 
 The previously certified bisector/layer-cake argument excludes eighteen patterns, ten of which overlap the fourteen open-semicircle exclusions. Its eight new exclusions are
 
@@ -87,79 +87,79 @@ The certificate below gives an exact strict width-`<2pi/3` realization for every
 
 Hence
 
-$$
+```math
 \boxed{
 H6:\quad
 P\in\{145,156,234,235,236,237,245,256,345,346,347,356,456\}
 }
 \tag{2.2}
-$$
+```
 
 is an if-and-only-if classification at the ground-only level.
 
 In particular,
 
-$$
+```math
 \boxed{
 \text{H6 ground-only feasibility has exactly }13/35\text{ sign patterns.}
 }
 \tag{2.3}
-$$
+```
 
 ## 3. Exact constructive witness scheme
 
 The realizability proof uses the rational half-angle parameterization
 
-$$
+```math
 u(t)=\left(\frac{1-t^2}{1+t^2},\frac{2t}{1+t^2}\right),
 \qquad t\in\mathbb Q,
 \tag{3.1}
-$$
+```
 
 whose canonical angle is `2 arctan(t)` in `(-pi,pi)`.
 
 For each surviving pattern, choose two positions `a<b` carrying the same sign and assign rational half-angle parameters to the other five rays. Write `s_i=+1` on the minority class and `s_i=-1` on its complement, and let
 
-$$
+```math
 \sigma=s_a=s_b.
-$$
+```
 
 The two missing unit vectors must have sum
 
-$$
+```math
 R=-\frac1\sigma\sum_{i\ne a,b}s_i u(t_i).
 \tag{3.2}
-$$
+```
 
 The committed witness data are chosen so that
 
-$$
+```math
 0<r^2:=|R|^2<4.
-$$
+```
 
 Put
 
-$$
+```math
 q=\frac{4-r^2}{r^2}>0
-$$
+```
 
 and let `J(x,y)=(-y,x)`. Then
 
-$$
+```math
 \boxed{
  u_a=\frac R2+\frac{\sqrt q}{2}JR,
 \qquad
  u_b=\frac R2-\frac{\sqrt q}{2}JR.
 }
 \tag{3.3}
-$$
+```
 
 Since `JR` is perpendicular to `R`,
 
-$$
+```math
 |u_a|^2=|u_b|^2
 =\frac{r^2}{4}(1+q)=1,
-$$
+```
 
 and `u_a+u_b=R`. Thus (3.2) gives the signed equilibrium (1.1) exactly.
 

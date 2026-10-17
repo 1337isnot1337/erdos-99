@@ -29,26 +29,26 @@ Combining this with the explicit PI force-perimeter deficit gives a macroscopic 
 inside `K\setminus F`.  A concentric disk of almost the same radius is therefore
 unit-covered by contact-isolated source points.  Quantitatively, for every fixed
 
-$$
+```math
 \lambda_0<\lambda_{\rm disk},
 \qquad
 \lambda_D:=\frac{e_{BB}+2s_C}{D},
-$$
+```
 
 there is `tau(lambda_0)>0` such that every sufficiently large post-ZF survivor with
 `lambda_D<=lambda_0` contains a point `x` for which
 
-$$
+```math
 \boxed{B(x,\tau D)\subset K\setminus F,}
 \tag{CM.1}
-$$
+```
 
 and at least
 
-$$
+```math
 \boxed{(\tau D-1)^2}
 \tag{CM.2}
-$$
+```
 
 contact-isolated source points lie in `B(x,tau D)` and their closed unit disks cover
 `B(x,tau D-1)`.
@@ -65,45 +65,45 @@ support is `o(D)` and is placed well inside the chamber.
 Let `A` be a triangle-free global minimizer of diameter `D=D(n)` chosen with the
 minimum possible number of unit contacts, and put
 
-$$
+```math
 K=\operatorname{conv}A.
-$$
+```
 
 ### Theorem CM.1 — deletion covering
 
 For every nonisolated contact vertex `v in A`,
 
-$$
+```math
 \boxed{
 K\subseteq
 \bigcup_{a\in A\setminus\{v\}}\overline B(a,1).
 }
 \tag{1.1}
-$$
+```
 
 ### Proof
 
 Assume there were `x in K` such that
 
-$$
+```math
 |x-a|>1
 \qquad(a\in A\setminus\{v\}).
 \tag{1.2}
-$$
+```
 
 Replace `v` by `x`:
 
-$$
+```math
 A'=(A\setminus\{v\})\cup\{x\}.
-$$
+```
 
 All pairwise separations in `A'` are at least one, and every pair involving `x` is
 strictly longer than one.  Since every point of `A'` lies in the convex body `K` and
 `diam K=D`,
 
-$$
+```math
 \operatorname{diam}A'\le D.
-$$
+```
 
 By the definition of `D(n)`, equality must hold, so `A'` is again a global minimizer.
 It is triangle-free because no new unit contact is incident to `x`.  Every original
@@ -120,9 +120,9 @@ argument is involved.
 Work now in C-II after C65.  Let `C_core` be the unique nonisolated positive contact
 core and let
 
-$$
+```math
 F=\operatorname{conv}B_+
-$$
+```
 
 be the force hull of the actual diameter endpoints.
 
@@ -135,14 +135,14 @@ diameter endpoints.
 
 Let `Z` be the set of contact-isolated source points.  Then CM.1 implies
 
-$$
+```math
 \boxed{
 \{y\in K:\operatorname{dist}(y,F)>1\}
 \subseteq
 \bigcup_{z\in Z}\overline B(z,1).
 }
 \tag{1.3}
-$$
+```
 
 To see this, choose any contact vertex `v`.  For a point `y` on the left, CM.1 gives
 `a in A\setminus\{v\}` with `|y-a|<=1`.  Such an `a` cannot belong to `F`; otherwise
@@ -159,80 +159,80 @@ representative.
 
 Fix
 
-$$
+```math
 \lambda_0<\lambda_{\rm disk}.
-$$
+```
 
 Let `p_+(lambda)` be the explicit perimeter envelope from PI.  Put
 
-$$
+```math
 p_0:=p_+(\lambda_0)<\pi,
 \qquad
 p_1:=\frac{\pi+p_0}{2}<\pi,
 \tag{2.1}
-$$
+```
 
 and
 
-$$
+```math
 \eta_0:=
 \frac\pi4-\frac{p_1^2}{4\pi}
 =\frac{\pi^2-p_1^2}{4\pi}>0.
 \tag{2.2}
-$$
+```
 
 PI implies that for all sufficiently large post-ZF survivors with
 `lambda_D<=lambda_0`,
 
-$$
+```math
 \operatorname{per}F\le p_1D.
 \tag{2.3}
-$$
+```
 
 For the full source hull the exact Oler/lattice allowance gives
 
-$$
+```math
 0\le\delta_K
 :=\frac\pi4D^2-\operatorname{area}K
 <\frac{\sqrt3}{4}\operatorname{per}K
 \le\frac{\pi\sqrt3}{4}D.
 \tag{2.4}
-$$
+```
 
 Hence
 
-$$
+```math
 \operatorname{area}K
 \ge\frac\pi4D^2-O(D).
 \tag{2.5}
-$$
+```
 
 By isoperimetry and (2.3),
 
-$$
+```math
 \operatorname{area}F
 \le\frac{p_1^2}{4\pi}D^2.
 \tag{2.6}
-$$
+```
 
 Thus, after increasing the threshold in `D`,
 
-$$
+```math
 \boxed{
 \operatorname{area}(K\setminus F)
 \ge\frac{\eta_0}{2}D^2.
 }
 \tag{2.7}
-$$
+```
 
 Set
 
-$$
+```math
 \boxed{
 \tau:=\frac{\eta_0}{12\pi}>0.
 }
 \tag{2.8}
-$$
+```
 
 ### Lemma CM.3 — boundary-layer estimate
 
@@ -240,46 +240,46 @@ For nested compact convex planar bodies `F subseteq K` and every `r>0`, if every
 of `K\setminus F` is within distance `r` of `F` or within distance `r` of `partial K`,
 then
 
-$$
+```math
 \boxed{
 \operatorname{area}(K\setminus F)
 \le
 r\bigl(\operatorname{per}K+\operatorname{per}F\bigr)+\pi r^2.
 }
 \tag{2.9}
-$$
+```
 
 ### Proof
 
 The portion within distance `r` of `F` is contained in
 
-$$
+```math
 (F+r\mathbb B)\setminus F,
-$$
+```
 
 whose area is exactly
 
-$$
+```math
 r\operatorname{per}F+\pi r^2
-$$
+```
 
 by Steiner's formula.
 
 For the inner boundary layer of `K`, let
 
-$$
+```math
 K_{-t}:=\{x:x+t\mathbb B\subset K\}.
-$$
+```
 
 The coarea formula for the distance to `partial K`, together with monotonicity of
 perimeter under inclusion for convex bodies, gives
 
-$$
+```math
 \operatorname{area}\{x\in K:\operatorname{dist}(x,\partial K)<r\}
 \le
 \int_0^r\operatorname{per}(K_{-t})\,dt
 \le r\operatorname{per}K.
-$$
+```
 
 Adding the two layers proves (2.9). `square`
 
@@ -288,14 +288,14 @@ Adding the two layers proves (2.9). `square`
 For all sufficiently large survivors with `lambda_D<=lambda_0`, there exists
 `x=x_D` such that
 
-$$
+```math
 \boxed{
 \operatorname{dist}(x,F)\ge\tau D,
 \qquad
 \operatorname{dist}(x,\partial K)\ge\tau D.
 }
 \tag{2.10}
-$$
+```
 
 In particular the open disk `B(x,tau D)` lies in `K\setminus F`.
 
@@ -304,24 +304,24 @@ In particular the open disk `B(x,tau D)` lies in `K\setminus F`.
 Assume no such point exists and apply CM.3 with `r=tau D`.  Since both `K` and `F`
 have diameter at most `D`, Cauchy's perimeter--diameter inequality gives
 
-$$
+```math
 \operatorname{per}K,\operatorname{per}F\le\pi D.
-$$
+```
 
 Therefore
 
-$$
+```math
 \operatorname{area}(K\setminus F)
 \le
 (2\pi\tau+\pi\tau^2)D^2.
 \tag{2.11}
-$$
+```
 
 From (2.2), `eta_0<pi/4`, hence `tau<1/48<1`; consequently
 
-$$
+```math
 2\pi\tau+\pi\tau^2<3\pi\tau=\frac{\eta_0}{4}.
-$$
+```
 
 This contradicts (2.7). `square`
 
@@ -334,58 +334,58 @@ linear chamber radius.
 
 Let
 
-$$
+```math
 r:=\tau D.
-$$
+```
 
 For large `D`, `r>1`.  By CM.4,
 
-$$
+```math
 B(x,r)\cap F=\varnothing,
 \qquad
 B(x,r)\subset K.
 \tag{3.1}
-$$
+```
 
 Apply CM.2 to every `y in B(x,r-1)`.  There is a contact-isolated source point `z`
 with `|y-z|<=1`.  The triangle inequality gives
 
-$$
+```math
 |z-x|<r,
-$$
+```
 
 so in fact `z in B(x,r)`.
 
 Thus, with
 
-$$
+```math
 Z_x:=Z\cap B(x,r),
-$$
+```
 
 we have the exact covering
 
-$$
+```math
 \boxed{
 B(x,r-1)
 \subseteq
 \bigcup_{z\in Z_x}\overline B(z,1).
 }
 \tag{3.2}
-$$
+```
 
 Taking areas and using subadditivity,
 
-$$
+```math
 \pi(r-1)^2
 \le |Z_x|\pi.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{|Z_x|\ge(r-1)^2=(\tau D-1)^2.}
 \tag{3.3}
-$$
+```
 
 Every pair of points of `Z_x` has distance strictly larger than one because all of
 these source points are contact-isolated.
@@ -418,9 +418,9 @@ an `o(D)` support bound for a positive-cardinality rearrangement.
 This is precisely where the Kuperberg gap-defect theorem is near but not yet enough.
 The audited Target A five-block theorem gives support
 
-$$
+```math
 W(d)\le C_1\exp(C_2d^{-3})
-$$
+```
 
 for an aligned lattice gap of width `d`, but CM supplies neither an aligned triangular
 lattice phase nor a quantitative lower bound on the minimum strict gap.  Importing the

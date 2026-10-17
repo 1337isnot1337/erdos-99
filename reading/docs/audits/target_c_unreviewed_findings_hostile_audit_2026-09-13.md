@@ -27,17 +27,17 @@ route assigned to that side. The only geometric input used is the canonical
 
 Define
 
-$$
+```math
 r_i=\ell_i-\lceil s_i\rceil\ge0,
 \qquad
 \varphi_i=\lceil s_i\rceil-s_i\in[0,1).
-$$
+```
 
 Then, term by term,
 
-$$
+```math
 \ell_i-s_i=r_i+\varphi_i.
-$$
+```
 
 Summing over the cyclic loaded-hull sides gives the displayed decomposition
 `b-per(F)=sum r_i+sum phi_i`. No side or bridge occurrence is identified with
@@ -45,26 +45,26 @@ another one.
 
 For `M={i:s_i>1}`, the Type-II integer slack is
 
-$$
+```math
 u_B=\sum_{i\in M}(\ell_i-2)+\sum_{i\notin M}(\ell_i-1).
-$$
+```
 
 For `s_i>2`, the first summand dominates `s_i-2`; for `1<s_i<=2` its contribution
 is nonnegative; and for `s_i=1` the contribution is exactly `ell_i-s_i`.
 Therefore
 
-$$
+```math
 u_B\ge \sum_{i\in M}(s_i-2)_+,
 \qquad
 0\le u_B-\sum_{i\in M}(s_i-2)_+
 \le b-\operatorname{per}(F).
-$$
+```
 
 Also
 
-$$
+```math
 \sum_{i\in M}(s_i-2)=\operatorname{per}(F)-q-m,
-$$
+```
 
 so the positive-part lower bound in the reviewed report has the correct sign. The
 asymptotic identities in its zero-detour subsection follow directly from
@@ -74,11 +74,11 @@ near-disk convergence is used.
 The pure-tooth corollary also checks: `m=q` and `ell_i=2` give `b=2q`, while the
 named endpoint floor supplies `q/D >= 2 sqrt(Delta_2)`. Hence
 
-$$
+```math
 \frac{b-\operatorname{per}(F)}D
 \ge 4\sqrt{\Delta_2}-\pi-o(1)
 =0.6676585738\ldots-o(1).
-$$
+```
 
 **Verdict:** PASS as a finite Type-II rounding reduction and as a scoped endpoint
 corollary. It does not rule out a rounded long-side endpoint or give a diameter
@@ -130,27 +130,27 @@ In Type II, the audited loaded-hull localization gives `c_B=0` and hence
 `e_BB=q-m=Q+2k+u_B`. Since every nonquadrilateral bounded face contributes at least
 one degree unit, `f<=Q`. Therefore
 
-$$
+```math
 2f-k\le 2Q-k=2e_{BB}-5k-2u_B\le2e_{BB}.
-$$
+```
 
 The audited all-defect phase gap supplies
 
-$$
+```math
 \liminf\frac{2f-k}{D}\ge
 \gamma,
 \qquad
 \gamma=2\sqrt{\Delta_2}-\frac\pi2.
-$$
+```
 
 Dividing the finite inequality gives
 `liminf e_BB/D >= gamma/2`, with
 
-$$
+```math
 \frac\gamma2
 =\sqrt{\frac\pi{2\sqrt3}}-\frac\pi4
 =0.1669146434\ldots.
-$$
+```
 
 Section 130 identifies `r_deep=m-T_triangle`, so
 `q-T_triangle=e_BB+r_deep>=e_BB`. The same explicit lower bound therefore applies

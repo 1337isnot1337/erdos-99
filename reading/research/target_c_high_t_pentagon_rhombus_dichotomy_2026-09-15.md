@@ -16,76 +16,76 @@
 
 The modern high-`t` theorem gives the safe train-slack floor
 
-$$
+```math
 \boxed{
 \liminf {\tau_D\over D}\ge0.7467921.
 }
 \tag{PRD.1}
-$$
+```
 
 The hostile audit explicitly checks that this is the same canonical slack as the older
 exact two-currency decomposition
 
-$$
+```math
 \boxed{2\tau_D=\rho_D+\sigma_D,}
 \tag{PRD.2}
-$$
+```
 
 where
 
-$$
+```math
 \rho_D:=b+4f+Q-B_4\ge0
 \tag{PRD.3}
-$$
+```
 
 is unused outer/nonquadrilateral **recipient capacity** for boundary occurrences of the
 strict-rhombus complex, while
 
-$$
+```math
 \sigma_D:=B_4-4\sqrt{R_4}\ge0
 \tag{PRD.4}
-$$
+```
 
 is strict-rhombus train-isoperimetric slack.
 
 Put
 
-$$
+```math
 \tau_0:=0.7467921.
-$$
+```
 
 Then every remaining full-core survivor has, after passage to a subsequence, one of
 two explicit branches:
 
 ### RW — large recipient waste
 
-$$
+```math
 \boxed{
 \rho_D\ge(\tau_0-o(1))D.
 }
 \tag{PRD.5}
-$$
+```
 
 ### RP — rhombus-coupled pentagons plus large Mantel deficit
 
-$$
+```math
 \boxed{
 \rho_D<(\tau_0+o(1))D,
 \qquad
 \sigma_D>(\tau_0-o(1))D,
 }
 \tag{PRD.6}
-$$
+```
 
 and the stopped strict-rhombus train-crossing graph has Mantel deficit
 
-$$
+```math
 \boxed{
 M_D:={T_R^2\over4}-R_4
 >(0.390-o(1))D^2.
 }
 \tag{PRD.7}
-$$
+```
 
 Here `T_R=B_4/2` is the stopped **strict-rhombus** train count used in the older exact
 split.  No identification with a differently normalized all-train count is needed in
@@ -96,31 +96,31 @@ recipient slots.  Let `I_5` be the number of contact-edge occurrences that have 
 bounded pentagonal contact face on one side and a strict unit-rhombus face on the
 other.  Then
 
-$$
+```math
 \boxed{
 t\le1.850\Longrightarrow I_5>0.468D-o(D),}
 \tag{PRD.8}
-$$
+```
 
-$$
+```math
 \boxed{
 t\le1.855\Longrightarrow I_5>0.393D-o(D),}
 \tag{PRD.9}
-$$
+```
 
-$$
+```math
 \boxed{
 t\le1.860\Longrightarrow I_5>0.318D-o(D).}
 \tag{PRD.10}
-$$
+```
 
 Consequently the numbers of **distinct** pentagons touching the strict-rhombus complex
 are respectively greater than
 
-$$
+```math
 0.093D-o(D),\qquad0.078D-o(D),\qquad0.063D-o(D).
 \tag{PRD.11}
-$$
+```
 
 Thus the modern train slack has a concrete geometric meaning.  Either a linear number
 of potential rhombus-boundary recipient slots are unused, or a linear pentagon
@@ -133,28 +133,28 @@ graph is macroscopically far from its Mantel endpoint.
 
 The hostile-audited modern chamber theorem proves
 
-$$
+```math
 \liminf {\tau_D\over D}\ge\rho_*+0.007707
 >0.7467921,
 \tag{PRD.12}
-$$
+```
 
 where `rho_*=cos rho_*` is the Dottie number.  The same audit checks the exact older
 identity (PRD.2).
 
 If (PRD.5) fails along a subsequence, then
 
-$$
+```math
 \rho_D<(\tau_0+o(1))D.
-$$
+```
 
 Equations (PRD.2) and (PRD.12) give
 
-$$
+```math
 \sigma_D
 =2\tau_D-\rho_D
 >(\tau_0-o(1))D.
-$$
+```
 
 This proves the first part of branch RP.
 
@@ -168,72 +168,72 @@ not needed below.
 
 Let
 
-$$
+```math
 T_R={B_4\over2}
-$$
+```
 
 be the stopped strict-rhombus train count.  Its train-crossing graph is simple and
 triangle-free with exactly `R_4` edges.  Put
 
-$$
+```math
 M_D={T_R^2\over4}-R_4.
 \tag{PRD.13}
-$$
+```
 
 From the definition (PRD.4),
 
-$$
+```math
 \sigma_D=2T_R-4\sqrt{R_4},
-$$
+```
 
 so exactly
 
-$$
+```math
 T_R=2\sqrt{R_4}+{\sigma_D\over2}.
 \tag{PRD.14}
-$$
+```
 
 Substitution in (PRD.13) gives the sharper identity
 
-$$
+```math
 \boxed{
 M_D
 ={\sigma_D\sqrt{R_4}\over2}
 +{\sigma_D^2\over16}.
 }
 \tag{PRD.15}
-$$
+```
 
 This is stronger than the previously recorded one-sided estimate obtained by merely
 rationalizing the Mantel deficit.
 
 Canonical Type-II rhombic saturation gives
 
-$$
+```math
 {\sqrt{R_4}\over D}\to
 \sqrt{\Delta_2},
 \qquad
 \Delta_2={\pi\over2\sqrt3}.
 \tag{PRD.16}
-$$
+```
 
 Hence branch RP and (PRD.15) imply
 
-$$
+```math
 \liminf {M_D\over D^2}
 \ge
 {\tau_0\sqrt{\Delta_2}\over2}
 +{\tau_0^2\over16}.
 \tag{PRD.17}
-$$
+```
 
 The exact companion certificate gives
 
-$$
+```math
 {\tau_0\sqrt{\Delta_2}\over2}
 +{\tau_0^2\over16}
 >0.3904459>0.390,
-$$
+```
 
 which proves (PRD.7).
 
@@ -248,29 +248,29 @@ Every boundary occurrence of the strict-rhombus complex faces either the old out
 contact face or one bounded nonquadrilateral contact face.  The total available
 recipient capacity is
 
-$$
+```math
 b+(4f+Q),
-$$
+```
 
 while the used capacity is `B_4`.  Thus (PRD.3) is exactly total unused recipient
 capacity.
 
 Let
 
-$$
+```math
 I_{exc}
-$$
+```
 
 be the number of strict-rhombus boundary occurrences whose recipient is a bounded
 nonquadrilateral face.  Even if all unused capacity were charged to the exceptional
 faces,
 
-$$
+```math
 \boxed{
 I_{exc}\ge4f+Q-\rho_D.
 }
 \tag{PRD.18}
-$$
+```
 
 This is deliberately adverse: unused outer-face slots are ignored rather than credited.
 
@@ -280,13 +280,13 @@ This is deliberately adverse: unused outer-face slots are ignored rather than cr
 
 Let `P_5` be the pentagon count and put
 
-$$
+```math
 N_{6+}:=f-P_5.
-$$
+```
 
 The total boundary-occurrence capacity of faces of degree at least six is
 
-$$
+```math
 \begin{aligned}
 C_{6+}
 &=\sum_{\deg P\ge6}\deg P\\
@@ -294,29 +294,29 @@ C_{6+}
 &=4(f-P_5)+(Q-P_5).
 \end{aligned}
 \tag{PRD.19}
-$$
+```
 
 The degree arithmetic used in the pentagon-floor theorem gives
 
-$$
+```math
 P_5\ge2f-Q.
 \tag{PRD.20}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 C_{6+}
 \le6(Q-f).
 }
 \tag{PRD.21}
-$$
+```
 
 Let `I_5` count rhombus/pentagon boundary incidences.  Even if every occurrence of
 every degree-`>=6` face were used by a rhombus, (PRD.18)--(PRD.21) yield
 
-$$
+```math
 \begin{aligned}
 I_5
 &\ge I_{exc}-C_{6+}\\
@@ -325,17 +325,17 @@ I_5
 &=5(2f-Q)-\rho_D.
 \end{aligned}
 \tag{PRD.22}
-$$
+```
 
 On branch RP, `rho_D<(tau_0+o(1))D`, so
 
-$$
+```math
 \boxed{
 {I_5\over D}
 \ge5\left(2{f\over D}-{Q\over D}\right)-\tau_0-o(1).
 }
 \tag{PRD.23}
-$$
+```
 
 ---
 
@@ -343,7 +343,7 @@ $$
 
 The companion pentagon theorem proves
 
-$$
+```math
 2{f\over D}-{Q\over D}
 >\begin{cases}
 0.2430102-o(1),&t\le1.850,\\
@@ -351,11 +351,11 @@ $$
 0.2130102-o(1),&t\le1.860.
 \end{cases}
 \tag{PRD.24}
-$$
+```
 
 Substitute (PRD.24) in (PRD.23).  Exact outward arithmetic gives
 
-$$
+```math
 {I_5\over D}
 >\begin{cases}
 0.4682592-o(1),&t\le1.850,\\
@@ -363,23 +363,23 @@ $$
 0.3182592-o(1),&t\le1.860.
 \end{cases}
 \tag{PRD.25}
-$$
+```
 
 This proves (PRD.8)--(PRD.10).
 
 A pentagon has exactly five boundary occurrences.  Hence the number `P_5^{touch}` of
 distinct pentagons with at least one strict-rhombus neighbor satisfies
 
-$$
+```math
 P_5^{touch}\ge {I_5\over5}.
 \tag{PRD.26}
-$$
+```
 
 The certificate gives the stronger numerical floors
 
-$$
+```math
 0.09365D-o(D),\qquad0.07865D-o(D),\qquad0.06365D-o(D),
-$$
+```
 
 and (PRD.11) records simple safe roundings.
 
@@ -389,9 +389,9 @@ and (PRD.11) records simple safe roundings.
 
 In the live band
 
-$$
+```math
 1.844<t\le1.855,
-$$
+```
 
 the independently proved low-energy O--O theorem gives a same-phase dual path of more
 than `0.0184D-o(D)` selected cuts, one common diameter-routing hub, and a nonhub

@@ -15,9 +15,9 @@
 
 The transport/fan ladder was originally written with an upper hypothesis on the older all-phase surplus variable `mu_D`. The later exact cancellation theorem shows that its two scalar stability inputs hold directly under an upper hypothesis on
 
-$$
+```math
 t_D={q-k\over D}.
-$$
+```
 
 This matters after the correlated `0.00704` theorem: the old `mu_D` may contain an additional nonunit-hull-side term, so an upper bound on `t_D` does not by itself upper-bound the old `mu_D`. The fan ladder therefore needs an explicit `t`-based transfer rather than a silent variable substitution.
 
@@ -29,26 +29,26 @@ The transfer is exact. No new geometric hypothesis is required.
 
 Put
 
-$$
+```math
 s_2:=\sqrt{\frac\pi{2\sqrt3}},
 \qquad
 g:=0.007707,
 \qquad
 \tau_*:={\pi\over2}+g,
-$$
+```
 
 and
 
-$$
+```math
 M_*:=4s_2+2g,
 \qquad
 p_*:={M_*\over5}.
 \tag{1.1}
-$$
+```
 
 The exact terminal identity is
 
-$$
+```math
 q-k
 =
 {2P_F+2\sqrt{R_4}\over5}
@@ -56,67 +56,67 @@ q-k
 +{2\over5}(b-P_F)
 +{1\over5}\tau_D,
 \tag{1.2}
-$$
+```
 
 where
 
-$$
+```math
 \tau_D:=T-2\sqrt{R_4}.
-$$
+```
 
 Along a terminal subsequence define the nonnegative normalized defects
 
-$$
+```math
 r:=\lim {Q-f\over D},
 \qquad
 \delta:=\lim {b-P_F\over D},
 \qquad
  a:=\lim\left({\tau_D\over D}-{\pi\over2}-g\right).
 \tag{1.3}
-$$
+```
 
 Terminality gives
 
-$$
+```math
 {P_F\over D}\to\pi,
 \qquad
 {\sqrt{R_4}\over D}\to s_2,
-$$
+```
 
 and the matched all-train theorem gives `a>=0`.
 
 Therefore
 
-$$
+```math
 \boxed{
 \lim(t_D-\mu_*)
 ={2\over5}(r+\delta)+{1\over5}a,
 }
 \tag{1.4}
-$$
+```
 
 where
 
-$$
+```math
 \mu_*
 ={\pi\over2}+{2\over5}s_2+{g\over5}
 =1.953262849540479\ldots .
-$$
+```
 
 Hence an upper hypothesis
 
-$$
+```math
 \limsup t_D\le\mu_*+\varepsilon
 \tag{1.5}
-$$
+```
 
 implies the exact stability constraint
 
-$$
+```math
 \boxed{
 a+2(r+\delta)\le5\varepsilon.}
 \tag{1.6}
-$$
+```
 
 This is the first scalar input used by the transport/fan ladder.
 
@@ -128,56 +128,56 @@ The second scalar input in the fan ladder is the normalized exceptional-face cou
 
 Use the exact train ledger
 
-$$
+```math
 2T=b+Q+4f
 \tag{2.1}
-$$
+```
 
 and
 
-$$
+```math
 T=2\sqrt{R_4}+\tau_D.
 \tag{2.2}
-$$
+```
 
 Write
 
-$$
+```math
 x:=\lim {f\over D}.
-$$
+```
 
 Since
 
-$$
+```math
 {b\over D}\to\pi+\delta,
 \qquad
 {Q\over D}\to x+r,
-$$
+```
 
 while
 
-$$
+```math
 {2T\over D}
 \to4s_2+\pi+2g+2a
 =\pi+M_*+2a,
-$$
+```
 
 equating the two sides of (2.1) gives
 
-$$
+```math
 \pi+M_*+2a
 =\pi+\delta+r+5x.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 {f\over D}
 ={M_*+2a-\delta-r\over5}+o(1).
 }
 \tag{2.3}
-$$
+```
 
 This is exactly the second stability formula used in the transport/fan ladder.
 
@@ -188,19 +188,22 @@ This is exactly the second stability formula used in the transport/fan ladder.
 The remainder of the transport/fan proof uses only:
 
 1. the endpoint multigraph identities
-   $$
+   ```math
    2E_{BB}+E_{BO}=4f+Q,
    \qquad
    E_{BO}+2L_O=b;
-   $$
+   
+   ```
 2. the superpentagon bound
-   $$
+   ```math
    n_+\le Q-f;
-   $$
+   
+   ```
 3. the full-flower incidence inequality
-   $$
+   ```math
    P_5-F_5^{full}\le2S;
-   $$
+   
+   ```
 4. terminality `b/D=pi+delta+o(1)`;
 5. the two scalar formulas (1.6) and (2.3).
 
@@ -208,7 +211,7 @@ No later step uses the old surplus variable itself. Therefore equations (2.1)--(
 
 For `1<=k<=4`, if `F^{full}_{5,>=kO}` counts fully rhombic pentagons with at least `k` pentagon-to-outer stopped trains, then
 
-$$
+```math
 \boxed{
 \max\left\{
 {S\over D},
@@ -218,18 +221,18 @@ $$
 \ge C_k^{(t)}(\varepsilon)-o(1),
 }
 \tag{3.1}
-$$
+```
 
 where
 
-$$
+```math
 \boxed{
 C_k^{(t)}(\varepsilon)
 =
 {\pi-(k-1)p_*-3(6-k)\varepsilon\over20-3k}.
 }
 \tag{3.2}
-$$
+```
 
 Thus the transport/fan ladder is now a theorem about actual terminal feasibility `t_D`, not merely the older all-phase surplus.
 
@@ -239,9 +242,9 @@ Thus the transport/fan ladder is now a theorem about actual terminal feasibility
 
 Take
 
-$$
+```math
 \varepsilon_0=0.00710.
-$$
+```
 
 The correlated theorem excludes all terminal survivor limits at or below `0.00704` above `mu_*`, so this is a concrete narrow window immediately above the certified floor.
 
@@ -256,13 +259,13 @@ Equation (3.2) gives
 
 The `k=3` row again maximizes the guaranteed number of localized outer-reaching spokes. In particular, every terminal subsequence satisfying
 
-$$
+```math
 \limsup t_D\le1.960362849540479\ldots
-$$
+```
 
 obeys
 
-$$
+```math
 \boxed{
 \max\left\{
 S/D,\ L_O/D,\ F^{full}_{5,\ge3O}/D
@@ -270,7 +273,7 @@ S/D,\ L_O/D,\ F^{full}_{5,\ge3O}/D
 \ge0.140711505691587\ldots-o(1).
 }
 \tag{4.1}
-$$
+```
 
 This is the `t`-based input used by `target_c_free_terminal_live_flex_diameter_locking_2026-09-18.md`.
 

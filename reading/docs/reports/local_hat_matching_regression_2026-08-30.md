@@ -11,24 +11,24 @@ This note records an exact obstruction to a tempting shortcut in the triangular
 lattice scaffold.  Let (u_0,u_2,u_4) be three unit lattice directions separated
 by (120^circ), and choose
 
-$$
+```math
 r=\frac35.
-$$
+```
 
 The three points (p_i=r u_i) are pairwise at distance
 
-$$
+```math
 \sqrt3r=\frac{3\sqrt3}{5}>1.
-$$
+```
 
 Thus this is a unit-separated, triangle-free three-point set.  Each point lies on
 an alternating lattice ray.  If one assigns to it the ordinary barycentric
 weights in a chosen incident elementary triangle, its weight at the central
 lattice vertex is (1-r=2/5).  The total central weight is therefore
 
-$$
+```math
 3(1-r)=\frac65>1.
-$$
+```
 
 So the standard continuous piecewise-linear hat functions of the triangular
 triangulation do **not** furnish a fractional matching from arbitrary

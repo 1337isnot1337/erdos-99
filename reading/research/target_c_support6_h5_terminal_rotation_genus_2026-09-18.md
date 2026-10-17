@@ -18,9 +18,9 @@ The finite H5 reduction leaves 48 labelled uniform survivors and 80 labelled sim
 
 The resulting exact orientable rotation surface is never planar:
 
-$$
+```math
 \boxed{g\in\{2,3\}\quad\text{for every one of the 128 labelled H5 survivors}.}
-$$
+```
 
 The computation uses only integer chirotope signs, integer edge signs, permutation enumeration of the regular 5-tournament, and a disjoint-set calculation of vertex classes. No coordinates, floating-point tolerances, or metric root assumptions enter.
 
@@ -28,19 +28,19 @@ The computation uses only integer chirotope signs, integer edge signs, permutati
 
 At a non-ground reciprocal vertex `i`, the regular-force-tournament condition already certified in the H5 reduction determines a cyclic order of the five incident force sides. Label the corresponding terminal pentagon sides by the neighbors `j`, with `j=0` denoting the outside/anchor side. If the occurrence of side `{i,j}` at face `i` starts at corner slot `k`, the occurrence at face `j` has the opposite vector and is glued by
 
-$$
+```math
 (i,k)\sim(j,m+1),\qquad (i,k+1)\sim(j,m),
-$$
+```
 
 where `m` is the slot of `i` in face `j`. This is the orientation-preserving translation pairing forced by opposite force vectors.
 
 There are six pentagonal cells, twelve paired relation-side classes, and six boundary anchor sides. The certificate computes the number `V` of corner classes, the number `b` of boundary components, and
 
-$$
+```math
 \chi=V-18+6=V-12,
 \qquad
 g={2-b-\chi\over2}.
-$$
+```
 
 The surface is connected because the non-ground relation graph is `K_6` minus a perfect matching, hence connected.
 
@@ -48,25 +48,25 @@ The surface is connected because the non-ground relation graph is `K_6` minus a 
 
 The certificate returns the following distributions, indexed by `(V,b,g)`:
 
-$$
+```math
 \begin{array}{c|rrrr}
 & (6,2,3)&(7,1,3)&(7,3,2)&(8,2,2)\\ \hline
 \text{uniform}&26&12&6&4\\
 \text{simple wall}&62&10&4&0
 \end{array}
-$$
+```
 
 Thus every noncollapsed H5 sign/order survivor has terminal rotation genus at least two. The previously excluded higher-codimension ground-collinearity strata do not add cases.
 
 As a finite sensitivity check, the certificate also leaves a selected subset of relation-side pairs unglued and recomputes the surface. Reaching genus zero requires at least three such pairs in every case. The exact minimum-cut distributions are
 
-$$
+```math
 \begin{array}{c|cc}
 &3&4\\ \hline
 \text{uniform}&30&18\\
 \text{simple wall}&44&36
 \end{array}
-$$
+```
 
 This is a statement about the terminal rotation model: it does not identify an unglued pair with a particular canonical train corridor, and therefore is not itself a linear global train lower bound.
 
@@ -80,7 +80,7 @@ This conditional implication is the useful frontier reduction. It does **not** a
 
 ## 4. Dependency chain and limits
 
-$$
+```math
 \text{H5 sign/order survivor}
 \to
 \text{terminal rotation genus }g\ge2
@@ -88,7 +88,7 @@ $$
 \text{no direct-side planar embedding}
 \to
 \text{any global realization needs corridor/extra-structure compatibility}.
-$$
+```
 
 The last arrow is not yet a contradiction with C-II. The next finite global task is to show that the required corridor/extra-structure routing is incompatible with the planar contact-face incidence and train-boundary currency, or to lift one of the 128 cases to the full metric equations and rule it out. The collapsed support-six branch is separate and locally realizable under the certified conditions in its regression note.
 

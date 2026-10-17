@@ -54,30 +54,30 @@ The contact-path diameter estimate itself already appears in the September 9 ZG 
 
 For every unloaded component,
 
-$$
+```math
 \boxed{
 \operatorname{diam}P_r\le \delta_r+2,
 \qquad
 \operatorname{per}P_r\le \pi(\delta_r+2).
 }
 \tag{AP.1}
-$$
+```
 
 ### Proof
 
 Take any two attachment terminals `a,b in A_r`.  By definition there are vertices `x,y in I_r` with unit contacts `ax` and `yb`.  Since `I_r` is connected, an internal contact path from `x` to `y` has at most `delta_r` edges.  Concatenating gives a contact path from `a` to `b` of length at most `delta_r+2`.  Every edge has Euclidean length one, so
 
-$$
+```math
 |a-b|\le\delta_r+2.
-$$
+```
 
 Taking the maximum over attachment terminals gives `diam(A_r)<=delta_r+2`, hence the same bound for `P_r=conv(A_r)`.
 
 For every planar convex body, the perimeter-diameter inequality gives
 
-$$
+```math
 \operatorname{per}P_r\le\pi\operatorname{diam}P_r.
-$$
+```
 
 Combining the two inequalities proves AP.1. `square`
 
@@ -85,29 +85,29 @@ Combining the two inequalities proves AP.1. `square`
 
 ZK proves the exact component ledger
 
-$$
+```math
 \boxed{
 \sum_r\delta_r+R_I+s_B+3k
 =6+e_{BB}+2s_C.
 }
 \tag{AP.2}
-$$
+```
 
 ZU gives
 
-$$
+```math
 \boxed{
 c_I+e_{BB}+s_C=q-2+k.}
 \tag{AP.3}
-$$
+```
 
 Summing AP.1 and using AP.2 gives
 
-$$
+```math
 \sum_r\operatorname{per}P_r
 \le
 \pi\left(6+e_{BB}+2s_C-3k-R_I-s_B+2c_I\right).
-$$
+```
 
 Substitute AP.3.  The `s_C` terms cancel exactly, as do all but one copy of the loaded-contact and mixed-defect currencies.
 
@@ -115,23 +115,23 @@ Substitute AP.3.  The `s_C` terms cancel exactly, as do all but one copy of the 
 
 Every post-ZF C-II survivor satisfies
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{per}P_r
 \le
 \pi\bigl(2+2q-e_{BB}-k-R_I-s_B\bigr).
 }
 \tag{AP.4}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{per}P_r\le 2\pi q+2\pi\le2\pi^2D+2\pi.
 }
 \tag{AP.5}
-$$
+```
 
 The point is not the crude final constant.  The old cellwise estimate paid `pi D` once per component; AP.4 pays only one global linear boundary budget even when `c_I=Theta(D)`.
 
@@ -143,21 +143,21 @@ AP.4 is finite and exact.  It uses only the actual post-ZF contact components an
 
 Let `Z_cell` be the number of contact-isolated source points lying in
 
-$$
+```math
 \bigcup_r\operatorname{int}P_r.
-$$
+```
 
 The interiors of the `P_r` are pairwise disjoint by C43/C49, so every such isolated point belongs to a unique cell.  Write `Z_r` for the isolated source points in `int(P_r)` and put `z=sum_r|Z_r|=Z_cell`.
 
 For each `r`, the set
 
-$$
+```math
 I_r\cup A_r\cup Z_r
-$$
+```
 
 is unit-separated and lies in the convex body `P_r`.  Oler therefore gives
 
-$$
+```math
 \frac{\sqrt3}{2}
 \bigl(|I_r|+|A_r|+|Z_r|-1\bigr)
 \le
@@ -165,50 +165,50 @@ $$
 +
 \frac{\sqrt3}{4}\operatorname{per}P_r.
 \tag{AP.6}
-$$
+```
 
 Sum over `r`.  Put `a_inc=sum_r|A_r|`, `n_I=sum_r|I_r|`, and `m=n_I+q`.  With the ZJ incidence slacks
 
-$$
+```math
 u_A=a_{inc}-3c_I,
 \qquad
 p_A=q_{used}+2c_I-2s-a_{inc},
 \qquad
 u_0=q-q_{used},
-$$
+```
 
 ZJ gives
 
-$$
+```math
 e_{BB}+s_C-k=u_A+p_A+2(s-1)+u_0.
 \tag{AP.7}
-$$
+```
 
 From the definitions,
 
-$$
+```math
 n_I+z+a_{inc}-c_I
 =m+z+c_I-2s-p_A-u_0.
-$$
+```
 
 Using AP.7 to eliminate `2s+p_A+u_0` yields
 
-$$
+```math
 n_I+z+a_{inc}-c_I
 =m+z+c_I-e_{BB}-s_C+k+u_A-2.
 \tag{AP.8}
-$$
+```
 
 Let
 
-$$
+```math
 A_{cell}:=\sum_r\operatorname{area}P_r
 =\operatorname{area}F-G.
-$$
+```
 
 Substituting AP.8 into the summed Oler inequality and then using AP.3 gives
 
-$$
+```math
 \boxed{
  m+Z_{cell}
 \le
@@ -218,7 +218,7 @@ $$
 -q+4+2e_{BB}+2s_C-2k-u_A.
 }
 \tag{AP.9}
-$$
+```
 
 Finally apply AP.4.
 
@@ -226,7 +226,7 @@ Finally apply AP.4.
 
 For `c_I>0`,
 
-$$
+```math
 \boxed{
 \begin{aligned}
  m+Z_{cell}
@@ -242,20 +242,20 @@ $$
 \end{aligned}
 }
 \tag{AP.10}
-$$
+```
 
 Every omitted correction in the second line has the favorable sign.
 
 Since `q<=pi D`, loaded degree at most three gives `e_BB=O(D)`, the exact terminal partition gives `k<=q/2`, and AP.3 gives `s_C=O(D)`.  Therefore AP.10 has the clean asymptotic consequence
 
-$$
+```math
 \boxed{
  m+Z_{cell}
 \le
 \frac{2}{\sqrt3}(\operatorname{area}F-G)+O(D).
 }
 \tag{AP.11}
-$$
+```
 
 The `O(D)` is uniform over post-ZF survivors.
 
@@ -278,13 +278,10 @@ A Level I closure still requires a source-wide outer-shell theorem.  One suffici
 > **Outer-shell capacity with loaded-boundary cancellation.**  For the lexicographic post-ZF source, bound the source points in the outer contact face and outside the harmonic-cell interiors so that, after adding AP.6/C52, the total source satisfies
 > 
 
-$$
-
+```math
 > n\le \frac{\pi}{2\sqrt3}D^2+1.
 > 
-$$
-
-
+```
 
 By the canonical strict translated-triangular-lattice comparison, this is impossible for a global minimizer.  An equivalent proof may construct an explicit `n`-point configuration of diameter `<D`.
 

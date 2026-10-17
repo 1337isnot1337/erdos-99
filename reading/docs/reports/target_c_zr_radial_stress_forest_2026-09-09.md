@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_radial_stress_forest_2026-09-09.md) · source SHA-256 `048e65395d69f558f3a5d14d9c42b83616b04e1e2f3bf812cef2baedad57b0d1`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-704B542316A1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZRF: near-zero response forces almost all contact stress onto a radial forest
 
@@ -17,7 +19,7 @@
 
 C68 proves that in the C66 near-star phase `D epsilon -> 0`, the weighted radial defect of the complete positive contact core about the star center `z` satisfies
 
-$$
+```math
 Q_z
 :=
 \sum_{ij\in C}\alpha_{ij}
@@ -25,7 +27,7 @@ Q_z
 =o(D^2),
 \qquad
 r_i=|p_i-z|.
-$$
+```
 
 A priori this allows a high-stress contact edge to lie in a cycle whose remaining braces have tiny stress. The new observation is that all **radially efficient** contact edges, irrespective of their weights, form a forest. Every contact cycle therefore contains a quantitatively radially inefficient edge. C68 then shows that one can delete a set of total contact stress `o(D^2)` and destroy every contact cycle.
 
@@ -39,34 +41,34 @@ This does not delete those low-stress cycle-closing contacts from the finite sou
 
 Fix any source point `z` and put
 
-$$
+```math
 r_x=|x-z|.
-$$
+```
 
 For a unit contact `xy`, reverse triangle inequality gives
 
-$$
+```math
 |r_x-r_y|\le1.
 \tag{1.1}
-$$
+```
 
 Call the contact **radially efficient** when
 
-$$
+```math
 \boxed{|r_x-r_y|>\sqrt3/2.}
 \tag{1.2}
-$$
+```
 
 and **radially bad** otherwise.
 
 For every bad edge,
 
-$$
+```math
 1-(r_x-r_y)^2
 \ge1-3/4
 =1/4.
 \tag{1.3}
-$$
+```
 
 ---
 
@@ -76,9 +78,9 @@ $$
 
 For every unit-separated planar point set and every reference point `z` belonging to the set, the graph formed by unit contacts satisfying
 
-$$
+```math
 |r_x-r_y|>\sqrt3/2
-$$
+```
 
 is a forest.
 
@@ -86,36 +88,36 @@ is a forest.
 
 Suppose there were a simple cycle consisting entirely of efficient contacts. Choose a cycle vertex `v` of maximal radius
 
-$$
+```math
 r=|v-z|.
-$$
+```
 
 Let `u,w` be its two cycle neighbors. Then
 
-$$
+```math
 r_u,r_w\le r.
-$$
+```
 
 Because both cycle edges are efficient,
 
-$$
+```math
 d_u:=r-r_u>\sqrt3/2,
 \qquad
  d_w:=r-r_w>\sqrt3/2.
 \tag{2.1}
-$$
+```
 
 We have `r>0`; otherwise every cycle vertex would coincide with `z`.
 
 Let `n` be the inward radial unit vector at `v`,
 
-$$
+```math
 n=\frac{z-v}{r}.
-$$
+```
 
 For the unit edge `vu`, the inward radial projection is
 
-$$
+```math
 \begin{aligned}
 n\cdot(u-v)
 &=
@@ -128,32 +130,32 @@ n\cdot(u-v)
 >\sqrt3/2.
 \end{aligned}
 \tag{2.2}
-$$
+```
 
 Thus the unit vector from `v` to `u` makes angle strictly less than `pi/6` with the inward radial direction. The same holds for `vw`.
 
 Therefore
 
-$$
+```math
 \angle uvw? 
-$$
+```
 
 more precisely, the angle between the two unit rays `vu` and `vw` is strictly less than
 
-$$
+```math
 \pi/6+\pi/6=\pi/3.
 \tag{2.3}
-$$
+```
 
 Since `|v-u|=|v-w|=1`, the chord between their endpoints satisfies
 
-$$
+```math
 |u-w|
 =2\sin\frac{\angle uvw_v}{2}
 <2\sin\frac\pi6
 =1.
 \tag{2.4}
-$$
+```
 
 This contradicts unit separation of distinct source points `u,w`.
 
@@ -167,19 +169,19 @@ The notation in (2.4) refers to the angle `angle uvw_v := angle(u-v,w-v)` at `v`
 
 Let
 
-$$
+```math
 C_{bad}(z)
 :=
 \{xy\in C:|r_x-r_y|\le\sqrt3/2\}.
 \tag{3.1}
-$$
+```
 
 ZRF.1 says
 
-$$
+```math
 \boxed{C\setminus C_{bad}(z)\text{ is a forest}.}
 \tag{ZRF1}
-$$
+```
 
 Equivalently, `C_bad(z)` is a feedback edge set: every cycle of the complete contact graph contains at least one bad edge.
 
@@ -191,59 +193,61 @@ This statement is unweighted and holds for any unit-separated point set.
 
 Now take `z` to be the C66 stress-star center in the lexicographically normalized C-II survivor. C68 gives
 
-$$
+```math
 Q_z
 =
 \sum_{xy\in C}\alpha_{xy}
 [1-(r_x-r_y)^2].
 \tag{4.1}
-$$
+```
 
 Every bad edge contributes at least `alpha_e/4` by (1.3). Therefore
 
-$$
+```math
 \boxed{
 \sum_{e\in C_{bad}(z)}\alpha_e
 \le4Q_z.
 }
 \tag{ZRF2}
-$$
+```
 
 C68 further gives
 
-$$
+```math
 Q_z\le C_0D^3\varepsilon.
 \tag{4.2}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \sum_{e\in C_{bad}(z)}\alpha_e
 \le4C_0D^3\varepsilon.
 }
 \tag{ZRF3}
+```
 
 If
 
-\[
+```math
 D\varepsilon\to0,
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \sum_{e\in C_{bad}(z)}\alpha_e=o(D^2).
 }
 \tag{ZRF4}
+```
 
 Since the complete contact stress is normalized by
 
-\[
+```math
 \sum_{e\in C}\alpha_e=D^2,
-$$
+```
 
 we obtain:
 
@@ -251,18 +255,19 @@ we obtain:
 
 Under `D epsilon->0`, there exists a contact forest
 
-$$
+```math
 F_z:=C\setminus C_{bad}(z)
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{
 \sum_{e\in F_z}\alpha_e
 =D^2-o(D^2).
 }
 \tag{ZRF5}
+```
 
 Thus asymptotically all mechanical contact stress is carried by a forest whose every edge changes distance from `z` by more than `sqrt(3)/2`.
 
@@ -272,28 +277,28 @@ Thus asymptotically all mechanical contact stress is carried by a forest whose e
 
 Let `v` be the number of nonisolated core vertices. Since `F_z` is a forest,
 
-\[
+```math
 |F_z|\le v-1.
 \tag{5.1}
-$$
+```
 
 Hence
 
-$$
+```math
 |C_{bad}(z)|
 \ge e-v+1.
 \tag{5.2}
-$$
+```
 
 ZF gives
 
-$$
+```math
 e+h\ge2v-2,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 |C_{bad}(z)|
 \ge v-h-1
@@ -301,6 +306,7 @@ $$
 \ge v-\pi D-1.
 }
 \tag{ZRF6}
+```
 
 Thus if the nonisolated core itself has quadratic cardinality `v=Omega(D^2)`, then it contains `Omega(D^2)` radially bad cycle-closing contacts, but by ZRF4 their **total** KKT stress is `o(D^2)`.
 
@@ -314,9 +320,9 @@ This is a source-wide version of the low-stress-brace phenomenon found locally i
 
 Every ZWT trunk bridge has
 
-\[
+```math
 \alpha_e=\Theta(D)
-$$
+```
 
 and ZBL/C68 makes all but `o(D)` trunk bridges satisfy radial progress arbitrarily close to one. Hence almost the entire macroscopic trunk belongs to the efficient forest `F_z`.
 

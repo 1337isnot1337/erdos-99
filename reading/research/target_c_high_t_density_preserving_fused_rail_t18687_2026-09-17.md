@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_density_preserving_fused_rail_t18687_2026-09-17.md) · source SHA-256 `b82e75e88458d61edc5aee6db0acb1a82e194380caf09b39d34b4162b025b9d6`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 14 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "662f78b6438dd76298411a2a8bbf029c4d547d6c", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_density_preserving_fused_rail_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "dc8ed3c610ca471ef395bfc0b5e37a38ae88134a6871544729f5d9cbdfca1009"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -18,89 +20,96 @@ The fixed-parameter fused-rail theorem retained one half of the `c0/2` tagged ne
 
 Let
 
-$$
+```math
 c_0={113\over20{,}000{,}000},
 \qquad
 \gamma={c_0\over2}=2.825\times10^{-6},
 \qquad
 r=0.6536.
 \tag{DP.1}
-$$
+```
 
 There is a strictly nested exact-normal tagged rail `R_D` with
 
-$$
+```math
 |R_D|>\gamma D-o(D).
 \tag{DP.2}
-$$
+```
 
 Apply the local phase/bracket argument with the varying parameters
 
-$$
+```math
 \eta_D=\sigma_D=D^{-1/3},
 \qquad
 \mu={1\over100}.
 \tag{DP.3}
-$$
+```
 
 Then one obtains a subrail `R_D'` satisfying
 
-$$
+```math
 \boxed{|R_D'|>\gamma D-o(D),}
 \tag{DP.4}
+```
 
 so there is **no leading-density loss**, and every retained birth interface has one common adjacent-row transverse family `P_i` with
 
-\[
+```math
 \boxed{|P_i|>rD-o(D),}
 \tag{DP.5}
+```
 
 such that every retained crossing on both adjacent rows has angular defect
 
-\[
+```math
 \boxed{
 0<\delta(\tau_j,b)
 \le {2C_{phase}\over\gamma}D^{-1/3}
 +o(D^{-1/3}),
 }
 \tag{DP.6}
+```
 
 where
 
-\[
+```math
 C_{phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
-$$
+```
 
 Thus the common two-row ladders are uniformly `o(1)`-equilateral while retaining asymptotically the entire `0.6536D` crossing population.
 
 The same columns contain common circumcenter flanks at `+-0.01D`. Each flank has density
 
-$$
+```math
 \boxed{
 q_*:=0.6536-{1.02\over\sqrt3}
 =0.0647027254\ldots,
 }
 \tag{DP.7}
+```
 
 so
 
-\[
+```math
 \boxed{|P_i^-|,|P_i^+|>(q_*-o(1))D.}
 \tag{DP.8}
+```
 
 All global rail structure survives: strict selected-cut nesting, exact normal-direction order, exact antipodal transport of the normal parameter to the partner endpoint, and the EA/TB1 mechanism tag at every position.
 
 Consequently one mechanism tag occurs on at least
 
-\[
+```math
 \boxed{{c_0\over4}D-o(D)=1.4125\times10^{-6}D-o(D)}
 \tag{DP.9}
+```
 
 positions of the same density-preserving fused rail. If one also fixes one physical destination, opposite host or `T_m`, one tag/destination branch still has density
 
-\[
+```math
 \boxed{{c_0\over8}D-o(D)=7.0625\times10^{-7}D-o(D).}
 \tag{DP.10}
+```
 
 The price for preserving full density is only that the uniform phase defect is `O(D^-1/3)` rather than `O(D^-1)`.
 
@@ -110,10 +119,11 @@ The price for preserving full density is only that the uniform phase defect is `
 
 The full tagged-rail theorem gives a family `R_D` of actual switching diameter bars born on one fixed host with
 
-\[
+```math
 |R_D|>\gamma D-o(D),
 \qquad \gamma={c_0\over2}.
 \tag{DP.11}
+```
 
 Their selected-cut supports are strictly nested, their exact diameter/hull-normal directions are strictly ordered, and every partner endpoint lies on the opposite-host-plus-terminal segment. Every rail interface is fixed-good, so its adjacent stopped-train terminal cost is `O(1)`.
 
@@ -125,31 +135,34 @@ Deleting any subset of rail positions preserves all of these order statements. I
 
 For an interface `i in R_D`, let `S_i` be the two-row total angular-defect charge over the common adjacent-row train family, exactly as in the local phase/bracket theorem. The global strict-rhombus defect budget gives
 
-\[
+```math
 \sum_{i\in R_D}S_i\le2C_{phase}D.
 \tag{DP.12}
+```
 
 Set
 
-\[
+```math
 \eta_D=D^{-1/3}.
-$$
+```
 
 Use the threshold
 
-$$
+```math
 T_D={2C_{phase}\over\eta_D\gamma}
 ={2C_{phase}\over\gamma}D^{1/3}.
 \tag{DP.13}
+```
 
 At most
 
-\[
+```math
 {2C_{phase}D\over T_D}
 =\eta_D\gamma D
 =\gamma D^{2/3}
 =o(D)
 \tag{DP.14}
+```
 
 rail positions have `S_i>T_D`. Delete them. Together with the original `o(D)` error in (DP.11), the surviving rail still satisfies (DP.4).
 
@@ -159,52 +172,55 @@ rail positions have `S_i>T_D`. Delete them. Together with the original `o(D)` er
 
 At a retained interface choose
 
-\[
+```math
 \sigma_D=D^{-1/3}.
-$$
+```
 
 Call a common adjacent-row column bad if its two-row defect charge exceeds
 
-$$
+```math
 {K_D\over D},
 \qquad
 K_D={T_D\over\sigma_D}
 ={2C_{phase}\over\gamma}D^{2/3}.
 \tag{DP.15}
+```
 
 Since `S_i<=T_D`, there are at most
 
-\[
+```math
 \sigma_DD=D^{2/3}=o(D)
 \tag{DP.16}
+```
 
 bad columns. The adjacent common-train theorem starts with
 
-\[
+```math
 |\Gamma_i\cap\Gamma_{i+1}|>rD-o(D),
-$$
+```
 
 so after deleting the bad columns,
 
-$$
+```math
 |P_i|>rD-o(D),
-$$
+```
 
 which is (DP.5).
 
 Every retained crossing defect on either adjacent row is at most
 
-$$
+```math
 {K_D\over D}
 ={2C_{phase}\over\gamma}D^{-1/3},
-$$
+```
 
 proving (DP.6). The numerical coefficient is
 
-$$
+```math
 {2C_{phase}\over\gamma}
 =3.763901224\ldots\times10^6.
 \tag{DP.17}
+```
 
 The coefficient is large, but fixed; the bound still tends to zero.
 
@@ -214,20 +230,20 @@ The coefficient is large, but fixed; the bound still tends to zero.
 
 Fix `mu=.01`. The train-step/circumdisk capacity argument applied after the `o(D)` column deletion gives, on either adjacent row, more than
 
-\[
+```math
 \left(
  r-\sigma_D-{1.02\over\sqrt3}-o(1)
 \right)D
-$$
+```
 
 retained crossings below `-.01D` and the same number above `+.01D`.
 
 The common column order on the two rows turns these rowwise counts into common prefix/suffix families. Since `sigma_D->0`, each common flank has the limiting density
 
-$$
+```math
 q_*=r-{1.02\over\sqrt3}
 =0.0647027254265\ldots,
-$$
+```
 
 proving (DP.7)--(DP.8).
 
@@ -256,26 +272,27 @@ The exponent `1/3` balances the two relative errors when the same power is used 
 
 More generally take
 
-$$
+```math
 \eta_D=D^{-a},
 \qquad
 \sigma_D=D^{-b},
-$$
+```
 
 with fixed `a,b>0` and
 
-$$
+```math
 a+b<1.
-$$
+```
 
 Then:
 
 - interface loss is `O(D^{1-a})=o(D)`;
 - column loss is `O(D^{1-b})=o(D)`;
 - retained angular defect is
-  $$
+  ```math
   O(D^{a+b-1})=o(1).
-  $$
+  
+  ```
 
 Thus every choice `a,b>0`, `a+b<1` preserves the full leading rail and column densities while forcing the local ladder defect to zero. The symmetric choice `a=b=1/3` makes all three normalized errors of order `D^-1/3`.
 

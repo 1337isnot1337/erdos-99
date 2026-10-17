@@ -30,17 +30,17 @@ strictly convex, unit-separated and triangle-free.
 
 Put `R=M-1` and use the limiting triangular interior grid
 
-$$
+```math
 P_R=\{iu+jv:\ |i|,|j|,|i+j|\le R\},
 \quad u=(1,0),\quad v=(1/2,\sqrt3/2).
-$$
+```
 
 Delete its central site from the **target chart**, leaving
 
-$$
+```math
 \boxed{|P_R\setminus\{0\}|=3M^2-3M=:N-1,
 \qquad N=3M^2-3M+1.}\tag{1}
-$$
+```
 
 Delete the old wall corner in direction `e_0` in the eventual source
 exchange. At zero, five retained wall corners supply unit guard pairs
@@ -91,10 +91,10 @@ coordinate space. Section 2 says zero is not in their convex hull. Take
 the closest point `d` of that compact convex hull to zero. The projection
 inequality gives
 
-$$
+```math
 a_l\cdot d\ge|d|^2>0\qquad\text{for every }l.
 \tag{2}
-$$
+```
 
 Thus every chart unit pair and every retained corner guard strictly
 opens to first order. A sufficiently close rational approximation in
@@ -110,10 +110,10 @@ derivatives then remain positive, while every homogeneous derivative
 stays strictly positive. This supplies one fixed velocity field `d_i`
 such that
 
-$$
+```math
 p_i(\theta)=p_i+\theta d_i
 \tag{3}
-$$
+```
 
 strictly separates every formerly unit chart pair and every formerly
 unit retained wall guard for small positive `theta`. Every other lower
@@ -134,9 +134,9 @@ Suppose an actual triangle-free normalized global source contains this
 complete wall and `z` source points strictly inside it. Their positions
 and mutual contacts are arbitrary. If
 
-$$
+```math
 \boxed{z\le N-2,}\tag{4}
-$$
+```
 
 delete those `z` interior labels and the one wall corner. Assign them
 to exactly `z+1<=N-1` of the strict packet sites.
@@ -151,20 +151,20 @@ minimality or contact-minimality is contradicted.
 
 If also
 
-$$
+```math
 \operatorname{area}(F_\theta)<a_*(3M^2+1),
 \quad a_*=\sqrt3/2,
 \tag{5}
-$$
+```
 
 finite Oler applied to all wall and interior points gives
 `6M+z<3M^2+3M+2`, hence `z<=N`. The area tends to `3a_* M^2`, so (5)
 holds at sufficiently small positive angle. Composing the exact packet
 with this **upper** population bound leaves only
 
-$$
+```math
 \boxed{z\in\{N-1,N\}}\tag{6}
-$$
+```
 
 for any canonical completion in this wall class. Thus a population
 deficit of at least two has been spent as an actual source exchange.

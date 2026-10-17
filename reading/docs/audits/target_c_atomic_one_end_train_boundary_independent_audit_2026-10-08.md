@@ -23,25 +23,25 @@ bounded nonquadrilateral faces, `p` loaded-hull perimeter,
 `u_B=x_B-m`. Put `s_2=sqrt(pi/(2sqrt(3)))`.
 
 The exact one-ended train claim is
-$$
+```math
 \liminf_{D\to\infty}\frac{2f-k+m}{D}\ge 2s_2. \tag{1}
-$$
+```
 Using Section 63's exact identities, this gives
-$$
+```math
 \boxed{\liminf_{D\to\infty}
 \frac{5(q-k)+2g-z-u_B}{D}\ge3\pi+2s_2.} \tag{2}
-$$
+```
 Therefore `x_B=o(D)` forces
-$$
+```math
 \liminf (q-k)/D\ge(3\pi+2s_2)/5
 =2.26588071489945\ldots. \tag{3}
-$$
+```
 Combining (2) with Audit.130's outer-route bound, in the branch
 `(q-k)/D<=1.860+o(1)`, gives
-$$
+```math
 g\ge\max\{(5\pi+4s_2-18.6)D+4z,
 ((3\pi+2s_2-9.3)D+z+u_B)/2\}-o(D),
-$$
+```
 and hence `q/D<=2.1268908663411...+o(1)`. This remains compatible with the
 canonical lower bound on `q`; it is not a C-II contradiction.
 
@@ -73,10 +73,10 @@ Let `T_D` count the following complete trains in the contact complex:
    singleton train with its two facial terminal occurrences.
 
 The exact endpoint handshake is
-$$
+```math
 2T_D=b+Q+4f=2(q-k)+4f,
 \qquad T_D=q-k+2f. \tag{4}
-$$
+```
 For the first equality, count edge-side occurrences on the outer face and all
 bounded nonquadrilateral faces. An edge bordering the rhombic complex contributes
 one terminal occurrence of its actual track; an edge incident with no rhombus
@@ -115,25 +115,25 @@ of `A` with null boundary for both `lambda` and `mu`. At least
 `q-m-D mu(U)-o(D)` unit hull sides have directions outside `U`, by the tangent
 measure domination. They belong to at least `q-m-D mu(U)-o(D)-2` distinct
 trains outside `U`. Consequently, using (4) and weak convergence,
-$$
+```math
 \lambda(U)\le\lim\frac{T_D-q+m}{D}+\mu(U).
-$$
+```
 Shrink `U` to `A`. Since `mu` is atomless, `lambda(A)` is at most the limit on the
 right without the `mu(U)` term. Exhausting the countable atom set of `lambda` by
 finite `A` gives
-$$
+```math
 a\le\lim\frac{T_D-q+m}{D}
 =\lim\frac{2f-k+m}{D}. \tag{5}
-$$
+```
 Together with `a>=2s_2`, this proves (1) along any subsequence attaining the
 finite liminf; an infinite liminf is immediate.
 
 Since `Q>=f`, (1) implies
 `liminf (2Q-k+m)/D>=2s_2`. Substituting
 `Q=2(q-k)-b`, `b=p+z`, `m=g+z-u_B`, and `g=p-q` gives the exact identity
-$$
+```math
 2Q-k+m=5(q-k)-3p+2g-z-u_B.
-$$
+```
 Now `p/D->pi` proves (2). If `x_B=o(D)`, then `g,z,u_B=o(D)` because
 `x_B=g+z` and `0<=u_B<=x_B`; (3) follows. The combined low-`t_D` consequence
 uses only (2), Audit.130, and nonnegativity of `z,u_B`.

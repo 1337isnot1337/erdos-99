@@ -31,31 +31,31 @@ It uses no KKT coefficient lower bound and retains all source points.
 Use the canonical Section-96 wrapping notation. Let `P_D=conv(A_D)` be a
 wrapping harmonic cell, `d_D=diam(P_D)`, and `a_D=|A_D|`. Assume
 
-$$
+```math
  d_D/D\to\mu_4,
  \qquad
  \theta_4=2\arcsin\mu_4,
  \qquad
  \phi_4=2\pi-2\theta_4.
-$$
+```
 
 The Section-96 equality equation is
 
-$$
+```math
  \alpha_4:=3\theta_4-2\pi={3\over2}\sin\theta_4,
  \qquad
  \mu_4=0.936215741409583\ldots .
-$$
+```
 
 The endpoint outer-walk audit gives
 
-$$
+```math
  {a_D\over D}\to\alpha_4,
  \qquad
  Q_D+s_D+c_D=o(D),
  \qquad
  L_D=4\alpha_4D+o(D),
-$$
+```
 
 and three distinguished outer routes with chord length
 `sin(theta_4)D+o(D)` and total path excess `o(D)`.
@@ -64,13 +64,13 @@ The endpoint support-saturation argument gives a normalized attachment measure e
 to one-half of Lebesgue measure on the six allowed arcs, whose total angular measure
 is `2 alpha_4`. Consequently
 
-$$
+```math
  {\operatorname{area}(P_D)\over D^2}
  \longrightarrow
  A_4:= {\pi\over4}-{3\over8}(\phi_4-\sin\phi_4)
  =0.618374879828757\ldots .
 \tag{E.1}
-$$
+```
 
 The local rhombic deficit is `o(D^2)`, so the strict-rhombus complex in this cell
 has the same limiting area.
@@ -87,10 +87,10 @@ Every actual train end is incident either with the outer face of the induced car
 graph or with a bounded nonquadrilateral face. Since the latter contribute at most
 `5Q_D=o(D)` edge occurrences, we have, without any assumption on `b_D`,
 
-$$
+```math
 \boxed{\text{all but }o(D)\text{ train ends lie on the outer attachment routes}.}
 \tag{E.2a}
-$$
+```
 
 This is the only endpoint accounting used below. A linear family of outer-face
 bridges may remain, but it removes train ends rather than creating an additional
@@ -101,9 +101,9 @@ limits given by the midpoints of the three forbidden arcs. A unit path with `o(D
 excess over a chord has all but `o(D)` of its edge directions in every fixed
 neighborhood of the chord direction: this follows from
 
-$$
+```math
  \sum_k(1-q\cdot z_k)=\ell-|u-v|=o(D)
-$$
+```
 
 and `1-cos(t)\ge c_eta` outside an `eta`-neighborhood.
 
@@ -111,28 +111,28 @@ The endpoint count gives the needed stronger gap stability. Let `h_{i,D}` be the
 ordinary cyclic attachment gaps inside the six allowed arcs. The annular
 unit-separation estimate gives, uniformly,
 
-$$
+```math
 h_{i,D}\ge \ell_D:={r_D\over R_D^2},\qquad D\ell_D\to2.
 \tag{E.2b}
-$$
+```
 
 The saturated support has total allowed angular length `2alpha_4`, while
 `a_D=alpha_4D+o(D)`. Hence
 
-$$
+```math
 \sum_i(h_{i,D}-\ell_D)=o(1).
 \tag{E.2c}
-$$
+```
 
 Consequently, after deleting `o(D)` ordinary intervals, their gaps satisfy
 `h_{i,D}=(2+o(1))/D`; after also deleting `o(D)` intervals, their routes have
 exactly two edges. The next local step uses convexity, not annular convergence
 alone. Saturated support implies
 
-$$
+```math
  D^{-1}P_D\longrightarrow P_4:=\operatorname{conv}(U_4)
 \tag{E.2d}
-$$
+```
 
 in Hausdorff distance, where `U_4` is the six-arc circle support. Away from the
 finitely many arc endpoints, `P_4` has the circle as a supporting boundary arc.
@@ -144,10 +144,10 @@ same circle point, their tangential coordinates differ by at most two, and their
 normal coordinate is `(1/2+o(1))D`; hence `||p|-|q||=o(1)`. Together with
 `arg(q)-arg(p)=(2+o(1))/D`, this gives
 
-$$
+```math
  |p-q|=1+o(1).
 \tag{E.2e}
-$$
+```
 
 For a fixed endpoint-neighborhood width `epsilon`, the annular density bound gives
 `O(epsilon D)+o(D)` intervals there; let `epsilon` tend to zero after taking the
@@ -160,18 +160,18 @@ directions lie within `eta` of `v` are bounded by `O(eta D)+o(D)`: their attachm
 endpoints lie in finitely many angular windows of width `O(eta)+o(1)`. Letting
 `eta` tend to zero gives
 
-$$
+```math
 \boxed{\text{only }o(D)\text{ ordinary route edges approach any fixed projective direction}.}
 \tag{E.2d}
-$$
+```
 
 ## 3. The three long directions are distinct
 
 The forbidden arcs have length
 
-$$
+```math
  \phi_4=1.4363743902\ldots <\pi/2.
-$$
+```
 
 Two equal-length circular chords have the same projective direction exactly when
 their arc midpoints are antipodal. If two of the three forbidden arcs had antipodal
@@ -200,9 +200,9 @@ span is at most `d_D=O(D)`, all such mixed trains contribute `o(D^2)` in total.
 After also discarding the `o(D)` nonquadrilateral boundary ends, all remaining
 non-negligible-span trains have two ordinary-route ends. There are at most
 
-$$
+```math
  a_D+o(D)=\alpha_4D+o(D)
-$$
+```
 
 such trains, because the ordinary routes contain `2a_D+o(D)` boundary edges and
 each train has two ends.
@@ -213,26 +213,26 @@ For each train, the sum of its rhombus transverse advances equals its exact
 transverse span. Every terminal edge midpoint lies in `P_D`, so every train span is
 at most `d_D`. Each strict rhombus belongs to two trains. Thus
 
-$$
+```math
  2\operatorname{area}(P_D)-o(D^2)
  \le
  (\alpha_4D+o(D))d_D+o(D^2).
-$$
+```
 
 Dividing by `D^2` and using (E.1) gives the necessary endpoint inequality
 
-$$
+```math
  2A_4\le\alpha_4\mu_4.
 \tag{E.2}
-$$
+```
 
 But exact arithmetic gives
 
-$$
+```math
  2A_4=1.236749759657516\ldots,
  \qquad
   \alpha_4\mu_4=0.924074023352554\ldots,
-$$
+```
 
 so (E.2) is false by a fixed positive margin. Therefore no canonical Type-II
 wrapping-cell sequence satisfying the endpoint support-saturation hypotheses can
@@ -242,9 +242,9 @@ converge to the Section-96 endpoint `mu_4`.
 
 The result gives a qualitative strict improvement for the endpoint-saturated branch:
 
-$$
+```math
  \liminf {\operatorname{diam}(P_D)\over D}>\mu_4
-$$
+```
 
 for any family of wrapping cells satisfying the endpoint compactness and
 support-saturation hypotheses. The argument does not supply an explicit gap and does

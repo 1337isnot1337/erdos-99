@@ -34,11 +34,12 @@ The candidate proves:
 1. For every fixed `lambda>0` and `eta>0` there is a fixed `rho>0`
    such that eventually fewer than `eta D` attachment incidences
    `(a,I)` fail
-   $$
+   ```math
    \operatorname{dist}_I(a,z)<\lambda D
    \quad\text{for every }z\in I\cap\overline B(a,\rho D).
    \tag{PM1}
-   $$
+   
+   ```
    The count is over all harmonic components.
 2. In the macroscopic cell supplied by Section 78, for every fixed
    `lambda>0` at least `cD` actual attachments have same-component
@@ -101,24 +102,24 @@ Let `Q` be a compact convex polygon of area `S>0`. Choose diametral
 vertices `x,y` with `L=|x-y|`. Every triangle `xyz`, `z in Q`, lies in
 `Q`, giving `dist(z,ell_xy)<=2S/L`. Also that distance is at most `L`.
 Therefore
-$$
+```math
 Q\subset\{z:\operatorname{dist}(z,\ell_{xy})\le\sqrt{2S}\}.
 \tag{PM2}
-$$
+```
 This uses `min(L,2S/L)<=sqrt(2S)`, and allows long thin faces.
 
 Suppose the unit-separated convex-position vertices `B` satisfy
-$$
+```math
 \overline B(0,(1/2-\delta)D)\subset F
 \subset\overline B(0,(1/2+\delta)D),\qquad 0\le\delta<1/4.
 \tag{PM3}
-$$
+```
 Every vertex has radius in that interval. For any line `ell` and `w>=0`,
-$$
+```math
 \#\{b\in B:\operatorname{dist}(b,\ell)\le wD\}
 \le12(1+2\delta)\sqrt{w+\delta}\,D+64\delta D+8.
 \tag{PM4}
-$$
+```
 
 The bound in fact requires only the vertex-radius interval and convex
 position. The hull inclusions are a sufficient canonical way to obtain
@@ -129,12 +130,12 @@ projection to the radius-one-half circle changes the normal coordinate
 by at most `delta D`. The angular directions have cosine in an interval
 of length at most `4(w+delta)`, clipped to `[-1,1]`. For
 `0<=theta<=phi<=pi`,
-$$
+```math
 \cos\theta-\cos\phi
 =2\sin((\theta+\phi)/2)\sin((\phi-\theta)/2)
 \ge2\sin^2((\phi-\theta)/2)
 \ge2(\phi-\theta)^2/\pi^2.
-$$
+```
 The full angular preimage has length at most
 `2sqrt(2)pi sqrt(w+delta)<12sqrt(w+delta)`. Split it into at most four
 closed arcs of length at most `pi`.
@@ -155,11 +156,11 @@ all cells. Every unloaded-only actual rhombus remains a face of its
 augmented graph, since all its internal contact edges are retained.
 No face of `E_D` contains such a rhombus interior. Cell disjointness
 and Section 83 imply
-$$
+```math
 \sum_{f\in E_D}\operatorname{area}(f)
 \le\sum_I\{\operatorname{area}(P_I)-A_{4,I}\}=o(D^2).
 \tag{PM5}
-$$
+```
 Omitting loaded-loaded edges cannot merge across an unloaded-only
 rhombus edge. Polygon-side faces are included; their added sides need
 not have length one.
@@ -167,59 +168,59 @@ not have length one.
 Set `epsilon_D=sqrt(2 max_{f in E_D}area(f))/D`, zero for an empty family.
 Then `epsilon_D->0`. Convexity and Type-II Hausdorff convergence give
 `delta_D->0` satisfying (PM3). By (PM2)--(PM4), uniformly for every face,
-$$
+```math
 \#\{b\in B:\operatorname{dist}(b,f)\le\rho D\}\le L_D(\rho),
 \tag{PM6}
-$$
+```
 where
-$$
+```math
 L_D(\rho)=12(1+2\delta_D)\sqrt{\rho+\epsilon_D+\delta_D}\,D
 +64\delta_D D+8.
-$$
+```
 For each fixed `rho>0`,
 `limsup_D L_D(rho)/D<=12sqrt(rho)`. No convergence rate is asserted.
 
 ## 4. One global tail, with controlled multiplicity
 
 For fixed `M>=5` define
-$$
+```math
 T_M=\sum_{I,f:\ d(f)>M}(d(f)-4),\qquad
 \Phi_{a,I}(M,\rho)=
 \sum_{\substack{f\text{ in }J_I^+,\,d(f)>M\\
                  \operatorname{dist}(a,f)\le\rho D}}(d(f)-4).
-$$
+```
 Swap the finite nonnegative sums:
-$$
+```math
 \sum_{(a,I):\,a\in A_I}\Phi_{a,I}(M,\rho)\le L_D(\rho)T_M.
 \tag{PM7}
-$$
+```
 Each face counts only attachments of its own cell, a subset of `B`.
 A port shared by several cells gives several incidences, but each face
 enters the global bank once. This is a multiplicity bound, not a
 collection of independently available route banks.
 
 Loaded contact degree is at most three, `k>=0`, and `q<=pi D`, so
-$$
+```math
 T_M\le2(e_{BB}-k)\le2e_{BB}\le3q\le3\pi D.
 \tag{PM8}
-$$
+```
 Thus, for fixed rho,
-$$
+```math
 \limsup_{D\to\infty}D^{-2}\sum_{(a,I)}\Phi_{a,I}(M,\rho)
 \le36\pi\sqrt\rho.
 \tag{PM9}
-$$
+```
 A linear global tail remains permitted.
 
 ## 5. Short access outside a small exceptional incidence set
 
 Audit.134's proof directly gives the local refinement
-$$
+```math
 \operatorname{dist}_I(a,z)
 \le K_M|a-z|+B_M+5\Phi_{a,I}(M,\rho)
 \quad\text{if }|a-z|\le\rho D.
 \tag{PM10}
-$$
+```
 Every high-degree face met by `[a,z]` is within `rho D` of `a`.
 The low-degree tube count is unchanged. Closed faces and distances
 retain the degenerate limiting charges used in the canonical proof.
@@ -228,20 +229,20 @@ Fix `M=5` and choose `K_M rho<lambda/4`. Eventually
 `B_M<lambda D/4`. Every incidence with
 `Phi_{a,I}(M,rho)<lambda D/10` satisfies (PM1) for every indicated
 target. Equations (PM7)--(PM9) yield
-$$
+```math
 \limsup_{D\to\infty}
 \frac{\#\{(a,I):\Phi_{a,I}(5,\rho)\ge\lambda D/10\}}D
 \le(360\pi/\lambda)\sqrt\rho.
 \tag{PM11}
-$$
+```
 Taking also `360pi sqrt(rho)/lambda<eta/2` proves statement 1.
 Equivalently, for each fixed lambda,
-$$
+```math
 \lim_{\rho\downarrow0}\limsup_{D\to\infty}
 D^{-1}\#\{(a,I):\exists z\in I,\ |a-z|\le\rho D,\
                     \operatorname{dist}_I(a,z)\ge\lambda D\}=0.
 \tag{PM12}
-$$
+```
 This iterated-limit count does not bound a worst specified port or
 imply a vanishing global degree tail.
 
@@ -286,13 +287,13 @@ from `a`, with `L=|a-b|`. Since `P subset closed_ball(a,L)`,
 `L>=sqrt(S/pi)`. Relative to line `ab`, the total signed-height range
 is at least `S/D`, since the tangential span of `P` is at most `D`.
 Choose `c in A` of absolute height at least `S/(2D)`. Then
-$$
+```math
 \operatorname{area}(\Delta)\ge\frac{S^{3/2}}{4\sqrt\pi D}
 \ge\tau D^2,\quad
 \Delta=\operatorname{conv}\{a,b,c\},\quad
 \tau=\alpha^{3/2}/(4\sqrt\pi)>0.
 \tag{PM13}
-$$
+```
 Orient line `bc` so the height `eta(a)` is positive. As both altitude
 and base length are at most `D`,
 `eta(a)>=2tau D` and `|b-c|>=2tau D`.

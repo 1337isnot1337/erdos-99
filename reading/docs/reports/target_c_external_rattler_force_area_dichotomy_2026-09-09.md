@@ -38,51 +38,51 @@ minimizer. Let
 
 The OP theorem proves
 
-$$
+```math
 \boxed{
  n-Z_{ext}
  \le
  \frac{2}{\sqrt3}A_F+\frac12P_F+1.
 }
 \tag{ER.1}
-$$
+```
 
 Indeed `n-Z_ext` consists of the core vertices, bounded-face rattlers, and outer-face
 rattlers that still lie inside `F`.
 
 The current strict lattice comparison is
 
-$$
+```math
 \boxed{
 D(n)^2<\frac{2\sqrt3}{\pi}(n-1).
 }
 \tag{ER.2}
-$$
+```
 
 Equivalently, with
 
-$$
+```math
 \Delta:=\frac\pi{2\sqrt3},
-$$
+```
 
-$$
+```math
 \boxed{n>\Delta D^2+1.}
 \tag{ER.3}
-$$
+```
 
 Finally convexity gives
 
-$$
+```math
 P_F\le\pi D
 \tag{ER.4}
-$$
+```
 
 and the isodiametric inequality gives
 
-$$
+```math
 A_F\le\frac\pi4D^2.
 \tag{ER.5}
-$$
+```
 
 ## 2. Theorem ER — exact external-rattler lower bound
 
@@ -90,7 +90,7 @@ $$
 
 Every C65 hypothetical survivor satisfies
 
-$$
+```math
 \boxed{
 Z_{ext}
 >
@@ -99,11 +99,11 @@ Z_{ext}
 -\frac12P_F.
 }
 \tag{ER.6}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 Z_{ext}
 >
@@ -112,13 +112,13 @@ Z_{ext}
 -\frac\pi2D.
 }
 \tag{ER.7}
-$$
+```
 
 ### Proof
 
 Subtract ER.1 from ER.3:
 
-$$
+```math
 \begin{aligned}
 Z_{ext}
 &=n-(n-Z_{ext})\\
@@ -130,7 +130,7 @@ Z_{ext}
 \left(\frac\pi4D^2-A_F\right)
 -\frac12P_F.
 \end{aligned}
-$$
+```
 
 This proves ER.6. Insert `P_F<=pi D` to obtain ER.7. `square`
 
@@ -138,19 +138,19 @@ This proves ER.6. Insert `P_F<=pi D` to obtain ER.7. `square`
 
 Suppose along a sequence
 
-$$
+```math
 \frac{A_F}{D^2}\le\frac\pi4-\eta+o(1)
-$$
+```
 
 for some fixed `eta>0`. Then ER.7 gives
 
-$$
+```math
 \boxed{
 \liminf\frac{Z_{ext}}{D^2}
 \ge\frac{2\eta}{\sqrt3}.
 }
 \tag{ER.8}
-$$
+```
 
 Thus any fixed normalized force-hull area deficit produces a fixed positive density of
 source points outside the force hull.
@@ -161,29 +161,29 @@ Conversely:
 
 If
 
-$$
+```math
 Z_{ext}=o(D^2),
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \frac{A_F}{D^2}\longrightarrow\frac\pi4.
 }
 \tag{ER.9}
-$$
+```
 
 ### Proof
 
 ER.7 gives
 
-$$
+```math
 \frac{2}{\sqrt3}
 \left(\frac\pi4-\frac{A_F}{D^2}\right)
 <
 \frac{Z_{ext}}{D^2}+\frac\pi{2D}.
-$$
+```
 
 The right side tends to zero, while ER.5 makes the left side nonnegative. `square`
 
@@ -194,18 +194,18 @@ asymptotically attain the planar isodiametric area maximum.
 
 ZA proves the independent lower bound
 
-$$
+```math
 \liminf\frac{A_F}{D^2}\ge\frac12\sin1
 =0.4207354924\ldots .
-$$
+```
 
 ER upgrades the interpretation of the remaining interval
 
-$$
+```math
 0.420735\ldots
 \le\frac{A_F}{D^2}
 \le\frac\pi4=0.785398\ldots .
-$$
+```
 
 If the normalized area stays a fixed amount below `pi/4`, then there are
 `Theta(D^2)` external source points. If it approaches `pi/4`, then the force hull is
@@ -259,11 +259,11 @@ The combination isolates a precise representative-transfer target:
 
 ZA alone gives
 
-$$
+```math
 \frac\pi4D^2-A_F
 \le
 \left(\frac\pi4-\frac12\sin1+o(1)\right)D^2,
-$$
+```
 
 so ER does not force a positive external population from ZA alone. It is a lower bound
 on `Z_ext` in terms of the **actual** area deficit, not in terms of the minimum area
@@ -271,10 +271,10 @@ allowed by ZA.
 
 The coefficient is explicit:
 
-$$
+```math
 \frac{2}{\sqrt3}\left(\frac\pi4-\frac12\sin1\right)
 =0.421\ldots .
-$$
+```
 
 This only gives the maximum external density compatible with the current lower area
 floor, not a compulsory one.

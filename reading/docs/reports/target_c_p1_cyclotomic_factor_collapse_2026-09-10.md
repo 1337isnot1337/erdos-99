@@ -18,25 +18,25 @@
 
 The P1 endpoint has the exact angle equation, with
 
-$$
+```math
 m:=q-2,
 \qquad z=e^{i\delta},
-$$
+```
 
-$$
+```math
 \cos(m\delta)+4\cos\delta-3=0.
 \tag{CF.1}
-$$
+```
 
 Equivalently `z` is a root of the reciprocal five-term polynomial
 
-$$
+```math
 \boxed{
 F_m(z)
 :=z^{2m}+4z^{m+1}-6z^m+4z^{m-1}+1.
 }
 \tag{CF.2}
-$$
+```
 
 SC simultaneously requires `z` to be a root of a Littlewood polynomial of degree `m-1`.
 
@@ -46,7 +46,7 @@ The main theorem here completely removes the cyclotomic ambiguity from CF.2.
 
 For every integer `m>=1`,
 
-$$
+```math
 \boxed{
 \Phi_r(z)\mid F_m(z)
 \iff
@@ -54,11 +54,11 @@ r=6\ \text{and}\ 6\mid m.
 }
 \tag{CF.3}
 
-$$
+```
 
 Thus the complete cyclotomic part of `F_m` is
 
-$$
+```math
 \boxed{
 \operatorname{cyc}(F_m)=
 \begin{cases}
@@ -68,7 +68,7 @@ $$
 }
 \tag{CF.4}
 
-$$
+```
 
 The physical P1 root has `0<delta<pi/m`, hence for every sufficiently large Target C source it is not a primitive sixth root. Therefore its minimal polynomial is a **noncyclotomic reciprocal factor** of `F_m`.
 
@@ -84,45 +84,45 @@ Any bound `>m-1` closes P1 because SC supplies a Littlewood annihilator of degre
 
 PR/SC gives the P1 equation
 
-$$
+```math
 \cos(mx)=2\sin x,
 \qquad x=\delta/2.
 \tag{1.1}
-$$
+```
 
 Squaring and using `cos(2mx)=2cos^2(mx)-1` gives
 
-$$
+```math
 \cos(m\delta)
 =3-4\cos\delta,
-$$
+```
 
 which is CF.1. Multiplying
 
-$$
+```math
 z^m+z^{-m}+4(z+z^{-1})-6=0
 \tag{1.2}
-$$
+```
 
 by `z^m` gives CF.2.
 
 Two useful exact rewrites are
 
-$$
+```math
 \boxed{
 F_m(z)=(z^m+1)^2+4z^{m-1}(z-1)^2,
 }
 \tag{1.3}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 F_m(z)=(z^m-1)^2+4z^{m-1}(z^2-z+1).
 }
 \tag{1.4}
-$$
+```
 
 The second identity already shows the `Phi_6` factor when `6|m`, but it does not exclude other cyclotomic factors. The exclusion is the content of Sections 2-3.
 
@@ -132,50 +132,50 @@ The second identity already shows the `Phi_6` factor when `6|m`, but it does not
 
 Assume
 
-$$
+```math
 \Phi_r\mid F_m.
 \tag{2.1}
-$$
+```
 
 Let `xi` run through all primitive `r`th roots of unity. Because `Phi_r` is irreducible over `Q`, every such `xi` is a root of `F_m`. Dividing `F_m(xi)=0` by `xi^m` gives
 
-$$
+```math
 \xi^m+\xi^{-m}+4\xi+4\xi^{-1}-6=0.
 \tag{2.2}
-$$
+```
 
 Sum (2.2) over the complete primitive `r`th-root orbit.
 
 Write
 
-$$
+```math
 c_r(k):=\sum_{\substack{1\le a\le r\\(a,r)=1}}
  e^{2\pi iak/r}
-$$
+```
 
 for the Ramanujan sum. Then
 
-$$
+```math
 c_r(-m)=c_r(m),
 \qquad
 c_r(1)=\mu(r),
-$$
+```
 
 and the number of primitive roots is `phi(r)`. Hence (2.2) gives the exact integer identity
 
-$$
+```math
 2c_r(m)+8\mu(r)-6\phi(r)=0,
-$$
+```
 
 or
 
-$$
+```math
 \boxed{
 c_r(m)+4\mu(r)=3\phi(r).
 }
 \tag{2.3}
 
-$$
+```
 
 This trace identity is much stronger than testing individual roots.
 
@@ -185,39 +185,39 @@ This trace identity is much stronger than testing individual roots.
 
 A Ramanujan sum is the sum of `phi(r)` complex numbers of modulus one, so
 
-$$
+```math
 |c_r(m)|\le\phi(r).
 \tag{3.1}
-$$
+```
 
 Also
 
-$$
+```math
 |\mu(r)|\le1.
 \tag{3.2}
-$$
+```
 
 Taking the upper bound in (2.3),
 
-$$
+```math
 3\phi(r)
 =c_r(m)+4\mu(r)
 \le\phi(r)+4.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{\phi(r)\le2.}
 \tag{3.3}
-$$
+```
 
 The only positive integers with Euler totient at most two are
 
-$$
+```math
 r\in\{1,2,3,4,6\}.
 \tag{3.4}
-$$
+```
 
 We now check these five possibilities in the exact trace identity.
 
@@ -226,31 +226,32 @@ We now check these five possibilities in the exact trace identity.
 - `r=3`: `mu(3)=-1`, `phi(3)=2`, and `c_3(m)<=2`; the left side is at most `-2`, never `6`.
 - `r=4`: `mu(4)=0`, `phi(4)=2`, and `|c_4(m)|<=2`; it cannot equal `6`.
 - `r=6`: `mu(6)=1`, `phi(6)=2`, so (2.3) requires
-  $$
+  ```math
   c_6(m)=2.
   \tag{3.5}
-  $$
+  
+  ```
 
 The sum `c_6(m)` is the sum of two unit complex numbers. Equality to `2` forces both summands to equal `1`, equivalently every primitive sixth root satisfies `xi^m=1`. Thus
 
-$$
+```math
 \boxed{6\mid m.}
 \tag{3.6}
-$$
+```
 
 Conversely, if `6|m`, then for a primitive sixth root `xi`,
 
-$$
+```math
 \xi^m=1,
 \qquad
 \xi+\xi^{-1}=1,
-$$
+```
 
 and (2.2) reads
 
-$$
+```math
 2+4-6=0.
-$$
+```
 
 Hence every primitive sixth root is a root of `F_m`, so `Phi_6|F_m`.
 
@@ -262,27 +263,27 @@ This proves CF.3-CF.4. `square`
 
 Put
 
-$$
+```math
 y=z+z^{-1}.
-$$
+```
 
 Let `C_m(y)` be the monic trace Chebyshev polynomial defined by
 
-$$
+```math
 C_0=2,
 \qquad C_1=y,
 \qquad C_{m+1}=yC_m-C_{m-1},
-$$
+```
 
 so that
 
-$$
+```math
 C_m(z+z^{-1})=z^m+z^{-m}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 z^{-m}F_m(z)=H_m(y),
 \qquad
@@ -290,25 +291,25 @@ H_m(y):=C_m(y)+4y-6.
 }
 \tag{4.1}
 
-$$
+```
 
 The cyclotomic factor `Phi_6(z)=z(z+z^{-1}-1)` corresponds exactly to the linear trace factor
 
-$$
+```math
 \boxed{y-1.}
 \tag{4.2}
-$$
+```
 
 Thus CF is equivalently
 
-$$
+```math
 \boxed{
 H_m(y)\text{ has a trace-cyclotomic factor iff }6\mid m,
 \text{ in which case it is exactly }y-1.
 }
 \tag{4.3}
 
-$$
+```
 
 No other root-of-unity trace can occur.
 
@@ -318,68 +319,68 @@ No other root-of-unity trace can occur.
 
 SC proves that a P1 survivor requires a Littlewood polynomial
 
-$$
+```math
 P(z)=\sum_{k=0}^{m-1}\varepsilon_kz^k,
 \qquad
 \varepsilon_k\in\{+1,-1\},
 \tag{5.1}
-$$
+```
 
 with
 
-$$
+```math
 P(e^{i\delta})=0.
 \tag{5.2}
-$$
+```
 
 Let
 
-$$
+```math
 z_0=e^{i\delta}
-$$
+```
 
 be the physical P1 root and let `R_m` be its minimal polynomial over `Q`. Since `F_m` is monic with constant term one, `z_0` is an algebraic unit and
 
-$$
+```math
 R_m\mid F_m.
 \tag{5.3}
-$$
+```
 
 Since `P(z_0)=0`,
 
-$$
+```math
 R_m\mid P,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{\deg R_m\le m-1.}
 \tag{5.4}
-$$
+```
 
 Because `z_0` lies on the unit circle and `R_m` has real rational coefficients, `z_0^{-1}=\overline{z_0}` is another root. Irreducibility then makes `R_m` reciprocal.
 
 For a P1 source,
 
-$$
+```math
 m\delta+\Delta_2=\pi,
 \qquad
 \Delta_2>0,
-$$
+```
 
 so
 
-$$
+```math
 0<\delta<\pi/m.
 \tag{5.5}
-$$
+```
 
 In the large Target C regime `m>=4`, this excludes `delta=pi/3`. By CF, `z_0` is therefore noncyclotomic.
 
 Hence every P1 survivor forces:
 
-$$
+```math
 \boxed{
 \begin{array}{l}
 R_m\text{ noncyclotomic and reciprocal},\\
@@ -388,7 +389,7 @@ R_m\mid F_m,\\
 R_m\text{ has the physical unit-circle root }e^{i\delta}.
 \end{array}}
 \tag{CF.5}
-$$
+```
 
 This is the exact remaining arithmetic obstruction.
 
@@ -398,16 +399,16 @@ This is the exact remaining arithmetic obstruction.
 
 Although they do not yet prove irreducibility, the same five-term polynomial has unusually rigid reductions:
 
-$$
+```math
 \boxed{
 F_m(z)\equiv z^{2m}+1=(z^m+1)^2\pmod2,
 }
 \tag{6.1}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 F_m(z)
 \equiv
@@ -416,14 +417,14 @@ z^{2m}+z^{m+1}+z^{m-1}+1
 \pmod3.
 }
 \tag{6.2}
-$$
+```
 
 SC's Littlewood polynomial satisfies
 
-$$
+```math
 P(z)\equiv1+z+\cdots+z^{m-1}\pmod2.
 \tag{6.3}
-$$
+```
 
 Thus any hypothetical low-degree common factor `R_m` is simultaneously constrained by the square `z^m+1` modulo two, the adjacent binomials `z^{m-1}+1,z^{m+1}+1` modulo three, and the geometric unit-circle condition CF.5.
 
@@ -451,15 +452,15 @@ P1-NC would contradict SC's degree bound `deg R_m<=m-1` and eliminate the entire
 
 Exact factorizations for moderate `m` strongly suggest the stronger global statement
 
-$$
+```math
 F_m\text{ is irreducible if }6\nmid m,
-$$
+```
 
 and
 
-$$
+```math
 F_m/\Phi_6\text{ is irreducible if }6\mid m,
-$$
+```
 
 but this report deliberately does not promote that computational pattern to a theorem.
 

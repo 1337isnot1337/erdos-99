@@ -20,9 +20,9 @@
 
 The earlier LI theorem proved
 
-$$
+```math
 Q_B\ge(2-o(1))D
-$$
+```
 
 only in the cap-minimal full-core subbranch `S/D->2`.  The cap-minimal assumption is unnecessary.
 
@@ -40,46 +40,46 @@ Let
 
 Then every full-core near-circle sequence satisfies
 
-$$
+```math
 \boxed{
 K_I\ge(\pi+2-o(1))D,
 }
 \tag{FP.1}
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{
 S+R_I\ge\left(1+\frac\pi2-o(1)\right)D.
 }
 \tag{FP.2}
-$$
+```
 
 More sharply, the exact near-circle ledgers give the asymptotic identity
 
-$$
+```math
 \boxed{
 Q_B=K_I-\pi D+2s_B+o(D).
 }
 \tag{FP.3}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 Q_B\ge(2-o(1))D+2s_B.
 }
 \tag{FP.4}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{Q_B\ge(2-o(1))D}
 \tag{FP.5}
-$$
+```
 
 throughout the entire full-core near-circle branch, with no assumption that `S/D->2`.
 
@@ -91,26 +91,26 @@ This supersedes LI's cap-minimal scope.  The new proof identifies the geometric 
 
 C36 and C44 give
 
-$$
+```math
 K_r\subseteq P_r,
 \qquad
 \operatorname{diam}K_r\le\operatorname{diam}P_r\le\delta_r+2.
-$$
+```
 
 For every planar convex body, perimeter is at most `pi` times diameter.  Therefore
 
-$$
+```math
 \operatorname{per}(K_r)\le\pi(\delta_r+2).
-$$
+```
 
 Summing and using the post-ZF bounds `S=O(D)` and HBd's `c_I=o(D)` gives
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{per}(K_r)=O(D).
 }
 \tag{1.1}
-$$
+```
 
 This makes the perimeter term in componentwise Oler only boundary-order.
 
@@ -120,51 +120,51 @@ This makes the perimeter term in componentwise Oler only boundary-order.
 
 HG proves that the attachment-cell decomposition has two dominant groups `G_1,G_2`, each contained asymptotically in one of two complementary diameter-`D` semicircular caps and each carrying
 
-$$
+```math
 N_i:=\sum_{r\in G_i}n_r
 =(\Delta/2+o(1))D^2,
 \qquad
 \Delta=\frac\pi{2\sqrt3}.
 \tag{2.1}
-$$
+```
 
 Apply Oler to the `n_r` unit-separated vertices of `I_r` inside their own convex hull `K_r`:
 
-$$
+```math
 \frac{\sqrt3}{2}(n_r-1)
 \le
 \operatorname{area}(K_r)
 +\frac{\sqrt3}{4}\operatorname{per}(K_r).
 \tag{2.2}
-$$
+```
 
 Sum over one dominant group.  By (1.1) the total perimeter term is `O(D)=o(D^2)`, and HBd gives only `o(D)` components, so the `-1` terms are also `o(D^2)`.  Thus
 
-$$
+```math
 \sum_{r\in G_i}\operatorname{area}(K_r)
 \ge
 \frac{\sqrt3}{2}N_i-o(D^2)
 =
 \left(\frac\pi8-o(1)\right)D^2.
 \tag{2.3}
-$$
+```
 
 But `K_r subset P_r`, the cell interiors are pairwise disjoint by C49, and HG puts the whole group inside one semicircular cap of area `(pi/8+o(1))D^2`.  Hence equality holds at leading order:
 
-$$
+```math
 \boxed{
 \sum_{r\in G_i}\operatorname{area}(K_r)
 =
 \left(\frac\pi8+o(1)\right)D^2.
 }
 \tag{2.4}
-$$
+```
 
 Let
 
-$$
+```math
 U_{i,D}:=\bigcup_{r\in G_i}K_r.
-$$
+```
 
 The interiors of the `K_r` are pairwise disjoint, so (2.4), together with containment in the corresponding asymptotic cap, says that after scaling by `D`, `U_{i,D}` converges in measure to that semicircle.
 
@@ -174,61 +174,61 @@ The interiors of the `K_r` are pairwise disjoint, so (2.4), together with contai
 
 For a finite union of convex bodies, its planar perimeter is at most the sum of the component perimeters:
 
-$$
+```math
 \operatorname{Per}(U_{i,D})
 \le
 \sum_{r\in G_i}\operatorname{per}(K_r).
 \tag{3.1}
-$$
+```
 
 Planar perimeter is lower semicontinuous under convergence in measure of sets of finite perimeter.  Applying this after scaling by `D`, and using the measure convergence from Section 2, gives
 
-$$
+```math
 \liminf
 \frac1D\operatorname{Per}(U_{i,D})
 \ge
 \operatorname{per}(C_i),
 \tag{3.2}
-$$
+```
 
 where `C_i` is a radius-`1/2` semicircle.  Its perimeter is
 
-$$
+```math
 \operatorname{per}(C_i)=1+\frac\pi2.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \sum_{r\in G_i}\operatorname{per}(K_r)
 \ge
 \left(1+\frac\pi2-o(1)\right)D.
 }
 \tag{3.3}
-$$
+```
 
 The remaining non-dominant groups contribute nonnegative perimeter.  Summing `i=1,2` yields
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{per}(K_r)
 \ge(\pi+2-o(1))D.
 }
 \tag{3.4}
-$$
+```
 
 Every extreme vertex of `K_r` lies on the outer face of the straight-line connected graph `C[I_r]`.  The closed outer walk has geometric length exactly `k_r` and convex hull `K_r`, so the closed-walk perimeter inequality gives
 
-$$
+```math
 k_r\ge\operatorname{per}(K_r).
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{K_I:=\sum_r k_r\ge(\pi+2-o(1))D,}
-$$
+```
 
 which proves FP.1.
 
@@ -240,42 +240,42 @@ The constant `2D` is the two-sided internal partition boundary introduced when a
 
 For every unloaded component,
 
-$$
+```math
 r_r=\frac{k_r+Q_r}{2}-\delta_r.
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \delta_r+r_r=\frac{k_r+Q_r}{2}.
-$$
+```
 
 Summing gives the exact identity
 
-$$
+```math
 \boxed{
 S+R_I=\frac{K_I+Q_I}{2}.
 }
 \tag{4.1}
-$$
+```
 
 Since `Q_I>=0`, FP.1 immediately gives
 
-$$
+```math
 S+R_I
 \ge
 \frac{K_I}{2}
 \ge
 \left(1+\frac\pi2-o(1)\right)D,
-$$
+```
 
 proving FP.2.
 
 This strengthens HG.4,
 
-$$
+```math
 S+R_I\ge(\pi/\sqrt2-o(1))D,
-$$
+```
 
 throughout the full-core near-circle phase.
 
@@ -285,34 +285,34 @@ throughout the full-core near-circle phase.
 
 NC and HBd simplify the exact boundary budget NBd to
 
-$$
+```math
 \boxed{
 S+R_I+s_B+s_C=(\pi+o(1))D.
 }
 \tag{5.1}
-$$
+```
 
 HBd also simplifies the terminal ledger to
 
-$$
+```math
 \boxed{
 Q+2s_C=(\pi+o(1))D.
 }
 \tag{5.2}
-$$
+```
 
 Use (4.1) in (5.1):
 
-$$
+```math
 s_C
 =
 \pi D-rac{K_I+Q_I}{2}-s_B+o(D).
 \tag{5.3}
-$$
+```
 
 Insert this into (5.2):
 
-$$
+```math
 \begin{aligned}
 Q
 &=
@@ -321,26 +321,26 @@ Q
 K_I+Q_I+2s_B-\pi D+o(D).
 \end{aligned}
 \tag{5.4}
-$$
+```
 
 Since `Q_B=Q-Q_I`, all internal-face defect cancels:
 
-$$
+```math
 \boxed{
 Q_B=K_I-\pi D+2s_B+o(D).
 }
-$$
+```
 
 This proves FP.3.
 
 Insert FP.1:
 
-$$
+```math
 Q_B
 \ge
 (\pi+2-o(1))D-\pi D+2s_B
 =(2-o(1))D+2s_B.
-$$
+```
 
 This proves FP.4 and FP.5.
 
@@ -350,29 +350,29 @@ This proves FP.4 and FP.5.
 
 First, because `s_B>=0`, every full-core near-circle survivor satisfies
 
-$$
+```math
 \boxed{Q\ge Q_B\ge(2-o(1))D.}
 \tag{6.1}
-$$
+```
 
 This improves UF's full-core bound `Q/D>=1.390168...` and removes the cap-minimal hypothesis from TE/LI's two-unit bound.
 
 Second, FP.2 and (5.1) give
 
-$$
+```math
 \boxed{
 s_B+s_C
 \le
 \left(\frac\pi2-1+o(1)\right)D.
 }
 \tag{6.2}
-$$
+```
 
 Third, FP.3 is a stability identity.  Any positive linear excess in either
 
-$$
+```math
 K_I-(\pi+2)D
-$$
+```
 
 or `s_B` appears with the same sign in `Q_B-2D`.  Thus the only way to remain near the minimum interface defect is simultaneously to have
 
@@ -387,33 +387,33 @@ This gives a sharply defined equality branch for further work.
 
 Suppose in addition
 
-$$
+```math
 Q_B=(2+o(1))D.
 \tag{7.1}
-$$
+```
 
 Then FP.3-FP.4 force
 
-$$
+```math
 \boxed{s_B=o(D)}
 \tag{7.2}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{K_I=(\pi+2+o(1))D.}
 \tag{7.3}
-$$
+```
 
 Hence every inequality in the perimeter argument is asymptotically sharp.  In particular each dominant semicircle group satisfies
 
-$$
+```math
 \sum_{r\in G_i}k_r
 =
 \left(1+\frac\pi2+o(1)\right)D,
 \tag{7.4}
-$$
+```
 
 and the total component convex-hull perimeter in that group has the same leading value.
 

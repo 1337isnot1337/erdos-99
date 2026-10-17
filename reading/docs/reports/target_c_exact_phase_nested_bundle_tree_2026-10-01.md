@@ -22,10 +22,10 @@ Let P be a finite planar set with two-dimensional hull and diameter D. Select m
 ordered disjoint proper crosscuts with nested shores, giving layers `0,...,m`.
 On the cyclic order of actual diameter endpoints the layer blocks have the order
 
-$$
+```math
 0,1^+,\ldots,(m-1)^+,m,(m-1)^-,\ldots,1^-.
 \tag{1}
-$$
+```
 
 Some interior blocks may be empty. The two appearances of one interior layer are
 distinct hull arcs and must not be identified geometrically.
@@ -34,20 +34,20 @@ Assume every contact crossing selected cut i has the same oriented unit vector u
 from the lower to the higher layers. Assume positive diameter weights `beta_h`
 and positive contact cut masses `A_i` give the exact cut identities
 
-$$
+```math
 \sum_{h:\,p_h<i\le q_h}\beta_h r_h=A_i u,
 \qquad A_i>0,
 \tag{2}
-$$
+```
 
 where a nonempty-support diameter h is oriented from its layer `p_h` to its
 layer `q_h>p_h`, with `r_h=p_y-p_x`. Define
 
-$$
+```math
 c_h=r_h\cdot Ju,\quad I_h=[p_h+1,q_h],\quad
 M_h=c_h\mathbf1_{I_h}.
 \tag{3}
-$$
+```
 
 Discard zero rows. Then the following conclusions hold.
 
@@ -55,10 +55,11 @@ Discard zero rows. Then the following conclusions hold.
    the negative-c intervals also form a chain.
 2. These two chains have exactly the same interval types. For each type I,
    independently,
-   $$
+   ```math
    \boxed{\sum_{h:I_h=I}\beta_h c_h=0.}
    \tag{4}
-   $$
+   
+   ```
    Each interval type therefore contains at least two actual diameter edges with
    opposite strict transverse signs.
 3. If `rank M=m`, there are exactly m distinct interval types. Ordered from
@@ -67,10 +68,11 @@ Discard zero rows. Then the following conclusions hold.
 4. Consequently the simple support of the gap multigraph is a tree with m edges,
    obtained by recursive deletion of an extreme ordered gap vertex. The full
    multigraph consists of opposed parallel bundles on this tree. In particular,
-   $$
+   ```math
    \boxed{|\{h:c_h\ne0,\ I_h\ne\varnothing\}|\ge2m.}
    \tag{5}
-   $$
+   
+   ```
 5. Every nonempty-support diameter crosses the same selected cut k, including
    the possible diameter parallel to u. The actual diameter subgraph with
    nonempty support is bipartite and has no cycles; cycles in the gap quotient
@@ -86,12 +88,12 @@ directly. No statement is made about diameter edges with empty selected support.
 For a diameter vector `r=b-a` and any other source point z, the upper distance
 bound to b gives
 
-$$
+```math
 |z-b|^2\le D^2=|r|^2
 \quad\Longrightarrow\quad
 (z-a)\cdot r\ge |z-a|^2/2>0.
 \tag{6}
-$$
+```
 
 Similarly `(z-b) dot r <= -|z-b|^2/2<0`. Thus a and b uniquely minimize and
 maximize the linear functional with direction r. In particular they are extreme
@@ -162,11 +164,11 @@ the two u-support faces in the exterior layers.
 
 Take the transverse component of (2). For every coordinate i,
 
-$$
+```math
 P_i:=\sum_{c_h>0}\beta_h c_h\mathbf1_{I_h}(i)
 =\sum_{c_h<0}\beta_h(-c_h)\mathbf1_{I_h}(i)=:N_i.
 \tag{7}
-$$
+```
 
 We use an elementary uniqueness lemma.
 
@@ -196,10 +198,10 @@ Its indicator vectors are independent: evaluate a dependence on each nonempty
 shell `I_j\I_(j+1)` successively. Every nonzero row of M is a nonzero multiple
 of one of these indicators, so
 
-$$
+```math
 \operatorname{rank}M=s.
 \tag{8}
-$$
+```
 
 If this equals m, the maximal interval contains all m coordinates, since no
 column can be zero. Thus `I_1=[1,m]`. A chain of m nonempty proper nested
@@ -230,10 +232,10 @@ hull intervals are strictly separated by a functional phi. Orient phi from
 the lower to the higher shore. Every oriented diameter r has `phi dot r>0`;
 (2) gives `phi dot u>0`. Therefore
 
-$$
+```math
 K_j>0,\qquad A_i=\sum_{j:i\in I_j}K_j.
 \tag{13}
-$$
+```
 
 Any parallel-u diameter is included in the maximal bundle and contributes
 `beta_h D>0`. Since one coordinate is removed at each step, all m contact cut
@@ -243,21 +245,21 @@ they increase toward k on either side.
 There is also a strict variation law that keeps the actual diameter directions.
 Let
 
-$$
+```math
 W_j=\sum_{h:I_h=I_j,\ c_h>0}\beta_h c_h
 =\sum_{h:I_h=I_j,\ c_h<0}\beta_h(-c_h)>0.
 \tag{14}
-$$
+```
 
 For a positive-c bar put `theta_h=arg(r_h)-arg(u)` in `(0,pi)`; for a negative
 bar use the absolute clockwise angle in `(0,pi)`. Then
 
-$$
+```math
 {K_j\over W_j}
 =\mathbb E_{j,+}[\cot\theta_h]
 +\mathbb E_{j,-}[\cot\theta_h],
 \tag{15}
-$$
+```
 
 with each expectation weighted by `beta_h |c_h| / W_j`. For j=1 only, add the
 nonnegative contribution of the possible parallel-u diameter divided by W_1.
@@ -267,10 +269,10 @@ in rotation away from u, by the strict interval erosion and normal order.
 Distinct diameter edges cannot have the same projective direction, by (6).
 Cotangent is strictly decreasing on `(0,pi)`. Consequently
 
-$$
+```math
 \boxed{{K_1\over W_1}>{K_2\over W_2}>\cdots>{K_m\over W_m}>0.}
 \tag{16}
-$$
+```
 
 Thus for a coordinate removed at stage s,
 `A_i/P_i=(K_1+...+K_s)/(W_1+...+W_s)` is a weighted prefix average of a strictly
@@ -284,36 +286,36 @@ restriction, not a contradiction by itself.
 
 The exact laminar shear formula is
 
-$$
+```math
 p_x(\theta)=p_x+\sum_{i\le\ell(x)}(R_{\theta_i}u-u).
 \tag{9}
-$$
+```
 
 It preserves every old unit contact under the actual train-cut hypotheses. For
 each active diameter its squared length has expansion
 
-$$
+```math
 L_h(\theta)=D^2+2M_h\theta+O(\|\theta\|^2).
 \tag{10}
-$$
+```
 
 Because every row weight is positive, `sum_h beta_h M_h=0`, and M has full
 column rank, every nonzero theta has some `M_h theta>0`: otherwise positive
 weighted cancellation would make every row zero, contradicting rank. Compactness
 of the unit sphere gives a finite-source constant
 
-$$
+```math
 \kappa=\min_{\|z\|=1}\max_h M_hz>0.
 \tag{11}
-$$
+```
 
 The Taylor remainder is uniform across the finite active set. Therefore every
 sufficiently small nonzero theta satisfies
 
-$$
+```math
 \max_h L_h(\theta)\ge D^2+2\kappa\|\theta\|-C\|\theta\|^2>D^2.
 \tag{12}
-$$
+```
 
 **Finite isolation conclusion.** No sufficiently small nontrivial endpoint of
 the selected contact-preserving train-shear family has diameter at most D.
@@ -333,9 +335,9 @@ moving diameters satisfy that strict inequality, inactive source pairs can
 block it. In particular, whenever an actual transverse grid row has the
 consecutive exact-phase contact chain
 
-$$
+```math
 x,\quad x+u,\quad x+2u,
-$$
+```
 
 with x in the translated exterior layer and the other two points fixed, the
 move sends x **exactly onto** the third source point. The obstruction is a

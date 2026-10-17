@@ -9,10 +9,10 @@
 
 The Target-B train-angle stack has long contained the proposed estimate
 
-$$
+```math
 \sum_{\lambda_\tau<0}(-\lambda_\tau)
 \le {D\over2}(L-D),
-$$
+```
 
 where `L` was intended to be a suitable boundary arc joining an active diameter pair.
 The 2026-08-30 mathematical audit correctly left this **unproved** because neither the
@@ -32,58 +32,58 @@ The result is finite and exact.
 Let `mathcal R` be a finite simply connected pure strict-unit-rhombus disk.  Its outer
 boundary is a simple cycle of unit contact edges.  Let `z,a` be vertices with
 
-$$
+```math
 r:=p_a-p_z,
 \qquad |r|=D,
 \qquad q:={r\over D}.
 \tag{120.1}
-$$
+```
 
 For every train `tau`, choose an arbitrary unit edge direction `u_tau`.  The standard
 train-coordinate representation of the diameter vector is
 
-$$
+```math
 r=\sum_\tau d_\tau u_\tau,
 \qquad d_\tau\in\{-1,0,1\}.
 \tag{120.2}
-$$
+```
 
 A train is separating for `z,a` iff `d_tau!=0`.  For such a train define
 
-$$
+```math
 a_\tau:=d_\tau u_\tau.
 \tag{120.3}
-$$
+```
 
 Canonical train-coordinate geometry orients `a_tau` from the `z`-side of the train to
 the `a`-side.  In particular
 
-$$
+```math
 r=\sum_{\tau\in P(z,a)}a_\tau,
 \qquad |a_\tau|=1.
 \tag{120.4}
-$$
+```
 
 Define
 
-$$
+```math
 \lambda_\tau:=r\cdot a_\tau.
 \tag{120.5}
-$$
+```
 
 A separating train is **backward** for the diameter pair when
 
-$$
+```math
 \lambda_\tau<0.
-$$
+```
 
 This is the same signed coefficient used in the exact train-angle Hessian
 
-$$
+```math
 \mathrm d^2f_{za}[v,v]
 =-\sum_\tau\lambda_\tau(v_\tau-\bar v)^2.
 \tag{120.6}
-$$
+```
 
 Let `Gamma` be either one of the two outer-boundary arcs from `z` to `a`, directed from
 `z` to `a`, and let `L=|Gamma|` be its number of unit edges.
@@ -103,19 +103,19 @@ Traverse `Gamma` from `z` to `a`.  At that terminal edge, `Gamma` crosses the tr
 from the `z`-side chamber to the `a`-side chamber.  Therefore the directed unit vector
 of this boundary edge is exactly
 
-$$
+```math
 \boxed{a_\tau,}
 \tag{120.7}
-$$
+```
 
 not `-a_tau`.
 
 Distinct trains have distinct terminal boundary-edge occurrences: a contact edge is
 carried by exactly one train.  Thus
 
-$$
+```math
 \tau\longmapsto e_\tau(\Gamma)
-$$
+```
 
 is an injective charging map from the separating trains to edge occurrences of either
 chosen boundary arc.
@@ -127,86 +127,86 @@ This is the missing topological/orientation statement in the old proposed Sectio
 
 Write the directed unit edge vectors of `Gamma` as
 
-$$
+```math
 v_1,\ldots,v_L.
-$$
+```
 
 Their sum is the diameter vector:
 
-$$
+```math
 \sum_{j=1}^L v_j=r=Dq.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 L-D
 =\sum_{j=1}^L(1-q\cdot v_j).
 }
 \tag{120.8}
-$$
+```
 
 Every summand is nonnegative because `|q|=|v_j|=1`.
 
 For the terminal edge assigned to a separating train `tau`, (120.7) gives the exact
 loss
 
-$$
+```math
 1-q\cdot a_\tau
 =1-\frac{\lambda_\tau}{D}.
 \tag{120.9}
-$$
+```
 
 If `tau` is backward, put
 
-$$
+```math
 x_\tau:={-\lambda_\tau\over D}.
-$$
+```
 
 Since `|r|=D` and `|a_tau|=1`,
 
-$$
+```math
 0<x_\tau\le1.
 \tag{120.10}
-$$
+```
 
 Its charged boundary edge contributes exactly
 
-$$
+```math
 1+x_\tau.
 \tag{120.11}
-$$
+```
 
 ## 120.4 Boundary backtracking theorem
 
 Let
 
-$$
+```math
 P_-(z,a):=\{\tau:\lambda_\tau<0\},
 \qquad
 S_-(z,a):=
 \sum_{\tau\in P_-(z,a)}(-\lambda_\tau).
-$$
+```
 
 Injectivity of the charge and (120.8)--(120.11) give the stronger raw estimate
 
-$$
+```math
 \boxed{
 L-D
 \ge
 |P_-(z,a)|+{S_-(z,a)\over D}.
 }
 \tag{120.12}
-$$
+```
 
 Because `1+x>=2x` for `0<=x<=1`, they also give
 
-$$
+```math
 L-D
 \ge2\sum_{\tau\in P_-}x_\tau
 ={2S_-(z,a)\over D}.
-$$
+```
 
 Hence:
 
@@ -214,28 +214,28 @@ Hence:
 
 For **either** outer-boundary arc `Gamma` from `z` to `a`,
 
-$$
+```math
 \boxed{
 \sum_{\lambda_\tau<0}(-\lambda_\tau)
 \le
 {D\over2}(L-D).
 }
 \tag{120.13}
-$$
+```
 
 This is exactly the old proposed equation (37.7), now with a canonical arc and a
 non-overcounted proof.
 
 Equation (120.12) also gives the complementary count-sensitive bound
 
-$$
+```math
 \boxed{
 S_-(z,a)
 \le
 D\bigl(L-D-|P_-(z,a)|\bigr).
 }
 \tag{120.14}
-$$
+```
 
 In particular, any backward train forces strictly more than one unit of boundary
 projection excess on each diameter-joining boundary arc.
@@ -246,21 +246,21 @@ Let the two outer-boundary arcs joining `z` and `a` have lengths `L_1,L_2`.  In 
 rhombic disk every train has exactly two physical outer-boundary ends, so if `T` is the
 number of trains then the outer-boundary length is
 
-$$
+```math
 B=2T=L_1+L_2.
 \tag{120.15}
-$$
+```
 
 Let
 
-$$
+```math
 L_*:=\min(L_1,L_2)\le T.
-$$
+```
 
 Every unit-edge path joining Euclidean distance `D` has length at least `D`, so
 `L_*>=D`.  Theorem 120.1 gives
 
-$$
+```math
 \boxed{
 S_-(z,a)
 \le {D\over2}(L_*-D)
@@ -268,14 +268,14 @@ S_-(z,a)
 ={D\over4}(B-2D).
 }
 \tag{120.16}
-$$
+```
 
 The raw bound (120.12) also yields
 
-$$
+```math
 \boxed{|P_-(z,a)|<L_*-D\le T-D}
 \tag{120.17}
-$$
+```
 
 whenever at least one backward train exists; with integer lengths the obvious integral
 rounding can be applied.
@@ -287,48 +287,48 @@ literal boundary detour beyond a Euclidean geodesic.
 
 For a first-order-neutral train-angle velocity `v`, put
 
-$$
+```math
 \eta_\tau:=v_\tau-\bar v.
-$$
+```
 
 The exact signed-variance formula is
 
-$$
+```math
 \mathrm d^2f_{za}[v,v]
 =-\sum_\tau\lambda_\tau\eta_\tau^2.
-$$
+```
 
 Discarding the nonpositive contributions from `lambda_tau>=0`,
 
-$$
+```math
 \mathrm d^2f_{za}[v,v]
 \le
 \sum_{\lambda_\tau<0}(-\lambda_\tau)\eta_\tau^2
 \le
 S_-(z,a)\|\eta\|_\infty^2.
-$$
+```
 
 Therefore either boundary arc gives
 
-$$
+```math
 \boxed{
 \mathrm d^2f_{za}[v,v]
 \le
 {D\over2}(L-D)\|v-\bar v\|_\infty^2.
 }
 \tag{120.18}
-$$
+```
 
 and the shorter arc gives
 
-$$
+```math
 \boxed{
 \mathrm d^2f_{za}[v,v]
 \le
 {D\over2}(T-D)\|v-\bar v\|_\infty^2.
 }
 \tag{120.19}
-$$
+```
 
 These inequalities quantify the old statement that positive quadratic curvature must
 be paid by boundary backtracking.
@@ -364,9 +364,9 @@ Most importantly, it closes only the old **quadratic backward-incidence** gap.  
 second-pass audit correctly identified a separate higher-order mechanism: separating
 trains with
 
-$$
+```math
 \lambda_\tau=0
-$$
+```
 
 can block at quartic order in balanced tangent classes.  Equation (120.13) says nothing
 about those zero-weight tangent incidences.  Therefore Section 120 does **not** close

@@ -57,24 +57,24 @@ There is an absolute constant `C` with the following property. Let `P` be a conv
 polygon of diameter `D`, with `q` distinct extreme vertices separated pairwise by
 at least one. Suppose, after one translation, that
 
-$$
+```math
 B(0,r)\subseteq P\subseteq B(0,R),\qquad
 0<r\le R,\qquad \eta:=1-r/R,
-$$
+```
 
 let `m` of the `q` vertices have distance greater than `epsilon` from one
 translate of a lattice
-$$
+```math
 \Lambda=\mathbb Zu+\mathbb Zv,\qquad |u|=|v|=1,\qquad
 \angle(u,v)\in[\pi/3,2\pi/3].
-$$
+```
 
 For `0<=epsilon<=1/100` and `0<=eta<=1/100`,
 
-$$
+```math
 \boxed{q-2m\le C D\bigl(\sqrt\epsilon+\eta^{1/6}\bigr).}
 \tag{NL.1}
-$$
+```
 
 The constant is uniform in the lattice angle and the lattice translation. The
 bound is asymptotic in no hidden parameter; enlarging `C` covers the small values
@@ -86,9 +86,9 @@ We give the counting details because the exact-lattice vertex theorem alone does
 not control repeated lattice edge vectors after small vertex perturbations.
 
 **Step 1: a short normal-arc bound.** Put
-$$
+```math
 \alpha:=\arccos(r/R)\le C_1\sqrt\eta.
-$$
+```
 At any point `x` of an edge of `P`, its outward supporting normal `n` satisfies
 `n dot x=h_P(n)>=r` and `|x|<=R`. Thus the radial direction of `x` differs from
 `n` by at most `alpha`. Consider all edges whose oriented tangent directions lie
@@ -96,17 +96,17 @@ in one angular interval `J` of width `w<=1/4`. Convexity puts these edges in one
 contiguous boundary chain (allowing empty edges between them). Every point of that
 chain lies in an annular sector of radial angular width at most `w+2alpha` and
 radii between `r` and `R`. Two points in this sector are at distance at most
-$$
+```math
 R(w+2\alpha)+(R-r).
-$$
+```
 Closing the convex chain by the chord between its endpoints makes a convex polygon.
 The perimeter-diameter inequality for that polygon bounds the chain length by
-$$
+```math
 \boxed{\operatorname{length}(J)
 \le \pi\{R(w+2\alpha)+(R-r)\}
 \le C_2D(w+\sqrt\eta).}
 \tag{NL.2}
-$$
+```
 Here `R<=D/2+o(D)` is not needed: the diameter of `P` lies between `2r` and
 `2R`, so `R<=D/[2(1-eta)]`, and `R-r=R eta` is absorbed by `R sqrt(eta)`.
 The same bound, with a larger absolute constant, holds for wider angular
@@ -118,9 +118,9 @@ least `q-2m` edges have two good endpoints. Assign one lattice point `z_i`
 within `epsilon` of each good vertex `p_i`. Since `2epsilon<1` and the actual
 vertices are unit separated, assigned lattice points at distinct good vertices
 are distinct. For each good-good edge set
-$$
+```math
 v_i=z_{i+1}-z_i,\qquad e_i=p_{i+1}-p_i.
-$$
+```
 The lattice minimum distance is one: vectors with both integer coefficients in
 `{-1,0,1}` are checked directly, while every other nonzero vector has squared
 length at least `(a^2+b^2)/2>=2`. Then `v_i` is a nonzero lattice vector and
@@ -129,35 +129,35 @@ length at least `(a^2+b^2)/2>=2`. Then `v_i` is a nonzero lattice vector and
 vector `v`, all edges with `v_i=v` have tangents in an interval of width at most
 `C_4 epsilon/|v|<=1/4`. Their total number is at most their total length because
 each actual edge has length at least one. By (NL.2), that number is at most
-$$
+```math
 C_5D(\epsilon/|v|+\sqrt\eta).
 \tag{NL.3}
-$$
+```
 
 **Step 3: sum short vectors and pay long edges by length.** Uniformly over the
 angle range,
-$$
+```math
 |au+bv|^2=a^2+b^2+2ab\cos\theta
 \ge (a^2+b^2)/2.
-$$
+```
 Consequently the number of lattice vectors of length at most `M` is `O(M^2)`,
 and the sum of their reciprocal lengths is `O(M)`, with absolute constants. Sum
 (NL.3) over all nonzero vectors of length at most `M`:
-$$
+```math
 q_{\le M}^{\rm good}\le C_6D(\epsilon M+M^2\sqrt\eta).
 \tag{NL.4}
-$$
+```
 An edge assigned a vector longer than `M` has actual length at least
 `M-2epsilon`. Since `per(P)<=pi D`,
-$$
+```math
 q_{>M}^{\rm good}\le {\pi D\over M-2\epsilon}.
 \tag{NL.5}
-$$
+```
 For `M>=2`, (NL.4)–(NL.5) give
-$$
+```math
 q-2m\le C_7D(\epsilon M+M^2\sqrt\eta+M^{-1}).
 \tag{NL.6}
-$$
+```
 Choose `M` comparable to
 `min(epsilon^(-1/2), eta^(-1/6))`, interpreting a zero
 parameter as infinity. This makes the three terms in (NL.6) at most constant
@@ -176,10 +176,10 @@ vertex shadow with maximum error `o(1)`.
 
 **Proof.** Section 80 supplies a disk center with `r/D,R/D->1/2`, so `eta->0`.
 Section 63 supplies
-$$
+```math
 q\ge q-k={b+Q\over2}\ge{\operatorname{per}(F)\over2}
  =(\pi/2-o(1))D.
-$$
+```
 The loaded vertices are actual source points and are unit separated. Apply NL.1.
 Choose a fixed `epsilon_*` so small that `C sqrt(epsilon_*)<pi/8`. Since
 `eta->0`, NL.1 then gives, for all sufficiently large `D`,
@@ -192,19 +192,19 @@ Let the vertices of a polygon satisfying NL.1 be labelled by `t` translates of
 unit oblique lattices in the same angle range. Suppose each vertex lies within
 `epsilon` of the lattice bearing its label. Let `T` count polygon sides whose
 endpoint labels differ. Then
-$$
+```math
 \boxed{q-T\le CtD(\sqrt\epsilon+\eta^{1/6}).}
 \tag{NL.7}
-$$
+```
 
 Indeed, there are exactly `q-T` same-label sides. For each fixed label, Steps
 1–3 of NL.1 count its same-label sides by the displayed bound; the proof never
 uses sides of other labels. Sum over the `t` labels. In a canonical full-core
 Type-II sequence, if `t` is bounded and `epsilon=o(1)`, then
-$$
+```math
 \liminf_{D\to\infty}{T\over D}\ge {\pi\over2}.
 \tag{NL.8}
-$$
+```
 More generally this holds when
 `t(sqrt(epsilon)+eta^(1/6))->0`. Thus a fixed number of
 near-exact affine grains can cover the loaded hull only if their labels
@@ -219,10 +219,10 @@ vertices of `P` whose members lie within `epsilon` of one translate of one
 unit oblique lattice. The vertices of `S` need not be adjacent on `partial P`.
 For `D` sufficiently large, `epsilon<=1/100`, and `eta<=1/100`, an absolute
 constant `C'` satisfies
-$$
+```math
 \boxed{|S|\le C'D\bigl(\sqrt\epsilon+\eta^{1/6}+D^{-1/4}\bigr).}
 \tag{NL.9}
-$$
+```
 
 **Proof.** List `S` in the cyclic order inherited from `partial P`, and join
 successive members to form the convex polygon `P_S`. Every member remains an
@@ -237,11 +237,11 @@ We first record the short-chord transfer. Let `a,b` be the endpoints of one
 remaining side of `P_S`, and suppose `|a-b|<=2M` with `M/D` small. Because
 `|a|,|b|>=r`, the radial angular separation `Delta` of the short parent arc
 satisfies
-$$
+```math
 2r\sin(\Delta/2)\le |a-b|\le2M,
 \qquad \Delta\le C_8M/D.
 \tag{NL.10}
-$$
+```
 The first inequality follows by expanding `|a-b|^2` and using both radii at
 least `r`. Since the origin lies inside `P`, radial angle increases in the
 boundary order. Every point of this parent arc has radial direction between
@@ -259,35 +259,35 @@ Assign distinct lattice points to the members of `S` as in NL.1. If a side
 most `C_3 epsilon/|v|`. By the short-chord transfer, its associated parent
 arc consists only of parent edges with tangents in a cone around `v` of
 width
-$$
+```math
 C_{10}(\epsilon/|v|+M/D+\sqrt\eta).
 \tag{NL.11}
-$$
+```
 The parent arcs associated to successive `P_S` sides are disjoint except at
 endpoints. Each has length at least `|a-b|>=1`. Applying the parent normal-arc
 bound (NL.2) to the cone in (NL.11), the number of `P_S` sides assigned the
 same short vector `v` is at most
-$$
+```math
 C_{11}D(\epsilon/|v|+M/D+\sqrt\eta).
 \tag{NL.12}
-$$
+```
 The discarded wrap side, if any, costs one side and needs no assignment.
 
 There are `O(M^2)` vectors with `|v|<=M`, and their reciprocal lengths sum to
 `O(M)`, uniformly over the allowed lattice angles. Thus all short assigned
 sides number at most
-$$
+```math
 C_{12}(D\epsilon M+M^3+DM^2\sqrt\eta).
 \tag{NL.13}
-$$
+```
 Every remaining side assigned `|v|>M` has length at least `M-2epsilon`.
 Since `per(P_S)<=pi D`, there are at most `pi D/(M-2epsilon)` such sides.
 Including the one discarded side,
-$$
+```math
 |S|\le1+C_{13}D
 \bigl(\epsilon M+M^3/D+M^2\sqrt\eta+M^{-1}\bigr).
 \tag{NL.14}
-$$
+```
 Take `M` comparable to
 `min(epsilon^(-1/2),eta^(-1/6),D^(1/4))`, with a zero
 parameter interpreted as infinity. Each term in (NL.14) is bounded by a
@@ -309,18 +309,18 @@ within `epsilon_t` of the `i`th lattice, NL.4 bounds each `|S_i|` by
 ### Regression NL.R1 — lattice outliers do not by themselves pay outer-walk detour
 
 For every even `N>=6`, put `t=pi/N`, `R=1/sin(t)`, and
-$$
+```math
 A_j=R(\cos(2jt),\sin(2jt)),\qquad
 M_j={A_j+A_{j+1}\over2},\qquad j\in\mathbb Z/N\mathbb Z.
-$$
+```
 The source `X_N={A_j,M_j:j in Z/NZ}` is unit separated and triangle-free.
 Its only unit contacts are the cycle edges `A_jM_j` and `M_jA_{j+1}`.
 Its force hull for those positive contacts is the regular `N`-gon
 `F_N=conv{A_j}`. Its diameter is `D=2R`, its inradius is `r=R cos(t)`, and
-$$
+```math
 {N\over D}={N\sin t\over2}\longrightarrow{\pi\over2},
 \qquad 1-r/R=1-\cos t\longrightarrow0.
-$$
+```
 Therefore NL.5 applies to `F_N`: any fixed finite collection of unit oblique
 lattices misses `cD` of its actual hull vertices at a fixed positive distance.
 Nevertheless each hull side has length two and is exactly the straight
@@ -337,9 +337,9 @@ cycle is the entire unit-contact graph. In particular it has no triangle.
 
 Give every cycle contact multiplier one. At a midpoint the contact-force sum
 vanishes. At an outer vertex, writing `e_j=A_j/R`,
-$$
+```math
 (A_j-M_{j-1})+(A_j-M_j)=2\sin t\,e_j.
-$$
+```
 The only active diameter pair at `A_j` is `A_jA_{j+N/2}`, whose vector is
 `D e_j`. Giving each opposite diameter pair the positive multiplier
 `2 sin(t)/D` balances the displayed contact force at every outer vertex.
@@ -353,9 +353,9 @@ distances greater than one and their distance from the contact ring is at
 least two. Their pair distances are strictly below `D`, so the active diameter
 pairs and the positive equilibrium above remain unchanged. Elementary
 fundamental-cell counting gives, for the enlarged source,
-$$
+```math
 |X_N|={\pi\over2\sqrt3}D^2+O(D).
-$$
+```
 This is the leading triangular-packing density, yet the source is still
 triangle-free and has zero hull metric detour. The construction is **not**
 claimed to be a global diameter minimizer or a canonical full-core source;

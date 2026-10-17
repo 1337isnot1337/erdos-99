@@ -17,9 +17,9 @@
 
 C66 proves that if
 
-$$
+```math
 \varepsilon:=\frac12\operatorname{tr}(\Lambda-L_H)
-$$
+```
 
 satisfies `D epsilon -> 0`, then one diameter vertex `z` carries `1-o(1)` of the
 normalized diameter stress. C68 shows that the contact-stress measure around the same
@@ -38,15 +38,15 @@ Quantitatively, after deleting `z` from the positive contact graph, let `w_1>=w_
 be the two largest amounts of `z`-star diameter weight carried by components attached
 back to `z` through exactly one contact edge. If
 
-$$
+```math
 \delta_z:=1-\sum_{h\ni z}\beta_h,
-$$
+```
 
 then
 
-$$
+```math
 \boxed{\delta_z\ge q_D w_2,}
-$$
+```
 
 where `q_D>0` is explicit and tends to a positive constant. Hence in the C66 regime
 `D epsilon ->0`, either a component returning to `z` through at least two contact
@@ -64,33 +64,33 @@ Work in the C65 lexicographically normalized hypothetical C-II source. Thus one
 relative-interior normalized KKT stress is positive on the entire actual contact graph
 `C` and the entire actual diameter graph `H`, with
 
-$$
+```math
 \sum_{h\in H}\beta_h=1.
 \tag{C71.1}
-$$
+```
 
 Fix a diameter vertex `z`. Put
 
-$$
+```math
 S_z:=\sum_{za\in H}\beta_{za},
 \qquad
 \delta_z:=1-S_z.
 \tag{C71.2}
-$$
+```
 
 Thus `delta_z` is exactly the total normalized diameter weight on edges not incident
 to `z`.
 
 For two diameter partners `a,b` of `z`, C18 gives
 
-$$
+```math
 \angle azb<\Theta_D,
 \tag{C71.3}
-$$
+```
 
 where
 
-$$
+```math
 \Theta_D:=
 \frac{
 D\left(\frac{5\pi}{6}-\sqrt3\right)
@@ -98,35 +98,35 @@ D\left(\frac{5\pi}{6}-\sqrt3\right)
 +\frac{\pi}{2D}
 }{D+1}.
 \tag{C71.4}
-$$
+```
 
 For `D>=20`, `Theta_D<pi/3`. Define
 
-$$
+```math
 \eta_D:=\frac\pi3-\Theta_D>0,
 \qquad
 c_D:=\cos\frac{\Theta_D}{2},
 \qquad
 q_D:=c_D\sin\frac{\eta_D}{2}>0.
 \tag{C71.5}
-$$
+```
 
 As `D->infinity`,
 
-$$
+```math
 \Theta_D\to\theta_\infty:=\frac{5\pi}{6}-\sqrt3,
-$$
+```
 
 so
 
-$$
+```math
 q_D\to q_\infty
 :=
 \cos\frac{\theta_\infty}{2}
 \sin\frac{\pi/3-\theta_\infty}{2}
 =0.0727\ldots>0.
 \tag{C71.6}
-$$
+```
 
 The strict positivity of this limit is the only constant-level fact needed below.
 
@@ -140,78 +140,78 @@ Delete `z` from the positive contact graph. Let `R` be one connected component o
 Call `R` **single-port** if exactly one contact edge joins it back to `z`; write that
 edge as
 
-$$
+```math
 z x_R,\qquad x_R\in R.
-$$
+```
 
 Define the `z`-star mass carried by `R`:
 
-$$
+```math
 w_R:=
 \sum_{\substack{za\in H\\a\in R}}
 \beta_{za}.
 \tag{C71.7}
-$$
+```
 
 Define also the total non-star diameter weight crossing the vertex cut
 `(R,V\setminus R)`:
 
-$$
+```math
 \lambda_R:=
 \sum_{\substack{bk\in H,\ b\in R,\ k\notin R\\z\notin\{b,k\}}}
 \beta_{bk}.
 \tag{C71.8}
-$$
+```
 
 Every term in `lambda_R` is a non-star diameter edge, hence
 
-$$
+```math
 0\le\lambda_R\le\delta_z.
 \tag{C71.9}
-$$
+```
 
 Sum the KKT equilibrium equation over all vertices of `R`. Every internal contact
 force cancels. Since `R` is single-port, the only surviving contact force is the port
 edge. Internal diameter reactions also cancel. We obtain
 
-$$
+```math
 \alpha_{z x_R}(p_{x_R}-p_z)
 =
 D\sum_{\substack{za\in H\\a\in R}}
 \beta_{za}u_a
 +E_R,
 \tag{C71.10}
-$$
+```
 
 where
 
-$$
+```math
 u_a:=\frac{p_a-p_z}{D},\qquad |u_a|=1,
-$$
+```
 
 and `E_R` is the vector sum of the non-star diameter reactions crossing the cut.
 Every such diameter vector has length `D`, so
 
-$$
+```math
 |E_R|\le D\lambda_R.
 \tag{C71.11}
-$$
+```
 
 Put
 
-$$
+```math
 V_R:=D\sum_{\substack{za\in H\\a\in R}}
 \beta_{za}u_a.
 \tag{C71.12}
-$$
+```
 
 All vectors `u_a` lie in the common angular interval of the diameter star at `z`, of
 width at most `Theta_D`. Projection onto the interval bisector gives
 
-$$
+```math
 \boxed{|V_R|\ge D c_D w_R.}
 \tag{C71.13}
-$$
+```
 
 Whenever `w_R>0`, the direction of the positive vector sum `V_R` also lies inside
 that same interval.
@@ -222,10 +222,10 @@ that same interval.
 
 Let
 
-$$
+```math
 v_R:=p_{x_R}-p_z,
 \qquad |v_R|=1,
-$$
+```
 
 and assume `w_R>0`. Let `phi_R` be the smaller angle between `v_R` and `V_R`.
 Equation C71.10 says that the error vector `E_R` moves `V_R` onto the ray spanned by
@@ -239,12 +239,12 @@ For any nonzero vector `V`, the Euclidean distance from `V` to a ray making angl
 
 If `w_R>0` and `phi_R>=psi`, where `0<=psi<=pi/2`, then
 
-$$
+```math
 \boxed{
 \lambda_R\ge c_D w_R\sin\psi.
 }
 \tag{C71.14}
-$$
+```
 
 Thus rotating a macroscopic diameter-star resultant away from its one physical contact
 port requires macroscopic non-star diameter weight. This is an exact KKT force
@@ -258,36 +258,36 @@ Let `R` and `S` be distinct single-port components with positive star masses. Th
 port neighbors `x_R,x_S` are distinct source points at unit distance from `z`.
 Unit separation gives
 
-$$
+```math
 |x_R-x_S|
 =2\sin\frac{\angle x_R z x_S}{2}
 \ge1,
-$$
+```
 
 hence
 
-$$
+```math
 \angle x_R z x_S\ge\frac\pi3.
 \tag{C71.15}
-$$
+```
 
 On the other hand, both `V_R` and `V_S` lie in the common diameter-star angular
 interval, so
 
-$$
+```math
 \angle(V_R,V_S)\le\Theta_D.
 \tag{C71.16}
-$$
+```
 
 The angular triangle inequality gives
 
-$$
+```math
 \phi_R+\phi_S
 \ge
 \frac\pi3-\Theta_D
 =\eta_D.
 \tag{C71.17}
-$$
+```
 
 Therefore at least one of `phi_R,phi_S` is at least `eta_D/2`. Apply C71.1 to that
 component, then C71.9.
@@ -296,25 +296,25 @@ component, then C71.9.
 
 For any two distinct single-port components `R,S` with positive star masses,
 
-$$
+```math
 \boxed{
 \delta_z\ge q_D\min\{w_R,w_S\}.
 }
 \tag{C71.18}
-$$
+```
 
 Equivalently, if
 
-$$
+```math
 w_1\ge w_2\ge w_3\ge\cdots
-$$
+```
 
 are the positive star masses of all single-port components, then
 
-$$
+```math
 \boxed{w_2\le\frac{\delta_z}{q_D}.}
 \tag{C71.19}
-$$
+```
 
 This is the main new quantitative statement.
 
@@ -324,10 +324,10 @@ This is the main new quantitative statement.
 
 C35 gives
 
-$$
+```math
 \deg_C(z)\le3
 \tag{C71.20}
-$$
+```
 
 because `z` is a loaded boundary terminal.
 
@@ -339,26 +339,26 @@ There are at most three single-port components. By C71.19, all but the largest o
 their star masses sum to at most `2 delta_z/q_D`. Therefore some single-port
 component `R` satisfies
 
-$$
+```math
 \boxed{
 w_R
 \ge
 S_z-W_{\rm multi}-\frac{2\delta_z}{q_D}.}
 \tag{C71.21}
-$$
+```
 
 For this `R`, project C71.10 onto the bisector of the diameter-star cone. The star
 term contributes at least `D c_D w_R`, while the error loses at most
 `D lambda_R<=D delta_z`. Since the left side has magnitude
 `alpha_{zx_R}`, we get
 
-$$
+```math
 \boxed{
 \alpha_{zx_R}
 \ge
 D(c_D w_R-\delta_z).}
 \tag{C71.22}
-$$
+```
 
 Thus a dominant single port is automatically a high-stress physical contact.
 
@@ -368,25 +368,25 @@ Thus a dominant single port is automatically a high-stress physical contact.
 
 C66 gives a diameter vertex `z` such that
 
-$$
+```math
 S_z\ge1-C_0D\varepsilon,
 \qquad
 C_0:=\frac{2\pi}{\kappa_0},
 \tag{C71.23}
-$$
+```
 
 where
 
-$$
+```math
 \kappa_0=\frac{2\gamma_0}{1+2\gamma_0}>0.
-$$
+```
 
 Hence
 
-$$
+```math
 \delta_z\le C_0D\varepsilon.
 \tag{C71.24}
-$$
+```
 
 Combining C71.21-C71.24 gives the promised near-zero normal form.
 
@@ -394,33 +394,36 @@ Combining C71.21-C71.24 gives the promised near-zero normal form.
 
 Along any hypothetical C-II sequence satisfying
 
-$$
+```math
 D\varepsilon\longrightarrow0,
 \tag{C71.25}
-$$
+```
 
 choose the C66 star center `z`. Then one of the following holds along a subsequence.
 
 1. **Return/cycle phase:** the multi-port component of `C-z` carries star mass bounded
    away from zero.
 2. **Single-port phase:** one single-port component `R` satisfies
-   $$
+   ```math
    \boxed{w_R\longrightarrow1,}
    \tag{C71.26}
-   $$
+   
+   ```
    and its unique contact port obeys
-   $$
+   ```math
    \boxed{
    \alpha_{zx_R}\ge(c_\infty-o(1))D,
    }
    \tag{C71.27}
-   $$
+   
+   ```
    where
-   $$
+   ```math
    c_\infty
    :=\cos\left(\frac{5\pi}{12}-\frac{\sqrt3}{2}\right)
    =0.90348\ldots .
-   $$
+   
+   ```
 
 Indeed, if `W_multi` does not stay bounded away from zero, pass to a subsequence with
 `W_multi->0`; then C71.21, C71.23, and `delta_z->0` give `w_R->1`, and C71.22 gives
@@ -436,9 +439,10 @@ branches issuing from its common star center.
 C71 is not a restatement of either newer theorem.
 
 - C68 controls the **aggregate transverse contact-stress energy**
-  $$
+  ```math
   Q_z=\sum_C\alpha_{ij}[1-(r_i-r_j)^2]
-  $$
+  
+  ```
   and gives `Q_z=o(D^2)` when `D epsilon->0`.
 - C70 controls the **boundary response support** and gives total non-`z` response
   conductance `X_z=o(1)` in the same regime.

@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_selected_genericity_2026-09-09.md) · source SHA-256 `1adf50e5a3a6ced31c4bdf04240cc66dba8a942201b42cc52e218a2fd85468c1`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 10 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-13A54EF55684","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic endpoint: every selected stress is generic and maximal-rank
 
@@ -18,11 +20,11 @@
 
 CY proves that in the primitive cyclic endpoint every normalized KKT stress has
 
-$$
+```math
 C_s=C_q,
 \qquad
 B_s=B_+.
-$$
+```
 
 Thus support reduction never changes the positive contact network or the terminal polygon; it can only delete positive diameter edges while keeping those edges an edge cover of all `q` terminals.
 
@@ -30,21 +32,22 @@ This lets the report-level zero-transfer exclusion be applied **uniformly over t
 
 The result is:
 
-$$
+```math
 \boxed{
 \text{every normalized KKT stress is in C56-G, not C56-Z},}
 \tag{CG.0}
-$$
+```
 
 and consequently every selected scalar stress matrix has the same exact affine kernel
 
-$$
+```math
 \boxed{
 \ker\Omega_s
 =\operatorname{span}\{\mathbf1,P_x,P_y\},
 \qquad
 \operatorname{rank}\Omega_s=q-3.}
 \tag{CG.1}
+```
 
 So the entire KKT polytope lies in the relative interior of one fixed maximal-rank PSD face. Its boundary is created solely by diameter coefficients reaching zero; scalar-stress rank never drops.
 
@@ -56,26 +59,26 @@ Fix any normalized KKT stress `s` in the cyclic endpoint.
 
 CY.1 gives the complete positive contact cycle
 
-\[
+```math
 C_s=C_q.
-$$
+```
 
 Hence the positive contact network is connected and circular-planar on the full terminal set `B_+`.
 
 CY.2 gives
 
-$$
+```math
 B_s=B_+,
-$$
+```
 
 so the positive diameter graph `H_s` has no isolated terminal. Its edges are actual diameter chords of the same strictly convex terminal polygon, hence form a straight-line geometric thrackle.
 
 For the large post-ZF regime `q>=6`. Any edge cover of `q>=6` vertices has at least three edges, so
 
-$$
+```math
 |H_s|\ge3.
 \tag{1.1}
-$$
+```
 
 These are exactly the structural hypotheses needed by Theorem Z.
 
@@ -83,9 +86,9 @@ Suppose `s` were in C56-Z. Theorem Z would make the complete effective-resistanc
 
 Every terminal here is loaded, and its actual positive contact degree in `C_s=C_q` is exactly two. For `q>=6`,
 
-$$
+```math
 q-1>2.
-$$
+```
 
 Contradiction.
 
@@ -95,15 +98,17 @@ Therefore:
 
 For every normalized KKT stress of a sufficiently large cyclic survivor,
 
-$$
+```math
 \boxed{\text{C56-G holds and C56-Z is impossible}.}
 \tag{CG.2}
+```
 
 In C56 notation the minimum off-diagonal transfer is strictly negative and the edge-defect kernel is exactly
 
-\[
+```math
 \operatorname{span}\{\mathbf1,t\}.
 \tag{1.2}
+```
 
 ---
 
@@ -117,49 +122,52 @@ For the selected stress `s`, let
 
 There are no positive-contact interior vertices in the cyclic endpoint, so
 
-\[
+```math
 \Lambda=L_{C_q}(\alpha).
 \tag{2.1}
+```
 
 On the zero-sum terminal space, define as in the ZR proof
 
-\[
+```math
 Y=\Lambda^{-1/2}Q B_H^{1/2},
 \tag{2.2}
+```
 
 where `Q` is the selected diameter incidence matrix and `B_H` the positive diagonal beta matrix.
 
 The C56 edge defect is congruent to
 
-\[
+```math
 I-Y^{\mathsf T}Y.
-$$
+```
 
 CG.1/C56-G says the zero eigenvalue of this edge defect has multiplicity exactly two. The nonzero singular values of `Y` are the same from the left and the right, so
 
-$$
+```math
 I-YY^{\mathsf T}
-$$
+```
 
 also has zero eigenvalue with multiplicity exactly two.
 
 But the selected boundary defect on the zero-sum terminal space is congruent to
 
-$$
+```math
 I-YY^{\mathsf T}.
-$$
+```
 
 Restoring the constant boundary mode adds exactly one kernel dimension. Therefore
 
-$$
+```math
 \operatorname{nullity}\Omega_s=3.
 \tag{2.3}
+```
 
 The affine vectors
 
-\[
+```math
 \mathbf1,P_x,P_y
-$$
+```
 
 already lie in the kernel by the C11 equilibrium identity and are independent because the force hull is two-dimensional. They therefore exhaust it.
 
@@ -171,37 +179,39 @@ This proves CG.1. `square`
 
 Universal selected-stress PSD gives
 
-$$
+```math
 \Omega_s\succeq0
-$$
+```
 
 for every normalized KKT stress. CG.1 sharpens this in the cyclic endpoint to
 
-$$
+```math
 \boxed{
 \Omega_s\succeq0,
 \qquad
 \operatorname{rank}\Omega_s=q-3
 \quad(s\in\mathcal S).}
 \tag{CG.3}
+```
 
 Thus every selected stress has the **same** scalar kernel
 
-\[
+```math
 K_{aff}:=\operatorname{span}\{1,P_x,P_y\}.
-$$
+```
 
 Equivalently, after restricting to `K_aff^perp`, every `Omega_s` is positive definite.
 
 For a fixed source the KKT polytope is compact, so the smallest positive eigenvalue has a positive minimum over the complete polytope:
 
-$$
+```math
 \boxed{
 \mu_{cyc}:=
 \min_{s\in\mathcal S}
 \lambda_{min}(\Omega_s|_{K_{aff}^{\perp}})
 >0.}
 \tag{CG.4}
+```
 
 No uniform-in-`D` lower bound is claimed. The number `mu_cyc` may tend to zero along an unbounded sequence.
 
@@ -213,19 +223,20 @@ The important structural point is exact: KKT-polytope boundary formation never c
 
 CY.1 already proves every cycle coefficient `alpha_e` is positive at every point of `S`. Compactness therefore gives, for the fixed source,
 
-\[
+```math
 \boxed{
 \alpha_e\ge a_e^{min}>0
 \qquad(e\in C_q,\ s\in\mathcal S).}
 \tag{4.1}
+```
 
 Hence no normalized KKT-polytope face lies in a contact coordinate hyperplane.
 
 All proper faces of `S` arise solely from conditions
 
-\[
+```math
 \beta_h=0
-$$
+```
 
 on selected diameter edges, while the selected diameter support continues to cover all `q` terminals by CY.2.
 
@@ -235,11 +246,12 @@ Thus:
 
 The face lattice of the cyclic KKT polytope is induced entirely by the nonnegativity facets of the diameter coefficients. Every face retains
 
-$$
+```math
 C_s=C_q,
 \qquad B_s=B_+,
 \qquad \operatorname{rank}\Omega_s=q-3.
 \tag{CG.5}
+```
 
 This reduces the low-dimensional stress-family problem to a polytope in diameter-weight coordinates; contact support and stress rank are frozen.
 
@@ -249,17 +261,17 @@ This reduces the low-dimensional stress-family problem to a polytope in diameter
 
 CY gives for every extreme stress
 
-\[
+```math
 \lceil q/2\rceil
 \le h_s:=|H_s|
 \le q-2.
-$$
+```
 
 CG adds
 
-$$
+```math
 \operatorname{rank}\Omega_s=q-3.
-$$
+```
 
 Therefore every KKT extreme simultaneously has:
 
@@ -277,9 +289,9 @@ No zero-transfer forest extreme survives, even if the selected `H_s` itself happ
 
 Recall
 
-$$
+```math
 (d_H,s_Z)=(0,2),(1,1),(2,0).
-$$
+```
 
 ### `d_H=2`
 

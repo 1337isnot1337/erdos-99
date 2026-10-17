@@ -15,67 +15,67 @@ Status: exact structural necessary condition for every generic support-seven rec
 
 Let `y_0,...,y_7` be a generic reciprocal configuration. For every unordered reciprocal segment
 
-$$
+```math
 e=\{u,v\}\subset\{0,\ldots,7\}
-$$
+```
 
 write
 
-$$
+```math
 \lambda_e=|y_u-y_v|>0.
-$$
+```
 
 There are 28 such segment lengths.
 
 For a root `r` and distinct `i,j != r`, define
 
-$$
+```math
 A^{(r)}_{ij}=\angle r i j,
 \qquad
 D^{(r)}_{ij}=A^{(r)}_{ij}-A^{(r)}_{ji}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \operatorname{sgn}D^{(r)}_{ij}
 =
 \operatorname{sgn}\bigl(\lambda_{\{r,j\}}-\lambda_{\{r,i\}}\bigr).
 }
 \tag{1}
-$$
+```
 
 Thus the 168 rooted affine angle comparisons are not eight independent seven-distance order systems. They are the comparison signs of one common family of 28 positive segment lengths.
 
 Put a vertex in a graph for each reciprocal segment and join two vertices exactly when the corresponding segments share one reciprocal endpoint. This is the line graph
 
-$$
+```math
 L(K_8).
-$$
+```
 
 It has
 
-$$
+```math
 28\text{ vertices},\qquad 168\text{ edges},\qquad \deg=12,
-$$
+```
 
 and cycle rank
 
-$$
+```math
 168-28+1=141.
-$$
+```
 
 Equation (1) supplies one comparison sign on every edge of `L(K8)`. Every genuine reciprocal metric therefore gives a sign pattern on `L(K8)` that extends to a single total preorder of its 28 vertices by the scalar values `lambda_e`.
 
 In particular, if all 28 segment lengths are distinct, orient each comparison edge from the shorter segment to the longer segment. Then
 
-$$
+```math
 \boxed{
 \text{the resulting orientation of }L(K_8)\text{ is acyclic.}
 }
 \tag{2}
-$$
+```
 
 Any forced directed cycle, including one that passes through several different reciprocal roots, excludes the affine cell before any sine-law magnitude equation is used.
 
@@ -83,27 +83,27 @@ Any forced directed cycle, including one that passes through several different r
 
 Fix distinct `r,i,j`. In triangle `rij`, the sine law gives
 
-$$
+```math
 \frac{\lambda_{\{r,j\}}}{\lambda_{\{r,i\}}}
 =
 \frac{\sin A^{(r)}_{ij}}{\sin A^{(r)}_{ji}}.
 \tag{3}
-$$
+```
 
 Let
 
-$$
+```math
 S=A^{(r)}_{ij}+A^{(r)}_{ji}
 =\pi-\angle i r j.
-$$
+```
 
 Genericity gives `0<S<pi`. Hence
 
-$$
+```math
 \sin A^{(r)}_{ij}-\sin A^{(r)}_{ji}
 =2\cos\!\left(\frac S2\right)
  \sin\!\left(\frac{D^{(r)}_{ij}}2\right).
-$$
+```
 
 The cosine factor is positive and `D^(r)_ij` lies in `(-pi,pi)`, so the right side has the sign of `D^(r)_ij`. The denominator in (3) is positive. Therefore (1) follows exactly.
 
@@ -113,9 +113,9 @@ This is the ground-radius sign theorem with the root no longer fixed at `0`.
 
 At a fixed root `r`, the seven incident segment lengths
 
-$$
+```math
 \lambda_{\{r,i\}},\qquad i\ne r,
-$$
+```
 
 have a total preorder. This recovers the local `7! = 5040` strict order cones and `47293` weak orders already available at the ground root.
 
@@ -135,9 +135,9 @@ form the cycle
 
 whose four comparisons occur at roots `0,2,3,1`, respectively. A strict sign pattern asserting
 
-$$
+```math
 \lambda_{01}<\lambda_{02}<\lambda_{23}<\lambda_{13}<\lambda_{01}
-$$
+```
 
 is impossible, even though no single root sees the whole contradiction.
 
@@ -165,47 +165,47 @@ Hence this criterion is an exact order-extension theorem. It does not assert tha
 The same graph packages the full metric compatibility equations, not only their signs.
 For adjacent segment vertices
 
-$$
+```math
 e=\{r,i\},\qquad f=\{r,j\},
-$$
+```
 
 define the antisymmetric log-sine cochain
 
-$$
+```math
 H_{e f}
 =
 \log\sin A^{(r)}_{ij}
 -
 \log\sin A^{(r)}_{ji}.
 \tag{4}
-$$
+```
 
 In a genuine metric, the sine law gives
 
-$$
+```math
 H_{e f}=\log\lambda_f-\log\lambda_e.
 \tag{5}
-$$
+```
 
 Hence `H` is an exact one-cochain on `L(K8)`. Equivalently, its sum around every directed line-graph cycle is zero.
 
 Conversely, restrict `L(K8)` to the seven segment vertices
 
-$$
+```math
 01,02,\ldots,07.
-$$
+```
 
 This induced subgraph is `K7`, and the restriction of (4) is exactly the complete ground-radius log-sine cochain used in the existing 15-cycle metric theorem. Therefore exactness of `H` on `L(K8)` implies those fifteen root-fan identities. The committed complete-metric theorem then reconstructs one common reciprocal coordinate configuration up to similarity. That configuration makes (5) hold on every line-graph edge.
 
 Thus, on the complete generic angular system,
 
-$$
+```math
 \boxed{
 \text{common reciprocal metric}
 \iff H\text{ is exact on }L(K_8).
 }
 \tag{6}
-$$
+```
 
 Because `L(K8)` is connected with cycle rank 141, exactness can be written as 141 cycle equations. They are highly redundant after the complete reciprocal triangle equations are imposed: the existing fifteen ground-root equations are already sufficient. The redundancy is useful computationally. One may choose whichever short cycle has the strongest certified angle bounds instead of forcing every contradiction through one fixed ground-root basis.
 
@@ -216,9 +216,9 @@ Two short-cycle families are especially explicit.
 
 The first genuinely cross-root chordless cycles have length four. They are exactly the simple four-cycles of `K8`, so there are
 
-$$
+```math
 3\binom84=\boxed{210}
-$$
+```
 
 of them. A quantitative sine bound on any one of these 210 cycle products can exclude a cell even when its sign orientation is acyclic. This is the direct `H6` analogue of the quantitative law-of-sines contradictions already used successfully in the generic `H7b` branch.
 
@@ -231,15 +231,15 @@ Accordingly there are two nested filters on the same graph:
 
 Every segment of `K8` meets six other segments at each endpoint, so every vertex of `L(K8)` has degree 12. Therefore
 
-$$
+```math
 |E(L(K_8))|=\frac{28\cdot12}{2}=168.
-$$
+```
 
 Equivalently,
 
-$$
+```math
 168=8\binom72,
-$$
+```
 
 one comparison for each root and unordered pair of the other seven reciprocal points.
 
@@ -250,9 +250,9 @@ The triangles of `L(K8)` have exactly two forms:
 
 So `L(K8)` has exactly
 
-$$
+```math
 280+56=336
-$$
+```
 
 triangles.
 

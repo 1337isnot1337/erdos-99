@@ -32,49 +32,49 @@ linear packet is an additional obligation there.
 
 Let A be a finite planar unit-separated set of diameter D, and put
 
-$$
+```math
 K=\operatorname{conv}A,\qquad
 \delta_K={\pi D^2\over4}-\operatorname{area}K.
-$$
+```
 
 Fix c>0 and define the simple undirected graph
 
-$$
+```math
 H_c=\{xy\subset A:|x-y|\ge D-c/D\},\qquad d_c(v)=\deg_{H_c}(v).
 \tag{1}
-$$
+```
 
 Assume D>=max{2,4 sqrt(c),2c}, and set
 
-$$
+```math
 B_c=1+\lceil20\sqrt c\rceil,\quad M_c=2(4\sqrt c+1)^2,
 \quad C_c=768\pi\sqrt3 M_c.
 \tag{2}
-$$
+```
 
 **Finite geometric theorem:**
 
-$$
+```math
 \boxed{\sum_{v:d_c(v)>B_c}(d_c(v)-1)^3\le3072M_cD\delta_K.}
 \tag{3}
-$$
+```
 
 For a noncollinear global minimum-diameter source, canonical Section 58, Section 1 gives
 delta_K < (pi sqrt(3)/4)D. Thus
 
-$$
+```math
 \boxed{\sum_v(d_c(v)-B_c)_+^3<C_cD^2.}
 \tag{4}
-$$
+```
 
 **Global packet theorem:** for any subgraphs F_D of H_c in global minimizing
 sources, if |E(F_D)| >= (kappa-o(1))D for fixed kappa>0, then
 
-$$
+```math
 \boxed{\liminf_{D\to\infty}{\nu(F_D)\over\sqrt D}
 \ge{\kappa^{3/2}\over2\sqrt{C_c}}>0.}
 \tag{5}
-$$
+```
 
 Here nu is maximum matching size. Constants are uniform over the subgraphs.
 
@@ -116,16 +116,16 @@ and has a unique support point in every normal direction.
 Fix v with at least two H_c neighbors, and put epsilon=c/D. For a neighbor q,
 r=|v-q|, n=(v-q)/r, constant width and q in W give
 
-$$
+```math
 0\le h(n)-v\cdot n\le D-r\le\epsilon.                 \tag{6}
-$$
+```
 
 All near-partner rays lie in one ordinary angular interval of length theta_v
 less than pi/2. Indeed, for two lengths in [D-epsilon,D], the diameter bound gives
 
-$$
+```math
 \cos\alpha\ge1-{D^2\over2(D-\epsilon)^2}>0.           \tag{7}
-$$
+```
 
 The cosine expression is increasing in each ray length in this range, so its
 minimum occurs at two lengths D-epsilon. We used epsilon/D<=1/16. Lift all
@@ -136,22 +136,22 @@ between those extremes, rotated to (-a_v,a_v), with a_v=theta_v/2.
 Sublinearity of h, expressed using the two endpoint normals with coefficients
 sin(a_v-t)/sin(2a_v) and sin(a_v+t)/sin(2a_v), gives
 
-$$
+```math
 0\le y_v(t):=h(t)-v\cdot n(t)
 \le\epsilon{\cos t\over\cos a_v}\le2\epsilon.          \tag{8}
-$$
+```
 
 Distinct neighbors are unit-separated and their radii differ by at most epsilon:
 
-$$
+```math
 1\le|q-q'|^2\le\epsilon^2+4D^2\sin^2(\alpha/2).
-$$
+```
 
 Since epsilon<=1/2, every consecutive ray gap exceeds 1/(2D). Thus
 
-$$
+```math
 \boxed{\theta_v\ge(d_c(v)-1)/(2D).}                     \tag{9}
-$$
+```
 
 ## 3. Bounded overlap
 
@@ -159,10 +159,10 @@ Let z(n) be W's support point at n. Differentiating the width identity gives
 z(n)-z(-n)=Dn. For any x in the support cap h(n)-x dot n<=2epsilon, write
 x=z(n)-tn+sJn, with 0<=t<=2epsilon. Because diam(W)=D,
 
-$$
+```math
 (D-t)^2+s^2\le D^2,\qquad
 |x-z(n)|^2\le2Dt\le4c.                                  \tag{10}
-$$
+```
 
 This cap's source points lie in a radius-2sqrt(c) disk. Their disjoint open
 radius-1/2 disks fit in the concentric radius-(2sqrt(c)+1/2) disk, so their
@@ -178,34 +178,34 @@ endpoints need not be hull vertices or loaded.
 On I_v define g_v(t)=cos(t)/cos(a_v)-1, on I_v+pi use its negative, and elsewhere
 use zero. It is antiperiodic and in H^1. Put k_v=tan(a_v)-a_v. Direct integration gives
 
-$$
+```math
 E(g_v):=\int[(g_v')^2-g_v^2]=4k_v,\qquad
 \int(g_v')^2=2(a_v\sec^2a_v-\tan a_v)\le8k_v.             \tag{11}
-$$
+```
 
 For the last inequality, t=tan(a_v)<=1 reduces it to
 F(t)=5t-(t^2+5)atan(t)>=0. F(0)=0 and atan(t)<=t give
 
-$$
+```math
 F'(t)={4t^2\over1+t^2}-2t\arctan t
 \ge {2t^2(1-t^2)\over1+t^2}\ge0.                         \tag{12}
-$$
+```
 
 On I_v, y_v+y_v''=rho and g_v''+g_v=-1. Integration by parts gives
 
-$$
+```math
 \int_{I_v}\rho g_v
 =\tan a_v[y_v(-a_v)+y_v(a_v)]-\int_{I_v}y_v
 \le2\epsilon\tan a_v.                                    \tag{13}
-$$
+```
 
 Here the endpoint bound epsilon from (6) is retained. Since int_{I_v}g_v=2k_v,
 antiperiodicity gives
 
-$$
+```math
 -\langle f,g_v\rangle\ge2Dk_v-4\epsilon\tan a_v
 \ge2Dk_v-8\epsilon a_v.                                  \tag{14}
-$$
+```
 
 We used tan(a)<=2a on [0,pi/4], from sec^2(a)<=2. Also k_v>=a_v^3/3,
 by integrating tan^2(a)>=a^2.
@@ -213,37 +213,37 @@ by integrating tan^2(a)>=a^2.
 Call v heavy if d_c(v)>B_c. By (9), a_v>5sqrt(c)/D, so a_v^2>=24epsilon/D.
 Thus Dk_v>=8epsilon a_v and
 
-$$
+```math
 -\langle f,g_v\rangle\ge Dk_v\quad(v\text{ heavy}).       \tag{15}
-$$
+```
 
 Set g=sum_{heavy v}g_v and S=sum_{heavy v}k_v. Pointwise Cauchy--Schwarz,
 the M_c overlap bound, and (11) give
 
-$$
+```math
 E(g)\le\int(g')^2\le M_c\sum_v\int(g_v')^2\le8M_cS.      \tag{16}
-$$
+```
 
 On antiperiodic H^1 functions E is positive semidefinite: Fourier frequencies
 are odd integers and its eigenvalues are j^2-1>=0. Its kernel consists of
 translation first harmonics. The support-area identity gives
 
-$$
+```math
 E(p)=2\delta_W,\quad
 \delta_W={\pi D^2\over4}-\operatorname{area}W\le\delta_K.
-$$
+```
 
 Polarization gives E(p,g)=-<f,g>; semidefinite Cauchy--Schwarz then gives
 
-$$
+```math
 \langle f,g\rangle^2\le2\delta_WE(g).                    \tag{17}
-$$
+```
 
 If S>0, (15)--(17) imply D^2 S^2<=16M_c delta_K S, hence
 
-$$
+```math
 S\le16M_c\delta_K/D^2.                                   \tag{18}
-$$
+```
 
 Finally k_v>=theta_v^3/24>=(d_c(v)-1)^3/(192D^3). Sum over heavy v
 and use (18) to prove (3). If S=0, the assertion is immediate. Canonical
@@ -254,10 +254,10 @@ delta_K<(pi sqrt(3)/4)D proves (4). The actual-star report was not a premise.
 The truncated cubic bound is inherited by any subgraph F of H_c. For a vertex
 cover T of size r, every edge has an endpoint in T, so Holder gives
 
-$$
+```math
 |E(F)|\le\sum_{v\in T}\deg_F(v)
 \le B_cr+C_c^{1/3}r^{2/3}D^{2/3}.                         \tag{19}
-$$
+```
 
 Maximum-matching endpoints form a cover, so use r=2nu(F). On any subsequence
 with nu(F_D)/sqrt(D) tending to a finite l, division by D gives
@@ -269,9 +269,9 @@ owner, and partners on the opposite shore, the distinct partner set is a
 cover. Selecting one pair per partner is a matching. If its size is r and
 the packet has at least (kappa-o(1))D edges, (19) gives the stronger bound
 
-$$
+```math
 \boxed{\liminf r/\sqrt D\ge\kappa^{3/2}/\sqrt{C_c}.}      \tag{20}
-$$
+```
 
 This uses aggregate repetition. The maximum degree bound alone would only
 yield a cube-root matching.
@@ -282,9 +282,9 @@ degree six once D>=10c. If seven neighbors existed, two consecutive rays would
 have angle at most 2pi/7; their radii differ by at most 1/10 and are at most
 11/10. Using pi<22/7, their squared separation would be at most
 
-$$
+```math
 {1\over100}+4(11/10)^2(22/49)^2<1,
-$$
+```
 
 a contradiction. A maximum matching's endpoint cover then gives nu>=m/12
 for any m-edge near-unit packet. This bounded-degree step is elementary,
@@ -301,10 +301,10 @@ For any one near-star, if theta_v^2>=96epsilon/D, (15) holds without a degree
 assumption. Apply (17) to g_v alone: D^2 k_v^2<=8delta_K k_v, so
 theta_v^3<=192delta_K/D^2. Otherwise its span is already small. Therefore
 
-$$
+```math
 \boxed{\theta_v\le\max\{\sqrt{96c}/D,
 (192\delta_K/D^2)^{1/3}\}.}                               \tag{21}
-$$
+```
 
 For a noncollinear global minimizer this is at most
 max{sqrt(96c)/D,(48 pi sqrt(3)/D)^{1/3}}=o(1), uniformly over all vertices.
@@ -333,10 +333,10 @@ shore gives a bipartite packet of at least (gamma_0/160-o(1))D pairs.
 **Assuming that proof-only packet theorem**, apply (20) with c=1/4,
 B_c=11, M_c=18, C_c=13824 pi sqrt(3). The same row contains a matching with
 
-$$
+```math
 \boxed{\liminf {M_D^{sync}\over\sqrt D}
 \ge{(\gamma_0/160)^{3/2}\over\sqrt{13824\pi\sqrt3}}>0.}      \tag{22}
-$$
+```
 
 Its original train scaffold and tags are retained. The old report only obtained
 Omega(D^{1/4}) from a maximum partner-degree bound. Equation (22) eliminates
@@ -362,10 +362,10 @@ high-t frontier; the source-wide statements (3)--(21) do not depend on it.
 For integer D>=64, take v=(0,0), an actual partner (D,0), and for
 0<|i|<=floor(D/5), let r=D-1/(2D) and
 
-$$
+```math
 q_i=r\left({1-(i/D)^2\over1+(i/D)^2},
 {2i/D\over1+(i/D)^2}\right).                              \tag{23}
-$$
+```
 
 All coordinates are rational. Equal-radius partner chord lengths are at least
 2r/[D(1+1/25)]>1; their tangential distances from (D,0) exceed one. Their

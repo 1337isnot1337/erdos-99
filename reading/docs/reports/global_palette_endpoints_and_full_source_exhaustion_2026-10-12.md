@@ -25,9 +25,9 @@ Given a complete n-label source P of diameter D, assign a finite set O_i of
 possible new planar positions to each label. A strict competitor exists within
 these palettes exactly when there are choices y_i in O_i with
 
-$$
+```math
 1\le |y_i-y_j|<D\quad\text{for every }i\ne j.
-$$
+```
 
 Make a graph with vertices (i,a), one for each label/option pair. Join any two
 options of the same label, and join options of different labels when their
@@ -74,10 +74,10 @@ assignment is separately checked over every chosen pair.
 Let P consist of the vertices of the regular unit 43-gon. Its exact radius and
 diameter are
 
-$$
+```math
 R=\frac1{2\sin(\pi/43)},\qquad
 D=\frac1{2\sin(\pi/86)}.
-$$
+```
 
 Canonical `docs/theory/02-nonlinear-and-regressions.md`, Proposition 13.1,
 supplies strict local diameter minimality modulo congruence, since 43 is prime.
@@ -87,11 +87,11 @@ identities are not used in the endpoint certificate.
 
 Choose alpha=17/20 and the three translation vectors
 
-$$
+```math
 u_0=(1,0),\quad
 u_1=(-1/2,\sqrt3/2),\quad
 u_2=(-1/2,-\sqrt3/2),
-$$
+```
 
 with options O_i={alpha p_i+u_0, alpha p_i+u_1, alpha p_i+u_2}. The sufficient
 system finds an assignment in 13 search nodes. The independent full-pair check

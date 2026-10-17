@@ -18,14 +18,14 @@
 
 The two-leaf missing-budget theorem gives the stronger proof-only train gap
 
-$$
+```math
 g:=0.000698,
 \qquad
 {T-q/2\over D}\ge 2\sqrt{\Delta_2}+g-o(1),
 \qquad
 \Delta_2={\pi\over2\sqrt3}.
 \tag{PC.1}
-$$
+```
 
 This note reruns the audited §171 one-variable orbit/detour envelope with this input and then propagates the resulting `q-k` floor through the exact exceptional-face and inactive-chamber identities. The propagation uses the exact relation between `H_D`, `J_D`, and `q-k`; it does not lose a factor by reverting to the older coarse inequality `H_D>=3J_D/5`.
 
@@ -35,90 +35,90 @@ This note reruns the audited §171 one-variable orbit/detour envelope with this 
 
 Put
 
-$$
+```math
 C_{146}:={4\over9}(\pi+\sqrt{\Delta_2}).
-$$
+```
 
 Audited §171 proves that any Type-II subsequential limit
 
-$$
+```math
 t=\lim {q-k\over D},
 \qquad
 \delta=\lim {b-P_F\over D}\ge0
-$$
+```
 
 must satisfy
 
-$$
+```math
 F_t(\delta):=
 10t-5\pi-5\delta
 +\bigl(81(\pi+\delta)^2\delta\bigr)^{1/3}
 -{8\Delta_2\over {9t\over2}-2\pi-2\delta}
 \ge0,
 \tag{PC.2}
-$$
+```
 
 with feasible detour interval
 
-$$
+```math
 0\le\delta\le
 {{9\over2}(t-C_{146})-g\over2}.
 \tag{PC.3}
-$$
+```
 
 Set
 
-$$
+```math
 \varepsilon_{69}:=0.0014334,
 \qquad
 t_{69}:=C_{146}+\varepsilon_{69}.
 \tag{PC.4}
-$$
+```
 
 At the right endpoint of (PC.3),
 
-$$
+```math
 \delta_{69}=
 {{9\over2}\varepsilon_{69}-g\over2}
 =0.00287615.
 \tag{PC.5}
-$$
+```
 
 The exact-rational certificate `verify_target_c_two_leaf_orbit_chamber_propagation.py` proves
 
-$$
+```math
 1.820946937951019<t_{69}<1.820946937995464,
 \tag{PC.6}
-$$
+```
 
-$$
+```math
 F_{t_{69}}(\delta_{69})<-5.0\times10^{-5},
 \tag{PC.7}
-$$
+```
 
 and
 
-$$
+```math
 \partial_\delta F_{t_{69}}(\delta)>142
 \qquad(0<\delta\le\delta_{69}).
 \tag{PC.8}
-$$
+```
 
 Audited §171 also proves strict monotonicity in `t`. Hence no feasible Type-II limit can have `t<=t_69`, and therefore
 
-$$
+```math
 \boxed{
 \liminf {q-k\over D}
 \ge t_{69}>1.82094693795.
 }
 \tag{PC.9}
-$$
+```
 
 A high-precision non-load-bearing solve puts the unchanged envelope root at approximately
 
-$$
+```math
 \varepsilon_*=0.001433551478348,
-$$
+```
 
 so the safe decimal in (PC.4) retains a visible sign margin.
 
@@ -128,37 +128,37 @@ so the safe decimal in (PC.4) retains a visible sign margin.
 
 The exact train ledger is
 
-$$
+```math
 T=q+2f-k.
 \tag{PC.10}
-$$
+```
 
 Since `q<=P_F` and `k>=0`,
 
-$$
+```math
 T-{q\over2}
 ={q\over2}+2f-k
 \le {P_F\over2}+2f.
-$$
+```
 
 Full-core Type II has `P_F/D->pi`. Combining with (PC.1) gives
 
-$$
+```math
 \boxed{
 \liminf {f\over D}
 \ge f_{69}:=\sqrt{\Delta_2}-{\pi\over4}+{g\over2}
 =0.167263643466509\ldots .
 }
 \tag{PC.11}
-$$
+```
 
 This improves the AG42 value by `0.000139D` at first order. In particular `Q>=f` and the global exceptional-face perimeter obeys
 
-$$
+```math
 \liminf {Q+4f\over D}\ge5f_{69}
 =0.836318217332545\ldots .
 \tag{PC.12}
-$$
+```
 
 ---
 
@@ -166,40 +166,40 @@ $$
 
 Define
 
-$$
+```math
 J_D:=(b-P_F)+(Q+4f).
 \tag{PC.13}
-$$
+```
 
 The stopped-train handshake gives the exact identity
 
-$$
+```math
 J_D=2T-P_F.
 \tag{PC.14}
-$$
+```
 
 Write
 
-$$
+```math
 C_{69}:=2\sqrt{\Delta_2}+g.
-$$
+```
 
 Then
 
-$$
+```math
 2T=q+2(T-q/2)
-$$
+```
 
 and `q>=q-k`, so (PC.1), (PC.9), and `P_F/D->pi` give
 
-$$
+```math
 \boxed{
 \liminf {J_D\over D}
 \ge j_{69}:=t_{69}+2C_{69}-\pi
 =2.490001511845481\ldots .
 }
 \tag{PC.15}
-$$
+```
 
 The increase over the AG42/§171 value `2.489387211845480...` is about `0.0006143D`.
 
@@ -209,49 +209,49 @@ The increase over the AG42/§171 value `2.489387211845480...` is about `0.000614
 
 Define
 
-$$
+```math
 H_D:=(b-P_F)+(Q+2f).
 \tag{PC.16}
-$$
+```
 
 The outer ledger is
 
-$$
+```math
 b+Q=2(q-k).
 \tag{PC.17}
-$$
+```
 
 Using (PC.13),
 
-$$
+```math
 J_D=2(q-k)+4f-P_F.
-$$
+```
 
 Hence
 
-$$
+```math
 2f={J_D\over2}-(q-k)+{P_F\over2},
-$$
+```
 
 and therefore the exact identity
 
-$$
+```math
 \boxed{
 H_D={J_D\over2}+(q-k)-{P_F\over2}.
 }
 \tag{PC.18}
-$$
+```
 
 This is stronger for the present constants than discarding correlation via `H_D>=3J_D/5`. Thus
 
-$$
+```math
 \boxed{
 \liminf {H_D\over D}
 \ge h_{69}:={j_{69}\over2}+t_{69}-{\pi\over2}
 =1.495151367107289\ldots .
 }
 \tag{PC.19}
-$$
+```
 
 ---
 
@@ -259,55 +259,55 @@ $$
 
 The exact planar population identity is
 
-$$
+```math
 m-R_4={P_F+H_D\over2}+1.
 \tag{PC.20}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \liminf {m-R_4\over D}
 \ge {\pi\over2}+{h_{69}\over2}
 =2.318372010348541\ldots .
 }
 \tag{PC.21}
-$$
+```
 
 Canonical Section 85 gives, with
 
-$$
+```math
 a_0={\sqrt3\over2},
 \qquad
 c_0={\sqrt3\over4},
-$$
+```
 
-$$
+```math
 A_{ch}-a_0Z_{ch}\ge c_0H_D.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \liminf {A_{ch}-a_0Z_{ch}\over D}
 \ge \beta_{69}:=c_0h_{69}
 =0.647419533208972\ldots .
 }
 \tag{PC.22}
-$$
+```
 
 The full-source Oler count bound and (PC.21) similarly give
 
-$$
+```math
 \boxed{
 \liminf {\Delta_2D^2-R_4\over D}
 \ge \gamma_{69}:={h_{69}\over2}
 =0.747575683553644\ldots .
 }
 \tag{PC.23}
-$$
+```
 
 and `a_0 gamma_69=beta_69`.
 
@@ -317,48 +317,48 @@ and `a_0 gamma_69=beta_69`.
 
 The exact chamber-interface cancellation theorem on this branch gives
 
-$$
+```math
 \Sigma_{ch}=J_D+a+L_{add}+R_F,
 \qquad
 a,L_{add},R_F\ge0.
 \tag{PC.24}
-$$
+```
 
 Consequently the correct raw chamber-slack floor is simply
 
-$$
+```math
 \boxed{
 \liminf {\Sigma_{ch}\over D}
 \ge j_{69}=2.490001511845481\ldots .
 }
 \tag{PC.25}
-$$
+```
 
 This is mandatory boundary complexity, not fixed-wall spare. Section 85 still gives only `R_F>=0`; the stronger train constant does not manufacture a positive residual margin.
 
 On the upper side, the residual-budget theorem gives
 
-$$
+```math
 R_F+\Sigma_{ext}<{P_K\over2}+P_F-q.
-$$
+```
 
 Using `q>=q-k`, Cauchy's perimeter bounds, and (PC.9),
 
-$$
+```math
 \boxed{
 \limsup {R_F+\Sigma_{ext}\over D}
 \le {3\pi\over2}-t_{69}
 =2.891442042405245\ldots .
 }
 \tag{PC.26}
-$$
+```
 
 Adding the existing coarse loaded-rhombus allowance gives the joint-puncture coefficient
 
-$$
+```math
 3.863454192162531\ldots,
 \tag{PC.27}
-$$
+```
 
 still far from a numerical contradiction.
 

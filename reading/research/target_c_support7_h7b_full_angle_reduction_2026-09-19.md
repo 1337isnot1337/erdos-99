@@ -16,23 +16,23 @@
 
 The preceding exact reduction left
 
-$$
+```math
 77=47\,C_7+30\,(C_3\sqcup C_4)
-$$
+```
 
 generic interior-ground order/sign orbits. That reduction used the physical-pentagon turn simplex and triangle-angle identities only on triangles whose three vertices are non-ground hull vertices.
 
 The full reciprocal order type contains more affine information. Introduce the angular gaps between **all** reciprocal rays at each non-ground hull vertex, including rays belonging to missing reciprocal edges, and impose all Euclidean triangle-angle sums among the eight reciprocal points. This yields exact Farkas contradictions for 157 of the original 184 generic order/sign orbits. The surviving necessary affine cases are
 
-$$
+```math
 \boxed{27\ C_7\text{ orbits}.}
-$$
+```
 
 Thus, relative to the previously committed state,
 
-$$
+```math
 \boxed{77\longrightarrow27,}
-$$
+```
 
 and every generic `C_3\sqcup C_4` interior-ground orbit is excluded.
 
@@ -42,26 +42,26 @@ This is not a support-seven exclusion. The 27 surviving `C7` cells satisfy this 
 
 Fix a generic `H7b` state. At each hull vertex `i\in\{1,\ldots,7\}`, the six rays to the other hull vertices occur in convex-heptagon order
 
-$$
+```math
 i+1,i+2,\ldots,i-1\pmod 7.
-$$
+```
 
 The interior ray to `y_0` is inserted at the already-enumerated radial slot `k_i\in\{1,\ldots,5\}`. Hence the seven rays from `y_i` to the other reciprocal points have a fixed strict raw order.
 
 Let
 
-$$
+```math
 r_{i,0},\ldots,r_{i,5}
-$$
+```
 
 be the six consecutive raw angular gaps in this seven-ray order, normalized by `pi`. Strict convexity and strict interiority of `y_0` give
 
-$$
+```math
 r_{i,p}>0,
 \qquad
 \sum_{p=0}^{5}r_{i,p}<1.
 \tag{1.1}
-$$
+```
 
 The second inequality is the strict interior-angle bound at a convex hull vertex: every other reciprocal point lies strictly inside the hull interior cone, whose angle is less than `pi`.
 
@@ -71,27 +71,27 @@ These 42 variables retain the two rays that are deleted when forming the five pr
 
 Let
 
-$$
+```math
 h_j>0
-$$
+```
 
 be the normalized counterclockwise angular gap at `y_0` from ray `0j` to ray `0(j+1)`, with indices cyclic modulo seven. Because the seven hull vertices surround the strictly interior ground point,
 
-$$
+```math
 \sum_{j=1}^{7}h_j=2.
 \tag{2.1}
-$$
+```
 
 The radial slot data also determine on which side of each directed hull chord the ground lies. With the convention used by the finite census,
 
-$$
+```math
 \chi(i,j,0)
 =
 \operatorname{sgn}\det(y_j-y_i,-y_i)
 =
 \operatorname{sgn}\det(y_i,y_j).
 \tag{2.2}
-$$
+```
 
 Therefore the counterclockwise ground arc from ray `0i` to ray `0j` is strictly less than `pi` when `\chi(i,j,0)=+1` and strictly greater than `pi` when `\chi(i,j,0)=-1`. In normalized form these are 21 strict affine inequalities in the `h_j`.
 
@@ -101,24 +101,24 @@ At every non-ground vertex, delete the two missing-neighbor rays from the seven-
 
 Let
 
-$$
+```math
 x_{i,k}=\delta_{i,k}/\pi,
 \qquad k=0,\ldots,4,
-$$
+```
 
 be the five normalized consecutive force gaps. The physical equilateral-pentagon theorem gives
 
-$$
+```math
 \sum_{k=0}^{4}x_{i,k}=2
 \tag{3.1}
-$$
+```
 
 and the complete local affine turn-simplex inequalities
 
-$$
+```math
 q_{i,k}:=x_{i,k}+x_{i,k+1}-x_{i,k+3}>\frac13.
 \tag{3.2}
-$$
+```
 
 For each of the four consecutive pairs of present rays in raw order, the ordinary raw angle computed by summing the appropriate `r_{i,p}` is set equal to the exact affine angle obtained from the signed force gaps. If the two reciprocal-edge signs agree, the raw-forward angle is the corresponding force arc. If they differ, it is that force arc minus `pi`. These give 28 exact tie equalities.
 
@@ -128,27 +128,27 @@ No metric length or coordinate approximation enters these ties.
 
 Because the branch is generic, no three of the eight reciprocal points are collinear. Hence every unordered triple
 
-$$
+```math
 \{a,b,c\}\subset\{0,1,\ldots,7\}
-$$
+```
 
 forms an ordinary Euclidean triangle and its three interior angles sum to `pi`.
 
 There are
 
-$$
+```math
 \binom83=56
-$$
+```
 
 such equations. At a non-ground hull vertex, the triangle angle is the sum of the appropriate consecutive `r_{i,p}` because all seven rays lie in the strict hull cone of width less than `pi`. At the ground, the radial chirotope in (2.2) determines whether the interior angle is the counterclockwise `h`-arc or its complement `2pi` minus that arc.
 
 Thus all 56 triangle sums are exact affine equations in the 84 variables
 
-$$
+```math
 35\ x\text{-variables}
 +42\ r\text{-variables}
 +7\ h\text{-variables}.
-$$
+```
 
 The complete equality system has 92 rows:
 
@@ -169,35 +169,35 @@ The strict inequality system has 112 rows:
 
 Write the strict inequalities as
 
-$$
+```math
 A_r z<b_r
-$$
+```
 
 and the equalities as
 
-$$
+```math
 E_s z=d_s.
-$$
+```
 
 For 157 of the 184 order/sign orbits, the verifier stores rational multipliers `lambda_r>=0`, normalized by
 
-$$
+```math
 \sum_r\lambda_r=1,
-$$
+```
 
 and unrestricted rational equality multipliers `mu_s` such that
 
-$$
+```math
 \sum_r\lambda_r A_r-\sum_s\mu_s E_s=0
 \tag{5.1}
-$$
+```
 
 but
 
-$$
+```math
 \sum_r\lambda_r b_r-\sum_s\mu_s d_s\le0.
 \tag{5.2}
-$$
+```
 
 If a strict feasible point existed, (5.1) and the strict inequalities would force the quantity in (5.2) to be strictly positive. This contradicts (5.2).
 
@@ -205,25 +205,25 @@ The committed verifier rebuilds the entire 184-orbit census and every affine row
 
 The exact census is
 
-$$
+```math
 \boxed{157\text{ excluded}=93\,C_7+64\,(C_3\sqcup C_4).}
 \tag{5.3}
-$$
+```
 
 All 64 generic `C_3\sqcup C_4` orbits are therefore impossible. Among the 157 certificates, 38 have zero final Farkas right-hand side; strictness of the weighted inequality still gives the contradiction. The most negative exact right-hand side occurring in the stored certificates is
 
-$$
+```math
 -\frac5{42}.
-$$
+```
 
 The surviving 27 necessary affine cases are the one-based orbit indices
 
-$$
+```math
 \boxed{
 115,118,129,130,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,169,170,171,172,173,174,175,176.
 }
 \tag{5.4}
-$$
+```
 
 Every one has missing-graph type `C7`.
 
@@ -231,15 +231,15 @@ Every one has missing-graph type `C7`.
 
 The previous exact generic `H7b` endpoint was
 
-$$
+```math
 77=47\,C_7+30\,(C_3\sqcup C_4).
-$$
+```
 
 All 27 survivors in (5.4) are contained in that set. Hence the new full-angle layer removes exactly 50 additional previously surviving orbits:
 
-$$
+```math
 \boxed{50=20\,C_7+30\,(C_3\sqcup C_4).}
-$$
+```
 
 No old exclusion is weakened or replaced.
 

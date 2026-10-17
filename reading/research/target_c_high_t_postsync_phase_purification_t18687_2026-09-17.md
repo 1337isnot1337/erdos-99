@@ -18,30 +18,30 @@ The earlier inverse-`D` phase-collapse theorem purifies the full train rectangle
 
 This removes any fixed `1/2` phase-purification loss. For every fixed `epsilon>0`, one can keep a `(1-epsilon)` fraction of the synchronized rows and a `(1-epsilon)` fraction of the full consistently oriented transverse shore while still forcing every crossing angle to be
 
-$$
+```math
 {\pi\over3}+O_\epsilon(D^{-1}).
-$$
+```
 
 The synchronized diameter family is not thinned at all. In the concrete `epsilon=0.1` specialization this gives
 
-$$
+```math
 |E_*|>5.65\times10^{-6}D-o(D),
-$$
+```
 
-$$
+```math
 |A_{90}|>5.085\times10^{-6}D-o(D),
-$$
+```
 
-$$
+```math
 |B_{90}|>0.14103D-o(D),
-$$
+```
 
 where every diameter in `E_*` spans every row in `A_{90}`, every `A_{90} x B_{90}` pair is one strict rhombus in common order, and every grid angle satisfies
 
-$$
+```math
 0<\theta_{ab}-{\pi\over3}
 <{1.262\times10^8\over D}+o(D^{-1}).
-$$
+```
 
 Compared with the prior synchronized phase-collapsed scaffold, the row shore increases from `2.8e-6 D` to `5.085e-6 D`, the transverse shore from `0.0783D` to `0.14103D`, and the diameter family from `2.8e-6 D` to `5.65e-6 D`. The price is only a larger explicit inverse-`D` angle constant.
 
@@ -51,51 +51,51 @@ Compared with the prior synchronized phase-collapsed scaffold, the row shore inc
 
 Use the full-rectangle metric saturation lock. It supplies
 
-$$
+```math
 E_*\times A_1^*
-$$
+```
 
 with exact selected-cut support incidence and
 
-$$
+```math
 A_1^*\times B_*
-$$
+```
 
 with complete strict-rhombus incidence, where
 
-$$
+```math
 \boxed{|E_*|,|A_1^*|>aD-o(D),
 \qquad a={113\over20{,}000{,}000}=5.65\times10^{-6},}
 \tag{PP.1}
-$$
+```
 
 and
 
-$$
+```math
 |B_*|>0.3134D-o(D).
-$$
+```
 
 The complete-rectangle orientation reduction deletes only `O(1)` ambiguous columns and keeps one consistent crossing orientation. Thus there is
 
-$$
+```math
 B_+\subset B_*
-$$
+```
 
 with
 
-$$
+```math
 \boxed{|B_+|>bD-o(D),
 \qquad b={1567\over10000}=0.1567,}
 \tag{PP.2}
-$$
+```
 
 such that real phase representatives can be chosen with
 
-$$
+```math
 {\pi\over3}<\beta_b-\alpha_a<{2\pi\over3}
 \qquad(a\in A_*,b\in B_+).
 \tag{PP.3}
-$$
+```
 
 In particular (PP.3) holds on `A_1^* x B_+`.
 
@@ -107,92 +107,92 @@ Every diameter in `E_*` already spans every row in `A_1^*`, so any later thinnin
 
 As in the original phase-collapse proof, put
 
-$$
+```math
 \alpha^+=\max_{a\in A_*}\alpha_a,
 \qquad
 \beta^-=\min_{b\in B_+}\beta_b,
-$$
+```
 
-$$
+```math
 g=\beta^- -\alpha^+-{\pi\over3}>0,
-$$
+```
 
-$$
+```math
 r_a=\alpha^+-\alpha_a\ge0,
 \qquad
 q_b=\beta_b-\beta^-\ge0.
-$$
+```
 
 Then for every `a in A_*`, `b in B_+`, the angular defect is exactly
 
-$$
+```math
 \boxed{
 \delta_{ab}:=\beta_b-\alpha_a-{\pi\over3}
 =g+r_a+q_b.
 }
 \tag{PP.4}
-$$
+```
 
 Let
 
-$$
+```math
 S_1:=
 \sum_{a\in A_1^*}\sum_{b\in B_+}\delta_{ab}.
 \tag{PP.5}
-$$
+```
 
 Every term is the angular defect of a distinct strict rhombus. The canonical global budget therefore gives
 
-$$
+```math
 S_1<C_{phase}D,
 \qquad
 C_{phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
 \tag{PP.6}
-$$
+```
 
 Define the synchronized-product average defect
 
-$$
+```math
 \Lambda_D:={S_1\over |A_1^*||B_+|}.
 \tag{PP.7}
-$$
+```
 
 Using (PP.1)--(PP.2),
 
-$$
+```math
 \boxed{
 \Lambda_D
 <
 {C_{phase}\over ab}{1\over D}+o(D^{-1}).
 }
 \tag{PP.8}
-$$
+```
 
 The exact density product is
 
-$$
+```math
 ab={177071\over200{,}000{,}000{,}000}
 =8.85355\times10^{-7},
 \tag{PP.9}
-$$
+```
 
 and numerically
 
-$$
+```math
 {C_{phase}\over ab}
 =6.0049477\ldots\times10^6.
 \tag{PP.10}
-$$
+```
 
 Averaging the exact decomposition (PP.4) over the synchronized product gives
 
-$$
+```math
 \Lambda_D
 =g
 +{1\over|A_1^*|}\sum_{a\in A_1^*}r_a
 +{1\over|B_+|}\sum_{b\in B_+}q_b.
 \tag{PP.11}
-$$
+```
 
 All three terms are nonnegative, so each is at most `Lambda_D`.
 
@@ -202,47 +202,47 @@ All three terms are nonnegative, so each is at most `Lambda_D`.
 
 Fix any constant
 
-$$
+```math
 0<\varepsilon<1.
-$$
+```
 
 Define
 
-$$
+```math
 A_\varepsilon
 :=
 \{a\in A_1^*:r_a\le\Lambda_D/\varepsilon\},
-$$
+```
 
-$$
+```math
 B_\varepsilon
 :=
 \{b\in B_+:q_b\le\Lambda_D/\varepsilon\}.
 \tag{PP.12}
-$$
+```
 
 Markov gives
 
-$$
+```math
 \boxed{
 |A_\varepsilon|\ge(1-\varepsilon)|A_1^*|,
 \qquad
 |B_\varepsilon|\ge(1-\varepsilon)|B_+|.
 }
 \tag{PP.13}
-$$
+```
 
 For every retained cross-pair, (PP.4), (PP.11), and (PP.12) give
 
-$$
+```math
 0<\delta_{ab}
 \le
 \left(1+{2\over\varepsilon}\right)\Lambda_D.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 0<\theta_{ab}-{\pi\over3}
 <
@@ -251,44 +251,44 @@ $$
 +o(D^{-1})
 }
 \tag{PP.14}
-$$
+```
 
 uniformly on `A_epsilon x B_epsilon`.
 
 The retained shore sizes satisfy
 
-$$
+```math
 \boxed{
 |A_\varepsilon|
 >(1-\varepsilon)5.65\times10^{-6}D-o(D),
 }
 \tag{PP.15}
-$$
+```
 
-$$
+```math
 \boxed{
 |B_\varepsilon|
 >(1-\varepsilon)0.1567D-o(D).
 }
 \tag{PP.16}
-$$
+```
 
 Because `A_epsilon subset A_1^*`, all bars in the original unthinned `E_*` still span every retained row:
 
-$$
+```math
 \boxed{
 E_*\times A_\varepsilon
 \text{ remains complete in exact selected-cut support incidence.}
 }
 \tag{PP.17}
-$$
+```
 
 And because the two train shores remain internally noncrossing and use the same oriented branch, the signed monotone-grid argument gives one common crossing order on the complete product
 
-$$
+```math
 \boxed{A_\varepsilon\times B_\varepsilon.}
 \tag{PP.18}
-$$
+```
 
 Thus the synchronized inverse-`D` grid can retain an arbitrarily high fixed fraction of both available oriented shores. There is no intrinsic `1/2` Markov loss.
 
@@ -298,72 +298,72 @@ Thus the synchronized inverse-`D` grid can retain an arbitrarily high fixed frac
 
 Take
 
-$$
+```math
 \varepsilon={1\over10}.
-$$
+```
 
 Write
 
-$$
+```math
 A_{90}:=A_{1/10},
 \qquad
 B_{90}:=B_{1/10}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{|A_{90}|>5.085\times10^{-6}D-o(D),}
 \tag{PP.19}
-$$
+```
 
-$$
+```math
 \boxed{|B_{90}|>0.14103D-o(D),}
 \tag{PP.20}
-$$
+```
 
 while the diameter shore is unchanged:
 
-$$
+```math
 \boxed{|E_*|>5.65\times10^{-6}D-o(D).}
 \tag{PP.21}
-$$
+```
 
 The angle coefficient in (PP.14) is
 
-$$
+```math
 21{C_{phase}\over ab}
 =1.2610390189\ldots\times10^8,
-$$
+```
 
 so the clean displayed bound
 
-$$
+```math
 \boxed{
 {\pi\over3}<\theta_{ab}
 <{\pi\over3}+{1.262\times10^8\over D}+o(D^{-1})
 }
 \tag{PP.22}
-$$
+```
 
 holds for every `a in A90`, `b in B90`.
 
 The strict-rhombus product itself has density
 
-$$
+```math
 (5.085\times10^{-6})(0.14103)
 =7.1713755\times10^{-7},
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 |A_{90}||B_{90}|
 >(7.1713755\times10^{-7}-o(1))D^2.
 }
 \tag{PP.23}
-$$
+```
 
 ---
 
@@ -373,33 +373,33 @@ The metric train-grid span lemma applies directly. Both purified phase spreads a
 
 Using (PP.20), every retained row has transverse crossing-center span
 
-$$
+```math
 >{\sqrt3\over2}(|B_{90}|-1),
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{
 >(0.1221355-o(1))D.
 }
 \tag{PP.24}
-$$
+```
 
 Using (PP.19), every retained column has crossing-center span
 
-$$
+```math
 >{\sqrt3\over2}(|A_{90}|-1),
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{
 >(4.4037\times10^{-6}-o(1))D.
 }
 \tag{PP.25}
-$$
+```
 
 Thus the concrete synchronized object is
 
@@ -423,15 +423,15 @@ This retains `90%` of the synchronized row capacity and `90%` of the consistentl
 
 The fixed-birth-host and fixed-destination nested diameter rails extracted from `E_*` in the full-rectangle saturation theorem are not affected by row/column purification. They still have densities
 
-$$
+```math
 2.825\times10^{-6}
-$$
+```
 
 and
 
-$$
+```math
 1.4125\times10^{-6}
-$$
+```
 
 respectively, and every retained rail bar spans every row in `A_epsilon`, hence every row of `A90` in the concrete specialization.
 

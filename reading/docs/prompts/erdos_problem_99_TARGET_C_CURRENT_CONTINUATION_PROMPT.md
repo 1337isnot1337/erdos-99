@@ -35,11 +35,11 @@ Use the contact-minimal, then diameter-pair-minimal representative and retain ev
 
 The §57 ZR/ZF theorem is only on the nonisolated positive-contact core `V`:
 
-$$
+```math
 \ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
 \qquad
 \operatorname{rank}R_{C\cup H}[V]=2v-3.
-$$
+```
 
 Do not extend this affine-kernel theorem to contact-isolated coordinates. Full-source geometry comes from the separate canonical full-source modules.
 
@@ -105,58 +105,58 @@ Audit.105 promotes `C-OO-OUTER-ISOLATE-COLLAR-BOUND` in the Type-II near-disk br
 Audit.106 promotes `C-OO-LOWER-WITNESS-OWNER-CAPACITY`. For a specified disjoint-owner O--O family, singleton upper/rhombus safety and strict old-diameter shortening force an outer lower witness for every counted owner. The general count is `k<=2m_B+3(x_B+Z_out)`. In Type II, Audit.105 replaces `Z_out` witness charging by the collar count and gives `k<=147(x_B+m_B)`; if `x_B+m_B=o(D)`, only `o(D)` owners survive. Audit.114 later promotes the original-family `2d_H` deletion bound under fixed subfamily-stability and canonical isolate dispatch. Neither theorem supplies the proposal family or low-defect condition. See [Audit.114](../audits/target_c_original_family_outer_owner_capacity_independent_audit_2026-10-07.md).
 
 Audit.61 already reduces a sufficiently small O--O finite motion to
-$$
+```math
 \boxed{
 \text{old diameter constraints}
 +\ |J|\le d_H\text{ inactive upper exceptions}
 +\ \text{unary rhombus tests}
 +\ \text{outer-face near-unit pairs}.
 }
-$$
+```
 
 Audit.62 adds two exact finite restrictions.
 
 ### Loaded near-unit adjacency
 
-For the actual loaded set $B$,
-$$
+For the actual loaded set $`B`$,
+```math
 \tau_D=\frac{3D}{\sqrt{3D^2+4}+1}.
-$$
-If loaded endpoints $a,b$ are nonconsecutive on the loaded hull and $|ab|<D$, then
-$$
+```
+If loaded endpoints $`a,b`$ are nonconsecutive on the loaded hull and $`|ab|<D`$, then
+```math
 \boxed{|ab|\ge\tau_D.}
-$$
-For $D\ge6$, every loaded pair of length at most $13/12$ is a loaded-hull side. Thus the loaded near-unit graph is a subgraph of the loaded hull cycle and has maximum degree two.
+```
+For $`D\ge6`$, every loaded pair of length at most $`13/12`$ is a loaded-hull side. Thus the loaded near-unit graph is a subgraph of the loaded hull cycle and has maximum degree two.
 
 Do not model loaded-loaded lower clauses as an arbitrary planar graph.
 
 ### Loaded-hull cap budget
 
 Put
-$$
+```math
 K=\operatorname{conv}A,\qquad
 F=\operatorname{conv}B,\qquad
 W=\operatorname{per}K-q.
-$$
+```
 
 Canonically:
 
-- occupied loaded-hull caps: at most $W$;
-- total occupied cap arc/base length: at most $2W$;
-- core points within $<\sqrt2$ of a source point outside $F$: at most $68W$;
-- nonloaded source points in $F$ within boundary distance $1/2$: at most $12W$;
-- every deeper point has exact upper margin $D-1/2$;
-- extreme source vertices outside $B$: at most $W$.
+- occupied loaded-hull caps: at most $`W`$;
+- total occupied cap arc/base length: at most $`2W`$;
+- core points within $`<\sqrt2`$ of a source point outside $`F`$: at most $`68W`$;
+- nonloaded source points in $`F`$ within boundary distance $`1/2`$: at most $`12W`$;
+- every deeper point has exact upper margin $`D-1/2`$;
+- extreme source vertices outside $`B`$: at most $`W`$.
 
-Since $\operatorname{per}K<\pi D$, every subsequence with
-$$
+Since $`\operatorname{per}K<\pi D`$, every subsequence with
+```math
 q/D\to\pi
-$$
+```
 has
-$$
+```math
 W=o(D),
-$$
-so all three cap/exterior blocker populations above are $o(D)$.
+```
+so all three cap/exterior blocker populations above are $`o(D)`$.
 
 ### Audit.63 owner, terminal-train, and wall results
 
@@ -218,9 +218,9 @@ With all six radial corner guards retained, the complete triangular-lattice inte
 
 For the complete limiting triangular-lattice chart with six retained radial guards, every one-sided C2 feasible packet under the stated curved-wall guard expansion must satisfy
 
-$$
+```math
 E_r(d)\ge 2M(M^2-1),\qquad r=0,\ldots,M-1.
-$$
+```
 
 The positive selected stresses force the corresponding `3M(M+1)` ring/spoke/guard first variations to vanish. This is a necessary condition, not an energy upper bound or a packet-existence theorem. Do not add the overlapping ring lower bounds as independent currency. The source verifier's 225 selected polynomial-field checks do not prove a universal velocity classification; that classification remains open.
 
@@ -250,8 +250,8 @@ For the specified `M=4` six-sector wall with rates `(3,1,-1,-3)`, Audit.76 certi
 
 Do not infer:
 
-- small amplitude + contact preservation $\Rightarrow$ unary rhombus immunity;
-- source-level path forest $\Rightarrow$ acyclic owner implication graph.
+- small amplitude + contact preservation $`\Rightarrow`$ unary rhombus immunity;
+- source-level path forest $`\Rightarrow`$ acyclic owner implication graph.
 
 Both are exactly false.
 
@@ -260,14 +260,14 @@ Both are exactly false.
 ### Full-core branch
 
 The remaining small-motion obstruction is now
-$$
+```math
 \boxed{
 \text{outer-face owner/implication structure inside the loaded hull}
 +\text{cyclic loaded-hull near-unit clauses}
 +\text{unary rhombus blockers}
 +\text{at most }d_H\text{ upper exceptions}.
 }
-$$
+```
 
 Along q/D -> pi with u_B=o(D), loaded-hull caps, exterior extreme isolates, short cap attachments, the shallow nonloaded boundary layer, and the complete stopped O--O train population are sublinear. Distinct narrow-window binary loaded witnesses are also at most u_B. Any remaining linear obstruction must be supplied by face-coupled outer-to-bounded or bounded-to-bounded trains, explicit unary rhombus blockers, or the at most d_H upper exceptions, and must pass every full-source lower and actual-diameter upper test.
 

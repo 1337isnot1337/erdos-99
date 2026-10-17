@@ -21,61 +21,61 @@ Let `P` be a nondegenerate parallelogram with side vectors of lengths at most `s
 
 Write the side-vector Gram matrix as `G`. Replace it by
 
-$$
+```math
 G'=\begin{pmatrix}3&a\cdot b\\a\cdot b&3\end{pmatrix}.
-$$
+```
 
 Because `P` is nondegenerate and `|a|,|b|<=sqrt(3)`, `G'` is positive definite. The difference `G'-G` is diagonal positive semidefinite. The linear map taking the original side vectors to vectors with Gram matrix `G'` therefore expands every distance. It maps `P` to a rhombus of side `sqrt(3)`, preserves the center and convex coefficients, and sends weak or strict unit-clear points to weak or strict unit-clear points. A center-radius bound in the rhombus pulls back to at least as strong a bound in `P`.
 
 Use this covering identity: if vertices `v_i` lie in a radius-`r` disk centered at `o`, and `p=sum(lambda_i v_i)` is a convex combination, then
 
-$$
+```math
 \sum_i\lambda_i|p-v_i|^2
 =\sum_i\lambda_i|v_i-o|^2-|p-o|^2\le r^2.
-$$
+```
 
 At least one vertex is therefore within distance `r` of `p`; if `r<1`, the cover is strict. Represent the rhombus vertices as `(+-A,0),(0,+-B)`, with `A,B>0` and `A^2+B^2=3`. If `A>3/2`, triangulate along the `B` diagonal. Each triangle has circumradius `3/(2A)<1`; the identity covers both triangles strictly by unit disks about their vertices. Thus `K` is empty. The case `B>3/2` is symmetric.
 
 Otherwise `A^2,B^2` lie in `[3/4,9/4]`, so `A^2B^2>=27/16`. Reflect a weak-clear point to `p=(x,y)` with `x,y>=0`, and put `chi=x/A`, `psi=y/B`. Since `p` lies in the rhombus, `chi+psi<=1`. If `chi>=1/2`, then
 
-$$
+```math
 |p-(A,0)|^2
 =A^2(1-\chi)^2+B^2\psi^2
 \le 3(1-\chi)^2\le3/4<1,
-$$
+```
 
 contrary to weak clearance. Likewise `psi<1/2`.
 
 Give the vertices `(A,0),(-A,0)` weights `1/4+chi/2,1/4-chi/2`, and `(0,B),(0,-B)` weights `1/4+psi/2,1/4-psi/2`. These weights are nonnegative, sum to one, and have barycenter `p`. The variance identity gives
 
-$$
+```math
 1\le\sum_i\lambda_i|p-v_i|^2
 =\sum_i\lambda_i|v_i|^2-|p|^2
 =3/2-t,
 \qquad t=x^2+y^2,
-$$
+```
 
 so `t<=1/2`.
 
 Clearance from `(A,0)` and `(0,B)` also gives
 
-$$
+```math
 x\le\frac{t+A^2-1}{2A},
 \qquad
 y\le\frac{t+B^2-1}{2B}.
-$$
+```
 
 The right sides are nonnegative for a feasible point. Squaring and adding, then using `A^2+B^2=3`, yields
 
-$$
+```math
 4t\le4t-1+\frac{3(t-1)^2}{A^2B^2}.
-$$
+```
 
 Since `t<=1/2` and `A^2B^2>=27/16`, this implies
 
-$$
+```math
 t\le1-\sqrt{A^2B^2/3}\le1/4.
-$$
+```
 
 If `A^2B^2>27/16`, this gives a uniform radius bound strictly below `1/2`, so the weak-clearance set has diameter strictly below one. In the equality case `A^2B^2=27/16`, the conditions `A^2+B^2=3` imply `{A^2,B^2}={3/4,9/4}`. The weak-clearance inequality from the shorter-axis vertices forces `t-2A|x|>=1/4`; combined with `t<=1/4`, this gives `x=0`, `t=1/4`, and `y=+/-1/2` (or the swapped case). These weak-clearance points are exactly distance one from a long-axis vertex, so no point is strictly clear of all four vertices. Therefore the strict-clearance set is empty in the equality case. For nonempty strict-clearance sets, the preceding estimate gives a uniform radius below `1/2`; their diameter is strictly below one. In the original parallelogram, distance contraction under the inverse linear map preserves both pairwise bounds.
 
@@ -91,19 +91,19 @@ By `C-QUARTER-FOLD-MINIMUM-FACE-SIZE`, the four transition arcs each have two un
 
 Opposite two-edge arcs have equal chord lengths, hence equal midpoint heights; convexity places their midpoint offsets on opposite sides of the transition parallelogram. Their four middle vertices therefore occur in opposite pairs about its center. To check the resulting central parallelogram is nondegenerate, its two representative half-diagonals may be written, up to the cyclic orientation, as
 
-$$
+```math
 m_u=\cos\beta\,v+\sin\alpha\,Ju,
 \qquad
 m_v=\cos\alpha\,u-\sin\beta\,Jv.
-$$
+```
 
 Their cross product is
 
-$$
+```math
 m_v\mathbin\times m_u
 =\cos(\alpha-\beta)\sin\gamma
 +\sin\alpha\cos\alpha+\sin\beta\cos\beta>0.
-$$
+```
 
 At each transition corner let `theta` be the old exterior turn. Endpoint unit separation and triangle-freeness force `theta>pi/3`; the old two-step chord between nonconsecutive actual face vertices has length `2cos(theta/2)>1`, so `theta<2pi/3`. The side of the middle parallelogram across that corner is exactly this chord, and hence has length `2cos(theta/2)<sqrt(3)`. All four sides meet the hypotheses of Claim 1.
 

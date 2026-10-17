@@ -23,21 +23,21 @@ The strongest new result is an exact **post-ZF phase collapse**. Once the audite
 
 A second exact reformulation inserts the planar diameter-graph edge deficit into the exceptional-face endpoint. If
 
-$$
+```math
 d_H:=q-h,
-$$
+```
 
 then every post-ZF survivor obeys
 
-$$
+```math
 T-q+d_H\le 2f,
-$$
+```
 
 while the desired global face contradiction is exactly the strict reverse inequality
 
-$$
+```math
 T-q+d_H>2f.
-$$
+```
 
 For the planar diameter graph, canonical pseudoforest structure identifies `d_H` with the number of tree components. Thus tree components of the diameter graph are exact positive credit on the contradiction side; they cannot be discarded from the defect bookkeeping.
 
@@ -60,42 +60,42 @@ Work with a hypothetical sufficiently large triangle-free global minimizer chose
 
 The reviewed report-level stack gives
 
-$$
+```math
 e+h\ge 2v-2
 \tag{ZF}
-$$
+```
 
 and the connected triangle-free penny-graph theorem gives
 
-$$
+```math
 e\le 2v-\delta-2,
 \qquad
 \delta\ge\lceil D\rceil.
 \tag{P}
-$$
+```
 
 Hence
 
-$$
+```math
 h\ge\delta\ge\lceil D\rceil.
 \tag{1.1}
-$$
+```
 
 The planar diameter-graph bound gives
 
-$$
+```math
 h\le q.
 \tag{1.2}
-$$
+```
 
 The exact scalar closing endpoint retained by the September 9 campaign is
 
-$$
+```math
 \boxed{
 b+Q>2h.
 }
 \tag{1.3}
-$$
+```
 
 Euler then gives `e+h<2v-2`, contradicting ZF.
 
@@ -120,28 +120,28 @@ ZF + Euler + DT
 
 Assume the hypotheses of the audited report-level ZF theorem for a lexicographically normalized triangle-free C-II global minimizer. Let
 
-$$
+```math
 d_H:=q-h\ge0
-$$
+```
 
 and let the canonical C33 boundary-surplus parameter be
 
-$$
+```math
 \sigma_B:=2q-\delta-2.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 q\ge h\ge\delta\ge\lceil D\rceil,
 }
 \tag{ZS.1}
-$$
+```
 
 and, more sharply,
 
-$$
+```math
 \boxed{
 \sigma_B
 \ge 2q-h-2
@@ -149,16 +149,16 @@ $$
 \ge\lceil D\rceil+d_H-2.
 }
 \tag{ZS.2}
-$$
+```
 
 In particular, along any sequence with `D->infinity`,
 
-$$
+```math
 \boxed{
 \sigma_B\ne o(D).
 }
 \tag{ZS.3}
-$$
+```
 
 Therefore the near-minimal loaded-boundary phase assumed by `04-near-minimal-response-frontier.md` cannot occur after ZF.
 
@@ -170,35 +170,35 @@ This theorem is exact for the same lexicographically normalized C-II sources to 
 
 ZF and the connected triangle-free penny-graph bound give
 
-$$
+```math
 2v-2
 \le e+h
 \le (2v-\delta-2)+h.
-$$
+```
 
 Cancel `2v-2` to obtain
 
-$$
+```math
 h\ge\delta.
-$$
+```
 
 The contact core contains two source points at Euclidean distance `D`, and every contact edge has unit length, so every contact path joining those two points has at least `ceil(D)` edges. Hence
 
-$$
+```math
 \delta\ge\lceil D\rceil.
-$$
+```
 
 The planar diameter graph on its `q` endpoints has at most `q` edges, so
 
-$$
+```math
 q\ge h.
-$$
+```
 
 This proves (ZS.1).
 
 Now use the definition of `sigma_B` and `delta<=h`:
 
-$$
+```math
 \begin{aligned}
 \sigma_B
 &=2q-\delta-2\\
@@ -206,19 +206,19 @@ $$
 &=q+(q-h)-2\\
 &=q+d_H-2.
 \end{aligned}
-$$
+```
 
 Since `q>=h>=delta>=ceil(D)`, this gives
 
-$$
+```math
 \sigma_B\ge\lceil D\rceil+d_H-2,
-$$
+```
 
 which is (ZS.2). Because `d_H>=0`, division by `D` gives
 
-$$
+```math
 \liminf_{D\to\infty}\frac{\sigma_B}{D}\ge1,
-$$
+```
 
 so `sigma_B=o(D)` is impossible. QED.
 
@@ -251,22 +251,22 @@ The same inputs give an exact reformulation of the remaining face inequality.
 
 Under the hypotheses of Theorem ZS, assume the DT stopped-train decomposition applies to the contact core. Then every post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 T-q+d_H\le2f,
 \qquad d_H=q-h.
 }
 \tag{ZD.1}
-$$
+```
 
 Moreover the desired face inequality (1.3) is equivalent to
 
-$$
+```math
 \boxed{
 T-q+d_H>2f.
 }
 \tag{ZD.2}
-$$
+```
 
 Thus (ZD.2) is an exact integer closing theorem: it contradicts ZF immediately.
 
@@ -276,78 +276,78 @@ If the canonical planar diameter-graph pseudoforest characterization is used, `d
 
 For a connected plane contact graph, Euler and face-incidence counting give
 
-$$
+```math
 \boxed{
 e=2v-2-\frac{b+Q}{2}.}
 \tag{ZD.3}
-$$
+```
 
 Indeed, if `R` is the number of bounded quadrilateral faces, Euler gives
 
-$$
+```math
 e=v+R+f-1,
-$$
+```
 
 while face incidence gives
 
-$$
+```math
 2e=b+4R+\sum_{F\text{ exceptional}}\deg F
 =b+4R+Q+4f.
-$$
+```
 
 Eliminating `R` and `f` yields (ZD.3).
 
 Insert (ZD.3) into ZF:
 
-$$
+```math
 2v-2-\frac{b+Q}{2}+h\ge2v-2,
-$$
+```
 
 so
 
-$$
+```math
 \frac{b+Q}{2}\le h.
 \tag{ZD.4}
-$$
+```
 
 DT gives the exact stopped-train count
 
-$$
+```math
 T=\frac{b+Q}{2}+2f.
 \tag{ZD.5}
-$$
+```
 
 Combining (ZD.4) and (ZD.5),
 
-$$
+```math
 T-h\le2f.
-$$
+```
 
 Since
 
-$$
+```math
 T-h=(T-q)+(q-h)=T-q+d_H,
-$$
+```
 
 we obtain (ZD.1).
 
 Conversely, the desired face inequality `b+Q>2h` is equivalent to
 
-$$
+```math
 \frac{b+Q}{2}>h.
-$$
+```
 
 Using (ZD.5), this is equivalent to
 
-$$
+```math
 T-2f>h,
-$$
+```
 
 or
 
-$$
+```math
 T-q+d_H>2f.
-$$
+```
 
 This is (ZD.2). QED.
 
@@ -355,9 +355,9 @@ This is (ZD.2). QED.
 
 The repository already records the classical planar diameter-graph structure: each connected component is a caterpillar whose spine is either a path or one odd cycle; two vertex-disjoint odd cycles cannot occur. For a tree component with `q_i` vertices there are `q_i-1` edges, while a unicyclic component has `q_i` edges. Hence
 
-$$
+```math
 q-h
-$$
+```
 
 counts the tree components exactly. This interpretation is canonical input, not claimed as new mathematics here.
 
@@ -373,28 +373,28 @@ That term was absent from the DF statement because DF used only `h<=q`.
 
 Let
 
-$$
+```math
 \Delta=\frac{\pi}{2\sqrt3}.
-$$
+```
 
 Under the additional DE/DF hypotheses, in particular `n-v=o(D^2)`, the reviewed train theorem gives
 
-$$
+```math
 \liminf\frac{T-q}{D}
 \ge
 2\sqrt\Delta-\frac\pi2.
 \tag{4.1}
-$$
+```
 
 ZD.1 gives pointwise
 
-$$
+```math
 2f-d_H\ge T-q.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \liminf
 \frac{2f-d_H}{D}
@@ -402,11 +402,11 @@ $$
 2\sqrt\Delta-\frac\pi2,
 }
 \tag{4.2}
-$$
+```
 
 or equivalently
 
-$$
+```math
 \boxed{
 \liminf
 \frac{f-d_H/2}{D}
@@ -415,7 +415,7 @@ $$
 =0.166914643466509\ldots.
 }
 \tag{4.3}
-$$
+```
 
 This strictly refines DF whenever the diameter graph has a non-negligible number of tree components. It does not remove the `n-v=o(D^2)` hypothesis and therefore does not solve the isolated-source branch.
 
@@ -477,9 +477,9 @@ This is not new. The repository already records the caterpillar / odd-unicycle s
 
 C33 proves
 
-$$
+```math
 c_I+e_{BB}\le\sigma_B.
-$$
+```
 
 The inequality is one-sided. ZS proves `sigma_B` is large; it does **not** imply that `c_I`, `e_BB`, or any face-defect count is large. Reversing this implication would be invalid.
 
@@ -531,19 +531,19 @@ The shortest remaining exact theorem is now best written as follows.
 
 For every sufficiently large lexicographically normalized triangle-free C-II global minimizer satisfying the audited Z stack,
 
-$$
+```math
 \boxed{
 T-q+d_H>2f,
 \qquad d_H=q-h.
 }
 \tag{ZD+}
-$$
+```
 
 Because all quantities are integral, it is enough to prove
 
-$$
+```math
 T-q+d_H\ge2f+1.
-$$
+```
 
 By ZD this is exactly equivalent to the old face inequality, but the new form identifies the only three currencies that matter:
 

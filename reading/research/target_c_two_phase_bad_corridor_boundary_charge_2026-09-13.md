@@ -32,31 +32,31 @@ branch, but does not prove that its unpaid population is sublinear.
 
 Let `K_D` be convex polygons with
 
-$$
+```math
  d_H(K_D,B(o_D,D/2))=o(D),
 \tag{BC.1}
-$$
+```
 
 and let `C_{D,i}` be convex polygons contained in `K_D` such that
 
-$$
+```math
  \max_i \operatorname{area}(C_{D,i})=o(D^2).
 \tag{BC.2}
-$$
+```
 
 For a side occurrence of `C_{D,i}`, call it **shared** if the whole side lies on
 `\partial K_D`; call it **free** otherwise.  Write `H_{D,i}` and `I_{D,i}` for the
 corresponding side counts.  The side lengths are one in the application, so counts
 and lengths agree.  Then
 
-$$
+```math
 \boxed{
  \sum_i H_{D,i}
  \le
  (1+o(1))\sum_i I_{D,i}.
 }
 \tag{BC.3}
-$$
+```
 
 The `o(1)` is uniform over all families satisfying (BC.1)--(BC.2).
 
@@ -66,10 +66,10 @@ Decompose the shared sides of one `C_{D,i}` into maximal boundary chains.  A cha
 `\Gamma` has endpoints `x,y`; the complementary boundary path `\Lambda` between
 these endpoints contains no shared side.  Consequently
 
-$$
+```math
  |\Lambda|\ge |x-y|.
 \tag{BC.4}
-$$
+```
 
 First, every shared chain has length `o(D)` uniformly.  Otherwise, after scaling by
 `D` and passing to a subsequence, (BC.1) and perimeter continuity give a nontrivial
@@ -82,10 +82,10 @@ positive area.
 For a convex body between concentric circles of radii `D/2-o(D)` and `D/2+o(D)`, a
 boundary arc of length `o(D)` has endpoint chord
 
-$$
+```math
  |x-y|=(1-o(1))|\Gamma|.
 \tag{BC.5}
-$$
+```
 
 To see the uniformity, let `r_D=D/2-o(D)` and `R_D=D/2+o(D)`.  Along a boundary
 segment the radial angle changes by at most its length divided by `r_D`.  At a
@@ -98,7 +98,7 @@ boundary therefore bounds the total tangent turn of a chain of length `h=o(D)` b
 Combining (BC.4)--(BC.5) for every shared chain and summing over the cyclic boundary
 of each face proves (BC.3).  A face with no free path would have its whole simple
 boundary on `\partial K_D`, hence would equal `K_D` and violate (BC.2).  Thus the
-chain decomposition is always available.  $\square$
+chain decomposition is always available.  $`\square`$
 
 The same argument can be phrased without a turning-angle estimate: a circular
 segment cut off by a shared chain has area proportional to the chain's cubic chord
@@ -129,55 +129,55 @@ Assume every bounded quadrilateral face uses only two selected projective direct
 at most two sides in any projective direction, hence at most four selected-direction
 sides.  For an exceptional face put
 
-$$
+```math
  H_i=\#\{\text{loaded-hull side occurrences}\},
-$$
+```
 
-$$
+```math
  S_i=\#\{\text{non-hull side occurrences in }[u]\cup[v]\},
 \qquad
  U_i=\#\{\text{non-hull side occurrences in neither }[u]\text{ nor }[v]\}.
-$$
+```
 
 Then
 
-$$
+```math
  I_i=S_i+U_i,
 \qquad S_i\le4.
 \tag{BC.6}
-$$
+```
 
 Call a face **good** if `U_i=0` and **bad** if `U_i\ge1`.
 
 For every bad face, (BC.6) gives
 
-$$
+```math
  I_i\le U_i+4\le5U_i.
 \tag{BC.7}
-$$
+```
 
 Applying (BC.3), and writing `U=\sum_iU_i`, yields
 
-$$
+```math
 \boxed{
  \sum_{i\ {
 m bad}}H_i
  \le 5(1+o(1))U+o(D).
 }
 \tag{BC.8}
-$$
+```
 
 For completeness, the `o(D)` term accounts for good faces.  A good face has a
 non-hull phase path: if every side were a loaded-hull side, its simple boundary would
 be the entire force-hull boundary, contradicting (BC.2).  Its phase path has at most
 four unit steps, so its displacement belongs to the finite set
 
-$$
+```math
  \mathcal W=\left\{\sum_{j=1}^{r}\epsilon_jw_j:
  1\le r\le4,\quad
  \epsilon_jw_j\in\{u,-u,v,-v\}\right\}.
 \tag{BC.9}
-$$
+```
 
 For a fixed nonzero displacement, the translate-pair lemma for a convex polygon gives
 at most two ordered pairs of force-hull vertices.  A fixed ordered phase word then
@@ -193,10 +193,10 @@ which it appears.
 The factor five cannot be improved from the per-face direction count alone. Take
 unit vectors with arguments
 
-$$
+```math
 0,\ \theta,\ 120^\circ,\ 180^\circ,\ 180^\circ+\theta,\ 300^\circ,
 \qquad \theta=70^\circ.
-$$
+```
 
 Equivalently, the cyclic edge vectors are `u,v,w,-u,-v,-w`, where `[u]` and `[v]`
 are the two selected projective directions and `w` is off-phase. They sum to zero,
@@ -204,9 +204,9 @@ and the successive angle gaps are all strictly between zero and `pi`, so they fo
 strict convex unit hexagon. Mark one of the two `w` edges as a loaded-hull occurrence
 and the other as a non-hull occurrence. Then
 
-$$
+```math
 H_i=1,\qquad S_i=4,\qquad U_i=1,\qquad I_i=5.
-$$
+```
 
 Thus `I_i=5U_i` is attained while the face-closure equation is satisfied. This is a
 finite incidence regression, not a claim that the marked hexagon is a C-II source
@@ -222,18 +222,18 @@ exceptional-face portion of the loaded boundary.
 
 On the scoped equality branch
 
-$$
+```math
  k=o(D),\qquad u_B=o(D),\qquad B_o=o(D),
 \tag{BC.10}
-$$
+```
 
 the exact Type-II identity `e_{BB}=Q+2k+u_B` and the bounded-face incidence ledger
 give
 
-$$
+```math
  \sum_iH_i\ge Q-o(D).
 \tag{BC.11}
-$$
+```
 
 Here is the needed incidence detail.  Every non-bridge loaded-hull side is incident
 to a bounded face.  A non-phase such side cannot be incident to a strict-rhombus face,
@@ -244,27 +244,27 @@ most four sides in those two projective directions.  Thus all but `O(1)+B_o` of 
 
 Combining (BC.8) and (BC.11) gives the concrete necessary condition
 
-$$
+```math
 \boxed{
  U\ge {1\over5}Q-o(D).
 }
 \tag{BC.12}
-$$
+```
 
 The same shared-boundary estimate also gives a face-count consequence. Since
 
-$$
+```math
  H:=\sum_iH_i\ge Q-o(D),
  \qquad H\le(1+o(1))I,
  \qquad H+I=P_{exc}=4f+Q,
-$$
+```
 
 one obtains
 
-$$
+```math
 \boxed{Q\le4f+o(D).}
 \tag{BC.13}
-$$
+```
 
 Thus the cheap-boundary equality corridor requires a linear exceptional-face count
 whenever `Q` is linear; it cannot hide all of its defect in a sublinear number of

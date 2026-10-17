@@ -32,18 +32,18 @@ global minimizers. The result is therefore not a Level-I solution.
 Use the canonical full-core, no-macroscopic-container, near-disk Type-II setting and
 assume for contradiction that a sequence reaches the promoted train-coupled floor
 
-$$
+```math
  \mu_D\longrightarrow \mu_{\rm TC},
  \qquad
  \Delta_2=\frac{\pi}{2\sqrt3},
  \qquad
  \mu_{\rm TC}=\frac{2\pi+2\sqrt{\Delta_2}}5.
 \tag{1.1}
-$$
+```
 
 The canonical endpoint equalities are
 
-$$
+```math
  \frac{R_D}{D^2}\to\Delta_2,
  \quad
  \frac{b_D}{D}\to\pi,
@@ -52,7 +52,7 @@ $$
  \quad
  \frac{Q_D-f_D}{D}\to0.
 \tag{1.2}
-$$
+```
 
 Here `R_D` is the number of bounded strict unit-rhombus faces, `b_D` is the
 occurrence-counted outer contact-face walk length, `f_D` is the number of bounded
@@ -60,12 +60,12 @@ nonquadrilateral contact faces, and `Q_D` is the sum of their degree excesses.
 Let `B_D` be the occurrence-counted boundary size of the strict-rhombus complex and
 `T_D=B_D/2` its train count. The canonical train-floor squeeze gives
 
-$$
+```math
  \frac{B_D}{D}\to4\sqrt{\Delta_2},
  \qquad
  \frac{T_D}{D}\to2\sqrt{\Delta_2}.
 \tag{1.3}
-$$
+```
 
 The candidate chain is
 
@@ -90,40 +90,40 @@ is the old unbounded contact face, and let `I_D` be the number whose other side 
 bounded nonquadrilateral face. Every strict-rhombus boundary occurrence has exactly
 one of these two recipients, so
 
-$$
+```math
  B_D=H_D+I_D,
  \qquad
  H_D\le b_D,
  \qquad
  I_D\le4f_D+Q_D.
 \tag{2.1}
-$$
+```
 
 The upper train-boundary inequality is `B_D\le b_D+4f_D+Q_D`. Equations (1.2)--(1.3)
 and
 
-$$
+```math
  \pi+5f_{\rm TC}=4\sqrt{\Delta_2}
 \tag{2.2}
-$$
+```
 
 show that the difference between the right side of that inequality and `B_D` is
 `o(D)`. Since both deficits in
 
-$$
+```math
  (b_D-H_D)+(4f_D+Q_D-I_D)
  =b_D+4f_D+Q_D-B_D
 \tag{2.3}
-$$
+```
 
 are nonnegative, each is `o(D)`. Consequently
 
-$$
+```math
  \frac{H_D}{D}\to\pi,
  \qquad
  \frac{I_D}{D}\to4\sqrt{\Delta_2}-\pi.
 \tag{2.4}
-$$
+```
 
 Every train has exactly two boundary-edge occurrences, including occurrences on
 holes and at bridges. A train with at least one endpoint in the nonquadrilateral
@@ -131,29 +131,29 @@ recipient set consumes at least one of the `I_D` occurrences. Thus the number `G
 of trains whose two endpoints both face the unbounded contact face satisfies the
 finite bound
 
-$$
+```math
  G_D\ge T_D-I_D.
 \tag{2.5}
-$$
+```
 
 Using (1.3)--(2.4),
 
-$$
+```math
  \boxed{
  \frac{G_D}{D}\ge
  \pi-2\sqrt{\Delta_2}-o(1).
  }
 \tag{2.6}
-$$
+```
 
 Set
 
-$$
+```math
  \tau:=2\sqrt{\Delta_2},
  \qquad
  g:=\pi-2\sqrt{\Delta_2}.
 \tag{2.7}
-$$
+```
 
 Numerically, `\tau=1.9046256137...` and `g=1.2369670398...`. The estimate is only
 an endpoint estimate; away from (1.1), the same outer-ended count is not asserted.
@@ -165,29 +165,29 @@ one of three labels. Same-label pairs are nonedges of the retained crossing grap
 At the endpoint, the Mantel stability theorem from the preceding endpoint report
 gives a partition
 
-$$
+```math
  \mathcal T_D=X_D\sqcup Y_D,
  \qquad
  |X_D|/T_D\to1/2,
  \quad |Y_D|/T_D\to1/2,
 \tag{3.1}
-$$
+```
 
 with `o(T_D^2)` missing cross edges. If `x_i=|X_D\cap\ell^{-1}(i)|` and
 `y_i=|Y_D\cap\ell^{-1}(i)|`, then
 
-$$
+```math
  \sum_i x_i y_i=o(T_D^2).
 \tag{3.2}
-$$
+```
 
 Let `g_i` be the number of outer-ended trains in `X_D` with label `i`, and `h_i`
 the corresponding number in `Y_D`. By (2.6),
 
-$$
+```math
  \sum_i(g_i+h_i)\ge(g-o(1))D.
 \tag{3.3}
-$$
+```
 
 The following elementary limiting lemma is the exact support calculation used here.
 
@@ -198,20 +198,20 @@ Suppose `T_D/D\to\tau`, `|X_D|/T_D,|Y_D|/T_D\to1/2`, (3.2) holds, and
 subsequence, there are distinct labels `i\ne j` and a choice of orientation of the
 two Mantel sides such that one of
 
-$$
+```math
  g_i+y_j,
  \qquad h_i+x_j
 \tag{3.4}
-$$
+```
 
 is at least
 
-$$
+```math
  \boxed{
  \left(\frac\pi3+\frac{\sqrt{\Delta_2}}6-o(1)\right)D.
  }
 \tag{3.5}
-$$
+```
 
 In particular both selected families have cardinality bounded below by a fixed
 positive multiple of `D`.
@@ -228,41 +228,41 @@ In the one-plus-two case, write the one-label side's limiting mass as `1/2`, the
 labels on the other side as `y_1,y_2` with `y_1+y_2=1/2`, and its outer-ended counts
 as `g,h_1,h_2`. Let `G_*=g+h_1+h_2`. Then
 
-$$
+```math
  \max(y_1,y_2)\ge\frac14,
  \qquad
  \max(h_1,h_2)\ge\frac{G_*-g}{2}.
 \tag{3.6}
-$$
+```
 
 Therefore the largest distinct-label pair in (3.4) is at least
 
-$$
+```math
  \max\left(g+\frac14,\frac12+\frac{G_*-g}{2}\right).
 \tag{3.7}
-$$
+```
 
 The minimum over `g` is attained when the two terms agree, and equals
 
-$$
+```math
  \frac5{12}+\frac{G_*}{3}.
 \tag{3.8}
-$$
+```
 
 The one-plus-one case gives the larger lower bound `1/2+G_*/2`. Substituting
 
-$$
+```math
  \frac{g}{\tau}=\frac{\pi-2\sqrt{\Delta_2}}{2\sqrt{\Delta_2}}
 \tag{3.9}
-$$
+```
 
 into (3.8), then multiplying by `\tau D`, gives
 
-$$
+```math
  \tau\left(\frac5{12}+\frac{g/\tau}{3}\right)
  =\frac{5\sqrt{\Delta_2}}6+\frac{\pi-2\sqrt{\Delta_2}}3
  =\frac\pi3+\frac{\sqrt{\Delta_2}}6.
-$$
+```
 
 This proves (3.5). Since each total side population is at most
 `T_D/2+o(D)`, (3.5) also gives a uniform positive lower bound for each selected
@@ -306,10 +306,10 @@ continue them a short distance in the collar to `\partial U`. The resulting arcs
 in the unbounded face and therefore do not meet any train-centerline in the finite
 complex. The crosscuts divide `U` into a linear chain of regions
 
-$$
+```math
  U\setminus\bigcup\widehat A=R_0\cup\cdots\cup R_a,
 \tag{4.1}
-$$
+```
 
 where consecutive regions share exactly one crosscut. As a `B` centerline is
 traversed, its region index changes by `+1` or `-1` whenever it crosses a
@@ -331,21 +331,21 @@ Under the hypotheses of Lemma 4.1, suppose `|\mathcal A|=a`, `|\mathcal B|=b` an
 number `q_D` of missing actual crossings satisfies `q_D=o(ab)`, with
 `a,b=\Theta(D)`. Then there are subfamilies
 
-$$
+```math
  \mathcal A_0\subset\mathcal A,
  \qquad
  \mathcal B_0\subset\mathcal B,
 \tag{4.2}
-$$
+```
 
 such that every `A\in\mathcal A_0` crosses every `B\in\mathcal B_0` and
 
-$$
+```math
  |\mathcal A_0|=a-o(D),
  \qquad
  |\mathcal B_0|=b-o(D).
 \tag{4.3}
-$$
+```
 
 #### Proof
 
@@ -353,10 +353,10 @@ By Lemma 4.1, the neighbors of each `B` form an interval in the ordered `A`
 family. If `m_B` is its missing count, then the interval omits `m_B` members from
 the two ends, and
 
-$$
+```math
  \sum_Bm_B=q_D.
 \tag{4.4}
-$$
+```
 
 Choose `\eta_D\downarrow0` with `q_D/(\eta_D a b)\to0`. Delete the `o(b)` members of
 `\mathcal B` with `m_B>\eta_Da`. The interval of every remaining member contains the
@@ -369,11 +369,11 @@ Apply Lemma 3.1, choosing the orientation so that the outer-ended family is call
 `\mathcal A_D` and the other family `\mathcal B_D`. The near-Mantel partition has
 `o(T_D^2)=o(D^2)` missing cross edges, so
 
-$$
+```math
  |\mathcal A_D||\mathcal B_D|
  -e(\mathcal A_D,\mathcal B_D)=o(D^2).
 \tag{5.1}
-$$
+```
 
 Lemma 4.2 gives a complete actual crossing product `\mathcal A_{0,D}\times
 \mathcal B_{0,D}` after losing `o(D)` trains. All selected train directions lie on the
@@ -381,11 +381,11 @@ reduced phase circle. For every complete-product pair, the circular distance bet
 the two reduced directions is exactly the rhombus angular excess `\delta_{AB}` in
 `(0,\pi/6]`. The global canonical angular-defect budget gives
 
-$$
+```math
  S_D:=\sum_{A\in\mathcal A_{0,D}}
        \sum_{B\in\mathcal B_{0,D}}\delta_{AB}=O(D).
 \tag{5.2}
-$$
+```
 
 We use the following finite clustering observation. If two finite subsets of a circle
 have complete cross-product and the sum of their pairwise circular distances is
@@ -413,24 +413,24 @@ second may have arbitrary holes, which Section 76 explicitly permits after commo
 order is established. Apply the hole-stable complete-grid inequality (canonical
 `C-HOLE-GRID-DIAMETER`, Section 76): if the final shore sizes are `a_D,b_D`, then
 
-$$
+```math
  D\ge
  \frac{\sqrt3}{2}(a_D+b_D)
  -\frac{S_D'}{\min(a_D,b_D)}-2,
 \tag{6.1}
-$$
+```
 
 where `S_D'=O(D)` is the angular-defect sum on the final complete product. Since both
 shore sizes remain linear, the defect term is `O(1)`. The pair-size bound (3.5), the
 `o(D)` extraction losses, and
 
-$$
+```math
  \frac\pi3+\frac{\sqrt{\Delta_2}}6
  =1.2059163523\ldots
  >
  \frac2{\sqrt3}=1.1547005383\ldots
 \tag{6.2}
-$$
+```
 
 The comparison in (6.2) is an exact strict inequality, not a floating-point
 assumption. With `s=\sqrt{\Delta_2}`, it is equivalent to
@@ -441,23 +441,23 @@ assumption. With `s=\sqrt{\Delta_2}`, it is equivalent to
 
 give a fixed `c>0` such that
 
-$$
+```math
  a_D+b_D\ge\left(\frac2{\sqrt3}+c\right)D
 \tag{6.3}
-$$
+```
 
 for all sufficiently large members of the sequence. Equation (6.1) then gives
 `D\ge(1+c\sqrt3/2)D-O(1)`, a contradiction.
 
 Therefore:
 
-$$
+```math
 \boxed{
 \text{No canonical full-core Type-II sequence can satisfy }
 \mu_D\to\mu_{\rm TC}.
 }
 \tag{6.4}
-$$
+```
 
 This is not an explicit numerical gap, but it does give an existence-only uniform gap
 within the stated canonical branch. Indeed, if no `\varepsilon_C>0` and `D_C` existed
@@ -471,21 +471,21 @@ macroscopic-container branch.
 
 The previous live full-core statement was
 
-$$
+```math
  \liminf\mu_D\ge\mu_{\rm TC}.
-$$
+```
 
 The new result removes equality at the endpoint and, by the sequential argument just
 given, yields a nonexplicit branch-uniform positive gap:
 
-$$
+```math
 \boxed{
  \exists\,\varepsilon_C>0,\ D_C<\infty:\quad
  \mu_D\ge\mu_{\rm TC}+\varepsilon_C
  \text{ for every sufficiently large canonical full-core Type-II minimizer.}
  }
 \tag{7.1}
-$$
+```
 
 The gap is existential and non-effective, not a displayed decimal or a supplied
 threshold. The higher-surplus full-core branch above this gap, the macroscopic-container

@@ -29,29 +29,29 @@ source population.
 For one relative-interior normalized KKT stress, orient the positive diameter edges in
 strict projective order. With positive weights `gamma_i`, put
 
-$$
+```math
 M=\Gamma(B^{-1}-K)\Gamma,
 \qquad M\mathbf 1=Mt=0,
-$$
+```
 
 where C53 gives `M>=0` and the Robinson inequalities for the symmetric transfer matrix
 `K`. Let
 
-$$
+```math
 c=\min_{i\ne j}K_{ij}.
-$$
+```
 
 Set `A_ij=K_ij-c` off diagonal and let `L_A` be its weighted Laplacian. Then
 
-$$
+```math
 L_A=M-c(G\Gamma-\gamma\gamma^T).
-$$
+```
 
 After centering the strict slope vector `t`,
 
-$$
+```math
 L_A t^0=-cG\Gamma t^0.
-$$
+```
 
 Since `L_A` is positive semidefinite, `c<=0`.
 
@@ -64,9 +64,9 @@ outside similarities, and the converse plateau lemma forces every Fiedler vector
 constant on that interval. Thus a strictly increasing Fiedler vector makes this
 eigenspace one-dimensional. Consequently
 
-$$
+```math
 \ker M=\operatorname{span}\{\mathbf1,t\}.
-$$
+```
 
 The delicate converse-plateau case is sound. If a plateau interval `J=[r,s]` has
 endpoint similarity `alpha=A_rs`, irreducibility gives `alpha>0`. All common outside
@@ -82,9 +82,9 @@ extreme similarity. This supplies the strict inequality required by the converse
 The canonical zero-transfer theorem gives, for the lexicographically normalized C-II
 source with `D>=9`,
 
-$$
+```math
 \min_{e\ne f}K_{ef}<0.
-$$
+```
 
 Therefore the relative-interior stress is in the `c<0` branch above, not the
 zero-transfer branch. Its edge defect has nullity exactly two.
@@ -94,23 +94,23 @@ zero-transfer branch. Its edge defect has nullity exactly two.
 Work on the zero-sum terminal space. With `Q` the diameter incidence matrix and `B`
 the positive diagonal diameter-weight matrix, put
 
-$$
+```math
 Y=\Lambda^{-1/2}QB^{1/2}.
-$$
+```
 
 The edge defect is congruent to
 
-$$
+```math
 I-Y^TY.
-$$
+```
 
 Its nullity is two by Section 1. Singular-value decomposition gives the same
 multiplicity two for the zero eigenvalue of `I-YY^T`. Congruence then identifies the
 terminal Schur defect
 
-$$
+```math
 \Lambda-L_H
-$$
+```
 
 as having exactly two zero modes on the zero-sum terminal space. Restoring constants
 adds one kernel dimension.
@@ -119,11 +119,11 @@ The positive contact Laplacian on `V` has an invertible grounded interior block,
 Schur elimination preserves nullity. Hence the scalar signed stress matrix on the
 nonisolated contact core satisfies
 
-$$
+```math
 \boxed{\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\}},
 \qquad
 \operatorname{rank}\Omega_V=v-3.
-$$
+```
 
 The three displayed vectors are already in the kernel by equilibrium and are
 independent because the force hull is two-dimensional. Thus there are no additional
@@ -145,9 +145,9 @@ full-source critical velocity to which C63 applies.
 
 C63 integrates `u` to nearby feasible configurations
 
-$$
+```math
 x(t)=tu+O(t^2).
-$$
+```
 
 Contact minimality removes weak contact rows. The identical finite argument applied to
 diameter-pair count removes weak diameter rows. For sufficiently small `t`, inactive
@@ -158,16 +158,16 @@ Restrict the integrated motion to `V`. Pair the exact squared-length identities 
 active rows with a relative-interior normalized KKT stress. Since
 `Omega_V(P_x|_V)=Omega_V(P_y|_V)=0`, exact preservation gives
 
-$$
+```math
 x_1(t)|_V^T\Omega_V x_1(t)|_V+x_2(t)|_V^T\Omega_V x_2(t)|_V=0.
-$$
+```
 
 C53 gives `Omega_V>=0`. Divide by `t^2` and let `t->0`; both coordinate fields of
 `u_V` lie in `ker Omega_V`. By ZR,
 
-$$
+```math
 (u_V)_i=b+A p_i\qquad(i\in V)
-$$
+```
 
 for one vector `b` and one `2x2` matrix `A`. No claim is made about arbitrary motions
 of contact-isolated source points; they are absent from the mixed active framework.
@@ -175,16 +175,16 @@ of contact-isolated source points; they are absent from the mixed active framewo
 Every active diameter row is strong, hence has zero radial first variation. For each
 active diameter vector `r`,
 
-$$
+```math
 r^T(A+A^T)r=0.
-$$
+```
 
 There is no circular use of the ZF edge-count conclusion here. The earlier canonical
 C34 boundary count gives
 
-$$
+```math
 q\ge {\lceil D\rceil+2\over2}.
-$$
+```
 
 Thus `D>=9` gives `q>=6` before ZF is invoked. Every loaded terminal is incident to at
 least one active diameter edge, so an edge cover of the `q` loaded terminals contains at
@@ -199,34 +199,34 @@ vanishes on at least three distinct projective directions.
 A nonzero homogeneous quadratic in two variables has at most two projective zeros.
 Therefore
 
-$$
+```math
 A+A^T=0.
-$$
+```
 
 So every mixed active bar flex **on `V`** is Euclidean. The mixed rigidity matrix on
 `V` has rank
 
-$$
+```math
 \boxed{2v-3}.
-$$
+```
 
 The normalized KKT stress is a nonzero row dependence, therefore
 
-$$
+```math
 \boxed{e+h\ge2v-2}.
-$$
+```
 
 Combining this with Eppstein's triangle-free penny-graph bound for the contact core
 
-$$
+```math
 e\le2v-\delta-2
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{h\ge\delta\ge\lceil D\rceil}.
-$$
+```
 
 This is the ZF input used by the later exact defect ledgers. It is a statement about
 the nonisolated contact core, not a rigidity statement for the full source including
@@ -236,17 +236,17 @@ contact-isolated points.
 
 Define on the nonisolated contact core
 
-$$
+```math
 r_E=2v-\delta-2-e\ge0,
 \qquad
 s_Z=e+h-(2v-2)\ge0.
-$$
+```
 
 Then, exactly,
 
-$$
+```math
 h=\delta+r_E+s_Z.
-$$
+```
 
 All subsequent ZE/ZT/PC/ZK bookkeeping is algebra from this identity, planar
 Euler/face incidence, and the pinned-contact definitions. The independent PR #188

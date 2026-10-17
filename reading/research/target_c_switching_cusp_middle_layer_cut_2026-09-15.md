@@ -21,23 +21,23 @@ diameter-graph edge boundary of the one physical layer between the two cuts.
 
 Let
 
-$$
+```math
 P=(\tau_1,\ldots,\tau_m)
-$$
+```
 
 be a selected dual-path O--O family with layers
 
-$$
+```math
 R_0,R_1,\ldots,R_m
-$$
+```
 
 from the exact laminar shear theorem.  Fix an internal boundary `i`, so the physical
 middle layer is `R_i`, between `tau_i` and `tau_{i+1}`.  Let `H` be the complete actual
 diameter graph and put
 
-$$
+```math
 B_i:=V(H)\cap R_i.
-$$
+```
 
 Then:
 
@@ -46,14 +46,14 @@ Then:
 A diameter edge switches between columns `i` and `i+1` if and only if it has exactly
 one endpoint in `B_i`.  Equivalently,
 
-$$
+```math
 \boxed{
 \mathcal S_i
 :=\{h:\varepsilon_{h,i+1}\ne\varepsilon_{hi}\}
 =\delta_H(B_i).
 }
 \tag{MC.1}
-$$
+```
 
 Thus every switching edge has one and only one loaded endpoint in the physical middle
 layer `R_i`.
@@ -64,60 +64,60 @@ Orient every switching diameter edge from its endpoint in `B_i` toward its endpo
 outside `B_i`, and write that length-`D` vector as `d_h`.  For the audited Section 157
 cut resultants
 
-$$
+```math
 F_j=A_j u_j
 =\sum_h\beta_h\varepsilon_{hj}r_h,
-$$
+```
 
 one has the exact vector identity
 
-$$
+```math
 \boxed{
 F_{i+1}-F_i
 =\sum_{h\in\delta_H(B_i)}\beta_h d_h.
 }
 \tag{MC.2}
-$$
+```
 
 Consequently the switching multiplier quantity from the adjacent-cut theorem is
 literally the KKT weight of this diameter cut:
 
-$$
+```math
 \boxed{
 B_i^{\rm sw}
 :=\sum_h\beta_h|\varepsilon_{h,i+1}-\varepsilon_{hi}|
 =\sum_{h\in\delta_H(B_i)}\beta_h.
 }
 \tag{MC.3}
-$$
+```
 
 ### Corollary MC.3 — the finite cusp is a bounded straight-line-thrackle cut
 
 For the triple-small pair from
 `target_c_adjacent_cut_triple_small_2026-09-15.md`,
 
-$$
+```math
 \boxed{|\delta_H(B_i)|<21200+o(1),}
 \tag{MC.4}
-$$
+```
 
-$$
+```math
 \boxed{
 \sum_{h\in\delta_H(B_i)}\beta_h
 <{21200\over D}+o(D^{-1}),
 }
 \tag{MC.5}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \left\|\sum_{h\in\delta_H(B_i)}\beta_h d_h\right\|
 <21200+o(1).
 }
 \tag{MC.6}
-$$
+```
 
 The active large-derivative rows in the finite opposite shear are **precisely** the
 edges of this cut.  Since `H` is a straight-line diameter thrackle, any two members of
@@ -134,25 +134,25 @@ the actual Woodall diameter graph.
 Use the exact layer index `ell(v)` from the laminar interval theorem.  Orient one actual
 diameter edge `h=xy` so
 
-$$
+```math
 a:=\ell(x)\le b:=\ell(y).
-$$
+```
 
 Its selected-cut support is exactly
 
-$$
+```math
 I_h=\{a+1,a+2,\ldots,b\},
 \tag{MC.7}
-$$
+```
 
 with one constant nonzero shore-incidence sign on this interval.  With the standard
 lower-to-higher orientation that sign is `+1`, so
 
-$$
+```math
 \varepsilon_{hj}
 =\mathbf 1_{\{a<j\le b\}}.
 \tag{MC.8}
-$$
+```
 
 Compare consecutive columns `i` and `i+1`.  Their indicators differ exactly in one of
 two cases:
@@ -174,14 +174,14 @@ this is exactly the graph cut `delta_H(B_i)`, proving (MC.1).
 
 A useful directional split is now canonical:
 
-$$
+```math
 \mathcal S_i^-:=\{h=xy:\ell(x)<\ell(y)=i\},
-$$
+```
 
-$$
+```math
 \mathcal S_i^+:=\{h=xy:\ell(x)=i<\ell(y)\}.
 \tag{MC.9}
-$$
+```
 
 The first family consists of diameter edges entering the middle layer from earlier
 layers; the second consists of edges leaving it toward later layers.
@@ -192,7 +192,7 @@ layers; the second consists of edges leaving it toward later layers.
 
 For the lower-to-higher orientation `r_h=p_y-p_x`, equation (MC.8) gives
 
-$$
+```math
 \varepsilon_{h,i+1}-\varepsilon_{hi}
 =\begin{cases}
 -1,&h\in\mathcal S_i^-,\\
@@ -200,28 +200,28 @@ $$
 0,&h\notin\mathcal S_i.
 \end{cases}
 \tag{MC.10}
-$$
+```
 
 If `h` is in `S_i^-`, then `r_h` points from the outside endpoint toward the middle
 layer, so `-r_h` is the vector from the middle endpoint to the outside endpoint.  If
 `h` is in `S_i^+`, then `r_h` already points from the middle endpoint outward.  Thus in
 both cases
 
-$$
+```math
 (\varepsilon_{h,i+1}-\varepsilon_{hi})r_h=d_h.
 \tag{MC.11}
-$$
+```
 
 Subtract the exact Section 157 identities for the two consecutive cuts:
 
-$$
+```math
 \begin{aligned}
 F_{i+1}-F_i
 &=\sum_h\beta_h
  (\varepsilon_{h,i+1}-\varepsilon_{hi})r_h\\
 &=\sum_{h\in\delta_H(B_i)}\beta_h d_h.
 \end{aligned}
-$$
+```
 
 This proves (MC.2).  Since every switch changes a `0/1` incidence by exactly one,
 (MC.3) follows immediately.
@@ -237,20 +237,20 @@ that layer.  No response-conductance inequality and no coefficient floor are use
 For the adjacent pair selected by the triple-small theorem, its switching count and
 switching multiplier satisfy
 
-$$
+```math
 N_i<21200+o(1),
 \qquad
 B_i^{\rm sw}<{21200\over D}+o(D^{-1}).
-$$
+```
 
 By (MC.1) and (MC.3), these are exactly (MC.4)--(MC.5).  Every `d_h` has norm `D`, so
 (MC.2) gives
 
-$$
+```math
 \|F_{i+1}-F_i\|
 \le D\sum_{h\in\delta_H(B_i)}\beta_h
 <21200+o(1),
-$$
+```
 
 recovering the existing resultant estimate with a sharper structural interpretation.
 
@@ -275,12 +275,12 @@ cusp cannot be an arbitrary collection of `<=21200` active constraints:
 
 In particular, if `B_i` contains exactly one loaded terminal `z`, then
 
-$$
+```math
 \boxed{
 \delta_H(B_i)=E_H(z),
 }
 \tag{MC.12}
-$$
+```
 
 so the entire finite cusp is one actual diameter star.  More generally, internal
 diameter edges with both endpoints in `B_i` are invisible to the cusp and every other
@@ -296,21 +296,21 @@ cyclic placement of the middle-layer terminals.
 For the finite opposite shear with coefficients `(1,-s)` and projective sign chosen so
 `|u_i-su_{i+1}|=eta`, the exact KKT curvature identity gives
 
-$$
+```math
 Q(1,-s)
 =\sum_h\beta_h|A_h|^2-A_i-A_{i+1}.
-$$
+```
 
 The three row types and (MC.3) imply the useful upper bound
 
-$$
+```math
 \boxed{
 Q(1,-s)
 \le
 B_i^{\rm sw}+\eta^2-A_i-A_{i+1}.
 }
 \tag{MC.13}
-$$
+```
 
 Indeed cusp rows contribute exactly one to `|A_h|^2`, rows spanning both coordinates
 contribute `|u_i-su_{i+1}|^2=eta^2`, and rows meeting neither contribute zero; the
@@ -318,19 +318,19 @@ total diameter multiplier is one.
 
 For the triple-small pair,
 
-$$
+```math
 B_i^{\rm sw}=O(D^{-1}),
 \qquad
 \eta=O(D^{-1}),
-$$
+```
 
 so
 
-$$
+```math
 Q(1,-s)
 \le -A_i-A_{i+1}+O(D^{-1}).
 \tag{MC.14}
-$$
+```
 
 This does **not** close the branch: the current audited stack has no quantitative lower
 bound on either `A_i` or `A_{i+1}`, and a negative KKT-weighted curvature by itself does

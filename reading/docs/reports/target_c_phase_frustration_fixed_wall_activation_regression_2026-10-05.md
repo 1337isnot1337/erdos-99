@@ -23,11 +23,11 @@ or a counterexample to Level I.
 
 ## 2. Actual source and global optimality attribution
 
-Put $\phi=(1+\sqrt5)/2$. The five consecutive unit edges are all
-actual contacts; all five diagonals have length $\phi$, are all actual
+Put $`\phi=(1+\sqrt5)/2`$. The five consecutive unit edges are all
+actual contacts; all five diagonals have length $`\phi`$, are all actual
 diameter pairs, and load all hull vertices. There is no unit triangle.
 
-The original Bateman--Erdős paper states $D(5)=\phi$ and identifies the
+The original Bateman--Erdős paper states $`D(5)=\phi`$ and identifies the
 regular unit pentagon as a minimizing source on printed page 307 (PDF page
 2). This was rechecked in the repository's original
 [paper](https://doi.org/10.1080/00029890.1951.11999682), rather than imported from a
@@ -41,29 +41,29 @@ canonical C-II reductions or that contact-minimal selection is unique.
 
 ## 3. Positive stress, correct PSD sign, and rigidity
 
-Normalize every diagonal weight to $\beta=1/5$, and every contact
-weight to $\alpha=\phi^2/5$. With the two circulant Laplacians
-$L_C,L_H$, the coordinate modes have eigenvalues
+Normalize every diagonal weight to $`\beta=1/5`$, and every contact
+weight to $`\alpha=\phi^2/5`$. With the two circulant Laplacians
+$`L_C,L_H`$, the coordinate modes have eigenvalues
 
-$$
+```math
 \lambda_1=(5-\sqrt5)/2,\qquad
 \lambda_2=(5+\sqrt5)/2,
-$$
+```
 
-and $\alpha\lambda_1=\beta\lambda_2$. Thus
-$\Omega=\alpha L_C-\beta L_H$ annihilates constants and both
-coordinate modes, and gives positive eigenvalue $\phi$ on the other
+and $`\alpha\lambda_1=\beta\lambda_2`$. Thus
+$`\Omega=\alpha L_C-\beta L_H`$ annihilates constants and both
+coordinate modes, and gives positive eigenvalue $`\phi`$ on the other
 two modes. Equivalently
 
-$$
+```math
 \Omega^2=\phi\Omega,\qquad \operatorname{tr}\Omega=2\phi.
-$$
+```
 
 This is a positive semidefinite stress with exactly the three affine
-kernel modes. All ten mixed bars form the complete graph $K_5$, whose
-planar framework has rank $2\cdot5-3=7$ because the points affinely
+kernel modes. All ten mixed bars form the complete graph $`K_5`$, whose
+planar framework has rank $`2\cdot5-3=7`$ because the points affinely
 span the plane. Virial normalization is exact:
-$\sum_H\beta=1$ and $\sum_C\alpha=\phi^2=D^2$.
+$`\sum_H\beta=1`$ and $`\sum_C\alpha=\phi^2=D^2`$.
 
 The example is consistent with C53. It does not revive the rejected
 incompatible-orientation pentagon separator argument.
@@ -72,45 +72,45 @@ incompatible-orientation pentagon separator argument.
 
 The circumradius satisfies
 
-$$
+```math
 R^2=(5+\sqrt5)/10<1.
-$$
+```
 
-The face has area $A=5\cot(\pi/5)/4$, perimeter five and no assigned
+The face has area $`A=5\cot(\pi/5)/4`$, perimeter five and no assigned
 isolates. Its fixed-boundary residual is
 
-$$
+```math
 r=A/a_0-3/2>0,\qquad a_0=\sqrt3/2.
 \tag{4.1}
-$$
+```
 
-Indeed $\cot^2(\pi/5)=(5+2\sqrt5)/5$, so $A^2>27/16$, which
-is equivalent to $A/a_0>3/2$. The five side phases advance by
-$2\pi/5$; their reduced phases modulo $\pi/3$ are distinct and
+Indeed $`\cot^2(\pi/5)=(5+2\sqrt5)/5`$, so $`A^2>27/16`$, which
+is equivalent to $`A/a_0>3/2`$. The five side phases advance by
+$`2\pi/5`$; their reduced phases modulo $`\pi/3`$ are distinct and
 not coherent in an arbitrarily small window.
 
 Nevertheless, the fixed-boundary capacity for even **one** interior point
 is zero. Triangulate the pentagon by its center. In each center/adjacent-
 vertex triangle, split at the perpendicular bisector of its unit side.
 Distance to the nearer endpoint is a convex function on the corresponding
-half-triangle, bounded at its vertices by $R,0,1/2$. Thus every point
-of the pentagon lies within distance at most $R<1$ of a boundary source.
+half-triangle, bounded at its vertices by $`R,0,1/2`$. Thus every point
+of the pentagon lies within distance at most $`R<1`$ of a boundary source.
 No interior site is unit-clear from the five fixed vertices.
 
 ## 5. Deleting any one boundary vertex still gives no inward vacancy
 
-Delete a vertex $p$, with neighbors $a,b$. Let $Q$ be the convex
+Delete a vertex $`p`$, with neighbors $`a,b`$. Let $`Q`$ be the convex
 hull of the remaining four vertices. Its center remains interior because
-the largest circular gap is $4\pi/5<\pi$. The same radial fan proof
-shows that every point of $Q$ is within $R<1$ of a remaining vertex:
-for each fan triangle the half-triangle vertex distances are $R$, zero,
-and half its chord length, at most $R$.
+the largest circular gap is $`4\pi/5<\pi`$. The same radial fan proof
+shows that every point of $`Q`$ is within $`R<1`$ of a remaining vertex:
+for each fan triangle the half-triangle vertex distances are $`R`$, zero,
+and half its chord length, at most $`R`$.
 
-The rest of the pentagon is the ear triangle $apb$. Split it along the
-bisector between $a,b$. The distance to the nearer of $a,b$ is
-bounded at half-triangle vertices by zero, $|a-b|/2=\phi/2<1$, and
-$|p-a|=|p-b|=1$. Convexity gives an upper bound one, with equality
-only at $p$. Therefore every point of the old pentagon except $p$
+The rest of the pentagon is the ear triangle $`apb`$. Split it along the
+bisector between $`a,b`$. The distance to the nearer of $`a,b`$ is
+bounded at half-triangle vertices by zero, $`|a-b|/2=\phi/2<1`$, and
+$`|p-a|=|p-b|=1`$. Convexity gives an upper bound one, with equality
+only at $`p`$. Therefore every point of the old pentagon except $`p`$
 has distance strictly below one from a retained boundary vertex.
 
 In particular, deleting one actual loaded point cannot be funded by a

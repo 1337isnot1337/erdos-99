@@ -19,27 +19,27 @@ Every bounded nonquadrilateral face is still a closed zero-displacement route.
 
 This gives the exact finite currency
 
-$$
+```math
 E_{\rm att}:=L+P_{\rm exc}-\operatorname{per}(P),
-$$
+```
 
 and transports all strict-rhombus train return into that same physical route excess.
 No train endpoint is discarded and no physical boundary occurrence is charged twice.
 
 The result is
 
-$$
+```math
 \boxed{
 E_{\rm att}
 \ge \sum_{\tau\in\mathcal T}
 \bigl(2-w_{Q_{\rm att}}(u_\tau)\bigr),
 }
 \tag{AR.1}
-$$
+```
 
 and, after exact train-span transport,
 
-$$
+```math
 \boxed{
  d E_{\rm att}
 \ge
@@ -49,7 +49,7 @@ $$
 \right].
 }
 \tag{AR.2}
-$$
+```
 
 Here `P` is the convex attachment polygon, `d=diam(P)`, `mathcal R` is the full
 strict-rhombus complex in the harmonic component, `mathcal T` is its set of complete
@@ -57,13 +57,13 @@ local trains, and `u_R,v_R` are the two train directions crossing in `R`.
 
 Using the exact face ledger, the left side is also
 
-$$
+```math
 \boxed{
 E_{\rm att}
 =4a-6-2s-2c+4f_{\rm exc}-\operatorname{per}(P).
 }
 \tag{AR.3}
-$$
+```
 
 Thus the unresolved all-regime signed-return problem can be stated without a coarse
 outer-walk baseline: the lower side of the desired comparison is an explicit weighted
@@ -76,15 +76,15 @@ is the actual route excess above the attachment polygon perimeter.
 
 Fix one canonical harmonic component `I` with attachment set
 
-$$
+```math
 A=\{p_1,\ldots,p_a\}
-$$
+```
 
 listed cyclically on
 
-$$
+```math
 P:=\operatorname{conv}(A).
-$$
+```
 
 Let `H` be the induced positive-contact graph on `I\cup A`.  Retain the standard
 local notation
@@ -101,67 +101,67 @@ local notation
 
 Canonical Section 82 gives
 
-$$
+```math
 L+Q=4a-6-2s-2c,
 \tag{AR.4}
-$$
+```
 
 and every physical boundary-edge occurrence of `mathcal R` faces either the old outer
 face of `H` or one bounded nonquadrilateral face.  It also gives
 
-$$
+```math
 P_{exc}=4f_{exc}+Q.
 \tag{AR.5}
-$$
+```
 
 The consecutive-attachment outer routes are the same occurrence-counted routes used in
 canonical Section 101.  Let `W_i` be the directed outer-walk route from `p_i` to
 `p_{i+1}` (indices cyclic), with the bounded side on the left.  Write
 
-$$
+```math
 \ell_i=|W_i|,
 \qquad
 z_i=p_{i+1}-p_i,
 \qquad
 q_i={z_i\over |z_i|}.
 \tag{AR.6}
-$$
+```
 
 The attachment vertices are distinct, so `z_i!=0`.  The routes partition the
 occurrence-counted outer walk and therefore
 
-$$
+```math
 \sum_i\ell_i=L,
 \qquad
 \sum_i|z_i|=\operatorname{per}(P).
 \tag{AR.7}
-$$
+```
 
 Orient every bounded nonquadrilateral face boundary clockwise.  Each such route is
 closed and receives host `0`.
 
 Define the finite host set
 
-$$
+```math
 Q_{att}:=\{q_1,\ldots,q_a,0\}\subset\overline{B_1(0)}
 \tag{AR.8}
-$$
+```
 
 and, for a unit direction `u`,
 
-$$
+```math
 w_{Q_{att}}(u)
 :=\max_{q\in Q_{att}}q\cdot u
  -\min_{q\in Q_{att}}q\cdot u.
 \tag{AR.9}
-$$
+```
 
 Since every host has norm at most one,
 
-$$
+```math
 0\le w_{Q_{att}}(u)\le2.
 \tag{AR.10}
-$$
+```
 
 ---
 
@@ -169,19 +169,19 @@ $$
 
 For any directed unit-edge walk `W` with displacement `z`, assign
 
-$$
+```math
 q(W)=z/|z|\quad(z\ne0),
 \qquad
 q(W)=0\quad(z=0).
-$$
+```
 
 Then
 
-$$
+```math
 |W|-|z|
 =\sum_{e\in W}(1-q(W)\cdot v_e),
 \tag{AR.11}
-$$
+```
 
 where `v_e` is the directed unit step of the occurrence.  Every summand is
 nonnegative.
@@ -189,33 +189,33 @@ nonnegative.
 Apply (AR.11) to all attachment routes and all bounded defect-face cycles.  The outer
 routes contribute
 
-$$
+```math
 \sum_i(\ell_i-|z_i|)
 =L-\operatorname{per}(P),
-$$
+```
 
 while the closed defect cycles contribute their entire lengths, totaling `P_exc`.
 Therefore their total exact excess is
 
-$$
+```math
 \boxed{
 E_{att}
 =L+P_{exc}-\operatorname{per}(P).
 }
 \tag{AR.12}
-$$
+```
 
 This quantity is nonnegative before any asymptotics.
 
 Using (AR.4)--(AR.5), the degree-excess variable cancels:
 
-$$
+```math
 \begin{aligned}
 L+P_{exc}
 &=(L+Q)+4f_{exc}\\
 &=4a-6-2s-2c+4f_{exc}.
 \end{aligned}
-$$
+```
 
 Hence (AR.3) follows exactly.
 
@@ -257,38 +257,38 @@ Take one complete train `tau`.  Its two terminal physical boundary orientations 
 `u_tau` and `-u_tau`.  Suppose their assigned routes have hosts `q_i,q_j` in
 `Q_att`.  Their two assigned summands in (AR.11) are
 
-$$
+```math
 (1-q_i\cdot u_\tau)
  +(1-q_j\cdot(-u_\tau))
 =2-(q_i-q_j)\cdot u_\tau.
 \tag{AR.13}
-$$
+```
 
 By definition of width,
 
-$$
+```math
 (q_i-q_j)\cdot u_\tau
 \le w_{Q_{att}}(u_\tau).
-$$
+```
 
 Hence the two ends cost at least
 
-$$
+```math
 \delta_\tau
 :=2-w_{Q_{att}}(u_\tau)
 \ge0.
 \tag{AR.14}
-$$
+```
 
 The assigned endpoint occurrences are pairwise distinct.  Every unassigned route
 occurrence contributes a nonnegative term to (AR.11).  Summing (AR.14) over all
 complete trains therefore proves
 
-$$
+```math
 \boxed{
 E_{att}\ge\sum_{\tau\in\mathcal T}\delta_\tau.
 }
-$$
+```
 
 This is (AR.1).
 
@@ -301,24 +301,24 @@ exact two-end contribution in (AR.13) is `2`, while `delta_tau<=2`.
 
 For a train `tau`, let
 
-$$
+```math
 A(\tau):=\sum_{R\in\tau}\operatorname{area}(R).
 \tag{AR.15}
-$$
+```
 
 The canonical train-span identity says that `A(tau)` is exactly the transverse
 displacement between its two terminal edge midpoints.  Both midpoints lie in the
 convex attachment cell `P`, so
 
-$$
+```math
 \boxed{A(\tau)\le d.}
 \tag{AR.16}
-$$
+```
 
 Multiply `delta_tau` by `A(tau)` and sum over all trains.  Each strict rhombus lies on
 exactly two trains, with its two train directions denoted `u_R,v_R`.  Therefore
 
-$$
+```math
 \begin{aligned}
 &\sum_{R\in\mathcal R}\operatorname{area}(R)
 \bigl(\delta_{\tau_u(R)}+\delta_{\tau_v(R)}\bigr)\\
@@ -327,14 +327,14 @@ $$
 &\qquad\le dE_{att}.
 \end{aligned}
 \tag{AR.17}
-$$
+```
 
 Substitute
 
-$$
+```math
 \delta_{\tau_u(R)}+\delta_{\tau_v(R)}
 =4-w_{Q_{att}}(u_R)-w_{Q_{att}}(v_R)
-$$
+```
 
 to obtain (AR.2).
 
@@ -382,16 +382,16 @@ The two-arc theorem gives a universal local return constant but spends only the
 diameter-pair displacement `2d`.  The present theorem spends **all actual attachment
 chords** and therefore replaces its raw outer-walk term by
 
-$$
+```math
 L+P_{exc}-\operatorname{per}(P).
-$$
+```
 
 The price is that the host set now contains every attachment-chord direction, so there
 is no universal positive lower bound for
 
-$$
+```math
 4-w_{Q_{att}}(u)-w_{Q_{att}}(v)
-$$
+```
 
 over all two-direction rhombi.
 
@@ -399,9 +399,9 @@ This identifies the precise all-regime obstruction.  To close the full-core bran
 is enough to prove, on the same actual harmonic cell, that the ordered inverse-phase
 train system forces the weighted return functional in (AR.2) to exceed
 
-$$
+```math
 d\left(4a-6-2s-2c+4f_{exc}-\operatorname{per}(P)\right).
-$$
+```
 
 Any such theorem must use the distribution and capacity of the physical
 attachment-route host directions; a uniform three-host constant cannot supply it.

@@ -25,29 +25,29 @@ C-I is closed. Work with a triangle-free global minimizer selected first to mini
 
 The first exact full-source endpoint is
 
-$$
+```math
 \delta_K+\mathscr O_A\ge c_0P,
-$$
+```
 
 where
 
-$$
+```math
 \delta_K=\frac{\pi D^2}{4}-\operatorname{area}K,
 \qquad
 \mathscr O_A=\operatorname{area}K+c_0P-a_0(n-1),
-$$
+```
 
-$$
+```math
 a_0=\frac{\sqrt3}{2},\qquad c_0=\frac{\sqrt3}{4}.
-$$
+```
 
 The strict translated-lattice comparison gives the opposite inequality for every global minimizer.
 
 The post-ZF alternative endpoint is
 
-$$
+```math
 b+Q_f>2h,
-$$
+```
 
 which is equivalent by Euler to `e+h<=2v-3` and contradicts ZF's `e+h>=2v-2`.
 
@@ -55,25 +55,25 @@ which is equivalent by Euler to `e+h<=2v-3` and contradicts ZF's `e+h>=2v-2`.
 
 There is a useful cancellation that should be kept explicit in every attempted NC proof:
 
-$$
+```math
 \begin{aligned}
 \delta_K+\mathscr O_A
 &=\left(\frac{\pi D^2}{4}-\operatorname{area}K\right)
   +\left(\operatorname{area}K+c_0P-a_0(n-1)\right)\\
 &=\frac{\pi D^2}{4}+c_0P-a_0(n-1).
 \end{aligned}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \delta_K+\mathscr O_A\ge c_0P
 \iff
 D^2\ge\frac{2\sqrt3}{\pi}(n-1).
 }
 \tag{2.1}
-$$
+```
 
 This is not a new closing theorem; it is an exact diagnostic for proposed bridges. In particular, no argument that only reallocates hull area between `delta_K` and `O_A` can close NC. The missing theorem must force a finite capacity loss from the triangle-free/global-source structure, or construct a strict sub-`D` competitor.
 
@@ -92,13 +92,13 @@ The 2026-09-10 full-source report supplies candidate FS.1–FS.4:
 
 The audited post-ZF chain supplies the report-level consequences
 
-$$
+```math
 e+h\ge2v-2,
 \qquad
 q\ge h\ge\delta\ge\lceil D\rceil,
 \qquad
 \sigma_B\ge\lceil D\rceil-2.
-$$
+```
 
 The old `sigma_B=o(D)` response normal form is therefore unavailable on this route.
 

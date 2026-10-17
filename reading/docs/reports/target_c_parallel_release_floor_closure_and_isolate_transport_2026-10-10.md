@@ -59,24 +59,24 @@ retained.
 
 Translate group i by s_i v with s_0=0 and
 
-$$
+```math
  0\le s_i\le U_i,\qquad U_i>0.
-$$
+```
 
 For a crossing old contact from group i to G_0, orient its unit vector r from
 the group to the fixed label. Its squared lower slack is
 
-$$
+```math
  |r+s_i v|^2-1=s_i(s_i+2r\cdot v).
-$$
+```
 
 Define the exact release floor
 
-$$
+```math
  F_i=\max\bigl(\{0\}\cup
        \{-2r\cdot v:r\text{ is an old contact from }G_i\text{ to }G_0\}\bigr).
                                                         \tag{2.1}
-$$
+```
 
 Our allowed domain is `s_i=0 or s_i>F_i`. Every active old contact cut then
 strictly opens. An isolate-only group has F_i=0. If a supplied parallel
@@ -86,10 +86,10 @@ specialization, not a required hypothesis of the theorem.
 
 For a source pair p in group i, q in group j, put
 
-$$
+```math
  a=(p-q)\cdot v,\quad z=(p-q)\cdot Jv,\quad
  d'=a+s_i-s_j.
-$$
+```
 
 Its endpoint squared distance is exactly `z^2+(d')^2`.
 
@@ -98,9 +98,9 @@ Its endpoint squared distance is exactly `z^2+(d')^2`.
 Let `u=sqrt(D^2-z^2)`. Since the old pair is at most D, `u>=|a|`. The complete
 upper constraint is precisely
 
-$$
+```math
  s_i-s_j\le u-a,\qquad s_j-s_i\le u+a.             \tag{2.2}
-$$
+```
 
 Both costs are nonnegative. Equality is permitted: contact loss makes a new
 diameter pair harmless to the contradiction. No weighted-diameter average
@@ -112,12 +112,12 @@ If |z|>1, the lower bound is always strict whatever the heights. If |z|<=1,
 put `ell=sqrt(1-z^2)`. For an old noncontact, `|a|>ell`, so a!=0. Retaining its
 old projected order and strict unit clearance is exactly
 
-$$
+```math
  \begin{cases}
  s_i-s_j<-a-\ell,&a<0,\\
  s_j-s_i<a-\ell,&a>0.
  \end{cases}                                      \tag{2.3}
-$$
+```
 
 The relevant cost is strictly positive. At |z|=1 this keeps the height
 difference nonzero; ignoring this boundary case would create a unit contact.
@@ -148,10 +148,10 @@ possible active support of any endpoint in this class.
 
 If I is nonempty, choose one common scaling factor
 
-$$
+```math
  \max_{i\in I}{F_i\over c_i}<\lambda<1,
  \qquad s_i=\lambda c_i\ (i\in I),\quad s_i=0\ (i\in Z). \tag{FC.1}
-$$
+```
 
 This is an explicit feasible coordinate endpoint. A contact-bearing group
 means a group with at least one old contact to G_0. In the canonical connected
@@ -194,9 +194,9 @@ cut, and satisfies (2.2) and the strict original-order conditions (2.3).
 Replace its heights by `t_i^+=max(t_i,0)`. For any difference inequality
 `t_i-t_j<=c` with c>=0,
 
-$$
+```math
  \max(t_i,0)-\max(t_j,0)\le\max(t_i-t_j,0)\le c.
-$$
+```
 
 For a strict noncontact cost c>0, the new difference is either zero, hence
 strictly below c, or positive and at most the old strict difference. Thus
@@ -275,18 +275,18 @@ an actual finite endpoint by FC; existence of a source-free path does not.
 Use the eight-train source from the preceding Slot 01 report, with integer
 H>=30, t=1/(100H^2),
 
-$$
+```math
  a_A={1-9t^2\over1+9t^2},\quad
  a_B={1-t^2\over1+t^2},\quad
  \delta_A={12t\over1+9t^2},\quad
  \delta_B={4t\over1+t^2},\quad D^2=H^2+25.
-$$
+```
 
 Retain every original label and add one contact-isolated fixed guard
 
-$$
+```math
  U=(5,3+g),\qquad g=5\delta_B/2.
-$$
+```
 
 The original right top moving label is Rm2=(5,2). The adjacent fixed connector
 label RCvert1 is `(5-a_B,3+delta_B/2)`. Consequently U is strictly separated
@@ -298,11 +298,11 @@ the same contact core and eight O–O trains, and one retained isolate.
 
 Put S=2delta_A. For this family,
 
-$$
+```math
  a_A,a_B>0.9,\quad S<1/1000,\quad
  11\delta_B/4<\delta_A<3\delta_B,\quad
  \delta_B<1/1000,\quad S<\gamma_D.
-$$
+```
 
 **Regression CTG.** No nonempty binary choice of original owners A,B translated
 by one common nonzero vector b=(x,y), |b|<=S, satisfies every source lower and
@@ -312,9 +312,9 @@ remain fixed. It does not assert failure when U is also allowed to move.
 For a selected owner i, its actual rungs include both contact vectors
 `(plus-or-minus a_i,-delta_i/2)`. Their weak unit lower bounds require
 
-$$
+```math
  x^2+y^2-\delta_i y\ge2a_i|x|.                  \tag{CTG.1}
-$$
+```
 
 Since x^2<=S|x| and 2a_i-S>1, if y<=0 this implies
 `|x|<=3delta_A|y|`. Its old bottom diameter to q=(0,H) requires
@@ -322,11 +322,11 @@ Since x^2<=S|x| and 2a_i-S>1, if y<=0 this implies
 `(30delta_A-2H)|y|<0`, impossible. If y=0, CTG.1 forces x=0. Thus any admissible
 nonzero b has y>0. Equation CTG.1 then gives
 
-$$
+```math
  y(y-\delta_i)\ge(2a_i-S)|x|\ge0,
  \qquad y\ge\delta_i,
  \qquad |x|<S^2<36\delta_B^2.                   \tag{CTG.2}
-$$
+```
 
 If only A is selected, the old vertical pair Am0:Bm0 has gap
 `1+delta_A-delta_B/2`; CTG.2 makes its new positive vertical separation at most
@@ -336,10 +336,10 @@ selected, Rm2:U has old gap `1+5delta_B/2`; y>=delta_A makes its new positive
 vertical separation less than `1-delta_B/4`. In all cases its horizontal
 separation is |x|, and
 
-$$
+```math
  |x|^2+(1-\delta_B/4)^2
  <1296\delta_B^4+(1-\delta_B/4)^2<1.
-$$
+```
 
 The last inequality follows from delta_B<1/1000. Each case has a strict
 lower violation. This proves CTG, conditional only on the directly checked
@@ -349,10 +349,10 @@ old contact and actual diameter data, not on a KKT assertion. QED.
 
 Instead set
 
-$$
+```math
  s_A=\delta_A+\delta_B/4,\qquad s_B=2\delta_B,
  \qquad s_U=0.                                  \tag{5.1}
-$$
+```
 
 Every old rung opens: its squared slack is `s_i(s_i-delta_i)>0`. Exactly 24
 old contacts are removed. The two old implication gaps remain strictly above
@@ -360,18 +360,18 @@ one, with new vertical separations `1+5delta_B/4` and
 `1+delta_A-5delta_B/4`. For each Emj:Fmj, the horizontal distance is
 `d=1-delta_B^2/4` and the residual vertical separation is `3delta_B/4`, giving
 
-$$
+```math
  d^2+(3\delta_B/4)^2-1
  ={\delta_B^2+\delta_B^4\over16}>0.
-$$
+```
 
 Rm2:U has new distance `1+delta_B/2>1`. These identities repair the specific
 blocking pairs; the certificate checks all other source pairs. The exact new
 squared diameter is the old right pair's
 
-$$
+```math
  D^2-4H\delta_B+4\delta_B^2<D^2.                \tag{5.2}
-$$
+```
 
 Thus independent heights escape a geometric obstruction that excludes every
 small common vector, while retaining the guard label and cardinality.
@@ -380,11 +380,11 @@ small common vector, while retaining the guard label and cardinality.
 
 With height bounds U_A=U_B=S, the only small binding arcs are
 
-$$
+```math
  B\to0:\ g=5\delta_B/2,\qquad
  A\to B:\ c=\delta_A-\delta_B-\ell,\qquad
  B\to A:\ \delta_B/2,
-$$
+```
 
 where `ell=sqrt(1-(1-delta_B^2/4)^2)`. Actual H also gives zero-cost arcs
 `0->A` and `0->B`, which do not limit positive heights. The A->B cost comes
@@ -398,9 +398,9 @@ so its computed c_A is a rigorous lower bound on the exact cap, while c_B=g
 is exact. It verifies `s_A>delta_A`, `s_B=9delta_B/4`, all 24 contact losses,
 strict original noncontact orders, and the exact new maximum
 
-$$
+```math
  D^2-{9\over2}H\delta_B+{81\over16}\delta_B^2<D^2. \tag{5.3}
-$$
+```
 
 ### Adaptive transport of the retained isolate
 
@@ -409,9 +409,9 @@ cost g rather than B->0. The reverse lower arc at RCvert1:U points 0->U and
 does not limit upward U motion. Full-source compilation gives final caps S
 for A,B,U. Set
 
-$$
+```math
  s_A=s_B=s_U=9\delta_A/5.                       \tag{5.4}
-$$
+```
 
 This retains and transports the isolate. All 24 old rung contacts open,
 every old noncontact remains strict, and both old diameter pairs attain the

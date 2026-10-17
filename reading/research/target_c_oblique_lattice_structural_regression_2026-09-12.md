@@ -26,38 +26,38 @@ not only ordered-grid topology or coarse width geometry.
 
 Fix an angle
 
-$$
+```math
  {\pi\over3}<\phi<{\pi\over2}
-$$
+```
 
 and put
 
-$$
+```math
  u=(1,0),\qquad v=(\cos\phi,\sin\phi),\qquad
  \Lambda_\phi=\{iu+jv:i,j\in\mathbb Z\}.
-$$
+```
 
 For integers `m,n`,
 
-$$
+```math
  |mu+nv|^2=m^2+n^2+2mn\cos\phi.
 \tag{1.1}
-$$
+```
 
 ### Lemma 1 — the only unit lattice vectors are the two basis directions
 
 For every nonzero `(m,n) in Z^2`,
 
-$$
+```math
  |mu+nv|\ge1,
-$$
+```
 
 with equality if and only if
 
-$$
+```math
  (m,n)\in\{(\pm1,0),(0,\pm1)\}.
 \tag{1.2}
-$$
+```
 
 ### Proof
 
@@ -65,24 +65,24 @@ Write `c=cos(phi)`, so `0<c<1/2`.
 
 If `mn>=0`, then
 
-$$
+```math
  m^2+n^2+2mnc\ge m^2+n^2\ge1,
-$$
+```
 
 and equality forces exactly one of `|m|,|n|` to equal one and the other to vanish.
 
 If `mn<0`, put `a=|m|`, `b=|n|`. Then
 
-$$
+```math
  |mu+nv|^2=a^2+b^2-2abc
 > a^2+b^2-ab.
-$$
+```
 
 For positive integers `a,b`,
 
-$$
+```math
  a^2+b^2-ab\ge1.
-$$
+```
 
 Thus the mixed-sign case is strictly larger than one. `square`
 
@@ -98,10 +98,10 @@ triangle.
 
 For integers `M,N>=1`, let
 
-$$
+```math
  P_{M,N}=\{iu+jv:0\le i\le M,\ 0\le j\le N\}.
 \tag{2.1}
-$$
+```
 
 Its contact graph is the `(M+1) x (N+1)` rectangular grid. The `MN` bounded faces are
 strict unit rhombi of angle `phi>pi/3`.
@@ -136,69 +136,69 @@ near-roundness changes the topology. It does not.
 
 For `R>4`, define
 
-$$
+```math
  A_R=\Lambda_\phi\cap B(0,R),
  \qquad K_R=\operatorname{conv}(A_R).
 \tag{3.1}
-$$
+```
 
 The lattice has a uniform covering radius at most one. Indeed, write any point as
 `su+tv`, round `s,t` independently to nearest integers, and note that the residual
 vector has norm at most
 
-$$
+```math
  {1\over2}|u|+{1\over2}|v|=1.
 \tag{3.2}
-$$
+```
 
 Fix a unit direction `e` and put `x=(R-1)e`. Choose `lambda in Lambda_phi` with
 `|lambda-x|<=1`. Then `|lambda|<=R`, so `lambda in A_R`, and
 
-$$
+```math
  e\cdot\lambda\ge R-2.
-$$
+```
 
 Since this holds for every `e`,
 
-$$
+```math
  \boxed{B(0,R-2)\subseteq K_R\subseteq B(0,R).}
 \tag{3.3}
-$$
+```
 
 Therefore, if `D_R=diam(A_R)=diam(K_R)`,
 
-$$
+```math
  2R-4\le D_R\le2R,
 \tag{3.4}
-$$
+```
 
 and after scaling by `D_R` the convex hulls converge in Hausdorff distance to a
 radius-`1/2` disk.
 
 For a rectangular block, set
 
-$$
+```math
  m_R=\lfloor R/4\rfloor.
-$$
+```
 
 Then the whole index rectangle
 
-$$
+```math
  |i|,|j|\le m_R
-$$
+```
 
 lies in `A_R`, since
 
-$$
+```math
  |iu+jv|\le |i|+|j|\le2m_R\le R/2<R.
-$$
+```
 
 It therefore contains an ordered complete train grid with both shore sizes
 
-$$
+```math
  2m_R=\Theta(R)=\Theta(D_R).
 \tag{3.5}
-$$
+```
 
 At the same time `A_R` remains triangle-free by Lemma 1.
 
@@ -209,24 +209,24 @@ At the same time `A_R` remains triangle-free by Lemma 1.
 Apply the covering argument in directions `e` and `-e`. There are points
 `p_+,p_- in A_R` satisfying
 
-$$
+```math
  |p_+-(R-1)e|\le1,
  \qquad
  |p_-+(R-1)e|\le1.
-$$
+```
 
 Hence
 
-$$
+```math
  |p_+-p_-|\ge2R-4\ge D_R-4.
 \tag{4.1}
-$$
+```
 
 Thus the same triangle-free source has a chord of length
 
-$$
+```math
  (1-O(D_R^{-1}))D_R
-$$
+```
 
 and simultaneously contains the linear-by-linear ordered train grid (3.5), whose
 transverse width is macroscopic.
@@ -247,43 +247,43 @@ attachment geometry, or the loaded diameter structure.
 
 The construction may vary with `R`. Let
 
-$$
+```math
  \phi_R={\pi\over3}+\varepsilon_R,
  \qquad \varepsilon_R>0,
  \qquad \varepsilon_R\to0.
 \tag{5.1}
-$$
+```
 
 All arguments above remain uniform because
 
-$$
+```math
  0<\cos\phi_R<1/2
-$$
+```
 
 and the covering-radius estimate (3.2) is independent of `phi_R`.
 
 Choose, for example,
 
-$$
+```math
  \varepsilon_R=R^{-2}.
 \tag{5.2}
-$$
+```
 
 Then every retained rhombus is still strict and triangle-free, while a central
 `Theta(R^2)`-rhombus block has total angular defect only
 
-$$
+```math
  \Theta(R^2)\varepsilon_R=\Theta(1).
 \tag{5.3}
-$$
+```
 
 The rhombus covolume is
 
-$$
+```math
  \sin\phi_R
  ={\sqrt3\over2}+{1\over2}\varepsilon_R+O(\varepsilon_R^2),
 \tag{5.4}
-$$
+```
 
 so even the density loss from the triangular lattice may be pushed below the ordinary
 boundary scale while all contacts remain strictly triangle-free.

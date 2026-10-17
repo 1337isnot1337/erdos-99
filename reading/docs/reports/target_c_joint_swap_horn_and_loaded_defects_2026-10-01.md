@@ -46,9 +46,9 @@ canonical premise, and keep every source point.
 
 Write
 
-$$
+```math
 L=\sqrt{D^2-1},\qquad \gamma_D=D-L,\qquad d_H=|B|-|H|.
-$$
+```
 
 Pairs of length greater than `L` form the convex strict-long thrackle `T_D`.
 Its core-endpoint rooted forest `F` leaves a fixed set `J` of inactive long
@@ -87,10 +87,10 @@ removed. The remaining joint search has no inactive upper blockers at all.
 
 For two vectors of lengths `a>=b` making angle `theta<=pi/3`,
 
-$$
+```math
 |\Delta_i-\Delta_j|^2
 =a^2+b^2-2ab\cos\theta\le a^2,
-$$
+```
 
 because `b<=a<=2a cos(theta)`. Thus the diameter of the set
 `{0,Delta_1,...,Delta_k}` is at most `s`. Every relatively changing pair moves
@@ -103,15 +103,15 @@ No old diameter can join two different moving groups. Orient such a putative
 diameter from group `j` into group `i`, with vector `r`. Individual ONE-SIGN
 shortening of the `i` move requires
 
-$$
+```math
 2r\cdot\Delta_i+|\Delta_i|^2<0,
-$$
+```
 
 while shortening of the `j` move requires
 
-$$
+```math
 -2r\cdot\Delta_j+|\Delta_j|^2<0.
-$$
+```
 
 Their projections have opposite signs, contrary to the common strict sign
 hypothesis. Each old diameter is consequently either unchanged within one
@@ -143,23 +143,23 @@ Restrict to the undisabled groups of Theorem 1. For a source pair with endpoints
 owned by distinct moving groups `i,j`, put `r=p_i-p_j`. Its four relative
 vectors are
 
-$$
+```math
 r,\quad r+\Delta_i,\quad r-\Delta_j,
 \quad r+\Delta_i-\Delta_j.
 \tag{1}
-$$
+```
 
 An old noncontact pair is forbidden in a local state when its new length is
 `<=1`, including creation of a new unit contact. The all-zero state is allowed.
 A pair with one fixed endpoint gives a unary clause. Every bad state of a
 two-owner pair gives one of
 
-$$
+```math
 10:\ i\Rightarrow j,\qquad
 01:\ j\Rightarrow i,\qquad
 11:\ \neg x_i\lor\neg x_j.
 \tag{2}
-$$
+```
 
 These clauses are Horn, with at most one positive literal. Every relevant pair
 has old length at most `1+s`. The exact clauses contain all and only the
@@ -187,10 +187,10 @@ If a pair forbids both `10` and `11`, it forces `i=0`; if it forbids both `01`
 and `11`, it forces `j=0`. An acute displacement cone also excludes the truth
 table with exactly `10,01` bad and `11` good. Set `f_ab=|r_ab|^2-1`. Then
 
-$$
+```math
 f_{11}=f_{10}+f_{01}-f_{00}-2\Delta_i\cdot\Delta_j.
 \tag{3}
-$$
+```
 
 If `f_10,f_01<=0`, `f_00>0`, and `Delta_i dot Delta_j>0`, then `f_11<0`.
 Such a pair forces both owners to zero. After prime reduction, the only
@@ -341,18 +341,18 @@ Suppose `|r|>1`, `|r+Delta_i|>1`, `|r-Delta_j|>1`, and
 Assume the angle between the displacement directions is at most `pi/3`.
 Then
 
-$$
+```math
 0<|r|^2-1<s^2+2s\kappa+s^2\kappa^2.
 \tag{4}
-$$
+```
 
 If a unit vector `v` is within `kappa_0` of both displacement unit directions,
 then
 
-$$
+```math
 |r\cdot v|<s+(1+s)\kappa_0.
 \tag{5}
-$$
+```
 
 Thus for an open-cell cone of width `W=O(1/D)` and swaps `s=O(1/D)`, pure
 joint conflicts have squared contact slack `O(1/D^2)` and are oriented within
@@ -363,37 +363,37 @@ joint conflicts have squared contact slack `O(1/D^2)` and are oriented within
 By reversing `r` and exchanging the endpoint labels if necessary, take `a>=b`.
 Set `lambda=1-b/a` and
 
-$$
+```math
 h=(b/a)\Delta_i-\Delta_j,
 \qquad |h|\le b\kappa.
-$$
+```
 
 The bad `11` state implies `|r+lambda Delta_i|<=1+b kappa`. The squared-norm
 identity for interpolation gives
 
-$$
+```math
 |r+\lambda\Delta_i|^2-1
 =(b/a)(|r|^2-1)+\lambda(|r+\Delta_i|^2-1)
 -\lambda(b/a)a^2.
-$$
+```
 
 The second term on the right is nonnegative and is positive if `lambda>0`.
 Consequently
 
-$$
+```math
 |r|^2-1\le2a\kappa+ab\kappa^2+\lambda a^2
 <s^2+2s\kappa+s^2\kappa^2.
-$$
+```
 
 Strictness remains when `a=b`, since then the `s^2` term is positive.
 
 Subtract the good `10` and `01` squared lengths from the bad `11` length. With
 `v_i=Delta_i/a`, `v_j=Delta_j/b`, this yields
 
-$$
+```math
 r\cdot v_j>-a+b/2\ge-s,\qquad
 r\cdot v_i<b-a/2\le s.
-$$
+```
 
 Also `|r|<=1+|Delta_i-Delta_j|<=1+s` in an acute cone of width at most `pi/3`.
 Replacing either unit direction by `v` proves (5). QED.
@@ -413,10 +413,10 @@ At an endpoint choose the unit-neighbor vector `c` whose `u` component has the
 same sign as the vector from this endpoint to the other endpoint. Unit
 separation gives `|r|>1`. Hence
 
-$$
+```math
 r\cdot c\ge {\sqrt3\over2}\sqrt{1-(1/8)^2}-{1\over2}(1/8)
 ={\sqrt{189}-1\over16}>{25\over32}\ge {|r|^2\over2}.
-$$
+```
 
 The other endpoint and this neighbor are distinct because the original pair
 is a noncontact. Their squared distance is
@@ -456,11 +456,11 @@ leaf.
 
 With unique unit neighbor `q`, KKT reads
 
-$$
+```math
 \alpha_{pq}(p-q)=\sum_{x:px\in H}\beta_{px}(p-x),
 \qquad \alpha_{pq}>0.
 \tag{6}
-$$
+```
 
 The diameter load cannot be empty. Its vectors lie in a cone of aperture at
 most `pi/3`. All weights are positive. The resulting contact direction is in
@@ -484,10 +484,10 @@ to an actual diameter is also an explicit exception.
 
 If `p` has an actual diameter partner `x` and unit neighbors `p-a,p-b`, then
 
-$$
+```math
 D|a+b|\ge1.
 \tag{7}
-$$
+```
 
 Indeed for `r=p-x`, the upper constraints at both neighbors give
 `|r-a|^2<=D^2`, `|r-b|^2<=D^2`, hence `r dot a,r dot b>=1/2`.
@@ -497,10 +497,10 @@ For a phase-swap slab the two outside-to-middle contact vectors are
 `a=u_p`, `b=-u_q`. Consequently any moving diameter endpoint incident with
 both boundary contact families requires
 
-$$
+```math
 |u_p-u_q|\ge1/D.
 \tag{8}
-$$
+```
 
 ### Corollary 7: every ultra-small slab has an internal-contact loaded defect
 
@@ -546,10 +546,10 @@ Writing `m` for the coherent phase midpoint and `n_h` for the diameter
 vectors directed into the middle slab, let `sigma` be their sign on `Jm`.
 For real lifted phases in the open cell,
 
-$$
+```math
 \operatorname{sign}(\theta_p-\theta_q)=\sigma.
 \tag{9}
-$$
+```
 
 In particular, a loaded-free inner pocket on one host arc can contain many
 retained train ends only with strictly monotone, pairwise distinct phases.
@@ -582,10 +582,10 @@ strict sign `sigma`.
 
 Summing the full positive source KKT over the slab yields
 
-$$
+```math
 A_pu_p-A_qu_q=\sum_h\beta_h n_h,\qquad A_p,A_q,\beta_h>0.
 \tag{10}
-$$
+```
 
 There is at least one switching diameter. For unequal phases the left side
 cannot vanish. If the phases were equal and there were no switching diameter,
@@ -598,11 +598,11 @@ not extend a core theorem to isolated source points.
 
 The transverse projection of (10) is
 
-$$
+```math
 (A_p+A_q)\sin((\theta_p-\theta_q)/2)
 =\sum_h\beta_h(n_h\cdot Jm).
 \tag{11}
-$$
+```
 
 The right side has strict sign `sigma`, so equality of the two phases is
 impossible and (9) follows. For `w=(u_p-u_q)/|u_p-u_q|`, equations (9)--(11)
@@ -627,10 +627,10 @@ pair in a block is also physically consecutive in that list, and its gap
 is at most `4K/(D(R-1))<=1/(2D)`. The resulting physical slabs are disjoint
 over the ordered host list and are all ONE-SIGN, with
 
-$$
+```math
 k\ge\sum_F\lfloor t_F/R\rfloor.
 \tag{12}
-$$
+```
 
 They can be fed directly into Theorems 1 and 8 and the Horn reduction.
 Neither a linear value of (12) nor a contradiction follows merely from a
@@ -677,10 +677,10 @@ counterexample to the open-cell theorem.
 
 **A bounded isolate should follow its chamber.** The convex unit octagon
 
-$$
+```math
 (0,0),(1,0),(8/5,4/5),(8/5,9/5),(1,13/5),(0,13/5),
 (-3/5,9/5),(-3/5,4/5)
-$$
+```
 
 contains the strict isolate `(1/2,7/8)`. Translating its boundary by `(0,1/100)`
 while keeping the isolate fixed produces an overlap. Translating the isolate

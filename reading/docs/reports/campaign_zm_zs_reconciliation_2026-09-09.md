@@ -22,17 +22,20 @@
 Two report-level results landed independently on September 9:
 
 - ZS, in `target_c_zf_boundary_surplus_collapse_2026-09-09.md`, proves after ZF that
-  $$
+  ```math
   q\ge h\ge\delta\ge\lceil D\rceil
-  $$
+  
+  ```
   and therefore
-  $$
+  ```math
   \sigma_B=2q-\delta-2\ge\lceil D\rceil-2.
-  $$
+  
+  ```
 - ZM, in `campaign_boundary_defect_matching_2026-09-09.md`, proves that the non-diameter response graph contains a terminal-disjoint matching `J` with
-  $$
+  ```math
   |J|\ge q/16.
-  $$
+  
+  ```
 
 The ZM report still states only the older C33 consequence `|J|>=(ceil(D)+2)/32` and proposes C44 Branch B as one possible next route. Both statements need reconciliation with ZS.
 
@@ -42,21 +45,21 @@ The ZM report still states only the older C33 consequence `|J|>=(ceil(D)+2)/32` 
 
 The live response-side endpoint after ZM is quantitative, not combinatorial:
 
-$$
+```math
 0<\sum_{ij\in J}c_{ij}
 \le\frac12\operatorname{tr}(\Lambda-L_H),
 \qquad
 |J|\ge q/16.
-$$
+```
 
 ZM supplies linearly many terminal-disjoint positive non-diameter response channels but no lower bound on their aggregate conductance.
 
 The direct Level I endpoint remains
 
-$$
+```math
 \boxed{
 b+\sum_F(\deg F-4)>2h,}
-$$
+```
 
 which would contradict ZF.
 
@@ -66,22 +69,22 @@ which would contradict ZF.
 
 Assume the common audited post-ZF hypotheses of ZS and ZM for a sufficiently large lexicographically normalized triangle-free C-II global minimizer. Then
 
-$$
+```math
 \boxed{
 |J|\ge\frac q{16}\ge\frac{\lceil D\rceil}{16}.
 }
 \tag{ZMS.1}
-$$
+```
 
 Moreover
 
-$$
+```math
 \boxed{
 \sigma_B=o(D)
 \quad\text{is impossible post-ZF}.
 }
 \tag{ZMS.2}
-$$
+```
 
 Consequently C44 Branch A/B is not a valid post-ZF fallback for proving a ZM aggregate-conductance lower bound. Any ZM mass theorem must be proved in the actual linear-boundary-surplus regime or by a theorem whose hypotheses do not include `sigma_B=o(D)`.
 
@@ -89,17 +92,17 @@ Consequently C44 Branch A/B is not a valid post-ZF fallback for proving a ZM agg
 
 ZM proves `|J|>=q/16`. ZS proves
 
-$$
+```math
 q\ge h\ge\delta\ge\lceil D\rceil.
-$$
+```
 
 Substitution gives ZMS.1.
 
 ZS also proves
 
-$$
+```math
 \sigma_B\ge\lceil D\rceil-2.
-$$
+```
 
 Thus along every unbounded-cardinality sequence, `liminf sigma_B/D>=1`; in particular `sigma_B=o(D)` is impossible. This proves ZMS.2.
 
@@ -135,15 +138,15 @@ More importantly, post-ZF response work cannot use C44's near-minimal-boundary p
 
 PR #109 supplies one exact description of that class through
 
-$$
+```math
 q=x_B+f+g_F+2d_H+2s_Z
-$$
+```
 
 and
 
-$$
+```math
 c_I+e_{BB}+s_C=q-2+d_H+s_Z.
-$$
+```
 
 Thus future response work can split by actual finite currencies rather than by the now-empty `sigma_B=o(D)` phase.
 
@@ -155,11 +158,11 @@ Thus future response work can split by actual finite currencies rather than by t
 
 Find an explicit `mu(D)>0`, strong enough to feed the C41/C64 quantitative bridge, such that every sufficiently large post-ZF survivor admits a ZM matching `J` with
 
-$$
+```math
 \boxed{
 \sum_{ij\in J}c_{ij}\ge\mu(D).
 }
-$$
+```
 
 A first meaningful target is `mu(D)>=c/D` for an absolute `c>0`; a constant lower bound would be stronger. Positivity edge by edge is already contained in ZM and is insufficient.
 
@@ -167,10 +170,10 @@ This mass lemma is not by itself Level I closure. A resulting trace defect still
 
 The shortest direct Level I lemma remains
 
-$$
+```math
 \boxed{
 b+\sum_F(\deg F-4)>2h.}
-$$
+```
 
 ---
 

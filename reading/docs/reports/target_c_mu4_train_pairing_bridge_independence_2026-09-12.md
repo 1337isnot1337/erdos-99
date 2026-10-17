@@ -44,9 +44,9 @@ There is no third case. In particular, a bridge of `H_D` has the outer face on b
 sides and is incident to no bounded rhombus, so it is not a train endpoint. The total
 number of endpoints of type 2 is at most
 
-$$
+```math
  \sum_{f\text{ nonquadrilateral}}\deg(f)\le5Q_D=o(D)
-$$
+```
 
 at the Section-96 endpoint. This conclusion does not assume `b_D=o(D)` and does not
 replace the outer walk by the rhombic boundary count.
@@ -55,24 +55,24 @@ replace the outer walk by the rhombic boundary count.
 
 Use the Section-96 equality and endpoint support saturation. With
 
-$$
+```math
  \theta_4=2\arcsin\mu_4,
  \quad
  \phi_4=2\pi-2\theta_4,
  \quad
  \alpha_4=3\theta_4-2\pi={3\over2}\sin\theta_4,
-$$
+```
 
 one has
 
-$$
+```math
  a_D/D\to\alpha_4,
  \quad
  Q_D+s_D+c_D=o(D),
  \quad
  \operatorname{area}(P_D)/D^2\to
  A_4={\pi\over4}-{3\over8}(\phi_4-\sin\phi_4).
-$$
+```
 
 The three forbidden-gap routes have total length `3 sin(theta_4)D+o(D)`, each
 has `o(D)` excess over its chord, and all but `o(D)` ordinary route edges lie on
@@ -87,10 +87,10 @@ allowed arc `J`, of length `pi-phi_4`. The values `x in J` for which either `x` 
 `x+pi` lies in the third forbidden arc are the intersections with two antipodal
 intervals of length `phi_4`. Their centers are `pi` apart. Since
 
-$$
+```math
  (\pi-\phi_4)+\phi_4=\pi,
  \qquad \phi_4<\pi/2,
-$$
+```
 
 at most one of those two intervals can meet the interior of `J` (simultaneous
 intersection can occur only at the two endpoint tangencies). Thus some `x` and
@@ -122,9 +122,9 @@ The last class has total transverse span `o(D^2)`, because each long route has
 `o(D)` Hausdorff distance from its chord. The only trains with potentially macroscopic
 span therefore have two ordinary-route endpoints. There are at most
 
-$$
+```math
  \alpha_4D+o(D)
-$$
+```
 
 of them, since the ordinary routes supply at most `2 alpha_4D+o(D)` endpoint
 occurrences. This estimate is an upper bound even if a linear bridge corridor removes
@@ -133,17 +133,17 @@ some ordinary or long outer-walk edges.
 For every train, its transverse span is at most `diam(P_D)`, and summing spans counts
 each rhombus twice. Since the rhombic area is `area(P_D)-o(D^2)`,
 
-$$
+```math
  2A_4\le\alpha_4\mu_4.
-$$
+```
 
 The two sides are
 
-$$
+```math
  2A_4=1.236749759657516\ldots,
  \qquad
  \alpha_4\mu_4=0.924074023352554\ldots,
-$$
+```
 
 which is impossible.
 

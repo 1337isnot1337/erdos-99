@@ -44,46 +44,46 @@ global minimum-diameter optimality.
 ## 2. Exact rational family
 
 For every integer `m>=12` let
-$$
+```math
 r_m={\lfloor m/\sqrt3\rfloor+2\over m},\qquad
 v_m=\left({1-r_m^2\over1+r_m^2},{2r_m\over1+r_m^2}\right),
 \qquad u=(1,0).
-$$
+```
 The integer in the numerator can be computed as
 `isqrt(3*m*m)//3 + 2`; thus no numerical square-root decisions enter
 the coordinates.
 For a rational parameter `t` let `R(t)` be rotation by `2 arctan(t)`:
-$$
+```math
 R(t)={1\over1+t^2}
 \begin{pmatrix}1-t^2&-2t\\2t&1-t^2\end{pmatrix}.
-$$
+```
 Define
-$$
+```math
 t_j={m+1-2j\over100m^2},\quad
 v_j^-=R(t_j)v_m,\quad v_j^+=R(-t_j)v_m,\quad
 V_j^\pm=\sum_{\ell=1}^jv_\ell^\pm,\quad V_0^\pm=0.
 \tag{SR1}
-$$
+```
 The symmetry `t_{m+1-j}=-t_j` gives
-$$
+```math
 V_m^-=V_m^+.
 \tag{SR2}
-$$
+```
 
 The labels are
-$$
+```math
 \{(i,j):0\le i\le m-1,\ 0\le j\le m\}
 \ \cup\
 \{(i,j):m+1\le i\le2m,\ 0\le j\le m\}
 \ \cup\ \{(m,0),(m,m)\}.
-$$
+```
 Their physical positions are `iu+V_j^-` on the left and
 `iu+V_j^+` on the right. The two middle labels use the common endpoint
 coordinates in SR2. There are
-$$
+```math
 n_m=2m(m+1)+2
 \tag{SR3}
-$$
+```
 source points.
 
 The artificial pin set `B_m` consists of every source label with
@@ -93,26 +93,26 @@ specified boundary condition, not a claimed actual diameter-endpoint set.
 ## 3. All lower distances and actual contacts
 
 For all `m>=12` the increments satisfy
-$$
+```math
 {1\over4}<(v_j^\pm)_x<{1\over2},\qquad
 (v_j^\pm)_y>{4\over5},\qquad |v_j^\pm|=1.
 \tag{SR4}
-$$
+```
 Here
-$$
+```math
 {1\over\sqrt3}+{1\over m}<r_m<
 {1\over\sqrt3}+{2\over m}.
-$$
+```
 The base angle is strictly above `pi/3` by at least
 `32/(25m)`, while the rotations have absolute angle below `1/(50m)`.
 The upper bound `r_m<3/4`, together with this rotation bound, gives
 the first lower bound in SR4; the remaining bounds follow from the
 first-quadrant unit-circle coordinates.
 Also
-$$
+```math
 |V_j^\pm-jv_m|<{1\over50}.
 \tag{SR5}
-$$
+```
 
 Within one grain, labels with row difference at least two have vertical
 distance greater than `8/5`. With row difference one, a same-column
@@ -134,49 +134,49 @@ present. They form a bipartite graph under index-sum parity, so there
 is no unit triangle. No contact isolate is present.
 
 The two grains contain
-$$
+```math
 R_4=2m(m-1)
 \tag{SR6}
-$$
+```
 strict unit rhombi. Each has area `(v_j^\pm)_y>sqrt(3)/2`.
 The base-angle departure from `pi/3` is `O(1/m)`, as are the individual
 rotation angles. Therefore
-$$
+```math
 \sum_{\text{rhombi}}\left(\operatorname{area}
  -{\sqrt3\over2}\right)=O(m).
 \tag{SR7}
-$$
+```
 The middle gap is one convex, possibly collinear at its two cap
 midpoints, bounded contact face with `2m+4` sides and area `O(m)`.
 
 ## 4. Strictly positive pinned equilibrium
 
 Orient each vertical edge upwards. Give it the positive stress weight
-$$
+```math
 b_j^\pm={1\over(v_j^\pm)_y}.
-$$
+```
 At an unpinned vertex in row `j` the difference of its weighted
 vertical neighbor vectors is
-$$
+```math
 \beta_j^\pm u,\qquad
 \beta_j^\pm=
 {(v_{j+1}^\pm)_x\over(v_{j+1}^\pm)_y}
  -{(v_j^\pm)_x\over(v_j^\pm)_y}.
 \tag{SR8}
-$$
+```
 The left increment angles strictly decrease, hence `beta_j^->0`;
 the right increment angles strictly increase, hence `beta_j^+<0`.
 
 For the horizontal edge from column `i` to column `i+1` in an
 interior row, use
-$$
+```math
 a_{i,j}^-=(m-1-i)\beta_j^-
 \quad(0\le i\le m-2),
 \qquad
 a_{i,j}^+=(i-m)(-\beta_j^+)
 \quad(m+1\le i\le2m-1).
 \tag{SR9}
-$$
+```
 These are strictly positive. Their horizontal force difference is
 `-beta_j^\pm u`, including the one-sided contact at each inner wall.
 It cancels SR8 exactly. Every top and bottom horizontal edge can have
@@ -208,27 +208,27 @@ There are `2(m-1)` horizontal-edge trains, each crossing `m` rhombi,
 and `2m` vertical-edge trains, each crossing `m-1` rhombi. The four
 horizontal cap edges incident to no rhombus are singleton trains.
 Therefore
-$$
+```math
 T=4m+2.
 \tag{SR10}
-$$
+```
 Choose all nonsingleton trains as `A` and the four singleton trains
 as `N`. Each inner-face terminal recipient reaches the outer boundary
 through a singleton. The literal `N` rails have no edges. The shared
 carrier `K_N` is the union of the outer boundary walk and the
 middle-face boundary walk. It contains
-$$
+```math
 |E(K_N)|=8m\le2T.
 \tag{SR11}
-$$
+```
 Every selected inner terminal has a unit-contact return in this carrier.
 
 Now choose one matched terminal vertex on each of the distinct
 left-hand vertical-edge trains indexed by `j+1`, for
-$$
+```math
 X_m=\{(m-1,j):\lceil m/3\rceil\le j\le\lfloor2m/3\rfloor\}.
 \tag{SR12}
-$$
+```
 Each such train has an actual horizontal contact rail of `m-1`
 edges. There are `|X_m|=m/3+O(1)` chosen roots.
 
@@ -246,10 +246,10 @@ an index until `i` is `0` or `2m`, or `j` is `0` or `m`. Every
 contact changes one index by one. Consequently every such return
 has at least `floor(m/3)` unit steps, so any full set of disjoint
 returns has total length at least
-$$
+```math
 |X_m|\lfloor m/3\rfloor=\Omega(m^2).
 \tag{SR13}
-$$
+```
 The disjoint returns therefore cannot be charged once to the `8m`
 carrier edges.
 
@@ -257,10 +257,10 @@ carrier edges.
 
 The two opposite corners `(0,0)` and `(2m,m)` have horizontal
 separation greater than `9m/4` by SR4. Hence
-$$
+```math
 D_m^2>{81\over16}m^2>2n_m\qquad(m\ge12).
 \tag{SR14}
-$$
+```
 A square-grid crop of `n_m` unit-separated points has squared
 diameter at most `2(ceil(sqrt(n_m))-1)^2<2n_m`. It is a strict
 whole-source smaller-diameter competitor.

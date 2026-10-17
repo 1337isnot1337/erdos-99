@@ -20,9 +20,9 @@
 
 LI proved
 
-$$
+```math
 Q_B\ge (2-o(1))D
-$$
+```
 
 only under the extra cap-minimal hypothesis `S/D->2`, because its lower bound for the internal Eppstein slack `R_I` used two individual semicircle carriers.
 
@@ -32,23 +32,23 @@ HG already proves that **every** full-core near-circle survivor has two dominant
 
 The result is
 
-$$
+```math
 \boxed{
 R_I\ge
 \left(\frac{\pi+2}{2}-o(1)\right)D
 +\frac12Q_{\rm all-int}-S.
 }
 \tag{GP.1}
-$$
+```
 
 The `-S` term then cancels **exactly** against the `+S` in NBd. Consequently the two-unit loaded-interface theorem becomes unconditional inside the full-core near-circle phase:
 
-$$
+```math
 \boxed{
 Q_B:=Q-Q_{\rm all-int}\ge(2-o(1))D.
 }
 \tag{GP.2}
-$$
+```
 
 Thus nesting extra harmonic components inside the two semicircle groups cannot evade the loaded-interface defect obligation.
 
@@ -69,30 +69,30 @@ Let `I_r` be the unloaded harmonic components after deleting the loaded terminal
 
 Put
 
-$$
+```math
 S:=\sum_r\delta_r,
 \qquad
 R_I:=\sum_rr_r,
 \qquad
 Q_{\rm all-int}:=\sum_rQ_r.
-$$
+```
 
 As in LI, every bounded full-contact face with no loaded terminal is an internal face of exactly one `C[I_r]`, so
 
-$$
+```math
 Q_B:=Q-Q_{\rm all-int}
-$$
+```
 
 is exactly the bounded-face defect carried by faces incident to at least one loaded terminal.
 
 Throughout this report assume the full-core near-circle endpoint
 
-$$
+```math
 x_B=o(D),
 \qquad
 (n-v)/D^2\to0.
 \tag{1.1}
-$$
+```
 
 HG then supplies two dominant maximal-cap groups `G_1,G_2`, each asymptotically occupying one of two complementary radius-`D/2` semicircles and each carrying half the quadratic unloaded population.
 
@@ -102,43 +102,43 @@ HG then supplies two dominant maximal-cap groups `G_1,G_2`, each asymptotically 
 
 Every loaded attachment `b in A_r` has a unit contact to at least one vertex of `I_r`. Hence
 
-$$
+```math
 A_r\subset K_r+B(0,1).
-$$
+```
 
 The right side is convex, so
 
-$$
+```math
 P_r=\operatorname{conv}(A_r)
 \subset K_r+B(0,1).
 \tag{2.1}
-$$
+```
 
 Planar convex perimeter is monotone under inclusion. Steiner's parallel-body formula therefore gives
 
-$$
+```math
 \operatorname{per}(P_r)
 \le
 \operatorname{per}(K_r+B(0,1))
 =
 \operatorname{per}(K_r)+2\pi.
 \tag{2.2}
-$$
+```
 
 The outer-face walk of the connected plane graph `C[I_r]` is a closed polygonal walk of length `k_r` whose convex hull is `K_r`. The perimeter of the convex hull of any closed rectifiable walk is at most the walk length. Thus
 
-$$
+```math
 \operatorname{per}(K_r)\le k_r.
 \tag{2.3}
-$$
+```
 
 Combining (2.2)--(2.3),
 
-$$
+```math
 \boxed{
 k_r\ge\operatorname{per}(P_r)-2\pi.}
 \tag{GP.3}
-$$
+```
 
 HBd proves `c_I=o(D)`, so summing the additive `2pi` error over all harmonic components costs only `o(D)`.
 
@@ -148,64 +148,64 @@ HBd proves `c_I=o(D)`, so summing the additive `2pi` error over all harmonic com
 
 Normalize by `D` and use the common translations/rotations from HG. For `i=1,2`, let
 
-$$
+```math
 E_{i,D}:=D^{-1}\bigcup_{r\in G_i}P_r.
-$$
+```
 
 The attachment-cell interiors are pairwise disjoint. HG proves that the cells in `G_i` lie asymptotically inside a fixed diameter-one semicircle `H_i`, and that
 
-$$
+```math
 \operatorname{area}(E_{i,D})\to\operatorname{area}(H_i)=\frac\pi8.
 \tag{3.1}
-$$
+```
 
 The containing cap itself converges to `H_i`. Therefore
 
-$$
+```math
 \mathbf 1_{E_{i,D}}\to\mathbf 1_{H_i}
 \quad\text{in }L^1.
 \tag{3.2}
-$$
+```
 
 For completeness, the only perimeter fact needed here is the standard lower semicontinuity under `L^1` convergence:
 
-$$
+```math
 \operatorname{per}(H_i)
 \le
 \liminf_D\operatorname{per}(E_{i,D}).
 \tag{3.3}
-$$
+```
 
 It follows immediately from the variational characterization
 
-$$
+```math
 \operatorname{per}(E)
 =
 \sup_{\substack{\varphi\in C_c^1(\mathbb R^2;\mathbb R^2)\\
 \|\varphi\|_\infty\le1}}
 \int_E\operatorname{div}\varphi,
-$$
+```
 
 because each fixed test-field integral is continuous under `L^1` convergence.
 
 Perimeter is subadditive for finite unions of finite-perimeter sets, and each `P_r` is a convex polygon. Hence
 
-$$
+```math
 \operatorname{per}(E_{i,D})
 \le
 \frac1D\sum_{r\in G_i}\operatorname{per}(P_r).
 \tag{3.4}
-$$
+```
 
 The diameter-one semicircle has perimeter
 
-$$
+```math
 \operatorname{per}(H_i)=1+\frac\pi2.
-$$
+```
 
 Equations (3.3)--(3.4) give
 
-$$
+```math
 \boxed{
 \sum_{r\in G_i}\operatorname{per}(P_r)
 \ge
@@ -213,26 +213,26 @@ $$
 \qquad i=1,2.
 }
 \tag{GP.4}
-$$
+```
 
 All remaining groups have nonnegative perimeter, so summing the two dominant groups yields
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{per}(P_r)
 \ge(\pi+2-o(1))D.
 }
 \tag{GP.5}
-$$
+```
 
 Insert GP.3 and `c_I=o(D)`:
 
-$$
+```math
 \boxed{
 \sum_r k_r\ge(\pi+2-o(1))D.
 }
 \tag{GP.6}
-$$
+```
 
 This is the group-level replacement for SI's two-individual-carrier semicircle-perimeter bound.
 
@@ -242,31 +242,31 @@ This is the group-level replacement for SI's two-individual-carrier semicircle-p
 
 For every unloaded component, LI's local Euler identity is exact:
 
-$$
+```math
 r_r=\frac{k_r+Q_r}{2}-\delta_r.
 \tag{4.1}
-$$
+```
 
 Sum over all components:
 
-$$
+```math
 R_I
 =\frac12\sum_rk_r
 +\frac12Q_{\rm all-int}
 -S.
 \tag{4.2}
-$$
+```
 
 Apply GP.6:
 
-$$
+```math
 \boxed{
 R_I\ge
 \left(\frac{\pi+2}{2}-o(1)\right)D
 +\frac12Q_{\rm all-int}
 -S.
 }
-$$
+```
 
 This proves GP.1.
 
@@ -278,53 +278,53 @@ The point is the sign of `S`: unlike the cap-minimal SI/LI argument, no upper or
 
 NBd gives
 
-$$
+```math
 S+R_I+s_B+2E_{BB}+3c_I+s_C=q+2x_B.
 \tag{5.1}
-$$
+```
 
 In the near-circle branch, NC and HBd give
 
-$$
+```math
 E_{BB}=o(D),
 \qquad
 c_I=o(D),
 \tag{5.2}
-$$
+```
 
 while DC gives
 
-$$
+```math
 q=(\pi+o(1))D,
 \qquad
 x_B=o(D).
 \tag{5.3}
-$$
+```
 
 Insert GP.1 into (5.1). The `S` terms cancel exactly:
 
-$$
+```math
 \left(\frac\pi2+1-o(1)\right)D
 +\frac12Q_{\rm all-int}
 +s_B+s_C
 \le
 (\pi+o(1))D.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 s_B+s_C+\frac12Q_{\rm all-int}
 \le
 \left(\frac\pi2-1+o(1)\right)D.
 }
 \tag{GP.7}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{
 s_C
 \le
@@ -332,7 +332,7 @@ s_C
 -\frac12Q_{\rm all-int}.
 }
 \tag{GP.8}
-$$
+```
 
 ---
 
@@ -340,21 +340,21 @@ $$
 
 HBd combines NC with ZU to give
 
-$$
+```math
 d_H+s_Z=s_C+o(D).
 \tag{6.1}
-$$
+```
 
 ZT gives the exact terminal partition
 
-$$
+```math
 q=x_B+Q+2(d_H+s_Z).
 \tag{6.2}
-$$
+```
 
 Thus, using (5.3), (6.1), and GP.8,
 
-$$
+```math
 \begin{aligned}
 Q
 &=q-x_B-2(d_H+s_Z)\\
@@ -367,15 +367,15 @@ Q
 \right]\\
 &=Q_{\rm all-int}+(2-o(1))D.
 \end{aligned}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 Q_B=Q-Q_{\rm all-int}\ge(2-o(1))D.
 }
-$$
+```
 
 This proves GP.2.
 
@@ -385,9 +385,9 @@ This proves GP.2.
 
 The old LI theorem needed
 
-$$
+```math
 S/D\to2
-$$
+```
 
 in order to identify two individual half-density semicircle carriers and derive their outer-walk cost.
 
@@ -426,9 +426,9 @@ So the sharp loaded-interface obstruction is now present in **every** full-core 
 
 The full-core near-circle endpoint is now uniformly reduced to
 
-$$
+```math
 Q_B\ge(2-o(1))D,
-$$
+```
 
 with no cap-cost split.
 

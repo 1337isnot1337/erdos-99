@@ -24,21 +24,21 @@ This does not yet give a quantitative lower bound on their KKT weight. The regul
 
 For the contact/diameter-lexicographically minimal hypothetical C-II source, the audited report-level ZF/ZS chain gives
 
-$$
+```math
  h\ge\delta\ge\lceil D\rceil,
-$$
+```
 
 where `h=|H|` is the number of actual diameter pairs.
 
 The unpromoted full-source report proves, for the same source and in fact for every global minimizer, that with
 
-$$
+```math
 \eta_D=3^{1/4}\sqrt D,
-$$
+```
 
 any two actual diameter edges sharing an endpoint make angle less than
 
-$$
+```math
 \vartheta_D
 :=
 \min\left\{
@@ -46,13 +46,13 @@ $$
 2\arccos\frac{D}{D+2\eta_D}
 \right\}
 =O(D^{-1/4}).
-$$
+```
 
 It also proves that, about a common circumcenter `o` of the full source hull, every actual diameter-pair midpoint lies within
 
-$$
+```math
 L_D:=\sqrt{D\eta_D+\eta_D^2}=O(D^{3/4})
-$$
+```
 
 of `o`.
 
@@ -82,21 +82,21 @@ The response-radialization part of the full-source report is not needed for the 
 
 Assume a sufficiently large triangle-free global minimizer has been chosen first to minimize unit contacts and then to minimize diameter pairs, and assume the audited ZR/ZF/ZS conclusions. Let `H` be its full actual diameter graph and put
 
-$$
+```math
 a_D:=2\arcsin\frac1{2D},
 \qquad
 \Delta_D:=
 \left\lceil\frac{\vartheta_D}{a_D}\right\rceil.
-$$
+```
 
 Then:
 
-$$
+```math
 \boxed{\Delta(H)\le\Delta_D,}
 \tag{FSD.1}
-$$
+```
 
-$$
+```math
 \boxed{
 \tau(H)\ge
 \left\lceil\frac{h}{\Delta_D}\right\rceil
@@ -104,11 +104,11 @@ $$
 \left\lceil\frac{\lceil D\rceil}{\Delta_D}\right\rceil,
 }
 \tag{FSD.2}
-$$
+```
 
 where `tau(H)` is the minimum vertex-cover number, and
 
-$$
+```math
 \boxed{
 \nu(H)\ge
 \left\lceil\frac{h}{2\Delta_D}\right\rceil
@@ -116,45 +116,45 @@ $$
 \left\lceil\frac{\lceil D\rceil}{2\Delta_D}\right\rceil,
 }
 \tag{FSD.3}
-$$
+```
 
 where `nu(H)` is the maximum matching number.
 
 Moreover the matching in FSD.3 consists of pairwise properly crossing straight diameter chords, and every one of those chords meets the common disk
 
-$$
+```math
 \boxed{B(o,L_D).}
 \tag{FSD.4}
-$$
+```
 
 Asymptotically,
 
-$$
+```math
 \boxed{
 \Delta_D=(4\,3^{1/8}+o(1))D^{3/4},
 }
 \tag{FSD.5}
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \tau(H)\ge
 \left(\frac1{4\,3^{1/8}}+o(1)\right)D^{1/4},
 }
 \tag{FSD.6}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \nu(H)\ge
 \left(\frac1{8\,3^{1/8}}+o(1)\right)D^{1/4}.
 }
 \tag{FSD.7}
-$$
+```
 
 Thus every bounded-hub or `O(1)`-vertex-cover model of the actual post-ZF diameter support is impossible.
 
@@ -168,95 +168,95 @@ FSD is a support theorem only. It does not give a lower bound on the total `beta
 
 Fix an actual diameter vertex `b`, with distinct diameter partners
 
-$$
+```math
 k_1,\ldots,k_d,
 \qquad d=\deg_H(b).
-$$
+```
 
 All partners lie on the radius-`D` circle centered at `b`. Unit separation gives
 
-$$
+```math
 |k_i-k_j|\ge1
 \qquad(i\ne j).
-$$
+```
 
 If `phi_ij` is the smaller angle between the rays `bk_i` and `bk_j`, then
 
-$$
+```math
 |k_i-k_j|=2D\sin(\phi_{ij}/2),
-$$
+```
 
 hence
 
-$$
+```math
 \phi_{ij}\ge a_D.
 \tag{FSD.8}
-$$
+```
 
 The full-source shared-endpoint theorem gives
 
-$$
+```math
 \phi_{ij}<\vartheta_D
 \qquad(i\ne j).
 \tag{FSD.9}
-$$
+```
 
 Because `vartheta_D<=pi/3<pi`, the partner directions lie in one ordinary angular interval of width strictly less than `vartheta_D`. Ordering them in that interval and applying FSD.8 to consecutive directions gives
 
-$$
+```math
 (d-1)a_D<\vartheta_D.
-$$
+```
 
 Therefore
 
-$$
+```math
 d\le\left\lceil\frac{\vartheta_D}{a_D}\right\rceil=\Delta_D,
-$$
+```
 
 proving FSD.1.
 
 If `S` is any vertex cover of `H`, every one of the `h` edges is incident to a vertex of `S`. Thus
 
-$$
+```math
 h\le\sum_{v\in S}\deg_H(v)\le |S|\Delta_D,
-$$
+```
 
 which proves FSD.2.
 
 Let `M` be a maximum matching. It is maximal, so the set of its `2|M|` endpoints is a vertex cover: otherwise an edge with neither endpoint covered could be added to `M`. Hence
 
-$$
+```math
 \tau(H)\le2\nu(H).
-$$
+```
 
 Together with FSD.2 this proves FSD.3.
 
 The planar diameter graph is a straight-line thrackle: two diameter edges either share an endpoint or cross. Distinct edges in a matching share no endpoint, so they cross properly pairwise. The full-source midpoint theorem gives
 
-$$
+```math
 \left|\frac{b+k}{2}-o\right|\le L_D
-$$
+```
 
 for every actual diameter edge `bk`; its midpoint lies on the chord itself, proving FSD.4.
 
 Finally
 
-$$
+```math
 \eta_D=3^{1/4}D^{1/2},
-$$
+```
 
 so
 
-$$
+```math
 2\arccos\frac{D}{D+2\eta_D}
 =(4\,3^{1/8}+o(1))D^{-1/4},
-$$
+```
 
 while
 
-$$
+```math
 a_D=(1+o(1))D^{-1}.
-$$
+```
 
 For large `D` the arccosine term is below `pi/3`; division proves FSD.5. Insert `h>=ceil(D)` into FSD.2-FSD.3 to obtain FSD.6-FSD.7. `square`
 
@@ -278,17 +278,17 @@ FSD removes all bounded-hub support models from the post-ZF source. Any closing 
 
 A response-theoretic closure would follow from either of these stronger quantitative transports:
 
-$$
+```math
 \boxed{
 \text{FSD matching}\Longrightarrow
 \sum_{h\in M}\beta_h\ge c>0,
 }
 \tag{FSD-W}
-$$
+```
 
 for some matching `M` of the guaranteed type, or
 
-$$
+```math
 \boxed{
 \text{FSD matching + circular-planar response}
 \Longrightarrow
@@ -296,7 +296,7 @@ $$
 \text{ or a strict sub-}D\text{ competitor.}
 }
 \tag{FSD-C}
-$$
+```
 
 Neither implication is proved here. Relative-interior positivity alone gives no uniform weight floor.
 
@@ -304,26 +304,26 @@ Neither implication is proved here. Relative-interior positivity alone gives no 
 
 The whole-source scalar endpoint is
 
-$$
+```math
 \delta_K+\mathscr O_A\ge c_0P.
-$$
+```
 
 Since
 
-$$
+```math
 \delta_K=\frac{\pi D^2}{4}-\operatorname{area}K,
 \qquad
 \mathscr O_A=\operatorname{area}K+c_0P-a_0(n-1),
-$$
+```
 
 this is exactly equivalent to
 
-$$
+```math
 \boxed{
 D^2\ge\frac{2\sqrt3}{\pi}(n-1).
 }
 \tag{FSD.10}
-$$
+```
 
 The unconditional translated-lattice comparison gives the strict reverse inequality for every global minimizer. Therefore proving FSD.10 from the triangle-free post-ZF/full-source structure would close Level I immediately.
 

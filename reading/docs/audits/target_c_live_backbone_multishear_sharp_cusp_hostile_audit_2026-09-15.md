@@ -35,17 +35,17 @@ contact-minimal / diameter-pair-minimal representative for which the relative-in
 KKT stress sees every actual active contact and diameter row.  This is the same
 representative used by the current C-II finite-shear and mixed-rigidity stack.  Thus
 
-$$
+```math
 \beta_h>0
-$$
+```
 
 for every actual diameter row appearing in the live-backbone derivative matrix `M`.
 
 The live-backbone theorem proves
 
-$$
+```math
 \operatorname{rank}M=m
-$$
+```
 
 on those actual rows, not merely on an auxiliary selected subset.
 
@@ -57,27 +57,27 @@ on those actual rows, not merely on an auxiliary selected subset.
 
 For backbone cut `i`, the audited Section-157 resultant is
 
-$$
+```math
 A_i u_i=\sum_h\beta_h\varepsilon_{hi}r_h.
-$$
+```
 
 Dotting with `Ju_i` gives
 
-$$
+```math
 \sum_h\beta_h\varepsilon_{hi}(r_h\cdot Ju_i)=0.
-$$
+```
 
 The bracketed coefficient is exactly the live-backbone matrix entry
 
-$$
+```math
 M_{hi}=\varepsilon_{hi}(r_h\cdot Ju_i).
-$$
+```
 
 Therefore
 
-$$
+```math
 \beta^T M=0.
-$$
+```
 
 No factor of two from squared-distance differentiation matters to the kernel or sign.
 
@@ -90,18 +90,18 @@ No factor of two from squared-distance differentiation matters to the kernel or 
 Take `c!=0`.  Full column rank gives `Mc!=0`.  If every component of `Mc` were
 nonpositive, then
 
-$$
+```math
 0=\beta^TMc
-$$
+```
 
 with every `beta_h>0` would force every component of `Mc` to vanish, contradiction.
 The same argument for `-c` excludes every component being nonnegative.  Hence
 
-$$
+```math
 \max_h(Mc)_h>0,
 \qquad
 \min_h(Mc)_h<0.
-$$
+```
 
 This is stronger than coordinatewise two-sided bracing: it applies to every linear
 combination of the selected train shears.
@@ -114,16 +114,16 @@ combination of the selected train shears.
 
 The function
 
-$$
+```math
 g(c)=\max_h(Mc)_h
-$$
+```
 
 is continuous and strictly positive on the Euclidean unit sphere in the finite
 `m`-dimensional shear space.  Therefore
 
-$$
+```math
 \gamma_0=\min_{\|c\|=1}g(c)>0.
-$$
+```
 
 The theorem does **not** claim a lower bound on `gamma_0` uniform in `D`.  Such a bound
 would require singular-value information not supplied by the rank theorem.  The finite
@@ -137,40 +137,40 @@ source-specific positivity is sufficient for a local no-go statement.
 
 For one row,
 
-$$
+```math
 r_h(\theta)=r_h+
 \sum_i\varepsilon_{hi}(R_{\theta_i}u_i-u_i).
-$$
+```
 
 Every planar rotation has expansion
 
-$$
+```math
 R_su-u=sJu+O(s^2)
-$$
+```
 
 with an absolute local remainder bound.  The selected family and actual diameter-row
 set are finite, so after summing at most `m` selected terms there is one finite constant
 `C` and one neighborhood of the origin such that simultaneously for every actual
 active diameter row
 
-$$
+```math
 |r_h(\theta)|^2-D^2
 \ge2(M\theta)_h-C\|\theta\|^2.
-$$
+```
 
 No asymptotic-in-`D` uniformity is used.
 
 Choose a row with `(M theta)_h>=gamma_0||theta||`.  For
 
-$$
+```math
 0<\|\theta\|<\gamma_0/C
-$$
+```
 
 one gets
 
-$$
+```math
 |r_h(\theta)|^2>D^2.
-$$
+```
 
 Therefore the full source diameter is strictly larger than `D`.
 
@@ -197,17 +197,17 @@ on inactive near-contact clearance in the sign proof.
 
 Suppose a parameter path has first nonzero jet
 
-$$
+```math
 \theta(t)=t^k c+o(t^k),
 \qquad c\ne0.
-$$
+```
 
 The same finite expansion gives
 
-$$
+```math
 \max_h(|r_h(\theta(t))|^2-D^2)
 \ge2\gamma_0|t|^k\|c\|+o(|t|^k)>0.
-$$
+```
 
 Thus replacing a linear shear by `t^2c`, or any finite-order flat
 reparametrization, cannot make the KKT-weighted second-curvature form load-bearing.

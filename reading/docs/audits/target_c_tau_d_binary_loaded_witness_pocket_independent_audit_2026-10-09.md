@@ -18,21 +18,21 @@ Date: 2026-10-09. Audit base: `origin/main=0539c5fee6e0e6bfee653efcbcb10c2219ff2
 
 Use the canonical narrow-window independent-binary O--O owner model: selected cut directions lie in one projective interval of width strictly less than `pi/3`, independent owner choices preserve every old contact, and an old contact cannot join two distinct nonzero moving owners. Let `D>=4`, let `B` be the actual loaded set, and define
 
-$$
+```math
  \tau_D=\frac{3D}{\sqrt{3D^2+4}+1}.
-$$
+```
 
 Count distinct physical pairs `ab` of actual loaded endpoints whose endpoints have distinct nonzero owner labels and whose lengths satisfy
 
-$$
+```math
  1<|a-b|<\tau_D.
-$$
+```
 
 Each such pair is counted once, whether or not it generates a lower clause. If `u_B=x_B-m_B=\sum_I(\ell_I-2)` is the canonical loaded-hull outer-interval budget over nonunit intervals, then
 
-$$
+```math
  N_{\rm owner}\le u_B.
-$$
+```
 
 Since `tau_D>sqrt(2)` for `D>=4` and `tau_D` tends to `sqrt(3)`, this strictly extends the promoted `13/12` band and covers more than the source report's lower-witness range. The exact `tau_D` threshold is retained; no uniform `sqrt(3)` endpoint is claimed for finite `D`.
 
@@ -40,9 +40,9 @@ Since `tau_D>sqrt(2)` for `D>=4` and `tau_D` tends to `sqrt(3)`, this strictly e
 
 First, the canonical loaded-near-unit theorem gives, for any nonconsecutive loaded endpoints with distance less than `D`,
 
-$$
+```math
  |a-b|\ge\tau_D.
-$$
+```
 
 Thus every counted pair with `|a-b|<tau_D` is a side of the actual loaded hull. Here `|a-b|<tau_D<D` for `D>=4`. Direct comparison gives `tau_D<sqrt(3)` for every finite `D`; direct squaring of positive sides shows `tau_D>sqrt(2)` exactly when `D>2+sqrt(2)`, so it holds for `D>=4`.
 
@@ -50,9 +50,9 @@ Charge each distinct physical pair to its unique nonunit outer interval between 
 
 Write `d=|a-b|`. In the charged range, `1<d<tau_D<sqrt(3)`, so the angle between the two unit contact rays at `z` is
 
-$$
+```math
  \theta=2\arcsin(d/2)\in(\pi/3,2\pi/3).
-$$
+```
 
 Their projective distance is `min(theta,pi-theta)>pi/3`. They therefore cannot both lie in a projective interval of width strictly less than `pi/3`, contradicting the selected-window hypothesis. So no counted pair uses a length-two interval.
 

@@ -23,9 +23,9 @@ generic transfer or `s_Z>0`.
 
 The conclusion is
 
-$$
+```math
 \boxed{\text{C56-Z + matching + triangle-free source}\quad\Longrightarrow\quad |H|\le3.}
-$$
+```
 
 For the fully force-visible C-II representative, the loaded degree cap improves
 this to `|H|<=2`.
@@ -39,18 +39,18 @@ linear diameter scale.
 Let `H` be the positive diameter graph of a two-dimensional C56-Z stress.  Write
 its matching edges as
 
-$$
+```math
 e_i=t_i u_i,\qquad 0\le i<h.
-$$
+```
 
 Because the diameter drawing is a convex geometric thrackle, pairwise-disjoint
 edges cross.  After choosing a cyclic cut and reversing individual orientations
 if necessary, the boundary order is
 
-$$
+```math
 t_0,t_1,\ldots,t_{h-1},u_0,u_1,\ldots,u_{h-1},
 \tag{M.1}
-$$
+```
 
 and the directed diameter chords are in the same strict projective order as
 the indices `0,...,h-1`.  The latter order is invariant under a strict convex
@@ -59,37 +59,37 @@ checked on the regular `2h`-gon.
 
 Put `Q=(e_{t_i}-e_{u_i})_i`, `R=\Lambda^+`, and
 
-$$
+```math
 K=Q^{\mathsf T}RQ.
-$$
+```
 
 C56-Z gives
 
-$$
+```math
 K=B_H^{-1},
 \qquad K_{ij}=0\quad(i\ne j).
 \tag{M.2}
-$$
+```
 
 The C50 circular-planar resistance theorem gives a nonnegative interval-split
 representation of the effective-resistance metric.  For an interval `A` on
 the terminal circle write
 
-$$
+```math
 z_i(A)=\mathbf 1_A(t_i)-\mathbf 1_A(u_i).
 \tag{M.3}
-$$
+```
 
 Modulo a sum matrix (which contributes only an additive terminal metric), its
 contribution to `K` is `z(A)z(A)^{\mathsf T}`.  C56.7 says that every positive
 split occurring in the zero-transfer representation has
 
-$$
+```math
 \operatorname{supp}z(A)\subseteq\{i\}
 \quad\text{or}\quad
 \operatorname{supp}z(A)\subseteq\{i,i+1\}.
 \tag{M.4}
-$$
+```
 
 The indices in the second alternative are ordinary adjacent indices in the
 linear projective order, not the two ends of the order.
@@ -100,17 +100,17 @@ linear projective order, not the two ends of the order.
 
 Assume (M.1).  If a proper cyclic interval `A` satisfies
 
-$$
+```math
 \operatorname{supp}z(A)\subseteq\{i,i+1\}
-$$
+```
 
 for an ordinary adjacent pair `0\le i<h-1`, and both coordinates are nonzero,
 then
 
-$$
+```math
 z_i(A)=z_{i+1}(A).
 \tag{M.5}
-$$
+```
 
 If the support has one coordinate, `A` or its complement is a singleton
 terminal interval.
@@ -127,10 +127,10 @@ For the support to be contained in `{i,i+1}`, every pair with index outside
 word (M.1), the only way to separate precisely the two consecutive pairs is to
 take, up to complement, one of the four two-letter intervals
 
-$$
+```math
 \{t_i,t_{i+1}\},\quad
 \{u_i,u_{i+1}\},
-$$
+```
 
 with the same conclusion after a cyclic relabeling at the ends of a block.
 For the first interval both coordinates are `-1`; for the second both are
@@ -141,7 +141,7 @@ other pairs are wholly on one side.  A proper cyclic interval with that
 property can contain only one of `t_i,u_i`, and no other terminal; otherwise
 the first and last included letters would separate another matching pair.
 Hence `A` or its complement is the singleton containing `t_i` or `u_i`.
-$\square$
+$`\square`$
 
 The statement can also be checked directly by writing the four indicator
 sequences in the two blocks of (M.1); no metric or generic-position assumption
@@ -152,20 +152,20 @@ is used.
 Let the nonnegative coefficient of an interval split `A` be `\lambda_A`.
 For an ordinary adjacent pair `i,i+1`, Lemma M.1 gives
 
-$$
+```math
 z_i(A)z_{i+1}(A)=1
-$$
+```
 
 whenever the split has both coordinates in its support.  Every other split
 has zero product on that pair.  Therefore the split representation gives
 
-$$
+```math
 K_{i,i+1}
  =\sum_A\lambda_A z_i(A)z_{i+1}(A)
  =\sum_{A:\,\operatorname{supp}z(A)\supseteq\{i,i+1\}}\lambda_A
  \ge0.
 \tag{M.6}
-$$
+```
 
 But C56-Z gives `K_{i,i+1}=0`.  Hence every coefficient in (M.6) vanishes:
 no positive split has two-coordinate support.  Combining this with Lemma M.1,
@@ -175,12 +175,12 @@ The possible sum-matrix term is itself additive and can be absorbed into the
 same terminal weights.  Consequently the full effective-resistance metric on
 the `2h` diameter terminals has the additive form
 
-$$
+```math
 \boxed{
 W_{xy}=r_x+r_y\qquad(x\ne y),
 }
 \tag{M.7}
-$$
+```
 
 with nonnegative `r_x`.  Indeed, a singleton cut at `x` contributes `1` exactly
 to pairs having exactly one endpoint `x`, and the sum of such cut metrics is
@@ -198,23 +198,23 @@ For `2h\ge4`, it supplies a source vertex `z` such that every component of
 the positive contact graph with `z` deleted contains at most one of the `2h`
 diameter terminals.  Therefore
 
-$$
+```math
 \deg_C(z)\ge 2h-1
 \quad\text{if }z\text{ is a terminal},
 \qquad
 \deg_C(z)\ge 2h
 \quad\text{otherwise}.
 \tag{M.8}
-$$
+```
 
 The source is triangle-free.  Six unit neighbors of any source point would
 have six angular gaps at least `\pi/3`, hence all gaps exactly `\pi/3`; two
 consecutive neighbors would then form a unit equilateral triangle with the
 center.  Thus every source contact degree is at most five.  From (M.8),
 
-$$
+```math
 2h-1\le5,
-$$
+```
 
 so `h\le3`.
 
@@ -223,10 +223,10 @@ also has `\deg_C(b)<=3` at a loaded terminal and `\deg_C(v)<=5` at a nonterminal
 If `h>=3`, then `2h>=6`; (M.8) requires degree at least six at a nonterminal
 or at least five at a terminal.  Both violate these C-II caps.  Therefore
 
-$$
+```math
 \boxed{\text{fully force-visible C-II + C56-Z + matching}\quad\Longrightarrow\quad |H|\le2.}
 \tag{M.9}
-$$
+```
 
 This proves the strengthened C-II theorem.
 
@@ -239,44 +239,44 @@ degree cap `3`; a nonterminal separator would need degree at least `q=6`,
 contradicting the triangle-free source degree cap `5`.  Therefore every
 zero-transfer C-II star has
 
-$$
+```math
 \boxed{k\le4.}
 \tag{M.10}
-$$
+```
 
 For a zero-transfer forest, Woodall's forest branch has exactly `d_H` star
 components.  Hence
 
-$$
+```math
 h\le4d_H,
 \qquad
 d_H\ge h/4.
 \tag{M.11}
-$$
+```
 
 The post-ZF edge/diameter comparison `h\ge\lceil D\rceil` then gives
 
-$$
+```math
 \boxed{d_H\ge D/4+O(1).}
 \tag{M.12}
-$$
+```
 
 In the audited zero-transfer forest circuit subbranch, where
 
-$$
+```math
 \nu_D=\frac{e_{BB}+2s_C-3d_H}{D}
 \ge0.597+\varepsilon_{597},
-$$
+```
 
 this improves the retained surplus currency to
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge0.597+\varepsilon_{597}+\frac34-o(1).
 }
 \tag{M.13}
-$$
+```
 
 This is still not a contradiction: no opposing upper bound on
 `(e_{BB}+2s_C)/D` is available in the forest branch.  The improvement is a

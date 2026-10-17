@@ -52,9 +52,9 @@ e=(2,0),  f=(3,1)
 be oriented from the complementary interval `{0,1}` to `{2,3}`. If `Lambda` is the
 Dirichlet response and `K_ef=q_e^T Lambda^+ q_f`, then
 
-$$
+```math
 \boxed{K_{ef}=\frac{bd-ac}{a+b+c+d}.}
-$$
+```
 
 Consequently the same common-block topology permits `K_ef<0`, `K_ef=0`, or
 `K_ef>0`, by changing only the positive edge weights. For example,
@@ -80,30 +80,30 @@ splits between the two paths from `3` to `1`. The path through `0` has resistanc
 `a+d`; the path through `2` has resistance `b+c`. Thus the currents on those paths
 are
 
-$$
+```math
 I_0=\frac{b+c}{a+b+c+d},
 \qquad
 I_2=\frac{a+d}{a+b+c+d}.
-$$
+```
 
 Set the potential at vertex `1` to zero. Ohm's law gives
 
-$$
+```math
 V_0=aI_0,
 \qquad
 V_2=bI_2.
-$$
+```
 
 The transfer entry for `e=(2,0)` is the voltage difference seen by that incidence
 vector:
 
-$$
+```math
 \begin{aligned}
 K_{ef}=V_2-V_0
 &=\frac{b(a+d)-a(b+c)}{a+b+c+d}\\
 &=\frac{bd-ac}{a+b+c+d}.
 \end{aligned}
-$$
+```
 
 The denominator is positive. The three sign cases follow immediately.
 
@@ -119,9 +119,9 @@ I_* is one bridge block.
 The new regression shows that this conclusion alone cannot be fed back into CB.1.
 In particular, the C53 conclusion
 
-$$
+```math
 \min_{e\ne f}K_{ef}\le0
-$$
+```
 
 is compatible with a common 2-edge-connected hub. There is no contradiction until a
 new theorem uses unit-contact geometry, KKT affine equilibrium, circuit sparsity, or the

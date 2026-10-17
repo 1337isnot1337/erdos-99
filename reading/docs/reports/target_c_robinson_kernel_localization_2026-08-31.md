@@ -37,137 +37,137 @@ The remaining C-I problem is now a concrete electrical-hinge exclusion.
 
 Fix a normalized two-dimensional KKT stress and use the C53 projective edge order
 
-$$
+```math
 e_0<e_1<\cdots<e_{m-1}.
-$$
+```
 
 Choose Euclidean axes so every oriented diameter vector has positive first coordinate,
 
-$$
+```math
 u_i=a_i(1,t_i),
 \qquad
 a_i>0,
 \qquad
 t_0<t_1<\cdots<t_{m-1}.
 \tag{C55.1}
-$$
+```
 
 Let
 
-$$
+```math
 \gamma_i=a_i\beta_i,
 \qquad
 \Gamma=\operatorname{diag}(\gamma_i),
-$$
+```
 
 and let `M` be the C53 scaled edge defect. Then
 
-$$
+```math
 M\succeq0,
 \qquad
 M\mathbf1=0,
 \qquad
 Mt=0,
 \tag{C55.2}
-$$
+```
 
 and for `i!=j`,
 
-$$
+```math
 M_{ij}=-\gamma_i\gamma_jK_{ij},
 \tag{C55.3}
-$$
+```
 
 where `K` is Robinson:
 
-$$
+```math
 K_{ik}\le\min(K_{ij},K_{jk})
 \qquad(i<j<k).
 \tag{C55.4}
-$$
+```
 
 ## 2. Difference-space transform
 
 Let `D` be the `(m-1) x m` first-difference matrix,
 
-$$
+```math
 (Dx)_i=x_{i+1}-x_i,
-$$
+```
 
 and let `T` be the cumulative right inverse
 
-$$
+```math
 (Ty)_0=0,
 \qquad
 (Ty)_r=\sum_{h<r}y_h.
-$$
+```
 
 Thus
 
-$$
+```math
 DT=I,
 \qquad
 TDx=x-x_0\mathbf1.
 \tag{C55.5}
-$$
+```
 
 Define
 
-$$
+```math
 C=D\Gamma^{-1}D^{\mathsf T},
 \qquad
 G=T^{\mathsf T}MT,
 \qquad
 H=D\Gamma^{-1}MT.
 \tag{C55.6}
-$$
+```
 
 Because `M1=0`,
 
-$$
+```math
 M=D^{\mathsf T}GD,
 \qquad
 H=CG.
 \tag{C55.7}
-$$
+```
 
 Here `C` is positive definite and `G` is symmetric positive semidefinite. Hence `H`
 has real nonnegative spectrum, with
 
-$$
+```math
 \ker H=\ker G.
 \tag{C55.8}
-$$
+```
 
 Put
 
-$$
+```math
 y=Dt,
 \qquad y_i=t_{i+1}-t_i>0.
-$$
+```
 
 Then `Mt=0` gives
 
-$$
+```math
 Hy=0.
 \tag{C55.9}
-$$
+```
 
 The C52 weighted-Fiedler calculation applies verbatim. For `k<i`,
 
-$$
+```math
 H_{ik}
 =-\sum_{r\le k}\gamma_r(K_{ri}-K_{r,i+1})\le0,
 \tag{C55.10}
-$$
+```
 
 and for `k>i`,
 
-$$
+```math
 H_{ik}
 =\sum_{r>k}\gamma_r(K_{ir}-K_{i+1,r})\le0.
 \tag{C55.11}
-$$
+```
 
 Thus `H` is a singular `Z`-matrix with a strictly positive right nullvector.
 
@@ -176,27 +176,27 @@ Thus `H` is a singular `Z`-matrix with a strictly positive right nullvector.
 Since `C` is a tridiagonal positive-definite `M`-matrix, its inverse is entrywise
 strictly positive. Set
 
-$$
+```math
 \ell=C^{-1}y>0.
 \tag{C55.12}
-$$
+```
 
 Then
 
-$$
+```math
 H^{\mathsf T}\ell
 =GC\ell
 =Gy
 =0.
 \tag{C55.13}
-$$
+```
 
 Scale the columns by the positive right nullvector:
 
-$$
+```math
 \mathcal L=H\operatorname{diag}(y).
 \tag{C55.14}
-$$
+```
 
 Its off-diagonal entries are nonpositive and its row sums vanish. Therefore
 `-mathcal L` is the generator of a finite directed continuous-time Markov chain.
@@ -216,10 +216,10 @@ The Robinson formulas make each block contiguous. Indeed, if `i<k` and
 `H_ik<0`, then for every `i<j<k`, (C55.11) for column `j` contains every summand
 present for column `k` plus additional nonpositive summands, so
 
-$$
+```math
 H_{ij}<0.
 \tag{C55.15}
-$$
+```
 
 The analogous statement holds to the left using (C55.10). Thus an edge in the
 off-diagonal graph joins all intermediate indices into the same component. Every
@@ -227,12 +227,12 @@ irreducible component is an interval of consecutive gap indices.
 
 Write these blocks as
 
-$$
+```math
 I_1,\ldots,I_r,
 \qquad
 \{0,\ldots,m-2\}=I_1\sqcup\cdots\sqcup I_r,
 \tag{C55.16}
-$$
+```
 
 with each `I_a` a consecutive interval.
 
@@ -242,18 +242,18 @@ with each `I_a` a consecutive interval.
 
 For a scalar vector `x in R^m`,
 
-$$
+```math
 Mx=0
-$$
+```
 
 if and only if, on every gap block `I_a`, there is a scalar `c_a` such that
 
-$$
+```math
 \boxed{
 x_{i+1}-x_i=c_a(t_{i+1}-t_i)
 \quad(i\in I_a).}
 \tag{C55.17}
-$$
+```
 
 Equivalently, `x` is a continuous piecewise-affine function of the ordered sample
 points `t_i`, with possible slope changes only between Robinson blocks.
@@ -262,16 +262,16 @@ points `t_i`, with possible slope changes only between Robinson blocks.
 
 If `Mx=0`, then by (C55.5)
 
-$$
+```math
 H(Dx)=D\Gamma^{-1}Mx=0.
-$$
+```
 
 Conversely, if `H(Dx)=0`, then `D Gamma^{-1}Mx=0`, so
 `Gamma^{-1}Mx=c1` for some scalar `c`. Since `1^T Mx=0`,
 
-$$
+```math
 0=c\sum_i\gamma_i,
-$$
+```
 
 hence `c=0` and `Mx=0`.
 
@@ -279,10 +279,10 @@ On each irreducible block, the singular `M`-matrix `H[I_a,I_a]` has a
 one-dimensional right kernel by Perron-Frobenius. Its positive kernel vector is the
 restriction of `y=Dt`. Hence
 
-$$
+```math
 (Dx)_i=c_a y_i
 \quad(i\in I_a),
-$$
+```
 
 which is exactly (C55.17). `square`
 
@@ -290,30 +290,30 @@ which is exactly (C55.17). `square`
 
 Let a vector velocity field `v` lie in the full selected stress kernel,
 
-$$
+```math
 \Omega_sV_x=\Omega_sV_y=0,
 \tag{C55.18}
-$$
+```
 
 and suppose, as for every fixed-diameter critical velocity, that every positive
 diameter edge has zero radial first variation. Thus
 
-$$
+```math
 v_{a_i}-v_{b_i}
 =\omega_iJ u_i
 =\omega_i a_i(-t_i,1).
 \tag{C55.19}
-$$
+```
 
 Schur equality and the C53 edge reduction imply that the normalized diameter-edge
 differences of each scalar velocity coordinate lie in `ker M`. Explicitly,
 
-$$
+```math
 \omega=(\omega_i)_{i=0}^{m-1}\in\ker M,
 \qquad
 (t_i\omega_i)_{i=0}^{m-1}\in\ker M.
 \tag{C55.20}
-$$
+```
 
 (The first vector comes from the second Euclidean velocity coordinate and the second,
 up to a harmless sign, from the first.)
@@ -322,13 +322,13 @@ up to a harmless sign, from the first.)
 
 On every Robinson block `I_a` containing at least two consecutive gap indices,
 
-$$
+```math
 \boxed{
 \omega_i=\omega_{i+1}
 \quad\text{for every }i\in I_a.
 }
 \tag{C55.21}
-$$
+```
 
 Consequently, if the angular-rate vector is nonconstant, at least one irreducible
 component of `H` is a singleton gap `{i}`.
@@ -337,16 +337,16 @@ component of `H` is a singleton gap `{i}`.
 
 By C55.1, on a block `I_a` the samples `omega_i` are affine in `t_i`:
 
-$$
+```math
 \omega_i=c_at_i+d_a
-$$
+```
 
 through all vertices incident to the gaps in that block. The second vector in
 (C55.20) must also be affine in `t` on the same block. Its values are
 
-$$
+```math
 t_i\omega_i=c_at_i^2+d_at_i.
-$$
+```
 
 If the block contains two consecutive gaps, it contains at least three strictly
 ordered sample points. A quadratic polynomial agrees with an affine function at
@@ -360,35 +360,35 @@ rate is therefore supported entirely on singleton gap components.
 
 Suppose `{i}` is a singleton component. Then
 
-$$
+```math
 H_{ik}=0
 \qquad(k\ne i).
 \tag{C55.22}
-$$
+```
 
 Write the C50 Kalmanson decomposition in edge space as
 
-$$
+```math
 K=\sum_A\lambda_A z_Az_A^{\mathsf T}
 \quad\text{modulo the annihilated sum-matrix part},
 \qquad
 \lambda_A\ge0.
 \tag{C55.23}
-$$
+```
 
 For one split vector `z`, its contribution to (C55.10), for `k<i`, is
 
-$$
+```math
 -(z_i-z_{i+1})\sum_{r\le k}\gamma_rz_r,
 \tag{C55.24}
-$$
+```
 
 and its contribution to (C55.11), for `k>i`, is
 
-$$
+```math
 (z_i-z_{i+1})\sum_{r>k}\gamma_rz_r.
 \tag{C55.25}
-$$
+```
 
 The C53 interval-sign lemma makes every contribution in (C55.24)-(C55.25)
 nonpositive. Since their nonnegative split-weighted sum is zero at an isolated gap,
@@ -396,22 +396,22 @@ every positive split contributes zero separately.
 
 If `lambda_A>0` and `z_i!=z_{i+1}`, equations (C55.24) for all `k<i` give
 
-$$
+```math
 \sum_{r\le k}\gamma_rz_r=0
 \qquad(k<i).
-$$
+```
 
 Taking consecutive differences and using `gamma_r>0` yields
 
-$$
+```math
 z_r=0\qquad(r<i).
-$$
+```
 
 Likewise (C55.25) for all `k>i+1` gives
 
-$$
+```math
 z_r=0\qquad(r>i+1).
-$$
+```
 
 Hence:
 
@@ -420,12 +420,12 @@ Hence:
 If `{i}` is an isolated Robinson gap, then every positive Kalmanson interval split
 that distinguishes the adjacent diameter edges `e_i,e_{i+1}` satisfies
 
-$$
+```math
 \boxed{
 \operatorname{supp}z_A\subseteq\{i,i+1\}.
 }
 \tag{C55.26}
-$$
+```
 
 Thus the electrical response can distinguish the two angular sectors only through
 interval splits that see no other positive diameter edge.

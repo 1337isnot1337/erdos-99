@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_endpoint_anchored_weak_strips_2026-09-09.md) · source SHA-256 `4e72807750022fc0062c711bafc5f99e721fb66b5e850f273595eec6e651bc1b`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-FFFDFA8AC9D1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZEA: macroscopic weak strips are anchored at stopped-train endpoints
 
@@ -28,71 +30,72 @@ Thus the `Omega(D)` weak transverse strips in the near-zero branch are not arbit
 
 Use ZWG notation. Fix one stopped train with contact-edge direction `u`. Write train-edge midpoints as
 
-$$
+```math
 m_j=(x_j,y_j)
-$$
+```
 
 in the orthonormal basis `(u,Ju)`, after translating `z` to the origin and orienting the train so `y_j` increases.
 
 DT gives
 
-$$
+```math
  y_{j+1}-y_j>\frac{\sqrt3}{2},
 \qquad
 |x_{j+1}-x_j|<\frac12.
-$$
+```
 
 Hence for every `i<j`,
 
-$$
+```math
 \boxed{
 |x_j-x_i|
 <\frac1{\sqrt3}(y_j-y_i).
 }
 \tag{ZEA1}
+```
 
 Let
 
-\[
+```math
 c_*:=\cos15^\circ,
 \qquad
 s_*:=\sin15^\circ.
-$$
+```
 
 ZWG computes the exact strongly-radial locus for the unit contact centered at `(x,y)`:
 
-$$
+```math
 |x|>g(|y|),
 \qquad
  g(t)=\frac{c_*}{2}\sqrt{1+\frac{4t^2}{s_*^2}}.
 \tag{1.1}
-$$
+```
 
 The two signs are the disjoint cones
 
-$$
+```math
 \mathcal C_+: x>g(|y|),
 \qquad
 \mathcal C_-: x<-g(|y|).
-$$
+```
 
 Since
 
-$$
+```math
 g(t)
 \ge
 \frac{c_*}{s_*}t
 =
 \cot15^\circ\,t,
 \tag{1.2}
-$$
+```
 
 and
 
-$$
+```math
 \cot15^\circ>\frac1{\sqrt3},
 \tag{1.3}
-$$
+```
 
 the train slope is much smaller than either cone slope.
 
@@ -102,52 +105,52 @@ the train slope is much smaller than either cone slope.
 
 Suppose for contradiction that train edges `i<j` satisfy
 
-$$
+```math
 x_i>g(|y_i|)
-$$
+```
 
 and
 
-$$
+```math
 x_j<-g(|y_j|).
-$$
+```
 
 Then
 
-$$
+```math
 |x_j-x_i|
 >
  g(|y_i|)+g(|y_j|).
 \tag{2.1}
-$$
+```
 
 By (1.2),
 
-$$
+```math
 g(|y_i|)+g(|y_j|)
 \ge
 \cot15^\circ\,(|y_i|+|y_j|).
 \tag{2.2}
-$$
+```
 
 For arbitrary real `y_i<y_j`,
 
-$$
+```math
 |y_i|+|y_j|
 \ge
  y_j-y_i.
 \tag{2.3}
-$$
+```
 
 Therefore
 
-$$
+```math
 |x_j-x_i|
 >
 \cot15^\circ\,(y_j-y_i)
 >
 \frac1{\sqrt3}(y_j-y_i),
-$$
+```
 
 contradicting ZEA1.
 
@@ -157,11 +160,12 @@ Thus:
 
 ### Theorem ZEA.1 — one radial sign per train
 
-$$
+```math
 \boxed{
 \text{A stopped train meets at most one of }\mathcal C_+,\mathcal C_-.
 }
 \tag{ZEA2}
+```
 
 ---
 
@@ -169,10 +173,10 @@ $$
 
 ZWG proves that outside the absolute central band
 
-\[
+```math
 |y|\le t_0,
 \qquad t_0<0.021,
-$$
+```
 
 the relevant hyperbola boundary outruns the train slope. Since consecutive train midpoints differ in `y` by more than `sqrt3/2`, at most one train edge lies in this central band.
 
@@ -180,11 +184,12 @@ By ZEA2 only one radial sign can occur. On the negative-`y` side the correspondi
 
 Therefore the nonradial train edges have the form
 
-$$
+```math
 \boxed{
 \text{prefix}\ \cup\ \text{suffix}\ \cup\ \text{at most one central edge}.
 }
 \tag{ZEA3}
+```
 
 Both the prefix and suffix, when nonempty, reach actual endpoints of the stopped train.
 
@@ -194,19 +199,19 @@ Both the prefix and suffix, when nonempty, reach actual endpoints of the stopped
 
 Let `tau` be ZWT weak-rich. ZWT gives at least
 
-\[
+```math
  k_\eta D,
 \qquad
 k_\eta:=\frac{c_\eta}{12\pi}+o(1),
-$$
+```
 
 distinct nonradial contacts on `tau`.
 
 By ZEA3, after removing the possible one central edge, these contacts lie in a prefix and a suffix. Hence one endpoint interval contains at least
 
-$$
+```math
 \frac{k_\eta D-1}{2}
-$$
+```
 
 nonradial contacts.
 
@@ -216,11 +221,12 @@ Thus:
 
 Every weak-rich train contains a contiguous nonradial prefix or suffix of length
 
-$$
+```math
 \boxed{
 \left(\frac{c_\eta}{24\pi}-o(1)\right)D
 }
 \tag{ZEA4}
+```
 
 that reaches one endpoint of the stopped train.
 
@@ -232,11 +238,11 @@ This improves the safe factor `1/4` in ZWG to an asymptotic factor `1/2` and, mo
 
 ZWT supplies
 
-\[
+```math
 N_{wr}
 \ge
 \left(\frac{3\sqrt3}{8}c_\eta-o(1)\right)D
-$$
+```
 
 weak-rich trains.
 
@@ -246,13 +252,14 @@ A nontrivial stopped train endpoint is precisely a train contact edge whose othe
 
 Hence:
 
-$$
+```math
 \boxed{
 E_{stop}
 \ge
 \left(\frac{3\sqrt3}{8}c_\eta-o(1)\right)D,
 }
 \tag{ZEA5}
+```
 
 where `E_stop` counts distinct defect-face incidences used by the selected weak strips.
 
@@ -264,9 +271,9 @@ C42 already bounds the complete outer/nonquadrilateral incidence population by `
 
 Use the explicit ZLS scale
 
-\[
+```math
 a_D=\sqrt{D\varepsilon}\to0.
-$$
+```
 
 The total number of nonradial contacts with `alpha_e>=a_D` is `o(D^2)`.
 
@@ -274,11 +281,12 @@ The selected endpoint-anchored strips are edge-disjoint and each has length `Ome
 
 After a diagonal choice `rho_D->0`, all but `o(D)` selected strips satisfy
 
-$$
+```math
 \boxed{
 \#\{e\text{ in anchored strip}:\alpha_e\ge a_D\}=o(D).
 }
 \tag{ZEA6}
+```
 
 Thus the branch contains a linear family of endpoint-anchored, macroscopic, asymptotically weak transverse strips.
 
@@ -298,11 +306,11 @@ Its terminal train edge lies on a bounded nonquadrilateral face. The strip penet
 
 The total bounded exceptional-face degree is
 
-\[
+```math
 \sum_{F\text{ non4}}\deg F
 =Q+4f
 =O(D),
-$$
+```
 
 and the outer boundary walk has length `b=O(D)`. Thus linear many anchored strips fit the existing endpoint budget, but only at linear density. A closing theorem now has to exploit their **macroscopic penetration depth**, not endpoint cardinality alone.
 

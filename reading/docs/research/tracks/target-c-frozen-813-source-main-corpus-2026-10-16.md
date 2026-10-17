@@ -63,10 +63,10 @@ same-cardinality endpoint.
 The [open-cell phase-flux note](../../../research/target_c_open_cell_phase_flux_2026-10-03.md)
 adds the exact finite identity
 
-$$
+```math
 F_{\rm out}(S)-F_{\rm in}(S)
 =(A_p+A_q)\sin\!\left(\frac{\theta_q-\theta_p}{2}\right)
-$$
+```
 
 for a two-phase slab. With its explicit inactive-pair and two-cut hypotheses,
 it classifies the old-diameter sign obstruction and restricts contiguous

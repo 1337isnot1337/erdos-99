@@ -24,94 +24,94 @@ On one side of the common diameter-routing hub, switching supports at distinct i
 
 Let `I` be any set of nonhub interfaces on one fixed side of the common hub. For `i in I`, let
 
-$$
+```math
 X_i
 \tag{RB.1}
-$$
+```
 
 be the actual-diameter switching set at interface `i`, and put
 
-$$
+```math
 B_i:=\sum_{h\in X_i}\beta_h.
 \tag{RB.2}
-$$
+```
 
 Orient every one-sided switching diameter consistently inward and write
 
-$$
+```math
 n_h=Dd_h,
 \qquad |d_h|=1.
 \tag{RB.3}
-$$
+```
 
 The exact strip reaction is
 
-$$
+```math
 G_i
 =\sum_{h\in X_i}\beta_h n_h
 =D\sum_{h\in X_i}\beta_h d_h.
 \tag{RB.4}
-$$
+```
 
 ### Theorem RB.1 — one-sided reaction budget
 
 For every such interface set `I`,
 
-$$
+```math
 \boxed{
 \sum_{i\in I}B_i\le1,
 \qquad
 \sum_{i\in I}|G_i|\le D.
 }
 \tag{RB.5}
-$$
+```
 
 Consequently, for every `K>0`,
 
-$$
+```math
 \boxed{
 \#\{i\in I:B_i>K/D\}< {D\over K},
 }
 \tag{RB.6}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \#\{i\in I:|G_i|>K\}< {D\over K}.
 }
 \tag{RB.7}
-$$
+```
 
 ### Proof
 
 On one side of the hub, every actual diameter support interval has at most one birth boundary. Therefore the switching sets `X_i` are pairwise disjoint. C65 normalization gives
 
-$$
+```math
 \sum_h\beta_h=1,
 \qquad \beta_h>0.
 \tag{RB.8}
-$$
+```
 
 Hence
 
-$$
+```math
 \sum_{i\in I}B_i
 =\sum_{i\in I}\sum_{h\in X_i}\beta_h
 \le\sum_h\beta_h
 =1.
 \tag{RB.9}
-$$
+```
 
 From (RB.4) and the triangle inequality,
 
-$$
+```math
 |G_i|
 \le D\sum_{h\in X_i}\beta_h
 =DB_i.
 \tag{RB.10}
-$$
+```
 
 Summing (RB.10) and using (RB.9) proves (RB.5). If `N` interfaces had `B_i>K/D`, then their total `B`-mass would exceed `NK/D`; (RB.9) gives `N<D/K`. Equation (RB.10) implies `|G_i|>K => B_i>K/D`, proving (RB.6)--(RB.7). `square`
 
@@ -123,95 +123,95 @@ This is exact. It does not use phase purity, a good-interface threshold, an asym
 
 Use the notation of the parameterized deep grid-force theorem. Fix
 
-$$
+```math
 0<\rho<{c_0\over6},
 \qquad \eta,\delta>0,
 \qquad
 \lambda=c_0-6\rho-\eta-2\delta>0,
 \tag{RB.11}
-$$
+```
 
 where
 
-$$
+```math
 c_0={113\over20{,}000{,}000}.
 \tag{RB.12}
-$$
+```
 
 For every fixed depth `r`, that theorem gives a one-sided family
 
-$$
+```math
 Q_D=Q_D(r;\rho,\eta,\delta)
 \tag{RB.13}
-$$
+```
 
 with
 
-$$
+```math
 |Q_D|>\lambda D-o(D).
 \tag{RB.14}
-$$
+```
 
 Every center is a bilateral, two-sided, `rho`-wide exact-force cell locked to the same linear train grid.
 
 Fix additionally a quantile parameter
 
-$$
+```math
 0<\sigma<1
 \tag{RB.15}
-$$
+```
 
 and put
 
-$$
+```math
 K_{\sigma,\lambda}:={1\over\sigma\lambda}.
 \tag{RB.16}
-$$
+```
 
 Delete from `Q_D` every center with
 
-$$
+```math
 B_i>{K_{\sigma,\lambda}\over D}.
 \tag{RB.17}
-$$
+```
 
 Theorem RB.1 deletes fewer than
 
-$$
+```math
 {D\over K_{\sigma,\lambda}}
 =\sigma\lambda D
 \tag{RB.18}
-$$
+```
 
 centers. Thus the survivor `Q_D^{budget}` satisfies
 
-$$
+```math
 \boxed{
 |Q_D^{budget}|
 >(1-\sigma)\lambda D-o(D).
 }
 \tag{RB.19}
-$$
+```
 
 Every surviving center retains all geometric conclusions of the parameterized theorem and also obeys the depth-independent bounds
 
-$$
+```math
 \boxed{
 B_i\le {1\over\sigma\lambda D},
 \qquad
 0<|G_i|\le {1\over\sigma\lambda}.
 }
 \tag{RB.20}
-$$
+```
 
 The crucial point is that the constant in (RB.20) does **not** contain the exact-phase depth `r` or the separator threshold `T_r`.
 
 The same argument applies after the parameterized theorem's growing-depth diagonal extraction. Hence one may take
 
-$$
+```math
 r_D\to\infty
 \tag{RB.21}
-$$
+```
 
 while retaining (RB.19)--(RB.20) with the same fixed constants.
 
@@ -221,58 +221,58 @@ while retaining (RB.19)--(RB.20) with the same fixed constants.
 
 At a selected force cell, write the exact positive two-ray compression as
 
-$$
+```math
 G_i
 =D(\lambda_i^-d_i^-+\lambda_i^+d_i^+).
 \tag{RB.22}
-$$
+```
 
 Let the lifted angular deviations from the reaction direction be `p_i,q_i>0`, with `p_i+q_i<pi`. The exact force formulas are
 
-$$
+```math
 \lambda_i^-
 ={|G_i|\over D}{\sin q_i\over\sin(p_i+q_i)},
 \qquad
 \lambda_i^+
 ={|G_i|\over D}{\sin p_i\over\sin(p_i+q_i)}.
 \tag{RB.23}
-$$
+```
 
 The projective pair gap is at least `rho`, so
 
-$$
+```math
 \sin(p_i+q_i)\ge\sin\rho.
 \tag{RB.24}
-$$
+```
 
 Therefore
 
-$$
+```math
 \lambda_i^-+\lambda_i^+
 \le {2|G_i|\over D\sin\rho}
 \le {2B_i\over\sin\rho}.
 \tag{RB.25}
-$$
+```
 
 Summing over **all** parameterized centers, before the quantile deletion, gives the exact global estimate
 
-$$
+```math
 \boxed{
 \sum_{i\in Q_D}(\lambda_i^-+\lambda_i^+)
 \le {2\over\sin\rho}.
 }
 \tag{RB.26}
-$$
+```
 
 For every center surviving (RB.19), each compressed force coefficient separately satisfies
 
-$$
+```math
 \boxed{
 0<\lambda_i^\pm
 \le {1\over\sigma\lambda D\sin\rho}.
 }
 \tag{RB.27}
-$$
+```
 
 Thus a linear number of exact, fixed-angle, two-sided force diamonds can be retained while every compressed force coefficient is `O(D^{-1})` with a constant independent of exact-phase depth.
 
@@ -284,7 +284,7 @@ Equation (RB.26) is a coefficient budget for the compressed cut-reaction represe
 
 Use the parameterized theorem's convenient choice
 
-$$
+```math
 \rho=\delta={c_0\over100},
 \qquad
 \eta={c_0\over50},
@@ -292,62 +292,62 @@ $$
 \lambda={9c_0\over10}
 ={1017\over200{,}000{,}000}.
 \tag{RB.28}
-$$
+```
 
 Take `sigma=1/2`. Then
 
-$$
+```math
 K_{1/2,\lambda}
 ={2\over\lambda}
 ={400{,}000{,}000\over1017}
 =393313.6676\ldots
 \tag{RB.29}
-$$
+```
 
 and the retained density is
 
-$$
+```math
 \boxed{
 {\lambda\over2}
 ={1017\over400{,}000{,}000}
 =2.5425\times10^{-6}.
 }
 \tag{RB.30}
-$$
+```
 
 Hence more than
 
-$$
+```math
 (2.5425\times10^{-6})D-o(D)
 \tag{RB.31}
-$$
+```
 
 deep grid-locked bilateral force cells simultaneously satisfy
 
-$$
+```math
 B_i\le{393313.668\over D},
 \qquad
 0<|G_i|\le393313.668.
 \tag{RB.32}
-$$
+```
 
 This improves the earlier uniform absolute reaction ceiling `H=4,436,000` by a factor
 
-$$
+```math
 11.27853\ldots
 \tag{RB.33}
-$$
+```
 
 on a still-positive-density subfamily, and unlike the neighborhood threshold it stays unchanged on a growing-depth diagonal.
 
 As the parameterized density tends to its current limit `c_0`, the half-quantile reaction constant tends to
 
-$$
+```math
 {2\over c_0}
 ={40{,}000{,}000\over113}
 =353982.3009\ldots.
 \tag{RB.34}
-$$
+```
 
 ---
 

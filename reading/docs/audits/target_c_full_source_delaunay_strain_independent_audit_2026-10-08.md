@@ -53,37 +53,37 @@ collinear side labels. Let `B` be the Delaunay faces with all three vertices
 in `J`, `f_B=|B|`, and `A_B=sum_{T in B} area(T)`. For the remaining faces
 `G`, define `sigma_T=area(T)-a` and `Sigma=sum_{T in G} sigma_T`. Then
 
-$$
+```math
  m\le 8D+1,\qquad f_B\le 2m-b-2,
-$$
+```
 
-$$
+```math
  \boxed{\Sigma+A_B+\delta_K+a_0g_A=a(b+f_B)},\qquad
  0\le\Sigma<a_0(m-1)\le4\sqrt3D.
-$$
+```
 
 There is an exceptional label set `E`, containing `J`, such that
 
-$$
+```math
  |E|\le25m+(450+12/\kappa)\Sigma.
-$$
+```
 
 Every label outside `E` is an interior Delaunay vertex of valence six. Every
 incident face is acute, has excess below `1/100`, and each of its sides and
 angles obey
 
-$$
+```math
  0\le |e|-1\le5\sigma_T,\qquad
  |\angle-\pi/3|\le50\sigma_T.
-$$
+```
 
 ### `C-FULL-SOURCE-DELAUNAY-NEAR-NEIGHBOR-BUDGET`
 
 For `0<epsilon<=1/10`, at most
 
-$$
+```math
  25m+(450+12/\kappa)\Sigma+30\Sigma/\epsilon
-$$
+```
 
 source labels fail to have six distinct Delaunay neighbors at distances in
 `[1,1+epsilon]`. Along any canonical source sequence with `D->infinity`,
@@ -132,9 +132,9 @@ They lie in the outer parallel body `K+B(0,1/2)` and outside
 `int(K minus B(0,3/2))`. Steiner's formula and the decreasing perimeters of
 inner parallel convex bodies bound this belt area by `2P(K)+pi/4`. Hence
 
-$$
+```math
  m\le 8P(K)/\pi+1\le8D+1,
-$$
+```
 
 using Cauchy's perimeter formula. Every hull-boundary label belongs to `J`,
 so `b<=m` and `conv(J)=K`.
@@ -159,18 +159,18 @@ three sides are at least one. The smallest triangle angle is at most
 minimizes the area when the angles are `ell,ell,pi-2ell`, where
 `ell=asin(1/(2R))`; this gives
 
-$$
+```math
  area(T)\ge\frac{\sqrt{4R^2-1}}{4R^2}\ge a
  \quad(1/\sqrt3\le R\le1).
-$$
+```
 
 The last function has its only interior critical point at a maximum and
 equals `a` at both endpoints. Thus every `sigma_T` on `G` is nonnegative.
 The face-area sum is
 
-$$
+```math
  area(K)=a(2|A|-b-2-f_B)+\Sigma+A_B.
-$$
+```
 
 Substitution of `delta_K` and `g_A` gives the claimed exact identity.
 Since `delta_K>=0`, `A_B>=0`, and the canonical strict lattice comparison
@@ -187,10 +187,10 @@ both circumradii are at most one. If the first face's largest angle is
 `beta<=pi-alpha`; side separation gives all relevant angles at least
 `pi/6`, and `alpha<=2pi/3`. The sine rule and concavity of `log(sin)` give
 
-$$
+```math
  area(T)\ge\tfrac12\sin\alpha,\qquad
  area(T')\ge a(1-\cos\alpha),
-$$
+```
 
 so `sigma_T+sigma_T'>=1/2 sin(alpha)-a(1+cos(alpha))>=kappa`.
 Each face excess is used at most four times (once as the selected face
@@ -238,11 +238,11 @@ take the two rays bracketing `u`; if `u` is itself a ray, use its immediate
 neighbors. Each selected vector `r` satisfies
 `u dot r>=1/2-delta/2`. If the label moves to `x-delta*u`, then
 
-$$
+```math
  |r-\delta u|^2\le(1+\delta/20)^2
  -2\delta(1/2-\delta/2)+\delta^2
  =1-\tfrac9{10}\delta+\tfrac{801}{400}\delta^2<1
-$$
+```
 
 for `0<delta<=1/10`. The blockers strictly bracket `u` and so positively
 span it. If `S` is lower-closed, these blockers lie in `S`. At a support

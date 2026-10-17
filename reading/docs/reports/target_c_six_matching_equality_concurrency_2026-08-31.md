@@ -16,62 +16,62 @@
 
 **STILL OPEN.**
 
-EQ6 classifies the $\rho_s=1$ boundary response as an additive effective-resistance
+EQ6 classifies the $`\rho_s=1`$ boundary response as an additive effective-resistance
 metric. This addendum converts that response normal form into a source-preserving
 geometric statement: the three selected matching chords must meet at one point
 inside all three chords.
 
 ## 1. Starting endpoint
 
-The K6 convex six-endpoint response closure gives $\rho_s\le1$. EQ6 gives, in
+The K6 convex six-endpoint response closure gives $`\rho_s\le1`$. EQ6 gives, in
 the equality case,
 
-$$
+```math
 W_{ij}=r_i+r_j,\qquad
 r_i+r_{i+3}=\frac1{\beta_i}.
-$$
+```
 
 The exact next implication is
 
-$$
+```math
 \rho_s=1
 \ \Longrightarrow\
 \text{the matching chords }p_ip_{i+3}\text{ are concurrent}.
-$$
+```
 
 ## 2. Strongest genuinely new audited theorem
 
 ### Theorem CONC6 (equality forces a common chord point)
 
-Assume the hypotheses of K6 and EQ6. In particular, $B=(p_0,\ldots,p_5)$
+Assume the hypotheses of K6 and EQ6. In particular, $`B=(p_0,\ldots,p_5)`$
 is a strictly convex hexagon in cyclic order, the response is connected and
 circular-planar, and
 
-$$
+```math
 H_s=\{03,14,25\}.
-$$
+```
 
-If $\rho_s=1$, then all six additive parameters in EQ6 are strictly positive.
+If $`\rho_s=1`$, then all six additive parameters in EQ6 are strictly positive.
 With
 
-$$
+```math
 g_i=\frac1{r_i},
 \qquad
 q=\frac{\sum_{i=0}^5 g_i p_i}{\sum_{i=0}^5 g_i},
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{
 q\in\operatorname{relint}[p_i,p_{i+3}]
 \qquad(i=0,1,2).
 }
 \tag{CONC6.1}
-$$
+```
 
 Thus the three selected matching chords are concurrent at the weighted
-boundary barycenter $q$.
+boundary barycenter $`q`$.
 
 ### Scope
 
@@ -84,114 +84,114 @@ matching equality mode.
 
 EQ6 gives the additive resistance representation and
 
-$$
+```math
 r_i+r_{i+3}=\frac1{\beta_i}>0.
 \tag{CONC6.2}
-$$
+```
 
-Let $J=I-\mathbf1\mathbf1^{\mathsf T}/6$. For an additive resistance matrix
+Let $`J=I-\mathbf1\mathbf1^{\mathsf T}/6`$. For an additive resistance matrix
 with zero diagonal,
 
-$$
+```math
 W_{ij}=r_i+r_j\quad(i\ne j),
-$$
+```
 
 the centered resistance matrix is
 
-$$
+```math
 R=J\operatorname{diag}(r_0,\ldots,r_5)J.
 \tag{CONC6.3}
-$$
+```
 
-Since $\Lambda$ is the response of a connected network, $R=\Lambda^+$ is
-positive definite on $\mathbf1^\perp$. If two of the $r_i$ were zero, then
-$e_i-e_j\in\mathbf1^\perp$ would have zero quadratic form in (CONC6.3).
-Therefore at most one $r_i$ can vanish.
+Since $`\Lambda`$ is the response of a connected network, $`R=\Lambda^+`$ is
+positive definite on $`\mathbf1^\perp`$. If two of the $`r_i`$ were zero, then
+$`e_i-e_j\in\mathbf1^\perp`$ would have zero quadratic form in (CONC6.3).
+Therefore at most one $`r_i`$ can vanish.
 
-We first exclude one zero. Suppose $r_z=0$. By (CONC6.2), $r_{z+3}>0$,
+We first exclude one zero. Suppose $`r_z=0`$. By (CONC6.2), $`r_{z+3}>0`$,
 and all parameters in the other two matching pairs are positive. For positive
 parameters, the response whose resistance metric is additive is the star
 response
 
-$$
+```math
 \Lambda=\operatorname{diag}(g)
 -\frac{gg^{\mathsf T}}{\sum_k g_k},
 \qquad g_i=\frac1{r_i}.
 \tag{CONC6.4}
-$$
+```
 
-When $r_z\downarrow0$, this formula has a finite limit on the centered
-subspace, with its weighted barycenter tending to $p_z$. Hence the C11
-identity in the limit gives, for each $i\notin\{z,z+3\}$,
+When $`r_z\downarrow0`$, this formula has a finite limit on the centered
+subspace, with its weighted barycenter tending to $`p_z`$. Hence the C11
+identity in the limit gives, for each $`i\notin\{z,z+3\}`$,
 
-$$
+```math
 g_i(p_i-p_z)=\beta_i(p_i-p_{i+3}).
 \tag{CONC6.5}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 p_z=(1-\beta_i r_i)p_i+\beta_i r_i\,p_{i+3}.
 \tag{CONC6.6}
-$$
+```
 
-Both $r_i$ and $r_{i+3}$ are positive, and (CONC6.2) gives
+Both $`r_i`$ and $`r_{i+3}`$ are positive, and (CONC6.2) gives
 
-$$
+```math
 0<\beta_i r_i<1.
-$$
+```
 
-Thus $p_z$ lies in the relative interior of the segment joining the two
-other vertices $p_i$ and $p_{i+3}$. This contradicts strict convexity of the
-hexagon, because $p_z$ is an extreme vertex distinct from both endpoints of
-that segment. Therefore every $r_i>0$.
+Thus $`p_z`$ lies in the relative interior of the segment joining the two
+other vertices $`p_i`$ and $`p_{i+3}`$. This contradicts strict convexity of the
+hexagon, because $`p_z`$ is an extreme vertex distinct from both endpoints of
+that segment. Therefore every $`r_i>0`$.
 
-For positive $r_i$, the star response (CONC6.4) is the Moore--Penrose inverse
+For positive $`r_i`$, the star response (CONC6.4) is the Moore--Penrose inverse
 of (CONC6.3). Its action on the coordinate matrix is
 
-$$
+```math
 (\Lambda P_B)_i=g_i(p_i-q).
 \tag{CONC6.7}
-$$
+```
 
-The C11 identity gives, for $i=0,1,2$,
+The C11 identity gives, for $`i=0,1,2`$,
 
-$$
+```math
 g_i(p_i-q)=\beta_i(p_i-p_{i+3}).
 \tag{CONC6.8}
-$$
+```
 
 Therefore
 
-$$
+```math
 q=(1-\beta_i r_i)p_i+\beta_i r_i\,p_{i+3}.
 \tag{CONC6.9}
-$$
+```
 
 By (CONC6.2), both coefficients in (CONC6.9) are strictly between zero and
-one. The same equation for $i+3$ is consistent because
+one. The same equation for $`i+3`$ is consistent because
 
-$$
+```math
 \beta_i r_i+\beta_i r_{i+3}=1.
-$$
+```
 
-Hence (CONC6.1) holds for all three matching pairs. $\square$
+Hence (CONC6.1) holds for all three matching pairs. $`\square`$
 
 ## 3. Exact target implication
 
 The equality mode is now source-geometrically restricted:
 
-$$
+```math
 \rho_s=1
 \quad\Longrightarrow\quad
 \text{three pairwise crossing diameter chords concur at an interior point}.
-$$
+```
 
 Consequently, any independent geometric theorem excluding concurrent selected
 diameter matchings in the relevant global-minimizer class would make the K6
 response inequality strict in that class. The theorem also supplies the exact
-point $q$ and its stress-dependent barycentric representation.
+point $`q`$ and its stress-dependent barycentric representation.
 
 This still does not close C-I. Concurrent diameter matchings are not excluded
 by the current canonical stack; the support-selection problem also remains.
@@ -203,7 +203,7 @@ by the current canonical stack; the support-selection problem also remains.
 - docs/reports/target_c_convex_six_matching_kalmanson_2026-08-31.md, Theorem K6:
   the six-endpoint response inequality and C11 response-block setting.
 - docs/reports/target_c_force_polygon_2026-08-30.md, Theorem C11:
-  $\Lambda P_B=L_{H_s}P_B$ for the actual positive contact response.
+  $`\Lambda P_B=L_{H_s}P_B`$ for the actual positive contact response.
 
 No physical one-hub replacement of the contact graph is used; (CONC6.4) is
 only the exact boundary response associated with the additive resistance
@@ -222,7 +222,7 @@ ratio on each chord.
 | --- | --- | --- |
 | All additive parameters are positive | proved | Connectedness rules out two zeros; one zero contradicts strict convexity through the limiting C11 identity. |
 | Additive response has star form | proved | It is the inverse of the centered diagonal form (CONC6.3), first for positive parameters and then by a centered limit. |
-| C11 forces chord concurrency | proved | Equation (CONC6.8) places the same barycenter $q$ in every matching segment. |
+| C11 forces chord concurrency | proved | Equation (CONC6.8) places the same barycenter $`q`$ in every matching segment. |
 | Concurrent matching is impossible globally | not proved | The current Target C stack does not exclude it. |
 | Physical contact graph is a literal star | not proved and not used | Electrical response equivalence does not preserve the embedded unit-contact graph. |
 | C-I is closed | not proved | Support selection and the remaining global equality geometry remain. |
@@ -231,11 +231,11 @@ ratio on each chord.
 
 | Regression | Passed? | Exact reason |
 | --- | --- | --- |
-| Regular centrally symmetric matching | yes | $q$ is the center and lies in all three opposite chords. |
-| Unequal positive matching weights | yes | The ratios $\beta_i r_i$ may differ, but remain in $(0,1)$. |
+| Regular centrally symmetric matching | yes | $`q`$ is the center and lies in all three opposite chords. |
+| Unequal positive matching weights | yes | The ratios $`\beta_i r_i`$ may differ, but remain in $`(0,1)`$. |
 | A single zero pendant parameter | excluded | It would put an extreme terminal vertex in the interior of a segment joining two other hull vertices. |
-| Two zero pendant parameters | excluded | It creates a nonzero zero mode of $R$ on $\mathbf1^\perp$. |
-| Nonconcurrent convex matching | equality excluded | It cannot satisfy (CONC6.1), though it may still have $\rho_s<1$. |
+| Two zero pendant parameters | excluded | It creates a nonzero zero mode of $`R`$ on $`\mathbf1^\perp`$. |
+| Nonconcurrent convex matching | equality excluded | It cannot satisfy (CONC6.1), though it may still have $`\rho_s<1`$. |
 
 ## 8. Failed routes and no-go results
 
@@ -274,7 +274,7 @@ Promote the theorem into:
 
 ## 12. Next run
 
-Use the common point $q$ as the next geometric variable. The highest-value
+Use the common point $`q`$ as the next geometric variable. The highest-value
 lemma is an exact obstruction to three concurrent diameter chords in a
 triangle-free global minimizer, or an argument that CONC6 equality forces a
 unit equilateral triangle in the actual contact embedding.

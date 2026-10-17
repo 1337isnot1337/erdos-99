@@ -32,18 +32,18 @@ component `I_r`, its loaded attachments `A_r`, induced graph
 `H_r=C[I_r union A_r]`, attachment polygon `P_r=conv(A_r)`, and its
 occurrence-counted outer contact walk `L_r`. Set
 
-$$
+```math
 Z_D=\sum_r(L_r-\operatorname{per}P_r),\qquad
 Q_D=\sum_r\sum_{f\text{ bounded in }H_r}(\deg f-4).
-$$
+```
 
 In particular, `Q_D` is the induced face defect, not the augmented local
 defect in Section 123 and not a phase-trim defect. The candidate concludes
 
-$$
+```math
 \liminf (Z_D+Q_D)/D\ge1/26000.
 \tag{1.1}
-$$
+```
 
 All source points remain in the full configuration. The proof obtains its
 quadratic rhombic area from the canonical full-core branch and supplies no
@@ -87,9 +87,9 @@ no uniform positive angle or force floor is asserted.
 
 The exact bank identity is
 
-$$
+```math
 \ell_i-d_i=\sum_{e\in W_i}(1-e\cdot t_i).
-$$
+```
 
 It charges bad terminal occurrences by `Z_r/(1-cos epsilon)` without
 identifying repeated vertices or discarding a boundary term.
@@ -120,12 +120,12 @@ the number of unit good ends after the bank-excess charge. Long bank
 pairs contribute only `O(eta^-2)`. The resulting bound is uniform in the
 component and phase-bin direction:
 
-$$
+```math
 \frac{M_r}{D}\le
 \left(1+\frac1{1-\cos\epsilon}\right)\frac{Z_D}{D}
 +\eta+2\tan(\epsilon+w+4\eta)+o(1).
 \tag{2.1}
-$$
+```
 
 Its error is used as a **maximum** over all cells, not summed once per
 cell. The constant `O(eta^-2)` times the total `O(D)` train count is
@@ -137,16 +137,16 @@ scale where it is used. This avoids a false `c_I eta D` argument.
 For three positive part sizes `a,b,c`, average over all triples with one
 vertex in each part. Triangle-freeness gives
 
-$$
+```math
 \frac{E_{AB}}{ab}+\frac{E_{AC}}{ac}+\frac{E_{BC}}{bc}\le2.
-$$
+```
 
 Each density is at most one. The linear relaxation is maximized by filling
 the two largest products; they share the largest part. Hence
 
-$$
+```math
 E\le\max\{a(b+c),b(a+c),c(a+b)\}\le\frac{2M}{3}(a+b+c)
-$$
+```
 
 when all part sizes are at most `M`. Empty parts are direct. The last
 ratio is increasing in all three sizes and reaches `2M/3` at equal
@@ -175,12 +175,12 @@ Section 68 supplies only `O(D)` total rhombic excess. Together with
 Section 62's `sum per(P_r)<=2pi^2 D+O(1)`, this gives exactly the
 candidate's one-parameter inequality
 
-$$
+```math
 \frac\pi4\le5q+\frac{\sqrt3}{6}(2\pi^2+z+5q)
 \left[\left(1+\frac1{1-\cos\epsilon}\right)z
 +2\tan\epsilon\right].
 \tag{2.2}
-$$
+```
 
 The order of limits is `D`, then `eta`, then bin width `w`, at fixed
 `epsilon`. It is not a conversion of `o(D^2)` error to `o(D)`.
@@ -196,9 +196,9 @@ bounds used in the floor.
 
 With `z<=1/66`, choosing `epsilon=(66z)^(1/3)/3` reduces (2.2) to
 
-$$
+```math
 \frac\pi4\le5q+\frac{\sqrt3}{6}(2\pi^2+z+5q)(66z)^{1/3}.
-$$
+```
 
 If `z+q<=1/26000`, the verified rational upper bound is strictly below
 the verified lower bound for `pi/4`, proving (1.1). The proof handles
@@ -219,9 +219,9 @@ full-core sources therefore survive this argument.
 
 Conditionally importing the current rooted ledger
 
-$$
+```math
 Z_D/2+Q_D/2\le\Delta(\lambda)D+o(D)
-$$
+```
 
 would force `Delta(lambda)>=1/52000` in that branch. This excludes its
 zero-defect endpoint, but its ledger is unpromoted, the inequality does

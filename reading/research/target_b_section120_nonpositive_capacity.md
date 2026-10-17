@@ -13,17 +13,17 @@ analysis allows `lambda=0` trains to block at quartic order.
 
 Keep the Section-120 setup.  Let
 
-$$
+```math
 P_-:=\{\tau:\lambda_\tau<0\},
 \qquad
 P_0:=\{\tau:d_\tau\ne0,\ \lambda_\tau=0\},
-$$
+```
 
 and
 
-$$
+```math
 S_-:=\sum_{\tau\in P_-}(-\lambda_\tau).
-$$
+```
 
 Let `Gamma` be either boundary arc from the active diameter endpoint `z` to `a`,
 directed from `z` to `a`, with unit-edge length `L`.
@@ -32,9 +32,9 @@ Every separating train has one unique terminal edge occurrence on `Gamma`, direc
 its train-coordinate vector `a_tau` from the `z`-side to the `a`-side.  The exact
 projection loss of that occurrence is
 
-$$
+```math
 1-q\cdot a_\tau=1-\lambda_\tau/D.
-$$
+```
 
 Thus:
 
@@ -44,45 +44,45 @@ Thus:
 
 Injectivity of the terminal-edge charge therefore gives the stronger finite theorem
 
-$$
+```math
 \boxed{
 L-D
 \ge
 |P_0|+|P_-|+{S_-\over D}.
 }
 \tag{120.N1}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 |P_0|+|P_-|
 \le L-D,
 }
 \tag{120.N2}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 S_-
 \le D\bigl(L-D-|P_0|-|P_-|\bigr).
 }
 \tag{120.N3}
-$$
+```
 
 Using `1+x>=2x` only on the backward terms while retaining the tangent cost gives
 another useful form:
 
-$$
+```math
 \boxed{
 S_-
 \le {D\over2}\bigl(L-D-|P_0|\bigr).
 }
 \tag{120.N4}
-$$
+```
 
 The original Section-120 backtracking theorem follows by discarding `|P_0|` and the
 backward count.
@@ -98,22 +98,22 @@ quartically blocks an `s`-dimensional paired-angle subspace.
 Equation (120.N2) gives a universal geometric bound on the **number of tangent
 coordinates available to that bar**:
 
-$$
+```math
 \boxed{
 |P_0|\le L-D.
 }
 \tag{120.N5}
-$$
+```
 
 For the specific paired construction of Section 43.1, which uses two distinct tangent
 trains per paired variable, this implies
 
-$$
+```math
 \boxed{
 s\le\left\lfloor{|P_0|\over2}\right\rfloor
 \le\left\lfloor{L-D\over2}\right\rfloor.}
 \tag{120.N6}
-$$
+```
 
 Equation (120.N6) is **not** asserted as a universal upper bound on the dimension of
 all possible quartic blocker sets supported on `P_0`.  The higher-order equations
@@ -124,20 +124,20 @@ proved here is the coordinate-support bound (120.N5), not a factor-two rank theo
 For the shorter of the two boundary arcs, `L_*<=T` because the total pure-disk boundary
 length is `2T`.  Hence
 
-$$
+```math
 \boxed{
 |P_0|+|P_-|\le T-D.
 }
 \tag{120.N7}
-$$
+```
 
 The explicit Section-43.1 paired regression then has
 
-$$
+```math
 \boxed{
 s\le\left\lfloor{T-D\over2}\right\rfloor.}
 \tag{120.N8}
-$$
+```
 
 These are per-active-bar capacities.  They do **not** by themselves prove the global
 component-quotiented rank bound, because different active diameter bars can use

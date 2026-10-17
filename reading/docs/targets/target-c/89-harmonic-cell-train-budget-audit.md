@@ -8,9 +8,9 @@
 
 Canonical Section 82 proves that every unloaded harmonic component is a boundary-order perturbation of a strict-rhombus quadrangulation. Its published local boundary estimate
 
-$$
+```math
 P_R\le 20a
-$$
+```
 
 is deliberately coarse. The exact Section-82 face ledger retains enough information to improve that coefficient and, after summing the exact transverse train spans, to couple local rhombic area directly to the diameter and attachment count of the same harmonic cell.
 
@@ -37,65 +37,65 @@ Fix one unloaded positive-contact component `I_r` and retain the canonical Secti
 
 Canonical Section 82 gives the exact identity
 
-$$
+```math
 \boxed{L+Q=4a-6-2s-2c,}
 \tag{89.1}
-$$
+```
 
 and, from `L>=2a-c_partial`,
 
-$$
+```math
 \boxed{Q\le 2a-6-2s-2c+c_{partial}.}
 \tag{89.2}
-$$
+```
 
 Every nonquadrilateral bounded face has degree at least five, so if `f_exc` is their number,
 
-$$
+```math
 f_{exc}\le Q,
 \qquad
 \sum_{f\,nonquad}\deg f=4f_{exc}+Q\le5Q.
 \tag{89.3}
-$$
+```
 
 The same boundary classification used in Section 82 therefore gives
 
-$$
+```math
 P_R\le L+5Q.
 \tag{89.4}
-$$
+```
 
 ## 89.1 Sharpen the local physical-boundary bound
 
 Insert (89.1) into (89.4):
 
-$$
+```math
 P_R
 \le (L+Q)+4Q
 =4a-6-2s-2c+4Q.
-$$
+```
 
 Now use (89.2). This yields the exact finite sharpening
 
-$$
+```math
 \boxed{
 P_R
 \le
 12a-30-10s-10c+4c_{partial}.
 }
 \tag{89.5}
-$$
+```
 
 Since `c_partial<=c`,
 
-$$
+```math
 \boxed{
 P_R
 \le
 12a-30-10s-6c.
 }
 \tag{89.6}
-$$
+```
 
 In particular the coefficient `20` in the coarse Section-82 estimate can be replaced by `12`, with explicit favorable corrections for pinned surplus and loaded-loaded attachment contacts.
 
@@ -105,34 +105,34 @@ This is not an asymptotic optimization: (89.5) is a direct finite consequence of
 
 Apply the canonical train decomposition separately to every edge-connected component of `mathcal R`. Every local train has exactly two physical boundary ends, including trains ending on hole boundaries. Summing over connected components gives
 
-$$
+```math
 \boxed{2T_R=P_R,}
 \tag{89.7}
-$$
+```
 
 where `T_R` is the total number of local train segments in the full harmonic-cell rhombus complex.
 
 Combining (89.5) and (89.7),
 
-$$
+```math
 \boxed{
 T_R
 \le
 6a-15-5s-5c+2c_{partial},
 }
 \tag{89.8}
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{
 T_R
 \le
 6a-15-5s-3c.
 }
 \tag{89.9}
-$$
+```
 
 Thus every finite harmonic component has only `O(a)` local pseudolines, with an explicit constant six rather than the ten supplied by the coarse Section-82 boundary estimate.
 
@@ -140,74 +140,74 @@ Thus every finite harmonic component has only `O(a)` local pseudolines, with an 
 
 For each local train `tau`, orient its transverse coordinate as in the canonical train theorem. Let
 
-$$
+```math
 L_\tau:=\sum_{R\in\tau}\sin\theta_R,
 \tag{89.10}
-$$
+```
 
 where `theta_R in (pi/3,2pi/3)` is the unit-rhombus side angle in the chosen orientation. Crossing one rhombus advances the transverse coordinate of opposite-edge midpoints by exactly `sin theta_R`. Therefore `L_tau` is exactly the transverse distance between the two terminal edge midpoints of the train.
 
 Both terminal edge midpoints belong to the convex cell `P`: every rhombus lies in `P` and every side midpoint of such a rhombus lies in `P`. Hence
 
-$$
+```math
 \boxed{L_\tau\le w_P(\nu_\tau)\le d,}
 \tag{89.11}
-$$
+```
 
 where `nu_tau` is the transverse unit normal and `w_P` is the directional width of `P`.
 
 Each strict rhombus belongs to exactly two local trains, and its Euclidean area is `sin theta_R`. Consequently
 
-$$
+```math
 \sum_\tau L_\tau
 =2\sum_{R\in\mathcal R}\sin\theta_R
 =2A_4.
 \tag{89.12}
-$$
+```
 
 Sum (89.11) over all `T_R` trains:
 
-$$
+```math
 \boxed{2A_4\le T_R d.}
 \tag{89.13}
-$$
+```
 
 Combining with (89.8) gives the exact area–diameter–attachment inequality
 
-$$
+```math
 \boxed{
 2A_4
 \le
 d\bigl(6a-15-5s-5c+2c_{partial}\bigr).
 }
 \tag{89.14}
-$$
+```
 
 Using `c_partial<=c`,
 
-$$
+```math
 \boxed{
 2A_4
 \le
 d\bigl(6a-15-5s-3c\bigr).
 }
 \tag{89.15}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{A_4<3ad.}
 \tag{89.16}
-$$
+```
 
 Equivalently, whenever `A_4>0`,
 
-$$
+```math
 \boxed{
 a>{A_4\over3d}.}
 \tag{89.17}
-$$
+```
 
 The useful content of (89.14) is the explicit simultaneous dependence on attachment count, local pinned surplus, loaded-loaded contacts, and the actual diameter of the same harmonic cell. It does not spend the ambient source diameter `D`.
 
@@ -215,56 +215,56 @@ The useful content of (89.14) is the explicit simultaneous dependence on attachm
 
 Now work in the canonical full-core near-disk Type-II branch and take the macroscopic locally rhombus-saturated cell supplied by `C-HARMONIC-WRAPPING`. Write its parameters as
 
-$$
+```math
 a_*,\quad d_*,\quad A_{4,*},\quad T_*,\quad s_*,\quad c_*,\quad c^\partial_*.
-$$
+```
 
 Canonical Section 88 gives
 
-$$
+```math
 d_*\ge(\mu_0-o(1))D,
 \qquad
 \mu_0=0.889670810115\ldots,
 \tag{89.18}
-$$
+```
 
 and
 
-$$
+```math
 A_{4,*}=area(P_*)-o(D^2)=\Omega(D^2).
 \tag{89.19}
-$$
+```
 
 The finite inequalities above therefore hold on the exact same macroscopic carrier used by the localized complete-grid theorem:
 
-$$
+```math
 T_*
 \le
 6a_*-15-5s_*-5c_*+2c^\partial_*,
 \tag{89.20}
-$$
+```
 
-$$
+```math
 2A_{4,*}\le T_*d_*.
 \tag{89.21}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 a_*=\Omega(D),\qquad T_*=\Omega(D),}
 \tag{89.22}
-$$
+```
 
 with the quantitative lower bounds
 
-$$
+```math
 T_*\ge {2A_{4,*}\over d_*},
 \qquad
 6a_*-15-5s_*-3c_*\ge {2A_{4,*}\over d_*}.
 \tag{89.23}
-$$
+```
 
 The first conclusion `a_*=Omega(D)` was already known from harmonic trapping. The new information is the exact finite train budget (89.20) and its simultaneous area constraint (89.21), which tie all local train pseudolines to the same attachment currency used by the harmonic response problem.
 

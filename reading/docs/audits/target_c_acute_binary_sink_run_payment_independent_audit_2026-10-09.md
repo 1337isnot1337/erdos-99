@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_acute_binary_sink_run_payment_independent_audit_2026-10-09.md) · source SHA-256 `494d9aed4956683e19c6857a19a0c7e4e67a22cb986d77dbad3e2fae4ad0c8ca`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 5 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
+
 <!-- theorem-state: {"artifact_id":"ART-5C1E9BE14C90","canonical":true,"claim_ids":["C-ACUTE-BINARY-SINK-WITNESS-DEBT","C-BINARY-SINK-OWNER-RUN-TRADEOFF","C-LOADED-BINARY-SINK-DOUBLE-RECURRENCE","C-LOADED-SINK-TRAIN-WITNESS-TRADEOFF"],"claim_statuses":{"C-ACUTE-BINARY-SINK-WITNESS-DEBT":"canonical","C-BINARY-SINK-OWNER-RUN-TRADEOFF":"canonical","C-LOADED-BINARY-SINK-DOUBLE-RECURRENCE":"canonical","C-LOADED-SINK-TRAIN-WITNESS-TRADEOFF":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: acute binary sink witness and loaded-run payments
 
@@ -34,20 +36,20 @@ Use a finite unit-separated source (A) of diameter (D\ge7) with a
 two-dimensional convex hull of the actual diameter endpoints (B). Consider an
 actual small O--O owner system with translation-cloud diameter
 
-$$
+```math
 s<\gamma_D=D-\sqrt{D^2-1},
-$$
+```
 
 independent binary selection of every owner, exact preservation of every old
 unit contact in every binary state, and pairwise acute nonzero owner translations
-$\Delta_i\cdot\Delta_j>0$. Every selected clause witness is an old
+$`\Delta_i\cdot\Delta_j>0`$. Every selected clause witness is an old
 noncontact pair between the two owner labels defining that clause. Contact
 isolates remain source points; the theorem neither deletes nor moves them.
 
 Reduce each pair's forbidden binary states to irreducible 2-SAT clauses, leaving
 unary forced-zero clauses separately identified. A **binary sink** is a strongly
 connected sink component (S) of the simple implication digraph, with
-$m=|S|\ge2$, having an internal binary incompatibility edge. If the lower
+$`m=|S|\ge2`$, having an internal binary incompatibility edge. If the lower
 formula has only the all-zero model and has no unary forced-zero clause, every
 sink component of size at least two has such an internal incompatibility.
 
@@ -56,39 +58,44 @@ For a sink (S), choose (m) distinct implication arcs covering every owner
 incompatibility witness. This is its **covering packet**. Let (u(S)) count
 packet witnesses with at least one endpoint outside (B). Let (r_i) be the
 number of cyclic loaded-hull runs carrying owner (i), and set
-$R(S)=\sum_{i\in S}r_i$.
+$`R(S)=\sum_{i\in S}r_i`$.
 
 The audited conclusions are:
 
 1. The (m+1) witnesses in the covering packet are distinct physical source
    pairs.
 2. For (D\ge7),
-   $$
+   ```math
    u(S)+R(S)-m\ge1.
-   $$
+   
+   ```
    For pairwise disjoint binary sinks (S_a),
-   $$
+   ```math
    \sum_a u(S_a)+\sum_a\bigl(R(S_a)-|S_a|\bigr)\ge t.
-   $$
+   
+   ```
 3. If the covering packet is entirely loaded-loaded, and it is enlarged to
    include one incoming and one outgoing implication witness at each endpoint
    of an internal incompatibility edge (ab), with every witness in this
    combined packet still loaded-loaded, then
-   $$
+   ```math
    r_a\ge2,\qquad r_b\ge2,\qquad R(S)\ge m+2.
-   $$
+   
+   ```
    The same lower bound sums over pairwise disjoint such sinks.
 4. If the O--O cuts are, in addition, pairwise disjoint proper crosscuts in the
    canonical owner system of Audit.127, with train count (T_{OO}), then for
    any pairwise disjoint sink family and covering packets as above,
-   $$
+   ```math
    T_{OO}+\sum_a u(S_a)\ge\sum_a(|S_a|+1).
-   $$
+   
+   ```
    If all selected packets are loaded-loaded and include the endpoint witnesses
    in item 3, the sharper conclusion is
-   $$
+   ```math
    T_{OO}\ge\sum_a(|S_a|+2).
-   $$
+   
+   ```
 
 Items 1--3 do not require pairwise-disjoint cuts. Item 4 does. It is a finite
 owner-system theorem, not a global-minimizer theorem or a motion result.
@@ -98,22 +105,22 @@ owner-system theorem, not a global-minimizer theorem or a motion result.
 ### One physical pair has at most one binary role
 
 For a noncontact pair between distinct owners (i,j), write its old vector as
-$r$, put
-$\Phi_{ab}=|r+b\Delta_j-a\Delta_i|^2-1$, and note
-$\Phi_{00}>0$. Direct expansion gives
+$`r`$, put
+$`\Phi_{ab}=|r+b\Delta_j-a\Delta_i|^2-1`$, and note
+$`\Phi_{00}>0`$. Direct expansion gives
 
-$$
+```math
 \Phi_{11}-\Phi_{10}-\Phi_{01}+\Phi_{00}
 =-2\Delta_i\cdot\Delta_j<0.
-$$
+```
 
 If both singleton states 10 and 01 violate the strict lower bound, then
-$\Phi_{10},\Phi_{01}\le0$, so
-$\Phi_{11}=\Phi_{10}+\Phi_{01}-\Phi_{00}-2\Delta_i\cdot\Delta_j<0$.
-Thus the bad-state set cannot be exactly $\{10,01\}$.
+$`\Phi_{10},\Phi_{01}\le0`$, so
+$`\Phi_{11}=\Phi_{10}+\Phi_{01}-\Phi_{00}-2\Delta_i\cdot\Delta_j<0`$.
+Thus the bad-state set cannot be exactly $`\{10,01\}`$.
 
 With state 00 good, the possible nonempty bad sets are
-$\{10\},\{01\},\{11\},\{10,11\},\{01,11\},\{10,01,11\}$.
+$`\{10\},\{01\},\{11\},\{10,11\},\{01,11\},\{10,01,11\}`$.
 Their reductions are, respectively, one implication, the reverse implication,
 one binary incompatibility, a unit clause forcing (i=0), a unit clause
 forcing (j=0), or two unit clauses forcing both to zero. Therefore one physical
@@ -139,16 +146,32 @@ rhombus constraints are safe.
 
 ### Loaded witnesses are distinct loaded-hull sides
 
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
+
 For any old lower witness, the relative displacement changes by at most (s),
 so its old length satisfies (1<|pq|\le1+s\). For (D\ge7),
-$$
+```
+
+
+```math
 s<\gamma_D<\frac1{2D-1}\le\frac1{13}<\frac1{12},
-$$
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 and hence (1<|pq|<14/13<13/12\). By canonical
 `C-LOADED-NEAR-UNIT-ADJACENCY`, every witness with both endpoints in (B) is
 an actual side of the loaded hull. Different physical witness pairs give
 different loaded-hull sides, and each side has two distinct owner labels from
 the same sink.
+```
+
+
 
 Let (E_S) count these loaded-hull sides whose endpoints carry distinct owners
 in (S). Mark the loaded-hull word by whether a vertex owner lies in (S). In
@@ -156,11 +179,11 @@ each marked path component, compress adjacent equal-owner vertices into maximal
 owner runs: at most one transition side occurs between consecutive runs. If the
 whole cycle is marked, there are at most as many transition sides as owner
 runs. Summing gives
-$$
+```math
 E_S\le R(S).
-$$
+```
 Exactly (m+1-u(S)) covering-packet witnesses are loaded-loaded, so
-$m+1-u(S)\le E_S\le R(S)$, proving item 2. Physical witness packets for
+$`m+1-u(S)\le E_S\le R(S)`$, proving item 2. Physical witness packets for
 different SCCs are disjoint because each selected pair witnesses an internal
 clause whose two owner labels belong to that SCC.
 
@@ -173,36 +196,49 @@ the acute pair-role calculation makes their physical witnesses distinct from
 each other and from the incompatibility witness. If the combined witness packet
 is loaded-loaded, (a) is incident with three distinct loaded-hull transition
 sides, as is (b). A cyclic owner run has at most two transition sides, hence
-$3\le2r_a$ and $3\le2r_b$, so both run counts are at least two.
+$`3\le2r_a`$ and $`3\le2r_b`$, so both run counts are at least two.
 
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 The covering arborescence packet also puts every owner of (S) on the loaded
 hull. Thus each owner has at least one run, and the two conflict endpoints
 contribute one extra run each: (R(S)\ge m+2\). For disjoint sinks this sums.
+```
+
+
 
 For item 4, if a sink has any loaded-loaded packet witness, its two distinct
 owner endpoints both occur on the loaded hull. Consequently every owner in
 that sink with a positive run has a nonempty outer-walk complement. Audit.127's
 canonical `C-OO-OVERLAP-AWARE-ROOT-RUN-CAPACITY` applies to the union of those
-owners, giving $\sum R(S_a)\le T_{OO}$ over sinks with at least one
+owners, giving $`\sum R(S_a)\le T_{OO}`$ over sinks with at least one
 loaded-loaded witness. A sink with none has (u(S_a)=|S_a|+1), so it contributes
 zero to the loaded-witness count. Therefore
-$$
+```math
 \sum_a(|S_a|+1-u(S_a))\le T_{OO},
-$$
+```
 which is the mixed terminal tradeoff. In the all-loaded case, every owner in
-each sink has a loaded occurrence and, since $|S_a|\ge2$, a nonempty
-complement. Audit.127 then gives $\sum_aR(S_a)\le T_{OO}$; item 3 gives
-$\sum_a(|S_a|+2)\le T_{OO}$.
+each sink has a loaded occurrence and, since $`|S_a|\ge2`$, a nonempty
+complement. Audit.127 then gives $`\sum_aR(S_a)\le T_{OO}`$; item 3 gives
+$`\sum_a(|S_a|+2)\le T_{OO}`$.
 
 ## 3. Hostile checks and limitations
 
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
+
 - **Acuteness is load-bearing.** If the dot product is negative, one pair can
   have bad states exactly 10 and 01. For example, take
-  $r=(201/200,0)$, $\Delta_i=(1/20,3/50)$, and
-  $\Delta_j=(1/20,-3/50)$. Then
-  $|r|^2=40401/40000>1$,
-  $|r-\Delta_i|^2=|r-\Delta_j|^2=36625/40000<1$, but
-  $|r+\Delta_j-\Delta_i|^2=40977/40000>1$. This is an exact pair-level
+  $`r=(201/200,0)`$, $`\Delta_i=(1/20,3/50)`$, and
+  $`\Delta_j=(1/20,-3/50)`$. Then
+  $`|r|^2=40401/40000>1`$,
+  $`|r-\Delta_i|^2=|r-\Delta_j|^2=36625/40000<1`$, but
+  $`|r+\Delta_j-\Delta_i|^2=40977/40000>1`$. This is an exact pair-level
   algebraic regression, not a source configuration.
 - **Unary blockers are not sink conflicts.** A unary force-zero clause can
   make zero the only model without an internal incompatibility edge. The
@@ -225,19 +261,30 @@ $\sum_a(|S_a|+2)\le T_{OO}$.
 - The companion unloaded endpoint estimate (6(b-q+Z_{out})) is outside this
   audit. The source sink notes supply no verifier for the analytic claims here;
   no sampled computation is treated as proof.
+```
+
+
 
 ## 4. Canonical dependencies and frontier effect
 
 New theorem IDs and dependencies:
 
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 | ID | Exact result | Dependencies |
 |---|---|---|
 | `C-ACUTE-BINARY-SINK-WITNESS-DEBT` | One acute physical pair has at most one irreducible binary role; an internally obstructed (m\)-owner sink needs (m+1) distinct physical lower witnesses. | Exact algebra in this report. |
 | `C-BINARY-SINK-OWNER-RUN-TRADEOFF` | (u(S)+R(S)-|S|\ge1), including the sum over pairwise disjoint sinks. | `C-ACUTE-BINARY-SINK-WITNESS-DEBT`; `C-LOADED-NEAR-UNIT-ADJACENCY`. |
 | `C-LOADED-BINARY-SINK-DOUBLE-RECURRENCE` | A fully loaded covering packet at an internal conflict forces two distinct repeated owners and (R(S)\ge |S|+2). | `C-ACUTE-BINARY-SINK-WITNESS-DEBT`; `C-LOADED-NEAR-UNIT-ADJACENCY`. |
 | `C-LOADED-SINK-TRAIN-WITNESS-TRADEOFF` | With pairwise-disjoint proper O--O cuts, (T_{OO}+\sum u(S_a)\ge\sum(|S_a|+1)); fully loaded packets force (T_{OO}\ge\sum(|S_a|+2)). | `C-BINARY-SINK-OWNER-RUN-TRADEOFF`; `C-LOADED-BINARY-SINK-DOUBLE-RECURRENCE`; `C-OO-OVERLAP-AWARE-ROOT-RUN-CAPACITY`. |
+```
 
-The branch's Section 2 bound $\sum r_i\le T_{OO}$ is already canonical in
+
+
+The branch's Section 2 bound $`\sum r_i\le T_{OO}`$ is already canonical in
 Audit.127 for its disjoint-cut scope. The new contribution is the lower
 recurrence cost and its exact combination with that upper capacity.
 

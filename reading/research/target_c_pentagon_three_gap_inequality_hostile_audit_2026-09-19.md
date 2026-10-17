@@ -15,22 +15,22 @@
 
 The proof uses
 
-$$
+```math
 u_i+u_{i+1}+u_{i+2}=-(u_{i+3}+u_{i+4}).
-$$
+```
 
 The squared norm of the left side is
 
-$$
+```math
 3+2\cos\delta_i+2\cos\delta_{i+1}
 +2\cos(\delta_i+\delta_{i+1}),
-$$
+```
 
 while the squared norm of the right side is
 
-$$
+```math
 2+2\cos\delta_{i+3}.
-$$
+```
 
 Thus the index `i+3` in the conclusion is correct; there is no hidden `i+2`/`i+4` shift.
 
@@ -38,20 +38,20 @@ Thus the index `i+3` in the conclusion is correct; there is no hidden `i+2`/`i+4
 
 Set `s=a+b`. The only delicate step is
 
-$$
+```math
 |a-b|<\frac{4\pi}{3}-s.
-$$
+```
 
 If `a>=b`, then `a-b=2a-s<4pi/3-s` because `a<2pi/3`; the other case is symmetric. Since `2pi/3<s<pi`, both `|a-b|/2` and `2pi/3-s/2` lie in `[0,pi]`, so the use of strict cosine monotonicity is legitimate.
 
 The algebra
 
-$$
+```math
 \frac12\left(\cos\frac s2+
 \cos\left(\frac{2\pi}{3}-\frac s2\right)\right)
 =
 \frac12\cos\left(\frac s2-\frac\pi3\right)
-$$
+```
 
 is correct: `cos A+cos B=2cos((A+B)/2)cos((A-B)/2)` and `(A+B)/2=pi/3`.
 
@@ -59,17 +59,17 @@ is correct: `cos A+cos B=2cos((A+B)/2)cos((A-B)/2)` and `(A+B)/2=pi/3`.
 
 The proof obtains
 
-$$
+```math
 \cos c>\cos(s-\pi/3).
-$$
+```
 
 The old bounds give
 
-$$
+```math
 0<c<2\pi/3,
 \qquad
 \pi/3<s-\pi/3<2\pi/3.
-$$
+```
 
 Both are in `(0,pi)`, so strict decrease of cosine gives `c<s-pi/3`. No inverse-cosine branch ambiguity is present.
 
@@ -81,11 +81,11 @@ The new inequality is strict because `a,b<2pi/3` is strict. Equality could only 
 
 For raw order `alpha_1<...<alpha_5` and minority positions `2,4`, the force cycle `(2,4,1,3,5)` gives the five gaps listed in the source. Direct coefficient cancellation gives
 
-$$
+```math
 x_2+x_3-x_0
 =
 \frac{(\alpha_2-\alpha_1)+(\alpha_5-\alpha_4)}{\pi}.
-$$
+```
 
 Global sign reversal changes `(2,4,1,3,5)` to the cyclic rotation `(1,3,5,2,4)`, so the cyclic family of inequalities is unchanged.
 

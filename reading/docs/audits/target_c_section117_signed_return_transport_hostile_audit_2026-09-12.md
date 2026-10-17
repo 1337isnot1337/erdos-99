@@ -20,12 +20,12 @@ All of those steps survive hostile review.
 
 The valid proof-only conclusion is the full-core carrier bound
 
-$$
+```math
 \boxed{
 \operatorname{diam}(P_*)
 \ge(0.9761078160770649\ldots-o(1))D
 }
-$$
+```
 
 through scalar slack `sigma<=0.0029`.  The corresponding decoupled signed-return
 envelope near `sigma=0.0029068729001` is also numerically correct.  Neither statement
@@ -35,36 +35,36 @@ closes C-II or LEVEL I.
 
 The largest-gap transfer function is
 
-$$
+```math
 h_\theta(t)
 =f(\theta-t)+f(\phi+t)-f(\theta)-f(\phi),
 \qquad f(x)=\sin(x/2).
-$$
+```
 
 On the rectangle used in the proof,
 
-$$
+```math
 \theta\ge\theta_8,
 \qquad0\le t\le0.1,
-$$
+```
 
 its derivative is increasing in `theta` and decreasing in `t`; hence the minimum is
 at `(theta_8,0.1)`, where it is `0.3084268...>0.30`.  The coarse `delta>=0.1`
 transfer costs more than `0.03`, still far above the present `0.0029` slack.  Thus
 
-$$
+```math
 \delta\le{10\over3}\sigma,
 \qquad
 x_2,x_3,\tau\le{13\over3}\sigma
-$$
+```
 
 remain valid.
 
 At the endpoint,
 
-$$
+```math
 {13\over3}\sigma=0.0125666\ldots
-$$
+```
 
 while the mandatory principal-gap scale is above `0.876`, so the adjacent-span/fourth-
 gap argument retains large strict slack.
@@ -72,11 +72,11 @@ gap argument retains large strict slack.
 The Section-104 oriented tangent lift is also safe.  The main support-region extent is
 bounded by
 
-$$
+```math
 |S|+\tau
 \le U(\theta)+{13\over3}\sigma
 =1.8399556597\ldots<\pi.
-$$
+```
 
 Therefore no projective-lift ambiguity appears in the directional tooth argument at
 the wider endpoint.
@@ -86,7 +86,7 @@ the wider endpoint.
 The hostile-audited compact-support circular-segment identity gives the conservative
 normalized area floor
 
-$$
+```math
 A(\sigma)
 ={\pi\over4}
 -G(\theta)
@@ -94,36 +94,36 @@ A(\sigma)
 -G\left({13\sigma\over3}\right),
 \qquad
 G(x)={x-\sin x\over8}.
-$$
+```
 
 At `sigma=0.0029`,
 
-$$
+```math
 A=0.4722552235794338\ldots .
-$$
+```
 
 Local rhombic saturation transfers this to
 `A_{4,D}/D^2>=A-o(1)`.
 
 Retaining the favorable Section-101 face currency gives
 
-$$
+```math
 Q_D/D\le\sigma+o(1).
-$$
+```
 
 Canonical Sections 82 and 89 therefore yield
 
-$$
+```math
 T_D/D
 \le U(\theta)+2\sigma+o(1)
 =:C_T(\sigma)+o(1),
-$$
+```
 
 with
 
-$$
+```math
 C_T(0.0029)=1.833188993111448\ldots .
-$$
+```
 
 For the three principal complement-gap routes, count actual directed outer-walk
 occurrences and orient every eligible endpoint occurrence with its incident strict
@@ -132,11 +132,11 @@ rhombus on the left are not silently accepted as good endpoints; they remain bad
 
 The countable route exhaustion gives, on this same finite-carrier sequence,
 
-$$
+```math
 E_D/D
 =\sum_{i=1}^3(\ell_i-|z_i|)/D
 \le\sigma+o(1).
-$$
+```
 
 Thus the lower and upper route-excess estimates are not taken from different relaxed
 configurations.
@@ -152,39 +152,39 @@ remains true for hole boundaries and disconnected rhombus components.
 For a directed walk of unit steps `v_e`, displacement `z`, and unit chord direction
 `q=z/|z|`,
 
-$$
+```math
 \ell-|z|=\sum_e(1-q\cdot v_e).
-$$
+```
 
 If a train's two good ends are assigned injectively to walks `i,j`, their exact loss is
 
-$$
+```math
 (1-q_i\cdot u)+(1+q_j\cdot u)
 =2-(q_i-q_j)\cdot u
 \ge2-w_Q(u).
-$$
+```
 
 Summation over injectively assigned occurrences proves
 
-$$
+```math
 E\ge\sum_{\tau\in\mathcal T_{gg}}(2-w_Q(u_\tau)).
-$$
+```
 
 For two train directions `u,v` at projective angle `varphi` and at most three unit host
 directions, the support-function collision argument gives
 
-$$
+```math
 a(2-w_Q(u))+b(2-w_Q(v))
 \ge
  a+b-\sqrt{a^2+b^2+2ab\cos\varphi}.
-$$
+```
 
 At a strict unit-rhombus crossing `varphi>pi/3`, so for `a=b=1`
 
-$$
+```math
 (2-w_Q(u))+(2-w_Q(v))
 \ge2-\sqrt3=:c_{ret}.
-$$
+```
 
 The constant is sharp for the host relaxation; no hidden factor of two is missing.
 
@@ -194,21 +194,21 @@ Retain only trains whose two ends are good.  Let `A_gg` be the total area of rho
 whose two crossing trains are both retained.  Multiply the local `c_ret` inequality by
 rhombus area and sum.  Reorganizing by trains gives
 
-$$
+```math
 c_{ret}A_{gg}
 \le
 \sum_{\tau\ retained}
 (2-w_Q(u_\tau))
 \sum_{R\in\tau,\,gg}\operatorname{area}(R).
-$$
+```
 
 Along a complete train, the sum of the areas of its rhombi is exactly the transverse
 endpoint displacement and therefore at most the diameter `d` of the same convex
 attachment cell.  Hence
 
-$$
+```math
 \boxed{dE\ge c_{ret}A_{gg}.}
-$$
+```
 
 This is a finite identity/inequality on the actual embedding, not an asymptotic phase
 heuristic.
@@ -228,13 +228,13 @@ increases the upper bound.
 Every remaining omitted rhombus has angle defect larger than `epsilon`, so their count
 is at most `Delta_D/epsilon`.  Since every unit rhombus has area at most one,
 
-$$
+```math
 \boxed{
 A_{gg,D}
 \ge
 A_{4,D}-2T_DM_{bad}(\epsilon)-{\Delta_D\over\epsilon}.
 }
-$$
+```
 
 The required order of limits is exactly the one stated in Section 117: fix `epsilon`,
 let `D->infinity`, then let `epsilon->0`.
@@ -259,9 +259,9 @@ budgets, not estimates that require a preselected phase family:
 
 Their combined coefficient is
 
-$$
+```math
 5+{19\over6}+9+{20\over3}={143\over6}.
-$$
+```
 
 Thus it is legitimate to apply these capacities to arbitrary bad trains in a fixed
 direction interval.
@@ -273,59 +273,59 @@ support region.
 
 For a tooth base `b=1+e`, put
 
-$$
+```math
 x={\pi\over3}-\arccos(b/2),
 \qquad
 \psi(x)=\cos x+\sqrt3\sin x-1=e.
-$$
+```
 
 Fix one of the two leg choices and a projective endpoint-direction interval `I` of
 width `epsilon`.  If the base offset satisfies `0<=x<=X`, then after using the unique
 oriented lift from §1, the corresponding oriented base directions lie in one interval
 of width at most
 
-$$
+```math
 X+\epsilon+o(1).
-$$
+```
 
 The hostile-audited Section-104 tangent-window theorem is a finite boundary-direction
 capacity statement.  It therefore gives
 
-$$
+```math
 \limsup {N([0,X])\over D}
 \le C_{tail}+{X+\epsilon\over2}.
-$$
+```
 
 Put
 
-$$
+```math
 F_\epsilon=C_{tail}+{\epsilon\over2}.
-$$
+```
 
 For one leg class with normalized endpoint mass `q`, the increasing quantile of the
 offset distribution obeys `x(t)>=2(t-F_epsilon)` above the free mass.  Since `psi` is
 increasing, the minimum base-excess cost is
 
-$$
+```math
 J((q-F_\epsilon)_+),
 \qquad
 J(p)={1\over2}
 [\sin(2p)+\sqrt3(1-\cos(2p))-2p].
-$$
+```
 
 On the relevant range `J` is increasing and convex.  For the two leg classes,
 convexity and the global micro-base excess budget `sigma D/2+o(D)` give
 
-$$
+```math
 q_1+q_2
 \le Q(\sigma)+2F_\epsilon,
-$$
+```
 
 where `Q(sigma)` is the unique nonnegative root of
 
-$$
+```math
 \sin Q+\sqrt3(1-\cos Q)-Q={\sigma\over2}.
-$$
+```
 
 This is exactly the Section-110 bathtub argument with the direction window widened by
 `epsilon`; no phase-label assumption is used in the cumulative tangent theorem itself.
@@ -339,38 +339,38 @@ projective separation is at most `epsilon`.
 Let `gamma` be the tooth apex angle.  Triangle-freeness gives `gamma>pi/3`.  Since
 `epsilon<pi/6`, the branch `gamma<=epsilon` is impossible, so
 
-$$
+```math
 \pi-\gamma\le\epsilon,
 \qquad
 \gamma\ge\pi-\epsilon.
-$$
+```
 
 The base therefore satisfies
 
-$$
+```math
 b=2\sin(\gamma/2)
 \ge2\cos(\epsilon/2),
-$$
+```
 
 so every such double-leg tooth has base excess at least
 
-$$
+```math
 c_\epsilon=2\cos(\epsilon/2)-1.
-$$
+```
 
 The total micro-base excess is at most `(sigma/2+o(1))D`, hence there are at most
 `sigma D/(2c_epsilon)+o(D)` such teeth and at most
 
-$$
+```math
 {\sigma\over c_\epsilon}D+o(D)
-$$
+```
 
 selected endpoint occurrences.  As `epsilon->0`, `c_epsilon->1`.
 
 Combining the regular-tooth bound, the two `C_tail` allowances, the double-leg term,
 and the four global non-tooth capacities gives
 
-$$
+```math
 \boxed{
 \lim_{\epsilon\downarrow0}
 \limsup_{D\to\infty}
@@ -379,13 +379,13 @@ $$
 B(\sigma)
 :=Q(\sigma)+{175\over6}\sigma.
 }
-$$
+```
 
 The coefficient is correct:
 
-$$
+```math
 {143\over6}+{13\over3}+1={175\over6}.
-$$
+```
 
 ## 9. The final scalar inequality and endpoint arithmetic are correct
 
@@ -393,20 +393,20 @@ Divide the finite area-transport inequality by `D^2`, fix `epsilon`, let `D->inf
 then let `epsilon->0`.  Canonical `Delta_D=O(D)` makes the defect term vanish at fixed
 `epsilon`.  The previous sections give the necessary inequality
 
-$$
+```math
 \boxed{
 \lambda\sigma
 \ge
 (2-\sqrt3)
 \left[A(\sigma)-2C_T(\sigma)B(\sigma)\right]_+,
 }
-$$
+```
 
 with `lambda=sin(theta/2)`.
 
 Independent numerical reproduction at `sigma=0.0029` gives
 
-$$
+```math
 \begin{aligned}
 \theta&=2.703524766763678\ldots,\\
 \lambda&=0.9761078160770649\ldots,\\
@@ -416,19 +416,19 @@ Q(\sigma)&=0.0410840313512094\ldots,\\
 B&=0.1256673646845427\ldots,\\
 A-2C_TB&=0.0115111641133817\ldots .
 \end{aligned}
-$$
+```
 
 Therefore the signed-return lower bound forces normalized route excess
 
-$$
+```math
 0.00315990413899035\ldots,
-$$
+```
 
 strictly larger than the available `0.0029` by
 
-$$
+```math
 2.59904138990\times10^{-4}.
-$$
+```
 
 The guaranteed right side deteriorates monotonically as `sigma` increases on this
 small interval: the area floor decreases, `C_T` and `B` increase, and `lambda`
@@ -436,11 +436,11 @@ increases.  Thus endpoint contradiction closes the entire interval.
 
 The reported decoupled root
 
-$$
+```math
 \sigma_{SR}=0.0029068729001\ldots,
 \qquad
 \mu_{SR}=0.9761079748635\ldots
-$$
+```
 
 is consistent with the same monotone scalar equation.
 

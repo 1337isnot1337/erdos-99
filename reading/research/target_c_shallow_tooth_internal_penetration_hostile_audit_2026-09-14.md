@@ -20,21 +20,21 @@ low-`t` arithmetic composition.
 
 Section 124 uses the Type-II disk sandwich
 
-$$
+```math
 B(0,r_D)\subset F_D\subset B(0,R_{+,D}),
 \qquad r_D/R_{+,D}\to1,
-$$
+```
 
 and proves that on a loaded-hull boundary arc whose endpoints are a fixed Euclidean
 distance apart, all side directions lie in an angular window tending uniformly to
 zero.  Replacing the unit chord in its displayed estimate by a fixed bound `L` changes
 only
 
-$$
+```math
 2\arcsin(1/(2r_D))
 \quad\text{to}\quad
 2\arcsin(L/(2r_D)),
-$$
+```
 
 which is still `o(1)`.  Projection along the midpoint direction of the tangent window
 bounds the corresponding short boundary arclength by `L/cos(o(1))=O_L(1)`.  The
@@ -47,15 +47,15 @@ near-disk geometry; it does not assume `d_H(F_D,B)=o(1)` in absolute units.
 
 For a tooth base of length `s`, write `u=s/2`.  Since the base is nonunit,
 
-$$
+```math
 1/2<u\le1.
-$$
+```
 
 A loaded contact neighbor `c=(X,z)` of the apex satisfies `z=o(1)` by Lemma IP.1 and
 
-$$
+```math
 X^2=u^2+o(1).
-$$
+```
 
 The lower bound `u>=1/2` makes the square-root step uniform: `|X|=u+o(1)` even if
 `s-1` tends to zero.  Thus `c` lies `o(1)` from one of the two base endpoints.  Source
@@ -81,26 +81,26 @@ unloaded.
 
 For an `eta`-shallow tooth,
 
-$$
+```math
 a=(-\cos\alpha,0),\quad b=(\cos\alpha,0),\quad
 x=(0,\sin\alpha),
-$$
+```
 
 with the force-hull interior on the positive-normal side of the base.  The extra
 unloaded endpoint lies in the same trapped component and therefore in the force hull.
 The triangle-free inequalities against both loaded endpoints give the same positive
 inward component as in the previously committed shallow-tooth theorem:
 
-$$
+```math
 Y>\sin(\pi/3-\alpha).
-$$
+```
 
 Thus the endpoint depth is
 
-$$
+```math
 \sin\alpha+Y>
 \sin\alpha+\sin(\pi/3-\alpha).
-$$
+```
 
 For `alpha<pi/6` this last function is increasing, so its infimum on the allowed
 interval is `sqrt(3)/2`.  The sign is not reversible: the component endpoint is on the
@@ -114,15 +114,15 @@ if the inner endpoint were another shallow apex, its second shallow base would l
 the same fixed-scale loaded-hull neighborhood, so the two support lines would differ
 by `o(1)`.  The endpoint would then have depth simultaneously
 
-$$
+```math
 >{\sqrt3\over2}-o(1)
-$$
+```
 
 and
 
-$$
+```math
 <\sin(\pi/12),
-$$
+```
 
 an absolute contradiction.
 
@@ -133,43 +133,43 @@ terminal occurrences as new edges.
 
 The current low-`t` proof-only endpoint gives
 
-$$
+```math
 R(t_{42})=0.00576795,
 \qquad
 \delta={d_{out}\over D}\le0.002883975+o(1).
-$$
+```
 
 The exact tooth/long-side dichotomy gives, on its tooth branch,
 
-$$
+```math
 {N_2\over D}\ge0.4363893718701161\ldots-o(1).
-$$
+```
 
 For `eta=0.06`, the metric Markov estimate therefore gives
 
-$$
+```math
 {N_{sh}\over D}
 \ge0.4363893718701161\ldots
 -{0.002883975\over0.06}-o(1)
 =0.3883231218701161\ldots-o(1).
-$$
+```
 
 The verifier independently checks
 
-$$
+```math
 0.06<2(1-\cos(\pi/12)),
-$$
+```
 
-$$
+```math
 Y_{0.06}=0.7184921838594732\ldots,
-$$
+```
 
 and the product
 
-$$
+```math
 0.3883231218701161\ldots\,Y_{0.06}
 =0.27900712787558\ldots .
-$$
+```
 
 The arithmetic matches the theorem statement.
 

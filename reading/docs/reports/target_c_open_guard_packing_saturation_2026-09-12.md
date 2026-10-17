@@ -63,20 +63,20 @@ the least number of unit contacts among triangle-free global minimizers of
 its cardinality. Let `v` be any contact-nonisolated vertex and `Z` any subset
 of the **actual contact-isolated source vertices**. Set
 
-$$
+```math
  z=|Z|,\qquad R=A\setminus(Z\cup\{v\}),\qquad
  U_R=\{x:1<|x-r|<D\text{ for every }r\in R\}.
 \tag{3.1}
-$$
+```
 
 Here `R` is nonempty because a contact neighbor of `v` cannot belong to `Z`.
 The set `U_R` is open and bounded. Define the integer capacity
 
-$$
+```math
  M_D(U_R)=\max\{|B|:B\subset U_R\text{ finite},\quad
  |b-b'|\ge1\ (b\ne b'),\quad\operatorname{diam}B<D\}.
 \tag{3.2}
-$$
+```
 
 The empty set is admissible, with diameter zero. Capacity is finite: the
 radius-`1/2` open disks about an admissible set are disjoint and all lie in
@@ -86,25 +86,25 @@ an optimizer in an open configuration space.
 
 ### Theorem 3.1
 
-$$
+```math
                          M_D(U_R)\le z.                 \tag{3.3}
-$$
+```
 
 If no actual diameter pair of `A` is incident to an isolate, as in the
 canonical C-II normal form, then
 
-$$
+```math
                          \boxed{M_D(U_R)=z.}            \tag{3.4}
-$$
+```
 
 **Proof.** If (3.3) fails, select `z+1` points from an admissible packing and
 apply Section 2 in `U_R`. The resulting `B'` has all internal distances
 strictly between one and `D`. Its cross distances to `R` satisfy the same
 strict inequalities by (3.1). Hence
 
-$$
+```math
                           A'=R\cup B'
-$$
+```
 
 has exactly `|A|` distinct points, is unit-separated, has diameter at most
 `D`, and has no new unit contacts. Every triangle in its unit-contact graph
@@ -134,9 +134,9 @@ set `W`, without requiring strict distances or triangle-freeness.
 
 For every open `W subset U_R` with `diam W<=D`,
 
-$$
+```math
                          N_1(W)\le z.                   \tag{4.1}
-$$
+```
 
 If `Z subset W`, equality holds under the diameter-endpoint hypothesis of
 Theorem 3.1. In particular, one can take any open `W subset int(conv A)`
@@ -151,17 +151,17 @@ point of `conv A`, by the same endpoint-motion argument. Thus `W subset U_R`.
 
 Under the hypotheses of Corollary 4.1, with `a_0=sqrt(3)/2`,
 
-$$
+```math
                          |W|\le a_0 z.                  \tag{4.2}
-$$
+```
 
 **Proof.** Let `Lambda` be the triangular unit lattice, with fundamental
 parallelogram `F` of area `a_0`. For a uniformly translated lattice,
 Tonelli's theorem and tiling by `F+lambda` give
 
-$$
+```math
  \frac1{|F|}\int_F\#((t+\Lambda)\cap W)\,dt=\frac{|W|}{a_0}.
-$$
+```
 
 Each lattice intersection is a finite unit-separated packing. If
 `|W|>a_0 z`, some intersection has at least `z+1` points, contrary to
@@ -172,10 +172,10 @@ For a convex inactive container `C subset conv A` holding exactly the
 selected isolate population in its interior, with every retained point
 outside `int C`, the open inner parallel set
 
-$$
+```math
                  C_{-1}=\{x\in\operatorname{int}C:
                                   \operatorname{dist}(x,\partial C)>1\}
-$$
+```
 
 is an allowable `W`. The same assertion holds if additional removed isolates
 were on its boundary. It requires the stated source partition: one must not

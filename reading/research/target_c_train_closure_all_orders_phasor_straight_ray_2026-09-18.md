@@ -36,47 +36,47 @@ No theorem-state file is changed.
 
 Let
 
-$$
+```math
 \Psi:(\mathbb R/2\pi\mathbb Z)^T\to\mathbb R^{2f}
-$$
+```
 
 be the bounded-exceptional-face closure map.  Fix a coherent unit direction `u_tau`
 for every complete stopped train `tau`, and occurrence signs
 `epsilon_{F tau} in {+1,-1}` so that
 
-$$
+```math
 \Psi_F(\theta)
 =\sum_{\tau\sim F}\epsilon_{F\tau}R_{\theta_\tau}u_\tau.
 \tag{1.1}
-$$
+```
 
 At the canonical source, `Psi(0)=0`.  Its derivative is the audited face-closure
 matrix
 
-$$
+```math
 C=D\Psi(0).
-$$
+```
 
 Fix a dual closure mode
 
-$$
+```math
 y=(y_F)_F\in\ker C^T.
-$$
+```
 
 For every train put
 
-$$
+```math
 v_\tau(y)
 :=\sum_{F:\tau\sim F}\epsilon_{F\tau}y_F.
-$$
+```
 
 The transpose closure equation says `v_tau(y)` is parallel to `u_tau`, so there is a
 unique real scalar `lambda_tau(y)` with
 
-$$
+```math
 \boxed{v_\tau(y)=\lambda_\tau(y)u_\tau.}
 \tag{1.2}
-$$
+```
 
 For an outer--outer train, `lambda_tau(y)=0`.
 
@@ -88,65 +88,65 @@ For an outer--outer train, `lambda_tau(y)=0`.
 
 If `theta` is any exact train-angle closure,
 
-$$
+```math
 \Psi(\theta)=0,
-$$
+```
 
 then every `y in ker C^T` satisfies
 
-$$
+```math
 \boxed{
 \sum_\tau\lambda_\tau(y)\cos\theta_\tau=0,
 \qquad
 \sum_\tau\lambda_\tau(y)\sin\theta_\tau=0.
 }
 \tag{2.1}
-$$
+```
 
 Equivalently, after identifying the angle circle with complex phases,
 
-$$
+```math
 \boxed{
 \sum_\tau\lambda_\tau(y)e^{i\theta_\tau}=0.
 }
 \tag{2.2}
-$$
+```
 
 ### Proof
 
 Contract the exact closure equations with `y`:
 
-$$
+```math
 \begin{aligned}
 0
 &=\sum_F y_F\cdot\Psi_F(\theta)\\
 &=\sum_\tau v_\tau(y)\cdot R_{\theta_\tau}u_\tau\\
 &=\sum_\tau\lambda_\tau(y)\cos\theta_\tau.
 \end{aligned}
-$$
+```
 
 Now contract the same exact closure equations with the blockwise-rotated test vector
 `Jy=(Jy_F)_F`.  It need not belong to `ker C^T`; no such assumption is used.  Since
 `Jv_tau=lambda_tau Ju_tau`,
 
-$$
+```math
 \begin{aligned}
 0
 &=\sum_F Jy_F\cdot\Psi_F(\theta)\\
 &=\sum_\tau Jv_\tau(y)\cdot R_{\theta_\tau}u_\tau\\
 &=\sum_\tau\lambda_\tau(y)\sin\theta_\tau.
 \end{aligned}
-$$
+```
 
 This proves (2.1)--(2.2).  The statement is finite and exact.  It is not a Taylor
 approximation.
 
 At `theta=0`, (2.2) gives the already proved rotation identity
 
-$$
+```math
 \sum_\tau\lambda_\tau(y)=0.
 \tag{2.3}
-$$
+```
 
 Differentiating (2.2) along a smooth exact path recovers the first-order identity and
 the diagonal Hessian obstruction from the preceding note.  Thus the Hessian theorem is
@@ -156,14 +156,14 @@ the quadratic truncation of one exact signed-phasor closure law.
 
 For every exact closure,
 
-$$
+```math
 \boxed{
 \sum_{\tau<\sigma}
 \lambda_\tau\lambda_\sigma
 \bigl(1-\cos(\theta_\tau-\theta_\sigma)\bigr)=0.
 }
 \tag{2.4}
-$$
+```
 
 Indeed, square the modulus in (2.2) and subtract the square of (2.3).
 
@@ -173,24 +173,24 @@ Suppose a nonzero dual coefficient vector `lambda(y)` has exactly one positive
 coordinate, or exactly one negative coordinate.  Then every sufficiently small exact
 closure has
 
-$$
+```math
 \theta_\tau=\theta_\sigma
-$$
+```
 
 for all trains `tau,sigma` in the support of `lambda(y)`.
 
 For example, if `lambda_p=M>0` is the unique positive coefficient and
 `lambda_j=-m_j<0` otherwise on the support, then (2.3) gives
 
-$$
+```math
 M=\sum_jm_j.
-$$
+```
 
 Equation (2.2) becomes
 
-$$
+```math
 M e^{i\theta_p}=\sum_jm_j e^{i\theta_j}.
-$$
+```
 
 After division by `M`, a convex combination of unit complex numbers has modulus one.
 Equality in the triangle inequality forces all phases in the combination to coincide
@@ -207,29 +207,29 @@ must have at least two positive and at least two negative nonzero coefficients.
 Identify `R^2` with `C`.  For a real train-speed vector `x in R^T`, consider the
 straight angle ray
 
-$$
+```math
 \theta(t)=tx.
-$$
+```
 
 For one bounded exceptional face `F`, and for each real number `a` appearing among the
 incident speeds, define the oriented side-vector sum
 
-$$
+```math
 S_{F,a}(x)
 :=\sum_{\substack{\tau\sim F\\x_\tau=a}}
 \epsilon_{F\tau}u_\tau.
 \tag{3.1}
-$$
+```
 
 ### Theorem 3.1 — slope-group criterion
 
 The face `F` remains exactly closed for every `t` in an interval around zero if and
 only if
 
-$$
+```math
 \boxed{S_{F,a}(x)=0}
 \tag{3.2}
-$$
+```
 
 for every distinct incident speed `a`.
 
@@ -241,12 +241,12 @@ group on that face.
 
 In complex notation,
 
-$$
+```math
 \Psi_F(tx)=\sum_{\tau\sim F}
 \epsilon_{F\tau}u_\tau e^{itx_\tau}
 =\sum_{a\in A_F}S_{F,a}(x)e^{ita},
 \tag{3.3}
-$$
+```
 
 where `A_F` is the finite set of distinct incident speeds.
 
@@ -254,10 +254,10 @@ If every group sum vanishes, (3.3) is identically zero.  Conversely suppose (3.3
 vanishes on an interval.  If `A_F={a_1,...,a_m}`, differentiate at `t=0` for orders
 `0,...,m-1`.  The resulting system is
 
-$$
+```math
 \sum_{j=1}^m (ia_j)^k S_{F,a_j}(x)=0,
 \qquad k=0,\ldots,m-1.
-$$
+```
 
 The coefficient matrix is a Vandermonde matrix on the distinct real numbers `a_j`, so
 it is invertible.  Hence every `S_{F,a_j}(x)=0`.  This proves the criterion.
@@ -276,18 +276,18 @@ every quadratic dual test.  There is no higher-order obstruction for such a vect
 
 Suppose
 
-$$
+```math
 s\in\ker C,
 \qquad
 s_\tau\in\{+1,-1\}
-$$
+```
 
 for every train.  Then
 
-$$
+```math
 \boxed{\Psi(ts)=0\quad\text{for every real }t.}
 \tag{4.1}
-$$
+```
 
 The same statement holds when every coordinate has one common absolute value `c`,
 after rescaling `t`.
@@ -296,19 +296,19 @@ after rescaling `t`.
 
 For each face,
 
-$$
+```math
 R_{ts_\tau}u_\tau
 =\cos t\,u_\tau+s_\tau\sin t\,Ju_\tau.
-$$
+```
 
 Therefore
 
-$$
+```math
 \Psi_F(ts)
 =\cos t\,\Psi_F(0)
 +\sin t\,(Cs)_F
 =0.
-$$
+```
 
 So the equal-magnitude observation is an exact finite integration theorem, not merely a
 second-order compatibility test.
@@ -323,11 +323,11 @@ near-pure pentagonal core.
 Let `F` be a strictly convex bounded pentagonal face of the complete unit-contact
 graph.  Write its five oriented unit side vectors in boundary order as
 
-$$
+```math
 w_1,\ldots,w_5,
 \qquad
 \sum_{j=1}^5w_j=0.
-$$
+```
 
 The proved bounded-pentagon lemma says no two side vectors are projectively parallel.
 
@@ -365,37 +365,37 @@ inside such a component.
 
 Let
 
-$$
+```math
 X:=Q-f=\sum_F(\deg F-5)\ge0
 \tag{6.1}
-$$
+```
 
 be the exact bounded-exceptional-face degree excess, and let `S` be the set of bounded
 exceptional faces of degree at least six.  Then
 
-$$
+```math
 |S|\le X
-$$
+```
 
 and
 
-$$
+```math
 \sum_{F\in S}\deg F
 =5|S|+\sum_{F\in S}(\deg F-5)
 \le6X.
 \tag{6.2}
-$$
+```
 
 Construct a graph `Gamma_5` whose vertices are complete trains incident to at least one
 bounded pentagonal exceptional face, joining all train variables that occur on the
 same pentagon.  Corollary 5.2 implies:
 
-$$
+```math
 \boxed{
  x_\tau\text{ is constant on every connected component of }\Gamma_5
 }
 \tag{6.3}
-$$
+```
 
 for every exact straight-ray speed vector `x`.
 
@@ -416,19 +416,19 @@ exact path need not be a straight ray.
 
 In the proof-only live terminal window from the detour-pinching note,
 
-$$
+```math
 {Q-f\over D}<0.000141+o(1).
-$$
+```
 
 Hence the entire non-outer--outer defect support on which an exact straight ray can
 avoid pentagon-component common speed has size
 
-$$
+```math
 \boxed{
 < (0.000846+o(1))D.
 }
 \tag{6.4}
-$$
+```
 
 The constant is simply `6*0.000141`; no numerical optimization is involved.
 

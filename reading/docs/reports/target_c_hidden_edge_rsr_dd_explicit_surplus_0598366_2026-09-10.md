@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_hidden_edge_rsr_dd_explicit_surplus_0598366_2026-09-10.md) · source SHA-256 `ad9e0bd0fea9f6c2b7e6b45f9907516a81838a005a8913ca3fba6bb390e2bd8f`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-47469C6DE3CC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_hidden_edge_rsr_dd_explicit_surplus_0598366_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=7fe52b00d1e7a03d0c16fd37dc458da0ec2a375a; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -19,7 +21,7 @@
 
 HE proves the uniform attachment-cell capacity
 
-$$
+```math
 \boxed{
 \limsup\frac1{D^2}
 \sum_r\operatorname{area}(\operatorname{conv}A_r)
@@ -28,46 +30,46 @@ $$
 c_{HE}:=\frac\pi4-\frac3{4000},
 }
 \tag{HX.1}
-$$
+```
 
 for every post-ZF sequence with
 
-$$
+```math
 \lambda:=\limsup\frac{e_{BB}+2s_C}{D}<3/5.
-$$
+```
 
 Re-running the RSR/DD optimizer with this coefficient gives an exact threshold
 `lambda_HE` satisfying
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
 \ge\lambda_{HE}>0.598366.
 }
 \tag{HX.2}
-$$
+```
 
 Numerically, for orientation only,
 
-$$
+```math
 \boxed{
 y_{HE}=1.5245283152144573698\ldots,}
 \tag{HX.3}
-$$
+```
 
-$$
+```math
 \boxed{
 p_{HE}=3.0231381569965496279\ldots,}
 \tag{HX.4}
-$$
+```
 
-$$
+```math
 \boxed{
 \lambda_{HE}=0.5983667958145539442\ldots .
 }
 \tag{HX.5}
-$$
+```
 
 The exact theorem is HX.2.  A companion `fractions.Fraction` verifier certifies the
 six-decimal extension with no floating-point dependency.
@@ -78,44 +80,44 @@ six-decimal extension with no floating-point dependency.
 
 Retain
 
-$$
+```math
 \Phi(y)=\frac{y+\sin y}{4},
 \qquad
 c_R=\frac\pi{(\pi-2)^2},
 \qquad
 \Psi(p)=c_R\left(\frac p2-1\right)^2,
 \tag{1.1}
-$$
+```
 
 and
 
-$$
+```math
 A(y,p)=\max\{\Phi(y),\Psi(p)\}.
 \tag{1.2}
-$$
+```
 
 As in RX, it is safe to enlarge the DB domain to
 
-$$
+```math
 \widetilde{\mathcal R}
 =
 \{(y,p):2\rho\le y\le\pi,\ y\le p\le\min\{2y,\pi\}\}.
 \tag{1.3}
-$$
+```
 
 For a candidate surplus `lambda<3/5`, HE and the two RD cavity estimates give
 
-$$
+```math
 \boxed{
 A(y,p)-c_{HE}\lambda^2
 \le\frac{(\lambda+p-y)^2}{4\pi},
 }
 \tag{1.4}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 A(y,p)-c_{HE}\lambda^2
 \le
@@ -123,31 +125,31 @@ A(y,p)-c_{HE}\lambda^2
 \frac2{\sqrt3}y^{3/2}\sqrt{2y-p}.
 }
 \tag{1.5}
-$$
+```
 
 If `lambda>=3/5`, HX.2 is immediate, so these inequalities cover every sequence that
 could violate the claimed bound.
 
 Define `R_HE(A,m)` as the positive root of
 
-$$
+```math
 \boxed{
 (4\pi c_{HE}+1)\lambda^2
 +2m\lambda+m^2-4\pi A=0.
 }
 \tag{1.6}
-$$
+```
 
 Then the JC threshold is
 
-$$
+```math
 J_{HE}(y,p)=R_{HE}(A(y,p),p-y),
 \tag{1.7}
-$$
+```
 
 and the DD threshold is
 
-$$
+```math
 D_{HE}(y,p)
 =
 \sqrt{
@@ -156,14 +158,14 @@ D_{HE}(y,p)
 \right\}
 }.
 \tag{1.8}
-$$
+```
 
 Every survivor in the relevant range satisfies
 
-$$
+```math
 \lambda\ge\max\{J_{HE}(y,p),D_{HE}(y,p)\}.
 \tag{1.9}
-$$
+```
 
 ---
 
@@ -171,11 +173,11 @@ $$
 
 The FSDB/RSR area crossover is unchanged:
 
-$$
+```math
 \boxed{
 p_e(y)=2+2\sqrt{\frac{\Phi(y)}{c_R}}.}
 \tag{2.1}
-$$
+```
 
 On `p<=p_e(y)`, the area currency is `Phi(y)`.  For fixed `y`:
 
@@ -185,16 +187,16 @@ On `p<=p_e(y)`, the area currency is `Phi(y)`.  For fixed `y`:
 For `p>=p_e(y)`, both thresholds strictly increase.  The DD statement is immediate.
 For JC, on the RSR-active branch
 
-$$
+```math
 \Psi(p)-c_{HE}\lambda^2
 =\frac{(\lambda+p-y)^2}{4\pi}.
-$$
+```
 
 Implicit differentiation gives a positive `p` derivative precisely when
 
-$$
+```math
 \pi c_R(p-2)>\lambda+p-y.
-$$
+```
 
 As in RSJ/RX, `p>3`, `c_R>2`, `lambda<1`, and `p-y<=pi`, so the inequality holds
 with room.
@@ -207,75 +209,76 @@ Therefore no fixed-`y` minimizer lies to the right of `p_e(y)`.
 
 For `y>=y_R`, put
 
-$$
+```math
 u(y)=2y-p_e(y)
-$$
+```
 
 and
 
-$$
+```math
 E(y)=
 \Phi(y)-\frac2{\sqrt3}y^{3/2}\sqrt{u(y)}.
 \tag{3.1}
-$$
+```
 
 RX proves `E'(y)<0` on `[y_R,pi/2]`.
 
 Define
 
-$$
+```math
 \boxed{
 d_{HE}(y)=\sqrt{\max\{0,E(y)/c_{HE}\}},}
 \tag{3.2}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 r_{HE}(y)=R_{HE}(\Phi(y),p_e(y)-y).}
 \tag{3.3}
-$$
+```
 
 Thus `d_HE` strictly decreases until it reaches zero.
 
 For `r_HE`, let `m(y)=p_e(y)-y`.  RX gives `m'(y)<0`.  Differentiating
 
-$$
+```math
 \Phi(y)-c_{HE}r_{HE}^2
 =\frac{(r_{HE}+m)^2}{4\pi}
-$$
+```
 
 gives
 
-$$
+```math
 \left[
 2c_{HE}r_{HE}+\frac{r_{HE}+m}{2\pi}
 \right]r_{HE}'
 =
 \Phi'(y)-\frac{(r_{HE}+m)m'}{2\pi}>0.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{r_{HE}'(y)>0.}
 \tag{3.4}
-$$
+```
 
 At `y=y_R`, the DD detour is zero, so `d_HE(y_R)>r_HE(y_R)`.  At
 `y=pi/2`, RX proves `E<0`, so `d_HE=0<r_HE`.  Therefore there is a unique
 
-$$
+```math
 \boxed{y_{HE}\in(y_R,\pi/2)}
 \tag{3.5}
-$$
+```
 
 with
 
-$$
+```math
 \boxed{d_{HE}(y_{HE})=r_{HE}(y_{HE}).}
 \tag{3.6}
+```
 
 ---
 
@@ -284,43 +287,43 @@ $$
 For `y<=y_HE`, let `lambda(y)` be the unique pre-crossover point where the JC and DD
 thresholds agree.  Put
 
-\[
+```math
 S=\Phi(y)-c_{HE}\lambda^2.
 \tag{4.1}
-$$
+```
 
 The equality equations give
 
-$$
+```math
 p-y=2\sqrt{\pi S}-\lambda,
 \qquad
 2y-p=\frac{3S^2}{4y^3}.
 \tag{4.2}
-$$
+```
 
 Eliminating `p`,
 
-$$
+```math
 F(y,\lambda)
 :=
 y+\lambda-2\sqrt{\pi S}-\frac{3S^2}{4y^3}=0.
 \tag{4.3}
-$$
+```
 
 At fixed `y`,
 
-$$
+```math
 F_\lambda
 =1+
 \frac{2c_{HE}\sqrt\pi\,\lambda}{\sqrt S}
 +
 \frac{3c_{HE}\lambda S}{y^3}>0.
 \tag{4.4}
-$$
+```
 
 At fixed `lambda`,
 
-$$
+```math
 F_y
 =1-
 \frac{\sqrt\pi\,\Phi'(y)}{\sqrt S}
@@ -329,34 +332,34 @@ F_y
 +
 \frac{9S^2}{4y^4}.
 \tag{4.5}
-$$
+```
 
 The HE system is pointwise stronger than RX, so every crossing satisfies the already
 certified
 
-$$
+```math
 \lambda>299/500.
 \tag{4.6}
-$$
+```
 
 Also
 
-$$
+```math
 y>7/5,
 \qquad
 \Phi'(y)<7/25.
 \tag{4.7}
-$$
+```
 
 Since `pi>3`,
 
-$$
+```math
 c_{HE}>\frac34-\frac3{4000}.
-$$
+```
 
 Together with `Phi<9/14` and (4.6),
 
-$$
+```math
 S
 <
 \frac9{14}
@@ -365,39 +368,39 @@ S
 \left(\frac{299}{500}\right)^2
 <\frac38.
 \tag{4.8}
-$$
+```
 
 Equation (4.2) then gives `2y-p<1/25`, hence `p-y>34/25`.  JC equality and
 `pi<22/7` give
 
-$$
+```math
 S>3/10.
 \tag{4.9}
-$$
+```
 
 As in BRD/BF,
 
-$$
+```math
 \sqrt{\pi/S}<13/4.
-$$
+```
 
 Discarding the positive final term in (4.5),
 
-$$
+```math
 F_y
 >
 1-rac{91}{100}-\frac{45}{784}
 =
 \boxed{\frac{639}{19600}>0.}
 \tag{4.10}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{\lambda'(y)=-F_y/F_\lambda<0.}
 \tag{4.11}
-$$
+```
 
 The pre-transition optimum strictly decreases.
 
@@ -409,51 +412,54 @@ Before `y_HE`, the fixed-`y` minimum is the JC/DD crossing and decreases with `y
 After `y_HE`, the fixed-`y` minimum is the area-crossover JC value `r_HE(y)` and
 increases with `y`.  Therefore the unique global minimum is
 
-$$
+```math
 \boxed{
 (y,p)=(y_{HE},p_e(y_{HE})).
 }
 \tag{5.1}
+```
 
 Define
 
-\[
+```math
 \boxed{
 \lambda_{HE}:=d_{HE}(y_{HE})=r_{HE}(y_{HE}).
 }
 \tag{5.2}
+```
 
 Equivalently, `(y,p,lambda)` is the unique solution in
 
-\[
+```math
 y_R<y<\pi/2,
 \qquad p=p_e(y),
 \qquad 0<\lambda<3/5
-$$
+```
 
 of
 
-$$
+```math
 \boxed{
 \Phi(y)=c_R\left(\frac p2-1\right)^2,
 }
 \tag{5.3}
-$$
+```
 
-$$
+```math
 \boxed{
 \Phi(y)-c_{HE}\lambda^2
 =\frac{(\lambda+p-y)^2}{4\pi},
 }
 \tag{5.4}
-$$
+```
 
-$$
+```math
 \boxed{
 \Phi(y)-c_{HE}\lambda^2
 =\frac2{\sqrt3}y^{3/2}\sqrt{2y-p}.
 }
 \tag{5.5}
+```
 
 ---
 
@@ -461,47 +467,47 @@ $$
 
 Take the rational point
 
-\[
+```math
 \boxed{y_0=\frac{190566}{125000}=1.524528.}
 \tag{6.1}
-$$
+```
 
 The companion verifier uses exact `Fraction` arithmetic with Machin bounds for `pi`,
 alternating Taylor bounds for `sin(y_0)`, and rational square-root brackets.  It proves
 
-$$
+```math
 0.5115690450
 <\sqrt{\Phi(y_0)/c_R}
 <0.5115690451.
 \tag{6.2}
-$$
+```
 
 At `lambda=0.598366`, an outward-rounded evaluation of the JC residual is strictly
 negative, while at `lambda=0.598367` an inward-rounded evaluation is strictly positive.
 Therefore
 
-$$
+```math
 \boxed{
 0.598366<r_{HE}(y_0)<0.598367.
 }
 \tag{6.3}
-$$
+```
 
 The same verifier proves
 
-$$
+```math
 \boxed{d_{HE}(y_0)>0.598367.}
 \tag{6.4}
-$$
+```
 
 Hence `d_HE(y_0)>r_HE(y_0)`, so `y_0<y_HE`.  Since `r_HE` is strictly increasing,
 
-$$
+```math
 \lambda_{HE}
 =r_{HE}(y_{HE})
 >r_{HE}(y_0)
 >0.598366.
-$$
+```
 
 This proves HX.2.
 
@@ -511,28 +517,28 @@ This proves HX.2.
 
 High-precision solution of (5.3)--(5.5) gives
 
-$$
+```math
 y_{HE}
 =1.52452831521445736977160144476\ldots,
-$$
+```
 
-$$
+```math
 p_{HE}
 =3.02313815699654962788235236509\ldots,
-$$
+```
 
 and
 
-$$
+```math
 \lambda_{HE}
 =0.59836679581455394420967160068\ldots .
-$$
+```
 
 The explicit improvement over the BVE feedback threshold is approximately
 
-$$
+```math
 2.6553\times10^{-5}.
-$$
+```
 
 ---
 

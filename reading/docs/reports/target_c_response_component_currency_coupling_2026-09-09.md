@@ -18,75 +18,75 @@
 
 Let
 
-$$
+```math
 \varepsilon
 :=\sum_{b<k}c_{bk}-1
 =\frac12\operatorname{tr}(\Lambda-L_H)\ge0
-$$
+```
 
 be the C41 response-conductance defect. Let
 
-$$
+```math
 L:=e_{BB}+2s_C,
 \qquad
 k:=d_H+s_Z.
-$$
+```
 
 ZK defines
 
-$$
+```math
 L_2:=6-3k+L
-$$
+```
 
 and proves
 
-$$
+```math
 \sum_r\delta_r\le L_2.
-$$
+```
 
 C40 gives every harmonic attachment set
 
-$$
+```math
 \operatorname{diam}(A_r)\le\delta_r+2.
-$$
+```
 
 The full response is the sum of direct loaded-loaded contacts and the Kron responses of the unloaded components. Therefore every positive response conductance is supported on a loaded pair of Euclidean distance at most
 
-$$
+```math
 L_2+2.
-$$
+```
 
 C41's exact coordinate-energy identity is
 
-$$
+```math
 \sum_{b<k}c_{bk}|b-k|^2=D^2.
-$$
+```
 
 Hence
 
-$$
+```math
 D^2
 \le
 (L_2+2)^2\sum_{b<k}c_{bk}
 =(L_2+2)^2(1+\varepsilon).
-$$
+```
 
 This gives the exact finite inequality
 
-$$
+```math
 \boxed{
 L_2+2
 \ge
 \frac{D}{\sqrt{1+\varepsilon}}.
 }
 \tag{RCC.1}
-$$
+```
 
 Substituting `L_2=6-3k+e_BB+2s_C` yields:
 
 ### Theorem RCC — response/currency coupling
 
-$$
+```math
 \boxed{
 e_{BB}+2s_C
 \ge
@@ -95,41 +95,41 @@ e_{BB}+2s_C
 +3(d_H+s_Z).
 }
 \tag{RCC.2}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
 \frac1{\sqrt{1+\varepsilon}}-rac8D.
 }
 \tag{RCC.3}
-$$
+```
 
 Thus any sequence with `epsilon ->0` already satisfies
 
-$$
+```math
 \boxed{
 \liminf\frac{e_{BB}+2s_C}{D}\ge1.
 }
 \tag{RCC.4}
-$$
+```
 
 The C66 near-zero phase assumes the stronger
 
-$$
+```math
 D\varepsilon\to0,
-$$
+```
 
 so it lies entirely in the asymptotic high pinned/contact-surplus region
 
-$$
+```math
 \boxed{
 e_{BB}+2s_C\ge D-o(D).}
 \tag{RCC.5}
-$$
+```
 
 This is more than twice the currently explicit unconditional ENS floor `0.48072358047D` on that response phase.
 
@@ -139,41 +139,41 @@ This is more than twice the currently explicit unconditional ENS floor `0.480723
 
 C41 decomposes the contact Dirichlet response as
 
-$$
+```math
 \Lambda
 =L_{BB}^{dir}+\sum_r\Lambda^{(r)}.
 \tag{1.1}
-$$
+```
 
 A direct loaded-loaded contact contributes response only on its two endpoints, which are unit distance apart.
 
 For a component contribution `Lambda^(r)`, C41 says the off-diagonal conductance support is the complete graph on its attachment set `A_r`. C40 proves
 
-$$
+```math
 \operatorname{diam}(A_r)\le\delta_r+2.
 \tag{1.2}
-$$
+```
 
 Since every `delta_r>=0`,
 
-$$
+```math
 \delta_r+2
 \le
 2+\sum_s\delta_s
 \le
 L_2+2.
 \tag{1.3}
-$$
+```
 
 Also a direct loaded-loaded contact has length `1<=L_2+2` because `L_2>=0`.
 
 Consequently
 
-$$
+```math
 \boxed{
 c_{bk}>0\Longrightarrow |b-k|\le L_2+2.}
 \tag{RCC.6}
-$$
+```
 
 This is a global response-support diameter bound extracted from the component ledger.
 
@@ -183,36 +183,36 @@ This is a global response-support diameter bound extracted from the component le
 
 C41 proves exactly
 
-$$
+```math
 \sum_{b<k}c_{bk}|b-k|^2=D^2.
 \tag{2.1}
-$$
+```
 
 Use RCC.6:
 
-$$
+```math
 \begin{aligned}
 D^2
 &=\sum_{b<k}c_{bk}|b-k|^2\\
 &\le(L_2+2)^2\sum_{b<k}c_{bk}\\
 &=(L_2+2)^2(1+\varepsilon).
 \end{aligned}
-$$
+```
 
 All factors are nonnegative, so
 
-$$
+```math
 L_2+2\ge D/\sqrt{1+\varepsilon},
-$$
+```
 
 which is RCC.1.
 
 Now
 
-$$
+```math
 L_2+2
 =8-3(d_H+s_Z)+e_{BB}+2s_C.
-$$
+```
 
 Rearrange to obtain RCC.2.
 
@@ -224,47 +224,47 @@ Rearrange to obtain RCC.2.
 
 If
 
-$$
+```math
 \varepsilon=o(1),
-$$
+```
 
 then
 
-$$
+```math
 \frac1{\sqrt{1+\varepsilon}}=1-o(1),
-$$
+```
 
 so RCC.3 gives
 
-$$
+```math
 e_{BB}+2s_C\ge D-o(D).
-$$
+```
 
 Thus no post-ZF sequence can simultaneously have
 
-$$
+```math
 \varepsilon=o(1)
-$$
+```
 
 and
 
-$$
+```math
 \limsup\frac{e_{BB}+2s_C}{D}<1.
-$$
+```
 
 ### C66 near-zero phase
 
 C66's difficult branch has
 
-$$
+```math
 D\varepsilon\to0.
-$$
+```
 
 RCC forces that branch into
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}\ge1.
-$$
+```
 
 So all scalar/cavity configurations near the ENS threshold are automatically disjoint from the C66 near-zero-response regime. The two frontiers should no longer be attacked as though they could occur simultaneously.
 
@@ -272,9 +272,9 @@ So all scalar/cavity configurations near the ENS threshold are automatically dis
 
 RCC.2 retains the exact positive correction
 
-$$
+```math
 3(d_H+s_Z).
-$$
+```
 
 Any linear density of diameter-tree components or extra mixed dependencies pushes the required pinned/contact currency strictly above the response-only value.
 
@@ -284,11 +284,11 @@ Any linear density of diameter-tree components or extra mixed dependencies pushe
 
 HSR proves the componentwise refinement
 
-$$
+```math
 S_r
 \le
 \frac{L_r^2}{D^2-L_r^2}E_r,
-$$
+```
 
 where `S_r` is component contact-stress mass and `E_r` its C41 response defect.
 
@@ -296,13 +296,13 @@ RCC is the global support-radius consequence obtained without tracking the stres
 
 This interpretation is useful:
 
-$$
+```math
 \boxed{
 \varepsilon\to0
 \quad\Longrightarrow\quad
 \text{some harmonic attachment geometry spans }D-o(D)
 }
-$$
+```
 
 unless direct loaded-loaded response itself is large, in which case `epsilon` cannot be small because those pairs have length one.
 
@@ -312,17 +312,17 @@ unless direct loaded-loaded response itself is large, in which case `epsilon` ca
 
 ENS proves unconditionally
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}
 \ge0.48072358047.
-$$
+```
 
 RCC proves the stronger conditional floor
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}
 \ge1
-$$
+```
 
 whenever `epsilon->0`.
 
@@ -349,9 +349,9 @@ This is a qualitative improvement over treating the response and cavity branches
 
 RCC moves the C66 near-zero phase into the high-surplus regime. The next useful question is whether the exact identities ZU/ZK/ZT permit
 
-$$
+```math
 e_{BB}+2s_C\ge D-o(D)
-$$
+```
 
 together with C66's near-star diameter reaction and `D epsilon->0`.
 

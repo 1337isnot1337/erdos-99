@@ -19,25 +19,25 @@ inequalities are valid and do not close C-II. Canonical state is unchanged.
 The reviewed argument assumes the audited two-half-disk alternative, so each dominant
 strict-rhombus group has area
 
-$$
+```math
 A_{i,D}=(\pi/8-o(1))D^2
-$$
+```
 
 inside a half-disk of ambient diameter `D`, with complement area `o(D^2)`. The imported
 physical-boundary transport theorem therefore gives
 `sum_j rho_{i,j,D} >= D-o(D)` and
 
-$$
+```math
 D\left(P_{i,D}-2\sum_j\rho_{i,j,D}\right)
 >(4-2\sqrt3)A_{i,D}.
-$$
+```
 
 Dividing by `D` gives
 
-$$
+```math
 P_{i,D}\ge
 \left(2+\frac\pi8(4-2\sqrt3)-o(1)\right)D.
-$$
+```
 
 The two applications are separate and do not identify the two group boundaries. The
 constant `gamma=pi(4-2sqrt(3))/8` is correct.
@@ -58,30 +58,30 @@ boundary occurrence of either dominant group is consequently a distinct physical
 boundary occurrence of the full strict-rhombus complex. Repeated vertices do not
 matter because the count is by edge occurrences. Hence
 
-$$
+```math
 P_{1,D}+P_{2,D}\le P_{R,D}.
-$$
+```
 
 Every full-complex boundary edge has either the unbounded face or a bounded
 nonquadrilateral face on its other side. Therefore
 
-$$
+```math
 P_{R,D}\le b_D+4f_D+Q_D.
-$$
+```
 
 Using the exact Type-II ledger `b_D+Q_D=2(q_D-k_D)` gives
 
-$$
+```math
 2\frac{q_D-k_D}{D}+4\frac{f_D}{D}
 \ge4+2\gamma-o(1),
-$$
+```
 
 or equivalently
 
-$$
+```math
 \frac{q_D-k_D}{D}+2\frac{f_D}{D}
 \ge2+\gamma-o(1).
-$$
+```
 
 No interface term has been silently discarded; it is removed only by the explicit
 same-label/no-cross-edge argument.
@@ -93,9 +93,9 @@ same-label/no-cross-edge argument.
 The second report defines `R_i` to contain all local strict-rhombus faces in group
 `G_i`, not a truncated area subfamily. Section 129 supplies
 
-$$
+```math
 N_{miss}=R_4-\sum_rR_r\le3c_I+5=o(D).
-$$
+```
 
 If an occurrence in the boundary of `R_1` or `R_2` has a strict rhombus on the other
 side outside its group, that opposite rhombus cannot be local: if it were local, the
@@ -103,9 +103,9 @@ shared-edge label argument would put it in the same harmonic component and hence
 same dominant group. Thus every such occurrence is incident to one of the `N_miss`
 missing rhombi. Four side occurrences per missing rhombus give
 
-$$
+```math
 I_D\le4N_{miss}\le12c_I+20=o(D).
-$$
+```
 
 This remains valid when one missing rhombus borders both groups; the estimate counts
 side occurrences rather than distinct rhombi or edges.
@@ -114,10 +114,10 @@ side occurrences rather than distinct rhombi or edges.
 
 The imported physical-interface transport inequality gives
 
-$$
+```math
 \frac{I_D}{D}\ge
 \left[4+2\gamma-2\frac{q-k}{D}-4\frac fD-o(1)\right]_+.
-$$
+```
 
 Combining this with `I_D=o(D)` yields the displayed
 `(q-k)/D+2f/D >=2+gamma-o(1)`. The endpoint arithmetic verifier was also rerun and

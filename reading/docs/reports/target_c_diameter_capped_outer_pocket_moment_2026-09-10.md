@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_capped_outer_pocket_moment_2026-09-10.md) · source SHA-256 `49b291abf45de19411a669912d4d7f1bceeec3ea9240581fee218b0a9039295b`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-84D19E54EAE5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — source diameter caps the outer-pocket cubic moment
 
@@ -18,22 +20,22 @@
 DD bounded the total outer-pocket area by a cubic moment of the old-contact chain
 lengths, then relaxed that moment by
 
-$$
+```math
 \sum_P\ell_P^3\le\left(\sum_P\ell_P\right)^3.
-$$
+```
 
 For a diameter-`D` source this loses a decisive finite constraint. Every outer-pocket
 force-hull chord joins two source points, so its length is at most `D`. If
 
-$$
+```math
 d_P:=\ell_P-s_P
-$$
+```
 
 is the chain--chord detour, then
 
-$$
+```math
 \ell_P\le D+d_P.
-$$
+```
 
 Consequently only the total normalized detour can support chain length above `D`.
 This gives an exact extremal moment theorem.
@@ -44,63 +46,63 @@ This gives an exact extremal moment theorem.
 
 For each outer pocket `P`, DD notation gives
 
-$$
+```math
 \ell_P=\text{old unit-contact chain length},
 \qquad
 s_P=\text{force-hull chord length},
-$$
+```
 
 with
 
-$$
+```math
 d_P:=\ell_P-s_P\ge0.
-$$
+```
 
 Since both chord endpoints lie in the source configuration of diameter `D`,
 
-$$
+```math
 0\le s_P\le D.
 \tag{1.1}
-$$
+```
 
 Normalize
 
-$$
+```math
 r_P:=\frac{\ell_P}{D},
 \qquad
 \delta_P:=\frac{d_P}{D}.
-$$
+```
 
 Then (1.1) gives
 
-$$
+```math
 (r_P-1)_+
 \le\delta_P.
 \tag{1.2}
-$$
+```
 
 OD/DD give the exact total detour identity
 
-$$
+```math
 \sum_Pd_P=b-P_F.
-$$
+```
 
 Thus, with
 
-$$
+```math
 L:=\sum_Pr_P,
 \qquad
 \nu:=\frac{b-P_F}{D},
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{
 \sum_P(r_P-1)_+\le\nu.
 }
 \tag{1.3}
-$$
+```
 
 This is a finite source-diameter constraint, not an asymptotic approximation.
 
@@ -112,44 +114,44 @@ This is a finite source-diameter constraint, not an asymptotic approximation.
 
 Let `r_1,...,r_m>=0` satisfy
 
-$$
+```math
 \sum_i r_i=L,
 \qquad
 \sum_i(r_i-1)_+\le\nu.
 \tag{2.1}
-$$
+```
 
 Define `A=1+nu`.
 
 If `L<=A`, then
 
-$$
+```math
 \boxed{
 \sum_i r_i^3\le L^3.
 }
 \tag{2.2}
-$$
+```
 
 If `L>A`, write
 
-$$
+```math
 R:=L-A,
 \qquad
 k:=\lfloor R\rfloor,
 \qquad
 \xi:=R-k\in[0,1).
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \sum_i r_i^3
 \le
 A^3+k+\xi^3.
 }
 \tag{2.3}
-$$
+```
 
 Both bounds are sharp in the abstract finite optimization.
 
@@ -167,17 +169,17 @@ value `L^3`.
 
 Now assume `L>1+nu`. The unique coordinate above one is maximized at
 
-$$
+```math
 r_1=1+\nu=A.
-$$
+```
 
 The remaining mass is `R=L-A` and every remaining coordinate lies in `[0,1]`.
 For variables in `[0,1]`, convexity again says to fill as many coordinates to one as
 possible, leaving at most one fractional coordinate. Thus the remaining vector is
 
-$$
+```math
 \underbrace{1,\ldots,1}_{k\text{ times}},\ \xi,\ 0,\ldots,0,
-$$
+```
 
 which gives (2.3). `square`
 
@@ -190,18 +192,18 @@ Define the sharp abstract moment function `M(L,nu)` by the right sides of
 
 DD before its scalar moment relaxation gives
 
-$$
+```math
 H_{out}
 \le
 \frac1{\sqrt6}
 \left(\sum_P\ell_P^3\right)^{1/2}
 \left(\sum_Pd_P\right)^{1/2}.
 \tag{3.1}
-$$
+```
 
 Using Lemma DC.1 and scaling by `D`,
 
-$$
+```math
 \boxed{
 \frac{H_{out}}{D^2}
 \le
@@ -209,26 +211,26 @@ $$
 \sqrt{M(L,\nu)\,\nu},
 }
 \tag{3.2}
-$$
+```
 
 where exactly
 
-$$
+```math
 L=\frac{x_B+a}{D},
 \qquad
 \nu=\frac{b-P_F}{D}.
-$$
+```
 
 This strictly improves DD.14 whenever `L>1+nu` and more than one diameter-scale chain
 is required.
 
 A convenient weaker consequence is
 
-$$
+```math
 \sum_Pr_P^3
 \le(1+\nu)^2L,
 \tag{3.3}
-$$
+```
 
 because every `r_P<=1+nu`; however the piecewise exact `M(L,nu)` is substantially
 stronger in the critical Target C regime.
@@ -239,35 +241,35 @@ stronger in the critical Target C regime.
 
 Put
 
-$$
+```math
 y=\frac hD,
 \qquad
 z=\frac{Q+2s_Z}{D}.
-$$
+```
 
 PC gives
 
-$$
+```math
 L
 =\frac{2h-(Q+2s_Z)-e_{BB}+c_B}{D}
 \le2(y-z).
 \tag{4.1}
-$$
+```
 
 MA and ZE give
 
-$$
+```math
 \nu
 =\frac{b-P_F}{D}
 \le u(y)-z+o(1),
 \qquad
 u(y):=y-2\cos(y/2).
 \tag{4.2}
-$$
+```
 
 Since `M` is nondecreasing in both arguments,
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}}{D^2}
 \le
@@ -277,15 +279,15 @@ M(2(y-z),u(y)-z)\,[u(y)-z]
 }.
 }
 \tag{4.3}
-$$
+```
 
 CC still gives
 
-$$
+```math
 \limsup\frac{A_{exc}}{D^2}
 \le\frac{z^2}{4\pi}.
 \tag{4.4}
-$$
+```
 
 Equations (4.3)--(4.4) are the new cavity-capacity surface.
 
@@ -295,79 +297,80 @@ Equations (4.3)--(4.4) are the new cavity-capacity surface.
 
 On the interval
 
-$$
+```math
 2\rho\le y\le\frac85,
-$$
+```
 
 we have
 
-$$
+```math
 0\le u(y)<\frac14.
 \tag{5.1}
-$$
+```
 
 Indeed `u` increases and
 
-$$
+```math
 \cos(4/5)>1-\frac{(4/5)^2}{2}=\frac{17}{25},
-$$
+```
 
 so
 
-$$
+```math
 u(8/5)<\frac85-\frac{34}{25}=rac6{25}<\frac14.
-$$
+```
 
 At `z=0`, put
 
-$$
+```math
 L=2y,
 \qquad
 \nu=u(y),
 \qquad
 p_0(y)=y+2\cos(y/2).
-$$
+```
 
 Then
 
-$$
+```math
 L-(1+\nu)=p_0(y)-1.
 \tag{5.2}
-$$
+```
 
 The function `p_0` is strictly increasing. At the lower endpoint,
 
-$$
+```math
 p_0(2\rho)=4\rho>2,
-$$
+```
 
 while the Taylor upper bound
 
-$$
+```math
 \cos(4/5)<1-\frac{(4/5)^2}{2}+\frac{(4/5)^4}{24}
 =\frac{1307}{1875}
-$$
+```
 
 gives
 
-$$
+```math
 p_0(8/5)<3.
-$$
+```
 
 Hence
 
-$$
+```math
 1<p_0(y)-1<2
-$$
+```
 
 throughout the interval. Lemma DC.1 therefore reduces to the explicit smooth formula
 
-\[
+```math
 \boxed{
 M_y
 =(1+u(y))^3+1+[p_0(y)-2]^3.
 }
 \tag{5.3}
+```
 
 This is the exact abstract cubic capacity at the largest permitted post-ZF chain length
 and detour on the critical interval.

@@ -15,10 +15,10 @@ for small positive surplus. This report proves the first quantitative stability 
 
 Let
 
-$$
+```math
 G:=\operatorname{area}(F)-
 \sum_r\operatorname{area}(\operatorname{conv}A_r)\ge0
-$$
+```
 
 be the C49 attachment-cell area gap. The attachment hulls have pairwise disjoint
 interiors. Combining their graph-diameter control with C67 shows that sublinear
@@ -35,41 +35,41 @@ outer-shell / giant-cavity geometry.
 
 Use the notation of the post-ZF incidence bridge. Put
 
-$$
+```math
 k=d_H+s_Z,
 \qquad
 L=6-3k+e_{BB}+3s_C.
 \tag{1.1}
-$$
+```
 
 ZI proves
 
-$$
+```math
 \sum_r\delta_r\le L.
 \tag{1.2}
-$$
+```
 
 For each unloaded component C44's elementary contact-path argument gives
 
-$$
+```math
 \operatorname{diam}(A_r)\le\delta_r+2.
 \tag{1.3}
-$$
+```
 
 By the planar isodiametric inequality,
 
-$$
+```math
 \operatorname{area}(\operatorname{conv}A_r)
 \le\frac\pi4(\delta_r+2)^2.
 \tag{1.4}
-$$
+```
 
 C49/C36-C38 give pairwise disjoint interiors of the attachment hulls, so their area
 sum is at most `area(F)` and defines the nonnegative gap `G` above.
 
 Summing (1.4), using `sum delta_r^2 <= L^2`, `c_I<=q`, and `q<=pi D`, gives
 
-$$
+```math
 \begin{aligned}
 \sum_r\operatorname{area}(\operatorname{conv}A_r)
 &\le\frac\pi4
@@ -79,7 +79,7 @@ $$
 \frac\pi4L^2+\pi L+\pi^2D.
 }
 \tag{1.5}
-$$
+```
 
 This estimate is unconditional within the post-ZF C-II branch; it does not assume a
 near-minimal boundary.
@@ -88,77 +88,77 @@ near-minimal boundary.
 
 Canonical C67 gives
 
-$$
+```math
 \liminf_{D\to\infty}
 \frac{\operatorname{area}(F)}{D^2}
 \ge
 \boxed{a_0:=\frac12\sin(1/4)}
 =0.1237019796\ldots .
 \tag{ZG.1}
-$$
+```
 
 Let a post-ZF sequence satisfy
 
-$$
+```math
 \lambda:=\limsup_{D\to\infty}
 \frac{e_{BB}+3s_C}{D}.
 \tag{ZG.2}
-$$
+```
 
 Since `k>=0`, (1.1) gives
 
-$$
+```math
 \limsup L/D\le\lambda.
-$$
+```
 
 Subtract (1.5) from the C67 lower bound.
 
 ### Theorem ZG
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\frac G{D^2}
 \ge
  a_0-\frac\pi4\lambda^2.
 }
 \tag{ZG.3}
-$$
+```
 
 In particular, if
 
-$$
+```math
 e_{BB}+s_C=o(D),
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \liminf\frac G{D^2}
 \ge a_0
 =rac12\sin(1/4)>0.
 }
 \tag{ZG.4}
-$$
+```
 
 More generally `G` is forced to have positive quadratic density whenever
 
-$$
+```math
 \lambda<2\sqrt{a_0/\pi}
 =\sqrt{\frac{2\sin(1/4)}\pi}
 =0.396\ldots .
 \tag{ZG.5}
-$$
+```
 
 ### Proof
 
 Divide (1.5) by `D^2`. The linear terms tend to zero and the quadratic term has
 limsup at most `(pi/4)lambda^2`. Since
 
-$$
+```math
 G=\operatorname{area}(F)-
 \sum_r\operatorname{area}(\operatorname{conv}A_r),
-$$
+```
 
 C67 gives ZG.3. The corollaries are immediate. `square`
 
@@ -179,46 +179,46 @@ cell charging.
 
 Consequently the area not charged to the attachment cells is bounded by
 
-$$
+```math
 \boxed{
 G\le H_{out}+A_{exc}+2q.
 }
 \tag{3.1}
-$$
+```
 
 The additive `2q` is only `O(D)`.
 
 The post-ZF face inequality in the survivor direction gives
 
-$$
+```math
 b+Q\le2h\le2q,
-$$
+```
 
 where `Q=sum_exc(deg F-4)`. Since every exceptional bounded face has degree at least
 five,
 
-$$
+```math
 f_{exc}\le Q,
-$$
+```
 
 and its total perimeter satisfies
 
-$$
+```math
 K_{exc}:=\sum_{F\ exc}\deg F
 =Q+4f_{exc}
 \le5Q
 \le10q
 \le10\pi D.
 \tag{3.2}
-$$
+```
 
 C51 says each bounded face is a simple strictly convex unit-edge polygon. Hence the
 isoperimetric inequality gives
 
-$$
+```math
 \operatorname{area}(F_i)
 \le\frac{k_i^2}{4\pi}
-$$
+```
 
 for an exceptional face of perimeter `k_i`.
 
@@ -226,23 +226,25 @@ for an exceptional face of perimeter `k_i`.
 
 Suppose along a post-ZF sequence
 
-$$
+```math
 G\ge gD^2
-$$
+```
 
 for some fixed `g>0` and all sufficiently large indices. Then, after passing to a
 subsequence, at least one of the following holds:
 
 1. **macroscopic outer-face area**
-   $$
+   ```math
    \boxed{H_{out}\ge(g/3)D^2;}
    \tag{ZG.6}
-   $$
+   
+   ```
 2. **giant bounded defect face:** there is a bounded nonquadrilateral face of perimeter
-   $$
+   ```math
    \boxed{k_{max}\ge c_gD}
    \tag{ZG.7}
-   $$
+   
+   ```
    for an explicit constant `c_g>0` (for example any asymptotic constant below
    `2g/15` is valid with the crude bounds used here).
 
@@ -251,27 +253,27 @@ subsequence, at least one of the following holds:
 By (3.1), for large `D` the `2q=O(D)` term is below `(g/3)D^2`. If `H_out` is also
 below `(g/3)D^2`, then
 
-$$
+```math
 A_{exc}\ge(g/3)D^2
-$$
+```
 
 for large `D`.
 
 Let `k_max` be the largest exceptional-face perimeter. Then
 
-$$
+```math
 A_{exc}
 \le\frac1{4\pi}\sum_i k_i^2
 \le\frac{k_{max}}{4\pi}\sum_i k_i
 \le\frac{k_{max}}{4\pi}(10\pi D)
 =\frac52 k_{max}D.
-$$
+```
 
 Thus
 
-$$
+```math
 k_{max}\ge\frac{2g}{15}D.
-$$
+```
 
 This proves the dichotomy. `square`
 
@@ -280,9 +282,9 @@ This proves the dichotomy. `square`
 If `e_BB+s_C=o(D)`, ZG.4 supplies any fixed `g<a_0` eventually. Hence every such
 post-ZF survivor has either
 
-$$
+```math
 H_{out}=\Omega(D^2)
-$$
+```
 
 or one bounded exceptional contact face of perimeter `Omega(D)`.
 

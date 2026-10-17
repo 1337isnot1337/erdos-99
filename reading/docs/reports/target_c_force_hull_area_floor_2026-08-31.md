@@ -19,28 +19,28 @@ This report salvages the force-hull area argument from stale PR #42, but correct
 
 Let `F=conv B` be the canonical C-II force hull after C65, so the response boundary `B` is the full actual diameter-endpoint set. Then
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)
 \ge
 \frac{D^2}{2}\sin\Phi(D),
 }
-$$
+```
 
 where
 
-$$
+```math
 \Phi(D)=
 \min\left\{
 \frac\pi3,
 \left(\frac D4-1\right)
 2\arcsin\frac1{2D}
 \right\}.
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{\operatorname{area}(F)}{D^2}
@@ -48,7 +48,7 @@ $$
 \frac12\sin\frac14
 =0.1237019796\ldots .
 }
-$$
+```
 
 Thus the fully force-visible force hull cannot collapse to an asymptotically thin strip. This does not by itself control the fully inactive rattler population or close C-II.
 
@@ -62,30 +62,30 @@ Work with the full actual diameter graph `H`, which equals the positive diameter
 
 Let `ba` and `bc` be distinct diameter edges sharing `b`, and let
 
-$$
+```math
 \theta=\angle abc.
-$$
+```
 
 Since
 
-$$
+```math
 |a-b|=|c-b|=D,
-$$
+```
 
 the chord formula gives
 
-$$
+```math
 |a-c|=2D\sin(\theta/2).
-$$
+```
 
 Unit separation gives `|a-c|>=1`, hence
 
-$$
+```math
 \boxed{
 \theta\ge2\arcsin\frac1{2D}.
 }
 \tag{C67.1}
-$$
+```
 
 Also `|a-c|<=D`, because `D` is the source diameter, so `theta<=pi/3`. Therefore `theta` is exactly the projective circular distance between the two supporting line directions.
 
@@ -95,81 +95,81 @@ Let `AB` and `CD` be vertex-disjoint diameter edges. The planar diameter-thrackl
 
 Put
 
-$$
+```math
 A=(0,0),\qquad B=(D,0),
-$$
+```
 
 and label the endpoints of the crossing chord so that
 
-$$
+```math
 C=(x,-u),\qquad D'=(y,v),
-$$
+```
 
 with `u,v>0` and `x<=y`. Since both endpoints lie within distance `D` of both `A` and `B`,
 
-$$
+```math
 0\le x\le y\le D.
-$$
+```
 
 The vertical and horizontal components of `CD'` are
 
-$$
+```math
 u+v=D\sin\phi,
 \qquad
 y-x=D\cos\phi.
-$$
+```
 
 Define
 
-$$
+```math
 a:=x+(D-y)=D(1-\cos\phi).
-$$
+```
 
 Suppose `D sin phi<1`. For `D>=2`,
 
-$$
+```math
 a=
 \frac{D\sin^2\phi}{1+\cos\phi}
 <\frac12.
-$$
+```
 
 Because `0<=x<=a` and `0<=D-y<=a`, unit separation from `A` and `B` gives
 
-$$
+```math
 u^2+x^2\ge1,
 \qquad
 v^2+(D-y)^2\ge1.
-$$
+```
 
 Hence
 
-$$
+```math
 u>\sqrt{1-a^2}>\frac{\sqrt3}{2},
 \qquad
 v>\sqrt{1-a^2}>\frac{\sqrt3}{2}.
-$$
+```
 
 Therefore `u+v>sqrt(3)>1`, contradicting `u+v=D sin phi<1`. Thus
 
-$$
+```math
 \boxed{
 \phi\ge\arcsin(1/D)
 >
 2\arcsin(1/(2D)).
 }
 \tag{C67.2}
-$$
+```
 
 for `D>=2`.
 
 Combining C67.1-C67.2, any two distinct diameter edges have projective direction distance at least
 
-$$
+```math
 \boxed{
 \delta_D:=2\arcsin\frac1{2D}.
 }
 \tag{C67.3}
-$$
+```
 
 ---
 
@@ -181,50 +181,50 @@ The stale PR #42 used an incorrect `pi/2` containment threshold. The following r
 
 Let `X` be `h>=2` points on a circle of circumference `pi`, with pairwise circular distance at least `delta>0`. Then two points of `X` have circular distance at least
 
-$$
+```math
 \boxed{
 \min\left\{\frac\pi3,(h-1)\delta\right\}.
 }
 \tag{C67.4}
-$$
+```
 
 #### Proof
 
 Let `r` be the circular diameter of `X`. Suppose
 
-$$
+```math
 r<\frac\pi3.
-$$
+```
 
 Choose `x_0 in X` and identify the circle with `R/pi Z` so that `x_0=0`. Every other point has a representative in `[-r,r]`. Let
 
-$$
+```math
 a=\max X\cap[0,r],
 \qquad
 -b=\min X\cap[-r,0]
-$$
+```
 
 with `a,b>=0`, omitting one side if it is empty.
 
 If both sides occur, the circular distance between `a` and `-b` is
 
-$$
+```math
 \min\{a+b,\pi-a-b\}\le r.
-$$
+```
 
 If `a+b>r`, then necessarily `pi-a-b<=r`, so
 
-$$
+```math
 a+b\ge\pi-r>\frac{2\pi}{3}.
-$$
+```
 
 But `a+b<=2r<2pi/3`, a contradiction. Therefore `a+b<=r`.
 
 Hence whenever `r<pi/3`, the whole set lies in one ordinary arc of length at most `r`. Packing `h` points in that arc with consecutive separation at least `delta` requires
 
-$$
+```math
 r\ge(h-1)\delta.
-$$
+```
 
 Therefore either `r>=pi/3` or `r>=(h-1)delta`, proving (C67.4). `square`
 
@@ -232,27 +232,27 @@ Therefore either `r>=pi/3` or `r>=(h-1)delta`, proving (C67.4). `square`
 
 Canonical C34 gives
 
-$$
+```math
 2|B|\ge\lceil D\rceil+2.
-$$
+```
 
 Every diameter endpoint is incident to at least one diameter edge, so with `h=|H|`,
 
-$$
+```math
 2h\ge|B|.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 h>\frac D4.}
 \tag{C67.5}
-$$
+```
 
 Apply C67.3 to the projective line directions of the diameter edges, with `delta=delta_D`. There are two diameter edges whose projective angle `phi` satisfies
 
-$$
+```math
 \boxed{
 \phi\ge
 \Phi(D):=
@@ -263,7 +263,7 @@ $$
 \right\}.
 }
 \tag{C67.6}
-$$
+```
 
 For large `D`, the second term is the smaller one.
 
@@ -275,44 +275,44 @@ Take the two diameter edges from C67.6.
 
 If they share an endpoint, their three endpoints form a triangle with two sides `D` and included angle `phi`, so its area is
 
-$$
+```math
 \frac{D^2}{2}\sin\phi.
-$$
+```
 
 If they are disjoint, the diameter-thrackle property makes them the crossing diagonals of a convex quadrilateral. The area of a convex quadrilateral is one half the magnitude of the cross product of its diagonal vectors, hence again
 
-$$
+```math
 \frac{D^2}{2}\sin\phi.
-$$
+```
 
 All endpoints lie in the force hull `F`. Therefore:
 
 ### Theorem C67 — force-hull area floor
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)
 \ge
 \frac{D^2}{2}\sin\Phi(D).
 }
 \tag{C67.7}
-$$
+```
 
 Since
 
-$$
+```math
 2\arcsin\frac1{2D}=\frac1D+O(D^{-3}),
-$$
+```
 
 we have
 
-$$
+```math
 \Phi(D)=\frac14+o(1),
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{\operatorname{area}(F)}{D^2}
@@ -321,7 +321,7 @@ $$
 =0.1237019796\ldots .
 }
 \tag{C67.8}
-$$
+```
 
 ---
 
@@ -329,13 +329,13 @@ $$
 
 The full source hull `K=conv A` satisfies the isodiametric bound
 
-$$
+```math
 \operatorname{area}(K)\le\frac\pi4D^2.
-$$
+```
 
 Thus C67 gives
 
-$$
+```math
 \operatorname{area}(K)-\operatorname{area}(F)
 \le
 \left(
@@ -343,14 +343,14 @@ $$
 \frac12\sin\Phi(D)
 \right)D^2.
 \tag{C67.9}
-$$
+```
 
 Asymptotically the coefficient is at most
 
-$$
+```math
 0.7853981634-0.1237019796
 =0.6616961838\ldots .
-$$
+```
 
 This is not a capacity contradiction. A round or regular-shell force hull remains compatible with the theorem, and a macroscopic fully inactive rattler population can still occupy the rest of the source hull. The theorem removes only the asymptotically one-dimensional force-hull phase.
 

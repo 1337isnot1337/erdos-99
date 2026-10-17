@@ -35,10 +35,10 @@ The giant exceptional-face alternative remains unresolved.
 In the cyclic Woodall branch, the odd diameter cycle gives a Reuleaux container. The
 September 10 reports prove
 
-$$
+```math
  P_F=\pi D-O(\sqrt D),\qquad b-P_F=O(\sqrt D),
 \tag{1.1}
-$$
+```
 
 where `F` is the actual force hull and `b` is the outer contact-face walk length.
 The existing isolate ledger allows two macroscopic possibilities: a quadratic
@@ -61,31 +61,31 @@ source points. Let `D` be the diameter, `F` the actual selected force hull, and 
 `Z_D` be the set of contact-isolated source points. Let `K=conv A_D`. Then there is an
 absolute constant `C` such that, for all sufficiently large members of the sequence,
 
-$$
+```math
 \boxed{
  |Z_D\setminus F|+|Z_D\cap \operatorname{Out}(C_+)|
  \le C D^{7/4},
 }
 \tag{2.1}
-$$
+```
 
 where `Out(C_+)` denotes the outer contact-face region inside `F` (equivalently, the
 union of the outer pockets in the outer-pocket augmentation).
 
 Consequently, if
 
-$$
+```math
  |Z_D|\ge \eta D^2
 \tag{2.2}
-$$
+```
 
 along a subsequence for some fixed `eta>0`, then some bounded nonquadrilateral contact
 face has perimeter at least
 
-$$
+```math
 \boxed{c_\eta D}
 \tag{2.3}
-$$
+```
 
 for all sufficiently large members of that subsequence, with `c_eta>0` depending
 only on `eta` and the universal constants in the cyclic reports.
@@ -93,13 +93,13 @@ only on `eta` and the universal constants in the cyclic reports.
 More quantitatively, if `K_D` is the largest bounded exceptional-face perimeter,
 then
 
-$$
+```math
 \boxed{
  |Z_D|
  \le C D^{7/4}+C(K_D+1)D.
 }
 \tag{2.4}
-$$
+```
 
 The theorem is a statement about the actual full source; no hull saturation is added
 to the lexicographic choice and no source point is discarded.
@@ -111,57 +111,57 @@ to the lexicographic choice and no source point is discarded.
 The full-source circumradius/response report supplies a centrally symmetric body `S`
 associated with `F` such that
 
-$$
+```math
 \operatorname{diam}S=D,
 \qquad \operatorname{per}S=\operatorname{per}F,
 \tag{2.5}
-$$
+```
 
 and, with `L_D=O(D^{3/4})`,
 
-$$
+```math
 0\le \operatorname{area}S-\operatorname{area}F
 \le L_D\operatorname{per}F+\pi L_D^2.
 \tag{2.6}
-$$
+```
 
 The symmetric Rogalski--Saint Raymond inequality used in the September 10 joint
 cavity report is
 
-$$
+```math
 \operatorname{area}S
 \ge c_R\left(\frac{\operatorname{per}S}{2}-D\right)^2,
 \qquad
 c_R=\frac{\pi}{(\pi-2)^2}.
 \tag{2.7}
-$$
+```
 
 Write `s_D=\pi D-P_F`. By the cyclic Reuleaux perimeter theorem,
 `0\le s_D=O(\sqrt D)`. Since `per S=P_F`, (2.7) gives
 
-$$
+```math
 \begin{aligned}
 \operatorname{area}S
 &\ge c_R\left(\left(\frac\pi2-1\right)D-\frac{s_D}{2}\right)^2\\
 &=\frac\pi4D^2-O(D^{3/2}),
 \end{aligned}
 \tag{2.8}
-$$
+```
 
 because
 
-$$
+```math
 c_R\left(\frac\pi2-1\right)^2=\frac\pi4.
-$$
+```
 
 The error in (2.6) is `O(D^{7/4})`, so (2.8) yields
 
-$$
+```math
 \boxed{
 \operatorname{area}F\ge\frac\pi4D^2-C_1D^{7/4}.
 }
 \tag{2.9}
-$$
+```
 
 This is only a rate statement; it does not assert that the force hull is exactly a
 disk or that the source hull is saturated.
@@ -170,39 +170,39 @@ disk or that the source hull is saturated.
 
 The full source hull `K` has diameter `D`, so the isodiametric inequality gives
 
-$$
+```math
 \operatorname{area}K\le\frac\pi4D^2.
 \tag{2.10}
-$$
+```
 
 Also `F\subseteq K`. Hence (2.9) gives
 
-$$
+```math
 \operatorname{area}K-\operatorname{area}F=O(D^{7/4}).
 \tag{2.11}
-$$
+```
 
 Use the finite annular Voronoi capacity theorem AV for the nested convex bodies
 `F\subseteq K`. Its exact statement is
 
-$$
+```math
 |X|
 \le\frac2{\sqrt3}\left(
 \operatorname{area}K-\operatorname{area}F
  +\operatorname{per}K+\operatorname{per}F+\pi
 \right)
 \tag{2.12}
-$$
+```
 
 for every unit-separated set `X\subseteq K\setminus\operatorname{int}F`.
 Take `X=Z_D\setminus\operatorname{int}F`; boundary points may be assigned to `F`.
 Both convex bodies have perimeter at most `\pi D`, by Cauchy's diameter-perimeter
 inequality. Combining (2.11)--(2.12) gives
 
-$$
+```math
 \boxed{|Z_D\setminus F|=O(D^{7/4}).}
 \tag{2.13}
-$$
+```
 
 #### Step 3: the outer contact-face region has area `O(D^{7/4})`
 
@@ -210,37 +210,37 @@ Let `H_out` denote the area of the outer contact-face region, equivalently the s
 the outer-pocket areas in the outer-pocket augmentation. The audited cyclic detour
 estimate gives
 
-$$
+```math
 H_{out}\le\frac1{\sqrt6}(x_B+a)^{3/2}\sqrt{b-P_F},
 \tag{2.14}
-$$
+```
 
 where `x_B=b-q`, `a` is the number of missing force-hull sides, and `q` is the
 number of loaded force-hull vertices. In the cyclic branch `q\le P_F\le\pi D`,
 `b=O(D)`, and `a\le q`; consequently `x_B+a=O(D)`. By (1.1),
 `b-P_F=O(\sqrt D)`. Therefore
 
-$$
+```math
 \boxed{H_{out}=O(D^{7/4}).}
 \tag{2.15}
-$$
+```
 
 The outer-face Oler estimate from the cyclic rhombus-transport report is
 
-$$
+```math
 Z_{outface}
 \le \frac1{a_0}H_{out}+\frac{P_F-b}{2},
 \qquad a_0=\frac{\sqrt3}{2}.
 \tag{2.16}
-$$
+```
 
 Since `P_F\le b`, the second term is nonpositive; retaining it only strengthens the
 bound. From (2.15),
 
-$$
+```math
 \boxed{Z_{outface}=O(D^{7/4}).}
 \tag{2.17}
-$$
+```
 
 This is the promised elimination of the cyclic outer-shell phase at quadratic scale.
 
@@ -250,10 +250,10 @@ Let the bounded exceptional faces be `F_i`, with boundary perimeters `k_i` and l
 `z_i` be the contact-isolated source points in `F_i`. The exact face-defect budget in
 the cyclic circuit branch is
 
-$$
+```math
 Q=\sum_i(k_i-4)=O(D),
 \tag{2.18}
-$$
+```
 
 by the finite C42 face budget `B+Q\le4q-4` and `q\le\pi D`. Since each exceptional
 face contributes at least one to `Q`, also `f\le Q` and
@@ -262,29 +262,29 @@ face contributes at least one to `Q`, also `f\le Q` and
 Oler applied to the convex equilateral `k_i`-gon `F_i` and its `z_i` interior source
 points gives
 
-$$
+```math
 a_0(k_i+z_i-1)
 \le \operatorname{area}(F_i)+c_0k_i,
 \qquad c_0=\frac{a_0}{2}.
 \tag{2.19}
-$$
+```
 
 The isoperimetric inequality gives `area(F_i)\le k_i^2/(4\pi)`. Hence there is a
 universal `C_2` such that
 
-$$
+```math
 z_i\le C_2(k_i^2+k_i+1).
 \tag{2.20}
-$$
+```
 
 Summing and using `\sum_i k_i=4f+Q=O(D)` and `k_i\le K_D` gives
 
-$$
+```math
 Z_{exc}:=\sum_i z_i
 \le C_2\left(K_D\sum_i k_i+\sum_i k_i+f\right)
 \le C_3(K_D+1)D.
 \tag{2.21}
-$$
+```
 
 Every source point not in the nonisolated contact core is either exterior to `F`, in
 the outer contact-face region, or in a bounded exceptional face: strict quadrilateral
@@ -292,18 +292,18 @@ faces contain no additional unit-separated source point, and a point in a bounde
 contact face with a unit contact would be a vertex of the actual contact graph.
 Therefore
 
-$$
+```math
 |Z_D|\le |Z_D\setminus F|+Z_{outface}+Z_{exc}.
 \tag{2.22}
-$$
+```
 
 Substituting (2.13), (2.17), and (2.21) proves (2.4), after increasing the constant.
 
 If `|Z_D|\ge\eta D^2`, then (2.4) implies
 
-$$
+```math
 C D^{7/4}+C(K_D+1)D\ge\eta D^2.
-$$
+```
 
 For large `D`, the first term is at most `(eta/2)D^2`, so
 `K_D\ge c_\eta D`, proving (2.3). `square`

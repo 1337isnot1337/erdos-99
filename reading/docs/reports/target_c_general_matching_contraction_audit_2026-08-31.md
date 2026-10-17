@@ -22,48 +22,48 @@ a tempting but false proof simplification with an exact rational witness.
 
 For `m>=3`, take `2m` strictly convex cyclic terminals and the opposite matching
 
-$$
+```math
 H=\{\,i(i+m):0\le i<m\,\}.
-$$
+```
 
 Let `Q` be the matching incidence matrix, `B=diag(beta_i)>0`, `Lambda` a connected
 circular-planar response, `R=Lambda^+`, and
 
-$$
+```math
 K=Q^T RQ.
-$$
+```
 
 Write the directed opposite chords as
 
-$$
+```math
 u_i=a_i(1,t_i),\qquad a_i>0,\qquad t_0<t_1<\cdots<t_{m-1},
-$$
+```
 
 after the same affine normalization used in C51.  The C11 affine identity is
 
-$$
+```math
 KBU=U.
-$$
+```
 
 Forcey's Kalmanson split representation implies
 
-$$
+```math
 K=\sum_I \lambda_I z_Iz_I^T,\qquad \lambda_I\ge0,
-$$
+```
 
 where
 
-$$
+```math
 (z_I)_i=1_I(i)-1_I(i+m)
-$$
+```
 
 for cyclic intervals `I` of the `2m` boundary order.
 
 C51 proves, for `m=4`,
 
-$$
+```math
 B^{-1}-K\succeq0.
-$$
+```
 
 The natural scalable candidate is:
 
@@ -87,9 +87,9 @@ linear affine constraints in floating point as a nonnegative LP in the split wei
 For sampled vectors `x` orthogonal to the two affine columns of `B^(1/2)U`, it then
 solves the LP
 
-$$
+```math
 \max\;x^T B^{1/2}KB^{1/2}x
-$$
+```
 
 subject to those same affine constraints.
 
@@ -110,11 +110,11 @@ abstract C51 hypotheses.
 
 Take `m=5` with
 
-$$
+```math
 t=(0,1,4,7,8),\qquad
 a=(4,1,2,1,2),\qquad
 \beta=(1,2,4,2,4).
-$$
+```
 
 Put `gamma_i=a_i beta_i`.  Use the following positive interval-difference split
 weights:
@@ -133,37 +133,37 @@ weights:
 
 Define
 
-$$
+```math
 K=\sum_z\lambda_z zz^T.
-$$
+```
 
 Direct exact arithmetic gives
 
-$$
+```math
 KBU=U.
-$$
+```
 
 However the rectangular transformed coupling across the two separated slope cuts
 `k=2`, `l=3` is
 
-$$
+```math
 \sum_{i\le2,\ j\ge4}\gamma_i\gamma_j K_{ij}
 =\frac{36672}{33605}>0.
-$$
+```
 
 So the desired proof cannot consist of showing every such rectangular coupling is
 nonpositive and then interpreting the slope energy as an ordinary graph Laplacian.
 
 Crucially, the contraction still holds in this witness.  Let
 
-$$
+```math
 N=B-BKB,
 \qquad E=diag(a_i),
-$$
+```
 
 and use the local affine-annihilator matrix
 
-$$
+```math
 C=
 \begin{pmatrix}
 3&0&0\\
@@ -172,32 +172,32 @@ C=
 0&3&-4\\
 0&0&3
 \end{pmatrix}.
-$$
+```
 
 Exact calculation gives
 
-$$
+```math
 ENE=CGC^T
-$$
+```
 
 with
 
-$$
+```math
 G=
 \begin{pmatrix}
 59767/302445&64033/362934&35824/302445\\
 64033/362934&3243199/10888020&182368/907335\\
 35824/302445&182368/907335&72352/302445
 \end{pmatrix}.
-$$
+```
 
 The leading principal minors are
 
-$$
+```math
 \frac{59767}{302445},\qquad
 \frac{29036}{1046925},\qquad
 \frac{64}{22275},
-$$
+```
 
 all strictly positive.  Hence `G` is positive definite and `N` is positive semidefinite
 with exactly the two affine kernel directions.  This is an exact regression: the
@@ -209,23 +209,23 @@ The local three-point affine annihilators used above are the natural generalizat
 the two columns in C51.  For general `m`, let `C_0` have column `r` supported on
 `r,r+1,r+2` with coefficients
 
-$$
+```math
 (t_{r+2}-t_{r+1}),\quad
 -(t_{r+2}-t_r),\quad
 (t_{r+1}-t_r).
-$$
+```
 
 For the scaled defect
 
-$$
+```math
 M=E(B-BKB)E,
-$$
+```
 
 the affine identity gives `M 1=M t=0`, hence uniquely
 
-$$
+```math
 M=C_0 G C_0^T
-$$
+```
 
 for a symmetric `(m-2)x(m-2)` Gale matrix `G`.
 

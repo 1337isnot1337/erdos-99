@@ -22,7 +22,7 @@ in the same annular packing set, because the loaded set is precisely the vertex 
 
 This gives the exact strengthening
 
-$$
+```math
 \boxed{
 E+\delta_K+a_0q
 < P_K+(1+c_0)P_F+\pi,
@@ -30,7 +30,7 @@ E+\delta_K+a_0q
 a_0={\sqrt3\over2},\quad c_0={\sqrt3\over4}.
 }
 \tag{LT.1}
-$$
+```
 
 Thus the mandatory linear loaded-terminal population consumes genuine annular packing
 capacity instead of disappearing from the global rhombus-excess cancellation.
@@ -48,41 +48,41 @@ Let
 
 The set
 
-$$
+```math
 S:=(A\setminus F)\cup B_+
-$$
+```
 
 is a subset of the original source, hence is unit-separated.  Also
 
-$$
+```math
 A\setminus F\subset K\setminus int(F),
 \qquad
 B_+\subset\partial F\subset K\setminus int(F).
-$$
+```
 
 Therefore the promoted annular Voronoi theorem AV applies directly and gives
 
-$$
+```math
 \boxed{
 a_0(Z_{ext}+q)
 \le area(K)-area(F)+P_K+P_F+\pi.}
 \tag{LT.2}
-$$
+```
 
 Equivalently, with
 
-$$
+```math
 \delta_F={\pi D^2\over4}-area(F),
 \qquad
 \delta_K={\pi D^2\over4}-area(K),
-$$
+```
 
-$$
+```math
 \boxed{
 a_0Z_{ext}
 \le\delta_F-\delta_K+P_K+P_F+\pi-a_0q.}
 \tag{LT.3}
-$$
+```
 
 ---
 
@@ -90,39 +90,39 @@ $$
 
 GR proves
 
-$$
+```math
 E+\delta_F<a_0Z_{ext}+c_0P_F.
 \tag{2.1}
-$$
+```
 
 Insert LT.3:
 
-$$
+```math
 E+\delta_F
 <\delta_F-\delta_K+P_K+(1+c_0)P_F+\pi-a_0q.
-$$
+```
 
 Cancel `delta_F` and rearrange:
 
 ### Theorem LT — loaded-terminal annular credit
 
-$$
+```math
 \boxed{
 E+\delta_K+a_0q
 < P_K+(1+c_0)P_F+\pi.
 }
 \tag{LT.4}
-$$
+```
 
 Since `P_K,P_F<=pi D`, this gives
 
-$$
+```math
 \boxed{
 E+\delta_K+a_0q
 <\pi D\left(2+{\sqrt3\over4}\right)+\pi.
 }
 \tag{LT.5}
-$$
+```
 
 The main use is not this crude perimeter relaxation but the exact finite form LT.4,
 which retains the actual force-hull perimeter and the loaded count simultaneously.
@@ -133,23 +133,23 @@ which retains the actual force-hull perimeter and the loaded count simultaneousl
 
 ZF gives
 
-$$
+```math
 h\ge\lceil D\rceil,
-$$
+```
 
 and the planar diameter graph satisfies `h<=q`.  Hence
 
-$$
+```math
 q\ge\lceil D\rceil.
 \tag{3.1}
-$$
+```
 
 The stronger DB theorem gives asymptotically
 
-$$
+```math
 \liminf {h\over D}\ge2\rho=1.47817\ldots,
 \qquad \rho=\cos\rho,
-$$
+```
 
 and therefore the same lower floor for `q/D`.
 

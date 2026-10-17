@@ -38,7 +38,7 @@ The theorem is finite and quantitative by compactness: for every fixed separatio
 
 Wegner's theorem states that if `N` nonoverlapping unit-radius disks have convex-hull region `D_N`, then
 
-$$
+```math
 \operatorname{area}(D_N)
 \ge
 2\sqrt3(N-1)
@@ -46,28 +46,28 @@ $$
 \left\lceil\sqrt{12N-3}-3\right\rceil
 +\pi,
 \tag{1.1}
-$$
+```
 
 with equality if and only if the packing is a Wegner packing. A Wegner packing is Groemer: its centers can be triangulated into equilateral triangles of side two.
 
 Scale by `1/2`. For `N` unit-separated centers with convex hull `K`, the radius-`1/2` disks are nonoverlapping and their convex hull is
 
-$$
+```math
 K+\frac12\mathbb B.
-$$
+```
 
 Steiner's formula gives
 
-$$
+```math
 \operatorname{area}\left(K+\frac12\mathbb B\right)
 =
 \operatorname{area}(K)+\frac12\operatorname{per}(K)+\frac\pi4.
 \tag{1.2}
-$$
+```
 
 Therefore the scaled Wegner theorem is
 
-$$
+```math
 \boxed{
 \operatorname{area}(K)+\frac12\operatorname{per}(K)
 \ge
@@ -76,14 +76,14 @@ $$
 W_N,
 }
 \tag{1.3}
-$$
+```
 
 where
 
-$$
+```math
 W_N:=\left\lceil\sqrt{12N-3}-3\right\rceil.
 \tag{1.4}
-$$
+```
 
 Equality holds exactly when the unit-separated center set is the `1/2`-scaled center set of a Wegner packing, hence a Groemer packing triangulatable by unit equilateral triangles.
 
@@ -93,13 +93,13 @@ Equality holds exactly when the unit-separated center set is the `1/2`-scaled ce
 
 For `N=5`,
 
-$$
+```math
 W_5=5.
-$$
+```
 
 If `K` is an equilateral convex pentagon, `per(K)=5`, so (1.3) gives
 
-$$
+```math
 \operatorname{area}(K)
 \ge
 4\frac{\sqrt3}{2}
@@ -108,23 +108,23 @@ $$
 =
 \boxed{\frac{3\sqrt3}{4}}.
 \tag{2.1}
-$$
+```
 
 This is exactly Oler's face lower bound
 
-$$
+```math
 c_0(5-2)=3\sqrt3/4.
-$$
+```
 
 For `N=6`,
 
-$$
+```math
 W_6=6.
-$$
+```
 
 An equilateral convex hexagon has perimeter six, and (1.3) gives
 
-$$
+```math
 \operatorname{area}(K)
 \ge
 5\frac{\sqrt3}{2}
@@ -133,13 +133,13 @@ $$
 =
 \boxed{\sqrt3},
 \tag{2.2}
-$$
+```
 
 again exactly Oler's face bound
 
-$$
+```math
 c_0(6-2)=\sqrt3.
-$$
+```
 
 Thus equality in the pentagon/hexagon Oler face inequality is governed by Wegner's exact equality classification.
 
@@ -149,25 +149,25 @@ Thus equality in the pentagon/hexagon Oler face inequality is governed by Wegner
 
 Fix `m in {5,6}`. Consider convex equilateral `m`-gons
 
-$$
+```math
 P=(p_1,\ldots,p_m)
-$$
+```
 
 in cyclic order with
 
-$$
+```math
 |p_i-p_{i+1}|=1
-$$
+```
 
 and all distinct vertex distances at least one.
 
 Modulo rigid motions this family has compact closure. Fix
 
-$$
+```math
 p_1=(0,0),
 \qquad
 p_2=(1,0).
-$$
+```
 
 All remaining vertices lie in the radius-`m` disk about `p_1` because the boundary path has total length `m`. Closed convexity and all distance inequalities survive limits; strict convexity may degenerate to collinearity, which is exactly what occurs in DP.
 
@@ -179,34 +179,34 @@ Area and convex-hull perimeter are continuous under this convergence.
 
 Let `P_j` be a sequence of strict convex unit-separated equilateral `m`-gons, `m=5` or `6`, whose Oler face slack tends to zero:
 
-$$
+```math
 \operatorname{area}(P_j)-c_0(m-2)\to0.
 \tag{4.1}
-$$
+```
 
 After rigid motions and a subsequence, let the vertex sets converge to `X` and their convex hulls to `K`.
 
 Every `P_j` has perimeter exactly `m`. Convex-hull perimeter is continuous, so
 
-$$
+```math
 \operatorname{per}(K)=m.
 \tag{4.2}
-$$
+```
 
 Also
 
-$$
+```math
 \operatorname{area}(K)=c_0(m-2).
 \tag{4.3}
-$$
+```
 
 By Sections 1-2, equations (4.2)-(4.3) give equality in the scaled Wegner inequality. Hence `X` is a scaled Wegner packing and in particular a Groemer packing: its centers admit a triangulation by unit equilateral triangles.
 
 The original cyclic boundary graph contributes only the `m` unit side pairs
 
-$$
+```math
 p_ip_{i+1}.
-$$
+```
 
 A Groemer packing on five or six points contains a unit equilateral triangle. The cycle `C_m` itself contains no triangle. Therefore at least one edge of the Groemer unit triangulation joins a pair that is **not** consecutive in the original cyclic order.
 
@@ -216,13 +216,13 @@ Thus:
 
 For `m=5` or `m=6`, any zero-Oler-slack limit of strict convex unit-separated equilateral `m`-gons satisfies
 
-$$
+```math
 \boxed{
 \min_{\substack{i,j\\j\not\equiv i\pm1\pmod m}}
 |p_i-p_j|=1.
 }
 \tag{LH.1}
-$$
+```
 
 In fact the limiting five- or six-point set contains a unit equilateral triangle.
 
@@ -236,9 +236,9 @@ The compactness argument immediately makes LH.1 quantitative without needing an 
 
 Fix `eta>0`. Let `F_{m,eta}` be the compact family of convex equilateral `m`-gons, `m=5` or `6`, satisfying
 
-$$
+```math
 |p_i-p_j|\ge1+\eta
-$$
+```
 
 for every nonconsecutive pair.
 
@@ -248,35 +248,35 @@ No member of `F_{m,eta}` can attain the Oler equality value by LH.1. Area is con
 
 For every `eta>0` and `m in {5,6}`, there exists
 
-$$
+```math
 \sigma_m(\eta)>0
-$$
+```
 
 such that every convex equilateral unit-separated `m`-gon whose nonconsecutive vertex pairs all satisfy
 
-$$
+```math
 |p_i-p_j|\ge1+\eta
-$$
+```
 
 obeys
 
-$$
+```math
 \boxed{
 \operatorname{area}(P)
 \ge
 c_0(m-2)+\sigma_m(\eta).
 }
 \tag{LH.2}
-$$
+```
 
 Equivalently, if a sequence of pentagonal or hexagonal defect faces has face slack tending to zero, then
 
-$$
+```math
 \boxed{
 \min_{\text{nonedge }ij}(|p_i-p_j|-1)\to0.
 }
 \tag{LH.3}
-$$
+```
 
 ---
 

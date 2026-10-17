@@ -30,9 +30,9 @@ range of constants.
 
 The direct Target A closure is
 
-$$
+```math
 \dim\ker S\ge\Delta_\Lambda-d_{\rm int},
-$$
+```
 
 or an actual `N`-point unit-separated competitor of diameter strictly below
 `D=D(N)`.
@@ -40,21 +40,21 @@ or an actual `N`-point unit-separated competitor of diameter strictly below
 The finite-gap subroute starts from Section 157.  In canonical minimum-distance-one
 normalization it proved
 
-$$
+```math
 W(d)\le C_1\exp(C_2d^{-3})
-$$
+```
 
 using the published five-block movement, whose one-step gain was
 
-$$
+```math
 \delta_{157,\rm can}(d)=\frac{\sqrt3}{9}d^4+O(d^5).
-$$
+```
 
 That gave the sufficient fixed-shape condition
 
-$$
+```math
 \alpha_L^{-3}=o(\log L).
-$$
+```
 
 The missing Target A implication was, and remains, exterior compatibility with a
 monomer domain actually derived from a global minimizer.
@@ -77,15 +77,15 @@ It is not by itself a Level I closure.
 Use the paper normalization with center distance two and upper-half gap `d>0`.  Keep
 the exact five-block partition of Section 157 and translate
 
-$$
+```math
 B_1=(-a,-b),\quad B_2=(-c,-e),\quad B_3=(0,v),\quad
 B_4=(c,-e),\quad B_5=(a,-b).
-$$
+```
 
 There are unique real-analytic functions `a,b,c,e,v` near `d=0`, all positive for
 small positive `d`, such that the five contact equations
 
-$$
+```math
 \begin{aligned}
 (2-a)^2+b^2&=4,\\
 (1-a)^2+(\sqrt3+d-b)^2&=4,\\
@@ -93,15 +93,15 @@ $$
 (1-c)^2+(\sqrt3+e)^2&=4,\\
 (1+c)^2+(\sqrt3-e-v)^2&=4
 \end{aligned}
-$$
+```
 
 hold and every other pair remains at distance at least two.  The middle lift is
 
-$$
+```math
 \boxed{
 v(d)=\frac{\sqrt3}{9}d^4-\frac29d^5+O(d^6).
 }
-$$
+```
 
 Therefore the local aligned gap widens from `d` to `d+v(d)`.  The leading gain is
 exactly eight times that of the movement used in Section 157.
@@ -111,7 +111,7 @@ exactly eight times that of the movement used in Section 157.
 At `d=a=b=c=e=v=0`, the Jacobian of the five displayed equations with respect to
 `(a,b,c,e,v)` is
 
-$$
+```math
 J_0=
 \begin{pmatrix}
 -4&0&0&0&0\\
@@ -120,18 +120,18 @@ J_0=
 0&0&-2&2\sqrt3&0\\
 0&0&2&-2\sqrt3&-2\sqrt3
 \end{pmatrix}
-$$
+```
 
 and
 
-$$
+```math
 \det J_0=384\sqrt3\ne0.
-$$
+```
 
 The real-analytic implicit-function theorem gives a unique analytic branch.  Expanding
 its five equations coefficient by coefficient gives
 
-$$
+```math
 \begin{aligned}
 a&=\frac14d^2-\frac{\sqrt3}{24}d^3+\frac1{24}d^4
    -\frac{\sqrt3}{144}d^5+O(d^6),\\
@@ -143,7 +143,7 @@ e&=\frac{\sqrt3}{6}d^2-\frac16d^3+\frac{\sqrt3}{72}d^4
    +\frac1{18}d^5+O(d^6),\\
 v&=\frac{\sqrt3}{9}d^4-\frac29d^5+O(d^6).
 \end{aligned}
-$$
+```
 
 The signs are positive for sufficiently small `d>0`.
 
@@ -153,11 +153,11 @@ moved/moved and moved/fixed interfaces gives fifteen distinct margin polynomials
 are exactly the defining equalities.  For the other ten, substitution of the analytic
 branch gives leading margins
 
-$$
+```math
 2\sqrt3d,\quad d^2,\quad 2\sqrt3d,\quad2d^2,\quad
 2\sqrt3d,\quad2\sqrt3d,\quad2\sqrt3d,\quad2\sqrt3d,
 \quad2d^2,\quad4d^2,
-$$
+```
 
 respectively, each plus higher-order terms.  Hence all ten are strictly positive for
 small `d>0`.  The full polynomial list is recorded in canonical Section 160 and the
@@ -184,9 +184,9 @@ rigid blocks.
 Use a fixed one-ring margin when fitting each child five-block template into the moved
 middle block.  The exact containment condition becomes
 
-$$
+```math
 3m+C\le n
-$$
+```
 
 for an absolute constant `C`; hence `k` recursive stages still require initial linear
 scale `O(3^k)`.  The safety ring ensures that all child nearest-neighbor constraints
@@ -195,48 +195,48 @@ and retain strict clearance.
 
 With
 
-$$
+```math
 \delta(x)=Kx^4+O(x^5),\qquad K=\frac{\sqrt3}{9},
-$$
+```
 
 the recurrence `x_{j+1}=x_j+\delta(x_j)` satisfies
 
-$$
+```math
 x_j^{-3}-x_{j+1}^{-3}=3K+O(x_j).
-$$
+```
 
 Also `\sum_jx_j=O(d^{-2})` before a fixed width is reached.  One direct proof uses
 `\delta(x)\asymp x^4` to compare each `x_j` with a constant multiple of
 `\int_{x_j}^{x_{j+1}}t^{-3}\,dt`; summing gives `O(d^{-2})`.  Consequently
 
-$$
+```math
 k(d)=\frac1{3K}d^{-3}+O(d^{-2})
 =\sqrt3d^{-3}+O(d^{-2}).
-$$
+```
 
 Thus in paper units
 
-$$
+```math
 \limsup_{d\downarrow0}d^3\log R(d)\le\sqrt3\log3.
-$$
+```
 
 Canonical gap width is half the paper width, and canonical support radius is half the
 paper radius.  Therefore
 
-$$
+```math
 \boxed{
 \limsup_{d\downarrow0}d^3\log W(d)
 \le\frac{\sqrt3\log3}{8}.
 }
-$$
+```
 
 The canonical one-step gain itself is
 
-$$
+```math
 \delta_{\rm can}(d)
 =\frac12v(2d)
 =\frac{8\sqrt3}{9}d^4-\frac{32}{9}d^5+O(d^6).
-$$
+```
 
 ### Borderline fixed-shape consequence
 
@@ -244,27 +244,27 @@ For the fixed polygon `K` of Sections 148 and 150, choose `r>0` with
 `r\mathbb B\subset K`.  The row split has gap `d_L=r\alpha_L`, and Section 150 needs
 `W(d_L)=o(L)`.  The explicit support constant yields
 
-$$
+```math
 \log W(r\alpha_L)
 \le
 \left(\frac{\sqrt3\log3}{8}+o(1)\right)r^{-3}\alpha_L^{-3}.
-$$
+```
 
 Hence the same-hull add-one theorem holds whenever
 
-$$
+```math
 \boxed{
 \limsup_{L\to\infty}
 \frac{\alpha_L^{-3}}{\log L}
 <\frac{8r^3}{\sqrt3\log3}.
 }
-$$
+```
 
 This includes `\alpha_L=A(\log L)^{-1/3}` for every
 
-$$
+```math
 A>\left(\frac{\sqrt3\log3}{8r^3}\right)^{1/3}.
-$$
+```
 
 That scale was not covered by the previous little-`o` condition.
 
@@ -282,11 +282,11 @@ That scale was not covered by the previous little-`o` condition.
 The direct Schur endpoint is unchanged.  The quantitative free-gap input is strictly
 stronger:
 
-$$
+```math
 W(d)\le\exp\left[
 \left(\frac{\sqrt3\log3}{8}+o(1)\right)d^{-3}
 \right].
-$$
+```
 
 The improvement is not merely cosmetic.  Section 157 only concluded from an unspecified
 constant that `\alpha_L^{-3}=o(\log L)` was sufficient.  The new explicit constant
@@ -302,15 +302,12 @@ strain and does not itself make a Section 157 witness exterior-compatible.
 > witness of support
 > 
 
-$$
-
+```math
 > \exp\left[
 > \left(\frac{\sqrt3\log3}{8}+o(1)\right)d^{-3}
 > \right]
 > 
-$$
-
-
+```
 > can be protected from every exterior source/scaffold blocker with support `o(D)`,
 > or construct a different finite architecture with gain order below four.
 

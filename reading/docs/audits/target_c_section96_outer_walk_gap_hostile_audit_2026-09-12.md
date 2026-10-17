@@ -15,17 +15,17 @@ Section 94 with the exact consecutive-attachment outer-face routes from canonica
 Section 62 and the local face identity from canonical Section 82.  It claims every
 wrapping Type-II harmonic-cell limit with normalized diameter `lambda` satisfies
 
-$$
+```math
 {3\over2}\sin\theta\le3\theta-2\pi,
 \qquad
 \theta=2\arcsin\lambda,
-$$
+```
 
 and hence
 
-$$
+```math
 \lambda\ge0.936215741409583\ldots .
-$$
+```
 
 ## Route-count audit
 
@@ -39,9 +39,9 @@ Each distinguished endpoint pair is separated by angular gap at least
 `phi-o(1)`, where `phi=2pi-2theta`.  Type-II annular convergence gives endpoint distance
 at least
 
-$$
+```math
 D\sin\theta-o(D).
-$$
+```
 
 A unit-edge polygonal route has length at least its endpoint distance, so the three
 selected intervals together cost at least `3D sin(theta)-o(D)`.  They are not direct
@@ -50,9 +50,9 @@ contacts for large `D`.
 Among the remaining `a-3` intervals, exactly `c^partial` can have one-edge routes; all
 others cost at least two.  Thus
 
-$$
+```math
 L\ge3D\sin\theta+2(a-3)-c^\partial-o(D).
-$$
+```
 
 No route or edge occurrence is counted twice.
 
@@ -60,43 +60,43 @@ No route or edge occurrence is counted twice.
 
 The exact Section-82 identity is
 
-$$
+```math
 L+Q=4a-6-2s-2c.
-$$
+```
 
 Substitution gives
 
-$$
+```math
 3D\sin\theta\le2a+c^\partial-2s-2c-Q+o(D).
-$$
+```
 
 Since `c^partial<=c`,
 
-$$
+```math
 2a\ge3D\sin\theta+2s+c+Q-o(D).
-$$
+```
 
 All retained correction terms have the favorable sign.  Dropping them gives
 `alpha>=3 sin(theta)/2`.
 
 Canonical Section 88/94 gives independently `alpha<=3theta-2pi`.  The scalar function
 
-$$
+```math
 F(\theta)=3\theta-2\pi-{3\over2}\sin\theta
-$$
+```
 
 is strictly increasing on `[2pi/3,pi)` because
 `F'=3-(3/2)cos(theta)>0`.  Its unique zero is
 
-$$
+```math
 \theta_4=2.4234054584753130275\ldots,
-$$
+```
 
 so
 
-$$
+```math
 \mu_4=\sin(\theta_4/2)=0.9362157414095831661\ldots .
-$$
+```
 
 The cap-family propagation is the same canonical argument already used in Sections 88
 and 94.  Its endpoint area gap remains positive.
@@ -106,11 +106,11 @@ and 94.  Its endpoint area gap remains positive.
 If `lambda->mu_4`, the six-cluster ceiling and the new lower bound are both tight.
 The nonnegative terms in the finite inequality force
 
-$$
+```math
 s/D\to0,
 \qquad c/D\to0,
 \qquad Q/D\to0.
-$$
+```
 
 Thus Section 96 does not merely improve a decimal constant; it isolates a sharper
 near-equality regime with three macroscopic near-geodesic outer routes and sublinear

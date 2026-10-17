@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_pure_rhombic_zf_exclusion_2026-09-11.md) · source SHA-256 `7fe22200233ec3d86bdff47395c884dac966cddd289f2250339af0aff05dd39f`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 4 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
+
 <!-- theorem-state: {"artifact_id":"ART-1298EAE74691","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact pure-rhombic C-II exclusion
 
@@ -25,16 +27,16 @@ contact-isolated sources in the unrestricted problem.
 The contradiction is particularly short once the two exact ledgers are kept
 together:
 
-$$
+```math
 s_Z=e+h-(2v-2)=h-T,
-$$
+```
 
 where (T) is the number of train tracks.  Thus (s_Z\ge0) forces (h\ge T).
 The audited pure-disk phase theorem gives (q/T\le0.9039456812+o(1)), while
 all diameter endpoints are among the (q) convex-hull vertices, so
-$$
+```math
 h\le q<T
-$$
+```
 for sufficiently large sources.  This contradicts ZF.
 
 ## 1. Exact hypotheses
@@ -56,10 +58,11 @@ Assume the following additional, explicit subbranch hypotheses.
 3. The pure-disk phase theorem of Target B applies to this actual contact core.
    In particular, if (R) is the number of rhombi, (T) the number of train
    tracks, and (q) the number of convex-hull vertices, then
-   $$
+   ```math
    \frac qT\le0.9039456812+o(1).
    \tag{PR.1}
-   $$
+   
+   ```
 
 The first hypothesis is deliberately weaker than source-carrying purity.  The
 second and third hypotheses are not consequences of the promoted C-II route
@@ -82,45 +85,53 @@ For a simply connected pure rhombic disk, let (R) denote the number of bounded
 rhombi.  Every rhombus contributes two train incidences and every train is a
 boundary-to-boundary path.  The standard disk Euler identities for the core are
 
-$$
+```math
 v=R+T+1,
 \qquad
 e=2R+T.
 \tag{PR.2}
-$$
+```
 
 For completeness, the second identity follows by counting face-edge incidences.
 If (B=2T) is the boundary-edge count, then
-$$
+```math
 4R=2e-B,
-$$
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 so (e=2R+T).  Euler's formula (v-e+R=1) then gives
-$v=R+T+1).
+\(v=R+T+1).
+```
+
+
 
 The post-ZF mixed-rigidity quantity is
 
-\[
+```math
 s_Z=e+h-(2v-2)\ge0.
 \tag{PR.3}
-\]
+```
 
 Substituting (PR.2) gives the exact identity
 
-\[
+```math
 \begin{aligned}
 s_Z
   &=(2R+T)+h-2(R+T+1)+2\\
   &=h-T.
 \end{aligned}
 \tag{PR.4}
-\]
+```
 
 Hence every such C-II source satisfies
 
-\[
+```math
 h\ge T.
 \tag{PR.5}
-\]
+```
 
 No (s_Z=0) assumption has been made; positive surplus makes the inequality
 stronger.
@@ -141,17 +152,17 @@ straight-line diameter graph of a finite planar point set has at most as many
 edges as vertices.  Applied to the subset of core hull vertices supporting H,
 it gives
 
-\[
+```math
 h=|E(H)|\le |V(H)|\le q.
 \tag{PR.6a}
-\]
+```
 
 Consequently
 
-\[
+```math
 h\le q.
 \tag{PR.6}
-\]
+```
 
 This step does not assume that every hull vertex is diametral and does not impose
 hull saturation together with the secondary diameter-pair minimization.
@@ -160,27 +171,35 @@ hull saturation together with the secondary diameter-pair minimization.
 
 Apply (PR.1). Since
 
-\[
+```math
 0.9039456812<1,
-\]
+```
 
 there are constants (eta>0) and (D_0) such that for every member of a
 sufficiently large pure-disk sequence,
 
-\[
+```math
 q\le(1-\eta)T<T.
 \tag{PR.7}
-\]
+```
 
 Combining (PR.5), (PR.6), and (PR.7) yields
 
-\[
+```math
 T\le h\le q<T,
-\]
+```
 
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 which is impossible.  Thus no sufficiently large C-II global minimizer can lie
 in the exact pure simply connected rhombic-disk subbranch described in Section 1.
-\(□$
+\(□\)
+```
+
+
 
 ## 5. Why the phase estimate still applies with (O(D)) isolates
 
@@ -189,42 +208,58 @@ extension.  It is not an assertion for a superlinear isolate population.
 
 The standard lattice comparison for the global minimum gives
 
-$$
+```math
 \frac{n}{D^2}\longrightarrow \Delta_2:=\frac{\pi}{2\sqrt3}.
 \tag{PR.8}
-$$
+```
 
 If (z=O(D)), then the sharper density comparison gives
 
-$$
+```math
 v=\Delta_2D^2+O(D).
 \tag{PR.8a}
-$$
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 
 In the C-II pure-core branch,
 (PR.5) and (PR.6), together with the convex-hull diameter bound
-$q\le\pi D+O(1)), give
+\(q\le\pi D+O(1)), give
+```
 
-\[
+
+
+```math
 T\le h\le q\le\pi D+O(1).
 \tag{PR.9}
-\]
+```
 
 Therefore (T=O(D)), and the core Euler identity gives
 
-\[
+```math
 \frac{R}{D^2}=\frac{v-T-1}{D^2}\longrightarrow\Delta_2,
 \qquad R=\Delta_2D^2+O(D).
 \tag{PR.10}
-\]
+```
 
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 The rhombi have disjoint interiors and each has area at least
-\(a_0=\sqrt3/2$, while the core diameter is (D) by the explicit hypothesis.
+\(a_0=\sqrt3/2\), while the core diameter is (D) by the explicit hypothesis.
 Hence
+```
 
-$$
+
+
+```math
 a_0R\le \operatorname{area}\operatorname{conv}V(G_C)\le\frac{\pi D^2}{4},
-$$
+```
 
 and (PR.10) make both inequalities asymptotic equalities with an (O(D))
 area error.  In particular the total angular rhombus defect is (O(D)), the
@@ -249,12 +284,12 @@ the number of loaded vertices.
 
 The missing implication is the topology/population upgrade:
 
-$$
+```math
 \text{C-II + global optimality}
 \quad\Longrightarrow\quad
 \text{an exact simply connected pure rhombic contact core with }z=O(D).
 \tag{PR.11}
-$$
+```
 
 The current promoted stack does not prove (PR.11).  Its almost-rhombic theorem
 allows (O(D)) boundary/nonquadrilateral/outer-walk defects, holes, components,

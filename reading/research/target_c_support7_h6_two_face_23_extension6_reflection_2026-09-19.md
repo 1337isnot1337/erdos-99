@@ -15,23 +15,23 @@ Status: exact finite reduction inside the generic H6 branch. The theorem-state a
 
 The previous exact reflection-closed generic-H6 endpoint is
 
-$$
+```math
 4276=3422\,C_7+854\,(C_3\sqcup C_4).
-$$
+```
 
 Continuing the fixed physical-face pair `(2,3)` scan through positions 1700 through 2199 of the 4,944-cell one-face-adaptive endpoint produces 59 additional direct exclusions that are still members of the 4,276-state endpoint. All 59 exactify successfully.
 
 The exact H6 hull reflection maps these 59 states to 59 distinct additional current survivors. The direct and reflected sets are disjoint. Closing the batch under reflection removes
 
-$$
+```math
 59+59=\boxed{118}
-$$
+```
 
 states and gives the explicit exact endpoint
 
-$$
+```math
 \boxed{4158=3316\,C_7+842\,(C_3\sqcup C_4)}.
-$$
+```
 
 The 59 direct exclusions split as
 
@@ -97,9 +97,9 @@ A one-face branch is marked dead only after numerical LP support is recovered as
 
 The 59 direct states use exactly
 
-$$
+```math
 1700+2321=\boxed{4021}
-$$
+```
 
 exact rational certificates:
 

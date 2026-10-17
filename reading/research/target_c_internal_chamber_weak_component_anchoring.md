@@ -22,17 +22,17 @@ This does not close the chamber branch. It replaces a diffuse rattler picture by
 
 Start from the canonical contact-minimal, then diameter-pair-minimal post-ZF C-II representative `A`. Let `G` be its connected positive-contact core and let
 
-$$
+```math
 C
-$$
+```
 
 be one bounded nonquadrilateral contact face of `G`. Canonical Section 67 proves that `C` is a convex polygon whose boundary sides are unit contact edges of `G`.
 
 Let
 
-$$
+```math
 Z_C:=A\cap\operatorname{int}C
-$$
+```
 
 be the actual contact-isolated source points assigned to this internal chamber. Put `z=|Z_C|`.
 
@@ -48,9 +48,9 @@ Every fixed old diameter edge remains present. Conversely every moved point lies
 
 Among the attained integer values of the number of unit contacts, choose an admissible configuration `A^max_C` with the maximum value. Such a maximum exists because the set of attained contact counts is a nonempty subset of
 
-$$
+```math
 \{0,1,\ldots,\tbinom n2\}.
-$$
+```
 
 No compactness assertion for the triangle-free subspace is needed.
 
@@ -100,9 +100,9 @@ At the stopping configuration of Lemma 2.1, the full source remains triangle-fre
 
 Only one new contact edge `xy` is created, with `x in W` and `y notin W`. If a new contact triangle used `xy`, its third vertex `z` would give an old contact path
 
-$$
+```math
 x-z-y
-$$
+```
 
 of length two from `W` to its complement. At least one of those two old edges would already cross the component cut, contradicting that `W` was a connected component of the old actual contact graph. Triangles not using `xy` are unchanged. `square`
 
@@ -126,12 +126,12 @@ If `y` were not a boundary vertex of the face `C`, the segment `xy` would have t
 
 Combining Theorem 2.3 with Lemma 2.4 gives the form used below:
 
-$$
+```math
 \boxed{
 \text{after deleting the old core, every weak chamber component has at least one unit-contact edge to a vertex of }\partial C.
 }
 \tag{2.1}
-$$
+```
 
 ---
 
@@ -139,9 +139,9 @@ $$
 
 Let `b` be a boundary vertex of the convex unit-edge polygon `C`. Its two neighboring boundary vertices `b_-` and `b_+` both satisfy
 
-$$
+```math
 |b-b_-|=|b-b_+|=1.
-$$
+```
 
 Let the interior angle of `C` at `b` be `phi<=pi`.
 
@@ -149,17 +149,17 @@ In a triangle-free unit-separated source, any two distinct unit neighbors of the
 
 Suppose `b` had `m` additional unit-contact neighbors lying in the chamber sector between the rays `bb_-` and `bb_+`. Ordering all `m+2` neighbor rays inside that sector gives `m+1` consecutive angular gaps, each strictly greater than `pi/3`. Therefore
 
-$$
+```math
 \phi>(m+1){\pi\over3}.
 \tag{3.1}
-$$
+```
 
 Since `phi<=pi`, (3.1) implies
 
-$$
+```math
 \boxed{m\le1.}
 \tag{3.2}
-$$
+```
 
 Thus:
 
@@ -175,50 +175,50 @@ No planarity estimate is used; this is the exact `60`-degree neighbor-angle rule
 
 Let the internal face have `p` boundary edges/vertices. Since every side is a unit contact,
 
-$$
+```math
 p=\operatorname{per}(C).
 \tag{4.1}
-$$
+```
 
 Delete the fixed old-core vertices from the actual contact graph of `A^max_C`, and let
 
-$$
+```math
 W_1,\ldots,W_s
-$$
+```
 
 be the weak components containing the `z` moved chamber points.
 
 Equation (2.1) gives each `W_i` at least one boundary attachment edge. Theorem 3.1 says distinct attachment edges use distinct boundary vertices. Hence
 
-$$
+```math
 \boxed{s\le p.}
 \tag{4.2}
-$$
+```
 
 Since the `W_i` partition the `z` chamber points,
 
-$$
+```math
 \boxed{
 \max_i |W_i|
 \ge {z\over p}.
 }
 \tag{4.3}
-$$
+```
 
 For a canonical macroscopic internal chamber, Sections 77 and 79 give
 
-$$
+```math
 z=\Omega(D^2),
 \qquad
 p=O(D).
-$$
+```
 
 Therefore the contact-maximized weak representation contains a boundary-anchored weak component with
 
-$$
+```math
 \boxed{|W_i|=\Omega(D).}
 \tag{4.4}
-$$
+```
 
 This component is an exact unit-contact object, not a near-contact graph, while the old diameter-carrying core has not moved.
 

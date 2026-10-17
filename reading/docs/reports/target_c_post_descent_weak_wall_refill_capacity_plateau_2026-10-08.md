@@ -43,18 +43,18 @@ at most L<=sqrt(3). If x is inside Q and at least one from every wall
 vertex, then x is at least one from every point of A outside int Q.
 For an outside point not itself a wall vertex the quantitative bound is
 
-$$
+```math
  |x-q|\ge 2\sqrt{1-L^2/4}\ge1.
-$$
+```
 
 Proof. For a wall vertex q use the guard directly. Otherwise let z be
 the first exit of the segment from x towards q. If z is a wall vertex,
 the two distances to z are at least one and add along this segment.
 If z=(1-t)a+tb lies on a side, the exact identity
 
-$$
+```math
  |w-z|^2=(1-t)|w-a|^2+t|w-b|^2-t(1-t)|a-b|^2
-$$
+```
 
 gives |w-z|>=sqrt(1-L^2/4) for w=x,q. Their distances add.
 This is the closed-guard version of
@@ -84,16 +84,16 @@ Choose walls as in Section 2 from A. Let S_i=A intersect int Q_i.
 For each i choose a finite weakly guarded, internally unit-separated
 packet Y_i in int Q_i. If
 
-$$
+```math
  \sum_i |Y_i|\ \ge\ |R|+\sum_i |S_i|,
-$$
+```
 
 then
 
-$$
+```math
  \bigl(A\setminus\textstyle\bigcup_i S_i\bigr)
        \ \cup\ \textstyle\bigcup_iY_i
-$$
+```
 
 has at least n points and is unit-separated by Section 2. Every point
 belongs to conv A, since a simple polygon lies in the convex hull of
@@ -119,21 +119,21 @@ large continuation.
 
 For any integer M>=2 put
 
-$$
+```math
  \tau={1\over100M^3},\quad
  c={1-\tau^2\over1+\tau^2},\quad
  s={2\tau\over1+\tau^2},\quad
  u=(1,0),\quad
  v=\left({c-\sqrt3s\over2},{s+\sqrt3c\over2}\right).
-$$
+```
 
 The angle theta from u to v is pi/3+2 arctan tau. In particular
 49/100<cos theta<1/2 and its phase defect is at most 2 tau.
 Let
 
-$$
+```math
  G_M=\{iu+jv:0\le i,j\le M\},\qquad q=(-2,-2),\quad r=(10M,0).
-$$
+```
 
 The source A_M=G_M union {q,r} is unit-separated and triangle-free.
 Its only unit pairs are adjacent grid indices along u or v: the
@@ -144,9 +144,9 @@ Both extra labels are contact-isolated.
 
 The unique actual diameter is rq, with
 
-$$
+```math
  D_M^2=(10M+2)^2+4.
-$$
+```
 
 Distances from r to grid points attain their maximum at a corner of
 the parallelogram; their squared maximum is 100M^2. Distances within
@@ -158,10 +158,10 @@ Delete r, and multiply every retained position, including q, by
 L=1+t, where 0<t<=1/(10M^2). All retained pairs now have distance
 strictly greater than one and
 
-$$
+```math
  \operatorname{diam} A_t^2
  \le L^2(3M^2+10M+8)<20M^2<D_M^2.
-$$
+```
 
 Use the actual 4M boundary labels of the scaled grid as a wall Q_t.
 Its sides have length L<sqrt(3). Its old interior contains exactly
@@ -174,18 +174,18 @@ guarded packet Y together with the 4M wall vertices is unit-separated
 in the closed convex parallelogram. The canonical
 [finite Oler inequality, Lemma 21.1](../theory/03-oler-shell.md) gives
 
-$$
+```math
  |Y|+4M\le {2\over\sqrt3}L^2M^2\sin\theta+2LM+1.
-$$
+```
 
 Since 2 sin theta/sqrt(3)=c+s/sqrt(3)<=1+2 tau, the right side
 minus (M+1)^2 is at most
 
-$$
+```math
  M^2(2t+t^2)+2\tau M^2(1+t)^2+2Mt
  \le {1\over5}+{1\over400}+{1\over50}+{1\over10}
  ={129\over400}<1.
-$$
+```
 
 Here M>=2, t<=1/(10M^2) and (1+t)^2<2 were used term by term.
 Integer rounding gives |Y|+4M<=(M+1)^2, hence |Y|<=S.

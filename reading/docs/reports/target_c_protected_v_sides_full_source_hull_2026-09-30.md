@@ -12,81 +12,81 @@
 
 ## 1. Exact full-source theorem
 
-Let $A$ be a finite unit-separated planar source of diameter $D\ge1$.
-Let $F$ be the two-dimensional convex hull of its full diameter-graph
-vertices, and $K=\operatorname{conv}A$. Suppose a side $xy$ of
-$F$, of length $s$, has a common diameter partner $v$. If
-$$
+Let $`A`$ be a finite unit-separated planar source of diameter $`D\ge1`$.
+Let $`F`$ be the two-dimensional convex hull of its full diameter-graph
+vertices, and $`K=\operatorname{conv}A`$. Suppose a side $`xy`$ of
+$`F`$, of length $`s`$, has a common diameter partner $`v`$. If
+```math
 \boxed{s^2\le4-D^{-2},}
 \tag{1.1}
-$$
-then $xy$'s supporting line also supports the entire source hull
-$K$. No source point, including a contact isolate, lies beyond that
-line, and $xy$ is also a side of $K$ with the same endpoints.
-For its normal $n$, exactly
-$$
+```
+then $`xy`$'s supporting line also supports the entire source hull
+$`K`$. No source point, including a contact isolate, lies beyond that
+line, and $`xy`$ is also a side of $`K`$ with the same endpoints.
+For its normal $`n`$, exactly
+```math
 \boxed{w_K(n)=w_F(n)=\sqrt{D^2-s^2/4}.}
 \tag{1.2}
-$$
+```
 The statement includes the equality in (1.1). No global minimality, stress,
 asymptotic geometry, or train theorem is used.
 
 In particular every covered unit side protects the full source. For fixed
-$0<\eta<1$, every covered side with $s\le1+\eta$ does so for
-all sufficiently large $D$.
+$`0<\eta<1`$, every covered side with $`s\le1+\eta`$ does so for
+all sufficiently large $`D`$.
 
 ## 2. Proof, including the equality case
 
-Put $x=(-s/2,0),y=(s/2,0)$, with $F$ above the side, and put
-$v=(0,H)$, where $H=\sqrt{D^2-s^2/4}$. A source point
-$z=(a,-b)$ beyond the side has $b>0$. The constraint
-$|z-v|\le D$ gives
-$$
+Put $`x=(-s/2,0),y=(s/2,0)`$, with $`F`$ above the side, and put
+$`v=(0,H)`$, where $`H=\sqrt{D^2-s^2/4}`$. A source point
+$`z=(a,-b)`$ beyond the side has $`b>0`$. The constraint
+$`|z-v|\le D`$ gives
+```math
 a^2+(H+b)^2\le D^2,
 \qquad |a|<s/2,\quad b\le D-H.
-$$
+```
 Its squared distance to the nearer endpoint is therefore at most
-$$
+```math
 (s/2-|a|)^2+b^2
 \le s^2/4+(D-H)^2
 =2D(D-H).
 \tag{2.1}
-$$
-Condition (1.1) is equivalent to $2D(D-H)\le1$: the intervening
-right-hand side $D-1/(2D)$ is positive, so squaring preserves the
+```
+Condition (1.1) is equivalent to $`2D(D-H)\le1`$: the intervening
+right-hand side $`D-1/(2D)`$ is positive, so squaring preserves the
 comparison. Unit separation and (2.1) force equality throughout. Thus
-$a=0$, $b=D-H$, and $|z-v|=D$. But then $z$ is a
-loaded diameter vertex beyond a supporting line of $F$, a contradiction.
+$`a=0`$, $`b=D-H`$, and $`|z-v|=D`$. But then $`z`$ is a
+loaded diameter vertex beyond a supporting line of $`F`$, a contradiction.
 
 The opposite-support calculation in the antipode-transition report gives
-the unique maximum height $H$ at $v$, even over all of $A$.
-The newly proved minimum height is zero at $x,y$. The disk about $v$
-confines height-zero source points to $[x,y]$, so this is exactly the
-support face of $K$. This proves (1.2) and the side assertion.
+the unique maximum height $`H`$ at $`v`$, even over all of $`A`$.
+The newly proved minimum height is zero at $`x,y`$. The disk about $`v`$
+confines height-zero source points to $`[x,y]`$, so this is exactly the
+support face of $`K`$. This proves (1.2) and the side assertion.
 
 ## 3. Quantitative protection count
 
-In the non-star case put $q=|B|$, $h=|E_H|$, $d_H=q-h$,
-and $P_F=\operatorname{per}F$. All loaded hull sides have length at
-least one. For fixed $\eta\in(0,1)$, sufficiently large $D$
+In the non-star case put $`q=|B|`$, $`h=|E_H|`$, $`d_H=q-h`$,
+and $`P_F=\operatorname{per}F`$. All loaded hull sides have length at
+least one. For fixed $`\eta\in(0,1)`$, sufficiently large $`D`$
 gives at least
-$$
+```math
 \boxed{q-2d_H-(P_F-q)/\eta}
 \tag{3.1}
-$$
+```
 protected loaded hull sides. Indeed, the exact V-cover leaves at most
-$2d_H$ uncovered sides, and each side longer than $1+\eta$
-uses more than $\eta$ of the length surplus $P_F-q$.
+$`2d_H`$ uncovered sides, and each side longer than $`1+\eta`$
+uses more than $`\eta`$ of the length surplus $`P_F-q`$.
 
 In the unpromoted rooted wrapping regime with
-$k\le\Delta D+o(D)$ and $P_F-q\le\Delta D+o(D)$, this
+$`k\le\Delta D+o(D)`$ and $`P_F-q\le\Delta D+o(D)`$, this
 gives at least
-$$
+```math
 q-(2+1/\eta)\Delta D-o(D)
-$$
+```
 **actual full-source supporting sides**, not only loaded-hull V's.
-Their full-source widths have the exact value (1.2). At $\Delta=0$,
-all but $o(D)$ loaded sides protect the entire source.
+Their full-source widths have the exact value (1.2). At $`\Delta=0`$,
+all but $`o(D)`$ loaded sides protect the entire source.
 
 Consequently every exterior source point must violate a side in the union of
 the uncovered sides and the covered sides exceeding the threshold (1.1).
@@ -97,17 +97,17 @@ the remaining caps still need an area/packing bound.
 ## 4. Why length two is not a safe replacement threshold
 
 Here is an exact rational non-star example. Take
-$$
+```math
 x=(-1,0),\quad y=(1,0),\quad v=(0,49/10),
-$$
-$$
+```
+```math
 w=(382/325,2927/650),\qquad z=(0,-1/20).
-$$
+```
 All pairwise distances are at least one. The diameter squared is
-$2501/100$, attained exactly by $vx,vy,xw$. Thus the loaded
-hull is the quadrilateral $xywv$, and the diameter graph is the path
-$y-v-x-w$. The side $xy$ has length two and common partner
-$v$, but $z$ is an unloaded source point beyond its line.
+$`2501/100`$, attained exactly by $`vx,vy,xw`$. Thus the loaded
+hull is the quadrilateral $`xywv`$, and the diameter graph is the path
+$`y-v-x-w`$. The side $`xy`$ has length two and common partner
+$`v`$, but $`z`$ is an unloaded source point beyond its line.
 
 The rational verifier checks all ten squared distances, the exact loaded
 hull, and the three diameter pairs. This is a regression against the claim
@@ -119,11 +119,11 @@ is not a global-minimizer certificate.
 The universal source protection proof is analytic. The equality case uses
 the **full** diameter graph: equality makes the purported exterior point
 loaded, so dropping such points would invalidate the proof. No contact
-status of $z$ is assumed.
+status of $`z`$ is assumed.
 
 [research/verify_antipode_transition.py](../../../docs/research/migration/2026-10-16/shards/04/evidence/research/verify_antipode_transition.py) additionally checks the generalized
 protection threshold
-$s^2\le4\sigma^2-\sigma^4/D^2$, where $\sigma$ is the actual
+$`s^2\le4\sigma^2-\sigma^4/D^2`$, where $`\sigma`$ is the actual
 minimum separation, by rational comparisons in its finite examples.
 
 The candidate chain is

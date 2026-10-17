@@ -13,20 +13,20 @@
 
 The DE report proved
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}\ge0.465
-$$
+```
 
 using the ellipse detour constant `pi/(4sqrt(2))`.  WD replaces that constant by the smaller exact value `sqrt(2)/pi`.  The DE proof then carries through verbatim and gives the stronger explicit floor
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
 \ge0.4658.
 }
 \tag{WE.1}
-$$
+```
 
 The endpoint margin is more than `6e-3`, so the improvement is not sensitive to displayed decimal truncation.
 
@@ -36,39 +36,39 @@ The endpoint margin is more than `6e-3`, so the improvement is not sensitive to 
 
 Put
 
-$$
+```math
 \lambda:=\lim\frac{e_{BB}+2s_C}{D}
-$$
+```
 
 along an arbitrary convergent post-ZF subsequence, and define
 
-$$
+```math
 A_{PI}:=\frac12\sin(2\rho),
 \qquad
 L(\lambda):=A_{PI}-\frac\pi4\lambda^2,
 \tag{WE.2}
-$$
+```
 
 where `rho=cos rho`.
 
 DE combines the PI/GU lower attachment-gap bound with the actual-perimeter JC upper bound and proves that every survivor must satisfy
 
-$$
+```math
 z+\varepsilon\le R(\lambda),
 \tag{WE.3}
-$$
+```
 
 where
 
-$$
+```math
 z:=\frac hD-\frac\pi2,
 \qquad
 \varepsilon:=\pi-\frac{per(F)}D\ge0,
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 R(\lambda)
 :=
@@ -76,28 +76,28 @@ R(\lambda)
 -2\sqrt{\pi L(\lambda)}.
 }
 \tag{WE.4}
-$$
+```
 
 Consequently, if `nu=lim Q/D`,
 
-$$
+```math
 \frac{L_{chain}}D
 \le\pi+2R-2\nu,
 \tag{WE.5}
-$$
+```
 
-$$
+```math
 \frac{U_{det}}D
 \le2R-\nu,
 \tag{WE.6}
-$$
+```
 
 and
 
-$$
+```math
 0\le\nu\le2R.
 \tag{WE.7}
-$$
+```
 
 No change is made to these parts of DE.
 
@@ -107,43 +107,43 @@ No change is made to these parts of DE.
 
 WD proves
 
-$$
+```math
 H_{out}
 \le
 C_W L_{chain}^{3/2}U_{det}^{1/2},
 \qquad
 \boxed{C_W:=\frac{\sqrt2}{\pi}}.
 \tag{WE.8}
-$$
+```
 
 Using WE.5-WE.7 and discarding the negative `nu` terms gives
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}}{D^2}
 \le
 C_W(\pi+2R)^{3/2}\sqrt{2R}.
 }
 \tag{WE.9}
-$$
+```
 
 CC's exceptional-face estimate is unchanged:
 
-$$
+```math
 \limsup\frac{A_{exc}}{D^2}
 \le\frac{R^2}{\pi}.
 \tag{WE.10}
-$$
+```
 
 Since ZG/GU gives
 
-$$
+```math
 G\le H_{out}+A_{exc}+O(D),
-$$
+```
 
 every survivor must satisfy the one-variable necessary condition
 
-$$
+```math
 \boxed{
 L(\lambda)
 \le
@@ -156,7 +156,7 @@ U_W(\lambda)
 \frac{R(\lambda)^2}{\pi}.
 }
 \tag{WE.11}
-$$
+```
 
 This is exactly DE.27 with the improved WD constant.
 
@@ -166,33 +166,33 @@ This is exactly DE.27 with the improved WD constant.
 
 DE already proves
 
-$$
+```math
 L'(\lambda)=-\frac\pi2\lambda<0
-$$
+```
 
 and
 
-$$
+```math
 R'(\lambda)
 =1+
 \frac{\pi^2\lambda}{2\sqrt{\pi L(\lambda)}}
 >0
-$$
+```
 
 throughout the positive-`L` interval.  The right side `U_W` is an increasing function of nonnegative `R`.
 
 Therefore, to exclude every
 
-$$
+```math
 \lambda\le\lambda_*,
-$$
+```
 
 it is enough to verify
 
-$$
+```math
 L(\lambda_*)>U_W(\lambda_*).
 \tag{WE.12}
-$$
+```
 
 If `R(lambda)<0`, the earlier JC inequality is already impossible.
 
@@ -202,62 +202,62 @@ If `R(lambda)<0`, the earlier JC inequality is already impossible.
 
 Take
 
-$$
+```math
 \boxed{\lambda_*=0.4658.}
-$$
+```
 
 Using
 
-$$
+```math
 \rho
 =0.7390851332151606416553\ldots
-$$
+```
 
 gives
 
-$$
+```math
 A_{PI}
 =0.4978566363242109995910\ldots .
 \tag{WE.13}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 L(\lambda_*)
 =0.32744907955520547\ldots,
 }
 \tag{WE.14}
-$$
+```
 
-$$
+```math
 \boxed{
 R(\lambda_*)
 =0.00808788682687567\ldots,
 }
 \tag{WE.15}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 U_W(\lambda_*)
 =0.32128926820354703\ldots .
 }
 \tag{WE.16}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 L(\lambda_*)-U_W(\lambda_*)
 =0.00615981135165844\ldots>0.
 }
 \tag{WE.17}
-$$
+```
 
 The necessary condition WE.11 fails at `lambda_*`; monotonicity makes it fail for every smaller `lambda` as well.  This proves WE.1.
 
@@ -267,25 +267,25 @@ The necessary condition WE.11 fails at `lambda_*`; monotonicity makes it fail fo
 
 The report-level sequence is now
 
-$$
+```math
 0.4633168954\ldots
 \quad\text{(JC)},
-$$
+```
 
-$$
+```math
 0.4647922503\ldots
 \quad\text{(GS)},
-$$
+```
 
-$$
+```math
 0.465
 \quad\text{(DE / ellipse detour)},
-$$
+```
 
-$$
+```math
 \boxed{0.4658}
 \quad\text{(WE / Wirtinger detour)}.
-$$
+```
 
 The point of WE is not the fourth decimal place by itself.  It establishes that the cavity threshold is controlled by the **metric detour** of the outer contact chains, a quantity absent from the previous scalar optimization.
 

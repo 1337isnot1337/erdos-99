@@ -23,24 +23,24 @@ canonical frontier is Sections 152–162. Reports and older prompts are provenan
 
 For the plateau-terminalized scaffold,
 
-$$
+```math
 \zeta=\dim\ker S=|C^\partial|-\operatorname{rank}S,
 \qquad s=\Delta_\Lambda-d_{\rm int},
-$$
+```
 
 and a surviving counterexample has
 
-$$
+```math
 g=s-\zeta=\Delta_\Lambda-d_{\rm sc}\ge1.
-$$
+```
 
 Target A closes exactly if
 
-$$
+```math
 \boxed{\dim\ker S\ge s}
 \qquad\text{or, equivalently,}\qquad
 \boxed{\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda}.
-$$
+```
 
 The alternative exact closure is an `N`-point unit-separated competitor of diameter
 strictly below `D(N)`.
@@ -57,34 +57,39 @@ strictly below `D(N)`.
   identify source rattlers with Schur terminals.
 - Section 160 constructs the strongest current free five-block gap branch. In paper
   units
-  $$
+  ```math
   \delta_{\rm toe}(d)=\frac{\sqrt3}{9}d^4-\frac29d^5+O(d^6),
-  $$
+  
+  ```
   and in canonical units
-  $$
+  ```math
   \boxed{\limsup_{d\downarrow0}d^3\log W(d)\le\frac{\sqrt3\log3}{8}}.
-  $$
+  
+  ```
   For fixed-shape `K` with `r B subset K`,
-  $$
+  ```math
   \boxed{\limsup_{L\to\infty}\frac{\alpha_L^{-3}}{\log L}
   <\frac{8r^3}{\sqrt3\log3}}
-  $$
+  
+  ```
   is sufficient for same-hull add-one.
 - Section 161 proves exponent optimality for arbitrary local rigid translations of the
   same five blocks: `V_5^{loc}(d)=Theta(d^4)`. Thus local simultaneous/asymmetric
   rescheduling cannot produce a cubic or quadratic gain.
 - Section 162 proves the stronger coefficient theorem in the full reflection-symmetric
   translation class:
-  $$
+  ```math
   \boxed{
   \limsup_{d\downarrow0}\frac{v(d)}{d^4}\le\frac{\sqrt3}{9}.
   }
-  $$
+  
+  ```
   Section 160 attains equality. Equality forces
-  $$
+  ```math
   b/d\to1,\quad a/d^2\to1/4,\quad c/d^2\to1/2,\quad
   e/d^2\to\sqrt3/6.
-  $$
+  
+  ```
   Therefore the Section 160 leading toe-out profile and coefficient are asymptotically
   optimal among all local reflection-symmetric rigid translations.
 
@@ -96,9 +101,10 @@ Do not claim that any of these statements alone proves Target A.
    actual source/scaffold monomer domain and prove all exterior blockers stay clear,
    with an exact strict-diameter certificate. Compare the available protected radius
    directly with
-   $$
+   ```math
    \exp\left[\left(\frac{\sqrt3\log3}{8}+o(1)\right)d^{-3}\right].
-   $$
+   
+   ```
 2. **Genuinely different lower-order gap architecture.** If a better support exponent
    is necessary, change the finite block/contact architecture or allowed motion class
    and prove a one-step gain `omega(d^4)`. Rotations, internal deformation, a nonlocal

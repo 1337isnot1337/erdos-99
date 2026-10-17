@@ -17,34 +17,34 @@
 
 This report proves a metric strengthening of C67 that is specific to **vertex-disjoint** diameter pairs. If two actual diameter chords do not share an endpoint, their projective directions are separated by twice the C67 minimum:
 
-$$
+```math
 \boxed{\theta\ge 4a_D,\qquad a_D:=\arcsin\frac1{2D}.}
-$$
+```
 
 The factor two is sharp for the underlying equal-diagonal diameter geometry.
 
 Combining this with the cyclic ordering of all diameter directions gives a new forest-side perimeter theorem. Let `H` be the full actual diameter graph on `q` loaded vertices, with `h` edges and
 
-$$
+```math
 d_H=q-h>0.
-$$
+```
 
 Except for the one-center star graph, at least `d_H` consecutive projective direction gaps come from vertex-disjoint diameter edges and therefore have size at least `4a_D`; every other gap is at least `2a_D`. Consequently
 
-$$
+```math
 \boxed{
 \operatorname{per}F
 \ge h-d_H+2(d_H-1)\cos a_D
  +2D\cos\bigl((q-2)a_D\bigr).
 }
 \tag{DG.1}
-$$
+```
 
 For sufficiently large post-ZF survivors the star exception is impossible by the already proved DB lower bound `h/D>=2rho+o(1)` versus the elementary star bound `h/D<=pi/3+o(1)`.
 
 In the exact circuit phase `s_Z=0`, where `b=q+x_B` and `per(F)<=b`, DG.1 gives
 
-$$
+```math
 \boxed{
 x_B
 \ge
@@ -52,23 +52,23 @@ x_B
 -2-2(d_H-1)(1-\cos a_D).
 }
 \tag{DG.2}
-$$
+```
 
 Thus along any unbounded forest sequence with `q/D->x`,
 
-$$
+```math
 \boxed{
 \liminf {x_B\over D}\ge2\cos(x/2).
 }
 \tag{DG.3}
-$$
+```
 
 In particular, for every fixed `eta>0`, if `q/D<=pi-eta` along a subsequence then
 
-$$
+```math
 \liminf {x_B\over D}\ge2\sin(\eta/2)>0.
 \tag{DG.4}
-$$
+```
 
 This is stronger than the existing statement that only the combined branching currency `x_B+Q=2h-q` is linear. Away from the near-maximal terminal-perimeter regime `q/D->pi`, the forest branch must pay linear **outer-walk excess itself**; the mandatory defect cannot be hidden entirely in bounded exceptional faces.
 
@@ -84,76 +84,76 @@ The new geometric input does not use KKT stress.
 
 Let `AB` and `CD` be two distinct segments of common length `D` in a planar set of diameter at most `D`. Let `theta in (0,pi/2]` be the acute projective angle between their supporting lines. Then
 
-$$
+```math
 \boxed{
 \min\{|A-C|,|A-D|,|B-C|,|B-D|\}
 \le2D\sin(\theta/4).
 }
 \tag{1.1}
-$$
+```
 
 ### Proof
 
 Scale by `D` and place the midpoint of `AB` at the origin. Choose unit direction vectors `u,v` for the two segments so that the angle between them is `theta`. If `m` is the normalized displacement from the midpoint of `AB` to the midpoint of `CD`, then the four cross distances are the norms of
 
-$$
+```math
 m\pm {u-v\over2},
 \qquad
 m\pm {u+v\over2}.
-$$
+```
 
 Put
 
-$$
+```math
 w={u-v\over2},\qquad z={u+v\over2},
-$$
+```
 so `w perpendicular z`,
 
-$$
+```math
 |w|=s:=\sin(\theta/2),
 \qquad
 |z|=c:=\cos(\theta/2).
-$$
+```
 
 Write
 
-$$
+```math
 m=\alpha \widehat w+\beta\widehat z.
-$$
+```
 
 All cross distances are at most one because the whole set has diameter at most one. In particular
 
-$$
+```math
 |m+z|\le1,
 \qquad
 |m-z|\le1.
-$$
+```
 
 Therefore
 
-$$
+```math
 \alpha^2+(|\beta|+c)^2\le1.
 \tag{1.2}
-$$
+```
 
 It follows that `|alpha|<=s` and
 
-$$
+```math
 |\beta|\le\sqrt{1-\alpha^2}-c.
 \tag{1.3}
-$$
+```
 
 The smaller of the other two cross distances satisfies
 
-$$
+```math
 \min\{|m+w|^2,|m-w|^2\}
 =(s-|\alpha|)^2+\beta^2.
 \tag{1.4}
-$$
+```
 
 Set `|alpha|=sin phi`. Since `0<=|alpha|<=s` and `theta<=pi/2`, we have `0<=phi<=theta/2`. Using (1.3),
 
-$$
+```math
 \begin{aligned}
 (s-|\alpha|)^2+\beta^2
 &\le (s-\sin\phi)^2+(\cos\phi-c)^2\\
@@ -162,7 +162,7 @@ $$
 &\le2-2\cos(\theta/2)\\
 &=4\sin^2(\theta/4).
 \end{aligned}
-$$
+```
 
 Taking square roots and restoring the factor `D` proves (1.1). `square`
 
@@ -176,23 +176,23 @@ Equality is possible in the metric optimization. Take `alpha=0`, `|beta|=1-c`; t
 
 Assume now that the source is unit-separated. For two actual diameter edges with four distinct endpoints, every cross distance is at least one. Lemma DG.1 therefore gives
 
-$$
+```math
 1\le2D\sin(\theta/4).
-$$
+```
 
 Hence, whenever `4a_D<=pi/2` (in particular for all sufficiently large `D`),
 
-$$
+```math
 \boxed{\theta\ge4a_D.}
 \tag{2.1}
-$$
+```
 
 For comparison, if two diameter edges share an endpoint, their two other endpoints are unit-separated, so the elementary isosceles-triangle estimate gives only
 
-$$
+```math
 \boxed{\theta\ge2a_D.}
 \tag{2.2}
-$$
+```
 
 C67 already provides (2.2) for all distinct projective diameter directions. The content of (2.1) is the exact factor-two improvement for vertex-disjoint pairs.
 
@@ -204,9 +204,9 @@ The full actual diameter graph is a convex geometric thrackle, so two vertex-dis
 
 Order the `h` projective diameter directions cyclically as
 
-$$
+```math
 e_1,e_2,\ldots,e_h
-$$
+```
 
 and let `N_sh` be the number of cyclic consecutive pairs `(e_i,e_{i+1})` that share a vertex.
 
@@ -214,23 +214,23 @@ Assume `H` is not a star centered at one vertex. For a vertex `v`, the set of po
 
 Two distinct simple edges share at most one endpoint, so summing over vertices does not double-count a shared adjacency. Since every loaded vertex has positive diameter degree,
 
-$$
+```math
 \begin{aligned}
 N_{sh}
 &\le\sum_v(d_v-1)\\
 &=2h-q.
 \end{aligned}
 \tag{3.1}
-$$
+```
 
 Therefore the number `N_dis` of consecutive pairs with disjoint endpoints obeys
 
-$$
+```math
 \boxed{
 N_{dis}=h-N_{sh}\ge q-h=d_H.
 }
 \tag{3.2}
-$$
+```
 
 This bound is combinatorially sharp for caterpillar forests: their line graphs can realize long consecutive shared-edge runs. The gain below comes from the larger metric gap on the unavoidable `d_H` breaks, not from claiming extra breaks that Woodall does not supply.
 
@@ -242,24 +242,24 @@ Let the cyclic projective gaps be `g_1,...,g_h`, with sum `pi`. By Section 2 eve
 
 For the weakest lower bound, downgrade all but `d_H` of the doubled gaps to the lower value `2a_D`. The function
 
-$$
+```math
 f(g)=\sin(g/2)
-$$
+```
 
 is concave on `[0,pi]`. Under lower bounds and a fixed total sum, its sum is minimized at an extreme point: all but one gap are at their lower bounds.
 
 Because `d_H>=1`, the free gap can be chosen among the `4a_D`-lower-bound coordinates. This gives the smaller extreme value. Indeed, writing `a=a_D` and using feasibility `2aq<=pi`, the difference between putting the free coordinate on a `2a` gap and on a `4a` gap is
 
-$$
+```math
 2\sin(a/2)
 \left[
 \cos(3a/2)-\sin\bigl(a(q-3/2)\bigr)
 \right]\ge0.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \sum_{i=1}^h\sin(g_i/2)
 \ge
@@ -268,47 +268,47 @@ $$
 +\cos\bigl((q-2)a_D\bigr).
 }
 \tag{4.1}
-$$
+```
 
 As in DB, define
 
-$$
+```math
 P_H=D\,\operatorname{conv}\{\pm u_e:e\in E(H)\}.
-$$
+```
 
 Then `P_H subset F-F`, so Cauchy perimeter monotonicity and Minkowski additivity give
 
-$$
+```math
 \operatorname{per}F
 \ge2D\sum_i\sin(g_i/2).
 \tag{4.2}
-$$
+```
 
 Use
 
-$$
+```math
 \sin a_D={1\over2D},
 \qquad
 2D\sin(2a_D)=2\cos a_D.
-$$
+```
 
 Equations (4.1)--(4.2) yield DG.1:
 
-$$
+```math
 \boxed{
 \operatorname{per}F
 \ge h-d_H+2(d_H-1)\cos a_D
 +2D\cos\bigl((q-2)a_D\bigr).
 }
-$$
+```
 
 When `d_H/D->d` and `q/D->x`, this becomes
 
-$$
+```math
 \liminf {\operatorname{per}F\over D}
 \ge x+2\cos(x/2).
 \tag{4.3}
-$$
+```
 
 The cancellation of `d` in the first-order term is not accidental: each unavoidable disjoint direction adjacency spends one additional `2a_D` gap, exactly matching the one additional terminal represented by `q-h=d_H`.
 
@@ -320,29 +320,29 @@ Suppose `H` is a star with `h` leaves around center `b`. Every leaf lies at dist
 
 Unit separation of the leaves gives consecutive angular separation at least `2a_D`. Hence
 
-$$
+```math
 (h-1)2a_D\le\pi/3,
-$$
+```
 so
 
-$$
+```math
 \boxed{h\le1+{\pi\over6a_D}.}
 \tag{5.1}
-$$
+```
 
 Therefore
 
-$$
+```math
 \limsup h/D\le\pi/3=1.04719\ldots .
 \tag{5.2}
-$$
+```
 
 The already proved DB theorem gives every post-ZF survivor
 
-$$
+```math
 \liminf h/D\ge2\rho=1.47817\ldots,
 \qquad \rho=\cos\rho.
-$$
+```
 
 Thus the full actual diameter graph is not a star for all sufficiently large post-ZF survivors. The exception in Section 3 does not survive in the intended asymptotic branch.
 
@@ -352,81 +352,81 @@ Thus the full actual diameter graph is not a star for all sufficiently large pos
 
 Now assume the exact post-ZF circuit branch
 
-$$
+```math
 s_Z=0,
 \qquad d_H=q-h>0.
-$$
+```
 
 Woodall identifies this as the caterpillar-forest branch. ZE gives
 
-$$
+```math
 b+Q=2h,
-$$
+```
 while by definition of outer-walk excess
 
-$$
+```math
 b=q+x_B.
-$$
+```
 
 The closed outer contact walk has convex hull `F`, hence
 
-$$
+```math
 \operatorname{per}F\le b=q+x_B.
 \tag{6.1}
-$$
+```
 
 Combine (6.1) with DG.1 and use `h=q-d_H`:
 
-$$
+```math
 q+x_B
 \ge q-2d_H+2(d_H-1)\cos a_D
 +2D\cos((q-2)a_D).
-$$
+```
 
 Rearranging gives the exact finite estimate DG.2:
 
-$$
+```math
 \boxed{
 x_B
 \ge
 2D\cos((q-2)a_D)
 -2-2(d_H-1)(1-\cos a_D).
 }
-$$
+```
 
 Since `d_H=O(D)`,
 
-$$
+```math
 (d_H-1)(1-\cos a_D)=O(D^{-1}).
-$$
+```
 
 Also `a_D=1/(2D)+O(D^{-3})`. Therefore, along any convergent unbounded sequence with `q/D->x`,
 
-$$
+```math
 \boxed{
 \liminf {x_B\over D}\ge2\cos(x/2).
 }
-$$
+```
 
 The heterogeneous gap feasibility itself gives `x<=pi`. If `x<=pi-eta`, then
 
-$$
+```math
 2\cos(x/2)\ge2\cos((\pi-\eta)/2)=2\sin(\eta/2),
-$$
+```
 proving DG.4.
 
 Using the exact circuit branching identity
 
-$$
+```math
 x_B+Q=2h-q,
-$$
+```
 DG.3 can equivalently be written as the exceptional-face restriction
 
-$$
+```math
 \limsup {Q\over D}
 \le
 \lim {2h-q\over D}-2\cos(x/2)
-$$
+```
 whenever the displayed limits exist.
 
 ---
@@ -435,17 +435,17 @@ whenever the displayed limits exist.
 
 The current `s_Z=0` theorem uses
 
-$$
+```math
 \nu_D={e_{BB}+2s_C-3d_H\over D}
-$$
+```
 
 and proves `nu_D>0.597+o(1)`. DG does not improve that scalar floor by itself: the new currency is `x_B`, and DD's outer-pocket upper bound is increasing rather than decreasing in `x_B+a`.
 
 What DG does remove is a previously live allocation pattern. A forest survivor with terminal density bounded away from `pi` cannot have
 
-$$
+```math
 x_B=o(D),\qquad Q=\Theta(D).
-$$
+```
 
 Thus a future forest closure may split cleanly into:
 

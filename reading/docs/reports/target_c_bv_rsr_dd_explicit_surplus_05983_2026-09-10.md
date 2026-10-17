@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_bv_rsr_dd_explicit_surplus_05983_2026-09-10.md) · source SHA-256 `0cf52661a51a05616a4f77b06679704ddc11565be6b467a2abc8836b0da1c0d8`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-7FAB2E4EE903","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — boundary-vertex stability raises the generic post-ZF surplus floor above 0.5983
 
@@ -17,45 +19,45 @@
 BV improves the attachment-cell area coefficient throughout the current low-surplus
 range from `pi/4` to
 
-$$
+```math
 \boxed{
 c_{BV}:=\frac\pi4-\frac1{1600}.}
 \tag{BRD.1}
-$$
+```
 
 Re-running the RSR/DD optimization gives a new exact generic post-ZF threshold
 `lambda_BRD` satisfying
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
 \ge\lambda_{BRD}>0.5983.
 }
 \tag{BRD.2}
-$$
+```
 
 The optimizer is unique.  Numerically, only for orientation,
 
-$$
+```math
 y_{BRD}=1.5245273793788846894\ldots,
 \tag{BRD.3}
-$$
+```
 
-$$
+```math
 p_{BRD}=3.0231379585040676617\ldots,
 \tag{BRD.4}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \lambda_{BRD}
 =0.5983312494252812289\ldots .
 }
 \tag{BRD.5}
-$$
+```
 
 The exact theorem is BRD.2; a companion exact-Fraction verifier certifies the displayed
 `>0.5983` inequality.
@@ -66,87 +68,88 @@ The exact theorem is BRD.2; a companion exact-Fraction verifier certifies the di
 
 Retain
 
-$$
+```math
 \Phi(y)=\frac{y+\sin y}{4},
 \qquad
 c_R=\frac\pi{(\pi-2)^2},
 \qquad
 \Psi(p)=c_R\left(\frac p2-1\right)^2,
 \tag{1.1}
-$$
+```
 
 and
 
-$$
+```math
 A(y,p)=\max\{\Phi(y),\Psi(p)\}.
 \tag{1.2}
-$$
+```
 
 As in RX, enlarge the actual DB domain to
 
-$$
+```math
 \widetilde{\mathcal R}
 =
 \{(y,p):2\rho\le y\le\pi,\ y\le p\le\min\{2y,\pi\}\}.
 \tag{1.3}
-$$
+```
 
 Every actual post-ZF survivor lies in this larger region.
 
 BV proves that for every survivor sequence with candidate surplus below `3/5`, the
 attachment-cell area satisfies
 
-$$
+```math
 \limsup\frac1{D^2}
 \sum_r\operatorname{area}(\operatorname{conv}A_r)
 \le c_{BV}\lambda^2.
 \tag{1.4}
-$$
+```
 
 Since the final constant in BRD.5 is below `3/5`, this hypothesis is self-consistent in
 the entire range being excluded.  RD's two cavity arguments therefore sharpen to
 
-$$
+```math
 \boxed{
 A(y,p)-c_{BV}\lambda^2
 \le
 \frac{(\lambda+p-y)^2}{4\pi},
 }
 \tag{1.5}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 A(y,p)-c_{BV}\lambda^2
 \le
 \frac2{\sqrt3}y^{3/2}\sqrt{2y-p}.
 }
 \tag{1.6}
-$$
+```
 
 For `A>0,m>=0`, define `R_BV(A,m)` as the unique nonnegative root of
 
-$$
+```math
 \boxed{
 (4\pi c_{BV}+1)\lambda^2
 +2m\lambda+m^2-4\pi A=0.
 }
 \tag{1.7}
+```
 
 The root is strictly increasing in `A` and strictly decreasing in `m`.
 
 Define
 
-\[
+```math
 J_{BV}(y,p):=R_{BV}(A(y,p),p-y)
 \tag{1.8}
-$$
+```
 
 and
 
-$$
+```math
 D_{BV}(y,p):=
 \sqrt{
 \max\left\{0,
@@ -154,16 +157,17 @@ D_{BV}(y,p):=
 \right\}
 }.
 \tag{1.9}
-$$
+```
 
 Every survivor with `lambda<3/5` satisfies
 
-$$
+```math
 \boxed{
 \lambda\ge
 M_{BV}(y,p):=\max\{J_{BV}(y,p),D_{BV}(y,p)\}.
 }
 \tag{1.10}
+```
 
 ---
 
@@ -171,11 +175,11 @@ M_{BV}(y,p):=\max\{J_{BV}(y,p),D_{BV}(y,p)\}.
 
 The FSDB/RSR area crossover is unchanged:
 
-\[
+```math
 \boxed{
 p_e(y)=2+2\sqrt{\frac{\Phi(y)}{c_R}}.}
 \tag{2.1}
-$$
+```
 
 On `p<=p_e(y)`, `A=Phi(y)`.  Hence for fixed `y`:
 
@@ -187,17 +191,17 @@ For `p>=p_e(y)`, both functions strictly increase.  For `D_BV` this is immediate
 `Psi(p)` increases and the detour decreases.  For `J_BV`, implicit differentiation of
 (1.7) on the RSR-active branch gives a positive derivative whenever
 
-$$
+```math
 \pi c_R(p-2)>\lambda+p-y.
 \tag{2.2}
-$$
+```
 
 Exactly as in RSJ, `p>=p_e(y_R)=2y_R>3`, `c_R>2`, and every relevant root satisfies
 `lambda<1`.  Hence
 
-$$
+```math
 \pi c_R(p-2)>2\pi>1+\pi>\lambda+p-y,
-$$
+```
 
 so (2.2) holds.
 
@@ -209,63 +213,63 @@ Therefore no fixed-`y` minimizer lies strictly to the right of `p_e(y)`.
 
 For `y>=y_R`, put
 
-$$
+```math
 u(y):=2y-p_e(y)
 \tag{3.1}
-$$
+```
 
 and
 
-$$
+```math
 E(y):=
 \Phi(y)-\frac2{\sqrt3}y^{3/2}\sqrt{u(y)}.
 \tag{3.2}
-$$
+```
 
 Define
 
-$$
+```math
 \boxed{
 d_{BV}(y):=
 \sqrt{\max\{0,E(y)/c_{BV}\}},}
 \tag{3.3}
-$$
+```
 
-$$
+```math
 \boxed{
 r_{BV}(y):=
 R_{BV}(\Phi(y),p_e(y)-y).}
 \tag{3.4}
-$$
+```
 
 RX proves directly that `E'(y)<0` on `[y_R,pi/2]`; this calculation is independent
 of the attachment coefficient.  Hence `d_BV` strictly decreases until it reaches zero.
 
 The JC crossover value `r_BV` is strictly increasing.  Write
 
-$$
+```math
 m(y)=p_e(y)-y.
-$$
+```
 
 RX/RSJ gives `p_e'(y)<1/2`, so
 
-$$
+```math
 m'(y)<-1/2.
 \tag{3.5}
-$$
+```
 
 At the root,
 
-$$
+```math
 \Phi(y)-c_{BV}r_{BV}(y)^2
 =
 \frac{(r_{BV}(y)+m(y))^2}{4\pi}.
 \tag{3.6}
-$$
+```
 
 Differentiate:
 
-$$
+```math
 \left[
 2c_{BV}r_{BV}
 +\frac{r_{BV}+m}{2\pi}
@@ -274,44 +278,44 @@ $$
 \Phi'(y)-
 \frac{(r_{BV}+m)m'}{2\pi}.
 \tag{3.7}
-$$
+```
 
 The bracket on the left is positive, while the right side is strictly positive because
 `Phi'>=0`, `r_BV+m>0`, and `m'<0`.  Thus
 
-$$
+```math
 \boxed{r_{BV}'(y)>0.}
 \tag{3.8}
-$$
+```
 
 At `y=y_R`, the detour vanishes, so
 
-$$
+```math
 d_{BV}(y_R)=\sqrt{\Phi(y_R)/c_{BV}}>r_{BV}(y_R),
 \tag{3.9}
-$$
+```
 
 because the JC equation has a strictly positive cavity term.  At `y=pi/2`, RX proves
 `E(y)<0`, so
 
-$$
+```math
 d_{BV}(\pi/2)=0<r_{BV}(\pi/2).
 \tag{3.10}
-$$
+```
 
 Therefore there is a unique
 
-$$
+```math
 \boxed{y_{BRD}\in(y_R,\pi/2)}
 \tag{3.11}
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{d_{BV}(y_{BRD})=r_{BV}(y_{BRD}).}
 \tag{3.12}
-$$
+```
 
 ---
 
@@ -320,47 +324,47 @@ $$
 For `y<=y_BRD`, the fixed-`y` optimum is the unique pre-crossover intersection of
 JC and DD.  Let its common value be `lambda`, and set
 
-$$
+```math
 S:=\Phi(y)-c_{BV}\lambda^2>0.
 \tag{4.1}
-$$
+```
 
 JC and DD equality give exactly
 
-$$
+```math
 p-y=2\sqrt{\pi S}-\lambda,
 \tag{4.2}
-$$
+```
 
-$$
+```math
 2y-p=\frac{3S^2}{4y^3}.
 \tag{4.3}
-$$
+```
 
 Eliminating `p`, define
 
-$$
+```math
 \boxed{
 F(y,\lambda)
 :=y+\lambda-2\sqrt{\pi S}-\frac{3S^2}{4y^3}=0.
 }
 \tag{4.4}
-$$
+```
 
 At fixed `y`,
 
-$$
+```math
 F_\lambda
 =1+
 \frac{2c_{BV}\sqrt\pi\,\lambda}{\sqrt S}
 +
 \frac{3c_{BV}\lambda S}{y^3}>0.
 \tag{4.5}
-$$
+```
 
 At fixed `lambda`,
 
-$$
+```math
 F_y
 =1-
 \frac{\sqrt\pi\,\Phi'(y)}{\sqrt S}
@@ -369,32 +373,32 @@ F_y
 +
 \frac{9S^2}{4y^4}.
 \tag{4.6}
-$$
+```
 
 We give a robust rational lower bound.  The new system is stronger pointwise than RX,
 so every crossing value satisfies the already certified
 
-$$
+```math
 \lambda>299/500.
 \tag{4.7}
-$$
+```
 
 Also `y>=2rho>147/100>7/5`, and on this interval
 
-$$
+```math
 \Phi'(y)<7/25.
 \tag{4.8}
-$$
+```
 
 Since `y<pi/2`,
 
-$$
+```math
 \Phi(y)<9/14.
-$$
+```
 
 Using `pi>3`, hence `c_BV>1199/1600`, and (4.7),
 
-$$
+```math
 S
 <
 \frac9{14}
@@ -402,44 +406,44 @@ S
 \frac{1199}{1600}\left(\frac{299}{500}\right)^2
 <\frac38.
 \tag{4.9}
-$$
+```
 
 Then (4.3) gives
 
-$$
+```math
 2y-p
 <
 \frac{3(3/8)^2}{4(7/5)^3}
 <\frac1{25}.
 \tag{4.10}
-$$
+```
 
 Thus
 
-$$
+```math
 p-y>y-1/25>34/25.
-$$
+```
 
 By JC equality,
 
-$$
+```math
 S=\frac{(\lambda+p-y)^2}{4\pi}
 >
 \left(\frac{979}{500}\right)^2\frac7{88}
 >\frac3{10}.
 \tag{4.11}
-$$
+```
 
 Now `pi<22/7`, so
 
-$$
+```math
 \sqrt{\frac\pi S}
 <\sqrt{\frac{220}{21}}<\frac{13}{4}.
-$$
+```
 
 Discard the final positive term in (4.6).  Using (4.8)--(4.11),
 
-$$
+```math
 \begin{aligned}
 F_y
 &>
@@ -451,16 +455,16 @@ F_y
 &=\boxed{\frac{639}{19600}>0.}
 \end{aligned}
 \tag{4.12}
-$$
+```
 
 Therefore implicit differentiation of (4.4) gives
 
-$$
+```math
 \boxed{
 \lambda'(y)=-F_y/F_\lambda<0.
 }
 \tag{4.13}
-$$
+```
 
 So the pre-transition optimum strictly decreases with `y`.
 
@@ -477,57 +481,59 @@ Sections 2--4 give the complete picture:
 
 Hence the unique global minimum over the enlarged domain is
 
-$$
+```math
 \boxed{
 (y,p)=(y_{BRD},p_e(y_{BRD})).
 }
 \tag{5.1}
+```
 
 Define
 
-\[
+```math
 \boxed{
 \lambda_{BRD}:=r_{BV}(y_{BRD})=d_{BV}(y_{BRD}).
 }
 \tag{5.2}
+```
 
 This proves the exact lower bound in BRD.2 except for the displayed rational decimal
 certificate.
 
 The exact defining equations are
 
-\[
+```math
 \boxed{
 \Phi(y)=c_R\left(\frac p2-1\right)^2,
 }
 \tag{5.3}
-$$
+```
 
-$$
+```math
 \boxed{
 \Phi(y)-c_{BV}\lambda^2
 =\frac{(\lambda+p-y)^2}{4\pi},
 }
 \tag{5.4}
-$$
+```
 
-$$
+```math
 \boxed{
 \Phi(y)-c_{BV}\lambda^2
 =\frac2{\sqrt3}y^{3/2}\sqrt{2y-p}.
 }
 \tag{5.5}
-$$
+```
 
 They have the unique solution in
 
-$$
+```math
 y_R<y<\pi/2,
 \qquad
 p=p_e(y),
 \qquad
 0<\lambda<3/5.
-$$
+```
 
 ---
 
@@ -535,37 +541,37 @@ $$
 
 Take the rational test point
 
-$$
+```math
 \boxed{y_0=3049/2000=1.5245.}
 \tag{6.1}
-$$
+```
 
 The companion verifier uses only exact `Fraction` arithmetic, Machin-series bounds for
 `pi`, and alternating Taylor bounds for `sin(y_0)`.  It proves
 
-$$
+```math
 \boxed{
 r_{BV}(y_0)>0.5983,}
 \tag{6.2}
-$$
+```
 
 while also proving
 
-$$
+```math
 \boxed{
 d_{BV}(y_0)>0.5986>r_{BV}(y_0).}
 \tag{6.3}
-$$
+```
 
 Because `d_BV-r_BV` is strictly decreasing through its unique zero, (6.3) puts
 `y_0<y_BRD`.  Since `r_BV` is increasing,
 
-$$
+```math
 \lambda_{BRD}
 =r_{BV}(y_{BRD})
 >r_{BV}(y_0)
 >0.5983.
-$$
+```
 
 This proves BRD.2 with no floating-point dependency.
 
@@ -575,25 +581,25 @@ This proves BRD.2 with no floating-point dependency.
 
 Solving the exact system (5.3)--(5.5) at high precision gives
 
-$$
+```math
 y_{BRD}=1.5245273793788846893987925837\ldots,
-$$
+```
 
-$$
+```math
 p_{BRD}=3.0231379585040676616950256072\ldots,
-$$
+```
 
 and
 
-$$
+```math
 \lambda_{BRD}=0.5983312494252812288712637313\ldots .
-$$
+```
 
 The increase over the previous RSR/DD variational value is approximately
 
-$$
+```math
 1.77631\times10^{-4}.
-$$
+```
 
 Unlike the preceding ND nonattainment epsilon, this increase is fully explicit and
 comes from a uniform cellwise geometric defect.

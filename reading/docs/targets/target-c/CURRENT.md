@@ -15,11 +15,11 @@ Rejected/overridden IDs: `C-RESIDUAL-CAGE-RELEASE-REFILL`, `C-EXTERIOR-ONE-SITE-
 
 ## Full-core finite realization
 
-Use the contact-minimal, then diameter-pair-minimal global source, $C=C_*$ and $H=H_*$. Every source label, including contact isolates, participates in the lower and actual-diameter upper constraint ledger.
+Use the contact-minimal, then diameter-pair-minimal global source, $`C=C_*`$ and $`H=H_*`$. Every source label, including contact isolates, participates in the lower and actual-diameter upper constraint ledger.
 
-A surviving outer-to-bounded or bounded-to-bounded train/face system needs a finite source-realized motion or discrete same-cardinality replacement. Prove every old/new lower distance is at least one and every upper distance at most $D$, together with the applicable unary rhombus constraints. The endpoint must either remain triangle-free at diameter $D$ with a strict lexicographic decrease in unit contacts/actual diameter pairs, or have diameter strictly below $D$. A formal bit assignment or nonzero infinitesimal flex alone supplies neither conclusion.
+A surviving outer-to-bounded or bounded-to-bounded train/face system needs a finite source-realized motion or discrete same-cardinality replacement. Prove every old/new lower distance is at least one and every upper distance at most $`D`$, together with the applicable unary rhombus constraints. The endpoint must either remain triangle-free at diameter $`D`$ with a strict lexicographic decrease in unit contacts/actual diameter pairs, or have diameter strictly below $`D`$. A formal bit assignment or nonzero infinitesimal flex alone supplies neither conclusion.
 
-Quarter-fold results restrict nonconstant endpoint-feasible eight-faces to the $2,2,2,2$ pattern and control the transformed hull and conditional isolate population. The area infimum is exactly $2\sqrt3$, so no uniform excess may be inserted. Population transfer under preserved contact graph/face embedding does not construct an endpoint, track all labels, bound outside capacity or establish diameter feasibility. Consult the exact entries and independent audits before combining these hypotheses.
+Quarter-fold results restrict nonconstant endpoint-feasible eight-faces to the $`2,2,2,2`$ pattern and control the transformed hull and conditional isolate population. The area infimum is exactly $`2\sqrt3`$, so no uniform excess may be inserted. Population transfer under preserved contact graph/face embedding does not construct an endpoint, track all labels, bound outside capacity or establish diameter feasibility. Consult the exact entries and independent audits before combining these hypotheses.
 
 Source PR #948 preserves seven additional unreviewed proofs on feasible quarter-fold endpoints, deep-face/rigid-cycle persistence, the rhombic four-unit defect, and complete bent arrays. The exact complete-array route yields an actual diameter forest and a conditional linear external-boundary attachment theorem; neither extracts that array from a general C-II survivor. The [quarter-fold/bent-array research track](../../research/tracks/target-c-quarter-folds-bent-arrays.md) gives all seven proofs, verifiers, candidate records, and remaining bridges. The claims remain unreviewed; C-II stays open.
 
@@ -27,30 +27,30 @@ Source PR #948 preserves seven additional unreviewed proofs on feasible quarter-
 
 A macroscopic inactive container needs an arbitrary-container full-source packet/capacity theorem or a moved-core strict-diameter construction with cardinality restoration. Strict fixed-wall capacity barriers and occupied-cap internal-wall results rule out specified local surplus arguments. They do not prohibit every movable-wall or cross-cell architecture.
 
-Supplied-$W$ stress deletion requires a source-extracted stress-relevant loaded set and restoration. Unweighted route access does not control exceptional positive KKT mass. Keep actual loads, source geometry and packet geometry separate until proved compatible.
+Supplied-$`W`$ stress deletion requires a source-extracted stress-relevant loaded set and restoration. Unweighted route access does not control exceptional positive KKT mass. Keep actual loads, source geometry and packet geometry separate until proved compatible.
 
 ## Quantitative guards
 
-The canonical finite hull-side train inequality is $5(q-k)+x_B+m_B\ge3P_F-2$. It uses harmonic trapping for core containment and has no near-disk assumption. The fixed-$M$ local sorting theorem at the central vacancy assumes convergence to the punctured arithmetic six-wall chart, has no uniform onset in $M$ and gives no arbitrary one-deficit extraction. The inherited population-reserve and circumradius/lattice competitors retain their exact scopes; triangle-free-only density does not exclude triangle-free global minimizers.
+The canonical finite hull-side train inequality is $`5(q-k)+x_B+m_B\ge3P_F-2`$. It uses harmonic trapping for core containment and has no near-disk assumption. The fixed-$`M`$ local sorting theorem at the central vacancy assumes convergence to the punctured arithmetic six-wall chart, has no uniform onset in $`M`$ and gives no arbitrary one-deficit extraction. The inherited population-reserve and circumradius/lattice competitors retain their exact scopes; triangle-free-only density does not exclude triangle-free global minimizers.
 
 ## Cross-target population reserve candidate
 
 Source PR #1008 contributes an **unreviewed** all-minimizer lower bound
-$g_A\ge\gamma D-\sqrt D/(4\sqrt2)-60$, with
-$\gamma=0.001939936045\ldots$, for $D>16384$; it gives the explicit
-$g_A\ge D/600$ for $D\ge10^6$. The [full source report](../../reports/population_reserve_independent_reconstruction_2026-10-15.md),
+$`g_A\ge\gamma D-\sqrt D/(4\sqrt2)-60`$, with
+$`\gamma=0.001939936045\ldots`$, for $`D>16384`$; it gives the explicit
+$`g_A\ge D/600`$ for $`D\ge10^6`$. The [full source report](../../reports/population_reserve_independent_reconstruction_2026-10-15.md),
 [exact finite verifier](../../../../research/verify_population_reserve_twelve_arc_2026_10_15.py),
 [fixture output](../../../../research/population_reserve_twelve_arc_2026_10_15.json),
 and [candidate registry](../../../../docs/targets/target-c/candidate-registry.json) retain its
 proof, provenance, validation boundary, and open obligations. This improves the
-asymptotic order of the canonical $D^{2/3}$ population-reserve claims if the
+asymptotic order of the canonical $`D^{2/3}`$ population-reserve claims if the
 candidate proof is correct; it has not replaced them in theorem-state.
 
 The bound applies to every global minimizer, without a triangle-free or
 contact-minimality hypothesis. It supplies no C-II finite endpoint and no
 triangle conclusion. The Target C use remains conditional on proving that every
-large triangle-free global minimizer has $g_A\le cD+o(D)$ for some fixed
-$c<\gamma$, or on constructing a source-specific strict-diameter competitor.
+large triangle-free global minimizer has $`g_A\le cD+o(D)`$ for some fixed
+$`c<\gamma`$, or on constructing a source-specific strict-diameter competitor.
 The report also gives a nonglobal triangle-free high-reserve regression, which
 blocks dropping global optimality from that proposed upper-bound route.
 
@@ -160,9 +160,9 @@ arguments and five exact verifier/fixture pairs. Together they expose both a
 positive reduced-source route and its missing cardinality payment:
 
 - An exact rhombic vacancy hop has a proved candidate threshold
-  $\cos\theta\le1/4$; the report also proves exact two-site weak capacity
-  throughout $0\le\cos\theta<1/2$. The coherent strip theorem gives weak
-  capacity $k$ and strict capacity $k-1$, even with overlapping hop cells.
+  $`\cos\theta\le1/4`$; the report also proves exact two-site weak capacity
+  throughout $`0\le\cos\theta<1/2`$. The coherent strip theorem gives weak
+  capacity $`k`$ and strict capacity $`k-1`$, even with overlapping hop cells.
 - A literal vacancy can release a complete oblique chart or a coherent row
   with selected side pins while preserving every full-source lower and upper
   constraint. Under the stated all-stress-transversal hypothesis this gives a
@@ -243,10 +243,10 @@ extracts no global phase/tail premise, finite move, or source competitor.
 
 Source PR #958 adds a separate, **unreviewed** whole-source endpoint route. The
 uniform squared-distance interpolation preserves contacts and strictly
-decreases diameter, but its centered Gram matrix has rank $n-1$, so it does
-not give a planar configuration for $n\ge4$. Triangle-free contact graphs
+decreases diameter, but its centered Gram matrix has rank $`n-1`$, so it does
+not give a planar configuration for $`n\ge4`$. Triangle-free contact graphs
 are 2-degenerate; a proper three-colouring yields a contact-preserving
-full-label strict descent in $\mathbb R^4$. The unit-square control has
+full-label strict descent in $`\mathbb R^4`$. The unit-square control has
 rank-three lift. The exact affine flattening condition requires two
 parallel-line colour classes; no such coloring is extracted from global
 optimality.

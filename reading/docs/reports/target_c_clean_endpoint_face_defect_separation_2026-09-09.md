@@ -17,11 +17,11 @@
 
 CE proved in the near-circle full-core branch
 
-$$
+```math
 \liminf\frac{T-q}{D}\ge2\sqrt\Delta,
 \qquad
 \Delta=\frac\pi{2\sqrt3}.
-$$
+```
 
 Its first stated consequence lower-bounded the combined branching currency `Q+2s_Z`. The exact terminal ledger actually separates the currencies more strongly: the bounded-face defect `Q` itself must already carry the full `1.390168...D` lower bound.
 
@@ -29,15 +29,15 @@ Its first stated consequence lower-bounded the combined branching currency `Q+2s
 
 Every post-ZF sequence satisfying
 
-$$
+```math
 x_B=o(D),
 \qquad
 n-v=o(D^2)
-$$
+```
 
 obeys
 
-$$
+```math
 \boxed{
 \liminf\frac QD
 \ge
@@ -45,11 +45,11 @@ $$
 =1.3901687762\ldots .
 }
 \tag{CF.1}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \limsup\frac{d_H+s_Z}{D}
 \le
@@ -57,7 +57,7 @@ $$
 =0.8757119387\ldots .
 }
 \tag{CF.2}
-$$
+```
 
 Thus the CE endpoint cannot hide its boundary-scale defect in extra mixed-framework stress dependencies. A genuinely linear amount of bounded nonquadrilateral face degree is mandatory.
 
@@ -65,64 +65,64 @@ Thus the CE endpoint cannot hide its boundary-scale defect in extra mixed-framew
 
 ZE gives
 
-$$
+```math
 2f=(T-q)+d_H+s_Z.
-$$
+```
 
 CE gives `T-q >= (2sqrt(Delta)-o(1))D`, hence
 
-$$
+```math
 \frac fD
 \ge
 \sqrt\Delta
 +\frac12\frac{d_H+s_Z}{D}
 -o(1).
 \tag{1.1}
-$$
+```
 
 Every bounded exceptional face has degree at least five, so `Q>=f`.
 
 On the other hand the exact terminal ledger is
 
-$$
+```math
 q=x_B+Q+2d_H+2s_Z.
-$$
+```
 
 DG/DC gives `q/D->pi` and the present hypothesis gives `x_B/D->0`. Put
 
-$$
+```math
 k_D:=\frac{d_H+s_Z}{D}.
-$$
+```
 
 Then
 
-$$
+```math
 \frac QD
 =\pi-2k_D+o(1).
 \tag{1.2}
-$$
+```
 
 Combine `Q>=f`, (1.1), and (1.2):
 
-$$
+```math
 \pi-2k_D
 \ge
 \sqrt\Delta+\frac{k_D}{2}-o(1).
-$$
+```
 
 Therefore
 
-$$
+```math
 \frac52k_D
 \le
 \pi-\sqrt\Delta+o(1),
-$$
+```
 
 which proves CF.2.
 
 Substitute the resulting upper bound into (1.2):
 
-$$
+```math
 \begin{aligned}
 \liminf\frac QD
 &\ge
@@ -130,7 +130,7 @@ $$
 &=
 \frac\pi5+\frac45\sqrt\Delta.
 \end{aligned}
-$$
+```
 
 This proves CF.1. `square`
 
@@ -138,29 +138,29 @@ This proves CF.1. `square`
 
 Because `Q=sum_F(deg F-4)` and CE also gives `f/D>=sqrt(Delta)`, the average defect degree satisfies only the weak lower ratio
 
-$$
+```math
 \frac Qf\ge1
-$$
+```
 
 in general; CF does not force high-degree faces. The binding near-triangular pentagon regression remains possible.
 
 However, CF materially changes the remaining theorem target. The full-core branch now has simultaneous mandatory bounds
 
-$$
+```math
 T-q\ge(1.9046256-o(1))D,
-$$
+```
 
-$$
+```math
 f\ge(0.9523128-o(1))D,
-$$
+```
 
-$$
+```math
 Q\ge(1.3901688-o(1))D,
-$$
+```
 
-$$
+```math
 K_{exc}=Q+4f\ge(6.9508439-o(1))D.
-$$
+```
 
 The `Q` lower bound is geometric/topological and survives even if `s_Z` is large.
 

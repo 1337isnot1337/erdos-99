@@ -18,10 +18,10 @@ Date: 2026-10-09. Audit base: `origin/main=37f295d30333509d64d59803d80ddbe307ee3
 
 Fix distinct planar anchors `a_0,a_1,a_2` and integers `0<r<s`. Consider unit directions `t` for which there is a translation `z` satisfying
 
-$$
+```math
  p_0=z,\qquad p_r=z+rt,\qquad p_s=z+st,
  \qquad |p_0-a_0|=|p_r-a_1|=|p_s-a_2|=1.
-$$
+```
 
 There are at most ten distinct directions `t`. Translating all three anchors does not change the direction set. Several translations `z` may occur at one fixed `t`.
 
@@ -29,22 +29,22 @@ There are at most ten distinct directions `t`. Translating all three anchors doe
 
 Translate `a_0` to zero and put `A=a_1-a_0`, `B=a_2-a_0`. Since the anchors are distinct, `A`, `B`, and `A-B` are all nonzero. For a fixed `t`, subtracting `|z|^2=1` from the other two squared-distance equations gives
 
-$$
+```math
  z\cdot(rt-A)=-\tfrac12|rt-A|^2,
  \qquad z\cdot(st-B)=-\tfrac12|st-B|^2. \tag{1}
-$$
+```
 
 The determinant of this two-equation system in `z` is
 
-$$
+```math
  d(t)=\det(t,C)+\det(A,B),\qquad C=sA-rB.
-$$
+```
 
 If `d` vanishes identically on the unit circle, then `C=0`. Thus `A/r=B/s=c`; equations (1) become
 
-$$
+```math
  z\cdot(t-c)=-\tfrac r2|t-c|^2=-\tfrac s2|t-c|^2,
-$$
+```
 
 so `t=c`. This identity branch contributes at most one direction.
 
@@ -52,9 +52,9 @@ Otherwise `d(t)` has at most two zeros on the unit circle. At every other direct
 
 It remains to exclude the identity case for `|z(t)|^2=1`. Here `C` is nonzero. Taking `s` times the first equation of (1) minus `r` times the second shows that `z(t)\cdot C` is affine in `t`. Rotate coordinates so `C` is horizontal; then
 
-$$
+```math
  z_x(t)=L(t)=c_0+c_1t_x+c_2t_y
-$$
+```
 
 for real constants. Since `z_y` is rational on the unit circle, `1-L^2=z_y^2` is a rational square.
 
@@ -62,17 +62,17 @@ If `L` is constant, any real solution has constant `z_y` as well, so `z` is cons
 
 If `L` is nonconstant, each of the two distinct level lines `L=1` and `L=-1` meets the complexified unit circle with even intersection multiplicity, because `1-L^2` is a rational square and the two factors have no common zero. A line has two intersections with the circle counting multiplicity, so each must be tangent. Their tangency equations are
 
-$$
+```math
  (c_0-1)^2=c_1^2+c_2^2=(c_0+1)^2,
-$$
+```
 
 hence `c_0=0` and `c_1^2+c_2^2=1`. It follows that `1-L^2` is the square of the perpendicular linear coordinate on the unit circle, and therefore `z(t)=Ot` for one fixed orthogonal matrix `O`.
 
 Put `M=O+rI`. The first distance identity becomes
 
-$$
+```math
  |Mt-A|^2=1\quad\text{for all }|t|=1.
-$$
+```
 
 Its second Fourier harmonic forces `M^TM` to be scalar, and its first harmonic forces `M^TA=0`. A reflection has `M^TM=(1+r^2)I+2rO`, which is not scalar, so `O` must be a rotation. The matrix `O+rI` is invertible unless `r=1` and `O=-I`. In the invertible cases `A=0`, contrary to distinct anchors. In the exceptional case, the third identity has matrix `(s-1)I`, which is invertible since `s>=2`, and forces `B=0`, again impossible. Thus the norm identity cannot hold identically.
 

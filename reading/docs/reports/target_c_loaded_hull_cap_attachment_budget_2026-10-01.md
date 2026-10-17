@@ -22,27 +22,27 @@ Let A be a finite unit-separated planar set of diameter D. Let B be a subset of
 the vertices of K=conv(A), in cyclic order, with q>=3 and F=conv(B) having positive
 area. Suppose the positive-contact core V is contained in F. Define
 
-$$
+```math
 W=\operatorname{per}(K)-q\ge0.
-$$
+```
 
 For each side ab of F, let Q_ab be its closed cap in K on the outer side of the
 line ab, let ell_ab=|ab|, and let L_ab be the length of the boundary arc of K
 from a to b having no other point of B. Call the cap occupied when it contains a
 point of A outside F. Then
 
-$$
+```math
 \#\{\text{occupied caps}\}\le W,\qquad
 \sum_{\text{occupied}}L_{ab}\le2W,\qquad
 \sum_{\text{occupied}}\ell_{ab}\le2W.                 \tag{1}
-$$
+```
 
 Let P be the set of core points p for which there is a source point z outside F
 with |p-z|<sqrt(2). Then
 
-$$
+```math
 |P|\le68W.                                           \tag{2}
-$$
+```
 
 Let X be the source points in F outside B whose distance to its boundary is
 at most 1/2. Then |X|<=12W. Every source point p in F at boundary distance at
@@ -62,9 +62,9 @@ one cap, apart from common boundary vertices, which are in F.
 
 Each ell_ab>=1 and L_ab>=ell_ab, so
 
-$$
+```math
 W=\sum_{ab}(L_{ab}-1),\qquad L_{ab}-1\ge0.             \tag{3}
-$$
+```
 
 If z occupies Q_ab, the triangle abz is contained in that convex cap. Perimeter
 is monotone for convex sets: the projection-width integral
@@ -72,9 +72,9 @@ is monotone for convex sets: the projection-width integral
 polygonal and degenerate limits. Comparing the triangle and cap perimeters
 gives
 
-$$
+```math
 \ell_{ab}+L_{ab}\ge\ell_{ab}+|az|+|bz|\ge\ell_{ab}+2.
-$$
+```
 
 Hence L_ab>=2. On occupied caps, `1<=L_ab-1` and
 `L_ab<=2(L_ab-1)`. Sum and use (3), then ell_ab<=L_ab, to obtain (1).
@@ -92,9 +92,9 @@ there is no endpoint exception.
 If p is in P and z is a corresponding outside point, choose its cap ab and
 its nearest point y in F. Then
 
-$$
+```math
 |z-y|\le|z-p|<\sqrt2,\qquad |p-y|<2\sqrt2.           \tag{4}
-$$
+```
 
 Put closed disks of radius 1/2 about the points in P. Their interiors are
 disjoint by unit separation. By (4), each disk lies in the tube of radius
@@ -102,12 +102,12 @@ rho=7/2 about one occupied base segment, since `2sqrt(2)+1/2<7/2`.
 The tube about a segment of length ell has area `2rho ell+pi rho^2`.
 Taking the sum of tube areas is an upper bound on their union, hence (1) gives
 
-$$
+```math
 |P|\frac\pi4
 \le2\rho\sum_{\text{occupied}}\ell_{ab}
    +\pi\rho^2\#\{\text{occupied caps}\}
 \le(4\rho+\pi\rho^2)W.
-$$
+```
 
 Thus `|P|< (56/pi+49)W <68W` when W>0; when W=0 there are no occupied caps and
 P is empty. This proves (2). The estimate uses source-point separation, not
@@ -166,9 +166,9 @@ W points. The finite upper-threshold geometry and dispatch are rederived in
 
 The standard convex perimeter bound gives
 
-$$
+```math
 0\le W\le\pi D-q.                                   \tag{5}
-$$
+```
 
 Consequently, **conditionally** on a sequence having q=pi D-o(D), the
 attachment population P, the shallow interior population X, and the
@@ -198,9 +198,9 @@ each outer-attached obstructed proposal. The first kind charges one of at most
 W extreme isolates; the second charges a point of P. Each charged point can
 have label 1 in at most one proposal. Therefore
 
-$$
+```math
 \#\{\text{outer-attached obstructed proposals}\}\le69W. \tag{6}
-$$
+```
 
 This eliminates an outer-attached obstruction for a linear disjoint family when
 W=o(D). It is stronger than counting cap isolates, since a cap can contain many

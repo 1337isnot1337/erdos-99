@@ -35,10 +35,10 @@ The concrete lattice theorem is as follows. Put `a=pi/(2sqrt(3))`. If
 `S` is a finite subset of a translated unit-separated rank-two lattice and
 `diam(S)<=D`, with `D>=1`, then
 
-$$
+```math
 \boxed{|S|\le aD^2+86D^{4/5}+1.}
 \tag{1}
-$$
+```
 
 The constant is uniform in lattice shape, phase, and orientation. No circular
 container is assumed: the bound uses the **actual pairwise diameter** of the
@@ -53,16 +53,16 @@ when `q<=D/16`. Full cross-coset separation is essential.
 
 Let `K` be a convex polygon of diameter at most `D`, and set
 
-$$
+```math
 \delta={\pi D^2\over4}-\operatorname{area}(K)\ge0.
-$$
+```
 
 Every side of `K`, of length `ell`, satisfies
 
-$$
+```math
 \boxed{\ell^3\le48D\delta.}
 \tag{2}
-$$
+```
 
 To prove this, form `L=(K-K)/2`. Every point of `L` has norm at most
 `R=D/2`; Brunn-Minkowski gives `area(L)>=area(K)`. A supporting side of
@@ -74,19 +74,19 @@ with the radius-`R` disk has length `2sqrt(R^2-h^2)>=s`. The circular cap
 beyond the line is absent from `L`. Its area is at least the cap with chord
 length `s`. Writing `t=s/(2R)`, that cap has area
 
-$$
+```math
 R^2(\arcsin t-t\sqrt{1-t^2})
 \ge {2R^2t^3\over3}
 ={s^3\over12R}.
-$$
+```
 
 The inequality follows by differentiating the bracket: its derivative is
 `2t^2/sqrt(1-t^2)>=2t^2`, and its value at zero is zero. Therefore
 
-$$
+```math
 \delta\ge\pi R^2-\operatorname{area}(L)
 \ge {s^3\over12R}\ge {\ell^3\over48D},
-$$
+```
 
 which proves (2). No equality-case uniqueness theorem is used.
 
@@ -103,18 +103,18 @@ at least `s`, so its perpendicular component has magnitude at least
 Let `N(t)` count nonzero lattice vectors of length at most `t`. Disjoint
 radius-`1/2` open disks around these vectors give, for `t>=1`,
 
-$$
+```math
 N(t)\le4(t+1/2)^2\le9t^2.
-$$
+```
 
 For every `T>=1`, summation by parts consequently gives
 
-$$
+```math
 \sum_{0<|u|\le T}{1\over|u|}
 ={N(T)\over T}+\int_1^T{N(t)\over t^2}\,dt
 \le18T.
 \tag{3}
-$$
+```
 
 Set `K=conv(S)` and suppose it has positive area. Merge consecutive collinear
 sides. Each oriented side has one primitive lattice direction `u`, and its
@@ -123,10 +123,10 @@ its length divided by `|u|`. A given oriented direction occurs at most once
 on a convex polygon. With `ell_max` the longest side and `P=per(K)`, split
 these directions at length `T`. Equation (3) gives
 
-$$
+```math
 \boxed{B\le18\ell_{\max}T+{P\over T}.}
 \tag{4}
-$$
+```
 
 This controls collinear boundary lattice points as well as extreme vertices.
 They must not be confused: counting only hull vertices would make the bound
@@ -136,10 +136,10 @@ false even for a large lattice rectangle.
 
 Pick's theorem, after an invertible basis map to the integer lattice, gives
 
-$$
+```math
 |S|\le |K\cap(t+\Lambda)|
 ={\operatorname{area}(K)\over v}+{B\over2}+1.
-$$
+```
 
 For completeness, `P<=pi D` follows by projecting the polygon boundary:
 the total absolute projection of its edges onto a fixed line is twice its
@@ -149,21 +149,21 @@ of those widths, each at most `D`.
 Use `v>=a0`, `P<=pi D<4D`, equations (2) and (4), and
 `T=D^{1/5}>=1`. Since `48^{1/3}<4` and `a0<1`,
 
-$$
+```math
 \begin{aligned}
 |S|-aD^2-1
 &\le-{\delta\over a_0}+9\ell_{\max}T+{P\over2T}\\
 &\le-\delta+36D^{8/15}\delta^{1/3}+2D^{4/5}.
 \end{aligned}
 \tag{5}
-$$
+```
 
 Put `u=delta^{1/3}/D^{4/15}`. The right side of (5) becomes
 `D^{4/5}(-u^3+36u+2)`. For `u>=0`,
 
-$$
+```math
 u^3-36u+48\sqrt3=(u-2\sqrt3)^2(u+4\sqrt3)\ge0,
-$$
+```
 
 and `48sqrt(3)+2<86`. This proves (1).
 
@@ -178,10 +178,10 @@ bounded condition number, and no source embedding inside a diameter-half disk.
 Assume the linear-reserve candidate, so every sufficiently large global source
 `A`, with diameter `D`, satisfies
 
-$$
+```math
 n-1\ge aD^2+cD,\qquad c={1\over320000}.
 \tag{6}
-$$
+```
 
 Fix **any** translated unit-separated rank-two lattice `Lambda` and any
 `0<=rho<1/2`. Let `k_rho(A,Lambda)` count the actual source labels farther
@@ -192,23 +192,23 @@ most `D+2rho`.
 
 Apply (1) to the matched sites and subtract from (6):
 
-$$
+```math
 \boxed{
 k_\rho(A,\Lambda)
 \ge(c-4a\rho)D-4a\rho^2-86(D+2\rho)^{4/5}.
 }
 \tag{7}
-$$
+```
 
 All source labels participate, including every contact isolate. The bound is
 uniform over lattice shape, orientation and translation. In particular, for
 `rho0=1/10000000`, one has `4a rho0<c/4`. Thus, for every sufficiently
 large global minimizer and **every** such lattice,
 
-$$
+```math
 \boxed{k_{\rho_0}(A,\Lambda)\ge {D\over640000}.}
 \tag{8}
-$$
+```
 
 The threshold implied by this deliberately coarse estimate is very large;
 the result is asymptotic, with explicit finite inequality (7). No practical
@@ -249,9 +249,9 @@ absolute coordinate is `9/10`, giving squared length at least
 
 A packet point from row `k` and index `i=2j+sigma` has coordinates
 
-$$
+```math
 (A_k+1+(19/10)j+(19/20)\sigma,\quad t_y+ka_0+\eta_\sigma),
-$$
+```
 
 with `sigma in {0,1}`, `eta_0=1/6`, and `eta_1=1/2`. Choose the
 residue `r in {0,...,18}` of the integer `A_k+1-k` modulo 19.
@@ -283,18 +283,18 @@ None of those additional hypotheses is supplied by finite lattice coverage.
 Unlike an arbitrary finite union of lattices, a **globally unit-separated
 periodic packing** has a uniform population bound. Suppose
 
-$$
+```math
 P=\bigcup_{i=1}^q(t_i+\Lambda)
-$$
+```
 
 is unit-separated as a whole, with `q` distinct cosets. The lattice, phases,
 and `q` may vary with the source. If `S` is any finite subset of `P`,
 `diam(S)<=D`, and `1<=q<=D/16`, then
 
-$$
+```math
 \boxed{|S|\le aD^2+114q^{6/5}D^{4/5}+q.}
 \tag{9}
-$$
+```
 
 This counts the full source. It assumes no contact connectivity, grain
 decomposition, circular container, or common hull for the separate coset
@@ -306,18 +306,18 @@ including cross-coset distances, to be at least one.
 For a unit-separated lattice of covolume `V`, and `D>=max(1,V)`,
 Sections 2--4 give the stronger estimate
 
-$$
+```math
 \boxed{|X|\le {\pi D^2\over4V}+86V^{1/5}D^{4/5}+1}
 \tag{10}
-$$
+```
 
 for any subset of a translate with diameter at most `D`. For a noncollinear
 hull put `delta=pi D^2/4-area(conv X)` and retain its coefficient in Pick:
 
-$$
+```math
 |X|-{\pi D^2\over4V}-1
 \le-\delta/V+36D^{1/3}T\delta^{1/3}+2D/T,\qquad T\ge1.
-$$
+```
 
 The maximum of the first two terms is
 `48sqrt(3) sqrt(V) D^(1/2) T^(3/2)`. Choose
@@ -332,10 +332,10 @@ term in (10) already exceeds `D`; if `D/2<V<=D`, its error term exceeds
 The period lattice is unit-separated, since `p,p+lambda` belong to `P`
 for any `p in P` and nonzero period `lambda`. Its covolume satisfies
 
-$$
+```math
 \boxed{V\ge q a_0.}
 \tag{11}
-$$
+```
 
 Indeed apply the canonical [finite Oler inequality](../theory/03-oler-shell.md)
 to increasingly large parallelograms of period cells. Population is `q`
@@ -347,10 +347,10 @@ If `V<=4q`, then `q<=D/16` gives `V<=D/4`. Apply (10) to each actual
 subset `S_i=S intersect (t_i+Lambda)`. Their hulls need not coincide, but
 each has diameter at most `D`. Summing and using (11) gives
 
-$$
+```math
 |S|\le {q\pi D^2\over4V}+86qV^{1/5}D^{4/5}+q
 \le aD^2+114q^{6/5}D^{4/5}+q,
-$$
+```
 
 because `86*4^(1/5)<114`.
 
@@ -360,10 +360,10 @@ vector's parallel component to absolute value at most `s/2`. Its normal
 component satisfies `h>=a0 s`, with `V=sh`. A diameter-`D` coset subset
 uses at most `D/h+1` rows and at most `D/s+1` points per row. Hence
 
-$$
+```math
 |S|\le q\left({D^2\over V}+D\left({1\over s}+{1\over h}\right)+1\right)
 <{qD^2\over V}+3qD+q.
-$$
+```
 
 For `V>4q` and `q<=D/16`, this is at most `D^2/2`, below the right
 side of (9). This proves (9) in both alternatives.
@@ -374,10 +374,10 @@ Combining (9) with the candidate linear reserve, every global minimizer
 with `D>1280000` contained in a full unit-separated periodic packing with
 `q` points per period cell satisfies
 
-$$
+```math
 \boxed{q\ge {D^{1/6}\over(36800000)^{5/6}}.}
 \tag{12}
-$$
+```
 
 For `q<=D/16`, the two population bounds give
 `D/320000<=114q^(6/5)D^(4/5)+q-1<=115q^(6/5)D^(4/5)`, which is

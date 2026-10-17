@@ -24,9 +24,9 @@ Suppressing those vertices turns the fully force-visible contact graph into a pl
 weighted skeleton with positive-integer edge lengths.  The normalized KKT virial
 identity becomes an exact stress-length identity on that skeleton:
 
-$$
+```math
 \boxed{\sum_{E\in E(\mathscr S)} L_E\alpha_E=D^2.}
-$$
+```
 
 This identifies the precise loophole left by the bridge/reciprocal theorem C20.  A
 large amount of bridge stress can evade the `O(D)` reciprocal-frontier budget only by
@@ -41,23 +41,23 @@ Fix a normalized KKT stress.  Let `C_+` be its positive unit-contact graph and `
 the positive diameter-reaction vertices.  At every vertex `x notin B_+`, KKT
 equilibrium is
 
-$$
+```math
 \boxed{
 \sum_{xy\in C_+}\alpha_{xy}(x-y)=0,
 \qquad \alpha_{xy}>0.
 }
 \tag{C21.1}
-$$
+```
 
 Every positive contact has length one.
 
 ### Lemma C21.1 (no unloaded leaf)
 
 If `x notin B_+`, then
-$$
+```math
 \boxed{\deg_{C_+}(x)\ne1.}
 \tag{C21.2}
-$$
+```
 
 #### Proof
 
@@ -68,37 +68,37 @@ A single nonzero vector with a positive coefficient cannot sum to zero in (C21.1
 
 Suppose `x notin B_+` has exactly two positive-contact neighbors `y,z`.  Then
 
-$$
+```math
 \boxed{
 y,x,z\text{ are collinear},
 \qquad |y-x|=|x-z|=1,
 \qquad x=\frac{y+z}{2},}
 \tag{C21.3}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{\alpha_{xy}=\alpha_{xz}.}
 \tag{C21.4}
-$$
+```
 
 #### Proof
 
 Put
-$$
+```math
 u=x-y,\qquad v=x-z.
-$$
+```
 Both are unit vectors.  Equation (C21.1) becomes
-$$
+```math
 \alpha_{xy}u+\alpha_{xz}v=0.
 \tag{C21.5}
-$$
+```
 A positive linear combination of two nonzero vectors can vanish only when the vectors
 are antiparallel.  Since they have the same norm,
-$$
+```math
 v=-u
-$$
+```
 and equality of coefficients follows from (C21.5).  The geometric statements in
 (C21.3) are immediate. `\square`
 
@@ -110,31 +110,31 @@ This uses neither genericity nor triangle-freeness.
 
 Call a contact vertex **structural** when it belongs to `B_+` or its positive-contact
 degree is not two.  A **neutral chain** is a simple contact path
-$$
+```math
 P=(x_0,x_1,\ldots,x_L)
 \tag{C21.6}
-$$
+```
 whose internal vertices `x_1,...,x_{L-1}` are nonreaction degree-two vertices.
 
 ### Corollary C21.3 (straight constant-stress chain)
 
 Every neutral chain satisfies
-$$
+```math
 \boxed{
 x_i=x_0+i u
 \qquad(0\le i\le L)}
 \tag{C21.7}
-$$
+```
 for one unit vector `u`, and all its contact edges have one common stress value
-$$
+```math
 \boxed{\alpha_{x_{i-1}x_i}=\alpha_P>0.}
 \tag{C21.8}
-$$
+```
 Consequently
-$$
+```math
 \boxed{|x_0-x_L|=L.}
 \tag{C21.9}
-$$
+```
 
 #### Proof
 
@@ -156,17 +156,17 @@ neutral chain terminates at structural vertices.
 ## 3. The weighted structural skeleton
 
 Suppress every internal vertex of every maximal neutral chain.  Let
-$$
+```math
 \mathscr S
 \tag{C21.10}
-$$
+```
 be the resulting graph.  Its vertices are the structural vertices.  For each skeleton
 edge `E=ab`, let
 
-$$
+```math
 L_E\in\mathbb Z_{\ge1}
 \tag{C21.11}
-$$
+```
 be the number of unit contacts in the corresponding neutral chain and let
 `alpha_E` be the common stress on that chain.
 
@@ -175,28 +175,31 @@ be the number of unit contacts in the corresponding neutral chain and let
 The skeleton has the following exact properties.
 
 1. Every skeleton edge is realized by the straight segment `[a,b]` and
-   $$
+   ```math
    \boxed{|a-b|=L_E\in\mathbb Z_{\ge1}.}
    \tag{C21.12}
-   $$
+   
+   ```
 2. The straight-line skeleton is plane.  Distinct edge interiors are disjoint.
 3. At every nonreaction skeleton vertex `a`,
-   $$
+   ```math
    \boxed{
    \sum_{E=ab}\alpha_E\frac{a-b}{L_E}=0.
    }
    \tag{C21.13}
-   $$
+   
+   ```
    At a reaction vertex `b in B_+`, the same left side equals the canonical diameter
    reaction `g_b`.
 4. The normalized contact virial becomes
-   $$
+   ```math
    \boxed{
    
    \sum_{E\in E(\mathscr S)}L_E\alpha_E=D^2.
    }
    \tag{C21.14}
-   $$
+   
+   ```
 
 #### Proof
 
@@ -209,11 +212,11 @@ share suppressed vertices and would not be distinct maximal chains.  This proves
 
 At a structural endpoint `a`, the contact force contributed by the first edge of the
 chain to `b` is
-$$
+```math
 \alpha_E\frac{a-b}{|a-b|}
 =
 \alpha_E\frac{a-b}{L_E}.
-$$
+```
 All suppressed internal forces cancel by equilibrium.  Summing over incident chains
 gives (C21.13) and its reaction version.
 
@@ -242,7 +245,7 @@ Moving a bridge cut across one suppressed internal vertex changes no positive di
 reaction vertex on either side.  Therefore Theorem C20.2 assigns the **same**
 reciprocal-polygon diagonal to every unit bridge in the chain:
 
-$$
+```math
 \boxed{
 \Delta z_E
 =\alpha_E J\frac{a-b}{L_E},
@@ -250,7 +253,7 @@ $$
 |\Delta z_E|=\alpha_E.
 }
 \tag{C21.15}
-$$
+```
 
 Thus repeated identical reciprocal diagonals have an exact primal meaning: they are
 precisely straight unloaded series transport until a reaction, branch, or
@@ -264,23 +267,23 @@ Now assume the fully force-visible branch and choose a relative-interior normali
 KKT stress, so `C_+=C`.
 
 Let
-$$
+```math
 S_{\rm br}
 =
 \sum_{e\text{ bridge of }C}\alpha_e
 \tag{C21.16}
-$$
+```
 be the total contact-stress mass on bridges.  C20 gives, for every bridge-tree depth
 frontier, total stress at most `2D`.  Hence if
-$$
+```math
 S_{\rm br}\ge\eta D^2
 \tag{C21.17}
-$$
+```
 for some `eta>0`, then the bridge tree has unit-edge depth at least
-$$
+```math
 \boxed{\frac{\eta D}{2}.}
 \tag{C21.18}
-$$
+```
 
 Along any bridge-tree path, every maximal subrun with no reaction vertex, no branching
 vertex, and no nontrivial two-edge-connected block is a neutral chain and is therefore

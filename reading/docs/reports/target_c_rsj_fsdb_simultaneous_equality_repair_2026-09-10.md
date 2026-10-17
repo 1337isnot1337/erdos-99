@@ -28,38 +28,38 @@ the force hull must coincide with the half diameter-direction polygon.  Near equ
 in the elementary gap minimization then forces all projective diameter-direction gap
 excess into one gap.  Its limiting perimeter is
 
-$$
+```math
 \boxed{
 p_{FS}(y)=y+2\cos(y/2).}
 \tag{RFS.1}
-$$
+```
 
 At the unique RSJ optimizer, however,
 
-$$
+```math
 \boxed{p_R=2y_R.}
 \tag{RFS.2}
-$$
+```
 
 The parent report already proves
 
-$$
+```math
 y_R>\frac32>2\rho,
 \qquad
 \rho=\cos\rho,
-$$
+```
 
 so
 
-$$
+```math
 2y_R>y_R+2\cos(y_R/2).
 \tag{RFS.3}
-$$
+```
 
 Thus the RSJ endpoint is impossible for a reason entirely internal to the Target C
 geometry.  Consequently the uniform strict gap claimed as RSJ.6 is restored:
 
-$$
+```math
 \boxed{
 \exists\epsilon_R>0\ \exists D_0<\infty\ \forall D\ge D_0,
 \qquad
@@ -68,13 +68,13 @@ $$
 \lambda_R+\epsilon_R,
 }
 \tag{RFS.4}
-$$
+```
 
 where
 
-$$
+```math
 \lambda_R=0.5921405436062881570\ldots .
-$$
+```
 
 No classification of equality in the Rogalski–Saint Raymond inequality is used.
 
@@ -84,34 +84,34 @@ No classification of equality in the Rogalski–Saint Raymond inequality is used
 
 Let
 
-$$
+```math
 y_D=\frac hD,
 \qquad
 p_D=\frac{\operatorname{per}F}{D},
 \qquad
 \lambda_D=\frac{e_{BB}+2s_C}{D}.
-$$
+```
 
 The corrected RSJ argument through Sections 1–4 gives
 
-$$
+```math
 \liminf\lambda_D\ge\lambda_R,
 \tag{1.1}
-$$
+```
 
 with a unique parameter minimizer
 
-$$
+```math
 y_D\to y_R,
 \qquad
 p_D\to p_R=2y_R
 \tag{1.2}
-$$
+```
 
 whenever `lambda_D->lambda_R`.  Its Section 5 also proves from the unrelaxed GU/JC
 upper chain that in this case
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}F}{D^2}
 \to
@@ -119,7 +119,7 @@ A_R:=\Phi(y_R)
 =\frac{y_R+\sin y_R}{4}.
 }
 \tag{1.3}
-$$
+```
 
 The new theorem proves that (1.2)–(1.3) are incompatible with FSDB.
 
@@ -144,99 +144,99 @@ This is an exact contradiction with a fixed positive perimeter mismatch.
 
 For a post-ZF survivor let
 
-$$
+```math
 a_D=\arcsin\frac1{2D},
 \qquad
 \delta_D=2a_D.
 \tag{2.1}
-$$
+```
 
 Order the `h` projective directions of the actual diameter edges around the projective
 circle and let
 
-$$
+```math
 g_{D,1},\ldots,g_{D,h}
 \tag{2.2}
-$$
+```
 
 be the gaps.  C67 and DB give
 
-$$
+```math
 g_{D,i}\ge\delta_D,
 \qquad
 \sum_i g_{D,i}=\pi.
 \tag{2.3}
-$$
+```
 
 Let
 
-$$
+```math
 P_D^{\rm dir}
 :=D\operatorname{conv}\{\pm u_e:e\in E(H)\}
 \tag{2.4}
-$$
+```
 
 be DB's complete diameter-direction polygon.  Its exact area and perimeter are
 
-$$
+```math
 \operatorname{area}(P_D^{\rm dir})
 =D^2\sum_i\sin g_{D,i},
 \tag{2.5}
-$$
+```
 
 and
 
-$$
+```math
 \operatorname{per}(P_D^{\rm dir})
 =4D\sum_i\sin\frac{g_{D,i}}2.
 \tag{2.6}
-$$
+```
 
 FS.4 gives the full-source circumcenter `o_D` and FSDB proves, with
 `L_D/D->0`,
 
-$$
+```math
 \boxed{
 \frac12P_D^{\rm dir}
 \subseteq
 (F-o_D)+L_DB_2.
 }
 \tag{2.7}
-$$
+```
 
 Define normalized convex bodies
 
-$$
+```math
 Q_D:=\frac1{2D}P_D^{\rm dir},
 \qquad
 \widehat F_D:=\frac1D(F-o_D),
 \qquad
 \epsilon_D:=\frac{L_D}{D}\to0.
 \tag{2.8}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{Q_D\subseteq\widehat F_D+\epsilon_DB_2.}
 \tag{2.9}
-$$
+```
 
 Also
 
-$$
+```math
 \operatorname{area}Q_D
 =\frac14\sum_i\sin g_{D,i},
 \tag{2.10}
-$$
+```
 
 and
 
-$$
+```math
 \operatorname{per}Q_D
 =2\sum_i\sin\frac{g_{D,i}}2.
 \tag{2.11}
-$$
+```
 
 ---
 
@@ -246,55 +246,55 @@ $$
 
 Let `D_j->infinity`, let `h_j/D_j->y` with `0<y<pi`, and let
 
-$$
+```math
 \delta_j=2\arcsin\frac1{2D_j}.
-$$
+```
 
 Suppose angles
 
-$$
+```math
 g_{j,1},\ldots,g_{j,h_j}\ge\delta_j,
 \qquad
 \sum_i g_{j,i}=\pi
-$$
+```
 
 satisfy the asymptotic FSDB area equality
 
-$$
+```math
 \sum_i\sin g_{j,i}
 \longrightarrow
 y+\sin y.
 \tag{3.1}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 2\sum_i\sin\frac{g_{j,i}}2
 \longrightarrow
 y+2\cos\frac y2.
 }
 \tag{3.2}
-$$
+```
 
 More precisely, after relabeling the gaps, if
 
-$$
+```math
 x_{j,i}:=g_{j,i}-\delta_j\ge0,
 \qquad
 X_j:=\sum_i x_{j,i}=\pi-h_j\delta_j,
 \tag{3.3}
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \sum_{i\ne i_j}x_{j,i}\to0
 }
 \tag{3.4}
-$$
+```
 
 for an index `i_j` at which `x_{j,i}` is maximal.  Thus all asymptotic excess over the
 C67 minimum gap is concentrated into one projective gap.
@@ -303,48 +303,48 @@ C67 minimum gap is concentrated into one projective gap.
 
 Since `D_j delta_j->1` and `h_j/D_j->y`,
 
-$$
+```math
 X_j\to X:=\pi-y\in(0,\pi).
 \tag{3.5}
-$$
+```
 
 Write
 
-$$
+```math
 f_j(x):=\sin(\delta_j+x),
 \qquad 0\le x\le X_j.
-$$
+```
 
 For large `j`, `delta_j+x` lies in `(0,pi)` throughout this interval, so `f_j` is
 strictly concave.  The standard concave-transfer argument gives the exact minimum
 
-$$
+```math
 \sum_i f_j(x_{j,i})
 \ge
 (h_j-1)f_j(0)+f_j(X_j).
 \tag{3.6}
-$$
+```
 
 The right side equals
 
-$$
+```math
 (h_j-1)\sin\delta_j
 +
 \sin\bigl(\pi-(h_j-1)\delta_j\bigr)
 \to y+\sin y.
 \tag{3.7}
-$$
+```
 
 Hence (3.1) says that the deficit above the concave minimum in (3.6) tends to zero.
 
 Let
 
-$$
+```math
 M_j:=\max_i x_{j,i},
 \qquad
 r_j:=X_j-M_j.
 \tag{3.8}
-$$
+```
 
 We show `r_j->0`.
 
@@ -353,10 +353,10 @@ sum `X_j` and every coordinate at most `X_j/2`, concavity makes the minimum occu
 two coordinates equal `X_j/2` and all others vanish.  Therefore the deficit in (3.6)
 is asymptotically at least
 
-$$
+```math
 2\sin(X/2)-\sin X>0,
 \tag{3.9}
-$$
+```
 
 because `0<X<pi`.  This contradicts the deficit tending to zero.  Thus eventually
 `M_j>X_j/2`, so `0<=r_j<X_j/2`.
@@ -365,47 +365,47 @@ For such `j`, keep the largest coordinate `M_j=X_j-r_j`.  Concavity again minimi
 the contribution of all remaining coordinates, whose sum is `r_j`, by concentrating
 that sum into one coordinate.  Hence the deficit in (3.6) is at least
 
-$$
+```math
 \begin{aligned}
 \Delta_j(r_j):={}&
  f_j(X_j-r_j)+f_j(r_j)\\
 &-f_j(X_j)-f_j(0).
 \end{aligned}
 \tag{3.10}
-$$
+```
 
 If `r_j` failed to tend to zero, take a further subsequence with
 `r_j->r in (0,X/2]`.  Then
 
-$$
+```math
 \Delta_j(r_j)
 \to
 \sin(X-r)+\sin r-\sin X.
 \tag{3.11}
-$$
+```
 
 Using the sum-to-product identity,
 
-$$
+```math
 \sin(X-r)+\sin r-\sin X
 =2\sin(X/2)
 \left[\cos(X/2-r)-\cos(X/2)\right]>0
 \tag{3.12}
-$$
+```
 
 for `0<r<=X/2`.  This again contradicts vanishing deficit.  Therefore `r_j->0`,
 proving (3.4).
 
 Now compare the half-angle sum with the one-excess-gap extremizer.  The function
 
-$$
+```math
 q_j(x):=\sin\frac{\delta_j+x}{2}
-$$
+```
 
 is `1/2`-Lipschitz.  Moving all excess outside the maximal coordinate onto that
 coordinate changes the excess vector in `l^1` distance exactly `2r_j`.  Hence
 
-$$
+```math
 \left|
 \sum_i q_j(x_{j,i})
 -
@@ -413,21 +413,21 @@ $$
 \right|
 \le r_j\to0.
 \tag{3.13}
-$$
+```
 
 Finally,
 
-$$
+```math
 (h_j-1)q_j(0)
 =(h_j-1)\sin a_{D_j}
 =\frac{h_j-1}{2D_j}
 \to\frac y2,
 \tag{3.14}
-$$
+```
 
 and
 
-$$
+```math
 q_j(X_j)
 =
 \sin\frac{\pi-(h_j-1)\delta_j}{2}
@@ -435,7 +435,7 @@ q_j(X_j)
 \cos((h_j-1)a_{D_j})
 \to\cos\frac y2.
 \tag{3.15}
-$$
+```
 
 Multiply (3.13) by two.  This proves (3.2). `square`
 
@@ -455,36 +455,36 @@ half-angle sum by only `o(1)`, exactly as required.
 
 Consider an unbounded post-ZF survivor sequence with
 
-$$
+```math
 \frac hD\to y\in(0,\pi)
 \tag{4.1}
-$$
+```
 
 and suppose
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}F}{D^2}
 \to\Phi(y)=\frac{y+\sin y}{4}.
 }
 \tag{4.2}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \frac{\operatorname{per}F}{D}
 \to y+2\cos(y/2).
 }
 \tag{4.3}
-$$
+```
 
 ### Proof
 
 By FSDB's exact area formula and gap minimization,
 
-$$
+```math
 \operatorname{area}Q_D
 =\frac14\sum_i\sin g_{D,i}
 \ge
@@ -493,11 +493,11 @@ $$
 \sin((h-1)\delta_D)
 \right].
 \tag{4.4}
-$$
+```
 
 The right side tends to `Phi(y)`.  On the other hand, (2.9) and Steiner's formula give
 
-$$
+```math
 \operatorname{area}Q_D
 \le
 \operatorname{area}(\widehat F_D+\epsilon_DB_2)
@@ -508,24 +508,24 @@ $$
 +
 \pi\epsilon_D^2.
 \tag{4.5}
-$$
+```
 
 The normalized force hull has diameter one, so
 `per(widehat F_D)<=pi`; hence the last two terms tend to zero.  By (4.2),
 
-$$
+```math
 \operatorname{area}Q_D\to\Phi(y).
 \tag{4.6}
-$$
+```
 
 Thus the lower bound (4.4) is asymptotically an equality, and Lemma RFS.1 gives
 
-$$
+```math
 \operatorname{per}Q_D
 =2\sum_i\sin\frac{g_{D,i}}2
 \to y+2\cos(y/2).
 \tag{4.7}
-$$
+```
 
 It remains to transfer this perimeter from `Q_D` to the force hull.  Both normalized
 body sequences are uniformly bounded.  Indeed `Q_D` lies in the radius-`1/2` disk,
@@ -533,43 +533,43 @@ and FS's full-source circumradius bound places `widehat F_D` in a disk of radius
 `1/2+o(1)` about the chosen source circumcenter.  Pass to a Hausdorff-convergent
 subsequence
 
-$$
+```math
 Q_D\to Q_\infty,
 \qquad
 \widehat F_D\to F_\infty.
 \tag{4.8}
-$$
+```
 
 From (2.9),
 
-$$
+```math
 Q_\infty\subseteq F_\infty.
 \tag{4.9}
-$$
+```
 
 Equations (4.2) and (4.6) give
 
-$$
+```math
 \operatorname{area}Q_\infty
 =
 \operatorname{area}F_\infty
 =
 \Phi(y)>0.
 \tag{4.10}
-$$
+```
 
 Two planar compact convex bodies with positive area cannot be strictly nested while
 having equal area: a point of `F_infty\Q_infty` together with an interior disk of
 `Q_infty` would create a positive-area convex wedge outside `Q_infty`.  Hence
 
-$$
+```math
 Q_\infty=F_\infty.
 \tag{4.11}
-$$
+```
 
 Perimeter is continuous under Hausdorff convergence of planar convex bodies.  Therefore
 
-$$
+```math
 \lim\operatorname{per}\widehat F_D
 =
 \operatorname{per}F_\infty
@@ -578,7 +578,7 @@ $$
 =
 \lim\operatorname{per}Q_D.
 \tag{4.12}
-$$
+```
 
 Using (4.7) proves (4.3) on every convergent subsequence, hence on the original
 sequence. `square`
@@ -601,10 +601,10 @@ Assume the report-level dependencies used in RSJ through Section 4, including FS
 FSDB, FD.1–FD.2, GU, and JC, and use only the **inequality** part of Rogalski–Saint
 Raymond Theorem 1.  Then no unbounded post-ZF survivor sequence can satisfy
 
-$$
+```math
 \lambda_D\to\lambda_R.
 \tag{5.1}
-$$
+```
 
 Consequently RFS.4 holds for some absolute `epsilon_R>0`.
 
@@ -612,49 +612,49 @@ Consequently RFS.4 holds for some absolute `epsilon_R>0`.
 
 Suppose (5.1).  The unique analytic minimization in RSJ Section 4 gives
 
-$$
+```math
 y_D\to y_R,
 \qquad
 p_D\to2y_R.
 \tag{5.2}
-$$
+```
 
 The GU/JC upper chain and the two area lower bounds, exactly as in RSJ (5.4)–(5.6),
 give
 
-$$
+```math
 \frac{\operatorname{area}F}{D^2}
 \to
 A_R=\Phi(y_R).
 \tag{5.3}
-$$
+```
 
 Apply Theorem RFS.2 with `y=y_R`.  It forces
 
-$$
+```math
 p_D\to y_R+2\cos(y_R/2).
 \tag{5.4}
-$$
+```
 
 Comparing (5.2) and (5.4) yields
 
-$$
+```math
 y_R=2\cos(y_R/2).
 \tag{5.5}
-$$
+```
 
 Write `x=y_R/2`.  Then (5.5) is exactly
 
-$$
+```math
 x=\cos x.
-$$
+```
 
 By uniqueness of the positive solution `rho` of `rho=cos rho`, this gives
 
-$$
+```math
 y_R=2\rho.
 \tag{5.6}
-$$
+```
 
 But the parent RSJ report proves `y_R>3/2`, while DB records `2rho<3/2`.  Contradiction.
 Thus no endpoint sequence exists.
@@ -662,11 +662,11 @@ Thus no endpoint sequence exists.
 For the uniform gap, argue by diagonal sequence.  If no `epsilon_R>0,D_0` existed,
 then for every integer `j` there would be a post-ZF survivor with
 
-$$
+```math
 D_j\ge j,
 \qquad
 \lambda_j<\lambda_R+1/j.
-$$
+```
 
 The retained RSJ lower bound `liminf lambda>=lambda_R` would force
 `lambda_j->lambda_R`, contradicting the endpoint exclusion just proved. `square`
@@ -675,27 +675,27 @@ The retained RSJ lower bound `liminf lambda>=lambda_R` would force
 
 For orientation only,
 
-$$
+```math
 y_R=1.51001714376294\ldots,
-$$
+```
 
 so the two forced perimeter limits would be
 
-$$
+```math
 2y_R=3.02003428752588\ldots
-$$
+```
 
 and
 
-$$
+```math
 y_R+2\cos(y_R/2)=2.96654848164832\ldots .
-$$
+```
 
 Their difference is
 
-$$
+```math
 0.05348580587755\ldots>0.
-$$
+```
 
 No decimal is needed for the sign: `y_R>3/2>2rho` proves it exactly.
 
@@ -792,12 +792,12 @@ same **source-specific** strict endpoint exclusion that the parent RSJ report in
 
 Thus the strongest justified report-level post-ZF statement is again
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge0.592140543606288\ldots+\epsilon_R
 }
-$$
+```
 
 for some absolute `epsilon_R>0` and all sufficiently large post-ZF survivors, but the
 proof now uses simultaneous FSDB equality rigidity rather than an unsupported external
@@ -815,17 +815,17 @@ This can be reused independently of RSJ.
 Level I still requires a contradiction for every post-ZF survivor.  After RFS, the
 highest-value exact target remains an upper tradeoff on
 
-$$
+```math
 e_{BB}+2s_C
-$$
+```
 
 that uses the retained `(y,p,lambda)` state.  A sufficient theorem is any uniform
 upper bound
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}
 \le\lambda_R+o(1),
-$$
+```
 
 because RFS.4 would contradict it for large `D`.
 

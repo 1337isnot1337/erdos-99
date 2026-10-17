@@ -19,15 +19,12 @@ Erdős Problem #99.  Its endpoint is the following asymptotic exclusion:
 > triangle-free contact-minimal representatives satisfies
 > 
 
-$$
-
+```math
 > \liminf_{D\to\infty}
 > \frac{e_{BB}+2s_C-3k}{D}\ge 1,
 > \qquad k=d_H+s_Z.
 > 
-$$
-
-
+```
 
 Here (D) is the diameter of the representative, (e_{BB}), (s_C), (d_H),
 and (s_Z) have exactly the meanings in the canonical Target C-II attachment
@@ -38,108 +35,108 @@ being substituted for the source.
 
 The result eliminates every full-core sequence with a subunit limiting value of
 the displayed scalar.  It supplies no upper bound on that scalar, so it does not
-eliminate the remaining $\mu\ge1$ full-core regime and does not address the
+eliminate the remaining $`\mu\ge1`$ full-core regime and does not address the
 macroscopic-container/exterior-cap branch.
 
 ## 2. Abstract large-cell lemma
 
-Let $D_j\to\infty$.  For each $j$, let $P_{r,j}$ be finitely many convex
+Let $`D_j\to\infty`$.  For each $`j`$, let $`P_{r,j}`$ be finitely many convex
 polygons (degenerate polygons are allowed), with
 
 
-$$
+```math
  \sum_r \operatorname{area}(P_{r,j})
      \ge \alpha D_j^2-o(D_j^2),
  \qquad
  \sum_r \sqrt{\operatorname{area}(P_{r,j})}
      \le C D_j,
 \tag{2.1}
-$$
+```
 
-for fixed $\alpha>0$ and $C<\infty$.  Write
+for fixed $`\alpha>0`$ and $`C<\infty`$.  Write
 
-$$
+```math
  a_{r,j}=\operatorname{area}(P_{r,j}),
  \quad d_{r,j}=\operatorname{diam}(P_{r,j}),
  \quad d_{r,j}\le \delta_{r,j}+b,
 \tag{2.2}
-$$
+```
 
-with fixed $b<\infty$, and suppose that the exact budget inequality
+with fixed $`b<\infty`$, and suppose that the exact budget inequality
 
-$$
+```math
  \sum_r\delta_{r,j}\le 6+\mu_jD_j
 \tag{2.3}
-$$
+```
 
 holds.  Then
 
-$$
+```math
  \liminf_{j\to\infty}\mu_j
  \ge 2\sqrt{\frac{\alpha}{\pi}}.
 \tag{2.4}
-$$
+```
 
 ### Proof
 
-Fix $0<\eta<\alpha^2/(4C^2)$, and call $r$ large when
+Fix $`0<\eta<\alpha^2/(4C^2)`$, and call $`r`$ large when
 
-$$
+```math
  a_{r,j}\ge \eta D_j^2.
-$$
+```
 
 The complementary small cells satisfy
 
-$$
+```math
  \sum_{r\ {\rm small}}a_{r,j}
  \le \sqrt{\eta}\,D_j
        \sum_r\sqrt{a_{r,j}}
  \le C\sqrt{\eta}\,D_j^2.
 \tag{2.5}
-$$
+```
 
 Consequently, (2.1) gives
 
-$$
+```math
  \sum_{r\ {\rm large}}a_{r,j}
  \ge (\alpha-C\sqrt\eta)D_j^2-o(D_j^2).
 \tag{2.6}
-$$
+```
 
 For every convex planar set, the isodiametric inequality gives
 
-$$
+```math
  a_{r,j}\le \frac\pi4d_{r,j}^2.
-$$
+```
 
 Therefore (2.6) implies
 
-$$
+```math
  \sum_{r\ {\rm large}}d_{r,j}^2
  \ge \frac4\pi
        \left((\alpha-C\sqrt\eta)D_j^2-o(D_j^2)\right).
 \tag{2.7}
-$$
+```
 
 Since the (d_{r,j}) are nonnegative,
 
-$$
+```math
  \sum_{r\ {\rm large}}d_{r,j}
  \ge \left(\sum_{r\ {\rm large}}d_{r,j}^2\right)^{1/2}.
 \tag{2.8}
-$$
+```
 
 The number of large cells is uniformly bounded for fixed (eta): indeed,
 
-$$
+```math
  |\{r:a_{r,j}\ge\eta D_j^2\}|\sqrt\eta D_j
  \le \sum_r\sqrt{a_{r,j}}\le CD_j,
-$$
+```
 
-so it is at most $C/\sqrt{\eta}$.  Combining (2.7)–(2.8), and then using
-$d_{r,j}\le\delta_{r,j}+b$, gives
+so it is at most $`C/\sqrt{\eta}`$.  Combining (2.7)–(2.8), and then using
+$`d_{r,j}\le\delta_{r,j}+b`$, gives
 
-$$
+```math
  \begin{aligned}
  \sum_r\delta_{r,j}
  &\ge \sum_{r\ {\rm large}}\delta_{r,j}\\
@@ -147,56 +144,59 @@ $$
  &\ge 2\sqrt{\frac{\alpha-C\sqrt{\eta}}{\pi}}\,D_j-o(D_j)-b\,\frac C{\sqrt{\eta}}.
  \end{aligned}
 \tag{2.9}
-$$
+```
 
-Insert (2.9) into the exact budget (2.3), divide by $D_j$, and let
-$j\to\infty$.  For each fixed $\eta$,
+Insert (2.9) into the exact budget (2.3), divide by $`D_j`$, and let
+$`j\to\infty`$.  For each fixed $`\eta`$,
 
-$$
+```math
  \liminf_{j\to\infty}\mu_j
  \ge 2\sqrt{\frac{\alpha-C\sqrt{\eta}}{\pi}}.
-$$
+```
 
-Finally let $\eta\downarrow0$.  This proves (2.4).  Notice that the fixed
-additive term $bC/\sqrt{\eta}+6$ disappears only after $\eta$ is fixed and
-$D_j\to\infty$; no uniform-in-$\eta$ assertion is being smuggled into the
+Finally let $`\eta\downarrow0`$.  This proves (2.4).  Notice that the fixed
+additive term $`bC/\sqrt{\eta}+6`$ disappears only after $`\eta`$ is fixed and
+$`D_j\to\infty`$; no uniform-in-$`\eta`$ assertion is being smuggled into the
 argument.
 
 ## 3. Canonical Target C-II application
 
-Take a sequence in the canonical full-core branch, with $D_j\to\infty$.  Let
+Take a sequence in the canonical full-core branch, with $`D_j\to\infty`$.  Let
 
-$$
+```math
  P_{r,j}=\operatorname{conv}(A_{r,j}),
-$$
+```
 
-where $A_{r,j}$ is the attachment set of the $r$-th unloaded positive-contact
+where $`A_{r,j}`$ is the attachment set of the $`r`$-th unloaded positive-contact
 component, with the canonical cell decomposition and occurrence conventions.
 The following are canonical inputs, used only with their stated scopes.
 
 1. Full-core near-disk saturation gives
 
-   $$
+   ```math
    \operatorname{area}(F_j)=\frac\pi4D_j^2-o(D_j^2).
-   $$
+   
+   ```
 
 2. Canonical attachment-cell disjoint tiling gives
 
-   $$
+   ```math
    \sum_r\operatorname{area}(P_{r,j})
      =\operatorname{area}(F_j)-o(D_j^2),
    \qquad
    \sum_r\sqrt{\operatorname{area}(P_{r,j})}=O(D_j).
-   $$
+   
+   ```
 
    The first equality is the canonical full-core rhombic-saturation statement;
    it is not asserted for a Type-I chamber/cap branch.
 
 3. The attachment-cell diameter conversion is
 
-   $$
+   ```math
    d_{r,j}=\operatorname{diam}(P_{r,j})\le\delta_{r,j}+2.
-   $$
+   
+   ```
 
    The (+2) is retained.  It is not discarded by claiming that boundary walks
    are simple or that bridges occur only once.
@@ -204,29 +204,31 @@ The following are canonical inputs, used only with their stated scopes.
 4. The exact attachment currency identity and nonnegativity of the residual
    terms give
 
-   $$
+   ```math
    \sum_r\delta_{r,j}+R_{I,j}+s_{B,j}
      =6+e_{BB,j}+2s_{C,j}-3k_j.
-   $$
+   
+   ```
 
-Since $R_{I,j},s_{B,j}\ge0$, this implies
+Since $`R_{I,j},s_{B,j}\ge0`$, this implies
 
-   $$
+   ```math
    \sum_r\delta_{r,j}
       \le6+\mu_jD_j,
    \qquad
    \mu_j:=\frac{e_{BB,j}+2s_{C,j}-3k_j}{D_j}.
-   $$
+   
+   ```
 
-Items 1 and 2 yield (2.1) with $\alpha=\pi/4$; items 3 and 4 yield (2.2)–
-(2.3) with $b=2$.  The abstract lemma therefore gives
+Items 1 and 2 yield (2.1) with $`\alpha=\pi/4`$; items 3 and 4 yield (2.2)–
+(2.3) with $`b=2`$.  The abstract lemma therefore gives
 
-$$
+```math
  \boxed{\displaystyle
  \liminf_{j\to\infty}
  \frac{e_{BB,j}+2s_{C,j}-3k_j}{D_j}\ge1.}
 \tag{3.1}
-$$
+```
 
 This is a statement about the canonical source-derived ledger.  It does not
 delete contact-isolated source points, and it does not extend the affine-kernel
@@ -244,17 +246,17 @@ full-core near-disk area + canonical cell square-root budget
     -> every full-core sequence with liminf(mu)<1 is excluded.
 ```
 
-This advances the source-level endpoint by removing the entire subunit-$\mu$
+This advances the source-level endpoint by removing the entire subunit-$`\mu`$
 regime.  It does not give the missing implication
 
-$$
+```math
  \mu\ge1
  \quad\Longrightarrow\quad
  \text{unit equilateral triangle or a source-preserving strict diameter decrease}.
-$$
+```
 
 The Section-122 lower bound and Section-123 excess-payment estimate remain
-compatible with $\mu\ge1$.  In particular, their scalar substitution does not
+compatible with $`\mu\ge1`$.  In particular, their scalar substitution does not
 produce a sign contradiction.  The aggregate outer-walk detour and the loaded
 diameter geometry are still unresolved.  The Type-I macroscopic inactive chamber
 or exterior-cap branch is also untouched.
@@ -263,12 +265,12 @@ or exterior-cap branch is also untouched.
 
 The argument was checked against the relevant regressions as follows.
 
-* The abstract scalar compatibility witness has $\mu>1$ and positive detour.
+* The abstract scalar compatibility witness has $`\mu>1`$ and positive detour.
   It therefore does not contradict (3.1); it demonstrates why the new lower
   bound is not already a closure.
 
 * The square-grid harmonic attachment regression has a large
-  $a_r-d_r$, but it lacks the canonical full-core near-disk area saturation and
+  $`a_r-d_r`$, but it lacks the canonical full-core near-disk area saturation and
   disjoint cell square-root budget.  It is not a counterexample to the lemma.
 
 * The vanishing-shear full-core-looking finite family is an exact geometric
@@ -310,7 +312,7 @@ planar isodiametric inequality.
 
 ### Exact consequence
 
-* Full-core $\liminf\mu\ge1$, equation (3.1).
+* Full-core $`\liminf\mu\ge1`$, equation (3.1).
 
 ### Candidate or conditional claims
 

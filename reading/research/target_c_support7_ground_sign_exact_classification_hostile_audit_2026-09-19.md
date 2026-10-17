@@ -35,23 +35,23 @@ Thus the constructive side is checked against an independently recomputed comple
 
 For five fixed signed unit vectors and two missing positions `a,b` of common sign `sigma`, signed equilibrium requires
 
-$$
+```math
 u_a+u_b=R,
 \qquad
 R=-\frac1\sigma\sum_{i\ne a,b}s_i u_i.
-$$
+```
 
 The certificate requires `0<|R|^2<4`, sets
 
-$$
+```math
 q=\frac{4-|R|^2}{|R|^2},
-$$
+```
 
 and uses
 
-$$
+```math
 u_{a,b}=\frac R2\mathbin{\pm}\frac{\sqrt q}{2}JR.
-$$
+```
 
 There is no hidden numerical solve here. The formula gives the exact two intersections of the unit circle whose sum is `R`. Orthogonality of `R` and `JR` proves unit norm directly, and the pair sum is exactly `R`.
 
@@ -61,16 +61,16 @@ All fixed vectors come from rational half-angle coordinates, so `R` and `q` are 
 
 The verifier represents a field element as
 
-$$
+```math
 a+b\sqrt q,
 \qquad a,b,q\in\mathbb Q,\ q>0.
-$$
+```
 
 If the rational and radical terms have the same sign, the sign is immediate. If they oppose, comparing
 
-$$
+```math
 a^2\quad\text{and}\quad b^2q
-$$
+```
 
 is exact because both quantities are nonnegative. This is sufficient for every strict inequality used in the witness checks.
 
@@ -82,15 +82,15 @@ For a unit vector in the canonical half-angle chart, `t=y/(1+x)`. Every witness 
 
 Therefore
 
-$$
+```math
 t_v-t_u>0
-$$
+```
 
 has exactly the sign of
 
-$$
+```math
 y_v(1+x_u)-y_u(1+x_v).
-$$
+```
 
 The verifier checks this quantity is strictly positive for each adjacent pair. This proves the intended strict order `theta_1<...<theta_7` without approximate angles.
 
@@ -100,15 +100,15 @@ Once the seven rays are strictly ordered in the canonical chart, a positive cros
 
 Within that interval,
 
-$$
+```math
 \theta_7-\theta_1<\frac{2\pi}{3}
-$$
+```
 
 is equivalent to
 
-$$
+```math
 u_1\cdot u_7>\cos(2\pi/3)=-\frac12.
-$$
+```
 
 The thirteen H6 witnesses satisfy this strict inequality exactly.
 
@@ -120,15 +120,15 @@ The certificate has one witness for every member of the exact `21`-pattern open-
 
 Thus the stated classifications are exhaustive at the local ground level:
 
-$$
+```math
 35=14+21
-$$
+```
 
 for an open semicircle, and
 
-$$
+```math
 35=22+13
-$$
+```
 
 for the H6 width bound.
 

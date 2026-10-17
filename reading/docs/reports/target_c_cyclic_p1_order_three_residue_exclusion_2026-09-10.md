@@ -18,19 +18,19 @@ LEVEL I STATUS: STILL OPEN
 
 Write
 
-$$
+```math
 m=ru,
 \qquad r=2^k,
 \qquad u\text{ odd},
-$$
+```
 
 and let `M(Z)` be the monic minimal polynomial of the physical P1 root. PR #152 excludes the residue root `Z=1`; NRS proves exact multiplicity saturation for every nontrivial odd-order residue block except order three.
 
 The only untreated block is
 
-$$
+```math
 \phi_3(Z):=Z^2+Z+1
-$$
+```
 
 over `F_2`, corresponding to nontrivial cube roots.
 
@@ -38,12 +38,12 @@ over `F_2`, corresponding to nontrivial cube roots.
 
 For every P1 candidate,
 
-$$
+```math
 \boxed{
 \phi_3(Z)\nmid\overline M(Z).
 }
 \tag{O3X.1}
-$$
+```
 
 This holds whether `m` is odd or even.
 
@@ -53,33 +53,33 @@ Combining O3X with PR #152 and NRS gives the complete mod-two normal form:
 
 There is a squarefree self-reciprocal polynomial
 
-$$
+```math
 B(Z)\mid S_u(Z)
-$$
+```
 
 such that
 
-$$
+```math
 \gcd(B,(Z+1)\phi_3)=1
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \overline M(Z)=B(Z)^r.
 }
 \tag{O3X.2}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \deg M=r\deg B.
 }
 \tag{O3X.3}
-$$
+```
 
 Every characteristic-two residue block used by the physical factor is a complete odd-cyclotomic block, saturated to exactly the `2^k` multiplicity supplied by the Littlewood polynomial, and neither the trivial nor order-three block may occur.
 
@@ -91,36 +91,36 @@ This recovers both previously excluded odd parts `u=1` and `u=3` as immediate de
 
 The reciprocal P1 polynomial is
 
-$$
+```math
 F_m(Z)
 =(Z^m+1)^2+4Z^{m-1}(Z-1)^2.
 \tag{2.1}
-$$
+```
 
 The P1 Littlewood closure gives
 
-$$
+```math
 M\mid P,
 \qquad
 \overline P=S_m
 =(Z+1)^{r-1}S_u^r.
 \tag{2.2}
-$$
+```
 
 Because `u` is odd, every irreducible factor of `S_u`, including `phi_3` when `3|u`, occurs in `S_m` with exact multiplicity `r`.
 
 Thus if
 
-$$
+```math
 \phi_3\mid\overline M,
-$$
+```
 
 the exponent of `phi_3` in `bar M` is at most
 
-$$
+```math
 \boxed r.
 \tag{2.3}
-$$
+```
 
 We prove that every possible noncyclotomic local lift of this residue block needs strictly more than `r` copies.
 
@@ -130,66 +130,66 @@ We prove that every possible noncyclotomic local lift of this residue block need
 
 Assume `3|u`. Let
 
-$$
+```math
 \xi\in\mathbf F_4
-$$
+```
 
 be a primitive cube root and let
 
-$$
+```math
 \zeta\in\mathcal O_K,
 \qquad K/\mathbf Q_2\text{ unramified quadratic},
-$$
+```
 
 be its Teichmüller lift. Then
 
-$$
+```math
 \zeta^2+\zeta+1=0,
 \qquad
 \zeta^u=1,
 \qquad
 \zeta^m=1.
 \tag{3.1}
-$$
+```
 
 In particular
 
-$$
+```math
 \zeta+\zeta^{-1}=-1.
-$$
+```
 
 Evaluate (2.1):
 
-$$
+```math
 \begin{aligned}
 F_m(\zeta)
 &=4\left(1+\zeta^{-1}(\zeta-1)^2\right)\\
 &=4(\zeta+\zeta^{-1}-1)\\
 &=-8.
 \end{aligned}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{v_2(F_m(\zeta))=3.}
 \tag{O3X.4}
-$$
+```
 
 This is exactly why NRS's generic `(0,2)` Newton edge did not cover order three.
 
 As in NRS, for every power of two `r`,
 
-$$
+```math
 F_m(Z)\equiv(Z^u+1)^{2r}\pmod4.
 \tag{3.2}
-$$
+```
 
 Since `Z^u+1` has a simple root at `xi`, after putting
 
-$$
+```math
 Z=\zeta+X
-$$
+```
 
 the coefficient of `X^(2r)` is a unit and every coefficient of degrees `1,...,2r-1` is divisible by four.
 
@@ -201,7 +201,7 @@ The only additional datum needed is the exact valuation of the linear coefficien
 
 Differentiate (2.1):
 
-$$
+```math
 \begin{aligned}
 F_m'(Z)
 ={}&2(Z^m+1)mZ^{m-1}\\
@@ -209,53 +209,53 @@ F_m'(Z)
 &+8Z^{m-1}(Z-1).
 \end{aligned}
 \tag{4.1}
-$$
+```
 
 At `Z=zeta`, using `zeta^m=1`,
 
-$$
+```math
 \frac{F_m'(\zeta)}4
 =
  m\zeta^{-1}
  +(m-1)\zeta^{-2}(\zeta-1)^2
  +2\zeta^{-1}(\zeta-1).
 \tag{4.2}
-$$
+```
 
 ### Even `m`, equivalently `r>=2`
 
 Modulo two, the first and third terms vanish while `m-1` is odd. Therefore
 
-$$
+```math
 \frac{F_m'(\zeta)}4
 \equiv
 \xi^{-2}(\xi-1)^2
 \not=0
 \pmod2.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{v_2(F_m'(\zeta))=2.}
 \tag{O3X.5e}
-$$
+```
 
 ### Odd `m`, equivalently `r=1`
 
 Now `m` is odd and `m-1` is even. Modulo two only the first term survives:
 
-$$
+```math
 \frac{F_m'(\zeta)}4
 \equiv\xi^{-1}\not=0.
-$$
+```
 
 Thus again
 
-$$
+```math
 \boxed{v_2(F_m'(\zeta))=2.}
 \tag{O3X.5o}
-$$
+```
 
 The same linear valuation occurs in both parity cases, but the Newton lower hull differs because the endpoint length `2r` differs.
 
@@ -265,9 +265,9 @@ The same linear valuation occurs in both parity cases, but the Newton lower hull
 
 Suppose
 
-$$
+```math
 r=1.
-$$
+```
 
 The local coefficient valuations are:
 
@@ -277,23 +277,23 @@ The local coefficient valuations are:
 
 The line from `(0,3)` to `(2,0)` has height `3/2` at degree one, below the actual point `(1,2)`. Hence the lower Newton polygon begins with the single segment
 
-$$
+```math
 \boxed{(0,3)\longrightarrow(2,0)}
 \tag{O3X.6}
-$$
+```
 
 of slope
 
-$$
+```math
 -3/2.
-$$
+```
 
 Every irreducible local factor above the cube-root residue therefore has degree divisible by `2`, in particular at least two. Consequently any rational factor using this residue block has
 
-$$
+```math
 \phi_3^e\mid\overline M
 \qquad\text{with }e\ge2.
-$$
+```
 
 But the Littlewood ceiling (2.3) is `r=1`. Contradiction.
 
@@ -305,64 +305,64 @@ Thus O3X.1 holds when `m` is odd.
 
 Now assume
 
-$$
+```math
 r\ge2.
-$$
+```
 
 The local coefficient valuations give the points
 
-$$
+```math
 (0,3),
 \qquad
 (1,2),
 \qquad
 (2r,0),
-$$
+```
 
 while every coefficient of degrees `2,...,2r-1` has valuation at least two.
 
 Therefore the lower Newton polygon is exactly
 
-$$
+```math
 \boxed{
 (0,3)\longrightarrow(1,2)
 \longrightarrow(2r,0).
 }
 \tag{O3X.7}
-$$
+```
 
 The two slopes are
 
-$$
+```math
 -1
 \qquad\text{and}\qquad
 -\frac2{2r-1}.
 \tag{6.1}
-$$
+```
 
 The first segment has horizontal length one. There is therefore exactly one local root reducing to `xi` with
 
-$$
+```math
 v_2(Z-\zeta)=1.
-$$
+```
 
 Because `6|m`, PR #153 proves that `F_m` has the exact cyclotomic factor
 
-$$
+```math
 \Phi_6(Z)=Z^2-Z+1.
-$$
+```
 
 Over `K`, its root reducing to `xi` is
 
-$$
+```math
 -\zeta,
-$$
+```
 
 and
 
-$$
+```math
 (-\zeta)-\zeta=-2\zeta
-$$
+```
 
 has valuation one. Hence the unique first-segment root is precisely the known primitive-sixth-root lift.
 
@@ -372,35 +372,35 @@ Thus if `M` uses the residue factor `phi_3`, it must use a root on the second Ne
 
 That segment has slope
 
-$$
+```math
 -\frac2{2r-1}
-$$
+```
 
 in lowest terms because `2r-1` is odd. Every irreducible local factor containing one of its roots has degree divisible by
 
-$$
+```math
 2r-1.
-$$
+```
 
 Hence its reduction contributes at least
 
-$$
+```math
 \boxed{2r-1}
 \tag{O3X.8}
-$$
+```
 
 copies of the local residue root. After the unramified Frobenius conjugate is restored, this means
 
-$$
+```math
 \phi_3^{\,2r-1}\mid\overline M.
-$$
+```
 
 But
 
-$$
+```math
 2r-1>r
 \qquad(r\ge2),
-$$
+```
 
 contradicting the Littlewood ceiling (2.3).
 
@@ -412,33 +412,33 @@ Therefore O3X.1 also holds for even `m`. `square`
 
 PR #152 proves
 
-$$
+```math
 Z+1\nmid\overline M.
-$$
+```
 
 O3X proves
 
-$$
+```math
 \phi_3\nmid\overline M.
-$$
+```
 
 Every remaining residue factor has odd order different from one and three, so NRS applies and forces its exponent to equal exactly `r`.
 
 Since `S_u` is squarefree, let `B` be the product of the distinct remaining residue factors used by `M`. Then
 
-$$
+```math
 \boxed{\overline M=B^r,}
-$$
+```
 
 with
 
-$$
+```math
 B\mid S_u,
 \qquad
 B\text{ squarefree},
 \qquad
 \gcd(B,(Z+1)(Z^2+Z+1))=1.
-$$
+```
 
 Reciprocity of `M` forces reciprocity of `B`, exactly as in NRS.
 
@@ -468,17 +468,17 @@ Thus the 2-adic endpoint is now completely classified at the multiplicity level.
 
 PR #153 gives independently
 
-$$
+```math
 F_m(Z)\equiv
 (Z^{m-1}+1)(Z^{m+1}+1)
 \pmod3.
-$$
+```
 
 The physical characteristic-zero factor is noncyclotomic, yet O3X/NRS force
 
-$$
+```math
 \overline M=B^{2^k}
-$$
+```
 
 with `B` squarefree and assembled from complete odd-cyclotomic residue blocks of orders dividing `u`, excluding orders one and three.
 
@@ -510,23 +510,17 @@ A concrete target is:
 > **Two-prime block incompatibility.** Let `M` be a noncyclotomic reciprocal irreducible factor of `F_m` with `deg M<=m-1`. If
 > 
 
-$$
-
+```math
 > \overline M^{(2)}=B^{2^k}
 > 
-$$
-
-
+```
 > for a squarefree self-reciprocal `B|S_u` with no order-one/order-three block, prove that the mod-three factorization
 > 
 
-$$
-
+```math
 > \overline F_m^{(3)}=(Z^{m-1}+1)(Z^{m+1}+1)
 > 
-$$
-
-
+```
 > cannot accommodate `M`.
 
 The first cases to attack are odd part `u=p` prime. Then the entire mod-two residue support lies over the single odd cyclotomic family `Phi_p`, and the degree of `M` is quantized by the Frobenius orbit size of `2` modulo `p`.

@@ -31,15 +31,15 @@ blocker closure. It uses all labels in both C-II population branches.
 Let `A` be a canonical triangle-free global minimizer chosen
 contact-minimal and then actual-diameter-pair-minimal. Write
 
-$$
+```math
 n=|A|,\quad D=\operatorname{diam}A,\quad K=\operatorname{conv}A,\quad
 P=\operatorname{per}K,\quad
 a_0=\sqrt3/2,\quad \Delta=\pi/(2\sqrt3),
-$$
-$$
+```
+```math
 g_A=n-1-\Delta D^2>0,\qquad
 \delta_K=\pi D^2/4-\operatorname{area}K\ge0.
-$$
+```
 
 The strict population inequality is canonical
 [FS.1 and GE.1](../targets/target-c/58-full-source-geometry-audit.md).
@@ -96,11 +96,11 @@ new candidate. If a convex polygon contains the radius-`r` disk
 about the origin and all its vertices have radius at least
 `r_0>=r`, then its area is at least
 
-$$
+```math
 H(r,r_0)=
 \frac{\pi r\sqrt{r_0^2-r^2}}{\arccos(r/r_0)}.
 \tag{1}
-$$
+```
 
 The endpoint `r=r_0` is interpreted as the disk-area limit.
 
@@ -109,17 +109,17 @@ origin to successive polygon sides. Let one triangle have vertex
 radii `a,b`, angle `phi in (0,pi)`, and side-line distance `h`
 from the origin. The contained disk gives `h>=r`. The identity
 
-$$
+```math
 h^2=\frac{a^2b^2\sin^2\phi}{a^2+b^2-2ab\cos\phi}
 \le ab\cos^2(\phi/2)
-$$
+```
 
 implies `ab>=r^2 sec^2(phi/2)`, while the vertex hypothesis gives
 `ab>=r_0^2`. Thus this triangle has area at least
 
-$$
+```math
 \max\{\tfrac12r_0^2\sin\phi,\ r^2\tan(\phi/2)\}.
-$$
+```
 
 Put `theta_0=arccos(r/r_0)`. For `phi<=2theta_0`, the first
 bound divided by `phi` is at least
@@ -139,22 +139,22 @@ a smallest triangle angle gives this radius bound.
 A delta-near-isolated center has a Voronoi cell containing the
 radius `r=(1+delta)/2` disk. Then
 
-$$
+```math
 \boxed{|V_x|\ge a_0+\delta.}
 \tag{2}
-$$
+```
 
 For `1/2<=r<=r_0`, apply (1). Put
 `r=r_0 cos(theta)`, `0<=theta<=pi/6`. The right side is
 `pi r_0^2 sin(2theta)/(2theta)`. Its derivative with respect
 to `r` is
 
-$$
+```math
 \frac{\pi r_0}{2}
 \frac{\sin(2\theta)-2\theta\cos(2\theta)}
      {\theta^2\sin\theta}\ge2.
 \tag{3}
-$$
+```
 
 Indeed the numerator is `integral_0^(2theta) t sin(t) dt`.
 Concavity of sine on `[0,pi/3]` gives
@@ -174,20 +174,20 @@ Let `J` be the labels whose clipped Voronoi cells touch
 Every label outside `J` has its full bounded cell inside `int K`.
 Write
 
-$$
+```math
 \sigma_x=|V_x|-a_0\ge0\quad(x\notin J),\qquad
 A_\partial=\sum_{x\in J}|V_x\cap K|.
-$$
+```
 
 The cells partition `K` up to zero-area boundaries, so
 
-$$
+```math
 \boxed{
 \sum_{x\notin J}\sigma_x+A_\partial+\delta_K
 =a_0(m-1)-a_0g_A.
 }
 \tag{4}
-$$
+```
 
 This counts all original labels. A triangle-free source has
 `sigma_x>0` on every full cell: equality in the checked local
@@ -207,31 +207,31 @@ at most `2P+pi/4`. The latter estimate follows by integrating
 the decreasing perimeters of convex inner parallel sets.
 Thus
 
-$$
+```math
 m\le(8/\pi)P+1\le8D+1.
 \tag{5}
-$$
+```
 
 ### Near-isolation count
 
 Let `z_int` count delta-near-isolated labels outside `J`.
 Equations (2)--(4) imply
 
-$$
+```math
 \delta z_{\rm int}+A_\partial+\delta_K
 \le a_0(m-1)-a_0g_A<a_0(m-1).
-$$
+```
 
 There are at most `m` remaining near-isolated boundary labels.
 Consequently
 
-$$
+```math
 \boxed{
 |Z_\delta|<
 \left(\frac{4\sqrt3}{\delta}+8\right)D+1.
 }
 \tag{6}
-$$
+```
 
 For any `delta(D)->0` with `D delta(D)->infinity`,
 `|Z_delta|=o(D^2)`. This controls an empty near-unit neighborhood,
@@ -245,26 +245,26 @@ Partition any unit-separated diameter-`D` source into `X` and
 `lambda=1+c/D`, with `c>0`.
 Scale `Y` and the full source hull by `1/lambda` and apply Oler:
 
-$$
+```math
 |Y|-1\le\Delta D^2/\lambda^2+\pi D/(2\lambda).
-$$
+```
 
 Therefore the full-source quantity satisfies
 
-$$
+```math
 \boxed{
 g_A\le |X|-\Delta D^2(1-\lambda^{-2})
 +\frac{\pi D}{2\lambda}.
 }
 \tag{7}
-$$
+```
 
 If `|X|<=bD+o(D)` for fixed `b,c`, then
 
-$$
+```math
 g_A\le(b+\pi/2-2c\Delta)D+o(D).
 \tag{8}
-$$
+```
 
 A canonical source must therefore satisfy
 `b>=2c Delta-pi/2` whenever such a partition is supplied.
@@ -279,21 +279,21 @@ leading-density augmentation uses a triangular lattice of
 spacing `1+2/D`. Even if that augmentation could use the
 entire diameter-`D` hull, (7) gives
 
-$$
+```math
 g_A<-\frac95D.
 \tag{9}
-$$
+```
 
 To check the constant, use
 `D^2(D+1)/(D+2)^2>=D-3` and
 `Delta>471/520`, `pi/2<11/7`.
 For `D>=576`,
 
-$$
+```math
 4\Delta-\pi/2-1/5-\frac{12\Delta}{D}-9/5
 \ge(191/48)(471/520)-11/7-2
 =\frac{5727}{174720}>0.
-$$
+```
 
 The numerical bounds follow from
 `pi>157/50`, `pi<22/7` and `sqrt(3)<26/15`;

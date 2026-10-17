@@ -18,35 +18,35 @@
 
 The September 9 difference-body area theorem used the worst-case planar Rogers–Shephard estimate
 
-$$
+```math
 \operatorname{area}(F-F)\le6\operatorname{area}(F),
-$$
+```
 
 which is sharp for triangles. FS.4 supplies information unavailable when DA was written: every selected C-II force hull is `o(D)`-Hausdorff-close to its own half-turn. That makes the factor `6` asymptotically impossible. The correct factor on the present source is `4+o(1)`, the centrally symmetric value.
 
 This raises the post-ZF force-hull area floor from
 
-$$
+```math
 \frac{y+\sin y}{6}
-$$
+```
 
 to
 
-$$
+```math
 \boxed{\frac{y+\sin y}{4}},
 \qquad y=\lim h/D.
-$$
+```
 
 In particular, using DB's `y>=2rho`, every unbounded post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}(F)}{D^2}
 \ge A_{SC}
 :=\frac{2\rho+\sin(2\rho)}4
 =0.6184708847696858\ldots,
 }
-$$
+```
 
 where `rho=cos rho=0.7390851332...`. This eliminates the entire previously allowed force-hull area interval below `0.61847 D^2`; it is not merely another scalar stress bound.
 
@@ -56,38 +56,38 @@ where `rho=cos rho=0.7390851332...`. This eliminates the entire previously allow
 
 Use the same lexicographically normalized C-II source as FS and DA. Translate by the common source circumcenter `o` and write
 
-$$
+```math
 F_0:=F-o.
-$$
+```
 
 FS.4 gives
 
-$$
+```math
 \boxed{
 d_H(F_0,-F_0)\le\varepsilon_D,
 \qquad
 \varepsilon_D:=2L_D,
 }
 \tag{SC.1}
-$$
+```
 
 with
 
-$$
+```math
 L_D=\sqrt{D\eta+\eta^2},
 \qquad
 \eta=3^{1/4}\sqrt D,
 \qquad
 L_D=O(D^{3/4})=o(D).
 \tag{SC.2}
-$$
+```
 
 The force hull has diameter exactly `D`, hence
 
-$$
+```math
 \operatorname{per}(F)\le\pi D.
 \tag{SC.3}
-$$
+```
 
 No assertion `F=conv A` or small-isolate hypothesis is used.
 
@@ -99,7 +99,7 @@ No assertion `F=conv A` or small-isolate hypothesis is used.
 
 Every selected force hull satisfying SC.1 obeys
 
-$$
+```math
 \boxed{
 \operatorname{area}(F-F)
 \le
@@ -108,66 +108,66 @@ $$
 +\pi\varepsilon_D^2.
 }
 \tag{SC.4}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \operatorname{area}(F-F)
 \le
 4\operatorname{area}(F)+o(D^2).
 }
 \tag{SC.5}
-$$
+```
 
 #### Proof
 
 Hausdorff distance at most `epsilon_D` means
 
-$$
+```math
 -F_0\subseteq F_0+\varepsilon_D B,
-$$
+```
 
 where `B` is the unit Euclidean disk. Therefore
 
-$$
+```math
 F-F
 =F_0+(-F_0)
 \subseteq
 F_0+(F_0+\varepsilon_D B)
 =2F_0+\varepsilon_D B.
 \tag{SC.6}
-$$
+```
 
 Area is monotone under inclusion. Steiner's formula for a planar convex body gives
 
-$$
+```math
 \operatorname{area}(2F_0+\varepsilon_D B)
 =
 \operatorname{area}(2F_0)
 +\varepsilon_D\operatorname{per}(2F_0)
 +\pi\varepsilon_D^2.
-$$
+```
 
 Homogeneity gives
 
-$$
+```math
 \operatorname{area}(2F_0)=4\operatorname{area}(F),
 \qquad
 \operatorname{per}(2F_0)=2\operatorname{per}(F),
-$$
+```
 
 which proves SC.4.
 
 By SC.2–SC.3,
 
-$$
+```math
 2\varepsilon_D\operatorname{per}(F)
 =O(D^{7/4}),
 \qquad
 \pi\varepsilon_D^2=O(D^{3/2}),
-$$
+```
 
 both `o(D^2)`. This proves SC.5. `square`
 
@@ -179,7 +179,7 @@ The factor four is asymptotically sharp: for a centrally symmetric force hull, `
 
 DA defines the projective diameter-direction gaps
 
-$$
+```math
 g_1,\ldots,g_h,
 \qquad
 \sum_i g_i=\pi,
@@ -188,40 +188,40 @@ g_i\ge2a_D,
 \qquad
 a_D:=\arcsin\frac1{2D},
 \tag{SC.7}
-$$
+```
 
 and the centrally symmetric diameter polygon
 
-$$
+```math
 P_H=D\operatorname{conv}\{\pm u_e:e\in E(H)\}
 \subseteq F-F.
 \tag{SC.8}
-$$
+```
 
 Its exact area is
 
-$$
+```math
 \operatorname{area}(P_H)
 =D^2\sum_i\sin g_i.
 \tag{SC.9}
-$$
+```
 
 Concavity of `sin` under SC.7 gives DA.5:
 
-$$
+```math
 \sum_i\sin g_i
 \ge
 (h-1)\sin(2a_D)
 +
 \sin(2(h-1)a_D).
 \tag{SC.10}
-$$
+```
 
 Combine SC.4 and `P_H subset F-F`.
 
 ### Theorem SC.2 — finite FS-corrected difference-body area floor
 
-$$
+```math
 \boxed{
 \begin{aligned}
 \operatorname{area}(F)
@@ -234,11 +234,11 @@ $$
 \end{aligned}
 }
 \tag{SC.11}
-$$
+```
 
 Using `epsilon_D=2L_D` and `per(F)<=pi D`, a completely explicit weaker form is
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)
 \ge
@@ -248,16 +248,16 @@ $$
 -\pi DL_D-\pi L_D^2.
 }
 \tag{SC.12}
-$$
+```
 
 #### Proof
 
 SC.8–SC.10 give
 
-$$
+```math
 D^2\left[(h-1)\sin(2a_D)+\sin(2(h-1)a_D)\right]
 \le\operatorname{area}(F-F).
-$$
+```
 
 Apply SC.4 and rearrange. SC.12 follows from SC.3 and `epsilon_D=2L_D`. `square`
 
@@ -267,54 +267,54 @@ Apply SC.4 and rearrange. SC.12 follows from SC.3 and `epsilon_D=2L_D`. `square`
 
 Take any unbounded post-ZF subsequence on which
 
-$$
+```math
 \frac hD\to y.
-$$
+```
 
 Since
 
-$$
+```math
 2Da_D\to1,
-$$
+```
 
 SC.10 gives
 
-$$
+```math
 (h-1)\sin(2a_D)\to y,
 \qquad
 2(h-1)a_D\to y.
-$$
+```
 
 The error terms in SC.11 are `o(D^2)`. Therefore:
 
 ### Theorem SC.3 — symmetry-corrected diameter-density area floor
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}(F)}{D^2}
 \ge
 A_{sym}(y):=\frac{y+\sin y}{4}.
 }
 \tag{SC.13}
-$$
+```
 
 On `0<=y<=pi`,
 
-$$
+```math
 A_{sym}'(y)=\frac{1+\cos y}{4}\ge0.
 \tag{SC.14}
-$$
+```
 
 DB gives
 
-$$
+```math
 \liminf h/D\ge2\rho,
 \qquad\rho=\cos\rho.
-$$
+```
 
 Hence every unbounded post-ZF survivor sequence satisfies
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}(F)}{D^2}
 \ge
@@ -322,32 +322,32 @@ A_{SC}:=A_{sym}(2\rho)
 =0.6184708847696858\ldots .
 }
 \tag{SC.15}
-$$
+```
 
 For comparison, the older universal floors were
 
-$$
+```math
 \frac{\sqrt3}{4}=0.4330127019\ldots
-$$
+```
 
 from DB and
 
-$$
+```math
 A_{PI}=\frac12\sin(2\rho)=0.4978566363\ldots
-$$
+```
 
 from PI. SC.15 is strictly stronger than both.
 
 The isodiametric maximum is `pi/4=0.785398...`, so SC.15 also gives
 
-$$
+```math
 \boxed{
 \frac{\pi D^2}{4}-\operatorname{area}(F)
 \le
 (0.1669272787\ldots+o(1))D^2.
 }
 \tag{SC.16}
-$$
+```
 
 ---
 
@@ -368,22 +368,22 @@ Likewise, any post-ZF argument whose only area input was DB's `sqrt(3)/4` or PI'
 
 Let
 
-$$
+```math
 \lambda:=\lim\frac{e_{BB}+2s_C}{D}
-$$
+```
 
 along a convergent post-ZF subsequence. The GU component-area argument uses only an area floor for `F` and gives
 
-$$
+```math
 \liminf\frac GD^2
 \ge
 A_0-\frac\pi4\lambda^2
 \tag{SC.17}
-$$
+```
 
 whenever `A_0D^2-o(D^2)` is a valid force-hull area floor. With SC.15,
 
-$$
+```math
 \boxed{
 \liminf\frac GD^2
 \ge
@@ -391,33 +391,33 @@ L_{SC}(\lambda):=
 A_{SC}-\frac\pi4\lambda^2.
 }
 \tag{SC.18}
-$$
+```
 
 The JC joint pocket/face capacity argument implies the necessary condition
 
-$$
+```math
 L_{SC}(\lambda)
 \le
 \frac{(\lambda+\pi/2)^2}{4\pi}.
 \tag{SC.19}
-$$
+```
 
 The left side decreases and the right side increases. Their unique positive intersection is
 
-$$
+```math
 \lambda_{JC,SC}=0.5688589938734753\ldots .
 \tag{SC.20}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \liminf\frac{e_{BB}+2s_C}{D}
 \ge0.5688589938734753\ldots .
 }
 \tag{SC.21}
-$$
+```
 
 This is a downstream numerical consequence, not the main theorem. The structural advance is SC.13–SC.15, which eliminates a force-hull area class. Further finite scalar iteration is intentionally not treated as an endpoint.
 
@@ -427,29 +427,29 @@ This is a downstream numerical consequence, not the main theorem. The structural
 
 FS.3 also gives a separate cardinality consequence that does not use KKT weights. Put
 
-$$
+```math
 \Delta_H(D):=
 1+\left\lfloor
 \frac{\min\{\pi/3,\Theta_D\}}
 {2\arcsin(1/(2D))}
 \right\rfloor,
-$$
+```
 
 where `Theta_D` is FS.3's shared-endpoint angle cap. Then
 
-$$
+```math
 \Delta(H)\le\Delta_H(D)=O(D^{3/4}).
-$$
+```
 
 Any maximal matching `M` in a graph of maximum degree `Delta` covers every edge, and the two endpoints of one matching edge are incident with at most `2Delta-1` edges. Hence
 
-$$
+```math
 h\le|M|(2\Delta(H)-1).
-$$
+```
 
 ZF gives `h>=ceil(D)`, so
 
-$$
+```math
 \boxed{
 \nu(H)
 \ge
@@ -459,7 +459,7 @@ $$
 =\Omega(D^{1/4}).
 }
 \tag{SC.22}
-$$
+```
 
 The matching edges are pairwise geometrically crossing because `H` is a diameter thrackle. This is new cardinality information but does not by itself control the matching's KKT weight. The odd-shell regression remains compatible with it.
 
@@ -511,8 +511,8 @@ SC removes the low-force-hull-area branch. A surviving post-ZF source is now sim
 
 The remaining closing theorem must use this high-area/high-surplus geometry to force the whole-source capacity inequality
 
-$$
+```math
 n-1\le\frac\pi{2\sqrt3}D^2
-$$
+```
 
 or a strict sub-`D` competitor. SC alone does not supply that population transfer.

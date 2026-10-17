@@ -21,15 +21,15 @@ constraint on the **cubic norm of all outer-pocket hull chords**.
 
 Take any convergent audited post-ZF survivor subsequence and put
 
-$$
+```math
 y:=\lim \frac hD,
 \qquad
 z:=\lim\frac{Q+2s_Z}{D}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \limsup_{D\to\infty}
 \frac{1}{D^3}\sum_{P}s_P^3
@@ -37,17 +37,17 @@ $$
 2\cos^3(y/2),
 }
 \tag{CM.1}
-$$
+```
 
 where `s_P` is the force-hull chord of an OP outer pocket. Consequently, with
 
-$$
+```math
 u(y):=y-2\cos(y/2),
-$$
+```
 
 DD improves to
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}}{D^2}
 \le
@@ -56,7 +56,7 @@ $$
 \sqrt{u(y)-z}.
 }
 \tag{CM.2}
-$$
+```
 
 The estimate is uniform over all distributions of the missing force-hull arcs and all
 outer-pocket detour allocations. It is not an equality-case theorem.
@@ -67,41 +67,41 @@ outer-pocket detour allocations. It is not an equality-case theorem.
 
 Let
 
-$$
+```math
 K_D:=D^{-1}(F-o),
-$$
+```
 
 where `o` is the full-source circumcenter supplied by FS. Pass to a Hausdorff limit
 
-$$
+```math
 K_D\to K_\infty.
-$$
+```
 
 FS.1/FS.4 and MA imply that `K_infty` is centrally symmetric, lies in the radius-`1/2`
 disk, and is the convex hull of a closed subset of the boundary circle.
 
 Let the complementary open intervals of its projective circle set have lengths
 
-$$
+```math
 \alpha_1,\alpha_2,\ldots>0,
 \qquad
 X:=\sum_i\alpha_i.
-$$
+```
 
 MA proves the missing-angle budget
 
-$$
+```math
 \boxed{X\le\pi-y.}
 \tag{1.1}
-$$
+```
 
 Each projective missing interval lifts to two antipodal ordinary-circle gaps. The two
 corresponding straight sides of `K_infty` each have chord length
 
-$$
+```math
 c_i:=\sin(\alpha_i/2).
 \tag{1.2}
-$$
+```
 
 ---
 
@@ -111,39 +111,39 @@ $$
 
 If `x,y>=0` and `x+y<=pi/2`, then
 
-$$
+```math
 \boxed{\sin^3x+\sin^3y\le\sin^3(x+y).}
 \tag{2.1}
-$$
+```
 
 ### Proof
 
 A direct expansion gives
 
-$$
+```math
 \sin^2(x+y)-\sin^2x-\sin^2y
 =2\sin x\sin y\cos(x+y)\ge0.
 \tag{2.2}
-$$
+```
 
 Hence
 
-$$
+```math
 \sin(x+y)\ge\sqrt{\sin^2x+\sin^2y}.
-$$
+```
 
 For nonnegative `a,b`, the `l^2` norm dominates the `l^3` norm:
 
-$$
+```math
 (a^2+b^2)^{3/2}\ge a^3+b^3.
-$$
+```
 
 Take `a=sin x`, `b=sin y` to obtain (2.1). `square`
 
 Because `y>=2rho>0`, (1.1) gives `X/2<pi/2`. Repeatedly merge the half-gaps
 `alpha_i/2` using Lemma CM.1. Monotone convergence handles countably many gaps. Thus
 
-$$
+```math
 \sum_i\sin^3(\alpha_i/2)
 \le
 \sin^3(X/2)
@@ -152,16 +152,16 @@ $$
 =
 \cos^3(y/2).
 \tag{2.3}
-$$
+```
 
 Since every projective gap contributes two antipodal sides,
 
-$$
+```math
 \boxed{
 2\sum_i c_i^3\le2\cos^3(y/2).
 }
 \tag{2.4}
-$$
+```
 
 This is sharp for a single projective missing interval of total angle `pi-y`.
 
@@ -174,16 +174,16 @@ many finite sides that shrink in the normalized limit.
 
 Fix `epsilon>0`. Split the outer-pocket hull sides into
 
-$$
+```math
 \mathcal P_{\ge\epsilon}
 :=\{P:s_P\ge\epsilon D\}
-$$
+```
 
 and the remaining small sides.
 
 For the small sides, Cauchy's perimeter bound gives
 
-$$
+```math
 \begin{aligned}
 \frac1{D^3}
 \sum_{P\notin\mathcal P_{\ge\epsilon}}s_P^3
@@ -193,7 +193,7 @@ $$
 \pi\epsilon^2+o(1).
 \end{aligned}
 \tag{3.1}
-$$
+```
 
 For fixed `epsilon`, only finitely many sides can lie in
 `P_{>=epsilon}` because their total length is `O(D)`. Pass to a further subsequence on
@@ -206,13 +206,13 @@ the limit after zero-length coincidences are discarded.
 
 Therefore (2.4) implies
 
-$$
+```math
 \limsup
 \frac1{D^3}
 \sum_{P\in\mathcal P_{\ge\epsilon}}s_P^3
 \le2\cos^3(y/2).
 \tag{3.2}
-$$
+```
 
 Combine (3.1)--(3.2), then let `epsilon downarrow0`, to obtain CM.1. `square`
 
@@ -225,54 +225,54 @@ contribution vanishes.
 
 For each outer pocket write
 
-$$
+```math
 \ell_P=s_P+d_P,
 \qquad d_P:=\ell_P-s_P\ge0.
-$$
+```
 
 Minkowski's inequality in `l^3` gives
 
-$$
+```math
 \left(\sum_P\ell_P^3\right)^{1/3}
 \le
 \left(\sum_Ps_P^3\right)^{1/3}
 +
 \left(\sum_Pd_P^3\right)^{1/3}.
 \tag{4.1}
-$$
+```
 
 Convexity gives
 
-$$
+```math
 \left(\sum_Pd_P^3\right)^{1/3}
 \le\sum_Pd_P.
 \tag{4.2}
-$$
+```
 
 OD/DD give
 
-$$
+```math
 \sum_Pd_P=b-P_F.
 \tag{4.3}
-$$
+```
 
 ZE gives
 
-$$
+```math
 \frac bD\to2y-z.
-$$
+```
 
 MA gives
 
-$$
+```math
 \liminf\frac{P_F}{D}
 \ge
 p_0(y):=y+2\cos(y/2).
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \limsup\frac1D\sum_Pd_P
 \le
@@ -281,11 +281,11 @@ u(y)-z,
 u(y):=y-2\cos(y/2).
 }
 \tag{4.4}
-$$
+```
 
 Taking normalized limsups in (4.1), then applying CM.1 and (4.4), yields
 
-$$
+```math
 \boxed{
 \limsup
 \left(\frac1{D^3}\sum_P\ell_P^3\right)^{1/3}
@@ -293,7 +293,7 @@ $$
 2^{1/3}\cos(y/2)+u(y)-z.
 }
 \tag{4.5}
-$$
+```
 
 ---
 
@@ -301,36 +301,36 @@ $$
 
 DD before its scalar cubic relaxation proves
 
-$$
+```math
 H_{out}
 \le
 \frac1{\sqrt6}
 \left(\sum_P\ell_P^3\right)^{1/2}
 \left(\sum_Pd_P\right)^{1/2}.
 \tag{5.1}
-$$
+```
 
 Combine (4.4)--(4.5) with (5.1). This gives exactly CM.2:
 
-$$
+```math
 \limsup\frac{H_{out}}{D^2}
 \le
 \frac1{\sqrt6}
 \left(2^{1/3}\cos(y/2)+u(y)-z\right)^{3/2}
 \sqrt{u(y)-z}.
-$$
+```
 
 CC may then be added without relaxation as
 
-$$
+```math
 \limsup\frac{A_{exc}}{D^2}
 \le\frac{z^2}{4\pi}.
 \tag{5.2}
-$$
+```
 
 Thus the full defect-aware cavity surface is
 
-$$
+```math
 \boxed{
 \mathcal C(y,z)
 =
@@ -341,7 +341,7 @@ $$
 \frac{z^2}{4\pi}.
 }
 \tag{5.3}
-$$
+```
 
 This replaces the old unrestricted chain moment by an invariant of the actual
 full-source cyclic force hull.

@@ -17,68 +17,68 @@ C43 gives a uniform geometric deficit but does not lower-bound the effective con
 
 Let
 
-$$
+```math
 \rho_0:=1-\eta_0\in(0,1),
 \qquad
 \gamma_0:=1-\rho_0^2>0,
 \tag{C44.1}
-$$
+```
 
 where `eta_0` is the C43 anti-Reuleaux constant. For the C11 response conductances
 
-$$
+```math
 c_{bk}:=-\Lambda_{bk}\ge0,
-$$
+```
 
 define the total uniformly short response mass
 
-$$
+```math
 \boxed{
 S_{short}:=
 \sum_{\substack{b<k\\|b-k|\le\rho_0D}}c_{bk}.
 }
 \tag{C44.2}
-$$
+```
 
 Then there is an absolute integer `K_0<infty`, depending only on `eta_0`, such that every sufficiently large fully force-visible C-II survivor satisfies at least one of the following.
 
 ### Branch A — absolute short-response mass
 
-$$
+```math
 \boxed{S_{short}\ge\frac12.}
 \tag{C44.3}
-$$
+```
 
 Consequently C41 gives the absolute trace gap
 
-$$
+```math
 \boxed{
 \operatorname{tr}(\Lambda-L_H)\ge\gamma_0.
 }
 \tag{C44.4}
-$$
+```
 
 ### Branch B — one macroscopic harmonic response component
 
 There is an unpinned component `I_r` with attachment set `A_r`, graph diameter `delta_r`, boundary-contact count `t_r`, and component response total conductance
 
-$$
+```math
 C_r:=\sum_{s<t\in A_r}c^{(r)}_{st}
 \tag{C44.5}
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{
 C_r>\frac1{2K_0},
 }
 \tag{C44.6}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \operatorname{diam}A_r>\rho_0D,
 \qquad
@@ -89,7 +89,7 @@ $$
 t_r>\rho_0D+1.
 }
 \tag{C44.7}
-$$
+```
 
 Thus failure of an absolute short-response mass cannot be spread through many tiny-conductance components. It forces a **single** harmonic component carrying nonvanishing response conductance, linear graph diameter, and a linear fraction of the loaded boundary incidence.
 
@@ -101,50 +101,50 @@ This is the first quantitative C-II response dichotomy that remains valid despit
 
 Fix an unpinned component `I_r` and two distinct attachments `s,t in A_r`. By definition there are contact edges
 
-$$
+```math
 sx\in C,
 \qquad
 ty\in C
-$$
+```
 
 with `x,y in I_r`.
 
 Since the induced contact graph on `I_r` is connected and has graph diameter `delta_r`, there is an internal contact path from `x` to `y` using at most `delta_r` edges. Adding the two boundary contact edges gives a contact path from `s` to `t` of length at most
 
-$$
+```math
 \delta_r+2.
-$$
+```
 
 Every contact edge has Euclidean length one, so the triangle inequality gives
 
-$$
+```math
 |s-t|\le\delta_r+2.
 \tag{C44.8}
-$$
+```
 
 Taking the maximum over attachments proves
 
-$$
+```math
 \boxed{
 \operatorname{diam}A_r\le\delta_r+2.
 }
 \tag{C44.9}
-$$
+```
 
 C40 gives
 
-$$
+```math
 \delta_r\le3|A_r|-3,
-$$
+```
 
 therefore
 
-$$
+```math
 \boxed{
 \operatorname{diam}A_r\le3|A_r|-1.
 }
 \tag{C44.10}
-$$
+```
 
 This elementary transport from graph diameter to attachment geometry was not used in C40.
 
@@ -154,67 +154,67 @@ This elementary transport from graph diameter to attachment geometry was not use
 
 Call `I_r` **macroscopic** if
 
-$$
+```math
 \operatorname{diam}A_r>\rho_0D.
 \tag{C44.11}
-$$
+```
 
 By C44.10, every macroscopic component satisfies
 
-$$
+```math
 3|A_r|-1>\rho_0D,
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{
 |A_r|>\frac{\rho_0D+1}{3}.
 }
 \tag{C44.12}
-$$
+```
 
 C36 gives the global distinct-attachment incidence bound
 
-$$
+```math
 \sum_r|A_r|\le3|B_+|.
 \tag{C44.13}
-$$
+```
 
 The force-hull perimeter bound gives
 
-$$
+```math
 |B_+|\le\operatorname{per}(F)\le\pi D.
 \tag{C44.14}
-$$
+```
 
 If `M` is the number of macroscopic components, C44.12-C44.14 imply
 
-$$
+```math
 M\frac{\rho_0D+1}{3}
 <
 3\pi D,
-$$
+```
 
 so
 
-$$
+```math
 M
 <
 \frac{9\pi D}{\rho_0D+1}
 <
 \frac{9\pi}{\rho_0}.
 \tag{C44.15}
-$$
+```
 
 Fix once and for all
 
-$$
+```math
 \boxed{
 K_0:=\left\lceil\frac{9\pi}{\rho_0}\right\rceil.
 }
 \tag{C44.16}
-$$
+```
 
 Then every sufficiently large C-II survivor has at most `K_0` macroscopic harmonic components.
 
@@ -228,26 +228,26 @@ Direct loaded-loaded contact response edges have length one, hence are short for
 
 Let
 
-$$
+```math
 C_{resp}:=\sum_{b<k}c_{bk}.
 \tag{C44.17}
-$$
+```
 
 C41 proves
 
-$$
+```math
 \boxed{C_{resp}>1.}
 \tag{C44.18}
-$$
+```
 
 The response decomposes into direct loaded-loaded contacts and the component Schur responses:
 
-$$
+```math
 C_{resp}
 =
 C_{BB}^{dir}+\sum_r C_r.
 \tag{C44.19}
-$$
+```
 
 All terms are nonnegative.
 
@@ -257,24 +257,24 @@ All terms are nonnegative.
 
 If
 
-$$
+```math
 S_{short}\ge\frac12,
-$$
+```
 
 then every term counted in `S_short` has
 
-$$
+```math
 D^2-|b-k|^2
 \ge
 (1-\rho_0^2)D^2
 =
 \gamma_0D^2.
 \tag{C44.20}
-$$
+```
 
 C41 therefore gives
 
-$$
+```math
 \frac{D^2}{2}\operatorname{tr}(\Lambda-L_H)
 =
 \sum_{b<k}c_{bk}(D^2-|b-k|^2)
@@ -282,77 +282,77 @@ $$
 \gamma_0D^2S_{short}
 \ge
 \frac{\gamma_0D^2}{2}.
-$$
+```
 
 Cancel `D^2/2` to obtain C44.4. This is Branch A.
 
 Now assume instead
 
-$$
+```math
 S_{short}<\frac12.
 \tag{C44.21}
-$$
+```
 
 The total nonshort response mass is
 
-$$
+```math
 C_{long}:=
 \sum_{\substack{b<k\\|b-k|>\rho_0D}}c_{bk}
 =
 C_{resp}-S_{short}.
 \tag{C44.22}
-$$
+```
 
 By C44.18 and C44.21,
 
-$$
+```math
 \boxed{C_{long}>\frac12.}
 \tag{C44.23}
-$$
+```
 
 No direct loaded-loaded contact contributes to `C_long`, and no nonmacroscopic component contributes to it. Hence all of `C_long` lies in the at most `K_0` macroscopic component responses. Therefore one macroscopic component satisfies
 
-$$
+```math
 C_r
 \ge
 \frac{C_{long}}{K_0}
 >
 \frac1{2K_0},
-$$
+```
 
 which proves C44.6.
 
 Because this component is macroscopic,
 
-$$
+```math
 \operatorname{diam}A_r>\rho_0D.
-$$
+```
 
 C44.9 then gives
 
-$$
+```math
 \delta_r+2>\rho_0D,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{\delta_r>\rho_0D-2.}
 \tag{C44.24}
-$$
+```
 
 C44.12 gives the attachment-count bound in C44.7. Finally C40 proves
 
-$$
+```math
 t_r\ge\delta_r+3,
-$$
+```
 
 hence C44.24 yields
 
-$$
+```math
 \boxed{t_r>\rho_0D+1.}
 \tag{C44.25}
-$$
+```
 
 This is Branch B. `square`
 
@@ -362,21 +362,21 @@ This is Branch B. `square`
 
 In the C33 near-minimal phase `sigma_B=o(D)`, C37 improves C36's crude incidence count to
 
-$$
+```math
 \sum_r|A_r|
 \le
 q_{used}+2c_I-2s
 \le
 |B_+|+o(D).
 \tag{C44.26}
-$$
+```
 
 Since `|B_+|<=pi D`, the number of macroscopic components is then asymptotically at most
 
-$$
+```math
 \frac{3\pi}{\rho_0}+o(1),
 \tag{C44.27}
-$$
+```
 
 rather than `9pi/rho_0`. Thus Branch B in the actual near-minimal response frontier can be taken to involve one of only an absolute bounded number of macroscopic cells, with a better constant.
 

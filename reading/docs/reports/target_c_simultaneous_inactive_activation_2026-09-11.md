@@ -48,12 +48,12 @@ Let `C_0` be a convex chamber contained in `conv(A)`, with no nonisolated contac
 vertex in its interior. Suppose a matching of `M` pairs `x_i,y_i` of contact-isolated
 source points satisfies
 
-$$
+```math
 1<|x_i-y_i|\le1+\epsilon,\qquad
 x_i,y_i\in(C_0)_{-w},
 \qquad w>1,\quad 0<\epsilon<1/4.
 \tag{SA.1}
-$$
+```
 
 Here `(C_0)_{-w}` is the inner parallel body at distance `w`. Assume at least one
 original diameter pair remains outside these movable isolate labels. This is
@@ -64,10 +64,10 @@ the original positive core.
 
 There is a family of at least
 
-$$
+```math
 \boxed{N\ge\lceil M/81\rceil}
 \tag{SA.2}
-$$
+```
 
 independent one-point motions, each of length at most `epsilon`, whose full Cartesian
 product is a cube of triangle-free unit-separated configurations of diameter exactly
@@ -108,10 +108,10 @@ source point provisionally fixed. Its original distance to every point is strict
 greater than one. At travel distance `|x_i-y_i|-1<=epsilon`, its mate is exactly one
 unit away. By continuity there is a first travel distance
 
-$$
+```math
 0<\ell_i\le\epsilon
 \tag{SA.3}
-$$
+```
 
 at which some source distance reaches one. Stop there; ties between several first
 blockers are allowed. Before stopping, every lower-distance inequality is strict;
@@ -152,10 +152,10 @@ to `(C_0)_{-w}`, so its radius-`w` disk is contained in `conv(A)`. For every oth
 `a` in that convex hull, extend the ray from `a` through the mover by length `w`.
 The extended point is still in the hull; since the hull has diameter `D`,
 
-$$
+```math
 |x_i(t_i)-a|\le D-w<D.
 \tag{SA.4}
-$$
+```
 
 Thus no new diameter pair involves a mover. Stationary pairs are unchanged. The
 original diameter pair assumed in the statement remains present, so diameter is
@@ -177,10 +177,10 @@ equations over one star after taking the dot product at each vertex with its pos
 There is no diameter load and no contact edge leaving that component. Internal
 contributions pair to give
 
-$$
+```math
 \sum_{ij\text{ in the star}}\alpha_{ij}|p_i-p_j|^2=0.
 \tag{SA.5}
-$$
+```
 
 The lengths are one and all coefficients are nonnegative. Hence every coefficient
 on that star is zero. This works for every star and every normalized stress, including
@@ -205,10 +205,10 @@ vertex in its interior. Every original actual diameter endpoint belongs to the
 positive core. All hypotheses of Theorem SA hold. Therefore the source belongs to
 an exact cube of triangle-free global minimizers of dimension at least
 
-$$
+```math
 \boxed{\lceil c_w D/81\rceil,}
 \tag{SA.6}
-$$
+```
 
 obtained by moving each selected isolate at most `K_w/D`. Its far corner has linearly
 many new contacts but precisely the same normalized KKT polytope and force hull.

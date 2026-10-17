@@ -36,11 +36,11 @@ local smoothing produce a simple Jordan curve `Gamma` whose contact-graph crossi
 are precisely the selected train-edge occurrences. All selected rhombi and face arcs
 lie in the convex hull `K` of the full source, so
 
-$$
+```math
 \Gamma\subset K,
 \qquad \operatorname{Int}(\Gamma)\subset K.
 \tag{1.1}
-$$
+```
 
 Let `S` be the nonisolated positive-contact-core vertices in the Jordan interior. A
 crossed train edge makes `S` nonempty. Every active diameter endpoint is extreme in
@@ -52,20 +52,20 @@ Sum the relative-interior positive KKT equilibrium equations over `S`. Internal
 contact forces cancel and there is no diameter contribution. Each connected selected
 train portion contributes a nonzero vector
 
-$$
+```math
 \epsilon_iA_i u_i,
 \qquad A_i>0,
 \qquad \epsilon_i\in\{+1,-1\},
 \tag{2.1}
-$$
+```
 
 because all crossed edges in that train have one coherent projective direction and
 orientation. Thus
 
-$$
+```math
 \epsilon_1A_1u_1+\epsilon_2A_2u_2=0.
 \tag{2.2}
-$$
+```
 
 If one selected portion is absent, its single nonzero resultant already contradicts
 equilibrium. Otherwise (2.2) forces `u_1,u_2` to be projectively parallel.

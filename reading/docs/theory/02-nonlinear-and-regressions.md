@@ -10,32 +10,32 @@
 
 The ordinary KKT stress is not automatically a universal prestress-stability certificate. The correct necessary statement is direction dependent.
 
-Let $v=(v_1,\ldots,v_n)$ satisfy the first-order critical inequalities with no first-order change in $T$:
+Let $`v=(v_1,\ldots,v_n)`$ satisfy the first-order critical inequalities with no first-order change in $`T`$:
 
-$$
+```math
 (p_i-p_j)\cdot(v_i-v_j)\ge0\quad(ij\in C),
 \tag{11.1}
-$$
+```
 
-$$
+```math
 (p_i-p_j)\cdot(v_i-v_j)\le0\quad(ij\in H).
 \tag{11.2}
-$$
+```
 
-Let $C_0(v)$ and $H_0(v)$ be the active edges on which equality holds.
+Let $`C_0(v)`$ and $`H_0(v)`$ be the active edges on which equality holds.
 
 ### Theorem 11.1: second-order normal stress for each critical direction
 
 There exist multipliers
 
-$$
+```math
 \alpha_{ij}\ge0\quad(ij\in C_0(v)),\qquad
 \beta_{ij}\ge0\quad(ij\in H_0(v))
-$$
+```
 
 satisfying the equilibrium, scalar, and tensor identities (4.1)-(4.5), supported on the zero-derivative edges, and additionally
 
-$$
+```math
 \boxed{
 \sum_{H_0(v)}\beta_{ij}|v_i-v_j|^2
 -
@@ -43,53 +43,53 @@ $$
 \ge0.
 }
 \tag{11.3}
-$$
+```
 
 #### Proof
 
-Suppose there were accelerations $a_i$ and $s<0$ such that
+Suppose there were accelerations $`a_i`$ and $`s<0`$ such that
 
-$$
+```math
 p_i(t)=p_i+tv_i+\frac{t^2}{2}a_i,
 \qquad
 T(t)=T+\frac{t^2}{2}s
-$$
+```
 
 strictly satisfy every second-order condition on the zero-derivative active edges. Those conditions are
 
-$$
+```math
 -2(p_i-p_j)\cdot(a_i-a_j)-2|v_i-v_j|^2<0
 \quad(ij\in C_0(v)),
 \tag{11.4}
-$$
+```
 
-$$
+```math
 2(p_i-p_j)\cdot(a_i-a_j)-s+2|v_i-v_j|^2<0
 \quad(ij\in H_0(v)).
 \tag{11.5}
-$$
+```
 
-Edges with strict first-order slack remain feasible automatically for sufficiently small $t>0$, as do inactive constraints. Thus (11.4)-(11.5) with $s<0$ would produce a feasible configuration of smaller diameter, contradicting optimality.
+Edges with strict first-order slack remain feasible automatically for sufficiently small $`t>0`$, as do inactive constraints. Thus (11.4)-(11.5) with $`s<0`$ would produce a feasible configuration of smaller diameter, contradicting optimality.
 
-The strict linear system in the variables $(a,s)$ is therefore infeasible. Apply the strict Farkas alternative also to the row $s<0$. It gives nonnegative multipliers $\alpha,\beta,\lambda$, not all zero, with stationarity in $(a,s)$, where stationarity in $s$ says
+The strict linear system in the variables $`(a,s)`$ is therefore infeasible. Apply the strict Farkas alternative also to the row $`s<0`$. It gives nonnegative multipliers $`\alpha,\beta,\lambda`$, not all zero, with stationarity in $`(a,s)`$, where stationarity in $`s`$ says
 
-$$
+```math
 \lambda=\sum\beta.
-$$
+```
 
-If $\lambda=0$, then $\beta=0$ and the remaining equations would be a nonzero nonnegative equilibrium stress supported only on contacts. That is impossible for a finite free framework: choose a vertex uniquely extreme in a generic direction among the vertices incident to positive stress; every positive incident contact force has strictly positive projection there. Thus $\lambda>0$. Normalize it to (1), obtaining $\sum\beta=1$. The constant term in the Farkas alternative is precisely (11.3), and the scalar and tensor identities follow as in Theorem 4.1. ∎
+If $`\lambda=0`$, then $`\beta=0`$ and the remaining equations would be a nonzero nonnegative equilibrium stress supported only on contacts. That is impossible for a finite free framework: choose a vertex uniquely extreme in a generic direction among the vertices incident to positive stress; every positive incident contact force has strictly positive projection there. Thus $`\lambda>0`$. Normalize it to (1), obtaining $`\sum\beta=1`$. The constant term in the Farkas alternative is precisely (11.3), and the scalar and tensor identities follow as in Theorem 4.1. ∎
 
 ### Corollary 11.2: affine second-order neutrality
 
 For an affine velocity field
 
-$$
+```math
 v_i=Mp_i+b,
-$$
+```
 
-write $r_{ij}=p_i-p_j$ on contacts and $R_{ij}=p_i-p_j$ on diameter edges. Then the quadratic stress expression is identically zero:
+write $`r_{ij}=p_i-p_j`$ on contacts and $`R_{ij}=p_i-p_j`$ on diameter edges. Then the quadratic stress expression is identically zero:
 
-$$
+```math
 \begin{aligned}
 &\sum_H\beta_{ij}|M(p_i-p_j)|^2
 -\sum_C\alpha_{ij}|M(p_i-p_j)|^2\\
@@ -103,34 +103,34 @@ M^{\mathsf T}M
 \right)=0.
 \end{aligned}
 \tag{11.6}
-$$
+```
 
-Thus the tensor identity blocks the hoped-for contradiction from a global affine shear. Also, the multiplier in Theorem 11.1 may depend on $v$; MFCQ alone does not justify one stress with nonnegative quadratic energy on the entire critical cone.
+Thus the tensor identity blocks the hoped-for contradiction from a global affine shear. Also, the multiplier in Theorem 11.1 may depend on $`v`$; MFCQ alone does not justify one stress with nonnegative quadratic energy on the entire critical cone.
 
 ### Theorem 11.3: virtual work and the common stress midpoint
 
-Fix any KKT stress from Theorem 4.1. For arbitrary vectors $\xi_i\in\mathbb R^2$, equilibrium gives the exact virtual-work identity
+Fix any KKT stress from Theorem 4.1. For arbitrary vectors $`\xi_i\in\mathbb R^2`$, equilibrium gives the exact virtual-work identity
 
-$$
+```math
 \boxed{
 \sum_{ij\in C}\alpha_{ij}(p_i-p_j)\cdot(\xi_i-\xi_j)
 =
 \sum_{ij\in H}\beta_{ij}(p_i-p_j)\cdot(\xi_i-\xi_j).
 }
 \tag{11.7}
-$$
+```
 
 Let
 
-$$
+```math
 m_{ij}=\frac{p_i+p_j}{2},
 \qquad
 a_{ij}=\frac{\alpha_{ij}}{D^2}\quad(ij\in C).
-$$
+```
 
-Both $(a_{ij})_{C}$ and $(\beta_{ij})_{H}$ are probability weights. Their midpoint barycenters agree:
+Both $`(a_{ij})_{C}`$ and $`(\beta_{ij})_{H}`$ are probability weights. Their midpoint barycenters agree:
 
-$$
+```math
 \boxed{
 \sum_C a_{ij}m_{ij}
 =
@@ -138,44 +138,44 @@ $$
 =:\mu.
 }
 \tag{11.8}
-$$
+```
 
-In particular, $\mu\in\operatorname{conv}A$.
+In particular, $`\mu\in\operatorname{conv}A`$.
 
 #### Proof
 
-Dot the vertex equilibrium equation (4.2) with $\xi_i$ and sum over $i$; the two endpoint terms of every edge combine to give (11.7).
+Dot the vertex equilibrium equation (4.2) with $`\xi_i`$ and sum over $`i`$; the two endpoint terms of every edge combine to give (11.7).
 
-For a fixed vector $b$, choose
+For a fixed vector $`b`$, choose
 
-$$
+```math
 \xi(x)=|x|^2b-2(b\cdot x)x.
-$$
+```
 
-A direct calculation, with $d=x-y$, gives
+A direct calculation, with $`d=x-y`$, gives
 
-$$
+```math
 d\cdot\bigl(\xi(x)-\xi(y)\bigr)
 =-|d|^2b\cdot(x+y).
-$$
+```
 
-Use this field in (11.7), substitute the active lengths $1$ and $D$, and divide by $2D^2$. Since $b$ is arbitrary, (11.8) follows. ∎
+Use this field in (11.7), substitute the active lengths $`1`$ and $`D`$, and divide by $`2D^2`$. Since $`b`$ is arbitrary, (11.8) follows. ∎
 
 ### Theorem 11.4: quartic identity and macroscopic contact-stress mass
 
 Write
 
-$$
+```math
 \bar m_{ij}=m_{ij}-\mu,
 \qquad
 u_{ij}=p_i-p_j\quad(ij\in C),
 \qquad
 w_{ij}=\frac{p_i-p_j}{D}\quad(ij\in H).
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \begin{aligned}
 &\sum_C a_{ij}
@@ -187,135 +187,135 @@ $$
 \end{aligned}
 }
 \tag{11.9}
-$$
+```
 
 Consequently,
 
-$$
+```math
 \boxed{
 \sum_C a_{ij}|m_{ij}-\mu|^2
 \ge\frac{D^2-1}{12}.
 }
 \tag{11.10}
-$$
+```
 
-For $D>2$, the normalized contact-stress mass whose midpoint lies at distance at least $D/4$ from $\mu$ satisfies
+For $`D>2`$, the normalized contact-stress mass whose midpoint lies at distance at least $`D/4`$ from $`\mu`$ satisfies
 
-$$
+```math
 \boxed{
 \sum_{\substack{ij\in C\\|m_{ij}-\mu|\ge D/4}}a_{ij}
 \ge\frac{D^2-4}{45D^2}.
 }
 \tag{11.11}
-$$
+```
 
-Equivalently, the corresponding unnormalized $\alpha$-mass is at least $(D^2-4)/45$, which is $\Theta(n)$ along any sequence with $n\to\infty$ by (2.2).
+Equivalently, the corresponding unnormalized $`\alpha`$-mass is at least $`(D^2-4)/45`$, which is $`\Theta(n)`$ along any sequence with $`n\to\infty`$ by (2.2).
 
 #### Proof
 
-Translate the origin to $\mu$ and use $\xi(x)=|x|^2x$ in (11.7). For $d=x-y$ and $m=(x+y)/2$,
+Translate the origin to $`\mu`$ and use $`\xi(x)=|x|^2x`$ in (11.7). For $`d=x-y`$ and $`m=(x+y)/2`$,
 
-$$
+```math
 d\cdot\bigl(|x|^2x-|y|^2y\bigr)
 =|m|^2|d|^2+\frac{|d|^4}{4}+2(m\cdot d)^2.
-$$
+```
 
-Insert the contact and diameter lengths, divide by $D^2$, and use $\sum_Ca=\sum_H\beta=1$ to obtain (11.9). The diameter sum in (11.9) is nonnegative, while
+Insert the contact and diameter lengths, divide by $`D^2`$, and use $`\sum_Ca=\sum_H\beta=1`$ to obtain (11.9). The diameter sum in (11.9) is nonnegative, while
 
-$$
+```math
 |m|^2+2(m\cdot u)^2\le3|m|^2,
-$$
+```
 
 which proves (11.10).
 
-Every midpoint and $\mu$ lie in $\operatorname{conv}A$, whose diameter is $D$, so $|m_{ij}-\mu|\le D$. If $s$ denotes the left side of (11.11), then
+Every midpoint and $`\mu`$ lie in $`\operatorname{conv}A`$, whose diameter is $`D`$, so $`|m_{ij}-\mu|\le D`$. If $`s`$ denotes the left side of (11.11), then
 
-$$
+```math
 \sum_Ca_{ij}|m_{ij}-\mu|^2
 \le (1-s)\frac{D^2}{16}+sD^2.
-$$
+```
 
-Combine this with (11.10) and solve for $s$ to get (11.11). ∎
+Combine this with (11.10) and solve for $`s`$ to get (11.11). ∎
 
-### Theorem 11.5: positive contact stress reaches radius $(D-1)/2$
+### Theorem 11.5: positive contact stress reaches radius $`(D-1)/2`$
 
 For every normalized KKT certificate,
 
-$$
+```math
 \boxed{
 \max_{\alpha_{ij}>0}|m_{ij}-\mu|
 \ge\frac{D-1}{2}.
 }
 \tag{11.12}
-$$
+```
 
 #### Proof
 
-Translate again so $\mu=0$. For an integer $k\ge1$, put
+Translate again so $`\mu=0`$. For an integer $`k\ge1`$, put
 
-$$
+```math
 \xi_k(x)=|x|^{2k}x
 =\nabla\left(\frac{|x|^{2k+2}}{2k+2}\right).
-$$
+```
 
 Its Jacobian, equivalently the Hessian of the displayed convex function, is
 
-$$
+```math
 H_k(x)=|x|^{2k}I+2k|x|^{2k-2}xx^{\mathsf T}.
-$$
+```
 
-For a segment $[x,y]$ of length $L$, unit direction $u$, and midpoint $m$, define its normalized work
+For a segment $`[x,y]`$ of length $`L`$, unit direction $`u`$, and midpoint $`m`$, define its normalized work
 
-$$
+```math
 W_k(x,y)
 =\frac{(x-y)\cdot(\xi_k(x)-\xi_k(y))}{L^2}
 =\frac1L\int_{-L/2}^{L/2}u^{\mathsf T}H_k(m+tu)u\,dt.
-$$
+```
 
-For a diameter segment, write $m\cdot u=s_0$. Since
+For a diameter segment, write $`m\cdot u=s_0`$. Since
 
-$$
+```math
 u^{\mathsf T}H_k(z)u
 \ge(2k+1)|z\cdot u|^{2k},
-$$
+```
 
-and the integral of $|s_0+t|^{2k}$ over an interval of fixed length is minimized when $s_0=0$,
+and the integral of $`|s_0+t|^{2k}`$ over an interval of fixed length is minimized when $`s_0=0`$,
 
-$$
+```math
 W_k(x,y)\ge\left(\frac D2\right)^{2k}
 \qquad(ij\in H).
 \tag{11.13}
-$$
+```
 
 Let
 
-$$
+```math
 R=\max_{\alpha_{ij}>0}|m_{ij}|.
-$$
+```
 
-Every point on a positively stressed unit contact lies within distance $R+1/2$ of the origin. The largest eigenvalue of $H_k(z)$ is $(2k+1)|z|^{2k}$, so
+Every point on a positively stressed unit contact lies within distance $`R+1/2`$ of the origin. The largest eigenvalue of $`H_k(z)`$ is $`(2k+1)|z|^{2k}`$, so
 
-$$
+```math
 W_k(x,y)\le(2k+1)(R+1/2)^{2k}
 \qquad(ij\in C,\ \alpha_{ij}>0).
 \tag{11.14}
-$$
+```
 
-Apply (11.7) with $\xi_i=\xi_k(p_i)$ and divide by $D^2$. It becomes
+Apply (11.7) with $`\xi_i=\xi_k(p_i)`$ and divide by $`D^2`$. It becomes
 
-$$
+```math
 \sum_Ca_{ij}W_k(p_i,p_j)
 =\sum_H\beta_{ij}W_k(p_i,p_j).
-$$
+```
 
 Equations (11.13)--(11.14) give
 
-$$
+```math
 (2k+1)(R+1/2)^{2k}
 \ge(D/2)^{2k}.
-$$
+```
 
-Let $k\to\infty$ to obtain $R+1/2\ge D/2$, proving (11.12). ∎
+Let $`k\to\infty`$ to obtain $`R+1/2\ge D/2`$, proving (11.12). ∎
 
 ---
 
@@ -323,196 +323,199 @@ Let $k\to\infty$ to obtain $R+1/2\ge D/2$, proving (11.12). ∎
 
 ### Theorem 12.1: every isolated point can be attached
 
-Let $A$ be a triangle-free minimizer and let $p\in A$ be contact-isolated. Then $p$ can be moved, without increasing the diameter or creating a unit triangle, until it has exactly one unit contact. Repeating this process gives a triangle-free minimizer with the same $n$ and $D(n)$ and no contact-isolated points.
+Let $`A`$ be a triangle-free minimizer and let $`p\in A`$ be contact-isolated. Then $`p`$ can be moved, without increasing the diameter or creating a unit triangle, until it has exactly one unit contact. Repeating this process gives a triangle-free minimizer with the same $`n`$ and $`D(n)`$ and no contact-isolated points.
 
 #### Proof
 
-For $n\ge4$, a diameter minimizer is noncollinear: a collinear feasible $n$-point set has diameter at least $n-1$, whereas the regular unit $n$-gon has strictly smaller diameter. The smaller cases have no isolated point. Thus the convex hull below has nonempty interior.
+For $`n\ge4`$, a diameter minimizer is noncollinear: a collinear feasible $`n`$-point set has diameter at least $`n-1`$, whereas the regular unit $`n`$-gon has strictly smaller diameter. The smaller cases have no isolated point. Thus the convex hull below has nonempty interior.
 
-Work inside the convex polygon $K=\operatorname{conv}A$. Every point $y\in K$ satisfies
+Work inside the convex polygon $`K=\operatorname{conv}A`$. Every point $`y\in K`$ satisfies
 
-$$
+```math
 |y-x|\le D\qquad(x\in A\setminus\{p\})
-$$
+```
 
-by convexity of the distance function. Starting from $p$, choose a path in $K$ toward one of the existing points. It must meet the boundary of the forbidden union
+by convexity of the distance function. Starting from $`p`$, choose a path in $`K`$ toward one of the existing points. It must meet the boundary of the forbidden union
 
-$$
+```math
 \bigcup_{x\in A\setminus\{p\}}B(x,1).
-$$
+```
 
-The finitely many points at which two of the boundary circles meet can be avoided by a generic small perturbation of the path. Stop at its first boundary point. Exactly one distance is then (1), every other lower-distance constraint is still strict, and every upper-distance constraint is at most $D$. Thus no unit triangle is created.
+The finitely many points at which two of the boundary circles meet can be avoided by a generic small perturbation of the path. Stop at its first boundary point. Exactly one distance is then (1), every other lower-distance constraint is still strict, and every upper-distance constraint is at most $`D`$. Thus no unit triangle is created.
 
-The resulting diameter is at most $D$. If it were smaller than $D(n)$, global optimality would be contradicted. Hence it remains exactly $D(n)$. ∎
+The resulting diameter is at most $`D`$. If it were smaller than $`D(n)`$, global optimality would be contradicted. Hence it remains exactly $`D(n)`$. ∎
 
-This theorem does **not** imply that a no-isolate representative can simultaneously be chosen contact-minimal or first-order jammed. The exact $n=8$ family warns against such a simultaneous normalization.
+This theorem does **not** imply that a no-isolate representative can simultaneously be chosen contact-minimal or first-order jammed. The exact $`n=8`$ family warns against such a simultaneous normalization.
 
 ### Theorem 12.2: structure of a minimum-contact core
 
-Choose a triangle-free minimizer with the minimum possible number of contacts. Delete its isolated vertices, leaving a nonisolated core with $m$ vertices. Let $Q^\circ$ be the diameter endpoints belonging to that core.
+Choose a triangle-free minimizer with the minimum possible number of contacts. Delete its isolated vertices, leaving a nonisolated core with $`m`$ vertices. Let $`Q^\circ`$ be the diameter endpoints belonging to that core.
 
 Then:
 
-1. Every nontrivial contact component meets $Q^\circ$.
-2. Fixing $Q^\circ$, the expansive cone of the core is zero.
-3. If the core has $e$ contact edges, then
+1. Every nontrivial contact component meets $`Q^\circ`$.
+2. Fixing $`Q^\circ`$, the expansive cone of the core is zero.
+3. If the core has $`e`$ contact edges, then
 
-   $$
+   ```math
    e\ge2(m-|Q^\circ|).
    \tag{12.1}
-   $$
+   
+   ```
 
 4. Under triangle-freeness,
 
-   $$
+   ```math
    |Q^\circ|
    \ge\frac14\sqrt{2\pi\sqrt3\,m}-O(1).
    \tag{12.2}
-   $$
+   
+   ```
 
 #### Proof
 
-If a nontrivial contact component contains no diameter endpoint, give every vertex $p_i$ in that component the velocity
+If a nontrivial contact component contains no diameter endpoint, give every vertex $`p_i`$ in that component the velocity
 
-$$
+```math
 v_i=J(p_i-c),
-$$
+```
 
-where $J$ is a quarter-turn and $c$ is fixed. Along the straight path, every internal contact vector $r$ changes by $tJr$, so its squared length becomes
+where $`J`$ is a quarter-turn and $`c`$ is fixed. Along the straight path, every internal contact vector $`r`$ changes by $`tJr`$, so its squared length becomes
 
-$$
+```math
 |r+tJr|^2=|r|^2+t^2|r|^2>1.
-$$
+```
 
-Cross-component pairs and diameter constraints have strict slack. This breaks contacts without increasing the diameter, contradicting contact minimality. Hence every component meets $Q^\circ$.
+Cross-component pairs and diameter constraints have strict slack. This breaks contacts without increasing the diameter, contradicting contact minimality. Hence every component meets $`Q^\circ`$.
 
 Now suppose the core has a nonzero pinned expansive velocity. Along the straight motion, every contact with positive first derivative breaks immediately; a zero-derivative contact with nonzero relative velocity breaks at second order. If every contact has zero relative velocity, the velocity is constant on each component, and the pinned vertex in that component forces the constant to be zero. Thus every nonzero expansive velocity would reduce the contact count, a contradiction. The cone is zero, and the rank and Eppstein arguments give (12.1)-(12.2). ∎
 
-If the number $z=n-m$ of isolated vertices in this contact-minimal representative is $O(\sqrt n)$, the face-counting argument applied to the core again yields $m-O(\sqrt n)$ near-equilateral rhombi. If $z$ is large, that representative is genuinely rattler dominated; Theorem 12.3 controls a different, maximal-contact representative.
+If the number $`z=n-m`$ of isolated vertices in this contact-minimal representative is $`O(\sqrt n)`$, the face-counting argument applied to the core again yields $`m-O(\sqrt n)`$ near-equilateral rhombi. If $`z`$ is large, that representative is genuinely rattler dominated; Theorem 12.3 controls a different, maximal-contact representative.
 
 ### Theorem 12.3: a maximal-contact representative has no unanchored component
 
-Assume that a triangle-free minimizer exists for a fixed $n$. Among all such minimizers, choose $A_{\max}$ with the maximum number of unit contacts; subject to that choice, maximize the number $q$ of diameter endpoints. Then every contact component contains a diameter endpoint. Consequently, if $z$ is the number of isolated contact vertices and $c$ the number of contact components,
+Assume that a triangle-free minimizer exists for a fixed $`n`$. Among all such minimizers, choose $`A_{\max}`$ with the maximum number of unit contacts; subject to that choice, maximize the number $`q`$ of diameter endpoints. Then every contact component contains a diameter endpoint. Consequently, if $`z`$ is the number of isolated contact vertices and $`c`$ the number of contact components,
 
-$$
+```math
 \boxed{
 z\le q\le C_0\sqrt n,
 \qquad
 c\le q\le C_0\sqrt n.
 }
 \tag{12.3}
-$$
+```
 
 #### Proof
 
-Suppose a contact component $K$ contains no diameter endpoint. Translate every point of $K$ by the same vector $t$. Internal distances remain unchanged. For every $p\in K$ and $x\notin K$, the original cross-distance is strictly between $1$ and $D$. Define the feasible translation set
+Suppose a contact component $`K`$ contains no diameter endpoint. Translate every point of $`K`$ by the same vector $`t`$. Internal distances remain unchanged. For every $`p\in K`$ and $`x\notin K`$, the original cross-distance is strictly between $`1`$ and $`D`$. Define the feasible translation set
 
-$$
+```math
 \mathcal T=
 \left\{
 t\in\mathbb R^2:
 1\le|p+t-x|\le D
 \text{ for all }p\in K, x\notin K
 \right\}.
-$$
+```
 
-It is closed and bounded, and $0$ lies in its interior. Boundedness follows already from any one upper constraint $|p+t-x|\le D$; a point outside $K$ exists because every diameter edge lies outside $K$.
+It is closed and bounded, and $`0`$ lies in its interior. Boundedness follows already from any one upper constraint $`|p+t-x|\le D`$; a point outside $`K`$ exists because every diameter edge lies outside $`K`$.
 
-The boundary lies in finitely many unit or diameter circles in the translation plane. Choose a ray from $0$ that avoids every intersection point of two noncoincident circles, and move along it until the first boundary point of $\mathcal T$. All newly active cross-constraints then belong to one geometric circle. Distinct constraints defining the same circle have the same center $x-p$ and radius. For unit constraints, the resulting new contact edges form a matching: two distinct such pairs cannot share $p$ or share $x$. A matching of new intercomponent edges cannot create a triangle, because any triangle using the old components would require two new edges sharing a vertex.
+The boundary lies in finitely many unit or diameter circles in the translation plane. Choose a ray from $`0`$ that avoids every intersection point of two noncoincident circles, and move along it until the first boundary point of $`\mathcal T`$. All newly active cross-constraints then belong to one geometric circle. Distinct constraints defining the same circle have the same center $`x-p`$ and radius. For unit constraints, the resulting new contact edges form a matching: two distinct such pairs cannot share $`p`$ or share $`x`$. A matching of new intercomponent edges cannot create a triangle, because any triangle using the old components would require two new edges sharing a vertex.
 
-If the active circle is a unit circle, at least one contact is added and none is lost, contradicting maximality of the contact count. If it is a diameter circle, the contact graph is unchanged but a vertex of $K$ becomes a new diameter endpoint, contradicting the secondary maximization. Existing diameter edges lie outside $K$ and remain fixed, so every translated configuration still has diameter exactly $D$. This proves the anchoring assertion.
+If the active circle is a unit circle, at least one contact is added and none is lost, contradicting maximality of the contact count. If it is a diameter circle, the contact graph is unchanged but a vertex of $`K`$ becomes a new diameter endpoint, contradicting the secondary maximization. Existing diameter edges lie outside $`K`$ and remain fixed, so every translated configuration still has diameter exactly $`D`$. This proves the anchoring assertion.
 
-Each component contains a distinct vertex of $Q$, proving $c\le q$; an isolated vertex is itself a component, proving $z\le q$. Corollary 6.2 supplies the remaining bounds. ∎
+Each component contains a distinct vertex of $`Q`$, proving $`c\le q`$; an isolated vertex is itself a component, proving $`z\le q`$. Corollary 6.2 supplies the remaining bounds. ∎
 
 The minimum-contact and maximum-contact representatives serve different purposes. The former has a jammed nonisolated core; the latter eliminates an arbitrarily large collection of unanchored rattlers or components. They need not be the same minimizer.
 
 ### Theorem 12.4: a hybrid representative with a fixed jammed backbone
 
-Assume that a triangle-free minimizer exists for a fixed $n$. There is a triangle-free minimizer $\widehat A$ with the same $n$ and $D(n)$, together with a distinguished contact subgraph $K$, such that:
+Assume that a triangle-free minimizer exists for a fixed $`n`$. There is a triangle-free minimizer $`\widehat A`$ with the same $`n`$ and $`D(n)`$, together with a distinguished contact subgraph $`K`$, such that:
 
-1. $K$ is the unchanged nonisolated core of a contact-minimal triangle-free minimizer. If $Q_K$ denotes its original diameter endpoints, then the expansive cone of $K$ pinned at $Q_K$ is zero.
-2. Every contact component of $\widehat A$ contains a diameter endpoint, and
+1. $`K`$ is the unchanged nonisolated core of a contact-minimal triangle-free minimizer. If $`Q_K`$ denotes its original diameter endpoints, then the expansive cone of $`K`$ pinned at $`Q_K`$ is zero.
+2. Every contact component of $`\widehat A`$ contains a diameter endpoint, and
 
-   $$
+   ```math
    \#\{\text{contact components}\},
    \quad
    \#\{\text{contact-isolated vertices}\}
    \le C_0\sqrt n.
    \tag{12.4}
-   $$
+   
+   ```
 
-3. Every contact edge of $\widehat A$ outside $K$ is a bridge. Thus every contact cycle and every nonbridge contact edge lies in $K$.
-4. If $\widehat Q$ is the full diameter-endpoint set of $\widehat A$, every velocity in $\mathcal E_{\widehat Q}(\widehat A)$ vanishes on $V(K)$. All surviving pinned flexibility is confined to the forest left after the fixed vertices $V(K)\cup\widehat Q$ are deleted.
+3. Every contact edge of $`\widehat A`$ outside $`K`$ is a bridge. Thus every contact cycle and every nonbridge contact edge lies in $`K`$.
+4. If $`\widehat Q`$ is the full diameter-endpoint set of $`\widehat A`$, every velocity in $`\mathcal E_{\widehat Q}(\widehat A)`$ vanishes on $`V(K)`$. All surviving pinned flexibility is confined to the forest left after the fixed vertices $`V(K)\cup\widehat Q`$ are deleted.
 
 #### Proof
 
-Start with a contact-minimal triangle-free minimizer $A_0$. Let $K$ be its nonisolated core and $Q_0$ its full diameter-endpoint set. By Theorem 12.2, every component of $K$ meets
+Start with a contact-minimal triangle-free minimizer $`A_0`$. Let $`K`$ be its nonisolated core and $`Q_0`$ its full diameter-endpoint set. By Theorem 12.2, every component of $`K`$ meets
 
-$$
+```math
 Q_K=Q_0\cap V(K),
-$$
+```
 
-and the expansive cone of $K$ pinned at $Q_K$ is zero.
+and the expansive cone of $`K`$ pinned at $`Q_K`$ is zero.
 
-Keep every point of $K$ and every point of $Q_0$ fixed from now on. In particular, an original diameter pair remains fixed, so every configuration constructed below has diameter exactly $D(n)$, not merely at most $D(n)$.
+Keep every point of $`K`$ and every point of $`Q_0`$ fixed from now on. In particular, an original diameter pair remains fixed, so every configuration constructed below has diameter exactly $`D(n)`$, not merely at most $`D(n)`$.
 
-First treat the isolated points. Whenever a currently isolated point $p\notin Q_0$ remains, apply the path construction from Theorem 12.1 while all other points stay fixed, choosing the path generically so that its first lower-distance boundary point creates exactly one contact. That edge joins two previously distinct contact components, so it is a bridge and cannot create a triangle. Repeat until every remaining isolated point belongs to $Q_0$. There are at most $|Q_0|=O(\sqrt n)$ such points.
+First treat the isolated points. Whenever a currently isolated point $`p\notin Q_0`$ remains, apply the path construction from Theorem 12.1 while all other points stay fixed, choosing the path generically so that its first lower-distance boundary point creates exactly one contact. That edge joins two previously distinct contact components, so it is a bridge and cannot create a triangle. Repeat until every remaining isolated point belongs to $`Q_0`$. There are at most $`|Q_0|=O(\sqrt n)`$ such points.
 
-Next take a contact component $L$ containing no current diameter endpoint. Every cross-distance between $L$ and its complement is strictly between (1) and $D$. Make an arbitrarily small generic rigid rotation of $L$, preserving all its internal distances and all strict cross-inequalities. After that rotation, parameterize a translation by $t$. Each cross-constraint has boundary circle
+Next take a contact component $`L`$ containing no current diameter endpoint. Every cross-distance between $`L`$ and its complement is strictly between (1) and $`D`$. Make an arbitrarily small generic rigid rotation of $`L`$, preserving all its internal distances and all strict cross-inequalities. After that rotation, parameterize a translation by $`t`$. Each cross-constraint has boundary circle
 
-$$
+```math
 |Rp+t-x|=r,
 \qquad r\in\{1,D\},\qquad p\in L,\qquad x\notin L.
 \tag{12.5}
-$$
+```
 
 Two distinct constraints of the same radius have coincident circles only if
 
-$$
+```math
 x-y=R(p-q).
 \tag{12.6}
-$$
+```
 
 For each pair this excludes at most finitely many rotation angles unless the constraints are identical. The two radii are distinct in every nontrivial case. Thus the preliminary rotation can make all distinct boundary circles noncoincident.
 
 The feasible translation set
 
-$$
+```math
 \mathcal T_L=
 \left\{t:
 1\le|Rp+t-x|\le D
 \text{ for all }p\in L, x\notin L
 \right\}
-$$
+```
 
 is closed and bounded and contains the current translation in its interior. Choose a ray avoiding the finitely many intersection points of distinct boundary circles and stop at its first boundary point. Exactly one cross-constraint becomes active.
 
-If it is a unit constraint, one new bridge joins two contact components and their number decreases. If it is a diameter constraint, the contact graph stays unchanged and $L$ acquires a diameter endpoint. In either case the number of components without a diameter endpoint decreases by at least one. Never move a component after it has acquired a diameter endpoint. Repetition terminates with every component anchored.
+If it is a unit constraint, one new bridge joins two contact components and their number decreases. If it is a diameter constraint, the contact graph stays unchanged and $`L`$ acquires a diameter endpoint. In either case the number of components without a diameter endpoint decreases by at least one. Never move a component after it has acquired a diameter endpoint. Repetition terminates with every component anchored.
 
-Every added unit edge joined two distinct current components. The quotient graph of these mergers is therefore a forest, so every added contact remains a bridge. Since every final component contains a distinct point of $\widehat Q$,
+Every added unit edge joined two distinct current components. The quotient graph of these mergers is therefore a forest, so every added contact remains a bridge. Since every final component contains a distinct point of $`\widehat Q`$,
 
-$$
+```math
 \#\{\text{components}\},
 \quad
 \#\{\text{isolates}\}
 \le|\widehat Q|
 \le C_0\sqrt n.
-$$
+```
 
-Finally let $v\in\mathcal E_{\widehat Q}(\widehat A)$. Every point of $Q_K$ remains an endpoint of its fixed original diameter pair, so $Q_K\subseteq\widehat Q$. Restrict $v$ to the unchanged contacts of $K$. This is an element of the expansive cone of $K$ pinned at $Q_K$, hence it vanishes throughout $K$. Every edge outside $K$ is a bridge, proving the last assertion. A remaining forest piece may have several fixed attachments; no one-root assertion is being made. ∎
+Finally let $`v\in\mathcal E_{\widehat Q}(\widehat A)`$. Every point of $`Q_K`$ remains an endpoint of its fixed original diameter pair, so $`Q_K\subseteq\widehat Q`$. Restrict $`v`$ to the unchanged contacts of $`K`$. This is an element of the expansive cone of $`K`$ pinned at $`Q_K`$, hence it vanishes throughout $`K`$. Every edge outside $`K`$ is a bridge, proving the last assertion. A remaining forest piece may have several fixed attachments; no one-root assertion is being made. ∎
 
 ### Theorem 12.5: quantitative size of the bridge-forest obstruction
 
-Use $\widehat A,K,\widehat Q$ from Theorem 12.4 and put
+Use $`\widehat A,K,\widehat Q`$ from Theorem 12.4 and put
 
-$$
+```math
 U=V(\widehat A)\setminus\bigl(V(K)\cup\widehat Q\bigr),
 \qquad u=|U|.
-$$
+```
 
-Contract each component of $K$ to one fixed root, retain each point of $\widehat Q\setminus V(K)$ as a fixed root, and retain all contact edges incident with $U$. Let $r$ be the number of incident fixed roots and $c$ the number of nonempty connected components of this quotient forest. Define the pinned contact-preserving lineality space
+Contract each component of $`K`$ to one fixed root, retain each point of $`\widehat Q\setminus V(K)`$ as a fixed root, and retain all contact edges incident with $`U`$. Let $`r`$ be the number of incident fixed roots and $`c`$ the number of nonempty connected components of this quotient forest. Define the pinned contact-preserving lineality space
 
-$$
+```math
 \mathcal L_{\widehat Q}(\widehat A)=
 \left\{v:
 v_i=0\ (i\in\widehat Q),
@@ -520,64 +523,64 @@ v_i=0\ (i\in\widehat Q),
 (p_i-p_j)\cdot(v_i-v_j)=0\ (ij\in C)
 \right\}.
 \tag{12.7}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \dim\mathcal L_{\widehat Q}(\widehat A)
 \ge u-r+c
 \ge u-|\widehat Q|+c.
 }
 \tag{12.8}
-$$
+```
 
 In particular, if the full pinned expansive cone is zero, then
 
-$$
+```math
 \boxed{
 u\le r-c\le|\widehat Q|-c.
 }
 \tag{12.9}
-$$
+```
 
-Writing $\ell=\dim\mathcal L_{\widehat Q}(\widehat A)$, one has
+Writing $`\ell=\dim\mathcal L_{\widehat Q}(\widehat A)`$, one has
 
-$$
+```math
 \boxed{
 |V(\widehat A)\setminus V(K)|
 \le \ell+2|\widehat Q|.
 }
 \tag{12.10}
-$$
+```
 
-Consequently, if $\ell=O(\sqrt n)$, then $K$ contains $n-O(\sqrt n)$ vertices and itself has
+Consequently, if $`\ell=O(\sqrt n)`$, then $`K`$ contains $`n-O(\sqrt n)`$ vertices and itself has
 
-$$
+```math
 n-O(\sqrt n)
-$$
+```
 
-strict unit-rhombus faces with total angular defect $O(\sqrt n)$.
+strict unit-rhombus faces with total angular defect $`O(\sqrt n)`$.
 
 #### Proof
 
-Every contact edge outside $K$ is a bridge. After the components of $K$ are contracted, a cycle or a pair of parallel quotient edges would put its uncontracted edges on a contact cycle in the original graph, contradicting that bridge property. The quotient is therefore a forest.
+Every contact edge outside $`K`$ is a bridge. After the components of $`K`$ are contracted, a cycle or a pair of parallel quotient edges would put its uncontracted edges on a contact cycle in the original graph, contradicting that bridge property. The quotient is therefore a forest.
 
-A forest on $u+r$ vertices with $c$ components has $u+r-c$ edges. Its contact-equality matrix has $2u$ columns and at most $u+r-c$ nonzero rows, so its kernel has dimension at least
+A forest on $`u+r`$ vertices with $`c`$ components has $`u+r-c`$ edges. Its contact-equality matrix has $`2u`$ columns and at most $`u+r-c`$ nonzero rows, so its kernel has dimension at least
 
-$$
+```math
 2u-(u+r-c)=u-r+c.
-$$
+```
 
-Extend a kernel vector by zero on $V(K)\cup\widehat Q$. Every contact derivative is zero, so the extension belongs to (12.7). Every component of $K$ contains an original diameter endpoint, and all other roots are in $\widehat Q\setminus V(K)$; hence $r\le|\widehat Q|$. This proves (12.8).
+Extend a kernel vector by zero on $`V(K)\cup\widehat Q`$. Every contact derivative is zero, so the extension belongs to (12.7). Every component of $`K`$ contains an original diameter endpoint, and all other roots are in $`\widehat Q\setminus V(K)`$; hence $`r\le|\widehat Q|`$. This proves (12.8).
 
-The lineality space lies inside the pinned expansive cone. If that cone is zero, its lineality is zero, and (12.9) follows from (12.8). In general, $u\le\ell+|\widehat Q|-c$. Adding the at most $|\widehat Q|$ pinned vertices outside $K$ gives (12.10). If $\ell=O(\sqrt n)$, (12.10) and Corollary 6.2 give $|V(K)|=n-O(\sqrt n)$. The core is triangle-free and has zero expansive cone after $Q_K$ is pinned. Applying the rank and Euler counts to $K$, and using the ambient area bound
+The lineality space lies inside the pinned expansive cone. If that cone is zero, its lineality is zero, and (12.9) follows from (12.8). In general, $`u\le\ell+|\widehat Q|-c`$. Adding the at most $`|\widehat Q|`$ pinned vertices outside $`K`$ gives (12.10). If $`\ell=O(\sqrt n)`$, (12.10) and Corollary 6.2 give $`|V(K)|=n-O(\sqrt n)`$. The core is triangle-free and has zero expansive cone after $`Q_K`$ is pinned. Applying the rank and Euler counts to $`K`$, and using the ambient area bound
 
-$$
+```math
 \operatorname{area}(\operatorname{conv}A)
 <\frac{\sqrt3}{2}n,
-$$
+```
 
 gives the stated almost-rhombic conclusions exactly as in Sections 8--10. ∎
 
@@ -591,33 +594,33 @@ The local-rigidity route cannot prove Erdős #99.
 
 ### Proposition 13.1: regular prime polygons
 
-For every odd prime $p\ge5$, the regular unit $p$-gon is a triangle-free strict local minimum of diameter among feasible $p$-point configurations, modulo Euclidean congruence.
+For every odd prime $`p\ge5`$, the regular unit $`p`$-gon is a triangle-free strict local minimum of diameter among feasible $`p`$-point configurations, modulo Euclidean congruence.
 
 #### Proof
 
-In a regular unit $p$-gon, a diagonal spanning $k$ boundary steps has length
+In a regular unit $`p`$-gon, a diagonal spanning $`k`$ boundary steps has length
 
-$$
+```math
 \frac{\sin(k\pi/p)}{\sin(\pi/p)}>1
 \qquad
 \left(2\le k\le\frac{p-1}{2}\right).
-$$
+```
 
-Thus its only contacts are its sides, and the contact graph is $C_p$.
+Thus its only contacts are its sides, and the contact graph is $`C_p`$.
 
-Bezdek and Fodor [3, Theorem 1.2] prove that, for odd prime $p$, every convex $p$-gon with sides at least (1) has diameter at least
+Bezdek and Fodor [3, Theorem 1.2] prove that, for odd prime $`p`$, every convex $`p`$-gon with sides at least (1) has diameter at least
 
-$$
+```math
 d_p=\frac1{2\sin(\pi/(2p))},
-$$
+```
 
-with equality only for the regular unit $p$-gon.
+with equality only for the regular unit $`p`$-gon.
 
-Convexity and cyclic order persist under sufficiently small perturbations. Every nearby feasible configuration is therefore a convex $p$-gon with consecutive side lengths at least (1), so the theorem applies. Equality forces congruence. ∎
+Convexity and cyclic order persist under sufficiently small perturbations. Every nearby feasible configuration is therefore a convex $`p`$-gon with consecutive side lengths at least (1), so the theorem applies. Equality forces congruence. ∎
 
 There are arbitrarily large odd primes, so there are arbitrarily large triangle-free strict local minima. Consequently, no proof can rely on the assertion that every sufficiently large triangle-free feasible configuration is locally diameter-improvable.
 
-The proposition does not produce global minimizers for the full $p$-point problem: other configurations may have fewer hull vertices and smaller diameter, as already happens at $p=7$.
+The proposition does not produce global minimizers for the full $`p`$-point problem: other configurations may have fewer hull vertices and smaller diameter, as already happens at $`p=7`$.
 
 ---
 
@@ -625,75 +628,75 @@ The proposition does not produce global minimizers for the full $p$-point proble
 
 The exact stress identities also cannot distinguish global minimizers from large, dense triangle-free local minima.
 
-Let $h=2k+1\ge5$ be odd and let $P_h$ be a regular unit $h$-gon. Its diameter is
+Let $`h=2k+1\ge5`$ be odd and let $`P_h`$ be a regular unit $`h`$-gon. Its diameter is
 
-$$
+```math
 D_h=\frac1{2\sin(\pi/(2h))}.
 \tag{14.1}
-$$
+```
 
-Its contact graph is the boundary cycle. Its diameter graph joins each vertex to the two vertices $k$ steps away and is another $h$-cycle.
+Its contact graph is the boundary cycle. Its diameter graph joins each vertex to the two vertices $`k`$ steps away and is another $`h`$-cycle.
 
 ### Proposition 14.1: exact shell stress
 
 Assign
 
-$$
+```math
 \alpha_e=\frac{D_h^2}{h}
-$$
+```
 
 to every contact edge and
 
-$$
+```math
 \beta_e=\frac1h
-$$
+```
 
 to every diameter edge. These coefficients satisfy all equations (4.1)-(4.5).
 
 #### Verification
 
-At a vertex, the sum of its two contact edge vectors is radial with factor $2(1-\cos(2\pi/h))$, while the sum of its two diameter vectors is radial with factor $2(1+\cos(\pi/h))$. The identity
+At a vertex, the sum of its two contact edge vectors is radial with factor $`2(1-\cos(2\pi/h))`$, while the sum of its two diameter vectors is radial with factor $`2(1+\cos(\pi/h))`$. The identity
 
-$$
+```math
 D_h^2\bigl(1-\cos(2\pi/h)\bigr)
 =1+\cos(\pi/h)
-$$
+```
 
-gives equilibrium. Rotational symmetry gives the tensor identity; both sides equal $D_h^2I/2$.
+gives equilibrium. Rotational symmetry gives the tensor identity; both sides equal $`D_h^2I/2`$.
 
 ### Proposition 14.2: dense triangle-free shell fillings
 
-For arbitrarily large odd $h$, one can place
+For arbitrarily large odd $`h`$, one can place
 
-$$
+```math
 n_h=\Delta_2D_h^2+o(D_h^2)
 \tag{14.2}
-$$
+```
 
-points in $P_h$, including its vertices, so that the configuration is unit-separated, has diameter $D_h$, and has no unit equilateral triangle.
+points in $`P_h`$, including its vertices, so that the configuration is unit-separated, has diameter $`D_h`$, and has no unit equilateral triangle.
 
 #### Construction
 
-Retain the unit polygon vertices. Inside $P_h$, exclude the unit neighborhoods of those vertices and place a generically translated and rotated triangular lattice of spacing $1+\varepsilon_h$, where $\varepsilon_h\downarrow0$. All interior-interior distances are at least $1+\varepsilon_h$, and all shell-interior distances are strictly greater than (1). A generic placement avoids accidental equalities. Thus the only unit contacts are the shell sides.
+Retain the unit polygon vertices. Inside $`P_h`$, exclude the unit neighborhoods of those vertices and place a generically translated and rotated triangular lattice of spacing $`1+\varepsilon_h`$, where $`\varepsilon_h\downarrow0`$. All interior-interior distances are at least $`1+\varepsilon_h`$, and all shell-interior distances are strictly greater than (1). A generic placement avoids accidental equalities. Thus the only unit contacts are the shell sides.
 
-The excluded boundary area is $O(h)$, while
+The excluded boundary area is $`O(h)`$, while
 
-$$
+```math
 \operatorname{area}(P_h)\sim\frac{h^2}{4\pi}
 \quad\text{and}\quad
 D_h\sim\frac h\pi.
-$$
+```
 
-For completeness, if $\Lambda$ is a lattice with fundamental-cell area $a$, averaging over a fundamental cell of translations gives
+For completeness, if $`\Lambda`$ is a lattice with fundamental-cell area $`a`$, averaging over a fundamental cell of translations gives
 
-$$
+```math
 \frac1a\int_{\mathbb R^2/\Lambda}|(K+t)\cap\Lambda|\,dt
 =\frac{\operatorname{area}(K)}a
-$$
+```
 
-for every measurable bounded region $K$. Hence some translate contains at least the average number of lattice points. Apply this to the polygon after deleting the forbidden shell neighborhoods. Its area is $\operatorname{area}(P_h)-O(h)$, and the spacing-$1+\varepsilon_h$ triangular lattice has cell area $\frac{\sqrt3}{2}(1+\varepsilon_h)^2$. Choosing $\varepsilon_h\downarrow0$ slowly gives (14.2); a further generic translation or rotation avoids the finitely many unwanted equality conditions without changing the asymptotic count.
+for every measurable bounded region $`K`$. Hence some translate contains at least the average number of lattice points. Apply this to the polygon after deleting the forbidden shell neighborhoods. Its area is $`\operatorname{area}(P_h)-O(h)`$, and the spacing-$`1+\varepsilon_h`$ triangular lattice has cell area $`\frac{\sqrt3}{2}(1+\varepsilon_h)^2`$. Choosing $`\varepsilon_h\downarrow0`$ slowly gives (14.2); a further generic translation or rotation avoids the finitely many unwanted equality conditions without changing the asymptotic count.
 
-For prime $h$, Proposition 13.1 makes the shell locally diameter minimizing. The interior points may move, so the filled configuration need not be a strict local minimum, but no sufficiently small feasible perturbation can lower its diameter because the shell subset cannot be improved locally.
+For prime $`h`$, Proposition 13.1 makes the shell locally diameter minimizing. The interior points may move, so the filled configuration need not be a strict local minimum, but no sufficiently small feasible perturbation can lower its diameter because the shell subset cannot be improved locally.
 
 These configurations are **not certified global minimizers**. They prove instead that all of the following may coexist at arbitrarily large scale:
 
@@ -712,37 +715,37 @@ Therefore any Level I proof must use a sharp global finite-capacity comparison, 
 
 Numerical optimization was used only for conjecture formation and falsification of local lemmas.
 
-### 15.1 Moderate-$n$ nonlinear searches
+### 15.1 Moderate-$`n`$ nonlinear searches
 
-SLSQP searches were run for $9\le n\le13$, minimizing a diameter variable subject to all squared-distance lower and upper constraints. Multiple perturbed triangular-patch starts were used.
+SLSQP searches were run for $`9\le n\le13`$, minimizing a diameter variable subject to all squared-distance lower and upper constraints. Multiple perturbed triangular-patch starts were used.
 
-For $n=9$, one run produced an apparent triangle-free local optimum with
+For $`n=9`$, one run produced an apparent triangle-free local optimum with
 
-$$
+```math
 D\approx2.56923698,
-$$
+```
 
 with (11) apparent unit contacts and (5) apparent diameter pairs. Its hull had seven vertices. This is consistent with the Vincze-type upper-bound discussion in [3], but it is **not** an exact configuration and no global lower bound was obtained.
 
-For $n=10,11,12,13$, the best runs found in the limited search included apparent unit triangles in several active sets. These computations are neither exhaustive nor exact.
+For $`n=10,11,12,13`$, the best runs found in the limited search included apparent unit triangles in several active sets. These computations are neither exhaustive nor exact.
 
 No numerical equality was treated as a unit contact. The experiment supplies no proof for or against Erdős #99.
 
 ### 15.2 Polygon-area experiment
 
-A separate constrained numerical experiment minimized the area of convex equilateral $m$-gons with all vertex distances at least (1), for $4\le m\le8$. It repeatedly found the value
+A separate constrained numerical experiment minimized the area of convex equilateral $`m`$-gons with all vertex distances at least (1), for $`4\le m\le8`$. It repeatedly found the value
 
-$$
+```math
 (m-2)\frac{\sqrt3}{4}
-$$
+```
 
 at degenerate triangular-lattice-type limits. A complete proof for the general face class was not established, and even such a face inequality would not control the possibly winding outer contact face. It was therefore not used as a theorem.
 
 ### 15.3 Train-track and boundary-word falsification
 
-The balanced $C_5$ crossing pattern was first tested by explicit coordinate generation for small sector sizes. Those tests detected no unintended unit distances or edge crossings and led to Proposition 10.10. The proposition's final statement does not rely on those computations: its unit separation, planarity, track graph, positive stress, and pinned rank are proved exactly.
+The balanced $`C_5`$ crossing pattern was first tested by explicit coordinate generation for small sector sizes. Those tests detected no unintended unit distances or edge crossings and led to Proposition 10.10. The proposition's final statement does not rely on those computations: its unit separation, planarity, track graph, positive stress, and pinned rank are proved exactly.
 
-The $k=0$ case of Theorem 10.12 was independently checked by enumerating the words $r_i\in\{0,1,2\}$ for $4\le C\le8$. Before simplicity is imposed, the canonical closed words are exactly those displayed after (10.36); all except $0000$ and $01010101$ repeat a boundary vertex. Again the theorem uses the explicit finite recurrence (10.36), not floating-point evidence.
+The $`k=0`$ case of Theorem 10.12 was independently checked by enumerating the words $`r_i\in\{0,1,2\}`$ for $`4\le C\le8`$. Before simplicity is imposed, the canonical closed words are exactly those displayed after (10.36); all except $`0000`$ and $`01010101`$ repeat a boundary vertex. Again the theorem uses the explicit finite recurrence (10.36), not floating-point evidence.
 
 Finally, the pairwise distances in the 11-point sun and the 12-point triangular-lattice competitor were enumerated during discovery and then replaced by the exact cyclotomic and quadratic-form calculations in Proposition 10.10.
 
@@ -752,11 +755,11 @@ Finally, the pairwise distances in the 11-point sun and the 12-point triangular-
 
 ### 16.1 Leading density
 
-A triangular lattice can be perturbed by an arbitrarily small amount so that no exact unit triangle remains, then rescaled to minimum distance (1). Thus triangle-free configurations can approach $\Delta_2$ arbitrarily closely. There is no uniform density gap based only on the absence of exact contacts.
+A triangular lattice can be perturbed by an arbitrarily small amount so that no exact unit triangle remains, then rescaled to minimum distance (1). Thus triangle-free configurations can approach $`\Delta_2`$ arbitrarily closely. There is no uniform density gap based only on the absence of exact contacts.
 
 ### 16.2 Raw edge counts and Laman-style counting
 
-Eppstein gives a contact deficit of order $\sqrt n$, but the diameter graph also lives on $\Theta(\sqrt n)$ boundary vertices. Those cable constraints can compensate for the missing contact rows. The square is the smallest exact example.
+Eppstein gives a contact deficit of order $`\sqrt n`$, but the diameter graph also lives on $`\Theta(\sqrt n)`$ boundary vertices. Those cable constraints can compensate for the missing contact rows. The square is the smallest exact example.
 
 ### 16.3 Recursive use of (2)-degeneracy
 
@@ -774,11 +777,11 @@ The correct multiplier may depend on the critical direction. Furthermore, the te
 
 The total defect
 
-$$
+```math
 \sum_F\left(\sin\theta_F-\frac{\sqrt3}{2}\right)
-$$
+```
 
-is only $O(\sqrt n)$. This permits $n-O(\sqrt n)$ strictly positive defects of size $O(1/n)$, or smaller. No exact $60^\circ$ angle follows.
+is only $`O(\sqrt n)`$. This permits $`n-O(\sqrt n)`$ strictly positive defects of size $`O(1/n)`$, or smaller. No exact $`60^\circ`$ angle follows.
 
 ### 16.7 Lattice classification
 
@@ -786,11 +789,11 @@ Schürmann rules out eventual lattice extremizers. Nonlattice does not mean tria
 
 ### 16.8 Simultaneous normalizations
 
-The full normalization $\mathcal E_Q(A)=\{0\}$ still cannot be imposed by selection. Theorem 12.4 does combine the two useful partial normalizations in one representative: it has only $O(\sqrt n)$ components and isolates, and every pinned motion vanishes on a fixed contact-minimal core. The residue is exactly a bridge forest. Theorem 12.5 quantifies it: if its contact-preserving lineality is only $O(\sqrt n)$, the fixed core already contains $n-O(\sqrt n)$ vertices. What remains is a genuinely high-dimensional forest-flex alternative, not the old arbitrary-representative gap.
+The full normalization $`\mathcal E_Q(A)=\{0\}`$ still cannot be imposed by selection. Theorem 12.4 does combine the two useful partial normalizations in one representative: it has only $`O(\sqrt n)`$ components and isolates, and every pinned motion vanishes on a fixed contact-minimal core. The residue is exactly a bridge forest. Theorem 12.5 quantifies it: if its contact-preserving lineality is only $`O(\sqrt n)`$, the fixed core already contains $`n-O(\sqrt n)`$ vertices. What remains is a genuinely high-dimensional forest-flex alternative, not the old arbitrary-representative gap.
 
 ### 16.9 Regular shells as counterexamples
 
-Regular prime shells certify local polygonal optimality and carry exact stresses. What is missing for a disproof is an infinite sequence of $n$ for which a filled shell has diameter exactly $D(n)$. Bezdek-Fodor's polygon theorem does not compare against configurations with fewer hull vertices and many interior points.
+Regular prime shells certify local polygonal optimality and carry exact stresses. What is missing for a disproof is an infinite sequence of $`n`$ for which a filled shell has diameter exactly $`D(n)`$. Bezdek-Fodor's polygon theorem does not compare against configurations with fewer hull vertices and many interior points.
 
 ### 16.10 Nonlinear stress moments
 
@@ -800,29 +803,29 @@ The identities (11.7)--(11.14) are exact and substantially restrict where positi
 
 The crossing graph of the rhombus tracks is simple and triangle-free, giving
 
-$$
+```math
 F_4\le B_{\mathcal R}^2/16.
-$$
+```
 
 At most two tracks can have both ends on the strictly turning convex hull, so at least
 
-$$
+```math
 2\sqrt n-O(1)
-$$
+```
 
 track ends enter the non-hull or non-rhombic defect network. The exact width inequality also charges every angular defect. These facts eliminate an exception-free convex rhombic crystal but do not control the compulsory boundary shell sharply enough.
 
-Proposition 10.10 is the exact limitation. Its five-sector complexes have zero expansive cone when their full boundary is pinned, a positive stress on every edge, $n-O(\sqrt n)$ strict rhombi, diameter $O(\sqrt n)$, and total defect tending to zero. They fail precisely because most boundary pins are neither extreme nor diametral. Thus a local curvature maximum principle, positive stress, or ordinary boundary-pinned rigidity cannot replace $Q=V(\operatorname{conv}A)$.
+Proposition 10.10 is the exact limitation. Its five-sector complexes have zero expansive cone when their full boundary is pinned, a positive stress on every edge, $`n-O(\sqrt n)`$ strict rhombi, diameter $`O(\sqrt n)`$, and total defect tending to zero. They fail precisely because most boundary pins are neither extreme nor diametral. Thus a local curvature maximum principle, positive stress, or ordinary boundary-pinned rigidity cannot replace $`Q=V(\operatorname{conv}A)`$.
 
-Theorem 10.12 sharpens the opposite side of this picture. A two-fixed-direction $R$-face core needs at least $\sqrt R-3$ non-hull interface supports, apart from the one-rhombus and five-rhombus-cross exceptions. This proves that the $\Theta(\sqrt n)$ support shell is genuinely necessary for an ordinary oblique grid, but the general theorem stack still permits a shell of exactly that order.
+Theorem 10.12 sharpens the opposite side of this picture. A two-fixed-direction $`R`$-face core needs at least $`\sqrt R-3`$ non-hull interface supports, apart from the one-rhombus and five-rhombus-cross exceptions. This proves that the $`\Theta(\sqrt n)`$ support shell is genuinely necessary for an ordinary oblique grid, but the general theorem stack still permits a shell of exactly that order.
 
 ### 16.12 Why the Cartesian estimate does not automatically globalize
 
-Theorem 10.9 is a genuine global-capacity exclusion: an additive $a\times b$ block occupying at least $2n/\pi$ cells cannot occur in a minimizer. A dense track-crossing graph need not supply such a block. Five projective direction classes can have crossing graph a balanced blow-up of $C_5$; Proposition 10.10 realizes the corresponding five-sector geometry with $R=5s^2$ crossings. Its largest complete bipartite subgraph has only $2s^2=2R/5$ crossings, below the $2R/\pi$ scale needed for the Cartesian estimate to contradict global optimality when $R\sim n$. No extraction of a sufficiently large Cartesian block follows from triangle-freeness, quadratic track density, unit separation, or even total defect $o(1)$ alone.
+Theorem 10.9 is a genuine global-capacity exclusion: an additive $`a\times b`$ block occupying at least $`2n/\pi`$ cells cannot occur in a minimizer. A dense track-crossing graph need not supply such a block. Five projective direction classes can have crossing graph a balanced blow-up of $`C_5`$; Proposition 10.10 realizes the corresponding five-sector geometry with $`R=5s^2`$ crossings. Its largest complete bipartite subgraph has only $`2s^2=2R/5`$ crossings, below the $`2R/\pi`$ scale needed for the Cartesian estimate to contradict global optimality when $`R\sim n`$. No extraction of a sufficiently large Cartesian block follows from triangle-freeness, quadratic track density, unit separation, or even total defect $`o(1)`$ alone.
 
 ### 16.13 Schürmann's deformation mechanism
 
-Schürmann's proof was rechecked at the level of its actual sequential motion. It uses missing neighbors in one fixed four- or six-neighbor packing lattice, frees sites one at a time, and propagates the free sites to the boundary. An almost-rhombic mesh has varying track directions and may devote $\Theta(\sqrt n)$ exceptional vertices to blocking exactly this propagation. The lattice deformation remains a useful model, but its hypotheses do not extend to the surviving defect shell without a new boundary-peeling theorem.
+Schürmann's proof was rechecked at the level of its actual sequential motion. It uses missing neighbors in one fixed four- or six-neighbor packing lattice, frees sites one at a time, and propagates the free sites to the boundary. An almost-rhombic mesh has varying track directions and may devote $`\Theta(\sqrt n)`$ exceptional vertices to blocking exactly this propagation. The lattice deformation remains a useful model, but its hypotheses do not extend to the surviving defect shell without a new boundary-peeling theorem.
 
 ---
 
@@ -830,98 +833,108 @@ Schürmann's proof was rechecked at the level of its actual sequential motion. I
 
 ### Theorem 17.1: audited triangle-free minimizer alternatives
 
-Let $A$ be a triangle-free diameter-minimizing $n$-point configuration with minimum distance (1), and let $Q$ be its diameter endpoints.
+Let $`A`$ be a triangle-free diameter-minimizing $`n`$-point configuration with minimum distance (1), and let $`Q`$ be its diameter endpoints.
 
 Then:
 
-1. **Exact stress and moments.** $A$ carries a normalized proper mixed contact/diameter KKT stress satisfying (4.1)-(4.5) and the virtual-work identity (11.7). The two normalized edge-stress measures have the same midpoint barycenter $\mu$, satisfy the quartic identity (11.9), and obey
+1. **Exact stress and moments.** $`A`$ carries a normalized proper mixed contact/diameter KKT stress satisfying (4.1)-(4.5) and the virtual-work identity (11.7). The two normalized edge-stress measures have the same midpoint barycenter $`\mu`$, satisfy the quartic identity (11.9), and obey
 
-   $$
+   ```math
    \sum_C\frac{\alpha_{ij}}{D^2}|m_{ij}-\mu|^2
    \ge\frac{D^2-1}{12},
    \qquad
    \max_{\alpha_{ij}>0}|m_{ij}-\mu|
    \ge\frac{D-1}{2}.
-   $$
+   
+   ```
 
 2. **Second-order normality.** Every critical first-order direction has a direction-dependent normalized stress supported on its zero-derivative active edges and satisfying (11.3).
 
 3. **Pinned dichotomy.** Exactly one of the following occurs:
 
-   - $A$ belongs to a nontrivial continuous family of triangle-free global minimizers with all diameter endpoints fixed; or
+   - $`A`$ belongs to a nontrivial continuous family of triangle-free global minimizers with all diameter endpoints fixed; or
    - the pinned expansive cone is zero.
 
 4. **Jammed branch.** In the zero-cone branch:
 
-   $$
+   ```math
    Q=V(\operatorname{conv}A),
-   $$
+   
+   ```
 
    every non-hull vertex is a strict convex combination of at least three unit-contact neighbors,
 
-   $$
+   ```math
    |Q|=\Theta(\sqrt n),\qquad
    e^\circ\ge2(n-|Q|),\qquad
    |E(G(A))|=2n-\Theta(\sqrt n),
-   $$
+   
+   ```
 
-   and its cyclomatic number is at least $n-2|Q|+c=n-O(\sqrt n)$. All nontrivial tree components together contain $O(\sqrt n)$ vertices, every cyclic component contains at least four diameter endpoints, and for $n\ge44$ at least one cyclic component exists.
+   and its cyclomatic number is at least $`n-2|Q|+c=n-O(\sqrt n)`$. All nontrivial tree components together contain $`O(\sqrt n)`$ vertices, every cyclic component contains at least four diameter endpoints, and for $`n\ge44`$ at least one cyclic component exists.
 
-5. **Rhombic bulk.** In the zero-cone branch there are $n-O(\sqrt n)$ bounded unit-rhombus faces and
+5. **Rhombic bulk.** In the zero-cone branch there are $`n-O(\sqrt n)`$ bounded unit-rhombus faces and
 
-   $$
+   ```math
    \sum_{F\in\mathcal F_4}\left(\theta_F-\frac\pi3\right)=O(\sqrt n).
-   $$
+   
+   ```
 
-   All but $O(\sqrt n)$ vertices have contact degree (4) and are incident only with these rhombi. For every fixed $\varepsilon>0$, all but $O_\varepsilon(\sqrt n)$ vertices are surrounded by rhombi with acute angles in
+   All but $`O(\sqrt n)`$ vertices have contact degree (4) and are incident only with these rhombi. For every fixed $`\varepsilon>0`$, all but $`O_\varepsilon(\sqrt n)`$ vertices are surrounded by rhombi with acute angles in
 
-   $$
+   ```math
    60^\circ<\theta<60^\circ+\varepsilon.
-   $$
+   
+   ```
 
-   If $B_{\mathcal R}$ is the boundary-edge count of the full rhombic face complex, then
+   If $`B_{\mathcal R}`$ is the boundary-edge count of the full rhombic face complex, then
 
-   $$
+   ```math
    F_4\le\frac{B_{\mathcal R}^2}{16},
    \qquad
    B_{\mathcal R}D_{\mathcal R}
    \ge4\sum_F\sin\theta_F
    \ge2\sqrt3F_4+4\chi_*\sum_F\left(\theta_F-\frac\pi3\right).
-   $$
+   
+   ```
 
-   At most two tracks have both ends on the convex hull, so at least $2\sqrt n-O(1)$ track ends enter the defect network. If the rhombi tile the whole convex hull, the configuration is the unit square.
+   At most two tracks have both ends on the convex hull, so at least $`2\sqrt n-O(1)`$ track ends enter the defect network. If the rhombi tile the whole convex hull, the configuration is the unit square.
 
-   If a connected $R$-face subcomplex uses only two fixed edge directions, has regular boundary topology as in Theorem 10.12, and needs external support at only $k$ non-hull boundary incidences, then
+   If a connected $`R`$-face subcomplex uses only two fixed edge directions, has regular boundary topology as in Theorem 10.12, and needs external support at only $`k`$ non-hull boundary incidences, then
 
-   $$
+   ```math
    R\le(k+3)^2.
-   $$
+   
+   ```
 
    With no such incidences it is either one rhombus or the five-rhombus cross.
 
-6. **Existential normal forms.** If any triangle-free minimizer exists for a given $n$, there is a contact-minimal one for the same $n,D(n)$ in which every non-diameter nonisolated vertex is surrounded by (3)-(5) contacts, every contact vertex of degree (1) or (2) is diametral, all nontrivial tree components together contain $O(\sqrt n)$ vertices, and
+6. **Existential normal forms.** If any triangle-free minimizer exists for a given $`n`$, there is a contact-minimal one for the same $`n,D(n)`$ in which every non-diameter nonisolated vertex is surrounded by (3)-(5) contacts, every contact vertex of degree (1) or (2) is diametral, all nontrivial tree components together contain $`O(\sqrt n)`$ vertices, and
 
-   $$
+   ```math
    \kappa\ge\frac{n-z}{2}-C_0\sqrt n+c_*
-   $$
+   
+   ```
 
    for the cyclomatic number of the nonisolated contact graph.
 
-   More strongly, one hybrid representative has only $O(\sqrt n)$ components and isolates and contains the unchanged contact-minimal core $K$, pointwise fixed under every pinned expansive motion. Every contact edge outside $K$ is a bridge. If $u$ unpinned vertices lie outside $K$ and the contracted bridge forest has $r$ fixed roots and $c$ components, then
+   More strongly, one hybrid representative has only $`O(\sqrt n)`$ components and isolates and contains the unchanged contact-minimal core $`K`$, pointwise fixed under every pinned expansive motion. Every contact edge outside $`K`$ is a bridge. If $`u`$ unpinned vertices lie outside $`K`$ and the contracted bridge forest has $`r`$ fixed roots and $`c`$ components, then
 
-   $$
+   ```math
    \dim\mathcal L_{\widehat Q}\ge u-r+c\ge u-|\widehat Q|+c.
-   $$
+   
+   ```
 
-   Hence lineality $O(\sqrt n)$ already forces $|V(K)|=n-O(\sqrt n)$ and puts that core in the almost-rhombic regime.
+   Hence lineality $`O(\sqrt n)`$ already forces $`|V(K)|=n-O(\sqrt n)`$ and puts that core in the almost-rhombic regime.
 
-7. **Exact global block restriction.** Every additive Cartesian $a\times b$ rhombic train block in a global minimizer satisfies
+7. **Exact global block restriction.** Every additive Cartesian $`a\times b`$ rhombic train block in a global minimizer satisfies
 
-   $$
+   ```math
    ab+\frac{4\sqrt3-6}{\pi}\Delta_{a,b}<\frac2\pi n.
-   $$
+   
+   ```
 
-8. **Exact limitations.** There are arbitrarily large triangle-free strict local diameter minima, arbitrarily large asymptotically dense triangle-free shell configurations carrying the full exact KKT stress, and arbitrarily large boundary-pinned jammed rhombic complexes with positive stress and total positive angular defect tending to zero. The 11-point sun additionally has a diametral convex hull, positive stress, zero hull-pinned cone, and five strict rhombi, yet no $60^\circ$ face. It is provably not global: a 12-point triangular-lattice set of diameter (3) is already smaller than its diameter $\sqrt{5+2\sqrt5}$.
+8. **Exact limitations.** There are arbitrarily large triangle-free strict local diameter minima, arbitrarily large asymptotically dense triangle-free shell configurations carrying the full exact KKT stress, and arbitrarily large boundary-pinned jammed rhombic complexes with positive stress and total positive angular defect tending to zero. The 11-point sun additionally has a diametral convex hull, positive stress, zero hull-pinned cone, and five strict rhombi, yet no $`60^\circ`$ face. It is provably not global: a 12-point triangular-lattice set of diameter (3) is already smaller than its diameter $`\sqrt{5+2\sqrt5}`$.
 
 Every statement above is unconditional. None implies that a hypothetical triangle-free configuration is globally nonoptimal.
 
@@ -933,94 +946,94 @@ The investigation reduces the affirmative problem to eliminating two sharply def
 
 ### 18.1 Flexible anchored-component obstruction
 
-One must prove that, for sufficiently large $n$, no triangle-free global minimizer can have a nonzero pinned expansive cone. Equivalently, one must rule out a same-diameter triangle-free minimizer family supported by a diametral shell.
+One must prove that, for sufficiently large $`n`$, no triangle-free global minimizer can have a nonzero pinned expansive cone. Equivalently, one must rule out a same-diameter triangle-free minimizer family supported by a diametral shell.
 
-Theorems 12.4 and 12.5 reduce this to an exact scale question. In one representative, all nonbridge structure lies in a fixed pinned-jammed core $K$, and the remaining contact graph is a bridge forest. If its pinned contact-preserving lineality has dimension $\ell$, then
+Theorems 12.4 and 12.5 reduce this to an exact scale question. In one representative, all nonbridge structure lies in a fixed pinned-jammed core $`K`$, and the remaining contact graph is a bridge forest. If its pinned contact-preserving lineality has dimension $`\ell`$, then
 
-$$
+```math
 |V(A)\setminus V(K)|\le\ell+2|Q|.
-$$
+```
 
-Thus $\ell=O(\sqrt n)$ already puts $n-O(\sqrt n)$ vertices into the almost-rhombic core. The genuinely separate flexible obstruction is now:
+Thus $`\ell=O(\sqrt n)`$ already puts $`n-O(\sqrt n)`$ vertices into the almost-rhombic core. The genuinely separate flexible obstruction is now:
 
-> **Super-boundary forest-capacity lemma.** No sufficiently large triangle-free global minimizer in the hybrid normal form has $\ell=\omega(\sqrt n)$.
+> **Super-boundary forest-capacity lemma.** No sufficiently large triangle-free global minimizer in the hybrid normal form has $`\ell=\omega(\sqrt n)`$.
 
-This lemma would not by itself finish Level I, but it would reduce every counterexample to the same boundary-order rhombic problem. The $n=8$ family and the regular-shell fillings show why it requires global capacity, not another local rigidity count.
+This lemma would not by itself finish Level I, but it would reduce every counterexample to the same boundary-order rhombic problem. The $`n=8`$ family and the regular-shell fillings show why it requires global capacity, not another local rigidity count.
 
 ### 18.2 First-order-jammed almost-rhombic obstruction
 
-One must prove that a global minimizer cannot satisfy all of the following for arbitrarily large $n$:
+One must prove that a global minimizer cannot satisfy all of the following for arbitrarily large $`n`$:
 
-$$
+```math
 Q=V(\operatorname{conv}A),\qquad |Q|=\Theta(\sqrt n),
-$$
+```
 
-$$
+```math
 e^\circ\ge2(n-|Q|),\qquad
 e=2n-\Theta(\sqrt n),\qquad
 F_4=n-O(\sqrt n),
-$$
+```
 
-$$
+```math
 \theta_F>60^\circ\text{ for every rhombus},
-$$
+```
 
-$$
+```math
 \sum_F\left(\theta_F-\frac\pi3\right)=O(\sqrt n),
-$$
+```
 
-together with cyclomatic number $n-O(\sqrt n)$, the first- and second-order stress identities, the common midpoint barycenter, the quartic identity, and positive contact stress reaching radius at least $(D-1)/2$ from that barycenter.
+together with cyclomatic number $`n-O(\sqrt n)`$, the first- and second-order stress identities, the common midpoint barycenter, the quartic identity, and positive contact stress reaching radius at least $`(D-1)/2`$ from that barycenter.
 
 In addition, the surviving rhombic complex must satisfy
 
-$$
+```math
 F_4\le\frac{B_{\mathcal R}^2}{16},
 \qquad
 b_{\mathcal R}\ge2\sqrt{F_4}-2,
-$$
+```
 
-where $b_{\mathcal R}$ counts non-hull boundary edges, as well as
+where $`b_{\mathcal R}`$ counts non-hull boundary edges, as well as
 
-$$
+```math
 B_{\mathcal R}D_{\mathcal R}
 \ge2\sqrt3F_4+4\chi_*\sum_F\delta_F.
-$$
+```
 
 For an ideal disk rhombic minimizer, its exact permitted shell budget is
 
-$$
+```math
 4G+4\chi_*\Delta
 <\sqrt3B_{\mathcal R}+2\sqrt3.
 \tag{18.1}
-$$
+```
 
-Theorem 10.12 eliminates one important model case: a large two-direction core cannot be held only by its diametral hull vertices. It must use at least $\sqrt R-3$ non-hull support incidences. This does not yet contradict the general $O(\sqrt n)$ exceptional budget; it identifies the exact boundary scale that a sharp capacity theorem must charge.
+Theorem 10.12 eliminates one important model case: a large two-direction core cannot be held only by its diametral hull vertices. It must use at least $`\sqrt R-3`$ non-hull support incidences. This does not yet contradict the general $`O(\sqrt n)`$ exceptional budget; it identifies the exact boundary scale that a sharp capacity theorem must charge.
 
 The required conclusion is an exact equality
 
-$$
+```math
 \theta_F=60^\circ
-$$
+```
 
-for at least one face, not merely $\theta_F=60^\circ+o(1)$.
+for at least one face, not merely $`\theta_F=60^\circ+o(1)`$.
 
 ### 18.3 A sufficient missing global theorem
 
 One sufficient theorem would be:
 
-> **Sharp boundary-capacity theorem.** For all sufficiently large $n$, every unit-separated triangle-free $n$-point set satisfying either branch of Theorem 17.1 has diameter strictly larger than an explicitly constructed $n$-point competitor.
+> **Sharp boundary-capacity theorem.** For all sufficiently large $`n`$, every unit-separated triangle-free $`n`$-point set satisfying either branch of Theorem 17.1 has diameter strictly larger than an explicitly constructed $`n`$-point competitor.
 
-Such a theorem must include a boundary-order term and an exact equality analysis. The leading Thue density constant, an $O(\sqrt n)$ contact deficit, or an $O(1)$ diameter estimate is insufficient unless its constants and equality cases actually separate the two configurations.
+Such a theorem must include a boundary-order term and an exact equality analysis. The leading Thue density constant, an $`O(\sqrt n)`$ contact deficit, or an $`O(1)`$ diameter estimate is insufficient unless its constants and equality cases actually separate the two configurations.
 
 After the new train-track theorem, a focused jammed-branch version is:
 
-> **Diametral-shell cost lemma.** In a sufficiently large jammed triangle-free minimizer, the non-hull interfaces forced by at least $2\sqrt n-O(1)$ bad track ends have a strict area/diameter cost exceeding the right side of (18.1), with the exact exceptional-face, hole, component, and outside-vertex corrections.
+> **Diametral-shell cost lemma.** In a sufficiently large jammed triangle-free minimizer, the non-hull interfaces forced by at least $`2\sqrt n-O(1)`$ bad track ends have a strict area/diameter cost exceeding the right side of (18.1), with the exact exceptional-face, hole, component, and outside-vertex corrections.
 
-Proposition 10.10 shows that “pinned boundary” cannot replace “diametral convex hull” in this statement. The five-sector examples satisfy all the local premises, even with total defect $o(1)$, and fail only at the hull condition.
+Proposition 10.10 shows that “pinned boundary” cannot replace “diametral convex hull” in this statement. The five-sector examples satisfy all the local premises, even with total defect $`o(1)`$, and fail only at the hull condition.
 
 For a disproof, the exact missing theorem is the opposite:
 
-> **Globally optimal shell theorem.** There are arbitrarily large $n$ for which a triangle-free shell or rhombic configuration can be proved to have diameter $D(n)$.
+> **Globally optimal shell theorem.** There are arbitrarily large $`n`$ for which a triangle-free shell or rhombic configuration can be proved to have diameter $`D(n)`$.
 
 No such global certificate was obtained.
 
@@ -1047,7 +1060,7 @@ The following checks were applied to every consolidated claim.
 - Ordinary KKT is justified by an explicit MFCQ direction.
 - The second-order multiplier is allowed to depend on the critical direction.
 - The nonlinear midpoint and moment formulas are derived from the vertex equilibrium equations by exact virtual work, not by an asymptotic approximation.
-- The high-moment radius estimate uses the explicit Hessian of $|x|^{2k+2}/(2k+2)$ and then takes $k\to\infty$ only after a valid inequality for every integer $k\ge1$.
+- The high-moment radius estimate uses the explicit Hessian of $`|x|^{2k+2}/(2k+2)`$ and then takes $`k\to\infty`$ only after a valid inequality for every integer $`k\ge1`$.
 - Global and local optimality are kept distinct.
 - Same-diameter flexes are not called diameter improvements.
 
@@ -1055,7 +1068,7 @@ The following checks were applied to every consolidated claim.
 
 - No Laman theorem is applied to the cable-strut problem.
 - The pinned positive stress is obtained by a direct cone-duality proof, not by an unchecked transfer of an unpinned theorem.
-- Contacts joining two pinned vertices are removed from the effective row count, giving $e^\circ\ge2(n-q)$.
+- Contacts joining two pinned vertices are removed from the effective row count, giving $`e^\circ\ge2(n-q)`$.
 - First-order zero-cone rigidity is not silently upgraded to global rigidity.
 
 ### Boundary and packing
@@ -1065,7 +1078,7 @@ The following checks were applied to every consolidated claim.
 - Cauchy's perimeter-diameter inequality is used only for convex hulls.
 - The enclosing-circle problem is never substituted for the diameter problem.
 - Schürmann's theorem is used only to exclude large lattice extremizers.
-- Train monotonicity and the two-crossing exclusion do not assume simple connectedness; the latter uses disjoint open $60^\circ$ displacement cones.
+- Train monotonicity and the two-crossing exclusion do not assume simple connectedness; the latter uses disjoint open $`60^\circ`$ displacement cones.
 - The Cartesian determinant bound is invoked only for an actual additive block, not for an abstract biclique or a dense crossing graph.
 - The two-direction support theorem assumes a connected cell complex, a simple outer boundary, and no pinched boundary vertices. Every hole-boundary incidence is explicitly charged; none disappears in the affine square-complex reduction.
 - The zero-support classification in Theorem 10.12 is an exact finite turn-word check. The closed but rejected words repeat a boundary vertex; numerical polyomino enumeration is not being used as proof.
@@ -1074,7 +1087,7 @@ The following checks were applied to every consolidated claim.
 
 - Contact-isolated vertices are retained as a genuine possibility.
 - Theorem 12.4 does not conflate minimum- and maximum-contact representatives. It freezes the original contact-minimal core and every original diameter endpoint, then creates only bridge contacts while anchoring the other components.
-- An original diameter pair remains fixed throughout the hybrid construction, so its diameter never silently falls below $D(n)$.
+- An original diameter pair remains fixed throughout the hybrid construction, so its diameter never silently falls below $`D(n)`$.
 - The generic preliminary rotation separates coincident equal-radius translation circles; the subsequent ray avoids their intersections, so each new contact is unique.
 - The bridge-forest count permits several fixed roots in one forest component; no false one-root or freely hinged-leaf assertion is used.
 - In the maximal-contact representative, coincident active translation circles are handled explicitly: their new unit edges form a matching and cannot create a triangle.
@@ -1082,18 +1095,18 @@ The following checks were applied to every consolidated claim.
 
 ### Regression against the exact small minimizers
 
-- The unit square lies in the zero-cone branch because every vertex is diametral; its single bounded contact face is the allowed $90^\circ$ rhombus.
-- The five-rhombus cross is the exact nontrivial $k=0$ exception in Theorem 10.12. It blocks the stronger but false assertion that an internally equilibrated two-direction core must be a single rhombus.
+- The unit square lies in the zero-cone branch because every vertex is diametral; its single bounded contact face is the allowed $`90^\circ`$ rhombus.
+- The five-rhombus cross is the exact nontrivial $`k=0`$ exception in Theorem 10.12. It blocks the stronger but false assertion that an internally equilibrated two-direction core must be a single rhombus.
 - The regular unit pentagon also has every hull vertex diametral and supplies an arbitrarily extensible model for polygonal local rigidity.
-- For $n=6$, the five hull vertices are diametral and the center is trapped by its five radial contacts; the contact graph is a tree, consistent with the threshold $n<44$.
-- The $n=7$ hexagon-plus-center configuration is excluded by the triangle-free hypothesis exactly because its six center-side triples are unit triangles.
-- For $n=8$, the regular unit heptagon plus its center lies in the flexible branch: all seven hull vertices are fixed diameter endpoints and the contact-isolated center can move. The attachment or maximum-contact selection moves it to a representative with additional anchoring, whereas contact minimization prefers the isolated representative. This confirms why the normalizations must not be conflated.
-- The 11-point five-rhombus sun is triangle-free, has a regular-pentagon diametral hull, and has zero cone after exactly those hull vertices are pinned. Its contact distances and diameter $\sqrt{5+2\sqrt5}$ are checked exactly. The explicit 12-point triangular-lattice set of diameter (3) proves that the sun is not globally minimizing.
-- The five-sector family has exactly $5s^2+5s+1$ vertices, $5s^2$ rhombi, $10s$ rhombic boundary edges, and a balanced $C_5$ blow-up on $5s$ tracks. With $\varepsilon=s^{-3}$ its positive total defect is $8/s$, while its boundary-pinned cone is still zero. It is not a jammed-branch counterexample because most of those pins are nonextreme and nondiametral.
+- For $`n=6`$, the five hull vertices are diametral and the center is trapped by its five radial contacts; the contact graph is a tree, consistent with the threshold $`n<44`$.
+- The $`n=7`$ hexagon-plus-center configuration is excluded by the triangle-free hypothesis exactly because its six center-side triples are unit triangles.
+- For $`n=8`$, the regular unit heptagon plus its center lies in the flexible branch: all seven hull vertices are fixed diameter endpoints and the contact-isolated center can move. The attachment or maximum-contact selection moves it to a representative with additional anchoring, whereas contact minimization prefers the isolated representative. This confirms why the normalizations must not be conflated.
+- The 11-point five-rhombus sun is triangle-free, has a regular-pentagon diametral hull, and has zero cone after exactly those hull vertices are pinned. Its contact distances and diameter $`\sqrt{5+2\sqrt5}`$ are checked exactly. The explicit 12-point triangular-lattice set of diameter (3) proves that the sun is not globally minimizing.
+- The five-sector family has exactly $`5s^2+5s+1`$ vertices, $`5s^2`$ rhombi, $`10s`$ rhombic boundary edges, and a balanced $`C_5`$ blow-up on $`5s`$ tracks. With $`\varepsilon=s^{-3}`$ its positive total defect is $`8/s`$, while its boundary-pinned cone is still zero. It is not a jammed-branch counterexample because most of those pins are nonextreme and nondiametral.
 
 ### Conclusion
 
-The Level I problem remains unresolved in this record. Target A is reduced to a super-boundary-dimensional bridge-forest capacity question; Target B is reduced to charging at least $2\sqrt n-O(1)$ forced bad track ends against the exact diametral shell budget. Both remaining statements are global finite-capacity comparisons, not omitted routine rigidity or train-track calculations.
+The Level I problem remains unresolved in this record. Target A is reduced to a super-boundary-dimensional bridge-forest capacity question; Target B is reduced to charging at least $`2\sqrt n-O(1)`$ forced bad track ends against the exact diametral shell budget. Both remaining statements are global finite-capacity comparisons, not omitted routine rigidity or train-track calculations.
 
 ---
 
@@ -1103,7 +1116,7 @@ The Level I problem remains unresolved in this record. Target A is reduced to a 
 2. P. Bateman and P. Erdős, “Geometrical Extrema Suggested by a Lemma of Besicovitch,” *American Mathematical Monthly* **58** (1951), 306-314. [Supplied PDF](https://doi.org/10.1080/00029890.1951.11999682)
 3. A. Bezdek and F. Fodor, “Minimal Diameter of Certain Sets in the Plane,” *Journal of Combinatorial Theory, Series A* **85** (1999), 105-111. [Supplied PDF](https://doi.org/10.1006/jcta.1998.2889)
 4. A. Schürmann, “On Extremal Finite Packings,” *Discrete & Computational Geometry* **28** (2002), 389-403. [Supplied PDF](https://doi.org/10.1007/s00454-002-0747-6)
-5. A. V. Bondarenko, D. P. Hardin, and E. B. Saff, “Minimal $N$-Point Diameters and $f$-Best-Packing Constants in $\mathbb R^d$,” *Proceedings of the American Mathematical Society* **142** (2014), 981-988. [Supplied PDF](https://arxiv.org/abs/1204.4403)
+5. A. V. Bondarenko, D. P. Hardin, and E. B. Saff, “Minimal $`N`$-Point Diameters and $`f`$-Best-Packing Constants in $`\mathbb R^d`$,” *Proceedings of the American Mathematical Society* **142** (2014), 981-988. [Supplied PDF](https://arxiv.org/abs/1204.4403)
 6. D. Eppstein, “Edge Bounds and Degeneracy of Triangle-Free Penny Graphs and Squaregraphs,” *Journal of Graph Algorithms and Applications* **22** (2018), 483-499. [Supplied PDF](https://jgaa.info/index.php/jgaa/article/view/paper463)
 7. A. Bezdek, K. Bezdek, and R. Connelly, “Finite and Uniform Stability of Sphere Packings,” *Discrete & Computational Geometry* **20** (1998), 111-130. [Supplied PDF](https://doi.org/10.1007/PL00009374)
 

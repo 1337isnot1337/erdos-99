@@ -19,10 +19,10 @@ that projective direction: repeated sides with the same orientation are impossib
 and the only possible pair is an oppositely oriented pair.  If `a_F` is the number
 of activated bounded faces, then
 
-$$
+```math
 \boxed{6m_6\le r_O+2a_F.}
 \tag{DC.1}
-$$
+```
 
 The outer face is deliberately not assigned capacity two; its occurrence-counted
 boundary can repeat a projective direction.  Thus (DC.1) is valid without a hidden
@@ -31,9 +31,9 @@ outer-boundary simplicity assumption.
 Combining (DC.1) with the audited pair-shield flex bound gives the exact finite
 payment
 
-$$
+```math
 m_D\ge {b-f\over2}+a_F+{x_A\over2}+{n_0+n_2\over2}+p_U,
-$$
+```
 
 so any collapsed population whose anchor mass is not predominantly outer-facing
 forces activated-face flex.  In particular, if `r_O=o(m_6)`, then

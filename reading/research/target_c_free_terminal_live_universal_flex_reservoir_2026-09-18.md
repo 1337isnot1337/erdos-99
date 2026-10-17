@@ -28,27 +28,27 @@ singleton selected train has no rhombus equation at all.
 
 This removes the singleton escape from the live window. Put
 
-$$
+```math
 c_*:=0.31805.
 \tag{UF.1}
-$$
+```
 
 Every terminal full-core Type-II FREE survivor sequence satisfying
 
-$$
+```math
 \limsup t_D\le\mu_*+0.00710
 =1.960362849540479\ldots
 \tag{UF.2}
-$$
+```
 
 has an exact contact-preserving local product manifold `M_D` with
 
-$$
+```math
 \boxed{
 \dim M_D\ge(c_*-o(1))D.
 }
 \tag{UF.3}
-$$
+```
 
 There is no alternative involving a large singleton population.
 
@@ -56,24 +56,24 @@ Applying the already proved live diameter-locking lemma to this product gives a
 first-diameter-derivative matrix `G_D` of full column rank and a matching saturating all
 flex coordinates. Consequently there are at least
 
-$$
+```math
 \boxed{
 (c_*-o(1))D
 }
 \tag{UF.4}
-$$
+```
 
 pairwise distinct actual diameter bars participating in the locking system, and the
 signed derivative incidence counts obey
 
-$$
+```math
 \boxed{
 I_+\ge(c_*-o(1))D,
 \qquad
 I_-\ge(c_*-o(1))D.
 }
 \tag{UF.5}
-$$
+```
 
 Thus the live terminal window can no longer avoid a macroscopic exact contact-flex
 space by moving mass into singleton trains. The remaining obstruction is entirely on
@@ -87,24 +87,24 @@ Let `P` be any bounded pentagonal contact face. Suppose at least three incident 
 stopped trains have terminal faces `P` and the actual outer face `O`. Choose three such
 trains and orient their pentagon side vectors cyclically as
 
-$$
+```math
 u_1,u_2,u_3.
-$$
+```
 
 Let the two unselected pentagon side vectors be `v_1,v_2`. At the original placement,
 
-$$
+```math
 u_1+u_2+u_3+v_1+v_2=0.
 \tag{1.1}
-$$
+```
 
 For train-angle parameters `theta=(theta_1,theta_2,theta_3)`, define
 
-$$
+```math
 \Phi(\theta)
 :=R_{\theta_1}u_1+R_{\theta_2}u_2+R_{\theta_3}u_3+v_1+v_2.
 \tag{1.2}
-$$
+```
 
 The equation `Phi(theta)=0` is exactly the vector closure equation for `P` after the
 three selected train directions are changed.
@@ -116,11 +116,11 @@ case, one-parameter curve through `theta=0` on which `Phi=0`.
 
 If `u_1,u_2,u_3` span the plane, then
 
-$$
+```math
 D\Phi(0)(a_1,a_2,a_3)
 =J(a_1u_1+a_2u_2+a_3u_3)
 \tag{1.3}
-$$
+```
 
 has rank two. The implicit-function theorem therefore gives a one-dimensional smooth
 zero set through the origin.
@@ -129,24 +129,24 @@ It remains only to handle rank one. Then the three selected unit vectors are all
 projectively parallel. They cannot all have the same oriented direction: their sum
 would have norm three, while by (1.1)
 
-$$
+```math
 |u_1+u_2+u_3|=|v_1+v_2|\le2.
-$$
+```
 
 Hence two selected vectors are opposite; after relabeling, `u_2=-u_1`. Setting
 
-$$
+```math
 \theta_1=\theta_2=s,
 \qquad
 \theta_3=0
 \tag{1.4}
-$$
+```
 
 preserves their cancellation exactly:
 
-$$
+```math
 R_su_1+R_su_2=0.
-$$
+```
 
 Thus (1.2) remains zero for every sufficiently small `s`. This is an explicit exact
 nonconstant local curve. No convexity or near-orbit hypothesis is required.
@@ -180,11 +180,11 @@ Thus every such pentagon supplies one exact non-Euclidean contact-flex coordinat
 
 Let `Y_3` be the terminal transport count
 
-$$
+```math
 Y_3=\#\{P:\ P\text{ is a bounded pentagon with at least three incident }P\!\!\to O
 \text{ trains}\}.
 \tag{2.1}
-$$
+```
 
 For every `P` counted by `Y_3`, choose three `P`-to-`O` trains and one local curve from
 Section 1.
@@ -196,13 +196,13 @@ train has exactly one bounded terminal occurrence, so it cannot simultaneously b
 Therefore the local closure maps use disjoint train-angle variables. Their curves form
 an exact local product of dimension `Y_3`. In particular,
 
-$$
+```math
 \boxed{
 \text{three outer spokes per pentagon}\quad\Longrightarrow\quad
 \dim M_D\ge Y_3.
 }
 \tag{2.2}
-$$
+```
 
 This is the point where the earlier fully-rhombic restriction disappears. Full
 rhombicity is useful for rhombus-complex incidence statements, but it is not needed for
@@ -218,36 +218,36 @@ fixed. Any nonzero Euclidean rotation would rotate every fixed nonzero contact v
 
 Retain the live-window variables
 
-$$
+```math
 r=\lim{Q-f\over D},
 \qquad
 \delta=\lim{b-P_F\over D},
 \qquad
 a=\lim\left({\tau_D\over D}-{\pi\over2}-0.007707\right),
 \tag{3.1}
-$$
+```
 
 with
 
-$$
+```math
 \boxed{
 a+2(r+\delta)\le5\varepsilon,
 \qquad
 \varepsilon=0.00710.
 }
 \tag{3.2}
-$$
+```
 
 Let
 
-$$
+```math
 \ell:=\lim {L_O\over D},
-$$
+```
 
 where `L_O` is the number of complete outer-to-outer stopped trains. The exact terminal
 fan ledger at `k=3` gives
 
-$$
+```math
 \liminf {Y_3\over D}
 \ge
 A_3-{2\over3}\ell
@@ -255,11 +255,11 @@ A_3-{2\over3}\ell
 -{6\over5}r
 -{4\over15}a,
 \tag{3.3}
-$$
+```
 
 where
 
-$$
+```math
 M_*=4\sqrt{\frac\pi{2\sqrt3}}+2(0.007707),
 \qquad
 p_*={M_*\over5},
@@ -267,28 +267,28 @@ p_*={M_*\over5},
 A_3={\pi-2p_*\over3}
 =0.537242187535821\ldots .
 \tag{3.4}
-$$
+```
 
 The negative defect terms preserve more of the correlation than the previous
 `-3epsilon` display. Since
 
-$$
+```math
 {6\over5}r+{4\over15}a
 \le {3\over5}(a+2r)
 \le {3\over5}(5\varepsilon-2\delta),
 \tag{3.5}
-$$
+```
 
 (3.3) yields
 
-$$
+```math
 \boxed{
 \liminf {Y_3\over D}
 \ge
 A_3-{2\over3}\ell+{5\over3}\delta-3\varepsilon.
 }
 \tag{3.6}
-$$
+```
 
 Unlike the old fully-rhombic fan estimate, no `-2S/D` term appears.
 
@@ -300,83 +300,83 @@ Let `p` be the retained complement O--O pair mass from shared routewise retentio
 is a fractional mass supported on actual O--O trains, with every train carrying weight
 at most one. Therefore
 
-$$
+```math
 \boxed{p\le\ell.}
 \tag{4.1}
-$$
+```
 
 Set
 
-$$
+```math
 c_*={6361\over20000}=0.31805,
 \qquad
 d_*={213\over25000}=0.00852.
 \tag{4.2}
-$$
+```
 
 Suppose first that `ell>=c_*`. The exact arbitrary O--O multishear immediately gives
 an exact contact-flex product of dimension at least `(c_*-o(1))D`, proving (UF.3).
 
 It remains to consider
 
-$$
+```math
 \ell<c_*.
 \tag{4.3}
-$$
+```
 
 Then by (4.1), `p<c_*`. The live correlated two-bin envelope gives
 
-$$
+```math
 R\le\rho(\delta)
 :=r_2\bigl(2s_2+0.007707+5\varepsilon-2\delta\bigr),
 \tag{4.4}
-$$
+```
 
 where
 
-$$
+```math
 s_2=\sqrt{\frac\pi{2\sqrt3}},
 \qquad
 r_2(C)={C-\sqrt{8\Delta_2-C^2}\over2},
 \qquad
 \Delta_2={\pi\over2\sqrt3}.
-$$
+```
 
 Shared retention and dominant outer energy give
 
-$$
+```math
 z+p\ge{\pi\over2}-R-o(1),
 \qquad
 F(z):=z-6\sin(z/6)\le\delta.
 \tag{4.5}
-$$
+```
 
 Thus a limiting survivor with `p<=c_*` must satisfy
 
-$$
+```math
 F\left({\pi\over2}-\rho(\delta)-c_*\right)\le\delta.
 \tag{4.6}
-$$
+```
 
 The exact-rational certificate proves that the left-minus-right side of (4.6) is
 strictly decreasing on `0<=delta<=0.01775` and is still positive at `delta=d_*`:
 
-$$
+```math
 \boxed{
 F\left({\pi\over2}-\rho(d_*)-c_*\right)-d_*
 >1.8\times10^{-6}.
 }
 \tag{4.7}
-$$
+```
 
 Consequently (4.3) forces
 
-$$
+```math
 \boxed{
 \delta>d_*=0.00852.
 }
 \tag{4.8}
-$$
+```
 
 This uses the same hostile-audited retention and dominant-energy inputs as the current
 `p>0.01` versus near-maximal-detour theorem, but chooses the threshold to optimize the
@@ -388,32 +388,32 @@ fan/flex handoff rather than to maximize pentagonal concentration.
 
 Under (4.3) and (4.8), (3.6) gives
 
-$$
+```math
 \liminf {Y_3\over D}
 >
 A_3-{2\over3}c_*+{5\over3}d_*-3\varepsilon.
 \tag{5.1}
-$$
+```
 
 The exact certificate proves
 
-$$
+```math
 A_3-{2\over3}c_*+{5\over3}d_*-3\varepsilon
 >0.3181088
 >c_*.
 \tag{5.2}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \ell<c_*
 \quad\Longrightarrow\quad
 Y_3>(c_*-o(1))D.
 }
 \tag{5.3}
-$$
+```
 
 Section 2 turns these `Y_3` pentagons into an exact contact-flex product of dimension
 at least `Y_3`. Together with the `ell>=c_*` O--O branch, this proves (UF.3).
@@ -421,11 +421,11 @@ at least `Y_3`. Together with the `ell>=c_*` O--O branch, this proves (UF.3).
 For comparison, if the dominant-energy feedback (4.8) is omitted, the same direct
 `Y_3` argument already gives the universal coefficient
 
-$$
+```math
 {3\over5}(A_3-3\varepsilon)
 =0.3095653125\ldots .
 \tag{5.4}
-$$
+```
 
 The shared-retention feedback raises the safe coefficient to `0.31805`.
 
@@ -447,35 +447,35 @@ diameter stress apply.
 Those facts hold for both products constructed above. Therefore the active-diameter
 first-derivative matrix
 
-$$
+```math
 G_D\in\mathbb R^{H_D\times m_D}
-$$
+```
 
 has
 
-$$
+```math
 \operatorname{rank}G_D=m_D.
 \tag{6.1}
-$$
+```
 
 KKT stationarity gives a strictly positive vector `beta` with
 
-$$
+```math
 G_D^T\beta=0.
 \tag{6.2}
-$$
+```
 
 Hence the row vectors of `G_D` positively span `R^{m_D}`. Hall's theorem applied to the
 nonzero pattern gives a matching saturating all `m_D` coordinates, so at least `m_D`
 pairwise distinct actual diameter bars have nonzero matched derivatives. Positive
 spanning also forces each coordinate column to contain both signs. Thus
 
-$$
+```math
 I_+\ge m_D,
 \qquad
 I_-\ge m_D.
 \tag{6.3}
-$$
+```
 
 Combining with (UF.3) proves (UF.4)--(UF.5).
 

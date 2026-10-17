@@ -13,76 +13,76 @@ loaded-hull floor already extracted in the low-response report.
 
 Put
 
-$$
+```math
 t_D:={q-k\over D},
 \qquad
 \Delta_2:={\pi\over2\sqrt3},
 \qquad
 Q=\sum_{F\ {\rm bounded}}(\deg F-4),
-$$
+```
 
 and let `f` be the number of bounded nonquadrilateral contact faces. In the
 full-core Type-II branch, canonical Section 80 gives
 
-$$
+```math
 {\operatorname{per}(F)\over D}\to\pi,
 \qquad
 {R_4\over D^2}\to\Delta_2.
 \tag{TQ.1}
-$$
+```
 
 ## 1. Two finite inequalities
 
 Section 63 gives the exact identities
 
-$$
+```math
 b=q+x_B,
 \qquad
 q-x_B=Q+2k.
 \tag{TQ.2}
-$$
+```
 
 Since the outer contact walk dominates the force-hull perimeter,
 `b\ge\operatorname{per}(F)`. Eliminating `x_B` from (TQ.2) gives
 
-$$
+```math
 Q=2(q-k)-b\le2(q-k)-\operatorname{per}(F).
 \tag{TQ.3}
-$$
+```
 
 Canonical Section 85 gives
 
-$$
+```math
 q-k+2f\ge2\sqrt{R_4}.
 \tag{TQ.4}
-$$
+```
 
 Every bounded nonquadrilateral face has degree at least five, so its contribution
 to `Q` is at least one. Hence
 
-$$
+```math
 f\le Q.
 \tag{TQ.5}
-$$
+```
 
 ## 2. The corrected floor
 
 Define
 
-$$
+```math
 t_*:={2\over5}\left(\pi+\sqrt{\Delta_2}\right)
 =1.6375621841815\ldots .
 \tag{TQ.6}
-$$
+```
 
 We prove
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}{q-k\over D}\ge t_*.
 }
 \tag{TQ.7}
-$$
+```
 
 Take an arbitrary subsequence along which `t_D` converges to a finite limit `t`.
 There are two cases.
@@ -91,9 +91,9 @@ There are two cases.
 
 Since
 
-$$
+```math
 2\sqrt{\Delta_2}>t_*,
-$$
+```
 
 we immediately have `t>=t_*`.
 
@@ -101,70 +101,70 @@ we immediately have `t>=t_*`.
 
 From (TQ.4) and the Type-II rhombus-density limit,
 
-$$
+```math
 {f\over D}
 \ge\sqrt{\Delta_2}-{t\over2}+o(1).
 \tag{TQ.8}
-$$
+```
 
 From (TQ.3) and the force-hull perimeter limit,
 
-$$
+```math
 {Q\over D}\le2t-\pi+o(1).
 \tag{TQ.9}
-$$
+```
 
 Using `f<=Q` and passing to the limit gives
 
-$$
+```math
 \sqrt{\Delta_2}-{t\over2}
 \le2t-\pi.
-$$
+```
 
 Rearranging correctly,
 
-$$
+```math
 \pi+\sqrt{\Delta_2}
 \le{5\over2}t,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 t\ge {2\over5}\left(\pi+\sqrt{\Delta_2}\right)=t_*.
 }
 \tag{TQ.10}
-$$
+```
 
 Thus every subsequential limit of `t_D` is at least `t_*`, proving (TQ.7).
 Equivalently,
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}{q-k\over D}
 \ge {2\over5}\left(\pi+\sqrt{\frac\pi{2\sqrt3}}\right)
 =1.6375621842\ldots .
 }
 \tag{TQ.11}
-$$
+```
 
 This is stronger than the direct half-perimeter floor `\pi/2`; it uses the
 first-order train-boundary cost of the rhombic Type-II core.
 
 The previously advertised value
 
-$$
+```math
 2\sqrt{\Delta_2}=1.9046256137\ldots
-$$
+```
 
 is **rejected**. It came from the false algebraic rearrangement
 
-$$
+```math
 \sqrt{\Delta_2}-{t\over2}\le2t-\pi
 \quad\not\Longrightarrow\quad
  t\ge {2\pi+2\sqrt{\Delta_2}\over3}.
-$$
+```
 
 The dated hostile audit
 `target_c_typeii_qk_train_hull_gap_hostile_audit_2026-09-12.md` records this regression.

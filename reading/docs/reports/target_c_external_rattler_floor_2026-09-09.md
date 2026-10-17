@@ -30,14 +30,14 @@ Use the C65 lexicographically normalized hypothetical triangle-free global minim
 
 Then
 
-$$
+```math
 n=v+Z_{def}+Z_{in}+Z_{ext}.
 \tag{1.1}
-$$
+```
 
 OP proves the exact internal-capacity estimate
 
-$$
+```math
 \boxed{
  v+Z_{def}+Z_{in}
 \le
@@ -45,41 +45,41 @@ $$
 +\frac12\operatorname{per}(F)+1.
 }
 \tag{1.2}
-$$
+```
 
 The post-ZF survivor satisfies
 
-$$
+```math
 b+Q\le2h
 \tag{1.3}
-$$
+```
 
 and the outer contact walk contains the force-hull vertices, so
 
-$$
+```math
 \operatorname{per}(F)\le b\le b+Q\le2h.
 \tag{1.4}
-$$
+```
 
 ## 2. Exact finite external-population inequality
 
 The planar isoperimetric inequality gives
 
-$$
+```math
 \operatorname{area}(F)
 \le
 \frac{\operatorname{per}(F)^2}{4\pi}.
 \tag{2.1}
-$$
+```
 
 Insert (1.4):
 
-$$
+```math
 \operatorname{area}(F)
 \le
 \frac{h^2}{\pi}.
 \tag{2.2}
-$$
+```
 
 Subtract (1.2) from (1.1).
 
@@ -87,25 +87,25 @@ Subtract (1.2) from (1.1).
 
 Every post-ZF C65 survivor satisfies
 
-$$
+```math
 \boxed{
 Z_{ext}
 \ge
 n-rac{2h^2}{\pi\sqrt3}-h-1.
 }
 \tag{ZX.1}
-$$
+```
 
 ### Proof
 
 By (1.1) and OP,
 
-$$
+```math
 Z_{ext}
 \ge
 n-rac{2}{\sqrt3}\operatorname{area}(F)
 -rac12\operatorname{per}(F)-1.
-$$
+```
 
 Use (2.2) and `per(F)<=2h`. QED.
 
@@ -115,69 +115,69 @@ No isolated point is declared diametral. The theorem is about the actual externa
 
 The global packing bounds give
 
-$$
+```math
 \frac{n}{D^2}\to
 \Delta:=\frac{\pi}{2\sqrt3}.
 \tag{3.1}
-$$
+```
 
 Pass to a subsequence with
 
-$$
+```math
 \frac hD\to x.
 \tag{3.2}
-$$
+```
 
 Divide ZX.1 by `D^2`.
 
 ### Corollary ZX.2
 
-$$
+```math
 \boxed{
 \liminf\frac{Z_{ext}}{D^2}
 \ge
 \Delta-rac{2x^2}{\pi\sqrt3}.
 }
 \tag{ZX.2}
-$$
+```
 
 The right side is positive exactly when
 
-$$
+```math
 \boxed{x<\frac\pi2.}
 \tag{ZX.3}
-$$
+```
 
 Thus every hypothetical sequence with
 
-$$
+```math
 \limsup h/D<\pi/2
-$$
+```
 
 contains a positive quadratic density of source points strictly outside the force hull.
 
 PR #112 gives the universal post-ZF endpoint
 
-$$
+```math
 \tau_*=1.4781702664\ldots
 \le\liminf h/D.
-$$
+```
 
 At `x=tau_*`, ZX.2 gives
 
-$$
+```math
 \boxed{
 \Delta-rac{2\tau_*^2}{\pi\sqrt3}
 =0.1038019123\ldots .
 }
 \tag{ZX.4}
-$$
+```
 
 So a survivor asymptotically saturating the current diameter-edge lower endpoint would require at least
 
-$$
+```math
 (0.1038019-o(1))D^2
-$$
+```
 
 source points outside the force hull.
 
@@ -185,17 +185,17 @@ source points outside the force hull.
 
 PR #112 independently proves, from stopped trains and Mantel,
 
-$$
+```math
 \liminf\frac{n-v}{D^2}
 \ge
 \Delta-rac14(3x-4\cos(x/2))^2.
-$$
+```
 
 That lower bound concerns **all** points outside the positive core and remains positive until
 
-$$
+```math
 x_0=1.5754757611\ldots>\pi/2.
-$$
+```
 
 ZX is stronger in localization but weaker in range:
 
@@ -223,9 +223,9 @@ After ZX, the post-ZF problem admits a useful finite-scale conceptual split:
 
 The direct Level I endpoint remains
 
-$$
+```math
 \boxed{b+Q>2h.}
-$$
+```
 
 A proof in phase 1 should now target the external completion shell or the RA representative transfer directly. A proof in phase 2 should use the dense diameter-thrackle/face ledger.
 

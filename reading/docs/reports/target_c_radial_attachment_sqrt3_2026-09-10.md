@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_radial_attachment_sqrt3_2026-09-10.md) · source SHA-256 `e0aabc05c7199d97a043e75058b3c7ca87ec8024a0f8b77817bc354477324d8b`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-C269D96679B9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — radial attachment geometry pushes the all-phase renormalized surplus past `sqrt(3)/2`
 
@@ -29,20 +31,20 @@ This yields:
 There are absolute constants `epsilon_RA>0` and `D_0<infinity` such that every
 post-ZF survivor with `D>=D_0` satisfies
 
-$$
+```math
 \boxed{
 \mu_D
 \ge
 \frac{\sqrt3}{2}+\epsilon_{RA}.
 }
 \tag{RA.1}
-$$
+```
 
 In particular the explicit frontier jumps past
 
-$$
+```math
 \boxed{\sqrt3/2=0.8660254037844386\ldots .}
-$$
+```
 
 The positive gap `epsilon_RA` is nonexplicit here; the proof has a fixed area margin
 at the limiting threshold.
@@ -53,37 +55,37 @@ at the limiting threshold.
 
 For an unloaded contact component `I_r`, let
 
-$$
+```math
 \delta_r=\operatorname{diam}_{C[I_r]}I_r
-$$
+```
 
 and let `A_r` be its distinct loaded attachment set.  If `a,b in A_r`, choose their
 contact neighbors in `I_r` and a shortest contact path between those neighbors.  All
 contact edges have length one, so
 
-$$
+```math
 \boxed{
 |a-b|\le\delta_r+2.
 }
 \tag{1.1}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{\operatorname{diam}(A_r)\le\delta_r+2.}
 \tag{1.2}
-$$
+```
 
 FS.4 supplies one full-source center `o` and a uniform error `L_D=o(D)` such that every
 loaded diameter endpoint satisfies
 
-$$
+```math
 \boxed{
 \bigl||b-o|-D/2\bigr|\le L_D.
 }
 \tag{1.3}
-$$
+```
 
 Consequently every macroscopic attachment set, after scaling by `D` and taking a
 subsequence, lies on the circle of radius `1/2` centered at the origin.
@@ -97,19 +99,19 @@ subsequence, lies on the circle of radius `1/2` centered at the origin.
 Let `S` be a finite subset of the circle of radius `1/2` centered at the origin and
 assume
 
-$$
+```math
 \operatorname{diam}S\le z<\frac{\sqrt3}{2}.
-$$
+```
 
 Then `S` is contained in a circular arc of angle
 
-$$
+```math
 \theta=2\arcsin z<\frac{2\pi}{3}.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \operatorname{area}(\operatorname{conv}S)
 \le
@@ -117,6 +119,7 @@ B(z):=
 \frac{\arcsin z-z\sqrt{1-z^2}}4.
 }
 \tag{RA.2}
+```
 
 ### Proof
 
@@ -126,9 +129,9 @@ angular gaps.  A triangle containing the origin has every gap at most `pi`, and 
 gaps sum to `2pi`; therefore at least one gap is at least `2pi/3`.  The corresponding
 pair of radius-`1/2` points has distance at least
 
-\[
+```math
 2(1/2)\sin(\pi/3)=\frac{\sqrt3}{2},
-$$
+```
 
 contrary to the diameter hypothesis.
 
@@ -137,36 +140,36 @@ from the compact convex polygon `conv(S)`, so all directions in `S` lie in one o
 semicircle.  Inside a semicircle, angular separation is monotone with chord length.
 The extreme directions therefore differ by at most
 
-$$
+```math
 2\arcsin z=\theta.
-$$
+```
 
 The convex hull of the entire radius-`1/2` circular arc of angle `theta` is the
 corresponding circular segment.  Its area is
 
-$$
+```math
 \frac{(1/2)^2}{2}(\theta-\sin\theta)
 =
 \frac{\arcsin z-z\sqrt{1-z^2}}4.
-$$
+```
 
 This proves RA.2. `square`
 
 The function `B` satisfies
 
-$$
+```math
 \boxed{
 B'(z)=\frac{z^2}{2\sqrt{1-z^2}}>0
 }
 \tag{2.1}
-$$
+```
 
 and is convex on `(0,1)`.  Since `B(0)=0`, it is superadditive:
 
-$$
+```math
 B(x)+B(y)\le B(x+y)
 \tag{2.2}
-$$
+```
 
 whenever `x,y>=0` and `x+y<1`.
 
@@ -176,9 +179,9 @@ whenever `x,y>=0` and `x+y<1`.
 
 The preceding arc conclusion can fail exactly at
 
-$$
+```math
 z_0:=\sqrt3/2.
-$$
+```
 
 There is only one new limiting topology.
 
@@ -186,9 +189,9 @@ There is only one new limiting topology.
 
 If `S` lies on the radius-`1/2` circle and
 
-$$
+```math
 \operatorname{diam}S\le\sqrt3/2,
-$$
+```
 
 then either
 
@@ -198,12 +201,13 @@ then either
 
 In particular
 
-$$
+```math
 \boxed{
 \operatorname{area}(\operatorname{conv}S)
 \le\frac{3\sqrt3}{16}.
 }
 \tag{RA.3}
+```
 
 ### Proof
 
@@ -223,47 +227,47 @@ whole set is those three directions.  Its area at circumradius `1/2` is
 
 Let
 
-\[
+```math
 L_D^{att}:=\sum_r\delta_r.
-$$
+```
 
 The exact GR/ZK identity gives
 
-$$
+```math
 \boxed{
 \sum_r\delta_r+R_I+s_B=\mu_DD+6,
 }
 \tag{4.1}
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \sum_r\delta_r\le\mu_DD+6.
 }
 \tag{4.2}
-$$
+```
 
 Consider an unbounded sequence with
 
-$$
+```math
 \mu_D\to\mu\le z_0.
-$$
+```
 
 Fix `eta>0`.  Components with `delta_r>=eta D` are finite in number, uniformly in
 `D`.  After taking a subsequence, write their normalized graph diameters as `z_j`.
 Equation (4.2) gives
 
-$$
+```math
 \sum_jz_j\le\mu.
 \tag{4.3}
-$$
+```
 
 For each such component, (1.2)-(1.3) and Lemma RA.1 apply in the scaled limit whenever
 `z_j<z_0`.  If every `z_j<z_0`, then
 
-$$
+```math
 \limsup\frac1{D^2}
 \sum_{\delta_r\ge\eta D}
 area(conv A_r)
@@ -272,35 +276,36 @@ area(conv A_r)
 \le B\left(\sum_jz_j\right)
 \le B(\mu).
 \tag{4.4}
-$$
+```
 
 If `mu=z_0` and some `z_j=z_0`, it is the only positive macroscopic diameter in
 (4.3); Lemma RA.2 gives instead
 
-$$
+```math
 \limsup\frac{C_{att}}{D^2}
 \le\frac{3\sqrt3}{16}.
 \tag{4.5}
-$$
+```
 
 It remains to dispose of the components with `delta_r<eta D`.  The ordinary
 attachment-cell diameter bound and planar isodiametric inequality give
 
-$$
+```math
 area(conv A_r)\le\frac\pi4(\delta_r+2)^2.
-$$
+```
 
 Since `sum delta_r=O(D)` and `c_I=O(D)`, their total normalized area is `O(eta)+o(1)`.
 Let `eta->0`.
 
 Therefore every limiting state with `mu<=z_0` satisfies the uniform coarse bound
 
-$$
+```math
 \boxed{
 \limsup\frac{C_{att}}{D^2}
 \le\frac{3\sqrt3}{16}.
 }
 \tag{RA.4}
+```
 
 For `mu<z_0` the much stronger bound `B(mu)` holds; RA.4 is chosen only because it
 also covers the endpoint topology.
@@ -311,15 +316,16 @@ also covers the endpoint topology.
 
 JS gives, after dropping the nonnegative side cost `C`,
 
-\[
+```math
 \boxed{
 x:=\lim\frac{d_P+Q}{D}
 \le\frac{2\mu+\pi}{3}.}
 \tag{5.1}
+```
 
 RP paired-pocket capacity plus the exceptional-face estimate and ZG give
 
-\[
+```math
 \boxed{
 \limsup\frac G{D^2}
 \le\frac{x^2}{4\pi}
@@ -327,28 +333,30 @@ RP paired-pocket capacity plus the exceptional-face estimate and ZG give
 \frac{(2\mu+\pi)^2}{36\pi}.
 }
 \tag{5.2}
+```
 
 For `mu<=sqrt(3)/2`, equations RA.4 and (5.2) give
 
-\[
+```math
 \limsup\frac{area(F)}{D^2}
 \le
 \frac{3\sqrt3}{16}
 +
 \frac{(\pi+\sqrt3)^2}{36\pi}.
 \tag{5.3}
+```
 
 Use the elementary rational bounds
 
-\[
+```math
 \sqrt3<7/4,
 \qquad
 3<\pi<22/7.
-$$
+```
 
 Then
 
-$$
+```math
 \frac{3\sqrt3}{16}
 +
 \frac{(\pi+\sqrt3)^2}{36\pi}
@@ -363,32 +371,35 @@ $$
 =
 \frac{2179}{4032}.
 \tag{5.4}
+```
 
 The universal FSDB lower bound has the exact rational estimate already used in RP:
 
-\[
+```math
 \boxed{
 \liminf\frac{area(F)}{D^2}
 >
 \frac{154451}{250000}.
 }
 \tag{5.5}
+```
 
 The fixed rational margin is
 
-\[
+```math
 \frac{154451}{250000}-\frac{2179}{4032}
 =
 \boxed{
 \frac{4874777}{63000000}>0.0773.
 }
 \tag{5.6}
+```
 
 This contradicts (5.3).  Hence no subsequential survivor limit can satisfy
 
-\[
+```math
 \mu\le\sqrt3/2.
-$$
+```
 
 ---
 
@@ -398,9 +409,9 @@ The preceding contradiction has a fixed area margin at the endpoint.  Suppose th
 were no `epsilon_RA>0` in RA.1.  Then one could choose post-ZF survivors with
 `D_j->infinity` and
 
-$$
+```math
 \mu_{D_j}\downarrow\sqrt3/2.
-$$
+```
 
 The component-diameter measures have uniformly bounded total mass by (4.2).  Extract
 the finitely many macroscopic components at each fixed scale and diagonalize.  Their
@@ -417,14 +428,14 @@ Therefore some absolute `epsilon_RA>0` exists, proving RA.1.
 
 The explicit all-phase sequence of lower barriers is now
 
-$$
+```math
 0.5947
 <0.7811
 <0.8092
 <0.834
 <0.857
 <\frac{\sqrt3}{2}=0.8660254\ldots,
-$$
+```
 
 and the `sqrt(3)/2` endpoint itself is excluded.
 
@@ -436,9 +447,9 @@ large-cell extremizer below the `120`-degree wrapping threshold.
 
 Extend Lemma RA.2 to a quantitative sharp area envelope for circle subsets with
 
-$$
+```math
 \sqrt3/2<z<1.
-$$
+```
 
 The endpoint margin (5.6) is large, so even a fairly coarse wrapped-cell bound beyond
 `sqrt(3)/2` should raise the explicit constant again.  The required auxiliary problem

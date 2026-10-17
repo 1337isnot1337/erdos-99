@@ -20,55 +20,55 @@ Therefore one phase-zero marker strip has both a bounded defect set and a linear
 
 For every sufficiently large survivor with `t<=1.8687`, there are consecutive selected marker-path cuts `tau_0,tau_1` bounding a nonhub region `R` such that
 
-$$
+```math
 \boxed{
 N_R+L_R+D B_R<72025,
 }
 \tag{ML.1}
-$$
+```
 
 where `N_R` counts switching actual diameter rows, `L_R` counts complete-train terminal face-side occurrences assigned to `R`, and `B_R` is the normalized switching diameter KKT mass. Consequently
 
-$$
+```math
 N_R,L_R\le72024,
 \qquad
 B_R<{72025\over D},
 \tag{ML.2}
-$$
+```
 
 and `R` contains at most `14404` bounded nonquadrilateral faces.
 
 Moreover the crossing neighborhoods of the two boundary trains satisfy
 
-$$
+```math
 \boxed{
 |\Gamma(\tau_0)\triangle\Gamma(\tau_1)|\le72024,
 }
 \tag{ML.3}
-$$
+```
 
 while each boundary train has more than
 
-$$
+```math
 0.6535D-o(D)
-$$
+```
 
 distinct strict-rhombus crossing neighbors. Hence
 
-$$
+```math
 \boxed{
 |\Gamma(\tau_0)\cap\Gamma(\tau_1)|
 >0.6535D-o(D).
 }
 \tag{ML.4}
-$$
+```
 
 The common family is pairwise noncrossing, so the strip contains an ordered train-crossing
 
-$$
+```math
 \boxed{K_{2,M},\qquad M>0.6535D-o(D).}
 \tag{ML.5}
-$$
+```
 
 This same strip also inherits the phase-zero marker blocker classification: it is one-sided toward the common diameter hub, its exact strip reaction is supported by one or two actual switching diameter directions, and its rigid layer translation is locally isolated.
 
@@ -78,98 +78,98 @@ This same strip also inherits the phase-zero marker blocker classification: it i
 
 The phase-zero marker theorem gives a cleaned path
 
-$$
+```math
 \tau_1,\ldots,\tau_m,
 \qquad
 m>0.0002D-o(D).
 \tag{ML.6}
-$$
+```
 
 Delete the one common diameter-routing hub region and the two end regions. This costs only `O(1)` indices and leaves the same normalized path density.
 
 For an eligible internal region put
 
-$$
+```math
 C_i:=N_i+L_i+D B_i.
 \tag{ML.7}
-$$
+```
 
 Exact interval support gives
 
-$$
+```math
 \sum_iN_i\le2|H|\le2\pi D.
 \tag{ML.8}
-$$
+```
 
 The exact stopped-train ledger gives
 
-$$
+```math
 T_{tr}=tD+2f,
-$$
+```
 
 so total terminal face-side occurrences equal
 
-$$
+```math
 2T_{tr}=2tD+4f.
-$$
+```
 
 Since `f<=Q` and the loaded-hull ledger gives
 
-$$
+```math
 Q/D\le2T-\pi+o(1)
-$$
+```
 
 uniformly for `t<=T`, at
 
-$$
+```math
 T=1.8687
-$$
+```
 
 we get
 
-$$
+```math
 \boxed{
 \sum_iL_i
 \le(10T-4\pi)D+o(D).
 }
 \tag{ML.9}
-$$
+```
 
 Normalize the positive relative-interior diameter stress by `sum beta_h=1`. Diameter interval support gives
 
-$$
+```math
 \sum_iD B_i\le2D.
 \tag{ML.10}
-$$
+```
 
 Therefore
 
-$$
+```math
 \sum_iC_i
 \le(10T-2\pi+2)D+o(D).
 \tag{ML.11}
-$$
+```
 
 The exact certificate proves
 
-$$
+```math
 {10T-2\pi+2\over0.0002}
 <72025.
 \tag{ML.12}
-$$
+```
 
 Hence some eligible nonhub region satisfies (ML.1). Integrality yields (ML.2). Every bounded nonquadrilateral face assigned to the region contributes at least five terminal face-side occurrences, so
 
-$$
+```math
 5|\mathcal F_R|\le L_R\le72024,
-$$
+```
 
 which gives
 
-$$
+```math
 \boxed{|\mathcal F_R|\le14404.}
 \tag{ML.13}
-$$
+```
 
 ---
 
@@ -179,14 +179,14 @@ A complete train which crosses exactly one of `tau_0,tau_1` must terminate insid
 
 Each such one-sided transverse train contributes at least one terminal face-side occurrence assigned to `R`. Thus
 
-$$
+```math
 \boxed{
 |\Gamma(\tau_0)\triangle\Gamma(\tau_1)|
 \le L_R
 \le72024.
 }
 \tag{ML.14}
-$$
+```
 
 This is exact occurrence-safe counting; no train is counted from an exceptional face outside the selected region.
 
@@ -196,49 +196,49 @@ This is exact occurrence-safe counting; no train is counted from an exceptional 
 
 For a complete O--O train `tau`, let `r_tau` be the number of strict rhombi traversed. The hostile-audited complement-train incidence theorem gives
 
-$$
+```math
 {r_\tau\over D}
 \ge1-\delta-{e_\tau\over2}-o(1).
 \tag{ML.15}
-$$
+```
 
 The coupled adaptive path selects only trains satisfying
 
-$$
+```math
 e_\tau\le\lambda(\delta)
 =0.5857-\delta.
 \tag{ML.16}
-$$
+```
 
 Therefore
 
-$$
+```math
 {r_\tau\over D}
 \ge0.70715-{\delta\over2}-o(1).
 \tag{ML.17}
-$$
+```
 
 At `T=1.8687`, the matched `C_76` floor gives the exact detour ceiling used in the merged theorem. The companion certificate recomputes it outward and obtains
 
-$$
+```math
 \delta<0.10687+o(1),
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{
 r_\tau>0.6535D-o(D).
 }
 \tag{ML.18}
-$$
+```
 
 The stopped-train crossing graph is simple: two complete trains cross at most once. Thus strict rhombi on `tau` correspond to distinct crossing neighbors and
 
-$$
+```math
 |\Gamma(\tau)|=r_\tau.
 \tag{ML.19}
-$$
+```
 
 In particular (ML.18) holds for both `tau_0,tau_1`.
 
@@ -248,26 +248,26 @@ In particular (ML.18) holds for both `tau_0,tau_1`.
 
 Put
 
-$$
+```math
 A=\Gamma(\tau_0),
 \qquad
 B=\Gamma(\tau_1).
-$$
+```
 
 Using (ML.14),
 
-$$
+```math
 |A\cap B|
 \ge\min(|A|,|B|)-|A\triangle B|.
-$$
+```
 
 The second term is an absolute constant while the first is `>0.6535D-o(D)`, so
 
-$$
+```math
 \boxed{
 |A\cap B|>0.6535D-o(D).
 }
-$$
+```
 
 Call this common family `mathcal C`. Every member crosses each boundary exactly once and its segment between the two crossing rhombi lies in the selected strip.
 

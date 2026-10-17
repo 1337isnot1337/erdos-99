@@ -18,50 +18,50 @@ No exact biclique extraction is required.
 
 Put
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},
 \qquad s_0:=\sqrt{\Delta_2},
 \qquad
 C_{146}:={4\over9}(\pi+s_0)
 =1.8195135379794445\ldots .
-$$
+```
 
 For the post-ZF positive-contact core use the audited-working notation
 `q,h,d_H,s_Z,k=d_H+s_Z,f,Q,T`, where `T` is the complete stopped-train count.
 Define the §146 normalized quantity
 
-$$
+```math
 \Xi_D:={1\over D}\left(h-{d_H\over9}-{10s_Z\over9}\right)
 ={1\over D}\left(q-{10k\over9}\right).
 \tag{NM.1}
-$$
+```
 
 Audited-working §146 gives
 
-$$
+```math
 \liminf \Xi_D\ge C_{146}.
 \tag{NM.2}
-$$
+```
 
 The new theorem is:
 
-$$
+```math
 \boxed{
 \text{No Type-II sequence can satisfy }\Xi_D\to C_{146}.
 }
 \tag{NM.3}
-$$
+```
 
 Consequently, by the usual diagonal argument, there is an absolute
 `epsilon_NM>0` such that every sufficiently large Type-II survivor in the scope of
 §§142–146 satisfies
 
-$$
+```math
 \boxed{
 \Xi_D\ge C_{146}+\epsilon_{NM}.
 }
 \tag{NM.4}
-$$
+```
 
 The constant is not made explicit here. The proof has a fixed geometric margin, but a
 numerical `epsilon_NM` would also require quantitative versions of the phase-measure
@@ -73,71 +73,71 @@ and Mantel-stability compactness steps.
 
 Assume for contradiction that a Type-II sequence satisfies
 
-$$
+```math
 \Xi_D\to C_{146}.
 \tag{NM.5}
-$$
+```
 
 Pass to a subsequence on which
 
-$$
+```math
 {k\over D}\to\kappa.
-$$
+```
 
 Write
 
-$$
+```math
 t_D={q-k\over D}.
-$$
+```
 
 Since `Xi_D=t_D-k/(9D)`, (NM.5) gives
 
-$$
+```math
 t_D\to C_{146}+{\kappa\over9},
 \qquad
 {q\over D}\to C_{146}+{10\kappa\over9}.
 \tag{NM.6}
-$$
+```
 
 Audited-working §146.2, rewritten with `t=(q-k)/D`, gives
 
-$$
+```math
 \liminf {f\over D}
 \ge
 s_0-{t\over4}+{\kappa\over4}.
 \tag{NM.7}
-$$
+```
 
 The exact outer-walk ledger used in §146 gives
 
-$$
+```math
 \limsup {Q\over D}\le2t-\pi.
 \tag{NM.8}
-$$
+```
 
 Define
 
-$$
+```math
 F_0:=s_0-{C_{146}\over4}=2C_{146}-\pi
 =0.497434422369096\ldots .
-$$
+```
 
 Substitution of (NM.6) into (NM.7)–(NM.8) yields
 
-$$
+```math
 \liminf {f\over D}\ge F_0+{2\kappa\over9},
 \qquad
 \limsup {Q\over D}\le F_0+{2\kappa\over9}.
-$$
+```
 
 Because every bounded nonquadrilateral face contributes at least one unit to `Q`,
 `f<=Q`. Hence both inequalities are equalities:
 
-$$
+```math
 {f\over D},{Q\over D}
 \to F_0+{2\kappa\over9}.
 \tag{NM.9}
-$$
+```
 
 In particular `Q-f=o(D)`, so all but `o(D)` bounded nonquadrilateral faces are
 pentagons. This pentagon conclusion is not needed for the contradiction below, but it
@@ -145,73 +145,73 @@ is a useful endpoint diagnostic.
 
 Audited-working §142.4 gives the exact train ledger
 
-$$
+```math
 T=q+2f-k.
 \tag{NM.10}
-$$
+```
 
 Combining (NM.6), (NM.9), and (NM.10),
 
-$$
+```math
 {T-q/2\over D}\to2s_0.
 \tag{NM.11}
-$$
+```
 
 Now pass to the phase-measure subsequence used in §142.3–142.4. Write
 
-$$
+```math
 {T\over D}\to x,
 \qquad
 {q\over T}\to y,
-$$
+```
 
 and let `rho` be the total atomic mass of the limiting projective train-phase measure.
 Audited-working §142 proves
 
-$$
+```math
 2s_0\le x\rho,
 \tag{NM.12}
-$$
+```
 
 and
 
-$$
+```math
 y\le2(1-\rho).
 \tag{NM.13}
-$$
+```
 
 Equation (NM.13) gives
 
-$$
+```math
 x\rho\le x\left(1-{y\over2}\right)
 ={T-q/2\over D}+o(1).
-$$
+```
 
 Together with (NM.11)–(NM.12),
 
-$$
+```math
 \boxed{x\rho=2s_0.}
 \tag{NM.14}
-$$
+```
 
 Thus the weighted-Mantel bound in §142.5 is also saturated:
 
-$$
+```math
 {\Delta_2\over x^2}={\rho^2\over4}.
 \tag{NM.15}
-$$
+```
 
 The endpoint therefore contains
 
-$$
+```math
 \boxed{(2s_0+o(1))D}
-$$
+```
 
 phase-atomic trains carrying
 
-$$
+```math
 \boxed{(\Delta_2-o(1))D^2}
-$$
+```
 
 actual strict-rhombus crossings.
 
@@ -224,13 +224,13 @@ atoms. If a fixed positive normalized crossing mass remained outside every such
 exhaustion, the final weighted-Mantel inequality would be strict. Hence a diagonal
 choice of shrinking atomic neighborhoods gives an induced train graph `G_D` with
 
-$$
+```math
 n_D=(2s_0+o(1))D,
 \qquad
 e(G_D)=(\Delta_2-o(1))D^2
 ={n_D^2\over4}-o(D^2).
 \tag{NM.16}
-$$
+```
 
 `G_D` is simple and triangle-free by audited-working §142.2.
 
@@ -244,17 +244,17 @@ We need only the elementary stability form of Mantel.
 
 If a triangle-free graph has `n` vertices and
 
-$$
+```math
 e={n^2\over4}-o(n^2),
-$$
+```
 
 then there are disjoint independent sets `U,V` such that
 
-$$
+```math
 |U|=|V|={n\over2}+o(n),
 \qquad
 |V(G)\setminus(U\cup V)|=o(n),
-$$
+```
 
 and only `o(n^2)` pairs in `U x V` are nonedges.
 
@@ -262,65 +262,65 @@ and only `o(n^2)` pairs in `U x V` are nonedges.
 
 For every edge `uv`, triangle-freeness gives
 
-$$
+```math
 d(u)+d(v)\le n.
-$$
+```
 
 Summing over edges,
 
-$$
+```math
 \sum_wd(w)^2\le ne.
-$$
+```
 
 Cauchy gives
 
-$$
+```math
 \sum_wd(w)^2\ge{(2e)^2\over n}.
-$$
+```
 
 Since `e=n^2/4-o(n^2)`, the edge-weighted average of `d(u)+d(v)` is
 `n-o(n)`. Hence some edge `uv` satisfies
 
-$$
+```math
 d(u)+d(v)=n-o(n).
-$$
+```
 
 Put
 
-$$
+```math
 U=N(u),\qquad V=N(v).
-$$
+```
 
 The two sets are disjoint and each is independent. They cover `n-o(n)` vertices. All
 edges not between `U,V` are incident with the `o(n)` uncovered vertices, hence number
 `o(n^2)`. Therefore
 
-$$
+```math
 e(U,V)={n^2\over4}-o(n^2).
-$$
+```
 
 Since `|U|+|V|=n-o(n)`, the product bound
 `e(U,V)<=|U||V|` forces
 
-$$
+```math
 |U|=|V|={n\over2}+o(n),
-$$
+```
 
 and then
 
-$$
+```math
 |U||V|-e(U,V)=o(n^2).
-$$
+```
 
 This proves the lemma. `square`
 
 Apply the lemma to (NM.16). After discarding `o(D)` trains we have two independent
 train shores `U_D,V_D`, each of size
 
-$$
+```math
 (s_0+o(1))D,
 \tag{NM.17}
-$$
+```
 
 with only `o(D^2)` missing cross-shore crossings.
 
@@ -340,17 +340,17 @@ geometry forbids crossings. If it is above `pi/3` by a fixed amount, a quadratic
 of such crossings would contradict the `o(D^2)` population of fixed-positive angular
 rhombus defect used in §142.3. Thus every positive-mass cross-shore atom pair satisfies
 
-$$
+```math
 \operatorname{dist}_{\mathbb R/\pi\mathbb Z}(\phi,\psi)={\pi\over3}.
 \tag{NM.18}
-$$
+```
 
 The graph on the projective direction circle joining points at distance `pi/3` is a
 disjoint union of 3-cycles: the orbit of `phi` is
 
-$$
+```math
 \{\phi,\phi+\pi/3,\phi+2\pi/3\}\pmod\pi.
-$$
+```
 
 It contains no `K_{2,2}`. Since every positive-mass atom on one stability shore must be
 related by (NM.18) to every positive-mass atom on the other shore, one of the two
@@ -360,38 +360,38 @@ neighbors.
 Relabel the shores so the singleton is the **central** atom. From (NM.17), its train
 population is
 
-$$
+```math
 \boxed{(s_0+o(1))D.}
 \tag{NM.19}
-$$
+```
 
 The opposite shore has total population `(s_0+o(1))D` on at most two neighboring
 phase atoms. One neighbor therefore carries at least
 
-$$
+```math
 \boxed{(s_0/2-o(1))D.}
 \tag{NM.20}
-$$
+```
 
 Choose that neighbor. By a diagonal shrinking-neighborhood choice, we obtain two
 physical train families `A_D,B_D` such that
 
-$$
+```math
 |A_D|=(s_0+o(1))D,
 \qquad
 |B_D|\ge(s_0/2-o(1))D,
 \tag{NM.21}
-$$
+```
 
 all projective directions in each family lie in an `o(1)` neighborhood of one fixed
 phase direction, the two limiting directions differ by `pi/3`, and
 
-$$
+```math
 \boxed{
 |A_D||B_D|-e(A_D,B_D)=o(D^2).
 }
 \tag{NM.22}
-$$
+```
 
 Same-family trains are pairwise disjoint for large `D`, because their projective
 direction spread is less than `pi/3` while every strict-rhombus crossing has angle
@@ -407,9 +407,9 @@ The following lemma is the geometric step that removes the need for an exact bic
 
 Let `A_D,B_D` be two train families in one source of diameter `D`, with
 
-$$
+```math
 |A_D|,|B_D|=\Theta(D),
-$$
+```
 
 such that
 
@@ -422,13 +422,13 @@ such that
 
 Then
 
-$$
+```math
 \boxed{
 D\ge\left({\sqrt3\over2}-o(1)\right)
 \bigl(|A_D|+|B_D|\bigr).
 }
 \tag{NM.23}
-$$
+```
 
 #### Proof
 
@@ -436,15 +436,15 @@ Choose consistent lifts of the two contact-direction families near `alpha_0` and
 `alpha_0+pi/3`. The canonical train orientation puts the elementary midpoint-path
 displacements of the first family in the open cones
 
-$$
+```math
 (\alpha+\pi/3,\alpha+2\pi/3),
-$$
+```
 
 and those of the second family, in its canonical orientation, in the adjacent cones
 
-$$
+```math
 (\beta+\pi/3,\beta+2\pi/3).
-$$
+```
 
 Because the combined reduced-phase width is `o(1)<pi/3`, exactly the common-cone
 argument used in audited-working §145 gives one linear coordinate `X` that is strictly
@@ -454,11 +454,11 @@ coordinates, every crossing has the same signed graph crossing.
 
 Let
 
-$$
+```math
 \epsilon_D
 ={|A_D||B_D|-e(A_D,B_D)\over |A_D||B_D|}
 \to0.
-$$
+```
 
 Delete every `A` train missing more than `sqrt(epsilon_D)|B_D|` opposite trains and
 every `B` train missing more than `sqrt(epsilon_D)|A_D|` opposite trains. Markov's
@@ -492,9 +492,9 @@ retained `A` neighbor of `B^+`. At selected crossings the corresponding unit con
 vectors project onto the direction halfway between the two limiting contact directions
 by
 
-$$
+```math
 {\sqrt3\over2}-o(1).
-$$
+```
 
 Intervening rhombi cannot create a macroscopic negative error. Along an `A` train their
 midpoint displacements lie in the canonical `(pi/3,2pi/3)` cone relative to its
@@ -507,14 +507,14 @@ total transverse span is at most `D`. Thus both legs together contribute at wors
 
 As in §76, the two path endpoints cost at most two half-vectors. Therefore
 
-$$
+```math
 D
 \ge
 \left({\sqrt3\over2}-o(1)\right)
 \left(
 \deg_{B}(A^+)+\deg_A(B^+)
 \right)-o(D).
-$$
+```
 
 Both degrees equal the corresponding shore size minus `o(D)`, proving (NM.23).
 `square`
@@ -525,22 +525,22 @@ Both degrees equal the corresponding shore size minus `o(D)`, proving (NM.23).
 
 Apply Lemma NM.2 to the families in (NM.21)–(NM.22). Then
 
-$$
+```math
 D
 \ge
 \left({\sqrt3\over2}-o(1)\right)
 \left({3s_0\over2}-o(1)\right)D.
-$$
+```
 
 But
 
-$$
+```math
 {3\sqrt3\over4}s_0
 ={3\sqrt3\over4}
 \sqrt{\frac\pi{2\sqrt3}}
 =1.237090624640176\ldots>1.
 \tag{NM.24}
-$$
+```
 
 For sufficiently large `D` this says `D>(1+c)D` for a fixed `c>0`, a contradiction.
 This proves (NM.3).
@@ -548,9 +548,9 @@ This proves (NM.3).
 If no uniform positive gap in (NM.4) existed, one could choose a sequence of
 sufficiently large Type-II survivors with
 
-$$
+```math
 C_{146}\le\Xi_D<C_{146}+1/j
-$$
+```
 
 at the `j`-th term. That sequence would satisfy (NM.5), already excluded. Hence
 (NM.4) follows.
@@ -577,10 +577,10 @@ at the `j`-th term. That sequence would satisfy (NM.5), already excluded. Hence
 The full-core Type-II frontier is therefore strictly above the audited §146 lower
 surface:
 
-$$
+```math
 h-{d_H\over9}-{10s_Z\over9}
 \ge(C_{146}+\epsilon_{NM})D
-$$
+```
 
 for some absolute `epsilon_NM>0`, once this proof-only theorem is independently audited.
 C-II remains open.

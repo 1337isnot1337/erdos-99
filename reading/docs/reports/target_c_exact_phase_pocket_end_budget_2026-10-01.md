@@ -30,9 +30,9 @@ Use the canonical full-support post-ZF source and notation of
 In particular G is the connected complete unit-contact core, B is the full actual
 loaded set, `F=conv B=conv V(G)`, `q=|B|`, and the global face ledger is
 
-$$
+```math
  b+Q=2(q-k),\qquad x_B:=b-q=q-Q-2k.                    \tag{1}
-$$
+```
 
 Q is the **global** bounded exceptional-face degree surplus. An inner pocket
 means a new bounded face after adding missing sides of F to G. Its boundary is
@@ -97,9 +97,9 @@ layer-m witness partners, respectively.
 
 Under Section 1's one-shore hypotheses,
 
-$$
+```math
  \boxed{Q+2k+2m\le q+2.}                              \tag{2}
-$$
+```
 
 ### Proof
 
@@ -121,9 +121,9 @@ Each such pocket has a nonunit closing side. Its unit-contact path has at
 least two edges, so it contributes at least one to the integer outer-walk
 excess x_B. Summing these distinct occurrences gives
 
-$$
+```math
  x_B\ge2m-2.
-$$
+```
 
 Insert (1) to prove (2). No estimate on the lengths of the nonunit hull sides
 has been used. QED.
@@ -137,9 +137,9 @@ endpoint-count shortcut. It does not replace b by per(F).
 
 Under the two-shore hypotheses of Section 1,
 
-$$
+```math
  \boxed{Q+2k+2(m_A+m_B)\le q+8.}                      \tag{3}
-$$
+```
 
 ### Proof
 
@@ -163,9 +163,9 @@ end. Their integer excess contributions give
 
 At the conditional rooted endpoint q=(pi+o(1))D, the necessary source budget is
 
-$$
+```math
  Q+2k+2(m_A+m_B)\le (\pi+o(1))D.
-$$
+```
 
 This is stronger than merely requiring enough actual diameter rows on each
 shore: it couples the actual contact interface currency to both gap systems.
@@ -179,15 +179,15 @@ Now additionally assume a sequence D tending to infinity with, after translation
 unpromoted [rooted endpoint ledger](target_c_wrapping_root_defect_stability_2026-09-30.md)
 and its near-disk full-core ancestry. For one exact-phase shore,
 
-$$
+```math
  \boxed{Q+2k+4m\le q+o(D).}                           \tag{4}
-$$
+```
 
 If both shores satisfy Section 1's hypotheses,
 
-$$
+```math
  \boxed{Q+2k+4(m_A+m_B)\le q+o(D).}                   \tag{5}
-$$
+```
 
 ### Proof
 
@@ -250,12 +250,12 @@ exclusion to every short higher-degree pocket. For D>=10 put t=1/(100D),
 `c=(1-t^2)/(1+t^2)`, `s=2t/(1+t^2)`, L=1+2s, and
 `H=sqrt(D^2-(D+L)^2/4)`. Take six source points
 
-$$
+```math
  a=(c,-s),\quad x=(0,0),\quad y=(0,1),\quad b=(c,1+s),
-$$
-$$
+```
+```math
  p=(c-H,1/2+D/2),\qquad z=(c-H,1/2-D/2).
-$$
+```
 
 The actual diameter set is exactly `{ap,bz,pz}`. The actual unit contacts are
 exactly `{ax,xy,yb}`. The other distances lie strictly between one and D:
@@ -267,9 +267,9 @@ formulas, and the bounded radical certificate checks six widely separated D.
 
 Replace a by
 
-$$
+```math
  v=((1-4t^2)/(1+4t^2),4t/(1+4t^2)),
-$$
+```
 
 fixing all other points. Every old contact is preserved. The amplitude is
 `2sin(3 arctan t)<=6t<1/(2D)`. Its displacement has negative horizontal
@@ -283,9 +283,9 @@ Nevertheless ab becomes an overlap. Put A=1+t^2, B=1+4t^2. Its new difference
 has components `6t^2/(AB)` and `1-2t(1-2t^2)/(AB)`. For t<=1/1000 the second
 decrement is at least t, so
 
-$$
+```math
  |b-v|^2\le36t^4+(1-t)^2<1.
-$$
+```
 
 The other changed lower diagonal has square `2-2v_y>1`.
 

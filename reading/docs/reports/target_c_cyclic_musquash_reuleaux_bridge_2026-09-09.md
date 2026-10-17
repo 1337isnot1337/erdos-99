@@ -21,9 +21,9 @@ The missing local bookkeeping is exact.
 
 Let
 
-$$
+```math
 v_0,\ldots,v_{r-1}
-$$
+```
 
 be the unique odd diameter-cycle vertices in cycle order. Let `p_i` be the number of pendant diameter leaves adjacent to `v_i`.
 
@@ -31,50 +31,50 @@ be the unique odd diameter-cycle vertices in cycle order. Let `p_i` be the numbe
 
 The Reuleaux boundary arc centered at `v_i` contains exactly the shell path
 
-$$
+```math
 P_i:v_{i-1}\leadsto v_{i+1}
-$$
+```
 
 whose internal vertices are the `p_i` pendant diameter leaves adjacent to `v_i`. Consequently
 
-$$
+```math
 \boxed{|E(P_i)|=p_i+1.}
 \tag{LC.1}
-$$
+```
 
 If
 
-$$
+```math
 \ell_i:=p_i+1,
-$$
+```
 
 then
 
-$$
+```math
 \boxed{\ell_i\in\mathbb Z_{>0},\qquad \sum_{i=0}^{r-1}\ell_i=q,}
 \tag{LC.2}
-$$
+```
 
 and the corresponding Reuleaux arc has angular length
 
-$$
+```math
 \boxed{\phi_i=\ell_i\frac\pi q.}
 \tag{LC.3}
-$$
+```
 
 At the same cycle vertex,
 
-$$
+```math
 \boxed{\deg_H(v_i)=\ell_i+1.}
 \tag{LC.4}
-$$
+```
 
 Every non-cycle diameter vertex is a leaf. Hence
 
-$$
+```math
 \boxed{\Delta(H)=1+\max_i\ell_i.}
 \tag{LC.5}
-$$
+```
 
 Thus one positive odd-length composition `(ell_i)` simultaneously records the Reuleaux arc lengths, pendant diameter populations, and local diameter degrees.
 
@@ -84,15 +84,15 @@ Thus one positive odd-length composition `(ell_i)` simultaneously records the Re
 
 Fix `v_i`. Its diameter neighbors are
 
-$$
+```math
 v_{i-1},\quad v_{i+1},
-$$
+```
 
 plus exactly `p_i` leaves
 
-$$
+```math
 w_{i,1},\ldots,w_{i,p_i}.
-$$
+```
 
 The cyclic endpoint transition theorem says all diameter edges incident to one terminal occur consecutively in projective diameter-direction order.
 
@@ -100,14 +100,14 @@ The two cycle edges must be the endpoints of this block. A pendant edge cannot b
 
 After reversing the local order if necessary, the block is
 
-$$
+```math
 v_iv_{i-1},
 \quad
 v_iw_{i,1},\ldots,v_iw_{i,p_i},
 \quad
 v_iv_{i+1}.
 \tag{1.1}
-$$
+```
 
 It contains `p_i+2` diameter edges and therefore `p_i+1` internal consecutive-edge transitions.
 
@@ -119,25 +119,25 @@ The diameter/contact transition duality says that two consecutive diameter edges
 
 Applying this successively to (1.1) gives
 
-$$
+```math
 v_{i-1}w_{i,1},
 \quad
 w_{i,1}w_{i,2},
 \ldots,
 \quad
 w_{i,p_i}v_{i+1},
-$$
+```
 
 with the direct contact `v_{i-1}v_{i+1}` when `p_i=0`.
 
 These contacts form the path
 
-$$
+```math
 \boxed{
 P_i=(v_{i-1},w_{i,1},\ldots,w_{i,p_i},v_{i+1}).
 }
 \tag{2.1}
-$$
+```
 
 Therefore `|E(P_i)|=p_i+1`, proving LC.1.
 
@@ -149,27 +149,27 @@ For a diameter terminal `x`, a contiguous star of degree `d_x` contributes exact
 
 Summing over all `q` terminals and using `h=q`,
 
-$$
+```math
 \sum_x(d_x-1)
 =2h-q
 =q.
 \tag{3.1}
-$$
+```
 
 There are exactly `q` cyclic direction transitions in total. Hence every direction transition is internal to one star block.
 
 Only cycle vertices have degree greater than one; diameter leaves contribute zero. Therefore the paths `P_i` account for every transition. The transition/contact bijection then gives
 
-$$
+```math
 \boxed{E(C_q)=\bigsqcup_i E(P_i).}
 \tag{3.2}
-$$
+```
 
 Their edge counts sum to
 
-$$
+```math
 \sum_i(p_i+1)=q.
-$$
+```
 
 With `ell_i=p_i+1`, this proves LC.2.
 
@@ -183,33 +183,33 @@ The exact Reinhardt completion in #118 associates to each diameter-cycle vertex 
 
 Every internal vertex `w_{i,j}` of `P_i` is a diameter neighbor of `v_i`, so
 
-$$
+```math
 |w_{i,j}-v_i|=D.
-$$
+```
 
 The whole source lies in the disk `B(v_i,D)`. Therefore every point of `P_i` lies on the boundary circle of that disk and on the corresponding Reuleaux boundary arc.
 
 Consecutive diameter directions in the exact equality shell differ by
 
-$$
+```math
 \frac\pi q.
-$$
+```
 
 Within one star block they use one common Euclidean lift. Thus consecutive vertices along `P_i` subtend exactly `pi/q` at the center `v_i`.
 
 There are `ell_i=p_i+1` such subarcs, so the full arc angle is
 
-$$
+```math
 \phi_i=\ell_i\frac\pi q,
-$$
+```
 
 proving LC.3.
 
 The graph degree identity
 
-$$
+```math
 \deg_H(v_i)=p_i+2=\ell_i+1
-$$
+```
 
 proves LC.4, and LC.5 follows because all off-cycle vertices have degree one.
 
@@ -221,11 +221,11 @@ proves LC.4, and LC.5 follows because all off-cycle vertices have degree one.
 
 The composition
 
-$$
+```math
 (\ell_0,\ldots,\ell_{r-1}),
 \qquad
 \sum\ell_i=q,
-$$
+```
 
 is the pointwise bridge between the exact Reinhardt geometry and the diameter graph:
 

@@ -40,23 +40,23 @@ This is boundary-order progress, not a Level I closure.
 
 Böröczky and Ruzsa quote Wegner's theorem in the following form for `N>=2` nonoverlapping unit disks. If `D_disk` is the convex hull of the disks, then
 
-$$
+```math
 \operatorname{area}(D_{disk})
 \ge
 2\sqrt3(N-1)
 +(2-\sqrt3)W_N
 +\pi,
 \tag{WG.1}
-$$
+```
 
 where
 
-$$
+```math
 \boxed{
 W_N:=\left\lceil\sqrt{12N-3}-3\right\rceil.
 }
 \tag{WG.2}
-$$
+```
 
 Equality is characterized by Wegner packings. The exact source is:
 
@@ -64,10 +64,10 @@ K. J. Böröczky and I. Z. Ruzsa, *Note on an Inequality of Wegner*, Discrete & 
 
 Let `K` now be the convex hull of `N` planar points with minimum pairwise distance one. Scale by two. The scaled center hull is `2K`, and the corresponding unit disks are nonoverlapping. Steiner's formula gives
 
-$$
+```math
 \operatorname{area}(2K+B_1)
 =4\operatorname{area}(K)+2\operatorname{per}(K)+\pi.
-$$
+```
 
 Insert this into WG.1, cancel `pi`, and divide by four.
 
@@ -75,7 +75,7 @@ Insert this into WG.1, cancel `pi`, and divide by four.
 
 For every convex hull `K` of `N>=2` unit-separated planar points,
 
-$$
+```math
 \boxed{
 \operatorname{area}(K)+\frac12\operatorname{per}(K)
 \ge
@@ -84,46 +84,46 @@ $$
 }
 \tag{WG.3}
 
-$$
+```
 
 Put
 
-$$
+```math
 a_0:=\frac{\sqrt3}{2},
 \qquad
 c_W:=\frac{2-\sqrt3}{4}.
 \tag{WG.4}
-$$
+```
 
 The Oler inequality in the same normalization is
 
-$$
+```math
 \operatorname{area}(K)+\frac{a_0}{2}\operatorname{per}(K)
 \ge a_0(N-1).
 \tag{WG.5}
-$$
+```
 
 Because
 
-$$
+```math
 \frac12-\frac{a_0}{2}=c_W,
-$$
+```
 
 WG.3 is exactly
 
-$$
+```math
 \operatorname{area}(K)
 \ge
 a_0(N-1)-\frac{a_0}{2}P
 +c_W(W_N-P).
 \tag{WG.6}
-$$
+```
 
 Taking the better of WG.5 and WG.6 gives the useful combined theorem.
 
 ### Corollary WG.2 — Oler plus Wegner correction
 
-$$
+```math
 \boxed{
 \operatorname{area}(K)
 \ge
@@ -131,7 +131,7 @@ $$
 +c_W[W_N-P]_+,
 }
 \tag{WG.7}
-$$
+```
 
 where `P=per(K)` and `[x]_+=max{x,0}`.
 
@@ -143,73 +143,73 @@ Thus Wegner improves Oler exactly when `W_N>P`; there is no hidden comparison of
 
 Use the AR/C36/C49 notation. For an unloaded component `I_r`, let
 
-$$
+```math
 n_r=|I_r|,
 \qquad
 A_r\subset B_+,
 \qquad
 a_r=|A_r|\ge3,
-$$
+```
 
 and
 
-$$
+```math
 P_r=\operatorname{conv}A_r.
-$$
+```
 
 The unit-separated point set
 
-$$
+```math
 X_r=I_r\cup A_r
-$$
+```
 
 lies in `P_r` and has
 
-$$
+```math
 N_r=n_r+a_r.
 \tag{2.1}
-$$
+```
 
 C44 gives
 
-$$
+```math
 \operatorname{diam}P_r
 =\operatorname{diam}A_r
 \le\delta_r+2,
-$$
+```
 
 so the convex perimeter-diameter bound gives
 
-$$
+```math
 \operatorname{per}(P_r)
 \le\pi(\delta_r+2).
 \tag{2.2}
-$$
+```
 
 Define the raw cellwise Wegner excess
 
-$$
+```math
 \boxed{
 E_r:=
 \left[W_{N_r}-\pi(\delta_r+2)\right]_+.
 }
 \tag{2.3}
-$$
+```
 
 Since the positive-part function is monotone and `per(P_r)<=pi(delta_r+2)`, WG.7 yields
 
-$$
+```math
 \operatorname{area}(P_r)
 \ge
  a_0(N_r-1)
 -\frac{a_0\pi}{2}(\delta_r+2)
 +c_WE_r.
 \tag{2.4}
-$$
+```
 
 Using `a_r>=3` gives the convenient coarser form
 
-$$
+```math
 \boxed{
 \operatorname{area}(P_r)
 \ge
@@ -219,7 +219,7 @@ $$
 +c_WE_r.
 }
 \tag{WG.8}
-$$
+```
 
 This is exactly the AR Oler lower bound plus a nonnegative certified boundary-order correction.
 
@@ -229,26 +229,26 @@ This is exactly the AR Oler lower bound plus a nonnegative certified boundary-or
 
 Put
 
-$$
+```math
 S:=\sum_r\delta_r,
 \qquad
 E_W:=\sum_rE_r.
-$$
+```
 
 C49 gives pairwise interior-disjoint attachment cells, and AR uses the isodiametric upper bound
 
-$$
+```math
 \sum_r\operatorname{area}(P_r)
 \le
 \frac\pi4(S^2+4S+4c_I).
 \tag{3.1}
-$$
+```
 
 Sum WG.8 and compare with (3.1).
 
 ### Theorem WG.3 — corrected AR inequality
 
-$$
+```math
 \boxed{
  a_0(v-q)+c_WE_W
 \le
@@ -257,7 +257,7 @@ $$
 +\bigl[\pi+a_0(\pi-2)\bigr]c_I.
 }
 \tag{WG.9}
-$$
+```
 
 AR is recovered by discarding `c_W E_W`.
 
@@ -271,51 +271,51 @@ The definition of `W_N` and `E_r` contains additional information independent of
 
 Since
 
-$$
+```math
 W_{N_r}
 \le
 \pi(\delta_r+2)+E_r
 \tag{4.1}
-$$
+```
 
 and
 
-$$
+```math
 \sqrt{12N_r-3}-3
 \le W_{N_r},
 \tag{4.2}
-$$
+```
 
 we have
 
-$$
+```math
 12N_r-3
 \le
 \bigl(\pi\delta_r+E_r+2\pi+3\bigr)^2.
 \tag{4.3}
-$$
+```
 
 Let
 
-$$
+```math
 c:=2\pi+3.
-$$
+```
 
 Summing (4.3), using
 
-$$
+```math
 \sum_r\delta_r^2\le S^2,
 \qquad
 \sum_rE_r^2\le E_W^2,
 \qquad
 \sum_r\delta_rE_r\le SE_W,
-$$
+```
 
 and `v-q=sum n_r <=sum N_r`, gives the finite theorem
 
 ### Theorem WG.4 — population versus component diameter plus Wegner excess
 
-$$
+```math
 \boxed{
 12(v-q)
 \le
@@ -324,7 +324,7 @@ $$
 +(c^2+3)c_I.
 }
 \tag{WG.10}
-$$
+```
 
 No area estimate enters WG.10 after the definition of `E_r`; it is a direct consequence of the integer Wegner boundary term.
 
@@ -334,72 +334,72 @@ No area estimate enters WG.10 after the definition of `E_r`; it is a direct cons
 
 Along an unbounded post-ZF subsequence suppose
 
-$$
+```math
 \frac v{D^2}\to r,
 \qquad
 \frac SD\to s,
 \qquad
 \frac{E_W}{D}\to\varepsilon
-$$
+```
 
 after extracting further if necessary. The post-ZF bounds `q,c_I=O(D)` make the lower-order terms in WG.10 vanish after division by `D^2`. Therefore
 
-$$
+```math
 \boxed{
 \sqrt{12r}
 \le
 \pi s+\varepsilon.
 }
 \tag{WG.11}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \varepsilon
 \ge
 [\sqrt{12r}-\pi s]_+.
 }
 \tag{WG.12}
-$$
+```
 
 ### Corollary WG.5 — sublinear Wegner correction strengthens AR
 
 If
 
-$$
+```math
 E_W=o(D),
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \liminf\frac SD
 \ge
 \frac{\sqrt{12r}}\pi.
 }
 \tag{WG.13}
-$$
+```
 
 Compare AR:
 
-$$
+```math
 \liminf\frac SD
 \ge
 \sqrt{\frac r\Delta},
 \qquad
 \Delta=\frac\pi{2\sqrt3}.
-$$
+```
 
 Since
 
-$$
+```math
 \frac{\sqrt{12}}\pi
 >
 \sqrt{\frac{2\sqrt3}{\pi}},
-$$
+```
 
 WG.13 is strictly stronger whenever `r>0`.
 
@@ -409,63 +409,63 @@ WG.13 is strictly stronger whenever `r>0`.
 
 In the PR #119 UF parameterization,
 
-$$
+```math
 r=\Delta-\zeta.
-$$
+```
 
 Thus if `E_W=o(D)`, WG.13 gives
 
-$$
+```math
 \boxed{
 \liminf\frac SD
 \ge
 \frac{\sqrt{12(\Delta-\zeta)}}\pi.
 }
 \tag{WG.14}
-$$
+```
 
 At the UF worst crossover
 
-$$
+```math
 \zeta_*=0.5572837714\ldots,
-$$
+```
 
 this evaluates to
 
-$$
+```math
 \boxed{
 \liminf\frac SD
 \ge0.6519831092\ldots,
 }
 \tag{WG.15}
-$$
+```
 
 instead of the AR floor
 
-$$
+```math
 0.6208918647\ldots .
-$$
+```
 
 Conversely, if `S/D` approaches the AR floor at this same `zeta_*`, WG.12 forces
 
-$$
+```math
 \boxed{
 \liminf\frac{E_W}{D}
 \ge0.0976760251\ldots .
 }
 \tag{WG.16}
-$$
+```
 
 and WG.9 therefore contains the extra boundary-order cell-area term
 
-$$
+```math
 \boxed{
  c_WE_W
 \ge
 (0.0065430530\ldots-o(1))D.
 }
 \tag{WG.17}
-$$
+```
 
 This gives an explicit currency for the failure of the stronger component-diameter floor.
 
@@ -477,7 +477,7 @@ Let `F` be a bounded contact face of degree `k` containing `z` contact-isolated 
 
 WG.7 gives the exact facewise capacity bound
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)
 \ge
@@ -486,7 +486,7 @@ $$
 +c_W[W_{k+z}-k]_+.
 }
 \tag{WG.18}
-$$
+```
 
 The DP pentagon regression is respected: for `k=5,z=0`, `W_5=5`, so the Wegner correction is exactly zero. Therefore WG does not falsely resurrect a uniform positive defect-face charge that the September 9 DP family already disproves.
 
@@ -528,10 +528,10 @@ It does **not** yet convert the linear correction into the forbidden face sign. 
 
 The new boundary-order currency is
 
-$$
+```math
 E_W
 =\sum_r[W_{N_r}-\pi(\delta_r+2)]_+.
-$$
+```
 
 The best next theorem is one of:
 

@@ -22,9 +22,9 @@ scope is the proof-level geometry that the earlier audit explicitly left unresol
 Both sections survive this review.  In particular the Section-108 proof-only carrier
 coefficient
 
-$$
+```math
 \mu_{12}=0.9760418064930821\ldots
-$$
+```
 
 is supported by the stated inputs.  Neither section closes C-II.
 
@@ -39,9 +39,9 @@ would then be an open semicircle containing `S`, contradicting wrapping.  It can
 have length exactly `pi`, because its two endpoints would be antipodal points of `S`,
 contradicting the strict angular-diameter bound.  Hence every gap length satisfies
 
-$$
+```math
 0<g_j<\pi.
-$$
+```
 
 Since its endpoints are in `S`, their minor angular separation is exactly `g_j`, so
 also `g_j<=theta`.
@@ -72,25 +72,25 @@ point of the disk outside `K` belongs to one of the gap segments.
 
 Therefore, up to boundary sets of zero area,
 
-$$
+```math
 B_{1/2}\setminus K
 =\bigsqcup_j \operatorname{Seg}(G_j).
-$$
+```
 
 The area of a radius-`1/2` circular segment subtending angle `g` is
 
-$$
+```math
 {g-\sin g\over8}.
-$$
+```
 
 Countable additivity now gives the exact identity
 
-$$
+```math
 \boxed{
 \operatorname{area}(K)
 ={\pi\over4}-{1\over8}\sum_j(g_j-\sin g_j).
 }
-$$
+```
 
 No finite-support, smoothness, or finite-gap assumption is hidden in this step.
 
@@ -98,23 +98,23 @@ No finite-support, smoothness, or finite-gap assumption is hidden in this step.
 
 Put
 
-$$
+```math
 G(x)={x-\sin x\over8}.
-$$
+```
 
 For `a,b>=0` with `a+b<=pi`,
 
-$$
+```math
 8(G(a+b)-G(a)-G(b))
 =\sin a+\sin b-\sin(a+b)\ge0.
-$$
+```
 
 Thus `G` is superadditive on finite families whose total is at most `pi`.  Since
 `G>=0` and is continuous, finite partial sums followed by monotone convergence yield
 
-$$
+```math
 \sum_kG(t_k)\le G\left(\sum_kt_k\right)
-$$
+```
 
 for countable families with total at most `pi`.
 
@@ -125,10 +125,10 @@ Section 107 applies this only to the tail whose total angular mass is at most
 
 Canonical Sections 94, 100, and 101 provide
 
-$$
+```math
 M\le C\le2\alpha\le|S|\le U,
 \qquad U-M=\sigma.
-$$
+```
 
 For `sigma<=10^-3`, every individual slack in this chain is at most `sigma`.  If the
 largest gap is `g_1=theta-delta`, the same concave-majorization argument used at the
@@ -144,23 +144,23 @@ smaller Section-104 endpoint remains valid:
 
 Hence
 
-$$
+```math
 \delta\le{10\over3}\sigma.
-$$
+```
 
 Writing the next two principal gaps as `phi+x_2`, `phi+x_3` and the remaining tail
 mass as `tau`, the exact total complement-mass identity gives
 
-$$
+```math
 x_2+x_3+\tau=\delta+e,
 \qquad 0\le e\le\sigma,
-$$
+```
 
 so
 
-$$
+```math
 0\le x_2,x_3,\tau\le{13\over3}\sigma.
-$$
+```
 
 No statement from Sections 104–106 is required.
 
@@ -169,34 +169,34 @@ No statement from Sections 104–106 is required.
 Throughout `sigma<=10^-3`, let `bar theta` be the unique solution of
 `sigma(bar theta)=10^-3`, let `phi_8=2pi-2theta_8`, and put
 
-$$
+```math
 q_*={13\over3}10^{-3}.
-$$
+```
 
 The preceding bounds imply
 
-$$
+```math
 g_1\le\bar\theta,
 \qquad
 g_2,g_3\le\phi_8+q_*,
 \qquad
 \sum_{j\ge4}g_j\le q_*.
-$$
+```
 
 Because `G` is increasing on `[0,pi]` and superadditive on the tail,
 
-$$
+```math
 \sum_jG(g_j)
 \le
 G(\bar\theta)+2G(\phi_8+q_*)+G(q_*).
-$$
+```
 
 Substitution into the exact area identity yields
 
-$$
+```math
 \operatorname{area}(K)
 \ge0.4731076260\ldots>0.473.
-$$
+```
 
 The inequalities are deliberately one-sided in the safe direction: each principal gap
 is enlarged to its separate worst-case upper bound and all tail mass is concentrated
@@ -207,28 +207,28 @@ into one gap, which maximizes the superadditive segment-area loss.
 For the normalized harmonic attachment cells, Hausdorff convergence of planar compact
 convex bodies implies convergence of area.  Therefore
 
-$$
+```math
 D^{-2}\operatorname{area}(P_D)
 \to\operatorname{area}(K)>0.473.
-$$
+```
 
 On a locally rhombus-saturated carrier,
 
-$$
+```math
 A_{4,D}/\operatorname{area}(P_D)\to1.
-$$
+```
 
 Every strict unit rhombus has area at most one, so if `R_D` is its count then
 
-$$
+```math
 R_D\ge A_{4,D}.
-$$
+```
 
 Consequently
 
-$$
+```math
 R_D\ge(0.473-o(1))D^2,
-$$
+```
 
 and the explicit finite constant `R_D>=0.472D^2` is valid after increasing the
 large-`D` threshold.
@@ -246,26 +246,26 @@ The phase-circle cut removes only `O(D)` crossings, so at least `0.471D^2` remai
 large `D`.  With defect cutoff `K=1000`, the canonical global defect budget removes at
 most
 
-$$
+```math
 5.317D/(1000/D)=0.005317D^2,
-$$
+```
 
 leaving at least `0.465683D^2` good crossings.  One of three unordered phase-label
 pairs carries at least one third of them.  Random bins of width `20000/D` retain at
 least `19/20` for one shift, yielding more than
 
-$$
+```math
 0.14746628D^2
-$$
+```
 
 internal-bin edges.
 
 For one fixed label pair let `a_j,b_j` be the two shore sizes in a bin.  The local
 train count gives
 
-$$
+```math
 \sum_j a_j,\sum_j b_j\le6D.
-$$
+```
 
 If every bin had `a_j<0.012D` or `b_j<0.012D`, bins small on the first shore would
 carry at most `0.072D^2` crossing edges and the remaining bins, necessarily small on
@@ -283,25 +283,25 @@ is `O(1/D)`, and the two distinct labels give limiting projective directions exa
 For every fixed finite family of positive limit gaps, the exact Section-82 outer ledger
 and two-edge baseline on all unselected intervals give
 
-$$
+```math
 \sum_{j\in J}\ell_j\le2\alpha.
-$$
+```
 
 Take the scale limit first, then exhaust the countable positive complement components.
 Nonnegativity gives
 
-$$
+```math
 \sum_j\ell_j\le2\alpha.
-$$
+```
 
 Canonical Section 101 gives `C=sum_j sin(g_j/2)` and `2alpha-C<=sigma`; every selected
 outer route dominates its endpoint chord.  Hence
 
-$$
+```math
 \boxed{
 \sum_j(\ell_j-\sin(g_j/2))\le\sigma.
 }
-$$
+```
 
 The three principal routes therefore have total normalized path excess at most
 `sigma`.  This is the correct budget for Section 108's projection step.
@@ -327,20 +327,20 @@ assumed.
 
 Thus for any cutoff `h>0` the inherited leakage formula
 
-$$
+```math
 L(\sigma,h)
 =w(h)+\left({1\over h}+{169\over6}\right)\sigma,
 \qquad
 w(h)=\pi/3-\arccos((1+h)/2),
-$$
+```
 
 continues to hold.
 
 At `h=0.0088` and `sigma=4.5e-5`, the published value
 
-$$
+```math
 L=0.0114693143\ldots
-$$
+```
 
 is below the endpoint supply `0.024`.  After pigeonholing the three principal
 corridors, `rho=0.00417` is a safe retained endpoint-density constant.
@@ -355,40 +355,40 @@ transverse/tangent convention mismatch.
 Orient the route along its chord.  Each selected unit-edge occurrence contributes at
 least
 
-$$
+```math
 1-\cos\Delta-o(1),
 \qquad
 \Delta=\operatorname{dist}_{RP^1}(u,q),
-$$
+```
 
 to path length minus chord projection.  Distinct selected trains supply distinct
 physical endpoint occurrences.  The principal-route excess budget therefore gives
 
-$$
+```math
 \rho(1-\cos\Delta)\le\sigma.
-$$
+```
 
 At `rho=0.00417` and `sigma=4.5e-5`, exact cosine inversion gives
 
-$$
+```math
 \Delta=0.1470431\ldots .
-$$
+```
 
 The two selected phase families cannot use the same principal corridor because they
 are exactly `pi/3` apart while `2Delta<pi/3`.  For two distinct selected corridors,
 the projective triangle inequality would force
 
-$$
+```math
 \left|\operatorname{dist}_{RP^1}(q_i,q_j)-\pi/3\right|
 <2\Delta<0.294087.
-$$
+```
 
 The gap-stability geometry gives the incompatible lower bound
 
-$$
+```math
 {\theta_8\over2}-{\pi\over3}-{73\over6}\sigma
 =0.3037089\ldots .
-$$
+```
 
 The contradiction margin is positive by more than `0.00962` radians.
 
@@ -398,22 +398,22 @@ Sections 107 and 108 survive full geometric hostile review.
 
 The valid proof-only conclusions are:
 
-$$
+```math
 \boxed{
 \sigma\le10^{-3}
 \Longrightarrow
 \operatorname{area}(P_{\rm wrap})>(0.473-o(1))D^2
 }
-$$
+```
 
 for a locally rhombus-saturated wrapping carrier, and
 
-$$
+```math
 \boxed{
 \operatorname{diam}(P_*)
 \ge(0.9760418064930821\ldots-o(1))D
 }
-$$
+```
 
 for some quadratic-area locally rhombus-saturated harmonic carrier in every sufficiently
 large Type-II survivor.

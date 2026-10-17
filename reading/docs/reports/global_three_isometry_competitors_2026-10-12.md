@@ -43,10 +43,10 @@ isometries, common to every source label.
 For each label `i`, create `k` alternatives `(i,a)`. Join all alternatives
 of one label into a clique, and join `(i,a)` to `(j,b)` exactly when
 
-$$
+```math
 |T_a p_i-T_b p_j|<1\quad\text{or}\quad
 |T_a p_i-T_b p_j|\ge D. \tag{1}
-$$
+```
 
 A full-source strict competitor exists in this dictionary if and only if
 this graph has an independent transversal containing one alternative
@@ -64,25 +64,25 @@ does not check any lower pair or any old non-diameter upper pair.
 
 Let `c=cos(2*pi/7)`, `s=sin(2*pi/7)`, and
 
-$$
+```math
 R=(2-2c)^{-1/2},\qquad
 p_j=R(\cos(2\pi j/7),\sin(2\pi j/7)),\quad0\le j<7.
-$$
+```
 
 The source has seven unit contacts in a cycle, no unit triangle, and seven
 diameter pairs joining indices differing by three modulo seven. Its
 diameter squared is
 
-$$
+```math
 D^2={1-\cos(6\pi/7)\over1-c}>5. \tag{2}
-$$
+```
 
 For rational `q`, define the exact rotation
 
-$$
+```math
 U(q)={1\over1+q^2}
 \begin{pmatrix}1-q^2&-2q\\2q&1-q^2\end{pmatrix}.
-$$
+```
 
 Use `T_0` identity and `T_a(p)=U(q_a)p+t_a` with
 
@@ -94,15 +94,15 @@ Use `T_0` identity and `T_a(p)=U(q_a)p+t_a` with
 
 The exact certificate proves, for every mixed-state pair,
 
-$$
+```math
 |T_a p_i-T_b p_j|^2>{1000005\over1000000}>1,
-$$
+```
 
 and for every endpoint pair,
 
-$$
+```math
 |p'_i-p'_j|^2<{4477\over1000}<5<D^2. \tag{3}
-$$
+```
 
 Four old same-state unit contacts remain exactly unit. All other endpoint
 pairs have strict lower slack. All seven labels are retained, and the new
@@ -120,11 +120,11 @@ The cyclic Laplacians applied to the position vectors have factors
 
 For `Omega=alpha L_C-beta L_H`, Fourier eigenvalues are
 
-$$
+```math
 \lambda_l={2\over7}
 \left[D^2(1-\cos(2\pi l/7))
  -(1-\cos(6\pi l/7))\right].
-$$
+```
 
 Modes `0,1,6` have eigenvalue zero. The certificate proves
 `lambda_2=lambda_5>8/5` and `lambda_3=lambda_4>23/10`.
@@ -149,10 +149,10 @@ There is no floating arithmetic in this independent certificate.
 Let the source be the complete `m by m` unit square grid, `m>=6`:
 `p_ij=(i,j)`, `0<=i,j<m`. Apply the row-dependent common translations
 
-$$
+```math
 T_j(p)=p+\left({j\bmod2\over2},
  (\sqrt3/2-1)j\right). \tag{4}
-$$
+```
 
 Every one of the `m^2` labels stays. Within a row the separation is an
 integer at least one. Between adjacent rows the horizontal separation is
@@ -163,12 +163,12 @@ separation alone exceeds one. Thus all full-source lower constraints hold.
 For any endpoint pair the horizontal separation is at most `m-1/2` and
 the vertical separation is at most `(sqrt(3)/2)(m-1)`. Therefore
 
-$$
+```math
 \operatorname{diam}(P')^2
 \le(m-1/2)^2+{3\over4}(m-1)^2
 =2(m-1)^2-{m^2-6m+4\over4}
 <\operatorname{diam}(P)^2. \tag{5}
-$$
+```
 
 The last numerator is positive for every `m>=6`. The asymptotic upper
 ratio is `sqrt(7/8)`. This is a single complete-source construction for

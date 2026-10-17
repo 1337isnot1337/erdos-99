@@ -20,10 +20,10 @@
 
 The exact chamber decomposition isolates the nonnegative absorption residual
 
-$$
+```math
 \mathcal R_{ch}
 =(A_{ch}-a_0Z_{ch})-c_0[(b-P_F)+(Q+2f)].
-$$
+```
 
 Since the latest bootstrap forces `f=Omega(D)`, a tempting closure route is to seek a
 uniform positive contribution to `R_ch` from each bounded exceptional face. This is
@@ -32,10 +32,10 @@ impossible at the level of one face.
 For a pentagonal contact face with no interior source point, canonical Section 67.19
 is
 
-$$
+```math
 \operatorname{area}(P)\ge a_0+c_0={3\sqrt3\over4}.
 \tag{P.1}
-$$
+```
 
 The lower bound is sharp as an infimum even among strictly convex equilateral
 pentagons whose five diagonals are all strictly longer than one. Thus triangle-freeness
@@ -45,30 +45,30 @@ alone gives no positive additive gap beyond (P.1).
 
 Put
 
-$$
+```math
 y_0={\sqrt3\over2}.
-$$
+```
 
 For `y>y_0` sufficiently close to `y_0`, set
 
-$$
+```math
 A=(0,0),\qquad B=(1,0),\qquad D=(1/2,y).
-$$
+```
 
 Let `C` be the right-hand intersection of the two unit circles centered at `B` and
 `D`, and let `E` be the reflection of `C` across the vertical line `x=1/2`.
 
 Write
 
-$$
+```math
 d=|B-D|=\sqrt{y^2+1/4},
 \qquad
 s=\sqrt{1-d^2/4}.
-$$
+```
 
 The circle-intersection formula gives
 
-$$
+```math
 C=
 \left(
 {3\over4}+{sy\over d},
@@ -76,27 +76,27 @@ C=
 \right)
 =:(x_C,y_C),
 \tag{P.2}
-$$
+```
 
 and
 
-$$
+```math
 E=(1-x_C,y_C).
 \tag{P.3}
-$$
+```
 
 By construction
 
-$$
+```math
 |A-B|=|B-C|=|C-D|=|D-E|=|E-A|=1.
 \tag{P.4}
-$$
+```
 
 At `y=y_0`,
 
-$$
+```math
 C=(3/2,y_0),\qquad D=(1/2,y_0),\qquad E=(-1/2,y_0),
-$$
+```
 
 so the limiting polygon has three collinear top vertices and area `3sqrt(3)/4`.
 
@@ -104,33 +104,33 @@ so the limiting polygon has three collinear top vertices and area `3sqrt(3)/4`.
 
 At `y_0`, `d=1` and `s/d=sqrt(3)/2`. Put
 
-$$
+```math
 r(y):={s\over d}=\sqrt{{1\over d^2}-{1\over4}}.
-$$
+```
 
 Since `d'(y_0)=sqrt(3)/2`, direct differentiation gives
 
-$$
+```math
 r'(y_0)=-1.
-$$
+```
 
 From (P.2),
 
-$$
+```math
 y_C={y\over2}+{r(y)\over2},
-$$
+```
 
 so
 
-$$
+```math
 y_C'(y_0)=0.
-$$
+```
 
 Consequently
 
-$$
+```math
 {d\over dy}(y-y_C)\bigg|_{y=y_0}=1.
-$$
+```
 
 Thus `D` lies strictly above the horizontal segment `CE` for every sufficiently small
 `y-y_0>0`. The remaining four turns are already strictly positive at the limiting
@@ -141,20 +141,20 @@ sufficiently small positive `y-y_0`.
 
 The two diagonals from `D` to the lower vertices have the same length
 
-$$
+```math
 |D-A|=|D-B|=d>1
 \tag{P.5}
-$$
+```
 
 because `y>y_0`.
 
 At the limiting value `y=y_0`, the remaining three diagonals have lengths
 
-$$
+```math
 |A-C|=|B-E|=\sqrt3,
 \qquad
 |C-E|=2.
-$$
+```
 
 They therefore remain strictly larger than one for all sufficiently small positive
 `y-y_0` by continuity.
@@ -166,30 +166,30 @@ contacts, and no unit equilateral triangle occurs.
 
 By symmetry and the shoelace formula,
 
-$$
+```math
 \operatorname{area}(ABCDE)
 ={1\over2}\left[y_C+y(2x_C-1)\right].
 \tag{P.6}
-$$
+```
 
 Both coordinates in (P.2) are continuous at `y_0`, so
 
-$$
+```math
 \lim_{y\downarrow y_0}
 \operatorname{area}(ABCDE)
 ={1\over2}\left[y_0+2y_0\right]
 ={3\sqrt3\over4}
 =a_0+c_0.
 \tag{P.7}
-$$
+```
 
 Therefore, for every `epsilon>0`, some strictly convex triangle-free equilateral
 pentagon satisfies
 
-$$
+```math
 0<\operatorname{area}(P)-(a_0+c_0)<\epsilon.
 \tag{P.8}
-$$
+```
 
 The strict left inequality follows from Oler/Section 67.19 and the fact that the
 limiting equality configuration is degenerate.
@@ -199,16 +199,16 @@ limiting equality configuration is degenerate.
 There is no constant `eta>0` such that every bounded pentagonal contact face with no
 interior source point obeys
 
-$$
+```math
 \operatorname{area}(P)
 \ge a_0+c_0+\eta.
-$$
+```
 
 Thus the linear face count
 
-$$
+```math
 f\ge0.1671246\ldots D-o(D)
-$$
+```
 
 cannot by itself force `R_ch=Omega(D)` through a purely local area gap. Any positive
 residual theorem must use information absent from this construction, such as

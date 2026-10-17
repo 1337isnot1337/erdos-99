@@ -42,9 +42,9 @@ No response-conductance theorem and no sign claim such as `A_tau>w_tau` is used.
 
 Let
 
-$$
+```math
 \mathcal L=\{\tau_e:e\in E(\mathcal T)\}
-$$
+```
 
 be a finite family of complete stopped trains satisfying:
 
@@ -63,22 +63,22 @@ has vector exactly `u_e`.
 
 For a real parameter `theta_e`, put
 
-$$
+```math
 \boxed{
 \Delta_e(\theta_e):=R_{\theta_e}u_e-u_e.
 }
 \tag{MS.1}
-$$
+```
 
 For a dual region `v`, define its translation
 
-$$
+```math
 \boxed{
 X_v(\theta)
 :=\sum_{e\in P(o,v)}\Delta_e(\theta_e),
 }
 \tag{MS.2}
-$$
+```
 
 where `P(o,v)` is the unique dual-tree path from the root to `v`.
 
@@ -113,17 +113,17 @@ pairwise disjoint, `xy` crosses no other selected cut.  Thus the dual regions of
 and `y` are adjacent across the single dual edge `e`.  Their root paths differ by
 exactly `e`, so
 
-$$
+```math
 X_y-X_x=\pm\Delta_e.
-$$
+```
 
 With the orientation from `T_e` to `S_e`, the sign is positive and
 
-$$
+```math
 (p_y+X_y)-(p_x+X_x)
 =u_e+\Delta_e
 =R_{\theta_e}u_e,
-$$
+```
 
 which has length one.
 
@@ -150,39 +150,39 @@ by (MS.1).
 
 For a selected dual edge `e`, let
 
-$$
+```math
 \chi_e(v)=
 \begin{cases}
 1,&v\in S_e,\\
 0,&v\in T_e.
 \end{cases}
-$$
+```
 
 For an ordered source pair `h=xy`, with endpoint regions `v_x,v_y`, put
 
-$$
+```math
 \varepsilon_{he}:=\chi_e(v_y)-\chi_e(v_x)\in\{-1,0,1\}.
 \tag{MS.3}
-$$
+```
 
 Then (MS.2) gives the exact identity
 
-$$
+```math
 \boxed{
 X_{v_y}-X_{v_x}
 =\sum_e\varepsilon_{he}\Delta_e(\theta_e).
 }
 \tag{MS.4}
-$$
+```
 
 Moreover
 
-$$
+```math
 \boxed{
 \{e:\varepsilon_{he}\ne0\}=P(v_x,v_y),
 }
 \tag{MS.5}
-$$
+```
 
 the unique simple dual-tree path between the two endpoint regions.  Along that path
 the signs are coherent after orienting the ordered pair from one endpoint region to
@@ -190,13 +190,13 @@ the other.
 
 Thus if `r_h=p_y-p_x`, the exact deformed pair vector is
 
-$$
+```math
 \boxed{
 r_h(\theta)
 =r_h+\sum_e\varepsilon_{he}\Delta_e(\theta_e).
 }
 \tag{MS.6}
-$$
+```
 
 For a selected family whose dual edges lie on one dual-tree path, (MS.5) says every
 row support is one consecutive interval.  This is the exact finite version of the
@@ -209,43 +209,43 @@ interval structure suggested by the current small-leaf rectangle.
 Let `H` be the full set of actual diameter pairs after the full-visibility
 normalization.  Choose any fixed orientation for each `h in H` and write
 
-$$
+```math
 r_h=p_{y_h}-p_{x_h},\qquad |r_h|=D.
-$$
+```
 
 Let `beta_h>0` be the relative-interior KKT diameter weights.  For selected train
 `tau_e`, write
 
-$$
+```math
 A_e:=\sum_{c\in E(\tau_e)}\alpha_c>0
 \tag{MS.7}
-$$
+```
 
 for the total positive contact stress on its physical cut contacts.
 
 Summing KKT equilibrium over the child shore `S_e` gives the audited shore resultant
 
-$$
+```math
 \boxed{
 A_eu_e
 =\sum_{h\in H}\beta_h\varepsilon_{he}r_h.
 }
 \tag{MS.8}
-$$
+```
 
 Define the weighted actual-diameter square sum under the simultaneous shear by
 
-$$
+```math
 \Psi(\theta)
 :=\sum_{h\in H}\beta_h|r_h(\theta)|^2.
 \tag{MS.9}
-$$
+```
 
 ### Theorem MS.2 — exact finite multi-shear energy identity
 
 For every sufficiently small `theta`, one has
 
-$$
+```math
 \boxed{
 \Psi(\theta)-\Psi(0)
 =-2\sum_eA_e(1-\cos\theta_e)
@@ -253,31 +253,31 @@ $$
 \left|\sum_e\varepsilon_{he}\Delta_e(\theta_e)\right|^2.
 }
 \tag{MS.10}
-$$
+```
 
 ### Proof
 
 Expand (MS.6):
 
-$$
+```math
 |r_h(\theta)|^2-|r_h|^2
 =2r_h\cdot\sum_e\varepsilon_{he}\Delta_e
 +\left|\sum_e\varepsilon_{he}\Delta_e\right|^2.
-$$
+```
 
 After weighting and summing, interchange the first double sum and use (MS.8):
 
-$$
+```math
 2\sum_e\Delta_e\cdot
 \sum_h\beta_h\varepsilon_{he}r_h
 =2\sum_eA_e\Delta_e\cdot u_e.
-$$
+```
 
 By (MS.1),
 
-$$
+```math
 \Delta_e\cdot u_e=\cos\theta_e-1.
-$$
+```
 
 Substitution proves (MS.10). `square`
 
@@ -291,33 +291,33 @@ exactly the correlations a closing multi-train theorem must control.
 
 Differentiate at the origin.  The first derivative of one actual diameter square is
 
-$$
+```math
 \boxed{
 D_h'(0)[x]
 =2\sum_e\varepsilon_{he}
 (r_h\cdot Ju_e)x_e.
 }
 \tag{MS.11}
-$$
+```
 
 Let `G` be the `|H| x |mathcal L|` matrix
 
-$$
+```math
 G_{he}:=2\varepsilon_{he}(r_h\cdot Ju_e).
 \tag{MS.12}
-$$
+```
 
 Equation (MS.8) immediately gives
 
-$$
+```math
 \boxed{G^{\mathsf T}\beta=0,
 \qquad \beta_h>0.}
 \tag{MS.13}
-$$
+```
 
 The exact second variation of the weighted square sum is
 
-$$
+```math
 \boxed{
 {1\over2}\Psi''(0)[x,x]
 =
@@ -326,7 +326,7 @@ $$
 -\sum_eA_ex_e^2.
 }
 \tag{MS.14}
-$$
+```
 
 Again, no sign is claimed.  Formula (MS.14) identifies the precise metric quadratic
 form left after the first-order positive-spanning cusp.
@@ -351,17 +351,17 @@ If `Gx=0`, the corresponding selected multi-shear tangent preserves every contac
 every actual diameter length to first order.  Canonical mixed infinitesimal rigidity
 then makes it Euclidean.  The preceding paragraph forces `x=0`.  Therefore
 
-$$
+```math
 \boxed{\operatorname{rank}G=|\mathcal L|.}
 \tag{MS.15}
-$$
+```
 
 Together with the strictly positive left-kernel vector (MS.13), this implies
 
-$$
+```math
 \boxed{|H|\ge|\mathcal L|+1.}
 \tag{MS.16}
-$$
+```
 
 The count itself is not the main gain; related global train/diameter counts already
 exist.  The new information is that the full-rank matrix in (MS.15) has **tree-path
@@ -374,28 +374,28 @@ row support** by (MS.5), and interval support on every selected dual-tree backbo
 In the current `t<=1.844` full-core Type-II branch, the hostile-audited phase-resolved
 work gives retained smallest-leaf outer-to-outer pair weight
 
-$$
+```math
 P_V>0.0848-o(1).
 \tag{MS.17}
-$$
+```
 
 Every retained pair weight is at most one.  Therefore there are more than
 
-$$
+```math
 \boxed{0.0848D-o(D)}
 \tag{MS.18}
-$$
+```
 
 distinct smallest-leaf outer-to-outer trains with positive retained pair weight.
 They lie in one phase and are pairwise noncrossing.  Applying MS.1--MS.6 to this
 family gives:
 
-$$
+```math
 \boxed{
 \text{an exact finite }(0.0848D-o(D))\text{-parameter contact-preserving shear chart,}
 }
 \tag{MS.19}
-$$
+```
 
 whose actual-diameter rows are supported on simple paths of the leaf complement dual
 tree.

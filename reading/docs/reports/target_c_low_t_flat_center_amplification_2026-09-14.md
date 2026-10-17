@@ -24,88 +24,88 @@ Fix `epsilon_0=pi/12`. Empty-pentagon stability supplies `theta_0>0` such that e
 pentagon with residual below `theta_0` is isolate-free and has a distinguished
 boundary triple `l-m-r` satisfying
 
-$$
+```math
 |l-m|=|m-r|=1,\qquad \angle lmr>\pi-\epsilon_0.
 \tag{LC.1}
-$$
+```
 
 Call it good. Let `G_0` count good pentagons, `V_flat` count distinct distinguished
 middle vertices, let `H_flat` be the maximum number of endpoint-disjoint hidden chords after choosing one center-to-shoulder diagonal from each good pentagon, and let `C_flat` be the maximum number of pairwise vertex-disjoint distinguished three-vertex chains. Then
 
-$$
+```math
 \boxed{V_{flat}=G_0.}
 \tag{LC.2}
-$$
+```
 
 On a convergent Type-II subsequence put
 
-$$
+```math
 t=(q-k)/D\to t,\quad \kappa=k/D\to\kappa,\quad
 \delta=(b-P_F)/D\to\delta,
-$$
+```
 
 and
 
-$$
+```math
 A(t,\delta,\kappa)=\pi+C_0-{5t\over2}+\delta+{\kappa\over2},
 \qquad C_0=2\sqrt{\Delta_2}+0.00042.
-$$
+```
 
 The low-t pentagon theorem and residual deletion give
 
-$$
+```math
 \boxed{{V_{flat}\over D}\ge
 A(t,\delta,\kappa)-{R_F\over\theta_0D}-o(1),}
 \tag{LC.3}
-$$
+```
 
 and the flat center/shoulder angle pattern gives
 
-$$
+```math
 \boxed{{H_{flat}\over D}\ge {1\over4}
 \left(A(t,\delta,\kappa)-{R_F\over\theta_0D}\right)-o(1).}
 \tag{LC.4}
-$$
+```
 
 The existing three-vertex conflict bound gives
 
-$$
+```math
 \boxed{{C_{flat}\over D}\ge {1\over13}
 \left(A(t,\delta,\kappa)-{R_F\over\theta_0D}\right)-o(1).}
 \tag{LC.5}
-$$
+```
 
 On `R_F=o(D)`, at the current proof-only floor
 `t_42=C_146+0.0013751=1.8208886379794447...`, and with the permissive
 `delta=kappa=0`,
 
-$$
+```math
 \boxed{{V_{flat}\over D}\ge0.4944166723690961\ldots-o(1),}
 \tag{LC.6}
-$$
-$$
+```
+```math
 \boxed{{H_{flat}\over D}\ge0.1236041680922740\ldots-o(1),}
 \tag{LC.7}
-$$
-$$
+```
+```math
 \boxed{{C_{flat}\over D}\ge0.0380320517206997\ldots-o(1).}
 \tag{LC.8}
-$$
+```
 
 Throughout `t<=1.8585`, dropping nonnegative `delta,kappa`,
 
-$$
+```math
 \boxed{{V_{flat}\over D}\ge0.4003882673177079\ldots-o(1),}
 \tag{LC.9}
-$$
-$$
+```
+```math
 \boxed{{H_{flat}\over D}\ge0.1000970668294269\ldots-o(1),}
 \tag{LC.10}
-$$
-$$
+```
+```math
 \boxed{{C_{flat}\over D}\ge0.0307990974859775\ldots-o(1).}
 \tag{LC.11}
-$$
+```
 
 The center count (LC.6) is more than `14.7` times the old coarse
 `f_*/5=0.0334249286...` bound; the disjoint-chain count (LC.8) is more than `2.95`
@@ -125,10 +125,10 @@ pentagons shared the same distinguished middle `m`.
 If `d(m)>=3`, the two good face sectors are disjoint and every remaining sector is
 strictly larger than `pi/3`. Their total angle would therefore exceed
 
-$$
+```math
 2(\pi-\pi/12)+(d(m)-2){\pi\over3}
 \ge {13\pi\over6}>2\pi,
-$$
+```
 
 impossible.
 
@@ -143,18 +143,18 @@ is again impossible. Thus (LC.2) holds.
 
 The low-t pentagon-sea theorem gives
 
-$$
+```math
 {p_5\over D}\ge A(t,\delta,\kappa)-o(1).
 \tag{LC.12}
-$$
+```
 
 Exceptional-face residuals are nonnegative and sum to at most `R_F`, so at most
 `R_F/theta_0` pentagons fail the good-face threshold. Hence
 
-$$
+```math
 G_0\ge p_5-R_F/\theta_0.
 \tag{LC.13}
-$$
+```
 
 Together with (LC.2), this proves (LC.3).
 
@@ -170,18 +170,18 @@ pentagon by Section 1. It can be a shoulder of at most three good pentagons, bec
 four disjoint shoulder sectors larger than `7pi/12` exceed `2pi`. If it is itself a
 flat center, it can be a shoulder of at most one other good pentagon, because
 
-$$
+```math
 {11\pi\over12}+2{7\pi\over12}>2\pi.
 \tag{LC.14}
-$$
+```
 
 Therefore, in the graph containing one chosen hidden chord per good pentagon, a center
 endpoint has total chord incidence at most two and the other endpoint has incidence at
 most three. Each chosen chord conflicts with at most
 
-$$
+```math
 (2-1)+(3-1)=3
-$$
+```
 
 other chosen chords. Greedy matching retains at least `G_0/4` endpoint-disjoint
 hidden chords, proving (LC.4). This improves the generic factor `1/9` from the

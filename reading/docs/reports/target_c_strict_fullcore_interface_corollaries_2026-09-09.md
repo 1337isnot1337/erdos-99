@@ -17,70 +17,70 @@
 
 HA proves that the GP coefficient two is uniformly unattainable: there exists an absolute `eta_IF>0` such that every sufficiently large full-core near-circle survivor satisfies
 
-$$
+```math
 Q_B\ge(2+\eta_{IF})D-o(D).
 \tag{SC.1}
-$$
+```
 
 Since `Q>=Q_B`, HBd's exact near-circle identity
 
-$$
+```math
 Q+2s_C=(\pi+o(1))D
 \tag{SC.2}
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{
 s_C
 \le
 \frac{\pi-2-\eta_{IF}}2D+o(D).}
 \tag{SC.3}
-$$
+```
 
 HBd also gives
 
-$$
+```math
 d_H+s_Z=s_C+o(D),
 \tag{SC.4}
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 d_H+s_Z
 \le
 \frac{\pi-2-\eta_{IF}}2D+o(D).}
 \tag{SC.5}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{d_H
 \le
 \frac{\pi-2-\eta_{IF}}2D+o(D).}
 \tag{SC.6}
-$$
+```
 
 Since `d_H=q-h` and `q=(\pi+o(1))D`,
 
-$$
+```math
 \boxed{
 h
 \ge
 \frac{\pi+2+\eta_{IF}}2D-o(D).}
 \tag{SC.7}
-$$
+```
 
 Thus the full actual diameter graph has a strict linear separation above the baseline coefficient
 
-$$
+```math
 \frac{\pi+2}{2}
 =2.57079632679\ldots .
-$$
+```
 
 The same `eta_IF/2` improves the baseline upper bound on the cycle-edge deletion count in the TC maximal-thrackle completion.
 
@@ -92,25 +92,25 @@ No numerical value of `eta_IF` is claimed. HA proves existence by excluding ever
 
 Equation SC.1 and nonnegativity of internal face defect give
 
-$$
+```math
 Q\ge Q_B\ge(2+\eta_{IF})D-o(D).
-$$
+```
 
 Insert in SC.2:
 
-$$
+```math
 2s_C
 =(\pi+o(1))D-Q
 \le(\pi-2-\eta_{IF})D+o(D),
-$$
+```
 
 which is SC.3.
 
 Equation SC.4 and `s_Z>=0` give SC.5-SC.6. Finally
 
-$$
+```math
 h=q-d_H
-$$
+```
 
 and `q=(pi+o(1))D` give SC.7.
 
@@ -120,17 +120,17 @@ and `q=(pi+o(1))D` give SC.7.
 
 Before HA, GP alone supplied only
 
-$$
+```math
 Q_B\ge2D-o(D),
-$$
+```
 
 which allowed the baseline limiting values
 
-$$
+```math
 s_C/D\to\frac{\pi-2}{2},
 \qquad
 h/D\to\frac{\pi+2}{2}.
-$$
+```
 
 HA eliminates that entire equality package. Therefore any future compactness argument at the baseline diameter-support coefficient may treat it as a forbidden limit, exactly as HKN treats the scalar Hemmi threshold on PR #130.
 

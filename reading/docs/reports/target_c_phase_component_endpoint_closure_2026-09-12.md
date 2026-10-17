@@ -28,32 +28,32 @@ already impossible, and isolates the exact multi-grain premise still missing.
 The current canonical endpoint is the Section-104 quantitative phase/corridor gap.
 The post-104 proof-only chain gives, through the safe Section-118 window,
 
-$$
+```math
  \sigma\le 0.0088,
  \qquad
  \frac{A_4}{D^2}\ge A_*(\sigma)-o(1),
  \qquad
  \frac{T}{D}\le C_T(\sigma)+o(1),
-$$
+```
 
 where `A_4` is the number-weighted area of the strict rhombus faces in one wrapping
 carrier and `T` is its number of complete local train segments. The same chain gives
 three principal complement-gap routes, with total normalized route length bounded by
 
-$$
+```math
  M(\theta)+\frac{16}{3}\sigma+o(1),
  \qquad
  M(\theta):=\sin(\theta/2)+2\sin\theta.
-$$
+```
 
 For one fixed limiting train-direction interval, the corrected Section-118
 directional leakage bound is
 
-$$
+```math
  B_*(\sigma)=\frac{35}{3}\sigma+\kappa_0,
  \qquad
  \kappa_0=0.0136038132609408\ldots,
-$$
+```
 
 once `\sigma\ge y_0=0.0012822850180674...`. This is the number of bad trains per
 unit source diameter in that interval, not the number of endpoint occurrences.
@@ -79,16 +79,16 @@ direction belongs to one of at most `r_j` projective direction windows whose wid
 tend to zero, and that the Section-118 bad-train capacity applies to each such
 window. Put
 
-$$
+```math
  R_D=\text{number of strict-rhombus faces},
  \qquad
  \frac{R_D}{D^2}\ge r-o(1).
-$$
+```
 
 Assume also that all strict-rhombus crossing pairs belong to the listed phase
 components. Then
 
-$$
+```math
 \boxed{
  4\sqrt r
  \le
@@ -96,7 +96,7 @@ $$
    +2B_*(\sigma)\sum_{j=1}^k r_j .
 }
 \tag{PC.1}
-$$
+```
 
 The conclusion uses all source points in the carrier boundary accounting. It does not
 delete contact-isolated source points, and it does not extend the ZR/ZF affine-kernel
@@ -104,18 +104,18 @@ theorem beyond the nonisolated positive-contact core.
 
 In particular, at the safe Section-118 endpoint, the scalar certificate gives
 
-$$
+```math
 \begin{aligned}
  r&=0.4703752868004241\ldots,\\
  \theta&=2.7047792352154936\ldots,\\
  M(\theta)&=1.8223523984668937\ldots,\\
  B_*(\sigma)&=0.1162704799276074\ldots,
 \end{aligned}
-$$
+```
 
 and hence
 
-$$
+```math
 4\sqrt r-
 M(\theta)-\frac{16}{3}\sigma
 -2B_*(\sigma)\sum_jr_j
@@ -123,14 +123,14 @@ M(\theta)-\frac{16}{3}\sigma
 0.8740707140169731\ldots
 -0.2325409598552148\ldots\sum_jr_j.
 \tag{PC.2}
-$$
+```
 
 Therefore the full-core carrier is impossible whenever
 
-$$
+```math
 \boxed{\sum_jr_j\le3.}
 \tag{PC.3}
-$$
+```
 
 The strongest immediate case is one phase-collapsed train component: it may use all
 three labels, so `\sum_jr_j\le3` holds. Thus:
@@ -150,12 +150,12 @@ graph is a simple triangle-free graph: each vertex is a train segment, each edge
 strict-rhombus crossing, and three pairwise crossing trains are forbidden by the
 projective-angle theorem. Mantel's inequality therefore gives
 
-$$
+```math
  R_D\le \frac{T_D^2}{4},
  \qquad
  T_D\ge2\sqrt{R_D}.
 \tag{PC.4}
-$$
+```
 
 Every complete train has exactly two distinct physical terminal edge occurrences,
 including terminals on hole boundaries. Hence the carrier has exactly `2T_D` train
@@ -164,12 +164,12 @@ endpoint occurrences.
 Let `W_1,W_2,W_3` be the three principal complement-gap route pieces. The exact
 Section-104 gap bookkeeping gives
 
-$$
+```math
  \sum_{i=1}^3\frac{|W_i|}{D}
  \le
  M(\theta)+\frac{16}{3}\sigma+o(1).
 \tag{PC.5}
-$$
+```
 
 Here the `13\sigma/6` term bounds the perturbation of the three chord lengths from
 `M(\theta)`, and the `19\sigma/6` term bounds their total route excess. This is only
@@ -181,30 +181,30 @@ Consider one phase window in component `j`. A train in this window with an endpo
 off the principal routes is a bad train in the sense of Section 117/118. The
 proof-only Section-118 leakage theorem bounds its count by
 
-$$
+```math
  B_*(\sigma)D+o(D).
 \tag{PC.6}
-$$
+```
 
 Each such train has at most two off-principal endpoint occurrences. Consequently all
 off-principal endpoints belonging to the `r_j` windows of component `j` number at
 most
 
-$$
+```math
  2r_jB_*(\sigma)D+o(D).
 \tag{PC.7}
-$$
+```
 
 The windows are assumed to be assigned to the components without double counting a
 train. Summing (PC.7) over components and adding (PC.5) gives
 
-$$
+```math
  2T_D
  \le
  \left(M(\theta)+\frac{16}{3}\sigma\right)D
  +2B_*(\sigma)D\sum_jr_j+o(D).
 \tag{PC.8}
-$$
+```
 
 Combining (PC.4) and (PC.8), dividing by `D`, and passing to the limit proves (PC.1).
 The endpoint arithmetic in (PC.2)--(PC.3) is independently reproduced by the
@@ -229,12 +229,12 @@ sub-`D` competitor.
 
 The new remaining structural target is now precise:
 
-$$
+```math
 \boxed{
 \text{show that the total number of genuinely distinct phase windows carrying all
 carrier trains is at most three,}
 }
-$$
+```
 
 or weaken it to a weighted endpoint-capacity inequality that replaces the coarse term
 `2B_*\sum_jr_j`. The existing canonical phase-cut and coherent-grain theorems only

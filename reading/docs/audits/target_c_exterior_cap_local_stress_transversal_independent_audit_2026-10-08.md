@@ -20,28 +20,29 @@ The strict-motion consequence is the already canonical `C-UNLOADED-KKT-STRESS-TR
 
 Let `A` be a canonical contact-minimal then actual-diameter-pair-minimal C-II source, with `D>=9`, full source retained, nonisolated positive-contact core `V`, actual diameter-endpoint set `B`, unit-contact set `C`, actual diameter-pair set `H`, and normalized KKT stress polytope
 
-$$
+```math
 \mathcal P=\{(\alpha,\beta)\ge0:R^T(\alpha,-\beta)=0,\ \sum_{h\in H}\beta_h=1\}.
-$$
+```
 
 Write `s_Z=dim_aff(P)`, as in canonical Section 64.1. Assume the canonical actual exterior-cap separator supplies a unit vector `w` and `g>1` such that every `b in B` has `|w dot b|>=g`, and every actual diameter pair has one endpoint with `w dot b<=-g` and the other with `w dot b>=g`.
 
 For each `t` in `(-g+1,g-1)`, use shores `V_-={p in V:w dot p<=t}` and `V_+={p in V:w dot p>t}`. Let `C_t` be the actual unit contacts crossing these shores, orient each crossing edge `e=p_e q_e` from the negative to positive shore, and set
 
-$$
+```math
 d_e=w\cdot(q_e-p_e)>0,\qquad
 R_t=\{p_e:e\in C_t\}.
-$$
+```
 
 Then:
 
 1. `R_t` is a nonempty subset of the unloaded core `V\\B`, and every `p in R_t` lies in the strip `t-1 < w dot p <= t`.
 2. For every normalized stress `(alpha,beta) in P`,
 
-   $$
+   ```math
    \sum_{e\in C_t}\alpha_e d_e
    =\sum_{h\in H}\beta_h d_h\ge2g.
-   $$
+   
+   ```
 
    Hence `sum_{e in C_t} alpha_e >=2g`, since each unit-contact projection `d_e` is at most one.
 3. There is a nonempty `U_t subset R_t` with `|U_t|<=s_Z+1` such that every normalized stress has positive contact coefficient on at least one contact incident to `U_t`. Thus deleting `U_t` removes every normalized KKT stress and, by the canonical unloaded-transversal theorem, permits a strict reduced-source motion.
@@ -53,27 +54,27 @@ The cap-area hypothesis is needed only for the last asymptotic count: Audit.139 
 
 For a cut level `t`, a crossing unit contact has a unique orientation from `x_p<=t` to `x_q>t`. Its projected length is
 
-$$
+```math
 d_e=x_q-x_p\in(0,1],
-$$
+```
 
 so `t-1<x_p<=t`. Since `t>-g+1` and `t<g-1`, the strip `(t-1,t]` lies strictly between `-g` and `g`. It contains no loaded endpoint. Every point in `R_t` is a contact vertex, hence is in `V`, and is unloaded.
 
 For any velocity field on the core, KKT stationarity gives the virtual-work identity
 
-$$
+```math
 \sum_{e\in C}\alpha_e\,\dot\ell_e
  =\sum_{h\in H}\beta_h\,\dot\ell_h,
-$$
+```
 
 where `dot ell` is the derivative of half the squared pair distance. Give every core vertex on the negative shore velocity `+w` and every core vertex on the positive shore velocity `-w`. Contacts internal to either shore have zero derivative. A crossing contact has `dot ell_e=-2d_e`. Each actual diameter pair also crosses the cut, has projected span `d_h>=2g`, and has `dot ell_h=-2d_h`. Substitution and cancellation of `-2` prove the equality. Since `sum beta_h=1` and every `d_h>=2g`, the right side is at least `2g`. This proves the strict positivity of the crossing contact load for every normalized stress.
 
 For each `u in R_t`, define the nonnegative affine functional
 
-$$
+```math
 f_u(\alpha,\beta)=\sum_{e\ni u}\alpha_e,
 \qquad F_u=\{s\in\mathcal P:f_u(s)=0\}.
-$$
+```
 
 The force inequality implies `intersection_{u in R_t} F_u` is empty: every stress has positive coefficient on some crossing edge, whose negative endpoint belongs to `R_t`. Choose an inclusion-minimal subfamily `U_t` with empty intersection. For each `u in U_t`, minimality supplies a stress `s_u` in all `F_v` for `v in U_t\\{u}` and outside `F_u`. Thus `f_u(s_u)>0` and `f_v(s_u)=0` for every other selected `v`.
 

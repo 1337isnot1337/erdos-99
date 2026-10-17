@@ -12,17 +12,17 @@ Let A={tau_1,...,tau_m} and B={sigma_1,...,sigma_n} be the two pairwise-noncross
 
 The new joint bound is
 
-$$
+```math
 \boxed{t_A(h)+t_B(h)\le 2.}
 \tag{1}
-$$
+```
 
 Therefore, if N_i^A and N_j^B count switching diameter rows at adjacent selected interfaces,
 
-$$
+```math
 \boxed{\sum_i N_i^A+\sum_j N_j^B\le 2h.}
 \tag{2}
-$$
+```
 
 Proof. Complete mutual crossing puts the train terminals on four disjoint outer-boundary host intervals Q_A^-,Q_B^-,Q_A^+,Q_B^+ in cyclic order. A boundary vertex p changes shore membership at most once along the ordered A cuts, and only if p lies on an A host interval. Write this change count c_A(p) in {0,1}; define c_B(p) similarly. The four host intervals are disjoint, so c_A(p)+c_B(p)<=1.
 
@@ -37,35 +37,35 @@ The shared-switch graph is bipartite between Q and its neighboring host side(s),
 
 For the current fixed-star rectangle,
 
-$$
+```math
 |A|,|B|\ge(c_*-o(1))D,\qquad c_*=\frac{\kappa^4}{16\pi^3C_KM_K}.
-$$
+```
 
 Current main gives s_A>=ceil(|A|/2)-1 and s_B>=ceil(|B|/2)-1, so
 
-$$
+```math
 s_A+s_B\ge(c_*-o(1))D.
 \tag{3}
-$$
+```
 
 At the rooted endpoint h=pi D+o(D), (2) gives
 
-$$
+```math
 \sum_i N_i^A+\sum_j N_j^B\le(2pi+o(1))D.
 \tag{4}
-$$
+```
 
 Set H_*=ceil(4pi/c_*)+1. Fewer than (c_*/2+o(1))D active interfaces can have more than H_* switching rows. Hence at least
 
-$$
+```math
 \boxed{(c_*/2-o(1))D}
-$$
+```
 
 interfaces across the two shores have between 1 and H_* switching rows, and one shore contains at least
 
-$$
+```math
 \boxed{(c_*/4-o(1))D}
-$$
+```
 
 such bounded cusps.
 

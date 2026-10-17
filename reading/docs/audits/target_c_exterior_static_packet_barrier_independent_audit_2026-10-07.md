@@ -34,15 +34,15 @@ Pin every retained positive-contact core vertex in `V\R`; let the free labels be
 
 For `e=ij∈E`, define the lower-distance row on free velocities by
 
-$$
+```math
 a_e(u)=(p_i-p_j)\cdot(u_i-u_j),
-$$
+```
 
 with zero velocity at pins. Define `E_+` as the union of the supports of all nonnegative row dependencies
 
-$$
+```math
 \lambda_e\ge0,\qquad \sum_{e\in E}\lambda_e a_e=0.
-$$
+```
 
 Because `E` is finite, summing one witness dependency for each edge of `E_+` gives a single dependency positive on every edge in `E_+`.
 
@@ -60,10 +60,10 @@ For any `e∉E_+`, there is a velocity `u_e` with `a_f(u_e)≥0` for all `f∈E`
 
 Choose a vector `w` in the kernel of the supported rows and outside the finite union of the proper subspaces `w_i=w_j`, `ij∈E_+`. A sufficiently small perturbation of `u_0` in direction `w` preserves the positive derivatives on `E\E_+` and gives nonzero relative velocity on every edge in `E_+`. For the resulting velocity `u`, every initially unit free pair has exact squared-length change
 
-$$
+```math
 |p_i+tu_i-p_j-tu_j|^2-1
 =2t\,a_{ij}(u)+t^2|u_i-u_j|^2>0\qquad(t>0).
-$$
+```
 
 The inequality is first-order strict outside `E_+` and second-order strict on `E_+`. This is a finite straight motion; no first-order condition is being integrated without a second-order opening term.
 

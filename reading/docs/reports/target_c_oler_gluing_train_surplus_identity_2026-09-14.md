@@ -28,16 +28,16 @@ The identity also gives a stronger unconditional chamber-slack floor than the cu
 
 Use
 
-$$
+```math
 a_0={\sqrt3\over2},\qquad c_0={a_0\over2}={\sqrt3\over4}.
-$$
+```
 
 Let `K=conv(A)` be the full source hull and `F` the force hull. Retain the canonical
 Section-77 notation:
 
 - `N_F=|A\cap F|`, `Z_ext=n-N_F`;
 - `R_4` strict rhombus faces and
-  $A_4=a_0R_4+E_4$;
+  $`A_4=a_0R_4+E_4`$;
 - `f,Q,q,k` the exceptional-face, loaded-hull, and mixed-defect currencies;
 - `a` the number of convex outer pockets inside `F`;
 - `T=q-k+2f` the complete stopped-train count;
@@ -46,45 +46,45 @@ Section-77 notation:
 
 Define the force-hull Oler slack
 
-$$
+```math
 \Sigma_F:={\operatorname{area}(F)\over a_0}
 +{P_F\over2}+1-N_F\ge0
 \tag{G.1}
-$$
+```
 
 and the canonical chamber slack
 
-$$
+```math
 \Sigma_{ch}:={A_{ch}\over a_0}+{P_{ch}\over2}+s_{ch}-Z_{ch}\ge0.
 \tag{G.2}
-$$
+```
 
 For the exterior caps of Section 77.2, let `A_i,P_i,z_i` have the same meaning there
 and define their individual Oler slacks
 
-$$
+```math
 \sigma_i^{ext}:={A_i\over a_0}+{P_i\over2}-1-z_i\ge0,
 \qquad
 \Sigma_{ext}:=\sum_i\sigma_i^{ext}.
 \tag{G.3}
-$$
+```
 
 Finally define the full-source Oler slack
 
-$$
+```math
 \Sigma_K:={\operatorname{area}(K)\over a_0}
 +{P_K\over2}+1-n,
 \tag{G.4}
-$$
+```
 
 and the punctured-packing slack
 
-$$
+```math
 \boxed{
 \Omega_K:=\Sigma_K-{E_4\over a_0}\ge0.
 }
 \tag{G.5}
-$$
+```
 
 The nonnegativity in (G.5) is exactly canonical Section 68.9 after dividing by `a_0`.
 
@@ -103,109 +103,109 @@ face/cap Oler additivity.
 
 Section 77.2 gives
 
-$$
+```math
 \sum_iA_i=\operatorname{area}(K)-\operatorname{area}(F),
-$$
+```
 
-$$
+```math
 \sum_iP_i=P_K+P_F-2P_{com},
-$$
+```
 
 where `P_com` is the total length of force-hull sides already lying on `partial K`,
 and the `r` nondegenerate caps contain exactly the `Z_ext` exterior source points.
 Therefore
 
-$$
+```math
 \begin{aligned}
 \Sigma_{ext}
 &={\operatorname{area}(K)-\operatorname{area}(F)\over a_0}
  +{P_K+P_F\over2}-P_{com}-r-Z_{ext}.
 \end{aligned}
 \tag{G.6}
-$$
+```
 
 Adding (G.1), using `n=N_F+Z_ext`, gives the finite identity
 
-$$
+```math
 \boxed{
 \Sigma_F+\Sigma_{ext}
 =\Sigma_K+P_F-P_{com}-r.
 }
 \tag{G.7}
-$$
+```
 
 Every noncommon force-hull side is the closing chord of one nondegenerate exterior
 cap. Its endpoints are distinct source points, so its length is at least one. Hence
 
-$$
+```math
 \boxed{
 L_{cap}:=P_F-P_{com}-r\ge0.
 }
 \tag{G.8}
-$$
+```
 
 ## 2. Chamber slack differs from force-hull slack by an exact train term
 
 The chamber tiling gives
 
-$$
+```math
 \operatorname{area}(F)=A_4+A_{ch},
 \qquad
 N_F=m+Z_{ch},
 \tag{G.9}
-$$
+```
 
 and canonical Section 77 gives
 
-$$
+```math
 m=R_4+f+q-k+1.
 \tag{G.10}
-$$
+```
 
 The exact chamber-perimeter decomposition is
 
-$$
+```math
 P_{ch}=(4f+Q)+(b+P_F-2q+2a).
 \tag{G.11}
-$$
+```
 
 Using the outer-walk identity
 
-$$
+```math
 b+Q=2(q-k),
 \tag{G.12}
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{
 P_{ch}-P_F=4f-2k+2a.
 }
 \tag{G.13}
-$$
+```
 
 Subtract (G.1) from (G.2), then use (G.9)--(G.13) and
 `A_4/a_0=R_4+E_4/a_0`:
 
-$$
+```math
 \begin{aligned}
 \Sigma_{ch}-\Sigma_F
 &=-{A_4\over a_0}+{P_{ch}-P_F\over2}+s_{ch}-1+m\\
 &=q+4f-2k+2a-{E_4\over a_0}.
 \end{aligned}
 \tag{G.14}
-$$
+```
 
 Since `T=q-k+2f`,
 
-$$
+```math
 q+4f-2k=2T-q=2\left(T-{q\over2}\right).
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 \Sigma_{ch}
 =\Sigma_F
@@ -213,7 +213,7 @@ $$
 +2a-{E_4\over a_0}.
 }
 \tag{G.15}
-$$
+```
 
 No inequality has been used.
 
@@ -221,7 +221,7 @@ No inequality has been used.
 
 Add (G.7) to (G.15) and use (G.5):
 
-$$
+```math
 \boxed{
 \Sigma_{ch}+\Sigma_{ext}
 =\Omega_K
@@ -229,17 +229,17 @@ $$
 +2a+L_{cap}.
 }
 \tag{G.16}
-$$
+```
 
 Every term on the right is nonnegative. In particular,
 
-$$
+```math
 \boxed{
 \Sigma_{ch}+\Sigma_{ext}
 \ge2\left(T-{q\over2}\right).
 }
 \tag{G.17}
-$$
+```
 
 This is the exact correction to the proposed additive Oler-gluing route. Internal
 boundary cancellation does not leave only the global source slack. It necessarily
@@ -250,7 +250,7 @@ exterior-cap chord corrections.
 
 The audited-working AG42 theorem gives in Type II
 
-$$
+```math
 {T-q/2\over D}
 \ge C_*-o(1),
 \qquad
@@ -258,11 +258,11 @@ C_*:=2\sqrt{\Delta_2}+0.00042,
 \qquad
 \Delta_2={\pi\over2\sqrt3}.
 \tag{G.18}
-$$
+```
 
 Therefore (G.17) yields
 
-$$
+```math
 \boxed{
 \liminf {\Sigma_{ch}+\Sigma_{ext}\over D}
 \ge2C_*
@@ -270,7 +270,7 @@ $$
 =3.810091227455829\ldots .
 }
 \tag{G.19}
-$$
+```
 
 This is not a contradiction: the local cap/chamber slacks are allowed to contain this
 mandatory topological train correction.
@@ -279,31 +279,31 @@ mandatory topological train correction.
 
 Equation (G.15), `Sigma_F>=0`, and `a>=0` give
 
-$$
+```math
 \Sigma_{ch}
 \ge2\left(T-{q\over2}\right)-{E_4\over a_0}.
 \tag{G.20}
-$$
+```
 
 Canonical Section 68 gives
 
-$$
+```math
 E_4<c_0P_K={a_0\over2}P_K,
-$$
+```
 
 while Cauchy's perimeter-diameter inequality gives `P_K<=pi D`. Hence
 
-$$
+```math
 \boxed{
 \Sigma_{ch}
 >2\left(T-{q\over2}\right)-{\pi\over2}D.
 }
 \tag{G.21}
-$$
+```
 
 Combining with AG42,
 
-$$
+```math
 \boxed{
 \liminf {\Sigma_{ch}\over D}
 \ge
@@ -311,13 +311,13 @@ $$
 =2.239294900660933\ldots .
 }
 \tag{G.22}
-$$
+```
 
 This improves the current bootstrap floor
 
-$$
+```math
 \Sigma_{ch}/D\ge2.158634412942893\ldots-o(1)
-$$
+```
 
 by about `0.08066049`.
 
@@ -333,9 +333,9 @@ internal chamber boundaries and leaves only the outer source-hull boundary. Equa
 
 Any valid gluing theorem must retain or separately cancel
 
-$$
+```math
 2(T-q/2)+2a+L_{cap}.
-$$
+```
 
 The first term alone is at least `3.81009D-o(D)` in Type II. Therefore an upper bound
 of the schematic form
@@ -358,14 +358,14 @@ The revised closing target is one of the following:
 
 Thus the gluing route remains live, but its correct invariant is
 
-$$
+```math
 \boxed{
 \Sigma_{ch}+\Sigma_{ext}
 -2(T-q/2)-2a-L_{cap}
 =\Omega_K\ge0,
 }
 \tag{G.23}
-$$
+```
 
 not `Sigma_ch` by itself.
 

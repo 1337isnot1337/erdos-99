@@ -68,15 +68,15 @@ the swaps weakly shortens every old diameter and strictly shortens at least one.
 **Proof.** Suppose p in L_i and q in L_j, i != j, form an old diameter, and put
 r=q-p. The individual i move gives r-Delta_i and strict shortening implies
 
-$$
+```math
  r\cdot\Delta_i>\frac{|\Delta_i|^2}{2}>0.
-$$
+```
 
 The individual j move gives r+Delta_j and strict shortening implies
 
-$$
+```math
  r\cdot\Delta_j<-\frac{|\Delta_j|^2}{2}<0.
-$$
+```
 
 This contradicts coherence. Thus an old diameter has both endpoints in one
 moving subset, both fixed, or exactly one moving endpoint. In the first two
@@ -103,16 +103,16 @@ the simultaneous argument. It does not establish feasibility of inactive pairs.
 Let B be all old diameter endpoints, H all old diameter pairs, q=|B|, h=|H|,
 and d_H=q-h. Put
 
-$$
+```math
  L_D=\sqrt{D^2-1},\qquad \gamma_D=D-L_D.
-$$
+```
 
 Assume D>1. Original moving subsets can include contact isolates. All individual
 move amplitudes are at most s, with
 
-$$
+```math
  \boxed{2s<\gamma_D.}                                      \tag{1}
-$$
+```
 
 Define T to contain every source pair strictly longer than L_D.
 
@@ -139,15 +139,15 @@ from all B vertices, adding one parent edge per newly reached z in Z. This
 constructs a forest F with exactly |Z| edges and one designated B root r(z) for
 each z. No H edge is in F. Define once at the original source
 
-$$
+```math
  J=(E(G)\setminus H)\setminus E(F).
-$$
+```
 
 The edge bound gives
 
-$$
+```math
  \boxed{|J|=|E(G)|-h-|Z|\le q-h=d_H.}                      \tag{2}
-$$
+```
 
 Retain the original assignment of every B vertex and every nonisolated point.
 Overwrite the assignment of each z with the binary displacement of r(z),
@@ -186,11 +186,11 @@ depends on at most two variables. The original all-zero assignment is feasible.
 Consequently a bad two-variable pattern can only be 10, 01, or 11. Its clause is,
 respectively,
 
-$$
+```math
  x_i\Rightarrow x_j,\qquad
  x_j\Rightarrow x_i,\qquad
  \neg(x_i\wedge x_j).                                     \tag{3}
-$$
+```
 
 A bad one-variable pattern forces that variable to zero. These are exactly
 zero-satisfiable Horn clauses of length at most two. This observation applies to
@@ -203,11 +203,11 @@ be all variables reachable from i along E, including i itself.
 
 **Theorem 3.** A feasible assignment with x_i=1 exists if and only if
 
-$$
+```math
  C(i)\cap R=\varnothing
  \quad\hbox{and}\quad
  \text{no pair of K has both endpoints in C(i).}             \tag{4}
-$$
+```
 
 When (4) holds, the indicator of C(i) is the least such assignment. When it
 fails, a path i -> r in R, or two paths from i to the ends of a pair in K, is
@@ -248,19 +248,19 @@ not turn the edges into actual contacts or create a global Schur kernel.
 The next statement uses no optimality, KKT, train embedding, or diameter.
 Let u,w be perpendicular unit vectors. Let
 
-$$
+```math
  \Delta_i=s_i w_i,\quad \Delta_j=s_j w_j,
  \qquad 0<s_i,s_j\le\frac1{10},
  \qquad |w_i-w|,|w_j-w|\le\frac1{10},
-$$
+```
 
 where w_i,w_j are unit vectors. Let p,q be an old noncontact in a unit-separated
 source, with r=q-p. Their four lower-distance states have vectors
 
-$$
+```math
  r,\quad r-\Delta_i,\quad r+\Delta_j,
  \quad r+\Delta_j-\Delta_i.                                \tag{5}
-$$
+```
 
 Call p **axially bracketed** if it has unit neighbors p+a_+ and p+a_- such that
 |a_+-u|<=1/10 and |a_-+u|<=1/10. The same definition applies at q.
@@ -275,36 +275,36 @@ clause in the aligned lower Horn system has two unbracketed source endpoints.
 both single-move lengths are strictly greater than one. Subtracting squared
 distances gives
 
-$$
+```math
  |r+\Delta_j-\Delta_i|^2-|r-\Delta_i|^2
  =2s_j r\cdot w_j+s_j^2-2s_i s_j w_i\cdot w_j<0,
-$$
+```
 
-$$
+```math
  |r+\Delta_j-\Delta_i|^2-|r+\Delta_j|^2
  =-2s_i r\cdot w_i+s_i^2-2s_i s_j w_i\cdot w_j<0.
-$$
+```
 
 Hence r dot w_j < s_i <=1/10 and r dot w_i > -s_j >=-1/10.
 Also R=|r|<=1+|Delta_j-Delta_i|<=6/5. Consequently
 
-$$
+```math
  |r\cdot w|<\frac1{10}+\frac{R}{10}\le\frac{11}{50}.
 \tag{6}
-$$
+```
 
 Since R>1, orthogonality gives |r dot u|^2>1-(11/50)^2>(19/20)^2.
 Choose the unit neighbor vector a at a bracketed endpoint directed toward the
 appropriate sign of r dot u. If that endpoint is p, then
 
-$$
+```math
  r\cdot a>\frac{19}{20}-\frac{R}{10}\ge\frac{83}{100},
-$$
+```
 
-$$
+```math
  |q-(p+a)|^2=R^2+1-2r\cdot a
  <\frac{36}{25}+1-\frac{166}{100}=\frac{39}{50}<1.
-$$
+```
 
 The neighbor differs from q because pq is an old noncontact. This contradicts
 source unit separation. If q is bracketed, use -r and its neighbor toward p;
@@ -370,9 +370,9 @@ No statement here eliminates them or weakens the Level I quantifiers.
 For actual unit-direction swaps there is a sharper conclusion than small-axis
 alignment. Choose the common orientation so
 
-$$
+```math
  \Delta_i=s_i Jm_i,\qquad s_i=2\sin(\varepsilon_i/2),
-$$
+```
 
 where the consistently lifted midpoint phase is mu_i and the boundary phase
 interval is I_i=[mu_i-epsilon_i/2,mu_i+epsilon_i/2]. Assume all boundary phases
@@ -385,23 +385,23 @@ boundary phase intervals. In particular I_i and I_j are disjoint.
 **Proof.** Orient r from its endpoint in L_i to its endpoint in L_j. Blocking
 both singles gives
 
-$$
+```math
  r\cdot Jm_i\ge\frac{R^2-1+s_i^2}{2s_i}>0,
  \qquad
  r\cdot Jm_j\le-\frac{R^2-1+s_j^2}{2s_j}<0,
  \quad R=|r|>1.
-$$
+```
 
 As the midpoint phase moves between mu_i and mu_j, the transverse scalar must
 vanish at [r], so [r] lies in that subinterval of J. Reverse r and exchange
 i,j if necessary, giving an ordinary lifted phase theta with mu_i<theta<mu_j.
 Then
 
-$$
+```math
  \sin(\theta-\mu_i)
  \ge\frac{R^2-1+s_i^2}{2Rs_i}>
  \frac{s_i}{2}=\sin(\varepsilon_i/2).                 \tag{7}
-$$
+```
 
 The strict inequality is exactly
 (R-1)(R+1-s_i^2)>0. All angles are in (0,1/10), where sine is increasing,
@@ -415,9 +415,9 @@ dispatch/freezing in Theorem 2. If their boundary phase intervals have a common
 point, their individual obstructions require at least k' distinct near-unit
 source pairs. The convenient explicit estimate is
 
-$$
+```math
  \boxed{N_1\ge k'\ge\max\{0,k-2d_H\}.}                \tag{8}
-$$
+```
 
 Indeed every singleton move must violate a lower constraint by canonicality,
 and a source pair can change under at most two singleton moves. Theorem 5
@@ -430,9 +430,9 @@ More generally let N_1 be the number of distinct source pairs blocking at least
 one surviving singleton, and U the subset blocking two. Counting singleton/pair
 incidences gives
 
-$$
+```math
  \boxed{N_1+|U|\ge k'.}                               \tag{9}
-$$
+```
 
 Every pair in U has two unbracketed endpoints by Theorem 4, direction in J by
 Theorem 5, and old length at most 1+s. The graph of U on actual source points
@@ -447,10 +447,10 @@ quotient statement, and says nothing about the actual contact graph being a path
 The paired-singleton case also has an extra slack factor. If W is the width of
 J, equation (7) before normalization and theta-mu_i<W give
 
-$$
+```math
  R^2-1\le2s_iR\sin W-s_i^2,
  \qquad 0<R-1<2s\sin W.                              \tag{10}
-$$
+```
 
 For W=O(D^{-1}) and s=O(D^{-2}) these two-hit pairs are O(D^{-3})-near-unit.
 They are still inactive; this stronger proximity does not provide an exact
@@ -467,26 +467,26 @@ the number of distinct retained phases in the whole window.
 
 Let 0<t<=1/100 and set
 
-$$
+```math
  s_1=\frac{4t}{1+t^2},\qquad
  s_2=\frac{8t}{1+4t^2},\qquad a=s_2-s_1,
-$$
+```
 
-$$
+```math
  \Delta_1=(0,s_1),\quad\Delta_2=(0,s_2),
  \qquad r=(1-a^2/4,-a).
-$$
+```
 
 Here 0<a<s_1. Each Delta_i is the difference of exact unit vectors symmetric
 about one common horizontal midpoint phase. Thus the translations are parallel,
 coherently oriented, and arbitrarily small. The old pair and the two single
 states have squared distances, respectively,
 
-$$
+```math
  (1-a^2/4)^2+a^2>1,
  \quad(1-a^2/4)^2+s_2^2>1,
  \quad(1-a^2/4)^2+s_1^2>1.
-$$
+```
 
 The joint state has squared distance (1-a^2/4)^2<1. Embed the pair as p=0,q=r
 along with fixed source points (-10,0),(10,0). All four points are unit-separated;
@@ -500,10 +500,10 @@ arcs. It does not falsify Theorem 1 or the canonical conclusion in Section 4.
 A failed intermediate estimate was also preserved. Even for parallel vectors,
 joint-only blocking does not imply |r|^2-1<=2 Delta_1 dot Delta_2. Use
 
-$$
+```math
  r=(1-1/20000000,-124/1250),\quad
  \Delta_1=(0,1/1000),\quad\Delta_2=(0,1/10).
-$$
+```
 
 The same bad-pattern set is exactly {11}, but the old slack exceeds the proposed
 bound. The proof of Theorem 4 uses differences of the joint and single squared
@@ -515,10 +515,10 @@ parameters at t^2, for 0<t<=1/100. The midpoint vectors (c,-h),(c,h) have
 strictly separated boundary intervals after rotation by the unit half-angle
 (ce,he), because h ce>c he. Put s=2he and
 
-$$
+```math
  \Delta_1=(sh,sc),\quad\Delta_2=(-sh,sc),
  \qquad r=(1+sh/4,0).
-$$
+```
 
 The two translations are exact unit-direction differences with the common
 orientation. The old pair is strict; both single states and the joint state

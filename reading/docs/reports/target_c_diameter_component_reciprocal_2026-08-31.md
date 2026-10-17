@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_component_reciprocal_2026-08-31.md) · source SHA-256 `be1853b0c0ea541e74bd3b6e90cb5e547fdb41d1856764bdd213a3d7e29a2ffe`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-4E7BF3E3D90F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C addendum: diameter-component reciprocal decomposition
 
@@ -25,9 +27,9 @@ sum of these component polygons.
 The decomposition is exact at the mixed-area level.  If `beta_Q` is the total positive
 KKT diameter mass carried inside full-diameter component `Q`, then
 
-$$
+```math
 \boxed{2V(F,F_Q^*)=D^2\beta_Q.}
-$$
+```
 
 After rescaling `F_Q^*` by `1/beta_Q`, every component has the same mixed area
 `D^2/2` with the force hull.  Its perimeter lies in the same narrow global interval
@@ -44,55 +46,56 @@ The theorem isolates that escape exactly.
 
 Work in the C-II branch and choose a relative-interior normalized KKT stress.  Then
 `C_+=C`, `H_+=H_*`, and
-$$
+```math
 F=\operatorname{conv}V(C)=\operatorname{conv}B_+
 \tag{C25.1}
-$$
+```
 for this same stress.  For `b in B_+`, put
-$$
+```math
 g_b=\sum_{bk\in H_+}\beta_{bk}(b-k).
 \tag{C25.2}
-$$
+```
 The reciprocal polygon `F^*` has side vectors
-$$
+```math
 e_b=Jg_b
 \tag{C25.3}
-$$
+```
 in the cyclic order of the force-hull vertices.
 
 Let
-$$
+```math
 \mathscr D=\{Q_1,\ldots,Q_c\}
 \tag{C25.4}
-$$
+```
 be the connected components of the **full** diameter graph that meet the contact
 component `V`.  C24.1 says precisely that
-$$
+```math
 B_+=V\cap V(H),
 \tag{C25.5}
-$$
+```
 so the nonempty sets
-$$
+```math
 B_Q=B_+\cap Q
 \tag{C25.6}
-$$
+```
 partition `B_+`.
 
 Every positive diameter edge belongs to one full-diameter component.  Define
-$$
+```math
 \boxed{
 \beta_Q
 =\sum_{h\in H_+,\ h\subset Q}\beta_h.
 }
 \tag{C25.7}
-$$
+```
 Since every `b in B_+` is incident with a positive diameter edge, every
 `Q in mathscr D` has `beta_Q>0`, and normalization gives
-$$
+```math
 \boxed{
 \sum_{Q\in\mathscr D}\beta_Q=1.
 }
 \tag{C25.8}
+```
 
 ---
 
@@ -101,11 +104,12 @@ $$
 ### Lemma C25.1 (component resultant vanishes)
 
 For every `Q in mathscr D`,
-\[
+```math
 \boxed{
 \sum_{b\in B_Q}g_b=0.
 }
 \tag{C25.9}
+```
 
 #### Proof
 
@@ -120,29 +124,30 @@ A subsequence indexed by `B_Q` therefore retains cyclic order.
 ### Theorem C25.2 (component reciprocal polygon)
 
 For every `Q in mathscr D`, the vectors
-\[
+```math
 \{e_b=Jg_b:b\in B_Q\}
 \tag{C25.10}
-$$
+```
 in their inherited cyclic order are the side vectors of a convex polygon
 `F_Q^*`, unique up to translation.  The polygon may be degenerate to a segment when
 `|B_Q|=2`.
 
 Moreover, up to translation,
-$$
+```math
 \boxed{
 F^*=\sum_{Q\in\mathscr D}F_Q^*
 }
 \tag{C25.11}
-$$
+```
 where the right side is Minkowski addition.  In particular
-$$
+```math
 \boxed{
 P_*=\sum_Q P_Q^*,
 \qquad
 P_Q^*=\operatorname{per}(F_Q^*)=\sum_{b\in B_Q}|g_b|.
 }
 \tag{C25.12}
+```
 
 #### Proof
 
@@ -168,7 +173,7 @@ reciprocal geometry.
 ### Theorem C25.3 (diameter mass = component mixed area)
 
 For every `Q in mathscr D`,
-\[
+```math
 \boxed{
 2V(F,F_Q^*)
 =
@@ -177,13 +182,14 @@ For every `Q in mathscr D`,
 D^2\beta_Q.
 }
 \tag{C25.13}
+```
 
 #### Proof
 
 The side of `F_Q^*` indexed by `b` has vector `Jg_b`, length `|g_b|`, and outward
 normal `g_b/|g_b|`.  This normal supports `F` uniquely at `b`.  The polygonal mixed
 area formula therefore gives
-\[
+```math
 2V(F,F_Q^*)
 =
 \sum_{b\in B_Q}|g_b|
@@ -191,39 +197,40 @@ area formula therefore gives
 =
 \sum_{b\in B_Q}b\cdot g_b.
 \tag{C25.14}
-$$
+```
 Group the last sum by positive diameter edges inside `Q`.  An edge `bk` contributes
-$$
+```math
 \beta_{bk}\bigl[b\cdot(b-k)+k\cdot(k-b)\bigr]
 =
 \beta_{bk}|b-k|^2
 =
 D^2\beta_{bk}.
 \tag{C25.15}
-$$
+```
 Summing over `H_+ cap Q` proves (C25.13). `\square`
 
 Summing C25.13 over all components recovers the global identity
 `2V(F,F^*)=D^2` by mixed-area linearity and (C25.8), as it must.
 
 Define the normalized component polygon
-$$
+```math
 \widetilde F_Q^*=\beta_Q^{-1}F_Q^*.
 \tag{C25.16}
-$$
+```
 Then
-$$
+```math
 \boxed{
 2V(F,\widetilde F_Q^*)=D^2
 }
 \tag{C25.17}
-$$
+```
 for **every** full-diameter component, while
-$$
+```math
 \boxed{
 F^*=\sum_Q\beta_Q\widetilde F_Q^*.
 }
 \tag{C25.18}
+```
 
 Thus the global reciprocal is a Minkowski barycenter of component responses all lying
 on the same mixed-area level set.
@@ -235,31 +242,31 @@ on the same mixed-area level set.
 Let `Theta(D)` denote the finite shared-endpoint diameter-angle upper bound from C18,
 truncated at `pi/3` when the explicit bound is weaker than the elementary one.  For
 `b in B_+`, put
-\[
+```math
 s_b=\sum_{bk\in H_+}\beta_{bk}.
 \tag{C25.19}
-$$
+```
 All vectors `b-k` in (C25.2) have length `D` and lie in an angular interval of width at
 most `Theta(D)`.  Projection onto the interval bisector gives
-$$
+```math
 |g_b|
 \ge
 D\cos\frac{\Theta(D)}2\,s_b,
 \tag{C25.20}
-$$
+```
 while the triangle inequality gives `|g_b|<=Ds_b`.
 
 Since every positive diameter edge in `Q` is counted at both endpoints,
-$$
+```math
 \sum_{b\in B_Q}s_b=2\beta_Q.
 \tag{C25.21}
-$$
+```
 Hence:
 
 ### Theorem C25.4 (component perimeter interval)
 
 For every full-diameter component,
-$$
+```math
 \boxed{
 2D\beta_Q\cos\frac{\Theta(D)}2
 \le
@@ -268,9 +275,10 @@ P_Q^*
 2D\beta_Q.
 }
 \tag{C25.22}
+```
 
 Equivalently, every normalized response obeys
-\[
+```math
 \boxed{
 2D\cos\frac{\Theta(D)}2
 \le
@@ -279,13 +287,14 @@ Equivalently, every normalized response obeys
 2D.
 }
 \tag{C25.23}
+```
 
 As `D->infinity`, the lower coefficient tends to
-\[
+```math
 2\cos\left(\frac{5\pi}{12}-\frac{\sqrt3}{2}\right)
 =1.8069639529\ldots.
 \tag{C25.24}
-$$
+```
 
 Thus the narrow global force-perimeter window holds component-by-component after
 normalization; a small KKT mass cannot hide a geometrically poor component merely by
@@ -298,10 +307,10 @@ being small.
 ### Proposition C25.5 (component upper equality)
 
 For `Q in mathscr D`,
-$$
+```math
 \boxed{P_Q^*=2D\beta_Q}
 \tag{C25.25}
-$$
+```
 if and only if every vertex of `B_Q` has positive-diameter degree one.  Equivalently,
 the positive diameter graph `H_+` restricted to `B_Q` is a matching.
 

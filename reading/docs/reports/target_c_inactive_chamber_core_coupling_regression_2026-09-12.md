@@ -37,22 +37,22 @@ container/core closure based only on the current local chamber statistics.
 Use the unit triangular lattice with axial basis vectors (u,v) making angle
 (pi/3). For an integer (rge0), write
 
-$$
+```math
  H_r:=\{iu+jv:\max(|i|,|j|,|i+j|)\le r\}.
-$$
+```
 
 The convex hull of (H_r) is a regular hexagon of side length (r), and
 
-$$
+```math
  |H_r|=1+3r(r+1).
 \tag{IC.1}
-$$
+```
 
 For (mge8), let the positive-contact core be the outer lattice shell
 
-$$
+```math
  B_m:=\{iu+jv:\max(|i|,|j|,|i+j|)=m\}.
-$$
+```
 
 Its induced unit-contact graph is a single cycle with (6m) vertices and (6m)
 unit edges. At every shell corner the two neighboring shell vertices are at
@@ -60,35 +60,35 @@ distance (sqrt3), not one, so the cycle contains no unit equilateral triangle.
 
 Set
 
-$$
+```math
  r=m-2,
  \qquad s_m=1+{1\over 2m},
  \qquad I_m:=s_m H_r.
 \tag{IC.2}
-$$
+```
 
 The full finite source is
 
-$$
+```math
  A_m:=B_m\cup I_m.
 \tag{IC.3}
-$$
+```
 
 The homothetic inner hexagon has support distance
 
-$$
+```math
  {\sqrt3\over2}\bigl(m-s_m(m-2)\bigr)
  ={\sqrt3\over2}\left({3\over2}+{1\over m}\right)>1
 \tag{IC.4}
-$$
+```
 
 from every side of (\operatorname{conv}B_m). Thus every point of (I_m) is more
 than one unit from every shell point. Distinct points of (I_m) have squared
 distance
 
-$$
+```math
  s_m^2(a^2+ab+b^2)>1
-$$
+```
 
 for every nonzero axial difference ((a,b)). Hence all points of (I_m) are
 contact-isolated in the full source.
@@ -98,10 +98,10 @@ and (A_m) contains no exact unit equilateral triangle.
 
 Since (A_m\subset H_m) and opposite shell vertices are (2m) apart,
 
-$$
+```math
 \operatorname{diam}A_m=2m.
 \tag{IC.5}
-$$
+```
 
 The bounded face of the shell cycle is an actual inactive chamber containing all of
 (I_m). The positive-contact core has (6m=O(\operatorname{diam}A_m)) vertices,
@@ -111,25 +111,25 @@ whereas the inactive population is quadratic.
 
 The regular hexagon (H_m) has area
 
-$$
+```math
  \operatorname{area}(H_m)={3\sqrt3\over2}m^2,
 \qquad
  {\operatorname{area}(H_m)\over a_0}=3m^2,
  \qquad a_0={\sqrt3\over2},
 \tag{IC.6}
-$$
+```
 
 and perimeter (6m). The number of isolated chamber points is, by (IC.1),
 
-$$
+```math
  |I_m|=1+3(m-2)(m-1)=3m^2-9m+7.
 \tag{IC.7}
-$$
+```
 
 Therefore the Oler slack of the actual chamber (H_m), computed using the isolated
 population, is exactly
 
-$$
+```math
 \begin{aligned}
  \Sigma_m
  &:={\operatorname{area}(H_m)\over a_0}
@@ -138,15 +138,15 @@ $$
  &=12m-6.
 \end{aligned}
 \tag{IC.8}
-$$
+```
 
 Thus the chamber has area (Theta(D^2)), isolated population (Theta(D^2)),
 perimeter (O(D)), and Oler slack (O(D)), with (D=2m). Moreover
 
-$$
+```math
  |A_m|=6m+(3m^2-9m+7)=3m^2-3m+7=|H_{m-1}|+6.
 \tag{IC.10}
-$$
+```
 
 So the full source has the cardinality of a unit triangular-lattice hexagon of radius
 one less, up to only six points, while its interior population has no unit contacts.
@@ -160,10 +160,10 @@ strictly smaller lattice hexagon (H_{m-3}). It still gives
 (Omega(m^2)=Omega(D^2)) vertex-disjoint pairs, and their endpoints have support
 gap
 
-$$
+```math
  {\sqrt3\over2}\bigl(m-s_m(m-3)\bigr)
  ={\sqrt3\over2}\left({5\over2}+{3\over2m}\right)>2
-$$
+```
 
 from the chamber boundary. For an arbitrary prescribed fixed Euclidean depth
 `w`, use `H_{m-k}` instead, with a fixed integer `k>=3` chosen so that
@@ -171,10 +171,10 @@ from the chamber boundary. For an arbitrary prescribed fixed Euclidean depth
 
 All those pairs satisfy
 
-$$
+```math
 1<|x-y|=1+{1\over 2m}=1+{1\over D}.
 \tag{IC.9}
-$$
+```
 
 The first-contact motions of such pairs therefore exist locally, but they only create
 zero-stress contact components when the shell core is held fixed, exactly as in the
@@ -207,30 +207,30 @@ source-level global argument.
 The family is not a global-minimum counterexample, and in this regular model the
 missing source-level comparison can be exhibited exactly. Let
 
-$$
+```math
  L_m:=H_{m-1}\cup\{(m-i)u+iv:0\le i\le5\}.
 \tag{IC.11}
-$$
+```
 
 The six added points lie on one side of the radius-(m) hexagon. They are mutually
 unit-separated, and every point of (H_{m-1}) is at least unit distance from them
 because all points belong to the unit triangular lattice. Hence (L_m) is
 unit-separated. Its cardinality is
 
-$$
+```math
  |L_m|=|H_{m-1}|+6=|A_m|.
 \tag{IC.12}
-$$
+```
 
 Every point of (H_{m-1}) has norm at most (m-1), while every added point has norm
 at most (m). Thus a cross-distance is at most (2m-1); two points in (H_{m-1})
 are at distance at most (2m-2), and two added points on the same side are at
 distance at most five. For (m\ge8),
 
-$$
+```math
  \operatorname{diam}L_m\le2m-1<2m=\operatorname{diam}A_m.
 \tag{IC.13}
-$$
+```
 
 Therefore this exact co-embedded regression family does admit a same-cardinality
 strict-diameter competitor. The competitor is allowed to contain unit equilateral

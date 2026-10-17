@@ -24,23 +24,23 @@ Let
 
 Then
 
-$$
+```math
 \boxed{e_{BB}\ge s+(q-q_{used})-1.}
-$$
+```
 
 When `c_I>0`, this gives
 
-$$
+```math
 \boxed{q-q_{used}\le e_{BB}-s+1\le e_{BB}.}
-$$
+```
 
 In particular, if `e_BB=0`, then the incidence graph is connected and every loaded vertex touches the unpinned interior.
 
 Combining with C37, the number of loaded vertices that either miss the interior or attach to multiple distinct unpinned components is at most
 
-$$
+```math
 \boxed{2c_I+e_{BB}-3s+1\le2(c_I+e_{BB}).}
-$$
+```
 
 By C33 this is at most `2 sigma_B`, so it is `o(D)` in the near-minimal boundary phase.
 
@@ -62,19 +62,19 @@ Before the `e_BB` loaded-loaded edges are restored, `K` consists of:
 
 Thus there are
 
-$$
+```math
 s+(q-q_{used})
 \tag{C38.1}
-$$
+```
 
 components. At least one fewer edges are required to connect them, proving:
 
 ### Theorem C38.1
 
-$$
+```math
 \boxed{e_{BB}\ge s+(q-q_{used})-1.}
 \tag{C38.2}
-$$
+```
 
 The convention also covers `c_I=0`: then `s=q_used=0` and C38.2 reduces to the obvious `e_BB>=q-1` for a connected boundary-only contact core.
 
@@ -84,17 +84,17 @@ The convention also covers `c_I=0`: then `s=q_used=0` and C38.2 reduces to the o
 
 Assume `c_I>0`, so `s>=1`. Rearranging C38.2 gives
 
-$$
+```math
 q-q_{used}\le e_{BB}-s+1\le e_{BB}.
 \tag{C38.3}
-$$
+```
 
 If `e_BB=0`, both nonnegative terms in C38.2 force
 
-$$
+```math
 \boxed{s=1,\qquad q_{used}=q.}
 \tag{C38.4}
-$$
+```
 
 Thus the incidence graph itself is connected and covers every loaded boundary vertex.
 
@@ -104,17 +104,17 @@ Thus the incidence graph itself is connected and covers every loaded boundary ve
 
 C37 bounds the used loaded vertices with multiple attachment sets by
 
-$$
+```math
 2c_I-2s.
 \tag{C38.5}
-$$
+```
 
 C38.3 bounds unused loaded vertices by
 
-$$
+```math
 e_{BB}-s+1.
 \tag{C38.6}
-$$
+```
 
 Therefore:
 
@@ -127,25 +127,25 @@ For `c_I>0`, the number `E_exc` of loaded vertices that either
 
 satisfies
 
-$$
+```math
 \boxed{
 E_{exc}\le2c_I+e_{BB}-3s+1.}
 \tag{C38.7}
-$$
+```
 
 Since `s>=1`,
 
-$$
+```math
 E_{exc}\le2(c_I+e_{BB}).
 \tag{C38.8}
-$$
+```
 
 C33 gives `c_I+e_BB<=sigma_B`, hence
 
-$$
+```math
 \boxed{E_{exc}\le2\sigma_B.}
 \tag{C38.9}
-$$
+```
 
 If `sigma_B=o(D)`, canonical C30 gives `q=Theta(D)` and all but `o(D)` loaded vertices belong to exactly one noncrossing harmonic attachment set.
 

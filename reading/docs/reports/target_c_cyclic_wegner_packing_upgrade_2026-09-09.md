@@ -18,11 +18,11 @@
 
 FB proves that in the exact `d_H=0` cyclic branch the force hull is the full source hull:
 
-$$
+```math
 F=\operatorname{conv}A,
 \qquad
 \operatorname{per}(F)=q.
-$$
+```
 
 Therefore one can apply the sharp finite disk-packing inequality of Wegner directly to the complete source, rather than use only generic Oler capacity.
 
@@ -30,7 +30,7 @@ Therefore one can apply the sharp finite disk-packing inequality of Wegner direc
 
 Every exact cyclic `d_H=0` survivor satisfies
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)
 \ge
@@ -39,17 +39,17 @@ $$
 +\frac{2-\sqrt3}{4}
 \left\lceil\sqrt{12n-3}-3\right\rceil.}
 \tag{WG.1}
-$$
+```
 
 Using the strict global diameter comparison
 
-$$
+```math
 n>\frac\pi{2\sqrt3}D^2,
-$$
+```
 
 this gives the finite consequence
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)
 >
@@ -61,27 +61,27 @@ $$
 \sqrt{2\pi\sqrt3\,D^2-3}-3
 \right).}
 \tag{WG.2}
-$$
+```
 
 Since RE gives
 
-$$
+```math
 q=\pi D-\frac\pi{24D}+O(D^{-3})
-$$
+```
 
 exactly through the Reinhardt relation, the disk-area deficit satisfies
 
-$$
+```math
 \boxed{
 \frac\pi4D^2-\operatorname{area}(F)
 \le
 \left(C_W+o(1)\right)D,}
 \tag{WG.3}
-$$
+```
 
 where
 
-$$
+```math
 \boxed{
 C_W
 :=
@@ -91,14 +91,14 @@ C_W
 \sqrt{2\pi\sqrt3}
 =1.349811370903931\ldots .}
 \tag{WG.4}
-$$
+```
 
 The Oler-only coefficient was
 
-$$
+```math
 \frac{\pi\sqrt3}{4}
 =1.3603495231\ldots ,
-$$
+```
 
 so WG is a genuine linear improvement.
 
@@ -112,30 +112,30 @@ Scale the entire picture by factor two. The resulting packing consists of `n` pa
 
 Because FB gives
 
-$$
+```math
 F=\operatorname{conv}A,
-$$
+```
 
 the convex hull of the scaled unit disks is
 
-$$
+```math
 \mathcal D
 =2F+B_2(0,1).
 \tag{1.1}
-$$
+```
 
 Steiner's formula gives
 
-$$
+```math
 \operatorname{area}(\mathcal D)
 =4\operatorname{area}(F)+2\operatorname{per}(F)+\pi
 =4\operatorname{area}(F)+2q+\pi.
 \tag{1.2}
-$$
+```
 
 Wegner's inequality states that for the convex hull of `n` non-overlapping unit disks,
 
-$$
+```math
 \operatorname{area}(\mathcal D)
 \ge
 2\sqrt3(n-1)
@@ -143,18 +143,18 @@ $$
 \left\lceil\sqrt{12n-3}-3\right\rceil
 +\pi.
 \tag{1.3}
-$$
+```
 
 Subtract `pi`, substitute (1.2), and divide by four:
 
-$$
+```math
 \operatorname{area}(F)
 \ge
 \frac{\sqrt3}{2}(n-1)
 -\frac q2
 +\frac{2-\sqrt3}{4}
 \left\lceil\sqrt{12n-3}-3\right\rceil.
-$$
+```
 
 This proves WG.1. `square`
 
@@ -164,56 +164,56 @@ This proves WG.1. `square`
 
 The canonical strict comparison gives
 
-$$
+```math
 n>\Delta D^2,
 \qquad
 \Delta=\frac\pi{2\sqrt3}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \frac{\sqrt3}{2}(n-1)
 >
 \frac\pi4D^2-\frac{\sqrt3}{2}.
 \tag{2.1}
-$$
+```
 
 Also
 
-$$
+```math
 \sqrt{12n-3}
 >
 \sqrt{12\Delta D^2-3}
 =
 \sqrt{2\pi\sqrt3\,D^2-3}.
 \tag{2.2}
-$$
+```
 
 Since `ceil(x)>=x`, substituting (2.1)-(2.2) into WG.1 proves WG.2.
 
 RE gives the exact relation
 
-$$
+```math
 D=\frac1{2\sin(\pi/(2q))},
-$$
+```
 
 and hence
 
-$$
+```math
 q
 =
 \pi D-\frac\pi{24D}+O(D^{-3}).
 \tag{2.3}
-$$
+```
 
 Divide the deficit form of WG.2 by `D` and use
 
-$$
+```math
 \frac1D\sqrt{2\pi\sqrt3\,D^2-3}
 \to
 \sqrt{2\pi\sqrt3}.
-$$
+```
 
 This proves WG.3-WG.4. `square`
 
@@ -225,41 +225,41 @@ RC lets `nu` denote the odd cycle length of the diameter graph, equivalently the
 
 Since
 
-$$
+```math
 F\subseteq R,
-$$
+```
 
 we have
 
-$$
+```math
 \frac\pi4D^2-\operatorname{area}(R)
 \le
 \frac\pi4D^2-\operatorname{area}(F).
 \tag{3.1}
-$$
+```
 
 The Firey--Sallee maximal-area theorem used in RC gives
 
-$$
+```math
 \frac\pi4D^2-\operatorname{area}(R)
 \ge
 \frac{\pi^3D^2}{48\nu^2}.
 \tag{3.2}
-$$
+```
 
 Combining (3.1)-(3.2) with WG.3 yields
 
-$$
+```math
 \frac{\pi^3D^2}{48\nu^2}
 \le
 (C_W+o(1))D.
-$$
+```
 
 Therefore:
 
 ### Corollary WG.1 — sharpened odd-core growth
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac\nu{\sqrt D}
@@ -267,13 +267,13 @@ $$
 \sqrt{\frac{\pi^3}{48C_W}}
 =0.6917794379919272\ldots .}
 \tag{WG.5}
-$$
+```
 
 RC's Oler-only constant was
 
-$$
+```math
 0.6890947417786648\ldots .
-$$
+```
 
 The numerical gain is modest, but the proof is exact and replaces a generic boundary correction by the sharp known finite-packing correction.
 
@@ -285,9 +285,9 @@ The cited sharp form of Wegner's theorem has equality exactly for Wegner packing
 
 Our exact cyclic source has
 
-$$
+```math
 q\sim\pi D\to\infty
-$$
+```
 
 strictly convex hull vertices, all consecutive hull sides equal to one. Therefore the cyclic source cannot attain equality in WG.1 for sufficiently large `q`.
 
@@ -301,10 +301,10 @@ This does **not** by itself yield a uniform additional linear gap: the equality 
 
 The linear source-capacity margin remains positive:
 
-$$
+```math
 C_WD
 =1.3498\ldots D.
-$$
+```
 
 The exact Reinhardt family can have disk-area deficit much smaller than this, so the improved area floor is compatible with the convex hull geometry.
 
@@ -340,13 +340,13 @@ Recorded correctly. We do not turn qualitative non-equality into an unproved qua
 
 The best packing endpoint is now:
 
-$$
+```math
 \operatorname{area}(F)
 \ge
 \frac{\sqrt3}{2}(n-1)-\frac q2
 +\frac{2-\sqrt3}{4}
 \left\lceil\sqrt{12n-3}-3\right\rceil,
-$$
+```
 
 with `q=Theta(D)` distinct strictly convex unit boundary directions, while Wegner equality uses at most six lattice directions.
 
@@ -366,12 +366,12 @@ WG.1 is an exact direct scaling of a classical sharp packing theorem. The Target
 
 The external input is the sharp form
 
-$$
+```math
 A(\mathcal D)
 \ge
 2\sqrt3(n-1)
 +(2-\sqrt3)\left\lceil\sqrt{12n-3}-3\right\rceil+\pi,
-$$
+```
 
 with equality iff the packing is a Wegner packing, as stated in Böröczky--Ruzsa, *Note on an inequality of Wegner*. Their discussion also records that Groemer center hulls have at most six sides.
 

@@ -144,9 +144,9 @@ The convex-order determinant step can be made explicit. Suppose four endpoints
 Write `X-A=t(C-A)` and `X-B=s(E-B)`, with `t,s>0`. Since `A,B,X` is positively
 oriented,
 
-$$
+```math
 0<\det(B-A,X-A)=ts\det(C-A,E-B).
-$$
+```
 
 If two relevant bars share one endpoint, the corresponding determinant is the
 positive area determinant of the remaining hull triangle. It is strict because
@@ -161,9 +161,9 @@ for every pair of representatives, including the shared `v` or `z` cases.
 With the original positive transverse flow `f_h=beta_h D sin(angle_h)`, the
 original layer-oriented axial resultant is
 
-$$
+```math
 R_{ab}=\sum_+f_h\cot\alpha_h-\sum_-f_h\cot\gamma_h.
-$$
+```
 
 The two flow masses are equal and positive. Product-coupling their normalized
 measures expresses this resultant as their common mass times an average of
@@ -186,9 +186,9 @@ endpoint order inside that same layer. If it labels the same endpoint, the share
 endpoint triangle gives the same strict determinant. Applying the argument in
 the reverse order to the negative representatives gives
 
-$$
+```math
 \alpha_1<\cdots<\alpha_m<\gamma_m<\cdots<\gamma_1
-$$
+```
 
 for **every** selection of one bar in each orientation bundle. A common layer
 does not prescribe an order among its vertices; crossing supplies that order
@@ -199,18 +199,18 @@ endpoints, partner separation gives `2D sin(epsilon/2)>=1`. For disjoint bars,
 orient the two vectors at their minor projective angle `epsilon`, and denote
 the midpoint difference by `d`. The two far cross-distances have squared average
 
-$$
+```math
 |d|^2+D^2\cos^2(\varepsilon/2)\le D^2.
-$$
+```
 
 The two near cross-distances have squared average
 `|d|^2+D^2 sin^2(epsilon/2)>=1`. Combining them gives the stronger disjoint bound
 `epsilon>=2 asin(1/(sqrt(2)D))`. In particular every distinct pair of actual
 diameter directions has spacing at least
 
-$$
+```math
 \delta_D=2\arcsin(1/(2D)).
-$$
+```
 
 Every positive angular difference appearing above is at least `delta_D`, even if
 its minor projective representative is its complement. Hence the PR's equation (9),
@@ -220,10 +220,10 @@ There is also a small additional bound, classified as a **proved candidate await
 promotion**. Apply the spacing bound to the central pair `alpha_m,gamma_m`, as well
 as the other `2(m-1)` increments. Since `Theta_1=pi-gamma_1+alpha_1`,
 
-$$
+```math
 \boxed{\Theta_1+(2m-1)\delta_D\le\pi,\qquad
        (2m-1)\delta_D<\pi.}
-$$
+```
 
 If the central pair has distinct endpoints, replace that central `delta_D` by
 `2 asin(1/(sqrt(2)D))`. These inequalities improve the finite angular budget; they
@@ -235,14 +235,14 @@ closure is obtained from them.
 Classification: **regression**. Put `s=sqrt(42)`, `t=sqrt(165)`, `D=13`, `u=(1,0)`.
 Use the nine points
 
-$$
+```math
 \begin{split}
 v&=(0,0),&p^\pm&=(12,\pm5),\\
 L_1&=(6,-s),&U_1&=(6,s),\\
 L_2&=(7,-s),&U_2&=(7,s),\\
 L_3&=(8,s-t),&U_3&=(8,t-s).
 \end{split}
-$$
+```
 
 Their strict hull order is `v,L1,L2,L3,p-,p+,U3,U2,U1`. All 36 pair distances
 lie in `[1,13]`. The only unit contacts are `L1L2,U1U2`. The six actual diameters
@@ -250,9 +250,9 @@ are `vp-,vp+,L1U2,L2U1,L1U3,L3U1`. Assign levels `0` to `v`, `1` to `L1,U1`,
 `2` to `L2,U2`, and `3` to the remaining points. Weights `beta=1/6` give exact
 projected balance, rank three, and staircase cells
 
-$$
+```math
 (0,3),\quad(1,3),\quad(1,2).
-$$
+```
 
 Their axial resultants are `4,2/3,1/3`; their formal cut masses are
 `4,5,14/3`, realizing a strict interior peak. The direction order is checked by

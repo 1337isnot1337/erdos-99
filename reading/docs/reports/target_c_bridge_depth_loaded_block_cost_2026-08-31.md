@@ -19,17 +19,17 @@ C23 converts total bridge stress into positive-diameter endpoint mass times brid
 
 If `R` is the number of loaded bridge blocks, every loaded block lies at bridge-tree depth at most `R-1` from a C23 common hub. Consequently
 
-$$
+```math
 \boxed{S_{br}\le2D(R-1).}
-$$
+```
 
 Therefore
 
-$$
+```math
 S_{br}\ge\eta D^2
 \quad\Longrightarrow\quad
 \boxed{R\ge\frac{\eta D}{2}+1.}
-$$
+```
 
 and hence `|B_+| >= eta D/2+1`.
 
@@ -55,19 +55,19 @@ Let `R` be the number of loaded blocks of `T`.
 
 For every loaded block `Y`,
 
-$$
+```math
 \boxed{d_T(X_*,Y)\le R-1.}
 \tag{C29.1}
-$$
+```
 
 #### Proof
 
 Let
 
-$$
+```math
 X_*=v_0,v_1,\ldots,v_L=Y
 \tag{C29.2}
-$$
+```
 
 be the unique tree path, so `L=d_T(X_*,Y)`.
 
@@ -94,64 +94,64 @@ In all cases `R>=L+1`, proving C29.1. `\square`
 
 For each positive diameter endpoint `b`, let `tau(b)` be its loaded bridge block and
 
-$$
+```math
 s_b:=\sum_{bk\in H_+}\beta_{bk}.
 \tag{C29.3}
-$$
+```
 
 Then
 
-$$
+```math
 \sum_{b\in B_+}s_b=2.
 \tag{C29.4}
-$$
+```
 
 C23 proves
 
-$$
+```math
 S_{br}
 \le
 D\sum_{b\in B_+}s_b\,d_T(\tau(b),X_*).
 \tag{C29.5}
-$$
+```
 
 By Lemma C29.1 every depth is at most `R-1`, so
 
-$$
+```math
 S_{br}
 \le
 D(R-1)\sum_b s_b
 =2D(R-1).
 \tag{C29.6}
-$$
+```
 
 ### Theorem C29 (loaded-block cost of bridge stress)
 
-$$
+```math
 \boxed{S_{br}\le2D(R-1).}
 \tag{C29.7}
-$$
+```
 
 Consequently, if
 
-$$
+```math
 S_{br}\ge\eta D^2,
 \tag{C29.8}
-$$
+```
 
 then
 
-$$
+```math
 \boxed{R\ge\frac{\eta D}{2}+1,}
 \tag{C29.9}
-$$
+```
 
 and because each loaded block contains at least one distinct positive diameter endpoint,
 
-$$
+```math
 \boxed{|B_+|\ge\frac{\eta D}{2}+1.}
 \tag{C29.10}
-$$
+```
 
 This improves the earlier factor-`1/4` endpoint-count consequence obtained only from the total structural-node bound.
 

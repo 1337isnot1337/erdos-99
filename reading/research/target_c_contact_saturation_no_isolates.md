@@ -22,23 +22,23 @@ A quadratic actual-isolate population can therefore be converted, at fixed globa
 
 Let `A` be a finite noncollinear unit-separated planar set and put
 
-$$
+```math
 K:=\operatorname{conv}A,
 \qquad D:=\operatorname{diam}A=\operatorname{diam}K.
-$$
+```
 
 Fix `x\in A` such that
 
-$$
+```math
 |x-y|>1\qquad(y\in A\setminus\{x\}).
 \tag{1.1}
-$$
+```
 
 For the unchanged source points put
 
-$$
+```math
 U:=\bigcup_{y\in A\setminus\{x\}} B(y,1),
-$$
+```
 
 where the disks are closed. By (1.1), `x\notin U`.
 
@@ -46,16 +46,16 @@ where the disks are closed. By (1.1), `x\notin U`.
 
 There is a point `x'\in K` and a segment path from `x` to `x'` contained in `K` such that
 
-$$
+```math
 |x'-y_0|=1
-$$
+```
 
 for exactly one `y_0\in A\setminus\{x\}`, while
 
-$$
+```math
 |x'-y|>1\qquad(y\ne x,y_0).
 \tag{1.2}
-$$
+```
 
 Along the open path before `x'`, all distances to `A\setminus\{x\}` are strictly greater than one.
 
@@ -63,33 +63,33 @@ Along the open path before `x'`, all distances to `A\setminus\{x\}` are strictly
 
 Choose one unchanged source point `y`. Since `K` is two-dimensional, every sufficiently small neighborhood of `y` has a positive-area intersection with `K`. Hence there are points of
 
-$$
+```math
 K\cap\operatorname{int}B(y,1)
-$$
+```
 
 in a two-dimensional wedge of `K`; in particular `K\cap\operatorname{int}U` has positive area.
 
 The set of points lying on two distinct unit-circle boundaries
 
-$$
+```math
 \partial B(y_i,1)\cap\partial B(y_j,1),\qquad i\ne j,
-$$
+```
 
 is finite: each pair contributes at most two points. Therefore the set of rays from `x` through any such multiple-circle point is finite.
 
 Choose
 
-$$
+```math
 z\in K\cap\operatorname{int}U
-$$
+```
 
 so that the segment direction from `x` to `z` is not one of those finitely many exceptional ray directions. Convexity gives `[x,z]\subset K`.
 
 Parameterize the segment by `p(t)=(1-t)x+tz`, `0\le t\le1`. Since `x\notin U` and `z\in\operatorname{int}U`, there is a first time
 
-$$
+```math
 t_*:=\min\{t:p(t)\in U\}\in(0,1).
-$$
+```
 
 Put `x'=p(t_*)`. By first entry, `x'\in\partial U`, every unchanged source point is at distance at least one from `x'`, and all those distances were strictly greater than one for `t<t_*`.
 
@@ -103,49 +103,49 @@ The only role of noncollinearity is to make the choice of a generic target `z` i
 
 Assume now that `A` is a triangle-free **global** minimum-diameter source of cardinality `n`, so
 
-$$
+```math
 \operatorname{diam}A=D(n)=D.
-$$
+```
 
 Apply Lemma 1.1 to a contact-isolated point `x`, and set
 
-$$
+```math
 A':=(A\setminus\{x\})\cup\{x'\}.
-$$
+```
 
 All unchanged pair distances remain at least one. Lemma 1.1 gives the same for pairs involving `x'`, with exactly one new unit contact. Thus `A'` is unit-separated.
 
 Because `x'\in K` and every unchanged point also lies in `K`,
 
-$$
+```math
 \operatorname{diam}A'
 \le\operatorname{diam}K
 =D.
 \tag{2.1}
-$$
+```
 
 But `D=D(n)` is the global minimum over all unit-separated `n`-point sources, so (2.1) must be equality:
 
-$$
+```math
 \boxed{\operatorname{diam}A'=D.}
 \tag{2.2}
-$$
+```
 
 Hence `A'` is another global minimizer.
 
 Only one new unit-contact edge is created. Since `x` had no old unit contacts, a unit-contact triangle involving `x'` would require at least two new contacts incident to `x'`. There is exactly one. All triangles avoiding `x'` would already have existed in `A`. Therefore
 
-$$
+```math
 \boxed{A'\text{ is triangle-free}.}
 \tag{2.3}
-$$
+```
 
 Finally,
 
-$$
+```math
 |C(A')|=|C(A)|+1.
 \tag{2.4}
-$$
+```
 
 No source point is deleted, no diameter comparison is asymptotic, and no KKT statement is used.
 
@@ -159,10 +159,10 @@ If there exists a noncollinear triangle-free global minimum-diameter `n`-point s
 
 More strongly, starting from any such source `A`, repeated applications of Section 2 terminate after at most `n` steps at a triangle-free global minimizer `A^sat` satisfying
 
-$$
+```math
 \boxed{\deg_{C(A^{sat})}(x)\ge1\quad\text{for every }x\in A^{sat}.}
 \tag{3.1}
-$$
+```
 
 At each step the global diameter remains exactly `D(n)`, the number of source points remains `n`, triangle-freeness is preserved, and the number of unit contacts increases by exactly one.
 
@@ -176,9 +176,9 @@ There are finitely many source points, so after at most `n` moves no contact-iso
 
 Among the triangle-free global minimizers, choose one whose number of unit contacts is maximal. Such a maximum exists because the set of attained contact counts is a nonempty subset of the finite integer set
 
-$$
+```math
 \{0,1,\ldots,\tbinom n2\}.
-$$
+```
 
 Then that representative has no contact-isolated source point.
 
@@ -196,33 +196,33 @@ Now start from the canonical contact-minimal, then diameter-pair-minimal post-ZF
 
 Canonical Section 57 records that every endpoint of an actual diameter edge is loaded by the relative-interior stress and therefore belongs to `V`. Hence
 
-$$
+```math
 \boxed{x\in Z\Longrightarrow |x-y|<D\text{ for every }y\in A\setminus\{x\}.}
 \tag{4.1}
-$$
+```
 
 ### Lemma 4.1 — diameter-safe first contact
 
 For `x\in Z`, the point `x'` in Lemma 1.1 can be chosen so that in addition
 
-$$
+```math
 |x'-y|<D\qquad(y\in A\setminus\{x\}).
 \tag{4.2}
-$$
+```
 
 ### Proof
 
 For each unchanged source point `y`, the old hull satisfies
 
-$$
+```math
 K\subseteq B(y,D).
-$$
+```
 
 The polygon `K` meets the circle `\partial B(y,D)` in finitely many points: each straight side has at most two intersections with the circle, and `K` has finitely many sides. Taking the union over the finite source gives a finite set
 
-$$
+```math
 E_D:=K\cap\bigcup_{y\ne x}\partial B(y,D).
-$$
+```
 
 In the generic-ray construction of Lemma 1.1, exclude also the finitely many rays from `x` through points of `E_D`. The target set `K\cap\operatorname{int}U` still has positive area, so such a generic target exists. The resulting segment contains no point of `E_D`, and in particular its first unit-contact point `x'` satisfies (4.2). `square`
 
@@ -234,10 +234,10 @@ Likewise, every old positive-contact vertex and every old positive-contact edge 
 
 The canonical post-ZF triangle-free global minimizer can be transformed into another triangle-free global minimizer `A^sat` of the same cardinality and diameter such that
 
-$$
+```math
 \boxed{H(A^{sat})=H(A).}
 \tag{4.3}
-$$
+```
 
 Every old normalized KKT stress extends to a normalized KKT stress of `A^sat` by giving all new contacts weight zero.
 
@@ -247,22 +247,22 @@ At each saturation step the moved vertex has actual contact degree zero immediat
 
 If the initial isolate population is
 
-$$
+```math
 z:=|Z|
-$$
+```
 
 and `m` saturation moves are performed, each move removes at most two isolated vertices: the moved isolate and, only when its unique blocker was also isolated, that blocker. Since saturation ends with no isolates,
 
-$$
+```math
 2m\ge z.
-$$
+```
 
 Exactly one new edge is created per move, so
 
-$$
+```math
 \boxed{|F_{new}|=m\ge\lceil z/2\rceil.}
 \tag{4.4}
-$$
+```
 
 Because the old contact-minimal C-I representative has no weak actual contacts, its old actual contact graph is the positive core together with the isolated vertices `Z`. Consequently the final actual contact graph is the old positive core plus a forest of new edges. Every tree of that forest is either attached to the old core at one vertex or remains a separate tree. No new edge can create a second attachment of an existing tree: its moved endpoint is isolated at the moment of insertion, so it can only attach that singleton to one pre-existing vertex/component.
 
@@ -279,21 +279,21 @@ Choose a leaf of `T` that is not the old-core root. Its KKT equilibrium equation
 
 Delete that zero-weight leaf edge from the force-balance calculation and repeat. Inductively every edge of `T` has zero multiplier. This works for every tree component, so
 
-$$
+```math
 \boxed{\alpha_e=0\qquad(e\in F_{new})}
 \tag{4.5}
-$$
+```
 
 in **every** normalized KKT stress of `A^sat`.
 
 After the forest multipliers vanish, the remaining equilibrium and normalization equations are exactly those of the old canonical source on the unchanged old contact and diameter rows. Conversely every old normalized stress extends by zero on `F_new`. Therefore zero-extension/restriction gives a bijection
 
-$$
+```math
 \boxed{
 \mathcal K(A^{sat})\cong\mathcal K(A)
 }
 \tag{4.6}
-$$
+```
 
 between the normalized KKT stress polytopes.
 
@@ -301,10 +301,10 @@ In particular the positive KKT support, old core `V`, stress matrix `Omega_V`, d
 
 Combining (4.4) and (4.5), a macroscopic inactive-container population `z=Omega(D^2)` can be converted, without changing the old force system or diameter graph, into
 
-$$
+```math
 \boxed{Omega(D^2)\text{ exact unit contacts carried by a KKT-invisible forest}.}
 \tag{4.7}
-$$
+```
 
 This is a whole-population strengthening of proof-only Section 95: first-contact creation can fail to alter the normalized KKT polytope even after the entire actual-isolate population has been saturated.
 

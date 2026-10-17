@@ -27,11 +27,11 @@ component of `H_+` to be a caterpillar.
 
 Thus the C24 common-chain phase has the exact diameter normal form
 
-$$
+```math
 \boxed{
 H_+ = \text{a disjoint union of caterpillar trees},
 }
-$$
+```
 
 with no isolated vertices in `B_+`.
 
@@ -42,20 +42,20 @@ with no isolated vertices in `B_+`.
 Assume the C24 common intersection `I_*` contains a bridge-tree edge `e`.  Removing
 `e` partitions the loaded vertices into complementary cyclic intervals
 
-$$
+```math
 A=\{a_1,\ldots,a_p\},
 \qquad
 B=\{b_1,\ldots,b_q\},
 \tag{C25.1}
-$$
+```
 
 listed in the same cyclic direction around the convex boundary.  C24.5 says every
 positive diameter edge crosses this cut:
 
-$$
+```math
 H_+\subseteq A\times B.
 \tag{C25.2}
-$$
+```
 
 In particular `H_+` is bipartite and acyclic.
 
@@ -67,17 +67,17 @@ In particular `H_+` is bipartite and acyclic.
 
 Let
 
-$$
+```math
 a_i b_j,\ a_k b_\ell\in H_+
 \tag{C25.3}
-$$
+```
 
 be vertex-disjoint.  If `i<k`, then
 
-$$
+```math
 \boxed{j<\ell.}
 \tag{C25.4}
-$$
+```
 
 #### Proof
 
@@ -106,40 +106,40 @@ No vertex of `H_+` has three distinct non-leaf neighbors.
 
 Suppose first that some `a_i in A` has three non-leaf neighbors
 
-$$
+```math
 b_{j_1},\ b_{j_2},\ b_{j_3},
 \qquad
 j_1<j_2<j_3.
 \tag{C25.5}
-$$
+```
 
 Because the middle neighbor `b_{j_2}` is non-leaf, it has another neighbor
 
-$$
+```math
 a_k\ne a_i.
 \tag{C25.6}
-$$
+```
 
 The graph `H_+` is a forest, so no ambiguity from a cycle arises; in particular the
 four edges used below are ordinary distinct tree incidences.
 
 If `i<k`, compare the vertex-disjoint edges
 
-$$
+```math
 a_i b_{j_3}
 \quad\text{and}\quad
 a_k b_{j_2}.
-$$
+```
 
 Lemma C25.1 would require `j_3<j_2`, impossible.
 
 If `k<i`, compare instead
 
-$$
+```math
 a_k b_{j_2}
 \quad\text{and}\quad
 a_i b_{j_1}.
-$$
+```
 
 Lemma C25.1 would require `j_2<j_1`, again impossible.
 

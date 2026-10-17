@@ -92,10 +92,10 @@ Let `C` be the actual unit-contact graph. An edge of `C` cannot join two
 distinct moving owners. Indeed the four squared-length equations for
 relative vectors
 
-$$
+```math
 r,\quad r+\Delta_i,\quad r-\Delta_j,
 \quad r+\Delta_i-\Delta_j
-$$
+```
 
 all equal one, and their mixed difference is `-2 Delta_i dot Delta_j`.
 Mutual acuteness makes this impossible.
@@ -106,9 +106,9 @@ rhombus moves while both its neighboring vertices are fixed, let `a,b`
 be its two old unit vectors from those neighbors. They make an angle
 strictly between `pi/3` and `2pi/3`. Preservation requires
 
-$$
+```math
 a\cdot\Delta=b\cdot\Delta=-|\Delta|^2/2.
-$$
+```
 
 Thus `Delta` is parallel to `a+b`, and the unique nonzero solution is
 `Delta=-(a+b)`. Its length is `2 cos(angle(a,b)/2)>1`, contradicting the
@@ -147,10 +147,10 @@ the retained boundary cells, not every source rhombus automatically.
 
 Fix orthonormal axes `u,v`. Form a graph `P` from any source pairs with
 
-$$
+```math
 1<|r|\le5/4,\qquad |r\cdot v|\le1/8.
 \tag{1}
-$$
+```
 
 Then **every component of `P` is a path or an isolated vertex**. Orient
 each edge by increasing `u` coordinate; every vertex has at most one
@@ -160,17 +160,17 @@ incoming and one outgoing edge.
 
 An edge in (1) has longitudinal component
 
-$$
+```math
 |r\cdot u|>\sqrt{1-1/64}>7/8.
-$$
+```
 
 Two neighbors of a vertex on the same longitudinal side would have
 longitudinal coordinate difference at most `5/4-7/8=3/8`, and transverse
 difference at most `1/4`. Their squared distance would be at most
 
-$$
+```math
 (3/8)^2+(1/4)^2=13/64<1,
-$$
+```
 
 contrary to unit separation. Thus there is at most one neighbor on each
 side. A finite cycle has a vertex of maximal longitudinal coordinate;
@@ -187,10 +187,10 @@ packet's two-sided-contact exclusion. If `W` is the set of these actual
 exceptional source vertices and `c_P` is the number of nontrivial conflict
 path components, then
 
-$$
+```math
 \boxed{N_{\rm pure}\le |W|-c_P.}
 \tag{2}
-$$
+```
 
 No exceptional source vertex can carry three pure conflict pairs. An
 unbounded isolate or defect population remains possible; (2) is not a
@@ -219,11 +219,11 @@ Combine this with Sections 2–3. A near-unit pair joining two distinct
 moving **core** owners cannot lie in a bounded four-face, and cannot lie
 in a bounded nonquadrilateral face. Therefore
 
-$$
+```math
 \boxed{\text{every core-to-core intergroup lower clause lies in the outer
 contact face}.}
 \tag{2a}
-$$
+```
 
 In particular every core-to-core pure conflict edge lies there; together
 these edges form a linear forest on actual outer-face core vertices.
@@ -241,10 +241,10 @@ bounded-face assignment; no isolate is removed.
 In fact this exception can be removed **inside every bounded contact face**.
 Suppose the displacement cloud, including zero, has diameter
 
-$$
+```math
 s<\min\{D-\sqrt{D^2-1},\sqrt2-1\}.
 \tag{2b}
-$$
+```
 
 Keep the checked rooted-forest dispatch for exterior isolates, and assign
 each contact isolate in a bounded nonquadrilateral face to that face's
@@ -261,11 +261,11 @@ of that face's boundary vertices, hence is nonextreme in the full source.
 For any other source point `q`, write `z=sum lambda_i p_i` using distinct
 boundary vertices. Source unit separation and the variance identity give
 
-$$
+```math
 |z-q|^2=\sum_i\lambda_i|p_i-q|^2
 -\sum_i\lambda_i|p_i-z|^2\le D^2-1.
 \tag{2c}
-$$
+```
 
 Thus no strict-long pair of length greater than `sqrt(D^2-1)` is incident
 with `z`. Changing its ownership cannot break any rooted long forest edge
@@ -297,18 +297,18 @@ source paths.
 Suppose the contact graph is connected and triangle-free. Let `b` be its
 outer-face boundary walk length and
 
-$$
+```math
 Q=\sum_{\text{bounded faces }F,\,\deg F>4}(\deg F-4).
-$$
+```
 
 Let `Z` be the number of contact isolates in the full source, and let `W_F`
 contain all nonisolated vertices incident with the outer face or a bounded
 nonquadrilateral face. Then
 
-$$
+```math
 |W_F|\le b+5Q.
 \tag{3}
-$$
+```
 
 Indeed each nonquadrilateral bounded face has length `p>=5`, and
 `p<=5(p-4)`. Repeated walk vertices can only lower the distinct-vertex count.
@@ -318,10 +318,10 @@ all old diameters/upper constraints have already been handled, and the
 joint moves strictly shorten an old diameter for every nonzero pattern.
 If `k` owners remain, canonical minimality then implies
 
-$$
+```math
 \boxed{k\le |W_F|+Z\le b+5Q+Z.}
 \tag{4}
-$$
+```
 
 To prove this, test each singleton pattern. If it has no bad lower state,
 it is a forbidden finite competitor. Hence it has a bad pair with an
@@ -338,10 +338,10 @@ we do not replace `Q` by a smaller induced harmonic-cell defect.
 
 For the actual global stopped O–O moves, improve (4) to
 
-$$
+```math
 \boxed{k\le b+2Z.}
 \tag{5}
-$$
+```
 
 Here retain the same hypothesis that every unary rhombus-diagonal state
 has been checked to remain strict. For each contact isolate `z`, record
@@ -364,11 +364,11 @@ capacity theorem to the actual outer face rather than bounded defects.
 
 Use the bounded-face reassignment to obtain the stronger full-source bound
 
-$$
+```math
 \boxed{k\le b+Z_{\rm out},\qquad
 r\le b+Z_{\rm out}+2d_H,}
 \tag{6}
-$$
+```
 
 where `Z_out` counts isolates in the **outer contact face**, including
 outer pockets; it is not only the population outside the core convex hull.
@@ -426,10 +426,10 @@ stopped O–O trains have projective directions in one interval of width
 less than `pi/3`, and replace each train vector `u_i` by any unit vector
 `u_i'` in the exact source chart. Put
 
-$$
+```math
 X_0=0,\qquad X_j=\sum_{i=1}^j(u_i'-u_i).
 \tag{7}
-$$
+```
 
 Assume the cloud `{X_0,...,X_m}` has diameter satisfying (2b). This is
 an explicit hypothesis on the finite motion, not inferred from the
@@ -451,10 +451,10 @@ selected direction interval is narrower than `pi/3`. If it meets train
 `u_i'+w` and `u_i'-w`. Thus all its noncontact distances remain strictly
 above one exactly when
 
-$$
+```math
 \boxed{|u_i'\cdot w|<1/2.}
 \tag{8}
-$$
+```
 
 After those explicit rhombus tests, **every remaining lower-distance
 equality/violation is an old near-unit pair in the outer contact face**.
@@ -462,14 +462,14 @@ This follows from near-unit cofaciality, bounded-face rigid translation,
 and the fact that a four-face has only its two diagonals as noncontact
 corner pairs. This is a full-source feasibility reduction:
 
-$$
+```math
 \boxed{\begin{array}{c}
 \text{actual diameter constraints}\; +\; |J|\le d_H\text{ inactive upper pairs}\\
 {}+\;\text{local strict inequalities (8)}\\
 {}+\;\text{outer-face near-unit pairs only}.
 \end{array}}
 \tag{9}
-$$
+```
 
 The finite cyclic phase rotation of PR #608 at `88c9d25d`, checked during
 this run, is one concrete example of (7). Its telescoping translations

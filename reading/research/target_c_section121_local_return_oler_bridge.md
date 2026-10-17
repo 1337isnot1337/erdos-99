@@ -21,9 +21,9 @@ is `G_loc/d`, not `G_loc/d^2`. The asymptotic moment statement formerly numbered
 Fix one unloaded harmonic component with induced positive-contact graph `H` and convex
 attachment polygon
 
-$$
+```math
 P=\operatorname{conv}(A).
-$$
+```
 
 Use the canonical Section-82 notation:
 
@@ -37,26 +37,26 @@ Use the canonical Section-82 notation:
 
 Put
 
-$$
+```math
 G_{loc}:=\operatorname{area}(P)-A_4,
 \qquad
 c_0={\sqrt3\over4}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 G_{loc}
 \ge
 c_0\bigl[(L-p)+(2f+Q)\bigr].
 }
 \tag{121.1}
-$$
+```
 
 Since `L>=p` and `Q>=f`,
 
-$$
+```math
 \boxed{
 G_{loc}
 \ge
@@ -64,28 +64,28 @@ G_{loc}
 \bigl(L+P_{exc}-p\bigr).
 }
 \tag{121.2}
-$$
+```
 
 Now assume Section 120. For any two distinct attachment vertices `p_-,p_+` occurring
 on the outer walk, let
 
-$$
+```math
 r=|p_+-p_-|,
 \qquad
 q={p_+-p_-\over r},
-$$
+```
 
 and let
 
-$$
+```math
 M(q)=
 \sum_R\operatorname{area}(R)
 \bigl(|q\cdot u_R|+|q\cdot v_R|\bigr).
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 G_{loc}
 \ge
@@ -95,11 +95,11 @@ G_{loc}
 \right]_+ .
 }
 \tag{121.3}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 M(q)
 \ge
@@ -110,7 +110,7 @@ M(q)
 \right].
 }
 \tag{121.4}
-$$
+```
 
 Equations (121.1)--(121.4) are finite statements on the actual harmonic carrier. They
 do not require the carrier to be a standalone global minimizer and do not delete or
@@ -134,48 +134,48 @@ Let
 
 Every pre-existing polygon-side contact has unit length, so
 
-$$
+```math
 \boxed{p=c_{partial}+L_{add}.}
 \tag{121.5}
-$$
+```
 
 The `h` added sides split the old outer face into `h` convex pockets. For a new pocket
 `C`, let `k_C`, `P_C`, and `A_C` be its boundary-edge count, Euclidean perimeter, and
 area. Euler/face-incidence subtraction gives
 
-$$
+```math
 \boxed{
 \sum_C k_C=L+2h-a,
 }
 \tag{121.6}
-$$
+```
 
 and Euclidean perimeter incidence gives
 
-$$
+```math
 \boxed{
 \sum_C P_C=L+2L_{add}-p.
 }
 \tag{121.7}
-$$
+```
 
 Each pocket boundary vertex is a source point, hence the boundary vertices are
 unit-separated. Oler gives
 
-$$
+```math
 A_C\ge a_0(k_C-1)-c_0P_C,
 \qquad a_0={\sqrt3\over2}=2c_0.
 \tag{121.8}
-$$
+```
 
 Summing and using (121.5)--(121.7),
 
-$$
+```math
 \boxed{
 H_{out}:=\sum_CA_C\ge c_0(L-p).
 }
 \tag{121.9}
-$$
+```
 
 The incidence identities count old outer-face occurrences with multiplicity, so
 bridges/repeated vertices cause no loss.
@@ -186,30 +186,30 @@ Every old bounded face remains a bounded face of `Hhat`, and Section 82 proves i
 convex. A nonquadrilateral face of degree `m=4+r`, `r>=1`, is an equilateral polygon
 with unit-separated boundary vertices. Oler on those vertices yields
 
-$$
+```math
 \operatorname{area}(F)
 \ge a_0(m-1)-c_0m
 =c_0(m-2)
 =c_0(2+r).
 \tag{121.10}
-$$
+```
 
 Summing over all `f` nonquadrilateral bounded faces and using `sum r=Q`,
 
-$$
+```math
 \boxed{
 A_{exc}\ge c_0(2f+Q).
 }
 \tag{121.11}
-$$
+```
 
 The strict rhombi, bounded nonquadrilateral faces, and new outer pockets tile `P` up
 to common boundaries. Hence
 
-$$
+```math
 G_{loc}=A_{exc}+H_{out},
 \tag{121.12}
-$$
+```
 
 which proves (121.1).
 
@@ -217,25 +217,25 @@ which proves (121.1).
 
 Set
 
-$$
+```math
 H=(L-p)+(2f+Q),
 \qquad
 J=(L-p)+(4f+Q)=L+P_{exc}-p.
-$$
+```
 
 The outer walk has convex hull `P`, so `L>=p`. Also each nonquadrilateral face
 contributes at least one to `Q`, so `Q>=f`. Therefore
 
-$$
+```math
 5H-3J=2\bigl[(L-p)+(Q-f)\bigr]\ge0,
-$$
+```
 
 and
 
-$$
+```math
 \boxed{H\ge{3\over5}J.}
 \tag{121.13}
-$$
+```
 
 Combining with (121.1) proves (121.2).
 
@@ -243,17 +243,17 @@ Combining with (121.1) proves (121.2).
 
 Section 120 gives
 
-$$
+```math
 d\bigl(L+P_{exc}-2r\bigr)
 \ge4A_4-2M(q).
 \tag{121.14}
-$$
+```
 
 Since `J=L+P_exc-p`,
 
-$$
+```math
 J\ge2r-p+{4A_4-2M(q)\over d}.
-$$
+```
 
 Also `J>=0`. Inserting this into (121.2) proves (121.3). Conversely, (121.2) gives
 `J<=5G_loc/(3c_0)`; substituting that upper bound into (121.14) proves (121.4).
@@ -262,7 +262,7 @@ Also `J>=0`. Inserting this into (121.2) proves (121.3). Conversely, (121.2) giv
 
 Suppose `d=Theta(D)`. Dividing (121.4) by `d^2` gives
 
-$$
+```math
 {M(q)\over d^2}
 \ge
 2{A_4\over d^2}
@@ -270,7 +270,7 @@ $$
 -{p\over2d}
 -{5\over6c_0}{G_{loc}\over d}.
 \tag{121.15}
-$$
+```
 
 The last term is `G_loc/d`, not `G_loc/d^2`.
 
@@ -281,10 +281,10 @@ nontrivial limiting moment constraint.
 
 A sufficient additional hypothesis would be the genuinely boundary-order statement
 
-$$
+```math
 G_{loc}=o(d),
 \tag{121.16}
-$$
+```
 
 or any explicit `G_loc=O(d)` bound strong enough for the desired constants. No such
 bound is proved here.

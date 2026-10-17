@@ -23,9 +23,9 @@ as separate currencies. They are in fact coupled by a direct boundary argument.
 
 Let the loaded force-hull vertices be `b_1,...,b_q` in cyclic order. Split one distinguished pass of the outer contact-face walk into the `q` subwalks `W_i` from `b_i` to `b_{i+1}`. NM already uses this decomposition and proves
 
-$$
+```math
 \sum_i(\ell_i-1)=x_B,
-$$
+```
 
 where `ell_i>=1` is the number of contact-edge occurrences in `W_i`.
 
@@ -37,16 +37,16 @@ Every interval with `ell_i=1` is literally the unit convex-hull side contact `b_
 
 Call `W_i` good when `ell_i=1` and bad when `ell_i>=2`. Let `m_bad` be the number of bad intervals. Since every bad interval contributes at least one unit to `ell_i-1`,
 
-$$
+```math
 \boxed{m_{bad}\le x_B.}
 \tag{HB.1}
-$$
+```
 
 There are therefore at least
 
-$$
+```math
 q-m_{bad}\ge q-x_B
-$$
+```
 
 good intervals.
 
@@ -56,17 +56,17 @@ For a good interval the unique outer-walk edge has endpoints `b_i,b_{i+1}`. Thes
 
 Every sufficiently large fully force-visible C-II source satisfies
 
-$$
+```math
 \boxed{e_{BB}\ge q-x_B.}
 \tag{HB.2}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{x_B+e_{BB}\ge q.}
 \tag{HB.3}
-$$
+```
 
 No KKT weight is used. HB.2 is a statement about the actual contact graph of the same post-ZF source.
 
@@ -76,39 +76,39 @@ No KKT weight is used. HB.2 is a statement about the actual contact graph of the
 
 ZT gives
 
-$$
+```math
 \boxed{q=x_B+Q+2d_H+2s_Z.}
 \tag{HB.4}
-$$
+```
 
 Substitute HB.4 into HB.2:
 
 ### Corollary HB.2 — direct contacts dominate face and mixed defects
 
-$$
+```math
 \boxed{
 e_{BB}
 \ge
 Q+2d_H+2s_Z.
 }
 \tag{HB.5}
-$$
+```
 
 Thus each unit of bounded face defect must be matched by at least one loaded-loaded contact, while each diameter-tree-component defect or extra mixed row dependency costs at least two such contacts, unless that cost has already been paid as outer-walk excess before HB.5 is formed through the exact terminal partition.
 
 In particular,
 
-$$
+```math
 \boxed{e_{BB}\ge Q+2s_Z,}
 \tag{HB.6}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{e_{BB}\ge2d_H.}
 \tag{HB.7}
-$$
+```
 
 This is substantially stronger than treating `Q,d_H,s_Z` as independent of the loaded boundary contact graph.
 
@@ -118,29 +118,29 @@ This is substantially stronger than treating `Q,d_H,s_Z` as independent of the l
 
 ZU gives
 
-$$
+```math
 \boxed{c_I+e_{BB}+s_C=q-2+d_H+s_Z.}
 \tag{HB.8}
-$$
+```
 
 Using HB.2,
 
-$$
+```math
 \begin{aligned}
 c_I+s_C
 &=q-2+d_H+s_Z-e_{BB}\\
 &\le x_B+d_H+s_Z-2.
 \end{aligned}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 c_I+s_C\le x_B+d_H+s_Z-2.
 }
 \tag{HB.9}
-$$
+```
 
 So a source with a short outer walk and small `d_H+s_Z` cannot hide a large number of unloaded components or pinned-contact stress dimensions: most of its boundary budget is already consumed by the mandatory loaded hull-side contacts.
 
@@ -152,53 +152,53 @@ The inequality is exact up to the integer constant `2`; no asymptotic estimate i
 
 DB proves
 
-$$
+```math
 \liminf\frac hD\ge2\rho,
 \qquad
 \rho=\cos\rho=0.7390851332\ldots .
 \tag{HB.10}
-$$
+```
 
 The diameter-thrackle bound gives `q>=h`. Therefore
 
-$$
+```math
 \boxed{
 \liminf\frac qD\ge2\rho
 =1.4781702664\ldots .
 }
 \tag{HB.11}
-$$
+```
 
 Divide HB.3 by `D`:
 
-$$
+```math
 \liminf\frac{x_B+e_{BB}}D\ge2\rho.
 \tag{HB.12}
-$$
+```
 
 Consequently every unbounded post-ZF survivor satisfies the two-way alternative
 
-$$
+```math
 \boxed{
  x_B\ge(\rho-o(1))D
 }
 \tag{HB.13}
-$$
+```
 
 or
 
-$$
+```math
 \boxed{
  e_{BB}\ge(\rho-o(1))D.
 }
 \tag{HB.14}
-$$
+```
 
 Numerically,
 
-$$
+```math
 \rho=0.7390851332\ldots .
-$$
+```
 
 This is much stronger than the crude three-way consequence of NB, whose individual threshold was only `0.2033 D`. NB remains stronger in a different sense because it lower-bounds diameter branching `2h-q`; HB instead says that the post-ZF source must pay a large amount directly on its outer walk and/or in loaded-loaded unit contacts.
 
@@ -208,51 +208,51 @@ This is much stronger than the crude three-way consequence of NB, whose individu
 
 GU uses
 
-$$
+```math
 \lambda_2
 :=\limsup\frac{e_{BB}+2s_C}{D}
-$$
+```
 
 and forces a quadratic attachment-cell gap whenever
 
-$$
+```math
 \lambda_2<\lambda_*
 :=\sqrt{\frac{\sqrt3}{\pi}}
 =0.7425152492\ldots .
 \tag{HB.15}
-$$
+```
 
 The HB contact threshold
 
-$$
+```math
 \rho=0.7390851332\ldots
-$$
+```
 
 lies only
 
-$$
+```math
 \lambda_* - \rho
 =0.0034301160\ldots
-$$
+```
 
 below the GU transition.
 
 More concretely, along any subsequence with
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}<\lambda_*-o(1),
-$$
+```
 
 we also have `e_BB/D<lambda_*+o(1)`. HB.3 and HB.11 then force
 
-$$
+```math
 \boxed{
 \liminf\frac{x_B}{D}
 \ge2\rho-\lambda_*
 =0.7356550172\ldots .
 }
 \tag{HB.16}
-$$
+```
 
 Thus the GU low-surplus/macroscopic-gap branch necessarily carries an enormous outer-walk excess at the same time. A future cavity theorem can therefore assume both:
 
@@ -269,9 +269,9 @@ This is a narrower target than the previous generic macroscopic-gap branch.
 
 For a regular unit odd shell, `x_B=0` and every hull side is a loaded-loaded contact, so `e_BB=q`. HB.2 is equality. ZT gives `Q=q-4`, `d_H=0`, `s_Z=2`, and HB.5 again gives equality:
 
-$$
+```math
 e_{BB}=q=Q+2s_Z.
-$$
+```
 
 Thus HB retains the main local/non-global shell regression.
 
@@ -279,9 +279,9 @@ Thus HB retains the main local/non-global shell regression.
 
 Here `x_B=0`, `e_BB=q=4`, `Q=s_Z=0`, and `d_H=2`. Again HB.5 is equality:
 
-$$
+```math
 4=2d_H.
-$$
+```
 
 ### Bridge/excursion-heavy outer face
 

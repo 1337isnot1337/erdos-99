@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_kkt_cycle_localization_2026-09-09.md) · source SHA-256 `03861b1e00677bde0ef1d059730b538e36d98e80f05a2a14782214dc70419f57`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-22912651186C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=0` KKT variation localizes to the unique diameter cycle
 
@@ -21,48 +23,48 @@ This report shows that all stress-polytope variation is supported by the **uniqu
 
 Let the actual diameter edges be ordered by the DC half-turn order
 
-$$
+```math
 h_0,h_1,\ldots,h_{q-1},
-$$
+```
 
 and let `c_t` be the contact edge produced by the transition `h_t -> h_{t+1}`. For an arbitrary normalized KKT stress write
 
-$$
+```math
 a_t:=\alpha_{c_t}>0,
 \qquad
 b_t:=\beta_{h_t}\ge0.
-$$
+```
 
 If `h_t` is not on the unique diameter cycle, then
 
-$$
+```math
 \boxed{a_{t-1}=a_t,}
 \tag{KL.1}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{b_t=\frac{a_t}{D^2}>0.}
 \tag{KL.2}
-$$
+```
 
 Therefore:
 
-$$
+```math
 \boxed{
 \beta_h>0
 \quad\text{for every diameter-tree edge }h
 \text{ and every normalized KKT stress.}
 }
 \tag{KL.3}
-$$
+```
 
 So every proper face of the normalized KKT polytope is cut out solely by equations
 
-$$
+```math
 \beta_h=0
-$$
+```
 
 for diameter edges `h` belonging to the unique odd cycle of `H`.
 
@@ -74,42 +76,42 @@ In particular every KKT extreme point retains **all** diameter branches. Since e
 
 In `d_H=0`, CY gives
 
-$$
+```math
 h=q.
 \tag{1.1}
-$$
+```
 
 DC orders all `q` actual diameter edges cyclically so that consecutive edges share an endpoint:
 
-$$
+```math
 h_t\cap h_{t+1}\ne\varnothing
 \qquad(t\in\mathbb Z/q\mathbb Z).
 \tag{1.2}
-$$
+```
 
 Because this cyclic list contains every actual diameter edge, the union of the diameter edges is connected as an abstract graph. CY also gives that every one of the `q` loaded terminals belongs to the actual diameter graph. Hence `H` is connected on `q` vertices.
 
 Together with `|E(H)|=q`,
 
-$$
+```math
 \boxed{H\text{ is connected and unicyclic}.}
 \tag{1.3}
-$$
+```
 
 Every cycle in a planar diameter graph is odd, so the unique cycle of `H` is odd.
 
 Let
 
-$$
+```math
 \chi\in\{-1,0,1\}^q
-$$
+```
 
 be a signed oriented cycle vector for this unique cycle in the DC diameter-edge ordering. Then
 
-$$
+```math
 \boxed{\ker A_H^{\mathsf T}=\operatorname{span}\{\chi\},}
 \tag{1.4}
-$$
+```
 
 where `A_H` is the oriented diameter-incidence matrix used in AS.
 
@@ -119,39 +121,40 @@ where `A_H` is the oriented diameter-incidence matrix used in AS.
 
 AS proves that, after a signed permutation of the contact rows, the contact incidence matrix factors as
 
-$$
+```math
 B_C=US A_H,
 \tag{2.1}
-$$
+```
 
 where
 
 - `U` is a signed permutation matrix;
 - `S` is the antiperiodic difference operator
-  $$
+  ```math
   (Sz)_t=z_{t+1}-z_t,
   \qquad z_q=-z_0.
-  $$
+  
+  ```
 
 Order the contact weights according to the corresponding transition rows and put
 
-$$
+```math
 D_a=\operatorname{diag}(a_0,\ldots,a_{q-1}),
 \qquad
 D_b=\operatorname{diag}(b_0,\ldots,b_{q-1}).
-$$
+```
 
 The scalar stress matrix of an arbitrary KKT stress is
 
-$$
+```math
 \Omega
 =B_C^{\mathsf T}D_aB_C
 -A_H^{\mathsf T}D_bA_H.
-$$
+```
 
 Using (2.1),
 
-$$
+```math
 \boxed{
 \Omega
 =A_H^{\mathsf T}MA_H,
@@ -159,16 +162,17 @@ $$
 M:=S^{\mathsf T}D_aS-D_b.
 }
 \tag{2.2}
+```
 
 Let
 
-\[
+```math
 W:=A_HP
-$$
+```
 
 be the `q x 2` matrix of oriented diameter vectors. CE gives, after one common rotation,
 
-$$
+```math
 W_t
 =D\left(
 \cos(\theta_0+t\theta),
@@ -177,30 +181,33 @@ W_t
 \qquad
 \theta=\frac\pi q.
 \tag{2.3}
+```
 
 Equilibrium is
 
-\[
+```math
 \Omega P=0.
-$$
+```
 
 Using (2.2),
 
-$$
+```math
 A_H^{\mathsf T}MW=0.
 \tag{2.4}
+```
 
 By (1.4), each column of `MW` lies in the one-dimensional cycle space. Hence there is a vector
 
-\[
+```math
 \lambda\in\mathbb R^2
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{MW=\chi\lambda^{\mathsf T}.}
 \tag{2.5}
+```
 
 This is the complete place where a nonuniform KKT stress may differ from the uniform AS stress: the middle antiperiodic defect need only vanish modulo the one-dimensional diameter cycle space.
 
@@ -210,47 +217,48 @@ This is the complete place where a nonuniform KKT stress may differ from the uni
 
 Identify the two coordinate columns of `W` with the complex sequence
 
-\[
+```math
 z_t:=D e^{i(\theta_0+t\theta)}.
 \tag{3.1}
-$$
+```
 
 The antiperiodic continuation satisfies
 
-$$
+```math
 z_{t+q}=-z_t.
-$$
+```
 
 Equation (2.5) becomes
 
-$$
+```math
 \boxed{Mz=c\chi}
 \tag{3.2}
-$$
+```
 
 for one complex scalar `c`.
 
 The `t`-th coordinate of `S^T D_a S z` is
 
-$$
+```math
 a_{t-1}(z_t-z_{t-1})
 +a_t(z_t-z_{t+1}),
 \tag{3.3}
-$$
+```
 
 with the antiperiodic indexing convention at the closing edge. Dividing (3.2) by `z_t` gives
 
-$$
+```math
 a_{t-1}(1-e^{-i\theta})
 +a_t(1-e^{i\theta})
 -b_t
 =
 \frac{c\chi_t}{D}e^{-i(\theta_0+t\theta)}.
 \tag{3.4}
+```
 
 Taking imaginary and real parts yields
 
-\[
+```math
 \boxed{
 \sin\theta\,(a_{t-1}-a_t)
 =
@@ -259,11 +267,11 @@ Taking imaginary and real parts yields
 \left(c e^{-i(\theta_0+t\theta)}\right),
 }
 \tag{3.5}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 (1-\cos\theta)(a_{t-1}+a_t)-b_t
 =
@@ -272,26 +280,27 @@ $$
 \left(c e^{-i(\theta_0+t\theta)}\right).
 }
 \tag{3.6}
+```
 
 Equations (3.5)-(3.6) are an explicit three-real-parameter description before normalization: one additive contact level and the two real components of `c`. This matches the known unnormalized KKT stress-space dimension `s_Z+1=3`.
 
 The periodic consistency of (3.5) is automatic. Indeed `chi` is a cycle vector, so
 
-\[
+```math
 A_H^{\mathsf T}\chi=0.
-$$
+```
 
 Multiplying by `P` gives
 
-$$
+```math
 \chi^{\mathsf T}W=0,
-$$
+```
 
 or in complex form
 
-$$
+```math
 \sum_t\chi_t e^{i(\theta_0+t\theta)}=0.
-$$
+```
 
 Its conjugate is exactly the identity needed when summing (3.5) around the cycle.
 
@@ -301,58 +310,58 @@ Its conjugate is exactly the identity needed when summing (3.5) around the cycle
 
 Now suppose `h_t` is not on the unique diameter cycle. Then
 
-$$
+```math
 \chi_t=0.
-$$
+```
 
 Equation (3.5) immediately gives
 
-$$
+```math
 a_{t-1}=a_t.
-$$
+```
 
 This proves KL.1.
 
 Equation (3.6) then reduces to
 
-$$
+```math
 b_t
 =2(1-\cos\theta)a_t.
 \tag{4.1}
-$$
+```
 
 CE gives
 
-$$
+```math
 D=\frac1{2\sin(\theta/2)},
-$$
+```
 
 so
 
-$$
+```math
 2(1-\cos\theta)
 =4\sin^2\frac\theta2
 =\frac1{D^2}.
 \tag{4.2}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{b_t=\frac{a_t}{D^2}.}
-$$
+```
 
 CY proves that every cycle contact coefficient is strictly positive for **every** normalized KKT stress. Thus
 
-$$
+```math
 a_t>0,
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{b_t>0.}
-$$
+```
 
 This proves KL.2-KL.3. `square`
 
@@ -371,9 +380,10 @@ Therefore:
 
 Every proper face of the normalized KKT polytope is induced by a set of equations
 
-$$
+```math
 \boxed{\beta_h=0\qquad(h\in E(C_H)),}
 \tag{5.1}
+```
 
 where `C_H` is the unique odd cycle of the full actual diameter graph.
 
@@ -385,9 +395,9 @@ All branch edges of `H-C_H` remain strictly positive on the entire polytope.
 
 The `d_H=0` endpoint has
 
-\[
+```math
 s_Z=2.
-$$
+```
 
 The extreme-stress sparsification theorem says every extreme normalized KKT stress has at least `s_Z=2` zero actual coordinates. CY/CG exclude contact zeros, and KL excludes diameter-tree zeros. Hence:
 
@@ -397,7 +407,7 @@ Every extreme normalized KKT stress has at least two zero `beta` coordinates, an
 
 Equivalently the selected diameter support of an extreme stress has the form
 
-\[
+```math
 \boxed{
 H_s=H\setminus Z,
 \qquad
@@ -406,6 +416,7 @@ Z\subseteq E(C_H),
 |Z|\ge2.
 }
 \tag{6.1}
+```
 
 All diameter branches survive every extreme-point reduction.
 
@@ -413,11 +424,12 @@ Since removing at least two edges from the unique cycle destroys the only cycle,
 
 Thus:
 
-\[
+```math
 \boxed{
 \text{every KKT extreme in the `d_H=0` equality class has a diameter forest support.}
 }
 \tag{6.2}
+```
 
 CG remains important here: despite the forest support, every extreme stays in the generic C56 transfer phase and its scalar stress matrix still has rank `q-3`.
 

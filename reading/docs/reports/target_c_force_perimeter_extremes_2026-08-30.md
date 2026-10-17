@@ -21,9 +21,9 @@
 
 Target C Theorem C10 proved for the reciprocal force polygon `F^*`
 
-$$
+```math
 \sqrt3D\le\operatorname{per}(F^*)\le2D.
-$$
+```
 
 The upper equality case was already classified: it occurs exactly when the positive
 diameter graph is a matching.  This note gives an elementary local proof of the lower
@@ -31,23 +31,23 @@ bound and completely classifies its equality case.
 
 The two endpoints are therefore rigidly different:
 
-$$
+```math
 \boxed{
 P_*=2D
 \iff
 H_+\text{ is a matching},
 }
-$$
+```
 
 whereas
 
-$$
+```math
 \boxed{
 P_*=\sqrt3D
 \iff
 H_+=K_3\text{ on an equilateral diameter triangle and }\beta\equiv1/3.
 }
-$$
+```
 
 Thus the force-perimeter parameter continuously measures how far the positive diameter
 reactions lie between a two-ended matching regime and a maximally cancelling
@@ -60,17 +60,17 @@ three-direction equilateral regime.
 Fix a normalized KKT stress `(\alpha,\beta)`.  At a positive diameter endpoint
 `b\in B_+`, write
 
-$$
+```math
 s_b:=\sum_{bk\in H_+}\beta_{bk}>0
 \tag{C14.1}
-$$
+```
 
 and
 
-$$
+```math
 g_b=\sum_{bk\in H_+}\beta_{bk}(b-k).
 \tag{C14.2}
-$$
+```
 
 Every vector `b-k` occurring here has length `D`.
 
@@ -83,25 +83,25 @@ between `b-k` and `b-l` is at most `\pi/3`.
 
 Let the angle be `\theta`.  Since the entire configuration has diameter `D`,
 
-$$
+```math
 |k-l|\le D.
-$$
+```
 
 But
 
-$$
+```math
 |k-l|^2
 =|(b-k)-(b-l)|^2
 =2D^2(1-\cos\theta).
-$$
+```
 
 Hence
 
-$$
+```math
 2(1-\cos\theta)\le1,
 \qquad
 \cos\theta\ge\frac12,
-$$
+```
 
 so `\theta\le\pi/3`. `\square`
 
@@ -112,44 +112,44 @@ diameter vector has projection at least `D\cos(\pi/6)=\sqrt3D/2` onto `u_b`.
 
 ### Corollary C14.2 (local reaction lower bound)
 
-$$
+```math
 \boxed{
 |g_b|
 \ge
 \frac{\sqrt3}{2}D s_b.
 }
 \tag{C14.3}
-$$
+```
 
 #### Proof
 
 Project (C14.2) onto `u_b`:
 
-$$
+```math
 g_b\cdot u_b
 \ge
 \frac{\sqrt3}{2}D\sum_{bk}\beta_{bk}
 =
 \frac{\sqrt3}{2}Ds_b.
-$$
+```
 
 Since `|g_b|\ge g_b\cdot u_b`, the result follows. `\square`
 
 Summing over `b` and using
 
-$$
+```math
 \sum_{b\in B_+}s_b=2\sum_{h\in H_+}\beta_h=2
 \tag{C14.4}
-$$
+```
 
 immediately recovers
 
-$$
+```math
 \boxed{
 P_*:=\sum_b|g_b|\ge\sqrt3D.
 }
 \tag{C14.5}
-$$
+```
 
 This proof is local and does not use Jung's circumradius theorem.
 
@@ -167,9 +167,9 @@ are incident to `b`, their two diameter vectors make angle exactly `\pi/3`, and 
 
 If only one positive diameter vector is present, then
 
-$$
+```math
 |g_b|=Ds_b>\frac{\sqrt3}{2}Ds_b,
-$$
+```
 
 so equality is impossible.
 
@@ -178,13 +178,13 @@ For at least two vectors, let `I` be a shortest containing angular interval of w
 has projection strictly larger than `D\cos(\theta/2)` onto `u_b`, while the two endpoint
 directions have projection exactly that value.  Therefore equality in
 
-$$
+```math
 |g_b|
 \ge g_b\cdot u_b
 \ge D\cos(\theta/2)s_b
 \ge\frac{\sqrt3}{2}Ds_b
 \tag{C14.6}
-$$
+```
 
 forces all three inequalities to be equalities.
 
@@ -206,27 +206,27 @@ magnitude `\sqrt3/2` times the sum of their magnitudes, giving equality. `\squar
 
 For a normalized KKT stress,
 
-$$
+```math
 \boxed{
 P_*=\sqrt3D
 }
 \tag{C14.7}
-$$
+```
 
 if and only if `B_+` consists of three points forming an equilateral triangle of side
 `D`,
 
-$$
+```math
 \boxed{H_+=K_3,}
 \tag{C14.8}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{\beta_h=\frac13\qquad(h\in H_+).}
 \tag{C14.9}
-$$
+```
 
 #### Proof
 
@@ -237,37 +237,37 @@ classical planar diameter-graph theorem says every such cycle is odd.  The strai
 diameter graph is a thrackle, so two vertex-disjoint odd cycles cannot occur.  Thus
 `H_+` is one odd cycle
 
-$$
+```math
 v_0v_1\cdots v_{q-1}v_0.
 \tag{C14.10}
-$$
+```
 
 At each vertex, the two incident positive diameter edges meet at angle exactly
 `\pi/3`.  In particular, at `v_0` the two neighbors `v_1,v_{q-1}` satisfy
 
-$$
+```math
 |v_1-v_{q-1}|^2
 =D^2+D^2-2D^2\cos(\pi/3)
 =D^2.
 \tag{C14.11}
-$$
+```
 
 So `v_1v_{q-1}` is also an edge of the full diameter graph `H`, whether or not it
 carries positive `\beta`.
 
 If `q>3`, this chord together with the path
 
-$$
+```math
 v_1v_2\cdots v_{q-1}
-$$
+```
 
 forms a cycle of length `q-1`.  The positive cycle `q` is odd, so `q-1` is even.  This
 contradicts the same classical theorem that every planar diameter-graph cycle is odd.
 Therefore
 
-$$
+```math
 q=3,
-$$
+```
 
 and `H_+=K_3`.  All three distances are `D`, so the three points form an equilateral
 triangle of side `D`.
@@ -280,9 +280,9 @@ Conversely, if `H_+=K_3` on an equilateral diameter triangle with all three weig
 `1/3`, then at each of the three vertices the two reaction vectors have length `D/3`
 and angle `\pi/3`.  Their resultant has magnitude
 
-$$
+```math
 \frac{\sqrt3}{3}D.
-$$
+```
 
 Summing over the three vertices gives `P_*=\sqrt3D`. `\square`
 
@@ -292,32 +292,32 @@ Summing over the three vertices gives `P_*=\sqrt3D`. `\square`
 
 Combining Theorem C14 with Target C Theorem C10.3 gives
 
-$$
+```math
 \boxed{
 \sqrt3D\le P_*\le2D,
 }
 \tag{C14.12}
-$$
+```
 
 with exact endpoint classifications
 
-$$
+```math
 \boxed{
 P_*=\sqrt3D
 \iff
 \text{equal-weight equilateral diameter }K_3,
 }
 \tag{C14.13}
-$$
+```
 
-$$
+```math
 \boxed{
 P_*=2D
 \iff
 H_+\text{ is a matching}.
 }
 \tag{C14.14}
-$$
+```
 
 These are opposite cancellation regimes.
 
@@ -337,26 +337,26 @@ triangle-freeness because the equilateral triangle has side `D`, not side one.
 
 The same local proof gives a useful strictness parameter.  Let
 
-$$
+```math
 B_1:=\{b\in B_+:\deg_{H_+}(b)=1\}
-$$
+```
 
 and put
 
-$$
+```math
 S_1:=\sum_{b\in B_1}s_b.
 \tag{C14.15}
-$$
+```
 
 At a leaf `b`, there is no cancellation:
 
-$$
+```math
 |g_b|=Ds_b.
-$$
+```
 
 At every other vertex use (C14.3).  Since `\sum_bs_b=2`,
 
-$$
+```math
 \boxed{
 P_*
 \ge
@@ -365,7 +365,7 @@ P_*
 \left(1-\frac{\sqrt3}{2}\right)D S_1.
 }
 \tag{C14.16}
-$$
+```
 
 Thus any positive `\beta` mass carried by leaf edges of the diameter graph pushes the
 force perimeter quantitatively away from the equilateral endpoint.

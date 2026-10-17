@@ -25,37 +25,37 @@ pentagon-sea theorem.
 
 Put
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},\qquad s:=\sqrt{\Delta_2},\qquad
  g:=0.0009,\qquad C_g:=2s+g.
-$$
+```
 
 On a Type-II subsequence write
 
-$$
+```math
 t_D={q-k\over D},\qquad
 \delta_D={b-P_F\over D},\qquad
 \kappa_D={k\over D},\qquad
 X:=Q-f.
-$$
+```
 
 For an upper endpoint `t_0` define
 
-$$
+```math
 A_g(t_0):={9t_0\over4}-\pi-{C_g\over2}.
 \tag{OP.1}
-$$
+```
 
 The new all-train atomic theorem and the audited Section-171 elimination give, on
 `limsup t_D<=t_0`,
 
-$$
+```math
 \boxed{
 {X\over D}\le
 A_g(t_0)-\delta_D-{\kappa_D\over4}+o(1).
 }
 \tag{OP.2}
-$$
+```
 
 Let
 
@@ -68,57 +68,57 @@ Let
 
 Then
 
-$$
+```math
 \boxed{
 2L_{OO}+L_{O5}
 \ge
 \left(W_g(t_0)-o(1)\right)D,
 }
 \tag{OP.3}
-$$
+```
 
 where
 
-$$
+```math
 \boxed{
 W_g(t_0):=\pi-6A_g(t_0)
 =7\pi+3C_g-{27t_0\over2}.
 }
 \tag{OP.4}
-$$
+```
 
 In particular, whenever `W_g(t_0)>0`,
 
-$$
+```math
 \boxed{
 \max\{L_{OO},L_{O5}\}
 \ge \left({W_g(t_0)\over3}-o(1)\right)D.
 }
 \tag{OP.5}
-$$
+```
 
 At the safe phase-star/Section-171 endpoint
 
-$$
+```math
 t_9={4\over9}(\pi+s)+0.0014759
 =1.8209894379\ldots,
-$$
+```
 
 one has
 
-$$
+```math
 A_g(t_9)=0.002870775
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 \max\{L_{OO},L_{O5}\}
 \ge(1.0414560011\ldots-o(1))D.
 }
 \tag{OP.6}
-$$
+```
 
 This already forces more than one outer-ending train per unit diameter in one of two
 geometrically distinct classes.
@@ -129,37 +129,37 @@ flat-pentagon residual threshold `theta>0`.  Let `J_leaf` be the maximum number 
 pairwise vertex-disjoint two-contact leaf teeth from `theta`-good pentagons such that
 at least one of the two exact unit sides belongs to an `O5` train.  Then
 
-$$
+```math
 \boxed{
 2L_{OO}+52J_{leaf}+{5R_F\over\theta}
 \ge\left(R_g(t_0)-o(1)\right)D,
 }
 \tag{OP.7}
-$$
+```
 
 where
 
-$$
+```math
 \boxed{
 R_g(t_0):=2\pi-2t_0-5A_g(t_0)
 =7\pi+{5C_g\over2}-{53t_0\over4}.
 }
 \tag{OP.8}
-$$
+```
 
 Consequently, on `R_F=o(D)` at `t_0=t_9`, either
 
-$$
+```math
 \boxed{L_{OO}\ge(1.0414560011\ldots-o(1))D}
 \tag{OP.9}
-$$
+```
 
 or
 
-$$
+```math
 \boxed{J_{leaf}\ge(0.01046039\ldots-o(1))D.}
 \tag{OP.10}
-$$
+```
 
 Every tooth in the second alternative consists of three actual source vertices, has
 two exact unit contacts, has its hidden side `1+o(1)` after the standard slow residual
@@ -171,63 +171,63 @@ to the outer face.
 Let `n_d` be the number of bounded exceptional faces of degree `d>=5`.  The exact
 degree-excess identity is
 
-$$
+```math
 X=Q-f=\sum_{d\ge6}(d-5)n_d.
 \tag{OP.11}
-$$
+```
 
 For every `d>=6`,
 
-$$
+```math
 d\le6(d-5).
-$$
+```
 
 Hence the total number `B_{>=6}` of stopped-train terminal occurrences on
 nonpentagonal bounded exceptional faces satisfies
 
-$$
+```math
 B_{\ge6}=\sum_{d\ge6}dn_d\le6X.
 \tag{OP.12}
-$$
+```
 
 Every train counted by `L_O6` consumes one distinct such occurrence, so
 
-$$
+```math
 \boxed{L_{O6}\le6X.}
 \tag{OP.13}
-$$
+```
 
 ## 2. Exact outer occurrence ledger
 
 Every complete stopped train has exactly two terminal occurrences.  Counting only
 outer-face occurrences gives the exact partition
 
-$$
+```math
 \boxed{b=2L_{OO}+L_{O5}+L_{O6}.}
 \tag{OP.14}
-$$
+```
 
 Together with (OP.13),
 
-$$
+```math
 2L_{OO}+L_{O5}\ge b-6X.
 \tag{OP.15}
-$$
+```
 
 Canonical Type II has
 
-$$
+```math
 {b\over D}=\pi+\delta_D+o(1).
-$$
+```
 
 Insert (OP.2):
 
-$$
+```math
 {b-6X\over D}
 \ge
 \pi-6A_g(t_0)+7\delta_D+{3\over2}\kappa_D-o(1).
 \tag{OP.16}
-$$
+```
 
 Dropping the nonnegative bonuses proves (OP.3).  Since
 `2a+b<=3 max{a,b}`, (OP.5) follows.
@@ -238,24 +238,24 @@ Fix `theta>0` below the Wegner first jump and inside the empty-pentagon trapezoi
 stability neighborhood.  Call a pentagon `theta`-good when its residual is below
 `theta`.  Exact residual conservation shows that at most
 
-$$
+```math
 {R_F\over\theta}
 \tag{OP.17}
-$$
+```
 
 pentagons are not good.
 
 For a good pentagon use the canonical cyclic labeling
 
-$$
+```math
 l,m,r,a,b.
-$$
+```
 
 Its two leaf teeth are `(m,l,b)` and `(m,r,a)`.  Their four exact boundary sides are
 
-$$
+```math
 lm,\quad lb,\quad mr,\quad ra,
-$$
+```
 
 and `ab` is the unique boundary side not contained in a leaf tooth.
 
@@ -265,41 +265,41 @@ complete train is of type `O5`.  The high-residual pentagons absorb at most
 side `ab` contributes at most one occurrence per pentagon, while every further `O5`
 occurrence must lie on a leaf side.  Therefore
 
-$$
+```math
 L_{O5}\le {5R_F\over\theta}+p_5+4A_{leaf}.
 \tag{OP.18}
-$$
+```
 
 Since `p_5<=f`, equations (OP.13), (OP.14), and (OP.18) give
 
-$$
+```math
 2L_{OO}+4A_{leaf}+{5R_F\over\theta}
 \ge b-f-6X.
 \tag{OP.19}
-$$
+```
 
 Use `f=Q-X` to rewrite the right side as
 
-$$
+```math
 b-Q-5X.
 \tag{OP.20}
-$$
+```
 
 The exact low-`t` outer ledger is
 
-$$
+```math
 {Q\over D}=2t_D-\pi-\delta_D+o(1).
 \tag{OP.21}
-$$
+```
 
 Using `t_D<=t_0+o(1)` and (OP.2),
 
-$$
+```math
 {b-Q-5X\over D}
 \ge
 R_g(t_0)+7\delta_D+{5\over4}\kappa_D-o(1),
 \tag{OP.22}
-$$
+```
 
 which yields the source-level inequality before the conflict extraction.
 
@@ -310,17 +310,17 @@ most one chosen tooth per face.  A source vertex belongs to at most five bounded
 sectors in a triangle-free unit-contact graph.  Hence a chosen three-vertex tooth
 conflicts with at most
 
-$$
+```math
 3(5-1)=12
-$$
+```
 
 others.  A greedy independent set keeps at least `A_leaf/13` teeth.  By definition of
 `J_leaf`,
 
-$$
+```math
 A_{leaf}\le13J_{leaf}.
 \tag{OP.23}
-$$
+```
 
 Insert this in (OP.19)--(OP.22) to obtain (OP.7).
 
@@ -328,22 +328,22 @@ Insert this in (OP.19)--(OP.22) to obtain (OP.7).
 
 At `t_0=t_9`, the exact arithmetic gives
 
-$$
+```math
 W_g(t_9)=3.1243680035\ldots,
 \qquad
 R_g(t_9)=2.6268525563\ldots .
 \tag{OP.24}
-$$
+```
 
 If (OP.9) fails, (OP.3) forces the pentagonal outer-train side.  More directly, combine
 (OP.7) with `L_OO<W_g(t_9)D/3+o(D)` and `R_F=o(D)`:
 
-$$
+```math
 52J_{leaf}
 \ge
 \left(R_g(t_9)-{2W_g(t_9)\over3}-o(1)\right)D.
 \tag{OP.25}
-$$
+```
 
 The bracket is positive.  Dividing by 52 gives (OP.10).
 

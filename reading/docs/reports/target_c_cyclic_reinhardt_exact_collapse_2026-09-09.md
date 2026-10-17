@@ -24,38 +24,38 @@ The result is finite and exact.
 
 Let a sufficiently large cyclic primitive survivor satisfy
 
-$$
+```math
 d_H=0.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 D=\frac1{2\sin(\pi/(2q))},
 \qquad
 \delta_D:=2\arcsin\frac1{2D}=\frac\pi q.}
 \tag{RE.1}
-$$
+```
 
 Every projective diameter-direction gap is exactly `pi/q`. Moreover the DA diameter-direction polygon equals the complete difference body:
 
-$$
+```math
 \boxed{
 P_H=F-F,}
 \tag{RE.2}
-$$
+```
 
 and this common body is the regular `2q`-gon with circumradius `D`.
 
 Consequently the force hull attains Reinhardt's sharp perimeter-diameter bound exactly:
 
-$$
+```math
 \boxed{
 \operatorname{per}(F)=q
 =2q\sin\frac\pi{2q}\,D.}
 \tag{RE.3}
-$$
+```
 
 Thus the `d_H=0` cyclic phase is not merely asymptotically close to the Reinhardt family. It lies on the exact equality locus for every member.
 
@@ -65,84 +65,84 @@ Thus the `d_H=0` cyclic phase is not merely asymptotically close to the Reinhard
 
 CY gives
 
-$$
+```math
 C=C_q,
 \qquad
 \operatorname{per}(F)=q,
 \qquad
 h=q-d_H=q.
 \tag{1.1}
-$$
+```
 
 There are `q` actual diameter directions. Put them in projective cyclic order and let their positive gaps be
 
-$$
+```math
 g_1,\ldots,g_q,
 \qquad
 \sum_{i=1}^q g_i=\pi.
 \tag{1.2}
-$$
+```
 
 C67/DA gives the exact separation
 
-$$
+```math
 \boxed{
 g_i\ge\delta_D,
 \qquad
 \delta_D:=2\arcsin\frac1{2D}.}
 \tag{1.3}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{q\delta_D\le\pi.}
 \tag{1.4}
-$$
+```
 
 DA constructs
 
-$$
+```math
 P_H=D\operatorname{conv}\{\pm u_1,\ldots,\pm u_q\}
 \subseteq F-F
 \tag{1.5}
-$$
+```
 
 and, by concavity of sine under (1.2)-(1.3), proves
 
-$$
+```math
 \operatorname{area}(P_H)
 \ge
 D^2\left[(q-1)\sin\delta_D+
 \sin((q-1)\delta_D)\right].
 \tag{1.6}
-$$
+```
 
 Because
 
-$$
+```math
 D=\frac1{2\sin(\delta_D/2)},
 \tag{1.7}
-$$
+```
 
 define
 
-$$
+```math
 \boxed{
 \Psi_q(\delta)
 :=
 \frac{(q-1)\sin\delta+\sin((q-1)\delta)}
 {4\sin^2(\delta/2)}.}
 \tag{1.8}
-$$
+```
 
 Then (1.6) is
 
-$$
+```math
 \operatorname{area}(P_H)
 \ge\Psi_q(\delta_D).
 \tag{1.9}
-$$
+```
 
 ---
 
@@ -150,88 +150,88 @@ $$
 
 The key point missing from the asymptotic RP argument is that `Psi_q` is strictly decreasing on the complete feasible interval
 
-$$
+```math
 0<\delta\le\frac\pi q.
-$$
+```
 
 Split
 
-$$
+```math
 \Psi_q(\delta)
 =
 \frac{q-1}{2}\cot\frac\delta2
 +
 \frac{\sin((q-1)\delta)}{4\sin^2(\delta/2)}.
 \tag{2.1}
-$$
+```
 
 The first summand is strictly decreasing.
 
 For the second summand put
 
-$$
+```math
 n=q-1
-$$
+```
 
 and
 
-$$
+```math
 G_n(\delta)
 :=
 \frac{\sin(n\delta)}{\sin^2(\delta/2)}.
-$$
+```
 
 On `0<delta<=pi/q`, one has
 
-$$
+```math
 0<n\delta<\pi,
-$$
+```
 
 so `G_n>0`, and logarithmic differentiation gives
 
-$$
+```math
 \frac{G_n'(\delta)}{G_n(\delta)}
 =n\cot(n\delta)-\cot(\delta/2).
 \tag{2.2}
-$$
+```
 
 If
 
-$$
+```math
 n\delta\ge\frac\pi2,
-$$
+```
 
 then the first term is nonpositive while the second is positive, so (2.2) is strictly negative.
 
 If
 
-$$
+```math
 n\delta<\frac\pi2,
-$$
+```
 
 put `x=delta/2`. Then `2nx<pi/2`. The function
 
-$$
+```math
 \frac{\tan y}{y}
-$$
+```
 
 is strictly increasing on `(0,pi/2)`, hence
 
-$$
+```math
 \tan(2nx)>2n\tan x>n\tan x.
-$$
+```
 
 All terms are positive, so reciprocation gives
 
-$$
+```math
 n\cot(2nx)<\cot x.
-$$
+```
 
 This is exactly
 
-$$
+```math
 n\cot(n\delta)<\cot(\delta/2).
-$$
+```
 
 Thus (2.2) is again strictly negative.
 
@@ -239,13 +239,13 @@ Therefore `G_n`, and hence both summands in (2.1), are strictly decreasing. We h
 
 ### Lemma RE.1
 
-$$
+```math
 \boxed{
 \Psi_q'(\delta)<0
 \quad
 \left(0<\delta\le\frac\pi q\right).}
 \tag{RE.4}
-$$
+```
 
 ---
 
@@ -253,30 +253,30 @@ $$
 
 Since `F` has `q` vertices, its difference body is a centrally symmetric convex polygon with at most `2q` sides. Minkowski/Cauchy perimeter additivity gives
 
-$$
+```math
 \operatorname{per}(F-F)=2\operatorname{per}(F)=2q.
 \tag{3.1}
-$$
+```
 
 The sharp polygonal isoperimetric inequality for a polygon with at most `2q` sides and perimeter `2q` gives
 
-$$
+```math
 \boxed{
 \operatorname{area}(F-F)
 \le
 U_q:=\frac{q}{2\tan(\pi/(2q))}.}
 \tag{3.2}
-$$
+```
 
 At the endpoint `delta=pi/q`,
 
-$$
+```math
 \sin((q-1)\pi/q)=\sin(\pi/q),
-$$
+```
 
 so
 
-$$
+```math
 \begin{aligned}
 \Psi_q(\pi/q)
 &=
@@ -286,11 +286,11 @@ $$
 &=U_q.
 \end{aligned}
 \tag{3.3}
-$$
+```
 
 Now combine all inequalities:
 
-$$
+```math
 \Psi_q(\delta_D)
 \le
 \operatorname{area}(P_H)
@@ -298,45 +298,45 @@ $$
 \operatorname{area}(F-F)
 \le U_q.
 \tag{3.4}
-$$
+```
 
 But (1.4) gives
 
-$$
+```math
 \delta_D\le\frac\pi q,
-$$
+```
 
 and Lemma RE.1 plus (3.3) gives
 
-$$
+```math
 \Psi_q(\delta_D)
 \ge
 \Psi_q(\pi/q)
 =U_q,
 \tag{3.5}
-$$
+```
 
 with strict inequality unless
 
-$$
+```math
 \delta_D=\frac\pi q.
-$$
+```
 
 Equations (3.4)-(3.5) therefore force equality everywhere:
 
-$$
+```math
 \boxed{
 \delta_D=\frac\pi q,}
 \tag{3.6}
-$$
+```
 
-$$
+```math
 \boxed{
 \operatorname{area}(P_H)
 =\operatorname{area}(F-F)
 =U_q.}
 \tag{3.7}
-$$
+```
 
 Using the definition of `delta_D`, (3.6) is exactly RE.1.
 
@@ -346,39 +346,39 @@ Using the definition of `delta_D`, (3.6) is exactly RE.1.
 
 From (1.2), (1.3), and (3.6),
 
-$$
+```math
 \sum_i g_i
 =\pi
 =q\delta_D
-$$
+```
 
 while every term obeys `g_i>=delta_D`. Therefore
 
-$$
+```math
 \boxed{g_i=\delta_D=\frac\pi q
 \quad(1\le i\le q).}
 \tag{4.1}
-$$
+```
 
 Thus the `2q` oriented vectors
 
-$$
+```math
 \{\pm D u_i\}
-$$
+```
 
 are equally spaced on the radius-`D` circle. Hence `P_H` is the regular `2q`-gon of circumradius `D`.
 
 By (1.5),
 
-$$
+```math
 P_H\subseteq F-F.
-$$
+```
 
 Both are two-dimensional compact convex bodies and (3.7) says they have the same area. Proper convex containment would leave positive area between their boundaries. Hence
 
-$$
+```math
 \boxed{P_H=F-F.}
-$$
+```
 
 This proves RE.2.
 
@@ -390,36 +390,36 @@ The polygonal-isoperimetric upper bound (3.2) is also attained, so its equality 
 
 From RE.1,
 
-$$
+```math
 2q\sin\frac\pi{2q}\,D=q.
-$$
+```
 
 But the cyclic force hull has perimeter exactly `q`. Therefore
 
-$$
+```math
 \boxed{
 \operatorname{per}(F)
 =2q\sin\frac\pi{2q}\,D,}
-$$
+```
 
 which is RE.3.
 
 The classical Reinhardt inequality states that every convex `q`-gon of diameter `D` satisfies
 
-$$
+```math
 \operatorname{per}(F)
 \le
 2q\sin\frac\pi{2q}\,D.
-$$
+```
 
 Thus `F` lies on the exact equality locus.
 
 Datta's 1997 equality theorem gives the immediate arithmetic consequence:
 
-$$
+```math
 \boxed{q\text{ has an odd factor; in particular }q\ne2^r.}
 \tag{5.1}
-$$
+```
 
 The modern Reinhardt description reviewed by Fejes Tóth identifies every equality polygon as an equilateral polygon inscribed in a suitable Reuleaux polygon. In the terminology of that literature, `F` is a Reinhardt/clipped-Reuleaux polygon.
 
@@ -431,54 +431,54 @@ These literature statements are corollaries only. The Target C collapse RE.1-RE.
 
 RP currently records
 
-$$
+```math
 \pi D-q
 =\frac\pi{24D}+O(D^{-2})
-$$
+```
 
 and projective gap excess
 
-$$
+```math
 \sum_i(g_i-\delta_D)=O(D^{-3})
-$$
+```
 
 in the `d_H=0` phase.
 
 RE replaces both asymptotic statements by exact equalities:
 
-$$
+```math
 \boxed{
 \pi D-q
 =
 \pi D-\frac{\pi}{2\arcsin(1/(2D))}
 }
-$$
+```
 
 with `q delta_D=pi`, and more usefully
 
-$$
+```math
 \boxed{
 \sum_i(g_i-\delta_D)=0.}
 \tag{6.1}
-$$
+```
 
 There is no residual projective angular defect at any order.
 
 The local normal-cone sum from RP also becomes exact:
 
-$$
+```math
 \sum_b\left(\theta_b-\deg_H(b)\delta_D\right)
 =2(\pi-h\delta_D)=0.
-$$
+```
 
 Each summand is nonnegative, hence
 
-$$
+```math
 \boxed{
 \theta_b=\deg_H(b)\frac\pi q
 \quad\text{for every loaded vertex }b.}
 \tag{6.2}
-$$
+```
 
 Thus every local diameter normal cone also attains its minimum-width packing exactly.
 
@@ -490,9 +490,9 @@ Thus every local diameter normal cone also attains its minimum-width packing exa
 
 A regular odd unit `q`-gon has
 
-$$
+```math
 D=\frac1{2\sin(\pi/(2q))},
-$$
+```
 
 its diameter graph is a `q`-cycle, its projective diameter directions are exactly equally spaced, and `F-F` is the regular `2q`-gon. It attains every equality above. RE therefore retains the principal cyclic regression.
 
@@ -518,9 +518,10 @@ The `d_H=0` cyclic source now satisfies simultaneously:
 2. `F-F` is exactly the regular `2q`-gon of circumradius `D`;
 3. all `q` projective diameter directions are spaced exactly by `pi/q`;
 4. every local exterior angle obeys
-   $$
+   ```math
    \theta_b=\deg_H(b)\pi/q;
-   $$
+   
+   ```
 5. the normalized KKT polytope is two-dimensional (`s_Z=2`);
 6. every normalized stress keeps all cycle contacts positive and has maximal scalar rank by CY/CG;
 7. the full source still contains `n-q=Theta(D^2)` contact-isolated points in the C65 representative.
@@ -537,9 +538,9 @@ Two routes are now sharply defined.
 
 Use the clipped-Reuleaux equality representation together with
 
-$$
+```math
 \theta_b=\deg_H(b)\pi/q
-$$
+```
 
 and the canonical diameter-thrackle pseudoforest structure. The aim is to classify the only possible full diameter graphs and then solve the two-dimensional KKT stress polytope explicitly.
 
@@ -547,9 +548,9 @@ and the canonical diameter-thrackle pseudoforest structure. The aim is to classi
 
 Since
 
-$$
+```math
 F-F=P_H
-$$
+```
 
 is regular, every support-width equality used by the diameter directions is exact. Combine this with the positive unit-contact equilibrium around `C_q` to test whether the only compatible primal shell is the regular odd polygon or a much smaller Reinhardt subclass.
 

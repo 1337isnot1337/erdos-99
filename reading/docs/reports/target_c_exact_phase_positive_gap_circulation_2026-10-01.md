@@ -42,62 +42,62 @@ They neither require nor promote the entire fixed-star extraction chain.
 
 ## 2. Positive-circulation theorem
 
-Let one exact-phase shore have $m\ge1$ independent train coordinates.
+Let one exact-phase shore have $`m\ge1`$ independent train coordinates.
 For each actual diameter row write
 
-$$
+```math
 M_h=c_h\mathbf1_{[a_h,b_h]},\qquad
 c_h=\sigma_h(r_h\cdot Ju).
-$$
+```
 
-Discard empty rows and rows with $c_h=0$. Assume the remaining matrix has
-rank $m$, and that a normalized KKT stress has $\beta_h>0$ on every
-actual diameter. The signed gap graph has vertices $0,\ldots,m$. Put
+Discard empty rows and rows with $`c_h=0`$. Assume the remaining matrix has
+rank $`m`$, and that a normalized KKT stress has $`\beta_h>0`$ on every
+actual diameter. The signed gap graph has vertices $`0,\ldots,m`$. Put
 
-$$
+```math
 p_h=a_h-1,quad q_h=b_h,quad
 f_h=\beta_h|c_h|>0.
-$$
+```
 
-Orient its edge from $p_h$ to $q_h$ when $c_h>0$, and in the reverse
-direction when $c_h<0$. Then:
+Orient its edge from $`p_h`$ to $`q_h`$ when $`c_h>0`$, and in the reverse
+direction when $`c_h<0`$. Then:
 
-1. $f$ is a strictly positive circulation;
+1. $`f`$ is a strictly positive circulation;
 2. the directed graph is strongly connected;
 3. every actual nonzero row lies on a directed cycle;
 4. every nonempty proper vertex cut has at least one edge in each direction;
-5. the full multigraph has no bridges and has at least $m+1$ edges;
-6. the diameter rows positively span $\mathbb R^m$.
+5. the full multigraph has no bridges and has at least $`m+1`$ edges;
+6. the diameter rows positively span $`\mathbb R^m`$.
 
 ### Proof
 
 For every train shear all old contact first variations vanish. Pairing the
 velocity with KKT equilibrium gives
 
-$$
+```math
 M^{\mathsf T}\beta=0. \tag{1}
-$$
+```
 
 This uses stationarity at the actual source, rather than a generic stress on
 an abstract graph. There is no diameter multiplier floor.
 
 Apply the isomorphism
 
-$$
+```math
 L$x$=(x_1,x_2-x_1,\ldots,x_m-x_{m-1},-x_m)
-$$
+```
 
 to the row sum in (1). Since
 
-$$
+```math
 L(\mathbf1_{[a,b]})=e_{a-1}-e_b,
-$$
+```
 
 the resulting equation is exactly
 
-$$
+```math
 \sum_h f_h(e_{\mathrm{tail}(h)}-e_{\mathrm{head}(h)})=0. \tag{2}
-$$
+```
 
 Summing (2) over a vertex set equates the outgoing and incoming positive
 flows. Thus every nontrivial cut crossed by any edge is crossed in both
@@ -107,12 +107,12 @@ component of the condensation DAG would have an outgoing edge and no
 incoming edge, contradicting (2). This proves strong connectivity and the
 cut assertion. Every directed edge therefore has a return path. No bridge
 can lie on such a cycle. Every vertex has an outgoing edge, so there are
-at least $m+1$ edges, counting multiplicity.
+at least $`m+1`$ edges, counting multiplicity.
 
 Finally, (1) with strictly positive coefficients expresses the negative of
 each row as a positive combination of the other rows. Consequently the
 positive cone of the rows is their linear span, which is all of
-$\mathbb R^m$. ∎
+$`\mathbb R^m`$. ∎
 
 The statement concerns the **entire** diameter packet. A spanning-tree basis
 is still available, but it cannot inherit the force constraints of the packet
@@ -120,132 +120,132 @@ by deleting its nonbasis rows.
 
 ## 3. Exact obstruction to basis-leaf release
 
-Take any spanning-tree basis $T$, remove a basis edge $h_0$, and let $S$
+Take any spanning-tree basis $`T`$, remove a basis edge $`h_0`$, and let $`S`$
 be one component of the remaining tree. Define gap potentials
 
-$$
+```math
 z_j=\mathbf1_S(j),\qquad \theta_i=z_{i-1}-z_i.
-$$
+```
 
 Then for every actual diameter row
 
-$$
+```math
 M_h\theta=c_h(z_{p_h}-z_{q_h}). \tag{3}
-$$
+```
 
-All other basis rows vanish. Choose the overall sign of $z$ to make
+All other basis rows vanish. Choose the overall sign of $`z`$ to make
 
-$$
+```math
 M_{h_0}\theta<0.
-$$
+```
 
 The bidirectional-cut conclusion forces an actual diameter outside the
 basis with
 
-$$
+```math
 M_h\theta>0.
-$$
+```
 
 This holds for a leaf cut as a special case. It gives the precise failure of
 the private-basis-edge proposal: the other direction across the same cut is
 carried by a nonbasis diameter. No assertion about Euler paths is used.
 
-More generally, if $M\theta\le0$ componentwise, (1) and positivity imply
+More generally, if $`M\theta\le0`$ componentwise, (1) and positivity imply
 
-$$
+```math
 M\theta=0,
-$$
+```
 
-and full rank implies $\theta=0$. Thus no nonzero contact-preserving train
+and full rank implies $`\theta=0`$. Thus no nonzero contact-preserving train
 velocity weakly shortens every active diameter.
 
 ## 4. Finite local isolation in the exact contact chart
 
 Assume the explicit source chart
 
-$$
+```math
 P_v$t$=P_v+\sum_i\chi_i(v)(R_{t_i}u-u), \tag{4}
-$$
+```
 
-with the coherent choice of shore indicators, has each contact of train $i$
-crossing only cut $i$, and every other contact crossing none of these cuts.
+with the coherent choice of shore indicators, has each contact of train $`i`$
+crossing only cut $`i`$, and every other contact crossing none of these cuts.
 Then (4) preserves every old contact exactly, for every sufficiently small
-$t$: the corresponding unit vector becomes $R_{t_i}u$, and all other
+$`t`$: the corresponding unit vector becomes $`R_{t_i}u`$, and all other
 contact vectors are unchanged. All source vertices, including contact
 isolates, remain in the chart.
 
-There exists a source-dependent $\epsilon>0$ such that
+There exists a source-dependent $`\epsilon>0`$ such that
 
-$$
+```math
 0<\|t\|<\epsilon\quad\Longrightarrow\quad
 \operatorname{diam}P$t$>D. \tag{5}
-$$
+```
 
 Indeed, positive spanning gives
 
-$$
+```math
 \delta:=\min_{\|s\|=1}\max_h M_hs>0.
-$$
+```
 
 For the finitely many old actual diameter pairs, Taylor expansion in (4)
 is uniform:
 
-$$
+```math
 \tfrac12(|r_h$t$|^2-D^2)=M_ht+O(\|t\|^2).
-$$
+```
 
 Hence the largest left side is at least
 
-$$
+```math
 \delta\|t\|-C\|t\|^2>0
-$$
+```
 
-for sufficiently small nonzero $t$. This proves (5), even before testing
+for sufficiently small nonzero $`t`$. This proves (5), even before testing
 inactive pairs. It is a finite neighbourhood theorem, rather than an
 unsupported integration of a first-order calculation.
 
-No uniform lower bound for $\delta$, or uniform neighbourhood in $D$,
+No uniform lower bound for $`\delta`$, or uniform neighbourhood in $`D`$,
 is asserted. Moves outside this chart, contact-opening moves, and distant
 finite competitors are not excluded by this theorem.
 
 ## 5. Rational geometric regression
 
-Put $u=(1,0)$, and take the five actual points
+Put $`u=(1,0)`$, and take the five actual points
 
-$$
+```math
 o=(0,0),\quad x_\pm=(12,\pm5),\quad
 y_\pm=(63/5,\pm16/5).
-$$
+```
 
-Their minimum squared pair distance is $18/5>1$, their diameter is $13$,
-and their only actual diameter bars are $ox_\pm,oy_\pm$. Thus they form a
+Their minimum squared pair distance is $`18/5>1`$, their diameter is $`13`$,
+and their only actual diameter bars are $`ox_\pm,oy_\pm`$. Thus they form a
 genuine convex diameter thrackle, a four-leaf star.
 
-Assign gap label 0 to $o$, 1 to both $x$'s, and 2 to both $y$'s.
+Assign gap label 0 to $`o`$, 1 to both $`x`$'s, and 2 to both $`y`$'s.
 The diameter rows are
 
-$$
+```math
 (5,0),\quad(-5,0),\quad(16/5,16/5),\quad(-16/5,-16/5).
-$$
+```
 
-They have rank 2 and positive dependence with $\beta_h=1/4$. Their gap
+They have rank 2 and positive dependence with $`\beta_h=1/4`$. Their gap
 graph is a doubled star with center 0. The weighted axial resultants of
 the two train cuts are
 
-$$
+```math
 A_1u=(123/10)u,\qquad A_2u=(63/10)u.
-$$
+```
 
-The internal strip reaction is exactly $6u\ne0$, positively generated
-by $\tfrac14(12,5)+\tfrac14(12,-5)$. Its bars have opposite strict
+The internal strip reaction is exactly $`6u\ne0`$, positively generated
+by $`\tfrac14(12,5)+\tfrac14(12,-5)`$. Its bars have opposite strict
 transverse signs. The tree basis consisting of the first and third rows
 has a private leaf at gap 1, but the candidate leaf velocity
 
-$$
+```math
 \theta=(-1,1)
-$$
+```
 
-gives derivatives $(-5,5,0,0)$: the nonbasis diameter lengthens.
+gives derivatives $`(-5,5,0,0)`$: the nonbasis diameter lengthens.
 
 **Encoded:** actual Euclidean diameters, unit separation, convex thrackle,
 ordered interval labels, full row rank, positive circulation, and a nonzero

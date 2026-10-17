@@ -86,9 +86,9 @@ one-sided-gap theorem. Reaction nondegeneracy is not needed there.
 
 For any different source point `z`, expand `|z-y|^2<=|x-y|^2` to obtain
 
-$$
+```math
 2r\cdot(z-x)+|z-x|^2\le0.
-$$
+```
 
 Thus `r dot (z-x)<0`. In particular `r` lies in the interior of the normal
 cone at `x`. The same argument applies to `-r` at `y`. This also proves that
@@ -197,10 +197,10 @@ with the canonical odd-unicyclic Woodall branch; it does not exclude it.
 **Theorem 5.** Consider any family of pairwise edge-disjoint two-bar axial
 reaction bundles at internal exact-phase layers:
 
-$$
+```math
 G_i=\lambda_i^- n_i^-+\lambda_i^+n_i^+\ne0,
 \qquad \lambda_i^\pm>0,
-$$
+```
 
 with opposite strict transverse signs. If the two bars in a bundle share an
 endpoint, their common endpoint is outside the layer and strictly exposes
@@ -221,9 +221,9 @@ vertex. If the corresponding support face is an edge, it has no such vertex.
 Each STAR bundle consumes two different incident edges at its center. Edge
 disjointness gives at most
 
-$$
+```math
 \frac{\deg(v_u)+\deg(v_{-u})}{2}\le\Delta(H)
-$$
+```
 
 STAR bundles, treating a nonexistent exposing vertex as degree zero.
 

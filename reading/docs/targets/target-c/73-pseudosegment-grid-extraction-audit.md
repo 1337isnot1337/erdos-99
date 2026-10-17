@@ -42,10 +42,10 @@ Fix one `epsilon`-coherent physical grain `G` supplied by Section 69. Write
 
 Section 69 gives exactly
 
-$$
+```math
 \boxed{2T=P.}
 \tag{73.1}
-$$
+```
 
 The endpoint convention in the Section-69 phase-bin cut is understood in the
 endpoint-safe form: choose a nonexceptional shift for which no train potential lies
@@ -60,10 +60,10 @@ Apply Theorem 10.6 to the rhombi of `G`. It does not require simple connectednes
 Each local train centerline is a simple arc; two train centerlines cross in at most
 one rhombus; no train closes; and
 
-$$
+```math
 \boxed{R\le {T^2\over4}.}
 \tag{73.2}
-$$
+```
 
 Every retained rhombus is the proper transverse crossing of its two local train
 centerlines. Conversely two train centerlines can meet only in such a rhombus.
@@ -80,18 +80,18 @@ the external density theorem.
 
 Set
 
-$$
+```math
 \eta={R\over T^2}.
 \tag{73.3}
-$$
+```
 
 The Fox--Pach theorem gives subfamilies `C_1,C_2` of the local train centerlines such
 that every member of `C_1` crosses every member of `C_2` and
 
-$$
+```math
 \boxed{|C_1|,|C_2|\ge c_{PS}{R\over T}.}
 \tag{73.4}
-$$
+```
 
 The two shores are automatically disjoint: a curve cannot cross itself. More
 importantly, they are automatically internally pairwise noncrossing. If two members
@@ -107,10 +107,10 @@ or minimum-degree pruning is used.
 
 Section 69 gives the grain one `epsilon`-wide three-phase frame with
 
-$$
+```math
 0<\epsilon<\pi/6.
 \tag{73.5}
-$$
+```
 
 Every local train inherits a label `ell in Z/3`. Because the whole physical grain is
 contained in one retained train component, all train potentials lie in one phase bin
@@ -124,28 +124,28 @@ Let `L_1,L_2 subset Z/3` be the phase-label supports used by `C_1,C_2`. Since
 every member of `C_1` crosses every member of `C_2`, while same-label trains cannot
 cross, the two supports are disjoint:
 
-$$
+```math
 L_1\cap L_2=\varnothing.
-$$
+```
 
 Both supports are nonempty subsets of a three-element set, so each has size at most
 two. Choose the largest phase class in each shore and call the resulting families
 `A subset C_1` and `B subset C_2`. Then the labels of `A,B` are distinct and
 
-$$
+```math
 |A|\ge {|C_1|\over2},
 \qquad
 |B|\ge {|C_2|\over2}.
-$$
+```
 
 Thus the sharper phase-purification bound is
 
-$$
+```math
 \boxed{
 |A|,|B|\ge {c_{PS}\over2}{R\over T}.
 }
 \tag{73.6}
-$$
+```
 
 Both shores are internally noncrossing, the two shores have distinct actual phase
 labels, and every `A`-train crosses every `B`-train in a retained rhombus. This is an
@@ -156,44 +156,44 @@ actual phase-pure complete grid in the contact geometry, not a virtual graph bic
 Suppose a survivor subsequence is in the quadratic positive-core branch. Section 69
 gives fixed constants `r,C>0` (after fixing `epsilon`) and one physical grain with
 
-$$
+```math
 R\ge rD^2,
 \qquad
 P\le CD.
 \tag{73.7}
-$$
+```
 
 Equation (73.1) gives
 
-$$
+```math
 T\le {C\over2}D.
-$$
+```
 
 Equation (73.2) gives the complementary lower bound
 
-$$
+```math
 T\ge2\sqrt R\ge2\sqrt r\,D,
-$$
+```
 
 so `T=Theta(D)`. Substitution into (73.4) and (73.6) yields
 
-$$
+```math
 \boxed{
 |C_1|,|C_2|
 \ge {2c_{PS}r\over C}D,
 }
 \tag{73.8}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 |A|,|B|
 \ge {c_{PS}r\over C}D.
 }
 \tag{73.9}
-$$
+```
 
 Therefore every quadratic coherent Section-69 grain contains both
 
@@ -228,10 +228,10 @@ with one global additive array `p+x_i+y_j`.
 
 Section 69 proves
 
-$$
+```math
 \boxed{m=R_4+O(D)}.
 \tag{73.10}
-$$
+```
 
 Hence:
 

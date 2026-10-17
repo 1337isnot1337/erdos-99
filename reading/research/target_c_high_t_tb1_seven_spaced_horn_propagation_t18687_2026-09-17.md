@@ -20,19 +20,19 @@ Therefore the same construction can retain one residue class modulo seven.
 
 Let
 
-$$
+```math
 s_0={791\over320{,}000{,}000}.
-$$
+```
 
 The one-sign strong-TB1 population has size
 
-$$
+```math
 |M_D|>{s_0\over2}D-o(D).
-$$
+```
 
 Keeping a largest residue class modulo seven and deleting the `O(1)` coordinates incident to genuine upper binary exceptions gives a retained exact-swap system `P_D^{(7)}` with
 
-$$
+```math
 \boxed{
 |P_D^{(7)}|>
 (\gamma_7-o(1))D,
@@ -42,61 +42,61 @@ $$
 =1.765625\times10^{-7}.
 }
 \tag{SP.1}
-$$
+```
 
 This is larger than the previous Horn density by the exact factor
 
-$$
+```math
 \boxed{{\gamma_7\over\gamma_{15}}={15\over7}.}
 \tag{SP.2}
-$$
+```
 
 Every two retained coordinates differ by at least seven, while every inverse-`D` near-unit blocker has path bandwidth at most six. Hence all LOWER singleton blockers are again permanent one-coordinate constraints, and the no-new-two-coordinate-obstruction argument is unchanged.
 
 The entire Horn poisoning theorem therefore reruns with `gamma_7`. It forces one of:
 
-$$
+```math
 \boxed{
 N_{\rm permanent\ lower}>
 \left({\gamma_7\over4}-o(1)\right)D
 =(4.4140625\times10^{-8}-o(1))D,
 }
 \tag{SP.3}
-$$
+```
 
-$$
+```math
 \boxed{
 N_{\rm permanent\ upper}>
 \left({\gamma_7\over8}-o(1)\right)D
 =(2.20703125\times10^{-8}-o(1))D,
 }
 \tag{SP.4}
-$$
+```
 
 or
 
-$$
+```math
 \boxed{
 N_{\rm implication\ forest}>
 \left({\gamma_7\over2}-o(1)\right)D
 =(8.828125\times10^{-8}-o(1))D.
 }
 \tag{SP.5}
-$$
+```
 
 The local-ladder and upper-localization steps also improve without any structural change. In the LOWER branch, after the orientation and low-cost extractions there are
 
-$$
+```math
 \boxed{
 \left({\gamma_7\over16}-o(1)\right)D
 =(1.103515625\times10^{-8}-o(1))D
 }
 \tag{SP.6}
-$$
+```
 
 pairwise-disjoint support windows, now of depth at most six. One fixed complete stopped train belongs to the pure common-column family of more than
 
-$$
+```math
 \boxed{
 \left(
 {\gamma_7\over16}{0.6436\over3.0605}-o(1)
@@ -105,13 +105,13 @@ $$
 (2.32060988809\ldots\times10^{-9}-o(1))D
 }
 \tag{SP.7}
-$$
+```
 
 such windows.
 
 In either UPPER branch, the common owned upper family may be taken with density `gamma_7/8`. Repeating the long-support/common-cut versus short-support/local-window localization gives a same-type SIGNED or THIN population of more than
 
-$$
+```math
 \boxed{
 (c_{*,7}-o(1)){D\over\log D},
 \qquad
@@ -121,13 +121,13 @@ c_{*,7}
 =1.20189035016\ldots\times10^{-9},
 }
 \tag{SP.8}
-$$
+```
 
 where
 
-$$
+```math
 T_*=3.0605={6121\over2000}.
-$$
+```
 
 All later SIGNED/THIN geometric reductions inherit this larger input coefficient. Their polynomial exponents and normal forms do not change.
 
@@ -137,33 +137,33 @@ All later SIGNED/THIN geometric reductions inherit this larger input coefficient
 
 Partition the one-sign coordinate indices into their seven residue classes. A largest class `P_D^0` satisfies
 
-$$
+```math
 |P_D^0|\ge{|M_D|\over7}
 >{s_0\over14}D-o(D).
 \tag{SP.9}
-$$
+```
 
 If `i,j in P_D^0` are distinct, then
 
-$$
+```math
 \boxed{|i-j|\ge7.}
 \tag{SP.10}
-$$
+```
 
 In particular the layers are nonadjacent, so the simultaneous exact-swap active-contact/old-diameter decoupling theorem still applies.
 
 Now let `xy` be a LOWER blocker of the singleton swap at retained coordinate `i`. The exact local window gives
 
-$$
+```math
 1<|xy|\le1+O(D^{-1}).
-$$
+```
 
 The Oler short-pair theorem gives
 
-$$
+```math
 |\operatorname{reg}(x)-\operatorname{reg}(y)|\le6.
 \tag{SP.11}
-$$
+```
 
 Thus the other endpoint cannot lie in another retained layer. Relative to `P_D^0`, every LOWER blocker depends on one Boolean coordinate only and is unaffected by all other retained swaps.
 
@@ -179,40 +179,40 @@ Let `F_D` be the forbidden set and `I_D` the Horn implication digraph on `P_D^{(
 
 If
 
-$$
+```math
 |F_D|<{|P_D^{(7)}|\over2},
-$$
+```
 
 shortest paths to `F_D` select an acyclic implication forest with
 
-$$
+```math
 |E_{forest}|=|P_D^{(7)}|-|F_D|
 >{|P_D^{(7)}|\over2},
-$$
+```
 
 which yields (SP.5).
 
 If instead
 
-$$
+```math
 |F_D|\ge{|P_D^{(7)}|\over2},
-$$
+```
 
 at least half of the chosen forbidden incidences have one common metric type.
 
 For LOWER, (SP.11) plus seven-spacing means one lower source pair poisons at most one retained coordinate. Therefore a LOWER winner gives at least
 
-$$
+```math
 {|P_D^{(7)}|\over4}
-$$
+```
 
 distinct blockers, proving (SP.3).
 
 For UPPER, one source pair has at most two retained endpoint coordinates, so an UPPER winner gives at least
 
-$$
+```math
 {|P_D^{(7)}|\over8}
-$$
+```
 
 distinct blockers, proving (SP.4).
 
@@ -230,26 +230,26 @@ The global train-defect and terminal-variation budgets may therefore be spent in
 
 Each good six-deep window retains a common pure column family of
 
-$$
+```math
 (0.6436-o(1))D
-$$
+```
 
 trains with uniform inverse-`D` angular error on every support row. Counting blocker-window/train incidences against the global complete-train count
 
-$$
+```math
 T_D<(T_*+o(1))D
-$$
+```
 
 gives (SP.7).
 
 The exact coefficient is
 
-$$
+```math
 {\gamma_7\over16}{0.6436\over T_*}
 ={181817\over78{,}348{,}800{,}000{,}000}
 =2.32060988809\ldots\times10^{-9}.
 \tag{SP.12}
-$$
+```
 
 ---
 
@@ -257,10 +257,10 @@ $$
 
 Both UPPER poison outcomes contain an injectively owned upper family of density at least
 
-$$
+```math
 \delta_{0,7}:={\gamma_7\over8}.
 \tag{SP.13}
-$$
+```
 
 The upper dense-grid localization proof uses only:
 
@@ -272,11 +272,11 @@ The upper dense-grid localization proof uses only:
 
 Its rich-cut threshold is `delta_0/(3T_*)`, followed by one factor `1/2` for the SIGNED/THIN type split. Therefore the localized same-type coefficient is
 
-$$
+```math
 {\delta_{0,7}\over6T_*}
 ={\gamma_7\over48T_*}
 =c_{*,7},
-$$
+```
 
 which is (SP.8).
 

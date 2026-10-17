@@ -21,19 +21,19 @@ Mantel bound gives a stronger form of the preceding low-defect result. Condition
 on the audited FSDB area floor and the full-source slack theorem, every unbounded
 post-ZF C-II sequence satisfies
 
-$$
+```math
 \boxed{\liminf_{D\to\infty}(x_B+Q)/D\ge\varepsilon_* > 0.0476.}
 \tag{S.1}
-$$
+```
 
 Here `\varepsilon_*` is the positive root of
 
-$$
+```math
 \frac{\sqrt3}{8}\left(\frac\pi2+\frac52\varepsilon\right)^2
  +\frac{\varepsilon^2}{4\pi}=A_{FS},
 \qquad A_{FS}=\frac{2\rho+\sin(2\rho)}4,\quad \rho=\cos\rho.
 \tag{S.2}
-$$
+```
 
 Numerically, `\varepsilon_*=0.0476412815054\ldots`. The numerical value is not
 needed: (S.2) defines a strictly positive constant because
@@ -48,10 +48,10 @@ There is a useful population-spanning refinement. If the nonisolated core has
 deficit and the exact definition of `s_Z` give `h/D\ge\pi/2-o(1)`. FSDB then
 raises the area floor to
 
-$$
+```math
 A_{\rm span}=\frac{\pi/2+1}{4}.
 \tag{S.3}
-$$
+```
 
 The same proof gives
 `\liminf(x_B+Q)/D\ge\varepsilon_{\rm span}`, where
@@ -70,9 +70,9 @@ greater than `1-3/10`.
 Let `F` be the actual force hull, `R` the number of bounded quadrilateral contact
 faces, `f` the number of exceptional bounded faces, and `x=x_B`. Put
 
-$$
+```math
 Q=\sum_i(\deg F_i-4),\qquad a_0=\frac{\sqrt3}{2}.
-$$
+```
 
 The two report-level inputs are: FSDB, `\liminf area(F)/D^2\ge A_{FS}`; and FSCS,
 the total quadrilateral area is `a_0R+O(D)` uniformly in C-II, including repeated
@@ -83,81 +83,81 @@ source points. The target contradiction is `\limsup area(F)/D^2<A_{FS}`.
 
 Take any subsequence and, after a further extraction, suppose
 
-$$
+```math
 X:=\lim x/D,\qquad Y:=\lim Q/D,qquad r:=X+Y<\infty.
 \tag{S.4}
-$$
+```
 
 The exact all-ZF identities are
 
-$$
+```math
 q=x+Q+2(d_H+s_Z),\qquad T=q-(d_H+s_Z)+2f.
 \tag{S.5}
-$$
+```
 
 Since `f\le Q` and `q\le\operatorname{per}F\le\pi D`,
 
-$$
+```math
 \limsup T/D\le\frac\pi2+\frac X2+\frac52Y.
 \tag{S.6}
-$$
+```
 
 The actual train-crossing graph is simple and triangle-free, so Mantel gives
 `R\le T^2/4`. FSCS therefore gives
 
-$$
+```math
 \limsup\frac{a_0R+O(D)}{D^2}
 \le\frac{a_0}{4}\left(\frac\pi2+\frac X2+\frac52Y\right)^2.
 \tag{S.7}
-$$
+```
 
 The outer-pocket sum satisfies `\sum_P k_P=x+2a\le3x`, where `a\le x` is the
 number of missing force-hull sides. Hence
 
-$$
+```math
 \limsup A_{out}/D^2\le9X^2/\pi.
 \tag{S.8}
-$$
+```
 
 For exceptional faces, the exact degree-defect estimate gives
 
-$$
+```math
 \limsup A_{exc}/D^2\le Y^2/(4\pi).
 \tag{S.9}
-$$
+```
 
 The augmented contact subdivision partitions `F` into these three classes. Thus
 
-$$
+```math
 \limsup area(F)/D^2\le V(X,Y),
 \quad V(X,Y)=\frac{a_0}{4}\left(\frac\pi2+\frac X2+\frac52Y\right)^2
  +\frac{9X^2}{\pi}+\frac{Y^2}{4\pi}.
 \tag{S.10}
-$$
+```
 
 At fixed `r=X+Y`, the function `X\mapsto V(X,r-X)` is convex, so its maximum is
 at an endpoint. The endpoint values are
 
-$$
+```math
 V(r,0)=\frac{a_0}{4}\left(\frac\pi2+\frac r2\right)^2+\frac{9r^2}{\pi},
 \tag{S.11}
-$$
+```
 
 and
 
-$$
+```math
 V(0,r)=\frac{a_0}{4}\left(\frac\pi2+\frac{5r}{2}\right)^2+\frac{r^2}{4\pi}=:U(r).
 \tag{S.12}
-$$
+```
 
 The root of `U(r)=A_{FS}` is less than `1/20`. Indeed `\rho<37/50` and
 `\sin(2\rho)<1` give `A_{FS}<0.62`, while `a_0>0.866`, `\pi>3.14` give
 `U(1/20)>0.622`. For `0\le r\le1/20`, `V(0,r)\ge V(r,0)`: their difference is
 
-$$
+```math
 \frac{a_0\pi}{2}r+\left(\frac{3a_0}{2}-\frac{35}{4\pi}\right)r^2>0.
 \tag{S.13}
-$$
+```
 
 The difference is positive on this interval: `a_0\pi/2>1` and its quadratic
 coefficient is greater than `-3`, so after factoring out `r` the bracket is
@@ -180,27 +180,27 @@ assumed to lie in the force hull.
 The same calculation gives a useful three-parameter necessary inequality. If along
 a subsequence
 
-$$
+```math
 v/D^2\to\nu,\qquad s_Z/D\to\sigma,
-$$
+```
 
 then Eppstein's edge deficit and `s_Z=e+h-(2v-2)` imply
 
-$$
+```math
 \liminf h/D\ge\sigma+c_E\sqrt\nu,
 \qquad c_E=\frac12\sqrt{2\pi\sqrt3}.
 \tag{S.14}
-$$
+```
 
 Since `y\mapsto(y+\sin y)/4` is increasing on `[0,\pi]`, FSDB and (S.10) give
 
-$$
+```math
 \boxed{
 \frac{\sigma+c_E\sqrt\nu+\sin(\sigma+c_E\sqrt\nu)}4
 \le V(X,Y),
 }
 \tag{S.15}
-$$
+```
 
 whenever the left argument is at most `\pi`; if it exceeds `\pi`, the branch is
 already impossible because `h\le q\le\pi D`. In particular, for a
@@ -228,9 +228,9 @@ must not be promoted automatically.
 
 The survivors obey at least
 
-$$
+```math
 x_B+Q\ge(0.0476412\ldots-o(1))D,
-$$
+```
 
 as well as the independent linear ledgers involving `e_{BB}`, `s_C`, `d_H`, and
 `s_Z`. Current theory has no opposing upper bound on the linear area capacity

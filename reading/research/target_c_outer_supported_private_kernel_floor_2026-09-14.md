@@ -34,110 +34,110 @@ Let
 Then the train-angle closure matrix has an outer-supported kernel subspace `W_out`
 with
 
-$$
+```math
 \boxed{
 \dim W_{out}
 \ge L_{OO}+\sum_F(r_F-2)_+.
 }
 \tag{OK.1}
-$$
+```
 
 The actual-outer occurrence ledger is exact:
 
-$$
+```math
 \boxed{b=2L_{OO}+L_{OB},\qquad \sum_F r_F=L_{OB}.}
 \tag{OK.2}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \dim W_{out}\ge {b\over2}-f.
 }
 \tag{OK.3}
-$$
+```
 
 After quotienting the one-dimensional global rotation, the corresponding genuinely
 non-Euclidean contact-flex subspace has dimension
 
-$$
+```math
 \boxed{
  d_{out}^{loc}\ge {b\over2}-f-1.
 }
 \tag{OK.4}
-$$
+```
 
 Using only `f<=Q` and the exact canonical endpoint identity
 
-$$
+```math
 b+Q=2(q-k),
 \tag{OK.5}
-$$
+```
 
 we obtain the completely finite weaker form
 
-$$
+```math
 \boxed{
  d_{out}^{loc}
 \ge {3b\over2}-2(q-k)-1.
 }
 \tag{OK.6}
-$$
+```
 
 Thus on any Type-II subsequence on which
 
-$$
+```math
 t={q-k\over D}\to t,
 \qquad
 \delta={b-P_F\over D}\to\delta,
 \qquad {P_F\over D}\to\pi,
-$$
+```
 
 we have
 
-$$
+```math
 \boxed{
 \liminf {d_{out}^{loc}\over D}
 \ge {3\pi\over2}-2t+{3\delta\over2}.
 }
 \tag{OK.7}
-$$
+```
 
 At the current proof-only low-`t` endpoint
 
-$$
+```math
 t_0={4\over9}\left(\pi+\sqrt{\pi/(2\sqrt3)}\right)+0.0017279
 =1.8212414379\ldots,
-$$
+```
 
 and with the conservative choice `delta=0`,
 
-$$
+```math
 \boxed{
 \liminf {d_{out}^{loc}\over D}
 >1.06990.
 }
 \tag{OK.8}
-$$
+```
 
 More robustly, throughout the entire working low-`t` band `t<=1.8585`,
 
-$$
+```math
 \boxed{
 \liminf {d_{out}^{loc}\over D}
 >0.99538
 }
 \tag{OK.9}
-$$
+```
 
 before using any positive outer-detour bonus. The zero-bonus coefficient stays
 positive all the way to
 
-$$
+```math
 t<{3\pi\over4}=2.35619\ldots .
 \tag{OK.10}
-$$
+```
 
 This is not a stronger lower bound on the total contact-flex dimension, which is
 already large from the global closure-rank ledger. Its content is localization: a
@@ -150,9 +150,9 @@ actual outer face.
 
 The audited face-closure matrix
 
-$$
+```math
 C_{face}:\mathbb R^T\to\mathbb R^{2f}
-$$
+```
 
 has one train-angle column for every complete stopped train and two scalar closure rows
 for every bounded nonquadrilateral face. Strict rhombi impose no additional rows
@@ -177,17 +177,17 @@ Each of these `r` train columns is private to `F`: it occurs in no other bounded
 closure row. Restrict `C_face` to these columns. Its only possibly nonzero block is a
 real `2 x r` matrix
 
-$$
+```math
 B_F=(\pm Jr_1\ \cdots\ \pm Jr_r).
 \tag{OK.11}
-$$
+```
 
 Hence
 
-$$
+```math
 \dim\ker B_F\ge(r-2)_+.
 \tag{OK.12}
-$$
+```
 
 Extending a local kernel vector by zero on all other train coordinates gives a vector
 in the global `ker C_face`.
@@ -208,38 +208,38 @@ nonpentagons and metrically bad pentagons as losses.
 The outer-face occurrence ledger counts two occurrences from each outer-to-outer train
 and one from each outer-to-bounded train:
 
-$$
+```math
 b=2L_{OO}+L_{OB}.
-$$
+```
 
 Also
 
-$$
+```math
 \sum_F r_F=L_{OB}.
-$$
+```
 
 For nonnegative numbers `r_F`,
 
-$$
+```math
 \sum_F(r_F-2)_+
 \ge (L_{OB}-2f)_+.
 \tag{OK.13}
-$$
+```
 
 Therefore (OK.1) gives
 
-$$
+```math
 \dim W_{out}
 \ge L_{OO}+(L_{OB}-2f)_+.
 \tag{OK.14}
-$$
+```
 
 For `x=L_OO` and `y=L_OB`,
 
-$$
+```math
 x+(y-2f)_+\ge x+{y\over2}-f={b\over2}-f.
 \tag{OK.15}
-$$
+```
 
 Indeed, if `y<=2f`, then the left side is `x` and
 `x-(x+y/2-f)=f-y/2>=0`; if `y>=2f`, the difference is `y/2-f>=0`.
@@ -255,41 +255,41 @@ remove at most one dimension, proving (OK.4). No support-gap argument is needed.
 
 Every bounded nonquadrilateral face has degree at least five, so its contribution to
 
-$$
+```math
 Q=\sum_F(\deg F-4)
-$$
+```
 
 is at least one. Hence
 
-$$
+```math
 f\le Q.
 \tag{OK.16}
-$$
+```
 
 The canonical outer/exceptional identity is
 
-$$
+```math
 b+Q=2(q-k).
-$$
+```
 
 Substitute (OK.16) into (OK.4):
 
-$$
+```math
 \begin{aligned}
 d_{out}^{loc}
 &\ge {b\over2}-Q-1\\
 &={b\over2}-\bigl(2(q-k)-b\bigr)-1\\
 &={3b\over2}-2(q-k)-1.
 \end{aligned}
-$$
+```
 
 This proves (OK.6).
 
 On a Type-II subsequence, `P_F/D->pi` and by definition
 
-$$
+```math
 {b\over D}={P_F\over D}+{b-P_F\over D}\to\pi+\delta.
-$$
+```
 
 Divide (OK.6) by `D` to obtain (OK.7).
 
@@ -333,9 +333,9 @@ The remaining obstruction is sharply support-sensitive. A closing theorem can fo
 only on the action of the near-extremal planar diameter graph on outer-supported train
 modes. In particular, any rank-capacity theorem showing that fewer than
 
-$$
+```math
 \left({3\pi\over2}-2t+{3\delta\over2}\right)D-o(D)
-$$
+```
 
 independent diameter rows can act on these modes would close the corresponding Type-II
 subsequence.

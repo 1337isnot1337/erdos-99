@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_contact_walk_anisotropic_regression_2026-09-14.md) · source SHA-256 `f2179c71da31e861160f7d5851f3a719140ea8f9452eac873d768f6b56bdbad9`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 4 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
+
 <!-- theorem-state: {"artifact_id":"ART-02DE33235967","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fullcore_contact_walk_anisotropic_regression_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=6334ebc2f126f5828e2f7a9568f832d1b59595cc; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -32,29 +34,29 @@ solves nor disproves Problem #99.
 
 The live full-core C-II endpoint is the occurrence-counted aggregate inequality
 
-$$
+```math
  \liminf_{D\to\infty}{1\over D}
  \sum_r(L_r+P_{{\rm exc},r}-2d_r)
  \ge {\pi\over2}(2-\sqrt3),
-$$
+```
 
 together with
 
-$$
+```math
  \sum_rP_{{\rm exc},r}\le10(e_{BB}-k),
  \qquad k=d_H+s_Z.
-$$
+```
 
 The promoted near-disk loaded-chord/train coupling additionally gives, in the
 canonical Type-II force-hull branch,
 
-$$
+```math
  \liminf {e_{BB}+2s_C-3k\over D}
  \ge {2\pi+2\sqrt{\pi/(2\sqrt3)}\over5}.
-$$
+```
 
 The missing source-level implication is still an upper bound on the same outer
-detour, an exact unit triangle, or a finite same-cardinality strict sub-$D$
+detour, an exact unit triangle, or a finite same-cardinality strict sub-$`D`$
 competitor.
 
 The candidate chain tested here was
@@ -76,59 +78,63 @@ noncanonical.
 
 For every sufficiently large integer (R), put
 
-$$
+```math
  \varepsilon_R=R^{-2},
  \qquad \theta_R={\pi\over3}+\varepsilon_R,
  \qquad u=(1,0),
  \qquad v=(\cos\theta_R,\sin\theta_R),
-$$
+```
 
 and let
 
-$$
+```math
  \Lambda_R=\{iu+jv:i,j\in\mathbb Z\},
  \qquad A_R=\Lambda_R\cap B(0,R).
-$$
+```
 
 Let (G_R) be the straight-line graph on (A_R) whose edges are the unit
 contacts, let (F_R=\operatorname{conv}(A_R)), let (b_R) be the length of the
 outer-face boundary walk of (G_R), with edge occurrences counted, and let
 
-$$
+```math
  D_R=\operatorname{diam}(A_R),
  \qquad P_R=\operatorname{per}(F_R).
-$$
+```
 
 Then, for all sufficiently large (R):
 
 1. (A_R) is unit-separated and contains no unit equilateral triangle;
 2. (G_R) is connected and its edges are exactly the differences
-   $\pm u,\pm v$, so it is bipartite;
+   $`\pm u,\pm v`$, so it is bipartite;
 3. (D_R=2R+O(1)), (F_R) is within bounded Hausdorff distance of (B(0,R)), and
-   $$
+   ```math
    |A_R|={\pi\over2\sqrt3}D_R^2+O(D_R);
-   $$
+   
+   ```
 4. the outer contact walk has the explicit lower bound
-   $$
+   ```math
    b_R\ge {8(R-3)\over\sin\theta_R};
-   $$
+   
+   ```
 5. consequently,
-   $$
+   ```math
    b_R-P_R\ge
    {8(R-3)\over\sin\theta_R}-2\pi R,
-   $$
+   
+   ```
    and therefore
-   $$
+   ```math
    \boxed{
    \liminf_{R\to\infty}{b_R-P_R\over D_R}
    \ge {8\over\sqrt3}-\pi
    =1.4772094999272136\ldots .
    }
-   $$
+   
+   ```
 
 Thus near-disk geometry, asymptotically optimal triangular-packing density, and
 triangle-free two-direction contact structure do not imply
-$b_R-P_R=o(D_R)$. The obstruction is a genuine linear detour, not a boundary
+$`b_R-P_R=o(D_R)`$. The obstruction is a genuine linear detour, not a boundary
 rounding error.
 
 ### Scope
@@ -152,43 +158,51 @@ not a counterexample to the C-II theorem itself.
 Write (c_R=\cos\theta_R) and (s_R=\sin\theta_R). For sufficiently large
 (R),
 
-$$
+```math
 0<c_R<\frac12.
-$$
+```
 
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 For a lattice difference (iu+jv\), if (ij\ge0), then
+```
 
-$$
+
+
+```math
  |iu+jv|^2=i^2+j^2+2c_Rij\ge1
-$$
+```
 
 for every nonzero integer pair. If (ij<0), put (a=|i|), (d=|j|). Then
 
-$$
+```math
  |iu+jv|^2=(a-d)^2+2ad(1-c_R).
-$$
+```
 
 For (a=d=1), this is (2(1-c_R)>1), and for (a\ne d) the first term is at
 least one and the second is positive. Hence all distinct points are at distance at
 least one. Equality occurs only for
-$±u,±v$. Coloring (iu+jv) by (i+j\pmod 2) makes every contact edge
+$`±u,±v`$. Coloring (iu+jv) by (i+j\pmod 2) makes every contact edge
 bichromatic, so (G_R) is triangle-free.
 
 It remains to check that the induced contact graph is connected. In the coordinate
 form
 
-$$
+```math
  Q(i,j)=i^2+j^2+2c_Rij,
-$$
+```
 
 consider a nonzero pair ((i,j)). If (ij\ge0), moving one nonzero coordinate
 one unit toward zero changes (Q) by
 
-$$
+```math
  -2(|i|+c_R|j|)+1
  \quad\text{or}\quad
  -2(|j|+c_R|i|)+1,
-$$
+```
 
 which is negative. If (ij<0), write (I=|i|), (J=|j|). When (I\ge J),
 moving (i) toward zero has dot-product term (I-c_RJ\ge1-c_R>1/2); when
@@ -198,36 +212,44 @@ Iterating reaches the origin, proving connectivity.
 
 For the diameter and density estimates, use the fundamental parallelogram
 
-$$
+```math
  Q_0=\{su+tv:0\le s,t<1\}.
-$$
+```
 
 It tiles the plane, has area (s_R), and every point of (Q_0) is within distance
 at most two of one of its lattice vertices. Thus, for an absolute constant (C),
 
-$$
+```math
  {\pi(R-C)^2\over s_R}
  \le |A_R|\le
  {\pi(R+C)^2\over s_R}.
 \tag{2.1}
-$$
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 
 More directly, rounding the two real lattice coordinates independently gives a
 lattice point within distance at most one. Applying this to
-$(R-2)e) and \(-(R-2)e), for any unit vector (e), gives
+\((R-2)e) and \(-(R-2)e), for any unit vector (e), gives
+```
 
-\[
+
+
+```math
  2R-6\le D_R\le2R.
 \tag{2.2}
-\]
+```
 
 The same rounding argument gives a support point of (F_R) at distance at least
 (R-3) in every direction. Hence
 
-\[
+```math
  B(0,R-3)\subseteq F_R\subseteq B(0,R).
 \tag{2.3}
-\]
+```
 
 Since (s_R=\sqrt3/2+O(R^{-2})), (2.1)–(2.2) give the stated density estimate,
 and (2.3) gives bounded Hausdorff error.
@@ -235,67 +257,75 @@ and (2.3) gives bounded Hausdorff error.
 Now use lattice coordinates. Every contact edge changes exactly one of the two
 coordinates (\alpha,β) in
 
-\[
+```math
  x=\alpha u+\beta v
-\]
+```
 
 by (+1) or (-1). The graph's outer boundary walk is a closed polygonal walk
 whose image has convex hull (F_R): every extreme vertex of a straight-line
 connected planar graph lies on its outer face. Consequently its number of edge
 occurrences is its total coordinate variation,
 
-\[
+```math
  b_R=\operatorname{Var}_{\partial G_R}(\alpha)
      +\operatorname{Var}_{\partial G_R}(\beta).
 \tag{2.4}
-\]
+```
 
 For any closed walk whose image has coordinate range of width (w), the total
 variation in that coordinate is at least (2w). The coordinate functionals are
 
-\[
+```math
  \alpha(x,y)=x-\cot\theta_R\,y,
  \qquad
  \beta(x,y)=\csc\theta_R\,y.
-\]
+```
 
-Each has Euclidean gradient norm \(\csc\theta_R$, so (2.3) gives
 
-$$
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
+Each has Euclidean gradient norm \(\csc\theta_R\), so (2.3) gives
+```
+
+
+
+```math
  \operatorname{width}_{F_R}(\alpha)
  \ge {2(R-3)\over\sin\theta_R},
  \qquad
  \operatorname{width}_{F_R}(\beta)
  \ge {2(R-3)\over\sin\theta_R}.
 \tag{2.5}
-$$
+```
 
 Combining (2.4)–(2.5) gives
 
-$$
+```math
  b_R\ge {8(R-3)\over\sin\theta_R}.
 \tag{2.6}
-$$
+```
 
 Finally, (F_R\subseteq B(0,R)), and Euclidean perimeter is monotone for convex
 bodies, so
 
-$$
+```math
  P_R\le2\pi R.
 \tag{2.7}
-$$
+```
 
 Equations (2.6)–(2.7), (D_R=2R+O(1)), and
-$\sin\theta_R\to\sqrt3/2$ yield
+$`\sin\theta_R\to\sqrt3/2`$ yield
 
-$$
+```math
  {b_R-P_R\over D_R}
  \ge
  {8(R-3)/\sin\theta_R-2\pi R\over 2R+O(1)}
  \longrightarrow {8\over\sqrt3}-\pi.
-$$
+```
 
-This proves the theorem. $\square$
+This proves the theorem. $`\square`$
 
 ## 3. Exact frontier effect
 
@@ -328,7 +358,7 @@ The relevant closing target is now more sharply delimited:
 > exact source-preserving deformation. A bound based only on near-disk source
 > geometry, density, and local two-direction contacts is impossible.
 
-The bound must be on the actual $\sum_r(L_r-2d_r)$, retain repeated boundary
+The bound must be on the actual $`\sum_r(L_r-2d_r)`$, retain repeated boundary
 occurrences and bridges, and include every source point in any subsequent
 source-preserving competitor.
 
@@ -376,10 +406,10 @@ perimeter monotonicity for convex bodies. No external theorem is imported.
 No computation is logically required. Every displayed constant follows from the
 exact limit
 
-$$
+```math
 \sin\theta_R\to{\sqrt3\over2},
 \qquad D_R=2R+O(1).
-$$
+```
 
 The finite construction could be enumerated directly, but no numerical enumeration
 is used as evidence for the theorem.
@@ -403,6 +433,11 @@ detour.
 
 ## 11. Handoff
 
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
+
 1. **Strongest new theorem:** the explicit finite family (A_R) has
    \(b_R-P_R\ge(8/\sqrt3-\pi-o(1))D_R) while remaining triangle-free and
    asymptotically density-optimal.
@@ -415,3 +450,5 @@ detour.
    contact outer walk.
 5. **Files to read next:** `docs/targets/target-c/CURRENT.md`, canonical Sections
    122–123, the promoted train-surplus report, and the active Target A/B endpoints.
+
+```

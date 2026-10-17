@@ -29,10 +29,10 @@ At a sign transition the folded exterior turn is the supplementary angle `pi-tau
 
 By `C-QUARTER-FOLD-CONVEX-FACE-CLASSIFICATION`, the four transition vertices form the inscribed parallelogram. Write `alpha,beta>=0` for the outward deflections of its two-edge unit arcs, so their chords have lengths `2cos(alpha)` and `2cos(beta)`. Let `gamma` be the angle between the two adjacent chord directions. At a transition, the incident face-edge directions differ from the corresponding chord directions by the adjacent arc deflections; subtracting those deflections from the alternating parallelogram turns gives old transition turns `gamma-(alpha+beta)` and `pi-gamma-(alpha+beta)`. With `s=alpha+beta`, the two strict turn bounds therefore imply
 
-$$
+```math
 s<\pi/6,\qquad \pi/3+s<\gamma<2\pi/3-s.
 \tag{1}
-$$
+```
 
 Only old-face and transformed-boundary pairs were used here; no position of an outside source label was held fixed.
 
@@ -40,68 +40,68 @@ Only old-face and transformed-boundary pairs were used here; no position of an o
 
 Undo the common quarter-turn and put `c_alpha=cos(alpha)`, `s_alpha=sin(alpha)`, with the corresponding notation for `beta`. For unit chord directions `u,v` at angle `gamma`, the four transformed transition corners are
 
-$$
+```math
 \pm c_\alpha u\;\pm c_\beta v.
-$$
+```
 
 The other four transformed labels are `+x,-x,+y,-y`, with
 
-$$
+```math
 x=c_\alpha u+s_\beta Jv,
 \qquad y=c_\beta v-s_\alpha Ju.
-$$
+```
 
 In the basis `u,v`,
 
-$$
+```math
 x=(c_\alpha-s_\beta\csc\gamma)u+(s_\beta\cot\gamma)v,
 \quad
 y=(s_\alpha\cot\gamma)u+(c_\beta-s_\alpha\csc\gamma)v.
-$$
+```
 
 By (1), `alpha,beta<pi/6`, `sin(gamma)>sqrt(3)/2`, and `|cot(gamma)|<1/sqrt(3)`. Hence
 
-$$
+```math
 0<c_\alpha-s_\beta\csc\gamma<c_\alpha,
 \qquad |s_\beta\cot\gamma|<c_\beta,
-$$
+```
 
 and symmetrically for `y`. Thus all four middle labels lie strictly inside the corner parallelogram `P=conv{+/-c_alpha u +/-c_beta v}`, so `H=P`.
 
 The cells used below are in the claimed cyclic order, not just contained in `P`. Write `C_{++}=c_alpha u+c_beta v`, `C_{-+}=-c_alpha u+c_beta v`, and `C_{+-}=c_alpha u-c_beta v`. Direct cross-product expansion gives
 
-$$
+```math
 x\times C_{++}=c_\alpha\sin(\gamma-\beta)-c_\beta\sin\beta,\qquad
 C_{++}\times y=c_\beta\sin(\gamma-\alpha)-c_\alpha\sin\alpha,
-$$
-$$
+```
+```math
 y\times C_{-+}=c_\beta\sin(\gamma+\alpha)-c_\alpha\sin\alpha,\qquad
 C_{+-}\times x=c_\alpha\sin(\gamma+\beta)-c_\beta\sin\beta.
-$$
+```
 
 Each is positive: all four angles `gamma±alpha` and `gamma±beta` lie strictly in `(pi/3,2pi/3)`, so the first product in each expression exceeds `3/4`, while the subtracted term is below `1/2`. Together with central symmetry these signs place the rays in the order `x,C_{++},y,C_{-+},-x,C_{--},-y,C_{+-}`. Hence the central diamond, the four transition-corner triangles, and the four side pockets form a noncrossing triangulation of `P`.
 
 The middle labels form a nondegenerate central diamond because
 
-$$
+```math
 x\mathbin\times y=\cos(\alpha-\beta)\{\sin\gamma-\sin(\alpha+\beta)\}>0.
-$$
+```
 
 Their squared radii are
 
-$$
+```math
 |x|^2=c_\alpha^2+s_\beta^2-2c_\alpha s_\beta\sin\gamma,
 \qquad
 |y|^2=c_\beta^2+s_\alpha^2-2c_\beta s_\alpha\sin\gamma.
-$$
+```
 
 Both are at most one. For example, if `beta>0`, then `s_beta<2c_alpha sin(gamma)`, so the beta terms in `|x|^2` have negative sum; if `beta=0`, `|x|^2=c_alpha^2`. The symmetric argument handles `y`. If `alpha+beta>0`, both radii are strictly below one.
 
 For any convex combination `p=sum lambda_i v_i` of points `v_i` in a radius-`r` disk centered at zero,
 
-$$
+```math
 \sum_i\lambda_i|p-v_i|^2=\sum_i\lambda_i|v_i|^2-|p|^2\le r^2.
-$$
+```
 
 Therefore the central diamond is covered by the radius-`r` disks centered at its four middle labels, with `r<=1` and `r<1` when bowed.
 

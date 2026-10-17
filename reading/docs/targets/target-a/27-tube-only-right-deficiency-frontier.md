@@ -16,15 +16,15 @@ reports. It does not close Target A.
 Retain the actual plateau-terminalized response optimum `X^*`, its generic triangular
 lattice response graph, and the Section-113 fixed `Z`-perfect basis matching
 
-$$
+```math
 \mu_0:B\longrightarrow Z.
-$$
+```
 
 Let `Sigma` be a finite connected unit-contact shield in `X^*` satisfying the
 Section-174 separation hypotheses. In particular the three-channel locked fan of
 Section 172 is admissible. Put
 
-$$
+```math
 T_\Sigma
 =\{y\in Y_{\rm in}:\operatorname{dist}(y,|\Sigma|)<1\},
 \qquad
@@ -32,49 +32,49 @@ T_Z=T_\Sigma\cap Z,
 \qquad
 T_O=T_\Sigma\cap O.
 \tag{175.1}
-$$
+```
 
 Let `D_1,...,D_k` be the components of `K^*\setminus|Sigma|`. Use the basis-closed
 shield of Section 174 only to define the surviving sector sets. Write
 
-$$
+```math
 C_i=(C^\partial\setminus\widehat W_\Sigma)\cap D_i
 \tag{175.2}
-$$
+```
 
 and let `O_i` be the surviving exterior sinks having a surviving response neighbor in
 `D_i`. Section 174 proves that the `O_i` are pairwise disjoint. Put
 
-$$
+```math
 O_{\rm iso}
 =(O\setminus\widehat W_\Sigma)\setminus\bigcup_i O_i,
 \tag{175.3}
-$$
+```
 
 and
 
-$$
+```math
 Q_\Sigma=\sum_i\max\{0,|O_i|-|C_i|\}.
 \tag{175.4}
-$$
+```
 
 Finally use the current flexible-source collar demand
 
-$$
+```math
 j_*=N-|Y_0|-m^*.
 \tag{175.5}
-$$
+```
 
 The exact identity from the plateau-terminalized Schur bookkeeping is
 
-$$
+```math
 \zeta-s=h(G)-j_*,
 \qquad
 h(G)=|O|-\operatorname{rank}S,
 \qquad
 s=\Delta_\Lambda-d_{\rm int}.
 \tag{175.6}
-$$
+```
 
 ## 175.1 Nine lattice sites per unit contact edge
 
@@ -82,46 +82,40 @@ $$
 > triangular lattice `Lambda`,
 > 
 
-$$
-
+```math
 > \#\{y\in\Lambda:\operatorname{dist}(y,e)<1\}\le9.
 > \tag{175.7}
 > 
-$$
-
-
+```
 > Consequently
 > 
 
-$$
-
+```math
 > \boxed{|T_\Sigma|\le9|E(\Sigma)|.}
 > \tag{175.8}
 > 
-$$
-
-
+```
 
 ### Proof
 
 If `y,y'` lie in the open unit tube of the same unit segment, choose `x,x'` on the
 segment with `|y-x|<1` and `|y'-x'|<1`. Then
 
-$$
+```math
 |y-y'|<1+|x-x'|+1\le3.
-$$
+```
 
 Partition `Lambda` into the nine cosets of `3Lambda`. Distinct points in one coset are
 at distance at least three, so the tube contains at most one point from each coset.
 This proves (175.7). Since `Sigma` has no isolated vertices, its geometric realization
-is the union of its unit edges. A union bound proves (175.8). $\square$
+is the union of its unit edges. A union bound proves (175.8). $`\square`$
 
 For the Section-172 three-channel fan, `Sigma` is connected and unicyclic, so
 
-$$
+```math
 |E(\Sigma)|=|V(\Sigma)|
 \tag{175.9}
-$$
+```
 
 and the pointwise coarse tube charge is at most `9|V(Sigma)|`.
 
@@ -129,14 +123,14 @@ and the pointwise coarse tube charge is at most `9|V(Sigma)|`.
 
 The basis-closed shield of Section 174 can be written exactly as
 
-$$
+```math
 \widehat W_\Sigma
 =T_\Sigma
 \sqcup\mu_0^{-1}(T_Z)
 \sqcup(V(\Sigma)\cap C^\circ)
 \sqcup(V(\Sigma)\cap C^\partial).
 \tag{175.10}
-$$
+```
 
 Indeed, if `b in B cap V(Sigma)`, then its matched row `mu_0(b)` is a strict response
 neighbor of `b` and therefore belongs to `T_Z`; hence every basis vertex of the
@@ -162,7 +156,7 @@ cannot visit a shielded `C^circ` vertex internally, and it can meet a shielded
 `C^partial` vertex only as its initial terminal. If that terminal lies on `Sigma`, its
 next response row is at distance below one from `|Sigma|`, hence belongs to
 `T_Sigma`. Thus every possible shield encounter forces a tube-row encounter.
-$\square$
+$`\square`$
 
 ## 175.3 Tube-only rank and nullity bounds
 
@@ -175,47 +169,44 @@ corresponding `O_i`.
 > **Theorem 175.3 (tube-only Schur cut).**
 > 
 
-$$
-
+```math
 > \boxed{
 > \operatorname{rank}S
 > \le |T_\Sigma|+\sum_i\min\{|C_i|,|O_i|\}.
 > }
 > \tag{175.11}
 > 
-$$
-
-
+```
 
 If
 
-$$
+```math
 t_\Sigma=|C^\partial\cap V(\Sigma)|,
 \qquad
 P_\Sigma=\sum_i\max\{0,|C_i|-|O_i|\},
 \tag{175.12}
-$$
+```
 
 then subtracting (175.11) from
 
-$$
+```math
 |C^\partial|=t_\Sigma+\sum_i|C_i|
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{\zeta\ge t_\Sigma+P_\Sigma-|T_\Sigma|.}
 \tag{175.13}
-$$
+```
 
 This strictly improves the Section-174 basis-closed shield charge. In particular it
 is sufficient to prove
 
-$$
+```math
 \boxed{t_\Sigma+P_\Sigma\ge s+|T_\Sigma|.}
 \tag{175.14}
-$$
+```
 
 No basis partner or left contact vertex is charged separately.
 
@@ -223,54 +214,51 @@ No basis partner or left contact vertex is charged separately.
 
 The right shore decomposes as
 
-$$
+```math
 O=T_O\sqcup O_{\rm iso}\sqcup\bigsqcup_i O_i.
 \tag{175.15}
-$$
+```
 
 Subtract (175.11) from this identity. Since
 
-$$
+```math
 |T_\Sigma|=|T_Z|+|T_O|,
-$$
+```
 
 the exterior tube population cancels exactly.
 
 > **Theorem 175.4 (contact-fan right-deficiency bound).**
 > 
 
-$$
-
+```math
 > \boxed{
 > h(G)=|O|-\operatorname{rank}S
 > \ge O_{\rm iso}+Q_\Sigma-|T_Z|.
 > }
 > \tag{175.16}
 > 
-$$
-
-
+```
 
 Combining with (175.6) gives the current locked-branch closing criterion
 
-$$
+```math
 \boxed{
 |O_{\rm iso}|+Q_\Sigma
 \ge j_*+|T_Z|.
 }
 \tag{175.17}
-$$
+```
 
 Equivalently, any surviving Target A counterexample must satisfy the pointwise integer
 inequality
 
-$$
+```math
 \boxed{
 |O_{\rm iso}|+Q_\Sigma
 \le j_*+|T_Z|-1.
 }
 \tag{175.18}
-$$
+```
 
 This is the strongest exact shield inequality in the audited locked-fan chain. The
 hard term is now a genuine exterior-sink surplus. The only shield loss is the number
@@ -286,24 +274,24 @@ The geometric fan `Sigma` depends only on the fixed response optimum and its con
 stress, not on the triangular-lattice translation. Average over one lattice
 fundamental cell of area
 
-$$
+```math
 a_0=\sqrt3/2.
-$$
+```
 
 Translation averaging gives
 
-$$
+```math
 \mathbb E_v|T_Z(v)|
 ={\operatorname{area}(K^*\cap N_1(|\Sigma|))\over a_0}.
 \tag{175.19}
-$$
+```
 
 For any connected finite straight-edge graph of total edge length `L`,
 
-$$
+```math
 \operatorname{area}N_1(G)\le\pi+2L.
 \tag{175.20}
-$$
+```
 
 To prove this, begin with the unit disk around one graph vertex. Order a spanning-tree
 set of edges so each new edge is attached at a vertex already present, then add the
@@ -313,20 +301,20 @@ the union. Thus each added edge increases area by at most `2ell`.
 
 Every fan edge is a unit contact, so `L=|E(Sigma)|`. Therefore
 
-$$
+```math
 \boxed{
 \mathbb E_v|T_Z(v)|
 \le {\pi+2|E(\Sigma)|\over a_0}
 ={2\pi\over\sqrt3}+{4\over\sqrt3}|E(\Sigma)|.
 }
 \tag{175.21}
-$$
+```
 
 For the unicyclic three-channel fan, replace `|E(Sigma)|` by `|V(Sigma)|`.
 
 A survivor consequently obeys the joint averaged necessary inequality
 
-$$
+```math
 \boxed{
 \mathbb E_v\bigl[|O_{\rm iso}(v)|+Q_\Sigma(v)\bigr]
 \le
@@ -334,7 +322,7 @@ $$
 +{\operatorname{area}(K^*\cap N_1(|\Sigma|))\over a_0}-1.
 }
 \tag{175.22}
-$$
+```
 
 This average is legitimate because (175.18) holds phase by phase; no phase is selected
 by minimizing the tube independently of the collar demand.
@@ -379,12 +367,12 @@ Schur-cut bookkeeping, not a repair of a broken canonical theorem.
 Target A remains open. In the actual-response locked branch it now suffices to prove,
 for one stress-generated three-channel fan,
 
-$$
+```math
 |O_{\rm iso}|+
 \sum_i\max\{0,|O_i|-|C_i|\}
 \ge j_*+|T_Z|,
 \tag{175.23}
-$$
+```
 
 or to construct an `N`-point unit-separated configuration of diameter strictly below
 `D`.

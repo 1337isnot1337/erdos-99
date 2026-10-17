@@ -25,10 +25,10 @@
 
 The canonical sufficient Target B endpoint is
 
-$$
+```math
 G+E\ge {\sqrt3\over4}B+{\sqrt3\over2}(t+\chi-1),
 \tag{1.1}
-$$
+```
 
 where the exact cell/Euler identities make (1.1) equivalent to
 `area(K) >= a_0(n-1)`, with `a_0=sqrt(3)/2`. A global minimizer obeys the
@@ -54,11 +54,11 @@ relative-isoperimetric candidate.
 Let `c=2sqrt(3)/pi`, and let `U` be the union of all complete unit rhombi in
 the indicated finite contact graph. Define
 
-$$
+```math
 Q_U=\mathcal H^1(\partial U\cap\operatorname{int}K),\quad
 G=\operatorname{area}(K)-\operatorname{area}(U),\quad
 E=\operatorname{area}(U)-a_0R.
-$$
+```
 
 ### Theorem B-DC
 
@@ -76,12 +76,13 @@ unit-separated planar sets `A` of size `n`, with diameter `D` and convex hull
    rhombi;
 5. if `V_miss` is the noncrossing determinant mass of the two-direction
    train system of `U`, then
-   $$
+   ```math
    V_{\rm miss}\ge
    \left({2\over\sqrt3}-{\pi\over4}-o(1)\right)D^2,
    \qquad {2\over\sqrt3}-{\pi\over4}>0.
    \tag{2.1}
-   $$
+   
+   ```
 6. every sufficiently small shear chosen as in (2.4), including rational
    angle cosines, has at most two active diameter pairs, while its hull has
    `Omega(sqrt(D))` vertices, all with unit contacts. Its pinned
@@ -102,10 +103,10 @@ Let `Lambda_0=Z u+Z v_0`, with
 `u=(1,0)` and `v_0=(1/2,sqrt(3)/2)`. Its covolume is `a_0`.
 For an integer `m` tending to infinity, choose `r` by
 
-$$
+```math
 \pi r^2/a_0=m.
 \tag{2.2}
-$$
+```
 
 The translated open-disk lattice count has mean `m` and is not constant:
 crossing a generic translate for which exactly one lattice point lies on the
@@ -119,10 +120,10 @@ Because the open disk is convex, `K_0` is contained in it and
 Let `b>=3` be the number of lattice points on `partial K_0`. Pick's theorem,
 in the normalization with fundamental area `a_0`, gives exactly
 
-$$
+```math
 \operatorname{area}(K_0)=a_0(N-b/2-1).
 \tag{2.3}
-$$
+```
 
 In particular `area(K_0)<a_0(N-1)`. Also `D_0=diam(A_0)<2r`, whereas
 `c(N-1)>=cm=4r^2`. The strict diameter comparison therefore holds at
@@ -133,23 +134,23 @@ Now let `theta=pi/3+delta`, `0<delta<pi/6`, and map `u` to itself and
 `L_theta`. Put `A_theta=L_theta A_0`, `K_theta=L_theta K_0`, and
 `s_theta=sin(theta)`. Choose `delta=delta_m>0` so small that
 
-$$
+```math
 delta_m<r^{-3},\qquad D(A_\theta)<2r,
 \tag{2.4}
-$$
+```
 
 and, if necessary, smaller still. Such a positive choice exists by the strict
 inequality `D_0<2r` and continuity of the diameter of a fixed finite set.
 The sheared polygon is saturated in `Lambda_theta=Z u+Z v_theta`, so the
 same Pick count gives
 
-$$
+```math
 \operatorname{area}(K_\theta)
 =s_\theta(N-b/2-1),\qquad
 a_0(N-1)-\operatorname{area}(K_\theta)
 ={s_\theta b\over2}-(s_\theta-a_0)(N-1).
 \tag{2.5}
-$$
+```
 
 Here `N=O(r^2)` and `s_theta-a_0=O(delta_m)=O(r^{-3})`.
 The second term in (2.5) is `O(r^{-1})`, while the first is at least
@@ -159,9 +160,9 @@ The second term in (2.5) is `O(r^{-1})`, while the first is at least
 The complete infinite oblique lattice `Lambda_theta` is unit-separated.
 For integers `i,j` not both zero,
 
-$$
+```math
 |iu+jv_\theta|^2=i^2+j^2+2ij\cos\theta.
-$$
+```
 
 If `ij>=0`, this is at least one. If `ij<0`, put `p=|i|`, `q=|j|`;
 since `0<cos(theta)<1/2`, the square is strictly larger than
@@ -191,10 +192,10 @@ from area and Cauchy's perimeter formula. The number `R` of complete
 rhombi is `O(r^2)` because their interiors are disjoint and lie in a
 disk of radius `r+o(1)`. Therefore
 
-$$
+```math
 0<E=R(s_\theta-a_0)=O(r^2\delta_m)=O(r^{-1})=o(1).
 \tag{2.6}
-$$
+```
 
 If a lattice point of `A_0` lies at radius at most `r-2`, the
 fundamental rhombus based at that point has all four vertices in the
@@ -212,20 +213,20 @@ least `r-O(1)` from the common center, while `K_theta` lies in a disk
 of radius `r+O(1)`. Its intersection with that disk has length
 `O(sqrt(r))`. Hence
 
-$$
+```math
 \mathcal H^1(\partial U_\theta\cap\partial K_\theta)=O(\sqrt r).
 \tag{2.7}
-$$
+```
 
 The isoperimetric inequality and the contained disk give
 `per(U_theta)>=2pi(r-O(1))`. Since `U_theta subset K_theta`, subtracting
 (2.7) proves
 
-$$
+```math
 Q_{U_\theta}\ge2\pi r-O(\sqrt r)
 =(\pi-o(1))D.
 \tag{2.8}
-$$
+```
 
 The two train directions of `U_theta` have one common phase difference
 `delta_m`; orient every physical crossing from the `u` phase to the
@@ -249,11 +250,11 @@ Each direction-pair contributes determinant `s_theta`; exactly `R`
 such pairs cross physically, once each. The virtual-pair identity therefore
 gives
 
-$$
+```math
 V_{\rm miss}
 \ge s_\theta\left[
 \left({2r\over s_\theta}-O(1)\right)^2-R\right].
-$$
+```
 
 As `R s_theta=area(U_theta)<=pi(r+o(1))^2`, this is at least
 `(4/s_theta-pi)r^2-O(r)`. Since `s_theta -> a_0` and
@@ -300,10 +301,10 @@ lattice, without a disk or rhombic-core hypothesis.
 To prove it, write every difference vector as `z=iu+jv_theta` with
 integers `i,j`. If two vectors have the same squared length, then
 
-$$
+```math
 (i^2+j^2)-(i'^2+j'^2)
 +2\cos\theta(ij-i'j')=0.
-$$
+```
 
 Irrationality forces both integer coefficients to vanish. The values of
 `i^2+j^2` and `ij` determine `(i,j)` up to swapping and simultaneous
@@ -358,10 +359,10 @@ Cell-edge incidence and Euler give
 `area(K_theta)=a_0R+E+G`. Hence the strict Pick inequality in (2.5)
 is exactly
 
-$$
+```math
 G+E<c_0B+a_0(t+\chi-1),\qquad c_0=a_0/2.
 \tag{2.9}
-$$
+```
 
 The source thus satisfies the same strict scalar side as a global minimizer.
 This does **not** make it a minimizer; first-order jammed stress and
@@ -388,10 +389,10 @@ Lemma B-IRR. There are at most four oriented solutions.
 Now put cos(theta)=p/q in lowest terms, with q>0 and |p|<q. If q>4M^2,
 equality of two lengths yields
 
-$$
+```math
 q\,\Delta(i^2+j^2)+2p\,\Delta(ij)=0.
 \tag{3.1}
-$$
+```
 
 Since gcd(p,q)=1, q divides 2 Delta(ij); the latter has absolute value at
 most 4M^2<q. Thus Delta(ij)=0, and then Delta(i^2+j^2)=0. Again at most
@@ -401,10 +402,10 @@ It remains to handle q<=4M^2. For a fixed squared length L>0, put
 m=q^2 L, a positive integer: qL=q(i^2+j^2)+2pij is integral. In the
 imaginary quadratic field F=Q(sqrt(p^2-q^2)), define
 
-$$
+```math
 \alpha(i,j)=qi+j\bigl(p+\sqrt{p^2-q^2}\bigr).
 \tag{3.2}
-$$
+```
 
 It is an algebraic integer, the map (i,j) -> alpha(i,j) is injective,
 and its field norm is exactly q^2 L=m. Let O_F be the **maximal**
@@ -418,10 +419,10 @@ prime power ell^e, the split case permits e+1 exponent allocations, and
 the other two cases permit at most one. Consequently the number of oriented
 vectors of length L is at most 6 tau(m). Finally,
 
-$$
+```math
 0<m=q^2L\le (4M^2)^2(2M)^2=64M^6,
 \tag{3.3}
-$$
+```
 
 because each basis vector has norm one. The elementary divisor estimate
 tau(n)<=C_delta n^delta for any delta>0 now gives the claimed uniform
@@ -492,9 +493,9 @@ subcase, not a new Target B closure.
 The failed route was suggested by a valid exact two-grid calculation. Let
 `u=(1,0)`, let `v_y>0>w_y`, and take `m,a,b>0`. Define
 
-$$
+```math
 U=([0,mu]+[0,av])\ \cup\ ([0,mu]+[0,bw]),\quad K=\operatorname{conv}U.
-$$
+```
 
 The two parallelograms meet along their common length-`m` seam. Because
 convex hull commutes with adding the common segment,
@@ -504,11 +505,11 @@ two parallelograms have total area `m(a v_y-b w_y)`, while the triangle
 `conv{0,av,bw}` has area `ab|det(v,w)|/2` and the same vertical width
 `a v_y-b w_y`. Therefore exactly
 
-$$
+```math
 \operatorname{area}(K)-\operatorname{area}(U)
 ={ab\over2}|\det(v,w)|.
 \tag{4.1}
-$$
+```
 
 This converts a macroscopic angular mismatch across an *exposed, straight,
 two-grid seam* into a quadratic hull pocket. In the disk-clipped family,

@@ -22,41 +22,41 @@ There are triangle-free unit-separated lattice patches whose unit-contact graph 
 
 Fix `delta>0` and put
 
-$$
+```math
 u=(1,0),
 \qquad
 v=(1+\delta)\left({1\over2},{\sqrt3\over2}\right).
 \tag{1.1}
-$$
+```
 
 Let
 
-$$
+```math
 \Lambda_\delta:=\{au+bv:a,b\in\mathbb Z\}.
-$$
+```
 
 For one lattice difference,
 
-$$
+```math
 |au+bv|^2
 =a^2+(1+\delta)ab+(1+\delta)^2b^2.
 \tag{1.2}
-$$
+```
 
 ### Lemma 1.1 — exact shortest vectors
 
 For every nonzero `(a,b)\in\mathbb Z^2`,
 
-$$
+```math
 |au+bv|\ge1,
-$$
+```
 
 with equality if and only if
 
-$$
+```math
 (a,b)=(1,0)\quad\text{or}\quad(-1,0).
 \tag{1.3}
-$$
+```
 
 ### Proof
 
@@ -64,30 +64,30 @@ If `b=0`, then `|au|=|a|`, so the claim is immediate.
 
 If `|b|\ge2`, the vertical component alone has magnitude
 
-$$
+```math
 |b|{\sqrt3\over2}(1+\delta)
 \ge\sqrt3(1+\delta)>1.
-$$
+```
 
 It remains to consider `|b|=1`. By symmetry it is enough to take `b=1`. As a function of the integer `a`, (1.2) is a strictly convex quadratic whose real minimizer is
 
-$$
+```math
 a=-{1+\delta\over2}.
-$$
+```
 
 The two nearest relevant integers are `a=0` and `a=-1`. They give
 
-$$
+```math
 |v|=1+\delta>1
-$$
+```
 
 and
 
-$$
+```math
 |v-u|^2
 =1-(1+\delta)+(1+\delta)^2
 =1+\delta+\delta^2>1.
-$$
+```
 
 All other integers give a larger value. The case `b=-1` is identical. Therefore only `\pm u` have unit length. `square`
 
@@ -99,17 +99,17 @@ Consequently `Lambda_delta` is unit-separated and its unit-contact graph consist
 
 For integers `M,N\ge1`, take the finite rectangular patch
 
-$$
+```math
 P_{M,N}(\delta)
 :=\{iu+jv:0\le i\le M,\ 0\le j\le N\}.
 \tag{2.1}
-$$
+```
 
 By Lemma 1.1, every unit contact joins
 
-$$
+```math
 (i,j)\leftrightarrow(i+1,j).
-$$
+```
 
 Thus the unit-contact graph is the disjoint union of `N+1` paths, each with `M+1` vertices. In particular it is a forest and contains no contact triangle.
 
@@ -121,31 +121,31 @@ Every vertex has a unit neighbor when `M\ge1`, so these examples also show that 
 
 The fundamental parallelogram area is
 
-$$
+```math
 \det(u,v)
 ={\sqrt3\over2}(1+\delta).
 \tag{3.1}
-$$
+```
 
 Hence the area per lattice point tends to
 
-$$
+```math
 \boxed{
 {\sqrt3\over2}
 }
 \tag{3.2}
-$$
+```
 
 as `delta\downarrow0`, exactly the triangular-lattice packing value.
 
 Equivalently, the density of radius-`1/2` disks is
 
-$$
+```math
 {\pi/4\over (\sqrt3/2)(1+\delta)}
 ={\pi\over2\sqrt3}{1\over1+\delta}
 \longrightarrow {\pi\over2\sqrt3}.
 \tag{3.3}
-$$
+```
 
 Thus there is no fixed positive density penalty for requiring the exact unit-contact graph to be a forest, even a disjoint union of paths.
 

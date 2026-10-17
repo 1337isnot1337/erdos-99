@@ -42,17 +42,17 @@ selected-grid proxy is introduced.
 
 For every integer `M>=0`, the new bound is
 
-$$
+```math
  N_M:=\#\{r:\delta_r\le M\}\le 12{,}000{,}000\pi(M+2).
-$$
+```
 
 Together with the canonical `\sum_r\delta_r\le2+2\pi D` budget, this gives
 
-$$
+```math
  c_I\le12{,}000{,}000\pi(\lfloor\sqrt D\rfloor+2)
        +\frac{2+2\pi D}{\lfloor\sqrt D\rfloor+1}
  =O(\sqrt D).
-$$
+```
 
 ## Independent reconstruction
 
@@ -83,22 +83,22 @@ Concavity gives `s1>=s2`. The other two sides have lengths at least their
 horizontal runs `l1` and `l2`, so the semiperimeter is at least `l1+l2`.
 Using the area formula and `l1*l2/(l1+l2)<=min(l1,l2)` gives
 
-$$
+```math
  A_T=\tfrac12 l_1l_2(s_1-s_2),\qquad
  r_T\le\tfrac12\min(l_1,l_2)(s_1-s_2).
-$$
+```
 
 Let `mu=-f''` be the nonnegative slope-drop measure. Direct integration of
 secants gives
 
-$$
+```math
  s_1-s_2=\int g_{a,b,c}(t)\,d\mu(t),\qquad
  g_{a,b,c}(t)=\begin{cases}
  (t-a)/(b-a),&a\le t\le b,\\
  (c-t)/(c-b),&b\le t\le c,\\
  0,&\text{otherwise}.
  \end{cases}
-$$
+```
 
 At a fixed `t`, nonzero kernels occur only along the single triangulation
 root-to-leaf chain whose intervals contain `t`; a curvature atom at a split
@@ -109,10 +109,10 @@ if `t` is the split vertex, the terminal charge `min(l1,l2)` is at most the
 remaining interval length and is absorbed in that same total. Since `0<=g<=1`,
 it follows that
 
-$$
+```math
  \sum_T r_T\le\tfrac12\int\sum_T\min(l_1,l_2)g_{a,b,c}(t)\,d\mu(t)
  \le XV/2.
-$$
+```
 
 Since every selected triangle has inradius at least `w/12`, the number of
 polygons is at most `6XV/w`, and hence also at most the deliberately looser
@@ -161,9 +161,9 @@ bounded by `1+22^2=485`.
 The curvature lemma with `X=88L`, `V=485 Theta`, and `w=1/2` bounds the
 assigned cells by
 
-$$
+```math
  24(88L)(485\Theta)=1{,}024{,}320L\Theta.
-$$
+```
 
 The extended arcs cover each boundary point at most five times: the original
 equal blocks have length at least `w0`, and each extension adds only `w0` at

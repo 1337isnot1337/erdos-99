@@ -64,10 +64,10 @@ Let A be any finite unit-separated planar source of diameter D. Let B contain
 `ab` be a side of F of length L<D. A source point on the exterior side of its
 supporting line forces
 
-$$
+```math
  \boxed{(1+D^{-2})L^2+2L/D\ge3,\qquad
  L\ge\tau_D:=\frac{3D}{\sqrt{3D^2+4}+1}.}                 \tag{1}
-$$
+```
 
 This theorem requires neither global optimality nor contact equilibrium.
 It applies to every source point, including isolates. In particular,
@@ -79,30 +79,30 @@ Put `a=(-L/2,0)`, `b=(L/2,0)`, with F below the horizontal line. Choose actual
 diameter partners c,d in B with `|c-a|=|d-b|=D`. The remaining upper constraints
 give `c_x>=0` and `d_x<=0`, and `c_y,d_y<=0`. Write
 
-$$
+```math
  c-a=(A_0,-C),\qquad d-b=(-B_0,-E),
  \quad A_0,B_0\ge L/2>0,\quad C,E\ge0.
-$$
+```
 
 Let alpha,beta in `(0,pi/2]` be the angles of these vectors from the downward
 vertical on the two sides, and put theta=alpha+beta. Since
 
-$$
+```math
  |(c-a)-(d-b)|=|c-d+(b-a)|\le D+L<2D,
-$$
+```
 
 we have theta<pi and
 
-$$
+```math
  2D\sin(\theta/2)\le D+L.                               \tag{2}
-$$
+```
 
 The two diameter disks give the tangent half-plane inequalities
 
-$$
+```math
  -A_0(x+L/2)+Cy\le0,\qquad
  B_0(x-L/2)+Ey\le0.                                    \tag{3}
-$$
+```
 
 Together with `y>=0`, these half-planes bound a triangle T with base ab and
 apex angle `pi-theta`. A vertical side is permitted if C or E is zero;
@@ -112,11 +112,11 @@ lies in T, and its horizontal projection lies strictly between a and b.
 The circumdisk of T contains T. Any z in T above ab therefore sees ab under
 an angle at least `pi-theta`. With `r=|z-a|>=1`, `s=|z-b|>=1`, the cosine law gives
 
-$$
+```math
  L^2\ge r^2+s^2+2rs\cos\theta
        =(r-s)^2+2rs(1+\cos\theta)
        \ge4\cos^2(\theta/2).
-$$
+```
 
 By (2), `4cos^2(theta/2)>=4-(1+L/D)^2`. Rearrangement proves (1).
 The positive quadratic root equals the stated tau_D. QED.
@@ -125,30 +125,30 @@ The positive quadratic root equals the stated tau_D. QED.
 
 Put `q=|B|`, `P_F=per(F)`, and `E_F=P_F-q>=0`. Assume
 
-$$
+```math
  \boxed{D\ge6,\qquad 1+E_F\le D/4.}                     \tag{4}
-$$
+```
 
 Every hull side has length at least one, and at most `1+E_F`. Hence every
 nonempty exterior cap has base `3/2<L<=D/4`, by (1). For its tangent triangle,
 (2) gives `cos(theta/2)>=sqrt(39)/8`. The sine rule gives
 
-$$
+```math
  \frac{\text{two apex-side lengths}}L
  =\frac{\sin\alpha+\sin\beta}{\sin(\alpha+\beta)}
  =\frac{\cos((\alpha-\beta)/2)}{\cos(\theta/2)}
  \le\frac8{\sqrt{39}}.                                 \tag{5}
-$$
+```
 
 Each convex cap is contained in T, so convex perimeter monotonicity, after
 subtracting the common base, bounds its source-hull arc by `8L/sqrt(39)`.
 If that arc has t extra extreme source vertices, unit separation gives arc
 length at least t+1. Since `L<=3(L-1)` on the nonempty caps,
 
-$$
+```math
  \boxed{|Vert(conv A)\setminus B|
  \le\frac{24}{\sqrt{39}}E_F.}                           \tag{6}
-$$
+```
 
 This is a bound on the number of extra **extreme vertices**, not on the total
 exterior population. A cap can still contain a large inactive cloud.
@@ -157,27 +157,27 @@ Let `r<=13/12`, and draw all source pairs of length at most r. Every vertex
 has at most nine neighbors in this graph: disjoint radius-1/2 disks at those
 neighbors and the vertex lie in its radius-`r+1/2` disk, so
 
-$$
+```math
  N+1\le4(r+1/2)^2\le361/36<11,
  \qquad N\le9.                                        \tag{7}
-$$
+```
 
 Any exterior point having such a pair to a point in F lies at height at most r
 above its cap base. Its horizontal projection lies on that base by (3).
 Radius-1/2 disks at all such exterior points lie in a rectangle of area
 `(L+1)(r+1)`. Using pi>3 and L>3/2 bounds their number by
 
-$$
+```math
  \frac4\pi(L+1)(r+1)
  <\frac{25}9(L+1)\le\frac{125}{27}L<5L.
-$$
+```
 
 Thus at most `15E_F` exterior points have a length-at-most-r pair to F, and
 
-$$
+```math
  \boxed{\#\{xy:|xy|\le r,\ x\notin F,\ y\in F\}
  \le135E_F.}                                          \tag{8}
-$$
+```
 
 No packing density or near-disk limit has entered (6)--(8).
 
@@ -225,9 +225,9 @@ at B by directing each new vertex toward one neighbor decreasing its graph
 distance to B. If Z_B is the set of new vertices here, the forest has |Z_B|
 edges. The remaining edge set J satisfies
 
-$$
+```math
  |J|\le |B|-|H|=d_H                                  \tag{9}
-$$
+```
 
 by applying `e<=v` to `H union F_B` on `B union Z_B`. A new vertex inherits
 its forest root's displacement; every isolate-only T^+ component translates
@@ -253,10 +253,10 @@ short pair with an exterior endpoint has its other endpoint in F, and is counted
 by (8). Thus the static universe of possible exterior lower-blocker labels has
 size
 
-$$
+```math
  \boxed{N_{\rm exterior}\le
  (135+216/\sqrt{39})E_F\le170E_F.}                     \tag{10}
-$$
+```
 
 For this statement use `r=1+s<=13/12`, as ensured by D>=6. The total exterior
 isolate population is never replaced by the count of extreme vertices.
@@ -283,18 +283,18 @@ At most d_H labels are upper blockers, by (9). Every remaining label has
 `1<|xy|<=1+s`. At most `170E_F` of these have an exterior endpoint, by (10).
 Therefore
 
-$$
+```math
  \boxed{N_{\rm residual}\ge
  \max\{0,r-d_H-170(P_F-q)\}.}                         \tag{11}
-$$
+```
 
 For k disjoint ONE-SIGN swaps with different vectors, the same fixed dispatch
 and endpoint charging instead give
 
-$$
+```math
  N_{\rm residual}\ge
  \max\{0,\lceil k/2\rceil-d_H-170(P_F-q)\}.            \tag{12}
-$$
+```
 
 The exact disposition of each residual label follows from short-pair planarity.
 Every pair shorter than sqrt(2) is a strict Gabriel edge: a source point in its
@@ -354,18 +354,18 @@ perimeters or on global Q has been substituted for this narrow-direction proof.
 The asymptotic sqrt(3) base threshold cannot be increased. For every integer
 D>=10 put
 
-$$
+```math
  L=\sqrt3+D^{-1},\quad r=1+(100D)^{-1},\quad
  H_0=\sqrt{D^2-(D+L)^2/4},\quad
  h_0=\sqrt{r^2-L^2/4},
-$$
+```
 
 and take
 
-$$
+```math
  a=(-L/2,0),\ b=(L/2,0),\
  c=(D/2,-H_0),\ d=(-D/2,-H_0),\ z=(0,h_0).
-$$
+```
 
 The actual diameter pairs are exactly ac, bd, cd. All other distances exceed
 one, so the contact graph is empty and the source is triangle-free. The point

@@ -21,29 +21,29 @@ symmetric planar convex bodies and applies it to the exact central symmetral of 
 post-ZF force hull.  Combined with FS.4, FSDB, ZK, and the unrelaxed JC cavity bound,
 it raises the explicit pinned/contact threshold from
 
-$$
+```math
 0.5882283437736394\ldots
-$$
+```
 
 to
 
-$$
+```math
 \boxed{
 \lambda_{RS}=0.5921405436062881\ldots .
 }
 \tag{RS.1}
-$$
+```
 
 More strongly, the new endpoint cannot be attained by an unbounded post-ZF survivor
 sequence.  Therefore there are absolute constants `epsilon_RS>0` and `D_0<infinity`
 such that every post-ZF survivor with `D>=D_0` satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}\ge \lambda_{RS}+\epsilon_{RS}.
 }
 \tag{RS.2}
-$$
+```
 
 The value of `epsilon_RS` is not made explicit here.
 
@@ -59,7 +59,7 @@ perimeter from the force-hull central symmetral.
 
 Use the post-ZF notation
 
-$$
+```math
 L=e_{BB}+2s_C,
 \qquad
 k=d_H+s_Z,
@@ -67,14 +67,14 @@ k=d_H+s_Z,
 h=|E(H)|,
 \qquad
 P=\operatorname{per}F.
-$$
+```
 
 The September 10 FSJC theorem proved
 
-$$
+```math
 \liminf \frac LD\ge
 \lambda_*=0.5882283437736394\ldots,
-$$
+```
 
 and current main excludes exact saturation `L/D -> lambda_*` by FS.4 disk rigidity.
 No universal upper bound on `L/D` is known, so this is not yet a Level I
@@ -114,14 +114,14 @@ Theorem 1.  Public author-hosted copy:
 Let `S` be a centrally symmetric compact convex set in the Euclidean plane, with
 area `A`, perimeter `P`, and diameter `D`.  Then
 
-$$
+```math
 \boxed{
 A\ge
 \frac{\pi}{(\pi-2)^2}
 \left(\frac P2-D\right)^2.
 }
 \tag{RS.3}
-$$
+```
 
 The Euclidean disk attains equality.  The paper proves that the constant
 `pi/(pi-2)^2` is best possible.
@@ -143,35 +143,35 @@ ball.  Consequently this report does **not** use such a uniqueness statement.
 
 Let `o` be the full-source circumcenter from FS.4, and write
 
-$$
+```math
 F_0:=F-o,
 \qquad
 S:=\frac12(F_0+(-F_0))=\frac12(F-F).
 \tag{3.1}
-$$
+```
 
 The body `S` is centrally symmetric about the origin.
 
 ### Lemma RSF.1 — exact diameter and perimeter preservation
 
-$$
+```math
 \boxed{
 \operatorname{diam}S=D,
 \qquad
 \operatorname{per}S=P.
 }
 \tag{3.2}
-$$
+```
 
 #### Proof
 
 For every unit vector `u`, Minkowski addition and reflection give
 
-$$
+```math
 w_S(u)
 =\frac12\bigl(w_{F_0}(u)+w_{-F_0}(u)\bigr)
 =w_F(u).
-$$
+```
 
 The diameter of a planar convex body is the maximum of its directional widths, so
 `diam S=diam F=D`.  Cauchy's perimeter formula is the integral of the width over a
@@ -182,57 +182,57 @@ projective half-circle, so equality of every width also gives `per S=per F=P`.
 
 With
 
-$$
+```math
 L_D=\sqrt{D\,3^{1/4}\sqrt D+3^{1/2}D}
 =O(D^{3/4})
-$$
+```
 
 as in FS.4,
 
-$$
+```math
 \boxed{d_{\rm Haus}(F_0,S)\le L_D.}
 \tag{3.3}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \operatorname{area}F
 \ge
 \operatorname{area}S-P L_D-\pi L_D^2.
 }
 \tag{3.4}
-$$
+```
 
 #### Proof
 
 FS.4 gives
 
-$$
+```math
 d_{\rm Haus}(F_0,-F_0)\le2L_D.
-$$
+```
 
 For support functions,
 
-$$
+```math
 h_S(u)=\frac{h_{F_0}(u)+h_{F_0}(-u)}2.
-$$
+```
 
 Hence
 
-$$
+```math
 |h_S(u)-h_{F_0}(u)|
 \le\frac12|h_{F_0}(-u)-h_{F_0}(u)|
 \le L_D,
-$$
+```
 
 which is (3.3).  Thus `S subset F_0+L_D B_2`.  Steiner's formula gives
 
-$$
+```math
 \operatorname{area}(F_0+L_DB_2)
 =\operatorname{area}F+P L_D+\pi L_D^2,
-$$
+```
 
 and (3.4) follows. `\square`
 
@@ -240,16 +240,16 @@ and (3.4) follows. `\square`
 
 Put
 
-$$
+```math
 C_{RS}:=\frac\pi{(\pi-2)^2},
 \qquad
 \Psi(p):=C_{RS}\left(\frac p2-1\right)^2.
 \tag{3.5}
-$$
+```
 
 Every post-ZF source satisfies the finite estimate
 
-$$
+```math
 \boxed{
 \operatorname{area}F
 \ge
@@ -257,16 +257,16 @@ C_{RS}\left(\frac P2-D\right)^2
 -P L_D-\pi L_D^2.
 }
 \tag{3.6}
-$$
+```
 
 Thus along every subsequence on which `P/D -> p`,
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}F}{D^2}\ge\Psi(p).
 }
 \tag{3.7}
-$$
+```
 
 #### Proof
 
@@ -283,7 +283,7 @@ near maximal perimeter than FSDB alone.
 
 Pass to an arbitrary convergent post-ZF survivor subsequence and write
 
-$$
+```math
 \lambda:=\lim\frac LD,
 \qquad
 t:=\lim\frac{e_{BB}}D,
@@ -294,18 +294,18 @@ p:=\lim\frac PD,
 \qquad
 \kappa:=\lim\frac kD.
 \tag{4.1}
-$$
+```
 
 After further extraction these limits always exist.  The known bounds give
 
-$$
+```math
 2\rho\le y\le\pi,
 \qquad
 \max\{2,y\}\le p\le\pi,
 \qquad
 0\le t\le\lambda,
 \tag{4.2}
-$$
+```
 
 where `rho` is the positive root of `rho=cos rho`.  Here `p>=2` is the elementary
 perimeter-diameter inequality and `p>=y` follows from
@@ -313,63 +313,63 @@ perimeter-diameter inequality and `p>=y` follows from
 
 FSDB gives
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 \Phi(y):=\frac{y+\sin y}{4}.
 \tag{4.3}
-$$
+```
 
 Together with RSF,
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge A(y,p):=\max\{\Phi(y),\Psi(p)\}.
 }
 \tag{4.4}
-$$
+```
 
 The exact ZK cell budget uses
 
-$$
+```math
 L_2=6-3k+L\ge0
-$$
+```
 
 and gives
 
-$$
+```math
 \limsup
 \frac{\sum_r\operatorname{area}(P_r)}{D^2}
 \le
 \frac\pi4(\lambda-3\kappa)^2.
 \tag{4.5}
-$$
+```
 
 In particular `0<=3kappa<=lambda`.  Therefore the attachment gap satisfies
 
-$$
+```math
 \liminf\frac GD^2
 \ge
 A(y,p)-\frac\pi4(\lambda-3\kappa)^2.
 \tag{4.6}
-$$
+```
 
 The unrelaxed actual-perimeter JC bound gives
 
-$$
+```math
 \limsup\frac GD^2
 \le
 \frac{(t+m(y,p))^2}{4\pi},
 \qquad
 m(y,p):=\min\{y,p-y\}.
 \tag{4.7}
-$$
+```
 
 Dropping the favorable `kappa` correction and using `t<=lambda`, every survivor limit
 must satisfy
 
-$$
+```math
 \boxed{
 (\pi^2+1)\lambda^2
 +2m(y,p)\lambda
@@ -378,19 +378,19 @@ $$
 \ge0.
 }
 \tag{4.8}
-$$
+```
 
 For fixed `A>0` and `m>=0`, let `R(A,m)` denote the positive root of the corresponding
 quadratic equality.  Implicit differentiation gives
 
-$$
+```math
 \frac{\partial R}{\partial A}
 =\frac{2\pi}{(\pi^2+1)R+m}>0,
 \qquad
 \frac{\partial R}{\partial m}
 =-\frac{R+m}{(\pi^2+1)R+m}<0.
 \tag{4.9}
-$$
+```
 
 Thus more area raises the required currency while more cavity perimeter lowers it.
 
@@ -400,43 +400,43 @@ Thus more area raises the required currency while more cavity perimeter lowers i
 
 For fixed `y`, let `p_c(y)` be the unique perimeter at which the two area floors cross:
 
-$$
+```math
 \Psi(p_c(y))=\Phi(y).
 \tag{5.1}
-$$
+```
 
 Since `Psi` is increasing on `[2,pi]`,
 
-$$
+```math
 \boxed{
 p_c(y)
 =2+2(\pi-2)\sqrt{\frac{\Phi(y)}\pi}.
 }
 \tag{5.2}
-$$
+```
 
 ### Lemma 5.1 — the crossover is always feasible
 
 For `2rho<=y<=pi`,
 
-$$
+```math
 \boxed{p_c(y)\ge\max\{2,y\}.}
 \tag{5.3}
-$$
+```
 
 #### Proof
 
 The assertion is immediate when `y<2`.  For `2<=y<=pi`, put
 
-$$
+```math
 d(y):=\Phi(y)-\Psi(y).
-$$
+```
 
 Then
 
-$$
+```math
 d''(y)=-\frac{\sin y}{4}-\frac{C_{RS}}2<0.
-$$
+```
 
 Also `d(2)=Phi(2)>0` and `d(pi)=0`, because `Psi(pi)=pi/4=Phi(pi)`.
 Concavity puts `d` above its endpoint chord, hence `d(y)>=0`.  Therefore
@@ -446,14 +446,14 @@ Concavity puts `d` above its endpoint chord, hence `d(y)>=0`.  Therefore
 
 For each fixed `y`, the smallest root allowed by (4.8) is
 
-$$
+```math
 \boxed{
 \begin{cases}
 R(\Phi(y),y),&p_c(y)\ge2y,\\[3pt]
 R(\Phi(y),p_c(y)-y),&p_c(y)\le2y.
 \end{cases}}
 \tag{5.4}
-$$
+```
 
 #### Proof
 
@@ -464,47 +464,47 @@ For `p<=p_c`, the area floor is the fixed value `Phi(y)`.  While `p<=2y`,
 It remains to show that after `p_c` the threshold cannot decrease.  First note that
 `p_c(y)>3` on the whole DB interval.  FSJC already records
 
-$$
+```math
 \frac{739}{1000}<\rho<\frac{37}{50}.
 \tag{5.5}
-$$
+```
 
 Using `sin rho=sqrt(1-rho^2)` gives
 
-$$
+```math
 \sin\rho>\frac{84}{125},
 \qquad
 \Phi(2\rho)>0.617804.
 \tag{5.6}
-$$
+```
 
 The standard bound `pi>157/50` gives
 
-$$
+```math
 C_{RS}<\frac{121}{50},
 \qquad
 \Psi(3)=\frac{C_{RS}}4<0.605.
 \tag{5.7}
-$$
+```
 
 Since `Phi` is increasing, (5.6)--(5.7) imply `p_c(y)>3`.
 
 On the branch `p_c<=p<=2y`, put
 
-$$
+```math
 H(p,\lambda)
 =(\pi^2+1)\lambda^2
 +2(p-y)\lambda+(p-y)^2-4\pi\Psi(p).
-$$
+```
 
 At its positive root, `lambda<1`, because `Psi(p)<=pi/4` and hence
 `(pi^2+1)lambda^2<=pi^2`.  Also `p-y<=pi`.  Therefore
 
-$$
+```math
 \partial_pH
 =2(\lambda+p-y)-4\pi C_{RS}\left(\frac p2-1\right)
 <2(1+\pi)-2\pi C_{RS}.
-$$
+```
 
 The elementary bounds `3<pi<22/7` imply `C_RS>2`, so the last quantity is less
 than `2(1-pi)<0`.  Since `H` is increasing in `lambda`, its threshold root increases
@@ -518,63 +518,63 @@ increases with `p`, so the threshold again increases.  These observations prove
 
 There is a unique
 
-$$
+```math
 \boxed{y_0\in(2\rho,\pi/2)}
 \tag{5.8}
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{p_c(y_0)=2y_0.}
 \tag{5.9}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \frac\pi{(\pi-2)^2}(y_0-1)^2
 =\frac{y_0+\sin y_0}{4}.
 }
 \tag{5.10}
-$$
+```
 
 #### Proof
 
 Differentiate (5.2):
 
-$$
+```math
 p_c'(y)
 =\frac{\pi-2}{\sqrt\pi}
 \frac{\Phi'(y)}{\sqrt{\Phi(y)}}.
-$$
+```
 
 On the relevant interval, `(pi-2)/sqrt(pi)<1`, `Phi'(y)<=1/2`, and
 `Phi(y)>1/4`; hence
 
-$$
+```math
 \boxed{p_c'(y)<1.}
 \tag{5.11}
-$$
+```
 
 Thus `p_c(y)-2y` is strictly decreasing.
 
 At `y=2rho`, use (5.5)--(5.7):
 
-$$
+```math
 \Psi(4\rho)
 =C_{RS}(2\rho-1)^2
 <\frac{121}{50}\left(\frac{12}{25}\right)^2
 <0.558
 <\Phi(2\rho).
-$$
+```
 
 Hence `p_c(2rho)>4rho`.  At `y=pi/2`,
 
-$$
+```math
 \Phi(\pi/2)=\frac{\pi/2+1}{4}<\frac\pi4=\Psi(\pi),
-$$
+```
 
 so `p_c(pi/2)<pi`.  The intermediate value theorem and strict monotonicity prove
 (5.8)--(5.9). `\square`
@@ -583,7 +583,7 @@ so `p_c(pi/2)<pi`.  The intermediate value theorem and strict monotonicity prove
 
 Let `y_0` be defined by (5.8)--(5.10), and let `lambda_RS` be the positive root of
 
-$$
+```math
 \boxed{
 (\pi^2+1)\lambda_{RS}^2
 +2y_0\lambda_{RS}
@@ -591,40 +591,40 @@ $$
 -\pi(y_0+\sin y_0)=0.
 }
 \tag{5.12}
-$$
+```
 
 Then every unbounded post-ZF survivor sequence satisfies
 
-$$
+```math
 \boxed{
 \liminf\frac{e_{BB}+2s_C}{D}\ge\lambda_{RS}.
 }
 \tag{5.13}
-$$
+```
 
 The exact minimizer of the relaxed asymptotic feasible region is
 
-$$
+```math
 \boxed{(y,p)=(y_0,2y_0).}
 \tag{5.14}
-$$
+```
 
 #### Proof
 
 If `y<=y_0`, Lemmas 5.2--5.3 give the fixed-y threshold
 `R(Phi(y),y)`.  This is the left FSJC threshold.  Its defining polynomial is
 
-$$
+```math
 J(y,\lambda)
 =(\pi^2+1)\lambda^2+2y\lambda+y^2-\pi(y+\sin y).
-$$
+```
 
 FSJC proves these roots are all above `lambda_*>1/2`.  For `lambda>=1/2`,
 
-$$
+```math
 \partial_yJ
 =2\lambda+2y-\pi(1+\cos y)>0
-$$
+```
 
 throughout `[2rho,pi/2]`: the right side is increasing in `y`, and at `2rho`
 its lower bound obtained from (5.5) and `pi<22/7` is already positive.  Therefore
@@ -632,23 +632,23 @@ implicit differentiation shows that `R(Phi(y),y)` is strictly decreasing in `y`.
 
 If `y>=y_0`, Lemmas 5.2--5.3 give the fixed-y threshold
 
-$$
+```math
 R(\Phi(y),n(y)),
 \qquad
 n(y):=p_c(y)-y.
-$$
+```
 
 Equation (5.11) gives `n'(y)<0`, while `Phi'(y)>=0`.  For the defining equation
 
-$$
+```math
 (\pi^2+1)\lambda^2+2n\lambda+n^2-4\pi\Phi(y)=0,
-$$
+```
 
 the derivative with respect to `y` at fixed `lambda` is
 
-$$
+```math
 2n'(\lambda+n)-4\pi\Phi'(y)<0.
-$$
+```
 
 Hence the positive root is strictly increasing in `y`.
 
@@ -658,7 +658,7 @@ The decreasing and increasing branches meet only at `y_0`; there
 
 For reference only,
 
-$$
+```math
 \begin{aligned}
 y_0&=1.5100171437629435858\ldots,\\
 p_0:=2y_0&=3.0200342875258871717\ldots,\\
@@ -666,14 +666,14 @@ p_0:=2y_0&=3.0200342875258871717\ldots,\\
 \lambda_{RS}&=0.5921405436062881570\ldots .
 \end{aligned}
 \tag{5.15}
-$$
+```
 
 The constants are defined by (5.10) and (5.12); the decimals are not proof inputs.
 Since `y_0<pi/2` and the left FSJC threshold is strictly decreasing,
 
-$$
+```math
 \lambda_{RS}>\lambda_*.
-$$
+```
 
 ---
 
@@ -681,38 +681,38 @@ $$
 
 Assume for contradiction that an unbounded post-ZF sequence has
 
-$$
+```math
 \frac LD\to\lambda_{RS}.
 \tag{6.1}
-$$
+```
 
 The strict uniqueness of the minimizer in Section 5 and compactness of the
 `(y,p)` domain force
 
-$$
+```math
 \boxed{
 \frac hD\to y_0,
 \qquad
 \frac PD\to2y_0.
 }
 \tag{6.2}
-$$
+```
 
 Pass to a subsequence with `k/D -> kappa` and `e_BB/D -> t`.  At the endpoint,
 (4.6)--(4.7) become
 
-$$
+```math
 \Phi(y_0)-\frac\pi4(\lambda_{RS}-3\kappa)^2
 \le
 \frac{(t+y_0)^2}{4\pi}.
 \tag{6.3}
-$$
+```
 
 By (5.12), equality holds in (6.3) when `kappa=0` and `t=lambda_RS`.  Since
 `0<=3kappa<=lambda_RS` and `t<=lambda_RS`, any `kappa>0` makes the left side strictly
 larger while any `t<lambda_RS` makes the right side strictly smaller.  Hence
 
-$$
+```math
 \boxed{
 \frac{d_H+s_Z}{D}\to0,
 \qquad
@@ -721,40 +721,40 @@ $$
 \frac{s_C}{D}\to0.
 }
 \tag{6.4}
-$$
+```
 
 Since `q=h+d_H`, also
 
-$$
+```math
 \boxed{\frac qD\to y_0.}
 \tag{6.5}
-$$
+```
 
 Let `A_F=area(F)`.  The cell bound and JC upper bound now imply
 
-$$
+```math
 \limsup\frac{A_F}{D^2}
 \le
 \frac\pi4\lambda_{RS}^2
 +
 \frac{(\lambda_{RS}+y_0)^2}{4\pi}
 =\Phi(y_0),
-$$
+```
 
 where the equality is (5.12).  The combined area lower bound gives the reverse
 inequality.  Therefore
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}F}{D^2}\to
 A_0:=\Phi(y_0)=\Psi(2y_0).
 }
 \tag{6.6}
-$$
+```
 
 By Lemma RSF.2, the exact central symmetral `S=(F-F)/2` satisfies
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}S}{D^2}\to A_0,
 \qquad
@@ -763,7 +763,7 @@ $$
 \operatorname{diam}S=D.
 }
 \tag{6.7}
-$$
+```
 
 Thus the endpoint simultaneously saturates the RSF and FSDB area floors.
 
@@ -774,35 +774,35 @@ Thus the endpoint simultaneously saturates the RSF and FSDB area floors.
 For every actual diameter edge `e`, let `u_e` be its projective unit direction and
 put, as in DB/FSDB,
 
-$$
+```math
 P_H:=D\,\operatorname{conv}\{\pm u_e:e\in E(H)\},
 \qquad
 Q_H:=\frac12P_H.
 \tag{7.1}
-$$
+```
 
 Because `P_H subset F-F`, there is an exact finite containment
 
-$$
+```math
 \boxed{Q_H\subseteq S.}
 \tag{7.2}
-$$
+```
 
 Order the `h` projective diameter directions around the circle of circumference
 `pi`, and let their gaps be
 
-$$
+```math
 \gamma_1,\ldots,\gamma_h,
 \qquad
 \gamma_i\ge\delta_D:=2\arcsin\frac1{2D},
 \qquad
 \sum_i\gamma_i=\pi.
 \tag{7.3}
-$$
+```
 
 The normalized area and perimeter of `Q_H` are exactly
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}Q_H}{D^2}
 =\frac14\sum_i\sin\gamma_i,
@@ -811,27 +811,27 @@ $$
 =2\sum_i\sin\frac{\gamma_i}{2}.
 }
 \tag{7.4}
-$$
+```
 
 FSDB's gap minimization gives
 
-$$
+```math
 \frac14\sum_i\sin\gamma_i
 \ge
 \frac14\left[(h-1)\sin\delta_D
 +\sin((h-1)\delta_D)\right].
 \tag{7.5}
-$$
+```
 
 Under `h/D -> y_0`, the right side tends to `Phi(y_0)=A_0`.  By (7.2) and
 (6.7), the left side is at most `A_0+o(1)`.  Hence
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}Q_H}{D^2}\to A_0,
 }
 \tag{7.6}
-$$
+```
 
 so the projective gap inequality itself is asymptotically saturated.
 
@@ -840,93 +840,93 @@ so the projective gap inequality itself is asymptotically saturated.
 If (7.3) holds, `h/D -> y in (0,pi)`, and the area in (7.4) approaches the lower
 bound in (7.5), then
 
-$$
+```math
 \boxed{
 \frac{\operatorname{per}Q_H}{D}
 \to y+2\cos\frac y2.
 }
 \tag{7.7}
-$$
+```
 
 #### Proof
 
 Write `delta=delta_D` and
 
-$$
+```math
 x_i:=\gamma_i-\delta\ge0,
 \qquad
 E_D:=\sum_i x_i=\pi-h\delta.
-$$
+```
 
 Then `delta->0` and `E_D->E:=pi-y in (0,pi)`.  Define
 
-$$
+```math
 g_D(x):=\sin(\delta+x)-\sin\delta.
-$$
+```
 
 On `[0,E_D]`, `g_D` is strictly concave, `g_D(0)=0`, and therefore
 `g_D(x)/x` is strictly decreasing.  If `M_D=max_i x_i`, concavity gives
 
-$$
+```math
 \sum_i g_D(x_i)
 \ge
 \frac{E_D}{M_D}g_D(M_D)
 \ge g_D(E_D).
 \tag{7.8}
-$$
+```
 
 The last term is exactly the one-large-gap minimum behind (7.5).  If area saturation
 holds but `M_D` does not tend to `E_D`, pass to a subsequence with
 `M_D->M<E`.  Taking limits in (7.8) gives
 
-$$
+```math
 \frac{E}{M}\sin M>\sin E
-$$
+```
 
 (with the left side interpreted as `E` when `M=0`), because `sin x/x` is strictly
 decreasing on `(0,pi)`.  This produces a fixed positive area gap, contradiction.
 Thus
 
-$$
+```math
 M_D\to E_D,
 \qquad
 \sum_{i\ne i_*}x_i=E_D-M_D\to0
-$$
+```
 
 for an index `i_*` attaining the maximum.
 
 Consequently
 
-$$
+```math
 \gamma_{i_*}\to\pi-y,
 \qquad
 \max_{i\ne i_*}\gamma_i\to0,
 \qquad
 \sum_{i\ne i_*}\gamma_i\to y.
-$$
+```
 
 For the small gaps, `2sin(z/2)=z+O(z^3)` uniformly, and the sum of the cubic errors
 is `o(1)` because their maximum tends to zero while their total remains bounded.
 Using (7.4),
 
-$$
+```math
 \frac{\operatorname{per}Q_H}{D}
 \to
 2\sin\frac{\pi-y}{2}+y
 =y+2\cos\frac y2.
-$$
+```
 
 This proves (7.7). `\square`
 
 Apply Lemma 7.1 at `y=y_0`:
 
-$$
+```math
 \boxed{
 \frac{\operatorname{per}Q_H}{D}
 \to y_0+2\cos\frac{y_0}{2}.
 }
 \tag{7.9}
-$$
+```
 
 ### Theorem FSRS.2 — the explicit endpoint is unattainable
 
@@ -941,39 +941,39 @@ subsequence on which both converge in Hausdorff distance to convex bodies
 
 Equations (6.7) and (7.6) give
 
-$$
+```math
 \operatorname{area}Q_\infty
 =\operatorname{area}S_\infty
 =A_0>0.
-$$
+```
 
 A proper containment between two full-dimensional compact convex bodies has positive
 area difference, so
 
-$$
+```math
 Q_\infty=S_\infty.
 \tag{7.10}
-$$
+```
 
 Perimeter is continuous under Hausdorff convergence of planar convex bodies.  Hence
 (6.7), (7.9), and (7.10) force
 
-$$
+```math
 2y_0=y_0+2\cos\frac{y_0}{2},
-$$
+```
 
 or
 
-$$
+```math
 y_0=2\cos\frac{y_0}{2}.
 \tag{7.11}
-$$
+```
 
 But `y=2rho` satisfies (7.11) exactly because `rho=cos rho`.  The function
 
-$$
+```math
 y-2\cos(y/2)
-$$
+```
 
 has derivative `1+sin(y/2)>0`, so (7.11) has a unique root.  Section 5 proved
 `y_0>2rho`.  Contradiction. `\square`
@@ -988,9 +988,9 @@ This endpoint contradiction uses the actual complete diameter-direction set thro
 If no absolute improvement above `lambda_RS` existed, for every integer `j` one could
 choose a post-ZF survivor with `D_j->infinity` and
 
-$$
+```math
 \frac{L_j}{D_j}<\lambda_{RS}+\frac1j.
-$$
+```
 
 Theorem FSRS.1 forces `L_j/D_j -> lambda_RS`, contradicting Theorem FSRS.2.  Therefore
 there exist absolute `epsilon_RS>0` and `D_0<infinity` such that (RS.2) holds.
@@ -1020,7 +1020,7 @@ for some absolute epsilon_RS>0.
 
 The new endpoint normal form, before its contradiction, is
 
-$$
+```math
 \begin{aligned}
 h/D&\to y_0,\\
 P/D&\to2y_0,\\
@@ -1030,7 +1030,7 @@ e_{BB}/D&\to\lambda_{RS},\\
 q/D&\to y_0,\\
 \operatorname{area}(F)/D^2&\to\Phi(y_0)=\Psi(2y_0).
 \end{aligned}
-$$
+```
 
 This is still a lower-bound theorem.  There is no proved universal upper bound on
 `L/D` that crosses it, so Level I remains open.
@@ -1043,14 +1043,14 @@ A useful next theorem must produce a contradictory **upper** restriction or turn
 strict endpoint gap quantitative enough to interact with another structural bound.
 The cleanest post-ZF formulation is:
 
-$$
+```math
 \boxed{
 \text{Prove a universal }\Lambda_{\rm top}<\lambda_{RS}+\epsilon_{RS}
 \text{ with }
 \frac{e_{BB}+2s_C}{D}\le\Lambda_{\rm top}+o(1),
 }
 \tag{10.1}
-$$
+```
 
 or construct a strict sub-`D` competitor whenever the left side lies above the new
 lower region.
@@ -1058,9 +1058,9 @@ lower region.
 A nearer structural target is a quantitative version of Lemma 7.1 plus convex
 containment stability: convert the fixed perimeter mismatch
 
-$$
+```math
 2y_0-\left(y_0+2\cos\frac{y_0}{2}\right)>0
-$$
+```
 
 into an explicit positive area/cavity penalty.  That would give an explicit increment
 above `lambda_RS` rather than a compactness-only `epsilon_RS` and may be iterated with
@@ -1089,10 +1089,11 @@ attachment-cell budget, and JC's source cavity upper bound.
 ## 12. Failed routes and no-go results
 
 1. **Exact whole-source Oler reversal.**  The identity
-   $$
+   ```math
    \delta_K+\mathscr O_A
    =c_0P-\frac\pi4\left(\frac{2\sqrt3}{\pi}(n-1)-D^2\right)
-   $$
+   
+   ```
    shows that the requested reverse inequality is exactly the finite lower bound
    `D^2 >= (2sqrt(3)/pi)(n-1)`.  FS.1--FS.4 alone do not supply this discrete
    packing-number jump.
@@ -1161,10 +1162,10 @@ Do not promote a disk equality classification for the imported theorem.
 
 Quantify Section 7.  The endpoint has a fixed normalized perimeter mismatch
 
-$$
+```math
 \Delta_P
 :=y_0-2\cos(y_0/2)>0
-$$
+```
 
 between the central symmetral demanded by JC and the FSDB direction body demanded by
 area saturation.  Derive an explicit lower bound on the area increment of a

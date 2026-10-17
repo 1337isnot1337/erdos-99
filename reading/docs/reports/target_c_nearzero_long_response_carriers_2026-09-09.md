@@ -20,17 +20,17 @@ RCC proves that the small-response regime has large pinned/contact currency. NLC
 
 Let
 
-$$
+```math
 \varepsilon:=\sum_{b<k}c_{bk}-1
 =\frac12\operatorname{tr}(\Lambda-L_H),
-$$
+```
 
 and assume
 
-$$
+```math
 D\varepsilon\to0.
 \tag{NLC.1}
-$$
+```
 
 Let `z` be the C66/C70 star center. Then all but `o(1)` of the response conductance is carried by `z`-incident pairs of Euclidean length greater than `D-1`.
 
@@ -38,12 +38,12 @@ Because `z` has physical contact degree at most three, those long response pairs
 
 Then:
 
-$$
+```math
 \boxed{|R_z|\le3,}
 \tag{NLC.2}
-$$
+```
 
-$$
+```math
 \boxed{
 \sum_{r\in R_z}
 \sum_{\substack{k\in A_r\\|z-k|>D-1}}
@@ -51,32 +51,32 @@ c^{(r)}_{zk}
 =1-o(1),
 }
 \tag{NLC.3}
-$$
+```
 
 and every member of `R_z` has
 
-$$
+```math
 \boxed{
 \delta_r>D-3.
 }
 \tag{NLC.4}
-$$
+```
 
 Moreover the same at-most-three components carry asymptotically the entire mechanical contact-stress budget:
 
-$$
+```math
 \boxed{
 \sum_{r\in R_z}S_r
 =D^2-o(D^2),
 }
 \tag{NLC.5}
-$$
+```
 
 where `S_r` is the total contact stress on the internal and attachment edges of component `r`.
 
 In particular one component satisfies
 
-$$
+```math
 \boxed{
 S_r\ge\left(\frac13-o(1)\right)D^2,
 \qquad
@@ -85,20 +85,20 @@ C_r\ge\frac13-o(1),
 \delta_r>D-3.
 }
 \tag{NLC.6}
-$$
+```
 
 This improves the generic E43/C44 macroscopic-cell stress fraction `0.01536D^2` to asymptotically `D^2/3` in the actual C66 near-zero phase.
 
 There is also a useful integer branch-count consequence. If `m=|R_z|`, then ZK gives
 
-$$
+```math
 \boxed{
 e_{BB}+2s_C
 \ge
 mD-(3m+6)+3(d_H+s_Z).
 }
 \tag{NLC.7}
-$$
+```
 
 Thus two long harmonic response branches force pinned/contact slope at least two, and three force slope at least three. Any near-zero survivor with slope below two has exactly one long response carrier asymptotically.
 
@@ -108,65 +108,65 @@ Thus two long harmonic response branches force pinned/contact slope at least two
 
 C41 gives the exact defect identity
 
-$$
+```math
 D^2\varepsilon
 =\sum_{b<k}c_{bk}(D^2-|b-k|^2).
 \tag{1.1}
-$$
+```
 
 Let
 
-$$
+```math
 C_{\le D-1}
 :=\sum_{|b-k|\le D-1}c_{bk}.
-$$
+```
 
 Every pair counted here has squared-distance deficit at least
 
-$$
+```math
 D^2-(D-1)^2=2D-1.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 C_{\le D-1}
 \le\frac{D^2\varepsilon}{2D-1}.
 }
 \tag{NLC.8}
-$$
+```
 
 Under NLC.1, the right side is `o(1)`.
 
 C70 gives for the C66 center
 
-$$
+```math
 X_z
 :=\sum_{b<k:\,z\notin\{b,k\}}c_{bk}
 \le(C_0D+1)\varepsilon
 =o(1).
 \tag{1.2}
-$$
+```
 
 The total response conductance is `1+epsilon=1+o(1)`. Subtract the off-star mass and all response pairs of length at most `D-1`:
 
-$$
+```math
 \sum_{k:\,|z-k|>D-1}c_{zk}
 \ge
 1+\varepsilon-X_z-C_{\le D-1}
 =1-o(1).
 \tag{1.3}
-$$
+```
 
 The opposite inequality follows from total response mass. Hence
 
-$$
+```math
 \boxed{
 \sum_{k:\,|z-k|>D-1}c_{zk}=1-o(1).
 }
 \tag{NLC.9}
-$$
+```
 
 ---
 
@@ -176,18 +176,18 @@ For sufficiently large `D`, a pair with length greater than `D-1` cannot be a di
 
 C41 decomposes every remaining response coefficient into harmonic-component contributions:
 
-$$
+```math
 c_{zk}=\sum_{r:\,z,k\in A_r}c^{(r)}_{zk}.
 \tag{2.1}
-$$
+```
 
 A component contributes to a `z`-incident response coefficient only if it is physically attached to `z` by at least one contact edge.
 
 C35 gives
 
-$$
+```math
 \deg_C(z)\le3.
-$$
+```
 
 Distinct unloaded components attached to `z` use distinct contact edges at `z`. Therefore at most three unloaded components can contribute to any `z`-response at all. Let `R_z` be those among them that contain an attachment `k` with `|z-k|>D-1`.
 
@@ -199,27 +199,27 @@ This proves NLC.2. Summing (2.1) over the long pairs and using NLC.9 proves NLC.
 
 If `r in R_z`, choose `k in A_r` with
 
-$$
+```math
 |z-k|>D-1.
-$$
+```
 
 C40/C44 gives
 
-$$
+```math
 \operatorname{diam}(A_r)\le\delta_r+2.
-$$
+```
 
 Hence
 
-$$
+```math
 D-1<|z-k|\le\operatorname{diam}(A_r)\le\delta_r+2,
-$$
+```
 
 so
 
-$$
+```math
 \delta_r>D-3.
-$$
+```
 
 This proves NLC.4.
 
@@ -229,32 +229,32 @@ This proves NLC.4.
 
 For component `r`, HSR/C41 gives the exact coordinate-energy identity
 
-$$
+```math
 S_r
 =\sum_{s<t\in A_r}c^{(r)}_{st}|s-t|^2.
 \tag{4.1}
-$$
+```
 
 Discard every term except the long `z`-response terms:
 
-$$
+```math
 S_r
 \ge
 (D-1)^2
 \sum_{\substack{k\in A_r\\|z-k|>D-1}}
 c^{(r)}_{zk}.
 \tag{4.2}
-$$
+```
 
 Sum over `R_z` and use NLC.3:
 
-$$
+```math
 \sum_{r\in R_z}S_r
 \ge
 (D-1)^2(1-o(1))
 =D^2-o(D^2).
 \tag{4.3}
-$$
+```
 
 The total normalized contact stress is exactly `D^2`, so the reverse upper bound is automatic. This proves NLC.5.
 
@@ -266,48 +266,48 @@ Since `|R_z|<=3`, one component has long `z`-response mass at least `1/3-o(1)`. 
 
 Let
 
-$$
+```math
 m:=|R_z|.
-$$
+```
 
 By NLC.4,
 
-$$
+```math
 \sum_r\delta_r
 \ge
 \sum_{r\in R_z}\delta_r
 >m(D-3).
 \tag{5.1}
-$$
+```
 
 ZK gives
 
-$$
+```math
 \sum_r\delta_r
 \le
 L_2
 =6-3(d_H+s_Z)+e_{BB}+2s_C.
 \tag{5.2}
-$$
+```
 
 Combining and rearranging,
 
-$$
+```math
 e_{BB}+2s_C
 >m(D-3)-6+3(d_H+s_Z),
-$$
+```
 
 which is NLC.7.
 
 Thus the integer number of electrically active depth-`D` branches creates an asymptotic integer slope hierarchy:
 
-$$
+```math
 m=1\Rightarrow\lambda\ge1,
 \qquad
 m=2\Rightarrow\lambda\ge2,
 \qquad
 m=3\Rightarrow\lambda\ge3.
-$$
+```
 
 RCC is the branch-count-free version of the first inequality. NLC explains the physical source of its slope one.
 

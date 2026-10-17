@@ -26,14 +26,14 @@ near-optimal unit-separated packing.
 
 The resulting explicit bound is
 
-$$
+```math
 \boxed{
 n\ge362
 \quad\Longrightarrow\quad
 \text{no global minimizer contains three points pairwise at distance }D(n).
 }
 \tag{C15.1}
-$$
+```
 
 Combining this with Target C Theorem C14 immediately rules out the lower reciprocal
 force-perimeter equality `P_*=\sqrt3D` for every normalized KKT stress of every global
@@ -51,16 +51,16 @@ is `D(n)`.  Its value is that it removes one exact boundary-stress phase from th
 
 Let `A\subset\mathbb R^2` have diameter `D`, and suppose
 
-$$
+```math
 x,y,z\in A,
 \qquad
 |x-y|=|y-z|=|z-x|=D.
 \tag{C15.2}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \operatorname{conv}A
 \subseteq
@@ -73,7 +73,7 @@ $$
 \overline B(z,D),
 }
 \tag{C15.3}
-$$
+```
 
 where `\mathcal R_D` is the Reuleaux triangle of width `D` determined by the
 equilateral triangle `xyz`.
@@ -82,9 +82,9 @@ equilateral triangle `xyz`.
 
 Every point `a\in A` satisfies
 
-$$
+```math
 |a-x|,|a-y|,|a-z|\le D
-$$
+```
 
 because `D` is the diameter.  Hence `A\subseteq\mathcal R_D`.  The Reuleaux triangle
 is convex as an intersection of closed disks, so it also contains `\operatorname{conv}A`.
@@ -92,7 +92,7 @@ is convex as an intersection of closed disks, so it also contains `\operatorname
 
 The standard area and perimeter formulas are
 
-$$
+```math
 \boxed{
 \operatorname{area}(\mathcal R_D)
 =
@@ -101,18 +101,18 @@ $$
 \operatorname{per}(\mathcal R_D)=\pi D.
 }
 \tag{C15.4}
-$$
+```
 
 For completeness, the area formula is the area of three `60`-degree radius-`D`
 sectors minus twice the equilateral triangle area:
 
-$$
+```math
 3\cdot\frac{\pi D^2}{6}
 -
 2\cdot\frac{\sqrt3D^2}{4}
 =
 \frac{\pi-\sqrt3}{2}D^2.
-$$
+```
 
 The boundary consists of three `60`-degree radius-`D` arcs, so its perimeter is
 `\pi D`.
@@ -123,25 +123,25 @@ The boundary consists of three `60`-degree radius-`D` arcs, so its perimeter is
 
 Let `B_{1/2}=B(0,1/2)`.  Inclusion (C15.3) gives
 
-$$
+```math
 \operatorname{conv}A+B_{1/2}
 \subseteq
 \mathcal R_D+B_{1/2}.
 \tag{C15.5}
-$$
+```
 
 Steiner's formula for a planar convex body `K` says
 
-$$
+```math
 \operatorname{area}(K+tB)
 =
 \operatorname{area}(K)+t\operatorname{per}(K)+\pi t^2.
 \tag{C15.6}
-$$
+```
 
 Using (C15.4) with `t=1/2`,
 
-$$
+```math
 \boxed{
 \operatorname{area}(\mathcal R_D+B_{1/2})
 =
@@ -152,24 +152,24 @@ $$
 \frac\pi4.
 }
 \tag{C15.7}
-$$
+```
 
 On the other hand, the canonical Fejes Tóth finite-packing inequality gives every
 unit-separated `n`-point configuration
 
-$$
+```math
 \boxed{
 \operatorname{area}(\operatorname{conv}A+B_{1/2})
 \ge
 \frac{\sqrt3}{2}n.
 }
 \tag{C15.8}
-$$
+```
 
 Therefore any unit-separated diameter-`D` configuration containing a diametral
 equilateral triple must satisfy
 
-$$
+```math
 \boxed{
 \frac{\sqrt3}{2}n
 \le
@@ -180,7 +180,7 @@ $$
 \frac\pi4.
 }
 \tag{C15.9}
-$$
+```
 
 This statement is independent of global optimality.  Global optimality enters only
 through the sharp upper bound on `D(n)`.
@@ -191,25 +191,25 @@ through the sharp upper bound on `D(n)`.
 
 For a planar global minimizer, the canonical strict upper bound is
 
-$$
+```math
 D(n)
 <
 \sqrt{\frac{n}{\Delta_2}}
 =
 \sqrt{\frac{2\sqrt3}{\pi}}\,\sqrt n.
 \tag{C15.10}
-$$
+```
 
 Put
 
-$$
+```math
 a:=\sqrt{\frac{2\sqrt3}{\pi}}.
-$$
+```
 
 If a global minimizer contained a diametral equilateral triple, (C15.9) and (C15.10)
 would imply the strict inequality
 
-$$
+```math
 \frac{\sqrt3}{2}n
 <
 \frac{\pi-\sqrt3}{2}a^2n
@@ -218,11 +218,11 @@ $$
 +
 \frac\pi4.
 \tag{C15.11}
-$$
+```
 
 The leading coefficient gap is
 
-$$
+```math
 \begin{aligned}
 \frac{\sqrt3}{2}
 -
@@ -236,22 +236,22 @@ $$
 =0.0889042547\ldots>0.
 \end{aligned}
 \tag{C15.12}
-$$
+```
 
 Thus (C15.11) is equivalent to
 
-$$
+```math
 \left(\frac3\pi-\frac{\sqrt3}{2}\right)n
 <
 \sqrt{\frac{\pi\sqrt3}{2}}\,\sqrt n
 +
 \frac\pi4.
 \tag{C15.13}
-$$
+```
 
 Write `X=\sqrt n`.  The positive root of the corresponding equality
 
-$$
+```math
 \left(\frac3\pi-\frac{\sqrt3}{2}\right)X^2
 -
 \sqrt{\frac{\pi\sqrt3}{2}}X
@@ -259,23 +259,23 @@ $$
 \frac\pi4
 =0
 \tag{C15.14}
-$$
+```
 
 is
 
-$$
+```math
 X_0=19.0176779\ldots,
 \qquad
 X_0^2=361.672075\ldots.
 \tag{C15.15}
-$$
+```
 
 For every integer `n\ge362`, the left side of (C15.14) is positive, contradicting the
 necessary inequality (C15.13).  This proves:
 
 ### Theorem C15 (large global minimizers have no diametral equilateral triple)
 
-$$
+```math
 \boxed{
  n\ge362
 \quad\Longrightarrow\quad
@@ -284,7 +284,7 @@ $$
 |x-y|=|y-z|=|z-x|=D(n)
 }
 \tag{C15.16}
-$$
+```
 
 for every global minimizer `A`. `\square`
 
@@ -296,13 +296,13 @@ No triangle-free hypothesis is used.
 
 Target C Theorem C14 proved
 
-$$
+```math
 P_*=\sqrt3D
 \iff
 H_+=K_3
 \text{ on an equilateral diameter triangle with }\beta\equiv1/3.
 \tag{C15.17}
-$$
+```
 
 Theorem C15 therefore gives immediately:
 
@@ -310,12 +310,12 @@ Theorem C15 therefore gives immediately:
 
 For every normalized KKT stress of every global minimizer with `n\ge362`,
 
-$$
+```math
 \boxed{
 \sqrt3D<P_*\le2D.
 }
 \tag{C15.18}
-$$
+```
 
 The upper equality remains possible in principle and is exactly the matching branch of
 Target C Theorem C10.3.
@@ -353,13 +353,10 @@ A quantitative stability version would be substantially stronger:
 > minimizer with `n\ge n_0` satisfies
 > 
 
-$$
-
+```math
 > P_*\ge(\sqrt3+\varepsilon)D.
 > 
-$$
-
-
+```
 
 A compactness route is plausible: if `P_*/D\to\sqrt3`, the local equality analysis in
 C14 forces almost all positive diameter-reaction mass into three approximately

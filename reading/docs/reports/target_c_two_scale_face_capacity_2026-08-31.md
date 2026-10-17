@@ -136,7 +136,7 @@ Together with (C49.1), this gives
 
 Under the hypotheses above,
 
-$$
+```math
 \boxed{
  m < \min\left\{
  \frac{2}{\sqrt3}A_F+5q-3c_I-3e_{BB}-5,
@@ -144,13 +144,13 @@ $$
  \frac{2}{\sqrt3}(A_F-G)+7q-3c_I-3e_{BB}-5
  \right\}.}
 \tag{C49.1}
-$$
+```
 
 The first term is unconditional within C-II. The second is available when
 `c_I>=1` and uses the attachment cells. In particular, using
 `A_F<=pi D^2/4` and `q<=pi D`,
 
-$$
+```math
 \boxed{
  m < \Delta_2D^2+5\pi D-3c_I-3e_{BB}-5,
  \\[-1mm]
@@ -158,7 +158,7 @@ $$
        +7\pi D-3c_I-3e_{BB}-5,
  }
 \tag{C49.2}
-$$
+```
 
 where `Delta_2=pi/(2sqrt(3))`.
 

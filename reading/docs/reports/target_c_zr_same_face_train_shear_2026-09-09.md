@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_same_face_train_shear_2026-09-09.md) · source SHA-256 `a02185c533a9560b7fb4ae5475f17fe24dfee4ef6695b1e7476e23cc4be42725`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-3CC1B1CE4372","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZSF: any stopped train with both endpoints on one face is an exact global shear
 
@@ -46,25 +48,25 @@ DT gives a simple train midpoint path `gamma_tau` from the midpoint of `e_-` to 
 
 Choose a simple arc
 
-$$
+```math
 \eta_F
-$$
+```
 
 inside the open face `F` joining the endpoint midpoints. Near each endpoint it approaches from the `F` side of the corresponding contact edge.
 
 Because the interior of `F` is disjoint from the contact graph,
 
-$$
+```math
 \eta_F
-$$
+```
 
 meets no contact edge except at its two endpoint midpoints.
 
 The union
 
-$$
+```math
 \Gamma_\tau:=\gamma_\tau\cup\eta_F
-$$
+```
 
 is a simple closed curve after an arbitrarily small smoothing at the endpoint midpoints. DT excludes self-intersection of `gamma_tau`, and the closing arc lies in a face disjoint from the rhombic train interior.
 
@@ -72,19 +74,20 @@ No source vertex lies on `Gamma_tau`.
 
 Let
 
-$$
+```math
 S_\tau,T_\tau
-$$
+```
 
 be the two Jordan shores.
 
 Exactly as in ZGS, a contact edge joins the two shores iff it crosses `Gamma_tau`. The only such intersections are the train contact-edge midpoints. Therefore
 
-$$
+```math
 \boxed{
 \delta_C(S_\tau)=E(\tau).
 }
 \tag{ZSF1}
+```
 
 The same conclusion holds for outer/outer trains by the original ZGS outer-face closure.
 
@@ -96,17 +99,17 @@ Orient the train so every cut contact vector from `T_tau` to `S_tau` equals one 
 
 For real `theta`, put
 
-\[
+```math
 \Delta_\theta:=R_\theta u_\tau-u_\tau
-$$
+```
 
 and translate every source point in `S_tau` by `Delta_theta`, leaving `T_tau` fixed.
 
 Every same-shore contact is unchanged. Every cut contact vector becomes
 
-$$
+```math
 u_\tau+\Delta_\theta=R_\theta u_\tau,
-$$
+```
 
 still of length one.
 
@@ -124,55 +127,57 @@ For sufficiently small `theta`, all strict noncontact lower-distance constraints
 
 Define
 
-$$
+```math
 A_\tau:=\sum_{e\in\tau}\alpha_e.
-$$
+```
 
 Summing KKT equilibrium over one Jordan shore gives
 
-$$
+```math
 \boxed{
 A_\tau u_\tau
 =
 \sum_{h\pitchfork\tau}\beta_h r_h.
 }
 \tag{ZSF2}
+```
 
 The right side is nonzero, so both shores contain actual diameter terminals and the induced terminal cut is nontrivial.
 
 Put
 
-\[
+```math
 w_\tau:=\sum_{h\pitchfork\tau}\beta_h,
 \qquad
 C_\tau:=\sum_{b\in B_S,k\in B_T}c_{bk}.
-$$
+```
 
 ZK strict all-cut response gives
 
-$$
+```math
 C_\tau>w_\tau.
-$$
+```
 
 The piecewise-constant voltage test on the two Jordan shores gives
 
-$$
+```math
 C_\tau\le A_\tau.
-$$
+```
 
 The resultant norm gives
 
-$$
+```math
 A_\tau\le Dw_\tau.
-$$
+```
 
 Hence every same-face train satisfies
 
-$$
+```math
 \boxed{
  w_\tau<C_\tau\le A_\tau\le Dw_\tau.
 }
 \tag{ZSF3}
+```
 
 ---
 
@@ -180,7 +185,7 @@ $$
 
 The finite shear is identical to ZGS on crossing diameter pairs. Therefore
 
-\[
+```math
 \boxed{
 \sum_{h\pitchfork\tau}\beta_h|r_h(\theta)|^2
 =
@@ -188,19 +193,21 @@ w_\tau D^2
 -2(A_\tau-w_\tau)(1-\cos\theta).
 }
 \tag{ZSF4}
+```
 
 For every sufficiently small nonzero `theta`,
 
-\[
+```math
 \boxed{
 \sum_{h\pitchfork\tau}\beta_h
 \bigl(D^2-|r_h(\theta)|^2\bigr)>0.
 }
 \tag{ZSF5}
+```
 
 Secondary diameter-pair minimality again forces the exact two-sided cusp:
 
-\[
+```math
 \boxed{
 \exists h_+,h_-\pitchfork\tau:
 \quad
@@ -209,6 +216,7 @@ r_{h_+}\cdot Ju_\tau>0,
 r_{h_-}\cdot Ju_\tau<0.
 }
 \tag{ZSF6}
+```
 
 Otherwise one shear sign would make every crossing active diameter pair nonincreasing to first order; weighted stationarity would force all derivatives to vanish, and the exact second-order formula would strictly shorten every crossing diameter pair, contradicting the secondary diameter normalization.
 
@@ -220,15 +228,15 @@ In the near-zero stress-star phase, the ZMA proof used only the exact cut result
 
 For every fixed `c>0`, if
 
-\[
+```math
 A_\tau\ge cD,
-$$
+```
 
 then its projective train direction lies within `o_c(1)` of the C18 stress-star cone of width
 
-$$
+```math
 \frac{5\pi}{6}-\sqrt3+o(1)<\frac\pi3.
-$$
+```
 
 Hence:
 
@@ -236,9 +244,9 @@ Hence:
 
 For sufficiently large near-zero survivors, any two same-face trains with
 
-$$
+```math
 A_{\tau_1},A_{\tau_2}\ge cD
-$$
+```
 
 are pairwise noncrossing.
 
@@ -255,9 +263,9 @@ For the ZRC component `Q_*`, let the stopping-face set consist of
 
 Every component train has two endpoint faces and therefore determines an edge of a multigraph
 
-$$
+```math
 \mathcal E_{stop}
-$$
+```
 
 on this stopping-face set.
 
@@ -275,17 +283,17 @@ Let `N_loop` be the number of weak-rich trains whose two endpoints lie on the sa
 
 Since ZRC/ZWT gives
 
-$$
+```math
 N_{loop}+N_{crossface}=\Omega_\eta(D),
-$$
+```
 
 one of two alternatives holds.
 
 ### ZSF-A — linear many exact global weak shears
 
-$$
+```math
 N_{loop}=\Omega_\eta(D).
-$$
+```
 
 Then the source has a linear family of exact full-contact train shears. Every one is blocked only by the active diameter cusp and has the ZSF4 negative weighted curvature identity.
 
@@ -293,9 +301,9 @@ This is the natural input for a multi-shear Theorem-Z/circular-split argument.
 
 ### ZSF-B — linear cross-face train transport
 
-$$
+```math
 N_{crossface}=\Omega_\eta(D).
-$$
+```
 
 Then the macroscopic rhombic sea contains a linear family of weak-rich train paths joining distinct stopping faces. These are genuine defect-to-defect transport strips, not same-boundary shear modes.
 

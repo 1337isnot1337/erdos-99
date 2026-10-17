@@ -18,29 +18,29 @@
 
 DG proves that a post-ZF sequence with sublinear outer-walk excess
 
-$$
+```math
 x_B=b-q=o(D)
-$$
+```
 
 has
 
-$$
+```math
 q/D\to\pi,
 \qquad
 \operatorname{per}(F)/D\to\pi,
 \qquad
 M_D:=D-\min_\theta w_F(\theta)=o(D).
-$$
+```
 
 This report turns the last statement into a source-wide completion theorem. Every source point outside the force hull lies within distance `M_D` of the force hull. Unit separation then bounds the external population by the area of an `M_D+1/2` outer parallel strip, so the number of external C65 rattlers is `o(D^2)`.
 
 OP then forces the force hull itself to carry asymptotically all of the global packing capacity. Consequently
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)/D^2\to\pi/4,
 }
-$$
+```
 
 and every normalized Hausdorff subsequential limit of `F/D` is the disk of diameter one.
 
@@ -48,15 +48,15 @@ Thus DG's small-outer-walk endpoint is not merely asymptotically constant-width.
 
 A second exact observation records the loaded-boundary contact consequence:
 
-$$
+```math
 \boxed{e_{BB}\ge q-x_B.}
-$$
+```
 
 Hence in the same endpoint
 
-$$
+```math
 \liminf_{D\to\infty} e_{BB}/D\ge\pi.
-$$
+```
 
 Together with DG.7, a surviving small-outer-walk source must therefore combine an almost complete unit-contact cycle on the loaded hull, a near-circular force hull, and a linear `Q+2s_Z` defect.
 
@@ -66,101 +66,101 @@ Together with DG.7, a surviving small-outer-walk source must therefore combine a
 
 For a convex body `F` of diameter at most `D`, define its diameter-completion region
 
-$$
+```math
 \mathcal C_D(F)
 :=\bigcap_{p\in F}\overline B(p,D).
 \tag{1.1}
-$$
+```
 
 A point lies in `C_D(F)` exactly when it can be added without making its distance from any point of `F` exceed `D`.
 
 Put
 
-$$
+```math
 w_{min}(F):=\min_{|u|=1}w_F(u),
 \qquad
 M:=D-w_{min}(F)\ge0.
 \tag{1.2}
-$$
+```
 
 ### Theorem DC.1 — exact completion-shell bound
 
-$$
+```math
 \boxed{
 \mathcal C_D(F)\subseteq F+M\overline B(0,1).
 }
 \tag{DC.1}
-$$
+```
 
 Equivalently, every `x in C_D(F)` satisfies
 
-$$
+```math
 \boxed{
 \operatorname{dist}(x,F)\le D-w_{min}(F).
 }
 \tag{DC.2}
-$$
+```
 
 ### Proof
 
 The assertion is trivial for `x in F`. Let `x notin F`, let `y` be a nearest point of the closed convex body `F`, and put
 
-$$
+```math
 t:=|x-y|>0,
 \qquad
 u:=\frac{x-y}{t}.
-$$
+```
 
 The nearest-point property gives the supporting inequality
 
-$$
+```math
 \nu\cdot p\le\nu\cdot y
 \qquad(p\in F),
-$$
+```
 
 so
 
-$$
+```math
 h_F(\nu)=\nu\cdot y.
-$$
+```
 
 Choose an opposite support point `p_- in F` with
 
-$$
+```math
 \nu\cdot p_-
 =\min_{p\in F}\nu\cdot p
 =h_F(\nu)-w_F(\nu).
-$$
+```
 
 Then
 
-$$
+```math
 \nu\cdot(x-p_-)
 =t+w_F(\nu)
 \ge t+w_{min}(F).
-$$
+```
 
 Hence
 
-$$
+```math
 |x-p_-|
 \ge t+w_{min}(F).
 \tag{1.3}
-$$
+```
 
 If `x in C_D(F)`, the left side is at most `D`. Therefore
 
-$$
+```math
 t\le D-w_{min}(F)=M.
-$$
+```
 
 This proves DC.1-DC.2. `square`
 
 For exact constant width `w_min(F)=D`, this recovers diametric completeness directly:
 
-$$
+```math
 \mathcal C_D(F)=F.
-$$
+```
 
 No external completeness theorem is needed.
 
@@ -170,45 +170,45 @@ No external completeness theorem is needed.
 
 Let `A` be the C65 source and let
 
-$$
+```math
 F=\operatorname{conv}V(C)
-$$
+```
 
 be its force hull. Every source point `a in A` is at distance at most `D` from every force-core vertex. By convexity of the norm, if
 
-$$
+```math
 p=\sum_i\lambda_i v_i\in F,
 \qquad
 \lambda_i\ge0,
 \qquad
 \sum_i\lambda_i=1,
-$$
+```
 
 then
 
-$$
+```math
 |a-p|
 \le\sum_i\lambda_i|a-v_i|
 \le D.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{A\subseteq\mathcal C_D(F).}
 \tag{2.1}
-$$
+```
 
 Combining with DC.1,
 
-$$
+```math
 \boxed{
 A\subseteq F+M\overline B,
 \qquad
 M=D-w_{min}(F).
 }
 \tag{2.2}
-$$
+```
 
 In particular every source point outside `F` lies in the outer parallel strip of thickness `M`.
 
@@ -218,9 +218,9 @@ In particular every source point outside `F` lies in the outer parallel strip of
 
 Let
 
-$$
+```math
 Z_{ext}:=|A\setminus F|.
-$$
+```
 
 Around every external source point put the open disk of radius `1/2`. Unit separation makes these disks pairwise disjoint.
 
@@ -228,28 +228,28 @@ For each external center `x`, choose a line separating `x` from the convex body 
 
 These chosen half-disks remain pairwise disjoint because the full radius-`1/2` disks are disjoint. By (2.2), every full disk lies in
 
-$$
+```math
 F+(M+1/2)\overline B.
-$$
+```
 
 Therefore the chosen exterior half-disks all lie in the parallel strip
 
-$$
+```math
 (F+(M+1/2)\overline B)\setminus F.
-$$
+```
 
 Steiner's formula gives
 
-$$
+```math
 \operatorname{area}(F+t\overline B)-\operatorname{area}(F)
 =t\operatorname{per}(F)+\pi t^2.
-$$
+```
 
 Hence:
 
 ### Theorem DC.2 — external-population shell bound
 
-$$
+```math
 \boxed{
 Z_{ext}\frac\pi8
 \le
@@ -257,11 +257,11 @@ Z_{ext}\frac\pi8
 +\pi(M+1/2)^2.
 }
 \tag{DC.3}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 Z_{ext}
 \le
@@ -269,22 +269,22 @@ Z_{ext}
 +8(M+1/2)^2.
 }
 \tag{DC.4}
-$$
+```
 
 This is finite and uses only unit separation, convexity, and source diameter.
 
 Since `per(F)<=pi D`, if
 
-$$
+```math
 M=o(D),
-$$
+```
 
 then
 
-$$
+```math
 \boxed{Z_{ext}=o(D^2).}
 \tag{DC.5}
-$$
+```
 
 ---
 
@@ -292,11 +292,11 @@ $$
 
 DG.6 proves
 
-$$
+```math
 x_B=o(D)
 \quad\Longrightarrow\quad
 M=D-w_{min}(F)=o(D).
-$$
+```
 
 Apply DC.5:
 
@@ -304,16 +304,16 @@ Apply DC.5:
 
 Every post-ZF sequence with
 
-$$
+```math
 x_B=o(D)
-$$
+```
 
 satisfies
 
-$$
+```math
 \boxed{Z_{ext}=o(D^2).}
 \tag{4.1}
-$$
+```
 
 This removes the quadratic external-rattler escape that remains available under the universal DB area floor alone.
 
@@ -323,7 +323,7 @@ This removes the quadratic external-rattler escape that remains available under 
 
 OP proves the exact finite capacity bound for all source points lying in `F`:
 
-$$
+```math
 \boxed{
 n-Z_{ext}
 \le
@@ -331,44 +331,44 @@ n-Z_{ext}
 +\frac12\operatorname{per}(F)+1.
 }
 \tag{5.1}
-$$
+```
 
 For global minimizers,
 
-$$
+```math
 \frac n{D^2}\to
 \Delta:=\frac\pi{2\sqrt3}.
 \tag{5.2}
-$$
+```
 
 In the DG endpoint, DC.3 gives `Z_ext=o(D^2)` and `per(F)=O(D)`. Divide (5.1) by `D^2` and take lower limits:
 
-$$
+```math
 \Delta
 \le
 \frac2{\sqrt3}
 \liminf\frac{\operatorname{area}(F)}{D^2}.
-$$
+```
 
 Since
 
-$$
+```math
 \frac{\sqrt3}{2}\Delta=\frac\pi4,
-$$
+```
 
 we obtain
 
-$$
+```math
 \liminf\frac{\operatorname{area}(F)}{D^2}
 \ge\frac\pi4.
-$$
+```
 
 The isodiametric inequality gives the reverse bound for every `F`:
 
-$$
+```math
 \operatorname{area}(F)
 \le\frac\pi4D^2.
-$$
+```
 
 Therefore:
 
@@ -376,13 +376,13 @@ Therefore:
 
 If `x_B=o(D)` along an unbounded post-ZF sequence, then
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}(F)}{D^2}
 \longrightarrow\frac\pi4.
 }
 \tag{DC.6}
-$$
+```
 
 After translations, every Hausdorff-convergent subsequence of `F/D` converges to the disk of diameter one.
 
@@ -398,16 +398,16 @@ Thus every subsequential limit is the same disk, up to translation.
 
 The outer contact walk is partitioned into `q` walks between consecutive loaded hull vertices. If their positive integer lengths are
 
-$$
+```math
 \ell_1,\ldots,\ell_q,
-$$
+```
 
 then
 
-$$
+```math
 \sum_i(\ell_i-1)=b-q=x_B.
 \tag{6.1}
-$$
+```
 
 At most `x_B` of these intervals can have length greater than one. Every remaining interval has length exactly one and is therefore the straight unit contact between its two consecutive loaded hull vertices.
 
@@ -415,21 +415,21 @@ These good hull sides are distinct loaded-loaded contact edges. Consequently:
 
 ### Theorem DC.5 — loaded boundary contact floor
 
-$$
+```math
 \boxed{
 e_{BB}\ge q-x_B.
 }
 \tag{DC.7}
-$$
+```
 
 In particular, in the DG endpoint,
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\frac{e_{BB}}D\ge\pi.
 }
 \tag{DC.8}
-$$
+```
 
 because `q/D->pi` and `x_B/D->0`.
 
@@ -441,7 +441,7 @@ This is a second independent degeneration: nearly the entire loaded force-hull c
 
 A hypothetical post-ZF sequence with `x_B=o(D)` must now satisfy simultaneously
 
-$$
+```math
 \boxed{
 q/D\to\pi,
 \qquad
@@ -449,31 +449,31 @@ per(F)/D\to\pi,
 \qquad
 area(F)/D^2\to\pi/4,
 }
-$$
+```
 
-$$
+```math
 \boxed{
 F/D\to\text{the diameter-one disk in Hausdorff shape},
 }
-$$
+```
 
-$$
+```math
 \boxed{
 Z_{ext}=o(D^2),
 \qquad
 \liminf_{D\to\infty} e_{BB}/D\ge\pi,
 }
-$$
+```
 
 and from DG.7,
 
-$$
+```math
 \boxed{
 \liminf h/D\ge3\pi/5,
 \qquad
 \liminf(Q+2s_Z)/D\ge\pi/5.
 }
-$$
+```
 
 Thus the small-outer-walk branch is reduced to a near-circular, nearly unit-contact loaded boundary with a mandatory linear exceptional-face/mixed-stress defect.
 

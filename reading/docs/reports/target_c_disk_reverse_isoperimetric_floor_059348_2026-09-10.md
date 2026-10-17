@@ -17,20 +17,20 @@
 
 The immediately preceding report on this branch proved the self-contained centrally symmetric support-function lower bound
 
-$$
+```math
 A\ge \frac{P^2}{2\pi}-\frac{\pi D^2}{4}
-$$
+```
 
 and used it to obtain
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}
 \ge 0.5933612807422635\ldots .
-$$
+```
 
 This report replaces that coarse convex-area floor by the exact solution of the reverse isoperimetric problem for convex subsets of a disk. The result is the stronger explicit post-ZF bound
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
@@ -39,23 +39,23 @@ $$
 =0.59348346023609149178\ldots .
 }
 \tag{RI.1}
-$$
+```
 
 The improvement is small numerically but structurally useful: the force-hull area input is now the exact disk-container lower envelope rather than a quadratic support-function relaxation.
 
 The unique scalar optimizer lies on the six-gon branch. There is a unique pair
 
-$$
+```math
 \boxed{
 (y_0,\theta_0)
 \in(2\rho,\pi/2)\times(0,\pi/3)
 }
 \tag{RI.2}
-$$
+```
 
 satisfying
 
-$$
+```math
 \boxed{
 2y_0
 =
@@ -63,11 +63,11 @@ $$
 +5\sin\frac{2\pi-\theta_0}{10},
 }
 \tag{RI.3}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \frac{y_0+\sin y_0}{4}
 =
@@ -77,28 +77,28 @@ $$
 \right).
 }
 \tag{RI.4}
-$$
+```
 
 Numerically,
 
-$$
+```math
 y_0=1.48353287160140953601\ldots,
 \qquad
 \theta_0=0.31683197976766354674\ldots,
 \tag{RI.5}
-$$
+```
 
 so
 
-$$
+```math
 p_0:=2y_0
 =2.96706574320281907201\ldots .
 \tag{RI.6}
-$$
+```
 
 Then `lambda_RI` is the positive root of
 
-$$
+```math
 \boxed{
 (\pi^2+1)\lambda^2
 +2y_0\lambda
@@ -106,7 +106,7 @@ $$
 -\pi(y_0+\sin y_0)=0.
 }
 \tag{RI.7}
-$$
+```
 
 No numerical optimizer is a proof dependency.
 
@@ -116,53 +116,53 @@ No numerical optimizer is a proof dependency.
 
 Let `B_1` be the Euclidean unit disk. Bogosel studies convex sets
 
-$$
+```math
 \Omega\subseteq B_1
-$$
+```
 
 with prescribed area `A in (0,pi)` and maximizes their perimeter.
 
 Theorem 6 of arXiv:2402.05648v1 states that the maximizer is an inscribed `m`-gon, unique up to permutation of its side-angle data, where
 
-$$
+```math
 (m-1)\sin\frac{2\pi}{m-1}
 <2A
 \le m\sin\frac{2\pi}{m},
 \tag{1.1}
-$$
+```
 
 and its central angles have the form
 
-$$
+```math
 0<\theta_1\le\theta_2=\cdots=\theta_m.
 \tag{1.2}
-$$
+```
 
 Writing
 
-$$
+```math
 \theta:=\theta_1,
 \qquad
 \vartheta:=\frac{2\pi-\theta}{m-1},
 \tag{1.3}
-$$
+```
 
 the area and perimeter are
 
-$$
+```math
 A
 =\frac12\bigl(\sin\theta+(m-1)\sin\vartheta\bigr),
 \tag{1.4}
-$$
+```
 
-$$
+```math
 P
 =2\left(
 \sin\frac\theta2
 +(m-1)\sin\frac\vartheta2
 \right).
 \tag{1.5}
-$$
+```
 
 Proposition 5(c) in the same paper proves that the maximal perimeter is **strictly increasing** with the prescribed area. Therefore Theorem 6 can be inverted: for every admissible perimeter `P`, any convex subset of `B_1` with that perimeter has area at least the unique inverse-envelope value determined by (1.4)-(1.5).
 
@@ -170,39 +170,39 @@ Proposition 5(c) in the same paper proves that the maximal perimeter is **strict
 
 For the post-ZF force hull `F`, the current FS symmetral theorem defines
 
-$$
+```math
 S:=\frac12((F-o)-(F-o))
 \tag{1.6}
-$$
+```
 
 and proves
 
-$$
+```math
 \operatorname{diam}S=D,
 \qquad
 \operatorname{per}S=\operatorname{per}F,
 \tag{1.7}
-$$
+```
 
-$$
+```math
 0\le
 \operatorname{area}S-\operatorname{area}F
 =o(D^2).
 \tag{1.8}
-$$
+```
 
 Because `S` is centrally symmetric and has diameter `D`, it is contained in the radius-`D/2` disk centered at its symmetry center:
 
-$$
+```math
 S\subseteq B(0,D/2).
 \tag{1.9}
-$$
+```
 
 Thus the rescaled body
 
-$$
+```math
 \widetilde S:=\frac2D S
-$$
+```
 
 satisfies exactly the containment hypothesis of Bogosel's theorem. No claim that `F` itself is centrally symmetric at finite `D` is needed.
 
@@ -212,34 +212,34 @@ satisfies exactly the containment hypothesis of Bogosel's theorem. No claim that
 
 Normalize back to source diameter `D=1`. For
 
-$$
+```math
 p:=\frac{\operatorname{per}F}{D}\in[2,\pi],
-$$
+```
 
 define `B(p)` to be one quarter of the least area in the unit-disk normalization at perimeter `2p`. Equivalently, `B(p)` is the sharp area lower envelope for convex bodies contained in a radius-`1/2` disk and having perimeter `p`.
 
 Put
 
-$$
+```math
 p_m:=m\sin\frac\pi m
 \qquad(m\ge2).
 \tag{2.1}
-$$
+```
 
 For
 
-$$
+```math
 p_{m-1}<p\le p_m,
 \tag{2.2}
-$$
+```
 there is a unique
 
-$$
+```math
 0<\theta\le\frac{2\pi}{m}
-$$
+```
 with
 
-$$
+```math
 \boxed{
 p
 =
@@ -247,11 +247,11 @@ p
 +(m-1)\sin\frac{2\pi-\theta}{2(m-1)}.
 }
 \tag{2.3}
-$$
+```
 
 The sharp lower envelope is
 
-$$
+```math
 \boxed{
 B(p)
 =
@@ -261,18 +261,18 @@ B(p)
 \right].
 }
 \tag{2.4}
-$$
+```
 
 The function `B` is continuous and strictly increasing from `B(2)=0` to
 
-$$
+```math
 B(\pi)=\frac\pi4.
 \tag{2.5}
-$$
+```
 
 On the interior of one `m`-gon branch, differentiating (2.3)-(2.4) gives the exact derivative
 
-$$
+```math
 \boxed{
 B'(p)
 =
@@ -283,33 +283,33 @@ B'(p)
 \right).
 }
 \tag{2.6}
-$$
+```
 
 Indeed, if
 
-$$
+```math
 \vartheta=\frac{2\pi-\theta}{m-1},
-$$
+```
 then
 
-$$
+```math
 \frac{dp}{d\theta}
 =\frac12\left(
 \cos\frac\theta2-
 \cos\frac\vartheta2
 \right)
-$$
+```
 
 and
 
-$$
+```math
 \frac{dB}{d\theta}
 =\frac18(\cos\theta-\cos\vartheta),
-$$
+```
 
 so the factorization
 
-$$
+```math
 \cos\theta-\cos\vartheta
 =2\left(
 \cos\frac\theta2-
@@ -319,7 +319,7 @@ $$
 \cos\frac\theta2+
 \cos\frac\vartheta2
 \right)
-$$
+```
 
 gives (2.6).
 
@@ -327,14 +327,14 @@ gives (2.6).
 
 By (1.8), every convergent post-ZF subsequence with normalized force-hull perimeter `p` satisfies
 
-$$
+```math
 \boxed{
 \liminf
 \frac{\operatorname{area}F}{D^2}
 \ge B(p).
 }
 \tag{2.7}
-$$
+```
 
 This is stronger than the preceding report's self-contained quadratic floor `Psi(p)` wherever the two differ in the active range.
 
@@ -344,47 +344,47 @@ This is stronger than the preceding report's self-contained quadratic floor `Psi
 
 Retain
 
-$$
+```math
 y:=\lim\frac hD,
 \qquad
 \lambda:=\lim\frac{e_{BB}+2s_C}{D},
 \qquad
 p:=\lim\frac{\operatorname{per}F}{D}.
 \tag{3.1}
-$$
+```
 
 DB and convexity give
 
-$$
+```math
 2\rho\le y\le p\le\pi.
 \tag{3.2}
-$$
+```
 
 FSDB independently gives
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 \Phi(y):=\frac{y+\sin y}{4}.
 }
 \tag{3.3}
-$$
+```
 
 Together with (2.7),
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 M(y,p):=\max\{\Phi(y),B(p)\}.
 }
 \tag{3.4}
-$$
+```
 
 The GU/ZK cell estimate and actual-perimeter JC cavity inequality then give, exactly as in the preceding report,
 
-$$
+```math
 \boxed{
 M(y,p)-\frac\pi4\lambda^2
 \le
@@ -393,11 +393,11 @@ M(y,p)-\frac\pi4\lambda^2
 m(y,p):=\min\{y,p-y\}.
 }
 \tag{3.5}
-$$
+```
 
 Equivalently every survivor limit must satisfy
 
-$$
+```math
 \boxed{
 F(y,p,\lambda):=
 (\pi^2+1)\lambda^2
@@ -407,7 +407,7 @@ F(y,p,\lambda):=
 \ge0.
 }
 \tag{3.6}
-$$
+```
 
 For fixed `(y,p)`, `F` is strictly increasing in `lambda>=0`.
 
@@ -417,59 +417,59 @@ For fixed `(y,p)`, `F` is strictly increasing in `lambda>=0`.
 
 For fixed `y`, let `p_y` be the unique perimeter satisfying
 
-$$
+```math
 \boxed{B(p_y)=\Phi(y).}
 \tag{4.1}
-$$
+```
 
 It exists because `B(pi)=pi/4>=Phi(y)`. It also satisfies `p_y>=y`. Indeed
 
-$$
+```math
 B(y)\le\frac{y^2}{4\pi}\le\Phi(y),
 \tag{4.2}
-$$
+```
 
 where the first inequality is the ordinary isoperimetric upper bound for **any** body of perimeter `y`, and the second is equivalent to
 
-$$
+```math
 y^2\le\pi(y+\sin y),
-$$
+```
 
 which holds on `[0,pi]` with equality only at `pi`.
 
 The relevant reverse-isoperimetric branch is always at least the six-gon branch once `B` is active. To see this, let
 
-$$
+```math
 p_5=5\sin\frac\pi5.
-$$
+```
 
 The canonical bound `rho>739/1000` gives
 
-$$
+```math
 4\rho>2.956.
-$$
+```
 
 The exact formula
 
-$$
+```math
 \sin^2\frac\pi5=\frac{5-\sqrt5}{8}
-$$
+```
 
 and `sqrt(5)>223/100` give
 
-$$
+```math
 p_5<2.95<4\rho.
 \tag{4.3}
-$$
+```
 
 Section 5 below proves `p_y>=4rho` at the left endpoint and `p_y` increases thereafter. Hence all derivatives needed in the active `B` region have `m>=6`.
 
 For any branch `m>=6`, (2.6) gives the uniform bound
 
-$$
+```math
 \boxed{B'(p)>\frac12.}
 \tag{4.4}
-$$
+```
 
 For example `theta/2<=pi/6`, while the second half-angle is below `pi/5`; both cosines are positive and their sum is greater than one.
 
@@ -487,20 +487,20 @@ Then `m=y` and `M=Phi(y)`, so `F` is constant in `p`.
 
 Then
 
-$$
+```math
 \frac{\partial F}{\partial p}
 =2(\lambda+p-y)-4\pi B'(p).
 \tag{4.5}
-$$
+```
 
 Since `p-y<=p/2<=pi/2`, `lambda<=1`, and `B'(p)>1/2`,
 
-$$
+```math
 \frac{\partial F}{\partial p}
 <2+\pi-2\pi
 =2-\pi<0.
 \tag{4.6}
-$$
+```
 
 ### Case 4: `p>=2y` and `B(p)>Phi(y)`
 
@@ -508,7 +508,7 @@ Then `m=y` is fixed and `B` increases, so `F` strictly decreases.
 
 Therefore the largest value of `F` over admissible `p` is attained as follows:
 
-$$
+```math
 \boxed{
  p_*(y)=
  \begin{cases}
@@ -517,7 +517,7 @@ $$
  \end{cases}
 }
 \tag{4.7}
-$$
+```
 
 When `p_y>2y`, every point in the flat interval `[2y,p_y]` gives the same value; choosing `2y` is convenient.
 
@@ -529,99 +529,99 @@ Because the threshold root in `lambda` decreases when `F` increases, (4.7) gives
 
 On
 
-$$
+```math
 2\rho\le y\le\frac\pi2,
-$$
+```
 put
 
-$$
+```math
 H(y):=B(2y)-\Phi(y).
 \tag{5.1}
-$$
+```
 
 At the left endpoint,
 
-$$
+```math
 \boxed{H(2\rho)<0.}
 \tag{5.2}
-$$
+```
 
 A geometric proof avoids numerical evaluation. A symmetric circular slice of diameter one with parameter `y` has
 
-$$
+```math
 P_{slice}(y)=y+2\cos(y/2),
 \qquad
 A_{slice}(y)=\Phi(y).
 \tag{5.3}
-$$
+```
 
 At `y=2rho`, the Dottie equation `rho=cos rho` gives
 
-$$
+```math
 P_{slice}(2\rho)=4\rho=2y.
 \tag{5.4}
-$$
+```
 
 This circular slice is not a polygon. Bogosel's Theorem 6 says the perimeter maximizer at its fixed area is an inscribed polygon and characterizes it uniquely up to side permutation. Hence the slice is not a maximizer, so the maximal perimeter at area `Phi(2rho)` is strictly larger than `4rho`. Since that maximal-perimeter function is strictly increasing in area, inversion gives
 
-$$
+```math
 B(4\rho)<\Phi(2\rho),
-$$
+```
 
 proving (5.2).
 
 At the right endpoint,
 
-$$
+```math
 B(\pi)=\frac\pi4,
-$$
+```
 
 while
 
-$$
+```math
 \Phi(\pi/2)=\frac{\pi/2+1}{4}.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 H(\pi/2)=\frac{\pi-2}{8}>0.
 }
 \tag{5.5}
-$$
+```
 
 Between branch transition points, (4.4) gives
 
-$$
+```math
 H'(y)
 =2B'(2y)-\Phi'(y)
 >1-\frac12
 =\frac12.
 \tag{5.6}
-$$
+```
 
 The same strict increase holds across the finitely many branch transition points by continuity and the positive one-sided derivative bounds. Therefore there is a unique
 
-$$
+```math
 \boxed{y_0\in(2\rho,\pi/2)}
 \tag{5.7}
-$$
+```
 
 with
 
-$$
+```math
 \boxed{B(2y_0)=\Phi(y_0).}
 \tag{5.8}
-$$
+```
 
 For `y<=y_0`, one has `p_y>=2y`; for `y>=y_0`, one has `p_y<=2y`.
 
 Because
 
-$$
+```math
 p_5<4\rho<2y_0<3=p_6,
-$$
+```
 
 the crossover lies on the six-gon branch. Equations (2.3)-(2.4) with `m=6` are exactly RI.3-RI.4.
 
@@ -631,18 +631,18 @@ the crossover lies on the six-gon branch. Equations (2.3)-(2.4) with `m=6` are e
 
 Define `lambda_RI` by RI.7. Since
 
-$$
+```math
 \lambda_{RI}<1,
-$$
+```
 
 all fixed-`lambda` derivative arguments in Section 4 apply. The inequality follows, for example, by evaluating (3.6) at `lambda=1`: on the relevant range its value is positive, so the unique positive threshold root is below one.
 
 We prove that for every admissible `(y,p)`,
 
-$$
+```math
 F(y,p,\lambda_{RI})\le0.
 \tag{6.1}
-$$
+```
 
 Because `F` is increasing in `lambda`, this implies every survivor threshold is at least `lambda_RI`.
 
@@ -650,94 +650,94 @@ Because `F` is increasing in `lambda`, this implies every survivor threshold is 
 
 By Section 4 we may take `p=2y`; then `m=y` and `M=Phi(y)`. Put
 
-$$
+```math
 F_1(y)
 =(\pi^2+1)\lambda_{RI}^2
 +2y\lambda_{RI}
 +y^2
 -\pi(y+\sin y).
 \tag{6.2}
-$$
+```
 
 At `y=y_0`, RI.7 gives
 
-$$
+```math
 F_1(y_0)=0.
 \tag{6.3}
-$$
+```
 
 Also
 
-$$
+```math
 F_1'(y)
 =2\lambda_{RI}+2y-\pi(1+\cos y),
 \tag{6.4}
-$$
+```
 
-$$
+```math
 F_1''(y)=2+\pi\sin y>0.
 \tag{6.5}
-$$
+```
 
 The existing FSJC audit proves (6.4) is already positive at `y=2rho` for every `lambda>1/2`. Since `lambda_RI>lambda_FSJC>1/2`, `F_1` is strictly increasing throughout this interval. Hence
 
-$$
+```math
 F_1(y)\le0.
 \tag{6.6}
-$$
+```
 
 ### Right branch: `y>=y_0`
 
 Now Section 4 gives `p=p_y`, where `B(p_y)=Phi(y)`. Put
 
-$$
+```math
 m_y:=p_y-y.
-$$
+```
 
 Then
 
-$$
+```math
 F_2(y)
 =(\pi^2+1)\lambda_{RI}^2
 +2m_y\lambda_{RI}
 +m_y^2
 -4\pi\Phi(y).
 \tag{6.7}
-$$
+```
 
 Differentiate the defining identity `B(p_y)=Phi(y)` away from branch-transition points:
 
-$$
+```math
 p_y'
 =\frac{\Phi'(y)}{B'(p_y)}.
 \tag{6.8}
-$$
+```
 
 Using `Phi'(y)<=1/2` and `B'(p_y)>1/2`,
 
-$$
+```math
 0\le p_y'<1,
 \qquad
 m_y'=p_y'-1<0.
 \tag{6.9}
-$$
+```
 
 Therefore
 
-$$
+```math
 F_2'(y)
 =2(\lambda_{RI}+m_y)m_y'
 -4\pi\Phi'(y)
 <0.
 \tag{6.10}
-$$
+```
 
 At reverse-isoperimetric branch transitions the same conclusion follows from the one-sided derivative bounds. Since `F_2(y_0)=0`,
 
-$$
+```math
 F_2(y)\le0
 \tag{6.11}
-$$
+```
 
 for every `y>=y_0`.
 
@@ -749,48 +749,48 @@ This proves (6.1), hence RI.1.
 
 Solving RI.3-RI.4 gives
 
-$$
+```math
 y_0
 =1.4835328716014095360059192473\ldots,
-$$
+```
 
-$$
+```math
 \theta_0
 =0.3168319797676635467428160269\ldots,
-$$
+```
 
-$$
+```math
 p_0=2y_0
 =2.9670657432028190720118384946\ldots,
-$$
+```
 
 and
 
-$$
+```math
 \Phi(y_0)=B(p_0)
 =0.6199319579503434243031685729\ldots .
-$$
+```
 
 The positive root of RI.7 is
 
-$$
+```math
 \boxed{
 \lambda_{RI}
 =0.5934834602360914917813991541\ldots .
 }
-$$
+```
 
 The improvement over the self-contained CSA checkpoint is
 
-$$
+```math
 0.0001221794938279671961\ldots,
-$$
+```
 
 and the improvement over FSJC is approximately
 
-$$
+```math
 0.0052551164624520531\ldots .
-$$
+```
 
 The decimals only orient the reader. The proof objects are RI.3, RI.4, and RI.7 together with the monotonicity arguments above.
 
@@ -800,12 +800,12 @@ The decimals only orient the reader. The proof objects are RI.3, RI.4, and RI.7 
 
 The scalar minimum in Sections 4-6 is attained only when
 
-$$
+```math
 \frac hD\to y_0,
 \qquad
 \frac{\operatorname{per}F}{D}\to2y_0,
 \tag{8.1}
-$$
+```
 
 and the central symmetral `S` asymptotically attains the reverse-isoperimetric lower envelope at the same perimeter.
 

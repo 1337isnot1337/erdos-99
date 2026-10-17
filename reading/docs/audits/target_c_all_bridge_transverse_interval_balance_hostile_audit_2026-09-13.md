@@ -32,10 +32,10 @@ not asserted at the degenerate value `D=1`.
 Summing equilibrium on one shore cancels all internal contact and diameter forces. With
 the bridge vector oriented from `T` to `S`, the result is
 
-$$
+```math
 \alpha u_0=\sum_{h\pitchfork uv}\beta_h r_h,
 \qquad \alpha>0,\quad \beta_h>0.
-$$
+```
 
 Dotting with `Ju_0` gives the zero transverse sum. If the nonzero transverse values
 did not include both signs, positivity would force every transverse value to vanish.
@@ -56,10 +56,10 @@ All other old noncontacts have strict distance greater than one and remain so fo
 sufficiently small nonzero angle by finiteness and continuity. The sole crossing
 diameter changes from `D u_0` to `D u_0+R_theta u_0-u_0`, and direct expansion gives
 
-$$
+```math
 |D u_0+R_\theta u_0-u_0|^2
  =D^2-2(D-1)(1-\cos\theta)<D^2.
-$$
+```
 
 No other crossing pair can newly attain `D` for a small enough angle because all such
 pairs had strict slack. If a same-shore diameter remains, the source has the same
@@ -80,17 +80,17 @@ edge path in the bridge-block tree intersects the corridor in a consecutive inte
 its endpoint orientation is constant on that interval. Applying the same bridge cut
 resultant at level `j` and taking the transverse coordinate gives
 
-$$
+```math
 F_j=\sum_{h:\,\ell_h\le j\le r_h}y_h=0.
-$$
+```
 
 With the harmless boundary convention `F_0=F_{L+1}=0`, subtracting adjacent equations
 gives exactly
 
-$$
+```math
 \sum_{h:\,\ell_h=j}y_h
  =\sum_{h:\,r_h=j-1}y_h.
-$$
+```
 
 The difference is a finite telescoping identity for the actual positive KKT weights;
 it does not assume that the diameter graph is a matching or that a cut is a star.

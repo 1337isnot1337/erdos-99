@@ -24,10 +24,10 @@ The key observation is that, when `F` has no parallel sides, the complete vertex
 
 Let `F` be a cyclic S1 survivor and let `g=uv` be the unique short vertex-vertex antipodal pair supplied by AD/D1. Let `A(F)` denote the graph of all vertex-vertex antipodal pairs of `F`. Then
 
-$$
+```math
 \boxed{A(F)=H\cup\{g\}.}
 \tag{AC.1}
-$$
+```
 
 Moreover:
 
@@ -36,17 +36,19 @@ Moreover:
 3. `g` lies on that unique odd cycle;
 4. `H=A(F)-g` is the spanning tree obtained by opening that odd cycle at the unique short antipodal chord;
 5. the short length is the explicit D1 quantity
-   $$
+   ```math
    |g|
    =D\cos\frac{(s+2)\delta}{2}
    +\sqrt{1-D^2\sin^2\frac{(s+2)\delta}{2}},
-   $$
+   
+   ```
    with
-   $$
+   ```math
    0<s<\frac{\Delta_2}{\delta}-2,
    \qquad
    \sqrt{D^2-1}<|g|<D.
-   $$
+   
+   ```
 
 Thus MT completion nonuniqueness disappears entirely in S1: the geometry of `F-F` itself selects the missing odd-cycle chord.
 
@@ -58,9 +60,9 @@ Because S1 has no parallel sides, the edge directions of `F` and `-F` never merg
 
 Fix a vertex `x` of `K`. For every normal direction in the interior of the normal cone of `x`, the maximizing point of `F` and the minimizing point of `F` are unique vertices, say `p_i,p_j`, and
 
-$$
+```math
 x=p_i-p_j.
-$$
+```
 
 The two vertices admit parallel supporting lines with opposite normals, so `{p_i,p_j}` is a vertex-vertex antipodal pair of `F`.
 
@@ -76,23 +78,23 @@ We include the rotating-calipers crossing argument because it is the only struct
 
 Let
 
-$$
+```math
 e_1=p_i p_j,
 \qquad
 e_2=p_k p_\ell
-$$
+```
 
 be two distinct vertex-vertex antipodal chords. Choose projective support-normal directions `theta_1,theta_2` realizing the two pairs and lift them to one interval of length `<pi` with
 
-$$
+```math
 \theta_1<\theta_2.
-$$
+```
 
 As the support normal rotates from `theta_1` to `theta_2`, the maximizing support vertex moves monotonically forward around the counterclockwise boundary of `F`. The minimizing support vertex does the same on the opposite side. Therefore, after a cyclic relabeling, the four endpoints occur in the order
 
-$$
+```math
 p_i,\ p_k,\ p_j,\ p_\ell,
-$$
+```
 
 with equality allowed only when the two antipodal chords share an endpoint.
 
@@ -100,10 +102,10 @@ If all four endpoints are distinct, this alternating cyclic order is exactly the
 
 Therefore every two edges of `A(F)` meet exactly once, at a common endpoint or in a proper crossing. Thus
 
-$$
+```math
 \boxed{A(F)\text{ is a convex straight-line thrackle}.}
 \tag{2.1}
-$$
+```
 
 ---
 
@@ -111,9 +113,9 @@ $$
 
 Section 1 gives
 
-$$
+```math
 |E(A(F))|=q.
-$$
+```
 
 A convex straight-line thrackle on `q` vertices has at most `q` edges. Therefore `A(F)` is edge-maximal.
 
@@ -127,17 +129,17 @@ This proves items 1 and 2 of AC.
 
 AD/D1 say that among the `q` antipodal pairs represented by the `q` antipodal vertex pairs of `K`, exactly
 
-$$
+```math
 q-1
-$$
+```
 
 have Euclidean length `D`, while exactly one pair `g=uv` has length strictly below `D`.
 
 Every length-`D` pair is an edge of the full diameter graph `H`, and every edge of `H` is one of these antipodal pairs. Hence
 
-$$
+```math
 E(H)=E(A(F))\setminus\{g\},
-$$
+```
 
 which is AC.1.
 
@@ -155,25 +157,25 @@ The canonical completion also gives a useful rotating-calipers corollary.
 
 Let
 
-$$
+```math
 x=p_u-p_v
-$$
+```
 
 be the short vertex of one projective half of `K`, and let its two circular neighbors be `a,b`.
 
 Because S1 has no parallel sides, each of the two unit Minkowski edges incident to `x` changes exactly one of the two support vertices. Suppose both changes occurred at the same endpoint. Up to reversing orientation, the three consecutive antipodal states would be
 
-$$
+```math
 (u_-,v),\quad (u,v),\quad (u_+,v),
-$$
+```
 
 where `u_-,u,u_+` are consecutive shell vertices. The outer two chords `vu_-` and `vu_+` are actual diameters, while `vu` is short.
 
 Any actual diameter edge incident to `u` other than `uv` is vertex-disjoint from both `vu_-` and `vu_+`. In cyclic order
 
-$$
+```math
 u_-,u,u_+,\ldots,v,\ldots,
-$$
+```
 
 a chord from `u` cannot cross both `vu_-` and `vu_+`: crossing the first forces its other endpoint onto the `v -> u_-` arc, while crossing the second forces it onto the disjoint `u_+ -> v` arc.
 
@@ -181,16 +183,16 @@ Thus `u` would have no actual diameter edge. This contradicts C65 full diameter 
 
 Hence the two defect steps change opposite support endpoints. After orientation the local states are
 
-$$
+```math
 \boxed{(u_-,v),\quad (u,v),\quad (u,v_+),}
 \tag{AC.2}
-$$
+```
 
 where `u_-u` and `vv_+` are shell sides and the two neighboring diameter chords
 
-$$
+```math
 u_-v,\qquad uv_+
-$$
+```
 
 are vertex-disjoint. Since both are actual diameter edges, the diameter-thrackle property forces them to cross. Therefore their endpoints alternate on the shell.
 
@@ -202,17 +204,17 @@ This is the exact local combinatorial form of the unique S1 defect.
 
 MT proved only that there exists at least one maximal convex-thrackle completion
 
-$$
+```math
 T=H+g'
-$$
+```
 
 with a short cycle chord `g'`; small abstract examples show such a completion need not be unique in general.
 
 AC is stronger in S1. The difference body itself provides the complete antipodal graph, and therefore
 
-$$
+```math
 \boxed{T=A(F)=H+g}
-$$
+```
 
 with the unique short antipodal pair `g` from D1.
 

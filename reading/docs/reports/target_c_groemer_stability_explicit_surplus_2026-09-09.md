@@ -20,15 +20,15 @@
 
 JN proves nonconstructively that the JC threshold
 
-$$
+```math
 \lambda_1=0.4633168953789\ldots
-$$
+```
 
 is separated from the true feasible region by a positive constant. Groemer's explicit stability theorem makes part of that gap numerical.
 
 The result is
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
@@ -37,14 +37,14 @@ $$
 =0.4647922503\ldots .
 }
 \tag{GS.1}
-$$
+```
 
 The chosen split constant is deliberately simple rather than numerically optimized:
 
-$$
+```math
 \boxed{\varepsilon_*=0.0096=\frac6{625}.}
 \tag{GS.2}
-$$
+```
 
 ---
 
@@ -52,20 +52,20 @@ $$
 
 Normalize a planar convex body `K` to diameter one. Groemer's Theorem 2 states that if
 
-$$
+```math
 \operatorname{per}(K)\ge\pi-\varepsilon,
 \tag{GS.3}
-$$
+```
 
 then there exists a convex body `C` of constant width one such that
 
-$$
+```math
 K\subseteq C
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 d_H(K,C)
 \le
@@ -74,52 +74,52 @@ c_G\varepsilon^{2/3},
 c_G:=\frac{34}{25}.
 }
 \tag{GS.4}
-$$
+```
 
 The exponent `2/3` is sharp in Groemer's theorem; no stronger stability exponent is being assumed.
 
 Let
 
-$$
+```math
 \delta:=c_G\varepsilon^{2/3}.
-$$
+```
 
 Since `K subset C` and the Hausdorff distance is at most `delta`,
 
-$$
+```math
 C\subseteq K+B(0,\delta).
-$$
+```
 
 Steiner's formula gives
 
-$$
+```math
 \operatorname{area}(C)
 \le
 \operatorname{area}(K)
 +\delta\operatorname{per}(K)
 +\pi\delta^2.
 \tag{GS.5}
-$$
+```
 
 The Blaschke--Lebesgue theorem gives every constant-width-one body the area floor
 
-$$
+```math
 \operatorname{area}(C)
 \ge
 A_{BL}:=\frac{\pi-\sqrt3}{2}.
 \tag{GS.6}
-$$
+```
 
 Using `per(K)<=pi`, GS.5--GS.6 imply
 
-$$
+```math
 \boxed{
 \operatorname{area}(K)
 \ge
 A_{BL}-\pi\delta-\pi\delta^2.
 }
 \tag{GS.7}
-$$
+```
 
 This is the only quantitative stability input needed below.
 
@@ -129,55 +129,55 @@ This is the only quantitative stability input needed below.
 
 Let
 
-$$
+```math
 p:=\frac{\operatorname{per}(F)}D,
 \qquad
 \lambda:=\frac{e_{BB}+2s_C}{D},
 \qquad
  t:=\frac{e_{BB}}D.
-$$
+```
 
 JC's proof before replacing the force-hull perimeter by `pi D` gives
 
-$$
+```math
 \boxed{
 E_{out}+Q
 \le
  e_{BB}+\min\{h,\operatorname{per}(F)-h\}.
 }
 \tag{GS.8}
-$$
+```
 
 Since `0<=h<=per(F)`, the minimum is at most half the perimeter:
 
-$$
+```math
 E_{out}+Q
 \le
  e_{BB}+\frac12\operatorname{per}(F).
 \tag{GS.9}
-$$
+```
 
 Therefore the joint pocket/exceptional cavity capacity satisfies
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}+A_{exc}}{D^2}
 \le
 \frac{(t+p/2)^2}{4\pi}.
 }
 \tag{GS.10}
-$$
+```
 
 Since `t<=lambda`, a convenient one-parameter relaxation is
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}+A_{exc}}{D^2}
 \le
 \frac{(\lambda+p/2)^2}{4\pi}.
 }
 \tag{GS.11}
-$$
+```
 
 ZG/GU adds only `O(D)` to pass from this cavity area to the full attachment gap `G`.
 
@@ -187,82 +187,82 @@ ZG/GU adds only `O(D)` to pass from this cavity area to the full attachment gap 
 
 Assume along an unbounded subsequence
 
-$$
+```math
 p\ge\pi-\varepsilon_*.
 \tag{GS.12}
-$$
+```
 
 Apply Groemer to the normalized force hull `D^{-1}F`. Put
 
-$$
+```math
 \delta_*
 :=
 \frac{34}{25}\varepsilon_*^{2/3}.
 \tag{GS.13}
-$$
+```
 
 Then GS.7 gives
 
-$$
+```math
 \frac{\operatorname{area}(F)}{D^2}
 \ge
 A_*:=
 A_{BL}-\pi\delta_*-\pi\delta_*^2.
 \tag{GS.14}
-$$
+```
 
 For `epsilon_*=0.0096`,
 
-$$
+```math
 \delta_*=0.06143\ldots,
-$$
+```
 
 and
 
-$$
+```math
 \boxed{A_*=0.4999246963\ldots>A_{PI}.}
 \tag{GS.15}
-$$
+```
 
 GU bounds the total attachment-cell area by
 
-$$
+```math
 \frac\pi4\lambda^2D^2+o(D^2).
-$$
+```
 
 Hence
 
-$$
+```math
 \liminf\frac G{D^2}
 \ge
 A_*-rac\pi4\lambda^2.
 \tag{GS.16}
-$$
+```
 
 In the same case GS.11 can still use the universal `p<=pi`, so
 
-$$
+```math
 \limsup\frac G{D^2}
 \le
 \frac{(\lambda+\pi/2)^2}{4\pi}.
 \tag{GS.17}
-$$
+```
 
 Let `lambda_near` be the positive root of
 
-$$
+```math
 A_*-rac\pi4\lambda^2
 =
 \frac{(\lambda+\pi/2)^2}{4\pi}.
 \tag{GS.18}
-$$
+```
 
 Numerically,
 
-$$
+```math
 \lambda_{near}=0.46528\ldots .
 \tag{GS.19}
-$$
+```
 
 Thus Case I requires a surplus strictly larger than the final constant GS.1.
 
@@ -272,64 +272,64 @@ Thus Case I requires a surplus strictly larger than the final constant GS.1.
 
 Now assume
 
-$$
+```math
 p\le p_*:=\pi-\varepsilon_*.
 \tag{GS.20}
-$$
+```
 
 No stability theorem is needed. PI gives
 
-$$
+```math
 \frac{\operatorname{area}(F)}{D^2}
 \ge
 A_{PI}-o(1),
 \qquad
 A_{PI}=\frac12\sin(2\rho).
 \tag{GS.21}
-$$
+```
 
 Therefore
 
-$$
+```math
 \liminf\frac G{D^2}
 \ge
 A_{PI}-\frac\pi4\lambda^2.
 \tag{GS.22}
-$$
+```
 
 But GS.11 improves because `p<=p_*`:
 
-$$
+```math
 \limsup\frac G{D^2}
 \le
 \frac{(\lambda+p_*/2)^2}{4\pi}.
 \tag{GS.23}
-$$
+```
 
 Let `lambda_G` be the positive root of
 
-$$
+```math
 \boxed{
 A_{PI}-\frac\pi4\lambda^2
 =
 \frac{(\lambda+p_*/2)^2}{4\pi}.
 }
 \tag{GS.24}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 (\pi^2+1)\lambda^2
 +p_*\lambda
 +\frac{p_*^2}{4}
 -4\pi A_{PI}=0.
 \tag{GS.25}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 \lambda_G
 =
@@ -338,17 +338,17 @@ $$
 {2(\pi^2+1)}.
 }
 \tag{GS.26}
-$$
+```
 
 With `epsilon_*=0.0096`,
 
-$$
+```math
 \boxed{
 \lambda_G
 =0.464792250394\ldots .
 }
 \tag{GS.27}
-$$
+```
 
 Case II therefore requires `lambda>=lambda_G`.
 
@@ -360,16 +360,16 @@ Because Case I has the stronger lower bound GS.19, GS.27 holds universally. This
 
 Groemer's Hausdorff estimate scales as the `2/3` power of the perimeter deficit. To make the resulting Blaschke--Lebesgue area bound exceed PI's already strong
 
-$$
+```math
 A_{PI}=0.4978566363\ldots,
-$$
+```
 
 the perimeter must be extremely close to `pi D`. Consequently the explicit numerical improvement over JC is modest:
 
-$$
+```math
 0.4647922504-0.4633168954
 =0.0014753550\ldots .
-$$
+```
 
 JN's compactness theorem still proves that the true gap above `lambda_1` is positive without specifying its size. GS gives a certified explicit portion of that gap.
 
@@ -404,24 +404,24 @@ JN's compactness theorem still proves that the true gap above `lambda_1` is posi
 
 The current rigorous post-ZF floor is now explicit:
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}
 \ge0.4647922504\ldots-o(1).
-$$
+```
 
 Combined with ZK/DB,
 
-$$
+```math
 \frac{r_H}{D}
 +\frac13\frac{e_{BB}+2s_C}{D}
 \ge2\rho-o(1),
-$$
+```
 
 so a survivor near this floor has
 
-$$
+```math
 \frac{r_H}{D}
 \ge1.3232395163\ldots-o(1).
-$$
+```
 
 The next step should exploit the resulting simultaneous high diameter branching and positive loaded/pinned contact currency, rather than further optimizing a one-dimensional cavity constant.

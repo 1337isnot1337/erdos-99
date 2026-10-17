@@ -22,49 +22,49 @@ C44 proves that if the uniformly short C11 response mass is below `1/2`, then al
 
 In C44 Branch B there is an unpinned harmonic component `I_r` for which the **long response mass**
 
-$$
+```math
 L_r
 :=
 \sum_{\substack{s<t\in A_r\\|s-t|>\rho_0D}}c^{(r)}_{st}
 \tag{C45.1}
-$$
+```
 
 satisfies
 
-$$
+```math
 \boxed{L_r>\frac1{2K_0}.}
 \tag{C45.2}
-$$
+```
 
 Let `E_r` be the set consisting of all contact edges internal to `I_r` together with all contact edges from `I_r` to `B_+`. Then the positive contact-stress mass carried by this one harmonic component obeys
 
-$$
+```math
 \boxed{
 \sum_{e\in E_r}\alpha_e
 >
 \frac{\rho_0^2}{2K_0}D^2.
 }
 \tag{C45.3}
-$$
+```
 
 Since the normalized full contact stress satisfies
 
-$$
+```math
 \sum_{e\in C}\alpha_e=D^2,
-$$
+```
 
 this one unloaded component carries a fixed absolute fraction
 
-$$
+```math
 \boxed{\frac{\rho_0^2}{2K_0}>0}
 \tag{C45.4}
-$$
+```
 
 of the entire KKT contact-stress mass.
 
 Combined with C44, the same component also has
 
-$$
+```math
 \operatorname{diam}A_r>\rho_0D,
 \quad
 \delta_r>\rho_0D-2,
@@ -73,7 +73,7 @@ $$
 \quad
 t_r>\rho_0D+1.
 \tag{C45.5}
-$$
+```
 
 Thus the non-short-response branch is not merely a large geometric cell. It is one macroscopic harmonic cell simultaneously carrying linear boundary incidence, linear graph diameter, and a positive fraction of the full normalized contact stress.
 
@@ -83,38 +83,38 @@ Thus the non-short-response branch is not merely a large geometric cell. It is o
 
 In C44 Branch B,
 
-$$
+```math
 S_{short}<\frac12.
-$$
+```
 
 C41 gives total response conductance
 
-$$
+```math
 C_{resp}>1,
-$$
+```
 
 so the total response mass on pairs longer than `rho_0D` is
 
-$$
+```math
 C_{long}=C_{resp}-S_{short}>\frac12.
 \tag{C45.6}
-$$
+```
 
 C44 proves that no direct loaded-loaded unit contact and no nonmacroscopic harmonic component contributes to `C_long`. There are at most `K_0` macroscopic components. Therefore
 
-$$
+```math
 C_{long}=\sum_{r\in\mathcal M}L_r
 \tag{C45.7}
-$$
+```
 
 for a set `mathcal M` of at most `K_0` components.
 
 By pigeonhole, some `r in mathcal M` satisfies
 
-$$
+```math
 L_r\ge\frac{C_{long}}{|\mathcal M|}
 >\frac1{2K_0},
-$$
+```
 
 which proves C45.2. `square`
 
@@ -126,48 +126,48 @@ The C11 response is obtained by Schur complement of the positive contact Laplaci
 
 For one component, let `Lambda^(r)` be its Schur response on `A_r`, so
 
-$$
+```math
 -\Lambda^{(r)}_{st}=c^{(r)}_{st}\qquad(s\ne t).
-$$
+```
 
 The actual two coordinate functions on `I_r` are harmonic for the `alpha` conductances. Therefore their Dirichlet energy equals the boundary response energy:
 
-$$
+```math
 \boxed{
 \sum_{e=uv\in E_r}\alpha_e|u-v|^2
 =
 \sum_{s<t\in A_r}c^{(r)}_{st}|s-t|^2.
 }
 \tag{C45.8}
-$$
+```
 
 Every edge in `E_r` is a unit contact, hence
 
-$$
+```math
 \boxed{
 \sum_{e\in E_r}\alpha_e
 =
 \sum_{s<t\in A_r}c^{(r)}_{st}|s-t|^2.
 }
 \tag{C45.9}
-$$
+```
 
 Restrict the right side to the long response pairs counted by `L_r`. Every such pair has squared distance greater than `rho_0^2D^2`, so
 
-$$
+```math
 \sum_{e\in E_r}\alpha_e
 >
 \rho_0^2D^2L_r.
 \tag{C45.10}
-$$
+```
 
 Insert C45.2:
 
-$$
+```math
 \sum_{e\in E_r}\alpha_e
 >
 \frac{\rho_0^2}{2K_0}D^2.
-$$
+```
 
 This proves C45.3. `square`
 

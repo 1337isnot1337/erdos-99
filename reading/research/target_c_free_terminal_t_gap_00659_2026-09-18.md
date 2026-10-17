@@ -17,18 +17,18 @@
 The current terminal FREE package has an avoidable loss.  The latest quantitative
 incidence theorem was stated as a gap for the all-phase surplus
 
-$$
+```math
 \mu_D:=\frac{e_{BB}+2s_C-3k}{D},
 \qquad k=d_H+s_Z,
-$$
+```
 
 and then converted to
 
-$$
+```math
 \mu_D=t_D+\frac{m_B}{D}+o(1),
 \qquad
  t_D:=\frac{q-k}{D},
-$$
+```
 
 leaving a separate branch in which linearly many nonunit loaded-hull sides `m_B`
 could keep `t_D` near the old floor.
@@ -42,21 +42,21 @@ Retaining one further already-audited term, namely that dominant and complement
 terminal-edge energy supports are disjoint, sharpens the scalar contradiction enough
 to prove
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty} t_D
 \ge
 1.959852849540479\ldots .
 }
 \tag{TG.1}
-$$
+```
 
 This is an unconditional terminal FREE improvement of exactly `0.00659` above the
 previous feasibility floor
 
-$$
+```math
 1.953262849540479\ldots .
-$$
+```
 
 after the matched `g=0.007707` input.  In particular, the former alternative
 
@@ -71,23 +71,23 @@ in nonunit hull sides.
 
 The same improvement raises the raw terminal inactive-chamber interface floor to
 
-$$
+```math
 \boxed{
 \liminf\frac{\mathcal H_D}{D}
 \ge2.301389136473497\ldots,
 }
 \tag{TG.2}
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{
 \liminf\frac{A_{ch}-(\sqrt3/2)Z_{ch}}D
 \ge0.996530728089790\ldots .
 }
 \tag{TG.3}
-$$
+```
 
 No source-preserving diameter decrease is claimed.  C-II remains open.
 
@@ -97,37 +97,37 @@ No source-preserving diameter decrease is claimed.  C-II remains open.
 
 Retain the notation of the terminal surplus-endpoint theorem.  Put
 
-$$
+```math
 s_2:=\sqrt{\frac\pi{2\sqrt3}},
 \qquad
  g:=0.007707,
-$$
+```
 
-$$
+```math
 \tau_*:=\frac\pi2+g,
 \qquad
 A_0:=2s_2+g.
 \tag{1.1}
-$$
+```
 
 Let
 
-$$
+```math
 \tau_D:=T-2\sqrt{R_4}
 \tag{1.2}
-$$
+```
 
 be the stopped-train slack used in the modern terminal ledger.  The matched all-train
 theorem gives
 
-$$
+```math
 \frac{\tau_D}{D}\ge\tau_*-o(1).
 \tag{1.3}
-$$
+```
 
 The exact surplus decomposition already proved on the terminal FREE branch is
 
-$$
+```math
 \begin{aligned}
 \mu_DD={}&
 \frac{2P_F+2\sqrt{R_4}}5
@@ -139,26 +139,26 @@ $$
 -2c_I-4,
 \end{aligned}
 \tag{1.4}
-$$
+```
 
 with
 
-$$
+```math
 \rho_{rec}+\sigma_R=2\tau_D.
 \tag{1.5}
-$$
+```
 
 On the same full-core loaded-chord branch,
 
-$$
+```math
 \mu_DD=q+m_B-k-2c_I-4.
 \tag{1.6}
-$$
+```
 
 Subtract `m_B-2c_I-4` from (1.4) and (1.6).  Everything involving nonunit hull-side
 count and component deatomization cancels exactly.  This gives the finite identity
 
-$$
+```math
 \boxed{
 q-k
 =
@@ -168,66 +168,66 @@ q-k
 +\frac15\tau_D.
 }
 \tag{1.7}
-$$
+```
 
 Thus the terminal feasibility variable `t_D=(q-k)/D` already has its own nonnegative
 defect decomposition.
 
 Terminal full-core geometry gives
 
-$$
+```math
 \frac{P_F}{D}\to\pi,
 \qquad
 \frac{\sqrt{R_4}}D\to s_2.
 \tag{1.8}
-$$
+```
 
 Define
 
-$$
+```math
 \mu_*:=
 \frac{2\pi+2s_2}{5}+\frac{\tau_*}{5}
 =
 \frac\pi2+\frac{2s_2}{5}+\frac g5
 =1.953262849540479\ldots .
 \tag{1.9}
-$$
+```
 
 Pass to a subsequence on which the normalized nonnegative defect currencies converge,
 and write
 
-$$
+```math
 r:=\lim\frac{Q-f}{D},
 \qquad
 \delta:=\lim\frac{b-P_F}{D},
 \qquad
  a:=\lim\left(\frac{\tau_D}{D}-\tau_*\right).
 \tag{1.10}
-$$
+```
 
 By (1.3), `a>=0`.  Equations (1.7)--(1.9) give the exact asymptotic identity
 
-$$
+```math
 \boxed{
 \lim(t_D-\mu_*)
 =
 \frac25(r+\delta)+\frac15a.
 }
 \tag{1.11}
-$$
+```
 
 There is no `m_B` term.
 
 Consequently, if a terminal subsequence satisfies
 
-$$
+```math
 \limsup t_D\le\mu_*+\varepsilon,
 \tag{1.12}
-$$
+```
 
 then necessarily
 
-$$
+```math
 \boxed{
 0\le\delta\le\frac52\varepsilon,
 \qquad
@@ -236,7 +236,7 @@ $$
 0\le a\le5\varepsilon.
 }
 \tag{1.13}
-$$
+```
 
 These are exactly the stability bounds that the preceding quantitative incidence proof
 obtained from an upper bound on `mu_D`.  They actually follow from an upper bound on
@@ -248,16 +248,16 @@ obtained from an upper bound on `mu_D`.  They actually follow from an upper boun
 
 The normalized all-train scalar satisfies, along the same subsequence,
 
-$$
+```math
 C:=\lim\frac{T-q/2}{D}
 =A_0+a.
 \tag{2.1}
-$$
+```
 
 The hostile-audited two-bin exact-orbit theorem gives one dominant exact projective
 `pi/3` orbit and bounds all residual exact-orbit train mass by
 
-$$
+```math
 \boxed{
 r_2(C)
 :=
@@ -266,31 +266,31 @@ r_2(C)
 \Delta_2:=\frac\pi{2\sqrt3}.
 }
 \tag{2.2}
-$$
+```
 
 On the present live interval `r_2` is increasing.  Choose
 
-$$
+```math
 \boxed{\varepsilon_0:=0.00659.}
 \tag{2.3}
-$$
+```
 
 Then (1.13) gives
 
-$$
+```math
 a\le0.03295,
 \qquad
 \delta\le0.016475.
 \tag{2.4}
-$$
+```
 
 The exact-rational certificate proves
 
-$$
+```math
 \boxed{
 r_2(A_0+0.03295)<0.04111.}
 \tag{2.5}
-$$
+```
 
 Let `r_0=0.04111` for the rest of the finite scalar estimate.
 
@@ -301,18 +301,18 @@ Let `r_0=0.04111` for the rest of the finite scalar estimate.
 The hostile-audited shared routewise-retention theorem supplies retained dominant
 outer-occurrence mass `z` and retained complement O--O pair mass `p` satisfying
 
-$$
+```math
 \boxed{
 z+p\ge\frac\pi2-r_0-o(1).}
 \tag{3.1}
-$$
+```
 
 For
 
-$$
+```math
 F(z):=z-6\sin(z/6),
 \tag{3.2}
-$$
+```
 
 the dominant retained occurrences consume at least `F(z)D-o(D)` of actual outer
 directional energy.
@@ -320,43 +320,43 @@ directional energy.
 Let `e_c D` be the selected terminal-edge directional energy of the retained complement
 O--O family.  Complement train/rhombus incidence gives
 
-$$
+```math
 \boxed{
 p(1-\delta)-\frac{e_c}{2}
 \le\frac{r_0^2}{2}+o(1).}
 \tag{3.3}
-$$
+```
 
 The recent `0.00645` surplus-gap proof used only the coarse estimate `e_c<=delta`.
 The earlier hostile-audited complement-incidence theorem proves more: the dominant and
 complement selected terminal-edge supports are physically disjoint.  Therefore their
 energy payments add, and
 
-$$
+```math
 \boxed{F(z)+e_c\le\delta.}
 \tag{3.4}
-$$
+```
 
 Substituting (3.4) into (3.3), every survivor must satisfy
 
-$$
+```math
 \boxed{
 p
 \le
 \frac{r_0^2+\delta-F(z)}{2(1-\delta)}+o(1).}
 \tag{3.5}
-$$
+```
 
 Together with (3.1), this requires
 
-$$
+```math
 H(z):=
 \frac\pi2-r_0-z
 -
 \frac{r_0^2+\delta-F(z)}{2(1-\delta)}
 \le o(1).
 \tag{3.6}
-$$
+```
 
 This is the only change to the preceding incidence-gap architecture: retain the
 `-F(z)` term instead of discarding it.
@@ -367,83 +367,83 @@ This is the only change to the preceding incidence-gap architecture: retain the
 
 Set
 
-$$
+```math
 z_0:=1.5286.
 \tag{4.1}
-$$
+```
 
 The alternating Taylor bound
 
-$$
+```math
 \sin x\le x-\frac{x^3}{6}+\frac{x^5}{120}
 \qquad(x\ge0\text{ in the present range})
-$$
+```
 
 gives
 
-$$
+```math
 F(z_0)
 \ge
 \frac{z_0^3}{216}-\frac{z_0^5}{155520}.
 \tag{4.2}
-$$
+```
 
 The exact certificate proves
 
-$$
+```math
 \boxed{
 F(1.5286)>0.0164822351>0.016475.
 }
 \tag{4.3}
-$$
+```
 
 Hence (3.4) and (2.4) imply
 
-$$
+```math
 z<z_0.
 \tag{4.4}
-$$
+```
 
 Now
 
-$$
+```math
 H'(z)
 =-1+\frac{F'(z)}{2(1-\delta)}.
 \tag{4.5}
-$$
+```
 
 For `0<=z<=z_0`,
 
-$$
+```math
 F'(z)=1-\cos(z/6)
 \le\frac{z^2}{72}
 \le\frac{z_0^2}{72}
 <\frac1{30}.
 \tag{4.6}
-$$
+```
 
 Together with `delta<=0.016475`, this makes `H'(z)<0` throughout the feasible interval.
 Thus (4.4) gives
 
-$$
+```math
 H(z)>H(z_0).
 \tag{4.7}
-$$
+```
 
 At `z_0`, (4.3) says `delta-F(z_0)<0`, so a still weaker lower bound is
 
-$$
+```math
 H(z_0)
 >
 \frac\pi2-r_0-z_0
 -
 \frac{r_0^2}{2(1-0.016475)}.
 \tag{4.8}
-$$
+```
 
 Using a Machin-series lower enclosure for `pi`, the certificate proves
 
-$$
+```math
 \boxed{
 \frac\pi2-0.04111-1.5286
 -
@@ -451,14 +451,14 @@ $$
 >0.000227.
 }
 \tag{4.9}
-$$
+```
 
 This contradicts the necessary condition (3.6).  Therefore no terminal FREE survivor
 subsequence can satisfy (1.12) with `epsilon=0.00659`.
 
 We have proved
 
-$$
+```math
 \boxed{
 \liminf t_D
 \ge
@@ -467,7 +467,7 @@ $$
 1.959852849540479\ldots .
 }
 \tag{4.10}
-$$
+```
 
 This proves (TG.1).
 
@@ -481,59 +481,59 @@ of this one-variable endpoint is not the useful next route.
 
 The matched terminal chamber-interface derivation gives
 
-$$
+```math
 \frac{\mathcal H_D}{D}
 \ge t_D+\gamma_g-o(1),
 \qquad
 \gamma_g:=2s_2-\frac\pi2+g
 =0.341536286933018\ldots,
 \tag{5.1}
-$$
+```
 
 where
 
-$$
+```math
 \mathcal H_D=(b-P_F)+(Q+2f).
 \tag{5.2}
-$$
+```
 
 Insert (4.10):
 
-$$
+```math
 \boxed{
 \liminf\frac{\mathcal H_D}{D}
 \ge
 2.301389136473497\ldots .
 }
 \tag{5.3}
-$$
+```
 
 Canonical Section 85 then gives
 
-$$
+```math
 A_{ch}-a_0Z_{ch}
 \ge\frac{\sqrt3}{4}\mathcal H_D,
 \qquad a_0=\frac{\sqrt3}{2},
 \tag{5.4}
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \liminf\frac{A_{ch}-a_0Z_{ch}}D
 \ge0.996530728089790\ldots .
 }
 \tag{5.5}
-$$
+```
 
 The coefficient remains below one, so this is not by itself a closure.
 
 Also, because
 
-$$
+```math
 \mu_D=t_D+\frac{m_B}{D}+o(1)
-$$
+```
 
 with `m_B>=0`, (4.10) automatically strengthens the previous terminal surplus floor
 to the same numerical value.  The logical direction is now the useful one: the actual
@@ -559,10 +559,10 @@ terminal FREE branch in which nonunit hull-side count can keep `t_D` near the ol
 
 For comparison, canonical Section 63 also gives the finite relation
 
-$$
+```math
 u_B=(P_F-q)+(b-P_F)-m_B\ge0,
 \tag{6.1}
-$$
+```
 
 so on the terminal face, where `P_F-q=o(D)`, any linear `m_B` already forces comparable
 linear actual outer-walk detour `b-P_F`.  This is consistent with the cancellation
@@ -571,9 +571,9 @@ needs to split on `m_B` at all.
 
 The terminal FREE package now starts beyond
 
-$$
+```math
 \boxed{t_D=1.959852849540479\ldots-o(1)}.
-$$
+```
 
 The older high-`t` support-normal-form machinery that stopped below about `1.87` is
 therefore even farther from the live terminal branch.  The next useful theorem should

@@ -21,9 +21,9 @@
 
 The September 10 FDJ report excludes only the single FSJC endpoint
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to0.5882283437\ldots
-$$
+```
 
 when its equality chain drives the force-hull perimeter to `pi D`.  The same disk-limit
 mechanism is substantially stronger.  It excludes the entire maximal-perimeter regime
@@ -31,47 +31,47 @@ below an explicit larger threshold.
 
 Put
 
-$$
+```math
 \ell_D:=\frac{e_{BB}+2s_C}{D},
 \qquad
 p_D:=\frac{\operatorname{per}F}{D}.
-$$
+```
 
 Define
 
-$$
+```math
 \boxed{
 \lambda_{\rm disk}:=
 \frac{\pi\bigl(\sqrt{3\pi^2+4}-1\bigr)}{2(\pi^2+1)}
 =0.693272542288314\ldots .
 }
 \tag{MP.1}
-$$
+```
 
 Then every unbounded post-ZF survivor sequence with
 
-$$
+```math
 p_D\to\pi
-$$
+```
 
 satisfies
 
-$$
+```math
 \boxed{
 \liminf\ell_D\ge\lambda_{\rm disk}.
 }
 \tag{MP.2}
-$$
+```
 
 Equivalently, for every fixed `lambda_0<lambda_disk` there are
 `epsilon(lambda_0)>0` and `D_0(lambda_0)<infinity` such that every post-ZF survivor
 with `D>=D_0` and `ell_D<=lambda_0` obeys
 
-$$
+```math
 \boxed{
 p_D\le\pi-\epsilon(\lambda_0).}
 \tag{MP.3}
-$$
+```
 
 This is a branch elimination, not another unconditional scalar iteration: a low- or
 medium-pinned-surplus survivor must now lose a fixed fraction of the maximum possible
@@ -87,12 +87,12 @@ First, FS.4 and FD show that the relative-interior force hull is asymptotically
 centrally symmetric about the full-source circumcenter, and that maximal normalized
 perimeter forces a disk limit:
 
-$$
+```math
 p_D\to\pi
 \quad\Longrightarrow\quad
 \frac{\operatorname{area}F}{D^2}\to\frac\pi4.
 \tag{1.1}
-$$
+```
 
 Second, ZK/GU and JC compare the force-hull area not occupied by the unloaded attachment
 hulls with the total pinned/contact currency and the actual perimeter available to
@@ -125,35 +125,35 @@ statements used here.
 `target_c_full_source_circumradius_response_2026-09-10.md`, FS.4, gives for the
 full-source circumcenter `o`
 
-$$
+```math
 d_{\rm Haus}(F-o,-(F-o))=o(D).
 \tag{2.1}
-$$
+```
 
 More explicitly the right side is `2L_D` with `L_D=O(D^{3/4})`.
 
 `target_c_fs_max_perimeter_disk_and_fsjc_gap_2026-09-10.md`, FD, forms the central
 symmetral
 
-$$
+```math
 S=\frac12\bigl((F-o)-(F-o)\bigr).
-$$
+```
 
 The two facts needed here are exact:
 
-$$
+```math
 \operatorname{diam}S=D,
 \qquad
 \operatorname{per}S=\operatorname{per}F,
 \tag{2.2}
-$$
+```
 
 and FS.4 gives
 
-$$
+```math
 0\le\operatorname{area}S-\operatorname{area}F=o(D^2).
 \tag{2.3}
-$$
+```
 
 For a centrally symmetric diameter-`D` body, symmetry about the origin places it
 inside the radius-`D/2` disk.  If its perimeter divided by `D` tends to `pi`, Cauchy's
@@ -167,32 +167,32 @@ body is near a disk is used.
 Let the unloaded contact components have harmonic attachment hulls `P_r`, with
 pairwise disjoint interiors, and put
 
-$$
+```math
 C_D:=\frac1{D^2}\sum_r\operatorname{area}(P_r).
-$$
+```
 
 ZK gives
 
-$$
+```math
 L_2=6-3(d_H+s_Z)+e_{BB}+2s_C
 \le6+e_{BB}+2s_C
 \tag{2.4}
-$$
+```
 
 and the attachment-hull estimate
 
-$$
+```math
 \sum_r\operatorname{area}(P_r)
 \le\frac\pi4L_2^2+\pi L_2+\pi^2D.
 \tag{2.5}
-$$
+```
 
 Therefore, on any subsequence with `ell_D->lambda`,
 
-$$
+```math
 \boxed{\limsup C_D\le\frac\pi4\lambda^2.}
 \tag{2.6}
-$$
+```
 
 This is the only GU/ZK consequence used below.
 
@@ -200,36 +200,36 @@ This is the only GU/ZK consequence used below.
 
 Let
 
-$$
+```math
 G_D:=\frac1{D^2}
 \left(
 \operatorname{area}F-
 \sum_r\operatorname{area}(P_r)
 \right).
 \tag{2.7}
-$$
+```
 
 Write
 
-$$
+```math
 t_D:=\frac{e_{BB}}D,
 \qquad
 y_D:=\frac hD.
-$$
+```
 
 The proof of JC.10--JC.16 gives, before replacing `per(F)` by `pi D`,
 
-$$
+```math
 E_{out}+Q
 \le
  e_{BB}+
  \min\{h,\operatorname{per}F-h\}.
 \tag{2.8}
-$$
+```
 
 The same isoperimetric squaring and the `O(D)` charging remainder therefore give
 
-$$
+```math
 \boxed{
 G_D
 \le
@@ -239,7 +239,7 @@ G_D
 +o(1).
 }
 \tag{2.9}
-$$
+```
 
 This is exactly the actual-perimeter form already used in the FDJ report.  It is not a
 new cavity estimate.
@@ -257,35 +257,35 @@ Let `(A_j)` be any unbounded sequence of triangle-free, contact-then-diameter
 lexicographically normalized post-ZF global minimizers, with diameters `D_j->infinity`.
 Let `F_j` be their relative-interior force hulls.  If
 
-$$
+```math
 \frac{\operatorname{per}F_j}{D_j}\to\pi,
 \tag{3.1}
-$$
+```
 
 then
 
-$$
+```math
 \liminf_{j\to\infty}
 \frac{e_{BB,j}+2s_{C,j}}{D_j}
 \ge\lambda_{\rm disk}.
 \tag{3.2}
-$$
+```
 
 More sharply, if along a subsequence
 
-$$
+```math
 \frac{h_j}{D_j}\to y,
-$$
+```
 
 then, with
 
-$$
+```math
 m(y):=\min\{y,\pi-y\},
-$$
+```
 
 its pinned/contact limit `lambda` obeys
 
-$$
+```math
 \boxed{
 (\pi^2+1)\lambda^2
 +2m(y)\lambda
@@ -293,11 +293,11 @@ $$
 \ge0.
 }
 \tag{MP.4}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \lambda\ge
 \Lambda_{\rm disk}(y):=
@@ -306,7 +306,7 @@ $$
 {\pi^2+1}.
 }
 \tag{MP.5}
-$$
+```
 
 The minimum of `Lambda_disk(y)` over all admissible `y` occurs at `m(y)=pi/2`,
 and equals `lambda_disk` in MP.1.
@@ -322,77 +322,77 @@ unit-distance frameworks or dense isolated shell fillings.
 
 Assume (3.1).  Put
 
-$$
+```math
 \ell_j:=\frac{e_{BB,j}+2s_{C,j}}{D_j}.
-$$
+```
 
 If `liminf ell_j>=lambda_disk` there is nothing to prove.  Otherwise choose a
 subsequence realizing a finite limit
 
-$$
+```math
 \ell_j\to\lambda<\lambda_{\rm disk}<1.
 \tag{3.3}
-$$
+```
 
 The exact ZT/ZU ledgers and `q<=pi D` make all normalized defect currencies bounded,
 so after a further subsequence we may also assume
 
-$$
+```math
 t_j:=\frac{e_{BB,j}}{D_j}\to t,
 \qquad
  y_j:=\frac{h_j}{D_j}\to y.
 \tag{3.4}
-$$
+```
 
 Since `e_BB<=e_BB+2s_C`,
 
-$$
+```math
 0\le t\le\lambda.
 \tag{3.5}
-$$
+```
 
 By FD and (3.1),
 
-$$
+```math
 \frac{\operatorname{area}F_j}{D_j^2}
 \to\frac\pi4.
 \tag{3.6}
-$$
+```
 
 By (2.6),
 
-$$
+```math
 \limsup C_j\le\frac\pi4\lambda^2.
-$$
+```
 
 Hence the normalized attachment-cell gap satisfies
 
-$$
+```math
 \boxed{
 \liminf G_j
 \ge\frac\pi4(1-\lambda^2).
 }
 \tag{3.7}
-$$
+```
 
 On the other hand, (2.9), `p_j->pi`, and (3.4) give
 
-$$
+```math
 \limsup G_j
 \le
 \frac{(t+m(y))^2}{4\pi}
 \le
 \frac{(\lambda+m(y))^2}{4\pi}.
 \tag{3.8}
-$$
+```
 
 Combining (3.7) and (3.8),
 
-$$
+```math
 \pi^2(1-\lambda^2)
 \le(\lambda+m(y))^2.
 \tag{3.9}
-$$
+```
 
 Rearranging proves MP.4.  The left side of MP.4, viewed as a quadratic in nonnegative
 `lambda`, is strictly increasing above its unique positive root.  Solving for that
@@ -401,27 +401,27 @@ root gives MP.5.
 For `0<=m<=pi/2`, the threshold root decreases as `m` increases: at fixed `lambda`
 the expression
 
-$$
+```math
 (\pi^2+1)\lambda^2+2m\lambda+m^2-\pi^2
-$$
+```
 
 is increasing in `m`.  Thus the weakest threshold occurs at the largest possible
 `m`, namely `pi/2`.  Substituting `m=pi/2` gives
 
-$$
+```math
 (\pi^2+1)\lambda^2
 +\pi\lambda
 -\frac{3\pi^2}{4}=0.
 \tag{3.10}
-$$
+```
 
 Its positive root is exactly
 
-$$
+```math
 \lambda_{\rm disk}
 =
 \frac{\pi(\sqrt{3\pi^2+4}-1)}{2(\pi^2+1)}.
-$$
+```
 
 This contradicts (3.3), proving MP.2. `square`
 
@@ -431,25 +431,25 @@ Fix any `lambda_0<lambda_disk`.  Then there exist constants
 `epsilon(lambda_0)>0` and `D_0(lambda_0)<infinity` such that every post-ZF survivor
 with `D>=D_0` and
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\le\lambda_0
-$$
+```
 
 satisfies
 
-$$
+```math
 \frac{\operatorname{per}F}{D}
 \le\pi-\epsilon(\lambda_0).
-$$
+```
 
 #### Proof
 
 If not, for each positive integer `j` one could choose a survivor with `D_j>=j`,
 `ell_j<=lambda_0`, and
 
-$$
+```math
 p_j>\pi-\frac1j.
-$$
+```
 
 Then `p_j->pi` while `liminf ell_j<=lambda_0<lambda_disk`, contradicting MP.1.
 `square`
@@ -471,29 +471,29 @@ The current low-surplus C-II feasible region splits rigorously as follows.
 
 For every fixed
 
-$$
+```math
 \lambda_0<0.693272542288314\ldots,
-$$
+```
 
 a sufficiently large post-ZF survivor with
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\le\lambda_0
-$$
+```
 
 must have a **uniform force-hull perimeter deficit**
 
-$$
+```math
 \pi D-\operatorname{per}F\ge\epsilon(\lambda_0)D.
 \tag{4.1}
-$$
+```
 
 Thus the low-surplus branch can no longer approach the constant-width/disk endpoint.
 In particular FDJ is recovered immediately because
 
-$$
+```math
 \lambda_{FSJC}=0.5882283437\ldots<\lambda_{\rm disk}.
-$$
+```
 
 The theorem does not yet contradict the exact C-II face inequality.  A survivor may
 pay (4.1) while retaining enough outer-pocket/exceptional-face capacity to satisfy the
@@ -510,25 +510,19 @@ another endpoint compactness argument.
 > that a post-ZF survivor satisfying
 > 
 
-$$
-
+```math
 > e_{BB}+2s_C\le\lambda_0D,
 > \qquad
 > \pi D-\operatorname{per}F\ge\epsilon D
 > 
-$$
-
-
+```
 > for some fixed `epsilon>0` either obeys
 > 
 
-$$
-
+```math
 > b+Q>2h
 > 
-$$
-
-
+```
 > or admits an `n`-point unit-separated competitor of diameter `<D`.
 
 Because ZF gives `b+Q=2h-2s_Z<=2h`, either conclusion closes that low-surplus
@@ -599,11 +593,11 @@ constant.
 No computation is logically required.  The displayed decimal is the evaluation of the
 closed form MP.1.  The theorem is defined exactly by
 
-$$
+```math
 (\pi^2+1)\lambda_{\rm disk}^2
 +\pi\lambda_{\rm disk}
 -3\pi^2/4=0.
-$$
+```
 
 ---
 

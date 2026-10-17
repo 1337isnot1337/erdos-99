@@ -18,10 +18,10 @@
 
 The cyclic endpoint has
 
-$$
+```math
 |E(H)|=h=q-d_H,
 \qquad d_H\in\{0,1,2\}.
-$$
+```
 
 Thus its full actual diameter graph is within at most two edges of the extremal size of a convex thrackle. Extending the edge set greedily on the same cyclic vertex set gives a much sharper unified normal form.
 
@@ -29,18 +29,18 @@ Thus its full actual diameter graph is within at most two edges of the extremal 
 
 There exists a maximal convex thrackle `T` on the same `q` shell vertices such that
 
-$$
+```math
 H\subseteq T,
 \qquad
 |E(T)\setminus E(H)|=d_H.
 \tag{MT.1}
-$$
+```
 
 The maximal graph `T` consists of one odd cycle `C_T` with every remaining vertex a degree-one leaf attached directly to a cycle vertex. Moreover every added edge
 
-$$
+```math
 g\in E(T)\setminus E(H)
-$$
+```
 
 lies on `C_T`. Consequently:
 
@@ -50,16 +50,16 @@ lies on `C_T`. Consequently:
 
 Hence the complete cyclic endpoint admits a single description:
 
-$$
+```math
 \boxed{
 \text{odd-cycle-plus-leaves maximal convex thrackle with exactly }d_H\le2
 \text{ short cycle chords}.}
 \tag{MT.2}
-$$
+```
 
 The three phases are:
 
-$$
+```math
 \begin{array}{c|c|c}
  d_H & H & T\setminus H\\ \hline
 0 & T & \varnothing\\
@@ -67,7 +67,7 @@ $$
 2 & T-\{g_1,g_2\}\text{ is two trees} & \{g_1,g_2\}.
 \end{array}
 \tag{MT.3}
-$$
+```
 
 For `d_H=2`, both added chords join the two D2 tree components and are opposite-corner chords of the four-block partition.
 
@@ -83,28 +83,28 @@ Fix the `q` force-hull vertices in their cyclic convex order. A convex thrackle 
 
 The full diameter graph `H` is a convex thrackle. Because there are finitely many chords on the fixed vertex set, repeatedly add any chord meeting every current edge until no further chord can be added. This produces an edge-maximal convex thrackle `T` with
 
-$$
+```math
 H\subseteq T.
-$$
+```
 
 The standard classification of maximal convex thrackles says that `T` consists of one odd cycle plus leaves attached directly to cycle vertices. In particular
 
-$$
+```math
 |E(T)|=q.
 \tag{1.1}
-$$
+```
 
 Since
 
-$$
+```math
 |E(H)|=q-d_H,
-$$
+```
 
 we obtain
 
-$$
+```math
 |E(T)\setminus E(H)|=d_H,
-$$
+```
 
 which proves MT.1. `square`
 
@@ -118,15 +118,15 @@ DC says `H` is a connected spanning tree when `d_H=1`.
 
 Let
 
-$$
+```math
 E(T)\setminus E(H)=\{g\}.
-$$
+```
 
 If `g` were a pendant edge of the maximal odd-cycle-plus-leaves graph `T`, then deleting `g` would isolate its leaf endpoint. But
 
-$$
+```math
 H=T-g
-$$
+```
 
 is connected and spanning. Contradiction.
 
@@ -142,17 +142,17 @@ Thus the `d_H=1` full diameter graph is **exactly one cycle chord short** of a m
 
 DC/D2 give
 
-$$
+```math
 H=T_A\sqcup T_B,
-$$
+```
 
 where `T_A,T_B` are two nontrivial trees covering all shell vertices.
 
 Let
 
-$$
+```math
 E(T)\setminus E(H)=\{g_1,g_2\}.
-$$
+```
 
 Because `T` is connected, at least one added edge joins `T_A` to `T_B`.
 
@@ -172,25 +172,25 @@ This proves the added-edge assertion for `d_H=2`. `square`
 
 D2 writes the two tree bipartitions as four nonempty cyclic blocks
 
-$$
+```math
 A_0\mid B_0\mid A_1\mid B_1.
 \tag{4.1}
-$$
+```
 
 Take any chord
 
-$$
+```math
 g=uv,
 \qquad u\in A_s,\quad v\in B_t,
-$$
+```
 
 which can be added to `H` while preserving the convex-thrackle property.
 
 It must meet every A-edge and every B-edge. The same corner argument used in EU now applies without any KKT hypothesis. For example, if
 
-$$
+```math
 u\in A_0,\qquad v\in B_0,
-$$
+```
 
 then every A0 vertex other than `u` is incident to an A0--A1 tree edge that must cross `uv`; the cyclic endpoint criterion forces all such A0 vertices to lie on one side of `u` inside their block. Hence `u` is the A0 block endpoint at the opposite transition. The symmetric B argument makes `v` the corresponding B0 corner.
 
@@ -206,23 +206,23 @@ So the `d_H=2` phase is not merely two arbitrary diameter trees: it is obtained 
 
 Let `H` be the spanning tree and let
 
-$$
+```math
 e\in E(H)
-$$
+```
 
 be a zeroed nonleaf full-tree edge at a KKT endpoint. EU gives
 
-$$
+```math
 H-e=T_A\sqcup T_B
-$$
+```
 
 with four alternating bipartition blocks, and proves that `e` is an opposite-corner chord.
 
 Fix any maximal completion
 
-$$
+```math
 T=H+g.
-$$
+```
 
 Section 2 shows `g` lies on the unique odd cycle of `T`.
 
@@ -234,9 +234,10 @@ Therefore every zeroed nonleaf endpoint edge `e` sits in a four-block presentati
 
 - one actual length-`D` corner chord `e` whose KKT coefficient is zero at the selected endpoint;
 - one subdiameter maximal-completion corner chord `g` with
-  $$
+  ```math
   |g|<D.
-  $$
+  
+  ```
 
 The two chords together lie on the odd cycle of the maximal completion.
 
@@ -246,16 +247,16 @@ The two chords together lie on the odd cycle of the maximal completion.
 
 By definition `H` is the **full actual diameter graph** on the cyclic source. Thus if
 
-$$
+```math
 g\notin H,
-$$
+```
 
 then
 
-$$
+```math
 \boxed{|g|<D.}
 \tag{6.1}
-$$
+```
 
 No quantitative gap is claimed yet. The added chords may be arbitrarily close to diameter.
 
@@ -272,13 +273,15 @@ Let `C_T` have odd length `nu`. Every cyclic phase admits a maximal completion w
 3. all `q-nu` pendant edges have length exactly `D`;
 4. the shell itself is equilateral with side length one;
 5. RP gives
-   $$
+   ```math
    q=\pi D-\frac\pi{24D}+O(D^{-2});
-   $$
+   
+   ```
 6. UFB gives
-   $$
+   ```math
    F=\operatorname{conv}A;
-   $$
+   
+   ```
 7. SL says `F` is a local diameter minimum among convex equilateral `q`-gons.
 
 For `d_H=0`, RE upgrades the zero-defect case to exact Reinhardt equality.
@@ -331,9 +334,9 @@ The most direct unified geometric target is now:
 
 For a convex equilateral cyclic shell with a maximal-thrackle completion `T`, prove that if exactly `k<=2` cycle edges of `T` are subdiametral, then either
 
-$$
+```math
 \max_{g\in T\setminus H}(D-|g|)
-$$
+```
 
 has a quantitative lower bound incompatible with RP/local optimality, or the shell is forced into a finite near-Reinhardt normal form that can be checked against C56-G and the dense interior population.
 

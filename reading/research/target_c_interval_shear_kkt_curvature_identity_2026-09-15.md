@@ -21,94 +21,94 @@ rejected response theorem and without asserting any curvature sign.
 Let `tau_1,...,tau_m` be a dual-path family as in the interval-shear theorem.  For each
 selected cut `i`, let
 
-$$
+```math
 A_i:=\sum_{e\in E(\tau_i)}\alpha_e>0
-$$
+```
 
 be its total positive KKT contact weight and let `u_i` be its contact vector oriented
 from `T_i` to `S_i`.  For every actual diameter pair `h`, orient it from its lower
 layer to its higher layer and let `I_h` be its contiguous interval of crossed selected
 cuts.  Write
 
-$$
+```math
 r_h=p_{y_h}-p_{x_h},
 \qquad |r_h|=D,
 \qquad \beta_h>0.
-$$
+```
 
 Then Section 157 gives, for every selected cut,
 
-$$
+```math
 \boxed{
 A_i u_i=\sum_{h:\,i\in I_h}\beta_h r_h.
 }
 \tag{KC.1}
-$$
+```
 
 For an arbitrary real shear direction `c=(c_1,...,c_m)`, put
 
-$$
+```math
 A_h(c):=\sum_{i\in I_h}c_iJu_i,
 \qquad
 B_h(c):=\sum_{i\in I_h}c_i^2u_i.
 \tag{KC.2}
-$$
+```
 
 Along the exact finite motion `theta_i=t c_i`, every active diameter row has
 
-$$
+```math
 |r_h(t)|^2
 =D^2+2t\,r_h\cdot A_h(c)
 +t^2\bigl(|A_h(c)|^2-r_h\cdot B_h(c)\bigr)
 +O(t^3).
 \tag{KC.3}
-$$
+```
 
 The theorem is:
 
 ### Theorem KC.1 — weighted first variation vanishes identically
 
-$$
+```math
 \boxed{
 \sum_h\beta_h\,r_h\cdot A_h(c)=0
 \qquad\text{for every }c\in\mathbb R^m.
 }
 \tag{KC.4}
-$$
+```
 
 ### Theorem KC.2 — exact weighted quadratic coefficient
 
 Define
 
-$$
+```math
 \boxed{
 Q(c):=
 \sum_h\beta_h|A_h(c)|^2
 -\sum_{i=1}^m A_i c_i^2.
 }
 \tag{KC.5}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \sum_h\beta_h|r_h(t)|^2
 =D^2\sum_h\beta_h+t^2Q(c)+O(t^3).
 }
 \tag{KC.6}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 {1\over2}{d^2\over dt^2}
 \sum_h\beta_h|r_h(t)|^2\Big|_{t=0}
 =Q(c).
 }
 \tag{KC.7}
-$$
+```
 
 No sign of `Q(c)` is asserted.
 
@@ -118,21 +118,21 @@ No sign of `Q(c)` is asserted.
 
 The interval-shear theorem chooses nested shores
 
-$$
+```math
 S_1\supseteq\cdots\supseteq S_m
-$$
+```
 
 and defines a layer index `ell(v)`.  If `h=xy` is oriented so
 
-$$
+```math
 \ell(x)<\ell(y),
-$$
+```
 
 then for every `i in I_h` one has `x in T_i` and `y in S_i`.  Thus the single vector
 
-$$
+```math
 r_h=p_y-p_x
-$$
+```
 
 has exactly the orientation used in the Section 157 shore resultant for **every**
 selected cut it crosses.  No extra signs are needed in (KC.1).
@@ -146,7 +146,7 @@ interval reduction is stronger than an arbitrary collection of O--O cuts.
 
 Using (KC.2), interchange the finite sums:
 
-$$
+```math
 \begin{aligned}
 \sum_h\beta_h r_h\cdot A_h(c)
 &=\sum_h\beta_h
@@ -154,14 +154,14 @@ $$
 &=\sum_i c_i
   \left(\sum_{h:\,i\in I_h}\beta_h r_h\right)\cdot Ju_i.
 \end{aligned}
-$$
+```
 
 Apply (KC.1):
 
-$$
+```math
 \sum_h\beta_h r_h\cdot A_h(c)
 =\sum_i c_i A_i u_i\cdot Ju_i=0.
-$$
+```
 
 This proves (KC.4).  It is precisely KKT stationarity restricted to the exact
 multi-train contact-preserving motion, derived directly from the cut resultants.
@@ -173,13 +173,13 @@ multi-train contact-preserving motion, derived directly from the cut resultants.
 Multiply the `t^2` coefficient in (KC.3) by `beta_h` and sum over all actual diameter
 rows.  The positive part is already
 
-$$
+```math
 \sum_h\beta_h|A_h(c)|^2.
-$$
+```
 
 For the longitudinal part,
 
-$$
+```math
 \begin{aligned}
 \sum_h\beta_h r_h\cdot B_h(c)
 &=\sum_h\beta_h
@@ -188,7 +188,7 @@ $$
   \left(\sum_{h:\,i\in I_h}\beta_h r_h\right)\cdot u_i\\
 &=\sum_i A_i c_i^2,
 \end{aligned}
-$$
+```
 
 again by (KC.1).  Substitution gives (KC.5)--(KC.7).
 
@@ -202,56 +202,56 @@ projection by itself.
 
 Define the diameter co-crossing weight kernel
 
-$$
+```math
 W_{ij}:=
 \sum_{h:\,i,j\in I_h}\beta_h.
 \tag{KC.8}
-$$
+```
 
 Because every `I_h` is a contiguous interval, `W` is a sum of positive weighted
 interval indicator outer products.  In particular it is positive semidefinite.
 
 Expanding the first term of (KC.5),
 
-$$
+```math
 \sum_h\beta_h|A_h(c)|^2
 =\sum_{i,j}c_ic_j\,(u_i\cdot u_j)W_{ij}.
 \tag{KC.9}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 Q(c)=c^T\left(K-\operatorname{diag}(A_1,\ldots,A_m)\right)c,
 }
 \tag{KC.10}
-$$
+```
 
 where
 
-$$
+```math
 K_{ij}:=(u_i\cdot u_j)W_{ij}.
 \tag{KC.11}
-$$
+```
 
 The matrix `K` is positive semidefinite as well: it is the Gram sum
 
-$$
+```math
 K=\sum_h\beta_h V_h^TV_h,
-$$
+```
 
 where the two rows of `V_h` are the Cartesian components of the vectors
 `1_{i in I_h}Ju_i`.
 
 At the single-coordinate vector `c=e_i`,
 
-$$
+```math
 Q(e_i)=w_i-A_i,
 \qquad
 w_i:=\sum_{h:\,i\in I_h}\beta_h.
 \tag{KC.12}
-$$
+```
 
 Thus the old rejected strict inequality `A_i>w_i` would exactly say that every
 coordinate diagonal curvature is negative.  The present theorem does **not** assume or
@@ -265,9 +265,9 @@ On the phase-collapsed small-leaf rectangle, after trimming, all selected leaf
 contact directions lie in one projective window of width `O(D^{-1})`.  After choosing
 consistent real orientations along the dual path,
 
-$$
+```math
 u_i\cdot u_j=1-O(D^{-2})
-$$
+```
 
 uniformly on any fixed-density trimmed block.
 

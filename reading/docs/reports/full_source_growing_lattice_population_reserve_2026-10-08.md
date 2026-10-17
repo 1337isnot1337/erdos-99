@@ -26,19 +26,19 @@ C-II survivor whose population excess can be of boundary order.
 For every global unit-separated n-point planar diameter minimizer
 with `D>=3`, put
 
-$$
+```math
 \Delta=\frac{\pi}{2\sqrt3},\qquad g_A=n-1-\Delta D^2.
-$$
+```
 
 The [canonical full-source comparison](../targets/target-c/58-full-source-geometry-audit.md)
 gives `g_A>0`. The candidate strengthens it to
 
-$$
+```math
 \boxed{
 g_A\ge \frac{3^{5/4}}{256\pi}\sqrt D
 >\frac{\sqrt D}{256}.
 } \tag{1}
-$$
+```
 
 This uses no triangle-free hypothesis, KKT stress, contact-core
 identification or assumption about contact isolates. It concerns
@@ -51,21 +51,21 @@ Let `Lambda` be the separation-one triangular lattice, with
 covolume `a_0=sqrt(3)/2`. Let `F` be a fundamental parallelogram.
 For disk radius `R` define
 
-$$
+```math
 N_R(t)=\#((\Lambda-t)\cap B(0,R)),\qquad
 \mu_R=\frac{\pi R^2}{a_0}.
-$$
+```
 
 Use normalized integration on `F`. Unfolding the finite lattice
 sum gives `int_F N_R=mu_R`. For nonzero `k in Lambda^*`,
 the coefficient of `f_R=N_R-mu_R` is
 
-$$
+```math
 \widehat f_R(k)
 =\frac1{a_0}\int_{B(0,R)}e^{2\pi i k\cdot x}\,dx
 =\frac{R}{a_0|k|}J_1(2\pi R|k|).
 \tag{2}
-$$
+```
 
 No convergence of a Poisson or Fourier series is invoked.
 The angular identity for `J_0` is checked at
@@ -76,11 +76,11 @@ at order zero.
 
 Since `f_R` has mean zero,
 
-$$
+```math
 |\widehat f_R(k)|\le\int_F|f_R|
 =2\int_F(f_R)_+\le2\operatorname{ess\,sup}_F f_R.
 \tag{3}
-$$
+```
 
 Thus one sufficiently large nonzero coefficient forces a positive
 translation gain, even without selecting a maximizing translation.
@@ -92,20 +92,20 @@ The primary source checked is
 For real `z>0`, order `nu=1`, and one retained Hankel term,
 its real-argument first-neglected-term bound gives
 
-$$
+```math
 H_1^{(1)}(z)=\sqrt{\frac2{\pi z}},
 e^{i(z-3\pi/4)}(1+\mathcal R(z)),\qquad
 |\mathcal R(z)|\le\frac3{8z}.
-$$
+```
 
 The written conditions hold: `nu>-1/2` and the number of
 retained terms `ell=1>=max(nu-1/2,1)`. Taking real parts gives
 
-$$
+```math
 \left|\sqrt{\frac{\pi z}{2}}J_1(z)
 -\cos(z-3\pi/4)\right|\le\frac3{8z}.
 \tag{4}
-$$
+```
 
 This is a checked error bound with a stated domain, not a
 numerical asymptotic approximation.
@@ -115,31 +115,31 @@ numerical asymptotic approximation.
 Choose a shortest dual vector, of length `s=2/sqrt(3)`, and
 its double. Put
 
-$$
+```math
 z=2\pi Rs,\qquad \theta=z-3\pi/4,\qquad
 A_R=\frac{3^{1/4}}{\pi\sqrt2}\sqrt R.
-$$
+```
 
 Equations (2) and (4) give
 
-$$
+```math
 \frac{\widehat f_R(k)}{A_R}=\cos\theta+e_1,
 \qquad |e_1|\le\frac3{8z},
-$$
-$$
+```
+```math
 \frac{\widehat f_R(2k)}{A_R}
 =2^{-3/2}\cos(2\theta+3\pi/4)+e_2,
 \qquad |e_2|\le2^{-3/2}\frac3{16z}.
 \tag{5}
-$$
+```
 
 The two leading phases satisfy
 
-$$
+```math
 \max\{|\cos\theta|,
 2^{-3/2}|\cos(2\theta+3\pi/4)|\}\ge3/32.
 \tag{6}
-$$
+```
 
 Indeed, if `|cos theta|>=1/4`, the first term suffices.
 Otherwise write `c=cos theta` and `s_\theta=sin theta`.
@@ -151,15 +151,15 @@ it is at least `3/32`.
 For `z>=8`, the two remainder bounds in (5) are at most `3/64`.
 Therefore
 
-$$
+```math
 \max\{|\widehat f_R(k)|,|\widehat f_R(2k)|\}
 \ge(3/64)A_R,
-$$
-$$
+```
+```math
 \operatorname{ess\,sup}(N_R-\mu_R)
 \ge\frac3{128}A_R.
 \tag{7}
-$$
+```
 
 The constant is conservative. No claim of optimality is made.
 
@@ -172,10 +172,10 @@ lie strictly inside the disk. Any `n` of them would have diameter
 strictly less than `2R=D`, contradicting global minimality.
 Thus `N_R(t)<=n-1` almost everywhere, and
 
-$$
+```math
 g_A=n-1-\mu_R
 \ge\operatorname{ess\,sup}(N_R-\mu_R).
-$$
+```
 
 For `D>=3`, `z=2pi D/sqrt(3)>8`. Substituting (7) gives
 the first inequality in (1). The second follows from

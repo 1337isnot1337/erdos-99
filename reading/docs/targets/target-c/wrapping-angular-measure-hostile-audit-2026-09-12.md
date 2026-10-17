@@ -13,31 +13,31 @@ different local argument than the antipodal-neighborhood proof in
 
 The audited conclusion is
 
-$$
+```math
 |S|\le3\theta-2\pi,
 \qquad
 \alpha\le {3\theta-2\pi\over2},
-$$
+```
 
 for every wrapping Type-II attachment limit of angular diameter `theta<pi`. Combined
 with canonical Section 96,
 
-$$
+```math
 \alpha\ge {3\over2}\sin\theta,
-$$
+```
 
 this gives
 
-$$
+```math
 3\sin\theta\le3\theta-2\pi
-$$
+```
 
 and therefore
 
-$$
+```math
 \lambda\ge
 0.9642670742838973\ldots .
-$$
+```
 
 The five fragile steps were checked separately below.
 
@@ -46,19 +46,19 @@ The five fragile steps were checked separately below.
 Let the three Section-88 wrapping anchors be `x_1,x_2,x_3` in cyclic order, with
 anchor gaps `g_i` from `x_i` to `x_{i+1}`. Put
 
-$$
+```math
 \delta_i:=\theta-g_i,
 \qquad
 \phi:=2\pi-2\theta.
-$$
+```
 
 In gap `g_1`, Section 88 permits support only for length `delta_3` immediately after
 `x_1` and length `delta_2` immediately before `x_2`; cyclically the six allowed
 pieces have lengths
 
-$$
+```math
 \delta_1,\delta_1,\delta_2,\delta_2,\delta_3,\delta_3.
-$$
+```
 
 The two pieces of length `delta_i` are indeed the pieces immediately **before** `x_i`
 and immediately **after** `x_{i+1}`. They are outside the two endpoints of anchor gap
@@ -69,55 +69,55 @@ the paired argument.
 
 Parameterize the paired pieces by compact sets
 
-$$
+```math
 A_i,B_i\subset[0,\delta_i],
-$$
+```
 
 where `a` runs backward from `x_i` and `b` forward from `x_{i+1}`. The clockwise
 separation between the corresponding two circle points across gap `g_i` is
 
-$$
+```math
 q=g_i+a+b=\theta-\delta_i+a+b.
-$$
+```
 
 Because `0<=q<2pi` and the **minor** angular separation is at most `theta`, one must
 have
 
-$$
+```math
 q\le\theta
 \quad\text{or}\quad
 q\ge2\pi-\theta.
-$$
+```
 
 No unwrapping step may discard the second alternative. Substitution gives exactly
 
-$$
+```math
 a+b\le\delta_i
 \quad\text{or}\quad
  a+b\ge\delta_i+\phi.
-$$
+```
 
 ## 3. The reflection sign is one-sided and correct
 
 Set
 
-$$
+```math
 C_i:=\delta_i-B_i.
-$$
+```
 
 Writing `c=delta_i-b`, the preceding alternative becomes
 
-$$
+```math
 a\le c
 \quad\text{or}\quad
  a\ge c+\phi.
-$$
+```
 
 Hence
 
-$$
+```math
 (A_i-C_i)\cap(0,\phi)=\varnothing.
-$$
+```
 
 This is deliberately a one-sided difference exclusion. A symmetric exclusion is not
 claimed or needed.
@@ -126,38 +126,38 @@ claimed or needed.
 
 For every fixed `t` with `0<t<phi`, the difference exclusion implies
 
-$$
+```math
 A_i\cap(C_i+t)=\varnothing.
-$$
+```
 
 Moreover
 
-$$
+```math
 A_i\subset[0,\delta_i],
 \qquad
 C_i+t\subset[t,\delta_i+t].
-$$
+```
 
 Their disjoint union is therefore contained in an interval of length `delta_i+t`.
 Lebesgue measure and translation invariance give
 
-$$
+```math
 |A_i|+|B_i|
 =|A_i|+|C_i+t|
 \le\delta_i+t.
-$$
+```
 
 Sending `t downarrow0` proves
 
-$$
+```math
 |A_i|+|B_i|\le\delta_i.
-$$
+```
 
 Summing over the three paired pieces yields
 
-$$
+```math
 |S|\le\sum_i\delta_i=3\theta-2\pi.
-$$
+```
 
 This proof works for arbitrary compact, disconnected, or fractal support subsets and
 is independent of the antipodal-neighborhood proof in Section 100.
@@ -168,35 +168,35 @@ Let scaled attachment angle sets converge in Hausdorff distance to compact `S` a
 write `a_D/D -> alpha` along a subsequence. For every `epsilon>0`, outer regularity and
 compactness give a finite union of open angular intervals `U` with
 
-$$
+```math
 S\subset U,
 \qquad
 |U|\le|S|+\epsilon.
-$$
+```
 
 For all large `D`, every attachment angle lies in `U`. Canonical Section 88 equation
 (88.8), applied to this fixed finite interval union, gives
 
-$$
+```math
 a_D
 \le
 \left({|U|\over2}+o(1)\right)D+O_U(1).
-$$
+```
 
 The number of interval components is fixed before `D->infinity`, so the additive term
 vanishes after division by `D`. Thus
 
-$$
+```math
 \alpha\le{|U|\over2}
 \le{|S|+\epsilon\over2}.
-$$
+```
 
 Letting `epsilon downarrow0` proves
 
-$$
+```math
 \alpha\le{|S|\over2}
 \le{3\theta-2\pi\over2}.
-$$
+```
 
 This blocks the only serious compactness regression: `Theta(D)` unit-separated
 attachments cannot hide in a zero-measure Hausdorff limit because the fixed open cover
@@ -206,31 +206,31 @@ is chosen before the scale limit.
 
 Canonical Section 96 gives the independent floor
 
-$$
+```math
 \alpha\ge {3\over2}\sin\theta.
-$$
+```
 
 Therefore
 
-$$
+```math
 3\sin\theta\le3\theta-2\pi.
-$$
+```
 
 The scalar function
 
-$$
+```math
 F(\theta)=3\theta-2\pi-3\sin\theta
-$$
+```
 
 has derivative `3(1-cos theta)>0` on `[2pi/3,pi)`, so it has one root. The independent
 regression certificate
 `research/verify_target_c_paired_six_cluster_density.py` reproduces
 
-$$
+```math
 \theta_*=2.6053256746009029\ldots,
 \qquad
 \mu_*:=\sin(\theta_*/2)=0.9642670742838973\ldots .
-$$
+```
 
 The Section-88 cap-family argument depends only on excluding wrapping limits below a
 fixed threshold. Hence, for every fixed `mu<mu_*`, all shorter macroscopic cell limits

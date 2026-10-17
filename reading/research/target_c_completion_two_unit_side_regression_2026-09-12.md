@@ -14,9 +14,9 @@
 
 The live Type-II completion argument gives
 
-$$
+```math
 e_{BB}-C_A\le 2d_{tile},
-$$
+```
 
 because a completion triangle can contain two uncovered unit outer sides.  A proposed
 sharpening was to show that only `O(1)` completion triangles can contain two such
@@ -25,9 +25,9 @@ sides, which would give `e_{BB}-C_A\le d_{tile}+O(1)`.  That implication is fals
 The mistake is a turn reversal.  If two consecutive hull sides have unit length, the
 distance between their other endpoints is
 
-$$
+```math
 2\cos(\alpha/2)>1,
-$$
+```
 
 where `alpha` is the exterior turn.  Thus `alpha<2pi/3`; convex turning supplies no
 constant upper bound on the number of such vertices.
@@ -45,11 +45,11 @@ union is a triangulation of the original polygon, and every even vertex is an ea
 Each of its `m` ear triangles has two unit outer sides.  The cell subgraph has `m-2`
 triangles, none using a full polygon side, so
 
-$$
+```math
 d_{tile}=(2m-2)-(m-2)=m,
 \qquad
 e_{BB}-C_A=2m=2d_{tile}.
-$$
+```
 
 Thus the existing coefficient `2` is sharp for the outerplanar completion ledger, and
 the number of two-unit-side ears is linear in the number of outer sides.
@@ -61,11 +61,11 @@ cell-incidence or source-response information would be needed for a stronger cha
 
 ## Correct implication chain
 
-$$
+```math
 \text{completion triangulation}
 \to e_{BB}-C_A\le2d_{tile}
 \to \text{canonical joint-payment scalar}.
-$$
+```
 
 The replacement `2d_tile -> d_tile+O(1)` is rejected, and the current source-level
 obstruction remains the aggregate outer detour coupled to the actual loaded-hull and

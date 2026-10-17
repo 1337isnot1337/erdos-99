@@ -25,25 +25,25 @@ alpha_e > 0, beta_h > 0.
 
 For any planar placement `Q` of the core that preserves every old contact exactly, put `U=Q-P`. Then
 
-$$
+```math
 \boxed{\sum_{h=ij\in H_V}\beta_h\bigl(D^2-|Q_i-Q_j|^2\bigr)
       =\operatorname{tr}(U^T\Omega U)\ge0.}
-$$
+```
 
 Let `Pi` be orthogonal projection in vertex-coordinate space onto `span{1,Px,Py}`. If `v>3` and `lambda_+` is the least positive eigenvalue of `Omega`, then
 
-$$
+```math
 \operatorname{tr}(U^T\Omega U)
 \ge \lambda_+\|(I-Pi)Q\|_F^2.
-$$
+```
 
 Thus every contact-isometric core placement that is nonaffine in the source has strictly positive weighted old-diameter shortening, so at least one old core diameter pair becomes shorter, even if another old diameter pair lengthens. If the placement is noncongruent on `V` and no old core diameter pair lengthens, at least one strictly shortens. No uniform lower bound on `lambda_+` is asserted.
 
 For the full-source consequence, let `Q` be a placement of all labels in `A`, unit-separated, with diameter at most `D`, preserving every old contact at length one and creating no new unit contacts. Suppose its restriction to `V` is noncongruent. Let `H_A` be the set of all old diameter pairs in the full source; let `L` count those pairs that become shorter than `D`, and let `N` count formerly inactive unordered source-label pairs that become length `D`. Then
 
-$$
+```math
 \boxed{L\ge1,\qquad N\ge L.}
-$$
+```
 
 The source-label pairs in both counts include every contact-isolated label. In particular, no isolate-involving pair may be omitted from the diameter-pair comparison.
 

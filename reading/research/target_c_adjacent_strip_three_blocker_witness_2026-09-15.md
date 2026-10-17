@@ -17,32 +17,32 @@ The adjacent-strip opening theorem reduces all moving upper-distance constraints
 
 Let `R` be the middle source layer and let `a,b` be the two coherently oriented unit contact vectors on its boundary trains, each oriented from the fixed exterior into `R`.  For a switching diameter edge `h=xy`, put
 
-$$
+```math
 r_h=p_y-p_x,
 \qquad
 \delta_h=\mathbf 1_R(y)-\mathbf 1_R(x)\in\{-1,+1\},
-$$
+```
 
 and define its layer-oriented diameter vector
 
-$$
+```math
 \boxed{c_h:=\delta_h r_h.}
 \tag{TW.1}
-$$
+```
 
 Thus `c_h` always points from the endpoint outside `R` to the endpoint inside `R`, and
 
-$$
+```math
 |c_h|=D.
-$$
+```
 
 Under a layer translation `v`, every switching diameter satisfies exactly
 
-$$
+```math
 |r_h(v)|^2-D^2
 =2c_h\cdot v+|v|^2.
 \tag{TW.2}
-$$
+```
 
 The two boundary contacts become `a+v` and `b+v`.
 
@@ -54,52 +54,52 @@ This note proves that if the canonical source survives the strip-opening move, t
 
 Assume first
 
-$$
+```math
 \boxed{b\ne-a.}
 \tag{TW.3}
-$$
+```
 
 Consider the finite set of planar normals
 
-$$
+```math
 \mathcal N
 :=\{a,b\}\cup\{-c_h:h\in H_{sw}\}.
 \tag{TW.4}
-$$
+```
 
 ### Theorem TW.1
 
 For every canonical survivor in the nonantipodal case,
 
-$$
+```math
 \boxed{0\in\operatorname{conv}(\mathcal N).}
 \tag{TW.5}
-$$
+```
 
 Consequently there is a subfamily
 
-$$
+```math
 \mathcal N_0\subseteq\mathcal N,
 \qquad
 1\le|\mathcal N_0|\le3,
-$$
+```
 
 and coefficients
 
-$$
+```math
 \lambda_n\ge0,
 \qquad
 \sum_{n\in\mathcal N_0}\lambda_n=1,
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{
 \sum_{n\in\mathcal N_0}\lambda_n n=0.
 }
 \tag{TW.6}
-$$
+```
 
 At least one member of `N_0` is a switching-diameter normal `-c_h`.  In particular the complete strip obstruction has a certificate involving at most three switching diameter edges, and at most three constraints total if the two fixed boundary-contact normals are counted.
 
@@ -107,60 +107,60 @@ At least one member of `N_0` is a switching-diameter normal `-c_h`.  In particul
 
 Suppose instead that
 
-$$
+```math
 0\notin\operatorname{conv}(\mathcal N).
-$$
+```
 
 Because `conv(N)` is a compact convex set disjoint from the origin, strict separation gives a vector `w` and a number `eta>0` such that
 
-$$
+```math
 \boxed{n\cdot w\ge\eta>0\quad(n\in\mathcal N).}
 \tag{TW.7}
-$$
+```
 
 Thus
 
-$$
+```math
 a\cdot w>0,
 \qquad
 b\cdot w>0,
 \tag{TW.8}
-$$
+```
 
 and for every switching diameter edge
 
-$$
+```math
 c_h\cdot w<0.
 \tag{TW.9}
-$$
+```
 
 Translate the layer by
 
-$$
+```math
 v=s w,
 \qquad s>0.
-$$
+```
 
 The two boundary contacts satisfy
 
-$$
+```math
 |a+sw|^2
 =1+2s(a\cdot w)+s^2|w|^2>1,
-$$
+```
 
-$$
+```math
 |b+sw|^2
 =1+2s(b\cdot w)+s^2|w|^2>1
-$$
+```
 
 for every sufficiently small positive `s`.
 
 For a switching diameter, (TW.2) gives
 
-$$
+```math
 |r_h(sw)|^2-D^2
 =2s(c_h\cdot w)+s^2|w|^2<0
-$$
+```
 
 simultaneously for all `h` once `s` is sufficiently small.  Every nonswitching source-pair vector is unchanged exactly by the strip theorem.  Since the source is finite, shrinking `s` once more preserves every strict old lower-distance and strict old nondiameter slack.
 
@@ -168,9 +168,9 @@ The resulting source therefore has diameter at most `D`, remains unit-separated,
 
 Planar Caratheodory now gives (TW.6) with at most three normals.  Finally,
 
-$$
+```math
 0\notin\operatorname{conv}\{a,b\}
-$$
+```
 
 because `a,b` are unit vectors and `b!=-a`.  Hence every zero-convex-combination witness contains at least one switching-diameter normal.  `square`
 
@@ -202,25 +202,25 @@ No KKT coefficient lower bound is used in this reduction.
 
 Now assume
 
-$$
+```math
 \boxed{b=-a.}
 \tag{TW.10}
-$$
+```
 
 The linear inequalities `a dot v>0` and `b dot v>0` are then incompatible, but this is not a genuine blocker: a perpendicular translation opens both contacts quadratically.  Therefore Theorem TW.1 must not be applied blindly in this case.
 
 Let
 
-$$
+```math
 w:=Ja,
-$$
+```
 
 so `(a,w)` is an orthonormal basis.  Write
 
-$$
+```math
 q_h:=c_h\cdot w.
 \tag{TW.11}
-$$
+```
 
 ### Theorem TW.2
 
@@ -228,24 +228,24 @@ If the canonical source survives in the antipodal case, then two switching diame
 
 **Transverse sign pair.** There are switching edges `h_+,h_-` with
 
-$$
+```math
 \boxed{
 q_{h_+}>0,
 \qquad
 q_{h_-}<0.
 }
 \tag{TW.12}
-$$
+```
 
 **Longitudinal opposite pair.** There are switching edges `h_+,h_-` with
 
-$$
+```math
 \boxed{
 c_{h_+}=Da,
 \qquad
 c_{h_-}=-Da.}
 \tag{TW.13}
-$$
+```
 
 Hence the antipodal strip obstruction has a diameter witness of size at most two.
 
@@ -253,73 +253,73 @@ Hence the antipodal strip obstruction has a diameter witness of size at most two
 
 Assume no transverse sign pair exists.  Replacing `w` by `-w` if necessary, we may suppose
 
-$$
+```math
 q_h\le0
 \qquad(h\in H_{sw}).
 \tag{TW.14}
-$$
+```
 
 Every edge with `q_h<0` strictly shortens to first order under `v=sw`, `s>0`.
 
 For an edge with `q_h=0`, the equality `|c_h|=D` forces
 
-$$
+```math
 c_h=\sigma_h Da,
 \qquad
 \sigma_h\in\{-1,+1\}.
 \tag{TW.15}
-$$
+```
 
 Suppose the zero-transverse edges do not contain both signs.  If there are none, take simply `v=sw`.  Otherwise they all have one sign `sigma`.  Choose a fixed number
 
-$$
+```math
 {1\over2D}<\kappa<{1\over2},
 \tag{TW.16}
-$$
+```
 
 which exists for every `D>1`, and put
 
-$$
+```math
 v_s=sw-\sigma\kappa s^2a.
 \tag{TW.17}
-$$
+```
 
 For the two boundary contacts,
 
-$$
+```math
 |a+v_s|^2-1
 =2a\cdot v_s+|v_s|^2,
-$$
+```
 
-$$
+```math
 |-a+v_s|^2-1
 =-2a\cdot v_s+|v_s|^2.
-$$
+```
 
 Since
 
-$$
+```math
 |v_s|^2=s^2+\kappa^2s^4,
 \qquad
 |a\cdot v_s|=\kappa s^2,
-$$
+```
 
 both expressions are positive for all sufficiently small `s>0` because `kappa<1/2`.
 
 For a zero-transverse diameter edge, `c_h=sigma Da`, so
 
-$$
+```math
 2c_h\cdot v_s+|v_s|^2
 =(-2D\kappa+1)s^2+\kappa^2s^4<0
-$$
+```
 
 for small `s`, using `kappa>1/(2D)`.
 
 Every edge with `q_h<0` still has a negative linear term
 
-$$
+```math
 2s q_h
-$$
+```
 
 which dominates the `O(s^2)` correction.  Hence all switching diameters strictly shorten for sufficiently small `s` while both boundary contact families strictly open.  As in Theorem TW.1, all remaining strict source-pair slacks survive after shrinking `s`, contradicting global/contact minimality.
 

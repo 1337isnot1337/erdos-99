@@ -17,29 +17,29 @@ The fourteen all-root interior-domination disjunctions do not, by themselves, cr
 
 For an unordered reciprocal segment `e`, let
 
-$$
+```math
 \delta(e)=|e\cap\{6,7\}|,
-$$
+```
 
 so a hull-hull segment has level `0`, a hull-interior segment has level `1`, and the interior-interior segment `67` has level `2`.
 
 A domination branch for root `r`, interior target `t`, and one chosen bracketing hull endpoint `h` is
 
-$$
+```math
 |y_t-y_r|<|y_h-y_r|.
-$$
+```
 
 If `r` is a hull vertex, the target segment `rt` is hull-interior while `rh` is hull-hull, hence
 
-$$
+```math
 \delta(rt)=1,\qquad \delta(rh)=0.
-$$
+```
 
 If `r` is the other interior vertex, the target segment is `67` while `rh` is hull-interior, hence
 
-$$
+```math
 \delta(rt)=2,\qquad \delta(rh)=1.
-$$
+```
 
 Thus every selected strict comparison decreases `delta` by exactly one when oriented from the shorter target segment toward the longer chosen endpoint. A directed cycle made only of domination-branch comparisons is therefore impossible.
 

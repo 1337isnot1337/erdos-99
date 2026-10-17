@@ -20,158 +20,158 @@ SCC reduces the RCC slope-one endpoint to an `o(D^2)` force-visible contact core
 
 Let
 
-$$
+```math
 L:=e_{BB}+2s_C,
 \qquad
 k:=d_H+s_Z.
-$$
+```
 
 The finite post-ZF identities give
 
-$$
+```math
 q=x_B+Q+2k,
 \tag{SOC.1}
-$$
+```
 
 and the hull-side contact theorem gives
 
-$$
+```math
 x_B+e_{BB}\ge q.
 \tag{SOC.2}
-$$
+```
 
 Therefore, without any asymptotic assumption,
 
-$$
+```math
 \boxed{e_{BB}\ge Q+2k,}
 \tag{SOC.3}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{x_B\ge q-L+2s_C\ge q-L.}
 \tag{SOC.4}
-$$
+```
 
 Now assume the S1E slope-one endpoint
 
-$$
+```math
 D\varepsilon\to0,
 \qquad
 L=D+o(D).
 \tag{SOC.5}
-$$
+```
 
 S1E gives
 
-$$
+```math
 k=o(D),
 \qquad
 h=q-o(D).
 \tag{SOC.6}
-$$
+```
 
 DB gives
 
-$$
+```math
 \liminf \frac hD\ge2\rho,
 \qquad
 \rho=\cos\rho=0.7390851332\ldots .
 \tag{SOC.7}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \liminf\frac{x_B}{D}
 \ge2\rho-1
 =0.4781702664\ldots .
 }
 \tag{SOC.8}
-$$
+```
 
 So the RCC slope-one survivor is forced into the **linear outer-walk phase**. It cannot enter the `x_B=o(D)` near-circle phase of the separate outer-shell route.
 
 There is a second, more structural consequence. ZU gives the exact component-count identity
 
-$$
+```math
 \boxed{
 c_I+e_{BB}+s_C=q-2+k.}
 \tag{SOC.9}
-$$
+```
 
 Combining this with `L=e_{BB}+2s_C` gives
 
-$$
+```math
 \boxed{
 c_I=q-L+s_C-2+k.}
 \tag{SOC.10}
-$$
+```
 
 At slope one,
 
-$$
+```math
 \boxed{
 \frac{c_I}{D}
 =
 \frac qD-1+rac{s_C}{D}+o(1).
 }
 \tag{SOC.11}
-$$
+```
 
 Using DB again,
 
-$$
+```math
 \boxed{
 c_I\ge(2\rho-1)D+s_C-o(D).}
 \tag{SOC.12}
-$$
+```
 
 S1E and SCC give one unique giant harmonic component `I_*` and
 
-$$
+```math
 \sum_{r\ne *}\delta_r=o(D).
 \tag{SOC.13}
-$$
+```
 
 Every connected harmonic component with at least two internal vertices has graph diameter at least one. Therefore the number of nonsingleton components other than `I_*` is at most the left side of SOC.13 and is `o(D)`. Consequently the number `N_1` of singleton unloaded harmonic components satisfies
 
-$$
+```math
 \boxed{
 N_1=c_I-o(D)
 \ge(2\rho-1)D+s_C-o(D).
 }
 \tag{SOC.14}
-$$
+```
 
 Each singleton component is one unpinned source point with no internal contact edge. C40/ZK gives for every component
 
-$$
+```math
 t_r-\delta_r-3=s_r+r_r.
-$$
+```
 
 For a singleton, `n_r=1`, `e_r=0`, `delta_r=0`, hence its Eppstein slack is
 
-$$
+```math
 r_r=2n_r-\delta_r-2-e_r=0.
-$$
+```
 
 Thus every singleton satisfies the exact relation
 
-$$
+```math
 \boxed{t_r=3+s_r\ge3.}
 \tag{SOC.15}
-$$
+```
 
 In particular SOC.14 forces a linear cloud of positive-contact singleton components, each attached directly to at least three loaded terminals. The total pinned-stress surplus on these singleton stars is exactly
 
-$$
+```math
 \sum_{r\ singleton}(t_r-3)
 \le s_C.
 \tag{SOC.16}
-$$
+```
 
 Therefore, if a later argument forces `s_C=o(D)`, then all but `o(D)` of the singleton cloud are exact three-contact tripods.
 
@@ -181,29 +181,29 @@ Therefore, if a later argument forces `s_C=o(D)`, then all but `o(D)` of the sin
 
 Starting from SOC.1,
 
-$$
+```math
 q-x_B=Q+2k.
-$$
+```
 
 SOC.2 therefore gives
 
-$$
+```math
 e_{BB}\ge q-x_B=Q+2k,
-$$
+```
 
 which is SOC.3.
 
 Also
 
-$$
+```math
 x_B\ge q-e_{BB}.
-$$
+```
 
 Since `e_BB=L-2s_C`,
 
-$$
+```math
 x_B\ge q-L+2s_C,
-$$
+```
 
 which proves SOC.4.
 
@@ -215,46 +215,46 @@ This form is useful because it records the pinned-stress dependence rather than 
 
 Under SOC.5, SOC.4 gives
 
-$$
+```math
 \frac{x_B}{D}
 \ge
 \frac qD-1+\frac{2s_C}{D}-o(1).
 \tag{2.1}
-$$
+```
 
 S1E gives `q-h=o(D)`. Hence DB's post-ZF diameter-edge lower bound SOC.7 implies
 
-$$
+```math
 \liminf q/D\ge2\rho.
-$$
+```
 
 Dropping the nonnegative `2s_C/D` term proves SOC.8.
 
 The stronger parameterized form is
 
-$$
+```math
 \boxed{
 \liminf\frac{x_B-2s_C}{D}
 \ge2\rho-1.
 }
 \tag{SOC.17}
-$$
+```
 
 Thus any slope-one subsequence with
 
-$$
+```math
 \frac{s_C}{D}\to\sigma
-$$
+```
 
 obeys
 
-$$
+```math
 \boxed{
 \liminf\frac{x_B}{D}
 \ge2\rho-1+2\sigma.
 }
 \tag{SOC.18}
-$$
+```
 
 Since `x_B<=q<=pi D`, this is compatible with all presently known global bounds; it is not by itself a contradiction.
 
@@ -264,20 +264,20 @@ Since `x_B<=q<=pi D`, this is compatible with all presently known global bounds;
 
 ZU gives SOC.9. Substitute
 
-$$
+```math
 e_{BB}=L-2s_C
-$$
+```
 
 to obtain
 
-$$
+```math
 \begin{aligned}
 c_I
 &=q-2+k-e_{BB}-s_C\\
 &=q-2+k-(L-2s_C)-s_C\\
 &=q-L+s_C-2+k,
 \end{aligned}
-$$
+```
 
 which proves SOC.10.
 
@@ -293,26 +293,26 @@ This is a useful correction to the informal picture of the slope-one endpoint. T
 
 Let `N_{>=2}` be the number of components other than `I_*` with at least two internal vertices. Every such connected graph has
 
-$$
+```math
 \delta_r\ge1.
-$$
+```
 
 Therefore
 
-$$
+```math
 N_{>=2}
 \le
 \sum_{r\ne *}\delta_r
 =o(D)
-$$
+```
 
 by S1E. Hence
 
-$$
+```math
 N_1
 =c_I-1-N_{>=2}
 =c_I-o(D).
-$$
+```
 
 Insert SOC.12 to prove SOC.14.
 
@@ -324,15 +324,15 @@ The conclusion is independent of the SCC `o(D^2)` population estimate; it uses o
 
 For a singleton `I_r={x}`, there are no internal contact edges. Its attachment contacts are exactly all positive contact rows incident to `x`. The component identities are
 
-$$
+```math
 s_r=e_r+t_r-2n_r-1=t_r-3,
-$$
+```
 
 and
 
-$$
+```math
 r_r=2n_r-\delta_r-2-e_r=0.
-$$
+```
 
 Thus `t_r=3+s_r`, proving SOC.15.
 
@@ -340,11 +340,11 @@ Because the source is triangle-free, no two loaded neighbors of the same singlet
 
 Positive equilibrium at the unpinned singleton also gives
 
-$$
+```math
 \sum_{b\in A_r}\alpha_{xb}(b-x)=0,
 \qquad
 \alpha_{xb}>0.
-$$
+```
 
 Hence `x` lies in the relative interior of `conv(A_r)`; since at least three distinct contact directions positively span the plane, it lies in the interior of the attachment polygon. This is the geometric “tripod cloud” interpretation.
 
@@ -356,11 +356,11 @@ Summing `s_r=t_r-3` over singleton components gives SOC.16 because `s_C=sum_r s_
 
 SCC proves
 
-$$
+```math
 |V(C)|=o(D^2),
 \qquad
 n-|V(C)|=\Theta(D^2).
-$$
+```
 
 SOC refines the sparse visible core itself:
 
@@ -390,15 +390,15 @@ This makes the next global-capacity question more specific than SCC alone.
 
 There are now two coupled linear resources in the slope-one endpoint:
 
-$$
+```math
 x_B\ge(2\rho-1)D+2s_C-o(D),
-$$
+```
 
 and
 
-$$
+```math
 N_1\ge(2\rho-1)D+s_C-o(D).
-$$
+```
 
 The next useful theorem should exploit the **noncrossing attachment incidence** of the singleton cloud together with the thin giant attachment hull from SCC.
 

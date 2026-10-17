@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_rhombic_radial_vertex_incidence_2026-09-09.md) · source SHA-256 `a67c7984f0e4bc3a98a37b2ded5d3b30fcbb12cf37795edf168cd84e5f1bbe4b`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-F3CF8901C039","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZRI: almost every bulk rhombus has two vanishing-stress transverse sides
 
@@ -29,26 +31,28 @@ Current main's PI theorem has meanwhile raised the universal force-hull area flo
 
 ZCQ gives, for fixed bridge fraction `eta>0`,
 
-$$
+```math
  v\ge c_\eta D^2-o(D^2)
 \tag{1.1}
-$$
+```
 
 with `c_eta>0`.
 
 C42 gives
 
-$$
+```math
 F_4\ge v-O(D),
 \tag{1.2}
+```
 
 where `F_4` is the number of bounded quadrilateral contact faces. Every such face is a strict unit rhombus. Therefore
 
-\[
+```math
 \boxed{
 F_4\ge c_\eta D^2-o(D^2).
 }
 \tag{ZRI1}
+```
 
 Only `O(1)` rhombi can be incident to the distinguished center `z`, because `deg_C(z)<=3`. They are discarded below.
 
@@ -58,63 +62,65 @@ Only `O(1)` rhombi can be incident to the distinguished center `z`, because `deg
 
 Let
 
-\[
+```math
 c_*:=\cos15^\circ.
-$$
+```
 
 A contact `uv` is strongly radial when
 
-$$
+```math
 \bigl||u-z|-|v-z|\bigr|>c_*.
-$$
+```
 
 Fix `v!=z`, put `r=|v-z|>=1`, and suppose `u` is a smaller-radius strongly-radial neighbor. With
 
-$$
+```math
 d=r-|u-z|>c_*,
-$$
+```
 
 ZRP computes the inward radial projection
 
-$$
+```math
 n_{in}\cdot(u-v)
 =d+\frac{1-d^2}{2r}
 \ge d
 >\cos15^\circ.
 \tag{2.1}
-$$
+```
 
 Thus the ray `vu` lies within strictly less than `15 degrees` of the inward radial ray.
 
 Now suppose `w` is a larger-radius strongly-radial neighbor and put
 
-$$
+```math
 d'=|w-z|-r>c_*.
-$$
+```
 
 ZRP computes the outward radial projection
 
-$$
+```math
 n_{out}\cdot(w-v)
 =d'-\frac{1-d'^2}{2r}.
 \tag{2.2}
+```
 
 For `r>=1` and `d'>c_*`, this is larger than
 
-\[
+```math
 c_*-\frac{1-c_*^2}{2}
 >\frac{\sqrt3}{2}.
 \tag{2.3}
+```
 
 Hence `vw` lies within strictly less than `30 degrees` of the outward radial ray.
 
 The inward and outward radial rays are opposite. Therefore the smaller angle between the two contact rays `vu` and `vw` is strictly larger than
 
-\[
+```math
 180^\circ-15^\circ-30^\circ
 =135^\circ.
 \tag{2.4}
-$$
+```
 
 Thus:
 
@@ -130,11 +136,12 @@ ZRP already proves there can be at most one inward and at most one outward stron
 
 Every bounded quadrilateral contact face is a nondegenerate unit rhombus. Unit separation makes both diagonals strictly larger than one, so every interior angle lies strictly between
 
-$$
+```math
 60^\circ
 \quad\text{and}\quad
 120^\circ.
 \tag{3.1}
+```
 
 Take a strict-rhombus face not incident to `z`. If two of its adjacent sides were strongly radial, they would meet at a face vertex `v!=z`. Lemma ZRI.1 would make their angle greater than `135 degrees`, contradicting (3.1).
 
@@ -146,19 +153,20 @@ A four-cycle with no adjacent selected edges contains at most two selected edges
 
 Every strict-rhombus face not incident to `z` has
 
-\[
+```math
 \boxed{
 |E(F)\cap C_{rad}|\le2,
 }
 \tag{ZRI2}
+```
 
 and if equality holds, the two radial sides are opposite.
 
 Equivalently, every such rhombus has at least two boundary contacts in
 
-\[
+```math
 E_{nr}:=C\setminus C_{rad}.
-$$
+```
 
 ---
 
@@ -168,16 +176,16 @@ Count incidences `(F,e)` where `F` is a strict-rhombus face not incident to `z` 
 
 By ZRI2 every such face contributes at least two incidences. Every plane contact edge is incident to at most two bounded faces. Hence
 
-$$
+```math
 2(F_4-O(1))
 \le2|E_{nr}|.
-$$
+```
 
 Therefore:
 
 ### Corollary ZRI.3 — quadratic transverse-edge population
 
-$$
+```math
 \boxed{
 |E_{nr}|
 \ge
@@ -186,6 +194,7 @@ F_4-O(1)
 c_\eta D^2-o(D^2).
 }
 \tag{ZRI3}
+```
 
 ---
 
@@ -193,35 +202,38 @@ c_\eta D^2-o(D^2).
 
 ZRP/C68 gives
 
-\[
+```math
 \boxed{
 \sum_{e\in E_{nr}}\alpha_e=o(D^2)
 }
 \tag{5.1}
+```
 
 under `D epsilon->0`.
 
 Combined with ZRI3,
 
-\[
+```math
 \boxed{
 \frac1{|E_{nr}|}\sum_{e\in E_{nr}}\alpha_e=o(1).
 }
 \tag{ZRI4}
+```
 
 Choose a sequence `a_D>0` tending to zero sufficiently slowly that
 
-\[
+```math
 \frac1{a_DD^2}
 \sum_{e\in E_{nr}}\alpha_e
 \to0.
 \tag{5.2}
+```
 
 Then the number of nonradial contacts satisfying
 
-\[
+```math
 \alpha_e\ge a_D
-$$
+```
 
 is `o(D^2)`.
 
@@ -235,7 +247,7 @@ Thus:
 
 All but `o(D^2)` strict-rhombus faces have at least two boundary contacts `e_1,e_2` such that
 
-$$
+```math
 \boxed{
  e_1,e_2\notin C_{rad},
 \qquad
@@ -244,6 +256,7 @@ $$
 a_D\to0.
 }
 \tag{ZRI5}
+```
 
 If the rhombus has two radial sides, they form the opposite side pair and the other opposite side pair is entirely weak/nonradial.
 
@@ -279,18 +292,18 @@ The oblique-grid regression shows that local rhombus equilibrium alone allows th
 
 Current main proves
 
-\[
+```math
 \liminf area(F)/D^2
 \ge
 A_{PI}=0.4978566363\ldots
-$$
+```
 
 and forces a quadratic attachment-cell gap whenever
 
-$$
+```math
 \lambda_2:=\limsup(e_{BB}+2s_C)/D
 <0.7961725673\ldots .
-$$
+```
 
 ZCQ's explicit lower coefficient `c_eta` depends on the bridge fraction `eta` and can be arbitrarily small as `eta->0`. Therefore PI's area floor plus ZCQ's packing lower bound does **not** yield a universal numerical contradiction.
 

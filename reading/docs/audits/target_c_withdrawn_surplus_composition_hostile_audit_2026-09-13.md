@@ -16,36 +16,36 @@ composition must not be used as a theorem premise. Canonical state is unchanged.
 
 The finite attachment identity is
 
-$$
+```math
 c_I+s_C=m+k-2.
-$$
+```
 
 After division by `D`, this is
 
-$$
+```math
 \frac mD=c+s-\kappa+\frac2D,
-$$
+```
 
 not `c+s-kappa+2`. Hence
 
-$$
+```math
 e=t+2\kappa-c-s-\frac2D,
 \qquad
 \frac{e_{BB}+2s_C-3k}{D}
 =t-\kappa+s-c-\frac2D.
-$$
+```
 
 Using `e>=0` gives only
 
-$$
+```math
 2t+\kappa\ge z_0-o(1),
-$$
+```
 
 while the separate moment input gives
 
-$$
+```math
 5t-2\kappa\ge A_0-o(1).
-$$
+```
 
 There is no normalized `+4` term. The old `2.0585` interval came from treating the
 finite integer `2` as a quantity of order `D`.
@@ -54,9 +54,9 @@ finite integer `2` as a quantity of order `D`.
 
 The corrected scalar values
 
-$$
+```math
 t=1.9,\quad \kappa=0,\quad e=0.9,\quad c=0,\quad s=1
-$$
+```
 
 satisfy the corrected asymptotic identities and the displayed surplus and moment
 lower bounds. The accompanying verifier passes these exact rational checks. This is

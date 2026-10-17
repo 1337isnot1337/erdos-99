@@ -22,30 +22,30 @@
 Let `A` be any global minimum-diameter unit-separated source, not necessarily
 triangle-free, and put
 
-$$
+```math
 K=\operatorname{conv}A,
 \qquad
 D=\operatorname{diam}A,
 \qquad
 P=\operatorname{per}K.
-$$
+```
 
 The exact whole-source Oler/lattice allowance already implies
 
-$$
+```math
 \delta_K:=\frac\pi4D^2-\operatorname{area}K
 <\frac{\sqrt3}{4}P.
-$$
+```
 
 Combining this with the planar isoperimetric inequality gives the stronger exact
 perimeter statement
 
-$$
+```math
 \boxed{
 0\le\pi D-P<\frac{\pi\sqrt3}{2}.
 }
 \tag{CP.1}
-$$
+```
 
 Thus every global source hull has perimeter within an **absolute constant** of the
 maximum possible perimeter `pi D`.  This sharpens the previously used conclusion
@@ -58,44 +58,44 @@ hull.
 
 For
 
-$$
+```math
 a_0=\frac{\sqrt3}{2},
 \qquad
 c_0=\frac{\sqrt3}{4},
-$$
+```
 
 define the full-source Oler surplus
 
-$$
+```math
 \mathscr O_A
 =\operatorname{area}K+c_0P-a_0(n-1).
-$$
+```
 
 Oler gives
 
-$$
+```math
 \mathscr O_A\ge0.
 \tag{1.1}
-$$
+```
 
 The strict translated-triangular-lattice comparison at the global minimum diameter
 `D(n)` gives
 
-$$
+```math
 \boxed{
 \delta_K+\mathscr O_A<c_0P.
 }
 \tag{1.2}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 0\le\delta_K<c_0P.
 }
 \tag{1.3}
-$$
+```
 
 The existing reports use `P<=pi D` to conclude only `delta_K=O(D)`.  The same two
 inequalities contain a stronger perimeter consequence.
@@ -108,54 +108,54 @@ inequalities contain a stronger perimeter consequence.
 
 Every global minimizer satisfies
 
-$$
+```math
 \boxed{
 \pi D-\operatorname{per}(\operatorname{conv}A)
 <\frac{\pi\sqrt3}{2}.
 }
-$$
+```
 
 ### Proof
 
 The planar isoperimetric inequality gives
 
-$$
+```math
 P^2\ge4\pi\operatorname{area}K
 =\pi^2D^2-4\pi\delta_K.
-$$
+```
 
 Hence
 
-$$
+```math
 (\pi D-P)(\pi D+P)
 =\pi^2D^2-P^2
 \le4\pi\delta_K.
 \tag{2.1}
-$$
+```
 
 By (1.3),
 
-$$
+```math
 4\pi\delta_K
 <4\pi c_0P
 =\pi\sqrt3\,P.
 \tag{2.2}
-$$
+```
 
 Combining (2.1) and (2.2),
 
-$$
+```math
 \pi D-P
 <\pi\sqrt3\,
 \frac{P}{\pi D+P}.
 \tag{2.3}
-$$
+```
 
 Cauchy's perimeter--diameter inequality gives `P<=pi D`, so
 
-$$
+```math
 \frac{P}{\pi D+P}\le\frac12.
-$$
+```
 
 Substitution in (2.3) proves CP.1. `square`
 
@@ -172,26 +172,26 @@ minimization, or any KKT normalization.
 
 Cauchy's width formula is
 
-$$
+```math
 P=\int_0^\pi w_K(\theta)\,d\theta.
-$$
+```
 
 Since every width is at most the diameter,
 
-$$
+```math
 0\le D-w_K(\theta).
-$$
+```
 
 Therefore CP.1 is exactly the integrated width-defect bound
 
-$$
+```math
 \boxed{
 \int_0^\pi
 \bigl(D-w_K(\theta)\bigr)\,d\theta
 <\frac{\pi\sqrt3}{2}.
 }
 \tag{CP.2}
-$$
+```
 
 The average width deficit of the full source is therefore strictly below `sqrt(3)/2`,
 uniformly in the cardinality.
@@ -207,20 +207,20 @@ a separate Bonnesen argument.
 Let `F` be the post-ZF force hull.  In the AS low-surplus branch, MP gives for every
 fixed `lambda_0<lambda_disk` a constant `epsilon(lambda_0)>0` such that
 
-$$
+```math
 \operatorname{per}F\le(\pi-\epsilon)D.
-$$
+```
 
 CP.1 then gives the exact boundary separation
 
-$$
+```math
 \boxed{
 P_K-P_F
 \ge
 \epsilon D-\frac{\pi\sqrt3}{2}.
 }
 \tag{CP.3}
-$$
+```
 
 Thus the quadratic saturated external annulus from AS is bounded externally by a
 source hull whose perimeter is maximum up to `O(1)`, while its inner force hull loses a
@@ -228,11 +228,11 @@ fixed linear amount of perimeter.
 
 Combined with AS,
 
-$$
+```math
 Z_{ext}
 =\frac2{\sqrt3}
 \bigl(\operatorname{area}K-\operatorname{area}F\bigr)+O(D),
-$$
+```
 
 so the remaining low-surplus branch simultaneously has:
 
@@ -250,9 +250,9 @@ isolated filling.
 
 CP does not by itself prove the C-II contradiction
 
-$$
+```math
 b+Q>2h
-$$
+```
 
 or produce a smaller-diameter `n`-point configuration.  Its value is boundary-order:
 the full source has only constant perimeter slack left, while every low-surplus force
@@ -270,17 +270,14 @@ packing-boundary term exposed by AV.
 > regime, use
 > 
 
-$$
-
+```math
 > \pi D-P_K<\pi\sqrt3/2,
 > \quad
 > P_K-P_F=\Omega(D),
 > \quad
 > Z_{ext}=\frac2{\sqrt3}A_{ann}+O(D),
 > 
-$$
-
-
+```
 > and `s_ext=1+O(D^{-1})` to obtain either a cardinality-preserving strict sub-`D`
 > rearrangement or an exact post-ZF boundary surplus.
 >

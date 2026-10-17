@@ -68,11 +68,11 @@ Verdict: PASS.
 
 For every physical non-ground pentagon, prior audited work proves
 
-$$
+```math
 0<x_{i,k}<2/3,
 \qquad
 2/3<x_{i,k}+x_{i,k+1}<1.
-$$
+```
 
 The source uses only these bounds and, in two cases, strict positivity of a ground force gap. In convex `H8`, the seven raw ground rays are distinct; reversing a subset by `pi` cannot create coincident force rays because all raw rays lie in an open cone of width `<pi`. Hence every ground force gap is strictly positive.
 
@@ -127,9 +127,9 @@ The preceding reduction has 20 convex reflection orbits: 12 of missing type `C7`
 
 It then asserts exactly
 
-$$
+```math
 9+3=12
-$$
+```
 
 keys remain.
 

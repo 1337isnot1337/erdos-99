@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_marker_classified_rectangle_cusp_t18687_2026-09-15.md) · source SHA-256 `03bca70942cd005add187d8fcb614105f47abe6119a41a9edb4d1cb71707ed7c`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c51bd46b1d21a2ed84e0042a1751f1d41ec60548", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_marker_classified_rectangle_cusp_t18687_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "7956e8dd8d693bd7c78a254dc41bcf7445e2acc128d9f5d95a027ae72ff454ab"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -20,53 +22,53 @@ Thus the finite KKT cusp can be chosen on the **fixed-marker path** itself.
 
 There are adjacent selected O--O rows
 
-$$
+```math
 \tau_0,\tau_1
-$$
+```
 
 bounding one nonhub path region `R`, and a pairwise-noncrossing common column family
 
-$$
+```math
 B_0,
 \qquad
 |B_0|>0.0783D-o(D),
 \tag{MC.1}
-$$
+```
 
 such that all parent joint-cusp conclusions hold:
 
-$$
+```math
 \boxed{
 N_R+L_R+D B_R+S_0+S_1<1{,}109{,}000,
 }
 \tag{MC.2}
-$$
+```
 
-$$
+```math
 N_R,L_R\le1{,}108{,}999,
 \qquad
 B_R<{1{,}109{,}000\over D},
 \tag{MC.3}
-$$
+```
 
-$$
+```math
 d_{\mathbb{RP}^1}(\nu_0,\nu_1)
 <{7.08\times10^6\over D}+o(D^{-1}),
 \tag{MC.4}
-$$
+```
 
 and every `b in B_0` crosses both rows in one common order with
 
-$$
+```math
 0<\theta(\tau_r,b)-{\pi\over3}
 <{1.416\times10^7\over D}+o(D^{-1})
 \qquad(r=0,1).
 \tag{MC.5}
-$$
+```
 
 The new marker information gives the exact local blocker dichotomy:
 
-$$
+```math
 \boxed{
 \begin{array}{ll}
 \nu_0\ne\nu_1
@@ -75,15 +77,16 @@ $$
 &\Longrightarrow\text{TB1 is impossible and minimal TB2 has opposite transverse signs.}
 \end{array}}
 \tag{MC.6}
-$$
+```
 
 In the second case there is no phase-parallel switching diameter. In both cases the zero rigid translation of `R` is locally isolated for the fixed finite source.
 
 Because `R` is nonhub, every actual diameter edge with an endpoint in `R` is a switching edge at this interface. Hence `R` contains at most `N_R` distinct actual-diameter endpoints. Combining this with the terminal bound and the ordered common columns gives a further geometric consequence: between the two rows there is a run of more than
 
-$$
+```math
 \boxed{3.5\times10^{-8}D-o(D)}
 \tag{MC.7}
+```
 
 consecutive common-column slabs whose interior contains
 
@@ -99,12 +102,12 @@ This is a defect-free **contact/routing corridor**, not a source-free corridor: 
 
 The complete-rectangle theorem starts with one shrinking dominant phase window and extracts a consecutive row block
 
-\[
+```math
 A_*=(\tau_1,\ldots,\tau_m),
 \qquad
 m>0.0000226D-o(D).
 \tag{MC.8}
-$$
+```
 
 Every row belongs to the same adaptively selected retained O--O family used by the coupled paired-remainder theorem.
 
@@ -112,17 +115,17 @@ Apply the phase-zero marker deletion to that same phase window. Its selected end
 
 Let `A_M` be the surviving rows of `A_*`. Then
 
-$$
+```math
 |A_M|>0.0000226D-o(D).
 \tag{MC.9}
-$$
+```
 
 An internal adjacent interface of the original consecutive block is **marker-good** if both of its boundary rows lie in `A_M`. One deleted row destroys at most two such interfaces. Therefore the number of marker-good interfaces is still
 
-$$
+```math
 >0.0000226D-o(D).
 \tag{MC.10}
-$$
+```
 
 Delete also the unique hub region and the `O(1)` end interfaces. The same density remains.
 
@@ -134,25 +137,25 @@ The oriented common-column family `B_+` from the rectangle theorem crossed every
 
 For an internal rectangle interface let
 
-$$
+```math
 J_i=N_i+L_i+D B_i+S_i+S_{i+1}
-$$
+```
 
 with the notation of the parent joint-cusp theorem.
 
 All terms are nonnegative. The parent proof gives the global restricted-block bound
 
-$$
+```math
 \sum_{i\in A_*}J_i
 <\left(10T-2\pi+2+2C_{phase}\right)D+o(D).
 \tag{MC.11}
-$$
+```
 
 Discarding marker-bad interfaces can only decrease the left side. By (MC.10), the denominator in the averaging step is unchanged at first order. The same exact arithmetic certificate therefore gives one marker-good nonhub interface satisfying
 
-$$
+```math
 J_i<1{,}109{,}000.
-$$
+```
 
 This is (MC.2). Every scalar consequence (MC.3)--(MC.5) from the parent theorem applies to the same pair without modification.
 
@@ -164,12 +167,12 @@ Because the two rows are both marker survivors and were adjacent in the original
 
 Choose coherent oriented row directions `nu_0,nu_1` by putting the fixed marker `theta_+` on the same named shore. Orient the two physical strip contact vectors from the fixed exterior into `R`:
 
-$$
+```math
 a=\nu_0,
 \qquad
 b=-\nu_1.
 \tag{MC.12}
-$$
+```
 
 The loaded-hull boundary pieces belonging to `R` lie between consecutive surviving marker-path terminals. Hence their oriented normal angles avoid the two deleted marker neighborhoods.
 
@@ -181,12 +184,12 @@ The phase-zero blocker theorem now applies verbatim.
 
 If `nu_0!=nu_1`, a minimal TB2 pair would force each blocker direction to lie projectively within the shrinking row phase gap of `nu_0`. Its endpoint normal would then lie in a deleted marker neighborhood, impossible. Hence TB1 occurs. A TB1 vector on a boundary ray is excluded by the same argument, so
 
-$$
+```math
 \boxed{
 n_h\in\operatorname{int}\operatorname{cone}\{a,b\}.
 }
 \tag{MC.13}
-$$
+```
 
 This strict interiority gives a positive sourcewise tangent margin and locally isolates the zero finite layer translation.
 
@@ -194,18 +197,18 @@ This strict interiority gives a positive sourcewise tangent margin and locally i
 
 If `nu_0=nu_1=nu`, any switching diameter with
 
-$$
+```math
 n_h\cdot J\nu=0
-$$
+```
 
 would be phase-parallel and therefore marker-forbidden. A one-bar certificate for the two antipodal opening directions would require exactly such zero transverse projection. Thus TB1 is impossible and a minimal certificate is exactly two bars with
 
-$$
+```math
 \boxed{
 (n_{h_+}\cdot J\nu)(n_{h_-}\cdot J\nu)<0.
 }
 \tag{MC.14}
-$$
+```
 
 Again the strict signs locally isolate the zero finite layer translation.
 
@@ -223,13 +226,13 @@ Consequently its cut-incidence row starts or stops exactly at the interface betw
 
 Therefore
 
-$$
+```math
 \boxed{
 \#\{\text{distinct actual-diameter endpoints in }R\}
 \le N_R.
 }
 \tag{MC.15}
-$$
+```
 
 This is stronger than merely bounding the number of block-crossing diameter bars: in a nonhub single path region there are no hidden actual-diameter endpoints belonging to an internally supported diameter edge.
 
@@ -241,9 +244,9 @@ The columns in `B_0` are pairwise noncrossing and every one crosses both boundar
 
 By the common-order theorem they occur in one order along both boundary rows. Thus if
 
-$$
+```math
 M:=|B_0|,
-$$
+```
 
 they cut `R` into `M+1` slabs, with `M-1` internal slabs between consecutive common columns.
 
@@ -254,39 +257,39 @@ Call the following objects **finite defects** in `R`:
 
 By (MC.2) and (MC.15), their total number is at most
 
-$$
+```math
 N_R+L_R\le1{,}108{,}999.
 \tag{MC.16}
-$$
+```
 
 Assign a defect in the interior of one slab to that slab. If a defect lies on a common-column segment, mark both adjacent internal slabs; at the two extreme columns mark the one adjacent internal slab. Hence one defect marks at most two internal slabs.
 
 The number of marked internal slabs is therefore at most
 
-$$
+```math
 2(1{,}108{,}999)=2{,}217{,}998.
 \tag{MC.17}
-$$
+```
 
 Deleting those marked slabs leaves at most `2,217,999` consecutive runs of unmarked internal slabs.
 
 Since
 
-$$
+```math
 M>0.0783D-o(D),
-$$
+```
 
 pigeonhole gives one unmarked run of length
 
-$$
+```math
 >{0.0783\over2{,}217{,}999}D-o(D).
-$$
+```
 
 The companion exact checker verifies
 
-$$
+```math
 {0.0783\over2{,}217{,}999}>3.5\times10^{-8},
-$$
+```
 
 proving (MC.7).
 

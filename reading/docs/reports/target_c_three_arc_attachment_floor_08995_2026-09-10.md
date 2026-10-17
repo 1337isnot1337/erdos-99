@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_three_arc_attachment_floor_08995_2026-09-10.md) · source SHA-256 `294c87f08ab1fd846c63ae7447cbaae94bc2bd33a56ba5ed00c105c345ec1592`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-33B992564453","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — sharp three-arc attachment envelope raises the renormalized floor above `0.8995`
 
@@ -21,23 +23,23 @@ circle-subset extremal problem sharply through the next odd-component transition
 
 For
 
-$$
+```math
 z_0:=\frac{\sqrt3}{2},
 \qquad
 z_5:=\sin\frac{2\pi}{5},
-$$
+```
 
 define
 
-$$
+```math
 \theta(z):=2\arcsin z,
 \qquad
  g(z):=\frac{4\pi}{3}-\theta(z),
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 W_3(z):=
 \frac\pi4-
@@ -45,7 +47,7 @@ W_3(z):=
 \qquad z_0\le z<z_5.
 }
 \tag{TA.1}
-$$
+```
 
 The new geometric theorem is:
 
@@ -53,20 +55,17 @@ The new geometric theorem is:
 > `diam(S)<=z in [z_0,z_5)`, then
 > 
 
-$$
-
+```math
 > area(conv S)\le W_3(z).
 > 
-$$
-
-
+```
 > Equality in the wrapping class is approached by three equal circular arcs,
 > separated by three equal gaps.
 
 Feeding this into the Target C component ledger gives a unique analytic threshold
 `mu_3 in (z_0,z_5)` defined by
 
-$$
+```math
 \boxed{
 W_3(\mu_3)
 +
@@ -78,29 +77,29 @@ W_3(\mu_3)
 \quad \rho=\cos\rho.
 }
 \tag{TA.2}
-$$
+```
 
 Every post-ZF survivor sequence satisfies
 
-$$
+```math
 \boxed{
 \liminf\mu_D\ge\mu_3.
 }
 \tag{TA.3}
-$$
+```
 
 The exact certificate proves
 
-$$
+```math
 \boxed{\mu_3>0.8995.}
 \tag{TA.4}
-$$
+```
 
 High-precision diagnostic evaluation gives
 
-$$
+```math
 \mu_3=0.899867166043839\ldots .
-$$
+```
 
 The decimal is not a proof input.
 
@@ -111,48 +110,48 @@ The decimal is not a proof input.
 Scale an attachment set by `D` and pass to the FS center.  The limiting loaded
 attachment directions lie on the circle
 
-$$
+```math
 \mathbb S:=\{x:|x|=1/2\}.
-$$
+```
 
 For two points whose angular separation in the minor direction is `alpha`, the chord
 length is
 
-$$
+```math
 2(1/2)\sin(\alpha/2)=\sin(\alpha/2).
-$$
+```
 
 Thus the Euclidean diameter condition `diam(S)<=z<1` is equivalent to
 
-$$
+```math
 d_{\mathbb T}(u,v)\le\theta:=2\arcsin z<\pi
 \qquad(u,v\in S),
 \tag{1.1}
-$$
+```
 
 where `d_T` is geodesic angular distance on the circle of circumference `2pi`.
 
 Put
 
-$$
+```math
 \varphi:=\pi-\theta.
 \tag{1.2}
-$$
+```
 
 Then (1.1) is equivalently
 
-$$
+```math
 \boxed{
 d_{\mathbb T}(S,S+\pi)\ge\varphi.}
 \tag{1.3}
-$$
+```
 
 In the range `z_0<=z<z_5`,
 
-$$
+```math
 \boxed{\frac\pi5<\varphi\le\frac\pi3.}
 \tag{1.4}
-$$
+```
 
 ---
 
@@ -165,22 +164,22 @@ condition.
 
 Maximality gives the exact fixed-point relation
 
-$$
+```math
 \boxed{
 M=\{x:d_{\mathbb T}(x,M+\pi)\ge\varphi\}.
 }
 \tag{2.1}
-$$
+```
 
 Indeed, any point outside `M` satisfying the right-side inequality could be added
 without violating (1.3).  Hence
 
-$$
+```math
 \boxed{
 \mathbb T\setminus M=N_\varphi(M+\pi),
 }
 \tag{2.2}
-$$
+```
 
 where `N_varphi` is the open angular `varphi`-neighborhood.
 
@@ -188,10 +187,10 @@ where `N_varphi` is the open angular `varphi`-neighborhood.
 
 Suppose `M` has `m` connected components.  Then
 
-$$
+```math
 \boxed{m\text{ is odd},\qquad |M|=\pi-m\varphi.}
 \tag{2.3}
-$$
+```
 
 Here `|M|` is total angular Lebesgue measure.
 
@@ -207,9 +206,9 @@ components but cannot split them.  Equation (2.2) says the result still has exac
 `m` components.  Hence no two component neighborhoods merge.  Each component of
 `M+pi` therefore expands by exactly `varphi` at each end, and
 
-$$
+```math
 2\pi-|M|=|M|+2m\varphi.
-$$
+```
 
 This proves the measure formula.
 
@@ -229,49 +228,49 @@ so `M` lies in an open semicircle.  In that case (1.1) puts it in one arc of ang
 length at most `theta`; its convex hull is contained in the corresponding circular
 segment.  Thus
 
-$$
+```math
 area(conv M)
 \le
 B(z):=
 \frac{\theta-\sin\theta}{8}.
 \tag{3.1}
-$$
+```
 
 Now assume
 
-$$
+```math
 0\in conv(M).
-$$
+```
 
 Then `m` cannot be one, since Lemma TA.1 would make `M` one arc of length
 `pi-varphi<pi`, whose convex hull misses the origin.  Hence `m>=3`.
 
 By (1.4) and the nonnegativity of `|M|=pi-mvarphi`,
 
-$$
+```math
 m<\frac\pi\varphi<5
-$$
+```
 
 for `varphi>pi/5`.  Since `m` is odd,
 
-$$
+```math
 \boxed{m=3.}
 \tag{3.2}
-$$
+```
 
 The total occupied angular measure is therefore
 
-$$
+```math
 |M|=\pi-3\varphi=3\theta-2\pi,
 \tag{3.3}
-$$
+```
 
 and the three complementary gaps `g_1,g_2,g_3` have total
 
-$$
+```math
 \boxed{g_1+g_2+g_3=\pi+3\varphi=4\pi-3\theta.}
 \tag{3.4}
-$$
+```
 
 Because the origin lies in `conv(M)` and `theta<pi`, each `g_i<pi`.
 
@@ -282,37 +281,37 @@ Because the origin lies in `conv(M)` and `theta<pi`, each `g_i<pi`.
 The convex hull of `M` is the radius-`1/2` disk with the three circular segments over
 the complementary gaps removed.  A gap of angular size `g` removes area
 
-$$
+```math
 \frac18(g-\sin g).
-$$
+```
 
 Therefore
 
-$$
+```math
 area(conv M)
 =
 \frac\pi4-
 \frac18\sum_{i=1}^3(g_i-\sin g_i).
 \tag{4.1}
-$$
+```
 
 The function
 
-$$
+```math
 f(g)=g-\sin g
-$$
+```
 
 is convex on `[0,pi]`, since `f''(g)=sin g>=0`.  Jensen and (3.4) give
 
-$$
+```math
 \sum_{i=1}^3f(g_i)
 \ge
 3f\left(\frac{4\pi-3\theta}{3}\right).
-$$
+```
 
 Thus
 
-$$
+```math
 area(conv M)
 \le
 \frac\pi4-
@@ -323,37 +322,37 @@ area(conv M)
 \right]
 =W_3(z).
 \tag{4.2}
-$$
+```
 
 Since `conv(S) subset conv(M)`, the same upper bound holds for the original set.
 
 The equality model is explicit: take three equal occupied arcs of length
 
-$$
+```math
 \theta-\frac{2\pi}{3}
-$$
+```
 
 separated by three equal gaps of length
 
-$$
+```math
 \frac{4\pi}{3}-\theta.
-$$
+```
 
 Their pairwise circular diameter is exactly `theta`, so the envelope is sharp.
 
 Finally the outside-origin cap bound cannot dominate in this interval.  Indeed
 `W_3(z)` is increasing and
 
-$$
+```math
 W_3(z_0)=\frac{3\sqrt3}{16}.
-$$
+```
 
 Meanwhile
 
-$$
+```math
 B(z)\le\frac{\theta}{8}<\frac\pi{10}
 <\frac{3\sqrt3}{16},
-$$
+```
 
 where the last strict inequality follows already from `pi<22/7` and `sqrt(3)>17/10`.
 This completes the sharp circle-subset theorem.
@@ -364,22 +363,22 @@ This completes the sharp circle-subset theorem.
 
 Let the macroscopic unloaded components have normalized graph diameters
 
-$$
+```math
 z_j=\lim\delta_j/D.
-$$
+```
 
 GR gives
 
-$$
+```math
 \sum_jz_j\le\mu.
 \tag{5.1}
-$$
+```
 
 Suppose
 
-$$
+```math
 z_0\le\mu<z_5.
-$$
+```
 
 At most one limiting attachment cell can be in the wrapping class, because two such
 components would consume at least `2z_0=sqrt(3)>mu` of the graph-diameter budget.
@@ -392,42 +391,42 @@ If there is no wrapping component, their total is at most `B(mu)<W_3(mu)`.
 
 If a wrapping component has mass `z>=z_0`, the remainder satisfies
 
-$$
+```math
 r\le z_5-z_0<\frac1{10}.
-$$
+```
 
 On `[z_0,z_5]`, differentiating (TA.1) gives
 
-$$
+```math
 W_3'(z)
 =
 \frac34\frac{1-\cos g(z)}{\sqrt{1-z^2}}
 >\frac32,
 \tag{5.2}
-$$
+```
 
 because `g(z)>pi/2` throughout this interval and
 `sqrt(1-z^2)<=1/2` for `z>=z_0`.
 
 For `0<=r<=1/10`,
 
-$$
+```math
 B'(r)=\frac{r^2}{2\sqrt{1-r^2}}<\frac1{100}.
 \tag{5.3}
-$$
+```
 
 Therefore
 
-$$
+```math
 W_3(z+r)-W_3(z)>B(r),
-$$
+```
 
 and
 
-$$
+```math
 W_3(z)+B(r)\le W_3(z+r)\le W_3(\mu).
 \tag{5.4}
-$$
+```
 
 As in RA, components with `delta_r=o(D)` contribute `o(D^2)` after an `eta` truncation.
 Thus:
@@ -436,15 +435,16 @@ Thus:
 
 For every convergent post-ZF subsequence with
 
-$$
+```math
 z_0\le\mu<z_5,
-$$
+```
 
-$$
+```math
 \boxed{
 \limsup\frac{C_{att}}{D^2}\le W_3(\mu).
 }
 \tag{TA.5}
+```
 
 ---
 
@@ -452,73 +452,77 @@ $$
 
 JS gives
 
-\[
+```math
 x:=\lim\frac{d_P+Q}{D}
 \le\frac{2\mu+\pi}{3}
 \tag{6.1}
-$$
+```
 
 after discarding the nonnegative projective side cost.  RP paired-pocket capacity and
 ZG give
 
-$$
+```math
 \boxed{
 \limsup\frac G{D^2}
 \le
 \frac{(2\mu+\pi)^2}{36\pi}.
 }
 \tag{6.2}
+```
 
 Since
 
-\[
+```math
 area(F)=C_{att}+G,
-$$
+```
 
 TA.5 gives
 
-$$
+```math
 \limsup\frac{area(F)}{D^2}
 \le
 W_3(\mu)+\frac{(2\mu+\pi)^2}{36\pi}.
 \tag{6.3}
+```
 
 FSDB, independently of `mu`, gives
 
-\[
+```math
 \boxed{
 \liminf\frac{area(F)}{D^2}
 \ge
 \Phi(2\rho).
 }
 \tag{6.4}
+```
 
 Therefore every survivor limit in the three-arc range must satisfy
 
-\[
+```math
 \boxed{
 J_3(\mu):=
 W_3(\mu)+\frac{(2\mu+\pi)^2}{36\pi}
 \ge\Phi(2\rho).
 }
 \tag{TA.6}
+```
 
 Both terms in `J_3` are strictly increasing, so there is at most one threshold.
 At `mu=z_0`, RA gives a fixed strict deficit.  At `mu=z_5`, the right side is already
 strictly above `0.62`, while
 
-\[
+```math
 \Phi(2\rho)<\frac{1.48+1}{4}=0.62.
-$$
+```
 
 For example
 
-$$
+```math
 W_3(z_5)
 =
 \frac\pi{20}+\frac38\cos\frac\pi{30}
 >0.52,
-$$
+```
 
 and the cavity term is `>0.21`.  Hence TA.2 has a unique root `mu_3 in (z_0,z_5)`.
 For every `mu<mu_3`, (TA.6) fails.  This proves TA.3.
@@ -536,54 +540,54 @@ python3 research/target_c_three_arc_attachment_check.py
 uses only `fractions.Fraction` and integer square-root checks for every asserted sign.
 At
 
-$$
+```math
 \mu=8995/10000,
-$$
+```
 
 it upper-bounds `asin(mu)` via
 
-$$
+```math
 \arcsin\mu
 =
 \frac\pi2-
 \arctan\frac{\sqrt{1-\mu^2}}{\mu}
-$$
+```
 
 and an alternating rational arctangent series.  It uses the canonical rational
 barriers
 
-$$
+```math
 6283/2000<\pi<3927/1250,
 \qquad
 \sqrt3<97/56,
-$$
+```
 
 and the already audited FSDB floor
 
-$$
+```math
 \Phi(2\rho)>154451/250000.
-$$
+```
 
 The resulting exact rational margin in
 
-$$
+```math
 \Phi(2\rho)-J_3(0.8995)
-$$
+```
 
 is strictly positive; its decimal diagnostic is about
 
-$$
+```math
 2.18\times10^{-4}.
-$$
+```
 
 The script also proves `0.8995<0.95<sin(2pi/5)` exactly using
 `sqrt(5)>20/9`, so the candidate lies safely inside the three-component regime.
 
 Thus
 
-$$
+```math
 \boxed{\mu_3>0.8995.}
-$$
+```
 
 ---
 
@@ -591,9 +595,9 @@ $$
 
 Any sequence with
 
-$$
+```math
 \mu_D\to\mu_3
-$$
+```
 
 must make both (6.3) and (6.4) sharp.  In particular:
 
@@ -605,10 +609,10 @@ must make both (6.3) and (6.4) sharp.  In particular:
 
 The first component has three equal complementary angular gaps of size
 
-$$
+```math
 g_*=\frac{4\pi}{3}-2\arcsin\mu_3
 \approx1.95\text{ radians}.
-$$
+```
 
 The force hull itself need not have those gaps: other loaded vertices may lie between
 attachment arcs.  This prevents an immediate reuse of the projective side-cost

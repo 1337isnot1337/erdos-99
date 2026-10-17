@@ -22,7 +22,7 @@ FB identifies `R\setminus F` as the union of the circular caps cut off by the `q
 
 Let `R` be the width-`D` Reuleaux completion of the exact cyclic `d_H=0` force hull `F`. Then
 
-$$
+```math
 \boxed{
 \operatorname{area}(R)-\operatorname{area}(F)
 =
@@ -31,17 +31,17 @@ $$
 \frac\pi q-\sin\frac\pi q
 \right).}
 \tag{CA.1}
-$$
+```
 
 Using
 
-$$
+```math
 D=\frac1{2\sin(\pi/(2q))},
-$$
+```
 
 this can also be written
 
-$$
+```math
 \boxed{
 \operatorname{area}(R)-\operatorname{area}(F)
 =
@@ -49,11 +49,11 @@ $$
 \left(1-\frac{\sin x\cos x}{x}\right),
 \qquad x:=\frac\pi{2q}.}
 \tag{CA.2}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{
 \operatorname{area}(R)-\operatorname{area}(F)
 =
@@ -64,16 +64,16 @@ $$
 \frac{\pi^5}{10080q^4}
 +O(q^{-6}).}
 \tag{CA.3}
-$$
+```
 
 Thus the entire curved completion outside the polygonal force hull has only constant area:
 
-$$
+```math
 \boxed{
 \operatorname{area}(R)-\operatorname{area}(F)
 \to\frac\pi{12}.}
 \tag{CA.4}
-$$
+```
 
 This is much sharper than the earlier `O(D)` force-area comparisons.
 
@@ -83,30 +83,30 @@ This is much sharper than the earlier `O(D)` force-area comparisons.
 
 Take consecutive force-hull vertices `p_i,p_{i+1}`. RE gives
 
-$$
+```math
 |p_i-p_{i+1}|=1,
-$$
+```
 
 and the corresponding boundary portion of `R` is a radius-`D` minor circular arc with central angle
 
-$$
+```math
 \delta=2\arcsin\frac1{2D}=\frac\pi q.
-$$
+```
 
 The area between a radius-`D` minor arc of angle `delta` and its chord is the circular-segment area
 
-$$
+```math
 A_{cap}
 =\frac{D^2}{2}(\delta-\sin\delta).
 \tag{1.1}
-$$
+```
 
 FB shows that the `q` such cap interiors are disjoint and their union is exactly `R\setminus F`. Hence
 
-$$
+```math
 \operatorname{area}(R)-\operatorname{area}(F)
 =qA_{cap},
-$$
+```
 
 which proves CA.1. `square`
 
@@ -116,21 +116,21 @@ which proves CA.1. `square`
 
 Put
 
-$$
+```math
 x=\frac\pi{2q},
 \qquad
 \delta=2x.
-$$
+```
 
 RE gives
 
-$$
+```math
 D=\frac1{2\sin x}.
-$$
+```
 
 Substitute into CA.1:
 
-$$
+```math
 \begin{aligned}
 q\frac{D^2}{2}(2x-\sin2x)
 &=
@@ -140,7 +140,7 @@ q\frac{D^2}{2}(2x-\sin2x)
 \frac{qx}{4\sin^2x}
 \left(1-\frac{\sin x\cos x}{x}\right).
 \end{aligned}
-$$
+```
 
 Since `qx=pi/2`, this is CA.2.
 
@@ -150,21 +150,21 @@ Since `qx=pi/2`, this is CA.2.
 
 The elementary Taylor expansions give
 
-$$
+```math
 \frac{1}{\sin^2x}
 =\frac1{x^2}+\frac13+\frac{x^2}{15}+O(x^4),
-$$
+```
 
 and
 
-$$
+```math
 1-\frac{\sin x\cos x}{x}
 =\frac{2}{3}x^2-\frac{2}{15}x^4+\frac{4}{315}x^6+O(x^8).
-$$
+```
 
 Multiplying in CA.2 yields
 
-$$
+```math
 \operatorname{area}(R)-\operatorname{area}(F)
 =
 \frac\pi{12}
@@ -173,7 +173,7 @@ $$
 +
 \frac\pi{630}x^4
 +O(x^6).
-$$
+```
 
 Using `x=pi/(2q)` gives CA.3.
 
@@ -183,7 +183,7 @@ Using `x=pi/(2q)` gives CA.3.
 
 Let `nu` be the odd Reuleaux/diameter-cycle core size from RC. Firey--Sallee gives
 
-$$
+```math
 \operatorname{area}(R)
 \le
 A_\nu^{reg}(D)
@@ -193,21 +193,21 @@ A_\nu^{reg}(D)
 \pi-\nu\tan\frac\pi{2\nu}
 \right).
 \tag{4.1}
-$$
+```
 
 CA therefore gives the direct force-hull upper bound
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)
 \le
 A_\nu^{reg}(D)-C_q,}
 \tag{CA.5}
-$$
+```
 
 where
 
-$$
+```math
 C_q
 :=
 \frac{qD^2}{2}
@@ -215,11 +215,11 @@ C_q
 \frac\pi q-\sin\frac\pi q
 \right)
 =\frac\pi{12}+O(q^{-2}).
-$$
+```
 
 Combining with the exact Wegner lower bound WG.1 gives the finite necessary inequality
 
-$$
+```math
 \boxed{
 A_\nu^{reg}(D)-C_q
 \ge
@@ -228,7 +228,7 @@ A_\nu^{reg}(D)-C_q
 +\frac{2-\sqrt3}{4}
 \left\lceil\sqrt{12n-3}-3\right\rceil.}
 \tag{CA.6}
-$$
+```
 
 This is a sharper finite version of the asymptotic core-growth bound: the completion-to-hull conversion loses only the explicit constant `C_q`, rather than a perimeter-scale error.
 
@@ -243,9 +243,9 @@ The remaining exact cyclic branch has two natural geometric objects:
 
 CA shows that these two area currencies differ by only
 
-$$
+```math
 \frac\pi{12}+o(1).
-$$
+```
 
 Therefore any future improvement of order `D`, `sqrt(D)`, or even a fixed constant in a Reuleaux-area estimate transfers essentially unchanged to the actual source hull.
 
@@ -273,16 +273,16 @@ Cap interiors cannot overlap because `F` is convex, each cap lies beyond one dis
 
 CA reduces the remaining population problem to comparing two sharp finite inequalities without a large translation error:
 
-$$
+```math
 \text{Wegner lower bound on }\operatorname{area}(F)
-$$
+```
 
 versus
 
-$$
+```math
 \text{Reuleaux-composition upper bound on }\operatorname{area}(R)
 -C_q.
-$$
+```
 
 The next useful step is therefore a composition-sensitive upper bound for a Reinhardt Reuleaux polygon, stronger than the regular-`nu` envelope whenever its dihedral composition is uneven. Because the loss `C_q` is constant-order, even a sublinear composition penalty can now survive the transfer back to `F`.
 

@@ -36,9 +36,9 @@ large transformation family.
 
 Put `a0=sqrt(3)/2` and
 
-$$
+```math
 \kappa_0=\frac{3\pi}{5a_0}\left(\frac{3a_0}{16}\right)^{2/3}.
-$$
+```
 
 For every fixed `theta` with `131/208<theta<2/3`, there are constants `C,D0`
 such that for every `D>=D0` there is a planar source `A_D` with the following
@@ -50,11 +50,12 @@ properties.
    Every other source label is a contact isolate and is retained.
 3. Its population `n_D` satisfies
 
-   $$
+   ```math
    n_D-1-\frac{\pi D^2}{2\sqrt3}
    \ge\kappa_0D^{2/3}-CD^\theta.
    \tag{1}
-   $$
+   
+   ```
 
 4. Every finite-valued inversion/Möbius transformation, or any realized placement
    with positive endpoint-factor distances, has normalized diameter at least `D`.
@@ -72,16 +73,16 @@ canonical [Audit.243](../audits/target_c_population_excess_sharp_coefficient_ind
 proof supplies a finite triangular-lattice subset `Y_D`, in some translate of an
 open disk of radius
 
-$$
+```math
 S=D/2+c_*D^{-1/3},\qquad c_*=(3a_0/16)^{2/3}<1,
-$$
+```
 
 with diameter strictly below `D` and population at least
 
-$$
+```math
 \frac{\pi D^2}{4a_0}+\kappa_0D^{2/3}-C_\theta D^\theta.
 \tag{2}
-$$
+```
 
 We use the comparison construction proved there, not an inference that every
 packing obeys an all-minimizer theorem. The strict-deletion and finite perturbation
@@ -105,10 +106,10 @@ center by `1+eta_D`. Since its diameter was strictly below `D`, its diameter
 remains strictly below `D`. Every lower distance becomes strictly greater than one.
 Choose the scale still smaller if needed so the resulting packet `X_D` lies in
 
-$$
+```math
 B_R(0),\qquad R=D/2+\delta,\qquad\delta=2c_*D^{-1/3}.
 \tag{3}
-$$
+```
 
 This scaling is separate for each finite packet. There is no source-uniform
 lower bound on its size. Its cardinality still obeys (2).
@@ -117,11 +118,11 @@ lower bound on its size. Its cardinality still obeys (2).
 
 Let `L=sqrt(D^2-1)` and introduce
 
-$$
+```math
 q_1=(-L/2,-1/2),\quad q_2=(-L/2,1/2),\quad
 q_3=(L/2,-1/2),\quad q_4=(L/2,1/2).
 \tag{4}
-$$
+```
 
 Each has norm `D/2`. Their only unit pairs are `q1 q2` and `q3 q4`, and their
 only diameter pairs are `q1 q4` and `q2 q3`. The two horizontal distances are
@@ -139,28 +140,28 @@ varying caps.
 Fix `q=(D/2)e`, `|e|=1`, and write `x=-u e+v e_perp`. If `|x|<=R` and
 `|x-q|>=D`, then
 
-$$
+```math
 u\ge D/2-\delta-\delta^2/D,
 \qquad u\le D/2+\delta.
-$$
+```
 
 For large `D`, when `delta<=D/4`, this places `u` in an interval of length
 at most `3delta`. Also
 
-$$
+```math
 v^2\le(D/2+\delta)^2-(D/2-\delta-\delta^2/D)^2
 \le4D\delta.
-$$
+```
 
 The bad set lies in a rectangle with side lengths `3delta` and
 `4sqrt(D delta)`. Its unit-separated points have disjoint radius-1/2 disks
 inside the rectangle enlarged by 1/2 in each coordinate. Therefore their number
 is at most
 
-$$
+```math
 \frac4\pi(3\delta+1)(4\sqrt{D\delta}+1)=O(D^{1/3}).
 \tag{5}
-$$
+```
 
 Repeat for the four `q_i`. Add arbitrary deletions if necessary so at least four
 packet labels are deleted. There remain `|X_D|-O(D^(1/3))-O(1)` packet labels.
@@ -197,9 +198,9 @@ finite, so all those lower bounds persist for a common sufficiently small
 contraction. Every pair distance is nonincreasing under this map, while both old
 diameter pairs shorten strictly from `D` to
 
-$$
+```math
 \sqrt{\alpha^2(D^2-1)+1}<D.
-$$
+```
 
 All previously inactive upper pairs remain strictly below `D`. Thus the actual
 full-source maximum is strictly below `D`, and all `n_D` labels are retained.

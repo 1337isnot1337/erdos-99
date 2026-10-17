@@ -16,9 +16,9 @@
 
 SR2 proves doubled ramification for every nonzero odd-order residue cluster when
 
-$$
+```math
 r=2^k\ge2,
-$$
+```
 
 except for the separate order-three cluster.  The proof deliberately left `r=1` open because the explicit `X` perturbation and the integral lifting error have the same valuation.
 
@@ -28,48 +28,48 @@ That coincidence can be resolved exactly modulo four.
 
 Let `u` be odd.  Let `xi` be a nontrivial residue `u`-th root of unity of order
 
-$$
+```math
 d\ne3,
-$$
+```
 
 let
 
-$$
+```math
 \tau=\xi+\xi^{-1},
-$$
+```
 
 and consider the local trace cluster of
 
-$$
+```math
 G_u(T)=C_u(T)+4T-6
-$$
+```
 
 over the unramified 2-adic trace field of `tau`.
 
 If
 
-$$
+```math
 \boxed{d\ne9,}
 \tag{OR1.1}
-$$
+```
 
 then the local double cluster is one ramified quadratic factor.  Equivalently every root in that cluster has ramification index two over the unramified trace field.
 
 The only residue order at which the first mod-four obstruction vanishes is
 
-$$
+```math
 \boxed{d=9.}
 \tag{OR1.2}
-$$
+```
 
 No claim is made here about whether the order-nine cluster ultimately splits or ramifies at a higher lifting stage.
 
 Combining OR1 with SR2 gives the uniform local cost
 
-$$
+```math
 \boxed{2r f_d}
 \tag{OR1.3}
-$$
+```
 
 for every `r=2^k>=1` and every nonzero residue order `d` other than `3` and, only when `r=1`, `9`.
 
@@ -77,19 +77,19 @@ for every `r=2^k>=1` and every nonzero residue order `d` other than `3` and, onl
 
 A prime residue order `p>=5` is never `3` or `9`.  Therefore the maximal-projective-order prime exclusion from SR2 extends from `k>=1` to all
 
-$$
+```math
 \boxed{k\ge0.}
 \tag{OR1.4}
-$$
+```
 
 Thus if
 
-$$
+```math
 q-2=2^k p,
 \qquad p\ge5\text{ prime},
 \qquad
 \min\{f:2^f\equiv\pm1\pmod p\}=\frac{p-1}{2},
-$$
+```
 
 then P1 is impossible for every `k>=0`.
 
@@ -99,92 +99,92 @@ then P1 is impossible for every `k>=0`.
 
 Let `K/Q_2` be the unramified trace field.  Choose the Teichmüller lift `zeta` of `xi` and put
 
-$$
+```math
 a=\zeta+\zeta^{-1}.
-$$
+```
 
 Then
 
-$$
+```math
 C_u(a)=2.
-$$
+```
 
 As in SR2,
 
-$$
+```math
 U(X):=C_u(a+X)-2
 =cX^2+d_3X^3+O(X^4),
 \tag{1.1}
-$$
+```
 
 where `c` is a unit.  The coefficients can be computed from the parametrization
 
-$$
+```math
 T(s)=\zeta e^s+\zeta^{-1}e^{-s}.
-$$
+```
 
 At `s=0`,
 
-$$
+```math
 T'(0)=\zeta-\zeta^{-1},
 \qquad
 T''(0)=a,
-$$
+```
 
 while
 
-$$
+```math
 C_u(T(s))=e^{us}+e^{-us}.
-$$
+```
 
 The first derivative vanishes and the second/third chain rules give
 
-$$
+```math
 \boxed{
 c=\frac{u^2}{a^2-4},}
 \tag{1.2}
-$$
+```
 
-$$
+```math
 \boxed{
 d_3=-\frac{u^2a}{(a^2-4)^2}.}
 \tag{1.3}
-$$
+```
 
 For `d!=3`, the residue trace is not one, so `a-1` is a unit.
 
 The first Newton segment of
 
-$$
+```math
 G_u(a+X)=U(X)+4(a-1)+4X
-$$
+```
 
 is therefore
 
-$$
+```math
 (0,2)\longrightarrow(2,0),
-$$
+```
 
 so every root in the cluster has
 
-$$
+```math
 \boxed{v(X)=1.}
 \tag{1.4}
-$$
+```
 
 Write
 
-$$
+```math
 X=2W,
 \qquad v(W)=0.
-$$
+```
 
 Dividing by four gives
 
-$$
+```math
 0=(a-1)+cW^2+2W+2d_3W^3+O(4).
 \tag{1.5}
-$$
+```
 
 The question is whether this repeated residual root can lift in an unramified extension.
 
@@ -194,74 +194,74 @@ The question is whether this repeated residual root can lift in an unramified ex
 
 Let `kappa` be the residue field of `K`.  Modulo four, every element has a unique Teichmüller expansion
 
-$$
+```math
 [x_0]+2[x_1],
 \qquad x_0,x_1\in\kappa.
-$$
+```
 
 We denote this pair by `(x_0,x_1)`.  The only length-two formulas needed are
 
-$$
+```math
 (x_0,x_1)+(y_0,y_1)
 =(x_0+y_0,\ x_1+y_1+x_0y_0),
 \tag{2.1}
-$$
+```
 
 and
 
-$$
+```math
 (x_0,x_1)(y_0,y_1)
 =(x_0y_0,\ x_0^2y_1+y_0^2x_1).
 \tag{2.2}
-$$
+```
 
 These follow immediately by comparing the first two Witt ghost components.  They are included here so no black-box local-field computation is hidden in the proof.
 
 Since `zeta=[xi]` and `zeta^{-1}=[xi^{-1}]`, writing
 
-$$
+```math
 \tau=\xi+\xi^{-1}
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{a=(\tau,1).}
 \tag{2.3}
-$$
+```
 
 Also
 
-$$
+```math
 -1=(1,1),
-$$
+```
 
 so
 
-$$
+```math
 \boxed{a-1=(\tau+1,\tau).}
 \tag{2.4}
-$$
+```
 
 Because `u` is odd,
 
-$$
+```math
 u^2\equiv1\pmod8.
-$$
+```
 
 Modulo four, `a^2-4` is simply `a^2`, and (2.2) shows that the square of any Witt unit `(x_0,x_1)` has second coordinate zero.  Hence
 
-$$
+```math
 \boxed{c\equiv a^{-2}=(\tau^{-2},0)\pmod4.}
 \tag{2.5}
-$$
+```
 
 From (1.3), only the residue of `d_3` is needed:
 
-$$
+```math
 \boxed{\overline{d_3}=\tau^{-3}.}
 \tag{2.6}
-$$
+```
 
 ---
 
@@ -269,67 +269,67 @@ $$
 
 Reduce (1.5) modulo two.  If
 
-$$
+```math
 \omega:=\overline W,
-$$
+```
 
 then
 
-$$
+```math
 \tau^{-2}\omega^2+(\tau+1)=0,
-$$
+```
 
 or
 
-$$
+```math
 \boxed{\omega^2=\tau^2(\tau+1).}
 \tag{3.1}
-$$
+```
 
 The residue field is perfect, so `omega` is uniquely determined.
 
 Suppose the local root could lie in an unramified extension of `K`.  Its residue is still `omega`, which already belongs to the base residue field.  Modulo four we may therefore replace `W` by the Teichmüller lift
 
-$$
+```math
 [\omega]=(\omega,0),
-$$
+```
 
 because changing `W` by a multiple of two changes `W^2` only by a multiple of four, and changes the terms already multiplied by two only by a multiple of four.
 
 Using (2.5) and (3.1),
 
-$$
+```math
 c[\omega]^2=(\tau+1,0).
-$$
+```
 
 Adding this to (2.4) with (2.1) gives
 
-$$
+```math
 (a-1)+c[\omega]^2
 =
 (0,\tau+(\tau+1)^2).
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 \frac{(a-1)+c[\omega]^2}{2}
 \equiv \tau^2+\tau+1
 \pmod2.
 }
 \tag{3.2}
-$$
+```
 
 The remaining valuation-one correction in (1.5) is
 
-$$
+```math
 W+d_3W^3.
-$$
+```
 
 Modulo two, (2.6) and (3.1) give
 
-$$
+```math
 \begin{aligned}
 \omega+\tau^{-3}\omega^3
 &=\omega\left(1+\tau^{-3}\omega^2\right)\\
@@ -337,16 +337,16 @@ $$
 &=\boxed{\frac\omega\tau}.
 \end{aligned}
 \tag{3.3}
-$$
+```
 
 Therefore an unramified lift can exist only if
 
-$$
+```math
 \boxed{
 \tau^2+\tau+1+\frac\omega\tau=0.
 }
 \tag{3.4}
-$$
+```
 
 This condition is independent of the chosen unramified extension.
 
@@ -356,61 +356,61 @@ This condition is independent of the chosen unramified extension.
 
 Assume (3.4).  Then
 
-$$
+```math
 \omega=\tau(\tau^2+\tau+1).
-$$
+```
 
 Square and use (3.1):
 
-$$
+```math
 \tau^2(\tau+1)
 =
 \tau^2(\tau^2+\tau+1)^2.
-$$
+```
 
 Since `tau!=0`, divide by `tau^2`:
 
-$$
+```math
 \tau+1=\tau^4+\tau^2+1.
-$$
+```
 
 Hence
 
-$$
+```math
 \tau^4+\tau^2+\tau=0,
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{\tau^3+\tau+1=0.}
 \tag{4.1}
-$$
+```
 
 Conversely, if (4.1) holds, the two sides defining `omega` have the same square; the Frobenius square map is injective in the residue field, so (3.4) follows.  Thus the mod-four obstruction vanishes exactly when (4.1) holds.
 
 Now take the reciprocal lift of the cubic:
 
-$$
+```math
 \begin{aligned}
 Z^3\left[(Z+Z^{-1})^3+(Z+Z^{-1})+1\right]
 &=Z^6+Z^3+1\\
 &=\frac{Z^9-1}{Z^3-1}
 \end{aligned}
-$$
+```
 
 in characteristic two.
 
 Its roots are exactly the roots of unity of order nine.  Therefore
 
-$$
+```math
 \boxed{
 \tau^3+\tau+1=0
 \iff
 \operatorname{ord}(\xi)=9.
 }
 \tag{4.2}
-$$
+```
 
 This proves OR1.2.
 
@@ -426,9 +426,9 @@ For `r=1`, OR1 proves ramification index two for every residue order other than 
 
 Therefore a nonzero residue trace orbit of degree `f_d` has exact minimum local factor cost
 
-$$
+```math
 \boxed{2r f_d}
-$$
+```
 
 throughout
 
@@ -440,9 +440,9 @@ r=1, d not in {3,9}.
 
 For prime `d=p>=5`, both exceptional orders are absent, so this holds for every power of two
 
-$$
+```math
 r=2^k,\qquad k>=0.
-$$
+```
 
 ---
 
@@ -450,35 +450,35 @@ $$
 
 Let
 
-$$
+```math
 u=p>=5
-$$
+```
 
 be prime and suppose
 
-$$
+```math
 f_p=\frac{p-1}{2}.
-$$
+```
 
 PR #152 says the P1 trace minimal polynomial must use a nonzero `p`-trace cluster.  OR1/SR2 give local degree at least
 
-$$
+```math
 2r f_p=r(p-1)
-$$
+```
 
 for every `r=2^k`, including `r=1`.
 
 RB gives the global degree ceiling
 
-$$
+```math
 \deg h\le\frac{r(p-1)}2.
-$$
+```
 
 Contradiction.
 
 Hence
 
-$$
+```math
 \boxed{
 q-2=2^k p,
 \ p>=5\text{ prime},
@@ -487,7 +487,7 @@ q-2=2^k p,
 \text{P1 impossible for every }k>=0.
 }
 \tag{6.1}
-$$
+```
 
 This strictly strengthens SR2 by removing its `k>=1` restriction.
 

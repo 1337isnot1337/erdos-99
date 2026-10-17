@@ -24,30 +24,30 @@ The C65 rattlers are not merely interior to `R`. The prescribed unit-spaced shel
 
 Put
 
-$$
+```math
 \delta_D:=\frac\pi q
 =2\arcsin\frac1{2D}
-$$
+```
 
 and define
 
-$$
+```math
 \boxed{
  s_D^2
 :=4D^2\sin^2\frac{\delta_D}{4}
 =\frac1{2\left(1+\sqrt{1-1/(4D^2)}\right)}.}
 \tag{RD.1}
-$$
+```
 
 Let `r_D` be the positive root of
 
-$$
+```math
  t^2+s_D^2\left(1-\frac tD\right)=1.
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
  r_D
 =
@@ -57,19 +57,19 @@ $$
 \sqrt{\frac{s_D^4}{D^2}+4(1-s_D^2)}
 \right].}
 \tag{RD.2}
-$$
+```
 
 Then every C65 contact-isolated source point `z` satisfies
 
-$$
+```math
 \boxed{
 \operatorname{dist}(z,\partial R)>r_D.}
 \tag{RD.3}
-$$
+```
 
 Moreover
 
-$$
+```math
 \boxed{
  r_D
 =
@@ -80,25 +80,25 @@ $$
 \frac1{128D^3}
 +O(D^{-5}).}
 \tag{RD.4}
-$$
+```
 
 Thus all rattlers lie in the inner parallel body
 
-$$
+```math
 R_{-r_D}:=
 \{x\in R:\operatorname{dist}(x,\partial R)\ge r_D\},
-$$
+```
 
 whose diameter obeys
 
-$$
+```math
 \boxed{
 \operatorname{diam}(R_{-r_D})
 \le D-2r_D
 =
 D-\sqrt3-\frac1{4D}+O(D^{-3}).}
 \tag{RD.5}
-$$
+```
 
 In particular, the force-invisible population has a strictly smaller intrinsic diameter than the full source by an asymptotic additive gap `sqrt(3)`.
 
@@ -110,20 +110,20 @@ The Reinhardt equality classification used in RC supplies a width-`D` Reuleaux p
 
 The vertices of `F` occur in the same cyclic order on `partial R` as on the convex polygon `F`. Consecutive vertices `p_i,p_{i+1}` satisfy
 
-$$
+```math
 |p_i-p_{i+1}|=1.
 \tag{1.1}
-$$
+```
 
 Every defining Reuleaux vertex is itself one of these shell vertices. Therefore the boundary portion from one force-hull vertex to the next contains no Reuleaux corner in its relative interior. It lies on one radius-`D` circular arc.
 
 For a radius-`D` circle, a unit chord subtends the minor central angle
 
-$$
+```math
 2\arcsin\frac1{2D}
 =\delta_D.
 \tag{1.2}
-$$
+```
 
 Hence `partial R` is sampled by force-hull vertices so that every shell subarc between consecutive samples has central angle exactly `delta_D`.
 
@@ -133,17 +133,17 @@ Hence `partial R` is sampled by force-hull vertices so that every shell subarc b
 
 Let `z` be a C65 rattler and set
 
-$$
+```math
 t:=\operatorname{dist}(z,\partial R).
-$$
+```
 
 Choose a nearest boundary point `y`.
 
 If `y` is a force-hull shell vertex, then
 
-$$
+```math
 |z-y|=t.
-$$
+```
 
 Since `r_D<1` for the sufficiently large Target C regime, any `t\le r_D` would give a source separation `<1` or `=1`, impossible for a contact-isolated source point after C-I restoration.
 
@@ -151,55 +151,55 @@ It remains to consider `y` in the relative interior of one circular shell subarc
 
 Let `c` be the center of the radius-`D` circle supporting that Reuleaux arc. Because `R` lies inside `B(c,D)`, the inward normal points from `y` toward `c`. At a nearest smooth boundary point, `z-y` is normal to the boundary, so
 
-$$
+```math
 |z-c|=D-t
-$$
+```
 
 and `z,c,y` are collinear.
 
 Let `phi` be the smaller central angle from the ray `cy` to one of the endpoint rays `cp_0,cp_1`. Since the total subarc angle is `delta_D`, one endpoint satisfies
 
-$$
+```math
 0\le\phi\le\frac{\delta_D}{2}.
 \tag{2.1}
-$$
+```
 
 For that endpoint `p`, the law of cosines gives
 
-$$
+```math
 \begin{aligned}
 |z-p|^2
 &=(D-t)^2+D^2-2D(D-t)\cos\phi\\
 &=t^2+2D(D-t)(1-\cos\phi).
 \end{aligned}
 \tag{2.2}
-$$
+```
 
 The right side increases with `phi` on the present range. Therefore by (2.1)
 
-$$
+```math
 |z-p|^2
 \le
  t^2+2D(D-t)
 \left(1-\cos\frac{\delta_D}{2}\right).
 \tag{2.3}
-$$
+```
 
 By definition of `s_D`,
 
-$$
+```math
 2D^2\left(1-\cos\frac{\delta_D}{2}\right)=s_D^2,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 |z-p|^2
 \le
  t^2+s_D^2\left(1-\frac tD\right).}
 \tag{2.4}
-$$
+```
 
 The worst point of a shell subarc is therefore its midpoint; no other boundary location can be farther from both adjacent shell samples at a fixed inward depth.
 
@@ -209,30 +209,30 @@ The worst point of a shell subarc is therefore its midpoint; no other boundary l
 
 Define
 
-$$
+```math
 f_D(t)
 :=t^2+s_D^2\left(1-\frac tD\right).
-$$
+```
 
 Since `s_D^2<1`, the equation
 
-$$
+```math
 f_D(t)=1
-$$
+```
 
 has one positive and one negative root. The positive root is exactly (RD.2).
 
 For `0\le t<r_D`,
 
-$$
+```math
 f_D(t)<1.
-$$
+```
 
 Equation (2.4) would then give
 
-$$
+```math
 |z-p|<1,
-$$
+```
 
 contradicting unit separation.
 
@@ -240,9 +240,9 @@ If `t=r_D`, then (2.4) gives `|z-p|<=1`. Unit separation forces equality, which 
 
 Therefore
 
-$$
+```math
 \boxed{t>r_D,}
-$$
+```
 
 proving RD.3.
 
@@ -252,21 +252,21 @@ proving RD.3.
 
 Since
 
-$$
+```math
 \sin\frac{\delta_D}{2}=\frac1{2D},
-$$
+```
 
 we have
 
-$$
+```math
 \cos\frac{\delta_D}{2}
 =
 \sqrt{1-\frac1{4D^2}}.
-$$
+```
 
 By the half-angle identity,
 
-$$
+```math
 \begin{aligned}
 s_D^2
 &=4D^2\sin^2\frac{\delta_D}{4}\\
@@ -276,20 +276,20 @@ s_D^2
 &=
 \frac1{2\left(1+\sqrt{1-1/(4D^2)}\right)}.
 \end{aligned}
-$$
+```
 
 This proves RD.1.
 
 Expanding at large `D`,
 
-$$
+```math
 s_D^2
 =\frac14+\frac1{64D^2}+\frac1{512D^4}+O(D^{-6}).
-$$
+```
 
 Substitution into the exact quadratic root (RD.2) gives
 
-$$
+```math
 r_D
 =
 \frac{\sqrt3}{2}
@@ -298,7 +298,7 @@ r_D
 +
 \frac1{128D^3}
 +O(D^{-5}),
-$$
+```
 
 which is RD.4.
 
@@ -308,61 +308,61 @@ which is RD.4.
 
 For any convex body `K`, the inner parallel body at depth `r` can be written as the erosion
 
-$$
+```math
 K_{-r}
 =
 \{x:x+rB_2\subseteq K\}.
-$$
+```
 
 It is convex. Moreover
 
-$$
+```math
 K_{-r}+rB_2\subseteq K.
 \tag{5.1}
-$$
+```
 
 Take support functions in any unit direction `u`. Equation (5.1) gives
 
-$$
+```math
 h_{K_{-r}}(u)+r\le h_K(u)
-$$
+```
 
 and the same inequality for `-u`. Hence
 
-$$
+```math
 w_{K_{-r}}(u)+2r\le w_K(u).
 \tag{5.2}
-$$
+```
 
 Our Reuleaux completion has constant width
 
-$$
+```math
 w_R(u)=D
 \qquad\text{for every }u.
-$$
+```
 
 Therefore
 
-$$
+```math
 w_{R_{-r_D}}(u)\le D-2r_D
-$$
+```
 
 for every direction. A compact convex body's diameter is the maximum of its directional widths, so
 
-$$
+```math
 \operatorname{diam}(R_{-r_D})\le D-2r_D.
-$$
+```
 
 This proves RD.5.
 
 Equivalently, using the disk-intersection form from RC,
 
-$$
+```math
 R_{-r_D}
 =
 \bigcap_{c\in S}\overline B(c,D-r_D).
 \tag{5.3}
-$$
+```
 
 ---
 
@@ -370,15 +370,15 @@ $$
 
 There are
 
-$$
+```math
 n-q=\Theta(D^2)
-$$
+```
 
 rattlers in the C65 cyclic source, and RD now confines all of them to a unit-separated set of diameter at most
 
-$$
+```math
 D-\sqrt3+O(D^{-1}).
-$$
+```
 
 This is substantial geometric compression, but generic Oler/isodiametric bounds on the inner parallel body still leave an `O(D)` population margin. Therefore RD alone is not a contradiction.
 
@@ -417,11 +417,12 @@ The exact `d_H=0` cyclic endpoint now has three nested scales:
 1. full source diameter `D`;
 2. unit-spaced Reinhardt force shell on `partial R` with `q=Theta(D)` points;
 3. all `Theta(D^2)` C65 rattlers inside
-   $$
+   ```math
    R_{-r_D},
    \qquad
    r_D=\sqrt3/2+o(1),
-   $$
+   
+   ```
    whose diameter is at most `D-sqrt3+o(1)`.
 
 The highest-value next target is a **sampled-boundary Oler improvement**: prove that a unit-separated set consisting of every unit-spaced Reinhardt boundary sample plus an interior set in `R_{-r_D}` has a linear correction strictly smaller than generic Oler allows.

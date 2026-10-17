@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_strict_stopped_train_phase_gap.md) · source SHA-256 `51b90df5f91bd3e2d6ba56ca53abd38d35ec320e5175a7a5dd9b4809a23693c1`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "fa905480bd5cf413a798cf4c4f5100fe8ecef393", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_strict_stopped_train_phase_gap.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4aad63ab18b700b23dbd26517c66c05930e0a0892ada2f566e78ed9963b97f0c"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -17,17 +19,17 @@ and hostile-audited in this branch.
 
 Put
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},
 \qquad s_0:=\sqrt{\Delta_2}.
-$$
+```
 
 Audited-working §142 proves for every Type-II survivor sequence
 
-$$
+```math
 \liminf {T-q/2\over D}\ge2s_0.
 \tag{SG.1}
-$$
+```
 
 The new result is the strict form.
 
@@ -36,20 +38,20 @@ The new result is the strict form.
 There exists an absolute constant `epsilon_SG>0` such that every sufficiently large
 Type-II C-II survivor in the audited-working §142 scope satisfies
 
-$$
+```math
 \boxed{
 {T-q/2\over D}
 \ge2\sqrt{\Delta_2}+\epsilon_{SG}.
 }
 \tag{SG.2}
-$$
+```
 
 Equivalently, no Type-II survivor sequence can satisfy
 
-$$
+```math
 {T-q/2\over D}\to2\sqrt{\Delta_2}.
 \tag{SG.3}
-$$
+```
 
 The proof is compactness-based and does not extract a numerical value of
 `epsilon_SG`.
@@ -61,59 +63,59 @@ The proof is compactness-based and does not extract a numerical value of
 Assume for contradiction that a Type-II sequence satisfies (SG.3). Pass to the phase
 subsequence used in audited-working §142:
 
-$$
+```math
 {T\over D}\to x,
 \qquad
 {q\over T}\to y,
 \qquad
 \mu_D\Rightarrow\mu,
-$$
+```
 
 and let `rho` be the total atomic mass of `mu`.
 
 Section 142 gives
 
-$$
+```math
 2s_0\le x\rho
 \tag{SG.4}
-$$
+```
 
 and
 
-$$
+```math
 y\le2(1-\rho).
 \tag{SG.5}
-$$
+```
 
 Therefore
 
-$$
+```math
 x\rho
 \le x(1-y/2)
 ={T-q/2\over D}+o(1)
 \to2s_0.
-$$
+```
 
 Together with (SG.4),
 
-$$
+```math
 \boxed{x\rho=2s_0.}
 \tag{SG.6}
-$$
+```
 
 Audited-working §142 also proves the weighted-Mantel inequality
 
-$$
+```math
 {\Delta_2\over x^2}\le{\rho^2\over4}.
 \tag{SG.7}
-$$
+```
 
 Equation (SG.6) makes (SG.7) equality. The measure-sandwich repair in
 `target_c_near_mantel_atomic_endpoint_proof_repair.md` then applies verbatim: equality
 through the crossing-measure/product-measure/weighted-Mantel chain yields a physical
 induced train graph `G_D` with
 
-$$
+```math
 \boxed{
 |V(G_D)|=(2s_0+o(1))D,
 \qquad
@@ -121,6 +123,7 @@ $$
 ={|V(G_D)|^2\over4}-o(D^2).
 }
 \tag{SG.8}
+```
 
 The graph is simple and triangle-free by §142.2.
 
@@ -131,10 +134,10 @@ The graph is simple and triangle-free by §142.2.
 The self-contained near-Mantel stability lemma from the endpoint proof supplies two
 independent physical train shores `U_D,V_D` with
 
-\[
+```math
 |U_D|=|V_D|=(s_0+o(1))D
 \tag{SG.9}
-$$
+```
 
 and only `o(D^2)` missing `U_D x V_D` crossings.
 
@@ -147,20 +150,20 @@ two phase neighbors.
 Choose the larger neighboring atom. This gives physical train families `A_D,B_D`
 with
 
-$$
+```math
 |A_D|=(s_0+o(1))D,
 \qquad
 |B_D|\ge(s_0/2-o(1))D,
 \tag{SG.10}
-$$
+```
 
 family direction widths `o(1)`, limiting projective separation `pi/3`, same-family
 disjointness, common crossing sign, and
 
-$$
+```math
 |A_D||B_D|-e(A_D,B_D)=o(D^2).
 \tag{SG.11}
-$$
+```
 
 ---
 
@@ -168,37 +171,37 @@ $$
 
 The hostile-audited near-complete signed-monotone train lemma gives
 
-$$
+```math
 D\ge
 \left({\sqrt3\over2}-o(1)\right)
 (|A_D|+|B_D|).
 \tag{SG.12}
-$$
+```
 
 Using (SG.10),
 
-$$
+```math
 1
 \ge
 {3\sqrt3\over4}s_0-o(1).
-$$
+```
 
 But
 
-$$
+```math
 {3\sqrt3\over4}s_0
 =1.237090624640176\ldots>1.
 \tag{SG.13}
-$$
+```
 
 This contradiction proves that (SG.3) is impossible.
 
 If no positive uniform `epsilon_SG` existed in (SG.2), choose for each integer `j` a
 Type-II survivor with `D>=j` and
 
-$$
+```math
 {T-q/2\over D}<2s_0+1/j.
-$$
+```
 
 Audited-working §142 supplies the reverse lower bound, so the selected sequence would
 satisfy (SG.3), already excluded. This proves (SG.2).
@@ -209,36 +212,36 @@ satisfy (SG.3), already excluded. This proves (SG.2).
 
 The exact stopped-train ledger is
 
-$$
+```math
 T-q=2f-k,
 \qquad k=d_H+s_Z.
 \tag{SG.14}
-$$
+```
 
 The convex loaded hull has `q<=pi D`. Therefore
 
-$$
+```math
 \begin{aligned}
 {T-q\over D}
 &={T-q/2\over D}-{q\over2D}\\
 &\ge2s_0+\epsilon_{SG}-\pi/2,
 \end{aligned}
-$$
+```
 
 so, with
 
-$$
+```math
 \gamma:=2s_0-\pi/2
 =0.333829286933018\ldots,
-$$
+```
 
-$$
+```math
 \boxed{
 \liminf {2f-k\over D}
 \ge\gamma+\epsilon_{SG}.
 }
 \tag{SG.15}
-$$
+```
 
 This strictly improves audited-working §142.9.
 
@@ -246,14 +249,14 @@ This strictly improves audited-working §142.9.
 
 From
 
-$$
+```math
 T=h-s_Z+2f,
 \qquad q=h+d_H,
-$$
+```
 
 (SG.2) gives
 
-$$
+```math
 {f\over D}
 \ge
 s_0+{\epsilon_{SG}\over2}
@@ -262,20 +265,20 @@ s_0+{\epsilon_{SG}\over2}
 +{1\over2}{s_Z\over D}
 -o(1).
 \tag{SG.16}
-$$
+```
 
 The same outer-walk inequality used in §146 is
 
-$$
+```math
 {Q\over D}+2{s_Z\over D}
 \le2{h\over D}-\pi+o(1),
 \qquad Q\ge f.
 \tag{SG.17}
-$$
+```
 
 Combining (SG.16)–(SG.17) yields
 
-$$
+```math
 \boxed{
 \liminf {1\over D}
 \left(
@@ -285,13 +288,13 @@ $$
 C_{146}+{2\epsilon_{SG}\over9},
 }
 \tag{SG.18}
-$$
+```
 
 where
 
-$$
+```math
 C_{146}={4\over9}(\pi+s_0).
-$$
+```
 
 Thus the weighted §146 endpoint is not merely unattainable; its strict separation is a
 formal corollary of the stronger train-phase gap.
@@ -300,14 +303,14 @@ formal corollary of the stronger train-phase gap.
 
 Audited-working §152 has
 
-$$
+```math
 q-T_{\triangle}\ge f+2k
 ={1\over2}(2f-k)+{5\over2}k.
-$$
+```
 
 Using (SG.15),
 
-$$
+```math
 \boxed{
 \liminf {q-T_{\triangle}\over D}
 \ge
@@ -315,7 +318,7 @@ $$
 +{5\over2}\liminf{k\over D}
 }
 \tag{SG.19}
-$$
+```
 
 in the corresponding fixed-subsequence form. In particular the current universal
 `0.1669146434...D` tooth-loss coefficient improves by `epsilon_SG/2`.

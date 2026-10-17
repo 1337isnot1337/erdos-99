@@ -35,31 +35,31 @@ thrackles without assuming Conway's conjecture.
 
 For the actual loaded diameter graph `H`, this turns
 
-$$
+```math
 d_H:=q-h
-$$
+```
 
 into an exact topology variable:
 
-$$
+```math
 \boxed{
  d_H=0
  \iff
  H\text{ is connected and contains one odd cycle},
 }
 \tag{WT.1}
-$$
+```
 
 while
 
-$$
+```math
 \boxed{
  d_H>0
  \iff
  H\text{ is a caterpillar forest with exactly }d_H\text{ components}.
 }
 \tag{WT.2}
-$$
+```
 
 In the cyclic case, every vertex outside the unique odd cycle is a leaf attached
 directly to a cycle vertex.  Thus the post-ZF diameter graph has only two global
@@ -69,10 +69,10 @@ tree component.
 This is useful in the exact `s_Z=0` circuit phase because E597 charges `d_H` with
 coefficient three:
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}
 \ge0.597+\epsilon_{597}+3\frac{d_H}{D}.
-$$
+```
 
 The term `d_H/D` is therefore literally normalized caterpillar-component count in the
 forest branch, and it vanishes identically in the unique cyclic branch.
@@ -83,11 +83,11 @@ forest branch, and it vanishes identically in the unique cyclic branch.
 
 Let `B` be the loaded terminal set and let
 
-$$
+```math
 H=(B,E_H),
 \qquad q=|B|,
 \qquad h=|E_H|.
-$$
+```
 
 Every edge of `H` is an actual diameter pair and is drawn as the corresponding
 straight segment of length `D`.
@@ -103,10 +103,10 @@ Two distinct edges of `H` behave as follows.
 Hence every pair of edges meets exactly once, either at a common endpoint or at one
 proper crossing. Therefore
 
-$$
+```math
 \boxed{H\text{ is a finite straight-line thrackle}.}
 \tag{1.1}
-$$
+```
 
 Every vertex of `H` has positive degree by the definition of the loaded terminal set.
 
@@ -123,16 +123,16 @@ diameter degree, there are no isolated-vertex components.
 
 If the component sizes are `q_1,...,q_c`, each caterpillar is a tree, so
 
-$$
+```math
 h=\sum_{j=1}^c(q_j-1)=q-c.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{c=q-h=d_H.}
 \tag{2.1}
-$$
+```
 
 In particular a forest phase automatically has `d_H>=1`, and `d_H` is exactly its
 number of diameter components.
@@ -143,24 +143,24 @@ Let `Gamma` be the odd cycle supplied by Woodall and let it have `r` vertices an
 edges.  Every one of the remaining `q-r` vertices is adjacent to a cycle vertex.
 Therefore
 
-$$
+```math
 h\ge r+(q-r)=q.
 \tag{2.2}
-$$
+```
 
 The Hopf--Pannwitz bound for a planar diameter graph gives
 
-$$
+```math
 h\le q.
 \tag{2.3}
-$$
+```
 
 Hence equality holds throughout:
 
-$$
+```math
 \boxed{h=q,\qquad d_H=0.}
 \tag{2.4}
-$$
+```
 
 Moreover every outside vertex contributes exactly one edge to the cycle, and there can
 be no other edge.  Thus every outside vertex is a leaf attached directly to a cycle
@@ -170,14 +170,14 @@ This proves WT.1--WT.2.
 
 A useful equivalent formulation is
 
-$$
+```math
 \boxed{
 H\text{ contains a cycle}\iff d_H=0,
 \qquad
 H\text{ is a forest}\iff d_H>0.
 }
 \tag{2.5}
-$$
+```
 
 ---
 
@@ -190,12 +190,12 @@ with them.
 
 In the cyclic case the unique cycle is an actual diameter cycle. C17 therefore gives
 
-$$
+```math
  r>
  \frac{\pi D}{\sqrt{12(2D+1)}}
  =\Omega(\sqrt D).
 \tag{3.1}
-$$
+```
 
 Thus the cyclic Woodall core cannot have bounded size in an unbounded global-minimizer
 sequence.
@@ -206,14 +206,14 @@ The relative-interior normalization makes `H` the positive diameter support used
 C24.  Since the cyclic case contains an odd cycle, C24.6 forces the common
 bridge-block intersection `I_*` to be exactly one block.  Therefore
 
-$$
+```math
 \boxed{
  d_H=0
  \Longrightarrow
  \text{all positive diameter routes meet in one contact bridge block, not a common bridge}.
 }
 \tag{3.2}
-$$
+```
 
 If `d_H>0`, Woodall says `H` is globally a caterpillar forest whether or not the C24
 common intersection degenerates to one block.  This removes the need to derive
@@ -237,40 +237,40 @@ either wholly in the cyclic connected case or wholly in the caterpillar-forest c
 E597 proves that for some absolute `epsilon_597>0`, every sufficiently large
 `s_Z=0` survivor satisfies
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}
 \ge
 0.597+\epsilon_{597}+3\frac{d_H}{D}.
 \tag{4.1}
-$$
+```
 
 Woodall now gives the exact interpretation
 
-$$
+```math
 \boxed{
 \frac{d_H}{D}
 =
 \frac{\#\{\text{diameter caterpillar components}\}}D
 }
 \tag{4.2}
-$$
+```
 
 throughout the forest branch.
 
 Thus, for any fixed `L`, a hypothetical circuit-phase sequence satisfying
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\le L+o(1)
-$$
+```
 
 has at most
 
-$$
+```math
 \boxed{
 \left(\frac{L-0.597}{3}+o(1)\right)D
 }
 \tag{4.3}
-$$
+```
 
 diameter components, unless it is in the single connected cyclic branch.
 
@@ -305,26 +305,26 @@ The `s_Z=0` circuit phase can now be attacked as two disjoint cases.
 
 ### WT-C: cyclic diameter support
 
-$$
+```math
 d_H=0,
-$$
+```
 
 `H` is one odd cycle of length `Omega(sqrt D)` with possible pendant leaves, and C24
 puts every diameter route through one bridgeless contact hub block.  The E597 currency
 reduces to
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}>0.597.
-$$
+```
 
 A useful next theorem here must use the cycle/leaf geometry, not a generic thrackle
 edge count.
 
 ### WT-F: caterpillar forest
 
-$$
+```math
 d_H\ge1,
-$$
+```
 
 `H` has exactly `d_H` caterpillar components.  Every component-count unit is already
 charged three times in E597.  A useful next theorem is a contact-bypass or circuit

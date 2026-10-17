@@ -50,10 +50,10 @@ Let a convex polygon contain the closed disk of radius `r>0` centered at the
 origin, and suppose every polygon vertex has distance at least `r0>=r` from
 the origin. If `r<r0`, then
 
-$$
+```math
 \operatorname{area}(P)\ge
 \frac{\pi r\sqrt{r_0^2-r^2}}{\arccos(r/r_0)}.
-$$
+```
 
 At `r=r0`, the right side is interpreted by continuity as `pi*r0^2`, which
 also follows directly from disk containment.
@@ -67,9 +67,9 @@ neighbor centers. If the center is `delta`-near-isolated, meaning its
 distance from every other center is strictly greater than `1+delta` for
 `delta>0`, then
 
-$$
+```math
 |V_x|\ge a_0+\delta.
-$$
+```
 
 The equality characterization and the non-strict base area bound are the
 scaled theorem of Mazel, Stuhl, and Suhov. Their original unit-disk centers
@@ -86,9 +86,9 @@ source, chosen contact-minimal, with the complete source retained. Write
 `D=diam(A)` and let `Z_delta` be the set of labels at distance strictly
 greater than `1+delta` from every other original label. For every `delta>0`,
 
-$$
+```math
 |Z_\delta|<\left(\frac{4\sqrt{3}}{\delta}+8\right)D+1.
-$$
+```
 
 Consequently, along any such sequence with `delta=delta(D)->0` and
 `D*delta(D)->infinity`, `|Z_delta|=o(D^2)`. This bounds only the
@@ -101,9 +101,9 @@ Let `A=X disjoint-union Y` be any finite unit-separated source of diameter
 `Y` are at least `lambda` apart. With
 `Delta=pi/(2*sqrt(3))` and `g_A=|A|-1-Delta*D^2`,
 
-$$
+```math
 g_A\le |X|-\Delta D^2(1-\lambda^{-2})+\frac{\pi D}{2\lambda}.
-$$
+```
 
 If such partitions are supplied along canonical global-minimizer sources
 with `|X|<=bD+o(D)` for fixed `b,c`, the strict canonical inequality
@@ -132,16 +132,16 @@ Join the origin to consecutive polygon vertices. Their radii are `a,b`, and
 the intervening angle `phi` lies in `(0,pi)`. The altitude `h` to the side is
 at least `r`. The exact altitude identity and `a^2+b^2>=2ab` give
 
-$$
+```math
 h^2=\frac{a^2b^2\sin^2\phi}{a^2+b^2-2ab\cos\phi}
 \le ab\cos^2(\phi/2).
-$$
+```
 
 Thus `ab>=r^2 sec^2(phi/2)` and, independently, `ab>=r0^2`. The triangle
 area is therefore at least
-$$
+```math
 \max\{\tfrac12r_0^2\sin\phi,\ r^2\tan(\phi/2)\}.
-$$
+```
 Put `theta0=arccos(r/r0)`. On `0<phi<=2*theta0`, the first expression
 divided by `phi` is bounded below by
 `r*sqrt(r0^2-r^2)/(2*theta0)`, since `sin(phi)/phi` decreases. On
@@ -163,12 +163,12 @@ cell vertex at radius at least `r0=1/sqrt(3)` from its center. A
 For `1/2<=r<r0`, apply the polygon bound `H(r,r0)`. With
 `r=r0*cos(theta)`, `0<theta<=pi/6`,
 
-$$
+```math
 H=\pi r_0^2\frac{\sin(2\theta)}{2\theta},\qquad
 \frac{dH}{dr}=\frac{\pi r_0}{2}
 \frac{\sin(2\theta)-2\theta\cos(2\theta)}
 {\theta^2\sin\theta}\ge2.
-$$
+```
 
 The numerator is `integral_0^(2 theta) t*sin(t) dt`. Concavity gives
 `sin(t)>=3*sqrt(3)*t/(2*pi)` on `[0,pi/3]`, and `sin(theta)<=theta`,
@@ -189,10 +189,10 @@ Put `sigma_x=|V_x|-a0` on those full cells and
 zero-area boundaries. With `delta_K=pi*D^2/4-area(K)` and
 `g_A=n-1-Delta*D^2`, exact cancellation gives
 
-$$
+```math
 \sum_{x\notin J}\sigma_x+A_{\partial}+\delta_K
 =a_0(m-1)-a_0g_A.
-$$
+```
 
 All terms on the left are nonnegative. By hull coverage, each label in `J`
 lies within one of `\partial K`; its radius-`1/2` disk is in the outer

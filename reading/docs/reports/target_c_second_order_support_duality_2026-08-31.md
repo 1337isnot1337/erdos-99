@@ -30,76 +30,76 @@ Moreover all of C57-C61 applies to this larger velocity-specific zero face, not 
 
 Fix
 
-$$
+```math
 v\in\operatorname{ri}\mathcal K_D(A).
 \tag{C62.1}
-$$
+```
 
 By C6, every strong row has zero first variation and every weak row has strict first variation. Weak rows therefore need no second-order condition for sufficiently small positive time.
 
 Let `R_*` be the signed rigidity matrix on the strong active set `E_*=C_* union H_*`, with rows
 
-$$
+```math
 R_e a=(p_i-p_j)\cdot(a_i-a_j)
 \qquad(e=ij\in C_*),
 \tag{C62.2}
-$$
+```
 
 and
 
-$$
+```math
 R_h a=-(p_i-p_j)\cdot(a_i-a_j)
 \qquad(h=ij\in H_*).
 \tag{C62.3}
-$$
+```
 
 For the quadratic jet
 
-$$
+```math
 p_i(t)=p_i+t v_i+\frac{t^2}{2}a_i,
 \tag{C62.4}
-$$
+```
 
 the coefficient of `t^2` in the squared-distance constraint is feasible exactly when
 
-$$
+```math
 R_ea\ge -|v_i-v_j|^2
 \qquad(e=ij\in C_*),
 \tag{C62.5}
-$$
+```
 
 and
 
-$$
+```math
 R_ha\ge |v_i-v_j|^2
 \qquad(h=ij\in H_*).
 \tag{C62.6}
-$$
+```
 
 Define the right-hand side vector `b(v)` by
 
-$$
+```math
 b_e=-|v_i-v_j|^2\quad(e\in C_*),
 \qquad
 b_h=|v_i-v_j|^2\quad(h\in H_*),
 \tag{C62.7}
-$$
+```
 
 and the second-order acceleration polyhedron
 
-$$
+```math
 \boxed{
 \mathcal A_2(v)=\{a:R_*a\ge b(v)\}.
 }
 \tag{C62.8}
-$$
+```
 
 For `a in A_2(v)` put
 
-$$
+```math
 \rho_e(a)=R_ea-b_e(v)\ge0.
 \tag{C62.9}
-$$
+```
 
 These are the signed second-order slacks.
 
@@ -107,20 +107,20 @@ These are the signed second-order slacks.
 
 Let `lambda=(alpha,beta)>=0` satisfy
 
-$$
+```math
 R_*^{\mathsf T}\lambda=0.
 \tag{C62.10}
-$$
+```
 
 Exactly as in C6, a nonzero such dependence must have positive total diameter coefficient: a nonzero nonnegative equilibrium dependence supported only on free contact forces is impossible by the generic extreme-vertex argument. Normalize
 
-$$
+```math
 \sum_H\beta_h=1.
-$$
+```
 
 Then `lambda` is a normalized KKT stress. Its pairing with the second-order right-hand side is
 
-$$
+```math
 \begin{aligned}
 \lambda^{\mathsf T}b(v)
 &=\sum_H\beta_h|v_i-v_j|^2
@@ -128,34 +128,34 @@ $$
 &=-q_\lambda(v),
 \end{aligned}
 \tag{C62.11}
-$$
+```
 
 where
 
-$$
+```math
 q_\lambda(v)=\operatorname{tr}(V^{\mathsf T}\Omega_\lambda V).
-$$
+```
 
 C53-C54 give
 
-$$
+```math
 \Omega_\lambda\succeq0
-$$
+```
 
 for every normalized KKT stress, so
 
-$$
+```math
 \lambda^{\mathsf T}b(v)\le0.
 \tag{C62.12}
-$$
+```
 
 Farkas' alternative for `R_*a>=b(v)` says infeasibility would produce a nonzero `lambda>=0` with
 
-$$
+```math
 R_*^{\mathsf T}\lambda=0,
 \qquad
 \lambda^{\mathsf T}b(v)>0,
-$$
+```
 
 contradicting (C62.12).
 
@@ -163,10 +163,10 @@ contradicting (C62.12).
 
 For every relative-interior fixed-diameter critical velocity,
 
-$$
+```math
 \boxed{\mathcal A_2(v)\ne\varnothing.}
 \tag{C62.13}
-$$
+```
 
 This is stronger than C13.3 in a different direction. C13.3 supplies one zero-energy dual stress; C62.1 says the entire fixed-diameter second-order primal inequality system is feasible because **all** normalized stresses have the PSD sign.
 
@@ -174,36 +174,36 @@ This is stronger than C13.3 in a different direction. C13.3 supplies one zero-en
 
 Define
 
-$$
+```math
 \mathcal Z(v)
 =\{s\in\mathcal S:q_s(v)=0\},
 \tag{C62.14}
-$$
+```
 
 where `S` is the normalized KKT polytope. Universal PSD makes `q_s(v)>=0` on all of `S`, while C13.3 gives at least one stress with `q_s(v)<=0`. Therefore
 
-$$
+```math
 \boxed{\mathcal Z(v)\text{ is a nonempty exposed face of }\mathcal S.}
 \tag{C62.15}
-$$
+```
 
 Let
 
-$$
+```math
 E_2(v)=\bigcup_{s\in\mathcal Z(v)}\operatorname{supp}s.
 \tag{C62.16}
-$$
+```
 
 A relative-interior point of `Z(v)` has support exactly `E_2(v)`.
 
 Because every `Omega_s` is PSD,
 
-$$
+```math
 q_s(v)=0
 \iff
 \Omega_sV_x=\Omega_sV_y=0.
 \tag{C62.17}
-$$
+```
 
 Thus every extreme point of `Z(v)` satisfies the C57 kernel hypothesis for this fixed velocity. All of the extreme-body, zero-transfer, shunt-collapse, and common-hinge integration results C57-C61 therefore apply verbatim with `Z(v)` in place of the smaller C54 face `F_0`.
 
@@ -211,7 +211,7 @@ Thus every extreme point of `Z(v)` satisfies the C57 kernel hypothesis for this 
 
 Take `s=(alpha,beta) in Z(v)` and any `a in A_2(v)`. Since `lambda^T R_*=0`,
 
-$$
+```math
 \begin{aligned}
 \sum_{e\in E_*}\lambda_e\rho_e(a)
 &=\lambda^{\mathsf T}(R_*a-b(v))\\
@@ -219,17 +219,17 @@ $$
 &=q_s(v)=0.
 \end{aligned}
 \tag{C62.18}
-$$
+```
 
 Every term is nonnegative. Hence
 
-$$
+```math
 \lambda_e>0
 \Longrightarrow
 \rho_e(a)=0
 \quad\text{for every }a\in\mathcal A_2(v).
 \tag{C62.19}
-$$
+```
 
 Therefore every row in `E_2(v)` is second-order frozen.
 
@@ -239,38 +239,38 @@ The converse is the important half.
 
 Assume a strong row `e` satisfies
 
-$$
+```math
 \rho_e(a)=0
 \qquad\text{for every }a\in\mathcal A_2(v).
 \tag{C62.20}
-$$
+```
 
 The inequality
 
-$$
+```math
 -R_ea\ge-b_e(v)
 \tag{C62.21}
-$$
+```
 
 is therefore valid on the nonempty polyhedron `R_*a>=b(v)`. By the valid-inequality form of Farkas' lemma, there is `mu>=0` such that
 
-$$
+```math
 \mu^{\mathsf T}R_*=-R_e,
 \qquad
 \mu^{\mathsf T}b(v)\ge-b_e(v).
 \tag{C62.22}
-$$
+```
 
 Put
 
-$$
+```math
 \lambda=\mu+\mathbf e_e.
 \tag{C62.23}
-$$
+```
 
 Then
 
-$$
+```math
 \lambda\ge0,
 \qquad
 R_*^{\mathsf T}\lambda=0,
@@ -279,28 +279,28 @@ R_*^{\mathsf T}\lambda=0,
 \qquad
 \lambda^{\mathsf T}b(v)\ge0.
 \tag{C62.24}
-$$
+```
 
 The nonzero dependence `lambda` has positive total diameter coefficient and can be normalized to a KKT stress. Universal PSD gives the reverse inequality
 
-$$
+```math
 \lambda^{\mathsf T}b(v)\le0.
-$$
+```
 
 Hence equality holds:
 
-$$
+```math
 \lambda^{\mathsf T}b(v)=0,
 \qquad
 q_\lambda(v)=0.
 \tag{C62.25}
-$$
+```
 
 After normalization, `lambda in Z(v)` and has positive `e` coordinate. Thus
 
-$$
+```math
 e\in E_2(v).
-$$
+```
 
 Combining both directions gives the exact theorem.
 
@@ -308,13 +308,13 @@ Combining both directions gives the exact theorem.
 
 For every strong active row `e`,
 
-$$
+```math
 \boxed{
 e\in E_2(v)
 \iff
 \rho_e(a)=0\text{ for every }a\in\mathcal A_2(v).}
 \tag{C62.26}
-$$
+```
 
 Equivalently, the support union of the velocity-specific zero-energy KKT face is exactly the set of active rows that are **unavoidably second-order tight** for the fixed release velocity.
 
@@ -324,9 +324,9 @@ This is the precise second-order counterpart of C6.6.
 
 If `f notin E_2(v)`, Theorem C62 gives some feasible acceleration `a^(f)` with
 
-$$
+```math
 \rho_f(a^{(f)})>0.
-$$
+```
 
 There are finitely many such rows. Average the corresponding accelerations. Convexity of `A_2(v)` keeps the average feasible, and for each outside row one summand contributes positive slack while every other summand contributes nonnegative slack.
 
@@ -334,14 +334,14 @@ There are finitely many such rows. Average the corresponding accelerations. Conv
 
 There exists one acceleration `a^circ in A_2(v)` such that
 
-$$
+```math
 \boxed{
 \rho_e(a^\circ)=0\quad(e\in E_2(v)),
 \qquad
 \rho_e(a^\circ)>0\quad(e\in E_*\setminus E_2(v)).
 }
 \tag{C62.27}
-$$
+```
 
 Together with `v in ri K_D(A)`, the active hierarchy is now exact:
 

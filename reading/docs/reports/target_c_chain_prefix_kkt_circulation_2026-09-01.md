@@ -24,38 +24,38 @@ normalization. Thus every actual active diameter bar has strictly positive weigh
 `beta_h>0`. On the C80 chain atom, C83 writes every non-chain bar with nonempty
 interval as
 
-$$
+```math
 g_h|_P=\eta_h\mathbf 1_{(a_h,b_h]},
 \qquad
 0\le a_h<b_h\le D,
 \qquad
 \eta_h\ne0.
-$$
+```
 
 Train-angle first variations preserve all unit contacts, so the KKT virtual-work
 identity is
 
-$$
+```math
 \sum_{h\in H}\beta_h g_h=0.
-$$
+```
 
 The chain bar has zero gradient. Restricting to `P` therefore gives
 
-$$
+```math
 \boxed{
 \sum_{h\ne h_0}\beta_h\eta_h\mathbf 1_{(a_h,b_h]}=0.
 }
 \tag{C84.1}
-$$
+```
 
 Under prefix summation, an interval row is the ordinary incidence row of the edge
 `a_h b_h`. Thus (C84.1) is exactly a **nowhere-zero circulation** on the multigraph of
 non-chain diameter intervals, with signed edge flow
 
-$$
+```math
 \boxed{w_h:=\beta_h\eta_h\ne0.}
 \tag{C84.2}
-$$
+```
 
 Consequences are immediate but useful:
 
@@ -79,59 +79,59 @@ blockers lie on its interior-crossing, non-endpoint part.
 
 Work in the exact C80 chain-face geometry
 
-$$
+```math
 h_0=za,
 \qquad
 z=x_0,x_1,\ldots,x_D=a,
-$$
+```
 
 with ordered chain tracks
 
-$$
+```math
 P=\{\tau_1,\ldots,\tau_D\}.
-$$
+```
 
 C83 gives, for every ordered active diameter bar `h=xy`, a signed interval
 
-$$
+```math
 I_h=(a_h,b_h]\subseteq\{1,\ldots,D\}
-$$
+```
 
 and scalars
 
-$$
+```math
 c_h=\sigma_h r_h\cdot u,
 \qquad
 \eta_h=\sigma_h r_h\cdot Ju,
 \qquad
 u:=\frac{a-z}{D},
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{
 g_h|_P=\eta_h\mathbf1_{I_h}.}
 \tag{C84.3}
-$$
+```
 
 The chain bar satisfies
 
-$$
+```math
 I_{h_0}=P,
 \qquad
 c_{h_0}=D,
 \qquad
 \eta_{h_0}=0.
 \tag{C84.4}
-$$
+```
 
 C83 also proves that if `h\ne h_0` and `I_h` is nonempty, then
 
-$$
+```math
 \boxed{\eta_h\ne0.}
 \tag{C84.5}
-$$
+```
 
 Indeed `eta_h=0` would make the diameter segment parallel to the chain, and a
 source of diameter `D` contains at most one diameter segment in one prescribed
@@ -146,55 +146,55 @@ Bars with empty interval have zero restriction to `P` and will be omitted below.
 C65 supplies a canonical C-II representative for which every actual diameter pair is
 force-visible. Choose a relative-interior normalized KKT stress
 
-$$
+```math
 s=(\alpha,\beta).
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{\beta_h>0\qquad(h\in H).}
 \tag{C84.6}
-$$
+```
 
 Every train-angle first variation preserves every unit rhombus edge exactly to first
 order. Target B Section 40 therefore gives the diameter-gradient equilibrium
 
-$$
+```math
 \boxed{\sum_{h\in H}\beta_hg_h=0.}
 \tag{C84.7}
-$$
+```
 
 Restrict C84.7 to the chain coordinates. The chain bar contributes zero by C84.4,
 and empty-interval bars contribute zero. Hence
 
-$$
+```math
 \boxed{
 \sum_{h\in H_P}
 \beta_h\eta_h\mathbf1_{(a_h,b_h]}=0,
 }
 \tag{C84.8}
-$$
+```
 
 where
 
-$$
+```math
 H_P:=\{h\in H\setminus\{h_0\}:a_h<b_h\}.
-$$
+```
 
 Put
 
-$$
+```math
 w_h:=\beta_h\eta_h.
 \tag{C84.9}
-$$
+```
 
 By C84.5-C84.6,
 
-$$
+```math
 \boxed{w_h\ne0\qquad(h\in H_P).}
 \tag{C84.10}
-$$
+```
 
 This nonvanishing is the point of using the relative-interior KKT stress rather than
 the exposed chain-face stress itself.
@@ -206,18 +206,18 @@ the exposed chain-face stress itself.
 Let `e_0,...,e_D` be the standard basis on prefix vertices. Define the linear
 operator
 
-$$
+```math
 \partial:\mathbb R^D\to\mathbf1^\perp\subset\mathbb R^{D+1}
-$$
+```
 
 by its action on interval indicators:
 
-$$
+```math
 \boxed{
 \partial\mathbf1_{(a,b]}=e_b-e_a.
 }
 \tag{C84.11}
-$$
+```
 
 Concretely, if `q=(q_1,...,q_D)` and `q_0=q_{D+1}=0`, `partial q` is the signed
 successive-difference vector with the indexing chosen so that C84.11 holds. The map
@@ -226,24 +226,24 @@ C84.11 determines it uniquely.
 
 Apply `partial` to C84.8:
 
-$$
+```math
 \boxed{
 \sum_{h\in H_P}w_h(e_{b_h}-e_{a_h})=0.
 }
 \tag{C84.12}
-$$
+```
 
 Now form the directed multigraph
 
-$$
+```math
 \mathcal G_P
-$$
+```
 
 on prefix vertices `0,...,D` with one oriented edge
 
-$$
+```math
 a_h\longrightarrow b_h
-$$
+```
 
 for every `h in H_P`. Equation C84.12 is exactly the node-balance equation for the
 signed flow `w_h`.
@@ -252,9 +252,9 @@ signed flow `w_h`.
 
 The active non-chain diameter intervals support a circulation
 
-$$
+```math
 \boxed{w_h=\beta_h\eta_h}
-$$
+```
 
 which is nonzero on every edge of `mathcal G_P`.
 
@@ -272,20 +272,20 @@ bridge. Delete it and let `S` be the vertex set of one resulting component. Sum 
 node-balance equation C84.12 over vertices of `S`. Every internal edge cancels. The
 only surviving term is the flow on `e`, with sign according to its orientation. Thus
 
-$$
+```math
 w_e=0,
-$$
+```
 
 contradicting C84.10.
 
 ### Corollary C84.2 — bridgeless interval multigraph
 
-$$
+```math
 \boxed{
 \mathcal G_P\text{ has no bridges.}
 }
 \tag{C84.13}
-$$
+```
 
 Equivalently every non-chain diameter interval belongs to a cycle of the prefix
 **multigraph**. Parallel intervals count as distinct edges and form a two-edge cycle.
@@ -300,12 +300,12 @@ actual diameter bars whose signed flows cancel across the corresponding cut.
 
 Equation C84.8 can be read coordinate by coordinate. For chain track `tau_j`,
 
-$$
+```math
 \boxed{
 \sum_{h:\ a_h<j\le b_h}\beta_h\eta_h=0.
 }
 \tag{C84.14}
-$$
+```
 
 Every summand is nonzero. Therefore:
 
@@ -333,9 +333,9 @@ track.
 Let `G_P` be the simple graph obtained from `mathcal G_P` by forgetting orientations,
 weights, and parallel multiplicity. Let
 
-$$
+```math
 c(G_P)
-$$
+```
 
 be its number of connected components, including isolated prefix vertices.
 
@@ -345,44 +345,44 @@ rows of `G_P`. Hence the standard graph-incidence rank formula gives
 
 ### Theorem C84.4 — exact chain-gradient rank
 
-$$
+```math
 \boxed{
 \operatorname{rank}\{g_h|_P:h\in H\}
 =D+1-c(G_P).
 }
 \tag{C84.15}
-$$
+```
 
 Equivalently the chain-supported first-order-neutral space has dimension
 
-$$
+```math
 \boxed{
 c(G_P)-1.}
 \tag{C84.16}
-$$
+```
 
 The extra KKT circulation now strengthens the edge count. Let `V_+` be the set of
 nonisolated vertices of `G_P`, and let
 
-$$
+```math
 n_+:=|V_+|.
-$$
+```
 
 Every nontrivial connected component of the multigraph is bridgeless, hence contains
 at least as many multiedges as vertices. Summing over nontrivial components gives
 
-$$
+```math
 \boxed{|H_P|\ge n_+.}
 \tag{C84.17}
-$$
+```
 
 In particular, if the restricted gradient rank is full, then `G_P` is connected on
 all `D+1` prefix vertices, so
 
-$$
+```math
 \boxed{|H_P|\ge D+1.}
 \tag{C84.18}
-$$
+```
 
 Adding the chain bar itself:
 
@@ -390,10 +390,10 @@ Adding the chain bar itself:
 
 If the active diameter gradients have rank `D` on the `D` chain coordinates, then
 
-$$
+```math
 \boxed{|H|\ge D+2.}
 \tag{C84.19}
-$$
+```
 
 This improves the raw spanning-tree requirement `|H|>=D+1` by one edge. It is not by
 itself a contradiction because the planar diameter graph can have `Theta(D)` edges.
@@ -404,9 +404,9 @@ itself a contradiction because the planar diameter graph can have `Theta(D)` edg
 
 C83 classifies an interval as backward exactly when
 
-$$
+```math
 c_h=\sigma_h r_h\cdot u<0.
-$$
+```
 
 The chain bar is `za` with direction `u=(a-z)/D`.
 
@@ -414,22 +414,22 @@ Suppose another active diameter bar is `zb`, and its chain interval is nonempty.
 Orient it from level `0=t(z)` toward `t(b)>0`. Then the C83 interval sign is positive
 and
 
-$$
+```math
 c_{zb}=(b-z)\cdot u.
-$$
+```
 
 Both `za` and `zb` are diameter edges sharing `z`. C18 gives, for `D>=20`,
 
-$$
+```math
 \angle azb<\Theta_D<\frac\pi3.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{c_{zb}>D\cos(\pi/3)=D/2>0.}
 \tag{C84.20}
-$$
+```
 
 So every nonempty interval bar incident to `z` is strongly forward.
 
@@ -437,10 +437,10 @@ The same argument at `a` uses the vectors from `a` to `z` and from `a` to its ot
 diameter partner. With the C83 interval orientation toward level `D=t(a)`, it gives
 again
 
-$$
+```math
 \boxed{c_{ab}>D/2>0.}
 \tag{C84.21}
-$$
+```
 
 for every nonempty interval bar incident to `a`.
 

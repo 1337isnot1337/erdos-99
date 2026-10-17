@@ -28,15 +28,15 @@ The following holds in both tree phases.
 
 Let
 
-$$
+```math
 H=T_A\sqcup T_B
-$$
+```
 
 be the D2 two-tree decomposition, with four blocks
 
-$$
+```math
 A_0\mid B_0\mid A_1\mid B_1.
-$$
+```
 
 Let `G_A` consist of
 
@@ -47,15 +47,15 @@ Define `G_B` analogously.
 
 Then
 
-$$
+```math
 \boxed{|E(G_A)|=2|A|-3,\qquad \operatorname{rank}R(G_A)=2|A|-3,}
 \tag{IB.1}
-$$
+```
 
-$$
+```math
 \boxed{|E(G_B)|=2|B|-3,\qquad \operatorname{rank}R(G_B)=2|B|-3.}
 \tag{IB.2}
-$$
+```
 
 Thus both are infinitesimally isostatic.
 
@@ -65,15 +65,15 @@ The four A/B transition contacts contribute exactly three further rigidity ranks
 
 Let `H` be the full spanning diameter tree and let `e` be any nonleaf full-tree edge with
 
-$$
+```math
 \beta_e(s)=0
-$$
+```
 
 at a KKT endpoint `s`. Let
 
-$$
+```math
 H-e=T_A\sqcup T_B
-$$
+```
 
 be the corrected-EU four-block decomposition.
 
@@ -87,41 +87,41 @@ This statement does **not** identify the selected positive endpoint support with
 
 Let
 
-$$
+```math
 a:=|A|,
 \qquad
 b:=|B|,
 \qquad
 a+b=q.
-$$
+```
 
 The four-block order makes `A_0` and `A_1` two disjoint boundary runs. Therefore the number of cycle-contact edges internal to `A` is
 
-$$
+```math
 (|A_0|-1)+(|A_1|-1)=a-2.
 \tag{1.1}
-$$
+```
 
 The diameter component `T_A` is a tree on the `a` A-vertices, so
 
-$$
+```math
 |E(T_A)|=a-1.
 \tag{1.2}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{|E(G_A)|=(a-2)+(a-1)=2a-3.}
 \tag{1.3}
-$$
+```
 
 Likewise
 
-$$
+```math
 \boxed{|E(G_B)|=2b-3.}
 \tag{1.4}
-$$
+```
 
 The count is the planar isostatic count on each side.
 
@@ -131,16 +131,16 @@ The count is the planar isostatic count on each side.
 
 In the full `d_H=2` phase,
 
-$$
+```math
 |C_q|+|H|=q+(q-2)=2q-2.
-$$
+```
 
 CY/ZF gives mixed rigidity rank
 
-$$
+```math
 2q-3.
 \tag{2.1}
-$$
+```
 
 Therefore the full row-dependence space has dimension one.
 
@@ -156,56 +156,56 @@ Hence all `2a-3` rows of `G_A` are independent. This proves IB.1. The proof for 
 
 The full `d_H=1` mixed framework has
 
-$$
+```math
 q+(q-1)=2q-1
-$$
+```
 
 rows and rigidity rank `2q-3`. Its row-dependence space `mathcal D` therefore has dimension
 
-$$
+```math
 \boxed{\dim\mathcal D=2.}
 \tag{3.1}
-$$
+```
 
 Fix a full-tree edge `e` with `beta_e(s)=0` at a KKT endpoint `s`.
 
 Consider the linear coordinate functional
 
-$$
+```math
 \varphi_e:\mathcal D\to\mathbb R,
 \qquad
 \varphi_e(\omega)=\omega_e.
 \tag{3.2}
-$$
+```
 
 A relative-interior normalized KKT stress has strictly positive coefficient on `e`. Hence `varphi_e` is not the zero functional.
 
 Since `mathcal D` is two-dimensional,
 
-$$
+```math
 \boxed{\dim\ker\varphi_e=1.}
 \tag{3.3}
-$$
+```
 
 But `ker varphi_e` is exactly the row-dependence space of the full mixed framework with the one geometric row `e` deleted: any dependence of `R(C_q\cup(H-e))` extends by a zero `e`-coordinate, and conversely.
 
 Therefore
 
-$$
+```math
 \boxed{
 \operatorname{null}_{row}R(C_q\cup(H-e))=1.}
 \tag{3.4}
-$$
+```
 
 That framework has `2q-2` rows, so
 
-$$
+```math
 \boxed{
 \operatorname{rank}R(C_q\cup(H-e))
 =(2q-2)-1
 =2q-3.}
 \tag{3.5}
-$$
+```
 
 This is the correct selected-endpoint rank statement: it concerns the **full geometric row set with only `e` deleted**, not the positive selected support.
 
@@ -223,10 +223,10 @@ This proves IB for `d_H=1` without assuming that every internal beta coefficient
 
 Delete the four A/B transition contact rows. What remains is the disjoint union of `G_A` and `G_B`, with total row rank
 
-$$
+```math
 (2a-3)+(2b-3)=2q-6.
 \tag{4.1}
-$$
+```
 
 Restore the four transition contacts.
 
@@ -234,24 +234,24 @@ In `d_H=2`, the full framework rank is `2q-3`. In the `d_H=1` endpoint reduction
 
 Therefore the four transition rows increase rank by exactly
 
-$$
+```math
 (2q-3)-(2q-6)=3.
 \tag{4.2}
-$$
+```
 
 Once each isostatic side is quotient by its internal Euclidean rigid motions, the relative motion of the two bodies has three degrees of freedom in the plane. Each transition bar contributes one body-bar row, represented by the line wrench vector
 
-$$
+```math
 L_r=(t_{r,x},t_{r,y},p_r\times t_r).
-$$
+```
 
 Equation (4.2) is therefore equivalent to
 
-$$
+```math
 \boxed{
 \operatorname{rank}[L_i\ L_j\ L_k\ L_\ell]=3.}
 \tag{4.3}
-$$
+```
 
 Thus WM's projective-pencil branch is impossible.
 
@@ -261,13 +261,13 @@ The four transition side lines are not all concurrent in the projective plane an
 
 Consequently WM.5 applies **unconditionally** in both cyclic tree phases:
 
-$$
+```math
 \boxed{
 (\alpha_i,-\alpha_j,\alpha_k,-\alpha_\ell)
 \propto
 (-\Delta_{jk\ell},\Delta_{ik\ell},-\Delta_{ij\ell},\Delta_{ijk}).}
 \tag{4.4}
-$$
+```
 
 The four transition contact-weight ratios are always determined by shell geometry alone.
 
@@ -284,15 +284,15 @@ Its edge count is `2a-3`. The same holds for B.
 
 The usual Laman sparsity count is in fact automatic combinatorially for this topology. For a vertex subset `U`, let `c_P(U)` be the number of components in the induced two-path forest and `c_T(U)` the number in the induced diameter-tree forest. Then
 
-$$
+```math
 e(U)=2|U|-c_P(U)-c_T(U).
-$$
+```
 
 If `U` meets both bipartition/color blocks, `c_P(U)>=2` and `c_T(U)>=1`; if it lies in one color block, the diameter-tree induced graph has no edges, so `c_T(U)=|U|`. Hence
 
-$$
+```math
 e(U)\le2|U|-3
-$$
+```
 
 for every `|U|>=2`.
 

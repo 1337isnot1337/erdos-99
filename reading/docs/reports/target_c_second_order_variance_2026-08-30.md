@@ -41,7 +41,7 @@ variance on the boundary-order diameter system.
 
 Let `A={p_1,...,p_n}` be a global minimizer of diameter `D>1`.  Let
 
-$$
+```math
 \mathcal K_D(A)
 =
 \left\{v:
@@ -51,7 +51,7 @@ $$
 \end{array}
 \right\}
 \tag{C13.1}
-$$
+```
 
 be the fixed-diameter critical cone.  Let `E_*=C_*\cup H_*` be the maximal normalized
 KKT support from Target C Theorem C4.
@@ -60,30 +60,30 @@ By Target C Theorem C6, every strong active row vanishes identically on
 `\mathcal K_D(A)`.  Therefore for every `v\in\mathcal K_D(A)` and every
 `e=ij\in C_*` there is a unique scalar `\kappa_e(v)` with
 
-$$
+```math
 \boxed{
 v_i-v_j=\kappa_e(v)J(p_i-p_j),}
 \tag{C13.2}
-$$
+```
 
 while for every `h=ij\in H_*` there is a unique scalar `\omega_h(v)` with
 
-$$
+```math
 \boxed{
 v_i-v_j=\omega_h(v)J(p_i-p_j).}
 \tag{C13.3}
-$$
+```
 
 The contact vector has length one and the diameter vector has length `D`, so
 
-$$
+```math
 |v_i-v_j|^2=\kappa_e^2
 \quad(e\in C_*),
 \qquad
 |v_i-v_j|^2=D^2\omega_h^2
 \quad(h\in H_*).
 \tag{C13.4}
-$$
+```
 
 Adding an infinitesimal rigid rotation `v_i\mapsto v_i+\eta Jp_i` adds the same scalar
 `\eta` to every `\kappa_e` and every `\omega_h`.  Hence only centered angular
@@ -98,26 +98,26 @@ velocities have intrinsic meaning.
 Fix any normalized KKT stress `(\alpha,\beta)` and any
 `v\in\mathcal K_D(A)`.  Then
 
-$$
+```math
 \boxed{
 \sum_{e\in C_*}\alpha_e\kappa_e
 =
 D^2\sum_{h\in H_*}\beta_h\omega_h.
 }
 \tag{C13.5}
-$$
+```
 
 Since
 
-$$
+```math
 \sum_C\alpha_e=D^2,
 \qquad
 \sum_H\beta_h=1,
-$$
+```
 
 the common weighted mean
 
-$$
+```math
 \boxed{
 \bar\omega_{\alpha,\beta}(v)
 :=
@@ -126,7 +126,7 @@ $$
 \sum_H\beta_h\omega_h
 }
 \tag{C13.6}
-$$
+```
 
 is well defined.
 
@@ -134,41 +134,41 @@ is well defined.
 
 Use the exact virtual-work identity, canonical Theorem 11.3,
 
-$$
+```math
 \sum_C\alpha_{ij}(p_i-p_j)\cdot(\xi_i-\xi_j)
 =
 \sum_H\beta_{ij}(p_i-p_j)\cdot(\xi_i-\xi_j),
 \tag{C13.7}
-$$
+```
 
 with
 
-$$
+```math
 \xi_i=-Jv_i.
 \tag{C13.8}
-$$
+```
 
 For a positive contact edge `e=ij`, (C13.2) gives
 
-$$
+```math
 (p_i-p_j)\cdot[-J(v_i-v_j)]
 =
 \kappa_e|p_i-p_j|^2
 =
 \kappa_e.
 \tag{C13.9}
-$$
+```
 
 For a positive diameter edge `h=ij`, (C13.3) gives
 
-$$
+```math
 (p_i-p_j)\cdot[-J(v_i-v_j)]
 =
 \omega_h|p_i-p_j|^2
 =
 D^2\omega_h.
 \tag{C13.10}
-$$
+```
 
 Every weak active constraint has zero multiplier in every normalized KKT stress, so no
 other term contributes.  Substitution into (C13.7) proves (C13.5). `\square`
@@ -177,23 +177,23 @@ other term contributes.  Substitution into (C13.7) proves (C13.5). `\square`
 
 Put
 
-$$
+```math
 \widehat\kappa_e=\kappa_e-\bar\omega,
 \qquad
 \widehat\omega_h=\omega_h-\bar\omega.
 \tag{C13.11}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \sum_C\alpha_e\widehat\kappa_e=0,
 \qquad
 \sum_H\beta_h\widehat\omega_h=0.
 }
 \tag{C13.12}
-$$
+```
 
 Equivalently, after subtracting the infinitesimal rigid rotation
 `\bar\omega Jp_i`, both the contact and diameter angular fields have zero weighted
@@ -205,20 +205,20 @@ mean.
 
 For a normalized KKT stress define the two normalized angular variances
 
-$$
+```math
 \operatorname{Var}_{C,\alpha}(\kappa)
 :=
 \frac1{D^2}
 \sum_C\alpha_e(\kappa_e-\bar\omega)^2,
 \tag{C13.13}
-$$
+```
 
-$$
+```math
 \operatorname{Var}_{H,\beta}(\omega)
 :=
 \sum_H\beta_h(\omega_h-\bar\omega)^2.
 \tag{C13.14}
-$$
+```
 
 Both are invariant under adding an infinitesimal rigid rotation.
 
@@ -227,14 +227,14 @@ Both are invariant under adding an infinitesimal rigid rotation.
 For every fixed-diameter critical velocity `v\in\mathcal K_D(A)`, there exists a
 normalized KKT stress `(\alpha,\beta)` such that
 
-$$
+```math
 \boxed{
 \operatorname{Var}_{C,\alpha}(\kappa)
 \le
 \operatorname{Var}_{H,\beta}(\omega).
 }
 \tag{C13.15}
-$$
+```
 
 If `v` lies in the relative interior of `\mathcal K_D(A)`, then every weak active
 constraint has strict first variation, so the multiplier supplied by the theorem is
@@ -245,30 +245,30 @@ supported entirely on the strong set `E_*`.
 Canonical Theorem 11.1 supplies, for the chosen critical velocity, a normalized KKT
 stress supported on the zero-first-derivative active edges and satisfying
 
-$$
+```math
 \sum_H\beta_h|v_i-v_j|^2
 -
 \sum_C\alpha_e|v_i-v_j|^2
 \ge0.
 \tag{C13.16}
-$$
+```
 
 Every edge carrying positive multiplier is strong by the definition of maximal KKT
 support.  Using (C13.4), (C13.16) becomes
 
-$$
+```math
 D^2\sum_H\beta_h\omega_h^2
 -
 \sum_C\alpha_e\kappa_e^2
 \ge0.
 \tag{C13.17}
-$$
+```
 
 For this same stress, Theorem C13.1 gives the common mean `\bar\omega`.  Because
 `\sum_H\beta=1` and `\sum_C\alpha=D^2`, expanding around that common mean gives the
 exact identity
 
-$$
+```math
 \begin{aligned}
 &D^2\sum_H\beta_h(\omega_h-\bar\omega)^2
 -
@@ -279,7 +279,7 @@ D^2\sum_H\beta_h\omega_h^2
 \sum_C\alpha_e\kappa_e^2.
 \end{aligned}
 \tag{C13.18}
-$$
+```
 
 Thus (C13.17) is exactly (C13.15). `\square`
 
@@ -292,14 +292,14 @@ removing the same rigid rotation.
 
 Global diameter optimality therefore forces the inequality
 
-$$
+```math
 \boxed{
 \text{contact rotational variance}
 \ \le\ 
 \text{diameter-shear variance}
 }
 \tag{C13.19}
-$$
+```
 
 for at least one direction-dependent KKT certificate attached to every critical
 velocity.
@@ -314,10 +314,10 @@ obstruction: it gives the exact quadratic currency that pays for it.
 Let `A` now be a triangle-free global minimizer with the minimum possible number of
 unit contacts, and use the maximal-support strong framework
 
-$$
+```math
 \mathcal F_*=(V(C_*),\ C_*\cup H_*).
 \tag{C13.20}
-$$
+```
 
 Target C Theorem C12 says `C_*` is connected and already has Euclidean diameter `D`.
 
@@ -325,10 +325,10 @@ Target C Theorem C12 says `C_*` is connected and already has Euclidean diameter 
 
 If
 
-$$
+```math
 C\setminus C_*\ne\varnothing,
 \tag{C13.21}
-$$
+```
 
 then all of the following hold:
 
@@ -340,10 +340,10 @@ then all of the following hold:
 
 Target C Theorem C6 gives a velocity
 
-$$
+```math
 v^\circ\in\operatorname{ri}\mathcal K_D(A)
 \tag{C13.22}
-$$
+```
 
 that strictly releases every weak active row while every strong row has zero first
 variation.
@@ -364,7 +364,7 @@ Therefore `\mathcal F_*` is infinitesimally flexible. `\square`
 
 So every surviving weak contact forces a very specific object:
 
-$$
+```math
 \boxed{
 \text{one connected full-diameter positive unit network}
 +
@@ -373,7 +373,7 @@ $$
 \text{a genuine mixed-bar infinitesimal mechanism}.
 }
 \tag{C13.23}
-$$
+```
 
 The mechanism cannot be a common rigid rotation; its diameter angular shear must be
 nonzero on every strict weak-release direction.
@@ -384,34 +384,34 @@ nonzero on every strict weak-release direction.
 
 For a normalized KKT stress let
 
-$$
+```math
 \Omega_{\alpha,\beta}
 :=L_C(\alpha)-L_H(\beta),
 \tag{C13.24}
-$$
+```
 
 where the two weighted Laplacians are placed on the same vertex set.  For any vector
 field `z_i\in\mathbb R^2`,
 
-$$
+```math
 \operatorname{tr}(Z^{\mathsf T}\Omega_{\alpha,\beta}Z)
 =
 \sum_C\alpha_e|z_i-z_j|^2
 -
 \sum_H\beta_h|z_i-z_j|^2.
 \tag{C13.25}
-$$
+```
 
 For a critical velocity `v`, rotating the field does not change squared edge
 increments, so Theorem C13.3 is equivalently the existence of a normalized KKT stress
 with
 
-$$
+```math
 \boxed{
 \operatorname{tr}(V^{\mathsf T}\Omega_{\alpha,\beta}V)\le0.
 }
 \tag{C13.26}
-$$
+```
 
 This shows exactly where a tempting PSD route would have to enter.  If one could prove,
 under additional **global-minimizer and triangle-free hypotheses**, that an
@@ -433,16 +433,13 @@ A more targeted possible closure is the following angular inequality.
 > stress relevant to Theorem 11.1,
 > 
 
-$$
-
+```math
 > \operatorname{Var}_{H,\beta}(\omega)
 > \le
 > \operatorname{Var}_{C,\alpha}(\kappa),
 > \tag{C13.27}
 > 
-$$
-
-
+```
 > with equality only for a motion whose strong diameter angular velocities are all
 > equal.
 

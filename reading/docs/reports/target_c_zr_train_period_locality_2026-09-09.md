@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_train_period_locality_2026-09-09.md) · source SHA-256 `1a93466a41d0fcb8367cada708a3307eb671ed9d47e7c7de03ad861359416650`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-E1F0A4C5265C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZPL: hole periods only lock trains that terminate on holes
 
@@ -49,39 +51,42 @@ A train may have both endpoints on the same hole or on distinct holes.
 
 Orient one boundary walk `partial H_j` of a bounded hole. For train `tau`, let
 
-$$
+```math
 n_{j\tau}\in\mathbb Z
-$$
+```
 
 be the signed number of boundary edges of `partial H_j` that belong to `tau`, with sign determined by whether their oriented edge vector is `+u_tau` or `-u_tau`.
 
 Because a stopped train is a path, it can meet a component boundary only at its endpoint edges. Therefore
 
-$$
+```math
 \boxed{
  n_{j\tau}\ne0
 \Longrightarrow
 \tau\text{ has an endpoint on }\partial H_j.
 }
 \tag{ZPL1}
+```
 
 The finite vector period of the hole is
 
-\[
+```math
 \boxed{
 \sum_{\tau=1}^T n_{j\tau}u_\tau=0.
 }
 \tag{ZPL2}
+```
 
 This is simply the polygonal closure of the hole boundary, grouped by train directions.
 
 Its infinitesimal derivative under train-angle velocities `t_tau` is
 
-\[
+```math
 \boxed{
 \sum_\tau n_{j\tau}t_\tau Ju_\tau=0,
 }
 \tag{ZPL3}
+```
 
 which is the corresponding row pair of ZTF's period map.
 
@@ -93,10 +98,10 @@ By ZPL1, every column of the period map is supported only on holes at which that
 
 If `tau` has both endpoint edges on the outer component boundary, it has no endpoint on any bounded hole. Therefore
 
-\[
+```math
  n_{j\tau}=0
 \qquad(j=1,...,g).
-$$
+```
 
 Hence:
 
@@ -104,9 +109,9 @@ Hence:
 
 For every outer-to-outer component train `tau`, the coordinate vector
 
-$$
+```math
 e_\tau\in\mathbb R^T
-$$
+```
 
 belongs to the ZTF infinitesimal period kernel.
 
@@ -120,10 +125,10 @@ Different outer-to-outer trains give linearly independent coordinate flexes.
 
 Fix an outer-to-outer train `tau_0`. For small real `theta`, replace its train vector by
 
-$$
+```math
 u_{\tau_0}(\theta)
 :=R_\theta u_{\tau_0}
-$$
+```
 
 and leave every other train vector unchanged.
 
@@ -131,17 +136,17 @@ For every rhombus face, opposite sides belonging to the same train remain opposi
 
 For every bounded hole `H_j`, ZPL1 gives
 
-$$
+```math
 n_{j,\tau_0}=0.
-$$
+```
 
 Thus its finite period remains
 
-$$
+```math
 \sum_{\tau\ne\tau_0}n_{j\tau}u_\tau
 +n_{j,\tau_0}R_\theta u_{\tau_0}
 =0.
-$$
+```
 
 All hole periods remain exactly closed.
 
@@ -163,9 +168,9 @@ Thus this is a genuine local bar-preserving deformation of the isolated rhombic 
 
 Remove the train edges of `tau_0` from the rhombic component's edge graph. The train is a simple pseudoline path from one outer component-boundary edge to another. In the planar component it separates the rhombic faces locally into two shores; across each train edge the modified edge vector changes by
 
-$$
+```math
 (R_\theta-I)u_{\tau_0}.
-$$
+```
 
 Accordingly, after choosing one shore as reference, the other shore undergoes the same relative translation increment each time a path crosses the train. In a simply connected disk this is the familiar train shear. With holes, ZPL2 shows that the outer-to-outer hypothesis is exactly what prevents any nonzero period obstruction.
 
@@ -179,15 +184,16 @@ Apply ZPL to the ZRC macroscopic component `Q_*`, which contains `Omega_eta(D)` 
 
 Let
 
-$$
+```math
 N_{oo},N_{oh},N_{hh}
-$$
+```
 
 be the numbers of weak-rich trains of the three endpoint types. Then
 
-$$
+```math
 N_{oo}+N_{oh}+N_{hh}=\Omega_\eta(D).
 \tag{6.1}
+```
 
 There are two structural alternatives.
 
@@ -195,9 +201,9 @@ There are two structural alternatives.
 
 If
 
-\[
+```math
 N_{oo}=\Omega_\eta(D),
-$$
+```
 
 then the free rhombic sea contains `Omega_eta(D)` linearly independent **exact one-train shear mechanisms**, each attached to a train that is weak on `Omega_eta(D)` rhombi.
 
@@ -207,17 +213,18 @@ The full globally rigid source must lock these modes entirely through the extern
 
 Otherwise
 
-$$
+```math
 N_{oh}+N_{hh}=\Omega_\eta(D).
-$$
+```
 
 Each such train consumes at least one hole-boundary endpoint incidence. Therefore the bounded-hole boundary of `Q_*` itself has linear length:
 
-\[
+```math
 \boxed{
 B_{hole}=\Omega_\eta(D).
 }
 \tag{ZPL4}
+```
 
 So the weak-train degeneration is then tied to a linearly large internal defect boundary rather than the outer component boundary.
 

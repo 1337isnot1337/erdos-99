@@ -38,19 +38,19 @@ Erdős #99 is false or independent of the remaining mathematics.
 
 Put `theta=pi/7`, `R=1/(2 sin theta)`, and
 
-$$
+```math
 p_j=R(\cos(2j\theta),\sin(2j\theta)),\quad 0\le j<7,
 \qquad A=\{p_0,\ldots,p_6,0\}.
-$$
+```
 
 ### Distances and global optimality
 
 The three hull-distance classes are
 
-$$
+```math
 2R\sin\theta=1,\quad 2R\sin(2\theta)>1,
 \quad D=2R\sin(3\theta)=\frac1{2\sin(\pi/14)}.
-$$
+```
 
 The center-to-hull distance is `R>1`, because `theta<pi/6`, and is less than
 `D`. Thus the unit-contact graph is exactly a seven-cycle plus an isolated
@@ -72,10 +72,10 @@ Assign `beta=1/7` to each hull diameter chord, and `alpha=D^2/7` to each hull
 contact. At `p_j`, the sums of the two contact and the two diameter vectors are
 respectively
 
-$$
+```math
 4\sin^2\theta\,p_j,
 \qquad 4\sin^2(3\theta)\,p_j.
-$$
+```
 
 Since `D^2=sin^2(3 theta)/sin^2 theta`, equilibrium holds. The center equation
 is zero on both sides. All contacts and all diameter edges receive positive
@@ -88,9 +88,9 @@ not make a contact-isolated vertex part of the contact core.
 Here `(n-m)+q=8`, whereas `pi D<8`. For an exact elementary verification let
 `t=pi/14<1/4`. The inequality `sin t >= t-t^3/6` gives
 
-$$
+```math
 \pi D=\frac{7t}{\sin t}<\frac{672}{95}<8.
-$$
+```
 
 Thus (FB4) is false as stated, even with global optimality, contact minimality,
 full contact and diameter support, and diametral saturation. The isolated center
@@ -117,11 +117,11 @@ independent pinned motions, so the whole pinned cone is nonzero.
 Retain the C-II hypotheses, and let `z_int` count contact-isolated points in
 `int(conv A)`. Let `z_boundary` count the other isolated points. Then
 
-$$
+```math
 \boxed{n-m+q=|Q|+z_{\rm int},\qquad
        n-m+q\le\pi D+z_{\rm int}.}
 \tag{R1}
-$$
+```
 
 **Proof.** C26 implies `Q intersect V(C)=B_+`: an unloaded contact vertex is
 a strict positive barycenter, so cannot be a diameter endpoint; every loaded
@@ -137,11 +137,11 @@ variable. It specializes to `8=7+1` in the heptagon witness.
 Where the refined C49 attachment-cell estimate applies, retain its notation
 `G`, `c_I`, `e_BB`, and `A_F`. Combining it with (R1) gives
 
-$$
+```math
 n<\frac{2(A_F-G)}{\sqrt3}+6q+\pi D+z_{\rm int}
        -3c_I-3e_{BB}-5.
 \tag{R2}
-$$
+```
 
 The unconditional strict `n-1` lattice comparison in
 [Target B Section 36](../targets/target-b/01-jammed-rhombic-branch.md)
@@ -149,11 +149,11 @@ gives `n>Delta_2 D^2+1`. Its hypothesis is global minimum diameter, not the
 Target B jammed branch, so its use here is valid. Using
 `A_F<=pi D^2/4` and `q<=pi D` in (R2) consequently yields
 
-$$
+```math
 \boxed{G<\frac{\sqrt3}{2}
  (7\pi D+z_{\rm int}-3c_I-3e_{BB}-6).}
 \tag{R3}
-$$
+```
 
 Every step is algebraic substitution in C49; no new density theorem is used.
 The former linear-only area endpoint requires an additional estimate for
@@ -167,12 +167,12 @@ For an exact homogeneous quadratic system `g(x)=Ax+Q(x)`, the statement
 
 is equivalent to
 
-$$
+```math
 \lambda^TQ(x)\ge0
 \quad\hbox{for all }x\hbox{ and all }\lambda\ge0
 \hbox{ with }\lambda^TA=0.
 \tag{R4}
-$$
+```
 
 **Proof.** Farkas' alternative makes solvability equivalent to
 `lambda^T g(x)>=0` for all such `lambda`. The linear term vanishes, giving
@@ -200,11 +200,11 @@ in this conditional convergence argument.
 For any integer `k>=1`, minimize `tau` over `x in R`, `y in R^k`, `tau in R`
 subject to
 
-$$
+```math
 g_1=2x+x^2+\|y\|^2\ge0,\quad
 g_2=\tau-2x-2x^2-\|y\|^2\ge0,\quad y_j\ge0.
 \tag{R5}
-$$
+```
 
 **Theorem.** The origin is the unique global minimizer, MFCQ holds, every
 `y_j` has zero multiplier in every normalized KKT certificate, the signed
@@ -230,10 +230,10 @@ even on the whole space; ordinary second-order optimality also holds.
 For any nonzero `w>=0`, set `y(t)=tw`, `x(t)=-t^2||w||^2/2`, `tau(t)=0`.
 Both strong constraint coefficients vanish through order two, while
 
-$$
+```math
 g_1=\tfrac14t^4\|w\|^4,\qquad
 g_2=-\tfrac12t^4\|w\|^4.
-$$
+```
 
 Thus the second-order acceleration problem is feasible; all weak rows with
 `w_j>0` release strictly to first order. Yet the fixed-objective feasible set

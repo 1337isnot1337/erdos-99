@@ -105,9 +105,9 @@ Select one local through pair on every flower with at least three dominant-windo
 terminals.  A flower left unselected has at most two dominant occurrences, hence at
 least three complement terminal occurrences.  Therefore
 
-$$
+```math
 C_D\ge3(M_D-P_D)-o(D).
-$$
+```
 
 The count is by terminal occurrence.  A complete train has exactly two terminals, so
 turning it into a distinct-complement-train lower bound loses by at most a factor two,

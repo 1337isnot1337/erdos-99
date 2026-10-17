@@ -21,78 +21,78 @@ No claim below closes C-II or Level I.
 
 Let `A` be a global `n`-point unit-separated minimum-diameter configuration, let
 
-$$
+```math
 D=D(n),\qquad K=\operatorname{conv}A,\qquad P=\operatorname{per}K,
-$$
+```
 
 and set
 
-$$
+```math
 a_0={\sqrt3\over2},\qquad c_0={\sqrt3\over4},\qquad
 \eta=3^{1/4}\sqrt D.
-$$
+```
 
 The finite Oler inequality gives
 
-$$
+```math
 \operatorname{area}K+c_0P\ge a_0(n-1).
-$$
+```
 
 The canonical strict translated-triangular-lattice comparison is
 
-$$
+```math
 D^2<{2\sqrt3\over\pi}(n-1),
-$$
+```
 
 hence
 
-$$
+```math
 a_0(n-1)>{\pi D^2\over4}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \operatorname{area}K>{\pi D^2\over4}-c_0P.
-$$
+```
 
 Using Cauchy's perimeter-diameter inequality `P<=pi D`,
 
-$$
+```math
 \begin{aligned}
 P^2-4\pi\operatorname{area}K
 &<P^2-\pi^2D^2+4\pi c_0P\\
 &\le \pi^2\sqrt3\,D.
 \end{aligned}
-$$
+```
 
 Bonnesen's inequality
 
-$$
+```math
 P^2-4\pi\operatorname{area}K\ge\pi^2(R-r)^2
-$$
+```
 
 for circumradius `R` and inradius `r` of `K` now gives
 
-$$
+```math
 R-r<\eta.
-$$
+```
 
 Since every inscribed disk has diameter at most `D`, `r<=D/2`; since `K` contains a diameter pair, `R>=D/2`. Thus
 
-$$
+```math
 \boxed{{D\over2}\le R(K)<{D\over2}+\eta.}
 \tag{FS.1}
-$$
+```
 
 This proof is direct. It does not require Target A Section 155 or any bound on the number of contact-isolated points.
 
 For any normalized KKT stress, let `B_s` be its positive diameter endpoints and `F_s=conv(B_s)`. A positive diameter edge exists because `sum beta=1`, so `diam(F_s)=D`; also `F_s subset K`. Circumradius is monotone under inclusion. Hence
 
-$$
+```math
 \boxed{{D\over2}\le R(F_s)\le R(K)<{D\over2}+\eta.}
 \tag{FS.2}
-$$
+```
 
 This is valid uniformly over all normalized KKT stresses of the same source.
 
@@ -100,42 +100,42 @@ This is valid uniformly over all normalized KKT stresses of the same source.
 
 For a normalized stress write
 
-$$
+```math
 s_b=\sum_k\beta_{bk},\qquad
 g_b=\sum_k\beta_{bk}(p_b-p_k),\qquad
 P_*=\sum_b|g_b|.
-$$
+```
 
 Let `o` be the full-source circumcenter used above. Grouping endpoint contributions of every diameter edge gives the exact virial identity
 
-$$
+```math
 \sum_b(p_b-o)\cdot g_b=D^2.
-$$
+```
 
 Therefore
 
-$$
+```math
 D^2\le R(K)P_*.
-$$
+```
 
 At the same time
 
-$$
+```math
 |g_b|\le D s_b,
 \qquad
 \sum_b s_b=2,
-$$
+```
 
 so `P_*<=2D`. Substituting FS.1 yields
 
-$$
+```math
 \boxed{
 {2D\over1+2\eta/D}<P_*\le2D,
 \qquad
 0\le2D-P_*<{4\eta\over1+2\eta/D}<4\eta.
 }
 \tag{FS.3}
-$$
+```
 
 Thus `P_*/D -> 2` uniformly over all normalized stresses of every global source.
 
@@ -143,43 +143,43 @@ Thus `P_*/D -> 2` uniformly over all normalized stresses of every global source.
 
 Suppose two distinct diameter edges `by` and `bz` share endpoint `b`, and let their smaller angle be `theta`. Since `|y-z|<=D`, `theta<=pi/3`. The triangle `byz` is acute, with minimum enclosing-circle radius
 
-$$
+```math
 R_{byz}={D\over2\cos(\theta/2)}.
-$$
+```
 
 It is contained in `K`, so FS.1 gives
 
-$$
+```math
 {D\over2\cos(\theta/2)}<{D\over2}+\eta.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \theta<\vartheta_D:=
 2\arccos\!\left({D\over D+2\eta}\right)
 =(4\,3^{1/8}+o(1))D^{-1/4}.
 }
 \tag{FS.4}
-$$
+```
 
 Unit separation of two partners on the radius-`D` circle about `b` gives angular separation at least
 
-$$
+```math
 a_D=2\arcsin{1\over2D}.
-$$
+```
 
 Because all partner directions lie in an ordinary arc of width `<min(pi/3,vartheta_D)`, ordering them gives
 
-$$
+```math
 \boxed{
 \deg_H(b)\le
 \left\lceil{\min(\pi/3,\vartheta_D)\over a_D}\right\rceil
 =O(D^{3/4}).
 }
 \tag{FS.5}
-$$
+```
 
 The ceiling form is the sharp safe integer consequence of `(d-1)a_D<vartheta_D`.
 
@@ -187,86 +187,86 @@ The ceiling form is the sharp safe integer consequence of `(d-1)a_D<vartheta_D`.
 
 Put
 
-$$
+```math
 L_D=\sqrt{D\eta+\eta^2}=O(D^{3/4}).
-$$
+```
 
 For every actual diameter pair `bk`, with midpoint `m=(p_b+p_k)/2`, the parallelogram identity gives
 
-$$
+```math
 |m-o|^2
 ={|p_b-o|^2+|p_k-o|^2\over2}-{D^2\over4}
 <R(K)^2-{D^2\over4}<D\eta+\eta^2.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{\left|{p_b+p_k\over2}-o\right|<L_D.}
 \tag{FS.6}
-$$
+```
 
 For every selected stress,
 
-$$
+```math
 g_b-2s_b(p_b-o)
 =-\sum_k\beta_{bk}(p_b+p_k-2o),
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 |g_b-2s_b(p_b-o)|\le2s_bL_D,
 \qquad
 \sum_b|g_b-2s_b(p_b-o)|\le4L_D.
 }
 \tag{FS.7}
-$$
+```
 
 If `X_B` has rows `(p_b-o)/D`, `S_B=diag(s_b)`, and `Lambda` is the actual positive-contact Dirichlet response, C11 gives `Lambda X_B=g/D`. Thus
 
-$$
+```math
 \boxed{
 \sum_b\left|(\Lambda X_B-2S_BX_B)_b\right|
 \le {4L_D\over D}=O(D^{-1/4}).
 }
 \tag{FS.8}
-$$
+```
 
 This is only a statement on the two affine coordinate fields. It is not an operator-norm estimate on arbitrary boundary data.
 
 Equation FS.6 also pairs every selected endpoint with a point within `2L_D` of its reflection through `o`, so
 
-$$
+```math
 \boxed{d_{\rm Haus}(F_s-o,-(F_s-o))\le2L_D.}
 \tag{FS.9}
-$$
+```
 
 Every selected endpoint has radius between `D-R(K)` and `R(K)`, hence after scaling by `D` every subsequential selected force-hull limit is centrally symmetric and is the convex hull of points on the radius-`1/2` circle. This does **not** imply the limit is the disk.
 
 Finally define
 
-$$
+```math
 V_b=\sum_{k<l}\beta_{bk}\beta_{bl}|p_k-p_l|^2.
-$$
+```
 
 Because
 
-$$
+```math
 |g_b|^2=D^2s_b^2-V_b,
-$$
+```
 
 we obtain the exact aggregate partner-dispersion estimate
 
-$$
+```math
 \boxed{
 \sum_b{V_b\over s_b}
 =\sum_b(Ds_b-|g_b|)\left(D+{|g_b|\over s_b}\right)
 \le2D(2D-P_*)<8D\eta.
 }
 \tag{FS.10}
-$$
+```
 
 No individual positive `beta` floor follows.
 
@@ -274,67 +274,67 @@ No individual positive `beta` floor follows.
 
 The same Oler/lattice inputs give more than the circumradius estimate. By the planar isoperimetric inequality,
 
-$$
+```math
 \operatorname{area}K\le {P^2\over4\pi}.
-$$
+```
 
 Together with
 
-$$
+```math
 \operatorname{area}K+c_0P>{\pi D^2\over4},
-$$
+```
 
 this yields
 
-$$
+```math
 P^2+\pi\sqrt3\,P-\pi^2D^2>0.
-$$
+```
 
 Taking the positive root,
 
-$$
+```math
 \boxed{
 P>{\pi\over2}\left(\sqrt{4D^2+3}-\sqrt3\right).
 }
 \tag{PW.1}
-$$
+```
 
 Since `P<=pi D`,
 
-$$
+```math
 \boxed{
 0\le\pi D-P
 <{\pi\over2}\left(2D-\sqrt{4D^2+3}+\sqrt3\right)
 <{\pi\sqrt3\over2}.
 }
 \tag{PW.2}
-$$
+```
 
 By Cauchy's width formula,
 
-$$
+```math
 P=\int_0^\pi w_K(\theta)\,d\theta,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \int_0^\pi(D-w_K(\theta))\,d\theta
 =\pi D-P<{\pi\sqrt3\over2}.
 }
 \tag{PW.3}
-$$
+```
 
 Consequently for every `tau>0`,
 
-$$
+```math
 \boxed{
 \left|\{\theta:w_K(\theta)\le D-\tau\}\right|
 <{\pi\sqrt3\over2\tau}.
 }
 \tag{PW.4}
-$$
+```
 
 In particular a fixed relative width deficit occurs on only `O(D^{-1})` angular measure.
 
@@ -342,39 +342,39 @@ In particular a fixed relative width deficit occurs on only `O(D^{-1})` angular 
 
 Define
 
-$$
+```math
 \Delta={\pi\over2\sqrt3},
 \qquad
 g_A=n-1-\Delta D^2,
-$$
+```
 
 and
 
-$$
+```math
 \delta_K={\pi D^2\over4}-\operatorname{area}K,
 \qquad
 \mathscr O_A=\operatorname{area}K+c_0P-a_0(n-1).
-$$
+```
 
 The strict lattice comparison gives `g_A>0`. Direct cancellation of the area term gives
 
-$$
+```math
 \boxed{
 \delta_K+\mathscr O_A=c_0P-a_0g_A.
 }
 \tag{GE.1}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \delta_K+\mathscr O_A\ge c_0P
 \iff g_A\le0
 \iff n-1\le{\pi\over2\sqrt3}D^2.
 }
 \tag{GE.2}
-$$
+```
 
 Thus the formerly proposed full-source NC endpoint is exactly the negation of the strict translated-lattice population excess. It is a valid sufficient contradiction, but GE.2 does not prove it from triangle-freeness.
 
@@ -382,60 +382,60 @@ Thus the formerly proposed full-source NC endpoint is exactly the negation of th
 
 Now specialize to the canonical contact-minimal then diameter-pair-minimal C-II representative with `D>=9`, so `H=H_*`. The canonical ZR/ZF audit gives
 
-$$
+```math
 h=|H|\ge\delta\ge\lceil D\rceil.
 \tag{FSD.1}
-$$
+```
 
 Set
 
-$$
+```math
 \Delta_D=
 \left\lceil{\min(\pi/3,\vartheta_D)\over a_D}\right\rceil.
-$$
+```
 
 FS.5 gives `Delta(H)<=Delta_D`. Therefore every vertex cover `S` satisfies
 
-$$
+```math
 h\le\sum_{v\in S}\deg_H(v)\le|S|\Delta_D,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \tau(H)\ge\left\lceil{h\over\Delta_D}\right\rceil
 \ge\left\lceil{\lceil D\rceil\over\Delta_D}\right\rceil.
 }
 \tag{FSD.2}
-$$
+```
 
 The endpoints of a maximum matching form a vertex cover, hence `tau(H)<=2nu(H)` and
 
-$$
+```math
 \boxed{
 \nu(H)\ge\left\lceil{h\over2\Delta_D}\right\rceil
 \ge\left\lceil{\lceil D\rceil\over2\Delta_D}\right\rceil.
 }
 \tag{FSD.3}
-$$
+```
 
 Every two disjoint diameter edges cross properly: the planar diameter graph is a straight-line thrackle. FS.6 places the midpoint of every one of these matching edges in `B(o,L_D)`. Since
 
-$$
+```math
 \Delta_D=(4\,3^{1/8}+o(1))D^{3/4},
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{
 \tau(H)\ge\left({1\over4\,3^{1/8}}+o(1)\right)D^{1/4},
 \qquad
 \nu(H)\ge\left({1\over8\,3^{1/8}}+o(1)\right)D^{1/4}.
 }
 \tag{FSD.4}
-$$
+```
 
 Thus bounded-hub and `O(1)`-vertex-cover models of the actual post-ZF diameter support are impossible.
 
@@ -445,42 +445,42 @@ This is a support theorem only. Relative-interior positivity gives no uniform lo
 
 The regular odd unit shell is a necessary regression. Let `h>=5` be odd, `a=pi/(2h)`, and
 
-$$
+```math
 D_h={1\over2\sin a}.
-$$
+```
 
 With contact weights `alpha=D_h^2/h` on the side cycle and diameter weights `beta=1/h` on the diameter cycle,
 
-$$
+```math
 P_*=2D_h\cos a,
 \qquad
 2D_h-P_*=\tan(a/2)\sim{1\over4D_h}.
-$$
+```
 
 Yet a matching in the odd diameter cycle retains at most `(h-1)/(2h)->1/2` of the total `beta` weight. Therefore near equality `P_*->2D` does not imply near-matching support after deleting `o(1)` weight.
 
 For the actual side-cycle response `Lambda`,
 
-$$
+```math
 \operatorname{tr}(\Lambda-L_H)=2D_h^2-2.
-$$
+```
 
 Its Fourier eigenvalues are
 
-$$
+```math
 {4\over h}\left[
 D_h^2\sin^2{\pi j\over h}-
 \sin^2{\pi ((h-1)/2)j\over h}
 \right].
-$$
+```
 
 They vanish exactly for `j=0,1,h-1` and are positive otherwise. Thus
 
-$$
+```math
 \Lambda-L_H\succeq0,
 \qquad
 \ker(\Lambda-L_H)=\operatorname{span}\{1,P_x,P_y\},
-$$
+```
 
 while the trace defect is quadratic. Dense strictly separated interior fillings preserve this response/stress regression and can have asymptotically hexagonal density, but they have no global-optimality certificate.
 
@@ -496,29 +496,29 @@ Accordingly none of the following may be promoted from FS/PW/FSD alone:
 
 The audited universal input available to every future C-II argument is now:
 
-$$
+```math
 R(K)={D\over2}+O(\sqrt D),
 \qquad
 \pi D-P=O(1),
-$$
+```
 
 uniformly over selected stresses,
 
-$$
+```math
 R(F_s)={D\over2}+O(\sqrt D),
 \qquad
 P_*=2D-O(\sqrt D),
-$$
+```
 
 with actual diameter-star angles `O(D^{-1/4})`, diameter-pair midpoints within `O(D^{3/4})` of one source circumcenter, and coordinate-field response radialization `O(D^{-1/4})`.
 
 On the post-ZF lexicographic C-II source, the actual diameter graph additionally has
 
-$$
+```math
 \Delta(H)=O(D^{3/4}),
 \qquad
 \tau(H),\nu(H)=\Omega(D^{1/4}),
-$$
+```
 
 and the guaranteed matching chords cross pairwise near the common source center.
 

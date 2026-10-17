@@ -23,42 +23,42 @@ the missing upper tradeoff for the surplus currency.
 Let (v,e,h,q,d_H,s_Z,x_B,Q) have the post-ZF meanings in the active Target C
 ledger. Then
 
-$$
+```math
 h=x_B+Q+d_H+2s_Z,
 \tag{1}
-$$
+```
 
 and Eppstein's triangle-free penny-graph bound gives
 
-$$
+```math
 \boxed{
 x_B+Q+d_H+s_Z
 \ge c_E\sqrt v-(C_E+2),
 \qquad c_E=\tfrac12\sqrt{2\pi\sqrt3}.}
 \tag{2}
-$$
+```
 
 ### Proof
 
 The exact post-ZF incidence identity is
 
-$$
+```math
 q=x_B+Q+2(d_H+s_Z),
 \tag{3}
-$$
+```
 
 while the diameter topology gives (q=h+d_H). Subtracting gives (1).
 Eppstein's bound is
 
-$$
+```math
 e\le2v-c_E\sqrt v+C_E.
-$$
+```
 
 Since (s_Z=e+h-(2v-2)), rearrangement gives
 
-$$
+```math
 h\ge s_Z+c_E\sqrt v-(C_E+2).
-$$
+```
 
 Insert (1) and cancel one (s_Z), obtaining (2). No source point is removed in
 this calculation. (square)
@@ -66,12 +66,12 @@ this calculation. (square)
 If the contact-isolated population is (o(D^2)), then
 (v/D^2	oDelta_2=pi/(2\sqrt3)), and (c_E\sqrt{\Delta_2}=pi/2). Hence
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{x_B+Q+d_H+s_Z}{D}\ge\frac\pi2.}
 \tag{4}
-$$
+```
 
 This is a full-source statement: the alternative to (4) is a quadratic
 contact-isolated population, not a missing estimate on (h).
@@ -81,10 +81,10 @@ contact-isolated population, not a missing estimate on (h).
 Assume in addition (s_Z=0), the diameter graph is in the forest branch, and the
 selected full-support stress is in the exact zero-transfer phase
 
-$$
+```math
 Q^{\mathsf T}\Lambda^+Q=B_H^{-1}.
 \tag{5}
-$$
+```
 
 Then, for all sufficiently large survivors:
 
@@ -92,11 +92,11 @@ Then, for all sufficiently large survivors:
    (d_H\ge D/5+O(1));
 2. with (L=e_{BB}+2s_C), the report-level forest surplus floor gives
 
-$$
+```math
 \boxed{
 \frac LD\ge 0.597+\varepsilon_{597}+\frac35-o(1).}
 \tag{6}
-$$
+```
 
 ### Proof
 
@@ -105,31 +105,31 @@ each connected component of (H) is a star and that its degree is at most five.
 The Woodall forest classification gives (d_H) components and (q=h+d_H). Since
 each component has at most five edges,
 
-$$
+```math
 h\le5d_H.
 \tag{7}
-$$
+```
 
 The audited ZF edge/diameter comparison gives (h\ge\lceil D\rceil). Thus
 
-$$
+```math
 d_H\ge h/5\ge D/5+O(1).
 \tag{8}
-$$
+```
 
 In the (s_Z=0) forest circuit phase the exact surplus variable is
 
-$$
+```math
 \nu_D=\frac{e_{BB}+2s_C-3d_H}{D},
-$$
+```
 
 and the explicit detour theorem gives
 (liminf\nu_D\ge0.597+arepsilon_{597}). Therefore
 
-$$
+```math
 \frac LD=\nu_D+3\frac{d_H}{D}
 \ge0.597+arepsilon_{597}+\frac35-o(1),
-$$
+```
 
 which is (6). (square)
 

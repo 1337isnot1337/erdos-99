@@ -25,9 +25,9 @@ For a boundary mark `p`, let `R(p)` be the set of complementary regions whose cl
 
 Suppose a finite family `E` of such boundary pairs has the property that every two distinct pairs either share a mark or have four distinct endpoints that alternate in cyclic order on `partial X`. Then
 
-$$
+```math
 \boxed{\bigcap_{e\in E} S_e\ne\varnothing.}
-$$
+```
 
 ### Independent proof
 

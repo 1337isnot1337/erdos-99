@@ -54,23 +54,23 @@ below.
 
 Let
 
-$$
+```math
 A=\{\tau_1,\ldots,\tau_m\},\qquad
 B=\{\sigma_1,\ldots,\sigma_n\}.
-$$
+```
 
 On the resolved outer-face boundary the four host intervals occur cyclically as
 
-$$
+```math
 I_A^+,\ I_B^+,\ I_A^-,\ I_B^-.
 \tag{2.1}
-$$
+```
 
 Every A-crosscut joins I_A^+ to I_A^- and every B-crosscut joins I_B^+ to I_B^-.
 Endpoint resolution is chosen away from source vertices.
 
-Let $\ell_A$ be the A-layer. On the two B-host intervals, $\ell_A$ is
-constant at the two extreme values 0 and m. Symmetrically, the B-layer $\ell_B$
+Let $`\ell_A`$ be the A-layer. On the two B-host intervals, $`\ell_A`$ is
+constant at the two extreme values 0 and m. Symmetrically, the B-layer $`\ell_B`$
 is constant at opposite extreme values 0 and n on I_A^+ and I_A^-.
 
 In the threshold branch there is an actual full-support diameter h_0=za.
@@ -95,7 +95,7 @@ hull; otherwise hull chords between consecutive extreme vertices would have
 alternating boundary order and would cross the outer-face embedding. Resolving train
 endpoints away from source vertices does not change that order. Deleting non-extreme
 boundary occurrences from the two z-to-a paths therefore gives the two convex-hull
-arcs. $\square$
+arcs. $`\square`$
 
 No simple outer boundary is assumed. Repeated non-hull occurrences are harmless
 because the statement is only about the extreme-vertex subsequence.
@@ -105,7 +105,7 @@ because the statement is only about the extreme-vertex subsequence.
 ### Theorem 3.1
 
 After possibly swapping I_A^+ and I_A^-, every extreme source vertex on L with
-A-layer in $\{1,\ldots,m-1\}$ lies in I_A^+, while every extreme source vertex
+A-layer in $`\{1,\ldots,m-1\}`$ lies in I_A^+, while every extreme source vertex
 on U with interior A-layer lies in I_A^-.
 
 ### Proof
@@ -127,25 +127,25 @@ an interior A-layer lies in one A-host interval.
 The two paths use opposite A-hosts for their interior portions. For each selected
 A-crosscut, one endpoint is on P_L and the other on P_U, while its two endpoints
 lie on opposite A-host intervals. Lemma 2.1 transfers the conclusion from the
-resolved outer paths to the convex-hull arcs L,U. $\square$
+resolved outer paths to the convex-hull arcs L,U. $`\square`$
 
 This does **not** assert that all of L or U lies in one A-host interval. Layer-0
 and layer-m plateaus may extend into B-host intervals or A-host tails.
 
 ## 4. Internal staircase representatives are B-full-span
 
-Take a simple threshold staircase edge $\{p,q\}$ with
+Take a simple threshold staircase edge $`\{p,q\}`$ with
 
-$$
+```math
 0<p<q<m.
-$$
+```
 
 The paired-staircase theorem supplies two distinct actual diameter bars
 
-$$
+```math
 h_1=L_pU_q,\qquad h_2=L_qU_p.
 \tag{4.1}
-$$
+```
 
 By Theorem 3.1, each L-endpoint lies in one A-host interval and each U-endpoint
 lies in the other. On these two A-host intervals the B-layer is constant at
@@ -153,7 +153,7 @@ opposite extreme values 0,n. Hence both rows in (4.1) have B-layer endpoints 0,n
 
 Exact laminar interval support on the B-shore gives
 
-$$
+```math
 \boxed{
 \operatorname{supp}_B(h_1)
 =
@@ -162,16 +162,16 @@ $$
 \{1,\ldots,n\}.
 }
 \tag{4.2}
-$$
+```
 
 Thus every internal simple staircase edge contributes two distinct actual
 B-full-span diameter rows. If e_int is the number of simple staircase edges with
 both gap endpoints interior,
 
-$$
+```math
 \boxed{N_{\rm full}^B\ge 2e_{\rm int}.}
 \tag{4.3}
-$$
+```
 
 This validates the strongest disputed assertion of PR #603.
 
@@ -180,9 +180,9 @@ This validates the strongest disputed assertion of PR #603.
 For an internal A-support interval (p,q], the signed A-incidence has two internal
 switches, so t_A(h)=2. Current main gives
 
-$$
+```math
 t_A(h)+t_B(h)\le2,
-$$
+```
 
 hence t_B(h)=0. That inequality alone permits either empty or full B-support.
 
@@ -195,24 +195,24 @@ laminar support; it does not require the numerical joint-switch inequality.
 
 The opposite-shore rank theorem gives
 
-$$
+```math
 N_{\rm prop}^B\ge n-2,
-$$
+```
 
-or $n-1$ if B is exact phase. Full-support and nonempty proper-support rows are
+or $`n-1`$ if B is exact phase. Full-support and nonempty proper-support rows are
 disjoint, so (4.3) gives
 
-$$
+```math
 \boxed{h\ge n+2e_{\rm int}-2,}
 \tag{6.1}
-$$
+```
 
 and in the exact-B case
 
-$$
+```math
 \boxed{h\ge n+2e_{\rm int}-1.}
 \tag{6.2}
-$$
+```
 
 Thus the edge-budget conclusions in PRs #603 and #605 survive. The audit identifies
 the 2e_int excluded rows as genuinely B-full-span, rather than merely B-nonswitching.
@@ -221,31 +221,31 @@ the 2e_int excluded rows as genuinely B-full-span, rather than merely B-nonswitc
 
 The staircase equality case has
 
-$$
+```math
 a_i=i-1,\qquad B_i=\{t_i,\ldots,t_{i-1}\},\qquad t_0=m,
-$$
+```
 
-so $\{0,m\}$ is a simple edge.
+so $`\{0,m\}`$ is a simple edge.
 
-A proper edge $\{0,b\}$, b<m, and a proper edge $\{a,m\}$, a>0, cannot coexist:
+A proper edge $`\{0,b\}`$, b<m, and a proper edge $`\{a,m\}`$, a>0, cannot coexist:
 antitonicity with 0<a would force b>=m. Therefore all proper boundary-touching
 simple edges form one fan side.
 
 If f is their number,
 
-$$
+```math
 e_{\rm int}+f=m-1.
 \tag{7.1}
-$$
+```
 
 Combining with (6.1),
 
-$$
+```math
 \boxed{
 f\ge \frac{2m+n-h-4}{2}.
 }
 \tag{7.2}
-$$
+```
 
 This part of PR #605 also passes.
 
@@ -253,47 +253,47 @@ This part of PR #605 also passes.
 
 PR #605 defines side-resolved fiber counts n_{X,j}, genuine side-split excess
 
-$$
+```math
 S=\sum_{X\in\{L,U\}}\sum_{j=0}^m(n_{X,j}-1),
-$$
+```
 
 the overlap count o at z,a, and r_0, the number of literal h_0 endpoints already
 present in the paired graph.
 
 Its forest counts
 
-$$
+```math
 c_{\rm pair}=2+S-o,\qquad
 c_0=3+S-o-r_0
 \tag{8.1}
-$$
+```
 
 are exact: the selected common-cut diameter graphs are bipartite, and a bipartite
 subgraph of the convex diameter thrackle has no cycle.
 
 Consequently
 
-$$
+```math
 \sum_{j=0}^m(n_j-1)=m+c_0.
 \tag{8.2}
-$$
+```
 
 Subtracting the mandatory two-sided contribution in the interior layers gives the
 PR #603 residual identity
 
-$$
+```math
 (n_0-1)+(n_m-1)+\sum_{j=1}^{m-1}(n_j-2)=c_0+1.
 \tag{8.3}
-$$
+```
 
 The two reports are therefore algebraically compatible.
 
 The global side-split upper budget in PR #605 also checks:
 
-$$
+```math
 S\le q-2m-4+o+r_0\le q-2m.
 \tag{8.4}
-$$
+```
 
 No contradiction follows from (8.4) at the current extraction constant.
 
@@ -316,7 +316,7 @@ No contradiction follows from (8.4) at the current extraction constant.
 
 The audited threshold chain is
 
-$$
+```math
 \text{threshold paired staircase}
 \Longrightarrow
 \begin{cases}
@@ -326,7 +326,7 @@ N_{\rm full}^B\ge2e_{\rm int},\\
 h\ge n+2e_{\rm int}-2,\\
 \text{or a one-sided boundary fan}.
 \end{cases}
-$$
+```
 
 The next obligation is source-geometric:
 
@@ -364,56 +364,56 @@ PR #605 also added a threshold--threshold overlap bound. Let H_0^A and H_0^B be 
 two selected paired threshold systems. Partition each by its switch count on its own
 shore:
 
-$$
+```math
 |A_2|=2e_{\rm int}^A,\quad |A_1|=2f_A,\quad |A_0|=3,
-$$
-$$
+```
+```math
 |B_2|=2e_{\rm int}^B,\quad |B_1|=2f_B,\quad |B_0|=3.
-$$
+```
 
 For an edge shared by the two selected systems, the same physical row satisfies
 
-$$
+```math
 t_A(h)+t_B(h)\le2.
-$$
+```
 
-If the shared row lies outside $A_0\cup B_0$, both switch counts are positive,
-hence they are exactly $t_A=t_B=1$. Therefore
+If the shared row lies outside $`A_0\cup B_0`$, both switch counts are positive,
+hence they are exactly $`t_A=t_B=1`$. Therefore
 
-$$
+```math
 H_0^A\cap H_0^B
 \subseteq
 A_0\cup B_0\cup(A_1\cap B_1),
-$$
+```
 
 and consequently
 
-$$
+```math
 |H_0^A\cap H_0^B|
 \le 6+2\min(f_A,f_B).
 \tag{12.1}
-$$
+```
 
-Since $|H_0^A|=2m+1$ and $|H_0^B|=2n+1$,
+Since $`|H_0^A|=2m+1`$ and $`|H_0^B|=2n+1`$,
 
-$$
+```math
 \boxed{
 h\ge2m+2n-4-2\min(f_A,f_B).
 }
 \tag{12.2}
-$$
+```
 
 This argument is exact. No hidden assumption about physical endpoint disjointness is
 used; it counts actual diameter edges and allows arbitrary reuse consistent with the
 joint switch inequality.
 
 The host-localization continuation in PR #605 is weaker than the audited theorem.
-From $t_A=2$ alone one may classify a row as B-empty when its endpoints occupy the
+From $`t_A=2`$ alone one may classify a row as B-empty when its endpoints occupy the
 same A-host and B-full-span when they occupy opposite A-hosts. But the actual paired
-internal representatives are $L_pU_q,L_qU_p$, and Sections 2--4 prove their
+internal representatives are $`L_pU_q,L_qU_p`$, and Sections 2--4 prove their
 interior L/U endpoints occupy opposite A-hosts. Thus the B-empty alternative does not
 occur for these named paired rows. It remains a legitimate abstract classification
-for an unidentified row with $t_A=2$, not an escape for the paired staircase lift.
+for an unidentified row with $`t_A=2`$, not an escape for the paired staircase lift.
 
 Audit disposition for the live continuation:
 
@@ -431,22 +431,22 @@ fan edge.
 
 Let
 
-$$
+```math
 C:=A_1\cap B_1.
-$$
+```
 
 Every row in C switches once on each shore. The joint switch theorem says all such
 shared-switch diameter rows occupy at most two adjacent corner types among
 
-$$
+```math
 (A^+,B^+),\ (A^+,B^-),\ (A^-,B^+),\ (A^-,B^-).
-$$
+```
 
 Hence all rows in C share one common host interval: either one A-host or one B-host.
 
-Now fix one proper boundary-fan edge of the A staircase. It is either $\{0,j\}$
-or $\{j,m\}$ with $1\le j\le m-1$. Its two paired physical representatives
-have their unique A-switching endpoints at $L_j$ and $U_j$. By Theorem 3.1
+Now fix one proper boundary-fan edge of the A staircase. It is either $`\{0,j\}`$
+or $`\{j,m\}`$ with $`1\le j\le m-1`$. Its two paired physical representatives
+have their unique A-switching endpoints at $`L_j`$ and $`U_j`$. By Theorem 3.1
 these lie on opposite A-host intervals. Therefore, for either fixed A-host,
 **at most one** of the two representatives over that fan edge switches there.
 Summing over the f_A fan edges, exactly f_A selected A_1 rows switch on each A-host.
@@ -455,19 +455,19 @@ Symmetrically, exactly f_B selected B_1 rows switch on each B-host.
 
 If the two adjacent corner types supporting C share an A-host, then
 
-$$
+```math
 |C|\le f_A
-$$
+```
 
-(and of course $|C|\le2f_B$). If they share a B-host, then
+(and of course $`|C|\le2f_B`$). If they share a B-host, then
 
-$$
+```math
 |C|\le f_B
-$$
+```
 
-(and $|C|\le2f_A$). Therefore
+(and $`|C|\le2f_A`$). Therefore
 
-$$
+```math
 \boxed{
 |A_1\cap B_1|
 \le
@@ -479,56 +479,56 @@ g(f_A,f_B)
 \bigr).
 }
 \tag{13.1}
-$$
+```
 
-Indeed, if $f_A\le f_B$, the worst of the two possible common-host orientations is
+Indeed, if $`f_A\le f_B`$, the worst of the two possible common-host orientations is
 
-$$
+```math
 \max\{f_A,\min(f_B,2f_A)\}
 =
 \min(f_B,2f_A),
-$$
+```
 
 which is (13.1).
 
 Rows shared by the two selected threshold systems but outside C must lie in
-$A_0\cup B_0$, whose union has at most six actual edges. Thus
+$`A_0\cup B_0`$, whose union has at most six actual edges. Thus
 
-$$
+```math
 \boxed{
 |H_0^A\cap H_0^B|
 \le
 6+g(f_A,f_B).
 }
 \tag{13.2}
-$$
+```
 
 Taking the union gives the strengthened two-threshold diameter budget
 
-$$
+```math
 \boxed{
 h
 \ge
 2m+2n-4-g(f_A,f_B).
 }
 \tag{13.3}
-$$
+```
 
-This improves PR #605 equation (22), which subtracts $2\min(f_A,f_B)$, whenever
-the two fan sizes are within a factor of two. In particular, when $f_A=f_B=f$,
-the overlap penalty drops from $2f$ to $f$.
+This improves PR #605 equation (22), which subtracts $`2\min(f_A,f_B)`$, whenever
+the two fan sizes are within a factor of two. In particular, when $`f_A=f_B=f`$,
+the overlap penalty drops from $`2f`$ to $`f`$.
 
 A convenient coarser symmetric form follows from
 
-$$
+```math
 g(f_A,f_B)\le\frac23(f_A+f_B).
-$$
+```
 
 Using
-$f_A=m-1-e_{\rm int}^A$ and
-$f_B=n-1-e_{\rm int}^B$,
+$`f_A=m-1-e_{\rm int}^A`$ and
+$`f_B=n-1-e_{\rm int}^B`$,
 
-$$
+```math
 \boxed{
 3h
 \ge
@@ -538,7 +538,7 @@ $$
 -8.
 }
 \tag{13.4}
-$$
+```
 
 The proof is purely source-level incidence bookkeeping: it counts actual diameter
 edges, uses the already proved physical L/U host separation, and permits arbitrary

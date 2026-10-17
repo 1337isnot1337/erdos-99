@@ -37,28 +37,28 @@ Thus every bounded quadrilateral face is an edge of a simple triangle-free graph
 the train tracks. If `T` is the number of tracks and `F_4` the number of bounded
 quadrilateral contact faces,
 
-$$
+```math
 \boxed{F_4\le\frac{T^2}{4}.}
-$$
+```
 
 Moreover every track has two ends on the boundary of the rhombic-face union. If `h`
 is the outer contact-face walk and
 
-$$
+```math
 Q=\sum_{f\text{ bounded}}(k_f-4),
-$$
+```
 
 then
 
-$$
+```math
 \boxed{2T\le h+5Q.}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{F_4\le\frac{(h+5Q)^2}{16}.}
-$$
+```
 
 This does not close C-II by itself, because the linear face-defect budget can have a
 large constant. It replaces an unstructured quadratic rhombic bulk by a finite
@@ -84,11 +84,11 @@ nonquadrilateral face.
 Because opposite sides of a parallelogram are parallel, all entry/exit edges of one
 track are parallel. Thus every track has a fixed unoriented transversal
 
-$$
+```math
 [u_T]\in\mathbb{RP}^1,
 \qquad |u_T|=1.
 \tag{C77.1}
-$$
+```
 
 Every rhombus belongs to exactly two tracks, one for each opposite-edge pair.
 
@@ -117,18 +117,18 @@ Now orient two distinct tracks `T,S`. If they cross in a rhombus, choose the
 orientations so that `T` crosses `S` from right to left. Their oriented transversals
 then satisfy
 
-$$
+```math
 \det(u_T,u_S)>0.
 \tag{C77.2}
-$$
+```
 
 If the same two simple tracks crossed again, the crossing order would be reversed at
 the next crossing, while the same fixed transversals would still be attached to the
 tracks. The second rhombus would therefore require
 
-$$
+```math
 \det(u_T,u_S)<0,
-$$
+```
 
 which is impossible. This is exactly the necessary-direction argument in
 Kenyon--Schlenker, Theorem 3.1.
@@ -150,27 +150,27 @@ directions are `[u_T]` and `[u_S]`.
 
 Let
 
-$$
+```math
 \phi(T,S)\in(0,\pi/2]
-$$
+```
 
 be the acute projective angle between those directions. The short diagonal of the
 unit rhombus has length
 
-$$
+```math
 2\sin\frac{\phi(T,S)}2.
-$$
+```
 
 That diagonal joins two source vertices. Unit separation makes its length at least
 one. Equality would make it an actual unit contact drawn across the interior of the
 quadrilateral face, splitting the face into contact triangles. Therefore
 
-$$
+```math
 \boxed{
 \phi(T,S)>\frac\pi3.
 }
 \tag{C77.3}
-$$
+```
 
 Now suppose three tracks `T_1,T_2,T_3` were pairwise intersecting. Their three
 unoriented directions are three points on the projective circle `R/pi Z`. Put them in
@@ -186,19 +186,19 @@ crossing. Then `Gamma_R` is a simple triangle-free graph.
 By Lemma C77.1, every crossing corresponds to one and only one rhombic face, and every
 rhombic face is one crossing. Hence
 
-$$
+```math
 \boxed{|E(\Gamma_R)|=F_4.}
 \tag{C77.4}
-$$
+```
 
 Mantel's theorem gives
 
-$$
+```math
 \boxed{
 F_4\le\left\lfloor\frac{T^2}{4}\right\rfloor,
 }
 \tag{C77.5}
-$$
+```
 
 where `T=|V(Gamma_R)|`.
 
@@ -222,63 +222,63 @@ opposite-edge pair of its incident rhombus containing that edge.
 Let `E_boundary^R` denote the number of contact edges incident to exactly one bounded
 quadrilateral face. Then
 
-$$
+```math
 \boxed{2T=E_{\partial R}.}
 \tag{C77.6}
-$$
+```
 
 Let `h` be the outer contact-face walk length and let
 
-$$
+```math
 L_{def}:=\sum_{\substack{f\text{ bounded}\\k_f\ge5}}k_f.
-$$
+```
 
 Every rhombic-boundary edge is represented by an incidence in the outer walk or in a
 bounded nonquadrilateral face walk, so
 
-$$
+```math
 E_{\partial R}\le h+L_{def}.
 \tag{C77.7}
-$$
+```
 
 For every integer `k>=5`,
 
-$$
+```math
 k\le5(k-4).
-$$
+```
 
 Therefore
 
-$$
+```math
 L_{def}\le5Q.
 \tag{C77.8}
-$$
+```
 
 Combining C77.6-C77.8 gives:
 
 ### Theorem C77.3 — train-track boundary budget
 
-$$
+```math
 \boxed{
 T\le\frac{h+5Q}{2}.
 }
 \tag{C77.9}
-$$
+```
 
 With C77.5,
 
-$$
+```math
 \boxed{
 F_4\le\frac{(h+5Q)^2}{16}.
 }
 \tag{C77.10}
-$$
+```
 
 C49's exact face-defect budget
 
-$$
+```math
 h+Q\le4q-4
-$$
+```
 
 still implies only `T=O(D)` at the present level of constants, because `q<=pi D`.
 The value of C77.10 is structural rather than a completed density gap.
@@ -289,14 +289,14 @@ The value of C77.10 is structural rather than a completed density gap.
 
 C42 gives
 
-$$
+```math
 F_4\ge m-5q+3c_I+3e_{BB}+5.
 \tag{C77.11}
-$$
+```
 
 Therefore C77.10 yields the exact new core inequality
 
-$$
+```math
 \boxed{
  m
 \le
@@ -304,25 +304,25 @@ $$
 +5q-3c_I-3e_{BB}-5.
 }
 \tag{C77.12}
-$$
+```
 
 Equivalently, a large rhombic core forces many global train tracks:
 
-$$
+```math
 \boxed{
 T\ge2\sqrt{F_4}
 \ge2\sqrt{m-5q+3c_I+3e_{BB}+5}.
 }
 \tag{C77.13}
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 h+5Q\ge4\sqrt{F_4}.}
 \tag{C77.14}
-$$
+```
 
 This turns quadratic rhombic bulk into linear pseudoline complexity.
 
@@ -332,15 +332,15 @@ This turns quadratic rhombic bulk into linear pseudoline complexity.
 
 For a crossing `TS`, C75's short diagonal is
 
-$$
+```math
 s_{TS}=2\sin\frac{\phi(T,S)}2,
-$$
+```
 
 where `phi(T,S)>pi/3` is the acute track angle.
 
 Thus C75's purely geometric slack becomes a track-intersection energy:
 
-$$
+```math
 \boxed{
 \Sigma_{diag}
 =
@@ -348,22 +348,22 @@ $$
 \left(2\sin\frac{\phi(T,S)}2-1\right).
 }
 \tag{C77.15}
-$$
+```
 
 If the force-visible core is near capacity in the sense used in C75, then
 
-$$
+```math
 \Sigma_{diag}=O(D).
-$$
+```
 
 Since `F_4=Theta(D^2)`, the mean angular excess above the forbidden `60`-degree
 threshold is `O(1/D)`. More precisely, for any fixed `eta>0`, only `O_eta(D)` track
 crossings can have
 
-$$
+```math
 \phi(T,S)\ge\frac\pi3+\eta.
 \tag{C77.16}
-$$
+```
 
 So the near-capacity geometry has the following exact global representation:
 

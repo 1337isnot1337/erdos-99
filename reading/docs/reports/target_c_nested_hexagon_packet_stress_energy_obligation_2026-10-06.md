@@ -25,22 +25,22 @@ Use the six-sided curved unit wall of the preceding corner-barrier report,
 with `M>=3`, and put `R=M-1`. The limiting candidate interior sites are
 the complete triangular-lattice hexagon
 
-$$
+```math
 P_R=\{iu+jv:\ |i|,|j|,|i+j|\le R\},
 \quad u=(1,0),\quad v=(1/2,\sqrt3/2).
-$$
+```
 
 There are `3R^2+3R+1` sites. For each radius `r=1,...,R`, its six
 radial corner sites are `r e_k`, with `e_k=Rot(k pi/3)u`. The outer
 wall corners are `M e_k` at zero. The guard pair from `R e_k` to
 `M e_k` has unit length. At positive curvature the wall corner is
 
-$$
+```math
 q_k(\theta)=L(\theta)e_k
 =M e_k-C\theta^2e_k+O(\theta^4),
 \quad C=M(M^2-1)/6.
 \tag{1}
-$$
+```
 
 No feasible old source containing this full limiting interior grid is
 asserted. It is the target packet chart being tested. The wall itself is
@@ -70,10 +70,10 @@ from the positive-radius ring supports.
 
 The selected contact count is
 
-$$
+```math
 6r+6(M-r)=6M.
 \tag{2}
-$$
+```
 
 For any first-order packet velocity `d` satisfying all unit lower
 inequalities and the six stationary first-order corner guards, the
@@ -83,9 +83,9 @@ vanishes. Taking every `r=0,...,R` shows that all nested ring and radial-chain
 rows are forced zero. Their distinct support, including the six guard
 rows, has count
 
-$$
+```math
 \boxed{3R(R+1)+6R+6=3M(M+1).}\tag{3}
-$$
+```
 
 The count is not a theorem that every other row is weak: completeness of
 that classification would need a strictly positive certificate for all
@@ -96,20 +96,20 @@ No affine restriction is placed on the velocity field.
 
 Suppose a `C^2` nonaffine packet family has positions
 
-$$
+```math
 p_i(\theta)=p_i+\theta d_i+\theta^2b_i+o(\theta^2).
-$$
+```
 
 For the six guards use (1), so their first velocities are zero and
 second coefficients are `-C e_k`. Define
 
-$$
+```math
 E_r(d)=
 \sum_{ij\in\mathrm{ring}_r}|d_i-d_j|^2
 +\sum_{k=0}^5\sum_{s=r}^{R}|d_{s e_k}-d_{(s+1)e_k}|^2,
 \quad d_{M e_k}=0.
 \tag{4}
-$$
+```
 
 All selected pairs had unit length and zero first variation by Section 2.
 Summing their squared-distance changes to second order cancels every
@@ -118,16 +118,16 @@ the old difference from `R e_k` to `M e_k` is `-e_k`, giving the guard
 contribution `-2C`. Therefore the summed theta-squared coefficient is
 exactly
 
-$$
+```math
 \boxed{E_r(d)-12C.}\tag{5}
-$$
+```
 
 All lower inequalities require
 
-$$
+```math
 \boxed{E_r(d)\ge12C=2M(M^2-1)
 \qquad\text{for every }r=0,\ldots,R.}\tag{6}
-$$
+```
 
 If every selected contact opens with strictly positive second-order
 coefficient, its particular inequality is strict. A packet could open a

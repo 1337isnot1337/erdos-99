@@ -13,16 +13,16 @@
 ## Audited statement
 
 For a sequence of canonical full-core Type-II representatives with diameters
-$D_j\to\infty$, attachment cells $P_{r,j}$, cell diameters
-$d_{r,j}$, component graph diameters $\delta_{r,j}$, and
-$$
+$`D_j\to\infty`$, attachment cells $`P_{r,j}`$, cell diameters
+$`d_{r,j}`$, component graph diameters $`\delta_{r,j}`$, and
+```math
 \mu_j=\frac{e_{BB,j}+2s_{C,j}-3k_j}{D_j},
 \qquad k_j=d_{H,j}+s_{Z,j},
-$$
+```
 we audit
-$$
+```math
 \liminf_j\mu_j\ge1.
-$$
+```
 The source convention is the full source, including contact-isolated points. The
 cells and component diameters are auxiliary core objects only.
 
@@ -30,44 +30,44 @@ cells and component diameters are auxiliary core objects only.
 
 The report uses the following hypotheses and no stronger ones:
 
-1. $\sum_r a_{r,j}\ge(\pi/4)D_j^2-o(D_j^2)$, from the canonical full-core
+1. $`\sum_r a_{r,j}\ge(\pi/4)D_j^2-o(D_j^2)`$, from the canonical full-core
    near-disk area and attachment-cell saturation statements.
-2. $\sum_r\sqrt{a_{r,j}}\le C D_j$, from the canonical cell perimeter budget and
+2. $`\sum_r\sqrt{a_{r,j}}\le C D_j`$, from the canonical cell perimeter budget and
    planar isoperimetry.
-3. $d_{r,j}\le\delta_{r,j}+2$, with the additive two retained.
-4. $\sum_r\delta_{r,j}\le6+\mu_jD_j$, from the exact attachment currency identity
-   after dropping the nonnegative $R_I+s_B$ terms.
+3. $`d_{r,j}\le\delta_{r,j}+2`$, with the additive two retained.
+4. $`\sum_r\delta_{r,j}\le6+\mu_jD_j`$, from the exact attachment currency identity
+   after dropping the nonnegative $`R_I+s_B`$ terms.
 
-For a fixed area threshold $\eta D_j^2$, the small-cell area is bounded by
-$$
+For a fixed area threshold $`\eta D_j^2`$, the small-cell area is bounded by
+```math
 \sum_{a_{r,j}<\eta D_j^2}a_{r,j}
 \le\sqrt\eta D_j\sum_r\sqrt{a_{r,j}}
 \le C\sqrt\eta D_j^2.
-$$
+```
 Thus the large cells carry at least
-$(\pi/4-C\sqrt\eta)D_j^2-o(D_j^2)$ area. The planar isodiametric inequality
-$$
+$`(\pi/4-C\sqrt\eta)D_j^2-o(D_j^2)`$ area. The planar isodiametric inequality
+```math
 a_{r,j}\le\pi d_{r,j}^2/4
-$$
+```
 then gives
-$$
+```math
 \sum_{r\ {\rm large}}d_{r,j}
 \ge
 2\sqrt{\frac{\pi/4-C\sqrt\eta}{\pi}}D_j-o(D_j).
-$$
-The number of large cells is at most $C/\sqrt\eta$. Therefore
-$$
+```
+The number of large cells is at most $`C/\sqrt\eta`$. Therefore
+```math
 \sum_r\delta_{r,j}
 \ge
 2\sqrt{\frac{\pi/4-C\sqrt\eta}{\pi}}D_j-o(D_j)-O_\eta(1).
-$$
-Combining with the exact upper budget, then taking $j\to\infty$ at fixed $\eta$,
-and finally $\eta\downarrow0$, gives $\liminf\mu_j\ge1$.
+```
+Combining with the exact upper budget, then taking $`j\to\infty`$ at fixed $`\eta`$,
+and finally $`\eta\downarrow0`$, gives $`\liminf\mu_j\ge1`$.
 
 All inequality directions are correct. In particular, the use of
-$\sum d_r\ge\sqrt{\sum d_r^2}$ is valid because the diameters are nonnegative; the
-fixed $+2$ loss is harmless because the number of threshold-large cells is bounded
-for fixed $\eta$. No claim that the number of all cells is bounded is made.
+$`\sum d_r\ge\sqrt{\sum d_r^2}`$ is valid because the diameters are nonnegative; the
+fixed $`+2`$ loss is harmless because the number of threshold-large cells is bounded
+for fixed $`\eta`$. No claim that the number of all cells is bounded is made.
 
 ## Scope and dependency audit
 
@@ -76,7 +76,7 @@ for fixed $\eta$. No claim that the number of all cells is bounded is made.
 * `C-HARMONIC-CELL-TILING` is used for cell area saturation and the square-root
   budget. It supplies actual convex attachment cells, not an abstract scaffold.
 * `C-ATTACH-CURRENCY` is used for the exact component-diameter budget and
-  $d_r\le\delta_r+2$.
+  $`d_r\le\delta_r+2`$.
 * No extension of the ZR/ZF affine-kernel statement to isolated source coordinates is
   used.
 * Sections 122 and 123, carrier decimals, outer-walk occurrence injectivity, and
@@ -84,7 +84,7 @@ for fixed $\eta$. No claim that the number of all cells is bounded is made.
 
 ## Regression audit
 
-* The scalar-ledger compatibility witness has $\mu>1$, so it is compatible with the
+* The scalar-ledger compatibility witness has $`\mu>1`$, so it is compatible with the
   theorem and still blocks scalar-only closure.
 * The saturated chamber/exterior-cap constructions do not satisfy full-core cell-area
   saturation, so they are outside scope.
@@ -92,7 +92,7 @@ for fixed $\eta$. No claim that the number of all cells is bounded is made.
   full-core cell/ledger hypotheses simultaneously.
 * Contact-isolated points are retained globally and are not counted as core vertices.
 * No equality claim is made for individual cells, nor is near-disk convergence assigned
-  a rate beyond the canonical $o(D^2)$ input.
+  a rate beyond the canonical $`o(D^2)`$ input.
 
 ## Promotion verdict
 

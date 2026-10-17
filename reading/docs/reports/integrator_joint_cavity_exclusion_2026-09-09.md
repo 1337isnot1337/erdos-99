@@ -17,11 +17,11 @@
 The new ambient-force geometry raises the explicit asymptotic pinned/contact
 surplus floor to
 
-$$
+```math
 \boxed{\liminf\frac{e_{BB}+2s_C}{D}\ge
 \lambda_{\rm int}=0.5932351999\ldots,}
 \tag{IC.1}
-$$
+```
 
 conditional on the post-ZF inputs stated in Section 1. There is also a positive
 uniform gap above this particular constant, by the equality audit in Section 6.
@@ -76,32 +76,32 @@ the square of their sum. All discarded terms are `O(D)` for bounded `L/D`.
 
 Pass to a subsequence with finite limits
 
-$$
+```math
 \frac LD\to\lambda,\quad\frac{e_{BB}}D\to t,\quad
 \frac hD\to y,\quad\frac{P_F}D\to p,\quad
 \frac{\operatorname{area}(F)}{D^2}\to a.
 \tag{IC.2}
-$$
+```
 
 This suffices to rule out a finite lower accumulation point of `L/D`.
 The bounds `0<=t<=lambda`, `h<=q<=P_F<=pi D`, and input 1 imply
 
-$$
+```math
 0\le t\le\lambda,\qquad
 2\rho\le y\le p\le\min\{2y,\pi\}.
 \tag{IC.3}
-$$
+```
 
 The ambient-force report gives, writing
 
-$$
+```math
 f(y)=\frac{y+\sin y}{4},\qquad c=3\pi/4,
-$$
+```
 
-$$
+```math
 \boxed{a\ge\max\{f(y),p-c\}.}
 \tag{IC.4}
-$$
+```
 
 The first term uses all diameter directions in the centered cyclic model; the
 second term is its area-perimeter inequality. Neither treats `F` as the whole
@@ -110,23 +110,23 @@ source hull.
 Input 4, with nonnegative remainders dropped, gives
 `E_out+Q<=P_F-h+e_BB`. Inputs 3 and 5 therefore give
 
-$$
+```math
 a\le\frac\pi4\lambda^2+
 \frac{(t+p-y)^2}{4\pi}
 \le\frac\pi4\lambda^2+
 \frac{(\lambda+p-y)^2}{4\pi}.
 \tag{IC.5}
-$$
+```
 
 Thus every survivor must satisfy the explicit necessary condition
 
-$$
+```math
 \boxed{\max\{f(y),p-c\}\le
 \frac\pi4\lambda^2+
 \frac{(\lambda+p-y)^2}{4\pi},\qquad
 2\rho\le y\le p\le\min\{2y,\pi\}.}
 \tag{IC.6}
-$$
+```
 
 This is stronger than independently inserting one area constant and `p<=pi`.
 
@@ -134,35 +134,35 @@ This is stronger than independently inserting one area constant and `p<=pi`.
 
 Let `y_*` be the unique root in `(0,pi)` of
 
-$$
+```math
 \boxed{7y_*-\sin y_*=3\pi.}
 \tag{IC.7}
-$$
+```
 
 Uniqueness follows because the derivative is `7-cos y>=6`. Equivalently,
 `f(y_*)+c=2y_*`. Let `lambda_*` be the positive root of
 
-$$
+```math
 \boxed{f(y_*)=\frac\pi4\lambda_*^2+
 \frac{(\lambda_*+y_*)^2}{4\pi}.}
 \tag{IC.8}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 (\pi^2+1)\lambda_*^2+2y_*\lambda_*+
 y_*^2-4\pi f(y_*)=0.
 \tag{IC.9}
-$$
+```
 
 The exact equations, not decimal approximations, define the constants:
 
-$$
+```math
 y_*=1.4887737130\ldots,\quad
 f(y_*)=0.6213529360\ldots,\quad
 \lambda_*=0.5932351999\ldots .
-$$
+```
 
 Useful coarse bounds are `1.48<y_*<1.5` and `1/2<lambda_*<1`.
 The former follow by evaluating IC.7 using
@@ -174,10 +174,10 @@ whereas `f(y_*)<pi/4`. Monotonicity in positive `lambda` finishes the check.
 Also `2rho<y_*`. One exact way to see this is to put
 `p_min(y)=y+2cos(y/2)` and use
 
-$$
+```math
 4(f(y)+c-p_{\min}(y))
 =3(\pi-y)+\sin(\pi-y)-8\sin((\pi-y)/2)>0
-$$
+```
 
 for `y<pi`, by the strict derivative calculation in AP.4. At `y=2rho`,
 `p_min(y)=2y`. Since `f(y)+c-2y` is strictly decreasing, its zero `y_*` lies
@@ -187,10 +187,10 @@ strictly above `2rho`.
 
 For a fixed `lambda`, define the available slack
 
-$$
+```math
 \Psi_\lambda(y,p)=\frac\pi4\lambda^2+
 \frac{(\lambda+p-y)^2}{4\pi}-\max\{f(y),p-c\}.
-$$
+```
 
 We show `Psi_(lambda_*)<=0` everywhere in IC.3, with equality only at
 `y=y_*`, `p=2y_*`. Since `p-y>=0`, this expression increases strictly with
@@ -204,10 +204,10 @@ Below `p_0(y)=f(y)+c`, the derivative in `p` is
 is negative because `lambda_*<1`, `p<=pi`, and `y>=2rho>1.4`.
 Also `y<=p_0(y)<=pi`. Hence, on `y<=p<=min(2y,pi)`, the maximum is at
 
-$$
+```math
 p=\min\{2y,p_0(y)\}.
 \tag{IC.10}
-$$
+```
 
 The switch is exactly at `y=y_*`.
 
@@ -215,17 +215,17 @@ The switch is exactly at `y=y_*`.
 
 Here IC.10 is `p=2y`, and the maximum becomes
 
-$$
+```math
 \frac\pi4\lambda_*^2+
 \frac{(\lambda_*+y)^2}{4\pi}-f(y).
 \tag{IC.11}
-$$
+```
 
 Its derivative is
 
-$$
+```math
 \frac{\lambda_*+y}{2\pi}-\frac{1+\cos y}{4}>0.
-$$
+```
 
 For a fully explicit sign check, `rho>0.7` follows from
 `cos(0.7)>=1-0.7^2/2>0.7`. Thus `y>1.4`, `lambda_*>1/2`, and
@@ -237,11 +237,11 @@ Therefore IC.11 increases to zero at `y_*`, by IC.8.
 
 Here IC.10 is `p=f(y)+c`. Put `r(y)=f(y)+c-y>=0`. The maximum is
 
-$$
+```math
 \frac\pi4\lambda_*^2+
 \frac{(\lambda_*+r(y))^2}{4\pi}-f(y).
 \tag{IC.12}
-$$
+```
 
 Since `f'(y)>=0`, `r'(y)=f'(y)-1<0`, and `lambda_*+r(y)>0`, its derivative
 is strictly negative. It decreases from zero at `y_*`.
@@ -253,9 +253,9 @@ no sampled optimization is used to certify the minimum.
 
 Conditional on Section 1, no unbounded survivor sequence can have
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}<0.5932351999\ldots .
-$$
+```
 
 The increase over GS's explicit constant is about `0.12844D`, or 27.6 percent
 of the old coefficient. This is a fixed linear improvement; all geometric
@@ -274,11 +274,11 @@ by the actual ambient-force hulls.
 Suppose a sequence had `L/D -> lambda_*`. The strict monotonicity in Section 4
 forces, after taking subsequences,
 
-$$
+```math
 y\to y_*,\qquad p\to2y_*,\qquad
 a\to f(y_*)=2y_*-3\pi/4.
 \tag{IC.13}
-$$
+```
 
 The ambient-force theorem makes the normalized force-hull limit the convex hull
 of a closed antipodal subset of the radius-`1/2` circle. For any proper such
@@ -287,10 +287,10 @@ is then strict on that gap. The same area/perimeter sums extend to a closed
 subset by summing over its disjoint complementary arcs, or by polygonal
 approximation. Thus
 
-$$
+```math
 \operatorname{area}(F_\infty)>
 \operatorname{per}(F_\infty)-3\pi/4
-$$
+```
 
 unless the subset is the whole circle. In the whole-circle case the perimeter
 is `pi`, whereas IC.13 has perimeter `2y_*<pi`. Both alternatives contradict
@@ -299,10 +299,10 @@ IC.13. A degenerating segment also has a positive gap and strict inequality.
 Therefore there is an absolute `epsilon>0` such that every sufficiently large
 source satisfying Section 1 has
 
-$$
+```math
 \boxed{(e_{BB}+2s_C)/D\ge\lambda_*+\epsilon.}
 \tag{IC.14}
-$$
+```
 
 Indeed, failure would provide a sequence with increasing diameters and
 `L/D<lambda_*+1/j`; IC.1 would force convergence to `lambda_*`, which was

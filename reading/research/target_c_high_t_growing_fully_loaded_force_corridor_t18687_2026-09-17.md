@@ -22,14 +22,14 @@ The same run can be taken from the `slow-good` exact population of the growing-b
 
 Put
 
-$$
+```math
 c={113\over5{,}000{,}000},
 \qquad
 C=1{,}109{,}000,
 \qquad
 c_H=0.453819885927\ldots .
 \tag{FC.1}
-$$
+```
 
 Here `c_H` is the sharpened coupled-host transverse constant.
 
@@ -40,42 +40,45 @@ Here `c_H` is the sharpened coupled-host transverse constant.
 Assume the positive-density non-antipodal TB1 alternative does not occur. After passing to a subsequence, there exist
 
 - a sequence `rho_D>0` with
-  $$
+  ```math
   \boxed{\rho_D\to0,
   \qquad \rho_DD^{1/4}\to\infty,}
   \tag{FC.2}
-  $$
+  
+  ```
 - and a consecutive one-sided interface block
-  $$
+  ```math
   I_D^{\rm force}=[p_D,q_D]
   \tag{FC.3}
-  $$
+  
+  ```
   whose length
-  $$
+  ```math
   \boxed{R_D:=q_D-p_D+1\to\infty,}
   \tag{FC.4}
-  $$
+  
+  ```
 
 such that every internal interface `i in I_D^{force}` simultaneously has the following properties.
 
 ### 1. Every interface is slow-good and exactly antipodal
 
-$$
+```math
 \boxed{J_i<C\sqrt D,}
 \tag{FC.5}
-$$
+```
 
 and all rows in the corridor have one exact oriented phase,
 
-$$
+```math
 \boxed{
 u_{p_D}=u_{p_D+1}=\cdots=u_{q_D+1}=:v_D.}
 \tag{FC.6}
-$$
+```
 
 In particular,
 
-$$
+```math
 N_i,L_i<C\sqrt D,
 \qquad
 B_i<{C\over\sqrt D},
@@ -84,13 +87,13 @@ S_i+S_{i+1}<C\sqrt D,
 \qquad
 0<|G_i|<C\sqrt D.
 \tag{FC.7}
-$$
+```
 
 ### 2. Every interface has a `rho_D`-wide exact force pair
 
 There are two switching actual diameter bars with unit directions `d_i^-,d_i^+` such that
 
-$$
+```math
 \boxed{
 G_i
 =D\bigl(\lambda_i^-d_i^-+\lambda_i^+d_i^+\bigr),
@@ -98,15 +101,15 @@ G_i
 \lambda_i^\pm>0,
 }
 \tag{FC.8}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 d_{\mathbb{RP}^1}([d_i^-],[d_i^+])\ge\rho_D.}
 \tag{FC.9}
-$$
+```
 
 The two birth endpoints lie on opposite ordered host subarcs. Switching supports at distinct corridor interfaces are disjoint, so all selected force bars at different interfaces are distinct.
 
@@ -114,42 +117,42 @@ The two birth endpoints lie on opposite ordered host subarcs. Switching supports
 
 Let
 
-$$
+```math
 L_D=O(D^{3/4})
-$$
+```
 
 be the common source midpoint error. The diagonal can be chosen so slowly that, in addition to (FC.2),
 
-$$
+```math
 2L_D\le {1\over2}D\sin{\rho_D\over2}
 \tag{FC.10}
-$$
+```
 
 for all sufficiently large retained sources. Hence every selected pair has four distinct endpoints, the two diameter bars cross, and its four-endpoint hull contains
 
-$$
+```math
 \boxed{
 B\!\left(o,{D\over2}\sin{\rho_D\over2}-L_D\right).
 }
 \tag{FC.11}
-$$
+```
 
 If `r_D^{cent}` denotes the radius in (FC.11), then
 
-$$
+```math
 \boxed{
 r_D^{cent}=o(D),
 \qquad
 {r_D^{cent}\over D^{3/4}}\to\infty.}
 \tag{FC.12}
-$$
+```
 
 The two diagonals intersect within
 
-$$
+```math
 \left(1+{2\over\sin\rho_D}\right)L_D=o(D)
 \tag{FC.13}
-$$
+```
 
 of the common source circumcenter. Thus the pair angle tends to zero, but much more slowly than the source midpoint-error scale: every interface still carries a genuinely large central diamond.
 
@@ -157,32 +160,32 @@ of the common source circumcenter. Thus the pair angle tends to zero, but much m
 
 The coupled host theorem is pointwise and does not deteriorate with `rho_D`. Therefore
 
-$$
+```math
 \boxed{
 |d_i^\pm\cdot Jv_D|
 \ge c_H-o(1)
 =0.453819885927\ldots-o(1).}
 \tag{FC.14}
-$$
+```
 
 The elementary antipodal dipole coordinate has opposite-sign squared-length slopes satisfying
 
-$$
+```math
 \boxed{
 |\ell_{h_i^\pm}(s d^{(i)})|
 \ge(0.907639771854\ldots-o(1))D|s|.}
 \tag{FC.15}
-$$
+```
 
 The exact force coefficients obey
 
-$$
+```math
 \boxed{
 (c_H-o(1)){|G_i|\over D}
 \le\lambda_i^\pm
 \le {C\over\sqrt D\,\sin\rho_D}.}
 \tag{FC.16}
-$$
+```
 
 Because `rho_DD^{1/4}->infinity`, the upper bound in (FC.16) tends to zero; in fact it is `o(D^{-1/4})`. This is only a bound on the two-ray compression coefficients, not a positive lower bound on the original KKT multipliers.
 
@@ -190,44 +193,44 @@ Because `rho_DD^{1/4}->infinity`, the upper bound in (FC.16) tends to zero; in f
 
 Use the global family `B_0` from the common-grid theorem:
 
-$$
+```math
 \boxed{|B_0|>0.0783D-o(D).}
 \tag{FC.17}
-$$
+```
 
 Choose any internal corridor interface `i`. From (FC.5),
 
-$$
+```math
 S_i<C\sqrt D.
-$$
+```
 
 The additive rectangle decomposition and the global `B_0` column bound give
 
-$$
+```math
 0<\theta(\tau_i,b)-{\pi\over3}
 <
 {C\over0.1567\sqrt D}
 +{3.004\times10^6\over D}
 +o(D^{-1/2})
 \tag{FC.18}
-$$
+```
 
 for every `b in B_0`. Every row in (FC.6) has exactly the same oriented phase, so the same estimate holds on **every row of the growing corridor**:
 
-$$
+```math
 \boxed{
 0<\theta(\tau_j,b)-{\pi\over3}
 < {7.078\times10^6+o(1)\over\sqrt D}
 }
 \tag{FC.19}
-$$
+```
 
 uniformly for
 
-$$
+```math
 p_D\le j\le q_D+1,
 \qquad b\in B_0.
-$$
+```
 
 The rows are internally noncrossing, the columns are internally noncrossing, every cross-pair meets once, and the inherited determinant sign is common. Thus this is one ordered growing near-equilateral train rectangle, not separate local grids.
 
@@ -235,28 +238,28 @@ The rows are internally noncrossing, the columns are internally noncrossing, eve
 
 Write
 
-$$
+```math
 F_j=A_jv_D,
 \qquad A_j>0.
-$$
+```
 
 The one-sided separation functional gives
 
-$$
+```math
 \boxed{
 A_{p_D}>A_{p_D+1}>\cdots>A_{q_D+1}
 }
 \tag{FC.20}
-$$
+```
 
 up to reversing the common orientation convention. All `G_i` point in the same ordinary direction and telescope:
 
-$$
+```math
 \boxed{
 \sum_{i=p_D}^{q_D}|G_i|
 =|A_{p_D}-A_{q_D+1}|<D.}
 \tag{FC.21}
-$$
+```
 
 So the fully loaded corridor carries a growing ordered stack of exact positive force dipoles whose total axial reaction remains below one diameter scale.
 
@@ -266,22 +269,22 @@ So the fully loaded corridor carries a growing ordered stack of exact positive f
 
 On the no-TB1 branch, the growing exact-phase theorem proves that the one-sided shore `I_D` has
 
-$$
+```math
 |I_D|>{c\over2}D-o(D)
 \tag{FC.22}
-$$
+```
 
 and that all but `o(D)` of its interfaces are **slow-good exact-antipodal**:
 
-$$
+```math
 E_D^{slow}
 =\{i:\ J_i<C\sqrt D\text{ and }i\text{ is exact-antipodal}\},
-$$
+```
 
-$$
+```math
 \boxed{|I_D\setminus E_D^{slow}|=o(D).}
 \tag{FC.23}
-$$
+```
 
 At every member of `E_D^{slow}`, choose the exact positive force pair from the antipodal force-pair theorem.
 
@@ -291,62 +294,62 @@ At every member of `E_D^{slow}`, choose the exact positive force pair from the a
 
 For every fixed `rho>0`, the threshold-free narrow exact-force-pair packing argument gives
 
-$$
+```math
 N_D^{narrow}(\rho)
 \le2\rho D+o(D).
 \tag{FC.24}
-$$
+```
 
 The proof uses only the common one-sided open semicircle, opposite transverse signs of the exact pair, the shrinking common row-axis window, disjoint switching supports, and C67 diameter-direction separation. It does not use a fixed local cost threshold.
 
 For integers `k>=2`, put
 
-$$
+```math
 \rho_k={1\over k}.
-$$
+```
 
 Choose an increasing sequence of source thresholds `D_k` so large that whenever a retained source has `D>=D_k`, all of the following hold:
 
-$$
+```math
 N_D^{narrow}(\rho_k)\le {3D\over k},
 \tag{FC.25}
-$$
+```
 
-$$
+```math
 D^{1/4}\ge k^2,
 \tag{FC.26}
-$$
+```
 
 and
 
-$$
+```math
 2L_D\le {1\over2}D\sin{1\over2k}.
 \tag{FC.27}
-$$
+```
 
 This is possible because (FC.24) holds for each fixed `k`, `L_D/D=O(D^{-1/4})->0`, and `D^{1/4}->infinity`.
 
 For `D_k<=D<D_{k+1}`, set
 
-$$
+```math
 \rho_D={1\over k}.
 \tag{FC.28}
-$$
+```
 
 Then `k=k(D)->infinity`, so
 
-$$
+```math
 \rho_D\to0,
 \qquad
 \rho_DD^{1/4}\ge k\to\infty,
-$$
+```
 
 and (FC.25) gives
 
-$$
+```math
 \boxed{N_D^{narrow}(\rho_D)=o(D).}
 \tag{FC.29}
-$$
+```
 
 This proves the angular part of the diagonal without assuming any quantitative rate for the original shrinking row-phase window.
 
@@ -356,35 +359,35 @@ This proves the angular part of the diagonal without assuming any quantitative r
 
 For a `rho_D`-wide exact pair, the bilateral birth-loading inequality is exact:
 
-$$
+```math
 N_D^{same}
 \left(D\sin{\rho_D\over2}-2L_D\right)
 \le\pi D.
 \tag{FC.30}
-$$
+```
 
 By (FC.27),
 
-$$
+```math
 D\sin{\rho_D\over2}-2L_D
 \ge {1\over2}D\sin{\rho_D\over2}.
-$$
+```
 
 Therefore
 
-$$
+```math
 N_D^{same}
 \le {2\pi\over\sin(\rho_D/2)}
 =O(k(D)).
 \tag{FC.31}
-$$
+```
 
 Since `D>=D_k` and (FC.26) imply `D>=k^8`,
 
-$$
+```math
 \boxed{N_D^{same}=o(D).}
 \tag{FC.32}
-$$
+```
 
 The same inequality also gives positive cross-pair endpoint separation, so the selected pair cannot share an endpoint and its two diameter bars cross.
 
@@ -400,24 +403,24 @@ Let `Z_D` be the union of
 
 By (FC.23), (FC.29), and (FC.32),
 
-$$
+```math
 \boxed{|Z_D|=o(D).}
 \tag{FC.33}
-$$
+```
 
 Hence the complement has
 
-$$
+```math
 \boxed{|I_D\setminus Z_D|>{c\over2}D-o(D).}
 \tag{FC.34}
-$$
+```
 
 The complement is a union of at most `|Z_D|+1=o(D)` maximal consecutive runs. Therefore the longest run has length at least
 
-$$
+```math
 {|I_D\setminus Z_D|\over |Z_D|+1}\longrightarrow\infty.
 \tag{FC.35}
-$$
+```
 
 Choose that run as `I_D^{force}`. By construction every internal interface satisfies (FC.5), (FC.8)--(FC.10), and bilateral birth. Exact antipodality throughout the run gives (FC.6) and the reaction ordering (FC.20)--(FC.21).
 
@@ -427,25 +430,25 @@ Choose that run as `I_D^{force}`. By construction every internal interface satis
 
 From (FC.10),
 
-$$
+```math
 r_D^{cent}
 ={D\over2}\sin{\rho_D\over2}-L_D
 \ge {D\over4}\sin{\rho_D\over2}.
 \tag{FC.36}
-$$
+```
 
 For small `rho_D`, `sin(rho_D/2)` is comparable to `rho_D`. Thus (FC.2) gives
 
-$$
+```math
 {r_D^{cent}\over D^{3/4}}
 \gg \rho_DD^{1/4}\to\infty,
-$$
+```
 
 while `rho_D->0` gives `r_D^{cent}/D->0`. This proves (FC.12). The central-intersection estimate divided by `D` is
 
-$$
+```math
 O\!\left({D^{-1/4}\over\rho_D}\right)=o(1),
-$$
+```
 
 which proves (FC.13).
 
@@ -453,23 +456,23 @@ The sharpened host theorem gives (FC.14)--(FC.16) pointwise. The upper force-coe
 
 For the common grid, the global `B_0` family is crossed by every row in the one-sided rectangle. The additive phase formula gives
 
-$$
+```math
 g+r_i\le {S_i\over|B_+|},
 \qquad
 |B_+|>0.1567D-o(D),
-$$
+```
 
 and every `b in B_0` has
 
-$$
+```math
 q_b<{3.004\times10^6\over D}+o(D^{-1}).
-$$
+```
 
 Use `S_i<C sqrt(D)` to get (FC.18). Exact phase makes the left side identical on every corridor row, giving (FC.19). Numerically,
 
-$$
+```math
 {C\over0.1567}=7{,}077{,}217.6\ldots,
-$$
+```
 
 so `7.078e6` is a safe readable coefficient in (FC.19).
 

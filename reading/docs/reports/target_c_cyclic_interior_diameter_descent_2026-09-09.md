@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_interior_diameter_descent_2026-09-09.md) · source SHA-256 `9ae7771985e77c3ec9aa4325ec5a3fb5bfc32e4f8060b9335339eea6a7a531f8`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-8AF01C1EF2BA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic force-bulk closure gives exact interior diameter descent
 
@@ -24,50 +26,50 @@ The prescribed unit hull sides then force a universal boundary collar. Removing 
 
 Let `A` be a sufficiently large cyclic primitive triangle-free global minimizer of cardinality `n` and diameter
 
-$$
+```math
 D=D(n).
-$$
+```
 
 Let
 
-$$
+```math
 Z:=A\setminus V(F),
 \qquad |Z|=n-q.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \operatorname{dist}(z,\partial F)>\frac{\sqrt3}{2}
 \qquad(z\in Z).}
 \tag{ID.1}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \operatorname{diam}Z<D-\sqrt3,}
 \tag{ID.2}
-$$
+```
 
 and therefore the global optimum values satisfy
 
-$$
+```math
 \boxed{
 D(n-q)<D(n)-\sqrt3.}
 \tag{ID.3}
-$$
+```
 
 This holds in all three cyclic diameter-topology phases.
 
 Because RP gives
 
-$$
+```math
 q=\pi D-\frac\pi{24D}+O(D^{-2}),
 \tag{ID.4}
-$$
+```
 
 ID is an exact one-step descent on the asymptotically natural shell scale: deleting approximately `pi D` source points decreases achievable diameter by strictly more than `sqrt(3)`.
 
@@ -77,28 +79,28 @@ ID is an exact one-step descent on the asymptotically natural shell scale: delet
 
 CY gives the positive contact core
 
-$$
+```math
 C_q
-$$
+```
 
 on the `q` force-hull vertices. UFB gives
 
-$$
+```math
 F=\operatorname{conv}A.
-$$
+```
 
 The promoted C-I restoration identifies the actual unit-contact graph with the positive contact graph. Therefore every point
 
-$$
+```math
 z\in Z=A\setminus V(F)
-$$
+```
 
 has no unit contact with any source point. Unit separation then gives
 
-$$
+```math
 \boxed{|z-p|>1\qquad(p\in A\setminus\{z\}).}
 \tag{1.1}
-$$
+```
 
 In particular this holds for every hull vertex.
 
@@ -108,49 +110,49 @@ In particular this holds for every hull vertex.
 
 Fix `z in Z` and let
 
-$$
+```math
 r:=\operatorname{dist}(z,\partial F).
-$$
+```
 
 Choose a nearest boundary point `y`.
 
 If `y` is a hull vertex, then by (1.1)
 
-$$
+```math
 r=|z-y|>1>\frac{\sqrt3}{2}.
-$$
+```
 
 Otherwise `y` lies in the relative interior of one hull side `ab`. CY gives
 
-$$
+```math
 |a-b|=1.
-$$
+```
 
 Because `y` is the nearest point of a convex polygon side, `zy` is perpendicular to the side. One of the two endpoints, call it `p`, satisfies
 
-$$
+```math
 |y-p|\le\frac12.
-$$
+```
 
 Thus
 
-$$
+```math
 |z-p|^2
 =r^2+|y-p|^2
 \le r^2+\frac14.
-$$
+```
 
 Equation (1.1) gives `|z-p|>1`, hence
 
-$$
+```math
 r^2+\frac14>1.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{r>\frac{\sqrt3}{2}.}
-$$
+```
 
 This proves ID.1. `square`
 
@@ -160,28 +162,29 @@ This proves ID.1. `square`
 
 The set `Z` is finite. Hence the minimum collar depth
 
-$$
+```math
 r_*:=\min_{z\in Z}\operatorname{dist}(z,\partial F)
-$$
+```
 
 exists and satisfies
 
-$$
+```math
 \boxed{r_*>\frac{\sqrt3}{2}.}
 \tag{3.1}
+```
 
 Thus
 
-\[
+```math
 Z\subseteq F_{-r_*},
-$$
+```
 
 where
 
-$$
+```math
 F_{-r_*}:=
 \{x:x+r_*B_2\subseteq F\}
-$$
+```
 
 is the convex inner parallel body.
 
@@ -191,45 +194,47 @@ is the convex inner parallel body.
 
 For every unit direction `u`, support-function inclusion
 
-$$
+```math
 F_{-r_*}+r_*B_2\subseteq F
-$$
+```
 
 gives
 
-$$
+```math
 h_{F_{-r_*}}(u)+r_*\le h_F(u)
-$$
+```
 
 and the same inequality for `-u`. Therefore
 
-$$
+```math
 \boxed{
 w_{F_{-r_*}}(u)
 \le w_F(u)-2r_*.}
 \tag{4.1}
+```
 
 The diameter of a compact convex body is the maximum directional width. Since
 
-\[
+```math
 \operatorname{diam}F=D,
-$$
+```
 
 we obtain
 
-$$
+```math
 \operatorname{diam}F_{-r_*}
 \le D-2r_*
 <D-\sqrt3.
 \tag{4.2}
+```
 
 Because `Z subseteq F_{-r_*}`,
 
-\[
+```math
 \operatorname{diam}Z
 \le\operatorname{diam}F_{-r_*}
 <D-\sqrt3.
-$$
+```
 
 This proves ID.2. `square`
 
@@ -241,17 +246,17 @@ The set `Z` contains exactly `n-q` source points and remains unit-separated beca
 
 By definition of the optimum diameter function,
 
-$$
+```math
 D(n-q)
 \le\operatorname{diam}Z.
-$$
+```
 
 Using ID.2,
 
-$$
+```math
 \boxed{
 D(n-q)<D(n)-\sqrt3.}
-$$
+```
 
 This proves ID.3. `square`
 
@@ -263,34 +268,35 @@ The strict inequality is finite and source-specific. No asymptotic density theor
 
 Write
 
-$$
+```math
 \Delta=\frac\pi{2\sqrt3}.
-$$
+```
 
 The leading asymptotic law is
 
-$$
+```math
 D(n)\sim\sqrt{n/\Delta}.
-$$
+```
 
 Removing `q~pi D` points from a configuration of diameter `D` changes the leading-order radius by
 
-$$
+```math
 \frac{q}{2\Delta D}
 \sim
 \frac\pi{2\Delta}
 =\sqrt3.
-$$
+```
 
 Thus ID sits exactly at the first derivative of the planar packing law:
 
-$$
+```math
 \boxed{
 q\sim\pi D
 \quad\leftrightarrow\quad
 \Delta D^2-\Delta(D-\sqrt3)^2
 \sim\pi D.}
 \tag{6.1}
+```
 
 The theorem therefore captures the correct first-order shell-removal scale with a strict finite inequality. Any second-order asymptotic control on `D(n)` strong enough to resolve this one-step comparison could close the cyclic endpoint.
 
@@ -300,18 +306,18 @@ The theorem therefore captures the correct first-order shell-removal scale with 
 
 In the exact `d_H=0` Reinhardt phase, RD gives the slightly stronger explicit collar
 
-\[
+```math
 r_D
 =\frac{\sqrt3}{2}+\frac1{8D}+O(D^{-3}),
-$$
+```
 
 hence
 
-$$
+```math
 \operatorname{diam}Z
 \le
 D-\sqrt3-\frac1{4D}+O(D^{-3}).
-$$
+```
 
 ID is weaker numerically there but has two advantages:
 
@@ -344,15 +350,15 @@ ID works on the existing C65 cyclic source. It does not invoke contact-preservin
 
 Every cyclic survivor now implies the simultaneous pair
 
-$$
+```math
 \boxed{
 q=\pi D-\frac\pi{24D}+O(D^{-2}),}
-$$
+```
 
-$$
+```math
 \boxed{
 D(n-q)<D(n)-\sqrt3.}
-$$
+```
 
 This converts the source-population problem from an internal Oler estimate into a direct discrete inequality for the global optimum sequence `D(n)`.
 

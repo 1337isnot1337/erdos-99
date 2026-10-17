@@ -20,68 +20,68 @@ C66 says that when `D epsilon ->0`, almost all normalized diameter reaction weig
 
 C18 confines every diameter partner of `z` to an angular interval of width `Theta_D`, where
 
-$$
+```math
 \Theta_D
 =
 \frac{
 D(5\pi/6-\sqrt3)+4\pi/3+\pi/(2D)
 }{D+1},
 \tag{OSF.1}
-$$
+```
 
 and
 
-$$
+```math
 \Theta_D\to
 \theta_\infty:=\frac{5\pi}{6}-\sqrt3
 =0.885943070422617\ldots .
 \tag{OSF.2}
-$$
+```
 
 Distinct diameter partners are unit-separated and lie on the circle of radius `D` centered at `z`. Hence their angular separation is at least
 
-$$
+```math
 \delta_D:=2\arcsin\frac1{2D}.
 \tag{OSF.3}
-$$
+```
 
 Therefore the actual diameter degree of `z` satisfies the finite bound
 
-$$
+```math
 \boxed{
 \deg_H(z)
 \le
 1+\left\lfloor\frac{\Theta_D}{\delta_D}\right\rfloor.
 }
 \tag{OSF.4}
-$$
+```
 
 Since `D delta_D ->1`, asymptotically
 
-$$
+```math
 \boxed{
 \limsup\frac{\deg_H(z)}D
 \le\theta_\infty.
 }
 \tag{OSF.5}
-$$
+```
 
 DB independently gives
 
-$$
+```math
 \boxed{
 \liminf\frac hD
 \ge2\rho
 =1.478170266430321\ldots,
 }
 \tag{OSF.6}
-$$
+```
 
 where `rho=cos rho`.
 
 Thus **for every loaded vertex** `z`, not only the C66 center,
 
-$$
+```math
 \boxed{
 |E(H)\setminus E_H(z)|
 \ge
@@ -90,26 +90,26 @@ $$
 \right)D,
 }
 \tag{OSF.7}
-$$
+```
 
 with
 
-$$
+```math
 \boxed{
 2\rho-\frac{5\pi}{6}+\sqrt3
 =0.592227196007704\ldots .
 }
 \tag{OSF.8}
-$$
+```
 
 At the C66 center, all these off-star edges remain actual active diameter constraints with positive relative-interior `beta`, but their **total** beta weight satisfies
 
-$$
+```math
 \sum_{h\not\ni z}\beta_h
 \le\frac{723\pi}{49}D\varepsilon
 =o(1).
 \tag{OSF.9}
-$$
+```
 
 Consequently the near-zero phase has at least `0.592227D-o(D)` genuine off-star diameter constraints whose average normalized reaction weight is `o(1/D)`.
 
@@ -121,39 +121,39 @@ This is a hard support-versus-weight separation: the full mixed framework remain
 
 Fix any loaded diameter vertex `z`. Every diameter partner `a` satisfies
 
-$$
+```math
 |a-z|=D.
-$$
+```
 
 C18 proves that all such partner rays from `z` lie in one angular interval of width at most `Theta_D` in OSF.1.
 
 For distinct partners `a,b`, source unit separation gives
 
-$$
+```math
 |a-b|\ge1.
-$$
+```
 
 Since both lie on the radius-`D` circle around `z`,
 
-$$
+```math
 |a-b|
 =2D\sin\frac{\angle azb}{2}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \angle azb
 \ge2\arcsin\frac1{2D}
 =\delta_D.
 \tag{1.1}
-$$
+```
 
 If `m=deg_H(z)` partner directions lie in an interval of length `Theta_D` and are pairwise separated by at least `delta_D`, then the ordered first and last directions span at least `(m-1)delta_D`. Hence
 
-$$
+```math
 (m-1)\delta_D\le\Theta_D,
-$$
+```
 
 which proves OSF.4.
 
@@ -163,20 +163,20 @@ which proves OSF.4.
 
 Let
 
-$$
+```math
 h=|E(H)|.
-$$
+```
 
 The number of diameter edges not incident to `z` is exactly
 
-$$
+```math
 h-\deg_H(z).
 \tag{2.1}
-$$
+```
 
 DB gives OSF.6. C18 and `D delta_D->1` give OSF.5. Thus
 
-$$
+```math
 \begin{aligned}
 \liminf\frac{h-\deg_H(z)}D
 &\ge
@@ -184,14 +184,14 @@ $$
 &=
 2\rho-\frac{5\pi}{6}+\sqrt3.
 \end{aligned}
-$$
+```
 
 The right side is positive:
 
-$$
+```math
 2\rho-\theta_\infty
 =0.592227196007704\ldots .
-$$
+```
 
 This proves OSF.7--OSF.8.
 
@@ -203,45 +203,45 @@ No beta weights enter this count.
 
 For the C66 center `z`, E43R makes the C66 estimate explicit:
 
-$$
+```math
 \delta_z
 :=\sum_{h\not\ni z}\beta_h
 \le\frac{723\pi}{49}D\varepsilon.
 \tag{3.1}
-$$
+```
 
 If
 
-$$
+```math
 D\varepsilon\to0,
-$$
+```
 
 then
 
-$$
+```math
 \delta_z=o(1).
-$$
+```
 
 But OSF gives at least
 
-$$
+```math
 (c_{OSF}-o(1))D,
 \qquad
 c_{OSF}:=2\rho-\frac{5\pi}{6}+\sqrt3>0,
-$$
+```
 
 actual off-star diameter edges.
 
 Because the KKT stress is chosen in the relative interior of the maximal-support polytope, each of these edges has strictly positive beta weight. Their average satisfies
 
-$$
+```math
 \boxed{
 \frac1{|E(H)\setminus E_H(z)|}
 \sum_{h\not\ni z}\beta_h
 =o(1/D).
 }
 \tag{OSF.10}
-$$
+```
 
 No individual upper bound is claimed; the statement is an aggregate support/weight mismatch.
 

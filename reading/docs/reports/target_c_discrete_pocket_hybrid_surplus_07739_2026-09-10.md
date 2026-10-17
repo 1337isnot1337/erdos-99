@@ -18,17 +18,17 @@
 
 The strongest result of this run is a new exact finite outer-pocket inequality that uses the fact that the old pocket boundary is a chain of **unit edges**, not an arbitrary rectifiable curve. Combined with the September 9 PC/DB cavity ledgers and the September 10 FSDB whole-source force-hull area floor, it raises the report-level post-ZF lower bound
 
-$$
+```math
 \liminf_{D\to\infty}\frac{e_{BB}+2s_C}{D}
-$$
+```
 
 from `0.5882283437...` to
 
-$$
+```math
 \boxed{
 \lambda_{DPH}=0.7739547058568927\ldots .
 }
-$$
+```
 
 The constant is not obtained by a numerical optimizer. It is the unique root of an explicit one-variable monotone equation given in Section 5.
 
@@ -55,15 +55,15 @@ Use the post-ZF notation
 
 Put
 
-$$
+```math
 L:=e_{BB}+2s_C.
-$$
+```
 
 The September 10 FSJC report gave
 
-$$
+```math
 \liminf L/D\ge0.5882283437\ldots
-$$
+```
 
 by a continuous isoperimetric cavity bound. The closing implication attacked here is
 
@@ -78,9 +78,9 @@ unit-edge discreteness of every OP pocket
 
 The exact Level I target remains exclusion of every sufficiently large C-II source, or equivalently a theorem forcing the whole-source population inequality
 
-$$
+```math
 \delta_K+\mathscr O_A\ge(\sqrt3/4)\,per(K),
-$$
+```
 
 which is the same as `n-1 <= (pi/(2sqrt3))D^2` and contradicts the strict translated-lattice comparison for a global minimizer.
 
@@ -95,29 +95,29 @@ Let `P` be one OP outer pocket. Its boundary consists of
 
 Then
 
-$$
+```math
 \boxed{
 area(P)^2
 \le
 \frac{\ell^3-\ell}{6}\,(\ell-s).
 }
 \tag{DPC.1}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 area(P)
 \le
 \frac1{\sqrt6}\sqrt{\ell^3-\ell}\,\sqrt{\ell-s}.
 \tag{DPC.2}
-$$
+```
 
 This strictly improves the continuous DD bound
 
-$$
+```math
 area(P)\le\frac1{\sqrt6}\ell^{3/2}\sqrt{\ell-s}
-$$
+```
 
 for every finite `ell`.
 
@@ -125,121 +125,121 @@ for every finite `ell`.
 
 Translate and rotate so
 
-$$
+```math
 A=(0,0),\qquad B=(s,0),
-$$
+```
 
 and `P` lies in the upper half-plane. Let the unit-contact chain vertices be
 
-$$
+```math
 p_j=(x_j,y_j),\qquad j=0,1,\ldots,\ell,
-$$
+```
 
 with `p_0=A`, `p_ell=B`. OP convexity gives `y_j>=0`, and `y_0=y_ell=0`.
 
 Parameterize each unit edge linearly by arclength on `[j-1,j]`. Since every chain edge has length exactly one,
 
-$$
+```math
 (\Delta x_j)^2+(\Delta y_j)^2=1,
 \qquad
 \Delta x_j=x_j-x_{j-1},
 \quad
 \Delta y_j=y_j-y_{j-1}.
-$$
+```
 
 As in DD,
 
-$$
+```math
 (\Delta y_j)^2
 =(1-\Delta x_j)(1+\Delta x_j)
 \le2(1-\Delta x_j).
-$$
+```
 
 Summing and using `sum Delta x_j=s` gives
 
-$$
+```math
 \boxed{
 \sum_{j=1}^{\ell}(\Delta y_j)^2
 \le2(\ell-s).
 }
 \tag{DPC.3}
-$$
+```
 
 Because `y` is linear on every unit interval and the endpoint values vanish,
 
-$$
+```math
 \int_0^\ell y(t)\,dt
 =\sum_{j=1}^{\ell-1}y_j.
 \tag{DPC.4}
-$$
+```
 
 Now define the discrete Dirichlet Green function
 
-$$
+```math
 g_j=\frac12j(\ell-j),
 \qquad 0\le j\le\ell.
-$$
+```
 
 It satisfies `g_0=g_ell=0` and
 
-$$
+```math
 2g_j-g_{j-1}-g_{j+1}=1
 \qquad(1\le j\le\ell-1).
-$$
+```
 
 Discrete summation by parts therefore gives
 
-$$
+```math
 \sum_{j=1}^{\ell-1}y_j
 =
 \sum_{j=1}^{\ell}
 (\Delta y_j)(\Delta g_j).
 \tag{DPC.5}
-$$
+```
 
 Cauchy-Schwarz gives
 
-$$
+```math
 \left(\sum_{j=1}^{\ell-1}y_j\right)^2
 \le
 \left(\sum_{j=1}^{\ell}(\Delta y_j)^2\right)
 \left(\sum_{j=1}^{\ell}(\Delta g_j)^2\right).
 \tag{DPC.6}
-$$
+```
 
 The Green energy is exact:
 
-$$
+```math
 \sum_{j=1}^{\ell}(\Delta g_j)^2
 =
 \sum_{j=1}^{\ell-1}g_j
 =
 \frac{\ell(\ell^2-1)}{12}.
 \tag{DPC.7}
-$$
+```
 
 Green's theorem in the same orientation as DD gives
 
-$$
+```math
 area(P)=\int_0^\ell y(t)x'(t)\,dt.
-$$
+```
 
 Since `y>=0` and `x'<=1`,
 
-$$
+```math
 area(P)\le\int_0^\ell y(t)\,dt.
 \tag{DPC.8}
-$$
+```
 
 Insert DPC.3 and DPC.7 into DPC.6, then use DPC.4 and DPC.8:
 
-$$
+```math
 area(P)^2
 \le
 2(\ell-s)\frac{\ell(\ell^2-1)}{12}
 =
 \frac{\ell^3-\ell}{6}(\ell-s).
-$$
+```
 
 This proves DPC.1. `square`
 
@@ -247,64 +247,64 @@ This proves DPC.1. `square`
 
 For each pocket put
 
-$$
+```math
 x_P:=\ell_P-2=k_P-3\in\mathbb Z_{\ge0}.
-$$
+```
 
 Then
 
-$$
+```math
 \sum_Px_P=d_P,
 \qquad
 \sum_P(\ell_P-s_P)=b-P_F.
-$$
+```
 
 Every post-ZF source satisfies
 
-$$
+```math
 \boxed{
 H_{out}^2
 \le
 \frac{d_P^3+6d_P^2+11d_P+6a}{6}\,(b-P_F).
 }
 \tag{DPC.9}
-$$
+```
 
 #### Proof
 
 DPC.2 and Cauchy-Schwarz give
 
-$$
+```math
 H_{out}^2
 \le
 \frac16
 \left(\sum_P(\ell_P^3-\ell_P)\right)
 \left(\sum_P(\ell_P-s_P)\right).
 \tag{DPC.10}
-$$
+```
 
 For `x>=0`, let
 
-$$
+```math
 f(x)=(x+2)^3-(x+2)=x^3+6x^2+11x+6.
-$$
+```
 
 For `x,y>=0`,
 
-$$
+```math
 f(x+y)+f(0)-f(x)-f(y)
 =3xy(x+y+4)\ge0.
 \tag{DPC.11}
-$$
+```
 
 Repeatedly merging two positive excesses therefore cannot decrease the sum of `f`. With `a` pockets and total excess `d_P`,
 
-$$
+```math
 \sum_P(\ell_P^3-\ell_P)
 =\sum_Pf(x_P)
 \le f(d_P)+(a-1)f(0)
 =d_P^3+6d_P^2+11d_P+6a.
-$$
+```
 
 Use the exact OP identity for the total detour to obtain DPC.9. `square`
 
@@ -314,37 +314,37 @@ Because each added force-hull side joins two distinct source points, unit separa
 
 Consequently
 
-$$
+```math
 \ell_P-s_P<\ell_P-1=x_P+1.
-$$
+```
 
 DPC.1 gives
 
-$$
+```math
 area(P)
 <
 \frac1{\sqrt6}(x_P+1)\sqrt{(x_P+2)(x_P+3)}.
 \tag{DPC.12}
-$$
+```
 
 Using geometric mean <= arithmetic mean,
 
-$$
+```math
 \sqrt{(x+2)(x+3)}\le x+\frac52.
-$$
+```
 
 Hence
 
-$$
+```math
 area(P)
 <
 \frac1{\sqrt6}
 \left(x_P^2+\frac72x_P+\frac52\right).
-$$
+```
 
 Summing and using `sum x_P^2 <= (sum x_P)^2=d_P^2` gives the exact finite estimate
 
-$$
+```math
 \boxed{
 H_{out}
 <
@@ -352,7 +352,7 @@ H_{out}
 \left(d_P^2+\frac72d_P+\frac52a\right).
 }
 \tag{DPC.13}
-$$
+```
 
 The leading quadratic cavity capacity is therefore controlled by `d_P^2`, not by the square of the total chain length `x_B+a`.
 
@@ -368,153 +368,153 @@ DD treats each pocket boundary as an arbitrary arclength-parametrized curve and 
 
 Pass to a convergent post-ZF subsequence and write
 
-$$
+```math
 \lambda:=\lim\frac{L}{D},
 \qquad
 y:=\lim\frac hD,
 \qquad
 \nu:=\lim\frac QD.
-$$
+```
 
 Let
 
-$$
+```math
 \tau:=\lim\frac{d_P}{D}
-$$
+```
 
 along a further subsequence when needed. PC.2 gives
 
-$$
+```math
 e_{BB}=d_P+Q+2(d_H+s_Z)+c_B,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{0\le\tau+\nu\le\lambda.}
 \tag{3.1}
-$$
+```
 
 Define
 
-$$
+```math
 g(y):=y-2\cos(y/2).
 \tag{3.2}
-$$
+```
 
 DB gives
 
-$$
+```math
 \frac{P_F}{D}
 \ge y+2\cos(y/2)-o(1)
-$$
+```
 
 and the exact outer-walk formula gives
 
-$$
+```math
 \frac bD=2y-\nu-2\frac{s_Z}{D}+o(1).
-$$
+```
 
 Therefore the total detour satisfies
 
-$$
+```math
 \boxed{
 \limsup\frac{b-P_F}{D}
 \le g(y)-\nu.
 }
 \tag{3.3}
-$$
+```
 
 where dropping `2s_Z/D` only weakens the upper bound. DB also gives `y>=2rho`, where `rho=cos rho`.
 
 DPC.9 and DPC.13 imply the two simultaneous leading bounds
 
-$$
+```math
 \limsup\frac{H_{out}}{D^2}
 \le
 \frac1{\sqrt6}\tau^{3/2}\sqrt{g(y)-\nu},
 \tag{3.4}
-$$
+```
 
 and
 
-$$
+```math
 \limsup\frac{H_{out}}{D^2}
 \le
 \frac1{\sqrt6}\tau^2.
 \tag{3.5}
-$$
+```
 
 The exceptional-face estimate used in JC/ED gives
 
-$$
+```math
 \limsup\frac{A_{exc}}{D^2}
 \le\frac{\nu^2}{4\pi}.
 \tag{3.6}
-$$
+```
 
 Set `C=1/sqrt(6)`. We now remove `nu` without numerical optimization.
 
 For the chord-floor branch,
 
-$$
+```math
 C(\lambda-\nu)^2+\frac{\nu^2}{4\pi}
 \le C\lambda^2
 \tag{3.7}
-$$
+```
 
 for `0<=nu<=lambda`, because `C>1/(4pi)` and direct expansion gives a nonnegative difference.
 
 For the detour branch, put
 
-$$
+```math
 P(\nu)=C(\lambda-\nu)^{3/2}(g-\nu)^{1/2}
-$$
+```
 
 on `0<=nu<=min(lambda,g)`, where `g=g(y)`. Since
 
-$$
+```math
 (1-\nu/\lambda)^{3/2}(1-\nu/g)^{1/2}
 \le1-\nu/\lambda,
-$$
+```
 
 we have
 
-$$
+```math
 P(0)-P(\nu)
 \ge C\lambda^{1/2}\sqrt g\,\nu.
-$$
+```
 
 Also `nu<=min(lambda,g)<=sqrt(lambda g)`, so
 
-$$
+```math
 \frac{\nu^2}{4\pi}
 \le
 \frac1{4\pi}\lambda^{1/2}\sqrt g\,\nu
 < C\lambda^{1/2}\sqrt g\,\nu.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 P(\nu)+\frac{\nu^2}{4\pi}
 \le P(0)
 =C\lambda^{3/2}\sqrt{g(y)}.
 }
 \tag{3.8}
-$$
+```
 
 Combining both branches, ZG/GU therefore gives the clean hybrid cavity ceiling
 
-$$
+```math
 \boxed{
 \limsup\frac G{D^2}
 \le
 C\lambda^{3/2}\sqrt{\min\{\lambda,g(y)\}}.
 }
 \tag{3.9}
-$$
+```
 
 The maximizing relaxation has `Q/D=0`; positive exceptional-face density cannot rescue the low-surplus branch.
 
@@ -522,30 +522,30 @@ The maximizing relaxation has `Q/D=0`; positive exceptional-face density cannot 
 
 FSDB gives, for
 
-$$
+```math
 \Phi(y):=\frac{y+\sin y}{4},
-$$
+```
 
-$$
+```math
 \liminf\frac{area(F)}{D^2}\ge\Phi(y).
-$$
+```
 
 GU bounds the attachment-cell area by `(pi/4)L^2+o(D^2)`, hence
 
-$$
+```math
 \boxed{
 \liminf\frac G{D^2}
 \ge
 \Phi(y)-\frac\pi4\lambda^2.
 }
 \tag{4.1}
-$$
+```
 
 This is where the **whole global source**, including contact-isolated points, enters the proof through FSDB's full-source circumradius transport and the global-minimum comparison behind it.
 
 Equations 3.9 and 4.1 force every survivor limit to satisfy
 
-$$
+```math
 \boxed{
 \Phi(y)-\frac\pi4\lambda^2
 \le
@@ -555,7 +555,7 @@ $$
 2\rho\le y\le\pi.
 }
 \tag{4.2}
-$$
+```
 
 This is the new post-ZF feasible-region inequality.
 
@@ -563,24 +563,24 @@ This is the new post-ZF feasible-region inequality.
 
 FSJC already proves
 
-$$
+```math
 \lambda\ge\lambda_{FSJC}=0.5882283437\ldots>0.58.
 \tag{5.1}
-$$
+```
 
 For completeness, the strict `>0.58` follows directly from the exact FSJC quadratic. At `lambda=29/50`, its left side is
 
-$$
+```math
 \frac{54}{625}\pi^2-rac{21}{50}\pi+rac{841}{2500}<0
-$$
+```
 
 using `pi<22/7` and `pi>3.14`; the resulting upper estimate is `-158/1225`.
 
 Fix `lambda>=0.58`. Since `g'(y)=1+sin(y/2)>0`, there is a unique `y_lambda` with
 
-$$
+```math
 g(y_\lambda)=\lambda
-$$
+```
 
 for every `lambda<pi`.
 
@@ -588,79 +588,79 @@ for every `lambda<pi`.
 
 On `g(y)<=lambda`, define
 
-$$
+```math
 J(y)=\Phi(y)-C\lambda^{3/2}\sqrt{g(y)}.
-$$
+```
 
 A derivative calculation gives
 
-$$
+```math
 J'(y)\le0
 \iff
 \sqrt{g(y)}\bigl(1-\sin(y/2)\bigr)
 \le C\lambda^{3/2}.
 \tag{5.2}
-$$
+```
 
 The left side has a uniform elementary bound below `0.171`. To prove it, put `t=y/2` and
 
-$$
+```math
 R(t)=\sqrt{2(t-\cos t)}(1-\sin t),
 \qquad \rho\le t\le\pi/2.
-$$
+```
 
 At the endpoints `R=0`. On the interior the sign of `R'` is the sign of
 
-$$
+```math
 3\cos t-2t,
-$$
+```
 
 which is strictly decreasing. Hence there is a unique maximizer `t_0`, satisfying
 
-$$
+```math
 3\cos t_0=2t_0.
-$$
+```
 
 Using the alternating Taylor upper bound
 
-$$
+```math
 \cos(0.93)\le1-0.93^2/2+0.93^4/24<0.62
-$$
+```
 
 shows `3cos(0.93)<2(0.93)`, so `t_0<0.93`. At the critical point set `c=cos t_0=2t_0/3<0.62`. Then `g(2t_0)=c`, so
 
-$$
+```math
 R(t_0)=\sqrt c\left(1-\sqrt{1-c^2}\right).
-$$
+```
 
 This expression increases with `c in (0,1)`. Since
 
-$$
+```math
 \sqrt{0.62}<0.788,
 \qquad
 \sqrt{1-0.62^2}=\sqrt{0.6156}>0.784,
-$$
+```
 
 we obtain
 
-$$
+```math
 R(t_0)<0.788(1-0.784)=0.170208<0.171.
 \tag{5.3}
-$$
+```
 
 On the other hand, for `lambda>=0.58`,
 
-$$
+```math
 C\lambda^{3/2}
 \ge C(0.58)^{3/2}>0.171,
-$$
+```
 
 because after squaring the last inequality reduces exactly to
 
-$$
+```math
 \frac{(29/50)^3}{6}-\left(\frac{171}{1000}\right)^2
 =rac{9833}{3000000}>0.
-$$
+```
 
 Thus `J'(y)<0` throughout the detour branch.
 
@@ -668,75 +668,75 @@ Thus `J'(y)<0` throughout the detour branch.
 
 On `g(y)>=lambda`, the right side of 4.2 is simply `C lambda^2`, independent of `y`, while
 
-$$
+```math
 \Phi'(y)=\frac{1+\cos y}{4}\ge0.
-$$
+```
 
 Thus the gap between the two sides of 4.2 increases after `y_lambda`.
 
 Lemmas 5.1-5.2 prove that for every fixed `lambda>=0.58`, the easiest point at which 4.2 can hold is exactly
 
-$$
+```math
 \boxed{g(y_\lambda)=\lambda.}
 \tag{5.4}
-$$
+```
 
 At that crossover, 4.2 becomes
 
-$$
+```math
 \boxed{
 \Phi(y_\lambda)
 \le
 \left(\frac\pi4+\frac1{\sqrt6}\right)\lambda^2.
 }
 \tag{5.5}
-$$
+```
 
 Define
 
-$$
+```math
 A:=\frac\pi4+\frac1{\sqrt6}
-$$
+```
 
 and
 
-$$
+```math
 K(\lambda):=\Phi(g^{-1}(\lambda))-A\lambda^2.
-$$
+```
 
 Differentiating through `g(y_lambda)=lambda` gives the exact simplification
 
-$$
+```math
 \frac{d}{d\lambda}\Phi(y_\lambda)
 =
 \frac{\Phi'(y_\lambda)}{g'(y_\lambda)}
 =
 \frac{1-\sin(y_\lambda/2)}2.
-$$
+```
 
 Hence
 
-$$
+```math
 K'(\lambda)
 =
 \frac{1-\sin(y_\lambda/2)}2-2A\lambda
 <\frac12-2\frac34(0.58)<0
 \tag{5.6}
-$$
+```
 
 for `lambda>=0.58`. Thus `K` is strictly decreasing in the entire relevant range.
 
 Moreover `K(0.58)>0`: `Phi(y)>=Phi(2rho)>0.575`, while `A<101/84` and `(0.58)^2<0.337`, so `A(0.58)^2<0.406`. Also `K(1)<0` because `Phi<=pi/4<A`. Therefore there is a unique
 
-$$
+```math
 \boxed{\lambda_{DPH}\in(0.58,1)}
-$$
+```
 
 with `K(lambda_DPH)=0`.
 
 Equivalently, if `y_*` is the unique solution in `(2rho,pi)` of
 
-$$
+```math
 \boxed{
 \frac{y_*+\sin y_*}{4}
 =
@@ -744,33 +744,33 @@ $$
 \left(y_*-2\cos(y_*/2)\right)^2,
 }
 \tag{5.7}
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \lambda_{DPH}=y_*-2\cos(y_*/2).
 }
 \tag{5.8}
-$$
+```
 
 Numerically,
 
-$$
+```math
 y_*=1.9205467456885863\ldots,
-$$
+```
 
-$$
+```math
 \boxed{
 \lambda_{DPH}=0.7739547058568927\ldots .
 }
 \tag{5.9}
-$$
+```
 
 Since 4.2 is impossible for every `lambda<lambda_DPH`, every post-ZF survivor sequence obeys
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
@@ -778,7 +778,7 @@ $$
 0.7739547058568927\ldots .
 }
 \tag{DPH.1}
-$$
+```
 
 This proves the claimed new floor.
 
@@ -786,9 +786,9 @@ This proves the claimed new floor.
 
 The proof gives more than the scalar constant. If a survivor sequence approaches the new endpoint,
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to\lambda_{DPH},
-$$
+```
 
 then every relaxed inequality above must be asymptotically sharp. In particular:
 
@@ -797,13 +797,15 @@ then every relaxed inequality above must be asymptotically sharp. In particular:
 3. `d_P/D -> lambda_DPH` and `e_BB/D -> lambda_DPH`;
 4. `s_C/D ->0`;
 5. from PC.2,
-   $$
+   ```math
    d_H/D\to0,\qquad s_Z/D\to0,\qquad c_B/D\to0;
-   $$
+   
+   ```
 6. the DPC concentration step forces one outer pocket to carry asymptotically all `d_P`: if `M=max_P x_P`, then
-   $$
+   ```math
    M/D\to\lambda_{DPH},
-   $$
+   
+   ```
    because `sum x_P^2<=M d_P` and equality in the quadratic leading term forces `M/d_P->1`.
 
 The last point gives a macroscopic outer-pocket contact chain. It is a useful structural target for the next run, but no contradiction from it is claimed here.
@@ -812,28 +814,28 @@ The last point gives a macroscopic outer-pocket contact chain. It is a useful st
 
 Before this run, the strongest full-source C-II cavity theorem gave
 
-$$
+```math
 \liminf (e_{BB}+2s_C)/D\ge0.5882283437\ldots .
-$$
+```
 
 DPC/DPH replaces that report-level endpoint by
 
-$$
+```math
 \boxed{
 \liminf (e_{BB}+2s_C)/D\ge0.7739547058\ldots .
 }
-$$
+```
 
 The improvement is not a scalar iteration of JC. It comes from a new finite geometric theorem, DPC.1-DPC.3, that uses the integer unit-edge structure and the unit lower bound on every missing force-hull side.
 
 The shortest remaining implication is now:
 
-$$
+```math
 \boxed{
 \text{derive a universal C-II upper bound on }(e_{BB}+2s_C)/D
 \text{ below }\lambda_{DPH},
 }
-$$
+```
 
 or exclude the DPH endpoint/high-surplus geometry directly by FS.4 common-center symmetry, diameter-thrackle structure, or an exact smaller-diameter rearrangement.
 

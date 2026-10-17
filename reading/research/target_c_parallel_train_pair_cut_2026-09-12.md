@@ -53,12 +53,12 @@ order. Pairing the two paths accordingly gives a simple Jordan curve `Gamma`.
 Every train midpoint path lies in the union of its strict rhombi, and every bounded
 contact face lies in the convex hull `K` of the full source. Hence
 
-$$
+```math
 \Gamma\subset K,
 \qquad
 \operatorname{Int}(\Gamma)\subset K.
 \tag{2.1}
-$$
+```
 
 The curve meets the contact graph only at the midpoints of contact edges belonging to
 `tau_1` or `tau_2`. All such edges are parallel to `u`.
@@ -81,23 +81,23 @@ the mixed core matrix and are assigned zero velocity below.
 
 Let `J` denote a quarter-turn and define a core velocity field
 
-$$
+```math
 w(p)=
 \begin{cases}
 Ju,&p\in S,\\
 0,&p\in V\setminus S,
 \end{cases}
 \tag{4.1}
-$$
+```
 
 where `V` is the nonisolated positive-contact core. For a contact edge with both
 endpoints on one side of `Gamma`, the relative velocity is zero. For a contact edge
 crossing `Gamma`, the edge belongs to one of the two selected trains and is parallel
 to `u`; its first length variation is
 
-$$
+```math
 u\cdot(\pm Ju)=0.
-$$
+```
 
 Thus every active contact row vanishes. Every active diameter row also vanishes,
 because both endpoints lie outside `S`. The field `w` is therefore an infinitesimal
@@ -109,9 +109,9 @@ and hence at least two distinct active core vertices outside `S`. A Euclidean
 infinitesimal motion that vanishes at two distinct points is identically zero, while
 `w` is nonzero on `S`. This contradicts
 
-$$
+```math
 \operatorname{rank}R_{C\cup H}[V]=2|V|-3.
-$$
+```
 
 Therefore the two parallel trains cannot exist. `square`
 

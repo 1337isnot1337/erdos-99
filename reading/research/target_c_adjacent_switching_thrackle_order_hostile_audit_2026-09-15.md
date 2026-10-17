@@ -22,9 +22,9 @@ The audit checks the layer indexing, the four-block boundary topology, the conve
 
 For an actual diameter edge with endpoint layers `a<b`, the laminar interval theorem gives support
 
-$$
+```math
 I_h=\{a+1,\ldots,b\}.
-$$
+```
 
 For consecutive columns `i,i+1`:
 
@@ -33,9 +33,9 @@ For consecutive columns `i,i+1`:
 
 Thus the switching graph has bipartition
 
-$$
+```math
 M\quad\text{versus}\quad L\cup R.
-$$
+```
 
 There is no fourth interval-support case hidden by the signed incidence convention: sign is constant on a row's nonzero interval, so a change between adjacent columns is exactly an interval start or stop.
 
@@ -57,19 +57,19 @@ This conclusion does not need the stronger caterpillar theorem and does not use 
 
 Two consecutive selected O-O trains are represented by disjoint proper crosscuts of the outer-face disk. Removing the two crosscuts gives three regions in a path: left, middle, right. The left and right regions each meet the disk boundary in one open arc; the middle region meets it in the other two open arcs. Therefore, after choosing an orientation, the four outer-boundary arcs occur cyclically as
 
-$$
+```math
 B_L,\ B_M^+,\ B_R,\ B_M^-.
-$$
+```
 
 Unselected train crosscuts may subdivide these regions internally, but they do not change this coarse four-block classification relative to the two selected crosscuts.
 
 Every actual diameter endpoint is an extreme point of the source convex hull. If `p=lambda a+(1-lambda)b` with `0<lambda<1` and `a!=b`, strict convexity gives
 
-$$
+```math
 |p-y|^2
 <\lambda|a-y|^2+(1-\lambda)|b-y|^2
 \le D^2,
-$$
+```
 
 contradicting `|p-y|=D`. Hence the diameter endpoints used in the chord argument lie on the source outer boundary, and their outer-face order agrees with convex-hull cyclic order.
 
@@ -81,9 +81,9 @@ contradicting `|p-y|=D`. Hence the diameter endpoints used in the chord argument
 
 Take a left-switch edge of type `B_L-B_M^+` and a right-switch edge of type `B_R-B_M^-`. Their four endpoints occur in cyclic block order
 
-$$
+```math
 l,m_+,r,m_-.
-$$
+```
 
 The two chords pair adjacent blocks, so their endpoints do not alternate and the chords do not cross. They cannot share an endpoint because all four blocks are disjoint. This contradicts the diameter-thrackle property.
 
@@ -99,15 +99,15 @@ If at least one left and one right switching edge exist, any chosen pair must th
 
 Assume the common middle arc is `B_M^+`, oriented in the boundary order
 
-$$
+```math
 B_L\to B_M^+\to B_R.
-$$
+```
 
 For a left edge `l m_L` and right edge `m_R r` with distinct middle endpoints, the exterior endpoints lie in different blocks and are distinct. Thus the edges are vertex-disjoint and must cross. Their endpoints alternate exactly when
 
-$$
+```math
 m_R<m_L
-$$
+```
 
 on `B_M^+`.
 

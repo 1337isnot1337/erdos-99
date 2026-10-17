@@ -27,64 +27,64 @@ This is a substantially narrower geometric endpoint than either C27's one macros
 
 Assume
 
-$$
+```math
 S_{\rm br}:=\sum_{e\text{ contact bridge}}\alpha_e
 \ge\eta D^2
 \tag{1.1}
-$$
+```
 
 for fixed `eta in (0,1]`.
 
 Following ZBL, put
 
-$$
+```math
 c_\eta:=\frac{\eta}{4\pi}
 \tag{1.2}
-$$
+```
 
 and call a contact bridge **eta-heavy** if
 
-$$
+```math
 \alpha_e\ge c_\eta D.
 \tag{1.3}
-$$
+```
 
 ZBL proves that the number `N_eta` of eta-heavy bridges satisfies
 
-$$
+```math
 N_\eta\ge\frac\eta2 D.
 \tag{1.4}
-$$
+```
 
 C20 proves the antichain bridge-stress budget: if oriented bridge-side components are pairwise disjoint, then
 
-$$
+```math
 \sum\alpha_e\le2D.
 \tag{1.5}
-$$
+```
 
 In a rooted bridge tree, descendant sides of pairwise incomparable edges are pairwise disjoint, so (1.5) applies to every edge antichain.
 
 In the C66 near-zero phase let `z` be the stress-star center and
 
-$$
+```math
 \tau_z:=\sum_{h\not\ni z}\beta_h.
 \tag{1.6}
-$$
+```
 
 C66 gives
 
-$$
+```math
 \tau_z\le C_0D\varepsilon.
 \tag{1.7}
-$$
+```
 
 Finally every eta-heavy bridge satisfies, by C20/ZBR,
 
-$$
+```math
 w_e\ge\frac{\alpha_e}{D}\ge c_\eta,
 \tag{1.8}
-$$
+```
 
 where `w_e` is the total active diameter weight crossing the bridge cut.
 
@@ -95,16 +95,17 @@ where `w_e` is the total active diameter weight crossing the bridge cut.
 Under (1.1):
 
 1. **Bounded heavy-antichain width.** Every antichain of eta-heavy bridge edges has cardinality at most
-   $$
+   ```math
    \boxed{
    W_\eta:=\left\lfloor\frac{2}{c_\eta}\right\rfloor
    =\left\lfloor\frac{8\pi}{\eta}\right\rfloor.
    }
    \tag{ZBC1}
-   $$
+   
+   ```
 
 2. **Linear nested chain.** The eta-heavy bridge edges contain a single chain in the bridge-tree ancestor order of length `L_eta` satisfying
-   $$
+   ```math
    \boxed{
    L_\eta
    \ge
@@ -113,7 +114,8 @@ Under (1.1):
    \frac{\eta^2}{16\pi}D.
    }
    \tag{ZBC2}
-   $$
+   
+   ```
    The last displayed lower bound is understood as a real lower bound; the integer chain length is at least its ceiling when necessary.
 
 Now also assume the C66 near-zero phase and `D epsilon -> 0`. Root the bridge tree at the contact block containing `z`. Then for all sufficiently large `D`:
@@ -121,22 +123,25 @@ Now also assume the C66 near-zero phase and `D epsilon -> 0`. Root the bridge tr
 3. **Every eta-heavy cut is crossed by the stress star.** Every eta-heavy bridge is crossed by at least one active diameter edge incident to `z`.
 
 4. **One diameter edge crosses the entire heavy chain.** If
-   $$
+   ```math
    e_1<e_2<\cdots<e_{L_\eta}
    \tag{2.1}
-   $$
+   
+   ```
    is a deepest-oriented eta-heavy chain, there exists an actual diameter edge `zk in H` such that the bridge-tree path from the block of `z` to the block of `k` contains all `e_1,...,e_{L_eta}`.
 
 5. **Near-zero geometric refinement.** Combining with ZBL, the chain can be chosen so that every chain bridge has
-   $$
+   ```math
    \operatorname{dist}(z,\ell_{e_j})=o(D),
    \tag{2.2}
-   $$
+   
+   ```
    and for every fixed `xi>0`, all but `o(D)` of its bridges satisfy
-   $$
+   ```math
    \bigl||u_j-z|-|v_j-z|\bigr|>1-\xi.
    \tag{2.3}
-   $$
+   
+   ```
 
 Thus one actual diameter pair has a contact bridge-tree route containing a linear number of `Theta_eta(D)`-stress, macroscopically radial bridge edges.
 
@@ -144,22 +149,22 @@ Thus one actual diameter pair has a contact bridge-tree route containing a linea
 
 Root the contact bridge-block tree at an arbitrary block. Let `A` be an antichain of eta-heavy bridge edges. Choose for each edge its descendant-side contact component. Incomparable tree edges have disjoint descendant components, so C20's antichain budget gives
 
-$$
+```math
 \sum_{e\in A}\alpha_e\le2D.
 \tag{2.4}
-$$
+```
 
 Each edge in `A` is eta-heavy, hence contributes at least `c_eta D`. Therefore
 
-$$
+```math
 |A|c_\eta D\le2D,
-$$
+```
 
 so
 
-$$
+```math
 |A|\le\frac2{c_\eta}.
-$$
+```
 
 Integrality gives ZBC1. QED.
 
@@ -171,33 +176,33 @@ Two eta-heavy edges with the same heavy rank are incomparable. Indeed, if `e<f`,
 
 Thus each heavy-rank level is an antichain and contains at most `W_eta` edges by ZBC1. If the largest heavy rank is `L_eta`, then
 
-$$
+```math
 N_\eta\le W_\eta L_\eta.
 \tag{2.5}
-$$
+```
 
 Hence
 
-$$
+```math
 L_\eta\ge\frac{N_\eta}{W_\eta}.
 \tag{2.6}
-$$
+```
 
 Using `N_eta>=eta D/2` from ZBL and
 
-$$
+```math
 W_\eta\le\frac{8\pi}{\eta}
-$$
+```
 
 gives
 
-$$
+```math
 L_\eta
 \ge
 \frac{\eta D}{2}\frac{\eta}{8\pi}
 =
 \frac{\eta^2}{16\pi}D.
-$$
+```
 
 This proves ZBC2 without importing Dilworth or any external poset theorem. QED.
 
@@ -205,23 +210,23 @@ This proves ZBC2 without importing Dilworth or any external poset theorem. QED.
 
 Root now at the bridge block containing the C66 star center `z`. Since `D epsilon->0`, equation (1.7) gives
 
-$$
+```math
 \tau_z=o(1).
 \tag{2.7}
-$$
+```
 
 For all sufficiently large `D`,
 
-$$
+```math
 \tau_z<c_\eta.
 \tag{2.8}
-$$
+```
 
 Let `e` be eta-heavy. Its crossing diameter mass satisfies `w_e>=c_eta` by (1.8). If no crossing active diameter edge were incident to `z`, then all crossing diameter mass would belong to the global non-star tail, giving
 
-$$
+```math
 w_e\le\tau_z<c_\eta,
-$$
+```
 
 contradiction. Therefore some active star edge `zk` crosses `e`.
 
@@ -231,16 +236,16 @@ Because the tree is rooted at the block containing `z`, the descendant side of `
 
 Take a heavy chain
 
-$$
+```math
 e_1<e_2<\cdots<e_L
-$$
+```
 
 ordered from the root outward. The descendant components satisfy
 
-$$
+```math
 S_{e_L}\subset S_{e_{L-1}}\subset\cdots\subset S_{e_1}.
 \tag{2.9}
-$$
+```
 
 By the preceding result, the deepest bridge `e_L` is crossed by some star edge `zk`. Thus `z` lies outside `S_{e_L}` and `k` lies inside it.
 
@@ -250,12 +255,12 @@ Since `S_{e_L}` is contained in every ancestor descendant component `S_{e_j}`, t
 
 ZBL3 applies to every eta-heavy bridge and gives
 
-$$
+```math
 \frac{\operatorname{dist}(z,\ell_e)}D
 \le
 \frac{4\pi C_0}{\eta}D\varepsilon=o(1).
 \tag{2.10}
-$$
+```
 
 Hence every bridge in the heavy chain satisfies (2.2).
 
@@ -265,26 +270,26 @@ For fixed `xi>0`, ZBL4 says the total number of eta-heavy bridges in the entire 
 
 Assume bridge dominance and near-zero response defect:
 
-$$
+```math
 S_{\rm br}\ge\eta D^2,
 \qquad
 D\varepsilon\to0.
 \tag{3.1}
-$$
+```
 
 Then there is an actual diameter pair `z,k` with `|z-k|=D` such that **every** contact path from the block of `z` to the block of `k` must cross a nested sequence of at least
 
-$$
+```math
 \frac{\eta^2}{16\pi}D
 \tag{3.2}
-$$
+```
 
 eta-heavy contact bridges. Every one of those bridges has
 
-$$
+```math
 \alpha_e\ge\frac{\eta}{4\pi}D,
 \tag{3.3}
-$$
+```
 
 its supporting line passes `o(D)` from `z`, and all but `o(D)` have near-unit radial progress from `z`.
 
@@ -309,29 +314,26 @@ No theorem currently turns those linearly many events into an `Omega(D^2)` C68 r
 
 The global face endpoint remains
 
-$$
+```math
 \boxed{
  b+\sum_F(\deg F-4)>2h.
 }
 \tag{5.1}
-$$
+```
 
 For the bridge-dominant near-zero branch, ZBC sharpens the geometric substitute to:
 
 > **BC — deep radial diameter-route exclusion.** For every fixed `eta>0`, no sufficiently large lexicographically normalized triangle-free global minimizer can have an actual diameter pair `z,k` whose bridge-tree route contains `Omega_eta(D)` contact bridges satisfying
 > 
 
-$$
-
+```math
 > \alpha_e=\Omega_\eta(D),
 > \qquad
 > \operatorname{dist}(z,\ell_e)=o(D),
 > \qquad
 > \bigl||u-z|-|v-z|\bigr|=1-o(1)
 > 
-$$
-
-
+```
 > for all but `o(D)` of them, while the intervening loaded/transverse structure carries only `o(1)` total non-star diameter weight.
 >
 > It is enough to derive an `Omega(1/D)` response defect, a strict sub-`D` competitor, or the face inequality (5.1).

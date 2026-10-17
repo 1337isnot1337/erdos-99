@@ -15,11 +15,11 @@
 
 The current AG42 proof certifies
 
-$$
+```math
 x\sigma\ge 2\sqrt{\Delta_2}+0.00042,
 \qquad
 \Delta_2={\pi\over2\sqrt3},
-$$
+```
 
 by applying finite Mantel stability to one dominant three-direction atomic orbit.  Its
 last numerical step is deliberately wasteful: after assigning the three atom windows
@@ -31,15 +31,15 @@ Keeping the two retained shore masses coupled strengthens the opposite-corner pa
 bound without changing any geometric input, phase-order argument, or degree-pruning
 argument.  The resulting safe round constant is
 
-$$
+```math
 \boxed{\eta_{grid}=0.00059.}
-$$
+```
 
 The scalar root of this revised bookkeeping is approximately
 
-$$
+```math
 0.0005994655685586\ldots,
-$$
+```
 
 so `0.00059` retains substantial numerical margin.
 
@@ -49,60 +49,60 @@ so `0.00059` retains substantial numerical margin.
 
 Put
 
-$$
+```math
 s_2:=\sqrt{\Delta_2},
 \qquad
 \bar A:=2s_2+\eta.
-$$
+```
 
 Assume for contradiction that the absolute atomic train mass satisfies
 
-$$
+```math
 A=x\sigma\le \bar A.
-$$
+```
 
 Exactly as in audited §168, one dominant exact `pi/3` orbit has mass at least
 
-$$
+```math
 M_0={4s_2^2\over\bar A}.
 \tag{SB.1}
-$$
+```
 
 The remaining atomic mass is at most
 
-$$
+```math
 R_0:=\bar A-M_0,
-$$
+```
 
 and the dominant-orbit finite crossing graph has Mantel deficit at most
 
-$$
+```math
 \boxed{
 d_0:={\bar A^2\over4}-s_2^2+{R_0^2\over4}.
 }
 \tag{SB.2}
-$$
+```
 
 Let its actual normalized orbit mass be `M>=M_0`.  The standard maximum-degree
 near-Mantel partition gives two shores `X,Y` with
 
-$$
+```math
 |X|+|Y|=(M+o(1))D,
 \tag{SB.3}
-$$
+```
 
-$$
+```math
 \min\{|X|,|Y|\}
 \ge\left({M\over2}-\sqrt{d_0}-o(1)\right)D,
 \tag{SB.4}
-$$
+```
 
 and at most
 
-$$
+```math
 (2d_0+o(1))D^2
 \tag{SB.5}
-$$
+```
 
 missing cross-shore pairs.
 
@@ -115,55 +115,55 @@ These are precisely the §168 bounds; no new stability theorem is used.
 Freeze the at most three atom windows of the dominant orbit.  Write their normalized
 populations on the two Mantel shores as
 
-$$
+```math
 (x_i,y_i),\qquad i=1,2,3.
-$$
+```
 
 Trains in the same sufficiently narrow direction window do not cross in strict
 rhombi.  Hence every same-window cross-shore pair is missing, so (SB.5) gives
 
-$$
+```math
 \sum_{i=1}^3 x_i y_i\le2d_0+o(1).
 \tag{SB.6}
-$$
+```
 
 Assign each atom window to its majority shore and discard the minority population.
 Let
 
-$$
+```math
 L:=\sum_i\min(x_i,y_i).
-$$
+```
 
 Since `min(x_i,y_i)<=sqrt(x_i y_i)`, Cauchy gives
 
-$$
+```math
 \boxed{
 L\le\sqrt{3\sum_i x_i y_i}
 \le\sqrt{6d_0}+o(1).
 }
 \tag{SB.7}
-$$
+```
 
 Let `P,Q` be the retained normalized masses on the two shores after this one global
 discard.  Then
 
-$$
+```math
 \boxed{
 P+Q\ge M-\sqrt{6d_0}-o(1),
 }
 \tag{SB.8}
-$$
+```
 
 while (SB.4) and the fact that the total discard is at most the right side of (SB.7)
 give
 
-$$
+```math
 \boxed{
 \min(P,Q)
 \ge {M\over2}-\sqrt{d_0}-\sqrt{6d_0}-o(1).
 }
 \tag{SB.9}
-$$
+```
 
 The old AG42 bookkeeping replaced both `P` and `Q` separately by the lower bound in
 (SB.9).  That pays the same total minority loss twice.
@@ -179,29 +179,29 @@ shore contains at most one atom family and the other contains at most two.
 Choose `A_1` to be the unique family on the one-family shore and `B_1` to be the
 larger family on the other shore.  If the one-family shore has mass `P`, then
 
-$$
+```math
 |A_1|/D+|B_1|/D\ge P+{Q\over2}-o(1).
-$$
+```
 
 If instead it has mass `Q`, the corresponding bound is `Q+P/2`.  Therefore in all
 cases
 
-$$
+```math
 { |A_1|+|B_1|\over D}
 \ge
 \min\left\{P+{Q\over2},Q+{P\over2}\right\}-o(1).
-$$
+```
 
 Using
 
-$$
+```math
 \min\left\{P+{Q\over2},Q+{P\over2}\right\}
 ={P+Q+\min(P,Q)\over2}
-$$
+```
 
 with (SB.8)--(SB.9) yields the strengthened coupled family floor
 
-$$
+```math
 \boxed{
 { |A_1|+|B_1|\over D}
 \ge
@@ -211,28 +211,28 @@ $$
 -o(1).
 }
 \tag{SB.10}
-$$
+```
 
 Since `M>=M_0`, it is enough to use
 
-$$
+```math
 \boxed{
 G_0:={3M_0\over4}
 -{\sqrt{d_0}\over2}
 -\sqrt{6d_0}.
 }
 \tag{SB.11}
-$$
+```
 
 This is the only mathematical change from AG42.
 
 For the separate common-neighbor/transitivity check we retain the old individual shore
 floor
 
-$$
+```math
 S_0:={M_0\over2}-\sqrt{d_0}-\sqrt{6d_0}.
 \tag{SB.12}
-$$
+```
 
 Thus no part of the inherited §163 order-consistency proof is weakened.
 
@@ -242,10 +242,10 @@ Thus no part of the inherited §163 order-consistency proof is weakened.
 
 Put
 
-$$
+```math
 p_0:=\sqrt{2d_0}.
 \tag{SB.13}
-$$
+```
 
 The total missing-pair budget between `A_1` and `B_1` is still at most
 `(2d_0+o(1))D^2`.
@@ -257,7 +257,7 @@ each family.  The subsequent minimum-degree pruning deletes at most another
 
 Consequently the opposite-corner degree sum in §163.7 is at least
 
-$$
+```math
 \boxed{
 E_{bal}(\eta)D-o(D),
 \qquad
@@ -265,7 +265,7 @@ E_{bal}(\eta)
 :=G_0-6p_0.
 }
 \tag{SB.14}
-$$
+```
 
 The six `p_0` losses have the same provenance as in audited §168:
 
@@ -281,10 +281,10 @@ No pruning loss has been removed or merged.
 The old individual floor (SB.12) still guarantees the common-neighbor hypotheses.  In
 particular it suffices that
 
-$$
+```math
 {S_0\over2}-2p_0>3p_0,
 \tag{SB.15}
-$$
+```
 
 which has very large slack at the chosen constant.
 
@@ -294,13 +294,13 @@ which has very large slack at the chosen constant.
 
 Take
 
-$$
+```math
 \boxed{\eta=0.00059.}
-$$
+```
 
 High-precision evaluation gives
 
-$$
+```math
 \begin{aligned}
 s_2&=0.9523128068639573458\ldots,\\
 \bar A&=1.9052156137279146917\ldots,\\
@@ -311,69 +311,69 @@ p_0&=0.0335350435592316692\ldots,\\
 \sqrt{6d_0}&=0.0580843992786246898\ldots .
 \end{aligned}
 \tag{SB.16}
-$$
+```
 
 The old individual-shore quantity is
 
-$$
+```math
 S_0=0.8702206422317033040\ldots,
-$$
+```
 
 so
 
-$$
+```math
 {S_0\over2}-2p_0
 =0.368040233997388314\ldots
 >3p_0
 =0.100605130677695008\ldots .
 \tag{SB.17}
-$$
+```
 
 Thus the inherited common-neighbor and global crossing-order argument is comfortably
 valid.
 
 The new coupled corner coefficient is
 
-$$
+```math
 \boxed{
 E_{bal}(0.00059)
 =1.1568757583395962534\ldots .
 }
 \tag{SB.18}
-$$
+```
 
 Every selected train vector has common projection tending to `sqrt(3)/2`, so the
 opposite-corner path inequality would force
 
-$$
+```math
 1\ge {\sqrt3\over2}E_{bal}(0.00059)-o(1).
-$$
+```
 
 But
 
-$$
+```math
 \boxed{
 {\sqrt3\over2}E_{bal}(0.00059)
 =1.0018837957444775105\ldots>1.
 }
 \tag{SB.19}
-$$
+```
 
 This is a margin of about `1.88e-3`, more than ten times the final margin in AG42 at
 `0.00042`.
 
 A numerical root search for the unchanged formulas gives
 
-$$
+```math
 E_{bal}(\eta)={2\over\sqrt3}
-$$
+```
 
 at
 
-$$
+```math
 \eta\approx0.0005994655685586,
 \tag{SB.20}
-$$
+```
 
 so the displayed `0.00059` is deliberately conservative.
 
@@ -382,11 +382,11 @@ so the displayed `0.00059` is deliberately conservative.
 Every Type-II §142 train-measure subsequential limit in the audited §163/§168 scope
 satisfies
 
-$$
+```math
 \boxed{
 x\sigma\ge2\sqrt{\Delta_2}+0.00059.}
 \tag{SB.21}
-$$
+```
 
 The theorem is proof-only and does not mutate canonical theorem state.
 
@@ -396,23 +396,23 @@ The theorem is proof-only and does not mutate canonical theorem state.
 
 The exposed-hull step used in §§142/164 is unchanged, hence
 
-$$
+```math
 \boxed{
 \liminf {T-q/2\over D}
 \ge2\sqrt{\Delta_2}+0.00059.
 }
 \tag{SB.22}
-$$
+```
 
 Using `T-q=2f-k`,
 
-$$
+```math
 \boxed{
 \liminf {2f-k\over D}
 \ge2\sqrt{\Delta_2}-\frac\pi2+0.00059.
 }
 \tag{SB.23}
-$$
+```
 
 The same argument also restricts to the non-singleton rhombic train graph wherever the
 independent §168 rhombic-only audit applies.

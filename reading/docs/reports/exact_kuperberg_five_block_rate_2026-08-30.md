@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/exact_kuperberg_five_block_rate_2026-08-30.md) · source SHA-256 `27560100129be1bcfc4a9a19360f10f086b4393af5a313dc284a1fb8f5cc1147`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 22 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-AF559C180C0F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99 — exact Kuperberg five-block gain and explicit support rate
 
@@ -20,43 +22,43 @@ The preceding quantitative reports obtained an asymptotic support rate from semi
 
 In the paper normalization, where circles have radius one and nearest-neighbor center distance two, the explicit three-move construction has gap gain
 
-$$
+```math
 \boxed{
 \delta(d)
 =\frac{\sqrt3}{72}d^4-rac1{72}d^5+O(d^6).
 }
 \tag{E.1}
-$$
+```
 
 Thus the leading exponent is exactly four for the published mechanism.
 
 Moreover the repeated-smaller-block step can be quantified directly: a five-block template of parameter `m` fits along the base of the moved middle `Delta_{n-1}` block whenever
 
-$$
+```math
 \boxed{n-2\ge3m.}
 \tag{E.2}
-$$
+```
 
 Consequently `k` widening stages require initial block size only `O(3^k)`. Since the quartic recurrence reaches fixed positive width in `O(d^{-3})` stages, the canonical support radius satisfies
 
-$$
+```math
 \boxed{
 W(d)\le C_1\exp(C_2d^{-3})
 \qquad(d\downarrow0).
 }
 \tag{E.3}
-$$
+```
 
 This supersedes the unknown-exponent semialgebraic upper bound in the two preceding reports. It also sharpens the fixed-shape vanishing-strain consequence to
 
-$$
+```math
 \boxed{
 \alpha_L^{-3}=o(\log L)
 \Longrightarrow
 \alpha_1(H_{L,\alpha_L})\ge |P_L|+1
 }
 \tag{E.4}
-$$
+```
 
 for all sufficiently large `L` in the notation of canonical Section 150.
 
@@ -68,30 +70,30 @@ The theorem remains a **free aligned-gap** result. Exterior blockers in a genuin
 
 The paper uses the triangular center lattice
 
-$$
+```math
 \Lambda_2
 =
 \{(2i+j,\sqrt3j):i,j\in\mathbb Z\},
 \tag{E.5}
-$$
+```
 
 whose minimum distance is two. The gap packing moves every center with `j>=0` by
 
-$$
+```math
 (0,d),
 \qquad d>0.
 \tag{E.6}
-$$
+```
 
 Fix `n>=3` and put
 
-$$
+```math
 a=n-1.
-$$
+```
 
 A coordinate realization of the five triangular blocks in Figures 3--4 is the following partition of a trapezoidal patch of the upper half-lattice. We specify centers by their lattice indices `(i,j)` in (E.5):
 
-$$
+```math
 \begin{aligned}
 B_1&=
 \{(i,j):0\le j\le a,\ 0\le i\le a-j\},\\
@@ -105,10 +107,11 @@ B_5&=
 \{(i,j):0\le j\le a,\ 2a+3\le i\le3a+3-j\}.
 \end{aligned}
 \tag{E.7}
+```
 
 Then `B_1,B_5` are upward `Delta_n` blocks, `B_2,B_4` are downward `nabla_n` blocks, and `B_3` is an upward `Delta_{n-1}` block. Their sizes are respectively
 
-\[
+```math
 \frac{n(n+1)}2,
 \quad
 \frac{n(n+1)}2,
@@ -118,19 +121,19 @@ Then `B_1,B_5` are upward `Delta_n` blocks, `B_2,B_4` are downward `nabla_n` blo
 \frac{n(n+1)}2,
 \quad
 \frac{n(n+1)}2.
-$$
+```
 
 For `0<=j<=a-1`, their union is the consecutive row
 
-$$
+```math
 0\le i\le3a+3-j,
-$$
+```
 
 and the top row `j=a` is again consecutive. Thus the five blocks form exactly the finite trapezoid described in the paper.
 
 Use the paper's three moves, with symmetric directions made explicit:
 
-$$
+```math
 \begin{aligned}
 B_1,B_5 &: (0,-x),\\
 B_2 &: \left(-\frac{\sqrt3}{2}u,-\frac12u\right),\\
@@ -138,6 +141,7 @@ B_4 &: \left(+\frac{\sqrt3}{2}u,-\frac12u\right),\\
 B_3 &: (0,v).
 \end{aligned}
 \tag{E.8}
+```
 
 The `B_2,B_4` directions make 60-degree angles with downward vertical, exactly as in §2.1. The paper performs these moves successively: first increase `x`, then `u`, then `v`.
 
@@ -147,15 +151,16 @@ The `B_2,B_4` directions make 60-degree angles with downward vertical, exactly a
 
 The bottom centers of each outer `Delta_n` block initially lie at height `d` above the unshifted lower half-lattice. Moving the outer blocks downward by `x` leaves a packing for
 
-\[
+```math
 0\le x\le d,
-$$
+```
 
 and at `x=d` the bottom boundary restores exact triangular-lattice contacts with the lower half-plane. Thus the maximal first motion is
 
-$$
+```math
 \boxed{x=d.}
 \tag{E.9}
+```
 
 All later gains are increasing for sufficiently small positive first-stage clearance, so the paper's maximizing choice uses (E.9).
 
@@ -165,15 +170,15 @@ All later gains are increasing for sufficiently small positive first-stage clear
 
 Rigid translation preserves every within-block distance. At `d=0`, all other center pairs in the triangular lattice have distance either two or at least `2sqrt(3)`. For sufficiently small `d`, all four block-translation magnitudes below are `<d`; therefore any originally non-neighboring pair remains farther than
 
-\[
+```math
 2\sqrt3-2d>2
-$$
+```
 
 once, for example, `d<sqrt(3)-1`. It is therefore enough to check the lattice-neighbor pairs.
 
 A direct row-boundary enumeration from (E.7) gives, after the outer move `x=d`, exactly the following nonconstant squared-distance margins `|p-q|^2-4`, up to left-right symmetry and repeated copies:
 
-$$
+```math
 \begin{array}{c|l}
 \text{interface type} & |p-q|^2-4 \\ \hline
 \text{outer / fixed upper} & d^2,
@@ -196,26 +201,27 @@ G_u(v),
 (d+v)(d+v+2\sqrt3),
 \end{array}
 \tag{E.10}
-$$
+```
 
 where
 
-$$
+```math
 \boxed{
 F_d(u)
 =u^2-(2\sqrt3+d)u+d^2,
 }
 \tag{E.11}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 G_u(v)
 =v^2-(2\sqrt3-u)v+u^2.
 }
 \tag{E.12}
+```
 
 For audit, the two controlling formulas can also be read off from one representative contact each.
 
@@ -223,42 +229,42 @@ For audit, the two controlling formulas can also be read off from one representa
 
 Take a horizontal nearest-neighbor pair with initial difference `(2,0)`, the left point in `B_1` and the right point in `B_2`. After the moves it has difference
 
-\[
+```math
 \left(
 2-\frac{\sqrt3}{2}u,
 \ d-\frac12u
 \right).
-$$
+```
 
 Subtracting four from its squared length gives exactly
 
-$$
+```math
 F_d(u)
 =d^2-du+u^2-2\sqrt3u.
-$$
+```
 
 ### Inner-to-middle contact
 
 Take the diagonal nearest-neighbor pair whose initial difference from the middle point to the left-inner point is
 
-$$
+```math
 (-1,\sqrt3).
-$$
+```
 
 After moving the inner block and middle block the difference is
 
-$$
+```math
 \left(
 -1-\frac{\sqrt3}{2}u,
 \sqrt3-\frac12u-v
 \right).
-$$
+```
 
 Its squared-distance margin is
 
-$$
+```math
 u^2+uv+v^2-2\sqrt3v=G_u(v).
-$$
+```
 
 Every expression in (E.10) other than `F_d` and `G_u` is manifestly nonnegative whenever `d,u,v>=0`, once `F_d(u)>=0` is imposed where appropriate.
 
@@ -268,21 +274,21 @@ Every expression in (E.10) other than `F_d` and `G_u` is manifestly nonnegative 
 
 At `u=0`,
 
-$$
+```math
 F_d(0)=d^2>0.
-$$
+```
 
 The two roots of `F_d` are
 
-$$
+```math
 \frac{2\sqrt3+d
 \pm
 \sqrt{(2\sqrt3+d)^2-4d^2}}{2}.
-$$
+```
 
 The continuous motion from zero encounters the smaller root first. Define
 
-$$
+```math
 \boxed{
 \phi(d)
 :=
@@ -290,22 +296,24 @@ $$
 \sqrt{(2\sqrt3+d)^2-4d^2}}{2}.
 }
 \tag{E.13}
+```
 
 Then `F_d(u)>=0` for
 
-\[
+```math
 0\le u\le\phi(d),
-$$
+```
 
 all other second-stage margins in (E.10) remain nonnegative, and the horizontal outer-inner contacts become exact at `u=phi(d)`. Hence the maximal second movement in the prescribed continuous move is
 
-$$
+```math
 \boxed{u=\phi(d).}
 \tag{E.14}
+```
 
 Expansion at zero gives
 
-\[
+```math
 \boxed{
 \phi(d)
 =
@@ -315,6 +323,7 @@ Expansion at zero gives
 +O(d^5).
 }
 \tag{E.15}
+```
 
 The first amplification stage is therefore actually a **quadratic bottleneck**: the distance gained by moving the outer blocks tangentially to their horizontal inter-block contacts is second order.
 
@@ -324,21 +333,21 @@ The first amplification stage is therefore actually a **quadratic bottleneck**: 
 
 With `u=phi(d)>0`,
 
-\[
+```math
 G_u(0)=u^2>0.
-$$
+```
 
 The roots of `G_u` are
 
-$$
+```math
 \frac{2\sqrt3-u
 \pm
 \sqrt{(2\sqrt3-u)^2-4u^2}}{2}.
-$$
+```
 
 Define the smaller root
 
-$$
+```math
 \boxed{
 \psi(u)
 :=
@@ -346,36 +355,39 @@ $$
 \sqrt{(2\sqrt3-u)^2-4u^2}}{2}.
 }
 \tag{E.16}
+```
 
 Then `G_u(v)>=0` for
 
-\[
+```math
 0\le v\le\psi(u),
-$$
+```
 
 and every other third-stage margin in (E.10) stays nonnegative. Thus the middle block may be moved upward by
 
-$$
+```math
 \boxed{v=\psi(\phi(d)).}
 \tag{E.17}
+```
 
 Along the interior of the middle block's base, the upper-half center row has moved from height `d` to height
 
-\[
+```math
 d+v,
-$$
+```
 
 while the lower half-packing is unchanged. This creates an aligned local gap of width
 
-$$
+```math
 \boxed{d'=d+\delta(d),
 \qquad
 \delta(d)=\psi(\phi(d)).}
 \tag{E.18}
+```
 
 Expanding (E.16) and substituting (E.15) gives
 
-\[
+```math
 \boxed{
 \delta(d)
 =
@@ -385,22 +397,24 @@ Expanding (E.16) and substituting (E.15) gives
 +O(d^7).
 }
 \tag{E.19}
+```
 
 In particular
 
-\[
+```math
 \boxed{
 \delta(d)\sim\frac{\sqrt3}{72}d^4.
 }
 \tag{E.20}
+```
 
 This explains a point left quantitative only in prose in the original paper. The sentence that the gap is to be widened “by a factor bounded away from 1” cannot be used as a uniform small-`d` multiplicative estimate for this explicit mechanism: (E.20) gives
 
-\[
+```math
 \frac{d'}d
 =1+\frac{\sqrt3}{72}d^3+O(d^4)
 \longrightarrow1.
-$$
+```
 
 The proof itself only needs positive monotone gain and repeated smaller blocks, so there is no conflict with the qualitative theorem.
 
@@ -412,37 +426,40 @@ The paper says that `n` can be taken large enough to repeat the operation with s
 
 A size-`m` five-block template of the form (E.7), with `b=m-1`, occupies in lattice indices the rows
 
-$$
+```math
 0\le j\le b,
-$$
+```
 
 and for `0<=j<=b-1` the complete interval
 
-$$
+```math
 0\le i\le3m-j.
 \tag{E.21}
+```
 
 Its top row also satisfies the same containing inequality.
 
 After one widening stage, the moved middle block is a rigid translate of `Delta_{n-1}`. Before translation, that block is a triangular lattice set with parameter `n-1`, hence after shifting its base coordinate to zero it has rows
 
-\[
+```math
 0\le j\le n-2,
 \qquad
 0\le i\le n-2-j.
 \tag{E.22}
+```
 
 A translated copy of (E.21) fits along the base of (E.22) provided
 
-\[
+```math
 3m-j\le n-2-j
-$$
+```
 
 for every relevant row, i.e. exactly when
 
-$$
+```math
 \boxed{3m\le n-2.}
 \tag{E.23}
+```
 
 If desired one may impose a fixed extra lattice-row safety margin; this only replaces the `2` in (E.23) by another absolute constant and does not alter the factor three.
 
@@ -450,9 +467,10 @@ Because the parent middle block moved rigidly, its internal triangular-lattice g
 
 Iterating backward, `k` widening stages can be supported by an initial block parameter
 
-\[
+```math
 \boxed{n_0=O(3^k).}
 \tag{E.24}
+```
 
 The five-block trapezoid has Euclidean diameter `O(n_0)`, so the same bound holds for the support radius.
 
@@ -462,37 +480,39 @@ The five-block trapezoid has Euclidean diameter `O(n_0)`, so the same bound hold
 
 From (E.20), choose `d_0,c_*>0` such that
 
-\[
+```math
 \delta(x)\ge c_*x^4
 \qquad(0<x<d_0).
 \tag{E.25}
+```
 
 Let
 
-\[
+```math
 x_{j+1}=x_j+\delta(x_j),
 \qquad x_0=d.
-$$
+```
 
 While `x_j<d_0`, comparison with the differential equation
 
-$$
+```math
 \frac{dx}{dj}=c_*x^4
-$$
+```
 
 or the elementary integral estimate
 
-$$
+```math
 1
 \le C
 \int_{x_j}^{x_{j+1}}t^{-4}\,dt
-$$
+```
 
 for small enough `x_j` gives
 
-$$
+```math
 \boxed{k_0(d)=O(d^{-3})}
 \tag{E.26}
+```
 
 stages to reach the fixed width `d_0`.
 
@@ -500,9 +520,10 @@ The Kuperberg gain is weakly nondecreasing in the current gap. Once the width is
 
 Thus
 
-\[
+```math
 \boxed{k(d)=O(d^{-3}).}
 \tag{E.27}
+```
 
 ---
 
@@ -510,50 +531,49 @@ Thus
 
 Combine (E.24) and (E.27): in the paper normalization,
 
-\[
+```math
 R(d)
 \le C3^{C'd^{-3}}
 \le C_1\exp(C_2d^{-3}).
 \tag{E.28}
+```
 
 The canonical repository normalization has nearest-neighbor center distance one, so paper gap `d_p` corresponds to canonical gap
 
-\[
+```math
 d_c=\frac{d_p}{2}
-$$
+```
 
 and all support radii are divided by two. Absorbing the fixed factors into constants gives:
 
 > **Theorem E.1 (explicit Kuperberg support exponent).** For the aligned triangular-lattice gap packing in canonical Section 150, there exist constants
 > 
 
-$$
-
+```math
 > C_1,C_2,d_*>0
 > 
-$$
-
-
+```
 > such that
 > 
 
-$$
-
+```math
 > \boxed{
 > W(d)\le C_1\exp(C_2d^{-3})
 > \qquad(0<d<d_*).
 > }
 > \tag{E.29}
+```
 
 For reference, the explicit canonical one-step gain obtained by scaling (E.19) is
 
-\[
+```math
 \boxed{
 \delta_{\rm can}(d)
 =\frac12\delta(2d)
 =\frac{\sqrt3}{9}d^4+O(d^5).
 }
 \tag{E.30}
+```
 
 No claim is made that (E.29) is optimal among all finite rearrangements. It is an upper bound obtained from the published five-block architecture.
 
@@ -563,58 +583,52 @@ No claim is made that (E.29) is optimal among all finite rearrangements. It is a
 
 Canonical Section 150 takes a fixed full-dimensional triangular-lattice polygon `K`, with
 
-\[
+```math
 r\mathbb B\subset K,
-$$
+```
 
 and an accumulated homothetic strain `alpha_L>0`. The row split produces canonical aligned gap width
 
-$$
+```math
 d_L=r\alpha_L.
-$$
+```
 
 Canonical (150.4) says that the desired same-hull add-one conclusion follows if
 
-$$
+```math
 W(r\alpha_L)=o(L).
-$$
+```
 
 Theorem E.1 gives
 
-$$
+```math
 \log W(r\alpha_L)
 \le O(1)+C r^{-3}\alpha_L^{-3}.
-$$
+```
 
 Therefore:
 
 > **Corollary E.2 (explicit vanishing accumulated-strain regime).** If
 > 
 
-$$
-
+```math
 > \boxed{
 > \alpha_L^{-3}=o(\log L),
 > }
 > \tag{E.31}
 > 
-$$
-
-
+```
 > then
 > 
 
-$$
-
+```math
 > \boxed{
 > \alpha_1(H_{L,\alpha_L})
 > \ge |P_L|+1
 > }
 > \tag{E.32}
 > 
-$$
-
-
+```
 > for all sufficiently large `L`.
 
 This strictly extends canonical Theorem 148.1 from fixed positive accumulated strain to a concrete vanishing-strain class.
@@ -629,9 +643,9 @@ It does **not** reach power-law accumulated strain `alpha_L=L^{-beta}` for any f
 
 There is no conflict with Section 146:
 
-$$
+```math
 \kappa_*(d)\to\infty.
-$$
+```
 
 The support bound (E.29) also diverges rapidly as `d downarrow0`. The exact five-block mechanism indeed requires an increasing number of nested stages.
 
@@ -658,9 +672,10 @@ This report supersedes their unknown-exponent conclusions for the actual publish
 - `quantitative_kuperberg_support_rate_2026-08-30.md` proved that finite algebraicity would force some asymptotic upper class but left a rational exponent `q` unspecified.
 - `quantitative_kuperberg_rate_refinement_2026-08-30.md` split the resulting support rate according to whether `q<1`, `q=1`, or `q>1`.
 - The exact coordinate calculation here gives
-  $$
+  ```math
   \boxed{q=4}
-  $$
+  
+  ```
   for the specific three-move Kuperberg mechanism and therefore the concrete support exponent `d^{-3}` in (E.29).
 
 The semialgebraic reports remain useful as an audit trail and as a method that would apply to variants of the block mechanism, but they are no longer the strongest rate statement.
@@ -674,24 +689,21 @@ The remaining gap is now geometric rather than quantitative in the free model.
 > **Exterior-compatible Kuperberg embedding lemma.** Let a genuinely derived Target A monomer region contain an aligned gap corridor of width `d`. Prove that it contains a radius
 > 
 
-$$
-
+```math
 > R\ge C_1\exp(C_2d^{-3})
 > 
-$$
-
-
+```
 > subregion on which the nested five-block moves above can be executed while every exterior source/scaffold point remains at distance at least one throughout; or replace this support requirement by a stronger protected finite rearrangement.
 
 A proof of this statement at an actual canonical gap scale with `R=o(D)` would feed directly into the strict smaller-diameter replacement route.
 
 A separate route is to improve the block architecture itself. The quartic bottleneck is now explicit:
 
-$$
+```math
 \text{outer vertical move}
 \Rightarrow u=\Theta(d^2)
 \Rightarrow v=\Theta(u^2)=\Theta(d^4).
-$$
+```
 
 Any alternative finite block mechanism that creates a **linear** or **quadratic** final gap gain would dramatically reduce the support cost. This is now a concrete finite geometric design problem.
 

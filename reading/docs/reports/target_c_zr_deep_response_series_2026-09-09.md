@@ -17,19 +17,19 @@
 
 The revised ZHC theorem produces, in the bridge-dominant near-zero phase, one unloaded harmonic component `I_*` and an actual diameter pair `a,b in A_*` with
 
-$$
+```math
 \ell(a b)\ge\eta D/2,
 \qquad
 c_{ab}^{(*)}\ge\frac{p_\eta}{36\pi D},
 \tag{1.1}
-$$
+```
 
 where
 
-$$
+```math
 p_\eta=\frac{\eta}{4\pi-\eta}.
 \tag{1.2}
-$$
+```
 
 Every physical contact bridge on the global `a--b` bridge-tree route lies in the closure of `I_*`.
 
@@ -45,38 +45,38 @@ Let `N_*` be the weighted contact subnetwork consisting of `I_*`, its attachment
 
 Prescribe boundary values
 
-$$
+```math
 V_b=1,
 \qquad
 V_s=0\quad(s\in A_*\setminus\{b\}),
 \tag{1.3}
-$$
+```
 
 and let `V` be the harmonic extension to `I_*`.
 
 The maximum principle gives
 
-$$
+```math
 0\le V_x\le1
 \qquad(x\in V(N_*)).
 \tag{1.4}
-$$
+```
 
 The current absorbed at attachment `a` has magnitude exactly
 
-$$
+```math
 c_{ab}^{(*)},
 \tag{1.5}
-$$
+```
 
 because
 
-$$
+```math
 (\Lambda^{(*)}V)_a
 =
 \Lambda^{(*)}_{ab}
 =-c_{ab}^{(*)}.
-$$
+```
 
 ---
 
@@ -88,31 +88,31 @@ Delete `e` from the complete contact graph. Let `S_e` be the side containing `a`
 
 Sum Kirchhoff current balance over all interior vertices of `N_* cap S_e`. Internal currents cancel. The current through `e` equals the total current absorbed at the zero-voltage attachments lying on the `a` side. For each such attachment `s`,
 
-$$
+```math
 -(\Lambda^{(*)}V)_s
 =c_{sb}^{(*)}\ge0.
 \tag{2.1}
-$$
+```
 
 Since `a` is one of them,
 
-$$
+```math
 \boxed{
 I_e
 =\sum_{s\in A_*\cap S_e}c_{sb}^{(*)}
 \ge c_{ab}^{(*)}.
 }
 \tag{2.2}
-$$
+```
 
 Ohm's law gives the oriented bridge drop
 
-$$
+```math
 V_u-V_v
 =\frac{I_e}{\alpha_e}
 \ge\frac{c_{ab}^{(*)}}{\alpha_e}>0.
 \tag{2.3}
-$$
+```
 
 ---
 
@@ -120,10 +120,10 @@ $$
 
 Order the physical bridges on the `b--a` bridge-tree route as
 
-$$
+```math
 e_1=u_1v_1,\ldots,e_L=u_Lv_L,
 \tag{3.1}
-$$
+```
 
 from `b` toward `a`, each oriented so `u_j` lies on the `b` side and `v_j` on the `a` side.
 
@@ -131,37 +131,37 @@ The bridge sides are nested. After deleting `e_j`, the side containing `a` also 
 
 Restrict the harmonic solution to this `a`-side subnetwork and treat `v_j` as an additional boundary vertex with value `V_{v_j}`. Every original attachment boundary value inside is zero. The maximum principle therefore gives
 
-$$
+```math
 V_x\le V_{v_j}
 \qquad
 \text{for every vertex }x\text{ on the }a\text{ side of }e_j.
 \tag{3.2}
-$$
+```
 
 In particular,
 
-$$
+```math
 V_{u_{j+1}}\le V_{v_j}.
 \tag{3.3}
-$$
+```
 
 Together with the positive bridge drops (2.3),
 
-$$
+```math
 1=V_b
 \ge V_{u_1}>V_{v_1}
 \ge V_{u_2}>V_{v_2}
 \ge\cdots\ge
 V_{u_L}>V_{v_L}\ge V_a=0.
 \tag{3.4}
-$$
+```
 
 Hence the bridge drops themselves telescope below the full boundary drop:
 
-$$
+```math
 \sum_{j=1}^L(V_{u_j}-V_{v_j})\le1.
 \tag{3.5}
-$$
+```
 
 Using (2.3) termwise proves the exact series theorem.
 
@@ -169,24 +169,24 @@ Using (2.3) termwise proves the exact series theorem.
 
 For every positive harmonic-component response pair `a,b`,
 
-$$
+```math
 \boxed{
  c_{ab}^{(*)}
  \sum_{e\in P_{br}(a,b)}\frac1{\alpha_e}
  \le1.
 }
 \tag{ZHS1}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \sum_{e\in P_{br}(a,b)}\frac1{\alpha_e}
 \le\frac1{c_{ab}^{(*)}}.
 }
 \tag{ZHS2}
-$$
+```
 
 No two-terminal reduction is substituted for the multi-terminal response coefficient. All other attachment terminals remain grounded throughout the proof.
 
@@ -196,44 +196,44 @@ No two-terminal reduction is substituted for the multi-terminal response coeffic
 
 Define
 
-$$
+```math
 C_\eta:=\frac{p_\eta}{36\pi}>0.
 \tag{4.1}
-$$
+```
 
 For the ZHC pair, eventually along a sequence with `D epsilon->0`,
 
-$$
+```math
 L:=|P_{br}(a,b)|=\ell(ab)\ge\eta D/2,
 \qquad
 c_{ab}^{(*)}\ge C_\eta/D.
 \tag{4.2}
-$$
+```
 
 ZHS2 gives
 
-$$
+```math
 \boxed{
 \sum_{e\in P_{br}(a,b)}\frac1{\alpha_e}
 \le\frac{D}{C_\eta}.
 }
 \tag{ZHS3}
-$$
+```
 
 ### 4.1 Linear route-stress lower bound
 
 Cauchy--Schwarz gives
 
-$$
+```math
 \left(\sum_{e\in P}\alpha_e\right)
 \left(\sum_{e\in P}\frac1{\alpha_e}\right)
 \ge L^2.
 \tag{4.3}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \sum_{e\in P_{br}(a,b)}\alpha_e
 \ge
@@ -242,7 +242,7 @@ c_{ab}^{(*)}L^2
 \frac{C_\eta\eta^2}{4}D.
 }
 \tag{ZHS4}
-$$
+```
 
 Thus the selected deep route itself carries `Omega_eta(D)` bridge stress.
 
@@ -250,30 +250,30 @@ Thus the selected deep route itself carries `Omega_eta(D)` bridge stress.
 
 Set
 
-$$
+```math
 a_\eta:=\frac{C_\eta\eta}{4}>0.
 \tag{4.4}
-$$
+```
 
 Let `N_small` count route bridges with `alpha_e<a_eta`. Every such edge contributes more than `1/a_eta` to ZHS3, so
 
-$$
+```math
 \frac{N_{small}}{a_\eta}
 <\frac{D}{C_\eta},
-$$
+```
 
 hence
 
-$$
+```math
 N_{small}
 <\frac{a_\eta}{C_\eta}D
 =\frac{\eta D}{4}.
 \tag{4.5}
-$$
+```
 
 Since `L>=eta D/2`, at least `eta D/4` route bridges obey `alpha_e>=a_eta`:
 
-$$
+```math
 \boxed{
 \#\{e\in P_{br}(a,b):\alpha_e\ge a_\eta\}
 \ge\frac{\eta D}{4},
@@ -281,7 +281,7 @@ $$
  a_\eta=\frac{p_\eta\eta}{144\pi}.
 }
 \tag{ZHS5}
-$$
+```
 
 This eliminates another real loophole: the linearly deep harmonic-cell route cannot consist almost entirely of bridge stresses tending to zero. A fixed linear subfamily has a fixed absolute positive stress floor.
 
@@ -291,12 +291,12 @@ This eliminates another real loophole: the linearly deep harmonic-cell route can
 
 Under
 
-$$
+```math
 S_{br}\ge\eta D^2,
 \qquad
 D\varepsilon\to0,
 \tag{5.1}
-$$
+```
 
 the revised ZHC/ZHS cell contains one actual diameter route with simultaneously:
 
@@ -306,9 +306,10 @@ the revised ZHC/ZHS cell contains one actual diameter route with simultaneously:
 - reciprocal bridge-stress sum at most `36pi D/p_eta`;
 - route bridge stress at least `[p_eta eta^2/(144pi)]D`;
 - at least `eta D/4` bridge edges with
-  $$
+  ```math
   \alpha_e\ge\frac{p_\eta\eta}{144\pi}>0;
-  $$
+  
+  ```
 - the whole harmonic cell carrying `(p_eta/18-o(1))D^2` contact stress.
 
 Therefore, unless a macroscopic amount of the cell's quadratic stress lies on much heavier bridge edges, almost all of its stress must lie in the intervening two-edge-connected blocks. The bridge-dominant near-zero problem has become a route-local block-stress problem inside one unloaded harmonic cell.

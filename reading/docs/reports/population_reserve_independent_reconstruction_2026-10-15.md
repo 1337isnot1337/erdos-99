@@ -29,21 +29,21 @@ Put `a=sqrt(3)/2`. For a translated unit triangular lattice, crop a disk of radi
 Deleting one endpoint per edge leaves a subset of strict diameter below `D`.
 Translation averaging gives
 
-$$
+```math
 \mathbb E V=\pi R^2/a,\qquad
 \mathbb E E={1\over2a}\sum_{v\in\Lambda,\ D\le |v|\le D+w}
  |B_R\cap(B_R-v)|.
-$$
+```
 
 For `t=2R-|v|` the lens area is
 `(4/3)sqrt(R)t^(3/2)(1+O(t/R))`. Replacing the radial lattice measure by
 `(2 pi r/a)dr` therefore predicts
 
-$$
+```math
 \mathbb E(V-E)={\pi D^2\over4a}
  +\left({\pi c\over2a}-{8\pi c^{5/2}\over15\sqrt2 a^2}\right)D^{2/3}
  +O_\theta(D^\theta).
-$$
+```
 
 The proposed discrepancy error follows if the centered disk count is
 `pi r^2/a+O_theta(r^theta)` uniformly over `D<=r<=D+w`: Stieltjes integration
@@ -53,11 +53,11 @@ an exact-radius atom is included in the error, not discarded.
 
 The maximum occurs at
 
-$$
+```math
 c_*=(3\sqrt2 a/8)^{2/3},\qquad
 \max={3\pi c_*\over10a}
  ={3\pi\over5a}(3a/16)^{2/3}=\kappa_0.
-$$
+```
 
 For a global `n`-point minimizer of diameter `D`, every strict sub-`D`
 unit-separated competitor has at most `n-1` points. Thus the construction,
@@ -168,45 +168,45 @@ review; unreviewed in the project lifecycle.**
 
 Define the following exact constants:
 
-$$
+```math
 a={\sqrt3\over2},\quad h={56\over65},\quad
 p=1-a,\quad q={98\over65}-a,\quad
 b=a-q=\sqrt3-{98\over65},\quad k={9\over56},\quad C={65\over28},
-$$
-$$
+```
+```math
 s={256\over16385},\quad \beta={16383\over16385},
 \qquad s^2+\beta^2=1,
-$$
-$$
+```
+```math
 \boxed{\gamma={6\over a}\{kb s-C(1-\beta)\}
  ={3(576b-65)\over114695a}
  =0.001939936045\ldots.}
 \tag{L1}
-$$
+```
 
 **Theorem.** For every real `R>=8192` a unit-separated finite packing in the
 closed radius-`R` disk has population at least
 
-$$
+```math
 {\pi R^2\over a}+2\gamma R-{\sqrt R\over4}-60.
 \tag{L2}
-$$
+```
 
 Every global unit-separated `n`-point diameter minimizer with `D>16384` therefore
 satisfies
 
-$$
+```math
 \boxed{g_A\ge\gamma D-{\sqrt D\over4\sqrt2}-60
              \ge\gamma D-{\sqrt D\over5}-60.}
 \tag{L3}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{D\ge10^6\quad\Longrightarrow\quad g_A\ge D/600.}
 \tag{L4}
-$$
+```
 
 The asymptotic linear coefficient exceeds PR #956's `1/320000` by a factor
 greater than 620; the convenient effective coefficient `1/600` is greater by
@@ -220,21 +220,21 @@ Let `f(z)=sqrt(R^2-z^2)`. Write a translated unit triangular lattice as
 `{(t_x+j+l/2,t_y+la):j,l in Z}`. In each of the six coordinate frames obtained
 by rotating through multiples of `pi/3`, select every lattice row at height
 
-$$
+```math
 \beta R\le y\le R-a.
 \tag{L5}
-$$
+```
 
 On its right side put
 `u=f(y+a)`, `v=f(y+q)`, `ell=v-u`. Delete the lattice labels on that row in
 `[u,v]` and insert
 
-$$
+```math
 (u+1+ih,\ y+\eta_i),\quad
 0\le i\le\lfloor(\ell-2)/h\rfloor,\qquad
 \eta_i=\begin{cases}p&i\text{ even},\\q&i\text{ odd}.\end{cases}
 \tag{L6}
-$$
+```
 
 Make the reflected replacement on the left. Since `q-p=33/65`, adjacent
 inserted squared distances are exactly `h^2+(33/65)^2=1`; nonadjacent
@@ -250,10 +250,10 @@ All new points lie in the original disk: their positive heights are at most
 `y+q` and their horizontal coordinates lie in `[u+1,v-1]`, so in particular
 have absolute value strictly below `f(y+q)`. Also
 
-$$
+```math
 \ell=\int_{y+q}^{y+a}{z\over f(z)}\,dz\ge b\beta/s>14>2.
 \tag{L7}
-$$
+```
 
 The packets are well defined. If `y_2>=y_1+a`, then
 `v_(y_2)=f(y_2+q)<f(y_1+a)=u_(y_1)`. Hence two right packets of the same
@@ -266,11 +266,11 @@ has radius at least `beta R`. Different frame normals differ by at least
 `pi/3`. With `phi=arcsin(s)`, their angular separation is at least
 `pi/3-2phi`, so their distance is at least
 
-$$
+```math
 2\beta R\sin(\pi/6-\phi)
 =\beta R(\beta-\sqrt3s)>R/2>1.
 \tag{L8}
-$$
+```
 
 For unequal radii this lower bound follows from
 `|x-y|^2=(r_1-r_2)^2+4r_1r_2 sin^2(angle/2)`.
@@ -291,10 +291,10 @@ closed endpoints affect a null set. The inserted count is
 Unfolding the vertical phase then gives expected gain, for all twelve
 families combined, at least
 
-$$
+```math
 {12\over a}\int_{\beta R}^{R-a}\{k\ell(y)-C\}\,dy.
 \tag{L9}
-$$
+```
 
 The six frames are automorphisms of the triangular lattice. Their rotated
 translation classes have the same uniform distribution; no independence
@@ -305,31 +305,31 @@ translation domain. An integer output at least its mean exists.
 Put `I=integral_(beta R)^(R-a)ell(y)dy`. Substitution in the two terms gives
 the exact telescoping identity
 
-$$
+```math
 I=\int_{\beta R+q}^{\beta R+a}f(z)\,dz
        -\int_{R-b}^R f(z)\,dz.
 \tag{L10}
-$$
+```
 
 The first term is at least `b f(beta R+a)` since `f` decreases. The second
 is at most `(2/3)sqrt(2R)b^(3/2)`, since `f(R-t)<=sqrt(2Rt)`.
 For `R>=8192` we have `beta R+a<=R` and
 
-$$
+```math
 f(\beta R+a)\ge sR-{2\beta a\over s}-{a^2\over sR},
 \tag{L11}
-$$
+```
 
 by `sqrt(X-e)>=sqrt(X)-e/sqrt(X)` for `0<=e<=X`.
 Combining (L9)--(L11) and dropping the positive term `12C` gives expected
 population at least
 
-$$
+```math
 {\pi R^2\over a}+2\gamma R-A\sqrt R-B_0,
 \quad A={8\sqrt2\over a}k b^{3/2},\quad
 B_0={12\over a}kb\left({2\beta a\over s}+{a^2\over8192s}\right).
 \tag{L12}
-$$
+```
 
 Exact arithmetic gives `A<1/4`, `B_0<60`, and `gamma>193/100000`.
 These are inequalities between elements of `Q(sqrt(3))` after squaring
@@ -347,10 +347,10 @@ used in the contradiction. This proves (L3).
 
 For `x=sqrt(D)>=1000`,
 
-$$
+```math
 \left({193\over100000}-{1\over600}\right)x^2-{x\over5}-60
 ={79\over300000}x^2-{x\over5}-60>0.
-$$
+```
 
 At `x=1000` this is `10/3`, and its derivative is positive for all
 `x>=1000`. This proves (L4). All source labels and original lower constraints
@@ -361,10 +361,10 @@ on a minimizer. QED.
 `kappa0<2/3` follows by cubing: `kappa0^3=243 pi^3/(32000a)` and the classical
 bound `pi<22/7` suffices. Thus (L4), for `D>=64000000=400^3`, gives
 
-$$
+```math
 g_A\ge D/600\ge(2/3)D^{2/3}>\kappa_0D^{2/3}.
 \tag{L13}
-$$
+```
 
 This supplies an elementary effective proof of the headline bound with
 **zero** remainder on this explicit range, independently of any effective
@@ -411,11 +411,11 @@ global minimizer using its contact graph or a source lattice realization. The
 new comparison supplies a larger boundary budget, but still supplies no such
 realization. The remaining sufficient implication can be stated quantitatively:
 
-$$
+```math
 \text{every sufficiently large triangle-free global minimizer has}
 \quad g_A\le cD+o(D)\quad\text{for some fixed }c<\gamma.
 \tag{GAP}
-$$
+```
 
 An admissible source-specific replacement of all `n` labels with strict diameter
 improvement would also suffice. Neither implication was proved in this session.

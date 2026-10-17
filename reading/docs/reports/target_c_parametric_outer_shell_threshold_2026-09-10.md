@@ -20,30 +20,30 @@ mechanism has an exact maximal range.
 
 Define
 
-$$
+```math
 \boxed{
  u_\pi:=
  \frac{\pi\bigl(\sqrt{3\pi^2+4}-1\bigr)}{2(\pi^2+1)}
  =0.6932725422\ldots .
 }
 \tag{PT.1}
-$$
+```
 
 For every fixed
 
-$$
+```math
 0<u<u_\pi,
-$$
+```
 
 there is a unique number
 
-$$
+```math
 p_u\in(2,\pi)
-$$
+```
 
 satisfying
 
-$$
+```math
 \boxed{
 \frac\pi{(\pi-2)^2}\left(\frac{p_u}{2}-1\right)^2
 =
@@ -51,62 +51,62 @@ $$
 \frac{(u+p_u/2)^2}{4\pi}.
 }
 \tag{PT.2}
-$$
+```
 
 Every post-ZF survivor sequence with
 
-$$
+```math
 \mu_D\le u+o(1),
 \qquad
 \mu_D:=\frac{e_{BB}+2s_C-3(d_H+s_Z)}D,
-$$
+```
 
 then satisfies
 
-$$
+```math
 \boxed{
 \limsup\frac{P_F}{D}\le p_u<\pi.
 }
 \tag{PT.3}
-$$
+```
 
 Since every global minimizer has
 
-$$
+```math
 P_K>\pi D-\frac{\pi\sqrt3}{2},
-$$
+```
 
 it follows that
 
-$$
+```math
 \boxed{
 P_K-P_F\ge(\pi-p_u)D-O(1).
 }
 \tag{PT.4}
-$$
+```
 
 Consequently some source point outside the positive force hull has one-sided support
 excess at least
 
-$$
+```math
 \boxed{
 \frac{\pi-p_u}{2\pi}D-O(1).
 }
 \tag{PT.5}
-$$
+```
 
 By C36 and C65 this point is a fully inactive contact-isolated rattler and is not a
 diameter endpoint.
 
 At the same time EA gives
 
-$$
+```math
 \boxed{
 \liminf\frac{|R|}{n}
 \ge1-\frac{4u^2}{\pi^2}.
 }
 \tag{PT.6}
-$$
+```
 
 Thus every fixed normalized-surplus window below `u_pi` is an inactive outer-shell
 phase with both positive source-density and linear geometric protrusion.  At the
@@ -123,24 +123,24 @@ bound, while the outer-shell phase still lacks a finite rearrangement theorem.
 
 GR proves that every post-ZF subsequential limit `(mu,y,p)` satisfies
 
-$$
+```math
 \max\{\Phi(y),\Psi(p)\}
 \le
 \frac\pi4\mu^2+
 \frac{(\mu+p/2)^2}{4\pi},
 \tag{1.1}
-$$
+```
 
 where
 
-$$
+```math
 \Psi(p)=\frac\pi{(\pi-2)^2}\left(\frac p2-1\right)^2.
-$$
+```
 
 Discard the `Phi(y)` term.  If `mu<=u`, monotonicity of the right side in `mu>=0`
 gives the necessary condition
 
-$$
+```math
 \boxed{
 \Psi(p)
 \le
@@ -148,39 +148,39 @@ $$
 \frac{(u+p/2)^2}{4\pi}.
 }
 \tag{1.2}
-$$
+```
 
 Define the difference
 
-$$
+```math
 g_u(p):=
 \Psi(p)-
 \frac\pi4u^2-
 \frac{(u+p/2)^2}{4\pi}.
 \tag{1.3}
-$$
+```
 
 As a function of `p`, `g_u` is a quadratic with leading coefficient
 
-$$
+```math
 \frac{\pi}{4(\pi-2)^2}-\frac1{16\pi}>0.
 \tag{1.4}
-$$
+```
 
 Moreover
 
-$$
+```math
 g_u(2)<0.
 \tag{1.5}
-$$
+```
 
 Therefore, if `g_u(pi)>0`, convexity implies that there is exactly one zero
 `p_u` above `2`, it lies in `(2,pi)`, and
 
-$$
+```math
 g_u(p)>0\qquad(p>p_u).
 \tag{1.6}
-$$
+```
 
 The necessary condition (1.2) then forces `p<=p_u` whenever `p>2`; if `p<=2`, the same
 conclusion is automatic because `p_u>2`.  This proves PT.3 once the exact range
@@ -192,59 +192,59 @@ conclusion is automatic because `p_u>2`.  This proves PT.3 once the exact range
 
 At `p=pi`, the symmetric area lower bound is the disk value:
 
-$$
+```math
 \Psi(\pi)=\frac\pi4.
 \tag{2.1}
-$$
+```
 
 Hence
 
-$$
+```math
 g_u(\pi)>0
-$$
+```
 
 is equivalent to
 
-$$
+```math
 \frac\pi4
 >
 \frac\pi4u^2+
 \frac{(u+\pi/2)^2}{4\pi}.
 \tag{2.2}
-$$
+```
 
 Multiply by `4pi`:
 
-$$
+```math
 \pi^2
 >
 \pi^2u^2+(u+\pi/2)^2.
-$$
+```
 
 Equivalently
 
-$$
+```math
 \boxed{
 (\pi^2+1)u^2+\pi u-\frac{3\pi^2}{4}<0.
 }
 \tag{2.3}
-$$
+```
 
 The positive root is exactly
 
-$$
+```math
 \frac{-\pi+\sqrt{\pi^2+3\pi^2(\pi^2+1)}}{2(\pi^2+1)}
 =
 \frac{\pi(\sqrt{3\pi^2+4}-1)}{2(\pi^2+1)}
 =u_\pi.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{g_u(\pi)>0\iff0\le u<u_\pi.}
 \tag{2.4}
-$$
+```
 
 This proves existence/uniqueness of `p_u` and PT.3.
 
@@ -258,41 +258,41 @@ argument.
 
 OS proves for every global minimizer, without any triangle-free assumption,
 
-$$
+```math
 P_K>
 \pi\left(\sqrt{D^2+\frac34}-\frac{\sqrt3}{2}\right)
 >
 \pi D-\frac{\pi\sqrt3}{2}.
 \tag{3.1}
-$$
+```
 
 Combining with PT.3 gives
 
-$$
+```math
 P_K-P_F
 \ge
 (\pi-p_u)D-O(1),
-$$
+```
 
 which is PT.4.
 
 Cauchy's width formula gives
 
-$$
+```math
 P_K-P_F
 =
 \int_0^\pi(w_K-w_F)\,d\theta.
 \tag{3.2}
-$$
+```
 
 The integrand is nonnegative because `F subseteq K`.  Therefore some direction has
 
-$$
+```math
 w_K-w_F
 \ge
 \frac{\pi-p_u}{\pi}D-O(1).
 \tag{3.3}
-$$
+```
 
 A width is the sum of the two opposite support functions, so one side contributes at
 least half this gap.  This proves PT.5.
@@ -308,14 +308,14 @@ and non-diametral.
 
 EA proves
 
-$$
+```math
 \limsup\frac vn
 \le
 \frac4{\pi^2}
 \left(\mu-\frac{s_B}{D}\right)^2
 \le
 \frac4{\pi^2}\mu^2.
-$$
+```
 
 Thus every sequence with `mu_D<=u+o(1)` satisfies PT.6.
 
@@ -367,32 +367,32 @@ The entire post-ZF C-II branch now has a natural quantitative split:
 
 For any fixed `u<u_pi`, a sequence with `mu_D<=u+o(1)` has
 
-$$
+```math
 |R|/n\ge1-4u^2/\pi^2-o(1)
-$$
+```
 
 and a fully inactive source point protruding beyond `F` by
 
-$$
+```math
 \frac{\pi-p_u}{2\pi}D-O(1).
-$$
+```
 
 ### PT-H: high renormalized-defect phase
 
 Any sequence avoiding every such fixed outer-shell window must satisfy
 
-$$
+```math
 \boxed{\liminf\mu_D\ge u_\pi=0.6932725422\ldots .}
 \tag{6.1}
-$$
+```
 
 In exact component/loaded currency,
 
-$$
+```math
 \mu_DD+6
 =
 \sum_r(\delta_r+r_r)+s_B.
-$$
+```
 
 Thus PT-H requires at least `u_pi D+o(D)` of component boundary/face defect plus loaded
 contact-degree slack.
@@ -408,9 +408,10 @@ A full C-II closure can now target the two disjoint mechanisms:
 1. prove a finite rearrangement / boundary-order packing theorem excluding PT-L for
    one fixed `u` below `u_pi`; and
 2. prove a topology/response upper bound
-   $$
+   ```math
    \mu_D<u_\pi-o(1)
-   $$
+   
+   ```
    excluding PT-H.
 
 Either improvement to the second threshold immediately enlarges the first outer-shell

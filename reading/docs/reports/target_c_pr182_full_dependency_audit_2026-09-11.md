@@ -17,21 +17,21 @@ This audit does not inherit PR #182's self-classifications. It reads the 13 theo
 
 The principal conclusions are:
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\frac{e_{BB}+2s_C}{D}
 \ge \lambda_{HE}>0.598366
 }
-$$
+```
 
 from the merged hidden-edge report, and the slightly stronger audit consequence
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\frac{e_{BB}+2s_C}{D}
 >0.5983685.
 }
-$$
+```
 
 The latter uses no new geometric hypothesis; it only spends the uniform margin already present in the two cases of the HE proof.
 
@@ -74,11 +74,11 @@ BV/BVE/HE use the following planar theorem.
 
 For every compact convex planar body with area `A` and perimeter `P`, there exist concentric inscribed/circumscribed circles with radii `r_1<=r_2` such that
 
-$$
+```math
 \boxed{
 (r_2-r_1)^2\le\frac{P^2-4\pi A}{4\pi}.
 }
-$$
+```
 
 This is the correct concentric-annulus Bonnesen theorem. It is stronger in form than the more familiar inequality written using the ordinary inradius and circumradius; the reports do not confuse the two versions.
 
@@ -90,85 +90,85 @@ The later arguments use only existence of one such concentric annulus, not uniqu
 
 Let
 
-$$
+```math
 \lambda=\lim\frac{e_{BB}+2s_C}{D},\qquad
 y=\lim h/D,\qquad p=\lim P_F/D.
-$$
+```
 
 The combined force-hull area lower bound is
 
-$$
+```math
 A(y,p)=\max\left\{\Phi(y),\Psi(p)\right\},
-$$
+```
 
 with
 
-$$
+```math
 \Phi(y)=\frac{y+\sin y}{4},
 \qquad
 \Psi(p)=\frac\pi{(\pi-2)^2}\left(\frac p2-1\right)^2.
-$$
+```
 
 RD correctly derives the two necessary inequalities
 
-$$
+```math
 A(y,p)-\frac\pi4\lambda^2
 \le\frac{(\lambda+p-y)^2}{4\pi}
 \tag{RD-JC}
-$$
+```
 
 and
 
-$$
+```math
 A(y,p)-\frac\pi4\lambda^2
 \le
 \frac2{\sqrt3}y^{3/2}\sqrt{2y-p}.
 \tag{RD-DD}
-$$
+```
 
 The nontrivial DD reduction introduces
 
-$$
+```math
 z=(Q+2s_Z)/D
-$$
+```
 
 and upper-bounds the cavity by
 
-$$
+```math
 F_{y,p}(z)=
 \frac1{\sqrt6}(2y-z)^{3/2}\sqrt{2y-z-p}
 +\frac{z^2}{4\pi}.
-$$
+```
 
 The derivative sign in RD is correct. On the feasible interval,
 
-$$
+```math
 F'_{y,p}(z)<0,
-$$
+```
 
 so replacing `z` by zero is genuinely the worst relaxation rather than an unjustified endpoint guess.
 
 RX's optimizer calculus was rederived. The area crossover
 
-$$
+```math
 p_e(y)=2+2\sqrt{\Phi(y)/c_R},
 \qquad c_R=\pi/(\pi-2)^2,
-$$
+```
 
 has `p_e'(y)<1/2`, hence `m(y)=p_e(y)-y` decreases. On the crossover, the DD threshold decreases and the JC threshold increases. The pre-transition JC/DD intersection has implicit equation
 
-$$
+```math
 F(y,\lambda)
 =y+\lambda-2\sqrt{\pi S}-{3S^2\over4y^3}=0,
 \qquad
 S=\Phi(y)-{\pi\over4}\lambda^2,
-$$
+```
 
 with `F_lambda>0` and the certified rational estimate
 
-$$
+```math
 F_y>{639\over19600}>0.
-$$
+```
 
 Therefore the crossing threshold decreases before the unique transition.
 
@@ -184,27 +184,27 @@ The exact RX certificate was independently rerun and passes.
 
 At the exact RX endpoint, strictness of the `z` relaxation forces
 
-$$
+```math
 Q=o(D),\qquad s_Z=o(D).
-$$
+```
 
 Because the DD endpoint has a positive normalized detour, equality in the relaxation
 
-$$
+```math
 x_B+a\le b
-$$
+```
 
 forces
 
-$$
+```math
 q-a=o(D).
-$$
+```
 
 PC then gives
 
-$$
+```math
 d_P=o(D),\qquad d_H=o(D),
-$$
+```
 
 and the remaining component ledger yields the stated linear singleton lower bound. These implications are valid; none assumes a pocket-to-component injection.
 
@@ -212,23 +212,23 @@ and the remaining component ledger yields the stated linear singleton lower boun
 
 Endpoint saturation of the attachment-cell area budget gives
 
-$$
+```math
 \sum_r\delta_r/D\to\lambda_{RD},
 \qquad
 \sum_r\delta_r^2/D^2\to\lambda_{RD}^2.
-$$
+```
 
 The inequality
 
-$$
+```math
 \sum_r\delta_r^2\le(\max_r\delta_r)\sum_r\delta_r
-$$
+```
 
 therefore forces one component with
 
-$$
+```math
 \delta_*/D\to\lambda_{RD}
-$$
+```
 
 and total diameter `o(D)` in all other components. The dominant attachment polygon saturates planar isodiametry, so every normalized Hausdorff limit is a disk of diameter `lambda_RD`.
 
@@ -250,23 +250,23 @@ The diagonal-sequence argument then gives a nonexplicit positive gap above `lamb
 
 Let `K subset F`, `V(K) subset partial F`, `diam K=d<=3D/5`. Bonnesen gives a concentric annulus. With normalized half-width parameter `x=2(r_2-r_1)/d`, one obtains
 
-$$
+```math
 B(c,{d\over2}(1-x))\subset K\subset B(c,{d\over2}(1+x)).
-$$
+```
 
 The adjacent polygon-edge support normals are each within an angle
 
-$$
+```math
 \alpha=\arccos{1-x\over1+x}
-$$
+```
 
 of the corresponding vertex radial direction. Since the inner disk is nondegenerate, the cyclic radial directions of the vertices cover the circle; consecutive gaps are at most `2alpha`. Every support normal of `F` at a shared polygon vertex is also a support normal of `K` there and therefore lies in the polygon normal cone. This makes the selected force-hull support normals a `2alpha`-net.
 
 The resulting radial support estimate
 
-$$
+```math
 D\le d\frac{(1+x)^3}{1-6x+x^2}
-$$
+```
 
 is correct. The constant BV loss `1/1600` follows.
 
@@ -274,16 +274,16 @@ is correct. The constant BV loss `1/1600` follows.
 
 The exact root `kappa(c)` of
 
-$$
+```math
 c(1+\kappa)^3=1-6\kappa+\kappa^2
-$$
+```
 
 correctly packages the same support-normal argument and yields
 
-$$
+```math
 area(K)\le
 \left({\pi\over4}-{\kappa(c)^2\over4}\right)d^2.
-$$
+```
 
 The defining rational function is strictly increasing in `x` on the stated interval, so the direction of the contradiction is correct. Applying BVE cellwise with `c=lambda+eta` and then `eta downarrow0` correctly yields the surplus-dependent attachment coefficient `G(lambda)`.
 
@@ -295,17 +295,17 @@ BRD is the constant-BV-coefficient rerun of RX. Its monotonicity and exact `>0.5
 
 BF replaces the constant coefficient by BVE's increasing `G(lambda)`. The fixed-`y` threshold monotonicities remain correct; differentiating the JC root gives a positive right-branch derivative because
 
-$$
+```math
 \pi c_R(p-2)>\lambda+p-y.
-$$
+```
 
 The pre-transition implicit derivative uses the same robust `F_y>639/19600` lower bound. The BVE exact certificate independently passes and proves `lambda_BVE>0.59834`.
 
 CW's endpoint exclusion is also valid. Saturation concentrates component diameter into one attachment hull `K_D`. If `P_D/d_D` stayed below `pi` by a fixed amount, Bonnesen would force an annulus parameter strictly below `kappa(lambda_BVE)`, while the BVE support-normal inequality would then give
 
-$$
+```math
 1<1
-$$
+```
 
 in the limit. Therefore `P_D/d_D->pi`.
 
@@ -323,16 +323,16 @@ Choose an exterior force-hull point `y` at distance at least `D/2` from the Bonn
 
 The tangent geometry gives a uniform edge-length lower bound. The subsequent perimeter lemma is correct: if a diameter-`d` convex body contains a boundary segment of length `ell`, then in the segment-normal direction its width is at most
 
-$$
+```math
 \sqrt{d^2-\ell^2/4}.
-$$
+```
 
 The width function is `d`-Lipschitz in angular distance because it is the support function of `K-K subset B(0,d)`. Integrating the resulting triangular width deficit gives
 
-$$
+```math
 \pi d-P
 \ge d\left(1-\sqrt{1-\ell^2/(4d^2)}\right)^2.
-$$
+```
 
 Feeding this perimeter deficit into Bonnesen yields HE.3.
 
@@ -344,54 +344,54 @@ No step uses RSR equality uniqueness.
 
 The published HE statement deliberately rounds its loss down to
 
-$$
+```math
 {3\over4000}=0.00075.
-$$
+```
 
 Its own case split proves more.
 
 If
 
-$$
+```math
 x\ge{11\over200},
-$$
+```
 
 Bonnesen immediately gives
 
-$$
+```math
 {A\over d^2}
 \le{\pi\over4}-{x^2\over4}
 \le{\pi\over4}-{121\over160000}.
 \tag{HE+1}
-$$
+```
 
 If `x<11/200`, HE proves `x>51/1000` and one hidden edge of normalized length at least
 
-$$
+```math
 r={69363\over200000}.
-$$
+```
 
 Put
 
-$$
+```math
 s_0={r^4\over64}.
-$$
+```
 
 The same Bonnesen feedback gives the exact loss
 
-$$
+```math
 {1\over4}\left({51\over1000}\right)^2
 +{s_0\over2}-{s_0^2\over12}.
-$$
+```
 
 Exact rational arithmetic gives
 
-$$
+```math
 {1\over4}\left({51\over1000}\right)^2
 +{s_0\over2}-{s_0^2\over12}
 >{121\over160000}.
 \tag{HE+2}
-$$
+```
 
 Therefore the proof actually establishes:
 
@@ -399,14 +399,14 @@ Therefore the proof actually establishes:
 
 Under the hypotheses of HE,
 
-$$
+```math
 \boxed{
 area(K)
 \le
 \left({\pi\over4}-{121\over160000}\right)\,diam(K)^2.
 }
 \tag{HE+3}
-$$
+```
 
 The target-C cell corollary follows verbatim for `lambda<3/5`.
 
@@ -416,43 +416,43 @@ The target-C cell corollary follows verbatim for `lambda<3/5`.
 
 Let
 
-$$
+```math
 c_+= {\pi\over4}-{121\over160000}.
-$$
+```
 
 Replace `c_HE` by `c_+` in HX. The optimizer proof is unchanged: the fixed-`y` JC threshold decreases to the FSDB/RSR crossover and increases after it; the DD crossover value decreases, the JC crossover value increases, and the pre-transition crossing has `F_y>0` by the same rational estimates. For `y>=pi/2`, it is enough to use the increasing fixed-`y` JC lower bound as explained in Section 3 of this audit.
 
 The companion certificate `research/verify_pr182_heplus_05983685.py` uses only exact `Fraction` arithmetic. At
 
-$$
+```math
 y_0={15245283\over10^7}=1.5245283
-$$
+```
 
 it proves
 
-$$
+```math
 0.5115690768
 <\sqrt{\Phi(y_0)/c_R}
 <0.5115690769,
-$$
+```
 
-$$
+```math
 0.5983685<r_+(y_0)<0.5983686,
-$$
+```
 
 and
 
-$$
+```math
 d_+(y_0)>0.598369.
-$$
+```
 
 Thus `y_0` lies strictly before the unique crossover, and monotonicity gives
 
-$$
+```math
 \boxed{
 \lambda_+>0.5983685.
 }
-$$
+```
 
 This is a theorem-level audit strengthening, not a floating-point extrapolation.
 
@@ -464,42 +464,42 @@ This is a theorem-level audit strengthening, not a floating-point extrapolation.
 
 Writing an OP pocket chain length as
 
-$$
+```math
 \ell_P=2+r_P,
 \qquad\sum r_P=d_P,
-$$
+```
 
 the exact convexity/concentration identity gives
 
-$$
+```math
 \sum_P\ell_P^3
 \le(d_P+2)^3+8(a-1).
-$$
+```
 
 Combining with DD yields the finite PD.1 bound. After normalization, PC gives
 
-$$
+```math
 d+\xi\le\lambda,
 \qquad
 \xi=Q/D,
-$$
+```
 
 and the exceptional-face allocation inequality
 
-$$
+```math
 {1\over\sqrt6}(1-a)^{3/2}\sqrt{r-a}+{a^2\over4\pi}
 \le{1\over\sqrt6}\sqrt r
-$$
+```
 
 is correct for `0<=a<=min(1,r)`. Hence
 
-$$
+```math
 \boxed{
 A(y,p)-{\pi\over4}\lambda^2
 \le{1\over\sqrt6}\lambda^{3/2}\sqrt{2y-p}
 }
 \tag{PD}
-$$
+```
 
 is a valid post-ZF necessary inequality.
 

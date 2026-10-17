@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/22-contact-crosscut-separator.md) · source SHA-256 `1c7050144616004d8b28561a5ce0bca9e680330de37a0f6c11418095f888db56`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 # Target A — contact-crosscut Schur separator bound
 
 This addendum continues the actual-response locked branch of Section 169.  A locked
@@ -16,17 +18,17 @@ large enough to close Target A.
 # 170. A geometric crosscut gives an exact Menger bound
 
 Work with the plateau-terminalized response optimum
-$$
+```math
 X^*\subset K^*,
 \qquad Z=(\Lambda+v)\cap\operatorname{int}K^*,
 \qquad O=Y_{\rm in}\setminus Z,
 \tag{170.1}
-$$
+```
 and the planar radial conflict graph
-$$
+```math
 G\subseteq X^*\times (Z\sqcup O).
 \tag{170.2}
-$$
+```
 Assume `K^*` is full-dimensional.  Choose the lattice translate generically so that,
 in addition to the canonical no-distance-equality conditions, no response radial edge
 passes through a distinct point of `X^*`.  This excludes only finitely many
@@ -34,23 +36,23 @@ codimension-one translation conditions and therefore does not affect the pointwi
 survivor argument.
 
 Let
-$$
+```math
 Q=(q_0,q_1,\ldots,q_L)
 \tag{170.3}
-$$
+```
 be a simple unit-contact path in `X^*` such that
-$$
+```math
 q_0,q_L\in\partial K^*,
 \qquad
 q_1,\ldots,q_{L-1}\in\operatorname{int}K^*,
 \tag{170.4}
-$$
+```
 and the polygonal arc `|Q|` meets `partial K^*` only at its two endpoints.  Thus
 `|Q|` is a crosscut of the topological disk `K^*`.  The relative complement
-$$
+```math
 K^*\setminus |Q|
 \tag{170.5}
-$$
+```
 has exactly two connected components; call them `D_L,D_R`.  Each component contains
 one of the two open boundary arcs of `partial K^*\setminus{q_0,q_L}`.  In particular,
 every point of `K^*\setminus |Q|`, including a point on the hull boundary away from the
@@ -58,13 +60,13 @@ crosscut endpoints, belongs to exactly one of `D_L,D_R`.
 
 For a response point `x in X^*`, let `N_Lambda(x)` denote its strict neighborhood in
 the response lattice.  Put
-$$
+```math
 R_Q=
 \left(\bigcup_{q\in V(Q)}N_\Lambda(q)\right)\cap Y_{\rm in},
 \qquad
 W_Q=V(Q)\sqcup R_Q.
 \tag{170.6}
-$$
+```
 The two shores are disjoint, so this is a disjoint union.
 
 ## 170.1 Removing `W_Q` eliminates every crossing of the crosscut
@@ -73,14 +75,11 @@ The two shores are disjoint, so this is a disjoint union.
 > `|Q|`.  Consequently every connected component of the induced graph on
 > 
 
-$$
-
+```math
 > (X^*\sqcup Z)\setminus W_Q
 > \tag{170.7}
 > 
-$$
-
-
+```
 > lies entirely in `D_L` or entirely in `D_R`.
 
 ### Proof
@@ -93,61 +92,61 @@ crosscut vertex distinct from `x`.  If `x in V(Q)` then the edge is incident wit
 Suppose `xy` nevertheless meets the relative interior of a unit contact edge
 `q_iq_{i+1}`.  If the intersection point is the right endpoint `y`, then `y` lies in
 the open segment between `q_i` and `q_{i+1}` and hence
-$$
+```math
 |y-q_i|<1,
 \qquad |y-q_{i+1}|<1.
 \tag{170.8}
-$$
+```
 Thus `y in R_Q`, contradiction.
 
 The two segments cannot overlap collinearly in a nontrivial interval.  Indeed, because
 `x` is distinct from `q_i,q_{i+1}`, unit separation gives
-$$
+```math
 |x-q_i|\ge1,
 \qquad |x-q_{i+1}|\ge1.
 \tag{170.9}
-$$
+```
 A collinear segment from `x` of length `|x-y|<1` therefore cannot reach the relative
 interior of the unit segment `q_iq_{i+1}`.  Hence every remaining intersection is a
 proper crossing.  Lemma 169.5 then gives
-$$
+```math
 |y-q_i|<1
 \quad\text{or}\quad
 |y-q_{i+1}|<1,
 \tag{170.10}
-$$
+```
 so again `y in R_Q subset W_Q`, a contradiction.  Thus no surviving response edge
 meets the crosscut.
 
 Every edge with both endpoints in `K^*` is contained in `K^*` by convexity.  A path in
 the induced graph on `X^* sqcup Z` therefore cannot pass from `D_L` to `D_R` without
-meeting the crosscut.  The first assertion excludes that possibility.  $\square$
+meeting the crosscut.  The first assertion excludes that possibility.  $`\square`$
 
 Because a generic response point has at most four strict lattice neighbors,
-$$
+```math
 \boxed{|R_Q|\le4|V(Q)|,
 \qquad |W_Q|\le5|V(Q)|.}
 \tag{170.11}
-$$
+```
 More precisely,
-$$
+```math
 \boxed{
 |W_Q\setminus C^\partial|
 =|R_Q|+|V(Q)\setminus C^\partial|
 \le4|V(Q)|+|V(Q)\setminus C^\partial|.
 }
 \tag{170.12}
-$$
+```
 
 ## 170.2 Side decomposition of terminals and exterior sinks
 
 Delete `W_Q`.  For `sigma in {L,R}` define
-$$
+```math
 C_\sigma
 =
 \{c\in C^\partial\setminus W_Q:c\in D_\sigma\}.
 \tag{170.13}
-$$
+```
 For an exterior right vertex `o in O\setminus W_Q`, put `o in O_sigma` when `o`
 has at least one surviving response neighbor `x in X^*\setminus W_Q` belonging to
 `D_sigma`.  Thus an exterior vertex may belong to both `O_L` and `O_R`; allowing this
@@ -160,8 +159,7 @@ directed `C^partial-to-O` path has all of its vertices except its final `O` endp
 > **Theorem 170.2 (contact-crosscut Menger bound).**  The Schur rank satisfies
 > 
 
-$$
-
+```math
 > \boxed{
 > \operatorname{rank}S
 > \le
@@ -171,15 +169,12 @@ $$
 > }
 > \tag{170.14}
 > 
-$$
-
-
+```
 > Consequently the terminal vertices of the shield cancel exactly from the nullity
 > loss:
 > 
 
-$$
-
+```math
 > \boxed{
 > \zeta=\dim\ker S
 > \ge
@@ -189,14 +184,11 @@ $$
 > }
 > \tag{170.15}
 > 
-$$
-
-
+```
 > Hence
 > 
 
-$$
-
+```math
 > \boxed{
 > \zeta
 > \ge
@@ -206,9 +198,7 @@ $$
 > }
 > \tag{170.16}
 > 
-$$
-
-
+```
 > The earlier crude `5|V(Q)|` loss is recovered by discarding the information that
 > some crosscut vertices may themselves be Schur terminals.
 
@@ -216,10 +206,10 @@ $$
 
 Take a maximum family `mathcal P` of pairwise vertex-disjoint directed
 `C^partial-to-O` paths.  By Theorem 113.1,
-$$
+```math
 |\mathcal P|=\operatorname{rank}S.
 \tag{170.17}
-$$
+```
 At most `|W_Q|` paths of `mathcal P` contain a vertex of `W_Q`, because the paths are
 vertex-disjoint.  Delete those paths.
 
@@ -230,22 +220,22 @@ of its vertices before the final exterior endpoint remain in the same component
 `D_L` or `D_R`.  Hence a path starting in `C_L` ends at a vertex of `O_L`, and a path
 starting in `C_R` ends at a vertex of `O_R`.  Vertex-disjointness makes both the
 initial terminals and the exterior endpoints distinct.  Therefore at most
-$$
+```math
 \min\{|C_L|,|O_L|\}
 \tag{170.18}
-$$
+```
 remaining paths start on the left and at most the analogous minimum start on the
 right.  Adding the at most `|W_Q|` deleted paths proves (170.14).
 
 Now the left-shore terminal set is partitioned exactly as
-$$
+```math
 C^\partial
 =
 (C^\partial\cap W_Q)\sqcup C_L\sqcup C_R.
 \tag{170.19}
-$$
+```
 Subtract (170.14) from its cardinality:
-$$
+```math
 \begin{aligned}
 \zeta
 &\ge |C^\partial\cap W_Q|+|C_L|+|C_R|-|W_Q|\\
@@ -264,23 +254,22 @@ $$
 -|W_Q\setminus C^\partial|.
 \end{aligned}
 \tag{170.20}
-$$
-This is (170.15), and (170.16) follows from (170.12).  $\square$
+```
+This is (170.15), and (170.16) follows from (170.12).  $`\square`$
 
 ## 170.3 Exact closing criterion for the locked branch
 
 Put as usual
-$$
+```math
 s=\Delta_\Lambda-d_{\rm int}.
 \tag{170.21}
-$$
+```
 
 > **Corollary 170.3 (crosscut-imbalance closure criterion).**  If a locked positive-
 > contact component supplies a crosscut `Q` for which
 > 
 
-$$
-
+```math
 > \boxed{
 > \max\{0,|C_L|-|O_L|\}
 > +\max\{0,|C_R|-|O_R|\}
@@ -288,11 +277,11 @@ $$
 > }
 > \tag{170.22}
 > 
-$$
-
-
+```
 > then Target A closes for that configuration.  It is enough to prove
-> \[
+> 
+
+```math
 > \boxed{
 > \max\{0,|C_L|-|O_L|\}
 > +\max\{0,|C_R|-|O_R|\}
@@ -300,11 +289,12 @@ $$
 > s+4|V(Q)|+|V(Q)\setminus C^\partial|.
 > }
 > \tag{170.23}
+```
 
 ### Proof
 
 Equation (170.15) gives `zeta>=s`, which is exactly the Target A Schur-nullity
-criterion.  \(\square\)
+criterion.  $`\square`$
 
 The theorem does not assert (170.22).  It isolates the exact quantitative information
 still missing from the locked branch: either a sufficiently economical contact

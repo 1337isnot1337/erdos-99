@@ -15,23 +15,23 @@ This note strengthens the generic support-seven H6 finite branch. It does not ch
 
 The previous exact complete-angle endpoint contains
 
-$$
+```math
 5692=4464\,C_7+1228\,(C_3\sqcup C_4)
-$$
+```
 
 generic H6 cells.
 
 Retaining the physical gap-order disjunction at one pentagonal face and intersecting each order cone with the exact median-threshold hull gives 716 additional exact exclusions:
 
-$$
+```math
 \boxed{5692\longrightarrow4976}
-$$
+```
 
 with
 
-$$
+```math
 \boxed{4976=3972\,C_7+1004\,(C_3\sqcup C_4).}
-$$
+```
 
 The exact exclusion split is
 
@@ -77,31 +77,31 @@ This reduction keeps all ten physical strict gap orders separate. Equality cases
 
 For a fixed order
 
-$$
+```math
 x_a\le x_b\le x_c\le x_d\le x_e,
-$$
+```
 
 the existing 2/5 threshold theorem forces ranks 1 and 2 onto the low secant
 
-$$
+```math
 x_{k+2}+x_{k+3}\le {2\over3}+{x_k\over3},
-$$
+```
 
 and ranks 4 and 5 onto the high secant
 
-$$
+```math
 x_{k+2}+x_{k+3}\le {1\over2}+{3x_k\over4}.
-$$
+```
 
 The median can lie on either side of 2/5. Instead of branching on that bit here, use the exact convex hull of the two median branches. Besides the four rank-forced secants, its two new facets are
 
-$$
+```math
 5x_b+7x_c+4x_d\ge6+x_a,
-$$
+```
 
-$$
+```math
 8x_b+13x_c+9x_d\ge12.
-$$
+```
 
 These inequalities are valid only with the order retained. The verifier does exactly that.
 
@@ -129,17 +129,17 @@ Faces 1 and 5 are not needed as the first witness for any of these 716 cells. Th
 
 For each of the 716 excluded cells, all ten order branches at the witness face have a rational Farkas certificate. Thus the reduction contains
 
-$$
+```math
 716\cdot10=7160
-$$
+```
 
 exact branch certificates.
 
 The certificate form is as follows. The original complete-angle facets are strict, with nonnegative multipliers `alpha` normalized by
 
-$$
+```math
 \sum\alpha_i=1.
-$$
+```
 
 The order/secant/hull facets are closed, with nonnegative multipliers `beta`. Equality multipliers are unrestricted. A certificate is accepted only when the weighted variable coefficients cancel exactly over `fractions.Fraction` in all 85 variables and the remaining forced constant is nonpositive. Since the normalized strict contribution is strictly positive while the closed contribution is nonnegative, such an identity is impossible for a feasible branch.
 

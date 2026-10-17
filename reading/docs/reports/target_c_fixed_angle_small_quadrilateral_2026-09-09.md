@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fixed_angle_small_quadrilateral_2026-09-09.md) · source SHA-256 `f02107347ea8b66f9aa93ec5c2341393035b47d5b62a228627b550bd64a34b87`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 14 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-2BACD0209E5D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — FAQ: exact maximal perimeter of a small quadrilateral with prescribed unit-diagonal angle
 
@@ -22,28 +24,29 @@ TQB reduced the explicit HKN gap problem to a finite four-endpoint optimization.
 
 Let `ABCD` be a nondegenerate convex quadrilateral of diameter at most one whose two diagonals satisfy
 
-$$
+```math
 AC=BD=1.
-$$
+```
 
 Let
 
-$$
+```math
 \phi\in[\pi/3,2\pi/3]
-$$
+```
 
 be the smaller oriented angle between the diagonal lines. Then
 
-$$
+```math
 \boxed{
 \operatorname{per}(ABCD)
 \le P_4(\phi),
 }
 \tag{FAQ.1}
+```
 
 where
 
-\[
+```math
 \boxed{
 P_4(\phi)
 :=
@@ -53,47 +56,50 @@ P_4(\phi)
 \sqrt{2-\sqrt3\sin\phi+\cos\phi}.
 }
 \tag{FAQ.2}
+```
 
 Equality is attained. Every equality configuration has a three-vertex equilateral triangle of side one among the four quadrilateral vertices.
 
 The function is symmetric under
 
-\[
+```math
 \phi\mapsto\pi-\phi.
-$$
+```
 
 At `phi=pi/2`, FAQ.2 becomes
 
-$$
+```math
 2+2\sqrt{2-\sqrt3}
 =2+\sqrt6-\sqrt2,
-$$
+```
 
 recovering Tamvakis's maximal unit-diameter quadrilateral perimeter.
 
 At the HKS angle
 
-$$
+```math
 \phi_c:=p_c/2
 =1.5176561597019888\ldots,
-$$
+```
 
 FAQ gives
 
-$$
+```math
 \boxed{
 P_4(\phi_c)
 =3.0349107652877701707\ldots,
 }
 \tag{FAQ.3}
+```
 
 so
 
-\[
+```math
 \boxed{
 p_c-P_4(\phi_c)
 =0.0004015541162074667\ldots .}
 \tag{FAQ.4}
+```
 
 This is more than eleven times the global Tamvakis separation `p_c-P_4^*` used in TQB.
 
@@ -103,54 +109,56 @@ This is more than eleven times the global Tamvakis separation `p_c-P_4^*` used i
 
 Fix unit vectors `e,v` making angle `phi`. Translate and rotate so
 
-\[
+```math
 A=0,
 \qquad C=e,
-$$
+```
 
 and orient `BD` so
 
-$$
+```math
 B-D=v.
-$$
+```
 
 Thus
 
-$$
+```math
 D=B-v.
-$$
+```
 
 The four side lengths are
 
-$$
+```math
 AB=|B|,
 \qquad
 BC=|B-e|,
-$$
+```
 
-$$
+```math
 DA=|B-v|,
 \qquad
 CD=|B-e-v|.
-$$
+```
 
 Because the complete quadrilateral has diameter at most one, all four quantities are at most one. Therefore `B` belongs to the compact convex set
 
-$$
+```math
 \boxed{
 K
 =B(0,1)\cap B(e,1)\cap B(v,1)\cap B(e+v,1).
 }
 \tag{FAQ.5}
+```
 
 The perimeter is the convex function
 
-\[
+```math
 \boxed{
 F(x)
 =|x|+|x-e|+|x-v|+|x-e-v|.
 }
 \tag{FAQ.6}
+```
 
 The four disk centers are the vertices of a unit rhombus. Its two vertex angles are `phi` and `pi-phi`, both lying in `[pi/3,2pi/3]`.
 
@@ -162,55 +170,57 @@ A convex function on a compact convex set attains its maximum on the boundary. T
 
 Take any one disk center `O`. The two adjacent disk centers are unit distance from `O`; let the angle between their center vectors be
 
-\[
+```math
 \psi\in[\pi/3,2\pi/3].
-$$
+```
 
 After translating `O` to zero and rotating, write the adjacent centers as
 
-$$
+```math
 e_1=(1,0),
 \qquad
 e_2=(\cos\psi,\sin\psi).
-$$
+```
 
 The opposite rhombus center is `e_1+e_2`.
 
 A point on the active circle is
 
-$$
+```math
 x=(\cos t,\sin t).
-$$
+```
 
 Feasibility with the two adjacent unit disks gives
 
-$$
+```math
 |x-e_1|\le1,
 \qquad
 |x-e_2|\le1.
-$$
+```
 
 For unit vectors, distance at most one is equivalent to angular separation at most `pi/3`. Hence, after choosing the relevant angular lift,
 
-$$
+```math
 \boxed{
 \psi-\frac\pi3
 \le t\le
 \frac\pi3.
 }
 \tag{FAQ.7}
+```
 
 The fourth disk can only shrink this interval, so an upper bound on the whole interval is sufficient.
 
 On this active circle,
 
-\[
+```math
 F(t)
 =1
 +2\sin\frac t2
 +2\sin\frac{\psi-t}{2}
 +\sqrt{3+2\cos\psi-2\cos t-2\cos(\psi-t)}.
 \tag{FAQ.8}
+```
 
 ---
 
@@ -218,38 +228,39 @@ F(t)
 
 Put
 
-\[
+```math
 \theta:=\frac\psi2,
 \qquad
 x:=t-\theta.
-$$
+```
 
 Then
 
-$$
+```math
 |x|\le a:=\frac\pi3-\theta\le\frac\pi6.
-$$
+```
 
 Write
 
-$$
+```math
 C:=\cos\theta,
 \qquad
 R(x):=\sqrt{1+4C^2-4C\cos x}.
-$$
+```
 
 Equation FAQ.8 becomes the even function
 
-$$
+```math
 \boxed{
 F(x)
 =1+4\sin\frac\theta2\cos\frac x2+R(x).
 }
 \tag{FAQ.9}
+```
 
 For `x>0`, differentiation gives
 
-\[
+```math
 F'(x)
 =2\sin\frac x2
 \left[
@@ -258,81 +269,84 @@ F'(x)
 \frac{2C\cos(x/2)}{R(x)}
 \right].
 \tag{FAQ.10}
+```
 
 It remains to show the bracket is positive.
 
 All quantities are nonnegative, so square the desired inequality. Put
 
-\[
+```math
 q:=\cos\frac x2.
-$$
+```
 
 Using
 
-$$
+```math
 \sin^2\frac\theta2=\frac{1-C}{2},
-$$
+```
 
 and
 
-$$
+```math
 R(x)^2=(2C+1)^2-8Cq^2,
-$$
+```
 
 one finds exactly
 
-$$
+```math
 4C^2q^2
 -\sin^2\frac\theta2\,R(x)^2
 =
 \frac{4C^3+8Cq^2-3C-1}{2}.
 \tag{FAQ.11}
+```
 
 Now
 
-\[
+```math
 \frac12\le C\le\frac{\sqrt3}{2}
-$$
+```
 
 and
 
-$$
+```math
 q^2\ge\cos^2\frac\pi{12}
 =rac{2+\sqrt3}{4}.
-$$
+```
 
 The numerator in FAQ.11 is increasing in both `q^2` and `C` on this rectangle, because
 
-$$
+```math
 \frac{\partial}{\partial C}
 (4C^3+8Cq^2-3C-1)
 =12C^2+8q^2-3>0.
-$$
+```
 
 At the lower corner it equals
 
-$$
+```math
 4(1/2)^3
 +8(1/2)\frac{2+\sqrt3}{4}
 -3(1/2)-1
 =\sqrt3>0.
-$$
+```
 
 Therefore the bracket in FAQ.10 is strictly positive for every `x>0`.
 
 Hence
 
-$$
+```math
 \boxed{F(x)\text{ is strictly increasing in }|x|.}
 \tag{FAQ.12}
+```
 
 The maximum on every feasible boundary arc occurs at one of the two endpoint angles
 
-\[
+```math
 t=\frac\pi3
 \quad\text{or}\quad
 t=\psi-\frac\pi3.
-$$
+```
 
 ---
 
@@ -340,47 +354,49 @@ $$
 
 Take
 
-$$
+```math
 t=\frac\pi3.
-$$
+```
 
 Then the distances to `O` and `e_1` are both one. The remaining squared distances are
 
-$$
+```math
 |x-e_2|^2
 =2-\sqrt3\sin\psi-\cos\psi,
 \tag{4.1}
-$$
+```
 
-$$
+```math
 |x-e_1-e_2|^2
 =2-\sqrt3\sin\psi+\cos\psi.
 \tag{4.2}
+```
 
 The endpoint lies in all four disks. Indeed `|x-e_2|<=1` follows from `|psi-pi/3|<=pi/3`, while
 
-\[
+```math
 |x-e_1-e_2|^2\le1
 \iff
 1+\cos\psi\le\sqrt3\sin\psi,
-$$
+```
 
 which is equivalent to
 
-$$
+```math
 \cot(\psi/2)\le\sqrt3
-$$
+```
 
 and holds for `psi>=pi/3`.
 
 Thus the endpoint value is actually attained and equals
 
-$$
+```math
 2+
 \sqrt{2-\sqrt3\sin\psi-\cos\psi}
 +
 \sqrt{2-\sqrt3\sin\psi+\cos\psi}.
 \tag{4.3}
+```
 
 At the other endpoint the two square-root terms are exchanged.
 
@@ -394,9 +410,9 @@ At every boundary maximum, the active point has distance one to the active rhomb
 
 Translating this back through FAQ.5 gives one of the four source triples
 
-\[
+```math
 ABC,\ ABD,\ BCD,\ ACD
-$$
+```
 
 with all three pairwise distances equal to one.
 
@@ -416,30 +432,30 @@ This equality classification is stronger for Target C than the global Tamvakis u
 
 At
 
-$$
+```math
 \phi_c=p_c/2,
-$$
+```
 
 FAQ.2 gives
 
-$$
+```math
 P_4(\phi_c)
 =3.0349107652877701706750\ldots .
-$$
+```
 
 Therefore
 
-$$
+```math
 p_c-P_4(\phi_c)
 =0.00040155411620746672497\ldots .
-$$
+```
 
 The global Tamvakis gap was only
 
-$$
+```math
 p_c-(2+\sqrt6-\sqrt2)
 =0.0000361389938945880\ldots .
-$$
+```
 
 So using the actual PI diagonal angle enlarges the exact four-point perimeter separation by a factor greater than eleven.
 
@@ -463,9 +479,9 @@ The finite next target is now sharper:
 
 Because FAQ gives
 
-$$
+```math
 \operatorname{per}(Q)\le p_c-0.00040155\ldots,
-$$
+```
 
 only a very weak quantitative nested-convex estimate is needed to make the HKN surplus gap explicit.
 

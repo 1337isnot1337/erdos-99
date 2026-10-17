@@ -20,23 +20,23 @@ PK proves that every primitive torus character on the Gaussian P2 curve remains 
 
 Let
 
-$$
+```math
 K:=\mathbb Q(i),
 \qquad
 f(X,Y):=X^2Y^2+i(4X^2-6X+4)Y-1.
-$$
+```
 
 Work first in the Laurent ring
 
-$$
+```math
 K[X^{\pm1},Y^{\pm1}].
-$$
+```
 
 For a full-rank integer matrix
 
-$$
+```math
 M=\begin{pmatrix}a&b\\c&d\end{pmatrix},
-$$
+```
 
 let `phi_M` be the torus isogeny whose pullback on characters is the lattice map represented by `M`. Equivalently, after choosing the usual coordinate convention, `phi_M^*f` is obtained from `f` by a rank-two monomial substitution. Transposing `M` only changes the coordinate convention and does not affect the Smith invariants used below.
 
@@ -44,25 +44,25 @@ let `phi_M` be the torus isogeny whose pullback on characters is the lattice map
 
 Assume the first Smith invariant of `M` is one, equivalently
 
-$$
+```math
 \boxed{\gcd(a,b,c,d)=1.}
 \tag{CI.1}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{\phi_M^*f\text{ is irreducible in }K[X^{\pm1},Y^{\pm1}].}
 \tag{CI.2}
-$$
+```
 
 After multiplication by a monomial to clear negative exponents, the resulting ordinary polynomial has no nonmonomial factorization over `K`.
 
 Equivalently, the inverse image of the irreducible curve
 
-$$
+```math
 C:f=0
-$$
+```
 
 under every finite torus isogeny with cyclic kernel is irreducible over `Q(i)`.
 
@@ -70,9 +70,9 @@ under every finite torus isogeny with cyclic kernel is irreducible over `Q(i)`.
 
 Suppose a rank-two matrix `M` occurs in the Schinzel/Sawin large-gap reduction and its row lattice contains a primitive integer vector, in particular a vector of the form
 
-$$
+```math
 (1,N).
-$$
+```
 
 Then `M` satisfies CI.1, so the associated monomial pullback of `f` is irreducible over `Q(i)`.
 
@@ -84,7 +84,7 @@ Thus the P2 Gaussian curve has **no rank-two monomial-pullback obstruction at al
 
 For any full-rank integer `2 x 2` matrix `M`, Smith normal form gives
 
-$$
+```math
 U M V
 =\begin{pmatrix}d_1&0\\0&d_2\end{pmatrix},
 \qquad
@@ -92,39 +92,39 @@ U,V\in GL_2(\mathbb Z),
 \qquad
 d_1\mid d_2.
 \tag{1.1}
-$$
+```
 
 The first invariant is
 
-$$
+```math
 \boxed{d_1=\gcd(a,b,c,d).}
 \tag{1.2}
-$$
+```
 
 Under CI.1,
 
-$$
+```math
 d_1=1.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 U M V=\operatorname{diag}(1,k),
 \qquad k=|\det M|.
 }
 \tag{1.3}
-$$
+```
 
 The finite cokernel is consequently cyclic of order `k`.
 
 Matrices in `GL_2(Z)` act by Laurent-monomial automorphisms on the source or target torus. Such automorphisms preserve irreducibility in the Laurent polynomial ring. Hence it is enough to prove CI after reducing the monomial map to
 
-$$
+```math
 (S,T)\longmapsto(S,T^k),
 \tag{1.4}
-$$
+```
 
 but with the target coordinates `(S,V)` replaced by a unimodular monomial coordinate system.
 
@@ -134,45 +134,45 @@ but with the target coordinates `(S,V)` replaced by a unimodular monomial coordi
 
 A unimodular target monomial change has the form
 
-$$
+```math
 S=X^pY^q,
 \qquad
 V=X^rY^s,
-$$
+```
 
 with
 
-$$
+```math
 \begin{pmatrix}p&q\\r&s\end{pmatrix}\in GL_2(\mathbb Z).
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{\gcd(r,s)=1.}
 \tag{2.1}
-$$
+```
 
 Thus the coordinate `V`, restricted to the original curve `C`, is exactly the primitive character
 
-$$
+```math
 \chi_{r,s}=X^rY^s.
-$$
+```
 
 PK proves for every prime `p_0`
 
-$$
+```math
 \chi_{r,s}\notin K(C)^{p_0},
-$$
+```
 
 and also excludes the exceptional `-4` fourth-power class.
 
 Consequently
 
-$$
+```math
 \boxed{T^k-\chi_{r,s}\text{ is irreducible over }K(C).}
 \tag{2.2}
-$$
+```
 
 ---
 
@@ -180,15 +180,15 @@ $$
 
 Let
 
-$$
+```math
 g(S,V)
-$$
+```
 
 be the Laurent polynomial obtained from `f(X,Y)` by the unimodular target coordinate change in Section 2. Since Laurent automorphisms preserve irreducibility and GC proves `f` irreducible,
 
-$$
+```math
 g
-$$
+```
 
 is irreducible.
 
@@ -196,48 +196,48 @@ Multiply by a Laurent monomial if necessary so that `g` is a primitive ordinary 
 
 View
 
-$$
+```math
 g(S,V)
-$$
+```
 
 as an irreducible polynomial over the field
 
-$$
+```math
 K(S).
-$$
+```
 
 Let `alpha` be the class of `V` in the function field of its curve. Then
 
-$$
+```math
 K(S)(\alpha)\cong K(C),
-$$
+```
 
 and under this identification
 
-$$
+```math
 \alpha=\chi_{r,s}.
-$$
+```
 
 The Capelli composition theorem says that
 
-$$
+```math
 g(S,T^k)
-$$
+```
 
 is irreducible over `K(S)` if and only if
 
-$$
+```math
 T^k-\alpha
-$$
+```
 
 is irreducible over `K(S)(\alpha)`.
 
 Equation (2.2) supplies exactly that condition. Hence
 
-$$
+```math
 \boxed{g(S,T^k)\text{ is irreducible over }K(S).}
 \tag{3.1}
-$$
+```
 
 Gauss's lemma, followed by undoing the source and target Laurent automorphisms from the Smith decomposition, proves CI.2. `square`
 
@@ -249,29 +249,29 @@ The rank-two large-gap reductions used by Schinzel and by Sawin--Shusterman--Sto
 
 For the one-parameter specialization relevant here, that vector is primitive; after the harmless fixed degree shift in the standard formulation it has the form
 
-$$
+```math
 (1,N).
-$$
+```
 
 Suppose an integer
 
-$$
+```math
 e>1
-$$
+```
 
 divided every entry of `M`. Then every integer linear combination of its rows would have both coordinates divisible by `e`. It could not equal the primitive vector `(1,N)`.
 
 Therefore
 
-$$
+```math
 \gcd(\text{entries of }M)=1.
-$$
+```
 
 By (1.2),
 
-$$
+```math
 d_1=1.
-$$
+```
 
 Thus every rank-two monomial map admitted by the primitive large-gap relation has cyclic cokernel and falls under CI.
 
@@ -285,33 +285,33 @@ The transpose convention in the literature can be a source of pointless ambiguit
 
 Let
 
-$$
+```math
 M_T\cong\mathbb Z^2
-$$
+```
 
 be the character lattice of the target torus and
 
-$$
+```math
 M_S\cong\mathbb Z^2
-$$
+```
 
 that of the source torus. A finite monomial map induces an injective lattice map
 
-$$
+```math
 \phi^*:M_T\hookrightarrow M_S.
-$$
+```
 
 The first Smith invariant equals one if and only if the finite quotient
 
-$$
+```math
 M_S/\phi^*M_T
-$$
+```
 
 is cyclic. In that case one may choose unimodular bases in which
 
-$$
+```math
 \phi^*=\operatorname{diag}(1,k).
-$$
+```
 
 The second target basis vector is primitive. Its restriction to `C` is therefore a primitive character, and PK says its `k`th-root Kummer cover is irreducible.
 
@@ -325,15 +325,15 @@ GC proved irreducibility for the special two-parameter bivariate families requir
 
 GC:
 
-$$
+```math
 \text{special explicit matrices for all }t,\ell.
-$$
+```
 
 CI:
 
-$$
+```math
 \boxed{\text{every full-rank monomial matrix with first Smith invariant }1.}
-$$
+```
 
 The latter is precisely the structural class forced by a primitive exponent vector in the rank-two Schinzel reduction.
 
@@ -379,11 +379,11 @@ The conditional GC-F handoff said:
 
 CI replaces the algebraic half of that request by a direct theorem:
 
-$$
+```math
 \boxed{
 \text{every rank-two primitive Schinzel pullback of the P2 curve is irreducible over }\mathbb Q(i).
 }
-$$
+```
 
 So the shortest remaining external/theorem-level question is now only:
 

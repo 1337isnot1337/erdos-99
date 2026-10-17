@@ -28,31 +28,31 @@ Fix one all-inactive FREE activation ancestry. Let
 
 Every ancestry vertex is an original contact- and diameter-inactive source point in the original outer contact face, and all ancestry vertices are distinct. The two-sided absorption theorem gives
 
-$$
+```math
 \boxed{L\ge D-O(\sqrt D).}
 \tag{SF.1}
-$$
+```
 
 ## 1. One FREE ancestry pays almost one full diameter unit of OP currency
 
 Let `Z_in` be the old outer-face isolate population inside `F`. Since the ancestry has `L+U+1` distinct vertices,
 
-$$
+```math
 Z_{\rm in}+Z_{\rm ext}\ge L+U+1.
 \tag{SF.2}
-$$
+```
 
 The exact OP inequality is
 
-$$
+```math
 Z_{\rm in}
 \le\frac{2}{\sqrt3}H_{\rm out}-\frac{u}{2}.
 \tag{SF.3}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 Z_{\rm ext}
 +\frac{2}{\sqrt3}H_{\rm out}
@@ -60,116 +60,116 @@ Z_{\rm ext}
 \ge D+U-O(\sqrt D).
 }
 \tag{SF.4}
-$$
+```
 
 The outer-pocket area capacity
 
-$$
+```math
 H_{\rm out}\le\frac4\pi x_B^2
 \tag{SF.5}
-$$
+```
 
 and `u>=0` now give
 
-$$
+```math
 \boxed{
 Z_{\rm ext}
 +\frac8{\pi\sqrt3}x_B^2
 \ge D+U-O(\sqrt D).
 }
 \tag{SF.6}
-$$
+```
 
 Thus every FREE module, including the later `LINEAR-MATCHING` branch, already has a nonlinear canonical outer-currency cost. No common-edge reuse is needed.
 
 Immediate consequences are
 
-$$
+```math
 x_B=o(\sqrt D)
 \Longrightarrow
 Z_{\rm ext}\ge D-O(\sqrt D),
 \tag{SF.7}
-$$
+```
 
 and
 
-$$
+```math
 Z_{\rm ext}=o(D)
 \Longrightarrow
 \frac{x_B}{\sqrt D}
 \ge
 \sqrt{\frac{\pi\sqrt3}{8}}-o(1).
 \tag{SF.8}
-$$
+```
 
 The constant is
 
-$$
+```math
 \boxed{
 c_{\rm FREE}
 :=\sqrt{\frac{\pi\sqrt3}{8}}
 =0.824727083093451\ldots .}
 \tag{SF.9}
-$$
+```
 
 ## 2. Combine with the directional pocket-width routing law
 
 The pocket-width routing theorem for the same ancestry gives
 
-$$
+```math
 2x_B(U+1)+2(1+t_D)Z_{\rm ext}
 \ge D-O(\sqrt D).
 \tag{SF.10}
-$$
+```
 
 Because every upper gate uses one distinct external source point,
 
-$$
+```math
 U\le Z_{\rm ext},
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 2x_B(Z_{\rm ext}+1)
 +2(1+t_D)Z_{\rm ext}
 \ge D-O(\sqrt D).
 }
 \tag{SF.11}
-$$
+```
 
 Suppose a subsequence has finite square-root limits
 
-$$
+```math
 \frac{x_B}{\sqrt D}\to\xi,
 \qquad
 \frac{Z_{\rm ext}}{\sqrt D}\to\zeta.
-$$
+```
 
 Then (SF.6) and (SF.11) give
 
-$$
+```math
 \boxed{
 \frac8{\pi\sqrt3}\xi^2\ge1,
 \qquad
 2\xi\zeta\ge1.
 }
 \tag{SF.12}
-$$
+```
 
 Hence
 
-$$
+```math
 \xi\ge c_{\rm FREE},
 \qquad
 \zeta\ge\frac1{2\xi}.
 \tag{SF.13}
-$$
+```
 
 Since `c_FREE>1/sqrt(2)`, minimizing `xi+1/(2xi)` on this range gives
 
-$$
+```math
 \boxed{
 \liminf
 \frac{x_B+Z_{\rm ext}}{\sqrt D}
@@ -178,18 +178,18 @@ c_{\rm FREE}+\frac1{2c_{\rm FREE}}
 =1.430988245421916\ldots .
 }
 \tag{SF.14}
-$$
+```
 
 This statement is unconditional on the FREE side: if either normalized currency diverges, the bound is automatic; if both remain bounded, (SF.12) applies.
 
 At the scalar minimum,
 
-$$
+```math
 \frac{x_B}{\sqrt D}\to0.824727083093451\ldots,
 \qquad
 \frac{Z_{\rm ext}}{\sqrt D}\to0.606261162328465\ldots .
 \tag{SF.15}
-$$
+```
 
 The fixed-pair `PAIR-REUSE` directional-defect theorem improves these constants slightly to `0.825157...`, `0.605945...`, and `1.431102...`, but the basic obstruction is already present in one FREE module.
 
@@ -197,51 +197,51 @@ The fixed-pair `PAIR-REUSE` directional-defect theorem improves these constants 
 
 From (SF.4), if `Z_ext=O(sqrt(D))`, then
 
-$$
+```math
 H_{\rm out}\ge\left(\frac{\sqrt3}{2}-o(1)\right)D.
 \tag{SF.16}
-$$
+```
 
 The canonical outer-pocket detour-area theorem gives
 
-$$
+```math
 H_{\rm out}\le\frac\pi2x_B^{3/2}\sqrt u.
 \tag{SF.17}
-$$
+```
 
 Thus, for finite normalized limits
 
-$$
+```math
 \frac{x_B}{\sqrt D}\to\xi,
 \qquad
 \frac{u}{\sqrt D}\to\eta,
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{
 \xi^3\eta\ge\frac3{\pi^2}
 =0.303963550927013\ldots .
 }
 \tag{SF.18}
-$$
+```
 
 At the minimum `xi=c_FREE`, this gives
 
-$$
+```math
 \boxed{
 \eta\ge0.541864550399676\ldots .
 }
 \tag{SF.19}
-$$
+```
 
 The finiteness assumption on `eta` is automatic at the combined-currency endpoint. Since every force-hull side joins distinct source points, `P_F>=q`; hence
 
-$$
+```math
 0\le u=b-P_F=q+x_B-P_F\le x_B.
 \tag{SF.20}
-$$
+```
 
 Therefore a FREE sequence approaching the scalar minimum (SF.14) must simultaneously satisfy the positive square-root detour floor (SF.19).
 

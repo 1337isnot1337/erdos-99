@@ -15,17 +15,17 @@ Status: exact structural refinement of the generic reciprocal metric layer. The 
 
 The current complete generic metric test uses the 45 simple `K8` four-cycles
 
-$$
+```math
 F=\{C^{(1)}_{ij},C^{(2)}_{ij},C^{(3)}_{ij}:2\le i<j\le7\},
-$$
+```
 
 three for each of the fifteen pairs `ij`. Together with the 56 automatic triangle-side cycles, these imply the fifteen ground-root star equations.
 
 There are 210 undirected simple four-cycles in `K8`. An obvious next question is whether some 44 of them can replace the present 45-cycle test. The following exact obstruction sharply restricts such a search:
 
-$$
+```math
 \boxed{\text{Any sufficient 44-cycle family must use at least five cycles outside }F.}
-$$
+```
 
 Equivalently, no sufficient 44-cycle family can be obtained by introducing only zero, one, two, three, or four external simple four-cycles. Such a 44-family, if it exists at all, must omit at least six of the present 45 cycles and introduce at least five external cycles.
 
@@ -41,31 +41,31 @@ The verifier uses only exact `fractions.Fraction` arithmetic and integer determi
 
 Let `SIDE` be the span of the 56 automatic triangle-side cycles in the 168-edge cycle space of `L(K8)`. Let
 
-$$
+```math
 W=\operatorname{span}_{\mathbb Q}(\mathrm{SIDE}\cup F).
-$$
+```
 
 The 101 rows `SIDE + F` are independent, so `F` is a 45-element basis of `W/SIDE`.
 
 For each pair `2 <= i < j <= 7`, the previously proved local `K4` identity is
 
-$$
+```math
 2S_{ij}
 =-T_{01i}+T_{01j}-T_{0ij}-T_{1ij}
 +C^{(1)}_{ij}-C^{(2)}_{ij}-C^{(3)}_{ij}.
-$$
+```
 
 Modulo `SIDE`, therefore,
 
-$$
+```math
 S_{ij}=\tfrac12\bigl(C^{(1)}_{ij}-C^{(2)}_{ij}-C^{(3)}_{ij}\bigr).
-$$
+```
 
 In the `F` basis, the fifteen ground-root cycles consequently occupy fifteen disjoint three-coordinate blocks. Each block has coordinate vector
 
-$$
+```math
 \tfrac12(1,-1,-1).
-$$
+```
 
 If a subset `R` of the selected cycles is removed, the dimension of the missing ground information is exactly the number `t(R)` of these three-coordinate blocks touched by `R`.
 
@@ -75,22 +75,22 @@ Enumerating all 210 undirected simple `K8` four-cycles gives 45 selected cycles 
 
 For a set `E` of `r` external cycles, let `d(E)` be the exact rank of their images modulo `W`. Then
 
-$$
+```math
 \dim\bigl(\operatorname{span}(E)\cap W\bigr)=r-d(E).
-$$
+```
 
 A 44-cycle replacement with `r` external cycles contains `44-r` members of `F`, hence removes
 
-$$
+```math
 |R|=45-(44-r)=r+1
-$$
+```
 
 selected cycles. A necessary condition for it to recover all fifteen ground equations is
 
-$$
+```math
 t(R)\le r-d(E).
 \tag{1}
-$$
+```
 
 The verifier applies this condition exactly.
 
@@ -118,9 +118,9 @@ The verifier constructs the unique `W`-valued combination of each of the 60 depe
 
 Thus all
 
-$$
+```math
 60\cdot15=900
-$$
+```
 
 two-external/full-block possibilities fail exactly.
 
@@ -128,17 +128,17 @@ two-external/full-block possibilities fail exactly.
 
 Every exact external projective class has size at most two. Therefore three external cycles have quotient rank at least two:
 
-$$
+```math
 d(E)\ge2,
 \qquad
 r-d(E)\le1.
-$$
+```
 
 But removing four selected cycles necessarily touches at least
 
-$$
+```math
 \left\lceil\frac4{3}\right\rceil=2
-$$
+```
 
 ground blocks. Hence (1) fails for every three-external replacement.
 
@@ -146,25 +146,25 @@ ground blocks. Hence (1) fails for every three-external replacement.
 
 Removing five selected cycles touches at least two ground blocks. Hence a possible four-external replacement must satisfy
 
-$$
+```math
 4-d(E)\ge2,
-$$
+```
 
 so `d(E)<=2`.
 
 The verifier constructs the exact projective quotient configuration of all 165 external cycles and enumerates every four-set of quotient rank at most two. There are exactly
 
-$$
+```math
 \boxed{2010}
-$$
+```
 
 such four-sets, and every one has exact quotient rank two. Thus each contributes exactly two `W`-valued directions.
 
 With only two replacement directions, the five removed selected cycles must touch exactly two ground blocks. Because a block has only three coordinates, the removal pattern must be `3+2`: one complete block and two coordinates of another. There are
 
-$$
+```math
 15\cdot14\cdot\binom32=\boxed{630}
-$$
+```
 
 such removed-five patterns.
 
@@ -172,9 +172,9 @@ For each of the 2,010 external four-sets, the verifier computes an exact rationa
 
 The final finite audit therefore contains
 
-$$
+```math
 2010\cdot630=\boxed{1,266,300}
-$$
+```
 
 exact four-external compensation checks.
 
@@ -182,11 +182,11 @@ exact four-external compensation checks.
 
 A 44-cycle complete metric test, if one exists among the 210 simple `K8` four-cycles, must begin at exchange depth five:
 
-$$
+```math
 |E|\ge5,
 \qquad
 |R|=|E|+1\ge6.
-$$
+```
 
 This makes the remaining minimization problem smaller and more structured. The next search should classify quotient-rank-at-most-three five-external sets. For five external cycles, six selected cycles are removed. The first possible cases are:
 

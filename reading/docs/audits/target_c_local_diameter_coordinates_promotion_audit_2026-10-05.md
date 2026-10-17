@@ -26,43 +26,43 @@ Work on the canonical nonisolated positive-contact core. Contact-isolated source
 
 Canonical \`C-CONTACT-FACE-REGULARITY\` gives a smooth exact unit-contact realization manifold near the source. Modulo Euclidean motions its dimension is
 
-$$
+```math
 m=q-k-1.
-$$
+```
 
-Let $H$ be the set of active diameter edges, $h=|H|$, and define for every $e=ij\in H$
+Let $`H`$ be the set of active diameter edges, $`h=|H|`$, and define for every $`e=ij\in H`$
 
-$$
+```math
 \ell_e(p')
 =
 \frac{|p_i'-p_j'|^2-D^2}{2}.
-$$
+```
 
-Thus $\ell_e=0$ at the original source, and $\ell_e>0$ means that old active diameter edge has become strictly longer than $D$.
+Thus $`\ell_e=0`$ at the original source, and $`\ell_e>0`$ means that old active diameter edge has become strictly longer than $`D`$.
 
 Let
-$$
+```math
 g_e=d\ell_e|_{T_p\mathcal M}.
-$$
+```
 
 Collect these covectors as the rows of a linear map
-$$
+```math
 G:T_p\mathcal M\to\mathbb R^H.
-$$
+```
 
 ## 2. The active-diameter differential has full rank
 
-Suppose $u\in T_p\mathcal M$ lies in $\ker G$.
+Suppose $`u\in T_p\mathcal M`$ lies in $`\ker G`$.
 
-Because $u$ is tangent to the exact contact manifold, it kills every original contact row to first order. Since $Gu=0$, it also kills every active diameter row.
+Because $`u`$ is tangent to the exact contact manifold, it kills every original contact row to first order. Since $`Gu=0`$, it also kills every active diameter row.
 
-Canonical \`C-ZRF\` says that the mixed contact/active-diameter framework on the nonisolated core has only Euclidean infinitesimal motions. Modulo Euclidean motions, $u=0$.
+Canonical \`C-ZRF\` says that the mixed contact/active-diameter framework on the nonisolated core has only Euclidean infinitesimal motions. Modulo Euclidean motions, $`u=0`$.
 
 Therefore
 
-$$
+```math
 \boxed{\operatorname{rank}G=m.}
-$$
+```
 
 This is the exact linear statement needed below.
 
@@ -70,151 +70,151 @@ This is the exact linear statement needed below.
 
 Choose a normalized relative-interior canonical KKT stress. Its active diameter coefficients satisfy
 
-$$
+```math
 \beta_e>0,
 \qquad
 \sum_{e\in H}\beta_e=1.
-$$
+```
 
 Restricting KKT stationarity to the tangent space of the exact contact manifold gives
 
-$$
+```math
 \boxed{
 \sum_{e\in H}\beta_e g_e=0.
 }
-$$
+```
 
-Because all coefficients are strictly positive and the $g_e$ span the full $m$-dimensional tangent dual, zero lies in the ordinary interior of
-$$
+Because all coefficients are strictly positive and the $`g_e`$ span the full $`m`$-dimensional tangent dual, zero lies in the ordinary interior of
+```math
 \operatorname{conv}\{g_e:e\in H\}.
-$$
+```
 
-Indeed, if zero lay on the boundary, there would be a nonzero tangent vector $u$ and a supporting halfspace with
-$$
+Indeed, if zero lay on the boundary, there would be a nonzero tangent vector $`u`$ and a supporting halfspace with
+```math
 g_e(u)\ge0
-$$
-for every $e$. The positive weighted sum could vanish only if every $g_e(u)=0$, contradicting $\operatorname{rank}G=m$.
+```
+for every $`e`$. The positive weighted sum could vanish only if every $`g_e(u)=0`$, contradicting $`\operatorname{rank}G=m`$.
 
-Hence there is a source-dependent constant $c>0$ such that for every tangent vector $u$,
+Hence there is a source-dependent constant $`c>0`$ such that for every tangent vector $`u`$,
 
-$$
+```math
 \max_{e\in H}g_e(u)\ge c\|u\|,
 \qquad
 \min_{e\in H}g_e(u)\le-c\|u\|.
-$$
+```
 
 ## 4. Exact local diameter cage
 
 Take any smooth local coordinate chart
-$$
+```math
 \phi:U\subset\mathbb R^m\to\mathcal M,
 \qquad
 \phi(0)=p.
-$$
+```
 
 Taylor expansion gives, uniformly over the finite active edge set,
 
-$$
+```math
 \ell_e(\phi(z))
 =
 g_e(D\phi_0z)+O(\|z\|^2).
-$$
+```
 
-Since $D\phi_0$ is invertible onto $T_p\mathcal M$, the interior-hull estimate above gives one point-dependent $r>0$ such that every nonzero $z$ with $\|z\|<r$ has some old active diameter edge with
+Since $`D\phi_0`$ is invertible onto $`T_p\mathcal M`$, the interior-hull estimate above gives one point-dependent $`r>0`$ such that every nonzero $`z`$ with $`\|z\|<r`$ has some old active diameter edge with
 
-$$
+```math
 \ell_e(\phi(z))>0.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 0<\operatorname{dist}_{\mathcal M}(p,p')<r
 \quad\Longrightarrow\quad
 \max_{e\in H}|p_i'-p_j'|>D
 }
-$$
+```
 
-for every noncongruent contact-preserving realization $p'$ in that neighborhood.
+for every noncongruent contact-preserving realization $`p'`$ in that neighborhood.
 
-No uniform lower bound on $r$ is asserted.
+No uniform lower bound on $`r`$ is asserted.
 
 This makes the current obstruction precise: the exact contact manifold has many dimensions, but the old active diameter cage is locally sharp in every non-Euclidean direction.
 
 ## 5. Exact local diameter coordinates and the residual cage
 
-Choose a subset $B\subset H$ with
-$$
+Choose a subset $`B\subset H`$ with
+```math
 |B|=m
-$$
-whose covectors form a basis of $T_p^*\mathcal M$. Put
-$$
+```
+whose covectors form a basis of $`T_p^*\mathcal M`$. Put
+```math
 R=H\setminus B.
-$$
+```
 
 The map
-$$
+```math
 p'\mapsto
 y=
 (\ell_b(p'))_{b\in B}
-$$
-has invertible derivative at $p$. By the inverse function theorem, $y$ is an exact local coordinate system on $\mathcal M$.
+```
+has invertible derivative at $`p`$. By the inverse function theorem, $`y`$ is an exact local coordinate system on $`\mathcal M`$.
 
 Write the residual active excesses as
-$$
+```math
 \rho(y)
 =
 (\ell_r(p'(y)))_{r\in R}.
-$$
+```
 
 Now use
-$$
+```math
 d_H=q-h,
 \qquad
 k=d_H+s_Z.
-$$
+```
 Since
-$$
+```math
 m=q-k-1,
-$$
+```
 we obtain
 
-$$
+```math
 m=h-s_Z-1,
-$$
+```
 hence
 
-$$
+```math
 \boxed{|R|=h-m=s_Z+1.}
-$$
+```
 
-Thus every local diameter-coordinate basis leaves exactly $s_Z+1$ residual active diameter edges.
+Thus every local diameter-coordinate basis leaves exactly $`s_Z+1`$ residual active diameter edges.
 
 ## 6. First-order residual obstruction
 
 Let
-$$
+```math
 A=D\rho(0)
-$$
+```
 denote the Jacobian of the residual excess map at the origin.
 
-KKT stationarity in the $y$-coordinates becomes
+KKT stationarity in the $`y`$-coordinates becomes
 
-$$
+```math
 \boxed{
 \beta_B+A^T\beta_R=0.
 }
-$$
+```
 
-Therefore for every nonzero componentwise $y\le0$,
+Therefore for every nonzero componentwise $`y\le0`$,
 
-$$
+```math
 \beta_R^TAy
 =
 -\beta_B^Ty
 >0.
-$$
+```
 
 So if all basis active diameters are infinitesimally shortened or held fixed, some residual active diameter has positive first variation.
 
@@ -224,44 +224,44 @@ This is an exact finite first-order cage statement.
 
 Canonical \`C-CONTACT-FACE-REGULARITY\` also supplies the exact stress-energy identity for every labelled contact-preserving core realization:
 
-$$
+```math
 \sum_{e\in H}\beta_e|p_i'-p_j'|^2
 =
 D^2-E_\Omega(p'),
 \qquad
 E_\Omega(p')\ge0.
-$$
+```
 
 Substitute
 
-$$
+```math
 |p_i'-p_j'|^2=D^2+2\ell_e(p')
-$$
-and $\sum_H\beta_e=1$. In the $y,\rho(y)$ coordinates this gives exactly
+```
+and $`\sum_H\beta_e=1`$. In the $`y,\rho(y)`$ coordinates this gives exactly
 
-$$
+```math
 \boxed{
 \beta_R^T\rho(y)
 =
 -\beta_B^Ty-\frac12E_\Omega(y).
 }
-$$
+```
 
-Because the displacement from $p$ is $O(\|y\|)$, the stress quadratic energy satisfies
+Because the displacement from $`p`$ is $`O(\|y\|)`$, the stress quadratic energy satisfies
 
-$$
+```math
 E_\Omega(y)=O(\|y\|^2).
-$$
+```
 
-Hence for every sufficiently small nonzero componentwise $y\le0$,
+Hence for every sufficiently small nonzero componentwise $`y\le0`$,
 
-$$
+```math
 \boxed{
 \beta_R^T\rho(y)>0.
 }
-$$
+```
 
-In particular at least one residual active diameter is strictly longer than $D$.
+In particular at least one residual active diameter is strictly longer than $`D`$.
 
 This is stronger than the first-order statement because it is an exact finite nonlinear obstruction in a point-dependent neighborhood.
 
@@ -270,37 +270,37 @@ It is still not a global obstruction: the chart neighborhood can shrink with the
 ## 8. The same residual edges parameterize every active-diameter covector dependence
 
 Since
-$$
+```math
 \operatorname{rank}G=m,
-$$
-$$
+```
+```math
 \dim\ker G^T=h-m=s_Z+1.
-$$
+```
 
-Order the rows with basis block $B$ first. If
-$$
+Order the rows with basis block $`B`$ first. If
+```math
 \lambda\in\ker G^T
-$$
-has $\lambda_R=0$, then
-$$
+```
+has $`\lambda_R=0`$, then
+```math
 G_B^T\lambda_B=0.
-$$
-Because $G_B$ is invertible,
-$$
+```
+Because $`G_B`$ is invertible,
+```math
 \lambda_B=0.
-$$
+```
 
-Thus restriction to the residual coordinates is injective. Domain and codomain both have dimension $s_Z+1$, so it is an isomorphism:
+Thus restriction to the residual coordinates is injective. Domain and codomain both have dimension $`s_Z+1`$, so it is an isomorphism:
 
-$$
+```math
 \boxed{
 \ker G^T
 \;\xrightarrow[\cong]{\lambda\mapsto\lambda_R}\;
 \mathbb R^R.
 }
-$$
+```
 
-The same $s_Z+1$ residual diameter edges therefore parameterize all linear dependencies among the active-diameter covectors.
+The same $`s_Z+1`$ residual diameter edges therefore parameterize all linear dependencies among the active-diameter covectors.
 
 ## 9. Hostile scope audit
 
@@ -308,12 +308,12 @@ The promoted theorem does **not** claim any of the following.
 
 - It does not give a global strict-diameter competitor.
 - It does not give a uniform chart radius.
-- It does not imply that the $s_Z+1$ residual edges are geometrically localized.
+- It does not imply that the $`s_Z+1`$ residual edges are geometrically localized.
 - It does not identify residual active edges with the audit.53 loaded-return paths.
 - It does not turn weighted stress-energy decrease into maximum-diameter decrease.
 - It does not move or delete contact-isolated source points.
-- It does not say that $s_Z=o(D)$ alone closes the branch.
-- It does not say that $s_Z=\Omega(D)$ is itself contradictory; it is only linear mixed-rigidity currency.
+- It does not say that $`s_Z=o(D)`$ alone closes the branch.
+- It does not say that $`s_Z=\Omega(D)`$ is itself contradictory; it is only linear mixed-rigidity currency.
 
 The theorem changes the live problem from an undifferentiated active-diameter feasibility question into a finite residual-cage problem.
 
@@ -324,20 +324,22 @@ Audit.55 forces explicit linear physical/train currencies. Audit.54 supplies a s
 The present theorem adds an exact local dichotomy inside the contact manifold.
 
 - A basis of
-  $$
+  ```math
   m=q-k-1
-  $$
+  
+  ```
   old active diameter excesses is a complete local coordinate system.
 - The entire leftover local obstruction is carried by exactly
-  $$
+  ```math
   s_Z+1
-  $$
+  
+  ```
   residual active diameter edges.
 - Attempting to make all basis coordinates nonpositive forces positive residual diameter excess, already at first order and in the exact nonlinear weighted identity.
 
 Therefore a successful closing theorem must either:
 
-1. control the $s_Z+1$ residual cage simultaneously with the wall/return currencies;
+1. control the $`s_Z+1`$ residual cage simultaneously with the wall/return currencies;
 2. leave the local chart through a finite collective replacement;
 3. change the active diameter graph by deleting a diameter cover and invoking the audit.54 refill theorem;
 4. or force an exact unit equilateral triangle.

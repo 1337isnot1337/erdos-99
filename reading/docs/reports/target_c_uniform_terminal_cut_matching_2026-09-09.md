@@ -18,27 +18,27 @@
 
 C64 proves
 
-$$
+```math
 M:=\Lambda-L_H\succeq0,
 \qquad M\mathbf 1=0,
 \qquad \operatorname{tr}M=2\varepsilon,
-$$
+```
 
 where
 
-$$
+```math
 \varepsilon=\sum_{b<k}c_{bk}-1.
-$$
+```
 
 BRM used this on terminal sets arising from physical branches of `C-z`. The same argument works for **every** terminal subset and the Laplacian kernel gives a sharper centered-indicator estimate.
 
 For `S subseteq B_+`, define
 
-$$
+```math
 C(S):=\sum_{\substack{b\in S\\k\notin S}}c_{bk},
 \qquad
 B(S):=\sum_{\substack{b\in S\\k\notin S}}\beta_{bk}.
-$$
+```
 
 Then:
 
@@ -46,40 +46,40 @@ Then:
 
 For every `S subseteq B_+`, with `q=|B_+|`,
 
-$$
+```math
 \boxed{
 0\le C(S)-B(S)
 \le
 2\varepsilon\,\frac{|S|(q-|S|)}q.
 }
 \tag{UCM.1}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{
 0\le C(S)-B(S)
 \le\frac q2\varepsilon
 \le\frac{\pi D}{2}\varepsilon.
 }
 \tag{UCM.2}
-$$
+```
 
 Hence the difficult C66 phase
 
-$$
+```math
 D\varepsilon\to0
-$$
+```
 
 satisfies the uniform cut-function convergence
 
-$$
+```math
 \boxed{
 \sup_{S\subseteq B_+}|C(S)-B(S)|\to0.
 }
 \tag{UCM.3}
-$$
+```
 
 So the electrical response and mechanical diameter-reaction Laplacians agree not merely entrywise on selected matchings or branchwise at the C66 center, but on **every terminal cut simultaneously**.
 
@@ -89,32 +89,32 @@ So the electrical response and mechanical diameter-reaction Laplacians agree not
 
 Let
 
-$$
+```math
 x=\mathbf 1_S\in\mathbb R^{B_+}.
-$$
+```
 
 For any weighted graph Laplacian `L_w`,
 
-$$
+```math
 x^TL_wx
 =\sum_{\substack{b\in S\\k\notin S}}w_{bk}.
 \tag{1.1}
-$$
+```
 
 Therefore
 
-$$
+```math
 x^T\Lambda x=C(S),
 \qquad
 x^TL_Hx=B(S),
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{x^TMx=C(S)-B(S).}
 \tag{UCM.4}
-$$
+```
 
 PSD gives the lower bound in UCM.1 immediately.
 
@@ -124,57 +124,57 @@ PSD gives the lower bound in UCM.1 immediately.
 
 Because
 
-$$
+```math
 M\mathbf 1=0,
-$$
+```
 
 we may subtract any constant multiple of the all-ones vector without changing the quadratic form. Put
 
-$$
+```math
 y:=x-\frac{|S|}{q}\mathbf 1.
-$$
+```
 
 Then
 
-$$
+```math
 x^TMx=y^TMy.
 \tag{2.1}
-$$
+```
 
 A direct calculation gives
 
-$$
+```math
 \|y\|^2
 =|S|\left(1-\frac{|S|}{q}\right)^2
 +(q-|S|)\left(\frac{|S|}{q}\right)^2
 =\frac{|S|(q-|S|)}q.
 \tag{2.2}
-$$
+```
 
 Since `M` is PSD,
 
-$$
+```math
 \lambda_{max}(M)
 \le\operatorname{tr}M
 =2\varepsilon.
-$$
+```
 
 Thus
 
-$$
+```math
 C(S)-B(S)
 =y^TMy
 \le2\varepsilon\|y\|^2
 =2\varepsilon\frac{|S|(q-|S|)}q.
-$$
+```
 
 This proves UCM.1.
 
 The quadratic `s(q-s)/q` is maximized at `s=q/2`, with value `q/4`. Therefore
 
-$$
+```math
 C(S)-B(S)\le\frac q2\varepsilon.
-$$
+```
 
 Finally `q<=pi D` gives UCM.2.
 
@@ -186,7 +186,7 @@ Finally `q<=pi D` gives UCM.2.
 
 Take `S={b}`. Then
 
-$$
+```math
 \boxed{
 0\le
 \sum_{k\ne b}c_{bk}
@@ -196,7 +196,7 @@ $$
 2\varepsilon\left(1-\frac1q\right).
 }
 \tag{UCM.5}
-$$
+```
 
 So in any `epsilon->0` sequence the total response degree of each individual terminal converges uniformly to its total beta incidence.
 
@@ -210,19 +210,19 @@ This is useful because circular-planar minors and physical contact separators na
 
 For a component `R` of `C-z`, BRM identifies
 
-$$
+```math
 C(B_R)=r_R,
 \qquad
 B(B_R)=w_R+\lambda_R.
-$$
+```
 
 Therefore UCM gives
 
-$$
+```math
 0\le r_R-(w_R+\lambda_R)
 \le
 2\varepsilon\frac{|B_R|(q-|B_R|)}q,
-$$
+```
 
 which improves BRM's earlier `2epsilon |B_R|` bound and automatically uses the smaller side of a large branch cut.
 
@@ -232,25 +232,25 @@ which improves BRM's earlier `2epsilon |B_R|` bound and automatically uses the s
 
 At the C66 center `z`, let
 
-$$
+```math
 \delta_z:=\sum_{h\not\ni z}\beta_h=o(1).
-$$
+```
 
 For any terminal subset `S` not containing `z`, the beta cut is
 
-$$
+```math
 B(S)
 =
 \sum_{zk\in H,\ k\in S}\beta_{zk}
 +O(\delta_z),
 \tag{4.1}
-$$
+```
 
 where the absolute error is at most `delta_z` because only off-star beta edges can contribute anything beyond the `z`-star term.
 
 Thus UCM implies uniformly for all `S` with `z notin S`:
 
-$$
+```math
 \boxed{
 C(S)
 =
@@ -258,7 +258,7 @@ C(S)
 +o(1).
 }
 \tag{UCM.6}
-$$
+```
 
 Similarly, if `z in S`, apply the same statement to the complementary cut.
 

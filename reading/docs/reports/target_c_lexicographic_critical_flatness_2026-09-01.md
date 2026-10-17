@@ -25,18 +25,18 @@ Work in the C65 lexicographically normalized hypothetical counterexample: first
 minimize the number of unit contacts, then among those minimizers minimize the number
 of diameter pairs. C65 proves
 
-$$
+```math
 C=C_*,\qquad H=H_*.
-$$
+```
 
 Thus every active unit-contact row and every active diameter row is strong.
 
 C63 says that **every** fixed-diameter critical velocity `v` has an actual nearby
 feasible realization
 
-$$
+```math
 p(t)=p+t v+O(t^2)
-$$
+```
 
 satisfying all strong active inequalities. Since inactive rows have strict slack,
 small `t` creates no new contact and no new diameter pair. Primary contact minimality
@@ -45,23 +45,23 @@ minimality prevents any old diameter pair from shortening.
 
 Therefore the C63 realization actually remains in the exact active face:
 
-$$
+```math
 \boxed{
 |p_i(t)-p_j(t)|=1\quad(ij\in C),
 \qquad
 |p_i(t)-p_j(t)|=D\quad(ij\in H).
 }
 \tag{C86.1}
-$$
+```
 
 for all sufficiently small `t`.
 
 This is a general C-II finite-flatness theorem. It has an immediate consequence for
 the exact C80 chain face. If
 
-$$
+```math
 z=x_0,x_1,\ldots,x_D=a
-$$
+```
 
 is the literal straight `D`-edge unit-contact chain with `|z-a|=D`, then every
 critical velocity must give all `D` chain edges one common angular rate. Otherwise
@@ -71,18 +71,18 @@ endpoints at distance `D`, contradicting equality in the triangle inequality.
 Hence every nonconstant chain-supported first-order-neutral mode is impossible. In
 C84 notation:
 
-$$
+```math
 \boxed{N_P=\{0\},\qquad G_P\text{ is connected}.}
 \tag{C86.2}
-$$
+```
 
 The disconnected-prefix branch analyzed in C85 cannot occur in the fully
 lexicographically normalized C65 source. Combining C86.2 with C84 gives
 
-$$
+```math
 \boxed{|H_P|\ge D+1,\qquad |H|\ge D+2.}
 \tag{C86.3}
-$$
+```
 
 Thus the exact chain-face route is reduced entirely to the **connected bridgeless
 prefix-circulation branch**.
@@ -100,17 +100,17 @@ make the C65 lexicographic choice:
 C63 closes Gate C-I, and C65 applies the same critical-cone integrability to the
 secondary normalization. The result is
 
-$$
+```math
 \boxed{C=C_*,\qquad H=H_*.}
 \tag{C86.4}
-$$
+```
 
 Every initially inactive pair has one of the strict alternatives
 
-$$
+```math
 1<|p_i-p_j|<D,
 \tag{C86.5}
-$$
+```
 
 unless it is an active contact or active diameter pair.
 
@@ -123,37 +123,37 @@ its signed first variation vanishes on every active contact and diameter row.
 
 C63 writes the strong feasibility map exactly as
 
-$$
+```math
 g_*(x)=A_*x+Q_*(x)
-$$
+```
 
 and uses universal PSD, Farkas, and a fixed Hoffman constant to construct, for every
 critical tangent `v`, actual small displacements
 
-$$
+```math
 \boxed{x(t)=t v+O(t^2)}
 \tag{C86.6}
-$$
+```
 
 such that every strong active row remains feasible.
 
 Since C86.4 says every active row is strong, the resulting configuration `A(t)` is
 unit-separated and has diameter at most `D`. Global minimality of `D=D(n)` gives
 
-$$
+```math
 \operatorname{diam}A(t)=D.
 \tag{C86.7}
-$$
+```
 
 C63's construction is local. For sufficiently small `t`, every initially inactive
 pair retains strict slack by C86.5. Therefore
 
-$$
+```math
 C(A(t))\subseteq C(A),
 \qquad
 H(A(t))\subseteq H(A).
 \tag{C86.8}
-$$
+```
 
 No new active pair appears.
 
@@ -163,15 +163,15 @@ No new active pair appears.
 
 Suppose some original contact `ij in C(A)` opened:
 
-$$
+```math
 |p_i(t)-p_j(t)|>1.
-$$
+```
 
 Then C86.8 would be strict on contacts:
 
-$$
+```math
 |C(A(t))|<|C(A)|.
-$$
+```
 
 The configuration `A(t)` is still triangle-free: no new unit contact appears, while
 opening contacts cannot create a contact triangle. By C86.7 it is another global
@@ -183,17 +183,17 @@ Hence
 
 For every critical `v` and all sufficiently small C63 realizations,
 
-$$
+```math
 \boxed{C(A(t))=C(A),}
 \tag{C86.9}
-$$
+```
 
 and, edge by edge,
 
-$$
+```math
 \boxed{|p_i(t)-p_j(t)|=1\qquad(ij\in C).}
 \tag{C86.10}
-$$
+```
 
 The equality is edgewise because C86.8 already excludes replacement contacts.
 
@@ -206,15 +206,15 @@ secondary normalization.
 
 Suppose some original diameter pair `ij in H(A)` shortened:
 
-$$
+```math
 |p_i(t)-p_j(t)|<D.
-$$
+```
 
 Again C86.8 gives no new diameter pair, so
 
-$$
+```math
 |H(A(t))|<|H(A)|.
-$$
+```
 
 This contradicts the secondary lexicographic choice among contact-minimal global
 minimizers.
@@ -225,20 +225,20 @@ Therefore:
 
 For every fixed-diameter critical velocity `v`, there are actual nearby realizations
 
-$$
+```math
 p(t)=p+t v+O(t^2)
-$$
+```
 
 such that, for all sufficiently small `t`,
 
-$$
+```math
 \boxed{
 |p_i(t)-p_j(t)|=1\quad(ij\in C),
 \qquad
 |p_i(t)-p_j(t)|=D\quad(ij\in H).
 }
 \tag{C86.11}
-$$
+```
 
 All inactive pairs remain strict.
 
@@ -254,62 +254,62 @@ relative-interior critical velocity to eliminate weak rows.
 
 Now assume the exact C80 chain-face branch. Thus one active diameter pair is
 
-$$
+```math
 h_0=za,
 \qquad |z-a|=D,
-$$
+```
 
 and the source contains the literal contact path
 
-$$
+```math
 \boxed{z=x_0,x_1,\ldots,x_D=a}
 \tag{C86.12}
-$$
+```
 
 with
 
-$$
+```math
 |x_j-x_{j-1}|=1
 \qquad(1\le j\le D).
-$$
+```
 
 Let `v` be any critical velocity. Apply C86.2. Along the integrated realization,
 all chain edges remain unit contacts and `za` remains a diameter pair. Therefore
 
-$$
+```math
 D
 =|a(t)-z(t)|
 \le
 \sum_{j=1}^D|x_j(t)-x_{j-1}(t)|
 =D.
 \tag{C86.13}
-$$
+```
 
 Equality holds in the Euclidean triangle inequality. Equality for a sum of nonzero
 vectors occurs exactly when all summands are nonnegative scalar multiples of one
 common vector. Here every summand has length one, so there is one unit vector `u(t)`
 such that
 
-$$
+```math
 \boxed{x_j(t)-x_{j-1}(t)=u(t)\qquad(1\le j\le D).}
 \tag{C86.14}
-$$
+```
 
 The entire contact chain remains a literal straight unit-spaced segment for every
 small `t`.
 
 Differentiate at `t=0`. If
 
-$$
+```math
 \dot x_j-\dot x_{j-1}=\omega_j Ju
-$$
+```
 
 is the tangential first-order motion of the `j`th chain edge, C86.14 gives
 
-$$
+```math
 \boxed{\omega_1=\omega_2=\cdots=\omega_D.}
 \tag{C86.15}
-$$
+```
 
 ### Corollary C86.3 — chain angular synchronization
 
@@ -323,9 +323,9 @@ C65-normalized source.
 
 C80 associates to the chain edges `x_{j-1}x_j` the `D` distinct parallel train tracks
 
-$$
+```math
 P=\{\tau_1,\ldots,\tau_D\},
-$$
+```
 
 one track per edge. In the pure-rhombic train-angle parametrization, the velocity
 coordinate `v_{\tau_j}` is exactly the angular rate of the unit-edge direction on
@@ -333,27 +333,27 @@ that train, after a common global rotation is included in all train coordinates.
 
 Therefore C86.15 becomes
 
-$$
+```math
 \boxed{
 v_{\tau_1}=\cdots=v_{\tau_D}}
 \tag{C86.16}
-$$
+```
 
 for every train-angle velocity that is first-order neutral for all active diameters.
 
 In particular, on the C80 chain-bending space
 
-$$
+```math
 W_P=\left\{v:\operatorname{supp}v\subseteq P,
 \quad\sum_{\tau\in P}v_\tau=0\right\},
-$$
+```
 
 only zero can be critical:
 
-$$
+```math
 \boxed{W_P\cap\ker G_H=\{0\}.}
 \tag{C86.17}
-$$
+```
 
 Here `G_H` is the full active diameter-gradient map.
 
@@ -364,10 +364,10 @@ Here `G_H` is the full active diameter-gradient map.
 C84 gives the exact rank formula for chain-supported neutral motions. If `G_P` is the
 simple prefix graph on levels `0,...,D`, then
 
-$$
+```math
 \dim N_P=c(G_P)-1,
 \tag{C86.18}
-$$
+```
 
 where `N_P` is the mean-zero chain-supported first-order-neutral space used in C85.
 
@@ -377,17 +377,17 @@ C86.17 says `N_P={0}`. Hence:
 
 In the exact C80 chain-face branch of the C65 lexicographically normalized source,
 
-$$
+```math
 \boxed{c(G_P)=1.}
 \tag{C86.19}
-$$
+```
 
 So
 
-$$
+```math
 \boxed{G_P\text{ is connected}.}
 \tag{C86.20}
-$$
+```
 
 The entire disconnected-prefix branch is impossible. In particular the nonzero
 chain-neutral modes used by C85 cannot occur in the canonical counterexample.
@@ -408,17 +408,17 @@ C86.20 activates that bound unconditionally inside the exact chain-face branch:
 
 ### Corollary C86.5 — exact chain face forces a linear diameter-bar family
 
-$$
+```math
 \boxed{|H_P|\ge D+1.}
 \tag{C86.21}
-$$
+```
 
 Including the chain diameter `h_0` itself,
 
-$$
+```math
 \boxed{|H|\ge D+2.}
 \tag{C86.22}
-$$
+```
 
 Moreover every chain cut is crossed by at least two active non-chain interval bars
 with opposite signs of the transverse KKT flow `beta_h eta_h`.

@@ -20,12 +20,12 @@ C49 confines every contact-isolated source point to the outer contact face or to
 
 C50 quantifies the bounded-face part. If a bounded defect face has boundary-walk length `k` and contains `z` contact-isolated source points, then
 
-$$
+```math
 \boxed{
  z
 \le
 1+\frac{k}{2}+\frac{k^2}{2\pi\sqrt3}.}
-$$
+```
 
 Consequently, if `Z_def` isolated points lie in bounded defect faces and
 
@@ -33,12 +33,12 @@ Consequently, if `Z_def` isolated points lie in bounded defect faces and
 
 then one bounded defect face has perimeter at least
 
-$$
+```math
 \boxed{
  k_{max}
 \ge
 \frac{\sqrt3}{10}(\eta D-14\pi),}
-$$
+```
 
 using the canonical `q<=pi D` bound.
 
@@ -52,44 +52,44 @@ Let `f` be a bounded nonquadrilateral face of the contact core. Let its boundary
 
 Let `K_f` be the convex hull of the boundary vertices of `f`. Every isolated point in the face lies in `K_f`. The convex hull perimeter is no larger than the length of the boundary polygonal walk:
 
-$$
+```math
 \operatorname{per}(K_f)\le k_f.
 \tag{C50.1}
-$$
+```
 
 By the planar isoperimetric inequality,
 
-$$
+```math
 \operatorname{area}(K_f)
 \le
 \frac{\operatorname{per}(K_f)^2}{4\pi}
 \le
 \frac{k_f^2}{4\pi}.
 \tag{C50.2}
-$$
+```
 
 The `z_f` isolated points are unit-separated. Apply Oler inside `K_f`:
 
-$$
+```math
 \frac{\sqrt3}{2}(z_f-1)
 \le
 \operatorname{area}(K_f)
 +
 \frac{\sqrt3}{4}\operatorname{per}(K_f).
 \tag{C50.3}
-$$
+```
 
 Using C50.1-C50.2 and multiplying by `2/sqrt3` gives:
 
 ### Lemma C50.1 — defect-face rattler capacity
 
-$$
+```math
 \boxed{
  z_f
 \le
 1+\frac{k_f}{2}+rac{k_f^2}{2\pi\sqrt3}.}
 \tag{C50.4}
-$$
+```
 
 This bound deliberately ignores the additional unit-separation constraints from the face-boundary vertices, so it is safe but not sharp.
 
@@ -106,27 +106,27 @@ Let
 
 C49 gives
 
-$$
+```math
 N_{def}\le Q,
 \qquad
 L_{def}\le5Q.
 \tag{C50.5}
-$$
+```
 
 Summing C50.4,
 
-$$
+```math
 Z_{def}
 \le
 N_{def}+\frac12L_{def}
 +
 \frac1{2\pi\sqrt3}\sum_f k_f^2.
 \tag{C50.6}
-$$
+```
 
 Since `sum k_f^2 <= K L_def`,
 
-$$
+```math
 \boxed{
 Z_{def}
 \le
@@ -134,19 +134,19 @@ Z_{def}
 +
 \frac{5KQ}{2\pi\sqrt3}.}
 \tag{C50.7}
-$$
+```
 
 C49 also has
 
-$$
+```math
 Q\le4q-B-4<4q
 \le4\pi D.
 \tag{C50.8}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 Z_{def}
 <
@@ -154,7 +154,7 @@ Z_{def}
 +
 \frac{10}{\sqrt3}KD.}
 \tag{C50.9}
-$$
+```
 
 ---
 
@@ -162,38 +162,38 @@ $$
 
 If
 
-$$
+```math
 Z_{def}\ge\eta D^2,
 \tag{C50.10}
-$$
+```
 
 then C50.9 gives
 
-$$
+```math
 \eta D^2
 <14\pi D+rac{10}{\sqrt3}KD.
-$$
+```
 
 Divide by `D` and rearrange:
 
 ### Theorem C50.2 — macroscopic bounded rattlers force macroscopic face perimeter
 
-$$
+```math
 \boxed{
 K
 >
 \frac{\sqrt3}{10}(\eta D-14\pi).}
 \tag{C50.11}
-$$
+```
 
 In particular `K=Omega_eta(D)` for fixed `eta>0` and large `D`.
 
 Equivalently, if every bounded defect face has perimeter `o(D)`, then
 
-$$
+```math
 Z_{def}=o(D^2).
 \tag{C50.12}
-$$
+```
 
 ---
 

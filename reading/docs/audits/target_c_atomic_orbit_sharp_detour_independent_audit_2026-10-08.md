@@ -16,23 +16,23 @@ Frozen source hashes: companion report `25f88179926f1ee57b796429ea1a320ca8d1bfa4
 
 Let `mu` be a finite positive measure on the projective direction circle, of mass
 `M=pi+lambda`, satisfying
-$$
+```math
 \int |\cos(\theta-\alpha)|\,d\mu(\theta)\ge2
 \quad\text{for every }\alpha.
-$$
+```
 For one orbit `O={theta_0,theta_0+pi/3,theta_0+2pi/3}` let `A=mu(O)`. Then
-$$
+```math
 \boxed{\lambda\ge\Phi(A),}
-$$
+```
 where
-$$
+```math
 \Phi(A)=
 \begin{cases}
 2A-12\arctan(A/6),&0\le A\le6\tan(\pi/12),\\
 3-\pi+(1-\sqrt3/2)A,&6\tan(\pi/12)\le A\le2\sqrt3,\\
 A-\pi,&A\ge2\sqrt3.
 \end{cases}
-$$
+```
 The bound is sharp for every `A>=0`; `Phi` is continuous, strictly increasing,
 and convex, with `Phi(A)=A^3/54+O(A^5)` at zero.
 
@@ -44,10 +44,10 @@ occurrence-counted outer-walk direction measure, let
 `lambda=lim (b-p)/D`, `t=lim (q-k)/D`, and
 `J=lim (Q+4f)/D`, after taking a joint convergent subsequence. Then the
 canonical crossing/endpoint budgets imply the necessary inequality
-$$
+```math
 \boxed{4s_2\le\sqrt{(\pi+\lambda)\Phi^{-1}(\lambda)}+J
 \le\sqrt{(\pi+\lambda)\Phi^{-1}(\lambda)}+5(2t-\pi-\lambda),}
-$$
+```
 where `s_2=sqrt(pi/(2sqrt(3)))`. The final inequality is the source obstruction;
 it neither forces a large orbit nor supplies a source deformation.
 
@@ -76,9 +76,9 @@ three directions. No direction outside the selected orbit is mapped into it.
 The case `A=0` follows from `lambda>=0`; assume `A>0` for the face geometry.
 
 The support function
-$$
+```math
 h(\alpha)=\tfrac12\int|\cos(\theta-\alpha)|\,d\mu(\theta)
-$$
+```
 is the support function of a centrally symmetric planar zonoid `Z`. The
 constraints give `h>=1`, hence `B_1 subset Z`. Cauchy's perimeter formula gives
 `per(Z)=2M`. A projective atom of mass `a` creates opposite parallel faces of
@@ -88,10 +88,10 @@ normals.
 
 For the face with normal `(1,0)`, the endpoints are `(H,+/-a/2)`. The adjacent
 face endpoint must lie in the supporting half-plane `x<=H`, so
-$$
+```math
 H/2+\sqrt3a/4\le H,
 \qquad H\ge\sqrt3a/2.
-$$
+```
 Thus `H>=H_0=max(1,sqrt(3)a/2)`. Let `K_H` be the convex hull of the unit disk
 and all twelve face endpoints. On a 60-degree symmetry sector, its support is
 the maximum of `1` and the two endpoint supports
@@ -102,10 +102,10 @@ radius and polar angles `j*pi/3+/-beta`. In `psi in [0,pi/6]`, the nearest
 endpoint angles are `beta` and `pi/3-beta`; all others give no larger dot
 product. Their coefficients of H are positive; hence `K_H` expands
 with H, `Z` contains `K_H`, and
-$$
+```math
 \operatorname{per}(Z)\ge\operatorname{per}(K_H)
 \ge\operatorname{per}(K_{H_0}).
-$$
+```
 
 The perimeter of the minimal body is determined directly by its boundary:
 
@@ -158,18 +158,18 @@ finite family of those orbits, freeze disjoint neighborhoods of their direction
 atoms and apply Mantel to the induced finite **physical** track-crossing graphs.
 The graphs are triangle-free; singleton or otherwise unused vertices do not
 change that. Passing to the limit and exhausting the orbit family gives
-$$
+```math
 \Delta_2\le\sum_r m_r^2/4.
-$$
+```
 No quotient graph on the three orbit labels is used.
 
 The inequalities above imply
-$$
+```math
 4\sqrt{\Delta_2}\le2\|m\|_2
 \le\|A+J_\bullet\|_2
 \le\|A\|_2+\|J_\bullet\|_2
 \le\sqrt{(\pi+\lambda)\Phi^{-1}(\lambda)}+J,
-$$
+```
 where `J_bullet=(J_r)` and `||J_bullet||_2<=sum J_r<=J`. Since
 `Delta_2=s_2^2`, this is the first source inequality. Finally,
 `Q/D=2t-(pi+lambda)` by Section 63, and `f<=Q`, so

@@ -30,82 +30,82 @@ The only canonical analytic input is FS.1 in
 The threshold staircase, layer occupancy and laminar cut equation remain
 conditional on main's explicitly named unpromoted reports in the first packet.
 
-For each tree edge $e=\{a,b\}$, put $s_e=b-a$, let $B_e$ be its total
-diameter multiplier mass and $R_eu$ its axial resultant. The theorem is
+For each tree edge $`e=\{a,b\}`$, put $`s_e=b-a`$, let $`B_e`$ be its total
+diameter multiplier mass and $`R_eu`$ its axial resultant. The theorem is
 
-$$
+```math
 \boxed{R_e\ge B_e\min\left\{\frac D{16},\frac{2s_e}3\right\}
 \qquad(D\ge512).} \tag{1}
-$$
+```
 
 This applies to boundary and internal packets, with every actual source point
-retained. In particular, for $s_e\ge\varepsilon D$, the reaction per
-multiplier mass is at least $D\min\{1/16,2\varepsilon/3\}$.
-There is no assumed lower bound on the masses $B_e$.
+retained. In particular, for $`s_e\ge\varepsilon D`$, the reaction per
+multiplier mass is at least $`D\min\{1/16,2\varepsilon/3\}`$.
+There is no assumed lower bound on the masses $`B_e`$.
 
 ## 2. Proof of the length theorem
 
 Use the positive-pair convex average from the first report. Fix any one pair
-and denote its reaction by $\rho$. Shared-endpoint pairs have
-$\rho\ge D/2$, so satisfy the required bound. The same is immediate if
-$\rho\ge D/16$. Assume four distinct endpoints and $\rho<D/16$.
+and denote its reaction by $`\rho`$. Shared-endpoint pairs have
+$`\rho\ge D/2`$, so satisfy the required bound. The same is immediate if
+$`\rho\ge D/16`$. Assume four distinct endpoints and $`\rho<D/16`$.
 
 The midpoint argument in the first report gives a same-arc corresponding-end
-chord of length $L$ satisfying
+chord of length $`L`$ satisfying
 
-$$
+```math
 L\le F_D(\rho):=
 \sqrt{2D\left(D-\sqrt{D^2-\rho^2}\right)}
 =\rho\sqrt{\frac{2D}{D+\sqrt{D^2-\rho^2}}}
 <\frac D{15}. \tag{2}
-$$
+```
 
 The last bound follows by squaring
-$\sqrt{255/256}>449/450$. The multiplicative factor in (2) is less than
+$`\sqrt{255/256}>449/450`$. The multiplicative factor in (2) is less than
 (16/15); a weaker rational estimate suffices here.
 
 Let (x,y) be this chord's two actual diameter endpoints. They are in layers
 (a,b) on the same physical hull arc, ordered from the reference diameter
-endpoint $z$ to its other endpoint $w$. Use FS.1 to take a containing
-radius $R<9D/16$, $r_0=D-R>7D/16$, as in the first report.
+endpoint $`z`$ to its other endpoint $`w`$. Use FS.1 to take a containing
+radius $`R<9D/16`$, $`r_0=D-R>7D/16`$, as in the first report.
 The two chosen outward diameter normals differ by at most
 
-$$
+```math
 \Delta=2\arccos(r_0/R)+2\arcsin(L/(2r_0)).
-$$
+```
 
-Here $t=L/(2r_0)<8/105<1/13$, so
+Here $`t=L/(2r_0)<8/105<1/13`$, so
 
-$$
+```math
 \cos(\Delta/2)
 >\frac79\sqrt{1-t^2}-\frac69t
 >\frac79\frac{168}{169}-\frac6{9\cdot13}
 =\frac{1098}{1521}>\frac1{\sqrt2}. \tag{3}
-$$
+```
 
-Thus $\Delta<\pi/2$. The two supporting lines bound the exterior triangle
-used in the first report. Its diameter is less than $\sqrt2L<D$, so it
+Thus $`\Delta<\pi/2`$. The two supporting lines bound the exterior triangle
+used in the first report. Its diameter is less than $`\sqrt2L<D`$, so it
 cannot contain the two reference diameter endpoints (z,w). Consequently
 the exterior boundary arc between (x,y) is the arc within the relevant
 physical shore, rather than its complement containing (z,w).
 
 Convexity puts every directed hull-side tangent on that short arc into the
-cone of width at most $\Delta$ between the two endpoint tangents. The
+cone of width at most $`\Delta`$ between the two endpoint tangents. The
 layer-occupancy theorem supplies at least one distinct actual diameter vertex
-at every intervening layer $a+1,\ldots,b-1$. These occur strictly between
-(x,y) in monotone arc order. Hence the short arc contains at least $s_e$
+at every intervening layer $`a+1,\ldots,b-1`$. These occur strictly between
+(x,y) in monotone arc order. Hence the short arc contains at least $`s_e`$
 full-source hull sides, each of length at least one. Project their sum onto
 the middle tangent direction to obtain
 
-$$
+```math
 L\ge s_e\cos(\Delta/2)>\frac{1098}{1521}s_e.
-$$
+```
 
 Together with (2), this gives
 
-$$
+```math
 \rho>\frac{15}{16}\frac{1098}{1521}s_e>\frac23s_e.
-$$
+```
 
 Every pair reaction therefore satisfies the truncated bound. Its convex
 average proves (1). The proof counts actual distinct source vertices in
@@ -116,13 +116,13 @@ isolated source points.
 
 The exact KKT equation now yields
 
-$$
+```math
 \boxed{A_r\ge\beta_0D+
 \sum_{e\in E(T)}B_e\min\{D/16,2s_e/3\}.} \tag{4}
-$$
+```
 
 The unweighted staircase identity is still
-$\sum_es_e=m(m+1)/2$. It cannot be substituted into (4) without a theorem
+$`\sum_es_e=m(m+1)/2`$. It cannot be substituted into (4) without a theorem
 controlling the **actual multiplier masses**. All masses are positive, but
 that fact alone does not prevent arbitrarily small mass on long intervals.
 
@@ -134,42 +134,42 @@ the scalar cut stress matrix are incompatible with (1). They are compatible
 as abstract cut data, even with distinct projective directions assigned to
 all diameter rows.
 
-Let $T$ be any staircase tree on gaps $0,\ldots,m$; let $v_e$ be its
-interval indicator in $\mathbb R^m$. Choose $D=1024m$, positive $B_e$ with
-$\sum_eB_e<1$, and $\beta_0=1-\sum_eB_e>0$. Number the edges $e=1,\ldots,m$
+Let $`T`$ be any staircase tree on gaps $`0,\ldots,m`$; let $`v_e`$ be its
+interval indicator in $`\mathbb R^m`$. Choose $`D=1024m`$, positive $`B_e`$ with
+$`\sum_eB_e<1`$, and $`\beta_0=1-\sum_eB_e>0`$. Number the edges $`e=1,\ldots,m`$
 and put
 
-$$
+```math
 d_e=s_e+\frac{e}{10m},\qquad R_e=B_ed_e,
 \qquad A=\beta_0D\mathbf1+\sum_eR_ev_e.
-$$
+```
 
-Assign two formal rows $d_eu\pm\sqrt{D^2-d_e^2}Ju$ of weight (B_e/2)
-to each packet, and (Du) of weight $\beta_0$ to the reference row.
-They have length $D$, positive weights, exact transverse balance, normalized
+Assign two formal rows $`d_eu\pm\sqrt{D^2-d_e^2}Ju`$ of weight (B_e/2)
+to each packet, and (Du) of weight $`\beta_0`$ to the reference row.
+They have length $`D`$, positive weights, exact transverse balance, normalized
 total weight, and mutually distinct projective directions. Their axial sums
 give precisely the displayed cut pressures. The interval incidence has full
 rank; the pressure profile has the strict staircase peak.
 
 The scalar cut matrix is
 
-$$
+```math
 K=\operatorname{diag}(A)-\beta_0\mathbf1\mathbf1^T
 -\sum_eB_ev_ev_e^T.
-$$
+```
 
 It is **positive definite**, because
 
-$$
+```math
 K=\beta_0(DI-\mathbf1\mathbf1^T)
 +\sum_eB_e\left[s_e\operatorname{diag}(v_e)-v_ev_e^T\right]
 +\sum_e\frac{eB_e}{10m}\operatorname{diag}(v_e).
-$$
+```
 
-The first term is positive definite since $D>m$. Each bracket is PSD by
-Cauchy--Schwarz on its $s_e$ supported coordinates; the last term is PSD.
-All reaction floors in (1), and indeed $R_e>B_es_e$, hold.
-One may take $B_e=\varepsilon/m$ with arbitrarily small $\varepsilon>0$,
+The first term is positive definite since $`D>m`$. Each bracket is PSD by
+Cauchy--Schwarz on its $`s_e`$ supported coordinates; the last term is PSD.
+All reaction floors in (1), and indeed $`R_e>B_es_e`$, hold.
+One may take $`B_e=\varepsilon/m`$ with arbitrarily small $`\varepsilon>0`$,
 preserving every statement. This is an exact obstruction to an inference
 from positivity or PSD to a uniform coefficient lower bound.
 

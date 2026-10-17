@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_adaptive_safe_region_saturation_2026-09-15.md) · source SHA-256 `c55083d2bb177dd27aa813a3ecf90d8f851adec9acc06348fac49099db64e90f`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 # Target C - adaptive strict-safe regions are saturated after arbitrary source deletion
 
 **Date:** 2026-09-15  
@@ -36,34 +38,34 @@ Let `A` be a finite noncollinear triangle-free global minimum-diameter source of
 cardinality `n`, chosen among such global minimizers to minimize the number of unit
 contacts. Put
 
-$$
+```math
 K=\operatorname{conv}A,
 \qquad
 D=\operatorname{diam}A=D(n),
 \qquad
 a_0={\sqrt3\over2}.
 \tag{AS.1}
-$$
+```
 
 Let `R subseteq A` be finite. Define
 
-$$
+```math
 E_C(R):=\{xy:\ x,y\in A,\ |x-y|=1,\ \{x,y\}\cap R\ne\varnothing\}
 \tag{AS.2}
-$$
+```
 
 as the set of old unit contacts removed when `R` is deleted.
 
 Call a measurable set `S subset int K` **strict-safe relative to `R`** if
 
-$$
+```math
 \boxed{
 |y-a|>1
 \qquad
 (y\in S,\ a\in A\setminus R).
 }
 \tag{AS.3}
-$$
+```
 
 No convexity of `S` is assumed.
 
@@ -76,15 +78,17 @@ No convexity of `S` is assumed.
 Assume `A` has at least one unit contact. Then:
 
 1. if `E_C(R)=emptyset`,
-   $$
+   ```math
    \boxed{\operatorname{area}S\le a_0|R|;}
    \tag{AS.4}
-   $$
+   
+   ```
 2. if `E_C(R)\ne emptyset`,
-   $$
+   ```math
    \boxed{\operatorname{area}S\le a_0\max\{|R|-1,0\}.}
    \tag{AS.5}
-   $$
+   
+   ```
 
 In the second case `R` is necessarily nonempty, so the maximum notation only records
 the singleton endpoint cleanly.
@@ -93,23 +97,23 @@ the singleton endpoint cleanly.
 
 For `lambda>1`, let
 
-$$
+```math
 \Lambda_\lambda:=\lambda\Lambda
-$$
+```
 
 be the triangular lattice of minimum distance `lambda` and covolume
 
-$$
+```math
 a_0\lambda^2.
-$$
+```
 
 Translation averaging over one fundamental cell gives
 
-$$
+```math
 \mathbb E_t |(t+\Lambda_\lambda)\cap S|
 ={\operatorname{area}S\over a_0\lambda^2}.
 \tag{AS.6}
-$$
+```
 
 #### Case 1: `R` removes no old contact
 
@@ -118,22 +122,22 @@ incident to a unit contact; such a vertex exists because the source has a unit c
 
 If `area(S)>a_0|R|`, choose `lambda>1` sufficiently close to one that
 
-$$
+```math
 {\operatorname{area}S\over a_0\lambda^2}>|R|.
-$$
+```
 
 Since the lattice count is integer-valued, some translate contains at least
 
-$$
+```math
 |R|+1
-$$
+```
 
 points of `S`. Choose exactly that many and call the set `Y`. Define
 
-$$
+```math
 A':=(A\setminus(R\cup\{v\}))\cup Y.
 \tag{AS.7}
-$$
+```
 
 Cardinality is unchanged. Distinct points of `Y` are farther than one apart because
 `lambda>1`, and (AS.3) gives strict separation from every retained old source point.
@@ -142,9 +146,9 @@ Thus `A'` is unit-separated and every unit contact incident to a new point is ab
 All new points lie in `int K`, so every distance involving a new point is strictly below
 `D`; retained old-old distances are at most `D`. Hence
 
-$$
+```math
 \operatorname{diam}A'\le D=D(n).
-$$
+```
 
 Global minimality forces equality, so `A'` is another global minimizer. It is
 triangle-free: no new point has a unit contact, and all retained triangles would have
@@ -158,23 +162,23 @@ than `A`, contradicting contact minimality. This proves (AS.4).
 
 Suppose instead that
 
-$$
+```math
 \operatorname{area}S>a_0(|R|-1).
-$$
+```
 
 Choose `lambda>1` sufficiently close to one that
 
-$$
+```math
 {\operatorname{area}S\over a_0\lambda^2}>|R|-1.
-$$
+```
 
 Some translate of `Lambda_lambda` therefore contains at least `|R|` points in `S`.
 Choose exactly `|R|` and call them `Y`. Set
 
-$$
+```math
 A':=(A\setminus R)\cup Y.
 \tag{AS.8}
-$$
+```
 
 The same argument gives unit separation, triangle-freeness, cardinality `n`, and
 diameter at most `D`, hence exactly `D(n)`. Retained old-old contacts are unchanged;
@@ -192,23 +196,23 @@ The singleton case of (AS.5) is stronger than an area statement.
 
 Let `v in A` be incident to a unit contact. Then
 
-$$
+```math
 \boxed{
 \operatorname{int}K
 \subseteq
 \bigcup_{a\in A\setminus\{v\}}\overline B(a,1).
 }
 \tag{AS.9}
-$$
+```
 
 ### Proof
 
 If some `y in int K` satisfied
 
-$$
+```math
 |y-a|>1
 \qquad(a\ne v),
-$$
+```
 
 openness of the finitely many strict inequalities would give a positive-area open
 neighborhood `S` of `y` that is strict-safe relative to `R={v}`. But `R` removes at
@@ -225,27 +229,28 @@ of the canonical contact-minimal normalization.
 Let `Z` be an assigned contact-isolated population in one Type-I container and let `B`
 be any nonempty finite set of old contact-wall guard vertices. Put
 
-$$
+```math
 R=Z\cup B.
-$$
+```
 
 Because `Z` is contact-isolated and every member of `B` is incident to an old unit
 contact, `E_C(R)` is nonempty. Therefore every strict-safe replacement region
 `S subset int K` satisfying
 
-$$
+```math
 |y-a|>1
 \qquad(y\in S,\ a\in A\setminus R)
-$$
+```
 
 obeys
 
-\[
+```math
 \boxed{
 \operatorname{area}S
 \le a_0(z+|B|-1).
 }
 \tag{AS.10}
+```
 
 Thus a triangular lattice of spacing `lambda>1` cannot be forced by area averaging to
 contain even `z+|B|` replacement points in such a region, let alone those points plus

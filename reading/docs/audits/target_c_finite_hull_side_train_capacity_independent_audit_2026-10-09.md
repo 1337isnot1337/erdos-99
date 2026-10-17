@@ -15,16 +15,16 @@
 
 For a finite canonical contact-minimal, then diameter-pair-minimal triangle-free global minimizer in the post-ZF C-II normal form, with `C=C_*`, `H=H_*`, all source labels retained, and positive-area actual loaded force hull `F`, let `q,b,x_B,m_B,f,Q,k,P_F` have the meanings stated in the promoted report. At most two complete trains have both terminal incidences on direct unit loaded-hull sides. The occurrence intervals satisfy
 
-$$
+```math
 \ell_i=1\iff |b_i-b_{i+1}|=1,
 \qquad \sum_{\ell_i>1}\ell_i=x_B+m_B,
-$$
+```
 
 and the source satisfies
 
-$$
+```math
 \boxed{5(q-k)+x_B+m_B\ge3P_F-2.}
-$$
+```
 
 This is finite source geometry. It does not assert a finite move, a capacity surplus, or a branch elimination.
 
@@ -35,11 +35,11 @@ The canonical outer-walk split has `q` intervals with `ell_i >= 1`, `sum_i ell_i
 For each actual rhombus, the train-link graph joins opposite contact edges. The canonical finite train theorem gives a path forest and the exact incidence count `T=(b+Q)/2+2f=(q-k)+2f`, with singleton contact-edge trains included. A train with two good ends has terminal sides parallel to its fixed projective direction and with opposite orientations. The directed edge angles of the strictly convex polygon `F` make one strictly ordered turn. A double-good train uses one side in each of two opposite directions. A strictly convex polygon has at most one side in each oriented direction, and each physical contact edge belongs to one train, so distinct double-good trains have distinct projective directions. For directions `0 <= theta_i < theta_j < pi`, their four directed sides occur in the order `theta_i, theta_j, theta_i+pi, theta_j+pi`. Their terminal pairs alternate on the boundary of `F`, so their embedded train arcs must cross. The canonical simple triangle-free crossing graph allows at most two such trains.
 
 Each remaining train has a terminal occurrence either among the `x_B+m_B` bad outer occurrences or among the
-$\sum_{G\text{ nonquadrilateral}}\deg G=4f+Q$ bounded exceptional-face incidences. Incidence counting gives
+$`\sum_{G\text{ nonquadrilateral}}\deg G=4f+Q`$ bounded exceptional-face incidences. Incidence counting gives
 
-$$
+```math
 T-2\le x_B+m_B+4f+Q.
-$$
+```
 
 Substitute `T=(q-k)+2f`, then `f <= Q`, to get `q-k-2 <= x_B+m_B+3Q`. The canonical identity `Q=2(q-k)-b` yields `3b <= 5(q-k)+x_B+m_B+2`; `P_F <= b` gives the stated inequality. No asymptotic premise enters this derivation.
 

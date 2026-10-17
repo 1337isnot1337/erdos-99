@@ -20,15 +20,15 @@ Let one harmonic carrier have
 
 For each strict rhombus `R`, let `u_R,v_R` be unit representatives of its two projective train directions. Choose **any two distinct attachment vertices** `p_-,p_+` occurring on the outer-face walk, put
 
-$$
+```math
 r:=|p_+-p_-|>0,
 \qquad
 q:={p_+-p_-\over r}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
  d\bigl(L+P_{\rm exc}-2r\bigr)
  \ge
@@ -39,41 +39,41 @@ $$
  \Bigr].
 }
 \tag{120.1}
-$$
+```
 
 Equivalently, if
 
-$$
+```math
 M(q):=
 \sum_{R\in\mathcal R_4}
 \operatorname{area}(R)
 \bigl(|q\cdot u_R|+|q\cdot v_R|\bigr),
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
  d\bigl(L+P_{\rm exc}-2r\bigr)
  \ge 4A_4-2M(q).
 }
 \tag{120.2}
-$$
+```
 
 The Section-116 universal two-arc theorem is the immediate pointwise corollary
 
-$$
+```math
  d(L+P_{\rm exc}-2r)
  \ge (4-2\sqrt3)A_4,
 \tag{120.3}
-$$
+```
 
 because a strict unit rhombus has projective train angle `phi_R>pi/3` and
 
-$$
+```math
 |q\cdot u_R|+|q\cdot v_R|
 \le2\cos(\phi_R/2)<\sqrt3.
-$$
+```
 
 For a diameter pair `r=d`, (120.3) is exactly the Section-116 companion inequality.
 
@@ -92,11 +92,11 @@ Use the same physical boundary orientation convention as the hostile-audited Sec
 
 Cut the occurrence-counted outer-face walk at the two chosen attachment vertices `p_-` and `p_+`. Orient the outer walk with its bounded side on the left. The two resulting directed arcs have displacements
 
-$$
+```math
 z=p_+-p_-=rq,
 \qquad
 -z,
-$$
+```
 
 and therefore unit chord hosts `q` and `-q`.
 
@@ -111,12 +111,12 @@ All complete train ends are good.
 
 The total exact route excess of the designated walks is
 
-$$
+```math
 \boxed{
 E=L+P_{\rm exc}-2r.
 }
 \tag{120.4}
-$$
+```
 
 Indeed the two outer arcs have total length `L` and total displacement norm `2r`, while every bounded defect-face cycle has zero displacement and contributes its full length to `P_exc`.
 
@@ -124,13 +124,13 @@ Indeed the two outer arcs have total length `L` and total displacement norm `2r`
 
 For the host set
 
-$$
+```math
 Q=\{q,-q,0\},
-$$
+```
 
 the support width in a unit train direction `u` is
 
-$$
+```math
 \begin{aligned}
 w_Q(u)
 &=\max\{q\cdot u,-q\cdot u,0\}
@@ -138,27 +138,27 @@ w_Q(u)
 &=2|q\cdot u|.
 \end{aligned}
 \tag{120.5}
-$$
+```
 
 Hence the exact signed-return cost assigned to a complete train `tau` with projective direction `u_tau` is
 
-$$
+```math
 \boxed{
 \delta_\tau(q)
 :=2-w_Q(u_\tau)
 =2-2|q\cdot u_\tau|.
 }
 \tag{120.6}
-$$
+```
 
 Because every train has two good ends, the finite signed-return projection identity gives
 
-$$
+```math
 \boxed{
 E\ge\sum_\tau\delta_\tau(q).
 }
 \tag{120.7}
-$$
+```
 
 There is no orientation ambiguity in (120.6): replacing `u_tau` by `-u_tau` leaves the absolute scalar product unchanged.
 
@@ -166,16 +166,16 @@ There is no orientation ambiguity in (120.6): replacing `u_tau` by `-u_tau` leav
 
 Let `R` be a strict unit rhombus. Its two crossing complete trains have projective directions `u_R,v_R`. Therefore
 
-$$
+```math
 \delta_{u_R}(q)+\delta_{v_R}(q)
 =
 4-2\bigl(|q\cdot u_R|+|q\cdot v_R|\bigr).
 \tag{120.8}
-$$
+```
 
 Multiply (120.8) by `area(R)` and sum over all strict rhombi. Reorganizing by complete trains gives the exact identity
 
-$$
+```math
 \begin{aligned}
 &\sum_R \operatorname{area}(R)
 \Bigl[4-2\bigl(|q\cdot u_R|+|q\cdot v_R|\bigr)\Bigr]\\
@@ -184,18 +184,18 @@ $$
 \sum_{R\in\tau}\operatorname{area}(R).
 \end{aligned}
 \tag{120.9}
-$$
+```
 
 For one complete train, the sum of the areas of the rhombi along it equals the transverse displacement between its two physical terminal-edge midpoints. Both terminal midpoints lie in the same carrier of diameter `d`, so
 
-$$
+```math
 \sum_{R\in\tau}\operatorname{area}(R)\le d.
 \tag{120.10}
-$$
+```
 
 Every `delta_tau(q)` is nonnegative. Thus (120.9), (120.10), and (120.7) give
 
-$$
+```math
 \begin{aligned}
 &\sum_R \operatorname{area}(R)
 \Bigl[4-2\bigl(|q\cdot u_R|+|q\cdot v_R|\bigr)\Bigr]\\
@@ -203,7 +203,7 @@ $$
  d\sum_\tau\delta_\tau(q)
 \le dE.
 \end{aligned}
-$$
+```
 
 Using (120.4) proves (120.1).
 
@@ -213,28 +213,28 @@ This proof is finite. Holes, bridges, repeated outer-face vertices, and disconne
 
 Let `phi_R in (pi/3,pi/2]` be the projective angle between the two train directions of one strict unit rhombus. For any unit `q`, choose signs of `u_R,v_R` so their oriented angle is `phi_R`. Then
 
-$$
+```math
 |q\cdot u_R|+|q\cdot v_R|
 \le
 \max\{|u_R+v_R|,|u_R-v_R|\}
 =2\cos(\phi_R/2)
 <\sqrt3.
 \tag{120.11}
-$$
+```
 
 Consequently each local bracket in (120.1) is strictly larger than
 
-$$
+```math
 4-2\sqrt3.
-$$
+```
 
 The weak uniform estimate gives
 
-$$
+```math
  d(L+P_{\rm exc}-2r)
  \ge(4-2\sqrt3)A_4.
 \tag{120.12}
-$$
+```
 
 Taking a diameter pair `r=d` recovers the existing Section-116 two-arc theorem exactly at its uniform constant. Thus Section 120 is a genuine refinement, not a competing proof with a different convention.
 
@@ -244,7 +244,7 @@ The anisotropic statement can be averaged without changing any finite geometry.
 
 Let `nu` be any probability distribution on admissible ordered cut pairs `(p_-,p_+)` of distinct attachment vertices on the outer walk. For a sampled pair write `r(q)` for its chord length and `q` for its unit chord direction. Averaging (120.2) gives
 
-$$
+```math
 \boxed{
  d\left(
  L+P_{\rm exc}-2\mathbb E_\nu r
@@ -259,26 +259,26 @@ $$
  \right].
 }
 \tag{120.13}
-$$
+```
 
 In particular, suppose an admissible cut-pair distribution satisfies, for every train direction `u` occurring in the strict-rhombus complex,
 
-$$
+```math
 \mathbb E_\nu|q\cdot u|
 \le {2\over\pi}+\eta
 \tag{120.14}
-$$
+```
 
 and
 
-$$
+```math
 \mathbb E_\nu r\ge\rho d.
 \tag{120.15}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 L+P_{\rm exc}
 \ge
@@ -286,19 +286,19 @@ L+P_{\rm exc}
 +\left(4-{8\over\pi}-4\eta\right){A_4\over d}.
 }
 \tag{120.16}
-$$
+```
 
 The constant
 
-$$
+```math
 4-{8\over\pi}=1.4535209\ldots
-$$
+```
 
 is much larger than the universal worst-case constant
 
-$$
+```math
 4-2\sqrt3=0.5358983\ldots .
-$$
+```
 
 Equation (120.16) is a **conditional corollary only**. This section does not assert that the required admissible cut-pair distribution exists. Its purpose is to isolate the exact next geometric obligation: produce many sufficiently long attachment chords whose directions are diffuse relative to the area-weighted train-direction measure.
 
@@ -306,9 +306,9 @@ Equation (120.16) is a **conditional corollary only**. This section does not ass
 
 The reconciled Target-C state identifies the Section-116 outer-walk detour
 
-$$
+```math
 L+P_{\rm exc}-2d
-$$
+```
 
 as one of the two main source-level full-core obstructions. The universal Section-116 theorem forces a linear detour but ignores essentially all phase information in the rhombic core.
 

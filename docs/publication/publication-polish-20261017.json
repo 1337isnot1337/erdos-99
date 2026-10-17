@@ -201,6 +201,40 @@
       "after": null,
       "preserved_original": "docs/archive/publication-polish-20261017/.github/workflows/migration-namespace-canary.yml.source",
       "reason": "Retire the completed PR75-only canary while retaining its exact archived bytes and mode."
+    },
+    {
+      "path": ".gitattributes",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "5e6c655e97456081fc0fdf78a0cb8f76be90b26a",
+        "sha256": "fbce405f30383c1e9d4790d14b7defc53cd54f9123f5b2264a2e8944ce3d81f5",
+        "bytes": 106
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "78498e89b1a6b8b1d1dda208e2471c80e3ca5a64",
+        "sha256": "432f6c1f0b816d0dd1e55a973a5404b9b77e9e0e3c080a36b57616f6d401e134",
+        "bytes": 293
+      },
+      "preserved_original": "docs/archive/publication-polish-20261017/.gitattributes.source",
+      "reason": "Allow the exact archived audit file's pre-existing terminal blank line without changing its bytes."
+    },
+    {
+      "path": "tools/verify_frozen_target_c_813_migration.py",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "76aed04e7996f7b0123cf91c60c67ee43a4669df",
+        "sha256": "fbc85985750d29162512a6b6c9786a5ed2ca03eeb326fbd17404dbe0e9cef1fa",
+        "bytes": 22210
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "35c16e162d91022303292e5a1321ec13c41270da",
+        "sha256": "c9224be7fda7b9550d1d99ffedfc30f36ea2b801c354d67d21e234be38d95231",
+        "bytes": 22231
+      },
+      "preserved_original": "docs/archive/publication-polish-20261017/tools/verify_frozen_target_c_813_migration.py.source",
+      "reason": "Describe the narrowly checked operational selector edit in the shared owner-manifest lineage."
     }
   ]
 }

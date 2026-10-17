@@ -15,18 +15,18 @@ This note removes two pieces of slack left implicit in the post-ZF boundary book
 
 The result is an exact four-currency ledger.  In particular, the earlier HB inequality
 
-$$
+```math
 e_{BB}\ge Q+2(d_H+s_Z)
-$$
+```
 
 has an exact remainder:
 
-$$
+```math
 \boxed{
 e_{BB}-Q-2(d_H+s_Z)
 =d_P+c_B,
 }
-$$
+```
 
 where `d_P` is the total excess of outer-pocket degrees above triangles and `c_B` is the number of loaded-loaded unit contacts that are not force-hull sides.
 
@@ -51,28 +51,28 @@ Use the post-ZF notation
 
 OP augments the positive contact graph by every missing force-hull side.  Let
 
-$$
+```math
 \boxed{a:=\#\{\text{force-hull sides that are not unit-contact edges}\}.}
 \tag{1.1}
-$$
+```
 
 OP proves that the augmentation creates exactly `a` convex outer pockets.  Let their graph-boundary lengths be `k_P`.  Define
 
-$$
+```math
 \boxed{
 d_P:=\sum_P(k_P-3)\ge0.}
 \tag{1.2}
-$$
+```
 
 Thus `d_P=0` iff every outer pocket is triangular.
 
 There are exactly `q-a` force-hull sides that already are contact edges.  Each has both endpoints in `B_+`.  Define the remaining loaded-loaded contact count
 
-$$
+```math
 \boxed{
 c_B:=e_{BB}-(q-a)\ge0.}
 \tag{1.3}
-$$
+```
 
 So `c_B` counts precisely the loaded-loaded unit contacts that are not force-hull sides.
 
@@ -82,14 +82,14 @@ So `c_B` counts precisely the loaded-loaded unit contacts that are not force-hul
 
 OP proves
 
-$$
+```math
 \sum_P k_P=b+2a-q.
 \tag{2.1}
-$$
+```
 
 Since the number of pockets is `a`,
 
-$$
+```math
 \begin{aligned}
 d_P
 &=\sum_P(k_P-3)\\
@@ -97,14 +97,14 @@ d_P
 &=b-q-a\\
 &=x_B-a.
 \end{aligned}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{x_B=a+d_P.}
 \tag{2.2}
-$$
+```
 
 This is stronger than the earlier observation `a<=x_B`: every unit of outer-walk excess not creating a new pocket is exactly a unit of outer-pocket degree above three.
 
@@ -114,54 +114,54 @@ This is stronger than the earlier observation `a<=x_B`: every unit of outer-walk
 
 ZT gives
 
-$$
+```math
 q=x_B+Q+2(d_H+s_Z)=x_B+Q+2k.
 \tag{3.1}
-$$
+```
 
 Insert (2.2):
 
 ### Theorem PC.1 — terminal partition by outer pockets
 
-$$
+```math
 \boxed{
 q=a+d_P+Q+2k.
 }
 \tag{PC.1}
-$$
+```
 
 Now (1.3) gives
 
-$$
+```math
 e_{BB}=q-a+c_B.
 \tag{3.2}
-$$
+```
 
 Use PC.1:
 
 ### Theorem PC.2 — exact HB remainder
 
-$$
+```math
 \boxed{
 e_{BB}=d_P+Q+2k+c_B.
 }
 \tag{PC.2}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 e_{BB}-\bigl(Q+2d_H+2s_Z\bigr)=d_P+c_B.
 }
 \tag{PC.3}
-$$
+```
 
 Thus the HB inequality
 
-$$
+```math
 e_{BB}\ge Q+2d_H+2s_Z
-$$
+```
 
 is equality exactly when
 
@@ -176,39 +176,39 @@ There is no additional hidden slack.
 
 ZU gives
 
-$$
+```math
 c_I+e_{BB}+s_C=q-2+k.
 \tag{4.1}
-$$
+```
 
 Insert `e_BB=q-a+c_B` and cancel `q`:
 
 ### Theorem PC.3 — outer-pocket balance
 
-$$
+```math
 \boxed{
 a+k=c_I+c_B+s_C+2.
 }
 \tag{PC.4}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 a=c_I+c_B+s_C+2-d_H-s_Z.
 }
 \tag{PC.5}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 q-e_{BB}=a-c_B=c_I+s_C+2-k.
 }
 \tag{PC.6}
-$$
+```
 
 This identity is useful because `a` is a genuine count of pairwise interior-disjoint convex outer pockets, whereas `x_B` was only a boundary-walk excess with repeated edge occurrences allowed.
 
@@ -220,44 +220,44 @@ A large pocket count is therefore not an independent escape: apart from the two 
 
 DT and ZE give
 
-$$
+```math
 T=\frac{b+Q}{2}+2f=h-s_Z+2f=q-k+2f.
 \tag{5.1}
-$$
+```
 
 Use PC.1 and `Q=f+g_F`:
 
-$$
+```math
 \boxed{
 T=a+d_P+3f+g_F+k.
 }
 \tag{PC.7}
-$$
+```
 
 NM proves
 
-$$
+```math
 T-2\le2x_B+5f+g_F.
 \tag{5.2}
-$$
+```
 
 Substitute `x_B=a+d_P` and PC.7.  After cancellation,
 
-$$
+```math
 \boxed{
 k\le a+d_P+2f+2.
 }
 \tag{PC.8}
-$$
+```
 
 Combining with PC.4 gives the equivalent structural bound
 
-$$
+```math
 \boxed{
 c_I+c_B+s_C\le2a+d_P+2f.
 }
 \tag{PC.9}
-$$
+```
 
 This is only a repackaging of NM plus the exact new ledger, but it identifies which geometric boundary objects must pay for a large pinned/interior surplus.
 
@@ -269,19 +269,19 @@ This is only a repackaging of NM plus the exact new ledger, but it identifies wh
 
 From `e_BB=q-a+c_B`,
 
-$$
+```math
 \boxed{a+e_{BB}=q+c_B\ge q.}
 \tag{6.1}
-$$
+```
 
 Thus the old OP/HB dichotomy is exact up to the explicitly named non-hull chord count `c_B`.
 
 DB gives asymptotically
 
-$$
+```math
 q\ge h\ge(2\rho-o(1))D,
 \qquad \rho=0.7390851332\ldots,
-$$
+```
 
 so every post-ZF survivor has either `a=Omega(D)` or `e_BB=Omega(D)`.
 
@@ -289,17 +289,17 @@ so every post-ZF survivor has either `a=Omega(D)` or `e_BB=Omega(D)`.
 
 If along a sequence
 
-$$
+```math
 e_{BB}+2s_C\le\lambda D+o(D),
-$$
+```
 
 then `e_BB<=lambda D+o(D)` and (6.1) gives
 
-$$
+```math
 \boxed{
 a\ge(2\rho-\lambda-o(1))D.}
 \tag{6.2}
-$$
+```
 
 At the PI/GU area-gap threshold `lambda<0.796172...`, this lower bound is still a positive linear constant.  This localizes the low-surplus branch to linearly many **distinct convex outer pockets**, not merely a long repeated outer walk.
 

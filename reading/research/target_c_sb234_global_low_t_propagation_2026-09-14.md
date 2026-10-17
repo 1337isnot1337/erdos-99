@@ -15,19 +15,19 @@
 
 The current proof-only atomic theorem is
 
-$$
+```math
 \boxed{g=\eta_{grid}=0.00234.}
-$$
+```
 
 This supersedes the SP1625 propagation on this branch.
 
 Put
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},
 \quad s_2=\sqrt{\Delta_2},
 \quad C_{146}={4\over9}(\pi+s_2),
-$$
+```
 
 and `rho=0.7390851332151606...`, the positive root of `rho=cos(rho)`.
 
@@ -35,106 +35,106 @@ and `rho=0.7390851332151606...`, the positive root of `rho=cos(rho)`.
 
 The correlated identity gives
 
-$$
+```math
 \boxed{
 \liminf{\rho_{rec}+\sigma_R-q\over D}\ge2g=0.00468.
 }
 \tag{P234.1}
-$$
+```
 
 Hence every survivor lies in at least one of
 
-$$
+```math
 \boxed{
 {S\over D}\ge{\rho\over2}+{g\over2}-o(1)
 =0.370712566607580\ldots-o(1),
 }
 \tag{P234.2}
-$$
+```
 
 or
 
-$$
+```math
 \boxed{
 {\sigma_R\over D}\ge\rho+g-o(1)
 =0.741425133215161\ldots-o(1).
 }
 \tag{P234.3}
-$$
+```
 
 The rhombic missing-crossing lower bound becomes
 
-$$
+```math
 \boxed{
 \liminf{M_R\over D^2}\ge0.387391276606001\ldots .
 }
 \tag{P234.4}
-$$
+```
 
 The post-endpoint scalar floor is
 
-$$
+```math
 \boxed{
 \liminf\mu_D\ge1.785847210824532\ldots .
 }
 \tag{P234.5}
-$$
+```
 
 and the direct correlated interface floor is
 
-$$
+```math
 \boxed{
 \liminf{J\over D}\ge2.150508840296357\ldots .
 }
 \tag{P234.6}
-$$
+```
 
 ## 2. Section-171 endpoint
 
 Take
 
-$$
+```math
 \varepsilon_{234}=0.0017782,
 \qquad
 t_{234}=C_{146}+\varepsilon_{234}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 t_{234}=1.8212917379794447\ldots .
 }
 \tag{P234.7}
-$$
+```
 
 The feasible detour endpoint is exactly
 
-$$
+```math
 \boxed{
 \delta_{234}
 ={{9\over2}\varepsilon_{234}-g\over2}
 =0.00283095.
 }
 \tag{P234.8}
-$$
+```
 
 `research/verify_target_c_sb234_global_propagation.py` certifies the Section-171 endpoint with outward negativity margin greater than `5.7e-5` and the same positive `delta`-derivative bound used in the prior propagations. Thus
 
-$$
+```math
 \boxed{
 \liminf {q-k\over D}
 \ge C_{146}+0.0017782
 =1.8212917379794447\ldots .
 }
 \tag{P234.9}
-$$
+```
 
 The numerical root of the unchanged endpoint equation is
 
-$$
+```math
 0.0017783923034325955\ldots,
-$$
+```
 
 so decimal tuning is again irrelevant.
 
@@ -142,52 +142,52 @@ so decimal tuning is again irrelevant.
 
 The mandatory chamber/interface floor is
 
-$$
+```math
 \boxed{
 \liminf {J\over D}
 \ge t_{234}+2(2s_2+g)-\pi
 =2.493630311845481\ldots .
 }
 \tag{P234.10}
-$$
+```
 
 The exact `H` relation gives
 
-$$
+```math
 \boxed{
 \liminf {H\over D}
 \ge1.497310567107289\ldots .
 }
 \tag{P234.11}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \liminf {A_{ch}-a_0Z_{ch}\over D}
 \ge0.648354494234898\ldots,
 }
 \tag{P234.12}
-$$
+```
 
-$$
+```math
 \boxed{
 \liminf {\Delta_2D^2-R_4\over D}
 \ge0.748655283553644\ldots,
 }
 \tag{P234.13}
-$$
+```
 
 and the corrected residual cap is
 
-$$
+```math
 \boxed{
 \limsup {R_F+\Sigma_{ext}\over D}
 \le2.891097242405245\ldots .
 }
 \tag{P234.14}
-$$
+```
 
 No scalar contradiction results.
 
@@ -195,110 +195,110 @@ No scalar contradiction results.
 
 The latest-main low-`t` network theorem uses
 
-$$
+```math
 C_0=2s_2+g,
 \qquad
 R(t)={9t\over2}-2\pi-C_0.
-$$
+```
 
 At `t=t234`,
 
-$$
+```math
 \boxed{C_0=1.906965613727915\ldots,}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{R(t_{234})=4.5(0.0017782)-0.00234=0.0056619.}
 \tag{P234.15}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \delta\le0.00283095+o(1),
 \qquad
 \kappa={k\over D}\le0.0113238+o(1).
 }
 \tag{P234.16}
-$$
+```
 
 The loaded diameter graph satisfies
 
-$$
+```math
 \boxed{
 {h\over q}\ge0.993820962572169\ldots-o(1).
 }
 \tag{P234.17}
-$$
+```
 
 If it is a caterpillar forest, its average component size satisfies
 
-$$
+```math
 \boxed{
 {q\over d_H}\ge160.837504899\ldots-o(1).
 }
 \tag{P234.18}
-$$
+```
 
 ## 5. Pentagon sea
 
 The bounded exceptional-face count satisfies
 
-$$
+```math
 \boxed{
 {f\over D}\ge0.498159872369096\ldots-o(1).
 }
 \tag{P234.19}
-$$
+```
 
 while
 
-$$
+```math
 \boxed{
 {Q-f\over D}\le0.00283095+o(1).
 }
 \tag{P234.20}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 {p_5\over D}\ge0.495328922369096\ldots-o(1).
 }
 \tag{P234.21}
-$$
+```
 
 and the pentagon closure-rank theorem gives
 
-$$
+```math
 \boxed{
 {\operatorname{rank}C_{P_5}\over D}
 \ge0.979334044738192\ldots-o(1).
 }
 \tag{P234.22}
-$$
+```
 
 Degree-at-least-six bounded faces carry at most
 
-$$
+```math
 \boxed{
 {B_{\ge6}\over D}\le0.0169857+o(1)
 }
 \tag{P234.23}
-$$
+```
 
 terminal occurrences, while distinct complete trains touching pentagons satisfy
 
-$$
+```math
 \boxed{
 {N_5\over D}\ge1.238322305922740\ldots-o(1).
 }
 \tag{P234.24}
-$$
+```
 
 Thus more than `99.43%` of bounded exceptional faces are forced to be pentagons at the endpoint profile.
 
@@ -306,36 +306,36 @@ Thus more than `99.43%` of bounded exceptional faces are forced to be pentagons 
 
 For `B=Q+4f`,
 
-$$
+```math
 \boxed{
 2.490799361845481\ldots
 \le{B\over D}
 \le2.504954111845481\ldots
 }
 \tag{P234.25}
-$$
+```
 
 up to `o(1)`. Since `2T=b+B`,
 
-$$
+```math
 \boxed{
 2.816196007717637\ldots
 \le{T\over D}
 \le2.823273382717637\ldots .
 }
 \tag{P234.26}
-$$
+```
 
 The outer-to-outer train count obeys
 
-$$
+```math
 \boxed{
 \liminf {L_{OO}\over D}
 \ge3\pi-5t_{234}
 =0.318319270872156\ldots .
 }
 \tag{P234.27}
-$$
+```
 
 Each such cut remains two-sidedly diameter-braced, but diameter-edge reuse across nested cuts is still uncontrolled.
 
@@ -343,24 +343,24 @@ Each such cut remains two-sidedly diameter-braced, but diameter-edge reuse acros
 
 The latest-main dichotomy gives
 
-$$
+```math
 \boxed{
 \liminf {N_2+2L_{>2}\over D}
 \ge5\pi+2C_0-10t_{234}
 =1.308977115610349\ldots .
 }
 \tag{P234.28}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \liminf {1\over D}\max\{N_2,L_{>2}\}
 \ge0.436325705203450\ldots .
 }
 \tag{P234.29}
-$$
+```
 
 As before, the atomic improvement mainly tightens the topology and pentagon budgets; the tooth/long-side scalar floor is nearly stationary because the larger `g` and larger certified `t` compensate.
 

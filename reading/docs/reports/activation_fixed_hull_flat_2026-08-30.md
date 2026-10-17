@@ -24,20 +24,20 @@
 
 The exact Target A endpoint was
 
-$$
+```math
 \dim\ker S\ge s,
 \qquad
 s=\Delta_\Lambda-d_{\rm int},
 \tag{R1.1}
-$$
+```
 
 equivalently
 
-$$
+```math
 \operatorname{rank}S
 \le d_{\rm int}+|C^\partial|-\Delta_\Lambda.
 \tag{R1.2}
-$$
+```
 
 The attempted implication chain was
 
@@ -59,40 +59,41 @@ the final two-shadow/backbone compatibility.
 
 Run the canonical monotone activation sequence
 
-$$
+```math
 A_0,A_1,\ldots,A_\ell
-$$
+```
 
-from a triangle-free global minimizer of cardinality $n$ and diameter
-$D=D(n)>1$. Let $r_i$ be the strict point moved at step $i$, and let
-$e_i=r_iq_i$ be the unique unit or diameter pair created at that step. Put
+from a triangle-free global minimizer of cardinality $`n`$ and diameter
+$`D=D(n)>1`$. Let $`r_i`$ be the strict point moved at step $`i`$, and let
+$`e_i=r_iq_i`$ be the unique unit or diameter pair created at that step. Put
 
-$$
+```math
 E_{\rm new}=\{e_1,\ldots,e_\ell\},
 \qquad
 M=\{r_1,\ldots,r_\ell\}.
-$$
+```
 
-Let $A^*=A_\ell$, $H^*=\operatorname{conv}A^*$,
-$b=|M\cap\partial H^*|$, and let $d_D$ be the number of diameter
+Let $`A^*=A_\ell`$, $`H^*=\operatorname{conv}A^*`$,
+$`b=|M\cap\partial H^*|`$, and let $`d_D`$ be the number of diameter
 activations. Then:
 
-1. $E_{\rm new}$ is a forest, every one of its edges is a bridge in the full
+1. $`E_{\rm new}`$ is a forest, every one of its edges is a bridge in the full
    terminal active graph, and
-   $\operatorname{rank}R_{E_{\rm new}}=\ell$.
-2. There is a linear space $\mathcal L_{\rm act}$ and a neighborhood of zero
+   $`\operatorname{rank}R_{E_{\rm new}}=\ell`$.
+2. There is a linear space $`\mathcal L_{\rm act}`$ and a neighborhood of zero
    in it whose vectors give triangle-free global minimizers inside the fixed hull
-   $H^*$ by direct affine displacement.
+   $`H^*`$ by direct affine displacement.
 3. Its dimension obeys
-   $$
+   ```math
    \boxed{
    \dim\mathcal L_{\rm act}
    \ge\max\{0,\ell-2b+d_D\}.
    }
    \tag{R2.1}
-   $$
-4. If $R_0$ is a specified set of $r_0$ initial strict rattlers, then
-   $$
+   
+   ```
+4. If $`R_0`$ is a specified set of $`r_0`$ initial strict rattlers, then
+   ```math
    \boxed{
    \dim\mathcal L_{\rm act}
    \ge
@@ -102,13 +103,14 @@ activations. Then:
    \right\}.
    }
    \tag{R2.2}
-   $$
+   
+   ```
 
 After the Section 121 maximal triangle-free extension, one may take
-$r_0=|R_B|\ge\rho-5\widehat p_H$. Thus the activated terminal
+$`r_0=|R_B|\ge\rho-5\widehat p_H`$. Thus the activated terminal
 representative has a fixed-terminal-hull affine family of dimension at least
 
-$$
+```math
 \max\left\{0,
 \left\lceil
 \frac{\max\{0,\rho-5\widehat p_H\}}2
@@ -116,7 +118,7 @@ $$
 -2\lfloor\pi D\rfloor
 \right\}.
 \tag{R2.3}
-$$
+```
 
 ### Scope
 
@@ -128,75 +130,75 @@ and prescribed-phase inner scaffold under the Section 155 threshold.
 
 ### Proof
 
-Immediately before step $i$, the creator $r_i$ is strict, hence isolated in
-the current active graph. Adding $e_i$ therefore attaches an isolated vertex by
-one edge. Persistence of every active pair makes $r_i$ permanently non-strict, so
-the creators are distinct. If $q_i$ is itself a creator, it must have been moved
-earlier: if it were still strict, $e_i$ would make it non-strict and prevent a
+Immediately before step $`i`$, the creator $`r_i`$ is strict, hence isolated in
+the current active graph. Adding $`e_i`$ therefore attaches an isolated vertex by
+one edge. Persistence of every active pair makes $`r_i`$ permanently non-strict, so
+the creators are distinct. If $`q_i`$ is itself a creator, it must have been moved
+earlier: if it were still strict, $`e_i`$ would make it non-strict and prevent a
 later move. Thus the creation order orients every created edge from a new isolated
 vertex toward an earlier or never-moved vertex.
 
 Inductively, adding an edge at an isolated endpoint creates no cycle and cannot later
 be placed on a cycle, because every later edge again has a new isolated endpoint.
-Hence $E_{\rm new}$ is a forest and every created edge remains a bridge in the
+Hence $`E_{\rm new}`$ is a forest and every created edge remains a bridge in the
 full terminal active graph. Leaf elimination in the rigidity matrix proves that the
-$\ell$ nonzero forest rows are independent.
+$`\ell`$ nonzero forest rows are independent.
 
 Let
 
-$$
+```math
 I=M\cap\operatorname{int}H^*.
-$$
+```
 
-Define $\mathcal L_{\rm act}$ to consist of velocity fields supported on $I$
+Define $`\mathcal L_{\rm act}`$ to consist of velocity fields supported on $`I`$
 and satisfying
 
-$$
+```math
 (p_x-p_y)\cdot(v_x-v_y)=0
 \tag{R2.4}
-$$
+```
 
-for every created unit pair $xy$. There are $2(\ell-b)$ variables and at
-most $\ell-d_D$ equations. This proves (R2.1).
+for every created unit pair $`xy`$. There are $`2(\ell-b)`$ variables and at
+most $`\ell-d_D`$ equations. This proves (R2.1).
 
-Every endpoint of a diameter pair lies on $\partial H^*$. Thus all created
+Every endpoint of a diameter pair lies on $`\partial H^*`$. Thus all created
 diameter pairs are fixed by these velocities. Every old active pair is also fixed:
 no creator can have been incident to an old active pair, because old pairs persist
 and would have prevented it from being strict when moved.
 
-For a created unit pair and any $v\in\mathcal L_{\rm act}$,
+For a created unit pair and any $`v\in\mathcal L_{\rm act}`$,
 
-$$
+```math
 \begin{aligned}
 |(p_x+v_x)-(p_y+v_y)|^2
 &=1+2(p_x-p_y)\cdot(v_x-v_y)+|v_x-v_y|^2\\
 &=1+|v_x-v_y|^2\ge1.
 \end{aligned}
 \tag{R2.5}
-$$
+```
 
-Every nonactive pair has terminal distance strictly between $1$ and $D$, so
+Every nonactive pair has terminal distance strictly between $`1`$ and $`D`$, so
 all its inequalities persist for sufficiently small velocities. Every moved point in
-$I$ has positive distance from $\partial H^*$, so a common sufficiently small
-neighborhood stays in $H^*$. An old fixed diameter pair retains length $D$.
-The perturbed set is therefore unit-separated, has diameter exactly $D=D(n)$,
+$`I`$ has positive distance from $`\partial H^*`$, so a common sufficiently small
+neighborhood stays in $`H^*`$. An old fixed diameter pair retains length $`D`$.
+The perturbed set is therefore unit-separated, has diameter exactly $`D=D(n)`$,
 and is another global minimizer. Its contact graph is a subgraph of the terminal
 triangle-free contact graph, so it remains triangle-free.
 
-If $h=|A^*\cap\partial H^*|$, the boundary arcs between cyclically consecutive
+If $`h=|A^*\cap\partial H^*|`$, the boundary arcs between cyclically consecutive
 points have length at least one. Hence
 
-$$
+```math
 b\le h\le\operatorname{per}(H^*)\le\pi D,
 \tag{R2.6}
-$$
+```
 
-and therefore $b\le\lfloor\pi D\rfloor$.
+and therefore $`b\le\lfloor\pi D\rfloor`$.
 
-At termination every point of a specified initial strict set $R_0$ is incident to
-a created pair. One pair covers at most two members of $R_0$, so
-$\ell\ge\lceil r_0/2\rceil$. Equations (R2.1) and (R2.6) give
-(R2.2), and the canonical retained-rattler estimate gives (R2.3). $\square$
+At termination every point of a specified initial strict set $`R_0`$ is incident to
+a created pair. One pair covers at most two members of $`R_0`$, so
+$`\ell\ge\lceil r_0/2\rceil`$. Equations (R2.1) and (R2.6) give
+(R2.2), and the canonical retained-rattler estimate gives (R2.3). $`\square`$
 
 ### Coembedded Section 155 subbranch
 
@@ -208,37 +210,37 @@ hull vertex is frozen by the affine construction, so the hull remains fixed thro
 the family. The exact fixed-source Hall theorem consequently gives, uniformly over
 the family,
 
-$$
+```math
 \nu(X_m,A^*(v))\ge m-\widehat p_{H^*},
 \qquad
 \nu(Y_{\rm in},A^*(v))\ge |Y_{\rm in}|-\widehat p_{H^*}.
 \tag{R2.7}
-$$
+```
 
 This is the coembedded affine two-shadow family of Corollary 156.3 in the canonical
 module. It is not a claim that the two matchings use the same source labels.
 
 ### Fixed-basis transition corollary
 
-Rebuild the capacity endpoint and fixed-basis flag in $H^*$. On a relatively open
-chamber of $\mathcal L_{\rm act}$ where the strict conflict graph is constant,
+Rebuild the capacity endpoint and fixed-basis flag in $`H^*`$. On a relatively open
+chamber of $`\mathcal L_{\rm act}`$ where the strict conflict graph is constant,
 all exchanged configurations remain same-hull global optima. If every configuration
 at one fixed transition contains a unit triangle, then one fixed labeled triangle
 persists throughout the chamber. It either lies entirely among inserted capacity
 points, or every retained source vertex in it is fixed by all of
-$\mathcal L_{\rm act}$.
+$`\mathcal L_{\rm act}`$.
 
 Indeed, finitely many algebraic triangle loci cover the chamber, so one has relative
 interior and its distance polynomials vanish identically. If a persistent triangle
-contains a source vertex $x$ and an inserted fixed vertex $z$, then for every
-direction $w\in\mathcal L_{\rm act}$,
+contains a source vertex $`x`$ and an inserted fixed vertex $`z`$, then for every
+direction $`w\in\mathcal L_{\rm act}`$,
 
-$$
+```math
 |p_x+v_x+t w_x-z|^2=1
-$$
+```
 
-for small $t$. Its quadratic coefficient is $|w_x|^2$, forcing
-$w_x=0$. This applies to every retained source vertex in the triangle.
+for small $`t`$. Its quadratic coefficient is $`|w_x|^2`$, forcing
+$`w_x=0`$. This applies to every retained source vertex in the triangle.
 
 ### Dependencies
 
@@ -263,9 +265,9 @@ inside one fixed terminal hull. In the Section 155 regime it coembeds the smalle
 optimum and inner scaffold, and it reduces any universally triangle-producing
 fixed-basis transition to inserted points and source labels frozen by that family.
 
-It does **not** change $\zeta=\dim\ker S$ directly. The exact endpoint remains
+It does **not** change $`\zeta=\dim\ker S`$ directly. The exact endpoint remains
 (R1.1). The new source quantities available for transport are
-$\mathcal L_{\rm act}$, the two uniform Hall shadows (R2.7), and the captured
+$`\mathcal L_{\rm act}`$, the two uniform Hall shadows (R2.7), and the captured
 rattler set in the Section 157 backbone witness.
 
 ## 4. Exact remaining lemma
@@ -273,10 +275,10 @@ rattler set in the Section 157 backbone witness.
 The missing statement is a global activation-flat/two-shadow transport theorem:
 
 > In the Section 155 common placement, use the uniform Hall shadows over
-> $\mathcal L_{\rm act}$, the Section 157 backbone witness, and its captured
-> strict rattlers to induce at least $s=\Delta_\Lambda-d_{\rm int}$ independent
-> boundary-response null directions, or produce an $N$-point unit-separated
-> configuration of diameter strictly below $D$. Outside that subbranch, the
+> $`\mathcal L_{\rm act}`$, the Section 157 backbone witness, and its captured
+> strict rattlers to induce at least $`s=\Delta_\Lambda-d_{\rm int}`$ independent
+> boundary-response null directions, or produce an $`N`$-point unit-separated
+> configuration of diameter strictly below $`D`$. Outside that subbranch, the
 > missing source/scaffold coordinate transport must be supplied first.
 
 Local incidence cannot prove this statement; the construction must use the genuine
@@ -284,12 +286,12 @@ global relation between the source and the independently chosen smaller optimum.
 
 In the Section 155 common placement, Proposition 157.3 adds the exact graft
 inequality
-$$
+```math
 |Q|-|N_A(Q)\cup C|\le-1
-$$
-for every source diameter cover $C$. Hence a backbone-maximizing witness of
-deficiency $h$ captures at least $h-|C|+1$ strict rattlers; with a minimum cover
-and $h\ge\tau_D(A)$, at least one rattler is forced. This remains a source-side
+```
+for every source diameter cover $`C`$. Hence a backbone-maximizing witness of
+deficiency $`h`$ captures at least $`h-|C|+1`$ strict rattlers; with a minimum cover
+and $`h\ge\tau_D(A)`$, at least one rattler is forced. This remains a source-side
 statement and supplies no response-kernel map.
 
 ## 5. Audit classification of other claims
@@ -299,7 +301,7 @@ statement and supplies no response-kernel map.
 | Every activation-created pair remains a bridge | proved | Each is added at a currently isolated creator; later edges have the same form. |
 | All created activation rows are independent | proved | The complete created set is a forest, so leaf elimination applies. |
 | The terminal representative has a same-hull affine global-optimum family | proved | Orthogonality removes the linear term and the quadratic term has the feasible sign. |
-| The affine family maps canonically into $\ker S$ | unproved | Even in the Section 155 common placement, the two Hall shadows and the response have no proved compatible composition. |
+| The affine family maps canonically into $`\ker S`$ | unproved | Even in the Section 155 common placement, the two Hall shadows and the response have no proved compatible composition. |
 | A large affine family automatically breaks the first transition | rejected as stated | A triangle may lie entirely on inserted/frozen support. |
 | Kuperberg supplies a quantitative support-radius rate | not imported | The checked proof remains qualitative in the small-gap parameter. |
 | Section 157 backbone deficiency gives a Target A contradiction | conditional only | Its strict-rattler capture is exactly the capacity slack mechanism, not a Schur certificate. |

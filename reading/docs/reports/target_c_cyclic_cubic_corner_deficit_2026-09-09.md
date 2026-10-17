@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_cubic_corner_deficit_2026-09-09.md) · source SHA-256 `5a2f9d871a7cd68c699583beafdb3cf408f0370049d2217478e319b03e38e456`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 25 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-34FEC7B121DE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cubic Reuleaux-corner deficit forces `O(D^(2/3))` diameter branching
 
@@ -17,23 +19,23 @@
 
 MR reduces the exact `d_H=0` shell to a Reuleaux composition
 
-$$
+```math
 \ell_0+\cdots+\ell_{r-1}=q,
 \qquad
 \ell_i\in\mathbb Z_{>0},
 \qquad
 r\text{ odd},
-$$
+```
 
 where the Reuleaux side centered at the corresponding diameter-cycle vertex has angular length
 
-$$
+```math
 \phi_i=\ell_i\frac\pi q.
-$$
+```
 
 The missing quantitative input is a penalty for one anomalously long Reuleaux side. A direct support-function argument gives the cubic estimate
 
-$$
+```math
 \boxed{
 \frac{\pi D^2}{4}-\operatorname{area}(R)
 \ge
@@ -42,23 +44,24 @@ $$
 \frac{2D^2\phi^3}{\pi^4}
 }
 \tag{CC.1}
-$$
+```
 
 for every side of angular length `phi` in any Reuleaux polygon `R` of width `D`.
 
 Applying this to the unique-cycle Reuleaux completion `R_Gamma`, while MR and complete-source Oler give only `O(D)` total area deficit, yields
 
-$$
+```math
 \boxed{
 \phi_{\max}^3
 <
 \frac{\sqrt3\,\pi^4 q}{8D^2}.
 }
 \tag{CC.2}
+```
 
 Equivalently,
 
-\[
+```math
 \boxed{
 \ell_{\max}^3
 <
@@ -66,10 +69,11 @@ Equivalently,
 \frac{q^4}{D^2}.
 }
 \tag{CC.3}
+```
 
 Since `q<=pi D`,
 
-\[
+```math
 \boxed{
 \ell_{\max}
 <
@@ -78,22 +82,24 @@ Since `q<=pi D`,
 4.0464421382\ldots D^{2/3}.
 }
 \tag{CC.4}
+```
 
 MR gives
 
-\[
+```math
 \deg_H(v_i)=\ell_i+1
-$$
+```
 
 at every diameter-cycle vertex, while every off-cycle vertex is a diameter leaf. Therefore
 
-$$
+```math
 \boxed{
 \Delta(H)
 <
 4.0464421382\ldots D^{2/3}+1.
 }
 \tag{CC.5}
+```
 
 This is the first sublinear **explicit** branch-degree bound intrinsic to the exact Reinhardt endpoint. It improves the `O(D^{3/4})` scale obtained by combining generic near-disk Bonnesen stability with the primitive-cyclic `O(1/D)` normalized area deficit.
 
@@ -103,65 +109,69 @@ This is the first sublinear **explicit** branch-degree bound intrinsic to the ex
 
 Let `R` be a planar convex body of constant width `D`. Write its support function as
 
-\[
+```math
 h(\theta),
 \qquad 0\le\theta<2\pi.
-$$
+```
 
 Constant width is exactly
 
-$$
+```math
 \boxed{
 h(\theta)+h(\theta+\pi)=D.}
 \tag{1.1}
+```
 
 Put
 
-\[
+```math
 \boxed{p(\theta):=h(\theta)-\frac D2.}
 \tag{1.2}
+```
 
 Then
 
-\[
+```math
 \boxed{p(\theta+\pi)=-p(\theta).}
 \tag{1.3}
+```
 
 Thus `p` is antiperiodic and has only odd Fourier modes. Its first harmonic is the arbitrary choice of origin/translation and will lie in the kernel of the energy below.
 
 For a piecewise `C^2` strictly convex body such as a Reuleaux polygon, the standard support-function area formula is
 
-\[
+```math
 \boxed{
 A(R)
 =\frac12\int_0^{2\pi}
 \left(h^2-(h')^2\right)d\theta.
 }
 \tag{1.4}
+```
 
 For completeness, on every smooth support interval the boundary parametrization is
 
-\[
+```math
 x(\theta)=h(\theta)u(\theta)+h'(\theta)u^\perp(\theta),
-$$
+```
 
 so
 
-$$
+```math
 x'(\theta)=(h+h'')u^\perp.
-$$
+```
 
 Then `A=(1/2) int det(x,x') dtheta`, and one integration by parts gives (1.4). The finitely many Reuleaux transition angles do not affect the integral; the formula extends across them by piecewise integration.
 
 Since antiperiodicity gives
 
-$$
+```math
 \int_0^{2\pi}p=0,
-$$
+```
 
 substituting `h=D/2+p` into (1.4) yields
 
-$$
+```math
 \boxed{
 \delta(R)
 :=
@@ -171,6 +181,7 @@ $$
 \left((p')^2-p^2\right)d\theta.
 }
 \tag{1.5}
+```
 
 ---
 
@@ -178,62 +189,69 @@ $$
 
 Define the radius-of-curvature density, in support coordinates,
 
-\[
+```math
 \rho=h+h''.
 \tag{2.1}
+```
 
 For a Reuleaux polygon this is piecewise constant almost everywhere:
 
 - on the normal interval corresponding to a circular side of radius `D`,
-  \[
+  ```math
   \rho=D;
-  $$
+  
+  ```
 - on the antipodal normal interval corresponding to the opposite vertex, constant-width duality gives
-  $$
+  ```math
   \rho=0.
-  $$
+  
+  ```
 
 Indeed differentiating (1.1) twice in the distributional/piecewise sense gives
 
-$$
+```math
 \boxed{
 \rho(\theta)+\rho(\theta+\pi)=D.
 }
 \tag{2.2}
+```
 
 Put
 
-\[
+```math
 \boxed{f:=\rho-\frac D2=p+p''.}
 \tag{2.3}
+```
 
 Thus `f` is also antiperiodic.
 
 Suppose one Reuleaux side has angular/normal length
 
-\[
+```math
 0<\phi<\pi.
-$$
+```
 
 After rotating the angular parameter, write its normal interval as
 
-$$
+```math
 I=\left(-\frac\phi2,\frac\phi2\right).
-$$
+```
 
 Then almost everywhere
 
-$$
+```math
 \boxed{
 f=\frac D2\text{ on }I,}
 \tag{2.4}
+```
 
 and by (2.2)
 
-\[
+```math
 \boxed{
 f=-\frac D2\text{ on }I+\pi.}
 \tag{2.5}
+```
 
 Nothing is assumed about `f` on the remaining normal directions.
 
@@ -243,42 +261,45 @@ Nothing is assumed about `f` on the remaining normal directions.
 
 On the antiperiodic space define
 
-\[
+```math
 L:=-\frac{d^2}{d\theta^2}-1.
 \tag{3.1}
+```
 
 Its Fourier eigenvalues on odd mode `n` are
 
-\[
+```math
 n^2-1.
-$$
+```
 
 The `n=1` translation modes form the kernel; every odd mode `n>=3` has strictly positive eigenvalue.
 
 Equation (2.3) is
 
-$$
+```math
 \boxed{Lp=-f.}
 \tag{3.2}
+```
 
 The function `f` is automatically orthogonal to the translation kernel. Modulo that kernel,
 
-\[
+```math
 p=-L^{-1}f.
-$$
+```
 
 Equation (1.5) becomes
 
-$$
+```math
 \boxed{
 \delta(R)
 =\frac12\langle f,L^{-1}f\rangle.
 }
 \tag{3.3}
+```
 
 Equivalently, for every antiperiodic `H^1` test function `g`, Cauchy--Schwarz in the `L` energy gives
 
-\[
+```math
 \boxed{
 \langle f,g\rangle^2
 \le
@@ -286,6 +307,7 @@ Equivalently, for every antiperiodic `H^1` test function `g`, Cauchy--Schwarz in
 \int_0^{2\pi}\left((g')^2-g^2\right)d\theta.
 }
 \tag{3.4}
+```
 
 If `g` has a first-harmonic component, subtracting that component changes neither side: `f` is orthogonal to it and its `L` energy is zero. Thus (3.4) applies to the explicit test below without any centering convention.
 
@@ -295,7 +317,7 @@ If `g` has a first-harmonic component, subtracting that component changes neithe
 
 Define an antiperiodic test function supported only on the forced side/opposite-vertex intervals:
 
-\[
+```math
 g(\theta)
 =
 \begin{cases}
@@ -304,18 +326,19 @@ g(\theta)
 0,&\text{otherwise},
 \end{cases}
 \tag{4.1}
+```
 
 extended `2pi`-periodically.
 
 It is continuous, belongs to `H^1`, and satisfies
 
-\[
+```math
 g(\theta+\pi)=-g(\theta).
-$$
+```
 
 Using (2.4)-(2.5),
 
-$$
+```math
 \begin{aligned}
 \langle f,g\rangle
 &=2\cdot\frac D2
@@ -323,28 +346,29 @@ $$
 \cos(\pi\theta/\phi)d\theta\\
 &=D\cdot\frac{2\phi}{\pi}.
 \end{aligned}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \langle f,g\rangle
 =\frac{2D\phi}{\pi}.
 }
 \tag{4.2}
+```
 
 On one interval,
 
-\[
+```math
 \int_I g^2=\frac\phi2,
 \qquad
 \int_I(g')^2=\frac{\pi^2}{2\phi}.
-$$
+```
 
 There are two antipodal copies, so
 
-$$
+```math
 \boxed{
 E(g):=
 \int_0^{2\pi}\left((g')^2-g^2\right)d\theta
@@ -352,41 +376,43 @@ E(g):=
 =\frac{\pi^2-\phi^2}{\phi}.
 }
 \tag{4.3}
+```
 
 Insert (4.2)-(4.3) into (3.4):
 
-\[
+```math
 \frac{4D^2\phi^2}{\pi^2}
 \le
 2\delta(R)
 \frac{\pi^2-\phi^2}{\phi}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \delta(R)
 \ge
 \frac{2D^2\phi^3}{\pi^2(\pi^2-\phi^2)}.
 }
-$$
+```
 
 Since `0<phi<pi`,
 
-$$
+```math
 \pi^2(\pi^2-\phi^2)<\pi^4,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \delta(R)
 >
 \frac{2D^2\phi^3}{\pi^4}.
 }
 \tag{4.4}
+```
 
 This proves CC.1.
 
@@ -400,7 +426,7 @@ Let `R_Gamma` be the Reuleaux polygon determined by the unique odd diameter cycl
 
 MR gives the exact area bridge
 
-\[
+```math
 A(R_\Gamma)-A(F)
 =
 S_q
@@ -410,18 +436,20 @@ S_q
 \frac\pi q-\sin\frac\pi q
 \right)>0.
 \tag{5.1}
+```
 
 Complete-source Oler plus global strict minimality gives
 
-\[
+```math
 A(F)
 >
 \frac\pi4D^2-rac{\sqrt3}{4}q.
 \tag{5.2}
+```
 
 Therefore
 
-\[
+```math
 \begin{aligned}
 \delta(R_\Gamma)
 &=\frac\pi4D^2-A(R_\Gamma)\\
@@ -429,30 +457,31 @@ Therefore
 &<\frac{\sqrt3}{4}q.
 \end{aligned}
 \tag{5.3}
+```
 
 Let
 
-\[
+```math
 \phi_{\max}=\max_i\phi_i.
-$$
+```
 
 Apply the weak form (4.4) of CC.1 to a longest side:
 
-$$
+```math
 \frac{2D^2\phi_{\max}^3}{\pi^4}
 <
 \frac{\sqrt3}{4}q.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \phi_{\max}^3
 <
 \frac{\sqrt3\,\pi^4q}{8D^2}.
 }
-$$
+```
 
 This proves CC.2. Retaining `S_q` and the exact denominator in CC.1 gives a strictly stronger finite inequality if needed.
 
@@ -462,78 +491,78 @@ This proves CC.2. Retaining `S_q` and the exact denominator in CC.1 gives a stri
 
 MR gives
 
-$$
+```math
 \phi_i=\ell_i\frac\pi q.
-$$
+```
 
 Thus CC.2 gives
 
-$$
+```math
 \ell_{\max}^3
 \frac{\pi^3}{q^3}
 <
 \frac{\sqrt3\,\pi^4q}{8D^2},
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \ell_{\max}^3
 <
 \frac{\sqrt3\,\pi}{8}
 \frac{q^4}{D^2}.
 }
-$$
+```
 
 This proves CC.3.
 
 Cauchy's perimeter-diameter inequality gives
 
-$$
+```math
 q=\operatorname{per}(F)\le\pi D.
-$$
+```
 
 Therefore
 
-$$
+```math
 \ell_{\max}^3
 <
 \frac{\sqrt3\,\pi}{8}\pi^4D^2
 =
 \frac{\sqrt3\,\pi^5}{8}D^2,
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \ell_{\max}
 <
 \left(\frac{\sqrt3\,\pi^5}{8}\right)^{1/3}D^{2/3}.
 }
-$$
+```
 
 Numerically the coefficient is
 
-$$
+```math
 4.0464421382\ldots .
-$$
+```
 
 At a unique-cycle vertex MR gives
 
-$$
+```math
 \deg_H(v_i)=\ell_i+1.
-$$
+```
 
 Every off-cycle diameter vertex is a leaf. Hence
 
-$$
+```math
 \boxed{
 \Delta(H)\le\ell_{\max}+1
 <4.0464421382\ldots D^{2/3}+1.
 }
-$$
+```
 
 This proves CC.4-CC.5.
 
@@ -543,21 +572,21 @@ This proves CC.4-CC.5.
 
 CA plus full-source Oler gives normalized area deficit
 
-$$
+```math
 \xi=\frac\pi4-\frac{A(F)}{D^2}=O(D^{-1}).
-$$
+```
 
 The generic ND Bonnesen/antipodal theorem gives a diameter-degree bound at scale
 
-$$
+```math
 O(D\xi^{1/4})=O(D^{3/4}).
-$$
+```
 
 CC uses the exact constant-width Reuleaux side structure, rather than only an annular approximation, and improves the exponent to
 
-$$
+```math
 \boxed{2/3.}
-$$
+```
 
 This is genuine new information about the cyclic equality phase.
 
@@ -569,15 +598,15 @@ This is genuine new information about the cyclic equality phase.
 
 Since
 
-$$
+```math
 p_i=\ell_i-1,
-$$
+```
 
 no diameter-cycle vertex carries more than
 
-$$
+```math
 O(D^{2/3})
-$$
+```
 
 pendant leaves.
 
@@ -585,16 +614,16 @@ pendant leaves.
 
 Because
 
-$$
+```math
 q=\sum_i\ell_i
 \le r\ell_{\max},
-$$
+```
 
 and `q=Theta(D)`, CC gives
 
-$$
+```math
 r=\Omega(D^{1/3}).
-$$
+```
 
 This is weaker than the sharper `Omega(sqrt D)` area-girth theorem CG, but it is obtained from pointwise branch control and remains useful locally.
 
@@ -602,9 +631,9 @@ This is weaker than the sharper `Omega(sqrt D)` area-girth theorem CG, but it is
 
 For every fixed `epsilon>0`, eventually
 
-$$
+```math
 \Delta(H)<\epsilon D.
-$$
+```
 
 Thus the exact cyclic equality shell is quantitatively far from every diameter-star or finite-hub model.
 

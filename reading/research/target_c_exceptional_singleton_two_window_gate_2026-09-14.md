@@ -22,30 +22,30 @@
 
 The q-k amplified bridge-subtracted theorem gives
 
-$$
+```math
 \sigma_R+2S_E+(b-P_F)\ge (L_*-o(1))D,
 \qquad L_*=1.821728637979444\ldots .
 \tag{EW.1}
-$$
+```
 
 Here `S_E` is the number of singleton stopped trains with at least one terminal
 incidence on a bounded nonquadrilateral face. Put `X:=Q-f`. We prove
 
-$$
+```math
 \boxed{\sigma_R+(b-P_F)+2S_5+12X\ge(L_*-o(1))D,}
 \tag{EW.2}
-$$
+```
 
 where `S_5` counts singleton stopped trains with at least one pentagonal terminal
 incidence. Combining this with the odd-face two-window lemma yields, for every fixed
 pair of projective directions `[u],[v]` and every fixed
 `0<epsilon<2 arcsin(1/10)`,
 
-$$
+```math
 \boxed{\sigma_R+(b-P_F)+12(Q-f)+20T_{off}(u,v;\epsilon)
 \ge(L_*-o(1))D.}
 \tag{EW.3}
-$$
+```
 
 `T_off` counts complete stopped trains whose projective direction lies outside both
 `epsilon`-windows. Thus a two-window model cannot hide the exceptional-singleton
@@ -57,31 +57,31 @@ excess, or rhombic non-Mantel slack.
 For `d>=5`, let `n_d` be the number of bounded nonquadrilateral contact faces of degree
 `d`. Then
 
-$$
+```math
 f=\sum_{d\ge5}n_d,\qquad Q=\sum_{d\ge5}(d-4)n_d,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{X=Q-f=\sum_{d\ge6}(d-5)n_d\ge0.}
 \tag{EW.4}
-$$
+```
 
 Let `N_{>=6}=sum_{d>=6}n_d` and let `P_{>=6}` be the total boundary edge-occurrence
 count on faces of degree at least six. Then
 
-$$
+```math
 P_{\ge6}=\sum_{d\ge6}dn_d=X+5N_{\ge6}.
 \tag{EW.5}
-$$
+```
 
 Every such face contributes at least one to `X`, so `N_{>=6}<=X`. Therefore
 
-$$
+```math
 \boxed{P_{\ge6}\le6X.}
 \tag{EW.6}
-$$
+```
 
 The coefficient six is sharp at the level of degree data: one hexagon contributes six
 boundary occurrences and one unit to `Q-f`.
@@ -93,24 +93,24 @@ incidence but has, by the definition of `S_E`, at least one terminal incidence o
 face of degree at least six. Choose one such incidence per train. Distinct complete
 stopped trains have distinct terminal edge-side incidences, hence
 
-$$
+```math
 S_E-S_5\le P_{\ge6}\le6X.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{S_E\le S_5+6(Q-f).}
 \tag{EW.7}
-$$
+```
 
 Insert this upper bound into the right side of (EW.1):
 
-$$
+```math
 L_*D-o(D)
 \le\sigma_R+(b-P_F)+2S_E
 \le\sigma_R+(b-P_F)+2S_5+12(Q-f),
-$$
+```
 
 which proves (EW.2). This uses actual global contact-face incidences only. It does not
 identify them with induced attachment-cell faces from Section 123.
@@ -121,10 +121,10 @@ Let `p_5^{hit}` be the number of bounded pentagons incident with at least one si
 train counted by `S_5`. Every `S_5` train touches at least one such pentagon, while a
 pentagon has only five boundary edges. Therefore
 
-$$
+```math
 \boxed{p_5^{hit}\ge S_5/5.}
 \tag{EW.8}
-$$
+```
 
 Fix `[u],[v]` and `epsilon<epsilon_5:=2 arcsin(1/10)`. The odd-face two-window lemma
 supplies at least one off-window boundary-edge occurrence on every pentagon. Applied
@@ -132,17 +132,17 @@ to the `p_5^{hit}` pentagons, this gives at least `p_5^{hit}` off-window excepti
 terminal occurrences. A complete stopped train has at most two terminal incidences,
 so
 
-$$
+```math
 T_{off}(u,v;\epsilon)\ge p_5^{hit}/2\ge S_5/10.
 \tag{EW.9}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{S_5\le10T_{off}(u,v;\epsilon).}
 \tag{EW.10}
-$$
+```
 
 Since the right side of (EW.2) only increases when `2S_5` is replaced by
 `20T_off`, equation (EW.3) follows.
@@ -156,7 +156,7 @@ the parity lemma is then applied independently to those pentagons.
 The coefficients in (EW.3) sum to `34`. Hence pointwise along every sufficiently
 large full-core sequence,
 
-$$
+```math
 \max\left\{
 {\sigma_R\over D},
 {b-P_F\over D},
@@ -165,43 +165,43 @@ $$
 \right\}
 \ge {L_*\over34}-o(1).
 \tag{EW.11}
-$$
+```
 
 Numerically,
 
-$$
+```math
 \boxed{L_*/34=0.053580253\ldots .}
 \tag{EW.12}
-$$
+```
 
 Thus every fixed two-window model pays a linear amount in at least one of four actual
 source-derived defects.
 
 A stronger conditional form is useful. If along a subsequence
 
-$$
+```math
 T_{off}=o(D),\qquad Q-f=o(D),
-$$
+```
 
 then
 
-$$
+```math
 \boxed{\sigma_R+(b-P_F)\ge(L_*-o(1))D.}
 \tag{EW.13}
-$$
+```
 
 After selecting a branch, one of these two currencies has scale at least
 
-$$
+```math
 L_*/2=0.910864318989722\ldots .
 \tag{EW.14}
-$$
+```
 
 If additionally `b-P_F=o(D)`, then `sigma_R>=(L_*-o(1))D`, which through
 
-$$
+```math
 M_R={\sigma_R\over8}\left(4\sqrt{R_4}+{\sigma_R\over2}\right)
-$$
+```
 
 forces a very large quadratic Mantel deficit. This remains a structural alternative,
 not a contradiction.

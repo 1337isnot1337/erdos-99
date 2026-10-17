@@ -16,31 +16,31 @@ Frozen source hashes: report e79dbcfcefcd7a65851e2f7e2307fede023f8860656f0b8979d
 
 For every unbounded canonical contact-minimal, then diameter-pair-minimal, triangle-free global-source sequence in the Type-II branch, retain every source point including contact isolates. Use the notation from C-ATOMIC-TRACK-BOUNDARY-COST and put P_exc=Q+4f. The new claim is
 
-$$
+```math
 \liminf_{D\to\infty}\frac{P_{\rm exc}+x_B}{D}\ge4s_2,
 \qquad s_2=\sqrt{\frac{\pi}{2\sqrt3}}. \tag{1}
-$$
+```
 
 Section 63 gives
-$$
+```math
 5Q+x_B=10(q-k)-5p+g-4z,
-$$
+```
 so (1), f<=Q, and p/D->pi imply
-$$
+```math
 \boxed{\liminf_{D\to\infty}
 \frac{10(q-k)+g-4z}{D}\ge5\pi+4s_2.} \tag{2}
-$$
+```
 For t_D=(q-k)/D<=1.860+o(1), this yields
-$$
+```math
 g-4z\ge(c-o(1))D,\qquad
 c=5\pi+4s_2-18.6\in(0.91721449540479,0.91721449540480).
-$$
+```
 In particular
-$$
+```math
 \frac qD\le\pi-c+o(1)
 =18.6-4\pi-4s_2+o(1)
 =2.2243781581850\ldots+o(1).
-$$
+```
 The source verifier's q_hi=PI_HI-demand_lo arithmetic is consistent with this Theorem B consequence. It is not a certificate for the analytic theorem.
 
 ## Dependencies
@@ -58,42 +58,42 @@ All dependencies are canonical at the audit base. No unit-side assumption is mad
 Fix a subsequence along which (P_exc+x_B)/D approaches a finite liminf. The infinite case is immediate. On this subsequence P_exc/D and x_B/D are bounded; since q<=p and p/D->pi, also b/D=(q+x_B)/D=O(1). Pass jointly to limits of these scalar budgets and the normalized direction measures. Use the same fixed weak limit nu of actual track directions as in the preceding canonical theorem, so its atomic mass is a>=2s_2.
 
 Let omega_D count every occurrence of a unit contact edge in the cyclic outer contact walk, with mass 1/D per occurrence. Let o_D be the outer terminal-occurrence measure of the actual tracks. Then o_D<=omega_D. Every track end has one terminal occurrence, so in the joint limit
-$$
+```math
 2\nu=o+j,
 \qquad j\ge0,
 \qquad \|j_D\|\le P_{\rm exc}/D. \tag{3}
-$$
+```
 In particular o<=2nu, so every atom of o lies at an atom of nu.
 
 Fix a finite set A of atoms of nu, and let U be disjoint small direction neighborhoods of A, with boundary null for the limiting measures. Section 63 partitions the entire occurrence-counted outer walk into exactly q edge-disjoint routes W_i, one between each consecutive pair of distinguished loaded vertices; their edge counts ell_i sum to b=q+x_B. Route endpoints are distinct source points and therefore have separation at least one.
 
 Fix an integer M>=1. At most b/(M+1) routes have more than M unit-edge occurrences. For a route of length at most M whose every edge direction lies in U, choose fixed unit-vector lifts u_1,...,u_r of the finitely many directions in A. Its chord vector differs by at most M delta from one of the finitely many signed sums
-$$
+```math
 \sum_{j=1}^{\ell}\varepsilon_j u_{i_j},
 \qquad 1\le\ell\le M,
 \quad \varepsilon_j\in\{-1,1\},
-$$
+```
 where delta is the maximum neighborhood width. If the limiting signed sum is zero, then for M delta<1 the route chord would have length less than one, contradicting separation of its endpoints. Every nonzero signed sum belongs to a finite set and has a fixed direction; as delta->0, all such route chords lie in neighborhoods shrinking to a finite set of loaded hull-side directions.
 
 For fixed M and neighborhood width δ, let S_{M,δ} be a union of closed direction arcs around the finitely many nonzero signed-sum directions above, chosen so its width tends to zero as δ tends to zero. The short routes whose every edge lies in U have distinct loaded-hull sides directed into S_{M,δ}. Each such side has length at least one, so their number R_D divided by D is at most the normalized loaded-hull tangent measure of S_{M,δ}. Its weak limit is the uniform measure μ; choosing arc boundaries μ-null gives
-$$
+```math
 \limsup_{D\to\infty}R_D/D\le\mu(S_{M,\delta}),
 \qquad \mu(S_{M,\delta})\to0\quad(\delta\downarrow0,\ M\text{ fixed}).
-$$
+```
 This uses the actual loaded hull and does not assume its sides are unit. At most b/(M+1) routes are longer than M. Every other route contains at least one outer-walk occurrence outside U. These routes are edge-occurrence disjoint, and the full walk has b occurrences, so
-$$
+```math
 \omega_D(U)\le\frac{x_B}{D}+\frac{R_D}{D}+\frac{b/D}{M+1}. \tag{4}
-$$
+```
 Choose a joint subsequence on which b/D and x_B/D converge, and choose shrinking neighborhoods U of A whose boundaries are null for the weak limit omega. For fixed M and U, the route count and the tangent-measure bound give
-$$
+```math
 \omega(U)\le X+\mu(S_{M,\delta})+\frac{B}{M+1},
-$$
+```
 where X=lim x_B/D, B=lim b/D, and δ is the width of U. Here weak convergence applies because the boundary of U is omega-null. First let δ tend to zero at fixed M, so μ(S_{M,δ}) tends to zero; then let M tend to infinity. Continuity from above gives omega(A)<=X. Since o<=omega and o<=2nu, every atom of o lies in the countable atom set of nu. Exhausting that set by finite A shows that the outer terminal measure's total atomic mass is at most X.
 
 Taking atomic masses in (3), the exceptional terminal measure has total mass at most lim P_exc/D, while the outer terminal atoms cost at most lim x_B/D. Hence
-$$
+```math
 2a\le\lim\frac{x_B+P_{\rm exc}}D.
-$$
+```
 Together with a>=2s_2, this proves (1) on the finite-liminf subsequence, and therefore on the full sequence.
 
 ## Adversarial checks

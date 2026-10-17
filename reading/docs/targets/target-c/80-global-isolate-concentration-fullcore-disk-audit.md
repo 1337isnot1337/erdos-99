@@ -41,26 +41,26 @@ claim that an `o(D^2)` isolate set is empty.
 
 Let
 
-$$
+```math
 a_0={\sqrt3\over2},
 \qquad
 K=\operatorname{conv}A,
 \qquad
 F=\operatorname{conv}V(G),
 \tag{80.1}
-$$
+```
 
 where `G` is the connected nonisolated positive-contact core of the canonical post-ZF
 representative. Write
 
-$$
+```math
 m:=|V(G)|,
 \qquad
 A_K:=\operatorname{area}K,
 \qquad
 A_F:=\operatorname{area}F.
 \tag{80.2}
-$$
+```
 
 Canonical Section 77 defines
 
@@ -70,32 +70,32 @@ Canonical Section 77 defines
 
 Thus the full source partitions exactly as
 
-$$
+```math
 \boxed{n=m+Z_{ch}+Z_{ext}.}
 \tag{80.3}
-$$
+```
 
 Canonical Section 77 proves
 
-$$
+```math
 \boxed{
 a_0N_F=A_F+O(D),
 \qquad
 a_0Z_{ext}={\pi D^2\over4}-A_F+O(D).
 }
 \tag{80.4}
-$$
+```
 
 It also proves for the internal inactive chambers
 
-$$
+```math
 \boxed{
 a_0Z_{ch}=A_{ch}+O(D),
 \qquad
 P_{ch}\le13\pi D.
 }
 \tag{80.5}
-$$
+```
 
 Here `A_ch` is their total area and `P_ch` their total perimeter.
 
@@ -103,85 +103,85 @@ Here `A_ch` is their total area and `P_ch` their total perimeter.
 
 Let the nondegenerate exterior caps of Section 77 be
 
-$$
+```math
 K_1,\ldots,K_r.
-$$
+```
 
 Write
 
-$$
+```math
 A_i:=\operatorname{area}K_i,
 \qquad
 P_i:=\operatorname{per}K_i,
 \qquad
 z_i:=|A\cap(K_i\setminus F)|.
 \tag{80.6}
-$$
+```
 
 Their interiors are disjoint and they partition `K\setminus F` up to closing chords,
 so
 
-$$
+```math
 A_{ext}:=\sum_iA_i=A_K-A_F.
 \tag{80.7}
-$$
+```
 
 Canonical Section 68 gives
 
-$$
+```math
 0\le \delta_K:={\pi D^2\over4}-A_K=O(D),
 \tag{80.8}
-$$
+```
 
 because `delta_K+E_4<c_0P_K` and `P_K<=pi D`. Therefore
 
-$$
+```math
 A_{ext}={\pi D^2\over4}-A_F+O(D).
 \tag{80.9}
-$$
+```
 
 Comparing with (80.4),
 
-$$
+```math
 \boxed{
 a_0Z_{ext}=A_{ext}+O(D).}
 \tag{80.10}
-$$
+```
 
 The exact cap-perimeter incidence identity from Section 77 is
 
-$$
+```math
 \sum_iP_i=P_K+P_F-2P_{com}.
 \tag{80.11}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 P_{ext}:=\sum_iP_i\le P_K+P_F\le2\pi D.
 }
 \tag{80.12}
-$$
+```
 
 Also `r<=q<=pi D`.
 
 For each cap Section 77's Oler argument gives the nonnegative slack
 
-$$
+```math
 \sigma_i^{ext}
 :={A_i\over a_0}+{P_i\over2}-1-z_i\ge0.
 \tag{80.13}
-$$
+```
 
 Summing and using (80.10)--(80.12),
 
-$$
+```math
 \sum_i\sigma_i^{ext}
 ={A_{ext}\over a_0}+{P_{ext}\over2}-r-Z_{ext}
 =O(D).
 \tag{80.14}
-$$
+```
 
 Thus the exterior-cap Oler slack is boundary order just as the internal-chamber slack
 is.
@@ -190,76 +190,76 @@ is.
 
 Put
 
-$$
+```math
 A_{ext,max}:=\max_iA_i.
-$$
+```
 
 Isoperimetry gives
 
-$$
+```math
 \sum_i\sqrt{A_i}
 \le {P_{ext}\over2\sqrt\pi}
 \le\sqrt\pi D.
 \tag{80.15}
-$$
+```
 
 Therefore
 
-$$
+```math
 A_{ext}
 =\sum_iA_i
 \le\sqrt{A_{ext,max}}\sum_i\sqrt{A_i}
 \le\sqrt{A_{ext,max}}\sqrt\pi D,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 A_{ext,max}\ge {A_{ext}^2\over\pi D^2}.
 }
 \tag{80.16}
-$$
+```
 
 Suppose along a subsequence
 
-$$
+```math
 Z_{ext}\ge\zeta D^2
 \tag{80.17}
-$$
+```
 
 for some fixed `zeta>0`. Equation (80.10) gives
 
-$$
+```math
 A_{ext}\ge a_0\zeta D^2-O(D).
-$$
+```
 
 Hence (80.16) yields
 
-$$
+```math
 \boxed{
 \liminf {A_{ext,max}\over D^2}
 \ge {a_0^2\zeta^2\over\pi}>0.
 }
 \tag{80.18}
-$$
+```
 
 Choose a cap `K_*` attaining `A_ext,max`. Its individual slack is `O(D)` by
 (80.14), and its perimeter is `O(D)` by (80.12). Therefore
 
-$$
+```math
 z_*
 ={A_{ext,max}\over a_0}+{P_*\over2}-1-\sigma_*^{ext}
 ={A_{ext,max}\over a_0}+O(D),
 \tag{80.19}
-$$
+```
 
 so
 
-$$
+```math
 \boxed{z_*=\Omega(D^2).}
 \tag{80.20}
-$$
+```
 
 Thus a quadratic external source population cannot be diffuse: it forces one actual
 macroscopic convex exterior cap containing a quadratic number of source points.
@@ -270,34 +270,34 @@ canonical representative.
 
 Conversely, if
 
-$$
+```math
 A_{ext,max}=o(D^2),
 \tag{80.21}
-$$
+```
 
 then (80.15) gives
 
-$$
+```math
 A_{ext}
 \le\sqrt{A_{ext,max}}\sqrt\pi D
 =o(D^2).
 \tag{80.22}
-$$
+```
 
 Equation (80.10) gives
 
-$$
+```math
 \boxed{Z_{ext}=o(D^2).}
 \tag{80.23}
-$$
+```
 
 Equivalently, absence of one macroscopic exterior cap forces the full source hull and
 force hull to agree in area to leading order:
 
-$$
+```math
 A_K-A_F=o(D^2).
 \tag{80.24}
-$$
+```
 
 ## 80.4 Combine with the internal chamber dichotomy
 
@@ -307,23 +307,23 @@ Canonical Section 79 proves the corresponding internal statement:
   area and quadratic isolated population; and
 - if every internal inactive chamber has area `o(D^2)`, then
 
-$$
+```math
 Z_{ch}=o(D^2),
 \qquad
 A_{ch}=o(D^2),
 \qquad
 A_4=A_F-o(D^2).
 \tag{80.25}
-$$
+```
 
 Therefore, if **neither** an internal inactive chamber nor an exterior cap is
 macroscopic, (80.23) and (80.25) give
 
-$$
+```math
 \boxed{
 n-m=Z_{ch}+Z_{ext}=o(D^2).}
 \tag{80.26}
-$$
+```
 
 The entire source is asymptotically force-visible in population, although an
 `o(D^2)` isolate set may remain.
@@ -332,63 +332,63 @@ The entire source is asymptotically force-visible in population, although an
 
 Canonical Section 77 gives the full-source density identity
 
-$$
+```math
 \boxed{
 a_0n={\pi D^2\over4}+O(D).}
 \tag{80.27}
-$$
+```
 
 Hence
 
-$$
+```math
 {n\over D^2}\longrightarrow
 \Delta_2:={\pi\over4a_0}={\pi\over2\sqrt3}.
 \tag{80.28}
-$$
+```
 
 Using (80.26),
 
-$$
+```math
 \boxed{
 {m\over D^2}\longrightarrow\Delta_2.
 }
 \tag{80.29}
-$$
+```
 
 Equation (80.4) and `Z_ext=o(D^2)` give
 
-$$
+```math
 \boxed{
 {A_F\over D^2}\longrightarrow{\pi\over4}.
 }
 \tag{80.30}
-$$
+```
 
 Canonical Section 79 gives `A_4=A_F-o(D^2)`, so
 
-$$
+```math
 \boxed{
 {A_4\over D^2}\longrightarrow{\pi\over4}.
 }
 \tag{80.31}
-$$
+```
 
 Canonical Section 68 writes
 
-$$
+```math
 A_4=a_0R_4+E_4,
 \qquad E_4=O(D),
 \tag{80.32}
-$$
+```
 
 therefore
 
-$$
+```math
 \boxed{
 {R_4\over D^2}\longrightarrow\Delta_2.
 }
 \tag{80.33}
-$$
+```
 
 This is the genuine asymptotic full-core density, not merely `m=Omega(D^2)`.
 
@@ -401,17 +401,17 @@ By Blaschke selection and uniqueness of equality in the planar isodiametric ineq
 every Hausdorff-convergent subsequence of suitable translates tends to the radius-1/2
 Euclidean disk. Consequently
 
-$$
+```math
 \boxed{
 {1\over D}\inf_o d_H\!\left(F,B(o,D/2)\right)\longrightarrow0.
 }
 \tag{80.34}
-$$
+```
 
 So the no-macroscopic-container branch is an **asymptotic full-core near-disk
 rhombic branch**:
 
-$$
+```math
 \boxed{
  n-m=o(D^2),
 \quad
@@ -422,7 +422,7 @@ $$
  m,R_4=(\Delta_2+o(1))D^2.
 }
 \tag{80.35}
-$$
+```
 
 ## 80.6 Coherent grains cover the near-disk force hull
 
@@ -430,18 +430,18 @@ Fix `epsilon in (0,pi/6)`. Canonical Section 69 deletes only `O_epsilon(D)` rhom
 form `epsilon`-coherent physical grains, so in the no-container branch their union has
 area
 
-$$
+```math
 {\pi D^2\over4}-o(D^2).
 \tag{80.36}
-$$
+```
 
 The total grain perimeter is `O_epsilon(D)`. As in Section 79, for every fixed
 `eta>0`, grains with fewer than `eta D^2` rhombi carry only
 
-$$
+```math
 O_\epsilon(\sqrt\eta\,D^2)
 \tag{80.37}
-$$
+```
 
 rhombi in total. Thus, after fixing `epsilon` and then taking `eta` small, finitely
 many macroscopic `epsilon`-coherent grains cover all but an arbitrarily small area
@@ -465,7 +465,7 @@ At least one of the following exists:
 
 In either case the container has
 
-$$
+```math
 \boxed{
 area=\Omega(D^2),
 \qquad
@@ -476,7 +476,7 @@ perimeter=O(D),
 Oler\ slack=O(D),
 }
 \tag{80.38}
-$$
+```
 
 and its `z` points are actual contact-isolated source points in the canonical
 representative.

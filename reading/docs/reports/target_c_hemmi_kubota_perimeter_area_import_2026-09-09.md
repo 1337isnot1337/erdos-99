@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_hemmi_kubota_perimeter_area_import_2026-09-09.md) · source SHA-256 `06dc2736c02cdd4875ff7c6bfec13e98e343fa02d3071baa0c765727cb4aa453`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 15 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-CD09D493C2BD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_hemmi_kubota_perimeter_area_import_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=952233844e5aceedb671cb7f0a20f8e6c83d2c0a; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -23,13 +25,13 @@ The PDG run isolated the force-hull perimeter `L=per(F)` and diameter `D` as the
 
 Kripfganz's 2003 habilitation, Chapter 5, Section 5.1, reproduces Hemmi's 1953 perimeter-diameter area inequalities. In the notation `F=area(K)`, `L=per(K)`, `D=diam(K)`, equation (5.5) states that for every integer `n>=1` and
 
-$$
+```math
 L\in\left[6nD\sin\frac{\pi}{6n},\ \pi D\right],
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{
 F\ge
 \left(
@@ -38,21 +40,23 @@ F\ge
 \right)D^2.
 }
 \tag{HKI.1}
+```
 
 The source states that these bounds are attained by regular `3n`-sided Hemmi polyhedra at the corresponding special perimeters and that for `n>=2` they improve the older Kubota bound.
 
 Only the `n=2` case is needed here. It creates a sharp enough barrier at the perimeter
 
-\[
+```math
 \boxed{
 p_2:=12\sin\frac\pi{12}
 =3.1058285412302491481\ldots .
 }
 \tag{HKI.2}
+```
 
 Combining this single imported inequality with the existing PI/JC machinery raises the unconditional post-ZF pinned/contact floor to
 
-\[
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
@@ -61,6 +65,7 @@ Combining this single imported inequality with the existing PI/JC machinery rais
 =0.4707353395403166318\ldots .
 }
 \tag{HKI.3}
+```
 
 This is a significant improvement over PDG's `0.4668176044...`.
 
@@ -74,9 +79,9 @@ Anita Kripfganz, *Hemmi–Polyeder*, Habilitationsschrift, Universität Leipzig,
 
 The PDF was text-checked and visually checked at the displayed equation (5.5). The surrounding text attributes the inequality to Hemmi's 1953 work and gives the precise range
 
-\[
+```math
 L\in[6nD\sin(\pi/(6n)),\pi D].
-$$
+```
 
 The bibliography identifies the relevant original papers as
 
@@ -99,28 +104,29 @@ The force hull `F=conv(B)` is a planar convex body. Its Euclidean diameter is ex
 
 Set
 
-$$
+```math
 p:=\frac{\operatorname{per}(F)}D.
-$$
+```
 
 For `n=2`, HKI.1 applies whenever
 
-$$
+```math
 p\ge p_2:=12\sin\frac\pi{12}.
-$$
+```
 
 It gives
 
-$$
+```math
 \frac{\operatorname{area}(F)}{D^2}
 \ge
 \frac p2\cos\frac\pi{12}
 -\frac{\sqrt3}{2}.
 \tag{2.1}
+```
 
 The right side is increasing in `p`. At the threshold,
 
-\[
+```math
 \begin{aligned}
 \frac{p_2}{2}\cos\frac\pi{12}
 -\frac{\sqrt3}{2}
@@ -133,10 +139,11 @@ The right side is increasing in `p`. At the threshold,
 \boxed{\frac{3-\sqrt3}{2}}.
 \end{aligned}
 \tag{HKI.4}
+```
 
 Thus every Target C force hull with `p>=p_2` satisfies
 
-\[
+```math
 \boxed{
 \frac{\operatorname{area}(F)}{D^2}
 \ge
@@ -144,6 +151,7 @@ Thus every Target C force hull with `p>=p_2` satisfies
 =0.63397459621556\ldots .
 }
 \tag{HKI.5}
+```
 
 This is already far above the approximately `0.5 D^2` PI/Groemer floor governing PDG.
 
@@ -153,58 +161,61 @@ This is already far above the approximately `0.5 D^2` PI/Groemer floor governing
 
 Let
 
-\[
+```math
 \lambda:=\lim\frac{e_{BB}+2s_C}{D},
 \qquad
 t:=\lim\frac{e_{BB}}D
-$$
+```
 
 along a convergent post-ZF subsequence.
 
 GU subtracts at most
 
-$$
+```math
 \frac\pi4\lambda^2D^2+o(D^2)
-$$
+```
 
 for the attachment cells. JC gives the joint cavity capacity
 
-$$
+```math
 \limsup\frac GD^2
 \le
 \frac{(t+m)^2}{4\pi}
-$$
+```
 
 with
 
-$$
+```math
 m=\min\{y,p-y\}\le\frac p2\le\frac\pi2.
-$$
+```
 
 Since `t<=lambda`, any `p>=p_2` survivor must satisfy the deliberately weakened inequality
 
-$$
+```math
 \frac{3-\sqrt3}{2}
 -\frac\pi4\lambda^2
 \le
 \frac{(\lambda+\pi/2)^2}{4\pi}.
 \tag{3.1}
+```
 
 Its positive root is
 
-\[
+```math
 \boxed{
 \lambda_{high}
 =0.5813130664918103722\ldots .
 }
 \tag{HKI.6}
+```
 
 Therefore
 
-\[
+```math
 \boxed{
 p\ge p_2\quad\Longrightarrow\quad\lambda\ge0.5813130664\ldots .}
 \tag{HKI.7}
+```
 
 The exact value of this high-perimeter root is not important for the universal minimum; only the large separation from the low-perimeter branch matters.
 
@@ -214,74 +225,79 @@ The exact value of this high-perimeter root is not important for the universal m
 
 Now suppose
 
-\[
+```math
 p<p_2.
-$$
+```
 
 Use no Hemmi inequality at all. PDG proved that, after optimizing the diameter density `y` for fixed perimeter `p`, the PI/JC required-surplus function `L_PI(p)` is decreasing on the entire allowed interval.
 
 Hence
 
-$$
+```math
 \lambda\ge L_{PI}(p)>\lim_{u\uparrow p_2}L_{PI}(u).
 \tag{4.1}
+```
 
 Because
 
-\[
+```math
 p_2>4\rho,
-$$
+```
 
 the fixed-perimeter PI optimizer near `p_2` is
 
-$$
+```math
 y=p/2.
-$$
+```
 
 Therefore the limiting low-perimeter constant is the positive root of
 
-$$
+```math
 \frac12\sin\frac{p_2}{2}
 -\frac\pi4\lambda^2
 =
 \frac{(\lambda+p_2/2)^2}{4\pi}.
 \tag{HKI.8}
+```
 
 Define this root by
 
-\[
+```math
 \boxed{\lambda_{HKI}:=R\left(\frac12\sin(p_2/2),\frac{p_2}{2}\right),}
 \tag{HKI.9}
+```
 
 where `R(A,m)` is the explicit positive-root function from PDG.
 
 Numerically,
 
-\[
+```math
 \frac{p_2}{2}
 =1.5529142706151245741\ldots,
-$$
+```
 
-$$
+```math
 \frac12\sin\frac{p_2}{2}
 =0.4999200601469133947\ldots,
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \lambda_{HKI}
 =0.4707353395403166317719720558\ldots .
 }
 \tag{HKI.10}
+```
 
 Thus
 
-\[
+```math
 \boxed{
 p<p_2\quad\Longrightarrow\quad\lambda>\lambda_{HKI}.}
 \tag{HKI.11}
+```
 
 ---
 
@@ -299,13 +315,14 @@ p >= p_2:
 
 Therefore every unbounded post-ZF survivor sequence satisfies
 
-\[
+```math
 \boxed{
 \liminf\frac{e_{BB}+2s_C}{D}
 \ge
 0.4707353395403166317\ldots .
 }
 \tag{HKI.12}
+```
 
 The worst regime allowed by this coarse Hemmi import approaches the threshold `p_2` from **below**. At `p_2` itself the `n=2` Hemmi inequality activates and produces a much stronger area floor.
 
@@ -317,29 +334,29 @@ This discontinuity is a discontinuity only in the **coarse family of lower bound
 
 The explicit floors developed in this campaign are
 
-\[
+```math
 \lambda_{GS}=0.4647922504\ldots,
-$$
+```
 
-$$
+```math
 \lambda_{DJC}=0.4653518454\ldots,
-$$
+```
 
-$$
+```math
 \lambda_{PDG}=0.4668176044\ldots,
-$$
+```
 
 and now
 
-$$
+```math
 \boxed{\lambda_{HKI}=0.4707353395\ldots .}
-$$
+```
 
 The improvement over PDG is approximately
 
-$$
+```math
 \boxed{0.0039177351.}
-$$
+```
 
 Unlike the small numerical GS refinement, this gain comes from importing a theorem tailored exactly to fixed perimeter and diameter.
 
@@ -349,9 +366,9 @@ Unlike the small numerical GS refinement, this gain comes from importing a theor
 
 Kripfganz's Section 5.4 states that the full isoperimetric-isodiametric problem is quantitatively solved by Hemmi polyhedra and gives a piecewise sharp complex of inequalities for every
 
-$$
+```math
 2D\le L\le\pi D.
-$$
+```
 
 Equation (5.5) is only a convenient coarse member of that complex. Therefore the natural next literature task is now concrete:
 

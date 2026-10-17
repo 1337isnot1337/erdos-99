@@ -23,25 +23,25 @@ many endpoints and edges as the source diameter grows.
 Let `A` be a contact-minimal, diametrally saturated, triangle-free global minimizer
 with diameter `D`, and assume
 
-$$
+```math
 C=C_*.
 \tag{C34.1}
-$$
+```
 
 For a relative-interior normalized KKT stress, let `B_+` be the endpoints of its
 positive diameter support. Then
 
-$$
+```math
 \boxed{2|B_+|\ge \lceil D\rceil+2.}
 \tag{C34.2}
-$$
+```
 
 Consequently, if `H_+` is the positive diameter support,
 
-$$
+```math
 \boxed{|H_+|\ge \frac{\lceil D\rceil+2}{4}.}
 \tag{C34.3}
-$$
+```
 
 The conclusion is an exact finite inequality; no lower bound on an individual KKT
 diameter multiplier is used.
@@ -50,10 +50,10 @@ diameter multiplier is used.
 
 Choose a relative-interior point of the normalized KKT polytope. Since `C=C_*`,
 
-$$
+```math
 C_+=C.
 \tag{C34.4}
-$$
+```
 
 Let
 
@@ -64,10 +64,10 @@ Let
 
 The inclusion
 
-$$
+```math
 B_+\subseteq Q^\circ
 \tag{C34.5}
-$$
+```
 
 is canonical Lemma 5.2: every endpoint of a positive diameter edge lies in the
 vertex set of the positive contact support. Using (C34.4), that support is `C`, so
@@ -79,17 +79,17 @@ dichotomy. A vertex incident to a contact but outside `B_+` is a strict convex
 combination of its contact neighbors, hence is not an extreme point and cannot be a
 source diameter endpoint. Every member of `Q^\circ` is incident to a contact, so
 
-$$
+```math
 Q^\circ\subseteq B_+.
 \tag{C34.6}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{Q^\circ=B_+.}
 \tag{C34.7}
-$$
+```
 
 This is the only point where C26 is needed: it identifies the canonical pinned set
 in Theorem 12.2 with the KKT-visible diameter endpoint set.
@@ -99,17 +99,17 @@ in Theorem 12.2 with the KKT-visible diameter endpoint set.
 Canonical Theorem 12.2 applies to the contact-minimal triangle-free core with its
 nonisolated diameter endpoints pinned. Hence
 
-$$
+```math
 e\ge 2\bigl(m-|Q^\circ|\bigr).
 \tag{C34.8}
-$$
+```
 
 Substituting (C34.7), and writing `q=|B_+|`, gives
 
-$$
+```math
 e\ge 2(m-q).
 \tag{C34.9}
-$$
+```
 
 This is a rank consequence of the zero pinned expansive cone in Theorem 12.2. It is
 not a prestress-stability or stress-matrix assertion.
@@ -125,26 +125,26 @@ Let `\delta` be the graph diameter of `C`. Every contact edge has Euclidean leng
 one, so a contact path joining that pair has at least `D` edges. Since `\delta` is an
 integer,
 
-$$
+```math
 \delta\ge \lceil D\rceil.
 \tag{C34.10}
-$$
+```
 
 The graph is triangle-free because it is a subgraph of the triangle-free unit-contact
 graph. Eppstein's connected triangle-free penny-graph inequality, already imported in
 the canonical theorem stack, gives
 
-$$
+```math
 e\le 2m-\delta-2
 \le 2m-\lceil D\rceil-2.
 \tag{C34.11}
-$$
+```
 
 Combining (C34.9) and (C34.11),
 
-$$
+```math
 2m-2q\le 2m-\lceil D\rceil-2,
-$$
+```
 
 and cancellation yields (C34.2). `\square`
 
@@ -153,9 +153,9 @@ and cancellation yields (C34.2). `\square`
 Every endpoint in `B_+` is incident to a positive diameter edge. Counting endpoint
 incidences gives
 
-$$
+```math
 2|H_+|\ge |B_+|.
-$$
+```
 
 Together with (C34.2), this proves (C34.3). Thus a fully force-visible survivor has
 `Omega(D)` positive diameter edges, even if their positive weights are spread across
@@ -164,10 +164,10 @@ many edges and each individual weight is small.
 The force hull `F=conv B_+` also has perimeter at least `|B_+|`: its consecutive
 vertices are distinct unit-separated source points. Hence
 
-$$
+```math
 \operatorname{per}(F)\ge |B_+|\ge \frac{\lceil D\rceil+2}{2}.
 \tag{C34.12}
-$$
+```
 
 The existing upper bound `per(F)\le \pi D` is larger, so (C34.12) is a structural
 count and not yet a contradiction.

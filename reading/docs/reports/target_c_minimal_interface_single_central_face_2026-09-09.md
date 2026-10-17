@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_minimal_interface_single_central_face_2026-09-09.md) · source SHA-256 `d851380304235d869ea5a8e58f3df3ca0ca7ab3f1469a58ce4ddcffa52578e9e`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 25 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-3D85201F6CE0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_minimal_interface_single_central_face_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=afca4495c8fe103883240b4d01f203a21b4cf6b3; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -20,9 +22,9 @@
 
 The previous reports left two apparent ways to realize the sharp interface lower bound
 
-$$
+```math
 Q_B=(2+o(1))D:
-$$
+```
 
 - diffuse excess through many annular exceptional faces;
 - concentration in one or a few long transition faces.
@@ -38,21 +40,23 @@ The regular shell-facing interface faces carry only `o(D)` total defect. Every r
 
 That region is a single bounded contact face `F_*`. Consequently
 
-$$
+```math
 \boxed{
 k_{F_*}=(2+o(1))D,
 \qquad
 Q_{F_*}=(2+o(1))D,
 }
 \tag{CF.1}
+```
 
 and
 
-\[
+```math
 \boxed{
 Q_B-Q_{F_*}=o(D).
 }
 \tag{CF.2}
+```
 
 Moreover the two long sides of `F_*` are exactly the diameter-side outer-boundary paths of `I_1,I_2`, each of length `D+o(D)`, and MF implies that the normalized convex face converges to their common diameter segment.
 
@@ -76,80 +80,89 @@ This still does not prove Level I. A thin staggered two-row contact corridor can
 
 Assume throughout
 
-\[
+```math
 Q_B=(2+o(1))D.
 \tag{1.1}
+```
 
 FS gives one dominant attachment cell `P_i` in each HG semicircle group such that
 
-\[
+```math
 \operatorname{area}(P_i)
 =\left(\frac\pi8+o(1)\right)D^2,
 \tag{1.2}
+```
 
-\[
+```math
 P_i/D\to H_i
-$$
+```
 
 in Hausdorff distance, where `H_1,H_2` are complementary diameter-one semicircles, and
 
-$$
+```math
 |I_i|=(\Delta/2+o(1))D^2.
 \tag{1.3}
+```
 
 Convex perimeter continuity gives
 
-\[
+```math
 \operatorname{per}(P_i)
 =\left(1+\frac\pi2+o(1)\right)D.
 \tag{1.4}
+```
 
 FS also gives total attachment-cell perimeter
 
-\[
+```math
 P_A:=\sum_r\operatorname{per}(P_r)
 =(\pi+2+o(1))D.
 \tag{1.5}
+```
 
 Therefore all nondominant attachment cells together satisfy
 
-\[
+```math
 \boxed{
 \sum_{r\ne1,2}\operatorname{per}(P_r)=o(D).
 }
 \tag{1.6}
+```
 
 Every attachment point is a vertex of the strictly convex-position loaded set and distinct attachment points are unit-separated, so
 
-\[
+```math
 |A_r|\le\operatorname{per}(P_r).
 \tag{1.7}
+```
 
 Hence nondominant components use only `o(D)` loaded attachment vertices in total.
 
 Also every convex body satisfies
 
-\[
+```math
 2\operatorname{diam}(K)\le\operatorname{per}(K)
-$$
+```
 
 with the degenerate segment giving equality in the limiting sense. Thus
 
-$$
+```math
 \max_{r\ne1,2}\operatorname{diam}(P_r)=o(D).
 \tag{1.8}
+```
 
 Since `I_r subset P_r`, every nondominant harmonic component has Euclidean diameter `o(D)`.
 
 Its attachment vertices lie on the near-circular loaded hull, so a set of boundary points of chord diameter `o(D)` lies in an angular interval of width `o(1)`. Its convex hull, and hence `I_r`, lies within `o(D)` Euclidean distance of the force-hull boundary. Therefore
 
-\[
+```math
 \boxed{
 \bigcup_{r\ne1,2}I_r
 \subset
 \{x:\operatorname{dist}(x,\partial F)=o(D)\}.
 }
 \tag{1.9}
+```
 
 The `o(D)` here is uniform because the largest nondominant cell perimeter is bounded by the total in (1.6).
 
@@ -159,56 +172,62 @@ The `o(D)` here is uniform because the largest nondominant cell perimeter is bou
 
 Let
 
-\[
+```math
 K_i:=\operatorname{conv}(I_i).
-$$
+```
 
 C36 gives `K_i subset P_i`. Conversely every loaded attachment vertex lies at unit distance from a vertex of `I_i`, so
 
-$$
+```math
 P_i\subset K_i+B(0,1).
 \tag{2.1}
+```
 
 Thus
 
-\[
+```math
 d_H(K_i,P_i)\le1.
-$$
+```
 
 After division by `D`,
 
-$$
+```math
 \boxed{K_i/D\to H_i}
 \tag{2.2}
+```
 
 in Hausdorff distance. In particular
 
-\[
+```math
 \operatorname{per}(K_i)
 =\left(1+\frac\pi2+o(1)\right)D.
 \tag{2.3}
+```
 
 AS proves
 
-\[
+```math
 \sum_rk_r=(\pi+2+o(1))D.
 \tag{2.4}
+```
 
 The outer-face walk of `C[I_i]` has length `k_i>=per(K_i)`. Therefore (2.3)--(2.4) and nonnegativity of all other `k_r` imply
 
-\[
+```math
 \boxed{
 k_i=\left(1+\frac\pi2+o(1)\right)D,
 \qquad i=1,2,}
 \tag{2.5}
+```
 
 and
 
-\[
+```math
 \boxed{
 \sum_{r\ne1,2}k_r=o(D).
 }
 \tag{2.6}
+```
 
 So not only attachment-cell perimeter but also actual nondominant component outer-walk length is sublinear.
 
@@ -224,11 +243,12 @@ Thus the dominant labels occupy two complementary cyclic blocks up to `o(D)` del
 
 Because `P_i/D->H_i`, the extreme attachments of `I_i` converge to the endpoints of the corresponding semicircle. Perimeter-measure convergence of the near-circular loaded hull and the fact that its side lengths have total excess `o(D)` over their unit lower bound give
 
-\[
+```math
 \boxed{
 M_i=\left(\frac\pi2+o(1)\right)D
 }
 \tag{3.1}
+```
 
 loaded shell edges whose two regular endpoints attach to `I_i`, for each `i=1,2`.
 
@@ -246,51 +266,57 @@ For every AS-regular shell edge of the `I_i` block, the adjacent bounded face co
 
 AS gives
 
-\[
+```math
 Q_F=L-1.
 \tag{4.1}
+```
 
 Following these faces in shell order gives edge occurrences on one side of the outer-face walk of `C[I_i]`. Let `L_i^{ann}` be the total length of these internal paths and `Q_i^{ann}` their total defect. Then
 
-\[
+```math
 L_i^{ann}=M_i+Q_i^{ann}+o(D).
 \tag{4.2}
+```
 
 Let `u_i^-`, `u_i^+` be interior attachment neighbors within `O(1)` of the two extreme loaded attachments of `I_i`. The latter approach antipodal endpoints of the semicircle, so
 
-\[
+```math
 |u_i^--u_i^+|=D-o(D).
 \tag{4.3}
+```
 
 The closed outer walk of `I_i` contains a complementary route from `u_i^+` back to `u_i^-` outside the annular path occurrences. By the triangle inequality that complementary route has length at least
 
-\[
+```math
 D-o(D).
 \tag{4.4}
+```
 
 Hence, using (2.5), (3.1), and (4.2),
 
-\[
+```math
 \begin{aligned}
 \left(1+\frac\pi2+o(1)\right)D
 =k_i
 &\ge L_i^{ann}+D-o(D)\\
 &=\left(\frac\pi2+o(1)\right)D+Q_i^{ann}+D-o(D).
 \end{aligned}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{Q_i^{ann}=o(D),
 \qquad i=1,2.}
 \tag{4.5}
+```
 
 Let `Gamma_i` be the complementary outer-walk route in (4.4). Equality in the same estimate gives
 
-\[
+```math
 \boxed{|\Gamma_i|=D+o(D).}
 \tag{4.6}
+```
 
 Since its endpoints have Euclidean separation `D-o(D)`, every point of `Gamma_i` lies within `o(D)` of the straight segment joining its endpoints. One elementary proof is that if a path point has perpendicular distance `h` from that segment, the two subpath lengths are at least the two sides of the broken line through that point; the excess over the chord is at least a positive multiple of `h^2/D` when `h=o(D)` and is a fixed multiple of `D` when `h` is a fixed fraction of `D`. Since the total path excess is `o(D)`, necessarily `h=o(D)` uniformly.
 
@@ -314,15 +340,16 @@ Hence that connected open region belongs to one face of the full plane contact g
 
 For fixed `epsilon`, the boundary of `F_*` contains subpaths of each `Gamma_i` whose lengths are at least
 
-\[
+```math
 (1-O(\epsilon))D-o(D).
-$$
+```
 
 Let first `D->infinity` and then `epsilon->0`. We obtain
 
-$$
+```math
 \boxed{k_{F_*}\ge(2-o(1))D.}
 \tag{5.1}
+```
 
 The face is necessarily exceptional for large `D`.
 
@@ -332,29 +359,29 @@ The face is necessarily exceptional for large `D`.
 
 MF proves that every macroscopic exceptional bounded face in the full-core near-circle branch satisfies
 
-\[
+```math
 k_F\le(2+o(1))D.
-$$
+```
 
 Apply this to `F_*` and combine with (5.1):
 
-$$
+```math
 \boxed{k_{F_*}=(2+o(1))D.}
-$$
+```
 
 Therefore
 
-$$
+```math
 Q_{F_*}=k_{F_*}-4=(2+o(1))D.
-$$
+```
 
 But the entire loaded-interface defect satisfies (1.1), and `F_*` is a loaded-interface face: its boundary connects to the shell through the two endpoint transition regions, while a bounded face with vertices from two distinct unloaded components cannot close without passing through loaded terminals because there are no contact edges between different `I_r` components.
 
 Thus
 
-$$
+```math
 Q_B-Q_{F_*}=o(D),
-$$
+```
 
 proving CF.1-CF.2.
 
@@ -411,9 +438,9 @@ The minimum-interface equality branch has become a finite-width separator proble
 
 The central face `F_*` is a strictly convex unit polygon with
 
-$$
+```math
 k_{F_*}=2D+o(D),
-$$
+```
 
 whose boundary is two `D+o(D)` unloaded contact paths belonging to distinct positive-density harmonic components. The two component interiors lie on opposite sides and each fills an asymptotic half-disk at optimal leading density.
 

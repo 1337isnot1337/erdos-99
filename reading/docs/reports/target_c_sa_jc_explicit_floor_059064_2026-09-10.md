@@ -19,13 +19,13 @@
 The SA theorem strictly dominates the QPD perimeter-dependent area floor.  Re-running
 the exact QJ optimization with
 
-$$
+```math
 \Xi(p)=\frac{p\alpha(p)}4
-$$
+```
 
 raises the explicit post-ZF pinned/contact floor to
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\frac{e_{BB}+2s_C}{D}
 \ge
@@ -33,28 +33,28 @@ $$
 =0.5906428373093669\ldots .
 }
 \tag{SJ.1}
-$$
+```
 
 The optimizing scalar state is
 
-$$
+```math
 \boxed{
 y_*=1.5354681179195452\ldots,
 \qquad
 p_*=2y_*=3.0709362358390904\ldots .
 }
 \tag{SJ.2}
-$$
+```
 
 Thus the explicit report-level floor has moved
 
-$$
+```math
 0.5882283437736394\ldots
 \quad\longrightarrow\quad
 0.5894611562694627\ldots
 \quad\longrightarrow\quad
 0.5906428373093669\ldots
-$$
+```
 
 through two independently proved perimeter/area refinements.  The decimal values are
 not proof dependencies.
@@ -65,28 +65,28 @@ not proof dependencies.
 
 Along a convergent post-ZF subsequence write
 
-$$
+```math
 \lambda=\lim\frac{e_{BB}+2s_C}{D},
 \qquad
 y=\lim\frac hD,
 \qquad
 p=\lim\frac{\operatorname{per}F}{D}.
-$$
+```
 
 The retained feasible region is
 
-$$
+```math
 \boxed{
 2\rho\le y\le\pi,
 \qquad
 g(y):=y+2\cos(y/2)\le p\le\pi.
 }
 \tag{1.1}
-$$
+```
 
 FSDB and SA give
 
-$$
+```math
 \boxed{
 A(y,p):=
 \max\left\{
@@ -96,55 +96,55 @@ A(y,p):=
 \liminf\frac{\operatorname{area}F}{D^2},
 }
 \tag{1.2}
-$$
+```
 
 where
 
-$$
+```math
 \Phi(y)=\frac{y+\sin y}{4}.
 \tag{1.3}
-$$
+```
 
 The actual-perimeter JC inequality gives
 
-$$
+```math
 A(y,p)-\frac\pi4\lambda^2
 \le
 \frac{(\lambda+m)^2}{4\pi},
 \qquad
 m:=\min\{y,p-y\}.
 \tag{1.4}
-$$
+```
 
 Equivalently
 
-$$
+```math
 (\pi^2+1)\lambda^2+2m\lambda+m^2-4\pi A(y,p)\ge0.
 \tag{1.5}
-$$
+```
 
 Let
 
-$$
+```math
 R(A,m)=
 \frac{\sqrt{4\pi(\pi^2+1)A-\pi^2m^2}-m}{\pi^2+1}
 \tag{1.6}
-$$
+```
 
 be the positive threshold root.  As in QJ,
 
-$$
+```math
 \frac{\partial R}{\partial A}>0,
 \qquad
 \frac{\partial R}{\partial m}<0.
 \tag{1.7}
-$$
+```
 
 Thus the problem is to minimize
 
-$$
+```math
 R(A(y,p),\min\{y,p-y\})
-$$
+```
 
 over the compact region (1.1).
 
@@ -154,51 +154,51 @@ over the compact region (1.1).
 
 For every `y in [2rho,pi)`, SA proves
 
-$$
+```math
 \Xi(g(y))
 =\frac14\left[y\sin(y/2)+\sin y\right]
 <
 \frac{y+\sin y}{4}
 =\Phi(y).
 \tag{2.1}
-$$
+```
 
 Also `Xi(pi)=pi/4>Phi(y)` for `y<pi`.  Since `Xi` is strictly increasing, there is a
 unique crossover
 
-$$
+```math
 \boxed{
 c(y)\in(g(y),\pi)
 \quad\text{with}\quad
 \Xi(c(y))=\Phi(y).
 }
 \tag{2.2}
-$$
+```
 
 Set `c(pi)=pi`.
 
 SA gives the uniform derivative bound
 
-$$
+```math
 \Xi'(p)>\frac{17}{24}>\frac12
 \tag{2.3}
-$$
+```
 
 throughout the post-ZF perimeter range, while
 
-$$
+```math
 \Phi'(y)=\frac{1+\cos y}{4}\le\frac12.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 0\le c'(y)
 =\frac{\Phi'(y)}{\Xi'(c(y))}<1.
 }
 \tag{2.4}
-$$
+```
 
 ---
 
@@ -214,17 +214,17 @@ function:
 SA proves all three for `Xi`, with the stronger derivative margin (2.3).  For
 completeness, the key derivative after the crossover is
 
-$$
+```math
 \frac d{dp}R(\Xi(p),p-y)
 =
 \frac{2\pi\Xi'(p)-(R+m)}{(\pi^2+1)R+m}
 \tag{3.1}
-$$
+```
 
 whenever `p<2y`.  Since `A<=pi/4`, every positive threshold root has `R<1`; and
 `p<2y` gives `m<=pi/2`.  Therefore
 
-$$
+```math
 2\pi\Xi'(p)
 >
 \frac{17\pi}{12}
@@ -232,7 +232,7 @@ $$
 1+\frac\pi2
 >R+m,
 \tag{3.2}
-$$
+```
 
 so (3.1) is positive.
 
@@ -250,69 +250,69 @@ No floating-point optimization is used.
 
 At `y=2rho`, the equation `rho=cos rho` gives
 
-$$
+```math
 g(2\rho)=4\rho=2(2\rho).
-$$
+```
 
 Equation (2.1) therefore gives
 
-$$
+```math
 c(2\rho)>2(2\rho).
 \tag{4.1}
-$$
+```
 
 At `y=pi/2`, `2y=pi` and
 
-$$
+```math
 \Xi(\pi)=\frac\pi4>\Phi(\pi/2),
-$$
+```
 
 so
 
-$$
+```math
 c(\pi/2)<2(\pi/2).
 \tag{4.2}
-$$
+```
 
 Because `c'(y)<1`, the function `c(y)-2y` is strictly decreasing.  Hence there is a
 unique
 
-$$
+```math
 \boxed{
 y_*\in(2\rho,\pi/2)
 \quad\text{such that}\quad
 c(y_*)=2y_*.
 }
 \tag{4.3}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \Xi(2y_*)=\Phi(y_*).
 }
 \tag{4.4}
-$$
+```
 
 This is the exact definition of `y_*`.
 
 If
 
-$$
+```math
 a_*:=\alpha(2y_*),
-$$
+```
 
 then (4.4) can also be written
 
-$$
+```math
 \boxed{
 2y_*a_*=y_*+\sin y_*,
 \qquad
  y_*=\arcsin a_*+\sqrt{1-a_*^2}.
 }
 \tag{4.5}
-$$
+```
 
 ---
 
@@ -320,66 +320,66 @@ $$
 
 For `2rho<=y<=y_*`, the fixed-`y` optimum is
 
-$$
+```math
 M_-(y)=R(\Phi(y),y).
-$$
+```
 
 This is exactly the left FSJC threshold.  The strict derivative argument already
 proved in FSJC and reused in QJ gives
 
-$$
+```math
 M_-'(y)<0.
 \tag{5.1}
-$$
+```
 
 For `y_*<=y<=pi`, the fixed-`y` optimum is
 
-$$
+```math
 M_+(y)=R(\Phi(y),c(y)-y).
-$$
+```
 
 Here `Phi(y)` increases and, by (2.4),
 
-$$
+```math
 (c(y)-y)'<0.
-$$
+```
 
 Since `R` increases with its first argument and decreases with its second,
 
-$$
+```math
 M_+(y)\text{ is strictly increasing}.
 \tag{5.2}
-$$
+```
 
 Therefore the global minimum occurs exactly at
 
-$$
+```math
 y=y_*,
 \qquad
 p=c(y_*)=2y_*.
 \tag{5.3}
-$$
+```
 
 Define
 
-$$
+```math
 \boxed{
 \lambda_{SA}:=R(\Phi(y_*),y_*).
 }
 \tag{5.4}
-$$
+```
 
 Then every post-ZF subsequential limit satisfies
 
-$$
+```math
 \lambda\ge\lambda_{SA},
-$$
+```
 
 proving SJ.1.
 
 Equivalently, `lambda_SA` is the positive root of
 
-$$
+```math
 \boxed{
 (\pi^2+1)\lambda^2
 +2y_*\lambda
@@ -387,14 +387,14 @@ $$
 -\pi(y_*+\sin y_*)=0.
 }
 \tag{5.5}
-$$
+```
 
 Since `y_*<pi/2` and the FSJC left threshold decreases strictly toward
 `lambda_FSJC` as `y` approaches `pi/2`, the strict improvement
 
-$$
+```math
 \lambda_{SA}>\lambda_{FSJC}
-$$
+```
 
 is exact and does not depend on the displayed decimals.
 
@@ -404,33 +404,33 @@ is exact and does not depend on the displayed decimals.
 
 High-precision evaluation of the exact implicit system gives
 
-$$
+```math
 y_*=1.53546811791954519242\ldots,
-$$
+```
 
-$$
+```math
 a_*=0.82543040525152030207\ldots,
-$$
+```
 
-$$
+```math
 \Phi(y_*)=\Xi(2y_*)
 =0.63371103541255967521\ldots,
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \lambda_{SA}
 =0.59064283730936696903\ldots .
 }
-$$
+```
 
 The numerical increase over FSJC is
 
-$$
+```math
 0.0024144935357275\ldots .
-$$
+```
 
 ---
 
@@ -438,44 +438,44 @@ $$
 
 Any sequence approaching equality in SJ.1 must satisfy
 
-$$
+```math
 \boxed{
 \frac hD\to y_*,
 \qquad
 \frac{\operatorname{per}F}{D}\to2y_*.
 }
 \tag{7.1}
-$$
+```
 
 Because the two area floors cross at the optimizer,
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}F}{D^2}
 \to
 \Phi(y_*)=\Xi(2y_*)
 }
 \tag{7.2}
-$$
+```
 
 is necessary for scalar equality: any fixed positive area excess would make the gap
 lower bound exceed the JC cavity upper bound at `lambda_SA`.
 
 The `t<=lambda` relaxation in JC must also saturate, so
 
-$$
+```math
 \boxed{
 \frac{s_C}{D}\to0.
 }
 \tag{7.3}
-$$
+```
 
 Finally `p=2y` balances the two exact JC perimeter branches:
 
-$$
+```math
 y=p-y.
 \tag{7.4}
-$$
+```
 
 This endpoint is now the shortest structural target.  In particular, SA equality
 requires the central symmetral to become asymptotically tangential to its centered

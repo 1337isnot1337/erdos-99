@@ -28,30 +28,30 @@ The new family is finite, nonglobal, and has no normalized nonnegative KKT diame
 
 For a source contained in the disk `B(a,D)`, take `c=a`, `R=D`, and the actual diameter pair `p-a`, with `u=(p-a)/D`. In Audit.166's notation,
 
-$$
+```math
 P=u\cdot(p-c)=D,\qquad E=\sqrt{R^2-D^2/4}=\frac{\sqrt3}{2}D.
-$$
+```
 
 For `D >= 10` and `delta <= 1/D`, the large-`E` branch gives
 
-$$
+```math
 H=P-E-\delta/4=(1-\sqrt3/2)D-\delta/4.
-$$
+```
 
 Thus the report's upper-pair lemma is exactly the centered-carrier-disk specialization of `C-CIRCUMCIRCLE-UPPER-PAIR-SAFETY`. Its arrow-closed finite move is the corresponding specialization of `C-CIRCUMCIRCLE-BLOCKER-CLOSURE`; the source report's canonical path conclusion adds no stronger canonical consequence than Audit.166's half-depth theorem.
 
 The new four-point sharpness example is correct. Let
 
-$$
+```math
 a=(0,0),\quad p=(D,0),\quad
 x=(\sqrt3D/2,D/2),\quad y=(\sqrt3D/2,-D/2),\qquad D\ge10.
-$$
+```
 
 All four labels are unit-separated. The pairs `ap`, `ax`, `ay`, and `xy` have length `D`, and the other two distances are `D*sqrt(2-sqrt(3)) < D`; hence the actual diameter is `D`. The source is nonglobal, for example by replacing it with four integer-grid points. At `x`, support depth is exactly `(1-sqrt(3)/2)D`. Moving only `x` by `-delta*(1,0)` gives
 
-$$
+```math
 |x-\delta(1,0)-y|^2=D^2+\delta^2>D^2.
-$$
+```
 
 Therefore no uniform leading coefficient greater than `1-sqrt(3)/2` is valid from this diameter-disk geometry alone. This example does not challenge the lower-order `-delta/4` margin in the promoted theorem.
 
@@ -59,37 +59,37 @@ Therefore no uniform leading coefficient greater than `1-sqrt(3)/2` is valid fro
 
 Fix an integer `q >= 1`, and put
 
-$$
+```math
 K=3q,\quad M=64K^2,\quad D=M+\frac1{16M},\quad
 \delta=D^{-1},\quad \sigma=\frac1{4M},\quad
 w=\frac{1-\sigma^2}{1+\sigma^2},\quad
 z=1-\delta^2/2+i\delta w.
-$$
+```
 
 The identity `w^2=1-delta^2/4` gives `|z|=1` exactly. Writing `z=e^(i theta)`,
 
-$$
+```math
 2D\sin(\theta/2)=1,\qquad \delta\le\theta<1.01\delta.
-$$
+```
 
 Set `p_j=D*z^j` for `-1 <= j <= K+1`, `a=(0,0)`, `c=1+1/K`, and `rho=1+delta^2/100`. Consecutive wall edges have length exactly one. Add the row
 
-$$
+```math
 r_j=(D-3+c(D-\Re p_j),\Im p_j),\quad 0\le j\le K.
-$$
+```
 
 The `q+1` roots have indices `i=0,3,...,K`. For each root set `u_i=p_i/D`, `f_i=p_i-rho*u_i`, and `v_i=r_i-f_i`. Define
 
-$$
+```math
 \lambda_i^2=\frac{\rho^2-|v_i|^2/4}{|v_i|^2},\qquad
 m_i=\frac{f_i+r_i}{2}+\lambda_i Jv_i.
-$$
+```
 
 The actual construction rounds `lambda_i` upward to a rational with denominator `10^6*M^6`. Finally add
 
-$$
+```math
 t_\ell=(D-3-\ell\rho,0),\quad 1\le\ell\le T=\lceil D/7\rceil.
-$$
+```
 
 All coordinates are rational. The label count is (N=8q+7+T<D/5).
 
@@ -97,31 +97,31 @@ All coordinates are rational. The label count is (N=8q+7+T<D/5).
 
 The all-`q` bounds used in the pair audit are uniform. Since `D >= 64K^2` and `K >= 3`, all wall angles have magnitude below `0.01`. For `h_j=D*(1-cos(j*theta))`,
 
-$$
+```math
 0\le h_j\le\frac{1.0201j^2}{2D}<0.008\quad(0\le j\le K),
-$$
+```
 
 and the two wall endpoints have `h_-1,h_(K+1) < 0.02`. These give the stated narrow depth and column boxes. In particular, root columns are separated by at least `2.97` in the tangential coordinate before the `0.17` middle-point offsets.
 
 For a row edge, with (A_j=\sin((j-1/2)\theta)), (B_j=\cos((j-1/2)\theta)),
 
-$$
+```math
 r_j-r_{j-1}=(cA_j,B_j),\qquad
 |r_j-r_{j-1}|^2=1+(c^2-1)A_j^2.
-$$
+```
 
 It is strictly longer than one and at most `1+delta`. For a connector,
 
-$$
+```math
 |v_i|^2=(3-\rho)^2+h_i\{-2(3-\rho)A+2\rho^2/D\}
 +h_i^2(A^2-\rho^2/D^2),\quad A=c+1-\rho/D.
-$$
+```
 
 Here (1.9<A<2.4), (h_i<0.008), and the coefficient of (h_i) is negative. Hence (1.9<|v_i|\le3-\rho<2\rho), so the equal-length midpoint radicand is positive. Its perpendicular offset is below (0.16), since
 
-$$
+```math
 \rho^2-|v_i|^2/4\le4(\rho-1)+3h_i<0.16^2.
-$$
+```
 
 Upward rational rounding changes either segment length by less than (3/(10^6M^6)); the three connector lengths lie in ([\rho,1+\delta^2/50)). The first segment (p_i f_i) has length exactly (\rho).
 
@@ -134,9 +134,9 @@ The complete set of pairs of length at most (1+\delta) is exactly:
 
 All listed edges except the wall edges are strict noncontacts. The remaining pair classes are excluded as follows: nonconsecutive wall chords exceed (1.99); for a first-column point and a different wall point,
 
-$$
+```math
 |f_i-p_j|^2=\rho^2+(1-\rho/D)|p_i-p_j|^2>1.99;
-$$
+```
 
 nonmatching middle-to-row pairs have horizontal gap at least (0.96) and tangential gap at least (0.82), hence squared distance above (1.59); nonadjacent row pairs dominate the corresponding nonadjacent wall chord and exceed (1.99); row-to-trunk pairs other than (r_0t_1) have either horizontal gap at least (\rho) plus a nonzero row height, or a horizontal gap above (2\rho); and nonconsecutive trunk pairs exceed (2\rho). The depth and root-column bounds separate the remaining cross-column classes by more than (1+\delta). Thus the full contact graph is exactly the wall path and has no triangle. Every listed row, connector, and trunk point, as well as (a), is contact-isolated.
 
@@ -152,35 +152,35 @@ For root (p_i), define an arrow (x\to y) when translating (x) by (-\delta u_i) m
 
 All three connector arrows and the row-to-trunk/trunk arrows have forward support projection at least (0.9) (at least (0.99\rho) on the trunk). For a row arrow (r_j\to r_{j-1}), (1\le j\le i), its parent-minus-child vector is ((cA_j,B_j)). The angle bounds give
 
-$$
+```math
 (c^2-1)A_j^2\le\frac52(j-1/2)\delta^2,
-$$
+```
 
-$$
+```math
 2\delta\,u_i\cdot(cA_j,B_j)-\delta^2
 \ge(98j/25-99/50)\delta^2.
-$$
+```
 
 The second quantity exceeds the first for every (j\ge1), exactly the condition that moving (r_j) makes (r_{j-1}) closer than one. The reverse row, connector, and trunk edges have negative forward projection. Every pair not in the displayed near-unit graph is farther than (1+\delta), so a displacement of length (\delta) cannot make it an arrow. At (r_j), the only outgoing arrow before the threshold is (r_j\to r_{j-1}), and at (r_0) it is (r_0\to t_1). Hence the path
 
-$$
+```math
 p_i\to f_i\to m_i\to r_i\to r_{i-1}\to\cdots\to r_0\to t_1\to t_2\to\cdots
-$$
+```
 
 is unique through its first vertex at support depth
 
-$$
+```math
 H=(1-\sqrt3/2)D-\delta/4.
-$$
+```
 
 For each root,
 
-$$
+```math
 s_i(t_\ell)=h_i+(3+\ell\rho)\cos(i\theta)
 \le3+\ell\rho+0.008.
-$$
+```
 
-For (D\ge576), this is (<H) for every (1\le\ell\le\lfloor D/8\rfloor), and (T\ge\lfloor D/8\rfloor). Thus all (q+1) unique paths use the same first $\lfloor D/8\rfloor$ trunk labels. Each such label is contact-isolated; path congestion is (q+1) on a trunk of length $\Theta(D)$, while each path reaches at least (D/8) edges before crossing (H).
+For (D\ge576), this is (<H) for every (1\le\ell\le\lfloor D/8\rfloor), and (T\ge\lfloor D/8\rfloor). Thus all (q+1) unique paths use the same first $`\lfloor D/8\rfloor`$ trunk labels. Each such label is contact-isolated; path congestion is (q+1) on a trunk of length $`\Theta(D)`$, while each path reaches at least (D/8) edges before crossing (H).
 
 The path-gap calculation also survives: using (d-1\le(d^2-1)/2), the row part is at most (5K^2/(12D^2)\le5/(768D)), the trunk part is below (2/(700D)+2/(100D^2)), and the three connector edges contribute below (1/(10D^2)). Their sum is (<1/(100D)) for (D\ge576). Small total path excess does not imply path disjointness.
 
@@ -188,21 +188,21 @@ The path-gap calculation also survives: using (d-1\le(d^2-1)/2), the row part is
 
 This extension is analytic, not a conclusion of the finite verifier. Let (o=(D/2,0)), (R=D/2). Every old point lies in (B(o,R+0.02)). Remove from (B(o,R-3)) all closed radius-((1+\delta)) disks centered at old source points. The remaining region has area
 
-$$
+```math
 \pi(R-3)^2-N\pi(1+\delta)^2=\pi D^2/4-O(D).
-$$
+```
 
 Translate a triangular lattice of systole (1+2\delta) through this region. Averaging over one fundamental cell gives a translation with at least its mean number of sites there, namely
 
-$$
+```math
 \frac{\pi D^2}{2\sqrt3}+O(D).
-$$
+```
 
-The new points have pairwise separation at least (1+2\delta), distance greater than (1+\delta) from every old point, and distance at most (D-2.98) from every old point. They add neither contacts nor blocker arrows, so the graph and unique paths above are unchanged. The full population is (n=\pi D^2/(2\sqrt3)+O(D)). Oler's inequality and $\operatorname{per}(K)\le\pi D$ give
+The new points have pairwise separation at least (1+2\delta), distance greater than (1+\delta) from every old point, and distance at most (D-2.98) from every old point. They add neither contacts nor blocker arrows, so the graph and unique paths above are unchanged. The full population is (n=\pi D^2/(2\sqrt3)+O(D)). Oler's inequality and $`\operatorname{per}(K)\le\pi D`$ give
 
-$$
+```math
 \operatorname{area}(K)=\pi D^2/4-O(D).
-$$
+```
 
 Nonglobality remains explicit. Fix the carrier and all new points, and translate only the original noncarrier labels by (-\delta(1,0)). Original-to-new separation remains (>1), since its old value exceeded (1+\delta). The moved original labels remain within (B(o,R+0.02)), because their first coordinates exceed (5D/6); hence all old-to-new distances remain below (D-2.98). Original internal distances are unchanged, while every carrier diameter shortens. The augmented source is still nonglobal and still has no normalized nonnegative KKT stress.
 
@@ -212,6 +212,6 @@ I inspected the exact rational source construction and the imported `Q(sqrt(3))`
 
 **Promoted regression `C-CIRCUMCIRCLE-CENTERED-DISK-CAP-SHARPNESS-REGRESSION`:** the leading coefficient (1-\sqrt3/2) cannot be increased in the centered radius-(D) disk cap from diameter geometry alone.
 
-**Promoted regression `C-FAN-PATH-COMMON-TRUNK-REGRESSION`:** for every (q\ge1), a triangle-free unit-separated finite source has (q+1) pairwise label-disjoint actual two-contact diameter-fan triples whose unique (1/D)-blocker paths share at least $\lfloor D/8\rfloor$ contact-isolated labels and have path gap excess (<1/(100D)). The same behavior persists after a leading-density, near-maximal-area augmentation. Every displayed source is nonglobal and has no normalized nonnegative KKT diameter stress. This is not a counterexample to any theorem whose hypotheses require canonical global optimality or canonical KKT stress, and it yields no C-II or Level I conclusion.
+**Promoted regression `C-FAN-PATH-COMMON-TRUNK-REGRESSION`:** for every (q\ge1), a triangle-free unit-separated finite source has (q+1) pairwise label-disjoint actual two-contact diameter-fan triples whose unique (1/D)-blocker paths share at least $`\lfloor D/8\rfloor`$ contact-isolated labels and have path gap excess (<1/(100D)). The same behavior persists after a leading-density, near-maximal-area augmentation. Every displayed source is nonglobal and has no normalized nonnegative KKT diameter stress. This is not a counterexample to any theorem whose hypotheses require canonical global optimality or canonical KKT stress, and it yields no C-II or Level I conclusion.
 
 The current Target C endpoint remains the source-realized finite move or discrete replacement on the residual face/train system. Audit.166's path theorem still gives no path-disjointness; this exact nonglobal family shows that leading density and small path gap excess alone cannot supply it. No discovery-worker branch was modified.

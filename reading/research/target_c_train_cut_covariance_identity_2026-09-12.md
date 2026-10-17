@@ -34,49 +34,49 @@ outer-to-outer trains and `q` actual diameter edges.  For each train `tau`, choo
 the shore orientation and its unit cut vector `u_tau`.  For each diameter edge
 `h`, choose an orientation and write
 
-$$
+```math
 r_h=p_{y_h}-p_{x_h},\qquad |r_h|=D.
-$$
+```
 
 Define the signed shore-separation matrix
 
-$$
+```math
 E_{h\tau}=\varepsilon_{h\tau}
  :=\chi_\tau(y_h)-\chi_\tau(x_h)\in\{-1,0,1\}.
-$$
+```
 
 The exact Section-159 displacement identity, written row-wise, is
 
-$$
+```math
 \boxed{R=EU},
 \tag{TC.1}
-$$
+```
 
 where `U` is the `q x 2` matrix whose `tau`-row is `u_tau`, and `R` is the
 `q x 2` matrix whose `h`-row is `r_h`.
 
 For the relative-interior KKT stress, put `B_beta=diag(beta_h)` and
 
-$$
+```math
 a_\tau:=\sum_{e\in\tau}\alpha_e>0,
 \qquad A_\alpha:=\operatorname{diag}(a_\tau).
-$$
+```
 
 The exact shore sum from Section 127 is, with the same sign convention,
 
-$$
+```math
 a_\tau u_\tau
  =\sum_h\beta_h\varepsilon_{h\tau}r_h.
 \tag{TC.2}
-$$
+```
 
 In matrix form this is
 
-$$
+```math
 \boxed{A_\alpha U=E^{\mathsf T}B_\beta R
        =E^{\mathsf T}B_\beta E U.}
 \tag{TC.3}
-$$
+```
 
 No diameter coefficient lower bound is used.  The identity only uses the actual
 positive relative-interior stress and the fact that every train is a global cut.
@@ -86,32 +86,32 @@ positive relative-interior stress and the fact that every train is a global cut.
 Left-multiply (TC.3) by `U^T`.  Since `R=EU`, this gives the exact symmetric
 two-dimensional covariance equality
 
-$$
+```math
 \boxed{
 U^{\mathsf T}A_\alpha U
  =R^{\mathsf T}B_\beta R.
 }
 \tag{TC.4}
-$$
+```
 
 Equivalently, for every `z\in\mathbb R^2`,
 
-$$
+```math
 \boxed{
 \sum_\tau a_\tau(z\cdot u_\tau)^2
  =\sum_h\beta_h(z\cdot r_h)^2.
 }
 \tag{TC.5}
-$$
+```
 
 Taking traces and using `|u_tau|=1`, `|r_h|=D`, `sum_h beta_h=1`, and the
 normalized KKT virial `sum_tau a_tau=sum_e alpha_e=D^2`, gives
 
-$$
+```math
 \operatorname{tr}(U^{\mathsf T}A_\alpha U)
  =\operatorname{tr}(R^{\mathsf T}B_\beta R)=D^2.
 \tag{TC.6}
-$$
+```
 
 Thus the train-cut system does not merely reproduce the scalar shore resultant:
 its entire second moment in the two physical directions agrees with the actual
@@ -121,25 +121,25 @@ diameter second moment.
 
 Set
 
-$$
+```math
 W:=E^{\mathsf T}B_\beta E.
-$$
+```
 
 Then `W` is positive semidefinite and (TC.3) says
 
-$$
+```math
 \boxed{(W-A_\alpha)U=0.}
 \tag{TC.7}
-$$
+```
 
 The train directions span the plane because the pure endpoint contains strict
 rhombi with two nonparallel train directions.  Hence the two coordinate columns of
 `U` are linearly independent, and
 
-$$
+```math
 \boxed{\dim\ker(W-A_\alpha)\ge2.}
 \tag{TC.8}
-$$
+```
 
 Since `A_alpha` is positive diagonal, this is a genuine spectral condition on the
 signed circular-split matrix `E`; it is stronger than the row/column support and
@@ -147,31 +147,31 @@ positive-left-kernel data rejected by Section 158.
 
 The diagonal entries of `W` are
 
-$$
+```math
 W_{\tau\tau}=\sum_{h\pitchfork\tau}\beta_h,
 \tag{TC.9}
-$$
+```
 
 and (TC.7) also recovers the finite train resultant and angular-slack formula
 
-$$
+```math
 a_\tau u_\tau
  =\sum_{h\pitchfork\tau}\beta_h\varepsilon_{h\tau}r_h,
 \qquad
 a_\tau\le D W_{\tau\tau}.
 \tag{TC.10}
-$$
+```
 
 Summing (TC.10) over trains gives
 
-$$
+```math
 \boxed{
 \sum_h\beta_h(t_h-D)
  ={1\over D}\sum_\tau\sum_{h\pitchfork\tau}
  \beta_h\left(D-u_\tau\cdot(\varepsilon_{h\tau}r_h)\right),
 }
 \tag{TC.11}
-$$
+```
 
 where `t_h` is the number of trains separating the endpoints of `h`.  Every term
 on the right is nonnegative, and Section 159 gives `t_h\ge D` pointwise.
@@ -213,50 +213,50 @@ Let `q` be odd, let `r=(q-1)/2`, and choose an integer `2<=ell<q/2`.  Index load
 vertices and trains by `Z/qZ`.  For train `s`, let its cut shore be the cyclic
 interval
 
-$$
+```math
 S_s=\{s,s+1,\ldots,s+\ell-1\}.
-$$
+```
 
 Take
 
-$$
+```math
 u_s=(\cos(2\pi s/q),\sin(2\pi s/q))
-$$
+```
 
 and define loaded points by the exact binary cut coordinates
 
-$$
+```math
 p_i=\sum_s\chi_{S_s}(i)u_s.
 \tag{TC.12}
-$$
+```
 
 The points `p_i` form a regular `q`-gon.  Its `r`-step edges are the diameter
 edges of length `D`; the corresponding signed cut matrix is
 
-$$
+```math
 E_{is}=\chi_{S_s}(i+r)-\chi_{S_s}(i),
-$$
+```
 
 and its displacement rows satisfy `r_i=p_(i+r)-p_i=(EU)_i` exactly.  With uniform
 diameter weights `beta_i=1/q`, the circulant matrix `E^T B_beta E` has the first
 Fourier sine/cosine pair as an eigenspace.  The two-dimensional unit-direction
 matrix `U` therefore satisfies
 
-$$
+```math
 E^{\mathsf T}B_\beta E U={D^2\over q}U.
 \tag{TC.13}
-$$
+```
 
 Setting `a_tau=D^2/q` gives the exact shore resultant (TC.3), positive contact
 train weights, `sum_tau a_tau=D^2`, and the covariance identity (TC.4).  For
 `ell/q` near `1/3`,
 
-$$
+```math
 {D\over q}\longrightarrow {2\over\pi}\sin(\pi/3)={\sqrt3\over\pi},
 \qquad
 {q\over D}\longrightarrow {\pi\over\sqrt3}=1.813799\ldots,
 \tag{TC.14}
-$$
+```
 
 which is on the current Type-II scale.
 
@@ -265,12 +265,12 @@ train directions do not supply the strict-rhombus crossing graph with its
 projective angle greater than `pi/3`; no full contact complex or global minimizer is
 claimed.  Its exact implication is narrower:
 
-$$
+```math
 \boxed{
 \text{covariance + binary circular cuts + odd-shell diameter support}
 \not\Longrightarrow\text{C-II closure}.
 }
-$$
+```
 
 The missing closing input must therefore use the actual triangle-free train
 crossing graph, its angular defect/phase budget, or a finite source-preserving

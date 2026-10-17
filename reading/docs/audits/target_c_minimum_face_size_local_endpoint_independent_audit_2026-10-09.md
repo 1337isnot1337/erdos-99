@@ -28,16 +28,16 @@ Suppose one transition arc has a single edge. Its chord has length one. The oppo
 
 Write the transition parallelogram as
 
-$$
+```math
 a=0,\qquad b=Lt,\qquad d=v,\qquad c=Lt+v,
-$$
+```
 
 where `t,v` are unit vectors meeting at angle `gamma`. The two one-edge arcs are the opposite sides `ad` and `bc`, so `|v|=1`; the two longer arcs run from `a` to `b` and from `d` to `c`. By convexity, their first unit edges have the form
 
-$$
+```math
 e=(\cos\alpha)t-(\sin\alpha)Jt,\qquad
 f=(\cos\beta)t+(\sin\beta)Jt,
-$$
+```
 
 with `alpha,beta>=0`.
 
@@ -45,21 +45,21 @@ At every transition, the old two-edge chord has length `2cos(tau/2)` and is stri
 
 At `a` and `d`, the old turns are `pi-gamma-alpha` and `gamma-beta`. Their lower bounds give
 
-$$
+```math
 \pi/3+\beta<\gamma<2\pi/3-\alpha.
-$$
+```
 
 Put `delta=(alpha+beta)/2` and `d0=(beta-alpha)/2`. These inequalities imply `0<=delta<pi/6` and
 
-$$
+```math
 \pi/3+\delta<\gamma-d0<2\pi/3-\delta.
-$$
+```
 
 Undo the common quarter-turn. Up to reversing all signs, the two longer arcs have positive signs and the one-edge arcs have negative signs. The bottom long arc stays in place and the top long arc translates by `-2v`. The two first internal boundary labels in the folded endpoint therefore differ by `f-e-v`, and direct expansion gives
 
-$$
+```math
 |f-e-v|^2=1+4\sin^2\!\delta-4\sin\delta\sin(\gamma-d0).
-$$
+```
 
 If `delta>0`, then `sin(gamma-d0)>sin(delta)`, so this squared distance is strictly less than one. That contradicts lower-feasibility of the folded boundary labels. If `delta=0`, then `alpha=beta=0`; the two old first internal labels are separated by the unit vector `v`. They are nonconsecutive vertices of the old actual face, again impossible. Thus no transition arc has one edge.
 

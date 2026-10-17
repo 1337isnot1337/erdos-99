@@ -24,28 +24,29 @@ bounded geometric theorem below.
 ## Exact claims promoted
 
 1. **`C-FIVE-POINT-HULL-PERIMETER-LOWER-BOUND`:** For every five-point
-   unit-separated set $X\subset\mathbb R^2$,
-   $\operatorname{per}(\operatorname{conv}X)\ge5$. The bound is sharp.
+   unit-separated set $`X\subset\mathbb R^2`$,
+   $`\operatorname{per}(\operatorname{conv}X)\ge5`$. The bound is sharp.
 
-Let $P$ be a strictly convex pentagon with five unit sides and pairwise
+Let $`P`$ be a strictly convex pentagon with five unit sides and pairwise
 unit-separated vertices.
 
 2. **`C-UNIT-PENTAGON-PERIMETER-CAPACITY`:** Every five-point
-   unit-separated set contained in $P$ is exactly its five
-   vertices. In particular, $P$ has no strict-interior unit-separated point
+   unit-separated set contained in $`P`$ is exactly its five
+   vertices. In particular, $`P`$ has no strict-interior unit-separated point
    when all five vertices are retained.
-3. If $d\in\{1,2,3,4,5\}$ vertices are deleted and the other $5-d$ are
+3. If $`d\in\{1,2,3,4,5\}`$ vertices are deleted and the other $`5-d`$ are
    retained, any finite set of strict-interior replacement points that is
    pairwise unit-separated and unit-clear of the retained vertices has
-   cardinality at most $d-1$.
+   cardinality at most $`d-1`$.
 4. For a vertex-disjoint bank of such walls, assign each replacement label
    lying in the strict interior of at least one wall to at most one wall
-   whose strict interior contains it. If wall $j$ loses $d_j$ vertices,
-   then the number $M$ of assigned labels in walls with $d_j>0$ satisfies
-   $$
+   whose strict interior contains it. If wall $`j`$ loses $`d_j`$ vertices,
+   then the number $`M`$ of assigned labels in walls with $`d_j>0`$ satisfies
+   ```math
    M\le\sum_{j:d_j>0}(d_j-1)=\sum_jd_j-a,
-   $$
-   where $a=|\{j:d_j>0\}|$. A wall with $d_j=0$ admits no assigned
+   
+   ```
+   where $`a=|\{j:d_j>0\}|`$. A wall with $`d_j=0`$ admits no assigned
    strict-interior replacement point.
 
    Here the replacement labels form a globally pairwise unit-separated set;
@@ -75,59 +76,61 @@ source-level replacement or alter the C-II endpoint.
 
 ### Five-point perimeter bound
 
-For five mutually unit-separated points $X\subset\mathbb R^2$, I verified
+For five mutually unit-separated points $`X\subset\mathbb R^2`$, I verified
 
-$$
+```math
 \operatorname{per}(\operatorname{conv}X)\ge5.
-$$
+```
 
 The hull cases are exhaustive:
 
 - If there are five hull vertices, every hull edge is at least one.
 - If the hull is a segment, the ordered points span at least four, so its
   perimeter (twice the span) is at least eight.
-- If the hull is a triangle and its perimeter $p<5$, Heron's inequality
-  gives area at most $p^2/(12\sqrt3)$. Canonical Oler (Lemma 21.1 of
+- If the hull is a triangle and its perimeter $`p<5`$, Heron's inequality
+  gives area at most $`p^2/(12\sqrt3)`$. Canonical Oler (Lemma 21.1 of
   `docs/theory/03-oler-shell.md`) would then give
-  $$
+  ```math
   5\le p^2/18+p/2+1<25/18+5/2+1=44/9<5,
-  $$
+  
+  ```
   a contradiction. Boundary points are included by Oler.
-- If the hull is a quadrilateral, let $z$ be the fifth point and
-  $r_i=|z-v_i|\ge1$ for its cyclic vertices. The consecutive polar gaps
-  $\theta_i\in[0,\pi]$ sum to $2\pi$, including when $z$ lies on a
+- If the hull is a quadrilateral, let $`z`$ be the fifth point and
+  $`r_i=|z-v_i|\ge1`$ for its cyclic vertices. The consecutive polar gaps
+  $`\theta_i\in[0,\pi]`$ sum to $`2\pi`$, including when $`z`$ lies on a
   hull edge. The exact identity
-  $$
+  ```math
   |v_{i+1}-v_i|^2-2(1-\cos\theta_i)
   =(r_i-r_{i+1})^2+2(1-\cos\theta_i)(r_ir_{i+1}-1)\ge0
-  $$
+  
+  ```
   implies each hull side has length at least
-  $\max\{1,2\sin(\theta_i/2)\}$. Concavity of sine gives
-  $\max\{1,2\sin(\theta/2)\}\ge1/2+3\theta/(2\pi)$ on
-  $[0,\pi]$. Summing over the four gaps gives perimeter at least five.
+  $`\max\{1,2\sin(\theta_i/2)\}`$. Concavity of sine gives
+  $`\max\{1,2\sin(\theta/2)\}\ge1/2+3\theta/(2\pi)`$ on
+  $`[0,\pi]`$. Summing over the four gaps gives perimeter at least five.
 
 The quadrilateral boundary case is necessary: the five points
-$(0,0),(-1,0),(1,0),(1/2,\sqrt3/2),(-1/2,\sqrt3/2)$ are unit-separated
+$`(0,0),(-1,0),(1,0),(1/2,\sqrt3/2),(-1/2,\sqrt3/2)`$ are unit-separated
 and have hull perimeter exactly five.
 
 ### Uniqueness and deletion accounting
 
-For any five-point unit-separated $B\subset P$, the perimeter bound gives
-$\operatorname{per}(\operatorname{conv}B)\ge5=\operatorname{per}(P)$.
-If $B$ is not the vertex set, one extreme vertex of the strictly convex
-pentagon is absent, so $K=\operatorname{conv}B$ is a proper compact convex
-subset of $P$. There is a support direction in which $h_K<h_P$; by
+For any five-point unit-separated $`B\subset P`$, the perimeter bound gives
+$`\operatorname{per}(\operatorname{conv}B)\ge5=\operatorname{per}(P)`$.
+If $`B`$ is not the vertex set, one extreme vertex of the strictly convex
+pentagon is absent, so $`K=\operatorname{conv}B`$ is a proper compact convex
+subset of $`P`$. There is a support direction in which $`h_K<h_P`$; by
 continuity this strict gap holds on an open interval. Width is no larger for
 the subset in every direction, so Cauchy's perimeter formula, valid also for
-segments, gives $\operatorname{per}(K)<\operatorname{per}(P)=5$, a
-contradiction. Thus $B$ is exactly the five vertices. If the vertices are
+segments, gives $`\operatorname{per}(K)<\operatorname{per}(P)=5`$, a
+contradiction. Thus $`B`$ is exactly the five vertices. If the vertices are
 not mutually separated, this conclusion simply says no five-point packing
 exists; the source-wall capacity statement assumes they are separated.
 
-If $d\ge1$ vertices are deleted and at least $d$ strict-interior points
-are available, choose $d$ of them and combine them with the $5-d$
-retained vertices. This is a five-point unit-separated subset of $P$ that is
-not its vertex set, contradicting uniqueness. If $d=0$, one strict-interior
+If $`d\ge1`$ vertices are deleted and at least $`d`$ strict-interior points
+are available, choose $`d`$ of them and combine them with the $`5-d`$
+retained vertices. This is a five-point unit-separated subset of $`P`$ that is
+not its vertex set, contradicting uniqueness. If $`d=0`$, one strict-interior
 point plus any four wall vertices gives the same contradiction. Applying the
 one-wall inequality separately to a disjoint assignment of labels proves the
 bank bound.

@@ -20,20 +20,20 @@
 
 JC proves the explicit post-ZF floor
 
-$$
+```math
 \lambda:=\frac{e_{BB}+2s_C}{D}
 \not\to\lambda_1^- ,
 \qquad
 \lambda_1=0.4633168953789\ldots,
-$$
+```
 
 in the sense that every unbounded survivor sequence has `liminf lambda>=lambda_1`.
 
 The scalar calculation used only the universal bounds
 
-$$
+```math
 \min\{h,\pi D-h\}\le\pi D/2
-$$
+```
 
 and the PI area floor. Equality in the scalar bound would force the force-hull perimeter to approach the Rosenthal--Szász maximum `pi D`. The equality case then makes the normalized force-hull limit a body of constant width one, and Blaschke--Lebesgue raises its area from PI's `0.497856...` to at least `0.704770...`. That is incompatible with the same cavity capacity which defined `lambda_1`.
 
@@ -43,21 +43,21 @@ Therefore the JC threshold is not merely unattained at equality: compactness giv
 
 There exists an absolute constant
 
-$$
+```math
 \boxed{\eta_0>0}
 \tag{JN.1}
-$$
+```
 
 such that every sufficiently large audited post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
 \lambda_1+\eta_0.
 }
 \tag{JN.2}
-$$
+```
 
 The proof is qualitative and does not make `eta_0` explicit.
 
@@ -67,72 +67,72 @@ The proof is qualitative and does not make `eta_0` explicit.
 
 Suppose for contradiction that there is an unbounded survivor sequence with
 
-$$
+```math
 \lambda_j:=\frac{e_{BB,j}+2s_{C,j}}{D_j}
 \longrightarrow\lambda_1.
 \tag{JN.3}
-$$
+```
 
 Pass to a subsequence on which
 
-$$
+```math
 t_j:=\frac{e_{BB,j}}{D_j}\to t,
 \qquad
  y_j:=\frac{h_j}{D_j}\to y.
 \tag{JN.4}
-$$
+```
 
 The bounds `0<=t_j<=lambda_j` and `h_j<=pi D_j+O(1)` make this possible.
 
 JC gives the diameter-sensitive necessary inequality
 
-$$
+```math
 A_{PI}-\frac\pi4\lambda^2
 \le
 \frac{(t+\min\{y,\pi-y\})^2}{4\pi},
 \tag{JN.5}
-$$
+```
 
 where
 
-$$
+```math
 A_{PI}=\frac12\sin(2\rho).
-$$
+```
 
 By definition, `lambda_1` is the positive solution of
 
-$$
+```math
 A_{PI}-\frac\pi4\lambda_1^2
 =
 \frac{(\lambda_1+\pi/2)^2}{4\pi}.
 \tag{JN.6}
-$$
+```
 
 But
 
-$$
+```math
 t\le\lambda_1,
 \qquad
 \min\{y,\pi-y\}\le\pi/2.
-$$
+```
 
 Thus JN.5--JN.6 can hold only if both inequalities are equalities:
 
-$$
+```math
 \boxed{t=\lambda_1,}
 \tag{JN.7}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{y=\pi/2.}
 \tag{JN.8}
-$$
+```
 
 Moreover the lower and upper normalized gap bounds themselves converge to the common value
 
-$$
+```math
 U_1
 :=
 A_{PI}-\frac\pi4\lambda_1^2
@@ -140,7 +140,7 @@ A_{PI}-\frac\pi4\lambda_1^2
 \frac{(\lambda_1+\pi/2)^2}{4\pi}
 =0.3292610673\ldots .
 \tag{JN.9}
-$$
+```
 
 So every relaxation used in the joint cavity upper bound must be asymptotically tight.
 
@@ -150,13 +150,13 @@ So every relaxation used in the joint cavity upper bound must be asymptotically 
 
 Recall
 
-$$
+```math
 E_{out}:=\sum_P(L_P-3).
-$$
+```
 
 The proof of JC.12 actually gives the sharper finite inequality
 
-$$
+```math
 \boxed{
 E_{out}+Q
 \le
@@ -165,59 +165,59 @@ E_{out}+Q
 \bigl[(\pi D-P_F)+3d_H+(z-Q)\bigr],
 }
 \tag{JN.10}
-$$
+```
 
 where
 
-$$
+```math
 P_F=\operatorname{per}(F),
 \qquad
 z=Q+2s_Z.
-$$
+```
 
 Every term in the square bracket is nonnegative.
 
 JC's area estimate is
 
-$$
+```math
 H_{out}+A_{exc}
 \le
 \frac{(E_{out}+Q)^2}{4\pi}+o(D^2),
 \tag{JN.11}
-$$
+```
 
 while the gap charging gives
 
-$$
+```math
 G\le H_{out}+A_{exc}+O(D).
 \tag{JN.12}
-$$
+```
 
 Since JN.9 says the normalized upper bound is attained asymptotically, JN.10 cannot lose a positive linear amount. Using JN.7--JN.8,
 
-$$
+```math
 \frac{\pi D_j-h_j+e_{BB,j}}{D_j}
 \to
 \frac\pi2+\lambda_1.
-$$
+```
 
 Therefore JN.10--JN.12 force
 
-$$
+```math
 \boxed{
 \frac{\pi D_j-P_{F,j}}{D_j}\longrightarrow0.
 }
 \tag{JN.13}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{
 \frac{P_{F,j}}{D_j}\longrightarrow\pi.
 }
 \tag{JN.14}
-$$
+```
 
 The same saturation also gives `d_H/D->0` and `(z-Q)/D=2s_Z/D->0`, but those facts are not needed below.
 
@@ -227,44 +227,44 @@ The same saturation also gives `d_H/D->0` and `(z-Q)/D=2s_Z/D->0`, but those fac
 
 Scale each force hull by `D_j` and translate it so that one point lies at the origin:
 
-$$
+```math
 \widetilde F_j:=D_j^{-1}(F_j-p_j).
-$$
+```
 
 Then
 
-$$
+```math
 \operatorname{diam}(\widetilde F_j)=1.
-$$
+```
 
 All sets lie in a fixed unit disk after translation. By Blaschke selection, pass to a Hausdorff-convergent subsequence
 
-$$
+```math
 \widetilde F_j\longrightarrow F_\infty.
 \tag{JN.15}
-$$
+```
 
 For planar convex bodies, diameter, perimeter, and area are continuous under Hausdorff convergence. Hence JN.14 gives
 
-$$
+```math
 \operatorname{diam}(F_\infty)=1,
 \qquad
 \operatorname{per}(F_\infty)=\pi.
 \tag{JN.16}
-$$
+```
 
 The classical Rosenthal--Szász theorem states
 
-$$
+```math
 \operatorname{per}(K)\le\pi\operatorname{diam}(K)
-$$
+```
 
 for every planar convex body, with equality exactly for bodies of constant width equal to the diameter. Thus JN.16 implies
 
-$$
+```math
 \boxed{F_\infty\text{ has constant width }1.}
 \tag{JN.17}
-$$
+```
 
 ---
 
@@ -272,7 +272,7 @@ $$
 
 The Blaschke--Lebesgue theorem says that among planar convex bodies of constant width one, the Reuleaux triangle has minimum area. Therefore
 
-$$
+```math
 \boxed{
 \operatorname{area}(F_\infty)
 \ge
@@ -280,37 +280,37 @@ A_{BL}:=\frac{\pi-\sqrt3}{2}
 =0.7047709230\ldots .
 }
 \tag{JN.18}
-$$
+```
 
 By area continuity,
 
-$$
+```math
 \liminf_j
 \frac{\operatorname{area}(F_j)}{D_j^2}
 \ge A_{BL}.
 \tag{JN.19}
-$$
+```
 
 GU's attachment-cell upper bound depends only on
 
-$$
+```math
 L=e_{BB}+2s_C.
-$$
+```
 
 Along JN.3,
 
-$$
+```math
 \limsup_j
 \frac1{D_j^2}
 \sum_r\operatorname{area}(\operatorname{conv}A_r)
 \le
 \frac\pi4\lambda_1^2.
 \tag{JN.20}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \liminf_j\frac{G_j}{D_j^2}
 \ge
@@ -318,16 +318,16 @@ A_{BL}-\frac\pi4\lambda_1^2
 =0.53617535399\ldots .
 }
 \tag{JN.21}
-$$
+```
 
 But JN.9--JN.12 give
 
-$$
+```math
 \limsup_j\frac{G_j}{D_j^2}
 \le U_1
 =0.32926106730\ldots .
 \tag{JN.22}
-$$
+```
 
 This is impossible.
 
@@ -339,23 +339,23 @@ Therefore no unbounded post-ZF survivor sequence can satisfy `lambda_j->lambda_1
 
 JC already proves the universal asymptotic lower bound
 
-$$
+```math
 \liminf\lambda_j\ge\lambda_1
-$$
+```
 
 for every unbounded survivor sequence.
 
 If JN.2 were false for every `eta_0>0`, then for each integer `m` one could choose a sufficiently large survivor with
 
-$$
+```math
 \lambda<\lambda_1+1/m.
-$$
+```
 
 Using the JC lower bound to choose the diameters increasingly large, a diagonal sequence would satisfy
 
-$$
+```math
 \lambda_j\to\lambda_1,
-$$
+```
 
 contradicting Sections 1--4.
 
@@ -369,25 +369,25 @@ No numerical value is claimed because the argument uses only compactness and equ
 
 Any hypothetical sequence attempting to approach the old JC threshold would have to satisfy simultaneously
 
-$$
+```math
 \frac hD\to\frac\pi2,
 \qquad
 \frac{e_{BB}}D\to\lambda_1,
 \qquad
 \frac{s_C}{D}\to0,
 \tag{JN.23}
-$$
+```
 
 and
 
-$$
+```math
 \frac{P_F}{D}\to\pi,
 \qquad
 \frac{d_H}{D}\to0,
 \qquad
 \frac{s_Z}{D}\to0.
 \tag{JN.24}
-$$
+```
 
 Thus the numerical worst case was already a near-constant-width loaded shell, not an arbitrary cavity. The constant-width equality theory removes it.
 

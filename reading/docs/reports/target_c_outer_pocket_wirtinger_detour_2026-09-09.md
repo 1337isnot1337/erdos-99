@@ -13,17 +13,17 @@
 
 OD proved
 
-$$
+```math
 area(P)
 \le
 \frac\pi{4\sqrt2}\ell^{3/2}\sqrt{\ell-s}
-$$
+```
 
 for one convex outer pocket whose old unit-contact boundary chain has length `ell` and whose force-hull side has chord length `s`.
 
 The ellipse argument is convenient but loses a constant.  A direct arclength calculation gives the stronger self-contained estimate
 
-$$
+```math
 \boxed{
 area(P)
 \le
@@ -31,17 +31,17 @@ area(P)
 \ell^{3/2}\sqrt{\ell-s}.
 }
 \tag{WD.1}
-$$
+```
 
 Since
 
-$$
+```math
 \frac{\sqrt2}{\pi}
 =0.450158158078553\ldots
 <
 \frac\pi{4\sqrt2}
 =0.555360367269796\ldots,
-$$
+```
 
 this improves every OD detour-area consequence by about nineteen percent at the constant level.
 
@@ -56,37 +56,37 @@ Fix one OP outer pocket `P`.  By OP/OD its boundary consists of
 
 OP proves the pocket is convex.  Translate and rotate so
 
-$$
+```math
 A=(0,0),
 \qquad
 B=(s,0),
-$$
+```
 
 and the pocket lies in the closed upper half-plane.
 
 Parameterize the contact chain by arclength:
 
-$$
+```math
 \gamma(t)=(x(t),y(t)),
 \qquad
 0\le t\le\ell.
-$$
+```
 
 The functions `x,y` are piecewise linear and absolutely continuous, with
 
-$$
+```math
 x(0)=0,
 \quad x(\ell)=s,
 \quad y(0)=y(\ell)=0,
 \tag{WD.2}
-$$
+```
 
 and, almost everywhere,
 
-$$
+```math
 \boxed{x'(t)^2+y'(t)^2=1.}
 \tag{WD.3}
-$$
+```
 
 ---
 
@@ -94,45 +94,45 @@ $$
 
 Integrating `x'` gives
 
-$$
+```math
 \int_0^\ell x'(t)\,dt=s.
-$$
+```
 
 Hence
 
-$$
+```math
 \ell-s
 =\int_0^\ell(1-x'(t))\,dt.
 \tag{WD.4}
-$$
+```
 
 From WD.3,
 
-$$
+```math
 y'^2=1-x'^2=(1-x')(1+x').
-$$
+```
 
 Since `x'<=1`,
 
-$$
+```math
 1+x'\le2.
-$$
+```
 
 Also `1-x'>=0`. Therefore pointwise almost everywhere,
 
-$$
+```math
 y'^2\le2(1-x').
-$$
+```
 
 Integrating and using WD.4 gives the exact transverse-energy estimate
 
-$$
+```math
 \boxed{
 \int_0^\ell y'(t)^2\,dt
 \le2(\ell-s).
 }
 \tag{WD.5}
-$$
+```
 
 This is the key gain over the ellipse containment: the chain–chord detour directly controls squared transverse slope.
 
@@ -142,13 +142,13 @@ This is the key gain over the ellipse containment: the chain–chord detour dire
 
 For every absolutely continuous function `f:[0,ell]->R` with
 
-$$
+```math
 f(0)=f(\ell)=0,
-$$
+```
 
 the sharp Dirichlet Poincare/Wirtinger inequality is
 
-$$
+```math
 \boxed{
 \int_0^\ell f(t)^2\,dt
 \le
@@ -156,33 +156,33 @@ $$
 \int_0^\ell f'(t)^2\,dt.
 }
 \tag{WD.6}
-$$
+```
 
 For completeness, this follows by scaling to `[0,pi]` and applying the standard sine-series identity
 
-$$
+```math
 f(t)=\sum_{m\ge1}a_m\sin(mt),
-$$
+```
 
 for which
 
-$$
+```math
 \int f^2=\frac\pi2\sum a_m^2,
 \qquad
 \int(f')^2=\frac\pi2\sum m^2a_m^2
 \ge\int f^2.
-$$
+```
 
 Piecewise linear `y` lies in `H_0^1`, so WD.6 applies directly.  Applying it to `y` and then WD.5 gives
 
-$$
+```math
 \boxed{
 \int_0^\ell y^2
 \le
 \frac{2\ell^2}{\pi^2}(\ell-s).
 }
 \tag{WD.7}
-$$
+```
 
 ---
 
@@ -190,32 +190,32 @@ $$
 
 Because the closing chord lies on the `x`-axis, Green's formula gives the pocket area as
 
-$$
+```math
 area(P)
 =\left|\int_0^\ell y(t)x'(t)\,dt\right|.
 \tag{WD.8}
-$$
+```
 
 Cauchy–Schwarz gives
 
-$$
+```math
 area(P)
 \le
 \left(\int_0^\ell y^2\right)^{1/2}
 \left(\int_0^\ell x'^2\right)^{1/2}.
 \tag{WD.9}
-$$
+```
 
 From WD.3,
 
-$$
+```math
 \int_0^\ell x'^2\le\ell.
 \tag{WD.10}
-$$
+```
 
 Insert WD.7 and WD.10 into WD.9:
 
-$$
+```math
 area(P)
 \le
 \left(\frac{2\ell^2}{\pi^2}(\ell-s)\right)^{1/2}
@@ -225,7 +225,7 @@ area(P)
 \frac{\sqrt2}{\pi}
 \ell^{3/2}\sqrt{\ell-s}
 }.
-$$
+```
 
 This proves WD.1.
 
@@ -237,17 +237,17 @@ No monotonicity of the `x` coordinate is required.  Backtracking portions of the
 
 Use OD's exact identities
 
-$$
+```math
 \sum_P\ell_P=x_B+a,
 \qquad
 \sum_P(\ell_P-s_P)=b-P_F.
-$$
+```
 
 Applying WD.1 pocketwise and repeating OD's Cauchy argument gives
 
 ### Theorem WD.2 — global Wirtinger detour bound
 
-$$
+```math
 \boxed{
 H_{out}
 \le
@@ -256,11 +256,11 @@ H_{out}
 \sqrt{b-P_F}.
 }
 \tag{WD.11}
-$$
+```
 
 In exact post-ZF variables,
 
-$$
+```math
 \boxed{
 H_{out}
 \le
@@ -269,7 +269,7 @@ H_{out}
 \sqrt{2h-Q-2s_Z-P_F}.
 }
 \tag{WD.12}
-$$
+```
 
 This strictly supersedes OD.1/OD.17 wherever the latter are used only through their constants.
 
@@ -281,14 +281,15 @@ Every qualitative OD consequence survives with the smaller constant. In particul
 
 - if `b-P_F=o(D)`, then `H_out=o(D^2)`;
 - if `H_out>=gamma D^2` and `x_B+a<=LD`, then
-  $$
+  ```math
   \boxed{
   \frac{b-P_F}{D}
   \ge
   \frac{\pi^2\gamma^2}{2L^3}.
   }
   \tag{WD.13}
-  $$
+  
+  ```
 
 The second formula is obtained by squaring WD.11 and rearranging.
 

@@ -52,59 +52,59 @@ binding regression.
 
 For the plateau-terminalized boundary response,
 
-$$
+```math
 \zeta=\dim\ker S=|C^\partial|-\operatorname{rank}S,
 \qquad
 s=\Delta_\Lambda-d_{\rm int}.
-$$
+```
 
 A hypothetical survivor has
 
-$$
+```math
 g=\Delta_\Lambda-d_{\rm sc}=s-\zeta\ge1.
-$$
+```
 
 Target A closes exactly if
 
-$$
+```math
 \boxed{\zeta\ge s,}
-$$
+```
 
 equivalently
 
-$$
+```math
 \boxed{
 \operatorname{rank}S
 \le d_{\rm int}+|C^\partial|-\Delta_\Lambda.
 }
-$$
+```
 
 The response is an exact planar strict gammoid. Planarity alone does not force the
 required rank loss.
 
 A second valid closure is an actual source-side replacement producing the required
-cardinality inside a set of diameter strictly less than $D$. A same-hull Hall
+cardinality inside a set of diameter strictly less than $`D`$. A same-hull Hall
 surplus above the exact hull capacity is not a valid target.
 
 ## Binding corrections and dead routes
 
 ### Fixed-hull Hall capacity is exact
 
-For the genuine source $A\subset H$,
+For the genuine source $`A\subset H`$,
 
-$$
+```math
 |Q|-|N_A(Q)|\le\widehat p_H
-$$
+```
 
-for every unit-separated finite $Q\subset H$. After maximal triangle-free extension
-$B$,
+for every unit-separated finite $`Q\subset H`$. After maximal triangle-free extension
+$`B`$,
 
-$$
+```math
 |Q|-|N_B(Q)|\le\tau.
-$$
+```
 
-Do **not** seek a same-hull witness of deficiency $\widehat p_H+1$, $p+1$, or
-$\tau+1$. Such a witness is impossible. Any source replacement must carry a strict
+Do **not** seek a same-hull witness of deficiency $`\widehat p_H+1`$, $`p+1`$, or
+$`\tau+1`$. Such a witness is impossible. Any source replacement must carry a strict
 diameter certificate or be transported directly into the Schur response.
 
 ### First-transition cages are real
@@ -130,32 +130,32 @@ moves.
 
 ### Kuperberg support-radius scope
 
-The canonical theorem still gives only finiteness of $W(d)$ for each fixed gap.
+The canonical theorem still gives only finiteness of $`W(d)`$ for each fixed gap.
 Sections 154–155 instead resolve a separate coordinate issue: in the explicit
 very-super-boundary subbranch
 
-$$
+```math
 \rho\ge \frac{\pi D}{2}+\frac{4D}{c}\left(1+3\,3^{1/4}\sqrt D\right),
 \qquad c=\frac{2\sqrt3}{\pi},
-$$
+```
 
 the prescribed lattice phase, the smaller optimum, and the inner scaffold collar can
 be placed in one genuine source hull. The remaining capacity-shadow problem is to
 make the two resulting source matchings compatible with one another or with the Schur
 response. No exterior-compatible Kuperberg support rate is promoted.
 
-The deletion-cardinality complexity $\kappa_*(d)$ and witness support radius $W(d)$
+The deletion-cardinality complexity $`\kappa_*(d)`$ and witness support radius $`W(d)`$
 are different quantities. The canonical theorem proves
 
-$$
+```math
 \kappa_*(d)\to\infty\qquad(d\downarrow0),
-$$
+```
 
 but no useful support-radius upper rate is promoted.
 
 ### Activation rank has two binding no-go results
 
-Section 152 gives an exact rational non-global regression: $\Theta(D^2)$ independent
+Section 152 gives an exact rational non-global regression: $`\Theta(D^2)`$ independent
 one-at-a-time activation constraints, a fixed diameter pair, persistent active
 constraints, and coherent neutral monomer incidence can coexist with zero scaffold
 nullity. Thus local activation geometry plus monomer incidence is insufficient.
@@ -169,13 +169,13 @@ zero-stressed despite its independent rigidity row.
 
 Therefore do **not** pursue the implication
 
-$$
+```math
 \text{large activation rigidity rank}
 \Longrightarrow
 \text{positive KKT load on the activation forest}
 \Longrightarrow
 \text{Schur nullity}.
-$$
+```
 
 That route is false for the canonical globally optimal activation normalization. An
 activation-based proof must instead use unweighted active-constraint/critical-cone
@@ -186,38 +186,38 @@ smaller optimum, or another genuinely global source-to-response invariant.
 
 Section 156 proves that the complete set of monotone-activation edges is a bridge
 forest in the final active graph. After freezing terminal-hull boundary creators,
-the interior creators support a linear space $\mathcal L_{\rm act}$ whose small
+the interior creators support a linear space $`\mathcal L_{\rm act}`$ whose small
 neighborhood is an affine family of triangle-free global minimizers in one fixed
 hull, with
 
-$$
+```math
 \dim\mathcal L_{\rm act}
 \ge
 \max\left\{0,
 \left\lceil\frac{\max\{0,\rho-5\widehat p_H\}}2\right\rceil
 -2\lfloor\pi D\rfloor
 \right\}.
-$$
+```
 
-This is super-boundary for $\rho=\omega(D)$. It corrects the historical warning
+This is super-boundary for $`\rho=\omega(D)`$. It corrects the historical warning
 that an activation edge might later become non-bridging. It still does not identify
 the terminal source flat with the independently rebuilt plateau scaffold. Persistent
 capacity-transition triangles localize to inserted capacity points and source labels
 frozen by the flat; exact two-leaf cages remain possible on that support.
 
-Section 157 supplies a second global bridge. If $P=A\setminus R$ is the
-nonrattler source backbone and $X_m$ is the smaller optimum with
-$D-D(m)>2$, then
+Section 157 supplies a second global bridge. If $`P=A\setminus R`$ is the
+nonrattler source backbone and $`X_m`$ is the smaller optimum with
+$`D-D(m)>2`$, then
 
-$$
+```math
 \max_{Q\subseteq X_m}(|Q|-|N_P(Q)|)
 \ge \tau_D(A)\ge p_N+1,
-$$
+```
 
-where $\tau_D(A)$ is the source diameter-graph vertex-cover number. Under the
+where $`\tau_D(A)`$ is the source diameter-graph vertex-cover number. Under the
 Section 155 common placement, every maximizing witness is captured by at least
-$h-\widehat p_H$ strict rattlers, and the diameter-cover graft inequality sharpens
-this to $h-|C|+1$ for any chosen diameter cover $C$. Do not mistake this
+$`h-\widehat p_H`$ strict rattlers, and the diameter-cover graft inequality sharpens
+this to $`h-|C|+1`$ for any chosen diameter cover $`C`$. Do not mistake this
 backbone deficiency for a fixed-source Hall contradiction; the rattler capture is
 exactly how the capacity ceiling absorbs it.
 
@@ -247,17 +247,17 @@ Prioritize one exact bridge. Do not return a survey.
    Kuperberg replacement inside a genuinely derived monomer region while respecting
    all exterior blockers, and obtain an explicit strict diameter certificate.
 2. **Locked-cage to Schur transport.** Use global first-transition/source data to turn
-   locked triangles into at least $s$ independent failures of the boundary
+   locked triangles into at least $`s`$ independent failures of the boundary
    alternating linkage.
 3. **Fixed-hull flat to Schur transport.** Rebuild the plateau scaffold across a
-   chamber of the Section 156 affine family and send at least $s$ independent flat
-   directions into $\ker S$, or turn the frozen/inserted persistent-triangle support
+   chamber of the Section 156 affine family and send at least $`s`$ independent flat
+   directions into $`\ker S`$, or turn the frozen/inserted persistent-triangle support
    into a strict smaller-diameter replacement.
 4. **Backbone-witness/rattler transport.** In the Section 155 common placement, combine
    the Section 157 backbone Hall witness, its captured strict rattlers, and the
    co-phased inner scaffold to force the exact Schur nullity or relocate the captured
-   rattlers into a strict sub-$D$ graft.
-5. **Quantitative gap support.** Prove an explicit upper bound for $W(d)$ only if the
+   rattlers into a strict sub-$`D`$ graft.
+5. **Quantitative gap support.** Prove an explicit upper bound for $`W(d)`$ only if the
    bound is strong enough for a vanishing-gap regime that actually occurs in the
    canonical geometry.
 
@@ -281,7 +281,7 @@ list:
 - Section 153 universal zero-KKT-load activation theorem.
 - Section 156 frozen/inserted persistent-triangle support;
 - diameter-star and regular-shell cases with small or boundary-order
-  $\tau_D(A)$.
+  $`\tau_D(A)`$.
 - Section 158 simultaneous activation release;
 - Section 159 locked-triangle boundary stress.
 

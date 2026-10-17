@@ -24,35 +24,35 @@ For `theta<5/2`, `L>U/2`, so the residual mass
 the smallest possible chord sum places all residual mass in one distinguished gap.
 This gives the perimeter floor
 
-$$
+```math
 q(\alpha,\theta)=\alpha+2\sin\theta+
 \sin(2\theta-\pi-\alpha).
-$$
+```
 
 Because `partial q/partial alpha = 1-cos(2 theta-pi-alpha)>=0`, use `alpha>=L`:
 
-$$
+```math
 Q(\theta)=\frac72\sin\theta+
 \sin\left(2\theta-\pi-\frac32\sin\theta\right).
-$$
+```
 
 Cauchy gives `Q(theta)<=pi sin(theta/2)`. The candidate's derivative bound is valid:
 on `[theta_5,5/2]`, with `theta_5=2 acos(pi/9)`,
 
-$$
+```math
 H'(\theta)\le2+2\cos\theta-
 \frac\pi2\cos(\theta/2)<0,
-$$
+```
 
 using `cos(theta)<=cos(theta_5)`, `cos(theta/2)>=cos(5/4)`, and the displayed
 rational Taylor bound for `cos(5/4)`. Also `H(theta_5)>0` and `H(5/2)<0`, so the
 unique root is
 
-$$
+```math
 \theta_6=2.445200194924480059\ldots,
 \qquad
 \mu_6=\sin(\theta_6/2)=0.939989693353197775\ldots .
-$$
+```
 
 For `theta>=5/2`, `lambda>=sin(5/4)>mu_6`, so the restriction loses no cases.
 

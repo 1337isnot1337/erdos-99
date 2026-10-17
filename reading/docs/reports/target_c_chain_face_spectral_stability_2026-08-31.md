@@ -23,39 +23,39 @@ Let a pure simply connected rhombic source contain the exact C80 chain geometry 
 diameter edge `h_0=za`, with chain-track set `P`, `|P|=D`. Consider any normalized KKT
 stress on the same configuration, not necessarily the chain-face stress, and suppose
 
-$$
+```math
 \beta_{h_0}\ge1-\delta.
-$$
+```
 
 Let
 
-$$
+```math
 Q_s:=\sum_{h\in H}\beta_h H_h
-$$
+```
 
 be Target B's stress-projected train-angle Hessian. If `T` is the total number of
 trains, then on the `D-1` dimensional zero-sum chain-bending space
 
-$$
+```math
 W_P:=\left\{v:\operatorname{supp}v\subseteq P,
 \ \sum_{\tau\in P}v_\tau=0\right\}
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{
 Q_s[v,v]
 \le-
 \bigl[D-\delta(2D+T)\bigr]\|v\|^2.
 }
-$$
+```
 
 Consequently, whenever
 
-$$
+```math
 \delta<\frac{D}{2D+T},
-$$
+```
 
 `Q_s` has at least `D-1` negative eigenvalues. In the pure-rhombic asymptotic regime
 `T=O(D)`, any `delta=o(1)` gives a spectral gap `(1-o(1))D` on all `D-1` chain-bending
@@ -72,45 +72,45 @@ vanishing residual beta mass.
 
 Use Target B Section 41 train coordinates. For a diameter bar `h`, write
 
-$$
+```math
 d_{h\tau}\in\{-1,0,1\},
 \qquad
 a_{h\tau}=d_{h\tau}u_\tau,
 \qquad
 \lambda_{h\tau}=r_h\cdot a_{h\tau},
-$$
+```
 
 where `|r_h|=D` and `|u_tau|=1`.
 
 The train-angle Hessian entries are
 
-$$
+```math
 (H_h)_{\tau\tau}=d_{h\tau}^2-\lambda_{h\tau},
 \qquad
 (H_h)_{\tau\sigma}=a_{h\tau}\cdot a_{h\sigma}
 \quad(\tau\ne\sigma).
 \tag{C81.1}
-$$
+```
 
 Since
 
-$$
+```math
 |\lambda_{h\tau}|\le D,
 \qquad
 |a_{h\tau}\cdot a_{h\sigma}|\le1,
-$$
+```
 
 every diagonal entry has absolute value at most `D+1`, and every off-diagonal entry
 has absolute value at most one. A row with `d_{h tau}=0` is identically zero. Every
 nonzero row has at most `T-1` off-diagonal entries. Therefore the absolute row-sum
 norm obeys
 
-$$
+```math
 \boxed{
 \|H_h\|_{op}\le\|H_h\|_\infty\le D+T.
 }
 \tag{C81.2}
-$$
+```
 
 This crude bound is sufficient and is uniform over all active diameter bars.
 
@@ -120,20 +120,20 @@ This crude bound is sufficient and is uniform over all active diameter bars.
 
 C80 gives, for the chain bar `h_0`,
 
-$$
+```math
 H_{h_0}[v,v]
 =-D\sum_{\tau\in P}(v_\tau-\bar v_P)^2.
 \tag{C81.3}
-$$
+```
 
 If `v in W_P`, then `bar v_P=0`, so
 
-$$
+```math
 \boxed{
 H_{h_0}[v,v]=-D\|v\|^2.
 }
 \tag{C81.4}
-$$
+```
 
 Thus `H_{h_0}` is exactly `-D I` on the chain-bending subspace `W_P`.
 
@@ -143,35 +143,35 @@ Thus `H_{h_0}` is exactly `-D I` on the chain-bending subspace `W_P`.
 
 Write
 
-$$
+```math
 b:=\beta_{h_0},
 \qquad
 \delta':=1-b\le\delta.
-$$
+```
 
 Then
 
-$$
+```math
 Q_s=bH_{h_0}+R,
 \qquad
 R:=\sum_{h\ne h_0}\beta_hH_h.
 \tag{C81.5}
-$$
+```
 
 Using C81.2 and `sum_{h ne h0} beta_h=delta'`,
 
-$$
+```math
 \boxed{
 \|R\|_{op}
 \le\delta'(D+T)
 \le\delta(D+T).
 }
 \tag{C81.6}
-$$
+```
 
 For `v in W_P`, C81.4-C81.6 give
 
-$$
+```math
 \begin{aligned}
 Q_s[v,v]
 &\le-bD\|v\|^2+\|R\|_{op}\|v\|^2\\
@@ -179,7 +179,7 @@ Q_s[v,v]
 &=-\left[D-\delta(2D+T)\right]\|v\|^2.
 \end{aligned}
 \tag{C81.7}
-$$
+```
 
 This proves the quantitative bound.
 
@@ -187,19 +187,19 @@ This proves the quantitative bound.
 
 If
 
-$$
+```math
 \mu:=D-\delta(2D+T)>0,
-$$
+```
 
 then `Q_s` is negative definite on `W_P` with spectral gap at least `mu`. In
 particular
 
-$$
+```math
 \boxed{
 \nu_-(Q_s)\ge D-1.
 }
 \tag{C81.8}
-$$
+```
 
 The conclusion follows from the min-max principle because `dim W_P=D-1`.
 
@@ -209,40 +209,40 @@ The conclusion follows from the min-max principle because `dim W_P=D-1`.
 
 Target B's pure-rhombic shell theory gives
 
-$$
+```math
 T=\Theta(D).
-$$
+```
 
 Suppose along a sequence there is a fixed chain edge `h_0` with
 
-$$
+```math
 \beta_{h_0}=1-o(1).
-$$
+```
 
 Then
 
-$$
+```math
 \delta(2D+T)=o(D),
-$$
+```
 
 so C81.7 becomes
 
-$$
+```math
 \boxed{
 Q_s[v,v]\le-(1-o(1))D\|v\|^2
 \qquad(v\in W_P).
 }
 \tag{C81.9}
-$$
+```
 
 Thus the KKT-weighted train Hessian has `D-1` eigenvalues at most
 `-(1-o(1))D`.
 
 This is much stronger than the earlier Target B trace estimate
 
-$$
+```math
 \operatorname{tr}Q_s=-\Theta(D^2),
-$$
+```
 
 which by itself does not control the negative index.
 
@@ -276,9 +276,9 @@ secondary stresses into one stress whose residual mass cannot be `o(1)`.
 
 C66 gives only
 
-$$
+```math
 S_z:=\sum_{zk\in H}\beta_{zk}=1-o(1)
-$$
+```
 
 in the small-response phase. It does **not** imply that one star edge has
 `beta=1-o(1)`; the mass may be spread over many leaves.

@@ -24,9 +24,9 @@ source A. Let V be its nonisolated positive-contact core; retain `Z=A\V`. Let
 H be the full actual diameter graph, B its endpoint set, `q=|B|`, `h=|H|`, and
 `d_H=q-h`. Put
 
-$$
+```math
 L=\sqrt{D^2-1},\qquad \gamma=D-L.
-$$
+```
 
 There is a **fixed** set E of inactive source pairs longer than L, and a fixed
 map assigning each isolate either an anchor in B or no anchor, with the following
@@ -44,17 +44,17 @@ outside E stays **strictly below D**. Old contacts are unchanged by this extensi
 If the core move preserves all old contacts, weakly shortens all old diameters,
 and strictly shortens at least one, then one of the following must occur:
 
-$$
+```math
 1<|xy|\le1+s,\qquad |x'-y'|\le1,
 \tag{1}
-$$
+```
 
 or
 
-$$
+```math
 xy\in E,\qquad |x'-y'|\ge D.
 \tag{2}
-$$
+```
 
 The exceptional set and anchor map depend only on the original source, not on
 which core move is being extended. This uniformity is needed for the counting
@@ -66,10 +66,10 @@ Define T to contain exactly pairs of length strictly greater than L. Every endpo
 is extreme: if `p=sum lambda_j a_j`, using other source points, the variance identity
 and unit separation give for every q
 
-$$
+```math
 |p-q|^2=\sum_j\lambda_j|a_j-q|^2-\sum_j\lambda_j|a_j-p|^2
 \le D^2-1.
-$$
+```
 
 Two disjoint T edges that failed to cross would be opposite sides of a strictly
 convex four-point quadrilateral. Every angle is incident to one such long side and
@@ -169,10 +169,10 @@ two proposals. At most `2|E|` moves can be obstructed only by an exceptional upp
 pair. Choose a near-unit witness at each other move. Each such witness is reused at
 most twice. The number of distinct original near-unit pairs is consequently
 
-$$
+```math
 \boxed{N_1\ge\max\{0,\lceil r/2\rceil-|E|\}.}
 \tag{3}
-$$
+```
 
 In the forest branch this is at least `max(0,ceil(r/2)-d_H)`, and improves by one
 when T is a forest. In the cyclic branch it is at least `ceil(r/2)` with no upper
@@ -184,15 +184,15 @@ diameter topology. Neither antecedent is asserted for all C-II sources.
 
 Take
 
-$$
+```math
 a=(0,0),\quad b=(8,0),\quad c=(3608/901,6240/901).
-$$
+```
 
 Then `|ab|=|ac|=8`, while
 
-$$
+```math
 63<|bc|^2=57600/901<64.
-$$
+```
 
 The diameter graph H is a two-edge tree with `d_H=1`; T is a triangle. There are
 no isolates. Move only b by `Delta=(-1/1000,-1/100)`. Its squared amplitude is
@@ -217,17 +217,17 @@ inactive upper pairs outside E still satisfy `L+s<D`.
 For any original noncontact source pair a,b with `r=b-a` and `p=r dot Delta>0`,
 put
 
-$$
+```math
 g=|r|^2-1>0,\qquad c_{ab}={g\over2p}>0.
 \tag{4}
-$$
+```
 
 Impose the directed difference constraint
 
-$$
+```math
 \lambda_a-\lambda_b\le c_{ab}.
 \tag{5}
-$$
+```
 
 Repeated source points in one protected component use the same variable.
 Pairs with zero projection need no constraint; reversing a negative projection
@@ -270,9 +270,9 @@ vertex. All other isolates have individual free variables. Take a shortest
 prescribed-1 to prescribed-0 path of cost less than one and trim it so it has no
 prescribed variable internally. Its source realization is a chain
 
-$$
+```math
 x_0,x_1,\ldots,x_k,
-$$
+```
 
 whose internal points are distinct contact isolates outside T. Each endpoint is
 either a core point or an anchored long-pair leaf; their respective core anchors
@@ -280,20 +280,20 @@ have prescribed move labels 1 and 0. Every chain edge is a previously strict
 source pair and is oriented strictly forward in the Delta direction. Its exact
 certificate is
 
-$$
+```math
 \boxed{\sum_{j=0}^{k-1}
 {\,|x_{j+1}-x_j|^2-1\over
  2(x_{j+1}-x_j)\cdot\Delta}<1.}
 \tag{6}
-$$
+```
 
 Put `ell_*=s+sqrt(1+s^2)`. Every summand is positive and less than one,
 so every edge length is strictly between 1 and ell_*. Moreover
 
-$$
+```math
 \boxed{\sum_j(|x_{j+1}-x_j|-1)<s\,ell_*.}
 \tag{7}
-$$
+```
 
 Indeed, with `p_j=(x_(j+1)-x_j) dot Delta`, (6) gives
 `sum_j g_j < 2 max_j p_j <=2s max_j |x_(j+1)-x_j|<2s ell_*`.
@@ -360,9 +360,9 @@ at `(+-a,0),(0,+-b)` in perpendicular diagonal coordinates, where `a^2+b^2=1`.
 For any point in it choose its quadrant and write `0<=x<=a`, `0<=y<=b`.
 The squared distances to `(a,0)` and `(0,b)` sum to
 
-$$
+```math
 2(x^2+y^2)-2ax-2by+a^2+b^2\le1.
-$$
+```
 
 One distance is at most `1/sqrt(2)<1`. Therefore a unit-separated source has
 no additional point in the interior of an actual unit-rhombus face.

@@ -21,23 +21,23 @@ Take a canonical contact-minimal, then actual-diameter-pair-minimal triangle-fre
 
 Make a recipient graph whose bounded nodes are the original physical bounded nonquadrilateral faces and whose outer nodes are occurrence-counted outer hull chains. The two terminal occurrences of each complete train determine its two endpoints. For any selected train family `A`, put `N=T\setminus A`; let `B(A)` be the selected trains with at least one terminal in an `N`-component that reaches an outer hull chain. Then
 
-$$
+```math
 |B(A)|\ge |A|/3,
 \qquad
 |B(A)|\ge {2\over3}\sqrt{[R4-\sum_{\tau\in N}d_\tau]_+}.
-$$
+```
 
 Every bank train has a terminal source vertex joined by actual unit contacts to an actual loaded vertex. The union `K_N` of the complementary train rails, the bounded nonquadrilateral facial walks in boundary-reaching `N`-components, and the old outer contact walk is an actual contact subgraph satisfying
 
-$$
+```math
 |E(K_N)|\le \sum_{\tau\in N}d_\tau+2T.
-$$
+```
 
 The second promoted claim is the asymptotic corollary. Along any unbounded sequence of these canonical sources with `R4/D^2 -> r>0`, for every fixed `0<epsilon<r`, the family `A_L={tau:d_tau>=L}`, `L=floor(epsilon D/(3 pi))`, has
 
-$$
+```math
 |B(A_L)|\ge \left({2\over3}\sqrt{r-\epsilon}-o(1)\right)D,
-$$
+```
 
 each selected train's two terminal-edge midpoints are separated by at least `sqrt(3) epsilon D/(6 pi)-O(1)`, and its carrier has at most `epsilon D^2+6 pi D` edges. A slow choice `epsilon_D -> 0` with `epsilon_D D -> infinity` gives `|B| >= (2/3 sqrt(r)-o(1))D`, divergent terminal-midpoint separation, and an `o(D^2)` carrier. This result does not give disjoint routes or a bound on any individual return length.
 
@@ -53,34 +53,34 @@ All original source points remain present. The train and carrier constructions u
 
 Let `I` be the union of bounded-face nodes whose `N`-component does not reach an outer chain. Put `f_I=|I|` and `Q_I=sum_{F in I}(deg(F)-4)>=f_I`. Let `E_I` count all complete trains with both ends in `I`; let `X_I` count those with exactly one end in `I`. Counting terminal occurrences on physical bounded nonquadrilateral faces gives
 
-$$
+```math
 4f_I+Q_I=2E_I+X_I.
-$$
+```
 
 For each singleton component of the induced internal train graph on `I`, reciprocal sparsity gives zero internal edges; for each nontrivial component `U_j`, it gives at most `2|U_j|-3`. Thus, with `sigma_I=2` per singleton and `3` per nontrivial component,
 
-$$
+```math
 E_I\le2f_I-\sigma_I,
 \qquad
 X_I\ge Q_I+2\sigma_I\ge f_I+2\sigma_I.
-$$
+```
 
 An `N`-train cannot leave the union `I`: it would join its interior component to an outer-reaching component, contradicting the definition of `I`. Hence every cut train is selected and is counted by `B(A)`, so `X_I<=|B(A)|`. A selected train outside `B(A)` has both endpoints in `I`; writing its count as `A_I` and the internal complementary count as `N_I`, one has `|A|=|B(A)|+A_I` and `A_I+N_I=E_I`. The displayed bounds yield
 
-$$
+```math
 |A|+N_I+5\sigma_I
 =|B(A)|+E_I+5\sigma_I
 \le3|B(A)|.
-$$
+```
 
 This proves the one-third bound, including the empty-interior case. It does not infer a bank from a terminal-occurrence count; it counts distinct trains throughout.
 
 For a track, orient its common unit vector and choose the same low-coordinate endpoint on each opposite terminal edge. Across each strict unit rhombus these chosen vertices are joined by one of its other unit sides. Chaining those sides gives a literal contact rail of `d_tau` edges. A singleton train's two chosen terminal vertices coincide. A complete bounded facial walk joins all terminal vertices incident to that face; the old outer contact walk connects its occurrence chains to actual loaded vertices. Therefore the stated union is an actual contact carrier. If `f` and `Q` count the bounded nonquadrilateral faces and their total degree excess, then the exact occurrence handshake `2T=b+4f+Q` bounds its non-rail part:
 
-$$
+```math
 b+\sum_{F\text{ in boundary-reaching }I}\deg(F)
 \le b+4f+Q=2T.
-$$
+```
 
 The bound counts carrier edges once even when many returns reuse a bottleneck. It gives no disjointness or individual path-length estimate.
 

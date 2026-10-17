@@ -16,17 +16,17 @@
 
 The same-host exclusion does more than improve the three-piece pigeonhole constant. Once one birth host side is fixed, deleting the now-impossible same-host partner piece leaves a **single contiguous hubward boundary segment**:
 
-$$
+```math
 T_m\cup Q^{\rm opp},
-$$
+```
 
 where `Q^opp` is the hubward part of the opposite physical host arc.
 
 In the boundary orientation transported from increasing birth-interface order by the diameter-thrackle partner map, the path-region labels on this whole remaining segment are weakly decreasing:
 
-$$
+```math
 m,m,\ldots,m,m-1,m-2,\ldots,k.
-$$
+```
 
 Therefore every selected bar in the fixed-birth-side family, without any second pigeonhole, has a support end `b_i` that is nonincreasing with its birth interface `i`. Since the support starts increase strictly, **all supports are strictly nested**.
 
@@ -38,52 +38,52 @@ This removes the support staircase from the high-`t` physical frontier. It also 
 
 Let `Z_D` be a family of nonhub interfaces on one fixed side of the common routing hub, with one selected actual switching diameter bar `h_i in X_i` per interface and
 
-$$
+```math
 |Z_D|>zD-o(D),
 \qquad z>0.
 \tag{FN.1}
-$$
+```
 
 Assume for notation that the selected interfaces are pre-hub, so `i<k`. After fixing one of the two physical birth host sides, there is a subfamily
 
-$$
+```math
 Z_D^\sigma\subset Z_D,
 \qquad
 |Z_D^\sigma|>{z\over2}D-o(D),
 \tag{FN.2}
-$$
+```
 
 whose birth endpoints are distinct and lie in increasing interface order on one fixed host arc.
 
 For all sufficiently large `D`, write the selected bars in increasing interface order
 
-$$
+```math
 i_1<i_2<\cdots<i_M<k,
-$$
+```
 
 and let the partner endpoint of the `s`-th bar lie in path region `R_{b_s}`. Then
 
-$$
+```math
 \boxed{
 b_1\ge b_2\ge\cdots\ge b_M\ge k.}
 \tag{FN.3}
-$$
+```
 
 Consequently the exact selected-cut support intervals
 
-$$
+```math
 I_s=\{i_s+1,\ldots,b_s\}
 \tag{FN.4}
-$$
+```
 
 satisfy
 
-$$
+```math
 \boxed{
 I_1\supsetneq I_2\supsetneq\cdots\supsetneq I_M.
 }
 \tag{FN.5}
-$$
+```
 
 Every partner endpoint lies either on the opposite physical host arc or on the far terminal piece `T_m`. No selected bar has both endpoints on the birth host arc.
 
@@ -95,22 +95,22 @@ The proper O--O crosscuts `tau_1,...,tau_m` connect the same two disjoint host a
 
 Fix one physical birth host `A`. Reverse the ambient cyclic orientation if necessary so the pre-hub layer subarcs on `A` occur in increasing interface order:
 
-$$
+```math
 C_{i_1}^A<C_{i_2}^A<\cdots<C_{i_M}^A.
 \tag{FN.6}
-$$
+```
 
 Let `B` be the opposite host arc. Because the crosscut endpoint orders on `A` and `B` are opposite, the hubward region labels on the relevant part of `B` run in the reverse path order when read in the same ambient cyclic orientation. At the far end sits the terminal boundary piece `T_m`, all of whose points belong to `R_m`.
 
 Thus, starting at `T_m` and continuing along the hubward part of `B` in the orientation compatible with (FN.6), the region-label word is weakly decreasing:
 
-$$
+```math
 \boxed{
 \underbrace{m,\ldots,m}_{T_m},
 \ m-1,m-2,\ldots,k.
 }
 \tag{FN.7}
-$$
+```
 
 Repeated labels inside one region and repeated partner vertices are allowed. The only property needed below is weak decrease.
 
@@ -124,16 +124,16 @@ By the same-host diameter-exclusion theorem, for sufficiently large `D` an actua
 
 Every selected support crosses the common hub cut. Hence its partner lies on the complementary hubward shore
 
-$$
+```math
 Q=Q^\uparrow\cup T_m\cup Q^\downarrow.
-$$
+```
 
 Of the two host pieces `Q^uparrow,Q^downarrow`, exactly one belongs to `A` and exactly one belongs to `B`. The piece on `A` is now impossible. Therefore every retained partner lies in
 
-$$
+```math
 \boxed{T_m\cup Q^B,}
 \tag{FN.8}
-$$
+```
 
 the contiguous opposite-host-plus-terminal segment whose label order is (FN.7).
 
@@ -145,12 +145,12 @@ No partner-side pigeonhole is required.
 
 Birth endpoints at distinct interface tags are distinct because they occupy occurrence-disjoint layer subarcs. Consider two selected bars
 
-$$
+```math
 e_s=x_sy_s,
 \qquad
 e_t=x_ty_t,
 \qquad s<t.
-$$
+```
 
 If `y_s=y_t`, their partner region labels tie.
 
@@ -158,19 +158,19 @@ If `y_s!=y_t`, the two actual diameter bars are vertex-disjoint. Diameter edges 
 
 By (FN.6), increasing interface order is increasing birth-boundary order. The partner endpoints therefore occur weakly forward in the same boundary orientation on the segment (FN.8). But its region-label word is weakly decreasing by (FN.7). Thus
 
-$$
+```math
 b_1\ge b_2\ge\cdots\ge b_M,
-$$
+```
 
 which proves (FN.3).
 
 Since `i_s` increases strictly while `b_s` does not increase,
 
-$$
+```math
 \{i_{s+1}+1,\ldots,b_{s+1}\}
 \subsetneq
 \{i_s+1,\ldots,b_s\},
-$$
+```
 
 proving the strict nesting (FN.5), including the case of partner collisions or constant death tags.
 
@@ -180,14 +180,14 @@ proving the strict nesting (FN.5), including the case of partner collisions or c
 
 The corrected exact-antipodal/strong-TB1 fork supplies a winning one-bar mechanism on one hub side with density
 
-$$
+```math
 s_0={791\over320{,}000{,}000}.
 \tag{FN.9}
-$$
+```
 
 Apply Theorem FN with `z=s_0`. The only loss is the initial choice of birth host side. Therefore the unconditional high-`t` obstruction contains a strictly nested support rail of size
 
-$$
+```math
 \boxed{
 M>
 {s_0\over2}D-o(D)
@@ -195,16 +195,16 @@ M>
 {791\over640{,}000{,}000}D-o(D).
 }
 \tag{FN.10}
-$$
+```
 
 Numerically,
 
-$$
+```math
 \boxed{
 {s_0\over2}=1.2359375\times10^{-6}.
 }
 \tag{FN.11}
-$$
+```
 
 Every rail bar runs from one fixed birth host side into the opposite-host-plus-terminal segment. The support staircase is no longer a surviving alternative.
 
@@ -216,16 +216,16 @@ If the winning mechanism is strong-TB1, every retained rail bar keeps its fixed 
 
 The rail births are distinct. Partner collisions are the only endpoint collisions. Using
 
-$$
+```math
 \Delta(H_D)
 \le
 (4\,3^{1/8}+o(1))D^{3/4},
 \tag{FN.12}
-$$
+```
 
 a greedy partner-vertex thinning gives an endpoint-disjoint nested subrail with
 
-$$
+```math
 \boxed{
 >
 \left(
@@ -233,14 +233,14 @@ $$
 \right)D^{1/4}.
 }
 \tag{FN.13}
-$$
+```
 
 The numerical coefficient is
 
-$$
+```math
 \boxed{2.6933721266\times10^{-7}.}
 \tag{FN.14}
-$$
+```
 
 All retained bars are vertex-disjoint actual diameter edges and therefore cross pairwise.
 
@@ -252,24 +252,24 @@ This is a factor-three improvement over the earlier endpoint-disjoint coefficien
 
 The full rail in (FN.10) may use both the opposite host arc and `T_m`. Partitioning it between those two physical destinations gives, if needed, one of
 
-$$
+```math
 \boxed{
 \text{opposite-host nested rail}
 \quad\text{or}\quad
 \text{far-terminal nested rail}
 }
 \tag{FN.15}
-$$
+```
 
 with size
 
-$$
+```math
 \boxed{
 >{s_0\over4}D-o(D)
 ={791\over1{,}280{,}000{,}000}D-o(D).
 }
 \tag{FN.16}
-$$
+```
 
 Thus the earlier physical trichotomy has collapsed to a nested two-destination dichotomy. In particular, the opposite-host staircase is not a genuine survivor once same-host diameter edges are removed and the actual crosscut orientation is retained.
 
@@ -279,33 +279,33 @@ Thus the earlier physical trichotomy has collapsed to a nested two-destination d
 
 The parameterized deep exact-force theorem already proves a full nested lane of density
 
-$$
+```math
 \lambda=c_0-6\rho-\eta-2\delta.
 \tag{FN.17}
-$$
+```
 
 The present theorem supplies its missing physical localization: every bar in that lane ends either on the opposite host arc or on `T_m`; none ends on its birth host arc.
 
 For the current ninety-percent choice
 
-$$
+```math
 \lambda=5.085\times10^{-6},
-$$
+```
 
 the full physically localized nested rail therefore still has density `5.085e-6`, with no physical-piece loss. If one insists on one physical destination, one of the opposite-host or terminal subrails has density at least
 
-$$
+```math
 \boxed{2.5425\times10^{-6}.}
 \tag{FN.18}
-$$
+```
 
 The existing endpoint-disjoint coefficient for the full deep nested rail remains
 
-$$
+```math
 {\lambda\over4\,3^{1/8}}
 \approx1.10813024638\times10^{-6},
 \tag{FN.19}
-$$
+```
 
 and the one-destination coefficient is half of this.
 

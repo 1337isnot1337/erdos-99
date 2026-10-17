@@ -15,10 +15,10 @@ The theorem aggregates the canonical Section-116 zero-host two-arc inequality ov
 
 For each unloaded positive-contact component `I_r`, let
 
-$$
+```math
 P_r=\operatorname{conv}(A_r),
 \qquad d_r=\operatorname{diam}(P_r),
-$$
+```
 
 and let `H_r` be the induced positive-contact graph on `I_r\cup A_r`, including loaded-loaded contacts with both endpoints in `A_r`. Write
 
@@ -28,20 +28,20 @@ and let `H_r` be the induced positive-contact graph on `I_r\cup A_r`, including 
 
 Canonical `C-ZERO-HOST-SIGNED-RETURN` gives
 
-$$
+```math
 \boxed{
 d_r\bigl(L_r+P_{{\rm exc},r}-2d_r\bigr)
 \ge(4-2\sqrt3)A_{4,r}.
 }
 \tag{122.1}
-$$
+```
 
 Put
 
-$$
+```math
 E_r:=L_r+P_{{\rm exc},r}-2d_r\ge0.
 \tag{122.2}
-$$
+```
 
 ## 122.2 Injective area summation
 
@@ -49,40 +49,40 @@ Call a strict rhombus **unloaded-only** when all four vertices are unloaded. Eve
 
 Let `A_{4,r}^0` be the unloaded-only strict-rhombus area assigned to `I_r`, and let `A_4^0` be their total global area. Then
 
-$$
+```math
 0\le A_{4,r}^0\le A_{4,r},
 \qquad
 \boxed{\sum_rA_{4,r}^0=A_4^0.}
 \tag{122.3}
-$$
+```
 
 Apply (122.1) and discard loaded-touching rhombi:
 
-$$
+```math
 E_r
 \ge(4-2\sqrt3){A_{4,r}^0\over d_r}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \sum_rE_r
 \ge(4-2\sqrt3)
 \sum_r{A_{4,r}^0\over d_r}.
 }
 \tag{122.4}
-$$
+```
 
 Since every `P_r\subset F\subset\operatorname{conv}(A)` has `d_r\le D`,
 
-$$
+```math
 \boxed{
 \sum_r\bigl(L_r+P_{{\rm exc},r}-2d_r\bigr)
 \ge {4-2\sqrt3\over D}A_4^0.
 }
 \tag{122.5}
-$$
+```
 
 No boundary-occurrence injectivity between different induced graphs is assumed; (122.4) is only a sum of valid scalar inequalities. Area injectivity is supplied by (122.3).
 
@@ -90,23 +90,23 @@ No boundary-occurrence injectivity between different induced graphs is assumed; 
 
 In the canonical full-core Type-II branch,
 
-$$
+```math
 {A_4\over D^2}\to{\pi\over4}.
 \tag{122.6}
-$$
+```
 
 Only `O(D)` strict rhombi touch loaded vertices: a loaded vertex has positive-contact degree at most three, and the loaded set has `O(D)` vertices. Unit rhombi have area at most one. Hence
 
-$$
+```math
 A_4-A_4^0=O(D),
 \qquad
 {A_4^0\over D^2}\to{\pi\over4}.
 \tag{122.7}
-$$
+```
 
 Divide (122.5) by `D`:
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}{1\over D}
 \sum_r\bigl(L_r+P_{{\rm exc},r}-2d_r\bigr)
@@ -114,7 +114,7 @@ $$
 ={\pi\over2}(2-\sqrt3).
 }
 \tag{122.8}
-$$
+```
 
 The right side is approximately `0.42089`.
 

@@ -47,27 +47,27 @@ worktree. Later PRs and their improved constants are not premises of this report
 
 ## 2. Finite oriented-return theorem
 
-Let $\mathcal R$ be a finite edge-to-edge complex of strict unit rhombi from the
+Let $`\mathcal R`$ be a finite edge-to-edge complex of strict unit rhombi from the
 canonical contact embedding. Components and holes are allowed. A physical boundary
 edge means an edge incident to exactly one retained rhombus. Orient every such edge
 with its incident rhombus on its left. Boundary occurrences, not merely endpoint
 vertices, are the objects counted below.
 
-Let $\mathcal T$ be any chosen set of $k$ complete trains of this complex. The
+Let $`\mathcal T`$ be any chosen set of $`k`$ complete trains of this complex. The
 trains must be continued to the physical boundary of the complex; stopping at an
 arbitrary phase-bin cut and treating the artificial cut as an outer route is invalid.
 
-Choose directed unit-edge walks $W_1,\ldots,W_m$ of lengths $\ell_j$, with
-nonzero displacements $z_j$, and write
+Choose directed unit-edge walks $`W_1,\ldots,W_m`$ of lengths $`\ell_j`$, with
+nonzero displacements $`z_j`$, and write
 
-$$
+```math
  q_j=z_j/|z_j|,\qquad
  E=\sum_j(\ell_j-|z_j|),\qquad Q=\{q_1,\ldots,q_m\}.
-$$
+```
 
 Every endpoint called **good** must be assigned injectively to a walk edge occurrence
 with exactly its physical-boundary orientation. All other selected train endpoints
-are bad. Let $b$ be their number. Different selected endpoints may not use the
+are bad. Let $`b`$ be their number. Different selected endpoints may not use the
 same walk occurrence. The walks can include additional edges that end no selected
 train. Occurrence multiplicity, including any bridge traversal, is retained.
 
@@ -75,106 +75,106 @@ train. Occurrence multiplicity, including any bridge traversal, is retained.
 
 Set
 
-$$
+```math
  \delta(Q)=2-\max_{i,j}|q_i-q_j|\ge0.
-$$
+```
 
 Then
 
-$$
+```math
  \boxed{E\ge \delta(Q)\,(k-b)_+.} \tag{SR.1}
-$$
+```
 
-More precisely, choose either unit orientation $u_\tau$ of each train's parallel
+More precisely, choose either unit orientation $`u_\tau`$ of each train's parallel
 edges and define
 
-$$
+```math
  w_Q(u)=\max_j q_j\cdot u-\min_j q_j\cdot u.
-$$
+```
 
-For the set $\mathcal T_{gg}$ of trains with two good ends,
+For the set $`\mathcal T_{gg}`$ of trains with two good ends,
 
-$$
+```math
  \boxed{E\ge\sum_{\tau\in\mathcal T_{gg}}(2-w_Q(u_\tau)).} \tag{SR.2}
-$$
+```
 
-The summands are independent of the choice of sign of $u_\tau$. Neither estimate
+The summands are independent of the choice of sign of $`u_\tau`$. Neither estimate
 requires a phase cut, a complete grid, a sixty-degree limiting angle, or a KKT weight
 bound.
 
 ### Proof: opposite boundary orientations
 
-Orient the parallel edges of a train by a unit vector $u$. Its centerline moves
-strictly in the coordinate $\det(u,x)$, by canonical Theorem 10.6. At its initial
-end, the incident rhombus is on the positive side of the line directed by $u$, so
-the physical boundary orientation is $u$. At its terminal end, the incident rhombus
-is on the negative side, so that orientation is $-u$. This local argument also
+Orient the parallel edges of a train by a unit vector $`u`$. Its centerline moves
+strictly in the coordinate $`\det(u,x)`$, by canonical Theorem 10.6. At its initial
+end, the incident rhombus is on the positive side of the line directed by $`u`$, so
+the physical boundary orientation is $`u`$. At its terminal end, the incident rhombus
+is on the negative side, so that orientation is $`-u`$. This local argument also
 applies to holes and disconnected complexes. There are exactly two ends per train.
 
-Write the directed unit steps of walk $j$ as $v_{j,r}$. Exactly, not just to
+Write the directed unit steps of walk $`j`$ as $`v_{j,r}`$. Exactly, not just to
 first order,
 
-$$
+```math
  \ell_j-|z_j|=\sum_r(1-q_j\cdot v_{j,r}). \tag{SR.3}
-$$
+```
 
 Every summand is nonnegative. If the two ends of a train are assigned to walks
-$i,j$, their combined contribution is
+$`i,j`$, their combined contribution is
 
-$$
+```math
  (1-q_i\cdot u)+(1+q_j\cdot u)
  =2-(q_i-q_j)\cdot u
  \ge2-w_Q(u)\ge\delta(Q). \tag{SR.4}
-$$
+```
 
 Injectivity permits summation without spending an occurrence twice. Discard all
 other nonnegative walk contributions to get (SR.2). Each train not in
-$\mathcal T_{gg}$ consumes at least one bad endpoint, hence
-$|\mathcal T_{gg}|\ge(k-b)_+$. This proves (SR.1). In particular, two endpoints
-on the same directed walk cost exactly two units of projection loss. $\square$
+$`\mathcal T_{gg}`$ consumes at least one bad endpoint, hence
+$`|\mathcal T_{gg}|\ge(k-b)_+`$. This proves (SR.1). In particular, two endpoints
+on the same directed walk cost exactly two units of projection loss. $`\square`$
 
 ### Sharpness and limitations
 
 For fixed host directions and a free train direction, the algebraic minimum in
-(SR.4) is exactly $2-|q_i-q_j|$, attained when $u$ is parallel to
-$q_i-q_j$. This is sharp for the local endpoint-cost relaxation. No assertion is
+(SR.4) is exactly $`2-|q_i-q_j|`$, attained when $`u`$ is parallel to
+$`q_i-q_j`$. This is sharp for the local endpoint-cost relaxation. No assertion is
 made that an arbitrary optimizing assignment is realized by a C-II source.
 
 The theorem gives no positive universal constant if two host directions are
-antipodal. In particular, replacing the oriented $q_j$ by projective directions
+antipodal. In particular, replacing the oriented $`q_j`$ by projective directions
 is false. A square's bottom and top boundary edges have opposite orientations and
 zero route excess, although their projective directions coincide.
 
 ## 3. Zero-excess corridors must supply antipodal returns
 
-Consider a sequence of complexes with scale $D\to\infty$. Suppose the number
-of designated directed routes is a fixed finite $m$, their directions converge
-to $q_1,\ldots,q_m$, and their total excess is $o(D)$.
+Consider a sequence of complexes with scale $`D\to\infty`$. Suppose the number
+of designated directed routes is a fixed finite $`m`$, their directions converge
+to $`q_1,\ldots,q_m`$, and their total excess is $`o(D)`$.
 
-Suppose a chosen family of complete trains has size at least $\eta D$,
-$\eta>0$, all its projective directions converge uniformly to one projective
-direction $[u]$, and only $o(D)$ of its endpoints are bad.
+Suppose a chosen family of complete trains has size at least $`\eta D`$,
+$`\eta>0`$, all its projective directions converge uniformly to one projective
+direction $`[u]`$, and only $`o(D)`$ of its endpoints are bad.
 
 ### Corollary AR — antipodal return necessity
 
-Both $u$ and $-u$ belong to $Q$.
+Both $`u`$ and $`-u`$ belong to $`Q`$.
 
-Indeed, all but $o(D)$ of the family's trains have two good endpoints. Uniform
-convergence, continuity of $w_Q$, and (SR.2) imply
+Indeed, all but $`o(D)`$ of the family's trains have two good endpoints. Uniform
+convergence, continuity of $`w_Q`$, and (SR.2) imply
 
-$$
+```math
  2-w_Q(u)=0.
-$$
+```
 
-For unit vectors, each scalar product lies in $[-1,1]$. Width two therefore
+For unit vectors, each scalar product lies in $`[-1,1]`$. Width two therefore
 requires a host with scalar product one and a host with scalar product minus one,
-which are precisely $u$ and $-u$. $\square$
+which are precisely $`u`$ and $`-u`$. $`\square`$
 
 ### Corollary FC — four-corridor obstruction
 
 Under the same route assumptions, two linear train families with distinct limiting
-projective directions and $o(D)$ bad endpoints each require at least four distinct
-limiting oriented host directions. Thus $m\le3$ is impossible.
+projective directions and $`o(D)`$ bad endpoints each require at least four distinct
+limiting oriented host directions. Thus $`m\le3`$ is impossible.
 
 Apply AR to both families. Distinct projective directions give disjoint antipodal
 pairs. This uses the fact that the trains themselves return; counting an arbitrary
@@ -183,9 +183,9 @@ linear collection of boundary edges does not give this conclusion.
 ### Application to the already-canonical Section-101 endpoint exclusion
 
 Canonical Section 90 supplies two linear families of complete local trains with
-limiting projective directions separated by $\pi/3$. Canonical Sections 101–102
-give three principal complement routes of total excess $o(D)$, and show that
-only $o(D)$ endpoints of either family lie off these routes: exceptional faces,
+limiting projective directions separated by $`\pi/3`$. Canonical Sections 101–102
+give three principal complement routes of total excess $`o(D)`$, and show that
+only $`o(D)`$ endpoints of either family lie off these routes: exceptional faces,
 nonprincipal routes, and exceptional teeth have sublinear endpoint capacity, while
 fixed-phase ends disperse on the curved dense tooth arc.
 
@@ -206,74 +206,74 @@ small constants from selecting two particular inverse-phase shores.
 
 ### Lemma TW — exact two-direction, three-host optimization
 
-Let $u,v$ be unit vectors at projective angle
-$\varphi\in(0,\pi/2]$, and let $a,b>0$. Among sets $Q$ of at most three
+Let $`u,v`$ be unit vectors at projective angle
+$`\varphi\in(0,\pi/2]`$, and let $`a,b>0`$. Among sets $`Q`$ of at most three
 unit host vectors,
 
-$$
+```math
  \min_Q\{a(2-w_Q(u))+b(2-w_Q(v))\}
  =a+b-\sqrt{a^2+b^2+2ab\cos\varphi}. \tag{TW}
-$$
+```
 
-To prove this, replace $v$ by its negative if necessary so $u\cdot v\ge0$.
+To prove this, replace $`v`$ by its negative if necessary so $`u\cdot v\ge0`$.
 The weighted sum of widths is the sum of four support maxima for the four vectors
-$au,-au,bv,-bv$. Assign each maximum to a realizing host. At most three hosts
+$`au,-au,bv,-bv`$. Assign each maximum to a realizing host. At most three hosts
 force at least two of these four vectors into the same group. The triangle
 inequality shows that such a pair loses at least
 
-$$
+```math
  a+b-\sqrt{a^2+b^2+2ab\cos\varphi}
-$$
+```
 
-from the unconstrained total $2(a+b)$. A pair of opposite vectors loses $2a$
-or $2b$, no less; a cross pair has its smallest loss at the acute orientation.
+from the unconstrained total $`2(a+b)`$. A pair of opposite vectors loses $`2a`$
+or $`2b`$, no less; a cross pair has its smallest loss at the acute orientation.
 Additional groupings cannot recover this loss, again by the triangle inequality.
 The bound is attained by hosts
-$(au+bv)/|au+bv|,-u,-v$. This proves (TW) and its sharpness as a host relaxation.
+$`(au+bv)/|au+bv|,-u,-v`$. This proves (TW) and its sharpness as a host relaxation.
 
 In particular, for any three hosts and two crossing strict-rhombus trains,
 
-$$
+```math
  (2-w_Q(u))+(2-w_Q(v))\ge 2-\sqrt3=:c_{ret}>0, \tag{TW.1}
-$$
+```
 
-since their projective angle is strictly greater than $\pi/3$. No limiting
+since their projective angle is strictly greater than $`\pi/3`$. No limiting
 phase theorem is used here.
 
 ### Theorem AT — three-corridor area transport
 
 Use SR with at most three walks. Assume the complex lies in a convex container of
-diameter $d$. Retain any trains with two good ends, and let $A_{gg}$ be the
+diameter $`d`$. Retain any trains with two good ends, and let $`A_{gg}`$ be the
 sum of areas of rhombi whose **both** trains are retained. Then
 
-$$
+```math
  \boxed{d E\ge(2-\sqrt3) A_{gg}.} \tag{AT.1}
-$$
+```
 
-If SR selects all trains, $A_4$ denotes the full rhombic area, and $b$ counts
+If SR selects all trains, $`A_4`$ denotes the full rhombic area, and $`b`$ counts
 all bad physical endpoints, then also
 
-$$
+```math
  \boxed{E\ge(2-\sqrt3)(A_4/d-b)_+.} \tag{AT.2}
-$$
+```
 
-**Proof.** Write $\delta_\tau=2-w_Q(u_\tau)\ge0$. Multiply (TW.1) at every
+**Proof.** Write $`\delta_\tau=2-w_Q(u_\tau)\ge0`$. Multiply (TW.1) at every
 retained-retained crossing by the area of its rhombus and sum. The result is
 
-$$
+```math
  c_{ret} A_{gg}
  \le\sum_{\tau\ retained}\delta_\tau
        \sum_{R\in\tau,\ R\ retained-retained}\operatorname{area}(R)
  \le d\sum_{\tau\ retained}\delta_\tau
  \le dE.
-$$
+```
 
 The middle inequality is the exact transverse-span bound from Section 89: the sum
 of areas along a complete train is its transverse endpoint displacement, at most
-$d$. SR.2 supplies the last inequality. Every excluded train uses at least one
-bad endpoint, so there are at most $b$ such trains. Their total incident rhombic
-area is at most $bd$, and every rhombus not counted in $A_{gg}$ meets one of
-them. Thus $A_{gg}\ge(A_4-bd)_+$. This proves (AT.2). $\square$
+$`d`$. SR.2 supplies the last inequality. Every excluded train uses at least one
+bad endpoint, so there are at most $`b`$ such trains. Their total incident rhombic
+area is at most $`bd`$, and every rhombus not counted in $`A_{gg}`$ meets one of
+them. Thus $`A_{gg}\ge(A_4-bd)_+`$. This proves (AT.2). $`\square`$
 
 This is a finite area-to-route-excess inequality on the actual embedding. It is not
 just a population extraction result. Bad-end capacity cannot be dropped: four
@@ -283,40 +283,40 @@ zero excess, but using only three sides makes an entire linear train family bad.
 ### Theorem DP — diffuse bad directions cannot hide quadratic area
 
 Suppose all trains are selected. Call a train bad if at least one of its ends is
-bad, count it only once, and let $M_{bad}(\varepsilon)$ be the largest number of
+bad, count it only once, and let $`M_{bad}(\varepsilon)`$ be the largest number of
 bad trains in any closed projective direction interval of angular length
-$\varepsilon$. Let $T$ be the full train count and
-$\Delta=\sum_R(\varphi_R-\pi/3)$ the angular defect. For
-$0<\varepsilon<\pi/6$,
+$`\varepsilon`$. Let $`T`$ be the full train count and
+$`\Delta=\sum_R(\varphi_R-\pi/3)`$ the angular defect. For
+$`0<\varepsilon<\pi/6`$,
 
-$$
+```math
  A_{gg}\ge A_4-2T M_{bad}(\varepsilon)-\Delta/\varepsilon. \tag{DP.1}
-$$
+```
 
 For a fixed other train, bad trains crossing it at angle in
-$(\pi/3,\pi/3+\varepsilon]$ lie in two projective direction intervals of length
-$\varepsilon$. They supply at most $2M_{bad}(\varepsilon)$ crossings, since
+$`(\pi/3,\pi/3+\varepsilon]`$ lie in two projective direction intervals of length
+$`\varepsilon`$. They supply at most $`2M_{bad}(\varepsilon)`$ crossings, since
 two complete trains cross at most once. Summing over all other trains overcounts,
-which is harmless. Rhombi at larger angle number at most $\Delta/\varepsilon$.
+which is harmless. Rhombi at larger angle number at most $`\Delta/\varepsilon`$.
 Every rhombus has area at most one. These observations prove (DP.1).
 
 Combining with AT gives the exact finite inequality
 
-$$
+```math
  \boxed{dE\ge c_{ret}
  (A_4-2T M_{bad}(\varepsilon)-\Delta/\varepsilon)_+.} \tag{DP.2}
-$$
+```
 
-Consequently, if $d\le D$, $T=O(D)$, $\Delta=O(D)$, $A_4\ge cD^2$
-for fixed $c>0$, and
+Consequently, if $`d\le D`$, $`T=O(D)`$, $`\Delta=O(D)`$, $`A_4\ge cD^2`$
+for fixed $`c>0`$, and
 
-$$
+```math
  \lim_{\varepsilon\downarrow0}\limsup_{D\to\infty}
  {M_{bad}(\varepsilon)\over D}=0, \tag{DP.3}
-$$
+```
 
-then three routes cannot have excess $o(D)$. First fix $\varepsilon$, take
-the large-$D$ limit in DP.2, and then decrease $\varepsilon$. This order of
+then three routes cannot have excess $`o(D)`$. First fix $`\varepsilon`$, take
+the large-$`D`$ limit in DP.2, and then decrease $`\varepsilon`$. This order of
 limits is essential; no uniform microscopic convergence rate is asserted.
 
 Condition (DP.3) is an explicit new obligation, not an automatic consequence of
@@ -346,10 +346,10 @@ A sufficient new all-regime Type-II theorem would provide, on an actual harmonic
 cell of every sufficiently large survivor, designated directed routes and a family
 of complete trains such that
 
-$$
+```math
  \sum_{\tau\in\mathcal T_{gg}}(2-w_Q(u_\tau))
  >\sum_j(\ell_j-|z_j|). \tag{RC}
-$$
+```
 
 Here both sides must be bounded independently from the canonical source data, with
 all non-route endpoints charged and no artificially cut train treated as complete.
@@ -359,10 +359,10 @@ in a previously excluded endpoint regime; it is **not** known for all Type II.
 AT and DP sharpen the available route to (RC): it suffices to certify, on the same
 cell and with at most three directed routes,
 
-$$
+```math
  (2-\sqrt3)
  (A_4-2T M_{bad}(\varepsilon)-\Delta/\varepsilon)>dE. \tag{RC-area}
-$$
+```
 
 This formulation uses the entire retained rhombic area rather than two extracted
 families. The unproved part is a source-specific upper bound on the directional

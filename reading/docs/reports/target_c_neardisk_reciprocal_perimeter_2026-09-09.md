@@ -16,11 +16,11 @@
 The ND theorem puts a near-isodiametric force hull inside a disk of radius
 `D(1/2+eta)`, with
 
-$$
+```math
 \eta=\sqrt\xi+\frac{2\xi}{\pi},
 \qquad
 \xi=\frac\pi4-\frac{\operatorname{area}(F)}{D^2}.
-$$
+```
 
 C10's reciprocal force-polygon theorem then immediately forces the reciprocal
 perimeter to its upper endpoint `2D`. This resolves a conditional observation already
@@ -32,24 +32,24 @@ hull.
 
 For any normalized KKT stress, let `F*` be the reciprocal force polygon and put
 
-$$
+```math
 P_*:=\operatorname{per}(F^*).
-$$
+```
 
 C10 proves
 
-$$
+```math
 \boxed{
 \frac{D^2}{R(F)}\le P_*\le2D,
 }
 \tag{RP.1}
-$$
+```
 
 where `R(F)` is the minimum circumradius of the force hull.
 
 It also gives the exact cancellation identity
 
-$$
+```math
 \boxed{
 2D-P_*
 =
@@ -59,15 +59,15 @@ D s_b-|g_b|
 \right],
 }
 \tag{RP.2}
-$$
+```
 
 where
 
-$$
+```math
 s_b:=\sum_{bk\in H}\beta_{bk},
 \qquad
  g_b:=\sum_{bk\in H}\beta_{bk}(b-k).
-$$
+```
 
 Each summand in RP.2 is nonnegative.
 
@@ -75,16 +75,16 @@ Each summand in RP.2 is nonnegative.
 
 ND gives a containing disk of radius
 
-$$
+```math
 D(1/2+\eta).
-$$
+```
 
 Therefore the minimum circumradius obeys
 
-$$
+```math
 R(F)\le D(1/2+\eta).
 \tag{RP.3}
-$$
+```
 
 Insert this in RP.1.
 
@@ -92,17 +92,17 @@ Insert this in RP.1.
 
 For every normalized KKT stress on the ND force hull,
 
-$$
+```math
 \boxed{
 \frac{2D}{1+2\eta}
 \le P_*\le2D.
 }
 \tag{RP.4}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 0\le2D-P_*
 \le
@@ -110,30 +110,30 @@ $$
 \le4\eta D.
 }
 \tag{RP.5}
-$$
+```
 
 By RP.2,
 
-$$
+```math
 \boxed{
 \sum_b(Ds_b-|g_b|)
 \le4\eta D.
 }
 \tag{RP.6}
-$$
+```
 
 ### Corollary RP.2 — ER near-disk branch
 
 If `Z_ext=o(D^2)`, then ER gives `xi->0`, ND gives `eta->0`, and hence
 
-$$
+```math
 \boxed{
 P_*=2D-o(D),
 \qquad
 \sum_b(Ds_b-|g_b|)=o(D).
 }
 \tag{RP.7}
-$$
+```
 
 This holds for every normalized KKT certificate for which the force hull is the same
 full C65 hull; in particular it holds for the relative-interior full-support stress.
@@ -143,31 +143,31 @@ full C65 hull; in particular it holds for the relative-interior full-support str
 The cancellation term can be rewritten without approximation. At one loaded vertex
 `b`, write the incident diameter unit directions
 
-$$
+```math
 u_{bk}:=\frac{b-k}{D},
 \qquad |u_{bk}|=1.
-$$
+```
 
 Then
 
-$$
+```math
 \frac{g_b}{D}=\sum_{bk}\beta_{bk}u_{bk}.
-$$
+```
 
 Put `s=s_b` and `r=|g_b|/D`. Direct expansion gives
 
-$$
+```math
 \boxed{
 s^2-r^2
 =\sum_{\{e,f\}\subset H(b)}
 \beta_e\beta_f|u_e-u_f|^2.
 }
 \tag{RP.8}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 Ds_b-|g_b|
 =
@@ -177,21 +177,21 @@ D\,
 }{s_b+|g_b|/D}.
 }
 \tag{RP.9}
-$$
+```
 
 This identifies exactly what RP.7 controls: the total weighted angular variance of
 incident diameter reactions.
 
 Since distinct diameter partners are unit separated,
 
-$$
+```math
 |u_e-u_f|
 =\frac{|k_e-k_f|}{D}\ge\frac1D.
-$$
+```
 
 Hence, using `s_b+|g_b|/D<=2s_b`,
 
-$$
+```math
 \boxed{
 Ds_b-|g_b|
 \ge
@@ -199,7 +199,7 @@ Ds_b-|g_b|
 \sum_{e<f\ni b}\beta_e\beta_f.
 }
 \tag{RP.10}
-$$
+```
 
 This is exact but too weak by itself to force a matching-weight theorem unless the
 area deficit is controlled at a much faster scale than ER currently supplies.

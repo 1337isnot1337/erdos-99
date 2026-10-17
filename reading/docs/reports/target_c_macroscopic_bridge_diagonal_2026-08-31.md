@@ -30,78 +30,78 @@ Thus the surviving bridge branch cannot distribute its `Theta(D^2)` stress among
 
 Assume the contact-minimal Target C fully force-visible branch and choose a relative-interior normalized KKT stress, so
 
-$$
+```math
 C_+=C,
 \qquad
 \sum_{e\in C}\alpha_e=D^2,
 \qquad
 \sum_{h\in H_+}\beta_h=1.
 \tag{C27.1}
-$$
+```
 
 Let
 
-$$
+```math
 S_{br}:=\sum_{e\text{ bridge of }C}\alpha_e.
 \tag{C27.2}
-$$
+```
 
 Let `T_br` be the positive-contact bridge-block tree. C26 gives
 
-$$
+```math
 |E(T_{br})|
 \le 2|B_+|-3
 \le 2\pi D-3
 \tag{C27.3}
-$$
+```
 
 whenever at least one contact bridge exists.
 
 For a bridge `e=uv`, C20 gives the exact reciprocal diagonal
 
-$$
+```math
 \Delta z_e=\alpha_e J(u-v),
 \qquad
 |\Delta z_e|=\alpha_e.
 \tag{C27.4}
-$$
+```
 
 Root `T_br` at a C23 common hub. Orient `e` away from the hub and let `B_e` be the positive diameter endpoints in the descendant side. Put
 
-$$
+```math
 s_b:=\sum_{bk\in H_+}\beta_{bk},
 \qquad
 w_e:=\sum_{b\in B_e}s_b.
 \tag{C27.5}
-$$
+```
 
 C23 proves that no positive diameter edge is internal to the descendant side, so
 
-$$
+```math
 w_e
 =
 \sum_{\substack{bk\in H_+\\b\in B_e,\ k\notin B_e}}
 \beta_{bk}
 \le1,
 \tag{C27.6}
-$$
+```
 
 and the bridge cut force is
 
-$$
+```math
 \alpha_e(u-v)
 =
 \sum_{\substack{bk\in H_+\\b\in B_e,\ k\notin B_e}}
 \beta_{bk}(b-k).
 \tag{C27.7}
-$$
+```
 
 Hence
 
-$$
+```math
 \alpha_e\le D w_e.
 \tag{C27.8}
-$$
+```
 
 ---
 
@@ -111,14 +111,14 @@ $$
 
 If
 
-$$
+```math
 S_{br}\ge\eta D^2
 \tag{C27.9}
-$$
+```
 
 for some `eta>0`, then there exists a contact bridge `e` with
 
-$$
+```math
 \boxed{
 \alpha_e
 \ge
@@ -127,18 +127,18 @@ $$
 \frac{\eta D^2}{2\pi D-3}.
 }
 \tag{C27.10}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{
 \alpha_e
 \ge
 \left(\frac{\eta}{2\pi}+o(1)\right)D.
 }
 \tag{C27.11}
-$$
+```
 
 #### Proof
 
@@ -150,12 +150,12 @@ By C27.4 this is simultaneously a reciprocal-geometric theorem.
 
 Under C27.9, the convex reciprocal force polygon `F*` contains a bridge diagonal of length at least
 
-$$
+```math
 \boxed{
 \frac{\eta D^2}{2\pi D-3}.
 }
 \tag{C27.12}
-$$
+```
 
 Thus for fixed `eta` the reciprocal polygon contains a chord whose length is a fixed positive fraction of its natural `Theta(D)` scale.
 
@@ -169,7 +169,7 @@ Combine C27.8 with C27.10.
 
 The bridge `e` supplied by C27.1 satisfies
 
-$$
+```math
 \boxed{
 w_e
 \ge
@@ -179,16 +179,16 @@ w_e
 \ge
 \frac{\eta D}{2\pi D-3}.}
 \tag{C27.13}
-$$
+```
 
 Consequently,
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty} w_e
 \ge\frac{\eta}{2\pi}.}
 \tag{C27.14}
-$$
+```
 
 The quantity `w_e` is exactly the total `beta` weight of positive diameter edges crossing that bridge cut, not merely an endpoint-incidence upper bound.
 
@@ -200,43 +200,43 @@ Since the total positive diameter weight is one, C27.14 means that a bridge-domi
 
 Orient every positive diameter edge crossing `e` from the descendant side toward the hub side and write
 
-$$
+```math
 r_h=\frac{b-k}{D}\in S^1.
 \tag{C27.15}
-$$
+```
 
 Then C27.7 becomes
 
-$$
+```math
 \frac{\alpha_e}{D}(u-v)
 =
 \sum_{h\pitchfork e}\beta_h r_h.
 \tag{C27.16}
-$$
+```
 
 Normalize the crossing weights by `w_e`:
 
-$$
+```math
 \lambda_h:=\frac{\beta_h}{w_e},
 \qquad
 \sum_{h\pitchfork e}\lambda_h=1.
 \tag{C27.17}
-$$
+```
 
 Hence
 
-$$
+```math
 \left|
 \sum_{h\pitchfork e}\lambda_h r_h
 \right|
 =
 \frac{\alpha_e}{D w_e}.
 \tag{C27.18}
-$$
+```
 
 C27.10 and `w_e<=1` give the unconditional lower bound
 
-$$
+```math
 \boxed{
 \left|
 \sum_{h\pitchfork e}\lambda_h r_h
@@ -244,7 +244,7 @@ $$
 \ge
 \frac{\eta D}{2\pi D-3}.}
 \tag{C27.19}
-$$
+```
 
 Thus the diameter directions across the macroscopic cut cannot cancel arbitrarily: their normalized weighted vector average has magnitude at least `eta/(2*pi)+o(1)`.
 

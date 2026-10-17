@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/quantitative_kuperberg_support_rate_2026-08-30.md) · source SHA-256 `d0c3ba237fe3bb8a94628cd470c467c5fd59d2925f103f556499a8b3ba48b947`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-A54588101FAD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99 — semialgebraic Kuperberg gain and stretched-exponential support bound
 
@@ -18,21 +20,21 @@
 
 Section 150 isolates a precise quantitative hole in the Kuperberg gap-defect route. For the aligned triangular-lattice gap packing, the checked literature previously gave only
 
-$$
+```math
 W(d)<\infty\qquad(d>0),
-$$
+```
 
 with no asymptotic upper rate as `d downarrow 0`.
 
 This report proves the first such rate from the actual Kuperberg--Kuperberg--Kuperberg block construction:
 
-$$
+```math
 \boxed{
 W(d)\le C_1\exp\!\left(C_2d^{-q}\right)
 \qquad(0<d<d_0)
 }
 \tag{QK.1}
-$$
+```
 
 for some constants `C_1,C_2,d_0>0` and some rational `q>0`.
 
@@ -43,14 +45,14 @@ The exponent is not numerically optimized. The point is the **functional class**
 
 As a consequence, the free fixed-shape same-hull add-one theorem extends to a genuine vanishing accumulated strain regime:
 
-$$
+```math
 \boxed{
 \alpha_L^{-q}=o(\log L)
 \Longrightarrow
 \alpha_1(H_{L,\alpha_L})\ge |P_L|+1
 }
 \tag{QK.2}
-$$
+```
 
 for all sufficiently large `L` in the notation of Section 150.
 
@@ -62,18 +64,18 @@ This does **not** yet handle exterior blockers of an embedded source/scaffold mo
 
 Kuperberg--Kuperberg--Kuperberg use unit **circles**, hence nearest-neighbor center distance `2`. Their aligned honeycomb lattice is
 
-$$
+```math
 \mathcal C=
 \{(2i+j,\sqrt3j):i,j\in\mathbb Z\}.
-$$
+```
 
 For paper gap width `D_g>0`, the centers on or above the horizontal lattice line are shifted by `(0,D_g)`.
 
 The canonical Section 150 normalization has minimum center separation `1`. Scaling all Kuperberg coordinates by `1/2` sends
 
-$$
+```math
 D_g=2d
-$$
+```
 
 to canonical gap width `d`. A support-radius bound of the form `exp(C D_g^{-q})` therefore gives the same form `exp(C' d^{-q})` after rescaling.
 
@@ -106,50 +108,47 @@ The missing rate is already constrained strongly by the finite geometry of the f
 > **Lemma QK.1 (semialgebraic one-step gain).** There is `D_0>0` such that the maximal Kuperberg one-step gain
 > 
 
-$$
-
+```math
 > \delta:(0,D_0)\to(0,\infty)
 > 
-$$
-
-
+```
 > for the aligned five-block mechanism is a semialgebraic function.
 
 ### Proof
 
 Fix a sufficiently large block parameter `n_0` for one instance of the five-block move. The old center coordinates in the gap packing are affine functions of the gap parameter `D_g`, with coefficients in the real algebraic field `Q(sqrt(3))`. After the prescribed rigid block translations, every moved center coordinate is affine in
 
-$$
+```math
 (D_g,d_1,d_2,d_3).
-$$
+```
 
 For any two centers whose block labels are fixed, the non-overlap condition is therefore a quadratic polynomial inequality
 
-$$
+```math
 |p_i(D_g,d_1,d_2,d_3)-p_j(D_g,d_1,d_2,d_3)|^2\ge4.
 \tag{QK.3}
-$$
+```
 
 The same is true for a moved center versus an unmoved exterior center. Although the original packing is infinite, only finitely many exterior centers can matter for this fixed finite move, uniformly for small `D_g`. Indeed, the perfect center lattice has covering radius `2/sqrt(3)`. The gap packing has covering radius at most
 
-$$
+```math
 \frac2{\sqrt3}+D_g.
-$$
+```
 
 Choose
 
-$$
+```math
 0<D_0<2-\frac2{\sqrt3}.
-$$
+```
 
 Then this covering radius is strictly below `2`. If a final moved center were outside a bounded neighborhood of the old five-block support, a nearest old gap-packing center at distance below `2` would be an **unmoved** center, contradicting non-overlap. Hence every feasible translated block lies in one bounded region depending only on the fixed one-step support and `D_0`. Only finitely many unmoved lattice centers lie within distance `2` of that region, and all other inequalities are automatic.
 
 Consequently the feasible parameter set
 
-$$
+```math
 \mathcal F\subset
 (0,D_0)\times\mathbb R^3
-$$
+```
 
 is given by finitely many polynomial inequalities, together with `0<=d_1<=D_g` and the fixed direction conditions. If one insists that the three translations remain a packing throughout the sequential motion, the intermediate motion parameter can be universally quantified over a compact interval; Tarski--Seidenberg eliminates that quantifier and the resulting feasible set is still semialgebraic. Final-position feasibility alone is already enough for a finite packing rearrangement.
 
@@ -157,7 +156,7 @@ The local widened-gap condition beneath an interior segment of the vertically tr
 
 Because the feasible motions are bounded, the maximum final vertical gain is attained. Its graph can be written by the first-order formula
 
-$$
+```math
 \begin{aligned}
 (D_g,z)\in\operatorname{graph}\delta
 \iff{}&
@@ -167,9 +166,9 @@ $$
 \,[\mathcal F(D_g,d'_1,d'_2,d'_3)\wedge d'_3>z].
 \end{aligned}
 \tag{QK.4}
-$$
+```
 
-Equivalently one may use the actual affine widened-gap functional if its notation is kept distinct from `d_3`; the argument is identical. Tarski--Seidenberg implies that (QK.4) is semialgebraic. This proves the lemma. $\square$
+Equivalently one may use the actual affine widened-gap functional if its notation is kept distinct from `d_3`; the argument is identical. Tarski--Seidenberg implies that (QK.4) is semialgebraic. This proves the lemma. $`\square`$
 
 ### Uniformity in the block parameter
 
@@ -183,61 +182,59 @@ We use two standard facts from semialgebraic geometry.
 
 1. **Tarski--Seidenberg / semialgebraic choice.** Projections of semialgebraic sets are semialgebraic, and a nonempty semialgebraic fiber relation admits a semialgebraic selection. A convenient explicit statement is Yehuda John Levy, “Uniformly Supported Approximate Equilibria in Families of Games,” *Journal of Mathematical Economics* 98 (2022), Theorem 2.3.
 2. **Growth dichotomy.** If `f:(0,epsilon)->R` is semialgebraic and nowhere zero, then
-   $$
+   ```math
    f(t)=a t^q+o(t^q)
-   $$
+   
+   ```
    for some `a != 0` and rational `q`. One explicit statement is Jae Hyoung Lee and Tien-Son Pham, “Openness, Hölder Metric Regularity and Hölder Continuity Properties of Semialgebraic Set-Valued Maps,” Lemma 2.2.
 
 > **Theorem QK.2 (power-law Kuperberg gain).** There are constants
 > 
 
-$$
-
+```math
 > c_*>0,
 > \qquad
 > q\in\mathbb Q_{>0},
 > \qquad
 > D_*\in(0,D_0)
 > 
-$$
-
-
+```
 > such that
 > 
 
-$$
-
+```math
 > \boxed{
 > \delta(D_g)\ge c_*D_g^q
 > \qquad(0<D_g<D_*).
 > }
 > \tag{QK.5}
+```
 
 ### Proof
 
 By Lemma QK.1, `delta` is semialgebraic. The Kuperberg construction gives
 
-\[
+```math
 \delta(D_g)>0
 \qquad(D_g>0).
-$$
+```
 
 The feasible translations are uniformly bounded on `(0,D_0)`, so `delta` is bounded there. Growth dichotomy gives
 
-$$
+```math
 \delta(D_g)
 =aD_g^q+o(D_g^q)
-$$
+```
 
 with `a>0` and `q in Q_{>=0}`. Shrink `D_*` so that
 
-$$
+```math
 \delta(D_g)\ge\frac a2D_g^q.
-$$
+```
 
 This proves (QK.5) with `c_*=a/2`.
 
-In fact `q` cannot be zero. If `q=0`, the one-step gain would stay bounded below by a positive constant as `D_g downarrow 0`; the nesting argument in the next section would then give positive-gain witnesses with uniformly bounded support as the gap closes. After scaling, this contradicts canonical Theorem 146.1, which proves that the number of deleted old centers in every positive-gain witness diverges as `d downarrow 0`. Thus `q>0`. $\square$
+In fact `q` cannot be zero. If `q=0`, the one-step gain would stay bounded below by a positive constant as `D_g downarrow 0`; the nesting argument in the next section would then give positive-gain witnesses with uniformly bounded support as the gap closes. After scaling, this contradicts canonical Theorem 146.1, which proves that the number of deleted old centers in every positive-gain witness diverges as `d downarrow 0`. Thus `q>0`. $`\square`$
 
 The theorem is qualitative in its exponent but quantitatively nontrivial: it rules out gains such as `exp(-1/D_g)` or any other super-polynomially flat behavior.
 
@@ -249,17 +246,17 @@ The paper says to choose `n` large enough to repeat the five-block move with sma
 
 Represent an upward triangular lattice block of size `N` in lattice coordinates as
 
-$$
+```math
 T_N=
 \{ie_1+je_2:
  i,j\ge0,\ i+j\le N-1\},
-$$
+```
 
 with `|e_1|=|e_2|=2` in the paper normalization. A five-block template of parameter `m` is a union of five triangular patches whose lattice-coordinate extents are affine-linear in `m`. Therefore its total horizontal and vertical lattice-coordinate spans are at most
 
-$$
+```math
 A_0m+B_0
-$$
+```
 
 for fixed constants `A_0,B_0`, independent of `m` and of the gap width. All actual rigid translations used while the target gap remains at most `2` are bounded by another fixed constant and can be absorbed into `B_0`.
 
@@ -268,46 +265,40 @@ The middle upward block produced by one stage is still a rigid translate of a pe
 > **Lemma QK.3 (uniform nesting).** There are integers
 > 
 
-$$
-
+```math
 > A\ge2,
 > \qquad B\ge0,
 > 
-$$
-
-
+```
 > such that whenever
 > 
 
-$$
-
+```math
 > N\ge Am+B,
 > \tag{QK.6}
 > 
-$$
-
-
+```
 > the widened middle `Delta_{N-1}` block contains, along an interior portion of its base and with all relevant exterior-neighbor rows present, a translated copy of the complete five-block template of parameter `m` for the next widening stage.
 
 ### Proof
 
 The five child blocks and the fixed number of neighboring lattice rows needed to certify non-overlap have lattice-coordinate diameter at most `A_0m+B_0`. The parent triangle `T_{N-1}` contains along its base a trapezoidal lattice region of width and height proportional to `N`; for example, after discarding fixed-fraction neighborhoods of the two sloping sides, the remaining basal region has both dimensions at least `cN-O(1)` for an absolute `c>0`. Choose `A>A_0/c` and then `B` large enough to absorb the fixed margins and the bounded rigid translations. The child template then fits by a lattice translation.
 
-Because it is kept beyond the fixed interaction margin from the parent side boundaries, every unmoved neighboring circle relevant to the child move is exactly the same as in the infinite aligned gap packing. The parent middle block is a rigid translate, so its internal triangular-lattice coordinates are unchanged. Thus the next five-block move has precisely the same local constraints and gain function. $\square$
+Because it is kept beyond the fixed interaction margin from the parent side boundaries, every unmoved neighboring circle relevant to the child move is exactly the same as in the infinite aligned gap packing. The parent middle block is a rigid translate, so its internal triangular-lattice coordinates are unchanged. Thus the next five-block move has precisely the same local constraints and gain function. $`\square`$
 
 Iterating (QK.6) backward, `k` widening stages fit inside an initial block parameter
 
-$$
+```math
 N_0\le C_AA^k
 \tag{QK.7}
-$$
+```
 
 for a constant `C_A`. The Euclidean support radius of the complete nested rearrangement is therefore
 
-$$
+```math
 R_k\le C_RA^k.
 \tag{QK.8}
-$$
+```
 
 This is intentionally conservative. The proof needs only a fixed shrink ratio, not an optimal one.
 
@@ -317,34 +308,36 @@ This is intentionally conservative. The proof needs only a fixed shrink ratio, n
 
 Let the initial paper-normalized gap be `D_g<D_*`, and define the successive widths
 
-$$
+```math
 D_{j+1}=D_j+\delta(D_j).
-$$
+```
 
 As long as `D_j<D_*`, Theorem QK.2 and `D_j>=D_g` give
 
-$$
+```math
 D_{j+1}-D_j
 \ge c_*D_j^q
 \ge c_*D_g^q.
-$$
+```
 
 Hence the number of stages required to reach `D_*` is at most
 
-$$
+```math
 k_1(D_g)
 \le
 1+\frac{D_*}{c_*D_g^q}
 =O(D_g^{-q}).
 \tag{QK.9}
+```
 
 The original Kuperberg proof observes that the maximal gain is weakly nondecreasing in the gap width. Once the gap is at least the fixed positive number `D_*`, every further stage gains at least the fixed amount `delta(D_*)>0`. Therefore only a fixed additional number `k_2=O(1)` of stages is needed to reach gap width `2`, at which point one additional unit circle fits.
 
 Thus
 
-\[
+```math
 \boxed{k(D_g)=O(D_g^{-q}).}
 \tag{QK.10}
+```
 
 ---
 
@@ -352,36 +345,37 @@ Thus
 
 Combine (QK.8) and (QK.10):
 
-\[
+```math
 R(D_g)
 \le
 C_RA^{C D_g^{-q}}
 \le
 C_1\exp(C_2D_g^{-q}).
 \tag{QK.11}
+```
 
 At the final stage the local gap has width at least `2`, so the Kuperberg construction inserts one additional unit circle. No old circles were deleted merely to perform the two-dimensional widening stages; they were partitioned into and translated as rigid finite blocks. Thus the operation gives a finite positive-gain witness supported in the same radius bound.
 
 Rescale center distances by `1/2`. Canonical gap width `d` corresponds to `D_g=2d`, and support radii scale by `1/2`. Absorbing fixed factors into the constants gives:
 
 > **Theorem QK.4 (stretched-exponential aligned support bound).** For the aligned unit-triangular-lattice gap packing used in Sections 148 and 150, there exist constants
-> \[
+> 
+
+```math
 > C_1,C_2,d_0>0,
 > \qquad q\in\mathbb Q_{>0},
 > 
-$$
-
-
+```
 > such that
 > 
 
-$$
-
+```math
 > \boxed{
 > W(d)\le C_1\exp(C_2d^{-q})
 > \qquad(0<d<d_0).
 > }
 > \tag{QK.12}
+```
 
 This is the first audited asymptotic upper class for `W(d)` obtained from the Kuperberg proof. It is compatible with the canonical lower-complexity theorem `kappa_*(d)->infinity`.
 
@@ -395,70 +389,64 @@ The theorem is for the **lattice-line aligned gap** used by the row-split constr
 
 Return to Section 150. Let `K` be a fixed full-dimensional convex triangular-lattice polygon with
 
-\[
+```math
 r\mathbb B\subset K,
-$$
+```
 
 and let accumulated homothetic strain `alpha_L>0` tend to zero. The row split creates an aligned gap
 
-$$
+```math
 d_L=r\alpha_L.
-$$
+```
 
 Canonical (150.4) says that it is enough to have
 
-$$
+```math
 W(r\alpha_L)=o(L).
-$$
+```
 
 Theorem QK.4 gives
 
-$$
+```math
 \log W(r\alpha_L)
 \le
 O(1)+C_2r^{-q}\alpha_L^{-q}.
-$$
+```
 
 Therefore if
 
-$$
+```math
 \boxed{
 \alpha_L^{-q}=o(\log L),
 }
 \tag{QK.13}
-$$
+```
 
 then
 
-$$
+```math
 W(r\alpha_L)
 =\exp(o(\log L))
 =L^{o(1)}
 =o(L).
-$$
+```
 
 Hence:
 
 > **Corollary QK.5 (vanishing accumulated strain closure for fixed shape).** There exists a rational `q>0`, depending only on the fixed Kuperberg local mechanism, such that for every fixed full-dimensional convex triangular-lattice polygon `K` and every positive sequence `alpha_L` satisfying
 > 
 
-$$
-
+```math
 > \alpha_L^{-q}=o(\log L),
 > 
-$$
-
-
+```
 > the hull of
 > 
 
-$$
-
+```math
 > \left(1+\frac{\alpha_L}{L}\right)(\Lambda\cap LK)
 > 
-$$
-
-
+```
 > contains a unit-separated set with one additional point for all sufficiently large `L`.
 
 This strictly extends Theorem 148.1, which handled fixed positive accumulated strain. It does **not** assert anything for strains decaying as a power of `L`, and it still does not protect the rearrangement from exterior blockers in an embedded source/scaffold monomer domain.
@@ -512,19 +500,19 @@ The quantitative gap-support item in the active v1.7.3 prompt is no longer wholl
 
 old status:
 
-$$
+```math
 W(d)<\infty\quad(d>0),
 \qquad
 \text{no asymptotic upper rate};
-$$
+```
 
 new status:
 
-$$
+```math
 \boxed{
 W(d)\le C_1\exp(C_2d^{-q})
 }
-$$
+```
 
 for some rational `q>0`.
 
@@ -533,13 +521,10 @@ This does **not** close the actual embedded monomer branch. The exact remaining 
 > **Exterior-compatible support lemma.** Show that a monomer region produced by the genuine source/scaffold geometry contains, after deleting/protecting only the exact boundary-order obstruction set, an aligned gap corridor of width `d` and radius at least
 > 
 
-$$
-
+```math
 > C_1\exp(C_2d^{-q}),
 > 
-$$
-
-
+```
 > or prove a stronger finite replacement directly.
 
 The stretched-exponential scale is large, so this may still be too expensive for the actual vanishing gap generated by Target A. But the previous undefined function `W(d)` has been replaced by a concrete asymptotic class.

@@ -17,20 +17,20 @@
 
 SJ proves the explicit post-ZF floor
 
-$$
+```math
 \lambda_{SA}=0.5906428373093669\ldots
-$$
+```
 
 and localizes scalar equality to
 
-$$
+```math
 \frac hD\to y_*,
 \qquad
 \frac{\operatorname{per}F}{D}\to p_*:=2y_*,
 \qquad
 \frac{\operatorname{area}F}{D^2}
 \to A_*:=\Phi(y_*)=\Xi(p_*).
-$$
+```
 
 This report proves that this endpoint is impossible.  The reason is exact: simultaneous
 saturation of QPA's perimeter envelope and SA's support-triangulation area bound would
@@ -39,30 +39,30 @@ strictly more area than the SA endpoint permits.
 
 Therefore no unbounded post-ZF survivor sequence can satisfy
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to\lambda_{SA}.
 \tag{ST.1}
-$$
+```
 
 Consequently there are constants
 
-$$
+```math
 \boxed{
 \epsilon_{ST}>0,
 \qquad D_0<\infty,
 }
-$$
+```
 
 such that every sufficiently large post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
 \lambda_{SA}+\epsilon_{ST}.
 }
 \tag{ST.2}
-$$
+```
 
 The new gap is nonexplicit.  The report-level explicit constant remains
 `lambda_SA`; ST proves it is not the true asymptotic endpoint.
@@ -73,49 +73,49 @@ The new gap is nonexplicit.  The report-level explicit constant remains
 
 Assume for contradiction that a post-ZF sequence has `D->infinity` and
 
-$$
+```math
 \lambda_D:=\frac{e_{BB}+2s_C}{D}
 \to\lambda_{SA}.
 \tag{1.1}
-$$
+```
 
 SJ's strict compact optimization forces
 
-$$
+```math
 y_D:=\frac hD\to y_*,
 \qquad
 p_D:=\frac{P_D}{D}	o p_*:=2y_*,
 \tag{1.2}
-$$
+```
 
 where `P_D=per(F_D)`, and
 
-$$
+```math
 A_*:=\Phi(y_*)=\Xi(p_*).
 \tag{1.3}
-$$
+```
 
 Let
 
-$$
+```math
 a_*:=\alpha(p_*).
 \tag{1.4}
-$$
+```
 
 By definition of `alpha`,
 
-$$
+```math
 p_*=f(a_*)
 =2\left(\arcsin a_*+\sqrt{1-a_*^2}\right).
 \tag{1.5}
-$$
+```
 
 Numerically only for orientation,
 
-$$
+```math
 a_*=0.8254304052515203\ldots<1.
 \tag{1.6}
-$$
+```
 
 The strict inequality is exact because `p_*<pi` and `alpha(pi)=1`.
 
@@ -125,62 +125,62 @@ The strict inequality is exact because `p_*<pi` and `alpha(pi)=1`.
 
 Write
 
-$$
+```math
 \mathcal A_D:=\frac{\operatorname{area}F_D}{D^2},
 \qquad
 C_D:=\frac1{D^2}\sum_r\operatorname{area}(P_r),
 \qquad
 G_D:=\mathcal A_D-C_D.
 \tag{2.1}
-$$
+```
 
 SA gives
 
-$$
+```math
 \liminf\mathcal A_D\ge A_*.
 \tag{2.2}
-$$
+```
 
 GU gives
 
-$$
+```math
 \limsup C_D\le\frac\pi4\lambda_{SA}^2.
 \tag{2.3}
-$$
+```
 
 The actual-perimeter JC capacity and SJ localization give
 
-$$
+```math
 \limsup G_D
 \le
 \frac{(\lambda_{SA}+y_*)^2}{4\pi}.
 \tag{2.4}
-$$
+```
 
 By the defining SJ equality,
 
-$$
+```math
 A_*-rac\pi4\lambda_{SA}^2
 =
 \frac{(\lambda_{SA}+y_*)^2}{4\pi}.
 \tag{2.5}
-$$
+```
 
 Since `mathcal A_D=G_D+C_D`, (2.3)--(2.5) imply
 
-$$
+```math
 \limsup\mathcal A_D\le A_*.
 \tag{2.6}
-$$
+```
 
 Together with (2.2),
 
-$$
+```math
 \boxed{
 \mathcal A_D\to A_*.
 }
 \tag{2.7}
-$$
+```
 
 Thus endpoint equality must saturate the SA force-hull area lower bound itself; there
 is no room to hide positive area slack in the attachment cells.
@@ -191,92 +191,92 @@ is no room to hide positive area slack in the attachment cells.
 
 Let
 
-$$
+```math
 S_D:=\frac12((F_D-o_D)-(F_D-o_D))
 \tag{3.1}
-$$
+```
 
 be the FD central symmetral.  FD gives exactly
 
-$$
+```math
 \operatorname{diam}S_D=D,
 \qquad
 \operatorname{per}S_D=P_D,
 \tag{3.2}
-$$
+```
 
 and
 
-$$
+```math
 0\le
 \operatorname{area}S_D-\operatorname{area}F_D
 =o(D^2).
 \tag{3.3}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}S_D}{D^2}\to A_*.
 }
 \tag{3.4}
-$$
+```
 
 Normalize
 
-$$
+```math
 K_D:=D^{-1}S_D.
 \tag{3.5}
-$$
+```
 
 Then every `K_D` is centrally symmetric about `0`, has diameter one, lies in the
 radius-`1/2` disk, and satisfies
 
-$$
+```math
 \operatorname{per}K_D\to p_*,
 \qquad
 \operatorname{area}K_D\to A_*.
 \tag{3.6}
-$$
+```
 
 Let
 
-$$
+```math
 r_D:=\min_{|u|=1}h_{K_D}(u),
 \qquad
 a_D:=2r_D.
 \tag{3.7}
-$$
+```
 
 QPA gives
 
-$$
+```math
 a_D\ge\alpha(p_D).
 \tag{3.8}
-$$
+```
 
 SA gives
 
-$$
+```math
 \operatorname{area}K_D
 \ge\frac12r_D\operatorname{per}K_D
 =\frac14a_Dp_D.
 \tag{3.9}
-$$
+```
 
 Using (3.6), `p_D->p_*`, and
 
-$$
+```math
 A_*=\Xi(p_*)=\frac14a_*p_*,
-$$
+```
 
 (3.8)--(3.9) force
 
-$$
+```math
 \boxed{a_D\to a_*.}
 \tag{3.10}
-$$
+```
 
 Thus the QPA inradius bound also saturates.
 
@@ -287,14 +287,14 @@ Thus the QPA inradius bound also saturates.
 For each `D`, choose a unit direction `u_D` attaining the minimum support in (3.7).
 Pass to a subsequence with
 
-$$
+```math
 u_D\to u_*.
 \tag{4.1}
-$$
+```
 
 QPA gives the exact containment
 
-$$
+```math
 K_D
 \subseteq
 T_D:=
@@ -302,17 +302,17 @@ T_D:=
 \cap
 \{x:|x\cdot u_D|\le a_D/2\}.
 \tag{4.2}
-$$
+```
 
 By Blaschke selection, pass further so that
 
-$$
+```math
 K_D\to K_\infty
-$$
+```
 
 in Hausdorff distance.  Equations (3.10), (4.1), and (4.2) give
 
-$$
+```math
 K_\infty
 \subseteq
 T_*:=
@@ -320,37 +320,37 @@ T_*:=
 \cap
 \{x:|x\cdot u_*|\le a_*/2\}.
 \tag{4.3}
-$$
+```
 
 Convex perimeter is continuous under Hausdorff convergence, so
 
-$$
+```math
 \operatorname{per}K_\infty=p_*.
 \tag{4.4}
-$$
+```
 
 The clipped-disk perimeter computation from QPA gives
 
-$$
+```math
 \operatorname{per}T_*=f(a_*)=p_*.
 \tag{4.5}
-$$
+```
 
 Both bodies are centrally symmetric about the same center.  Cauchy's width formula
 and (4.3) give
 
-$$
+```math
 w_{K_\infty}(\theta)\le w_{T_*}(\theta)
-$$
+```
 
 for every direction, while (4.4)--(4.5) give equality of their width integrals.  The
 width difference is continuous and nonnegative, so it vanishes identically.  Central
 symmetry then gives equality of support functions, hence
 
-$$
+```math
 \boxed{K_\infty=T_*.}
 \tag{4.6}
-$$
+```
 
 This is the rigidity statement hidden in QPA's perimeter envelope.
 
@@ -361,15 +361,15 @@ This is the rigidity statement hidden in QPA's perimeter envelope.
 Scale temporarily by a factor `2`, so the containing disk has radius one and the strip
 is `|x\cdot u_*|<=a_*`.  Its area is
 
-$$
+```math
 2\left(
 \arcsin a_*+a_*\sqrt{1-a_*^2}
 \right).
-$$
+```
 
 Scaling back by `1/2` multiplies area by `1/4`, so
 
-$$
+```math
 \boxed{
 \operatorname{area}T_*
 =
@@ -378,11 +378,11 @@ $$
 \right).
 }
 \tag{5.1}
-$$
+```
 
 On the other hand, using `p_*=f(a_*)`, the SA endpoint area is
 
-$$
+```math
 \begin{aligned}
 A_*
 &=\Xi(p_*)
@@ -392,11 +392,11 @@ A_*
 \right).
 \end{aligned}
 \tag{5.2}
-$$
+```
 
 Subtracting gives the exact positive gap
 
-$$
+```math
 \boxed{
 \operatorname{area}T_*-A_*
 =
@@ -404,28 +404,28 @@ $$
 >0.
 }
 \tag{5.3}
-$$
+```
 
 Numerically this gap is approximately
 
-$$
+```math
 0.08475041556.
-$$
+```
 
 But Hausdorff convergence in Section 4 implies area convergence, so (4.6) gives
 
-$$
+```math
 \operatorname{area}K_D
 \to\operatorname{area}T_*.
 \tag{5.4}
-$$
+```
 
 Section 3 instead gives
 
-$$
+```math
 \operatorname{area}K_D\to A_*.
 \tag{5.5}
-$$
+```
 
 Equations (5.3)--(5.5) contradict each other.  Therefore the endpoint assumption
 (1.1) is impossible.
@@ -437,10 +437,10 @@ Equations (5.3)--(5.5) contradict each other.  Therefore the endpoint assumption
 If ST.2 failed, then for every integer `j` there would be a post-ZF survivor with
 arbitrarily large `D` and
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}
 <\lambda_{SA}+\frac1j.
-$$
+```
 
 Choose a diagonal sequence with `D_j->infinity`.  SJ gives the opposite lower bound
 `lambda_SA-o(1)`, so after taking a subsequence its normalized surplus tends exactly to

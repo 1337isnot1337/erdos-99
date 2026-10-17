@@ -23,9 +23,9 @@ geometrically separated diameter endpoints.
 
 For a connected graph `G` and a terminal set `T`, let
 
-$$
+```math
 \tau_G(T)
-$$
+```
 
 be the minimum number of edges in a connected subgraph of `G` containing `T`.
 For `|T|=2` this is ordinary graph distance.
@@ -35,25 +35,25 @@ For `|T|=2` this is ordinary graph distance.
 If `G` is a connected triangle-free penny graph on `n` vertices and
 `T subset V(G)` has `|T|<=3`, then
 
-$$
+```math
 \boxed{
 |E(G)|\le2n-\tau_G(T)-2.
 }
 \tag{TP.1}
-$$
+```
 
 For an extreme selected KKT circuit, combine TP.1 with two separated positive diameter
 chords.  If
 
-$$
+```math
 y:=\lim\frac{h_*}{D},
 \qquad
 s:=\lim\frac{\sigma_*}{D}
-$$
+```
 
 along a convergent subsequence, then
 
-$$
+```math
 \boxed{
 y+s
 \ge
@@ -62,27 +62,27 @@ y+s
 \sin(\min\{y,\pi/2\})}.
 }
 \tag{TP.2}
-$$
+```
 
 In particular, if `sigma_*=o(D)`, then
 
-$$
+```math
 \boxed{
 \liminf\frac{h_*}{D}\ge\gamma
 =1.35891835330307\ldots,
 }
 \tag{TP.3}
-$$
+```
 
 where `gamma` is the unique root in `(1,pi/2)` of
 
-$$
+```math
 \boxed{
 \gamma^2
 =1+\frac{\sqrt3}{2}\sin\gamma.
 }
 \tag{TP.4}
-$$
+```
 
 Thus a near-maximal extreme rigidity circuit cannot concentrate its positive diameter
 support on a small number of bars. Conversely, an extreme ray with small normalized
@@ -100,39 +100,39 @@ We induct on `n`.
 If `G` is a tree, then `|E|=n-1` and every connected subgraph spanning `T` uses at
 most all `n-1` tree edges. Hence
 
-$$
+```math
 n-1\le2n-\tau_G(T)-2.
-$$
+```
 
 Now suppose `G` contains a cycle. Among Eppstein's at least four removable
 non-articulation vertices of degree at most two, choose one
 
-$$
+```math
 v\notin T.
-$$
+```
 
 Set `G'=G-v`. Then `G'` is connected and triangle-free penny, with
 
-$$
+```math
 |E(G)|\le|E(G')|+2.
 \tag{1.1}
-$$
+```
 
 Deleting a nonterminal vertex cannot create a smaller connected terminal-spanning
 subgraph, so
 
-$$
+```math
 \tau_{G'}(T)\ge\tau_G(T).
 \tag{1.2}
-$$
+```
 
 By induction,
 
-$$
+```math
 |E(G')|
 \le2(n-1)-\tau_{G'}(T)-2
 \le2n-\tau_G(T)-4.
-$$
+```
 
 Combine with (1.1) to obtain TP.1. `square`
 
@@ -149,26 +149,26 @@ contact subgraph spanning them is a geometric network whose every edge has lengt
 Its number of edges therefore equals its Euclidean total edge length. Allowing arbitrary
 Steiner points can only lower the minimum possible network length. Hence
 
-$$
+```math
 \boxed{
 \tau_C(\{a,b,c\})
 \ge L_{ST}(a,b,c),
 }
 \tag{2.1}
-$$
+```
 
 where `L_ST` is the ordinary Euclidean Steiner-tree length of the three points.
 
 For a triangle with side lengths `A,B,C`, area `Delta`, and all angles below
 `120 degrees`, the classical elementary Steiner construction gives
 
-$$
+```math
 \boxed{
 L_{ST}^2
 =\frac{A^2+B^2+C^2+4\sqrt3\,\Delta}{2}.
 }
 \tag{2.2}
-$$
+```
 
 Only the right-triangle limit of this formula is needed below.
 
@@ -181,21 +181,21 @@ Let an extreme normalized KKT stress have selected positive diameter graph `H_*`
 
 PI.2 applies to any subset of actual diameter directions. With
 
-$$
+```math
 \delta_D=2\arcsin\frac1{2D},
-$$
+```
 
 there are two selected diameter edges whose projective angle `theta_D in[0,pi/2]`
 satisfies
 
-$$
+```math
 \boxed{
 \theta_D
 \ge
 \min\left\{(h_*-1)\delta_D,\frac\pi2-\delta_D\right\}.
 }
 \tag{3.1}
-$$
+```
 
 Assume first that `h_*/D -> y>0`. Then the right side has a positive limiting lower
 bound. FS.3 says two actual diameter edges sharing an endpoint have angle
@@ -204,47 +204,47 @@ are disjoint for all sufficiently large members of the subsequence.
 
 Write them as
 
-$$
+```math
 aa',\qquad bb',
-$$
+```
 
 and orient their unit direction vectors `u,v` so the angle from `u` to `v` is
 `theta_D`. Let `m_1,m_2` be the two chord midpoints. FS.4 gives one full-source
 circumcenter `o` with
 
-$$
+```math
 |m_i-o|=O(D^{3/4})=o(D).
 \tag{3.2}
-$$
+```
 
 Thus, after choosing `b` rather than `b'` if necessary,
 
-$$
+```math
 \begin{aligned}
 |a-a'|&=D,\\
 |a-b|&=D\sin(\theta_D/2)+o(D),\\
 |a'-b|&=D\cos(\theta_D/2)+o(D).
 \end{aligned}
 \tag{3.3}
-$$
+```
 
 The limiting triangle is right, with normalized side lengths
 
-$$
+```math
 1,\quad\sin(\theta/2),\quad\cos(\theta/2).
-$$
+```
 
 Its normalized area is `sin(theta)/4`. Every limiting angle is below 120 degrees for
 `theta>0`, so (2.2) and continuity give
 
-$$
+```math
 \boxed{
 L_{ST}(a,a',b)
 =
 D\sqrt{1+\frac{\sqrt3}{2}\sin\theta_D}+o(D).
 }
 \tag{3.4}
-$$
+```
 
 All three terminals lie in the connected selected positive contact component.
 Therefore TP.1 and (2.1) apply to that contact graph.
@@ -255,47 +255,47 @@ Therefore TP.1 and (2.1) apply to that contact graph.
 
 EC gives
 
-$$
+```math
 e_*+h_*=2v_*-2-\sigma_*.
 \tag{4.1}
-$$
+```
 
 TP.1 with the terminals from Section 3 gives
 
-$$
+```math
 e_*
 \le2v_*-	au_*-2,
 \tag{4.2}
-$$
+```
 
 where `tau_*` is their selected contact Steiner size. Subtract (4.2) from (4.1):
 
-$$
+```math
 \boxed{h_*+\sigma_*\ge\tau_*.}
 \tag{4.3}
-$$
+```
 
 Combining with (3.4), dividing by `D`, and using
 
-$$
+```math
 D\delta_D\to1
-$$
+```
 
 proves for `y>0`
 
-$$
+```math
 y+s
 \ge
 \sqrt{1+\frac{\sqrt3}{2}
 \sin(\min\{y,\pi/2\})}.
-$$
+```
 
 If `y=0`, the ordinary two-terminal Eppstein theorem applied to the endpoints of any
 positive diameter edge gives
 
-$$
+```math
 h_*+\sigma_*\ge\lceil D\rceil,
-$$
+```
 
 so `s>=1=mathcal S(0)`. Hence TP.2 holds throughout the full nonnegative domain.
 
@@ -307,20 +307,20 @@ so `s>=1=mathcal S(0)`. Hence TP.2 holds throughout the full nonnegative domain.
 
 If `sigma_*=o(D)`, TP.2 reduces for any limit `y<pi/2` to
 
-$$
+```math
 y\ge\sqrt{1+\frac{\sqrt3}{2}\sin y}.
-$$
+```
 
 The right side minus `y` is positive at `y=1` and negative by `y=pi/2`; its unique
 zero is `gamma` from TP.4. Therefore TP.3 follows.
 
 The uniqueness follows by differentiating
 
-$$
+```math
 f(y)=y^2-1-\frac{\sqrt3}{2}\sin y:
 \qquad
 f'(y)=2y-\frac{\sqrt3}{2}\cos y>0
-$$
+```
 
 for `y>=1`.
 
@@ -328,14 +328,14 @@ for `y>=1`.
 
 For every subsequential limit with `0<=y<=gamma`,
 
-$$
+```math
 \boxed{
 \liminf\frac{\sigma_*}{D}
 \ge
 \mathcal S(y)-y.
 }
 \tag{5.1}
-$$
+```
 
 Examples:
 
@@ -345,20 +345,20 @@ Examples:
 
 By CT,
 
-$$
+```math
 z_*-s_Z=2(v-v_*)+\sigma_*\ge\sigma_*.
-$$
+```
 
 Hence the same lower bound applies to the excess number of zero coordinates beyond
 the unavoidable `s_Z` polytope dimension:
 
-$$
+```math
 \boxed{
 \liminf\frac{z_*-s_Z}{D}
 \ge\mathcal S(y)-y.
 }
 \tag{5.2}
-$$
+```
 
 Thus a diameter-sparse extreme ray is necessarily a strongly degenerate vertex of the
 KKT polytope.
@@ -367,36 +367,36 @@ KKT polytope.
 
 CT gives
 
-$$
+```math
 q_*+2\sigma_*=x_*+Q_*+2d_*,
 \qquad
 h_*=q_*-d_*.
-$$
+```
 
 Therefore
 
-$$
+```math
 h_*+\sigma_*
 =x_*+Q_*+d_*-\sigma_*.
-$$
+```
 
 Using (4.3),
 
-$$
+```math
 \boxed{
 x_*+Q_*+d_*
 \ge\tau_*+\sigma_*.}
 \tag{5.3}
-$$
+```
 
 In the positive-spread asymptotic regime this becomes
 
-$$
+```math
 \liminf\frac{x_*+Q_*+d_*}{D}
 \ge
 \mathcal S(y)+s.
 \tag{5.4}
-$$
+```
 
 So selected underbracing costs twice: it directly removes mixed rows and also forces
 additional outer/face/component topology.

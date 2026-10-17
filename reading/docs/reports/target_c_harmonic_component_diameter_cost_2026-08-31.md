@@ -25,48 +25,48 @@ Let `I_r` be one connected component of the unpinned contact graph `C[V(C)\setmi
 
 After pinning `B_+`, the component rigidity matrix has full rank `2n_r`. The strictly positive KKT contact stress supplies a nonzero left-kernel dependency. Hence
 
-$$
+```math
 e_r+t_r\ge2n_r+1.
-$$
+```
 
 Eppstein gives
 
-$$
+```math
 e_r\le2n_r-\delta_r-2.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{t_r\ge\delta_r+3.}
-$$
+```
 
 This strengthens C35's `t_r>=3` by charging every unit of internal graph diameter to an additional loaded-boundary contact.
 
 Since every loaded vertex has full contact degree at most three,
 
-$$
+```math
 \boxed{\delta_r\le3|A_r|-3,}
-$$
+```
 
 where `A_r` is the distinct loaded attachment set from C36.
 
 Summing over all unpinned components gives
 
-$$
+```math
 \boxed{
 \sum_r\delta_r+3c_I
 \le e_{BI}
 \le3q-2e_{BB},}
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{
 \sum_r\delta_r
 \le3q-2e_{BB}-3c_I.}
-$$
+```
 
 Thus the harmonic interior components also share an `O(D)` total graph-diameter budget.
 
@@ -76,19 +76,19 @@ Thus the harmonic interior components also share an `O(D)` total graph-diameter 
 
 Pin every loaded vertex `B_+`. The global pinned rigidity matrix is block diagonal by the connected components `I_r` of the unpinned graph. Contact minimality gives zero pinned expansive cone, so the block for `I_r` has full column rank
 
-$$
+```math
 2n_r.
 \tag{C40.1}
-$$
+```
 
 Its rows are exactly the `e_r` internal contacts and the `t_r` contacts from `I_r` to `B_+`.
 
 At every unpinned vertex, positive diameter reaction is zero. Restricting the strictly positive KKT contact stress to these `e_r+t_r` rows gives a nonzero left-kernel vector. Hence left nullity is at least one and
 
-$$
+```math
 \boxed{e_r+t_r\ge2n_r+1.}
 \tag{C40.2}
-$$
+```
 
 This is the componentwise source of the global C33 surplus.
 
@@ -98,29 +98,29 @@ This is the componentwise source of the global C33 surplus.
 
 The induced graph `C[I_r]` is a connected triangle-free penny graph. Eppstein's bound applies:
 
-$$
+```math
 \boxed{e_r\le2n_r-\delta_r-2.}
 \tag{C40.3}
-$$
+```
 
 For `n_r=1`, this reads `0<=0` with `delta_r=0`.
 
 Combine C40.2 and C40.3:
 
-$$
+```math
 2n_r+1
 \le e_r+t_r
 \le2n_r-\delta_r-2+t_r.
-$$
+```
 
 Therefore:
 
 ### Theorem C40.1 — harmonic component diameter cost
 
-$$
+```math
 \boxed{t_r\ge\delta_r+3.}
 \tag{C40.4}
-$$
+```
 
 C35 is the `delta_r>=0` corollary.
 
@@ -130,27 +130,27 @@ C35 is the `delta_r>=0` corollary.
 
 Let `A_r` be the distinct loaded vertices adjacent to `I_r`. Every boundary contact counted by `t_r` has its loaded endpoint in `A_r`. C35 gives
 
-$$
+```math
 \deg_C(b)\le3
 \qquad(b\in B_+).
-$$
+```
 
 Therefore each `b in A_r` contributes at most three of the `t_r` contact edges, so
 
-$$
+```math
 t_r\le3|A_r|.
 \tag{C40.5}
-$$
+```
 
 Together with C40.4:
 
 ### Corollary C40.2
 
-$$
+```math
 \boxed{
 \delta_r\le3|A_r|-3.}
 \tag{C40.6}
-$$
+```
 
 Thus a harmonic component spanning large contact-graph distance requires a proportionally large distinct loaded attachment set.
 
@@ -162,37 +162,37 @@ This is compatible with C36's localization `I_r subset conv(A_r)` and turns that
 
 Sum C40.4 over all `c_I` components:
 
-$$
+```math
 \sum_r\delta_r+3c_I
 \le\sum_rt_r
 =e_{BI}.
 \tag{C40.7}
-$$
+```
 
 C35's loaded degree budget is
 
-$$
+```math
 e_{BI}+2e_{BB}\le3q.
 \tag{C40.8}
-$$
+```
 
 Hence:
 
 ### Theorem C40.3 — global harmonic interior diameter budget
 
-$$
+```math
 \boxed{
 \sum_r\delta_r+3c_I+2e_{BB}\le3q,}
 \tag{C40.9}
-$$
+```
 
 and in particular
 
-$$
+```math
 \boxed{
 \sum_r\delta_r\le3q-2e_{BB}-3c_I.}
 \tag{C40.10}
-$$
+```
 
 Canonical C30 gives `q=O(D)` from convex perimeter, so the total internal graph diameter of all harmonic response components is `O(D)`.
 
@@ -202,17 +202,17 @@ Canonical C30 gives `q=O(D)` from convex perimeter, so the total internal graph 
 
 Choose one vertex in `I_r`. Every vertex of the component lies within Euclidean distance at most `delta_r` of it. Disjoint radius-`1/2` disks around the unit-separated vertices lie inside a disk of radius `delta_r+1/2`. Thus
 
-$$
+```math
 \boxed{n_r\le(2\delta_r+1)^2.}
 \tag{C40.11}
-$$
+```
 
 Combined with C40.6,
 
-$$
+```math
 \boxed{n_r\le(6|A_r|-5)^2.}
 \tag{C40.12}
-$$
+```
 
 This is crude but exact: a component with `Theta(D^2)` vertices must have `Theta(D)` distinct loaded attachment vertices.
 

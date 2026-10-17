@@ -18,13 +18,13 @@ are bounded nonquadrilateral faces and whose edges join faces sharing a train. F
 each component `K_j`, let `r_j` be the dimension of the span of the projective train
 directions of all train ends from `K_j` that terminate on the outer face. Then
 
-$$
+```math
 \boxed{\sum_{j=1}^m(2-r_j)\le
 \dim\ker(C_{\rm face}^{\mathsf T})
 =2f-\operatorname{rank}C_{\rm face}
 =\sigma_C\le s_Z.}
 \tag{HA.1}
-$$
+```
 
 Here `sigma_C` is the pure-contact self-stress dimension and `s_Z` is the mixed
 rigidity surplus. Thus a bounded-face component with no outer directional anchor
@@ -50,9 +50,9 @@ This proves the first inequality in (HA.1), including occurrence signs.
 
 The audited exceptional-face closure identity gives
 
-$$
+```math
 2f-\operatorname{rank}C_{\rm face}=\sigma_C.
-$$
+```
 
 Canonical mixed rigidity has signed stress-space dimension `s_Z+1`. Every pure
 contact self-stress extends by zero on the diameter rows, and the normalized KKT

@@ -23,15 +23,15 @@ perimeter, and `k=d_H+s_Z`, `t_D=(q-k)/D`.
 
 The new finite refinement is
 
-$$
+```math
 \boxed{P_{exc}\ge q-x_B-2m-4,}\tag{H.1}
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{5t_DD+x_B+m+2\ge3P_F.}\tag{H.2}
-$$
+```
 
 The Section-61 interval estimate only gives `P_exc>=q-3x_B-4`.
 Thus (H.1) improves its right side by `2u_B`, where `u_B=x_B-m`.
@@ -56,9 +56,9 @@ face incidences. A singleton has its two incident non-rhombic face
 incidences, with distinct occurrences when the edge is a bridge. The exact
 identities are
 
-$$
+```math
 2T=b+P_{exc},\qquad b+Q=2(q-k).\tag{H.3}
-$$
+```
 
 There are `g=q-m` physical unit hull sides. Such an edge is a contact and
 has at least one outer-face incidence, since the entire contact core lies
@@ -82,15 +82,15 @@ incidence. Those incidences comprise `b-g` outer ends and `P_exc`
 bounded-face ends. Terminal incidences of different trains are distinct,
 so
 
-$$
+```math
 T-2\le b-g+P_{exc}.\tag{H.4}
-$$
+```
 
 Substitute `2T=b+P_exc`, rearrange, and use `g=q-m`:
 
-$$
+```math
 P_{exc}\ge2g-b-4=q-x_B-2m-4.
-$$
+```
 
 This proves (H.1), including graphs with bridges, repeated face vertices,
 disconnected rhombic regions, and no rhombi at all.
@@ -98,26 +98,26 @@ disconnected rhombic regions, and no rhombi at all.
 Every exceptional bounded face has degree at least five, so `f<=Q` and
 `P_exc=4f+Q<=5Q`. By (H.3), `Q=2t_DD-b`. Consequently
 
-$$
+```math
 5(2t_DD-b)\ge2g-b-4,
-$$
+```
 
 or
 
-$$
+```math
 5t_DD\ge 2b+g-2=3q+2x_B-m-2.
-$$
+```
 
 As `P_F<=b=q+x_B`, this gives (H.2). More precisely its complete
 nonnegative-slack identity is
 
-$$
+```math
 \begin{aligned}
 5t_DD+x_B+m+2-3P_F
 ={}&\tfrac12[P_{exc}-(2g-b-4)]\\
 &+2(Q-f)+3(b-P_F)\ge0.
 \end{aligned}\tag{H.5}
-$$
+```
 
 This also checks the finite constants and separates the end, face-degree,
 and metric slacks without counting a defect twice.
@@ -127,16 +127,16 @@ and metric slacks without counting a defect twice.
 In the full-core near-disk branch `P_F/D->pi`. Along any sequence with
 `t_D->t`, (H.2) gives
 
-$$
+```math
 \liminf\frac{x_B+m}{D}\ge3\pi-5t.\tag{H.6}
-$$
+```
 
 In particular `m<=x_B` gives
 
-$$
+```math
 \liminf\frac{x_B}{D}\ge\frac{3\pi-5t}{2}
 \quad\hbox{when }t<3\pi/5.\tag{H.7}
-$$
+```
 
 At `t<=93/50=1.860`, the right side is at least
 `(3pi-93/10)/2=0.06238898038...`. Thus `x_B=O(sqrt(D))` is
@@ -152,22 +152,22 @@ motion and makes no claim about the local `sum Q_r^+ +2d_tile` currency.
 
 Even without the new refinement, canonical Section 61 gives
 
-$$
+```math
 q\le3x_B+5Q+4.
-$$
+```
 
 Substitute `Q=2t_DD-q-x_B` to obtain
 
-$$
+```math
 5t_DD\ge3q+x_B-2\ge3P_F-2x_B-2.\tag{H.8}
-$$
+```
 
 Therefore the simultaneous assumptions
 
-$$
+```math
 P_F/D\to\pi,\quad x_B=O(\sqrt D),\quad
 t_D\le1.860+o(1)
-$$
+```
 
 are already impossible in the canonical source. Indeed (H.8) gives
 `liminf t_D>=3pi/5>93/50`. The strict comparison needs no decimal:

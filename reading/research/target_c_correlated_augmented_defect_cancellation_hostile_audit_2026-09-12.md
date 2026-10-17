@@ -17,37 +17,37 @@ The theorem depends on four proof-only inputs from the current post-126 stack pl
 
 Use
 
-$$
+```math
 a=q-2+2c_I-d_{tile},
 \qquad e_{BB}=q-m,
-$$
+```
 
 and put `r_deep=m-T`. Then
 
-$$
+```math
 A_*:=a-T
 =e_{BB}+r_{deep}+2c_I-2-d_{tile}.
-$$
+```
 
 The augmented-triangle identity is
 
-$$
+```math
 Q_*=Q+u_B-r_{deep}-2(c_I-1)-d_{tile}.
-$$
+```
 
 The loaded-hull identity `e_BB=Q+2k+u_B` gives
 
-$$
+```math
 Q_*=e_{BB}-2k-r_{deep}-2c_I+2-d_{tile}.
-$$
+```
 
 Subtracting gives exactly
 
-$$
+```math
 \boxed{
 A_*-Q_*=2k+2r_{deep}+4c_I-4.
 }
-$$
+```
 
 Both `d_tile` and `e_BB` cancel. No limit or sign relaxation is used.
 
@@ -57,29 +57,29 @@ Both `d_tile` and `e_BB` cancel. No limit or sign relaxation is used.
 
 The merged augmented-route theorem gives
 
-$$
+```math
 \liminf D^{-1}
 \left(\Delta_{ad}+{1\over2}A_*+3Q_*\right)
 \ge {\pi\over4}(2-\sqrt3).
-$$
+```
 
 Substitution yields
 
-$$
+```math
 \Delta_{ad}+{1\over2}A_*+3Q_*
 =
 \Delta_{ad}+{7\over2}Q_*+k+r_{deep}+2c_I-2.
-$$
+```
 
 Canonical Section 75 supplies `c_I=O(D^(2/3))`, so the last two finite/component terms contribute `o(D)` after normalization. Hence
 
-$$
+```math
 \boxed{
 \liminf D^{-1}
 \left(\Delta_{ad}+{7\over2}Q_*+k+r_{deep}\right)
 \ge {\pi\over4}(2-\sqrt3).
 }
-$$
+```
 
 The coefficient `7/2` and the signs of `k` and `r_deep` are correct.
 
@@ -89,13 +89,13 @@ The coefficient `7/2` and the signs of `k` and `r_deep` are correct.
 
 If `Q_*/D`, `k/D`, and `r_deep/D` are each at most `eta` asymptotically, then
 
-$$
+```math
 \liminf{\Delta_{ad}\over D}
 \ge {\pi\over4}(2-\sqrt3)
 -\left({7\over2}+1+1\right)\eta
 =
 {\pi\over4}(2-\sqrt3)-{11\over2}\eta.
-$$
+```
 
 This is the correct coefficient. The theorem does not assert that any one currency is universally linear without subsequence selection; it states an exhaustive linear-scale alternative.
 

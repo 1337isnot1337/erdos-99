@@ -45,10 +45,10 @@ Let `P` be the normalized nonnegative KKT stress polytope.
 Canonical [Section 64](../targets/target-c/64-extreme-circuit-transfer-audit.md)
 gives compactness and
 
-$$
+```math
 \dim_{\rm aff}P=s_Z.
 \tag{AT1}
-$$
+```
 
 Let `W subset B` be any supplied set of actual loaded vertices.
 In the intended application each `b in W` has a certified short
@@ -56,20 +56,20 @@ actual contact path to a nearby same-component complete grid. The
 finite theorem needs only the set `W`, not that additional geometry.
 Define
 
-$$
+```math
 f_b(\alpha,\beta)=\sum_{e\in H:e\ni b}\beta_e,\qquad
 F_b=P\cap\{f_b=0\},\qquad
 P_0=\bigcap_{b\in W}F_b.
 \tag{AT2}
-$$
+```
 
 Each `f_b` is affine and nonnegative on `P`, so `F_b` and `P_0`
 are exposed faces, possibly empty. Put
 
-$$
+```math
 E_0=H[B\setminus W],\qquad b_0=|E_0|.
 \tag{AT3}
-$$
+```
 
 Every stress in `P_0` has its positive diameter support in `E_0`.
 This uses all actual source diameter pairs, not a selected substitute.
@@ -79,10 +79,10 @@ This uses all actual source diameter pairs, not a selected substitute.
 Suppose `P_0` is empty. Apply finite Helly in the affine hull of `P`
 to the faces `F_b`. There is `U subset W` with
 
-$$
+```math
 \boxed{|U|\le s_Z+1,\qquad \bigcap_{b\in U}F_b=\varnothing.}
 \tag{AT4}
-$$
+```
 
 Thus every normalized source stress has positive diameter reaction
 incident to some deleted `b in U`. At a loaded exposed hull vertex,
@@ -117,49 +117,49 @@ Suppose `P_0` is nonempty and `1<=b_0<=D`. Every extreme point of
 this exposed face is an extreme point of `P`. Choose any such point,
 and write `h_*,e_*,v_*,sigma_*` as in Section 64. Then
 
-$$
+```math
 h_*\le b_0,\qquad
 \sigma_*=2v_*-2-(e_*+h_*),\qquad
 \operatorname{rank}R_*=e_*+h_*-1.
 \tag{AT5}
-$$
+```
 
 Thus its velocity kernel has dimension `3+sigma_*`, and
 `sigma_*` is the excess over Euclidean motions.
 
 Canonical equation (64.10), with `Q_*>=0`, gives
 
-$$
+```math
 \sigma_*\ge
 D\cos((h_*-1)a_D)-{h_*+1\over2},
 \qquad a_D=\arcsin{1\over2D}.
 \tag{AT6}
-$$
+```
 
 The right side decreases with `h_*` on `1<=h_*<=b_0<=D`.
 Therefore every extreme circuit in the exceptional face satisfies
 
-$$
+```math
 \boxed{\sigma_*\ge
 D\cos((b_0-1)a_D)-{b_0+1\over2}.}
 \tag{AT7}
-$$
+```
 
 If `b_0<=eta D` with fixed `0<eta<1`, this implies
 
-$$
+```math
 \liminf{\sigma_*\over D}\ge\cos(\eta/2)-\eta/2.
 \tag{AT8}
-$$
+```
 
 If `b_0=o(D)`, the lower bound is `(1-o(1))D`.
 For a completely rational weaker bound, `a_D<=1/D` and
 `cos x>=1-x^2/2` give
 
-$$
+```math
 \sigma_*\ge D-{(b_0-1)^2\over2D}-{b_0+1\over2}.
 \tag{AT9}
-$$
+```
 
 Canonical excess degeneracy is
 `kappa_*=2(v-v_*)+sigma_*>=sigma_*`.
@@ -206,11 +206,11 @@ Every normalized nonnegative equilibrium stress has one common
 perimeter weight `c` and opposite-equal spoke weights
 `alpha_j=2 beta_j-c`, where
 
-$$
+```math
 \beta_0+\beta_1+\beta_2=1,\qquad
 0\le c\le2\min_j\beta_j.
 \tag{AT10}
-$$
+```
 
 The complete stress polytope is a tetrahedron. Its vertices are the
 three straight-diameter stresses with `beta_i=1,c=0`, and the

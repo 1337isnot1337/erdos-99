@@ -16,10 +16,10 @@ Unregistered downstream observations in this report retain their stated local sc
 **Theorem AR.1.** There is no sequence of canonical triangle-free full-core
 Type-II sources with diameter tending to infinity and
 
-$$
+```math
 R_F/D\longrightarrow0.
 \tag{1.1}
-$$
+```
 
 There is **no** bounded-degree, degree-tail, pocket-length-tail, or
 single-grain hypothesis. Here the fixed-boundary residual includes every
@@ -29,32 +29,32 @@ are removed.
 
 The exact normalization is
 
-$$
+```math
 R_F=\frac{A_F}{a_0}+\frac{P_F}{2}+1-N_F-\frac{E_4}{a_0}
  =\sum_C r_C\ge0,\qquad a_0=\sqrt3/2,
-$$
+```
 
-where $N_F$ includes all source points in the force hull and
-$r_C=A_C/a_0+P_C/2+1-z_C-k_C$ for every augmented inactive chamber.
+where $`N_F`$ includes all source points in the force hull and
+$`r_C=A_C/a_0+P_C/2+1-z_C-k_C`$ for every augmented inactive chamber.
 See [exact residual conservation](../../research/target_c_inactive_chamber_residual_conservation.md).
 
 The new finite mechanism is
 
-$$
+```math
 \boxed{N_j\le10|H|+4E_j.}
 \tag{1.2}
-$$
+```
 
-In a shifted reduced-phase bin, $N_j$ is the number of actual stopped
-trains, $H$ is the set of exceptional/pocket nodes not assigned a single
-bin, and $E_j$ counts actual unit-hull terminals and good pocket terminal
+In a shifted reduced-phase bin, $`N_j`$ is the number of actual stopped
+trains, $`H`$ is the set of exceptional/pocket nodes not assigned a single
+bin, and $`E_j`$ counts actual unit-hull terminals and good pocket terminal
 occurrences in that bin. Large faces and large pockets are charged by
 **node count**, not their possibly persistent terminal mass. Mixed rigidity
 makes that distinction legitimate.
 
 Small residual, fixed-degree Groemer compactness, and hull-side normal
-dispersion make the right side arbitrarily small compared with $D$.
-Section 69 then gives $R_4=o(D^2)$, contradicting Type II. This eliminates
+dispersion make the right side arbitrarily small compared with $`D`$.
+Section 69 then gives $`R_4=o(D^2)`$, contradicting Type II. This eliminates
 a branch; positive residual and the macroscopic-container branch remain.
 
 ## 2. Dependencies and exact source scope
@@ -73,8 +73,8 @@ Canonical inputs:
 - the stopped-train forest, signed opposite-side propagation and simple
   train-crossing graph;
 - [Section 69](../targets/target-c/69-coherent-grain-interface-audit.md):
-  fixed-width phase coarea, deleting only $O_\epsilon(D)$ crossings;
-- Type-II disk/rhombus saturation, $R_4/D^2\to\pi/(2\sqrt3)>0$.
+  fixed-width phase coarea, deleting only $`O_\epsilon(D)`$ crossings;
+- Type-II disk/rhombus saturation, $`R_4/D^2\to\pi/(2\sqrt3)>0`$.
 
 Personally checked proof-only inputs are the nonnegative chamber-residual
 conservation, the #699 uniform normal-capacity estimate for all actual hull
@@ -83,23 +83,23 @@ including both the segment and equilateral-triangulation equality cases.
 
 The finite bounds used below are
 
-$$
+```math
 Q\le P_F\le\pi D,\quad f\le Q,\quad
 P_{\rm exc}=4f+Q\le5\pi D,
 \quad b\le2q\le2\pi D,\quad T\le3\pi D.
 \tag{2.1}
-$$
+```
 
-Let $p=m_B$ be the number of added hull sides. There are exactly $p$
-new pockets, each with exactly one added side: adding $p$ edges increases
-the bounded-face count by $p$; every new face uses at least one added
+Let $`p=m_B`$ be the number of added hull sides. There are exactly $`p`$
+new pockets, each with exactly one added side: adding $`p`$ edges increases
+the bounded-face count by $`p`$; every new face uses at least one added
 edge and each added hull edge has one bounded occurrence. Thus their
-contact-path lengths satisfy $\ell_P\ge2$ and
+contact-path lengths satisfy $`\ell_P\ge2`$ and
 
-$$
+```math
 \sum_P\ell_P=b-h_B\le2\pi D,\qquad f+p\le2\pi D.
 \tag{2.2}
-$$
+```
 
 All physical exceptional faces have unit-boundary degree at least five.
 A pocket's train valence is its unit-path length, without the added side.
@@ -118,8 +118,8 @@ does not propagate opposite-side train rates automatically. Stopped
 trains are those of the original contact complex throughout.
 
 For an internal train joining two bounded augmented nodes, its oriented
-terminal vectors are $w,-w$. Its angular closure column has entries
-$Jw,-Jw$ in their two-coordinate blocks. This includes singleton edges,
+terminal vectors are $`w,-w`$. Its angular closure column has entries
+$`Jw,-Jw`$ in their two-coordinate blocks. This includes singleton edges,
 bridge occurrences and old outer-to-outer trains now ending at pockets.
 
 **Lemma AR.2.** All such internal train columns are independent.
@@ -127,7 +127,7 @@ bridge occurrences and old outer-to-outer trains now ending at pockets.
 Suppose a nonzero rate vector supported on internal trains closes every
 physical exceptional face and **every pocket, including four-sided
 pockets**. Give every contact edge displacement
-$Jw\omega_\tau$, with its oriented unit vector $w$, and give every
+$`Jw\omega_\tau`$, with its oriented unit vector $`w`$, and give every
 added hull side displacement zero. Opposite train rates automatically close
 every rhombus. The assumed equations close every physical exceptional face
 and every pocket. Bounded face cycles span the cycle space of the connected
@@ -147,113 +147,113 @@ in a **linear proof**. It does not move any source, turn an auxiliary side
 into a contact, or assert any finite feasible radius.
 
 As a consequence, there are no internal loops. For every nonempty bounded
-augmented node set $U$, two coordinate-sum row dependencies give
+augmented node set $`U`$, two coordinate-sum row dependencies give
 
-$$
+```math
 \boxed{e(U)\le2|U|-2.}
 \tag{3.1}
-$$
+```
 
 Parallel train edges are allowed. No generic rank, reciprocal embedding or
 unsupported simplicity theorem is used.
 
 ## 4. Finite phase-bank inequality
 
-Partition reduced projective phase modulo $\pi/3$ into bins. Some bounded
-nodes are bad, forming $H$. Every remaining physical exceptional face
+Partition reduced projective phase modulo $`\pi/3`$ into bins. Some bounded
+nodes are bad, forming $`H`$. Every remaining physical exceptional face
 and pocket has **all** its incident contact trains in one bin.
 
-Fix bin $j$. Let $A$ be its good physical exceptional faces. Let
-$C$ be its good pockets. Define $E_j$ as the number of outside
+Fix bin $`j`$. Let $`A`$ be its good physical exceptional faces. Let
+$`C`$ be its good pockets. Define $`E_j`$ as the number of outside
 unit-hull terminal occurrences in the bin plus the sum of valences of
-$C$. A train at a good node in another bin cannot meet $A$, since
+$`C`$. A train at a good node in another bin cannot meet $`A`$, since
 one actual train has one phase.
 
-Write $a=|A|$, $h=|H|$, $x=e(A,H)$, and let $y$ count
-train ends from $A$ to good pockets or the outside. Thus $y\le E_j$.
-When $A\ne\varnothing$, (3.1) on $A\cup H$ gives
+Write $`a=|A|`$, $`h=|H|`$, $`x=e(A,H)`$, and let $`y`$ count
+train ends from $`A`$ to good pockets or the outside. Thus $`y\le E_j`$.
+When $`A\ne\varnothing`$, (3.1) on $`A\cup H`$ gives
 
-$$
+```math
 e(A)+x\le2(a+h)-2.
-$$
+```
 
 Every physical exceptional face has valence at least five, so
 
-$$
+```math
 5a\le2e(A)+x+y
 \le4a+4h-4-x+y,
-$$
+```
 
 and therefore
 
-$$
+```math
 a+x\le4h+y-4.
 \tag{4.1}
-$$
+```
 
-Trains incident with $A$ number $e(A)+x+y$, at most
-$2a+x+y\le8h+3E_j$. All remaining trains in the bin either have
-both ends in $H$, of which there are at most $2h$, or have an
-outside/good-pocket occurrence, charged by $E_j$. This proves
+Trains incident with $`A`$ number $`e(A)+x+y`$, at most
+$`2a+x+y\le8h+3E_j`$. All remaining trains in the bin either have
+both ends in $`H`$, of which there are at most $`2h`$, or have an
+outside/good-pocket occurrence, charged by $`E_j`$. This proves
 
-$$
+```math
 N_j\le10h+4E_j.
 \tag{4.2}
-$$
+```
 
-If $A$ is empty, the last two classes prove the same bound directly.
-When $H$ is empty, use the zero upper bound for its internal edges;
+If $`A`$ is empty, the last two classes prove the same bound directly.
+When $`H`$ is empty, use the zero upper bound for its internal edges;
 the formula remains valid. Repeated terminal occurrences are counted.
 Distinct train incidence is bounded by occurrences, never by route length.
 
 ## 5. Construct bins with small bad-node count
 
-Fix cutoffs $M,L$, angular tolerance $\eta>0$, and bin width
-$\epsilon>2\eta$. To avoid a short last bin on the circle, take
-$\epsilon=(\pi/3)/n$ with an integer $n$. Declare bad:
+Fix cutoffs $`M,L`$, angular tolerance $`\eta>0`$, and bin width
+$`\epsilon>2\eta`$. To avoid a short last bin on the circle, take
+$`\epsilon=(\pi/3)/n`$ with an integer $`n`$. Declare bad:
 
-1. physical faces of degree greater than $M$;
-2. pockets with contact path length greater than $L$;
-3. remaining faces/pockets with a train direction farther than $\eta$
+1. physical faces of degree greater than $`M`$;
+2. pockets with contact path length greater than $`L`$;
+3. remaining faces/pockets with a train direction farther than $`\eta`$
    from their reference phase (a chosen unit edge for a physical face,
    the hull chord for a pocket);
-4. remaining nodes whose reference phase lies within $\eta$ of a
+4. remaining nodes whose reference phase lies within $`\eta`$ of a
    shifted bin boundary.
 
 The first two classes have cardinality at most
 
-$$
+```math
 5\pi D/M+2\pi D/L.
 \tag{5.1}
-$$
+```
 
 The third class has residual at least the relevant fixed positive Groemer
-threshold, and is $o_{M,L,\eta}(D)$ under (1.1), since residuals are
-nonnegative and sum to $R_F$. For a physical face use one unit edge as
-reference; every incident train is within $\eta$ of it. For a pocket
+threshold, and is $`o_{M,L,\eta}(D)`$ under (1.1), since residuals are
+nonnegative and sum to $`R_F`$. For a physical face use one unit edge as
+reference; every incident train is within $`\eta`$ of it. For a pocket
 use its added hull chord as reference; the same direction lemma applies.
 
 A uniform random bin shift makes each reference phase boundary-bad with
-probability $2\eta/\epsilon$. The total node count is at most
-$2\pi D$. Some shift therefore gives
+probability $`2\eta/\epsilon`$. The total node count is at most
+$`2\pi D`$. Some shift therefore gives
 
-$$
+```math
 \frac{|H|}{D}\le\frac{5\pi}{M}+\frac{2\pi}{L}
  +\frac{4\pi\eta}{\epsilon}+o_{M,L,\eta}(1).
 \tag{5.2}
-$$
+```
 
 Every remaining node has all train directions in one bin. A good pocket
-uses at most $L$ terminals and has a distinct hull-side anchor whose
+uses at most $`L`$ terminals and has a distinct hull-side anchor whose
 phase lies in that bin. Outside unit hull terminals also have distinct
 hull-side anchors. The #699 all-side estimate, uniform in the shift, gives
 
-$$
+```math
 \max_j E_j\le L[3\epsilon+o_\epsilon(1)]D
 \tag{5.3}
-$$
+```
 
-for $L\ge1$. This uses actual hull-side lengths at least one, not a
+for $`L\ge1`$. This uses actual hull-side lengths at least one, not a
 count bound for hypothetical carrier sides.
 
 Large-node terminal mass is never discarded or assumed small: (4.2)
@@ -262,60 +262,60 @@ still has a physical unit-hull anchor.
 
 ## 6. Coarea and explicit order of limits
 
-For any target $\delta>0$, choose fixed $M,L$ so the first two
-terms of (5.2), multiplied by ten, are below $\delta/3$. Next choose
-an equal-circle bin width $\epsilon$ small enough that
-$12L\epsilon<\delta/3$. Then choose fixed $\eta$ so
-$40\pi\eta/\epsilon<\delta/3$. Finally take $D\to\infty$.
+For any target $`\delta>0`$, choose fixed $`M,L`$ so the first two
+terms of (5.2), multiplied by ten, are below $`\delta/3`$. Next choose
+an equal-circle bin width $`\epsilon`$ small enough that
+$`12L\epsilon<\delta/3`$. Then choose fixed $`\eta`$ so
+$`40\pi\eta/\epsilon<\delta/3`$. Finally take $`D\to\infty`$.
 The compactness thresholds are fixed in this last limit. Equations
 (4.2), (5.2), (5.3) imply
 
-$$
+```math
 \limsup_D D^{-1}\max_j N_j\le\delta.
 \tag{6.1}
-$$
+```
 
 The random shift chosen for face references need not be the coarea shift
 from Section 69. Use the latter's real phase bins of width at most
-$\epsilon$. Modulo $\pi/3$, each such bin meets at most two of our
+$`\epsilon`$. Modulo $`\pi/3`$, each such bin meets at most two of our
 equal-circle bins. Its train count is therefore at most
-$2\max_jN_j$. The train-crossing graph is simple, so after the
-$O_\epsilon(D)$ coarea deletions, its edge count is at most
+$`2\max_jN_j`$. The train-crossing graph is simple, so after the
+$`O_\epsilon(D)`$ coarea deletions, its edge count is at most
 
-$$
+```math
 (2\max_j N_j)T\le6\pi\delta D^2+o(D^2).
-$$
+```
 
-Since $\delta$ is arbitrary, $R_4=o(D^2)$, contrary to the Type-II
+Since $`\delta`$ is arbitrary, $`R_4=o(D^2)`$, contrary to the Type-II
 positive limit. This proves AR.1. □
 
 ## 7. A forced bounded-degree direction-frustration bank
 
 The finite phase-bank proof applies without (1.1). Only the bound on the
-number of direction-bad chambers changes. Let $B_{M,L,\eta}$ be their
+number of direction-bad chambers changes. Let $`B_{M,L,\eta}`$ be their
 number. The coarea argument gives
 
-$$
+```math
 \Delta_2\le60\pi\liminf_D\frac{B_{M,L,\eta}}{D}
  +60\pi\left(\frac{5\pi}{M}+\frac{2\pi}{L}
                     +\frac{4\pi\eta}{\epsilon}\right)
  +72\pi L\epsilon.
 \tag{7.1}
-$$
+```
 
 To justify the liminf, apply the finite inequality on a subsequence
-attaining it, retaining the Type-II limits. Choose fixed $M,L$, then
-$\epsilon$, then $\eta$, so the last two terms total less than
-$\Delta_2/2$. These constants do not depend on the source sequence.
+attaining it, retaining the Type-II limits. Choose fixed $`M,L`$, then
+$`\epsilon`$, then $`\eta`$, so the last two terms total less than
+$`\Delta_2/2`$. These constants do not depend on the source sequence.
 Consequently
 
-$$
+```math
 \liminf_D B_{M,L,\eta}/D\ge\frac{\Delta_2}{120\pi}
  =\frac1{240\sqrt3}.
 \tag{7.2}
-$$
+```
 
-Thus eventually at least $D/(480\sqrt3)$ **actual bounded-degree
+Thus eventually at least $`D/(480\sqrt3)`$ **actual bounded-degree
 chambers** have a fixed positive reduced-phase mismatch and each pays a
 fixed positive residual. This is not merely a persistent large-face tail.
 The corresponding effective diameter threshold is not supplied.
@@ -323,11 +323,11 @@ The corresponding effective diameter threshold is not supplied.
 The constants can be chosen once for all Type-II sequences. For example,
 take `M=L=100000`,
 
-$$
+```math
 n=\left\lceil1000\pi^2L/\Delta_2\right\rceil,
 \qquad \epsilon=\pi/(3n),
 \qquad \eta=\Delta_2\epsilon/(3000\pi^2).
-$$
+```
 
 The high-node error is `420pi^2/100000`; the other two terms in (7.1)
 are at most `0.08Delta_2` and `0.024Delta_2`. Using only `3<pi<4` and
@@ -335,11 +335,11 @@ are at most `0.08Delta_2` and `0.024Delta_2`. Using only `3<pi<4` and
 The fixed-degree compactness threshold is independent of the source.
 Thus the same universal, nonexplicit constant
 
-$$
+```math
 \boxed{\kappa_{\rm fr}
  :=\frac{\sigma_{100000}(\eta)}{240\sqrt3}>0}
 \tag{7.3}
-$$
+```
 
 satisfies `liminf R_F/D >= kappa_fr` on **every** canonical full-core
 Type-II sequence. No effective numerical estimate for `sigma` or diameter
@@ -348,30 +348,30 @@ threshold is asserted.
 Substitute immediately into the exact population identity. Strict lattice
 comparison gives
 
-$$
+```math
 \delta_F+E_4+a_0R_F<c_0P_F+a_0Z_{\rm ext},
 \qquad c_0=a_0/2.
 \tag{7.4}
-$$
+```
 
 Consequently
 
-$$
+```math
 \limsup_D\left[
 \frac{\delta_F+E_4-a_0Z_{\rm ext}}{D}\right]
 \le c_0\pi-a_0\kappa_{\rm fr}.
 \tag{7.5}
-$$
+```
 
 This spends the new residual on the actual force-hull population budget;
 it does not supply the missing strict competitor.
 
-Put $K=\max(M,L+1)$. Each chamber uses at most $K$ boundary vertices.
+Put $`K=\max(M,L+1)`$. Each chamber uses at most $`K`$ boundary vertices.
 The triangle-free contact graph has degree at most five; an augmented
 loaded hull vertex has at most three contact neighbors and two added hull
 sides, hence augmented degree at most five as well. Each boundary source
 vertex meets at most five augmented faces. Greedy selection therefore
-gives at least $B_{M,L,\eta}/(5K)$ pairwise boundary-vertex-disjoint
+gives at least $`B_{M,L,\eta}/(5K)`$ pairwise boundary-vertex-disjoint
 direction-frustrated chambers. Their assigned isolate populations also
 remain disjoint by the unique chamber assignment, including source points
 assigned on an added hull chord. No contact or stress activation follows

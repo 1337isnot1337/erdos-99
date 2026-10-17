@@ -16,34 +16,34 @@
 
 Write
 
-$$
+```math
 m=q-2=ru,
 \qquad r=2^k,
 \qquad u\text{ odd}.
-$$
+```
 
 Let `h(T)` be the minimal polynomial of the P1 trace
 
-$$
+```math
 Y=z+z^{-1}=2\cos\delta,
-$$
+```
 
 and
 
-$$
+```math
 M(Z)=Z^{\deg h}h(Z+Z^{-1})
-$$
+```
 
 the reciprocal minimal polynomial of the physical root `z=e^{i\delta}`.
 
 The P1 Littlewood closure gives
 
-$$
+```math
 M\mid P,
 \qquad
 \overline P=S_m=(Z+1)^{r-1}S_u(Z)^r.
 \tag{EC.1}
-$$
+```
 
 Thus every nontrivial odd-order irreducible factor of `S_u` is available in `bar P` with exponent exactly `r`.
 
@@ -52,41 +52,46 @@ SR2/OR1 show that, except for two explicitly isolated residue types, a local tra
 ### Main theorem EC
 
 1. If
-   $$
+   ```math
    r\ge2,
-   $$
+   
+   ```
    then P1 is impossible for every odd part `u`.
 
 2. If
-   $$
+   ```math
    r=1
-   $$
+   
+   ```
    and `9` does not divide `u`, then P1 is impossible.
 
 3. Therefore every surviving P1 candidate must satisfy
-   $$
+   ```math
    \boxed{m=q-2\text{ odd and }9\mid m.}
    \tag{EC.2}
-   $$
+   
+   ```
 
 4. In that remaining case the physical reciprocal minimal polynomial has exact degree six and exact mod-two reduction
-   $$
+   ```math
    \boxed{
    \deg M=6,
    \qquad
    \overline M(Z)=\Phi_9(Z)=Z^6+Z^3+1.
    }
    \tag{EC.3}
-   $$
+   
+   ```
    Equivalently
-   $$
+   ```math
    \boxed{
    \deg h=3,
    \qquad
    \overline h(T)=T^3+T+1.
    }
    \tag{EC.4}
-   $$
+   
+   ```
 
 5. PR #153 shows the characteristic-zero factor `M` is noncyclotomic.  Thus the only P1 escape is a **noncyclotomic reciprocal sextic** reducing to `Phi_9` modulo two and dividing the sparse P1 polynomial `F_m` for an odd multiple `m` of nine.
 
@@ -98,54 +103,54 @@ This is a finite-degree endpoint, independent of `m`.
 
 Let `q(T)` be an irreducible trace factor over `F_2` associated with a nontrivial odd-order root `xi`, modulo inversion.  Let
 
-$$
+```math
 f=\deg q.
-$$
+```
 
 The characteristic-two identity
 
-$$
+```math
 C_u(Z+Z^{-1})=Z^u+Z^{-u}
 =Z^{-u}(Z^u+1)^2
-$$
+```
 
 shows that every nontrivial trace root occurs with multiplicity exactly two in `C_u(T)`.  The trace map
 
-$$
+```math
 Z\mapsto Z+Z^{-1}
-$$
+```
 
 is étale at every nontrivial odd-order residue root, since
 
-$$
+```math
 1-Z^{-2}\ne0.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{q(T)^2\parallel C_u(T).}
 \tag{1.1}
-$$
+```
 
 Because
 
-$$
+```math
 G_{ru}(T)\equiv C_u(T)^r\pmod2,
-$$
+```
 
 the complete trace cluster above `q` has mod-two multiplicity
 
-$$
+```math
 \boxed{2r}
 \tag{1.2}
-$$
+```
 
 and total degree
 
-$$
+```math
 2rf.
-$$
+```
 
 ---
 
@@ -153,34 +158,34 @@ $$
 
 Assume first
 
-$$
+```math
 r\ge2
-$$
+```
 
 and the residue order is not three.
 
 SR2 proves that every `Q_2`-irreducible factor in this trace cluster has degree at least
 
-$$
+```math
 2rf.
 \tag{2.1}
-$$
+```
 
 But Section 1 shows that the whole cluster itself has total degree exactly `2rf`.  Therefore the cluster is one local irreducible factor and its reduction is exactly
 
-$$
+```math
 \boxed{q(T)^{2r}.}
 \tag{2.2}
-$$
+```
 
 This is stronger than a degree lower bound: occurrence of the residue block forces **all `2r` copies** of its trace factor into the local factor.
 
 For `r=1`, OR1 gives the identical conclusion
 
-$$
+```math
 \boxed{q(T)^2}
 \tag{2.3}
-$$
+```
 
 for every residue order other than `3` and `9`.
 
@@ -190,44 +195,44 @@ for every residue order other than `3` and `9`.
 
 Let
 
-$$
+```math
 Q_q(Z):=Z^f q(Z+Z^{-1}).
-$$
+```
 
 Over `F_2`, `Q_q` is the reciprocal lift of the trace orbit.  Depending on whether inversion lies in the Frobenius orbit of the underlying odd root, `Q_q` is either irreducible or the product of two reciprocal-conjugate irreducibles.  In either case it is squarefree, because the trace map is étale at the nontrivial roots.
 
 If a local factor of `h` reduces as
 
-$$
+```math
 q(T)^{2r},
-$$
+```
 
 then the corresponding factor of the reciprocal lift `M` reduces as
 
-$$
+```math
 \boxed{Q_q(Z)^{2r}.}
 \tag{3.1}
-$$
+```
 
 Thus **every irreducible reciprocal residue factor occurring in `Q_q` appears in `bar M` with exponent `2r`.**
 
 But EC.1 gives
 
-$$
+```math
 \overline M\mid S_m=(Z+1)^{r-1}S_u^r.
-$$
+```
 
 Every nontrivial odd-order factor of `S_u` occurs on the right with exponent exactly
 
-$$
+```math
 r.
-$$
+```
 
 Therefore
 
-$$
+```math
 2r>r
-$$
+```
 
 is an immediate contradiction.
 
@@ -249,9 +254,9 @@ PR #152 proves that the zero trace cluster, equivalently the reciprocal residue 
 
 PR #155 O3X proves that the order-three reciprocal block
 
-$$
+```math
 Z^2+Z+1
-$$
+```
 
 never occurs either.  Its proof treats both parities:
 
@@ -267,10 +272,10 @@ This proves EC items 1-3.
 
 In particular:
 
-$$
+```math
 \boxed{m\text{ even}\Longrightarrow\text{P1 impossible}.}
 \tag{4.1}
-$$
+```
 
 This is a complete parity-class closure, with no restriction on the odd part of `m`.
 
@@ -280,30 +285,30 @@ This is a complete parity-class closure, with no restriction on the odd part of 
 
 Now let
 
-$$
+```math
 r=1,
 \qquad m=u\text{ odd}.
-$$
+```
 
 The Littlewood reduction is squarefree:
 
-$$
+```math
 \overline P=S_m.
-$$
+```
 
 Sections 3-4 eliminate every residue order except nine.  If
 
-$$
+```math
 9\nmid m,
-$$
+```
 
 then `S_m` has no primitive ninth-root factor, so `bar M` would have no nonconstant factor.  This is impossible.
 
 Hence
 
-$$
+```math
 \boxed{9\mid m.}
-$$
+```
 
 This proves EC.2.
 
@@ -313,51 +318,51 @@ This proves EC.2.
 
 For odd `m` divisible by nine, the primitive ninth roots occur in `S_m` exactly once.  Over `F_2`,
 
-$$
+```math
 \boxed{
 \Phi_9(Z)=Z^6+Z^3+1
 }
 \tag{6.1}
-$$
+```
 
 is irreducible, because
 
-$$
+```math
 \operatorname{ord}_9(2)=6.
-$$
+```
 
 Its trace polynomial is
 
-$$
+```math
 \boxed{q_9(T)=T^3+T+1.}
 \tag{6.2}
-$$
+```
 
 Indeed
 
-$$
+```math
 Z^3q_9(Z+Z^{-1})=Z^6+Z^3+1.
-$$
+```
 
 Every other irreducible factor of `S_m` belongs to a residue order already excluded.  Since `M` is nonconstant and `bar M|S_m`, the only possibility is
 
-$$
+```math
 \boxed{\overline M=\Phi_9.}
-$$
+```
 
 Reduction preserves the degree of a monic polynomial.  Hence
 
-$$
+```math
 \deg M=6,
 \qquad
 \deg h=3,
-$$
+```
 
 and the trace reduction is exactly
 
-$$
+```math
 \overline h=q_9.
-$$
+```
 
 This proves EC.3-EC.4.
 
@@ -367,9 +372,9 @@ This proves EC.3-EC.4.
 
 PR #153 classifies every cyclotomic factor of the P1 reciprocal polynomial
 
-$$
+```math
 F_m(Z)=Z^{2m}+4Z^{m+1}-6Z^m+4Z^{m-1}+1.
-$$
+```
 
 The only cyclotomic factor is `Phi_6`, and only when `6|m`.  Our remaining branch has `m` odd, so `6` does not divide `m`; in fact `F_m` has no cyclotomic factor at all.
 
@@ -380,13 +385,10 @@ The entire P1 endpoint is now reduced to:
 > `m` is an odd multiple of nine and `F_m` has a noncyclotomic reciprocal irreducible sextic factor `M` such that
 > 
 
-$$
-
+```math
 > \overline M=\Phi_9\pmod2
 > 
-$$
-
-
+```
 > and whose physical unit-circle root lies in the P1 arc `0<arg z<pi/m`.
 
 This is much smaller than the previous arbitrary-degree factor problem.
@@ -401,24 +403,24 @@ There are several concrete ways to attack the sextic endpoint.
 
 Write
 
-$$
+```math
 h(T)=T^3+aT^2+bT+c,
-$$
+```
 
 with
 
-$$
+```math
 a\equiv0,
 \quad b\equiv1,
 \quad c\equiv1
 \pmod2.
-$$
+```
 
 Since
 
-$$
+```math
 h\mid G_m(T)=C_m(T)+4T-6,
-$$
+```
 
 reduce the Chebyshev recurrence modulo `h`.  For `m\equiv0 mod9`, prove no integral cubic with the displayed parity can make the remainder vanish while containing the distinguished P1 real root near `2`.
 
@@ -426,15 +428,15 @@ reduce the Chebyshev recurrence modulo `h`.  For `m\equiv0 mod9`, prove no integ
 
 PR #153 gives
 
-$$
+```math
 F_m(Z)\equiv(Z^{m-1}+1)(Z^{m+1}+1)\pmod3.
-$$
+```
 
 Classify reciprocal sextic divisors of this product compatible with
 
-$$
+```math
 M\equiv\Phi_9\pmod2.
-$$
+```
 
 ### C. Unit-circle cubic trace geometry
 

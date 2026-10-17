@@ -33,15 +33,15 @@ multiplicity is an edge-side statement, not a vertex-simple-walk statement.
 Therefore for any selected subset of `G` outer-face occurrences, if `E` distinct
 physical edges occur in that subset and the whole graph has `B_o` outer bridges, then
 
-$$
+```math
 G\le E+B_o,
-$$
+```
 
 so
 
-$$
+```math
 E\ge G-B_o.
-$$
+```
 
 The bridge deduction in (BD.3) is occurrence-safe.  It is stronger than dividing by
 two because nonbridges cannot be duplicated at all.
@@ -53,42 +53,42 @@ two because nonbridges cannot be duplicated at all.
 The hostile-audited bridge-subtracted theorem gives for the full bounded-face union
 `U`
 
-$$
+```math
 B_o\le {b-2\sqrt{\pi\operatorname{area}(U)}\over2}.
-$$
+```
 
 In the canonical no-container full-core Type-II branch, the same hostile audit already
 verified the area sandwich
 
-$$
+```math
 A_4\le\operatorname{area}(U)\le\operatorname{area}(F),
-$$
+```
 
 with both endpoints equal to
 
-$$
+```math
 {\pi\over4}D^2-o(D^2).
-$$
+```
 
 Thus
 
-$$
+```math
 2\sqrt{\pi\operatorname{area}(U)}
 =\pi D-o(D).
-$$
+```
 
 The distinguished outer-route partition uses the actual full-core outer-face walk, so
 
-$$
+```math
 b=\operatorname{per}(F)+d_{out}
 =\pi D+d_{out}+o(D).
-$$
+```
 
 Substitution gives exactly
 
-$$
+```math
 B_o\le {d_{out}\over2}+o(D).
-$$
+```
 
 No selected-cell area saturation is being assumed.  The scope is the full positive
 core, exactly where the bridge theorem's area premise is available.
@@ -100,34 +100,34 @@ core, exactly where the bridge theorem's area premise is available.
 The main directional-energy identity is finite on the same distinguished outer-route
 partition:
 
-$$
+```math
 d_{out}=\sum_{i,j}(1-\cos\theta_{i,j}).
-$$
+```
 
 Hence the number of bad occurrences at angular threshold `beta` is at most
 
-$$
+```math
 {d_{out}\over1-\cos\beta}.
-$$
+```
 
 Long-side routes carry at least `L_{>2}` total occurrences, so after removing bad
 occurrences there are at least
 
-$$
+```math
 G_\beta
 \ge L_{>2}-{d_{out}\over1-\cos\beta}
-$$
+```
 
 good occurrences.  Applying the physical bridge multiplicity bound to this same
 subset gives
 
-$$
+```math
 E_{tan}(\beta)
 \ge
 L_{>2}
 -\left({1\over1-\cos\beta}+{1\over2}\right)d_{out}
 -o(D).
-$$
+```
 
 There is no mismatch between an all-outer-face bridge count and a selected long-side
 occurrence subset: using the total `B_o` only weakens the selected-subset estimate.
@@ -142,18 +142,18 @@ exactly two outer-face occurrences.  Every remaining occurrence belongs to a
 nonbridge, and distinct remaining occurrences correspond to distinct physical edges.
 Therefore
 
-$$
+```math
 \boxed{
 E_{tan}^{nb}(\beta)
 \ge
 L_{>2}-{d_{out}\over1-\cos\beta}-2B_o.
 }
 \tag{BA.1}
-$$
+```
 
 Using `2B_o<=d_out+o(D)`,
 
-$$
+```math
 \boxed{
 E_{tan}^{nb}(\beta)
 \ge
@@ -162,16 +162,16 @@ L_{>2}
 -o(D).
 }
 \tag{BA.2}
-$$
+```
 
 At `beta=pi/8`, the current low-`t` constants imply conservatively
 
-$$
+```math
 \boxed{
 E_{tan}^{nb}(\pi/8)>0.3956D-o(D).
 }
 \tag{BA.3}
-$$
+```
 
 Every edge in this cohort has the outer face on one side and a genuine bounded face on
 the other.  Thus it is automatically one of:
@@ -186,16 +186,16 @@ This is a physical partition; bridges have already been removed.
 The exact threshold needed merely to keep the nonbridge long-side count at least the
 companion tooth count `N_2-15 d_out` is
 
-$$
+```math
 {1\over1-\cos\beta}+1\le15,
-$$
+```
 
 or equivalently
 
-$$
+```math
 \boxed{\cos\beta\le {13\over14}.}
 \tag{BA.4}
-$$
+```
 
 The convenient choice `beta=pi/8` satisfies this with room.
 

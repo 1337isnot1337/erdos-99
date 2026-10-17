@@ -16,16 +16,16 @@
 
 The current terminal FREE package has treated the all-phase surplus endpoint
 
-$$
+```math
 \mu_* = 1.953262849540479\ldots
-$$
+```
 
 as a possible limiting face and then derived increasingly rigid structure under
 `mu_D -> mu_*`. That face is not attainable. Combining the endpoint stability ledger
 with the already hostile-audited outer-train directional-energy theorem gives an
 explicit positive gap:
 
-$$
+```math
 \boxed{
 \liminf \mu_D
 \ge
@@ -34,7 +34,7 @@ $$
 1.954462849540479\ldots .
 }
 \tag{OG.1}
-$$
+```
 
 No new deformation theorem is used. The contradiction is an energy-capacity loop.
 Near the old endpoint the train crossing measure forces almost all atomic train mass
@@ -57,93 +57,93 @@ floating optimization of the same inequalities loses positivity near
 
 Put
 
-$$
+```math
 \Delta_2:=\frac{\pi}{2\sqrt3},
 \qquad
 s_2:=\sqrt{\Delta_2},
 \qquad
 g:=0.007707,
-$$
+```
 
-$$
+```math
 A_0:=2s_2+g,
 \qquad
 M_*:=4s_2+2g=2A_0,
-$$
+```
 
 and
 
-$$
+```math
 \mu_*:=\frac\pi2+\frac{2s_2}{5}+\frac g5
 =1.953262849540479\ldots .
 \tag{1.1}
-$$
+```
 
 Let
 
-$$
+```math
 \varepsilon_0:=0.0012=\frac{3}{2500}.
 \tag{1.2}
-$$
+```
 
 Assume for contradiction that a terminal FREE subsequence satisfies
 
-$$
+```math
 \limsup \mu_D\le\mu_*+\varepsilon_0.
 \tag{1.3}
-$$
+```
 
 Use the notation of the terminal surplus-stability theorem:
 
-$$
+```math
 \delta:=\lim\frac{b-P_F}{D},
 \qquad
 r:=\lim\frac{Q-f}{D},
 \qquad
 a:=\lim\left(\frac{\tau_D}{D}-\left(\frac\pi2+g\right)\right),
-$$
+```
 
 where `P_F=per(F)` and
 
-$$
+```math
 \tau_D=T-2\sqrt{R_4}.
-$$
+```
 
 After passing to a further subsequence, all these limits exist and are nonnegative.
 The exact nonnegative endpoint decomposition gives
 
-$$
+```math
 m+\frac25(r+\delta)+\frac15a\le\varepsilon_0.
 \tag{1.4}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 a\le0.006,
 \qquad
 \delta\le0.003.}
 \tag{1.5}
-$$
+```
 
 The same theorem gives the bounded endpoint-occurrence density
 
-$$
+```math
 \boxed{
 B:=\lim\frac{Q+4f}{D}
 =M_*+2a-\delta.}
 \tag{1.6}
-$$
+```
 
 Terminality also gives
 
-$$
+```math
 \frac{P_F}{D}\to\pi,
 \qquad
 \frac bD\to\pi+\delta.
 \tag{1.7}
-$$
+```
 
 ---
 
@@ -151,85 +151,85 @@ $$
 
 Let
 
-$$
+```math
 C:=\lim\frac{T-q/2}{D}.
-$$
+```
 
 Since
 
-$$
+```math
 \frac{\sqrt{R_4}}D\to s_2,
 \qquad
 \frac qD\to\pi,
 \qquad
 \frac{\tau_D}{D}\to\frac\pi2+g+a,
-$$
+```
 
 we have
 
-$$
+```math
 \boxed{C=A_0+a\le A_0+0.006.}
 \tag{2.1}
-$$
+```
 
 Let `A` be the total absolute atomic train mass in the limiting projective train-phase
 measure. Audited §142 gives the exposed-hull bound
 
-$$
+```math
 A\le C.
 \tag{2.2}
-$$
+```
 
 Group the atoms into exact projective `pi/3` orbits. If `M_j` is the mass of one orbit
 and `E_j` its strict-rhombus crossing mass, then
 
-$$
+```math
 E_j\le\frac{M_j^2}{4},
 \qquad
 \sum_jE_j=\Delta_2.
 \tag{2.3}
-$$
+```
 
 Thus
 
-$$
+```math
 A\ge2s_2.
 \tag{2.4}
-$$
+```
 
 Let `M=max_j M_j` and let
 
-$$
+```math
 R:=A-M
-$$
+```
 
 be the total atomic mass outside a dominant orbit. From
 
-$$
+```math
 4\Delta_2
 \le\sum_jM_j^2
 \le MA
-$$
+```
 
 we get
 
-$$
+```math
 M\ge\frac{4\Delta_2}{A},
 \qquad
 R\le A-\frac{4\Delta_2}{A}.
 \tag{2.5}
-$$
+```
 
 The right side is increasing for `A>0`. Using `A<=C<=A_0+0.006`,
 
-$$
+```math
 R
 \le
 A_0+0.006-
 \frac{4\Delta_2}{A_0+0.006}
 <0.02732.
 \tag{2.6}
-$$
+```
 
 The exact rational certificate proves the final strict inequality.
 
@@ -246,30 +246,30 @@ near-disk subsequence. After retaining outer occurrences under loaded-hull side-
 capacity, at most `delta` occurrence mass is lost. Hence the retained dominant-orbit
 mass is at least
 
-$$
+```math
 (K-\delta)_+.
-$$
+```
 
 Its actual selected route directional energy is a sub-sum of the total outer detour,
 so
 
-$$
+```math
 \boxed{
 \delta\ge F((K-\delta)_+),
 \qquad
 F(z):=z-6\sin(z/6).}
 \tag{3.1}
-$$
+```
 
 The function `F` is increasing on `[0,pi]`. At
 
-$$
+```math
 z_0:=0.87
-$$
+```
 
 the alternating Taylor bound for sine gives the fully rational estimate
 
-$$
+```math
 \begin{aligned}
 F(z_0)
 &\ge
@@ -278,23 +278,23 @@ F(z_0)
 &>0.003.
 \end{aligned}
 \tag{3.2}
-$$
+```
 
 Together with (1.5), equations (3.1)--(3.2) imply
 
-$$
+```math
 \boxed{K\le\delta+0.87.}
 \tag{3.3}
-$$
+```
 
 Every residual atomic train contributes at most two outer terminal occurrences.
 Therefore the total outer occurrence density carried by all atomic trains satisfies
 
-$$
+```math
 \boxed{
 K_{\rm at}\le\delta+0.87+2R.}
 \tag{3.4}
-$$
+```
 
 ---
 
@@ -309,36 +309,36 @@ Let
 
 The exact endpoint multigraph identities are
 
-$$
+```math
 2E_{BB}+E_{BO}=Q+4f,
 \qquad
 E_{BO}+2L_O=b.
 \tag{4.1}
-$$
+```
 
 An atomic train which is not B--B consumes at least one atomic outer occurrence.
 Consequently the atomic B--B train mass is at least
 
-$$
+```math
 A-K_{\rm at}.
-$$
+```
 
 Since this is a subpopulation of all B--B trains,
 
-$$
+```math
 \liminf\frac{E_{BB}}D\ge A-K_{\rm at}.
 \tag{4.2}
-$$
+```
 
 Write
 
-$$
+```math
 e:=\lim\frac{E_{BO}}D
-$$
+```
 
 after another harmless subsequence. From (1.6), (4.1), (4.2), `A>=2s_2`, and (3.4),
 
-$$
+```math
 \begin{aligned}
 e
 &=B-2\lim\frac{E_{BB}}D\\
@@ -347,11 +347,11 @@ e
 &\le 2g+2a+\delta+1.74+4R.
 \end{aligned}
 \tag{4.3}
-$$
+```
 
 Use the second identity in (4.1) and (1.7). The `delta` term cancels:
 
-$$
+```math
 \begin{aligned}
 \ell
 :=\lim\frac{L_O}{D}
@@ -361,7 +361,7 @@ $$
 \frac\pi2-g-a-0.87-2R.}
 \end{aligned}
 \tag{4.4}
-$$
+```
 
 Thus the near-endpoint argument does not need exact atomlessness of the outer walk.
 The small detour budget itself forces a large O--O population.
@@ -376,16 +376,16 @@ corresponding hull-side length. The total endpoint-weight loss is at most the to
 outer detour `delta D`. If the retained endpoint weights of one O--O train are `x,y`,
 retain that train with pair weight `min(x,y)`. Then
 
-$$
+```math
 1-\min(x,y)\le(1-x)+(1-y),
-$$
+```
 
 so total retained pair-weight loss is also at most `delta D`.
 
 Let `p` be the limiting retained O--O pair mass per `D`. Equations (4.4), (1.5), and
 (2.6) give
 
-$$
+```math
 \begin{aligned}
 p
 &\ge \ell-\delta\\
@@ -393,14 +393,14 @@ p
 &>0.629449326794896\ldots .
 \end{aligned}
 \tag{5.1}
-$$
+```
 
 Hence the safe rational floor
 
-$$
+```math
 \boxed{p>0.6294.}
 \tag{5.2}
-$$
+```
 
 The retained endpoint measures are dominated by the physical loaded-hull perimeter
 measure `(1/2)dtheta`, exactly as in the hostile-audited complement O--O energy theorem.
@@ -416,20 +416,20 @@ noncrossing.
 
 By (5.2), one sector has retained pair mass at least
 
-$$
+```math
 \boxed{
 m_0:=\frac{0.6294}{3}=0.2098.}
 \tag{6.1}
-$$
+```
 
 The hostile-audited near-antipodal capacity theorem says that a noncrossing O--O
 sector family of retained pair mass `m<=pi/6` pays terminal directional energy at
 least
 
-$$
+```math
 E(m):=2m-2\sin m.
 \tag{6.2}
-$$
+```
 
 If the actual sector mass exceeds `pi/6`, retain only `pi/6`; this only increases the
 available lower bound. Since `E` is increasing on `[0,pi/6]`, every sector with mass at
@@ -437,7 +437,7 @@ least `m_0` pays at least `E(m_0)`.
 
 Again using the alternating Taylor bound,
 
-$$
+```math
 \begin{aligned}
 E(m_0)
 &\ge
@@ -446,21 +446,21 @@ E(m_0)
 &>0.003.
 \end{aligned}
 \tag{6.3}
-$$
+```
 
 This energy is carried by selected outer terminal edge occurrences, hence is a sub-sum
 of the actual outer route directional energy. All outer route directional energies sum
 exactly to
 
-$$
+```math
 \delta D.
-$$
+```
 
 Therefore (6.3) forces
 
-$$
+```math
 \delta>0.003,
-$$
+```
 
 contradicting (1.5).
 

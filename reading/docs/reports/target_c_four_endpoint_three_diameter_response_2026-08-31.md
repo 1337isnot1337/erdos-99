@@ -42,56 +42,56 @@ three diameter edges on four force-hull vertices
 Theorem C30 gives, for a normalized stress whose positive diameter endpoints span two
 dimensions,
 
-$$
+```math
 \nu_-(\Omega_s)\le\operatorname{rank}L_{H_s}-2.
-$$
+```
 
 For a three-edge diameter forest, the only possible negative mode is the scalar mode
-$\rho_s-1$, where
+$`\rho_s-1`$, where
 
-$$
+```math
 \rho_s=\sum_{h\in H_s}\beta_hR_{\mathrm{eff}}^{C_s}(h)-2.
-$$
+```
 
-The first unresolved endpoint is therefore the case $|H_s|=3$ and
-$|V(H_s)|=4$. The theorem below proves that this case has no negative mode, and
+The first unresolved endpoint is therefore the case $`|H_s|=3`$ and
+$`|V(H_s)|=4`$. The theorem below proves that this case has no negative mode, and
 that its response defect is strictly positive in the triangle-free setting.
 
 ## 2. Strongest genuinely new audited theorem
 
 ### Theorem C31 (four-endpoint three-diameter response positivity)
 
-Let $A$ be a diametrally saturated source with $D>1$, and let
-$s=(\alpha,\beta)$ be a normalized KKT stress. Let $G_s=(V_s,C_s)$ be its
-connected positive unit-contact graph, let $H_s$ be its positive diameter support,
-and put $B=V(H_s)$. Assume that $H_s$ is a three-edge forest and
+Let $`A`$ be a diametrally saturated source with $`D>1`$, and let
+$`s=(\alpha,\beta)`$ be a normalized KKT stress. Let $`G_s=(V_s,C_s)`$ be its
+connected positive unit-contact graph, let $`H_s`$ be its positive diameter support,
+and put $`B=V(H_s)`$. Assume that $`H_s`$ is a three-edge forest and
 
-$$
+```math
 |B|=4,\qquad \operatorname{aff}B\text{ is two-dimensional}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{\Omega_s=L_{C_s}(\alpha)-L_{H_s}(\beta)\succeq0.}
 \tag{C31.1}
-$$
+```
 
-If, in addition, $A$ is triangle-free, then
+If, in addition, $`A`$ is triangle-free, then
 
-$$
+```math
 \boxed{\ker\Omega_s=\operatorname{span}\{\mathbf1,x,y\},
 \qquad \operatorname{rank}\Omega_s=|V_s|-3.}
 \tag{C31.2}
-$$
+```
 
 Equivalently, in the C30 three-edge scalar notation,
 
-$$
+```math
 \boxed{\rho_s\le1\quad\text{in general},\qquad
 \rho_s<1\quad\text{for a triangle-free source}.}
 \tag{C31.3}
-$$
+```
 
 ### Scope
 
@@ -104,163 +104,163 @@ diameter, and contact-separation hypotheses is hidden in (C31.1).
 ### Proof
 
 Because a three-edge forest with four non-isolated endpoints is a tree, all four
-points of $B$ are vertices of their strictly convex quadrilateral in cyclic order.
-Let $I=V_s\setminus B$, let $\Lambda$ be the positive contact Dirichlet
-response on $B$, and write
+points of $`B`$ are vertices of their strictly convex quadrilateral in cyclic order.
+Let $`I=V_s\setminus B`$, let $`\Lambda`$ be the positive contact Dirichlet
+response on $`B`$, and write
 
-$$
+```math
 M=\Lambda-L_H.
-$$
+```
 
 The force-hull response identity gives
 
-$$
+```math
 M\mathbf1=0,\qquad MP_B=0.
 \tag{C31.4}
-$$
+```
 
-Since $\mathbf1,x,y$ are independent on a two-dimensional four-point set,
-$\operatorname{rank}M\le1$. Let $a\ne0$ span the orthogonal complement of
-$\operatorname{span}\{\mathbf1,x,y\}$. Thus
+Since $`\mathbf1,x,y`$ are independent on a two-dimensional four-point set,
+$`\operatorname{rank}M\le1`$. Let $`a\ne0`$ span the orthogonal complement of
+$`\operatorname{span}\{\mathbf1,x,y\}`$. Thus
 
-$$
+```math
 M=\lambda aa^{\mathsf T}
 \tag{C31.5}
-$$
+```
 
-for some scalar $\lambda$. The affine-dependence coefficients of a strictly convex
+for some scalar $`\lambda`$. The affine-dependence coefficients of a strictly convex
 quadrilateral alternate in sign around its boundary, so
 
-$$
+```math
 a_i a_{i+1}<0
 \tag{C31.6}
-$$
+```
 
 for every cyclically adjacent pair.
 
-Only three of the four boundary sides can belong to the three-edge support $H_s$.
-Choose a boundary side $ij\notin H_s$. A Kron reduction of a positive Laplacian
+Only three of the four boundary sides can belong to the three-edge support $`H_s`$.
+Choose a boundary side $`ij\notin H_s`$. A Kron reduction of a positive Laplacian
 has nonpositive off-diagonal entries, so
 
-$$
+```math
 M_{ij}=\Lambda_{ij}\le0.
-$$
+```
 
-By (C31.5)--(C31.6), this forces $\lambda\ge0$. Therefore $M\succeq0$, and
+By (C31.5)--(C31.6), this forces $`\lambda\ge0`$. Therefore $`M\succeq0`$, and
 the Schur congruence
 
-$$
+```math
 \Omega_s\sim_{\mathrm{cong}}
 M\oplus L_{C_s}[I,I]
 \tag{C31.7}
-$$
+```
 
 proves (C31.1), because the interior block is positive definite.
 
 It remains to prove strictness of the rank-one response defect in the triangle-free
-case. Suppose, for contradiction, that $\lambda=0$, so $\Lambda=L_H$.
+case. Suppose, for contradiction, that $`\lambda=0`$, so $`\Lambda=L_H`$.
 
-First, no positive contact can join two points of $B$. A contact between a positive
-diameter pair is impossible because $D>1$. A contact on a non-diameter pair would
-make the corresponding off-diagonal entry of $\Lambda$ strictly negative, whereas
-the same entry of the tree Laplacian $L_H$ is zero.
+First, no positive contact can join two points of $`B`$. A contact between a positive
+diameter pair is impossible because $`D>1`$. A contact on a non-diameter pair would
+make the corresponding off-diagonal entry of $`\Lambda`$ strictly negative, whereas
+the same entry of the tree Laplacian $`L_H`$ is zero.
 
-Consider a connected component $K$ of $G_s[I]$, and let $T_K\subseteq B$ be
+Consider a connected component $`K`$ of $`G_s[I]`$, and let $`T_K\subseteq B`$ be
 the set of its boundary attachments. The inverse of the positive interior block on
 K is entrywise positive. Consequently, if K attaches to two distinct terminals i and
-j, its contribution to $\Lambda_{ij}$ is strictly negative. If $|T_K|\ge3$,
-every pair in $T_K$ would therefore be an edge of $H_s$, contradicting that
-$H_s$ is a tree. A one-terminal component is impossible by the harmonic maximum
+j, its contribution to $`\Lambda_{ij}`$ is strictly negative. If $`|T_K|\ge3`$,
+every pair in $`T_K`$ would therefore be an edge of $`H_s`$, contradicting that
+$`H_s`$ is a tree. A one-terminal component is impossible by the harmonic maximum
 principle C22: its vertices would all lie in the convex hull of one boundary point,
 and hence would coincide with that point despite carrying unit contacts. Thus every
 component has exactly two attachments, and those two terminals form an edge of
-$H_s$. Conversely, every edge of $H_s$ must be realized by at least one such
-component because $\Lambda_{ij}=(L_H)_{ij}<0$.
+$`H_s`$. Conversely, every edge of $`H_s`$ must be realized by at least one such
+component because $`\Lambda_{ij}=(L_H)_{ij}<0`$.
 
 Apply the same C22 maximum principle to one such component K. Its vertices lie on the
 segment joining its two terminals. Since K is connected by unit contacts and all
 points are unit-separated, a path from one terminal to the other forces
 
-$$
+```math
 D\in\mathbb N,
-$$
+```
 
 and K is exactly the straight chain of points at integer positions
-$1,2,\ldots,D-1$ between the terminals. Two different components attached to the
+$`1,2,\ldots,D-1`$ between the terminals. Two different components attached to the
 same terminal pair would contain two points at the same integer position and violate
 unit separation. Hence the whole positive contact support is the union of three
-straight unit chains, one replacing each edge of the tree $H_s$.
+straight unit chains, one replacing each edge of the tree $`H_s`$.
 
 The tree has a vertex b incident with two diameter edges to, say, i and j. Let
-$\theta$ be the angle between the rays $bp_i$ and $bp_j$. Since all source
+$`\theta`$ be the angle between the rays $`bp_i`$ and $`bp_j`$. Since all source
 distances are at most D,
 
-$$
+```math
 2D\sin(\theta/2)=|p_i-p_j|\le D,
 \qquad\text{so}\qquad \theta\le\frac\pi3.
 \tag{C31.8}
-$$
+```
 
 The first unit-chain neighbors of b on those two rays are themselves at distance
-$2\sin(\theta/2)\le1$. Unit separation gives the reverse inequality, so equality
+$`2\sin(\theta/2)\le1`$. Unit separation gives the reverse inequality, so equality
 holds. These two neighbors and b form a unit equilateral triangle, contrary to the
-triangle-free hypothesis. This contradiction proves $\lambda>0$.
+triangle-free hypothesis. This contradiction proves $`\lambda>0`$.
 
-Now $M$ has rank one and kernel exactly
-$\operatorname{span}\{\mathbf1,x,y\}$. The positive interior block in (C31.7) is
+Now $`M`$ has rank one and kernel exactly
+$`\operatorname{span}\{\mathbf1,x,y\}`$. The positive interior block in (C31.7) is
 positive definite. Its harmonic extension of the three boundary affine functions is
 the actual coordinate field, by the interior KKT equilibrium equations. Therefore the
 full stress matrix has exactly the affine kernel and rank stated in (C31.2).
 
 Finally, C30.1 identifies the third nonzero eigenvalue of the conjugated response as
-$\rho_s$. Semidefiniteness gives $\rho_s\le1$, and the absence of an additional
-kernel mode in (C31.2) gives $\rho_s<1$. $\square$
+$`\rho_s`$. Semidefiniteness gives $`\rho_s\le1`$, and the absence of an additional
+kernel mode in (C31.2) gives $`\rho_s<1`$. $`\square`$
 
 ## 3. Conditional C-I closure supplied by the theorem
 
 ### Corollary C31.1 (fully visible three-edge witness closes C-I)
 
 Let A be a contact-minimal, triangle-free global minimizer with a weak unit contact.
-Let $v$ be the strict weak-release velocity from the critical-cone theorem, and let
-$s$ be the direction-dependent second-order KKT stress supplied by C13. Assume
+Let $`v`$ be the strict weak-release velocity from the critical-cone theorem, and let
+$`s`$ be the direction-dependent second-order KKT stress supplied by C13. Assume
 
-$$
+```math
 H_s=H_*,\qquad |H_*|=3,\qquad |V(H_*)|=4,
 \tag{C31.9}
-$$
+```
 
-with $H_*$ a forest. Then this situation is impossible.
+with $`H_*`$ a forest. Then this situation is impossible.
 
 ### Proof
 
-Theorem C31 gives $\Omega_s\succeq0$ and its exact affine kernel. C13 gives
-$\operatorname{tr}(V^{\mathsf T}\Omega_sV)\le0$, so equality holds and every
-coordinate column of v lies in the affine kernel. Thus on $V_s$,
+Theorem C31 gives $`\Omega_s\succeq0`$ and its exact affine kernel. C13 gives
+$`\operatorname{tr}(V^{\mathsf T}\Omega_sV)\le0`$, so equality holds and every
+coordinate column of v lies in the affine kernel. Thus on $`V_s`$,
 
-$$
+```math
 v_i=Ap_i+t
-$$
+```
 
-for one linear map A and translation t. Let $S=(A+A^{\mathsf T})/2$. Since v is
+for one linear map A and translation t. Let $`S=(A+A^{\mathsf T})/2`$. Since v is
 critical, every positive diameter direction r satisfies
 
-$$
+```math
 r^{\mathsf T}Sr=0.
-$$
+```
 
 The three edges of a four-vertex diameter tree have three distinct projective
 directions. Two edges sharing an endpoint cannot be parallel: the same ray would
-repeat an endpoint and opposite rays would put two endpoints at distance $2D$.
+repeat an endpoint and opposite rays would put two endpoints at distance $`2D`$.
 Two disjoint diameter edges are crossing diagonals of the convex quadrilateral, hence
 are not parallel. A nonzero planar quadratic form has at most two projective zero
-directions, so $S=0$ and $A=\eta J$.
+directions, so $`S=0`$ and $`A=\eta J`$.
 
 By (C31.9), this is a common angular rate on every strong diameter chord. The canonical
 C7 finite-integration theorem then subtracts the common rigid rotation and produces a
 nearby same-D minimizer in which every weak active row is strict, contradicting the
-contact-minimal choice of A. $\square$
+contact-minimal choice of A. $`\square`$
 
-The qualification $H_s=H_*$ is explicit. C13 is direction-dependent and does not
+The qualification $`H_s=H_*`$ is explicit. C13 is direction-dependent and does not
 assert that its stress has maximal support. If a three-edge four-endpoint source
 survives outside Corollary C31.1, the remaining issue is therefore support selection,
 not a hidden negative response mode.
@@ -284,8 +284,8 @@ After C31 it is
     -> the one-mode response test remains open.
 ~~~
 
-In particular, the scalar inequality $\rho_s\le1$ is proved for every relevant
-three-edge forest with four endpoints, and strengthened to $\rho_s<1$ under the
+In particular, the scalar inequality $`\rho_s\le1`$ is proved for every relevant
+three-edge forest with four endpoints, and strengthened to $`\rho_s<1`$ under the
 triangle-free hypothesis. A fully diameter-visible C13 witness in this topology would
 close C-I by Corollary C31.1.
 
@@ -293,9 +293,9 @@ close C-I by Corollary C31.1.
 
 The next shortest C-I statement is:
 
-> **Three-edge support-selection lemma.** If $|H_*|=3$ and
-> $|V(H_*)|=4$, then the C13 second-order witness for a strict weak-release
-> direction can be chosen with $H_s=H_*$, or the zero-energy witness face has an
+> **Three-edge support-selection lemma.** If $`|H_*|=3`$ and
+> $`|V(H_*)|=4`$, then the C13 second-order witness for a strict weak-release
+> direction can be chosen with $`H_s=H_*`$, or the zero-energy witness face has an
 > integrable blocker preserving every row it supports.
 
 The first alternative invokes Corollary C31.1. The second would extend the C25 finite
@@ -308,7 +308,7 @@ is asserted here.
 | --- | --- | --- |
 | C31 response positivity | proved | Rank-one affine defect and a non-diameter quadrilateral side force its sign. |
 | C31 strict affine kernel in the triangle-free case | proved | Zero defect forces three straight diameter chains, whose branching creates a unit equilateral triangle. |
-| C31 scalar bound $\rho_s<1$ | proved | C30 identifies the scalar mode, and C31.2 excludes equality. |
+| C31 scalar bound $`\rho_s<1`$ | proved | C30 identifies the scalar mode, and C31.2 excludes equality. |
 | Corollary C31.1 | proved conditional implication | It assumes the direction-dependent stress has the full strong diameter support. |
 | C-I in all three-edge cases | not proved | C13 support selection and the five/six-endpoint cases remain. |
 | General KKT stress PSD | rejected | C31 is limited to a three-edge, four-endpoint response defect. |
@@ -320,7 +320,7 @@ is asserted here.
 | Two-edge crossing quadrilateral | Outside the theorem; it is the C23 case. |
 | Three-edge forest with five or six endpoints | Not silently included; C30 remains the active statement there. |
 | Three diameter edges forming a cycle on three endpoints | Outside the forest hypothesis; it is a Reuleaux-triple-type support. |
-| Zero-response chain tree without triangle-freeness | Not ruled out by the response sign alone; the forced branch angle is exactly $\pi/3$, explaining the strict hypothesis. |
+| Zero-response chain tree without triangle-freeness | Not ruled out by the response sign alone; the forced branch angle is exactly $`\pi/3`$, explaining the strict hypothesis. |
 | Uneven positive contact coefficients | Covered; only positivity of the contact Laplacian and its maximum principle are used. |
 | Independent scaffold or local jammed framework | Outside scope; the response is the actual source contact network. |
 
@@ -330,9 +330,9 @@ five or six endpoints, or maximal support for the direction-dependent stress.
 ## 8. Dependencies
 
 - docs/reports/target_c_three_edge_response_inertia_2026-08-31.md, Theorem C30:
-  Schur congruence, the affine eigenvalue count, and the scalar $\rho_s$ formula.
+  Schur congruence, the affine eigenvalue count, and the scalar $`\rho_s`$ formula.
 - docs/reports/target_c_force_polygon_2026-08-30.md, Theorem C11:
-  the actual contact Dirichlet response and $\Lambda P_B=L_HP_B$.
+  the actual contact Dirichlet response and $`\Lambda P_B=L_HP_B`$.
 - docs/reports/target_c_two_terminal_bridge_collapse_2026-08-31.md,
   Theorem C22: the reaction-free-domain maximum principle used on interior response
   components.

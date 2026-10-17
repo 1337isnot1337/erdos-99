@@ -89,9 +89,9 @@ contact graph. Let `C` be a positive-area compact convex chamber contained in
 `0<epsilon<=1/4`. Suppose `M` vertex-disjoint pairs `(x_i,y_i)` of actual
 contact-isolated source points satisfy
 
-$$
+```math
 x_i,y_i\in C_{-w},\qquad 1<|x_i-y_i|\le1+\epsilon.
-$$
+```
 
 Then at least `ceil(M/49)` of the `x_i` can move simultaneously, each by at most
 `epsilon` along its segment toward `y_i`, to first contact, with these properties:
@@ -164,9 +164,9 @@ its vertex position. No external contact or diameter load enters that component.
 Each internal contact is counted at both endpoints and contributes its weight
 times squared length one. The result is
 
-$$
+```math
 \sum_{e\text{ in the new component}}\alpha_e=0.
-$$
+```
 
 All weights are nonnegative, so every one vanishes. Restricting to the unchanged
 old core and old diameter pairs therefore gives an original normalized stress.
@@ -250,10 +250,10 @@ sources and not examples satisfying every C-II hypothesis.
 
 The script also certifies a different-first-blocker example:
 
-$$
+```math
 x=(0,0),\quad y=(21/20,0),\quad
 z=(7007/25000,24024/25000).
-$$
+```
 
 All three distances initially exceed one. Moving `x` horizontally toward `y`
 meets `z` at a time in `(1/300,1/250)`, before the proposed mate closes at

@@ -28,65 +28,65 @@ Use the following proof instead.
 
 Let
 
-$$
+```math
 M:=\#\{(x,y)\in X\times Y:x\ge y\},
 \qquad
 \epsilon:={M\over |X||Y|}\to0.
-$$
+```
 
 For each `x in X` define
 
-$$
+```math
 L(x):=\#\{y\in Y:y\le x\}.
-$$
+```
 
 Then exactly
 
-$$
+```math
 \sum_{x\in X}L(x)=M.
 \tag{A1.1}
-$$
+```
 
 Put `delta=sqrt(epsilon)` when `epsilon>0`. Markov gives
 
-$$
+```math
 \#\{x:L(x)>\delta|Y|\}
 \le {M\over\delta|Y|}
 =\delta|X|
 =o(|X|).
 \tag{A1.2}
-$$
+```
 
 Let
 
-$$
+```math
 X':=\{x\in X:L(x)\le\delta|Y|\}.
-$$
+```
 
 If `X'` is nonempty, choose
 
-$$
+```math
 x_*:=\max X'.
-$$
+```
 
 Then
 
-$$
+```math
 \#\{y\in Y:y\le x_*\}=L(x_*)\le\delta|Y|=o(|Y|).
-$$
+```
 
 Delete those `Y` values and put
 
-$$
+```math
 Y':=\{y\in Y:y>x_*\}.
-$$
+```
 
 We have deleted only `o(D)` elements from each side, and
 
-$$
+```math
 \boxed{\max X'=x_*<\min Y'.}
 \tag{A1.3}
-$$
+```
 
 If `epsilon=0`, simply take `X'=X`, `Y'=Y`; then every `x<y` already. For all
 sufficiently large indices with `epsilon>0`, (A1.2) leaves `X'` nonempty because
@@ -97,17 +97,17 @@ separation. It is stronger and simpler than the quantile wording in the source.
 
 After applying it to
 
-$$
+```math
 x_u=\alpha_u,
 \qquad
 y_v=\beta_v-\pi/3,
-$$
+```
 
 the source's strict condition
 
-$$
+```math
 \max\alpha_u+\pi/3<\min\beta_v
-$$
+```
 
 follows exactly.
 
@@ -117,11 +117,11 @@ follows exactly.
 
 After phase-tail removal and missing-degree pruning, there is `r_D=o(D)` with
 
-$$
+```math
 \deg_A(u)\ge|B|-r_D,
 \qquad
 \deg_B(v)\ge|A|-r_D.
-$$
+```
 
 For large `D`, every two same-shore trains have a common opposite neighbor and every
 three have a common opposite neighbor.
@@ -143,9 +143,9 @@ No global product completeness is hidden here.
 The repaired phase separation and shrinking atom width give exactly the §76 angular
 hypotheses
 
-$$
+```math
 \pi/3<\beta_v-\alpha_u<2\pi/3
-$$
+```
 
 for every retained pair, whether or not that pair physically crosses. Hence the §76
 common projection `e_D` is positive on every elementary displacement of every selected
@@ -156,35 +156,35 @@ selected `B` crossings. They only add positive projection. The selected `B` rhom
 contribute the same half-end/full-interior vector sum as §76, so the first leg is at
 least
 
-$$
+```math
 e_D\cdot\sum_{v\in N(u_*)}v-1.
-$$
+```
 
 The second leg is identical. The two endpoints are centers of actual source rhombi and
 therefore belong to `conv(A)`, whose diameter is the source diameter `D`. Thus the
 source inequality
 
-$$
+```math
 D\ge
 \sum_{v\in N(u_*)}e_D\cdot v
 +
 \sum_{u\in N(v_*)}e_D\cdot u-2
-$$
+```
 
 is valid.
 
 Since the two train-direction clusters shrink to axes at projective separation
 `pi/3`, the §76 projection converges to their bisector and
 
-$$
+```math
 e_D\cdot u,\ e_D\cdot v
 \ge\sqrt3/2-o(1)
-$$
+```
 uniformly. The robust leading bound
 
-$$
+```math
 a+b\le2/\sqrt3
-$$
+```
 
 therefore survives.
 
@@ -194,63 +194,63 @@ therefore survives.
 
 Assume zero normalized outer detour and
 
-$$
+```math
 (q-k)/D\to t_0
 =\pi/2+(2/5)s_2.
-$$
+```
 
 The exact outer ledger gives
 
-$$
+```math
 Q/D\to(4/5)s_2.
-$$
+```
 
 Audited §154 gives `(Q+4f)/D>=4s_2-o(1)`, while `f<=Q` gives
 
-$$
+```math
 Q+4f\le5Q=4s_2D+o(D).
-$$
+```
 
 Hence the endpoint capacity is exactly saturated and
 
-$$
+```math
 (Q+4f)/D\to4s_2.
-$$
+```
 
 For every train-measure subsequential limit, §142 gives `x sigma>=2s_2`, while the
 §154 endpoint-count proof gives `2x sigma<=4s_2` from the now-exact bounded endpoint
 capacity. Thus
 
-$$
+```math
 \boxed{x\sigma=2s_2.}
-$$
+```
 
 Let `A_j` be the absolute atomic train mass in one orbit of the relation
 `phi -> phi+pi/3 mod pi`, and let `E_j` be its normalized physical crossing mass.
 Then
 
-$$
+```math
 E_j\le A_j^2/4
-$$
+```
 
 by triangle-free weighted Mantel, all limiting crossing mass lies on these exact
 atomic relation orbits by §142, and
 
-$$
+```math
 \sum_jE_j=s_2^2,
 \qquad
 \sum_jA_j=2s_2.
-$$
+```
 
 Therefore
 
-$$
+```math
 s_2^2
 =\sum_jE_j
 \le{1\over4}\sum_jA_j^2
 \le{1\over4}\left(\sum_jA_j\right)^2
 =s_2^2.
-$$
+```
 
 Equality throughout forces exactly one positive orbit. This step does not assume a
 finite global atom set.
@@ -265,16 +265,16 @@ mass `s_2`, while the other has an atom of mass at least `s_2/2`.
 
 The selected opposite-shore atom pair therefore satisfies the robust theorem with
 
-$$
+```math
 a+b\ge{3\over2}s_2.
-$$
+```
 
 Numerically and exactly at the needed sign,
 
-$$
+```math
 {\sqrt3\over2}{3s_2\over2}
 =1.2370906246\ldots>1,
-$$
+```
 
 giving the contradiction.
 

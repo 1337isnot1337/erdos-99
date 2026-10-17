@@ -27,39 +27,43 @@ Let `e=sp` be a P1 KKT-endpoint zeroed diameter edge. Let `H-e=A\sqcup B` be its
 2. its two incident ordinary unit Minkowski edges change opposite endpoints of `sp` because `e` lies on the common odd-cycle core of both P1 antipodal refinements;
 3. if the `p`-event changes `p` to its shell neighbor `p'`, then `p' in A`; if the `s`-event changes `s` to its shell neighbor `s'`, then `s' in B`;
 4. consequently the shell sides `pp'` and `ss'` are two of the four contact-cycle transitions of the cut, and
-   $$
+   ```math
    |p's|=|ps'|=D;
    \tag{RC.1}
-   $$
+   
+   ```
 5. the two neighboring diameter directions are exactly one minimum gap
-   $$
+   ```math
    \delta=2\arcsin\frac1{2D}
-   $$
+   
+   ```
    on either side of `e` in projective direction order;
 6. the four points `p,p',s',s` form, after choosing the common side of the diameter line, the exact isosceles diameter-lens cell
-   $$
+   ```math
    |pp'|=|ss'|=1,
    \qquad
    |sp|=|p's|=|ps'|=D,
-   $$
+   
+   ```
    and
-   $$
+   ```math
    |p's'|=D-\frac1D,
    \qquad
    p's'\parallel sp.
    \tag{RC.2}
-   $$
+   
+   ```
 
 If the relevant `B`-block at `p` and `A`-block at `s` are non-singletons, the only transition choices are the moving sides `f=pq` and `h=rs`; then `p'=q`, `s'=r`, and the original formulas
 
-$$
+```math
 |qs|=|pr|=D,
 \qquad
 |qr|=D-\frac1D,
 \qquad
 qr\parallel sp
 \tag{RC.3}
-$$
+```
 
 are valid. At an end edge of the common path `J`, one of the selected transition sides may instead be a fixed rectangle side `ab` or `cd`.
 
@@ -89,23 +93,23 @@ Thus one K-edge incident to `s-p` changes `p`, and the other changes `s`.
 
 Suppose the `p`-event changes `p` to a shell neighbor `p'` that remains in component `B`. The neighboring K-vertex represents the pair `p's`. It is circular by Section 1, hence
 
-$$
+```math
 |p's|=D.
-$$
+```
 
 Then `p's` is a second full-H diameter edge crossing the `A|B` cut of `H-e`, impossible because a tree edge `e` is the unique original edge joining the two components of `H-e`.
 
 Therefore
 
-$$
+```math
 p'\in A.
-$$
+```
 
 So `pp'` is a transition side of the component coloring. The same argument at `s` gives
 
-$$
+```math
 s'\in B,
-$$
+```
 
 and `ss'` is another transition side. The neighboring circular K-vertices yield RC.1.
 
@@ -117,51 +121,51 @@ This is the precise replacement for the invalid same-block-neighbor argument in 
 
 Normalize
 
-$$
+```math
 p=(0,0),
 \qquad
 s=(D,0).
-$$
+```
 
 Because `pp'=1` and `p's=D`, subtracting the two squared-distance equations gives
 
-$$
+```math
 p'_x=\frac1{2D}.
-$$
+```
 
 Hence
 
-$$
+```math
 p'=\left(\frac1{2D},\ \sigma\sqrt{1-\frac1{4D^2}}\right)
-$$
+```
 for some sign `sigma`.
 
 Likewise `ss'=1` and `ps'=D` give
 
-$$
+```math
 s'=\left(D-\frac1{2D},\ \sigma'\sqrt{1-\frac1{4D^2}}\right).
-$$
+```
 
 The two neighboring projective diameter directions lie on opposite sides of the direction of `sp`. With a common half-plane orientation, this forces `sigma=sigma'`. Therefore `p',s'` lie on the same side of the diameter line and
 
-$$
+```math
 |p's'|=D-\frac1D,
 \qquad
 p's'\parallel sp.
-$$
+```
 
 This proves RC.2.
 
 The angle between `sp` and either neighboring diameter is determined by
 
-$$
+```math
 \cos\delta=1-\frac1{2D^2},
-$$
+```
 so it is exactly
 
-$$
+```math
 \delta=2\arcsin\frac1{2D}.
-$$
+```
 
 ---
 

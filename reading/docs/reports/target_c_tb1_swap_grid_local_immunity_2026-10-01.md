@@ -14,51 +14,51 @@ Work in the fixed-star complete global O--O rectangle on current main and in the
 phase-changing TB1 situation of the exact-swap theorem. Let the adjacent trains on
 one shore be
 
-$$
+```math
 \tau_i,\tau_{i+1}
-$$
+```
 
-with coherent unit directions $u_i,u_{i+1}$, and let every train
-$\sigma$ on the opposite retained shore cross both trains in actual strict rhombi.
+with coherent unit directions $`u_i,u_{i+1}`$, and let every train
+$`\sigma`$ on the opposite retained shore cross both trains in actual strict rhombi.
 
 Translate the physical middle strip by the exact swap vector
 
-$$
+```math
 \Delta=u_{i+1}-u_i.
 \tag{1}
-$$
+```
 
 Then:
 
-1. every contact edge of $\tau_i$ changes from direction $u_i$ to direction
-   $u_{i+1}$;
-2. every contact edge of $\tau_{i+1}$ changes from direction $u_{i+1}$ to
-   direction $u_i$, up to the harmless reversal of edge orientation;
-3. every contact edge belonging to a transverse train $\sigma$ is unchanged;
-4. for every retained transverse train $\sigma$, the rhombus
-   $(\tau_i,\sigma)$ after the swap is congruent to an old rhombus
-   $(\tau_{i+1},\sigma)$, and conversely.
+1. every contact edge of $`\tau_i`$ changes from direction $`u_i`$ to direction
+   $`u_{i+1}`$;
+2. every contact edge of $`\tau_{i+1}`$ changes from direction $`u_{i+1}`$ to
+   direction $`u_i`$, up to the harmless reversal of edge orientation;
+3. every contact edge belonging to a transverse train $`\sigma`$ is unchanged;
+4. for every retained transverse train $`\sigma`$, the rhombus
+   $`(\tau_i,\sigma)`$ after the swap is congruent to an old rhombus
+   $`(\tau_{i+1},\sigma)`$, and conversely.
 
 In particular, the unordered pair of diagonal lengths of each boundary rhombus is
 permuted inside the old complete grid. Therefore
 
-$$
+```math
 \boxed{
 \text{no diagonal of a retained boundary-grid rhombus can be the inactive
 near-active witness forced by the ONE-SIGN swap.}
 }
 \tag{2}
-$$
+```
 
-For a pairwise nonadjacent family of $r$ TB1 interfaces inside a complete rectangle
-with opposite shore $B$, the $2r|B|$ boundary rhombi are distinct. Thus if
-$r=\Theta(D)$ and $|B|=\Theta(D)$, the exact swaps automatically protect a
+For a pairwise nonadjacent family of $`r`$ TB1 interfaces inside a complete rectangle
+with opposite shore $`B`$, the $`2r|B|`$ boundary rhombi are distinct. Thus if
+$`r=\Theta(D)`$ and $`|B|=\Theta(D)`$, the exact swaps automatically protect a
 quadratic family
 
-$$
+```math
 \boxed{\Theta(D^2)}
 \tag{3}
-$$
+```
 
 of the most obvious local inactive pairs. Any ONE-SIGN near-active obstruction must
 be nonlocal to these retained crossing cells.
@@ -67,81 +67,81 @@ No inactive-gap estimate is used.
 
 ## 2. One boundary rhombus
 
-Fix a transverse retained train $\sigma$. Let $v$ be either orientation of its
-unit contact direction in the rhombus where it crosses $\tau_i$.
+Fix a transverse retained train $`\sigma`$. Let $`v`$ be either orientation of its
+unit contact direction in the rhombus where it crosses $`\tau_i`$.
 
 Use coordinates for that rhombus
 
-$$
+```math
 0,\quad u_i,\quad v,\quad u_i+v.
 \tag{4}
-$$
+```
 
-The proper train cut for $\tau_i$ joins the midpoints of the two opposite
-$\tau_i$-edges. Hence the exact middle-strip translation moves the endpoints
+The proper train cut for $`\tau_i`$ joins the midpoints of the two opposite
+$`\tau_i`$-edges. Hence the exact middle-strip translation moves the endpoints
 
-$$
+```math
 u_i,\quad u_i+v
-$$
+```
 
-by the same vector $\Delta$, while $0,v$ remain fixed. The transformed vertices
+by the same vector $`\Delta`$, while $`0,v`$ remain fixed. The transformed vertices
 are therefore
 
-$$
+```math
 0,\quad u_i+\Delta,\quad v,\quad u_i+v+\Delta.
 \tag{5}
-$$
+```
 
 By (1),
 
-$$
+```math
 u_i+\Delta=u_{i+1}.
-$$
+```
 
 Thus (5) is exactly the unit parallelogram with side directions
 
-$$
+```math
 u_{i+1},\quad v.
 \tag{6}
-$$
+```
 
-All transverse $\sigma$-edges remain unchanged because a contact edge belonging to
+All transverse $`\sigma`$-edges remain unchanged because a contact edge belonging to
 a different complete stopped train has both endpoints on the same shore of the
-$\tau_i$ cut.
+$`\tau_i`$ cut.
 
 The identical argument on the other boundary, using the outside-to-middle vector
-$-u_{i+1}$, gives
+$`-u_{i+1}`$, gives
 
-$$
+```math
 -u_{i+1}+\Delta=-u_i.
 \tag{7}
-$$
+```
 
 So the two adjacent train directions are exchanged exactly.
 
 ## 3. Congruence with an old crossing cell
 
-Because the retained rectangle is complete, the same transverse train $\sigma$
-also crosses $\tau_{i+1}$ in an old actual strict rhombus.
+Because the retained rectangle is complete, the same transverse train $`\sigma`$
+also crosses $`\tau_{i+1}`$ in an old actual strict rhombus.
 
 A unit rhombus is determined up to Euclidean congruence by the two projective side
-directions. Equivalently, if representatives are $u,v$, its two diagonal lengths
+directions. Equivalently, if representatives are $`u,v`$, its two diagonal lengths
 are the unordered pair
 
-$$
+```math
 \{|u+v|,\ |u-v|\}.
 \tag{8}
-$$
+```
 
-The transformed $(\tau_i,\sigma)$ cell has projective side directions
-$[u_{i+1}],[v]$, exactly those of the old $(\tau_{i+1},\sigma)$ cell.
+The transformed $`(\tau_i,\sigma)`$ cell has projective side directions
+$`[u_{i+1}],[v]`$, exactly those of the old $`(\tau_{i+1},\sigma)`$ cell.
 Consequently their diagonal-length multisets coincide.
 
-Likewise the transformed $(\tau_{i+1},\sigma)$ cell is congruent to the old
-$(\tau_i,\sigma)$ cell.
+Likewise the transformed $`(\tau_{i+1},\sigma)`$ cell is congruent to the old
+$`(\tau_i,\sigma)`$ cell.
 
-This argument is insensitive to the orientation chosen for $v$: replacing $v$
-by $-v$ only exchanges the two numbers in (8).
+This argument is insensitive to the orientation chosen for $`v`$: replacing $`v`$
+by $`-v`$ only exchanges the two numbers in (8).
 
 ## 4. The local inactive diagonals remain admissible
 
@@ -150,13 +150,13 @@ triangle-free source. Its four sides are unit contacts. Therefore neither diagon
 can have length below one; if the shorter diagonal had length exactly one, it and
 two adjacent unit sides would form a forbidden unit equilateral triangle. Hence
 
-$$
+```math
 \min\{|u+v|,|u-v|\}>1.
 \tag{9}
-$$
+```
 
-The longer diagonal is $<2$, so for the asymptotic Target-C regime it is far below
-the global diameter $D$.
+The longer diagonal is $`<2`$, so for the asymptotic Target-C regime it is far below
+the global diameter $`D`$.
 
 By Section 3, after the exact swap the two diagonal lengths of every retained
 boundary rhombus are old diagonal lengths of the neighboring retained rhombus.
@@ -167,15 +167,15 @@ This proves (2).
 
 ## 5. Quadratic protected population on a linear TB1 family
 
-Now take a pairwise nonadjacent family of $r$ adjacent interfaces on the same
+Now take a pairwise nonadjacent family of $`r`$ adjacent interfaces on the same
 retained shore. Nonadjacency makes their two boundary-train sets disjoint.
 
-Every one of the $|B|$ trains on the complete transverse shore crosses both
+Every one of the $`|B|`$ trains on the complete transverse shore crosses both
 boundary trains of each interface. Hence each selected interface contributes
 
-$$
+```math
 2|B|
-$$
+```
 
 distinct retained strict-rhombus cells, and different selected interfaces contribute
 disjoint cells. The exact swap at its tagged interface permutes the two local
@@ -184,18 +184,18 @@ rhombus shapes for every transverse train.
 Thus the total number of retained boundary cells whose local diagonal constraints
 are automatically safe is exactly
 
-$$
+```math
 2r|B|.
 \tag{10}
-$$
+```
 
-When the current complete rectangle has $r\ge cD-o(D)$ selected TB1 interfaces and
-$|B|\ge c'D-o(D)$,
+When the current complete rectangle has $`r\ge cD-o(D)`$ selected TB1 interfaces and
+$`|B|\ge c'D-o(D)`$,
 
-$$
+```math
 2r|B|\ge (2cc'-o(1))D^2.
 \tag{11}
-$$
+```
 
 The ONE-SIGN obstruction supplied by the exact-swap theorem must therefore use a
 source pair which is not a diagonal of any of these retained boundary rhombi.

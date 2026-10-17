@@ -51,10 +51,10 @@ Write `F_j` for their force hulls and `B_j` for the loaded hull vertices.
 Let `I_{j,r}` be the connected components after deleting `B_j` from the
 nonisolated positive contact core, with
 
-$$
+```math
 \delta_{j,r}=\operatorname{diam}_{C[I_{j,r}]}I_{j,r},\qquad
 A_{j,r}\subset B_j
-$$
+```
 
 their graph diameters and distinct loaded attachment sets. A singleton has
 graph diameter zero. Contact-isolated source points are **not** these singleton
@@ -74,9 +74,9 @@ The proof uses the following exact facts:
 
 For (5), the audited FSDB bound supplies
 
-$$
+```math
 \liminf\operatorname{area}(F_j)/D_j^2>154451/250000>0.
-$$
+```
 
 Boundedness follows from diameter one after normalization. Thus a limiting
 force hull cannot be a segment. Neither a disk limit nor a smooth limit is
@@ -105,9 +105,9 @@ exterior turning angle at `p` (zero at a point with a unique tangent).
 Suppose `X_j subset Vert(D_j K_j)` has diameter at most `L`, and every
 `x/D_j`, `x in X_j`, tends uniformly to `p`. If
 
-$$
+```math
 \tau(p)<\arctan\frac1{4L},
-$$
+```
 
 then `conv(X_j)` lies in a strip of width less than `1/2` for all large `j`.
 
@@ -125,9 +125,9 @@ boundary arc. A nondegenerate limit is essential here.
 
 Choose `epsilon>0` with
 
-$$
+```math
 \tau(p)+\epsilon<\arctan(1/(2L))<\pi/2.
-$$
+```
 
 Use the midpoint direction of the tangent cone as an axis. Projection onto
 that axis increases along the local arc. Its total increase between the
@@ -154,23 +154,23 @@ perimeter. The cases of zero, one, or two vertices are covered by `+2`. QED.
 
 For every fixed nonnegative integer `M`, let
 
-$$
+```math
 N_M(j)=\#\{r:\delta_{j,r}\le M\}.
-$$
+```
 
 Then, under hypotheses 1–5 above,
 
-$$
+```math
 \boxed{N_M(j)=o(D_j).}
-$$
+```
 
 **Proof.** It suffices to prove the statement on every convergent subsequence
 of the normalized force hulls. Let its limit be `K`, with nonempty interior.
 Put `L=M+2` and
 
-$$
+```math
 \theta_M=\arctan\frac1{4(M+2)}.
-$$
+```
 
 Let `T_M` be the set of corners of `K` with exterior turning angle at least
 `theta_M`. This set is finite: the exterior-angle atoms of a convex curve
@@ -195,9 +195,9 @@ Each loaded vertex can represent at most three components, since each
 represented component uses a distinct incident contact and its contact degree
 is at most three. Lemma AC.3 therefore gives
 
-$$
+```math
 N_M(j)\le 3|T_M|(2\pi\epsilon D_j+2).
-$$
+```
 
 First let `j -> infinity`, with `M` and `epsilon` fixed, and then let
 `epsilon -> 0`. This gives `N_M(j)/D_j -> 0`. The argument applies to every
@@ -207,16 +207,16 @@ convergent subsequence, so it proves the original sequence statement. QED.
 
 For canonical post-ZF C-II sources in either Woodall branch,
 
-$$
+```math
 \boxed{c_I=o(D).}
-$$
+```
 
 **Proof.** Let `sum_r delta_r <= C D` for large `D`. For every fixed positive
 integer `M`,
 
-$$
+```math
 c_I\le N_M+\frac{CD}{M+1}.
-$$
+```
 
 Theorem AC.4 gives `limsup c_I/D <= C/(M+1)`. Letting `M -> infinity`
 proves the claim. The limits are taken in this order; there is no assertion
@@ -225,10 +225,10 @@ uniform in a growing cutoff `M=M(D)`. QED.
 The canonical uniform diameter budget can be checked without any new packing
 estimate. ZU gives `c_I+e_BB+s_C=q-2+k`, where `k=d_H+s_Z`, and ZK gives
 
-$$
+```math
 \sum_r\delta_r\le6+e_{BB}+2s_C-3k
 =2+2q-e_{BB}-k-2c_I\le2+2\pi D.
-$$
+```
 
 The theorem does **not** give `min_r delta_r -> infinity` for a general
 limit with corners. A bounded number, or a sublinear number, of bounded
@@ -244,15 +244,15 @@ more than `c_I=o(D)` and makes the uniformity of the conclusion explicit.
 Suppose the exact hypotheses 1–4 of Section 2 hold, `diam(F)=D`, and for
 some center `o` one has
 
-$$
+```math
 B(o,D/20)\subset F\subset B(o,11D/20).
-$$
+```
 
 Then for every nonnegative integer `M`,
 
-$$
+```math
 \boxed{N_M\le5000\pi(M+2)^2.}
-$$
+```
 
 The constant is deliberately coarse. It is uniform in the source,
 conductances, number of vertices, and diameter `D`.
@@ -262,9 +262,9 @@ conductances, number of vertices, and diameter `D`.
 attachments by C36, each loaded vertex has contact degree at most three,
 and the hull is unit-separated. If `L>D/10000`, this already gives
 
-$$
+```math
 N_M\le\pi D<10000\pi L\le5000\pi L^2.
-$$
+```
 
 It remains to handle `L<=D/10000`.
 
@@ -272,11 +272,11 @@ Choose one representative attachment `b` for each counted component. Every
 other attachment `a` of that component has `|a-b|<=L`. Since both radii are
 at least `r=D/20`, their minor polar separation `alpha` satisfies
 
-$$
+```math
 2r\sin(\alpha/2)\le|a-b|\le L,
 \qquad
 \alpha\le 2L/r\le1/250.
-$$
+```
 
 Here `arcsin x<=2x` for `0<=x<=1/2` suffices. Since zero is inside `F`,
 the attachments belong to one local boundary arc in this polar window.
@@ -284,15 +284,15 @@ the attachments belong to one local boundary arc in this polar window.
 Let `p` be a point on that local arc and `n` an outward unit normal there.
 Writing `R=11D/20` and `e=b/|b|`, the support inequality gives
 
-$$
+```math
 n\cdot(p/|p|)\ge r/R=1/11,
-$$
+```
 
 and therefore
 
-$$
+```math
 n\cdot e\ge1/11-1/250>1/22.
-$$
+```
 
 Consequently the counterclockwise unit tangent has projection greater than
 `1/22` onto `Je`. Along the local arc from `b` to any attachment, this
@@ -300,17 +300,17 @@ projection is monotone. Its total change is at most `|a-b|<=L`; that arc
 has length at most `22L`. All attachments are thus in the boundary-arclength
 window of radius
 
-$$
+```math
 w=22L
-$$
+```
 
 centered at the representative.
 
 Each such window has convex-boundary turning at least
 
-$$
+```math
 \theta=\arctan(1/(4L)).
-$$
+```
 
 Otherwise its edge directions lie in a cone of width less than `theta`.
 On the subarc between the first and last attachments, the same monotone
@@ -331,16 +331,16 @@ arclength. Each loaded vertex represents at most three components. These
 windows are proper arcs, since `4w=88L<=88D/10000<2D<=per(F)`.
 Thus
 
-$$
+```math
 N_M\le\frac{2\pi}{\theta}\,3(4w+1).
-$$
+```
 
 Using `arctan x>=x/2` for `0<=x<=1` gives `theta>=1/(8L)`, hence
 
-$$
+```math
 N_M\le48\pi L(88L+1)
 \le4248\pi L^2<5000\pi L^2.
-$$
+```
 
 This proves the finite bound. QED.
 
@@ -348,9 +348,9 @@ This proves the finite bound. QED.
 
 Every sufficiently large canonical post-ZF C-II source satisfies
 
-$$
+```math
 \boxed{c_I=O(D^{2/3}).}
-$$
+```
 
 **Proof.** The audited FSDB area lower bound implies
 `area(F)>3D^2/5` for all sufficiently large survivors. The shared ambient-force
@@ -360,18 +360,18 @@ theorem puts the force hull inside the source circumdisk of radius
 For every unit direction `u`, the bounding rectangle gives
 `area(F)<=D width_F(u)`, so `width_F(u)>3D/5`. With the circumcenter as zero,
 
-$$
+```math
 h_F(u)=\operatorname{width}_F(u)-h_F(-u)
 >3D/5-11D/20=D/20.
-$$
+```
 
 Thus `F` contains the centered disk of radius `D/20`, and AC.6 applies.
 The exact diameter budget at the end of Section 4 yields, for every `M>=1`,
 
-$$
+```math
 \boxed{
 c_I\le5000\pi(M+2)^2+\frac{2+2\pi D}{M+1}.}
-$$
+```
 
 Taking `M=floor(D^(1/3))` proves the stated order bound. This step uses the
 finite uniform AC.6 estimate, not the nonuniform fixed-cutoff limit AC.4.
@@ -382,25 +382,25 @@ QED.
 Retain `k=d_H+s_Z` and the original definitions of every source/core object.
 The canonical ZU and PC identities now imply the candidate asymptotic reductions
 
-$$
+```math
 \boxed{e_{BB}+s_C=q+k+O(D^{2/3}),}
 \qquad
 \boxed{a+k=c_B+s_C+O(D^{2/3}).}
-$$
+```
 
 For the renormalized surplus this gives
 
-$$
+```math
 \boxed{\mu_D D=2q-e_{BB}-k+O(D^{2/3})
 =q+s_C-2k+O(D^{2/3}).}
-$$
+```
 
 For example, in the scoped subbranch `k=o(D)`, the audited DB lower bound
 `liminf h/D >= 2rho`, `rho=cos rho`, and `q>=h` give
 
-$$
+```math
 \liminf\mu_D\ge2\rho>1.478.
-$$
+```
 
 This is a lower bound, not a contradiction. It shows in particular that a
 surplus sequence near the current `0.9604` frontier cannot have `k=o(D)`.
@@ -450,17 +450,17 @@ One precise sufficient next theorem is still the full-source cell-slack
 inequality. In the notation of the independently audited FSCS scope, let
 `a0=sqrt(3)/2`, `c0=a0/2`, `K=conv A`,
 
-$$
+```math
 \delta_K=\pi D^2/4-\operatorname{area}K,\qquad
 L=P_F-P_{com}-k_{cap},
-$$
+```
 
 and let `W` be the sum of dimensional Oler slacks of **all** augmented contact
 cells and exterior caps, including their isolated source populations. Prove
 
-$$
+```math
 \boxed{\delta_K+W\ge c_0P_K+a_0L}
-$$
+```
 
 for the reduced class `c_I=O(D^(2/3))`. The strict global lattice comparison gives
 the opposite strict inequality, so this would close the full-source gate.

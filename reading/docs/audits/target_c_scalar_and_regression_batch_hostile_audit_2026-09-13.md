@@ -32,11 +32,11 @@ sequence closes and has positive turns.
 
 The construction is sufficient against the following implication:
 
-$$
+```math
 \text{unit-separated strict convex face boundary}+
 \text{containment in a convex body of diameter }D+O(1)+o(D^2)\text{ area}
 \Longrightarrow U=o(D).
-$$
+```
 
 It is **not** a counterexample to a stronger Hausdorff-near-disk hypothesis. The thin
 rectangle-like polygon is contained in a disk of diameter `D+O(1)`, but is not itself
@@ -51,11 +51,11 @@ scope narrowed explicitly. It does not refute a genuine near-disk shape theorem.
 
 The active exact identities are
 
-$$
+```math
 T=\frac{b+Q}{2}+2f,
 \qquad
 \frac{b+Q}{2}=h-s_Z.
-$$
+```
 
 Thus `T-h-2f=-s_Z<=0`; in the equality case it is zero. The old strict target
 `T-h>2f` is algebraically impossible under the canonical definitions. The source
@@ -67,9 +67,9 @@ report correctly rejects the older endpoint and does not change the live route.
 
 The reviewed substitution starts from the audited inequality
 
-$$
+```math
 5q-7k\ge3S_D+2G_D+c_*D-o(D)
-$$
+```
 
 and writes `q/D=t+kappa`, `k/D=kappa`. This gives
 `5t-2kappa >= 3S_D+2G_D+c_*-o(1)`, with the sign of the `kappa` term correct.

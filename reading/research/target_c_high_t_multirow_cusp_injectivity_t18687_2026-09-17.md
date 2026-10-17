@@ -20,68 +20,68 @@ The generic version of that hope is false.
 
 Fix any integer `r>=2` before taking `D->infinity`, and select the `r+1` consecutive rows
 
-$$
+```math
 \tau_0,\tau_1,\ldots,\tau_r
 \tag{MI.1}
-$$
+```
 
 from the high-`t` fixed-chain theorem, all on one side of the common diameter-routing hub. Let
 
-$$
+```math
 u_j=(\cos\alpha_j,\sin\alpha_j)
 \tag{MI.2}
-$$
+```
 
 be their coherent real shore orientations, and let
 
-$$
+```math
 F_j=M_ju_j,
 \qquad M_j>0,
 \tag{MI.3}
-$$
+```
 
 be the positive Section-157 KKT cut resultants.
 
 Assume the generic strict-phase condition
 
-$$
+```math
 \boxed{\alpha_{i+1}\ne\alpha_i\quad(0\le i<r).}
 \tag{MI.4}
-$$
+```
 
 The common phase window has width `o(1)`, so for large `D` this is equivalent to saying that every adjacent pair of real row vectors is nonparallel.
 
 Consider a first-order exact-full-support cancellation vector
 
-$$
+```math
 c=(c_0,\ldots,c_r)
-$$
+```
 
 satisfying
 
-$$
+```math
 \boxed{\sum_{j=0}^r c_ju_j=0.}
 \tag{MI.5}
-$$
+```
 
 For each interface `i`, let `X_i` be the actual diameter rows whose interval support switches there, and define the KKT-weighted interface derivative
 
-$$
+```math
 \mathcal D_i(c)
 :=\sum_{h\in X_i}\beta_h
 {d\over ds}|r_h(s)|^2\Big|_{s=0}.
 \tag{MI.6}
-$$
+```
 
 Then the interface map
 
-$$
+```math
 \boxed{
 T:c\longmapsto
 (\mathcal D_0(c),\ldots,\mathcal D_{r-1}(c))
 }
 \tag{MI.7}
-$$
+```
 
 has the following properties.
 
@@ -89,52 +89,52 @@ has the following properties.
 
 Put
 
-$$
+```math
 P_i(c):=\sum_{j=0}^ic_ju_j.
 \tag{MI.8}
-$$
+```
 
 For either side of the hub,
 
-$$
+```math
 \boxed{
 \mathcal D_i(c)
 =-2(F_{i+1}-F_i)\cdot JP_i(c).
 }
 \tag{MI.9}
-$$
+```
 
 Moreover
 
-$$
+```math
 \boxed{
 \sum_{i=0}^{r-1}\mathcal D_i(c)=0.
 }
 \tag{MI.10}
-$$
+```
 
 ### Theorem MI.2 — generic cusp injectivity
 
 Under (MI.4),
 
-$$
+```math
 \boxed{
 T(c)=0\text{ and }\sum_jc_ju_j=0
 \quad\Longrightarrow\quad
 c=0.
 }
 \tag{MI.11}
-$$
+```
 
 Equivalently, because the full-support kernel has dimension `r-1` and the zero-sum interface space also has dimension `r-1`,
 
-$$
+```math
 \boxed{
 T:\ker L\overset{\sim}{\longrightarrow}
 \{d\in\mathbb R^r:\sum_i d_i=0\}
 }
 \tag{MI.12}
-$$
+```
 
 is an isomorphism, where `L(c)=sum_j c_j u_j`.
 
@@ -148,36 +148,36 @@ So adding more generic high-`t` rows does **not** create a first-order feasible 
 
 The fixed-chain theorem gives
 
-$$
+```math
 \sum_{i=0}^{r-1}
 \bigl(N_i+L_i+D B_i+S_i+S_{i+1}\bigr)
 <1{,}109{,}000r.
 \tag{MI.13}
-$$
+```
 
 Hence the union
 
-$$
+```math
 H_{\rm exc}:=\bigsqcup_{i=0}^{r-1}X_i
 \tag{MI.14}
-$$
+```
 
 of all switching actual diameter rows in the block satisfies
 
-$$
+```math
 \boxed{|H_{\rm exc}|<1{,}109{,}000r}
 \tag{MI.15}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \sum_{h\in H_{\rm exc}}\beta_h
 <{1{,}109{,}000r\over D}.
 }
 \tag{MI.16}
-$$
+```
 
 The union is disjoint because the block is wholly on one side of the hub: every diameter interval has only one start, respectively only one stop, inside the block.
 
@@ -189,33 +189,33 @@ The same theorem retains a common ordered transverse family of more than `0.0783
 
 For the selected rows define
 
-$$
+```math
 G(\theta_0,\ldots,\theta_r)
 :=\sum_{j=0}^r(R_{\theta_j}u_j-u_j).
 \tag{MI.17}
-$$
+```
 
 If the rows span the plane, then
 
-$$
+```math
 DG(0)[c]=J\sum_{j=0}^r c_ju_j
 \tag{MI.18}
-$$
+```
 
 has rank two. The implicit-function theorem therefore makes `G^{-1}(0)` a smooth local manifold of dimension
 
-$$
+```math
 (r+1)-2=r-1.
 \tag{MI.19}
-$$
+```
 
 Its tangent space is exactly
 
-$$
+```math
 \mathcal K
 :=\left\{c:\sum_{j=0}^r c_ju_j=0\right\}.
 \tag{MI.20}
-$$
+```
 
 For every tangent vector `c in K` there is a local curve on this exact cancellation manifold with tangent `c`.
 
@@ -223,16 +223,16 @@ As in the three-row theorem, one-sided interval support implies that an actual d
 
 If all row directions were rank one, the shrinking coherent real phase window would force
 
-$$
+```math
 u_0=\cdots=u_r.
-$$
+```
 
 Then
 
-$$
+```math
 u_0\cdot G(\theta)
 =\sum_j(\cos\theta_j-1)\le0
-$$
+```
 
 with a locally isolated zero, so the nontrivial exact-cancellation manifold disappears. The present theorem concerns the rank-two branch, which is automatic under the strict-phase assumption (MI.4).
 
@@ -244,38 +244,38 @@ Orient active diameter vectors by increasing selected-layer index, exactly as in
 
 First suppose the hub lies beyond `tau_r`, so the positive-support active sets are nested increasingly:
 
-$$
+```math
 H_0\subseteq H_1\subseteq\cdots\subseteq H_r.
 \tag{MI.21}
-$$
+```
 
 The fresh KKT vector at interface `i` is
 
-$$
+```math
 \sum_{h\in X_i}\beta_hr_h
 =F_{i+1}-F_i.
 \tag{MI.22}
-$$
+```
 
 A fresh row in `X_i` crosses exactly the selected cuts `i+1,...,r`. Its first relative-displacement vector is therefore
 
-$$
+```math
 J\sum_{j=i+1}^r c_ju_j.
-$$
+```
 
 Using the full-support kernel equation (MI.5), this is
 
-$$
+```math
 -JP_i(c).
 \tag{MI.23}
-$$
+```
 
 Hence
 
-$$
+```math
 \mathcal D_i(c)
 =2(F_{i+1}-F_i)\cdot[-JP_i(c)],
-$$
+```
 
 which is (MI.9).
 
@@ -287,13 +287,13 @@ If instead the hub lies beyond `tau_0`, the active sets are nested decreasing. T
 
 Set
 
-$$
+```math
 S:=\sum_{i=0}^{r-1}(F_{i+1}-F_i)\cdot JP_i.
-$$
+```
 
 Shift the first sum by one index:
 
-$$
+```math
 \begin{aligned}
 S
 &=F_r\cdot JP_{r-1}-F_0\cdot JP_0\\
@@ -301,18 +301,18 @@ S
 \sum_{i=1}^{r-1}F_i\cdot J(P_{i-1}-P_i).
 \end{aligned}
 \tag{MI.24}
-$$
+```
 
 But
 
-$$
+```math
 P_0=c_0u_0,
 \qquad
 P_i-P_{i-1}=c_iu_i,
 \qquad
 P_{r-1}=-c_ru_r
 \tag{MI.25}
-$$
+```
 
 by (MI.5). Since `F_i=M_i u_i`, every term on the right side of (MI.24) vanishes. Therefore `S=0`. Equation (MI.9) gives (MI.10).
 
@@ -324,63 +324,63 @@ This is the interface-resolved form of KKT first-order stationarity for an exact
 
 Assume every adjacent phase gap is nonzero and suppose
 
-$$
+```math
 \mathcal D_i(c)=0
 \qquad(0\le i<r).
 \tag{MI.26}
-$$
+```
 
 At the first interface,
 
-$$
+```math
 P_0=c_0u_0.
-$$
+```
 
 Using (MI.9),
 
-$$
+```math
 \begin{aligned}
 0=\mathcal D_0
 &=-2c_0(F_1-F_0)\cdot Ju_0\\
 &=-2c_0M_1\sin(\alpha_1-\alpha_0).
 \end{aligned}
 \tag{MI.27}
-$$
+```
 
 The multiplier `M_1` is positive and the sine is nonzero for sufficiently large `D`, so
 
-$$
+```math
 c_0=0.
 \tag{MI.28}
-$$
+```
 
 Proceed inductively. If
 
-$$
+```math
 c_0=\cdots=c_{i-1}=0,
-$$
+```
 
 then
 
-$$
+```math
 P_i=c_iu_i.
-$$
+```
 
 Equation (MI.9) becomes
 
-$$
+```math
 \boxed{
 \mathcal D_i
 =-2c_iM_{i+1}\sin(\alpha_{i+1}-\alpha_i).
 }
 \tag{MI.29}
-$$
+```
 
 Thus `D_i=0` forces `c_i=0`. Induction gives
 
-$$
+```math
 c_0=\cdots=c_{r-1}=0.
-$$
+```
 
 Finally (MI.5) gives `c_r=0`. This proves (MI.11).
 
@@ -392,44 +392,44 @@ The domain `K` has dimension `r-1`; by (MI.10), the image lies in the `(r-1)`-di
 
 The induction proof gives a useful local diagnostic. Let
 
-$$
+```math
 k:=\min\{j:c_j\ne0\}.
-$$
+```
 
 For any nonzero kernel vector in the strict-phase branch, `k<r`. Then
 
-$$
+```math
 P_k=c_ku_k
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \mathcal D_k
 =-2c_kM_{k+1}\sin(\alpha_{k+1}-\alpha_k)\ne0.
 }
 \tag{MI.30}
-$$
+```
 
 So a nonzero exact-cancellation tangent cannot hide its first-order obstruction in a distant part of the block. The first selected row on which the tangent is active already creates a nonzero KKT-weighted switching cusp at the immediately following interface.
 
 There is a symmetric statement at the last nonzero coefficient. If
 
-$$
+```math
 \ell:=\max\{j:c_j\ne0\},
-$$
+```
 
 then `ell>0`, and using `P_{ell-1}=-c_ell u_ell` gives
 
-$$
+```math
 \boxed{
 \mathcal D_{\ell-1}
 =2c_\ell M_{\ell-1}
 \sin(\alpha_\ell-\alpha_{\ell-1})\ne0.
 }
 \tag{MI.31}
-$$
+```
 
 Thus any nonzero aggregate-critical tangent in a nongeneric chain must have an exact adjacent phase equality at the boundary of its first active coefficient, and also at the boundary of its last active coefficient.
 
@@ -439,12 +439,12 @@ Thus any nonzero aggregate-critical tangent in a nongeneric chain must have an e
 
 Take any nonzero tangent `c in K` in the strict-phase branch. Injectivity says that the interface vector `T(c)` is nonzero. Equation (MI.10) says its entries sum to zero. Hence there are interfaces `i,j` with
 
-$$
+```math
 \mathcal D_i(c)>0,
 \qquad
 \mathcal D_j(c)<0.
 \tag{MI.32}
-$$
+```
 
 The KKT weights are nonnegative and are positive on the maximal force-visible support. Therefore
 

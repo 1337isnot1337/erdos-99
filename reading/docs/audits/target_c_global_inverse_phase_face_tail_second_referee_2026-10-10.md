@@ -31,22 +31,22 @@ The sequence-level exclusion is repaired by a diagonal cutoff and local patches 
 
 Consider an unbounded sequence of canonical post-ZF C-II sources in the contact-minimal, then actual-diameter-pair-minimal, triangle-free normal form, with `D -> infinity` and the full source retained, including contact isolates. Let `G=(V,C)` be the connected positive-contact core, `B` the set of all actual diameter endpoints, and `Ghat` the core augmented by every missing straight hull side between consecutive vertices of `B`. For each bounded face `Q` of `Ghat`, let `m(Q)` be its unit-contact boundary length when it is an old bounded contact face, and the number of actual unit-contact edges on its simple path boundary when it is a convex pocket. Define
 
-$$
+```math
 T_M(D)=\sum_{Q:m(Q)>M}m(Q),\qquad M\ge4.
-$$
+```
 
 Fix `0<=K<infinity`. Suppose that for each source there is one D-dependent unit triangular frame
 
-$$
+```math
 U_D=\{\pm u_D,\pm v_D,\pm(v_D-u_D)\},\quad |u_D|=|v_D|=1,
 \quad \angle(u_D,v_D)=\pi/3,
-$$
+```
 
 such that every oriented actual unit-contact edge vector of `G` is within `K/D` of a vector in `U_D`, and suppose
 
-$$
+```math
 \lim_{M\to\infty}\limsup_{D\to\infty}T_M(D)/D=0.
-$$
+```
 
 Then no such unbounded canonical sequence exists. The conclusion is conditional on both global premises; neither is extracted by this theorem.
 
@@ -54,13 +54,15 @@ Then no such unbounded canonical sequence exists. The conclusion is conditional 
 
 - `C-RHOMBUS-POP` supplies the connected core, `F=conv(B)=conv(V)`, convex old contact faces, and the convex hull-augmented pockets. It also ensures the augmented graph and face-path quantities above are the canonical ones. The pockets are not contact cycles.
 - `C-CURVED-BOUNDARY-LATTICE-LOCAL-CAPACITY` says that for a finite unit-separated source of diameter `D`, its actual diameter-endpoint set `B`, and
-  $$
+  ```math
   W=\bigcap_{a\in A}\overline B(a,D),
-  $$
+  
+  ```
   every `S subset B intersect closed_ball(c,r/2)` with `c in W`, `sqrt(D)<=r<=D`, and every point within `epsilon<=1/8` of one translate of a unit rhombic lattice satisfies
-  $$
+  ```math
   |S|\le C\bigl(r\epsilon+(Dr)^{1/3}+1\bigr),
-  $$
+  
+  ```
   with absolute constants, uniformly in the source and lattice.
 - `C-ZRF` gives `h>=ceil(D)` for the number `h` of actual diameter edges; `C-WOODALL` gives `h<=q`, where `q=|B|`.
 
@@ -71,32 +73,32 @@ No chart, motion, source/scaffold identification, or co-embedding is assumed. Co
 ### Diagonal face cutoff and zero holonomy
 
 Assume for contradiction that a sequence satisfies both premises. For each integer `j>=1`, choose a fixed integer `M_j>=4`, increasing to infinity, so that
-$$
+```math
 \limsup_{D\to\infty}T_{M_j}(D)/D<1/(2j).
-$$
+```
 Choose increasing thresholds `D_j` so that for every sequence term with `D>=D_j`,
-$$
+```math
 T_{M_j}(D)/D\le1/j,\qquad C_{M_j}D^{-1/4}\le1/j,
 \qquad M_j/D\le1/j,
-$$
+```
 where `C_M=56M(M+1)^2+42M(M+1)`. Define `M(D)=M_j` on `D_j<=D<D_{j+1}`. Then
-$$
+```math
 M(D)\to\infty,\quad T_{M(D)}(D)/D\to0,\quad C_{M(D)}D^{-1/4}\to0,
 \quad M(D)/D\to0.
-$$
+```
 
 The largest old bounded contact-face length is at most `M(D)+T_{M(D)}(D)=o(D)`. Assign every oriented actual contact edge its nearest frame vector, with opposite assignments on opposite orientations. For sufficiently large `D` this is unique. Around an old bounded contact face of length `m`, the assigned lattice vectors sum to a vector of norm at most `mK/D=o(1)`. Since a nonzero vector of the unit triangular lattice has norm at least one, this sum is zero. The bounded facial cycles of the connected plane graph generate its cycle space; bridge traversals cancel in opposite orientations. Therefore every closed contact walk has zero assigned sum. Path integration gives `ell:V -> Lambda_D`, where `Lambda_D=Z u_D+Z v_D`, with each contact edge mapped to its assigned frame vector. For `g(p)=p-ell(p)`, every actual contact edge satisfies
-$$
+```math
 |g(p)-g(q)|\le K/D.
-$$
+```
 
 ### Actual-contact routing, including the tail
 
 For every fixed cutoff `M>=4`, the actual-contact graph has a path between any `p,q in V` with
-$$
+```math
 d_G(p,q)\le C_M(|p-q|+1)+2T_M(D),\qquad
 C_M=56M(M+1)^2+42M(M+1).\tag{1}
-$$
+```
 Here is the routing count. Triangle-freeness bounds contact degree by five: six unit neighbors would force all six successive angular gaps to equal `pi/3`, creating a unit triangle. Hull augmentation adds at most two incident edges, so `Ghat` has degree at most seven. Route from `p` to `q` by a generic two-segment arc in the convex hull, within distance `1/10` of the chord and of length at most `|p-q|+1/10`. Convexity makes each face meet each segment in at most one interval. Replace each crossing through a face by a boundary path of actual contacts. An auxiliary hull side is never used: a pocket crossing is replaced along its actual contact path boundary. Each face is crossed at most twice, so faces with `m(Q)>M` cost at most `2T_M(D)`.
 
 For a crossed face with `m(Q)<=M`, one of its vertices lies within distance `M+1/10` of the chord. Disjoint radius-`1/2` disks about all such source vertices fit in the radius-`M+1` tube around the chord. Its area gives at most `4(M+1)^2+3(M+1)|p-q|` such vertices. Each is incident to at most seven faces, and each small-face crossing costs at most `M`; allowing two crossings per face gives the upper bound `14M(4(M+1)^2+3(M+1)|p-q|)`, which is at most `C_M(|p-q|+1)`. The replacements form an actual contact walk, proving (1). This estimate is used with a varying cutoff only after proving its constant is controlled diagonally.
@@ -104,17 +106,17 @@ For a crossed face with `m(Q)<=M`, one of its vertices lies within distance `M+1
 ### Patchwise lattice approximation and endpoint count
 
 Put `r_D=D^(3/4)`. If `p,q` are actual diameter endpoints in one boundary arc of length at most `r_D/2`, then `|p-q|<=r_D/2`. Use (1) with `M=M(D)` and sum the `K/D` edge errors along its actual contact route:
-$$
+```math
 |g(p)-g(q)|\le \frac K D\{C_{M(D)}(r_D+1)+2T_{M(D)}(D)\}
 =:\epsilon_D\longrightarrow0.
-$$
+```
 For each such arc choose one representative endpoint `p_0`. Every endpoint `p` assigned to the arc has `p=ell(p)+g(p)` with `ell(p)` in the same triangular lattice and `|g(p)-g(p_0)|<=epsilon_D`. Thus the endpoints in this patch are within `epsilon_D` of one translate of that lattice. This is only a patchwise approximation; it is not a global Lipschitz chart.
 
 Every actual diameter endpoint is on `partial W`, since its diameter partner supplies an active radius-`D` disk. A diameter pair at distance `D` also implies `W` lies in the lens of two radius-`D` disks, hence in a disk of radius `sqrt(3)D/2`; convex perimeter monotonicity gives `per(W)=O(D)`. Partition `partial W` into `O(D/r_D)` arcs of length at most `r_D/2`, and assign each endpoint to one arc. For each arc choose its midpoint `c` on `partial W`; then `c in W` and every assigned endpoint lies in `closed_ball(c,r_D/2)`. For all large `D`, `sqrt(D)<=r_D<=D` and `epsilon_D<=1/8`, so the canonical local-capacity theorem applies to each assigned set. Summing gives
-$$
+```math
 q\le O(D/r_D)\bigl(r_D\epsilon_D+(Dr_D)^{1/3}+1\bigr)
 =O(D\epsilon_D+D^{5/6}+D^{1/4})=o(D).
-$$
+```
 
 But `C-ZRF` and `C-WOODALL` give `q>=h>=ceil(D)`, a contradiction. This proves the retained sequence-level exclusion.
 

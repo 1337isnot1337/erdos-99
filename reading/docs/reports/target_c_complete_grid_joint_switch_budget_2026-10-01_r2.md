@@ -19,27 +19,27 @@ For an actual diameter edge h, let t_A(h) be the number of adjacent selected
 A-interfaces at which its signed cut incidence changes, and define t_B(h)
 analogously. Then
 
-$$
+```math
 \boxed{t_A(h)+t_B(h)\le 2.}
 \tag{1}
-$$
+```
 
 Hence, if N_i^A and N_j^B are the switching-row counts at the two shores' adjacent
 interfaces,
 
-$$
+```math
 \boxed{\sum_i N_i^A+\sum_j N_j^B\le 2h,}
 \tag{2}
-$$
+```
 
 where h is the total number of actual diameter edges.
 
 At the exact rooted endpoint, current main gives h=\pi D+o(D), so
 
-$$
+```math
 \boxed{\sum_i N_i^A+\sum_j N_j^B\le(2\pi+o(1))D.}
 \tag{3}
-$$
+```
 
 ## Proof of the joint per-edge bound
 
@@ -47,10 +47,10 @@ After the standard harmless endpoint resolution for proper train crosscuts, the
 boundary endpoints of a complete bipartite crossing grid lie in four disjoint
 boundary intervals in cyclic order
 
-$$
+```math
 \boxed{I_A^+,\ I_B^+,\ I_A^-,\ I_B^-.}
 \tag{4}
-$$
+```
 
 Every A-crosscut joins I_A^+ to I_A^- and every B-crosscut joins I_B^+ to I_B^-.
 
@@ -76,17 +76,17 @@ Exact laminar interval support says that, for h=xy, the nonzero A-incidence colu
 form the interval between \ell_A(x) and \ell_A(y). Therefore an endpoint of h can
 create an internal A-switch only if that endpoint lies on an A-host interval. Thus
 
-$$
+```math
 t_A(h)\le \#\{x,y\in I_A^+\cup I_A^-\}.
 \tag{5}
-$$
+```
 
 Symmetrically,
 
-$$
+```math
 t_B(h)\le \#\{x,y\in I_B^+\cup I_B^-\}.
 \tag{6}
-$$
+```
 
 The four host intervals partition the outer boundary and h has exactly two endpoints.
 Adding (5) and (6) proves (1). Summing over h proves (2).
@@ -99,11 +99,11 @@ If one diameter row switches internally on both shores, one of its endpoints mus
 on an A-host interval and the other on a B-host interval. Hence every such row has
 one of the four corner types
 
-$$
+```math
 I_A^+-I_B^+,\quad I_A^+-I_B^-,\quad
 I_A^--I_B^+,\quad I_A^--I_B^-.
 \tag{7}
-$$
+```
 
 Opposite corner types cannot coexist. For example, an I_A^+-I_B^+ diameter chord
 and an I_A^--I_B^- diameter chord join adjacent blocks in the cyclic order (4), so
@@ -119,56 +119,56 @@ interval.
 
 Current main gives
 
-$$
+```math
 |A|,|B|\ge(c_*-o(1))D,
 \qquad
 c_*={\kappa^4\over16\pi^3C_KM_K},
-$$
+```
 
 with C_K=\lfloor4K\rfloor+2 and M_K=2\lfloor4K\rfloor+3. Its rank-switching
 theorem gives
 
-$$
+```math
 s_A,s_B\ge\left({c_*\over2}-o(1)\right)D,
-$$
+```
 
 so
 
-$$
+```math
 s_A+s_B\ge(c_*-o(1))D.
 \tag{8}
-$$
+```
 
 Set
 
-$$
+```math
 H_*=\left\lceil{4\pi\over c_*}\right\rceil.
 \tag{9}
-$$
+```
 
 By (3), the number of active interfaces over both shores with more than H_* switching
 rows is at most
 
-$$
+```math
 {(2\pi+o(1))D\over H_*+1}
 <
 \left({c_*\over2}+o(1)\right)D.
-$$
+```
 
 Subtracting from (8), at least
 
-$$
+```math
 \boxed{\left({c_*\over2}-o(1)\right)D}
 \tag{10}
-$$
+```
 
 interfaces across the two shores satisfy 1\le N\le H_*. Hence one shore contains at
 least
 
-$$
+```math
 \boxed{\left({c_*\over4}-o(1)\right)D}
 \tag{11}
-$$
+```
 
 bounded switching cusps.
 
@@ -182,7 +182,7 @@ left-suffix order.
 The fixed-star branch now has a joint two-shore switch ledger rather than two separate
 ones:
 
-$$
+```math
 \boxed{
 \text{complete inverse-phase O-O grid}
 +
@@ -190,7 +190,7 @@ $$
 +
 \text{all cross-shore switch reuse confined to one boundary side}.
 }
-$$
+```
 
 The next target is to couple the one-arc cusp order to the corner-localized reused
 diameter rows and the opposite complete train shore. The split-star O-O branch and

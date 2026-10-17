@@ -10,156 +10,156 @@
 
 ## Result
 
-Let $H_D=(B,E_H)$ be the full loaded diameter graph in the canonical full-core
+Let $`H_D=(B,E_H)`$ be the full loaded diameter graph in the canonical full-core
 Type-II branch, with
 
-$$
+```math
 q=|B|,\qquad h=|E_H|,\qquad d_H=q-h,
 \qquad a_D=\arcsin(1/(2D)).
-$$
+```
 
-Order the $h$ projective diameter directions cyclically. Let $m_D$ count
+Order the $`h`$ projective diameter directions cyclically. Let $`m_D`$ count
 consecutive direction pairs whose diameter edges are vertex-disjoint. For
-$v\in B$, let $t_v$ be the number of maximal cyclic runs of edge positions
-incident with $v$. Canonical Section 66 excludes the star for all sufficiently
+$`v\in B`$, let $`t_v`$ be the number of maximal cyclic runs of edge positions
+incident with $`v`$. Canonical Section 66 excludes the star for all sufficiently
 large survivors, so every incident-position set is a proper nonempty subset of
 the cyclic direction order.
 
 Define
 
-$$
+```math
 R_D:=\sum_{v\in B}(t_v-1).
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{R_D=m_D-d_H},\qquad
 \boxed{h+m_D=q+R_D},
 \tag{1}
-$$
+```
 
 and the Section-66 shared/disjoint angular gap bounds give
 
-$$
+```math
 \boxed{2a_D(q+R_D)\le\pi}.
 \tag{2}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 0\le R_D\le {\pi\over2a_D}-q<\pi D-q.
 }
 \tag{3}
-$$
+```
 
 For a positive-area center-wrapping carrier with
-$d_w/D\to\lambda\ge\lambda_1$, put
+$`d_w/D\to\lambda\ge\lambda_1`$, put
 
-$$
+```math
 A(\lambda)=\lambda+4\lambda\sqrt{1-\lambda^2},
 \qquad
 \Delta(\lambda)={\pi\over2}-A(\lambda).
-$$
+```
 
 The current-main rooted defect ledger gives
 
-$$
+```math
 (\pi D-P_F)+(P_F-q)+k\le\Delta(\lambda)D+o(D),
 \qquad k=d_H+s_Z,
 \tag{4}
-$$
+```
 
-after absorbing the $o(D)$ possible negative part of its diameter-moment
-slack. Since $\pi D-q=(\pi D-P_F)+(P_F-q)$, $d_H\le k$, and
-$m_D=d_H+R_D$, equations (3)--(4) imply
+after absorbing the $`o(D)`$ possible negative part of its diameter-moment
+slack. Since $`\pi D-q=(\pi D-P_F)+(P_F-q)`$, $`d_H\le k`$, and
+$`m_D=d_H+R_D`$, equations (3)--(4) imply
 
-$$
+```math
 \boxed{
 m_D\le\Delta(\lambda)D+o(D),
 \qquad
 R_D\le\Delta(\lambda)D+o(D).
 }
 \tag{5}
-$$
+```
 
 At the exact rooted threshold
-$A(\lambda_1)=\pi/2$,
+$`A(\lambda_1)=\pi/2`$,
 
-$$
+```math
 \boxed{
 m_D=o(D),\qquad R_D=o(D),\qquad
 \#\{v:t_v\ge2\}=o(D).
 }
 \tag{6}
-$$
+```
 
-Thus all but $o(D)$ loaded diameter vertices have all incident actual
+Thus all but $`o(D)`$ loaded diameter vertices have all incident actual
 diameter edges in one contiguous projective-direction run. More generally, the
 total number of direction re-entries is paid by the same rooted scalar defect
-$\Delta(\lambda)D+o(D)$.
+$`\Delta(\lambda)D+o(D)`$.
 
 ## Proof of the exact identity
 
-Let $N_{\rm sh}$ count consecutive direction pairs sharing an endpoint. A
-vertex $v$ of diameter degree $d_v$ has its incident positions split into
-$t_v$ proper cyclic runs. Those runs contain exactly $d_v-t_v$ internal
+Let $`N_{\rm sh}`$ count consecutive direction pairs sharing an endpoint. A
+vertex $`v`$ of diameter degree $`d_v`$ has its incident positions split into
+$`t_v`$ proper cyclic runs. Those runs contain exactly $`d_v-t_v`$ internal
 adjacencies. Two distinct simple-graph edges share at most one endpoint, so no
 shared adjacency is counted twice. Hence
 
-$$
+```math
 N_{\rm sh}
 =\sum_v(d_v-t_v)
 =2h-\sum_vt_v.
-$$
+```
 
 Every consecutive pair is shared or vertex-disjoint, so
 
-$$
+```math
 m_D=h-N_{\rm sh}=\sum_vt_v-h.
-$$
+```
 
 Every loaded terminal has positive diameter degree. Therefore
 
-$$
+```math
 m_D-d_H
 =\left(\sum_vt_v-h\right)-(q-h)
 =\sum_v(t_v-1)=R_D,
-$$
+```
 
-proving (1). This refines the canonical inequality $m_D\ge d_H$: its entire
+proving (1). This refines the canonical inequality $`m_D\ge d_H`$: its entire
 slack is exactly incident-direction re-entry.
 
 ## Angular payment
 
-Section 66 gives projective gap at least $2a_D$ for a shared pair and at least
-$4a_D$ for a vertex-disjoint pair. Summing all cyclic gaps,
+Section 66 gives projective gap at least $`2a_D`$ for a shared pair and at least
+$`4a_D`$ for a vertex-disjoint pair. Summing all cyclic gaps,
 
-$$
+```math
 \pi
 \ge2a_D(h-m_D)+4a_Dm_D
 =2a_D(h+m_D)
 =2a_D(q+R_D),
-$$
+```
 
-which proves (2). Since $\arcsin x>x$ on $(0,1)$,
-$\pi/(2a_D)<\pi D$, proving (3).
+which proves (2). Since $`\arcsin x>x`$ on $`(0,1)`$,
+$`\pi/(2a_D)<\pi D`$, proving (3).
 
 Equivalently, if
 
-$$
+```math
 E_D=\sum_i
 \left(g_i-2a_D-2a_D{\bf1}_{\{i\ {\rm disjoint}\}}\right),
-$$
+```
 
 then exactly
 
-$$
+```math
 \boxed{E_D=\pi-2a_D(q+R_D)}.
 \tag{7}
-$$
+```
 
 The near-maximal projective packing therefore has an explicit topological
 currency: every re-entry consumes one additional direction slot.
@@ -169,14 +169,14 @@ currency: every re-entry consumes one additional direction slot.
 Current main proves at the exact rooted endpoint that almost every loaded hull
 side is generated by a consecutive shared-endpoint diameter V. The result above
 adds global order: the full diameter graph can return to a previously used
-center at a separated projective location only $o(D)$ times in total.
+center at a separated projective location only $`o(D)`$ times in total.
 
 This does not by itself contradict a regular odd shell, and it does not imply
-that the $o(D)$ re-entrant vertices carry only $o(D)$ diameter edges. It
+that the $`o(D)`$ re-entrant vertices carry only $`o(D)`$ diameter edges. It
 does rule out a linear density of star re-entry events as an escape from the
 diameter-V cover. A next closure step can couple the almost-contiguous
 diameter-star runs to harmonic route-geodesicity or the inverse-phase train
-families, charging any re-entry loss directly to $\Delta(\lambda)D+o(D)$.
+families, charging any re-entry loss directly to $`\Delta(\lambda)D+o(D)`$.
 
 ## Scope
 

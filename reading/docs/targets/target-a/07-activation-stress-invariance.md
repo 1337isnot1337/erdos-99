@@ -22,21 +22,21 @@ produce the missing Schur nullity.
 
 Use the monotone activation sequence of Theorem 142.1,
 
-$$
+```math
 A_0,A_1,\ldots,A_s,
 \tag{153.1}
-$$
+```
 
-where each $A_i$ is a triangle-free global minimizer of the same cardinality and
-diameter $D$. At step $i$, one currently strict rattler $r_i$ moves while all
+where each $`A_i`$ is a triangle-free global minimizer of the same cardinality and
+diameter $`D`$. At step $`i`$, one currently strict rattler $`r_i`$ moves while all
 other points remain fixed; all old active pairs persist; and exactly one new active
-pair $e_i$ is created.
+pair $`e_i`$ is created.
 
-Label the points consistently through the sequence. Let $C_i$ and $H_i$ be the
-unit-contact and diameter-pair sets of $A_i$. Define $\mathcal K_i$ to be the set
+Label the points consistently through the sequence. Let $`C_i`$ and $`H_i`$ be the
+unit-contact and diameter-pair sets of $`A_i`$. Define $`\mathcal K_i`$ to be the set
 of normalized KKT stresses from Theorem 4.1:
 
-$$
+```math
 \mathcal K_i=
 \left\{(\alpha,\beta):
 \begin{array}{l}
@@ -51,115 +51,109 @@ $$
 \end{array}
 \right\}.
 \tag{153.2}
-$$
+```
 
-Theorem 4.1 makes every $\mathcal K_i$ nonempty. Its trace identity also gives
-$\sum_{C_i}\alpha_{uv}=D^2$, so $\mathcal K_i$ is a compact convex polytope.
+Theorem 4.1 makes every $`\mathcal K_i`$ nonempty. Its trace identity also gives
+$`\sum_{C_i}\alpha_{uv}=D^2`$, so $`\mathcal K_i`$ is a compact convex polytope.
 
 > **Theorem 153.1 (KKT-stress invariance under monotone activation).** For every
-> activation step $A_i\to A_{i+1}$:
+> activation step $`A_i\to A_{i+1}`$:
 >
-> 1. the multiplier of the newly created active pair $e_i$ is zero in **every**
->    normalized KKT stress of $A_{i+1}$;
+> 1. the multiplier of the newly created active pair $`e_i`$ is zero in **every**
+>    normalized KKT stress of $`A_{i+1}`$;
 > 2. restriction to the old active pairs gives a canonical bijection
 >    
 
-$$
-
+```math
 >    \boxed{\mathcal K_{i+1}\cong\mathcal K_i,}
 >    \tag{153.3}
 >    
-$$
-
-
->    whose inverse extends a stress by assigning multiplier zero to $e_i$.
+```
+>    whose inverse extends a stress by assigning multiplier zero to $`e_i`$.
 >
 > Consequently
 > 
 
-$$
-
+```math
 > \boxed{\mathcal K_s\cong\mathcal K_0,}
 > \tag{153.4}
 > 
-$$
-
-
+```
 > and every active pair created anywhere in the activation sequence has multiplier
-> zero in every normalized KKT stress of the terminal configuration $A_s$.
+> zero in every normalized KKT stress of the terminal configuration $`A_s`$.
 
 ## Proof
 
-Fix one step and write $r=r_i$ for the moved point. Since $r$ is strict in
-$A_i$, no active unit or diameter pair of $A_i$ is incident to $r$. Theorem
+Fix one step and write $`r=r_i`$ for the moved point. Since $`r`$ is strict in
+$`A_i`$, no active unit or diameter pair of $`A_i`$ is incident to $`r`$. Theorem
 142.1 says that exactly one new active pair is created and that every old active pair
-persists. Hence at $A_{i+1}$, the point $r$ is incident to exactly one active
-pair, namely $e_i$.
+persists. Hence at $`A_{i+1}`$, the point $`r`$ is incident to exactly one active
+pair, namely $`e_i`$.
 
-Suppose first that $e_i=rv$ is a unit contact. Then $r$ has exactly one unit
-neighbor and no diameter neighbor. The equilibrium equation (4.2) at $r$ is
+Suppose first that $`e_i=rv`$ is a unit contact. Then $`r`$ has exactly one unit
+neighbor and no diameter neighbor. The equilibrium equation (4.2) at $`r`$ is
 
-$$
+```math
 \alpha_{e_i}(p_r-p_v)=0.
 \tag{153.5}
-$$
+```
 
 The edge vector is nonzero, so
 
-$$
+```math
 \boxed{\alpha_{e_i}=0}
 \tag{153.6}
-$$
+```
 
-for every $(\alpha,\beta)\in\mathcal K_{i+1}$.
+for every $`(\alpha,\beta)\in\mathcal K_{i+1}`$.
 
-If instead $e_i=rv$ is a diameter pair, then $r$ has exactly one diameter
-neighbor and no unit neighbor. Equation (4.2) at $r$ becomes
+If instead $`e_i=rv`$ is a diameter pair, then $`r`$ has exactly one diameter
+neighbor and no unit neighbor. Equation (4.2) at $`r`$ becomes
 
-$$
+```math
 0=\beta_{e_i}(p_r-p_v),
 \tag{153.7}
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{\beta_{e_i}=0}
 \tag{153.8}
-$$
+```
 
-for every stress in $\mathcal K_{i+1}$. This proves item 1.
+for every stress in $`\mathcal K_{i+1}`$. This proves item 1.
 
-Now remove the zero coordinate belonging to $e_i$. Every older active pair has the
-same two endpoints at the same positions in $A_i$ and $A_{i+1}$, because the
-only moved point was $r$ and $r$ was incident to no old active pair. Thus every
+Now remove the zero coordinate belonging to $`e_i`$. Every older active pair has the
+same two endpoints at the same positions in $`A_i`$ and $`A_{i+1}`$, because the
+only moved point was $`r`$ and $`r`$ was incident to no old active pair. Thus every
 old active edge vector is unchanged. The equilibrium equations at every fixed point
-therefore become exactly the equilibrium equations for $A_i$, while at $r$ both
-sides are zero. The normalization $\sum\beta=1$ is unchanged because the new
-multiplier is zero. Restriction hence maps $\mathcal K_{i+1}$ into
-$\mathcal K_i$.
+therefore become exactly the equilibrium equations for $`A_i`$, while at $`r`$ both
+sides are zero. The normalization $`\sum\beta=1`$ is unchanged because the new
+multiplier is zero. Restriction hence maps $`\mathcal K_{i+1}`$ into
+$`\mathcal K_i`$.
 
-Conversely, take any stress in $\mathcal K_i$ and assign multiplier zero to
-$e_i$. The same unchanged old edge vectors satisfy equilibrium at every fixed point,
-the moved point again has equation $0=0$, and the diameter normalization is
-unchanged. This zero-extension belongs to $\mathcal K_{i+1}$. Restriction and
+Conversely, take any stress in $`\mathcal K_i`$ and assign multiplier zero to
+$`e_i`$. The same unchanged old edge vectors satisfy equilibrium at every fixed point,
+the moved point again has equation $`0=0`$, and the diameter normalization is
+unchanged. This zero-extension belongs to $`\mathcal K_{i+1}`$. Restriction and
 zero-extension are inverse maps, proving (153.3).
 
 Iterating the bijection proves (153.4). At each stage the new coordinate is identically
 zero on the entire stress polytope, so every pair created at any earlier stage remains
-identically zero after all later bijections. $\square$
+identically zero after all later bijections. $`\square`$
 
 ## 153.1 Initial strict rattlers remain universally stress-unloaded
 
-Let $R_0$ be any specified set of strict rattlers in $A_0$. No active pair of
-$A_0$ is incident to a point of $R_0$. Therefore every active pair incident to
-$R_0$ in the terminal configuration $A_s$ was created during the activation
+Let $`R_0`$ be any specified set of strict rattlers in $`A_0`$. No active pair of
+$`A_0`$ is incident to a point of $`R_0`$. Therefore every active pair incident to
+$`R_0`$ in the terminal configuration $`A_s`$ was created during the activation
 sequence. Theorem 153.1 gives immediately:
 
 > **Corollary 153.2 (universal unloading of the initial rattler population).** For
-> every normalized KKT stress of $A_s$, every point of $R_0$ is absent from both
+> every normalized KKT stress of $`A_s`$, every point of $`R_0`$ is absent from both
 > the positive contact-stress support and the positive diameter-stress support.
-> Equivalently, every active pair incident to $R_0$ has multiplier zero.
+> Equivalently, every active pair incident to $`R_0`$ has multiplier zero.
 
 Thus eliminating strict rattlers by the globally optimal activation normalization does
 not make them visible to the normalized first-order stress system. Section 112 showed
@@ -169,40 +163,40 @@ not repair that blindness.
 
 ## 153.2 Exact separation between activation rigidity rank and KKT load
 
-Let $F_{\rm act}$ be the unit-activation forest from Section 144. Lemma 145.1 gives
+Let $`F_{\rm act}`$ be the unit-activation forest from Section 144. Lemma 145.1 gives
 
-$$
+```math
 \operatorname{rank}R_{F_{\rm act}}=|E(F_{\rm act})|,
 \tag{153.9}
-$$
+```
 
 and the quantitative lower bound is
 
-$$
+```math
 |E(F_{\rm act})|
 \ge
 \left\lceil
 \frac{\max\{0,\rho-5\widehat p_H-2\pi D\}}{2}
 \right\rceil.
 \tag{153.10}
-$$
+```
 
-Every edge of $F_{\rm act}$ was created during the monotone activation sequence.
+Every edge of $`F_{\rm act}`$ was created during the monotone activation sequence.
 Theorem 153.1 therefore gives, simultaneously for **every** terminal normalized KKT
 stress,
 
-$$
+```math
 \boxed{
 \alpha_e=0
 \qquad(e\in E(F_{\rm act})).
 }
 \tag{153.11}
-$$
+```
 
 Hence the activation forest can contribute a large exact rank to the unweighted
 unit-distance rigidity matrix while contributing exactly zero positive KKT load:
 
-$$
+```math
 \boxed{
 \text{large activation rigidity rank}
 +\text{global optimality}
@@ -210,7 +204,7 @@ $$
 \text{positive KKT stress on the activation forest}.
 }
 \tag{153.12}
-$$
+```
 
 This is stronger, in a different direction, than the non-global compatibility
 regression of Section 152. Section 152 shows that large activation rank can coexist
@@ -248,21 +242,21 @@ another source-to-response invariant.
 
 The authoritative Target A endpoint remains
 
-$$
+```math
 \boxed{
 \dim\ker S\ge\Delta_\Lambda-d_{\rm int},
 }
 \tag{153.13}
-$$
+```
 
 equivalently
 
-$$
+```math
 \boxed{
 \operatorname{rank}S
 \le d_{\rm int}+|C^\partial|-\Delta_\Lambda.
 }
 \tag{153.14}
-$$
+```
 
 **LEVEL I STATUS: STILL OPEN. TARGET A REMAINS UNRESOLVED.**

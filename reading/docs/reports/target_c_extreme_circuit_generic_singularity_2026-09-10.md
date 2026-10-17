@@ -19,9 +19,9 @@
 EC shows that every extreme normalized KKT stress has positive support `S` equal to a
 circuit of the **actual realized** rigidity-row matroid. Let
 
-$$
+```math
 \sigma_*:=2v_*-2-|S|\ge0.
-$$
+```
 
 There is an exact dichotomy that separates generic combinatorial rigidity from
 special-position dependence.
@@ -37,14 +37,14 @@ Then:
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \operatorname{rank}_{gen}S
 =
 \operatorname{rank}_{p}S+\mathbf1_{\{\sigma_*>0\}}.
 }
 \tag{GS.1}
-$$
+```
 
 Thus every underbraced extreme positive circuit is created by exactly one unit of rank
 loss at the actual geometry. Its large bar-flex deficit `sigma_*` is not a large
@@ -55,20 +55,20 @@ mechanism paired with the positive self-stress.
 Since the full post-ZF mixed framework has actual rank `2v-3`, which is the maximum
 possible planar rank, its generic and actual ranks agree. Therefore if
 
-$$
+```math
 \kappa_*:=\operatorname{rank}R-\operatorname{rank}_pR_S,
-$$
+```
 
 then the generic completion gap is
 
-$$
+```math
 \boxed{
 \operatorname{rank}R-\operatorname{rank}_{gen}R_S
 =
 \kappa_*-\mathbf1_{\{\sigma_*>0\}}.
 }
 \tag{GS.2}
-$$
+```
 
 This identifies precisely what a high-`sigma_*` QP pivot must change: a codimension-one
 special-position circuit singularity sitting inside an otherwise generically
@@ -80,9 +80,9 @@ underbraced graph.
 
 EC proves that `S` is an actual circuit. Therefore every proper edge subset
 
-$$
+```math
 J\subsetneq S
-$$
+```
 
 is row-independent at the actual placement `p`.
 
@@ -90,14 +90,14 @@ Row independence at one placement implies generic independence of the same abstr
 edge set: a maximal minor of the rigidity matrix is a polynomial in the vertex
 coordinates, and if it is nonzero at `p`, it is not the zero polynomial. Hence
 
-$$
+```math
 \boxed{
 J\subsetneq S
 \quad\Longrightarrow\quad
 J\text{ is independent in }M_{gen}.
 }
 \tag{1.1}
-$$
+```
 
 This direction uses no genericity assumption on the source.
 
@@ -107,10 +107,10 @@ This direction uses no genericity assumption on the source.
 
 If `sigma_*=0`, then
 
-$$
+```math
 |S|=2v_*-2.
 \tag{2.1}
-$$
+```
 
 A generic planar framework on `v_*` incident vertices has rigidity rank at most
 `2v_*-3`, so `S` is generically dependent. By (1.1), every proper subset is
@@ -125,42 +125,42 @@ This proves the first half of GS.
 
 Assume
 
-$$
+```math
 \sigma_*>0.
-$$
+```
 
 Then
 
-$$
+```math
 |S|=2v_*-2-\sigma_*
 \le2v_*-3.
 \tag{3.1}
-$$
+```
 
 Suppose for contradiction that `S` were generically dependent. By (1.1), every proper
 subset is generically independent, so `S` would be a **generic rigidity circuit**.
 The standard Laman circuit characterization says a planar generic rigidity circuit on
 its incident vertex set has exactly
 
-$$
+```math
 2v_*-2
-$$
+```
 
 edges. This contradicts (3.1).
 
 Hence
 
-$$
+```math
 \boxed{\operatorname{rank}_{gen}S=|S|.}
 \tag{3.2}
-$$
+```
 
 EC gives
 
-$$
+```math
 \operatorname{rank}_{p}S=|S|-1.
 \tag{3.3}
-$$
+```
 
 Thus the actual source geometry lowers the selected row rank by exactly one. This
 proves GS.1 in the underbraced case.
@@ -174,34 +174,34 @@ Euclidean rigid motions.
 
 If `sigma_*>0`, generic independence gives
 
-$$
+```math
 \begin{aligned}
 \dim\mathcal M_{gen}
 &=(2v_*-3)-|S|\\
 &=\sigma_*-1.
 \end{aligned}
 \tag{4.1}
-$$
+```
 
 At the actual source placement, EC gives row rank `|S|-1`, so
 
-$$
+```math
 \begin{aligned}
 \dim\mathcal M_p
 &=(2v_*-3)-(|S|-1)\\
 &=\sigma_*.
 \end{aligned}
 \tag{4.2}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \dim\mathcal M_p-\dim\mathcal M_{gen}=1.
 }
 \tag{4.3}
-$$
+```
 
 The positive KKT circuit stress and the extra infinitesimal mechanism are the unique
 Maxwell rank-drop pair introduced by the special source geometry.
@@ -215,41 +215,41 @@ only one more mechanism than its generic abstract graph.
 
 The full mixed framework has actual rigidity rank
 
-$$
+```math
 \operatorname{rank}_pR=2v-3.
-$$
+```
 
 This is the maximum possible rank for a nondegenerate planar framework. Hence the
 generic rank of the same abstract mixed graph is also
 
-$$
+```math
 \boxed{\operatorname{rank}_{gen}R=2v-3.}
 \tag{5.1}
-$$
+```
 
 Let
 
-$$
+```math
 \kappa_*
 =\operatorname{rank}_pR-\operatorname{rank}_pR_S.
-$$
+```
 
 If `sigma_*=0`, GS.1 gives equal selected generic/actual rank, so the generic
 completion gap is `kappa_*`.
 
 If `sigma_*>0`, GS.1 gives
 
-$$
+```math
 \operatorname{rank}_{gen}R_S
 =\operatorname{rank}_pR_S+1,
-$$
+```
 
 so
 
-$$
+```math
 \operatorname{rank}_{gen}R-\operatorname{rank}_{gen}R_S
 =\kappa_*-1.
-$$
+```
 
 This proves GS.2.
 
@@ -257,17 +257,17 @@ This proves GS.2.
 
 The full generic and actual mixed graphs both have stress-space dimension
 
-$$
+```math
 s_Z+1.
-$$
+```
 
 For an underbraced extreme circuit, the selected graph has
 
-$$
+```math
 \dim\mathcal S_{gen}(S)=0,
 \qquad
 \dim\mathcal S_p(S)=1.
-$$
+```
 
 So one selected positive stress dimension is created by specialization even though the
 **total** full stress nullity does not change. Necessarily, one generic dependence
@@ -282,15 +282,15 @@ Take an underbraced extreme circuit `S`, so `sigma_*>0` and `S` is generically
 independent. QP chooses a positive quotient circuit `T` among omitted actual rows and
 forms the two-stress union
 
-$$
+```math
 U=S\cup T.
-$$
+```
 
 At the actual placement,
 
-$$
+```math
 \dim\mathcal S_p(U)=2.
-$$
+```
 
 The generic nullity of `U` now distinguishes two structurally different pivots:
 
@@ -301,9 +301,9 @@ The generic nullity of `U` now distinguishes two structurally different pivots:
 
 The second case means
 
-$$
+```math
 \operatorname{rank}_{gen}U-\operatorname{rank}_pU=2.
-$$
+```
 
 Thus a chain of minimum-`kappa` QP pivots that never reaches a `sigma=0` circuit must
 continually transport or accumulate explicit algebraic rank singularities. This is a

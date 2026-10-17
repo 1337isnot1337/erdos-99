@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_p2_even_m_schinzel_closure_2026-09-10.md) · source SHA-256 `5238c3fa85b5cd388f780aa111dd756cd4052f9c8c0e6171f08d8d8963cd3b78`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-DF8FD976F468","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=2`, P2: sufficiently large even `m` excluded by Schinzel + cyclic-isogeny rigidity
 
@@ -18,15 +20,15 @@
 
 The P2 arithmetic route had one remaining scope question: GC originally used Filaseta only conditionally because its printed theorem was over `Z/Q`, while our natural Gaussian factor
 
-$$
+```math
 F_n^+(Z)=Z^{2n}-1+iZ^{n-1}(4Z^2-6Z+4)
-$$
+```
 
 lives over
 
-$$
+```math
 K=\mathbb Q(i).
-$$
+```
 
 PK and CI removed the algebraic part of that issue directly over `K`. The remaining finite-matrix reduction is supplied by Schinzel's Theorem 74, whose chapter scope is explicitly **arbitrary field**. Sawin–Shusterman–Stoll spell out exactly the rank-`<=2` matrix consequence needed here and explicitly contrast the older Schinzel 1969 theorem as the version stated over `Q`.
 
@@ -36,42 +38,42 @@ This closes the sufficiently large even-`m` P2 branch.
 
 There is an integer
 
-$$
+```math
 M_0
-$$
+```
 
 such that no cyclic P2 survivor exists with
 
-$$
+```math
 \boxed{m=q-4\ge M_0\quad\text{and}\quad m\text{ even}.}
 \tag{ES.1}
-$$
+```
 
 Equivalently, all sufficiently large P2 survivors, if any, must have odd shell cardinality `q`.
 
 More precisely, writing
 
-$$
+```math
 m=2n,
-$$
+```
 
 the Gaussian factor
 
-$$
+```math
 \boxed{
 F_n^+(Z)=Z^{2n}-1+iZ^{n-1}(4Z^2-6Z+4)
 }
 \tag{ES.2}
-$$
+```
 
 is irreducible over `Q(i)` for every sufficiently large `n`. Consequently
 
-$$
+```math
 \boxed{
 H_{2n}(X)=2T_{2n}(X/2)+16X^2-48X+34
 }
 \tag{ES.3}
-$$
+```
 
 is irreducible over `Q` for every sufficiently large `n`. P2A then excludes the corresponding P2 geometry.
 
@@ -96,9 +98,9 @@ They then add: “see also [Sch69, Theorem 2], where the result is stated over Q
 
 Our field
 
-$$
+```math
 K=\mathbb Q(i)
-$$
+```
 
 has characteristic zero, so it lies in the arbitrary-field scope relevant here.
 
@@ -110,30 +112,30 @@ No extension of Filaseta's integer-coefficient theorem is used below.
 
 Define the fixed polynomial
 
-$$
+```math
 \boxed{
 \mathcal F(X,Y)
 =X^2Y^2+i(4X^2-6X+4)Y-1
 \in K[X,Y].
 }
 \tag{2.1}
-$$
+```
 
 GC proves `mathcal F` irreducible over `K`, and for every `n>=1`,
 
-$$
+```math
 \boxed{
 \mathcal F(X,X^{n-1})=F_n^+(X).
 }
 \tag{2.2}
-$$
+```
 
 Thus the specialization exponent vector is
 
-$$
+```math
 (1,N),
 \qquad N=n-1.
-$$
+```
 
 Schinzel 74 therefore supplies a bounded rank-`r` monomial matrix if the nonreciprocal part of `F_n^+` has a nontrivial factorization for arbitrarily large `n`.
 
@@ -145,52 +147,52 @@ We now eliminate both possible ranks.
 
 Let
 
-$$
+```math
 M=(a,b)
-$$
+```
 
 have rank one, and suppose
 
-$$
+```math
 (1,N)=\lambda(a,b)
-$$
+```
 
 for an integer `lambda`.
 
 The first coordinate gives
 
-$$
+```math
 1=\lambda a.
-$$
+```
 
 Hence
 
-$$
+```math
 \lambda=\pm1,
 \qquad
 a=\pm1,
-$$
+```
 
 and therefore
 
-$$
+```math
 b=\pm N.
-$$
+```
 
 Schinzel's matrix entries are bounded by a constant `C_mathcalF` depending only on the fixed polynomial `mathcal F`. Thus
 
-$$
+```math
 N\le C_{\mathcal F}
-$$
+```
 
 in the rank-one case.
 
 Consequently for all sufficiently large `n`,
 
-$$
+```math
 \boxed{r\ne1.}
 \tag{3.1}
-$$
+```
 
 The only possible matrix has rank two.
 
@@ -200,15 +202,15 @@ The only possible matrix has rank two.
 
 Let
 
-$$
+```math
 M\in\mathbb Z^{2\times2}
-$$
+```
 
 be a full-rank matrix supplied by Schinzel, with
 
-$$
+```math
 (1,N)
-$$
+```
 
 an integral row combination.
 
@@ -216,20 +218,20 @@ Because `(1,N)` is primitive, no integer `d>1` can divide every entry of `M`: if
 
 Thus
 
-$$
+```math
 \gcd(\text{entries of }M)=1.
-$$
+```
 
 Equivalently, the first Smith invariant of `M` is one.
 
 CI proves exactly that every such rank-two monomial pullback of `mathcal F` is irreducible over `K=Q(i)`:
 
-$$
+```math
 \boxed{
 \phi_M^*\mathcal F\text{ is irreducible in }K[Y_1^{\pm1},Y_2^{\pm1}].
 }
 \tag{4.1}
-$$
+```
 
 The proof of CI is internal: Smith normal form reduces the pullback to one cyclic Kummer cover, and PK proves every primitive character on the Gaussian curve is Kummer-primitive.
 
@@ -241,9 +243,9 @@ Together with Section 3, Schinzel's finite-matrix theorem gives:
 
 For every sufficiently large `n`, the nonreciprocal part of
 
-$$
+```math
 F_n^+
-$$
+```
 
 is irreducible over `Q(i)`.
 
@@ -253,35 +255,35 @@ is irreducible over `Q(i)`.
 
 GC-R proves for every `n>=2` that
 
-$$
+```math
 \boxed{F_n^+\text{ has no nonconstant reciprocal factor over }Q(i).}
 \tag{5.1}
-$$
+```
 
 Hence the reciprocal part is a unit. The nonreciprocal part is the whole polynomial up to a Gaussian constant and monomial unit.
 
 Corollary ES.1 therefore gives
 
-$$
+```math
 \boxed{
 F_n^+\text{ is irreducible over }Q(i)
 \quad\text{for all sufficiently large }n.
 }
 \tag{5.2}
-$$
+```
 
 Complex conjugation gives the same conclusion for
 
-$$
+```math
 F_n^-.
-$$
+```
 
 GC-R also proves
 
-$$
+```math
 \gcd(F_n^+,F_n^-)=1.
 \tag{5.3}
-$$
+```
 
 ---
 
@@ -289,47 +291,47 @@ $$
 
 P2A gives the reciprocal lift
 
-$$
+```math
 \boxed{
 R_{2n}(Z)
 :=Z^{2n}H_{2n}(Z+Z^{-1})
 =F_n^+(Z)F_n^-(Z).
 }
 \tag{6.1}
-$$
+```
 
 Suppose for contradiction that
 
-$$
+```math
 H_{2n}=AB
-$$
+```
 
 with nonconstant
 
-$$
+```math
 A,B\in\mathbb Q[X].
-$$
+```
 
 Let
 
-$$
+```math
 a=\deg A.
-$$
+```
 
 Then
 
-$$
+```math
 \widetilde A(Z):=Z^aA(Z+Z^{-1})
-$$
+```
 
 is a nonconstant reciprocal polynomial in `Q[Z]` dividing `R_{2n}`.
 
 Over `Q(i)`, equations (5.2)-(5.3) say that the complete irreducible factorization of `R_{2n}` has exactly the two coprime factors
 
-$$
+```math
 F_n^+,
 \qquad F_n^-.
-$$
+```
 
 Therefore a nonconstant proper factor is, up to a unit, either `F_n^+` or `F_n^-`.
 
@@ -341,12 +343,13 @@ Hence `A` is a unit or `A=H_{2n}` up to a rational unit, contradiction to a prop
 
 Therefore
 
-$$
+```math
 \boxed{
 H_{2n}\text{ is irreducible over }\mathbb Q
 \quad\text{for all sufficiently large }n.
 }
 \tag{6.2}
+```
 
 ---
 
@@ -354,42 +357,42 @@ H_{2n}\text{ is irreducible over }\mathbb Q
 
 For P2 with
 
-\[
+```math
 m=q-4=2n,
-$$
+```
 
 P2A lets `r_m` be the degree of the irreducible factor of `H_m` containing the physical root
 
-$$
+```math
 x=2\cos\delta.
-$$
+```
 
 Equation (6.2) gives
 
-$$
+```math
 \boxed{r_m=m.}
 \tag{7.1}
-$$
+```
 
 P2A proves that a P2 staircase decomposition with positive lengths `a,b` and
 
-$$
+```math
 a+b=m
-$$
+```
 
 would require
 
-$$
+```math
 \max(a,b)\ge r_m+1=m+1,
-$$
+```
 
 impossible.
 
 If one staircase length is zero, P2A separately gives a degree-`m-1` Littlewood polynomial vanishing at `z=e^{i\delta}`, while the minimal polynomial of `z` has degree
 
-$$
+```math
 2r_m=2m,
-$$
+```
 
 again impossible.
 
@@ -403,9 +406,9 @@ Thus no sufficiently large even-`m` P2 survivor exists. This proves ES. `square`
 
 The theorem closes
 
-$$
+```math
 m=q-4\text{ even},
-$$
+```
 
 equivalently even `q`.
 
@@ -456,17 +459,17 @@ The application above uses only that finite-matrix reduction. All pullback irred
 
 Before ES, the rigorous infinite P2 exclusion was only the power-of-two subsequence
 
-$$
+```math
 m=2^k.
-$$
+```
 
 After ES:
 
-$$
+```math
 \boxed{
 \text{every sufficiently large even }m=q-4\text{ is excluded.}
 }
-$$
+```
 
 Thus any large P2 counterexample must lie in the **odd-`m` arithmetic branch**.
 

@@ -17,9 +17,9 @@
 
 The PA theorem gives, for each unloaded component `I_r` with `a_r=|A_r|` distinct loaded attachments,
 
-$$
+```math
 s_r\le a_r-3.
-$$
+```
 
 This report resolves the slack exactly and simultaneously identifies the deficit by which the convex attachment cells fail to triangulate the force hull. The two defects add up to the loaded-loaded contact currency left after mixed defect is paid.
 
@@ -38,59 +38,59 @@ The PA proof gives `T_r<=a_r`, because every triangular bounded face consumes ex
 
 The outer face of `J_r^+` is the simple `a_r`-cycle `partial P_r`. Let `V_r^+=n_r+a_r` and `E_r^+=e_r+t_r+a_r`. If `f_r` is the number of bounded faces, Euler gives
 
-$$
+```math
 f_r=E_r^+-V_r^++1.
 \tag{1.1}
-$$
+```
 
 The bounded-face degree sum is exactly
 
-$$
+```math
 2E_r^+-a_r
 =4f_r-T_r+Q_r^+.
 \tag{1.2}
-$$
+```
 
 Substituting (1.1) and rearranging gives
 
-$$
+```math
 E_r^+
 =2V_r^+-2+\frac{T_r-a_r-Q_r^+}{2}.
 \tag{1.3}
-$$
+```
 
 On the other hand, by the definition
 
-$$
+```math
 s_r=e_r+t_r-2n_r-1,
-$$
+```
 
 we have
 
-$$
+```math
 E_r^+=2n_r+1+s_r+a_r.
 \tag{1.4}
-$$
+```
 
 Compare (1.3) and (1.4).
 
 ### Theorem AT.1 — exact local defect identity
 
-$$
+```math
 \boxed{
 a_r-3-s_r
 =\frac{a_r-T_r+Q_r^+}{2}.
 }
 \tag{AT.1}
-$$
+```
 
 Every term is nonnegative. Thus the PA inequality is equality precisely when
 
-$$
+```math
 T_r=a_r,
 \qquad
 Q_r^+=0.
-$$
+```
 
 Equivalently every added side bounds one triangular face and every other bounded face is a quadrilateral. Since all non-added edges are unit contacts, those quadrilaterals are unit rhombi.
 
@@ -100,42 +100,42 @@ C49 proves that the convex attachment cells have pairwise disjoint interiors. Si
 
 The number of such triangles is
 
-$$
+```math
 N_\triangle
 =\sum_r(a_r-2).
 \tag{2.1}
-$$
+```
 
 A noncrossing straight-line graph on `q` vertices in convex position has at most `q-2` bounded triangular faces. Hence
 
-$$
+```math
 N_\triangle\le q-2.
-$$
+```
 
 Define
 
-$$
+```math
 \boxed{
 d_{tile}:=q-2-\sum_r(a_r-2)\ge0.
 }
 \tag{AT.2}
-$$
+```
 
 Use the ZJ notation
 
-$$
+```math
 p_A=q_{used}+2c_I-2s-a_{inc},
 \qquad
 u_0=q-q_{used}.
-$$
+```
 
 Then direct substitution gives the exact identity
 
-$$
+```math
 \boxed{
 d_{tile}=p_A+2(s-1)+u_0.}
 \tag{AT.3}
-$$
+```
 
 Thus the three planar-incidence slacks have one geometric meaning: they are exactly the missing number of triangles relative to a full triangulation of the loaded force hull.
 
@@ -143,33 +143,33 @@ Thus the three planar-incidence slacks have one geometric meaning: they are exac
 
 Sum AT.1. Since
 
-$$
+```math
 u_A=a_{inc}-3c_I,
 \qquad
 s_C=\sum_rs_r,
-$$
+```
 
 we get
 
-$$
+```math
 \boxed{
 u_A-s_C
 =\frac12\sum_r(a_r-T_r+Q_r^+).}
 \tag{3.1}
-$$
+```
 
 PA rewrites ZJ exactly as
 
-$$
+```math
 e_{BB}-k
 =(u_A-s_C)+p_A+2(s-1)+u_0.
-$$
+```
 
 Insert (3.1) and AT.3.
 
 ### Theorem AT.2 — loaded-contact defect ledger
 
-$$
+```math
 \boxed{
  e_{BB}-(d_H+s_Z)
  =
@@ -177,26 +177,26 @@ $$
  +d_{tile}.
 }
 \tag{AT.4}
-$$
+```
 
 This is a finite exact identity. In particular
 
-$$
+```math
 \boxed{
  d_{tile}\le e_{BB}-(d_H+s_Z)\le e_{BB},
 }
 \tag{AT.5}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \sum_r(a_r-T_r+Q_r^+)
 \le2\bigl(e_{BB}-(d_H+s_Z)\bigr).
 }
 \tag{AT.6}
-$$
+```
 
 So small loaded-loaded contact currency forces *simultaneously*:
 
@@ -211,13 +211,13 @@ No pinned-surplus term appears on the right.
 
 Suppose
 
-$$
+```math
 e_{BB}=0.
-$$
+```
 
 PA gives `k=0`, and AT.4 forces
 
-$$
+```math
 d_{tile}=0,
 \qquad
 T_r=a_r,
@@ -225,14 +225,14 @@ T_r=a_r,
 Q_r^+=0
 \quad\text{for every }r.
 \tag{4.1}
-$$
+```
 
 The first equality says
 
-$$
+```math
 \sum_r(a_r-2)=q-2.
 \tag{4.2}
-$$
+```
 
 Triangulate every `P_r`. Add all these triangle edges and the outer cycle `partial F` to one straight-line graph on the `q` loaded vertices. C49's pairwise interior-disjointness implies the triangle interiors are disjoint and all edges are noncrossing. Each of the `q-2` triangles is therefore a bounded triangular face of this outerplanar graph.
 
@@ -242,29 +242,29 @@ A plane graph on `q` convex-position vertices with the outer `q`-cycle has at mo
 
 If `e_BB=0`, then
 
-$$
+```math
 \boxed{
 F=\bigcup_r P_r,
 \qquad
 \operatorname{int}P_r\cap\operatorname{int}P_s=\varnothing\ (r\ne s).
 }
 \tag{AT.7}
-$$
+```
 
 Equivalently the harmonic attachment cells form a polygonal dissection of the entire force hull using only loaded vertices.
 
 The dissection has exactly
 
-$$
+```math
 \boxed{c_I-1}
 \tag{AT.8}
-$$
+```
 
 internal diagonals. Indeed a dissection of a polygon into `c_I` cells without interior dissection vertices has dual tree and therefore `c_I-1` internal edges. The same count follows from
 
-$$
+```math
 \sum_ra_r=q+2(c_I-1),
-$$
+```
 
 where each outer side is counted once and each internal diagonal twice.
 
@@ -279,12 +279,12 @@ Inside one component cell, AT.1 gives exactly `n_r-1` quadrilateral faces: from 
 
 Across the `c_I-1` internal cell diagonals, the paired boundary triangles give `c_I-1` further global rhombi. Hence the complete number `R` of bounded contact faces is
 
-$$
+```math
 \boxed{
 R=\sum_r(n_r-1)+(c_I-1)=n_I-1,
 }
 \tag{AT.9}
-$$
+```
 
 where `n_I=sum_r n_r=v-q`.
 
@@ -304,9 +304,10 @@ A contact-isolated source point cannot lie in a strict unit rhombus by the C49/C
 It also cannot lie in one of the triangular pockets. Let the triangle have two sides of length one and base length `ell`, with `1<ell<2`. The covering radius of its three vertices over the triangle is strictly less than one:
 
 - if the triangle is acute, its circumradius is
-  $$
+  ```math
   R=\frac1{2\sqrt{1-\ell^2/4}}<1
-  $$
+  
+  ```
   because acuteness here implies `ell<sqrt(2)`;
 - if it is right or obtuse, the farthest point from the nearest vertex occurs no farther than half the longest side, and `ell/2<1`.
 
@@ -318,10 +319,10 @@ Consequently:
 
 If `e_BB=0`, every source point outside the positive contact core lies outside the force hull:
 
-$$
+```math
 \boxed{A\setminus V(C)\subseteq\mathbb R^2\setminus F.}
 \tag{AT.10}
-$$
+```
 
 This is the zero-loaded-contact analogue of the matching-branch externalization theorem, but with outer triangular caps rather than a unit hull cycle.
 
@@ -329,63 +330,63 @@ This is the zero-loaded-contact analogue of the matching-branch externalization 
 
 With `Q=0`, `f=0`, and outer contact-walk length `b=2q`, DT gives exactly
 
-$$
+```math
 \boxed{T=q.}
 \tag{7.1}
-$$
+```
 
 The train-crossing graph is simple and triangle-free and has one edge for each of the `R` strict rhombi. Mantel gives
 
-$$
+```math
 \boxed{R\le\frac{q^2}{4}.}
 \tag{7.2}
-$$
+```
 
 Every unit rhombus has area at most one. Every triangular outer pocket with two unit sides has area at most `1/2`. Since these pieces partition `F`,
 
-$$
+```math
 \boxed{
 \operatorname{area}F
 \le R+\frac q2
 \le\frac{q^2}{4}+\frac q2.
 }
 \tag{AT.11}
-$$
+```
 
 If along an unbounded `e_BB=0` sequence
 
-$$
+```math
 \frac qD=\frac hD\to y,
-$$
+```
 
 FSDB supplies
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge\Phi(y):=\frac{y+\sin y}{4}.
-$$
+```
 
 AT.11 therefore gives the necessary condition
 
-$$
+```math
 \boxed{y^2\ge y+\sin y.}
 \tag{AT.12}
-$$
+```
 
 On the DB interval `y>=2rho`, the function `y^2-y-sin y` is strictly increasing once `y>1` because its derivative is `2y-1-cos y>0`. It has a unique positive root above one,
 
-$$
+```math
 y_0=1.6175452860\ldots .
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 \liminf\frac qD\ge y_0
 }
 \tag{AT.13}
-$$
+```
 
 for any unbounded exact zero-loaded-contact branch.
 

@@ -38,20 +38,20 @@ Retain the canonical post-ZF notation:
 
 Work along a quadratic positive-core subsequence. Fix
 
-$$
+```math
 0<\epsilon<\pi/6.
 \tag{78.1}
-$$
+```
 
 Canonical Section 69 then supplies fixed constants `r,C>0` and an
 `epsilon`-coherent physical grain `G` such that
 
-$$
+```math
 R(G)\ge rD^2,
 \qquad
 P(G)\le CD,
 \tag{78.2}
-$$
+```
 
 where physical perimeter counts every outer and hole-boundary unit-edge occurrence.
 
@@ -59,39 +59,39 @@ where physical perimeter counts every outer and hole-boundary unit-edge occurren
 
 Canonical C35 gives
 
-$$
+```math
 \deg_C(b)\le3
 \qquad(b\in B).
 \tag{78.3}
-$$
+```
 
 Let `R_B(G)` be the number of rhombi of `G` incident to at least one loaded vertex.
 A strict rhombus is a simple bounded face. At a fixed planar vertex, distinct bounded
 faces occupy distinct sectors between consecutive incident contact edges. Therefore
 one loaded vertex is incident to at most its contact degree many strict rhombi. Hence
 
-$$
+```math
 R_B(G)
 \le\sum_{b\in B}\deg_C(b)
 \le3q.
 \tag{78.4}
-$$
+```
 
 The loaded vertices are unit-separated convex-hull vertices, so
 `q<=per(F)<=pi D`. Thus
 
-$$
+```math
 \boxed{R_B(G)\le3\pi D.}
 \tag{78.5}
-$$
+```
 
 Delete from `G` every rhombus touching `B`. Let `R^0` be the number of remaining
 rhombi. Then
 
-$$
+```math
 \boxed{R^0\ge rD^2-3\pi D=(r-o(1))D^2.}
 \tag{78.6}
-$$
+```
 
 Every remaining rhombus has all four vertices in `V\B`. Its four boundary contacts
 connect those vertices, so they lie in one component `I_r`. Consequently every
@@ -105,96 +105,96 @@ for their rhombus counts and `P_j` for their physical perimeters.
 
 Deleting one rhombus can expose at most four new boundary-edge occurrences. Therefore
 
-$$
+```math
 \sum_jP_j
 \le P(G)+4R_B(G)
 \le(C+12\pi)D.
 \tag{78.7}
-$$
+```
 
 This estimate includes holes and components created by the deletion.
 
 Each `G_j` has area at least `a_0R_j`. The planar isoperimetric inequality, with all
 hole boundaries included in the perimeter, gives
 
-$$
+```math
 P_j\ge2\sqrt{\pi a_0R_j}.
 \tag{78.8}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 2\sqrt{\pi a_0}\sum_j\sqrt{R_j}
 \le(C+12\pi)D.
 }
 \tag{78.9}
-$$
+```
 
 Let `R_*:=max_jR_j`. Since `R^0=sum_jR_j`,
 
-$$
+```math
 R^0
 \le\sqrt{R_*}\sum_j\sqrt{R_j},
-$$
+```
 
 so (78.9) yields
 
-$$
+```math
 \boxed{
 R_*
 \ge {4\pi a_0(R^0)^2\over(C+12\pi)^2D^2}.
 }
 \tag{78.10}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \liminf {R_*\over D^2}
 \ge r_*:={4\pi a_0r^2\over(C+12\pi)^2}>0.
 }
 \tag{78.11}
-$$
+```
 
 Choose a component `G_*` attaining `R_*`. By Section 78.1, all its vertices lie in
 one unloaded component `I_*`; let
 
-$$
+```math
 P_*:=conv(A_*),
 \qquad
 d_*:=diam(P_*).
 \tag{78.12}
-$$
+```
 
 Harmonic trapping and convexity give
 
-$$
+```math
 \boxed{G_*\subset P_*.}
 \tag{78.13}
-$$
+```
 
 The subgrain is still `epsilon`-coherent because it is a subcomplex of the single
 Section-69 grain `G` and inherits its phase bin and three-phase frame.
 
 Its attachment cell is macroscopic. Since the rhombi of `G_*` have disjoint interiors,
 
-$$
+```math
 area(P_*)\ge a_0R_*.
 \tag{78.14}
-$$
+```
 
 The isodiametric inequality `area(P_*)<=pi d_*^2/4` gives
 
-$$
+```math
 \boxed{
  d_*\ge2\sqrt{{a_0R_*\over\pi}}
  =\Omega(D).
 }
 \tag{78.15}
-$$
+```
 
 Thus a quadratic-core survivor contains one quadratic coherent rhombic subgrain in
 one macroscopic harmonic attachment cell.
@@ -204,10 +204,10 @@ one macroscopic harmonic attachment cell.
 Let `T_*` be the local train count of `G_*`. Canonical Theorem 10.6 applies to this
 finite rhombic complex, with arbitrary holes, and gives
 
-$$
+```math
 2T_*=P(G_*).
 \tag{78.16}
-$$
+```
 
 Since `P(G_*)<=sum_jP_j`, equation (78.7) gives `T_*=O(D)`, while (78.11) gives
 `R_*=Omega(D^2)`.
@@ -217,19 +217,19 @@ inherits its phase label and reduced phase potential. Therefore the proof of can
 Section 73 applies verbatim to `G_*`: there are internally noncrossing,
 distinct-phase, all-crossing train families `A,B` with
 
-$$
+```math
 \boxed{
 |A|,|B|\ge {c_{PS}\over2}{R_*\over T_*}=\Omega(D).
 }
 \tag{78.17}
-$$
+```
 
 Thus for some fixed `gamma_*>0`, eventually
 
-$$
+```math
 \boxed{|A|,|B|\ge\gamma_*D.}
 \tag{78.18}
-$$
+```
 
 Since `d_*<=D`, these shores are also linear in the local cell diameter.
 
@@ -239,11 +239,11 @@ Every `A x B` crossing rhombus belongs to `G_*` and therefore lies inside `P_*`.
 
 Canonical Section 76 proves for a complete phase-pure grid that
 
-$$
+```math
 D\ge {\sqrt3\over2}(|A|+|B|)
       -{S_{AB}\over\min(|A|,|B|)}-2,
 \tag{78.19}
-$$
+```
 
 where `S_AB` is the sum of the acute-angle defects of the product rhombi. In that
 proof, the only use of the ambient `D` in the endpoint step is the bound on the
@@ -253,48 +253,48 @@ For the present grid, both selected crossing centers belong to rhombi in
 `G_* subset P_*`. Hence their distance is at most `d_*`, and the identical projection
 argument gives the stronger local statement
 
-$$
+```math
 \boxed{
  d_*\ge {\sqrt3\over2}(|A|+|B|)
       -{S_{AB}\over\min(|A|,|B|)}-2.
 }
 \tag{78.20}
-$$
+```
 
 Canonical Section 68 gives the global angular-defect bound
 
-$$
+```math
 S_{AB}<C_{phase}D.
 \tag{78.21}
-$$
+```
 
 Together with (78.18),
 
-$$
+```math
 {S_{AB}\over\min(|A|,|B|)}
 <{C_{phase}\over\gamma_*}=O(1).
 \tag{78.22}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 |A|+|B|
 \le {2\over\sqrt3}d_*+O(1),
 }
 \tag{78.23}
-$$
+```
 
 and AM-GM gives
 
-$$
+```math
 \boxed{
 |A||B|
 \le {d_*^2\over3}+O(d_*).
 }
 \tag{78.24}
-$$
+```
 
 The right-hand scale is now the diameter of one actual harmonic attachment cell,
 not the full source diameter.

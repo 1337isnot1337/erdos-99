@@ -22,10 +22,10 @@ This report continues
 During this run `main` advanced by
 [`target_c_zf_boundary_surplus_collapse_2026-09-09.md`](target_c_zf_boundary_surplus_collapse_2026-09-09.md). That concurrent report independently records
 
-$$
+```math
 q\ge h\ge\delta\ge\lceil D\rceil
 \tag{0.1}
-$$
+```
 
 and the C18 linear off-star support consequence. Those statements are therefore treated here as report-level inputs, not as new claims of this branch.
 
@@ -33,9 +33,10 @@ The genuinely new result below concerns **contact bridges**. A physical contact 
 
 - rank-one electrical transfer across the bridge;
 - strict electrical/mechanical cut sandwich
-  $$
+  ```math
   w_e<C_e\le\alpha_e\le Dw_e;
-  $$
+  
+  ```
 - at least two nonparallel crossing diameter bars for a singleton side;
 - full three-dimensional relative body-bar rank, hence at least three nonconcurrent crossing diameter bars, when both sides are nonsingleton.
 
@@ -53,62 +54,62 @@ Work with a sufficiently large triangle-free global minimizer in the lexicograph
 
 Use the audited ZR/ZF conclusions and the preceding ZK report:
 
-$$
+```math
 \Omega=L_C(\alpha)-L_H(\beta)\succeq0,
 \qquad
 \ker\Omega=\operatorname{span}\{\mathbf1,P_x,P_y\},
 \tag{1.1}
-$$
+```
 
 and the mixed active bar framework
 
-$$
+```math
 J=(V,C\cup H)
 \tag{1.2}
-$$
+```
 
 is redundantly infinitesimally rigid. In addition, if `Lambda` is the positive-contact Dirichlet response on `B`, then
 
-$$
+```math
 M=\Lambda-L_H(\beta)\succeq0
 \tag{1.3}
-$$
+```
 
 has exact affine kernel, so every nonempty proper terminal cut has **strict** response excess.
 
 Let `e=uv` be a bridge of the contact graph. Removing it gives contact components `X,Y`, with `u in X`, `v in Y`. C20 gives nonempty complementary cyclic terminal intervals
 
-$$
+```math
 B_X=B\cap X,
 \qquad
 B_Y=B\cap Y.
 \tag{1.4}
-$$
+```
 
 Define the active diameter edges crossing the bridge cut and their total KKT weight by
 
-$$
+```math
 H_e=\{xy\in H:x\in X,\ y\in Y\},
 \qquad
 w_e=\sum_{h\in H_e}\beta_h.
 \tag{1.5}
-$$
+```
 
 Write
 
-$$
+```math
 c_{bk}:=-\Lambda_{bk}\ge0
 \qquad(b\ne k)
 \tag{1.6}
-$$
+```
 
 and define total response conductance across the same terminal shore by
 
-$$
+```math
 C_e=
 \sum_{b\in B_X,\ k\in B_Y}c_{bk}.
 \tag{1.7}
-$$
+```
 
 ## 2. Strongest genuinely new audited theorem
 
@@ -117,43 +118,48 @@ $$
 Under the preceding hypotheses:
 
 1. **Rank-one electrical transfer.**
-   $$
+   ```math
    \boxed{\operatorname{rank}\Lambda_{B_X,B_Y}=1.}
    \tag{ZBR1}
-   $$
+   
+   ```
    Equivalently, the nonnegative cross-conductance block factors as
-   $$
+   ```math
    c_{bk}=\kappa x_b y_k
    \qquad
    (b\in B_X,\ k\in B_Y)
    \tag{2.1}
-   $$
+   
+   ```
    for nonnegative vectors `x,y` and some `kappa>0`.
 
 2. **Exact bridge sandwich.**
-   $$
+   ```math
    \boxed{
    w_e<C_e\le\alpha_e\le Dw_e.
    }
    \tag{ZBR2}
-   $$
+   
+   ```
 
 3. **Singleton bridge side.** If one contact side is a singleton, then at least two active diameter bars cross the bridge cut, and their directions are nonparallel.
 
 4. **Nonsingleton bridge body-bar rank.** If `|X|,|Y|>=2`, orient every `h=x_hy_h in H_e` from `X` to `Y`, put `r_h=x_h-y_h`, and associate the relative-body constraint row
-   $$
+   ```math
    \ell_h=
    \bigl(r_{h,x},r_{h,y},r_h\cdot Jx_h\bigr)
    \in\mathbb R^3.
    \tag{2.2}
-   $$
+   
+   ```
    Then
-   $$
+   ```math
    \boxed{
    \operatorname{rank}\{\ell_h:h\in H_e\}=3.
    }
    \tag{ZBR3}
-   $$
+   
+   ```
    Consequently:
    - `|H_e|>=3`;
    - some three crossing diameter supporting lines are not concurrent and are not all parallel;
@@ -171,7 +177,7 @@ Because every off-diagonal response entry is nonpositive, the cross-conductance 
 
 For an explicit Schur calculation, if neither bridge endpoint is retained as a terminal, Kron-reduce each contact side to `B_X union {u}` and `B_Y union {v}`. Write the port coupling vectors as `a,b` and the port diagonal terms as `d_X,d_Y`. The two-port matrix has the form
 
-$$
+```math
 \begin{pmatrix}
 A_X&0&-a&0\\
 0&A_Y&0&-b\\
@@ -179,7 +185,7 @@ A_X&0&-a&0\\
 0&-b^T&-\alpha_e&d_Y+\alpha_e
 \end{pmatrix}.
 \tag{2.3}
-$$
+```
 
 Eliminating the two ports produces a cross block proportional to `-a b^T`. If one or both ports are themselves terminals, the same calculation degenerates to an outer product with the corresponding coordinate vector. This proves ZBR1.
 
@@ -187,36 +193,36 @@ Eliminating the two ports produces a cross block proportional to `-a b^T`. If on
 
 Apply ZK strict cut domination to the proper terminal cut `B_X|B_Y`:
 
-$$
+```math
 C_e>w_e.
 \tag{2.4}
-$$
+```
 
 For the electrical upper bound, prescribe boundary potential one on `B_X` and zero on `B_Y`. Its response energy is exactly `C_e`. The harmonic extension minimizes contact-network Dirichlet energy. As a competitor, put potential one on every vertex of `X` and zero on every vertex of `Y`. Every contact edge has zero drop except `uv`, whose drop is one. Hence
 
-$$
+```math
 C_e\le\alpha_e.
 \tag{2.5}
-$$
+```
 
 Finally sum KKT equilibrium over all vertices of `X`. Internal contact and diameter forces cancel. C20's exact bridge cut law gives
 
-$$
+```math
 \alpha_e(u-v)
 =
 \sum_{xy\in H_e}\beta_{xy}(x-y)
 \tag{2.6}
-$$
+```
 
 with a consistent shore orientation. Taking norms and using `|x-y|=D` on every active diameter edge gives
 
-$$
+```math
 \alpha_e
 \le
 D\sum_{h\in H_e}\beta_h
 =Dw_e.
 \tag{2.7}
-$$
+```
 
 Together (2.4)–(2.7) prove ZBR2.
 
@@ -226,11 +232,11 @@ Assume `X={u}`. Because `uv` is a contact bridge and `X` is a singleton, `u` has
 
 Keep every vertex of `Y` fixed and give `u` an arbitrary velocity `t in R^2`. All bars internal to `Y` remain fixed. The only first-order constraints on `t` are
 
-$$
+```math
 (u-y)\cdot t=0
 \qquad(uy\in H_e).
 \tag{2.8}
-$$
+```
 
 Infinitesimal rigidity forces these linear functionals to span the two-dimensional translation space. Thus at least two active diameter bars cross the cut, and their directions are nonparallel. The argument is symmetric if `Y` is the singleton.
 
@@ -240,28 +246,28 @@ Assume `|X|,|Y|>=2`. Delete the contact bridge bar `uv`. By ZK, `J-uv` is infini
 
 Restrict attention to velocity fields for which `Y` is fixed while all of `X` undergoes one planar infinitesimal rigid-body motion:
 
-$$
+```math
 u_x=t+\omega Jx
 \quad(x\in X),
 \qquad
 u_y=0
 \quad(y\in Y),
 \tag{2.9}
-$$
+```
 
 with parameter vector `(t_x,t_y,omega) in R^3`. Every bar internal to `X` or to `Y` is automatically preserved to first order. A crossing diameter bar `h=x_hy_h` imposes
 
-$$
+```math
 (x_h-y_h)\cdot(t+\omega Jx_h)=0,
 \tag{2.10}
-$$
+```
 
 which is exactly
 
-$$
+```math
 \ell_h\cdot(t_x,t_y,\omega)=0.
 \tag{2.11}
-$$
+```
 
 If the rows `ell_h` had rank at most two, a nonzero parameter triple would satisfy every crossing diameter equation. Equation (2.9) would then define an infinitesimal flex of `J-uv`.
 
@@ -286,19 +292,19 @@ This proves Theorem ZBR. QED.
 
 If
 
-$$
+```math
 \alpha_e\ge cD
 \tag{3.1}
-$$
+```
 
 for fixed `c>0`, then ZBR2 gives
 
-$$
+```math
 w_e\ge c,
 \qquad
 C_e>c.
 \tag{3.2}
-$$
+```
 
 Thus a macroscopic reciprocal bridge diagonal cannot hide behind negligible total diameter reaction or negligible total terminal transfer across the same cyclic shore.
 
@@ -322,12 +328,12 @@ C66 nevertheless allows the **weights** to be asymptotically star-concentrated: 
 
 The concurrent main report now supplies the stronger global source normal form
 
-$$
+```math
 q\ge h\ge\delta\ge\lceil D\rceil,
 \qquad
 \sigma_B\ge\lceil D\rceil-2,
 \tag{3.3}
-$$
+```
 
 and shows that every diameter star misses `Omega(D)` active diameter edges. ZBR is complementary: when articulation is present in the contact network, it forces an exact local rank pattern on the diameter edges crossing each bridge cut.
 
@@ -335,25 +341,22 @@ and shows that every diameter star misses `Omega(D)` active diameter edges. ZBR 
 
 The shortest Level I scalar endpoint remains
 
-$$
+```math
 \boxed{
  b+\sum_{F\text{ bounded}}(\deg F-4)>2h.
 }
 \tag{4.1}
-$$
+```
 
 For the bridge-dominant subbranch, the next precise theorem is:
 
 > **BM3 — weighted nonconcurrent bridge exclusion.** For every fixed `c>0`, no sufficiently large lexicographically normalized triangle-free C-II global minimizer has a contact bridge `e` with `alpha_e>=cD` such that
 > 
 
-$$
-
+```math
 > w_e<C_e\le\alpha_e\le Dw_e,
 > 
-$$
-
-
+```
 > the cross response block has rank one, the crossing diameter body-bar rows have rank three, and the mechanically necessary nonconcurrent bars outside the dominant stress star are allowed arbitrarily small positive `beta` weights.
 >
 > It is enough to derive either an absolute C41 response defect, an `Omega(1/D)` defect in the relevant near-zero scaling, the global face inequality (4.1), or a strict sub-`D` competitor.

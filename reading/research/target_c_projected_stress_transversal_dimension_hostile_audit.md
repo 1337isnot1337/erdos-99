@@ -17,30 +17,30 @@
 
 Let
 
-$$
+```math
 \mathcal L=\ker R_{C\cup H}^T.
-$$
+```
 
 Canonical mixed rank gives
 
-$$
+```math
 \dim\mathcal L=s_Z+1.
-$$
+```
 
 Projection to the diameter coordinates has kernel exactly
 
-$$
+```math
 \{(\alpha,0):R_C^T\alpha=0\},
-$$
+```
 
 whose dimension is `sigma_C`. There is no additional kernel: zero diameter part is
 literally the pure-contact self-stress condition.
 
 Thus rank-nullity gives
 
-$$
+```math
 \dim\pi_H(\mathcal L)=s_Z+1-\sigma_C.
-$$
+```
 
 **Disposition:** PASS.
 
@@ -58,15 +58,15 @@ normalized polytope has the full normalized affine stress space as its affine hu
 
 Projection commutes with affine hull, so the projected polytope has affine hull
 
-$$
+```math
 \pi_H(\mathcal L)\cap\{\sum\beta=1\}
-$$
+```
 
 and dimension
 
-$$
+```math
 s_Z-\sigma_C.
-$$
+```
 
 No multiplier lower bound uniform in `D` is needed; the argument is source-by-source.
 
@@ -79,9 +79,9 @@ does to the full stress polytope. In affine dimension `d`, at most `d+1` selecte
 nonnegative diameter coordinates suffice to make their simultaneous zero face empty.
 Thus
 
-$$
+```math
 |J|\le s_Z-\sigma_C+1.
-$$
+```
 
 Deleting one endpoint of every selected diameter edge removes those rows. Any
 normalized stress on the retained source extends to the original core by putting zero
@@ -98,28 +98,28 @@ Repetition among chosen endpoints only decreases the number of deleted vertices.
 
 Audited-working §156 gives
 
-$$
+```math
 \sigma_C=2f-\operatorname{rank}C_{face},
 \qquad
 \operatorname{rank}C_{face}\le T-L_{OO},
-$$
+```
 
 and
 
-$$
+```math
 T=h-s_Z+2f.
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 s_Z-\sigma_C
 &=s_Z-2f+\operatorname{rank}C_{face}\\
 &\le s_Z-2f+T-L_{OO}\\
 &=h-L_{OO}.
 \end{aligned}
-$$
+```
 
 The signs and ledger substitution are correct.
 

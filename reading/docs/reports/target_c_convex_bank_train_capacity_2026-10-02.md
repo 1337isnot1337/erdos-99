@@ -25,11 +25,11 @@ Use the canonical full-support positive-contact core, retaining all source point
 Let `I` be one connected component after deleting the loaded vertices `B`, let
 `A` be its loaded attachment set, and let
 
-$$
+```math
  H=C[I\cup A],\qquad P=\operatorname{conv}A,\qquad
  L=\text{outer-walk length of }H,\qquad p=\operatorname{per}P,
  \qquad Z=L-p.
-$$
+```
 
 Every unloaded vertex is in positive contact equilibrium. Every member of `A`
 is an extreme vertex of the actual loaded hull `F`, hence also of `P`.
@@ -49,10 +49,10 @@ attachment chord within an angle less than a fixed acute tolerance.
 
 New asymptotic claim: if
 
-$$
+```math
  B(0,r_D)\subset F_D\subset B(0,R_D),\qquad
  r_D/D,R_D/D\longrightarrow 1/2,
-$$
+```
 
 and `Z=o(D)`, every locally outer-to-outer train family with projective phase
 width `o(1)` has `o(D)` members. In particular this forbids a linear exact-phase
@@ -62,10 +62,10 @@ star, or gap-graph connectivity.
 The stronger quantitative version is: if such a family has at least `gamma D`
 members for a fixed `0<gamma<=1`, then
 
-$$
+```math
  \boxed{\liminf Z/D\ge \gamma^3/100000.}
  \tag{1}
-$$
+```
 
 The constant is deliberately conservative.
 
@@ -73,20 +73,20 @@ The constant is deliberately conservative.
 
 List the vertices of `A` counterclockwise, `a_1,...,a_s`. Write
 
-$$
+```math
  d_i=|a_{i+1}-a_i|,\qquad
  t_i=(a_{i+1}-a_i)/d_i.
-$$
+```
 
 The outer walk of `H` decomposes into paths `W_i` from `a_i` to `a_{i+1}` in
 the same cyclic order. Let `ell_i` be the number of unit-edge occurrences on
 `W_i`. Then
 
-$$
+```math
  \sum_i\ell_i=L,\quad \sum_i d_i=p,\quad
  \boxed{\sum_i(\ell_i-d_i)=Z.}
  \tag{2}
-$$
+```
 
 Here is the necessary justification, including articulation issues. Deleting
 an attachment from `H` leaves the connected component `I`, together with all
@@ -110,20 +110,20 @@ edge angles along `W_i`, oriented from `a_i` to `a_{i+1}`, turn clockwise.
 
 For every directed unit edge occurrence `e` on `W_i`, telescoping gives
 
-$$
+```math
  \boxed{\ell_i-d_i=\sum_{e\in W_i}(1-e\cdot t_i).}
  \tag{3}
-$$
+```
 
 All summands are nonnegative. An end is **good** at tolerance `epsilon` if
 its induced outer-boundary direction `e` has angular distance at most
 `epsilon` from `t_i`, with `0<epsilon<pi/8`. All other ends are bad. Since
 distinct complete trains have distinct terminal edge occurrences,
 
-$$
+```math
  \boxed{N_{\rm bad}\le Z/(1-\cos\epsilon).}
  \tag{4}
-$$
+```
 
 The induced direction matters: an edge pointing almost opposite to `t_i`
 is bad, even when its projective direction is close to that of the chord.
@@ -180,19 +180,19 @@ also impossible by strict bank order.
 
 We obtain the finite capacity statement
 
-$$
+```math
  \boxed{\text{at most one train has good ends on a given bank pair}.}
  \tag{5}
-$$
+```
 
 In particular, if `b_long` banks have chord length greater than `eta D`,
 then at most `binom(b_long,2)` family members have good ends on two long
 banks. Since `p<=pi D`,
 
-$$
+```math
  \boxed{b_{\rm long}\le\pi/\eta.}
  \tag{6}
-$$
+```
 
 Holes are retained. Only the two exterior ends of the particular complete
 trains are extended through outer pockets; no internal hole is filled or
@@ -210,9 +210,9 @@ Let `eta<1/100` and call a bank short if `d_i<=eta D`. For sufficiently
 large `D`, `r_D>=D/3`. Its endpoints have polar separation on their shorter
 loaded-hull arc at most
 
-$$
+```math
  2\arcsin(d_i/(2r_D))\le4\eta.
-$$
+```
 
 The hull tangents on that arc are within `rho_D` of the corresponding circle
 tangents. The chord is a positive sum of these tangent vectors, so its
@@ -220,10 +220,10 @@ direction belongs to the same small cone. If the short bank has a good
 terminal edge, both its endpoints therefore lie in one of the polar bands
 centered at `Ju_D,-Ju_D`, each of half-width
 
-$$
+```math
  a_D=\epsilon+w_D+\rho_D+4\eta.
  \tag{7}
-$$
+```
 
 Except for at most one side of `P`, its consecutive attachment endpoints
 are consecutive along the shorter polar arc between them: all other
@@ -236,13 +236,13 @@ On a band, the hull tangent is within `a_D+rho_D` of `u_D` or `-u_D`.
 Projection bounds its arc length by
 `2R_D sin(a_D)/cos(a_D+rho_D)`. Provided `a_D+rho_D<pi/2`,
 
-$$
+```math
  \boxed{
  \sum_{\substack{i\text{ short}\\W_i\text{ has a good end}}}d_i
  \le {4R_D\sin a_D\over\cos(a_D+\rho_D)}+\eta D.
  }
  \tag{8}
-$$
+```
 
 A unit-edge occurrence counts at most once. By (2), the number of good
 terminal ends on these short banks is at most the chord sum in (8) plus `Z`.
@@ -253,23 +253,23 @@ Let `M_D` denote the size of the locally outer-to-outer narrow-phase family.
 A train either has a bad end, a good short-bank end, or two good long-bank
 ends. Equations (4)--(8) give
 
-$$
+```math
  \boxed{
  M_D\le {\pi^2\over2\eta^2}
  +\left(1+{1\over1-\cos\epsilon}\right)Z
  +\eta D+{4R_D\sin a_D\over\cos(a_D+\rho_D)}.
  }
  \tag{9}
-$$
+```
 
 This is an actual source-boundary estimate, not an interval-rank estimate.
 If `Z=o(D)`, first take the upper limit as `D` tends to infinity with
 `epsilon,eta` fixed. Since `R_D/D->1/2` and `w_D,rho_D->0`,
 
-$$
+```math
  \limsup M_D/D\le
  \eta+2\tan(\epsilon+4\eta).
-$$
+```
 
 Then let `epsilon,eta` tend to zero. This proves `M_D=o(D)`.
 
@@ -279,10 +279,10 @@ Then `a_D<=6gamma/100`, `a_D+rho_D<=7gamma/100`, so the last two terms of
 (9), divided by `D`, are less than `0.26gamma`. The constant first term is
 eventually less than `0.1gamma D`. Moreover
 
-$$
+```math
  1-\cos\epsilon\ge\epsilon^2/3,
  \qquad 1+(1-\cos\epsilon)^{-1}\le4/\epsilon^2.
-$$
+```
 
 Thus `Z/D>=0.64gamma epsilon^2/4=gamma^3/62500` for all sufficiently large
 members. The weaker safe bound (1) follows, including when the hypothesis
@@ -324,10 +324,10 @@ The current-main proof-only report
 [`target_c_wrapping_root_defect_stability_2026-09-30.md`](target_c_wrapping_root_defect_stability_2026-09-30.md)
 gives at the exact rooted threshold `lambda_1=0.9891345915624005...`
 
-$$
+```math
  \sum_r(L_r-\operatorname{per}P_r)=o(D),\qquad
  \sum_rQ_r=o(D).
-$$
+```
 
 Every summand is nonnegative. Thus the Section-90 macroscopic carrier has
 `Z=o(D)` and `Q=o(D)`. Canonical full-core near-disk geometry provides the

@@ -21,22 +21,22 @@
 
 The September 9 joint-cavity theorem JC used PI's force-hull area floor and obtained
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}\ge0.4633168953\ldots,
-$$
+```
 
 later sharpened by detour arguments to `0.4702`.  The September 10 FSDB theorem gives a
 substantially stronger area lower bound that depends on the actual normalized diameter
 edge count
 
-$$
+```math
 y:=\lim\frac hD.
-$$
+```
 
 Feeding that functional lower bound into the **unrelaxed diameter-density-sensitive
 JC inequality** gives
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\frac{e_{BB}+2s_C}{D}
 \ge
@@ -44,34 +44,34 @@ $$
 =0.5882283437736394387\ldots,
 }
 \tag{FSJC.1}
-$$
+```
 
 where `lambda_FSJC` is the unique positive root of
 
-$$
+```math
 \boxed{
 (\pi^2+1)\lambda^2+\pi\lambda-\frac{\pi^2}{4}-\pi=0.
 }
 \tag{FSJC.2}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \lambda_{FSJC}
 =
 \frac{-\pi+
 \sqrt{\pi^2+4(\pi^2+1)(\pi^2/4+\pi)}}
 {2(\pi^2+1)}.
 \tag{FSJC.3}
-$$
+```
 
 The minimizing diameter density is exactly
 
-$$
+```math
 \boxed{y=\pi/2.}
 \tag{FSJC.4}
-$$
+```
 
 Thus any sequence whose pinned/contact currency approaches the new lower endpoint must
 also satisfy `h/D -> pi/2`.  This extremal localization is part of the theorem, not a
@@ -83,67 +83,67 @@ numerical observation.
 
 Pass to an arbitrary convergent post-ZF survivor subsequence and write
 
-$$
+```math
 \lambda:=\lim\frac{e_{BB}+2s_C}{D},
 \qquad
 t:=\lim\frac{e_{BB}}D,
 \qquad
 y:=\lim\frac hD.
 \tag{1.1}
-$$
+```
 
 Then
 
-$$
+```math
 0\le t\le\lambda.
 \tag{1.2}
-$$
+```
 
 DB gives
 
-$$
+```math
 \boxed{2\rho\le y\le\pi,}
 \qquad
 \rho=\cos\rho=0.7390851332\ldots,
 \tag{1.3}
-$$
+```
 
 where the upper bound follows from `h<=q<=per(F)<=pi D`.
 
 FSDB proves the diameter-density-sensitive force-hull area estimate
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 \Phi(y):=\frac{y+\sin y}{4}.
 }
 \tag{1.4}
-$$
+```
 
 The GU attachment-cell estimate used in JC is unchanged and gives
 
-$$
+```math
 \limsup
 \frac{\sum_r\operatorname{area}(P_r)}{D^2}
 \le\frac\pi4\lambda^2.
 \tag{1.5}
-$$
+```
 
 Hence the attachment-cell gap `G` obeys
 
-$$
+```math
 \boxed{
 \liminf\frac G{D^2}
 \ge
 \Phi(y)-\frac\pi4\lambda^2.
 }
 \tag{1.6}
-$$
+```
 
 JC's unrelaxed diameter-density-sensitive cavity bound is
 
-$$
+```math
 \boxed{
 \limsup\frac G{D^2}
 \le
@@ -152,19 +152,19 @@ $$
 m(y):=\min\{y,\pi-y\}.
 }
 \tag{1.7}
-$$
+```
 
 The `O(D)` charging remainder vanishes after division by `D^2`.  Since `t<=lambda`,
 (1.6)--(1.7) imply the necessary condition
 
-$$
+```math
 \boxed{
 \Phi(y)-\frac\pi4\lambda^2
 \le
 \frac{(\lambda+m(y))^2}{4\pi}.
 }
 \tag{1.8}
-$$
+```
 
 Unlike the old scalar JC step, no replacement `m(y)<=pi/2` has yet been made.
 
@@ -174,7 +174,7 @@ Unlike the old scalar JC step, no replacement `m(y)<=pi/2` has yet been made.
 
 Multiply (1.8) by `4pi` and use `4pi Phi(y)=pi(y+sin y)`:
 
-$$
+```math
 \boxed{
 F(y,\lambda):=
 (\pi^2+1)\lambda^2
@@ -184,14 +184,14 @@ F(y,\lambda):=
 \ge0.
 }
 \tag{2.1}
-$$
+```
 
 For fixed `y`, `F(y,lambda)` is strictly increasing on `lambda>=0`, because
 
-$$
+```math
 \partial_\lambda F
 =2(\pi^2+1)\lambda+2m(y)>0
-$$
+```
 
 except at the irrelevant simultaneous zero endpoint.  Thus every `y` has a unique
 nonnegative threshold root whenever `F(y,0)<0`; any survivor must lie at or above that
@@ -206,25 +206,25 @@ at `y=pi/2`.
 
 Let `lambda_*` be the positive root of FSJC.2.  By construction,
 
-$$
+```math
 F(\pi/2,\lambda_*)=0,
 \tag{3.1}
-$$
+```
 
 because `m(pi/2)=pi/2` and
 
-$$
+```math
 \pi\left(\frac\pi2+\sin\frac\pi2\right)
 =\frac{\pi^2}{2}+\pi.
-$$
+```
 
 It suffices to prove
 
-$$
+```math
 F(y,\lambda_*)\le0
 \qquad(2\rho\le y\le\pi),
 \tag{3.2}
-$$
+```
 
 because `F` is increasing in `lambda`.  Then the threshold root at every `y` is at
 least `lambda_*`.
@@ -233,60 +233,60 @@ least `lambda_*`.
 
 Here `m(y)=y`, so
 
-$$
+```math
 F(y,\lambda_*)
 =(\pi^2+1)\lambda_*^2
 +2y\lambda_*+y^2
 -\pi y-\pi\sin y.
-$$
+```
 
 Differentiate in `y`:
 
-$$
+```math
 \boxed{
 \partial_yF
 =2\lambda_*+2y-\pi(1+\cos y).
 }
 \tag{3.3}
-$$
+```
 
 A second derivative gives
 
-$$
+```math
 \partial_y^2F=2+\pi\sin y>0,
-$$
+```
 
 so (3.3) is increasing in `y`.  It is enough to check positivity at `y=2rho`.
 
 The exact constant audit already gives
 
-$$
+```math
 \frac{739}{1000}<\rho<\frac{37}{50},
 \qquad
 \pi<\frac{22}{7}.
 \tag{3.4}
-$$
+```
 
 Also `lambda_*>1/2`: substituting `lambda=1/2` into FSJC.2's left side gives
 
-$$
+```math
 \frac14-\frac\pi2<0,
-$$
+```
 
 and the quadratic is increasing for positive `lambda` after its positive root.
 
 Because `cos(2rho)=2rho^2-1` and `rho<37/50`,
 
-$$
+```math
 \cos(2\rho)
 <2\left(\frac{37}{50}\right)^2-1
 =\frac{119}{1250}.
 \tag{3.5}
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 \partial_yF(2\rho,\lambda_*)
 &=2\lambda_*+4\rho-\pi(1+\cos2\rho)\\
@@ -297,45 +297,45 @@ $$
 \frac{4497}{8750}>0.
 \end{aligned}
 \tag{3.6}
-$$
+```
 
 Hence `F(y,lambda_*)` is strictly increasing on `[2rho,pi/2]`.  Since its value at
 `pi/2` is zero,
 
-$$
+```math
 F(y,\lambda_*)<0
 \qquad(2\rho\le y<\pi/2).
 \tag{3.7}
-$$
+```
 
 ### Right side: `pi/2 <= y <= pi`
 
 Here `m(y)=pi-y`.  Differentiation gives
 
-$$
+```math
 \boxed{
 \partial_yF
 =-2\lambda_*-2(\pi-y)-\pi(1+\cos y)<0
 }
 \tag{3.8}
-$$
+```
 
 for every `y in [pi/2,pi]`.  Thus `F(y,lambda_*)` is strictly decreasing to the right
 of `pi/2`, and again
 
-$$
+```math
 F(y,\lambda_*)<0
 \qquad(\pi/2<y\le\pi).
 \tag{3.9}
-$$
+```
 
 Equations (3.7), (3.9), and (3.1) prove (3.2), with equality only at `y=pi/2`.
 
 Therefore every post-ZF subsequential limit satisfies
 
-$$
+```math
 \boxed{\lambda\ge\lambda_*.}
-$$
+```
 
 This proves FSJC.1.
 
@@ -346,24 +346,24 @@ This proves FSJC.1.
 The preceding proof is strict away from `y=pi/2`.  More precisely, for every
 `epsilon>0`, compactness of
 
-$$
+```math
 [2\rho,\pi]\setminus(\pi/2-\epsilon,\pi/2+\epsilon)
-$$
+```
 
 and continuity give a positive threshold gap above `lambda_*` on that set.
 
 Hence if a survivor sequence satisfies
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to\lambda_*,
-$$
+```
 
 then necessarily
 
-$$
+```math
 \boxed{\frac hD\to\frac\pi2.}
 \tag{4.1}
-$$
+```
 
 This is the structural part of FSJC: a near-minimum pinned/contact survivor must also
 be asymptotically at the midpoint of the two JC perimeter branches.
@@ -379,15 +379,15 @@ stability audit before being promoted; they are not silently claimed here.
 
 The best explicit report-level post-ZF pinned/contact floor increases from
 
-$$
+```math
 0.4702
-$$
+```
 
 to
 
-$$
+```math
 \boxed{0.5882283437736394\ldots}.
-$$
+```
 
 This is not a closing upper/lower contradiction by itself.  The repository currently
 contains no proved universal upper bound on `(e_BB+2s_C)/D` below this value.
@@ -404,9 +404,10 @@ A closing continuation should not merely iterate this scalar floor.  The shortes
 useful next theorem is one of the following equivalent types:
 
 1. prove a universal upper bound
-   $$
+   ```math
    \limsup\frac{e_{BB}+2s_C}{D}<\lambda_{FSJC};
-   $$
+   
+   ```
 2. prove that the FSJC near-equality normal form `h/D -> pi/2` is incompatible with
    the post-ZF exact ledgers, mixed redundant rigidity, or FS.4 common-center geometry;
 3. strengthen the cavity upper bound in a way that excludes every
@@ -456,10 +457,10 @@ actual `y` and exact defect currencies rather than report another isolated decim
 
 The proof is analytic.  The only numerical evaluation is the positive root of FSJC.2:
 
-$$
+```math
 \lambda_{FSJC}
 =0.5882283437736394387149516348687232919\ldots .
-$$
+```
 
 The theorem and minimizer are defined exactly by FSJC.2 and `y=pi/2`; the decimal is
 not a proof dependency.

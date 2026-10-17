@@ -17,9 +17,9 @@ used the following proposed lemma:
 That lemma is false.  The counterexample is the simple orthogonal polygon listed
 counterclockwise by
 
-$$
+```math
 (0,0),(3,0),(3,1),(1,1),(1,3),(0,3).
-$$
+```
 
 The vertex `(1,1)` is reflex.  The other five vertices are convex, and they are
 all vertices of the convex hull of the L-shaped polygon.  There is no non-hull
@@ -57,12 +57,12 @@ repaired by treating a selected carrier as the full source.
 
 The unresolved source-level statement is still:
 
-$$
+```math
 \text{quadratic full-core phase structure}
 \Longrightarrow
 \text{unit equilateral triangle, or a finite same-cardinality strict sub-}D(n)
 \text{ competitor}.
-$$
+```
 
 The reflex-notch example is specifically a warning against replacing that statement
 by a purely orthogonal-boundary turn count.

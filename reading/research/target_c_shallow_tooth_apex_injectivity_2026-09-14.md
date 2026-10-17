@@ -26,25 +26,25 @@ resulting distinct inward-penetration edge floor.
 Let an `eta`-shallow two-edge outer tooth have loaded base endpoints `a,b`, unloaded
 apex `x`, and
 
-$$
+```math
 |a-x|=|b-x|=1,
 \qquad
 |a-b|\ge 2-\eta.
-$$
+```
 
 Put
 
-$$
+```math
 \alpha_\eta:=\arccos(1-\eta/2).
-$$
+```
 
 As in the preceding penetration theorem, the smaller central angle at `x` between the
 base endpoints is at least
 
-$$
+```math
 \pi-2\alpha_\eta.
 \tag{AI.1}
-$$
+```
 
 Every contact neighbor of `x` lies on the unit circle centered at `x`. Unit separation
 of the source implies that any two such neighbor directions have circular separation
@@ -52,10 +52,10 @@ at least `pi/3`.
 
 Assume throughout
 
-$$
+```math
 \boxed{\alpha_\eta<\pi/12.}
 \tag{AI.2}
-$$
+```
 
 This is the same hypothesis used in the preceding theorem.
 
@@ -74,9 +74,9 @@ First suppose their loaded base pairs share one endpoint `a`. For a shallow toot
 any possible partner of `a` lies in the arc of angular radius `2 alpha_eta` centered
 at the antipodal direction to `a`. That partner arc has total width
 
-$$
+```math
 4\alpha_\eta<\pi/3.
-$$
+```
 
 Two distinct contact neighbors cannot both lie in such an arc, because their mutual
 angular separation is at least `pi/3`. Hence two shallow base pairs through `x` cannot
@@ -89,35 +89,35 @@ pairs do not alternate around the circle.
 
 After cyclic relabeling, the four endpoint directions occur as
 
-$$
+```math
 a,b,c,d
-$$
+```
 
 with base pairs `ab` and `cd`. Let the four consecutive angular gaps be
 `g_ab,g_bc,g_cd,g_da`. Unit separation gives
 
-$$
+```math
 g_{ab},g_{bc},g_{cd},g_{da}\ge\pi/3.
 \tag{AI.3}
-$$
+```
 
 Since the other three gaps already sum to at least `pi`, each one of the four gaps is
 at most `pi`. Thus the smaller central angles for the two base pairs are exactly
 `g_ab` and `g_cd`. By (AI.1),
 
-$$
+```math
 g_{ab},g_{cd}\ge\pi-2\alpha_\eta.
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 2\pi
 &=g_{ab}+g_{bc}+g_{cd}+g_{da}\\
 &\ge 2(\pi-2\alpha_\eta)+{2\pi\over3}.
 \end{aligned}
-$$
+```
 
 But (AI.2) implies the right side is strictly larger than `2pi`. Contradiction.
 
@@ -132,10 +132,10 @@ already the standing shallow-tooth hypothesis.
 Let `N_sh(eta)` be the number of `eta`-shallow two-edge teeth and let `d_out` be the
 metric outer detour. The preceding exact detour count gives
 
-$$
+```math
 N_{sh}(\eta)\ge N_2-{d_{out}\over\eta}.
 \tag{AI.4}
-$$
+```
 
 Lemma AI.1 says these teeth have pairwise distinct apices. Therefore the number of
 distinct shallow apices is at least `N_sh(eta)`, not merely `N_sh(eta)/2`.
@@ -143,23 +143,23 @@ distinct shallow apices is at least `N_sh(eta)`, not merely `N_sh(eta)/2`.
 At every such apex, canonical contact degree and triangle-freeness give an extra unit
 contact whose inward component relative to the shallow base is greater than
 
-$$
+```math
 Y_\eta:=\sin(\pi/3-\alpha_\eta).
 \tag{AI.5}
-$$
+```
 
 Choose one such extra contact at every shallow apex. One undirected contact edge can
 be selected by at most its two endpoints. Hence the number `E_pen(eta)` of distinct
 selected penetration contacts satisfies
 
-$$
+```math
 \boxed{
 E_{pen}(\eta)
 \ge {N_{sh}(\eta)\over2}
 \ge {1\over2}\left(N_2-{d_{out}\over\eta}\right).
 }
 \tag{AI.6}
-$$
+```
 
 This improves the preceding factor `1/4` to `1/2` without any new stress-weight or
 area hypothesis.
@@ -168,65 +168,65 @@ area hypothesis.
 
 At the present proof-only floor
 
-$$
+```math
 t_{42}=C_{146}+0.0013751,
-$$
+```
 
 the low-`t` squeeze gives
 
-$$
+```math
 {d_{out}\over D}\le0.002883975+o(1),
-$$
+```
 
 while the tooth alternative gives
 
-$$
+```math
 {N_2\over D}\ge
 0.4363893718701161781\ldots-o(1).
-$$
+```
 
 Choose the exact convenient value
 
-$$
+```math
 \eta={1\over15}.
-$$
+```
 
 Then
 
-$$
+```math
 \cos\alpha_\eta={29\over30}>\cos(\pi/12),
-$$
+```
 
 so (AI.2) holds. Equation (AI.4) gives
 
-$$
+```math
 \boxed{
 {N_{sh}(1/15)\over D}
 \ge0.3931297468701161781\ldots-o(1).
 }
 \tag{AI.7}
-$$
+```
 
 All these shallow teeth have distinct unloaded apices. Equation (AI.6) then gives
 
-$$
+```math
 \boxed{
 {E_{pen}(1/15)\over D}
 \ge0.1965648734350580890\ldots-o(1).
 }
 \tag{AI.8}
-$$
+```
 
 The inward normal component is explicitly
 
-$$
+```math
 \boxed{
 Y_{1/15}
 ={29\sqrt3-\sqrt{59}\over60}
 =0.7091387945271472222\ldots .
 }
 \tag{AI.9}
-$$
+```
 
 Thus the tooth branch now forces almost `0.197D` distinct physical unit contacts with
 a uniformly large inward component, rather than the previous `0.073D` certificate.

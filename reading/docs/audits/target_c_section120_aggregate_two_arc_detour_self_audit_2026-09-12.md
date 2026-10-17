@@ -18,9 +18,9 @@ harmonic components without losing faces or charging one physical rhombus twice.
 For each unloaded positive-contact component `I_r`, canonical Section 62 supplies its
 attachment set `A_r` and convex harmonic cell
 
-$$
+```math
 P_r=\operatorname{conv}(A_r)\subset F.
-$$
+```
 
 The induced graph `H_r` used in Section 120 is exactly the harmonic induced graph used
 by the local near-quadrangulation machinery: all vertices of `I_r`, all loaded
@@ -33,10 +33,10 @@ nonquadrilateral face cycles, and the diameter `d_r=diam(P_r)`. It does not requ
 that the cell be the distinguished Section-78 carrier or that its rhombus area be
 quadratic. Thus applying
 
-$$
+```math
 d_r(L_r+P_{{\rm exc},r}-2d_r)
 \ge(4-2\sqrt3)A_{4,r}
-$$
+```
 
 to every harmonic component is within scope.
 
@@ -63,9 +63,9 @@ graph.
 
 If `A_{4,r}^0` denotes the total area of these assigned faces, then the identity
 
-$$
+```math
 \boxed{\sum_r A_{4,r}^0=A_4^0}
-$$
+```
 
 is exact. This is the required injectivity statement.
 
@@ -77,15 +77,15 @@ avoids overlap caused by one loaded vertex belonging to several attachment sets.
 Canonical Section 83 bounds the number of strict quadrilateral faces incident to the
 loaded set by
 
-$$
+```math
 \sum_{b\in B}\deg_C(b)\le3q=O(D).
-$$
+```
 
 Every unit rhombus has area at most one. Hence
 
-$$
+```math
 0\le A_4-A_4^0=O(D).
-$$
+```
 
 This loss is lower order after division by `D^2` and cannot affect the Type-II
 coefficient.
@@ -97,9 +97,9 @@ contact edge or a loaded attachment vertex on their outer walks. Section 120 doe
 identify its summed left-hand side with a global physical boundary length. It merely
 adds valid scalar inequalities
 
-$$
+```math
 E_r\ge(4-2\sqrt3)A_{4,r}^0/d_r.
-$$
+```
 
 No assertion that the boundary occurrences in distinct `E_r` are disjoint is needed
 for this addition. Any later theorem that tries to pay `sum_r E_r` from one global
@@ -110,21 +110,21 @@ not smuggle such a theorem in.
 
 Every attachment polygon satisfies
 
-$$
+```math
 P_r\subset F\subset\operatorname{conv}(A).
-$$
+```
 
 The convex hull of the full source has diameter `D`, so
 
-$$
+```math
 0<d_r\le D.
-$$
+```
 
 Therefore
 
-$$
+```math
 \frac{A_{4,r}^0}{d_r}\ge\frac{A_{4,r}^0}{D}
-$$
+```
 
 term by term. No source point is deleted and no core-only diameter is substituted for
 the full-source diameter.
@@ -133,24 +133,24 @@ the full-source diameter.
 
 The current authoritative Type-II stack gives
 
-$$
+```math
 A_4/D^2\to\pi/4.
-$$
+```
 
 Together with the loaded-touching loss above,
 
-$$
+```math
 A_4^0/D^2\to\pi/4.
-$$
+```
 
 Hence Section 120's finite inequality implies
 
-$$
+```math
 \liminf {1\over D}
 \sum_r(L_r+P_{{\rm exc},r}-2d_r)
 \ge {\pi\over4}(4-2\sqrt3)
 ={\pi\over2}(2-\sqrt3).
-$$
+```
 
 The derivation is valid.
 

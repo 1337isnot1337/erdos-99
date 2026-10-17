@@ -16,22 +16,22 @@
 
 The previous translation-surface reduction left five possible Abelian-differential signatures across the three surviving uniform H5 reciprocal orbits:
 
-$$
+```math
 P_1:\ \mathcal H(4,2)\text{ or }\mathcal H(3,3),\qquad
 P_2:\ \mathcal H(6),\qquad
 P_3:\ \mathcal H(4,4)\text{ or }\mathcal H(5,3).
-$$
+```
 
 The ambiguity can be removed exactly.  The raw reciprocal triangles already impose affine identities among the physical force-pentagon exterior gaps.  Applying those identities to the ambiguous surface vertex classes gives
 
-$$
+```math
 \boxed{
 P_1:\mathcal H(4,2),\qquad
 P_2:\mathcal H(6),\qquad
 P_3:\mathcal H(5,3).
 }
 \tag{0.1}
-$$
+```
 
 Thus the `H(3,3)` and `H(4,4)` signatures are impossible.  This does **not** yet exclude any of the three H5 sign/order orbits themselves.
 
@@ -41,22 +41,22 @@ Thus the `H(3,3)` and `H(4,4)` signatures are impossible.  This does **not** yet
 
 For each force polygon `P_i`, let
 
-$$
+```math
 x_{i,k}=\frac{\delta_{i,k}}{\pi}
-$$
+```
 
 be the normalized exterior gap from force side `k` to side `k+1` in the exact cyclic force order.  Thus
 
-$$
+```math
 F_i:=\sum_k x_{i,k}=2.
 \tag{1.1}
-$$
+```
 
 For two neighbors `a,b` of reciprocal vertex `i`, let
 
-$$
+```math
 R_i(a,b)
-$$
+```
 
 be the counterclockwise force-ray arc from the force on `ia` to the force on `ib`, expressed as the corresponding sum of the `x_{i,k}`.  Hence `R_i(a,b)` is an exact linear form in the force gaps.
 
@@ -68,13 +68,13 @@ Write `s_ia in {+1,-1}` for the reciprocal edge sign, so the force ray on edge `
 
 Let
 
-$$
+```math
 \chi_i(a,b)=\operatorname{sign}\det(y_a-y_i,y_b-y_i)\in\{+1,-1\}.
-$$
+```
 
 Uniformity guarantees that no relevant pair is collinear.  Let `alpha_i(a,b)` be the ordinary interior angle between the two raw reciprocal segments `ia` and `ib`, normalized by `pi`.  Comparing the raw rays with the signed force rays gives the exact four-case formula
 
-$$
+```math
 \boxed{
 \alpha_i(a,b)=
 \begin{cases}
@@ -84,16 +84,17 @@ R_i(a,b)-1,&s_{ia}\ne s_{ib},\ \chi_i(a,b)=+1,\\
 1-R_i(a,b),&s_{ia}\ne s_{ib},\ \chi_i(a,b)=-1.
 \end{cases}}
 \tag{2.1}
-$$
+```
 
 There is no metric approximation here.  Reversing exactly one raw ray adds `pi` to its argument, and the sign of `chi` determines which of the two complementary raw angles is the interior angle.
 
 The signs `chi_i(a,b)` are already determined by the current exact sign/order data:
 
 - at the ground vertex, the six raw rays occur in the strict order
-  $$
+  ```math
   1,6,5,2,3,4
-  $$
+  
+  ```
   inside a cone of width `<pi/3`, so their pairwise orientation signs are read directly from that order;
 - at a non-ground vertex, the exact force cycle is a regular five-ray tournament: the cross product from any force ray to each of the next two force rays is positive, and to each of the preceding two is negative.  Multiplication by the two edge signs recovers the raw orientation sign.
 
@@ -101,16 +102,16 @@ Therefore (2.1) is an explicit affine integer formula in the force-gap variables
 
 For every present reciprocal triangle `{i,j,k}`, its three ordinary interior angles sum to `pi`.  Define the normalized affine triangle functional
 
-$$
+```math
 T_{ijk}:=\alpha_i(j,k)+\alpha_j(i,k)+\alpha_k(i,j).
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{T_{ijk}=1.}
 \tag{2.2}
-$$
+```
 
 The certificate constructs every `T_ijk` directly from the recorded force cycles and edge signs.
 
@@ -122,43 +123,43 @@ Use the vertex-class numbering from `target_c_support6_reciprocal_h5_translation
 
 Exact symbolic reduction gives
 
-$$
+```math
 \boxed{
 \begin{aligned}
 G_1={}&-F_0-T_{012}+T_{015}-T_{023}+T_{035}\\
 &-T_{045}+T_{046}-T_{056}+8.
 \end{aligned}}
 \tag{3.1}
-$$
+```
 
 Substituting `F_0=2` and every triangle identity `T=1` gives
 
-$$
+```math
 \boxed{G_1=5.}
 \tag{3.2}
-$$
+```
 
 A surface vertex class with `N` polygon corners and normalized exterior-gap sum `G` has cone angle
 
-$$
+```math
 N\pi-G\pi=2\pi m,
 \qquad
 m=\frac{N-G}{2}.
 \tag{3.3}
-$$
+```
 
 Thus this eleven-corner class has
 
-$$
+```math
 m=\frac{11-5}{2}=3.
-$$
+```
 
 The other three small classes have order one and the total cone order is eleven, so the remaining large class has order five.  Hence
 
-$$
+```math
 \boxed{P_1:(m_v)=(5,3,1,1,1),\quad P_1\in\mathcal H(4,2).}
 \tag{3.4}
-$$
+```
 
 The former `H(3,3)` option is eliminated.
 
@@ -168,34 +169,34 @@ The former `H(3,3)` option is eliminated.
 
 Let `G_2` be the normalized exterior-gap sum at the twenty-two-corner class `C0` of `P2`.  The exact affine identity is
 
-$$
+```math
 \boxed{
 \begin{aligned}
 G_2={}&F_1+F_2+F_3+F_4+F_5+F_6\\
 &+T_{012}-T_{013}+T_{023}-T_{045}+T_{046}-T_{056}-4.
 \end{aligned}}
 \tag{4.1}
-$$
+```
 
 The six face sums contribute twelve and the signed triangle terms cancel in total, so
 
-$$
+```math
 \boxed{G_2=8.}
 \tag{4.2}
-$$
+```
 
 Therefore
 
-$$
+```math
 m=\frac{22-8}{2}=7,
-$$
+```
 
 recovering the already unique signature
 
-$$
+```math
 \boxed{P_2:(m_v)=(7,1,1,1,1),\quad P_2\in\mathcal H(6).}
 \tag{4.3}
-$$
+```
 
 This case acts as an internal consistency check on the angle-functional method.
 
@@ -205,34 +206,34 @@ This case acts as an internal consistency check on the angle-functional method.
 
 Let `G_3` be the normalized exterior-gap sum at the fourteen-corner class `C1` of `P3`.  Exact reduction gives
 
-$$
+```math
 \boxed{
 G_3=
 F_0+F_1+F_5
 +T_{014}-T_{023}-T_{024}-T_{026}+T_{035}+T_{046}.
 }
 \tag{5.1}
-$$
+```
 
 The three face sums contribute six and the triangle coefficients sum to zero.  Hence
 
-$$
+```math
 \boxed{G_3=6.}
 \tag{5.2}
-$$
+```
 
 Thus this class has
 
-$$
+```math
 m=\frac{14-6}{2}=4.
-$$
+```
 
 The three-corner class has order one and the total cone order is eleven, so the remaining nineteen-corner class has order six.  Therefore
 
-$$
+```math
 \boxed{P_3:(m_v)=(6,4,1),\quad P_3\in\mathcal H(5,3).}
 \tag{5.3}
-$$
+```
 
 The former `H(4,4)` option is eliminated.
 
@@ -242,14 +243,14 @@ The former `H(4,4)` option is eliminated.
 
 The noncollapsed uniform support-six H5 branch now has exactly three topological signatures, one per surviving sign/order orbit:
 
-$$
+```math
 \boxed{
 P_1\in\mathcal H(4,2),\qquad
 P_2\in\mathcal H(6),\qquad
 P_3\in\mathcal H(5,3).
 }
 \tag{6.1}
-$$
+```
 
 The proof uses only the exact current force cycles, edge signs, ground raw-ray order, ordinary triangle angle sum, and translation-surface corner bookkeeping.  It does not assume a numerical reciprocal realization and does not solve the remaining unit-force metric equations.
 

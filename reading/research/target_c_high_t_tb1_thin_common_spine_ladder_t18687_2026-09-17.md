@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_thin_common_spine_ladder_t18687_2026-09-17.md) · source SHA-256 `0fe1c890ce3bb3047ea3526ef973dbbb5a7673804395dda4c2bb6d1152f39209`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 27 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f03b9e7124b532ba16296fb7bc5b42a1180f58d2", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_thin_common_spine_ladder_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "e342830716f4d7042444eac392e0986a85ae1ee1bf156cf2ccccc3397a839cfe"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -16,9 +18,9 @@
 
 The THIN rich-cut theorem was used previously to choose one blocker-rich row with `O(1)` total angular defect. The same incidence count contains more information. There are linearly many blocker-rich rows, so a positive fraction of them have uniformly bounded total defect. Purify each such row separately, then double-count
 
-$$
+```math
 (\text{row},\text{THIN blocker},\text{good transverse train})
-$$
+```
 
 triples.
 
@@ -26,49 +28,51 @@ The result is a single THIN blocker `e_*` and a single complete stopped train `b
 
 Put
 
-$$
+```math
 \gamma={791\over9{,}600{,}000{,}000},
 \qquad
 p_0=0.6436={1609\over2500},
 \qquad
 T_*=3.0605={6121\over2000}.
 \tag{SL.1}
-$$
+```
 
 If `N_D` is the THIN owned-blocker population from the rich-cut theorem, then
 
-$$
+```math
 N_D>\left({\gamma\over16}-o(1)\right)D.
 \tag{SL.2}
+```
 
 Define
 
-\[
+```math
 \boxed{
 \kappa:={3p_0\over10T_*}
 ={9654\over153025}
 =0.0630877307629\ldots .
 }
 \tag{SL.3}
-$$
+```
 
 Then there are one blocker `e_*`, one complete train `b_*`, and a selected-row family `A_D` satisfying
 
-$$
+```math
 \boxed{|A_D|>(\kappa-o(1))N_D.}
 \tag{SL.4}
+```
 
 After fixing one of the two possible row phases relative to `b_*`, there remains
 
-\[
+```math
 \boxed{|A_D^{\rm phase}|>
 \left({\kappa\over2}-o(1)\right)N_D}
 \tag{SL.5}
-$$
+```
 
 rows. In diameter scale,
 
-$$
+```math
 \boxed{
 |A_D^{\rm phase}|>
 \left(
@@ -77,12 +81,14 @@ $$
 \right)D
 }
 \tag{SL.6}
+```
 
 with numerical coefficient
 
-\[
+```math
 \boxed{1.62442692166\ldots\times10^{-10}.}
 \tag{SL.7}
+```
 
 Every row in `A_D^{phase}` simultaneously has:
 
@@ -106,57 +112,61 @@ This is stronger than a single phase-pure rich row. It does not yet say that `e_
 
 Let `T_D` be the full THIN owned-blocker family and write
 
-\[
+```math
 N:=|T_D|.
-$$
+```
 
 The rich-cut theorem proves that there is a set `Q_D` of distinct selected O--O rows with
 
-$$
+```math
 \boxed{|Q_D|>(3-o(1))N}
 \tag{SL.8}
-$$
+```
 
 such that every `a in Q_D` is supported by more than
 
-$$
+```math
 \boxed{\left({1\over5}-o(1)\right)N}
 \tag{SL.9}
+```
 
 THIN blockers from `T_D`.
 
 For a row `a`, let
 
-\[
+```math
 F_a=\sum_{b\in\Gamma_a}\delta_{ab}
-$$
+```
 
 be its full strict-rhombus angular-defect sum. The global budget is
 
-$$
+```math
 \sum_a F_a\le C_{\rm phase}D,
 \qquad
 C_{\rm phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
 \tag{SL.10}
+```
 
 Also
 
-\[
+```math
 N>\left({\gamma\over16}-o(1)\right)D.
 \tag{SL.11}
+```
 
 Therefore the average `F_a` over `Q_D` is bounded by
 
-\[
+```math
 {C_{\rm phase}D\over|Q_D|}
 < {16C_{\rm phase}\over3\gamma}+o(1).
 \tag{SL.12}
+```
 
 The right-hand constant is the previous
 
-\[
+```math
 H_{\rm thin}=344128111.925\ldots .
-$$
+```
 
 ---
 
@@ -164,56 +174,62 @@ $$
 
 Set, for definiteness,
 
-$$
+```math
 \boxed{
 H_0={32C_{\rm phase}\over3\gamma}+1.
 }
 \tag{SL.13}
+```
 
 For all sufficiently large sources, Markov's inequality applied to (SL.12) shows that at least half of the rows in `Q_D` satisfy
 
-\[
+```math
 F_a\le H_0.
-$$
+```
 
 Let `R_D` be this low-defect rich-row set. Then
 
-$$
+```math
 \boxed{|R_D|>\left({3\over2}-o(1)\right)N.}
 \tag{SL.14}
+```
 
 Every row in `R_D` still has the blocker lower bound (SL.9).
 
 The high-`t` crossing-neighbor floor gives
 
-\[
+```math
 |\Gamma_a|>(0.6536-o(1))D
 \tag{SL.15}
+```
 
 for every retained row.
 
 Delete from `Gamma_a` every column with
 
-\[
+```math
 \delta_{ab}>{100H_0\over D}.
 \tag{SL.16}
+```
 
 Because `F_a<=H_0`, at most `0.01D` columns are deleted. Thus each low-defect rich row has a purified column set `P_a` with
 
-\[
+```math
 \boxed{|P_a|>(p_0-o(1))D,
 \qquad p_0=0.6436,}
 \tag{SL.17}
+```
 
 and
 
-\[
+```math
 \boxed{
 0<\theta(a,b)-{\pi\over3}
 \le {100H_0\over D}
 \qquad(b\in P_a).
 }
 \tag{SL.18}
+```
 
 The threshold constant is source-independent.
 
@@ -223,63 +239,68 @@ The threshold constant is source-independent.
 
 For `a in R_D`, let `B_a subset T_D` be the THIN blockers whose exact path support contains `a`. By (SL.9),
 
-\[
+```math
 |B_a|>\left({1\over5}-o(1)\right)N.
 \tag{SL.19}
+```
 
 Count triples
 
-\[
+```math
 (a,e,b)
-$$
+```
 
 with
 
-$$
+```math
 a\in R_D,
 \qquad
 e\in B_a,
 \qquad b\in P_a.
-$$
+```
 
 Equations (SL.14), (SL.17), and (SL.19) give
 
-$$
+```math
 \boxed{
 \#\{(a,e,b)\}
 >
 \left({3p_0\over10}-o(1)\right)N^2D.
 }
 \tag{SL.20}
+```
 
 The audited global complete-train count gives at most
 
-\[
+```math
 (T_*+o(1))D
 \tag{SL.21}
+```
 
 possible complete trains `b`. There are exactly `N` possible blockers `e`. Hence there are at most
 
-\[
+```math
 (T_*+o(1))ND
-$$
+```
 
 blocker-train pairs `(e,b)`.
 
 Pigeonhole applied to (SL.20) yields one pair
 
-$$
+```math
 \boxed{(e_*,b_*)}
 \tag{SL.22}
+```
 
 which occurs with more than
 
-\[
+```math
 \boxed{
 \left({3p_0\over10T_*}-o(1)\right)N
 =(\kappa-o(1))N
 }
 \tag{SL.23}
+```
 
 rows. Call this row set `A_D`.
 
@@ -292,11 +313,12 @@ Thus `e_*` and `b_*` are two fixed transversals of the same linearly large order
 
 The exact constant is
 
-\[
+```math
 \kappa
 ={3(1609/2500)\over10(6121/2000)}
 ={9654\over153025}.
 \tag{SL.24}
+```
 
 ---
 
@@ -306,43 +328,46 @@ A complete train has one fixed projective track-edge direction. Let `[v_*]` be t
 
 For every `a in A_D`, equation (SL.18) says that the acute angle between the row direction `[u_a]` and `[v_*]` is
 
-\[
+```math
 {\pi\over3}+O(D^{-1}).
-$$
+```
 
 Relative to `[v_*]`, there are only two possible projective sides for a row with this acute angle. Split `A_D` by those two phase signs and retain the larger class `A_D^{phase}`. Then
 
-$$
+```math
 \boxed{
 |A_D^{phase}|>
 \left({\kappa\over2}-o(1)\right)N.
 }
 \tag{SL.25}
+```
 
 After choosing one oriented representative `u_*^\dagger`, uniformly over this class
 
-\[
+```math
 \boxed{
  d_{\mathbb{RP}^1}([u_a],[u_*^\dagger])=O(D^{-1}).
 }
 \tag{SL.26}
+```
 
 So the common-spine extraction synchronizes the row phase across linearly many separated rich cuts, not merely across one row.
 
 Using (SL.11),
 
-\[
+```math
 |A_D^{phase}|>
 \left({\kappa\gamma\over32}-o(1)\right)D.
 \tag{SL.27}
+```
 
 Since
 
-\[
+```math
 {\kappa\gamma\over32}
 ={1{,}272{,}719\over7{,}834{,}880{,}000{,}000{,}000}
 =1.62442692166\ldots\times10^{-10},
-$$
+```
 
 this proves (SL.6)--(SL.7).
 
@@ -352,25 +377,27 @@ this proves (SL.6)--(SL.7).
 
 The selected blocker `e_*` belongs to the THIN family, so
 
-$$
+```math
 \boxed{
 D-{1\over4D}<|e_*|<D.
 }
 \tag{SL.28}
+```
 
 In particular
 
-\[
+```math
 |e_*|>\sqrt{D^2-1}.
-$$
+```
 
 Therefore both endpoints of `e_*` are convex-hull vertices. The standard near-diameter midpoint estimate also gives
 
-\[
+```math
 \boxed{
 \left|m(e_*)-o\right|=O(D^{3/4}).
 }
 \tag{SL.29}
+```
 
 Every row in `A_D^{phase}` belongs to the exact selected-cut support interval of this **same** chord. Hence the chord traverses a linear-height ordered stack of pairwise disjoint O--O rows whose phases have collapsed to one inverse-`D` cone relative to the same complete train `b_*`.
 
@@ -382,15 +409,17 @@ The row family is not asserted consecutive. Its cardinality is linear, and its o
 
 The choice of `(e_*,b_*)` did not thin the blocker or column populations attached to its rows. For every `a in A_D^{phase}` we still have
 
-\[
+```math
 \boxed{|B_a|>\left({1\over5}-o(1)\right)N}
 \tag{SL.30}
+```
 
 and
 
-\[
+```math
 \boxed{|P_a|>(0.6436-o(1))D.}
 \tag{SL.31}
+```
 
 Thus the same common row stack is simultaneously:
 

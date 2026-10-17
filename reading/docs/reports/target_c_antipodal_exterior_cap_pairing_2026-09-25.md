@@ -55,10 +55,10 @@ contact-isolated source points.
 If `liminf a_j/D_j^2 > 0`, there are **distinct** exterior caps `C'_j` of the
 same sources, for all sufficiently large `j`, such that
 
-$$
+```math
  {area(C'_j)-area(C_j)\over D_j^2}\longrightarrow0,
  \qquad {z'_j-z_j\over D_j^2}\longrightarrow0.
-$$
+```
 
 Along every convergent subsequence of the normalized caps, the normalized
 `C'_j-o_j` converge to the half-turn image of the limit of `C_j-o_j`. In
@@ -66,18 +66,18 @@ particular, an exterior cap with quadratic population forces a second,
 opposite exterior cap with the same leading population. A single cap cannot
 carry more than half of the total exterior source population to leading order:
 
-$$
+```math
  z_j\le {Z_{{ext},j}\over2}+o(D_j^2).
-$$
+```
 
 Let `I_j` and `I'_j` be the convex hulls of the actual assigned isolates in
 the two caps. For every fixed positive lower bound on `a_j/D_j^2`,
 
-$$
+```math
  d_H(I_j,C_j)=O(\sqrt{D_j}),\qquad
  d_H(I'_j,C'_j)=O(\sqrt{D_j}),\qquad
  {d_H(I'_j-o_j,-(I_j-o_j))\over D_j}\longrightarrow0.
-$$
+```
 
 Thus the paired **actual isolate hulls**, as well as the containers, have
 antipodal normalized limits. The `O(sqrt D)` constant can depend on the fixed
@@ -92,19 +92,19 @@ conclusions by a fixed positive multiple of `D_j^2`.
 Write `D=D_j` temporarily, and translate by `o_j`. Canonical `C-FS-GEOM`
 (Section 58, FS.1) gives a circumradius `R` and inradius `r` for `K_j` with
 
-$$
+```math
  D/2\le R<D/2+\eta_D,\qquad R-r<\eta_D,
  \qquad \eta_D=3^{1/4}\sqrt D.
-$$
+```
 
 If `c` is an incenter, containment of its inscribed disk in the circumdisk
 gives `|c-o_j|+r <= R`. Thus
 
-$$
+```math
  B(o_j,D/2-2\eta_D)\subseteq K_j
  \subseteq B(o_j,D/2+\eta_D).
  \tag{1}
-$$
+```
 
 After division by `D`, `K_j-o_j` therefore converges in Hausdorff distance to
 the centered radius-`1/2` disk `B`.
@@ -113,11 +113,11 @@ Every vertex `b` of `F_j` is an actual diameter endpoint. It has a partner
 `k` at distance `D`. FS.1 puts both vertices in the circumdisk, whence
 `D/2-eta_D <= |b-o_j| <= D/2+eta_D`. Canonical FS.6 further gives
 
-$$
+```math
  |k-(2o_j-b)|<2L_D,
  \qquad L_D=\sqrt{D\eta_D+\eta_D^2}=o(D).
  \tag{2}
-$$
+```
 
 Consequently the normalized loaded-vertex sets lie within `o(1)` of the
 radius-`1/2` circle and are `o(1)`-invariant under a half-turn. Canonical
@@ -155,12 +155,12 @@ statement.
 
 Canonical Section 80, equations (80.13)--(80.14), gives for every cap
 
-$$
+```math
  z_i={area(C_i)\over a_0}+{per(C_i)\over2}-1-\sigma_i,
  \qquad a_0=\sqrt3/2,
  \qquad \sum_i\sigma_i=O(D),
  \tag{3}
-$$
+```
 
 with all `sigma_i>=0` and `sum_i per(C_i)<=2pi D`. Hence, uniformly over
 individual caps, `z_i=area(C_i)/a_0+O(D)`. Applying this to the pair proves
@@ -173,12 +173,12 @@ For either member `C_i` of the pair, put `I_i=conv(Z_i)`. Equation (3) and
 unit-separated set `Z_i` in its own hull, together with convex perimeter
 monotonicity, gives
 
-$$
+```math
  a_0 z_i\le area(I_i)+c_0 per(I_i)+a_0
  \le area(I_i)+c_0 per(C_i)+a_0
  =area(I_i)+O(D),
  \qquad c_0=\sqrt3/4.
-$$
+```
 
 Hence `area(C_i)-area(I_i)=O(D)`. Both caps have area at least a fixed
 positive multiple of `D^2` and perimeter at most `2pi D`. Here is the
@@ -205,19 +205,19 @@ that promoted theorem beyond its internal-chamber scope.
 If the theorem failed uniformly for a fixed positive cap-area fraction,
 choose a violating sequence, extract the subsequences above, and obtain the
 same contradiction. This removes any hidden choice of a preferred cap or
-limit. $\square$
+limit. $`\square`$
 
 ### Corollary 2 (individual cap ceiling)
 
 Every exterior cap satisfies
 
-$$
+```math
  \limsup {area(C_i)\over D^2}
  \le {\pi-2\rho-\sin(2\rho)\over8}
  ={1\over2}\left({\pi\over4}-A_{SC}\right),
  \qquad A_{SC}={2\rho+\sin(2\rho)\over4},
  \tag{4}
-$$
+```
 
 and its assigned source population has limsup at most the right-hand side
 divided by `a_0`. This ceiling also follows directly from canonical DB.30:
@@ -232,14 +232,14 @@ pairing, not as an independent improvement over Section 59.
 For every fixed `epsilon>0`, at most `pi/(4epsilon)+o(1)` caps have area at
 least `epsilon D^2`. The caps below that threshold satisfy
 
-$$
+```math
  \sum_{area(C_i)<\epsilon D^2}area(C_i)
  \le\sqrt{\pi\epsilon}\,D^2,
  \qquad
  \sum_{area(C_i)<\epsilon D^2}z_i
  \le {\sqrt{\pi\epsilon}\over a_0}D^2+O(D).
  \tag{5}
-$$
+```
 
 Indeed, Section 80 gives `sum_i per(C_i)<=2pi D`. Isoperimetry then yields
 `sum_i sqrt(area(C_i))<=sqrt(pi)D`; multiply by the largest square root

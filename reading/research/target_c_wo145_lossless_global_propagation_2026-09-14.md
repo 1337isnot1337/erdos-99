@@ -19,9 +19,9 @@
 
 The weighted-overlap theorem WO145 proves the proof-only atomic train gain
 
-$$
+```math
  g:=\eta_{grid}=0.00145.
-$$
+```
 
 This note propagates that gain through the audited Section-171 orbit/detour envelope and
 then uses the exact lossless train identity before splitting singleton and rhombic
@@ -30,12 +30,12 @@ than falling back to the older difference-body lower bound on `q`.
 
 Put
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},
 \qquad s_2=\sqrt{\Delta_2},
 \qquad
 C_{146}={4\over9}(\pi+s_2).
-$$
+```
 
 ---
 
@@ -43,67 +43,67 @@ $$
 
 Audited Section 171 reduces every Type-II subsequential limit
 
-$$
+```math
 t=\lim{q-k\over D},
 \qquad
 \delta=\lim{b-P_F\over D}\ge0
-$$
+```
 
 to
 
-$$
+```math
 F_t(\delta)=
 10t-5\pi-5\delta
 +\left(81(\pi+\delta)^2\delta\right)^{1/3}
 -{8\Delta_2\over9t/2-2\pi-2\delta}
 \ge0.
 \tag{W145.1}
-$$
+```
 
 With train gain `g`, the feasible detour interval is
 
-$$
+```math
 0\le\delta\le
 {{9\over2}(t-C_{146})-g\over2}.
 \tag{W145.2}
-$$
+```
 
 Take
 
-$$
+```math
 g=0.00145,
 \qquad
 \varepsilon_{145}=0.0015914,
 \qquad
 t_{145}=C_{146}+\varepsilon_{145}.
 \tag{W145.3}
-$$
+```
 
 The right endpoint is exactly
 
-$$
+```math
 \delta_{145}=0.00285565.
 \tag{W145.4}
-$$
+```
 
 The exact-rational certificate proves that `F_{t145}` is increasing throughout the
 feasible detour interval, while
 
-$$
+```math
 F_{t_{145}}(\delta_{145})<0
-$$
+```
 
 with outward-rounding margin exceeding `1.5e-5`.  Section 171 also gives strict
 monotonicity in `t`.  Hence
 
-$$
+```math
 \boxed{
 \liminf {q-k\over D}
 \ge t_{145}
 =1.821104937979444\ldots .
 }
 \tag{W145.5}
-$$
+```
 
 The unchanged scalar equation has its first numerical zero at
 `epsilon=0.00159145276455...`, so the displayed endpoint is deliberately below the
@@ -116,50 +116,50 @@ method root.
 Let `T` be the complete stopped-train count, `T_R` the non-singleton rhombic-train
 count, and `S=T-T_R` the singleton count.  Put
 
-$$
+```math
 \rho_{rec}=2S,
 \qquad
 \sigma_R=2T_R-4\sqrt{R_4}.
-$$
+```
 
 Exactly,
 
-$$
+```math
 \boxed{
 \rho_{rec}+\sigma_R=2T-4\sqrt{R_4}.
 }
 \tag{W145.6}
-$$
+```
 
 WO145 gives
 
-$$
+```math
 {T-q/2\over D}\ge2s_2+g-o(1),
 \tag{W145.7}
-$$
+```
 
 so
 
-$$
+```math
 2T\ge q+4s_2D+2gD-o(D).
-$$
+```
 
 Since `q=(q-k)+k>=q-k`, equation (W145.5) applies.  Type-II rhombic saturation gives
 
-$$
+```math
 {\sqrt{R_4}\over D}\to s_2.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \liminf {\rho_{rec}+\sigma_R\over D}
 \ge L_{145}:=t_{145}+2g
 =1.824004937979444\ldots .
 }
 \tag{W145.8}
-$$
+```
 
 This is the correct lossless train split.  It is much stronger than the fallback
 coefficient obtained by replacing `q-k` with a generic difference-body bound.
@@ -170,46 +170,46 @@ coefficient obtained by replacing `q-k` with a generic difference-body bound.
 
 From (W145.8), after subsequence extraction at least one of
 
-$$
+```math
 \rho_{rec}\ge\left({L_{145}\over2}-o(1)\right)D,
 \qquad
 \sigma_R\ge\left({L_{145}\over2}-o(1)\right)D
-$$
+```
 
 holds.  Since `rho_rec=2S`, either
 
-$$
+```math
 \boxed{
 S\ge0.456001234494861\ldots D-o(D),
 }
 \tag{W145.9}
-$$
+```
 
 or
 
-$$
+```math
 \boxed{
 \sigma_R\ge0.912002468989722\ldots D-o(D).
 }
 \tag{W145.10}
-$$
+```
 
 On the rhombic branch, the exact rationalization
 
-$$
+```math
 M_R={\sigma_R\over8}
 \left(4\sqrt{R_4}+{\sigma_R\over2}\right)
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{
 \liminf {M_R\over D^2}
 \ge0.486240097020440\ldots .
 }
 \tag{W145.11}
-$$
+```
 
 Thus the surviving full-core geometry must carry either a linear population of nearly
 half a diameter's worth of singleton trains or almost one full `D` of rhombic
@@ -222,7 +222,7 @@ rhombic crossing capacity.
 
 The exact post-endpoint identity is
 
-$$
+```math
 \begin{aligned}
 \mu_DD
 ={}&{2P_F+2\sqrt{R_4}\over5}
@@ -232,22 +232,22 @@ $$
 -2c_I-4.
 \end{aligned}
 \tag{W145.12}
-$$
+```
 
 The displayed defect currencies are nonnegative, while
 
-$$
+```math
 P_F/D\to\pi,
 \qquad
 R_4/D^2\to\Delta_2,
 \qquad
 c_I/D\to0.
-$$
+```
 
 Using the **total** train-defect floor (W145.8), rather than only one rhombic term,
 therefore gives
 
-$$
+```math
 \boxed{
 \liminf\mu_D
 \ge
@@ -255,7 +255,7 @@ $$
 =1.819962677979444\ldots .
 }
 \tag{W145.13}
-$$
+```
 
 No universal upper bound currently known for `mu_D` contradicts this value, so it is a
 stronger scalar reduction rather than C-II closure.
@@ -266,30 +266,30 @@ stronger scalar reduction rather than C-II closure.
 
 Split singleton trains as
 
-$$
+```math
 S=S_o+S_E,
-$$
+```
 
 where `S_o` has no bounded-exceptional terminal incidence and `S_E` has at least one.
 The audited bridge payment gives
 
-$$
+```math
 2S_o\le b-P_F+o(D).
-$$
+```
 
 Subtracting only that paid population from (W145.8) yields
 
-$$
+```math
 \boxed{
 \sigma_R+2S_E+(b-P_F)
 \ge(L_{145}-o(1))D.
 }
 \tag{W145.14}
-$$
+```
 
 The exact detour-free elimination is algebraic in the train gain and gives
 
-$$
+```math
 \boxed{
 {\sigma_R+2S_E\over D}
 \ge
@@ -299,47 +299,47 @@ c_{DF,145}
 -o(1),
 }
 \tag{W145.15}
-$$
+```
 
 where
 
-$$
+```math
 \boxed{
 c_{DF,145}
 =s_2-\frac\pi4+\frac52g
 =0.170539643466509\ldots .}
 \tag{W145.16}
-$$
+```
 
 Even after discarding the positive `k` and `Q-f` terms, every detour-free survivor has
 at least one of
 
-$$
+```math
 \boxed{
 \sigma_R\ge0.0852698217332545\ldots D-o(D)
 }
 \tag{W145.17}
-$$
+```
 
 or
 
-$$
+```math
 \boxed{
 S_E\ge0.0426349108666273\ldots D-o(D).
 }
 \tag{W145.18}
-$$
+```
 
 For any fixed two sufficiently narrow projective windows, the exceptional-singleton
 incidence theorem correspondingly becomes
 
-$$
+```math
 \boxed{
 \sigma_R+11(Q-f)+20T_{off}
 \ge c_{DF,145}D+{5\over2}k-o(D).
 }
 \tag{W145.19}
-$$
+```
 
 ---
 
@@ -347,63 +347,63 @@ $$
 
 The exact all-train ledger and `P_F/D->pi` give
 
-$$
+```math
 T-{q\over2}\le {P_F\over2}+2f.
-$$
+```
 
 Therefore WO145 forces
 
-$$
+```math
 \boxed{
 \liminf {f\over D}
 \ge s_2-\frac\pi4+{g\over2}
 =0.167639643466509\ldots .
 }
 \tag{W145.20}
-$$
+```
 
 Since every bounded exceptional face has degree at least five,
 
-$$
+```math
 \boxed{
 \liminf {4f+Q\over D}
 \ge0.838198217332545\ldots .
 }
 \tag{W145.21}
-$$
+```
 
 Define
 
-$$
+```math
 J=(b-P_F)+(Q+4f)=2T-P_F.
-$$
+```
 
 Using `q>=q-k`, WO145, (W145.5), and `P_F/D->pi`,
 
-$$
+```math
 \boxed{
 \liminf {J\over D}
 \ge j_{145}:=t_{145}+4s_2+2g-\pi
 =2.491663511845481\ldots .
 }
 \tag{W145.22}
-$$
+```
 
 The exact chamber decomposition
 
-$$
+```math
 \Sigma_{ch}=J+a+L_{add}+R_F
-$$
+```
 
 then gives
 
-$$
+```math
 \boxed{
 \liminf {\Sigma_{ch}\over D}
 \ge2.491663511845481\ldots .
 }
 \tag{W145.23}
-$$
+```
 
 As in the corrected chamber audit, this large raw slack contains mandatory boundary
 credit and cannot be compared directly with the full-source Oler slack.
@@ -414,59 +414,59 @@ credit and cannot be compared directly with the full-source Oler slack.
 
 The exact identity
 
-$$
+```math
 H={J\over2}+(q-k)-{P_F\over2}
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{
 \liminf {H\over D}
 \ge h_{145}:={j_{145}\over2}+t_{145}-{\pi\over2}
 =1.496140367107289\ldots .
 }
 \tag{W145.24}
-$$
+```
 
 Canonical Section 85 therefore yields
 
-$$
+```math
 \boxed{
 \liminf {A_{ch}-a_0Z_{ch}\over D}
 \ge {\sqrt3\over4}h_{145}
 =0.647847782771144\ldots,
 }
 \tag{W145.25}
-$$
+```
 
 and the full-source count comparison gives
 
-$$
+```math
 \boxed{
 \liminf {\Delta_2D^2-R_4\over D}
 \ge {h_{145}\over2}
 =0.748070183553644\ldots .
 }
 \tag{W145.26}
-$$
+```
 
 The positive-core population identity
 
-$$
+```math
 m-R_4={P_F+H\over2}+1
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{
 \liminf {m-R_4\over D}
 \ge {\pi+h_{145}\over2}
 =2.318866510348541\ldots .
 }
 \tag{W145.27}
-$$
+```
 
 ---
 
@@ -474,21 +474,21 @@ $$
 
 The exact corrected cap remains
 
-$$
+```math
 R_F+\Sigma_{ext}
 <{P_K\over2}+P_F-q-{\delta_K+E_4\over a_0}.
-$$
+```
 
 Using `q>=q-k`, `P_K,P_F<=pi D`, and (W145.5),
 
-$$
+```math
 \boxed{
 \limsup {R_F+\Sigma_{ext}\over D}
 \le {3\pi\over2}-t_{145}
 =2.891284042405245\ldots .
 }
 \tag{W145.28}
-$$
+```
 
 The first-order gap between mandatory interface complexity and genuine residual
 allowance continues to move in the favorable direction, but it is not yet a

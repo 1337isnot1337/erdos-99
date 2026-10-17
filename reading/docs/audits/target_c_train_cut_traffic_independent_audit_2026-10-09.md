@@ -36,11 +36,11 @@ minimize contacts and then actual diameter pairs. Let V be its connected,
 two-dimensional nonisolated positive-contact core. Use the relative-interior
 normalized stress from C-ZRF, restricted to V:
 
-$$
+```math
 \Omega_V=L_C^\alpha-L_H^\beta\succeq0,\qquad
 \ker\Omega_V=\operatorname{span}\{\mathbf1,p_x,p_y\},\qquad
 \sum_{h\in H}\beta_h=1.
-$$
+```
 
 Here C is the full actual unit-contact set, H is the full actual diameter
 pair set, all coefficients on these rows are positive, and every endpoint of
@@ -60,43 +60,43 @@ stressed edge or virtual cut is substituted.
 
 Set
 
-$$
+```math
 A_e=\sum_{c\in\tau_e}\alpha_c,\qquad
 \varepsilon_{he}=R_{j_h e}-R_{i_h e},\qquad
 \mathcal B_{ef}=\sum_{h\in H}\beta_h\varepsilon_{he}\varepsilon_{hf},
 \qquad W=\operatorname{diag}(A)-\mathcal B.
-$$
+```
 
 Then R has full column rank and
 
-$$
+```math
 \boxed{W=R^T\Omega_VR\succeq0,\qquad
 \ker W=\{(\ell\cdot u_e)_e:
 \ell\cdot w_c=0\text{ for every unselected contact }c\}.}
-$$
+```
 
 Here w_c is the oriented unit vector of the unselected contact; its sign does
 not affect the span. In particular,
 
-$$
+```math
 \dim\ker W=2-\dim\operatorname{span}\{w_c:c\text{ unselected}\},
-$$
+```
 
 and W is positive definite exactly when those unselected directions span
-$\mathbb R^2$.
+$`\mathbb R^2`$.
 
 For any angles theta_e, set
-$\Delta_e=R_{\theta_e}u_e-u_e$ and translate every source label in region v
-by its sum of $\Delta_e$ along the root-to-v tree path. Every unit contact is
+$`\Delta_e=R_{\theta_e}u_e-u_e`$ and translate every source label in region v
+by its sum of $`\Delta_e`$ along the root-to-v tree path. Every unit contact is
 preserved exactly; for all sufficiently small angle vectors every other
 full-source pair remains strictly more than one apart. If
-$\Delta^{(k)}=(\Delta_{e,k})_e$ is the vector of coordinate increments, then
+$`\Delta^{(k)}=(\Delta_{e,k})_e`$ is the vector of coordinate increments, then
 the exact labelled-coordinate identity is
 
-$$
+```math
 \boxed{\sum_{h\in H}\beta_h|p'_{i_h}-p'_{j_h}|^2
 =D^2-\sum_{k=1}^2(\Delta^{(k)})^TW\Delta^{(k)}.}
-$$
+```
 
 Thus the weighted sum is nonincreasing for every angle vector, and is strictly
 smaller whenever one coordinate increment vector is outside ker W. For one
@@ -136,10 +136,10 @@ common neighborhood, including pairs incident to contact isolates. Finally,
 the core coordinates after motion are p'_k=p_k+R Delta^(k). Since the
 coordinate vectors p_k are in ker(Omega_V),
 
-$$
+```math
 (\Delta^{(k)})^TW\Delta^{(k)}
 =p_k'^T\Omega_Vp_k'-p_k^T\Omega_Vp_k.
-$$
+```
 
 Summing over the two coordinates, all contact terms remain
 sum_C alpha_c=D^2 by the original stress identity and sum_H beta_h=1;

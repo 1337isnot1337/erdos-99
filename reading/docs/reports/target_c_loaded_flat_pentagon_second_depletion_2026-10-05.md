@@ -16,31 +16,31 @@ In any canonical triangle-free full-core Type-II sequence with
 `g_F=Q-f`, and `k=d_H+s_Z`. There is a family of physical pentagonal
 contact faces of size
 
-$$
+```math
 g_D\ge q-e_{BI}-6g_F-o(D)
 \tag{1.1}
-$$
+```
 
 whose incident stopped trains carry only `o(D^2)` rhombi. Their actual
 closure equations have rank exactly `2g_D`, witnessed by two distinct
 unit hull singleton columns per face. Deleting them together with all
 outer-ended trains, and singleton trains outside this family, gives
 
-$$
+```math
 \boxed{2(f-g_D)\ge2sD+\sigma_C+S_U-o(D),}
 \quad s=\sqrt{\pi/(2\sqrt3)}.
 \tag{1.2}
-$$
+```
 
 Consequently every such survivor satisfies
 
-$$
+```math
 \boxed{
 e_{BI}+6(Q-f)
 \ge sD+2k+\frac{\sigma_C+S_U}{2}-o(D).
 }
 \tag{1.3}
-$$
+```
 
 This excludes the low-outer-walk branch if its actual loaded attachment
 and high-degree budgets lie strictly below the right side. It also gives
@@ -68,23 +68,23 @@ low-`t_D` collar hypotheses are not used.
 Let `a,x,b,c,d` be cyclic vertices of a convex unit-edge pentagon, pairwise
 unit-separated, with a straight angle at `x`. Normalize
 
-$$
+```math
 x=(0,0),\qquad a=(-1,0),\qquad b=(1,0).
-$$
+```
 
 The unit equalities `|c-b|=|d-a|=1` give
 
-$$
+```math
 |c|^2=2c_x,\qquad |d|^2=-2d_x.
-$$
+```
 
 Separation from `x` implies `c_x>=1/2`, `d_x<=-1/2`. Since `|c-d|=1`,
 both bounds are equalities and `c_y=d_y`. Therefore, up to reflection,
 
-$$
+```math
 c=(1/2,-\sqrt3/2),\qquad d=(-1/2,-\sqrt3/2).
 \tag{2.1}
-$$
+```
 
 The polygon is the triangular trapezoid, all edge phases agree modulo
 `pi/3`, and `x-c`, `x-d` are additional unit pairs in this **limit**.
@@ -130,10 +130,10 @@ contact-degree cap three. Contacts at the irregular vertices are uniformly
 bounded, so
 the number of regular degree-two loaded vertices is
 
-$$
+```math
 N_2=q-e_{BI}+o(D).
 \tag{3.1}
-$$
+```
 
 Also discard every remaining regular loaded vertex internal to a new
 pocket's contact path. The added-side endpoints were already irregular.
@@ -151,10 +151,10 @@ such a face has all angles below `2pi/3`, whereas its angle here tends to
 `pi`. Its bounded face is therefore exceptional. The total occurrence
 capacity of degree-at-least-six physical faces is at most
 
-$$
+```math
 \sum_{m_F\ge6}m_F\le6\sum_{m_F\ge6}(m_F-5)=6(Q-f).
 \tag{3.2}
-$$
+```
 
 At least `q-e_BI-6(Q-f)-o(D)` retained vertices lie on pentagons. For
 large `D`, Section 2 makes these pentagons distinct. Mark them, yielding
@@ -189,10 +189,10 @@ have rank `2g_D`. The
 [marked-face rank argument](target_c_outer_train_rank_groemer_bank_synthesis_2026-10-05.md)
 therefore gives
 
-$$
+```math
 |\mathcal D|\ge q-k+\sigma_C+2g_D.
 \tag{4.1}
-$$
+```
 
 After also deleting the `S_U` singletons outside `mathcal D`, the remaining
 train count is at most `2(f-g_D)-sigma_C-S_U`, and its simple triangle-free
@@ -200,20 +200,20 @@ crossing graph has `(Delta_2-o(1))D^2` edges. Mantel proves (1.2).
 Retaining the independent good-hull count as well gives the stronger
 combined bank
 
-$$
+```math
 2f\ge2sD+\max\{k-m_B,\sigma_C+2g_D\}+S_U-o(D).
 \tag{4.1a}
-$$
+```
 
 Using `f<=Q=q-m_B-u_B-2k` and (1.1) proves (1.3). The equivalent weighted
 frontier is
 
-$$
+```math
 4S+2\sigma_R\ge2(\pi+s)D
 +5(\max\{k-m_B,\sigma_C+2g_D\}+S_U)
 +2(Q-f)+2(b-P_F)-o(D).
 \tag{4.2}
-$$
+```
 
 Equations (1.2), (1.3) and (4.2) are composed forms of the same source
 ledger. Their payments cannot be added again as independent currencies.

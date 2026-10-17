@@ -51,11 +51,11 @@ consecutive affine patch.
 
 An actual `r by s` patch means all points
 
-$$
+```math
  p_{ij}=p_{00}+iu+jv,\qquad 0\le i\le r,\quad0\le j\le s,
  \quad |u|=|v|=1,\quad |u\cdot v|<1/2
 \tag{1}
-$$
+```
 
 belong to the same source. The unit faces are consecutive; a grid obtained by
 skipping intervening trains does not satisfy (1) without another theorem.
@@ -67,11 +67,11 @@ Its wall is the `2r+2s` boundary grid vertices. Its interior population is
 Let `C` be a simple polygonal wall of actual unit contacts, lying in the old
 source hull `K`. Define
 
-$$
+```math
  W_C=\{x\in\operatorname{int}C: |x-b|>1
                   \text{ for every wall vertex }b\}.
 \tag{2}
-$$
+```
 
 **Wall lemma.** Every `x in W_C` is strictly farther than one from every old
 source point outside `int C`. If that old point is not a wall vertex, its
@@ -82,9 +82,9 @@ point `q` distinct from them, follow `[x,q]` to its first wall intersection `z`.
 At a wall vertex, `|x-q|=|x-z|+|z-q|>2`. At an interior point of a unit edge
 `ab`, write `z=(1-t)a+tb`, `0<t<1`. The weighted-square identity gives
 
-$$
+```math
  |x-z|^2=(1-t)|x-a|^2+t|x-b|^2-t(1-t)>3/4.
-$$
+```
 
 Source separation similarly gives `|q-z|^2>=3/4`. Their sum of lengths is
 `|x-q|>sqrt(3)`. This argument needs the cross distances to the wall vertices,
@@ -134,10 +134,10 @@ triangle-free. ∎
 of **all actual old diameter pairs**, and let the wall packets have sizes
 `M_l`. If
 
-$$
+```math
  \sum_l M_l\ge\sum_l|S_l|+|T|,
 \tag{3}
-$$
+```
 
 then there is a same-cardinality unit-separated source of diameter strictly
 less than `D`. No contact-minimality premise is needed for this theorem.
@@ -158,11 +158,11 @@ leaf edge `ab`; choose `b` for the cover and recurse after removing `a,b`.
 For an odd-unicyclic graph, delete one cycle vertex, cover the resulting forest,
 and restore that vertex to the cover. Hence
 
-$$
+```math
  \tau(H)=\nu(H)\quad\text{in the forest branch},\qquad
  \tau(H)\le\nu(H)+1\quad\text{in the cyclic branch}.
 \tag{4}
-$$
+```
 
 No positive multiplier floor or Euler-path inference is used.
 
@@ -173,9 +173,9 @@ parallelogram `Q`, apart from its grid vertices. In any cell, round the two
 coordinates to the nearest corner. The residual coefficients `a,b` have
 absolute value at most `1/2`, and
 
-$$
+```math
  |au+bv|^2\le a^2+b^2+2|ab|\,|u\cdot v|<3/4<1.
-$$
+```
 
 An additional source point would violate unit separation. This explicitly
 excludes an interior contact isolate; none is simply dropped.
@@ -183,11 +183,11 @@ excludes an interior contact isolate; none is simply dropped.
 Put `t=sin(theta)>sqrt(3)/2=:a_0`. If `r,s>2/t`, the open depth-one inner
 parallelogram is wall-safe and has area
 
-$$
+```math
  |Q_{-1}|=(r-2/t)(s-2/t)t
          =rs t-2(r+s)+4/t.
 \tag{5}
-$$
+```
 
 Average a unit triangular lattice over its fundamental cell of area `a_0`.
 The average number of sites in any bounded open region `U` is `|U|/a_0`:
@@ -198,10 +198,10 @@ tiling proves this directly. If `|U|/a_0>|S|-1`, some translate has at least
 **Theorem 3 — embedded-grain exclusion.** A canonical contact-minimal
 triangle-free global source cannot contain an actual patch (1) for which
 
-$$
+```math
  \boxed{rs(t-a_0)>(2-a_0)(r+s)-4/t,\qquad r,s>2/t.}
 \tag{6}
-$$
+```
 
 More generally, `|Q_{-1}|/a_0>|S|+k-1` certifies `|S|+k` wall-safe sites;
 several such packets can be summed in Theorem 2.
@@ -218,10 +218,10 @@ possible repacking size. The explicit square packet below improves 15 to 7.
 Take `u=(1,0)`, `v=(0,1)`, `r=s=7`. The old wall has 28 vertices and the
 old interior has 36. Consider triangular-lattice sites
 
-$$
+```math
  x_i={7+i\sqrt3\over2},\qquad y_{ij}=4+i/2+j.
 \tag{7}
-$$
+```
 
 Use `i=-3,-2,...,3`. For odd `i`, take the five values
 `y=3/2,5/2,...,11/2`; for even `i`, take the six values `y=1,2,...,6`.
@@ -247,11 +247,11 @@ Interior points have no unit contact across the wall by the crossing lemma.
 The remaining two sites can instead pay an actual diameter cover in Theorem 2.
 For `p` disjoint such patches, `2p` spare sites are jointly compatible. Thus
 
-$$
+```math
  2p\ge\nu(H)\quad\text{(forest)},\qquad
  2p\ge\nu(H)+1\quad\text{(cyclic)}
 \tag{8}
-$$
+```
 
 is an explicit strict-competitor condition. Corollary 4 already excludes one
 patch in the contact-minimal representative; (8) is additionally useful when
@@ -269,10 +269,10 @@ Two adjacent patches are also checked jointly on a real 120-point source.
 **Corollary 5 — stable actual-patch exclusion.** Suppose an actual source has
 64 points `p_ij`, `0<=i,j<=7`, and, after one rigid motion,
 
-$$
+```math
  |p_{ij}-(i,j)|\le1/50.
 \tag{10}
-$$
+```
 
 Assume every horizontal and vertical grid-neighbor pair is an actual unit
 contact. A canonical contact-minimal triangle-free global source cannot contain
@@ -297,9 +297,9 @@ source vertex. An additional point would violate source unit separation.
 For an actual wall vertex `b` and its ideal counterpart `b_0`, the packet's
 distance obeys
 
-$$
+```math
  |y-b|\ge|y-b_0|-1/50>\sqrt{21/20}-1/50>1.
-$$
+```
 
 Thus the same exact 38-site packet lies in the actual strict wall-safe region.
 Theorem 1 supplies the contradiction. All old non-neighbor grid distances
@@ -354,10 +354,10 @@ For a finite unit-separated test packing `B subset int K`, let
 `N(T)={a in A: |a-t|<=1 for some t in T}`. In a contact-minimal triangle-free
 global source, every subset with a contact-nonisolated point in `N(T)` satisfies
 
-$$
+```math
  |N(T)|\ge |T|+1.
 \tag{9}
-$$
+```
 
 Indeed, if `|N(T)|<=|T|`, choose `|N(T)|` test sites, dilate them slightly in
 `int K`, and delete `N(T)`. All cross distances to retained source points were

@@ -18,9 +18,9 @@
 
 The cyclic reports previously controlled the **average** width through
 
-$$
+```math
 \operatorname{per}(F)=q=\pi D-O(D^{-1}),
-$$
+```
 
 and controlled the force-hull area only to a much coarser linear error through packing. The actual diameter directions give a stronger pointwise statement.
 
@@ -28,7 +28,7 @@ and controlled the force-hull area only to a much coarser linear error through p
 
 Put
 
-$$
+```math
 \delta:=2\arcsin\frac1{2D},
 \qquad
 q_R(D):=\frac\pi\delta,
@@ -37,11 +37,11 @@ s:=q_R(D)-q\ge0,
 \qquad
 d:=d_H\in\{0,1,2\}.
 \tag{UW.1}
-$$
+```
 
 Then every directional width of the cyclic force hull satisfies the exact finite bound
 
-$$
+```math
 \boxed{
 D\cos\left(\frac{(d+s+1)\delta}{2}\right)
 \le
@@ -49,11 +49,11 @@ w_F(\theta)
 \le D
 \qquad(\theta\in\mathbb R/\pi\mathbb Z).}
 \tag{UW.2}
-$$
+```
 
 Equivalently the centered difference body obeys the concentric sandwich
 
-$$
+```math
 \boxed{
 D\cos\left(\frac{(d+s+1)\delta}{2}\right)B_2
 \subseteq
@@ -61,22 +61,22 @@ F-F
 \subseteq
 DB_2.}
 \tag{UW.3}
-$$
+```
 
 Using R2, this yields the phase-specific asymptotics
 
-$$
+```math
 \boxed{
 0\le D-w_F(\theta)
 \le
 \frac{(d+1)^2}{8D}+o(D^{-1})
 \quad\text{uniformly in }\theta.}
 \tag{UW.4}
-$$
+```
 
 Thus
 
-$$
+```math
 \begin{array}{c|c}
  d_H & \displaystyle\sup_\theta(D-w_F(\theta))\\ \hline
 0 & \le\dfrac1{8D}+o(D^{-1}),\\[2mm]
@@ -84,7 +84,7 @@ $$
 2 & \le\dfrac9{8D}+o(D^{-1}).
 \end{array}
 \tag{UW.5}
-$$
+```
 
 For `d_H=0`, RE actually gives the exact regular difference body and the first bound is sharp for its side-normal directions.
 
@@ -92,36 +92,36 @@ For `d_H=0`, RE actually gives the exact regular difference body and the first b
 
 In the AD short-antipodal branches, every off-circle vertex `x` of `F-F` satisfies
 
-$$
+```math
 \boxed{
 D-|x|
 \le
 D\left[1-\cos\left(\frac{(d+s+1)\delta}{2}\right)\right].}
 \tag{UW.6}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \limsup D(D-|x|)
 \le\frac{(d+1)^2}{8}.}
 \tag{UW.7}
-$$
+```
 
 In particular:
 
-$$
+```math
 \boxed{
 d_H=1:\quad D-|x|\le\frac1{2D}+o(D^{-1}),}
 \tag{UW.8}
-$$
+```
 
-$$
+```math
 \boxed{
 d_H=2:\quad D-|x|\le\frac9{8D}+o(D^{-1}).}
 \tag{UW.9}
-$$
+```
 
 So the one/two canonical antipodal defects of AD cannot be macroscopically short.
 
@@ -131,69 +131,69 @@ So the one/two canonical antipodal defects of AD cannot be macroscopically short
 
 Let the `h=q-d` projective actual diameter directions be ordered cyclically and let
 
-$$
+```math
 g_1,\ldots,g_h>0,
 \qquad
 \sum_{i=1}^h g_i=\pi.
 \tag{1.1}
-$$
+```
 
 C67 gives
 
-$$
+```math
 g_i\ge\delta.
 \tag{1.2}
-$$
+```
 
 Write
 
-$$
+```math
 g_i=\delta+x_i,
 \qquad x_i\ge0.
-$$
+```
 
 Then
 
-$$
+```math
 \sum_i x_i
 =\pi-h\delta.
-$$
+```
 
 Using
 
-$$
+```math
 q_R\delta=\pi,
 \qquad h=q-d=q_R-s-d,
-$$
+```
 
 we get the exact identity
 
-$$
+```math
 \boxed{
 \sum_i x_i=(s+d)\delta.}
 \tag{1.3}
-$$
+```
 
 Therefore every individual gap satisfies
 
-$$
+```math
 \boxed{
 g_i\le\delta+(s+d)\delta=(s+d+1)\delta.}
 \tag{1.4}
-$$
+```
 
 Let
 
-$$
+```math
 G:=\max_i g_i.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{G\le(s+d+1)\delta.}
 \tag{1.5}
-$$
+```
 
 ---
 
@@ -201,41 +201,41 @@ $$
 
 For each actual diameter edge choose its projective unit direction `u_i`. DA defines the centrally symmetric diameter-direction polygon
 
-$$
+```math
 P_H:=\operatorname{conv}\{\pm D u_i:1\le i\le h\}.
 \tag{2.1}
-$$
+```
 
 All its `2h` vertices lie on the radius-`D` circle. Consecutive oriented vertices are separated by the projective gaps `g_i`, repeated antipodally.
 
 The edge joining two radius-`D` circle points with angular separation `g` lies on a line at distance
 
-$$
+```math
 D\cos(g/2)
-$$
+```
 
 from the origin. Since `P_H` is centrally symmetric and contains the origin, its centered inradius is therefore
 
-$$
+```math
 \boxed{
 r_{in}(P_H)=D\min_i\cos(g_i/2)=D\cos(G/2).}
 \tag{2.2}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{D\cos(G/2)B_2\subseteq P_H.}
 \tag{2.3}
-$$
+```
 
 Using (1.5), cosine monotonicity on the small-angle Target C regime gives
 
-$$
+```math
 D\cos\left(\frac{(s+d+1)\delta}{2}\right)B_2
 \subseteq P_H.
 \tag{2.4}
-$$
+```
 
 ---
 
@@ -243,28 +243,28 @@ $$
 
 Every actual diameter vector is a difference of two force-hull vertices, so
 
-$$
+```math
 P_H\subseteq F-F.
 \tag{3.1}
-$$
+```
 
 The force hull has diameter `D`, hence every difference vector has norm at most `D`:
 
-$$
+```math
 F-F\subseteq DB_2.
 \tag{3.2}
-$$
+```
 
 Combining (2.4), (3.1), and (3.2) proves UW.3.
 
 For a convex body `F`, the support function of its difference body is exactly the width:
 
-$$
+```math
 h_{F-F}(u)
 =h_F(u)+h_F(-u)
 =w_F(u).
 \tag{3.3}
-$$
+```
 
 Taking support functions in the concentric sandwich gives UW.2. `square`
 
@@ -274,38 +274,38 @@ Taking support functions in the concentric sandwich gives UW.2. `square`
 
 R2 gives
 
-$$
+```math
 s=O(D^{-2}),
-$$
+```
 
 and
 
-$$
+```math
 \delta=\frac1D+O(D^{-3}).
-$$
+```
 
 Therefore
 
-$$
+```math
 (s+d+1)\delta
 =\frac{d+1}{D}+o(D^{-1}).
-$$
+```
 
 Using
 
-$$
+```math
 1-\cos x=\frac{x^2}{2}+O(x^4),
-$$
+```
 
 UW.2 gives uniformly
 
-$$
+```math
 \begin{aligned}
 D-w_F(\theta)
 &\le D\left[1-\cos\frac{(s+d+1)\delta}{2}\right]\\
 &=\frac{(d+1)^2}{8D}+o(D^{-1}).
 \end{aligned}
-$$
+```
 
 This proves UW.4-UW.5. `square`
 
@@ -317,19 +317,19 @@ AD proves that an off-circle difference-body vertex exists only in the short-ant
 
 Every boundary point of a convex body containing the centered disk of radius `r` has Euclidean norm at least `r`. Therefore UW.3 gives, for every `x in partial(F-F)`,
 
-$$
+```math
 |x|
 \ge
 D\cos\left(\frac{(s+d+1)\delta}{2}\right).
-$$
+```
 
 For an off-circle vertex, `|x|<D`, so
 
-$$
+```math
 D-|x|
 \le
 D\left[1-\cos\left(\frac{(s+d+1)\delta}{2}\right)\right],
-$$
+```
 
 proving UW.6. The asymptotic forms follow as above.
 
@@ -339,15 +339,15 @@ proving UW.6. The asymptotic forms follow as above.
 
 The complete cyclic source is now close to a constant-width body in a much stronger metric than normalized perimeter:
 
-$$
+```math
 \sup_\theta|w_F(\theta)-D|=O(D^{-1}).
-$$
+```
 
 Equivalently, the central symmetral
 
-$$
+```math
 \frac12(F-F)
-$$
+```
 
 is at Hausdorff distance `O(D^-1)` from the radius-`D/2` disk.
 
@@ -360,11 +360,12 @@ The dense source-packing lower bounds remain necessary for that additional contr
 ## 7. Comparison with previous stability statements
 
 - RP gave average width defect
-  $$
+  ```math
   \int_0^\pi(D-w_F(\theta))d\theta
   =\pi D-q
   =\frac\pi{24D}+O(D^{-2}).
-  $$
+  
+  ```
 - Bonnesen/isodiametric stability from packing gives only much coarser primal Hausdorff control in the general cyclic branch.
 - UW upgrades the **difference-body / width function** to a uniform `O(D^-1)` estimate.
 - AD then converts that directly into `O(D^-1)` Euclidean length defects for every canonical short antipodal pair.

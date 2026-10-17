@@ -29,7 +29,7 @@ Let
 
 Then
 
-$$
+```math
 \boxed{
 Z_{in}
 \le
@@ -39,11 +39,11 @@ Z_{in}
 \frac{2}{\sqrt3}H.
 }
 \tag{OP.1}
-$$
+```
 
 Consequently, if `Z_def` denotes the contact-isolated points in bounded contact faces, C52 and OP.1 give
 
-$$
+```math
 \boxed{
  m+Z_{def}+Z_{in}
 \le
@@ -51,15 +51,15 @@ $$
 +\frac12\operatorname{per}(F)+1.
 }
 \tag{OP.2}
-$$
+```
 
 The second display is algebraically the ordinary Oler bound on all source points lying in `F`, but the first display is the useful result: it charges the **internal outer-face population itself** against exactly the missing area `H`, with a favorable perimeter correction. Hence the sole force-bulk population still not absorbed is
 
-$$
+```math
 \boxed{
 Z_{ext}:=|\{a\in A\setminus V(G):a\notin F\}|,
 }
-$$
+```
 
 i.e. contact-isolated source points outside the force hull.
 
@@ -71,9 +71,9 @@ This removes the shell-like `Theta(D^2)` population **inside** the force hull fr
 
 C26 and C42 give
 
-$$
+```math
 B_+=\operatorname{Vert}(F),
-$$
+```
 
 and every vertex of `B_+` lies on the outer contact-face walk. Every unloaded contact-core vertex has positive contact equilibrium and contact degree `3`, `4`, or `5`.
 
@@ -85,13 +85,13 @@ It also proves every bounded contact face is a simple strict convex unit-edge po
 
 C52 writes
 
-$$
+```math
 H=\operatorname{area}(F)-A_{bnd}
-$$
+```
 
 and proves
 
-$$
+```math
 \boxed{
  m+Z_{def}
 \le
@@ -99,7 +99,7 @@ $$
 +\frac B2+1.
 }
 \tag{1.1}
-$$
+```
 
 The open issue in C52 is exactly the isolated population in the outer contact face.
 
@@ -109,16 +109,16 @@ The open issue in C52 is exactly the isolated population in the outer contact fa
 
 Write the loaded hull vertices in cyclic order as
 
-$$
+```math
 b_1,\ldots,b_q,
 \qquad q=|B_+|.
-$$
+```
 
 Add every missing hull side `b_i b_{i+1}` to the straight-line plane graph `G`, retaining a hull side only once if it is already a unit contact edge. Call the resulting graph
 
-$$
+```math
 \widehat G:=G\cup\partial F.
-$$
+```
 
 No added edge crosses `G`, because every added segment lies on `\partial F` while `G\subseteq F`.
 
@@ -130,9 +130,9 @@ No added edge crosses `G`, because every added segment lies on `\partial F` whil
 
 Fix `x`. Let `S` be any component of `G-x`. By C51, `S` contains a loaded vertex
 
-$$
+```math
 b_S\in B_+.
-$$
+```
 
 Since `x\notin S`, necessarily `b_S\ne x`.
 
@@ -196,95 +196,95 @@ Let
 
 Because `G` and `\widehat G` are connected and have the same vertices,
 
-$$
+```math
 f_b(G)=e-v+1,
-$$
+```
 
 while
 
-$$
+```math
 f_b(\widehat G)=e+a-v+1.
-$$
+```
 
 All old bounded faces remain faces because the added hull edges lie in the old outer face. Therefore
 
-$$
+```math
 \boxed{p=a.}
 \tag{4.1}
-$$
+```
 
 Since `\widehat G` is 2-connected, its unbounded face has the simple hull cycle as boundary, with `q` edges. Hence
 
-$$
+```math
 \sum_{\widehat f\text{ bounded}}k_{\widehat f}
 =2(e+a)-q.
 \tag{4.2}
-$$
+```
 
 For the original graph,
 
-$$
+```math
 \sum_{f\text{ old bounded}}k_f=2e-B.
 \tag{4.3}
-$$
+```
 
 Subtracting gives the total edge-incidence count on new pockets:
 
-$$
+```math
 \boxed{
 \sum_{P}k_P=B+2a-q.
 }
 \tag{4.4}
-$$
+```
 
 Now let `L_add` be the total Euclidean length of the `a` added hull sides. Every old contact edge has length one. The total edge length of `\widehat G` is therefore
 
-$$
+```math
 e+L_{add}.
-$$
+```
 
 The unbounded face has Euclidean perimeter `per(F)`, so
 
-$$
+```math
 \sum_{\widehat f\text{ bounded}}L_{\widehat f}
 =2(e+L_{add})-\operatorname{per}(F).
 \tag{4.5}
-$$
+```
 
 The old bounded contact faces have total perimeter
 
-$$
+```math
 2e-B.
 \tag{4.6}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 \sum_PL_P
 =B+2L_{add}-\operatorname{per}(F).
 }
 \tag{4.7}
-$$
+```
 
 There are `q-a` hull sides already present as contact edges, each of length one. Therefore
 
-$$
+```math
 \boxed{
 \operatorname{per}(F)=(q-a)+L_{add}.
 }
 \tag{4.8}
-$$
+```
 
 Finally, the new pockets are exactly the portions of the old outer contact face lying in `F`; their interiors are pairwise disjoint and together have total area
 
-$$
+```math
 \boxed{
 \sum_P\operatorname{area}(P)=H.
 }
 \tag{4.9}
-$$
+```
 
 ---
 
@@ -294,27 +294,27 @@ Assign each contact-isolated source point lying in `F` and the old outer contact
 
 Let `z_P` be the assigned isolated population of pocket `P`. Lemma OP.2 makes `P` a convex container. Its `k_P` graph-boundary vertices together with its `z_P` isolated points are unit-separated. The canonical Oler inequality gives
 
-$$
+```math
 \frac{\sqrt3}{2}(k_P+z_P-1)
 \le
 \operatorname{area}(P)
 +\frac{\sqrt3}{4}L_P.
 \tag{5.1}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 z_P
 \le
 \frac{2}{\sqrt3}\operatorname{area}(P)
 +\frac12L_P+1-k_P.
 \tag{5.2}
-$$
+```
 
 Sum over all new pockets. Using (4.1), (4.4), (4.7), and (4.9),
 
-$$
+```math
 \begin{aligned}
 Z_{in}
 &\le
@@ -329,17 +329,17 @@ Z_{in}
 -a+q.
 \end{aligned}
 \tag{5.3}
-$$
+```
 
 Using (4.8),
 
-$$
+```math
 L_{add}-a+q=\operatorname{per}(F),
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{
 Z_{in}
 \le
@@ -347,7 +347,7 @@ Z_{in}
 +\frac{\operatorname{per}(F)-B}{2}.
 }
 \tag{5.4}
-$$
+```
 
 This is the first inequality in OP.1.
 
@@ -363,9 +363,9 @@ Its image lies in `F` and contains every extreme vertex of `F`, because C42 puts
 
 For any closed polygonal walk `gamma` of length `L`,
 
-$$
+```math
 \operatorname{per}(\operatorname{conv}\gamma)\le L.
-$$
+```
 
 #### Proof
 
@@ -373,42 +373,42 @@ For a direction `u_theta=(cos theta,sin theta)`, let `w(theta)` be the width of 
 
 For one segment of length `ell` making angle `phi`, the total variation of the `u_theta` projection contributed by that segment is
 
-$$
+```math
 ell|\cos(\phi-\theta)|.
-$$
+```
 
 Integrating over `theta in [0,pi]` gives `2ell`. Summing segments,
 
-$$
+```math
 \int_0^\pi 2w(\theta)\,d\theta
 \le 2L.
-$$
+```
 
 Cauchy's perimeter formula for a convex polygon is
 
-$$
+```math
 \operatorname{per}(K)=\int_0^\pi w_K(\theta)\,d\theta.
-$$
+```
 
 Hence `per(conv gamma)<=L`. `square`
 
 Apply the lemma to the outer contact walk. Since its convex hull is `F`,
 
-$$
+```math
 \boxed{
 \operatorname{per}(F)\le B.
 }
 \tag{6.1}
-$$
+```
 
 Insert this into (5.4):
 
-$$
+```math
 \boxed{
 Z_{in}\le\frac{2}{\sqrt3}H.
 }
 \tag{6.2}
-$$
+```
 
 This proves OP.1.
 
@@ -418,16 +418,16 @@ This proves OP.1.
 
 C52 gives (1.1):
 
-$$
+```math
  m+Z_{def}
 \le
 \frac{2}{\sqrt3}(\operatorname{area}(F)-H)
 +\frac B2+1.
-$$
+```
 
 Add the sharper form (5.4), not merely (6.2):
 
-$$
+```math
 \begin{aligned}
  m+Z_{def}+Z_{in}
 &\le
@@ -442,7 +442,7 @@ $$
 }
 \end{aligned}
 \tag{7.1}
-$$
+```
 
 This is OP.2.
 
@@ -454,15 +454,15 @@ The cancellation is exact: C52's outer-contact-boundary term `+B/2` is paid by t
 
 Split C52's outer-face invisible population as
 
-$$
+```math
 Z_{out}=Z_{in}+Z_{ext},
-$$
+```
 
 where
 
-$$
+```math
 Z_{ext}:=|A\setminus F|
-$$
+```
 
 because every source point outside `F` is necessarily absent from the contact core.
 

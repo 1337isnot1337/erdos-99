@@ -21,9 +21,9 @@
 Section 160 found a much better final translation of the Section 157 five rigid blocks:
 in paper normalization its middle lift is
 
-$$
+```math
 v_{\rm toe}(d)=\frac{\sqrt3}{9}d^4-\frac29d^5+O(d^6),
-$$
+```
 
 eight times the old leading coefficient. Section 160 deliberately made no optimality
 claim among other five-block translations.
@@ -34,9 +34,9 @@ translations converging to the identity, then every positive middle lift is `O(d
 Consequently the Section 160 toe-out branch has the optimal small-gap **exponent** in
 that entire local rigid-translation model:
 
-$$
+```math
 \boxed{V_5^{\rm loc}(d)=\Theta(d^4).}
-$$
+```
 
 The coefficient is not proved optimal. The theorem does not solve exterior
 compatibility or the global Schur endpoint.
@@ -47,9 +47,9 @@ compatibility or the global Schur endpoint.
 
 The global Target A closure remains
 
-$$
+```math
 \dim\ker S\ge\Delta_\Lambda-d_{\rm int},
-$$
+```
 
 or an actual `N`-point unit-separated competitor of diameter strictly below `D(N)`.
 
@@ -79,11 +79,11 @@ blocks is fixed.
 
 Translate block `B_i` by
 
-$$
+```math
 \tau_i=(x_i,y_i),
 \qquad
 E=\max_i\|\tau_i\|.
-$$
+```
 
 There is no symmetry assumption and no prescribed path. A final endpoint is feasible
 when all center distances are at least two. We consider `y_3>=0`, since `y_3` is the
@@ -101,23 +101,23 @@ of the complete Section 157/160 nearest-neighbor enumeration.
 
 Set `tau_0=tau_6=0`. Each horizontal chain edge has original vector `(2,0)`, hence
 
-$$
+```math
 |(2,0)+\tau_{i+1}-\tau_i|^2\ge4.
-$$
+```
 
 Expanding,
 
-$$
+```math
 x_{i+1}-x_i
 \ge-\frac14\|\tau_{i+1}-\tau_i\|^2.
-$$
+```
 
 Summing from the left fixed endpoint and separately from the right fixed endpoint gives
 
-$$
+```math
 \boxed{|x_i|\le5E^2.}
 \tag{3.1}
-$$
+```
 
 Thus arbitrary local horizontal motion is automatically second order.
 
@@ -128,30 +128,30 @@ Thus arbitrary local horizontal motion is automatically second order.
 For `i=1,2,4,5`, add the feasibility inequalities for the two fixed-upper contacts
 `(\pm1,\sqrt3)`. The horizontal terms cancel:
 
-$$
+```math
 2\|\tau_i\|^2-4\sqrt3y_i\ge0,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{y_i\le E^2.}
 \tag{4.1}
-$$
+```
 
 For the outer blocks, the two lower contacts have relative vectors
 `(\pm1,-\sqrt3-d)-\tau_i`. Adding their inequalities gives
 
-$$
+```math
 2\|\tau_i\|^2+4(\sqrt3+d)y_i+4\sqrt3d+2d^2\ge0.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{|y_1|,|y_5|\le d+E^2.}
 \tag{4.2}
-$$
+```
 
 ---
 
@@ -159,38 +159,38 @@ $$
 
 For the left inner block, use a fixed-upper contact with vector `(-1,\sqrt3)`:
 
-$$
+```math
 \|\tau_2\|^2+2x_2-2\sqrt3y_2\ge0.
 \tag{5.1}
-$$
+```
 
 The left middle interface contains a `B_3`-to-`B_2` contact with the same base vector:
 
-$$
+```math
 \|\tau_2-\tau_3\|^2
 -2(x_2-x_3)+2\sqrt3(y_2-y_3)\ge0.
 \tag{5.2}
-$$
+```
 
 Adding cancels all linear dependence on `tau_2`:
 
-$$
+```math
 \|\tau_2\|^2+\|\tau_2-\tau_3\|^2
 +2x_3-2\sqrt3y_3\ge0.
 \tag{5.3}
-$$
+```
 
 The reflected right pair gives
 
-$$
+```math
 \|\tau_4\|^2+\|\tau_4-\tau_3\|^2
 -2x_3-2\sqrt3y_3\ge0.
 \tag{5.4}
-$$
+```
 
 Adding these gives the central new identity-free inequality
 
-$$
+```math
 \boxed{
 4\sqrt3y_3
 \le
@@ -198,7 +198,7 @@ $$
 +\|\tau_4\|^2+\|\tau_4-\tau_3\|^2.
 }
 \tag{5.5}
-$$
+```
 
 In particular `y_3<2E^2`.
 
@@ -212,85 +212,85 @@ simultaneously and asymmetrically.
 
 Rearrange (5.2):
 
-$$
+```math
 y_2
 \ge y_3+\frac{x_2-x_3}{\sqrt3}
 -\frac{\|\tau_2-\tau_3\|^2}{2\sqrt3}.
-$$
+```
 
 Using `y_3>=0`, (3.1), and `||tau_2-tau_3||<=2E` gives
 
-$$
+```math
 y_2\ge-7E^2.
-$$
+```
 
 The reflected inequality gives the same result for `y_4`. With (4.1),
 
-$$
+```math
 |y_2|,|y_4|\le7E^2.
-$$
+```
 
 Together with (3.1) and `y_3<2E^2`, this gives the coarse bounds
 
-$$
+```math
 \|\tau_2\|,\|\tau_4\|\le12E^2,
 \qquad
 \|\tau_3\|\le7E^2.
 \tag{6.1}
-$$
+```
 
 For the outer blocks, (3.1) and (4.2) give
 
-$$
+```math
 \|\tau_1\|,\|\tau_5\|\le d+6E^2.
 \tag{6.2}
-$$
+```
 
 Therefore
 
-$$
+```math
 E\le d+12E^2.
 \tag{6.3}
-$$
+```
 
 In the fixed local neighborhood `E<=1/24`, equation (6.3) yields
 
-$$
+```math
 \boxed{E\le2d.}
 \tag{6.4}
-$$
+```
 
 Consequently
 
-$$
+```math
 \|\tau_2\|,\|\tau_4\|\le48d^2,
 \qquad
 \|\tau_3\|\le28d^2,
-$$
+```
 
 and
 
-$$
+```math
 \|\tau_2-\tau_3\|,
 \|\tau_4-\tau_3\|
 \le76d^2.
-$$
+```
 
 Substitute into (5.5):
 
-$$
+```math
 4\sqrt3y_3
 \le2(48^2+76^2)d^4=16160d^4.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 0\le y_3\le\frac{4040}{\sqrt3}d^4.
 }
 \tag{6.5}
-$$
+```
 
 This proves the universal local upper bound.
 
@@ -300,25 +300,25 @@ This proves the universal local upper bound.
 
 Define
 
-$$
+```math
 V_5^{\rm loc}(d)
 =
 \sup\{y_3:\text{feasible rigid five-block endpoint with }E\le1/24\}.
-$$
+```
 
 The Section 160 toe-out branch is feasible, converges to the identity, and has
 
-$$
+```math
 y_3=\frac{\sqrt3}{9}d^4-\frac29d^5+O(d^6).
-$$
+```
 
 Therefore it belongs to the defining class for all sufficiently small `d` and gives
 `V_5^{loc}(d)=Omega(d^4)`. Equation (6.5) gives the reverse bound. Hence
 
-$$
+```math
 \boxed{V_5^{\rm loc}(d)=\Theta(d^4).}
 \tag{7.1}
-$$
+```
 
 Equivalently, every feasible family of same-five-block rigid translations satisfying
 `E(d)->0` and `y_3(d)>=0` has `y_3(d)=O(d^4)`.
@@ -375,15 +375,15 @@ For the finite-gap route, do not spend further effort seeking a lower-order gain
 rescheduling or asymmetrically translating these same five rigid blocks near the
 identity. The next exact obligation is either
 
-$$
+```math
 \boxed{\text{an exterior-compatible embedding of the Section 160 quartic witness}}
-$$
+```
 
 or
 
-$$
+```math
 \boxed{\text{a genuinely different finite architecture/motion with gain }\omega(d^4).}
-$$
+```
 
 Either route must ultimately produce the exact Schur inequality or a strict sub-`D(N)`
 competitor.

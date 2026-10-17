@@ -16,9 +16,9 @@
 
 The post-ZF component identity uses, for every connected unloaded triangle-free penny component,
 
-$$
+```math
 r(G):=2|V(G)|-\operatorname{diam}(G)-2-|E(G)|\ge0
-$$
+```
 
 as the exact Eppstein edge slack.
 
@@ -32,10 +32,10 @@ Therefore the post-ZF near-equality branch cannot be closed by graph-diameter ed
 
 Eppstein proves that every connected triangle-free penny graph `G` with `n` vertices, graph diameter `D_G`, and `e` edges satisfies
 
-$$
+```math
 e\le2n-D_G-2.
 \tag{1.1}
-$$
+```
 
 If `G` has a cycle, his Lemma 2 supplies at least four non-articulation vertices of degree at most two. Choose a graph-diameter pair; at least one such vertex `v` is distinct from the two endpoints. Then
 
@@ -47,27 +47,27 @@ The theorem follows by induction.
 
 Define
 
-$$
+```math
 \boxed{r(G)=2|V(G)|-D_G-2-|E(G)|.}
 \tag{1.2}
-$$
+```
 
 For one allowed deletion `G' = G-v`, put
 
-$$
+```math
 d=\deg_G(v),
 \qquad
 \Delta=D_{G'}-D_G\ge0.
 \tag{1.3}
-$$
+```
 
 A direct calculation gives the exact recurrence
 
-$$
+```math
 \boxed{
 r(G)=r(G')+(2-d)+\Delta.}
 \tag{ZEP1}
-$$
+```
 
 Both added terms are nonnegative integers.
 
@@ -77,33 +77,33 @@ Both added terms are nonnegative integers.
 
 Repeat Eppstein's deletion while the current graph contains a cycle. Let
 
-$$
+```math
 G=G_0\supset G_1\supset\cdots\supset G_m=T
 \tag{2.1}
-$$
+```
 
 where `T` is the final tree. At step `i`, delete `v_i`, put
 
-$$
+```math
 d_i=\deg_{G_i}(v_i)\le2,
 \qquad
 \Delta_i=D_{G_{i+1}}-D_{G_i}\ge0.
 \tag{2.2}
-$$
+```
 
 For the final tree,
 
-$$
+```math
 |E(T)|=|V(T)|-1,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 r(T)=|V(T)|-D_T-1.}
 \tag{2.3}
-$$
+```
 
 This is exactly the number of tree vertices in excess of a diameter-realizing path.
 
@@ -111,7 +111,7 @@ Telescoping ZEP1 gives:
 
 ### Theorem ZEP.1 — exact peeling slack decomposition
 
-$$
+```math
 \boxed{
  r(G)
  =
@@ -120,7 +120,7 @@ $$
  +\sum_{i=0}^{m-1}\Delta_i.
 }
 \tag{ZEP2}
-$$
+```
 
 Every term on the right is a nonnegative integer.
 
@@ -134,33 +134,33 @@ Put `r=r(G)` and `D=D_G`.
 
 From ZEP2:
 
-$$
+```math
 \boxed{D_T-D=\sum_i\Delta_i\le r.}
 \tag{ZEP3}
-$$
+```
 
 Also
 
-$$
+```math
 \boxed{|V(T)|-D_T-1\le r.}
 \tag{ZEP4}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{|V(T)|\le D+2r+1.}
 \tag{ZEP5}
-$$
+```
 
 The number of deletion steps with `d_i<=1` is at most `r`, and the number of steps with `Delta_i>0` is at most `r`. Therefore all but at most `2r` non-tree deletion steps satisfy simultaneously
 
-$$
+```math
 \boxed{d_i=2,
 \qquad
 D_{G_{i+1}}=D_{G_i}.}
 \tag{ZEP6}
-$$
+```
 
 In reverse, a graph with `r=o(D)` admits a construction from a tree on at most `D+o(D)` vertices in which all but `o(D)` exceptional additions are degree-two additions that preserve the current graph diameter.
 
@@ -172,19 +172,19 @@ This is the strongest direct stability statement supplied by the induction itsel
 
 If
 
-$$
+```math
 r(G)=0,
-$$
+```
 
 then ZEP2 forces
 
-$$
+```math
 |V(T)|=D_T+1,
 \qquad
  d_i=2,
 \qquad
 \Delta_i=0
-$$
+```
 
 at every deletion step. Thus the final tree is a diameter-realizing path and every reverse addition is a degree-two, diameter-preserving ear in the evolving abstract graph.
 
@@ -194,34 +194,34 @@ It is tempting to infer that `G` must therefore be path-like. That inference is 
 
 Let `Q_L` be the `L x L` unit square grid graph, realized by the integer lattice points
 
-$$
+```math
 \{0,\ldots,L-1\}^2.
-$$
+```
 
 It is a triangle-free penny graph. It has
 
-$$
+```math
 n=L^2,
 \qquad
  e=2L(L-1),
 \qquad
  D_G=2(L-1).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 e=2n-D_G-2,}
 \tag{ZEP7}
-$$
+```
 
 so
 
-$$
+```math
 \boxed{r(Q_L)=0}
 \tag{ZEP8}
-$$
+```
 
 for every `L>=2`.
 
@@ -235,17 +235,17 @@ Eppstein's paper explicitly notes that the degree-two-vertex bound underlying th
 
 For the ZHT/ZHL harmonic cell `I_*`, current main uses
 
-$$
+```math
 r_*=2|I_*|-\delta_*-2-e_*
 \tag{5.1}
-$$
+```
 
 inside the exact identity
 
-$$
+```math
 t_*-\delta_*-3=s_*+r_*.
 \tag{5.2}
-$$
+```
 
 If `s_*+r_*=o(D)`, then ZEP applies to `C[I_*]` and gives an Eppstein peeling with only `o(D)` defective steps in the precise sense of ZEP6.
 
@@ -266,10 +266,10 @@ The unresolved near-equality theorem must combine these mechanical facts with th
 
 For the captured cell, (5.2) gives exactly
 
-$$
+```math
 \boxed{s_*+r_*=t_*-\delta_*-3.}
 \tag{6.1}
-$$
+```
 
 Hence one may split:
 

@@ -78,9 +78,9 @@ On whichever side of `mu` has angular width `g`, each sine magnitude is at most
 `sin g`, and at most `k-1` terms occur. Hence `2T<=2(k-1)sin g`. For a nonzero
 relative displacement `lambda w` and `D>=k-1`,
 
-$$
+```math
 |\lambda|\le2T\le2(k-1)\sin g\le2D\sin g<2|r\cdot w|.
-$$
+```
 
 The strict final inequality handles equality at `D=k-1`. Therefore
 `lambda(2 r dot w+lambda)` has the sign of `lambda(r dot w)`.
@@ -91,10 +91,10 @@ The verifier checks examples; the general statement is proved by this inequality
 
 The signed cut identity gives the exact finite work identity
 
-$$
+```math
 \sum_h\beta_h r_h\cdot\Delta_h
 =-2\sum_{i\in I}A_i a_i^2<0.
-$$
+```
 
 Positive contact mass on every selected cut is required for strictness. If no old
 diameter lengthens and every previously strict pair remains in `(1,D)`, the
@@ -160,16 +160,16 @@ Then:
 6. the selected physical graph `F` is a caterpillar forest. If it has `c(F)`
    nontrivial components and `n_j` selected vertices in layer `j`, then
 
-$$
+```math
 |V(F)|=2m+c(F),\qquad n_0\ge1,\qquad n_j\ge2\ (1\le j\le m),
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{(n_0-1)+\sum_{j=1}^m(n_j-2)=c(F)-1.}
 \tag{A}
-$$
+```
 
 Under the additional four-host complete transverse-shore hypothesis, each
 internal A-layer `1,...,m-1` has selected endpoints on both extreme B rails.
@@ -222,9 +222,9 @@ To count edges, list distinct left endpoints `a_1<...<a_s`, and let `B_i` be
 their right-neighbor sets with minimum `t_i` and maximum `M_i`. Antitonicity
 gives `t_i>=M_{i+1}`. Therefore
 
-$$
+```math
 |E|\le\sum_i(M_i-t_i+1)\le M_1-t_s+s\le m,
-$$
+```
 
 because `M_1<=m` and `t_s>=a_s+1>=s`. Connectivity gives at least `m` edges,
 so equality holds throughout and the simple graph is a tree. The two common
@@ -262,10 +262,10 @@ Retain the packet's `D=100m`, star points `p_j,n_j`, directions `u_i`, and
 positive diameter coefficients `gamma_j^+,gamma_j^-`, for every `m>=2`.
 Write `S_a=sum_{i<=a}u_i`, `S_0=0`, and set
 
-$$
+```math
 b=(8/17,15/17),\qquad q_{a,t}=S_a+t b\quad(0\le a,t\le m).
 \tag{B}
-$$
+```
 
 Add this entire actual contact grid to the source, identifying `q_{0,0}=v`.
 Give `q_{a,t}` A-layer `a`, and retain A-layer `j` for `p_j,n_j`. Give grid
@@ -285,9 +285,9 @@ Each fan point is at distance at least `D-2m>1` from the grid. For a fan unit
 ray `r`, every row increment has `r dot u_i>1/4` and `r dot b>1/4`. For
 `q=q_{a,t}!=0`, write `l=a+t<=2m`; then
 
-$$
+```math
 |Dr-q|^2-D^2\le-\tfrac12Dl+l^2<0.
-$$
+```
 
 Grid-grid distances are below `D`, and the old fan-fan distances retain the
 packet's bounds. Thus the actual diameters are still exactly the `2m` star
@@ -322,9 +322,9 @@ The complete transverse grid therefore does not by itself remove the obstruction
 
 For every B-cut the positive diameter resultant is the same vector
 
-$$
+```math
 R_B=\sum_j\gamma_j^+p_j.
-$$
+```
 
 It is in the cone of the upper star rays, of aperture at most `2 atan(1/10)`
 above the positive horizontal axis. The actual B-contact direction `b` lies

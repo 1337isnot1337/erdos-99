@@ -42,9 +42,9 @@ restriction is irrelevant here.
 For a bounded face with `j>=3` P--O terminal trains, the selected side vectors are
 `u_1,...,u_j` and the exact closure map is
 
-$$
+```math
 \Phi(\theta)=\sum_{i=1}^jR_{\theta_i}u_i+c.
-$$
+```
 
 Canonical bounded-face geometry makes the face strictly convex. A line direction can
 occur on at most two sides of a strictly convex polygon: oriented edge directions are
@@ -54,9 +54,9 @@ vectors.
 
 Therefore
 
-$$
+```math
 D\Phi(0)=[Ju_1\ \cdots\ Ju_j]
-$$
+```
 
 has rank two. The ordinary implicit-function theorem gives a smooth local zero
 manifold of dimension `j-2`. There is no folded rank-one case under the candidate's
@@ -88,15 +88,15 @@ variables.
 Two varied trains may cross in a strict rhombus. This is harmless. If their current
 unit direction vectors are `u` and `v`, the cyclic rhombus edge-vector sum is
 
-$$
+```math
 u+v-u-v=0.
-$$
+```
 
 After arbitrary independent train-angle changes it remains
 
-$$
+```math
 R_\alpha u+R_\beta v-R_\alpha u-R_\beta v=0.
-$$
+```
 
 Thus every strict-rhombus closure equation vanishes identically on the whole product.
 No laminarity or pairwise noncrossing assumption is being smuggled into the finite
@@ -132,10 +132,10 @@ fixed. No uniform-in-`D` neighborhood is required.
 The product varies only O--O and P--O train angles; every B--B train angle is fixed.
 The live terminal transport surplus gives
 
-$$
+```math
 E_{BB}-L_O
 \ge(0.3237862869\ldots-o(1))D,
-$$
+```
 
 so at least one B--B train exists for all sufficiently large members of the sequence.
 A nonzero global infinitesimal rotation gives the same nonzero angular rate to every
@@ -145,9 +145,9 @@ is fixed at zero.
 Translations have already been removed by fixing one core vertex. Hence the full
 product dimension
 
-$$
+```math
 M_D=L_O+\sum_F(o(F)-2)_+
-$$
+```
 
 survives in the non-Euclidean quotient. The candidate does not need to subtract one.
 
@@ -159,24 +159,24 @@ survives in the non-Euclidean quotient. The candidate does not need to subtract 
 
 The exact endpoint multigraph identities are
 
-$$
+```math
 \sum_Fo(F)=E_{BO},
 \qquad E_{BO}+2L_O=b.
-$$
+```
 
 For every integer `j>=0`, `(j-2)_+>=j-2`. Therefore
 
-$$
+```math
 M_D
 =L_O+\sum_F(o(F)-2)_+
 \ge b-L_O-2f.
-$$
+```
 
 Also `M_D>=L_O`. Taking the larger of the two bounds gives
 
-$$
+```math
 M_D\ge{b-2f\over2}.
-$$
+```
 
 This uses outer **occurrences**, so an O--O loop contributes two to `b`, exactly as it
 should, and no boundary-vertex identification is made.
@@ -189,38 +189,38 @@ should, and no boundary-vertex identification is made.
 
 Terminal correlated stability gives
 
-$$
+```math
 a+2(r+\delta)\le5\varepsilon,
 \qquad a,r,\delta\ge0,
-$$
+```
 
-$$
+```math
 {f\over D}={M_*+2a-\delta-r\over5}+o(1),
 \qquad
 {b\over D}=\pi+\delta+o(1).
-$$
+```
 
 Thus
 
-$$
+```math
 {b-2f\over2D}
 ={\pi\over2}-{M_*\over5}
 +{7\over10}\delta+{1\over5}r-{2\over5}a+o(1).
-$$
+```
 
 For fixed `r,delta`, the expression decreases with `a`, so the worst point saturates
 the stability budget. Substituting
 
-$$
+```math
 a=5\varepsilon-2r-2\delta
-$$
+```
 
 gives
 
-$$
+```math
 {\pi\over2}-{M_*\over5}-2\varepsilon
 +{3\over2}\delta+r.
-$$
+```
 
 The minimum is therefore at `r=delta=0`, proving the candidate live floor. In the
 small-complement branch, `delta>0.01725` and `a+2r<=0.001`; substituting the maximal

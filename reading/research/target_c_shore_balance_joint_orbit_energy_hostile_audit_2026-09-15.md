@@ -40,45 +40,45 @@ Let `X,Y` be the two Mantel shores in the dominant orbit after the standard
 maximum-degree stability step.  With orbit mass `M` and deficit `d_0`, audited §168
 gives
 
-$$
+```math
 |X|+|Y|=(M+o(1))D,
-$$
+```
 
 and
 
-$$
+```math
 \min(|X|,|Y|)/D\ge M/2-\sqrt{d_0}-o(1).
-$$
+```
 
 For the three atom windows let `(x_i,y_i)` be their normalized shore populations.
 Same-window cross-shore pairs cannot be strict-rhombus crossings, so
 
-$$
+```math
 \sum_i x_i y_i\le2d_0+o(1).
-$$
+```
 
 The total minority population discarded when each window is assigned to its majority
 shore is
 
-$$
+```math
 L=\sum_i\min(x_i,y_i)
 \le\sum_i\sqrt{x_i y_i}
 \le\sqrt{3\sum_i x_i y_i}
 \le\sqrt{6d_0}+o(1).
-$$
+```
 
 This is one global discard.  If `P,Q` are the retained shore masses, then
 
-$$
+```math
 P+Q\ge M-\sqrt{6d_0}-o(1),
-$$
+```
 
 while each retained shore loses at most the total discard, so
 
-$$
+```math
 \min(P,Q)
 \ge M/2-\sqrt{d_0}-\sqrt{6d_0}-o(1).
-$$
+```
 
 These two inequalities are compatible; they do not count the discarded mass twice.
 The first uses the exact total retained mass, and the second uses the worst possible
@@ -99,16 +99,16 @@ shore contains exactly one family and the other contains at most two.  If their 
 retained masses are `P,Q`, selecting the unique family on the one-family shore and the
 larger family on the other gives at least
 
-$$
+```math
 \min\{P+Q/2,Q+P/2\}
 ={P+Q+\min(P,Q)\over2}.
-$$
+```
 
 Substituting the two bounds above yields
 
-$$
+```math
 {3M\over4}-{\sqrt{d_0}\over2}-\sqrt{6d_0}-o(1).
-$$
+```
 
 This is the candidate's `G_0` inequality.  It is strictly stronger than replacing both
 shore masses independently by the old common lower bound.
@@ -129,9 +129,9 @@ that mistake.
 
 It retains the old individual shore quantity
 
-$$
+```math
 S_0=M_0/2-\sqrt{d_0}-\sqrt{6d_0}
-$$
+```
 
 and therefore the same individual family floors used by AG42: one selected family has
 mass at least `S_0`, and the larger family on the other shore has mass at least
@@ -139,10 +139,10 @@ mass at least `S_0`, and the larger family on the other shore has mass at least
 
 At `eta=0.00059`, the committed/Pyroam certificate gives
 
-$$
+```math
 S_0/2-2p_0-3p_0
 =0.2674351033\ldots>0,
-$$
+```
 
 where `p_0=sqrt(2d_0)`.  Thus the triple-common-neighbor threshold has very large
 slack.  The actual §163 `K_{2,2}` consistency and transitivity proof is unchanged.
@@ -167,19 +167,19 @@ The inherited proof still pays:
 
 Hence the path coefficient is exactly
 
-$$
+```math
 E_{bal}
 ={3M_0\over4}-{\sqrt{d_0}\over2}-\sqrt{6d_0}-6p_0.
-$$
+```
 
 No pruning payment has disappeared under a new name.
 
 At `eta=0.00059`, independent Pyroam evaluation gives
 
-$$
+```math
 {\sqrt3\over2}E_{bal}
 =1.0018837957444775\ldots>1.
-$$
+```
 
 The revised bookkeeping root lies between `0.00059946` and `0.00059947`, so the round
 constant `0.00059` is conservative.
@@ -193,38 +193,38 @@ constant `0.00059` is conservative.
 Let the exact orbit masses be `M_r`, with total atomic mass `A`, largest mass `M`, and
 crossing masses `E_r`.  The audited inequalities are
 
-$$
+```math
 4\Delta_2\le\sum_rM_r^2,
 \qquad
 \sum_rM_r=A.
-$$
+```
 
 For an orbit attaining `M`, the remaining masses sum to `A-M`, so
 
-$$
+```math
 \sum_{r\ne r_*}M_r^2\le(A-M)^2.
-$$
+```
 
 Therefore
 
-$$
+```math
 4\Delta_2\le M^2+(A-M)^2.
-$$
+```
 
 This quadratic inequality alone permits a small-root and a large-root branch.  The
 candidate correctly uses the pre-existing generic estimate
 
-$$
+```math
 M\ge4\Delta_2/A.
-$$
+```
 
 In the low-`t` domain under consideration `A^2<8\Delta_2`, so this generic estimate is
 strictly larger than `A/2`.  Therefore `M>A/2` and the small quadratic branch is
 excluded.  The valid conclusion is
 
-$$
+```math
 M\ge{A+\sqrt{8\Delta_2-A^2}\over2}.
-$$
+```
 
 A randomized Pyroam regression generated 500,000 orbit-mass vectors; among 37,903
 samples satisfying the crossing-capacity and generic-majority hypotheses, none
@@ -238,22 +238,22 @@ violated the derived large-root bound.
 
 Define
 
-$$
+```math
 m(A)={A+\sqrt{8\Delta_2-A^2}\over2}.
-$$
+```
 
 For `A>=2sqrt(Delta_2)`,
 
-$$
+```math
 m'(A)
 ={1\over2}\left(1-{A\over\sqrt{8\Delta_2-A^2}}\right)\le0.
-$$
+```
 
 The audited exposed-hull inequality gives `A<=C`, so
 
-$$
+```math
 m(A)\ge m(C).
-$$
+```
 
 Thus replacing the unknown actual atomic mass by `C` weakens the dominant-orbit lower
 bound and is safe.
@@ -266,31 +266,31 @@ bound and is safe.
 
 After inserting `m(C)`, the dominant-orbit outer-occurrence lower bound is
 
-$$
+```math
 K\ge
 \pi+\delta-t-\kappa-C+
 \sqrt{8\Delta_2-C^2}.
-$$
+```
 
 The `C`-dependent part
 
-$$
+```math
 g(C)=-C+\sqrt{8\Delta_2-C^2}
-$$
+```
 
 has derivative
 
-$$
+```math
 g'(C)=-1-{C\over\sqrt{8\Delta_2-C^2}}<0.
-$$
+```
 
 Since `C<=U`, one has `g(C)>=g(U)`.  Therefore
 
-$$
+```math
 K\ge
 \pi+\delta-t-\kappa-U+
 \sqrt{8\Delta_2-U^2}
-$$
+```
 
 with the correct inequality direction.
 
@@ -307,11 +307,11 @@ The candidate does not recompute or modify the local joint route relaxation.  It
 feeds a stronger lower bound for dominant-orbit outer occurrence mass into the merged
 theorem
 
-$$
+```math
 \delta\ge\Phi(K),
 \qquad
 \Phi(z)=z-6\arcsin(\tanh(z/6)).
-$$
+```
 
 The merged proof already handles occurrence multiplicity, the simultaneous
 `d_i>=n_i g_i` and `d_i>=n_i-s_i` constraints, the perimeter-measure limit, and the
@@ -329,61 +329,61 @@ formula remains in scope.
 
 Write
 
-$$
+```math
 U={9t\over2}-2\pi-2\delta-\kappa/2,
 \qquad
 S(U)=\sqrt{8\Delta_2-U^2},
-$$
+```
 
 and
 
-$$
+```math
 K_*=
 \pi+\delta-t-\kappa-U+S(U).
-$$
+```
 
 Because `U>=C_0>2sqrt(Delta_2)`, one has `U>S(U)`.  Direct differentiation gives
 
-$$
+```math
 {\partial K_*\over\partial\kappa}
 ={1\over2}\left({U\over S(U)}-1\right)>0.
-$$
+```
 
 Thus `Phi(K_*)-delta` is minimized at `kappa=0`.
 
 Also
 
-$$
+```math
 {\partial K_*\over\partial\delta}
 =3+{2U\over S(U)}.
-$$
+```
 
 Over the excluded interval the independent Decimal/Pyroam certificate gives the
 conservative bounds
 
-$$
+```math
 {\partial K_*\over\partial\delta}<5.05,
 \qquad
 K_*<1.33,
 \qquad
 \Phi'(K_*)<0.025.
-$$
+```
 
 Hence
 
-$$
+```math
 {\partial\over\partial\delta}
 [\Phi(K_*)-\delta]
 <5.05(0.025)-1<0.
-$$
+```
 
 After `kappa=0`, the weakest point is therefore maximal feasible detour
 
-$$
+```math
 \delta=R(t)/2,
 \qquad
 U=C_0.
-$$
+```
 
 The earlier draft of this branch temporarily used an overly tight `4.03` derivative
 envelope for the weaker sequential cost.  Its verifier caught that mistake before PR
@@ -398,51 +398,51 @@ envelope above.
 
 At the weakest point,
 
-$$
+```math
 K_0(t)
 =
 \pi+{R(t)\over2}-t-C_0+
 \sqrt{8\Delta_2-C_0^2},
-$$
+```
 
 and
 
-$$
+```math
 H_0(t)=\Phi(K_0(t))-R(t)/2.
-$$
+```
 
 Since `K_0'(t)=5/4` and `Phi'<1`,
 
-$$
+```math
 H_0'(t)
 ={5\over4}\Phi'(K_0(t))-{9\over4}<0.
-$$
+```
 
 The committed Decimal certificate and an independent Pyroam execution give
 
-$$
+```math
 H_0(1.82439)
 =0.0000036173637263927671\ldots>0,
-$$
+```
 
 and
 
-$$
+```math
 H_0(1.82439162)>0,
 \qquad
 H_0(1.82439163)<0.
-$$
+```
 
 The same execution reports
 
-$$
+```math
 {\partial K_*\over\partial\delta}_{max}
 =5.0469011333\ldots,
-$$
+```
 
-$$
+```math
 \Phi'(1.33)=0.02407491888\ldots,
-$$
+```
 
 whose product is only `0.1215037...`.
 
@@ -454,20 +454,20 @@ whose product is only `0.1215037...`.
 
 The package proves, at proof-only full-core Type-II scope,
 
-$$
+```math
 \boxed{
 \liminf {T-q/2\over D}
 \ge2\sqrt{\Delta_2}+0.00059
 }
-$$
+```
 
 and, after the merged joint route theorem,
 
-$$
+```math
 \boxed{
 \liminf {q-k\over D}\ge1.82439.
 }
-$$
+```
 
 It does **not** close C-II.  It does not address the macroscopic inactive-container
 branch, produce a source-preserving diameter-decreasing competitor, or prove a uniform

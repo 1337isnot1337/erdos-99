@@ -23,7 +23,7 @@ The exact isolate-host theorem proves that bounded contact faces of degree five 
 
 The current exact pentagon-sea certificate gives the safe staircase
 
-$$
+```math
 \begin{array}{c|c|c|c|c}
 T & f/D\text{ lower} & Q/D\text{ upper} & P_5/D\text{ lower} & P_5/f\text{ lower}\\ \hline
 1.850  & 0.493 & 0.558408 & 0.428 & 0.86\\
@@ -32,14 +32,14 @@ T & f/D\text{ lower} & Q/D\text{ upper} & P_5/D\text{ lower} & P_5/f\text{ lower
 1.8623 & 0.490 & 0.583008 & 0.398 & 0.81.
 \end{array}
 \tag{MIC.1}
-$$
+```
 
 The same certificate proves at `T=1.8623` that more than
 
-$$
+```math
 \boxed{0.99D-o(D)}
 \tag{MIC.2}
-$$
+```
 
 distinct all-stopped trains touch pentagonal faces.
 
@@ -47,16 +47,16 @@ distinct all-stopped trains touch pentagonal faces.
 
 Let `P` be one bounded pentagonal contact face.  The degree-`>=7` isolate-host theorem gives
 
-$$
+```math
 z_P=0.
-$$
+```
 
 Canonical face assignment says every source point in `int P` would be one of those assigned contact-isolates.  Therefore
 
-$$
+```math
 \boxed{A\cap\operatorname{int}P=\varnothing.}
 \tag{MIC.3}
-$$
+```
 
 Thus `P` is not merely an exceptional contact chamber with no counted rattler mass; its open interior contains **no source point at all**.
 
@@ -66,50 +66,50 @@ Consequently every pentagon counted in (MIC.1), including every pentagon touched
 
 Let
 
-$$
+```math
 f_{iso}:=\#\{P:z_P>0\}.
-$$
+```
 
 The exact local theorem gives
 
-$$
+```math
 f_{iso}\le{Q-f\over2}.
 \tag{MIC.4}
-$$
+```
 
 Using the certified safe rows of (MIC.1):
 
-$$
+```math
 \boxed{
 t\le1.850\Longrightarrow f_{iso}<0.03271D+o(D),}
 \tag{MIC.5}
-$$
+```
 
-$$
+```math
 \boxed{
 t\le1.855\Longrightarrow f_{iso}<0.03821D+o(D),}
 \tag{MIC.6}
-$$
+```
 
-$$
+```math
 \boxed{
 t\le1.860\Longrightarrow f_{iso}<0.04371D+o(D),}
 \tag{MIC.7}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 t\le1.8623\Longrightarrow f_{iso}<0.04651D+o(D).}
 \tag{MIC.8}
-$$
+```
 
 The arithmetic is exact at the rounded parent level.  For example,
 
-$$
+```math
 {0.583008-0.490\over2}=0.046504<0.04651.
-$$
+```
 
 A Pyroam `Fraction` regression checks all four displayed margins.
 
@@ -117,15 +117,15 @@ A Pyroam `Fraction` regression checks all four displayed margins.
 
 At the widest endpoint, (MIC.1) and (MIC.8) give simultaneously
 
-$$
+```math
 P_5>0.398D-o(D)
-$$
+```
 
 and
 
-$$
+```math
 f_{iso}<0.04651D+o(D).
-$$
+```
 
 Hence there are more than eight times as many empty pentagonal defect faces as there are bounded faces capable of hosting even one isolate.
 

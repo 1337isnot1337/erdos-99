@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_four_defect_reinhardt_body_2026-09-09.md) · source SHA-256 `3f899da7c031e49ea93db08dd085fa05418eb8574ce54a5699daa229af028d54`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-FEAFD5063D8C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=2`: four-defect Reinhardt body decomposition
 
@@ -17,25 +19,25 @@
 
 D2S associates to every consecutive within-tree diameter-direction pair an exact unit shell side: if
 
-$$
+```math
 zy,zw\in H,
 \qquad
 |zy|=|zw|=D,
-$$
+```
 
 are consecutive in direction order, then their nonshared endpoints satisfy
 
-$$
+```math
 |yw|=1
-$$
+```
 
 and `yw` is a shell edge.
 
 There are exactly `q-4` such within-tree transitions.  The four-block order contains exactly `q-4` shell sides internal to the blocks
 
-$$
+```math
 A_0\mid B_0\mid A_1\mid B_1.
-$$
+```
 
 The new observation is that these two sets coincide exactly and without multiplicity.
 
@@ -57,25 +59,25 @@ Thus the complete mixed framework consists of two exact Reinhardt-type triangle-
 
 For every within-tree consecutive direction pair sharing `z`, D2S produces one shell edge `yw` with
 
-$$
+```math
 |y-w|=1,
 \qquad
 |z-y|=|z-w|=D.
-$$
+```
 
 Suppose the same unit shell edge `yw` had two distinct diameter centers `z,z'`. Then `z,z'` would be the two intersection points of the radius-`D` circles about `y,w`.
 
 Their separation is
 
-$$
+```math
 |z-z'|=2\sqrt{D^2-\frac14}.
-$$
+```
 
 For `D>1`,
 
-$$
+```math
 2\sqrt{D^2-\frac14}>D.
-$$
+```
 
 This contradicts the source diameter bound. Hence a unit shell edge has at most one common diameter center.
 
@@ -93,9 +95,9 @@ Since D2 proves each `A_i` is one cyclic shell block, the resulting certified un
 
 Thus every D2S-certified shell side is internal to one of
 
-$$
+```math
 A_0,B_0,A_1,B_1.
-$$
+```
 
 ---
 
@@ -103,45 +105,46 @@ $$
 
 The diameter graph has
 
-$$
+```math
 h=q-2
-$$
+```
 
 edges and D2S gives exactly two cross-tree direction transitions. Hence the number of within-tree direction transitions is
 
-$$
+```math
 (h-2)=q-4.
-$$
+```
 
 By Section 1 these produce `q-4` distinct certified shell sides.
 
 On the other hand, if the four nonempty block sizes are
 
-$$
+```math
 a_0,b_0,a_1,b_1,
 \qquad
 a_0+b_0+a_1+b_1=q,
-$$
+```
 
 then the number of shell sides internal to the four blocks is exactly
 
-$$
+```math
 (a_0-1)+(b_0-1)+(a_1-1)+(b_1-1)=q-4.
-$$
+```
 
 Section 2 puts every certified side in this set, and the two sets have the same cardinality. Therefore they are equal.
 
 Hence:
 
-$$
+```math
 \boxed{
 \text{all internal block sides are certified, and exactly four shell sides are not.}
 }
 \tag{D2R.1}
+```
 
 Those four exceptions are precisely the transitions
 
-\[
+```math
 A_0|B_0,
 \quad
 B_0|A_1,
@@ -149,7 +152,7 @@ B_0|A_1,
 A_1|B_1,
 \quad
 B_1|A_0.
-$$
+```
 
 ---
 
@@ -159,17 +162,17 @@ Fix `z in A_0`.  D2S shows that whenever two consecutive direction edges inciden
 
 The total number of within-tree consecutive pairs sharing a vertex equals
 
-$$
+```math
 q-4.
-$$
+```
 
 But
 
-$$
+```math
 \sum_{v\in V(H)}(\deg_H(v)-1)
 =2h-q
 =q-4,
-$$
+```
 
 because every terminal has positive diameter degree.
 
@@ -187,25 +190,25 @@ This proves D2R.3.
 
 Take one tree component `T_A` on `a` vertices. IB gives its isostatic body
 
-$$
+```math
 G_A=T_A\cup P(A_0)\cup P(A_1),
-$$
+```
 
 with
 
-$$
+```math
 |E(G_A)|=2a-3.
-$$
+```
 
 The two shell paths contribute exactly `a-2` contact edges. By D2R.1 every one is certified: for each contact edge `uv` there is a unique `z` in the opposite color class with
 
-$$
+```math
 zu,zv\in E(T_A),
 \qquad
 |zu|=|zv|=D,
 \qquad
 |uv|=1.
-$$
+```
 
 Thus every internal contact edge is the base of an exact isosceles mixed triangle with two diameter sides.
 
@@ -215,9 +218,9 @@ The same statement holds for `G_B`.
 
 No abstract Laman body remains. The metric on every internal body triangle is fixed to
 
-$$
+```math
 (D,D,1).
-$$
+```
 
 ---
 
@@ -225,100 +228,102 @@ $$
 
 Suppose three consecutive diameter directions inside one tree are
 
-$$
+```math
 us,
 \qquad
 st,
 \qquad
 tv,
-$$
+```
 
 so the shared endpoint changes from `s` to `t` across the middle edge.
 
 D2S gives the two certified shell contacts
 
-$$
+```math
 |u-t|=1,
 \qquad
 |s-v|=1.
 \tag{6.1}
+```
 
 Normalize
 
-\[
+```math
 s=(0,0),
 \qquad
 t=(D,0).
-$$
+```
 
 The equations
 
-$$
+```math
 |u-s|=D,
 \qquad
 |u-t|=1
-$$
+```
 
 give
 
-$$
+```math
 u=
 \left(
 D-\frac1{2D},
 \sigma\sqrt{1-\frac1{4D^2}}
 \right)
-$$
+```
 
 for a sign `sigma in {+1,-1}`.
 
 Likewise
 
-$$
+```math
 |v-t|=D,
 \qquad
 |v-s|=1
-$$
+```
 
 gives
 
-$$
+```math
 v=
 \left(
 \frac1{2D},
 \tau\sqrt{1-\frac1{4D^2}}
 \right).
-$$
+```
 
 If `sigma=-tau`, then
 
-$$
+```math
 |u-v|^2
 =\left(D-\frac1D\right)^2
 +4\left(1-\frac1{4D^2}\right)
 =D^2+2>D^2,
-$$
+```
 
 contradicting the source diameter. Hence `sigma=tau`.
 
 Therefore `u,v` lie on the same side of the diameter `st` and
 
-$$
+```math
 \boxed{|u-v|=D-\frac1D.}
 \tag{D2R.2}
+```
 
 The convex quadrilateral on these four points is an isosceles trapezoid with bases
 
-\[
+```math
 |s-t|=D,
 \qquad
 |u-v|=D-1/D,
-$$
+```
 
 and legs
 
-$$
+```math
 |u-t|=|s-v|=1.
-$$
+```
 
 Thus every shared-center change in a D2S body has exactly one metric realization up to Euclidean congruence and reflection.
 
@@ -328,9 +333,9 @@ Thus every shared-center change in a D2S body has exactly one metric realization
 
 For an internal shell side `uv` with common diameter center `z`, the center lies on the inward perpendicular bisector of `uv` at distance
 
-$$
+```math
 \sqrt{D^2-\frac14}
-$$
+```
 
 from the supporting line of `uv`.
 
@@ -350,11 +355,11 @@ IB says `G_A,G_B` are isostatic and the four exceptional transition contacts are
 
 D2 gives that dependence in vector form:
 
-$$
+```math
 v_i+v_k=v_j+v_\ell,
 \qquad
 v_r=\alpha_rt_r.
-$$
+```
 
 D2R shows every internal force in either body propagates through a chain of fixed `D,D,1` triangles. Thus the only geometric freedom relevant to the unique stress is now:
 

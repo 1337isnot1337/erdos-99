@@ -18,19 +18,19 @@
 
 D2C localizes every non-Reinhardt metric defect to two cross-tree cells with projective gaps
 
-$$
+```math
 2\delta<G_j\le\Delta_2,
 \qquad
 \delta=2\arcsin\frac1{2D},
 \qquad
 \Delta_2=2\arcsin\frac1D.
-$$
+```
 
 The staircase words control which primal shell edge belongs to which block, but they do **not** affect the area of the difference body
 
-$$
+```math
 K:=F-F.
-$$
+```
 
 The complete area is an additive function of the two scalar cell gaps.
 
@@ -38,61 +38,61 @@ The complete area is an additive function of the two scalar cell gaps.
 
 For
 
-$$
+```math
 W(G):=\sqrt{1-D^2\sin^2(G/2)},
-$$
+```
 
 and
 
-$$
+```math
 L(G):=D\cos(G/2)+W(G),
-$$
+```
 
 define the full-cell area contribution
 
-$$
+```math
 \boxed{
 C_D(G):=2D\,L(G)\sin(G/2).
 }
 \tag{AE2.1}
-$$
+```
 
 Then every sufficiently large cyclic `d_H=2` survivor satisfies
 
-$$
+```math
 \boxed{
 \operatorname{area}(K)
 =(q-4)D^2\sin\delta+C_D(G_1)+C_D(G_2).
 }
 \tag{AE2.2}
-$$
+```
 
 This formula is valid uniformly in all three AD branches `S2`, `PS`, and `P2`.  At a parallel cell `G=Delta_2`, one has `W=0`; the same expression becomes the area of the single merged length-two edge.
 
 Equivalently, define the cell defect energy
 
-$$
+```math
 \boxed{
 \mathcal E_D(G)
 :=2D^2\sin\delta-C_D(G).
 }
 \tag{AE2.3}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \operatorname{area}(K)
 =qD^2\sin\delta
 -\mathcal E_D(G_1)-\mathcal E_D(G_2).
 }
 \tag{AE2.4}
-$$
+```
 
 Moreover
 
-$$
+```math
 \boxed{
 \mathcal E_D(2\delta)=0,
 \qquad
@@ -100,7 +100,7 @@ $$
 \quad(2\delta<G\le\Delta_2),
 }
 \tag{AE2.5}
-$$
+```
 
 and `mathcal E_D(G)` is strictly increasing on the full allowed interval.
 
@@ -114,24 +114,24 @@ Because `K=F-F` is centrally symmetric, take one projective half of its boundary
 
 For one such ordinary transition, if the consecutive circular vertices are `x,y`, then
 
-$$
+```math
 |x|=|y|=D,
 \qquad
 \angle(x,y)=\delta,
-$$
+```
 
 so
 
-$$
+```math
 x\times y=D^2\sin\delta.
 \tag{1.1}
-$$
+```
 
 The second antipodal half contributes the identical cross product.  Since polygon area is one half of the full cross-product sum, each ordinary transition contributes exactly
 
-$$
+```math
 D^2\sin\delta
-$$
+```
 
 to `area(K)` after the antipodal doubling.
 
@@ -143,52 +143,52 @@ There are `q-4` such transitions.
 
 Take a D2C short cell.  In one projective half its difference-body boundary is
 
-$$
+```math
 a\to x\to b,
-$$
+```
 
 where
 
-$$
+```math
 |a|=|b|=D,
 \qquad
 |x|=L(G),
-$$
+```
 
 and `x` lies on the angular bisector of `a,b`.  Hence, after centering the bisector at angle zero,
 
-$$
+```math
 \arg a=-G/2,
 \qquad
 \arg x=0,
 \qquad
 \arg b=G/2.
-$$
+```
 
 Therefore
 
-$$
+```math
 a\times x=DL(G)\sin(G/2),
-$$
+```
 
 and
 
-$$
+```math
 x\times b=DL(G)\sin(G/2).
-$$
+```
 
 The cross-product sum on the chosen half is
 
-$$
+```math
 2DL(G)\sin(G/2).
 \tag{2.1}
-$$
+```
 
 As above, antipodal doubling and the factor `1/2` in the polygon-area formula cancel.  Thus the full contribution of this cell to `area(K)` is exactly
 
-$$
+```math
 C_D(G)=2DL(G)\sin(G/2).
-$$
+```
 
 ---
 
@@ -196,29 +196,29 @@ $$
 
 At the D2C parallel endpoint,
 
-$$
+```math
 G=\Delta_2,
 \qquad
 W(G)=0,
 \qquad
 L(G)=D\cos(G/2).
-$$
+```
 
 The off-circle middle vertex has collapsed and the two unit Minkowski edges merge into one length-two edge joining the two circular radius-`D` vertices.
 
 Its cross product is
 
-$$
+```math
 D^2\sin G.
-$$
+```
 
 But
 
-$$
+```math
 C_D(G)
 =2D^2\cos(G/2)\sin(G/2)
 =D^2\sin G.
-$$
+```
 
 So AE2.1 remains exact without a separate branch convention.
 
@@ -230,31 +230,31 @@ This proves AE2.2 in S2, PS, and P2. `square`
 
 If a switch were at the forbidden equality value
 
-$$
+```math
 G=2\delta,
-$$
+```
 
 D2C gives
 
-$$
+```math
 L(G)=D.
-$$
+```
 
 Hence its contribution would be
 
-$$
+```math
 C_D(2\delta)
 =2D^2\sin\delta.
-$$
+```
 
 This is exactly the contribution of the two ordinary circular unit edges obtained when the missing completion state returns to the radius-`D` circle.
 
 Replacing the two actual switch cells by this zero-defect value gives
 
-$$
+```math
 (q-4)D^2\sin\delta+4D^2\sin\delta
 =qD^2\sin\delta.
-$$
+```
 
 Subtracting the actual cell contributions proves AE2.4.
 
@@ -266,95 +266,95 @@ It remains to show that `C_D(G)` strictly decreases as `G` moves away from `2del
 
 Put
 
-$$
+```math
 t:=D\sin(G/2).
-$$
+```
 
 On the allowed interval,
 
-$$
+```math
 D\sin\delta\le t\le1.
 \tag{5.1}
-$$
+```
 
 Since
 
-$$
+```math
 D\sin\delta
 =2D\sin(\delta/2)\cos(\delta/2)
 =\cos(\delta/2),
 \tag{5.2}
-$$
+```
 we have
 
-$$
+```math
 t^2\ge1-\frac1{4D^2}.
 \tag{5.3}
-$$
+```
 
 Write
 
-$$
+```math
 A:=\sqrt{D^2-t^2},
 \qquad
 B:=\sqrt{1-t^2}.
-$$
+```
 
 Then
 
-$$
+```math
 D\cos(G/2)=A,
 \qquad
 W(G)=B,
-$$
+```
 
 and
 
-$$
+```math
 \frac12C_D(G)=t(A+B)=:f(t).
 \tag{5.4}
-$$
+```
 
 Differentiate on the open interval:
 
-$$
+```math
  f'(t)
  =\frac{D^2-2t^2}{A}
   +\frac{1-2t^2}{B}.
 \tag{5.5}
-$$
+```
 
 For sufficiently large `D`, the first numerator is positive and the second is negative.  To compare their magnitudes, square after moving the negative term to the other side.  The numerator of the difference is exactly
 
-$$
+```math
 \begin{aligned}
 &(2t^2-1)^2(D^2-t^2)
  -(D^2-2t^2)^2(1-t^2)\\
 &\qquad=(D^2-1)\bigl((D^2+1)t^2-D^2\bigr).
 \end{aligned}
 \tag{5.6}
-$$
+```
 
 By (5.3), for `D>1`,
 
-$$
+```math
 t^2
 \ge1-\frac1{4D^2}
 >\frac{D^2}{D^2+1}.
-$$
+```
 
 Hence the right side of (5.6) is positive.  Therefore
 
-$$
+```math
 \frac{2t^2-1}{B}
 >
 \frac{D^2-2t^2}{A},
-$$
+```
 so
 
-$$
+```math
 f'(t)<0.
-$$
+```
 
 Because `t` strictly increases with `G`, `C_D(G)` is strictly decreasing.  Therefore `mathcal E_D(G)` is strictly increasing, proving AE2.5. `square`
 
@@ -364,31 +364,31 @@ Because `t` strictly increases with `G`, `C_D(G)` is strictly decreasing.  There
 
 D2C writes
 
-$$
+```math
 G_j=(2+s_j)\delta,
 \qquad
 s_1+s_2=s=q_R(D)-q,
 \qquad
 s_j=O(D^{-2}).
-$$
+```
 
 A useful parameter with no endpoint singularity is
 
-$$
+```math
 \lambda_j:=D W(G_j).
 \tag{6.1}
-$$
+```
 
 D2C gives
 
-$$
+```math
 0\le\lambda_j<\frac12
-$$
+```
 for a true cell, with `lambda_j=0` at a parallel cell and the formal SSR boundary value `lambda_j=1/2` at `s_j=0`.
 
 Uniform Taylor expansion of AE2.2 on the compact two-cell range gives
 
-$$
+```math
 \boxed{
 \operatorname{area}(K)
 =
@@ -397,71 +397,71 @@ $$
 +O(D^{-2}).
 }
 \tag{AE2.6}
-$$
+```
 
 The derivation is short.  First,
 
-$$
+```math
 D^2\sin\delta
 =D-\frac1{8D}+O(D^{-3}),
-$$
+```
 
-$$
+```math
 q
 =\frac\pi\delta-s
 =\pi D-\frac\pi{24D}-s+O(D^{-3}),
-$$
+```
 
 so
 
-$$
+```math
 qD^2\sin\delta
 =
 \pi D^2-\frac\pi6-Ds+O(D^{-2}).
 \tag{6.2}
-$$
+```
 
 For one cell put `u=D^2s_j=O(1)`.  From
 
-$$
+```math
 t=D\sin((1+s_j/2)\delta)
 =1+\frac{u/2-1/8}{D^2}+O(D^{-4})
-$$
+```
 and `W=lambda_j/D`, equation (5.4) gives
 
-$$
+```math
 C_D(G_j)
 =2D+\frac{u-5/4+2\lambda_j}{D}+O(D^{-3}).
 \tag{6.3}
-$$
+```
 
 Since
 
-$$
+```math
 2D^2\sin\delta
 =2D-\frac1{4D}+O(D^{-3}),
-$$
+```
 we get
 
-$$
+```math
 \mathcal E_D(G_j)
 =
 \frac{1-u-2\lambda_j}{D}+O(D^{-3}).
 \tag{6.4}
-$$
+```
 
 Summing (6.4), using
 
-$$
+```math
 D s=\frac{u_1+u_2}{D},
-$$
+```
 and substituting into (6.2) yields AE2.6.
 
 Because every true cell has `lambda_j<1/2`,
 
-$$
+```math
 1-\lambda_1-\lambda_2>0.
-$$
+```
 
 Thus a true D2 source has a strict order-`1/D` difference-body area loss beyond the universal regular `2q`-gon baseline `pi D^2-pi/6`.
 
@@ -471,19 +471,19 @@ Thus a true D2 source has a strict order-`1/D` difference-body area loss beyond 
 
 Along a sequence for which
 
-$$
+```math
 u_j:=D^2s_j\to u_j^\infty\in[0,1/4],
-$$
+```
 D2C gives
 
-$$
+```math
 \lambda_j
 \to\sqrt{\frac14-u_j^\infty}.
-$$
+```
 
 Therefore AE2.6 becomes
 
-$$
+```math
 \boxed{
 \operatorname{area}(K)
 =
@@ -494,20 +494,20 @@ $$
 +o(D^{-1}).
 }
 \tag{AE2.7}
-$$
+```
 
 The coefficient is strictly positive whenever at least one limiting cell defect is positive.
 
 For P2, both `lambda_j=0`, so
 
-$$
+```math
 \boxed{
 \operatorname{area}(K)
 =
 \pi D^2-\frac\pi6-\frac2D+O(D^{-2}).
 }
 \tag{AE2.8}
-$$
+```
 
 ---
 
@@ -522,10 +522,10 @@ The latter supplies a monotone geometric energy whose unique zero is the SSR/Rei
 
 In particular a proposed transversality theorem no longer needs an ad hoc defect norm: one may use
 
-$$
+```math
 \mathcal E_D(G_1)+\mathcal E_D(G_2)
 =qD^2\sin\delta-\operatorname{area}(F-F),
-$$
+```
 which is exact, positive, additive, and canonical.
 
 ---
@@ -536,9 +536,9 @@ which is exact, positive, additive, and canonical.
 
 At `G_1=G_2=2delta`, both energies vanish and AE2 gives
 
-$$
+```math
 \operatorname{area}(K)=qD^2\sin\delta,
-$$
+```
 the area of the regular `2q`-gon difference body.  Thus the selected-support Reinhardt regression is retained exactly.
 
 ### P2

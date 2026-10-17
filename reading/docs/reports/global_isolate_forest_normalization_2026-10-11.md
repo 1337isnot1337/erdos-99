@@ -68,18 +68,18 @@ lower distances remain strictly greater than one.
 
 For the centroid `c`, every source label `q` has
 
-$$
+```math
 |c-q|\le{n-1\over n}D<D.
-$$
+```
 
 Set `p_z(epsilon)=(1-epsilon)p_z+epsilon c` for `z in Z`. Isolate-isolate
 differences contract by the factor `1-epsilon`; isolate-fixed differences
 satisfy
 
-$$
+```math
 |p_z(\epsilon)-p_v|
 \le(1-\epsilon)|p_z-p_v|+\epsilon|c-p_v|<D.
-$$
+```
 
 There is a positive minimum lower-distance slack among the finitely many
 isolate-involving pairs. Moving each isolate by at most `epsilon D` preserves
@@ -108,9 +108,9 @@ cardinality.
 Let `p` be the isolate and `B` the other labels. Its upper-feasible region is
 the compact convex set
 
-$$
+```math
 K_p=\bigcap_{q\in B}\overline B(q,D).
-$$
+```
 
 It contains `p`. It has nonempty interior: the centroid `c_B` of `B` has
 distance at most `D(|B|-1)/|B|<D` from every label in `B`.
@@ -133,9 +133,9 @@ triangle.
 
 For every fixed `r in B` and every `0<t<=1`,
 
-$$
+```math
 |p(t)-r|\le(1-t)D+t|y-r|<D,
-$$
+```
 
 because `y` is in `int(K_p)`. Thus every upper constraint is checked, including
 inactive pairs and isolates. The one new edge has the previously isolated
@@ -149,20 +149,20 @@ global. All labels are retained.
 
 For every `n>=2`,
 
-$$
+```math
 M_{\rm tf}(n)\ne\varnothing
 \quad\Longleftrightarrow\quad
 M_{\rm tf}(n)\text{ contains a source with no contact isolates}.
-$$
+```
 
 Normalize upper distances by Section 2, then repeat Section 3 on a currently
 isolated label until none remains. Each step adds exactly one contact and
 removes one or two isolates. If initially `|Z|=z`, the number `k` of added
 edges therefore satisfies
 
-$$
+```math
 \lceil z/2\rceil\le k\le z.
-$$
+```
 
 All original nonisolated labels stay pointwise fixed. All original contacts
 are retained, triangle-freeness is preserved, no new diameter pair appears,
@@ -191,20 +191,20 @@ by the cone-preservation statement.
 
 Use nonnegative equilibrium coefficients with convention
 
-$$
+```math
 \sum_{ij\in C}\alpha_{ij}(p_i-p_j)
 =\sum_{ij\in H}\beta_{ij}(p_i-p_j),
 \qquad \alpha,\beta\ge0.
-$$
+```
 
 Every original diameter edge incident to an isolate has coefficient zero in
 every such stress. Indeed dot its isolate equilibrium with `c-p_i`. Each
 incident actual-diameter term has strictly negative inner product:
 
-$$
+```math
 (p_i-p_j)\cdot(c-p_i)
 ={|c-p_j|^2-D^2-|c-p_i|^2\over2}<0.
-$$
+```
 
 There is no contact term at the isolate, so all incident `beta` must vanish.
 Deleting those universally zero diameter edges in Section 2 consequently
@@ -235,9 +235,9 @@ each added edge, its moving singleton has zero columns in all active rows;
 the new row is nonzero in those columns. No diameter rows involving `Z`
 exist, and old rows have unchanged vectors. Consequently
 
-$$
+```math
 \operatorname{rank}R_{\rm final}=\operatorname{rank}R_{\rm old}+k.
-$$
+```
 
 Even if the old core had rank `2v-3`, the final rank is at most
 `2n-3-z`, leaving at least `z` additional infinitesimal freedoms. Physical
@@ -286,9 +286,9 @@ rigidity matrix has rank `2n-3`. No uniform spectral gap is asserted.
 Let `L_+` be the positive weighted Laplacian of the new network. Write its
 blocks as
 
-$$
+```math
 L_+=\begin{pmatrix}A_+&B\\B^T&C\end{pmatrix}.
-$$
+```
 
 The pinned rank hypothesis implies that every new component reaches an old
 pin, so the Dirichlet block `C` is positive definite. New-label equilibrium
@@ -301,18 +301,18 @@ three Euclidean kernel modes, the range of its transpose is exactly the space
 of balanced old-pin force fields. Thus there are signed old-edge coefficient
 increments `delta w` satisfying
 
-$$
+```math
 R_{\rm old}^T\delta w=-f.
-$$
+```
 
 Let `Delta Omega` be their signed Laplacian. For positive `epsilon`, put
 
-$$
+```math
 \Omega_\epsilon=
 \begin{pmatrix}\Omega_0&0\\0&0\end{pmatrix}
 +\epsilon\left[
 \begin{pmatrix}\Delta\Omega&0\\0&0\end{pmatrix}+L_+\right].
-$$
+```
 
 This is equilibrium at every source label. Its new contact coefficients are
 `epsilon a_e>0`. Every old coefficient keeps its required strict sign for
@@ -320,10 +320,10 @@ sufficiently small `epsilon`, because all old coefficients were strict.
 
 Eliminating the positive block `epsilon C` gives the old-core Schur matrix
 
-$$
+```math
 \Omega_0+\epsilon S,\qquad
 S=\Delta\Omega+A_+-BC^{-1}B^T.
-$$
+```
 
 The full equilibrium and the new-label harmonic identities imply `S U=0`.
 On `U`'s orthogonal complement `Omega_0` has a positive smallest eigenvalue
@@ -380,15 +380,15 @@ old pin, a contradiction. This is the finite maximum principle.
 
 Unit separation and the canonical Oler inequality therefore force
 
-$$
+```math
 n-1\le A_F/a_0+P_F/2,\qquad a_0=\sqrt3/2.
-$$
+```
 
 Independently, every global unit-separated minimizer has
 
-$$
+```math
 n-1\ge {\pi D^2\over4a_0}.
-$$
+```
 
 To prove this elementary population bound, if it failed choose `r<D/2`
 with `pi r^2/a_0>n-1`. Averaging translates of the unit triangular lattice
@@ -399,9 +399,9 @@ competitor, contradicting global minimality.
 
 Combining the bounds gives the necessary condition
 
-$$
+```math
 \boxed{\pi D^2/4-A_F\le {a_0\over2}P_F.}
-$$
+```
 
 Thus fixed-core positive activation is impossible whenever the old core-hull
 area deficit exceeds `(sqrt(3)/4) P_F`. In particular, if the deficit is

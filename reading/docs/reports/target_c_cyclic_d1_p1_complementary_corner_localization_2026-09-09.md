@@ -17,17 +17,17 @@
 
 AE proves that every P1 KKT endpoint-zero edge `e` cuts the diameter tree into components containing
 
-$$
+```math
 \{a,c\}\mid\{b,d\},
-$$
+```
 
 where `a,b,c,d` are the P1 rectangle vertices in cyclic order and `ab,cd` are the fixed parallel unit hull sides.
 
 Thus the four contact transitions are
 
-$$
+```math
 ab,\ f,\ cd,\ h,
-$$
+```
 
 with `f` on the open shell chain `b -> c` and `h` on the open shell chain `d -> a`.
 
@@ -37,35 +37,35 @@ The two short rectangle chords `ad` and `bc` are separately addable to the diame
 
 Let the moving transition sides be
 
-$$
+```math
 f=pq,
 \qquad
 h=rs,
-$$
+```
 
 in the counterclockwise shell order
 
-$$
+```math
 a,\ b,\ldots,p,q,\ldots,c,\ d,\ldots,r,s,\ldots,a.
 \tag{CC.1}
-$$
+```
 
 Color the `H-e` components so that
 
-$$
+```math
 a,c,p?\text{ after the transition}\in A,
 \qquad
 b,d\in B.
-$$
+```
 
 More precisely the four blocks are
 
-$$
+```math
 A_0\mid B_0\mid A_1\mid B_1
-$$
+```
 with
 
-$$
+```math
 A_0:\ s\leadsto a,
 \qquad
 B_0:\ b\leadsto p,
@@ -74,44 +74,44 @@ A_1:\ q\leadsto c,
 \qquad
 B_1:\ d\leadsto r.
 \tag{CC.2}
-$$
+```
 
 Then:
 
-$$
+```math
 \boxed{
 \{ad,bc\}
 \text{ are the two fixed-transition opposite-corner chords},
 }
 \tag{CC.3}
-$$
+```
 
 while
 
-$$
+```math
 \boxed{
 e=sp\quad\text{or}\quad e=qr.}
 \tag{CC.4}
-$$
+```
 
 In particular every endpoint-zero actual diameter edge has both endpoints incident to the two **moving** transition contacts `f,h`.
 
 Equivalently the four moving corner vertices form the convex quadrilateral
 
-$$
+```math
 p,q,r,s
-$$
+```
 with
 
-$$
+```math
 |pq|=|rs|=1,
-$$
+```
 
 and one of its two complementary sides
 
-$$
+```math
 sp,\ qr
-$$
+```
 has length exactly `D` and is the zeroed full-tree diameter edge.
 
 The other complementary side is necessarily strictly shorter than `D`, because `e` is the unique full diameter edge crossing the `H-e` cut.
@@ -122,11 +122,11 @@ The other complementary side is necessarily strictly shorter than `D`, because `
 
 AE gives component membership
 
-$$
+```math
 a,c\in A,
 \qquad
 b,d\in B.
-$$
+```
 
 Starting at `a` and traversing the shell counterclockwise:
 
@@ -137,7 +137,7 @@ Starting at `a` and traversing the shell counterclockwise:
 
 Therefore the component runs are exactly
 
-$$
+```math
 A_0=s,\ldots,a,
 \quad
 B_0=b,\ldots,p,
@@ -145,7 +145,7 @@ B_0=b,\ldots,p,
 A_1=q,\ldots,c,
 \quad
 B_1=d,\ldots,r,
-$$
+```
 
 after choosing the tree bipartition labels consistently. This is CC.2.
 
@@ -155,9 +155,9 @@ after choosing the tree bipartition labels consistently. This is CC.2.
 
 PR proves `H+ad` is a maximal convex thrackle. Hence after deleting `e`, the chord `ad` is addable to
 
-$$
+```math
 H-e=T_A\sqcup T_B.
-$$
+```
 
 It crosses the component cut because `a in A` and `d in B`.
 
@@ -165,14 +165,14 @@ The addable-cross-chord corner proof from MT/EU applies: an addable chord betwee
 
 Here
 
-$$
+```math
 a\in A_0
-$$
+```
 is the A0 endpoint at the `A_0|B_0` transition `ab`, while
 
-$$
+```math
 d\in B_1
-$$
+```
 is the B1 endpoint at the `A_1|B_1` transition `cd`.
 
 Thus `ad` is exactly the opposite-corner chord joining the A-side corner of `ab` to the B-side corner of `cd`.
@@ -185,26 +185,26 @@ Likewise PR proves `H+bc` is a maximal convex thrackle, so `bc` is addable to `H
 
 Its endpoints are
 
-$$
+```math
 b\in B_0
-$$
+```
 at the B-side corner of `ab`, and
 
-$$
+```math
 c\in A_1
-$$
+```
 at the A-side corner of `cd`.
 
 Therefore `bc` is the other opposite-corner chord based at the same two fixed transitions.
 
 The two short chords have exhausted the cross-block types
 
-$$
+```math
 A_0-B_1
 \quad\text{and}\quad
 B_0-A_1.
 \tag{3.1}
-$$
+```
 
 ---
 
@@ -214,7 +214,7 @@ EU says the actual zeroed edge `e` itself is an opposite-corner chord of the sam
 
 There are four possible component/color pair types:
 
-$$
+```math
 A_0-B_0,
 \quad
 A_0-B_1,
@@ -222,23 +222,23 @@ A_0-B_1,
 A_1-B_0,
 \quad
 A_1-B_1.
-$$
+```
 
 Sections 2-3 show that the unique opposite-corner chords of the middle two types are precisely the short rectangle chords
 
-$$
+```math
 ad,
 \qquad
 bc.
-$$
+```
 
 But
 
-$$
+```math
 |e|=D,
 \qquad
 |ad|=|bc|=\sqrt{D^2-1}<D,
-$$
+```
 so `e` cannot be either of those two chords.
 
 Hence `e` has type `A_0-B_0` or `A_1-B_1`.
@@ -249,37 +249,37 @@ Apply EU's explicit endpoint rule.
 
 The A0 endpoint must be the one adjacent to `B_1`, namely
 
-$$
+```math
 s,
-$$
+```
 while the B0 endpoint must be the one adjacent to `A_1`, namely
 
-$$
+```math
 p.
-$$
+```
 Thus
 
-$$
+```math
 e=sp.
-$$
+```
 
 ### Type `A_1-B_1`
 
 Symmetrically the A1 endpoint adjacent to `B_0` is
 
-$$
+```math
 q,
-$$
+```
 and the B1 endpoint adjacent to `A_0` is
 
-$$
+```math
 r.
-$$
+```
 Thus
 
-$$
+```math
 e=qr.
-$$
+```
 
 This proves CC.4. `square`
 
@@ -289,30 +289,30 @@ This proves CC.4. `square`
 
 Suppose, for example,
 
-$$
+```math
 e=sp.
-$$
+```
 
 The other complementary corner chord is
 
-$$
+```math
 qr.
-$$
+```
 
 If `|qr|=D`, then `qr` would be a second full-H diameter edge crossing the A/B component cut of `H-e`. But because `H` is a tree, the deleted edge `e` is the unique full-H edge crossing the cut between the two components of `H-e`.
 
 Therefore
 
-$$
+```math
 \boxed{|qr|<D.}
 \tag{5.1}
-$$
+```
 
 The case `e=qr` gives symmetrically
 
-$$
+```math
 |sp|<D.
-$$
+```
 
 Thus each endpoint cut selects a convex four-corner quadrilateral with two opposite unit sides `f,h`, one diameter side `e`, and one strictly subdiametral complementary side.
 
@@ -326,23 +326,23 @@ CC gives a metric meaning to every line in AE's four-force wrench system.
 
 If
 
-$$
+```math
 e=sp,
-$$
+```
 then the two moving contact lines are the unit sides
 
-$$
+```math
 pq,
 \qquad rs
-$$
+```
 adjacent to the endpoints of the diameter side `sp` in the four-corner quadrilateral `p,q,r,s`.
 
 The anchored endpoint force relation
 
-$$
+```math
 (\alpha_{ab}-\alpha_{cd})t
 =\alpha_f t_f+\alpha_h t_h
-$$
+```
 is therefore not an arbitrary four-side identity: the moving forces act on the two unit sides adjacent to a common length-`D` supporting chord of the four-corner quadrilateral.
 
 This supplies the metric input missing from a pure WM/WT calculation.
@@ -399,25 +399,25 @@ The immediate target is now geometric:
 
 For a convex quadrilateral `p,q,r,s` occurring in the P1 shell order, with
 
-$$
+```math
 |pq|=|rs|=1,
 \qquad
 |sp|=D,
 \qquad
 |qr|<D,
-$$
+```
 and with `sp` an actual source diameter, quantify the deficit
 
-$$
+```math
 D-|qr|
-$$
+```
 from the directions of the two unit sides `pq,rs`.
 
 Those same directions occur in the anchored WM equation. A lower bound on the complementary-side deficit can therefore be converted into a lower bound on the line-intersection displacement, hence on
 
-$$
+```math
 |\alpha_{ab}/\alpha_{cd}-1|.
-$$
+```
 
 A second target is combinatorial: compare the two endpoint quadrilaterals along the common path `J`. If their diameter sides use opposite complementary types (`sp` versus `qr`), the resulting sign reversal in the anchored force equation may force an interior stress with `alpha_ab=alpha_cd`.
 

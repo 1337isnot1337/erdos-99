@@ -25,15 +25,15 @@ A convex polygon with vertices in a rank-two lattice cannot have linearly many e
 vertices at linear diameter scale.  For the unit-rhombic lattices relevant to the
 triangle-free rhombic regression, an elementary fundamental-cell count gives
 
-$$
+```math
 q=O(D^{2/3}).
-$$
+```
 
 But C34 gives
 
-$$
+```math
 q\ge {\lceil D\rceil+2\over2}.
-$$
+```
 
 Therefore no sufficiently large C-II force hull can have all its vertices in one
 unit-rhombic affine lattice.  The conclusion is uniform as the rhombus angle tends to
@@ -46,42 +46,42 @@ bulk theorem.
 
 Let
 
-$$
+```math
 \Lambda=\mathbb Zu+\mathbb Zv,
 \qquad
 |u|=|v|=1,
 \qquad
 \theta=\angle(u,v)\in[\pi/3,2\pi/3].
 \tag{1.1}
-$$
+```
 
 Its fundamental area is
 
-$$
+```math
 a_\Lambda=|\det(u,v)|=\sin\theta\ge {\sqrt3\over2}=:a_0.
 \tag{1.2}
-$$
+```
 
 Use the centered half-open fundamental parallelogram
 
-$$
+```math
 Q=\{su+tv:-1/2\le s,t<1/2\}.
-$$
+```
 
 As in the existing affine-lattice audit,
 
-$$
+```math
 Q\subseteq B(0,R_\Lambda),
 \qquad
 R_\Lambda={1\over2}\max\{|u+v|,|u-v|\}.
-$$
+```
 
 For `theta in [pi/3,2pi/3]`,
 
-$$
+```math
 \boxed{R_\Lambda\le {\sqrt3\over2}=:R_0.}
 \tag{1.3}
-$$
+```
 
 ---
 
@@ -89,32 +89,32 @@ $$
 
 Let
 
-$$
+```math
 N_\Lambda(r)=|\{w\in\Lambda:|w|\le r\}|.
-$$
+```
 
 The translates `w+Q` have disjoint interiors.  For every `|w|<=r`,
 
-$$
+```math
 w+Q\subseteq B(0,r+R_\Lambda).
-$$
+```
 
 Therefore
 
-$$
+```math
 N_\Lambda(r)a_\Lambda
 \le\pi(r+R_\Lambda)^2.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 N_\Lambda(r)
 \le {\pi\over a_\Lambda}(r+R_\Lambda)^2.
 }
 \tag{2.1}
-$$
+```
 
 No number theory is used.
 
@@ -125,50 +125,50 @@ No number theory is used.
 Let `P` be a strictly convex polygon with `q>=3` vertices in one translate of
 `Lambda`.  Write its oriented edge vectors in cyclic order as
 
-$$
+```math
 e_1,\ldots,e_q\in\Lambda\setminus\{0\}.
-$$
+```
 
 Strict convexity implies the oriented edge directions are all distinct.  In
 particular the `e_i` themselves are distinct lattice vectors.
 
 Order their lengths as
 
-$$
+```math
 \ell_1\le\ell_2\le\cdots\le\ell_q.
-$$
+```
 
 Since at least `j` distinct lattice vectors have length at most `ell_j`, (2.1) gives
 
-$$
+```math
 j
 \le {\pi\over a_\Lambda}(\ell_j+R_\Lambda)^2.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 \ell_j
 \ge
 \sqrt{{a_\Lambda j\over\pi}}-R_\Lambda.
 }
 \tag{3.1}
-$$
+```
 
 Summing and using
 
-$$
+```math
 \sum_{j=1}^q\sqrt j
 \ge\int_0^q\sqrt x\,dx
 ={2\over3}q^{3/2},
-$$
+```
 
 we obtain the finite perimeter inequality
 
 ### Theorem AL.1 — convex lattice vertex/perimeter bound
 
-$$
+```math
 \boxed{
 \operatorname{per}P
 \ge
@@ -176,11 +176,11 @@ $$
 -R_\Lambda q.
 }
 \tag{AL.1}
-$$
+```
 
 For the unit-rhombic family, uniformly in `theta`,
 
-$$
+```math
 \boxed{
 \operatorname{per}P
 \ge
@@ -190,7 +190,7 @@ c_0={2\over3}\sqrt{{\sqrt3\over2\pi}},
 \quad R_0={\sqrt3\over2}.
 }
 \tag{AL.2}
-$$
+```
 
 This is the elementary convex-lattice-polygon mechanism usually associated with
 Jarnik-type bounds, but the displayed estimate is proved here directly.
@@ -202,20 +202,20 @@ Jarnik-type bounds, but the displayed estimate is proved here directly.
 Every convex planar body of diameter `D` has perimeter at most `pi D`.  Hence if
 `diam(P)<=D`, AL.2 gives
 
-$$
+```math
 c_0q^{3/2}-R_0q\le\pi D.
 \tag{4.1}
-$$
+```
 
 Once
 
-$$
+```math
 q\ge (2R_0/c_0)^2,
-$$
+```
 
 the left side is at least `(c_0/2)q^(3/2)`.  Therefore
 
-$$
+```math
 \boxed{
 q
 \le
@@ -223,7 +223,7 @@ q
 =O(D^{2/3}).
 }
 \tag{AL.3}
-$$
+```
 
 The constant is deliberately crude; only the sublinear exponent matters.
 
@@ -234,26 +234,26 @@ The constant is deliberately crude; only the sublinear exponent matters.
 Work now in the C65 fully force-visible branch.  The loaded terminal set `B_+` is
 exactly the vertex set of the convex force hull `F`, and
 
-$$
+```math
 \operatorname{diam}F=D.
-$$
+```
 
 C34 gives the exact lower bound
 
-$$
+```math
 \boxed{
 q:=|B_+|
 \ge {\lceil D\rceil+2\over2}.
 }
 \tag{5.1}
-$$
+```
 
 Suppose the entire force-visible contact core, or merely all force-hull vertices, lies
 in one translate of a unit-rhombic lattice (1.1).  Then AL.3 gives
 
-$$
+```math
 q=O(D^{2/3}),
-$$
+```
 
 while (5.1) gives `q=Omega(D)`.  These are incompatible for sufficiently large `D`.
 
@@ -262,13 +262,13 @@ while (5.1) gives `q=Omega(D)`.  These are incompatible for sufficiently large `
 There exists `D_0<infinity` such that no C65 fully force-visible survivor with
 `D>=D_0` has its complete force-hull vertex set in a translate of a lattice
 
-$$
+```math
 \mathbb Zu+\mathbb Zv,
 \qquad
 |u|=|v|=1,
 \qquad
 \angle(u,v)\in[\pi/3,2\pi/3].
-$$
+```
 
 A fortiori the entire positive contact core cannot be a finite subset of one such
 lattice.
@@ -280,22 +280,22 @@ lattice.
 The older theorem proves, for a fixed affine lattice `Lambda`, that a global minimizer
 must have
 
-$$
+```math
 a_\Lambda-\sqrt3/2=O(n^{-1/2}).
-$$
+```
 
 Thus it excludes a fixed oblique angle but leaves the distributed-strain regime
 
-$$
+```math
 \theta_D-\pi/3=O(1/D).
-$$
+```
 
 AL.2 is independent of that density comparison.  Its determinant lower bound remains
 uniform all the way to `theta=pi/3`, so it excludes even
 
-$$
+```math
 \theta_D-\pi/3\to0
-$$
+```
 
 at an arbitrarily fast rate, provided the force-hull vertices remain in one affine
 lattice grain.

@@ -33,15 +33,15 @@ All four are sound.
 
 The candidate uses the current exact `t<=1.844` ledger
 
-$$
+```math
 \kappa<0.007259926+o(1)
-$$
+```
 
 and
 
-$$
+```math
 {h_H\over D}<1.851259926+o(1).
-$$
+```
 
 These follow from the matched `g=0.007707` residual envelope together with the already
 proved retained-mass floor `z>2.2069-o(1)`.  No unmerged `z>2.217` strengthening is
@@ -50,10 +50,10 @@ used.
 Each actual diameter interval on a laminar backbone has at most one start and one stop,
 so
 
-$$
+```math
 \sum_iN_i\le2h_H
 <3.702519852D+o(D).
-$$
+```
 
 This is exactly the later adjacent-switch-count input already present on main.
 
@@ -65,19 +65,19 @@ This is exactly the later adjacent-switch-count input already present on main.
 
 The candidate sets
 
-$$
+```math
 \lambda=0.6404.
-$$
+```
 
 The audited fan theorem gives a weighted average center degree above `0.7404D` and
 retained pair weight above `0.0848D`.  Weighted thresholding first yields retained
 weight on good leaves
 
-$$
+```math
 gD-o(D),
 \qquad
 g=0.0200662565\ldots .
-$$
+```
 
 Only after that inequality is established does the proof use `w_tau<=1` to infer at
 least `gD-o(D)` **distinct** good leaf trains.  It never treats a weighted average as
@@ -85,33 +85,33 @@ an unweighted density floor.
 
 Choose
 
-$$
+```math
 d_{low}=10^{-4},
 \qquad
 r={\lambda-d_{low}\over1.063}.
-$$
+```
 
 Then
 
-$$
+```math
 \lambda-r(1.063)=d_{low}>0
-$$
+```
 
 and
 
-$$
+```math
 \lambda-(1-r)(1.063)=0.2177>0.
-$$
+```
 
 Thus every good leaf has a fixed positive linear number of center neighbors on both
 sides of the high-center cut.  Double counting incidences with the top `r` center
 fraction gives one center train crossing more than
 
-$$
+```math
 pD-o(D),
 \qquad
 p=0.0068224645348\ldots
-$$
+```
 
 distinct good leaves.  Since the good leaves are pairwise noncrossing, their crossings
 with one center train form one simple dual-tree path, as in the audited parent
@@ -125,23 +125,23 @@ construction.
 
 For each path leaf put
 
-$$
+```math
 q_j=\beta_j-\alpha_\gamma-\pi/3>0.
-$$
+```
 
 The leaf has at least
 
-$$
+```math
 d_{low}D-o(D)=10^{-4}D-o(D)
-$$
+```
 
 center neighbors of phase at most `alpha_gamma`.  Every such strict rhombus pays
 angular defect at least `q_j`.  Since different leaf/center pairs are different strict
 rhombi,
 
-$$
+```math
 \sum_jq_j\le {C_{phase}\over d_{low}}+o(1).
-$$
+```
 
 The constant `C_phase/d_low` is large, approximately `5.3e4`, but it is independent of
 `D`.  Therefore the total two-boundary phase cost is still `O(D)`, and imposing a fixed
@@ -158,40 +158,40 @@ rational `1/10000` throughout the theorem.
 
 For triple starts `i`, define
 
-$$
+```math
 \mathcal N_i=N_i+N_{i+1}.
-$$
+```
 
 Each internal boundary count `N_j` appears in at most two consecutive triples.  Hence
 
-$$
+```math
 \sum_i\mathcal N_i
 \le2\sum_jN_j.
-$$
+```
 
 The same combinatorics gives
 
-$$
+```math
 \sum_iD(B_i+B_{i+1})
 \le2D\sum_jB_j
 \le4D,
-$$
+```
 
 because the exact interval variation has `sum B_j<=2`.
 
 For the phase cost, the boundary quantity is `D(q_j+q_{j+1})`.  Its total over all
 boundaries is at most
 
-$$
+```math
 2D\sum_jq_j
 \le {2C_{phase}\over d_{low}}D+o(D).
-$$
+```
 
 Each boundary phase quantity again occurs in at most two consecutive triples, giving
 
-$$
+```math
 {4C_{phase}\over d_{low}}D+o(D).
-$$
+```
 
 No factor is missing.
 
@@ -216,20 +216,20 @@ Pareto density margin                3.8254812077e-6
 Thus the sum of bad triple-start densities is strictly below the available path/triple
 density.  At least one triple simultaneously satisfies
 
-$$
+```math
 \mathcal N_i<1086+o(1),
 \qquad
 D(B_i+B_{i+1})<10^{14}+o(1),
-$$
+```
 
 and the analogous phase inequality.
 
 Because `mathcal N_i` is an integer, the positive `1086-1085.390...` gap absorbs the
 `o(1)` term for all sufficiently large members of the survivor sequence, giving
 
-$$
+```math
 \mathcal N_i\le1085.
-$$
+```
 
 **Verdict:** PASS.
 
@@ -241,25 +241,25 @@ For three consecutive laminar cuts, every row whose support on the selected trip
 neither empty nor full switches at boundary `1|2` or `2|3`.  Therefore the parent exact
 kernel theorem gives
 
-$$
+```math
 H_{exc}\subseteq H_{sw,1}\cup H_{sw,2}.
-$$
+```
 
 Hence
 
-$$
+```math
 |H_{exc}|\le N_i+N_{i+1}\le1085.
-$$
+```
 
 A row in that union contributes its positive multiplier at least once to
 `B_i+B_{i+1}`; a middle-only row contributes twice, which only makes the upper bound
 looser.  Thus
 
-$$
+```math
 \sum_{h\in H_{exc}}\beta_h
 \le B_i+B_{i+1}
 <{10^{14}\over D}+o(D^{-1}).
-$$
+```
 
 Likewise the adjacent projective gaps are bounded by the two selected phase costs.
 
@@ -272,9 +272,9 @@ Likewise the adjacent projective gaps are bounded by the two selected phase cost
 The numerical optimization does not modify the parent algebra.  Three planar train
 vectors still have a nonzero coefficient vector `c` with
 
-$$
+```math
 \sum_{j=1}^3c_ju_j=0.
-$$
+```
 
 Rows meeting none or all three selected cuts therefore have exactly zero first
 relative-displacement coefficient.  Every possible nonzero first derivative lies in

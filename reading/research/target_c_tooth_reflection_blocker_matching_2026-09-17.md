@@ -20,59 +20,59 @@ Constant multiplicity is false in the near-circular model, but linear multiplici
 
 For the exact reflection geometry at `eta=15/56`, put
 
-$$
+```math
 C={\sqrt{3135}\over56}=0.9998405485\ldots<1.
 \tag{RB.1}
-$$
+```
 
 Every reflected upper blocker has original length
 
-$$
+```math
 \boxed{|xy|>D-C.}
 \tag{RB.2}
-$$
+```
 
 The fixed-slack graph on all source pairs satisfying (RB.2) has maximum degree
 
-$$
+```math
 \boxed{
 \Delta_C(D)
 \le
 \left(448\,3^{1/8}+o(1)\right)D^{3/4}.
 }
 \tag{RB.3}
-$$
+```
 
 The factor `448` is exact at the leading level because
 
-$$
+```math
 C^2={3135\over3136},
 \qquad
 \sqrt{1-C^2}={1\over56}.
 \tag{RB.4}
-$$
+```
 
 The coupled tooth/reflection theorem supplies
 
-$$
+```math
 \boxed{
 U_D>
 (0.243036024157656\ldots-o(1))D
 }
 \tag{RB.5}
-$$
+```
 
 distinct forced-degree shallow apices with upper reflection blockers. Choose one blocker edge from every such apex. Since the apices are distinct, every source vertex is a chosen tail at most once; (RB.3) bounds the number of possible chosen heads through one vertex.
 
 A greedy matching therefore contains
 
-$$
+```math
 \boxed{
 M_D>
 (0.0002364408355527\ldots-o(1))D^{1/4}
 }
 \tag{RB.6}
-$$
+```
 
 pairwise vertex-disjoint reflection blockers.
 
@@ -84,62 +84,62 @@ Thus the low-`t` shallow-tooth branch now contains an unbounded family of disjoi
 
 Let `A` be any unit-separated planar source of diameter `D`. Let `o` be the full-source circumcenter from the audited geometry theorem, so
 
-$$
+```math
 A\subset B(o,R_D),
 \qquad
 R_D<{D\over2}+\eta_D,
 \qquad
 \eta_D=3^{1/4}\sqrt D.
 \tag{RB.7}
-$$
+```
 
 Fix any constant
 
-$$
+```math
 0<C<1
-$$
+```
 
 and let `xy` be a source pair with
 
-$$
+```math
 \ell:=|x-y|\ge D-C.
-$$
+```
 
 Its midpoint `m=(x+y)/2` satisfies the parallelogram identity
 
-$$
+```math
 |m-o|^2
 ={|x-o|^2+|y-o|^2\over2}-{\ell^2\over4}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 |m-o|^2
 &<\left({D\over2}+\eta_D\right)^2-{(D-C)^2\over4}\\
 &=D\eta_D+\eta_D^2+{DC\over2}-{C^2\over4}.
 \end{aligned}
 \tag{RB.8}
-$$
+```
 
 Define
 
-$$
+```math
 L_{C,D}
 :=\sqrt{D\eta_D+\eta_D^2+{DC\over2}}.
 \tag{RB.9}
-$$
+```
 
 Since `C` is fixed,
 
-$$
+```math
 \boxed{
 |m-o|<L_{C,D}
 =(3^{1/8}+o(1))D^{3/4}.
 }
 \tag{RB.10}
-$$
+```
 
 Thus fixed additive slack below diameter has the same leading midpoint-localization scale as actual diameter edges and inverse-`D` inactive upper witnesses.
 
@@ -149,78 +149,78 @@ Thus fixed additive slack below diameter has the same leading midpoint-localizat
 
 Fix a source vertex `x` and two distinct neighbors `y,z` with
 
-$$
+```math
 D-C\le r:=|y-x|,\ s:=|z-x|\le D.
 \tag{RB.11}
-$$
+```
 
 By (RB.10), the two midpoints are both in `B(o,L_{C,D})`, so
 
-$$
+```math
 |y-z|\le4L_{C,D}.
 \tag{RB.12}
-$$
+```
 
 Let
 
-$$
+```math
 u={y-x\over r},
 \qquad
 v={z-x\over s}
-$$
+```
 
 and let `theta` be the smaller angle between the two rays. Then
 
-$$
+```math
 |u-v|
 \le {2|y-z|\over D-C}
 \le {8L_{C,D}\over D-C},
-$$
+```
 
 hence all such neighbor directions lie in an ordinary angular interval of width
 
-$$
+```math
 \Theta_{C,D}
 :=2\arcsin\left({4L_{C,D}\over D-C}\right)
 =(8\,3^{1/8}+o(1))D^{-1/4}.
 \tag{RB.13}
-$$
+```
 
 Distinct neighbors also have a minimum angular separation. Unit separation gives
 
-$$
+```math
 1\le|y-z|^2
 =(r-s)^2+4rs\sin^2{\theta\over2}.
 \tag{RB.14}
-$$
+```
 
 Because
 
-$$
+```math
 |r-s|\le C<1,
 \qquad rs\le D^2,
-$$
+```
 
 we obtain
 
-$$
+```math
 \sin{\theta\over2}
 \ge {\sqrt{1-C^2}\over2D}.
 \tag{RB.15}
-$$
+```
 
 Thus distinct near-diameter rays are separated by at least
 
-$$
+```math
 \delta_{C,D}
 :=2\arcsin\left({\sqrt{1-C^2}\over2D}\right)
 ={\sqrt{1-C^2}+o(1)\over D}.
 \tag{RB.16}
-$$
+```
 
 Packing these directions into the interval (RB.13) gives
 
-$$
+```math
 \boxed{
 \Delta_C(D)
 \le
@@ -231,7 +231,7 @@ $$
 \right)D^{3/4}.
 }
 \tag{RB.17}
-$$
+```
 
 This is the fixed-slack version of the existing inverse-`D` inactive near-diameter degree theorem.
 
@@ -241,39 +241,39 @@ This is the fixed-slack version of the existing inverse-`D` inactive near-diamet
 
 For the matching/reflection geometry,
 
-$$
+```math
 C={\sqrt{3135}\over56}.
-$$
+```
 
 Exactly,
 
-$$
+```math
 C^2={3135\over3136}
-$$
+```
 
 and therefore
 
-$$
+```math
 \sqrt{1-C^2}={1\over56}.
 \tag{RB.18}
-$$
+```
 
 Substitute this into (RB.17):
 
-$$
+```math
 \boxed{
 \Delta_C(D)
 \le
 \left(448\,3^{1/8}+o(1)\right)D^{3/4}.
 }
 \tag{RB.19}
-$$
+```
 
 Numerically the leading coefficient is
 
-$$
+```math
 448\,3^{1/8}=513.946805317\ldots .
-$$
+```
 
 The constant is large because the reflection slack lies very close to one, but the exponent is strictly sublinear.
 
@@ -283,19 +283,19 @@ The constant is large because the reflection slack lies very close to one, but t
 
 The current matching/reflection coupled floor gives a set `X_D` of distinct shallow apices with
 
-$$
+```math
 |X_D|>
 (u_0-o(1))D,
 \qquad
 u_0=0.2430360241576561830\ldots,
 \tag{RB.20}
-$$
+```
 
 such that every `x in X_D` has at least one upper reflection blocker `y(x)` with
 
-$$
+```math
 |x-y(x)|>D-C.
-$$
+```
 
 Choose one such blocker for each apex and orient the selected edge from `x` to `y(x)`. The tails are distinct.
 
@@ -303,29 +303,29 @@ For any source vertex `v`, at most one selected edge leaves `v`. The number of s
 
 Therefore at most
 
-$$
+```math
 \Delta_C(D)+1
-$$
+```
 
 selected edges are incident to any one source vertex. A greedy matching step selecting edge `xy` deletes at most
 
-$$
+```math
 2(\Delta_C(D)+1)-1
 =2\Delta_C(D)+1
-$$
+```
 
 selected edges. Hence
 
-$$
+```math
 |M_D|
 \ge
 {|X_D|\over2\Delta_C(D)+1}.
 \tag{RB.21}
-$$
+```
 
 Using (RB.19)--(RB.20),
 
-$$
+```math
 \boxed{
 |M_D|>
 \left(
@@ -333,14 +333,14 @@ $$
 \right)D^{1/4}.
 }
 \tag{RB.22}
-$$
+```
 
 The coefficient is
 
-$$
+```math
 {u_0\over896\,3^{1/8}}
 =0.0002364408355527397\ldots,
-$$
+```
 
 which proves (RB.6).
 

@@ -27,25 +27,26 @@ the tested affine-window form, so it does not close C-II or Level I.
 
 ## 1. Exact restricted theorem
 
-For an integer $R\ge1$, define the axial hexagonal index window
+For an integer $`R\ge1`$, define the axial hexagonal index window
 
-$$
+```math
  H_R=\{(i,j)\in\mathbb Z^2:\max(|i|,|j|,|i+j|)\le R\}.
-$$
+```
 
-Let $u,v$ be unit vectors with $u\cdot v=c$, where $0\le c<1/2$, and map
-$(i,j)\mapsto iu+jv$. Then:
+Let $`u,v`$ be unit vectors with $`u\cdot v=c`$, where $`0\le c<1/2`$, and map
+$`(i,j)\mapsto iu+jv`$. Then:
 
 1. the image is unit-separated;
 2. its unit-contact graph has exactly the four differences
-   $\pm u,\pm v$, hence is bipartite and triangle-free;
-3. $|H_R|=1+3R(R+1)$;
+   $`\pm u,\pm v`$, hence is bipartite and triangle-free;
+3. $`|H_R|=1+3R(R+1)`$;
 4. its exact squared diameter is
-   $$
+   ```math
    D_{\rm shear}^2=8R^2(1-c)>4R^2;
-   $$
-5. the equilateral choice $c=1/2$, with the same index set and cardinality, is
-   unit-separated and has diameter $D_{\rm tri}=2R$, and its contact graph contains
+   
+   ```
+5. the equilateral choice $`c=1/2`$, with the same index set and cardinality, is
+   unit-separated and has diameter $`D_{\rm tri}=2R`$, and its contact graph contains
    unit equilateral triangles.
 
 Consequently, every non-equilateral member of this restricted affine hex-window
@@ -56,53 +57,53 @@ hex-window competitor has strictly smaller diameter.
 
 Write
 
-$$
+```math
  q_c(i,j)=|iu+jv|^2=i^2+j^2+2cij.
-$$
+```
 
-If $ij\ge0$, a nonzero integer pair has $q_c(i,j)\ge i^2+j^2\ge1$.
-If $ij<0$, put $a=|i|$, $b=|j|$. Then
+If $`ij\ge0`$, a nonzero integer pair has $`q_c(i,j)\ge i^2+j^2\ge1`$.
+If $`ij<0`$, put $`a=|i|`$, $`b=|j|`$. Then
 
-$$
+```math
  q_c(i,j)=(a-b)^2+2ab(1-c).
-$$
+```
 
-For $a=b=1$, this is $2(1-c)>1$. For $a\ne b$, the first term is at
-least $1$ and the second term is positive. Thus all distinct image points are
+For $`a=b=1`$, this is $`2(1-c)>1`$. For $`a\ne b`$, the first term is at
+least $`1`$ and the second term is positive. Thus all distinct image points are
 at distance at least one. Equality is possible only for
-$(i,j)=\pm(1,0),\pm(0,1)$.
+$`(i,j)=\pm(1,0),\pm(0,1)`$.
 
 The contact graph is therefore a subgraph of the square grid on the two index
-directions. Coloring $(i,j)$ by $i+j\bmod2$ proves bipartiteness and
+directions. Coloring $`(i,j)`$ by $`i+j\bmod2`$ proves bipartiteness and
 triangle-freeness.
 
 The cardinality identity is the standard count of the six axial sides:
 
-$$
+```math
  |H_R|=1+6(1+\cdots+R)=1+3R(R+1).
-$$
+```
 
 For the diameter, the difference set is contained in the continuous hexagon
 
-$$
+```math
  H_{2R}^{\mathbb R}=\{(x,y):|x|\le2R,\ |y|\le2R,\ |x+y|\le2R\}.
-$$
+```
 
-The quadratic form $q_c$ is convex. Its maximum on this hexagon is attained
-at a vertex. At the six vertices the values are $4R^2$ at
-$(\pm2R,0),(0,\pm2R)$ and $8R^2(1-c)$ at
-$(\pm2R,\mp2R)$. Since $c<1/2$, the latter is larger. The difference
-$(2R,-2R)$ is attained by the two window points $(R,-R)$ and
-$(-R,R)$, so
+The quadratic form $`q_c`$ is convex. Its maximum on this hexagon is attained
+at a vertex. At the six vertices the values are $`4R^2`$ at
+$`(\pm2R,0),(0,\pm2R)`$ and $`8R^2(1-c)`$ at
+$`(\pm2R,\mp2R)`$. Since $`c<1/2`$, the latter is larger. The difference
+$`(2R,-2R)`$ is attained by the two window points $`(R,-R)`$ and
+$`(-R,R)`$, so
 
-$$
+```math
  \operatorname{diam}^2=8R^2(1-c).
-$$
+```
 
-At $c=1/2$, the same calculation gives $D_{\rm tri}^2=4R^2$. The
+At $`c=1/2`$, the same calculation gives $`D_{\rm tri}^2=4R^2`$. The
 three image points (0,u,v) form a unit equilateral triangle, and the strict
 inequality (8R^2(1-c)>4R^2) proves the same-cardinality comparison.
-$□$
+$`□`$
 
 ## 2. Certified finite check
 

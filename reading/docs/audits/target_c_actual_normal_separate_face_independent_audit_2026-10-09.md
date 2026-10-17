@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_actual_normal_separate_face_independent_audit_2026-10-09.md) · source SHA-256 `0dbfc348521100935dfd1e7308fabefda17d96d9a38e691517616836daadbe64`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 2 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
+
 <!-- theorem-state: {"artifact_id":"ART-F03C5D8903EA","canonical":true,"claim_ids":["C-ALL-BRANCH-SEPARATE-FACE-FLOOR","C-CII-ACTUAL-DIAMETER-NORMAL-ATOMLESS"],"claim_statuses":{"C-ALL-BRANCH-SEPARATE-FACE-FLOOR":"canonical","C-CII-ACTUAL-DIAMETER-NORMAL-ATOMLESS":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit of actual diameter normals and all-branch face cancellation
 
@@ -13,25 +15,25 @@ Source artifact: Sections 10.1–10.2 of `docs/reports/target_c_global_inverse_p
 
 **PASS — promote `C-CII-ACTUAL-DIAMETER-NORMAL-ATOMLESS`.** For every unbounded canonical post-ZF C-II source sequence, choose one actual diameter partner for each loaded endpoint (p), put (n_p=(p-p')/D), and set
 
-$$
+```math
 \nu_D=D^{-1}\sum_{p\in B}\delta_{n_p}.
-$$
+```
 
 Every weak limit of these measures is atomless, uniformly over all partner choices. Moreover, for consecutive loaded endpoints (p,q) with (|p-q|\le L) for any fixed (L), their forward chord direction approaches (Jn_p). Neither conclusion uses a Type-II disk limit.
 
 **PASS — promote `C-ALL-BRANCH-SEPARATE-FACE-FLOOR`.** For every such C-II sequence, in either exhaustive global branch and retaining every source point, with (z=b-P_F\ge0),
 
-$$
+```math
 f-k\ge\frac65\sqrt{R_4}-o(D),
-$$
+```
 
-$$
+```math
 2(q-k)-k-z\ge P_F+\frac65\sqrt{R_4}-o(D),
-$$
+```
 
-$$
+```math
 q-k\ge\frac12P_F+\frac35\sqrt{R_4}+\frac{k+z}{2}-o(D).
-$$
+```
 
 These are sequence-asymptotic inequalities with no uniform finite error rate. Type II specializes to the already promoted Audit.174 result. Type I retains its actual (P_F,R_4); the result does not infer a disk, face width, vacancy, finite motion, or strict-D competitor.
 
@@ -41,23 +43,31 @@ These are sequence-asymptotic inequalities with no uniform finite error rate. Ty
 
 For a diameter pair `p,p'`, with `n=(p-p')/D`, and any other source point `x`,
 
-$$
+```math
 n\cdot(x-p)\le-\frac{|x-p|^2}{2D}<0.
-$$
+```
 
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 Thus (p) is a strict exposed vertex of the full-source hull, including when there are contact-isolated points. The canonical full-source midpoint localization gives a common center and radius (L_D=o(D)) for all actual diameter midpoints. Ordering selected support normals around the full-source convex boundary and projecting the exposed endpoints onto the tangent direction gives, for any oriented normal window of half-width (t<\pi/2\),
+```
 
-$$
+
+
+```math
 \#\{p:n_p\text{ in the window}\}\le 1+\frac{D\sin t+2L_D}{\cos t}.
-$$
+```
 
-This bound is independent of partner choices. After division by (D), continuous majorants of a point in successively smaller windows show that any weak limit of $\nu_D$ has no atoms. Canonical C-ZRF supplies (q\ge\lceil D\rceil), and the loaded hull perimeter gives (q\le\pi D).
+This bound is independent of partner choices. After division by (D), continuous majorants of a point in successively smaller windows show that any weak limit of $`\nu_D`$ has no atoms. Canonical C-ZRF supplies (q\ge\lceil D\rceil), and the loaded hull perimeter gives (q\le\pi D).
 
 For consecutive loaded vertices (p,q) with (|p-q|\le L), the midpoint identity gives
 
-$$
+```math
 D(n_p-n_q)=2(p-q)-2(m_p-m_q),
-$$
+```
 
 so their chosen normals differ by (o(1)). The cyclic order of strict supporting normals agrees with the cyclic hull-vertex order. If the forward interval from (n_p) to (n_q) were the long interval, all other loaded normals would lie in the complementary (o(1)) window. The window estimate would imply (q=o(D)), contradicting C-ZRF. The short forward normal interval is therefore used; convexity places the forward chord tangent between its rotated endpoint normals, with the positive orientation. This proves the oriented-chord assertion.
 
@@ -67,11 +77,11 @@ Take any subsequence on which (R_4/D^2\to r), and jointly extract a weak limit o
 
 For any finite collection of atoms, the induced relation graph is triangle-free: no three projective directions can be pairwise separated by (pi/3). At each unordered pair, crossing mass is at most the product of its two atomic masses. Weighted Mantel (equivalently, the weighted Motzkin–Straus bound) gives total crossing mass at most one quarter of the square of the total atomic mass. Exhausting the atoms yields
 
-$$
+```math
 r\le a^2/4,\qquad a\ge2\sqrt r.
-$$
+```
 
-Diagonal shrinking neighborhoods select complete trains (A_D) with (|A_D|/D\to a) and with only (o(D^2)) crossings incident to the complement. Since a train's terminal-midpoint separation is at most its crossing degree, Markov's inequality leaves only (o(D)) complementary trains whose terminal separation exceeds $\epsilon_DD$, for some $\epsilon_D\to0$. Singleton trains have coincident terminal midpoints.
+Diagonal shrinking neighborhoods select complete trains (A_D) with (|A_D|/D\to a) and with only (o(D^2)) crossings incident to the complement. Since a train's terminal-midpoint separation is at most its crossing degree, Markov's inequality leaves only (o(D)) complementary trains whose terminal separation exceeds $`\epsilon_DD`$, for some $`\epsilon_D\to0`$. Singleton trains have coincident terminal midpoints.
 
 ### Boundary recipients and cancellation
 
@@ -81,49 +91,57 @@ Fix recipient-count cutoff (M) and recipient-degree cutoff (L). The total recipi
 
 Every bounded facial boundary has zero displacement, and the two terminal vectors of every complementary train cancel. Therefore, exactly,
 
-$$
+```math
 \sum_{W_i\text{ in the component}}(b_{i+1}-b_i)
 =\sum_{\text{selected atomic terminal occurrences in the component}}e.
-$$
+```
 
-The left side has nonzero limiting vector: there is at least one outer chain and all its boundedly many forward chords have a common oriented tangent and length at least one. Mark the component by one chain-base normal and its ordered list of selected atomic terminal vectors. For fixed (M,L), each list has at most (ML) entries. Every coordinate marginal is dominated by the selected terminal-vector measure and hence is supported in the countable signed direction set of train atoms. There are countably many such finite lists. The exact cancellation identity determines the limiting normal from the normalized, nonzero list sum, so the normal marginal is countably supported. Distinct components choose distinct chain bases, so this same marginal is dominated by $\nu_D$; every limit of the latter is atomless. The marginal must vanish. Thus, for fixed cutoffs, the retained boundary-component count is (o(D)). The discarded-component bounds followed by (M,L\to\infty) give
+The left side has nonzero limiting vector: there is at least one outer chain and all its boundedly many forward chords have a common oriented tangent and length at least one. Mark the component by one chain-base normal and its ordered list of selected atomic terminal vectors. For fixed (M,L), each list has at most (ML) entries. Every coordinate marginal is dominated by the selected terminal-vector measure and hence is supported in the countable signed direction set of train atoms. There are countably many such finite lists. The exact cancellation identity determines the limiting normal from the normalized, nonzero list sum, so the normal marginal is countably supported. Distinct components choose distinct chain bases, so this same marginal is dominated by $`\nu_D`$; every limit of the latter is atomless. The marginal must vanish. Thus, for fixed cutoffs, the retained boundary-component count is (o(D)). The discarded-component bounds followed by (M,L\to\infty) give
 
-$$
+```math
 c_{\partial}=o(D).
-$$
+```
 
 ### Exact face ledger, including interior-only components
 
 Let (f_{\partial}) be the number of exceptional faces in boundary components, (N_{\partial}) and (N_\circ) the complementary-train edge counts in boundary and interior-only components, and (Q_\circ) the exceptional-face excess in the latter. Connectivity of the recipient multigraph, including loops and parallel edges, gives
 
-$$
+```math
 N_{\partial}\ge q+f_{\partial}-c_{\partial}.
-$$
+```
 
 Occurrence-counted terminal handshake gives the nonnegative boundary remainder
 
-$$
+```math
 0\le a_{\partial}=b+4f_{\partial}+Q-Q_\circ-2N_{\partial}
 \le2f_{\partial}-Q_\circ-2k+2c_{\partial}.
-$$
+```
 
 Every interior-only exceptional face contributes at least one unit to (Q_\circ), hence (Q_\circ\ge f-f_{\partial}), and therefore
 
-$$
+```math
 3f_{\partial}\ge f+2k-2c_{\partial}.
-$$
+```
 
 The exact interior-only atomic terminal population is (4(f-f_{\partial})+Q_\circ-2N_\circ). Adding it to (a_{\partial}), dividing by two, and using the previous inequality yields
 
-$$
+```math
 3(|A_D|+N_\circ)\le5(f-k+c_{\partial}).
-$$
+```
 
-Divide by (D), use (|A_D|/D\to a\ge2\sqrt r\), (N_\circ\ge0), and (c_{\partial}=o(D)). This gives $\liminf(f-k)/D\ge6\sqrt r/5$ along every joint-limit subsequence. Every subsequence has a further subsequence with (R_4/D^2\) convergent, proving the first bound. Finally, with (z=b-P_F\), the canonical train/face identity gives
 
-$$
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
+Divide by (D), use (|A_D|/D\to a\ge2\sqrt r\), (N_\circ\ge0), and (c_{\partial}=o(D)). This gives $`\liminf(f-k)/D\ge6\sqrt r/5`$ along every joint-limit subsequence. Every subsequence has a further subsequence with (R_4/D^2\) convergent, proving the first bound. Finally, with (z=b-P_F\), the canonical train/face identity gives
+```
+
+
+
+```math
 2(q-k)-k-z=P_F+Q-k\ge P_F+f-k,
-$$
+```
 
 which implies the two scalar bounds.
 

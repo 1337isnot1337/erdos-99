@@ -54,9 +54,9 @@ with unit path neighbors `a,b`; let `W_Q` be all path vertices. If
 `x in int(Q)` is at distance at least one from every vertex in `W_Q\{v}`, and
 `q in K\Q` is at distance at least one from every vertex in `W_Q`, then
 
-$$
+```math
 |x-q|>1.
-$$
+```
 
 This includes old source points and proposed points in another cell. Weak
 guards suffice; exterior equality cannot occur.
@@ -73,25 +73,25 @@ at least `sqrt(3)/2` at each side of a crossed unit edge, hence
 Suppose instead `r<1`. Let `u_a,u_b` be the unit vectors along the two incident
 edges. The weak neighbor guards imply
 
-$$
+```math
 x\cdot u_a\le r^2/2,\qquad x\cdot u_b\le r^2/2.
-$$
+```
 
 For any unit direction `z` outside the open sector between `u_a,u_b`, the
 circular angular distance from `x/r` to `z` is at least its distance to one
 of the two boundary rays. Thus
 
-$$
+```math
 x\cdot z\le \mu:=\max(x\cdot u_a,x\cdot u_b)\le r^2/2.
-$$
+```
 
 Write `q=t z` with `t>=1`, which follows from its unit-clearance from `v`. Since
 `t-\mu>0`, `t^2-2t\mu` is increasing for `t>=1`, and
 
-$$
+```math
 |x-q|^2\ge r^2+t^2-2t\mu
 \ge r^2+1-2\mu\ge1.
-$$
+```
 
 Equality requires `t=1` and `z` to be one of the boundary rays, which makes
 `q=a` or `q=b`; both lie on `partial Q`, excluded by `q in K\Q`.
@@ -109,15 +109,15 @@ Let `Q_1,Q_2` be distinct actual hull-augmented cells with path vertex sets
 `W_1,W_2`. Let `R` be their four distinct loaded hull-arc tips. Assume every
 point of `R` is extreme in `K` and
 
-$$
+```math
 |v-w|\ge4\quad(v,w\in R,\ v\ne w).
-$$
+```
 
 Set `S_i=(A intersect Q_i) minus W_i` and
 
-$$
+```math
 N_i=\{x\in int(Q_i): |x-w|\ge1\text{ for all }w\in W_i\setminus R\}.
-$$
+```
 
 For each `x in N_i`, every retained old point in `A\(S_i union R)` is at
 distance at least one from `x`. Every such point outside `W_i` is strictly
@@ -150,9 +150,9 @@ every point except those in the named deletion sets.
 Under the same four-tip hypotheses, every
 `x in N_1` and `y in N_2` satisfy
 
-$$
+```math
 |x-y|>1.
-$$
+```
 
 Call a point close if it is within distance one of a member of `R`. Pairwise
 tip separation gives at most one such member per point. By Section 2, a close
@@ -196,10 +196,10 @@ wall vertices, excluded from `S_i`; a hull-arc isolate belongs to only one
 interval between consecutive loaded vertices. The four loaded tips are
 disjoint from both isolate populations. Put
 
-$$
+```math
 R_{all}=S_1\cup S_2\cup R,
 \qquad m=|S_1|+|S_2|+4.
-$$
+```
 
 All actual contacts removed by `R_all` are incident to `R`; there are no
 contacts between members of `R` because their pairwise distances are at least
@@ -233,10 +233,10 @@ be counted in both local ledgers, the audited sufficient condition is
 
 For each cell let
 
-$$
+```math
 E_i=\{x\in int(Q_i):|x-w|>1\text{ for all }w\in W_i\setminus R\},
 \qquad M_i=Pack_1(E_i).
-$$
+```
 
 If `M_1+M_2>=|S_1|+|S_2|+4`, choose finite packets with total cardinality
 `m`. Dilate each packet by a sufficiently small common factor about an interior
@@ -245,9 +245,9 @@ internal unit pair opens, and Sections 2--3 retain strict full-source and
 cross-cell lower clearance. Thus the replacement has `j=0<t`, contradicting
 the paired endpoint. Consequently
 
-$$
+```math
 \boxed{M_1+M_2\le |S_1|+|S_2|+3.}
-$$
+```
 
 The Audit.84 single-cell lower construction gives `M_i>=|S_i|`, so the sum of
 the two strict-capacity surpluses is at most three. This is a conditional

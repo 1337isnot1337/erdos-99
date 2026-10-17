@@ -16,22 +16,22 @@ Let (A) be the contact-minimal, then diameter-pair-minimal C-II representative,
 with all source points retained. Let (B) be the loaded endpoints of a
 relative-interior normalized stress and
 
-$$
+```math
 K=Q^{\mathsf T}\Lambda^+Q,
-$$
+```
 
 where the diameter edges have one legal C53 projective orientation. If (D\ge9),
 then
 
-$$
+```math
 \boxed{\min_{e\ne f}K_{ef}=0\text{ is impossible}.}
-$$
+```
 
 Thus every surviving two-dimensional C-II stress is in the strict-negative phase
 
-$$
+```math
 \boxed{\min_{e\ne f}K_{ef}<0.}
-$$
+```
 
 This conclusion is independent of (s_Z), the cyclic/forest topology of the actual
 diameter graph, and the number or location of contact-isolated source points.
@@ -40,44 +40,44 @@ diameter graph, and the number or location of contact-isolated source points.
 
 Write the consistently oriented diameter vectors as
 
-$$
+```math
 u_i=a_i(1,t_i),\qquad a_i>0,qquad t_1<\cdots<t_m,
-$$
+```
 
 and put (Γ=\operatorname{diag}(a_i\beta_i)). The promoted C53 identities are
 
-$$
+```math
 M=\Gamma(\Beta^{-1}-K)\Gamma\succeq0,
 \qquad M\mathbf1=Mt=0,
-$$
+```
 
 with (M_{ij}=-\gamma_i\gamma_jK_{ij}) for (i\ne j).
 
 Assume (min_{i\ne j}K_{ij}=0). Then all off-diagonal entries of (K) are
 nonnegative, so (M) is a weighted Laplacian. Since the slopes (t_i) are distinct,
 
-$$
+```math
 0=t^{\mathsf T}Mt
  =\sum_{i<j}\gamma_i\gamma_jK_{ij}(t_i-t_j)^2
-$$
+```
 
 forces every off-diagonal (K_{ij}) to vanish. Hence (K=\Beta^{-1}).
 
 Let (W) be the actual circular-planar effective-resistance metric. Its interval
 split representation gives, after centering,
 
-$$
+```math
 K=\sum_A\lambda_Az_Az_A^{\mathsf T},
 \qquad \lambda_A\ge0,
 \qquad z_A=Q^{\mathsf T}\mathbf1_A.
-$$
+```
 
 For three ordered diameter edges (i<j<k), the audited C53 interval-sign lemma is
 
-$$
+```math
 z_k(z_i-z_j)\le0,
 \qquad z_i(z_k-z_j)\le0.
-$$
+```
 
 Comparing the zero entries (K_{ri}=K_{r,i+1}) term by term shows that every
 positive split with (z_i\ne z_{i+1}) has support contained in
@@ -89,9 +89,9 @@ impossible because it would contribute positively to every off-diagonal entry of
 It follows that every positive split is singleton-supported. A singleton split gives
 an additive resistance metric, so
 
-$$
+```math
 W_{ij}=r_i+r_j\qquad(i\ne j).
-$$
+```
 
 For completeness, no non-singleton zero-crossing split has been silently excluded:
 if a proper interval split crosses no diameter edge, each nonempty shore contains a
@@ -104,11 +104,11 @@ SEPq now applies to the actual positive contact network. It supplies a contact
 vertex (z) such that every component of (C-z) contains at most one loaded
 terminal. Therefore
 
-$$
+```math
 \deg_C(z)\ge |B|\quad(z\notin B),
 \qquad
 \deg_C(z)\ge |B|-1\quad(z\in B).
-$$
+```
 
 C34 gives (2|B|\ge\lceil D\rceil+2), so (D\ge9) implies (|B|\ge6). The
 C26/C35 degree caps are (5) for an unloaded vertex and (3) for a loaded one,

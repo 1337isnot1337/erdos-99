@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_completion_shell_ebb_correction_2026-09-09.md) · source SHA-256 `ac58ffbf4ae7b98646b539e7218ae235ceac43e7b41f7e46fc8d3cbc23034913`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-4FED2AB87E28","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — correction to DC loaded-boundary contact asymptotic
 
@@ -16,34 +18,34 @@
 
 The completion-shell report DC proves the exact finite inequality
 
-$$
+```math
 \boxed{e_{BB}\ge q-x_B.}
 \tag{C1}
-$$
+```
 
 It then states that in the `x_B=o(D)` endpoint, where `q/D->pi`, one has
 
-$$
+```math
 e_{BB}/D\to\pi.
-$$
+```
 
 That conclusion does **not** follow from C1. C1 supplies only a lower bound. No matching upper bound `e_BB<=q+o(D)` is proved in DC.
 
 The correct consequence is
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\frac{e_{BB}}D\ge\pi.
 }
 \tag{C2}
-$$
+```
 
 or, equivalently,
 
-$$
+```math
 \boxed{e_{BB}\ge(\pi-o(1))D.}
 \tag{C3}
-$$
+```
 
 All claims in DC about the near-circle force hull, completion shell, and external population remain unchanged. Only the asserted convergence of `e_BB/D` is withdrawn.
 
@@ -53,23 +55,23 @@ All claims in DC about the near-circle force hull, completion shell, and externa
 
 In the small-outer-walk branch,
 
-$$
+```math
 x_B=o(D),
 \qquad
 q/D\to\pi.
-$$
+```
 
 The outer walk has `q` distinguished intervals between consecutive loaded hull vertices and total excess
 
-$$
+```math
 \sum_i(\ell_i-1)=x_B.
-$$
+```
 
 Therefore all but `o(D)` intervals have length one, and each such interval is a direct unit contact between consecutive loaded hull vertices. Hence
 
-$$
+```math
 e_{BB}\ge q-o(D)=(\pi-o(1))D.
-$$
+```
 
 This proves C2-C3.
 
@@ -81,30 +83,30 @@ Extra loaded-loaded unit chords are not excluded by this argument. The loaded de
 
 ZU gives
 
-$$
+```math
 c_I+e_{BB}+s_C=q-2+k,
 \qquad
 k:=d_H+s_Z.
-$$
+```
 
 Thus
 
-$$
+```math
 e_{BB}\le q-2+k.
 \tag{2.1}
-$$
+```
 
 ZT gives
 
-$$
+```math
 q=x_B+Q+2k,
-$$
+```
 
 so `k<=q/2`. Consequently the current exact stack gives only
 
-$$
+```math
 e_{BB}\le\frac32q+O(1),
-$$
+```
 
 before additional information is inserted. This is fully compatible with a linear number of extra loaded-loaded chords.
 
@@ -118,48 +120,49 @@ Although equality is unavailable, the lower bound C1 still couples the AR residu
 
 Write again
 
-$$
+```math
 k=d_H+s_Z.
-$$
+```
 
 ZU and C1 give
 
-$$
+```math
 \begin{aligned}
 c_I+s_C
 &=q-2+k-e_{BB}\\
 &\le k+x_B-2.
 \end{aligned}
 \tag{3.1}
+```
 
 Up to the harmless finite constant, therefore
 
-\[
+```math
 \boxed{s_C\le k+x_B-c_I+O(1).}
 \tag{3.2}
-$$
+```
 
 AR gives
 
-$$
+```math
 S+R_I+s_B=x_B+Q+4-c_I+s_C,
 \qquad S=\sum_r\delta_r.
-$$
+```
 
 Insert (3.2) and discard `R_I,s_B>=0`:
 
-$$
+```math
 \boxed{
 S
 \le
 Q+k+2x_B-2c_I+O(1).
 }
 \tag{3.3}
-$$
+```
 
 Since ZT gives `q=x_B+Q+2k`, this may also be written
 
-$$
+```math
 \boxed{
 S
 \le
@@ -169,18 +172,18 @@ S
 +O(1).
 }
 \tag{3.4}
-$$
+```
 
 In the near-circle branch `x_B=o(D)`, `q/D->pi`, so
 
-$$
+```math
 \boxed{
 \limsup\frac SD
 \le
 \frac12\left(\pi+\limsup\frac QD\right)
 }
 \tag{3.5}
-$$
+```
 
 when the displayed limsup exists after subsequence extraction.
 
@@ -208,9 +211,9 @@ Any report using `e_BB/D->pi` as an equality in ZU/ZK algebra must be re-audited
 
 A legitimate strengthening would be:
 
-$$
+```math
 \boxed{e_{BB}\le q+o(D)}
-$$
+```
 
 in the near-circle branch.
 

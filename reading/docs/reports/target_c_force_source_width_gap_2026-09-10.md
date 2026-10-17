@@ -21,16 +21,16 @@
 
 Let
 
-$$
+```math
 F=\operatorname{conv}B_+\subseteq K=\operatorname{conv}A
-$$
+```
 
 be the force hull and the full source hull of the lexicographically normalized C-II
 source.  Both have diameter `D`.  Let
 
-$$
+```math
 \Theta_H\subset\mathbb R/\pi\mathbb Z
-$$
+```
 
 be the set of unoriented directions of the **actual** diameter edges.  C65 identifies
 their endpoints with force-visible loaded vertices, so every `theta in Theta_H` is a
@@ -38,64 +38,64 @@ width-`D` direction of both `F` and `K`.
 
 Order the `h=|H|` distinct directions cyclically on the projective circle and let
 
-$$
+```math
 \gamma_1,\ldots,\gamma_h>0,
 \qquad
 \sum_i\gamma_i=\pi
 \tag{WG.1}
-$$
+```
 
 be the projective angular gaps.
 
 The new exact inequality is
 
-$$
+```math
 \boxed{
 \operatorname{per}K-\operatorname{per}F
 \le
 \frac D2\sum_{i=1}^h\gamma_i^2.
 }
 \tag{WG.2}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \sum_i\gamma_i^2
 \ge
 \frac{2(\operatorname{per}K-\operatorname{per}F)}D,
 }
 \tag{WG.3}
-$$
+```
 
 and, with `Gamma_H=max_i gamma_i`,
 
-$$
+```math
 \boxed{
 \Gamma_H
 \ge
 \frac{2(\operatorname{per}K-\operatorname{per}F)}{\pi D}.
 }
 \tag{WG.4}
-$$
+```
 
 Combining CP and PI, every fixed pinned/contact regime
 
-$$
+```math
 \limsup\frac{e_{BB}+2s_C}{D}\le\lambda_0<\lambda_{\rm disk}
-$$
+```
 
 therefore has a **macroscopic hole in its actual diameter-direction support**:
 
-$$
+```math
 \boxed{
 \liminf\Gamma_H
 \ge
 \frac{2}{\pi}\bigl(\pi-p_+(\lambda_0)\bigr)>0.
 }
 \tag{WG.5}
-$$
+```
 
 This is qualitatively different from the previous scalar-surplus conclusions: low
 surplus now removes an open interval of projective directions from the full actual
@@ -121,9 +121,9 @@ and WG.1 is well-defined.
 
 For a compact convex body `C`, write
 
-$$
+```math
 w_C(\theta)
-$$
+```
 
 for its width in projective direction `theta`.
 
@@ -131,25 +131,25 @@ If `xy` is an actual diameter edge of direction `theta`, C65 puts `x,y in B_+`, 
 `x,y in F subseteq K`.  Their projection difference in direction `theta` is exactly
 `D`.  Since both bodies have diameter at most `D`,
 
-$$
+```math
 \boxed{
 w_F(\theta)=w_K(\theta)=D.}
 \tag{WG.6}
-$$
+```
 
 Therefore the nonnegative width difference
 
-$$
+```math
 g(\theta):=w_K(\theta)-w_F(\theta)
 \tag{WG.7}
-$$
+```
 
 satisfies
 
-$$
+```math
 \boxed{g(\theta)=0\quad(\theta\in\Theta_H).}
 \tag{WG.8}
-$$
+```
 
 This is the decisive source/force coupling.  It uses the **actual** diameter support;
 a selected stress with missing actual diameter edges would not suffice.
@@ -160,10 +160,10 @@ a selected stress with missing actual diameter edges would not suffice.
 
 For every diameter-`D` convex body `C`,
 
-$$
+```math
 \boxed{|w_C(\theta)-w_C(\phi)|\le D\,d_\pi(\theta,\phi),}
 \tag{WG.9}
-$$
+```
 
 where `d_pi` is projective angular distance.
 
@@ -171,26 +171,26 @@ where `d_pi` is projective angular distance.
 
 The width is the support function of the difference body:
 
-$$
+```math
 w_C(u)=h_{C-C}(u).
-$$
+```
 
 Every vector of `C-C` has Euclidean norm at most `D`.  Hence for unit vectors `u,v`,
 
-$$
+```math
 |h_{C-C}(u)-h_{C-C}(v)|
 \le D|u-v|
 \le D\,\angle(u,v).
-$$
+```
 
 Passing to unoriented directions gives WG.9. `square`
 
 Applying WG.9 to both `K` and `F`,
 
-$$
+```math
 \boxed{|g(\theta)-g(\phi)|\le2D\,d_\pi(\theta,\phi).}
 \tag{WG.10}
-$$
+```
 
 ---
 
@@ -199,40 +199,40 @@ $$
 Fix one projective gap of length `gamma`, parameterized by `0<=t<=gamma`, with actual
 diameter directions at both endpoints.  By WG.8 and WG.10,
 
-$$
+```math
 g(t)
 \le2D\min\{t,\gamma-t\}.
 \tag{WG.11}
-$$
+```
 
 Therefore
 
-$$
+```math
 \int_0^\gamma g(t)\,dt
 \le
 2D\int_0^\gamma\min\{t,\gamma-t\}\,dt
 =\frac D2\gamma^2.
 \tag{WG.12}
-$$
+```
 
 Sum over all projective gaps.  Cauchy's width formula gives
 
-$$
+```math
 \int_0^\pi g(\theta)\,d\theta
 =\operatorname{per}K-\operatorname{per}F.
 \tag{WG.13}
-$$
+```
 
 Equations WG.12--WG.13 prove WG.2 and WG.3.
 
 Finally
 
-$$
+```math
 \sum_i\gamma_i^2
 \le
 \Gamma_H\sum_i\gamma_i
 =\pi\Gamma_H,
-$$
+```
 
 so WG.4 follows. `square`
 
@@ -242,47 +242,47 @@ so WG.4 follows. `square`
 
 CP proves for every global source
 
-$$
+```math
 \operatorname{per}K
 >\pi D-\frac{\pi\sqrt3}{2}.
 \tag{WG.14}
-$$
+```
 
 PI proves that for every fixed `lambda_0<lambda_disk`, any unbounded post-ZF sequence
 with
 
-$$
+```math
 \limsup\lambda_D
 :=
 \limsup\frac{e_{BB}+2s_C}{D}
 \le\lambda_0
-$$
+```
 
 satisfies
 
-$$
+```math
 \limsup\frac{\operatorname{per}F}{D}
 \le p_+(\lambda_0)<\pi.
 \tag{WG.15}
-$$
+```
 
 Thus
 
-$$
+```math
 \liminf\frac{\operatorname{per}K-\operatorname{per}F}{D}
 \ge\pi-p_+(\lambda_0).
 \tag{WG.16}
-$$
+```
 
 Insert this into WG.3--WG.4 to obtain
 
-$$
+```math
 \boxed{
 \liminf\sum_i\gamma_i^2
 \ge2\bigl(\pi-p_+(\lambda_0)\bigr),
 }
 \tag{WG.17}
-$$
+```
 
 and WG.5.
 
@@ -290,9 +290,9 @@ For orientation only, at `lambda_0=0.60`, PI gives
 `p_+(lambda_0)=3.029400052854...`, so the actual diameter directions omit an interval
 of asymptotic projective length at least
 
-$$
+```math
 0.07142\ldots\text{ radians}\approx4.09^\circ.
-$$
+```
 
 No decimal is used in the proof.
 

@@ -17,43 +17,43 @@ The previous line-graph basis note gave 85 canonical cross-root four-cycles whic
 
 Fix reciprocal points `0` and `1`. For every pair
 
-$$
+```math
 2\le i<j\le7,
-$$
+```
 
 use the three simple `K8` four-cycles
 
-$$
+```math
 C^{(1)}_{ij}=(0,1,i,j,0),
-$$
+```
 
-$$
+```math
 C^{(2)}_{ij}=(0,1,j,i,0),
-$$
+```
 
 and
 
-$$
+```math
 C^{(3)}_{ij}=(0,i,1,j,0).
-$$
+```
 
 There are
 
-$$
+```math
 3\binom62=\boxed{45}
-$$
+```
 
 such cross-root four-cycles.
 
 Let `H` be the reciprocal log-sine cochain on `L(K8)`. On every genuine reciprocal triangle, the triangle-side cycle sum of `H` vanishes identically. Then
 
-$$
+```math
 \boxed{
 \text{common reciprocal metric}
 \iff
 \text{all 45 displayed four-cycle sums of }H\text{ vanish.}
 }
-$$
+```
 
 The forward direction is immediate from exactness of `H`. The reverse direction reduces exactly to the existing fifteen ground-root metric equations.
 
@@ -61,13 +61,13 @@ The forward direction is immediate from exactness of `H`. The reverse direction 
 
 For each `2 <= i < j <= 7`, let
 
-$$
+```math
 S_{ij}=S_0(1,i,j)
-$$
+```
 
 be the root-`0` star triangle on the three segment vertices `01,0i,0j`. Let `T_{abc}` denote the triangle-side cycle on segments `ab,bc,ac`, with the orientations fixed in the verifier. Then the following identity holds as an integer 1-chain on `L(K8)`:
 
-$$
+```math
 \boxed{
 2S_{ij}
 =
@@ -75,16 +75,16 @@ $$
 +C^{(1)}_{ij}-C^{(2)}_{ij}-C^{(3)}_{ij}.
 }
 \tag{1}
-$$
+```
 
 This is not a trigonometric approximation. It is a coefficientwise identity of the 168 oriented line-graph edges.
 
 The four `T` terms vanish identically for a Euclidean reciprocal angular system. If the three four-cycle sums on the right of (1) vanish, then the `S_ij` sum vanishes. Doing this for all fifteen pairs gives all fifteen root-fan equations
 
-$$
+```math
 S_0(1,i,j)=0,
 \qquad 2\le i<j\le7.
-$$
+```
 
 Those fifteen equations form the complete ground-root metric basis already proved in `target_c_support7_global_segment_order_2026-09-19.md` and `target_c_support7_h6_metric_coordinate_reduction_2026-09-19.md`. Hence a common reciprocal metric follows.
 

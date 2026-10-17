@@ -28,15 +28,15 @@ contact isolates, remain in the triangulation.
 Let `A` be the canonical triangle-free global minimizer, chosen
 contact-minimal and then diameter-pair-minimal. Set
 
-$$
+```math
 n=|A|,\quad D=\operatorname{diam}A,\quad K=\operatorname{conv}A,
 \quad a=\sqrt3/4,\quad a_0=2a,\quad
 g_A=n-1-\frac{\pi}{2\sqrt3}D^2>0,
-$$
-$$
+```
+```math
 \delta_K=\frac{\pi D^2}{4}-\operatorname{area}K,
 \qquad \kappa=\frac{2-\sqrt3}{4}.
-$$
+```
 
 The global population comparison is
 [canonical full-source geometry](../targets/target-c/58-full-source-geometry-audit.md).
@@ -51,9 +51,9 @@ Let `J` consist of labels whose hull-clipped Voronoi cells touch
 full bounded Voronoi cell inside `K` and inside its radius-one
 ball. The previous candidate proves
 
-$$
+```math
 m\le (8/\pi)\operatorname{per}K+1\le8D+1. \tag{1}
-$$
+```
 
 Take any finite Delaunay triangulation of `A`, choosing diagonals
 at cocircular degeneracies. Let `b` count **all** labels on the
@@ -70,9 +70,9 @@ Every other face belongs to `G`.
 For `T in G`, its circumcenter belongs to the full bounded
 Voronoi cell of at least one vertex outside `J`. Consequently
 
-$$
+```math
 R_T\le1. \tag{2}
-$$
+```
 
 This does not hold for every boundary triangle. The checker
 includes a hull-covered three-point thin triangle with
@@ -83,9 +83,9 @@ Complete the planar subgraph induced by `J` to a triangulation
 on `J` in `K`, preserving its edges. Every original all-`J`
 triangular face remains a face. Euler gives
 
-$$
+```math
 f_B\le2m-b-2. \tag{3}
-$$
+```
 
 Every Delaunay edge joining `J` to its complement has length at
 most two, by its incident circumcenter in a bounded complement
@@ -100,9 +100,9 @@ The number of mixed faces therefore equals `E_{JI}`. In
 particular, the number of faces touching `J` is at most
 `26m-b-2`, and
 
-$$
+```math
 W:=J\cup N_{\rm Del}(J),\qquad |W|\le25m. \tag{4}
-$$
+```
 
 This boundary removal is analytical accounting. No source label
 is deleted from a configuration.
@@ -117,37 +117,37 @@ Explicitly, with circumradius `R`, every angle is at least
 `ell=arcsin(1/(2R))`. Concavity of `log sin` at fixed `R`
 minimizes area when two angles are `ell`:
 
-$$
+```math
 \operatorname{area}T\ge
 \frac{\sqrt{4R^2-1}}{4R^2}\ge a,
 \qquad 1/\sqrt3\le R\le1.
-$$
+```
 
 Set
 
-$$
+```math
 \sigma_T=\operatorname{area}T-a\quad(T\in G),\qquad
 \Sigma=\sum_{T\in G}\sigma_T\ge0.
-$$
+```
 
 Counting every face and every original label yields the identity
 
-$$
+```math
 \boxed{
 \Sigma+A_B+\delta_K+a_0g_A=a(b+f_B).
 } \tag{5}
-$$
+```
 
 Indeed the triangle-area partition gives
 `Sigma=area K-A_B-a(2n-b-2-f_B)`.
 Using (3),
 
-$$
+```math
 \boxed{
 \Sigma+A_B+\delta_K+a_0g_A\le a_0(m-1),
 \qquad \Sigma<4\sqrt3D.
 } \tag{6}
-$$
+```
 
 Unlike the unit-wall theorem, (5) assumes no unit hull sides
 and no maximal auxiliary completion. It uses the actual
@@ -164,18 +164,18 @@ The same local paired calculation as Audit.161 therefore applies.
 If the largest angle is `alpha>=pi/2` and the neighboring
 opposite angle is `beta<=pi-alpha`, the two excesses pay
 
-$$
+```math
 \sigma_T+\sigma_{T'}\ge
 \frac12\sin\alpha-a(1+\cos\alpha)\ge\kappa.
-$$
+```
 
 Here `alpha<=2pi/3` follows from separation and `R_T<=1`;
 the neighbor's other angles are at least `pi/6`.
 Each excess is charged at most four times. Hence
 
-$$
+```math
 H_0\le4\Sigma/\kappa. \tag{7}
-$$
+```
 
 Mark `W`, all vertices incident to a face in `G` with
 `sigma_T>=1/100`, and all vertices incident to the `H_0` faces.
@@ -183,11 +183,11 @@ Outside these marks, every incident face is acute with small
 excess. The standalone acute-triangle estimates proved in
 Audit.161 give
 
-$$
+```math
 1\le |e|<11/10,\qquad
 \max_e(|e|-1)\le5\sigma_T,\qquad
 |\angle-\pi/3|\le50\sigma_T. \tag{8}
-$$
+```
 
 For clarity, this is a new full-source extension of its local
 proof, not an application of the promoted fixed-unit-wall claim
@@ -203,11 +203,11 @@ There are fewer than `150Sigma` such vertices.
 
 The exceptional set `E` can therefore be chosen with
 
-$$
+```math
 \boxed{
 |E|\le25m+(450+12/\kappa)\Sigma.
 } \tag{9}
-$$
+```
 
 Every label outside `E` has Delaunay valence six and satisfies
 (8) on all incident faces. All these labels are actual source
@@ -217,10 +217,10 @@ points; they may be contact-isolated.
 
 For all acute small-excess faces in `G`, (8) implies
 
-$$
+```math
 \sum_T\sum_{e\subset T}(|e|-1)\le15\Sigma,\qquad
 \sum_T\sum_{\theta\subset T}|\theta-\pi/3|\le150\Sigma. \tag{10}
-$$
+```
 
 These are total budgets, not budgets supported only on `E`.
 Diffuse strain in quadratically many faces is allowed.
@@ -229,11 +229,11 @@ For `epsilon>0`, mark endpoints of an edge in such a face with
 length greater than `1+epsilon`. At most `30Sigma/epsilon`
 additional labels are marked. Consequently all but
 
-$$
+```math
 \boxed{
 25m+(450+12/\kappa)\Sigma+30\Sigma/\epsilon
 } \tag{11}
-$$
+```
 
 source labels have six distinct Delaunay neighbors within
 `1+epsilon`.
@@ -267,22 +267,22 @@ For any unit direction `u`, choose the two consecutive neighbor
 vectors `r_i=x-y_i` bracketing `u`. Each makes angle at most
 `pi/3+10epsilon` with `u`. Since `|r_i|>=1`,
 
-$$
+```math
 u\cdot r_i\ge\cos(\pi/3+10\epsilon)
 \ge1/2-10\epsilon=1/2-\delta/2.
-$$
+```
 
 Translating `x` to `x-delta u` while fixing either neighbor gives
 
-$$
+```math
 |r_i-\delta u|^2-1
 \le(1+\delta/20)^2-1
 -2\delta(1/2-\delta/2)+\delta^2
-$$
-$$
+```
+```math
 =-(9/10)\delta+(801/400)\delta^2<0.
 \tag{12}
-$$
+```
 
 Therefore both neighbors are actual strict lower blockers for
 that finite single-site translation. Their vectors bracket
@@ -303,9 +303,9 @@ be the exceptions from (11) with `epsilon=delta/20`.
 If `x in S minus E_delta` and `nu!=0` supports `conv S` at `x`,
 then
 
-$$
+```math
 \boxed{\nu\cdot u>0.} \tag{13}
-$$
+```
 
 To prove this, choose two strictly bracketing neighbor rays from
 Section 6. If `u` coincides with one ray, choose its immediate

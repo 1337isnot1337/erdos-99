@@ -16,9 +16,9 @@
 
 The post-ZF currency
 
-$$
+```math
 s_Z:=e+h-(2v-2)\ge0
-$$
+```
 
 has so far been used mainly as a mixed-row surplus. It has a second exact meaning: it is the affine dimension of the normalized KKT stress polytope. Consequently every extreme normalized stress simultaneously deletes at least `s_Z` actual contact/diameter constraints from its positive support, while retaining universal PSD and the canonical connected diameter-spanning positive contact component.
 
@@ -32,23 +32,23 @@ Work on the nonisolated C65 core. Let `v` be its vertices, `e` its actual unit c
 
 Let `R` be the ordinary planar bar-rigidity matrix for the equality framework on `C union H`. ZF gives
 
-$$
+```math
 \boxed{\operatorname{rank}R=2v-3.}
 \tag{ES.1}
-$$
+```
 
 A KKT multiplier is `x=(alpha,beta)>=0` with equilibrium
 
-$$
+```math
 \sum_{j:ij\in C}\alpha_{ij}(p_i-p_j)
 =
 \sum_{j:ij\in H}\beta_{ij}(p_i-p_j).
 \tag{ES.2}
-$$
+```
 
 Changing the sign of the diameter coordinates identifies the full linear KKT equilibrium space `W` with the ordinary bar self-stress space. Hence
 
-$$
+```math
 \begin{aligned}
 \dim W
 &=m-\operatorname{rank}R\\
@@ -56,16 +56,16 @@ $$
 &=s_Z+1.
 \end{aligned}
 \tag{ES.3}
-$$
+```
 
 The normalized KKT polytope is
 
-$$
+```math
 \mathcal P
 =
 \left\{(\alpha,\beta)\in W\cap\mathbb R^m_{\ge0}:\sum_{h\in H}\beta_h=1\right\}.
 \tag{ES.4}
-$$
+```
 
 C65 supplies a normalized point `x^0=(alpha^0,beta^0)` with every actual contact and diameter coordinate strictly positive.
 
@@ -79,36 +79,36 @@ Let `K=W cap R^m_{>=0}` and `L(alpha,beta)=sum_H beta`.
 
 Every nonzero `x in K` satisfies
 
-$$
+```math
 \boxed{L(x)>0.}
 \tag{ES.5}
-$$
+```
 
 ### Proof
 
 If `L(x)=0`, nonnegativity gives `beta=0`. Equilibrium becomes a nonnegative contact-only self-stress. Dot the equation at each vertex with its position and sum. Every unit contact contributes `alpha_ij`, so
 
-$$
+```math
 \sum_{ij\in C}\alpha_{ij}=0.
-$$
+```
 
 All `alpha_ij` are nonnegative, hence all vanish. Thus `x=0`, contradiction. `square`
 
 The same calculation gives the unnormalized virial identity
 
-$$
+```math
 \boxed{\sum_C\alpha=D^2\sum_H\beta.}
 \tag{ES.6}
-$$
+```
 
 Therefore on `P`,
 
-$$
+```math
 \sum_C\alpha=D^2,
 \qquad
 \sum_H\beta=1,
 \tag{ES.7}
-$$
+```
 
 so `P` is compact.
 
@@ -118,10 +118,10 @@ so `P` is compact.
 
 ### Theorem ES.2
 
-$$
+```math
 \boxed{\dim_{aff}\mathcal P=s_Z.}
 \tag{ES.8}
-$$
+```
 
 ### Proof
 
@@ -139,10 +139,10 @@ Thus `s_Z` is an actual moduli dimension of normalized nonnegative equilibrium s
 
 For any vertex `x*=(alpha*,beta*)` of `P`, at least `s_Z` coordinates vanish. Equivalently,
 
-$$
+```math
 \boxed{|supp(x^*)|\le m-s_Z=2v-2.}
 \tag{ES.9}
-$$
+```
 
 ### Proof
 
@@ -150,35 +150,35 @@ Let `Z={j:x*_j=0}`. If `|Z|<s_Z=dim_aff P`, the tangent space of `aff P` contain
 
 All coordinates outside `Z` are strictly positive at `x*`. For sufficiently small `t>0`, both `x*+tw` and `x*-tw` remain nonnegative, normalized, and in equilibrium. Hence
 
-$$
+```math
 x^*=\tfrac12(x^*+tw)+\tfrac12(x^*-tw)
-$$
+```
 
 is a nontrivial convex decomposition in `P`, contradicting extremality. Thus `|Z|>=s_Z`. `square`
 
 Write
 
-$$
+```math
 z_C=|\{e\in C:\alpha^*_e=0\}|,
 \qquad
 z_H=|\{h\in H:\beta^*_h=0\}|.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{z_C+z_H\ge s_Z,}
 \tag{ES.10}
-$$
+```
 
 so at least one of
 
-$$
+```math
 \boxed{z_C\ge s_Z/2}
 \qquad\text{or}\qquad
 \boxed{z_H\ge s_Z/2}
 \tag{ES.11}
-$$
+```
 
 holds.
 
@@ -188,10 +188,10 @@ holds.
 
 C53 proves universal selected-stress PSD. Hence for every vertex `x*` of `P`,
 
-$$
+```math
 \boxed{\Omega(x^*)=L_C(\alpha^*)-L_H(\beta^*)\succeq0.}
 \tag{ES.12}
-$$
+```
 
 The canonical support theorem applies to every normalized KKT stress: the positive contact graph has exactly one nontrivial connected component, it contains the endpoints of every positive diameter edge, and it spans Euclidean diameter `D`.
 
@@ -210,32 +210,32 @@ No equivalent network, replacement hull, or modified source is used.
 
 NB proves
 
-$$
+```math
 x_B+Q+2s_Z\ge(c_*-o(1))D,
 \qquad c_*=0.6099043189\ldots .
 \tag{ES.13}
-$$
+```
 
 Its crude three-way split includes
 
-$$
+```math
 s_Z\ge(c_*/6-o(1))D
 =0.1016507198\ldots D-o(D).
 \tag{ES.14}
-$$
+```
 
 In that branch, an extreme normalized PSD stress omits at least
 
-$$
+```math
 \boxed{(0.1016507198\ldots-o(1))D}
 \tag{ES.15}
-$$
+```
 
 actual rows. Moreover either at least
 
-$$
+```math
 (0.0508253599\ldots-o(1))D
-$$
+```
 
 actual contacts vanish from its positive support, or at least that many actual diameter pairs vanish from its positive support.
 
@@ -247,37 +247,37 @@ This is not yet a contradiction. It turns the `s_Z` alternative into a concrete 
 
 Let `x^(1),...,x^(N)` be the vertices of `P`. A relative-interior point `x^0` admits a convex representation with positive coefficients on a finite vertex family,
 
-$$
+```math
 x^0=\sum_r\lambda_r x^{(r)},
 \qquad \lambda_r>0.
 \tag{ES.16}
-$$
+```
 
 Linearity and universal PSD give
 
-$$
+```math
 \Omega(x^0)=\sum_r\lambda_r\Omega(x^{(r)}),
-$$
+```
 
 and for PSD matrices the kernel of a positive sum is the intersection of the kernels. Therefore
 
-$$
+```math
 \boxed{\ker\Omega(x^0)=\bigcap_r\ker\Omega(x^{(r)}).}
 \tag{ES.17}
-$$
+```
 
 ZR gives
 
-$$
+```math
 \ker\Omega(x^0)=span\{\mathbf1,P_x,P_y\}.
-$$
+```
 
 By Caratheodory, a representation of `x^0` needs at most `s_Z+1` vertices after discarding zero coefficients. Thus one may choose `k<=s_Z+1` sparse extreme PSD stresses such that
 
-$$
+```math
 \boxed{span\{\mathbf1,P_x,P_y\}=\bigcap_{r=1}^{k}\ker\Omega(x^{(r)}).}
 \tag{ES.18}
-$$
+```
 
 Individual extreme stresses may have larger kernels; no non-affine scalar mode survives all of them.
 

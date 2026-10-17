@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_two_leaf_common_center_energy_t18436_2026-09-15.md) · source SHA-256 `af972dba71f8e5b1e114558d6043f31655218062e858c31a0ad16d034b5c006c`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 8 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "df808fbebfd11bdf51ecd60633d5eae357bcefda", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_two_leaf_common_center_energy_t18436_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "16123cdf4215c493bc2ffedb8a43cd7da4ebe2a5364ede80ed6c8e34c0036c5c"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -16,12 +18,12 @@
 The near-frontier phase-localization theorem gives two retained outer-to-outer train
 populations in the two leaf phases of the dominant exact `pi/3` orbit:
 
-$$
+```math
 P_U>0.103-o(1),
 \qquad
 P_V>0.103-o(1).
 \tag{CE.1}
-$$
+```
 
 This note couples those populations through the center phase.  After discarding less
 than `0.03405D` retained pair weight in total, every remaining train in both leaf
@@ -33,12 +35,12 @@ terminal directional-energy payment.
 
 The result is
 
-$$
+```math
 \boxed{
 E_U+E_V>0.01847-o(1),
 }
 \tag{CE.2}
-$$
+```
 
 where `E_U D` and `E_V D` are the retained-pair-weighted sums of the exact two-terminal
 directional energies in the two leaf phases.
@@ -52,63 +54,63 @@ outer directional-energy budget.
 
 Write the dominant orbit phase masses as
 
-$$
+```math
 C\ge U\ge V.
-$$
+```
 
 The `t<=1.8436` two-leaf theorem supplies the safe bounds
 
-$$
+```math
 W:=C+U+V<1.912456+o(1),
 \tag{CE.3}
-$$
+```
 
-$$
+```math
 E_{dom}>0.90689967-o(1),
 \tag{CE.4}
-$$
+```
 
 and
 
-$$
+```math
 U,V<0.513-o(1).
 \tag{CE.5}
-$$
+```
 
 Let
 
-$$
+```math
 x=CU-e(C,U),
 \qquad
 y=CV-e(C,V)
-$$
+```
 
 be the missing center/leaf crossing masses, and put
 
-$$
+```math
 h=C(U+V)-E_{dom}.
-$$
+```
 
 The hostile-audited center/leaf correlation is
 
-$$
+```math
 \left(1-{V\over C}\right)x
 +
 \left(1-{U\over C}\right)y
 \le h.
 \tag{CE.6}
-$$
+```
 
 Since `U>=V`, the smaller coefficient is `1-U/C`.  Thus
 
-$$
+```math
 \left(1-{U\over C}\right)(x+y)
 \le h.
-$$
+```
 
 Using (CE.3)--(CE.5),
 
-$$
+```math
 \boxed{
  x+y
 \le
@@ -116,15 +118,16 @@ $$
 +o(1).
 }
 \tag{CE.7}
+```
 
 Generic center capacity also forces `C>0.513`: otherwise, because the right side
 `C(W-C)` is increasing for `C<W/2`,
 
-\[
+```math
 E_{dom}
 \le0.513(1.912456-0.513)
 <0.718
-$$
+```
 
 would contradict (CE.4).
 
@@ -136,38 +139,38 @@ For a retained O--O train `tau` in either leaf phase, let `w_tau in(0,1]` be its
 retained pair weight.  Let `N_C` be the actual number of frozen-window center-phase
 trains; then
 
-$$
+```math
 {N_C\over D}\to C.
-$$
+```
 
 Call a leaf O--O train **bad** if its center crossing degree is at most `N_C/2`.
 Such a train misses at least `N_C/2` center trains.  Therefore the total normalized
 retained weight of bad `U`-trains is at most
 
-$$
+```math
 {2x\over C}+o(1),
-$$
+```
 
 and similarly the bad `V`-weight is at most
 
-$$
+```math
 {2y\over C}+o(1).
-$$
+```
 
 Hence the total bad retained weight is at most
 
-$$
+```math
 B_{bad}
 \le {2(x+y)\over C}+o(1)
 \le
 {2[C(1.912456-C)-0.90689967]
 \over C-0.513}+o(1).
 \tag{CE.8}
-$$
+```
 
 The right side is uniformly below `0.03405`.  Indeed, with
 
-$$
+```math
 W_0={239057\over125000},
 \quad
 E_0={90689967\over10^8},
@@ -175,37 +178,40 @@ E_0={90689967\over10^8},
 u={513\over1000},
 \quad
 b={681\over20000},
-$$
+```
 
 the desired inequality is equivalent to positivity of
 
-$$
+```math
 q(C)=b(C-\nu)-2[C(W_0-C)-E_0].
-$$
+```
 
 This quadratic has leading coefficient `2`, and its exact discriminant is
 
-$$
+```math
 \boxed{
 \operatorname{disc}(q)<-1.88\times10^{-5}<0.
 }
 \tag{CE.9}
+```
 
 Therefore
 
-\[
+```math
 \boxed{B_{bad}<0.03405-o(1).}
 \tag{CE.10}
+```
 
 By (CE.1), even if all bad weight is concentrated in one leaf phase, each leaf retains
 good O--O weight
 
-\[
+```math
 \boxed{
 G_U,G_V>0.103-0.03405-o(1)
 =0.06895-o(1).
 }
 \tag{CE.11}
+```
 
 ---
 
@@ -214,9 +220,10 @@ G_U,G_V>0.103-0.03405-o(1)
 Take a good `U`-phase O--O train `tau` and a good `V`-phase O--O train `sigma`.
 Each crosses strictly more than half of the same finite center family.  Hence
 
-\[
+```math
 N_C(\tau)\cap N_C(\sigma)\ne\varnothing.
 \tag{CE.12}
+```
 
 Choose a center train `gamma` in the intersection.  Then `gamma` crosses both `tau` and
 `sigma` in strict rhombi.
@@ -232,11 +239,12 @@ The two leaf phases belong to the same exact three-phase orbit, so their project
 phase separation is exactly `pi/3` in the limiting frozen-window sense.  The existing
 cross-phase endpoint theorem therefore gives, uniformly over the good families,
 
-\[
+```math
 \boxed{
 e_\tau+e_\sigma
 \ge2-\sqrt3-o(1),}
 \tag{CE.13}
+```
 
 where `e_tau,e_sigma` are the exact sums of the two terminal directional-energy
 contributions of the corresponding O--O trains.
@@ -247,67 +255,69 @@ contributions of the corresponding O--O trains.
 
 Let
 
-\[
+```math
 E_U^{good}
 ={1\over D}\sum_{\tau\in U_{good}}w_\tau e_\tau,
 \qquad
 E_V^{good}
 ={1\over D}\sum_{\sigma\in V_{good}}w_\sigma e_\sigma.
-$$
+```
 
 Multiply (CE.13) by `w_tau w_sigma` and sum over the complete product of the two good
 families.  After dividing by `D^2`,
 
-$$
+```math
 G_VE_U^{good}+G_UE_V^{good}
 \ge(2-\sqrt3)G_UG_V-o(1).
 \tag{CE.14}
+```
 
 If `G_U<=G_V`, then the left side is at most
 
-\[
+```math
 G_V(E_U^{good}+E_V^{good}),
-$$
+```
 
 so
 
-$$
+```math
 E_U^{good}+E_V^{good}
 \ge(2-\sqrt3)G_U-o(1).
-$$
+```
 
 The symmetric case is identical.  Hence
 
-$$
+```math
 E_U+E_V
 \ge E_U^{good}+E_V^{good}
 \ge(2-\sqrt3)\min(G_U,G_V)-o(1).
 \tag{CE.15}
+```
 
 Using (CE.11),
 
-\[
+```math
 E_U+E_V
 >(2-\sqrt3)(0.06895)-o(1).
-$$
+```
 
 The exact certificate uses the rational bound
 
-$$
+```math
 \sqrt3<1.7321
-$$
+```
 
 and obtains
 
-$$
+```math
 (2-\sqrt3)(0.06895)>0.0184717.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{E_U+E_V>0.01847-o(1).}
-$$
+```
 
 ---
 

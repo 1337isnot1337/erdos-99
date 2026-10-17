@@ -11,9 +11,9 @@
 This audit independently checks Section 101's complement-gap/chord argument on top of
 canonical audit.40 Section 100. The claimed wrapping threshold
 
-$$
+```math
 \mu_8=0.976040765267051982\ldots
-$$
+```
 
 is valid. The audit also supplies the equality-case argument that is only summarized
 in Section 101: at the sharp scalar endpoint the limiting support is, up to rotation
@@ -24,19 +24,19 @@ and reflection, one closed circular arc plus two isolated support points.
 Let `S` be a compact wrapping subset of the radius-`1/2` circle with pairwise minor
 angular distance at most `theta<pi`. Put
 
-$$
+```math
 \phi=2\pi-2\theta,
 \qquad
 U=3\theta-2\pi.
-$$
+```
 
 Canonical Section 100 gives
 
-$$
+```math
 |S|\le U,
 \qquad
 2\alpha\le |S|,
-$$
+```
 
 for every wrapping Type-II attachment limit, where `alpha=lim a_D/D` after passing to
 a subsequence. Canonical Section 94 gives three distinct support-free central arcs of
@@ -49,19 +49,19 @@ KKT coefficient floor, and no deletion of contact-isolated source points.
 
 Write
 
-$$
+```math
 \mathbb T\setminus S=\bigsqcup_j G_j,
 \qquad |G_j|=g_j.
-$$
+```
 
 Each complement component has endpoints in `S`. Wrapping excludes `g_j>=pi`: a gap
 larger than `pi` puts `S` in an open semicircle, while a gap exactly `pi` has antipodal
 endpoints in `S`, contradicting `theta<pi`. Therefore `0<g_j<pi`, and the pairwise
 angular-diameter hypothesis gives
 
-$$
+```math
 g_j\le\theta.
-$$
+```
 
 The three Section-94 forbidden arcs lie in three distinct complement components because
 the three wrapping anchors separating them lie in `S`. Hence at least three distinct
@@ -69,10 +69,10 @@ gaps satisfy `g_j>=phi`.
 
 Section 100 gives
 
-$$
+```math
 \sum_j g_j=2\pi-|S|\ge 4\pi-3\theta
 =\theta+2\phi.
-$$
+```
 
 No multiplicity or connected-component assumption is missing here.
 
@@ -83,27 +83,27 @@ the positive interval.
 
 First consider a finite feasible gap vector of total mass
 
-$$
+```math
 H=\theta+2\phi.
-$$
+```
 
 After sorting decreasingly, the largest entry is at most `theta`; because two other
 entries must remain at least `phi`, the sum of the two largest entries is at most
 `theta+phi`. Thus
 
-$$
+```math
 (\theta,\phi,\phi,0,\ldots)
-$$
+```
 
 majorizes every feasible vector of mass `H`. Karamata for concave `f` therefore gives
 
-$$
+```math
 \sum_j \sin(g_j/2)
 \ge
 \sin(\theta/2)+2\sin(\phi/2)
 =
 \sin(\theta/2)+2\sin\theta.
-$$
+```
 
 If the finite total mass is larger than `H`, decrease entries while preserving three
 entries at least `phi` until the total is `H`; monotonicity of `f` can only decrease the
@@ -112,24 +112,24 @@ sum.
 For a countable complement, choose finite subfamilies containing the three guaranteed
 `phi`-gaps and carrying total mass at least `H-epsilon`. The same finite argument gives
 
-$$
+```math
 \sum_{j\in J_\epsilon}\sin(g_j/2)
 \ge
 \sin((\theta-\epsilon)/2)+2\sin(\phi/2)
-$$
+```
 
 for small `epsilon`. Letting `epsilon` decrease to zero proves the countable statement.
 The series is harmless because `sin(g_j/2)<=g_j/2` and `sum g_j<=2pi`.
 
 Therefore Section 101's chord floor
 
-$$
+```math
 \boxed{
 \sum_j\sin(g_j/2)
 \ge
 \sin(\theta/2)+2\sin\theta
 }
-$$
+```
 
 is valid.
 
@@ -149,9 +149,9 @@ Thus a limit gap `g_j` produces a finite angular gap at least `g_j-2eta`. Type-I
 annular convergence gives endpoint radii `(1/2+o(1))D`, so the corresponding endpoint
 chord has length at least
 
-$$
+```math
 D\sin((g_j-2\eta)/2)-o(D).
-$$
+```
 
 The canonical Section-62 outer-face route between those consecutive attachments is a
 unit-edge chain with the same endpoints, hence costs at least that chord length. The
@@ -162,36 +162,36 @@ For `k` selected macroscopic intervals, all unselected consecutive-attachment
 intervals cost at least two edges except the `c_D^partial` direct loaded-loaded
 contacts. Hence
 
-$$
+```math
 L_D\ge
 D\sum_{i=1}^k\sin((g_{j_i}-2\eta)/2)
 +2(a_D-k)-c_D^\partial-o(D).
-$$
+```
 
 Insert the exact Section-82 identity
 
-$$
+```math
 L_D+Q_D=4a_D-6-2s_D-2c_D.
-$$
+```
 
 Using `c_D^partial<=c_D` and dropping only favorable nonnegative terms gives, after
 dividing by `D`,
 
-$$
+```math
 2\alpha
 \ge
 \sum_{i=1}^k\sin((g_{j_i}-2\eta)/2).
-$$
+```
 
 Take `D` to infinity, then `eta` to zero, then increase the finite family. Monotone
 convergence gives
 
-$$
+```math
 \boxed{
 2\alpha\ge\sum_j\sin(g_j/2)
 \ge\sin(\theta/2)+2\sin\theta.
 }
-$$
+```
 
 The countable complement is therefore charged legitimately; Section 101 does not sum
 infinitely many finite outer-walk intervals at a fixed `D`.
@@ -200,39 +200,39 @@ infinitely many finite outer-walk intervals at a fixed `D`.
 
 Canonical Section 100 gives the opposite ceiling
 
-$$
+```math
 2\alpha\le3\theta-2\pi.
-$$
+```
 
 Thus every wrapping Type-II limit must satisfy
 
-$$
+```math
 F(\theta):=
 3\theta-2\pi-\sin(\theta/2)-2\sin\theta\ge0.
-$$
+```
 
 On `[2pi/3,pi)`,
 
-$$
+```math
 F'(\theta)
 =3-\frac12\cos(\theta/2)-2\cos\theta
 \ge\frac{15}{4}>0.
-$$
+```
 
 Hence `F` has a unique zero. The repository certificate reproduces
 
-$$
+```math
 \theta_8=2.7029080296483676832\ldots,
 \qquad
 \mu_8=\sin(\theta_8/2)
 =0.9760407652670519821\ldots .
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{\lambda\ge\mu_8.}
-$$
+```
 
 The Section-88 cap-family propagation is unchanged: for each fixed `mu<mu_8`, a
 macroscopic cell limit with normalized diameter at most `mu` cannot wrap and is cap
@@ -246,23 +246,23 @@ The endpoint description deserves an explicit proof.
 
 Suppose `theta=theta_8`. The scalar equality and the two density bounds force
 
-$$
+```math
 2\alpha=|S|=U_8:=3\theta_8-2\pi
-$$
+```
 
 and
 
-$$
+```math
 \sum_j\sin(g_j/2)
 =
 \sin(\theta_8/2)+2\sin\theta_8.
-$$
+```
 
 Therefore the complement has exactly the minimum allowed total mass
 
-$$
+```math
 \sum_jg_j=\theta_8+2\phi_8.
-$$
+```
 
 Any positive extra complement mass would strictly increase the chord sum because
 `f` is increasing. With the total fixed, strict concavity makes Karamata equality
@@ -270,9 +270,9 @@ rigid: splitting any positive extremal gap or replacing `(theta_8,phi_8,phi_8)` 
 non-permutation feasible vector strictly raises the sum. Hence the positive complement
 components are exactly three gaps, with lengths
 
-$$
+```math
 \boxed{(\theta_8,\phi_8,\phi_8)}
-$$
+```
 
 up to cyclic order.
 
@@ -283,24 +283,24 @@ This last step is stronger than merely exhibiting an extremizer.
 Order the three complement gaps cyclically as `theta_8,phi_8,phi_8`. Their closed
 complement consists of three closed support arcs of lengths `x,y,z>=0` with
 
-$$
+```math
 x+y+z=U_8.
-$$
+```
 
 Let `x` be the support arc immediately following the `theta_8` gap. If `x>0`, choose a
 support point an angular distance `t` into that arc with
 
-$$
+```math
 0<t<\min\{x,\phi_8\}.
-$$
+```
 
 Together with the support endpoint at the other side of the `theta_8` gap, this gives
 clockwise angular separation `theta_8+t`, which lies strictly in
 
-$$
+```math
 (\theta_8,\theta_8+\phi_8)
 =(\theta_8,2\pi-\theta_8).
-$$
+```
 
 Its minor angular distance is therefore strictly larger than `theta_8`, a
 contradiction. Thus `x=0`. The identical argument on the other side of the
@@ -308,25 +308,25 @@ contradiction. Thus `x=0`. The identical argument on the other side of the
 
 Consequently, up to rotation and reflection,
 
-$$
+```math
 \boxed{
 S=(\text{one closed arc of length }U_8)
 \cup\{p,q\},
 }
-$$
+```
 
 where `p,q` are the two isolated support points. This proves the endpoint concentration
 asserted in Section 101 rather than merely supplying one example.
 
 Numerically,
 
-$$
+```math
 \phi_8=0.877369247882851\ldots,
 \qquad
 U_8=1.825538781765516\ldots,
 \qquad
 \alpha_8=0.912769390882758\ldots .
-$$
+```
 
 ## 8. Verdict and next theorem
 

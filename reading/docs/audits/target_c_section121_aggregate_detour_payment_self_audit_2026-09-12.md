@@ -73,9 +73,9 @@ opposite sides.
 
 Therefore
 
-$$
+```math
 C_{\rm att}\le(q-m_B)+2c_B=e_{BB}+c_B
-$$
+```
 
 is valid.
 
@@ -86,33 +86,33 @@ component and therefore exactly one harmonic induced graph. Loaded-loaded contac
 the only edges that can be repeated, and their total repetition is precisely
 `C_att`. Thus
 
-$$
+```math
 \sum_rM_r=e_C-e_{BB}+C_{\rm att}
-$$
+```
 
 has no omitted or repeated non-loaded-loaded edge.
 
 For each `H_r`, face-edge handshaking is
 
-$$
+```math
 2M_r=L_r+4R_r+P_{{\rm exc},r},
-$$
+```
 
 so its detour equals `2M_r-4R_r-2d_r`. Canonical mixed rigidity gives
 `e_C=2m-2-q+k`, while the canonical face identity gives
 `m=R_4+f+q-k+1`. Their substitution yields
 
-$$
+```math
 e_C=2R_4+2f+q-k.
-$$
+```
 
 Direct algebra then gives
 
-$$
+```math
 E_\Sigma
 =4(R_4-R_{\rm loc})+4f
 +2(q-k-e_{BB}+C_{\rm att})-2\sum_rd_r.
-$$
+```
 
 No asymptotic estimate enters this identity.
 
@@ -120,24 +120,24 @@ No asymptotic estimate enters this identity.
 
 Canonical Section 75 records
 
-$$
+```math
 e_{BB}=q-m_B+c_B
-$$
+```
 
 and the exact post-ZF ledger
 
-$$
+```math
 m_B+k=c_I+c_B+s_C+2.
-$$
+```
 
 The latter is not merely a Type-II asymptotic statement. Therefore substituting the
 multiplicity ceiling into the exact aggregate identity gives
 
-$$
+```math
 E_\Sigma
 \le4\Delta_R+4f
 +2(q+m_B-c_I-s_C-2)-2d_\Sigma
-$$
+```
 
 without assuming `c_I=o(D)`. The Type-II limit is used only when this upper expression
 is composed with proof-only Section 120's linear lower bound.

@@ -19,54 +19,54 @@
 
 There is a finite unit-separated source with contact path
 
-$$
+```math
 (0,1)-(0,0)-(1,0)-(2,0)-(2,1)
-$$
+```
 
-and a retained contact-isolated source point $q=(1,17/10)$. The apparent rectangular wall $[0,2]\times[0,1]$ has a nonunit top side of length two, but that side is an interior chord of the actual source hull because $q$ lies above it. After deleting the middle bottom vertex $v=(1,0)$, the point $x=(1,4/5)$ is strictly farther than one from all four remaining contact-path vertices, yet $|x-q|<1$. Thus a partial wall with a nonunit side that is not an actual source-hull side does not by itself shield a proposed replacement point from retained exterior labels.
+and a retained contact-isolated source point $`q=(1,17/10)`$. The apparent rectangular wall $`[0,2]\times[0,1]`$ has a nonunit top side of length two, but that side is an interior chord of the actual source hull because $`q`$ lies above it. After deleting the middle bottom vertex $`v=(1,0)`$, the point $`x=(1,4/5)`$ is strictly farther than one from all four remaining contact-path vertices, yet $`|x-q|<1`$. Thus a partial wall with a nonunit side that is not an actual source-hull side does not by itself shield a proposed replacement point from retained exterior labels.
 
 This is an exact local feasibility regression. It is not asserted to satisfy canonical global-minimizer or KKT hypotheses, and it gives no Level I counterexample.
 
 ## Independent exact reconstruction
 
-Write $S=\{a,v,b,\ell,r,q\}$, where
+Write $`S=\{a,v,b,\ell,r,q\}`$, where
 
-$$
+```math
 a=(0,0),\quad v=(1,0),\quad b=(2,0),\quad \ell=(0,1),\quad r=(2,1),\quad q=(1,17/10).
-$$
+```
 
-The four unit distances are exactly $\ell a,av,vb,br$. The remaining squared distances are
+The four unit distances are exactly $`\ell a,av,vb,br`$. The remaining squared distances are
 
-$$
+```math
 |a-b|^2=4,\quad |a-r|^2=5,\quad |a-q|^2=389/100,\\
 |v-\ell|^2=2,\quad |v-r|^2=2,\quad |v-q|^2=289/100,\\
 |b-\ell|^2=5,\quad |b-q|^2=389/100,\\
 |\ell-r|^2=4,\quad |\ell-q|^2=149/100,\quad |r-q|^2=149/100.
-$$
+```
 
-All eleven displayed noncontacts have squared distance greater than one. Hence every old pair is at least one, and equality occurs exactly on $\ell-a-v-b-r$; $q$ has no unit contacts. The contact graph is a path plus an isolate, so it has no triangle.
+All eleven displayed noncontacts have squared distance greater than one. Hence every old pair is at least one, and equality occurs exactly on $`\ell-a-v-b-r`$; $`q`$ has no unit contacts. The contact graph is a path plus an isolate, so it has no triangle.
 
-Delete $v$ and consider $x=(1,4/5)$. Its squared distances to the four retained path vertices are
+Delete $`v`$ and consider $`x=(1,4/5)`$. Its squared distances to the four retained path vertices are
 
-$$
+```math
 |x-a|^2=|x-b|^2=41/25>1,
 \qquad
 |x-\ell|^2=|x-r|^2=26/25>1.
-$$
+```
 
 But
 
-$$
+```math
 |x-q|^2=(17/10-4/5)^2=81/100<1.
-$$
+```
 
-The point $x$ is inside the apparent rectangle. The top segment $\ell r$ is not on $\partial\operatorname{conv}(S)$: its endpoints are source labels, while the source label $q$ lies strictly above its supporting line. Its relative interior is therefore inside the actual source hull. In a genuine hull-augmented cell, source labels in that interior are part of the cell population and must be deleted or included in the exchange count; they cannot be treated as outside labels protected by an artificial hull side.
+The point $`x`$ is inside the apparent rectangle. The top segment $`\ell r`$ is not on $`\partial\operatorname{conv}(S)`$: its endpoints are source labels, while the source label $`q`$ lies strictly above its supporting line. Its relative interior is therefore inside the actual source hull. In a genuine hull-augmented cell, source labels in that interior are part of the cell population and must be deleted or included in the exchange count; they cannot be treated as outside labels protected by an artificial hull side.
 
 ## Certificate review and distinction from the existing threshold regression
 
-I inspected `partial_wall_regression()` in the frozen source verifier and reran it with exact integer arithmetic. It checks all 15 old pair distances, the four old contacts, the isolate condition, all four strict guard distances, and the colliding pair. It uses no floating-point tolerance. The function does not test global optimality or compute the convex hull; the latter is verified directly above from the location of $q$.
+I inspected `partial_wall_regression()` in the frozen source verifier and reran it with exact integer arithmetic. It checks all 15 old pair distances, the four old contacts, the isolate condition, all four strict guard distances, and the colliding pair. It uses no floating-point tolerance. The function does not test global optimality or compute the convex hull; the latter is verified directly above from the location of $`q`$.
 
-The already canonical `C-NONCONTACT-WALL-SQRT3-THRESHOLD-REGRESSION` concerns failure of an arbitrary polygon wall-vertex shield when its side-length cap exceeds $\sqrt3$. This example has a length-two side as well, but its separate route lesson is that this side is not an actual source-hull side and the retained isolate remains in the full source. It does not refute `C-EXTERIOR-INTERNAL-WALL-ONE-GUARD-CAPACITY` or `C-EXTERIOR-CELL-WEAK-GUARD-LEDGER`: their cell boundary is an actual hull arc, so the isolate here would be counted in the cell population rather than silently shielded outside it.
+The already canonical `C-NONCONTACT-WALL-SQRT3-THRESHOLD-REGRESSION` concerns failure of an arbitrary polygon wall-vertex shield when its side-length cap exceeds $`\sqrt3`$. This example has a length-two side as well, but its separate route lesson is that this side is not an actual source-hull side and the retained isolate remains in the full source. It does not refute `C-EXTERIOR-INTERNAL-WALL-ONE-GUARD-CAPACITY` or `C-EXTERIOR-CELL-WEAK-GUARD-LEDGER`: their cell boundary is an actual hull arc, so the isolate here would be counted in the cell population rather than silently shielded outside it.
 
 ## Canonical disposition
 

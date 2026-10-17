@@ -17,22 +17,22 @@
 
 For `L>=0`, define the stadium
 
-$$
+```math
 S_L=([0,L]\times\{0\})+B(0,1/2).
-$$
+```
 
 If `L<=21/20` and `X` is a finite subset of `S_L` whose distinct points have mutual distance at least `sqrt(3)/2`, then
 
-$$
+```math
 \boxed{|X|\le5.}
-$$
+```
 
 The bound is sharp at `L=1`. One exact five-point set is
 
-$$
+```math
 (-1/2,0),\quad(1/4,1/2),\quad(1/4,-1/2),\quad
 (6/5,9/20),\quad(6/5,-9/20).
-$$
+```
 
 All five points lie in `S_1`, and every squared pair distance is at least `3/4`. No claim is made that `21/20` is the largest segment length for which the packing number is at most five.
 
@@ -44,9 +44,9 @@ The exact distance from a square to the segment `[0,21/20] x {0}` is the Euclide
 
 For two distinct squares `Q,Q'`, let `dx` and `dy` be the maximum possible absolute coordinate differences between points in the respective rectangles. Their maximum squared separation is `dx^2+dy^2`. Put an edge between the two square labels if and only if
 
-$$
+```math
 4(dx^2+dy^2)\ge3\cdot24^2.
-$$
+```
 
 This is an exact integer test. If six separated points existed, they would occupy six distinct retained squares. Each pair of those squares would have maximum separation at least `sqrt(3)/2`, so their six labels would form a `K_6` in this compatibility graph.
 

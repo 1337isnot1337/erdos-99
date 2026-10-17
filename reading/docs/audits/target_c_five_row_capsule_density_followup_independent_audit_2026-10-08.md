@@ -23,16 +23,16 @@
 
 Put `s_0=791/320000000` and suppose a source-level family of layer indices has cardinality
 
-$$
+```math
 |M_D|>(s_0/2)D-o(D).
-$$
+```
 
 Partitioning into six residue classes gives one class of size greater than
 
-$$
+```math
 (s_0/12)D-o(D)=\gamma_6D-o(D),
 \qquad \gamma_6=791/3840000000.
-$$
+```
 
 Distinct indices in that class differ by at least six. The arithmetic is exact. In the supplied proper crosscut path regime of canonical `C-OO-SHORT-PAIR-PATH-BANDWIDTH-5`, if `D>=20K` and `|x-y|<=1+K/D`, then `|x-y|<=21/20` and the row span is at most five. Therefore such a pair cannot have its endpoints in two retained regions whose indices differ by at least six, provided every intervening path row separates `x` and `y` as required by the canonical theorem.
 
@@ -42,19 +42,19 @@ This verifies only the geometric exclusion of a short LOWER pair between two sel
 
 The scalar substitutions from `\gamma_6` are arithmetically consistent:
 
-$$
+```math
 \gamma_6/4=791/15360000000,\quad
 \gamma_6/8=791/30720000000,\quad
 \gamma_6/2=791/7680000000,\quad
 \gamma_6/16=791/61440000000.
-$$
+```
 
 The threaded coefficient in (FP.18) also follows exactly from the displayed inputs `0.6436=1609/2500` and `T_*=6121/2000`:
 
-$$
+```math
 \frac{\gamma_6}{16}\frac{1609/2500}{6121/2000}
 =\frac{1272719}{470092800000000}.
-$$
+```
 
 These computations do not prove the invoked poison-forest theorem, the source-wide train-defect/terminal-variation extraction, the five-deep-window count, or the complete-train bound in the canonical source regime. The report does not reconstruct those arguments in Sections 3--5. Consequently the lower/upper population alternatives and local-ladder count remain conditional.
 
@@ -62,18 +62,18 @@ These computations do not prove the invoked poison-forest theorem, the source-wi
 
 The exact ratio for the two stated densities is
 
-$$
+```math
 \gamma_6/\gamma_7
 =\frac{791/3840000000}{113/640000000}
 =7/6.
-$$
+```
 
 Using only the displayed constants, the proposed coefficient identity is also algebraically correct:
 
-$$
+```math
 \frac{\gamma_6}{48(14/(3\sqrt3))}
 =\frac{113\sqrt3}{122880000000}.
-$$
+```
 
 The source does not prove in these sections that the same-type upper-localization/path-incidence argument yields the denominator `48 A_*` under the stated exact-swap hypotheses. The flexible-scale alternatives are likewise asserted without their incidence construction. These source-level conclusions remain conditional.
 

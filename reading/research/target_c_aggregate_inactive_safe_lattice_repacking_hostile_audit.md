@@ -17,9 +17,9 @@
 Canonical Section 77 partitions every source point in `F` outside the nonisolated
 positive-contact core among the inactive chambers and gives
 
-$$
+```math
  Z_{ch}=N_F-m.
-$$
+```
 
 The chamber population consists of contact-isolated source points. The complete actual
 diameter endpoints are the loaded force-hull vertices in the positive core. Therefore
@@ -57,19 +57,19 @@ Let `S` be the measurable union of all safe regions. For the unit triangular lat
 `|(Lambda+t) cap S|` over a fundamental cell gives `area(S)/a_0`. Hence one translate
 has at least
 
-$$
+```math
  floor(area(S)/a_0)
-$$
+```
 
 points. This is one integer floor for the full union, not one floor per chamber.
 
 If there are more points than needed, taking a subset preserves unit separation.
 Because `Z_ch` is an integer,
 
-$$
+```math
  floor(area(S)/a_0)-Z_{ch}
  =floor(area(S)/a_0-Z_{ch}).
-$$
+```
 
 Thus a real lower bound `area(S)/a_0-Z_ch >= Xi` implies at least `floor(Xi)` realized
 extra slots.
@@ -80,38 +80,38 @@ extra slots.
 
 For exceptional faces,
 
-$$
+```math
  area(S_j)\ge A_j-m_jc_*-h_*.
-$$
+```
 
 For Section-67 hull-augmentation outer pockets,
 
-$$
+```math
  area(S_j)\ge A_j-s_j-ell_jc_*-h_*.
-$$
+```
 
 Canonical incidence identities give
 
-$$
+```math
  sum_{exc}m_j=4f+Q,
-$$
+```
 
-$$
+```math
  sum_{out}(ell_j+1)=b+2a-q,
  \qquad sum_{out}ell_j=b+a-q,
-$$
+```
 
 and
 
-$$
+```math
  sum_{out}s_j=L_{add}.
-$$
+```
 
 Therefore the stated total safe-area bound follows with
 
-$$
+```math
  L_c=(4f+Q)+(b+a-q)=4f+q-2k+a,
-$$
+```
 
 using canonical `b+Q=2(q-k)`.
 
@@ -122,24 +122,24 @@ perimeter decomposition.
 
 For an exceptional face,
 
-$$
+```math
  area(S_j)/a_0-z_j
  \ge r_j-kappa_*m_j-C_*.
-$$
+```
 
 For an outer pocket,
 
-$$
+```math
  area(S_j)/a_0-z_j
  \ge r_j-kappa_*ell_j-lambda_*s_j-eta_*.
-$$
+```
 
 The companion exact conservation theorem gives `sum r_j=R_F`. Summation therefore
 yields
 
-$$
+```math
  Xi=R_F-kappa_*L_c-lambda_*L_{add}-C_*f-eta_*a.
-$$
+```
 
 No asymptotic term or hidden per-chamber floor is present.
 
@@ -172,9 +172,9 @@ No contact isolate is placed under the Section-57 affine-kernel theorem.
 
 **Final verdict:** PASS. Every survivor must satisfy the finite source-level inequality
 
-$$
+```math
  Xi<tau(H)\le ceil(q/2).
-$$
+```
 
 The remaining mathematical task is to contradict this inequality in the Type-I
 internal-chamber regime, or separately close the Section-162 exterior-cap regime.

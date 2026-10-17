@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_tamvakis_four_endpoint_barrier_2026-09-09.md) · source SHA-256 `24a54610ec6ba81ee6aa0416769f7dd8a33e4c728ffccc7760d9a705bc6ab02a`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 8 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-F10708263898","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — TQB: Tamvakis gives an exact four-endpoint perimeter barrier at the HKS crossover
 
@@ -16,13 +18,14 @@
 
 Tamvakis proved that every convex quadrilateral of Euclidean diameter at most one has perimeter at most
 
-$$
+```math
 \boxed{
 P_4^*=2+\sqrt6-\sqrt2
 =2+4\sin\frac{\pi}{12}
 =3.0352761804100830494\ldots .
 }
 \tag{TQB.1}
+```
 
 Equality is attained uniquely up to congruence by the Tamvakis kite: three of its vertices form a unit equilateral triangle, and the fourth subdivides one side of the associated Reuleaux-triangle construction.
 
@@ -40,19 +43,21 @@ No stronger fixed-angle version is imported here.
 
 HKS defines the sharp PI/Hemmi crossover perimeter
 
-\[
+```math
 \boxed{
 p_c=3.0353123194039776374\ldots .}
 \tag{TQB.2}
+```
 
 Therefore
 
-\[
+```math
 \boxed{
 \Delta_4:=p_c-P_4^*
 =0.0000361389938945880\ldots>0.
 }
 \tag{TQB.3}
+```
 
 This is a genuine fixed perimeter separation, not an asymptotic `o(1)` statement.
 
@@ -62,47 +67,47 @@ This is a genuine fixed perimeter separation, not an asymptotic `o(1)` statement
 
 Assume a threshold-approaching sequence as in HKN:
 
-\[
+```math
 \lambda_j:=\frac{e_{BB,j}+2s_{C,j}}{D_j}
 \to\lambda_{HKS}.
-$$
+```
 
 HKN already proves, after diameter normalization and Hausdorff convergence,
 
-$$
+```math
 K_j\to K_\infty,
 \qquad
 \operatorname{per}(K_\infty)=p_c,
 \qquad
 \operatorname{area}(K_\infty)=A_c,
-$$
+```
 
 and PI supplies two limiting unit-diameter chords whose four-endpoint hull `Q` satisfies
 
-$$
+```math
 Q\subseteq K_\infty,
 \qquad
 \operatorname{area}(Q)\ge A_c.
-$$
+```
 
 Since `area(K_infty)=A_c`, equality forces
 
-$$
+```math
 K_\infty=Q.
-$$
+```
 
 Thus `K_infty` is a convex polygon with at most four vertices and diameter one. Tamvakis then gives
 
-$$
+```math
 \operatorname{per}(K_\infty)
 \le P_4^*.
-$$
+```
 
 But HKN forces
 
-$$
+```math
 \operatorname{per}(K_\infty)=p_c=P_4^*+\Delta_4>P_4^*.
-$$
+```
 
 Contradiction.
 
@@ -110,11 +115,12 @@ Contradiction.
 
 The HKS threshold is unattainable for the simpler reason
 
-$$
+```math
 \boxed{
 \text{PI equality forces a four-point hull, but every diameter-one four-point hull has perimeter }<p_c.
 }
 \tag{TQB.4}
+```
 
 This gives an alternative proof of HKN independent of the detailed six-sided Hemmi equality classification once HKS has already identified the scalar crossover and area squeeze.
 
@@ -124,17 +130,17 @@ This gives an alternative proof of HKN independent of the detailed six-sided Hem
 
 The fixed perimeter gap `Delta_4` is useful but does not by itself produce a numerical lower bound on
 
-\[
+```math
 \lambda-\lambda_{HKS}.
-$$
+```
 
 A near-threshold force hull `K` need not equal the four-endpoint PI hull `Q`; it only has very small excess area above `Q`. To turn `Delta_4` into an explicit surplus gap, one needs a quantitative nested-convex stability estimate of the form
 
-$$
+```math
 \operatorname{area}(K)-\operatorname{area}(Q)
 \ge
 \Psi\bigl(\operatorname{per}(K)-\operatorname{per}(Q)\bigr)
-$$
+```
 
 for the special diameter-one PI quadrilaterals, with `Psi(delta)>0` explicitly.
 
@@ -144,15 +150,15 @@ Equivalently, one can solve the more tailored finite problem:
 
 Numerical optimization at exactly
 
-$$
+```math
 \phi=p_c/2
-$$
+```
 
 suggests the maximum is approximately
 
-$$
+```math
 3.034910765287793,
-$$
+```
 
 strictly below even the global Tamvakis bound. This numerical value is **not used as a theorem** in TQB.
 
@@ -162,46 +168,49 @@ strictly below even the global Tamvakis bound. This numerical value is **not use
 
 Parameterize a quadrilateral with unit diagonals `AC=BD=1` crossing at angle `phi` by the intersection fractions
 
-$$
+```math
 A=a u,
 \quad C=-(1-a)u,
 \quad B=b v,
 \quad D=-(1-b)v,
-$$
+```
 
 where `u·v=cos phi`.
 
 A natural boundary candidate has two consecutive unit sides,
 
-$$
+```math
 AB=BC=1.
-$$
+```
 
 Solving those equations gives
 
-\[
+```math
 \boxed{
 b=\frac{\sqrt3}{2\sin\phi},
 \qquad
 a=\frac12+\frac{\sqrt3}{2}\cot\phi.}
 \tag{TQB.5}
+```
 
 The other two side lengths simplify exactly to
 
-\[
+```math
 \boxed{
 CD=\sqrt{2-\sqrt3\sin\phi-\cos\phi},
 }
 \tag{TQB.6}
+```
 
-\[
+```math
 \boxed{
 DA=\sqrt{2-\sqrt3\sin\phi+\cos\phi}.}
 \tag{TQB.7}
+```
 
 Hence the candidate perimeter is
 
-\[
+```math
 \boxed{
 P_{cand}(\phi)
 =2+
@@ -209,6 +218,7 @@ P_{cand}(\phi)
 +
 \sqrt{2-\sqrt3\sin\phi+\cos\phi}.}
 \tag{TQB.8}
+```
 
 At `phi=pi/2`, this is exactly the Tamvakis value `P_4^*`. At `phi=p_c/2`, it evaluates to the numerical value above.
 

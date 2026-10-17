@@ -26,10 +26,10 @@ The artifact lifecycle is unreviewed.<br>
 
 Let A be any finite unit-separated planar set with diameter D>1. Put
 
-$$
+```math
 L_D=\sqrt{D^2-1},\qquad
 \gamma_D=D-L_D=\frac1{D+L_D}.
-$$
+```
 
 Draw the simple graph T_D containing exactly the pairs with length **strictly**
 greater than L_D. Then every endpoint is an extreme vertex of conv(A), and any two
@@ -41,12 +41,12 @@ there. Thus, after omitting its isolated vertices, T_D is a straight-line thrack
 If p is not extreme, write p=sum_i lambda_i a_i, with a_i in A\\{p}, lambda_i>=0,
 and sum_i lambda_i=1. For every q in A the exact variance identity gives
 
-$$
+```math
 |p-q|^2
 =\sum_i\lambda_i|a_i-q|^2-\sum_i\lambda_i|a_i-p|^2
 \le D^2-1.
 \tag{1}
-$$
+```
 
 The second sum is at least one by source unit separation. Thus p cannot be incident
 to a T_D edge. This includes vertices on the relative interior of a hull side.
@@ -59,10 +59,10 @@ opposite sides of that quadrilateral. Some interior angle is at least pi/2. Its 
 incident sides comprise one of the two long sides and one source pair of length at
 least one. The diagonal opposite this angle consequently has squared length
 
-$$
+```math
 \ge (\text{long side})^2+(\text{other side})^2
 >L_D^2+1=D^2,
-$$
+```
 
 contradicting the source diameter. Distinct edges at one endpoint cannot overlap,
 since then one of the other two extreme endpoints would lie between source points.
@@ -84,11 +84,11 @@ Let H be the full actual diameter graph, B its endpoint set, q=|B|, h=|H|, and
 d_H=q-h. Let Z_T be the endpoints of T_D outside B. The straight-line thrackle
 edge bound gives
 
-$$
+```math
 |T_D|\le q+|Z_T|,\qquad
 \boxed{|T_D\setminus H|\le d_H+|Z_T|.}
 \tag{2}
-$$
+```
 
 In particular, the number of inactive long pairs with both endpoints in B is at
 most d_H, by applying the same edge bound to the induced graph on B. In the cyclic
@@ -127,23 +127,23 @@ This does not discard these points or assert that the source hull equals conv(B)
 Work in the cyclic representative of Section 3. Let V be the nonisolated contact
 core and Z=A\\V. Thus B is contained in V. Suppose a proposed finite core move is
 
-$$
+```math
 p\longmapsto p+f(p)\Delta\quad(p\in V),\qquad f:V\to\{0,1\},
 \qquad s=|\Delta|<\gamma_D.
 \tag{3}
-$$
+```
 
 Assume it preserves every old contact and weakly shortens every old diameter, with
 at least one old diameter strictly shortened. Extend it to the **entire** source by
 
-$$
+```math
 f(z)=
 \begin{cases}
 f(c(z)),&z\in Z_T,\\
 0,&z\in Z\setminus Z_T.
 \end{cases}
 \tag{4}
-$$
+```
 
 Every inactive pair stays strictly below D after this extension.
 
@@ -155,10 +155,10 @@ strictly below D. Any other inactive pair has original length at most L_D. Becau
 all displacements are either 0 or Delta, its relative displacement has length at
 most s, and its final length is at most
 
-$$
+```math
 L_D+s<D.
 \tag{5}
-$$
+```
 
 Old diameter pairs have endpoints in V and retain the assumed weak decrease.
 The extension changes no old contact because every z in Z is contact-isolated.
@@ -171,11 +171,11 @@ strict pair in a KKT system.
 Under Section 4, the extended endpoint necessarily has a previously strict source
 pair xy with
 
-$$
+```math
 \boxed{1<|xy|\le1+s,\qquad
 |x+f(x)\Delta-y-f(y)\Delta|\le1.}
 \tag{6}
-$$
+```
 
 Otherwise every old noncontact remains strictly greater than one. Old contacts are
 preserved, so the endpoint is triangle-free and has the same contact count. Section
@@ -207,17 +207,17 @@ exactly |Z_G| edges, none in H. Every z in Z_G has one designated root r(z) in B
 For any binary core motion f:V->{0,1}, set f(z)=f(r(z)); set f=0 on every remaining
 isolate. Define the **fixed**, motion-independent exception set
 
-$$
+```math
 J=(E(G)\setminus H)\setminus E(F).
 \tag{11}
-$$
+```
 
 The straight-line edge bound applied to G gives
 
-$$
+```math
 \boxed{|J|=|E(G)|-h-|Z_G|\le q-h=d_H.}
 \tag{12}
-$$
+```
 
 Every inactive long pair outside J is unchanged: it is either an F edge with equal
 root labels or is in an isolate-only component whose vertices all stay fixed. All
@@ -246,11 +246,11 @@ of Section 5, create a new contact or overlap from an old noncontact of length a
 most 1+s_*. A fixed such pair can witness at most two swaps. Hence the distinct
 near-unit witness count N_1 satisfies
 
-$$
+```math
 \boxed{N_1\ge\max\{0,\lceil k/2\rceil-|J|\}
 \ge\max\{0,\lceil k/2\rceil-d_H\}.}
 \tag{13}
-$$
+```
 
 This requires neither source-hull equality with the loaded hull nor the saturated
 estimate h=pi D-o(D). It charges the diameter obstruction to the exact canonical
@@ -264,10 +264,10 @@ real interval of width W. Choose two phases consecutive in **angular** order wit
 gap at most W/(r-1); their trains need not be adjacent on the complement-dual path.
 The arbitrary-block theorem applies to their physical slab and gives
 
-$$
+```math
 0<s=2\sin(\varepsilon/2)\le\frac W{r-1}.
 \tag{7}
-$$
+```
 
 If W/(r-1)<gamma_D and d_H=0, then either the old diameter support is TWO-SIGN, or
 the ONE-SIGN core block swap extended by (4) forces (6). The existing theorem supplies
@@ -277,10 +277,10 @@ its KKT slab balance ensures at least one moving old diameter exists.
 For W<=4K/D, the sufficient condition r-1>=8K gives
 s<=1/(2D)<gamma_D. If r>=eta D for fixed eta>0, then
 
-$$
+```math
 \boxed{s\le\frac{8K}{\eta D^2}}
 \tag{8}
-$$
+```
 
 for all sufficiently large D, and the forced inactive pair in the ONE-SIGN branch
 is O(D^-2)-near-unit. A nonconstant shore with only finitely many distinct phases
@@ -298,10 +298,10 @@ order and partition it greedily into consecutive blocks, closing each block as s
 as it has R distinct phases; leave a final block with fewer than R. If the whole
 shore has r distinct phases, the number b of completed blocks obeys
 
-$$
+```math
 b\ge\max\{0,\lceil(r-R+1)/R\rceil\}.
 \tag{14}
-$$
+```
 
 Indeed the union of the distinct-phase sets of b complete blocks and the final block
 has size at most bR+(R-1). In each completed block choose two phases consecutive in
@@ -332,17 +332,17 @@ common endpoint, would have length at least two, also impossible.
 Thus the near-unit witness in (6) belongs to a geometrically controlled augmented
 contact graph. If P_s is triangle-free and n=|A|>=3, planar Euler accounting gives
 
-$$
+```math
 |P_s\setminus C|\le2n-4-|C|.
 \tag{9}
-$$
+```
 
 For the canonical core currency e=2v-delta-2-r_E and n=v+z this reads
 
-$$
+```math
 |P_s\setminus C|\le\delta+r_E+2z-2.
 \tag{10}
-$$
+```
 
 Every pair on the left is included, including pairs between isolates or between an
 isolate and the core. If P_s has a triangle, it is only a triangle with three side
@@ -392,11 +392,12 @@ to these inactive edges. Sections 7–8 specifically block either unsupported up
    the cycle diameters remain, and every inactive pair stays strictly below 10.
    Nevertheless
 
-   $$
+   ```math
    1<|p-z|<1001/1000,\qquad
    |p+\Delta-z|=(999/1000)|p-z|<1.
    \tag{15}
-   $$
+   
+   ```
 
    The amplitude is below 1/(2D). Thus upper-distance control, cyclic geometry,
    triangle-free old contacts, and old-contact preservation cannot alone exclude

@@ -26,24 +26,24 @@ competitor, an exact unit equilateral triangle, or a global-optimality disproof.
 
 The selected route was the full-core C-II branch. The canonical endpoint was
 
-$$
+```math
  \liminf_{D\to\infty}\frac1D\sum_r
  (L_r+P_{{\rm exc},r}-2d_r)
  \ge c_{\rm det},\qquad
  c_{\rm det}:=\frac\pi2(2-\sqrt3),
  \tag{1.1}
-$$
+```
 
 from C-AGGREGATE-TWO-ARC-DETOUR, together with
 
-$$
+```math
  \sum_rP_{{\rm exc},r}\le10(e_{BB}-k),
  \qquad k=d_H+s_Z,
  \tag{1.2}
-$$
+```
 
 from C-AUGMENTED-CELL-DEFECT-BUDGET. The exact residual was
-$\sum_r(L_r-2d_r)$.
+$`\sum_r(L_r-2d_r)`$.
 
 The attempted chain was
 
@@ -83,87 +83,87 @@ positive-contact component I_r define:
 
 Then
 
-$$
+```math
 \boxed{\sum_r(L_r+P_{{\rm exc},r}-2a_r)
 \le 10(e_{BB}-k-d_{\rm tile})
 -4M_{\rm miss}-6C_\partial.}
 \tag{2.1}
-$$
+```
 
 Consequently,
 
-$$
+```math
 \boxed{\sum_r(L_r+P_{{\rm exc},r}-2d_r)
 \le 10(e_{BB}-k-d_{\rm tile})
 \;+\;2\sum_r(a_r-d_r)-4M_{\rm miss}-6C_\partial.}
 \tag{2.2}
-$$
+```
 
 Thus the canonical lower bound (1.1) implies only the necessary condition
 
-$$
+```math
 \boxed{\liminf_{D\to\infty}\frac1D
 \left[10(e_{BB}-k-d_{\rm tile})
 \;+\;2\sum_r(a_r-d_r)-4M_{\rm miss}-6C_\partial\right]
 \ge c_{\rm det}.}
 \tag{2.3}
-$$
+```
 
 No sign or smallness statement for the residual
-$\sum_r(a_r-d_r)$ has been proved.
+$`\sum_r(a_r-d_r)`$ has been proved.
 
 ### 2.1 Near-disk localization of loaded contacts
 
 Let F=conv(B) be the loaded force hull. Canonical C-FULLCORE-NEAR-DISK gives
-$d_H(F,B(o_D,D/2))=o(D)$. After translating, put R=D/2, choose
-$\delta=o(D)$, $r=R-\delta$, and $R_+=R+\delta$. Support functions give
+$`d_H(F,B(o_D,D/2))=o(D)`$. After translating, put R=D/2, choose
+$`\delta=o(D)`$, $`r=R-\delta`$, and $`R_+=R+\delta`$. Support functions give
 
-$$
+```math
 B(0,r)\subset F\subset B(0,R_+). \tag{2.4}
-$$
+```
 
 For a boundary point x and outward unit normal u,
-$u\cdot x=h_F(u)\ge r$ and $|x|\le R_+$. Therefore the normal and radial
+$`u\cdot x=h_F(u)\ge r`$ and $`|x|\le R_+`$. Therefore the normal and radial
 directions differ by at most
-$\beta=\arccos(r/R_+)=o(1)$.
+$`\beta=\arccos(r/R_+)=o(1)`$.
 
-If boundary vertices p,q satisfy $|p-q|=1$, their smaller radial angular
+If boundary vertices p,q satisfy $`|p-q|=1`$, their smaller radial angular
 separation satisfies
 
-$$
+```math
 1\ge2r\sin(\gamma/2),\qquad
 \gamma\le2\arcsin(1/(2r))=o(1). \tag{2.5}
-$$
+```
 
-Indeed, writing $p=a e$, $q=b f$, with $a,b\ge r$, the case
-$e\cdot f<0$ already gives $|p-q|^2\ge2r^2>1$ for large D. In the
+Indeed, writing $`p=a e`$, $`q=b f`$, with $`a,b\ge r`$, the case
+$`e\cdot f<0`$ already gives $`|p-q|^2\ge2r^2>1`$ for large D. In the
 remaining case,
-$$
+```math
 |p-q|^2=(a-b)^2+2ab(1-e\cdot f)
 \ge4r^2\sin^2(\gamma/2).
-$$
+```
 
 Along the short polar arc from p to q, every side direction lies in an interval
 of width
-$\tau=2\beta+2\arcsin(1/(2r))=o(1)$. If p and q were nonconsecutive, the
-arc would contain at least two side vectors $v_i$. Let
-$w=(q-p)/|q-p|$. Since the sum of vectors in a cone of width $\tau<\pi/2$
-stays in that cone, every $v_i$ makes angle at most $\tau$ with $w$.
-Projection onto $w$ gives
+$`\tau=2\beta+2\arcsin(1/(2r))=o(1)`$. If p and q were nonconsecutive, the
+arc would contain at least two side vectors $`v_i`$. Let
+$`w=(q-p)/|q-p|`$. Since the sum of vectors in a cone of width $`\tau<\pi/2`$
+stays in that cone, every $`v_i`$ makes angle at most $`\tau`$ with $`w`$.
+Projection onto $`w`$ gives
 
-$$
+```math
 1=|q-p|=w\cdot(q-p)
 \ge \sum_i |v_i|\cos(\tau)
 \ge2\cos(\tau)>1,
 \tag{2.6}
-$$
+```
 
 a contradiction. Hence every unit chord between loaded hull vertices is a hull side,
 and the Section-63 slack satisfies
 
-$$
+```math
 \boxed{c_B=0,\qquad e_{BB}=q-m.} \tag{2.7}
-$$
+```
 
 In particular, any loaded-loaded unit contact inside A_r is a side of P_r: the
 global hull side has no loaded vertex, and therefore no attachment vertex, between
@@ -174,20 +174,20 @@ its endpoints.
 Fix r. Form J_r^+ from the internal and attachment contacts on I_r union A_r by
 omitting loaded-loaded contacts and adding all sides of P_r. Let c_r^partial be
 the number of actual loaded contacts that are sides of P_r, and set
-$h_r=a_r-c_r^\partial$. By (2.7), J_r^+ has no loaded-loaded interior chords.
+$`h_r=a_r-c_r^\partial`$. By (2.7), J_r^+ has no loaded-loaded interior chords.
 
 Partition its bounded degree excess as
 
-$$
+```math
 Q_r^+=Q_{M,r}+Q_{C,r}+Q_{I,r}, \tag{2.8}
-$$
+```
 
 according as a face is side-adjacent to a missing polygon side, side-adjacent to an
 actual contact side, or is any other bounded face. Define
 
-$$
+```math
 M_r:=h_r-T_r+Q_{M,r}\ge0. \tag{2.9}
-$$
+```
 
 Every bounded triangular face uses a polygon side because the source is
 triangle-free. A triangle using two polygon sides would require the third edge
@@ -196,42 +196,42 @@ triangle; in the latter case the three polygon sides bound the outer face, not
 a bounded face. The former possibility is excluded by (2.7). A contact polygon
 side cannot bound a triangle using one polygon side, since its two other unit
 edges would form an exact unit equilateral triangle. Thus every bounded triangle
-is on a missing side, so $T_r\le h_r$, proving the inequality in (2.9).
+is on a missing side, so $`T_r\le h_r`$, proving the inequality in (2.9).
 
 A missing-side face of degree m has old route length m-1. Its contribution to
-$L_r-2a_r$ is m-3, namely 0 for a triangle, 1 for a quadrilateral, and
+$`L_r-2a_r`$ is m-3, namely 0 for a triangle, 1 for a quadrilateral, and
 1+(m-4) for m at least 5. A contact side contributes -1. Therefore
 
-$$
+```math
 L_r-2a_r=M_r-c_r^\partial. \tag{2.10}
-$$
+```
 
 There are no loaded interior chords. On deleting missing polygon sides, precisely
 the missing-side faces leave the bounded-face set, so the actual bounded
 nonquadrilateral excess is
 
-$$
+```math
 Q_r=Q_{C,r}+Q_{I,r}. \tag{2.11}
-$$
+```
 
 If f_r is the number of actual bounded nonquadrilateral faces, then
-$P_{{\rm exc},r}=4f_r+Q_r$, $f_r\le Q_r$, and
+$`P_{{\rm exc},r}=4f_r+Q_r`$, $`f_r\le Q_r`$, and
 
-$$
+```math
 P_{{\rm exc},r}\le5(Q_{C,r}+Q_{I,r}). \tag{2.12}
-$$
+```
 
-The exact Section-123 defect is $X_r=a_r-T_r+Q_r^+$, and (2.8)–(2.9) give
-$X_r=M_r+c_r^\partial+Q_{C,r}+Q_{I,r}$. Consequently
+The exact Section-123 defect is $`X_r=a_r-T_r+Q_r^+`$, and (2.8)–(2.9) give
+$`X_r=M_r+c_r^\partial+Q_{C,r}+Q_{I,r}`$. Consequently
 
-$$
+```math
 \begin{aligned}
 L_r+P_{{\rm exc},r}-2a_r
 &\le M_r-c_r^\partial+5(Q_{C,r}+Q_{I,r})\\
 &=5X_r-4M_r-6c_r^\partial.
 \end{aligned}
 \tag{2.13}
-$$
+```
 
 This finite inequality does not identify outer-walk occurrences from different cells.
 
@@ -239,16 +239,16 @@ This finite inequality does not identify outer-walk occurrences from different c
 
 Canonical Section 123 gives the exact identity
 
-$$
+```math
 e_{BB}-k=\frac12\sum_rX_r+d_{\rm tile}. \tag{2.14}
-$$
+```
 
-Summing (2.13), putting $M_{\rm miss}=\sum_rM_r$ and
-$C_\partial=\sum_rc_r^\partial$, proves (2.1). Adding
-$2\sum_r(a_r-d_r)$ proves (2.2), and (1.1) proves (2.3).
+Summing (2.13), putting $`M_{\rm miss}=\sum_rM_r`$ and
+$`C_\partial=\sum_rc_r^\partial`$, proves (2.1). Adding
+$`2\sum_r(a_r-d_r)`$ proves (2.2), and (1.1) proves (2.3).
 
 This does not close C-II. Current area saturation does not bound
-$\sum_r(a_r-d_r)$ with a sufficiently small coefficient; the loaded-hull scalar
+$`\sum_r(a_r-d_r)`$ with a sufficiently small coefficient; the loaded-hull scalar
 and the three negative credits have no proved joint sign that contradicts (2.3).
 No source-preserving deformation follows from this accounting.
 
@@ -260,49 +260,49 @@ This is a separate finite result for the macroscopic-container branch.
 
 Let A be a triangle-free contact-minimal global n-point minimizer, let
 K=conv(A), let Z be contact-isolated source points, and let v not in Z be
-nonisolated. If $Y\subset K$ obeys
+nonisolated. If $`Y\subset K`$ obeys
 
-$$
+```math
 |Y|=|Z|+1,\qquad |y-y'|>1\ (y\ne y'),\qquad
 |y-x|>1\quad
 (y\in Y,\ x\in A\setminus(Z\cup\{v\})), \tag{3.1}
-$$
+```
 
 then such a Y cannot exist.
 
-Proof. Replace $Z\cup\{v\}$ by Y. The cardinality is unchanged, retained old
+Proof. Replace $`Z\cup\{v\}`$ by Y. The cardinality is unchanged, retained old
 pairs stay separated, and (3.1) handles every new pair. All points remain in K,
 so the new diameter is at most D(n); the definition of D(n) forces equality.
 The deleted isolates remove no contact, v removes at least one, and Y creates none.
 The new contact graph remains triangle-free, so contact minimality is contradicted.
-$\square$
+$`\square`$
 
 ### Theorem 3.2 — loaded lexicographic companion
 
 Assume in Theorem 3.1 that K has nonempty interior, v is incident to a diameter
-pair, and $Y\subset\operatorname{int}K$ has the same cardinality as
-$Z\cup\{v\}$. Suppose the replacement is unit-separated and triangle-free, and
+pair, and $`Y\subset\operatorname{int}K`$ has the same cardinality as
+$`Z\cup\{v\}`$. Suppose the replacement is unit-separated and triangle-free, and
 let c_new be the number of new unit contacts incident to Y. If
 
-$$
+```math
 c_{\rm new}\le d_C(v), \tag{3.2}
-$$
+```
 
 then the replacement is impossible.
 
 Proof. If the inequality is strict, contact minimality is contradicted. At equality,
-contact count is unchanged. For $y\in\operatorname{int}K$ and $x\in K$, one has
-$|y-x|<D(n)$: otherwise y lies on the boundary circle of the disk
-$\overline B(x,D(n))$, while a neighborhood of y lies in
-$K\subset\overline B(x,D(n))$. Thus new points create no diameter pairs, while
+contact count is unchanged. For $`y\in\operatorname{int}K`$ and $`x\in K`$, one has
+$`|y-x|<D(n)`$: otherwise y lies on the boundary circle of the disk
+$`\overline B(x,D(n))`$, while a neighborhood of y lies in
+$`K\subset\overline B(x,D(n))`$. Thus new points create no diameter pairs, while
 deleting v removes a diameter pair. Diameter-pair minimality is contradicted.
-$\square$
+$`\square`$
 
 For an actual internal convex inactive chamber C, write
-$C_{-1}=\{x\in C:\operatorname{dist}(x,\partial C)>1\}$.
-Every point of $C_{-1}$ is more than unit distance from source points outside the
+$`C_{-1}=\{x\in C:\operatorname{dist}(x,\partial C)>1\}`$.
+Every point of $`C_{-1}`$ is more than unit distance from source points outside the
 chamber's assigned isolate set. Hence Theorem 3.1 gives the exact finite no-go: no
-protected strict k to k+1 exchange exists entirely in $C_{-1}$. The loaded
+protected strict k to k+1 exchange exists entirely in $`C_{-1}`$. The loaded
 companion gives the contact-budget analogue after deleting a loaded point. Both
 statements preserve source cardinality and retain all isolates; neither constructs
 a replacement.
@@ -310,12 +310,12 @@ a replacement.
 ## 4. Frontier effect and remaining obligations
 
 The repaired Type-II theorem reduces the aggregate route target to the exact positive
-currencies $e_{BB}-k$ and $\sum_r(a_r-d_r)$, after explicit dissection, missing-side,
+currencies $`e_{BB}-k`$ and $`\sum_r(a_r-d_r)`$, after explicit dissection, missing-side,
 and attachment-contact credits. It is a bookkeeping advance, not a Level-I closure.
 
 The remaining obligations are:
 
-1. Prove an upper bound for (2.3) below $c_{\rm det}$, or turn its residual into a
+1. Prove an upper bound for (2.3) below $`c_{\rm det}`$, or turn its residual into a
    finite source-preserving strict diameter decrease, or force an exact unit triangle.
 2. In the macroscopic internal chamber or exterior-cap branch, construct a protected
    finite exchange with the exact deleted-core contact budget, or prove a global
@@ -397,7 +397,7 @@ vanishing-shear report, and scalar verification script were preserved.
 2. Dependency chain: C-FULLCORE-NEAR-DISK + C-LOADED-HULL +
    C-HARMONIC-CELL-TILING + C-AUGMENTED-CELL-DEFECT-BUDGET -> Theorem 2.1;
    global lexicographic minimality -> Theorems 3.1–3.2.
-3. Exact remaining lemma: bound $e_{BB}-k+\sum_r(a_r-d_r)$ below the Section-122
+3. Exact remaining lemma: bound $`e_{BB}-k+\sum_r(a_r-d_r)`$ below the Section-122
    demand after credits, or construct a strict source-preserving competitor; also
    close the internal/exterior macroscopic-container branch.
 4. Binding dead routes: density-only loss, scalar ledger elimination, local KKT

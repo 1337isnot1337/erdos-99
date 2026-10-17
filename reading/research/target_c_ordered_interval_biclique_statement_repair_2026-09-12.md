@@ -15,16 +15,16 @@ The original exact interval-block theorem omitted the necessary existence condit
 `k<=b`, where `b` is the size of the ordered shore. Without it the displayed numerical
 condition can be vacuous. For example,
 
-$$
+```math
 a=b=e=1,
 \qquad k=2,
-$$
+```
 
 satisfies
 
-$$
+```math
 e+a=2=k(a+b-k+1),
-$$
+```
 
 but the ordered shore has no consecutive two-block and hence no `K_{2,2}`.
 
@@ -32,27 +32,27 @@ The actual Section-91 applications in the research file are unaffected: their ch
 `k` is automatically at most both shore sizes whenever it is positive. The finite
 regression script already tests the theorem only for
 
-$$
+```math
 1\le k\le\min(a,b).
-$$
+```
 
 ## Corrected exact theorem
 
 Let `G=(A,B,E)` be bipartite, let `|A|=a`, `|B|=b`, fix a linear order on `B`, and
 assume every row neighborhood `N(x)`, `x in A`, is an interval in that order. Let
 
-$$
+```math
 1\le k\le b.
-$$
+```
 
 If
 
-$$
+```math
 \boxed{
 e+a\ge k(a+b-k+1),
 }
 \tag{IB.1}
-$$
+```
 
 then `G` contains a `K_{k,k}` whose `B` shore is one consecutive `k`-block.
 
@@ -61,44 +61,44 @@ then `G` contains a `K_{k,k}` whose `B` shore is one consecutive `k`-block.
 For one row of degree `d_x`, the number of consecutive `k`-blocks contained in its
 interval neighborhood is
 
-$$
+```math
 \max(d_x-k+1,0).
-$$
+```
 
 Thus the total row/block incidence count satisfies
 
-$$
+```math
 I_k
 =\sum_x\max(d_x-k+1,0)
 \ge e-a(k-1).
-$$
+```
 
 By (IB.1),
 
-$$
+```math
 e\ge k(a+b-k+1)-a,
-$$
+```
 
 and therefore
 
-$$
+```math
 I_k
 \ge k(a+b-k+1)-a-a(k-1)
 =k(b-k+1).
-$$
+```
 
 Since `k<=b`, we have `b-k+1>=1`, so
 
-$$
+```math
 k(b-k+1)>(k-1)(b-k+1).
-$$
+```
 
 There are exactly `b-k+1` consecutive `k`-blocks on `B`. If every such block occurred
 in at most `k-1` row neighborhoods, then
 
-$$
+```math
 I_k\le(k-1)(b-k+1),
-$$
+```
 
 contradicting the preceding strict inequality. Hence some consecutive `k`-block is
 contained in at least `k` rows, giving the required `K_{k,k}`.
@@ -107,29 +107,29 @@ contained in at least `k` rows, giving the required `K_{k,k}`.
 
 Let
 
-$$
+```math
 k_0:=\left\lfloor{e\over a+b}\right\rfloor.
-$$
+```
 
 If `k_0>=1`, then automatically
 
-$$
+```math
 k_0\le {e\over a+b}\le {ab\over a+b}<\min(a,b),
-$$
+```
 
 because `e<=ab`. Thus the missing size hypothesis is automatic. Also
 
-$$
+```math
 e\ge k_0(a+b),
-$$
+```
 
 which implies (IB.1). Therefore the useful corollary
 
-$$
+```math
 \boxed{
 K_{k_0,k_0}\subseteq G
 }
-$$
+```
 
 remains valid exactly as used downstream.
 
@@ -137,30 +137,30 @@ remains valid exactly as used downstream.
 
 If
 
-$$
+```math
 a,b\le CD,
 \qquad e\ge\varepsilon D^2,
-$$
+```
 
 and `k=floor(cD)` with
 
-$$
+```math
 c<C-\sqrt{C^2-\varepsilon},
-$$
+```
 
 then the edge lower bound itself forces
 
-$$
+```math
 a,b\ge {\varepsilon\over C}D.
-$$
+```
 
 Moreover
 
-$$
+```math
 C-\sqrt{C^2-\varepsilon}
 ={\varepsilon\over C+\sqrt{C^2-\varepsilon}}
 \le {\varepsilon\over C}.
-$$
+```
 
 After choosing `c` strictly below the endpoint, `k<=min(a,b)` for all sufficiently
 large `D`. The interval-block extraction therefore remains valid and is linear, rather

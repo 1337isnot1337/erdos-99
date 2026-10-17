@@ -72,36 +72,36 @@ All coherently lifted directions lie in an open actual-diameter-direction cell
 
 Choose a subset `I` of `k>=2` cuts whose directions are not all equal. Put
 
-$$
+```math
 U=\sum_{i\in I}u_i,\qquad e=U/|U|,\qquad w=Je,
 \qquad a_i=u_i\cdot w.
 \tag{1}
-$$
+```
 
 The narrow span ensures `U!=0`; its direction is strictly between the smallest
 and largest selected angles. Reflect the selected contact vectors across the
 line in direction `e`:
 
-$$
+```math
 u'_i=u_i-2a_iw\quad(i\in I),\qquad u'_i=u_i\quad(i\notin I).
 \tag{2}
-$$
+```
 
 Assign the scalar prefix translations
 
-$$
+```math
 x_j=-2\sum_{i\in I,\ i\le j}a_i,\qquad X_j=x_jw,
 \qquad j=0,\ldots,m.
 \tag{3}
-$$
+```
 
 Translate **every** source point in layer `j` by `X_j`. Since
 `sum_{i in I}a_i=U dot w=0`,
 
-$$
+```math
 X_0=X_m=0.
 \tag{4}
-$$
+```
 
 ### Theorem 1: exact contacts, fixed exterior, and displacement bound
 
@@ -109,10 +109,10 @@ The finite placement (3) preserves every old unit contact exactly and fixes both
 exterior layers. If `W<pi/2` is the angular span of the selected directions, every
 point displacement and every pair-relative displacement is at most
 
-$$
+```math
 \boxed{\eta_I:=\sum_{i\in I}|a_i|\le k\sin W.}
 \tag{5}
-$$
+```
 
 **Proof.** A selected cut contact becomes
 `u_i+(X_i-X_{i-1})=u_i-2a_iw=u'_i`, which has norm one. Every other old contact
@@ -135,18 +135,18 @@ permutation of the phase word.
 
 Let `mu=arg e`, and let the selected extreme angles be `alpha<beta`. Put
 
-$$
+```math
 g=\min(\mu-\alpha,\beta-\mu)>0.
 \tag{6}
-$$
+```
 
 Both selected extremes lie strictly inside the empty cell `J`. Every old actual
 diameter vector `r`, with `|r|=D`, therefore satisfies
 
-$$
+```math
 \boxed{|r\cdot w|>D\sin g.}
 \tag{7}
-$$
+```
 
 This follows from projective angular distance: no actual diameter direction
 lies between `alpha` and `beta`, and the nearest direction outside `J` is
@@ -154,10 +154,10 @@ strictly farther from `mu` than `g`.
 
 ### Lemma 2: the balanced-prefix bound
 
-$$
+```math
 \boxed{\eta_I\le 2(k-1)\sin g.}
 \tag{8}
-$$
+```
 
 **Proof.** If `g=mu-alpha`, every negative `a_i` has magnitude at most `sin g`.
 There are at most `k-1` negative terms, because a nonconstant selected family has
@@ -169,27 +169,27 @@ QED.
 
 Assume
 
-$$
+```math
 \boxed{D\ge k-1.}
 \tag{9}
-$$
+```
 
 For a diameter whose endpoints have layers `a,b`, its relative displacement
 is `Delta=(x_b-x_a)w=lambda w`. If `lambda!=0`, then
 
-$$
+```math
 \boxed{
 \operatorname{sgn}(|r+\Delta|^2-D^2)
 =\operatorname{sgn}(r\cdot\Delta)\ne0.
 }
 \tag{10}
-$$
+```
 
 **Proof.** Equations (7)--(9) give
 
-$$
+```math
 2|r\cdot w|>2D\sin g\ge2(k-1)\sin g\ge|\lambda|.
-$$
+```
 
 Hence `2r dot Delta+|Delta|^2=lambda(2r dot w+lambda)` has the sign of
 `lambda(r dot w)`. Both factors determining that sign are nonzero. If
@@ -208,20 +208,20 @@ bound may then be order one, so it must not be called an inverse-diameter move.
 Let `A_i>0` be the actual positive contact mass on cut `i`. With arbitrary global
 diameter orientations and signed cut incidences `sigma_hi`, the audited identity is
 
-$$
+```math
 A_i u_i=\sum_h\beta_h\sigma_{hi}r_h,\qquad\beta_h>0.
 \tag{11}
-$$
+```
 
 The relative displacement is `Delta_h=sum_i sigma_hi(u'_i-u_i)`. Therefore
 
-$$
+```math
 \boxed{
 \sum_h\beta_h r_h\cdot\Delta_h
 =-2\sum_{i\in I}A_i a_i^2<0.
 }
 \tag{12}
-$$
+```
 
 The inequality is strict because some selected direction differs from `e` and
 every `A_i` is positive. By Theorem 3, at least one old actual diameter strictly
@@ -237,10 +237,10 @@ contradict the canonical choice.
 
 Thus the second alternative forces a previously strict pair with
 
-$$
+```math
 \boxed{1<|xy|\le1+\eta_I\quad\hbox{or}\quad D-\eta_I\le|xy|<D.}
 \tag{13}
-$$
+```
 
 Only the triangle inequality and (5) enter the slack conclusion. This is an
 endpoint comparison; contact-preserving interpolation and endpoint feasibility
@@ -257,11 +257,11 @@ of the form (1)--(3), unless it is the zero motion.
 
 **Proof.** Put `d_i=x_i-x_{i-1}`. On a cut contact,
 
-$$
+```math
 |u_i+d_iw|^2=1
 \quad\Longleftrightarrow\quad d_i(d_i+2u_i\cdot w)=0.
 \tag{14}
-$$
+```
 
 Consequently each cut either has `d_i=0` or is reflected, with
 `d_i=-2u_i dot w`. Let `I` consist of the genuinely changed cuts. The exterior
@@ -289,10 +289,10 @@ diameter can cross a transverse zero there. Parallel graph edges are retained.
 
 For a scalar layer potential `x`, absence of positive work is exactly
 
-$$
+```math
 x_{\rm head}\le x_{\rm tail}\quad\text{on every directed edge.}
 \tag{15}
-$$
+```
 
 ### Theorem 5: strong connectivity prevents every nonzero admissible reflection
 
@@ -350,19 +350,19 @@ last observation.
 
 For `m>=2`, set `D=100m` and
 
-$$
+```math
 t_j=\frac{m-j+1}{10m},\qquad
 c_j=\frac{1-t_j^2}{1+t_j^2},\qquad
 s_j=\frac{2t_j}{1+t_j^2}.
-$$
+```
 
 The source consists of
 
-$$
+```math
 v=(0,0),\qquad p_j=D(c_j,s_j),\qquad n_j=D(c_j,-s_j),
 \quad j=1,\ldots,m.
 \tag{16}
-$$
+```
 
 Its actual diameters are exactly `vp_j,vn_j`. All other pairs have length
 strictly between `1` and `D`. Indeed `0<t_j<=1/10` makes the neighbor arc
@@ -377,22 +377,22 @@ direction cell around the positive horizontal axis.
 
 Assign distinct rational unit directions
 
-$$
+```math
 z_i=\frac{i}{10^6m^3},\qquad
 u_i=\left(\frac{1-z_i^2}{1+z_i^2},\frac{2z_i}{1+z_i^2}\right),
 \qquad F_i=(m-i+1)u_i,
 \quad F_{m+1}=0.
 \tag{17}
-$$
+```
 
 All these directions lie strictly inside that same empty diameter cell. Put
 `V_j=F_j-F_{j+1}` and assign positive diameter weights
 
-$$
+```math
 \gamma_j^\pm=\frac12\left(\frac{V_{j,x}}{Dc_j}
 \ \pm\frac{V_{j,y}}{Ds_j}\right).
 \tag{18}
-$$
+```
 
 These weights are strictly positive. To check this uniformly, `z_i<=1/(10^6m^2)`
 gives `|V_{j,x}-1|<=4/(10^{12}m^3)` and
@@ -402,11 +402,11 @@ gives `|V_{j,x}-1|<=4/(10^{12}m^3)` and
 
 For every cut `i`, the exact telescope gives
 
-$$
+```math
 \sum_{j\ge i}(\gamma_j^+p_j+\gamma_j^-n_j)
 =\sum_{j\ge i}V_j=F_i=(m-i+1)u_i.
 \tag{19}
-$$
+```
 
 Thus the complete cut-resultant identity has positive cut masses and positive
 diameter coefficients. Normalizing all weights by their diameter-weight sum
@@ -427,11 +427,11 @@ larger packets.
 Even the restricted scalar stress test survives. With
 `B_j=gamma_j^++gamma_j^-=V_{j,x}/(Dc_j)<2/D`, the formal cut quadratic form is
 
-$$
+```math
 Q=\operatorname{diag}(m,m-1,\ldots,1)
 -\sum_jB_j1_{[1,j]}1_{[1,j]}^T\succ0.
 \tag{20}
-$$
+```
 
 Indeed Cauchy--Schwarz bounds each squared prefix by `j` times its coordinate
 square sum. At coordinate `i`, the subtracted coefficient is at most
@@ -459,37 +459,37 @@ There is a complementary exact five-point example. Take (16) at `m=2`, but
 give `n_1` layer two instead of layer one. The cyclic layer labels are now
 `0,2,2,2,1`, so the nested shores are still proper boundary intervals. Write
 
-$$
+```math
 u_1=\operatorname{circle}(10^{-6}),\quad u_2=(1,0),\qquad
 f=u_{1,x}-u_{1,y}c_1/s_1>0.
 \tag{21}
-$$
+```
 
 Here `circle(z)=((1-z^2)/(1+z^2),2z/(1+z^2))`. Give `vp_1` the positive weight
 
-$$
+```math
 b_1=u_{1,y}/(Ds_1).
-$$
+```
 
 It has only the first cut in its support. All other diameters have full support.
 Choose `d=f/(100D)>0` as the weight of `vn_1`, and put `T=f(1,0)-d n_1`.
 Give `vp_2,vn_2` the respective weights
 
-$$
+```math
 b_2^\pm=\frac12(T_x/(Dc_2)\pm T_y/(Ds_2)).
 \tag{22}
-$$
+```
 
 Both are positive: `s_1/s_2<2`, `c_2>0.99`, and `c_1<1` give
 `T_x/(Dc_2)>0.99f/D`, whereas `T_y/(Ds_2)<f/(50D)`.
 
 The cut resultants are exactly
 
-$$
+```math
 R_2=d n_1+b_2^+p_2+b_2^-n_2=f u_2,
 \qquad R_1=R_2+b_1p_1=u_1.
 \tag{23}
-$$
+```
 
 Thus both cut masses and all actual-diameter weights are positive; both unit
 directions lie in the empty star cell; and the derivative matrix has rank two

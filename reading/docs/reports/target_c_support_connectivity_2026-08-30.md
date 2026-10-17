@@ -39,64 +39,64 @@ No source/scaffold or rhombic-shell machinery is used.
 
 Fix a normalized KKT stress `(\alpha,\beta)` of a global minimizer `A`.  Write
 
-$$
+```math
 C_+=\{ij\in C:\alpha_{ij}>0\},
 \qquad
 H_+=\{ij\in H:\beta_{ij}>0\},
-$$
+```
 
 and let `B_+` be the endpoint set of `H_+`.
 
 Let
 
-$$
+```math
 F=\operatorname{conv}B_+=\operatorname{conv}V(C_+)
 \tag{C12.1}
-$$
+```
 
 by Target C Theorem C3.1.  Every `b\in B_+` is a vertex of `F`.  Define the boundary
 reaction
 
-$$
+```math
 g_b=\sum_{bk\in H_+}\beta_{bk}(b-k).
 \tag{C12.2}
-$$
+```
 
 Target C Lemma C10.1 gives
 
-$$
+```math
 g_b\ne0,
 \qquad
 g_b\in\operatorname{ri}N_F(b),
 \tag{C12.3}
-$$
+```
 
 where `N_F(b)` is the outward normal cone of `F` at `b`.
 
 For a connected component `K` of `C_+`, put
 
-$$
+```math
 B_K:=B_+\cap V(K).
 \tag{C12.4}
-$$
+```
 
 Canonical Proposition 5.4 gives
 
-$$
+```math
 |B_K|\ge2.
 \tag{C12.5}
-$$
+```
 
 ### Lemma C12.1 (component reaction balance)
 
 For every component `K` of `C_+`,
 
-$$
+```math
 \boxed{
 \sum_{b\in B_K}g_b=0.
 }
 \tag{C12.6}
-$$
+```
 
 #### Proof
 
@@ -123,9 +123,9 @@ Suppose unit segments `ab` and `cd` cross at an interior point `x`.  Of the two 
 choose `v\in\{c,d\}` with `|v-x|\le1/2`.  Because the segments cross properly, the two
 rays `xu` and `xv` are not opposite.  Hence the strict triangle inequality gives
 
-$$
+```math
 |u-v|<|u-x|+|x-v|\le1,
-$$
+```
 
 contradicting unit separation. `\square`
 
@@ -137,18 +137,18 @@ its connected component of `C_+`.
 There do not exist distinct contact components `K,L` and four boundary vertices in
 cyclic order
 
-$$
+```math
 a,b,c,d
-$$
+```
 
 with
 
-$$
+```math
 a,c\in B_K,
 \qquad
 b,d\in B_L.
 \tag{C12.7}
-$$
+```
 
 #### Proof
 
@@ -187,21 +187,21 @@ partitions.  Only the conclusion will be used below.
 
 For every normalized KKT stress of every planar global minimizer,
 
-$$
+```math
 \boxed{
 C_+\text{ has exactly one nontrivial connected component.}
 }
 \tag{C12.8}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \operatorname{diam}V(C_+)=D.
 }
 \tag{C12.9}
-$$
+```
 
 #### Proof
 
@@ -224,17 +224,17 @@ all reaction directions of the block.  Define `\theta_L` similarly.
 Because the two blocks are disjoint cyclic intervals and the reaction directions at
 distinct vertices have positive angular gaps, their spans satisfy
 
-$$
+```math
 \theta_K+\theta_L<2\pi.
 \tag{C12.10}
-$$
+```
 
 Hence at least one, say `K`, has
 
-$$
+```math
 \theta_K<\pi.
 \tag{C12.11}
-$$
+```
 
 All nonzero vectors `{g_b:b\in B_K}` then lie in one open half-plane through the
 origin.  A positive sum of vectors from an open half-plane cannot vanish.  This
@@ -255,34 +255,34 @@ of the unit-contact graph, is a connected triangle-free penny graph.
 
 Let
 
-$$
+```math
 m_+:=|V(C_+)|,
 \qquad
 e_+:=|C_+|.
-$$
+```
 
 The graph distance between the two vertices of any positive diameter edge is at least
 `D`, because every contact edge has Euclidean length one and the Euclidean distance
 between the endpoints is `D`.  Since graph distance is integral,
 
-$$
+```math
 \operatorname{diam}_{G}(C_+)\ge\lceil D\rceil.
 \tag{C12.12}
-$$
+```
 
 Eppstein's canonical connected triangle-free penny-graph inequality (literature
 baseline (2.3)) therefore gives:
 
 ### Corollary C12.5 (positive-support edge deficit)
 
-$$
+```math
 \boxed{
 e_+
 \le
 2m_+-\lceil D\rceil-2.
 }
 \tag{C12.13}
-$$
+```
 
 Thus every KKT stress of a triangle-free global minimizer has a connected,
 full-diameter positive unit-contact network with a **linear-in-`D` contact deficit**
@@ -300,15 +300,15 @@ Before Theorem C12, the reciprocal construction C10 could have been applied sepa
 to every positive contact component.  The theorem shows that this bookkeeping is
 unnecessary: all positive contact stress mass
 
-$$
+```math
 \sum_{C_+}\alpha=D^2
-$$
+```
 
 belongs to one connected network and its one force polygon has
 
-$$
+```math
 2V(F,F^*)=D^2.
-$$
+```
 
 Likewise the electrical response matrix `\Lambda` of C11 is the response of one
 connected contact network, rather than a block diagonal union of independent
@@ -343,13 +343,13 @@ The theorem gives no uniform density gap and does not say that `V(C_+)=A`.
 The positive part of a counterexample can no longer fragment into many islands.  The
 configuration has a canonical macroscopic core:
 
-$$
+```math
 \boxed{
 \text{one connected positive unit-contact network}
 \quad\text{of Euclidean diameter }D,
 }
 \tag{C12.14}
-$$
+```
 
 whose convex hull is the KKT force hull and whose boundary currents are the diameter
 reactions.

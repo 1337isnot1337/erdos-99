@@ -7,7 +7,7 @@
 **Date:** 2026-09-14
 **Target:** Target C-II, full-core branch
 **Audited artifact:** docs/reports/target_c_mu_one_cell_concentration_2026-09-14.md
-**Verdict:** PASS for the stated equality-case theorem; its $\mu_D\to1$ antecedent
+**Verdict:** PASS for the stated equality-case theorem; its $`\mu_D\to1`$ antecedent
 is excluded by the stronger canonical train-coupled floor; no C-II or Level I closure.
 
 ## Audited statement
@@ -89,7 +89,7 @@ or finite deformation is being used.
 
 The result is asymptotic and conditional on the canonical full-core hypotheses and
 mu_j tending to 1. The stronger canonical theorem `C-FULLCORE-TRAIN-SURPLUS-FLOOR`
-gives $\liminf\mu_D\ge1.637562\ldots$, so this antecedent is not realized by
+gives $`\liminf\mu_D\ge1.637562\ldots`$, so this antecedent is not realized by
 any canonical Type-II sequence. The formal implication itself does not assert a finite threshold, lattice structure,
 source-preserving motion, or an exact unit equilateral triangle. It does not apply
 to the Type-I macroscopic chamber or exterior-cap branch.

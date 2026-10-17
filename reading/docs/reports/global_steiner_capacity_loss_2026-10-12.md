@@ -27,10 +27,10 @@ optimality.
 
 Take the unit square rotated by the rational unit direction `(4/5,3/5)`:
 
-$$
+```math
 P=\{(-7/10,-1/10),(-1/10,7/10),
       (7/10,1/10),(1/10,-7/10)\}.
-$$
+```
 
 Its minimum distance is one, diameter squared is two, and contact graph is
 a four-cycle. It is a global minimizer for four labels.
@@ -47,9 +47,9 @@ The square attains `sqrt(2)`.
 
 Its convex hull has area one. The symmetrized hull is the hexagon
 
-$$
+```math
 S K=\operatorname{conv}\{(0,\pm7/10),(\pm5/8,\pm1/10)\}.
-$$
+```
 
 The notation includes all four independent sign choices in the latter term.
 The section widths are zero at `y=+-7/10`, `5/4` at `y=+-1/10`, constant
@@ -60,9 +60,9 @@ bound. The sites `(0,7/10)`, `(-5/8,-1/10)`, `(5/8,-1/10)` are all mutually
 more than unit distance apart, so `N(S K)=3`. The original hull has capacity
 exactly four (also directly from Oler's bound below). Thus
 
-$$
+```math
 \boxed{N(K)=4>3=N(S K)}
-$$
+```
 
 even for a triangle-free actual global diameter minimizer. This finite
 regression does not settle the eventual Level I quantifier.
@@ -71,18 +71,18 @@ regression does not settle the eventual Level I quantifier.
 
 For any integer `m>=20`, put
 
-$$
+```math
 t=\tfrac12-\frac1{m^2},\qquad h=\sqrt{1-t^2},\qquad
 u=(4/5,3/5),\qquad
 v=((4t-3h)/5,(3t+4h)/5).
-$$
+```
 
 These are unit vectors with `u dot v=t<1/2`. Use the actual source
 
-$$
+```math
 P_m=\{iu+jv:0\le i,j\le m,\ i,j\in\mathbb Z\},
 \qquad K_m=\operatorname{conv}P_m.
-$$
+```
 
 There are `n=(m+1)^2` labels. Every squared source distance is
 `a^2+b^2+2tab` for an integer pair `(a,b)`. If `ab>=0`, this is at least
@@ -93,18 +93,18 @@ no unit triangle.
 
 The rhombus hull has perimeter `4m` and area `hm^2`. With `a0=sqrt(3)/2`,
 
-$$
+```math
 1<\frac h{a_0}
 =\sqrt{1+\frac4{3m^2}-\frac4{3m^4}}
 \le1+\frac2{3m^2}.
-$$
+```
 
 Canonical Oler Lemma 21.1 gives
 
-$$
+```math
 N(K_m)\le(h/a_0)m^2+2m+1
 \le(m+1)^2+2/3.
-$$
+```
 
 The count is integral and the explicit source attains `(m+1)^2`, so
 `N(K_m)=(m+1)^2` exactly. Its point count per container area tends to the
@@ -116,33 +116,33 @@ heights `+-m(b-3/5)/2`, and middle half-width `mh/(2b)`. This follows by
 taking its horizontal sections; the constant middle width is `mh/b`.
 Its perimeter is exactly
 
-$$
+```math
 \operatorname{per}(S K_m)
 =2m(b-3/5)+4m\sqrt{(h/(2b))^2+(3/5)^2}.
-$$
+```
 
 For `m>=20`, `14h<=27t`: squaring reduces this to
 `196<=925t^2`, which holds already at `t=199/400` and improves thereafter.
 Equivalently `h/(2b)<=9/20`. Thus
 
-$$
+```math
 \operatorname{per}(S K_m)
 \le 2m(1-3/5)+4m(3/4)=19m/5.
-$$
+```
 
 The symmetrized hull still has area `hm^2`. Applying Oler again yields
 
-$$
+```math
 N(S K_m)\le m^2+\tfrac23+\tfrac{19}{10}m+1
 =n-\frac m{10}+\frac23.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{N(K_m)-N(S K_m)\ge
 \left\lceil\frac m{10}-\frac23\right\rceil.}
-$$
+```
 
 This is an unbounded loss, linear in source diameter and in `sqrt(n)`.
 The original unit-separated source labels cannot all be repacked into the

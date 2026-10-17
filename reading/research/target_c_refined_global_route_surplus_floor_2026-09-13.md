@@ -18,79 +18,79 @@ short-detour interval to give `153/1250`.
 
 Let
 
-$$
+```math
 S_D:={b-\operatorname{per}(F)+Q+4f\over D},
 \qquad
 \lambda_D:={b-\operatorname{per}(F)\over D},
-$$
+```
 
 in the Type-II full-core branch. Section 155, with the repaired finite-to-limit
 atomization lemma, gives for `N=2` and every subsequential limit `lambda>=0`
 
-$$
+```math
 \liminf {Q+4f\over D}
 \ge\left(4\sqrt{\Delta_2}-\sqrt{U_2(\lambda)}\right)_+,
 \tag{RG.1}
-$$
+```
 
 where
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},
 \qquad
 U_2(\lambda)={ (\pi+\lambda)^2+1225\lambda^2\over2}.
 \tag{RG.2}
-$$
+```
 
 ## Theorem RG — explicit `0.1224` route-surplus floor
 
 Every Type-II survivor sequence satisfies
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}S_D\ge {153\over1250}=0.1224.
 }
 \tag{RG.3}
-$$
+```
 
 ### Proof
 
 Set `r=153/1250` and `c=4\sqrt{\Delta_2}`. The function `U_2` is increasing on
 `[0,infinity)`. For `0<=lambda<=r`, define
 
-$$
+```math
 H(\lambda):=(c+\lambda-r)^2-U_2(\lambda).
-$$
+```
 
 Its quadratic coefficient is `-612`, so `H` is concave. The elementary rational
 enclosures
 
-$$
+```math
 \pi<3.14160,
 \qquad
 4\sqrt{\Delta_2}>3.8092
-$$
+```
 
 give
 
-$$
+```math
 H(0)>(3.8092-0.1224)^2-{3.14160^2\over2}>8.65>0,
-$$
+```
 
 and
 
-$$
+```math
 H(r)>3.8092^2-
 {(3.14160+0.1224)^2+1225(0.1224)^2\over2}>0.006>0.
-$$
+```
 
 Concavity gives `H(lambda)>=min{H(0),H(r)}>0` throughout `[0,r]`. Also
 `c+lambda-r>0`, so `sqrt(U_2(lambda))<=c+lambda-r` and therefore
 
-$$
+```math
 \lambda+4\sqrt{\Delta_2}-\sqrt{U_2(\lambda)}\ge r.
 \tag{RG.4}
-$$
+```
 
 Take a subsequence realizing the liminf of `S_D`. If `lambda_D>=r` along a further
 subsequence, then `S_D>=r` there. Otherwise pass to a limit `lambda<r` and apply
@@ -104,10 +104,10 @@ The floor is deliberately conservative. Numerical minimization of the unrounded
 
 The source-level route system must satisfy
 
-$$
+```math
 (b-\operatorname{per}(F))+P_{exc}\ge0.1224D-o(D),
 \qquad P_{exc}=Q+4f,
-$$
+```
 
 in Type II. This improves the existing `0.1D` proof-only floor but remains compatible
 with the current high-detour scalar regression. It does not give an upper bound on

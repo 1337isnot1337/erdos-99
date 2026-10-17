@@ -17,10 +17,10 @@ Write `a0=sqrt(3)/2` and `a=pi/(2sqrt(3))`. For every real
 `R>=640000`, there exists a unit-separated set in the closed radius-`R` disk
 with cardinality at least
 
-$$
+```math
 \boxed{{\pi R^2\over a_0}+{R\over160000}.}
 \tag{1}
-$$
+```
 
 More precisely, **every translate** of the triangular lattice, cropped to this
 disk, admits the explicitly described boundary replacement gaining at least
@@ -29,10 +29,10 @@ disk, admits the explicitly described boundary replacement gaining at least
 Consequently every global minimum-diameter `n`-point unit-separated source with
 `D>1280000` satisfies
 
-$$
+```math
 \boxed{g_A:=n-1-aD^2\ge {D\over320000}.}
 \tag{2}
-$$
+```
 
 The implication chain is
 
@@ -52,9 +52,9 @@ result, not a triangle theorem or a C-II finite-motion theorem.
 
 Use the triangular lattice
 
-$$
+```math
 \Lambda_t=\{t+(j+k/2,ka_0):j,k\in\mathbb Z\}.
-$$
+```
 
 Let `y=t_y+ka0>0` be one row height. Suppose an interval `[A,B]`, with integer
 endpoints and length `L=B-A`, has these two properties in the disk:
@@ -67,10 +67,10 @@ Delete exactly the row-`y` lattice points whose horizontal coordinates lie in
 `[A,B]`. There are at most `L+1` of them, irrespective of translation or row
 parity. Set `h=19/20`, and insert
 
-$$
+```math
 p_i=(A+1+ih,\ y+\eta_i),\qquad
 0\le i\le\left\lfloor{L-2\over h}\right\rfloor,
-$$
+```
 
 where `eta_i=1/6` for even `i` and `eta_i=1/2` for odd `i`.
 
@@ -94,10 +94,10 @@ linearization is used.
 
 The net cardinality gain is at least
 
-$$
+```math
 {L-2\over h}-(L+1)={L-59\over19}.
 \tag{3}
-$$
+```
 
 For `L>64`, the integer gain is therefore at least one.
 
@@ -107,20 +107,20 @@ Set `delta=1/200` and `f(x)=sqrt(R^2-x^2)`. Work only in the upper-right
 arc with horizontal coordinate between `delta R/2` and `delta R`.
 Choose every lattice row `y` such that
 
-$$
+```math
 f(\delta R)\le y,
 \qquad y+a_0\le f(\delta R/2).
 \tag{4}
-$$
+```
 
 Define real endpoints and their inward integer roundings by
 
-$$
+```math
 u_y=\sqrt{R^2-(y+a_0)^2},\qquad
 v_y=\sqrt{R^2-(y+1/2)^2},\qquad
 A_y=\lceil u_y\rceil,\quad B_y=\lfloor v_y\rfloor.
 \tag{5}
-$$
+```
 
 For `x in [A_y,B_y]`, the disk top is at least `y+1/2` and at most
 `y+a0`. Equality at the left endpoint is harmless because of the one-unit
@@ -128,19 +128,19 @@ horizontal guard used by the packet. Thus both hypotheses of Section 2 hold.
 
 Throughout these intervals,
 
-$$
+```math
 \left|{d\over dz}\sqrt{R^2-z^2}\right|
 ={z\over\sqrt{R^2-z^2}}
 \ge {\sqrt{1-\delta^2}\over\delta}>199.
-$$
+```
 
 Since `a0-1/2>1/3`, the mean value theorem and rounding give
 
-$$
+```math
 v_y-u_y>{199\over3},\qquad
 L_y=B_y-A_y>{199\over3}-2={193\over3}>64.
 \tag{6}
-$$
+```
 
 Each selected row therefore gains at least one point.
 
@@ -154,33 +154,33 @@ old labels. This checks the cross-packet constraints, not just single-row moves.
 
 Let
 
-$$
+```math
 \Delta=f(\delta R/2)-f(\delta R).
-$$
+```
 
 The number `K` of rows satisfying (4), for any vertical lattice translation,
 obeys
 
-$$
+```math
 K\ge {\Delta\over a_0}-2\ge\Delta-2.
 \tag{7}
-$$
+```
 
 Rationalizing the difference of square roots gives
 
-$$
+```math
 \Delta
 ={3\delta^2R/4\over
 \sqrt{1-\delta^2/4}+\sqrt{1-\delta^2}}
 \ge {3\delta^2R\over8}={3R\over320000}.
-$$
+```
 
 For `R>=640000`, equations (7) therefore give
 
-$$
+```math
 K\ge {3R\over320000}-2\ge {R\over160000}.
 \tag{8}
-$$
+```
 
 The untouched bulk, the remaining boundary rows, and all the packets form one
 unit-separated packing in the original disk. This proves the claimed gain for
@@ -197,9 +197,9 @@ Now suppose an `n`-point global minimizer has diameter `D>1280000`. For every
 diameter at most `2R<D`. If `N_R>=n`, any `n`-point subset contradicts global
 optimality. Therefore
 
-$$
+```math
 n-1\ge N_R\ge {\pi R^2\over a_0}+{R\over160000}.
-$$
+```
 
 Take `R` up to `D/2`. The right side is continuous, so (2) follows. This limiting
 step preserves the strict smaller-diameter comparison: each individual
@@ -269,25 +269,25 @@ Put `c=1/320000`, `c0=a0/2`, and
 
 In the precise scope where the Target B Section 36 identities hold,
 
-$$
+```math
 n=R_4+B/2+\chi+t,\qquad
 \operatorname{area}(K)=a_0R_4+E+G,
-$$
+```
 
 define `Q=c0 B+a0(t+chi-1)`. There is an **exact** identity
 
-$$
+```math
 Q-(G+E)
 =a_0(n-1)-\operatorname{area}(K)
 =a_0g_A+\delta_K.
-$$
+```
 
 Thus the candidate sharpens the necessary upper shell bound to
 
-$$
+```math
 \boxed{G+E\le Q-\delta_K-{\sqrt3\over640000}D.}
 \tag{11}
-$$
+```
 
 In particular, a uniform source-specific lower bound
 `G+E>=Q-epsilon D` for any fixed `epsilon<sqrt(3)/640000`
@@ -299,23 +299,23 @@ For the canonical Target C Section 67 full-source force-hull population
 inequality, retain `N_F` for all labels in `F`, `Z_ext=n-N_F`, and
 `delta_F=pi D^2/4-area(F)`. Its proved upper bound is
 
-$$
+```math
 a_0N_F\le\operatorname{area}(F)+c_0P_F+a_0-E_4.
-$$
+```
 
 Substitution, with no population deletion, gives
 
-$$
+```math
 \boxed{E_4+\delta_F+a_0g_A\le a_0Z_{ext}+c_0P_F,}
-$$
+```
 
 and hence the candidate consequence
 
-$$
+```math
 \boxed{E_4+\delta_F
 \le a_0Z_{ext}+c_0P_F-{\sqrt3\over640000}D.}
 \tag{12}
-$$
+```
 
 Every contact isolate is included in either `N_F` or `Z_ext`. The estimate does
 not supply a bound on `Z_ext`, an endpoint, or a capacity surplus. It identifies

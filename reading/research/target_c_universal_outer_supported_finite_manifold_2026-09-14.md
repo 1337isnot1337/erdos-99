@@ -30,17 +30,17 @@ on the actual outer face, and put `r_F=|J_F|`.
 Then there is a smooth local family of full-source unit-separated realizations through
 the given source whose train-angle parameter dimension is
 
-$$
+```math
 \boxed{d_{man}=L_{OO}+\sum_F(r_F-2)_+.}
 \tag{UM.1}
-$$
+```
 
 Its tangent train-coordinate space is exactly
 
-$$
+```math
 \boxed{\mathbb R^O\oplus\bigoplus_{F:r_F\ge3}\ker(C_F|_{J_F}),}
 \tag{UM.2}
-$$
+```
 
 where `C_F|_{J_F}` is the two-row first-order closure block of `F` on its private
 outer-to-bounded columns. Every old unit contact remains exactly unit on the family,
@@ -49,53 +49,53 @@ sufficiently small parameter neighborhood.
 
 The exact outer occurrence ledger gives
 
-$$
+```math
 b=2L_{OO}+L_{OB},\qquad L_{OB}=\sum_F r_F,
 \tag{UM.3}
-$$
+```
 
 so
 
-$$
+```math
 \boxed{d_{man}\ge {b\over2}-f.}
 \tag{UM.4}
-$$
+```
 
 Modulo global Euclidean rotation, the genuinely non-Euclidean local dimension is at
 least
 
-$$
+```math
 \boxed{d_{man}^{nonE}\ge {b\over2}-f-1.}
 \tag{UM.5}
-$$
+```
 
 Using `f<=Q` and `b+Q=2(q-k)` gives
 
-$$
+```math
 \boxed{d_{man}^{nonE}\ge {3b\over2}-2(q-k)-1.}
 \tag{UM.6}
-$$
+```
 
 Thus on a Type-II subsequence with
 
-$$
+```math
 {q-k\over D}\to t,\qquad {b-P_F\over D}\to\delta,
 \qquad {P_F\over D}\to\pi,
-$$
+```
 
-$$
+```math
 \boxed{\liminf {d_{man}^{nonE}\over D}
 \ge {3\pi\over2}-2t+{3\delta\over2}.}
 \tag{UM.7}
-$$
+```
 
 At the presently integrated hostile-audited `g=0.0021` Section-171 endpoint
 `t=1.8212414379...`, the zero-detour coefficient is
 
-$$
+```math
 \boxed{1.0699061044\ldots .}
 \tag{UM.8}
-$$
+```
 
 The result does not claim diameter feasibility. It changes the remaining obstruction:
 the actual diameter graph must make the maximum diameter function attain a local
@@ -114,17 +114,17 @@ Choose one projective orientation `u_tau` for every complete train `tau`, and on
 occurrence sign `sigma_e in {+1,-1}` for each oriented physical contact edge `e`, so
 at the original source
 
-$$
+```math
 p_y-p_x=\sigma_e u_{\tau(e)}.
 \tag{UM.9}
-$$
+```
 
 For `tau in J_F`, replace the train vector by
 
-$$
+```math
 u_\tau(\theta_\tau)=R_{\theta_\tau}u_\tau.
 \tag{UM.10}
-$$
+```
 
 Since these trains have no other bounded nonquadrilateral terminal, changing their
 angles affects no other nonquadrilateral face-closure equation. Along every strict
@@ -134,11 +134,11 @@ arbitrary nearby train directions.
 Hence the only finite closure equation involving the variables `theta_tau`,
 `tau in J_F`, is
 
-$$
+```math
 \Phi_F(\theta):=\sum_{e\in\partial F}
 \sigma_e u_{\tau(e)}(\theta_{\tau(e)})=0,
 \tag{UM.11}
-$$
+```
 
 with every nonselected train angle held fixed.
 
@@ -159,18 +159,18 @@ At least two selected vectors are linearly independent.
 
 Differentiating (UM.11) at the original source gives
 
-$$
+```math
 D\Phi_F(0)=C_F|_{J_F}
 =(\pm Ju_{\tau_1}\ \cdots\ \pm Ju_{\tau_{r_F}}),
 \tag{UM.12}
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{\operatorname{rank}(C_F|_{J_F})=2\qquad(r_F\ge3).}
 \tag{UM.13}
-$$
+```
 
 The ordinary implicit-function theorem now gives a smooth local solution manifold of
 train angles of dimension exactly `r_F-2`, tangent to
@@ -197,10 +197,10 @@ one exact finite angular parameter, not merely one infinitesimal zero column.
 
 If `F` and `F'` are distinct bounded nonquadrilateral faces, then
 
-$$
+```math
 J_F\cap J_{F'}=\varnothing.
 \tag{UM.14}
-$$
+```
 
 Indeed an outer-to-bounded train has exactly one bounded terminal occurrence. Hence the
 variables occurring in `Phi_F` and `Phi_F'` are disjoint.
@@ -217,10 +217,10 @@ Applying the implicit-function theorem block by block proves the parameter count
 
 For every physical oriented contact edge define its deformed edge vector by
 
-$$
+```math
 r_e(\theta)=\sigma_e u_{\tau(e)}(\theta_{\tau(e)}).
 \tag{UM.15}
-$$
+```
 
 All bounded face boundaries have zero vector sum:
 
@@ -252,43 +252,43 @@ No diameter estimate is used in this construction.
 
 For every integer `r>=0`,
 
-$$
+```math
 (r-2)_+\ge r-2,
-$$
+```
 
 and the left side is nonnegative. Therefore
 
-$$
+```math
 \boxed{
 \sum_F(r_F-2)_+\ge (L_{OB}-2f)_+.
 }
 \tag{UM.16}
-$$
+```
 
 Combining (UM.1) with the exact outer occurrence ledger gives
 
-$$
+```math
 d_{man}
 \ge L_{OO}+(L_{OB}-2f)_+.
 \tag{UM.17}
-$$
+```
 
 For nonnegative `L_OB`,
 
-$$
+```math
 (L_{OB}-2f)_+\ge {L_{OB}\over2}-f.
 \tag{UM.18}
-$$
+```
 
 Indeed, if `L_OB<=2f`, the right side is nonpositive; if `L_OB>=2f`,
 the difference between the two sides is `L_OB/2-f>=0`. Hence
 
-$$
+```math
 \boxed{
 d_{man}\ge L_{OO}+{L_{OB}\over2}-f={b\over2}-f.
 }
 \tag{UM.19}
-$$
+```
 
 Global rotation is one tangent direction whenever it lies in the selected support.
 Quotienting it costs at most one dimension, proving (UM.5).
@@ -306,9 +306,9 @@ The obstruction is therefore not singular first-order flexibility.
 
 For every finite canonical minimizer, the diameter function
 
-$$
+```math
 \mathcal D(\theta)=\max_{x,y}|p_x(\theta)-p_y(\theta)|
-$$
+```
 
 has a local minimum at the original parameter on this manifold. Canonical mixed
 rigidity says the active-diameter derivative map is injective after quotienting the

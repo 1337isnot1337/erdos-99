@@ -20,14 +20,14 @@ selected train chart -> remaining whole-region/source exchange -> Level I`
 
 ## 1. Finite source theorem
 
-Let $A$ be any finite planar source of diameter $D>0$. Give its actual
-diameter endpoints gap labels $0,\ldots,m$ in proper cyclic bitonic order:
+Let $`A`$ be any finite planar source of diameter $`D>0`$. Give its actual
+diameter endpoints gap labels $`0,\ldots,m`$ in proper cyclic bitonic order:
 one hull-boundary arc has nondecreasing labels and the other has
 nonincreasing labels, with the two extreme blocks contiguous. A diameter
 has **empty cut support** when its endpoints have the same gap label.
 
 If empty-support actual diameters exist, all of them have the same
-endpoint gap label $k$.
+endpoint gap label $`k`$.
 
 This statement needs no KKT stress, no exact phase, no optimality, and
 no deletion of any source point. Its exact geometric input is the convex
@@ -36,15 +36,15 @@ on the unpromoted proper nested-cut/boundary-order theorem.
 
 ### Proof
 
-Suppose two empty-support diameters have distinct labels $j<k$. Their
+Suppose two empty-support diameters have distinct labels $`j<k`$. Their
 four endpoints are distinct. If either diameter has both endpoints in
 one monotone boundary arc, the subarc between those endpoints contains
 only vertices with their common label. No endpoint of the other diameter
 lies on that subarc, so the four endpoints do not alternate.
 
 Otherwise both diameters join the two monotone arcs. One arc orders the
-$j$ endpoints before the $k$ endpoints, and the other reverses that
-order. The cyclic order is therefore $j,k,k,j$, again nonalternating.
+$`j`$ endpoints before the $`k`$ endpoints, and the other reverses that
+order. The cyclic order is therefore $`j,k,k,j`$, again nonalternating.
 The same argument includes extreme blocks by choosing the monotone-arc
 split inside those blocks. Thus the two vertex-disjoint chords do not
 cross, contradicting the actual diameter-thrackle property. ∎
@@ -56,20 +56,20 @@ in the predecessor report fails exactly this hypothesis.
 ## 2. Exact-phase refinement: only one central gap is used
 
 In the paired antitone tree from this branch, order each simple support
-edge as $(a,b)$ with $a<b$. Antitonicity implies that when $a<c$, the
-other endpoints obey $b\ge d$. Together with the cases $a=c$, all the
-closed intervals $[a,b]$ form one nested chain. Its shortest interval
-is adjacent, say $[r-1,r]$, by the adjacent-contraction theorem.
+edge as $`(a,b)`$ with $`a<b`$. Antitonicity implies that when $`a<c`$, the
+other endpoints obey $`b\ge d`$. Together with the cases $`a=c`$, all the
+closed intervals $`[a,b]`$ form one nested chain. Its shortest interval
+is adjacent, say $`[r-1,r]`$, by the adjacent-contraction theorem.
 
-Let an empty-support diameter have label $k$. Compare it with any paired
-edge interval $[a,b]$. If $k<a$ or $k>b$, the empty-support chord has no
+Let an empty-support diameter have label $`k`$. Compare it with any paired
+edge interval $`[a,b]`$. If $`k<a`$ or $`k>b`$, the empty-support chord has no
 endpoint in common with either actual representative of that paired
 edge. Boundary order gives nonalternating endpoints with those chords,
 contradicting the diameter-thrackle property. Thus
 
-$$
+```math
 k\in\bigcap_{(a,b)}[a,b]=\{r-1,r\}.
-$$
+```
 
 Section 1 strengthens this localization: **one** of the two central gaps
 contains every empty-support actual diameter. Their simultaneous
@@ -85,31 +85,31 @@ No claim in that report is rejected by this refinement.
 
 In the exact train chart,
 
-$$
+```math
 p_x(t)=p_x+z_{\ell(x)}(t),\qquad
 z_j(t)=\sum_{i\le j}(R_{t_i}u-u),
-$$
+```
 
 both endpoints of an empty-support diameter translate by the same vector
-$z_k(t)$. Its diameter is unchanged exactly, for all chart parameters;
-this is a finite statement. In the canonical regime $D>1$, these are
+$`z_k(t)`$. Its diameter is unchanged exactly, for all chart parameters;
+this is a finite statement. In the canonical regime $`D>1`$, these are
 precisely the actual diameters intrinsically stationary for every chart
 parameter. Indeed, for nonempty support vary just one coordinate. The
-identity $|r+\sigma(R_tu-u)|^2\equiv D^2$ would force $r=\sigma u$,
-hence $D=1$. Therefore all intrinsically stationary diameter bars belong
+identity $`|r+\sigma(R_tu-u)|^2\equiv D^2`$ would force $`r=\sigma u`$,
+hence $`D=1`$. Therefore all intrinsically stationary diameter bars belong
 to one gap whenever such bars exist.
 
 There is an explicit exception to **derivative-row** terminology. A
-diameter parallel to $u$ can have nonempty full support and zero first
+diameter parallel to $`u`$ can have nonempty full support and zero first
 variation. Its endpoints are in distinct extreme gaps, and its finite
 length need not be fixed. For example, with a singleton interval and
-$r=Du$,
+$`r=Du`$,
 
-$$
+```math
 |Du+(R_tu-u)|^2-D^2=2(1-D)(1-\cos t),
-$$
+```
 
-which strictly decreases for nonzero small $t$ when $D>1$. This parallel
+which strictly decreases for nonzero small $`t`$ when $`D>1`$. This parallel
 bar is not included among the empty-support stationary diameters.
 No inactive pair is promoted to activity, and no source cardinality is
 changed.

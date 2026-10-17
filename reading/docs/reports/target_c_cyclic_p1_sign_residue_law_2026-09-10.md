@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_sign_residue_law_2026-09-10.md) · source SHA-256 `034b43b887a8439ca72061edf0dadcdf0ca57a53bf6e9dcadd1b7482ba2168a2`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 20 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-AB0757A2D24E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 LEVEL I STATUS: STILL OPEN
 
@@ -18,53 +20,53 @@ LEVEL I STATUS: STILL OPEN
 
 Let
 
-$$
+```math
 m=ru,
 \qquad r=2^k,
 \qquad u\text{ odd},
-$$
+```
 
 and let
 
-$$
+```math
 P(Z)=\sum_{j=0}^{m-1}\varepsilon_jZ^j,
 \qquad \varepsilon_j\in\{+1,-1\},
-$$
+```
 
 be the P1 Littlewood annihilator supplied by SC.
 
 Write it uniquely as
 
-$$
+```math
 \boxed{
 P(Z)=S_m(Z)-2Q(Z),
 \qquad
 S_m(Z)=1+Z+\cdots+Z^{m-1},
 }
 \tag{SRL.1}
-$$
+```
 
 where
 
-$$
+```math
 Q(Z)\in\{0,1\}[Z]
-$$
+```
 
 is the indicator polynomial of the negative signs.
 
 Let `M` be the physical P1 root's minimal polynomial. NRS/O3X give
 
-$$
+```math
 \overline M(Z)=B(Z)^r,
-$$
+```
 
 where `B` is squarefree self-reciprocal,
 
-$$
+```math
 B\mid S_u,
 \qquad
 \gcd(B,(Z+1)(Z^2+Z+1))=1.
-$$
+```
 
 The new theorem reconstructs the parity pattern of the negative signs on every selected residue block.
 
@@ -72,7 +74,7 @@ The new theorem reconstructs the parity pattern of the negative signs on every s
 
 In `F_2[Z]`,
 
-$$
+```math
 \boxed{
 B(Z)\mid
  (Z+1)Q(Z)
@@ -81,17 +83,17 @@ B(Z)\mid
  +1.
 }
 \tag{SRL.2}
-$$
+```
 
 Equivalently, in the quotient `F_2[Z]/(B)`,
 
-$$
+```math
 \boxed{
 Q(Z)\equiv
  Z^{(u-1)/2}+(Z+1)^{-1}.
 }
 \tag{SRL.3}
-$$
+```
 
 Thus the Littlewood sign word is not arbitrary even after the complete mod-two factor support has been chosen: its negative-sign indicator has one prescribed residue class modulo `B`.
 
@@ -101,32 +103,32 @@ This yields an exact phase exclusion.
 
 Assume
 
-$$
+```math
 r=1,
 \qquad m=u\ge5\text{ odd}.
-$$
+```
 
 Then the physical minimal polynomial cannot have reciprocal degree
 
-$$
+```math
 \boxed{\deg M=m-1.}
 \tag{SRL.4}
-$$
+```
 
 Equivalently, the complete mod-two block
 
-$$
+```math
 B=S_m
-$$
+```
 
 is impossible.
 
 Therefore every odd P1 candidate with `m>=5` must omit at least one complete reciprocal mod-two residue block. In particular
 
-$$
+```math
 \boxed{\deg M\le m-3.}
 \tag{SRL.5}
-$$
+```
 
 For example, if `m=p>=5` is an odd prime and `Phi_p` is irreducible over `F_2` (equivalently `ord_p(2)=p-1`), then no P1 candidate exists at all, because the only nonzero admissible mod-two block is the full `S_p=Phi_p` block.
 
@@ -136,74 +138,79 @@ For example, if `m=p>=5` is an odd prime and `Phi_p` is irreducible over `F_2` (
 
 Let
 
-$$
+```math
 \xi
-$$
+```
 
 be any root of `B` in a finite extension of `F_2`. By the complete residue theorem, `xi` has odd order dividing `u` and has order neither one nor three.
 
 Let `K/Q_2` be the unramified extension containing the Teichmüller lift
 
-$$
+```math
 \zeta
-$$
+```
 
 of `xi`, and let
 
-$$
+```math
 \alpha
-$$
+```
 
 be any local root of `M` reducing to `zeta`.
 
 Since `M|P`,
 
-$$
+```math
 P(\alpha)=0.
-$$
+```
 
 Using SRL.1,
 
-$$
+```math
 \boxed{
 S_m(\alpha)=2Q(\alpha).
 }
 \tag{2.1}
+```
 
 Because `xi!=1`, the denominator `alpha-1` is a 2-adic unit. Write
 
-\[
+```math
 S_m(\alpha)=\frac{\alpha^m-1}{\alpha-1}.
 \tag{2.2}
+```
 
 The reciprocal P1 polynomial satisfies the exact identity
 
-\[
+```math
 \boxed{
 (\alpha^m+1)^2
 =-4\alpha^{m-1}(\alpha-1)^2.
 }
 \tag{2.3}
+```
 
 Define
 
-\[
+```math
 R_\alpha
 :=
 \frac{\alpha^m+1}{2(\alpha-1)}.
 \tag{2.4}
+```
 
 Equation (2.3) gives
 
-\[
+```math
 \boxed{
 R_\alpha^2=-\alpha^{m-1}.
 }
 \tag{2.5}
+```
 
 Also
 
-\[
+```math
 \begin{aligned}
 Q(\alpha)
 &=\frac{S_m(\alpha)}2\\
@@ -211,47 +218,50 @@ Q(\alpha)
 &=R_\alpha-\frac1{\alpha-1}.
 \end{aligned}
 \tag{2.6}
+```
 
 Reduce modulo the maximal ideal. Since `xi^m=1`,
 
-\[
+```math
 \overline{R_\alpha}^{\,2}=\xi^{-1}.
-$$
+```
 
 The finite residue field has characteristic two, so squaring is an automorphism. Since `xi^u=1` and `u` is odd,
 
-$$
+```math
 \left(\xi^{(u-1)/2}\right)^2
 =\xi^{u-1}
 =\xi^{-1}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \overline{R_\alpha}=\xi^{(u-1)/2}.
 }
 \tag{2.7}
+```
 
 Reducing (2.6), where subtraction equals addition in characteristic two, gives
 
-\[
+```math
 \boxed{
 Q(\xi)
 =\xi^{(u-1)/2}+\frac1{\xi+1}.
 }
 \tag{SRL.6}
+```
 
 Multiply by `xi+1`:
 
-\[
+```math
 (\xi+1)Q(\xi)
 +\xi^{(u+1)/2}
 +\xi^{(u-1)/2}
 +1
 =0.
-$$
+```
 
 Every root of the squarefree polynomial `B` satisfies this identity, so `B` divides the displayed polynomial. This proves SRL.2-SRL.3. `square`
 
@@ -261,51 +271,55 @@ Every root of the squarefree polynomial `B` satisfies this identity, so `B` divi
 
 Now assume
 
-$$
+```math
 r=1,
 \qquad m=u\text{ odd},
 \qquad B=S_u.
-$$
+```
 
 In `F_2[Z]/(S_u)`, `Z^u=1`. The inverse of `Z+1` has the explicit representative
 
-$$
+```math
 \boxed{
 A_u(Z):=1+Z^2+Z^4+\cdots+Z^{u-1}.
 }
 \tag{3.1}
+```
 
 Indeed
 
-\[
+```math
 (Z+1)A_u(Z)
 =S_u(Z)+Z^u
 \equiv1\pmod{S_u}.
 \tag{3.2}
+```
 
 Put
 
-\[
+```math
 e:=\frac{u-1}{2}.
-$$
+```
 
 SRL.3 becomes
 
-$$
+```math
 Q(Z)\equiv
 R_u(Z):=Z^e+A_u(Z)
 \pmod{S_u}.
 \tag{3.3}
+```
 
 Both `Q` and `R_u` have degree at most `u-1`. Since `S_u` has degree `u-1`, there are only two possibilities in `F_2[Z]`:
 
-\[
+```math
 \boxed{
 Q=R_u
 \quad\text{or}\quad
 Q=R_u+S_u.
 }
 \tag{3.4}
+```
 
 The second possibility is exactly the coefficientwise complement of the first and therefore changes `P` to `-P`. Thus the Littlewood word is determined up to global sign.
 
@@ -317,51 +331,53 @@ We compute `R_u(-1)` over the integers using the same `0/1` representative.
 
 The even-power polynomial `A_u` has
 
-\[
+```math
 \frac{u+1}{2}
-$$
+```
 
 terms, all equal to `+1` at `Z=-1`.
 
 If `e` is even, the monomial `Z^e` is already present in `A_u`, so addition in `F_2` deletes it. Thus the integer `0/1` representative `R_u` has
 
-$$
+```math
 R_u(-1)=\frac{u-1}{2}.
-$$
+```
 
 If `e` is odd, `Z^e` is not present in `A_u`; adding it contributes `-1` at `Z=-1`. Again
 
-$$
+```math
 R_u(-1)=\frac{u+1}{2}-1
 =\frac{u-1}{2}.
-$$
+```
 
 Therefore in either case
 
-$$
+```math
 \boxed{
 R_u(-1)=\frac{u-1}{2}.
 }
 \tag{4.1}
+```
 
 Since
 
-\[
+```math
 S_u(-1)=1
 \qquad(u\text{ odd}),
-$$
+```
 
 we obtain from `P=S_u-2Q`
 
-$$
+```math
 P(-1)=2-u
-$$
+```
 
 for `Q=R_u`, and the negative value for the complementary choice. Hence
 
-$$
+```math
 \boxed{|P(-1)|=u-2.}
 \tag{SRL.7}
+```
 
 ---
 
@@ -369,56 +385,60 @@ $$
 
 Still assume `r=1`, `B=S_u`. The complete mod-two normal form gives
 
-\[
+```math
 \deg M=\deg B=u-1=m-1.
-$$
+```
 
 But SC's Littlewood polynomial also has degree exactly `m-1`, and `M|P`. Since both are primitive with leading coefficient of absolute value one,
 
-$$
+```math
 \boxed{P=\pm M.}
 \tag{5.1}
+```
 
 The reciprocal P1 polynomial at `Z=-1` is
 
-\[
+```math
 F_m(-1)=16
 \qquad(m\text{ odd}).
 \tag{5.2}
+```
 
 Since `M` is a monic integer factor of `F_m`,
 
-\[
+```math
 M(-1)\mid16.
 \tag{5.3}
+```
 
 Moreover
 
-\[
+```math
 \overline M(-1)
 =\overline M(1)
 =S_u(1)
 =u
 \equiv1\pmod2.
-$$
+```
 
 So `M(-1)` is odd. The only odd integer divisors of `16` are `+/-1`. Thus
 
-$$
+```math
 \boxed{|M(-1)|=1.}
 \tag{5.4}
+```
 
 Equations (5.1), SRL.7, and (5.4) imply
 
-\[
+```math
 u-2=1.
-$$
+```
 
 Hence `u=3`. But O3X already excludes the order-three residue block, so the full-block case is impossible there as well. In particular for every
 
-$$
+```math
 u=m\ge5,
-$$
+```
 
 we have a contradiction. This proves SRL.4. `square`
 
@@ -428,9 +448,9 @@ we have a contradiction. This proves SRL.4. `square`
 
 For `r=1`, the complete normal form is
 
-$$
+```math
 \overline M=B,
-$$
+```
 
 where `B` is squarefree, self-reciprocal, and has only nontrivial odd-order roots other than order three.
 
@@ -440,9 +460,9 @@ Every nontrivial self-reciprocal factor omitted from `S_m` has degree at least t
 
 Therefore
 
-$$
+```math
 \deg B\le(m-1)-2=m-3.
-$$
+```
 
 Since `deg M=deg B` for `r=1`, this proves SRL.5.
 
@@ -452,38 +472,39 @@ Since `deg M=deg B` for `r=1`, this proves SRL.5.
 
 Let
 
-$$
+```math
 m=p\ge5
-$$
+```
 
 be prime. Then
 
-$$
+```math
 S_p=\Phi_p.
-$$
+```
 
 If `2` is primitive modulo `p`, equivalently
 
-$$
+```math
 \operatorname{ord}_p(2)=p-1,
-$$
+```
 
 then `Phi_p` is irreducible over `F_2`.
 
 The physical `B` is nonconstant, because `M` is nonconstant. Hence the only possible choice is
 
-$$
+```math
 B=\Phi_p=S_p.
-$$
+```
 
 SRL-M excludes that choice. Therefore:
 
-$$
+```math
 \boxed{
  m=p\ge5\text{ prime and }\operatorname{ord}_p(2)=p-1
  \Longrightarrow \text{P1 impossible}.
 }
 \tag{SRL.8}
+```
 
 This adds an exact arithmetic family beyond the previously recorded `m=2^k` and `m=3\cdot2^k` exclusions. No claim is made that infinitely many such primes are known.
 
@@ -495,39 +516,40 @@ The complete mod-two normal form also gives a useful universal fact.
 
 Since `B` is coprime to `Z+1`,
 
-\[
+```math
 \overline M(1)=1.
-$$
+```
 
 Writing
 
-$$
+```math
 M(Z)=Z^d h(Z+Z^{-1})
-$$
+```
 
 for the minimal trace polynomial `h`,
 
-$$
+```math
 M(1)=h(2).
-$$
+```
 
 Because `M|F_m`, equivalently `h|G_m=C_m+4T-6`,
 
-$$
+```math
 h(2)\mid G_m(2)=4.
-$$
+```
 
 But `h(2)` is odd, hence `h(2)=+/-1`. In fact `h(2)>0`: `G_m(T)>0` for every real `T>2`, so no real conjugate root of `h` exceeds two, and complex conjugate pairs contribute positive factors to `h(2)=prod(2-Y_i)`. Therefore
 
-$$
+```math
 \boxed{h(2)=1.}
 \tag{SRL.9}
+```
 
 Thus
 
-\[
+```math
 2-Y=4\sin^2(\delta/2)=D^{-2}
-$$
+```
 
 is an algebraic unit of norm one in the P1 trace field. This is not yet a contradiction, but it is a useful exact arithmetic constraint for the remaining proper-block cases.
 
@@ -553,9 +575,10 @@ The remaining arithmetic problem has acquired an extra exact constraint:
 2. `B` divides the explicit sign-residue polynomial in SRL.2;
 3. `h(2)=1`, so `D^{-2}=2-Y` is a norm-one algebraic unit;
 4. modulo three, `M` divides
-   $$
+   ```math
    (Z^{m-1}+1)(Z^{m+1}+1).
-   $$
+   
+   ```
 
 For `r=1`, every surviving factor has `deg M<=m-3`. The shortest next theorem is to combine SRL.2 with the restricted star-run/sign-change structure from the cyclic tree geometry, rather than treating `Q` as an arbitrary `0/1` polynomial.
 

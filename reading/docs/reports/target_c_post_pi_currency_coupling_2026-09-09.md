@@ -16,15 +16,15 @@
 
 GU previously gave a dichotomy: if the pinned/contact currency
 
-$$
+```math
 L:=e_{BB}+2s_C
-$$
+```
 
 is small compared with `D`, then the attachment-cell gap
 
-$$
+```math
 G:=area(F)-\sum_r area(conv A_r)
-$$
+```
 
 is quadratic, but that gap could escape into the outer contact region or into bounded exceptional faces.
 
@@ -32,7 +32,7 @@ PI, HB, PC, and OP allow both escape regions to be bounded in terms of the **sam
 
 The conclusion is the unconditional post-ZF lower bound
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
@@ -41,7 +41,7 @@ $$
 =0.4198649147034757\ldots .
 }
 \tag{CC.1}
-$$
+```
 
 Thus the entire branch `e_BB+2s_C=o(D)` and, more generally, every branch below `0.4198649D`, is excluded. No cavity or rattler alternative remains below that threshold.
 
@@ -51,36 +51,36 @@ Thus the entire branch `e_BB+2s_C=o(D)` and, more generally, every branch below 
 
 Let
 
-$$
+```math
 A_{PI}:=\frac12\sin(2\rho)
 =0.497856636324211\ldots,
 \qquad
 \rho=\cos\rho=0.7390851332151607\ldots .
 \tag{CC.2}
-$$
+```
 
 PI proves
 
-$$
+```math
 \liminf\frac{area(F)}{D^2}\ge A_{PI}.
-$$
+```
 
 The GU component-diameter argument is unchanged, except that its old force-hull area constant is replaced by `A_PI`. Along any subsequence on which
 
-$$
+```math
 \frac{L}{D}	o\lambda
-$$
+```
 
 (after passing to a further subsequence if needed), GU gives
 
-$$
+```math
 \boxed{
 \liminf\frac G{D^2}
 \ge
 A_{PI}-\frac\pi4\lambda^2.
 }
 \tag{CC.3}
-$$
+```
 
 The right side is positive throughout the range relevant below.
 
@@ -97,36 +97,36 @@ Let
 
 OP gives
 
-$$
+```math
 \sum_P L_P
 =x_B+P_F-q+2a.
 \tag{CC.4}
-$$
+```
 
 Every pocket is a strict convex polygon. Its contact-boundary edges have length one and its added hull side joins two source points, so every side has length at least one. Therefore
 
-$$
+```math
 L_P\ge3.
 \tag{CC.5}
-$$
+```
 
 Define the total pocket-perimeter excess above this unavoidable triangular baseline:
 
-$$
+```math
 \boxed{
 E_{out}:=\sum_P(L_P-3).
 }
 \tag{CC.6}
-$$
+```
 
 Using CC.4,
 
-$$
+```math
 \boxed{
 E_{out}=x_B+P_F-q-a.
 }
 \tag{CC.7}
-$$
+```
 
 This is a useful exact scalar: unlike total pocket perimeter, its square can be used without paying the `Theta(D)` baseline pocket count at quadratic order.
 
@@ -136,53 +136,53 @@ This is a useful exact scalar: unlike total pocket perimeter, its square can be 
 
 PC/HB gives
 
-$$
+```math
 a+e_{BB}\ge q,
 \qquad	ext{so}\qquad
  a\ge q-e_{BB}.
 \tag{CC.8}
-$$
+```
 
 ZT gives `x_B<=q`, while the convex perimeter bound gives
 
-$$
+```math
 P_F\le\pi D.
-$$
+```
 
 Insert these in CC.7:
 
-$$
+```math
 \begin{aligned}
 E_{out}
 &\le q+\pi D-q-(q-e_{BB})\\
 &=\pi D-q+e_{BB}.
 \end{aligned}
 \tag{CC.9}
-$$
+```
 
 DB gives
 
-$$
+```math
 \liminf q/D\ge\liminf h/D\ge2\rho.
 \tag{CC.10}
-$$
+```
 
 Write, along the chosen subsequence,
 
-$$
+```math
 \frac{e_{BB}}D\to t
-$$
+```
 
 after a further extraction. Since `e_BB<=L`,
 
-$$
+```math
 0\le t\le\lambda.
 \tag{CC.11}
-$$
+```
 
 From CC.9-CC.11,
 
-$$
+```math
 \boxed{
 \limsup\frac{E_{out}}D
 \le c_0+t,
@@ -191,7 +191,7 @@ c_0:=\pi-2\rho
 =1.663422387159472\ldots .
 }
 \tag{CC.12}
-$$
+```
 
 ---
 
@@ -199,32 +199,32 @@ $$
 
 For each pocket write
 
-$$
+```math
 L_P=3+u_P,
 \qquad u_P\ge0.
-$$
+```
 
 Then
 
-$$
+```math
 \sum_Pu_P=E_{out}.
-$$
+```
 
 By the planar isoperimetric inequality for each convex pocket,
 
-$$
+```math
 area(P)\le\frac{L_P^2}{4\pi}.
-$$
+```
 
 Since
 
-$$
+```math
 \sum_Pu_P^2\le\left(\sum_Pu_P\right)^2=E_{out}^2,
-$$
+```
 
 we obtain
 
-$$
+```math
 \begin{aligned}
 H_{out}:=\sum_Parea(P)
 &\le
@@ -233,18 +233,18 @@ H_{out}:=\sum_Parea(P)
 \frac{E_{out}^2+6E_{out}+9a}{4\pi}.
 \end{aligned}
 \tag{CC.13}
-$$
+```
 
 Here `a=O(D)` and `E_out=O(D)`, so the linear terms disappear after division by `D^2`. Therefore CC.12 gives
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}}{D^2}
 \le
 \frac{(c_0+t)^2}{4\pi}.
 }
 \tag{CC.14}
-$$
+```
 
 This is much sharper than squaring the total pocket perimeter, because the mandatory perimeter `3a=Theta(D)` does not create artificial quadratic area capacity.
 
@@ -254,32 +254,32 @@ This is much sharper than squaring the total pocket perimeter, because the manda
 
 For every bounded nonquadrilateral face `F_i`, put
 
-$$
+```math
 r_i:=\deg F_i-4\ge1.
-$$
+```
 
 Then
 
-$$
+```math
 Q=\sum_i r_i.
 \tag{CC.15}
-$$
+```
 
 Its perimeter is the integer
 
-$$
+```math
 k_i=r_i+4.
-$$
+```
 
 C51 makes each bounded face convex, hence
 
-$$
+```math
 area(F_i)\le\frac{k_i^2}{4\pi}.
-$$
+```
 
 Now
 
-$$
+```math
 \begin{aligned}
 \sum_i k_i^2
 &=\sum_i(r_i+4)^2\\
@@ -287,44 +287,44 @@ $$
 &\le Q^2+24Q,
 \end{aligned}
 \tag{CC.16}
-$$
+```
 
 because `sum r_i^2<=Q^2` and `f<=Q`.
 
 Thus the total exceptional-face area satisfies
 
-$$
+```math
 \boxed{
 A_{exc}
 \le
 \frac{Q^2+24Q}{4\pi}.
 }
 \tag{CC.17}
-$$
+```
 
 HB proves the stronger exact contact coupling
 
-$$
+```math
 e_{BB}\ge Q+2d_H+2s_Z,
-$$
+```
 
 so in particular
 
-$$
+```math
 Q\le e_{BB}.
 \tag{CC.18}
-$$
+```
 
 Combining CC.17-CC.18 gives
 
-$$
+```math
 \boxed{
 \limsup\frac{A_{exc}}{D^2}
 \le
 \frac{t^2}{4\pi}.
 }
 \tag{CC.19}
-$$
+```
 
 This improves GU's earlier `5pi D` exceptional-perimeter localization by using the post-HB fact that exceptional-face degree itself must be paid by actual loaded-loaded contacts.
 
@@ -334,25 +334,25 @@ This improves GU's earlier `5pi D` exceptional-perimeter localization by using t
 
 ZG/GU gives the geometric charging inequality
 
-$$
+```math
 G\le H_{out}+A_{exc}+2q.
 \tag{CC.20}
-$$
+```
 
 Since `q=O(D)`, the final term is negligible on the `D^2` scale. Using CC.14 and CC.19,
 
-$$
+```math
 \boxed{
 \limsup\frac G{D^2}
 \le
 \frac{(c_0+t)^2+t^2}{4\pi}.
 }
 \tag{CC.21}
-$$
+```
 
 Together with the PI/GU lower bound CC.3, every post-ZF subsequential limit `(lambda,t)` must satisfy
 
-$$
+```math
 \boxed{
 A_{PI}-\frac\pi4\lambda^2
 \le
@@ -361,7 +361,7 @@ A_{PI}-\frac\pi4\lambda^2
 0\le t\le\lambda.
 }
 \tag{CC.22}
-$$
+```
 
 This two-parameter inequality is the strongest form of the new currency coupling. It is strictly stronger when a substantial part of `L` comes from pinned stress `s_C` rather than direct loaded-loaded contacts.
 
@@ -371,35 +371,35 @@ This two-parameter inequality is the strongest form of the new currency coupling
 
 For fixed `lambda>=0`, the right side of CC.22 is increasing in `t`. Hence its largest possible value under `t<=lambda` is obtained at `t=lambda`. Therefore every survivor must satisfy
 
-$$
+```math
 A_{PI}-\frac\pi4\lambda^2
 \le
 \frac{(c_0+\lambda)^2+\lambda^2}{4\pi}.
 \tag{CC.23}
-$$
+```
 
 The left side decreases in `lambda` and the right side increases. Equality has one positive root
 
-$$
+```math
 \boxed{
 \lambda_0
 =0.4198649147034757\ldots .
 }
 \tag{CC.24}
-$$
+```
 
 Equivalently, `lambda_0` is the positive root of
 
-$$
+```math
 (\pi^2+2)\lambda^2
 +2c_0\lambda
 +c_0^2-4\pi A_{PI}=0.
 \tag{CC.25}
-$$
+```
 
 Explicitly,
 
-$$
+```math
 \lambda_0
 =
 \frac{
@@ -407,18 +407,18 @@ $$
 \sqrt{c_0^2-(\pi^2+2)(c_0^2-4\pi A_{PI})}
 }{\pi^2+2}.
 \tag{CC.26}
-$$
+```
 
 For every `lambda<lambda_0`, CC.23 is violated. Hence no unbounded post-ZF subsequence can have `(e_BB+2s_C)/D` tending below `lambda_0`.
 
 This proves CC.1:
 
-$$
+```math
 \boxed{
 \liminf\frac{e_{BB}+2s_C}{D}
 \ge0.4198649147034757\ldots .
 }
-$$
+```
 
 ---
 
@@ -428,23 +428,23 @@ Before CC, the small-`L` branch was reduced only to macroscopic cavity/shell geo
 
 Every sufficiently large post-ZF survivor must now carry **both** independent linear currencies:
 
-$$
+```math
 \boxed{
 \frac{x_B+Q+2s_Z}{D}
 \ge0.6099043189\ldots-o(1)
 }
 \tag{CC.27}
-$$
+```
 
 from NB, and
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge0.4198649147\ldots-o(1)
 }
 \tag{CC.28}
-$$
+```
 
 from CC.
 
@@ -494,15 +494,15 @@ If `s_C` is large but `e_BB` is small, the stronger two-parameter inequality CC.
 
 The surviving post-ZF source satisfies simultaneously
 
-$$
+```math
 x_B+Q+2s_Z\ge(0.6099043-o(1))D
-$$
+```
 
 and
 
-$$
+```math
 e_{BB}+2s_C\ge(0.4198649-o(1))D.
-$$
+```
 
 The next closing attempt should use the exact boundary incidence identities to show that these two linear currencies cannot coexist at their required scales without forcing either
 

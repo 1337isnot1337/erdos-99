@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_two_normal_directional_defect_2026-09-18.md) · source SHA-256 `62b0e9a1a33d166bc4143a2825c04f2bee75ea80ad384ef31b18385d42a5168d`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "019b5ab4f6bfe6fa9dfa768ef843fb887cc70c7f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_two_normal_directional_defect_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "9025009486db6fcc4dfcd4a7452795c02bbdc94a9f1ff248f4e313532d1e991e"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -28,50 +30,50 @@ more than `D` lower edges by a linear amount.
 
 Put
 
-$$
+```math
 h_*:=\frac{\sqrt{303}}{52}=0.334747984337100\ldots,
 \qquad
 c_*:=0.129220199818177\ldots,
-$$
+```
 
-$$
+```math
 \boxed{
 \delta_*:=2\left(1-\cos\frac{c_*}{2}\right)
 =0.00417301303247308\ldots .
 }
 \tag{DD.1}
-$$
+```
 
 Fix `K>h_*` and
 
-$$
+```math
 \alpha_K:=1-\frac{h_*}{K}>0.
 \tag{DD.2}
-$$
+```
 
 In the `PAIR-REUSE` branch for the two extreme FREE modules, let `E_*` be the common
 set of distinct original lower-gate edges. The fixed-pair theorem gives
 
-$$
+```math
 \boxed{
 E:=|E_*|
 \ge\left(\frac{\alpha_K}{2}-o(1)\right)D,
 }
 \tag{DD.3}
-$$
+```
 
-$$
+```math
 1<|e|\le1+\frac KD
 \qquad(e\in E_*),
 \tag{DD.4}
-$$
+```
 
 and, for the two canonical normals `N_1,N_2`,
 
-$$
+```math
 c_*-o(1)\le\theta_D:=\angle(N_1,N_2)\le\frac\pi2+o(1).
 \tag{DD.5}
-$$
+```
 
 The conclusions below are additional to the current boundary/forest/trunk forks.
 
@@ -79,44 +81,44 @@ The conclusions below are additional to the current boundary/forest/trunk forks.
 
 For ancestry `i`, write a lower event as in the two-boundary theorem:
 
-$$
+```math
 r_i=d_i+\Delta_iN_i,
 \qquad |d_i|=1,
 \qquad \Delta_i>0,
 \tag{DD.6}
-$$
+```
 
 where `r_i` is the original edge vector oriented in the ancestry direction. Put
 
-$$
+```math
 c_i:=N_i\cdot d_i\in[0,1],
 \qquad
 \epsilon_i:=1-c_i\in[0,1].
 \tag{DD.7}
-$$
+```
 
 Take one common original edge `e=xy` and put
 
-$$
+```math
 \ell:=|x-y|,
 \qquad
 \nu:=\frac{x-y}{\ell}.
-$$
+```
 
 After fixing the orientation of `nu` from ancestry 1, ancestry 2 traverses the same
 edge either in the same direction or the opposite direction. Thus for some
 `eta in {+1,-1}`,
 
-$$
+```math
 r_1=\ell\nu,
 \qquad
 r_2=\eta\ell\nu.
 \tag{DD.8}
-$$
+```
 
 Using (DD.6),
 
-$$
+```math
 \begin{aligned}
 \epsilon_1+\epsilon_2
 &=2-N_1\cdot d_1-N_2\cdot d_2\\
@@ -124,51 +126,51 @@ $$
 &\ge2-\ell|N_1+\eta N_2|.
 \end{aligned}
 \tag{DD.9}
-$$
+```
 
 There are two cases.
 
 If the traversals agree, `eta=+1` and
 
-$$
+```math
 |N_1+N_2|=2\cos(\theta_D/2).
-$$
+```
 
 Therefore (DD.4)--(DD.5) give
 
-$$
+```math
 \epsilon_1+\epsilon_2
 \ge
 2-2\left(1+\frac KD\right)\cos(\theta_D/2)
 \ge\delta_*-o(1).
 \tag{DD.10}
-$$
+```
 
 If the traversals are opposite, `eta=-1` and
 
-$$
+```math
 |N_1-N_2|=2\sin(\theta_D/2).
-$$
+```
 
 The upper bound in (DD.5) gives the much stronger estimate
 
-$$
+```math
 \epsilon_1+\epsilon_2
 \ge
 2-2\left(1+\frac KD\right)\sin(\theta_D/2)
 \ge 2-\sqrt2-o(1).
 \tag{DD.11}
-$$
+```
 
 Since `delta_* < 2-sqrt(2)`, both traversal types obey the uniform bound
 
-$$
+```math
 \boxed{
 \epsilon_1(e)+\epsilon_2(e)
 \ge\delta_*-o(1).
 }
 \tag{DD.12}
-$$
+```
 
 The `o(1)` is uniform over the common edge set for fixed `K`. No component, order, or
 cycle-rank hypothesis is used.
@@ -184,59 +186,59 @@ Let
 
 The exact two-boundary support identity is
 
-$$
+```math
 \sum_{e\in E_{{\rm low},i}}\epsilon_i(e)+B_i^{back}
 =L_i-A_i+S_i.
 \tag{DD.13}
-$$
+```
 
 Hence
 
-$$
+```math
 L_i
 =A_i-S_i
 +\sum_{e\in E_{{\rm low},i}}\epsilon_i(e)
 +B_i^{back}.
 \tag{DD.14}
-$$
+```
 
 The near-opposite ancestry theorem gives, uniformly for both modules,
 
-$$
+```math
 A_i>D-O(\sqrt D),
 \qquad
 0\le S_i\le h_*+D^{-1/3},
 \qquad
 B_i^{back}\ge0.
 \tag{DD.15}
-$$
+```
 
 Sum (DD.14) over the two ancestries and retain only directional defect on the common
 edge set. Equations (DD.12) and (DD.15) give
 
-$$
+```math
 \boxed{
 L_1+L_2
 \ge
 2D+(\delta_*-o(1))E-O(\sqrt D).
 }
 \tag{DD.16}
-$$
+```
 
 Consequently one of the two ancestries satisfies
 
-$$
+```math
 \boxed{
 L_i
 \ge
 D+\left(\frac{\delta_*}{2}-o(1)\right)E-O(\sqrt D).
 }
 \tag{DD.17}
-$$
+```
 
 Using (DD.3),
 
-$$
+```math
 \boxed{
 L_i
 \ge
@@ -245,17 +247,17 @@ L_i
 \right)D.
 }
 \tag{DD.18}
-$$
+```
 
 For `K=1`, the new linear surplus coefficient is
 
-$$
+```math
 \boxed{
 \frac{\delta_*\alpha_1}{4}
 =0.000694026332810067\ldots .
 }
 \tag{DD.19}
-$$
+```
 
 The small numerical constant is not the main point. The inequality is strict at
 linear scale and comes from the fixed angular separation of the two repairs. A common
@@ -264,7 +266,7 @@ lower corridor cannot be reused at zero directional cost.
 A traversal-sensitive version is also immediate. If `E_same,E_opp` are the numbers of
 common edges traversed in the same and opposite directions, then
 
-$$
+```math
 \boxed{
 L_1+L_2
 \ge
@@ -272,7 +274,7 @@ L_1+L_2
 \delta_*E_{same}+(2-\sqrt2)E_{opp}-o(D).
 }
 \tag{DD.20}
-$$
+```
 
 Thus opposite-direction reuse is much more expensive than the uniform estimate.
 
@@ -280,43 +282,43 @@ Thus opposite-direction reuse is much more expensive than the uniform estimate.
 
 The same ancestry also inherits the global lower-slack ledger
 
-$$
+```math
 \sum_{e\in E_{{\rm low},i}}(|e|-1)
 \le h_*+D^{-1/3}.
 \tag{DD.21}
-$$
+```
 
 Fix another constant `J>h_*`. At most
 
-$$
+```math
 \left(\frac{h_*}{J}+o(1)\right)D
 \tag{DD.22}
-$$
+```
 
 lower edges can have excess larger than `J/D`. Therefore the ancestry supplied by
 (DD.18) contains at least
 
-$$
+```math
 \left(
 1+\frac{\delta_*\alpha_K}{4}
 -\frac{h_*}{J}
 -o(1)
 \right)D
 \tag{DD.23}
-$$
+```
 
 lower edges satisfying
 
-$$
+```math
 1<|x-y|\le1+\frac JD.
 \tag{DD.24}
-$$
+```
 
 Split those edges by ancestry-edge parity. One parity is a vertex-disjoint matching,
 so the original source contains a matching of old fully inactive outer-face pairs of
 size
 
-$$
+```math
 \boxed{
 \left(
 \frac12
@@ -326,14 +328,14 @@ $$
 \right)D
 }
 \tag{DD.25}
-$$
+```
 
 satisfying (DD.24).
 
 Letting the fixed constants `K,J` be chosen arbitrarily large before sending `D` to
 infinity yields the asymptotic envelope
 
-$$
+```math
 \boxed{
 \left(
 \frac12+\frac{\delta_*}{8}-o(1)
@@ -342,7 +344,7 @@ $$
 (0.500521626629059\ldots-o(1))D
 }
 \tag{DD.26}
-$$
+```
 
 with edge lengths `1+O(1/D)`; more precisely, for every fixed `epsilon>0` one can
 choose finite constants `K,J` so that the matching coefficient is at least
@@ -351,38 +353,40 @@ choose finite constants `K,J` so that the matching coefficient is at least
 There is also a concrete one-parameter statement. Take `K=J`. The coefficient in
 (DD.25) becomes
 
-$$
+```math
 M(K):=
 \frac12-\frac{h_*}{2K}
 +\frac{\delta_*}{8}\left(1-\frac{h_*}{K}\right).
 \tag{DD.27}
-$$
+```
 
 It exceeds `1/2` exactly when
 
-$$
+```math
 \boxed{
 K>K_{1/2}:=h_*+\frac{4h_*}{\delta_*}
 =321.204087938175\ldots .
 }
 \tag{DD.28}
-$$
+```
 
 For the explicit fixed choice `K=J=400`, `PAIR-REUSE` therefore gives
 
-\[
+```math
 \boxed{
 (0.500102755114981\ldots-o(1))D
 }
 \tag{DD.29}
+```
 
 vertex-disjoint original fully inactive outer-face pairs satisfying
 
-\[
+```math
 \boxed{
 1<|x-y|\le1+\frac{400}{D}.
 }
 \tag{DD.30}
+```
 
 This is the first consequence of the fixed-pair heavy-reuse branch here which forces
 strictly more than `D/2` disjoint inverse-`D` near-unit pairs.

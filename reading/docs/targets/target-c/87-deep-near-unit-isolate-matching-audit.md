@@ -14,9 +14,9 @@ For every fixed physical depth `w>0`, the Section-77 chamber contains
 `Omega_w(D)` vertex-disjoint near-unit pairs whose **both endpoints** lie at Euclidean
 distance at least `w` from the chamber boundary. The threshold remains
 
-$$
+```math
 1<|x-y|\le1+{K_w\over D}
-$$
+```
 
 for a fixed constant `K_w` depending only on `w` and the canonical chamber constants.
 
@@ -42,48 +42,48 @@ it does not infer a triangle from the resulting near-contact graph.
 
 Let `C` be a convex body satisfying, for fixed positive constants,
 
-$$
+```math
 A:=\operatorname{area}C\ge\alpha D^2,
 \qquad
 P:=\operatorname{per}C\le P_0D.
 \tag{87.1}
-$$
+```
 
 Let `Z subset C` be the specified contact-isolated source points of an inactive
 chamber, with isolate-only Oler slack
 
-$$
+```math
 \sigma:={A\over a_0}+{P\over2}+1-|Z|,
 \qquad
 0\le\sigma\le S_0D.
 \tag{87.2}
-$$
+```
 
 Here `a_0=sqrt(3)/2`. Canonical Section 77 supplies such constants in its macroscopic
 chamber branch.
 
 Canonical C-INACTIVE-HULL-STABILITY gives a linear inradius lower bound
 
-$$
+```math
 r(C)\ge\kappa D
 \tag{87.3}
-$$
+```
 
 for some fixed `kappa>0`.
 
 Fix once and for all a depth `w>0`. For sufficiently large `D`,
 
-$$
+```math
 w+{1\over2}<r(C).
 \tag{87.4}
-$$
+```
 
 Define the width-`w` boundary strip
 
-$$
+```math
 U_w:=\{x\in C:\operatorname{dist}(x,\partial C)<w\}.
 \tag{87.5}
-$$
+```
 
 ## 87.1 Packing bound for the boundary strip
 
@@ -91,21 +91,21 @@ $$
 
 The number of chamber isolates in `U_w` satisfies
 
-$$
+```math
 \boxed{
 |Z\cap U_w|
 \le {4(w+1)P\over\pi}+1
 \le C_wD+1,
 }
 \tag{87.6}
-$$
+```
 
 where
 
-$$
+```math
 C_w:={4(w+1)P_0\over\pi}.
 \tag{87.7}
-$$
+```
 
 ### Proof
 
@@ -114,47 +114,47 @@ unit-separated, so these disks have pairwise disjoint interiors.
 
 Let
 
-$$
+```math
 C_{+1/2}:=C+B(0,1/2)
-$$
+```
 
 and let `C_{-(w+1/2)}` be the inner parallel body at depth `w+1/2`.
 Every radius-`1/2` disk centered in `U_w` lies in
 
-$$
+```math
 C_{+1/2}\setminus C_{-(w+1/2)}.
 \tag{87.8}
-$$
+```
 
 Steiner's outer parallel formula gives
 
-$$
+```math
 \operatorname{area}(C_{+1/2})
 =A+{P\over2}+{\pi\over4}.
 \tag{87.9}
-$$
+```
 
 For `t=w+1/2<r(C)`, inner-parallel coarea and convex perimeter monotonicity give
 
-$$
+```math
 A-\operatorname{area}(C_{-t})
 =\int_0^t\operatorname{per}(C_{-s})\,ds
 \le tP.
 \tag{87.10}
-$$
+```
 
 Therefore the container in (87.8) has area at most
 
-$$
+```math
 (w+1)P+{\pi\over4}.
 \tag{87.11}
-$$
+```
 
 The disjoint radius-`1/2` disks have total area
 
-$$
+```math
 |Z\cap U_w|{\pi\over4}.
-$$
+```
 
 Comparing with (87.11) proves (87.6). `square`
 
@@ -167,49 +167,49 @@ Thus every fixed-width chamber boundary layer contains only `O_w(D)` of the
 
 For `epsilon>0`, let `G_epsilon` be the near-contact graph on `Z`:
 
-$$
+```math
 xy\in E(G_\epsilon)
 \quad\Longleftrightarrow\quad
 |x-y|\le1+\epsilon.
-$$
+```
 
 Let `nu_epsilon` be its maximum matching number.
 
 Canonical C-INACTIVE-NEAR-MATCHING proves, for `0<epsilon<=1`,
 
-$$
+```math
 \boxed{
 \nu_\epsilon
 \ge {3A\over8a_0}\epsilon-{\sigma\over2}.
 }
 \tag{87.12}
-$$
+```
 
 Set
 
-$$
+```math
 \epsilon={K\over D}
-$$
+```
 
 for a fixed `K>0`. Using (87.1)--(87.2), for all sufficiently large `D`,
 
-$$
+```math
 \nu_{K/D}
 \ge
 \left({3\alpha K\over8a_0}-{S_0\over2}\right)D.
 \tag{87.13}
-$$
+```
 
 Choose `K=K_w` so large that
 
-$$
+```math
 \boxed{
 \gamma_w
 :={3\alpha K_w\over8a_0}-{S_0\over2}-C_w
 >0.
 }
 \tag{87.14}
-$$
+```
 
 This is always possible because `alpha>0` and all other constants are fixed.
 
@@ -221,25 +221,25 @@ edge.
 Therefore the number of matching edges whose **both** endpoints lie outside `U_w` is
 at least
 
-$$
+```math
 \nu_{K_w/D}-|Z\cap U_w|.
-$$
+```
 
 Equations (87.6), (87.13), and (87.14) give
 
-$$
+```math
 \boxed{
 \#\{xy\in M:x,y\notin U_w\}
 \ge \gamma_wD-1.
 }
 \tag{87.15}
-$$
+```
 
 For all sufficiently large `D`, this is at least `(gamma_w/2)D`.
 
 Because every chamber point in `Z` is contact-isolated, every such edge satisfies
 
-$$
+```math
 \boxed{
 1<|x-y|\le1+{K_w\over D},
 \qquad
@@ -247,7 +247,7 @@ $$
 \operatorname{dist}(y,\partial C)\ge w.
 }
 \tag{87.16}
-$$
+```
 
 This proves the deep near-unit matching theorem.
 
@@ -257,10 +257,10 @@ This proves the deep near-unit matching theorem.
 
 The inner parallel body
 
-$$
+```math
 C_{-w}:=\{x\in C:\operatorname{dist}(x,\partial C)\ge w\}
 \tag{87.17}
-$$
+```
 
 is convex. Hence for every pair in (87.16), the whole segment `[x,y]` lies in
 `C_{-w}`.
@@ -272,10 +272,10 @@ Assume now `w>1`. Move `x` at unit speed along `[x,y]` toward `y` until either
 
 The required displacement in case (1) is
 
-$$
+```math
 |x-y|-1\le {K_w\over D}=o(1).
 \tag{87.18}
-$$
+```
 
 For all sufficiently large `D`, this is smaller than `w-1`. Throughout the motion,
 the moved point stays in `C_{-w}`.
@@ -286,9 +286,9 @@ Every inactive chamber is contained in the force hull `F`, hence in the full sou
 hull `K_source=conv(A)`. The moved point remains in `C subset K_source`. Since a
 convex hull has the same diameter as its extreme source set,
 
-$$
+```math
 \operatorname{diam}K_{source}=D.
-$$
+```
 
 Therefore throughout the motion the moved point remains at distance at most `D` from
 every source point. The global diameter constraint cannot be the first obstruction.
@@ -301,10 +301,10 @@ at least `w` from every point outside the chamber and from every chamber-boundar
 point. Hence throughout the motion its distance to every positive-core vertex is at
 least
 
-$$
+```math
 w-{K_w\over D}>1
 \tag{87.19}
-$$
+```
 
 for all sufficiently large `D`.
 
@@ -335,28 +335,28 @@ subquadratic-core branch.
 
 Therefore for every fixed `w>0` there are constants
 
-$$
+```math
 K_w<\infty,
 \qquad
 c_w>0
-$$
+```
 
 such that every sufficiently large survivor in that branch contains at least
 
-$$
+```math
 \boxed{c_wD}
-$$
+```
 
 vertex-disjoint pairs of actual contact-isolated source points with
 
-$$
+```math
 \boxed{
 1<|x-y|\le1+{K_w\over D},
 \qquad
 \operatorname{dist}(\{x,y\},\partial C_*)\ge w.
 }
 \tag{87.20}
-$$
+```
 
 For every fixed `w>1`, all of their pair-closing segments are uniformly protected
 from the positive KKT core and from the diameter constraint as in Corollary 87.2.

@@ -21,20 +21,20 @@
 
 The FSJC floor
 
-$$
+```math
 \lambda_*:=0.5882283437736394387\ldots
-$$
+```
 
 is **not attainable asymptotically** by a post-ZF survivor. More precisely, there is
 an absolute, presently nonexplicit `eta_FS>0` such that every sufficiently large
 survivor in the audited post-ZF class satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}\ge \lambda_*+\eta_{FS}.
 }
 \tag{FJN.1}
-$$
+```
 
 The decisive new step is that FS.4 supplies asymptotic central symmetry of the actual
 force hull about the full-source circumcenter. Equality in the JC capacity bound would
@@ -51,30 +51,30 @@ No Blaschke--Lebesgue stability theorem is needed.
 
 Let
 
-$$
+```math
 \lambda_*
-$$
+```
 
 be the positive root of
 
-$$
+```math
 (\pi^2+1)\lambda^2+\pi\lambda-\frac{\pi^2}{4}-\pi=0.
 \tag{1.1}
-$$
+```
 
 FSJC proves
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}\ge\lambda_*
 \tag{1.2}
-$$
+```
 
 and proves that any sequence approaching equality must have
 
-$$
+```math
 \frac hD\to\frac\pi2.
 \tag{1.3}
-$$
+```
 
 The implication attacked here is
 
@@ -98,16 +98,16 @@ Assume an unbounded sequence of triangle-free global minimizers has been chosen 
 to minimize contacts and then diameter pairs, and assume the audited post-ZF chain
 applies to the relative-interior force hull `F`. Put
 
-$$
+```math
 \lambda_j:=\frac{e_{BB,j}+2s_{C,j}}{D_j}.
-$$
+```
 
 Then no such sequence satisfies
 
-$$
+```math
 \lambda_j\to\lambda_*.
 \tag{FJN.2}
-$$
+```
 
 Consequently there exists an absolute `eta_FS>0` for which (FJN.1) holds for all
 sufficiently large audited post-ZF survivors.
@@ -117,99 +117,99 @@ sufficiently large audited post-ZF survivors.
 Assume for contradiction that (FJN.2) holds. Pass to subsequences whenever necessary.
 Write
 
-$$
+```math
 t_j:=\frac{e_{BB,j}}{D_j},
 \qquad
 y_j:=\frac{h_j}{D_j}.
-$$
+```
 
 FSJC endpoint localization gives
 
-$$
+```math
 y_j\to\frac\pi2.
 \tag{2.1}
-$$
+```
 
 Also `0<=t_j<=lambda_j`, so take `t_j->t<=lambda_*`.
 
 FSDB and GU give the lower gap estimate
 
-$$
+```math
 \liminf\frac{G_j}{D_j^2}
 \ge
 \Phi(\pi/2)-\frac\pi4\lambda_*^2,
 \qquad
 \Phi(y)=\frac{y+\sin y}{4}.
 \tag{2.2}
-$$
+```
 
 The unrelaxed JC cavity estimate gives
 
-$$
+```math
 \limsup\frac{G_j}{D_j^2}
 \le
 \frac{(t+\pi/2)^2}{4\pi}.
 \tag{2.3}
-$$
+```
 
 By the defining equation (1.1),
 
-$$
+```math
 U_*:=
 \Phi(\pi/2)-\frac\pi4\lambda_*^2
 =
 \frac{(\lambda_*+\pi/2)^2}{4\pi}.
 \tag{2.4}
-$$
+```
 
 If `t<lambda_*`, then the right side of (2.3) is strictly smaller than `U_*`,
 contradicting (2.2). Hence
 
-$$
+```math
 \boxed{t=\lambda_*.}
 \tag{2.5}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{\frac{s_C}{D}\to0,}
 \tag{2.6}
-$$
+```
 
 and (2.2)--(2.4) force
 
-$$
+```math
 \boxed{\frac G{D^2}\to U_*.}
 \tag{2.7}
-$$
+```
 
 We now retain the exact remainder that JC discarded in its scalar relaxation. With
 `P_F=per(F)`, `d_H=q-h`, and `s_Z` the mixed-row surplus, the JC derivation gives
 
-$$
+```math
 E_{out}+Q
 \le
 P_F-h+e_{BB}-3d_H-2s_Z.
 \tag{2.8}
-$$
+```
 
 Every term `d_H,s_Z` is nonnegative, and `P_F<=pi D`. Moreover the same proof gives
 
-$$
+```math
 G\le H_{out}+A_{exc}+O(D),
 \qquad
 H_{out}+A_{exc}
 \le\frac{(E_{out}+Q)^2}{4\pi}+o(D^2).
 \tag{2.9}
-$$
+```
 
 Equations (2.1), (2.5), (2.7), and (2.9) imply
 
-$$
+```math
 \frac{E_{out}+Q}{D}\to\frac\pi2+\lambda_*.
 \tag{2.10}
-$$
+```
 
 Indeed the left side is nonnegative and (2.8) bounds its limsup by
 `pi/2+lambda_*`, while a smaller subsequential limit would make the quadratic upper
@@ -218,7 +218,7 @@ bound in (2.9) strictly smaller than `U_*`.
 Substituting (2.10) back into (2.8) therefore forces every nonnegative remainder to
 vanish at linear scale:
 
-$$
+```math
 \boxed{
 \frac{P_F}{D}\to\pi,
 \qquad
@@ -227,123 +227,123 @@ $$
 \frac{s_Z}{D}\to0.
 }
 \tag{2.11}
-$$
+```
 
 Now use the full-source geometry, which is the point not available in the older JC
 nonattainment argument. Let `o_j` be the full-source circumcenter from FS.1/FS.4 and
 normalize
 
-$$
+```math
 \widetilde F_j:=D_j^{-1}(F_j-o_j).
 \tag{2.12}
-$$
+```
 
 FS.1 puts every `\widetilde F_j` in a fixed bounded disk. Blaschke selection gives a
 Hausdorff-convergent subsequence
 
-$$
+```math
 \widetilde F_j\to F_\infty.
 \tag{2.13}
-$$
+```
 
 FS.4 gives
 
-$$
+```math
 d_{Haus}(F_j-o_j,-(F_j-o_j))=o(D_j),
-$$
+```
 
 so
 
-$$
+```math
 \boxed{F_\infty=-F_\infty.}
 \tag{2.14}
-$$
+```
 
 Every force hull contains an actual diameter pair, hence
 
-$$
+```math
 \operatorname{diam}F_\infty=1.
 \tag{2.15}
-$$
+```
 
 Perimeter is continuous under planar Hausdorff convergence of convex bodies, so
 (2.11) gives
 
-$$
+```math
 \operatorname{per}F_\infty=\pi.
 \tag{2.16}
-$$
+```
 
 For every unit direction `u`, let `w(u)` be the width of `F_\infty` in that direction.
 Cauchy's perimeter formula and (2.15) give
 
-$$
+```math
 \pi
 =\operatorname{per}F_\infty
 =\int_0^\pi w(\theta)\,d\theta,
 \qquad
 0\le w(\theta)\le1.
 \tag{2.17}
-$$
+```
 
 The width function is continuous. Equality in (2.17) therefore implies
 
-$$
+```math
 w(\theta)=1\quad\text{for every }\theta.
 \tag{2.18}
-$$
+```
 
 Thus `F_infty` has constant width one. Since (2.14) makes it centrally symmetric about
 the origin, its support function satisfies
 
-$$
+```math
 w(u)=h(u)+h(-u)=2h(u).
-$$
+```
 
 Equation (2.18) gives `h(u)=1/2` for every unit `u`. Hence
 
-$$
+```math
 \boxed{F_\infty=\tfrac12 B_2.}
 \tag{2.19}
-$$
+```
 
 Area is also continuous under Hausdorff convergence, so
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}F_j}{D_j^2}\to\frac\pi4.
 }
 \tag{2.20}
-$$
+```
 
 GU's attachment-cell estimate remains
 
-$$
+```math
 \limsup
 \frac{\sum_r\operatorname{area}(P_r)}{D_j^2}
 \le\frac\pi4\lambda_*^2.
 \tag{2.21}
-$$
+```
 
 Therefore (2.20)--(2.21) give
 
-$$
+```math
 \liminf\frac{G_j}{D_j^2}
 \ge
 \frac\pi4(1-\lambda_*^2).
 \tag{2.22}
-$$
+```
 
 But by (2.4),
 
-$$
+```math
 \begin{aligned}
 \frac\pi4(1-\lambda_*^2)-U_*
 &=\frac\pi4-\Phi(\pi/2)\\
 &=\frac{\pi-2}{8}>0.
 \end{aligned}
 \tag{2.23}
-$$
+```
 
 This contradicts the exact limit (2.7). Thus no endpoint sequence (FJN.2) exists.
 `square`
@@ -351,9 +351,9 @@ This contradicts the exact limit (2.7). Thus no endpoint sequence (FJN.2) exists
 To obtain the uniform gap, suppose no `eta_FS>0` works. For every integer `m` choose
 an audited survivor with `D>=m` and
 
-$$
+```math
 \lambda<\lambda_*+\frac1m.
-$$
+```
 
 FSJC's universal asymptotic lower bound forces the resulting sequence to satisfy
 `lambda->lambda_*`, contradicting Theorem FJN. This proves (FJN.1). `square`
@@ -367,40 +367,40 @@ is useful for quantitative stability work.
 
 The exact ZU ledger is
 
-$$
+```math
 c_I+e_{BB}+s_C=q-2+d_H+s_Z.
 \tag{3.1}
-$$
+```
 
 Since `q=h+d_H`, equations (2.1), (2.5), (2.6), and (2.11) would force
 
-$$
+```math
 \boxed{
 \frac{c_I}{D}\to\frac\pi2-\lambda_*
 =0.9825679830212571\ldots .
 }
 \tag{3.2}
-$$
+```
 
 ZK gives the exact component ledger
 
-$$
+```math
 \sum_r\delta_r+R_I+s_B+3(d_H+s_Z)
 =6+e_{BB}+2s_C.
 \tag{3.3}
-$$
+```
 
 Hence an endpoint sequence would satisfy
 
-$$
+```math
 \limsup\frac{\sum_r\delta_r}{D}\le\lambda_*.
 \tag{3.4}
-$$
+```
 
 Every nonsingleton unloaded component has integer contact-graph diameter at least one.
 Therefore the number `N_1` of singleton unloaded components would obey
 
-$$
+```math
 \boxed{
 \liminf\frac{N_1}{D}
 \ge
@@ -408,24 +408,24 @@ $$
 =0.3943396392476177\ldots .
 }
 \tag{3.5}
-$$
+```
 
 Finally ZK's component decomposition has
 
-$$
+```math
 s_C=\sum_r s_r,
 \qquad
 s_r=t_r-\delta_r-3-r_r,
 \qquad s_r,r_r\ge0.
-$$
+```
 
 For a singleton, `delta_r=r_r=0`, so `s_r=t_r-3`. Since `s_C=o(D)`, all but `o(D)`
 of the singleton components counted in (3.5) have exactly three loaded neighbors.
 Thus the impossible endpoint would contain at least
 
-$$
+```math
 \left(\frac\pi2-2\lambda_*-o(1)\right)D
-$$
+```
 
 interior positive-stress tripods, each with three distinct loaded attachments.
 Triangle-freeness makes all three attachment-to-attachment distances strictly greater
@@ -479,16 +479,16 @@ are promoted together.
 
 Before this report, FSJC allowed an extremal sequence with
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to\lambda_*.
-$$
+```
 
 FJN removes that entire equality regime and upgrades the asymptotic lower bound to a
 **uniform strict gap**
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\ge\lambda_*+\eta_{FS}
-$$
+```
 
 for some absolute `eta_FS>0` and all sufficiently large survivors.
 
@@ -540,21 +540,21 @@ actual force hull.
 No computational certificate is required. The defining constant is the exact positive
 root (1.1). For reference,
 
-$$
+```math
 \lambda_*=0.5882283437736394387149516348687\ldots,
-$$
+```
 
-$$
+```math
 \frac\pi2-\lambda_*=0.9825679830212571805\ldots,
 \qquad
 \frac\pi2-2\lambda_*=0.3943396392476177418\ldots.
-$$
+```
 
 The fixed normalized area margin in the contradiction is exact:
 
-$$
+```math
 \frac\pi4-\Phi(\pi/2)=\frac{\pi-2}{8}>0.
-$$
+```
 
 ---
 

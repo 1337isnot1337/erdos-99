@@ -62,24 +62,24 @@ every contact isolate, is retained.
 
 For a cut contact p in G_i, q in G_0, put
 
-$$
+```math
  \tau_{pq}=-2(p-q)\cdot v,
  \qquad F_i=\max(\{0\}\cup\{\tau_{pq}:pq\in C[G_i,G_0]\}).
-$$
+```
 
 The allowed heights are
 
-$$
+```math
  0\le s_i\le U_i,\qquad s_i=0\ \text{or}\ s_i\ge F_i,
  \qquad s_i>0\ \text{when group }i\text{ is active}.                 \tag{1}
-$$
+```
 
 Thus a zero-floor active group must still have positive height. The cut squared
 length is exactly
 
-$$
+```math
  |p-q+s_i v|^2=1+s_i(s_i-\tau_{pq}).                               \tag{2}
-$$
+```
 
 All old contacts remain unit or open; there are no contacts between different
 moving groups. At a positive floor, only cuts with tau=F_i stay unit. Smaller
@@ -87,16 +87,16 @@ tau cuts open. No new unit pair is permitted.
 
 For an arbitrary intergroup source pair, oriented from G_i to G_j, write
 
-$$
+```math
  a=(p-q)\cdot v,\quad z=(p-q)\cdot Jv,
  \quad u=\sqrt{D^2-z^2},\quad \Delta=s_i-s_j.
-$$
+```
 
 Every upper bound is the pair of difference inequalities
 
-$$
+```math
  s_i-s_j\le u-a,\qquad s_j-s_i\le u+a.                            \tag{3}
-$$
+```
 
 Both costs are nonnegative since the source pair is at most D. An old
 non-diameter pair has strictly positive costs. If it must remain strictly
@@ -106,12 +106,12 @@ For an old noncontact, a lower bound is automatic if |z|>1. If |z|<=1, put
 ell=sqrt(1-z^2). Unit separation and noncontact give |a|>ell. Preserve its
 original projected order and strict lower bound by imposing
 
-$$
+```math
  \begin{cases}
  s_i-s_j<-a-\ell,&a<0,\\
  s_j-s_i<a-\ell,&a>0.
  \end{cases}                                                     \tag{4}
-$$
+```
 
 These costs are strictly positive, including the case |z|=1, ell=0. Pairs
 inside a group do not change and are checked in the original source.
@@ -138,9 +138,9 @@ edge has c_e>0. Floors F_i are nonnegative and bounds are finite.
 
 Associate the **formal lexicographic cost**
 
-$$
+```math
  \widehat c_e=(c_e,-k_e),
-$$
+```
 
 with ordinary componentwise addition and lexicographic comparison. It encodes
 c_e-k_e epsilon for an infinitesimal positive epsilon; the proof below chooses
@@ -148,9 +148,9 @@ an actual positive rational epsilon when the data are rational.
 
 Start Z={0}. Compute shortest lexicographic path costs to Z,
 
-$$
+```math
  d_i=(a_i,-m_i),\qquad d_z=(0,0)\ (z\in Z).
-$$
+```
 
 Every vertex reaches 0 through its finite bound. Each edge is lexicographically
 nonnegative. A positive-real cycle increases cost; a zero-real cycle has only
@@ -160,10 +160,10 @@ the reversed graph computes these paths.
 
 Move i into Z exactly when
 
-$$
+```math
  a_i<F_i,\quad\text{or}\quad
  a_i=F_i\ \text{and}\ (F_i=0\ \text{or}\ m_i>0).                  \tag{5}
-$$
+```
 
 Repeat until no new vertex is removed. At most r rounds remove vertices.
 Let I be the final complement of Z.
@@ -186,31 +186,31 @@ feasible active support is contained in I.
 
 Use the final a_i,m_i, putting both equal to zero on Z. The path inequality
 
-$$
+```math
  d_i\le d_j+(c_e,-k_e)
-$$
+```
 
 holds for every edge, also when i is a zero vertex. Consequently
 
-$$
+```math
  w_e=c_e-a_i+a_j\ge0,
  \quad w_e=0\Longrightarrow m_i\ge m_j+k_e.                      \tag{6}
-$$
+```
 
 Let eta be the minimum of 1, all positive w_e, all costs of strict edges,
 and all positive a_i-F_i for i in I. Empty parts of this list are omitted;
 the retained 1 makes the list nonempty. Set
 
-$$
+```math
  \epsilon={\eta\over2(r+1)},\qquad s_i=a_i-m_i\epsilon.           \tag{7}
-$$
+```
 
 For any edge,
 
-$$
+```math
  (c_e-k_e\epsilon)-(s_i-s_j)
  =w_e+(m_i-m_j-k_e)\epsilon.
-$$
+```
 
 If w_e=0, (6) makes this nonnegative. If w_e>0, then
 m_i-m_j-k_e>=-(r+1), so it is at least w_e-eta/2>0. Thus a marked edge has
@@ -279,18 +279,18 @@ If some old contact opens, CLR's elementary contact-minimum argument applies.
 Otherwise the exact old contact graph is preserved. Strict old-noncontact lower
 bounds ensure there are no new contacts. For the canonical normalized stress,
 
-$$
+```math
  \Omega=L_C(\alpha)-L_H(\beta)\succeq0,
  \quad \Omega P=0,\quad \ker\Omega=\operatorname{span}\{1,P_x,P_y\},
  \quad \sum_H\beta_h=1,\quad \sum_C\alpha_e=D^2.
-$$
+```
 
 Let g_i indicate the core part of moving group i, and set
 
-$$
+```math
  \kappa_i=g_i^T\Omega g_i,
  \quad b_{ij}=g_i^T\Omega g_j.
-$$
+```
 
 Disjoint groups have no cross contacts, so b_ij is the total positive diameter
 weight between them and is nonnegative. Each nonempty proper core indicator
@@ -304,11 +304,11 @@ This is a core argument; no affine assertion is made about isolates.
 For nonnegative heights, the core displacement matrix is
 U=sum_i s_i g_i v^T. Expanding the audited contact-isometry energy identity gives
 
-$$
+```math
  \sum_{h\in H}\beta_h(D^2-|Q_h|^2)
  =\operatorname{tr}(U^T\Omega U)
  =\sum_i\kappa_i s_i^2+2\sum_{i<j}b_{ij}s_i s_j>0.                \tag{8}
-$$
+```
 
 The strict inequality holds because an active core group has s_i>0.
 Every old diameter has length at most D by the full-source constraints, so at
@@ -342,12 +342,12 @@ For any supplied family satisfying LCR's assumptions, canonical survival
 requires that every core group be eliminated. A group eliminated in a round
 has a directed owner-variable path to a previously forced-zero group with
 
-$$
+```math
  \sum_{e\in\pi}c_e<F_i,
  \quad\text{or}\quad
  \sum_{e\in\pi}c_e=F_i>0\text{ with a strict edge},
  \quad\text{or}\quad F_i=\sum_{e\in\pi}c_e=0.                   \tag{9}
-$$
+```
 
 For positive floors, an all-weak path of cost exactly F_i cannot force zero.
 This is the new difference from a strict-cut-only obstruction certificate.
@@ -375,11 +375,11 @@ policy distinction are mathematically necessary.
 
 Put t=1/100, delta=4t/(1+t^2), a=(1-t^2)/(1+t^2), D in {20,30,50}, and
 
-$$
+```math
  w=(-5/13,12/13),\quad f=(-a,\delta/2),\quad
  M_0=0,\ M_1=w,\ F_0=f,\ F_1=w+f,
  \quad Q=(-\sqrt3 D/2,D/2).
-$$
+```
 
 Move only {M_0,M_1} upward. Its four old contacts are M_0M_1, F_0F_1,
 M_0F_0, M_1F_1; the complete contact graph is a triangle-free rhombus.
@@ -388,17 +388,17 @@ fixed in these finite regressions.
 
 **Weak actual lock.** Choose
 
-$$
+```math
  P=(-\sqrt{D^2-\delta^2/4},\delta/2).
-$$
+```
 
 The original actual diameters are M_0P and M_0Q. The former gives the exact
 weak height cap delta. At height delta every contact remains unit, M_0P stays
 at D, and
 
-$$
+```math
  |M_0(\delta)-Q|^2=D^2-D\delta+\delta^2<D^2.
-$$
+```
 
 All other pairs are strictly between one and D. The diameter-pair count drops
 from two to one. A strict-cut solver discards this locked height; inclusive
@@ -406,9 +406,9 @@ policy B correctly retains it.
 
 **Strict inactive lock.** Instead choose
 
-$$
+```math
  P=(-\sqrt{D^2-25\delta^2/16},-\delta/4).
-$$
+```
 
 Initially |M_0-P|^2=D^2-3delta^2/2<D^2 and M_0Q is the only diameter.
 At height delta, M_0P becomes a new diameter and M_0Q shortens by the same

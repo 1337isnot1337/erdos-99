@@ -16,9 +16,9 @@ The source theorem composes the adaptive strict-safe saturation theorem with can
 
 One notation point should be repaired in the source before promotion: in Section 2, take
 
-$$
+```math
 E=\overline B(x,r)
-$$
+```
 
 rather than an unspecified/open `B(x,r)`.  This makes the distance-one witness in the definition of `N_Z(E)` literally attained.  The area and every subsequent estimate are unchanged.  Nothing else in the proof depends on open versus closed ball convention.
 
@@ -28,21 +28,21 @@ rather than an unspecified/open `B(x,r)`.  This makes the distance-one witness i
 
 The Hall neighborhood is
 
-$$
+```math
 R=N_Z(E)=\{z\in Z:\operatorname{dist}(z,E)\le1\}.
-$$
+```
 
 The full source is finite, so `R` is finite.  Every member of the assigned set `Z` is an actual contact isolate in the canonical Type-I representative.  Hence
 
-$$
+```math
 E_C(R)=\varnothing.
-$$
+```
 
 This is exactly the first branch of Theorem AS.1, not the stronger deleted-contact branch.  The source theorem uses the correct coefficient
 
-$$
+```math
 \operatorname{area}E\le a_0|R|.
-$$
+```
 
 There is no hidden deletion of a boundary/core contact.
 
@@ -60,9 +60,9 @@ Take `y in E subset C_{-1}`.
 
 Thus every `y in E` satisfies
 
-$$
+```math
 |y-a|>1\qquad(a\in A\setminus R),
-$$
+```
 
 which is precisely AS.3.
 
@@ -76,15 +76,15 @@ The argument works for the internal chamber and for the exterior cap because the
 
 AS.1 therefore gives
 
-$$
+```math
 \operatorname{area}E\le a_0|N_Z(E)|.
-$$
+```
 
 This is not merely the old covering statement `C_{-1} subset union B(z,1)`.  Ordinary unit-disk covering would only imply the crude area-count coefficient `pi`; the new inequality has the optimal packing-cell coefficient
 
-$$
+```math
 a_0={\sqrt3\over2}.
-$$
+```
 
 The theorem does not reverse Oler or assert a packing extension.  It is a neighborhood-expansion inequality forced by lexicographic source minimality.
 
@@ -96,35 +96,35 @@ The theorem does not reverse Oler or assert a packing extension.  It is a neighb
 
 Assume
 
-$$
+```math
 x\in C_{-(r+1)}.
-$$
+```
 
 With the literal repair
 
-$$
+```math
 E=\overline B(x,r),
-$$
+```
 
 one has `E subset C_{-1}`.  If `z in N_Z(E)`, compactness of the closed ball gives `y in E` with `|z-y|<=1`, hence
 
-$$
+```math
 |z-x|\le r+1.
-$$
+```
 
 Therefore
 
-$$
+```math
 N_Z(E)\subseteq Z\cap\overline B(x,r+1).
-$$
+```
 
 The Hall inequality gives
 
-$$
+```math
 \pi r^2
 \le a_0|N_Z(E)|
 \le a_0|Z\cap\overline B(x,r+1)|,
-$$
+```
 
 which is exactly the claimed local count floor.
 
@@ -138,24 +138,24 @@ No point outside the radius-`r+1` disk is silently counted.
 
 Let
 
-$$
+```math
 n_r=|Z\cap\overline B(x,r+1)|.
-$$
+```
 
 For the radius-`r+1` disk, finite Oler gives the nonnegative slack
 
-$$
+```math
 \sigma_r
 ={\pi(r+1)^2\over a_0}+\pi(r+1)+1-n_r.
-$$
+```
 
 The Hall count floor gives a **lower** bound on `n_r`, hence the required **upper** bound
 
-$$
+```math
 \sigma_r
 \le
 {\pi(2r+1)\over a_0}+\pi(r+1)+1.
-$$
+```
 
 The direction is correct.  No Oler upper bound is reversed into a capacity lower bound.
 
@@ -169,9 +169,9 @@ C-INACTIVE-NEAR-MATCHING is stated for any convex body containing a specified co
 
 The pair
 
-$$
+```math
 \left(\overline B(x,r+1),\ Z\cap\overline B(x,r+1)\right)
-$$
+```
 
 therefore satisfies its hypotheses exactly.  The selected points remain contact-isolated in the full source, so every near-contact edge produced by Section 81 has old length strictly greater than one.
 
@@ -183,14 +183,14 @@ therefore satisfies its hypotheses exactly.  The selected points remain contact-
 
 For
 
-$$
+```math
 \epsilon={4\over r},
 \qquad r\ge4,
-$$
+```
 
 canonical Section 81 gives
 
-$$
+```math
 \nu_{4/r}
 \ge
 {3\pi(r+1)^2\over2a_0r}
@@ -199,34 +199,34 @@ $$
 \left(
 {\pi(2r+1)\over a_0}+\pi(r+1)+1
 \right).
-$$
+```
 
 Define
 
-$$
+```math
 c_H={\pi(1-a_0)\over2a_0}.
-$$
+```
 
 Subtracting `c_H r` gives exactly
 
-$$
+```math
 {5\pi\over2a_0}
 -{\pi\over2}
 -{1\over2}
 +{3\pi\over2a_0r},
-$$
+```
 
 which is strictly positive because `a_0<1`.  Numerically
 
-$$
+```math
 c_H=0.243003037439\ldots.
-$$
+```
 
 Thus
 
-$$
+```math
 \nu_{4/r}\ge c_Hr
-$$
+```
 
 for every real `r>=4`.  The use of the Section-81 small-scale estimate is legal because `4/r<=1`.
 

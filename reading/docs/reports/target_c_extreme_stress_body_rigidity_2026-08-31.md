@@ -26,30 +26,30 @@ Hence any surviving C-I shear is not an internal mode of a null-face extreme str
 
 Let `S` be the normalized KKT polytope. Write a normalized stress as
 
-$$
+```math
 s=(\alpha,\beta)\in S,
 \qquad
 \alpha_e,\beta_h\ge0,
 \qquad
 \sum_h\beta_h=1,
 \tag{C57.1}
-$$
+```
 
 with the usual vertex-equilibrium equations. Put
 
-$$
+```math
 C_s=\{e:\alpha_e>0\},
 \qquad
 H_s=\{h:\beta_h>0\}.
-$$
+```
 
 ### Lemma C57.1
 
 If `s` is an extreme point of `S`, there is no nonzero signed coefficient vector
 
-$$
+```math
 r=(a,b)
-$$
+```
 
 supported in `C_s union H_s` such that
 
@@ -60,13 +60,13 @@ supported in `C_s union H_s` such that
 
 Every coordinate of `s` on its support is strictly positive. Hence for any fixed signed `r` supported there, both
 
-$$
+```math
 s+\varepsilon r,
 \qquad
 s-\varepsilon r
-$$
+```
 
-remain coordinatewise nonnegative for all sufficiently small positive `epsilon`. Homogeneous equilibrium and zero diameter-weight sum make both perturbed vectors normalized KKT stresses. If `r!=0`, then `s` is the midpoint of two distinct points of `S`, contradicting extremality. $\square$
+remain coordinatewise nonnegative for all sufficiently small positive `epsilon`. Homogeneous equilibrium and zero diameter-weight sum make both perturbed vectors normalized KKT stresses. If `r!=0`, then `s` is the midpoint of two distinct points of `S`, contradicting extremality. $`\square`$
 
 Equivalently: every signed equilibrium stress supported in `supp(s)` is proportional to `s` after fixing the total diameter coefficient.
 
@@ -74,74 +74,74 @@ Equivalently: every signed equilibrium stress supported in `supp(s)` is proporti
 
 Fix an extreme normalized KKT stress `s=(alpha,beta)` and a fixed-diameter critical velocity `v` such that
 
-$$
+```math
 \Omega_s V_x=0,
 \qquad
 \Omega_s V_y=0,
 \qquad
 \Omega_s=L_{C_s}(\alpha)-L_{H_s}(\beta).
 \tag{C57.2}
-$$
+```
 
 Every positive support edge is strong, so C6 makes its radial first variation zero. Therefore there are real angular rates
 
-$$
+```math
 v_i-v_j=\kappa_eJ(p_i-p_j)
 \qquad(e=ij\in C_s),
 \tag{C57.3}
-$$
+```
 
 and
 
-$$
+```math
 v_i-v_j=\omega_hJ(p_i-p_j)
 \qquad(h=ij\in H_s).
 \tag{C57.4}
-$$
+```
 
 The vector kernel equation is
 
-$$
+```math
 \sum_{e=ij\in C_s}\alpha_e(v_i-v_j)
 -
 \sum_{h=ij\in H_s}\beta_h(v_i-v_j)=0
 \tag{C57.5}
-$$
+```
 
 at every vertex, with the usual incidence signs. Apply `-J` and use (C57.3)-(C57.4):
 
-$$
+```math
 \sum_{e=ij\in C_s}\alpha_e\kappa_e(p_i-p_j)
 -
 \sum_{h=ij\in H_s}\beta_h\omega_h(p_i-p_j)=0.
 \tag{C57.6}
-$$
+```
 
 Thus
 
-$$
+```math
 \widetilde s
 =
 \bigl((\alpha_e\kappa_e)_{e\in C_s},
       (\beta_h\omega_h)_{h\in H_s}\bigr)
 \tag{C57.7}
-$$
+```
 
 is a signed equilibrium stress on exactly the same support.
 
 Set
 
-$$
+```math
 c=\sum_{h\in H_s}\beta_h\omega_h.
 \tag{C57.8}
-$$
+```
 
 Then
 
-$$
+```math
 r=\widetilde s-cs
 \tag{C57.9}
-$$
+```
 
 is a signed equilibrium stress supported in `supp(s)` whose diameter coefficients sum to zero. Lemma C57.1 forces `r=0`.
 
@@ -151,23 +151,23 @@ is a signed equilibrium stress supported in `supp(s)` whose diameter coefficient
 
 Let `s=(alpha,beta)` be an extreme normalized KKT stress. If a fixed-diameter critical velocity `v` satisfies (C57.2), then there is one scalar `c` such that
 
-$$
+```math
 \boxed{
 \kappa_e=c\quad(e\in C_s),
 \qquad
 \omega_h=c\quad(h\in H_s).
 }
 \tag{C57.10}
-$$
+```
 
 Consequently, after subtracting the infinitesimal rigid rotation `cJp`,
 
-$$
+```math
 \boxed{
 v_i-cJp_i=t_s
 \quad\text{for every vertex }i\text{ of the positive contact component},}
 \tag{C57.11}
-$$
+```
 
 for one translation vector `t_s`.
 
@@ -175,19 +175,19 @@ for one translation vector `t_s`.
 
 Equation (C57.9) and Lemma C57.1 give
 
-$$
+```math
 \alpha_e(\kappa_e-c)=0,
 \qquad
 \beta_h(\omega_h-c)=0.
-$$
+```
 
 All coefficients on the selected support are positive, proving (C57.10). The canonical support-connectivity theorem says the positive contact graph has one nontrivial connected component containing every endpoint of every positive diameter edge. Along each positive contact edge,
 
-$$
+```math
 (v_i-cJp_i)-(v_j-cJp_j)=0.
-$$
+```
 
-Connectivity gives (C57.11). $\square$
+Connectivity gives (C57.11). $`\square`$
 
 ### Relation to C56
 
@@ -203,21 +203,21 @@ Thus C57 is especially useful precisely in the C56-Z phase left open by PR #58.
 
 Let `L` be the infinitesimal-flex space of the maximal strong mixed framework, equivalently `span K_D(A)` by C54. Let
 
-$$
+```math
 \mathcal F_0
 =
 \{s\in S:\Omega_sV_x=\Omega_sV_y=0
 \text{ for every }v\in L\}
 \tag{C57.12}
-$$
+```
 
 be C54's nonempty exposed second-order null face.
 
 Let its extreme points be
 
-$$
+```math
 s^1,\ldots,s^r.
-$$
+```
 
 Every extreme point of a face is extreme in the whole polytope `S`. Let `P_a` be the vertex set of the unique nontrivial positive contact component of `s^a`.
 
@@ -227,10 +227,10 @@ For every `a` and every `v in L`, the restriction of `v` to `P_a` is an infinite
 
 Moreover, for every pair `a!=b`,
 
-$$
+```math
 \boxed{P_a\cap P_b\ne\varnothing.}
 \tag{C57.13}
-$$
+```
 
 If `P_a cap P_b` contains two distinct source vertices, then the two rigid motions coincide for every `v in L`.
 
@@ -240,13 +240,13 @@ The first claim is C57 because every stress in `F_0` annihilates all of `L`.
 
 For the intersection claim, the midpoint
 
-$$
+```math
 \frac12(s^a+s^b)
-$$
+```
 
 is again a normalized KKT stress. Its positive contact support is exactly the union of the two positive supports. If `P_a` and `P_b` were disjoint, that midpoint would have two nontrivial positive-contact components, contradicting the canonical support-connectivity theorem. Hence the two bodies meet.
 
-If they share two distinct vertices, their two planar infinitesimal rigid motions agree at two distinct points. Their angular velocities and translations are therefore equal. $\square$
+If they share two distinct vertices, their two planar infinitesimal rigid motions agree at two distinct points. Their angular velocities and translations are therefore equal. $`\square`$
 
 ## 5. Pairwise body mixing and C56
 
@@ -258,9 +258,9 @@ If the positive diameter endpoint hull of `s^{ab}` is two-dimensional, C56 appli
 
 If
 
-$$
+```math
 \min_{e\ne f}K^{ab}_{ef}<0,
-$$
+```
 
 then C56-G forces one common angular rate on **all** positive diameter edges of the midpoint support. In particular the diameter rates carried by `s^a` and `s^b` agree for every `v in L`.
 
@@ -268,14 +268,14 @@ then C56-G forces one common angular rate on **all** positive diameter edges of 
 
 If the two extreme bodies can rotate relatively for some `v in L`, their midpoint cannot be in C56-G. It must lie in C56-Z:
 
-$$
+```math
 K^{ab}=(B^{ab})^{-1},
 \qquad
 M^{ab}=0,
 \qquad
 H_{s^a}\cup H_{s^b}\text{ is a forest}.
 \tag{C57.14}
-$$
+```
 
 Thus relative rotation of two null-face extreme bodies is possible only across a **zero-transfer forest midpoint**.
 
@@ -287,13 +287,13 @@ Suppose a contact-minimal triangle-free minimizer still has a weak contact. C13.
 
 For every pair of bodies with different angular rates, their midpoint stress is trapped in C56-Z. Hence:
 
-$$
+```math
 \boxed{
 \text{surviving C-I shear}
 \Longrightarrow
 \text{pairwise one-vertex body hinges whose mixed stresses are zero-transfer forests}.}
 \tag{C57.15}
-$$
+```
 
 The C55/C56 split description and the C57 primal description now align:
 

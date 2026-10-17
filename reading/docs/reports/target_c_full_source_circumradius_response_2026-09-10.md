@@ -28,9 +28,9 @@ complete that bridge at response level.
 
 The new consequence for the indexed Target C frontier is
 
-$$
+```math
 \boxed{P_*=2D-O(\sqrt D)}
-$$
+```
 
 for **every** normalized KKT stress of **every** global minimizer. The full
 diameter graph also has maximum shared-endpoint angle `O(D^{-1/4})`, not merely
@@ -73,21 +73,21 @@ arrow fail an exact regular-shell regression:
 
 For an exact whole-population target, put
 
-$$
+```math
 a_0=\frac{\sqrt3}{2},\quad c_0=\frac{\sqrt3}{4},\quad
 K=\operatorname{conv}A,\quad P=\operatorname{per}K,
-$$
-$$
+```
+```math
 \delta_K=\frac{\pi D^2}{4}-\operatorname{area}K,\qquad
 \mathscr O_A=\operatorname{area}K+c_0P-a_0(n-1).
-$$
+```
 
 Oler and isodiametricity give `delta_K>=0` and `O_A>=0`. The canonical strict
 translated-lattice comparison gives the exact global allowance
 
-$$
+```math
 \boxed{\delta_K+\mathscr O_A<c_0P.}                 \tag{1.1}
-$$
+```
 
 A closing population/response theorem must overcome this allowance or give
 a strict smaller-diameter competitor. The estimates below alone do neither.
@@ -123,42 +123,42 @@ Its PSD rank and its two new no-go consequences are verified directly below.
 
 Let `A` be any noncollinear global `n`-point minimizer, with `D=D(n)`. Set
 
-$$
+```math
 \eta=3^{1/4}\sqrt D.
-$$
+```
 
 Let `o` be a circumcenter of the **full** source hull `K`, and write `R=R(K)`.
 Then
 
-$$
+```math
 \boxed{\frac D2\le R<\frac D2+\eta.}                \tag{3.1}
-$$
+```
 
 For every normalized KKT stress `s`, let `B_s` be its positive diameter
 endpoints and `F_s=conv(B_s)` its selected force hull. Then
 
-$$
+```math
 \boxed{
 F_s\subseteq K\subseteq\overline B(o,R),\qquad
 \frac D2\le R(F_s)\le R<\frac D2+\eta.
 }                                                        \tag{3.2}
-$$
+```
 
 #### Proof
 
 Oler on the entire source gives
 
-$$
+```math
 \operatorname{area}K+c_0P\ge a_0(n-1)>\frac{\pi D^2}{4}.
-$$
+```
 
 Since `P<=pi D`,
 
-$$
+```math
 P^2-4\pi\operatorname{area}K
 <P^2-\pi^2D^2+4\pi c_0P
 \le\pi^2\sqrt3D.
-$$
+```
 
 Bonnesen therefore gives `R-r<eta`. Every inscribed disk has diameter at
 most `D`, so `r<=D/2`; every enclosing disk has radius at least `D/2`.
@@ -187,13 +187,13 @@ report can now be made unconditional: its missing near-minimal
 
 For every normalized KKT stress of `A`,
 
-$$
+```math
 \boxed{
 \frac{2D}{1+2\eta/D}<P_*\le2D,
 \qquad
 0\le2D-P_*<\frac{4\eta}{1+2\eta/D}<4\eta.
 }                                                        \tag{4.1}
-$$
+```
 
 In particular `P_*/D -> 2` uniformly over all stresses and all global sources
 as `n -> infinity`. No triangle-free hypothesis is needed.
@@ -202,17 +202,17 @@ as `n -> infinity`. No triangle-free hypothesis is needed.
 
 Write
 
-$$
+```math
 s_b=\sum_k\beta_{bk},\qquad
 g_b=\sum_k\beta_{bk}(p_b-p_k),\qquad
 P_*=\sum_b|g_b|.
-$$
+```
 
 Summing endpoint contributions gives the exact virial identity
 
-$$
+```math
 D^2=\sum_b(p_b-o)\cdot g_b\le R\sum_b|g_b|=RP_*.
-$$
+```
 
 Also `|g_b|<=Ds_b` and `sum_b s_b=2`, so `P_*<=2D`.
 Substitute (3.1) and rearrange. QED.
@@ -227,24 +227,24 @@ but does not turn near equality into the **exact** matching equality case.
 
 If distinct diameter pairs `by` and `bz` meet at `b`, their angle satisfies
 
-$$
+```math
 \boxed{
 \theta<\Theta_D:=
 2\arccos\!\left(\frac{D}{D+2\eta}\right),\qquad
 \theta\le\frac\pi3.
 }                                                        \tag{5.1}
-$$
+```
 
 Thus uniformly over the full actual diameter graph,
 
-$$
+```math
 \theta=O(D^{-1/4}),\qquad
 \Theta_D=(4\,3^{1/8}+o(1))D^{-1/4}.
-$$
+```
 
 With `theta_cap=min(pi/3,Theta_D)` one also has
 
-$$
+```math
 \boxed{
 \deg_H(b)\le
 1+\left\lfloor
@@ -252,7 +252,7 @@ $$
 \right\rfloor
 =O(D^{3/4}).
 }                                                        \tag{5.2}
-$$
+```
 
 #### Proof
 
@@ -260,9 +260,9 @@ The triangle `byz` has two sides `D`, apex angle `theta<=pi/3`, and base
 `2D sin(theta/2)`. All its angles are acute. Its minimum enclosing circle
 is therefore its circumcircle, of radius
 
-$$
+```math
 R_{byz}=\frac{D}{2\cos(\theta/2)}.
-$$
+```
 
 It is contained in `K`, so `R_{byz}<=R(K)<D/2+eta`, proving (5.1).
 The expansion of arccos at one gives the displayed rate.
@@ -280,46 +280,46 @@ critical velocity. It does not supply a Poincaré inequality for those rates.
 
 Put
 
-$$
+```math
 T_D=D\eta+\eta^2,\qquad L_D=\sqrt{T_D}=O(D^{3/4}).
-$$
+```
 
 ### Theorem FS.4
 
 For every actual diameter pair `bk`,
 
-$$
+```math
 \boxed{
 \left|\frac{p_b+p_k}{2}-o\right|<L_D.
 }                                                        \tag{6.1}
-$$
+```
 
 For every selected normalized stress, simultaneously,
 
-$$
+```math
 \boxed{
 |g_b-2s_b(p_b-o)|\le2s_bL_D,\qquad
 \sum_b|g_b-2s_b(p_b-o)|\le4L_D.
 }                                                        \tag{6.2}
-$$
+```
 
 Let `X_B` have rows `(p_b-o)/D`, and let `S_B=diag(s_b)`. For the actual C11
 response `Lambda`,
 
-$$
+```math
 \boxed{
 \sum_b\left|(\Lambda X_B-2S_BX_B)_b\right|
 \le\frac{4L_D}{D}=O(D^{-1/4}).
 }                                                        \tag{6.3}
-$$
+```
 
 Also
 
-$$
+```math
 \boxed{
 d_{\rm Haus}(F_s-o,-(F_s-o))\le2L_D.
 }                                                        \tag{6.4}
-$$
+```
 
 Thus every normalized selected force-hull limit is centrally symmetric
 about the common source circumcenter and is the convex hull of points on
@@ -329,18 +329,18 @@ the radius-`1/2` circle. This is not a claim that the limit is the disk.
 
 The parallelogram identity gives, for the midpoint `m` of a diameter pair,
 
-$$
+```math
 |m-o|^2
 =\frac{|p_b-o|^2+|p_k-o|^2}{2}-\frac{D^2}{4}
 \le R^2-\frac{D^2}{4}<D\eta+\eta^2.
-$$
+```
 
 Next,
 
-$$
+```math
 g_b-2s_b(p_b-o)
 =-\sum_k\beta_{bk}(p_b+p_k-2o).
-$$
+```
 
 Apply (6.1), then sum using `sum_b s_b=2`. C11 gives
 `Lambda X_B=g/D`, which proves (6.3).
@@ -359,19 +359,19 @@ It is **not** a bound on the response operator on arbitrary boundary data.
 
 Define
 
-$$
+```math
 V_b=\sum_{k<l}\beta_{bk}\beta_{bl}|p_k-p_l|^2.
-$$
+```
 
 Expansion gives `|g_b|^2=D^2s_b^2-V_b`, and hence
 
-$$
+```math
 \boxed{
 \sum_b\frac{V_b}{s_b}
 =\sum_b(Ds_b-|g_b|)\left(D+\frac{|g_b|}{s_b}\right)
 \le2D(2D-P_*)<8D\eta.
 }                                                        \tag{6.5}
-$$
+```
 
 This supplies aggregate geometric coherence without any individual weight
 floor. It still says nothing about the magnitude of a C41 circular minor.
@@ -381,10 +381,10 @@ floor. It still says nothing about the magnitude of a C41 circular minor.
 Let `h>=5` be odd, `k=(h-1)/2`, `a=pi/(2h)`, and take a regular unit
 `h`-gon. Its diameter is `D_h=1/(2sin a)`. Use the canonical stress
 
-$$
+```math
 \alpha_e=D_h^2/h\quad\text{on its sides},\qquad
 \beta_e=1/h\quad\text{on its diameter cycle}.
-$$
+```
 
 All vertices are loaded, so the actual circular-planar response is just the
 weighted side-cycle Laplacian: `Lambda=L_C`.
@@ -393,20 +393,20 @@ weighted side-cycle Laplacian: `Lambda=L_C`.
 
 At each vertex the two diameter vectors make angle `pi/h=2a`. Therefore
 
-$$
+```math
 \boxed{
 P_*=2D_h\cos a,\qquad
 2D_h-P_*=\tan(a/2)\sim\frac1{4D_h}.
 }                                                        \tag{7.1}
-$$
+```
 
 Nevertheless the diameter graph is an odd cycle, not a matching. A matching
 contains at most `(h-1)/2` of its edges, so the maximum diameter weight retained
 by any matching is
 
-$$
+```math
 \boxed{\frac{h-1}{2h}\longrightarrow\frac12.}        \tag{7.2}
-$$
+```
 
 Thus even `2D-P_* -> 0` does not allow deletion of only `o(1)` diameter
 weight to reach a matching. Coalescing geometric directions are not the same
@@ -416,11 +416,11 @@ operation as deleting actual source constraints.
 
 The exact trace identity is
 
-$$
+```math
 \boxed{
 \operatorname{tr}(\Lambda-L_H)=2D_h^2-2.
 }                                                        \tag{7.3}
-$$
+```
 
 Indeed the trace of a weighted Laplacian is twice its total edge weight;
 the contact and diameter weight totals are `D_h^2` and one. This is exactly
@@ -429,31 +429,31 @@ the C41 defect, not a substituted or electrically equivalent network.
 For completeness the defect is PSD, with exactly the affine kernel.
 Its Fourier eigenvalues, for `j=0,...,h-1`, are
 
-$$
+```math
 \lambda_j=\frac4h
 \left[D_h^2\sin^2\frac{\pi j}{h}
       -\sin^2\frac{\pi k j}{h}\right].                 \tag{7.4}
-$$
+```
 
 The modes `j=0,1,h-1` have eigenvalue zero. For all other modes,
 
-$$
+```math
 D_h\sin\frac{\pi j}{h}
 \ge D_h\sin\frac{2\pi}{h}
 =2\cos\frac\pi h\cos\frac{\pi}{2h}>1.
-$$
+```
 
 The last strict inequality holds already at `h=5` and increases with `h`.
 The second squared sine in (7.4) is at most one, so every other eigenvalue
 is positive. The three zero modes are precisely the constant and two
 coordinate functions. Thus
 
-$$
+```math
 \boxed{
 \Lambda-L_H\succeq0,\qquad
 \ker(\Lambda-L_H)=\operatorname{span}\{1,P_x,P_y\}.
 }                                                        \tag{7.5}
-$$
+```
 
 There is no implication from FS.2/FS.4, circular planarity, unit contact
 lengths, affine equilibrium, PSD, and the affine kernel to a small response

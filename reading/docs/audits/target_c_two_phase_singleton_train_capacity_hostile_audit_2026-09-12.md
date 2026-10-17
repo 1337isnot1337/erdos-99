@@ -18,9 +18,9 @@ terminal outer occurrences, and a singleton bridge contributes its two face-side
 occurrences to the same train. An outer occurrence whose projective direction is
 outside the selected pair therefore belongs to an off-phase train. This proves
 
-$$
+```math
 N_o\le2T_o.
-$$
+```
 
 No injectivity between different outer occurrences is assumed; the inequality is
 deliberately a multiplicity bound. The audit retains bridges and articulation
@@ -35,16 +35,16 @@ selected projective directions, each selected rhombus is a crossing of one `u` t
 and one `v` train. The stopped-train crossing graph is simple, so there is at most one
 rhombus per ordered train pair. Thus
 
-$$
+```math
 R_{uv}\le T_uT_v
 \le \frac{(T-T_o)^2}{4}.
-$$
+```
 
 Combining `T_o\ge N_o/2` gives
 
-$$
+```math
 T\ge2\sqrt{R_{uv}}+\frac{N_o}{2}.
-$$
+```
 
 The inequality is safe if some phase-aligned singleton trains do not participate in a
 quadrilateral: retaining them in `T_u+T_v` only weakens the upper bound. The argument
@@ -57,23 +57,23 @@ concentration as a hypothesis on the rhombus faces.
 
 The two determinant-variation inequalities are the audited finite walk statement:
 
-$$
+```math
 sN_u+N_o\ge2\operatorname{width}_{Jv}(P),\qquad
 sN_v+N_o\ge2\operatorname{width}_{Ju}(P).
-$$
+```
 
 With both widths `D-o(D)` and `b=N_u+N_v+N_o\le xD+o(D)`, adding gives
 
-$$
+```math
 \frac{N_o}{D}\ge\frac{4-sx}{2-s}-o(1).
-$$
+```
 
 The train ledger `2T=b+Q+4f` then yields
 
-$$
+```math
 \frac{Q+4f}{D}
 \ge4\sqrt{\Delta_2}+\frac{4-2x}{2-s}-o(1).
-$$
+```
 
 For `x\ge\pi` the numerator `4-2x` is negative, so the lower bound is minimized at
 `s=1`, giving `4\sqrt{\Delta_2}+4-2x-o(1)`. At `x=\pi` this is

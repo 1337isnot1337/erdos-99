@@ -23,15 +23,15 @@ The near-circle endpoint and the asymptotically full-core endpoint were previous
 
 If a post-ZF survivor sequence satisfies
 
-$$
+```math
 x_B=o(D)
 \qquad\text{and}\qquad
 n-v=o(D^2),
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \liminf\frac hD
 \ge
@@ -39,11 +39,11 @@ $$
 =1.9517214495\ldots .
 }
 \tag{FC.1}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \liminf\frac{2h-q}{D}
 \ge
@@ -51,18 +51,18 @@ $$
 =0.7618502455\ldots ,
 }
 \tag{FC.2}
-$$
+```
 
 and, because `x_B=o(D)` and `2h-q=x_B+Q+2s_Z`,
 
-$$
+```math
 \boxed{
 \liminf\frac{Q+2s_Z}{D}
 \ge
 \frac45\sqrt{\frac\pi{2\sqrt3}}.
 }
 \tag{FC.3}
-$$
+```
 
 This improves DG+NM's `pi/5=0.628318...` defect constant in the full-core branch.
 
@@ -72,72 +72,72 @@ This improves DG+NM's `pi/5=0.628318...` defect constant in the full-core branch
 
 Write
 
-$$
+```math
 \Delta:=\frac\pi{2\sqrt3}.
 \tag{1.1}
-$$
+```
 
 The full-core hypothesis
 
-$$
+```math
 n-v=o(D^2)
 \tag{1.2}
-$$
+```
 
 allows the audited DE/DF asymptotic train theorem to be used. DE gives
 
-$$
+```math
 \boxed{
 \liminf\frac{T-q}{D}
 \ge
 c_0:=2\sqrt\Delta-\frac\pi2.
 }
 \tag{1.3}
-$$
+```
 
 Numerically
 
-$$
+```math
 c_0=0.3338292869\ldots .
-$$
+```
 
 The near-circle hypothesis `x_B=o(D)` gives by DG/DC
 
-$$
+```math
 \boxed{
 \frac qD\to\pi.
 }
 \tag{1.4}
-$$
+```
 
 The exact post-ZF identities are
 
-$$
+```math
 2f=(T-q)+d_H+s_Z,
 \tag{1.5}
-$$
+```
 
-$$
+```math
 q=x_B+Q+2d_H+2s_Z,
 \tag{1.6}
-$$
+```
 
 where
 
-$$
+```math
 d_H=q-h,
 \qquad
 Q=\sum_{F\ exc}(\deg F-4),
 \qquad
 f=\#\{\text{exceptional bounded faces}\}.
-$$
+```
 
 Every exceptional face has degree at least five, so
 
-$$
+```math
 \boxed{Q\ge f.}
 \tag{1.7}
-$$
+```
 
 ---
 
@@ -145,92 +145,92 @@ $$
 
 Pass to an arbitrary subsequence on which
 
-$$
+```math
 \frac hD\to y,
 \qquad
 \frac{s_Z}{D}\to s
-$$
+```
 
 after passing further if necessary; boundedness follows from `h<=q<=pi D` and `s_Z<=h`.
 
 By (1.4),
 
-$$
+```math
 \frac{d_H}{D}=\frac{q-h}{D}\to\pi-y.
 \tag{2.1}
-$$
+```
 
 From (1.5) and DE.1.3,
 
-$$
+```math
 2\liminf\frac fD
 \ge
 c_0+(\pi-y)+s.
 \tag{2.2}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 \liminf\frac fD
 \ge
 \frac{c_0+\pi-y+s}{2}.
 }
 \tag{2.3}
-$$
+```
 
 On the other hand, divide (1.6) by `D`. Since `x_B/D->0`,
 
-$$
+```math
 \frac QD
 \to
 \pi-2(\pi-y)-2s
 =2y-\pi-2s
 \tag{2.4}
-$$
+```
 
 along the chosen subsequence whenever the displayed variables converge; otherwise use limsup/liminf in the same inequality below.
 
 Since `Q>=f`, combine (2.3)-(2.4):
 
-$$
+```math
 2y-\pi-2s
 \ge
 \frac{c_0+\pi-y+s}{2}.
 \tag{2.5}
-$$
+```
 
 Multiply by two and rearrange:
 
-$$
+```math
 5y
 \ge
 3\pi+c_0+5s.
 \tag{2.6}
-$$
+```
 
 Since `s>=0`,
 
-$$
+```math
 y\ge\frac{3\pi+c_0}{5}.
 \tag{2.7}
-$$
+```
 
 Now substitute
 
-$$
+```math
 c_0=2\sqrt\Delta-\frac\pi2:
-$$
+```
 
-$$
+```math
 \frac{3\pi+c_0}{5}
 =
 \frac{5\pi/2+2\sqrt\Delta}{5}
 =
 \frac\pi2+\frac25\sqrt\Delta.
 \tag{2.8}
-$$
+```
 
 This proves FC.1 on every convergent subsequence, hence globally.
 
@@ -240,38 +240,38 @@ This proves FC.1 on every convergent subsequence, hence globally.
 
 DG/DC gives `q/D->pi`. Therefore
 
-$$
+```math
 \frac{2h-q}{D}
 \to 2y-\pi
-$$
+```
 
 on every convergent subsequence for `h/D`. Applying FC.1,
 
-$$
+```math
 \liminf\frac{2h-q}{D}
 \ge
 2\left(\frac\pi2+\frac25\sqrt\Delta\right)-\pi
 =
 \frac45\sqrt\Delta.
-$$
+```
 
 This proves FC.2.
 
 The exact branching identity is
 
-$$
+```math
 2h-q=x_B+Q+2s_Z.
 \tag{3.1}
-$$
+```
 
 Since `x_B=o(D)`, FC.3 follows immediately.
 
 Numerically
 
-$$
+```math
 \frac45\sqrt\Delta
 =0.7618502455\ldots .
-$$
+```
 
 ---
 
@@ -279,7 +279,7 @@ $$
 
 Equation (2.6) actually proves more than FC.1. Along every convergent subsequence,
 
-$$
+```math
 \boxed{
 \frac hD
 \ge
@@ -287,13 +287,13 @@ $$
 +\frac{s_Z}{D}-o(1).
 }
 \tag{4.1}
-$$
+```
 
 Thus linear extra mixed-framework dependence pushes the diameter-edge density upward one-for-one asymptotically.
 
 Equivalently, because `h/D<=q/D->pi`,
 
-$$
+```math
 \boxed{
 \limsup\frac{s_Z}{D}
 \le
@@ -301,7 +301,7 @@ $$
 =1.1898712040\ldots .
 }
 \tag{4.2}
-$$
+```
 
 This is not a small upper bound by itself, but it exposes the exact exchange rate between extra mixed stress dependencies and diameter edges in the near-circle full-core phase.
 
@@ -311,24 +311,24 @@ This is not a small upper bound by itself, but it exposes the exact exchange rat
 
 Universal post-ZF DB:
 
-$$
+```math
 \liminf h/D\ge1.4781702664\ldots .
-$$
+```
 
 DG+NM under `x_B=o(D)`:
 
-$$
+```math
 \liminf h/D\ge3\pi/5
 =1.8849555922\ldots .
-$$
+```
 
 FC under the additional asymptotically full-core hypothesis:
 
-$$
+```math
 \boxed{
 \liminf h/D\ge1.9517214495\ldots .
 }
-$$
+```
 
 The improvement comes from the DE exposed-hull train theorem, not another rearrangement of DB/NM.
 

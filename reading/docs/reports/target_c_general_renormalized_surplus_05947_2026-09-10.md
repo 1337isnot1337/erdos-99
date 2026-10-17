@@ -25,28 +25,28 @@ branch.
 
 Put
 
-$$
+```math
 k:=d_H+s_Z,
 \qquad
 \boxed{
 \mu_D:=\frac{e_{BB}+2s_C-3k}{D}.
 }
 \tag{GR.1}
-$$
+```
 
 Then every unbounded post-ZF survivor sequence satisfies
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\mu_D>0.5947.
 }
 \tag{GR.2}
-$$
+```
 
 Equivalently, there are absolute constants `epsilon_G>0` and `D_0<infinity` such
 that every sufficiently large post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
@@ -54,7 +54,7 @@ $$
 +3\frac{d_H+s_Z}{D}.
 }
 \tag{GR.3}
-$$
+```
 
 This removes the previous quantitative branch split between `s_Z=0` and `s_Z>0`:
 **each unit of mixed-stress surplus `s_Z` costs three units of pinned/contact
@@ -62,24 +62,24 @@ currency, with the same coefficient as a diameter-component defect.**
 
 The exact ZK identity rewrites the renormalized numerator as
 
-$$
+```math
 \boxed{
 e_{BB}+2s_C-3(d_H+s_Z)
 =
 \sum_r\delta_r+R_I+s_B-6.
 }
 \tag{GR.4}
-$$
+```
 
 Hence GR.2 is also the full-source structural lower bound
 
-$$
+```math
 \boxed{
 \sum_r\delta_r+R_I+s_B
 >(0.5947+o(1))D
 }
 \tag{GR.5}
-$$
+```
 
 for **all** post-ZF survivors, not only mixed circuits.
 
@@ -97,17 +97,17 @@ GR.5 is known.
 
 The prior `s_Z=0` report SZ used
 
-$$
+```math
 \nu_D=\frac{e_{BB}+2s_C-3d_H}{D}
-$$
+```
 
 because its pocket calculation was written after setting `s_Z=0`.
 The general ZK identity already suggested that the correct all-phase quantity should
 charge the full mixed defect
 
-$$
+```math
 k=d_H+s_Z.
-$$
+```
 
 The new implication is
 
@@ -138,49 +138,49 @@ The sign and coefficient are exact.  No step assumes `s_Z=0`.
 
 ZK proves for every post-ZF source
 
-$$
+```math
 \boxed{
 \sum_r\delta_r+R_I+s_B+3(d_H+s_Z)
 =6+e_{BB}+2s_C.
 }
 \tag{2.1}
-$$
+```
 
 Therefore
 
-$$
+```math
 L_G:=6+e_{BB}+2s_C-3(d_H+s_Z)
 =\sum_r\delta_r+R_I+s_B
 \ge0.
 \tag{2.2}
-$$
+```
 
 In particular
 
-$$
+```math
 \mu_D\ge-\frac6D.
 \tag{2.3}
-$$
+```
 
 GU/ZK's attachment-cell estimate is
 
-$$
+```math
 \sum_r\operatorname{area}(P_r)
 \le
 \frac\pi4L_G^2+\pi L_G+\pi^2D.
 \tag{2.4}
-$$
+```
 
 Thus on any unbounded convergent subsequence with `mu_D->mu`, necessarily
 `mu>=0` and
 
-$$
+```math
 \boxed{
 \limsup\frac{\sum_r\operatorname{area}(P_r)}{D^2}
 \le\frac\pi4\mu^2.
 }
 \tag{2.5}
-$$
+```
 
 This part of the `s_Z=0` renormalization never needed the circuit hypothesis.
 
@@ -199,85 +199,85 @@ Retain the exact PC/JC variables:
 
 JC.3 gives
 
-$$
+```math
 E_{out}=x_B+P_F-q-a.
 \tag{3.1}
-$$
+```
 
 PC.1 gives
 
-$$
+```math
 q=x_B+Q+2(d_H+s_Z).
 \tag{3.2}
-$$
+```
 
 Subtract (3.2) from (3.1) and add `Q`:
 
-$$
+```math
 \boxed{
 E_{out}+Q=P_F-a-2(d_H+s_Z).
 }
 \tag{3.3}
-$$
+```
 
 PC also gives
 
-$$
+```math
 e_{BB}=q-a+c_B,
-$$
+```
 
 so
 
-$$
+```math
 a=q+c_B-e_{BB}.
 \tag{3.4}
-$$
+```
 
 Finally `q=h+d_H`.  Insert (3.4) into (3.3):
 
 ### Theorem GR.1 — exact all-phase joint-pocket identity
 
-$$
+```math
 \boxed{
 E_{out}+Q
 =e_{BB}-c_B+P_F-h-3d_H-2s_Z.
 }
 \tag{GR.6}
-$$
+```
 
 This specializes exactly to SZ's circuit-phase formula when `s_Z=0`.
 
 There is a stronger form that exposes every relaxation used below.  ZE/ZT gives
 
-$$
+```math
 b+Q=2h-2s_Z.
 \tag{3.5}
-$$
+```
 
 Set
 
-$$
+```math
 r_{out}:=b-P_F\ge0.
 \tag{3.6}
-$$
+```
 
 Then (3.5) is
 
-$$
+```math
 2h=P_F+r_{out}+Q+2s_Z.
 \tag{3.7}
-$$
+```
 
 Using the numerator
 
-$$
+```math
 M_G:=e_{BB}+2s_C-3d_H-3s_Z,
 \tag{3.8}
-$$
+```
 
 rewrite GR.6 as
 
-$$
+```math
 \begin{aligned}
 E_{out}+Q
 &=M_G-2s_C-c_B+s_Z+P_F-h\\
@@ -287,25 +287,25 @@ E_{out}+Q
 \right).
 \end{aligned}
 \tag{3.9}
-$$
+```
 
 Hence the exact inequality
 
-$$
+```math
 \boxed{
 E_{out}+Q
 \le
 M_G+\frac{P_F}{2}.
 }
 \tag{GR.7}
-$$
+```
 
 The loss in GR.7 is not hidden.  It is precisely
 
-$$
+```math
 2s_C+c_B+\frac Q2+\frac{b-P_F}{2}\ge0.
 \tag{3.10}
-$$
+```
 
 This is the decisive algebraic extension beyond SZ.  The extra `s_Z` in GR.6 is
 absorbed by the exact outer-walk defect (3.5), leaving the full coefficient `3s_Z`
@@ -317,110 +317,110 @@ inside `M_G`.
 
 JC's joint convex-area estimate gives
 
-$$
+```math
 H_{out}+A_{exc}
 \le
 \frac{(E_{out}+Q)^2}{4\pi}+o(D^2).
 \tag{4.1}
-$$
+```
 
 ZG gives
 
-$$
+```math
 G
 \le H_{out}+A_{exc}+O(D),
 \qquad
 G:=\operatorname{area}F-\sum_r\operatorname{area}(P_r).
 \tag{4.2}
-$$
+```
 
 Pass to a convergent subsequence and write
 
-$$
+```math
 \mu=\lim\mu_D,
 \qquad
 y=\lim\frac hD,
 \qquad
 p=\lim\frac{P_F}{D}.
 \tag{4.3}
-$$
+```
 
 By GR.7,
 
-$$
+```math
 \boxed{
 \limsup\frac{E_{out}+Q}{D}
 \le\mu+\frac p2.
 }
 \tag{4.4}
-$$
+```
 
 Therefore (2.5), (4.1), and (4.2) imply
 
-$$
+```math
 \limsup\frac{\operatorname{area}F}{D^2}
 \le
 \frac\pi4\mu^2
 +
 \frac{(\mu+p/2)^2}{4\pi}.
 \tag{4.5}
-$$
+```
 
 The FSDB and central-symmetral RSR lower bounds are valid before any `s_Z=0`
 restriction.  Define
 
-$$
+```math
 \Phi(y):=\frac{y+\sin y}{4},
 \qquad
 \Psi(p):=c_R\left(\frac p2-1\right)^2,
 \qquad
 c_R:=\frac\pi{(\pi-2)^2},
 \tag{4.6}
-$$
+```
 
 and
 
-$$
+```math
 A_*(y,p):=\max\{\Phi(y),\Psi(p)\}.
 \tag{4.7}
-$$
+```
 
 Then
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge A_*(y,p).
 \tag{4.8}
-$$
+```
 
 Combining (4.5)–(4.8) gives the new all-phase necessary inequality
 
 ### Theorem GR.2 — generalized renormalized RSJ inequality
 
-$$
+```math
 \boxed{
 A_*(y,p)-\frac\pi4\mu^2
 \le
 \frac{(\mu+p/2)^2}{4\pi}.
 }
 \tag{GR.8}
-$$
+```
 
 The geometric domain includes
 
-$$
+```math
 2\rho\le y\le p\le\pi,
 \qquad
 p\le2y.
 \tag{4.9}
-$$
+```
 
 The last inequality follows directly from
 
-$$
+```math
 P_F\le b=2h-Q-2s_Z.
 \tag{4.10}
-$$
+```
 
 Notice what changed relative to the `s_Z=0` RSJ/SZ formula.  The cavity variable is
 now `p/2`, not `p-y`.  This is exactly the cost of allowing `s_Z>0`; it is still small
@@ -432,54 +432,54 @@ enough to retain a strong positive universal floor on `mu`.
 
 For `A>0,m>=0`, let `R(A,m)` be the least nonnegative `u` satisfying
 
-$$
+```math
 A
 \le
 \frac\pi4u^2+
 \frac{(u+m)^2}{4\pi}.
 \tag{5.1}
-$$
+```
 
 Equivalently `u=R(A,m)` is the nonnegative root of
 
-$$
+```math
 Q(u;A,m)
 :=(\pi^2+1)u^2+2mu+m^2-4\pi A=0.
 \tag{5.2}
-$$
+```
 
 RSJ already audits the monotonicities
 
-$$
+```math
 \frac{\partial R}{\partial A}>0,
 \qquad
 \frac{\partial R}{\partial m}<0.
 \tag{5.3}
-$$
+```
 
 Let `y_R` be RSJ's unique crossover
 
-$$
+```math
 \Phi(y_R)=\Psi(2y_R),
 \qquad
 \frac32<y_R<\frac\pi2,
 \tag{5.4}
-$$
+```
 
 and define
 
-$$
+```math
 \lambda_R:=R(\Phi(y_R),y_R)
 =0.592140543606288\ldots .
 \tag{5.5}
-$$
+```
 
 We now minimize the new threshold
 
-$$
+```math
 R(A_*(y,p),p/2)
 \tag{5.6}
-$$
+```
 
 over the relaxed domain (4.9).
 
@@ -487,32 +487,32 @@ over the relaxed domain (4.9).
 
 For this range, `p<=2y<=p_e(y)`, where
 
-$$
+```math
 p_e(y):=2+2\sqrt{\frac{\Phi(y)}{c_R}}
 \tag{5.7}
-$$
+```
 
 is the unique perimeter satisfying `Psi(p_e)=Phi(y)`.  Since every actual force hull
 has `p>2`, `Psi` is increasing on the relevant perimeter range.  Therefore
 
-$$
+```math
 A_*(y,p)=\Phi(y).
-$$
+```
 
 By (5.3), increasing `p` lowers the threshold, so the best allowed perimeter is
 `p=2y`.  Hence the fixed-`y` minimum is exactly
 
-$$
+```math
 r_-(y):=R(\Phi(y),y).
 \tag{5.8}
-$$
+```
 
 This is the same function audited in RSJ Section 4.1, where
 
-$$
+```math
 r_-'(y)<0.
 \tag{5.9}
-$$
+```
 
 Thus this half of the domain is minimized uniquely at `y=y_R`, with value
 `lambda_R`.
@@ -524,86 +524,86 @@ threshold decreases as `p` increases, so this side is minimized at `p=p_e(y)`.
 
 If `p>=p_e(y)`, then `A_*=Psi(p)` and the threshold `u(p)` solves
 
-$$
+```math
 (\pi^2+1)u^2
 +pu+
 \frac{p^2}{4}
 -\pi c_R(p-2)^2
 =0.
 \tag{5.10}
-$$
+```
 
 Implicit differentiation gives `u'(p)>0` exactly when
 
-$$
+```math
 2\pi c_R(p-2)>u+\frac p2.
 \tag{5.11}
-$$
+```
 
 On this branch
 
-$$
+```math
 p\ge p_e(y)\ge p_e(y_R)=2y_R>3.
-$$
+```
 
 Also `c_R>2`, `pi>3`, `p<=pi<4`, and the threshold root is `<1` because
 `A_*<=pi/4` while the right side of (5.1) at `u=1` is strictly larger than `pi/4`.
 Therefore
 
-$$
+```math
 2\pi c_R(p-2)>12>3>u+p/2,
-$$
+```
 
 proving (5.11).  Thus the `p>=p_e` side is also minimized uniquely at `p=p_e(y)`.
 
 It remains to vary `y`.  Put
 
-$$
+```math
 s(y):=\sqrt{\frac{\Phi(y)}{c_R}},
 \qquad
 \frac{p_e(y)}2=1+s(y).
 \tag{5.12}
-$$
+```
 
 At the fixed-`y` minimum the root satisfies
 
-$$
+```math
 (\pi^2+1)u^2
 +2(1+s)u
 +(1+s)^2
 -4\pi c_Rs^2
 =0.
 \tag{5.13}
-$$
+```
 
 Differentiate with respect to `s`.  The partial derivative of the left side with
 respect to `s` is
 
-$$
+```math
 2u+2(1+s)-8\pi c_Rs.
 \tag{5.14}
-$$
+```
 
 For `y>=y_R`, (5.4) and `p_e(y_R)=2y_R` give
 
-$$
+```math
 s\ge s(y_R)=y_R-1>\frac12.
-$$
+```
 
 Also `1+s=p_e/2<=pi/2<2` and `u<1`.  Hence
 
-$$
+```math
 2u+2(1+s)-8\pi c_Rs
 <2+4-8(3)(2)(1/2)<0.
 \tag{5.15}
-$$
+```
 
 The partial derivative of (5.13) with respect to `u` is positive, so
 
-$$
+```math
 \frac{du}{ds}>0.
 \tag{5.16}
-$$
+```
 
 Finally `Phi` is strictly increasing on `[2rho,pi)`, hence so is `s(y)`.  The
 fixed-`y` threshold is therefore strictly increasing for `y>=y_R`.
@@ -612,20 +612,20 @@ fixed-`y` threshold is therefore strictly increasing for `y>=y_R`.
 
 Combining Sections 5.1–5.2,
 
-$$
+```math
 \boxed{
 \mu\ge\lambda_R
 }
 \tag{GR.9}
-$$
+```
 
 for every post-ZF survivor limit, and equality in the relaxed parameter problem is
 possible only at
 
-$$
+```math
 \boxed{(y,p)=(y_R,2y_R).}
 \tag{5.17}
-$$
+```
 
 Thus even before the quantitative DD step, the full `3(d_H+s_Z)` renormalization has
 the same base constant as the former `s_Z=0` theorem.
@@ -639,115 +639,115 @@ classification for the Rogalski–Saint Raymond theorem.
 
 Assume for contradiction
 
-$$
+```math
 \mu_D\to\lambda_R.
 \tag{6.1}
-$$
+```
 
 By the strict minimization above,
 
-$$
+```math
 y_D\to y_R,
 \qquad
 p_D\to2y_R.
 \tag{6.2}
-$$
+```
 
 Return to the exact remainder in (3.9).  Define
 
-$$
+```math
 R_D:=
 2s_C+c_B+\frac Q2+\frac{b-P_F}{2}
 \ge0.
 \tag{6.3}
-$$
+```
 
 Then
 
-$$
+```math
 E_{out}+Q
 =M_G+\frac{P_F}{2}-R_D.
 \tag{6.4}
-$$
+```
 
 If `R_D/D` had a positive subsequential limit, the cavity variable in GR.8 would be
 strictly smaller than `p_R/2=y_R` by a fixed amount.  By the strict monotonicity
 `partial R/partial m<0`, the limiting threshold would then be strictly larger than
 `lambda_R`, contradicting (6.1).  Therefore
 
-$$
+```math
 \boxed{
 R_D=o(D).
 }
 \tag{6.5}
-$$
+```
 
 Every term in (6.3) is nonnegative, so
 
-$$
+```math
 \boxed{
 s_C=o(D),\quad c_B=o(D),\quad Q=o(D),
 \quad b-P_F=o(D).
 }
 \tag{6.6}
-$$
+```
 
 DD now gives
 
-$$
+```math
 H_{out}
 \le
 \frac1{\sqrt6}(x_B+a)^{3/2}\sqrt{b-P_F}.
 \tag{6.7}
-$$
+```
 
 The PC identities and `q=O(D)` give `x_B+a=O(D)`, so (6.6) implies
 
-$$
+```math
 H_{out}=o(D^2).
 \tag{6.8}
-$$
+```
 
 The exceptional-face estimate gives
 
-$$
+```math
 A_{exc}\le\frac{Q^2+O(D)}{4\pi}=o(D^2).
 \tag{6.9}
-$$
+```
 
 Hence ZG forces
 
-$$
+```math
 G=o(D^2).
 \tag{6.10}
-$$
+```
 
 But at the unique parameter endpoint the FSDB lower bound and the attachment estimate
 (2.5) give
 
-$$
+```math
 \liminf\frac GD^2
 \ge
 \Phi(y_R)-\frac\pi4\lambda_R^2.
 \tag{6.11}
-$$
+```
 
 By the defining threshold equation at `m=y_R`,
 
-$$
+```math
 \Phi(y_R)-\frac\pi4\lambda_R^2
 =
 \frac{(\lambda_R+y_R)^2}{4\pi}>0.
 \tag{6.12}
-$$
+```
 
 This contradicts (6.10).  Therefore the endpoint is impossible.
 
 A diagonal-sequence argument yields some nonexplicit absolute `epsilon_0>0` with
 
-$$
+```math
 \mu_D\ge\lambda_R+\epsilon_0
-$$
+```
 
 for every sufficiently large post-ZF survivor.  Section 7 makes a stronger part of
 that gap explicit.
@@ -758,17 +758,17 @@ that gap explicit.
 
 Put
 
-$$
+```math
 u_0:=\frac{5947}{10000}.
 \tag{7.1}
-$$
+```
 
 Suppose an unbounded survivor subsequence has
 
-$$
+```math
 \mu_D\to\mu\le u_0.
 \tag{7.2}
-$$
+```
 
 We derive a contradiction using only rational barriers plus the already proved
 monotonicity in Section 5.
@@ -777,131 +777,131 @@ monotonicity in Section 5.
 
 Use the E597 barriers
 
-$$
+```math
 \frac{6283}{2000}<\pi<\frac{3927}{1250}<\frac{22}{7},
 \qquad
 \rho>\frac{739}{1000},
 \tag{7.3}
-$$
+```
 
 so
 
-$$
+```math
 \frac1{4\pi}<\frac{500}{6283}.
 \tag{7.4}
-$$
+```
 
 Also
 
-$$
+```math
 \boxed{\frac1{\sqrt6}<\frac{1633}{4000}}
 \tag{7.5}
-$$
+```
 
 because
 
-$$
+```math
 6\left(\frac{1633}{4000}\right)^2-1
 =\frac{67}{8000000}>0.
-$$
+```
 
 For rational `x<pi/2` in the range below define
 
-$$
+```math
 \underline\Phi(x)
 :=
 \frac14\left[
 x+1-rac12\left(\frac{11}{7}-x\right)^2
 \right].
 \tag{7.6}
-$$
+```
 
 Since `pi/2<11/7` and `cos z>=1-z^2/2`,
 
-$$
+```math
 \Phi(x)>\underline\Phi(x).
 \tag{7.7}
-$$
+```
 
 Define also
 
-$$
+```math
 \overline J_u(m)
 :=
 \frac{3927}{5000}u^2
 +
 \frac{500}{6283}(u+m)^2,
 \tag{7.8}
-$$
+```
 
 so
 
-$$
+```math
 J_u(m):=rac\pi4u^2+rac{(u+m)^2}{4\pi}
 <\overline J_u(m).
 \tag{7.9}
-$$
+```
 
 ### 7.2 RSJ localizes `y<1.5245`
 
 Let
 
-$$
+```math
 y_0:=\frac{3049}{2000}=1.5245.
 \tag{7.10}
-$$
+```
 
 At the fixed-`y` optimum in the upper branch,
 
-$$
+```math
 \frac{p_e(y_0)}2
 =1+\sqrt{\frac{\Phi(y_0)}{c_R}}.
 \tag{7.11}
-$$
+```
 
 The function `x/(x-2)^2` decreases for `x>2`; hence
 
-$$
+```math
 c_R>
 \frac{3927/1250}{(3927/1250-2)^2}.
 \tag{7.12}
-$$
+```
 
 For an upper bound on `Phi(y_0)`, use
 
-$$
+```math
 z_0:=\frac{6283}{4000}-y_0>0.
-$$
+```
 
 Since the actual `z=pi/2-y_0` is larger than `z_0` and cosine decreases here,
 
-$$
+```math
 \sin y_0=\cos z
 \le\cos z_0
 \le1-\frac{z_0^2}{2}+rac{z_0^4}{24}.
 \tag{7.13}
-$$
+```
 
 Exact rational comparison then gives
 
-$$
+```math
 \frac{\Phi(y_0)}{c_R}
 <\left(\frac{2558}{5000}\right)^2.
 \tag{7.14}
-$$
+```
 
 Therefore
 
-$$
+```math
 \frac{p_e(y_0)}2<1.5116.
 \tag{7.15}
-$$
+```
 
 This also gives `p_e(y_0)<3.0232<2y_0=3.049`, so `y_0>y_R` by the unique crossover.
 
 Now exact rational arithmetic gives
 
-$$
+```math
 \underline\Phi(y_0)
 -
 \overline J_{u_0}(1.5116)
@@ -910,60 +910,60 @@ $$
 \frac{441700615443}{19241687500000000}>0.
 }
 \tag{7.16}
-$$
+```
 
 Thus even the optimal fixed-`y_0` perimeter requires `mu>u_0`.  By Section 5.2 the
 optimal threshold is strictly increasing for `y>=y_R`, so every state satisfying
 (7.2) has
 
-$$
+```math
 \boxed{2\rho\le y<1.5245.}
 \tag{7.17}
-$$
+```
 
 In particular the E597 bound on `rho` gives
 
-$$
+```math
 1.478<y<1.5245.
 \tag{7.18}
-$$
+```
 
 ### 7.3 Localize the actual-perimeter detour
 
 Set
 
-$$
+```math
 \delta:=2y-p\ge0.
 \tag{7.19}
-$$
+```
 
 Then `p/2=y-delta/2`, and GR.8 implies the weaker necessary inequality
 
-$$
+```math
 \boxed{
 \Phi(y)\le J_{u_0}(y-\delta/2).
 }
 \tag{7.20}
-$$
+```
 
 For a rational candidate `d`, define
 
-$$
+```math
 F_d(y):=J_{u_0}(y-d/2)-\Phi(y).
 \tag{7.21}
-$$
+```
 
 On
 
-$$
+```math
 1.478\le y\le1.5245,
 \qquad
 0\le d\le0.026,
-$$
+```
 
 we have `cos y<0.1` and `1/(2pi)>7/44`.  Therefore
 
-$$
+```math
 \begin{aligned}
 F_d'(y)
 &=\frac{u_0+y-d/2}{2\pi}-\frac{1+\cos y}{4}\\
@@ -981,89 +981,89 @@ F_d'(y)
 \boxed{\frac{23179}{440000}>0.}
 \end{aligned}
 \tag{7.22}
-$$
+```
 
 Partition `[1.478,1.5245]` into 465 adjacent intervals of width `10^-4`:
 
-$$
+```math
 I_j=[L_j,U_j].
 \tag{7.23}
-$$
+```
 
 For each cell choose `d_j` to be the first multiple of `10^-5` satisfying
 
-$$
+```math
 \overline J_{u_0}(U_j-d_j/2)
 <\underline\Phi(U_j).
 \tag{7.24}
-$$
+```
 
 The exact certificate checks `d_j<=0.02567<0.026` for every cell.  By (7.22),
 (7.24) implies
 
-$$
+```math
 \boxed{y\in I_j\Longrightarrow\delta<d_j.}
 \tag{7.25}
-$$
+```
 
 The weakest localization cell is
 
-$$
+```math
 [1.5012,1.5013],
 \qquad d_j=0.01605,
-$$
+```
 
 where the exact margin in (7.24) is
 
-$$
+```math
 \boxed{
 \frac{127118647}{76966750000000000}>0.
 }
 \tag{7.26}
-$$
+```
 
 ### 7.4 DD contradicts the force-gap lower bound on every cell
 
 The exact post-ZF identities give
 
-$$
+```math
 b-P_F=2h-Q-2s_Z-P_F\ge0.
 \tag{7.27}
-$$
+```
 
 Hence
 
-$$
+```math
 Q+2s_Z\le2h-P_F=\delta_DD,
-$$
+```
 
 so in particular
 
-$$
+```math
 \frac QD\le\delta_D,
 \qquad
 \frac{b-P_F}{D}\le\delta_D.
 \tag{7.28}
-$$
+```
 
 DD.15 has
 
-$$
+```math
 x_B+a
 =2h-Q-2s_Z-e_{BB}+c_B.
-$$
+```
 
 Since `0<=c_B<=e_BB`,
 
-$$
+```math
 \boxed{x_B+a\le2h.}
 \tag{7.29}
-$$
+```
 
 Therefore, on a limit with parameters `(y,delta)`, DD and the exceptional-face
 isoperimetric estimate give
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}+A_{exc}}{D^2}
 \le
@@ -1072,73 +1072,73 @@ $$
 \frac{\delta^2}{4\pi}.
 }
 \tag{7.30}
-$$
+```
 
 On the other hand, FSDB and (2.5) give
 
-$$
+```math
 \boxed{
 \liminf\frac GD^2
 \ge
 \Phi(y)-\frac\pi4u_0^2.
 }
 \tag{7.31}
-$$
+```
 
 Fix one cell `I_j`.  Choose the least rational `s_j` with denominator `10^6` such
 that
 
-$$
+```math
 s_j^2\ge2U_jd_j.
 \tag{7.32}
-$$
+```
 
 Then the right side of (7.30) is strictly below
 
-$$
+```math
 C_j:=
 \frac{1633}{4000}(2U_j)s_j
 +
 \frac{500}{6283}d_j^2.
 \tag{7.33}
-$$
+```
 
 The left side of (7.31) is strictly above
 
-$$
+```math
 B_j:=
 \underline\Phi(L_j)
 -
 \frac{3927}{5000}u_0^2.
 \tag{7.34}
-$$
+```
 
 The exact certificate verifies
 
-$$
+```math
 \boxed{B_j>C_j}
 \tag{7.35}
-$$
+```
 
 for all 465 cells.
 
 The smallest capacity margin occurs on the final cell
 
-$$
+```math
 [1.5244,1.5245],
-$$
+```
 
 where
 
-$$
+```math
 d_j=0.02567,
 \qquad
 s_j=0.279764,
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 B_j-C_j
 =
@@ -1146,15 +1146,15 @@ B_j-C_j
 >0.
 }
 \tag{7.36}
-$$
+```
 
 Thus every possible cell satisfies
 
-$$
+```math
 \liminf G/D^2
 >
 \limsup(H_{out}+A_{exc})/D^2,
-$$
+```
 
 contradicting ZG.  No sequence satisfying (7.2) exists.  This proves GR.2.
 
@@ -1164,11 +1164,11 @@ contradicting ZG.  No sequence satisfying (7.2) exists.  This proves GR.2.
 
 If GR.3 were false, then for every integer `j` there would be a post-ZF survivor with
 
-$$
+```math
 D_j\ge j,
 \qquad
 \mu_{D_j}<0.5947+\frac1j.
-$$
+```
 
 The normalized parameters have compact subsequences.  By (2.3), every subsequential
 limit of `mu_D` is nonnegative; after passing further it is at most `0.5947`, which
@@ -1331,12 +1331,12 @@ s_Z>0:
 
 GR changes the full branch to
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C-3(d_H+s_Z)}D>0.5947+o(1)
 }
 \tag{12.1}
-$$
+```
 
 without assuming `s_Z=0`.
 
@@ -1346,9 +1346,9 @@ uncontrolled positive mixed-surplus phase.
 
 The cleanest source-side form is GR.5:
 
-$$
+```math
 \sum_r\delta_r+R_I+s_B>(0.5947+o(1))D.
-$$
+```
 
 All three terms are concrete nonnegative graph/packing slacks:
 
@@ -1365,13 +1365,13 @@ actual slacks**, not a new treatment of `s_Z>0` from scratch.
 
 A sufficient full C-II theorem is
 
-$$
+```math
 \boxed{
 \sum_r\delta_r+R_I+s_B
 \le(0.5947+o(1))D.
 }
 \tag{13.1}
-$$
+```
 
 Indeed (13.1) contradicts GR.5 for large `D`.
 

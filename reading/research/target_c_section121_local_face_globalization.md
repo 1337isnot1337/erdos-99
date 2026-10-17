@@ -37,53 +37,53 @@ chamber.
 Let `G` be the full nonisolated positive-contact core of the canonical post-ZF
 representative. Its loaded vertex set is
 
-$$
+```math
 B=\operatorname{Vert}(F),
-$$
+```
 
 where `F` is the force hull. Let `I_1,...,I_{c_I}` be the connected components of the
 unloaded positive-contact graph.
 
 Fix `I_r`. Let
 
-$$
+```math
 A_r\subset B,
 \qquad
 P_r:=\operatorname{conv}(A_r),
-$$
+```
 
 be its distinct loaded attachment set and harmonic attachment cell. Let `H_r` be the
 induced positive-contact graph on
 
-$$
+```math
 I_r\cup A_r,
-$$
+```
 
 including every loaded-loaded positive contact whose two endpoints lie in `A_r`.
 Canonical Section 62 gives harmonic trapping
 
-$$
+```math
 I_r\subset P_r.
-$$
+```
 
 Canonical Section 82 strengthens this to
 
-$$
+```math
 \boxed{I_r\subset\operatorname{int}P_r,}
 \tag{121.1}
-$$
+```
 
 and proves that every bounded face of `H_r` is a simple convex polygon.
 
 Canonical Section 83 gives pairwise interior-disjointness of harmonic cells:
 
-$$
+```math
 \boxed{
 \operatorname{int}P_r\cap\operatorname{int}P_s=\varnothing
 \quad(r\ne s).
 }
 \tag{121.2}
-$$
+```
 
 ---
 
@@ -91,12 +91,12 @@ $$
 
 ### Lemma 121.1 — cell-interior vertex fidelity
 
-$$
+```math
 \boxed{
 V(G)\cap\operatorname{int}P_r=I_r.
 }
 \tag{121.3}
-$$
+```
 
 ### Proof
 
@@ -105,9 +105,9 @@ The inclusion `I_r subset int(P_r)` is (121.1).
 First consider an unloaded vertex `x in I_s` with `s ne r`. Applying (121.1) to its
 own harmonic component gives
 
-$$
+```math
 x\in\operatorname{int}P_s.
-$$
+```
 
 If also `x in int(P_r)`, then the two cell interiors meet, contradicting (121.2).
 Thus no unloaded vertex outside `I_r` lies in `int(P_r)`.
@@ -115,17 +115,17 @@ Thus no unloaded vertex outside `I_r` lies in `int(P_r)`.
 Now let `b in B\setminus A_r`. Since `B=Vert(F)`, the point `b` is an extreme point of
 `F=conv(B)`. Hence
 
-$$
+```math
 b\notin\operatorname{conv}(B\setminus\{b\}).
-$$
+```
 
 But `A_r subset B\setminus\{b\}`, so
 
-$$
+```math
 P_r=\operatorname{conv}(A_r)
 \subset
 \operatorname{conv}(B\setminus\{b\}).
-$$
+```
 
 Therefore `b notin P_r`. The loaded vertices in `A_r` are vertices of `P_r` and hence
 lie on its boundary, not in its interior.
@@ -146,18 +146,18 @@ positive-contact core `G`.
 By Section 82, the boundary of `f` is a simple convex contact polygon contained in
 `P_r`, and its open interior satisfies
 
-$$
+```math
 \operatorname{int}f\subset\operatorname{int}P_r.
 \tag{121.4}
-$$
+```
 
 Because `f` is a face of `H_r`, no vertex of `I_r union A_r` lies in `int(f)`. Lemma
 121.1 says there is no other positive-core vertex in `int(P_r)`. Hence
 
-$$
+```math
 \boxed{V(G)\cap\operatorname{int}f=\varnothing.}
 \tag{121.5}
-$$
+```
 
 Suppose nevertheless that an edge `xy` of `G` not belonging to `H_r` has relative
 interior meeting `int(f)`. Since neither endpoint lies in `int(f)`, the straight
@@ -204,10 +204,10 @@ the full source in the sense of Section 77.
 
 In particular, if its degree is `k_f`, then its chamber perimeter is exactly
 
-$$
+```math
 \boxed{\operatorname{per}(f)=k_f,}
 \tag{121.6}
-$$
+```
 
 because every boundary edge is a unit contact. All source points in its interior are
 retained contact isolates.
@@ -222,48 +222,48 @@ Now work along a Type-II full-core sequence. Let `r=r(D)` be any chosen harmonic
 component sequence and let `f_D` be a bounded nonquadrilateral face of `H_{r(D)}`.
 Write
 
-$$
+```math
 k_D:=\deg(f_D).
-$$
+```
 
 Assume along a subsequence
 
-$$
+```math
 {k_D\over D}\longrightarrow\lambda>0.
 \tag{121.7}
-$$
+```
 
 Corollary 121.3 makes `f_D` an actual internal inactive chamber. Canonical Section 84
 therefore applies. Choose a farthest pair of boundary vertices `x_D,y_D` and let the
 two boundary arcs between them have unit-edge lengths `ell_D^+` and `ell_D^-`.
 Section 84 gives
 
-$$
+```math
 \boxed{
 {|x_D-y_D|\over D}\longrightarrow{\lambda\over2},
 }
 \tag{121.8}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 {\ell_D^+\over D},
 {\ell_D^-\over D}
 \longrightarrow{\lambda\over2}.
 }
 \tag{121.9}
-$$
+```
 
 Since `ell_D^+ + ell_D^- = k_D`, the total excess of these two open face-boundary
 routes over their common chord is
 
-$$
+```math
 \boxed{
 k_D-2|x_D-y_D|=o(D).}
 \tag{121.10}
-$$
+```
 
 Thus a macroscopic local defect-face cycle need not be paid as a zero-displacement
 route of excess `k_D=Theta(D)`. It can be cut at a diameter pair into two oppositely
@@ -278,11 +278,11 @@ of the two open arcs. Hence endpoint assignment remains injective.
 The price is geometric rather than combinatorial: the zero host `0` is replaced by an
 antipodal pair of unit chord hosts
 
-$$
+```math
 q_f,
 \qquad -q_f.
 \tag{121.11}
-$$
+```
 
 This host-diversity cost must be retained; it cannot be silently ignored in a
 signed-return inequality.
@@ -294,15 +294,15 @@ signed-return inequality.
 Fix `eta>0` and one harmonic carrier `H_r`. Call a bounded nonquadrilateral face
 `eta`-macroscopic when
 
-$$
+```math
 \deg f\ge\eta D.
-$$
+```
 
 The local Section-82 boundary budget gives
 
-$$
+```math
 P_{{\rm exc},r}=O(D),
-$$
+```
 
 so the number of `eta`-macroscopic defect faces is bounded by a constant depending
 only on `eta` and the carrier boundary constant.
@@ -312,10 +312,10 @@ many faces by decreasing degree, padding the list when necessary. For every pers
 face whose normalized degree has a positive limit, apply (121.10). The sum of the
 resulting two-arc excesses is then
 
-$$
+```math
 \boxed{o(D)}
 \tag{121.12}
-$$
+```
 
 for fixed `eta`.
 
@@ -329,7 +329,7 @@ macroscopic scale, by the following occurrence-injective route family:
 Every physical end of every complete rhombus train is still assigned to exactly one
 matching boundary occurrence. The total route excess is
 
-$$
+```math
 \boxed{
 E_{\eta}
 =
@@ -341,7 +341,7 @@ L_r-2d_r
 \sum_{f\in\mathcal F_{<\eta D}}\deg f.
 }
 \tag{121.13}
-$$
+```
 
 For fixed `eta`, the middle sum is `o(D)` along the selected Type-II subsequence.
 

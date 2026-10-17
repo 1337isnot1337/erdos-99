@@ -19,12 +19,12 @@
 
 The companion matching-branch report uses the strict constant comparison
 
-$$
+```math
 A_{FS}:=\frac{2\rho+\sin(2\rho)}4
 >\frac{\pi^2}{16},
 \qquad \rho=\cos\rho,
 \tag{1}
-$$
+```
 
 where `rho` is the unique root of `cos x=x` in `(0,pi/2)`.
 This note gives a completely rational certificate for (1), so the branch closure does
@@ -34,171 +34,171 @@ not depend on printed decimal approximations.
 
 Put
 
-$$
+```math
 a=\frac{739}{1000},\qquad b=\frac{37}{50}.
-$$
+```
 
 On `(0,pi/2)`, the function
 
-$$
+```math
 f(x)=\cos x-x
-$$
+```
 
 is strictly decreasing because
 
-$$
+```math
 f'(x)=-\sin x-1<0.
-$$
+```
 
 For `0<x<1`, the alternating Taylor series gives
 
-$$
+```math
 \cos x>
 1-\frac{x^2}{2}+\frac{x^4}{24}-\frac{x^6}{720}
 \tag{2}
-$$
+```
 
 and
 
-$$
+```math
 \cos x<
 1-\frac{x^2}{2}+\frac{x^4}{24}.
 \tag{3}
-$$
+```
 
 At `a=739/1000`, direct rational arithmetic gives
 
-$$
+```math
 1-\frac{a^2}{2}+\frac{a^4}{24}-\frac{a^6}{720}-a
 =
 \frac{101004823138270439}{720000000000000000000}>0.
 \tag{4}
-$$
+```
 
 Hence `f(a)>0`.
 
 At `b=37/50`, direct rational arithmetic gives
 
-$$
+```math
 1-\frac{b^2}{2}+\frac{b^4}{24}-b
 =-\frac{195839}{150000000}<0.
 \tag{5}
-$$
+```
 
 Hence `f(b)<0`.
 
 Since `f` is strictly decreasing and `f(rho)=0`, (4)--(5) prove
 
-$$
+```math
 \boxed{\frac{739}{1000}<\rho<\frac{37}{50}.}
 \tag{6}
-$$
+```
 
 ## 2. Rational lower bound for `A_FS`
 
 Because `rho in (0,pi/2)` and `rho=cos rho`,
 
-$$
+```math
 \sin\rho=\sqrt{1-\rho^2}
-$$
+```
 
 and therefore
 
-$$
+```math
 A_{FS}
 =\frac{\rho}{2}\left(1+\sqrt{1-\rho^2}\right).
 \tag{7}
-$$
+```
 
 The upper bound in (6) gives
 
-$$
+```math
 1-\rho^2>1-\left(\frac{37}{50}\right)^2
 =\frac{1131}{2500}.
-$$
+```
 
 Also
 
-$$
+```math
 \frac{1131}{2500}>\left(\frac{84}{125}\right)^2,
-$$
+```
 
 because
 
-$$
+```math
 1131\cdot15625=17671875
 >
 17640000=7056\cdot2500.
-$$
+```
 
 Thus
 
-$$
+```math
 \sqrt{1-\rho^2}>\frac{84}{125}.
 \tag{8}
-$$
+```
 
 Using the lower bound on `rho` from (6) and (8) in (7),
 
-$$
+```math
 A_{FS}
 >
 \frac{739}{2000}\left(1+\frac{84}{125}\right)
 =
 \boxed{\frac{154451}{250000}}.
 \tag{9}
-$$
+```
 
 ## 3. Rational upper bound for `pi^2/16`
 
 The classical Archimedean bound `pi<22/7` can be certified by the exact identity
 
-$$
+```math
 \frac{22}{7}-\pi
 =
 \int_0^1
 \frac{x^4(1-x)^4}{1+x^2}\,dx>0.
 \tag{10}
-$$
+```
 
 (The equality follows by polynomial division and
 `integral_0^1 dx/(1+x^2)=pi/4`; positivity is immediate.)
 Therefore
 
-$$
+```math
 \frac{\pi^2}{16}
 <
 \frac1{16}\left(\frac{22}{7}\right)^2
 =
 \boxed{\frac{121}{196}}.
 \tag{11}
-$$
+```
 
 Finally,
 
-$$
+```math
 \frac{154451}{250000}>\frac{121}{196},
-$$
+```
 
 because
 
-$$
+```math
 154451\cdot196
 =30272396
 >
 30250000
 =121\cdot250000.
 \tag{12}
-$$
+```
 
 Combining (9), (11), and (12) proves the desired exact inequality
 
-$$
+```math
 \boxed{
 A_{FS}>\frac{\pi^2}{16}.
 }
 \tag{13}
-$$
+```
 
 No transcendental decimal evaluation is used.
 
@@ -206,15 +206,15 @@ No transcendental decimal evaluation is used.
 
 The companion report proves in the perfect-matching branch
 
-$$
+```math
 \operatorname{area}F\le\frac{\pi^2}{16}D^2,
-$$
+```
 
 while FSDB gives along every unbounded post-ZF sequence
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}\ge A_{FS}.
-$$
+```
 
 Equation (13) supplies the exact strict margin needed to make those inequalities
 incompatible.  Thus the matching-branch exclusion is a genuine proof, not a

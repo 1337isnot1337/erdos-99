@@ -18,22 +18,22 @@
 
 The detour-free train gate proves
 
-$$
+```math
 \boxed{
  {\sigma_R+2S_E\over D}
  \ge
  c_{DF}+{5\over2}{k\over D}+{Q-f\over D}-o(1),
 }
 \tag{SG.1}
-$$
+```
 
 where
 
-$$
+```math
 c_{DF}=\sqrt{\Delta_2}-{\pi\over4}+0.00105
 =0.167964643466509\ldots .
 \tag{SG.2}
-$$
+```
 
 Here `S_E` counts singleton stopped trains with a terminal incidence on a bounded exceptional face.
 
@@ -41,25 +41,25 @@ The Groemer hostile audit proves that small true face residual forces an anchore
 
 The resulting gate is
 
-$$
+```math
 \boxed{
 \sigma_R+11(Q-f)+130A^{sing}_\eta
 \ge
 c_{DF}D+{5\over2}k-o(D)
 }
 \tag{SG.3}
-$$
+```
 
 for every fixed `eta>0`, where `A^{sing}_eta` is the maximum number of pairwise vertex-disjoint triples `(u,v,w)` satisfying
 
-$$
+```math
 |u-v|=1,
 \qquad
 1\le|u-w|<1+\eta,
 \qquad
 1\le|v-w|<1+\eta,
 \tag{SG.4}
-$$
+```
 
 with `uv` a singleton stopped-train edge incident with a pentagonal exceptional face.
 
@@ -71,18 +71,18 @@ Thus, on the small-residual branch, the exceptional-singleton escape becomes an 
 
 Fix `K>=5` and `eta>0`. There exists `tau_K^edge(eta)>0` such that if a canonical bounded exceptional face `P` has degree at most `K` and residual
 
-$$
+```math
 r(P)<\tau_K^{edge}(\eta),
-$$
+```
 
 then **every** cyclic boundary edge `uv` of `P` has a source point `w` in the face with
 
-$$
+```math
 1\le|u-w|<1+\eta,
 \qquad
 1\le|v-w|<1+\eta.
 \tag{SG.5}
-$$
+```
 
 Because the global source is triangle-free, at least one of these two inequalities is strict.
 
@@ -92,9 +92,9 @@ If false, there is a sequence of degree-at-most-`K` exceptional faces with resid
 
 The limit cannot be the segment equality case, so it is a Groemer packing triangulated by unit equilateral triangles. The marked length-one segment `uv` remains on the convex-hull boundary. No third unit-separated source point can lie in its relative interior, so `uv` is a boundary edge of the triangulation. Every triangulation boundary edge is incident with exactly one triangular cell; Groemer equality makes that cell unit equilateral. Its third vertex `w` satisfies
 
-$$
+```math
 |u-w|=|v-w|=1.
-$$
+```
 
 The corresponding labeled source point in the approximating sequence then satisfies (SG.5) for all sufficiently large indices, contradiction.
 
@@ -106,26 +106,26 @@ Let `S_5` be the number of singleton stopped trains with at least one pentagonal
 
 Let `p_5^{hit}` be the number of pentagonal exceptional faces incident with at least one such singleton train. A pentagon has only five boundary edges, so
 
-$$
+```math
 \boxed{p_5^{hit}\ge S_5/5.}
 \tag{SG.6}
-$$
+```
 
 Assume now
 
-$$
+```math
 R_F=o(D).
 \tag{SG.7}
-$$
+```
 
 For fixed `eta>0`, Lemma SG.1 with `K=5` gives a positive threshold `tau_5^edge(eta)`. Because pentagon residuals are nonnegative and sum to at most `R_F`, the number of pentagons with residual at least this threshold is `o(D)`.
 
 Hence at least
 
-$$
+```math
 {S_5\over5}-o(D)
 \tag{SG.8}
-$$
+```
 
 singleton-hit pentagons are low-residual. In each such pentagon choose one incident singleton edge `uv`; Lemma SG.1 supplies a third source point `w` satisfying (SG.4). Thus the exact base `uv` is itself the singleton stopped train that entered the train ledger.
 
@@ -135,69 +135,69 @@ Choose only one anchored triple per pentagon in (SG.8). As in the dense anchored
 
 A greedy independent set keeps at least one thirteenth of them. Consequently
 
-$$
+```math
 \boxed{
 A^{sing}_\eta
 \ge {S_5\over65}-o(D).
 }
 \tag{SG.9}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{130A^{sing}_\eta\ge2S_5-o(D).}
 \tag{SG.10}
-$$
+```
 
 ## 4. Eliminate the exceptional-singleton currency
 
 Put
 
-$$
+```math
 X:=Q-f\ge0.
-$$
+```
 
 The exact exceptional-face incidence theorem gives
 
-$$
+```math
 S_E\le S_5+6X,
-$$
+```
 
 hence
 
-$$
+```math
 2S_5\ge2S_E-12X.
 \tag{SG.11}
-$$
+```
 
 From the detour-free gate (SG.1),
 
-$$
+```math
 \sigma_R+2S_E
 \ge
 c_{DF}D+{5\over2}k+X-o(D).
-$$
+```
 
 Subtract `12X` through (SG.11):
 
-$$
+```math
 2S_5
 \ge
 c_{DF}D+{5\over2}k-\sigma_R-11X-o(D).
 \tag{SG.12}
-$$
+```
 
 Finally use (SG.10). Rearranging gives exactly
 
-$$
+```math
 \boxed{
 \sigma_R+11(Q-f)+130A^{sing}_\eta
 \ge
 c_{DF}D+{5\over2}k-o(D).
 }
 \tag{SG.13}
-$$
+```
 
 No outer-detour term survives.
 
@@ -205,53 +205,53 @@ No outer-detour term survives.
 
 Ignoring the nonnegative topology bonus, for every fixed `eta>0` and every Type-II subsequence with `R_F=o(D)`, at least one of
 
-$$
+```math
 {\sigma_R\over D},
 \qquad
 {Q-f\over D},
 \qquad
 {A^{sing}_\eta\over D}
-$$
+```
 
 is at least
 
-$$
+```math
 {c_{DF}\over142}-o(1)
 =0.001182849601876\ldots-o(1),
 \tag{SG.14}
-$$
+```
 
 because the coefficients in (SG.13) sum to `1+11+130=142`.
 
 More usefully, if
 
-$$
+```math
 \sigma_R=o(D),
 \qquad
 Q-f=o(D),
 \tag{SG.15}
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \liminf {A^{sing}_\eta\over D}
 \ge {c_{DF}\over130}
 =0.001292035718973\ldots .
 }
 \tag{SG.16}
-$$
+```
 
 This holds for every fixed `eta>0`. A standard diagonal choice of `eta_j=1/j` gives a scale `eta_D->0` with the same limiting coefficient:
 
-$$
+```math
 \boxed{
 \liminf {A^{sing}_{\eta_D}\over D}
 \ge {c_{DF}\over130}
 }
 \tag{SG.17}
-$$
+```
 
 under (SG.15).
 

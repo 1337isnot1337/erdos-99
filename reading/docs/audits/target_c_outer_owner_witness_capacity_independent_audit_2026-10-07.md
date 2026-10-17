@@ -52,9 +52,9 @@ Let `k` be the number of these counted owners, `B` the actual diameter endpoints
 `x_B=b-q`, `m_B` the number of nonunit sides of `conv(B)`, and `Z_out` the number
 of contact isolates on the old outer contact face. Then
 
-$$
+```math
 \boxed{k\le 2m_B+3(x_B+Z_{out}).}
-$$
+```
 
 In the Type-II near-disk branch of `C-FULLCORE-NEAR-DISK`, let `a=m_B` and let `N`
 count the distinct contact isolates within `5/4` of any Section-67 outer pocket or
@@ -62,9 +62,9 @@ Section-77 nondegenerate exterior-cap boundary. Audit.105 gives `N<=48(x_B+a)` a
 localizes every isolate lower-witness endpoint to this collar. Therefore the sharper
 conclusion is
 
-$$
+```math
 \boxed{k\le 2a+3(x_B+N)\le147x_B+146a\le147(x_B+a).}
-$$
+```
 
 Consequently, in a Type-II sequence with `x_B+a=o(D)`, any such counted family has
 `k=o(D)`. This is a capacity bound on an already specified owner family; it does not
@@ -98,9 +98,9 @@ eventually for every fixed `t>1`.
 Let `U_out` be the distinct unloaded positive-contact core vertices on the outer
 contact face, and put `W=U_out union Z_out`. Each loaded hull vertex appears at least
 once in the outer walk. Every distinct `U_out` point also appears at least once, so
-$$
+```math
 |U_{out}|\le b-q=x_B.
-$$
+```
 
 Choose one lower witness for every counted owner, and charge that owner to an endpoint
 whose motion is relative to the other endpoint in the singleton state.
@@ -130,13 +130,13 @@ For the selected singleton witnesses, retain only the distinct outer-face isolat
 that actually appear as an endpoint, and call this set `Z_*`. Audit.105's collar
 localization applies to each lower equality/violation, so `|Z_*|<=N`. Re-run the
 three endpoint charges with `Z_*` in place of `Z_out`:
-$$
+```math
 k\le2m_B+3(x_B+N).
-$$
+```
 In Type II, `m_B=a` and `N<=48(x_B+a)`, giving
-$$
+```math
 k\le2a+3x_B+144(x_B+a)=147x_B+146a\le147(x_B+a).
-$$
+```
 This argument bounds distinct owner witnesses even if one isolate blocks several
 proposals: isolate-to-loaded incidence is at most two, and an isolate used as a
 moving endpoint belongs to only one owner. It does not presume simultaneous
@@ -171,12 +171,12 @@ Canonical dependencies are `C-OO-LOWER-BLOCKER-LOCALIZATION`,
 `C-NEARBY-DIAMETER-ENDPOINTS-FULL-HULL-SIDE`, and
 `C-OO-OUTER-ISOLATE-COLLAR-BOUND`.
 
-$$
+```math
 \text{singleton upper/unary safety + strict old-diameter shortening}
 \to\text{one outer lower witness per owner}
 \to k\le2m_B+3(x_B+Z_{out})
 \to\text{Type-II collar replacement }k\le147(x_B+a).
-$$
+```
 
 This rules out a linear already-specified O–O singleton family in the conditional
 low-defect Type-II subcase `x_B+a=o(D)`. The active C-II finite-move obligation is

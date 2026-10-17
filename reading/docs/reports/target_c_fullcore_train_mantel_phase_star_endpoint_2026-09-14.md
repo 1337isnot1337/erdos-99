@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_train_mantel_phase_star_endpoint_2026-09-14.md) · source SHA-256 `85666aeabb0f209e1f96d0014c5bf0b5569ebb30f544cedb7714ad2666648bdc`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 4 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
+
 <!-- theorem-state: {"artifact_id":"ART-0B796CCBDA65","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fullcore_train_mantel_phase_star_endpoint_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=21fdc5a9d34ca42326739a53a85ff6e109061c3d; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -76,17 +78,17 @@ Only the first four arrows are proved below. The last arrow is not asserted.
 
 Canonical train-boundary accounting gives the two finite inequalities
 
-$$
+```math
  4\sqrt{R_D}le B_D,
 \tag{2.1}
-$$
+```
 
 and
 
-$$
+```math
  B_Dle b_D+4f_D+Q_D.
 \tag{2.2}
-$$
+```
 
 The first is the track/Mantel boundary bound. The second counts every rhombic
 boundary occurrence by the old outer contact face or a bounded nonquadrilateral face;
@@ -95,67 +97,83 @@ occurrences are not simplified away.
 
 Using (1.1) and (1.2),
 
-$$
+```math
  {4\sqrt{R_D}\over D}	o4\sqrt{\Delta_2},
-$$
+```
 
 while
 
-$$
+```math
  {b_D+4f_D+Q_D\over D}
 \to \pi+5f_{
 m TC}
  =\pi+4\sqrt{\Delta_2}-\pi
  =4\sqrt{\Delta_2}.
-$$
+```
 
 Thus the squeeze in (2.1)--(2.2) is asymptotically sharp:
 
-$$
+```math
 \boxed{
  {B_D\over D}	o4\sqrt{\Delta_2}=3.809251227455829\ldots .
 }
 \tag{2.3}
-$$
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 
 The exact numerical value is orientation only; the proof uses the symbolic identity
-$pi+5f_{
+\(pi+5f_{
 m TC}=4\sqrt{\Delta_2}).
+```
+
+
 
 The train convention in the canonical theorem gives exactly two boundary-edge
 occurrences per local train segment, including holes and all other boundary
 components. Therefore
 
-\[
+```math
  T_D={B_D\over2},
 \qquad
  {T_D\over D}	o2\sqrt{\Delta_2}.
 \tag{2.4}
-\]
+```
 
 Since each rhombus is one crossing edge of (Gamma_D), (1.1), (2.3), and (2.4)
 give
 
-\[
+```math
 \boxed{
  {R_D\over T_D^2}	o {\Delta_2\over4\Delta_2}={1\over4}.
 }
 \tag{2.5}
-\]
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 
 This is stronger than merely knowing that the train graph has positive crossing
 density: it approaches equality in the exact Mantel bound
-\(R_D\le T_D^2/4$.
+\(R_D\le T_D^2/4\).
+```
+
+
 
 ## 3. Phase cut and three-class near-extremality
 
 The canonical phase-circle cut applies to the full strict-rhombus train graph. It
 removes a set (F_D) of crossing edges with
 
-$$
+```math
  |F_D|=O(D),
 \tag{3.1}
-$$
+```
 
 and assigns every train segment a label in (mathbb Z/3mathbb Z). Every retained
 crossing joins two distinct labels. Two trains with the same label cannot cross: all
@@ -168,107 +186,115 @@ Let the three label classes have sizes (M_Dge b_D^{\rm ph}ge a_D^{\rm ph}), and
 let (E_D^{\rm ph}) be the number of retained crossing edges. To avoid collision with
 the outer-walk variable (b_D), write these class sizes as (M_D,U_D,V_D) below:
 
-$$
+```math
  M_D\ge U_D\ge V_D,
 \qquad M_D+U_D+V_D=T_D.
 \tag{3.2}
-$$
+```
 
 Then
 
-$$
+```math
  E_D^{\rm ph}=R_D-O(D),
 \qquad
  {E_D^{\rm ph}\over T_D^2}	o{1\over4}.
 \tag{3.3}
-$$
+```
 
 ### Lemma 3.1 — three-partite triangle-free phase bound
 
 Let a tripartite graph have class sizes (M\ge U\ge V), no triangle with one
 vertex in each class, and edge count (E). Then
 
-$$
+```math
 \boxed{E\le M(U+V).}
 \tag{3.4}
-$$
+```
 
 #### Proof
 
 Write
 
-$$
+```math
  x=MU-e_{MU},
  \qquad y=MV-e_{MV},
-$$
+```
 
 for the missing edges in the two pairs incident with the largest class. For every
 edge (uv) between the (U)- and (V)-classes, the neighborhoods of (u) and
 (v) in the (M)-class are disjoint. Hence, if (d_M(u)) and (d_M(v)) denote
 those two degrees,
 
-$$
+```math
  d_M(u)+d_M(v)\le M.
-$$
+```
 
 Summing over all (UV)-edges gives
 
-$$
+```math
  M e_{UV}
  \le Vx+Uy
  \le M(x+y),
 \tag{3.5}
-$$
+```
 
 because (U,V\le M). Thus (e_{UV}\le x+y), and
 
-$$
+```math
  E=e_{MU}+e_{MV}+e_{UV}
  =M(U+V)-x-y+e_{UV}
  \le M(U+V).
-$$
-This proves (3.4). $square)
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+````text
+```
+This proves (3.4). \(square)
+````
+
+
 
 Apply (3.4) to (3.2)--(3.3). Since
 
-\[
+```math
  M_D(T_D-M_D)\le {T_D^2\over4},
-\]
+```
 
 we obtain
 
-\[
+```math
  {T_D^2\over4}-o(T_D^2)
  \le E_D^{\rm ph}
  \le M_D(T_D-M_D).
 \tag{3.6}
-\]
+```
 
 The quadratic (z(1-z)) has its unique maximum (1/4) at (z=1/2). Therefore
 
-\[
+```math
 \boxed{
  {M_D\over T_D}\to{1\over2},
  \qquad
  {U_D+V_D\over T_D}	o{1\over2}.
 }
 \tag{3.7}
-\]
+```
 
 Moreover, defining the phase-star deficit
 
-\[
+```math
  \Delta_D^{\rm ph}:={M_D(U_D+V_D)-E_D^{\rm ph}\over T_D^2}\ge0,
-\]
+```
 
 the same squeeze gives
 
-\[
+```math
 \boxed{
  \Delta_D^{\rm ph}\to0.
 }
 \tag{3.8}
-\]
+```
 
 Equations (3.7)--(3.8) are the exact near-extremal phase-star reduction. They do not
 claim that either center-to-leaf pair is individually near-complete; that additional
@@ -279,7 +305,7 @@ diameter step, an interface-stable train-order theorem.
 
 The endpoint now has the following simultaneous source-level structure:
 
-\[
+```math
 \begin{array}{rcl}
 R_D/D^2&\to&\Delta_2,\\
 T_D/D&\to&2\sqrt{\Delta_2},\\
@@ -288,7 +314,7 @@ M_D/T_D&\to&1/2,\\
 \Delta_D^{\rm ph}&\to&0.
 \end{array}
 \tag{4.1}
-\]
+```
 
 The endpoint is therefore not a free scalar compatibility witness: it is forced into a
 near-Mantel, near-three-partite-extremal train geometry. This is a genuine narrowing
@@ -324,14 +350,14 @@ comparison.
 
 The exact missing implication is
 
-\[
+```math
 \boxed{
 \text{(4.1) + actual holed/interface train geometry}
 \Longrightarrow
 \text{unit equilateral triangle or strict same-cardinality sub-}D(n)\text{ source}.
 }
 \tag{4.2}
-\]
+```
 
 This is a source-level statement. A positive KKT force, a graph edge deletion, or an
 abstract train rerouting is not a substitute for (4.2).
@@ -372,9 +398,17 @@ No unpromoted Target B stability theorem is used as a premise. In particular, th
 report does not cite the pure-disk near-extremal phase-star exclusions as if they
 already applied to a holed full-core carrier.
 
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 The report is asymptotic and conditional on a sequence attaining
-\(mu_D\to\mu_{\rm TC}$. It supplies no uniform finite threshold and no implication
-for the higher-surplus branch $\liminf\mu_D>\mu_{\rm TC}$.
+\(mu_D\to\mu_{\rm TC}\). It supplies no uniform finite threshold and no implication
+for the higher-surplus branch $`\liminf\mu_D>\mu_{\rm TC}`$.
+```
+
+
 
 ## 7. Handoff
 

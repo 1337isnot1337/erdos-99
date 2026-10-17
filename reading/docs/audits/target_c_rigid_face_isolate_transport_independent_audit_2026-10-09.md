@@ -40,17 +40,17 @@ For a cyclic boundary edge vector `q_i`, the integrated quarter-fold increments 
 
 For a unit boundary edge `cd` and a point `w=(1-t)c+td`, `0<=t<=1`, the weighted-square identity gives
 
-$$
+```math
 |x-w|^2=(1-t)|x-c|^2+t|x-d|^2-t(1-t)|c-d|^2.
-$$
+```
 
 If an old contact-isolated point `x` has strict clearance `|x-c|,|x-d|>1`, then `|x-w|^2>1-1/4=3/4`. If an endpoint point `z` is lower-feasible from every core vertex, so `|z-c|,|z-d|>=1`, the same identity gives `|z-w|^2>=3/4`.
 
 Take any core vertex or residual isolate `z` outside the face of `x`. The segment `[x,z]` exits that simple bounded face at some point `w` on a unit boundary edge. Since `w` lies between `x` and `z`,
 
-$$
+```math
 |x-z|=|x-w|+|w-z|>\sqrt3/2+\sqrt3/2=\sqrt3.
-$$
+```
 
 If the crossing is at a boundary vertex, the corresponding endpoint distance is at least one and the same strict conclusion holds. This proof works for nonconvex simple faces and does not use `C-ONE-VERTEX-CONVEX-WALL-SHIELD`, whose wall hypothesis is convexity. For isolates in two distinct bounded faces, choose the first exit point from the first face and the last entry point into the second along their connecting segment; both endpoint pieces are strictly longer than `sqrt(3)/2`, so their distance also exceeds `sqrt3`.
 
@@ -58,9 +58,9 @@ If the crossing is at a boundary vertex, the corresponding endpoint distance is 
 
 Every point in a bounded polygonal face lies in the convex hull of its boundary vertices, whether or not the face is convex. Write the transported isolate as `x=sum_i lambda_i v_i`, with `lambda_i>=0`, `sum_i lambda_i=1`, and `v_i` the face's core boundary vertices. For any endpoint point `z`,
 
-$$
+```math
 |x-z|^2=\sum_i\lambda_i|v_i-z|^2-\sum_i\lambda_i|v_i-x|^2.
-$$
+```
 
 The residual/core upper ledger gives `|v_i-z|<=D` when `z` is core or an outer residual isolate. If `z` is an isolate in another bounded face, express `z` as a convex combination of that face's core boundary vertices; the core upper ledger and the triangle inequality again give `|v_i-z|<=D`. The variance term is strictly greater than one because `x` remains strictly farther than one from every boundary vertex. Therefore `|x-z|^2<D^2-1`. For two isolates in the same rigid face, distances are preserved; applying the same identity also shows their upper pair is strictly below this bound.
 

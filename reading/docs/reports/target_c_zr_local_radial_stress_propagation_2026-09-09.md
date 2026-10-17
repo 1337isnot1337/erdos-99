@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_local_radial_stress_propagation_2026-09-09.md) · source SHA-256 `cce0674ed79a347113c789737c0ae277ff750dc8263892fa111d2f7b48a9735c`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-A2834ADD97C9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZLS: regular rhombic vertices propagate radial stress almost straight
 
@@ -31,74 +33,75 @@ Consequently a radial contact carrying macroscopic or moving-scale stress can tr
 
 Put
 
-$$
+```math
 \delta_D:=D\varepsilon\to0.
 \tag{1.1}
-$$
+```
 
 ZRP uses
 
-$$
+```math
 c_*:=\cos15^\circ,
 \qquad
 \sigma_*:=1-c_*^2=\sin^2 15^\circ>0.
-$$
+```
 
 For the nonradial contact set
 
-$$
+```math
 E_{nr}:=C\setminus C_{rad},
-$$
+```
 
 ZRP gives
 
-$$
+```math
 \sum_{e\in E_{nr}}\alpha_e
 \le
 \frac{Q_z}{\sigma_*}.
 \tag{1.2}
-$$
+```
 
 C68 gives
 
-$$
+```math
 Q_z\le C_0D^3\varepsilon
 =C_0D^2\delta_D.
 \tag{1.3}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \sum_{e\in E_{nr}}\alpha_e
 \le C_1D^2\delta_D,
 \qquad C_1:=C_0/\sigma_*.
 }
 \tag{ZLS1}
+```
 
 Choose the explicit weak threshold
 
-\[
+```math
 \boxed{
 a_D:=\sqrt{\delta_D}.}
 \tag{1.4}
-$$
+```
 
 Then `a_D->0`, and the number of nonradial contacts with
 
-$$
+```math
 \alpha_e\ge a_D
-$$
+```
 
 is at most
 
-$$
+```math
 C_1D^2\frac{\delta_D}{a_D}
 =C_1D^2\sqrt{\delta_D}
 =o(D^2).
 \tag{1.5}
-$$
+```
 
 Thus the ZRI good-face scale can be fixed explicitly as `a_D=sqrt(delta_D)` after enlarging the exceptional face family by only `o(D^2)` faces.
 
@@ -110,47 +113,48 @@ Let `V_def` be the set of contact-core vertices incident with the outer face or 
 
 C42 bounds the total outer/nonquadrilateral face-edge incidence by `O(D)`; every vertex of `V_def` is incident with at least one such face-edge incidence. Therefore
 
-$$
+```math
 \boxed{|V_{def}|=O(D).}
 \tag{2.1}
-$$
+```
 
 Take `v notin V_def`. It is an interior plane vertex and every incident face is a strict rhombus. Every rhombus angle lies strictly in
 
-$$
+```math
 (\pi/3,2\pi/3).
-$$
+```
 
 The angles around `v` sum to `2pi`. Therefore `deg_C(v)<=3` is impossible. Triangle-free unit separation gives `deg_C(v)<=5`. Hence
 
-$$
+```math
 \deg_C(v)\in\{4,5\}.
 \tag{2.2}
-$$
+```
 
 The exact planar curvature identity is
 
-$$
+```math
 \sum_{v\in V(C)}(4-\deg_C v)
 =4+b+Q.
 \tag{2.3}
-$$
+```
 
 Indeed `e=2v-2-(b+Q)/2` and the left side is `4v-2e`.
 
 Let `N_5` be the number of degree-five vertices outside `V_def`. Their contribution to (2.3) is `-N_5`; every vertex in `V_def` has degree at least one, hence contribution at most three. Therefore
 
-$$
+```math
 4+b+Q
 \le
 -N_5+3|V_{def}|,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{N_5=O(D).}
 \tag{ZLS2}
+```
 
 Consequently all but `O(D)` contact-core vertices are interior degree-four vertices surrounded entirely by strict rhombi.
 
@@ -168,25 +172,26 @@ Call a core vertex **regular** when
 
 By ZCQ, `v=Omega_eta(D^2)`. Sections 1-2 show
 
-\[
+```math
 \boxed{
 \#\{\text{nonregular core vertices}\}=o(D^2).
 }
 \tag{ZLS3}
+```
 
 At a regular vertex every nonradial incident contact satisfies
 
-\[
+```math
 \boxed{\alpha_e<a_D.}
 \tag{3.1}
-$$
+```
 
 The vertex is unloaded, so its exact KKT equilibrium is purely contact-mechanical:
 
-$$
+```math
 \sum_{e=vw\in C}\alpha_e\frac{w-v}{|w-v|}=0.
 \tag{3.2}
-$$
+```
 
 All contact lengths are one.
 
@@ -200,27 +205,29 @@ ZRP gives radial degree at most two away from `z`. A regular vertex is deep and 
 
 All four incident contacts are nonradial and satisfy `alpha<a_D`. Hence
 
-$$
+```math
 \boxed{
 \sum_{e\ni v}\alpha_e<4a_D.
 }
 \tag{ZLS4}
+```
 
 ### Case 1: exactly one radial contact
 
 Let its stress be `A`. The other three contact-force vectors have total norm less than `3a_D`. Equilibrium forces
 
-\[
+```math
 A<3a_D.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 \sum_{e\ni v}\alpha_e<6a_D.
 }
 \tag{ZLS5}
+```
 
 So a regular vertex carrying stress much larger than `a_D` cannot have radial degree zero or one.
 
@@ -228,40 +235,43 @@ So a regular vertex carrying stress much larger than `a_D` cannot have radial de
 
 Let their stresses be `A,B>0` and outward unit force directions from `v` be `u_1,u_2`. The remaining two nonradial forces have total norm less than `2a_D`, so
 
-\[
+```math
 \boxed{
 |Au_1+Bu_2|<2a_D.
 }
 \tag{ZLS6}
+```
 
 Immediately,
 
-\[
+```math
 \boxed{|A-B|<2a_D.}
 \tag{ZLS7}
+```
 
 Let `theta in (0,pi]` be the smaller angle between `u_1,u_2`, and put
 
-\[
+```math
 \phi:=\pi-\theta.
-$$
+```
 
 Then
 
-$$
+```math
 |Au_1+Bu_2|^2
 =(A-B)^2+4AB\sin^2(\phi/2).
-$$
+```
 
 Using ZLS6,
 
-$$
+```math
 \boxed{
 \sin(\phi/2)
 <
 \frac{a_D}{\sqrt{AB}}.
 }
 \tag{ZLS8}
+```
 
 Thus whenever `min(A,B)` dominates `a_D`, the two radial contacts are asymptotically opposite and have asymptotically equal stresses.
 
@@ -271,30 +281,31 @@ Thus whenever `min(A,B)` dominates `a_D`, the two radial contacts are asymptotic
 
 Let `lambda_D>0` be any scale satisfying
 
-\[
+```math
 \boxed{
 \frac{a_D}{\lambda_D}\to0.
 }
 \tag{5.1}
-$$
+```
 
 Suppose a regular vertex is incident with a radial contact of stress at least `lambda_D`.
 
 Cases 0-1 are impossible for large `D`. Therefore there is a unique second radial contact. By ZLS7 its stress is at least
 
-$$
+```math
 \lambda_D-2a_D
 =(1-o(1))\lambda_D.
 \tag{5.2}
-$$
+```
 
 By ZLS8 its direction differs from exact straight continuation by
 
-$$
+```math
 \boxed{
 \phi=O(a_D/\lambda_D)=o(1).
 }
 \tag{ZLS9}
+```
 
 Thus a strong radial edge has a unique almost-straight continuation through every regular endpoint.
 
@@ -304,68 +315,70 @@ Thus a strong radial edge has a unique almost-straight continuation through ever
 
 Orient a radial path component outward from smaller radius to larger radius. Suppose
 
-\[
+```math
 e_0,e_1,\ldots,e_L
-$$
+```
 
 is a consecutive radial path run whose internal vertices are all regular, with
 
-$$
+```math
 \alpha_{e_0}\ge\lambda_D.
-$$
+```
 
 Repeated ZLS7 gives
 
-$$
+```math
 \boxed{
 |\alpha_{e_j}-\alpha_{e_0}|<2ja_D.
 }
 \tag{6.1}
-$$
+```
 
 Every strongly-radial edge changes radius by more than `c_*`, so an outward run inside a diameter-`D` source has
 
-$$
+```math
 L< D/c_*+1.
 \tag{6.2}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 |\alpha_{e_j}-\alpha_{e_0}|
 =O(Da_D).
 }
 \tag{ZLS10}
+```
 
 If the entry scale satisfies the stronger condition
 
-\[
+```math
 \boxed{
 \lambda_D\gg Da_D,
 }
 \tag{6.3}
-$$
+```
 
 then the entire run retains stress `(1-o(1))alpha_{e_0}`.
 
 Similarly, summing ZLS8 along the run gives total turning
 
-$$
+```math
 \sum\phi_j
 =O\!\left(\frac{La_D}{\lambda_D}\right)
 =O\!\left(\frac{Da_D}{\lambda_D}\right).
 \tag{6.4}
-$$
+```
 
 Thus under (6.3),
 
-$$
+```math
 \boxed{
 \text{total turning along the regular run}=o(1).
 }
 \tag{ZLS11}
+```
 
 For an actual fixed-fraction macroscopic stress `lambda_D=cD`, conditions (5.1) and (6.3) hold because `a_D->0`. Therefore any `Theta(D)`-stress radial load that enters a regular bulk run propagates through it with only `o(D)` stress loss and `o(1)` total angular turn.
 
@@ -375,30 +388,30 @@ For an actual fixed-fraction macroscopic stress `lambda_D=cD`, conditions (5.1) 
 
 ZAC/ZDC choose a selected-corridor stress scale
 
-\[
+```math
 \widetilde\gamma_DD
-$$
+```
 
 with
 
-$$
+```math
 \delta_D/\widetilde\gamma_D\to0.
-$$
+```
 
 The explicit ZAC choice has `widetilde gamma_D` decaying only as a small power of `delta_D`, whereas
 
-$$
+```math
 a_D=\sqrt{\delta_D}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
  a_D/\widetilde\gamma_D\to0.
 }
 \tag{7.1}
-$$
+```
 
 At regular vertices the selected corridor load thus has unique almost-straight radial continuation. The stronger whole-run condition `widetilde gamma_D >> a_D` controls accumulated **angle** over `O(1)`-diameter blocks; a run of length `Theta(D)` additionally needs comparison with `Da_D`, which is not automatic.
 

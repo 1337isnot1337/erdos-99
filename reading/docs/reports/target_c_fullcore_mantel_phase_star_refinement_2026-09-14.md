@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_mantel_phase_star_refinement_2026-09-14.md) · source SHA-256 `45001ccf588572965f64e7a254b36e8205888212cc0e8be39eab7311611d6a93`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-63FDED205605","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fullcore_mantel_phase_star_refinement_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=4721d5fd930342e69848db4b75ac2fe027018387; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -54,14 +56,14 @@ vertices and are not deleted from the source.
 
 Assume the report-level train-floor endpoint
 
-$$
+```math
 \frac{R_D}{D^2}\to\Delta_2:=\frac{\pi}{2\sqrt3},
 \qquad
 \frac{T_D}{D}\to2\sqrt{\Delta_2},
 \qquad
 R_D=\frac{T_D^2}{4}-o(T_D^2).
 \tag{1.1}
-$$
+```
 
 The last relation is the report-level consequence of the canonical train-boundary
 squeeze at (mu_D	omu_{\rm TC}); it is not being promoted here.
@@ -75,57 +77,58 @@ proper three-partition for the retained crossing graph.
 
 The elementary Mantel stability argument gives a partition
 
-$$
+```math
 V(G_D)=X_D\sqcup Y_D
 \tag{2.1}
-$$
+```
 
 with
 
-$$
+```math
 |X_D|,|Y_D|=\frac{T_D}{2}+o(T_D),
 \tag{2.2}
-$$
+```
 
-$$
+```math
 e(G_D[X_D])+e(G_D[Y_D])=o(T_D^2),
 \qquad
 |X_D||Y_D|-e(X_D,Y_D)=o(T_D^2).
 \tag{2.3}
-$$
+```
 
 For (iinmathbb Z/3\mathbb Z), write
 
-$$
+```math
 x_i=|X_D\cap\ell^{-1}(i)|,
 \qquad
 y_i=|Y_D\cap\ell^{-1}(i)|.
 \tag{2.4}
-$$
+```
 
 Since same-label cross pairs are nonedges,
 
-$$
+```math
 \sum_i x_i y_i=o(T_D^2).
 \tag{2.5}
-$$
+```
 
 Consequently
 
-$$
+```math
 \sum_i\min\{x_i,y_i\}=o(T_D).
 \tag{2.6}
-$$
+```
 
 Indeed, (min(x_i,y_i)lesqrt{x_i y_i}), and Cauchy--Schwarz over three
 labels gives the claim.
 
 Let the total phase-class sizes be
 
-$$
+```math
 M_D\ge U_D\ge V_D,
 \qquad M_D+U_D+V_D=T_D.
 \tag{2.7}
+```
 
 We use the following elementary three-partite consequence of triangle-freeness.
 
@@ -133,10 +136,10 @@ We use the following elementary three-partite consequence of triangle-freeness.
 
 If a triangle-free graph has phase classes of sizes (M\ge U\ge V), then
 
-\[
+```math
 e\le M(U+V)=M(T-M).
 \tag{2.8}
-$$
+```
 
 #### Proof
 
@@ -144,35 +147,35 @@ Let (x=MU-e(M,U)) and (y=MV-e(M,V)) be the missing edges incident with
 the largest class. For every (UV)-edge, the two endpoint neighborhoods in the
 (M)-class are disjoint, so summing their degrees gives
 
-$$
+```math
 M e(U,V)\le Vx+Uy\le M(x+y).
-$$
+```
 
 Thus (e(U,V)le x+y), and
 
-$$
+```math
 e=e(M,U)+e(M,V)+e(U,V)
 \le M(U+V).
-$$
-$square$
+```
+$`square`$
 
 By (1.1) and Lemma 2.1,
 
-$$
+```math
 \frac{T_D^2}{4}-o(T_D^2)
 \le M_D(T_D-M_D)
 \le\frac{T_D^2}{4}.
-$$
+```
 
 The strict concavity of (z(1-z)) therefore gives
 
-$$
+```math
 \boxed{
 \frac{M_D}{T_D}\to\frac12,
 \qquad
 \frac{U_D+V_D}{T_D}\to\frac12.}
 \tag{2.9}
-$$
+```
 
 Now (2.6) says every phase class is concentrated on one Mantel shore up to
 (o(T_D)) tracks. Since the (M_D)-class itself has size (T_D/2+o(T_D)),
@@ -180,38 +183,38 @@ it occupies one shore, say (X_D), up to (o(T_D)). Equation (2.2) then forces
 the (U_D)- and (V_D)-classes to occupy the other shore (Y_D), up to
 (o(T_D)). Thus, after changing (o(T_D)) tracks,
 
-$$
+```math
 X_D=\mathcal M_D,
 \qquad
 Y_D=\mathcal U_D\sqcup\mathcal V_D,
 \tag{2.10}
-$$
+```
 
 where (|\mathcal M_D|=T_D/2+o(T_D)) and
 
-$$
+```math
 |\mathcal U_D|+|\mathcal V_D|=T_D/2+o(T_D).
-$$
+```
 
 The internal (Y_D)-edges are (o(T_D^2)) by (2.3), so the center-to-leaf
 crossing count obeys
 
-$$
+```math
 e(\mathcal M_D,\mathcal U_D)+e(\mathcal M_D,\mathcal V_D)
 =\frac{T_D^2}{4}-o(T_D^2).
 \tag{2.11}
-$$
+```
 
 Since the two missing counts in (2.11) are nonnegative, each individual pair
 satisfies
 
-$$
+```math
 \boxed{
 |\mathcal M_D||\mathcal U_D|-e(\mathcal M_D,\mathcal U_D)=o(T_D^2),
 \qquad
 |\mathcal M_D||\mathcal V_D|-e(\mathcal M_D,\mathcal V_D)=o(T_D^2).}
 \tag{2.12}
-$$
+```
 
 The second statement is vacuous if (V_D=o(T_D)), but no assumption that both
 leaf classes are linear is needed.
@@ -229,49 +232,49 @@ generic assertion about sparse graphs.
 
 Let
 
-$$
+```math
 \mathfrak m_D:=|X_D||Y_D|-e(X_D,Y_D)=o(T_D^2).
 \tag{3.1}
-$$
+```
 
 Call (xin X_D) (X)-dirty if its (Y_D)-degree is at most
 (|Y_D|/2). Every dirty (x) is incident with at least (|Y_D|/2) missing
 cross edges, hence
 
-$$
+```math
 |X_D^{\rm dirty}|\le\frac{2\mathfrak m_D}{|Y_D|}=o(T_D).
 \tag{3.2}
-$$
+```
 
 Define (Y_D^{\rm dirty}) symmetrically. Delete all dirty vertices and put
 
-$$
+```math
 X_D^*=X_D\setminus X_D^{\rm dirty},
 \qquad
 Y_D^*=Y_D\setminus Y_D^{\rm dirty}.
 \tag{3.3}
-$$
+```
 
 Then
 
-$$
+```math
 |X_D^*|,|Y_D^*|=\frac{T_D}{2}-o(T_D),
 \tag{3.4}
-$$
+```
 
 and both induced graphs (G_D[X_D^*]) and (G_D[Y_D^*]) are empty. To
 see this for (X_D^*), if (x,x'\in X_D^*) were adjacent, triangle-freeness
 would imply
 
-$$
+```math
 N_Y(x)\cap N_Y(x')=\varnothing,
-$$
+```
 
 so
 
-$$
+```math
 d_Y(x)+d_Y(x')\le|Y_D|,
-$$
+```
 
 contradicting (d_Y(x),d_Y(x')>|Y_D|/2). The proof for (Y_D^*) is the
 same.
@@ -292,15 +295,12 @@ Combining Sections 2--3 gives the following report-level theorem.
 >
 > 
 
-$$
-
+```math
 > |\mathcal M_D|=\frac{T_D}{2}-o(T_D),
 > \qquad
 > |\mathcal U_D|+|\mathcal V_D|=\frac{T_D}{2}-o(T_D),
 > 
-$$
-
-
+```
 >
 > the two shores are internally pairwise noncrossing, and each center-to-leaf
 > pair has (o(T_D^2)) missing actual crossings relative to its complete
@@ -309,18 +309,18 @@ $$
 
 The exact size scale is
 
-$$
+```math
 |\mathcal M_D|,\ |\mathcal U_D|+|\mathcal V_D|
  =\sqrt{\Delta_2}\,D-o(D),
 \tag{4.1}
-$$
+```
 
 and the two shore sizes sum to
 
-$$
+```math
 2\sqrt{\Delta_2}\,D-o(D).
 \tag{4.2}
-$$
+```
 
 This theorem concerns the actual train curves and occurrence-counted rhombus
 crossings after deletion of (O(D)) crossing relations. It does not replace the
@@ -335,7 +335,7 @@ graphs are individually near-complete, not merely jointly dense.
 
 The resulting exact remaining implication is
 
-$$
+```math
 \boxed{
 \begin{aligned}
 &\text{balanced internally noncrossing actual train shores,}\
@@ -345,7 +345,7 @@ $$
 \Longrightarrow
 \text{a source-level diameter penalty or an exact unit triangle.}}
 \tag{5.1}
-$$
+```
 
 The abstract graph conclusion is not enough. The graph-level random bipartite
 regression remains relevant: subquadratic missing crossings can have no linear

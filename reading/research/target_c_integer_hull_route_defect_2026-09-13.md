@@ -32,61 +32,61 @@ This is a source-level reduction.  It does not provide the missing contradiction
 Use the canonical Type-II loaded-hull notation.  Let `b_i` be the loaded force-hull
 vertices in cyclic order, put
 
-$$
+```math
 s_i:=|b_i-b_{i+1}|,
 \qquad
 \ell_i:=|W_i|,
-$$
+```
 
 where `W_i` is the distinguished outer-face unit-edge route from `b_i` to
 `b_{i+1}`.  The canonical route facts are
 
-$$
+```math
 s_i\ge1,
 \qquad
 \ell_i\in\mathbb Z_{\ge1},
 \qquad
 \ell_i\ge s_i.
 \tag{IR.1}
-$$
+```
 
 Therefore `\ell_i\ge\lceil s_i\rceil`.  Define
 
-$$
+```math
 r_i:=\ell_i-\lceil s_i\rceil\in\mathbb Z_{\ge0},
 \qquad
 \varphi_i:=\lceil s_i\rceil-s_i\in[0,1).
 \tag{IR.2}
-$$
+```
 
 Since the routes partition the occurrence-counted outer walk,
 
-$$
+```math
 \boxed{
 b-\operatorname{per}(F)
 =\sum_i(\ell_i-s_i)
 =\sum_i r_i+\sum_i\varphi_i.
 }
 \tag{IR.3}
-$$
+```
 
 Both terms on the right are nonnegative.  The first is an integer route surplus; the
 second is the one-sided distance of each hull side from the next integer length.
 
 For every `\epsilon\in(0,1)`, let
 
-$$
+```math
 N_{\epsilon}:=\#\{i:\varphi_i\ge\epsilon\}.
-$$
+```
 
 Equation (IR.3) gives the exact finite bound
 
-$$
+```math
 \boxed{
 N_{\epsilon}\le {b-\operatorname{per}(F)\over\epsilon}.
 }
 \tag{IR.4}
-$$
+```
 
 Thus a sublinear outer detour forces all but `o(D)` loaded-hull side lengths to lie
 within every fixed `\epsilon` below an integer.  This conclusion is one-sided: a side
@@ -96,56 +96,56 @@ length just above an integer is charged by the next integer, as it must be.
 
 Let `M=\{i:s_i>1\}` and `m=|M|`, as in Section 63.  Put
 
-$$
+```math
 L_{>2}:=\sum_{i\in M}(s_i-2)_+.
 \tag{IR.5}
-$$
+```
 
 The canonical integer slack is
 
-$$
+```math
 u_B=\sum_{i\in M}(\ell_i-2)
       +\sum_{i\notin M}(\ell_i-1).
 \tag{IR.6}
-$$
+```
 
 For `i\in M`, `\ell_i\ge2` and `\ell_i-2\ge(s_i-2)_+`; for `i\notin M`,
 `\ell_i-1\ge0`.  Hence
 
-$$
+```math
 \boxed{u_B\ge L_{>2}.}
 \tag{IR.7}
-$$
+```
 
 The difference is also controlled by the same metric detour.  Term by term, the
 contribution to `u_B-L_{>2}` is `ell_i-s_i` when `s_i>2`, is at most `ell_i-s_i`
 when `1<s_i\le2`, and equals `ell_i-s_i` when `s_i=1`.  Thus
 
-$$
+```math
 \boxed{
 0\le u_B-L_{>2}
 \le\sum_i(\ell_i-s_i)
 =b-\operatorname{per}(F).
 }
 \tag{IR.7a}
-$$
+```
 
 The signed sum is also explicit:
 
-$$
+```math
 \sum_{i\in M}(s_i-2)
 =\operatorname{per}(F)-q-m.
 \tag{IR.8}
-$$
+```
 
 Taking positive parts in (IR.8) and using (IR.7) gives
 
-$$
+```math
 \boxed{
 u_B\ge\bigl(\operatorname{per}(F)-q-m\bigr)_+.
 }
 \tag{IR.9}
-$$
+```
 
 This is stronger than the already-used `b\ge\operatorname{per}(F)` sign statement:
 it identifies the payment when the nonunit hull sides have total length greater than
@@ -155,47 +155,47 @@ it identifies the payment when the nonunit hull sides have total length greater 
 
 Consider a Type-II subsequence for which the relevant limits exist, and write
 
-$$
+```math
 t={q-k\over D},
 \qquad
 r={m+k\over D},
 \qquad
 \lambda={b-\operatorname{per}(F)\over D}.
-$$
+```
 
 The exact identity `b=q+m+u_B` and `\operatorname{per}(F)/D\to\pi` imply
 
-$$
+```math
 \boxed{
 {u_B\over D}=\pi+\lambda-t-r+o(1).
 }
 \tag{IR.10}
-$$
+```
 
 In particular, if `\lambda\to0`, then `t+r\le\pi+o(1)` and
 
-$$
+```math
 {u_B\over D}=\pi-t-r+o(1).
 \tag{IR.11}
-$$
+```
 
 On the same subsequence, (IR.9) gives
 
-$$
+```math
 {u_B\over D}\ge[\pi-t-r]_+-o(1).
 \tag{IR.12}
-$$
+```
 
 When `\lambda\to0`, (IR.7a) and (IR.11) give
 
-$$
+```math
 \boxed{
 {u_B-L_{>2}\over D}\longrightarrow0,
 \qquad
 {L_{>2}\over D}\longrightarrow\pi-t-r.
 }
 \tag{IR.13}
-$$
+```
 
 The first equality says that asymptotically every unit of `u_B` is spent on metric
 side length above two.  In particular, the zero-detour branch cannot hide a positive
@@ -210,31 +210,31 @@ the side lengths are literally integers.
 
 On the proof-only common-cap profile, the strict aggregate/moment composition gives
 
-$$
+```math
 t\ge T_0-o(1),
 \qquad
 T_0=2.8406856729\ldots .
 \tag{IR.14}
-$$
+```
 
 If a further zero-detour subsequence satisfies the low-sum condition
 
-$$
+```math
 t+r\le\pi-\eta+o(1),
 \qquad
 K_0:=\pi-T_0=0.3009069806\ldots,
 \tag{IR.15}
-$$
+```
 
 then (IR.13) yields
 
-$$
+```math
 \boxed{
 \liminf {u_B\over D}
 \ge\eta.
 }
 \tag{IR.16}
-$$
+```
 
 On the Section-118 profile, the lower floor `t\ge T_0-o(1)` and
 `K_0=\pi-T_0` show how this condition is approached: for example,
@@ -251,23 +251,23 @@ In the exact pure-tooth endpoint, Section 126 gives `m=q` and every distinguishe
 route has `\ell_i=2`. Hence `b=2q`. The audited endpoint train-capacity inequality
 gives
 
-$$
+```math
 \liminf {q\over D}
 \ge2\sqrt{\Delta_2},
 \qquad
 \Delta_2={\pi\over2\sqrt3}.
-$$
+```
 
 Using `\operatorname{per}(F)/D\to\pi`,
 
-$$
+```math
 \boxed{
 \liminf {b-\operatorname{per}(F)\over D}
 \ge4\sqrt{\Delta_2}-\pi
  =0.6676585738\ldots .
 }
 \tag{IR.17}
-$$
+```
 
 Thus the exact pure-tooth endpoint is automatically a positive-detour endpoint.  A
 near-geodesic argument cannot close it; it must use the long-side/diameter geometry

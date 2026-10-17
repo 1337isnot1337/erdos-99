@@ -32,22 +32,22 @@ Consider an unbounded sequence of canonical post-ZF C-II sources in the contact-
 
 For each bounded face `Q` of `Ghat`, define `m(Q)` to be its unit-contact boundary length if it is an old bounded contact face, and the number of actual unit-contact edges on its simple path boundary if it is a convex pocket. Put
 
-$$
+```math
 T_M(D)=\sum_{Q:m(Q)>M}m(Q),\qquad M\ge4.
-$$
+```
 
 Fix `K<infinity`. Suppose each source has a unit triangular frame
 
-$$
+```math
 U_D=\{\pm u_D,\pm v_D,\pm(v_D-u_D)\},\quad |u_D|=|v_D|=1,
 \quad \angle(u_D,v_D)=\pi/3,
-$$
+```
 
 such that every oriented actual unit-contact edge vector of `G` is within `K/D` of one of the six frame vectors, and suppose
 
-$$
+```math
 \lim_{M\to\infty}\limsup_{D\to\infty}T_M(D)/D=0.
-$$
+```
 
 Then no such unbounded sequence exists. More quantitatively, the assumptions imply `q=o(D)`, whereas the canonical `C-ZRF` bound gives `h>=ceil(D)` for the number `h` of actual diameter edges and `C-WOODALL` gives `h<=q`.
 
@@ -65,9 +65,9 @@ Dependencies recorded for the new claim: `C-RHOMBUS-POP`, `C-SLOW-LATTICE-DIAMET
 
 Let `M_0(D)` be the largest length of an old bounded contact face. For every fixed `M`,
 
-$$
+```math
 M_0(D)\le M+T_M(D).
-$$
+```
 
 Consequently `limsup_D M_0(D)/D <= limsup_D T_M(D)/D`; taking `M -> infinity` gives `M_0(D)=o(D)`. Assign each oriented actual contact edge its nearest frame vector and negate that assignment on the reverse orientation. For large `D` the nearest vector is unique. Around an old bounded face of length `m`, the actual edge vectors sum to zero, so the assigned lattice vectors have sum of norm at most `mK/D=o(1)`. A nonzero vector of the unit triangular lattice has norm at least one, hence every such face has zero assigned sum.
 
@@ -77,11 +77,11 @@ The bounded facial cycles of `G` are precisely the old contact faces: each auxil
 
 For fixed `M>=4`, any `p,q in V` admit an actual contact path satisfying
 
-$$
+```math
 d_G(p,q)\le C_M(|p-q|+1)+2T_M(D),\qquad
 C_M=56M(M+1)^2+42M(M+1).
 \tag{1}
-$$
+```
 
 To reconstruct (1), note that triangle-freeness makes the contact degree at most five: six unit neighbors would have six angular gaps at least `60` degrees and force a unit triangle. Hull augmentation adds at most two edges at a vertex, so `Ghat` has degree at most seven. Join `p` to `q` by a generic two-segment arc in the convex hull `F`, within distance `1/10` of the straight segment and of length at most `|p-q|+1/10`. Each convex face meets each segment in at most one interval, so each face is crossed at most twice. In an old contact face replace a crossed interval by a boundary arc of at most `m(Q)` actual unit edges. A pocket's auxiliary hull side lies on `partial F` and cannot be crossed by the interior arc; replace the interval by the intervening actual contact path, again of length at most `m(Q)`. No auxiliary side becomes a contact route.
 
@@ -91,25 +91,25 @@ Faces with `m(Q)>M` contribute at most `2T_M(D)`. Every crossed small face has a
 
 Choose a fixed `M` so large that `limsup_D T_M(D)/D<1`; then eventually `T_M(D)<=2D`. Since distinct source points are at least unit-separated, (1) and the edge displacement bound give, for distinct `p,q in V`,
 
-$$
+```math
 |g(p)-g(q)|\le \frac{KC_M}{D}(|p-q|+1)+\frac{2KT_M(D)}{D}
 \le \frac{K'}D|p-q|,
 \quad K'=2KC_M+4K.
 \tag{2}
-$$
+```
 
 For `D>K'`, (2) implies `ell` is injective, since
 
-$$
+```math
 |\ell(p)-\ell(q)|\ge(1-K'/D)|p-q|>0.
-$$
+```
 
 Use `X=ell(B)` as a subset of the triangular lattice. With `g(ell(p))=g(p)`, equation (2) and the same lower bound give
 
-$$
+```math
 |g(\lambda)-g(\mu)|\le \frac{K'/D}{1-K'/D}|\lambda-\mu|
 \le \frac{2K'}D|\lambda-\mu|
-$$
+```
 
 for large `D`. Thus every actual diameter endpoint is represented by one chart `b=lambda+g(lambda)` with a fixed `2K'/D` displacement-Lipschitz constant and no bad endpoints. Audit.201's `C-SLOW-LATTICE-DIAMETER-ENDPOINT-BOUND` with `J=1` now gives `q=O(D^(4/5))=o(D)`. This use does not assume a bound on absolute displacement or any global source/scaffold identification beyond the injectivity just proved.
 

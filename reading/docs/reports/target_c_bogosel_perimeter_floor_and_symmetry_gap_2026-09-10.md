@@ -18,10 +18,10 @@
 
 The preceding PS report gave the explicit report-level floor
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\ge
 0.5933612807422635\ldots-o(1)
-$$
+```
 
 from an elementary support-function lower bound for the force-hull central symmetral.
 This report replaces that nonsharp area bound by the sharp reverse-isoperimetric theorem
@@ -32,49 +32,49 @@ The result has two parts.
 First, define `rho` by `rho=cos rho` and define the sharp normalized disk area function
 `B(p)` below.  There is a unique
 
-$$
+```math
 \boxed{y_B\in(2\rho,\pi/2)}
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{\mathcal B(2y_B)=\Phi(y_B),
 \qquad
 \Phi(y)=\frac{y+\sin y}{4}.}
 \tag{B.1}
-$$
+```
 
 Let `lambda_B` be the positive root of
 
-$$
+```math
 \boxed{
 (\pi^2+1)\lambda^2+2y_B\lambda+y_B^2
 -\pi(y_B+\sin y_B)=0.
 }
 \tag{B.2}
-$$
+```
 
 Then every unbounded post-ZF survivor sequence satisfies
 
-$$
+```math
 \boxed{
 \liminf\frac{e_{BB}+2s_C}{D}\ge\lambda_B.
 }
 \tag{B.3}
-$$
+```
 
 Numerically,
 
-$$
+```math
 \boxed{
 y_B=1.4835328716014096\ldots,}
-$$
+```
 
-$$
+```math
 \boxed{
 \lambda_B=0.5934834602360914\ldots.}
-$$
+```
 
 This is strictly stronger than the PS floor.
 
@@ -87,18 +87,18 @@ central symmetral is centrally symmetric, compactness gives a contradiction.
 
 Hence there exist absolute constants
 
-$$
+```math
 \boxed{\varepsilon_B>0,\qquad D_0<\infty}
-$$
+```
 
 such that every sufficiently large post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge\lambda_B+\varepsilon_B.}
 \tag{B.4}
-$$
+```
 
 The new gap is nonexplicit.  Level I remains open because no contradictory universal
 upper bound for this currency is known.
@@ -109,33 +109,33 @@ upper bound for this currency is known.
 
 Write
 
-$$
+```math
 P_F=\operatorname{per}F,
 \qquad
 p=\lim P_F/D,
 \qquad
 y=\lim h/D,
-$$
+```
 
-$$
+```math
 t=\lim e_{BB}/D,
 \qquad
 \lambda=\lim(e_{BB}+2s_C)/D.
-$$
+```
 
 The audited FS/FSDB/JC/GU chain gives
 
-$$
+```math
 2\rho\le y\le p\le\pi,
 \qquad 0\le t\le\lambda.
 \tag{1.1}
-$$
+```
 
 The PS report used the elementary force-hull area lower bound
 
-$$
+```math
 \Psi(p)=\frac{p^2}{2\pi}-\frac\pi4.
-$$
+```
 
 The present implication is
 
@@ -179,49 +179,49 @@ The imported results are Theorem 6 and Proposition 5(c).
 Let `D_1` be the closed Euclidean unit disk.  For a prescribed area
 `A in (0,pi)`, Bogosel considers convex planar bodies
 
-$$
+```math
 \Omega\subseteq D_1,
 \qquad |\Omega|=A,
-$$
+```
 
 and maximizes `Per(Omega)`.
 
 Theorem 6 proves that a maximizer is an inscribed polygon.  If it has `m` positive
 sides, then
 
-$$
+```math
 (m-1)\sin\frac{2\pi}{m-1}<2A
 \le m\sin\frac{2\pi}{m},
 \tag{2.1}
-$$
+```
 
 and its central angles have the form
 
-$$
+```math
 0<\theta\le \varphi=\cdots=\varphi,
 \qquad
 \varphi=\frac{2\pi-\theta}{m-1},
 \tag{2.2}
-$$
+```
 
 up to permutation.  Proposition 5(c), applied with total angle `2pi`, proves that the
 maximal perimeter is strictly increasing with the prescribed area.
 
 For the polygon in (2.2),
 
-$$
+```math
 \operatorname{Per}=2\left(
 \sin\frac\theta2+(m-1)\sin\frac\varphi2
 \right),
 \tag{2.3}
-$$
+```
 
-$$
+```math
 A=\frac12\left(
 \sin\theta+(m-1)\sin\varphi
 \right).
 \tag{2.4}
-$$
+```
 
 No lattice, packing, KKT, or symmetry hypothesis occurs in this external theorem.
 
@@ -229,39 +229,39 @@ No lattice, packing, KKT, or symmetry hypothesis occurs in this external theorem
 
 For
 
-$$
+```math
 S=\frac12((F-o)-(F-o)),
-$$
+```
 
 FD proves
 
-$$
+```math
 \operatorname{diam}S=D,
 \qquad
 \operatorname{per}S=P_F,
-$$
+```
 
 and `S=-S`.  Hence
 
-$$
+```math
 S\subseteq B(0,D/2).
-$$
+```
 
 Therefore
 
-$$
+```math
 \Omega:=\frac2D S
-$$
+```
 
 is a convex body contained in `D_1`, exactly the container in Bogosel's theorem.
 The scaling gives
 
-$$
+```math
 \operatorname{Per}(\Omega)=2p,
 \qquad
 |\Omega|=4\operatorname{area}(S)/D^2.
 \tag{2.5}
-$$
+```
 
 Thus the external hypotheses match exactly.
 
@@ -271,75 +271,75 @@ Thus the external hypotheses match exactly.
 
 Let
 
-$$
+```math
 M(A)=\max\{\operatorname{Per}(\Omega):
 \Omega\subseteq D_1\text{ convex},\ |\Omega|=A\}.
-$$
+```
 
 By Bogosel, `M` is strictly increasing on `(0,pi)`.  Extend continuously to the
 segment and disk endpoints.  For
 
-$$
+```math
 2\le p\le\pi
-$$
+```
 
 define
 
-$$
+```math
 \boxed{
 \mathcal B(p):=\frac14 M^{-1}(2p).}
 \tag{3.1}
-$$
+```
 
 Thus `4 B(p)` is the least area that a convex subset of the unit disk can have while
 having perimeter `2p`.
 
 If `Omega subset D_1` has perimeter `2p` and area `A`, then
 
-$$
+```math
 2p\le M(A),
-$$
+```
 
 so strict monotonicity gives
 
-$$
+```math
 A\ge M^{-1}(2p)=4\mathcal B(p).
 \tag{3.2}
-$$
+```
 
 Apply this to (2.5):
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}S}{D^2}
 \ge\mathcal B(P_F/D).}
 \tag{3.3}
-$$
+```
 
 FS.4 and FD give
 
-$$
+```math
 0\le \operatorname{area}S-\operatorname{area}F=o(D^2),
 \tag{3.4}
-$$
+```
 
 uniformly along unbounded post-ZF survivor sequences.  Therefore if `P_F/D->p`,
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge\mathcal B(p).}
 \tag{3.5}
-$$
+```
 
 Together with FSDB,
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge A_B(y,p):=\max\{\Phi(y),\mathcal B(p)\}.}
 \tag{3.6}
-$$
+```
 
 ---
 
@@ -347,45 +347,45 @@ $$
 
 Inside one Bogosel `m`-gon branch, let `theta` be the exceptional central angle and
 
-$$
+```math
 \varphi=\frac{2\pi-\theta}{m-1}.
-$$
+```
 
 Equations (2.3)--(2.4), after the normalization in (3.1), give
 
-$$
+```math
 p(\theta)=
 \sin\frac\theta2+(m-1)\sin\frac\varphi2,
 \tag{4.1}
-$$
+```
 
-$$
+```math
 \mathcal B(p(\theta))
 =\frac18\left(\sin\theta+(m-1)\sin\varphi\right).
 \tag{4.2}
-$$
+```
 
 Differentiation yields
 
-$$
+```math
 \frac{dp}{d\theta}
 =\frac12\left(
 \cos\frac\theta2-\cos\frac\varphi2
 \right)>0
 \tag{4.3}
-$$
+```
 
 away from the regular endpoint, and
 
-$$
+```math
 \frac{d\mathcal B}{d\theta}
 =\frac18(\cos\theta-\cos\varphi).
 \tag{4.4}
-$$
+```
 
 Using
 
-$$
+```math
 \cos\theta-\cos\varphi
 =2\left(
 \cos\frac\theta2-\cos\frac\varphi2
@@ -393,45 +393,45 @@ $$
 \left(
 \cos\frac\theta2+\cos\frac\varphi2
 \right),
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{
 \mathcal B'(p)
 =\frac12\left(
 \cos\frac\theta2+\cos\frac\varphi2
 \right).}
 \tag{4.5}
-$$
+```
 
 For `m>=3`,
 
-$$
+```math
 0\le\frac\theta2\le\frac\pi m,
 \qquad
 \frac\varphi2\le\frac\pi{m-1},
-$$
+```
 
 and the minimum possible sum of the two cosines occurs in the degenerate `m=3`
 endpoint.  Hence
 
-$$
+```math
 \boxed{\mathcal B'(p)\ge\frac12}
 \tag{4.6}
-$$
+```
 
 on every smooth branch.  By continuity across regular-polygon transition points,
 this integrates to the global secant inequality
 
-$$
+```math
 \boxed{
 \mathcal B(p_2)-\mathcal B(p_1)
 \ge\frac{p_2-p_1}{2}
 \qquad(2\le p_1\le p_2\le\pi).}
 \tag{4.7}
-$$
+```
 
 This slope bound is the key fact that makes the two-parameter optimization exact.
 
@@ -441,50 +441,50 @@ This slope bound is the key fact that makes the two-parameter optimization exact
 
 The actual-perimeter JC theorem gives
 
-$$
+```math
 E_{out}+Q
 \le e_{BB}+\min\{h,P_F-h\}.
 \tag{5.1}
-$$
+```
 
 Hence, with
 
-$$
+```math
 m(y,p)=\min\{y,p-y\},
-$$
+```
 
-$$
+```math
 \limsup\frac G{D^2}
 \le\frac{(t+m(y,p))^2}{4\pi}.
 \tag{5.2}
-$$
+```
 
 GU gives
 
-$$
+```math
 \limsup\frac1{D^2}\sum_r\operatorname{area}(P_r)
 \le\frac\pi4\lambda^2.
 \tag{5.3}
-$$
+```
 
 Since
 
-$$
+```math
 G=\operatorname{area}F-
 \sum_r\operatorname{area}(P_r),
-$$
+```
 
 (3.6) and (5.3) give
 
-$$
+```math
 \liminf\frac G{D^2}
 \ge A_B(y,p)-\frac\pi4\lambda^2.
 \tag{5.4}
-$$
+```
 
 Using `t<=lambda`, every convergent survivor subsequence must therefore satisfy
 
-$$
+```math
 \boxed{
 A_B(y,p)-\frac\pi4\lambda^2
 \le
@@ -492,16 +492,16 @@ A_B(y,p)-\frac\pi4\lambda^2
 \qquad
 2\rho\le y\le p\le\pi.}
 \tag{5.5}
-$$
+```
 
 Also every planar convex body of diameter `D` has perimeter at least `2D`, because
 each of the two boundary arcs joining a diametral pair has length at least `D`.
 Therefore
 
-$$
+```math
 \boxed{p\ge2.}
 \tag{5.6}
-$$
+```
 
 For fixed `(y,p)`, let `R_B(y,p)` be the least nonnegative `lambda` satisfying (5.5).
 It is monotone increasing in the area input `A_B` and monotone decreasing in the cavity
@@ -513,10 +513,10 @@ width `m`.
 
 For fixed `y`, let `p_c(y)` be the unique solution of
 
-$$
+```math
 \boxed{\mathcal B(p_c(y))=\Phi(y)}
 \tag{6.1}
-$$
+```
 
 in `[max{2,y},pi]`.
 
@@ -527,29 +527,29 @@ If `y<=2`, then `B(2)=0<Phi(y)`.
 If `2<=y<=pi`, use the disk of radius `y/pi` inside the unit disk.  It has perimeter
 `2y` and area `y^2/pi`, so
 
-$$
+```math
 \mathcal B(y)\le\frac{y^2}{4\pi}.
 \tag{6.2}
-$$
+```
 
 The function
 
-$$
+```math
 f(y)=y+\sin y-\frac{y^2}{\pi}
-$$
+```
 
 is concave on `[0,pi]`, with `f(0)=f(pi)=0`.  Hence `f(y)>=0`, and therefore
 
-$$
+```math
 \mathcal B(y)\le\Phi(y).
 \tag{6.3}
-$$
+```
 
 At the other endpoint,
 
-$$
+```math
 \mathcal B(\pi)=\frac\pi4\ge\Phi(y),
-$$
+```
 
 with strict inequality for `y<pi`.  Strict monotonicity of `B` proves existence and
 uniqueness of `p_c(y)`.
@@ -564,22 +564,22 @@ After `p_c(y)`, the active area floor is `B(p)`.  If `p>=2y`, `m=y` is fixed and
 threshold increases with `B(p)`.  If `p<2y`, differentiate the polynomial form of
 (5.5) at the root.  Its derivative with respect to `p` is
 
-$$
+```math
 2(\lambda+m)-4\pi\mathcal B'(p).
-$$
+```
 
 Here `lambda<1`, `m<pi/2`, and `B'(p)>=1/2`, so
 
-$$
+```math
 2(\lambda+m)-4\pi\mathcal B'(p)
 <2+\pi-2\pi=2-\pi<0.
-$$
+```
 
 Thus the threshold increases after the crossing here as well.
 
 Consequently
 
-$$
+```math
 \boxed{
 \min_pR_B(y,p)=
 \begin{cases}
@@ -587,14 +587,14 @@ r(y),&p_c(y)\ge2y,\\
 R_B(y,p_c(y)),&p_c(y)\le2y,
 \end{cases}}
 \tag{6.4}
-$$
+```
 
 where `r(y)` is the old FSJC left-branch root
 
-$$
+```math
 (\pi^2+1)r^2+2yr+y^2-\pi(y+\sin y)=0.
 \tag{6.5}
-$$
+```
 
 If `p_c>2y`, any `p in[2y,p_c]` gives the same threshold; this harmless plateau does
 not affect the next optimization.
@@ -605,47 +605,47 @@ not affect the next optimization.
 
 For
 
-$$
+```math
 2\rho\le y\le\pi/2
-$$
+```
 
 define
 
-$$
+```math
 g_B(y)=\mathcal B(2y)-\Phi(y).
 \tag{7.1}
-$$
+```
 
 From (4.7), for `y_2>y_1`,
 
-$$
+```math
 \mathcal B(2y_2)-\mathcal B(2y_1)
 \ge y_2-y_1.
-$$
+```
 
 Also
 
-$$
+```math
 \Phi'(y)=\frac{1+\cos y}{4}\le\frac12.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 g_B(y_2)-g_B(y_1)\ge\frac12(y_2-y_1)>0.}
 \tag{7.2}
-$$
+```
 
 So `g_B` is strictly increasing.
 
 At the upper endpoint,
 
-$$
+```math
 \boxed{
 g_B(\pi/2)=\frac{\pi-2}{8}>0.}
 \tag{7.3}
-$$
+```
 
 The lower endpoint sign is certified geometrically rather than numerically.
 
@@ -653,7 +653,7 @@ The lower endpoint sign is certified geometrically rather than numerically.
 
 In the unit disk take the inscribed hexagon whose six consecutive central gaps are
 
-$$
+```math
 \frac\pi{10},\quad
 \frac{3\pi}{10},\quad
 \frac{2\pi}{5},\quad
@@ -661,52 +661,52 @@ $$
 \frac{2\pi}{5},\quad
 \frac{2\pi}{5}.
 \tag{7.4}
-$$
+```
 
 Its half-perimeter is
 
-$$
+```math
 p_W=
 \sin\frac\pi{20}
 +\sin\frac{3\pi}{20}
 +4\sin\frac\pi5
-$$
+```
 
-$$
+```math
 =\frac{\sqrt5-1}{2}\cos\frac\pi{20}
 +\sqrt{10-2\sqrt5}.
 \tag{7.5}
-$$
+```
 
 Use the elementary rational bounds
 
-$$
+```math
 \frac{559}{250}<\sqrt5<\frac{161}{72},
 \qquad
 \pi<\frac{22}{7},
 \qquad
 \frac{739}{1000}<\rho<\frac{37}{50}.
 \tag{7.6}
-$$
+```
 
 Since `cos x>1-x^2/2`,
 
-$$
+```math
 \cos\frac\pi{20}
 >1-\frac12\left(\frac{11}{70}\right)^2
 =\frac{9679}{9800}.
-$$
+```
 
 Also
 
-$$
+```math
 \sqrt{10-2\sqrt5}
 >\sqrt{\frac{199}{36}}>\frac{47}{20}.
-$$
+```
 
 Therefore
 
-$$
+```math
 p_W>
 \frac{309}{500}\frac{9679}{9800}
 +\frac{47}{20}
@@ -714,66 +714,66 @@ p_W>
 >\frac{74}{25}
 >4\rho.
 \tag{7.7}
-$$
+```
 
 The normalized area, meaning one quarter of its unit-disk area, is
 
-$$
+```math
 a_W=
 \frac{\sqrt5}{16}
 +\frac18\sqrt{10+2\sqrt5}.
 \tag{7.8}
-$$
+```
 
 The same rational bounds give
 
-$$
+```math
 a_W<
 \frac{161}{1152}+\frac{381}{800}
 <0.616007.
 \tag{7.9}
-$$
+```
 
 Because `rho=cos rho`,
 
-$$
+```math
 \Phi(2\rho)
 =\frac\rho2\left(1+\sqrt{1-\rho^2}\right).
-$$
+```
 
 Using (7.6) and
 
-$$
+```math
 \sqrt{1131}>\frac{3363}{100}
-$$
+```
 
 gives
 
-$$
+```math
 \Phi(2\rho)>
 \frac{739}{2000}
 \left(1+\frac{3363}{5000}\right)
 =\frac{6180257}{10000000}
 >0.618025.
 \tag{7.10}
-$$
+```
 
 The exact rational gap between the upper bound in (7.9) and the lower bound in
 (7.10) is
 
-$$
+```math
 \frac{22711}{11250000}>0.
 \tag{7.11}
-$$
+```
 
 Now homothetically shrink the witness by the factor `4rho/p_W<1`.  The resulting
 convex body remains in the unit disk, has half-perimeter exactly `4rho`, and has
 normalized area strictly below `Phi(2rho)`.  Hence
 
-$$
+```math
 \boxed{\mathcal B(4\rho)<\Phi(2\rho),}
 \tag{7.12}
-$$
+```
 
 so `g_B(2rho)<0`.
 
@@ -786,49 +786,49 @@ By (7.2), (7.3), and (7.12), there is a unique `y_B` satisfying (B.1).
 For `y<=y_B`, `p_c(y)>=2y`, so (6.4) gives the old root `r(y)`.  The audited FSJC
 monotonicity calculation proves
 
-$$
+```math
 \boxed{r'(y)<0\quad(2\rho\le y\le\pi/2).}
 \tag{8.1}
-$$
+```
 
 For `y>=y_B`, the minimizing perimeter is `p_c(y)<=2y`.  The crossing relation and
 (4.7) imply for `y_2>y_1`
 
-$$
+```math
 \frac{p_c(y_2)-p_c(y_1)}{2}
 \le
 \Phi(y_2)-\Phi(y_1)
 \le\frac{y_2-y_1}{2}.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{p_c(y)-y\text{ is nonincreasing}.}
 \tag{8.2}
-$$
+```
 
 Along the crossing, the active area floor is `Phi(y)`, which is strictly increasing
 for `y<pi`, while the cavity width
 
-$$
+```math
 m=p_c(y)-y
-$$
+```
 
 is nonincreasing.  The threshold is increasing in area and decreasing in cavity width.
 Therefore
 
-$$
+```math
 \boxed{R_B(y,p_c(y))\text{ is strictly increasing for }y_B\le y<\pi.}
 \tag{8.3}
-$$
+```
 
 The unique global minimum is therefore attained at
 
-$$
+```math
 \boxed{p=2y=y_B\cdot2.}
 \tag{8.4}
-$$
+```
 
 At this point `m=y_B` and `B(2y_B)=Phi(y_B)`, so the threshold equation is exactly
 (B.2).  This proves (B.3).
@@ -840,61 +840,61 @@ At this point `m=y_B` and `B(2y_B)=Phi(y_B)`, so the threshold equation is exact
 The support-function argument in PS in fact has the following general unit-disk form:
 for every convex `Omega subset D_1` with perimeter `L`,
 
-$$
+```math
 |\Omega|\ge\frac{L^2}{2\pi}-\pi.
 \tag{9.1}
-$$
+```
 
 Indeed, for the support function `h` about the disk center,
 `h^2+(h')^2<=1` almost everywhere,
 
-$$
+```math
 |\Omega|
 =\frac12\int_0^{2\pi}(h^2-(h')^2)
 \ge\int_0^{2\pi}h^2-\pi
 \ge\frac{L^2}{2\pi}-\pi.
-$$
+```
 
 Equality in both steps forces `h` constant and `h^2=1`, hence the unit disk.  Thus for
 
-$$
+```math
 2<p<\pi
-$$
+```
 
 Bogosel's attained minimum satisfies the strict inequality
 
-$$
+```math
 \boxed{\mathcal B(p)>\Psi(p).}
 \tag{9.2}
-$$
+```
 
 Let `y_0` be the PS transition, so
 
-$$
+```math
 \Psi(2y_0)=\Phi(y_0),
 \qquad y_0<\pi/2.
-$$
+```
 
 Then
 
-$$
+```math
 g_B(y_0)=\mathcal B(2y_0)-\Phi(y_0)>0.
-$$
+```
 
 Because `g_B` is increasing and vanishes at `y_B`,
 
-$$
+```math
 \boxed{y_B<y_0.}
 \tag{9.3}
-$$
+```
 
 Since the old root `r(y)` is strictly decreasing,
 
-$$
+```math
 \boxed{
 \lambda_B=r(y_B)>r(y_0)=\lambda_{PS}.}
 \tag{9.4}
-$$
+```
 
 The improvement is therefore exact, not a floating-point artifact.
 
@@ -906,67 +906,67 @@ The endpoint lies in Bogosel's six-gon branch.
 
 First,
 
-$$
+```math
 5\sin\frac\pi5<2.95<4\rho<2y_B.
 \tag{10.1}
-$$
+```
 
 For the first inequality use
 
-$$
+```math
 \sin\frac\pi5=\frac14\sqrt{10-2\sqrt5}
-$$
+```
 
 and the lower bound `sqrt5>559/250`; the middle inequality follows from
 `rho>739/1000`.
 
 Second, at `y=3/2`,
 
-$$
+```math
 \mathcal B(3)=\frac{3\sqrt3}{8}
 >\frac58
 >\Phi(3/2),
 \tag{10.2}
-$$
+```
 
 because `3sqrt3>5` and `sin(3/2)<1`.  Hence `g_B(3/2)>0`, so
 
-$$
+```math
 y_B<3/2,
 \qquad 2y_B<3.
-$$
+```
 
 Thus
 
-$$
+```math
 5\sin(\pi/5)<2y_B<6\sin(\pi/6)=3,
-$$
+```
 
 which is exactly the six-gon perimeter interval.
 
 Let `theta_B in (0,pi/3)` be its exceptional central angle and set
 
-$$
+```math
 \varphi_B=\frac{2\pi-\theta_B}{5}.
-$$
+```
 
 Then `(y_B,theta_B)` is characterized by
 
-$$
+```math
 \boxed{
 2y_B=
 \sin\frac{\theta_B}{2}
 +5\sin\frac{2\pi-\theta_B}{10},}
 \tag{10.3}
-$$
+```
 
-$$
+```math
 \boxed{
 \sin\theta_B
 +5\sin\frac{2\pi-\theta_B}{5}
 =2(y_B+\sin y_B).}
 \tag{10.4}
-$$
+```
 
 High-precision evaluation gives
 
@@ -989,128 +989,128 @@ These decimals are descriptive only.  Equations (B.1)--(B.2), or equivalently
 
 Assume for contradiction that an unbounded post-ZF survivor sequence satisfies
 
-$$
+```math
 \lambda_D:=\frac{e_{BB}+2s_C}{D}\to\lambda_B.
 \tag{11.1}
-$$
+```
 
 By uniqueness of the global optimizer in Sections 7--8, after passing to subsequences,
 
-$$
+```math
 \frac hD\to y_B,
 \qquad
 \frac{P_F}{D}\to2y_B.
 \tag{11.2}
-$$
+```
 
 Let
 
-$$
+```math
 A_D=\frac{\operatorname{area}F}{D^2},
 \qquad
 C_D=\frac1{D^2}\sum_r\operatorname{area}(P_r),
 \qquad
 G_D=A_D-C_D.
-$$
+```
 
 Bogosel+FS gives
 
-$$
+```math
 \liminf A_D\ge\mathcal B(2y_B).
 \tag{11.3}
-$$
+```
 
 GU gives
 
-$$
+```math
 \limsup C_D\le\frac\pi4\lambda_B^2.
 \tag{11.4}
-$$
+```
 
 The actual-perimeter JC bound gives
 
-$$
+```math
 \limsup G_D
 \le\frac{(t+y_B)^2}{4\pi}
 \le\frac{(\lambda_B+y_B)^2}{4\pi}.
 \tag{11.5}
-$$
+```
 
 By (B.1)--(B.2), the lower bound from (11.3)--(11.4) equals the final upper bound in
 (11.5).  Therefore every inequality must saturate:
 
-$$
+```math
 \boxed{A_D\to\mathcal B(2y_B),}
 \tag{11.6}
-$$
+```
 
-$$
+```math
 \boxed{C_D\to\frac\pi4\lambda_B^2,}
 \tag{11.7}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{t\to\lambda_B.}
 \tag{11.8}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{\frac{s_C}{D}\to0.}
 \tag{11.9}
-$$
+```
 
 Thus any endpoint sequence would already have to spend asymptotically all of its
 pinned/contact currency in actual loaded-loaded contacts.
 
 Now take the exact central symmetral
 
-$$
+```math
 S_D=\frac12((F-o)-(F-o))
-$$
+```
 
 and normalize
 
-$$
+```math
 \Omega_D=\frac2D S_D\subseteq D_1.
-$$
+```
 
 FS.4 gives `area(S_D)-area(F)=o(D^2)`, so (11.6) yields
 
-$$
+```math
 |\Omega_D|\to4\mathcal B(2y_B),
 \tag{11.10}
-$$
+```
 
 while (11.2) gives
 
-$$
+```math
 \operatorname{Per}(\Omega_D)\to4y_B.
 \tag{11.11}
-$$
+```
 
 Every `Omega_D` is centrally symmetric about the origin.
 
 By Blaschke selection, pass to a Hausdorff-convergent subsequence
 
-$$
+```math
 \Omega_D\to\Omega_\infty\subseteq D_1.
-$$
+```
 
 Central symmetry, area, and planar convex perimeter are preserved under the limit.
 Hence
 
-$$
+```math
 |\Omega_\infty|=4\mathcal B(2y_B),
-$$
+```
 
-$$
+```math
 \operatorname{Per}(\Omega_\infty)=4y_B
 =M(4\mathcal B(2y_B)).
-$$
+```
 
 So `Omega_infty` is a Bogosel perimeter maximizer at its area.
 
@@ -1141,18 +1141,18 @@ There is no unbounded post-ZF survivor sequence satisfying (11.1).
 There exist absolute `epsilon_B>0` and `D_0<infinity` such that every post-ZF survivor
 with `D>=D_0` satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}\ge\lambda_B+\varepsilon_B.}
-$$
+```
 
 ### Proof
 
 If not, choose for each integer `j` a post-ZF survivor with `D_j>=j` and
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D_j}<\lambda_B+\frac1j.
-$$
+```
 
 Theorem (B.3) gives liminf at least `lambda_B`, so the chosen ratios converge to
 `lambda_B`.  This contradicts BSG. `square`
@@ -1167,31 +1167,31 @@ constraint or a direct centrally symmetric reverse-isoperimetric theorem.
 
 The strongest explicit post-ZF lower bound becomes
 
-$$
+```math
 \boxed{
 \liminf\frac{e_{BB}+2s_C}{D}
 \ge0.5934834602360914\ldots,}
-$$
+```
 
 and the printed endpoint is itself excluded.  Therefore the actual asymptotic lower
 bound is strictly larger by an absolute nonzero amount.
 
 The endpoint audit also proves the structural statement
 
-$$
+```math
 \lambda_D\to\lambda_B
 \quad\Longrightarrow\quad
 s_C=o(D),
 \qquad e_{BB}/D\to\lambda_B,
-$$
+```
 
 before the final symmetry contradiction.
 
 The exact Level I face endpoint is still
 
-$$
+```math
 b+Q>2h,
-$$
+```
 
 or equivalently exclusion of all post-ZF survivors.  The present theorem remains a
 lower bound on a nonnegative survivor currency; there is still no global upper bound
@@ -1306,9 +1306,9 @@ nonexplicit `epsilon_B` into a larger explicit floor.
 
 The more ambitious closing target remains a genuine upper bound on
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}
-$$
+```
 
 or a theorem converting large loaded-loaded contact currency directly into the face
 contradiction or a strict sub-`D` competitor.

@@ -45,15 +45,15 @@ Let `H(A)` be the actual diameter graph of a finite planar unit-separated source
 
 For every noncollinear global minimum-diameter source with `D>=2`,
 
-$$
+```math
 \boxed{\sum_{x:d_H(x)>2}(d_H(x)-1)^3\le6144D\,\delta_K.}
-$$
+```
 
 Consequently, by canonical `C-FS-GEOM`,
 
-$$
+```math
 \boxed{\sum_x(d_H(x)-2)_+^3<C_0D^2,\qquad C_0=1536\pi\sqrt3.}
-$$
+```
 
 Every source vertex is included, including contact isolates.
 
@@ -69,10 +69,10 @@ of `P` shortened in `Q'`.
 
 For any vertex cover `S` of `F` of size `s>0`,
 
-$$
+```math
 \boxed{N\le 2s+C_0^{1/3}s^{2/3}D^{2/3},\qquad
        L\le 2s+C_0^{1/3}s^{2/3}D^{2/3}.}
-$$
+```
 
 In particular, choose any rigid alignment of the core endpoints with `P` and let
 `S` be the labels whose endpoint coordinates differ from `P`. Every new diameter pair
@@ -80,18 +80,18 @@ meets this set, so the inequality holds with `s` equal to the number of changed 
 labels. If `nu` is the maximum matching size in `F`, its `2 nu` endpoints are a vertex
 cover, and
 
-$$
+```math
 N\le4\nu+2^{2/3}C_0^{1/3}\nu^{2/3}D^{2/3},\qquad
 L\le4\nu+2^{2/3}C_0^{1/3}\nu^{2/3}D^{2/3}.
-$$
+```
 
 Along any sequence of such endpoints with `D->infinity` and
 `L>=(kappa-o(1))D` for fixed `kappa>0`,
 
-$$
+```math
 \boxed{\liminf\frac{s}{\sqrt D}\ge\frac{\kappa^{3/2}}{\sqrt{C_0}},\qquad
        \liminf\frac{\nu}{\sqrt D}\ge\frac{\kappa^{3/2}}{2\sqrt{C_0}}.}
-$$
+```
 
 The first bound holds for the chosen changed-label cover; the second holds for the
 maximum matching. Neither gives a linear-sized support or a finite motion.
@@ -108,35 +108,35 @@ diameter threshold for all sufficiently small `c`, `B_c=2` when `c<1/400`, and
 `M_c -> 2` as `c -> 0`. Apply the canonical finite inequality at this fixed source
 and take `c -> 0`:
 
-$$
+```math
 \sum_{d_H(x)>2}(d_H(x)-1)^3
 \le3072\cdot2\,D\delta_K=6144D\delta_K.
-$$
+```
 
 The gap is used only source-by-source. It need not have a uniform lower bound along
 any sequence. Since `(d-2)^3 <= (d-1)^3` for `d>2`, `C-FS-GEOM` gives
 
-$$
+```math
 \sum_x(d_H(x)-2)_+^3
 \le6144D\delta_K
 <6144D\frac{\pi\sqrt3D}{4}=C_0D^2.
-$$
+```
 
 For the cover inequality, apply the moment bound to the global minimizer `Q'` and
 its actual diameter graph `H(Q')`. Every edge of `F` has an endpoint in `S`, whence
 
-$$
+```math
 N=|E(F)|\le\sum_{x\in S}d_{H(Q')}(x)
 \le2s+\sum_{x\in S}(d_{H(Q')}(x)-2)_+.
-$$
+```
 
 Holder's inequality and the cubic moment give
 
-$$
+```math
 \sum_{x\in S}(d_{H(Q')}(x)-2)_+
 \le s^{2/3}\left(\sum_x(d_{H(Q')}(x)-2)_+^3\right)^{1/3}
 <C_0^{1/3}s^{2/3}D^{2/3}.
-$$
+```
 
 Audit.177 supplies `N>=L>=1`, so the new-pair graph is nonempty and a changed-label
 cover has `s>0`. New pairs cannot have both endpoints fixed at their old coordinates:

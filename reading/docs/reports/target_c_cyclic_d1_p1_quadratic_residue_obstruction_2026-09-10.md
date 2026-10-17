@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_p1_quadratic_residue_obstruction_2026-09-10.md) · source SHA-256 `cdc1a88ae61c186aa5aab47ccc89776edeebea5b8625fbc49bd5d9dbe2c25bea`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-36392B4B7FDF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 LEVEL I STATUS: STILL OPEN
 
@@ -17,25 +19,25 @@ LEVEL I STATUS: STILL OPEN
 
 An earlier version of this report derived, from the P1 Littlewood closure, the field-square conditions
 
-$$
+```math
 z^2-z+1\in\mathbb Q(z)^{\times2}
-$$
+```
 
 and
 
-$$
+```math
 (t+2)(t-1)\in\mathbb Q(t)^{\times2},
 \qquad t=z+z^{-1}.
-$$
+```
 
 Those identities are correct, but the interpretation as an **independent arithmetic obstruction** was wrong.
 
 They already follow from the squared P1 geometric equation
 
-$$
+```math
 \boxed{H_n(t)=D_n(t,1)+4t-6=0}
 \tag{AQ.1}
-$$
+```
 
 alone. Therefore they cannot distinguish a trace factor that also admits a Littlewood annihilator.
 
@@ -47,60 +49,61 @@ The proposed QR route is rejected as redundant. This correction is recorded expl
 
 Let
 
-$$
+```math
 x:=\frac t2.
-$$
+```
 
 The Dickson/Chebyshev relation is
 
-$$
+```math
 D_n(t,1)=2T_n(x).
-$$
+```
 
 Equation AQ.1 therefore gives
 
-$$
+```math
 T_n(x)=3-4x.
 \tag{2.1}
-$$
+```
 
 Use the standard identity
 
-$$
+```math
 T_n(x)^2-1=(x^2-1)U_{n-1}(x)^2,
 \tag{2.2}
-$$
+```
 
 where `U_{n-1}` is the Chebyshev polynomial of the second kind.
 
 Substituting (2.1),
 
-$$
+```math
 \begin{aligned}
 (x^2-1)U_{n-1}(x)^2
 &=(3-4x)^2-1\\
 &=16x^2-24x+8\\
 &=8(2x-1)(x-1).
 \end{aligned}
-$$
+```
 
 The distinguished P1 root has `t<2`, hence `x!=1`; cancel `x-1`:
 
-$$
+```math
 (x+1)U_{n-1}(x)^2=8(2x-1).
-$$
+```
 
 Returning to `t`,
 
-$$
+```math
 \boxed{
 (t+2)U_{n-1}(t/2)^2=16(t-1).
 }
 \tag{AQ.2}
+```
 
 Consequently
 
-\[
+```math
 \boxed{
 (t+2)(t-1)
 =
@@ -109,6 +112,7 @@ Consequently
 \right)^2.
 }
 \tag{AQ.3}
+```
 
 Thus `(t+2)(t-1)` is a square in the residue field of **every** nontrivial root of `H_n`, whether or not any Littlewood polynomial vanishes there.
 
@@ -118,54 +122,54 @@ Thus `(t+2)(t-1)` is a square in the residue field of **every** nontrivial root 
 
 Let
 
-\[
+```math
 z+z^{-1}=t.
-$$
+```
 
 Then
 
-$$
+```math
 t+2=\frac{(z+1)^2}{z}
-$$
+```
 
 and
 
-$$
+```math
 z^2-z+1=z(t-1).
-$$
+```
 
 Let
 
-$$
+```math
 s:=\frac{t+2}{4}U_{n-1}(t/2),
 \qquad
 s^2=(t+2)(t-1)
-$$
+```
 
 from AQ.3. Since `z!=-1` in the P1 geometry,
 
-$$
+```math
 \boxed{
 u:=\frac{zs}{z+1}}
-$$
+```
 
 satisfies
 
-$$
+```math
 \begin{aligned}
 u^2
 &=\frac{z^2}{(z+1)^2}(t+2)(t-1)\\
 &=z(t-1)\\
 &=z^2-z+1.
 \end{aligned}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{z^2-z+1\in\mathbb Q(z)^{\times2}}
 \tag{3.1}
-$$
+```
 
 is also automatic from `H_n(t)=0`.
 
@@ -175,16 +179,16 @@ is also automatic from `H_n(t)=0`.
 
 The earlier Littlewood/discriminant calculation was algebraically correct: if
 
-$$
+```math
 P=S_n-2A,
 \qquad P(z)=0,
-$$
+```
 
 and `B=(z-1)A(z)`, then eliminating `z^n` indeed produces a quadratic in `B` whose discriminant is
 
-$$
+```math
 4(z-1)^2(z^2-z+1).
-$$
+```
 
 What failed was the novelty inference. AQ.2-AQ.3 show that this discriminant is already forced to be a square by the geometric trace equation itself.
 
@@ -205,13 +209,15 @@ The valid arithmetic stack on this PR is therefore:
 
 1. **PA:** if `n=q-2` is a power of two, the shifted reciprocal polynomial has one 2-adic Newton segment of slope `-1/n`, forcing algebraic degree at least `n`; this contradicts the degree-`n-1` Littlewood annihilator.
 2. **TR:** for arbitrary `n`, a P1 Littlewood root forces the distinguished trace root `t` to have degree at most
-   $$
+   ```math
    \left\lfloor\frac{n-1}{2}\right\rfloor.
-   $$
+   
+   ```
 3. **Open:** prove the distinguished factor of
-   $$
+   ```math
    H_n(T)=D_n(T,1)+4T-6
-   $$
+   
+   ```
    has degree at least `ceil(n/2)`, or exploit additional sign-word structure not already encoded by `H_n=0`.
 
 The QR square route is removed from that frontier.
@@ -222,15 +228,15 @@ The QR square route is removed from that frontier.
 
 This correction is useful beyond bookkeeping. The factorization
 
-$$
+```math
 (t+2)U_{n-1}(t/2)^2=16(t-1)
-$$
+```
 
 explains why substitutions based on
 
-$$
+```math
 r^2=\frac{t+2}{t-1}
-$$
+```
 
 produce apparent low-degree splittings of transformed P1 polynomials: the square root is built into the Chebyshev equation. Such splittings are therefore not evidence of an additional Littlewood obstruction.
 

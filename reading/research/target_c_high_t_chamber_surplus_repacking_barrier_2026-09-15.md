@@ -15,73 +15,73 @@
 
 The modern high-`t` theorem proves
 
-$$
+```math
 A_{ch}-a_0Z_{ch}\ge(0.586223-o(1))D,
 \qquad
 a_0={\sqrt3\over2}.
-$$
+```
 
 It is tempting to treat this linear Oler surplus as packing spare and compare it with the vertex-cover cost `tau(H)`.  That inference is false.  The exact chamber ledger shows that the Section-85 lower bound is precisely the mandatory boundary-credit term; the genuine force-hull residual `R_F` is the excess **above** that term.
 
 With
 
-$$
+```math
 H_D=(b-P_F)+(Q+2f)
 =2[(q-k)+f]-P_F,
 \tag{RB.1}
-$$
+```
 
 and
 
-$$
+```math
 R_F={A_F\over a_0}+{P_F\over2}+1-N_F-{E_4\over a_0},
 \tag{RB.2}
-$$
+```
 
 one has the finite exact identity
 
-$$
+```math
 \boxed{
 {A_{ch}\over a_0}-Z_{ch}
 =R_F+{H_D\over2}.
 }
 \tag{RB.3}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 A_{ch}-a_0Z_{ch}
 =a_0R_F+{\sqrt3\over4}H_D.
 }
 \tag{RB.4}
-$$
+```
 
 Therefore canonical Section 85,
 
-$$
+```math
 A_{ch}-a_0Z_{ch}\ge {\sqrt3\over4}H_D,
-$$
+```
 
 is exactly the statement
 
-$$
+```math
 R_F\ge0.
-$$
+```
 
 The new high-`t` lower bound `H_D/D>=1.353825-o(1)` consequently forces the advertised `0.586223D` chamber surplus even when `R_F=o(D)` or identically zero at first order.  It supplies no positive lower bound on the residual used by aggregate safe-lattice repacking.
 
 The safe-lattice theorem instead requires
 
-$$
+```math
 \Xi=R_F
 -\kappa_*L_c
 -\lambda_*L_{add}
 -C_*f
 -\eta_*a
 \ge\tau(H)
-$$
+```
 
 for a strict-diameter competitor.  Since every erosion term is nonnegative, the high-`t` Section-85 surplus alone cannot prove even `Xi>0`, much less `Xi>=tau(H)`.
 
@@ -101,46 +101,46 @@ Any successful repacking route must obtain new positive information on `R_F` its
 
 Canonical chamber bookkeeping gives
 
-$$
+```math
 A_{ch}=A_F-A_4,
 \qquad
 A_4=a_0R_4+E_4,
 \tag{RB.5}
-$$
+```
 
-$$
+```math
 Z_{ch}=N_F-m,
 \tag{RB.6}
-$$
+```
 
 and
 
-$$
+```math
 m=R_4+f+q-k+1.
 \tag{RB.7}
-$$
+```
 
 Hence
 
-$$
+```math
 \begin{aligned}
 {A_{ch}\over a_0}-Z_{ch}
 &={A_F\over a_0}-R_4-{E_4\over a_0}-N_F+m\\
 &={A_F\over a_0}-N_F-{E_4\over a_0}+f+q-k+1.
 \end{aligned}
 \tag{RB.8}
-$$
+```
 
 Subtract (RB.2):
 
-$$
+```math
 \begin{aligned}
 \left({A_{ch}\over a_0}-Z_{ch}\right)-R_F
 &=f+q-k-{P_F\over2}\\
 &={1\over2}\left(2[(q-k)+f]-P_F\right)\\
 &={H_D\over2}.
 \end{aligned}
-$$
+```
 
 This proves (RB.3).  Multiplication by `a_0=sqrt(3)/2` gives (RB.4).
 
@@ -152,16 +152,16 @@ No asymptotic statement is used.
 
 The modern high-`t` theorem proves
 
-$$
+```math
 {H_D\over D}\ge1.353825-o(1).
-$$
+```
 
 The mandatory boundary-credit part in (RB.4) is therefore
 
-$$
+```math
 {\sqrt3\over4}H_D
 \ge(0.586223-o(1))D,
-$$
+```
 
 which is exactly the published high-`t` chamber-surplus floor up to the outward rounding in its certificate.
 
@@ -173,30 +173,30 @@ Thus the full numerical gain is already accounted for by `H_D`.  There is no hid
 
 The audited aggregate safe-lattice theorem first realizes a safe-region surplus bounded below by
 
-$$
+```math
 \Xi=R_F
 -\kappa_*L_c
 -\lambda_*L_{add}
 -C_*f
 -\eta_*a.
 \tag{RB.9}
-$$
+```
 
 It then closes if
 
-$$
+```math
 \Xi\ge\tau(H).
 \tag{RB.10}
-$$
+```
 
 Equation (RB.3) shows why replacing `R_F` in (RB.9) by the raw Oler surplus is invalid: doing so adds `H_D/2` a second time even though that amount is exactly the chamber-boundary credit already required by Oler.
 
 In fact (RB.9) immediately gives
 
-$$
+```math
 \Xi\le R_F.
 \tag{RB.11}
-$$
+```
 
 So a necessary first step for this repacking architecture is a positive lower bound on `R_F` of at least vertex-cover scale.  The current high-`t` theorem gives only the canonical nonnegativity `R_F>=0`.
 

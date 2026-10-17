@@ -41,11 +41,11 @@ For prefix `i`, all crossed contact edges have one projective direction `u_i` an
 coherent outside-to-inside orientation. Summing the positive KKT equilibrium equations
 over `S` therefore gives
 
-$$
+```math
 \epsilon_1 A_1u_1+\epsilon_2 A_2u_2=0,
 \qquad A_1,A_2>0,
 \tag{1.1}
-$$
+```
 
 where `epsilon_i` records orientation. Nonparallel projective directions cannot satisfy
 (1.1). If the directions are parallel, the piecewise velocity `Ju` on `S` and zero

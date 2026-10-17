@@ -20,43 +20,43 @@ This report proves the annular finite-packing theorem left open in the immediate
 
 The new geometric input is elementary but has the required sharp bulk coefficient. If `F subset K` are convex bodies of diameter at most `D` and `S subset K\F` is unit-separated, then
 
-$$
+```math
 \boxed{
 |S|\le\frac2{\sqrt3}\bigl(\operatorname{area}K-\operatorname{area}F\bigr)
 +O(D^{3/2}).
 }
 \tag{AP.1}
-$$
+```
 
 The proof tiles by squares of side `sqrt(D)`: Oler is applied only to squares wholly inside the annulus, while the `O(sqrt(D))` squares meeting either convex boundary are charged by a crude local disk-packing bound. This preserves the triangular-lattice bulk coefficient and loses only `o(D^2)` points.
 
 In the perfect-matching branch, MB requires at least
 
-$$
+```math
 \left(\frac\pi{2\sqrt3}-\frac{\pi^2}{16}\right)D^2-o(D^2)
-$$
+```
 
 external isolated source points outside the force hull. FSDB gives
 
-$$
+```math
 \operatorname{area}F\ge A_{FS}D^2-o(D^2),
 \qquad
 A_{FS}=\frac{2\rho+\sin(2\rho)}4,\quad \rho=\cos\rho.
-$$
+```
 
 AP therefore gives an asymptotic upper bound strictly below the MB lower bound. The contradiction is certified without decimal arithmetic by the coarse estimates
 
-$$
+```math
 \frac23<\rho<\frac\pi4,
 \qquad
 A_{FS}>\frac13+\frac{\sqrt3}{8},
-$$
+```
 
 and
 
-$$
+```math
 \frac{2}{3\sqrt3}+\frac14-\frac{\pi^2}{16}>0.
-$$
+```
 
 Level I remains open because nonmatching diameter graphs still survive.
 
@@ -71,12 +71,13 @@ proves, under the audited post-ZF stack, that if the full actual diameter graph 
 1. the positive contact core is a pure simply connected strict-rhombic disk;
 2. all contact-isolated source points lie outside the force hull `F`;
 3. if `v` is the core population, then
-   $$
+   ```math
    v\le\frac{q^2}{16}+\frac q2+1,
-   $$
+   
+   ```
    with `q<=pi D`; and consequently
 4. the external population `Z_ext=n-v` satisfies
-   $$
+   ```math
    \boxed{
    \liminf\frac{Z_{ext}}{D^2}
    \ge
@@ -85,11 +86,12 @@ proves, under the audited post-ZF stack, that if the full actual diameter graph 
    \Delta:=\frac\pi{2\sqrt3}.
    }
    \tag{1.1}
-   $$
+   
+   ```
 
 The new September 10 FS-symmetry report proves for every unbounded post-ZF survivor sequence
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge A_{FS}:=
@@ -98,7 +100,7 @@ $$
 \rho=\cos\rho.
 }
 \tag{1.2}
-$$
+```
 
 Since the full source hull `K` has `area(K)<=pi D^2/4`, the missing implication was exactly a sharp-leading-term packing bound for the nonconvex annulus `K\setminus F`:
 
@@ -120,13 +122,13 @@ The annular theorem below supplies this implication with an explicit `O(D^(3/2))
 
 Let `D>=1`. Let `F subset K` be compact convex planar sets with
 
-$$
+```math
 \operatorname{diam}K\le D.
-$$
+```
 
 Let `S subset K\setminus F` be finite and unit-separated. Then
 
-$$
+```math
 \boxed{
 |S|
 \le
@@ -135,11 +137,11 @@ $$
 +O(D^{3/2}),
 }
 \tag{AP.2}
-$$
+```
 
 where the implied constant is universal. In particular, for any sequence with `D->infinity`,
 
-$$
+```math
 \boxed{
 |S|
 \le
@@ -148,7 +150,7 @@ $$
 +o(D^2).
 }
 \tag{AP.3}
-$$
+```
 
 No contact, KKT, triangle-free, or global-optimality hypothesis is used in AP.
 
@@ -156,10 +158,10 @@ No contact, KKT, triangle-free, or global-optimality hypothesis is used in AP.
 
 Put
 
-$$
+```math
 L=\sqrt D.
 \tag{2.1}
-$$
+```
 
 Choose a translate of the axis-parallel square grid of side `L` such that no point of `S` lies on a grid line and no nontrivial line segment of `partial K` or `partial F` lies on a grid line. This is possible because only finitely many translations are forbidden for the point condition, and the boundary-segment coincidences occupy a measure-zero set of translations.
 
@@ -173,41 +175,41 @@ We use the following elementary grid-crossing count.
 
 **Lemma AP.1.** If `C` is convex with diameter at most `D`, the number of open side-`L` grid squares meeting `partial C` is at most
 
-$$
+```math
 \boxed{4D/L+5.}
 \tag{2.2}
-$$
+```
 
 To prove this, traverse `partial C`. A vertical grid line meets the boundary of a convex body at at most two points, and only at most `D/L+1` vertical grid lines can meet `C`, because its horizontal width is at most `D`. Thus there are at most `2(D/L+1)` vertical crossings. The same bound holds for horizontal crossings. Between consecutive grid-line crossings the boundary stays in one open square. Hence the number of visited squares is at most the total number of crossings plus one, which gives (2.2). The generic grid translation removes coincident boundary segments; tangencies only reduce the crossing count. `square`
 
 Apply AP.1 to both `K` and `F`. The total number `B` of occupied nonbulk squares therefore satisfies
 
-$$
+```math
 \boxed{B\le 8D/L+10.}
 \tag{2.3}
-$$
+```
 
 #### Step 2: sharp Oler count in bulk squares
 
 Let `Q` be a bulk square and put `N_Q=|S cap Q|`. Oler's finite packing inequality applied to the closed side-`L` square gives
 
-$$
+```math
 N_Q
 \le
 \frac2{\sqrt3}L^2+2L+1.
 \tag{2.4}
-$$
+```
 
 The bulk squares have disjoint interiors and lie in `K\setminus F`. If `G` is their number, then
 
-$$
+```math
 GL^2\le\operatorname{area}(K\setminus F).
 \tag{2.5}
-$$
+```
 
 Summing (2.4) and using (2.5),
 
-$$
+```math
 \begin{aligned}
 N_{bulk}
 &\le
@@ -219,7 +221,7 @@ N_{bulk}
 \operatorname{area}(K\setminus F).
 \end{aligned}
 \tag{2.6}
-$$
+```
 
 Since `area(K)<=pi D^2/4`, the last term is `O(D^2/L)`.
 
@@ -227,48 +229,48 @@ Since `area(K)<=pi D^2/4`, the last term is `O(D^2/L)`.
 
 For any side-`L` square `Q`, put `M_Q=|S cap Q|`. The radius-`1/2` disks centered at these points are pairwise interior-disjoint and lie in the Euclidean `1/2`-parallel body of `Q`. By Steiner's formula for the square,
 
-$$
+```math
 M_Q\frac\pi4
 \le
 L^2+2L+\frac\pi4.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 M_Q\le\frac4\pi L^2+\frac8\pi L+1.
 }
 \tag{2.7}
-$$
+```
 
 Combining (2.3) and (2.7),
 
-$$
+```math
 N_{bdry}
 \le
 \left(\frac{8D}{L}+10\right)
 \left(\frac4\pi L^2+\frac8\pi L+1\right)
 =O(DL+L^2+D).
 \tag{2.8}
-$$
+```
 
 #### Step 4: choose the mesoscopic scale
 
 With `L=sqrt(D)`, equations (2.6) and (2.8) give
 
-$$
+```math
 N_{bulk}
 \le
 \frac2{\sqrt3}\operatorname{area}(K\setminus F)
 +O(D^{3/2}),
-$$
+```
 
 and
 
-$$
+```math
 N_{bdry}=O(D^{3/2}).
-$$
+```
 
 Adding them proves AP.2, and `D^(3/2)=o(D^2)` proves AP.3. `square`
 
@@ -306,102 +308,102 @@ Equivalently, along every sufficiently large post-ZF survivor sequence, the full
 
 Suppose such a sequence exists. Let `K=conv A`, let `F` be the force hull, let `v` be the nonisolated contact-core population, and put
 
-$$
+```math
 Z_{ext}=n-v.
-$$
+```
 
 MB proves that every one of these `Z_ext` source points lies in `K\setminus F` and that
 
-$$
+```math
 \liminf\frac{Z_{ext}}{D^2}
 \ge
 \Delta-\frac{\pi^2}{16},
 \qquad
 \Delta=\frac\pi{2\sqrt3}.
 \tag{3.1}
-$$
+```
 
 FSDB proves
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge A_{FS}
 :=\frac{2\rho+\sin(2\rho)}4,
 \qquad
 \rho=\cos\rho.
 \tag{3.2}
-$$
+```
 
 The source hull satisfies the isodiametric inequality
 
-$$
+```math
 \operatorname{area}K\le\frac\pi4D^2.
 \tag{3.3}
-$$
+```
 
 Apply AP to the unit-separated external population. Equations (3.2)-(3.3) give
 
-$$
+```math
 \limsup\frac{Z_{ext}}{D^2}
 \le
 \frac2{\sqrt3}\left(\frac\pi4-A_{FS}\right).
 \tag{3.4}
-$$
+```
 
 It remains to prove that the right side of (3.4) is strictly smaller than the right side of (3.1).
 
 Define `f(x)=x-cos x`. On `[0,pi/2]`,
 
-$$
+```math
 f'(x)=1+\sin x>0.
-$$
+```
 
 Also
 
-$$
+```math
 \cos\frac23\ge1-\frac12\left(\frac23\right)^2
 =\frac79>\frac23,
-$$
+```
 
 so `f(2/3)<0`. On the other hand
 
-$$
+```math
 \cos\frac\pi4=\frac{\sqrt2}{2}<\frac34<\frac\pi4,
-$$
+```
 
 using `pi>3`; hence `f(pi/4)>0`. Therefore
 
-$$
+```math
 \boxed{\frac23<\rho<\frac\pi4.}
 \tag{3.5}
-$$
+```
 
 Thus
 
-$$
+```math
 \frac{4}{3}<2\rho<\frac\pi2.
-$$
+```
 
 Since `pi<4`, one has `4/3>pi/3`. Sine is increasing on `[0,pi/2]`, so
 
-$$
+```math
 \sin(2\rho)>\sin\frac\pi3=\frac{\sqrt3}{2}.
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 A_{FS}
 >\frac{4/3+\sqrt3/2}{4}
 =\frac13+\frac{\sqrt3}{8}.
 }
 \tag{3.6}
-$$
+```
 
 Insert this lower bound into (3.4):
 
-$$
+```math
 \begin{aligned}
 \limsup\frac{Z_{ext}}{D^2}
 &<
@@ -413,30 +415,30 @@ $$
 \Delta-\frac{2}{3\sqrt3}-\frac14.
 \end{aligned}
 \tag{3.7}
-$$
+```
 
 Compare this with (3.1). Their lower-minus-upper gap is
 
-$$
+```math
 \frac{2}{3\sqrt3}+\frac14-\frac{\pi^2}{16}.
 \tag{3.8}
-$$
+```
 
 Using the classical elementary bound `pi^2<10`,
 
-$$
+```math
 \frac{2}{3\sqrt3}+\frac14-\frac{\pi^2}{16}
 >
 \frac{2}{3\sqrt3}-\frac38.
-$$
+```
 
 Finally
 
-$$
+```math
 \frac{2}{3\sqrt3}>\frac38
 \quad\Longleftrightarrow\quad
 16>9\sqrt3,
-$$
+```
 
 and squaring the positive sides gives `256>243`. Hence (3.8) is strictly positive.
 
@@ -446,20 +448,20 @@ Therefore the asymptotic upper bound (3.7) is strictly below the MB lower bound 
 
 For orientation only, the exact constants are approximately
 
-$$
+```math
 A_{FS}=0.6184708847\ldots,
-$$
+```
 
-$$
+```math
 \Delta-\frac{\pi^2}{16}=0.2900494070\ldots,
-$$
+```
 
 while AP plus FSDB gives
 
-$$
+```math
 \frac2{\sqrt3}\left(\frac\pi4-A_{FS}\right)
 =0.1927510185\ldots.
-$$
+```
 
 The resulting asymptotic population margin is about `0.0972983885 D^2`. These decimals are not used in the sign proof.
 
@@ -490,20 +492,20 @@ Thus the perfect-matching branch is removed from C-II under the same report-leve
 
 Using the exact branching-defect identity from DB,
 
-$$
+```math
 2h-q=x_B+Q+2s_Z
 =\sum_{b\in B_+}(\deg_H(b)-1),
 \tag{4.1}
-$$
+```
 
 MEX says the zero value of this common quantity is impossible on every sufficiently large survivor. Since it is an integer,
 
-$$
+```math
 \boxed{
 2h-q=x_B+Q+2s_Z\ge1
 }
 \tag{4.2}
-$$
+```
 
 for every sufficiently large source in the audited post-ZF class.
 
@@ -520,23 +522,17 @@ One sufficient formulation is:
 > **Branched annular capacity theorem.** For every sufficiently large post-ZF survivor, use
 > 
 
-$$
-
+```math
 > r_H:=2h-q=x_B+Q+2s_Z\ge1
 > 
-$$
-
-
+```
 > together with the full-source FS/PW geometry and the difference-body constraints to prove either
 > 
 
-$$
-
+```math
 > n-1\le\frac\pi{2\sqrt3}D^2
 > 
-$$
-
-
+```
 > or construct an `n`-point unit-separated competitor of diameter `<D`.
 
 A more concrete near-matching subtarget is to prove a positive **linear** lower bound `r_H>=cD`; DB.1 would then force `h/D` above its minimum by a fixed amount, and FSDB's force-hull area constant would improve accordingly. MEX alone gives only `r_H>=1`, so such a linear upgrade is not claimed here.
@@ -615,9 +611,9 @@ No Level I status change is warranted.
 
 The highest-value continuation is to quantify how far every survivor must lie from the matching endpoint. Write
 
-$$
+```math
 r_H=2h-q=x_B+Q+2s_Z.
-$$
+```
 
 MEX gives `r_H>=1`. The next useful theorem would prove `r_H>=cD` for an absolute `c>0`, or else show that `r_H=o(D)` preserves enough of MB's pure-rhombic/external-population structure for the same annular argument to survive with `o(D^2)` losses. The second route is especially attractive: an `o(D)` defect changes only `o(D^2)` train/rhombic capacity at the scale relevant to the fixed MEX population margin.
 

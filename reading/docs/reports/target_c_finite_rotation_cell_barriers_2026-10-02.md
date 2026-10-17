@@ -56,9 +56,9 @@ regression for extending the inverse-diameter window.
 
 Write
 
-$$
+```math
 \delta_D=2\arcsin\frac1{2D}.
-$$
+```
 
 ### Lemma R.1 — two actual diameter bars
 
@@ -66,9 +66,9 @@ In a finite unit-separated planar diameter-`D` set, two distinct diameter bars
 have smaller projective angle at least `delta_D`. If they are vertex-disjoint,
 their smaller projective angle `phi` satisfies the stronger exact inequality
 
-$$
+```math
 \boxed{\phi\ge2\delta_D=4\arcsin\frac1{2D}.}                 \tag{R.1}
-$$
+```
 
 The shared-endpoint `delta_D` bound is an existing repository geometry input
 (called C67 in older reports); we include a proof and do not claim it as new.
@@ -81,25 +81,25 @@ other endpoints are at distance at least one, so `2D sin(phi/2)>=1`.
 For disjoint bars orient their vectors `r,r'` to have smaller angle
 `0<phi<=pi/2`. Let `z` be their midpoint displacement. Put
 
-$$
+```math
 s=(r+r')/2,\quad w=(r-r')/2,\quad
 a=|s|=D\cos(\phi/2),\quad b=|w|=D\sin(\phi/2).
-$$
+```
 
 The vectors `s,w` are perpendicular. In their orthogonal coordinates write
 `z=(x,y)` and replace coordinates by their absolute values. The two opposite
 cross-endpoint distances are `|z+s|,|z-s|<=D`, hence
 
-$$
+```math
 x^2+y^2+2ax\le b^2,\qquad x,y\ge0.                        \tag{R.2}
-$$
+```
 
 The smaller aligned-endpoint distance has square `x^2+(b-y)^2`, where
 `0<=y<=b`. It is at least one by unit separation. Its maximum on (R.2) is
 
-$$
+```math
 \boxed{\max[x^2+(b-y)^2]=2D(D-a)=4D^2\sin^2(\phi/4).}     \tag{R.3}
-$$
+```
 
 Here is an explicit optimization proof. For fixed `y` the objective increases
 with `x`, so maximize on the curved boundary. There it equals
@@ -112,11 +112,11 @@ Combining (R.3) with separation proves (R.1). This also excludes a zero angle.
 
 The bound is attained. For `D>= (1+sqrt(5))/2`, set
 
-$$
+```math
 h=\sqrt{1-\frac1{4D^2}},\quad
 P_0=(0,0),\ P_1=(D,0),\quad
 P_2=(1/(2D),h),\ P_3=(D-1/(2D),h).
-$$
+```
 
 The source is unit-separated. Its actual diameters are `P_0P_1`, `P_0P_3`,
 and `P_2P_1`. The last two are disjoint and have angle `2delta_D`; the two
@@ -128,9 +128,9 @@ not a global-optimality claim. Rational equality packets are certified in §8.
 For the same two disjoint diameter bars, both opposite cross-endpoint
 distances `ell_+,ell_-` satisfy
 
-$$
+```math
 \boxed{D^2\cos\phi\le\ell_\pm^2\le D^2.}                \tag{R.4}
-$$
+```
 
 **Proof.** Their squared lengths are
 `a^2+|z|^2 +/- 2ax`. By (R.2),
@@ -139,10 +139,10 @@ $$
 
 Consequently if `phi<=C/D`, with `phi<=pi/2`, both cross pairs obey
 
-$$
+```math
 0\le D-\ell_\pm\le D(1-\sqrt{\cos\phi})
 \le D\phi^2/2\le C^2/(2D).                                \tag{R.5}
-$$
+```
 
 The penultimate inequality follows from
 `1-sqrt(cos(phi))<=1-cos(phi)<=phi^2/2`. This supplies *actual source pairs*
@@ -153,20 +153,20 @@ for an augmented near-diameter system. It does not make a strict pair active.
 Let `b=D sin(phi/2)`, `q=D(1-cos(phi/2))`, and suppose `q<1`. The opposite
 cross pairs in R.2 have total squared diameter deficit
 
-$$
+```math
 E=(D^2-\ell_+^2)+(D^2-\ell_-^2)
 \ge\boxed{4b\sqrt{1-q^2}-2.}                              \tag{R.5b}
-$$
+```
 
 **Proof.** Use the absolute midpoint coordinates of (R.2). That inequality
 gives `0<=x<=q` and `0<=y<=b`. Separation of both aligned endpoint pairs
 implies `x^2+(b-y)^2>=1`. Since `x<1`, it follows that
 `y<=b-sqrt(1-x^2)`. Consequently
 
-$$
+```math
 |z|^2\le x^2+(b-\sqrt{1-x^2})^2
 =b^2+1-2b\sqrt{1-x^2}.
-$$
+```
 
 Adding the two cross-pair squared lengths yields
 `E=2(b^2-|z|^2)`. Substitute this bound, then use `x<=q`. ∎
@@ -195,24 +195,24 @@ Let `u=(1,0)`, and let `r=D(cos(phi),sin(phi))` be an actual diameter vector
 with `0<phi<pi`. Replacing one contact direction `u` by `R_theta u` changes
 that diameter vector to `r+R_theta u-u`. Put
 
-$$
+```math
 \psi=\operatorname{Arg}(r-u)\in(0,\pi).
-$$
+```
 
 Since subtracting the positive horizontal vector from `r` increases its
 argument, `psi>phi`. The exact upper constraint is
 
-$$
+```math
 |r+R_\theta u-u|^2-D^2
 =2(r-u)\cdot(R_\theta u-u)
 =2|r-u|[\cos(\theta-\psi)-\cos\psi].                       \tag{R.6}
-$$
+```
 
 For `0<theta<pi`, this is nonpositive **if and only if**
 
-$$
+```math
 \boxed{\theta\ge2\psi.}                                  \tag{R.7}
-$$
+```
 
 If `2psi>=pi` there is no such feasible positive turn below `pi`. Indeed the
 cosine difference is `2 sin(theta/2) sin(psi-theta/2)`, whose sign gives
@@ -228,9 +228,10 @@ Assume the following exact finite hypotheses.
    actual diameter with vector `Du`.
 2. The selected actual contact-preserving endpoint map has coordinates
    `theta_i in (-pi,pi)`, and an old diameter with support interval `I` changes by
-   $$
+   ```math
    r_h\longmapsto r_h+\sum_{i\in I}(R_{\theta_i}u-u).        \tag{R.8}
-   $$
+   
+   ```
    All other selected coordinates are fixed. This assumption must be proved on
    the actual source cuts before applying the theorem to a carrier or chart.
 3. There are interval types
@@ -246,25 +247,25 @@ Assume the following exact finite hypotheses.
 
 Suppose every old actual diameter is at most `D` at the endpoint. Define
 
-$$
+```math
 B_s^+=2\operatorname{Arg}(r_s^+-u),\qquad
 B_s^-=2\operatorname{Arg}(\overline{r_s^-}-u),              \tag{R.9}
-$$
+```
 
 where the overline reflects across the `u` axis. If
 `|theta_i|<=epsilon<pi`, only the coordinates `i_s` with
 
-$$
+```math
 s\le K:=\min\left(m,\left\lfloor\frac{\epsilon}{2\delta_D}\right\rfloor\right)
                                                                     \tag{R.10}
-$$
+```
 
 can change. Thus every coordinate in `I_{K+1}` is exactly zero. In particular,
 
-$$
+```math
 \boxed{\epsilon\le2\delta_D\quad\Longrightarrow\quad
        \theta_i=0\text{ for every }i.}                   \tag{R.11}
-$$
+```
 
 For a window `epsilon=C/D`, at most `floor(C/2)` outer erosion coordinates
 can change; the bound is uniform in `m` and in all KKT weights.
@@ -273,10 +274,10 @@ can change; the bound is uniform in `m` and in all KKT weights.
 bar, and between consecutive chosen bars of each sign. Ordinary angle
 differences are at least their smaller projective separations. Consequently
 
-$$
+```math
 \phi_s^\pm\ge s\delta_D,\qquad
 B_s^\pm>2\phi_s^\pm\ge2s\delta_D.                         \tag{R.12}
-$$
+```
 
 Start at `s=m` and descend. If all coordinates in `I_{s+1}` are zero, (R.8)
 on the two chosen bars of type `I_s` is exactly the single increment
@@ -301,9 +302,9 @@ Let `eta_+,eta_-` be the distances from the reference projective direction
 are positive and have sum at most `pi`. If every selected endpoint direction
 has the lift
 
-$$
+```math
 -\eta_-\le\theta_i\le\eta_+,                              \tag{R.13}
-$$
+```
 
 then every `theta_i=0`.
 
@@ -327,16 +328,16 @@ phase statement with an unspecified or larger constant is insufficient.
 
 There is an exact next finite formulation. Put
 
-$$
+```math
 X_s=\sum_{i\in I_s}(R_{\theta_i}u-u),\quad X_{m+1}=0,
 \quad \mathcal L_s=\bigcap_{h:I_h=I_s}\overline B_D(-r_h).
-$$
+```
 
 Then all old diameter constraints of these interval types are equivalent to
 
-$$
+```math
 X_s\in\mathcal L_s,\qquad |X_s-X_{s+1}+u|=1.               \tag{R.14}
-$$
+```
 
 The second identity is exactly the unit length of the changed coordinate.
 Conversely each sequence obeying (R.14) determines unit directions by
@@ -370,17 +371,17 @@ strict constraints, rather than becoming extra rows of the old KKT system.
 
 For integers `N` sufficiently large, let `D=N`, `u=(1,0)`,
 
-$$
+```math
 t=1/(2N-1),\quad c=\frac{1-t^2}{1+t^2},\quad
 s=\frac{2t}{1+t^2},\quad b_\pm=(Nc,\pm Ns).
-$$
+```
 
 Use the `N+5` actual source points
 
-$$
+```math
 A_N=\{ku:0\le k\le N\}\cup\{b_+,b_-,b_+-u,b_--u\}.
                                                                     \tag{R.15}
-$$
+```
 
 The three actual old diameters are `0--Nu`, `0--b_+`, `0--b_-`. Every source
 point has a unit contact: the long horizontal chain and the two end dimers.
@@ -389,10 +390,10 @@ oriented vector `u`. There are no unit triangles.
 
 Write `w=b_+-u=(w_x,w_y)` and rotate `u` to the rational unit vector
 
-$$
+```math
 v=\left(\frac{w_x^2-w_y^2}{|w|^2},
           \frac{2w_xw_y}{|w|^2}\right),\qquad \Delta=v-u.   \tag{R.16}
-$$
+```
 
 Translate the three moving points by `Delta`. Every old unit contact is
 preserved; all old and new source pairs remain at least one and at most `D`
@@ -400,10 +401,10 @@ for all sufficiently large `N`. The upper `b_+` diameter is preserved exactly,
 and the other two old diameters strictly shorten. No new contact or diameter
 is created. The rotation has
 
-$$
+```math
 \theta_N=2\operatorname{Arg}(b_+-u),\qquad
 \boxed{N\theta_N\longrightarrow2.}                       \tag{R.17}
-$$
+```
 
 **Complete asymptotic feasibility proof.** `Ns>1` and
 `|b_+-Nu|=2N/sqrt((2N-1)^2+1)>1`. Both moving-side and fixed-side pair

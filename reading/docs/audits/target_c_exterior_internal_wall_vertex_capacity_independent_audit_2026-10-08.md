@@ -21,15 +21,15 @@ Let A be a finite canonical triangle-free source: first minimize diameter, then 
 
 Let W_Q be the vertices of the unit-contact path and S_Q=(A intersect Q) minus W_Q. Suppose v is an internal path vertex, so both Q sides incident with v are actual unit-contact edges. Define
 
-$$
+```math
 E_{Q,v}=\{x\in\operatorname{int}(Q): |x-w|>1\text{ for every }w\in W_Q\setminus\{v\}\}.
-$$
+```
 
 For Pack_1 denoting the maximum cardinality of a finite unit-separated subset,
 
-$$
+```math
 \boxed{\operatorname{Pack}_1(E_{Q,v})=|S_Q|.}
-$$
+```
 
 The lower bound is already canonical: the fully guarded region E_Q, with guards at every member of W_Q, has exact capacity |S_Q| by C-EXTERIOR-CAP-STRICT-PACKET-CAPACITY, and E_Q is contained in E_{Q,v}. The audited addition is the upper bound after omitting one internal path guard.
 
@@ -41,23 +41,23 @@ The source hull K is convex, and x lies in int(Q), hence in int(K). For q in A o
 
 Write a,b for the unit path neighbors of v. First suppose |x-v|>1. Every endpoint of an actual unit side is then strictly farther than one from x: this follows from the guards for vertices other than v, and from the case assumption for v. If the first exit is through the interior of a unit side cd at z=(1-s)c+sd, the weighted-square identity
 
-$$
+```math
 |p-z|^2=(1-s)|p-c|^2+s|p-d|^2-s(1-s)
-$$
+```
 
 places x more than sqrt(3)/2 from z. The retained source point q is at least one from c and d, so it is at least sqrt(3)/2 from z. Since z lies between x and q, |x-q|>sqrt(3)>1. An exit at a retained path vertex is safe by the strict guard there and source separation; an exit at v is safe because |x-v|>1 and q is a distinct source point from v. A path-vertex exit therefore gives |x-q|>1 as well.
 
 Now suppose |x-v|<=1. Translate v to the origin, let a and b be the unit vectors toward its two path neighbors, and let K_v be the convex cone between those rays on the Q side. Put r=|x|. The strict guards at a and b give
 
-$$
+```math
 x\cdot a<r^2/2,\qquad x\cdot b<r^2/2.
-$$
+```
 
 If q is outside the interior of K_v, source separation gives q=t u with t>=1 and |u|=1. Since x is inside the cone, the largest value of x dot u over exterior directions occurs on one of its boundary rays. Therefore x dot u<r^2/2. Using t>=1 and r<=1,
 
-$$
+```math
 |x-q|^2=r^2+t^2-2t(x\cdot u)>1.
-$$
+```
 
 If q is inside K_v but outside Q, the segment from x to q stays inside K_v. It cannot first leave through either side incident with v, and cannot reach a source-hull side before q because it stays in int(K). It consequently exits through another actual unit side or a retained path vertex. The previous crossing or vertex estimate gives |x-q|>1.
 

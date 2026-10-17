@@ -25,15 +25,15 @@ Fix one Type-II subsequential limit from audited §142. Let `mu` be its projecti
 direction probability measure, let `x=lim T/D`, and write the atomic masses in absolute
 `D` normalization as
 
-$$
+```math
 a_i=x\,\mu(\{\phi_i\}).
-$$
+```
 
 The exact relation
 
-$$
+```math
 \psi=\phi\pm\pi/3\pmod\pi
-$$
+```
 
 partitions the projective circle into three-point orbits. For one orbit let `M_r` be the
 sum of its atomic masses and `E_r` the normalized limiting strict-rhombus crossing mass
@@ -47,21 +47,21 @@ Audited §142 gives two facts needed here:
 The second point implies that the exact relation carries product mass only through
 atoms:
 
-$$
+```math
 (\mu\times\mu)
 \{(\phi,\psi):\psi=\phi+\pi/3\}
 =
 \int \mu(\{\phi+\pi/3\})\,d\mu(\phi).
-$$
+```
 
 Thus no diffuse or singular-continuous part is omitted by the orbit decomposition.
 
 The physical train-crossing graphs are triangle-free. On the three atom vertices of one
 orbit, the weighted crossing graph is therefore triangle-free, so weighted Mantel gives
 
-$$
+```math
 E_r\le M_r^2/4.
-$$
+```
 
 This bound remains valid if one or two atom masses vanish.
 
@@ -72,59 +72,59 @@ This bound remains valid if one or two atom masses vanish.
 In the contradiction setup of the source, the `j`-th **fixed** subsequential limit has
 absolute atomic mass
 
-$$
+```math
 A_j=x_j\sigma_j
 \in[2s_2,2s_2+1/j].
-$$
+```
 
 Let `M_{j,r}` and `E_{j,r}` be its orbit masses and crossing masses. Then
 
-$$
+```math
 s_2^2
 =
 \sum_rE_{j,r}
 \le {1\over4}\sum_rM_{j,r}^2
 \le {A_j^2\over4}
 =s_2^2+O(1/j).
-$$
+```
 
 Hence
 
-$$
+```math
 A_j^2-\sum_rM_{j,r}^2=o_j(1).
-$$
+```
 
 This does force concentration in one orbit even if there are infinitely many positive
 orbits. Indeed, if
 
-$$
+```math
 m_j:=\max_rM_{j,r},
-$$
+```
 
 then
 
-$$
+```math
 \sum_rM_{j,r}^2\le m_jA_j,
-$$
+```
 
 so
 
-$$
+```math
 m_j\ge{\sum_rM_{j,r}^2\over A_j}=A_j-o_j(1).
-$$
+```
 
 Thus one orbit has
 
-$$
+```math
 M_j=2s_2-o_j(1),
-$$
+```
 
 and the total mass of all other orbits is `o_j(1)`. Their total crossing capacity is
 also `o_j(1)`, so the dominant orbit carries
 
-$$
+```math
 E_j=s_2^2-o_j(1).
-$$
+```
 
 No limit in `j` of the measures themselves is taken.
 
@@ -145,13 +145,13 @@ arcs converge along the source sequence realizing the `j`-th limit.
 It is therefore legitimate to choose one finite source, with diameter `D_j` as large as
 needed, satisfying simultaneously
 
-$$
+```math
 N_j/D_j=2s_2-o_j(1),
-$$
+```
 
-$$
+```math
 R_j^{orb}/D_j^2=s_2^2-o_j(1),
-$$
+```
 
 and Type-II normalized container errors `o_j(1)`. Choosing farther along each realizing
 sequence also ensures `D_j->infinity`.
@@ -166,21 +166,21 @@ measured on a finite source after the atom windows have been frozen.
 The complete stopped-train crossing graph is simple and triangle-free by audited §142.
 The induced graph on the selected window trains inherits both properties. From
 
-$$
+```math
 N_j=(2s_2-o_j(1))D_j
-$$
+```
 
 and
 
-$$
+```math
 e(G_j)=(s_2^2-o_j(1))D_j^2
-$$
+```
 
 we obtain
 
-$$
+```math
 e(G_j)=N_j^2/4-o(D_j^2).
-$$
+```
 
 Hence the elementary finite near-Mantel lemma from §153 applies directly. It supplies
 shores `X_j,Y_j` of size `s_2D_j+o(D_j)`, with only `o(D_j^2)` missing cross-shore
@@ -203,15 +203,15 @@ Thus every linearly populated window belongs, up to `o(D_j)` trains, to one shor
 There are only three windows and both shores have size `s_2D_j+o(D_j)`. Therefore at
 least one shore consists, up to `o(D_j)`, of a single window of size
 
-$$
+```math
 s_2D_j+o(D_j),
-$$
+```
 
 while the other shore contains a window of size at least
 
-$$
+```math
 (s_2/2)D_j+o(D_j).
-$$
+```
 
 The two windows are distinct members of one `pi/3` orbit, so their projective axes have
 acute separation exactly `pi/3`. Since the total cross-shore missing count is
@@ -227,19 +227,19 @@ theorem hold.
 
 The robust theorem forces
 
-$$
+```math
 {3\over2}s_2\le{2\over\sqrt3}.
-$$
+```
 
 But
 
-$$
+```math
 {3\over2}s_2
 =1.428469210295936\ldots,
 \qquad
 {2\over\sqrt3}
 =1.1547005383792517\ldots .
-$$
+```
 
 The margin is about `0.27377`, so no `o(D)` pruning or shrinking-window error can erase
 the contradiction.
@@ -253,21 +253,21 @@ propagation is algebraic.
 
 Audited §142 gives
 
-$$
+```math
 q/T\le2(1-\sigma),
-$$
+```
 
 hence
 
-$$
+```math
 (T-q/2)/D\ge x\sigma\ge2s_2+\eta_{grid}.
-$$
+```
 
 Using `T-q=2f-k` and `q/D<=pi+o(1)` gives
 
-$$
+```math
 (2f-k)/D\ge2s_2-\pi/2+\eta_{grid}-o(1).
-$$
+```
 
 Repeating the audited §146 elimination with this strengthened input adds exactly
 `(2/9)eta_grid` to the weighted diameter-edge floor. The coefficients of `d_H` and

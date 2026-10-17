@@ -49,36 +49,36 @@ if they share exactly the edge endpoints, the same-half-plane exclusion applies.
 
 Use the five labelled points
 
-$$
+```math
 A=(0,0),\quad B=(0,1),\quad
 D=(\sqrt3/2,1/2),\quad
 C=(\sqrt3/2,3/2),\quad
 E=(\sqrt3/2,-1/2).
-$$
+```
 
-Take the two cycles $A\!-\!B\!-\!C\!-\!D\!-\!A$ and
-$A\!-\!B\!-\!D\!-\!E\!-\!A$. Their squared pair distances are
+Take the two cycles $`A\!-\!B\!-\!C\!-\!D\!-\!A`$ and
+$`A\!-\!B\!-\!D\!-\!E\!-\!A`$. Their squared pair distances are
 
-$$
+```math
 |AB|^2=|AD|^2=|AE|^2=|BD|^2=|BC|^2=|CD|^2=|DE|^2=1,\quad
 |AC|^2=|BE|^2=3,\quad |CE|^2=4.
-$$
+```
 
 Thus the five points are unit-separated. Each cycle is a unit rhombus, the cycles
-share the edge $AB$ and the additional label $D$, and all three off-edge
-vertices $C,D,E$ lie in the same open half-plane bounded by $AB$. In the
-shared-edge parameterization from PR #972, the first cell has parameter $1/2$
-and the second has parameter $-1/2$; the lower vertex of the first is the
-upper vertex of the second, but both occurrences are the same source label $D$.
+share the edge $`AB`$ and the additional label $`D`$, and all three off-edge
+vertices $`C,D,E`$ lie in the same open half-plane bounded by $`AB`$. In the
+shared-edge parameterization from PR #972, the first cell has parameter $`1/2`$
+and the second has parameter $`-1/2`$; the lower vertex of the first is the
+upper vertex of the second, but both occurrences are the same source label $`D`$.
 So this is not a collision of distinct labels.
 
 The equality case in the original argument therefore does not always violate unit
 separation: it does so only when the coincident positions belong to distinct labels.
 The PR's statement that it always does is too broad.
 
-The finite fixture does not contradict the locking theorem. The common label $D$
+The finite fixture does not contradict the locking theorem. The common label $`D`$
 is a third noncollinear point shared by both cells, so after one cell is aligned,
-the neighboring cell cannot be reflected across $AB$ without moving $D$.
+the neighboring cell cannot be reflected across $`AB`$ without moving $`D`$.
 
 ### Corrected propagation proof
 
@@ -88,34 +88,34 @@ two diagonal squares sum to four, so nonincrease of both diagonals forces equali
 of both. Its four labels therefore have exactly the source coordinates up to an
 isometry.
 
-Now consider an adjacent cell sharing edge $AB$ with the aligned cell. A
-congruent labelled cell fixing $A,B$ has only two placements: its source placement
-and its reflection in the line $AB$.
+Now consider an adjacent cell sharing edge $`AB`$ with the aligned cell. A
+congruent labelled cell fixing $`A,B`$ has only two placements: its source placement
+and its reflection in the line $`AB`$.
 
-If the cycles share any additional label $X$, then $X$ lies off $AB$, since
+If the cycles share any additional label $`X`$, then $`X`$ lies off $`AB`$, since
 each four-cycle is a nondegenerate rhombus with distinct labels. The aligned cell
-already fixes $X$. Reflection in $AB$ changes its position, so the shared label
+already fixes $`X`$. Reflection in $`AB`$ changes its position, so the shared label
 forces the source placement.
 
-It remains to handle cycles sharing exactly $A,B$. Normalize $A=(0,0)$,
-$B=(0,1)$. For a unit rhombus on one side of $AB$, its two other vertices
+It remains to handle cycles sharing exactly $`A,B`$. Normalize $`A=(0,0)`$,
+$`B=(0,1)`$. For a unit rhombus on one side of $`AB`$, its two other vertices
 have the form
 
-$$
+```math
 v(t)=(\sqrt{1-t^2},t),\qquad v(t)+(0,1),
 \qquad -1/2\le t\le1/2.
-$$
+```
 
 The interval follows from unit separation between each off-edge vertex and the
-opposite endpoint of $AB$. Write $t=\sin\phi$; then
-$-\pi/6\le\phi\le\pi/6$, and
-$$
+opposite endpoint of $`AB`$. Write $`t=\sin\phi`$; then
+$`-\pi/6\le\phi\le\pi/6`$, and
+```math
 |v(t)-v(u)|=2\sin(|\phi-\psi|/2)\le1.
-$$
+```
 
-For two cells sharing only $A,B$, their lower vertices are distinct labels.
+For two cells sharing only $`A,B`$, their lower vertices are distinct labels.
 Unit separation rules out a strict inequality. Equality requires the two extreme
-parameters $-1/2,1/2$ (in either order); then the upper vertex of one cell
+parameters $`-1/2,1/2`$ (in either order); then the upper vertex of one cell
 coincides with the lower vertex of the other. Those are also distinct labels in
 this case, again contradicting unit separation. Hence two such cells cannot lie
 in the same half-plane. This applies both to the source cells and to the endpoint
@@ -156,9 +156,9 @@ overlap correction supplies no such extraction or move.
 
 | Regression/correction | Result | Exact hypothesis or failure |
 | --- | --- | --- |
-| Five-point same-side overlap | Pass | Two distinct unit rhombi share edge $AB$ and label $D$; all pair distances are at least one. |
-| Distinct-label equality collision in the edge-only case | Pass analytically | At parameters $-1/2,1/2$, the coincident off-edge positions carry distinct labels when the cells share only $A,B$. |
-| Extra-label orientation pin | Pass analytically | A shared off-edge label changes position under reflection across $AB$. |
+| Five-point same-side overlap | Pass | Two distinct unit rhombi share edge $`AB`$ and label $`D`$; all pair distances are at least one. |
+| Distinct-label equality collision in the edge-only case | Pass analytically | At parameters $`-1/2,1/2`$, the coincident off-edge positions carry distinct labels when the cells share only $`A,B`$. |
+| Extra-label orientation pin | Pass analytically | A shared off-edge label changes position under reflection across $`AB`$. |
 
 ## 7. Literature imports
 
@@ -167,13 +167,13 @@ None.
 ## 8. Computation
 
 The new script `research/verify_seed090_shared_edge_overlap_audit.py` uses exact
-rational coefficients in $\mathbb Q(\sqrt3)$ to enumerate all ten pair distances,
+rational coefficients in $`\mathbb Q(\sqrt3)`$ to enumerate all ten pair distances,
 check both four-cycles' unit sides and diagonals, and verify the shared-label and
 same-half-plane conditions. Its output confirms this one finite regression only;
 the corrected propagation theorem is proved analytically above.
 
 The PR's `research/verify_seed090_rhombus_contraction.py` was also rerun at its
-head. It passed its exact fixtures for $m=24,40,64$, including 46,360,
+head. It passed its exact fixtures for $`m=24,40,64`$, including 46,360,
 1,081,185, and 10,208,421 pair checks respectively. That script is the candidate's
 own verifier, not an independent implementation, and its finite runs do not prove
 the all-size statements.

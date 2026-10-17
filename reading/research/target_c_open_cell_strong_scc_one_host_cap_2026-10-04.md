@@ -15,58 +15,58 @@ LEVEL I STATUS: STILL OPEN. C-II REMAINS OPEN.
 This note stays entirely inside the nonconstant open-witness-cell strong-SCC Target C route.
 
 Current main proves that the strong branch has a common maximal staircase of m nonempty actual-diameter support types, each with a physical representative of each strict transverse sign, and that all support types contain one common selected cut c. Choose one representative of each sign over each support type. These are 2m distinct actual diameter bars. Every chosen bar crosses tau_c, so the physical graph F of the chosen bars is bipartite. Canonical C-WOODALL implies that this bipartite diameter subgraph is a forest. Hence
-$$
+```math
 |V(F)|=2m+c(F)\ge 2m+1. \tag{1}
-$$
+```
 
 For the retained complete O--O rectangle, current main gives four disjoint resolved outer-boundary host intervals in cyclic order
-$$
+```math
 I_A^+,\ I_B^+,\ I_A^-,\ I_B^- . \tag{2}
-$$
+```
 The endpoint resolution is away from source vertices. Every actual diameter endpoint is an extreme source-hull vertex, so every vertex of F belongs to exactly one host interval. Therefore one host X_* contains at least
-$$
+```math
 \boxed{r_*:=|V(F)\cap X_*|\ge\left\lceil{2m+1\over4}\right\rceil} . \tag{3}
-$$
+```
 
 Let Q_*=V(F)\cap X_* and C_*=\operatorname{conv}Q_*. The diameter-endpoint capacity theorem already on main is independent of threshold phase. For r>=8 distinct actual diameter endpoints in a unit-separated diameter-D source it gives
-$$
+```math
 \operatorname{width}(C)>{r^2\over256(D+r)}, \tag{4}
-$$
-$$
+```
+```math
 \operatorname{area}(C)>{r^4\over2\cdot256^2(D+r)^2}. \tag{5}
-$$
+```
 Thus, for m>=14,
-$$
+```math
 \boxed{\operatorname{width}(C_*)>{r_*^2\over256(D+r_*)}}, \tag{6}
-$$
-$$
+```
+```math
 \boxed{\operatorname{area}(C_*)>{r_*^4\over2\cdot256^2(D+r_*)^2}} . \tag{7}
-$$
+```
 
 For the global minimum-diameter source, the same current-main theorem gives
-$$
+```math
 \boxed{|P\cap C_*|>{2\over\sqrt3}\operatorname{area}(C_*)-2\pi D+1}. \tag{8}
-$$
+```
 The population is full-source population; contact-isolated points are retained.
 
 The current complete-grid extraction gives
-$$
+```math
 m\ge(c_*-o(1))D,\qquad
 c_*={\kappa^4\over16\pi^3 C_KM_K}>0. \tag{9}
-$$
+```
 Put rho=c_*/2. Then r_*/D>=rho-o(1), and (6)--(8) imply
-$$
+```math
 \boxed{\liminf{\operatorname{width}(C_*)\over D}
 \ge{\rho^2\over256(1+\rho)}>0}, \tag{10}
-$$
-$$
+```
+```math
 \boxed{\liminf{\operatorname{area}(C_*)\over D^2}
 \ge{\rho^4\over2\cdot256^2(1+\rho)^2}>0}, \tag{11}
-$$
-$$
+```
+```math
 \boxed{\liminf{|P\cap C_*|\over D^2}
 \ge{\rho^4\over\sqrt3\,256^2(1+\rho)^2}>0}. \tag{12}
-$$
+```
 
 Therefore every sufficiently large strong nonconstant open-cell survivor has one complete-grid host containing Omega(D) distinct actual diameter endpoints, whose convex hull has macroscopic width, quadratic area, and quadratic full-source population.
 

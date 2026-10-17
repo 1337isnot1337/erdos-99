@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_kkt_polar_polygon_2026-09-09.md) · source SHA-256 `b67a9ea017706e7dcae94e08a42952af145ed92e0118e76c3fb73d16d77a95f4`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-4CF928B28A87","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — the cyclic `d_H=0` KKT polytope is an exact polar polygon
 
@@ -18,25 +20,26 @@ EZ proves that the unique-cycle beta functionals are represented by the vertices
 
 Let the unique diameter cycle have odd length `r`, with cycle edges in ordinary cycle/projective order
 
-$$
+```math
 h_{t_0},h_{t_1},\ldots,h_{t_{r-1}}.
-$$
+```
 
 In the signed stress coordinates `(A,c in R^2)` from EZ,
 
-$$
+```math
 D^2\beta_{t_i}=A-c\cdot K_i.
-$$
+```
 
 Then the complete nonnegative equilibrium-stress cone is exactly
 
-$$
+```math
 \boxed{
 \mathcal C
 =
 \{(A,c):A-c\cdot K_i\ge0\text{ for every }i\}.
 }
 \tag{PP.1}
+```
 
 No additional contact or pendant-diameter inequality cuts this cone.
 
@@ -50,12 +53,13 @@ Consequently:
 
 Thus the extreme zero pairs are exactly
 
-\[
+```math
 \boxed{
 \{h_{t_i},h_{t_{i+2}}\}
 \qquad(i\in\mathbb Z/r\mathbb Z).
 }
 \tag{PP.2}
+```
 
 For `r>=5`, the two deleted cycle edges are nonadjacent and have exactly one cycle edge between them. For `r=3`, PP.2 gives the three possible pairs of triangle edges.
 
@@ -67,25 +71,27 @@ This completely determines the combinatorics of the two-dimensional normalized K
 
 EZ parametrizes the full three-dimensional signed equilibrium-stress space by `(A,c_x,c_y)` and associates a strictly convex polygon
 
-\[
+```math
 K=\operatorname{conv}\{K_0,\ldots,K_{r-1}\}
-$$
+```
 
 to the unique-cycle diameter coordinates, with
 
-$$
+```math
 \boxed{
 D^2\beta_{t_i}=A-c\cdot K_i.
 }
 \tag{1.1}
+```
 
 Define the cycle halfspace cone
 
-\[
+```math
 \mathcal C_{cyc}
 :=
 \{(A,c):A\ge c\cdot K_i\text{ for all }i\}.
 \tag{1.2}
+```
 
 The actual nonnegative KKT cone `C` is contained in `C_cyc`, because every KKT stress has nonnegative cycle coefficients.
 
@@ -97,26 +103,26 @@ AS supplies the uniform full-support stress `x_0`, which lies strictly inside th
 
 ### Theorem PP.1
 
-\[
+```math
 \boxed{\mathcal C=\mathcal C_{cyc}.}
-$$
+```
 
 ### Proof
 
 Suppose otherwise. Choose
 
-$$
+```math
 x\in\mathcal C_{cyc}\setminus\mathcal C.
-$$
+```
 
 At least one contact coefficient or pendant-diameter coefficient of `x` is negative.
 
 Consider the segment
 
-$$
+```math
 x(s)=(1-s)x_0+s x,
 \qquad0\le s\le1.
-$$
+```
 
 Every cycle coefficient stays nonnegative along the whole segment because `C_cyc` is convex. At `s=0`, every coefficient is strictly positive.
 
@@ -143,34 +149,34 @@ This argument also explains why contact positivity, although essential mechanica
 
 EZ proves every `K_i` is a vertex of the strictly convex polygon `K`. Therefore each `K_i` is exposed: there is a vector `c_i` such that
 
-$$
+```math
 c_i\cdot K_i
 >
 c_i\cdot K_j
 \qquad(j\ne i).
-$$
+```
 
 Set
 
-$$
+```math
 A_i=c_i\cdot K_i.
-$$
+```
 
 Then `(A_i,c_i)` belongs to `C_cyc=C` and satisfies
 
-$$
+```math
 A_i-c_i\cdot K_i=0,
-$$
+```
 
 while every other cycle inequality is strict.
 
 Hence
 
-$$
+```math
 \boxed{
 \beta_{t_i}=0
 }
-$$
+```
 
 defines a two-dimensional facet of the three-dimensional KKT cone for every `i`.
 
@@ -182,15 +188,15 @@ Thus every actual unique-cycle diameter edge can be switched off somewhere on th
 
 Equation PP.1 is the epigraph cone of the support function of `K`:
 
-$$
+```math
 A\ge h_K(c).
-$$
+```
 
 Choose any strictly positive normalization functional on the nonzero KKT cone, for example
 
-$$
+```math
 \sum_{h\in H}\beta_h=1.
-$$
+```
 
 Its affine section is the normalized KKT polytope `S`. Since the section intersects every ray exactly once, `S` has the same face lattice as the projectivized cone.
 
@@ -198,7 +204,7 @@ The cone has one facet for every vertex of `K`. Its extreme rays occur when two 
 
 In particular
 
-$$
+```math
 \boxed{
 \#\operatorname{vert}(\mathcal S)
 =
@@ -206,6 +212,7 @@ $$
 =r.
 }
 \tag{4.1}
+```
 
 No genericity assumption is involved; strict convexity of `K` gives the exact simple-polygon face lattice.
 
@@ -215,26 +222,26 @@ No genericity assumption is involved; strict convexity of `K` gives the exact si
 
 EZ proves that the boundary order of the `K` vertices is
 
-\[
+```math
 K_i,
 K_{i+2},
 K_{i+4},\ldots
 \tag{5.1}
-$$
+```
 
 with indices modulo the odd integer `r`.
 
 Adjacent facets of the polar stress polygon therefore correspond to the pair
 
-$$
+```math
 K_i,K_{i+2}.
-$$
+```
 
 At their intersection ray,
 
-$$
+```math
 \beta_{t_i}=\beta_{t_{i+2}}=0.
-$$
+```
 
 EZ excludes every third zero coordinate. Hence:
 
@@ -242,11 +249,12 @@ EZ excludes every third zero coordinate. Hence:
 
 The `r` normalized KKT extremes are indexed by `i in Z/rZ`. Extreme `s_i` has
 
-$$
+```math
 \boxed{
 Z(s_i)=\{h_{t_i},h_{t_{i+2}}\}.
 }
 \tag{5.2}
+```
 
 No other zero pair occurs.
 
@@ -260,9 +268,9 @@ Deleting `h_{t_i}` and `h_{t_{i+2}}` from the connected unicyclic diameter graph
 
 For `r>=5`, one component contains the one-edge cycle segment
 
-\[
+```math
 h_{t_{i+1}}
-$$
+```
 
 and its two cycle endpoints, together with all pendant diameter leaves attached to those two endpoints. The other component contains the complementary `r-3` cycle edges and their pendant leaves.
 
@@ -278,13 +286,13 @@ For `r=3`, deleting two triangle edges leaves the third cycle edge; selected edg
 
 Every extreme stress still satisfies CG:
 
-$$
+```math
 \Omega_s\succeq0,
 \qquad
 \ker\Omega_s=\operatorname{span}\{1,P_x,P_y\},
 \qquad
 \operatorname{rank}\Omega_s=q-3.
-$$
+```
 
 EZ gives that its mixed support is an actual-coordinate rigidity circuit with `2q-2` rows.
 

@@ -39,11 +39,11 @@ only the nonisolated positive-contact core. Write P for its planar coordinate
 matrix, C,H for its full actual core supports, and choose a relative-interior
 normalized stress with every α_e,β_h positive. The canonical inputs are
 
-$$
+```math
  \Omega=L_C(\alpha)-L_H(\beta)\succeq0,\quad
  \Omega P=0,\quad \Omega\mathbf1=0,\quad
  \ker\Omega=\operatorname{span}\{\mathbf1,P_x,P_y\},             \tag{1}
-$$
+```
 
 and mixed rigidity rank 2|V|−3. P spans the plane and has distinct points.
 These are assertions on V; no affine-kernel claim is made for contact isolates.
@@ -58,9 +58,9 @@ fails global minimality and the large-source geometry hypotheses.
 Put A=[1 P_x P_y]. For nonempty S⊆V, let T=V\S and A_S be the corresponding
 row restriction. Then
 
-$$
+```math
  \boxed{\operatorname{nullity}\Omega_{TT}=3-\operatorname{rank}A_S.} \tag{2}
-$$
+```
 
 More precisely its kernel consists of restrictions to T of the affine scalar
 functions vanishing on S.
@@ -118,9 +118,9 @@ diameter need not end in S. Let δ_K be the graph diameter of K.
 
 **Theorem CP.4 (sharp local diameter-incidence budget).**
 
-$$
+```math
  \boxed{\delta_K\le 2s+h_W-e_{SS}-3.}                   \tag{7}
-$$
+```
 
 **Proof.** Restrict the full mixed rigidity rows to velocity columns of W.
 They have rank 2w: a pinned flex extends by zero outside W to a mixed flex
@@ -130,16 +130,16 @@ Write e_W for the number of contact rows incident to W. The full positive
 equilibrium stress restricts to a row dependence with a nonzero coefficient
 on every one of these e_W+h_W rows. Hence
 
-$$
+```math
  e_W+h_W\ge2w+1.
-$$
+```
 
 The induced contact graph K has w+s vertices and e_W+e_SS edges. The
 canonical triangle-free penny-graph diameter bound gives
 
-$$
+```math
  e_W+e_{SS}\le2(w+s)-\delta_K-2.
-$$
+```
 
 Eliminating e_W proves (7). ∎
 
@@ -150,9 +150,9 @@ currency, with the one-row surplus supplied by the full nonzero stress.
 For b=2s+h_W−e_SS−3, Euclidean diameter of W∪S is at most b. The finite
 Oler inequality, isodiametric area bound and perimeter bound therefore give
 
-$$
+```math
  \boxed{w+s\le {\pi\over2\sqrt3}b^2+{\pi\over2}b+1.}     \tag{8}
-$$
+```
 
 If h_W=0, this gives diameter at most 2s−e_SS−3, improving the older
 3s−1 attachment-diameter estimate under the canonical ZF normalization.
@@ -167,18 +167,18 @@ Let Δ_D be the canonical §58 FS.5 maximum actual diameter degree, so
 to W. Then h_W≤tΔ_D, even if a bar has both endpoints in the hub set.
 Equations (7)–(8) show
 
-$$
+```math
  s+t\Delta_D=o(D)\quad\Longrightarrow\quad w=o(D^2).     \tag{9}
-$$
+```
 
 Thus a quadratic positive-contact island with finitely many such hubs needs
 linearly many actual contact attachment vertices. More generally, if w≥cD²
 for fixed c>0, then
 
-$$
+```math
  \liminf {2s+t\Delta_D\over D}
  \ge\sqrt{{2\sqrt3\,c\over\pi}}.                       \tag{10}
-$$
+```
 
 Indeed (8), divided by D², contradicts any smaller subsequential coefficient.
 No multiplier floor or asymptotic conversion of o(D²) into o(D) is used.
@@ -197,27 +197,27 @@ least positive eigenvalue of Ω. The hypotheses imply |V|>3 and f is nonaffine.
 
 **Theorem CP.3.** With δ_H(W) the actual diameters crossing the source cut,
 
-$$
+```math
  \boxed{-\sum_{ij\in\delta_H(W)}\beta_{ij}y_i y_j
  =f^T\Omega f
  \ge\lambda_+\|(I-\Pi)f\|^2>0.}                         \tag{3}
-$$
+```
 
 Consequently at least one crossing actual diameter has endpoints strictly on
 opposite sides of L, neither on L. If X denotes all such crossing diameters,
 
-$$
+```math
  \boxed{\sum_{h\in X}\beta_h
  \ge{4\lambda_+\over D^2}\|(I-\Pi)f\|^2>0.}             \tag{4}
-$$
+```
 
 **Proof.** For signed edge weights ω=α on C and ω=−β on H, the scalar
 equilibrium Ωy=0, multiplied by y_i and summed over i∈W, gives
 
-$$
+```math
  0=\sum_{ij\in E[W]}\omega_{ij}(y_i-y_j)^2
    +\sum_{i\in W,j\notin W}\omega_{ij}y_i(y_i-y_j).
-$$
+```
 
 Subtract this from the quadratic-form expansion for f to obtain the exact cut
 identity fᵀΩf=Σ_cut ω_ij y_i y_j. Every crossing contact has y_j=0,
@@ -252,9 +252,9 @@ family of global minimizers.
 
 For k≥2 let
 
-$$
+```math
  a={\pi\over3k},\qquad D={1\over2\sin(a/2)}.
-$$
+```
 
 Take three carriers B_0,B_1,B_2 forming an equilateral triangle of side D.
 On the radius-D minor circular arc centered at B_i between the other two
@@ -272,17 +272,17 @@ distance is nondecreasing separately in s and t: in coordinates with the
 common carrier 0 and the other carriers D(1,0),D(1/2,√3/2), differentiation
 in s gives
 
-$$
+```math
  {\partial\over\partial s}|x(s)-z(t)|^2
  =4D^2\sin(s+t/2)\sin((\pi/3-t)/2)\ge0.                 \tag{5}
-$$
+```
 
 If both points are interior, s,t≥a, their distance is at least the distance
 between the two neighbors of the common carrier:
 
-$$
+```math
  2\sin(\pi/3-a/2)\ge\sqrt2>1.
-$$
+```
 
 If one is the common carrier, only its immediately adjacent chord is unit.
 Thus C is exactly a cycle of length 3k and is triangle-free. The Reuleaux
@@ -299,12 +299,12 @@ vertex, the two contact reactions sum to D⁻² times its outward diameter
 vector. At a carrier, the two incident contact vectors sum in the radial
 direction with magnitude 2cos(π/3−a/2). The diameter reaction has magnitude
 
-$$
+```math
  D^{-1}\left[\sqrt3+
  {\sin((k-1)a/2)\over\sin(a/2)}\right]
  =2\sqrt3\sin(a/2)+2\sin(\pi/6-a/2)
  =2\cos(\pi/3-a/2).
-$$
+```
 
 Hence all vertex equilibrium rows hold and every actual coefficient is
 positive. Scaling by D²/(3k) normalizes Σ_H β=1 and Σ_C α=D².
@@ -313,9 +313,9 @@ Ground Ω on the three carriers. Its interior principal matrix has three
 independent (k−1)-by-(k−1) tridiagonal blocks, with diagonal 2cos a and
 off-diagonal −1. Their eigenvalues are
 
-$$
+```math
  2\cos a-2\cos(j\pi/k)>0,\quad j=1,\ldots,k-1.          \tag{6}
-$$
+```
 
 The grounded matrix is positive definite. Its carrier Schur complement
 annihilates the three independent carrier restrictions of 1,P_x,P_y, by

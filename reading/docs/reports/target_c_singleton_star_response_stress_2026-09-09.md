@@ -18,9 +18,9 @@
 
 ESN shows that a sequence attempting to approach the ENS pinned/contact threshold has
 
-$$
+```math
 (1.03693311957\ldots)D+o(D)
-$$
+```
 
 singleton unloaded contact components, all but `o(D)` of them incident to exactly three loaded contacts. Cardinality alone does not control response: a priori all those stars could carry arbitrarily small conductances.
 
@@ -28,47 +28,47 @@ The local equilibrium of a singleton gives an exact quantitative bridge from mec
 
 Let `x` be any unloaded singleton component. Let its loaded neighbors be
 
-$$
+```math
 b_1,\ldots,b_m\in B_+,
-$$
+```
 
 with positive contact stresses
 
-$$
+```math
 \alpha_1,\ldots,\alpha_m>0,
 \qquad |b_i-x|=1.
-$$
+```
 
 Put
 
-$$
+```math
 S_x:=\sum_i\alpha_i.
-$$
+```
 
 Eliminating `x` from this star produces pair response conductances
 
-$$
+```math
 c^{(x)}_{ij}=\frac{\alpha_i\alpha_j}{S_x}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \sum_{i<j}c^{(x)}_{ij}\ge\frac{S_x}{4}.
 }
 \tag{SSR.1}
-$$
+```
 
 Every pair of loaded neighbors satisfies
 
-$$
+```math
 |b_i-b_j|\le2.
-$$
+```
 
 Consequently the C41 diameter-defect trace pays
 
-$$
+```math
 \boxed{
 E_x
 :=\sum_{i<j}c^{(x)}_{ij}\bigl(D^2-|b_i-b_j|^2\bigr)
@@ -76,29 +76,29 @@ E_x
 \frac{D^2-4}{4}S_x.
 }
 \tag{SSR.2}
-$$
+```
 
 If `S_sing` is the total contact-stress mass on all unloaded singleton components, then
 
-$$
+```math
 \boxed{
 \operatorname{tr}(\Lambda-L_H)
 \ge
 \frac12\left(1-\frac4{D^2}\right)S_{sing}.
 }
 \tag{SSR.3}
-$$
+```
 
 Equivalently, with the C41 response defect
 
-$$
+```math
 \varepsilon:=\sum_{b<k}c_{bk}-1
 =\frac12\operatorname{tr}(\Lambda-L_H),
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{
 S_{sing}
 \le
@@ -106,14 +106,14 @@ S_{sing}
 \qquad(D>2).
 }
 \tag{SSR.4}
-$$
+```
 
 Thus the linear singleton population exposed by ESN cannot hide mechanically significant stress in the small-response-defect phase. If `D epsilon ->0`, then
 
-$$
+```math
 \boxed{S_{sing}=o(1/D).}
 \tag{SSR.5}
-$$
+```
 
 The remaining `D^2-o(1/D)` contact stress must then lie on the non-singleton part of the contact core. Combined with ESN, where only one unloaded component has macroscopic graph diameter, this sharply localizes the mechanical branch that remains to be excluded.
 
@@ -123,36 +123,36 @@ The remaining `D^2-o(1/D)` contact stress must then lie on the non-singleton par
 
 At the unloaded singleton `x`, KKT equilibrium has no diameter reaction and reads
 
-$$
+```math
 \sum_i\alpha_i(x-b_i)=0.
 \tag{1.1}
-$$
+```
 
 For each fixed `i`, rearrange:
 
-$$
+```math
 \alpha_i(x-b_i)
 =-\sum_{j\ne i}\alpha_j(x-b_j).
-$$
+```
 
 Every vector `x-b_j` has norm one. Taking norms and using the triangle inequality gives
 
-$$
+```math
 \alpha_i
 \le
 \sum_{j\ne i}\alpha_j
 =S_x-\alpha_i.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \alpha_i\le\frac{S_x}{2}
 \quad\text{for every }i.
 }
 \tag{SSR.6}
-$$
+```
 
 This uses only positive unloaded equilibrium and unit contact lengths. It does not assume `m=3`.
 
@@ -162,15 +162,15 @@ This uses only positive unloaded equilibrium and unit contact lengths. It does n
 
 The grounded Laplacian block of the singleton is the scalar `S_x`. Schur complementation therefore gives, for distinct loaded neighbors,
 
-$$
+```math
 \boxed{
 c^{(x)}_{ij}=\frac{\alpha_i\alpha_j}{S_x}.}
 \tag{SSR.7}
-$$
+```
 
 The total pair conductance is
 
-$$
+```math
 \begin{aligned}
 C_x
 &:=\sum_{i<j}c^{(x)}_{ij}\\
@@ -178,34 +178,34 @@ C_x
 &=\frac{S_x^2-\sum_i\alpha_i^2}{2S_x}.
 \end{aligned}
 \tag{2.1}
-$$
+```
 
 Normalize `p_i=alpha_i/S_x`. Then `p_i>=0`, `sum p_i=1`, and SSR.6 gives `p_i<=1/2`. Under these constraints,
 
-$$
+```math
 \sum_i p_i^2\le\frac12.
 \tag{2.2}
-$$
+```
 
 One proof is simply `p_i^2 <= p_i/2` termwise and summation. Thus
 
-$$
+```math
 C_x
 \ge
 \frac{S_x}{2}\left(1-\frac12\right)
 =\frac{S_x}{4},
-$$
+```
 
 which proves SSR.1.
 
 There is an independent energy check. The coordinate functions are harmonic at `x` by (1.1), so the star Dirichlet energy satisfies
 
-$$
+```math
 \sum_{i<j}c^{(x)}_{ij}|b_i-b_j|^2
 =\sum_i\alpha_i|x-b_i|^2
 =S_x.
 \tag{2.3}
-$$
+```
 
 Since `|b_i-b_j|<=2`, (2.3) also gives `C_x>=S_x/4` immediately.
 
@@ -215,28 +215,28 @@ Since `|b_i-b_j|<=2`, (2.3) also gives `C_x>=S_x/4` immediately.
 
 All loaded neighbors of `x` lie on the unit circle centered at `x`. Therefore
 
-$$
+```math
 \boxed{|b_i-b_j|\le2.}
 \tag{3.1}
-$$
+```
 
 For every sufficiently large Target C survivor, `D>2`, so these are strict non-diameter response pairs.
 
 The C41 component defect of the singleton is
 
-$$
+```math
 E_x
 =\sum_{i<j}c^{(x)}_{ij}
 \bigl(D^2-|b_i-b_j|^2\bigr).
-$$
+```
 
 By (3.1) and SSR.1,
 
-$$
+```math
 E_x
 \ge(D^2-4)C_x
 \ge\frac{D^2-4}{4}S_x.
-$$
+```
 
 This proves SSR.2.
 
@@ -246,36 +246,36 @@ This proves SSR.2.
 
 Different unloaded components have disjoint contact-edge sets. Let `X_sing` be the set of singleton unloaded components and define
 
-$$
+```math
 S_{sing}:=
 \sum_{x\in X_{sing}}S_x.
 \tag{4.1}
-$$
+```
 
 C41 decomposes the full response defect into nonnegative direct loaded-loaded and component contributions:
 
-$$
+```math
 \frac{D^2}{2}\operatorname{tr}(\Lambda-L_H)
 =(D^2-1)\sum_{bb'\in C[B_+]}\alpha_{bb'}
 +\sum_r E_r.
 \tag{4.2}
-$$
+```
 
 Discard every term except the singleton contributions and apply SSR.2:
 
-$$
+```math
 \frac{D^2}{2}\operatorname{tr}(\Lambda-L_H)
 \ge
 \frac{D^2-4}{4}S_{sing}.
-$$
+```
 
 Divide by `D^2/2` to obtain SSR.3.
 
 Since C41/C64 gives
 
-$$
+```math
 \operatorname{tr}(\Lambda-L_H)=2\varepsilon,
-$$
+```
 
 SSR.4 follows. If `D epsilon ->0`, then `epsilon=o(1/D)` and SSR.4 gives SSR.5.
 
@@ -297,20 +297,20 @@ SSR adds an orthogonal, weighted statement.
 
 Along any ESN-type sequence with
 
-$$
+```math
 D\varepsilon\to0,
-$$
+```
 
-$$
+```math
 \boxed{S_{sing}=o(1/D).}
 \tag{SSR.8}
-$$
+```
 
 Because normalized total contact stress is
 
-$$
+```math
 \sum_{e\in C}\alpha_e=D^2,
-$$
+```
 
 the singleton sea carries a vanishingly negligible fraction of mechanical stress despite containing `Theta(D)` components.
 
@@ -324,10 +324,10 @@ E43 is not needed for SSR itself. It improves the broader response split by maki
 
 In the C66 near-zero phase, where `D epsilon ->0`, SSR.8 gives an especially strong weighted collapse: all singleton contact stress is `o(1/D)`. This can be combined with C66's explicit nonstar diameter-weight bound from E43R,
 
-$$
+```math
 \sum_{h\not\ni z}\beta_h
 \le\frac{723\pi}{49}D\varepsilon,
-$$
+```
 
 to put both contact stress and diameter reaction into highly concentrated residual structures.
 

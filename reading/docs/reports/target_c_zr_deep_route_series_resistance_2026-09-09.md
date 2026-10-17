@@ -19,14 +19,14 @@ ZHC produces, in the bridge-dominant small-defect phase, one actual diameter pai
 
 The decisive observation is an exact effective-resistance comparison. Kron reduction preserves the effective resistance between retained terminals. Every physical contact bridge separating `a` and `b` is traversed by unit current in the unit `a`-to-`b` Thomson problem, so the sum of its electrical resistances `1/alpha_e` is a lower bound for the full effective resistance. In the reduced terminal network there is a direct conductance edge of weight `c_ab`, so the same effective resistance is at most `1/c_ab`. Therefore
 
-$$
+```math
 \boxed{
 \sum_{e\in P_{ab}}\frac1{\alpha_e}
 \le R_{\rm eff}(a,b)
 \le\frac1{c_{ab}}
 \le\frac1{c_{ab}^{(*)}}.
 }
-$$
+```
 
 For the ZHC pair this is `O(D)`. Since the route has `Omega(D)` bridges, a linear number of them have an absolute positive stress floor independent of `D`.
 
@@ -36,62 +36,62 @@ For the ZHC pair this is `O(D)`. Since the route has `Omega(D)` bridges, a linea
 
 Fix `eta in (0,1]`. Work along a hypothetical sequence of sufficiently large lexicographically normalized triangle-free C-II survivors satisfying
 
-$$
+```math
 S_{br}\ge\eta D^2,
 \qquad
 D\varepsilon\to0,
 \tag{1.1}
-$$
+```
 
 where
 
-$$
+```math
 \varepsilon=\frac12\operatorname{tr}(\Lambda-L_H).
-$$
+```
 
 Define
 
-$$
+```math
 p_\eta:=\frac{\eta}{4\pi-\eta}.
 \tag{1.2}
-$$
+```
 
 ZHC gives, for all sufficiently large members of the sequence, one unloaded harmonic component `I_*`, attachment set `A_*`, and one actual diameter pair
 
-$$
+```math
 g_*=ab\in H,
 \qquad a,b\in A_*,
 \qquad |a-b|=D,
 \tag{1.3}
-$$
+```
 
 such that
 
-$$
+```math
 c_{ab}^{(*)}\ge\frac{p_\eta}{36\pi D},
 \tag{1.4}
-$$
+```
 
-$$
+```math
 \beta_{ab}\ge\frac{p_\eta}{72\pi D},
 \tag{1.5}
-$$
+```
 
 and its contact bridge-block-tree route contains
 
-$$
+```math
 L:=|P_{ab}|=\ell(ab)\ge\frac{\eta D}{2}
 \tag{1.6}
-$$
+```
 
 physical contact bridges. ZHC also proves that every one of these bridges lies in the closure `E_*` of the same harmonic cell.
 
 Here `c_ab^(*)` is the contribution of `I_*` to the full terminal response conductance. Hence
 
-$$
+```math
 c_{ab}\ge c_{ab}^{(*)}>0.
 \tag{1.7}
-$$
+```
 
 ---
 
@@ -101,13 +101,13 @@ $$
 
 Let `G` be any finite connected positive-conductance network and let `a,b` be two vertices. Suppose `P` is a collection of physical bridge edges of `G`, each of which separates `a` from `b`. If the conductance of bridge `e` is `alpha_e`, then
 
-$$
+```math
 \boxed{
 \sum_{e\in P}\frac1{\alpha_e}
 \le R_{\rm eff}^G(a,b).
 }
 \tag{ZSR.1}
-$$
+```
 
 #### Proof
 
@@ -115,9 +115,9 @@ Use Thomson's principle with one unit of current injected at `a` and removed at 
 
 If `e` is a physical bridge separating `a` from `b`, deleting `e` gives two components, one containing `a` and the other containing `b`. Conservation of current on the `a`-side forces the net current through the unique cut edge `e` to be exactly one. Therefore the Dirichlet/Thomson energy spent on `e` is exactly
 
-$$
+```math
 \frac{1^2}{\alpha_e}=\frac1{\alpha_e}.
-$$
+```
 
 The bridge edges in `P` are distinct. The total energy of the unit current is therefore at least the sum of these bridge energies. Minimizing over unit flows gives (ZSR.1). `square`
 
@@ -125,14 +125,14 @@ The bridge edges in `P` are distinct. The total energy of the unit current is th
 
 Let `Lambda` be the Kron response of the same network on any retained terminal set containing `a,b`, and write `c_ab=-Lambda_ab`. Then
 
-$$
+```math
 \boxed{
 R_{\rm eff}^G(a,b)
 =R_{\rm eff}^{\Lambda}(a,b)
 \le\frac1{c_{ab}}.
 }
 \tag{ZSR.2}
-$$
+```
 
 #### Proof
 
@@ -140,15 +140,15 @@ Schur/Kron reduction preserves effective resistance between retained vertices. T
 
 In that reduced network, the single direct edge `ab` of conductance `c_ab` is one admissible `a`-to-`b` route. Deleting all other reduced edges can only increase effective resistance by Rayleigh monotonicity, and the one-edge network has resistance `1/c_ab`. Hence
 
-$$
+```math
 R_{\rm eff}^{\Lambda}(a,b)\le1/c_{ab}.
-$$
+```
 
 This proves ZSR.2. `square`
 
 Combining the two lemmas gives the exact bridge-route inequality
 
-$$
+```math
 \boxed{
 \sum_{e\in P_{ab}}\frac1{\alpha_e}
 \le R_{\rm eff}(a,b)
@@ -156,7 +156,7 @@ $$
 \le\frac1{c_{ab}^{(*)}}.
 }
 \tag{ZSR.3}
-$$
+```
 
 No small-defect assumption is used in ZSR.1--ZSR.3; the small-defect phase enters only to supply the quantitative ZHC pair.
 
@@ -166,69 +166,69 @@ No small-defect assumption is used in ZSR.1--ZSR.3; the small-defect phase enter
 
 Insert ZHC's bound (1.4) into ZSR.3:
 
-$$
+```math
 \boxed{
 \sum_{e\in P_{ab}}\frac1{\alpha_e}
 \le\frac{36\pi}{p_\eta}D.
 }
 \tag{ZSR.4}
-$$
+```
 
 Thus the `L>=eta D/2` bridge stresses have harmonic mean at least
 
-$$
+```math
 \frac{L}{\sum_{e\in P_{ab}}1/\alpha_e}
 \ge
 \frac{p_\eta L}{36\pi D}
 \ge
 \boxed{\frac{p_\eta\eta}{72\pi}}.
 \tag{ZSR.5}
-$$
+```
 
 This already rules out a deep route whose bridge stresses all tend to zero.
 
 A stronger counting form is convenient. Put
 
-$$
+```math
 \tau_\eta:=\frac{p_\eta\eta}{144\pi}.
 \tag{1.8}
-$$
+```
 
 Let
 
-$$
+```math
 N_{\rm low}
 =|\{e\in P_{ab}:\alpha_e<\tau_\eta\}|.
-$$
+```
 
 Each low-stress bridge contributes more than `1/tau_eta` to the left side of ZSR.4. Hence
 
-$$
+```math
 \frac{N_{\rm low}}{\tau_\eta}
 <\frac{36\pi}{p_\eta}D,
-$$
+```
 
 so
 
-$$
+```math
 N_{\rm low}<\frac{\eta D}{4}.
 \tag{ZSR.6}
-$$
+```
 
 Since `L>=eta D/2`, at least
 
-$$
+```math
 \boxed{
 N_{\rm abs}
 :=|\{e\in P_{ab}:\alpha_e\ge\tau_\eta\}|
 \ge\frac{\eta D}{4}
 }
 \tag{ZSR.7}
-$$
+```
 
 route bridges have the absolute stress floor
 
-$$
+```math
 \boxed{
 \alpha_e\ge
 \tau_\eta
@@ -236,13 +236,13 @@ $$
 =\frac{\eta^2}{144\pi(4\pi-\eta)}.
 }
 \tag{ZSR.8}
-$$
+```
 
 All of these bridges lie in the closure of the same unloaded harmonic cell `I_*`, and because they lie on one bridge-tree route they form one nested chain of cuts separating the same diameter pair `a,b`.
 
 Consequently the same route carries at least linear total contact stress:
 
-$$
+```math
 \boxed{
 \sum_{e\in P_{ab}}\alpha_e
 \ge
@@ -251,7 +251,7 @@ N_{\rm abs}\tau_\eta
 \frac{p_\eta\eta^2}{576\pi}D.
 }
 \tag{ZSR.9}
-$$
+```
 
 The stronger fact is not the `Omega(D)` total, which is small compared with the global `D^2` normalization; it is the existence of `Omega(D)` individually nonvanishing bridge stresses on one concrete diameter route.
 

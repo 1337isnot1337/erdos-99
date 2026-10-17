@@ -18,40 +18,40 @@ LEVEL I STATUS: STILL OPEN
 
 Write
 
-$$
+```math
 m=ru,
 \qquad r=2^k,
 \qquad u\text{ odd}.
-$$
+```
 
 For a hypothetical P1 survivor let
 
-$$
+```math
 z=e^{i\delta}
-$$
+```
 
 be the physical root, let `M(Z)` be its monic minimal polynomial over `Q`, and put
 
-$$
+```math
 F_m(Z)=Z^{2m}+4Z^{m+1}-6Z^m+4Z^{m-1}+1.
-$$
+```
 
 The P1 geometry and Littlewood closure give
 
-$$
+```math
 M\mid F_m,
 \qquad
 M\mid P,
 \qquad
 P(Z)=\sum_{j=0}^{m-1}\varepsilon_jZ^j,
 \quad \varepsilon_j\in\{\pm1\}.
-$$
+```
 
 Hence modulo two
 
-$$
+```math
 \overline M\mid S_m(Z):=1+Z+\cdots+Z^{m-1}.
-$$
+```
 
 PR #152 already proves that `Z+1` does not divide `bar M` and therefore every residue root of `M` has nontrivial odd order dividing `u`.
 
@@ -61,28 +61,28 @@ The new theorem determines the multiplicity of every residue block except the or
 
 Let
 
-$$
+```math
 \phi(Z)\in\mathbf F_2[Z]
-$$
+```
 
 be a monic irreducible factor of `S_u(Z)` whose roots have odd order `t>1`, with
 
-$$
+```math
 t\ne3.
-$$
+```
 
 If
 
-$$
+```math
 \phi\mid\overline M,
-$$
+```
 
 then in fact
 
-$$
+```math
 \boxed{\phi^r\parallel\overline M.}
 \tag{NRS.1}
-$$
+```
 
 Moreover the corresponding local factor of `M` is totally ramified of exact ramification index `r` over the unramified residue extension defined by `phi`.
 
@@ -90,30 +90,30 @@ Thus a hypothetical P1 factor cannot use part of a nonzero non-order-three resid
 
 In particular, if
 
-$$
+```math
 3\nmid u,
-$$
+```
 
 then there is a squarefree self-reciprocal divisor
 
-$$
+```math
 B(Z)\mid S_u(Z),
 \qquad Z+1\nmid B,
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{\overline M(Z)=B(Z)^r.}
 \tag{NRS.2}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{\deg M=r\deg B,}
 \tag{NRS.3}
-$$
+```
 
 so the characteristic-zero degree is quantized in blocks of size `r` times complete mod-two reciprocal cyclotomic blocks.
 
@@ -125,35 +125,35 @@ This is strictly stronger than PR #152's residue localization. PR #152 says wher
 
 Since `m=ru` and `r` is a power of two, Frobenius gives in characteristic two
 
-$$
+```math
 Z^m-1=(Z^u-1)^r.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 S_m(Z)
 =(Z+1)^{r-1}S_u(Z)^r
 \quad\text{in }\mathbf F_2[Z].
 }
 \tag{2.1}
-$$
+```
 
 Because `u` is odd, `Z^u-1` is separable over `F_2`. Hence
 
-$$
+```math
 S_u(Z)=\frac{Z^u-1}{Z-1}
-$$
+```
 
 is squarefree and is coprime to `Z+1`.
 
 Thus every irreducible factor `phi` of `S_u` occurs in `S_m` with **exact** multiplicity
 
-$$
+```math
 \boxed r.
 \tag{2.2}
-$$
+```
 
 Since `M|P` over `Z` and `bar P=S_m`, every such factor can occur in `bar M` with multiplicity at most `r`.
 
@@ -165,12 +165,12 @@ The rest of the proof supplies the matching lower bound `r` whenever the factor 
 
 Use the exact reciprocal form
 
-$$
+```math
 \boxed{
 F_m(Z)=(Z^m+1)^2+4Z^{m-1}(Z-1)^2.
 }
 \tag{3.1}
-$$
+```
 
 We need one elementary congruence.
 
@@ -178,44 +178,44 @@ We need one elementary congruence.
 
 For every power of two `r` and every indeterminate `W`,
 
-$$
+```math
 \boxed{
 (W^r+1)^2\equiv(W+1)^{2r}\pmod4.
 }
 \tag{3.2}
-$$
+```
 
 #### Proof
 
 For `r=1` there is equality. Suppose the statement holds for `r`. Put `Y=W^r`. Then
 
-$$
+```math
 (Y^2+1)^2-(Y+1)^4
 =-4Y(Y^2+Y+1),
-$$
+```
 
 so
 
-$$
+```math
 (W^{2r}+1)^2\equiv(W^r+1)^4\pmod4.
-$$
+```
 
 Squaring the induction congruence preserves it modulo four, giving
 
-$$
+```math
 (W^r+1)^4\equiv(W+1)^{4r}\pmod4.
-$$
+```
 
 This is the claim for `2r`. `square`
 
 With `W=Z^u`, Lemma 3.1 gives
 
-$$
+```math
 \boxed{
 F_m(Z)\equiv(Z^u+1)^{2r}\pmod4.
 }
 \tag{3.3}
-$$
+```
 
 The second summand in (3.1) disappears modulo four.
 
@@ -225,44 +225,44 @@ The second summand in (3.1) disappears modulo four.
 
 Let `phi` be as in NRS and let
 
-$$
+```math
 f:=\deg\phi.
-$$
+```
 
 Choose a root
 
-$$
+```math
 \xi\in\mathbf F_{2^f}
-$$
+```
 
 of `phi`. Its multiplicative order is the odd integer `t|u`, with `t>1` and `t!=3`.
 
 Let `K/Q_2` be the unramified extension of degree `f` with residue field containing `xi`, and let
 
-$$
+```math
 \zeta\in\mathcal O_K
-$$
+```
 
 be the Teichmüller lift of `xi`. Then
 
-$$
+```math
 \zeta^t=1,
 \qquad
 \zeta^u=1,
 \qquad
 \zeta^m=1.
 \tag{4.1}
-$$
+```
 
 Set
 
-$$
+```math
 Z=\zeta+X.
-$$
+```
 
 The constant term of the local expansion is exact. By (3.1),
 
-$$
+```math
 \begin{aligned}
 F_m(\zeta)
 &=4+4\zeta^{m-1}(\zeta-1)^2\\
@@ -270,26 +270,26 @@ F_m(\zeta)
 &=4(\zeta+\zeta^{-1}-1).
 \end{aligned}
 \tag{4.2}
-$$
+```
 
 The residue of the parenthesis vanishes exactly when
 
-$$
+```math
 \xi+\xi^{-1}=1,
-$$
+```
 
 i.e.
 
-$$
+```math
 \xi^2+\xi+1=0,
-$$
+```
 
 which is exactly the order-three case. Since `t!=3`, the parenthesis is a 2-adic unit. Therefore
 
-$$
+```math
 \boxed{v_2(F_m(\zeta))=2.}
 \tag{NRS.4}
-$$
+```
 
 This is the only point at which the order-three residue is exceptional.
 
@@ -299,57 +299,58 @@ This is the only point at which the order-three residue is exceptional.
 
 Put
 
-$$
+```math
 g(X):=(\zeta+X)^u+1.
-$$
+```
 
 Since `zeta^u=1`,
 
-$$
+```math
 g(X)=2+XU(X),
 \qquad
 U(0)=u\zeta^{u-1}\in\mathcal O_K^\times.
 \tag{5.1}
-$$
+```
 
 Equation (3.3) remains valid after translation:
 
-$$
+```math
 F_m(\zeta+X)\equiv g(X)^{2r}\pmod4.
 \tag{5.2}
-$$
+```
 
 Expand
 
-$$
+```math
 g(X)^{2r}
 =\sum_{j=0}^{2r}
 \binom{2r}{j}2^{2r-j}X^jU(X)^j.
 \tag{5.3}
-$$
+```
 
 For every coefficient of degree `n<2r`, only terms with `j<=n` contribute.
 
 - If `j<=2r-2`, then the explicit factor `2^(2r-j)` is divisible by four.
 - If `j=2r-1`, its multiplier is
-  $$
+  ```math
   \binom{2r}{2r-1}2=4r,
-  $$
+  
+  ```
   again divisible by four.
 
 Hence every coefficient of
 
-$$
+```math
 X,X^2,\ldots,X^{2r-1}
-$$
+```
 
 in `g^(2r)` is divisible by four. By (5.2), the same is true for `F_m(zeta+X)`.
 
 For degree `2r`, the `j=2r` term contributes
 
-$$
+```math
 U(0)^{2r},
-$$
+```
 
 which is a unit modulo two; every contribution with smaller `j` is even. Thus the coefficient of `X^(2r)` in `F_m(zeta+X)` is a 2-adic unit.
 
@@ -361,17 +362,17 @@ Combine this with NRS.4:
 
 Therefore the lower Newton polygon begins with the single edge
 
-$$
+```math
 \boxed{(0,2)\longrightarrow(2r,0),}
 \tag{NRS.5}
-$$
+```
 
 whose slope is
 
-$$
+```math
 \boxed{-1/r.}
 \tag{NRS.6}
-$$
+```
 
 All subsequent coefficients are integral, so no later point lies below the horizontal ray starting at `(2r,0)`.
 
@@ -381,58 +382,58 @@ All subsequent coefficients are integral, so no later point lies below the horiz
 
 Every root of `F_m(zeta+X)` with positive `X`-valuation belonging to the Newton edge NRS.5 has
 
-$$
+```math
 v_2(X)=1/r.
-$$
+```
 
 If an irreducible factor over `K` contains such a root, the value group of the corresponding field extension contains `1/r`. Hence its ramification index, and therefore its degree over `K`, is divisible by `r`.
 
 Now assume
 
-$$
+```math
 \phi\mid\overline M.
-$$
+```
 
 Then some `K`-local factor of `M` contains a root reducing to `zeta`. Let its degree be `e`. The Newton edge gives
 
-$$
+```math
 \boxed{e\ge r.}
 \tag{6.1}
-$$
+```
 
 All roots of this local factor reduce to `zeta`, so its reduction is
 
-$$
+```math
 (Z-\xi)^e.
-$$
+```
 
 Applying the unramified Frobenius conjugates over `Q_2` shows that
 
-$$
+```math
 \boxed{\phi(Z)^e\mid\overline M(Z).}
 \tag{6.2}
-$$
+```
 
 But Section 2 gives the opposite multiplicity bound
 
-$$
+```math
 e\le r
-$$
+```
 
 because `bar M|S_m` and `phi` occurs exactly `r` times in `S_m`.
 
 Therefore
 
-$$
+```math
 \boxed{e=r.}
 \tag{6.3}
-$$
+```
 
 Equations (6.2)-(6.3) prove
 
-$$
+```math
 \phi^r\parallel\overline M.
-$$
+```
 
 They also show that the chosen local factor is totally ramified of exact ramification index `r` over the unramified residue extension. This proves NRS.1. `square`
 
@@ -442,21 +443,21 @@ They also show that the chosen local factor is totally ramified of exact ramific
 
 Assume now
 
-$$
+```math
 3\nmid u.
-$$
+```
 
 PR #152 excludes `Z+1` from `bar M`. Every remaining irreducible factor of `bar M` lies in the squarefree polynomial `S_u`, and none has order three. NRS therefore applies to every factor.
 
 Let `B` be the product of the distinct irreducible factors that occur. Then
 
-$$
+```math
 \overline M=B^r,
 \qquad
 B\mid S_u,
 \qquad
 B\text{ squarefree}.
-$$
+```
 
 The characteristic-zero polynomial `M` is reciprocal, so `bar M` is reciprocal. Since `r` is a power of two and `B` is squarefree, uniqueness of factorization forces `B` itself to be self-reciprocal.
 
@@ -464,17 +465,17 @@ This proves NRS.2.
 
 Taking degrees gives
 
-$$
+```math
 \deg M=r\deg B,
-$$
+```
 
 which is NRS.3.
 
 Since the SC Littlewood polynomial has degree `m-1=ru-1`,
 
-$$
+```math
 r\deg B\le ru-1.
-$$
+```
 
 Thus `deg B<=u-1`, as expected from `B|S_u`; the point is not this coarse inequality but the exact block quantization. A rational P1 factor cannot take a fractional part of any mod-two odd-order block to lower its degree.
 
@@ -484,9 +485,9 @@ Thus `deg B<=u-1`, as expected from `B|S_u`; the point is not this coarse inequa
 
 PR #153 independently proves that the reciprocal polynomial `F_m` has no cyclotomic factor except
 
-$$
+```math
 \Phi_6
-$$
+```
 
 when `6|m`; the physical P1 factor is always noncyclotomic.
 
@@ -506,27 +507,27 @@ This is a substantially narrower factorization problem than arbitrary reducibili
 
 If
 
-$$
+```math
 3\mid u,
-$$
+```
 
 then `S_u` contains the residue block
 
-$$
+```math
 Z^2+Z+1.
-$$
+```
 
 For its roots `xi`, the Teichmüller lift satisfies
 
-$$
+```math
 \zeta+\zeta^{-1}=-1,
-$$
+```
 
 so the constant in (4.2) is
 
-$$
+```math
 F_m(\zeta)=-8,
-$$
+```
 
 with valuation `3`, not `2`. The Newton polygon therefore has a different first layer. When `r>=2`, the same residue class also contains the characteristic-zero primitive-sixth-root factor `Phi_6` whenever `6|m`, which PR #153 identifies explicitly.
 
@@ -558,15 +559,15 @@ When `3|u`, factor out the known characteristic-zero `Phi_6` factor when present
 
 PR #153 gives
 
-$$
+```math
 F_m(Z)\equiv(Z^{m-1}+1)(Z^{m+1}+1)\pmod3.
-$$
+```
 
 For `3\nmid u`, NRS gives
 
-$$
+```math
 \overline M=B^r
-$$
+```
 
 with `B` a squarefree self-reciprocal divisor of `S_u`. A closing arithmetic theorem would show that no noncyclotomic reciprocal characteristic-zero factor can simultaneously have this saturated mod-two reduction, divide the adjacent-binomial product modulo three, and have degree at most `m-1` while containing the distinguished physical unit-circle root.
 

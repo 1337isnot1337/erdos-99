@@ -9,15 +9,15 @@
 
 This module records the valid content of the former “asymptotically sharp” Section 109 and removes its false sharpness claim. The separate-shore counting proof below gives the baseline coefficient
 
-$$
+```math
 a<{r\over6C_T}.
-$$
+```
 
 It does **not** prove that this coefficient is optimal. Canonical Section 111 uses the fact that the two selected phase-label shores are disjoint subsets of the same local train set and improves the threshold to
 
-$$
+```math
 a<{r\over3C_T}.
-$$
+```
 
 The Section-109 numerical consequence remains valid as a historical quantitative waypoint; Section 111 and later sections supersede it.
 
@@ -33,14 +33,14 @@ Consider one locally rhombus-saturated harmonic carrier. Let
 
 Assume fixed constants `r,C_T,C_phase>0` such that, for all sufficiently large `D`,
 
-$$
+```math
 R_D\ge rD^2,
 \qquad
 T_D\le C_TD,
 \qquad
 \Delta_D\le C_{phase}D.
 \tag{109.1}
-$$
+```
 
 ## 109.1 Baseline shore lemma
 
@@ -48,17 +48,17 @@ $$
 
 For every fixed
 
-$$
+```math
 0<a<{r\over6C_T},
 \tag{109.2}
-$$
+```
 
 there are, for all sufficiently large `D`, two fixed distinct phase labels and two families `A_D,B_D` of full local train segments such that
 
-$$
+```math
 |A_D|,|B_D|\ge aD,
 \tag{109.3}
-$$
+```
 
 all their reduced phases lie in one interval of width `O(1/D)`. Their limiting projective directions therefore differ by `pi/3`.
 
@@ -66,64 +66,64 @@ all their reduced phases lie in one interval of width `O(1/D)`. Their limiting p
 
 Apply the canonical Section-90 phase-circle cut. It deletes only `O(D)` crossing rhombi, so the retained crossing count is
 
-$$
+```math
 (r-o(1))D^2.
 \tag{109.4}
-$$
+```
 
 Fix a large constant `K`. Call a retained crossing `K`-good when its angular defect is at most `K/D`. Markov's inequality and (109.1) show that at most
 
-$$
+```math
 {C_{phase}\over K}D^2
-$$
+```
 
 retained crossings are not `K`-good. One of the three unordered phase-label pairs therefore carries at least
 
-$$
+```math
 \left({r-C_{phase}/K\over3}-o(1)\right)D^2
 \tag{109.5}
-$$
+```
 
 `K`-good crossings.
 
 Fix an integer `m>=2` and randomly shift reduced-phase bins of width
 
-$$
+```math
 W={mK\over D}.
 \tag{109.6}
-$$
+```
 
 A `K`-good crossing has endpoint phase difference at most `K/D`, so a random bin boundary separates its endpoints with probability at most `1/m`. Some shift therefore leaves at least
 
-$$
+```math
 \left(1-{1\over m}\right)
 \left({r-C_{phase}/K\over3}-o(1)\right)D^2
 \tag{109.7}
-$$
+```
 
 crossings internal to common bins.
 
 For bin `j`, let `a_j,b_j` be the two fixed-label shore sizes and `e_j` its internal crossing count. The train pseudosegment theorem makes the crossing graph simple, so
 
-$$
+```math
 e_j\le a_jb_j.
-$$
+```
 
 Also
 
-$$
+```math
 \sum_j a_j\le C_TD,
 \qquad
 \sum_j b_j\le C_TD.
 \tag{109.8}
-$$
+```
 
 If every occupied bin had `a_j<aD` or `b_j<aD`, then bins small on the first shore carry at most `aC_TD^2` crossings, and the remaining bins that are small on the second shore carry at most another `aC_TD^2`. Thus all internal-bin crossings total at most
 
-$$
+```math
 2aC_TD^2.
 \tag{109.9}
-$$
+```
 
 Because `2aC_T<r/3`, choose `K` and then `m` sufficiently large that the leading coefficient in (109.7) exceeds `2aC_T`, and then take `D` large enough to absorb the `o(1)` term. Equation (109.9) is impossible. Hence one bin has both shores at least `aD`.
 
@@ -135,51 +135,51 @@ The factor `1/6` is a **baseline produced by the separate-shore split in (109.9)
 
 Canonical Section 107 gives, throughout its stated scalar window, the conservative finite mass bound
 
-$$
+```math
 R_D\ge0.472D^2.
 \tag{109.10}
-$$
+```
 
 Canonical Sections 68 and 89 give
 
-$$
+```math
 T_D\le6D,
 \qquad
 \Delta_D<5.317D.
 \tag{109.11}
-$$
+```
 
 Thus Lemma 109.1 permits every
 
-$$
+```math
 a<{0.472\over36}=0.013111\ldots .
-$$
+```
 
 The historical choice
 
-$$
+```math
 a=0.0131
 \tag{109.12}
-$$
+```
 
 is therefore valid. Each selected train has two distinct physical boundary-end occurrences, so each phase family supplies at least `0.0262D` train endpoints.
 
 Combining this endpoint supply with the already-audited Section-104/105 leakage geometry and the exact principal-route excess budget proves the historical Section-109 window
 
-$$
+```math
 \sigma(\theta)\le5\times10^{-5},
 \qquad
 \sigma(\theta)=3\theta-2\pi-\sin(\theta/2)-2\sin\theta,
 \tag{109.13}
-$$
+```
 
 and hence the carrier waypoint
 
-$$
+```math
 \operatorname{diam}(P_*)
 \ge(0.9760419221833405\ldots-o(1))D.
 \tag{109.14}
-$$
+```
 
 This numerical conclusion is valid but superseded by later canonical sections.
 

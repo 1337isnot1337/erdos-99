@@ -27,9 +27,9 @@ PASS: no collapsed support-six symmetry orbit admits a planar, angle-compatible 
 
 Together with the independently audited `k<=6` certificate, this proves
 
-$$
+```math
 \boxed{X_K\ge10}
-$$
+```
 
 for every globally realizable collapsed support-six block `K`, where `X_K` counts
 strict-rhombus crossings whose two trains are internal to `K`.
@@ -56,31 +56,31 @@ internal crossing rhombi are disjoint. If `c_6` is the number of degree-pure
 collapsed support-six components and `R_4` is the total bounded strict-rhombus
 count, then
 
-$$
+```math
 \boxed{R_4\ge10c_6,\qquad c_6\le R_4/10.}
-$$
+```
 
 Combining this with the audited tangent payment
 
-$$
+```math
 d_C\ge M_0+2c_6+(c_6-1)_+,
 \qquad M_0=(b-f)/2+E_U+p_U,
-$$
+```
 
 gives the sharpened simultaneous bound
 
-$$
+```math
 c_6\le\min\left\{\frac{d_C-M_0+1}{3},\frac{R_4}{10}\right\}.
-$$
+```
 
 Substitution into the existing support accounting yields
 
-$$
+```math
 \boxed{
 \sigma_C\le 2n_0+n_2+\frac{n_1}{7}+\frac{x_U}{7}
  +\frac17\min\left\{\frac{d_C-M_0+1}{3},\frac{R_4}{10}\right\}.
 }
-$$
+```
 
 This is a coupled tangent/rhombus payment, not yet a contradiction with the live
 terminal diameter budgets: `R_4` is quadratic-scale in the full-core branch while

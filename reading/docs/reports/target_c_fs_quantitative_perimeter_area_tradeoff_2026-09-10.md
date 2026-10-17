@@ -24,38 +24,38 @@ perimeter-to-area implication explicit at every perimeter scale.
 
 Let
 
-$$
+```math
 f(a):=2\left(\arcsin a+\sqrt{1-a^2}\right),\qquad 0\le a\le1.
 \tag{QPA.1}
-$$
+```
 
 Then `f` increases continuously from `2` to `pi`.  Let
 
-$$
+```math
 \alpha:[2,\pi]\to[0,1]
-$$
+```
 
 be its inverse and define
 
-$$
+```math
 \boxed{
 \Psi(p):=\frac\pi4\alpha(p)^2.
 }
 \tag{QPA.2}
-$$
+```
 
 For the actual force hull `F`, put `P=per(F)`.  With the FS.4 error
 
-$$
+```math
 \eta=3^{1/4}\sqrt D,
 \qquad
 L_D=\sqrt{D\eta+\eta^2},
 \tag{QPA.3}
-$$
+```
 
 one has the finite estimate
 
-$$
+```math
 \boxed{
 \operatorname{area}F
 \ge
@@ -64,20 +64,20 @@ $$
 -L_DP-\pi L_D^2.
 }
 \tag{QPA.4}
-$$
+```
 
 Consequently, along every unbounded post-ZF sequence on which
 
-$$
+```math
 \frac{P}{D}\to p,
-$$
+```
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}F}{D^2}\ge\Psi(p).
 }
 \tag{QPA.5}
-$$
+```
 
 This is useful precisely where the qualitative FD theorem was not: it gives an
 explicit area gain before `P/D` reaches `pi`.
@@ -88,30 +88,30 @@ explicit area gain before `P/D` reaches `pi`.
 
 Translate by the full-source circumcenter `o` from FS.4 and write
 
-$$
+```math
 F_0:=F-o,
 \qquad
 S:=\frac12(F_0-F_0).
 \tag{1.1}
-$$
+```
 
 FD already proves the exact identities
 
-$$
+```math
 \operatorname{diam}S=D,
 \qquad
 \operatorname{per}S=P,
 \tag{1.2}
-$$
+```
 
 and the finite area comparison
 
-$$
+```math
 0\le
 \operatorname{area}S-\operatorname{area}F
 \le L_DP+\pi L_D^2.
 \tag{1.3}
-$$
+```
 
 Thus it remains only to lower-bound the area of a centrally symmetric
 `diameter-D` convex body from its perimeter.
@@ -128,69 +128,69 @@ symmetric strip constraint.
 Let `K` be any compact centrally symmetric convex body with center `0` and diameter
 `D`.  Put
 
-$$
+```math
 R:=D/2.
-$$
+```
 
 Central symmetry immediately gives
 
-$$
+```math
 K\subseteq \overline B(0,R),
 \tag{2.1}
-$$
+```
 
 because `x,-x in K` implies `2|x|<=D`.
 
 Let
 
-$$
+```math
 r:=\min_{|u|=1}h_K(u),
 \tag{2.2}
-$$
+```
 
 where `h_K` is the support function.  Since `K` is centrally symmetric,
 `h_K(-u)=h_K(u)`.  If `u_0` realizes the minimum, then
 
-$$
+```math
 K\subseteq\{x:|x\cdot u_0|\le r\}.
 \tag{2.3}
-$$
+```
 
 Also `h_K(u)>=r` in every direction, so
 
-$$
+```math
 \overline B(0,r)\subseteq K.
 \tag{2.4}
-$$
+```
 
 Therefore
 
-$$
+```math
 K\subseteq
 T_{R,r}:=
 \overline B(0,R)\cap\{x:|x\cdot u_0|\le r\}.
 \tag{2.5}
-$$
+```
 
 Planar convex perimeter is monotone under inclusion, hence
 
-$$
+```math
 \operatorname{per}K\le\operatorname{per}T_{R,r}.
 \tag{2.6}
-$$
+```
 
 Write
 
-$$
+```math
 a:=r/R\in[0,1].
 \tag{2.7}
-$$
+```
 
 The boundary of `T_{R,r}` consists of two chords of length
 `2R sqrt(1-a^2)` and two circular arcs whose total angle is `4 arcsin a`.
 Thus
 
-$$
+```math
 \begin{aligned}
 \operatorname{per}T_{R,r}
 &=4R\sqrt{1-a^2}+4R\arcsin a\\
@@ -198,57 +198,57 @@ $$
 &=Df(a).
 \end{aligned}
 \tag{2.8}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \frac{\operatorname{per}K}{D}\le f(a).
 }
 \tag{2.9}
-$$
+```
 
 The derivative is
 
-$$
+```math
 f'(a)
 =2\frac{1-a}{\sqrt{1-a^2}}>0
 \qquad(0\le a<1),
 \tag{2.10}
-$$
+```
 
 so `f` is strictly increasing on `[0,1]`, with
 
-$$
+```math
 f(0)=2,
 \qquad
 f(1)=\pi.
 \tag{2.11}
-$$
+```
 
 If
 
-$$
+```math
 p:=\frac{\operatorname{per}K}{D},
-$$
+```
 
 then (2.9) gives
 
-$$
+```math
 a\ge\alpha(p).
 \tag{2.12}
-$$
+```
 
 Finally (2.4) yields
 
-$$
+```math
 \operatorname{area}K
 \ge\pi r^2
 =\frac{\pi D^2}{4}a^2
 \ge\frac{\pi D^2}{4}\alpha(p)^2.
 \tag{2.13}
-$$
+```
 
 We record this independently.
 
@@ -257,7 +257,7 @@ We record this independently.
 Every centrally symmetric planar convex body `K` of diameter `D` and perimeter `P`
 satisfies
 
-$$
+```math
 \boxed{
 \operatorname{area}K
 \ge
@@ -265,7 +265,7 @@ $$
 \alpha\!\left(\frac PD\right)^2.
 }
 \tag{2.14}
-$$
+```
 
 The lemma is deliberately one-sided.  It is not claimed to be the globally sharp
 minimum-area body at fixed `(D,P)`.  The proof only needs the sharp **perimeter
@@ -278,40 +278,40 @@ with the minimizing support strip.
 
 Apply Lemma QPA to the central symmetral `S`.  Equations (1.2) and (2.14) give
 
-$$
+```math
 \operatorname{area}S
 \ge
 \frac{\pi D^2}{4}
 \alpha\!\left(\frac PD\right)^2.
 \tag{3.1}
-$$
+```
 
 Subtract the FS.4/FD area error (1.3):
 
-$$
+```math
 \operatorname{area}F
 \ge
 \frac{\pi D^2}{4}
 \alpha\!\left(\frac PD\right)^2
 -L_DP-\pi L_D^2.
-$$
+```
 
 This is QPA.4.
 
 Since `P<=pi D` and `L_D=O(D^{3/4})`, the error is
 
-$$
+```math
 L_DP+\pi L_D^2=O(D^{7/4})=o(D^2).
 \tag{3.2}
-$$
+```
 
 If `P/D->p`, continuity of `alpha` gives QPA.5.
 
 At the maximal endpoint `p=pi`, `alpha(pi)=1`, so QPA.5 recovers FD's area conclusion
 
-$$
+```math
 \operatorname{area}F/D^2\to\pi/4
-$$
+```
 
 whenever `P/D->pi`; the matching upper bound is isodiametricity.
 
@@ -321,69 +321,69 @@ whenever `P/D->pi`; the matching upper bound is isodiametricity.
 
 For later optimization define
 
-$$
+```math
 y:=\lim\frac hD,
 \qquad
 p:=\lim\frac{\operatorname{per}F}{D},
 \qquad
 \lambda:=\lim\frac{e_{BB}+2s_C}{D}.
 \tag{4.1}
-$$
+```
 
 DB.3.3 gives, after division by `D`,
 
-$$
+```math
 \boxed{
 p\ge g(y):=y+2\cos(y/2),
 \qquad
 2\rho\le y\le\pi.
 }
 \tag{4.2}
-$$
+```
 
 The FSDB area theorem gives independently
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 \Phi(y):=\frac{y+\sin y}{4}.
 }
 \tag{4.3}
-$$
+```
 
 Combining (4.3) with QPA.5 therefore yields
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 A(y,p):=\max\{\Phi(y),\Psi(p)\}.
 }
 \tag{4.4}
-$$
+```
 
 The actual-perimeter version of JC retained in FD gives the necessary cavity
 inequality
 
-$$
+```math
 \boxed{
 A(y,p)-\frac\pi4\lambda^2
 \le
 \frac{\left(\lambda+\min\{y,p-y\}\right)^2}{4\pi},
 }
 \tag{4.5}
-$$
+```
 
 where replacing `t=e_BB/D` by `lambda` is again the only pinned/contact relaxation in
 the final scalar step.  Feasibility also retains
 
-$$
+```math
 2\rho\le y\le\pi,
 \qquad
 g(y)\le p\le\pi.
 \tag{4.6}
-$$
+```
 
 Equations (4.4)--(4.6) are a new explicit two-parameter feasible-region system.  They
 strictly strengthen FSJC near its old endpoint because `Psi(p)` rises to `pi/4` as
@@ -399,9 +399,9 @@ For any planar convex body of diameter `D`, Cauchy's width formula gives
 `per(K)>=2D` in the degenerate limit.  Thus `P/D in [2,pi]`, the full domain of
 `alpha`.  Post-ZF DB is much stronger: (4.2) and `y>=2rho` imply
 
-$$
+```math
 p\ge4\rho=2.9563405328\ldots .
-$$
+```
 
 ### Equality geometry in the strip envelope
 

@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_inverse_phase_mantel_component_2026-09-14.md) · source SHA-256 `a17548d33a7d752fef80663bcdd7ad5eee2e639e2dd3959135a52d656adf3557`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 10 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
+
 <!-- theorem-state: {"artifact_id":"ART-4C4A50A00728","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fullcore_inverse_phase_mantel_component_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=0614eb0c43e68e4320033f44bfa7e8e12fbb713e; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -33,25 +35,25 @@ analysis only; it does not delete source points or claim a new packing.
 Let (D	oinfty) along a canonical full-core, no-macroscopic-container Type-II
 sequence, and write
 
-$$
+```math
 \Delta_2=\frac{\pi}{2\sqrt3},
 \qquad
 \mu_{\rm TC}=\frac{2\pi+2\sqrt{\Delta_2}}5,
 \qquad
 f_{\rm TC}=\frac{4\sqrt{\Delta_2}-\pi}{5}.
-$$
+```
 
 Assume the endpoint subsequence
 
-$$
+```math
 \mu_D:=\frac{e_{BB}+2s_C-3(d_H+s_Z)}D
 \longrightarrow \mu_{\rm TC}.
 \tag{1.1}
-$$
+```
 
 The canonical full-core train-coupled floor and its equality bookkeeping give
 
-$$
+```math
 \frac{R_D}{D^2}\to\Delta_2,
 \qquad
 \frac{q-k}{D}\to\mu_{\rm TC},
@@ -59,50 +61,58 @@ $$
 \frac{f_D}{D}\to f_{\rm TC},
 \qquad k=d_H+s_Z.
 \tag{1.2}
-$$
+```
 
 Let (T_D) be the number of global train tracks and (R_D) the number of strict
 rhombus faces. The exact occurrence-counted train boundary relation and the
 canonical train-interface inequality are
 
-$$
+```math
 2T_D=B_{4,D},
 \qquad
 T_D\le q-k+2f_D,
 \qquad
 T_D\ge2\sqrt{R_D}.
 \tag{1.3}
-$$
+```
 
 Since
 
-$$
+```math
 \mu_{\rm TC}+2f_{\rm TC}=2\sqrt{\Delta_2},
-$$
+```
 
 (1.2)--(1.3) squeeze the endpoint train count:
 
-$$
+```math
 \boxed{\frac{T_D}{D}\longrightarrow 2\sqrt{\Delta_2}.}
 \tag{1.4}
-$$
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 
 The canonical phase-circle cut deletes (O(D)) crossing relations and supplies
 real reduced phases (x_\tau) in one interval of length (pi/3), labels
-$\ell(\tau)\in\mathbb Z/3\mathbb Z), and, on every retained oriented crossing,
+\(\ell(\tau)\in\mathbb Z/3\mathbb Z), and, on every retained oriented crossing,
+```
 
-\[
+
+
+```math
 x_v-x_u=\delta_{uv}>0,
 \tag{1.5}
-\]
+```
 
 where (delta_{uv}) is the acute rhombus-angle excess above (pi/3). The
 global angular-defect budget is
 
-\[
+```math
 \sum_{e}\delta_e\le C_{\rm phase}D
 \tag{1.6}
-\]
+```
 
 for an absolute canonical constant (C_{\rm phase}). All source points, including
 contact-isolated points, remain in the original source throughout.
@@ -128,76 +138,82 @@ companion audit named below, but not promoted into the theorem-state manifest.
 
 For every sequence (K_D) satisfying
 
-\[
+```math
 K_D\to\infty,
 \qquad K_D=o(D),
 \tag{2.1}
-\]
+```
 
 there are, for all sufficiently large (D), disjoint train sets
 
-\[
+```math
 X_D'\sqcup Y_D'\subseteq\mathcal T_D
-\]
+```
 
 and a simple bipartite graph (H_D) on (X_D'\sqcup Y_D') with the following
 properties.
 
 1. **Only sublinear train population is discarded.**
 
-   \[
+   ```math
    |\mathcal T_D\setminus(X_D'\cup Y_D')|=o(T_D),
    \qquad
    |X_D'|,|Y_D'|=\frac{T_D}{2}-o(T_D).
    \tag{2.2}
-   \]
+   
+   ```
 
 2. **The good graph is almost complete and robust.** Every edge of (H_D) is an
    actual strict-rhombus crossing with
 
-   \[
+   ```math
    0<\delta_e\le\frac{K_D}{D},
    \tag{2.3}
-   \]
+   
+   ```
 
    and every vertex has
 
-   \[
+   ```math
    \deg_{H_D}(v)\ge\frac{T_D}{2}-o(T_D).
    \tag{2.4}
-   \]
+   
+   ```
 
    In particular, (H_D) is connected and has graph diameter at most three.
 
 3. **All surviving reduced phases collapse.** There is an interval (J_D) such
    that
 
-   \[
+   ```math
    x_\tau\in J_D\quad(\tau\in X_D'\cup Y_D'),
    \qquad
    |J_D|\le\frac{3K_D}{D}=o(1).
    \tag{2.5}
-   \]
+   
+   ```
 
 4. **The three labels are concentrated on the two Mantel shores.** If
    (n_0,n_1,n_2) are the sizes of the three label classes in (H_D), and
    (M_D^{\rm cls}\ge b_D^{\rm cls}\ge a_D^{\rm cls}) are those sizes in decreasing
    order, then
 
-   \[
+   ```math
    M_D^{\rm cls}=\frac{T_D}{2}+o(T_D),
    \qquad
    a_D^{\rm cls}+b_D^{\rm cls}=\frac{T_D}{2}+o(T_D).
    \tag{2.6}
-   \]
+   
+   ```
 
 5. **The local cyclic-order bound is asymptotically saturated.**
 
-   \[
+   ```math
    |E(H_D)|
    =M_D^{\rm cls}(a_D^{\rm cls}+b_D^{\rm cls})-o(T_D^2),
    \tag{2.7}
-   \]
+   
+   ```
 
    and all but (o(D^2)) strict-rhombus crossings of the full source are outside
    (H_D). The component has one (o(1))-coherent three-phase frame, and its
@@ -215,73 +231,97 @@ component is an independent source configuration.
 Let (G_D^\circ) be the full train-crossing graph after the canonical phase cut.
 Only (O(D)) crossing edges are deleted, so
 
-\[
+```math
 e_D:=|E(G_D^\circ)|=R_D-O(D).
 \tag{2.8}
-\]
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 
 The exact train-track theorem makes (G_D^\circ) simple and triangle-free. Put
-\(v=T_D$. By (1.2) and (1.4),
+\(v=T_D\). By (1.2) and (1.4),
+```
 
-$$
+
+
+```math
 \frac{e_D}{v^2}\to\frac{\Delta_2}{4\Delta_2}=\frac14.
 \tag{2.9}
-$$
+```
 
 For completeness, the needed finite stability statement is proved here.
 
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 **Lemma 2.1 (Mantel stability).** If a simple triangle-free graph on (v) vertices
 has (e=v^2/4-\varepsilon v^2), then there is a partition
-$V=X\sqcup Y) with
+\(V=X\sqcup Y) with
+```
 
-\[
+
+
+```math
 |X|,|Y|=v/2+O(\sqrt\varepsilon v),
 \quad
 e(X)+e(Y)=O(\sqrt\varepsilon v^2),
 \quad
 |X||Y|-e(X,Y)=O(\sqrt\varepsilon v^2).
 \tag{2.10}
-\]
+```
 
 For every edge (xy), triangle-freeness gives (d(x)+d(y)\le v). Summing over
 edges yields
 
-\[
+```math
 \sum_zd(z)^2\le ve.
 \tag{2.11}
-\]
+```
 
 Since (sum_zd(z)=2e),
 
-\[
+```math
 \sum_z\left(d(z)-\frac v2\right)^2
 \le \frac{v^3}{4}-ve
 =\varepsilon v^3.
 \tag{2.12}
-\]
+```
 
 Choose (x) with (|d(x)-v/2|\le\sqrt\varepsilon v), put (X=N(x)), and
 put (Y=V\setminus X). The set (X) is independent. Moreover,
 
-\[
+```math
 e(X,Y)=\sum_{z\in X}d(z)
 =\frac{v^2}{4}+O(\sqrt\varepsilon v^2)
 \tag{2.13}
-\]
+```
 
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 by Cauchy--Schwarz and (2.12). Since (e=v^2/4-\varepsilon v^2), this gives
 \(e(Y)=O(\sqrt\varepsilon v^2)). Finally,
 \(|X||Y|=v^2/4+O(\varepsilon v^2)), proving (2.10).
-\(\square$
+\(\square\)
+```
+
+
 
 Applying Lemma 2.1 to (2.9) gives (\mathcal T_D=X_D\sqcup Y_D) with
 
-$$
+```math
 |X_D|,|Y_D|=T_D/2+o(T_D),
 \qquad
 M_D:=|X_D||Y_D|-e_D(X_D,Y_D)=o(T_D^2).
 \tag{2.14}
-$$
+```
 
 The internal edges in the partition are irrelevant below; only the cross edges
 are retained.
@@ -290,49 +330,65 @@ are retained.
 
 Call a phase-cut crossing (K_D)-bad if
 
-$$
+```math
 \delta_e> K_D/D.
-$$
+```
 
 By (1.6), the number of bad edges is at most
 
-$$
+```math
 \frac{C_{\rm phase}D}{K_D/D}
 =\frac{C_{\rm phase}}{K_D}D^2=o(D^2)=o(T_D^2).
 \tag{2.15}
-$$
+```
 
 Let (U_D) be the number of cross pairs in (X_D\times Y_D) that are either
 missing in (G_D^\circ) or are bad retained edges. Then
 
-$$
+```math
 U_D=o(T_D^2).
 \tag{2.16}
-$$
+```
 
 If (U_D>0), set
 
-$$
+```math
 \rho_D=\frac{\sqrt{U_D}}{T_D}=o(1);
-$$
+```
 
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 if (U_D=0), set (
 ho_D=0). Delete from (X_D\cup Y_D) every vertex incident with
 more than (
 ho_DT_D) pairs counted by (U_D). The number of deleted vertices is
 at most (2\rho_DT_D=o(T_D)), since the total bad/missing incidence is at most
-$2U_D). Call the remaining sets (X_D',Y_D'), and let (H_D) consist of all
+\(2U_D). Call the remaining sets (X_D',Y_D'), and let (H_D) consist of all
 remaining good cross edges.
+```
 
+
+
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 For (v\in X_D'), at most (
 ho_DT_D) members of (Y_D) are missing or bad at
 \(v), and deleting the exceptional (Y_D\setminus Y_D') loses at most another
 \(2\rho_DT_D) neighbors. Thus
+```
 
-\[
+
+
+```math
 \deg_{H_D}(v)\ge |Y_D'|-\rho_DT_D,
 \tag{2.17}
-\]
+```
 
 and symmetrically for (v\in Y_D'). This proves (2.2)--(2.4).
 
@@ -342,9 +398,9 @@ intersection is nonempty. If (x\in X_D') and (y\in Y_D') are nonadjacent, choose
 any (y_1\in N(x)). The two neighborhoods (N(y)) and (N(y_1)) in (X_D')
 have a common vertex (x_1), giving
 
-\[
+```math
 x-y_1-x_1-y.
-\]
+```
 
 Thus (H_D) is connected with diameter at most three.
 
@@ -352,15 +408,15 @@ Thus (H_D) is connected with diameter at most three.
 
 Every edge (uv\in H_D) is good, so its canonical oriented endpoints satisfy
 
-\[
+```math
 |x_u-x_v|=\delta_{uv}\le K_D/D.
-\]
+```
 
 The diameter-three property gives, for any two vertices of (H_D),
 
-\[
+```math
 |x_u-x_v|\le3K_D/D.
-\]
+```
 
 This proves (2.5). Notice that this is a statement about the real phase potential;
 it does not identify the train arcs with a Cartesian coordinate array in the plane.
@@ -371,19 +427,24 @@ Let (x_i=|X_D'\cap\ell^{-1}(i)|) and (y_i=|Y_D'\cap\ell^{-1}(i)|). Two trains wi
 the same label cannot cross in the triangle-free strict-rhombic branch. Therefore
 all same-label cross pairs are among the (M_D) missing cross pairs in (2.14), and
 
-\[
+```math
 \sum_{i=0}^2x_iy_i\le M_D=o(T_D^2).
 \tag{2.18}
-\]
+```
 
 Cauchy--Schwarz gives
 
-\[
+```math
 \sum_{i=0}^2\min(x_i,y_i)
 \le\sum_i\sqrt{x_iy_i}
 \le\sqrt{3\sum_ix_iy_i}=o(T_D).
 \tag{2.19}
-\]
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 
 Hence every label is concentrated, up to (o(T_D)) trains, on one Mantel shore.
 At least one label is concentrated on each shore, because both shores have
@@ -391,17 +452,28 @@ At least one label is concentrated on each shore, because both shores have
 shores as (1+2) (or, if a label is absent, (1+1) with an empty third class).
 Consequently the unique label on one shore has class size (T_D/2+o(T_D)), and
 the other two classes together have size (T_D/2+o(T_D)). This proves (2.6).
+```
+
+
 
 The good graph has
 
-\[
+```math
 |E(H_D)|=|X_D'||Y_D'|-o(T_D^2)=\frac{T_D^2}{4}-o(T_D^2).
 \tag{2.20}
-\]
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 
 Combining (2.6) and (2.20) gives (2.7). Since (R_D=T_D^2/4+o(D^2)), the number
 of full-source rhombus crossings not in (H_D) is (o(D^2)). This completes the
-proof. \(\square$
+proof. \(\square\)
+```
+
+
 
 ## 3. Exact frontier effect
 
@@ -444,11 +516,19 @@ The required next statement can be written without asymptotic ambiguity:
 > holes, exceptional faces, bridges, repeated boundary occurrences, and
 > contact-isolated source points.
 
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 The endpoint theorem proves a sequential (o(1)) version of the hypotheses, not
 this finite uniform theorem. A proof of the boxed missing statement would exclude
 the entire floor-attainment subsequence. It would still leave non-endpoint
-high-$mu_D) full-core sequences and the macroscopic-container branch, so it
+high-\(mu_D) full-core sequences and the macroscopic-container branch, so it
 would not by itself solve Level I.
+```
+
+
 
 The most direct geometric form is a near-complete phase-pure grid theorem for
 actual train pseudosegments with (O(D)) physical boundary. An arbitrary
@@ -529,10 +609,15 @@ it would not close C-II or Level I.
 
 ## 11. Handoff
 
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
+
 1. **Strongest new theorem:** at (mu_D\to\mu_{\rm TC}), an (o(T_D))-trimmed
    connected train component has (o(1)) reduced-phase diameter, robust
    near-complete bipartite crossing, and cyclic-order deficit (o(T_D^2)).
-2. **Canonical dependency chain:** `C-FULLCORE-TRAIN-SURPLUS-FLOOR` + `C-PUNCTURED-PHASE` + exact train-track/Mantel bounds \(\to$ IPM.
+2. **Canonical dependency chain:** `C-FULLCORE-TRAIN-SURPLUS-FLOOR` + `C-PUNCTURED-PHASE` + exact train-track/Mantel bounds \(\to\) IPM.
 3. **Exact remaining lemma:** a finite, uniform full-core near-extremal exclusion
    that tolerates holes, (O(D)) exceptional interfaces, and the full source.
 4. **Binding dead route:** ordinary Mantel stability or an abstract graph biclique
@@ -541,3 +626,5 @@ it would not close C-II or Level I.
    `docs/targets/target-c/91-explicit-ordered-grid-audit.md`, the canonical Sections
    122--123, and the Target-B near-extremal reports only for their exact pure-disk
    hypotheses.
+
+```

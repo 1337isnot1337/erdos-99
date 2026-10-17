@@ -21,15 +21,15 @@ The highest-value next steps are therefore:
 
 A useful target inequality would be one of
 
-$$
+```math
 Q \le c\,x_B+o(D)
-$$
+```
 
 with a constant forcing `s_Z` linear, followed by a stress-rank contradiction, or
 
-$$
+```math
 Q+2s_Z\le \frac\pi5D-\epsilon D
-$$
+```
 
 under `min width(F)=D-o(D)`, which would directly contradict DG.7.
 

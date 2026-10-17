@@ -14,24 +14,24 @@ C-II and Level I remain open.
 Use the actual canonical lexicographic source, retaining all points and contact
 isolates. Put
 
-$$
+```math
 \Delta_2=\frac{\pi}{2\sqrt3},\quad s=\sqrt{\Delta_2},\quad
 \mu_{\rm hull}=\frac{\pi+s}{2}.
-$$
+```
 
 For every unbounded full-core Type-II sequence, the new conclusions are
 
-$$
+```math
 \boxed{\liminf\left(5t_D+\frac{x_B+m_B}{D}\right)
         \ge3\pi+2s},                                      \tag{1}
-$$
-$$
+```
+```math
 \boxed{\liminf\left(4\mu_D-\frac{k+3m_B}{D}\right)
         \ge2\pi+2s},                                      \tag{2}
-$$
-$$
+```
+```math
 \boxed{\liminf\mu_D\ge\mu_{\rm hull}}.                    \tag{3}
-$$
+```
 
 There is no such sequence with `mu_D -> mu_hull`. As in the canonical
 endpoint-gap argument, (3) and that exclusion give a non-explicit uniform
@@ -68,9 +68,9 @@ terminal occurrences is exactly `q-m`. At most two trains have two good
 ends. Therefore the family `G_D` of actual complete stopped trains with at
 least one good hull end satisfies
 
-$$
+```math
 |G_D|\ge q-m-2.                                         \tag{4}
-$$
+```
 
 Canonical inputs are Sections 61 and 63 for actual train and face ledgers;
 Section 69 for the phase-cut/coarea construction; Sections 68 and 80 for
@@ -86,36 +86,36 @@ The precise reuse hypotheses are checked in Section 7 below.
 
 Translate a Type-II sequence so that
 
-$$
+```math
 B(0,r_D)\subset F_D\subset B(0,R_D),\quad
 r_D/D,R_D/D\longrightarrow1/2.
-$$
+```
 
 Let `alpha_D=acos(r_D/R_D) -> 0`. At a point `p` of a hull side with
 outward unit normal `n`,
 
-$$
+```math
 n\cdot p\ge r_D,\quad |p|\le R_D,
 \quad\angle(n,p)\le\alpha_D.                            \tag{5}
-$$
+```
 
 For any oriented normal interval of width `w`, all its sides lie in the
 radial-angle interval enlarged by `alpha_D` on each end. Radial
 parametrization preserves convex boundary order because `F_D` contains the
 inner disk. On a side with support height `h`, its radial function is
 
-$$
+```math
 \rho(\theta)=\frac{h}{n\cdot e_\theta},\quad
 \sqrt{\rho^2+(\rho')^2}
  =\frac{\rho}{\cos\angle(n,e_\theta)}
  \le\frac{R_D}{\cos\alpha_D}.
-$$
+```
 
 Integrating over that radial interval bounds the sum of side lengths by
 
-$$
+```math
 \frac{R_D}{\cos\alpha_D}(w+2\alpha_D).                  \tag{6}
-$$
+```
 
 The estimate is uniform in the interval's position; circular intervals that
 wrap around the origin are lifted before integration. Each unit side has
@@ -126,10 +126,10 @@ edge-direction intervals. It gives six oriented outward-normal intervals,
 each of width `epsilon`. Thus the number of unit hull sides in this union
 is at most
 
-$$
+```math
 \frac{6R_D}{\cos\alpha_D}(\epsilon+2\alpha_D)
 =(3\epsilon+o_\epsilon(1))D.                            \tag{7}
-$$
+```
 
 This does not assume a rate in the disk limit or a curvature lower bound.
 It applies to a polygon with arbitrarily uneven turning. The error is uniform
@@ -147,36 +147,36 @@ Let `T_j` count all train vertices in bin `j`, and let `g_j` count its
 vertices in `G_D`. Each member of `G_D` has at least one distinct good hull
 side. Equation (7) gives, uniformly in `j`,
 
-$$
+```math
 g_j\le(3\epsilon+o_\epsilon(1))D.                       \tag{8}
-$$
+```
 
 The whole train graph is simple. Therefore the number of retained crossing
 edges incident to `G_D` is at most
 
-$$
+```math
 \sum_j g_jT_j\le(3\epsilon+o_\epsilon(1))D\,T_D.       \tag{9}
-$$
+```
 
 The exact canonical identities give `Q=q-x_B-2k<=q`, `f<=Q`, and
 
-$$
+```math
 T_D=t_DD+2f\le3q\le3\pi D.                             \tag{10}
-$$
+```
 
 Adding back the deleted crossings, (9)--(10) imply
 
-$$
+```math
 \limsup_{D\to\infty}\frac{R_G}{D^2}\le9\pi\epsilon,
-$$
+```
 
 where `R_G` counts every actual rhombus having at least one train in `G_D`.
 This bound holds for every fixed positive `epsilon`. Taking `epsilon` to
 zero **after** the sequence limit proves
 
-$$
+```math
 \boxed{R_G=o(D^2).}                                     \tag{11}
-$$
+```
 
 Only crossing edges of the auxiliary train graph are counted or removed in
 this argument. Every source point, contact edge, diameter edge, and actual
@@ -188,31 +188,31 @@ constraint. No grain is assumed to share a phase with every other grain.
 Let `M_D=T_D-|G_D|` count the other complete actual trains. Their induced
 crossing graph retains
 
-$$
+```math
 R_{\rm bulk}=R_4-R_G=(\Delta_2-o(1))D^2
-$$
+```
 
 edges, by Type II and (11). It is a simple triangle-free graph, so Mantel gives
 
-$$
+```math
 \boxed{M_D\ge(2s-o(1))D.}                               \tag{12}
-$$
+```
 
 Using (4), the exact train count and `f<=Q`,
 
-$$
+```math
 \begin{aligned}
 M_D&\le t_DD+2Q-q+m+2\\
    &=5t_DD-3b+x_B+m+2.                                  \tag{13}
 \end{aligned}
-$$
+```
 
 Since `b>=P_F` and `P_F/D -> pi`, equations (12)--(13) prove (1).
 If `x_B=o(D)`, then `m=o(D)` and
 
-$$
+```math
 \boxed{\liminf t_D\ge\frac{3\pi+2s}{5}>\frac{2\pi}{3}.} \tag{14}
-$$
+```
 
 Thus the whole positive `4pi-6t` one-cell collar window is excluded in the
 small-excess branch, not only the October endpoint or two-cell window.
@@ -221,25 +221,25 @@ small-excess branch, not only the October endpoint or two-cell window.
 
 Use `b=q+x_B`, `t_DD=q-k`, and the canonical identity
 
-$$
+```math
 w_D:=q+m-k=\mu_DD+2c_I+4.                               \tag{15}
-$$
+```
 
 Rewriting (13) in terms of `w_D` gives the finite source inequality
 
-$$
+```math
 \boxed{4\mu_DD+8c_I+18\ge2b+M_D+k+3m.}                 \tag{16}
-$$
+```
 
 Indeed its right side is bounded by
 `2b+(4q-5k+m-2b+2)+k+3m=4w_D+2`.
 There is also an exact slack identity. Let `d_D<=2` count the trains with
 two good hull ends. Since `|G_D|=q-m-d_D`,
 
-$$
+```math
 \boxed{4\mu_DD+8c_I+18-2b-M_D-k-3m
        =2(Q-f)+2-d_D\ge0.}                              \tag{16a}
-$$
+```
 
 Divide (16) by `D`, use `c_I=o(D)`, (12), and the perimeter limit. This
 proves (2)--(3). All penalty terms are nonnegative because `k=d_H+s_Z>=0`
@@ -249,17 +249,17 @@ and `m>=0`. No small-outer-walk or small-matching assumption is used.
 
 Suppose `mu_D -> mu_hull`. Equation (16), `b>=P_F`, and (12) force
 
-$$
+```math
 M_D/D\to2s,\quad b/D\to\pi,\quad k/D\to0,\quad m/D\to0.
 \tag{17}
-$$
+```
 
 The induced graph on the `M_D` remaining actual train curves has
 `R_bulk/D^2 -> Delta_2`, so its crossing density tends to the Mantel limit:
 
-$$
+```math
 R_{\rm bulk}/M_D^2\longrightarrow1/4.                    \tag{18}
-$$
+```
 
 The canonical endpoint argument, Sections 2--5, uses exactly these geometric
 train-family hypotheses, not the formula defining the old surplus floor:
@@ -289,10 +289,10 @@ deletion and is not used as a same-cardinality competitor.
 
 For the extracted shores `a_D,b_D`, Section 76 yields
 
-$$
+```math
 D\ge\frac{\sqrt3}{2}(a_D+b_D)-O(1)
   \ge\frac{3\sqrt3}{4}sD-o(D)-O(1).
-$$
+```
 
 The coefficient `3sqrt(3)s/4` exceeds one because
 `Delta_2>16/27`. This is the identical strict source-diameter contradiction

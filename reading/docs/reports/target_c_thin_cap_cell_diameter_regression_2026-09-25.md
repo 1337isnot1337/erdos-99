@@ -22,10 +22,10 @@ STILL OPEN.
 
 Section 122 retains the sharper finite inequality
 
-$$
+```math
 \sum_r E_r\ge(4-2\sqrt3)\sum_r\frac{A^0_{4,r}}{d_r},
 \qquad E_r=L_r+P_{{\rm exc},r}-2d_r,
-$$
+```
 
 but its published asymptotic consequence only uses `d_r<=D`. The promoted
 train-coupled floor gives `liminf mu_D >= mu_TC = 1.637562...`, where
@@ -62,14 +62,15 @@ vertices of `F_q`, such that:
 4. one cell has diameter exactly `D_q` and area
    `pi D_q^2/4-O(D_q)`, while all other cells together have area `O(D_q)`;
 5. nevertheless
-   $$
+   ```math
    \frac1{D_q}\sum_r\operatorname{diam}(P_{r,q})\longrightarrow1+c,
    \qquad
    \frac1{D_q}\sum_r
      \frac{\operatorname{area}(P_{r,q})}
           {\operatorname{diam}(P_{r,q})}
        \longrightarrow\frac\pi4.
-   $$
+   
+   ```
 
 The polygon-dissection deficit of Section 123 is zero for this partition:
 `q-2-sum_r(a_r-2)=0`, where `a_r` is the number of vertices of `P_r`.
@@ -84,10 +85,10 @@ Let `q` range over even integers, put `x=pi/q`, and let `F_q` be the regular
 diameter is `D=2R=1/sin x`, and all pairs of vertices are unit-separated.
 The regular-polygon area formula gives
 
-$$
+```math
 \operatorname{area}(F_q)=\frac{qD^2}{8}\sin(2\pi/q)
    =\frac\pi4D^2+O(1),
-$$
+```
 
 and its normalized Hausdorff limit is the radius-`1/2` disk.
 
@@ -102,25 +103,25 @@ chords and retained boundary form the boundary of `P_0`. Every original hull
 vertex is in one, two, or three cells. The elementary polygon dissection has
 `a_0=q-N(M-1)` and `a_r=M+1` for `r>=1`, so
 
-$$
+```math
 q-2-\sum_{r=0}^{N}(a_r-2)=0.
-$$
+```
 
 An antipodal pair of hull vertices lies outside the cut arc and remains in
 `P_0`; hence `diam(P_0)=D`. Each cap is contained in an arc subtending angle
 `2Mx<pi`, so its diameter is the endpoint chord
 
-$$
+```math
 d_{cap}=D\sin(Mx)=\frac{\sin(Mx)}{\sin x}=M(1+o(1)).
-$$
+```
 
 Therefore `N d_cap/D->c` and `sum_r d_r/D->1+c`.
 
 The exact area of one cap is
 
-$$
+```math
 \frac{D^2}{8}\bigl[M\sin(2x)-\sin(2Mx)\bigr].
-$$
+```
 
 Its sagitta is `h=R(1-cos(Mx))`. Since `x=Theta(D^{-1})`
 and `M=Theta(sqrt D)`, we have `h=O(M^2/D)=O(1)`. Its chord is at most `M`,
@@ -128,10 +129,10 @@ so the exact area is bounded by `Mh=O(M^3/D)=O(sqrt D)`. Consequently all caps
 together have area `O(N sqrt D)=O(D)`. The central cell has the asserted area.
 The square-root budget follows from
 
-$$
+```math
 \sum_r\sqrt{\operatorname{area}(P_r)}
  \le O(D)+N\,O(D^{1/4})=O(D).
-$$
+```
 
 Finally the central term in `sum area(P_r)/d_r` is
 `(pi/4)D+O(1)`, while the cap terms total at most
@@ -161,9 +162,9 @@ A successful weighted-area route needs a **source-derived** nonconcentration
 statement. One sufficient form is: there exist fixed `epsilon,eta>0` such that
 every sufficiently large canonical full-core survivor satisfies
 
-$$
+```math
 \sum_{r:\,d_r\le(1-\epsilon)D} A^0_{4,r}\ge\eta D^2.
-$$
+```
 
 This would improve Section 122's normalized lower bound by at least
 `(4-2sqrt(3)) eta epsilon/(1-epsilon)`. It would still require an upper

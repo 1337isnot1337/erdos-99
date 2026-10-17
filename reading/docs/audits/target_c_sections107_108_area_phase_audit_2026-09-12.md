@@ -34,10 +34,10 @@ lengths `g_j`.
 
 The claimed identity
 
-$$
+```math
 \operatorname{area}(K)
 ={\pi\over4}-{1\over8}\sum_j(g_j-\sin g_j)
-$$
+```
 
 is valid for arbitrary compact `S`, including infinitely many complement components.
 
@@ -79,11 +79,11 @@ important because the window is enlarged from `sigma<=10^-7` to `sigma<=10^-3`.
 
 Canonical Sections 94, 100, and 101 give
 
-$$
+```math
 M\le C\le2\alpha\le |S|\le U,
 \qquad
 \sigma=U-M,
-$$
+```
 
 and at least three distinct complement gaps of length at least
 `phi=2pi-2theta`.
@@ -93,9 +93,9 @@ and at least three distinct complement gaps of length at least
 Writing `g_1=theta-delta`, the `delta>=0.1` barrier is valid. After decreasing excess
 complement mass while preserving three gaps at least `phi`, the extremal vector
 
-$$
+```math
 (theta-0.1,\,phi+0.1,\,phi,0,\ldots)
-$$
+```
 
 majorizes every feasible competitor under the largest-coordinate cap. Concavity of
 `f(x)=sin(x/2)` therefore gives the displayed lower bound for `C-M`, and the regression
@@ -104,17 +104,17 @@ This is far larger than the allowed slack.
 
 For `0<=delta<=0.1`, the transfer function
 
-$$
+```math
 h_theta(delta)=f(theta-delta)+f(phi+delta)-f(theta)-f(phi)
-$$
+```
 
 has derivative
 
-$$
+```math
 {1\over2}\left[
 \cos{phi+delta\over2}-\cos{theta-delta\over2}
 \right].
-$$
+```
 
 It decreases with `delta` and increases with `theta`, so its minimum on the relevant
 rectangle occurs at `theta=theta_8, delta=0.1`. The independently recomputed minimum
@@ -124,22 +124,22 @@ is `0.3084268...>0.30`. Hence `delta<=(10/3)sigma`.
 
 Writing
 
-$$
+```math
 g_2=phi+x_2,\qquad g_3=phi+x_3,\qquad
 \tau=\sum_{j\ge4}g_j,
-$$
+```
 
 and `e=U-|S|`, the total complement measure gives the exact identity
 
-$$
+```math
 x_2+x_3+\tau=\delta+e.
-$$
+```
 
 All terms are nonnegative and `e<=sigma`, so
 
-$$
+```math
 0\le x_2,x_3,\tau\le {13\over3}\sigma.
-$$
+```
 
 There is no omitted finite-gap error in this identity.
 
@@ -147,16 +147,16 @@ There is no omitted finite-gap error in this identity.
 
 For
 
-$$
+```math
 G(x)={x-\sin x\over8},
-$$
+```
 
 `G` is increasing on `[0,pi]`, and
 
-$$
+```math
 G(a+b)-G(a)-G(b)
 ={\sin a+\sin b-\sin(a+b)\over8}\ge0
-$$
+```
 
 whenever `a,b>=0` and `a+b<=pi`. Thus the total tail-segment loss is maximized by
 concentrating the tail angular mass: `sum_{j>=4}G(g_j)<=G(tau)`.
@@ -164,12 +164,12 @@ concentrating the tail angular mass: `sum_{j>=4}G(g_j)<=G(tau)`.
 At `sigma=10^-3`, Section 107's monotone upper bounds on the three principal gaps and
 tail mass therefore give
 
-$$
+```math
 \operatorname{area}(K)
 \ge
 {\pi\over4}-G(\bar\theta)-2G(\phi_8+q_*)-G(q_*)
 =0.4731076260226828\ldots>0.473.
-$$
+```
 
 Independent recomputation also gives the exact endpoint value
 `0.4735509805082776...`.
@@ -179,9 +179,9 @@ If `P_D/D` converges in Hausdorff distance to `K`, planar convex area continuity
 `A_{4,D}=area(P_D)-o(D^2)`. Every strict unit rhombus has Euclidean area at most one,
 so its count satisfies `R_D>=A_{4,D}`. Therefore
 
-$$
+```math
 R_D\ge(0.473-o(1))D^2,
-$$
+```
 
 and the conservative finite lower bound `R_D>=0.472D^2` is valid for all sufficiently
 large members of the selected sequence.
@@ -221,9 +221,9 @@ unordered phase-label pairs therefore supports at least one third of that mass.
 Randomly shifted bins of width `20K/D` retain at least `19/20` of those good crossings
 inside common bins. Hence internal-bin crossing density is at least
 
-$$
+```math
 {19\over20}{0.465683\over3}=0.1474662833\ldots .
-$$
+```
 
 For the fixed label pair, both total shores are bounded by the full train count `6D`.
 If every bin had one shore below `0.012D`, bins small on the first shore contribute at
@@ -248,24 +248,24 @@ on Sections 105 or 106.
 For every fixed finite family `J` of positive complement gaps, the Section-82
 outer-walk identity gives distinct occurrence subchains and
 
-$$
+```math
 \sum_{j\in J}\ell_j\le2\alpha.
-$$
+```
 
 Take a diagonal subsequence on which every fixed positive gap and its normalized route
 length converge. Since route lengths are nonnegative, monotone exhaustion of the
 countable complement components gives
 
-$$
+```math
 \sum_j\ell_j\le2\alpha.
-$$
+```
 
 Each route dominates its endpoint chord `f(g_j)=sin(g_j/2)`, and Section 101 gives
 `C=sum_j f(g_j)` with `0<=2alpha-C<=sigma`. Therefore
 
-$$
+```math
 \sum_j(\ell_j-f(g_j))\le2\alpha-C\le\sigma.
-$$
+```
 
 This is an occurrence-walk statement. Bridge edges are counted with their outer-walk
 multiplicity, exactly as in the canonical Section-82 ledger; no physical-edge
@@ -292,11 +292,11 @@ At Section 108's much smaller `sigma<=4.5e-5`:
 
 Thus one phase family has off-principal endpoint density at most
 
-$$
+```math
 L(\sigma,h)=
 \left({\pi\over3}-\arccos{1+h\over2}\right)
 +\left({1\over h}+{169\over6}\right)\sigma.
-$$
+```
 
 At `sigma=4.5e-5, h=0.0088`, this is
 `0.0114693143423...`. Subtracting from the `0.024` endpoint supply and pigeonholing
@@ -319,9 +319,9 @@ Consequently every selected endpoint edge contributes at least
 `1-cos Delta` to route-length minus chord projection, where
 `Delta=dist_RP1(u,q)`. The total principal-route excess is at most `sigma D+o(D)`, so
 
-$$
+```math
 rho(1-\cos\Delta)\le\sigma.
-$$
+```
 
 At maximal slack and `rho=0.00417`, exact inversion gives
 `Delta<=0.1470430677...`.
@@ -332,22 +332,22 @@ whose projective separation must lie within `2Delta<0.294087` of `pi/3`.
 
 The independently rederived gap stability gives, for every principal corridor pair,
 
-$$
+```math
 \left|dist_{RP^1}(q_i,q_j)-{\pi\over3}\right|
 >
 {\theta_8\over2}-{\pi\over3}-{73\over6}\sigma
 =0.3037089636\ldots
-$$
+```
 
 at `sigma=4.5e-5`. The contradiction margin exceeds `0.00962` radians.
 
 Independent arithmetic reproduces
 
-$$
+```math
 \theta_{12}=2.7029176003825128\ldots,
 \qquad
 \mu_{12}=0.9760418064930821\ldots .
-$$
+```
 
 ## 9. Finite carrier transfer and scope
 
@@ -356,10 +356,10 @@ positive-area macroscopic harmonic-cell limits have normalized diameter at most
 `mu_12`. The standard finite-macroscopic-cell compactness transfer therefore yields an
 actual locally rhombus-saturated quadratic-area carrier with
 
-$$
+```math
 \operatorname{diam}(P_*)
 \ge(0.9760418064930821\ldots-o(1))D.
-$$
+```
 
 Sections 105 and 106 are not logical premises: Section 108 rederives both the sharp
 all-route excess bound and the stronger phase-shore extraction. They may remain

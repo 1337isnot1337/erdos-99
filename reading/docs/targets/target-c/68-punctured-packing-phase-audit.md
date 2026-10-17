@@ -21,10 +21,11 @@ Retain the canonical Section 67 notation.  Let
 - `D=diam(A)`;
 - `R_4` be the number of bounded quadrilateral faces of the positive contact core;
 - for every such face `R`,
-  $$
+  ```math
   \epsilon_R:=\operatorname{area}(R)-a_0>0,
   \qquad a_0={\sqrt3\over2};
-  $$
+  
+  ```
 - `E_4=sum_R epsilon_R`; and
 - `c_0=sqrt(3)/4=a_0/2`.
 
@@ -35,20 +36,20 @@ Section 67 proves two facts needed below:
 
 Put
 
-$$
+```math
 \delta_K:={\pi D^2\over4}-\operatorname{area}(K)\ge0.
 \tag{68.1}
-$$
+```
 
 The main theorem is
 
-$$
+```math
 \boxed{
 E_4+\delta_K<c_0\operatorname{per}(K)
 \le {\pi\sqrt3\over4}D.
 }
 \tag{68.2}
-$$
+```
 
 Thus every post-ZF survivor has only boundary-order **total** strict-rhombus area
 excess, even if a quadratic population lies outside the force hull.  In particular,
@@ -71,28 +72,28 @@ For a finite plane simplicial complex `S`, let
 
 Their Theorem 4 states, for a finite packing in a Minkowski plane,
 
-$$
+```math
 \alpha_0(S)
 \le {A(S)\over2\Delta_*}+{P(S)\over2}+\chi(S),
 \tag{68.3}
-$$
+```
 
 where `Delta_*` is the minimum area of a unit equilateral triangle in the norm.
 For Euclidean distance,
 
-$$
+```math
 \Delta_*={\sqrt3\over4},
-$$
+```
 
 so (68.3) becomes
 
-$$
+```math
 \boxed{
 a_0\alpha_0(S)
 \le A(S)+c_0P(S)+a_0\chi(S).
 }
 \tag{68.4}
-$$
+```
 
 The paper defines a finite packing by requiring distance at least one for the
 relevant vertex pairs in the support.  Every vertex used below is an original source
@@ -126,43 +127,43 @@ Call the resulting finite plane simplicial complex `S^o`.
 Section 67's no-hidden-source-point theorem is essential here: no source point is
 lost when a rhombus interior is punctured.  Therefore
 
-$$
+```math
 \boxed{\alpha_0(S^o)=n.}
 \tag{68.5}
-$$
+```
 
 Its support is exactly
 
-$$
+```math
 |S^o|=K\setminus\bigcup_R\operatorname{int}(R).
-$$
+```
 
 ## 68.3 Exact area, perimeter, and Euler bookkeeping
 
 The deleted rhombi have pairwise disjoint interiors and total area
 
-$$
+```math
 \sum_R\operatorname{area}(R)=a_0R_4+E_4.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 A(S^o)=\operatorname{area}(K)-a_0R_4-E_4.
 }
 \tag{68.6}
-$$
+```
 
 Before puncturing, a triangulated convex disk has Euler characteristic one.  For each
 rhombus puncture we remove two 2-faces and its one chosen diagonal 1-face, while all
 four boundary edges and all vertices remain.  Thus `alpha_1` drops by one and
 `alpha_2` drops by two, decreasing Euler characteristic by exactly one.  Therefore
 
-$$
+```math
 \boxed{\chi(S^o)=1-R_4.}
 \tag{68.7}
-$$
+```
 
 For the perimeter invariant, the unpunctured triangulated disk contributes exactly
 `per(K)`.  Each deleted rhombus contributes one additional unit of perimeter for each
@@ -177,10 +178,10 @@ of its four side occurrences.  This remains true in every incidence case:
 
 Consequently
 
-$$
+```math
 \boxed{P(S^o)=\operatorname{per}(K)+4R_4.}
 \tag{68.8}
-$$
+```
 
 This multiplicity audit is the point that the older annular report left implicit in
 its touching-boundary discussion.
@@ -189,7 +190,7 @@ its touching-boundary discussion.
 
 Apply (68.4) to `S^o` and substitute (68.5)–(68.8):
 
-$$
+```math
 \begin{aligned}
 a_0n
 &\le
@@ -200,29 +201,29 @@ a_0n
 \operatorname{area}(K)+c_0\operatorname{per}(K)+a_0-E_4,
 \end{aligned}
 \tag{68.9}
-$$
+```
 
 because `4c_0=2a_0`.  Thus every occurrence of `R_4` cancels **exactly**.
 
 The canonical strict translated-triangular-lattice comparison for a global
 minimum-diameter source is
 
-$$
+```math
 \boxed{a_0(n-1)>{\pi D^2\over4}.}
 \tag{68.10}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 a_0n>{\pi D^2\over4}+a_0.
-$$
+```
 
 Compare this with (68.9), cancel `a_0`, and use the definition of `delta_K`:
 
-$$
+```math
 E_4+\delta_K<c_0\operatorname{per}(K).
-$$
+```
 
 Finally Cauchy's convex perimeter–diameter inequality gives
 `per(K)<=pi D`, proving (68.2).  `square`
@@ -231,10 +232,10 @@ Finally Cauchy's convex perimeter–diameter inequality gives
 
 Both terms on the left of (68.2) are nonnegative.  Hence
 
-$$
+```math
 \boxed{E_4=O(D),\qquad \delta_K=O(D).}
 \tag{68.11}
-$$
+```
 
 The second statement was already available from the full-source geometry stack; the
 first is new at this level of generality.  It is independent of `Z_ext`, `d_H`,
@@ -259,64 +260,64 @@ ledger and its low-`h` external-population floor.
 
 For each strict unit rhombus choose its acute angle
 
-$$
+```math
 \theta_R={\pi\over3}+\delta_R,
 \qquad 0<\delta_R\le{\pi\over6}.
 \tag{68.12}
-$$
+```
 
 Its area excess is
 
-$$
+```math
 \epsilon_R=\sin\left({\pi\over3}+\delta_R\right)-a_0.
-$$
+```
 
 Concavity of `sin` on `[pi/3,pi/2]` puts the graph above its endpoint chord, so
 
-$$
+```math
 \epsilon_R
 \ge {6(1-a_0)\over\pi}\,\delta_R.
 \tag{68.13}
-$$
+```
 
 Let
 
-$$
+```math
 \Delta_{train}:=\sum_R\delta_R.
-$$
+```
 
 Summing (68.13) gives
 
-$$
+```math
 \boxed{
 {3\Delta_{train}\over\pi}
 \le(2+\sqrt3)E_4
 < (2+\sqrt3)c_0\operatorname{per}(K).
 }
 \tag{68.14}
-$$
+```
 
 Now form the train-crossing multigraph of the strict rhombus faces.  A train has a
 projective direction `phi_v in R/pi Z`; at a rhombus crossing, orient the crossing so
 that
 
-$$
+```math
 \phi_v-\phi_u\equiv{\pi\over3}+\delta_e\pmod\pi.
-$$
+```
 
 At a right-angle crossing choose either orientation once and retain that choice.
 Reduce every train direction modulo `L=pi/3`.  Each oriented crossing then marks on
 the circle `R/LZ` a positive arc of length `delta_e`.  For a cut point `s`, delete the
 crossings whose marked arc contains `s`.  Averaging over `s` gives
 
-$$
+```math
 {1\over L}\int_0^L|F_s|\,ds
 ={\Delta_{train}\over L}={3\Delta_{train}\over\pi}.
-$$
+```
 
 Hence some cut deletes at most
 
-$$
+```math
 \boxed{
 |F_s|
 \le\left\lfloor{3\Delta_{train}\over\pi}\right\rfloor
@@ -324,15 +325,15 @@ $$
 =O(D).
 }
 \tag{68.15}
-$$
+```
 
 Lift every reduced direction to `x_v in (s,s+L)`.  Every retained oriented crossing
 satisfies
 
-$$
+```math
 x_v-x_u=\delta_e>0.
 \tag{68.16}
-$$
+```
 
 Thus the retained oriented train graph is acyclic and carries an exact real phase
 potential.  This is the phase-cut mechanism re-proved here at the full post-ZF scope;

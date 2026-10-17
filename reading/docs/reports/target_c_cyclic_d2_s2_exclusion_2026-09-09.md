@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_s2_exclusion_2026-09-09.md) · source SHA-256 `f38823eaf2f634a4dd28c4a6e46705274f1cf5fbfeb2b2b625cf4171e0b534fa`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 27 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-D89F55E29422","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=2` is impossible
 
@@ -17,17 +19,17 @@
 
 PX excludes P2 and PSX excludes PS. The only remaining AD branch for `d_H=2` is S2:
 
-$$
+```math
 r_\parallel=0,
 \qquad
 a_{short}=2.
-$$
+```
 
 CP2 identifies its complete antipodal graph canonically as
 
-$$
+```math
 T=H\cup\{g_1,g_2\},
-$$
+```
 
 where
 
@@ -37,9 +39,9 @@ where
 
 The two short states must represent the same component-center displacement
 
-$$
+```math
 S=C_B-C_A.
-$$
+```
 
 The exact defect-center map from PSX makes that impossible.
 
@@ -47,23 +49,25 @@ The exact defect-center map from PSX makes that impossible.
 
 For every sufficiently large primitive cyclic source,
 
-$$
+```math
 \boxed{d_H\ne2.}
 \tag{S2X.1}
+```
 
 In fact the proof below works once the preceding CP2/PSX reductions apply and `D>=3`.
 
 Therefore the cyclic endpoint is reduced to
 
-\[
+```math
 \boxed{d_H\in\{0,1\}.}
 \tag{S2X.2}
+```
 
 Equivalently the zero-stress-surplus phase
 
-\[
+```math
 s_Z=0
-$$
+```
 
 is completely eliminated from the primitive cyclic branch.
 
@@ -73,111 +77,116 @@ is completely eliminated from the primitive cyclic branch.
 
 For a genuine short state `g` put
 
-$$
+```math
 |g|=\rho,
 \qquad
 L:=\sqrt{D^2-1}.
-$$
+```
 
 PSX proves strict convexity forces
 
-$$
+```math
 L<\rho<D.
-$$
+```
 
 Rotate so
 
-$$
+```math
 g=\rho e,
 \qquad |e|=1.
-$$
+```
 
 Its neighboring actual diameter states are
 
-$$
+```math
 x=D(\cos a\,e-\sin a\,Je),
 \qquad
 y=D(\cos a\,e+\sin a\,Je),
-$$
+```
 
 with
 
-$$
+```math
 |g-x|=|g-y|=1.
-$$
+```
 
 Define
 
-$$
+```math
 \boxed{
 \lambda
 :=\rho-D\cos a
 =\frac{\rho^2-D^2+1}{2\rho}.}
 \tag{1.1}
+```
 
 Then
 
-\[
+```math
 \boxed{0<\lambda<\frac1{2D}}
 \tag{1.2}
+```
 
 and
 
-\[
+```math
 \boxed{\lambda^2+D^2\sin^2a=1.}
 \tag{1.3}
+```
 
 Let
 
-\[
+```math
 h_D:=\frac1{4\cos(\delta/2)},
 \qquad
 \delta=2\arcsin\frac1{2D}.
-$$
+```
 
 The fixed vector
 
-$$
+```math
 S=C_B-C_A
-$$
+```
 
 has one of three forms.
 
 ### Band I: same circle-side signs, subtracting
 
-$$
+```math
 \boxed{
 S=-(\mu-\lambda)e,
 \qquad
 \mu:=2h_D\sin a,}
 \tag{1.4}
+```
 
 with
 
-\[
+```math
 0<\mu-\lambda<s_L,
 \qquad
 s_L:=\frac{2h_D}{D}.
-$$
+```
 
 ### Band II: same circle-side signs, adding
 
-$$
+```math
 \boxed{
 S=(\mu+\lambda)e,}
 \tag{1.5}
+```
 
 with, for `D>=3`,
 
-\[
+```math
 s_L<\mu+\lambda<s_S,
 \qquad
 s_S:=\frac{2h_D\sqrt{D^2-1}}{D}.
-$$
+```
 
 ### Band III: opposite circle-side signs
 
-$$
+```math
 \boxed{
 S=\lambda e+\tau\kappa Je,
 \qquad
@@ -185,22 +194,24 @@ S=\lambda e+\tau\kappa Je,
 \qquad
 \kappa:=2h_D\cos a,}
 \tag{1.6}
+```
 
 and
 
-\[
+```math
 |S|>s_S.
-$$
+```
 
 Thus the three types occupy disjoint magnitude intervals
 
-$$
+```math
 (0,s_L),
 \quad
 (s_L,s_S),
 \quad
 (s_S,\infty).
 \tag{1.7}
+```
 
 ---
 
@@ -208,60 +219,64 @@ $$
 
 Equation (1.3) and `2h_D/D=s_L` give
 
-\[
+```math
 \boxed{
 \mu=s_L\sqrt{1-\lambda^2}.}
 \tag{2.1}
+```
 
 Therefore the Band-I magnitude is
 
-\[
+```math
 f_-(\lambda)
 =s_L\sqrt{1-\lambda^2}-\lambda.
-$$
+```
 
 It is strictly decreasing:
 
-$$
+```math
 f_-'(\lambda)
 =-\frac{s_L\lambda}{\sqrt{1-\lambda^2}}-1<0.
 \tag{2.2}
+```
 
 The Band-II magnitude is
 
-\[
+```math
 f_+(\lambda)
 =s_L\sqrt{1-\lambda^2}+\lambda.
-$$
+```
 
 For `0<lambda<1/(2D)` one has
 
-$$
+```math
 \frac{s_L\lambda}{\sqrt{1-\lambda^2}}<1,
-$$
+```
 
 so
 
-$$
+```math
 f_+'(\lambda)
 =1-\frac{s_L\lambda}{\sqrt{1-\lambda^2}}>0.
 \tag{2.3}
+```
 
 For Band III, PSX gives the exact identity
 
-\[
+```math
 \boxed{
 |S|^2
 =s_S^2+\frac{4D^2}{4D^2-1}\lambda^2,}
 \tag{2.4}
+```
 
 which is strictly increasing in `lambda>0`.
 
 Hence in each magnitude band the map
 
-\[
+```math
 \lambda\longmapsto |S|
-$$
+```
 
 is injective.
 
@@ -271,39 +286,43 @@ is injective.
 
 Let the two genuine short states have parameters
 
-$$
+```math
 (\lambda_1,a_1,\rho_1),
 \qquad
 (\lambda_2,a_2,\rho_2).
-$$
+```
 
 Both represent the same vector `S`, hence certainly the same magnitude `|S|`.
 
 By the disjoint bands (1.7), they must belong to the same band. By Section 2's injectivity,
 
-$$
+```math
 \boxed{\lambda_1=\lambda_2=: \lambda.}
 \tag{3.1}
+```
 
 Then (1.3), with `a_i in (0,pi/2)`, gives
 
-\[
+```math
 \boxed{a_1=a_2=:a.}
 \tag{3.2}
+```
 
 Since (1.1) is strictly increasing in `rho` on `(L,D)`, also
 
-\[
+```math
 \boxed{\rho_1=\rho_2.}
 \tag{3.3}
+```
 
 Thus the two short vertices have exactly the same radius and the same local angular defect.
 
 Put
 
-\[
+```math
 \boxed{G:=2a.}
 \tag{3.4}
+```
 
 Each short radial direction is the angular midpoint of its two neighboring actual diameter directions, and the neighboring diameter directions are separated by `G`.
 
@@ -313,15 +332,15 @@ Each short radial direction is the angular midpoint of its two neighboring actua
 
 In Band I, equation (1.4) says
 
-\[
+```math
 S=-f_-(\lambda)e.
-$$
+```
 
 The scalar `f_-(lambda)>0` is now the same at both defects. Therefore equality of the vector `S` forces
 
-$$
+```math
 e_1=e_2.
-$$
+```
 
 But `e_1,e_2` are the two distinct projective radial directions of distinct K-vertices in one projective half-boundary. They cannot coincide.
 
@@ -329,15 +348,15 @@ Thus Band I is impossible.
 
 In Band II, equation (1.5) gives
 
-$$
+```math
 S=f_+(\lambda)e,
-$$
+```
 
 with the same positive scalar at both defects. Again `S` equality forces
 
-$$
+```math
 e_1=e_2,
-$$
+```
 
 impossible.
 
@@ -349,64 +368,69 @@ Therefore both S2 defects must be in Band III.
 
 In Band III,
 
-$$
+```math
 S=\lambda e_i+\tau_i\kappa Je_i,
 \qquad
 \tau_i\in\{+1,-1\},
-$$
+```
 
 with common positive parameters `lambda,kappa` by Section 3.
 
 Identify the plane with the complex numbers and write
 
-$$
+```math
 e_i=e^{i\theta_i}.
-$$
+```
 
 Put
 
-$$
+```math
 \boxed{
 \psi:=\arctan\frac\kappa\lambda
 \in(0,\pi/2).}
 \tag{5.1}
+```
 
 Then
 
-\[
+```math
 S
 =\sqrt{\lambda^2+\kappa^2}
 \,e^{i(\theta_i+\tau_i\psi)}.
 \tag{5.2}
+```
 
 If `tau_1=tau_2`, equality of `S` forces `theta_1=theta_2 mod 2pi`, again impossible for distinct projective states in the same half-boundary.
 
 Hence
 
-\[
+```math
 \boxed{\tau_2=-\tau_1.}
 \tag{5.3}
+```
 
 Order the projective short directions so
 
-\[
+```math
 0<\theta_2-\theta_1<\pi.
-$$
+```
 
 After swapping indices if needed, (5.2)-(5.3) give
 
-$$
+```math
 \boxed{
 \theta_2-\theta_1=2\psi.}
 \tag{5.4}
+```
 
 Therefore the two arcs between the short radial directions on the projective direction circle have lengths
 
-\[
+```math
 \boxed{2\psi}
 \qquad\text{and}\qquad
 \boxed{\pi-2\psi.}
 \tag{5.5}
+```
 
 ---
 
@@ -416,42 +440,44 @@ We compare `pi-2psi` with the local defect gap `G=2a`.
 
 From Section 2 / PSX,
 
-\[
+```math
 \mu=2h_D\sin a>\lambda
 \tag{6.1}
-$$
+```
 
 for every genuine short state. Since
 
-$$
+```math
 \kappa=2h_D\cos a,
-$$
+```
 
 (6.1) is equivalent to
 
-$$
+```math
 \frac\kappa\lambda
 >
 \frac{\cos a}{\sin a}
 =\cot a.
-$$
+```
 
 Both sides are positive, so
 
-$$
+```math
 \psi
 =\arctan\frac\kappa\lambda
 >
 \arctan(\cot a)
 =\frac\pi2-a.
 \tag{6.2}
+```
 
 Therefore
 
-\[
+```math
 \boxed{
 \pi-2\psi<2a=G.}
 \tag{6.3}
+```
 
 Now use CP2. The two short states cut the projective antipodal sequence into the two diameter-path blocks `P_A,P_B`. Suppose one path has `m>=1` edges. Starting at the radial direction of one short state:
 
@@ -461,20 +487,21 @@ Now use CP2. The two short states cut the projective antipodal sequence into the
 
 Hence the projective angular length of that complete short-to-short arc is
 
-\[
+```math
 \boxed{
 G+(m-1)\delta
 =2a+(m-1)\delta
 \ge G.}
 \tag{6.4}
+```
 
 Both D2 components are nontrivial, so both projective arcs between `g_1,g_2` have this form with `m>=1`. Therefore **both** arcs have length at least `G`.
 
 But Section 5 says one of the same two arcs has length `pi-2psi`, and (6.3) says
 
-\[
+```math
 \pi-2\psi<G.
-$$
+```
 
 Contradiction.
 
@@ -504,21 +531,23 @@ Therefore:
 
 For every sufficiently large primitive cyclic Target C survivor,
 
-$$
+```math
 \boxed{d_H\le1.}
 \tag{7.1}
+```
 
 Since the exact cyclic ledger is
 
-\[
+```math
 d_H+s_Z=2,
-$$
+```
 
 this is equivalently
 
-\[
+```math
 \boxed{s_Z\ge1.}
 \tag{7.2}
+```
 
 The unique-stress / zero-surplus phase is gone completely.
 

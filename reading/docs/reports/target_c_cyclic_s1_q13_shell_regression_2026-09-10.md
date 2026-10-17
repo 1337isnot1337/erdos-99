@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_s1_q13_shell_regression_2026-09-10.md) · source SHA-256 `8c1ba5ecd2bf7a3a9c7926d5afe3dc326c9332f341b87a770bdfaab7c295b2d5`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 14 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-7A2B3FF788EF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 LEVEL I STATUS: STILL OPEN
 
@@ -16,25 +18,25 @@ LEVEL I STATUS: STILL OPEN
 
 RSQ reduces S1 to the exact system
 
-$$
+```math
 Q(z)=Q^*(z),
 \qquad
 F_m(z)=(z-1)^2Q(z)^2.
-$$
+```
 
 A tempting next conjecture was that this system itself might have no strict-interior S1 solutions. That conjecture is false.
 
 There is already a strict-interior palindromic solution at
 
-$$
+```math
 \boxed{q=13,\qquad m=11.}
-$$
+```
 
 More importantly, reconstructing the equilateral shell from that solution gives exactly the Target-C shell active counts
 
-$$
+```math
 \boxed{|C|=13,\qquad |H|=12,}
-$$
+```
 
 with `H` a spanning tree, and the mixed active framework admits a strictly positive full-support equilibrium stress whose scalar stress matrix is PSD with exactly the affine three-dimensional kernel.
 
@@ -55,11 +57,11 @@ It does **not** contradict Target C or Erdős #99. The full source contains a qu
 
 Take
 
-$$
+```math
 Q(Z)=
 -Z^{10}+Z^9-Z^8-Z^7+Z^6+Z^5+Z^4-Z^3-Z^2+Z-1.
 \tag{2.1}
-$$
+```
 
 Its coefficient word, low degree first, is
 
@@ -69,73 +71,78 @@ Its coefficient word, low degree first, is
 
 This is palindromic:
 
-$$
+```math
 Q=Q^*.
-$$
+```
 
 Thus the RSQ phase equation is automatic for every point on the unit circle.
 
 For `m=11`, the centered cosine polynomial is
 
-$$
+```math
 \boxed{
 R(T)=-T^5+T^4+4T^3-5T^2-T+5,
 }
 \tag{2.2}
+```
 
 meaning
 
-\[
+```math
 z^{-5}Q(z)=R(z+z^{-1}).
-$$
+```
 
 The RSQ amplitude equation becomes
 
-$$
+```math
 G_{11}(T)+(2-T)R(T)^2=0.
-$$
+```
 
 After cancellation of the leading term this is
 
-$$
+```math
 \boxed{
 P_{13}(T):=
 T^{10}-2T^9-8T^8+18T^7+17T^6-52T^5
 +T^4+51T^3-22T^2-13T+11=0.
 }
 \tag{2.3}
+```
 
 This polynomial is irreducible over `Q` in the symbolic computation used for the regression, though irreducibility is not needed for the shell construction.
 
 It has the real root
 
-\[
+```math
 \boxed{
 t_*=1.94199413054336852922749320256\ldots}
 \tag{2.4}
+```
 
 with a rational isolating interval obtained by exact Sturm isolation in the computation. Put
 
-\[
+```math
 \delta_*:=\arccos(t_*/2).
-$$
+```
 
 Numerically,
 
-$$
+```math
 \boxed{
 \delta_*=0.2414300075120225\ldots,
 }
 \tag{2.5}
+```
 
 and
 
-\[
+```math
 \boxed{
 D_*=\frac1{2\sin(\delta_*/2)}
 =4.1520639086997635\ldots.
 }
 \tag{2.6}
+```
 
 ---
 
@@ -143,67 +150,69 @@ D_*=\frac1{2\sin(\delta_*/2)}
 
 For `q=13`, the zero-defect Reinhardt boundary is
 
-\[
+```math
 \delta_R=\frac\pi{13}
 =0.241660973353061\ldots.
-$$
+```
 
 The P1 boundary is the unique solution of
 
-$$
+```math
 11\delta+2\arcsin\left(2\sin\frac\delta2\right)=\pi,
-$$
+```
 
 namely
 
-$$
+```math
 \delta_P
 =0.2413833791241437\ldots.
-$$
+```
 
 The constructed root satisfies
 
-$$
+```math
 \boxed{
 \delta_P<\delta_*<\delta_R.
 }
 \tag{3.1}
+```
 
 The margins are approximately
 
-\[
+```math
 \delta_* - \delta_P
 =4.66284\times10^{-5},
-$$
+```
 
-$$
+```math
 \delta_R-\delta_*
 =2.30966\times10^{-4}.
-$$
+```
 
 Hence this is neither the P1 collapse nor the Reinhardt equality boundary.
 
 D1 gives the strict short-state angle
 
-$$
+```math
 G_*=\pi-11\delta_*
 =0.4858625709575457\ldots,
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \tau_*=0.0990340932801166\ldots>0.
 }
 \tag{3.2}
+```
 
 The RSQ centered closure value is
 
-\[
+```math
 2\sin(\tau_*/2)
 =0.0989936273335191\ldots.
-$$
+```
 
 ---
 
@@ -219,17 +228,17 @@ where the first two signs are the canonical S1 defect pair and the remaining ele
 
 The half-boundary edge directions are the exact SC directions
 
-$$
+```math
 \theta_0=-\tau_*/2,
 \qquad
 \theta_1=+\tau_*/2,
-$$
+```
 
-$$
+```math
 \theta_j
 =\frac\pi2+(2j-14)\frac{\delta_*}{2},
 \qquad2\le j\le12.
-$$
+```
 
 Choose the signed primal unit vectors and sort them in cyclic direction order. In the half-boundary index labels this cyclic side order is
 
@@ -239,29 +248,31 @@ Choose the signed primal unit vectors and sort them in cyclic direction order. I
 
 Their vector sum vanishes to `7.1e-14` in the high-precision reconstruction. The corresponding convex equilateral polygon was then labeled in this cyclic side order as vertices
 
-$$
+```math
 0,1,\ldots,12.
-$$
+```
 
 The active unit contacts are exactly
 
-$$
+```math
 \boxed{
 01,12,23,34,45,56,67,78,89,9\,10,10\,11,11\,12,12\,0.
 }
 \tag{4.1}
+```
 
 There are no additional unit pairs. The closest inactive pair has distance
 
-\[
+```math
 1.771341203064894\ldots,
-$$
+```
 
 so its unit-separation slack is
 
-$$
+```math
 \boxed{>0.7713.}
 \tag{4.2}
+```
 
 ---
 
@@ -269,19 +280,21 @@ $$
 
 At the same reconstruction the actual diameter pairs are exactly
 
-\[
+```math
 \boxed{
 \begin{aligned}
 H=\{&06,07,17,18,19,29,39,49,4\,10,4\,11,5\,11,5\,12\}.
 \end{aligned}
 }
 \tag{5.1}
+```
 
 Thus
 
-\[
+```math
 \boxed{|H|=12=q-1.}
 \tag{5.2}
+```
 
 The graph is connected and acyclic, hence a spanning tree.
 
@@ -293,33 +306,34 @@ Its degree sequence in shell order is
 
 The closest inactive pair to diameter is the canonical short antipodal pair
 
-\[
+```math
 05,
-$$
+```
 
 with
 
-$$
+```math
 |05|=4.079643788218755\ldots,
-$$
+```
 
 while
 
-$$
+```math
 D_*=4.1520639086997635\ldots.
-$$
+```
 
 Hence the inactive diameter margin is
 
-$$
+```math
 \boxed{D_*-|05|>0.07242.}
 \tag{5.3}
+```
 
 The D1 endpoint lower value is
 
-\[
+```math
 \sqrt{D_*^2-1}=4.029843012069721\ldots,
-$$
+```
 
 so the canonical short edge lies strictly in the expected S1 interval.
 
@@ -336,9 +350,9 @@ Construct the signed mixed equilibrium matrix using
 
 Normalize
 
-$$
+```math
 \sum_{h\in H}\beta_h=1.
-$$
+```
 
 A linear program maximizing the smallest stress coordinate gives a strictly positive equilibrium stress. One numerical solution has contact coefficients
 
@@ -379,15 +393,16 @@ in the diameter order (5.1).
 
 The smallest displayed coefficient is
 
-$$
+```math
 \boxed{0.05283118\ldots>0.}
 \tag{6.1}
+```
 
 and the equilibrium residual in the reconstruction is about
 
-\[
+```math
 3.2\times10^{-15}.
-$$
+```
 
 Thus failure of positive KKT support is not a viable explanation for this S1 shell.
 
@@ -397,9 +412,9 @@ Thus failure of positive KKT support is not a viable explanation for this S1 she
 
 Form
 
-$$
+```math
 \Omega=L_C(\alpha)-L_H(\beta).
-$$
+```
 
 The computed eigenvalues are
 
@@ -421,21 +436,22 @@ The computed eigenvalues are
 
 The first three numerical zero modes are exactly the expected affine modes
 
-$$
+```math
 \mathbf1,P_x,P_y.
-$$
+```
 
 The first nonzero eigenvalue has the robust margin
 
-$$
+```math
 \boxed{\lambda_4>1.1039.}
 \tag{7.1}
+```
 
 Hence the numerical stress is PSD of rank
 
-\[
+```math
 q-3=10
-$$
+```
 
 with no near-zero accidental fourth mode.
 
@@ -452,9 +468,9 @@ As an additional nonproof regression, the reconstructed shell was used as the in
 
 SLSQP returned the same diameter
 
-$$
+```math
 4.15206390869976\ldots
-$$
+```
 
 with improvement below `1e-13`.
 

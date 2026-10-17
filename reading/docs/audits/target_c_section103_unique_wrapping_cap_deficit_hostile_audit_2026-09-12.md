@@ -23,9 +23,9 @@ unique wrapping cell. Its useful form is:
 
 At `mu=mu_8=0.976040765267051982...`, the canonical cap-capacity formula gives
 
-$$
+```math
 \Gamma(\mu_8)=0.202319755440525\ldots .
-$$
+```
 
 The theorem passes hostile review. The only repair is to state the `eta->0` selection
 as a diagonal argument, rather than implicitly treating a cell label selected at one
@@ -38,16 +38,18 @@ The proof uses only already-canonical facts:
 - Section 83 / `C-HARMONIC-CELL-TILING`: harmonic attachment cells are pairwise
   interior-disjoint, their total area is `pi D^2/4-o(D^2)` in the full-core branch,
   and
-  $$
+  ```math
   \sum_r\sqrt{\operatorname{area}(P_{r,D})}=O(D);
-  $$
+  
+  ```
 - Section 88 / `C-HARMONIC-WRAPPING`: every cap-type finite macroscopic limit family
   of diameter at most `mu<1` has total normalized area at most
-  $$
+  ```math
   \mathcal C(\mu)
   ={1\over8}\left[2\pi-k_\mu\sin\theta_\mu-\sin r_\mu\right]
   <{\pi\over4};
-  $$
+  
+  ```
 - audit.42 Section 102 is not needed to prove the concentration theorem itself; it is
   only a downstream use of the explicit constants.
 
@@ -70,10 +72,10 @@ interior-disjointness.
 
 Thus
 
-$$
+```math
 \operatorname{int}K_r\cap\operatorname{int}K_s=\varnothing
 \qquad(r\ne s).
-$$
+```
 
 ## 3. A wrapping cell of diameter below one contains the center in its interior
 
@@ -91,9 +93,9 @@ convex combination requires both members of that pair. This would put two points
 
 Therefore
 
-$$
+```math
 \boxed{0\in\operatorname{int}K.}
-$$
+```
 
 The strict diameter assumption is available in every Section-103 application because
 the common cap is a fixed `mu<1`.
@@ -111,17 +113,17 @@ graph is 2-connected and does not use the Section-102 corridor theorem.
 
 Put
 
-$$
+```math
 \Gamma(\mu):={\pi\over4}-\mathcal C(\mu)>0.
-$$
+```
 
 Section 83 gives the small-cell tail estimate
 
-$$
+```math
 \sum_{\operatorname{area}(P_{r,D})<\eta D^2}
 \operatorname{area}(P_{r,D})
 =O(\sqrt\eta D^2).
-$$
+```
 
 For fixed `eta`, pass to the finite macroscopic limit family. If every retained limit
 were cap type, Section 88 would bound their total normalized area by `C(mu)`, while the
@@ -135,26 +137,26 @@ The precise `eta->0` conclusion should be stated diagonally. Choose `eta_j downa
 For each `j`, after taking the large-`D` limit select the unique wrapping cell in the
 `eta_j`-macroscopic family. Its normalized area satisfies
 
-$$
+```math
 {\operatorname{area}(P_{w,D})\over D^2}
 \ge {\pi\over4}-\mathcal C(\mu)-O(\sqrt{\eta_j})-o_D(1).
-$$
+```
 
 Choose a diagonal sequence `D_j->infinity`. Compactness of convex subsets of the unit
 disk gives a limiting wrapping cell `K_w`, and the displayed lower bound yields
 
-$$
+```math
 \boxed{
 \operatorname{area}(K_w)\ge\Gamma(\mu).
 }
-$$
+```
 
 Equivalently one obtains a finite cell sequence with
 
-$$
+```math
 \operatorname{area}(P_{w,D})
 \ge(\Gamma(\mu)-o(1))D^2.
-$$
+```
 
 This is the same conclusion as Section 103. The clarification removes only an implicit
 cell-label persistence assumption across changing cutoffs.
@@ -163,33 +165,33 @@ cell-label persistence assumption across changing cutoffs.
 
 At the canonical Section-101 endpoint
 
-$$
+```math
 \theta_8=2.70290802964836768\ldots,
 \qquad
 \mu_8=\sin(\theta_8/2)=0.976040765267051982\ldots,
-$$
+```
 
 we have `k_mu8=2` and
 
-$$
+```math
 r_{\mu_8}=2\pi-2\theta_8=\phi_8.
-$$
+```
 
 Substituting in the canonical Section-88 capacity formula gives
 
-$$
+```math
 \mathcal C(\mu_8)=0.583078407956923\ldots,
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{
 \Gamma(\mu_8)
 ={\pi\over4}-\mathcal C(\mu_8)
 =0.202319755440525\ldots .
 }
-$$
+```
 
 This agrees with the independently registered Section-101 scalar certificate.
 
@@ -202,45 +204,45 @@ continuity keeps `Gamma(mu)` close to the displayed value.
 
 For `mu>mu_8` sufficiently close to `mu_8`, continuity gives
 
-$$
+```math
 \Gamma(\mu)>0.19.
-$$
+```
 
 The unique wrapping carrier then has area at least `(0.19-o(1))D^2`. Section 83's
 nonnegative summed local rhombic deficit is `o(D^2)`, so that carrier itself has
 strict-rhombus area
 
-$$
+```math
 A_{4,w}\ge(0.19-o(1))D^2.
-$$
+```
 
 Every unit rhombus has area at most one, hence its strict-rhombus count satisfies, for
 all large `D`,
 
-$$
+```math
 \boxed{R_D\ge0.18D^2.}
-$$
+```
 
 Canonical Section 89 gives
 
-$$
+```math
 T_D\le6a_D-15-5s_D-3c_D\le6a_D+O(1).
-$$
+```
 
 For a wrapping limit with `theta` in a sufficiently small fixed neighborhood of
 `theta_8`, canonical Section 100 gives
 
-$$
+```math
 {a_D\over D}
 \le {3\theta-2\pi\over2}+o(1)<1.
-$$
+```
 
 (The endpoint value of the right-hand side is approximately `0.91276939`.) Therefore
 one may indeed use the coarse uniform bound
 
-$$
+```math
 \boxed{T_D\le6D}
-$$
+```
 
 for all sufficiently large members of that fixed neighborhood.
 
@@ -248,38 +250,38 @@ for all sufficiently large members of that fixed neighborhood.
 
 Section 68 defines
 
-$$
+```math
 \Delta_{train}:=\sum_R\delta_R
-$$
+```
 
 for the same strict-rhombus angular defects used by the Section-90 phase binning. It
 proves
 
-$$
+```math
 {3\Delta_{train}\over\pi}
 \le(2+\sqrt3)E_4
 <(2+\sqrt3)c_0\operatorname{per}(K),
 \qquad c_0={\sqrt3\over4},
-$$
+```
 
 and `per(K)<=pi D`. Therefore
 
-$$
+```math
 \boxed{
 \Delta_{train}
 <{\pi^2\sqrt3(2+\sqrt3)\over12}D
 =5.31651047915437\ldots D.
 }
-$$
+```
 
 Restriction to one harmonic carrier can only decrease this nonnegative defect sum, so
 Section 103's rounded constant `5.317` is valid.
 
 Thus the explicit local constants
 
-$$
+```math
 (r,C_T,C_{phase})=(0.18,6,5.317)
-$$
+```
 
 are legitimate inputs for a quantitative stability version of canonical Section 102.
 

@@ -14,24 +14,24 @@
 Write `X=q-k-sum_r d_r`.  The exact outer-walk decomposition and the audited
 completion-side payment give
 
-$$
+```math
 0\le S_{\rm out}\le2X+4c_I-4-Q_{\rm loc}.
-$$
+```
 
 Hence `Q_loc<=2X+4c_I-4`.  Since
 
-$$
+```math
 E_{\rm agg}=S_{\rm out}+4F_{\rm loc}+Q_{\rm loc}
-$$
+```
 
 and each bounded nonquadrilateral face contributes at least one unit to degree
 excess, `F_loc<=Q_loc`.  The largest possible right side is
 
-$$
+```math
 E_{\rm agg}
 \le(2X+4c_I-4)+4(2X+4c_I-4)
 =10X+20c_I-20.
-$$
+```
 
 The coefficient `10` is therefore an intentional loss from retaining both the
 outer surplus and the defect term; no cancellation with the global degree defect
@@ -43,16 +43,16 @@ The canonical Section-75 component estimate gives `c_I=O(D^(2/3))`, so the
 finite `-20` and the `20c_I` term vanish after division by `D`.  Combining
 with the canonical Section-122 lower bound
 
-$$
+```math
 \liminf E_{\rm agg}/D\ge \frac\pi2(2-\sqrt3)
-$$
+```
 
 proves
 
-$$
+```math
 \liminf\frac{q-k-\sum_r d_r}{D}
 \ge\frac\pi{20}(2-\sqrt3)=0.0420893607\ldots .
-$$
+```
 
 No liminf/limsup reversal occurs: the finite inequality holds for every member
 of the Type-II sequence, and the lower bound is a liminf lower bound.
@@ -61,9 +61,9 @@ of the Type-II sequence, and the lower bound is a liminf lower bound.
 
 The Section-118 common-cap input is the separately audited lower bound
 
-$$
+```math
 \liminf\sum_r d_r/D\ge2.798596312209462\ldots .
-$$
+```
 
 Adding the two liminf bounds is valid for the same scoped sequence.  The
 stdlib-only certificate uses `pi>=3.14159` and `sqrt3<=1.73205`, which

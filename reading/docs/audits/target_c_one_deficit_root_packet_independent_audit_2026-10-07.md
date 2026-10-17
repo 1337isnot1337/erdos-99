@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_deficit_root_packet_independent_audit_2026-10-07.md) · source SHA-256 `e26781caad680b1e1ea0b4e300761ae01f6e2d15e29235fecdf59a2673a78a6d`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 2 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
+
 <!-- theorem-state: {"artifact_id":"ART-7DE7725C1A9C","canonical":true,"claim_ids":["C-M4-ONE-DEFICIT-ALL-SMALL-PACKET","C-M4-ONE-DEFICIT-ALL-SMALL-SOURCE-EXCLUSION","C-ONE-DEFICIT-EXACT-CURVATURE-PACKETS","C-ONE-DEFICIT-EXACT-CURVATURE-SOURCE-EXCLUSION"],"claim_statuses":{"C-M4-ONE-DEFICIT-ALL-SMALL-PACKET":"superseded","C-M4-ONE-DEFICIT-ALL-SMALL-SOURCE-EXCLUSION":"superseded","C-ONE-DEFICIT-EXACT-CURVATURE-PACKETS":"canonical","C-ONE-DEFICIT-EXACT-CURVATURE-SOURCE-EXCLUSION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit: one-deficit root packets
 
@@ -22,9 +24,9 @@ The audit treats two conclusions separately.
 **Claim B — `C-M4-ONE-DEFICIT-ALL-SMALL-SOURCE-EXCLUSION`.** For the same wall family and every (0<\theta<\theta_0), no contact-minimal, then diameter-pair-minimal, triangle-free global minimizer in canonical normal form can contain the full wall and (z\le36=N-1) actual source points in its strict interior.
 
 **Claim C — `C-ONE-DEFICIT-EXACT-CURVATURE-PACKETS`.** Strict (N=3M^2-3M+1) packets exist for the five exact cases
-$$
+```math
 (M,t)\in\{(4,1/50),(5,1/50),(6,1/50),(8,1/50),(4,1/10000)\}.
-$$
+```
 Each packet omits target site ((1,M-2)), omits one actual wall vertex ((1,M-1)), and is strictly inside the wall, pairwise unit-separated with strict slack, and strictly clear of all retained wall vertices.
 
 **Claim D — `C-ONE-DEFICIT-EXACT-CURVATURE-SOURCE-EXCLUSION`.** In each of those five specified wall geometries, a contact-minimal, then diameter-pair-minimal, triangle-free global minimizer containing the full wall cannot have (z\le N-1) strict-interior source points.
@@ -38,33 +40,49 @@ It applies to an arbitrary old interior cloud: no lattice, sorting, vacancy, or 
 ## Independent construction and analytic audit
 
 Write (u=(1,0)), (v=(1/2,\sqrt3/2)), (w=v-u), and
-$$
+```math
 \rho(t)=\frac{1-t^2+2it}{1+t^2}=e^{i\theta}.
-$$
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 For (M=4), the descending-rate chart uses ((3,1,-1,-3)) and the finite sums stated in the source report. Consecutive outer-wall edge directions on a side are (\rho^{2j-3}w), (j=0,1,2,3); each has length one. Consecutive edges turn by (2\theta) within a side and by (\pi/3-6\theta) at a corner. For sufficiently small positive (\theta) these turns all lie in ((0,\pi)) and sum to (2\pi), so the closed wall is a strictly convex polygon. The 36 unpunctured interior chart sites limit to (P_3\setminus\{(1,2)\}\), strictly inside (H_4); since there are finitely many sites and wall supports, all remain strictly inside the curved wall for sufficiently small (\theta).
+```
+
+
 
 The exact symbolic verifier was inspected and rerun. It represents the 60-point wall-plus-chart set by rational functions in (t) with coefficients in (\mathbb Q(\sqrt3)). It identifies all 92 unit rows with a moving endpoint and certifies positive leading coefficients for every other pair's squared-distance gap. The 73-by-73 basis system has 72 moving coordinates and one common opening variable; its 73 pivots have known nonzero leading terms (70 of order zero and 3 of order one). All 92 resulting row margins have positive leading coefficients, of orders 0 through 6, with certified remainder order at least 9. These are exact Laurent-series sign certificates, not floating feasibility tolerances. The tracked truncation rules for addition, multiplication, division, and pivot inversion preserve a remainder (O(t^p)); every accepted leading coefficient occurs below that remainder order. Each pivot is therefore nonzero for all sufficiently small (t>0), and each row margin is eventually positive.
 
 For each fixed small (\theta>0), choose a sufficiently small positive amplitude (\varepsilon) along the certified opening field. The 92 interior-involving exact contacts then become strict; every noncontact chart pair has a positive gap and remains so for small enough (\varepsilon). The wall's own unit sides remain as old contacts. This finite choice is made separately at each (\theta); no uniform amplitude or bound on the velocity field is needed.
 
 For the added root, let (\xi=(1,3)) be the deleted wall vertex and put
-$$
+```math
 r_\theta=\xi+3\sin\theta\,J(\rho^2w).
-$$
+```
 Its two adjacent wall-edge distances satisfy ( |r_\theta-q|^2=1+3\sin^2\theta>1). At (\theta=0), the only remaining interior unit neighbor of (\xi) after deleting (h=(1,2)) is (a=(0,3)). Direct differentiation gives
-$$
+```math
 (\xi-a)\cdot(r'_0-a'_0)=\frac{3\sqrt3}{2}>0,
-$$
+```
 so this last root-to-chart lower constraint opens for small positive (\theta); all other root-to-chart and root-to-wall distances have strict limiting margin. For the collinear limiting side, write its four directed edges as (E_j(\theta)), (j=0,1,2,3), with initial endpoints (W_j(\theta)). At zero, (E_j=w) and (\xi-W_j=(3-j)w); differentiation gives (E'_j=(2j-3)Jw), (W'_j=-j(4-j)Jw), and (r'_0=0). Thus the inward signed cross-product derivative is
-$$
+```math
 \operatorname{cross}(E'_j,\xi-W_j)+\operatorname{cross}(w,r'_0-W'_j)
 =-(3-j)(2j-3)+j(4-j)=(3-j)^2-(3-j)+3>0.
-$$
+```
 All other wall supports have positive margin already at (\theta=0). Hence (r_\theta) lies strictly inside the curved wall. Its strict clearances from the opened chart sites persist after choosing (\varepsilon) small enough. This proves Claim A without inferring a finite motion from first-order feasibility alone.
 
 ## Full-source exchange check
 
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
+
 For a source with this wall, every source point on its boundary is a wall vertex: a nonvertex point on a unit edge is within (1/2) of an endpoint and violates unit separation. Thus all other points in the closed wall are counted by (z) and deleted. Claim A supplies (z+1\) packet points whenever (z\le36\).
+```
+
+
 
 All inserted points lie strictly inside the convex wall and are strictly farther than one from every wall vertex except the deleted (v_0). The canonical `C-ONE-VERTEX-CONVEX-WALL-SHIELD` therefore gives strict lower clearance from every retained exterior source point, including isolates. For any retained old point (y), the function (x\mapsto|x-y|^2) is strictly convex on the wall polygon; its maximum is attained at wall vertices, and an interior (x) cannot attain that maximum. Every wall vertex belongs to the old source, so the maximum is at most the old diameter (D), and every new-to-retained distance is strictly below (D). For an interior packet point (y), its distance from every wall vertex is strictly below the wall diameter: moving (y) a short step away from that vertex stays inside the wall and increases the distance. The maximum of (x\mapsto|x-y|^2) on the wall is attained at a wall vertex, hence every new-to-new distance is strictly below the wall diameter and therefore below (D). The finite certificates check this directly for their exact cases. Retained old-old pairs are unchanged.
 

@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_difference_body_perimeter_collapse_2026-09-09.md) · source SHA-256 `6c540f9214506104c3b68a4ce6c3107d571fe44ff7a86c612fdcb67553f05221`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 30 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-FD509000488C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic endpoint: difference-body perimeter collapse
 
@@ -20,39 +22,41 @@ The cyclic primitive endpoint has enough extra structure to use the new DA diame
 
 DA constructs
 
-$$
+```math
 P_H
 :=D\operatorname{conv}\{\pm u_h:h\in H\}
 \subseteq F-F,
-$$
+```
 
 where the `u_h` are the `h` projective diameter directions. In a cyclic survivor
 
-$$
+```math
 \operatorname{per}(F)=q,
 \qquad
 h=q-d_H,
 \qquad
 0\le d_H\le2.
-$$
+```
 
 The key observation is that the difference body itself has perimeter exactly `2q`. Isoperimetry on `F-F`, rather than Rogers--Shephard back to `F`, forces the cyclic perimeter ratio to the **maximum possible value**:
 
-$$
+```math
 \boxed{
 \frac qD\longrightarrow\pi,
 \qquad
 \frac hD\longrightarrow\pi.}
 \tag{DP.1}
+```
 
 In fact the perimeter deficit is second-order small:
 
-\[
+```math
 \boxed{
 0\le \pi D-q
 \le
 \frac{\pi}{12D}+O(D^{-2}).}
 \tag{DP.2}
+```
 
 Thus the cyclic force hull is not merely a long equilateral polygon. It asymptotically saturates the Rosenthal--Szasz perimeter-diameter inequality at rate `O(1/D)`.
 
@@ -62,29 +66,29 @@ Thus the cyclic force hull is not merely a long equilateral polygon. It asymptot
 
 Let
 
-\[
+```math
 \delta_D:=2\arcsin\frac1{2D}.
-$$
+```
 
 DA/C67 gives pairwise projective separation at least `delta_D` between actual diameter directions. If the `h` projective gaps are `g_i`, then
 
-$$
+```math
 g_i\ge\delta_D,
 \qquad
 \sum_i g_i=\pi,
-$$
+```
 
 and
 
-$$
+```math
 \operatorname{area}(P_H)
 =D^2\sum_i\sin g_i.
 \tag{1.1}
-$$
+```
 
 Concavity of sine gives the exact DA lower bound
 
-$$
+```math
 \boxed{
 \operatorname{area}(P_H)
 \ge
@@ -94,47 +98,50 @@ D^2\left[
 \sin((h-1)\delta_D)
 \right].}
 \tag{DP.3}
+```
 
 Here the final sine uses
 
-\[
+```math
 \sin(\pi-(h-1)\delta_D)
 =\sin((h-1)\delta_D).
-$$
+```
 
 Now use
 
-$$
+```math
 P_H\subseteq F-F.
 \tag{1.2}
-$$
+```
 
 For planar convex bodies perimeter is Minkowski additive. Since `per(-F)=per(F)`,
 
-$$
+```math
 \boxed{
 \operatorname{per}(F-F)
 =2\operatorname{per}(F)
 =2q.}
 \tag{1.3}
+```
 
 Equivalently, Cauchy's perimeter formula gives this immediately from
 
-\[
+```math
 w_{F-F}(\theta)=w_F(\theta)+w_F(\theta+\pi)=2w_F(\theta)
-$$
+```
 
 after integration over one projective period.
 
 Planar isoperimetry applied to the centrally symmetric convex body `F-F` gives
 
-$$
+```math
 \boxed{
 \operatorname{area}(F-F)
 \le
 \frac{(2q)^2}{4\pi}
 =\frac{q^2}{\pi}.}
 \tag{1.4}
+```
 
 Combining DP.3, (1.2), and (1.4):
 
@@ -142,7 +149,7 @@ Combining DP.3, (1.2), and (1.4):
 
 Every cyclic primitive survivor satisfies
 
-\[
+```math
 \boxed{
 D^2\left[
 (h-1)\sin\delta_D
@@ -152,6 +159,7 @@ D^2\left[
 \le
 \frac{q^2}{\pi}.}
 \tag{DP.5}
+```
 
 No population asymptotic, Favard theorem, or contact-stress coefficient enters DP.5.
 
@@ -161,84 +169,88 @@ No population asymptotic, Favard theorem, or contact-stress coefficient enters D
 
 Take any unbounded cyclic survivor sequence. Put
 
-\[
+```math
 y_j:=\frac{h_j}{D_j}.
-$$
+```
 
 Since `h<=q<=pi D`, the sequence is bounded. Pass to any convergent subsequence
 
-$$
+```math
 y_j\to y.
-$$
+```
 
 CY gives
 
-$$
+```math
 0\le q_j-h_j=d_H\le2,
-$$
+```
 
 so
 
-$$
+```math
 \frac{q_j}{D_j}\to y.
 \tag{2.1}
+```
 
 Also
 
-\[
+```math
 D\delta_D
 =2D\arcsin\frac1{2D}
 \longrightarrow1,
-$$
+```
 
 and
 
-$$
+```math
 D\sin\delta_D
 =
 \sqrt{1-\frac1{4D^2}}
 \longrightarrow1.
-$$
+```
 
 Therefore DP.5 divided by `D^2` gives in the limit
 
-$$
+```math
 \boxed{
 y+\sin y\le\frac{y^2}{\pi}.}
 \tag{2.2}
+```
 
 Define
 
-\[
+```math
 \Phi(y):=\pi(y+\sin y)-y^2.
-$$
+```
 
 For `0<y<pi`,
 
-$$
+```math
 \Phi''(y)
 =-\pi\sin y-2<0.
 \tag{2.3}
+```
 
 Thus `Phi` is strictly concave on `[0,pi]`. Moreover
 
-\[
+```math
 \Phi(0)=0,
 \qquad
 \Phi(\pi)=0.
-$$
+```
 
 Strict concavity therefore gives
 
-$$
+```math
 \boxed{\Phi(y)>0\quad(0<y<\pi).}
 \tag{2.4}
+```
 
 Inequality (2.2) is equivalent to `Phi(y)<=0`. The post-ZF lower bounds exclude `y=0`, so the only possible subsequential limit is
 
-\[
+```math
 y=\pi.
-$$
+```
 
 Every convergent subsequence has that limit, proving DP.1. `square`
 
@@ -250,45 +262,50 @@ This supersedes the cyclic Favard threshold `2.6189005...`: the actual limit is 
 
 Put
 
-$$
+```math
 \boxed{t_D:=\pi D-q\ge0.}
 \tag{3.1}
+```
 
 DP.1 first gives
 
-\[
+```math
 t_D=o(D).
 \tag{3.2}
+```
 
 Fix one of the three possible values `d=d_H in {0,1,2}` along a subsequence, and write
 
-\[
+```math
 n:=h-1=q-d-1
 =\pi D-t_D-d-1.
 \tag{3.3}
+```
 
 Use the standard expansions
 
-\[
+```math
 \boxed{
 \delta_D
 =
 \frac1D+rac1{24D^3}+O(D^{-5}),}
 \tag{3.4}
+```
 
 and, exactly before expansion,
 
-\[
+```math
 \sin\delta_D
 =
 \frac1D\sqrt{1-\frac1{4D^2}}
 =
 \frac1D-rac1{8D^3}+O(D^{-5}).
 \tag{3.5}
+```
 
 Since `t_D=o(D)`, (3.3)--(3.5) give
 
-\[
+```math
 \begin{aligned}
 n\sin\delta_D
 &=
@@ -299,10 +316,11 @@ n\sin\delta_D
 +O\left(\frac{t_D+1}{D^3}\right),
 \end{aligned}
 \tag{3.6}
+```
 
 and
 
-\[
+```math
 n\delta_D
 =
 \pi-
@@ -311,25 +329,27 @@ n\delta_D
 \frac\pi{24D^2}
 +O\left(\frac{t_D+1}{D^3}+D^{-4}\right).
 \tag{3.7}
+```
 
 Let
 
-\[
+```math
 u_D
 :=
 \pi-n\delta_D.
-$$
+```
 
 Then `u_D=o(1)`, and
 
-$$
+```math
 \sin(n\delta_D)=\sin u_D
 =u_D+O(u_D^3).
 \tag{3.8}
+```
 
 Combining (3.6)--(3.8), the two linear terms in `t_D+d+1` cancel:
 
-\[
+```math
 \boxed{
  n\sin\delta_D+\sin(n\delta_D)
 =
@@ -340,47 +360,51 @@ Combining (3.6)--(3.8), the two linear terms in `t_D+d+1` cancel:
 \left(\frac{t_D+1}{D}\right)^3
 \right).}
 \tag{3.9}
+```
 
 The right side of DP.5 is
 
-\[
+```math
 \frac{q^2}{\pi D^2}
 =
 \pi-rac{2t_D}{D}
 +
 \frac{t_D^2}{\pi D^2}.
 \tag{3.10}
+```
 
 Suppose first that `D t_D` were unbounded along a subsequence. Divide the inequality obtained from (3.9)--(3.10) by `t_D/D`. Because `t_D=o(D)`, every error term and the quadratic term are `o(1)` relative to `t_D/D`, while the term `pi/(6D^2)` is also `o(t_D/D)` when `Dt_D->infinity`. The inequality would reduce to
 
-\[
+```math
 0\le -2+o(1),
-$$
+```
 
 a contradiction.
 
 Therefore
 
-$$
+```math
 \boxed{t_D=O(D^{-1}).}
 \tag{3.11}
+```
 
 Insert this improved scale back into (3.9). The error is now `O(D^{-3})`, while the final quadratic term in (3.10) is `O(D^{-4})`. DP.5 yields
 
-\[
+```math
 \pi-rac\pi{6D^2}+O(D^{-3})
 \le
 \pi-rac{2t_D}{D}+O(D^{-4}).
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
  t_D
 \le
 \frac\pi{12D}+O(D^{-2}).}
 \tag{3.12}
+```
 
 This proves DP.2. `square`
 
@@ -392,43 +416,45 @@ The argument is uniform over the three bounded values of `d_H`, so no subsequenc
 
 If `d_H=0`, then
 
-\[
+```math
 h=q.
-$$
+```
 
 The projective separation gaps themselves must fit on the projective circle:
 
-$$
+```math
 h\delta_D\le\pi.
 \tag{4.1}
+```
 
 Using
 
-\[
+```math
 q=\pi D-t_D
-$$
+```
 
 and (3.4),
 
-$$
+```math
 q\delta_D
 =
 \pi-rac{t_D}{D}+rac\pi{24D^2}+O(D^{-3}).
-$$
+```
 
 Thus (4.1) gives
 
-$$
+```math
 \boxed{
  t_D
 \ge
 \frac\pi{24D}+O(D^{-2})
 \qquad(d_H=0).}
 \tag{DP.6}
+```
 
 Together with DP.2,
 
-\[
+```math
 \boxed{
 \frac\pi{24D}+O(D^{-2})
 \le
@@ -437,18 +463,19 @@ Together with DP.2,
 \frac\pi{12D}+O(D^{-2})
 \qquad(d_H=0).}
 \tag{DP.7}
+```
 
 The regular odd unit shell has
 
-\[
+```math
 D=rac1{2\sin(\pi/(2q))}
-$$
+```
 
 and asymptotically attains the lower scale
 
-$$
+```math
 D(\pi D-q)\to\frac\pi{24}.
-$$
+```
 
 Thus DP.6 is consistent with, and sharp at leading order for, the regular-shell regression.
 
@@ -458,36 +485,38 @@ Thus DP.6 is consistent with, and sharp at leading order for, the regular-shell 
 
 DP.1-DP.2 force
 
-$$
+```math
 \frac{\operatorname{per}(F-F)}D
 =
 \frac{2q}{D}
 \longrightarrow2\pi.
-$$
+```
 
 The diameter of `F-F` is at most `2D`. Rosenthal--Szasz/Cauchy perimeter-diameter inequality therefore also becomes asymptotically sharp.
 
 Moreover DP.5 and the exact upper bound show
 
-$$
+```math
 \frac{\operatorname{area}(F-F)}{D^2}
 \longrightarrow\pi,
 \tag{5.1}
+```
 
 and
 
-\[
+```math
 \frac{\operatorname{area}(P_H)}{D^2}
 \longrightarrow\pi.
 \tag{5.2}
+```
 
 Indeed the DA lower tends to `pi+sin pi=pi`, while the isoperimetric upper `q^2/(pi D^2)` also tends to `pi`.
 
 Thus the centrally symmetric bodies
 
-\[
+```math
 D^{-1}(F-F)
-$$
+```
 
 asymptotically saturate planar isoperimetry with perimeter `2pi`. Quantitative isoperimetric compactness therefore forces them, after translation (unnecessary here because difference bodies are centrally centered), toward the unit disk in the usual Hausdorff/measure senses available from standard stability theorems.
 
@@ -501,28 +530,30 @@ Hence the cyclic branch has an asymptotically disk-like difference body even tho
 
 Let the projective gaps be `g_i>=delta_D`. Their total excess above the minimum is
 
-$$
+```math
 E_{dir}
 :=
 \sum_i(g_i-\delta_D)
 =
 \pi-h\delta_D.
 \tag{6.1}
+```
 
 Since
 
-\[
+```math
 h=q-d_H=\pi D-t_D-d_H
-$$
+```
 
 and DP.2 gives `t_D=O(1/D)`, expansion of `delta_D` gives
 
-$$
+```math
 \boxed{
 E_{dir}
 =
 \frac{d_H}{D}+O(D^{-2}).}
 \tag{DP.8}
+```
 
 In particular:
 
@@ -532,12 +563,13 @@ In particular:
 
 Since every individual excess is nonnegative, **every** projective diameter-direction gap satisfies
 
-\[
+```math
 \boxed{
 0\le g_i-\delta_D
 \le
 \frac{d_H}{D}+O(D^{-2}).}
 \tag{DP.9}
+```
 
 Thus the actual diameter directions become asymptotically uniformly spaced around the complete projective circle, with total defect controlled only by the constant `d_H`.
 
@@ -563,15 +595,15 @@ The remaining cyclic problem is therefore a stability/classification problem nea
 
 The preceding Favard bootstrap proved only
 
-\[
+```math
 \liminf q/D\ge2.6189005\ldots .
-$$
+```
 
 DP supersedes that constant completely:
 
-$$
+```math
 q/D\to\pi.
-$$
+```
 
 PI likewise becomes asymptotically saturated in direction spread; it remains useful for interpreting the nearly perpendicular diameter pairs but is no longer the best cyclic scalar bound.
 
@@ -587,9 +619,9 @@ The cyclic branch is now extremely narrow. Two high-value routes remain:
 
 Classify convex equilateral polygons with
 
-$$
+```math
 q=\pi D+O(D^{-1})
-$$
+```
 
 and `q-O(1)` actual diameter pairs whose projective directions have total spacing defect `O(1/D)`. Show that they must be quantitatively close to the regular odd-shell geometry, or exclude the `d_H=1,2` topologies.
 

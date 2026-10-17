@@ -23,18 +23,18 @@ The verifier solves ten scalar equations, namely the two closure coordinates for
 
 The center coordinates and approximate inverse entries in the script are parsed as exact decimal rationals. All proof inequalities are evaluated with `fractions.Fraction`. Trigonometric values use finite Taylor polynomials plus Lagrange remainder intervals. The `pi` enclosure uses the exact Machin identity
 
-$$
+```math
 \pi=16\arctan(1/5)-4\arctan(1/239)
-$$
+```
 
 with alternating-series enclosures. Floating-point conversion occurs only in printed summaries after the exact assertions pass.
 
 The verified bounds satisfy
 
-$$
+```math
 Y+Zr<r,
 \qquad Z<1,
-$$
+```
 
 so the Newton-like map is a strict contraction of the closed box into itself. This proves an exact root. Since `CJ` stays within operator norm `<1` of the identity, the relevant `10x10` Jacobian is invertible at the root.
 

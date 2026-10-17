@@ -34,47 +34,47 @@ Let `A` be a finite triangle-free global minimum-diameter source with diameter
 such global minimizers. Suppose `p` has exactly two unit-contact neighbors
 `p_- , p_+`, and there is a source point `a` such that
 
-$$
+```math
 |p-a|=|p_--a|=|p_+-a|=D,
 \qquad |p-p_-|=|p-p_+|=1.
-$$
+```
 
 Set `u=(p-a)/D`, `delta=1/D`, and define the support depth
-$$
+```math
 s(x)=u\cdot(p-x).
-$$
+```
 For distinct source points `x,y`, write `x -> y` if translating `x` by
 `-delta u` would make an old strict pair no longer strict, or would shorten an
 old contact below one:
-$$
+```math
 \begin{cases}
 |x-\delta u-y|\le1,& |x-y|>1,\\
 |x-\delta u-y|<1,& |x-y|=1.
 \end{cases}
-$$
+```
 
 There is a path of distinct source points
-$$
+```math
 p=x_0\to x_1\to\cdots\to x_m
-$$
+```
 where `x_m` is the first vertex with `s(x_m) >= D/10`. For every edge,
-$$
+```math
 1\le |x_{j-1}-x_j|\le1+1/D,
 \qquad s(x_j)-s(x_{j-1})>1/(2D),
-$$
+```
 and
-$$
+```math
 m\ge D/11,
 \qquad
 \sum_{j=1}^{m}(|x_{j-1}-x_j|-1)
 <\frac1{10}+\frac1D+\frac1{D^2}.
-$$
+```
 The first edge is a strict old noncontact and satisfies
-$$
+```math
 1<|p-x_1|\le1+1/D,
 \qquad
 s(x_1)>\frac{\sqrt3}{2}-\frac1{4D}.
-$$
+```
 
 Consequently either the path reaches a nonisolated source vertex before its
 first depth-`D/10` vertex, in which case the prefix to the first such vertex
@@ -90,15 +90,15 @@ different leaves.
 
 Reflect `p` in the line through `p_- p_+`. The reflected point is
 `p'=p-delta u`. For any fixed source point `y`, put `d=|p-y|`. The identity
-$$
+```math
 2(p-y)\cdot(p-a)=d^2+D^2-|y-a|^2\ge d^2
-$$
+```
 uses only that `a,y` are source points and `diam(A)=D`. Therefore
-$$
+```math
 |p'-y|^2-d^2
 =-\frac{2(p-y)\cdot(p-a)}{D^2}+\frac1{D^2}
 \le-\frac{d^2-1}{D^2}.
-$$
+```
 Every old strict pair incident to `p` strictly shortens. The two old contacts
 at `p` remain unit contacts because each has distance `D` from `a`; there are
 no other contacts at `p` by hypothesis. All other source pairs are fixed.
@@ -119,23 +119,23 @@ midpoint-concentration hypothesis. It is a finite full-source reflection.
 
 For `r=x-y` and `d=|r|`, the arrow definition gives `d<=1+delta` by the
 triangle inequality. If `d>1`, then
-$$
+```math
 0<d^2-1\le d^2-|r-\delta u|^2
 =2\delta\,u\cdot r-\delta^2.
-$$
+```
 If `d=1`, the strict arrow condition gives the same final strict inequality.
 Since `s(y)-s(x)=u\cdot r`, each arrow has
 `s(y)-s(x)>delta/2`. The directed relation is acyclic, so each closure chain
 has distinct vertices.
 
 On every arrow,
-$$
+```math
 d^2-1\le2\delta(s(y)-s(x))-\delta^2.
-$$
+```
 Divide by `d+1 >= 2` and sum along a path to obtain
-$$
+```math
 \sum_j(d_j-1)\le\delta s(x_m)-m\delta^2/2.
-$$
+```
 
 ### 3.3 A shallow closed blocker set is a finite competitor
 
@@ -151,25 +151,25 @@ lose old contacts, which only strengthens the contact-minimality contradiction.
 
 To check the full-source upper bound, take a crossing pair `(x,y)` whose
 distance increases. The increase implies
-$$
+```math
 s(y)-s(x)<\delta/2.
-$$
+```
 Hence `s(y)<H+delta/2` and the translated point `x'=x-delta u` has
 `s(x')<H+delta`. Also `|x'-a|<|x-a|<=D`: indeed
-$$
+```math
 |x'-a|^2=|x-a|^2-2\delta(D-s(x))+\delta^2,
-$$
+```
 and `s(x)<D/10`, `D>=10` make the last two terms strictly negative.
 Both `x'` and `y` lie in the cap
-$$
+```math
 \{z:|z-a|\le D,\ s(z)\le h\},\qquad h=H+\delta.
-$$
+```
 For any two points in this cap, their coordinates parallel to `u` differ by
 at most `h`, and each perpendicular coordinate has magnitude at most
 `sqrt(2Dh-h^2)`. Thus its squared diameter is at most
-$$
+```math
 8Dh-3h^2=D^2(8q-3q^2),\qquad q=h/D\le 11/100.
-$$
+```
 The function `8q-3q^2` is increasing on this interval and its endpoint is
 `8437/10000 < 1`; the new crossing distance is strictly below `D`. A
 nonincreasing crossing distance stays at most its old value. Therefore no
@@ -196,15 +196,15 @@ increment is at most its edge length. Thus
 `O(1)` total gap-excess estimate. The first-edge depth estimate was checked
 independently from the two fan-neighbor separation inequalities: if
 `x_1=p-su+vt`, then
-$$
+```math
 4s^2+2\delta(1-\delta^2)s-3-\delta^2+\delta^4>0,
-$$
+```
 so
-$$
+```math
 s>\frac{-\delta(1-\delta^2)+
 \sqrt{12+5\delta^2-6\delta^4+\delta^6}}4
 \ge\frac{\sqrt3}{2}-\frac\delta4.
-$$
+```
 
 The path edges have length at most `1+1/D <= 1.1 < sqrt(2)`. The straight
 segments for pairs of unit-separated source points of length `<sqrt(2)` cannot

@@ -66,20 +66,20 @@ is the corresponding `F` arc followed by the closing chord `v_Mv_0`.
 Write `s_0=|v_1-v_0|`, `s_M=|v_M-v_{M-1}|`, and let `turn_F(v)` denote the
 nonnegative exterior turning angle of `F` at a vertex. Define
 
-$$
+```math
  \psi(s)=\begin{cases}\arccos(s/2),&1\le s<2,\\0,&s\ge2.\end{cases}
-$$
+```
 
 ### Theorem 1 (endpoint and global turning charge)
 
 For every cap cell,
 
-$$
+```math
  \boxed{\displaystyle
  \sum_{i=1}^{M-1}turn_F(v_i)
  \ge\psi(s_0)+\psi(s_M).}
  \tag{1}
-$$
+```
 
 If `s_0=1`, its contribution in (1) is **strictly greater** than
 `pi/3`; likewise for `s_M=1`. Hence a cap cell whose two endpoint sides
@@ -90,12 +90,12 @@ For any family of cap cells with pairwise interior-disjoint polygons, their
 loaded-hull arcs are edge-disjoint and their internal-vertex turn sets are
 disjoint. Consequently
 
-$$
+```math
  \boxed{\displaystyle
  \sum_{r}\bigl(\psi(s_{0,r})+\psi(s_{M,r})\bigr)
  \le 2\pi.}
  \tag{2}
-$$
+```
 
 In particular, **at most two** actual harmonic cap cells can have both
 endpoint sides unit. This includes every cap cell with `M` consecutive
@@ -114,9 +114,9 @@ actual unit-contact neighbor `x in I` of `u`. Harmonic trapping puts
 `uw` and the closing chord `uv_M`. Then the angle
 `theta=angle xuw` lies in `[0,alpha_0]`. By the cosine rule,
 
-$$
+```math
  |x-w|^2=1+s_0^2-2s_0\cos\theta\ge1,
-$$
+```
 
 so `cos(theta)<=s_0/2`. If `s_0<2`, this gives
 `alpha_0>=theta>=arccos(s_0/2)=psi(s_0)`. If `s_0=1`, equality
@@ -131,9 +131,9 @@ Its exterior turns at the two chord endpoints are `pi-alpha_0` and
 of `P` are the corresponding consecutive sides of `F`, so its exterior
 turn in `P` equals `turn_F(v_i)`. Subtracting the endpoint turns gives
 
-$$
+```math
  \sum_{i=1}^{M-1}turn_F(v_i)=alpha_0+alpha_M,
-$$
+```
 
 which proves (1), including strictness.
 
@@ -174,16 +174,16 @@ Let `S_D` be the set of actual Type-II harmonic cap cells whose attachment
 polygons have consecutive **unit** loaded-hull sides and one closing
 chord. Then `|S_D|<=2` for every source. If
 
-$$
+```math
  \sum_{r\in S_D}area(P_r)=o(D^2),
-$$
+```
 
 then
 
-$$
+```math
  \boxed{\displaystyle\sum_{r\in S_D}diam(P_r)=o(D).}
  \tag{3}
-$$
+```
 
 To prove this, suppose along a subsequence one such cell has diameter
 `d_r>=epsilon D` for some fixed `epsilon>0`. Its diameter is attained by

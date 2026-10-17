@@ -22,40 +22,40 @@ The report-level Z/ZC/ZR/ZF chain survives the September 9 consolidated audit. T
 
 The audited ZF conclusion for the nonisolated contact core is
 
-$$
+```math
 e+h\ge 2v-2,
 \tag{1.1}
-$$
+```
 
 and Eppstein's connected triangle-free penny-graph bound is
 
-$$
+```math
 e\le 2v-\delta-2.
 \tag{1.2}
-$$
+```
 
 Hence the campaign already records
 
-$$
+```math
 h\ge\delta\ge\lceil D\rceil.
 \tag{1.3}
-$$
+```
 
 The exact scalar closing theorem remains
 
-$$
+```math
 b+\sum_{F\text{ bounded}}(\deg F-4)>2h,
 \tag{1.4}
-$$
+```
 
 which is equivalent to `e+h<2v-2` and would contradict ZF.
 
 Before this run, C33 split the loaded-boundary analysis according to
 
-$$
+```math
 \sigma_B:=2q-\delta-2,
 \tag{1.5}
-$$
+```
 
 where `q=|B_+|`. The modules C35–C45 develop a separate near-minimal branch under `sigma_B=o(D)`. The existing C34 estimate only gave `q>=(ceil(D)+2)/2`, so that branch was not excluded.
 
@@ -85,33 +85,33 @@ Assume a sufficiently large triangle-free global minimizer has been chosen first
 
 Define the two exact nonnegative slacks
 
-$$
+```math
 r_E:=2v-\delta-2-e\ge0
 \tag{ZS.1}
-$$
+```
 
 and
 
-$$
+```math
 s_Z:=e+h-(2v-2)\ge0.
 \tag{ZS.2}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{h=\delta+r_E+s_Z,}
 \tag{ZS.3}
-$$
+```
 
-$$
+```math
 \boxed{q\ge h\ge\delta\ge\lceil D\rceil,}
 \tag{ZS.4}
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 \sigma_B=2q-\delta-2
 \ge
@@ -120,20 +120,20 @@ $$
 \lceil D\rceil-2.
 }
 \tag{ZS.5}
-$$
+```
 
 In particular, along every unbounded hypothetical C-II sequence satisfying the audited ZF hypotheses,
 
-$$
+```math
 \liminf\frac{\sigma_B}{D}\ge1.
 \tag{ZS.6}
-$$
+```
 
 Thus the C33 near-minimal boundary phase `sigma_B=o(D)` cannot occur on the ZF route.
 
 The connected terminal-path theorem CR4 consequently improves from the old C34-based count to
 
-$$
+```math
 \boxed{
 \nu_{B_+}(C)
 \ge
@@ -142,18 +142,18 @@ $$
 \left\lceil\frac{\lceil D\rceil-1}{4}\right\rceil,
 }
 \tag{ZS.7}
-$$
+```
 
 and the positive circular-planar contact network contains at least
 
-$$
+```math
 \boxed{
 \left\lfloor\frac{q-1}{8}\right\rfloor
 \ge
 \left\lfloor\frac{\lceil D\rceil-1}{8}\right\rfloor
 }
 \tag{ZS.8}
-$$
+```
 
 pairwise terminal-disjoint strict size-two circular response minors. The previously recorded consequence from C34 was only `floor(ceil(D)/16)`.
 
@@ -161,28 +161,28 @@ pairwise terminal-disjoint strict size-two circular response minors. The previou
 
 Eppstein's bound (1.2) gives `r_E>=0`. ZF gives `s_Z>=0`. Rearranging their definitions,
 
-$$
+```math
 \begin{aligned}
 \delta+r_E+s_Z
 &=\delta+(2v-\delta-2-e)+(e+h-2v+2)\\
 &=h,
 \end{aligned}
-$$
+```
 
 which proves (ZS.3).
 
 By the lexicographic restoration, the relative-interior diameter support is the full actual diameter graph. Its vertex set is exactly `B_+`, so it has `q` nonisolated vertices and `h` edges. The classical Hopf–Pannwitz planar diameter-graph bound, already used canonically in C66, gives
 
-$$
+```math
 h\le q.
 \tag{ZS.9}
-$$
+```
 
 Combining (ZS.3), `r_E,s_Z>=0`, and the contact-path comparison `delta>=ceil(D)` proves (ZS.4).
 
 Now
 
-$$
+```math
 \begin{aligned}
 \sigma_B
 &=2q-\delta-2\\
@@ -190,7 +190,7 @@ $$
 &=2(\delta+r_E+s_Z)-\delta-2\\
 &=\delta+2r_E+2s_Z-2,
 \end{aligned}
-$$
+```
 
 which proves (ZS.5), and (ZS.6) follows because `D->infinity` on any unbounded-cardinality sequence.
 
@@ -219,58 +219,58 @@ The same ZF edge-count lower bound interacts with the global C18 diameter-angle 
 
 Let
 
-$$
+```math
 \Theta(D)=
 \frac{
 D(5\pi/6-\sqrt3)+4\pi/3+\pi/(2D)
 }{D+1},
 \tag{3.1}
-$$
+```
 
 and put
 
-$$
+```math
 a_D=2\arcsin\frac1{2D}.
 \tag{3.2}
-$$
+```
 
 For all sufficiently large `D`, `Theta(D)<pi/3`. At a diameter vertex `z`, C18 puts every pair of diameter-partner directions in angular separation `<Theta(D)`. Unit separation of two partners on the radius-`D` circle gives angular separation at least `a_D`. Ordering the `deg_H(z)` partner directions inside their common arc therefore gives
 
-$$
+```math
 (\deg_H(z)-1)a_D<\Theta(D),
-$$
+```
 
 hence the safe integer bound
 
-$$
+```math
 \boxed{
 \deg_H(z)\le
 \left\lceil\frac{\Theta(D)}{a_D}\right\rceil.
 }
 \tag{3.3}
-$$
+```
 
 Since `D a_D->1` and
 
-$$
+```math
 \Theta(D)\longrightarrow
 \theta_\infty:=\frac{5\pi}{6}-\sqrt3
 =0.8859430704\ldots<1,
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{
 \limsup_{D\to\infty}\frac{\Delta(H)}D
 \le\theta_\infty<1.
 }
 \tag{3.4}
-$$
+```
 
 Together with ZF's `h>=ceil(D)`, for every diameter vertex `z`,
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{h-\deg_H(z)}D
@@ -279,7 +279,7 @@ $$
 =0.1140569295\ldots.
 }
 \tag{3.5}
-$$
+```
 
 Thus every proposed mechanical star center misses a linear number of actual active diameter edges. In particular the full diameter support is not a star for all sufficiently large survivors.
 
@@ -291,28 +291,28 @@ For sufficiently large sources, C43 also excludes a diameter triangle. Hence the
 
 The Z route no longer needs to analyze the asymptotic normal form in `04-near-minimal-response-frontier.md` as a possible survivor. Once ZF is accepted, every survivor satisfies the stronger exact phase condition
 
-$$
+```math
 \sigma_B\ge\lceil D\rceil-2.
 \tag{4.1}
-$$
+```
 
 The remaining C-II source is therefore a **linear boundary-surplus** source with
 
-$$
+```math
 q\ge h\ge\delta\ge\lceil D\rceil,
 \tag{4.2}
-$$
+```
 
 at least `floor((ceil(D)-1)/8)` terminal-disjoint strict circular minors, and a diameter support that has `Omega(D)` edges outside every one-star support.
 
 This is a strict reduction of the pre-ZF branch ledger, but it does not change the exact scalar contradiction required by the campaign:
 
-$$
+```math
 \boxed{
  b+\sum_F(\deg F-4)>2h.
 }
 \tag{4.3}
-$$
+```
 
 Equivalently, a closing proof must still force `e+h<=2v-3` for the same actual source.
 
@@ -322,21 +322,21 @@ Equivalently, a closing proof must still force `e+h<=2v-3` for the same actual s
 
 There exists `D_0` such that every triangle-free lexicographically normalized global minimizer in the audited C-II/ZF class with `D>=D_0` satisfies
 
-$$
+```math
 \boxed{
  b+\sum_{F\text{ bounded}}(\deg F-4)>2h.
 }
 \tag{5.1}
-$$
+```
 
 It is enough to prove this only under the now-derived restrictions
 
-$$
+```math
 q\ge h\ge\delta\ge\lceil D\rceil,
 \qquad
 \sigma_B\ge\lceil D\rceil-2,
 \tag{5.2}
-$$
+```
 
 plus the C18 off-star support bound (3.3).
 

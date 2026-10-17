@@ -24,48 +24,48 @@ This is an exact finite statement and requires no lower bound on any KKT multipl
 
 Let
 
-$$
+```math
 \mathcal L=\{\tau_1,\ldots,\tau_m\}
-$$
+```
 
 be pairwise noncrossing outer-to-outer complete stopped trains, and let
 
-$$
+```math
 T=T_{\mathcal L}
-$$
+```
 
 be their complement dual tree.  Thus
 
-$$
+```math
 |E(T)|=m,
 \qquad
 |V(T)|=m+1.
-$$
+```
 
 Root `T` at an arbitrary vertex `r`.  For each selected edge `e_i`, let `S_i` be the descendant component of `T-e_i`, and define
 
-$$
+```math
 \chi_i(v)=1_{S_i}(v)
 \qquad(v\in V(T)).
 \tag{RS.1}
-$$
+```
 
 For each tree vertex put
 
-$$
+```math
 \Phi(v):=(\chi_1(v),\ldots,\chi_m(v))\in\{0,1\}^m.
 \tag{RS.2}
-$$
+```
 
 If an actual diameter row `h=xy` is globally oriented, its shore-incidence vector is exactly
 
-$$
+```math
 \boxed{
 \varepsilon_h
 =\Phi(\rho(y))-\Phi(\rho(x)),
 }
 \tag{RS.3}
-$$
+```
 
 where `rho(x),rho(y)` are the complement regions containing the two source endpoints.  Equation (RS.3) is the tree form of the signed support matrix in the exact global multishear theorem.
 
@@ -77,9 +77,9 @@ where `rho(x),rho(y)` are the complement regions containing the two source endpo
 
 The `m+1` points
 
-$$
+```math
 \{\Phi(v):v\in V(T)\}
-$$
+```
 
 are affinely independent in `R^m`.
 
@@ -95,26 +95,26 @@ Equivalently, `Phi` realizes the tree vertices as the vertices of an `m`-simplex
 
 Orient the selected train vector on cut `i` consistently with the rooted shore split and write it as `u_i`.  For an actual diameter vector
 
-$$
+```math
 r_h=p_y-p_x,
-$$
+```
 
 the first squared-length derivative under simultaneous selected-train shears is twice the matrix
 
-$$
+```math
 M_{hi}
 :=\varepsilon_{hi}(r_h\cdot Ju_i).
 \tag{RS.4}
-$$
+```
 
 ### Lemma RS.2 — arbitrary noncrossing-family shear injectivity
 
 Assume the selected family `L` is a proper subset of the complete stopped trains.  Then
 
-$$
+```math
 \boxed{\operatorname{rank}M=m.}
 \tag{RS.5}
-$$
+```
 
 ### Proof
 
@@ -124,9 +124,9 @@ Canonical mixed infinitesimal rigidity therefore makes the flex Euclidean on the
 
 In complete-train angular coordinates its rate is `theta_i` on selected trains and zero on every unselected train.  By assumption at least one complete train is unselected.  A Euclidean rotation has one common angular rate on every contact train, while a translation has zero train rates.  The unselected zero rate therefore kills the rotation component, and every selected rate must vanish:
 
-$$
+```math
 \theta=0.
-$$
+```
 
 Thus `ker M=0` and (RS.5) follows. `square`
 
@@ -138,48 +138,48 @@ For the high-`t` dominant same-phase O--O family, the proper-subset hypothesis i
 
 Now assume the selected family has one exact projective phase.  Fix one unit representative `u`.  Since the rooted shore orientation may reverse a train vector, write
 
-$$
+```math
 u_i=s_i u,
 \qquad
 s_i\in\{-1,+1\}.
 \tag{RS.6}
-$$
+```
 
 For each diameter row put
 
-$$
+```math
 d_h:=r_h\cdot Ju.
-$$
+```
 
 Then
 
-$$
+```math
 M_{hi}=d_h\,\varepsilon_{hi}s_i.
-$$
+```
 
 In matrix form,
 
-$$
+```math
 \boxed{
 M=\operatorname{diag}(d_h)\,E\,\operatorname{diag}(s_i),
 }
 \tag{RS.7}
-$$
+```
 
 where `E` is the signed tree-path incidence matrix with rows `epsilon_h`.
 
 Hence
 
-$$
+```math
 \operatorname{rank}M\le\operatorname{rank}E.
-$$
+```
 
 By Lemma RS.2,
 
-$$
+```math
 \boxed{\operatorname{rank}E=m.}
 \tag{RS.8}
-$$
+```
 
 In particular diameter rows perpendicular to `Ju` may disappear from `M`, but the remaining signed endpoint differences still span the entire `m`-dimensional tree cut space.
 
@@ -189,52 +189,52 @@ In particular diameter rows perpendicular to `Ju` may disappear from `M`, but th
 
 Let
 
-$$
+```math
 B_T:=\{v\in V(T):\text{region }v\text{ contains an endpoint of some }h\in H\}.
-$$
+```
 
 Put
 
-$$
+```math
 b:=|B_T|.
-$$
+```
 
 Every row of `E` is, by (RS.3), a difference of two region vectors `Phi(v)` with `v in B_T`.  Therefore the row space of `E` lies in the translation space of the affine hull of
 
-$$
+```math
 \{\Phi(v):v\in B_T\}.
-$$
+```
 
 A set of `b` points has affine dimension at most `b-1`, so
 
-$$
+```math
 \boxed{\operatorname{rank}E\le b-1.}
 \tag{RS.9}
-$$
+```
 
 Combine (RS.8) and (RS.9):
 
-$$
+```math
 m\le b-1.
-$$
+```
 
 But the whole tree has only `m+1` regions, so `b<=m+1`.  Hence equality is forced throughout:
 
-$$
+```math
 \boxed{b=m+1.}
 \tag{RS.10}
-$$
+```
 
 ### Theorem RS — dual-region diameter saturation
 
 Every complementary region of the selected same-phase O--O family contains at least one endpoint of an actual diameter edge:
 
-$$
+```math
 \boxed{
 B_T=V(T).
 }
 \tag{RS.11}
-$$
+```
 
 Since C65 makes every actual diameter edge force-visible under the canonical relative-interior stress, every region contains positive diameter endpoint incidence, not merely a KKT-invisible diameter vertex.
 
@@ -259,7 +259,7 @@ The exact rooted endpoint-mass flow from the hub theorem consequently has **posi
 
 The current dominant same-phase O--O staircase gives
 
-$$
+```math
 \begin{array}{c|c|c}
 \text{window} & m/D & \text{forced distinct loaded regions}\\ \hline
  t\le1.850 & >0.0700-o(1) & >0.0700D-o(D)\\
@@ -267,7 +267,7 @@ $$
  t\le1.860 & >0.0246-o(1) & >0.0246D-o(D).
 \end{array}
 \tag{RS.12}
-$$
+```
 
 Thus even at the widest current high-`t` window, a survivor cannot hide the dominant O--O family inside a few loaded complement chambers.  A linear number of distinct regions are individually touched by the actual diameter graph, while every diameter path is simultaneously routed through one common hub.
 

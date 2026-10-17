@@ -24,27 +24,27 @@ That escape is impossible at leading linear order because internal face defect i
 
 Let
 
-$$
+```math
 Q_{all-int}:=\sum_rQ_r
-$$
+```
 
 be the total bounded-face degree excess over **all** unloaded-component internal graphs `C[I_r]`, and let
 
-$$
+```math
 Q_B:=Q-Q_{all-int}
-$$
+```
 
 be the defect on bounded faces incident to at least one loaded terminal.
 
 Then the cap-minimal full-core branch satisfies
 
-$$
+```math
 \boxed{
 Q_B\ge(2-o(1))D.
 }
 \tag{LI.1}
 
-$$
+```
 
 Thus the remaining obstruction is now a genuinely loaded-boundary/interface phenomenon. Neither the two dense carrier interiors nor the graph-small harmonic components can absorb the mandatory two units of defect.
 
@@ -63,32 +63,32 @@ For any unloaded component `I_r`, let
 
 Euler and face-edge incidence give exactly
 
-$$
+```math
  e_r=2n_r-2-\frac{k_r+Q_r}{2}.
 \tag{1.1}
 
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
  r_r
 =\frac{k_r+Q_r}{2}-\delta_r.
 }
 \tag{LI.2}
 
-$$
+```
 
 Since `k_r>=0`,
 
-$$
+```math
 \boxed{
  r_r\ge\frac{Q_r}{2}-\delta_r.
 }
 \tag{1.2}
 
-$$
+```
 
 This elementary inequality is enough to eliminate the small-component defect escape.
 
@@ -98,44 +98,44 @@ This elementary inequality is enough to eliminate the small-component defect esc
 
 TD/TS give two giant components `I_1,I_2` satisfying
 
-$$
+```math
 \delta_1/D\to1,
 \qquad
 \delta_2/D\to1,
-$$
+```
 
 and the cap-minimal hypothesis is
 
-$$
+```math
 S:=\sum_r\delta_r=(2+o(1))D.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 S_{small}:=\sum_{r\ge3}\delta_r=o(D).
 }
 \tag{2.1}
 
-$$
+```
 
 Put
 
-$$
+```math
 Q_{small}:=\sum_{r\ge3}Q_r.
-$$
+```
 
 Summing (1.2) over `r>=3` gives
 
-$$
+```math
 \boxed{
 R_{small}:=\sum_{r\ge3}r_r
 \ge\frac12Q_{small}-o(D).
 }
 \tag{2.2}
 
-$$
+```
 
 No population estimate is needed for this step.
 
@@ -145,23 +145,23 @@ No population estimate is needed for this step.
 
 SI gives for the two giant components
 
-$$
+```math
  r_1+r_2
 \ge
 \left(\frac\pi2-1-o(1)\right)D
 +\frac12(Q_1+Q_2).
 \tag{3.1}
-$$
+```
 
 Add (2.2). Since
 
-$$
+```math
 Q_{all-int}=Q_1+Q_2+Q_{small},
-$$
+```
 
 we obtain the strengthened total slack bound
 
-$$
+```math
 \boxed{
 R_I
 \ge
@@ -170,7 +170,7 @@ R_I
 }
 \tag{LI.3}
 
-$$
+```
 
 This is the key improvement over TE.
 
@@ -180,29 +180,29 @@ This is the key improvement over TE.
 
 NC gives
 
-$$
+```math
 E_{BB}=o(D).
-$$
+```
 
 NBd gives
 
-$$
+```math
 S+R_I+s_B+2E_{BB}+3c_I+s_C=q+2x_B.
-$$
+```
 
 Use
 
-$$
+```math
 S=(2+o(1))D,
 \quad
 q=(\pi+o(1))D,
 \quad
 x_B=o(D),
-$$
+```
 
 and insert LI.3. Discard `s_B>=0`:
 
-$$
+```math
 \boxed{
 3c_I+s_C+\frac12Q_{all-int}
 \le
@@ -210,25 +210,25 @@ $$
 }
 \tag{4.1}
 
-$$
+```
 
 ZU plus NC gives
 
-$$
+```math
  k:=d_H+s_Z=c_I+s_C+o(D).
 \tag{4.2}
 
-$$
+```
 
 Because `c_I>=0`,
 
-$$
+```math
 k\le3c_I+s_C+o(D).
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
  k
 \le
@@ -237,7 +237,7 @@ $$
 }
 \tag{4.3}
 
-$$
+```
 
 ---
 
@@ -245,19 +245,19 @@ $$
 
 ZT gives
 
-$$
+```math
 q=x_B+Q+2k.
-$$
+```
 
 Hence
 
-$$
+```math
 Q=q-x_B-2k.
-$$
+```
 
 Insert `q=(pi+o(1))D`, `x_B=o(D)`, and (4.3):
 
-$$
+```math
 \begin{aligned}
 Q
 &\ge
@@ -269,16 +269,16 @@ Q
 &=
 Q_{all-int}+(2-o(1))D.
 \end{aligned}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 Q_B:=Q-Q_{all-int}
 \ge(2-o(1))D.
 }
-$$
+```
 
 This proves LI.1.
 
@@ -292,11 +292,11 @@ Conversely, the planarity argument in SI shows every bounded internal face of `C
 
 Hence the partition is exact:
 
-$$
+```math
 \boxed{
 Q=Q_{all-int}+Q_B,
 }
-$$
+```
 
 where every face counted by `Q_B` contains at least one loaded terminal.
 
@@ -312,9 +312,9 @@ Therefore at all but `o(D)` terminals there is at most **one** contact edge avai
 
 LI now says that bounded faces incident to this one-slot boundary family carry total excess
 
-$$
+```math
 Q_B\ge(2-o(1))D.
-$$
+```
 
 This is the sharp active target. A proof that such interface defect requires more than one interior contact slot per `O(1)` units of defect can close the cap-minimal branch.
 

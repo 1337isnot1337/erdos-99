@@ -18,9 +18,9 @@
 
 The midpoint-polygon theorem
 
-$$
+```math
 d_H\left(F-o,\frac12P_H\right)=o(D)
-$$
+```
 
 has a stronger consequence than endpoint exclusion. Because `P_H/2` is centrally symmetric and all force-hull vertices lie in the FS radial annulus `D/2+o(D)`, every macroscopic force-hull side has an asymptotically equal opposite side. Thus macroscopic outer pockets occur in opposite chord-pairs.
 
@@ -28,13 +28,13 @@ Two new asymptotic bounds follow.
 
 First, if
 
-$$
+```math
 \lambda=\lim\frac{e_{BB}+2s_C}{D}<1,
-$$
+```
 
 then the force-hull area satisfies
 
-$$
+```math
 \boxed{
 \liminf\frac{area(F)}{D^2}
 \ge
@@ -44,11 +44,11 @@ A(\lambda):=
 r_\lambda=2\arcsin(\lambda/2).
 }
 \tag{PP.1}
-$$
+```
 
 Second, opposite outer pockets can be glued across equal limiting chords. The planar isoperimetric inequality then halves the previous universal reflection coefficient:
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}}{D^2}
 \le
@@ -56,36 +56,36 @@ $$
 \left(\limsup\frac{d_P}{D}\right)^2.
 }
 \tag{PP.2}
-$$
+```
 
 Including exceptional faces and the GU attachment cells gives the necessary inequality
 
-$$
+```math
 A(\lambda)
 \le
 \left(\frac\pi4+\frac1{4\pi}\right)\lambda^2.
 \tag{PP.3}
-$$
+```
 
 Its unique root in `(0,1)` is
 
-$$
+```math
 \boxed{
 \lambda_{PP}=0.9307496328725488\ldots .
 }
 \tag{PP.4}
-$$
+```
 
 Moreover the equality endpoint is impossible: equality in PP.1 uses one macroscopic projective gap whose two opposite hull sides already consume all `d_P` mass, leaving asymptotically zero pocket detour, while PP.3 requires a positive quadratic cavity. Therefore there exist absolute `epsilon_PP>0` and `D_0` such that every sufficiently large post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
 \lambda_{PP}+\epsilon_{PP}.
 }
 \tag{PP.5}
-$$
+```
 
 The gap is nonexplicit. Level I remains open above it.
 
@@ -93,56 +93,56 @@ The gap is nonexplicit. Level I remains open above it.
 
 Use the C-II lexicographic source, FS.4, DB/PC, and the finite midpoint-polygon theorem MP:
 
-$$
+```math
 \boxed{
 d_H\left(F-o,Q_D\right)\le L_D=o(D),
 \qquad Q_D:=\frac12P_H.}
 \tag{1.1}
-$$
+```
 
 Every vertex of `Q_D` has radius exactly `D/2`; every force-hull vertex has radius
 
-$$
+```math
 D/2+o(D)
 \tag{1.2}
-$$
+```
 
 uniformly. The polygon `Q_D` is centrally symmetric.
 
 For the projective diameter-direction gaps write
 
-$$
+```math
 \gamma_1,\ldots,\gamma_h,
 \qquad
 \sum_i\gamma_i=\pi.
 \tag{1.3}
-$$
+```
 
 Its area identity is
 
-$$
+```math
 \boxed{
 \frac{area(Q_D)}{D^2}
 =\frac14\sum_i\sin\gamma_i.
 }
 \tag{1.4}
-$$
+```
 
 For the OP outer pockets write chain length `ell_P`, hull-side chord `s_P`, and
 
-$$
+```math
 x_P=\ell_P-2,
 \qquad
 \sum_Px_P=d_P.
 \tag{1.5}
-$$
+```
 
 PC gives
 
-$$
+```math
 d_P+Q\le e_{BB}\le e_{BB}+2s_C.
 \tag{1.6}
-$$
+```
 
 ## 2. Macroscopic side pairing
 
@@ -150,15 +150,15 @@ $$
 
 Consider any unbounded C-II sequence and any sequence of force-hull sides with lengths
 
-$$
+```math
 s_D/D\to c>0.
-$$
+```
 
 After passage to a subsequence, there is a distinct force-hull side in the opposite boundary sector with length
 
-$$
+```math
 s_D'/D\to c.
-$$
+```
 
 #### Proof
 
@@ -174,31 +174,31 @@ Every such side has length greater than one for large `D`, so it is a missing fo
 
 For a projective gap `gamma`, the corresponding side of `Q_D` has length
 
-$$
+```math
 D\sin(\gamma/2).
 \tag{3.1}
-$$
+```
 
 A positive limiting gap therefore gives two opposite force-hull sides of the same asymptotic length. Their two OP chain lengths are at least their chord lengths. Consequently, if `r_j>0` are the positive limiting macroscopic projective gaps along a subsequence, then
 
-$$
+```math
 \boxed{
 2\sum_j\sin(r_j/2)
 \le
 \tau:=\liminf\frac{d_P}{D}.
 }
 \tag{3.2}
-$$
+```
 
 The force-hull area deficit from the disk is carried only by these macroscopic gaps. Indeed, for gaps below `epsilon`,
 
-$$
+```math
 0\le\gamma-\sin\gamma\le\frac{\epsilon^2}{6}\gamma,
-$$
+```
 
 so their total deficit tends to zero as `epsilon downarrow0`. Using MP.1 and (1.4),
 
-$$
+```math
 \boxed{
 \liminf\frac{area(F)}{D^2}
 \ge
@@ -207,54 +207,54 @@ $$
 \right].
 }
 \tag{3.3}
-$$
+```
 
 We now optimize the right side under (3.2). Put
 
-$$
+```math
 c=2\sin(r/2),
 \qquad
 \varphi(c):=r-\sin r
 =2\arcsin(c/2)-c\sqrt{1-c^2/4}.
 \tag{3.4}
-$$
+```
 
 For `0<c<2`,
 
-$$
+```math
 \varphi'(c)
 =\frac{c^2}{2\sqrt{1-c^2/4}},
 \tag{3.5}
-$$
+```
 
 so `varphi` is strictly increasing and strictly convex, with `varphi(0)=0`. Hence it is superadditive on every interval on which the summed argument remains below `2`:
 
-$$
+```math
 \varphi(c_1)+\varphi(c_2)
 \le\varphi(c_1+c_2).
 \tag{3.6}
-$$
+```
 
 For `lambda<1`, (1.6) and (3.2) give
 
-$$
+```math
 \sum_j c_j\le\tau\le\lambda<1.
-$$
+```
 
 Repeated use of (3.6) therefore gives
 
-$$
+```math
 \sum_j(r_j-\sin r_j)
 \le
 \varphi(\lambda).
 \tag{3.7}
-$$
+```
 
 With
 
-$$
+```math
 r_\lambda=2\arcsin(\lambda/2),
-$$
+```
 
 substitution into (3.3) proves PP.1.
 
@@ -262,26 +262,26 @@ substitution into (3.3) proves PP.1.
 
 The inequality is strict unless all macroscopic gap-cost concentrates in one projective gap and the side budget is saturated. Thus if `area(F)/D^2 -> A(lambda)` with fixed `0<lambda<1`, then
 
-$$
+```math
 \frac{d_P}{D}\to\lambda,
 \tag{3.8}
-$$
+```
 
 there is one macroscopic projective gap
 
-$$
+```math
 r\to r_\lambda,
 \tag{3.9}
-$$
+```
 
 and all other macroscopic gap-cost vanishes. The single projective gap appears twice antipodally in `Q_D`, so it forces two opposite force-hull sides of lengths
 
-$$
+```math
 \boxed{
 \left(\frac\lambda2+o(1)\right)D
 }
 \tag{3.10}
-$$
+```
 
 each.
 
@@ -291,14 +291,14 @@ each.
 
 Let two convex pockets have the same chord length `s` and old-chain lengths `ell_1,ell_2`. Then
 
-$$
+```math
 \boxed{
 area(P_1)+area(P_2)
 \le
 \frac{(\ell_1+\ell_2)^2}{4\pi}.
 }
 \tag{4.1}
-$$
+```
 
 #### Proof
 
@@ -308,12 +308,12 @@ If the two chord lengths differ by `o(D)`, scaling one pocket by a factor `1+o(1
 
 For a macroscopic pocket whose chord is `o(D)`, the sharp Dido theorem gives
 
-$$
+```math
 area(P)
 \le
 \left(\frac1{4\pi}+o(1)\right)\ell_P^2,
 \tag{4.2}
-$$
+```
 
 because the Dido parameter tends to `theta=pi` when `s_P/ell_P->0`.
 
@@ -321,19 +321,19 @@ because the Dido parameter tends to `theta=pi` when `s_P/ell_P->0`.
 
 Along every post-ZF sequence with
 
-$$
+```math
 \frac{d_P}{D}\to\tau,
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}}{D^2}
 \le\frac{\tau^2}{4\pi}.
 }
 \tag{4.3}
-$$
+```
 
 #### Proof
 
@@ -343,17 +343,17 @@ Only `O_epsilon(1)` macroscopic-chain pockets remain. Pass to a subsequence so a
 
 If the normalized chain masses of the resulting disjoint groups are `m_1,...,m_k`, then
 
-$$
+```math
 \limsup\frac{H_{out}}{D^2}
 \le
 \frac1{4\pi}\sum_jm_j^2+O(\epsilon).
-$$
+```
 
 The total macroscopic chain mass is at most `tau+o(1)`, because `ell_P=x_P+2` and there are only `O_epsilon(1)` retained pockets. Hence
 
-$$
+```math
 \sum_jm_j^2\le\left(\sum_jm_j\right)^2\le\tau^2.
-$$
+```
 
 Let `epsilon downarrow0`. This proves (4.3). `square`
 
@@ -361,36 +361,36 @@ Let `epsilon downarrow0`. This proves (4.3). `square`
 
 Let
 
-$$
+```math
 \nu=\lim Q/D.
-$$
+```
 
 PC gives
 
-$$
+```math
 \tau+\nu\le\lambda.
-$$
+```
 
 PP.3 and the exceptional-face bound give
 
-$$
+```math
 \limsup\frac{H_{out}+A_{exc}}{D^2}
 \le
 \frac{(\lambda-\nu)^2+\nu^2}{4\pi}
 \le
 \frac{\lambda^2}{4\pi},
 \tag{5.1}
-$$
+```
 
 because `0<=nu<=lambda`. ZG therefore yields the clean global cavity ceiling
 
-$$
+```math
 \boxed{
 \limsup\frac G{D^2}
 \le\frac{\lambda^2}{4\pi}.
 }
 \tag{5.2}
-$$
+```
 
 This no longer uses a diameter-detour scalar optimization.
 
@@ -398,30 +398,30 @@ This no longer uses a diameter-detour scalar optimization.
 
 GU bounds the attachment-cell area by
 
-$$
+```math
 \limsup\frac{C_{att}}{D^2}
 \le\frac\pi4\lambda^2.
 \tag{6.1}
-$$
+```
 
 Since
 
-$$
+```math
 area(F)=G+C_{att},
-$$
+```
 
 (5.2)-(6.1) give
 
-$$
+```math
 \limsup\frac{area(F)}{D^2}
 \le
 \left(\frac\pi4+\frac1{4\pi}\right)\lambda^2.
 \tag{6.2}
-$$
+```
 
 For any hypothetical subsequence with `lambda<1`, PP.1 gives the opposite lower bound. Hence every such survivor limit must satisfy PP.3:
 
-$$
+```math
 \boxed{
 A(\lambda)
 \le
@@ -430,53 +430,53 @@ B\lambda^2,
 B:=\frac\pi4+\frac1{4\pi}.
 }
 \tag{6.3}
-$$
+```
 
 Put
 
-$$
+```math
 H(\lambda):=A(\lambda)-B\lambda^2.
-$$
+```
 
 For
 
-$$
+```math
 r_\lambda=2\arcsin(\lambda/2),
-$$
+```
 
 one has
 
-$$
+```math
 A'(\lambda)
 =-\frac{\lambda^2}{8\sqrt{1-\lambda^2/4}}<0.
 \tag{6.4}
-$$
+```
 
 Thus `H` is strictly decreasing on `(0,1)`.
 
 Also `H(0)=pi/4>0`, while at `lambda=1`,
 
-$$
+```math
 A(1)=\frac\pi6+\frac{\sqrt3}{8}
 <\frac\pi4+rac1{4\pi}=B.
-$$
+```
 
 The last strict inequality follows already from `pi>3` and `sqrt3<2`:
 
-$$
+```math
 B-A(1)
 =rac\pi{12}+rac1{4\pi}-rac{\sqrt3}{8}>0.
-$$
+```
 
 Therefore there is a unique root
 
-$$
+```math
 \boxed{\lambda_{PP}\in(0,1)}
-$$
+```
 
 of
 
-$$
+```math
 \boxed{
 \frac{\pi-2\arcsin(\lambda/2)
 +\lambda\sqrt{1-\lambda^2/4}}{4}
@@ -484,93 +484,93 @@ $$
 \left(\frac\pi4+\frac1{4\pi}\right)\lambda^2.
 }
 \tag{6.5}
-$$
+```
 
 Numerically,
 
-$$
+```math
 \boxed{\lambda_{PP}=0.93074963287254879100\ldots .}
 \tag{6.6}
-$$
+```
 
 Equation (6.3) is impossible below this root. Thus
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}\ge\lambda_{PP}.
 \tag{6.7}
-$$
+```
 
 ## 7. The `lambda_PP` endpoint is impossible
 
 Assume an unbounded survivor sequence has
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to\lambda_{PP}.
 \tag{7.1}
-$$
+```
 
 Every inequality in the chain PP.1 -> (6.2) -> (6.5) must then be asymptotically sharp.
 
 Because `A(lambda)` is strictly decreasing, the actual pocket-side budget must satisfy
 
-$$
+```math
 \frac{d_P}{D}\to\lambda_{PP}.
 \tag{7.2}
-$$
+```
 
 Equality in the convex concentration step (3.7) forces one macroscopic projective gap `r_lambda`, and its two antipodal force-hull sides have lengths
 
-$$
+```math
 \left(\frac{\lambda_{PP}}2+o(1)\right)D
-$$
+```
 
 each. Their two OP chains therefore have combined length at least
 
-$$
+```math
 (\lambda_{PP}+o(1))D.
 \tag{7.3}
-$$
+```
 
 But the total macroscopic chain length is at most `d_P+o(D)`, hence at most the same quantity. Thus both chains have asymptotically zero detour:
 
-$$
+```math
 (\ell_1-s_1)+(\ell_2-s_2)=o(D),
 \tag{7.4}
-$$
+```
 
 and every other macroscopic pocket chain has total length `o(D)`.
 
 DPC.1 or the sharp Dido theorem then gives
 
-$$
+```math
 H_{out}=o(D^2).
 \tag{7.5}
-$$
+```
 
 Also (1.6) and (7.2) force `Q/D->0`, so
 
-$$
+```math
 A_{exc}=o(D^2).
 \tag{7.6}
-$$
+```
 
 Hence ZG gives
 
-$$
+```math
 G=o(D^2).
 \tag{7.7}
-$$
+```
 
 On the other hand, PP.1 and GU give
 
-$$
+```math
 \liminf\frac G{D^2}
 \ge
 A(\lambda_{PP})-rac\pi4\lambda_{PP}^2
 =
 \frac{\lambda_{PP}^2}{4\pi}>0,
 \tag{7.8}
-$$
+```
 
 where the equality is the defining equation (6.5). Contradiction.
 
@@ -580,14 +580,14 @@ Therefore no `lambda_PP` endpoint sequence exists.
 
 There exist absolute constants `epsilon_PP>0` and `D_0<infinity` such that every post-ZF survivor with `D>=D_0` satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
 \lambda_{PP}+\epsilon_{PP}.
 }
 \tag{7.9}
-$$
+```
 
 The sequential proof is identical to MPE.1: otherwise choose a sequence converging down to `lambda_PP`, contradicting Section 7.
 
@@ -595,18 +595,18 @@ The sequential proof is identical to MPE.1: otherwise choose a sequence convergi
 
 The report-level surplus frontier has moved in this run from
 
-$$
+```math
 0.5882283\ldots\to0.7739547\ldots\to0.8316870\ldots
-$$
+```
 
 and now to the uniform statement
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge0.9307496328725488\ldots+\epsilon_{PP}
 }
-$$
+```
 
 for all sufficiently large post-ZF survivors, for some absolute nonexplicit `epsilon_PP>0`.
 
@@ -614,10 +614,10 @@ This is not a repeated scalar iteration. PP.1 and PP.3 use the full-source FS mi
 
 The shortest remaining Level I implication is a high-surplus upper/global incompatibility. Any universal post-ZF upper bound
 
-$$
+```math
 \limsup\frac{e_{BB}+2s_C}{D}
 \le0.9307496328\ldots
-$$
+```
 
 would now close C-II immediately.
 

@@ -17,9 +17,9 @@
 
 The EC/CT route isolates the flex deficit
 
-$$
+```math
 \sigma_*=2v_*-2-(e_*+h_*)
-$$
+```
 
 of an extreme positive rigidity circuit. A tempting next step would be to prove that
 `sigma_*>0` forces a one-dimensional or otherwise weak selected geometry. That is
@@ -36,27 +36,27 @@ Then the full mixed edge set `C union H` is a rigidity-matroid circuit in the ac
 realization, its unique signed KKT dependence has strictly positive contact and
 diameter multipliers, and
 
-$$
+```math
 \boxed{
 \sigma=rac N2-2.
 }
 \tag{ESR.1}
-$$
+```
 
 Moreover the signed stress matrix
 
-$$
+```math
 \Omega=L_C(\alpha)-L_H(\beta)
-$$
+```
 
 is PSD and has kernel exactly
 
-$$
+```math
 \boxed{
 \ker\Omega=\operatorname{span}\{\mathbf1,P_x,P_y\}.
 }
 \tag{ESR.2}
-$$
+```
 
 Thus there are genuinely two-dimensional, highly underbraced, positive PSD extreme
 circuits. Any proof of Level I must use information absent from this family, such as
@@ -69,24 +69,24 @@ multiple extreme circuits.
 
 Put
 
-$$
+```math
 \theta:=\frac{2\pi}{N},
 \qquad
 R:=\frac1{2\sin(\pi/N)}.
-$$
+```
 
 The vertices are
 
-$$
+```math
 p_j=R(\cos j\theta,\sin j\theta),
 \qquad j\in\mathbb Z/N\mathbb Z.
-$$
+```
 
 Then consecutive vertices are at distance one and opposite vertices are at distance
 
-$$
+```math
 D=2R=\csc(\pi/N).
-$$
+```
 
 For a regular polygon, no nonconsecutive chord has length one, so the unit-contact
 graph on these vertices is exactly `C_N`. The diameter graph is exactly the opposite
@@ -94,7 +94,7 @@ perfect matching.
 
 Hence
 
-$$
+```math
 v=N,
 \qquad
 e=N,
@@ -102,14 +102,14 @@ e=N,
 h=N/2,
 \qquad
 |C\cup H|=3N/2.
-$$
+```
 
 If this support is a circuit, its flex deficit is therefore
 
-$$
+```math
 2N-2-\frac{3N}{2}
 =\frac N2-2,
-$$
+```
 
 which is ESR.1.
 
@@ -123,42 +123,42 @@ The configuration is triangle-free with respect to unit contacts because `C_N` h
 Give the cycle edge `j(j+1)` coefficient `a_j` and the opposite diameter edge
 `j(j+m)` coefficient `b_j`, with the signed equilibrium convention
 
-$$
+```math
 L_C(a)P=L_H(b)P.
-$$
+```
 
 At vertex `j`, the two side vectors are symmetric around the radial line through
 `p_j`, while the opposite diameter vector is radial. Project equilibrium onto the
 tangent line at `p_j`. The diameter term vanishes there, and the two side projections
 are nonzero and opposite. Therefore
 
-$$
+```math
 \boxed{a_{j-1}=a_j}
 \tag{2.1}
-$$
+```
 
 for every `j`.
 
 Thus all cycle coefficients equal one scalar `a`. The radial equilibrium then fixes
 every diameter coefficient. Since
 
-$$
+```math
 (p_j-p_{j-1})+(p_j-p_{j+1})
 =2(1-\cos\theta)p_j
-$$
+```
 
 and
 
-$$
+```math
 p_j-p_{j+m}=2p_j,
-$$
+```
 
 equilibrium gives
 
-$$
+```math
 \boxed{b=a(1-\cos\theta).}
 \tag{2.2}
-$$
+```
 
 The same value is obtained at the opposite endpoint of each matching edge. Hence the
 entire signed self-stress space is one-dimensional.
@@ -180,28 +180,28 @@ change on diameter rows.
 
 Normalize
 
-$$
+```math
 \sum_{h\in H}\beta_h=1.
-$$
+```
 
 By symmetry,
 
-$$
+```math
 \boxed{
 \beta=\frac2N
 }
 \tag{3.1}
-$$
+```
 
 on each of the `N/2` diameter edges. Equation (2.2) gives
 
-$$
+```math
 \boxed{
 \alpha
 =\frac{2}{N(1-\cos(2\pi/N))}
 }
 \tag{3.2}
-$$
+```
 
 on each side contact.
 
@@ -213,29 +213,29 @@ Both are strictly positive.
 
 The stress matrix is the circulant matrix
 
-$$
+```math
 \Omega=\alpha L(C_N)-\beta L(M),
 \tag{4.1}
-$$
+```
 
 where `M` is the opposite perfect matching.
 
 For the Fourier mode
 
-$$
+```math
 f_k(j)=\exp(2\pi i k j/N),
-$$
+```
 
 the cycle Laplacian has eigenvalue
 
-$$
+```math
 \lambda_C(k)=4\sin^2\frac{\pi k}{N}.
 \tag{4.2}
-$$
+```
 
 The opposite matching Laplacian has eigenvalue
 
-$$
+```math
 \lambda_M(k)=1-(-1)^k
 =
 \begin{cases}
@@ -243,19 +243,19 @@ $$
 2,&k\text{ odd}.
 \end{cases}
 \tag{4.3}
-$$
+```
 
 From (2.2),
 
-$$
+```math
 \beta
 =2\alpha\sin^2\frac\pi N.
 \tag{4.4}
-$$
+```
 
 Therefore
 
-$$
+```math
 \mu_k:=\lambda_\Omega(k)
 =
 \begin{cases}
@@ -265,21 +265,21 @@ $$
 \right),&k\text{ odd}.
 \end{cases}
 \tag{4.5}
-$$
+```
 
 For `1<=k<=N-1`,
 
-$$
+```math
 \sin^2\frac{\pi k}{N}
 \ge
 \sin^2\frac\pi N,
-$$
+```
 
 with equality only at `k=1,N-1`. Thus every `mu_k>=0`, and the zero modes are exactly
 
-$$
+```math
 k=0,1,N-1.
-$$
+```
 
 The `k=0` mode is the constant vector; the real and imaginary parts of `k=1` are the
 coordinate vectors `P_x,P_y`. Hence ESR.2 follows.
@@ -294,7 +294,7 @@ the bar-rigidity circuit has a linear flex deficit.
 
 For this family
 
-$$
+```math
 h=\frac N2,
 \qquad
 q=N,
@@ -302,47 +302,47 @@ q=N,
 d=q-h=\frac N2,
 \qquad
 \sigma=\frac N2-2.
-$$
+```
 
 The contact graph is the convex `N`-cycle, so
 
-$$
+```math
 b=N,
 \qquad
 Q=N-4,
 \qquad
 x=b-q=0.
-$$
+```
 
 EC's exact selected face identity is saturated:
 
-$$
+```math
 b+Q
 =2N-4
 =2h+2\sigma.
-$$
+```
 
 CT's terminal ledger is also exact:
 
-$$
+```math
 q+2\sigma
 =2N-4
 =x+Q+2d.
-$$
+```
 
 As `N->infinity`,
 
-$$
+```math
 D=\csc(\pi/N)\sim\frac N\pi,
-$$
+```
 
 so
 
-$$
+```math
 \frac hD\to\frac\pi2,
 \qquad
 \frac\sigma D\to\frac\pi2.
-$$
+```
 
 This lies well inside TP's allowed high-flex region; TP does not falsely exclude it.
 

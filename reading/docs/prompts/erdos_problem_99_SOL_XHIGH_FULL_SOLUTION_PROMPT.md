@@ -17,17 +17,17 @@ and audit the finished argument. A plan, survey, restated frontier, conditional
 closing lemma, or improved numerical constant is not the requested outcome.
 
 For unit-separated planar sets define
-$$
+```math
 D(n)=\min\{\operatorname{diam}A: A\subset\mathbb R^2,
 \ |A|=n,\ |x-y|\ge1\text{ for }x\ne y\}.
-$$
+```
 Prove
-$$
+```math
 \exists n_0\ \forall n\ge n_0\ \forall A,
 \quad |A|=n,\ \min_{x\ne y}|x-y|\ge1,
 \ \operatorname{diam}A=D(n)
 \Longrightarrow A\text{ contains a unit equilateral triangle}.
-$$
+```
 Alternatively, construct triangle-free global minimizers for unbounded
 cardinalities and prove their global optimality. A finite example, local minimum,
 asymptotically optimal family, or one triangle-containing minimizer per
@@ -73,9 +73,9 @@ before using it in a proof. A report's self-description as “proved” or
 ## Current mathematical state: do not roll it back
 
 **C-I is closed.** The promoted September 9 orientation/dependency audit proves
-$$
+```math
 \Omega_s=L_C(\alpha_s)-L_H(\beta_s)\succeq0
-$$
+```
 for every normalized source KKT stress. This uses the actual circular-planar
 response, affine equilibrium, and one consistent projective cut/orientation
 of the diameter thrackle. C63's convergent Newton–Hoffman correction gives
@@ -100,32 +100,32 @@ Read `docs/reports/target_c_full_source_circumradius_response_2026-09-10.md`.
 Audit FS.1–FS.4 against its cited canonical inputs. Its proposed consequences
 hold for every selected normalized stress of every global source, without a
 small-isolate assumption:
-$$
+```math
 R(K)=D/2+O(\sqrt D),\qquad P_*=2D-O(\sqrt D),
 \qquad \theta_{\rm shared\ diameter}=O(D^{-1/4}).
-$$
+```
 It also gives almost-antipodal diameter endpoints about a common source
 circumcenter and radialization of the actual response on coordinate fields.
 These are unpromoted proof-report results to verify, not a Level I solution.
 
 Here is an exact whole-source endpoint. With
-$$
+```math
 K=\operatorname{conv}A,\quad P=\operatorname{per}K,\quad
 a_0=\sqrt3/2,\quad c_0=\sqrt3/4,
-$$
-$$
+```
+```math
 \delta_K=\pi D^2/4-\operatorname{area}K,\qquad
 \mathscr O_A=\operatorname{area}K+c_0P-a_0(n-1),
-$$
+```
 the unconditional strict translated-lattice comparison and Oler give
-$$
+```math
 \delta_K+\mathscr O_A<c_0P.
-$$
+```
 Derive from triangle-freeness and the actual global-source structure the
 opposite inequality
-$$
+```math
 \boxed{\delta_K+\mathscr O_A\ge c_0P,}
-$$
+```
 or construct an `n`-point unit-separated competitor of diameter strictly below
 `D`. Merely renaming this contradiction “NC” is not progress: supply the new
 geometric, response-to-population, or finite-rearrangement theorem that forces it.
@@ -154,9 +154,9 @@ Z/ZC/ZR/ZF claim maximal scalar stress rank and mixed equality-bar rigidity
 on the `v` nonisolated core vertices, giving `e+h>=2v-2`. Here `e` counts
 contacts, `h` diameter pairs, `b` the outer-face walk with multiplicity, and
 `Q_f=sum_bounded_faces(deg(F)-4)`. The exact sufficient contradiction is
-$$
+```math
 \boxed{b+Q_f>2h,\quad\text{equivalently }e+h\le2v-3.}
-$$
+```
 Any proof must account for the full source, exceptional faces, bridges,
 components, and isolates instead of assuming a pure rhombic disk.
 
@@ -177,10 +177,10 @@ the PSD KKT/bar stress has the opposite proper-stress signs for those inequaliti
 ## Other exact endgames remain available
 
 **A:** Prove the source-specific inequality
-$$
+```math
 \operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda,
 \qquad\text{equivalently }d_{\rm sc}\ge\Delta_\Lambda,
-$$
+```
 or a strict competitor with the required source cardinality. The route map
 reaches Sections 168–174, beyond the active prompt's 163–167 snapshot. Use
 the zero-slack/descent and locked stress-sector branches. Section 174 states
@@ -190,9 +190,9 @@ shield charge after audit. Fixed-hull Hall capacity cannot be exceeded.
 Closing only A still requires the remaining global branch coverage.
 
 **B:** Prove the topology-correct joint shell inequality
-$$
+```math
 G+E\ge(\sqrt3/4)B+(\sqrt3/2)(t+\chi-1),
-$$
+```
 with the route's exact definitions; global minimizers satisfy the strict
 reverse inequality. The promoted phase-cut/coherent-family addendum excludes
 specified coherent near-extremal cores, not every jammed survivor. Supply its

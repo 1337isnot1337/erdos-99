@@ -20,7 +20,7 @@ RP proves that every cyclic phase lies within `O(D^-2)` in side count of the exa
 
 Put
 
-$$
+```math
 \delta:=2\arcsin\frac1{2D},
 \qquad
 q_R(D):=\frac\pi\delta,
@@ -29,13 +29,13 @@ s:=q_R(D)-q\ge0,
 \qquad
 d:=d_H\in\{0,1,2\}.
 \tag{1.1}
-$$
+```
 
 Then `q_R(D)` is the real side count for which the Reinhardt equality relation
 
-$$
+```math
 D=\frac1{2\sin(\pi/(2q_R))}
-$$
+```
 
 holds exactly. RP gives `s=O(D^-2)=O(delta^2)`.
 
@@ -43,18 +43,18 @@ holds exactly. RP gives `s=O(D^-2)=O(delta^2)`.
 
 Every unbounded cyclic survivor sequence satisfies
 
-$$
+```math
 \boxed{
 \limsup_{D\to\infty}
 \frac{s}{\delta^2}
 \le
 \frac{d(d+1)(d+2)}{12}.}
 \tag{R2.1}
-$$
+```
 
 Since only `d=0,1,2` occur,
 
-$$
+```math
 \boxed{
 \begin{array}{c|c}
  d_H & \displaystyle\limsup D^2\bigl(q_R(D)-q\bigr)\\ \hline
@@ -63,29 +63,29 @@ $$
 2 & \le2.
 \end{array}}
 \tag{R2.2}
-$$
+```
 
 The `d_H=0` phase is already strengthened by RE to exact equality `s=0` for every sufficiently large survivor. The new content is the explicit constants in the two tree phases.
 
 Equivalently, if
 
-$$
+```math
 D_R(q):=\frac1{2\sin(\pi/(2q))},
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \limsup D^2\bigl(D-D_R(q)\bigr)
 \le
 \frac{d(d+1)(d+2)}{12\pi},}
 \tag{R2.3}
-$$
+```
 
 so in particular
 
-$$
+```math
 D-D_R(q)
 \le
 \begin{cases}
@@ -93,7 +93,7 @@ D-D_R(q)
 2(\pi D^2)^{-1}+o(D^{-2}), & d_H=2.
 \end{cases}
 \tag{R2.4}
-$$
+```
 
 Thus the one- and two-defect maximal-thrackle shells of MT are forced into an explicit second-order tube around exact Reinhardt equality.
 
@@ -103,32 +103,32 @@ Thus the one- and two-defect maximal-thrackle shells of MT are forced into an ex
 
 The number of actual diameter directions is
 
-$$
+```math
 h=q-d
 =q_R-s-d
 =\frac\pi\delta-(s+d).
 \tag{1.2}
-$$
+```
 
 DA gives
 
-$$
+```math
 \operatorname{area}(F-F)
 \ge
 D^2\left[(h-1)\sin\delta+\sin((h-1)\delta)\right].
 \tag{1.3}
-$$
+```
 
 Since
 
-$$
+```math
 (h-1)\delta
 =\pi-(s+d+1)\delta,
-$$
+```
 
 we can rewrite the lower side exactly as
 
-$$
+```math
 L
 :=
 D^2\left[
@@ -137,7 +137,7 @@ D^2\left[
 \sin((s+d+1)\delta)
 \right].
 \tag{1.4}
-$$
+```
 
 This is the useful form: the only deviation from the exact ladder appears through the bounded integer `d` and the small real defect `s`.
 
@@ -147,68 +147,68 @@ This is the useful form: the only deviation from the exact ladder appears throug
 
 Use
 
-$$
+```math
 D^2
 =\frac1{4\sin^2(\delta/2)}
 =\frac1{\delta^2}+\frac1{12}+O(\delta^2),
 \tag{2.1}
-$$
+```
 
-$$
+```math
 \sin\delta
 =\delta-\frac{\delta^3}{6}+O(\delta^5),
 \tag{2.2}
-$$
+```
 
 and RP's
 
-$$
+```math
 s=O(\delta^2).
 \tag{2.3}
-$$
+```
 
 Let
 
-$$
+```math
 r:=d+s,
 \qquad a:=r+1.
-$$
+```
 
 The bracket in (1.4) is
 
-$$
+```math
 \frac\pi\delta\sin\delta-a\sin\delta+\sin(a\delta).
-$$
+```
 
 The first term is
 
-$$
+```math
 \pi-\frac\pi6\delta^2+O(\delta^4).
 \tag{2.4}
-$$
+```
 
 For the last two terms,
 
-$$
+```math
 -a\sin\delta+\sin(a\delta)
 =
 -\frac{a(a^2-1)}6\delta^3+O(\delta^5).
 \tag{2.5}
-$$
+```
 
 Because `s=O(delta^2)`, replacing `a=d+1+s` by `d+1` in the cubic coefficient changes (2.5) only by `O(delta^5)`. Hence
 
-$$
+```math
 -a\sin\delta+\sin(a\delta)
 =
 -\frac{d(d+1)(d+2)}6\delta^3
 +O(\delta^5).
 \tag{2.6}
-$$
+```
 
 Multiplying (2.4)+(2.6) by (2.1) gives
 
-$$
+```math
 \boxed{
 L
 =
@@ -218,21 +218,21 @@ L
 A_d\,\delta
 +O(\delta^2),}
 \tag{2.7}
-$$
+```
 
 where
 
-$$
+```math
 \boxed{A_d:=\frac{d(d+1)(d+2)}6.}
 \tag{2.8}
-$$
+```
 
 For the actual phases,
 
-$$
+```math
 A_0=0,\qquad A_1=1,\qquad A_2=4.
 \tag{2.9}
-$$
+```
 
 ---
 
@@ -240,31 +240,31 @@ $$
 
 The difference body has at most `2q` sides and perimeter `2q`. Therefore
 
-$$
+```math
 \operatorname{area}(F-F)
 \le
 U(q):=\frac{q}{2\tan(\pi/(2q))}.
 \tag{3.1}
-$$
+```
 
 The standard expansion is
 
-$$
+```math
 U(q)
 =
 \frac{q^2}{\pi}-\frac\pi{12}+O(q^{-2}).
 \tag{3.2}
-$$
+```
 
 Now
 
-$$
+```math
 q=\frac\pi\delta-s,
-$$
+```
 
 so
 
-$$
+```math
 \frac{q^2}{\pi}
 =
 \frac\pi{\delta^2}
@@ -272,11 +272,11 @@ $$
 \frac{2s}{\delta}
 +
 \frac{s^2}{\pi}.
-$$
+```
 
 Since `s=O(delta^2)`, the last term is `O(delta^4)` and `q^-2=O(delta^2)`. Hence
 
-$$
+```math
 \boxed{
 U(q)
 =
@@ -287,7 +287,7 @@ U(q)
 \frac{2s}{\delta}
 +O(\delta^2).}
 \tag{3.3}
-$$
+```
 
 ---
 
@@ -295,13 +295,13 @@ $$
 
 We have
 
-$$
+```math
 L\le\operatorname{area}(F-F)\le U(q).
-$$
+```
 
 Subtract (2.7) from (3.3):
 
-$$
+```math
 0
 \le
 U(q)-L
@@ -311,33 +311,33 @@ A_d\delta
 \frac{2s}{\delta}
 +O(\delta^2).
 \tag{4.1}
-$$
+```
 
 Divide by `delta>0`:
 
-$$
+```math
 0
 \le
 A_d
 -
 2\frac{s}{\delta^2}
 +O(\delta).
-$$
+```
 
 Therefore
 
-$$
+```math
 \limsup\frac{s}{\delta^2}
 \le\frac{A_d}{2}
 =
 \frac{d(d+1)(d+2)}{12}.
-$$
+```
 
 This proves R2.1. Since
 
-$$
+```math
 D\delta\to1,
-$$
+```
 
 R2.2 follows. `square`
 
@@ -347,39 +347,39 @@ R2.2 follows. `square`
 
 The ladder function
 
-$$
+```math
 q_R(D)=\frac\pi{2\arcsin(1/(2D))}
-$$
+```
 
 has derivative
 
-$$
+```math
 q_R'(D)=\pi+O(D^{-2}).
 \tag{5.1}
-$$
+```
 
 By definition
 
-$$
+```math
 q_R(D_R(q))=q,
 \qquad
 q_R(D)-q=s.
-$$
+```
 
 The mean value theorem gives some `xi` between `D_R(q)` and `D` such that
 
-$$
+```math
 s=q_R'(\xi)\,[D-D_R(q)].
-$$
+```
 
 RP already gives `D-D_R(q)=O(D^-2)`, so `xi~D` and
 
-$$
+```math
 D-D_R(q)
 =
 \frac{s}{\pi}+o(D^{-2}).
 \tag{5.2}
-$$
+```
 
 Combining with R2.2 gives R2.3-R2.4. `square`
 
@@ -391,9 +391,9 @@ MT proves that there is a maximal odd-cycle-plus-leaves convex thrackle `T` cont
 
 R2 now says the **whole shell** has only
 
-$$
+```math
 O_d(D^{-2})
-$$
+```
 
 room above the exact Reinhardt diameter corresponding to its side count.
 
@@ -401,11 +401,11 @@ This does not yet bound each missing chord deficit `D-|g|`: a short completion c
 
 But the target is now numerical rather than qualitative. Any MT-gap theorem of the form
 
-$$
+```math
 D-D_R(q)
 \ge
 c\,\Phi(D-|g_1|,\ldots,D-|g_d|)
-$$
+```
 
 with a source-independent positive `c` can be combined with R2 immediately.
 
@@ -432,19 +432,19 @@ The shortest geometric target is now an **edge-labeled Reinhardt stability lemma
 
 R2 supplies the right-hand scale explicitly:
 
-$$
+```math
 D-D_R(q)
 \le
 \frac{1}{2\pi D^2}+o(D^{-2})
 \quad(d=1),
-$$
+```
 
-$$
+```math
 D-D_R(q)
 \le
 \frac{2}{\pi D^2}+o(D^{-2})
 \quad(d=2).
-$$
+```
 
 If the missing-edge defect must be appreciably larger in a local equilateral diameter minimum, the tree phases close.
 

@@ -15,32 +15,32 @@
 Let `C` be a convex unit-edge polygon of degree `k`. Choose farthest boundary vertices
 `a,b`, put
 
-$$
+```math
 r:=|a-b|=\operatorname{diam}C,
 \qquad q:={b-a\over r},
-$$
+```
 
 and for `0<eta<=pi/2` let `N_C(eta)` count boundary edge occurrences whose projective
 direction is at angular distance at least `eta` from `[q]`.
 
 Then
 
-$$
+```math
 \boxed{
 N_C(\eta)\le {k-2r\over1-\cos\eta}.
 }
 \tag{129.1}
-$$
+```
 
 A weighted form is
 
-$$
+```math
 \boxed{
 \sum_{e\subset\partial C}(1-|q\cdot u_e|)
 \le k-2r,
 }
 \tag{129.2}
-$$
+```
 
 where `u_e` is either unit orientation of the edge direction.
 
@@ -49,23 +49,23 @@ where `u_e` is either unit orientation of the edge direction.
 For a directed unit-edge path from `a` to `b`, with oriented steps `v_i` and length
 `m`,
 
-$$
+```math
 \sum_i v_i=rq,
-$$
+```
 
 hence exactly
 
-$$
+```math
 m-r=\sum_i(1-q\cdot v_i).
 \tag{129.3}
-$$
+```
 
 If the projective direction of `v_i` is at least `eta` from `[q]`, then its oriented
 angle from `q` lies in `[eta,pi-eta]`, so
 
-$$
+```math
 q\cdot v_i\le\cos\eta
-$$
+```
 
 and that occurrence costs at least `1-cos eta` in (129.3).
 
@@ -75,23 +75,23 @@ The two boundary arcs from `a` to `b` have lengths `m_+` and `m_-` with
 `m_++m_-=k`. Orient both arcs from `a` to `b`. Their occurrence sets are disjoint and
 each has displacement `rq`. Applying (129.3) to both gives total route excess
 
-$$
+```math
 (m_+-r)+(m_--r)=k-2r.
-$$
+```
 
 Every projectively `eta`-bad occurrence costs at least `1-cos eta`, proving (129.1).
 
 For (129.2), if the route orientation of occurrence `e` is `v_e=+-u_e`, then
 
-$$
+```math
 q\cdot v_e\le|q\cdot u_e|,
-$$
+```
 
 so
 
-$$
+```math
 1-|q\cdot u_e|\le1-q\cdot v_e.
-$$
+```
 
 Summing the two route identities proves (129.2).
 
@@ -99,38 +99,38 @@ Summing the two route identities proves (129.2).
 
 Let `C_D` be a sequence of bounded nonquadrilateral global contact faces with
 
-$$
+```math
 {\deg C_D\over D}\to\lambda>0.
-$$
+```
 
 Canonical Section 84 gives
 
-$$
+```math
 {\operatorname{diam}C_D\over D}\to{\lambda\over2},
-$$
+```
 
 hence
 
-$$
+```math
 \deg C_D-2\operatorname{diam}C_D=o(D).
 \tag{129.4}
-$$
+```
 
 For every fixed `eta>0`, (129.1) therefore yields
 
-$$
+```math
 \boxed{N_{C_D}(\eta)=o(D).}
 \tag{129.5}
-$$
+```
 
 Likewise (129.2) gives
 
-$$
+```math
 \boxed{
 \sum_{e\subset\partial C_D}(1-|q_D\cdot u_e|)=o(D).
 }
 \tag{129.6}
-$$
+```
 
 Thus all but `o(D)` physical boundary occurrences of a macroscopic inactive corridor
 lie in one projective phase window at every fixed angular scale.
@@ -155,16 +155,16 @@ corresponds to linearly many distinct trains, all but `o(D)` of one projective p
 Cutting a macroscopic corridor cycle at its diameter pair creates two routes with
 antipodal hosts `q_D,-q_D`. Their total excess is exactly
 
-$$
+```math
 \deg C_D-2\operatorname{diam}C_D=o(D).
-$$
+```
 
 The support width of that host pair for train direction `u` is `2|q_D·u|`; the return
 deficit is
 
-$$
+```math
 2(1-|q_D\cdot u|).
-$$
+```
 
 Equation (129.2) explains physically why the host pair can have small return deficit
 for the endpoint cohort actually assigned to its corridor: the total alignment defect

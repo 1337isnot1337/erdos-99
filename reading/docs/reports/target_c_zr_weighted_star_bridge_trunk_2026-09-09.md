@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_weighted_star_bridge_trunk_2026-09-09.md) · source SHA-256 `a16796d62ffca3152abc5cffc8cfbd667216fb64d4e41c667c870a3976334a63`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-61B268FA715E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZWT: weighted star flow forces an almost-eta-D macroscopic bridge trunk
 
@@ -31,71 +33,71 @@ Taking `a=eta/(4pi)` yields a **consecutive macroscopic bridge trunk of length `
 
 Assume
 
-$$
+```math
 S_{br}\ge\eta D^2,
 \qquad 0<\eta\le1,
 \tag{1.1}
-$$
+```
 
 and the near-zero response phase
 
-$$
+```math
 D\varepsilon\to0.
 \tag{1.2}
-$$
+```
 
 ZBD gives the exact bridge-depth identity
 
-$$
+```math
 \sum_{e\text{ bridge}}w_e
 =
 \sum_{g\in H}\beta_g\ell(g),
 \tag{1.3}
-$$
+```
 
 while C23 gives `alpha_e<=D w_e`. Therefore
 
-$$
+```math
 \boxed{
 \sum_{g\in H}\beta_g\ell(g)
 \ge\eta D.
 }
 \tag{1.4}
-$$
+```
 
 C66 supplies a diameter vertex `z` with nonstar beta mass
 
-$$
+```math
 \tau_z:=\sum_{g\not\ni z}\beta_g
 \le C_0D\varepsilon=o(1).
 \tag{1.5}
-$$
+```
 
 Every diameter tree path has length at most the total number of contact bridges, and C27 gives
 
-$$
+```math
 \ell(g)\le2q-3\le2\pi D.
 \tag{1.6}
-$$
+```
 
 Hence the complete nonstar contribution to (1.4) is at most
 
-$$
+```math
 \sum_{g\not\ni z}\beta_g\ell(g)
 \le2\pi D\tau_z=o(D).
 \tag{1.7}
-$$
+```
 
 Thus the z-star diameter edges alone satisfy
 
-$$
+```math
 \boxed{
 \sum_{zy\in H}\beta_{zy}\ell(zy)
 \ge
 (\eta-2\pi\tau_z)D.
 }
 \tag{ZWT1}
-$$
+```
 
 ---
 
@@ -105,7 +107,7 @@ Root the complete contact bridge-block tree at the block containing `z`.
 
 For every rooted bridge edge `e`, define its **star subtree mass**
 
-$$
+```math
 \boxed{
  m_e^z
  :=
@@ -113,40 +115,40 @@ $$
  \beta_{zy}.
 }
 \tag{2.1}
-$$
+```
 
 A star edge `zy` contributes `beta_zy` to `m_e^z` for exactly the bridge edges on its tree path from `z` to `y`. Therefore
 
-$$
+```math
 \boxed{
 \sum_e m_e^z
 =
 \sum_{zy\in H}\beta_{zy}\ell(zy).
 }
 \tag{2.2}
-$$
+```
 
 Combining with ZWT1,
 
-$$
+```math
 \boxed{
 \sum_e m_e^z
 \ge
 (\eta-2\pi\tau_z)D.
 }
 \tag{ZWT2}
-$$
+```
 
 The masses are monotone down the rooted tree: if `f` is a descendant of `e`, then
 
-$$
+```math
 m_f^z\le m_e^z.
 \tag{2.3}
-$$
+```
 
 At any fixed tree depth, the descendant subtrees of the bridge edges at that depth are disjoint, so
 
-$$
+```math
 \boxed{
 \sum_{e\text{ at depth }j}m_e^z
 \le
@@ -154,7 +156,7 @@ $$
 \le1.
 }
 \tag{2.4}
-$$
+```
 
 ---
 
@@ -162,54 +164,54 @@ $$
 
 Fix a constant
 
-$$
+```math
 0<a<\frac{\eta}{2\pi}.
 \tag{3.1}
-$$
+```
 
 Call a rooted bridge **a-heavy in star mass** if
 
-$$
+```math
 m_e^z\ge a.
 \tag{3.2}
-$$
+```
 
 Let `E_<a` be the remaining bridge edges. Since the complete contact graph has at most `2pi D` bridges,
 
-$$
+```math
 \sum_{e\in E_{<a}}m_e^z
 < a|E(T)|
 \le2\pi aD.
 \tag{3.3}
-$$
+```
 
 Therefore ZWT2 gives
 
-$$
+```math
 \boxed{
 \sum_{e:m_e^z\ge a}m_e^z
 \ge
 (\eta-2\pi a-2\pi\tau_z)D.
 }
 \tag{3.4}
-$$
+```
 
 Because star subtree mass is monotone under ancestry, the set
 
-$$
+```math
 T_a:=\{e:m_e^z\ge a\}
 \tag{3.5}
-$$
+```
 
 is a rooted subtree with no gaps from the root.
 
 Let `H_a` be its maximum edge depth. By (2.4), the total star mass over all edges of `T_a` is at most one per depth level:
 
-$$
+```math
 \sum_{e\in T_a}m_e^z
 \le H_a.
 \tag{3.6}
-$$
+```
 
 Combine with (3.4).
 
@@ -217,27 +219,27 @@ Combine with (3.4).
 
 For every fixed `a in (0,eta/(2pi))`, the rooted bridge tree contains a **consecutive** root-to-leaf bridge chain of length
 
-$$
+```math
 \boxed{
 H_a
 \ge
 (\eta-2\pi a-2\pi\tau_z)D.
 }
 \tag{ZWT3}
-$$
+```
 
 Every bridge on this chain has star crossing beta mass at least `a`.
 
 In the phase `D epsilon->0`, `tau_z=o(1)`, so
 
-$$
+```math
 \boxed{
 \liminf\frac{H_a}{D}
 \ge
 \eta-2\pi a.
 }
 \tag{ZWT4}
-$$
+```
 
 This is a weighted tree theorem; no Dilworth/antichain extraction is used.
 
@@ -247,39 +249,39 @@ This is a weighted tree theorem; no Dilworth/antichain extraction is used.
 
 Choose any one actual z-star diameter edge and let `u_0` be its unit direction from `z` to its partner. C18 gives, for all sufficiently large sources,
 
-$$
+```math
 \angle(u_0,u_{zy})<\Theta(D)<\pi/3
 \tag{4.1}
-$$
+```
 
 for every z-star diameter direction `u_zy`. Hence
 
-$$
+```math
 u_0\cdot u_{zy}>1/2.
 \tag{4.2}
-$$
+```
 
 Take a bridge `e` on the ZWT chain and orient it away from `z`. Every z-star edge counted by `m_e^z` crosses this bridge from `z` to its descendant partner. C23's exact vector cut law gives
 
-$$
+```math
 \frac{\alpha_e}{D}u_e
 =
 \sum_{g\pitchfork e}\beta_g u_g
 \tag{4.3}
-$$
+```
 
 with consistent orientation.
 
 Project onto `u_0`. The z-star contribution is more than `m_e^z/2>=a/2`. The complete nonstar contribution has norm at most `tau_z`, so
 
-$$
+```math
 \frac{\alpha_e}{D}
 \ge
 u_0\cdot\frac{\alpha_e}{D}u_e
 >
 \frac a2-\tau_z.
 \tag{4.4}
-$$
+```
 
 Thus:
 
@@ -287,23 +289,23 @@ Thus:
 
 For every fixed `a>0`, along `D epsilon->0`, all bridges in the ZWT chain satisfy
 
-$$
+```math
 \boxed{
 \alpha_e
 \ge
 \left(\frac a2-o(1)\right)D.
 }
 \tag{ZWT5}
-$$
+```
 
 In particular, eventually
 
-$$
+```math
 \boxed{
 \alpha_e\ge\frac a4D.
 }
 \tag{ZWT6}
-$$
+```
 
 The same projection shows that all oriented trunk directions remain in the common z-star cone up to `o(1)` angular error.
 
@@ -313,14 +315,14 @@ The same projection shows that all oriented trunk directions remain in the commo
 
 Set
 
-$$
+```math
  a=\frac{\eta}{4\pi}.
 \tag{5.1}
-$$
+```
 
 Then ZWT3 becomes
 
-$$
+```math
 \boxed{
 H_a
 \ge
@@ -329,44 +331,44 @@ H_a
 \left(\frac\eta2-o(1)\right)D.
 }
 \tag{ZWT7}
-$$
+```
 
 Every trunk bridge eventually satisfies
 
-$$
+```math
 \boxed{
 \alpha_e\ge\frac{\eta}{16\pi}D.
 }
 \tag{ZWT8}
-$$
+```
 
 Thus the earlier ZHT bound
 
-$$
+```math
 H\ge\frac{\eta^2}{16\pi}D
-$$
+```
 
 is superseded, in the near-zero phase, by
 
-$$
+```math
 \boxed{
 H\ge(\eta/2-o(1))D.
 }
 \tag{5.2}
-$$
+```
 
 The improvement is by a factor asymptotic to `8pi/eta` in trunk length.
 
 The stress carried by this complete trunk obeys, for sufficiently large members,
 
-$$
+```math
 \boxed{
 \sum_{e\in\text{trunk}}\alpha_e
 \ge
 \left(\frac{\eta^2}{32\pi}-o(1)\right)D^2.
 }
 \tag{ZWT9}
-$$
+```
 
 using the sharper asymptotic `alpha_e/D>=a/2-o(1)`; with the finite safe bound ZWT8 one gets `eta^2D^2/(32pi)-o(D^2)` after combining `H=(eta/2-o(1))D`.
 
@@ -378,56 +380,58 @@ Consider the deepest bridge `e_*` of the ZWT chain. Its star crossing beta mass 
 
 Discard z-star edges crossing `e_*` with `beta<=2epsilon`; their total beta mass is at most
 
-$$
+```math
 2\varepsilon\deg_H(z)
 \le2\pi D\varepsilon=o(1).
 \tag{6.1}
-$$
+```
 
 Every remaining star edge has `c_g>beta_g/2>0` by the PSD pointwise transfer estimate. Since `z` has contact degree at most three, it belongs to at most three unloaded harmonic attachment sets. Assign each remaining star edge to a common component carrying maximal component response, exactly as in revised ZHC/ZHH.
 
 One unloaded component `I_*` captures a fixed beta mass at least
 
-$$
+```math
 \boxed{
 a/3-o(1)}
 \tag{6.2}
-$$
+```
 
 and exact-diameter component response at least
 
-$$
+```math
 \boxed{
 a/18-o(1).}
 \tag{6.3}
-$$
+```
 
 Every assigned star edge crosses the deepest bridge and therefore every ancestor bridge of the ZWT chain. Its contact path through `I_*` must cross all those global contact bridges. Hence
 
-$$
+```math
 \boxed{
 \text{the complete ZWT trunk lies in the closure of one unloaded harmonic cell }I_*.
 }
 \tag{ZWT10}
+```
 
 The cell contact stress satisfies
 
-\[
+```math
 \boxed{
 \sum_{e\in E_*}\alpha_e
 \ge
 \left(\frac a{18}-o(1)\right)D^2.
 }
 \tag{ZWT11}
+```
 
 For `a=eta/(4pi)`, this is
 
-\[
+```math
 \sum_{E_*}\alpha_e
 \ge
 \left(\frac{\eta}{72\pi}-o(1)\right)D^2.
 \tag{6.4}
-$$
+```
 
 ---
 
@@ -435,67 +439,68 @@ $$
 
 ZHA applies to the complete ZWT trunk. If its length is `H_a`, then
 
-$$
+```math
 \boxed{|A_*|\ge H_a+1,}
 \tag{7.1}
-$$
+```
 
 and the uniformly-short component-response graph on `A_*` has a matching of size at least
 
-$$
+```math
 \boxed{(H_a-1)/2.}
 \tag{7.2}
-$$
+```
 
 For `a=eta/(4pi)`,
 
-$$
+```math
 \boxed{
 |A_*|
 \ge
 (\eta/2-o(1))D,
 }
 \tag{ZWT12}
-$$
+```
 
-$$
+```math
 \boxed{
 |J_*|
 \ge
 (\eta/4-o(1))D.
 }
 \tag{ZWT13}
-$$
+```
 
 The ZHA defect estimate still gives
 
-$$
+```math
 \sum_{st\in J_*}c_{st}^{(*)}=o(1/D),
 \tag{7.3}
-$$
+```
 
 so the average component conductance on this now much larger matching is `o(1/D^2)`.
 
 ZHL also improves immediately. The internal graph diameter of the captured component is at least `H_a-2`, so the current-main exact component ledger yields
 
-$$
+```math
 \boxed{
  e_{BB}+2s_C
 \ge
 H_a-8+3(d_H+s_Z).
 }
 \tag{7.4}
-$$
+```
 
 Therefore for `a=eta/(4pi)`,
 
-$$
+```math
 \boxed{
 \liminf\frac{e_{BB}+2s_C}{D}
 \ge
 \frac\eta2.
 }
 \tag{ZWT14}
+```
 
 This replaces ZHL's older `eta^2/(16pi)` coefficient.
 
@@ -505,9 +510,9 @@ This replaces ZHL's older `eta^2/(16pi)` coefficient.
 
 The parametric form is useful. For every fixed `a>0` with `2pi a<eta`,
 
-\[
+```math
 \liminf H_a/D\ge\eta-2\pi a,
-$$
+```
 
 while every bridge has asymptotic stress at least `(a/2)D`.
 
@@ -515,23 +520,23 @@ Thus one may make the trunk length coefficient arbitrarily close to `eta` at the
 
 Formally, for every fixed `theta in (0,eta)`, choose
 
-$$
+```math
 a=\frac{\eta-\theta}{2\pi}.
-$$
+```
 
 Then there is a consecutive trunk of length at least
 
-$$
+```math
 (\theta-o(1))D
-$$
+```
 
 whose every bridge has
 
-$$
+```math
 \alpha_e
 \ge
 \left(\frac{\eta-\theta}{4\pi}-o(1)\right)D.
-$$
+```
 
 This weighted tradeoff is the strongest bridge-tree route obtained so far.
 

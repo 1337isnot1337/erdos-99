@@ -25,11 +25,11 @@
 
 In the full-core branch, canonical Section 122 requires
 
-$$
+```math
 \liminf_{D\to\infty}D^{-1}\sum_r(L_r+P_{{\rm exc},r}-2d_r)
 \ge \frac{\pi}{2}(2-\sqrt3).
 \tag{1}
-$$
+```
 
 The exact source-preserving closure still needs an incompatible upper bound, an
 exact unit triangle, or a same-cardinality strict sub-`D` competitor. The
@@ -62,14 +62,14 @@ each cell, assign its selected isolates to one local bounded face or
 added-side outer pocket whose closure contains them. Let `Z_r` be the number
 assigned to the cell. Then
 
-$$
+```math
 \boxed{
 T_r:=G_r-a_0Z_r
 \ge c_0[(L_r-p_r)+(2f_r+Q_r)]
 \ge\frac{3c_0}{5}(L_r+P_{{\rm exc},r}-p_r)\ge0,
 }
 \tag{2}
-$$
+```
 
 where `a_0=sqrt(3)/2` and `c_0=sqrt(3)/4`. In particular, actual isolates do
 not appear as an additive error in the local return inequality.
@@ -77,13 +77,13 @@ not appear as an additive error in the local return inequality.
 For the Section-120 pair of specified outer-walk occurrences, with chord
 length `r`, direction `q`, and signed projection moment `M_r(q)`, (2) gives
 
-$$
+```math
 \boxed{
 M_r(q)\ge 2A_{4,r}-{d_r\over2}
 \left[p_r-2r+{5T_r\over3c_0}\right].
 }
 \tag{3}
-$$
+```
 
 This is the corrected finite Section-121 moment inequality with its area error
 replaced by the **paid** gap `T_r`. It makes no assertion that `T_r=o(d_r)`.
@@ -108,41 +108,41 @@ For an old bounded nonquadrilateral face of degree `m=4+t`, its boundary has
 isolates. Oler's finite inequality applied to all `m+z` actual source points
 in its closure gives
 
-$$
+```math
 \operatorname{area}(C)-a_0z
 \ge a_0(m-1)-c_0m=c_0(m-2)=c_0(2+t).
 \tag{4}
-$$
+```
 
 For an added-side outer pocket `C`, let `k_C` count its old boundary source
 vertices, `P_C` its Euclidean perimeter, and `z_C` its assigned isolates.
 The same Oler inequality gives
 
-$$
+```math
 \operatorname{area}(C)-a_0z_C
 \ge a_0(k_C-1)-c_0P_C.
 \tag{5}
-$$
+```
 
 If `h` polygon sides were added, Section 121's exact occurrence identities are
 `sum_C k_C=L_r+2h-a_r`, `sum_C P_C=L_r+2L_add-p_r`, and
 `p_r=c_partial+L_add` with `h=a_r-c_partial`. Summing (5) and using
 `a_0=2c_0` yields
 
-$$
+```math
 \sum_C[\operatorname{area}(C)-a_0z_C]\ge c_0(L_r-p_r).
 \tag{6}
-$$
+```
 
 The face and pocket areas sum to `G_r`, while their assigned isolate counts
 sum to `Z_r`. Summing (4) and (6) proves the first inequality in (2). The
 second is Section 121's exact algebra:
 
-$$
+```math
 5[(L_r-p_r)+(2f_r+Q_r)]
 -3[(L_r-p_r)+(4f_r+Q_r)]
 =2[(L_r-p_r)+(Q_r-f_r)]\ge0.
-$$
+```
 
 Here `L_r>=p_r` and `Q_r>=f_r`. Finally Section 120 gives
 `d_r(L_r+P_exc,r-2r)>=4A_{4,r}-2M_r(q)`; combine this with
@@ -161,7 +161,7 @@ nonquadrilateral contact faces, `q=|B|`, `k=d_H+s_Z`, and
 `P_F=per(F)`. Set `Z_cell=sum_r Z_r`. Then every canonical post-ZF C-II source
 satisfies the finite bound
 
-$$
+```math
 \boxed{
 0\le\sum_rT_r
 <a_0(\pi D+f+q-k)-E_4
@@ -169,7 +169,7 @@ $$
  -a_0d_{\rm tile},
 }
 \tag{7}
-$$
+```
 
 The right side is `O(D)` by canonical Sections 62, 68, 77, 83, and 122.
 In particular `sum_r T_r=O(D)` with **no** assumption on `Z_cell`.
@@ -179,19 +179,19 @@ In particular `sum_r T_r=O(D)` with **no** assumption on `Z_cell`.
 Canonical Section 77.12 gives `A_F-a_0N_F<a_0 pi D-a_0`, and Sections
 77.20--77.25 give
 
-$$
+```math
 A_4=a_0R_4+E_4,
 \quad m=R_4+f+q-k+1,
 \quad Z_{ch}=N_F-m.
-$$
+```
 
 Consequently, with `A_ch=A_F-A_4`,
 
-$$
+```math
 A_{ch}-a_0Z_{ch}
 <a_0(\pi D+f+q-k)-E_4.
 \tag{8}
-$$
+```
 
 The convex attachment cells have pairwise disjoint interiors and all their
 vertices are among the strictly convex-position loaded vertices of `F`
@@ -200,11 +200,11 @@ subdivision of `F`. Besides the cells themselves, its positive-area faces are
 convex complement polygons `C_j`. Write `A_out` for their total area and
 `Z_out` for the isolates assigned to their closures, so that
 
-$$
+```math
 A_F=\sum_r\operatorname{area}(P_r)+A_{out},
 \qquad Z_{ch}=Z_{cell}+Z_{out}.
 \tag{9}
-$$
+```
 
 Each complement polygon has loaded source vertices on its boundary. Apply
 Oler to those vertices together with its assigned isolates, ignoring any
@@ -213,26 +213,26 @@ other source points. If its perimeter is `p_j`, the resulting weak bound is
 loaded boundary vertices. The polygon-dissection identity of canonical
 Section 123 gives
 
-$$
+```math
 \sum_j(b_j-2)=q-2-\sum_r(a_r-2)=d_{\rm tile}.
-$$
+```
 
 Thus `sum_j(b_j-1)=d_tile+t`, with `t` the number of complement polygons.
 Every complement-side occurrence is either a side of `F` or a side of one
 attachment cell, so
 
-$$
+```math
 A_{out}-a_0Z_{out}
 \ge a_0(d_{\rm tile}+t)-c_0\sum_jp_j
 \ge a_0d_{\rm tile}-c_0\left(P_F+\sum_rp_r\right).
 \tag{10}
-$$
+```
 
 Canonical Section 122 assigns every unloaded-only strict rhombus to exactly
 one induced harmonic graph, whence `sum_r A_{4,r}>=A_4^0`. The exact area and
 population decomposition (9) now gives
 
-$$
+```math
 \begin{aligned}
 \sum_rT_r
 &=\sum_r\operatorname{area}(P_r)-\sum_rA_{4,r}-a_0Z_{cell}\\
@@ -242,7 +242,7 @@ $$
  +c_0(P_F+\sum_rp_r)-a_0d_{\rm tile}.
 \end{aligned}
 \tag{11}
-$$
+```
 
 Insert (8) to prove (7). The lower bound is (2) summed. Canonical Section
 122 gives `A_4-A_4^0=O(D)` because only `O(D)` rhombi touch loaded
@@ -255,13 +255,13 @@ larger than linear.
 
 Define the explicit right side of (7) as `U_D`. Equations (2) and (7) give
 
-$$
+```math
 \boxed{
 \sum_r(L_r+P_{{\rm exc},r}-2d_r)
 < {5U_D\over3c_0}+\sum_r(p_r-2d_r)=O(D).
 }
 \tag{12}
-$$
+```
 
 The `O(D)` scale of the aggregate detour also follows from existing Euler
 ledgers. The new content of (7)--(12) is the **paid-area and moment** control:

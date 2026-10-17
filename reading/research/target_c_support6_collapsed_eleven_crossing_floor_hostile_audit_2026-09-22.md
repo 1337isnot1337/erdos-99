@@ -17,9 +17,9 @@ For every globally realizable degree-pure collapsed support-six block, the numbe
 (X_K) of strict-rhombus crossings between its twelve internal relation trains
 satisfies
 
-$$
+```math
 X_K\ge11.
-$$
+```
 
 The earlier independently audited certificate excluded weights (0,ldots,9). The
 new certificate therefore has to exclude exactly weight (10).
@@ -49,11 +49,11 @@ crossing rotations, and Euler genus.
 
 Each selected pair is assigned either
 
-$$
+```math
 1<x_e-x_f<2
 \quad\text{or}\quad
 1<x_f-x_e<2.
-$$
+```
 
 All ten selected inequalities are appended to one common copy of the cell constraints.
 Thus independently compatible pairs are not silently combined from different angle

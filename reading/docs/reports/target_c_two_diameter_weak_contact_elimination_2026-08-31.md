@@ -21,23 +21,17 @@ This report closes the entire low-diameter-support part of Target C Gate C-I.
 > diameter `D>1`.  If `A` has a weak unit contact, then
 > 
 
-$$
-
+```math
 > \boxed{|H_*|\ge3.}
 > 
-$$
-
-
+```
 > Equivalently, if `|H_*|<=2`, then every unit contact is strong:
 > 
 
-$$
-
+```math
 > \boxed{C=C_*.}
 > 
-$$
-
-
+```
 
 The proof combines four ingredients.
 
@@ -66,56 +60,56 @@ diameter-shear separator phase.
 
 For an active contact `c=ij`, put
 
-$$
+```math
 r_c=p_i-p_j.
-$$
+```
 
 For an active diameter pair `h=ij`, put
 
-$$
+```math
 R_h=p_i-p_j,
 \qquad |R_h|=D.
-$$
+```
 
 Use the canonical signed first-order rows
 
-$$
+```math
 \phi_c(v)=r_c\cdot(v_i-v_j),
 \qquad
 \phi_h(v)=-R_h\cdot(v_i-v_j).
 \tag{C25.1}
-$$
+```
 
 Then the fixed-D critical cone is
 
-$$
+```math
 \mathcal K_D(A)=\{v:\phi_e(v)\ge0\text{ for every active }e\}.
 \tag{C25.2}
-$$
+```
 
 Let `a=(a_i)` be a candidate acceleration.  For a row whose first derivative is zero,
 the favorable signed second-order coefficient is
 
-$$
+```math
 \psi_c(v,a)
 =|v_i-v_j|^2+r_c\cdot(a_i-a_j)
 \tag{C25.3}
-$$
+```
 
 for a contact, and
 
-$$
+```math
 \psi_h(v,a)
 =-|v_i-v_j|^2-R_h\cdot(a_i-a_j)
 \tag{C25.4}
-$$
+```
 
 for a diameter pair.  Second-order feasibility requires
 
-$$
+```math
 \psi_e(v,a)\ge0
 \tag{C25.5}
-$$
+```
 
 on every active row with `phi_e(v)=0`.  Rows with `phi_e(v)>0` are already strict at
 first order and impose no second-order condition.
@@ -131,66 +125,66 @@ Fix `v in K_D(A)` and restrict to the strong rows `E_*`.  Let `R_*` be the matri
 contact row is `r_c` and whose diameter row is `-R_h`, acting on the acceleration
 variables.  Define
 
-$$
+```math
 b_c(v)=-|dv_c|^2,
 \qquad
 b_h(v)=|dv_h|^2.
 \tag{C25.6}
-$$
+```
 
 Then (C25.5) is exactly
 
-$$
+```math
 \boxed{R_*a\ge b(v).}
 \tag{C25.7}
-$$
+```
 
 A nonnegative row dependency
 
-$$
+```math
 \lambda R_*=0,
 \qquad
 \lambda\ge0
 \tag{C25.8}
-$$
+```
 
 is precisely an unnormalized KKT stress: write its contact coefficients as `alpha` and
 its diameter coefficients as `beta`.  Every nonzero such dependency has
 `sum_h beta_h>0`; the virial identity
 
-$$
+```math
 \sum_c\alpha_c=D^2\sum_h\beta_h
 \tag{C25.9}
-$$
+```
 
 excludes a nonzero contact-only dependency.  Hence it can be normalized to a point of
 the KKT polytope.
 
 For such a stress,
 
-$$
+```math
 \lambda\cdot b(v)
 =\sum_h\beta_h|dv_h|^2
 -\sum_c\alpha_c|dv_c|^2.
 \tag{C25.10}
-$$
+```
 
 On the other hand C20 gives
 
-$$
+```math
 \sum_c\alpha_c|dv_c|^2
 -\sum_h\beta_h|dv_h|^2
 =v^{\mathsf T}(\Omega_s\otimes I_2)v
 \ge0
 \tag{C25.11}
-$$
+```
 
 whenever `|H_*|<=2`.  Therefore
 
-$$
+```math
 \boxed{\lambda\cdot b(v)\le0}
 \tag{C25.12}
-$$
+```
 
 for every nonnegative dependency.
 
@@ -211,7 +205,7 @@ This is the present special case of the Connelly–Whiteley second-order stress 
 
 Define the artificial KKT energy
 
-$$
+```math
 E_s(v)
 :=
 \sum_c\alpha_c|dv_c|^2
@@ -219,23 +213,23 @@ E_s(v)
 \sum_h\beta_h|dv_h|^2
 \ge0
 \tag{C25.13}
-$$
+```
 
 for a normalized KKT stress `s`; nonnegativity is C20.  Let
 
-$$
+```math
 \mathcal Z(v)
 :=\{s:E_s(v)=0\}.
 \tag{C25.14}
-$$
+```
 
 Call a strong active member **blocked** for `v` if it is positive in some stress of
 `Z(v)`.  Let
 
-$$
+```math
 X(v)=\bigcup_{s\in\mathcal Z(v)}\operatorname{supp}s.
 \tag{C25.15}
-$$
+```
 
 The following strict Farkas variant is standard but we record the exact form.
 
@@ -243,14 +237,14 @@ The following strict Farkas variant is standard but we record the exact form.
 
 There exists a solution `a` of (C25.7) such that
 
-$$
+```math
 \boxed{
 \psi_e(v,a)>0
 \qquad
 (e\in E_*\setminus X(v)).
 }
 \tag{C25.16}
-$$
+```
 
 #### Proof
 
@@ -259,11 +253,11 @@ set `S` of rows iff every nonnegative dependency `lambda A=0` satisfying
 `lambda·b=0` has `lambda_i=0` for all `i in S`.  One proof is to maximize a common
 slack `epsilon` under
 
-$$
+```math
 A_i x\ge b_i+\epsilon\quad(i\in S),
 \qquad
 A_i x\ge b_i\quad(i\notin S).
-$$
+```
 
 If the maximal `epsilon` were zero, LP duality supplies a nonnegative dependency with
 zero `lambda·b` and positive mass on `S`.
@@ -276,26 +270,26 @@ dependency is supported inside `X(v)`.  The strictness criterion holds. `square`
 
 For the acceleration in Lemma C25.2,
 
-$$
+```math
 \boxed{
 \psi_e(v,a)=0
 \qquad
 (e\in X(v)).
 }
 \tag{C25.17}
-$$
+```
 
 #### Proof
 
 Take a blocked row `e`.  Some zero-energy stress `s in Z(v)` has positive multiplier on
 `e`.  All second-order signed slacks are nonnegative.  Their multiplier-weighted sum is
 
-$$
+```math
 \sum_{c}\alpha_c\psi_c(v,a)
 +\sum_h\beta_h\psi_h(v,a)
 =E_s(v)=0,
 \tag{C25.18}
-$$
+```
 
 because acceleration terms cancel by equilibrium.  Every positively weighted
 nonnegative term must therefore be zero, including the term for `e`. `square`
@@ -309,20 +303,20 @@ C6 relative-interior velocity `v` that releases every weak active row strictly.
 
 C13.3 gives a normalized KKT stress `s` with
 
-$$
+```math
 \sum_h\beta_h|dv_h|^2
 -
 \sum_c\alpha_c|dv_c|^2
 \ge0.
 \tag{C25.19}
-$$
+```
 
 C20 gives the reverse inequality when `|H_*|<=2`.  Hence equality holds:
 
-$$
+```math
 \boxed{E_s(v)=0.}
 \tag{C25.20}
-$$
+```
 
 Thus `Z(v)` is nonempty and `X(v)` contains at least one positive diameter edge and at
 least one positive contact chain.
@@ -331,10 +325,10 @@ If all strong diameter chords had one common angular rate under `v`, C7 would al
 integrate the strict weak release and contradict contact minimality.  Therefore in the
 only case still needing analysis,
 
-$$
+```math
 |H_*|=2
 \tag{C25.21}
-$$
+```
 
 and the two strong diameter angular rates are different.
 
@@ -346,10 +340,10 @@ Fix `s in Z(v)`.
 
 Because `Omega_s` is PSD, `E_s(v)=0` implies
 
-$$
+```math
 v\in\ker(\Omega_s\otimes I_2)
 \tag{C25.22}
-$$
+```
 
 on its positive support.
 
@@ -362,17 +356,17 @@ chain joining that diameter pair.
 
 C20 says the scalar kernel is `span{1,x,y}`, so `v` is affine on the support:
 
-$$
+```math
 v_i=Ap_i+t.
 \tag{C25.23}
-$$
+```
 
 Let `S=(A+A^T)/2`.  All stressed members are strong, hence
 
-$$
+```math
 r^TSr=0
 \tag{C25.24}
-$$
+```
 
 for every stressed member direction.  The two diameter directions are distinct.  If a
 third projective stressed direction occurred, the planar quadratic form
@@ -396,10 +390,10 @@ support equal to either
 
 Consequently the blocked **contact** set
 
-$$
+```math
 X_C(v):=X(v)\cap C_*
 \tag{C25.25}
-$$
+```
 
 is the union of one or two full-D unit chains.
 
@@ -410,12 +404,12 @@ a zero-energy two-diameter KKT stress, so C24 again forces the same crossing.
 
 Therefore:
 
-$$
+```math
 \boxed{
 X_C(v)\text{ is a forest.}
 }
 \tag{C25.26}
-$$
+```
 
 It is either one path or two paths meeting at one vertex.
 
@@ -426,15 +420,15 @@ It is either one path or two paths meeting at one vertex.
 Lemma C25.3 says the second-order jet `[v,a]` preserves every blocked contact through
 second order:
 
-$$
+```math
 r_{ij}\cdot(v_i-v_j)=0,
 \tag{C25.27}
-$$
+```
 
-$$
+```math
 |v_i-v_j|^2+r_{ij}\cdot(a_i-a_j)=0
 \tag{C25.28}
-$$
+```
 
 for every `ij in X_C(v)`.
 
@@ -447,14 +441,14 @@ Let `T` be any forest of unit bars.  Suppose a velocity/acceleration pair `[v,a]
 satisfies the first- and second-order bar equalities on every edge.  Then there is a
 real-analytic path `q(t)` with
 
-$$
+```math
 q(0)=p,
 \qquad
 q'(0)=v,
 \qquad
 q''(0)=a,
 \tag{C25.29}
-$$
+```
 
 that preserves every bar of `T` at length exactly one for all sufficiently small `t`.
 
@@ -463,33 +457,33 @@ that preserves every bar of `T` at length exactly one for all sufficiently small
 Root each tree component and orient its edges away from the root.  For one oriented
 unit edge `ij`, write `r=p_j-p_i`.  First-order equality gives
 
-$$
+```math
 v_j-v_i=\kappa Jr
 \tag{C25.30}
-$$
+```
 
 for a scalar `kappa`.  Second-order equality implies that for some scalar `eta`,
 
-$$
+```math
 a_j-a_i=-\kappa^2r+\eta Jr.
 \tag{C25.31}
-$$
+```
 
 Define the exact unit edge vector
 
-$$
+```math
 r_{ij}(t)
 =\operatorname{Rot}\!\left(\kappa t+\frac12\eta t^2\right)r.
 \tag{C25.32}
-$$
+```
 
 It has the required first two derivatives.  Choose an analytic root curve with the
 prescribed root position, velocity and acceleration, and recursively set
 
-$$
+```math
 q_j(t)=q_i(t)+r_{ij}(t).
 \tag{C25.33}
-$$
+```
 
 A forest has no cycle-consistency condition, so this defines every vertex uniquely and
 preserves each unit edge exactly.  Isolated vertices may use their quadratic Taylor
@@ -506,12 +500,12 @@ its endpoints are joined in `X_C(v)` by a full chain of exactly `D` unit bars.  
 analytic path of Lemma C25.5 preserves those bars exactly, so the triangle inequality
 gives
 
-$$
+```math
 \boxed{
 |q_i(t)-q_j(t)|\le D
 }
 \tag{C25.34}
-$$
+```
 
 for every blocked diameter pair and all small `t`.
 
@@ -540,14 +534,14 @@ on **all** vertices.
 
 Therefore for all sufficiently small positive `t`,
 
-$$
+```math
 \boxed{
 \min_{i\ne j}|q_i(t)-q_j(t)|\ge1,
 \qquad
 \operatorname{diam}q(t)\le D.
 }
 \tag{C25.35}
-$$
+```
 
 At least one original weak unit contact is now strictly longer than one.  No previously
 inactive pair can become a new unit contact for sufficiently small `t`.
@@ -565,25 +559,25 @@ This completes the proof.
 
 Let `A` be a contact-minimal triangle-free global minimizer with `D>1`.  Then
 
-$$
+```math
 \boxed{
 C\ne C_*
 \quad\Longrightarrow\quad
 |H_*|\ge3.
 }
 \tag{C25.36}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 |H_*|\le2
 \quad\Longrightarrow\quad
 C=C_*.
 }
 \tag{C25.37}
-$$
+```
 
 Since C19 already excludes the one-dimensional force-hull phase, the only remaining
 low-diameter-support source is the fully force-visible `|H_*|=2` C-II phase studied in
@@ -601,9 +595,9 @@ a strictness refinement controlled by zero-energy stresses.
 In the physical packing tensegrity, contacts are lower-bound members (struts) and
 active diameter pairs are upper-bound members (cables).  Its proper stress matrix is
 
-$$
+```math
 -\Omega_s.
-$$
+```
 
 C20 therefore says every proper stress matrix is negative semidefinite when
 `|H_*|<=2`.  The report reproduces the needed Farkas argument explicitly so that no
@@ -621,7 +615,7 @@ C-I no longer needs to handle one- or two-diameter KKT support.
 
 A weak-contact counterexample must satisfy all of:
 
-$$
+```math
 \boxed{
 \begin{array}{c}
 \dim F=2,\\
@@ -631,7 +625,7 @@ C_*\text{ connected and spanning diameter }D,\\
 \end{array}
 }
 \tag{C25.38}
-$$
+```
 
 The immediate next question is therefore a **three-or-more-diameter stress theorem**.
 C20 fails to give global PSD automatically once the boundary response has five or more

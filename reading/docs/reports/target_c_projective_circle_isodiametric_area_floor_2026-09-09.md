@@ -17,29 +17,29 @@
 
 Canonical C67 packs the projective directions of the actual diameter edges by using their pairwise separation
 
-$$
+```math
 \delta_D:=2\arcsin\frac1{2D}.
-$$
+```
 
 Its published finite packing lemma deliberately truncates the forced angular spread at `pi/3`. That truncation is not sharp. A one-dimensional isodiametric argument on the projective circle gives a spread approaching `pi/2` once enough separated diameter directions are present.
 
 Combined with DB's lower density
 
-$$
+```math
 \liminf h/D\ge2\rho,
 \qquad \rho=\cos\rho=0.7390851332\ldots,
-$$
+```
 
 this improves the universal post-ZF force-hull area floor to
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}(F)}{D^2}
 \ge
 \frac12\sin(2\rho)
 =0.4978566363\ldots .
 }
-$$
+```
 
 This is stronger than the previous `sqrt(3)/4=0.4330127019...` DB floor and substantially strengthens the GU attachment-gap threshold.
 
@@ -53,46 +53,46 @@ Let `T_L=R/LZ` be a circle of circumference `L`, with geodesic distance and Haar
 
 If `A subset T_L` is compact and
 
-$$
+```math
 \operatorname{diam}_{geo}(A)=\psi<L/2,
-$$
+```
 
 then
 
-$$
+```math
 \boxed{\mu(A)\le\psi.}
 \tag{PI.1}
-$$
+```
 
 ### Proof
 
 Every difference `x-y` with `x,y in A` has geodesic distance at most `psi` from zero. Hence
 
-$$
+```math
 A-A\subseteq[-\psi,\psi]\pmod L,
-$$
+```
 
 so
 
-$$
+```math
 \mu(A-A)\le2\psi<L.
 \tag{PI.2}
-$$
+```
 
 Kemperman's inequality for the compact connected group `T_L`, applied to `A` and `-A`, gives
 
-$$
+```math
 \mu(A-A)
 \ge
 \min\{2\mu(A),L\}.
 \tag{PI.3}
-$$
+```
 
 Because the left side is strictly below `L`, the minimum in PI.3 cannot be `L`. Therefore
 
-$$
+```math
 2\mu(A)\le\mu(A-A)\le2\psi,
-$$
+```
 
 which proves PI.1. `square`
 
@@ -104,71 +104,71 @@ Only the circle case of Kemperman is used. In the present application `A` is a f
 
 The projective direction circle has circumference `pi`. Let
 
-$$
+```math
 S=\{\theta_1,\ldots,\theta_h\}
 \subset\mathbb R/\pi\mathbb Z
-$$
+```
 
 be the directions of the `h` actual diameter edges. C67 gives the pairwise separation
 
-$$
+```math
 \boxed{
 d_{proj}(\theta_i,\theta_j)\ge\delta_D
 \quad(i\ne j).
 }
 \tag{PI.4}
-$$
+```
 
 Let
 
-$$
+```math
 \phi:=\operatorname{diam}_{proj}(S)
 \in[0,\pi/2]
-$$
+```
 
 be the largest projective angle between two actual diameter directions.
 
 Around every `theta_i`, take the closed projective arc of radius `delta_D/2`. Their interiors are disjoint by PI.4. Let `U` be their union. Thus
 
-$$
+```math
 \boxed{\mu(U)=h\delta_D.}
 \tag{PI.5}
-$$
+```
 
 By the triangle inequality on the projective circle,
 
-$$
+```math
 \operatorname{diam}_{proj}(U)
 \le\phi+\delta_D.
 \tag{PI.6}
-$$
+```
 
 If `phi+delta_D<pi/2`, Lemma PI.1 applied to `U` gives
 
-$$
+```math
 h\delta_D
 \le\phi+\delta_D,
-$$
+```
 
 so
 
-$$
+```math
 \phi\ge(h-1)\delta_D.
 \tag{PI.7}
-$$
+```
 
 If instead `phi+delta_D>=pi/2`, then directly
 
-$$
+```math
 \phi\ge\frac\pi2-\delta_D.
 \tag{PI.8}
-$$
+```
 
 Therefore in all cases:
 
 ### Theorem PI.2 — sharp projective spread lower bound
 
-$$
+```math
 \boxed{
 \phi
 \ge
@@ -180,7 +180,7 @@ $$
 \right\}.
 }
 \tag{PI.9}
-$$
+```
 
 This replaces C67's conservative `min{pi/3,(h-1)delta_D}` truncation.
 
@@ -196,12 +196,12 @@ This replaces C67's conservative `min{pi/3,(h-1)delta_D}` truncation.
 
 C67 proves the following exact geometric fact. If two actual diameter edges have projective angle `theta`, then the convex hull of their endpoints has area
 
-$$
+```math
 \boxed{
 \frac{D^2}{2}\sin\theta.
 }
 \tag{PI.10}
-$$
+```
 
 If the two diameter edges share an endpoint, this is the area of the triangle formed by the two length-`D` sides. If they are disjoint, the planar diameter-thrackle property makes them crossing diagonals of a convex quadrilateral, whose area is half the product of the diagonal lengths times the sine of their angle.
 
@@ -209,7 +209,7 @@ All endpoints lie in the force hull `F`. Since projective angles lie in `[0,pi/2
 
 ### Theorem PI — exact post-ZF force-hull area floor
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)
 \ge
@@ -222,13 +222,13 @@ $$
 \right),
 }
 \tag{PI.11}
-$$
+```
 
 where
 
-$$
+```math
 \delta_D=2\arcsin\frac1{2D}.
-$$
+```
 
 No contact-core population, face topology, or rhombic hypothesis enters PI.11.
 
@@ -238,48 +238,48 @@ No contact-core population, face topology, or rhombic hypothesis enters PI.11.
 
 DB proves
 
-$$
+```math
 \boxed{
 \liminf\frac hD\ge2\rho,
 \qquad
 \rho=\cos\rho=0.7390851332151607\ldots .
 }
 \tag{PI.12}
-$$
+```
 
 Also
 
-$$
+```math
 D\delta_D
 =2D\arcsin\frac1{2D}
 \longrightarrow1.
 \tag{PI.13}
-$$
+```
 
 Therefore
 
-$$
+```math
 \liminf (h-1)\delta_D
 \ge2\rho,
-$$
+```
 
 while
 
-$$
+```math
 \frac\pi2-\delta_D\longrightarrow\frac\pi2.
-$$
+```
 
 Since
 
-$$
+```math
 2\rho=1.478170266430321\ldots<\frac\pi2,
-$$
+```
 
 PI.11 yields:
 
 ### Corollary PI.3 — universal DB-upgraded area constant
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{\operatorname{area}(F)}{D^2}
@@ -288,30 +288,30 @@ A_{PI}:=rac12\sin(2\rho)
 =0.497856636324211\ldots .
 }
 \tag{PI.14}
-$$
+```
 
 For comparison:
 
-$$
+```math
 \frac12\sin1
 =0.4207354924\ldots,
-$$
+```
 
 from the first post-ZF C67 upgrade, and
 
-$$
+```math
 \frac{\sqrt3}{4}
 =0.4330127019\ldots,
-$$
+```
 
 from the DB projective-direction spread theorem. PI.14 supersedes both universal constants.
 
 The isodiametric upper bound remains
 
-$$
+```math
 \operatorname{area}(F)\le\frac\pi4D^2
 =0.7853981634\ldots D^2,
-$$
+```
 
 so PI is not by itself a Level I contradiction.
 
@@ -321,29 +321,29 @@ so PI is not by itself a Level I contradiction.
 
 GU's attachment-cell estimate has the form
 
-$$
+```math
 \sum_r\operatorname{area}(P_r)
 \le
 \frac\pi4\lambda_2^2D^2+o(D^2),
 \qquad
 \lambda_2:=\limsup\frac{e_{BB}+2s_C}{D}.
 \tag{PI.15}
-$$
+```
 
 Subtracting this from PI.14 gives
 
-$$
+```math
 \boxed{
 \liminf\frac G{D^2}
 \ge
 A_{PI}-\frac\pi4\lambda_2^2.
 }
 \tag{PI.16}
-$$
+```
 
 Hence a positive quadratic attachment-cell gap is forced whenever
 
-$$
+```math
 \boxed{
 \lambda_2
 <
@@ -354,14 +354,14 @@ $$
 0.796172567335008\ldots .
 }
 \tag{PI.17}
-$$
+```
 
 This raises the GU transition from
 
-$$
+```math
 \sqrt{\frac{\sqrt3}{\pi}}
 =0.7425152492\ldots
-$$
+```
 
 to `0.7961725673...`.
 
@@ -371,28 +371,28 @@ to `0.7961725673...`.
 
 PC proves
 
-$$
+```math
 a+e_{BB}\ge q,
 \tag{PI.18}
-$$
+```
 
 where `a` is the number of missing loaded force-hull sides, equivalently the number of distinct strict convex OP outer pockets.
 
 DB gives
 
-$$
+```math
 \liminf q/D\ge2\rho.
-$$
+```
 
 Along a PI/GU low-surplus subsequence with
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}<\lambda_{PI}-o(1),
-$$
+```
 
 we have `e_BB/D<lambda_PI+o(1)`. Thus
 
-$$
+```math
 \boxed{
 \liminf\frac aD
 \ge
@@ -400,7 +400,7 @@ $$
 =0.681997699095313\ldots .
 }
 \tag{PI.19}
-$$
+```
 
 So the strengthened low-surplus branch simultaneously has:
 
@@ -415,13 +415,13 @@ GU then localizes the quadratic gap to the outer region or to a giant bounded ex
 
 The report `target_c_difference_body_area_metric_fork_2026-09-09.md` proves the independent bound
 
-$$
+```math
 \operatorname{area}(F)
 \ge
 \frac{D^2}{6}
 \left[(h-1)\sin\delta_D+
 \sin((h-1)\delta_D)\right].
-$$
+```
 
 PI.11 is stronger in the DB density range because it uses a pair of widely separated diameter chords directly instead of passing through the planar Rogers--Shephard factor `6`.
 

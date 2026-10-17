@@ -19,19 +19,19 @@ MC/CH/LC force one harmonic component with graph diameter `Omega(D)`. A separate
 
 Let
 
-$$
+```math
 \Delta:=\frac\pi{2\sqrt3}.
-$$
+```
 
 Along a PR #119 near-circle subsequence suppose
 
-$$
+```math
 \frac v{D^2}\to r>0.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \liminf
 \max_r\frac{n_r}{D^2}
@@ -40,11 +40,11 @@ $$
 }
 \tag{QP.1}
 
-$$
+```
 
 In the UF notation `r=Delta-zeta`, this is
 
-$$
+```math
 \boxed{
 \liminf
 \max_r\frac{n_r}{D^2}
@@ -53,26 +53,26 @@ $$
 }
 \tag{QP.2}
 
-$$
+```
 
 At the UF worst crossover `zeta_*=0.5572837714...`, the certified component density is
 
-$$
+```math
 \boxed{0.0034139990\ldots D^2.}
 \tag{QP.3}
 
-$$
+```
 
 At the asymptotically full-core endpoint it is at least
 
-$$
+```math
 \boxed{
 \frac{\Delta}{4\pi^2}D^2
 =0.0229720373\ldots D^2.
 }
 \tag{QP.4}
 
-$$
+```
 
 The constants are conservative. The point is qualitative but strong: the live harmonic obstruction contains an actual positive-density two-dimensional contact component, not only a long sparse spine.
 
@@ -82,31 +82,31 @@ The constants are conservative. The point is qualitative but strong: the live ha
 
 For an unloaded component `I_r`, write
 
-$$
+```math
 n_r=|I_r|,
 \qquad
 P_r=\operatorname{conv}A_r,
 \qquad
 \delta_r=\operatorname{diam}_{C[I_r]}I_r.
-$$
+```
 
 C36 gives
 
-$$
+```math
 I_r\subseteq P_r.
-$$
+```
 
 C44 gives
 
-$$
+```math
 \operatorname{diam}(P_r)
 \le\delta_r+2.
 \tag{1.1}
-$$
+```
 
 The `n_r` points of `I_r` are unit-separated. Apply Oler to those points in the convex container `P_r`:
 
-$$
+```math
 a_0(n_r-1)
 \le
 \operatorname{area}(P_r)
@@ -114,27 +114,27 @@ a_0(n_r-1)
 \qquad
 a_0=\frac{\sqrt3}{2}.
 \tag{1.2}
-$$
+```
 
 The isodiametric and perimeter-diameter inequalities give
 
-$$
+```math
 \operatorname{area}(P_r)
 \le
 \frac\pi4(\delta_r+2)^2,
-$$
+```
 
 and
 
-$$
+```math
 \operatorname{per}(P_r)
 \le
 \pi(\delta_r+2).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
  n_r
 \le
@@ -142,20 +142,20 @@ $$
 +\frac\pi2(\delta_r+2),
 }
 \tag{QP.5}
-$$
+```
 
 because
 
-$$
+```math
 \frac{\pi}{4a_0}=\Delta.
-$$
+```
 
 In particular
 
-$$
+```math
  n_r\le\Delta\delta_r^2+O(\delta_r+1)
 \tag{1.3}
-$$
+```
 
 with absolute implied constants.
 
@@ -165,66 +165,66 @@ with absolute implied constants.
 
 Put
 
-$$
+```math
 S:=\sum_r\delta_r.
-$$
+```
 
 NBd gives in the near-circle branch
 
-$$
+```math
 S\le q+2x_B=(\pi+o(1))D.
 \tag{2.1}
-$$
+```
 
 Fix `epsilon>0` and split the components into
 
-$$
+```math
 \mathcal S_\epsilon:=\{r:\delta_r<\epsilon D\}
-$$
+```
 
 and
 
-$$
+```math
 \mathcal L_\epsilon:=\{r:\delta_r\ge\epsilon D\}.
-$$
+```
 
 For the small components, use
 
-$$
+```math
 \sum_{\mathcal S_\epsilon}\delta_r^2
 \le
 \epsilon D\sum_r\delta_r
 \le
 (\pi\epsilon+o(1))D^2.
-$$
+```
 
 Summing QP.5 and using `c_I=O(D)` gives
 
-$$
+```math
 \boxed{
 \sum_{\mathcal S_\epsilon}n_r
 \le
 (\Delta\pi\epsilon+o(1))D^2.
 }
 \tag{2.2}
-$$
+```
 
 The number of large components satisfies
 
-$$
+```math
 |\mathcal L_\epsilon|\epsilon D
 \le S,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 |\mathcal L_\epsilon|
 \le\frac\pi\epsilon+o(1).
 }
 \tag{2.3}
-$$
+```
 
 Thus only `O_epsilon(1)` large components remain.
 
@@ -234,26 +234,26 @@ Thus only `O_epsilon(1)` large components remain.
 
 Since
 
-$$
+```math
 v=q+\sum_r n_r,
-$$
+```
 
 and `q=O(D)`, the unloaded population satisfies
 
-$$
+```math
 \sum_r n_r=(r+o(1))D^2.
 \tag{3.1}
-$$
+```
 
 Equations (2.2)--(2.3) show that the large components carry at least
 
-$$
+```math
 \left(r-\Delta\pi\epsilon-o(1)\right)D^2
-$$
+```
 
 vertices and there are at most `pi/epsilon+o(1)` of them. Therefore one component satisfies
 
-$$
+```math
 \max_r n_r
 \ge
 \left[
@@ -262,18 +262,18 @@ $$
 -o(1)
 \right]D^2.
 \tag{3.2}
-$$
+```
 
 The bracket is a concave quadratic in `epsilon`. It is maximized at
 
-$$
+```math
 \epsilon_*
 =\frac{r}{2\Delta\pi},
-$$
+```
 
 which lies in `(0,1)` because `0<r<=Delta` and `2pi>1`. Substitution gives
 
-$$
+```math
 \boxed{
 \max_r n_r
 \ge
@@ -281,7 +281,7 @@ $$
 \frac{r^2}{4\pi^2\Delta}-o(1)
 \right)D^2.
 }
-$$
+```
 
 This proves QP.1.
 
@@ -338,11 +338,11 @@ The highest-value next target is now a **dense harmonic component boundary theor
 
 For one connected component with
 
-$$
+```math
 n_r\ge cD^2,
 \qquad
 \operatorname{diam}(P_r)\le\delta_r+2=O(D),
-$$
+```
 
 use its pinned-positive equilibrium and the fact that every extreme vertex of `conv(I_r)` must be directly loaded to compare
 

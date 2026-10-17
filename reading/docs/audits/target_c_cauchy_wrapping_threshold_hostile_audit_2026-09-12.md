@@ -14,15 +14,15 @@ For a wrapping Type-II harmonic-cell sequence with normalized cell diameter
 `lambda<1`, put `theta=2 asin(lambda)` and `alpha=a/D`, where `a` is the loaded
 attachment count. Canonical Section 94 gives
 
-$$
+```math
 \liminf \frac{\operatorname{per}(P_D)}D\ge\alpha+3\sin\theta,
-$$
+```
 
 and canonical Section 96 gives
 
-$$
+```math
 \alpha\ge\frac32\sin\theta.
-$$
+```
 
 The candidate combines these with the elementary convex-body inequality
 `per(P_D)<=pi diam(P_D)`.
@@ -31,32 +31,32 @@ The candidate combines these with the elementary convex-body inequality
 
 The two canonical lower bounds imply
 
-$$
+```math
 \liminf \frac{\operatorname{per}(P_D)}D
 \ge\frac92\sin\theta.
-$$
+```
 
 Since `diam(P_D)/D -> lambda=sin(theta/2)`, Cauchy's projection formula gives
 
-$$
+```math
 \limsup \frac{\operatorname{per}(P_D)}D
 \le\pi\sin(\theta/2).
-$$
+```
 
 On the admissible wrapping interval `theta in [2pi/3,pi)`, `sin(theta/2)>0` and
 `sin(theta)=2 sin(theta/2) cos(theta/2)`. Cancelling the positive factor yields
 
-$$
+```math
 9\cos(\theta/2)\le\pi.
-$$
+```
 
 Therefore
 
-$$
+```math
 \lambda=\sin(\theta/2)
 \ge\sqrt{1-(\pi/9)^2}
  =0.9370981976747776\ldots .
-$$
+```
 
 The inequality is strict relative to the canonical Section-96 value
 `0.936215741409583...`; direct evaluation gives a gap of about `8.82456e-4`.

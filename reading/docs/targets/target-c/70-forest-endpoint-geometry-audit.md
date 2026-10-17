@@ -13,17 +13,19 @@ section numbering or theorem-state snapshot.
 The result has two layers.
 
 1. Every Woodall-forest subsequence with `q/D -> x` satisfies
-   $$
+   ```math
    \liminf {\operatorname{area}(F)\over D^2}\ge {x+\sin x\over4},
    \qquad
    \liminf {r_o(F)\over D}\ge {1\over2}\sin(x/2).
-   $$
+   
+   ```
 2. At the sharp Section-66 endpoint,
-   $$
+   ```math
    q/D\to2\kappa,
    \quad e_{BB}/D,x_B/D\to\kappa,
    \quad \kappa=2\cos\kappa,
-   $$
+   
+   ```
    there are `(kappa-o(1))D` **distinct** unloaded vertices in an `o(1)` force-hull
    boundary layer, each on a two-edge outer detour over a nonunit loaded hull side of
    length `2-o(1)`. Each has an extra unit contact with inward normal component
@@ -38,10 +40,10 @@ normalization, or deletion of source points is used.
 
 Let
 
-$$
+```math
 a_D:=\arcsin{1\over2D},
 \qquad d_H=q-h>0.
-$$
+```
 
 Order the `h` projective actual-diameter directions cyclically with gaps
 `g_1,...,g_h`, summing to `pi`. Canonical Section 66 proves every gap is at least
@@ -49,61 +51,61 @@ Order the `h` projective actual-diameter directions cyclically with gaps
 
 Put
 
-$$
+```math
 P_H:=D\operatorname{conv}\{\pm u_e:e\in E(H)\}\subseteq F-F.
-$$
+```
 
 Then
 
-$$
+```math
 \operatorname{area}(P_H)=D^2\sum_i\sin g_i.
 \tag{70.1}
-$$
+```
 
 Since `sin` is concave on `[0,pi]`, the minimum under the gap lower bounds and fixed
 sum occurs with all but one gap at a lower bound. The two finite extreme types are
 
-$$
+```math
 A_D=(h-d_H)\sin(2a_D)+(d_H-1)\sin(4a_D)
      +\sin(2(q-2)a_D),
 \tag{70.2}
-$$
+```
 
 and, when an ordinary gap exists,
 
-$$
+```math
 A_N=(h-d_H-1)\sin(2a_D)+d_H\sin(4a_D)
      +\sin(2(q-1)a_D).
 \tag{70.3}
-$$
+```
 
 No ordering between these finite expressions is assumed.
 
 Section 58 gives one full-source circumcenter `o` and `L_D=O(D^(3/4))=o(D)` such that
 every actual diameter midpoint is within `L_D` of `o`. Hence
 
-$$
+```math
 d_{Haus}(F-o,-(F-o))\le2L_D
-$$
+```
 
 and
 
-$$
+```math
 \operatorname{area}(F-F)
 \le4\operatorname{area}(F)+4L_D\operatorname{per}(F)+4\pi L_D^2.
 \tag{70.4}
-$$
+```
 
 Along any forest subsequence with `q/D->x`, both (70.2) and (70.3) tend to
 `x+sin x`: the lower-bound gaps contribute `x` and the free gap contributes `sin x`.
 Therefore
 
-$$
+```math
 \boxed{
 \liminf {\operatorname{area}(F)\over D^2}
 \ge{x+\sin x\over4}.}
 \tag{70.5}
-$$
+```
 
 ---
 
@@ -112,32 +114,32 @@ $$
 Let `g_max=max_i g_i`. If the largest gap is doubled, the remaining gap lower bounds
 sum to at least `2(q-2)a_D`; if it is ordinary the lower sum is larger. Thus
 
-$$
+```math
 \boxed{g_{max}\le\pi-2(q-2)a_D.}
 \tag{70.6}
-$$
+```
 
 The centrally symmetric polygon `P_H/2` has circumradius `D/2`, hence centered
 inradius at least
 
-$$
+```math
 {D\over2}\sin((q-2)a_D).
-$$
+```
 
 Every vertex of `P_H/2` lies within `L_D` of `F-o`. Support-function comparison gives
 
-$$
+```math
 B\!\left(o,{D\over2}\sin((q-2)a_D)-L_D\right)\subseteq F.
 \tag{70.7}
-$$
+```
 
 Consequently, along `q/D->x`,
 
-$$
+```math
 \boxed{
 \liminf {r_o(F)\over D}\ge {1\over2}\sin(x/2).}
 \tag{70.8}
-$$
+```
 
 ---
 
@@ -145,58 +147,58 @@ $$
 
 Canonical Section 66 proves that approach to
 
-$$
+```math
 \kappa=2\cos\kappa=1.0298665293\ldots
-$$
+```
 
 forces
 
-$$
+```math
 q/D\to2\kappa,
 \qquad e_{BB}/D,x_B/D\to\kappa,
 \qquad \operatorname{per}(F)/D\to3\kappa,
 \qquad u_B+c_B=o(D).
 \tag{70.9}
-$$
+```
 
 Equations (70.5) and (70.8) yield
 
-$$
+```math
 \boxed{
 \liminf {\operatorname{area}(F)\over D^2}
 \ge A_\kappa:={2\kappa+\sin(2\kappa)\over4}
 =0.7356414549\ldots,}
 \tag{70.10}
-$$
+```
 
-$$
+```math
 \boxed{
 \liminf {r_o(F)\over D}
 \ge {1\over2}\sin\kappa
 =0.4286151341\ldots.}
 \tag{70.11}
-$$
+```
 
 Since `area(K)<=pi D^2/4`,
 
-$$
+```math
 \limsup {\operatorname{area}(K\setminus F)\over D^2}
 \le {\pi\over4}-A_\kappa
 =0.0497567084\ldots .
 \tag{70.12}
-$$
+```
 
 For every source point outside `F`, the open radius-`1/2` disks are pairwise disjoint,
 lie in `K_{+1/2}`, and avoid the interior of `F_{-1/2}`. Steiner's outer formula and
 the convex inner-strip estimate therefore give the conservative bound
 
-$$
+```math
 \boxed{
 \limsup {Z_{ext}\over D^2}
 \le {4\over\pi}\left({\pi\over4}-A_\kappa\right)
 =0.0633522087\ldots .}
 \tag{70.13}
-$$
+```
 
 ---
 
@@ -206,53 +208,53 @@ Let the loaded force-hull vertices be `b_i`, let `s_i=|b_i-b_{i+1}|`, and let th
 distinguished outer-contact interval from `b_i` to `b_{i+1}` have `ell_i` unit-edge
 occurrences. Canonical Section 63 gives
 
-$$
+```math
 x_B=\sum_i(\ell_i-1).
-$$
+```
 
 Let `M_D={i:s_i>1}` and `m=|M_D|`. Since `u_B=x_B-m`,
 
-$$
+```math
 u_B=
 \sum_{i\in M_D}(\ell_i-2)
 +\sum_{i\notin M_D}(\ell_i-1).
 \tag{70.14}
-$$
+```
 
 At the endpoint `u_B=o(D)` and `m=(kappa-o(1))D`. Hence all but `o(D)` nonunit hull
 sides have `ell_i=2`. Write those paths as
 
-$$
+```math
 (b_i,z_i,b_{i+1}).
-$$
+```
 
 Also
 
-$$
+```math
 b-\operatorname{per}(F)=\sum_i(\ell_i-s_i)=o(D).
-$$
+```
 
 Thus for the two-edge family
 
-$$
+```math
 \sum_i(2-s_i)=o(D).
 \tag{70.15}
-$$
+```
 
 After discarding only `o(D)` further indices, uniformly
 
-$$
+```math
 s_i=2-o(1).
 \tag{70.16}
-$$
+```
 
 In coordinates with the hull side on `y=0` and `F` in `y>=0`, the intermediate point
 has height
 
-$$
+```math
 t_i=\sqrt{1-s_i^2/4}=o(1).
 \tag{70.17}
-$$
+```
 
 Cauchy-Schwarz and (70.15) show that the associated triangular outer pockets have
 total area `o(D)`.
@@ -260,9 +262,9 @@ total area `o(D)`.
 Every `z_i` is unloaded: it is a contact-core vertex inside the hull interval between
 consecutive loaded hull vertices. Canonical C26 gives
 
-$$
+```math
 3\le\deg_C(z_i)\le5.
-$$
+```
 
 ---
 
@@ -271,32 +273,32 @@ $$
 Choose a contact neighbor `w_i` of `z_i` other than the two hull-side endpoints and
 write
 
-$$
+```math
 w_i-z_i=(X_i,Y_i),
 \qquad X_i^2+Y_i^2=1.
-$$
+```
 
 Since `w_i in F`, `t_i+Y_i>=0`. Triangle-freeness plus unit separation gives
 
-$$
+```math
 |w_i-b_i|>1,
 \qquad |w_i-b_{i+1}|>1.
-$$
+```
 
 Writing `t_i=sin(alpha_i)` and `s_i/2=cos(alpha_i)`, these imply
 
-$$
+```math
 \cos\alpha_i |X_i|-\sin\alpha_iY_i<1/2.
-$$
+```
 
 If `Y_i=sin(beta_i)` with `beta_i in[-pi/2,pi/2]`, then the hull-side condition gives
 `beta_i>=-alpha_i`, while the last inequality gives
 `cos(alpha_i+beta_i)<1/2`. Hence
 
-$$
+```math
 \boxed{Y_i\ge\sqrt3/2-o(1)}
 \tag{70.18}
-$$
+```
 
 uniformly. The extra contact penetrates from an `o(1)` boundary layer to inward normal
 depth at least `sqrt3/2-o(1)`.
@@ -319,18 +321,18 @@ convexity or unit separation.
 
 Therefore
 
-$$
+```math
 \boxed{|\{z_i\}|=(\kappa-o(1))D.}
 \tag{70.19}
-$$
+```
 
 Choose one extra inward contact at each distinct `z_i`. An undirected edge can be
 chosen by at most its two endpoints, so at least
 
-$$
+```math
 \boxed{(\kappa/2-o(1))D}
 \tag{70.20}
-$$
+```
 
 distinct penetration contacts occur.
 

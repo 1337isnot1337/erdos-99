@@ -24,97 +24,79 @@ What it does not control is whether an individual THIN chord meets an individual
 
 A finite bipartite-pattern argument removes most of that arbitrariness without making any geometric assumption about the intersection multiplicity. Define
 
-$$
+```math
 \chi(e,b)=
 \begin{cases}
 1,&\text{if the straight THIN chord }e\text{ meets the complete stopped-train midpoint curve }b,\\
 0,&\text{otherwise.}
 \end{cases}
 \tag{IP.1}
-$$
+```
 
 Then a diverging sub-braid and diverging phase-pure subfences can be selected so that `chi` is constant on each whole side.
 
 > **Two-sided incidence-purification theorem.** Let `F_D` be the braid and let `L_D,R_D` be phase-pure left and right fixed train subfences from the logarithmic braid/fence theorem. There are subsets
 > 
 
-$$
-
+```math
 > F_D'\subset F_D,\qquad L_D'\subset L_D,\qquad R_D'\subset R_D
 > 
-$$
-
-
+```
 > of common size
 > 
 
-$$
-
+```math
 > \boxed{
 > s_D=\left({1\over4}-o(1)\right)\log_2\log D
 > }
 > \tag{IP.2}
 > 
-$$
-
-
+```
 > and bits
 > 
 
-$$
-
+```math
 > \sigma_L,\sigma_R\in\{0,1\}
 > 
-$$
-
-
+```
 > such that
 > 
 
-$$
-
+```math
 > \boxed{
 > \chi(e,b)=\sigma_L
 > \quad(e\in F_D',\ b\in L_D')
 > }
 > \tag{IP.3}
 > 
-$$
-
-
+```
 > and
 > 
 
-$$
-
+```math
 > \boxed{
 > \chi(e,b)=\sigma_R
 > \quad(e\in F_D',\ b\in R_D').
 > }
 > \tag{IP.4}
 > 
-$$
-
-
+```
 >
 > Thus the arbitrary braid/fence incidence matrix collapses to four exact global cases:
 > 
 
-$$
-
+```math
 > (\sigma_L,\sigma_R)\in
 > \{(0,0),(1,0),(0,1),(1,1)\}.
 > \tag{IP.5}
 > 
-$$
-
-
+```
 
 At the concrete half-exponent choice from the parent theorem, all selected objects still coexist on the same
 
-$$
+```math
 D^{1/2-o(1)}
-$$
+```
 common inverse-`D` phase rows. Every selected left train remains below the `-0.01D` row-normal circumcenter level on every retained row, every selected right train remains above `+0.01D`, the train families remain pairwise noncrossing and phase-pure, and the selected THIN chords remain vertex-disjoint and pairwise properly crossing.
 
 No claim is made that a chord and a train meet at most once. The theorem deliberately records only the binary relation (IP.1), so it does not import an unproved straight-chord/stopped-train pseudoline property.
@@ -125,98 +107,98 @@ No claim is made that a chord and a train meet at most once. The theorem deliber
 
 Let
 
-$$
+```math
 F=\{e_1,\ldots,e_k\}
-$$
+```
 be any finite set, and let `L,R` be two other finite sets. Give arbitrary binary relations
 
-$$
+```math
 \chi_L:F\times L\to\{0,1\},
 \qquad
 \chi_R:F\times R\to\{0,1\}.
-$$
+```
 
 ### Lemma IP.1
 
 Suppose integers `s,k,n` satisfy
 
-$$
+```math
 |F|\ge4s,
 \qquad
 |L|,|R|\ge n,
 \qquad
 16^s s\le n.
 \tag{IP.6}
-$$
+```
 
 Then there exist
 
-$$
+```math
 F'\subset F,\quad L'\subset L,\quad R'\subset R,
 \qquad
 |F'|=|L'|=|R'|=s,
 \tag{IP.7}
-$$
+```
 
 and bits `sigma_L,sigma_R` for which both binary relations are constant on the corresponding complete rectangles:
 
-$$
+```math
 \chi_L(e,b)=\sigma_L
 \quad(e\in F',\ b\in L'),
 \tag{IP.8}
-$$
+```
 
-$$
+```math
 \chi_R(e,b)=\sigma_R
 \quad(e\in F',\ b\in R').
 \tag{IP.9}
-$$
+```
 
 ### Proof
 
 Choose any `4s` elements
 
-$$
+```math
 F_0\subset F.
-$$
+```
 
 Every `b in L` determines one binary pattern in `{0,1}^{F_0}`. There are at most
 
-$$
+```math
 2^{4s}=16^s
-$$
+```
 patterns, so one pattern occurs on at least
 
-$$
+```math
 {|L|\over16^s}
 \ge {n\over16^s}
 \ge s
 \tag{IP.10}
-$$
+```
 left trains. Choose `s` of them and call the set `L'`.
 
 Inside the common `4s`-bit pattern, at least `2s` coordinates carry the same bit. Retain exactly `2s` such coordinates and call that set `F_1`; call the common bit `sigma_L`. Then
 
-$$
+```math
 \chi_L(e,b)=\sigma_L
 \quad(e\in F_1,\ b\in L').
 \tag{IP.11}
-$$
+```
 
 Now classify the elements of `R` by their binary patterns on the `2s` coordinates of `F_1`. There are at most
 
-$$
+```math
 2^{2s}=4^s
-$$
+```
 patterns. Hence one pattern occurs at least
 
-$$
+```math
 {|R|\over4^s}
 \ge {n\over4^s}
 \ge 4^s s
 \ge s
 \tag{IP.12}
-$$
+```
 times, where the penultimate inequality uses `n>=16^s s`.
 
 Choose `s` right elements with that pattern and call the set `R'`. At least `s` coordinates of the common `2s`-bit pattern have one common bit `sigma_R`; choose exactly `s` such coordinates and call them `F'`.
@@ -231,44 +213,44 @@ The constants are intentionally elementary. No Ramsey theorem or asymptotic regu
 
 Use any fixed constant
 
-$$
+```math
 0<c<{1\over\log C_*},
 \qquad
 C_*=15650.8108585888\ldots,
-$$
+```
 from the logarithmic braid/fence theorem, and write
 
-$$
+```math
 k_D=\lfloor c\log D\rfloor.
 \tag{IP.13}
-$$
+```
 
 The parent theorem gives a `k_D`-edge THIN braid `F_D` and `k_D` fixed trains on each circumcenter flank. Splitting each flank by its two possible inverse-`D` column-phase signs leaves phase-pure sets satisfying
 
-$$
+```math
 |L_D|,|R_D|\ge \left\lfloor{k_D\over2}\right\rfloor.
 \tag{IP.14}
-$$
+```
 
 Put
 
-$$
+```math
 n_D:=\min(|L_D|,|R_D|)
-$$
+```
 and define `s_D` to be the largest integer satisfying
 
-$$
+```math
 4s_D\le k_D,
 \qquad
 16^{s_D}s_D\le n_D.
 \tag{IP.15}
-$$
+```
 
 Use the actual geometric incidence (IP.1) for both binary relations. Lemma IP.1 gives subsets
 
-$$
+```math
 F_D',L_D',R_D'
-$$
+```
 of size `s_D` and the two bits `sigma_L,sigma_R`, proving (IP.3)-(IP.4).
 
 Everything inherited from the parent theorem is monotone under taking subsets. In particular:
@@ -288,33 +270,33 @@ The row family itself is not thinned in this extraction.
 
 Since
 
-$$
+```math
 k_D=\Theta(\log D),
 \qquad
 n_D=\Theta(\log D),
 \tag{IP.16}
-$$
+```
 condition (IP.15) is governed by
 
-$$
+```math
 4s+\log_2s\le\log_2n_D.
 \tag{IP.17}
-$$
+```
 
 It follows that
 
-$$
+```math
 s_D\le {1\over4}\log_2n_D
 \tag{IP.18}
-$$
+```
 and, conversely, for example
 
-$$
+```math
 s={1\over4}\left(\log_2n_D-2\log_2\log_2n_D\right)
-$$
+```
 satisfies (IP.17) after taking an integer floor for all sufficiently large `D`. Hence
 
-$$
+```math
 \boxed{
 s_D=
 \left({1\over4}-o(1)\right)\log_2 n_D
@@ -322,21 +304,21 @@ s_D=
 \left({1\over4}-o(1)\right)\log_2\log D.
 }
 \tag{IP.19}
-$$
+```
 
 The additional requirement `4s_D<=k_D` is asymptotically harmless because `s_D=Theta(log log D)` while `k_D=Theta(log D)`.
 
 At the symmetric half-exponent choice
 
-$$
+```math
 c={1\over2\log C_*},
-$$
+```
 the parent theorem retains
 
-$$
+```math
 D^{1/2-o(1)}
 \tag{IP.20}
-$$
+```
 common rows. Therefore one source simultaneously contains
 
 ```text

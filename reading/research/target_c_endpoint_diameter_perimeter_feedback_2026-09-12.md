@@ -36,37 +36,37 @@ search and to state the remaining slack in an exact reusable form.
 
 Use the canonical post-ZF notation
 
-$$
+```math
 q=|B|,\qquad h=|H|,\qquad d_H=q-h,\qquad
 k=d_H+s_Z.
-$$
+```
 
 For the Type-II endpoint covered by the proof-only outer-detour floor, put
 
-$$
+```math
 t_D={q-k\over D}.
-$$
+```
 
 The audited endpoint result gives
 
-$$
+```math
 \liminf t_D\ge S_*:=2.798596312209462\ldots .
 \tag{EP.1}
-$$
+```
 
 The exact defect identity is
 
-$$
+```math
 q-k=h-s_Z.
 \tag{EP.2}
-$$
+```
 
 Since `s_Z\ge0`, (EP.1)--(EP.2) imply
 
-$$
+```math
 \boxed{\liminf {h\over D}\ge S_*.}
 \tag{EP.3}
-$$
+```
 
 No assumption that `s_Z=o(D)` is made.
 
@@ -74,19 +74,19 @@ No assumption that `s_Z=o(D)` is made.
 
 Let
 
-$$
+```math
 a_D:=\arcsin {1\over2D}.
-$$
+```
 
 The audited difference-body theorem applies to the full actual diameter graph.  Its
 projective diameter directions are pairwise separated by at least `2a_D`.  If `h`
 directions are placed in cyclic order, concavity of `sin(g/2)` gives
 
-$$
+```math
 \operatorname{per}(F)
 \ge h-1+2D\cos((h-1)a_D).
 \tag{EP.4}
-$$
+```
 
 The finite right side need not be asserted monotone at the last lattice step near
 `h=\pi D`; the asymptotic argument below avoids that unnecessary claim.  The bound
@@ -94,63 +94,63 @@ The finite right side need not be asserted monotone at the last lattice step nea
 subsequence, pass to `h/D\to y\in[S_*,\pi]`.  Since
 `a_D=1/(2D)+O(D^{-3})`, (EP.4) gives
 
-$$
+```math
 \liminf {\operatorname{per}(F)\over D}
 \ge y+2\cos(y/2).
-$$
+```
 
 The function `y+2\cos(y/2)` is increasing on `[S_*,\pi]` (strictly before `\pi`),
 so
 
-$$
+```math
 \boxed{
 \liminf {\operatorname{per}(F)\over D}
 \ge S_*+2\cos(S_*/2)
 =:P_*=3.139913777927318\ldots .
 }
 \tag{EP.5}
-$$
+```
 
 The universal diameter-perimeter inequality is `\operatorname{per}(F)\le\pi D`.
 Consequently the endpoint has the explicit remaining slack
 
-$$
+```math
 \boxed{
 0\le {\pi D-\operatorname{per}(F)\over D}
 \le \pi-P_*+o(1)
 =0.001678875662475\ldots+o(1).
 }
 \tag{EP.6}
-$$
+```
 
 ## 3. Equivalent area feedback
 
 The same audited difference-body module gives, for a subsequence with `h/D\to y`,
 
-$$
+```math
 \liminf {\operatorname{area}(F)\over D^2}
 \ge {y+\sin y\over4}.
 \tag{EP.7}
-$$
+```
 
 The function on the right is increasing on `[0,\pi]`.  Therefore (EP.3) also gives
 
-$$
+```math
 \boxed{
 \liminf {\operatorname{area}(F)\over D^2}
 \ge {S_*+\sin S_*\over4}
 =0.783726679476622\ldots .
 }
 \tag{EP.8}
-$$
+```
 
 This leaves only
 
-$$
+```math
 {\pi\over4}-{S_*+\sin S_*\over4}
 =0.001671483920826\ldots
 \tag{EP.9}
-$$
+```
 
 of the isodiametric area budget at the endpoint.  In the full Type-II branch the
 canonical harmonic-cell area saturation is stronger and gives `area(F)/D^2\to\pi/4`;
@@ -174,7 +174,7 @@ source-preserving finite deformation.
 
 The exact remaining implication is therefore
 
-$$
+```math
 \text{endpoint diameter moment}
 \to\text{near-maximal diameter-edge/perimeter profile}
 \to
@@ -183,7 +183,7 @@ $$
 \text{a common-block/unit-contact response contradiction},\\
 \text{or a finite strict-diameter descent}.
 \end{cases}
-$$
+```
 
 Contact-isolated source points remain retained throughout; no full-source affine
 kernel or unproved response sign is used.

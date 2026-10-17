@@ -16,48 +16,55 @@ This audit covers the proof-only `74-complete-grid-phase-collapse-audit.md` agai
 Let `A,B` be the Section-73 phase-pure complete shores, with fixed labels `ell_A,ell_B in Z/3`, and let `x_v` be the exact real phase potential from Sections 68–69.
 
 1. Section 68 orients every retained rhombus crossing `u->v` so that
-   $$
+   ```math
    \phi_v-\phi_u\equiv\pi/3+\delta_{uv}\pmod\pi,
    \qquad x_v-x_u=\delta_{uv}>0.
-   $$
+   
+   ```
    Section 69 writes `phi_v congruent x_v+(pi/3)ell_v (mod pi)` on the retained grain.
 2. Substitution cancels the real increment and gives `ell_v-ell_u=1 (mod 3)` for every oriented retained crossing.
 3. The shores `A,B` have two fixed distinct labels. Therefore the same label order occurs at every `A x B` crossing. After swapping shore names if needed, every crossing is oriented `A->B`, so
-   $$
+   ```math
    \delta_{ab}=x_b-x_a>0
    \quad(a\in A,b\in B).
-   $$
+   
+   ```
    In particular `max_A x < min_B x`.
 4. Every `A x B` pair is a distinct retained rhombus. Hence
-   $$
+   ```math
    S_{AB}:=\sum_{a,b}\delta_{ab}
-   $$
+   
+   ```
    is a sub-sum of the global Section-68 angular defect `Delta_train`.
 5. Canonical (68.14) gives
-   $$
+   ```math
    \Delta_{train}<C_{phase}D,
    \qquad
    C_{phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
-   $$
+   
+   ```
    Thus if `|A|,|B|>=gamma D`, the product mean
-   $$
+   ```math
    \lambda=S_{AB}/(|A||B|)
-   $$
+   
+   ```
    is at most `C_phase/(gamma^2 D)`.
 6. Put `x_A^+=max_A x` and `x_B^-=min_B x`. Since every product term is at least `x_B^- - x_A^+`, that gap is at most `lambda`.
 7. The exact product identity also gives
-   $$
+   ```math
    {1\over|A|}\sum_A(x_A^+-x_a)\le\lambda,
    \qquad
    {1\over|B|}\sum_B(x_b-x_B^-)\le\lambda.
-   $$
+   
+   ```
    Markov therefore retains subfamilies `A_0,B_0` of at least half the original shore sizes with each tail at most `2lambda`.
 8. For every retained pair,
-   $$
+   ```math
    \delta_{ab}
    =(x_b-x_B^-)+(x_B^--x_A^+)+(x_A^+-x_a)
    \le5\lambda.
-   $$
+   
+   ```
    Hence every crossing in the still-complete `A_0 x B_0` grid has angular defect `O(1/D)`.
 
 No topology enters steps 2–8. Holes remain allowed. The argument is stronger than an average-defect statement because the product sign/order turns one global average into a uniform bound on half-sized shores.
@@ -66,15 +73,15 @@ No topology enters steps 2–8. Holes remain allowed. The argument is stronger t
 
 There is a fixed `gamma>0` along every quadratic-core subsequence such that the actual source contains a complete internally noncrossing train grid `A_0 x B_0` with
 
-$$
+```math
 |A_0|,|B_0|\ge(\gamma/2)D
-$$
+```
 
 and every grid rhombus satisfies
 
-$$
+```math
 0<\theta_{ab}-\pi/3\le {5C_{phase}\over\gamma^2D}.
-$$
+```
 
 Equivalently, both train phase families have `O(1/D)` potential width on a linear-size complete grid.
 

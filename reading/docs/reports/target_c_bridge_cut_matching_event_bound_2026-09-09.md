@@ -13,22 +13,22 @@
 
 MC proves that the mixed support graph
 
-$$
+```math
 G_M=C\cup H
-$$
+```
 
 is 3-vertex-connected.  TF already used edge-connectivity to show that every contact bridge is bypassed by at least two actual diameter edges.  The vertex-connectivity statement gives more: on any bridge cut with at least three source vertices on each side, the complete mixed cut contains a matching of size three.  Hence at least two **vertex-disjoint** actual diameter edges bypass the contact bridge.
 
 At the bridge-block-tree level this yields a new exact global count.  Let `h=|E(H)|`.  After suppressing the reaction-free degree-two singleton blocks as in C22, the structural bridge tree satisfies
 
-$$
+```math
 \boxed{
 |V(T_{str})|\le2h-2,
 \qquad
 |E(T_{str})|\le2h-3.
 }
 \tag{BM.1}
-$$
+```
 
 The previous bound was `2q-2` and `2q-3`, where `q=|B_+|`.  Since `h=q-d_H`, BM improves the node bound by exactly `2d_H` whenever the diameter graph has tree-component defect.
 
@@ -38,22 +38,22 @@ The previous bound was `2q-2` and `2q-3`, where `q=|B_+|`.  Since `h=q-d_H`, BM 
 
 Let `uv` be a bridge of the contact graph `C`.  Removing it partitions the contact core vertex set as
 
-$$
+```math
 V=A\sqcup B',
 \qquad u\in A,
 \qquad v\in B'.
 \tag{BM.2}
-$$
+```
 
 The only contact edge crossing this partition is `uv`.  Every other mixed edge crossing it is an actual diameter edge.
 
 Let `X_{uv}` be the bipartite graph with parts `A,B'` whose edges are **all** mixed edges of `G_M` crossing the cut.  Thus
 
-$$
+```math
 E(X_{uv})
 =\{uv\}\sqcup E_H(A,B').
 \tag{BM.3}
-$$
+```
 
 TF gives `|E_H(A,B')|>=2`.  We first strengthen this when both sides are non-small.
 
@@ -65,19 +65,19 @@ TF gives `|E_H(A,B')|>=2`.  We first strengthen this when both sides are non-sma
 
 If
 
-$$
+```math
 |A|\ge3,
 \qquad
 |B'|\ge3,
 \tag{BM.4}
-$$
+```
 
 then `X_{uv}` contains a matching of size at least three:
 
-$$
+```math
 \boxed{\nu(X_{uv})\ge3.}
 \tag{BM.5}
-$$
+```
 
 Consequently at least two actual diameter edges in `E_H(A,B')` are pairwise vertex-disjoint.
 
@@ -85,34 +85,34 @@ Consequently at least two actual diameter edges in `E_H(A,B')` are pairwise vert
 
 Suppose the minimum vertex-cover number of `X_{uv}` were at most two.  Let
 
-$$
+```math
 S\subseteq A\cup B',
 \qquad |S|\le2,
-$$
+```
 
 meet every edge of `X_{uv}`.
 
 Because each side of the cut has at least three vertices,
 
-$$
+```math
 A\setminus S\ne\varnothing,
 \qquad
 B'\setminus S\ne\varnothing.
-$$
+```
 
 After deleting `S`, every mixed edge crossing `A|B'` is gone, because `S` covers the entire cut graph.  Hence `G_M-S` is disconnected, contradicting MC's 3-vertex-connectivity.
 
 Therefore
 
-$$
+```math
 \tau(X_{uv})\ge3.
-$$
+```
 
 The cut graph is bipartite, so König's theorem gives
 
-$$
+```math
 \nu(X_{uv})=\tau(X_{uv})\ge3.
-$$
+```
 
 At most one edge of any such matching can be the unique crossing contact edge `uv`.  Hence at least two matched edges are actual diameter edges, and because they belong to one matching they are vertex-disjoint. `square`
 
@@ -124,23 +124,23 @@ Since vertex-disjoint planar diameter edges cross geometrically, every large con
 
 For the bridge side `A`, define its mixed cut-boundary vertex set
 
-$$
+```math
 \partial_M A
 :=
 \{u\}
 \cup
 \{a\in A:\exists b\in B'\text{ with }ab\in H\}.
 \tag{BM.6}
-$$
+```
 
 ### Lemma BM.2 — every large bridge side has three mixed boundary vertices
 
 If `|A|>=3`, then
 
-$$
+```math
 \boxed{|\partial_M A|\ge3.}
 \tag{BM.7}
-$$
+```
 
 Consequently `A` contains at least two distinct loaded terminals from `B_+`.
 
@@ -148,9 +148,9 @@ Consequently `A` contains at least two distinct loaded terminals from `B_+`.
 
 If `|\partial_M A|<=2`, then because `|A|>=3` there is a vertex in
 
-$$
+```math
 A\setminus\partial_M A.
-$$
+```
 
 Delete all vertices of `\partial_M A`.  Every mixed edge from `A` to `B'` is incident to this deleted set: the contact bridge uses `u`, and by definition every crossing diameter edge uses an `A`-endpoint in `\partial_M A`.  Thus a surviving vertex of `A` is disconnected from the surviving vertices of `B'`, unless every vertex of `B'` was deleted.
 
@@ -182,10 +182,10 @@ By Lemma BM.2, every non-singleton leaf block contains at least two distinct loa
 
 Therefore the loaded terminals used by distinct leaf blocks are disjoint and
 
-$$
+```math
 \boxed{q\ge L_1+2L_+.}
 \tag{BM.8}
-$$
+```
 
 ---
 
@@ -193,52 +193,52 @@ $$
 
 Let `x` be a singleton leaf block.  Its unique incident bridge is its only contact edge, so
 
-$$
+```math
 \deg_C(x)=1.
 \tag{BM.9}
-$$
+```
 
 MC gives mixed minimum degree at least three.  Therefore
 
-$$
+```math
 \boxed{\deg_H(x)\ge2.}
 \tag{BM.10}
-$$
+```
 
 Every vertex of `B_+` has diameter degree at least one by definition.  Hence
 
-$$
+```math
 \begin{aligned}
 r_H
 :=2h-q
 &=\sum_{b\in B_+}(\deg_H(b)-1).
 \end{aligned}
 \tag{BM.11}
-$$
+```
 
 Each singleton leaf contributes at least one to the nonnegative sum on the right.  Distinct singleton leaves are distinct loaded vertices.  Thus
 
-$$
+```math
 \boxed{L_1\le r_H=2h-q.}
 \tag{BM.12}
-$$
+```
 
 Combine BM.8 and BM.12:
 
-$$
+```math
 2L
 =2L_1+2L_+
 \le q+L_1
 \le q+r_H
 =2h.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{L\le h.}
 \tag{BM.13}
-$$
+```
 
 This improves C22's general leaf count `L<=q`.
 
@@ -256,21 +256,21 @@ Let
 
 Suppression does not change the leaves.  Every reaction-free node has degree at least three, so the standard tree identity gives
 
-$$
+```math
 \boxed{I_0\le L-2.}
 \tag{BM.14}
-$$
+```
 
 C22 used only `R<=q`.  We can retain the extra terminal cost of the non-singleton leaf blocks.  Every loaded node contains at least one distinct loaded terminal, and every one of the `L_+` non-singleton leaf nodes contains at least one **additional** loaded terminal. Therefore
 
-$$
+```math
 \boxed{R+L_+\le q.}
 \tag{BM.15}
-$$
+```
 
 Now
 
-$$
+```math
 \begin{aligned}
 |V(T_{str})|
 &=R+I_0\\
@@ -280,14 +280,14 @@ $$
 &\le q+r_H-2\\
 &=2h-2.
 \end{aligned}
-$$
+```
 
 This proves the node bound in BM.1.  Since a tree has one fewer edge,
 
-$$
+```math
 \boxed{|E(T_{str})|\le2h-3.}
 \tag{BM.16}
-$$
+```
 
 Each edge of `T_str` represents one maximal exact straight constant-stress bridge corridor by C22.
 
@@ -297,22 +297,22 @@ Each edge of `T_str` represents one maximal exact straight constant-stress bridg
 
 C22 proved
 
-$$
+```math
 |V(T_{str})|\le2q-2.
-$$
+```
 
 Since
 
-$$
+```math
 h=q-d_H,
-$$
+```
 
 BM gives
 
-$$
+```math
 2h-2
 =2q-2d_H-2.
-$$
+```
 
 Thus every unit of diameter-graph tree-component defect removes **two** possible structural bridge events from the old worst-case count.
 
@@ -328,11 +328,11 @@ Therefore a large bridge side cannot be supplied by a diameter star through one 
 
 This is a useful regression against future scalar bridge-flow arguments: the cut force
 
-$$
+```math
 \alpha_{uv}(u-v)
 =
 \sum_{h\text{ crossing}}\beta_h d_h
-$$
+```
 
 is generated by a set of diameter vectors whose support contains at least two vertex-disjoint chords when both sides are large.  No uniform lower bound on their weights follows.
 

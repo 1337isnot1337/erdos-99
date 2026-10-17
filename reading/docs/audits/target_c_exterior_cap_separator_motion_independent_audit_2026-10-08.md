@@ -20,17 +20,17 @@
 
 Translate the full-source circumcenter to `0`. Let `R` be the circumradius of the full source hull, and assume every actual diameter midpoint `m=(b+k)/2` satisfies `|m|<=L`. Let `F=conv(B)` be the actual loaded endpoint hull. For one actual exterior cap, let its base be a side of `F`, with outward unit normal `u`, so `F` lies in `u dot x <= c`, `c>=0`. Put `w=Ju`, `r=D-R`, and assume
 
-$$
+```math
 c+2L<r,\qquad g=\sqrt{r^2-(c+2L)^2}>L.
-$$
+```
 
 For any loaded endpoint `b`, choose its actual diameter partner `k`. Since `|k|<=R` and `|b-k|=D`, `|b|>=D-R=r`. The loaded endpoints both lie in `F`, and the midpoint bound gives `|u dot (b+k)|<=2L`. Hence
 
-$$
+```math
 -c-2L\le u\cdot b\le c,
 \qquad |u\cdot b|\le c+2L,
 \qquad |w\cdot b|^2=|b|^2-|u\cdot b|^2\ge g^2.
-$$
+```
 
 The same estimate holds for `k`. If `b` and `k` had the same sign of `w`-projection, then `|w dot (b+k)|>=2g>2L`, contradicting `|b+k|<=2L`. Thus every full actual diameter edge crosses `w dot x=0`, and every loaded endpoint is at signed distance at least `g` from it.
 
@@ -38,20 +38,20 @@ The same estimate holds for `k`. If `b` and `k` had the same sign of `w`-project
 
 For a canonical source, `C-FS-GEOM` gives
 
-$$
+```math
 D/2\le R<D/2+3^{1/4}\sqrt D,
 \qquad L=\sqrt{D\eta+\eta^2}=O(D^{3/4}),
 \quad \eta=3^{1/4}\sqrt D.
-$$
+```
 
 `C-DB-DENSITY` places the full-source circumcenter inside the loaded force hull, so the chosen side has `c>=0`. If the actual cap has area at least `alpha D^2` for fixed `alpha>0`, it is contained in the circumdisk's segment `u dot x>=c`; the normalized circular-segment area tends to zero if `c/R` tends to one. Therefore `c/D` stays below `1/2` by a positive amount depending on `alpha`. Since `R/D -> 1/2` and `L/D -> 0`, the two finite inequalities hold for all sufficiently large `D` and give `g>=gamma_alpha D` for some `gamma_alpha>0`.
 
 All actual diameter edges cross the line, so the full actual diameter graph is bipartite. `C-WOODALL` then excludes its `d_H=0` odd-unicyclic alternative; the graph is in the `d_H>0` caterpillar-forest branch. Let `A_C` be the full-source boundary arc forming the cap and containing no other loaded endpoint. The cap perimeter is `A_C+|ab|<=2A_C`; the isoperimetric inequality gives `area(C)<=A_C^2/pi`, hence `A_C>=sqrt(pi alpha)D`. The other `q-1` consecutive loaded boundary arcs each have length at least one, so
 
-$$
+```math
 q\le \operatorname{per}(\operatorname{conv}A)-A_C+1
  \le \pi D-\sqrt{\pi\alpha}\,D+1.
-$$
+```
 
 This excludes the terminal `q/D -> pi` subcase whenever an actual exterior cap has area at least `alpha D^2`. It does not force `d_H` to be linear or exclude the nonmatching forest branch.
 
@@ -59,27 +59,27 @@ This excludes the terminal `q/D -> pi` subcase whenever an actual exterior cap h
 
 Use the canonical nonisolated positive-contact core `V`, all actual contacts `C`, and all actual diameter edges `H`. The canonical incidence theorem places every loaded endpoint in `V`; all contact-isolated source labels remain outside the motion argument and are kept fixed. Define
 
-$$
+```math
 V_- = \{p\in V:w\cdot p\le0\},\qquad V_+=\{p\in V:w\cdot p>0\},
-$$
+```
 
 and let `R_-` be the negative-shore endpoints of contact edges crossing this cut. Each `p in R_-` satisfies `-1<w dot p<=0`. Since `g>1`, no loaded endpoint is in `R_-`.
 
 The strip containing `R_-` has width one and tangential span at most `D`. Oler's finite inequality, with unit-separated centers, and the perimeter bound `per(conv R_-)<=2D+2` give
 
-$$
+```math
 |R_-|\le (2/\sqrt3)D+D+2=(1/a_0+1)D+2,
 \qquad a_0=\sqrt3/2.
-$$
+```
 
 For nonemptiness, suppose `R_-` were empty. Then no old contact crosses the cut. Translate every point of `V_-` by `+epsilon w` and every point of `V_+` by `-epsilon w`, retaining every source isolate fixed. All contacts stay unit, and every actual diameter pair crosses the cut and strictly shortens. Every other full-source pair has strict lower and upper margins; since the source is finite, one sufficiently small positive `epsilon` preserves all of them. This would give an `n`-point source of diameter `<D`, contradicting global minimality. Thus `R_-` is nonempty. This proof does not assume that the contact graph is connected.
 
 Now delete `R_-`, and perform the same shore translations. Every surviving old contact has both ends on one shore, so it remains exactly unit. Every old actual diameter endpoint remains because it is more than one from the cut, and every old diameter edge has projection span `d>=2g`. Its new squared length is
 
-$$
+```math
 D^2-4\epsilon d+4\epsilon^2<D^2
 \qquad(0<\epsilon<g).
-$$
+```
 
 For every retained pair that was neither a contact nor an actual diameter, the original distances lie strictly between `1` and `D`. The minimum of the finitely many positive lower and upper margins is positive. Taking `epsilon` smaller than one quarter of this minimum and than `g` preserves all such constraints, including pairs between moving core labels and fixed contact isolates. Therefore the reduced source has `n-|R_-|` unit-separated points and diameter `<D`. No uniform positive lower bound on this `epsilon` is claimed.
 
@@ -87,15 +87,15 @@ For every retained pair that was neither a contact nor an actual diameter, the o
 
 For any `1/2<a<g`, remove all source labels `R_a={p in A:|w dot p|<a}` and move the remaining negative and positive shores by `+epsilon w` and `-epsilon w`, respectively, where `0<epsilon<a-1/2`. Within-shore distances stay fixed. Across shores, the new normal separation is at least `2(a-epsilon)>1`, and for an old cross-shore vector with normal component `d>=2a`,
 
-$$
+```math
 |x-y-2\epsilon w|^2-|x-y|^2=-4\epsilon d+4\epsilon^2<0.
-$$
+```
 
 All old diameter pairs cross the line, so every same-shore pair was already strictly below `D`, while every cross-shore pair strictly decreases. This proves the new diameter is strictly below `D`. The strip has width `2a`, tangential span at most `D`, area at most `2aD`, and perimeter at most `2D+4a`; Oler gives
 
-$$
+```math
 |R_a|\le(2a/a_0+1)D+2a+1.
-$$
+```
 
 All actual diameter endpoints are retained because their cut distance is at least `g>a`. The parameter `epsilon` is a uniform permitted finite translation for the given `a`; this says nothing about the resulting full-source diameter gap, since same-shore pairs remain unchanged.
 

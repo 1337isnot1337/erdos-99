@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_dirichlet_pi_feedback_surplus_04702_2026-09-09.md) · source SHA-256 `2d45b04e49b6b9279893e22e46f2c841afe7e77733ebe3f80e29a0ee77da8c72`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-4475F0949018","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Dirichlet pocket functional plus PI feedback raises the surplus floor to 0.4702
 
@@ -12,22 +14,22 @@
 
 The merged PF theorem gives
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}\ge0.4694
-$$
+```
 
 using the WD outer-pocket constant `sqrt(2)/pi`.  DD replaces that constant by the stronger self-contained value `1/sqrt(6)`.
 
 Running the same two finite PI/detour feedback steps gives
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
 \ge0.4702.
 }
 \tag{DP.1}
-$$
+```
 
 No infinite bootstrap, numerical optimizer, or new external theorem is used.
 
@@ -37,64 +39,64 @@ No infinite bootstrap, numerical optimizer, or new external theorem is used.
 
 For a candidate subsequential limit
 
-$$
+```math
 \lambda:=\lim\frac{e_{BB}+2s_C}{D},
-$$
+```
 
 define
 
-$$
+```math
 A_{PI}:=\frac12\sin(2\rho),
 \qquad \rho=\cos\rho,
-$$
+```
 
 and
 
-$$
+```math
 L_0(\lambda)
 :=A_{PI}-\frac\pi4\lambda^2,
 \tag{DP.2}
-$$
+```
 
-$$
+```math
 R_0(\lambda)
 :=\lambda+\frac\pi2-2\sqrt{\pi L_0(\lambda)}.
 \tag{DP.3}
-$$
+```
 
 PF proves that this JC budget forces
 
-$$
+```math
 \left|\frac hD-\frac\pi2\right|\le R_0.
-$$
+```
 
 The diameter-density form of PI then gives the improved force-hull area floor `cos(R_0)/2`.  Set
 
-$$
+```math
 L_1(\lambda)
 :=\frac12\cos R_0(\lambda)-\frac\pi4\lambda^2,
 \tag{DP.4}
-$$
+```
 
-$$
+```math
 R_1(\lambda)
 :=\lambda+\frac\pi2-2\sqrt{\pi L_1(\lambda)}.
 \tag{DP.5}
-$$
+```
 
 Apply the same implication once more:
 
-$$
+```math
 L_2(\lambda)
 :=\frac12\cos R_1(\lambda)-\frac\pi4\lambda^2,
 \tag{DP.6}
-$$
+```
 
-$$
+```math
 R_2(\lambda)
 :=\lambda+\frac\pi2-2\sqrt{\pi L_2(\lambda)}.
 \tag{DP.7}
-$$
+```
 
 These are two finite theorem applications, exactly as in PF.
 
@@ -104,45 +106,45 @@ These are two finite theorem applications, exactly as in PF.
 
 PF/ED's exact-defect reduction gives, with
 
-$$
+```math
 \nu:=\lim Q/D,
-$$
+```
 
-$$
+```math
 \frac{L_{chain}}D
 \le\pi+2R_2-\lambda-\nu,
 \tag{DP.8}
-$$
+```
 
-$$
+```math
 \frac{U_{det}}D
 \le2R_2-\nu,
 \qquad
 0\le\nu\le2R_2.
 \tag{DP.9}
-$$
+```
 
 DD proves
 
-$$
+```math
 H_{out}
 \le
 \frac1{\sqrt6}
 L_{chain}^{3/2}U_{det}^{1/2}.
 \tag{DP.10}
-$$
+```
 
 The exceptional-face bound remains
 
-$$
+```math
 \limsup\frac{A_{exc}}{D^2}
 \le\frac{\nu^2}{4\pi}.
 \tag{DP.11}
-$$
+```
 
 Thus every survivor must satisfy
 
-$$
+```math
 L_2(\lambda)
 \le
 \max_{0\le\nu\le2R_2}
@@ -154,7 +156,7 @@ L_2(\lambda)
 \frac{\nu^2}{4\pi}
 \right\}.
 \tag{DP.12}
-$$
+```
 
 ---
 
@@ -162,24 +164,24 @@ $$
 
 Put
 
-$$
+```math
 A:=\pi+2R_2-\lambda,
 \qquad B:=2R_2,
-$$
+```
 
 and
 
-$$
+```math
 F(\nu)
 :=
 \frac1{\sqrt6}(A-\nu)^{3/2}(B-\nu)^{1/2}
 +
 \frac{\nu^2}{4\pi}.
-$$
+```
 
 For `0<=nu<B`,
 
-$$
+```math
 F'(\nu)
 =-
 \frac1{2\sqrt6}
@@ -188,45 +190,45 @@ F'(\nu)
 +
 \frac{\nu}{2\pi}.
 \tag{DP.13}
-$$
+```
 
 For `lambda<=0.4702`, the finite bootstrap is monotone and gives
 
-$$
+```math
 R_2\le R_2(0.4702)
 =0.0160758902\ldots,
-$$
+```
 
 so
 
-$$
+```math
 B<0.033.
-$$
+```
 
 Also
 
-$$
+```math
 A-\nu\ge A-B=\pi-\lambda>2.67.
-$$
+```
 
 Therefore the magnitude of the negative term in DP.13 is greater than `5`, whereas
 
-$$
+```math
 \frac{\nu}{2\pi}<0.006.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{F'(\nu)<0}
 \tag{DP.14}
-$$
+```
 
 throughout the relevant interval.  The maximum in DP.12 occurs at `nu=0`.
 
 Every survivor with `lambda<=0.4702` must therefore satisfy
 
-$$
+```math
 \boxed{
 L_2(\lambda)
 \le
@@ -237,7 +239,7 @@ V_D(\lambda)
 \sqrt{2R_2(\lambda)}.
 }
 \tag{DP.15}
-$$
+```
 
 ---
 
@@ -251,9 +253,9 @@ PF proves inductively on the relevant interval that
 
 Therefore
 
-$$
+```math
 \pi+2R_2(\lambda)-\lambda
-$$
+```
 
 is increasing, so `V_D(lambda)` is increasing.  To exclude every `lambda<=lambda_*`, it is enough to test DP.15 at `lambda_*`.
 
@@ -263,20 +265,20 @@ is increasing, so `V_D(lambda)` is increasing.  To exclude every `lambda<=lambda
 
 Take
 
-$$
+```math
 \boxed{\lambda_*=0.4702.}
-$$
+```
 
 With
 
-$$
+```math
 \rho
 =0.7390851332151606416553120877\ldots,
-$$
+```
 
 the two finite feedback steps give
 
-$$
+```math
 \boxed{
 L_0
 =0.3242144957590694118167\ldots,
@@ -285,9 +287,9 @@ R_0
 =0.0225316844847949784549\ldots,
 }
 \tag{DP.16}
-$$
+```
 
-$$
+```math
 \boxed{
 L_1
 =0.3262309456028315236922\ldots,
@@ -296,9 +298,9 @@ R_1
 =0.0162645005230745397146\ldots,
 }
 \tag{DP.17}
-$$
+```
 
-$$
+```math
 \boxed{
 L_2
 =0.3262917273984089741622\ldots,
@@ -307,24 +309,27 @@ R_2
 =0.0160758901140228867808\ldots .
 }
 \tag{DP.18}
+```
 
 The right side of DP.15 is
 
-\[
+```math
 \boxed{
 V_D(\lambda_*)
 =0.3254071976036928745110\ldots .
 }
 \tag{DP.19}
+```
 
 Hence
 
-\[
+```math
 \boxed{
 L_2(\lambda_*)-V_D(\lambda_*)
 =0.0008845297947160996512\ldots>0.
 }
 \tag{DP.20}
+```
 
 This contradicts DP.15.  Monotonicity excludes every smaller `lambda`.  Therefore DP.1 follows.
 
@@ -336,23 +341,23 @@ The endpoint margin is almost `9e-4`, safely above the displayed numerical preci
 
 The explicit post-ZF pinned/contact floor has moved through
 
-\[
+```math
 0.4633168954\ldots\quad\text{(JC)},
-$$
+```
 
-$$
+```math
 0.4647922503\ldots\quad\text{(GS)},
-$$
+```
 
-$$
+```math
 0.4694\quad\text{(merged PF)},
-$$
+```
 
 and now
 
-$$
+```math
 \boxed{0.4702}\quad\text{(DD + finite PI feedback)}.
-$$
+```
 
 The conceptual change is more important than the numerical increment: the limiting pocket functional is controlled by the Dirichlet dual of mean transverse height, not by a generic convex isoperimetric or `L^2` estimate.
 

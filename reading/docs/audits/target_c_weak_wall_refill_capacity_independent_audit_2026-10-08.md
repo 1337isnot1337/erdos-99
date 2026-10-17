@@ -32,15 +32,15 @@ For any source point `q` outside `int(Q)`, a weakly guarded `x` satisfies `|x-q|
 
 Take the first exit `z` of segment `[x,q]` from `Q`. If `z` is a wall vertex, both distances to it are at least one, unless `q=z`, which is the direct wall-vertex case. If `z=(1-t)a+tb` is in the interior of a side, then both `x` and `q` are at least one from `a,b`. The exact identity
 
-$$
+```math
 |w-z|^2=(1-t)|w-a|^2+t|w-b|^2-t(1-t)|a-b|^2
-$$
+```
 
 gives
 
-$$
+```math
 |x-z|,|q-z|\ge\sqrt{1-L^2/4}\ge\tfrac12.
-$$
+```
 
 The two lengths add along `[x,q]`, so `|x-q|>=2 sqrt(1-L^2/4)>=1`. Equality is allowed. No convexity is used.
 
@@ -54,15 +54,15 @@ Let `A_0` be an `n`-point global diameter minimizer of diameter `D`. Delete `r` 
 
 If
 
-$$
+```math
 \sum_i |Y_i|\ge r+\sum_i |S_i|,
-$$
+```
 
 then
 
-$$
+```math
 A'=(A\setminus\bigcup_i S_i)\cup\bigcup_iY_i
-$$
+```
 
 contains at least `n` unit-separated points. The cardinality count is exact: the old `S_i` are removed first; packet interiors are disjoint from each other and from the retained points. Therefore `|A'|=|A|-sum_i|S_i|+sum_i|Y_i|`, even if a packet reuses an old interior coordinate. Unit separation follows from the shield above. Each polygon interior lies in the convex hull of its vertices, so all of `A'` lies in `conv(A)`, whose diameter is `D'`. Selecting any `n` points gives an `n`-point unit-separated set of diameter at most `D'<D`, contradicting global minimality.
 
@@ -78,54 +78,54 @@ This is a label-preservation barrier for an already existing feasible motion. It
 
 For every integer `M>=2`, let
 
-$$
+```math
 \tau=\frac1{100M^3},\quad c=\frac{1-\tau^2}{1+\tau^2},\quad s=\frac{2\tau}{1+\tau^2},\quad
 u=(1,0),\quad v=\left(\frac{c-\sqrt3s}{2},\frac{s+\sqrt3c}{2}\right).
-$$
+```
 
 Thus the angle between `u,v` is `theta=pi/3+2 arctan(tau)`. Since `tau<=1/800`, `c>1-2/800^2` and `s<2/800`; hence `cos(theta)=(c-sqrt(3)s)/2>(1-2/800^2-2sqrt(3)/800)/2>49/100`. Also `c<1` and `s>0`, so `cos(theta)<1/2`. Define
 
-$$
+```math
 G_M=\{iu+jv:0\le i,j\le M\},\qquad q=(-2,-2),\qquad r=(10M,0),\qquad A_M=G_M\cup\{q,r\}.
-$$
+```
 
 For integer differences `(a,b)`, squared grid distances are `a^2+b^2+2ab cos(theta)`. If one difference is zero, the squared distance is the square of the other integer. If `a,b` have the same sign and are both nonzero this exceeds one. If they have opposite signs, it equals `(abs(a)-abs(b))^2+2 abs(a b)(1-cos(theta))>1`, since `cos(theta)<1/2`. Hence the only grid contacts are the adjacent `u` and `v` steps; their graph is bipartite and triangle-free. Grid coordinates have nonnegative coordinates, so `|q-(iu+jv)|^2>=8`; also their first coordinate is at most `M(1+cos(theta))<3M/2`, so their distance from `r` is greater than `17M/2`. Thus `q,r` are separated from the grid and contact-isolated.
 
 The grid-pair squared distances are at most `3M^2`: when the coordinate differences have the same sign use `2 cos(theta)<1`, and for opposite signs discard the nonpositive cross term. Also
 
-$$
+```math
 |q-(iu+jv)|^2=(i+j\cos\theta+2)^2+(j\sin\theta+2)^2\le3M^2+10M+8,
-$$
+```
 
 using `0<cos(theta)<1/2` and `0<sin(theta)<1`. The maximum squared distance from `r` to the grid is `100M^2`, attained at the origin. For the latter, squared distance is convex on the grid parallelogram and its four corner values are `100M^2`, `81M^2`, `(101-20 cos(theta))M^2`, and `(82-18 cos(theta))M^2`, all at most `100M^2`. Meanwhile
 
-$$
+```math
 |r-q|^2=D_M^2=(10M+2)^2+4.
-$$
+```
 
 Thus `r q` is the unique actual diameter pair. Its endpoints have no unit contacts, so stationarity forces the multiplier on `r q` to be zero. A contact-only nonnegative equilibrium is also zero: dotting force balance with the point coordinates gives a fixed-sign sum of contact multipliers times their squared lengths, hence all contact multipliers vanish. The source has no normalized nonnegative KKT diameter stress. It is not globally optimal: `n=(M+1)^2+2` points from the square lattice fit in `M+2` columns and `M+1` rows because `(M+2)(M+1)-n=M-1>=1`; their squared diameter is at most `(M+1)^2+M^2<D_M^2`.
 
 Delete `r` and scale every retained point by `L=1+t`, where `0<t<=1/(10M^2)`, and call the resulting set `A_t`. All retained distances become strictly greater than one. Since `3M^2+10M+8<=10M^2` for `M>=2` and `L^2<2`,
 
-$$
+```math
 \operatorname{diam}(A_t)^2\le L^2(3M^2+10M+8)<20M^2<D_M^2.
-$$
+```
 
 Use the `4M` boundary labels of the scaled grid as the wall `Q_t`, with each consecutive wall edge of length `L<sqrt(3)`. Its interior contains exactly `S=(M-1)^2` retained grid points, strictly guarded from all wall vertices.
 
 For any weakly guarded, internally unit-separated packet `Y` in this parallelogram, `Y` together with the `4M` wall vertices is unit-separated in the closed convex parallelogram. The finite Oler inequality [Lemma 21.1](../theory/03-oler-shell.md) gives
 
-$$
+```math
 |Y|+4M\le \frac{2}{\sqrt3}L^2M^2\sin\theta+2LM+1.
-$$
+```
 
 Here `(2/sqrt(3))sin(theta)=c+s/sqrt(3)<=1+2tau`. Subtracting `(M+1)^2` from the right side leaves at most
 
-$$
+```math
 M^2(2t+t^2)+2\tau M^2(1+t)^2+2Mt
 \le \frac15+\frac1{400}+\frac1{50}+\frac1{10}
 =\frac{129}{400}<1.
-$$
+```
 
 The first term bound uses `t<=1/(10M^2)` and `M>=2`; the second uses `(1+t)^2<2`; and the last uses `M>=2`. Integer rounding yields `|Y|+4M<=(M+1)^2`, hence `|Y|<=S`. The old interior grid attains `S`, so the weak packet capacity is exactly `S` for every `M>=2` and every `t` in the interval. Refilling the one deleted label together with all `S` old interior labels requires `S+1` sites; this fixed wall has no spare site.
 

@@ -16,29 +16,29 @@
 
 The post-ZF mixed equality framework
 
-$$
+```math
 G_M=(V,C\cup H)
-$$
+```
 
 is not merely infinitesimally rigid.  The relative-interior KKT row dependence is nonzero on **every** actual contact and diameter row.  Therefore every individual mixed edge is redundant in the rigidity matrix:
 
-$$
+```math
 \boxed{
 (G_M-e,p)\text{ is infinitesimally rigid for every }e\in C\cup H.
 }
 \tag{RR.1}
-$$
+```
 
 This holds for every post-ZF survivor, with no assumption `s_Z=0`.
 
 Combined with MC, the mixed support is therefore a 3-vertex-connected redundantly rigid graph in its actual realization.  One immediate cut consequence is
 
-$$
+```math
 \boxed{
 |\delta_{G_M}(A)|\ge4
 }
 \tag{RR.2}
-$$
+```
 
 whenever both `A` and its complement contain at least two vertices.  Hence every contact bridge separating two nonsingleton sides is bypassed by at least **three** actual diameter edges.
 
@@ -48,39 +48,39 @@ whenever both `A` and its complement contain at least two vertices.  Hence every
 
 Let
 
-$$
+```math
 R=R(G_M,p)
-$$
+```
 
 be the ordinary planar bar-rigidity matrix, with one row for every edge of `C union H`.
 
 ZF proves
 
-$$
+```math
 \boxed{\operatorname{rank}R=2v-3.}
 \tag{RR.3}
-$$
+```
 
 Choose the relative-interior normalized KKT stress supplied by C65.  Its multipliers satisfy
 
-$$
+```math
 \alpha_e>0\quad(e\in C),
 \qquad
 \beta_h>0\quad(h\in H).
-$$
+```
 
 After changing the sign of the diameter coordinates, the vector
 
-$$
+```math
 \omega=(\alpha,-\beta)
-$$
+```
 
 is an ordinary bar self-stress:
 
-$$
+```math
 \boxed{\omega^TR=0.}
 \tag{RR.4}
-$$
+```
 
 Every coordinate of `omega` is nonzero.
 
@@ -92,30 +92,30 @@ Every coordinate of `omega` is nonzero.
 
 For every mixed edge `f in C union H`, deleting `f` leaves rigidity rank unchanged:
 
-$$
+```math
 \boxed{
 \operatorname{rank}R(G_M-f,p)=2v-3.
 }
 \tag{RR.5}
-$$
+```
 
 ### Proof
 
 Write the full-support stress relation as
 
-$$
+```math
 \sum_{e\in E(G_M)}\omega_e R_e=0,
-$$
+```
 
 where `R_e` is the rigidity row of edge `e`.
 
 Fix `f`. Since `omega_f !=0`,
 
-$$
+```math
 R_f
 =-\frac1{\omega_f}
 \sum_{e\ne f}\omega_eR_e.
-$$
+```
 
 Thus row `R_f` lies in the span of all other rows. Deleting it does not change the row span or the rank. ZF gives the common rank `2v-3`. `square`
 
@@ -133,26 +133,26 @@ In the special case `s_Z=0`, the whole mixed graph is itself that unique circuit
 
 Let
 
-$$
+```math
 V=A\sqcup B,
 \qquad |A|\ge2,
 \qquad |B|\ge2,
-$$
+```
 
 and let
 
-$$
+```math
 k:=|\delta_{G_M}(A)|
-$$
+```
 
 be the number of mixed edges crossing the cut.
 
 ### Theorem RR.3 — essentially four-edge-connected mixed support
 
-$$
+```math
 \boxed{k\ge4.}
 \tag{RR.6}
-$$
+```
 
 ### Proof
 
@@ -160,26 +160,26 @@ Choose any crossing edge `f`.  RR.1 says `G_M-f` is infinitesimally rigid, so it
 
 After deleting `f`, at most `k-1` rows cross between `A` and `B`.  The rows internal to `A` have rank at most
 
-$$
+```math
 2|A|-3,
-$$
+```
 
 and the rows internal to `B` have rank at most
 
-$$
+```math
 2|B|-3.
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 2v-3
 &=\operatorname{rank}R(G_M-f,p)\\
 &\le(2|A|-3)+(2|B|-3)+(k-1)\\
 &=2v+k-7.
 \end{aligned}
-$$
+```
 
 Hence `k>=4`. `square`
 
@@ -198,24 +198,24 @@ Let `uv` be a contact bridge with bridge sides `A,B`.  The mixed cut consists of
 
 If
 
-$$
+```math
 |A|,|B|\ge2,
-$$
+```
 
 RR.3 gives
 
-$$
+```math
 1+|E_H(A,B)|\ge4.
-$$
+```
 
 Therefore:
 
 ### Corollary RR.4 — three-diameter bridge bypass
 
-$$
+```math
 \boxed{|E_H(A,B)|\ge3.}
 \tag{RR.7}
-$$
+```
 
 This strengthens TF's universal lower bound `>=2` on every bridge cut.  The exact cases are now:
 
@@ -226,9 +226,9 @@ When both sides have at least three vertices, BM simultaneously gives a mixed ma
 
 In the `s_Z=0` circuit phase, CS sharpens RR.7 to the exact formula
 
-$$
+```math
 |E_H(A,B)|=3+\delta_A+\delta_B.
-$$
+```
 
 ---
 

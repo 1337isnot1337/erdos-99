@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/100-wrapping-angular-measure-threshold-audit.md) · source SHA-256 `64bdc7c2acc38da75a75bf2a52102f32c9884ada186eed25ca4253413673b825`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 16 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 # Target C — wrapping angular-measure threshold audit
 
 **Date:** 2026-09-12  
@@ -16,9 +18,9 @@ Keeping that missing information halves the angular-measure ceiling.  If `S` is 
 wrapping compact subset of the circle whose pairwise minor angular distances are at
 most `theta<pi`, then
 
-$$
+```math
 \boxed{|S|\le3\theta-2\pi.}
-$$
+```
 
 The proof is a one-dimensional antipodal-neighborhood argument using the same three
 forbidden arcs already present in canonical Section 94.
@@ -26,35 +28,35 @@ forbidden arcs already present in canonical Section 94.
 For Type-II harmonic attachments, unit separation on the near-circle boundary then
 gives
 
-$$
+```math
 \boxed{
 \alpha:=\lim {|A_D|\over D}
 \le {3\theta-2\pi\over2}.
 }
-$$
+```
 
 Canonical Section 96 independently gives
 
-$$
+```math
 \alpha\ge{3\over2}\sin\theta.
-$$
+```
 
 Hence every wrapping harmonic-cell limit satisfies
 
-$$
+```math
 \boxed{3\sin\theta\le3\theta-2\pi.}
-$$
+```
 
 The unique root on `[2pi/3,pi)` is
 
-$$
+```math
 \boxed{
 \theta_7=2.6053256746009026857\ldots,
 \qquad
 \mu_7:=\sin(\theta_7/2)
 =0.9642670742838972841\ldots .
 }
-$$
+```
 
 Thus every wrapping Type-II harmonic-cell limit has normalized diameter at least
 `mu_7`.  This strictly improves both canonical Cauchy bounds: the coarse bound
@@ -77,64 +79,64 @@ angle modulo `2pi`, and write `d_T(x,y) in [0,pi]` for minor angular distance.
 
 Assume
 
-$$
+```math
 \boxed{d_T(x,y)\le\theta<\pi\qquad(x,y\in S)}
 \tag{100.1}
-$$
+```
 
 and that `S` is wrapping, meaning it is not contained in an open semicircle.
 Equivalently, the origin belongs to `conv(S)`.
 
 Put
 
-$$
+```math
 r:=\pi-\theta>0,
 \qquad
 \phi:=2r=2\pi-2\theta.
 \tag{100.2}
-$$
+```
 
 Canonical Sections 88 and 94 choose three cyclic anchors
 
-$$
+```math
 y_1,y_2,y_3\in S
-$$
+```
 
 whose triangle contains the origin.  If their three cyclic gaps are `g_1,g_2,g_3`,
 then
 
-$$
+```math
 g_i\in(0,\pi),
 \qquad
 \sum_i g_i=2\pi,
 \qquad
 g_i\le\theta.
 \tag{100.3}
-$$
+```
 
 Inside each anchor gap, Section 94 identifies a central support-free open arc of exact
 length
 
-$$
+```math
 \phi=2\pi-2\theta=2r.
 \tag{100.4}
-$$
+```
 
 Call these three disjoint forbidden arcs `J_1,J_2,J_3`.
 Removing them partitions the circle into three closed cluster arcs
 
-$$
+```math
 C_1,C_2,C_3,
-$$
+```
 
 each containing one anchor, and
 
-$$
+```math
 S=S_1\cup S_2\cup S_3,
 \qquad
 S_i:=S\cap C_i\ne\varnothing.
 \tag{100.5}
-$$
+```
 
 The interiors of the three cluster arcs are separated cyclically by gaps of length at
 least `2r`.
@@ -143,47 +145,47 @@ least `2r`.
 
 Let `x^*:=x+pi` denote the antipode of angle `x`.  For points on the circle,
 
-$$
+```math
 d_T(y,x^*)=\pi-d_T(x,y).
 \tag{100.6}
-$$
+```
 
 Thus (100.1) gives
 
-$$
+```math
 d_T(y,x^*)\ge\pi-\theta=r
 \qquad(x,y\in S).
 \tag{100.7}
-$$
+```
 
 Consequently the open angular `r`-neighborhood of the antipodal set is disjoint from
 `S`:
 
-$$
+```math
 \boxed{
 N_r(S+\pi)\cap S=\varnothing.
 }
 \tag{100.8}
-$$
+```
 
 Boundary contacts at angular distance exactly `r` have zero one-dimensional measure,
 so for angular Lebesgue measure `|.|`,
 
-$$
+```math
 \boxed{|N_r(S+\pi)|\le2\pi-|S|.}
 \tag{100.9}
-$$
+```
 
 ## 100.3 Three separated clusters force three neighborhood-expansion credits
 
 Translate the decomposition (100.5) by `pi`.  Since the original cluster groups are
 separated by the three forbidden gaps `J_i` of length `2r`, the open neighborhoods
 
-$$
+```math
 N_r(S_1+\pi),
 \quad N_r(S_2+\pi),
 \quad N_r(S_3+\pi)
-$$
+```
 
 have pairwise disjoint interiors.  They may touch at endpoints, which does not affect
 measure.
@@ -196,35 +198,38 @@ contribute total complementary angular length at least `4r`.
 
 Therefore
 
-$$
+```math
 \boxed{|N_r(S_i+\pi)|\ge|S_i|+2r.}
 \tag{100.10}
+```
 
 Summing over the three disjoint neighborhoods,
 
-\[
+```math
 |N_r(S+\pi)|
 =\sum_{i=1}^3|N_r(S_i+\pi)|
 \ge |S|+6r.
 \tag{100.11}
+```
 
 Combine (100.9) and (100.11):
 
-\[
+```math
 2\pi-|S|\ge|S|+6r.
-$$
+```
 
 Hence
 
-$$
+```math
 2|S|\le2\pi-6(\pi-\theta)=6\theta-4\pi,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{|S|\le3\theta-2\pi.}
 \tag{100.12}
+```
 
 This is exactly half the Section-88 six-interval container measure
 `6theta-4pi`.
@@ -240,22 +245,22 @@ The measure bound (100.12) cannot be improved using only wrapping and pairwise a
 diameter.  Put three arc centers at angles `0,2pi/3,4pi/3` and give each arc angular
 length
 
-\[
+```math
 t:=\theta-{2\pi\over3}.
-$$
+```
 
 For `theta in [2pi/3,pi)`, the three arcs are disjoint.  The largest minor angular
 distance between points in adjacent arcs is
 
-$$
+```math
 {2\pi\over3}+t=\theta,
-$$
+```
 
 so the union has pairwise angular diameter `theta`, is wrapping, and has measure
 
-$$
+```math
 3t=3\theta-2\pi.
-$$
+```
 
 Thus (100.12) is the sharp one-dimensional support theorem.
 
@@ -265,25 +270,25 @@ Thus (100.12) is the sharp one-dimensional support theorem.
 
 Now return to a wrapping Type-II harmonic-cell sequence
 
-$$
+```math
 P_D=\operatorname{conv}(A_D)
-$$
+```
 
 with source diameter `D->infinity` and
 
-$$
+```math
 {\operatorname{diam}(P_D)\over D}\to\lambda<1.
 \tag{100.13}
-$$
+```
 
 After passing to a subsequence, canonical Type-II annular compactness gives Hausdorff
 convergence of the normalized attachment sets to a compact wrapping set `S` on the
 radius-`1/2` circle.  Put
 
-$$
+```math
 \theta:=2\arcsin\lambda.
 \tag{100.14}
-$$
+```
 
 Because diameter of a convex polygon is attained at vertices, a limiting pair of
 attachment vertices realizes the limiting diameter; hence `S` has Euclidean diameter
@@ -292,16 +297,18 @@ so the circle theorem applies.
 
 After another subsequence let
 
-$$
+```math
 {a_D\over D}\to\alpha,
 \qquad a_D:=|A_D|.
 \tag{100.15}
+```
 
 We claim
 
-\[
+```math
 \boxed{\alpha\le{|S|\over2}.}
 \tag{100.16}
+```
 
 Fix `delta>0`.  Let `E_delta` be the open angular `delta`-neighborhood of `S` on the
 circle.  Since `S` is compact, `E_delta` is a finite union of angular intervals; the
@@ -310,60 +317,61 @@ every attachment angle in `E_delta` for all sufficiently large `D`.
 
 Canonical Type-II near-disk geometry gives
 
-\[
+```math
 B\left(0,\left({1\over2}-o(1)\right)D\right)
 \subset F_D\subset
 B\left(0,\left({1\over2}+o(1)\right)D\right).
 \tag{100.17}
-$$
+```
 
 The polar-arc estimate used in canonical Section 88 therefore bounds the total
 force-hull boundary arclength over `E_delta` by
 
-$$
+```math
 \left({D\over2}+o(D)\right)|E_\delta|.
 \tag{100.18}
-$$
+```
 
 On each component of `E_delta`, consecutive loaded attachments are source points at
 Euclidean distance at least one.  Boundary arclength dominates chord length, so a
 boundary arc of length `L` contains at most `L+1` such points.  Since the number of
 components is `O_delta(1)`, (100.18) gives
 
-$$
+```math
 a_D\le
 \left({D\over2}+o(D)\right)|E_\delta|+O_\delta(1).
 \tag{100.19}
-$$
+```
 
 Divide by `D` and pass to the subsequence limit:
 
-$$
+```math
 \alpha\le{|E_\delta|\over2}.
 \tag{100.20}
-$$
+```
 
 As `delta downarrow0`, continuity from above of angular measure for the compact set
 `S` gives
 
-$$
+```math
 |E_\delta|\downarrow|S|.
-$$
+```
 
 This proves (100.16).  Combining with (100.12),
 
-$$
+```math
 \boxed{
 \alpha\le {3\theta-2\pi\over2}.
 }
 \tag{100.21}
+```
 
 This is the new finite-density consequence.  It is strictly stronger than the
 canonical Section-88 ceiling
 
-\[
+```math
 \alpha\le3\theta-2\pi.
-$$
+```
 
 ---
 
@@ -372,60 +380,64 @@ $$
 Canonical Section 96 is independent of the new support-measure argument.  Its exact
 outer-walk/face ledger gives every wrapping limit
 
-$$
+```math
 \boxed{
 \alpha\ge {3\over2}\sin\theta.
 }
 \tag{100.22}
+```
 
 Combining (100.21) and (100.22),
 
-\[
+```math
 {3\over2}\sin\theta
 \le
 {3\theta-2\pi\over2}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 3\sin\theta\le3\theta-2\pi.
 }
 \tag{100.23}
+```
 
 Define
 
-\[
+```math
 G(\theta):=3\theta-2\pi-3\sin\theta,
 \qquad
 {2\pi\over3}\le\theta<\pi.
 \tag{100.24}
+```
 
 Then
 
-\[
+```math
 G'(\theta)=3-3\cos\theta>0
 \tag{100.25}
-$$
+```
 
 throughout the interval.  Also
 
-$$
+```math
 G(2\pi/3)=-{3\sqrt3\over2}<0,
 \qquad
 \lim_{\theta\uparrow\pi}G(\theta)=\pi>0.
-$$
+```
 
 Hence there is a unique root `theta_7`, and (100.23) forces
 
-$$
+```math
 \boxed{\theta\ge\theta_7.}
 \tag{100.26}
+```
 
 Numerically,
 
-\[
+```math
 \boxed{
 \theta_7=2.6053256746009026857\ldots,
 \qquad
@@ -433,21 +445,24 @@ Numerically,
 =0.9642670742838972841\ldots .
 }
 \tag{100.27}
+```
 
 Thus every wrapping Type-II harmonic-cell limit obeys
 
-\[
+```math
 \boxed{\lambda\ge\mu_7.}
 \tag{100.28}
+```
 
 For comparison,
 
-\[
+```math
 \mu_7
 >0.9399896933531978
 >\sqrt{1-(\pi/9)^2}
 >0.9362157414095831.
 \tag{100.29}
+```
 
 So the canonical mixed-gap/Cauchy and coarse-Cauchy thresholds remain correct but are
 strictly subsumed by (100.28).
@@ -465,9 +480,9 @@ following dichotomy for a macroscopic circle-supported cell limit of diameter at
 
 Section 100 excludes the second alternative for every fixed
 
-\[
+```math
 \mu<\mu_7.
-$$
+```
 
 Therefore the same cap-family capacity proof applies verbatim with any fixed
 `mu<mu_7`.  Its short-cell area ceiling remains strictly below the diameter-one disk
@@ -477,26 +492,29 @@ Canonical Section 83 supplies the total harmonic-cell perimeter/square-root tail
 budget and the summed local rhombic deficit `o(D^2)`.  Taking `mu upward mu_7`
 diagonally as in Sections 88, 94, and 96 yields actual harmonic cells `P_*` with
 
-$$
+```math
 \boxed{
 \operatorname{diam}(P_*)
 \ge(\mu_7-o(1))D,
 }
 \tag{100.30}
+```
 
-\[
+```math
 \boxed{
 \operatorname{area}(P_*)\ge c_7D^2
 }
 \tag{100.31}
+```
 
 for one absolute `c_7>0`, and
 
-\[
+```math
 \boxed{
 {A_{4,*}\over\operatorname{area}(P_*)}\to1.
 }
 \tag{100.32}
+```
 
 Canonical Section 82 then makes the selected carrier boundary-order
 near-quadrangulated, and canonical Sections 73--76 retain their ordered train-grid
@@ -559,18 +577,18 @@ First, the support-measure ceiling has a second proof. For anchor gap `g_i`, put
 `delta_i=theta-g_i` and parameterize the two equal `delta_i` support pieces outside its
 endpoints by compact sets `A_i,B_i subset [0,delta_i]`. Pairwise circular diameter gives
 
-\[
+```math
 a+b\le\delta_i\quad\hbox{or}\quad a+b\ge\delta_i+(2\pi-2\theta).
-$$
+```
 
 With `C_i=delta_i-B_i`, this is
 `(A_i-C_i) cap (0,2pi-2theta)=empty`. For every fixed
 `0<t<2pi-2theta`, the sets `A_i` and `C_i+t` are disjoint and both lie in
 `[0,delta_i+t]`. Therefore
 
-$$
+```math
 |A_i|+|B_i|\le\delta_i+t.
-$$
+```
 
 Letting `t` decrease to zero and summing the three pairs gives independently
 `|S|<=sum delta_i=3theta-2pi`. This is the core of the separate PR #289 proof and
@@ -580,9 +598,9 @@ Second, the finite-to-limit transfer was checked directly against canonical Sect
 equation (88.8). A fixed finite open cover `U` of the compact limit support contains all
 attachment angles for large `D`, and Section 88 gives
 
-$$
+```math
 |A_D|\le (|U|/2+o(1))D+O_U(1).
-$$
+```
 
 Outer regularity then gives `alpha<=|S|/2`. No angular equidistribution assumption is
 present.

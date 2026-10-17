@@ -19,9 +19,9 @@
 Let the full C65 mixed equality graph have `v` nonisolated vertices, `e` contact edges,
 `h` actual diameter edges, and mixed surplus
 
-$$
+```math
 s_Z=e+h-(2v-2)\ge0.
-$$
+```
 
 Let `x*` be an extreme normalized KKT stress. By EC its positive mixed support `S` is
 an actual rigidity-matroid circuit. Write
@@ -34,34 +34,34 @@ an actual rigidity-matroid circuit. Write
 Then the number `z_*` of full actual mixed rows omitted by this extreme stress is not
 merely bounded below by `s_Z`. It is exactly
 
-$$
+```math
 \boxed{
 z_*=(e+h)-(e_*+h_*)
 =2(v-v_*)+s_Z+\sigma_*.
 }
 \tag{CT.1}
-$$
+```
 
 The excess over the ES lower bound has a precise rank meaning:
 
-$$
+```math
 \boxed{
 z_*-s_Z=2(v-v_*)+\sigma_*
 =\operatorname{rank}R-\operatorname{rank}R_S.
 }
 \tag{CT.2}
-$$
+```
 
 Thus an extreme stress omits exactly `s_Z` rows if and only if it is simultaneously
 full-vertex and a maximal planar circuit:
 
-$$
+```math
 \boxed{
 z_*=s_Z
 \iff v_*=v\text{ and }\sigma_*=0.
 }
 \tag{CT.3}
-$$
+```
 
 This separates two fundamentally different reasons for sparsification: the inevitable
 `s_Z` redundant-row deletion, versus actual loss of rigidity rank caused by omitted
@@ -70,9 +70,9 @@ vertices or an underbraced circuit.
 Woodall applies independently to the selected positive diameter graph `H_*`, because
 it is still a straight-line subthrackle of the source diameter graph. Put
 
-$$
+```math
 d_*:=q_*-h_*\ge0.
-$$
+```
 
 Then exactly one of the following occurs:
 
@@ -83,24 +83,24 @@ Then exactly one of the following occurs:
 Combining this with the EC selected face identity gives the exact selected terminal
 ledger
 
-$$
+```math
 \boxed{
 q_*=x_*+Q_*+2d_*-2\sigma_*,
 }
 \tag{CT.4}
-$$
+```
 
 where `x_*:=b_*-q_*>=0` and `Q_*` is the bounded-face degree defect of the positive
 selected contact support.
 
 Equivalently,
 
-$$
+```math
 \boxed{
 q_*+2\sigma_*=x_*+Q_*+2d_*.
 }
 \tag{CT.5}
-$$
+```
 
 So every selected flex-deficit unit consumes two units of the same outer/face/diameter-
 component budget that pays for the loaded terminal set. This is the selected-support
@@ -113,42 +113,42 @@ side.
 
 ZF gives for the full actual mixed framework
 
-$$
+```math
 e+h=2v-2+s_Z.
 \tag{1.1}
-$$
+```
 
 EC gives for an extreme support circuit
 
-$$
+```math
 e_*+h_*=2v_*-2-\sigma_*.
 \tag{1.2}
-$$
+```
 
 Subtract (1.2) from (1.1):
 
-$$
+```math
 \begin{aligned}
 z_*
 &=(e+h)-(e_*+h_*)\\
 &=(2v-2+s_Z)-(2v_*-2-\sigma_*)\\
 &=2(v-v_*)+s_Z+\sigma_*.
 \end{aligned}
-$$
+```
 
 This proves CT.1.
 
 For the rank statement, ZF gives
 
-$$
+```math
 \operatorname{rank}R=2v-3,
-$$
+```
 
 while EC circuit minimality gives
 
-$$
+```math
 \operatorname{rank}R_S=e_*+h_*-1=2v_*-3-\sigma_*.
-$$
+```
 
 Subtracting proves CT.2. Since both `v-v_*` and `sigma_*` are nonnegative integers,
 CT.3 follows.
@@ -157,9 +157,9 @@ CT.3 follows.
 
 Among the `z_*` omitted full rows, exactly
 
-$$
+```math
 2(v-v_*)+\sigma_*
-$$
+```
 
 independent rank units are needed merely to recover the full ZF rigidity rank. The
 remaining exactly `s_Z` omitted rows are the full framework's redundant dependence
@@ -184,10 +184,10 @@ If `H_*` contains an odd cycle, every selected diameter endpoint is adjacent to 
 cycle. Counting the cycle edges and one incident edge for every outside vertex gives
 `h_*>=q_*`. Hopf-Pannwitz gives `h_*<=q_*`. Hence
 
-$$
+```math
 \boxed{h_*=q_*,\qquad d_*=0.}
 \tag{2.1}
-$$
+```
 
 There is exactly one odd cycle and every vertex off it is a pendant leaf.
 
@@ -196,16 +196,16 @@ There is exactly one odd cycle and every vertex off it is a pendant leaf.
 If no odd cycle occurs, `H_*` is a disjoint union of caterpillars. If it has `c_*`
 components, then
 
-$$
+```math
 h_*=q_*-c_*.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{d_*=c_*>0.}
 \tag{2.2}
-$$
+```
 
 The same exact topology switch used on the full diameter graph thus exists on every
 extreme positive support.
@@ -218,24 +218,24 @@ Every positive diameter endpoint is a distinct convex vertex of the selected for
 hull. Along the outer face of the connected selected positive contact graph, these
 `q_*` vertices occur cyclically. Write
 
-$$
+```math
 \boxed{x_*:=b_*-q_*\ge0.}
 \tag{3.1}
-$$
+```
 
 EC proves
 
-$$
+```math
 b_*+Q_*=2h_*+2\sigma_*.
 \tag{3.2}
-$$
+```
 
 Use `b_*=q_*+x_*` and `h_*=q_*-d_*`:
 
-$$
+```math
 q_*+x_*+Q_*
 =2q_*-2d_*+2\sigma_*.
-$$
+```
 
 Rearranging gives CT.4 and CT.5.
 
@@ -243,10 +243,10 @@ Rearranging gives CT.4 and CT.5.
 
 If `d_*=0`,
 
-$$
+```math
 \boxed{q_*+2\sigma_*=x_*+Q_*.}
 \tag{3.3}
-$$
+```
 
 Thus an underbraced cyclic extreme circuit requires outer-walk plus bounded-face
 defect strictly exceeding the entire selected loaded-terminal count.
@@ -255,10 +255,10 @@ defect strictly exceeding the entire selected loaded-terminal count.
 
 If `H_*` is a caterpillar forest with `d_*` components,
 
-$$
+```math
 \boxed{q_*+2\sigma_*=x_*+Q_*+2d_*.}
 \tag{3.4}
-$$
+```
 
 Each selected diameter component supplies exactly two units of the topology budget.
 
@@ -268,30 +268,30 @@ Each selected diameter component supplies exactly two units of the topology budg
 
 Since all terms in CT.5 are nonnegative,
 
-$$
+```math
 \boxed{
 2\sigma_*\le x_*+Q_*+2d_*.
 }
 \tag{4.1}
-$$
+```
 
 More sharply, CT.5 determines `sigma_*` exactly once the selected outer/face/diameter
 ledger is known:
 
-$$
+```math
 \boxed{
 \sigma_*
 =\frac{x_*+Q_*+2d_*-q_*}{2}.
 }
 \tag{4.2}
-$$
+```
 
 In particular the selected topology obeys the parity constraint
 
-$$
+```math
 \boxed{x_*+Q_*-q_*\equiv0\pmod2,}
 \tag{4.3}
-$$
+```
 
 because `2d_*-2sigma_*` is even.
 
@@ -330,9 +330,9 @@ The high-value target is one of the following equivalent structural advances.
 Prove that the full-support positive KKT vector lies in a face decomposition containing
 at least one extreme circuit with
 
-$$
+```math
 z_*=s_Z.
-$$
+```
 
 By CT.3 this produces a full-vertex maximal positive rigidity circuit, to which the
 `s_Z=0` circuit topology/area machinery may be compared directly.
@@ -341,9 +341,9 @@ By CT.3 this produces a full-vertex maximal positive rigidity circuit, to which 
 
 Prove a lower bound on the geometric cost of
 
-$$
+```math
 \kappa_*:=z_*-s_Z=2(v-v_*)+\sigma_*.
-$$
+```
 
 For example, show that `kappa_*=Omega(D)` forces a force-hull perimeter/area loss or an
 actual critical release incompatible with the full-source FS/CP bounds.

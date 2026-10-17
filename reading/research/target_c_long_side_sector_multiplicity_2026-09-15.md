@@ -33,10 +33,10 @@ From `x`, the ray to the predecessor is the negative of the incoming oriented ed
 while the ray to the successor is the outgoing oriented edge. Therefore the smaller
 angular separation `gamma` of those two contact rays satisfies
 
-$$
+```math
 \boxed{\gamma>\pi-2\beta.}
 \tag{SM.1}
-$$
+```
 
 At one occurrence of `x` on the unbounded-face walk, the predecessor and successor
 edge sides delimit one angular sector occupied by the unbounded face. Since the
@@ -44,10 +44,10 @@ smaller angle between the rays is `gamma`, either sector between them has angula
 measure at least `gamma`. Hence every `beta`-straight occurrence consumes an
 outer-face sector of size strictly greater than
 
-$$
+```math
 \pi-2\beta.
 \tag{SM.2}
-$$
+```
 
 Different occurrences of the same physical vertex correspond to distinct disjoint
 face sectors in the cyclic rotation around that vertex. Their angular measures sum to
@@ -57,9 +57,9 @@ at most `2pi`.
 
 If
 
-$$
+```math
 0<\beta\le\pi/6,
-$$
+```
 
 then one physical vertex supports at most two `beta`-straight outer-face occurrences.
 
@@ -67,9 +67,9 @@ then one physical vertex supports at most two `beta`-straight outer-face occurre
 
 By (SM.2), each such occurrence uses a sector strictly larger than
 
-$$
+```math
 \pi-2(\pi/6)=2\pi/3.
-$$
+```
 
 Three disjoint sectors of that size would have total angular measure strictly larger
 than `2pi`. QED.
@@ -92,42 +92,42 @@ Let
 
 For `beta<=pi/6`, Lemma SM.1 gives
 
-$$
+```math
 S_\beta-S_2(\beta)\le2B_\beta.
 \tag{SM.3}
-$$
+```
 
 One selected undirected extra contact can be selected at at most its two endpoints, so
 
-$$
+```math
 B_\beta\le2E_\perp(\beta).
 \tag{SM.4}
-$$
+```
 
 Thus
 
-$$
+```math
 S_\beta-S_2(\beta)\le4E_\perp(\beta).
 \tag{SM.5}
-$$
+```
 
 For degree-two events, the same sector cap gives at most two occurrences per physical
 vertex. The bridge-suppression theorem shows every such physical vertex is incident to
 outer bridges and gives `V_2(beta)<=B_o`. Hence
 
-$$
+```math
 S_2(\beta)\le2V_2(\beta)\le2B_o.
 \tag{SM.6}
-$$
+```
 
 Combining (SM.5)--(SM.6),
 
-$$
+```math
 \boxed{
 2B_o+4E_\perp(\beta)\ge S_\beta.
 }
 \tag{SM.7}
-$$
+```
 
 The earlier coefficient `10` is replaced by `4`.
 
@@ -135,26 +135,26 @@ The earlier coefficient `10` is replaced by `4`.
 
 The exact directional-energy argument gives
 
-$$
+```math
 S_\beta
 \ge
 L_{>2}-{2d_{out}\over1-\cos\beta}.
 \tag{SM.8}
-$$
+```
 
 In the full-core Type-II branch, bridge-subtracted isoperimetry and
 `P_F/D->pi` give on every convergent subsequence
 
-$$
+```math
 \limsup {2B_o\over D}\le\delta,
 \qquad
 \delta:=\lim {d_{out}\over D}.
 \tag{SM.9}
-$$
+```
 
 Therefore, for `beta<=pi/6`,
 
-$$
+```math
 \boxed{
 \liminf {4E_\perp(\beta)\over D}
 \ge
@@ -162,14 +162,14 @@ $$
 -\delta\left(1+{2\over1-\cos\beta}\right).
 }
 \tag{SM.10}
-$$
+```
 
 At each selected contact, triangle-freeness gives transverse component strictly larger
 than
 
-$$
+```math
 \sin(\pi/3-\beta)
-$$
+```
 
 relative to the corresponding loaded-hull side direction.
 
@@ -177,40 +177,40 @@ relative to the corresponding loaded-hull side direction.
 
 At `t=t_42`, the rounded long-side alternative gives
 
-$$
+```math
 {L_{>2}\over D}
 \ge0.4363893718701161781\ldots-o(1),
-$$
+```
 
 and the low-`t` squeeze gives
 
-$$
+```math
 \delta\le0.002883975.
-$$
+```
 
 Set
 
-$$
+```math
 \beta={\pi\over6}.
-$$
+```
 
 Then the near-straight occurrence floor is
 
-$$
+```math
 {S_{\pi/6}\over D}
 \ge0.3933368069590823665\ldots-o(1).
 \tag{SM.11}
-$$
+```
 
 Using (SM.9) in (SM.7) gives
 
-$$
+```math
 \boxed{
 {E_\perp(\pi/6)\over D}
 \ge0.09761320798977059163\ldots-o(1).
 }
 \tag{SM.12}
-$$
+```
 
 Every selected edge has absolute transverse component strictly greater than `1/2`.
 

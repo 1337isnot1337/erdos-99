@@ -24,23 +24,23 @@ RD proves that every rattler has boundary depth asymptotic to `sqrt(3)/2`. The c
 
 Every source point lies in the force hull:
 
-$$
+```math
 \boxed{A\subseteq F.}
 \tag{FB.1}
-$$
+```
 
 Since `V(F) subseteq A`, this gives
 
-$$
+```math
 \boxed{F=\operatorname{conv}A.}
 \tag{FB.2}
-$$
+```
 
 Thus the `d_H=0` cyclic phase has **no external force-hull population at all**. All
 
-$$
+```math
 n-q=\Theta(D^2)
-$$
+```
 
 C65 rattlers are strictly inside the same polygonal force hull whose boundary is the positive unit contact cycle.
 
@@ -52,42 +52,42 @@ This closes the force-bulk localization problem completely for this exact cyclic
 
 Let
 
-$$
+```math
 p_i p_{i+1}
-$$
+```
 
 be one unit side of the force hull. By RE/RC the corresponding portion of `partial R` is a radius-`D` circular arc with the same endpoints.
 
 The chord has length one. Its central angle is
 
-$$
+```math
 \delta_D
 =2\arcsin\frac1{2D}.
-$$
+```
 
 The maximum normal/radial distance between the minor circular arc and its chord occurs at the midpoint. It is the sagitta
 
-$$
+```math
 \boxed{
 \sigma_D
 :=D-D\cos\frac{\delta_D}{2}
 =D-\sqrt{D^2-\frac14}.}
 \tag{1.1}
-$$
+```
 
 Rationalizing,
 
-$$
+```math
 \boxed{
 \sigma_D
 =
 \frac1{4D\left(1+\sqrt{1-1/(4D^2)}\right)}.}
 \tag{1.2}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \sigma_D
 =
@@ -96,13 +96,13 @@ $$
 \frac1{128D^3}
 +O(D^{-5}).}
 \tag{1.3}
-$$
+```
 
 Because every defining Reuleaux corner is itself a force-hull vertex, the boundary between consecutive force-hull vertices contains no other Reuleaux corner. Therefore
 
-$$
+```math
 R\setminus F
-$$
+```
 
 is exactly the union of these `q` circular cap regions, one above each force-hull side.
 
@@ -112,15 +112,15 @@ is exactly the union of these `q` circular cap regions, one above each force-hul
 
 Fix one cap, supported by a radius-`D` circle centered at `c`. A point `x` in that cap has polar angle between the two chord endpoints and radius at least the distance from `c` to the chord line:
 
-$$
+```math
 |x-c|
 \ge
 D\cos\frac{\delta_D}{2}.
-$$
+```
 
 The radial point on the same ray at distance `D` from `c` lies on the corresponding arc of `partial R`. Therefore
 
-$$
+```math
 \operatorname{dist}(x,\partial R)
 \le
 D-|x-c|
@@ -128,17 +128,17 @@ D-|x-c|
 D-D\cos\frac{\delta_D}{2}
 =\sigma_D.
 \tag{2.1}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 R\setminus F
 \subseteq
 \{x\in R:\operatorname{dist}(x,\partial R)\le\sigma_D\}.}
 \tag{2.2}
-$$
+```
 
 The statement includes cap boundaries; points on a force-hull side have radial boundary distance at most the same sagitta.
 
@@ -148,35 +148,35 @@ The statement includes cap boundaries; points on a force-hull side have radial b
 
 RD proves that every C65 rattler `z` satisfies
 
-$$
+```math
 \operatorname{dist}(z,\partial R)>r_D,
-$$
+```
 
 where
 
-$$
+```math
 r_D
 =
 \frac{\sqrt3}{2}
 +
 \frac1{8D}
 +O(D^{-3}).
-$$
+```
 
 By (1.3),
 
-$$
+```math
 \sigma_D
 =
 \frac1{8D}+O(D^{-3}).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{r_D>\sigma_D}
 \tag{3.1}
-$$
+```
 
 throughout the sufficiently large Target C regime. In fact the gap tends to `sqrt(3)/2`.
 
@@ -184,15 +184,15 @@ Hence no C65 rattler can belong to `R\setminus F`.
 
 RC already gives
 
-$$
+```math
 A\subseteq R.
-$$
+```
 
 Every non-rattler source point in the C65 cyclic endpoint is a force-hull cycle vertex and therefore lies in `F`. We conclude
 
-$$
+```math
 A\subseteq F,
-$$
+```
 
 proving FB.1. Since the vertices of `F` are source points, `conv A=F`, proving FB.2. `square`
 
@@ -204,41 +204,41 @@ The force hull is no longer merely a mechanical object containing only the posit
 
 Oler therefore gives directly
 
-$$
+```math
 \boxed{
  n
 \le
 \frac2{\sqrt3}\operatorname{area}(F)
 +\frac q2+1,}
 \tag{4.1}
-$$
+```
 
 because
 
-$$
+```math
 \operatorname{per}(F)=q.
-$$
+```
 
 Equivalently, for the `n-q` interior C65 rattlers,
 
-$$
+```math
 \boxed{
  n-q
 \le
 \frac2{\sqrt3}\operatorname{area}(F)
 -\frac q2+1.}
 \tag{4.2}
-$$
+```
 
 Combining with the strict global diameter comparison
 
-$$
+```math
 n>\frac\pi{2\sqrt3}D^2
-$$
+```
 
 gives the necessary force-hull area floor
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)
 >
@@ -248,14 +248,14 @@ $$
 -
 \frac{\sqrt3}{2}.}
 \tag{4.3}
-$$
+```
 
 Since RE gives
 
-$$
+```math
 q=2q\sin\frac\pi{2q}\,D
 =\pi D+O(D^{-1}),
-$$
+```
 
 this says the exact Reinhardt force hull itself must carry essentially all the source packing capacity.
 
@@ -302,9 +302,10 @@ No regularity of `R` is used. Each force-hull side still cuts a radius-`D` unit-
 The exact `d_H=0` cyclic survivor is now reduced to:
 
 - a unit-side Reinhardt polygon `F=conv A` with
-  $$
+  ```math
   D=1/(2\sin(\pi/(2q)));
-  $$
+  
+  ```
 - a positive contact graph consisting only of its boundary cycle;
 - a canonical uniform full-support stress from US;
 - `n-q=Theta(D^2)` actual source points strictly inside `F`, all contact-isolated in the C65 representative;

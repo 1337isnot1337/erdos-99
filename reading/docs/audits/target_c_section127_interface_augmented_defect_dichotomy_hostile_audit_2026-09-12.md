@@ -23,22 +23,22 @@ the additional hypothesis `J_aug=o(D)`.
 
 Canonical Section 123 gives
 
-$$
+```math
 e_{BB}-k=\frac12\sum_r(a_r-T_r+Q_r^+)+d_{tile}.
-$$
+```
 
 With
 
-$$
+```math
 A_*:=\sum_r(a_r-T_r),\qquad Q_*:=\sum_rQ_r^+,qquad
 J_{aug}:=A_*+Q_*+2d_{tile},
-$$
+```
 
 this is exactly
 
-$$
+```math
 \boxed{J_{aug}=2(e_{BB}-k)}.
-$$
+```
 
 The identity is finite and uses no global boundary-occurrence injection.
 
@@ -46,28 +46,28 @@ The identity is finite and uses no global boundary-occurrence injection.
 
 Canonical Section 63 gives
 
-$$
+```math
 e_{BB}-k=Q+k+u_B+c_B\ge Q,
-$$
+```
 
 and every bounded nonquadrilateral face contributes at least one to the global
 degree excess (Q). Hence (e_{BB}-k\ge f), so
 
-$$
+```math
 J_{aug}\ge2f.
-$$
+```
 
 Canonical Section 85 supplies
 
-$$
+```math
 q-k+2f\ge2\sqrt{R_4}.
-$$
+```
 
 Adding the two inequalities gives
 
-$$
+```math
 \boxed{(q-k)+J_{aug}\ge2\sqrt{R_4}}.
-$$
+```
 
 The inequality directions and the factor of two are correct.
 
@@ -77,22 +77,22 @@ The inequality directions and the factor of two are correct.
 
 In the canonical full-core Type-II branch,
 
-$$
+```math
 R_4/D^2\to\Delta=\frac\pi{2\sqrt3}.
-$$
+```
 
 Dividing the finite inequality by (D) gives
 
-$$
+```math
 \liminf\frac{(q-k)+J_{aug}}D\ge2\sqrt\Delta.
-$$
+```
 
 If (J_{aug}=o(D)), this yields the stated (q-k) floor. More generally, if
 `(q-k)/D <= 2 sqrt(Delta)-eta+o(1)`, subtracting gives
 
-$$
+```math
 J_{aug}/D\ge eta-o(1).
-$$
+```
 
 This is an exhaustive two-way implication with the defect term intact.
 

@@ -30,37 +30,37 @@ The existing ledgers treat `s_r` as a raw stress currency.  Planarity gives a sh
 
 For every unloaded component,
 
-$$
+```math
 \boxed{s_r\le a_r-3.}
 \tag{PA.1}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{e_r+t_r\le2n_r+a_r-2.}
 \tag{PA.2}
-$$
+```
 
 Summing over components and using ZJ's
 
-$$
+```math
 u_A:=\sum_r a_r-3c_I,
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{s_C\le u_A.}
 \tag{PA.3}
-$$
+```
 
 Combining PA.3 with the exact ZJ identity yields a new universal defect bound
 
-$$
+```math
 \boxed{d_H+s_Z\le e_{BB}.}
 \tag{PA.4}
-$$
+```
 
 Thus pinned nullity cannot pay for diameter-tree defect or extra mixed-framework dependencies. Those defects require actual loaded-loaded unit contacts.
 
@@ -70,9 +70,9 @@ Thus pinned nullity cannot pay for diameter-tree defect or extra mixed-framework
 
 C36 proves
 
-$$
+```math
 I_r\subseteq\operatorname{conv}A_r.
-$$
+```
 
 For the planar augmentation below it is useful to record the strict form.
 
@@ -80,17 +80,17 @@ For the planar augmentation below it is useful to record the strict form.
 
 Every vertex of `I_r` lies in the interior of
 
-$$
+```math
 P_r:=\operatorname{conv}A_r.
-$$
+```
 
 ### Proof
 
 Suppose `x in I_r` lies on `partial P_r`. Choose a supporting linear functional `ell` of `P_r` with
 
-$$
+```math
 ell(x)=\max_{a\in A_r}\ell(a)=M.
-$$
+```
 
 C36's harmonic maximum principle already gives `ell(y)<=M` for every component vertex. At `x`, positive contact equilibrium writes `x` as a strict weighted average of its contact neighbors. Equality at the maximum forces every contact neighbor of `x` to have `ell=M`.
 
@@ -106,9 +106,9 @@ Therefore all original internal and attachment contact edges lie in `P_r`, and o
 
 Form a plane graph `J_r` with vertex set
 
-$$
+```math
 V(J_r)=I_r\sqcup A_r
-$$
+```
 
 and edge set consisting only of
 
@@ -121,12 +121,12 @@ Because `A_r` is a subset of the extreme vertices of the convex polygon `F`, the
 
 Call the augmented plane graph `J_r^+`. It has
 
-$$
+```math
 V^+=n_r+a_r,
 \qquad
 E^+=e_r+t_r+a_r.
 \tag{2.1}
-$$
+```
 
 Its outer face is the simple `a_r`-cycle `partial P_r`.
 
@@ -140,75 +140,75 @@ It cannot use two boundary-cycle edges: two adjacent boundary edges have three l
 
 Hence every triangular bounded face uses **exactly one** added boundary edge. Each added boundary edge is incident to at most one bounded face, the other side being exterior to `P_r`. If `T_r` denotes the number of triangular bounded faces,
 
-$$
+```math
 \boxed{T_r\le a_r.}
 \tag{3.1}
-$$
+```
 
 Every other bounded face has boundary-walk length at least four.
 
 Let `f_r` be the number of bounded faces of `J_r^+`. Euler gives
 
-$$
+```math
 f_r=E^+-V^++1.
 \tag{3.2}
-$$
+```
 
 The outer face has length `a_r`, so the sum of bounded-face walk lengths is
 
-$$
+```math
 2E^+-a_r.
 \tag{3.3}
-$$
+```
 
 Therefore
 
-$$
+```math
 2E^+-a_r
 \ge
 3T_r+4(f_r-T_r)
 =4f_r-T_r.
 \tag{3.4}
-$$
+```
 
 Substitute (3.2):
 
-$$
+```math
 2E^+-a_r
 \ge
 4(E^+-V^++1)-T_r.
-$$
+```
 
 Rearranging,
 
-$$
+```math
 E^+
 \le
 2V^+-2-\frac{a_r}{2}+\frac{T_r}{2}
 \le
 2V^+-2.
 \tag{3.5}
-$$
+```
 
 Using (2.1),
 
-$$
+```math
 e_r+t_r+a_r
 \le
 2(n_r+a_r)-2,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{e_r+t_r\le2n_r+a_r-2.}
-$$
+```
 
 Subtract `2n_r+1`. This is PA.1:
 
-$$
+```math
 \boxed{s_r\le a_r-3.}
-$$
+```
 
 `square`
 
@@ -218,55 +218,55 @@ $$
 
 The pinned blocks are disjoint over unloaded components, so ZK gives
 
-$$
+```math
 s_C=\sum_rs_r.
-$$
+```
 
 Sum PA.1:
 
-$$
+```math
 s_C
 \le
 \sum_r(a_r-3)
 =\left(\sum_ra_r\right)-3c_I
 =u_A.
-$$
+```
 
 This proves PA.3.
 
 The exact ZJ identity is
 
-$$
+```math
 e_{BB}+s_C-k
 =u_A+p_A+2(s-1)+u_0,
 \qquad
 k=d_H+s_Z,
 \tag{4.1}
-$$
+```
 
 with all slacks on the right nonnegative. Rearrange:
 
-$$
+```math
 e_{BB}-k
 =(u_A-s_C)+p_A+2(s-1)+u_0.
 \tag{4.2}
-$$
+```
 
 PA.3 makes every term on the right nonnegative. Hence
 
-$$
+```math
 \boxed{k=d_H+s_Z\le e_{BB}.}
-$$
+```
 
 More precisely, PA.4 has the exact remainder decomposition
 
-$$
+```math
 \boxed{
 e_{BB}-(d_H+s_Z)
 =(u_A-s_C)+p_A+2(s-1)+u_0.
 }
 \tag{PA.5}
-$$
+```
 
 This identifies every unit by which loaded-loaded contacts exceed mixed defect.
 
@@ -274,9 +274,9 @@ This identifies every unit by which loaded-loaded contacts exceed mixed defect.
 
 ZJ is stated for `c_I>0`. If `c_I=0`, then `s_C=0`, and ZU reads
 
-$$
+```math
 e_{BB}=q-2+k.
-$$
+```
 
 Since a nondegenerate large force hull has `q>=2`, this also gives `k<=e_{BB}`. Thus PA.4 is universal across the post-ZF branch.
 
@@ -288,9 +288,9 @@ PA.1 is sharp. A singleton component at the center of four loaded pins on a unit
 
 The proof records the exact equality conditions. If
 
-$$
+```math
 s_r=a_r-3,
-$$
+```
 
 then equality must hold throughout (3.4)--(3.5). Therefore
 
@@ -307,21 +307,21 @@ Thus equality in PA.1 has a concrete geometric normal form: a unit-rhombic disk 
 
 Suppose
 
-$$
+```math
 e_{BB}=0.
 \tag{6.1}
-$$
+```
 
 PA.4 forces
 
-$$
+```math
 \boxed{d_H=s_Z=0.}
 \tag{6.2}
-$$
+```
 
 If `c_I>0`, ZJ.4--ZJ.5 and PA.3 then force equality in every remaining incidence slack:
 
-$$
+```math
 \boxed{
 u_A=s_C,
 \qquad
@@ -332,7 +332,7 @@ s=1,
 u_0=0.
 }
 \tag{6.3}
-$$
+```
 
 Indeed (4.2) has zero left side, so all nonnegative terms vanish.
 
@@ -345,29 +345,29 @@ Consequences:
 
 The PC/TN exact outer-boundary ledger sharpens this further. With `e_BB=k=0`,
 
-$$
+```math
 e_{BB}=d_P+Q+2k+c_B
-$$
+```
 
 forces
 
-$$
+```math
 \boxed{d_P=Q=c_B=0.}
 \tag{6.4}
-$$
+```
 
 and
 
-$$
+```math
 q=a_{miss}+d_P+Q+2k
-$$
+```
 
 forces
 
-$$
+```math
 \boxed{a_{miss}=q.}
 \tag{6.5}
-$$
+```
 
 Here `a_miss` is the PC number of missing force-hull contact sides, not the incidence count `sum a_r`. Hence every force-hull side is noncontact, every OP outer pocket is triangular, and every bounded contact face has degree four. Since all its edges are unit contacts, every bounded contact face is a unit rhombus.
 
@@ -389,12 +389,12 @@ This is a strict structural reduction of the high-pinned-surplus branch. It does
 
 PA.4 also gives immediately
 
-$$
+```math
 e_{BB}=o(D)
 \quad\Longrightarrow\quad
  d_H=o(D),\ s_Z=o(D).
 \tag{7.1}
-$$
+```
 
 Thus any high-`s_C`, low-`e_BB` survivor has an asymptotically unicyclic diameter graph and asymptotically minimal mixed-framework surplus. The pinned currency cannot conceal linear diameter-tree defect.
 
@@ -436,9 +436,9 @@ This is the correct branch to attack if the new FSJC/FN lower bound is carried m
 
 **Hold as report pending independent audit.** PA.1--PA.5 are exact and use only C36, pinned rank-nullity, planarity, and the audited ZJ ledger. If accepted, PA.4 should replace the weaker ZJ.7 estimate
 
-$$
+```math
 d_H+s_Z\le s_C+e_{BB}
-$$
+```
 
 in the live post-ZF frontier.
 

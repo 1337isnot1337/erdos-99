@@ -16,25 +16,25 @@
 
 The coarse pentagon-bootstrap theorem proves
 
-$$
+```math
 \sigma_C\le {2\over3}f+{4\over3}(Q-f).
 \tag{1}
-$$
+```
 
 Its first live consequence combined independent upper bounds for `f/D` and `(Q-f)/D` with an independent lower bound for `k/D`, giving
 
-$$
+```math
 {d_H+p_D\over D}>0.6733591-o(1).
-$$
+```
 
 Those three extrema cannot occur simultaneously. Keeping the exact terminal correlation raises the unconditional unconverted-defect floor to
 
-$$
+```math
 \boxed{
 {d_H+p_D\over D}>0.6734530-o(1).
 }
 \tag{2}
-$$
+```
 
 The numerical gain is about `9.4e-5 D`. No new geometry is used.
 
@@ -44,70 +44,70 @@ The numerical gain is about `9.4e-5 D`. No new geometry is used.
 
 Along a terminal subsequence write
 
-$$
+```math
 r={Q-f\over D},
 \qquad
 \delta={b-P_F\over D},
 \qquad
 a={\tau_D\over D}-{\pi\over2}-0.007707.
-$$
+```
 
 The exact terminal `t` decomposition gives
 
-$$
+```math
 {q-k\over D}
 =\mu_*+{a+2r+2\delta\over5}+o(1),
 \tag{3}
-$$
+```
 
 where
 
-$$
+```math
 \mu_*={\pi\over2}
 +{2\over5}\sqrt{\frac\pi{2\sqrt3}}
 +{0.007707\over5}.
-$$
+```
 
 Hence, putting
 
-$$
+```math
 K_*:=\pi-\mu_*
 ={\pi\over2}-{2\over5}\sqrt{\frac\pi{2\sqrt3}}-{0.007707\over5},
-$$
+```
 
 we have
 
-$$
+```math
 {k\over D}
 =K_*-{a+2r+2\delta\over5}+o(1).
 \tag{4}
-$$
+```
 
 The exact face ledger is
 
-$$
+```math
 {f\over D}
 ={M_*+2a-\delta-r\over5}+o(1),
 \qquad
 M_*=4\sqrt{\frac\pi{2\sqrt3}}+2(0.007707).
 \tag{5}
-$$
+```
 
 The live assumptions give
 
-$$
+```math
 a+2(r+\delta)\le5\varepsilon_0,
 \qquad
 \varepsilon_0=0.00710,
 \tag{6}
-$$
+```
 
 and the certified detour pinching
 
-$$
+```math
 \delta>\delta_0:=0.017609.
 \tag{7}
-$$
+```
 
 ---
 
@@ -115,13 +115,13 @@ $$
 
 Let
 
-$$
+```math
 x_D={d_H+p_D\over D}.
-$$
+```
 
 Since `k=d_H+p_D+sigma_C`, equations (1), (4), and (5) give
 
-$$
+```math
 \begin{aligned}
 x_D
 &\ge {k\over D}-{2f\over3D}-{4r\over3}+o(1)\\
@@ -129,46 +129,46 @@ x_D
 -{7a\over15}-{8r\over5}-{4\delta\over15}+o(1).
 \end{aligned}
 \tag{8}
-$$
+```
 
 The defect penalty is
 
-$$
+```math
 {7a+24r+4\delta\over15}.
-$$
+```
 
 Use the exact identity
 
-$$
+```math
 7a+24r+4\delta
 =7\bigl(a+2r+2\delta\bigr)+10(r-\delta).
 \tag{9}
-$$
+```
 
 By (6),
 
-$$
+```math
 7\bigl(a+2r+2\delta\bigr)\le35\varepsilon_0.
-$$
+```
 
 Also (6) with `a>=0` gives
 
-$$
+```math
 r+\delta\le{5\varepsilon_0\over2}=0.01775,
-$$
+```
 
 and therefore, using (7),
 
-$$
+```math
 r-\delta
 \le0.01775-2\delta
 <0.01775-2(0.017609).
 \tag{10}
-$$
+```
 
 Substitute (9)--(10) into (8):
 
-$$
+```math
 \boxed{
  x_D
 >
@@ -180,14 +180,14 @@ K_*-{2M_*\over15}
 -o(1).
 }
 \tag{11}
-$$
+```
 
 The exact-rational certificate evaluates the right-hand side with outward enclosures for `pi`, `sqrt(3)`, and `sqrt(pi/(2sqrt(3)))` and proves
 
-$$
+```math
 \boxed{x_D>0.6734530-o(1).}
 \tag{12}
-$$
+```
 
 This proves (2).
 
@@ -199,21 +199,21 @@ The optimization in (9) is transparent: after the mandatory detour `delta_0` is 
 
 The correlated degree-weighted seed theorem gives
 
-$$
+```math
 {d_H+p_D\over D}+{8\over15}{m_D\over D}>1.5158692-o(1),
 \tag{13}
-$$
+```
 
 while the sealed-component line gives
 
-$$
+```math
 {d_H+p_D\over D}>5.9765850-4{m_D\over D}-o(1).
 \tag{14}
-$$
+```
 
 Replacing the old coarse floor by (12), the current certified piecewise envelope is
 
-$$
+```math
 \boxed{
 {d_H+p_D\over D}
 >
@@ -224,13 +224,13 @@ $$
 \right\}-o(1).
 }
 \tag{15}
-$$
+```
 
 The safe rounded middle line meets the new coarse floor at
 
-$$
+```math
 {m_D\over D}=1.579530375.
-$$
+```
 
 Using the unrounded certified constants moves this only in the seventh decimal place. The lower-flex crossing with the sealed-component line is unchanged at about `1.2867449`.
 
@@ -242,9 +242,9 @@ This is another correlation recovery, not a new geometric mechanism. It makes th
 
 The unresolved obstruction remains the same: the actual diameter thrackle must coexist with a large exact contact-flex manifold while carrying
 
-$$
+```math
 d_H+p_D>0.6734530D-o(D)
-$$
+```
 
 unconditionally, with substantially larger lower bounds at smaller flex density. Closing C-II now requires a geometric upper bound on this unconverted defect or a finite deformation/reinsertion argument that turns its size into a diameter contradiction.
 

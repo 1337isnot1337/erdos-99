@@ -33,11 +33,11 @@ Use the actual canonical contact-minimal, then diameter-pair-minimal source,
 with full contact and diameter support. Retain all source points, including
 contact isolates. Write
 
-$$
+```math
 b=q+x_B,\quad k=d_H+s_Z,\quad t_DD=q-k,\quad
 P_F=\operatorname{per}(F),\quad
 m=m_B,\quad u_B=x_B-m.
-$$
+```
 
 Here `b` counts occurrences on the global positive-contact outer walk, `m`
 counts nonunit sides of the loaded force hull, `Q` is the bounded exceptional
@@ -46,19 +46,19 @@ stopped trains, including singleton contact-edge trains.
 
 The finite conclusions are
 
-$$
+```math
 \boxed{q\le x_B+2m+4f+Q+4},                         \tag{1}
-$$
-$$
+```
+```math
 \boxed{5t_DD+x_B+m\ge3P_F-2}.                      \tag{2}
-$$
+```
 
 In the canonical full-core near-disk branch, additionally put
 `mu_D D=e_BB+2s_C-3k` and let `c_I` count unloaded contact components. Then
 
-$$
+```math
 \boxed{5\mu_DD+u_B-3m+10c_I+22\ge3P_F}.             \tag{3}
-$$
+```
 
 None of (1)--(3) assumes a small diameter matching. The finite train statement
 needs no near-disk limit. The asymptotic applications use canonical Type II.
@@ -72,9 +72,9 @@ corresponding interval on the outer walk, of occurrence length `ell_i`.
 
 **Lemma.**
 
-$$
+```math
 \ell_i=1\quad\Longleftrightarrow\quad |b_i-b_{i+1}|=1. \tag{4}
-$$
+```
 
 The forward implication is a unit contact. For the converse, a unit hull side
 is an actual contact because `C=C_*` contains all source contacts. All core
@@ -99,16 +99,16 @@ For a nonunit hull side, the polygonal route inequality gives `ell_i>=2`.
 Consequently the bad intervals are exactly the `m` nonunit hull intervals,
 and their total edge-occurrence count is exactly
 
-$$
+```math
 \boxed{B_{\rm bad}=\sum_{i:\ell_i>1}\ell_i=x_B+m}.    \tag{5}
-$$
+```
 
 The generic Section-61 bound `B_bad<=2x_B` discarded the information that
 the direct hull side is present. Formula (5) restores it. It also gives
 
-$$
+```math
 u_B=\sum_{i:\,|b_i-b_{i+1}|>1}(\ell_i-2).             \tag{6}
-$$
+```
 
 In particular `m=0` forces `x_B=u_B=0`. A source with positive global
 outer-walk excess needs an actual nonunit loaded-hull side.
@@ -124,85 +124,85 @@ Two trains with two good hull ends have alternating end pairs on the convex
 hull, hence cross. Thus at most two complete trains have two good hull ends.
 Singleton trains are included in this count and in the exact train identity
 
-$$
+```math
 N_{\rm tr}=\frac{b+Q}{2}+2f.                        \tag{7}
-$$
+```
 
 Every other train has at least one end in a bad outer interval or on a bounded
 exceptional face. These terminal incidences are distinct. The respective
 capacities are (5) and the exact exceptional face perimeter `4f+Q`. Hence
 
-$$
+```math
 N_{\rm tr}-2\le x_B+m+4f+Q.                       \tag{8}
-$$
+```
 
 Substitution of (7), with `b=q+x_B`, gives (1). Since `f<=Q`,
 
-$$
+```math
 q\le x_B+2m+5Q+4.                                  \tag{9}
-$$
+```
 
 The canonical exact face identity is
 
-$$
+```math
 b+Q=2(q-k)=2t_DD.                                  \tag{10}
-$$
+```
 
 Insert `Q=2t_DD-q-x_B` in (9):
 
-$$
+```math
 5t_DD\ge3q+2x_B-m-2
           =3b-x_B-m-2
           \ge3P_F-x_B-m-2.
-$$
+```
 
 This proves (2). Both inequalities retain every occurrence and every
 exceptional face. Define the nonnegative exact capacity slack
 
-$$
+```math
 \sigma=x_B+m+4f+Q-(N_{\rm tr}-2)\ge0.
-$$
+```
 
 No dropped term is hidden:
 
-$$
+```math
 \boxed{
 5t_DD+x_B+m-3P_F+2
 =\sigma+2(Q-f)+3(b-P_F).
 }                                                    \tag{11}
-$$
+```
 
 ## 4. Stronger full-core surplus payment
 
 For the near-disk full-core branch, the canonical loaded-chord theorem gives
 `e_BB=q-m`. The canonical pinned ledger gives
 
-$$
+```math
 s_C=m+k-c_I-2,
 \qquad
 \mu_DD=t_DD+m-2c_I-4.                              \tag{12}
-$$
+```
 
 Equations (2) and (12), with `x_B=m+u_B`, prove (3). Equivalently (11) is
 
-$$
+```math
 5\mu_DD+u_B-3m+10c_I+22-3P_F
 =\sigma+2(Q-f)+3(b-P_F).                            \tag{13}
-$$
+```
 
 Since canonical component deatomization gives `c_I=o(D)` and Type II gives
 `P_F/D -> pi`, every full-core survivor sequence satisfies
 
-$$
+```math
 \liminf\left(5\mu_D+\frac{u_B-3m}{D}\right)\ge3\pi.
 \tag{14}
-$$
+```
 
 If `limsup mu_D<=mu_0<3pi/5`, then
 
-$$
+```math
 \boxed{\liminf\frac{u_B-3m}{D}\ge3\pi-5\mu_0>0}.    \tag{15}
-$$
+```
 
 This is a stronger source payment than the September report's
 `liminf (u_B-3m/2)/D >= (3pi-5mu_0)/2`.
@@ -213,9 +213,9 @@ It does not identify global `u_B` with the harmonic-cell walks `L_r`.
 If `x_B=o(D)`, then `0<=m<=x_B` also gives `m=o(D)`. Dividing (2) by `D`
 and using the Type-II perimeter limit proves
 
-$$
+```math
 \boxed{\liminf t_D\ge\frac{3\pi}{5}=1.8849555921\ldots}. \tag{16}
-$$
+```
 
 Therefore there is no unbounded canonical Type-II sequence with
 `x_B=O(sqrt(D))` and `t_D<=1.860+o(1)`. The diameter matching bound
@@ -230,18 +230,18 @@ coefficient requires `t<3pi/5`, exactly the threshold excluded by (16).
 The same issue affects the entire positive collar-to-pentagon coefficient
 window, not only the endpoint `1.860`. Its coefficient is
 
-$$
+```math
 A(t)=10\pi+3(\rho+g)+6\sqrt{\Delta_2}-21t,
 \quad \rho=\cos\rho,\quad g=0.007707,\quad
 \Delta_2=\frac{\pi}{2\sqrt3}.
-$$
+```
 
 For `t>=3pi/5`,
 
-$$
+```math
 A(t)\le3(\rho+g)+6\sqrt{\Delta_2}-\frac{13\pi}{5}< -0.2.
 \tag{18}
-$$
+```
 
 An exact certification uses `rho<0.74`, `sqrt(Delta_2)<0.953`, and
 `pi>3.14159`. Thus the proposed positive pentagon transport window is entirely
@@ -254,11 +254,11 @@ For every fixed `T<3pi/5`, the same proof excludes Type-II sequences with
 `limsup t_D<=T` and `x_B=o(D)`. If `t_D<=T+o(1)` is retained while the
 small-excess hypothesis is removed, (2) instead forces
 
-$$
+```math
 \liminf\frac{x_B+m}{D}\ge3\pi-5T,
 \qquad
 \liminf\frac{x_B}{D}\ge\frac{3\pi-5T}{2}.             \tag{17}
-$$
+```
 
 At `T=1.860`, the latter coefficient is `0.0623889803...`.
 Allowing this linear excess invalidates every use of `x_B=o(D)` in the
@@ -311,9 +311,9 @@ The report's metric step from `b` to `P_F` is the analytic triangle inequality.
 
 The hostile star is
 
-$$
+```math
 (0,0),\ (5/13,12/13),\ (1,0),\ (5/13,-12/13).
-$$
+```
 
 Its actual contact graph is the three-edge star centered at the strict hull
 vertex `(0,0)`, which has three outer occurrences. Its unit hull sides still
@@ -323,22 +323,22 @@ it is not claimed to satisfy global minimality or canonical KKT.
 
 The scalar regression after dropping `x_B=o(D)` has leading normalized data
 
-$$
+```math
 t=93/50,\quad x=m=1/5,\quad P=b=\pi,\quad
 q=\pi-1/5,\quad Q=93/25-\pi,\quad f=9/20,
-$$
-$$
+```
+```math
 k=q-t,\quad e_{BB}=q-m,\quad s_C=m+k,\quad \mu=103/50.
-$$
+```
 
 It satisfies the exact normalized face, pinned, train-capacity, and surplus
 ledgers, the modern train-slack lower bound, and the finite fan/collar bounds
 with the constant terms dropped at leading order. Set `nu/D=c_I/D=0` and
 `S=I5_coll=0`. The collar lower expression is
 
-$$
+```math
 4\pi-6(93/50)-9/5=4\pi-324/25<0.
-$$
+```
 
 The good-end and pentagon-capacity lower bounds are negative as well, so they
 allow this zero transport. Thus the positive transport cannot be deduced

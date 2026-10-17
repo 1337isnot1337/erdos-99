@@ -18,39 +18,39 @@
 
 NM splits the outer contact-face walk into the `q` intervals between consecutive loaded force-hull vertices. Extracting the unit-side consequence gives an exact coupling not previously recorded in the post-ZF ledger:
 
-$$
+```math
 \boxed{e_{BB}+x_B\ge q.}
 \tag{LH.1}
-$$
+```
 
 Equivalently, using ZT,
 
-$$
+```math
 \boxed{
 e_{BB}\ge Q+2(d_H+s_Z).
 }
 \tag{LH.2}
-$$
+```
 
 Thus every exceptional-face defect unit costs at least one direct loaded-loaded unit contact, and every diameter-tree/mixed-row defect unit costs two, up to an explicitly classifiable nonnegative boundary slack.
 
 A useful immediate consequence is the primitive two-branch theorem
 
-$$
+```math
 \boxed{
 \max\{e_{BB},x_B\}\ge q/2.}
 \tag{LH.3}
-$$
+```
 
 Since DB gives `liminf q/D>=2rho`, `rho=cos rho`, every unbounded post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 \liminf\frac1D\max\{e_{BB},x_B\}
 \ge\rho
 =0.7390851332\ldots .}
 \tag{LH.4}
-$$
+```
 
 Unlike KC, this dichotomy involves two primitive geometric counts only: direct unit contacts among loaded hull vertices versus excess length of the outer contact-face walk.
 
@@ -60,80 +60,80 @@ Unlike KC, this dichotomy involves two primitive geometric counts only: direct u
 
 Write the loaded force-hull vertices in cyclic order as
 
-$$
+```math
 b_1,\ldots,b_q.
-$$
+```
 
 Let
 
-$$
+```math
 s_i:=|b_i-b_{i+1}|
-$$
+```
 
 with cyclic indices. Unit separation gives
 
-$$
+```math
 s_i\ge1.
 \tag{1.1}
-$$
+```
 
 NM chooses one cyclic pass of the outer contact-face boundary walk and splits it into subwalks
 
-$$
+```math
 W_i:b_i\leadsto b_{i+1}.
-$$
+```
 
 Let `ell_i` be the number of unit-contact edge occurrences in `W_i`. Then
 
-$$
+```math
 ell_i\ge s_i,
 \qquad
 \ell_i\in\mathbb Z_{\ge1},
 \tag{1.2}
-$$
+```
 
 and
 
-$$
+```math
 \sum_i\ell_i=b=q+x_B.
 \tag{1.3}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \sum_i(\ell_i-1)=x_B.}
 \tag{1.4}
-$$
+```
 
 This is NM's exact outer-interval identity.
 
 Let `m` be the number of convex force-hull sides with
 
-$$
+```math
 s_i>1.
-$$
+```
 
 If `s_i>1`, then (1.2) and integrality force
 
-$$
+```math
 \ell_i\ge2,
-$$
+```
 
 so that interval contributes at least one unit to (1.4). Therefore
 
-$$
+```math
 \boxed{m\le x_B.}
 \tag{1.5}
-$$
+```
 
 For every remaining side `s_i=1`, the two consecutive loaded vertices themselves form a unit contact. These `q-m` hull-side contacts are distinct edges counted by `e_BB`. Hence
 
-$$
+```math
 \boxed{e_{BB}\ge q-m\ge q-x_B,}
 \tag{1.6}
-$$
+```
 
 which proves LH.1. `square`
 
@@ -145,17 +145,17 @@ This proof does not assume that the outer contact walk is simple. Bridge excursi
 
 Define the two nonnegative integers
 
-$$
+```math
 \boxed{u_B:=x_B-m\ge0,}
 \tag{2.1}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{c_B:=e_{BB}-(q-m)\ge0.}
 \tag{2.2}
-$$
+```
 
 Here
 
@@ -164,42 +164,42 @@ Here
 
 Then
 
-$$
+```math
 \begin{aligned}
 e_{BB}
 &=q-m+c_B\\
 &=q-x_B+u_B+c_B.
 \end{aligned}
 \tag{2.3}
-$$
+```
 
 ZT gives
 
-$$
+```math
 q-x_B=Q+2(d_H+s_Z).
 \tag{2.4}
-$$
+```
 
 Therefore:
 
 ### Theorem LH — exact loaded-hull contact slack
 
-$$
+```math
 \boxed{
  e_{BB}
  =Q+2(d_H+s_Z)+u_B+c_B,
 \qquad
 u_B,c_B\ge0.}
 \tag{LH.5}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 e_{BB}-Q-2(d_H+s_Z)=u_B+c_B.}
 \tag{LH.6}
-$$
+```
 
 This identifies the complete slack in LH.2. It consists only of deeper outer-walk detours and additional loaded-loaded contact chords.
 
@@ -211,35 +211,35 @@ No stress coefficient or response conductance appears in this identity.
 
 Let
 
-$$
+```math
 P:=\operatorname{per}(F)=\sum_i s_i.
-$$
+```
 
 Because `s_i>=1`,
 
-$$
+```math
 P-q\ge0.
 \tag{3.1}
-$$
+```
 
 Because each outer subwalk has Euclidean length `ell_i` and joins endpoints at distance `s_i`,
 
-$$
+```math
 b-P
 =\sum_i(\ell_i-s_i)
 \ge0.
 \tag{3.2}
-$$
+```
 
 Hence the outer-walk currency has the exact geometric split
 
-$$
+```math
 \boxed{
  x_B
  =b-q
  =(P-q)+(b-P).}
 \tag{LH.7}
-$$
+```
 
 The first term is convex-hull side-length surplus above the unit lower bound; the second is contact-walk detour length above the convex perimeter.
 
@@ -253,22 +253,22 @@ The straight-line graph on the `q` loaded convex vertices with edge set consisti
 
 Add the `m` missing convex-hull sides. The resulting plane graph contains the complete convex `q`-cycle, has
 
-$$
+```math
 E'=e_{BB}+m
-$$
+```
 
 edges, and is 2-connected. Let `t` be its number of bounded triangular faces.
 
 Every triangular face must use at least one added hull side: otherwise its three edges were all original unit contacts, giving a forbidden unit triangle. Each added hull side borders at most one bounded face, so
 
-$$
+```math
 t\le m.
 \tag{4.1}
-$$
+```
 
 Euler gives `F_b=E'-q+1` bounded faces. Face incidence therefore gives
 
-$$
+```math
 \begin{aligned}
 2E'
 &=q+\sum_{F\ bounded}\deg F\\
@@ -276,23 +276,23 @@ $$
 &=q+4F_b-t\\
 &\ge q+4(E'-q+1)-m.
 \end{aligned}
-$$
+```
 
 Rearranging:
 
-$$
+```math
 \boxed{
 2e_{BB}+m\le3q-4.}
 \tag{LH.8}
-$$
+```
 
 In terms of the extra loaded chord count `c_B`, since `e_BB=q-m+c_B`,
 
-$$
+```math
 \boxed{
 2c_B\le q+m-4.}
 \tag{LH.9}
-$$
+```
 
 The cap is not a closing inequality; it records that the slack `c_B` in LH.5 is itself constrained by outerplanarity and triangle-freeness.
 
@@ -302,17 +302,17 @@ The cap is not a closing inequality; it records that the slack `c_B` in LH.5 is 
 
 LH.1 gives
 
-$$
+```math
 \max\{e_{BB},x_B\}\ge q/2.
-$$
+```
 
 DB gives
 
-$$
+```math
 \liminf\frac hD\ge2\rho,
 \qquad
 \rho=\cos\rho,
-$$
+```
 
 and `q>=h`. Dividing by `D` proves LH.4.
 
@@ -329,38 +329,38 @@ This is weaker numerically than KC's `0.886902...D` max bound on the composite c
 
 GU's low pinned/contact-surplus branch assumes
 
-$$
+```math
 \limsup\frac{e_{BB}+2s_C}{D}<\lambda_*,
 \qquad
 \lambda_*=\sqrt{\frac{\sqrt3}{\pi}}
 =0.7425152492\ldots .
-$$
+```
 
 Since `e_BB<=e_BB+2s_C`, LH.1 gives
 
-$$
+```math
 \frac{x_B}{D}
 \ge
 \frac qD-rac{e_{BB}}D.
-$$
+```
 
 Together with DB, if `limsup (e_BB+2s_C)/D<=lambda<lambda_*`, then
 
-$$
+```math
 \boxed{
 \liminf\frac{x_B}{D}
 \ge2\rho-\lambda.}
 \tag{LH.10}
-$$
+```
 
 Letting `lambda` approach `lambda_*` gives the threshold value
 
-$$
+```math
 \boxed{
 2\rho-\lambda_*
 =0.7356550176\ldots .}
 \tag{LH.11}
-$$
+```
 
 So GU's low-surplus branch simultaneously has
 
@@ -378,15 +378,15 @@ Equality in LH.1 is highly constrained.
 
 If
 
-$$
+```math
 e_{BB}+x_B=q,
-$$
+```
 
 then LH.5 forces
 
-$$
+```math
 u_B=c_B=0.
-$$
+```
 
 Therefore:
 
@@ -406,10 +406,10 @@ The intermediate vertex of each two-edge replacement is not a convex-hull vertex
 
 All `q` hull sides are unit contacts, so
 
-$$
+```math
 m=x_B=u_B=c_B=0,
 \qquad e_{BB}=q.
-$$
+```
 
 LH.1 and LH.5 are equalities. Thus the regular-shell regression is retained.
 
@@ -417,10 +417,10 @@ LH.1 and LH.5 are equalities. Thus the regular-shell regression is retained.
 
 Again all four hull sides are unit contacts and there are no loaded chords:
 
-$$
+```math
 e_{BB}=q=4,
 \qquad x_B=0.
-$$
+```
 
 LH.1 is exact.
 

@@ -16,25 +16,25 @@
 
 The preceding all-regime half-disk theorem gives strict-rhombus area
 
-$$
+```math
 A_{4,i}=\left({\pi\over8}-o(1)\right)D^2
-$$
+```
 
 for each dominant group.  Type II has
 
-$$
+```math
 R_4/D^2\to\Delta_2={\pi\over2\sqrt3},
 \qquad
 A_4/D^2\to\pi/4.
-$$
+```
 
 Every strict triangle-free unit rhombus has area at least `a_0=sqrt(3)/2`, so
 `A_4-a_0R_4>=0`; the displayed Type-II limits make this global excess `o(D^2)`.
 Group excess is a sub-sum of the same nonnegative terms, hence also `o(D^2)`.  Therefore
 
-$$
+```math
 R_i/D^2\to{(\pi/8)\over a_0}={\Delta_2\over2}.
-$$
+```
 
 No false universal upper bound such as `area(rhombus)<=sqrt(3)/2` is used.
 
@@ -68,15 +68,15 @@ Thus every undeleted train participating in a rhombus has one harmonic-cell labe
 The global stopped-train crossing graph is simple and has `T=O(D)` vertices.  Deleting
 `o(D)` train vertices removes at most
 
-$$
+```math
 o(D)\,T=o(D^2)
-$$
+```
 
 crossing edges.  Therefore the retained group crossing counts still satisfy
 
-$$
+```math
 R'_i/D^2\to\Delta_2/2.
-$$
+```
 
 This estimate does not require an individual train-length bound.
 
@@ -94,15 +94,15 @@ number of group crossings whose phase separation is at least `pi/3+epsilon` is
 group measure: limiting crossing mass lies on the exact `+-pi/3` relation, which the
 product phase measure charges only through atoms.  Weighted Mantel gives
 
-$$
+```math
 {\Delta_2/2\over x_i^2}\le{s_i^2\over4},
-$$
+```
 
 so
 
-$$
+```math
 x_i s_i\ge2\sqrt{\Delta_2/2}.
-$$
+```
 
 No groupwise exposed-hull inequality is assumed.
 
@@ -113,31 +113,31 @@ No groupwise exposed-hull inequality is assumed.
 At finite `D`, the two retained group train sets are disjoint subsets of the full train
 set.  Write their absolute empirical measures as
 
-$$
+```math
 \lambda_{i,D}=D^{-1}\sum_{\tau\in\mathcal T_{i,D}}\delta_{[u_\tau]}.
-$$
+```
 
 After a common subsequence,
 
-$$
+```math
 \lambda=\lambda_1+\lambda_2+\lambda_0
-$$
+```
 
 with `lambda_0` positive.  For finite positive measures, the mass of the atomic part is
 exactly additive, even if `lambda_1` and `lambda_2` have atoms at the same direction:
 
-$$
+```math
 \sum_x(\lambda_1+\lambda_2)(\{x\})
 =
 \sum_x\lambda_1(\{x\})+
 \sum_x\lambda_2(\{x\}).
-$$
+```
 
 Hence global absolute atomic train mass is at least
 
-$$
+```math
 4\sqrt{\Delta_2/2}=2\sqrt{2\Delta_2}.
-$$
+```
 
 This does not use the false weak-limit semicontinuity of atomic mass rejected elsewhere
 in the repository.  Atomic mass is computed directly on the fixed common limit measures
@@ -149,21 +149,21 @@ and then added exactly.
 
 Audited §142.4 applies to the original global train measure and gives
 
-$$
+```math
 q/T\le2(1-s).
-$$
+```
 
 With `T/D->x`, this is
 
-$$
+```math
 xs\le (T-q/2)/D.
-$$
+```
 
 Combining with the groupwise lower bound gives
 
-$$
+```math
 \liminf(T-q/2)/D\ge2\sqrt{2\Delta_2}.
-$$
+```
 
 This is directionally correct.  The proof never substitutes a local half-disk boundary
 for the global near-circular exposed hull.
@@ -174,42 +174,42 @@ for the global near-circular exposed hull.
 
 Using `q<=pi D`,
 
-$$
+```math
 \liminf{T-q\over D}
 \ge2\sqrt{2\Delta_2}-{\pi\over2}
 =1.122751047382300\ldots .
-$$
+```
 
 Since `T-q=2f-k`, this is the claimed defect-face floor.
 
 For the §146 elimination, a general input
 
-$$
+```math
 C\le\liminf(T-q/2)/D
-$$
+```
 
 gives
 
-$$
+```math
 \liminf {f\over D}
 \ge C/2-y/4+d/4+z/2
-$$
+```
 
 and the outer ledger gives `Q/D+2z<=2y-pi`.  With `Q>=f`,
 
-$$
+```math
 {9y\over4}\ge\pi+C/2+d/4+5z/2.
-$$
+```
 
 Setting `C=2sqrt(2Delta_2)` yields
 
-$$
+```math
 \liminf {1\over D}
 \left(h-{d_H\over9}-{10s_Z\over9}\right)
 \ge
 {4\pi\over9}+{4\over9}\sqrt{\pi/\sqrt3}
 =1.994829484745952\ldots .
-$$
+```
 
 The constants and coefficients are correct.
 

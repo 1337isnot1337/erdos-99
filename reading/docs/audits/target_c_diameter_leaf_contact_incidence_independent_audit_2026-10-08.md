@@ -16,14 +16,14 @@ Frozen source: `origin/swarm/sol/contact-convexity-exclusion-20261002` at `b79aa
 
 Use the canonical contact-minimal, then actual-diameter-pair-minimal triangle-free global minimizer with `D>=9`. Let `V` be the nonisolated positive-contact core, `C` all actual unit-contact edges on `V`, `H` the full actual diameter graph, `B` its loaded endpoint set, `q=|B|`, `h=|E(H)|`, and `d_H=q-h`. Let `ell_H` be the number of degree-one vertices of `H`, `e_BB` the number of contacts with both endpoints in `B`, and `t_BI` the number of contacts with one endpoint in `B` and one in `V minus B`. Then
 
-$$
+```math
 \boxed{
 t_{BI}+2e_{BB}
 =\sum_{b\in B}\deg_C(b)
 \ge q+\ell_H
 \ge q+2d_H.
 }
-$$
+```
 
 All graphs and contacts in this statement are the actual source objects. Every actual diameter endpoint belongs to `V`; contact-isolated source labels are not included in `B` or `V`.
 
@@ -31,32 +31,32 @@ All graphs and contacts in this statement are the actual source objects. Every a
 
 First, every actual diameter endpoint `b` is a strictly exposed source-hull vertex. Choose `p` with `|b-p|=D` and set `u=(b-p)/D`. For every other source point `x`,
 
-$$
+```math
 u\cdot(x-p)\le |x-p|\le D=u\cdot(b-p),
-$$
+```
 
 and equality at the right endpoint forces `x=b`. Thus `u` strictly exposes `b`. In the canonical relative-interior stress, every actual diameter edge has positive coefficient. If `b` had no contact edge, its equilibrium equation would consist only of the negative diameter-force terms. Taking its dot product with `u` gives a strictly negative sum, impossible. Therefore every `b\in B` has `deg_C(b)\ge1`. This also verifies the loaded-endpoint/contact-support premise directly, rather than importing it as an unexplained phrase.
 
 Next, `C-ZRF` gives `h\ge\lceil D\rceil\ge9`, so the simple mixed graph has at least five vertices. Its three-vertex connectivity implies minimum mixed degree at least three: if a vertex had at most two neighbors, deleting those neighbors would leave it isolated and at least one other vertex. Therefore, if `b` is a degree-one vertex of the full diameter graph `H`,
 
-$$
+```math
 \deg_C(b)=\deg_{C\cup H}(b)-\deg_H(b)\ge3-1=2.
-$$
+```
 
 Summing over loaded vertices gives
 
-$$
+```math
 \sum_{b\in B}\deg_C(b)
 \ge 2\ell_H+(q-\ell_H)=q+\ell_H.
-$$
+```
 
 For `d_H>0`, canonical `C-WOODALL` says `H` is a forest of exactly `d_H` caterpillar components. Since every vertex of `H` is loaded and has positive diameter degree, these components are nontrivial; each has at least two leaves. Hence `ell_H\ge2d_H`. For `d_H=0`, `ell_H\ge0=2d_H` is immediate.
 
 Finally, each contact from `B` to `V minus B` contributes once to `\sum_B deg_C`, while each loaded-loaded contact contributes twice. Thus
 
-$$
+```math
 t_{BI}+2e_{BB}=\sum_{b\in B}\deg_C(b),
-$$
+```
 
 which proves the displayed bound.
 

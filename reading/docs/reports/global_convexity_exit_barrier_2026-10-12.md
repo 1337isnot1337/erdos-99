@@ -47,37 +47,37 @@ No local, affine, radial, contact-preserving, or pinned-motion restriction is im
 
 Write
 
-$$
+```math
 L_m=2m\sin\frac{\pi}{2m},\qquad m\ge2.
-$$
+```
 
-For every convex polygon with at most $m$ vertices and diameter $d$,
+For every convex polygon with at most $`m`$ vertices and diameter $`d`$,
 
-$$
+```math
 \operatorname{per}(P)\le L_m d. \tag{1}
-$$
+```
 
 Here a segment has perimeter twice its length. One self-contained proof is as
-follows. The difference body $P-P$ has at most $2m$ sides, lies in the
-radius-$d$ disk, and has perimeter $2\operatorname{per}(P)$. The side
-bound follows by merging the edge directions of $P$ and $-P$; the perimeter
+follows. The difference body $`P-P`$ has at most $`2m`$ sides, lies in the
+radius-$`d`$ disk, and has perimeter $`2\operatorname{per}(P)`$. The side
+bound follows by merging the edge directions of $`P`$ and $`-P`$; the perimeter
 identity follows by integrating widths, since widths add under Minkowski addition.
 
-A convex $k$-gon in the radius-$d$ disk has perimeter at most
-$2kd\sin(\pi/k)$. To see this without assuming its vertices already lie on
+A convex $`k`$-gon in the radius-$`d`$ disk has perimeter at most
+$`2kd\sin(\pi/k)`$. To see this without assuming its vertices already lie on
 the circle, take a perimeter maximizer in the compact family of convex polygons
-with at most $k$ vertices in the disk. A strictly extreme vertex in the disk
+with at most $`k`$ vertices in the disk. A strictly extreme vertex in the disk
 interior can be moved slightly along a line while preserving convexity. The sum
 of its two incident edge lengths is a strictly convex function on a suitable such
 line, so one direction increases perimeter. Thus every extreme vertex of a
 maximizer lies on the circle. Its successive circular arc increments sum to
-$2\pi$, and concavity of sine gives the stated bound. Degenerate polygons are
+$`2\pi`$, and concavity of sine gives the stated bound. Degenerate polygons are
 covered by using their actual number of extreme vertices, including two for a
-segment. Finally $k\sin(\pi/k)$ increases for $k\ge2$.
+segment. Finally $`k\sin(\pi/k)`$ increases for $`k\ge2`$.
 
-Applying this with $k\le2m$ to $P-P$ proves (1).
-Also, $L_m$ strictly increases with $m$, because
-$\sin x-x\cos x>0$ for $0<x\le\pi/4$.
+Applying this with $`k\le2m`$ to $`P-P`$ proves (1).
+Also, $`L_m`$ strictly increases with $`m`$, because
+$`\sin x-x\cos x>0`$ for $`0<x\le\pi/4`$.
 
 This is the classical Reinhardt perimeter inequality. Its normalization was
 checked against Equation (1), pages 3--4, of Mulansky and Potschka,
@@ -89,66 +89,66 @@ not inputs here. The proof above supplies precisely the inequality used below.
 
 **Claim status: proved candidate awaiting promotion; no independent audit yet.**
 
-Let $q\ge4$. Let $p_0(t),\ldots,p_{q-1}(t)$, $0\le t\le1$, be
+Let $`q\ge4`$. Let $`p_0(t),\ldots,p_{q-1}(t)`$, $`0\le t\le1`$, be
 continuous planar trajectories of mutually unit-separated labeled points. They
 may be part of a larger finite source, whose other points may also move arbitrarily.
 Suppose the designated points initially form a strictly convex polygon in this
 cyclic order. If they ever cease to be in strict convex position, then at some time
 
-$$
+```math
 \operatorname{diam}\{p_i(t):0\le i<q\}
 \ \ge\ B_q:=\frac{q}{L_{q-1}}. \tag{2}
-$$
+```
 
-In particular the diameter of the full source is at least $B_q$ at that time.
+In particular the diameter of the full source is at least $`B_q`$ at that time.
 
 **Proof.** Consider the first exit from the open set of strictly convex embeddings
 in the initial cyclic order. Distinct labels cannot collide, because their distances
-are at least one. Before the exit, the hull perimeter is the sum of the $q$
+are at least one. Before the exit, the hull perimeter is the sum of the $`q`$
 consecutive edge lengths. Both quantities are continuous in the coordinates: for
 the hull perimeter this follows by integrating the continuously varying support
 width, with a uniform bound on the compact time interval. The equality therefore
-persists at the exit, and the limiting hull perimeter is at least $q$.
+persists at the exit, and the limiting hull perimeter is at least $`q`$.
 
 At least one designated point is no longer extreme, since a configuration with all
-$q$ labels extreme has a neighborhood with the same strict convexity and cyclic
-order. Thus the hull has at most $q-1$ extreme vertices. Inequality (1) bounds
-its perimeter by $L_{q-1}\operatorname{diam}\{p_i(t)\}$, proving (2).
+$`q`$ labels extreme has a neighborhood with the same strict convexity and cyclic
+order. Thus the hull has at most $`q-1`$ extreme vertices. Inequality (1) bounds
+its perimeter by $`L_{q-1}\operatorname{diam}\{p_i(t)\}`$, proving (2).
 If the hull degenerates to a segment, its perimeter is twice its length; continuity
 still gives the same equality and the bound applies with two extreme vertices.
-$\square$
+$`\square`$
 
 ## 4. Regular odd rims have a positive global path barrier
 
-Let $q\ge5$ be odd. The regular unit-sided $q$-gon has circumradius
+Let $`q\ge5`$ be odd. The regular unit-sided $`q`$-gon has circumradius
 and diameter
 
-$$
+```math
 R_q=\frac1{2\sin(\pi/q)},\qquad
 D_q=2R_q\cos\frac{\pi}{2q}
     =\frac1{2\sin(\pi/(2q))}
     =\frac q{L_q}. \tag{3}
-$$
+```
 
-Every unit-separated configuration of these $q$ labels in strict convex
-position, in any cyclic order, has diameter at least $D_q$: its hull perimeter
-is at least $q$, and (1) applies with $m=q$.
+Every unit-separated configuration of these $`q`$ labels in strict convex
+position, in any cyclic order, has diameter at least $`D_q`$: its hull perimeter
+is at least $`q`$, and (1) applies with $`m=q`$.
 
 Consequently any continuous unit-separated full-source motion starting with this
-rim and ending with full-source diameter below $D_q$ must attain diameter at
-least $B_q>D_q$. Its unavoidable overshoot is at least
+rim and ending with full-source diameter below $`D_q`$ must attain diameter at
+least $`B_q>D_q`$. Its unavoidable overshoot is at least
 
-$$
+```math
 \Delta_q=B_q-D_q
  =\frac{q}{2(q-1)\sin(\pi/(2(q-1)))}
   -\frac1{2\sin(\pi/(2q))}>0. \tag{4}
-$$
+```
 
-Expanding $L_m=\pi-\pi^3/(24m^2)+O(m^{-4})$ gives
+Expanding $`L_m=\pi-\pi^3/(24m^2)+O(m^{-4})`$ gives
 
-$$
+```math
 \Delta_q=\frac{\pi}{12q^2}+O(q^{-3}). \tag{5}
-$$
+```
 
 This is a lower bound on a barrier. Neither equality nor a matching escape path
 is claimed. The theorem permits old contacts to break, new contacts and triangles
@@ -157,83 +157,83 @@ Only continuity and full-source unit separation are required.
 
 ## 5. A dense triangle-free, nonglobal family behind that barrier
 
-For every odd $q\ge101$, put $\lambda_q=1+q^{-2}$. Let
-$\Lambda$ be the unit triangular lattice of covolume $a_0=\sqrt3/2$.
-Take the regular unit rim and all points of $\lambda_q\Lambda$ in the closed
-radius-$R_q-2$ disk about its center. Call their union $A_q$, and write
-$n_q=|A_q|$.
+For every odd $`q\ge101`$, put $`\lambda_q=1+q^{-2}`$. Let
+$`\Lambda`$ be the unit triangular lattice of covolume $`a_0=\sqrt3/2`$.
+Take the regular unit rim and all points of $`\lambda_q\Lambda`$ in the closed
+radius-$`R_q-2`$ disk about its center. Call their union $`A_q`$, and write
+$`n_q=|A_q|`$.
 
 All interior lattice pairs are strictly longer than one. Every rim-to-interior
 pair has length at least two. The disk lies strictly inside the rim hull, since
-$$
+```math
 R_q(1-\cos(\pi/q))=\tfrac12\tan(\pi/(2q))<2.
-$$
-Thus the actual full-source diameter is $D_q$, all interior points are
-contact-isolated, and the complete unit-contact graph is the rim cycle $C_q$.
+```
+Thus the actual full-source diameter is $`D_q`$, all interior points are
+contact-isolated, and the complete unit-contact graph is the rim cycle $`C_q`$.
 It is triangle-free. Every full-source diameter pair is a pair of rim points with
-cyclic offset $(q-1)/2$. An interior point has strictly smaller distances than
-$D_q$ to every source point: express it as a positive convex combination of
+cyclic offset $`(q-1)/2`$. An interior point has strictly smaller distances than
+$`D_q`$ to every source point: express it as a positive convex combination of
 rim vertices and use strictness for at least one vertex distance in the norm bound.
 
 The family has triangular leading density:
 
-$$
+```math
 n_q=\frac{\pi D_q^2}{4a_0}+O(D_q),\qquad q\longrightarrow\infty. \tag{6}
-$$
+```
 
 Indeed a fundamental hexagonal cell of the scaled lattice has area
-$a_0\lambda_q^2$ and circumradius $\lambda_q/\sqrt3<\lambda_q$.
-Comparing unions of cells with disks of radii $r\pm\lambda_q$ gives the
-disk count $\pi r^2/(a_0\lambda_q^2)+O(r+1)$; take $r=R_q-2$.
-Since $q=\Theta(R_q)$, $\lambda_q-1=O(R_q^{-2})$, and
-$R_q^2-D_q^2/4=O(1)$, this proves (6).
+$`a_0\lambda_q^2`$ and circumradius $`\lambda_q/\sqrt3<\lambda_q`$.
+Comparing unions of cells with disks of radii $`r\pm\lambda_q`$ gives the
+disk count $`\pi r^2/(a_0\lambda_q^2)+O(r+1)`$; take $`r=R_q-2`$.
+Since $`q=\Theta(R_q)`$, $`\lambda_q-1=O(R_q^{-2})`$, and
+$`R_q^2-D_q^2/4=O(1)`$, this proves (6).
 
-Nevertheless, every $A_q$ in this range is strictly nonglobal. Here is a finite
-upper count that makes the strict comparison explicit. Put $h=1-q^{-2}$.
-The same cell containment and $\lambda_q\ge1$ give
+Nevertheless, every $`A_q`$ in this range is strictly nonglobal. Here is a finite
+upper count that makes the strict comparison explicit. Put $`h=1-q^{-2}`$.
+The same cell containment and $`\lambda_q\ge1`$ give
 
-$$
+```math
 n_q\le q+\frac{\pi(R_q-h)^2}{a_0}.
-$$
+```
 
-Use $2\pi R_q\ge q$, $h^2\le1$, and
-$$
+Use $`2\pi R_q\ge q`$, $`h^2\le1`$, and
+```math
 R_q^2-D_q^2/4=\frac1{16\cos^2(\pi/(2q))}\le\frac1{12}.
-$$
+```
 Then
 
-$$
+```math
 n_q-\frac{\pi D_q^2}{4a_0}
 \le q(1-1/a_0)+\frac1{a_0q}+\frac{13\pi}{12a_0}<0. \tag{7}
-$$
+```
 
-For the last strict sign one may use $5/6<a_0<7/8$ and
-$\pi<22/7$: the right side is smaller than
-$-q/7+6/(5q)+143/35$, which is negative for $q\ge101$.
+For the last strict sign one may use $`5/6<a_0<7/8`$ and
+$`\pi<22/7`$: the right side is smaller than
+$`-q/7+6/(5q)+143/35`$, which is negative for $`q\ge101`$.
 
-Translation averaging places strictly more than $n_q$ unit triangular-lattice
-sites in the open radius-$D_q/2$ disk: the mean count is
-$\pi D_q^2/(4a_0)>n_q$. Retain any $n_q$ of those sites. Their diameter
-is strictly below $D_q$, because the set is finite and the disk is open.
+Translation averaging places strictly more than $`n_q`$ unit triangular-lattice
+sites in the open radius-$`D_q/2`$ disk: the mean count is
+$`\pi D_q^2/(4a_0)>n_q`$. Retain any $`n_q`$ of those sites. Their diameter
+is strictly below $`D_q`$, because the set is finite and the disk is open.
 This proves nonglobality by an independent full-cardinality replacement.
 
 Oler's inequality together with the isodiametric and perimeter inequalities gives
-$D(n_q)\ge\sqrt{4a_0(n_q-1)/\pi+3/4}-\sqrt3/2$.
+$`D(n_q)\ge\sqrt{4a_0(n_q-1)/\pi+3/4}-\sqrt3/2`$.
 Together with (6) and the explicit replacement this gives
-$D_q/D(n_q)\to1$. This use of Oler is the canonical shared-theory
+$`D_q/D(n_q)\to1`$. This use of Oler is the canonical shared-theory
 Lemma 21.1 and Equation (21.3) in `docs/theory/03-oler-shell.md`.
-Asymptotic optimality does not make any $A_q$ globally optimal.
+Asymptotic optimality does not make any $`A_q`$ globally optimal.
 
 ## 6. Actual normalized positive mixed stress
 
-Assign $\alpha=D_q^2/q$ to every rim contact and $\beta=1/q$ to every
+Assign $`\alpha=D_q^2/q`$ to every rim contact and $`\beta=1/q`$ to every
 actual diameter pair. Every interior label has zero incident stress. The weights
 are positive on the complete actual contact and diameter graphs, and
-$\sum\alpha=D_q^2$, $\sum\beta=1$.
+$`\sum\alpha=D_q^2`$, $`\sum\beta=1`$.
 
-At a rim vertex $p$, the sum of its two contact vectors is
-$4\sin^2(\pi/q)p=p/R_q^2$, while the sum of its two diameter vectors is
-$4\cos^2(\pi/(2q))p=D_q^2p/R_q^2$. This proves equilibrium with the
+At a rim vertex $`p`$, the sum of its two contact vectors is
+$`4\sin^2(\pi/q)p=p/R_q^2`$, while the sum of its two diameter vectors is
+$`4\cos^2(\pi/(2q))p=D_q^2p/R_q^2`$. This proves equilibrium with the
 stated weights. All full-source labels remain present.
 
 Thus positive actual mixed stress, asymptotically optimal triangular density,
@@ -243,26 +243,26 @@ No full-source stress-kernel or rigidity-rank conclusion is asserted.
 
 ## 7. A nonlocal conformal transformation cannot bypass this rim
 
-For an arbitrary finite source and inversion center $c$ outside its labels, put
-$$
+For an arbitrary finite source and inversion center $`c`$ outside its labels, put
+```math
 s_{ij}(c)=\frac{|p_i-p_j|^2}{|p_i-c|^2|p_j-c|^2}.
-$$
+```
 Inversion followed by dilation to minimum distance one gives squared diameter
-$\max_{i<j}s_{ij}(c)/\min_{i<j}s_{ij}(c)$. Checking this ratio on every
+$`\max_{i<j}s_{ij}(c)/\min_{i<j}s_{ij}(c)`$. Checking this ratio on every
 pair gives a valid independent global competitor test; checking only old contact
 and diameter pairs does not suffice at a nonlocal center.
 
 For the dense family here, even this nonlocal test cannot improve the source
-diameter. Invert the radius-$R_q$ rim by $y=(p-c)/|p-c|^2$. Its images
+diameter. Invert the radius-$`R_q`$ rim by $`y=(p-c)/|p-c|^2`$. Its images
 satisfy
-$$
+```math
 (|c|^2-R_q^2)|y|^2+2c\cdot y+1=0.
-$$
-Thus they lie on a circle when $|c|\ne R_q$, and on a line otherwise. All
+```
+Thus they lie on a circle when $`|c|\ne R_q`$, and on a line otherwise. All
 images are distinct. After unit-separation normalization, the circular case has
-$q$ extreme points and hence diameter at least $D_q$, by (1). In the
-linear case their diameter is at least $q-1>D_q$; for example concavity gives
-$\sin(\pi/(2q))\ge1/q$ and hence $D_q\le q/2<q-1$.
+$`q`$ extreme points and hence diameter at least $`D_q`$, by (1). In the
+linear case their diameter is at least $`q-1>D_q`$; for example concavity gives
+$`\sin(\pi/(2q))\ge1/q`$ and hence $`D_q\le q/2<q-1`$.
 
 The same obstruction applies to any finite composition of inversions and
 similarities that remains finite at every source label. Such transformations
@@ -308,7 +308,7 @@ Its default q=101 fixture has 822 source labels, including 721 contact isolates,
 and all 337431 pairs in an independent 822-label replacement selected from 931
 centered triangular-lattice sites. The replacement has squared diameter at most
 1024, below the source squared diameter by more than 9.6607. The certificate
-also gives $\Delta_{101}>0.000026051820$. All inactive source lower squared
+also gives $`\Delta_{101}>0.000026051820`$. All inactive source lower squared
 gaps exceed 0.000196068819, and all inactive upper squared gaps exceed
 1.999032564583.
 

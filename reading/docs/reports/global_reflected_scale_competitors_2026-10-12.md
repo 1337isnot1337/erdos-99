@@ -35,19 +35,19 @@ Let `p_i`, `1<=i<=n`, be all labels of a unit-separated planar source of
 diameter `D`. Choose a unit normal `u`, perpendicular unit tangent `v`, line
 offset `c`, and positive squared scales `A,B`. Write
 
-$$
+```math
 x_i=|u\cdot p_i-c|,\qquad y_i=v\cdot p_i,
 \qquad q_i=(\sqrt A\,\sigma_i x_i,\sqrt B\,y_i),
 \quad \sigma_i\in\{-1,1\}.
-$$
+```
 
 These are actual planar positions. Every source label has one chosen position.
 Define, for every pair,
 
-$$
+```math
 s_{ij}=A(x_i-x_j)^2+B(y_i-y_j)^2,
 \qquad o_{ij}=A(x_i+x_j)^2+B(y_i-y_j)^2.
-$$
+```
 
 Always `s_ij<=o_ij`. A placement with every squared distance in `[1,D^2)`
 exists **if and only if** both conditions hold:
@@ -78,17 +78,17 @@ two scales says nothing about another parameter choice or global optimality.
 
 For integers `K>=1`, `M>=20(K+1)`, take every square-grid point
 
-$$
+```math
 P_{M,K}=\{(i,j):i,j\in\mathbb Z,\ |i|\le M,\ |j|\le K\}.
-$$
+```
 
 The contact graph is triangle-free and the diameter squared is
 `D^2=4(M^2+K^2)`. Set
 
-$$
+```math
 u=(351,280)/449=(c,s),\quad v=(-s,c),\quad
 A=1/2,\quad B=9/5,\quad L=4K+2.
-$$
+```
 
 Choose the original sign of `u dot p` on `|i|<=L`, and positive sign on every
 other label. This gives a strictly unit-separated whole-source competitor
@@ -99,9 +99,9 @@ of strictly smaller diameter.
 The affine map before changing signs is strictly unit-separated on the
 integer lattice. For integer differences of norm squared at least two,
 
-$$
+```math
 |Tz|^2=\tfrac12|z|^2+\tfrac{13}{10}(v\cdot z)^2\ge1.
-$$
+```
 
 Equality would require a norm-squared-two vector perpendicular to `v`, which
 the stated rational direction excludes. The two coordinate unit vectors have
@@ -111,9 +111,9 @@ Consequently every opposite cost is above one, and every pair with same cost
 below one must have opposite original normal signs. Such a pair also has
 `|y_i-y_j|<1`, hence `|i-i'|<(2cK+1)/s`. Opposite original normal signs give
 
-$$
+```math
 |i|,|i'| < (s/c+2c/s)K+1/s <4K+2=L.
-$$
+```
 
 For example, if `i>K`, its normal sign is positive and an opposite-sign label
 has `i'<(s/c)K`; the displayed bound follows. The other cases follow by
@@ -124,17 +124,17 @@ Since `K<=M/20`, the absolute normal coordinates have range at most
 `133M/160<M`, and tangential differences at most `133M/100<4M/3`. Every same
 cost therefore satisfies
 
-$$
+```math
 s_{ij}<\left(\tfrac12+\tfrac95\tfrac{16}{9}\right)M^2
 =\tfrac{37}{10}M^2<4M^2\le D^2.
-$$
+```
 
 If one endpoint is in the central strip, both its opposite normal sum and
 tangential difference are at most
 
-$$
+```math
 M+L+2K\le M+6(K+1)\le13M/10.
-$$
+```
 
 Thus its opposite cost is at most `3887M^2/1000<4M^2<=D^2`.
 **No upper-forcing edge touches the central strip**. Original signs satisfy
@@ -143,9 +143,9 @@ The decision theorem now verifies every pair, not just contacts or diameters.
 
 All resulting squared lengths have form
 
-$$
+```math
 (5X^2+18Y^2)/(10\cdot449^2),\qquad X,Y\in\mathbb Z.
-$$
+```
 
 Equality to one is impossible: modulo five it forces `5|Y`, and modulo 25 it
 would force `X^2=2 (mod 5)`. Therefore every distance is strictly above one.
@@ -159,10 +159,10 @@ horizontal and vertical unit contacts force `G_xx,G_yy>=1`. The two original
 diameter vectors `(2M,2K)` and `(2M,-2K)` force the maximum squared diameter
 to be at least
 
-$$
+```math
 4M^2G_{xx}+4K^2G_{yy}+8MK|G_{xy}|
 \ge4(M^2+K^2)=D^2.
-$$
+```
 
 Translations do not change this. The finite reassignment evades an exact
 affine obstruction; it is not an affine descent in disguise.
@@ -179,9 +179,9 @@ The signed stress `Omega=L_C-L_H` is PSD. For a scalar vector `z`, applying
 Cauchy--Schwarz to each boundary chain leaves nonnegative chain-variance
 terms, and the corner contribution is
 
-$$
+```math
 \lambda(z_{BL}+z_{TR}-z_{TL}-z_{BR})^2.
-$$
+```
 
 Its kernel restricted to the boundary is the three-dimensional affine space:
 zero variance makes each side affine, and the corner equality is the only
@@ -197,9 +197,9 @@ are contact-isolated. The diameter squared is exactly 916. The decision
 theorem with the same normal and scales produces an endpoint whose exact
 full-source squared-distance range is
 
-$$
+```math
 \left[\frac{405441}{403202},\frac{865065744}{1008005}\right].
-$$
+```
 
 Thus all contacts open, all 12,246 pairs remain separated, and the squared
 diameter improves by `58266836/1008005>0`. This smaller-aspect fixture uses the

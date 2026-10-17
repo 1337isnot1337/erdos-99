@@ -22,9 +22,9 @@ Complete proofs and regression audits are in the promoted scopes of:
 Let `A` be any global unit-separated minimum-diameter source with
 `D>16sqrt(3)`, let `K=conv A`, and translate its circumcenter to zero. Put
 
-$$
+```math
 \eta=3^{1/4}\sqrt D,\qquad \mu=\sqrt{D\eta+\eta^2}=o(D).
-$$
+```
 
 [Target A Section 155](../targets/target-a/08-prescribed-phase-alignment.md)
 gives `K subset B(0,D/2+eta)`. This source-only estimate does **not** require
@@ -32,17 +32,17 @@ its additional very-super-boundary condition for embedding a smaller optimum.
 
 For any nonempty collection `J` of actual source diameter pairs, define
 
-$$
+```math
 F_J=\operatorname{conv}V(J),\qquad
 P_J=(D/2)\operatorname{conv}\{\pm u_e:e\in J\}.
-$$
+```
 
 **AG.** Every diameter midpoint has norm at most `mu`, and
 
-$$
+```math
 d_H(F_J,P_J)\le\mu,\qquad d_H(F_J,-F_J)\le2\mu,
 \qquad D/2\le R(F_J)\le D/2+\eta.
-$$
+```
 
 For endpoints `b=m+(D/2)u`, `k=m-(D/2)u`, the parallelogram identity gives
 `|m|^2+D^2/4<=(D/2+eta)^2`. Convex combinations give the Hausdorff bounds;
@@ -57,19 +57,19 @@ For a normalized KKT stress take `J=H_+`. The promoted C10 theorem identifies
 
 **AR.** Uniformly over all normalized stresses,
 
-$$
+```math
 \frac{D^2}{D/2+\eta}\le P_*\le2D,
 \qquad 0\le2D-P_*\le\frac{4D\eta}{D+2\eta}<4\eta.
-$$
+```
 
 Thus `P_*/D -> 2`. No estimate on omitted source population is needed.
 
 **AS.** Once `2mu<D`, every angle between two actual diameter pairs sharing
 an endpoint satisfies
 
-$$
+```math
 \theta\le2\arcsin(2\mu/D)=O(D^{-1/4}).
-$$
+```
 
 Their opposite endpoints differ by twice the difference of their midpoints,
 so have distance at most `4mu`; the chord formula proves the claim. The old
@@ -83,30 +83,30 @@ linearly many branching diameter vertices and `P_*/D -> 2`.
 Let `g_i` be the cyclic projective gaps of the distinct directions in `J`,
 summing to `pi`. The centered polygon satisfies
 
-$$
+```math
 \operatorname{per}(P_J)=2D\sum_i\sin(g_i/2),\qquad
 \operatorname{area}(P_J)=D^2\sum_i\sin g_i/4.
-$$
+```
 
 Perimeter of a degenerate segment is twice its length.
 
 **AP.** The parallel-body identities and AG give
 
-$$
+```math
 |\operatorname{per}(F_J)-\operatorname{per}(P_J)|\le2\pi\mu,
-$$
+```
 
-$$
+```math
 |\operatorname{area}(F_J)-\operatorname{area}(P_J)|
 \le\pi D\mu+\pi\mu^2.
-$$
+```
 
 The inequality `g-sin g<=4(g-2sin(g/2))` on `[0,pi]` additionally gives
 
-$$
+```math
 \operatorname{area}(F_J)\ge D\operatorname{per}(F_J)-3\pi D^2/4
 -3\pi D\mu-\pi\mu^2.
-$$
+```
 
 Thus limiting normalized area and perimeter obey `a>=p-3pi/4`. A force hull
 with `P_F/D -> pi` has disk limit and `area(F)/D^2 -> pi/4`, not merely an
@@ -123,24 +123,24 @@ Noncommon source-hull arcs between consecutive vertices of `F`, closed by
 their chords, form `k` convex caps with disjoint interiors. If `P_com` is
 the common-side length, then
 
-$$
+```math
 \sum_i\operatorname{area}(K_i)=\operatorname{area}(K)-\operatorname{area}(F),
 \qquad\sum_i\operatorname{per}(K_i)=P_K+P_F-2P_{\rm com}.
-$$
+```
 
 **EC.** Oler applied to each cap's `z_i` external points and its two chord
 endpoints gives
 
-$$
+```math
 Z\le\frac{\operatorname{area}(K)-\operatorname{area}(F)}{a_0}
 +\frac{P_K+P_F}{2}-P_{\rm com}-k.
-$$
+```
 
 **EP.** Oler inside `F` and the strict global lattice comparison give
 
-$$
+```math
 -\pi D/2-1<Z-\frac{\pi D^2/4-\operatorname{area}(F)}{a_0}\le\pi D.
-$$
+```
 
 Thus exterior density equals missing force-hull area density to `O(D^-1)`
 after division by `D^2`. Points inside `F` need not belong to the positive core.
@@ -148,10 +148,10 @@ after division by `D^2`. Points inside `F` need not belong to the positive core.
 **ES.** Write `sigma(L,N)=area(L)/a_0+per(L)/2+1-N`. For actual populations
 `n`, `n-Z`, and `z_i+2`, the exact identity is
 
-$$
+```math
 \sigma_F+\sum_i\sigma_i
 =\sigma_K+P_F-P_{\rm com}-k<3\pi D/2+1.
-$$
+```
 
 This also bounds the sum of independent container-capacity deficits because
 `alpha_1(L)-N<=sigma(L,N)`. Separate optimal cap packings need not be compatible

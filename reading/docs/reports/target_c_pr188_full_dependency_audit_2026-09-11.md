@@ -17,27 +17,27 @@ This audit does not infer validity from the self-audit chain in PR #188. It reco
 
 Write
 
-$$
+```math
 \mu_D=\frac{e_{BB}+2s_C-3(d_H+s_Z)}D.
-$$
+```
 
 The surviving explicit endpoint is the unique `z_* in (0,1)` satisfying
 
-$$
+```math
 10\arcsin z_*-4\pi=z_*/3,
-$$
+```
 
 with the exact certificate
 
-$$
+```math
 0.9604<z_*<0.961.
-$$
+```
 
 The conclusion certified here is
 
-$$
+```math
 \boxed{\liminf_{D\to\infty}\mu_D\ge z_*>0.9604.}
-$$
+```
 
 A separate September 11 repair, `target_c_attachment_perimeter_three_gap_endpoint_repair_2026-09-11.md`, excludes convergence to `z_*` itself and therefore gives a nonexplicit absolute gap above it.
 
@@ -85,33 +85,33 @@ The ZE/ZT/PC/ZK algebra was rederived from the definitions.
 
 With `k=d_H+s_Z`, PC gives
 
-$$
+```math
 e_{BB}=d_P+Q+2k+c_B,
 \qquad
 q=a+d_P+Q+2k.
-$$
+```
 
 ZK gives
 
-$$
+```math
 \sum_r\delta_r+R_I+s_B+3k=6+e_{BB}+2s_C.
-$$
+```
 
 Therefore exactly
 
-$$
+```math
 \boxed{\sum_r\delta_r+R_I+s_B=\mu_DD+6.}
-$$
+```
 
 No asymptotic replacement is used in this identity. It is the only component-diameter budget needed by RA/TA/FD.
 
 The RPE remainder also checks directly:
 
-$$
+```math
 \boxed{
 2(d_P+Q)=\mu_DD+h-s_Z-a-c_B-2s_C.
 }
-$$
+```
 
 The signs and coefficients are consistent with both PC identities. No hidden positive term has been dropped with the wrong sign.
 
@@ -121,9 +121,9 @@ The signs and coefficients are consistent with both PC identities. No hidden pos
 
 At a loaded force-hull vertex all source directions lie in a strict convex wedge of width `<pi`. Distinct unit-contact directions differ by at least `pi/3`; equality would create a forbidden unit equilateral triangle. Four such directions cannot fit in the wedge. Hence
 
-$$
+```math
 \deg_C(b)\le3.
-$$
+```
 
 ### 3.2 Pinned component rank
 
@@ -133,23 +133,23 @@ For an active unit contact with zero first derivative, a nonzero relative veloci
 
 Restricting the strictly positive contact stress to one unpinned component supplies a nonzero left-kernel relation. If that component has `n_r` vertices, `e_r` internal contacts, and `t_r` boundary contacts,
 
-$$
+```math
 e_r+t_r\ge2n_r+1.
-$$
+```
 
 Eppstein's published triangle-free penny-graph theorem gives
 
-$$
+```math
 e_r\le2n_r-\delta_r-2.
-$$
+```
 
 Consequently
 
-$$
+```math
 t_r\ge\delta_r+3,
 \qquad
 \boxed{\delta_r\le3|A_r|-3.}
-$$
+```
 
 This is the FD pin-density input.
 
@@ -157,18 +157,18 @@ This is the FD pin-density input.
 
 Positive equilibrium makes each coordinate harmonic on an unpinned component. The maximum principle gives
 
-$$
+```math
 I_r\subseteq\operatorname{conv}A_r.
-$$
+```
 
 The C36 alternating-path argument correctly forbids proper crossings of two attachment hulls. Containment would force at least three shared loaded attachments. The C37 contracted incidence graph would then contain two component nodes joined to three outer loaded nodes, six incidence edges, while its planar outer-boundary Euler bound permits at most five. Hence distinct attachment hulls have disjoint interiors.
 
 Thus
 
-$$
+```math
 C_{att}:=\sum_r\operatorname{area}(\operatorname{conv}A_r)
 \le\operatorname{area}F
-$$
+```
 
 and `G=area(F)-C_att>=0` are justified.
 
@@ -176,48 +176,48 @@ and `G=area(F)-C_att>=0` are justified.
 
 C67 separates distinct actual projective diameter directions by
 
-$$
+```math
 \delta_D=2\arcsin\frac1{2D},
 \qquad D\delta_D\to1.
-$$
+```
 
 DB places the diameter vectors in the difference body and compares its perimeter with the outer contact walk. The concave gap minimization gives the valid asymptotic bound
 
-$$
+```math
 \liminf h/D\ge2\rho,
 \qquad \rho=\cos\rho.
-$$
+```
 
 FS.4 uses the full-source circumcenter `o`. For every actual diameter edge `bk` with midpoint `m`, the parallelogram identity gives
 
-$$
+```math
 |m-o|=o(D)
-$$
+```
 
 uniformly. Every loaded force-hull vertex also satisfies
 
-$$
+```math
 \bigl||b-o|-D/2\bigr|=o(D)
-$$
+```
 
 uniformly. Consequently, with
 
-$$
+```math
 P_H=D\operatorname{conv}\{\pm u_e:e\in H\},
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{d_{Haus}(F-o,P_H/2)=o(D).}
-$$
+```
 
 The FSDB area calculation then gives, for `y=lim h/D`,
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge\Phi(y):=\frac{y+\sin y}{4}.
-$$
+```
 
 No RSR equality classification enters this implication.
 
@@ -229,21 +229,21 @@ RP and RLE use a correct geometric fact but originally state it too briefly. Hau
 
 Let `D_j->infinity`. Let `F_j` be convex polygons with center `o_j` such that every vertex `v` of `F_j` satisfies
 
-$$
+```math
 \bigl||v-o_j|-D_j/2\bigr|=o(D_j)
-$$
+```
 
 uniformly. Let `Q_j` be convex polygons whose vertices lie on the circle of radius `D_j/2`, and suppose
 
-$$
+```math
 d_{Haus}(F_j-o_j,Q_j)=o(D_j).
-$$
+```
 
 Assume `Q_j` has a side whose endpoint directions converge to two distinct circle points `a,b` with angular separation `r in (0,pi)`. Then `F_j` has an actual side of length
 
-$$
+```math
 D_j\sin(r/2)+o(D_j).
-$$
+```
 
 If `Q_j` has the antipodal side as well, `F_j` has the corresponding opposite actual side with the same asymptotic length.
 
@@ -265,58 +265,58 @@ For an OP pocket with old contact-chain length `ell` and hull chord `s`, its con
 
 Two opposite pockets with equal asymptotic chord can be glued across that chord. Their old chains form a Jordan curve of perimeter `ell_1+ell_2`; isoperimetry gives
 
-$$
+```math
 area(P_1)+area(P_2)
 \le\frac{(ell_1+ell_2)^2}{4\pi}.
-$$
+```
 
 Small pockets contribute `o(D^2)` after an epsilon truncation. The macroscopic groups therefore give
 
-$$
+```math
 \limsup H_{out}/D^2\le\tau^2/(4\pi),
 \qquad \tau=\lim d_P/D.
-$$
+```
 
 For exceptional bounded faces, put `r_i=k_i-4>=1`, so `Q=sum r_i`. Convex isoperimetry gives
 
-$$
+```math
 A_{exc}\le\frac1{4\pi}\sum_i(r_i+4)^2
 \le\frac{Q^2+24Q}{4\pi}.
-$$
+```
 
 Because the exact post-ZF ledgers give `Q=O(D)`, this is
 
-$$
+```math
 A_{exc}/D^2\le(Q/D)^2/(4\pi)+o(1).
-$$
+```
 
 Together with the RPE budget this validates RP's quadratic cavity capacity.
 
 For SC/JS, Lemma FA validates the side-cost charge. The algebra
 
-$$
+```math
 x\le\mu+d+s,
 \qquad
 x\le y-d-2s
-$$
+```
 
 for `x=(d_P+Q)/D` gives
 
-$$
+```math
 3x\le2\mu+y+d.
-$$
+```
 
 The same macroscopic sides contribute to `P_F-q`, while `q/D=y+d` and `P_F/D<=pi`, giving
 
-$$
+```math
 C\le\pi-y-d.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{3x+C\le2\mu+\pi,\qquad C\le x.}
-$$
+```
 
 The subsequent SC/JS one-variable calculus and rational endpoint checks are consistent with these inequalities.
 
@@ -326,53 +326,53 @@ RA correctly transfers each macroscopic attachment set to the common radius-`1/2
 
 TA's maximal feasible-set argument was checked separately. For
 
-$$
+```math
 \theta=2\arcsin z,\qquad \varphi=\pi-\theta,
-$$
+```
 
 an inclusion-maximal closed feasible set `M` satisfies
 
-$$
+```math
 T\setminus M=N_\varphi(M+\pi).
-$$
+```
 
 If `M` has `m` connected components, neighborhood components cannot merge at maximality; hence
 
-$$
+```math
 |M|=\pi-m\varphi.
-$$
+```
 
 The half-turn interchanges the alternating occupied/complement components, so `m` is odd. In the first wrapping range this forces `m=3`; Jensen's inequality for `g-sin g` gives the reported `W_3(z)` envelope.
 
 FD then uses C40 and C67 as follows. For a component with `delta_r/D->z<1`,
 
-$$
+```math
 |A_r|/D\ge z/3-o(1).
-$$
+```
 
 One actual diameter edge can be chosen at each attachment pin, and two distinct pins cannot choose the same edge: otherwise the two pins would be a diameter pair, contradicting `|b-b'|<=delta_r+2<D` for large `D`. Thus there are at least `|A_r|` distinct projective directions. Their C67 spacing forces every `m`-component maximal host of total angular measure `L` to satisfy
 
-$$
+```math
 L\ge z/3.
-$$
+```
 
 For `m=5`,
 
-$$
+```math
 L=10\arcsin z-4\pi.
-$$
+```
 
 Therefore the five-component phase cannot occur below the unique root `z_*` of
 
-$$
+```math
 10\arcsin z-4\pi=z/3.
-$$
+```
 
 TA's three-component envelope remains valid below that root, and the JS/SC/RP force-side inequality excludes the entire remaining interval. The exact FD certificate brackets the root by
 
-$$
+```math
 0.9604<z_*<0.961.
-$$
+```
 
 Hence the reported FD lower bound is valid.
 

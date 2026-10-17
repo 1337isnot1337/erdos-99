@@ -41,17 +41,17 @@ Use the post-ZF notation of
 
 Put
 
-$$
+```math
 \boxed{k:=d_H+s_Z.}
 \tag{1.1}
-$$
+```
 
 ZU gives the exact identity
 
-$$
+```math
 \boxed{c_I+e_{BB}+s_C=q-2+k.}
 \tag{1.2}
-$$
+```
 
 For each unloaded component let
 
@@ -60,19 +60,19 @@ For each unloaded component let
 
 C40 proves
 
-$$
+```math
 \boxed{t_r\ge\delta_r+3}
 \tag{1.3}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \sum_r\delta_r+3c_I+2e_{BB}\le3q.
 }
 \tag{1.4}
-$$
+```
 
 C35 gives loaded degree at most three.
 
@@ -80,86 +80,86 @@ C35 gives loaded degree at most three.
 
 Define the nonnegative component attachment surplus
 
-$$
+```math
 \boxed{
 U:=\sum_r\bigl(t_r-\delta_r-3\bigr)\ge0
 }
 \tag{ZI.1}
-$$
+```
 
 and the nonnegative loaded contact-degree slack
 
-$$
+```math
 \boxed{
 s_B:=3q-e_{BI}-2e_{BB}\ge0,
 }
 \tag{ZI.2}
-$$
+```
 
 where `e_BI=sum_r t_r`.
 
 Then every post-ZF survivor satisfies the exact identity
 
-$$
+```math
 \boxed{
 \sum_r\delta_r+U+s_B+3(d_H+s_Z)
 =6+e_{BB}+3s_C.
 }
 \tag{ZI.3}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{
 \sum_r\delta_r
 \le 6-3(d_H+s_Z)+e_{BB}+3s_C
 \le6+e_{BB}+3s_C.
 }
 \tag{ZI.4}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 3(d_H+s_Z)\le6+e_{BB}+3s_C.
 }
 \tag{ZI.5}
-$$
+```
 
 ### Proof
 
 By definition of `U`,
 
-$$
+```math
 e_{BI}=\sum_rt_r
 =\sum_r\delta_r+3c_I+U.
-$$
+```
 
 Insert this in ZI.2:
 
-$$
+```math
 s_B
 =3q-\sum_r\delta_r-3c_I-U-2e_{BB}.
-$$
+```
 
 ZU gives
 
-$$
+```math
 c_I=q-2+k-e_{BB}-s_C.
-$$
+```
 
 Substitute and cancel `3q`:
 
-$$
+```math
 \begin{aligned}
 s_B
 &=3q-\sum_r\delta_r
  -3(q-2+k-e_{BB}-s_C)-U-2e_{BB}\\
 &=6-3k+e_{BB}+3s_C-\sum_r\delta_r-U.
 \end{aligned}
-$$
+```
 
 Rearrangement is ZI.3. Nonnegativity gives ZI.4--ZI.5. `square`
 
@@ -168,9 +168,9 @@ Rearrangement is ZI.3. Nonnegativity gives ZI.4--ZI.5. `square`
 C40 by itself says only `sum delta_r=O(q)=O(D)`. ZI cancels the full `q` term. If
 `e_BB+s_C=o(D)`, then
 
-$$
+```math
 \sum_r\delta_r=o(D).
-$$
+```
 
 Thus a source can have linearly many unloaded components while their **total** internal
 graph diameter is sublinear.
@@ -186,87 +186,87 @@ Assume `c_I>0`. Use C37--C38 notation:
 
 Define four exact nonnegative slacks:
 
-$$
+```math
 \boxed{u_A:=a-3c_I\ge0,}
 \tag{ZJ.1}
-$$
+```
 
-$$
+```math
 \boxed{p_A:=q_{used}+2c_I-2s-a\ge0,}
 \tag{ZJ.2}
-$$
+```
 
-$$
+```math
 \boxed{u_0:=q-q_{used}\ge0,}
 \tag{ZJ.3}
-$$
+```
 
 and, from C38,
 
-$$
+```math
 \boxed{
 r_Q:=e_{BB}-\bigl(s+u_0-1\bigr)\ge0.}
 \tag{ZJ.4}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 e_{BB}+s_C-k
 =u_A+p_A+2(s-1)+u_0.
 }
 \tag{ZJ.5}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 s_C+r_Q
 =k+u_A+p_A+(s-1).
 }
 \tag{ZJ.6}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{k=d_H+s_Z\le s_C+r_Q\le s_C+e_{BB}.}
 \tag{ZJ.7}
-$$
+```
 
 ### Proof
 
 The definitions of `u_A,p_A` give
 
-$$
+```math
 q_{used}
 =a-2c_I+2s+p_A
 =c_I+u_A+p_A+2s.
-$$
+```
 
 Adding `u_0=q-q_used` yields
 
-$$
+```math
 q=c_I+u_A+p_A+2s+u_0.
 \tag{ZJ.8}
-$$
+```
 
 ZU, written with `k`, is
 
-$$
+```math
 q=c_I+e_{BB}+s_C+2-k.
 \tag{ZJ.9}
-$$
+```
 
 Cancel `c_I` between ZJ.8 and ZJ.9 to obtain ZJ.5.
 
 C38 and ZJ.4 give
 
-$$
+```math
 e_{BB}=s+u_0-1+r_Q.
-$$
+```
 
 Insert this into ZJ.5 and cancel `u_0`; the result is ZJ.6. Since every term on
 the right of ZJ.6 except `k` is nonnegative and `r_Q<=e_BB`, ZJ.7 follows. `square`
@@ -275,34 +275,34 @@ the right of ZJ.6 except `k` is nonnegative and `r_Q<=e_BB`, ZJ.7 follows. `squa
 
 If `c_I>0` and
 
-$$
+```math
 e_{BB}=s_C=0,
-$$
+```
 
 then C38 forces `s=1`, `u_0=0`, `r_Q=0`; ZJ.6 then forces
 
-$$
+```math
 \boxed{k=u_A=p_A=0.}
 \tag{ZJ.10}
-$$
+```
 
 ZU becomes
 
-$$
+```math
 \boxed{c_I=q-2.}
 \tag{ZJ.11}
-$$
+```
 
 Thus every unloaded component has exactly three distinct loaded attachments, every
 loaded terminal is used, the attachment incidence graph is connected, and C37's
 planar Euler bound is exact. ZI further gives
 
-$$
+```math
 \boxed{
 \sum_r\delta_r+U+s_B=6.
 }
 \tag{ZJ.12}
-$$
+```
 
 Hence only a constant total amount of internal graph diameter, excess boundary
 attachment, or loaded-degree deficit survives in this exact zero-surplus phase.
@@ -316,30 +316,30 @@ loaded polygon. No geometric triangulation classification is asserted here.
 
 Let
 
-$$
+```math
 \boxed{
 L:=6-3(d_H+s_Z)+e_{BB}+3s_C.
 }
 \tag{ZP.1}
-$$
+```
 
 ZI shows `L>=0` and
 
-$$
+```math
 \sum_r\delta_r\le L.
 \tag{ZP.2}
-$$
+```
 
 C40's elementary packing estimate gives, for `n_r=|I_r|`,
 
-$$
+```math
 \boxed{n_r\le(2\delta_r+1)^2.}
 \tag{ZP.3}
-$$
+```
 
 Therefore the nonisolated contact-core population satisfies
 
-$$
+```math
 \boxed{
  v
  \le q+c_I+4L^2+4L
@@ -347,37 +347,37 @@ $$
  \le2\pi D+4L^2+4L.
 }
 \tag{ZP.4}
-$$
+```
 
 ### Proof
 
 Sum ZP.3:
 
-$$
+```math
 \sum_rn_r
 \le c_I+4\sum_r\delta_r^2+4\sum_r\delta_r.
-$$
+```
 
 The `delta_r` are nonnegative, so
 
-$$
+```math
 \sum_r\delta_r^2
 \le\left(\sum_r\delta_r\right)^2
 \le L^2.
-$$
+```
 
 Hence
 
-$$
+```math
 \sum_rn_r\le c_I+4L^2+4L.
-$$
+```
 
 The core consists of the `q` loaded terminals and the unloaded vertices. C37 gives
 `c_I<=q` whenever `c_I>0`, while it is trivial if `c_I=0`. Thus
 
-$$
+```math
 v\le2q+4L^2+4L.
-$$
+```
 
 Finally the convex diameter-endpoint polygon has unit-separated consecutive vertices
 and perimeter at most `pi D`, so `q<=pi D`. This proves ZP.4. `square`
@@ -386,37 +386,37 @@ and perimeter at most `pi D`, so `q<=pi D`. This proves ZP.4. `square`
 
 For global minimizers the canonical lattice/Oler bounds give
 
-$$
+```math
 \frac n{D^2}\longrightarrow
 \Delta:=\frac\pi{2\sqrt3}.
 \tag{ZP.5}
-$$
+```
 
 If along a post-ZF sequence
 
-$$
+```math
 \lambda:=\limsup\frac{e_{BB}+3s_C}{D},
-$$
+```
 
 then `L/D<=lambda+o(1)`, so ZP.4 gives
 
-$$
+```math
 \boxed{
 \limsup\frac v{D^2}\le4\lambda^2.
 }
 \tag{ZP.6}
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{
 \liminf\frac{n-v}{D^2}
 \ge
 \Delta-4\lambda^2.
 }
 \tag{ZP.7}
-$$
+```
 
 whenever the right side is positive.
 
@@ -426,26 +426,26 @@ In particular:
 
 If
 
-$$
+```math
 e_{BB}+s_C=o(D),
-$$
+```
 
 then
 
-$$
+```math
 \boxed{v=o(D^2)}
 \tag{ZP.8}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \frac{n-v}{D^2}\longrightarrow
 \frac\pi{2\sqrt3}.
 }
 \tag{ZP.9}
-$$
+```
 
 Thus asymptotically **all quadratic source population is contact-isolated** in this
 branch; the force-visible core contains only a negligible fraction on the `D^2`
@@ -453,12 +453,12 @@ scale.
 
 More quantitatively, a positive quadratic isolate density is forced whenever
 
-$$
+```math
 \limsup\frac{e_{BB}+3s_C}{D}
 <\frac12\sqrt{\frac\pi{2\sqrt3}}
 =0.476\ldots .
 \tag{ZP.10}
-$$
+```
 
 No contradiction is claimed: the repository already identifies isolate control as a
 missing global source-capacity theorem.
@@ -513,32 +513,32 @@ ZP exposes two clean high-value targets.
 Prove that a sufficiently large triangle-free global minimizer in the lexicographic
 C-II normalization cannot have
 
-$$
+```math
 n-v=\Theta(D^2)
-$$
+```
 
 contact-isolated source points while the force-visible core has diameter `D`.
 
 Any exact source-capacity or finite same-`D` replacement theorem that gives
 `n-v=o(D^2)` would combine with ZP to force
 
-$$
+```math
 e_{BB}+s_C=\Omega(D).
-$$
+```
 
 ### Linear-surplus target
 
 In the complementary branch, convert
 
-$$
+```math
 e_{BB}+3s_C=\Omega(D)
-$$
+```
 
 into either the direct face inequality
 
-$$
+```math
 b+\sum_F(\deg F-4)>2h
-$$
+```
 
 or a strict sub-`D` competitor. ZJ shows that `s_C` must also pay for the mixed defect
 `d_H+s_Z` after the loaded-loaded contacts needed merely for quotient connectivity are

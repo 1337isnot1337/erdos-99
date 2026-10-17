@@ -16,29 +16,29 @@
 
 The pentagon residual theorem stops when the pentagon-only floor vanishes near `t=2.02157`. The modern low-degree staircase shows that this is not the end of the low-degree geometry: a linear population of bounded pentagon-or-hexagon contact faces persists to
 
-$$
+```math
  t<X_6,
  \qquad
  X_6={6C_{707}+4\pi\over11}>2.1854,
-$$
+```
 
 where
 
-$$
+```math
  C_{707}=2\sqrt{\pi/(2\sqrt3)}+0.007707.
-$$
+```
 
 Both degrees five and six are exactly the degrees for which the audited Wegner theorem classifies Oler equality, and the isolate-host theorem says both face types contain no assigned inactive source points. Consequently the exact residual argument extends without a new packing theorem.
 
 Let
 
-$$
+```math
 F_{56}:=f_5+f_6.
-$$
+```
 
 For every fixed endpoint `t<=T<X_6`, the staircase gives
 
-$$
+```math
 \boxed{
  {F_{56}\over D}
  \ge L_6(T)-o(1),
@@ -46,7 +46,7 @@ $$
  L_6(T):={3C_{707}/2+\pi-11T/4\over2}.
 }
 \tag{LR.1}
-$$
+```
 
 The conclusion is the following high-`t` fork.
 
@@ -54,14 +54,14 @@ The conclusion is the following high-`t` fork.
 
 Along every unbounded survivor sequence in the stated scope, either
 
-$$
+```math
 \limsup {R_F\over D}>0,
 \tag{LR.2}
-$$
+```
 
 or `R_F=o(D)` and there is a matching `M_D` of inactive source pairs with
 
-$$
+```math
 \boxed{
  |M_D|
  \ge\left({L_6(T)\over9}-o(1)\right)D,
@@ -69,7 +69,7 @@ $$
  \max_{xy\in M_D}(|x-y|-1)\to0.
 }
 \tag{LR.3}
-$$
+```
 
 Thus the sublinear-residual branch carries linearly many endpoint-disjoint almost-active unit constraints through the safe endpoint `t<=2.1854`, not merely through the pentagon cutoff.
 
@@ -77,47 +77,47 @@ Thus the sublinear-residual branch carries linearly many endpoint-disjoint almos
 
 Let `P` be a bounded exceptional contact face of degree `d in {5,6}`. The hostile-audited isolate-host theorem gives
 
-$$
+```math
 z_P=0.
-$$
+```
 
 Its fixed chamber boundary consists of exactly its `d` unit contact sides, so
 
-$$
+```math
 k_P=d,
 \qquad
 P_P=d.
-$$
+```
 
 With `a_0=sqrt(3)/2`, exact chamber residual conservation defines
 
-$$
+```math
 r_P={A_P\over a_0}+{d\over2}+1-d.
-$$
+```
 
 The equilateral-face Oler minimum is
 
-$$
+```math
 A_{min}(d)={\sqrt3\over4}(d-2)={a_0\over2}(d-2).
-$$
+```
 
 Therefore, exactly,
 
-$$
+```math
 \boxed{
  r_P={A_P-A_{min}(d)\over a_0}.
 }
 \tag{LR.4}
-$$
+```
 
 In particular `r_P>=0`, and residual conservation gives
 
-$$
+```math
 \boxed{
  \sum_{P:\deg P\in\{5,6\}}r_P\le R_F.
 }
 \tag{LR.5}
-$$
+```
 
 ## 2. Wegner stability is uniform at each fixed hidden-distance margin
 
@@ -125,50 +125,50 @@ For `d=5,6`, the audited scaled Wegner equality theorem says that zero Oler slac
 
 For every fixed `eta>0`, compactness consequently gives positive constants
 
-$$
+```math
 \sigma_5(\eta)>0,
 \qquad
 \sigma_6(\eta)>0
-$$
+```
 
 such that a convex equilateral unit-separated `d`-face all of whose nonconsecutive pairs have distance at least `1+eta` satisfies
 
-$$
+```math
 A_P\ge A_{min}(d)+\sigma_d(\eta).
-$$
+```
 
 Set
 
-$$
+```math
 c(\eta):={\min\{\sigma_5(\eta),\sigma_6(\eta)\}\over a_0}>0.
-$$
+```
 
 If
 
-$$
+```math
 h(P):=\min_{xy\text{ nonconsecutive in }P}(|x-y|-1),
-$$
+```
 
 then (LR.4)--(LR.5) imply the finite estimate
 
-$$
+```math
 \boxed{
  \#\{P:\deg P\in\{5,6\},\ h(P)\ge\eta\}
  \le {R_F\over c(\eta)}.
 }
 \tag{LR.6}
-$$
+```
 
 Hence if `R_F=o(D)`, then for every fixed `eta>0` all but `o(D)` of the linearly many faces counted by (LR.1) have a hidden nonedge shorter than `1+eta`.
 
 A diagonal choice `eta_D downarrow 0` gives a family `G_D` with
 
-$$
+```math
 |G_D|\ge(L_6(T)-o(1))D,
 \qquad
 \max_{P\in G_D}h(P)\to0.
 \tag{LR.7}
-$$
+```
 
 Choose one minimizing hidden pair `e_P` from each such face.
 
@@ -180,16 +180,16 @@ A source vertex belongs to at most `deg_C(v)<=5` distinct bounded face boundarie
 
 Regard the chosen pairs as a multigraph on source vertices. Its maximum degree is at most five. A chosen pair `xy` conflicts with at most
 
-$$
+```math
 (5-1)+(5-1)=8
-$$
+```
 
 other chosen pair occurrences. Greedy edge selection therefore gives a matching of at least one ninth of all chosen pairs:
 
-$$
+```math
 \boxed{|M_D|\ge{|G_D|\over9}.}
 \tag{LR.8}
-$$
+```
 
 Combining (LR.7)--(LR.8) proves (LR.3). Repeated candidate pairs from different faces cause no problem: they share both endpoints and are simply mutually conflicting occurrences in the same greedy extraction.
 
@@ -197,7 +197,7 @@ Combining (LR.7)--(LR.8) proves (LR.3). Repeated candidate pairs from different 
 
 The exact companion certificate gives the following deliberately rounded-down matching densities in the sublinear-residual branch:
 
-$$
+```math
 \begin{array}{c|c|c}
 T & F_{56}/D\text{ lower} & |M_D|/D\text{ lower}\\ \hline
 2.00 & 0.2550 & 0.0283\\
@@ -208,7 +208,7 @@ T & F_{56}/D\text{ lower} & |M_D|/D\text{ lower}\\ \hline
 2.1854 & 0.00012 & 0.00001
 \end{array}
 \tag{LR.9}
-$$
+```
 
 The exact positivity threshold satisfies `X_6>2.1854`.
 

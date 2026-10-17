@@ -14,39 +14,39 @@ proof-only floor (1.6375621ldots) survives.
 The report defines (t=(q-k)/D), (\Delta_2=\pi/(2\sqrt3)), and uses the valid
 finite/asymptotic inequalities
 
-$$
+```math
 Q/D\le 2t-\pi+o(1),
 \qquad
 f/D\ge \sqrt{\Delta_2}-t/2+o(1)
-$$
+```
 
 in the regime (t<2\sqrt{\Delta_2}), together with (f\le Q).  Therefore
 
-$$
+```math
 \sqrt{\Delta_2}-t/2\le 2t-\pi,
-$$
+```
 
 which rearranges to
 
-$$
+```math
 \pi+\sqrt{\Delta_2}\le {5\over2}t,
 \qquad
 \boxed{t\ge {2\over5}(\pi+\sqrt{\Delta_2})}.
-$$
+```
 
 The source report instead states
 
-$$
+```math
 t\ge {2\pi+2\sqrt{\Delta_2}\over3},
-$$
+```
 
 which is not the solution of the displayed inequality.  Numerically,
 
-$$
+```math
 {2\over5}(\pi+\sqrt{\Delta_2})=1.6375621841815\ldots,
 \qquad
 2\sqrt{\Delta_2}=1.9046256137279\ldots.
-$$
+```
 
 The claimed comparison that the former exceeds the latter is also false.
 
@@ -57,25 +57,25 @@ The claimed comparison that the former exceeds the latter is also false.
 The same premises do yield the weaker floor.  Take any subsequential limit (t) of
 ((q-k)/D).  If (t\ge2\sqrt{\Delta_2}), then certainly
 
-$$
+```math
 t\ge {2\over5}(\pi+\sqrt{\Delta_2}).
-$$
+```
 
 If (t<2\sqrt{\Delta_2}), the preceding valid inequalities and (f\le Q) give
 
-$$
+```math
 t\ge {2\over5}(\pi+\sqrt{\Delta_2}).
-$$
+```
 
 Thus the corrected candidate conclusion is
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}{q-k\over D}
 \ge {2\over5}\left(\pi+\sqrt{\frac\pi{2\sqrt3}}\right)
 =1.6375621841815\ldots .
 }
-$$
+```
 
 This is stronger than the previously canonical direct floor (pi/2), provided the
 source report’s two input inequalities are used in their stated Type-II scope.  It

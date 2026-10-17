@@ -24,34 +24,34 @@ Thus two null bodies cannot be the final C-I obstruction. A survivor needs at le
 
 Let `P,Q` be source-vertex sets with
 
-$$
+```math
 P\cap Q=\{x\}.
 \tag{C59.1}
-$$
+```
 
 Let a fixed-diameter critical velocity restrict to infinitesimal rigid motions
 
-$$
+```math
 v(p)=t_P+\omega_PJp\quad(p\in P),
 \qquad
 v(q)=t_Q+\omega_QJq\quad(q\in Q).
 \tag{C59.2}
-$$
+```
 
 If `omega_P=omega_Q`, equality of the two velocities at the shared vertex `x` gives `t_P=t_Q`; the two restrictions are one rigid motion. Assume instead
 
-$$
+```math
 \delta:=\omega_P-\omega_Q\ne0.
-$$
+```
 
 Subtract the global infinitesimal rigid motion of `Q`. Pair-distance derivatives are unchanged. Then
 
-$$
+```math
 v(q)=0\quad(q\in Q),
 \qquad
 \boxed{v(p)=\delta J(p-x)\quad(p\in P).}
 \tag{C59.3}
-$$
+```
 
 So the relative motion is exactly rotation about the shared source point `x`.
 
@@ -59,30 +59,30 @@ So the relative motion is exactly rotation about the shared source point `x`.
 
 For exclusive endpoints `p in P\setminus\{x\}` and `q in Q\setminus\{x\}`, put
 
-$$
+```math
 a=p-x,\qquad b=q-x.
-$$
+```
 
 Rotate `P` through angle `theta` about `x`, keeping `Q` fixed:
 
-$$
+```math
 p(\theta)=x+R_\theta a.
-$$
+```
 
 The squared cross distance is
 
-$$
+```math
 f_{pq}(\theta)
 =|a|^2+|b|^2-2(R_\theta a)\cdot b,
 \tag{C59.4}
-$$
+```
 
 with
 
-$$
+```math
 f'_{pq}(0)=-2(Ja)\cdot b.
 \tag{C59.5}
-$$
+```
 
 Hence zero first variation is equivalent to collinearity of `a` and `b`.
 
@@ -92,21 +92,21 @@ Hence zero first variation is equivalent to collinearity of `a` and `b`.
 
 If
 
-$$
+```math
 |p-q|=1,
 \qquad
 f'_{pq}(0)=0,
-$$
+```
 
 then `p-x` and `q-x` point along the same ray from `x`, and
 
-$$
+```math
 \boxed{
 f_{pq}(\theta)
 =1+2|p-x||q-x|(1-\cos\theta)
 \ge1.}
 \tag{C59.6}
-$$
+```
 
 It is strict for nonzero sufficiently small `theta`.
 
@@ -114,17 +114,17 @@ It is strict for nonzero sufficiently small `theta`.
 
 Collinearity leaves same or opposite rays. Opposite rays would give
 
-$$
+```math
 |p-q|=|p-x|+|q-x|\ge2,
-$$
+```
 
 because both exclusive source points are at least unit distance from `x`. Therefore the rays are the same. Writing the positive radii as `r,s`, one has `|r-s|=1`, and (C59.4) becomes
 
-$$
+```math
 (r-s)^2+2rs(1-\cos\theta).
-$$
+```
 
-This is (C59.6). $\square$
+This is (C59.6). $`\square`$
 
 ## 4. Stationary diameter pairs shorten
 
@@ -132,21 +132,21 @@ This is (C59.6). $\square$
 
 If
 
-$$
+```math
 |p-q|=D,
 \qquad
 f'_{pq}(0)=0,
-$$
+```
 
 then `p-x` and `q-x` point along opposite rays from `x`, and
 
-$$
+```math
 \boxed{
 f_{pq}(\theta)
 =D^2-2|p-x||q-x|(1-\cos\theta)
 \le D^2.}
 \tag{C59.7}
-$$
+```
 
 It is strict for nonzero sufficiently small `theta`.
 
@@ -154,23 +154,23 @@ It is strict for nonzero sufficiently small `theta`.
 
 If the collinear rays were the same, then, because exclusive source points satisfy
 
-$$
+```math
 1\le|p-x|,|q-x|\le D,
-$$
+```
 
 one would have
 
-$$
+```math
 |p-q|=igl||p-x|-|q-x|\bigr|\le D-1<D,
-$$
+```
 
 a contradiction. Hence the rays are opposite. Their positive radii `r,s` satisfy `r+s=D`, and (C59.4) becomes
 
-$$
+```math
 (r+s)^2-2rs(1-\cos\theta),
-$$
+```
 
-which is (C59.7). $\square$
+which is (C59.7). $`\square`$
 
 ## 5. Theorem C59 — finite two-body hinge integration
 
@@ -183,18 +183,18 @@ Assume:
 
 Then for all sufficiently small nonzero `theta` of the sign matching the relative angular velocity, the finite rotation of `P` about `x` with `Q` fixed satisfies
 
-$$
+```math
 |p_i(\theta)-p_j(\theta)|\ge1
 \quad\text{for all pairs},
 \tag{C59.8}
-$$
+```
 
 and
 
-$$
+```math
 \operatorname{diam}A(\theta)=D.
 \tag{C59.9}
-$$
+```
 
 Every weak active row becomes strict. Hence a weak unit contact contradicts contact minimality.
 
@@ -209,7 +209,7 @@ All initially inactive pairs have strict slack in `(1,D)` and retain it after sh
 
 A normalized extreme null body carries at least one positive diameter edge. Such an edge is internal to one rigid body, so its length remains exactly `D`; therefore the new diameter is exactly `D`, not merely at most `D`.
 
-Because `v` is relative-interior, every weak active row has strict signed derivative. No weak row can be internal to one rigid body, where its derivative would be zero. Thus every weak row becomes strict. No new contact appears, so a weak unit contact is removed, contradicting contact minimality. $\square$
+Because `v` is relative-interior, every weak active row has strict signed derivative. No weak row can be internal to one rigid body, where its derivative would be zero. Thus every weak row becomes strict. No new contact appears, so a weak unit contact is removed, contradicting contact minimality. $`\square`$
 
 ## 6. Exact effect on the C58 bounded-star branch
 
@@ -226,37 +226,37 @@ Any remaining C-I obstruction must have at least one of the following forms:
 
 The next branch already has an exact first reduction. Let three rigid-motion classes `A,B,C` have distinct angular rates and pairwise shared hinge vertices
 
-$$
+```math
 x_{AB},\quad x_{BC},\quad x_{CA}.
-$$
+```
 
 Write their rigid velocity fields as
 
-$$
+```math
 v_X(p)=t_X+\omega_XJp.
-$$
+```
 
 Equality of the two body velocities at each shared vertex gives
 
-$$
+```math
 t_B-t_A=(\omega_A-\omega_B)Jx_{AB},
-$$
+```
 
 and cyclic analogues. Summing and multiplying by `-J` yields
 
-$$
+```math
 (\omega_A-\omega_B)x_{AB}
 +(\omega_B-\omega_C)x_{BC}
 +(\omega_C-\omega_A)x_{CA}=0.
 \tag{C59.10}
-$$
+```
 
 The coefficients sum to zero and are not all zero. Therefore
 
-$$
+```math
 \boxed{x_{AB},x_{BC},x_{CA}\text{ are collinear}.}
 \tag{C59.11}
-$$
+```
 
 So the next obstruction is not an arbitrary three-body pin triangle: every flexible three-motion triangle has its three actual source hinges on one line.
 

@@ -38,17 +38,17 @@ Delaunay transfer or the separate finite radial-lifting certificate.
 
 Put
 
-$$
+```math
 a_h=M-1-2h\quad (0\le h<M),\qquad N=3M^2-3M+1.
-$$
+```
 
-There is one absolute constant $c_*>0$, independent of M and of the rate
-permutation, such that for every $M\ge4$ and
-$0<\theta\le c_*M^{-40}$, every pairwise unit-separated union of all
-$6M$ vertices of the specified arithmetic six-sided wall and exactly N
+There is one absolute constant $`c_*>0`$, independent of M and of the rate
+permutation, such that for every $`M\ge4`$ and
+$`0<\theta\le c_*M^{-40}`$, every pairwise unit-separated union of all
+$`6M`$ vertices of the specified arithmetic six-sided wall and exactly N
 additional points in its strict interior has its interior point set equal,
 after wall alignment and point relabeling, to a sorting packet associated
-with some permutation of $(a_h)$. Each such packet contains the center and
+with some permutation of $`(a_h)`$. Each such packet contains the center and
 two adjacent first-ring sites at mutual distances one, so the union contains
 an actual unit equilateral triangle.
 
@@ -65,8 +65,8 @@ isolates; at population N the classification supplies a unit triangle.
 ## Canonical dependencies
 
 The uniform chart input is `C-ARITHMETIC-SIX-WALL-UNIFORM-CHART`: in its
-stated $\theta\le1/(10000M^3)$ range, every maximal cloud is within
-$1000M^4\theta$ of the full triangular-lattice chart after rigid alignment.
+stated $`\theta\le1/(10000M^3)`$ range, every maximal cloud is within
+$`1000M^4\theta`$ of the full triangular-lattice chart after rigid alignment.
 The exact nested ring/axis stress identities are used only for their selected
 strong rows and central-chain energy bound, within
 `C-NESTED-HEXAGON-STRESS-ENERGY-DEMAND`'s stated geometry. The exact
@@ -77,8 +77,8 @@ quantitatively rather than inferred from that theorem's fixed-M onset.
 
 For the source corollary, I use
 `C-ONE-DEFICIT-ARITHMETIC-WINDOW-OLER-CAP` and
-`C-ONE-DEFICIT-ARITHMETIC-WINDOW-SOURCE-EXCLUSION`. The chosen $c_*$ is
-small enough that $c_*M^{-40}\le1/(100M^3)$ for all M≥4. Those canonical
+`C-ONE-DEFICIT-ARITHMETIC-WINDOW-SOURCE-EXCLUSION`. The chosen $`c_*`$ is
+small enough that $`c_*M^{-40}\le1/(100M^3)`$ for all M≥4. Those canonical
 exchanges retain the entire exterior source and every contact isolate.
 
 ## Independent proof reconstruction
@@ -86,103 +86,103 @@ exchanges retain the entire exterior source and every contact isolate.
 ### Uniform flat-row inverse
 
 Let J be the complete moving-involving unit-contact row set of a sorting
-packet, evaluated first at the flat chart $\theta=0$. Let S consist of
+packet, evaluated first at the flat chart $`\theta=0`$. Let S consist of
 all ring rows and the six radial axes (including the corner guards). For a
 moving displacement x with the wall fixed, set
 
-$$
+```math
 \eta=\|R_0[J]x\|_\infty.
-$$
+```
 
 Radial telescoping from the pinned corners gives axial radial components at
-most $M\eta$; the central displacement is at most $2M\eta$. Ring-row
+most $`M\eta`$; the central displacement is at most $`2M\eta`$. Ring-row
 sums bound the variation between the six axial tangential components on a
-ring by $4M\eta$. Taking one component $\alpha_r$ as the ring value,
-the axial vectors differ from $\alpha_rJ(e_k)$ by at most $21M\eta$.
+ring by $`4M\eta`$. Taking one component $`\alpha_r`$ as the ring value,
+the axial vectors differ from $`\alpha_rJ(e_k)`$ by at most $`21M\eta`$.
 
 For each off-axis sector point, its u-coordinate determines a scalar
-$s_{r,j}$; replace its v-coordinate by the value required by the ring
-kernel. Summing ring residuals bounds this change by $26M\eta$. This gives
-a linear projection $P_L$ onto the strong-row kernel L with
+$`s_{r,j}`$; replace its v-coordinate by the value required by the ring
+kernel. Summing ring residuals bounds this change by $`26M\eta`$. This gives
+a linear projection $`P_L`$ onto the strong-row kernel L with
 
-$$
+```math
 \|x-P_Lx\|_\infty\le26M\eta.
-$$
+```
 
 After this projection, each weak recurrence row has residual at most
-$62M\eta$ after division by $c=\sqrt3/2$. For the path selecting the
+$`62M\eta`$ after division by $`c=\sqrt3/2`$. For the path selecting the
 j smallest full rates, telescoping from the center to the pinned outer side
-gives each threshold subset sum error at most $62M^2\eta$. Taking adjacent
+gives each threshold subset sum error at most $`62M^2\eta`$. Taking adjacent
 threshold differences bounds every increment
-$t_h=\alpha_{h+1}-\alpha_h$ by $124M^2\eta$; summing the increments
-bounds $|\alpha_r|\le124M^3\eta$. Applying the same path estimate to each
-interior sector point gives $|s_{r,j}|\le186M^3\eta$. In Cartesian
+$`t_h=\alpha_{h+1}-\alpha_h`$ by $`124M^2\eta`$; summing the increments
+bounds $`|\alpha_r|\le124M^3\eta`$. Applying the same path estimate to each
+interior sector point gives $`|s_{r,j}|\le186M^3\eta`$. In Cartesian
 coordinates this yields
 
-$$
+```math
 \|x\|_\infty\le500M^3\eta,
 \qquad \sigma_{\min}(R_0[J])\ge(1000M^4)^{-1}.
-$$
+```
 
 The last inequality follows by converting the max-coordinate bound to
-Euclidean norm over at most $3M^2$ moving points. The same projection gives
-$\sigma^+_{\min}(R_0[S])\ge(52M^2)^{-1}$, since the distance to L is at
-most $26M\|R_0[S]x\|_\infty$. These are explicit threshold-path bounds,
+Euclidean norm over at most $`3M^2`$ moving points. The same projection gives
+$`\sigma^+_{\min}(R_0[S])\ge(52M^2)^{-1}`$, since the distance to L is at
+most $`26M\|R_0[S]x\|_\infty`$. These are explicit threshold-path bounds,
 not a generic-rank or floating-singular-value inference.
 
 ### Positive stress uniform in M and the permutation
 
-The central six-chain stress $\lambda^p$ has unit coefficients on the six
+The central six-chain stress $`\lambda^p`$ has unit coefficients on the six
 radial chains. For its first row derivative, the action on L is
 
-$$
+```math
 g_0\cdot x=12\sum_h a_{\pi(h)}t_h.
-$$
+```
 
-Sort the rates as $b_0<\cdots<b_{M-1}$, and let I_j be the j smallest
+Sort the rates as $`b_0<\cdots<b_{M-1}`$, and let I_j be the j smallest
 rates. Abel summation gives
 
-$$
+```math
 \sum_j b_jt_{\pi(j)}=-\sum_{j=1}^{M-1}(b_j-b_{j-1})\sum_{h\in I_j}t_h.
-$$
+```
 
-Each threshold path has row sum $c\sum_{I_j}t_h$. Distributing the
+Each threshold path has row sum $`c\sum_{I_j}t_h`$. Distributing the
 six-sector path representation assigns weak-row coefficients
 
-$$
+```math
 \mu_e=\frac2c\sum_{\text{threshold paths containing }e}(b_j-b_{j-1}).
-$$
+```
 
 Every active weak row lies on a threshold path, and every adjacent rate gap
-is exactly two. Thus each weak coefficient is at least $4/c$, while a row
-occurs in at most M−1 thresholds, giving $\mu_e\le C M$. The difference
-$g_0+R_0^T\mu$ annihilates L, hence lies in the strong-row span. The
-positive singular bound for S gives a strong correction $\nu$ with
-$\|\nu\|_2\le C M^4$. Consequently
+is exactly two. Thus each weak coefficient is at least $`4/c`$, while a row
+occurs in at most M−1 thresholds, giving $`\mu_e\le C M`$. The difference
+$`g_0+R_0^T\mu`$ annihilates L, hence lies in the strong-row span. The
+positive singular bound for S gives a strong correction $`\nu`$ with
+$`\|\nu\|_2\le C M^4`$. Consequently
 
-$$
+```math
 \lambda_1=(\mu-\nu)/2,\qquad R_0^T\lambda_1=-R_1^T\lambda^p,
-$$
+```
 
-and all weak coefficients of $\lambda_1$ are uniformly positive.
+and all weak coefficients of $`\lambda_1`$ are uniformly positive.
 
-Add $\epsilon=c_0M^{-7}$ times the remaining nested stresses so that every
-strong row has coefficient at least $\epsilon$. Their total first-force
-correction is at most $C\epsilon M^3$; the $R_0^T$ right inverse
-corrects $\lambda_1$ by at most $C\epsilon M^7$. A fixed sufficiently
-small absolute $c_0$ keeps every weak first-order coefficient positive.
+Add $`\epsilon=c_0M^{-7}`$ times the remaining nested stresses so that every
+strong row has coefficient at least $`\epsilon`$. Their total first-force
+correction is at most $`C\epsilon M^3`$; the $`R_0^T`$ right inverse
+corrects $`\lambda_1`$ by at most $`C\epsilon M^7`$. A fixed sufficiently
+small absolute $`c_0`$ keeps every weak first-order coefficient positive.
 The row matrices have bounded incidence degree and their entries and first
-two $\theta$-derivatives are respectively $O(M)$ and $O(M^2)$, since
-$|a_h|\le M$. For $\theta\le cM^{-11}$, the active-row singular bound
-persists with right-inverse norm at most $2000M^4$. Correcting
-$\lambda_0+\theta\lambda_1$ by $O(\theta^2M^9)$ therefore gives an
-exact stress $\lambda_\theta$ satisfying
+two $`\theta`$-derivatives are respectively $`O(M)`$ and $`O(M^2)`$, since
+$`|a_h|\le M`$. For $`\theta\le cM^{-11}`$, the active-row singular bound
+persists with right-inverse norm at most $`2000M^4`$. Correcting
+$`\lambda_0+\theta\lambda_1`$ by $`O(\theta^2M^9)`$ therefore gives an
+exact stress $`\lambda_\theta`$ satisfying
 
-$$
+```math
 R_\theta^T\lambda_\theta=0,\qquad
 \min_e\lambda_{\theta,e}\ge\theta/2,\qquad
 \sum_e\lambda_{\theta,e}\le C M.
-$$
+```
 
 Every bound is independent of the rate permutation. The exact rational
 certificate checks path coverage and finite linear identities; the
@@ -191,78 +191,78 @@ polynomial conditioning and stress-continuation estimates above are analytic.
 ### Finite isolation and arbitrary-cloud classification
 
 For any feasible displacement x from a sorting packet with the same wall,
-each active unit row obeys $(R_\theta x)_e\ge-2\|x\|_\infty^2$. The exact
+each active unit row obeys $`(R_\theta x)_e\ge-2\|x\|_\infty^2`$. The exact
 positive stress has zero weighted sum on these rows. Its coefficient floor
 and total mass give
 
-$$
+```math
 \|R_\theta x\|_\infty\le C M\|x\|_\infty^2/\theta.
-$$
+```
 
 The perturbed row inverse then yields
 
-$$
+```math
 x\ne0\quad\Longrightarrow\quad\|x\|_\infty\ge c\theta/M^4.
-$$
+```
 
 This is a finite isolation radius; no differentiable path of competing
 clouds is assumed.
 
 Now take any maximal cloud in the claim. The canonical uniform chart gives
-$\|\delta\|_\infty\le1000M^4\theta$ from the flat chart. Divide by
-$\theta$, incorporate the prescribed wall first field, and expand all
+$`\|\delta\|_\infty\le1000M^4\theta`$ from the flat chart. Divide by
+$`\theta`$, incorporate the prescribed wall first field, and expand all
 nearest-neighbor lower inequalities, including wall-neighbor rows. The
-quadratic row error is at most $C M^8\theta$ after division by theta.
+quadratic row error is at most $`C M^8\theta`$ after division by theta.
 Summing the nested strong rows, whose boundary first-field terms are the
-specified corner data, bounds each strong residual by $\eta\le C M^9\theta$.
-The projection above gives a strong-kernel field within $CM^{10}\theta$.
-The weak recurrences then have error $\zeta\le CM^{10}\theta$; every
+specified corner data, bounds each strong residual by $`\eta\le C M^9\theta`$.
+The projection above gives a strong-kernel field within $`CM^{10}\theta`$.
+The weak recurrences then have error $`\zeta\le CM^{10}\theta`$; every
 threshold path yields
 
-$$
+```math
 \sum_{h\in I}t_h\ge B_j-\rho,\qquad B_j=-j(M-j),\qquad
 \rho\le CM^{11}\theta.
-$$
+```
 
-Put $\bar t=(M-1)t/(M-1+\rho)$. Since $|B_j|=j(M-j)\ge M-1$,
-these inequalities and $\sum t_h=0$ imply $\bar t$ lies in the exact
+Put $`\bar t=(M-1)t/(M-1+\rho)`$. Since $`|B_j|=j(M-j)\ge M-1`$,
+these inequalities and $`\sum t_h=0`$ imply $`\bar t`$ lies in the exact
 permutahedron of the arithmetic rates. The initial chart bound gives
-$\|t-\bar t\|_2\le CM^{15}\theta$.
+$`\|t-\bar t\|_2\le CM^{15}\theta`$.
 
 For the six radial chains, writing their actual edge vectors as
-$y_{r,k}$, their endpoints are $L(\theta)e_k$, where
-$L(\theta)=\sum_h\cos(a_h\theta)$. Since $|y_{r,k}|\ge1$, expansion
+$`y_{r,k}`$, their endpoints are $`L(\theta)e_k`$, where
+$`L(\theta)=\sum_h\cos(a_h\theta)`$. Since $`|y_{r,k}|\ge1`$, expansion
 against the flat unit direction gives the exact lower bound
 
-$$
+```math
 \sum_{k,r}|y_{r,k}-e_k|^2\ge12(M-L(\theta)).
-$$
+```
 
-Taylor expansion of L yields $6\sum a_h^2-CM^5\theta^2$ after division
-by $\theta^2$. Replacing the approximate field by its strong-kernel
-projection changes the chain energy by at most $CM^{15}\theta$; replacing
-t by $\bar t$ costs at most $CM^{20}\theta$. Because the squared norm
+Taylor expansion of L yields $`6\sum a_h^2-CM^5\theta^2`$ after division
+by $`\theta^2`$. Replacing the approximate field by its strong-kernel
+projection changes the chain energy by at most $`CM^{15}\theta`$; replacing
+t by $`\bar t`$ costs at most $`CM^{20}\theta`$. Because the squared norm
 is maximized on this permutahedron at its permutation vertices, this proves
 
-$$
+```math
 0\le\sum_h a_h^2-\|\bar t\|_2^2\le CM^{20}\theta.
-$$
+```
 
 The variance identity for a convex combination of permutations supplies a
-permutation $t^*$ with $\|\bar t-t^*\|_2\le CM^{10}\sqrt\theta$.
+permutation $`t^*`$ with $`\|\bar t-t^*\|_2\le CM^{10}\sqrt\theta`$.
 Threshold paths control all remaining sector coordinates and give
-$\|d-d^*\|_\infty\le CM^{16}\sqrt\theta$. The exact packet differs from
-its first-order approximation by at most $CM^3\theta^2$; therefore the
-cloud lies within $CM^{16}\theta^{3/2}$ of that packet.
+$`\|d-d^*\|_\infty\le CM^{16}\sqrt\theta`$. The exact packet differs from
+its first-order approximation by at most $`CM^3\theta^2`$; therefore the
+cloud lies within $`CM^{16}\theta^{3/2}`$ of that packet.
 
-Choose $c_*>0$ below the finitely many absolute constants needed for the
-effective chart, the $M^{-11}$ stress continuation, exact packet
-feasibility, the $1/(100M^3)$ one-deficit/Oler range, and
-$CM^{20}\sqrt\theta<c_{\rm iso}$. With
-$\theta\le c_*M^{-40}$, the last condition is uniform in M. The cloud is
+Choose $`c_*>0`$ below the finitely many absolute constants needed for the
+effective chart, the $`M^{-11}`$ stress continuation, exact packet
+feasibility, the $`1/(100M^3)`$ one-deficit/Oler range, and
+$`CM^{20}\sqrt\theta<c_{\rm iso}`$. With
+$`\theta\le c_*M^{-40}`$, the last condition is uniform in M. The cloud is
 strictly inside the finite isolation radius of a feasible sorting packet,
 so it equals that packet. This explains the exponent 40 and proves an
-existential universal $c_*$; it does not provide a numerical value.
+existential universal $`c_*`$; it does not provide a numerical value.
 
 ## Verifier audit
 
@@ -282,8 +282,8 @@ stress continuation, or arbitrary-cloud classification.
 
 - The profile has adjacent rate gap exactly two. No uniform theorem for
   profiles with arbitrarily small gaps is promoted.
-- The joint range is only $\theta\le c_*M^{-40}$; it does not extend the
-  result to $\theta$ of order $M^{-3}$ or $M^{-1}$.
+- The joint range is only $`\theta\le c_*M^{-40}`$; it does not extend the
+  result to $`\theta`$ of order $`M^{-3}`$ or $`M^{-1}`$.
 - M≥4 is retained for the canonical one-deficit source exclusion. This audit
   does not extrapolate that exchange to M=3.
 - The wall constraints are weak pairwise unit separation; existing wall

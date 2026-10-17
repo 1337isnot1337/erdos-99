@@ -25,36 +25,36 @@ Combining both gives a substantially stronger quantitative dichotomy.
 
 Let
 
-$$
+```math
 G:=\operatorname{area}(F)-\sum_r\operatorname{area}(\operatorname{conv}A_r)\ge0
-$$
+```
 
 be the attachment-cell area gap and put
 
-$$
+```math
 \lambda_2:=\limsup_{D\to\infty}\frac{e_{BB}+2s_C}{D}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \liminf\frac G{D^2}
 \ge
 \frac{\sqrt3}{4}-\frac\pi4\lambda_2^2.
 }
 \tag{GU.1}
-$$
+```
 
 Hence a positive quadratic gap is forced whenever
 
-$$
+```math
 \boxed{
 \lambda_2<\lambda_*:=\sqrt{\frac{\sqrt3}{\pi}}
 =0.7425152492\ldots .
 }
 \tag{GU.2}
-$$
+```
 
 The prior ZG threshold was about `0.396`; GU nearly doubles the range in which the post-ZF source is forced into macroscopic cavity/shell geometry.
 
@@ -64,51 +64,51 @@ The prior ZG threshold was about `0.396`; GU nearly doubles the range in which t
 
 ZK defines
 
-$$
+```math
 k=d_H+s_Z
-$$
+```
 
 and proves
 
-$$
+```math
 \sum_r\delta_r+R_I+s_B+3k
 =6+e_{BB}+2s_C.
-$$
+```
 
 Therefore with
 
-$$
+```math
 L_2:=6-3k+e_{BB}+2s_C\ge0
-$$
+```
 
 we have
 
-$$
+```math
 \sum_r\delta_r\le L_2.
 \tag{1.1}
-$$
+```
 
 The C49 attachment hulls have pairwise disjoint interiors, and the same elementary diameter estimate used in ZG gives
 
-$$
+```math
 \operatorname{diam}(A_r)\le\delta_r+2.
-$$
+```
 
 By the planar isodiametric inequality,
 
-$$
+```math
 \sum_r\operatorname{area}(\operatorname{conv}A_r)
 \le
 \frac\pi4L_2^2+\pi L_2+\pi^2D.
 \tag{1.2}
-$$
+```
 
 Since `k>=0`,
 
-$$
+```math
 \limsup\frac{L_2}{D}\le\lambda_2.
 \tag{1.3}
-$$
+```
 
 ---
 
@@ -116,44 +116,44 @@ $$
 
 DB proves for every unbounded post-ZF sequence
 
-$$
+```math
 \liminf\frac{\operatorname{area}(F)}{D^2}
 \ge\frac{\sqrt3}{4}.
 \tag{2.1}
-$$
+```
 
 Subtract (1.2) from (2.1), divide by `D^2`, and use (1.3). The linear terms vanish, giving GU.1:
 
-$$
+```math
 \liminf\frac G{D^2}
 \ge
 \frac{\sqrt3}{4}-\frac\pi4\lambda_2^2.
-$$
+```
 
 The right side is positive exactly when
 
-$$
+```math
 \lambda_2^2<\frac{\sqrt3}{\pi},
-$$
+```
 
 which proves GU.2.
 
 In particular, if
 
-$$
+```math
 e_{BB}+s_C=o(D),
-$$
+```
 
 then also `e_BB+2s_C=o(D)` and
 
-$$
+```math
 \boxed{
 \liminf\frac G{D^2}
 \ge\frac{\sqrt3}{4}
 =0.4330127019\ldots .
 }
 \tag{2.2}
-$$
+```
 
 This replaces the old sublinear-surplus gap constant `0.1237019796...`.
 
@@ -163,41 +163,41 @@ This replaces the old sublinear-surplus gap constant `0.1237019796...`.
 
 Let `Q=sum_F(deg F-4)` over bounded nonquadrilateral contact faces. DB proves
 
-$$
+```math
 Q+2s_Z
 \le
 h+1-2D\cos((h-1)a_D),
 \qquad
 a_D=\arcsin\frac1{2D}.
-$$
+```
 
 The C67 gap-feasibility condition implies `(h-1)a_D<pi/2`, so the cosine term is positive. Thus
 
-$$
+```math
 Q<h+1\le q+1\le\pi D+1.
 \tag{3.1}
-$$
+```
 
 For exceptional faces let `f` be their count and
 
-$$
+```math
 g_F=\sum_F(\deg F-5).
-$$
+```
 
 Their total perimeter is exactly
 
-$$
+```math
 K_{exc}=5f+g_F=Q+4f\le5Q.
-$$
+```
 
 Therefore DB sharpens the old crude post-ZF estimate to
 
-$$
+```math
 \boxed{
 K_{exc}\le5\pi D+O(1).
 }
 \tag{3.2}
-$$
+```
 
 The previous ZG localization used `K_exc<=10pi D`.
 
@@ -207,10 +207,10 @@ The previous ZG localization used `K_exc<=10pi D`.
 
 ZG proves the geometric charging inequality
 
-$$
+```math
 G\le H_{out}+A_{exc}+2q,
 \tag{4.1}
-$$
+```
 
 where
 
@@ -219,55 +219,55 @@ where
 
 Assume along a subsequence
 
-$$
+```math
 G\ge gD^2
-$$
+```
 
 for some fixed `g>0`.
 
 If `H_out<(g/2)D^2` along a further subsequence, then (4.1) and `q=O(D)` imply
 
-$$
+```math
 A_{exc}\ge(g/2-o(1))D^2.
 \tag{4.2}
-$$
+```
 
 Let `k_max` be the maximum exceptional-face perimeter. C51 makes each exceptional face convex, so
 
-$$
+```math
 A_{exc}
 \le\frac1{4\pi}\sum_i k_i^2
 \le\frac{k_{max}}{4\pi}K_{exc}.
-$$
+```
 
 Using (3.2),
 
-$$
+```math
 A_{exc}
 \le\left(\frac54+o(1)\right)k_{max}D.
-$$
+```
 
 Together with (4.2),
 
-$$
+```math
 \boxed{
 \liminf\frac{k_{max}}D\ge\frac{2g}{5}
 }
 \tag{4.3}
-$$
+```
 
 along that subsequence.
 
 Thus any quadratic gap yields the sharpened dichotomy:
 
-$$
+```math
 \boxed{
 H_{out}\ge\frac g2D^2
 \quad\text{or}\quad
 k_{max}\ge\left(\frac{2g}{5}-o(1)\right)D.
 }
 \tag{4.4}
-$$
+```
 
 The constants are not claimed optimal; the point is that DB improves both the gap density and the total exceptional-perimeter budget.
 
@@ -277,23 +277,23 @@ The constants are not claimed optimal; the point is that DB improves both the ga
 
 If `e_BB+s_C=o(D)`, take any
 
-$$
+```math
 g<\frac{\sqrt3}{4}.
-$$
+```
 
 Eventually `G>=gD^2`. Hence after passing to a subsequence either
 
-$$
+```math
 H_{out}\ge\left(\frac{\sqrt3}{8}-o(1)\right)D^2
 =0.2165063509\ldots D^2-o(D^2),
-$$
+```
 
 or one bounded exceptional face has perimeter at least
 
-$$
+```math
 \left(\frac{\sqrt3}{10}-o(1)\right)D
 =0.1732050807\ldots D-o(D).
-$$
+```
 
 So the sublinear loaded-contact/pinned-stress branch now forces a quantitatively large visible cavity, not merely some unspecified `Omega(D^2)` gap.
 
@@ -303,11 +303,11 @@ So the sublinear loaded-contact/pinned-stress branch now forces a quantitatively
 
 NM independently proves
 
-$$
+```math
 x_B+Q+2s_Z
 \ge(2\rho/3-o(1))D
 =0.4927234221\ldots D-o(D).
-$$
+```
 
 Thus every post-ZF survivor already carries a mandatory linear **diameter-branching/contact-topology** defect. GU concerns the different boundary/stress currency `e_BB+2s_C`.
 
@@ -347,15 +347,15 @@ If DB/ZK are promoted, GU should replace the numerical constants in the earlier 
 
 The quantitative post-ZF source now satisfies simultaneously:
 
-$$
+```math
 x_B+Q+2s_Z\ge(0.4927234-o(1))D
-$$
+```
 
 and either
 
-$$
+```math
 e_{BB}+2s_C\ge(0.7425152-o(1))D
-$$
+```
 
 or a macroscopic force-hull cavity is present.
 

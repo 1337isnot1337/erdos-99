@@ -30,32 +30,32 @@ train shore indicators `f_i=1_(S_i)`; selected trains may be on both shores
 of a complete rectangle. Assume their exact contact cutsets are pairwise
 edge-disjoint, as they are for distinct actual trains. Put
 
-$$
+```math
 A_i=\sum_{e\in E(\tau_i)}\alpha_e>0,\qquad
 E_{hi}=f_i(y_h)-f_i(x_h),\qquad B=\operatorname{diag}(\beta_h).
-$$
+```
 
 Let `F` have columns `f_i`. For the contact Laplacian,
 
-$$
+```math
 f_i^TL_Cf_j=
 \sum_{e=xy\in C}\alpha_e(f_i(y)-f_i(x))(f_j(y)-f_j(x)).
-$$
+```
 
 Distinct cutsets are disjoint, so this is zero for `i!=j` and is `A_i`
 for `i=j`. Similarly `F^TL_HF=E^TBE`. Thus necessarily
 
-$$
+```math
 \boxed{Q:=\operatorname{diag}(A_i)-E^TBE=F^T\Omega F\succeq0.}
 \tag{1}
-$$
+```
 
 The exact vector cut balance also gives
 
-$$
+```math
 A_i u_i=\sum_h\beta_h E_{hi}(p_{y_h}-p_{x_h}).
 \tag{2}
-$$
+```
 
 This uses the physical unit train direction and force convention, not a
 generic rank theorem. Equation (1) applies jointly to both shores, with
@@ -86,10 +86,10 @@ matrix test nevertheless passes.
 
 Every cut has
 
-$$
+```math
 A_i>D/8.
 \tag{3}
-$$
+```
 
 To prove this, rotate its axis to the x-axis. All vertices with signed
 indices `|j|<=floor(q/12)` have x-projection at least `R cos(pi/6)>R/8`,
@@ -102,9 +102,9 @@ There are at least `q/6-1` such positive-side vertices and exactly two
 diameters per vertex. No edge is counted twice because its other endpoint
 is negative. Thus
 
-$$
+```math
 A_i>{1\over q}(q/3-2){D\over2}>D/8
-$$
+```
 
 for `q>=109`. All remaining crossing diameter contributions have positive
 axial projection and can be omitted for this lower bound.
@@ -112,22 +112,22 @@ axial projection and can be omitted for this lower bound.
 For one diameter row, its total absolute incidence across the `2L`
 selected cuts is at most `2L`. Put `T=E^TBE`. At every column,
 
-$$
+```math
 \sum_j|T_{ij}|
 \le\sum_h\beta_h|E_{hi}|\sum_j|E_{hj}|
 \le2L\sum_h\beta_h\le2L.
 \tag{4}
-$$
+```
 
 By (1) of the shell report, `D>q/pi>q/4`, and `2L<=q/50`. Therefore
 
-$$
+```math
 Q_{ii}-\sum_{j\ne i}|Q_{ij}|
 \ge A_i-\sum_j|T_{ij}|
 >D/8-2L
 >q/32-q/50={9q\over800}>0.
 \tag{5}
-$$
+```
 
 The real symmetric matrix `Q` is strictly diagonally dominant with positive
 diagonal, hence positive definite. For completeness this follows directly

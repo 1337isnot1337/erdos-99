@@ -20,14 +20,14 @@ PR tip is `e54dc5be6f88516570c82af38ed7707deb22ac89`.
 
 Put (s=\sqrt{\pi/(2\sqrt3)}). The live proof-only inequality is
 
-$$
+```math
 5m_B+4S+2\sigma_R\ge2(\pi+s)D+5k+2(Q-f)+2(b-P_F)-o(D).
-$$
+```
 
 Any further train subfamily carrying (o(D^2)) incident rhombi adds five
 times its cardinality to the right. The scalar hull floor is
-$\mu_D\ge(\pi+s)/2+\varepsilon_*$ eventually, for a nonexplicit positive
-gap. Terminal (q/D\to\pi) implies $\liminf t_D\ge(3\pi+2s)/5$.
+$`\mu_D\ge(\pi+s)/2+\varepsilon_*`$ eventually, for a nonexplicit positive
+gap. Terminal (q/D\to\pi) implies $`\liminf t_D\ge(3\pi+2s)/5`$.
 The old terminal windows near 1.95--1.96 and the terminal 1.860 collar scope
 are empty. The disk perimeter limit alone is not terminality.
 
@@ -37,13 +37,13 @@ are empty. The disk perimeter limit alone is not terminality.
 for a minimum actual-contact separator from selected augmented-face boundaries
 to actual loaded vertices,
 
-$$
+```math
  Q_{\mathcal F}\le2|S|-2c_U-4c_K\le2|S|-4.
-$$
+```
 
 The resulting globally vertex-disjoint unloaded-start returns satisfy a
 simultaneous quota
-$r_f=\max(0,\lfloor(m_f-4)/2\rfloor-\ell_f)$ for every selected face.
+$`r_f=\max(0,\lfloor(m_f-4)/2\rfloor-\ell_f)`$ for every selected face.
 This handles cross-face reuse and mesoscopic degree tails at the level of
 face-indexed return count. It does not charge return length as face currency.
 Classification: proved candidate awaiting independent audit and promotion.
@@ -52,13 +52,13 @@ Classification: proved candidate awaiting independent audit and promotion.
 for physical face and unloaded-rhombus demands behind one actual-contact
 separator,
 
-$$
+```math
 2\sqrt{\pi(\sqrt3/2)(R-5k_I)_+}+Q_{\mathcal F}\le4|S|-4.
-$$
+```
 
 In Type II this gives a joint endpoint bank of
 (\pi D/4+Q_{\mathcal F}/4-o(D)), with a simultaneous quarter-defect face
-quota and a $\pi D/4-o(D)$ bulk quota. Uniform spatial exclusion:
+quota and a $`\pi D/4-o(D)`$ bulk quota. Uniform spatial exclusion:
 (Q_{\mathcal F}\le(32+4\pi)r+18) when all selected boundaries lie in a
 radius-(r) disk. A linear defect tail cannot be confined to one (o(D))
 cluster, or to (o(D)) clusters whose radii sum to (o(D)). Classification:
@@ -69,17 +69,17 @@ on the conditional branch (R_F=o(D)) with uniformly integrable outer-pocket
 occurrence lengths, **every outer-ended train** carries only subquadratic
 rhombus incidence. The surviving internal-to-internal train bank satisfies
 
-$$
+```math
 T_{\rm int}\ge(2s-o(1))D,\qquad
 P_{\rm exc}\ge(4s-o(1))D+T_{\rm mix}.
-$$
+```
 
 This excludes smaller internal banks/perimeters in that exact branch. It
 also adds (5z_O) to (S), where (z_O=|\mathcal O_D|-|G_D|) and
 
-$$
+```math
 z_O\ge\max\{0,(3m_B+u_B-q)/2+d_D\}.
-$$
+```
 
 This is an actual second-depletion theorem, conditional on small residual
 and the outer-pocket tail condition. Neither condition is established for
@@ -90,9 +90,9 @@ For every fixed (K), the same deletion includes all degree-at-most-(K)
 exceptional faces touching any actual unit loaded-hull side. With their
 perimeter (P_{B,K}), the stronger charge is
 
-$$
+```math
 z_K\ge\max\{0,(3m_B+u_B-q+P_{B,K})/2+d_D\}.
-$$
+```
 
 All quadratic bulk must remain on trains with **two unselected-face ends**;
 their recipient face perimeter is at least (4sD-o(D)), plus the mixed
@@ -103,20 +103,20 @@ residual and outer-pocket tail hypotheses.
 [Outer-train determination and marked-face bank synthesis](../docs/reports/target_c_outer_train_rank_groemer_bank_synthesis_2026-10-05.md):
 the finite source-specific rank theorem gives
 
-$$
+```math
 |\mathcal O|\ge q-k+\sigma_C,
 \qquad |\mathcal D_K|\ge q-k+\sigma_C+r_B,
-$$
+```
 
 where (r_B\ge\max\{2N_K-\sigma_C,w_B\}). The phase argument now includes
 **every** degree-at-most-(K) physical exceptional face touching the outer
 contact walk, through one pocket/face phase transfer. Under the same
 conditional residual/tail hypotheses, the rank payment cancels (5m_B):
 
-$$
+```math
 4S+2\sigma_R\ge2(\pi+s)D+5(\sigma_C+r_B+S_U)
  +2(Q-f)+2(b-P_F)-o(D).
-$$
+```
 
 Thus nonunit hull sides alone cannot pay this branch. It also forces
 (\liminf f_{\rm in}/D\ge s), where these exceptional faces have **no outer

@@ -36,67 +36,67 @@ In that large-`D` regime, every Euclidean circle of radius `t<D` carries
 
 Fix a diameter vertex `z`. For every source vertex `v`, put
 
-$$
+```math
 r_v:=|p_v-p_z|.
-$$
+```
 
 For a contact `vj` incident to `v\ne z`, define
 
-$$
+```math
 d_{vj}:=r_j-r_v\in[-1,1]
 \tag{C74.1}
-$$
+```
 
 and
 
-$$
+```math
 q_{vj}:=1-d_{vj}^2\ge0.
 \tag{C74.2}
-$$
+```
 
 Let
 
-$$
+```math
 n_v:=\frac{p_v-p_z}{r_v}.
-$$
+```
 
 Since `|p_j-p_v|=1`,
 
-$$
+```math
 r_j^2-r_v^2
 =2(p_v-p_z)\cdot(p_j-p_v)+1.
-$$
+```
 
 Using `r_j=r_v+d_{vj}` gives
 
-$$
+```math
 \boxed{
  n_v\cdot(p_j-p_v)
 =d_{vj}-\frac{q_{vj}}{2r_v}.
 }
 \tag{C74.3}
-$$
+```
 
 This is exact.
 
 Use the reaction convention
 
-$$
+```math
 g_v:=\sum_{vk\in H}\beta_{vk}(p_v-p_k),
-$$
+```
 
 with `g_v=0` at unloaded vertices. KKT equilibrium is
 
-$$
+```math
 \sum_{vj\in C}\alpha_{vj}(p_v-p_j)=g_v.
 \tag{C74.4}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \sum_{vj\in C}\alpha_{vj}(p_j-p_v)=-g_v.
-$$
+```
 
 Dot with `n_v` and use C74.3.
 
@@ -104,7 +104,7 @@ Dot with `n_v` and use C74.3.
 
 For every contact-core vertex `v\ne z`,
 
-$$
+```math
 \boxed{
 \sum_{vj\in C}\alpha_{vj}(r_j-r_v)
 =
@@ -113,37 +113,37 @@ $$
 -g_v\cdot n_v.
 }
 \tag{C74.5}
-$$
+```
 
 At every unloaded vertex,
 
-$$
+```math
 \boxed{
 \sum_{vj\in C}\alpha_{vj}(r_j-r_v)\ge0.
 }
 \tag{C74.6}
-$$
+```
 
 Thus unloaded equilibrium cannot destroy signed outward radial stress flux. Its radial
 divergence is exactly the local C68 defect divided by `2r_v`.
 
 If
 
-$$
+```math
 q_v:=\sum_{vj\in C}\alpha_{vj}[1-(r_j-r_v)^2],
-$$
+```
 
 then
 
-$$
+```math
 \sum_v q_v=2Q_z,
-$$
+```
 
 where C68 defines
 
-$$
+```math
 Q_z:=\sum_{ij\in C}\alpha_{ij}[1-(r_i-r_j)^2].
-$$
+```
 
 ---
 
@@ -151,28 +151,28 @@ $$
 
 Choose `t in (0,D)` different from every source radius and put
 
-$$
+```math
 V_t:=\{v:r_v<t\}.
-$$
+```
 
 For a contact crossing this cut, orient it from its inside endpoint `i` to its outside
 endpoint `j`. Define
 
-$$
+```math
 F_z(t):=
 \sum_{\substack{ij\in C\\r_i<t<r_j}}
 \alpha_{ij}(r_j-r_i).
 \tag{C74.7}
-$$
+```
 
 Every summand is nonnegative.
 
 At the center, every contact neighbor has radius exactly one. Define
 
-$$
+```math
 J_z:=\sum_{zj\in C}\alpha_{zj}.
 \tag{C74.8}
-$$
+```
 
 Sum C74.5 over `V_t\setminus\{z\}` and add the center contribution `J_z`.
 Every internal contact cancels because its signed radial increments at the two
@@ -180,7 +180,7 @@ endpoints are opposite. The boundary terms are exactly C74.7.
 
 ### Lemma C74.2 — exact radial-cut balance
 
-$$
+```math
 \boxed{
 F_z(t)
 =J_z
@@ -192,7 +192,7 @@ F_z(t)
 g_v\cdot n_v.
 }
 \tag{C74.9}
-$$
+```
 
 This is an exact scalar divergence theorem for the KKT contact stress.
 
@@ -202,48 +202,48 @@ This is an exact scalar divergence theorem for the KKT contact stress.
 
 Put
 
-$$
+```math
 S_z:=\sum_{zk\in H}\beta_{zk},
 \qquad
 \delta_z:=1-S_z.
 \tag{C74.10}
-$$
+```
 
 Every endpoint `k` of a `z`-star diameter edge has
 
-$$
+```math
 r_k=D.
-$$
+```
 
 Hence no such endpoint lies in `V_t` for `t<D`.
 
 For a loaded vertex put
 
-$$
+```math
 s_v:=\sum_{vk\in H}\beta_{vk}.
-$$
+```
 
 Every loaded vertex in `V_t\setminus\{z\}` is charged only through non-star diameter
 edges. Summing endpoint degrees of those non-star edges gives
 
-$$
+```math
 \sum_{\substack{v\in V_t\\v\ne z}}s_v\le2\delta_z.
 \tag{C74.11}
-$$
+```
 
 Since each diameter reaction vector has length `D`,
 
-$$
+```math
 |g_v|\le Ds_v,
-$$
+```
 
 and therefore
 
-$$
+```math
 \sum_{\substack{v\in V_t\\v\ne z}}g_v\cdot n_v
 \le2D\delta_z.
 \tag{C74.12}
-$$
+```
 
 The defect term in C74.9 is nonnegative, so
 
@@ -251,12 +251,12 @@ The defect term in C74.9 is nonnegative, so
 
 For every regular `t in (0,D)`,
 
-$$
+```math
 \boxed{
 F_z(t)\ge J_z-2D\delta_z.
 }
 \tag{C74.13}
-$$
+```
 
 No angular hypothesis has been used yet.
 
@@ -266,20 +266,20 @@ No angular hypothesis has been used yet.
 
 KKT equilibrium at `z` gives
 
-$$
+```math
 \sum_{zj\in C}\alpha_{zj}(p_z-p_j)=g_z.
-$$
+```
 
 By the triangle inequality,
 
-$$
+```math
 J_z\ge|g_z|.
 \tag{C74.14}
-$$
+```
 
 For `D>=20`, C18 gives a common angular interval of width at most
 
-$$
+```math
 \Theta_D:=
 \frac{
 D\left(\frac{5\pi}{6}-\sqrt3\right)
@@ -288,21 +288,21 @@ D\left(\frac{5\pi}{6}-\sqrt3\right)
 }{D+1}
 <\frac\pi3
 \tag{C74.15}
-$$
+```
 
 containing all `z`-star diameter directions. Put
 
-$$
+```math
 c_D:=\cos(\Theta_D/2)>0.
 \tag{C74.16}
-$$
+```
 
 Project the star reaction at `z` onto the interval bisector. This gives
 
-$$
+```math
 |g_z|\ge Dc_DS_z.
 \tag{C74.17}
-$$
+```
 
 Combine C74.13-C74.17.
 
@@ -310,7 +310,7 @@ Combine C74.13-C74.17.
 
 For `D>=20`, every diameter vertex `z` and every regular `t in (0,D)` satisfy
 
-$$
+```math
 \boxed{
 F_z(t)
 \ge
@@ -319,26 +319,26 @@ D[c_DS_z-2\delta_z]
 D[c_D-(c_D+2)\delta_z].
 }
 \tag{C74.18}
-$$
+```
 
 At the C66 star center,
 
-$$
+```math
 \delta_z\le C_0D\varepsilon,
 \qquad
 C_0:=2\pi/\kappa_0.
 \tag{C74.19}
-$$
+```
 
 Also
 
-$$
+```math
 c_D\to
 c_\infty
 :=
 \cos\left(\frac{5\pi}{12}-\frac{\sqrt3}{2}\right)
 =0.90348\ldots .
-$$
+```
 
 Hence:
 
@@ -346,13 +346,13 @@ Hence:
 
 Along any hypothetical C-II sequence with `D epsilon->0`, at the C66 center,
 
-$$
+```math
 \boxed{
 \inf_{0<t<D}\frac{F_z(t)}D
 \ge c_\infty-o(1).
 }
 \tag{C74.20}
-$$
+```
 
 The infimum can be read over regular radii; one-sided limits give the same bound at
 vertex radii.
@@ -364,35 +364,35 @@ vertex radii.
 A contact with endpoint radii `a<b` crosses the thresholds `t in (a,b)`. Its value in
 `F_z(t)` is `alpha(b-a)` throughout that interval. Thus
 
-$$
+```math
 \int_0^D F_z(t)\,dt
 =
 \sum_{ij\in C}\alpha_{ij}(r_i-r_j)^2.
 \tag{C74.21}
-$$
+```
 
 Since C11 gives
 
-$$
+```math
 \sum_{ij\in C}\alpha_{ij}=D^2,
-$$
+```
 
 we obtain:
 
 ### Corollary C74.5 — exact radial-flux energy
 
-$$
+```math
 \boxed{
 \int_0^D F_z(t)\,dt=D^2-Q_z.
 }
 \tag{C74.22}
-$$
+```
 
 This complements C72's first-order identity
 
-$$
+```math
 T_z=\int_0^D A_z(t)\,dt,
-$$
+```
 
 where `A_z(t)` is unweighted cut stress and the edge contribution uses one power of
 `|Delta r|`. C74.22 uses the signed outward radial flux and two powers of

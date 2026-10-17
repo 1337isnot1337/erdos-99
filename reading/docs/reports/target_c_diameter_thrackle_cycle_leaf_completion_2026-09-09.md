@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_thrackle_cycle_leaf_completion_2026-09-09.md) · source SHA-256 `5a086c6c35786c0c79b0b063c6b3a94e0e22ccf1dca23d1e5278db12d1ae99b4`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-A32292559208","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — the loaded diameter graph is a deleted odd-cycle spine with pendant leaves
 
@@ -20,22 +22,23 @@ Let `H` be the complete actual diameter graph on the `q` loaded force-hull termi
 
 Every loaded terminal is an endpoint of at least one actual diameter edge, so
 
-$$
+```math
 \boxed{\delta(H)\ge1.}
 \tag{TC.1}
+```
 
 Extend `H` greedily, on the same vertex set, to an edge-maximal convex thrackle `T`. The classical convex-thrackle classification gives an odd cycle `C` such that every vertex outside `C` is a leaf adjacent to one cycle vertex, and
 
-\[
+```math
 |E(T)|=q.
-$$
+```
 
 Write
 
-$$
+```math
 d_H:=q-h,
 \qquad h=|E(H)|.
-$$
+```
 
 Then `T\setminus H` has exactly `d_H` edges. None of those deleted edges can be a pendant leaf edge of `T`: deleting the unique edge incident to a leaf of `T` would make that vertex isolated in `H`, contradicting TC.1.
 
@@ -45,7 +48,7 @@ Therefore every missing edge lies on the odd cycle `C`.
 
 There exists a maximal convex thrackle `T` on the loaded terminals with odd-cycle spine `C` such that
 
-$$
+```math
 \boxed{
 H=T-F,
 \qquad
@@ -54,6 +57,7 @@ F\subseteq E(C),
 |F|=d_H.
 }
 \tag{TC.2}
+```
 
 Equivalently:
 
@@ -66,15 +70,16 @@ Thus the earlier statement that the diameter graph is merely a pseudoforest can 
 
 At the minimal-interface endpoint, EP gives
 
-\[
+```math
 d_H+s_Z\le0.07571193869\ldots D+o(D),
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{|F|=d_H\le0.07571193869\ldots D+o(D).}
 \tag{TC.3}
+```
 
 Since `q=(pi+o(1))D`, at most about `2.41%` as many spine edges as loaded terminals are deleted.
 
@@ -107,9 +112,10 @@ No metric statement is imported: edges added in `T\setminus H` need not be diame
 
 Since `H` has `h=q-d_H` edges,
 
-\[
+```math
 |E(T)\setminus E(H)|=q-h=d_H.
 \tag{2.1}
+```
 
 ---
 
@@ -123,9 +129,9 @@ Hence every pendant edge of `T` is present in `H`.
 
 Therefore
 
-\[
+```math
 E(T)\setminus E(H)\subseteq E(C).
-$$
+```
 
 Together with (2.1), this proves TC.2.
 
@@ -151,28 +157,28 @@ Since `H` has no isolates, a spine vertex isolated by two adjacent deleted cycle
 
 EP proves in the sharp full-core near-circle interface branch
 
-$$
+```math
 d_H+s_Z
 \le c_*D+o(D),
 \qquad
 c_*:=\frac25(\pi-2-\sqrt\Delta)
 =0.07571193869\ldots .
-$$
+```
 
 Since both currencies are nonnegative,
 
-$$
+```math
 |F|=d_H\le c_*D+o(D).
-$$
+```
 
 With `q=(pi+o(1))D`,
 
-$$
+```math
 \frac{|F|}{q}
 \le
 \frac{c_*}{\pi}+o(1)
 =0.0240998586\ldots+o(1).
-$$
+```
 
 Thus the actual diameter graph is obtained from one maximal odd-cycle-plus-leaves convex thrackle by deleting at most about `2.41%` as many cycle edges as there are terminals.
 

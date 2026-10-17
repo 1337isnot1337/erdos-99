@@ -18,11 +18,11 @@
 This note removes a more demanding shell regression than the earlier buffered-cloud
 examples.  The source cardinalities satisfy
 
-$$
+```math
 \frac{|A_q|}{\operatorname{diam}(A_q)^2}
 \longrightarrow
 \Delta_2:=\frac{\pi}{2\sqrt3},
-$$
+```
 
 the global minimum-diameter density, while the unit-contact graph is a triangle-free
 cycle and the quadratic interior population is contact-isolated.  Nevertheless the
@@ -40,11 +40,11 @@ arbitrary canonical inactive chamber and its actual positive-contact boundary.
 Let (q\ge 8) be even and let (B_q) be the vertices of a regular (q)-gon with
 side length one.  Put
 
-$$
+```math
 R_q=\frac1{2\sin(\pi/q)},
 \qquad
 D_q=2R_q=\frac1{\sin(\pi/q)}.
-$$
+```
 
 The polygon has diameter (D_q), and its consecutive vertices form a unit cycle.
 Nonconsecutive polygon chords are strictly longer than one, so this cycle is
@@ -52,84 +52,84 @@ triangle-free.
 
 Fix a constant (a>1), restrict to even orders with (R_q>a), and set
 
-$$
+```math
 s_q=1+D_q^{-2}.
-$$
+```
 
 Let (Λ_{s_q}) be a triangular lattice with nearest-neighbor spacing (s_q).  By
 averaging translates over one fundamental cell, some translate contains at least
 
-$$
+```math
 z_q:=\left\lfloor
 \frac{2\pi}{\sqrt3\,s_q^2}(R_q-a)^2
 \right\rfloor
 \tag{ND.1}
-$$
+```
 
 lattice points in the disk (B(0,R_q-a)).  Select exactly (z_q) of them and call
 the set (I_q).  Define
 
-$$
+```math
 A_q:=B_q\cup I_q.
 \tag{ND.2}
-$$
+```
 
 The shell and the cloud are disjoint in the strongest useful sense: for (b\in B_q)
 and (x\in I_q),
 
-$$
+```math
 |b-x|\ge |b|-|x|\ge a>1.
 \tag{ND.3}
-$$
+```
 
 All nonzero lattice differences in (I_q) have length at least (s_q>1).  Thus the
 only unit contacts in (A_q) are the shell edges.  In particular (A_q) contains
 no unit equilateral triangle, and
 
-$$
+```math
 \operatorname{diam}(A_q)=D_q.
 \tag{ND.4b}
-$$
+```
 
 The source is triangle-free at every finite (q), not only asymptotically.
 
 The shell also carries a strictly positive mixed KKT stress.  Write
 
-$$
+```math
 \phi_q=\frac\pi q,
 \qquad D_q=\frac1{\sin\phi_q}.
-$$
+```
 
 Give every one of the (q) shell edges the contact multiplier
 
-$$
+```math
 \alpha_q=\frac1{q\sin^2\phi_q},
-$$
+```
 
 and every one of the (q/2) antipodal diameter pairs the multiplier
 
-$$
+```math
 \beta_q=\frac2q.
-$$
+```
 
 At a shell vertex, the two contact vectors have radial sum
 (4R_q\sin^2\phi_q), while its antipodal diameter vector has length (2R_q).
 Thus
 
-$$
+```math
 \alpha_q\,4R_q\sin^2\phi_q
 =\beta_q\,2R_q=\frac{4R_q}{q}.
-$$
+```
 
 The equilibrium equation holds at every shell vertex, all displayed multipliers are
 strictly positive, and
 
-$$
+```math
 \sum_H\beta_q=1,
 \qquad
 \sum_C\alpha_q=q\alpha_q=D_q^2.
 \tag{ND.4a}
-$$
+```
 
 The interior points have no active constraints and contribute no equilibrium rows.
 Consequently this family has the full positive shell stress and still has the strict
@@ -141,30 +141,30 @@ contact-isolated interior points.
 
 Write (Delta=2/\sqrt3).  Since (q=\pi D_q+O(D_q^{-1})),
 
-$$
+```math
 s_q^{-2}=1+O(D_q^{-2}),
 \qquad
 (R_q-a)^2=\frac{D_q^2}{4}-aD_q+O(1).
-$$
+```
 
 Equation (ND.1) therefore gives
 
-$$
+```math
 z_q=\frac{\Delta\pi}{4}D_q^2+O(D_q),
 \qquad
 q=O(D_q),
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{
 \frac{|A_q|}{D_q^2}
 \longrightarrow
 \frac{\Delta\pi}{4}=\frac{\pi}{2\sqrt3}.
 }
 \tag{ND.5}
-$$
+```
 
 This is the same leading density as global minimum-diameter sources.  The shell is
 not being dismissed merely because it has too few points.
@@ -173,62 +173,62 @@ not being dismissed merely because it has too few points.
 
 Choose a constant (c) with
 
-$$
+```math
 0<c<a-\frac{\sqrt3}{2}.
 \tag{ND.6}
-$$
+```
 
 The unit triangular lattice has density (Delta).  Translation averaging gives a
 translate containing at least
 
-$$
+```math
 w_q:=\left\lfloor\Delta\pi(R_q-c)^2\right\rfloor
 \tag{ND.7}
-$$
+```
 
 points in (B(0,R_q-c)).  We claim (w_q>|A_q|) for all sufficiently large even
 (q).
 
 Indeed, the upper bound in (ND.1), together with (q=\pi D_q+O(D_q^{-1})), gives
 
-$$
+```math
 |A_q|
 \le
 \frac{\Delta\pi}{4}D_q^2
 +\bigl(\pi-\Delta\pi a\bigr)D_q+O(1).
 \tag{ND.8}
-$$
+```
 
 On the other hand (ND.7) gives
 
-$$
+```math
 w_q
 \ge
 \frac{\Delta\pi}{4}D_q^2-\Delta\pi cD_q+O(1).
 \tag{ND.9}
-$$
+```
 
 Subtracting, the coefficient of (D_q) in (w_q-|A_q|) is
 
-$$
+```math
 \Delta\pi\left(a-c-\frac1\Delta\right)
 =\Delta\pi\left(a-c-\frac{\sqrt3}{2}\right)>0
 \tag{ND.10}
-$$
+```
 
 by (ND.6).  Therefore (w_q>|A_q|) eventually.  Select (|A_q|) of the (w_q)
 lattice points.  The selected competitor is unit-separated and has diameter at most
 
-$$
+```math
 2(R_q-c)=D_q-2c<D_q.
 \tag{ND.11}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{D(|A_q|)\le D_q-2c<D_q=\operatorname{diam}(A_q)}
-$$
+```
 
 for all sufficiently large even (q).  The competitor is allowed to contain unit
 equilateral triangles, as every valid global comparison permits.

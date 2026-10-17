@@ -21,25 +21,25 @@ arbitrarily light. A closing argument therefore needs a weight-free geometric cu
 
 C75 refines C49's strict-rhombus area charge. C49 used only
 
-$$
+```math
 \operatorname{area}(f)>\frac{\sqrt3}{2}
-$$
+```
 
 for every bounded quadrilateral contact face. C75 measures the amount of strictness.
 If `s_f>1` is the short diagonal of a strict unit rhombus, then
 
-$$
+```math
 \operatorname{area}(f)-\frac{\sqrt3}{2}
 \ge c_{\rm rh}(s_f-1),
-$$
+```
 
 with an explicit universal constant
 
-$$
+```math
 c_{\rm rh}:=
 \frac{1-\sqrt3/2}{\sqrt2-1}
 =0.32344\ldots .
-$$
+```
 
 Summing over the `m-O(D)` rhombic faces gives an exact core-capacity penalty
 proportional to the total missing-diagonal slack, with no KKT weights.
@@ -50,53 +50,53 @@ proportional to the total missing-diagonal slack, with no KKT weights.
 
 Let `f` be a unit rhombus. Let `s` be the length of its shorter diagonal. Then
 
-$$
+```math
 1<s\le\sqrt2
 \tag{C75.1}
-$$
+```
 
 for a strict triangle-free contact face: `s=1` would be a unit diagonal contact and
 split the face into contact triangles.
 
 The two diagonals of a rhombus are perpendicular and satisfy
 
-$$
+```math
 s^2+\ell^2=4.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 A(s):=\operatorname{area}(f)
 =\frac12s\sqrt{4-s^2}.
 }
 \tag{C75.2}
-$$
+```
 
 At the two endpoints,
 
-$$
+```math
 A(1)=\frac{\sqrt3}{2},
 \qquad
 A(\sqrt2)=1.
 \tag{C75.3}
-$$
+```
 
 A direct differentiation gives
 
-$$
+```math
 A'(s)=\frac{2-s^2}{\sqrt{4-s^2}},
-$$
+```
 
 and
 
-$$
+```math
 A''(s)=
 \frac{s(s^2-6)}{(4-s^2)^{3/2}}<0
 \qquad(1\le s\le\sqrt2).
 \tag{C75.4}
-$$
+```
 
 Thus `A` is strictly concave on the full admissible interval.
 
@@ -106,7 +106,7 @@ A concave function lies above the chord joining its endpoint values. Therefore
 
 For every strict unit rhombus with short diagonal `s`,
 
-$$
+```math
 \boxed{
 A(s)
 \ge
@@ -114,18 +114,18 @@ A(s)
 +c_{\rm rh}(s-1),
 }
 \tag{C75.5}
-$$
+```
 
 where
 
-$$
+```math
 \boxed{
 c_{\rm rh}
 :=
 \frac{1-\sqrt3/2}{\sqrt2-1}
 =0.32344\ldots .}
 \tag{C75.6}
-$$
+```
 
 Equality in the chord bound occurs only at `s=1` or `s=sqrt(2)`; the contact-face
 regime has `s>1`.
@@ -138,19 +138,19 @@ Let `F_4` be the set of bounded quadrilateral contact faces and write, by abuse 
 notation, `F_4:=|F_4|` for its cardinality when no ambiguity arises. Define the total
 short-diagonal slack
 
-$$
+```math
 \boxed{
 \Sigma_{\rm diag}
 :=
 \sum_{f\in F_4}(s_f-1)>0.
 }
 \tag{C75.7}
-$$
+```
 
 The interiors of bounded plane-graph faces are disjoint and lie in the force hull `F`.
 Hence Lemma C75.1 gives
 
-$$
+```math
 \operatorname{area}(F)
 \ge
 \sum_{f\in F_4}\operatorname{area}(f)
@@ -158,11 +158,11 @@ $$
 \frac{\sqrt3}{2}F_4
 +c_{\rm rh}\Sigma_{\rm diag}.
 \tag{C75.8}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 F_4
 \le
@@ -170,17 +170,17 @@ F_4
 -\lambda_{\rm rh}\Sigma_{\rm diag},
 }
 \tag{C75.9}
-$$
+```
 
 where
 
-$$
+```math
 \boxed{
 \lambda_{\rm rh}
 :=\frac{2c_{\rm rh}}{\sqrt3}
 =0.37348\ldots .}
 \tag{C75.10}
-$$
+```
 
 This is the quantitative version of C49's whole-hull strict-rhombus charge.
 
@@ -197,19 +197,19 @@ Use the standard C-II notation:
 
 C42 gives
 
-$$
+```math
 F_4
 \ge
 m-5q+3c_I+3e_{BB}+5.
 \tag{C75.11}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 m\le F_4+5q-3c_I-3e_{BB}-5.
 \tag{C75.12}
-$$
+```
 
 Substitute C75.9.
 
@@ -217,7 +217,7 @@ Substitute C75.9.
 
 In fully force-visible C-II,
 
-$$
+```math
 \boxed{
  m
 \le
@@ -226,11 +226,11 @@ $$
 +5q-3c_I-3e_{BB}-5.
 }
 \tag{C75.13}
-$$
+```
 
 Using the isodiametric inequality and `q<=pi D`,
 
-$$
+```math
 \boxed{
  m
 \le
@@ -239,13 +239,13 @@ $$
 +5\pi D-3c_I-3e_{BB}-5,
 }
 \tag{C75.14}
-$$
+```
 
 where
 
-$$
+```math
 \Delta_2:=\frac{\pi}{2\sqrt3}.
-$$
+```
 
 C75.14 strictly refines the whole-hull member of C49 by retaining the complete
 short-diagonal slack of every quadrilateral contact face.
@@ -256,24 +256,24 @@ short-diagonal slack of every quadrilateral contact face.
 
 For `tau in (0,sqrt(2)-1]`, let
 
-$$
+```math
 N_\tau
 :=
 |\{f\in F_4:s_f\ge1+\tau\}|.
 \tag{C75.15}
-$$
+```
 
 Then
 
-$$
+```math
 \Sigma_{\rm diag}\ge\tau N_\tau.
-$$
+```
 
 Hence C75 immediately gives
 
 ### Corollary C75.1 — faces bounded away from a missing unit diagonal
 
-$$
+```math
 \boxed{
  m
 \le
@@ -282,43 +282,43 @@ $$
 +5\pi D-3c_I-3e_{BB}-5.
 }
 \tag{C75.16}
-$$
+```
 
 Thus a positive fraction of rhombi whose short diagonals stay a fixed amount above
 one creates a genuine quadratic capacity deficit.
 
 Conversely, if a sequence of force-visible cores satisfies
 
-$$
+```math
 m\ge\Delta_2D^2-CD
 \tag{C75.17}
-$$
+```
 
 for some fixed `C`, then C75.14 implies
 
-$$
+```math
 \boxed{
 \Sigma_{\rm diag}=O(D),
 }
 \tag{C75.18}
-$$
+```
 
 and, for every fixed `tau>0`,
 
-$$
+```math
 \boxed{N_\tau=O_\tau(D).}
 \tag{C75.19}
-$$
+```
 
 So a near-capacity quadratic core must have all but `O(D)` of its `Theta(D^2)`
 rhombic faces with short diagonal below `1+tau`, for every fixed `tau`.
 
 More generally, for any scale `tau_D>0`,
 
-$$
+```math
 N_{\tau_D}=O(D/\tau_D)
 \tag{C75.20}
-$$
+```
 
 under C75.17. For example `tau_D=D^{-1/2}` leaves only `O(D^{3/2})=o(D^2)` rhombi
 outside the `1+D^{-1/2}` missing-diagonal regime.
@@ -339,9 +339,10 @@ Therefore all but `O_tau(D)` force-core vertices have the following local struct
 - contact degree exactly four;
 - four incident strict unit rhombi; and
 - every one of those rhombi has a missing short diagonal in
-  $$
+  ```math
   (1,1+\tau).
-  $$
+  
+  ```
 
 Thus the weight-free alternative to the C68-C74 anisotropic stress phase is not an
 arbitrary rhombic mesh. A near-capacity core is forced into a **near-triangular
@@ -361,9 +362,9 @@ weights are tiny.
 C75 does not use `alpha` or `beta` at all after the structural C42 face count. The
 quantity
 
-$$
+```math
 \Sigma_{\rm diag}
-$$
+```
 
 is purely geometric. A transverse rhombic face pays capacity according to how far its
 missing diagonal is from becoming a new unit contact, regardless of how little stress

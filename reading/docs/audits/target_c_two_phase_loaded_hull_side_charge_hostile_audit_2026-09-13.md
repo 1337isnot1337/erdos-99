@@ -31,9 +31,9 @@ the face is nonquadrilateral and its boundary incidence pays the side once.
 Distinct nonbridge side occurrences have distinct opposite face incidences. A bridge
 is charged once as a physical edge, so the exact safe inequality is
 
-$$
+```math
 e_{BB}\le4+P_{exc}+B_o.
-$$
+```
 
 The algebraic form `2k+u_B<=4f+B_o+4` follows from the exact Type-II identity
 `e_BB=Q+2k+u_B`.
@@ -44,9 +44,9 @@ The algebraic form `2k+u_B<=4f+B_o+4` follows from the exact Type-II identity
 
 The prior audited bridge-subtracted rhombus-area lemma gives
 
-$$
+```math
 2B_o\le(b-\pi D)+P_{exc}+o(D)
-$$
+```
 
 when `A_4=pi D^2/4-o(D^2)`. Substitution into the finite side charge gives the
 displayed (LH.5) with coefficients `3/2` and `1/2`; no direction reversal occurs.

@@ -27,21 +27,21 @@ For a reaction-free bridge block with
 
 this gives
 
-$$
+```math
 e+k\ge2m.
-$$
+```
 
 Eppstein's bound for a connected triangle-free penny graph of graph diameter `delta` gives
 
-$$
+```math
 e\le2m-\delta-2.
-$$
+```
 
 Therefore every nontrivial reaction-free bridge block satisfies the exact inequality
 
-$$
+```math
 \boxed{\delta\le k-2.}
-$$
+```
 
 In particular a reaction-free two-edge-connected block with large graph or Euclidean diameter must emit proportionally many contact bridges. Summing over the bridge tree gives a global `O(D)` budget for the graph diameters of all reaction-free nontrivial blocks.
 
@@ -53,35 +53,35 @@ Work in the contact-minimal, triangle-free, fully force-visible Target C-II bran
 
 Let `X` be a reaction-free node of the positive-contact bridge-block tree. Write
 
-$$
+```math
 K:=V(X),
 \qquad
 m:=|K|.
 \tag{C28.1}
-$$
+```
 
 Let
 
-$$
+```math
 e_X:=|C[K]|
 \tag{C28.2}
-$$
+```
 
 be the number of internal unit contacts in the block, and let
 
-$$
+```math
 k_X:=\deg_{T_{br}}(X)
 \tag{C28.3}
-$$
+```
 
 be the number of positive-contact bridges incident to the block.
 
 Because `X` is reaction-free, `K cap B_+=emptyset`. C26.1 then implies
 
-$$
+```math
 \boxed{K\cap Q=\varnothing,}
 \tag{C28.4}
-$$
+```
 
 where `Q` is the full source diameter-endpoint set. Thus no vertex of `K` is incident to any active diameter constraint, positive or weak.
 
@@ -93,19 +93,19 @@ Every contact edge leaving `K` is one of the `k_X` contact bridges by definition
 
 Pin every source vertex outside `K`. For a velocity assignment `v=(v_x)_{x in K}`, define the local expansive cone by the inequalities
 
-$$
+```math
 (x-y)\cdot(v_x-v_y)\ge0
 \qquad(xy\in C[K]),
 \tag{C28.5}
-$$
+```
 
 and
 
-$$
+```math
 (x-y)\cdot v_x\ge0
 \qquad(xy\in C,\ x\in K,\ y\notin K).
 \tag{C28.6}
-$$
+```
 
 The outside velocity is zero in C28.6.
 
@@ -113,30 +113,30 @@ The outside velocity is zero in C28.6.
 
 The only velocity satisfying C28.5-C28.6 is
 
-$$
+```math
 \boxed{v_x=0\quad(x\in K).}
 \tag{C28.7}
-$$
+```
 
 #### Proof
 
 Suppose `v` were nonzero. Move only the vertices of `K` along the straight motion
 
-$$
+```math
 x(t)=x+t v_x,
 \tag{C28.8}
-$$
+```
 
 and keep every vertex outside `K` fixed.
 
 For every internal contact and every incident contact bridge, the squared length is
 
-$$
+```math
 |r+t\dot r|^2
 =1+2t\,r\cdot\dot r+t^2|\dot r|^2
 \ge1
 \tag{C28.9}
-$$
+```
 
 for all sufficiently small `t>0` by C28.5-C28.6.
 
@@ -158,17 +158,17 @@ Let `R_X` be the rigidity matrix whose columns are the `2m` velocity coordinates
 
 ### Corollary C28.2 (local full rank)
 
-$$
+```math
 \boxed{\operatorname{rank}R_X=2m.}
 \tag{C28.10}
-$$
+```
 
 Consequently,
 
-$$
+```math
 \boxed{e_X+k_X\ge2m.}
 \tag{C28.11}
-$$
+```
 
 #### Proof
 
@@ -182,18 +182,18 @@ This is a local contact-minimal rank statement. No diameter row participates bec
 
 Assume now that `X` is nontrivial, so `m>=2`. The internal contact graph `C[K]` is connected and triangle-free, and it is a penny graph. Let
 
-$$
+```math
 \delta_X:=\operatorname{diam}_{graph}(C[K]).
 \tag{C28.12}
-$$
+```
 
 The canonical Eppstein bound gives
 
-$$
+```math
 \boxed{
 e_X\le2m-\delta_X-2.}
 \tag{C28.13}
-$$
+```
 
 Combine with C28.11.
 
@@ -201,24 +201,24 @@ Combine with C28.11.
 
 Every nontrivial reaction-free bridge block satisfies
 
-$$
+```math
 \boxed{k_X\ge\delta_X+2.}
 \tag{C28.14}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{\delta_X\le k_X-2.}
 \tag{C28.15}
-$$
+```
 
 Since every contact edge has Euclidean length one,
 
-$$
+```math
 \boxed{\operatorname{diam}_{Eucl}(K)\le\delta_X\le k_X-2.}
 \tag{C28.16}
-$$
+```
 
 A nontrivial reaction-free block therefore cannot be a large hidden two-dimensional event of bounded bridge-tree degree.
 
@@ -238,20 +238,20 @@ Choose any root vertex of `K`. Every vertex is at graph distance at most `delta_
 
 Therefore
 
-$$
+```math
 m\frac\pi4
 \le
 \pi\left(\delta_X+\frac12\right)^2.
 \tag{C28.17}
-$$
+```
 
 ### Corollary C28.4 (degree-capacity bound)
 
-$$
+```math
 \boxed{
 m\le(2\delta_X+1)^2\le(2k_X-3)^2.}
 \tag{C28.18}
-$$
+```
 
 Thus a reaction-free block containing `Theta(D^2)` positive-contact vertices would require bridge-tree degree `Theta(D)`.
 
@@ -263,32 +263,32 @@ The estimate is deliberately elementary and nonsharp; its role is to turn the ex
 
 Let `R` be the number of loaded bridge blocks and let `\mathcal R` be the family of nontrivial reaction-free bridge blocks. Every leaf block is loaded. For a finite tree,
 
-$$
+```math
 L
 =2+\sum_{X:\deg X\ge3}(\deg X-2),
 \tag{C28.19}
-$$
+```
 
 where `L` is the number of leaves. Since `L<=R`,
 
-$$
+```math
 \sum_{X\in\mathcal R}(k_X-2)
 \le R-2.
 \tag{C28.20}
-$$
+```
 
 Combine with C28.15.
 
 ### Theorem C28.5 (global reaction-free diameter budget)
 
-$$
+```math
 \boxed{
 \sum_{X\in\mathcal R}\delta_X
 \le R-2
 \le |B_+|-2
 \le\pi D-2.}
 \tag{C28.21}
-$$
+```
 
 The same bound holds with each `delta_X` replaced by the Euclidean diameter of the block.
 
@@ -302,59 +302,59 @@ This is stronger than the earlier `O(D)` count of structural bridge-tree nodes: 
 
 Let
 
-$$
+```math
 M_{rf}:=\sum_{X\in\mathcal R}|V(X)|
 \tag{C28.22}
-$$
+```
 
 and put
 
-$$
+```math
 K_{max}:=\max_{X\in\mathcal R}k_X.
 \tag{C28.23}
-$$
+```
 
 For nontrivial reaction-free blocks, C28.14 gives `k_X>=4`, so
 
-$$
+```math
 k_X\le2(k_X-2).
 \tag{C28.24}
-$$
+```
 
 Hence C28.20 gives
 
-$$
+```math
 \sum_{X\in\mathcal R}k_X
 \le2(R-2)
 \le2|B_+|.
 \tag{C28.25}
-$$
+```
 
 Using C28.18 and `(2k-3)^2<=4k^2`,
 
-$$
+```math
 M_{rf}
 \le4\sum_X k_X^2
 \le4K_{max}\sum_Xk_X
 \le8K_{max}|B_+|.
 \tag{C28.26}
-$$
+```
 
 Since `|B_+|<=pi D`,
 
-$$
+```math
 \boxed{M_{rf}\le8\pi D\,K_{max}.}
 \tag{C28.27}
-$$
+```
 
 Therefore if, along a sequence, reaction-free nontrivial bridge blocks contain at least `rho D^2` vertices, then some such block satisfies
 
-$$
+```math
 \boxed{
 K_{max}\ge\frac{\rho}{8\pi}D.
 }
 \tag{C28.28}
-$$
+```
 
 So a macroscopically populated reaction-free block phase necessarily contains a block incident to linearly many contact bridges.
 

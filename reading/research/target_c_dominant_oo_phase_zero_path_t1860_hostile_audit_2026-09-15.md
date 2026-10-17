@@ -26,9 +26,9 @@ All four survive audit.
 
 The wide-window theorem defines for every dominant O--O train
 
-$$
+```math
 w_\tau=\min(a_\tau,b_\tau),
-$$
+```
 
 where `a_tau,b_tau` are the two retained outer-terminal weights.  Thus a measure which
 puts weight `w_tau` at either terminal is pointwise dominated by the corresponding
@@ -37,9 +37,9 @@ occurrence weight on each loaded-hull side by that side's Euclidean length.
 
 The Type-II near-disk perimeter theorem therefore gives, on the oriented normal circle,
 
-$$
+```math
 D^{-1}\mu_D(I)\le |I|/2+o(1)
-$$
+```
 
 uniformly over moving intervals.  Hence a bounded union of intervals of total width
 `o(1)` carries `o(D)` pair-endpoint weight.  No train-count-to-length conversion is
@@ -55,23 +55,23 @@ For one shore `S`, orient each cut contact from the complementary shore into `S`
 `u`, and orient a crossing diameter vector into `S` by `r`.  Section 157 gives both
 signs of
 
-$$
+```math
 r\cdot Ju.
-$$
+```
 
 If the two shores are exchanged, the canonical orientations become
 
-$$
+```math
 u'=-u,
 \qquad
 r'=-r.
-$$
+```
 
 Therefore
 
-$$
+```math
 r'\cdot Ju'=(-r)\cdot J(-u)=r\cdot Ju.
-$$
+```
 
 The same two-sign theorem is available on the other shore.  Thus both complementary
 loaded-hull normal arcs contain a zero of `n dot J u_tau` after the near-disk radial
@@ -88,17 +88,17 @@ antipodal oriented representatives.
 The hostile audit of the complement bracing theorem already proves that an actual
 diameter vector oriented into a loaded shore satisfies
 
-$$
+```math
 r_h/D=n_h+o(1)
-$$
+```
 
 uniformly over actual diameter pairs.  The selected phase window has width
 `epsilon_D->0`.  Hence all errors can be absorbed into one sequence `eta_D->0`, then
 one may choose a slower `rho_D->0` with
 
-$$
+```math
 epsilon_D+eta_D=o(rho_D).
-$$
+```
 
 This is the correct diagonal order.  The candidate does not assume an unproved
 `O(1/D)` phase width in the high-`t` window.
@@ -113,11 +113,11 @@ A bad train has at least one terminal in the union of the two `rho_D` neighborho
 Its pair weight is no larger than the retained occurrence weight at that terminal.
 Charging each bad train to one such terminal gives
 
-$$
+```math
 \sum_{\tau\,bad}w_\tau
 \le \text{retained endpoint mass in the two neighborhoods}
 =o(D).
-$$
+```
 
 Double counting a train with both terminals bad would only weaken this upper bound if
 one charged both occurrences; the candidate charges at least one and uses an upper
@@ -189,9 +189,9 @@ Before this theorem the high-`t` same-phase O--O family could be a dual-tree sta
 linearly many tiny branches.  After deleting `o(D)` retained pair weight, that topology
 is impossible.  The surviving train counts are still
 
-$$
+```math
 >0.0700D-o(D),\quad >0.0466D-o(D),\quad >0.0246D-o(D)
-$$
+```
 
 at the `1.850`, `1.855`, and `1.860` checkpoints respectively, and their complement
 dual is a path.

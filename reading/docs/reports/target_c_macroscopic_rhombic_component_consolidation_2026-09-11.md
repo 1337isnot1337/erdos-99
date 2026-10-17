@@ -39,26 +39,26 @@ face a strict convex unit rhombus.
 Form the face adjacency graph whose vertices are these rhombi and whose edges join two
 rhombi sharing a contact edge.  Let
 
-$$
+```math
 \mathcal R_1,\ldots,\mathcal R_g
-$$
+```
 
 be its connected components, and write
 
-$$
+```math
 R_j=|\mathcal R_j|.
-$$
+```
 
 Let `U_j` be the closed polygonal region obtained by the union of the rhombi in
 `mathcal R_j`.  The interiors of the rhombi are disjoint, so
 
-$$
+```math
 \operatorname{area}U_j
 =\sum_{F\in\mathcal R_j}\operatorname{area}F
 \ge a_0R_j,
 \qquad a_0={\sqrt3\over2}.
 \tag{1.1}
-$$
+```
 
 Let `B_j` be the total number of unit contact-edge occurrences on all boundary
 components of `U_j`.  Thus its total geometric boundary length is `B_j`.
@@ -75,51 +75,51 @@ one of:
 
 Therefore, counting incidences,
 
-$$
+```math
 \boxed{
 \sum_jB_j
 \le b+\sum_{F\ {
 m exceptional}}\deg F.
 }
 \tag{2.1}
-$$
+```
 
 Write `f` for the number of exceptional bounded faces and
 
-$$
+```math
 Q=\sum_F(\deg F-4).
-$$
+```
 
 Every exceptional face has degree at least five, so `f<=Q`, and
 
-$$
+```math
 \sum_F\deg F=4f+Q\le5Q.
 \tag{2.2}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 B_{tot}:=\sum_jB_j\le b+5Q.
 }
 \tag{2.3}
-$$
+```
 
 Post-ZF gives
 
-$$
+```math
 b+Q=2(h-s_Z)\le2q,
 \qquad Q\le q,
 \qquad q\le\pi D.
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{B_{tot}\le7\pi D.}
 \tag{2.4}
-$$
+```
 
 The numerical constant is crude but finite and universal.
 
@@ -131,62 +131,62 @@ The connected polygonal region `U_j` may have holes.  Its area is at most the ar
 enclosed by its outer boundary.  The outer boundary length is at most the total
 boundary length `B_j`.  Therefore the planar isoperimetric inequality gives
 
-$$
+```math
 \operatorname{area}U_j\le{B_j^2\over4\pi}.
-$$
+```
 
 Together with (1.1),
 
-$$
+```math
 \boxed{
 R_j\le {B_j^2\over4\pi a_0}.}
 \tag{3.1}
-$$
+```
 
 Let
 
-$$
+```math
 R_{max}:=\max_jR_j.
-$$
+```
 
 Equation (3.1) also gives
 
-$$
+```math
 B_j\ge\sqrt{4\pi a_0R_j}.
-$$
+```
 
 Since `R_j<=R_max`,
 
-$$
+```math
 \sqrt{R_j}\ge {R_j\over\sqrt{R_{max}}}.
-$$
+```
 
 Thus
 
-$$
+```math
 \begin{aligned}
 B_{tot}
 &\ge\sqrt{4\pi a_0}\sum_j\sqrt{R_j}\\
 &\ge\sqrt{4\pi a_0}\,{\sum_jR_j\over\sqrt{R_{max}}}.
 \end{aligned}
-$$
+```
 
 Rearranging proves the finite consolidation inequality
 
 ### Theorem RC.1 — rhombic component concentration
 
-$$
+```math
 \boxed{
 R_{max}
 \ge
 {4\pi a_0\,R^2\over B_{tot}^2}.
 }
 \tag{RC.1}
-$$
+```
 
 Using (2.4),
 
-$$
+```math
 \boxed{
 R_{max}
 \ge
@@ -194,23 +194,23 @@ R_{max}
 ={2\sqrt3\over49\pi}{R^2\over D^2}.
 }
 \tag{RC.2}
-$$
+```
 
 Therefore, if along a post-ZF sequence
 
-$$
+```math
 R\ge r_0D^2
-$$
+```
 
 for a fixed `r_0>0`, then some edge-connected rhombic component satisfies
 
-$$
+```math
 \boxed{
 R_j\ge
 {2\sqrt3\over49\pi}r_0^2D^2.
 }
 \tag{RC.3}
-$$
+```
 
 So `O(D)` exceptional structure cannot fragment a quadratic rhombic sea into only
 subquadratic grains.
@@ -221,21 +221,21 @@ subquadratic grains.
 
 C42 gives
 
-$$
+```math
 R\ge m-5q+3c_I+3e_{BB}+5.
-$$
+```
 
 Since `q=O(D)`, any sequence with
 
-$$
+```math
 \liminf {m\over D^2}>0
-$$
+```
 
 also has
 
-$$
+```math
 \liminf {R\over D^2}>0.
-$$
+```
 
 RC.3 therefore gives:
 
@@ -256,30 +256,30 @@ vertices on its boundary.  No pure-disk conclusion is asserted.
 
 GA proves for the **entire** post-ZF source
 
-$$
+```math
 E=O(D),
-$$
+```
 
 where `E` is the sum of strict-rhombus area excesses above `a_0`.  Therefore the
 macroscopic component from RC.2 satisfies the same bound on its sub-sum:
 
-$$
+```math
 E_j=O(D).
-$$
+```
 
 The promoted Target B phase-cut theorem then gives boundary-order total angular defect
 and removes only `O(D)` crossing relations from the train graph of this component.
 Thus every quadratic force-visible core contains an actual quadratic rhombic domain
 with:
 
-$$
+```math
 \boxed{
 R_j=\Omega(D^2),\qquad
 B_j=O(D),\qquad
 E_j=O(D).
 }
 \tag{RC.4}
-$$
+```
 
 This is precisely the scale at which the distributed-strain / phase-density problem
 is meaningful; the defect cannot be hidden by splitting the rhombi into only small

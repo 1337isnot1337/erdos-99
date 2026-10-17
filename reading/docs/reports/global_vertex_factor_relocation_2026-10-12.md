@@ -49,10 +49,10 @@ triangle-free global minimizer
 
 A vertex-factor relocation prescribes distances
 
-$$
+```math
 d'_{ij}=s_i s_j d_{ij},\qquad s_i>0.
 \tag{1}
-$$
+```
 
 Möbius maps, inversions and similarities give this form, including at finite
 displacements far from the source. The investigation is exploratory until the
@@ -70,13 +70,13 @@ Let A be any finite unit-separated planar source of diameter D. Let C be its
 actual unit-contact graph and H its actual diameter graph. Suppose there are
 nonnegative edge weights a on C and b on H with
 
-$$
+```math
 \sum_C a_e=\sum_H b_e=1,
 \qquad
 \sum_{e\in C:e\ni i}a_e=
 \sum_{e\in H:e\ni i}b_e\quad\hbox{for every source label }i.
 \tag{2}
-$$
+```
 
 **Candidate theorem.** Every vertex-factor distance array (1) whose contact
 distances are at least one has some diameter-edge distance at least D. In
@@ -84,10 +84,10 @@ particular no feasible planar realization of (1) has diameter below D.
 
 **Proof.** Put u_i=log(s_i). The incidence balance cancels every vertex factor:
 
-$$
+```math
 \sum_H b_{ij}\log d'_{ij}-\sum_C a_{ij}\log d'_{ij}
 =\log D.
-$$
+```
 
 The second sum is nonnegative. The first sum is at most the logarithm of the
 largest transformed diameter-edge distance. This proves the assertion. The
@@ -96,10 +96,10 @@ proof has no infinitesimal, local-minimum or positive-stress hypothesis.
 For a complex Möbius map f(z)=(az+b)/(cz+d), with ad-bc nonzero and no source
 label at its pole,
 
-$$
+```math
 |f(z_i)-f(z_j)|=
 \frac{|ad-bc|\,|z_i-z_j|}{|cz_i+d|\,|cz_j+d|}.
-$$
+```
 
 Take s_i=sqrt(|ad-bc|)/|cz_i+d|. Complex conjugation preserves distances,
 so the same result covers anti-Möbius maps. Scaling is already included.
@@ -155,9 +155,9 @@ Use the 3 by 3 square grid. Assign s_i=9/10 on even checkerboard sites and
 s_i=10/9 on odd sites. All twelve contact lengths remain one. Checking all
 36 pairs gives
 
-$$
+```math
 \min d'^2=1,\qquad \max d'^2=40000/6561<8=D^2.
-$$
+```
 
 Yet the two opposite edge-midpoint sites have prescribed distance 200/81,
 while each is at distance one from the center. The triangle-inequality excess
@@ -172,18 +172,18 @@ The four cyclic edges are unit contacts; the diagonal squared lengths are
 Set r=19/20 and use vertex factors (r,1/r,r,1/r) in cyclic order. All four
 contacts remain one. The transformed diagonal squared lengths are
 
-$$
+```math
 L^2=130321/56000,\qquad S^2=1280000/912247.
-$$
+```
 
 All six transformed pair distances are at least one and at most L, and
 L^2<20/7. Every triangle inequality holds, because there is an explicit
 three-dimensional realization:
 
-$$
+```math
 A'=(-L/2,0,0),\quad C'=(L/2,0,0),\quad
 B'=(0,S/2,h),\quad E'=(0,-S/2,h),
-$$
+```
 
 where h^2=1-(L^2+S^2)/4>0. All four cyclic edges have length one.
 
@@ -229,9 +229,9 @@ is certified.
 **Candidate theorem.** Let p_1,...,p_n and q_1,...,q_n be two ordered sets of
 distinct planar points, n>=3. If positive s_i satisfy
 
-$$
+```math
 |q_i-q_j|=s_i s_j|p_i-p_j|\quad\hbox{for all }i\ne j,
-$$
+```
 
 then one Möbius or anti-Möbius map sends every p_i to q_i. Conversely every
 such map with no source point at its pole has this distance factorization.
@@ -242,19 +242,19 @@ assumption is needed.
 points of each set by a Möbius map to 0, 1 and infinity. Write the normalized
 remaining points as z_i and w_i. If d denotes source distances, then
 
-$$
+```math
 |z_i|=\frac{d_{i1}d_{23}}{d_{i3}d_{12}},\qquad
 |z_i-1|=\frac{d_{i2}d_{13}}{d_{i3}d_{12}}.
-$$
+```
 
 Every vertex factor cancels in these ratios, so |z_i|=|w_i| and
 |z_i-1|=|w_i-1|. Hence w_i is either z_i or its complex conjugate. In addition,
 
-$$
+```math
 |z_i-z_j|=
 \frac{d_{13}d_{23}d_{ij}}{d_{12}d_{i3}d_{j3}}
 =|w_i-w_j|.
-$$
+```
 
 Again all vertex factors cancel. If two normalized points have nonzero
 imaginary parts, conjugating exactly one changes their squared mutual
@@ -275,11 +275,11 @@ factorizing only contact and diameter distances is a different problem.
 Up to a Euclidean similarity or reflection, a non-affine Möbius map is an
 inversion with some pole x not equal to a source point. Put
 
-$$
+```math
 g_i(x)=|p_i-x|^2,\quad
 R_{ij}(x)=\frac{d_{ij}^2}{g_i(x)g_j(x)},\quad
 m(x)=\min_{i<j}R_{ij}(x),\quad M(x)=\max_{i<j}R_{ij}(x).
-$$
+```
 
 After scaling to minimum separation one, its squared diameter is M(x)/m(x).
 Hence a feasible strict-sub-D vertex-factor image exists exactly when
@@ -287,11 +287,11 @@ some pole satisfies M(x)<D^2 m(x). A similarity alone cannot improve a
 source whose minimum separation is already one. Equivalently, every pair
 of unordered pairs e=(i,j), f=(k,l) must satisfy
 
-$$
+```math
 d_{ij}^2 g_k(x)g_l(x)
 <D^2 d_{kl}^2 g_i(x)g_j(x).
 \tag{3}
-$$
+```
 
 These are strict quartic polynomial inequalities in the two pole coordinates,
 with the additional restrictions g_i(x)>0. This is a finite semialgebraic
@@ -327,20 +327,20 @@ O(n+|C|+|H|) time.
 
 For an alternating walk with m edges of each type, the product
 
-$$
+```math
 \frac{\prod_{\text{diameter occurrences}}d_{ij}}
      {\prod_{\text{contact occurrences}}d_{ij}}
-$$
+```
 
 is invariant under vertex factors. Its original value is D^m. In a feasible
 placement of diameter D'<D its value would be at most D'^m, so it must
 change. More quantitatively, for any attempted vertex potential u and a
 feasible strict competitor, at least one certificate edge satisfies
 
-$$
+```math
 \left|\log\frac{d'_{ij}}{d_{ij}}-u_i-u_j\right|
 \ge\tfrac12\log\frac{D}{D'}.
-$$
+```
 
 This follows by subtracting the two weighted residual averages in (2).
 It applies to arbitrary feasible competitors, even those outside the
@@ -359,9 +359,9 @@ Invert about x=(0,10), then scale by sqrt(104*101). The inversion identity
 gives all 21 pair distances exactly. The final minimum squared separation is
 one and the final maximum squared distance is
 
-$$
+```math
 202/13<16,
-$$
+```
 
 an improvement of 6/13 in squared diameter. Every isolate-involving pair
 remains strictly above one. No label is deleted. This is an actual planar

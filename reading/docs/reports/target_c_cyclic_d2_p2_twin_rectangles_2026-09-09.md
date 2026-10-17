@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_p2_twin_rectangles_2026-09-09.md) · source SHA-256 `d5b707a67a5b9612f770557425be8558594a280ec210e3245a1a7ef7786befce`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-417F6173E9E2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=2` P2 is a two-rectangle four-completion endpoint
 
@@ -19,47 +21,47 @@ In P2 the force hull has exactly two unordered pairs of parallel unit sides and 
 
 Let
 
-$$
+```math
 \delta:=2\arcsin\frac1{2D},
 \qquad
 \Delta:=2\arcsin\frac1D.
-$$
+```
 
 Then P2 satisfies the exact direction equation
 
-$$
+```math
 \boxed{(q-4)\delta+2\Delta=\pi.}
 \tag{P2R.1}
-$$
+```
 
 Equivalently
 
-$$
+```math
 \boxed{
 q
 =4+\frac{\pi-2\Delta}{\delta}
 =\pi D-\frac{\pi}{24D}-\frac1{2D^2}+O(D^{-3}).
 }
 \tag{P2R.2}
-$$
+```
 
 Each parallel side pair determines an exact rectangle of four shell vertices. Its parallel sides have length one, its two diagonals are actual diameter edges of length `D`, and its other two sides are antipodal short chords of length
 
-$$
+```math
 \boxed{\sqrt{D^2-1}.}
 \tag{P2R.3}
-$$
+```
 
 The two diameter diagonals of each such rectangle belong to different D2 diameter-tree components. Therefore the two parallel shell sides are A/B transition contacts. Since there are exactly two parallel pairs and exactly four A/B transition contacts, the four transition contacts are precisely those four sides, paired as two opposite parallel pairs.
 
 The WM/IB four-contact circuit then forces
 
-$$
+```math
 \boxed{
 \alpha_i=\alpha_j=\alpha_k=\alpha_\ell
 }
 \tag{P2R.4}
-$$
+```
 
 for the four transition contact coefficients.
 
@@ -73,9 +75,9 @@ Thus P2 reduces to two isostatic bodies coupled through an **equal-weight parall
 
 For a convex polygon `F`, the edge sequence of
 
-$$
+```math
 K=F+(-F)
-$$
+```
 
 is the angular merge of the edge sequences of `F` and `-F`. Every side of `F` has length one.
 
@@ -89,43 +91,43 @@ P2 has exactly two unordered parallel side pairs. Hence `K` has
 
 AD gives
 
-$$
+```math
 |V(K)|=2q-4
-$$
+```
 
 in P2, and by definition of the P2 subcase every K-vertex lies on the radius-`D` circle.
 
 A circle chord of length one subtends central angle
 
-$$
+```math
 \delta=2\arcsin\frac1{2D},
-$$
+```
 
 while a chord of length two subtends
 
-$$
+```math
 \Delta=2\arcsin\frac1D.
-$$
+```
 
 There are `2q-8` unit K-edges and four doubled K-edges. Summing central angles around the full circle gives
 
-$$
+```math
 (2q-8)\delta+4\Delta=2\pi,
-$$
+```
 
 which is P2R.1.
 
 Solving for `q` gives the exact expression in P2R.2. The expansion follows from
 
-$$
+```math
 2\arcsin\frac1{2D}
 =\frac1D+\frac1{24D^3}+O(D^{-5}),
-$$
+```
 
-$$
+```math
 2\arcsin\frac1D
 =\frac2D+\frac1{3D^3}+O(D^{-5}).
-$$
+```
 
 ---
 
@@ -133,63 +135,63 @@ $$
 
 Take one parallel shell-side pair
 
-$$
+```math
 ab,\qquad cd
-$$
+```
 
 in cyclic order, oriented so
 
-$$
+```math
 b-a=t,
 \qquad
 d-c=-t,
 \qquad |t|=1.
 \tag{2.1}
-$$
+```
 
 In the Minkowski merge, this pair produces the length-two K-edge
 
-$$
+```math
 [a-c,\ b-d],
-$$
+```
 
 whose vector is `2t`.
 
 P2 has no short K-vertices, so both endpoints are actual radius-`D` difference vectors:
 
-$$
+```math
 |a-c|=|b-d|=D.
 \tag{2.2}
-$$
+```
 
 Also
 
-$$
+```math
 b=a+t,
 \qquad d=c-t,
-$$
+```
 
 so
 
-$$
+```math
 a+c=b+d.
 \tag{2.3}
-$$
+```
 
 Thus `a,b,c,d` form a parallelogram. Its diagonals `ac` and `bd` have equal length `D`, hence the parallelogram is a rectangle.
 
 The other rectangle side length is therefore
 
-$$
+```math
 \boxed{L=\sqrt{D^2-1}.}
 \tag{2.4}
-$$
+```
 
 Moreover
 
-$$
+```math
 a-d=b-c
-$$
+```
 
 as directed vectors, so `ad` and `bc` are the two equal short antipodal chords associated with the tie.
 
@@ -201,15 +203,15 @@ This is exactly the P1 rectangle mechanism, now occurring twice independently.
 
 Write the D2 diameter forest as
 
-$$
+```math
 H=T_A\sqcup T_B.
-$$
+```
 
 For the rectangle above, both diagonals
 
-$$
+```math
 ac,\qquad bd
-$$
+```
 
 belong to `H`, because they are endpoints of a P2 K-edge and all K-vertices are actual diameter states.
 
@@ -217,15 +219,15 @@ We claim they cannot lie in the same tree component.
 
 Refine the length-two Minkowski edge by choosing either intermediate support state
 
-$$
+```math
 a-c\to b-c\to b-d
-$$
+```
 
 or
 
-$$
+```math
 a-c\to a-d\to b-d.
-$$
+```
 
 Perform either choice here and an arbitrary analogous choice at the second P2 tie. The full rotating-calipers support state sequence is still monotone, so the resulting `q` antipodal chords form a convex thrackle containing `H`. It has `q` edges on `q` vertices and is therefore maximal.
 
@@ -235,19 +237,19 @@ If `ac` and `bd` belonged to the same component, then all four vertices `a,b,c,d
 
 Therefore, after swapping labels if necessary,
 
-$$
+```math
 \boxed{a,c\in A,
 \qquad b,d\in B.}
 \tag{3.1}
-$$
+```
 
 Thus `ac` is an A-tree diameter edge and `bd` is a B-tree diameter edge.
 
 Consequently the shell sides
 
-$$
+```math
 ab,\qquad cd
-$$
+```
 
 both cross the A/B component cut. They are transition contacts of the four-block D2 decomposition.
 
@@ -257,9 +259,9 @@ both cross the A/B component cut. They are transition contacts of the four-block
 
 D2 gives exactly four shell edges crossing `A|B`, at the four transitions in
 
-$$
+```math
 A_0\mid B_0\mid A_1\mid B_1.
-$$
+```
 
 Section 3 shows that each of the two P2 parallel pairs contributes two such transition contacts.
 
@@ -269,19 +271,20 @@ Therefore the four P2 parallel sides are exactly all four transition contacts.
 
 Index the transitions cyclically as
 
-$$
+```math
 i<j<k<\ell.
-$$
+```
 
 The two A-to-B transitions are opposite in this cyclic list, as are the two B-to-A transitions. Hence the parallelism pattern is
 
-$$
+```math
 \boxed{
 t_k=-t_i,
 \qquad
 t_\ell=-t_j,
 }
 \tag{4.1}
+```
 
 where `t_r` is the oriented unit shell tangent on transition side `r`.
 
@@ -293,30 +296,31 @@ The directions `t_i,t_j` are not parallel, because the two unordered parallel pa
 
 WM gives the cut force balance
 
-\[
+```math
 \alpha_i t_i-
 \alpha_j t_j+
 \alpha_k t_k-
 \alpha_\ell t_\ell=0.
 \tag{5.1}
-$$
+```
 
 Using (4.1),
 
-$$
+```math
 (\alpha_i-\alpha_k)t_i
 +(\alpha_\ell-\alpha_j)t_j=0.
-$$
+```
 
 Since `t_i,t_j` are linearly independent,
 
-$$
+```math
 \boxed{
 \alpha_i=\alpha_k=:a,
 \qquad
 \alpha_j=\alpha_\ell=:b.
 }
 \tag{5.2}
+```
 
 So each opposite parallel transition pair already has equal KKT weight.
 
@@ -326,57 +330,57 @@ So each opposite parallel transition pair already has equal KKT weight.
 
 For a transition side `r`, WM writes
 
-\[
+```math
 m_r=p_r\times t_r.
-$$
+```
 
 For the first rectangle pair `(i,k)`, with shell sides `ab,cd` as in Section 2,
 
-$$
+```math
 m_i+m_k
 =a\times t+c\times(-t)
 =(a-c)\times t.
-$$
+```
 
 In the rectangle this signed quantity has absolute value exactly the separation of the two parallel unit sides,
 
-$$
+```math
 \boxed{|m_i+m_k|=L=\sqrt{D^2-1}.}
 \tag{6.1}
-$$
+```
 
 The convex cyclic orientation fixes the same sign convention for the second opposite transition pair. Its rectangle has the same dimensions `1 x L`, so
 
-$$
+```math
 \boxed{|m_j+m_\ell|=L.}
 \tag{6.2}
-$$
+```
 
 WM moment balance is
 
-$$
+```math
 \alpha_i m_i-\alpha_jm_j+\alpha_km_k-\alpha_\ell m_\ell=0.
 \tag{6.3}
-$$
+```
 
 Insert (5.2):
 
-$$
+```math
 a(m_i+m_k)=b(m_j+m_\ell).
 \tag{6.4}
-$$
+```
 
 The two signed couples oppose each other in the positive cut equilibrium, so their magnitudes are equal. By (6.1)-(6.2), both geometric lever arms equal `L`. Hence
 
-$$
+```math
 aL=bL.
-$$
+```
 
 Since `L>0`,
 
-$$
+```math
 \boxed{a=b.}
-$$
+```
 
 Together with (5.2), this proves P2R.4.
 
@@ -390,9 +394,9 @@ Each of the two length-two K-edges has two possible unit-step refinements, corre
 
 The choices at the two independent ties may be made independently. Hence P2 has
 
-$$
+```math
 \boxed{2\times2=4}
-$$
+```
 
 canonical refined antipodal state lists.
 
@@ -405,11 +409,11 @@ The rotating-calipers support indices remain monotone under either local tie ord
 
 Denote the four completions
 
-$$
+```math
 T^{\epsilon_1,\epsilon_2},
 \qquad
 \epsilon_s\in\{0,1\}.
-$$
+```
 
 By MT, in every completion both added short chords lie on the unique odd cycle and join the two D2 diameter-tree components.
 
@@ -419,9 +423,9 @@ By MT, in every completion both added short chords lie on the unique odd cycle a
 
 Fix one P2 rectangle. Its A-diameter diagonal is, say,
 
-$$
+```math
 e_A=ac.
-$$
+```
 
 The two short completion choices from this rectangle attach to opposite endpoints of `e_A`: one uses A-endpoint `a`, the other uses A-endpoint `c`.
 
@@ -439,11 +443,12 @@ The same argument applies to the B-diameter diagonal of this rectangle and to bo
 
 Therefore:
 
-$$
+```math
 \boxed{
 \text{all four actual diameter diagonals adjacent to the two P2 ties are H-leaf edges.}
 }
 \tag{8.1}
+```
 
 ---
 
@@ -451,35 +456,35 @@ $$
 
 For one tree component, say `T_A`, each of the four maximal completions contributes a unique tree path between its two chosen A-endpoints of the added short chords. Let
 
-\[
+```math
 J_A
 :=
 \bigcap_{\epsilon_1,\epsilon_2}
 P_{T_A}
 \bigl(a_1^{\epsilon_1},a_2^{\epsilon_2}\bigr),
 \tag{9.1}
-$$
+```
 
 where `a_s^epsilon` is the A-endpoint selected at tie `s`.
 
 Take any actual A-tree edge
 
-$$
+```math
 e\notin J_A.
-$$
+```
 
 Then some completion cycle omits `e`. In that maximal thrackle, `e` lies outside the unique odd cycle and is therefore pendant. The added edges are on the cycle, so `e` is a leaf edge of the original `T_A`.
 
 Hence every nonleaf A-tree edge lies in `J_A`:
 
-$$
+```math
 \boxed{
 \{e\in E(T_A):e\text{ is not a leaf edge}
 \}
 \subseteq J_A.
 }
 \tag{9.2}
-$$
+```
 
 The same holds for `T_B` with a common path `J_B`.
 
@@ -540,11 +545,11 @@ Only the four A/B transition contact coefficients are shown equal. No claim is m
 
 P2R.2 is compatible with R2: here
 
-$$
+```math
 q_R(D)-q
 =2\left(\frac\Delta\delta-2\right)
 =\frac1{2D^2}+O(D^{-4}),
-$$
+```
 
 well below the general `d_H=2` R2 upper constant `2/D^2`.
 

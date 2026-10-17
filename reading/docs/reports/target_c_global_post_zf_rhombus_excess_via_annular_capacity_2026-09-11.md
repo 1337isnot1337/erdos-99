@@ -20,13 +20,13 @@
 
 The preceding GR theorem proves for every post-ZF survivor
 
-$$
+```math
 E+\delta_F
 < a_0 Z_{ext}+c_0P_F,
 \qquad
 a_0={\sqrt3\over2},\quad c_0={\sqrt3\over4},
 \tag{1.1}
-$$
+```
 
 where
 
@@ -40,23 +40,23 @@ At first sight a quadratic `Z_ext` appears to block any general `E=O(D)` conclus
 The already-promoted annular Voronoi theorem AV has exactly the coefficient needed to
 remove that obstruction.  If `K=conv(A)` is the full source hull, AV gives
 
-$$
+```math
 Z_{ext}
 \le {2\over\sqrt3}
 \bigl(area(K)-area(F)+P_K+P_F+\pi\bigr).
 \tag{1.2}
-$$
+```
 
 Since `a_0(2/sqrt3)=1`, substitution cancels the complete force-hull area deficit.
 The result is an all-topology boundary-order rhombus-defect theorem:
 
-$$
+```math
 \boxed{
 E<P_K+(1+c_0)P_F+\pi
 \le \pi D\left(2+{\sqrt3\over4}\right)+\pi.
 }
 \tag{1.3}
-$$
+```
 
 Thus every post-ZF survivor, including `s_Z>0`, every Woodall forest topology, every
 external-rattler population, and every outer-pocket configuration, has only `O(D)`
@@ -71,40 +71,40 @@ This removes the cyclic hypothesis from the main CRE phase-transport conclusion.
 Let `F` be the force hull of the C65 post-ZF positive core and `K=conv(A)` the full
 source hull.  Then
 
-$$
+```math
 F\subseteq K,
 \qquad
 \operatorname{diam}F=\operatorname{diam}K=D.
 \tag{1.4}
-$$
+```
 
 Let
 
-$$
+```math
 \delta_F={\pi D^2\over4}-area(F).
-$$
+```
 
 The general rhombus-excess theorem GR on the present branch proves
 
-$$
+```math
 \boxed{E+\delta_F<a_0Z_{ext}+c_0P_F.}
 \tag{1.5}
-$$
+```
 
 The already-promoted annular Voronoi theorem AV applies to the external source points
 
-$$
+```math
 S=A\setminus F\subseteq K\setminus int(F),
-$$
+```
 
 which remain unit-separated.  It gives
 
-$$
+```math
 \boxed{
 a_0Z_{ext}
 \le area(K)-area(F)+P_K+P_F+\pi.}
 \tag{1.6}
-$$
+```
 
 No contact, KKT, or triangle-free hypothesis enters AV beyond the unit separation of
 this source subset.
@@ -115,84 +115,84 @@ this source subset.
 
 Write
 
-$$
+```math
 \delta_K={\pi D^2\over4}-area(K)\ge0.
-$$
+```
 
 Then
 
-$$
+```math
 area(K)-area(F)=\delta_F-\delta_K\le\delta_F.
 \tag{2.1}
-$$
+```
 
 Insert (1.6) into (1.5):
 
-$$
+```math
 \begin{aligned}
 E+\delta_F
 &< area(K)-area(F)+P_K+P_F+\pi+c_0P_F\\
 &=\delta_F-\delta_K+P_K+(1+c_0)P_F+\pi.
 \end{aligned}
-$$
+```
 
 Cancel `delta_F` from both sides.  This proves the sharper finite form
 
 ### Theorem GA — global post-ZF rhombus excess
 
-$$
+```math
 \boxed{
 E+\delta_K
 < P_K+(1+c_0)P_F+\pi.
 }
 \tag{GA.1}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{
 E<P_K+(1+c_0)P_F+\pi.
 }
 \tag{GA.2}
-$$
+```
 
 Both `F` and `K` have diameter `D`.  Cauchy's perimeter-diameter inequality gives
 
-$$
+```math
 P_F,P_K\le\pi D.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 E
 <\pi D\left(2+{\sqrt3\over4}\right)+\pi.
 }
 \tag{GA.3}
-$$
+```
 
 The coefficient is explicit but is not claimed sharp.
 
 A useful extra consequence of GA.1 is that the full source hull itself has only a
 boundary-order isodiametric deficit whenever the rhombus excess is nonnegative:
 
-$$
+```math
 \boxed{
 \delta_K<P_K+(1+c_0)P_F+\pi=O(D).
 }
 \tag{GA.4}
-$$
+```
 
 Thus every post-ZF hypothetical counterexample has
 
-$$
+```math
 \boxed{
 area(K)={\pi D^2\over4}-O(D).
 }
 \tag{GA.5}
-$$
+```
 
 This conclusion is stronger than the previously used Bonnesen consequence
 `area(K)=pi D^2/4-O(D)`: here it falls out of the same exact annular/rhombus ledger.
@@ -204,39 +204,39 @@ It is consistent with, and does not replace, the promoted full-source theorem FS
 
 For a strict unit rhombus with acute angle
 
-$$
+```math
 \theta\in(\pi/3,\pi/2],
-$$
+```
 
 its area excess is
 
-$$
+```math
 \sin\theta-\sqrt3/2.
-$$
+```
 
 The promoted Target B phase-cut theorem PC applies to the actual finite family of
 strict rhombic bounded faces without requiring that the whole C-II source be a pure
 rhombic disk.  If `Delta_train` is the total train angular defect, PC gives
 
-$$
+```math
 {3\Delta_{train}\over\pi}
 \le(2+\sqrt3)E.
 \tag{3.1}
-$$
+```
 
 GA.3 therefore yields
 
-$$
+```math
 \boxed{\Delta_{train}=O(D)}.
 \tag{GA.6}
-$$
+```
 
 Moreover PC deletes at most
 
-$$
+```math
 \left\lfloor{3\Delta_{train}\over\pi}\right\rfloor=O(D)
 \tag{3.2}
-$$
+```
 
 rhombus-crossing relations and leaves an exact acyclic real phase potential on the
 remaining train graph.
@@ -254,9 +254,9 @@ core.
 
 GR alone gives
 
-$$
+```math
 E+\delta_F<a_0Z_{ext}+O(D)
-$$
+```
 
 and therefore seems to leave a quadratic external-population escape.  ER similarly
 records external rattlers as the residual force-bulk obstruction.
@@ -264,9 +264,9 @@ records external rattlers as the residual force-bulk obstruction.
 AV has coefficient `2/sqrt3`, exactly reciprocal to the Oler coefficient
 `a_0=sqrt3/2`.  Consequently its leading annular area term is
 
-$$
+```math
 a_0Z_{ext}\le area(K)-area(F)+O(D),
-$$
+```
 
 which is exactly the difference between the full-hull and force-hull isodiametric
 deficits.  Substitution removes the unknown `delta_F` identically, rather than

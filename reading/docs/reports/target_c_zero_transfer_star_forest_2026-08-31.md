@@ -17,9 +17,9 @@
 C56 proves that a selected two-dimensional null stress can carry genuine diameter
 shear only in the exact zero-transfer phase
 
-$$
+```math
 K=Q^{\mathsf T}\Lambda^+Q=B^{-1}.
-$$
+```
 
 C57 then proves that two null-face extreme bodies with different angular rates have a
 midpoint stress in precisely this phase. This report classifies the positive diameter
@@ -27,11 +27,11 @@ graph of every such zero-transfer stress.
 
 The conclusion is sharp and finite:
 
-$$
+```math
 \boxed{
 \text{every connected positive-diameter component is a star of degree at most }5.
 }
-$$
+```
 
 Moreover each star component has an additive effective-resistance metric and therefore
 a source-preserving one-vertex terminal separator whenever it has at least four
@@ -44,35 +44,35 @@ Fix a normalized KKT stress `s=(alpha,beta)` in the C56-Z phase. Let `G_s` be it
 connected positive unit-contact graph, let `B=V(H_s)` be its positive diameter endpoint
 set, let `Lambda` be the positive-contact Dirichlet response on `B`, and put
 
-$$
+```math
 R=\Lambda^+.
-$$
+```
 
 Orient the positive diameter edges and let `Q` be the boundary-by-edge incidence
 matrix. With
 
-$$
+```math
 B_H=\operatorname{diag}(\beta_e:e\in H_s),
-$$
+```
 
 C56-Z gives
 
-$$
+```math
 \boxed{
 K:=Q^{\mathsf T}RQ=B_H^{-1}.
 }
 \tag{C58.1}
-$$
+```
 
 In particular `K` is positive definite, so the columns of `Q` are independent and
 `H_s` is a forest.
 
 The effective-resistance metric on `B` is
 
-$$
+```math
 W_{uv}=(e_u-e_v)^{\mathsf T}R(e_u-e_v).
 \tag{C58.2}
-$$
+```
 
 By the C50 circular-planar response theorem, `W` is Kalmanson in the cyclic order of
 the force-hull boundary. The Kalmanson inequalities remain true after restriction to
@@ -83,21 +83,21 @@ any subset of terminals, in its induced cyclic order.
 Let `T` be one connected component of the forest `H_s`. Give every edge `e` of `T`
 the positive length
 
-$$
+```math
 r_e=\frac1{\beta_e}.
 \tag{C58.3}
-$$
+```
 
 ### Theorem C58.1 (zero transfer gives the diameter-tree metric)
 
 For every `u,v in V(T)`,
 
-$$
+```math
 \boxed{
 W_{uv}=\sum_{e\in P_T(u,v)}r_e,
 }
 \tag{C58.4}
-$$
+```
 
 where `P_T(u,v)` is the unique path from `u` to `v` in `T`.
 
@@ -105,16 +105,16 @@ where `P_T(u,v)` is the unique path from `u` to `v` in `T`.
 
 Choose signs `sigma_e in {+1,-1}` along the oriented path so that
 
-$$
+```math
 e_u-e_v
 =\sum_{e\in P_T(u,v)}\sigma_e q_e,
 \tag{C58.5}
-$$
+```
 
 where `q_e` is the incidence column of `Q`. Let `z` be the corresponding edge vector,
 zero off that path. Then by (C58.1),
 
-$$
+```math
 \begin{aligned}
 W_{uv}
 &=(Qz)^{\mathsf T}R(Qz)\\
@@ -122,7 +122,7 @@ W_{uv}
 &=\sum_{e\in P_T(u,v)}\frac{\sigma_e^2}{\beta_e}\\
 &=\sum_{e\in P_T(u,v)}r_e.
 \end{aligned}
-$$
+```
 
 `\square`
 
@@ -135,9 +135,9 @@ diameter tree.
 Let a positive weighted tree `T` have a cyclic order on its vertex set. An edge `g`
 of `T` determines a bipartition
 
-$$
+```math
 V(T)=A_g\sqcup B_g.
-$$
+```
 
 Call this split **circular** when one side is a cyclic interval, equivalently when the
 two sides do not alternate around the circle.
@@ -152,50 +152,50 @@ then every edge split `A_g|B_g` is circular.
 Suppose the split of some positive-length edge `g` is not circular. Then there are four
 vertices in cyclic order
 
-$$
+```math
 a,b,c,d
-$$
+```
 
 with
 
-$$
+```math
 a,c\in A_g,
 \qquad
 b,d\in B_g.
 \tag{C58.6}
-$$
+```
 
 Restrict the tree metric to these four marked vertices. In the minimal subtree joining
 them, the edge `g` lies in the positive internal path realizing the quartet split
 
-$$
+```math
 ac\mid bd.
-$$
+```
 
 Hence the tree four-point identity gives
 
-$$
+```math
 d(a,c)+d(b,d)
 <d(a,b)+d(c,d)
 =d(a,d)+d(b,c).
 \tag{C58.7}
-$$
+```
 
 The inequality is strict because the internal path contains the positive edge `g`.
 
 But the Kalmanson inequalities for four vertices in cyclic order `a,b,c,d` require the
 crossing sum to be maximal:
 
-$$
+```math
 d(a,c)+d(b,d)
 \ge d(a,b)+d(c,d),
-$$
+```
 
-$$
+```math
 d(a,c)+d(b,d)
 \ge d(a,d)+d(b,c).
 \tag{C58.8}
-$$
+```
 
 Equations (C58.7)-(C58.8) contradict each other. Therefore every tree-edge split is
 circular. `\square`
@@ -235,12 +235,12 @@ case is a star as well. `\square`
 
 Therefore
 
-$$
+```math
 \boxed{
 H_s\text{ is a disjoint union of diameter stars.}
 }
 \tag{C58.9}
-$$
+```
 
 This removes every non-star caterpillar allowed by the purely combinatorial
 convex-thrackle classification.
@@ -249,21 +249,21 @@ convex-thrackle classification.
 
 Let a component `T` have center `o` and leaves `v_1,...,v_k`. Put
 
-$$
+```math
 r_o=0,
 \qquad
 r_{v_i}=\frac1{\beta_{ov_i}}.
 \tag{C58.10}
-$$
+```
 
 The tree-metric formula gives, for distinct vertices `x,y in V(T)`,
 
-$$
+```math
 \boxed{
 W_{xy}=r_x+r_y.
 }
 \tag{C58.11}
-$$
+```
 
 Thus the resistance metric on the `q=k+1` terminals of the star is additive, with the
 star center as the unique zero-parameter terminal.
@@ -279,14 +279,14 @@ source-preserving SEPq theorem applies to (C58.11).
 If `q>=4`, there is a vertex `z` of the actual positive contact graph `G_s` such that
 every component of `G_s-z` contains at most one terminal of `V(T)`. Consequently
 
-$$
+```math
 \deg_{G_s}(z)\ge
 \begin{cases}
 q,&z\notin V(T),\\
 q-1,&z\in V(T).
 \end{cases}
 \tag{C58.12}
-$$
+```
 
 No replacement star network is introduced: `z` is a vertex of the source positive
 unit-contact graph.
@@ -308,10 +308,10 @@ triangle with the center. `\square`
 
 Since `G_s` is a subgraph of the triangle-free source unit-contact graph,
 
-$$
+```math
 \deg_{G_s}(z)\le5
 \tag{C58.13}
-$$
+```
 
 for every vertex `z`.
 
@@ -321,12 +321,12 @@ Combining (C58.12)-(C58.13) gives:
 
 For every C56-Z selected normalized KKT stress in a triangle-free source,
 
-$$
+```math
 \boxed{
 H_s\text{ is a star forest and every star has degree at most }5.
 }
 \tag{C58.14}
-$$
+```
 
 Equivalently, every positive-diameter component has at most six terminals.
 
@@ -340,15 +340,15 @@ Let `s^a,s^b` be two extreme stresses of the C54 null face. C57 makes their posi
 contact components rigid bodies for every strong-framework flex. If the bodies have
 different angular rates, C57 proves their midpoint
 
-$$
+```math
 s^{ab}=\tfrac12(s^a+s^b)
-$$
+```
 
 is a C56-Z stress.
 
 Applying C58 to that midpoint gives:
 
-$$
+```math
 \boxed{
 \omega_a\ne\omega_b
 \Longrightarrow
@@ -356,7 +356,7 @@ H_{s^a}\cup H_{s^b}
 \text{ is a star forest with every star degree }\le5.
 }
 \tag{C58.15}
-$$
+```
 
 Every star with at least four terminals also has the source-preserving separator from
 C58.4.

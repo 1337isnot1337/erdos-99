@@ -191,7 +191,7 @@ Cauchy--Schwarz and the preceding degree-variance estimate give
     e_G(X,Y)=t^2/4+O(sqrt(epsilon_t)t^2).
 
 Since |X|=t/2+o(t), |Y|=t/2+o(t), subtracting e_G(X,Y)
-from e(G) proves (3.1). $\square$
+from e(G) proves (3.1). $`\square`$
 
 Apply Lemma MP.1 to (2.3). Let ell be the canonical phase label in
 Z/3Z, and write
@@ -238,7 +238,7 @@ In either case choose distinct i in I and j in J with
 
 and with both terms at least t/4-o(t). The only missing pairs in the
 selected X--Y cross product are counted by M, so the selected pair has
-o(t^2) missing edges. $\square$
+o(t^2) missing edges. $`\square`$
 
 The labels i and j may be interchanged. In what follows choose lifts so that
 the crossing phase law has the form
@@ -287,7 +287,7 @@ inversion graph of size at most r: one proof starts from a maximum
 matching, follows alternating paths from unmatched A vertices, and
 takes the reachable B vertices together with the nonreachable A vertices.
 Deleting this cover removes every inversion. Since M=o(D^2), its size
-is o(D), proving (3.4). $\square$
+is o(D), proving (3.4). $`\square`$
 
 ## 4. Near-complete two-label path lemma
 
@@ -308,18 +308,21 @@ Assume:
 2. every A--B crossing is simple and has one common crossing sign;
 3. after phase cleaning, all train directions have lifts alpha_a and beta_b
    satisfying
-   $$
+   ```math
    \beta_b-\alpha_a=L+\delta_{ab},\qquad 0<\delta_{ab}<L
-   $$
+   
+   ```
    whenever a and b cross, and every pair obeys
-   $$
+   ```math
    \alpha_a<\beta_b;
-   $$
+   
+   ```
 4. the number M of missing A--B pairs is o(D^2);
 5. the total phase defect over the actual A--B crossings satisfies
-   $$
+   ```math
    \sum_{ab\ {\rm crossing}}\delta_{ab}\le C D
-   $$
+   
+   ```
    for one fixed C.
 
 Then the convex hull of the source rhombus centers contains two points at
@@ -484,7 +487,7 @@ the convex hull of the full source. Its diameter is D, so
       >= e dot(z_+-z_-)
       >= (sqrt(3)/2)(p+q)-o(D).
 
-This proves (4.1). $\square$
+This proves (4.1). $`\square`$
 
 The proof is finite at each D. The only asymptotic inputs are M=o(D^2),
 p,q=Theta(D), and the stated O(D) phase-defect bound. No complete biclique

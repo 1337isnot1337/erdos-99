@@ -18,13 +18,13 @@
 
 GC reduces the even-`m` P2 arithmetic problem to the fixed Gaussian curve
 
-$$
+```math
 \mathcal F(X,Y)=X^2Y^2+i(4X^2-6X+4)Y-1=0
-$$
+```
 over
-$$
+```math
 K:=\mathbb Q(i).
-$$
+```
 
 The missing lacunary step eventually asks whether finite monomial pullbacks of this curve can split. The basic obstruction is now completely explicit: **no primitive torus character becomes a proper power in the function field of the curve.**
 
@@ -32,42 +32,42 @@ The missing lacunary step eventually asks whether finite monomial pullbacks of t
 
 Let
 
-$$
+```math
 C/K:\quad \mathcal F(X,Y)=0,
-$$
+```
 
 and let
 
-$$
+```math
 K(C)
-$$
+```
 
 be its function field. For every primitive integer pair
 
-$$
+```math
 (r,s)\in\mathbb Z^2,
 \qquad \gcd(r,s)=1,
-$$
+```
 
 put
 
-$$
+```math
 \chi_{r,s}:=X^rY^s\in K(C)^\times.
-$$
+```
 
 Then for every prime `p`,
 
-$$
+```math
 \boxed{\chi_{r,s}\notin K(C)^p.}
 \tag{PK.1}
-$$
+```
 
 In particular `chi_{r,s}` is never a square. Consequently, for every integer `k>=1`,
 
-$$
+```math
 \boxed{T^k-\chi_{r,s}\text{ is irreducible over }K(C).}
 \tag{PK.2}
-$$
+```
 
 The exceptional Capelli obstruction when `4|k` cannot occur either.
 
@@ -79,40 +79,40 @@ This theorem is uniform in the primitive character `(r,s)`; it is much stronger 
 
 GC introduced
 
-$$
+```math
 S:=\sqrt{X^2-X+1},
 \qquad
 u:=S-(X-1),
 \qquad
 v:=S+(X-1).
-$$
+```
 
 To avoid collision with later valuation notation, rename GC's `u` as `u` here. Thus
 
-$$
+```math
 u=S-(X-1),
 \qquad
 v=S+(X-1).
-$$
+```
 
 GC proves
 
-$$
+```math
 uv=X,
 \qquad
 v=\frac{u-2}{1-2u},
-$$
+```
 
 so
 
-$$
+```math
 K(C)=K(u).
 \tag{1.1}
-$$
+```
 
 For the branch corresponding to `mathcal F(X,Y)=0`, the `t=0` root formula in GC gives
 
-$$
+```math
 \boxed{
 X=u\,v
 =\frac{u(u-2)}{1-2u},
@@ -120,7 +120,7 @@ X=u\,v
 Y=-iu^{-2}.
 }
 \tag{1.2}
-$$
+```
 
 The conjugate parameterization `Y=-iv^{-2}` is obtained by the involution interchanging `u,v`; either one gives the same function field and the same conclusion.
 
@@ -130,13 +130,13 @@ The conjugate parameterization `Y=-iv^{-2}` is obtained by the involution interc
 
 Work in the rational function field
 
-$$
+```math
 K(u)=\mathbb Q(i)(u).
-$$
+```
 
 The only places needed are
 
-$$
+```math
 u=0,
 \qquad
 u=2,
@@ -144,27 +144,27 @@ u=2,
 u=\frac12,
 \qquad
 \nu=\infty.
-$$
+```
 
 From (1.2):
 
-$$
+```math
 \begin{array}{c|rrrr}
  & u=0 & u=2 & u=1/2 & u=\infty\\ \hline
 \operatorname{ord}(X) & 1 & 1 & -1 & -1\\
 \operatorname{ord}(Y) & -2 & 0 & 0 & 2
 \end{array}
 \tag{2.1}
-$$
+```
 
 Therefore for
 
-$$
+```math
 \chi_{r,s}=X^rY^s
-$$
+```
 we have
 
-$$
+```math
 \boxed{
 \begin{array}{c|rrrr}
  & 0 & 2 & 1/2 & \infty\\ \hline
@@ -172,7 +172,7 @@ $$
  & r-2s & r & -r & -r+2s.
 \end{array}}
 \tag{2.2}
-$$
+```
 
 These four integers already rule out every odd prime power.
 
@@ -182,45 +182,45 @@ These four integers already rule out every odd prime power.
 
 Suppose for some odd prime `p` that
 
-$$
+```math
 \chi_{r,s}=f^p
-$$
+```
 
 in `K(C)`. Every discrete valuation of a `p`th power is divisible by `p`. In particular (2.2) gives
 
-$$
+```math
 p\mid r,
 \qquad
 p\mid(r-2s).
-$$
+```
 
 Hence
 
-$$
+```math
 p\mid2s.
-$$
+```
 
 Since `p` is odd,
 
-$$
+```math
 p\mid s.
-$$
+```
 
 Thus `p` divides both `r` and `s`, contradicting
 
-$$
+```math
 \gcd(r,s)=1.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \chi_{r,s}\notin K(C)^p
 \quad\text{for every odd prime }p.
 }
 \tag{3.1}
-$$
+```
 
 ---
 
@@ -228,47 +228,47 @@ $$
 
 Suppose
 
-$$
+```math
 \chi_{r,s}=f^2.
-$$
+```
 
 The valuation at `u=2` gives
 
-$$
+```math
 r\equiv0\pmod2.
-$$
+```
 
 Because `(r,s)` is primitive, `s` must then be odd.
 
 Using `Y=-iu^{-2}`,
 
-$$
+```math
 \begin{aligned}
 \chi_{r,s}
 &=X^r(-i)^s u^{-2s}\\
 &=(-i)^s\left(X^{r/2}u^{-s}\right)^2.
 \end{aligned}
 \tag{4.1}
-$$
+```
 
 Write
 
-$$
+```math
 s=2j+1.
-$$
+```
 
 Then
 
-$$
+```math
 (-i)^s
 =(-i)\left((-i)^j\right)^2.
-$$
+```
 
 Thus `chi_{r,s}` could be a square in `K(u)` only if
 
-$$
+```math
 -i
-$$
+```
 
 were a square in `K(u)`.
 
@@ -276,42 +276,42 @@ It is not. The constant field `K=Q(i)` is algebraically closed in the purely tra
 
 If
 
-$$
+```math
 (a+bi)^2=-i,
 \qquad a,b\in\mathbb Q,
-$$
+```
 
 then
 
-$$
+```math
 a^2-b^2=0,
 \qquad
 2ab=-1.
-$$
+```
 
 The first equation gives `b=±a`; the second then forces
 
-$$
+```math
 a^2=\frac12
-$$
+```
 
 up to sign, impossible for rational `a`.
 
 Hence
 
-$$
+```math
 \boxed{-i\notin K^2,}
 \tag{4.2}
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 \chi_{r,s}\notin K(C)^2.
 }
 \tag{4.3}
-$$
+```
 
 Together with Section 3 this proves PK.1.
 
@@ -323,47 +323,48 @@ Use the standard binomial form of Capelli's criterion.
 
 For a field `L` and `a in L^×`, the binomial
 
-$$
+```math
 T^k-a
-$$
+```
 
 is irreducible over `L` if
 
 1. `a` is not a `p`th power in `L` for every prime `p|k`; and
 2. if `4|k`, then `a` is not of the exceptional form
-   $$
+   ```math
    -4b^4.
-   $$
+   
+   ```
 
 Take
 
-$$
+```math
 L=K(C),
 \qquad
 a=\chi_{r,s}.
-$$
+```
 
 PK.1 supplies condition 1 for every prime divisor of `k`.
 
 For condition 2, if
 
-$$
+```math
 \chi_{r,s}=-4b^4,
-$$
+```
 
 then, because `i in K`,
 
-$$
+```math
 \chi_{r,s}=(2ib^2)^2,
-$$
+```
 
 contradicting the nonsquare result (4.3).
 
 Therefore
 
-$$
+```math
 T^k-\chi_{r,s}
-$$
+```
 
 is irreducible for every `k>=1`. This proves PK.2. `square`
 
@@ -373,10 +374,10 @@ is irreducible for every `k>=1`. This proves PK.2. `square`
 
 The coordinate characters of the two-dimensional torus are
 
-$$
+```math
 X^rY^s,
 \qquad(r,s)\in\mathbb Z^2.
-$$
+```
 
 Primitive characters are exactly those with `gcd(r,s)=1`. PK says that restricting any primitive torus character to the Gaussian P2 curve never turns it into a nontrivial power in the curve function field.
 
@@ -418,12 +419,12 @@ Interchanging `u` and `v` gives the other root of `mathcal F` as a quadratic in 
 
 GC individually checked a large family of special characters arising from Filaseta's `N=kell±t` substitutions. PK proves a uniform statement instead:
 
-$$
+```math
 \boxed{
 \text{every primitive character of }(G_m)^2
 \text{ is Kummer-primitive on }C.
 }
-$$
+```
 
 The next algebraic theorem is now finite and lattice-theoretic:
 

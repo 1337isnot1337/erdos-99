@@ -17,10 +17,10 @@
 The certified collapsed branch is not globally realizable in its recorded cyclic-order
 chamber, even after allowing train crossings. The obstruction is finite and exact:
 
-$$
+```math
 \boxed{\text{the certified six-face octahedral terminal rotation has no planar train
 routing compatible with its allowed crossings}.}
-$$
+```
 
 This does not exclude the collapsed branch universally. It excludes only the regular
 local order chamber certified by the existing contraction box; other collapsed metric
@@ -30,18 +30,18 @@ components or order chambers still require analysis.
 
 The twelve internal relation trains are the edges of
 
-$$
+```math
 G=K_6\setminus\{03,14,25\},
-$$
+```
 
 the octahedral graph. Contract each bounded stopping face to a vertex and each complete
 train to an edge. The certified face orders induce a cyclic rotation of the four
 incident train ends at every vertex. With no crossings, the resulting rotation system
 has
 
-$$
+```math
 (V,E,F)=(6,12,4),\qquad \chi=-2,
-$$
+```
 
 and hence genus two.
 
@@ -69,9 +69,9 @@ crossing. The original six vertex rotations remain fixed.
 The verifier computes the face permutation of every resulting rotation system using
 integer combinatorics. A planar routing would have
 
-$$
+```math
 F=E-V+2=8+k
-$$
+```
 
 faces when `k` crossings are inserted. Exhausting all `2^7` candidate subsets, all
 legal crossing-graph choices, all multiple-crossing orders, and both alternating

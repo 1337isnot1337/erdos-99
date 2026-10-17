@@ -6,6 +6,11 @@ and historical archives. Every page links to its source and records its SHA-256.
 The [generation manifest](manifest.json) binds all reading pages to those sources.
 No statement, hypothesis, proof, or mathematical lifecycle is promoted here.
 
+Unclosed source display delimiters are repaired only at paragraph boundaries and
+flagged on their pages. Paragraphs with ambiguous inline delimiters are shown as
+explicit source excerpts. These presentation notes preserve the underlying text
+and make source formatting damage visible rather than inventing an equation.
+
 Start with the [problem](docs/problem/statement.md), [current state](docs/STATE.md),
 [research map](docs/KNOWLEDGE_MAP.md), [glossary](docs/GLOSSARY.md), and
 [numbered bibliography](docs/BIBLIOGRAPHY.md). Then choose [A](docs/targets/target-a/README.md),

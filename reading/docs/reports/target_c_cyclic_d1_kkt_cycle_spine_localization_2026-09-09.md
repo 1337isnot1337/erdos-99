@@ -17,15 +17,15 @@
 
 AC identifies the complete vertex-antipodal graph in S1 as a canonical maximal convex thrackle
 
-$$
+```math
 \mathcal A(F)=H+g,
-$$
+```
 
 where `g` is the unique short antipodal pair and lies on the unique odd cycle `C_*` of `A(F)`. The full diameter graph is
 
-$$
+```math
 H=\mathcal A(F)-g,
-$$
+```
 
 so the odd cycle opens into a path while every off-cycle edge remains a direct pendant edge.
 
@@ -37,13 +37,15 @@ Let `S` be the one-dimensional normalized KKT polytope in the cyclic S1 `d_H=1` 
 
 1. every diameter edge of `H` outside `C_*` has strictly positive beta coefficient for every stress in `S`;
 2. every diameter coordinate that vanishes anywhere on `partial S` is a retained edge of
-   $$
+   ```math
    C_*\setminus\{g\};
-   $$
+   
+   ```
 3. in particular the two distinct coordinate facets required by LF are supplied by two distinct actual diameter edges
-   $$
+   ```math
    e_-,e_+\in E(C_*)\setminus\{g\};
-   $$
+   
+   ```
 4. for either endpoint-zero edge `e`, deleting `e` from `H` cuts the opened odd-cycle path into two subpaths, together with the pendant leaves attached to those subpaths;
 5. the canonical short chord `g` is the unique edge of `A(F)` other than `e` that reconnects the two cycle-path sides through the deleted cycle.
 
@@ -57,21 +59,21 @@ The maximal-convex-thrackle structure of `A(F)` consists of one odd cycle `C_*`,
 
 AC proves that the deleted short edge `g` lies on `C_*`. Therefore deleting `g` does not alter any off-cycle pendant edge. Hence every edge
 
-$$
+```math
 h\in E(\mathcal A(F))\setminus E(C_*)
-$$
+```
 
 remains a pendant edge in the full diameter tree
 
-$$
+```math
 H=\mathcal A(F)-g.
-$$
+```
 
 In particular each such edge is incident to a vertex of full-H degree one.
 
 LF.1 therefore applies:
 
-$$
+```math
 \boxed{
 \beta_h(s)>0
 \quad
@@ -80,7 +82,7 @@ $$
 h\notin C_*.
 }
 \tag{CS.1}
-$$
+```
 
 This proves item 1.
 
@@ -92,25 +94,25 @@ CG says every proper face of the cyclic KKT polytope is induced by diameter coor
 
 Section 1 identifies every edge outside `C_*` as a full-H leaf edge. Therefore any diameter edge `e` satisfying
 
-$$
+```math
 \beta_e(s)=0
-$$
+```
 
 for some boundary stress `s` must lie on the retained cycle path
 
-$$
+```math
 C_*\setminus\{g\}.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 \{e\in H:\exists s\in\partial\mathcal S,\ \beta_e(s)=0\}
 \subseteq E(C_*)\setminus\{g\}.
 }
 \tag{CS.2}
-$$
+```
 
 This proves item 2.
 
@@ -122,17 +124,17 @@ Since `dim S=1`, LF.2 requires at least two distinct nonleaf diameter coordinate
 
 Fix one endpoint-zero edge
 
-$$
+```math
 e\in E(C_*)\setminus\{g\}.
-$$
+```
 
 The graph `C_*-g` is a path through all cycle vertices. Removing the additional edge `e` splits this path into exactly two path components.
 
 Every off-cycle vertex of `A(F)` is a direct leaf attached to one cycle vertex. Therefore in
 
-$$
+```math
 H-e=(\mathcal A(F)-g)-e
-$$
+```
 
 each pendant leaf remains attached to whichever of the two cycle-path components contains its attachment vertex.
 
@@ -152,17 +154,17 @@ No other topological decomposition is possible. This proves item 4.
 
 In the maximal antipodal graph `A(F)`, the only two cycle edges removed from the cycle when we pass to `H-e` are
 
-$$
+```math
 g
 \quad\text{and}\quad
 e.
-$$
+```
 
 Restoring `e` gives the diameter tree `H`; restoring `g` instead gives the alternate spanning tree
 
-$$
+```math
 \mathcal A(F)-e.
-$$
+```
 
 Both connect the two path sides of `C_*-\{g,e\}`. All pendant edges are internal to one side.
 
@@ -188,16 +190,16 @@ A finite combinatorial regression check shows that `e` and `g` need not be verte
 
 Every off-cycle beta coordinate has a fixed-source positive floor by LF:
 
-$$
+```math
 \min_{s\in\mathcal S}\beta_h(s)>0,
 \qquad h\notin C_*.
-$$
+```
 
 Thus any affine parameterization
 
-$$
+```math
 s(t)=s_0+t\dot s
-$$
+```
 
 of the one-dimensional stress polytope can hit coordinate hyperplanes only among the retained cycle-edge beta coordinates.
 

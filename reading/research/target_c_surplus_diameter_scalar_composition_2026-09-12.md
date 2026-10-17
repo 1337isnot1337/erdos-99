@@ -20,38 +20,38 @@ check. The attempted floor was obtained by treating the finite constant `2` as `
 
 Normalize by the source diameter `D` and write
 
-$$
+```math
  t={q-k\over D},\qquad \kappa={k\over D},\qquad
  e={e_{BB}\over D},\qquad s={s_C\over D},\qquad c={c_I\over D}.
-$$
+```
 
 On the Type-II endpoint branch, use the proof-only identities
 
-$$
+```math
  q/D=t+\kappa,
  \qquad e_{BB}=q-m,
  \qquad c_I+s_C=m+k-2.
 \tag{1}
-$$
+```
 
 The last two are the audited-working loaded-side/attachment identities with
 `c_B=0`; `c_I/D\to0` by the canonical component-count theorem.  The exact
 renormalized-surplus floor is canonical:
 
-$$
+```math
  {e_{BB}+2s_C-3k\over D}
  \ge z_0-o(1),
  \qquad z_0=0.9604.
 \tag{2}
-$$
+```
 
 The conservative Section-131 endpoint moment inequality is
 
-$$
+```math
  5q-7k\ge A_0D-o(D),
  \qquad A_0:=3(2.7985)+0.2104=8.6059.
 \tag{3}
-$$
+```
 
 The values `2.7985` and `0.2104` are rounded downward versions of the audited
 Section-130 diameter moment and `c_*` payment, so (3) is used only as a
@@ -61,55 +61,55 @@ conservative proof-only endpoint input.
 
 From (1), with all quantities finite before normalization,
 
-$$
+```math
  m=c_I+s_C-k+2,
-$$
+```
 
 The `2` is an ordinary integer, not `2D`. Therefore, after division by `D`,
 
-$$
+```math
  {m\over D}=c+s-\kappa+{2\over D},
  \qquad
  e={q-m\over D}=t+2\kappa-c-s-{2\over D}.
 \tag{4-correct}
-$$
+```
 
 Substituting (4-correct) into the surplus expression gives
 
-$$
+```math
  {e_{BB}+2s_C-3k\over D}=t-\kappa+s-c-{2\over D}.
 \tag{5-correct}
-$$
+```
 
 Because `e\ge0`, (4-correct) also gives
 
-$$
+```math
  s\le t+2\kappa-c-{2\over D}.
 \tag{6-correct}
-$$
+```
 
 Combining (5-correct) and (6-correct), and using `c\ge0`, yields
 
-$$
+```math
  {e_{BB}+2s_C-3k\over D}
  \le 2t+\kappa-2c-{4\over D}
  \le 2t+\kappa-{4\over D}.
 \tag{7-correct}
-$$
+```
 
 Thus the canonical floor (2) gives only
 
-$$
+```math
  2t+\kappa\ge z_0-o(1).
 \tag{8-correct}
-$$
+```
 
 Equation (3), after `q/D=t+\kappa`, is
 
-$$
+```math
  5t-2\kappa\ge A_0-o(1).
 \tag{9}
-$$
+```
 
 There is no `+4` term to eliminate. Since `\kappa\ge0`, (9) itself gives only
 the separate lower bound `t\ge A_0/5-o(1)=1.72118...-o(1)`; (8-correct) is
@@ -126,21 +126,21 @@ old displayed elimination was invalid.
 
 The corrected asymptotic ledger admits the rational values
 
-$$
+```math
  t=1.9,\quad \kappa=0,\quad e=0.9,\quad c=0,
  \quad s=1,
-$$
+```
 
 and set `q/D=t+\kappa=1.9`, `m/D=q/D-e=1`. Up to the vanishing `2/D`
 finite correction, (4-correct) holds and
 
-$$
+```math
  e+2s-3\kappa=2.9>0.9604,
-$$
+```
 
-$$
+```math
  5t-2\kappa=9.5>8.6059.
-$$
+```
 
 It also satisfies `q/D<\pi` and nonnegativity. This is only an asymptotic algebraic
 witness; it is not claimed to come from a contact complex, KKT stress, or global

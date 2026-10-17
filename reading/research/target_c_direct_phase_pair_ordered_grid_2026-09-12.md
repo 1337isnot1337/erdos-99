@@ -20,9 +20,9 @@ angular width strictly smaller than `pi` on every finite source.
 
 This removes the density-squaring loss
 
-$$
+```math
 E\asymp D^2\longmapsto {E^2\over T^2}
-$$
+```
 
 from the beginning of Section 91. Combining the direct monotonicity with its
 endpoint-balanced slab argument and the exact interval-block counting theorem gives a
@@ -40,71 +40,71 @@ Work in one full-core Type-II harmonic carrier. Let `R_D` be its number of stric
 rhombi and `T_D` its number of local train segments. Suppose fixed constants `r,C_0>0`
 satisfy, for all sufficiently large members of the sequence,
 
-$$
+```math
 R_D\ge rD^2,
 \qquad
 T_D\le C_0D.
 \tag{1.1}
-$$
+```
 
 Canonical Section 90 begins from exactly this situation. Apply the canonical
 Section-68 phase-circle cut. It deletes only `O(D)` crossing rhombi and places every
 remaining train reduced phase in one common open interval
 
-$$
+```math
 I=(s,s+L),
 \qquad L={\pi\over3}.
 \tag{1.2}
-$$
+```
 
 Thus, after increasing the threshold on `D`, at least
 
-$$
+```math
 {3r\over4}D^2
 \tag{1.3}
-$$
+```
 
 carrier crossings remain. Every retained crossing joins two distinct labels in
 `Z/3Z`, so one of the three unordered label pairs supports at least
 
-$$
+```math
 \boxed{E\ge\eta D^2,
 \qquad \eta:={r\over4}.}
 \tag{1.4}
-$$
+```
 
 Let `A,B` be the local train segments in that pair. Relabel cyclically so that
 
-$$
+```math
 \ell_B-\ell_A\equiv1\pmod3.
 \tag{1.5}
-$$
+```
 
 Choose integer lifts with `ell_B=ell_A+1`; if the labels wrap modulo three, add `3`
 to the lift of `ell_B`. For a train write
 
-$$
+```math
 \alpha_a=x_a+L\ell_A,
 \qquad
 \beta_b=x_b+L\ell_B.
 \tag{1.6}
-$$
+```
 
 At every actual `A`--`B` crossing the canonical oriented phase law gives
 
-$$
+```math
 \boxed{x_b-x_a=\delta_{ab}>0.}
 \tag{1.7}
-$$
+```
 
 No inverse-diameter defect cutoff is used.
 
 Because the two label families are disjoint subsets of the local train set,
 
-$$
+```math
 \boxed{|A|+|B|\le T_D\le C_0D.}
 \tag{1.8}
-$$
+```
 
 ---
 
@@ -112,61 +112,61 @@ $$
 
 Let
 
-$$
+```math
 x_-:=\min_{A\cup B}x_\tau,
 \qquad
 x_+:=\max_{A\cup B}x_\tau.
-$$
+```
 
 The train set is finite and all reduced phases lie in the open interval (1.2), so
 
-$$
+```math
 \boxed{x_+-x_-<L.}
 \tag{2.1}
-$$
+```
 
 Canonical Theorem 10.6 orients a train with physical unit-edge argument `alpha` so
 that every elementary centerline displacement has argument in
 
-$$
+```math
 (\alpha+L,\alpha+2L).
 \tag{2.2}
-$$
+```
 
 Orient **both** `A` and `B` trains canonically. Every elementary displacement of an
 `A` train then has argument in the common interval
 
-$$
+```math
 (x_-+L\ell_A+L,\ x_++L\ell_A+2L),
-$$
+```
 
 while every elementary displacement of a `B` train has argument in
 
-$$
+```math
 (x_-+L\ell_A+2L,\ x_++L\ell_A+3L).
-$$
+```
 
 The union is contained in
 
-$$
+```math
 J=(x_-+L\ell_A+L,\ x_++L\ell_A+3L),
 \tag{2.3}
-$$
+```
 
 whose length is
 
-$$
+```math
 |J|=(x_+-x_-)+2L<3L=\pi.
 \tag{2.4}
-$$
+```
 
 Choose a unit vector `e` whose argument is the midpoint of `J`. Every selected
 centerline displacement then has strictly positive projection on `e`. Hence
 
-$$
+```math
 \boxed{X(p):=e\cdot p}
 \tag{2.5}
-$$
+```
 
 strictly increases along every selected canonically oriented train.
 
@@ -176,18 +176,18 @@ not.
 
 At an actual crossing `ab`, (1.7) gives
 
-$$
+```math
 L<\beta_b-\alpha_a<2L.
 \tag{2.6}
-$$
+```
 
 The local forward centerline displacement on the canonical `A` train is `v_b`; the
 local forward displacement on the canonical `B` train is `-u_a`. Therefore
 
-$$
+```math
 \det(v_b,-u_a)=\det(u_a,v_b)>0.
 \tag{2.7}
-$$
+```
 
 Both vectors have positive `X` component by (2.5), so all actual `A`--`B` crossings
 have one common graph-crossing sign.
@@ -216,26 +216,26 @@ crossing.
 Partition the `X` axis into `M` consecutive open slabs, with cuts between endpoint
 coordinates, so that if `p_j` is the number of train endpoints in slab `j`, then
 
-$$
+```math
 \max_jp_j\le {2N\over M}+2,
 \qquad
 N:=|A|+|B|\le C_0D.
 \tag{3.1}
-$$
+```
 
 Assign every crossing edge to the slab containing its crossing. Call an assigned
 edge bad when **both** of its train segments have an endpoint in that slab. If a slab
 contains `A_j` such `A` trains and `B_j` such `B` trains, then
 
-$$
+```math
 A_j+B_j\le p_j,
 \qquad
 \#\text{bad}_j\le A_jB_j\le {p_j^2\over4}.
-$$
+```
 
 Since `sum_j p_j<=2N`,
 
-$$
+```math
 \begin{aligned}
 \#\text{bad}
 &\le {1\over4}(\max_jp_j)\sum_jp_j\\
@@ -243,22 +243,22 @@ $$
 &\le {C_0^2\over M}D^2+C_0D.
 \end{aligned}
 \tag{3.2}
-$$
+```
 
 Put
 
-$$
+```math
 \boxed{M_0:=\left\lfloor{2C_0^2\over\eta}\right\rfloor+1.}
 \tag{3.3}
-$$
+```
 
 Then `C_0^2/M_0<eta/2`, so for all sufficiently large `D`, (1.4) and (3.2) leave at
 least
 
-$$
+```math
 \left({\eta\over2}-o(1)\right)D^2
 \tag{3.4}
-$$
+```
 
 nonbad crossing edges.
 
@@ -271,12 +271,12 @@ assignments, and one of the `M_0` slabs receives at least the average. Thus some
 `S` contains a pairwise-disjoint spanning family, say `B_S`, and incident `A` trains
 with
 
-$$
+```math
 \boxed{
 E_S\ge\left({\eta\over4M_0}-o(1)\right)D^2
 }
 \tag{3.5}
-$$
+```
 
 actual crossings inside `S`.
 
@@ -297,66 +297,66 @@ with the `b`-shore linearly ordered. For an integer `k>=1`, every row interval o
 length `d_x` contains `max(d_x-k+1,0)` consecutive `k`-blocks. Hence the total number
 of row/block incidences is at least
 
-$$
+```math
 e-a(k-1).
 \tag{4.1}
-$$
+```
 
 If no consecutive `k`-block were contained in at least `k` row neighborhoods, this
 incidence count would be at most
 
-$$
+```math
 (k-1)(b-k+1).
 \tag{4.2}
-$$
+```
 
 Therefore a `K_{k,k}` exists whenever
 
-$$
+```math
 \boxed{e>(k-1)(a+b-k+1).}
 \tag{4.3}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{k=\left\lfloor{e\over a+b}\right\rfloor}
 \tag{4.4}
-$$
+```
 
 is safe whenever it is positive. Indeed `e>=k(a+b)`, which is stronger than (4.3).
 
 For the slab graph, `a+b<=N<=C_0D`. From (3.5), for every fixed
 
-$$
+```math
 0<c<{\eta\over4M_0C_0},
 \tag{4.5}
-$$
+```
 
 all sufficiently large sources therefore contain a complete ordered grid with
 
-$$
+```math
 \boxed{|A_0|,|B_0|\ge cD.}
 \tag{4.6}
-$$
+```
 
 Substituting `eta=r/4`, a convenient explicit coefficient is any
 
-$$
+```math
 \boxed{
 0<c<c_{\rm dir}:={r\over16C_0M_0},
 \qquad
 M_0=\left\lfloor{8C_0^2\over r}\right\rfloor+1.
 }
 \tag{4.7}
-$$
+```
 
 Ignoring only the harmless integer rounding in `M_0`, the leading coefficient is
 
-$$
+```math
 \boxed{c_{\rm dir}\sim {r^2\over128C_0^3}.}
 \tag{4.8}
-$$
+```
 
 The important improvement is the dependence on the original carrier crossing density.
 The phase-threshold route in canonical Section 91 first replaces that density by a
@@ -370,28 +370,28 @@ The extracted shores have fixed distinct labels and every cross-shore pair is an
 actual strict-rhombus crossing. Canonical Section 76 therefore supplies common order
 and the defect-averaged diameter estimate
 
-$$
+```math
 d_*\ge {\sqrt3\over2}(|A_0|+|B_0|)
 -{S_{A_0B_0}\over\min\{|A_0|,|B_0|\}}-2.
 \tag{5.1}
-$$
+```
 
 Every grid crossing is one source rhombus, so the global Section-68 angular-defect
 budget gives
 
-$$
+```math
 S_{A_0B_0}\le C_{\rm phase}D.
 \tag{5.2}
-$$
+```
 
 Thus for fixed `c<c_dir`,
 
-$$
+```math
 \boxed{
 d_*\ge\sqrt3\,cD-{C_{\rm phase}\over c}-2.
 }
 \tag{5.3}
-$$
+```
 
 A direct contradiction with `d_*<=D` would require `c_dir>1/sqrt(3)`. The currently
 certified constants do not give this. Hence the theorem removes a real combinatorial

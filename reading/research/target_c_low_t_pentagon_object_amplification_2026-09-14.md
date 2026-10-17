@@ -25,22 +25,22 @@ small residual.
 
 Write
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},\qquad
 C_0:=2\sqrt{\Delta_2}+0.00042,
-$$
+```
 
 and on a convergent Type-II subsequence put
 
-$$
+```math
 t:=\lim {q-k\over D},\qquad
 \delta:=\lim {b-P_F\over D},\qquad
 \kappa:=\lim {k\over D}.
-$$
+```
 
 The low-`t` theorem gives
 
-$$
+```math
 \boxed{
 {p_5\over D}
 \ge
@@ -50,41 +50,41 @@ P(t,\delta,\kappa)
 :=\pi+C_0-{5t\over2}+\delta+{\kappa\over2}.
 }
 \tag{LO.1}
-$$
+```
 
 Assume additionally
 
-$$
+```math
 R_F=o(D).
 \tag{LO.2}
-$$
+```
 
 Then there is a scale `eta_D->0` such that the same pentagon population yields all of
 the following actual source-level objects:
 
-$$
+```math
 \boxed{
 {V_{flat}\over D}\ge {P(t,\delta,\kappa)\over5}-o(1),
 }
 \tag{LO.3}
-$$
+```
 
-$$
+```math
 \boxed{
 {H_{tooth}\over D}\ge {P(t,\delta,\kappa)\over9}-o(1),
 }
 \tag{LO.4}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 {C_{flat}\over D},\ {T_{tooth}\over D}
 \ge {P(t,\delta,\kappa)\over13}-o(1).
 }
 \tag{LO.5}
-$$
+```
 
 Here:
 
@@ -111,9 +111,9 @@ exactly the low-`t` pentagon-sea bound.
 Fix `eta>0`. The empty-pentagon theorem supplies a positive threshold
 `theta(eta)>0` such that a pentagon with
 
-$$
+```math
 r(P)<\theta(\eta)
-$$
+```
 
 has no assigned interior isolate and is sufficiently close to the unique flat
 unit-trapezoid equality shape to support both source objects used below:
@@ -126,20 +126,20 @@ unit-trapezoid equality shape to support both source objects used below:
 All face residuals are nonnegative and sum to `R_F`. Under (LO.2), the number of
 pentagons failing the fixed threshold is at most
 
-$$
+```math
 {R_F\over\theta(\eta)}=o(D).
-$$
+```
 
 Therefore, if `G_eta` is the number of pentagons simultaneously good for the two local
 normal forms,
 
-$$
+```math
 \boxed{
 {G_\eta\over D}
 \ge P(t,\delta,\kappa)-o(1).
 }
 \tag{LO.6}
-$$
+```
 
 Unlike the earlier weighted formulas `X+G_eta>=f_*D-o(D)`, this composition does not
 subtract `X=Q-f`: the low-`t` theorem has already counted actual pentagons after paying
@@ -152,10 +152,10 @@ vertex of a triangle-free unit-contact graph has contact degree at most five and
 belongs to at most five bounded face sectors. Therefore no source vertex can be chosen
 as the middle of more than five good pentagons. Consequently
 
-$$
+```math
 5V_{flat}(\eta)\ge G_\eta.
 \tag{LO.7}
-$$
+```
 
 Combining with (LO.6) proves the fixed-`eta` form of (LO.3).
 
@@ -166,10 +166,10 @@ endpoint lies on at most five selected bounded faces. Thus a chosen hidden chord
 conflicts with at most four other chosen chords through each endpoint, for conflict
 degree at most eight. Greedy matching gives
 
-$$
+```math
 9H_{tooth}(\eta)\ge G_\eta.
 \tag{LO.8}
-$$
+```
 
 Together with (LO.6), this proves the fixed-`eta` form of (LO.4).
 
@@ -185,12 +185,12 @@ vertices, and through each source vertex at most four other selected objects ari
 other bounded faces. Hence the maximum conflict degree is at most twelve. A greedy
 independent set gives
 
-$$
+```math
 13C_{flat}(\eta)\ge G_\eta,
 \qquad
 13T_{tooth}(\eta)\ge G_\eta.
 \tag{LO.9}
-$$
+```
 
 Combining with (LO.6) proves the fixed-`eta` version of (LO.5).
 
@@ -203,9 +203,9 @@ they do not assert `2P/13` disjoint objects in one common packing.
 Apply the preceding fixed-`eta` theorem to `eta_j=1/j`. Since `R_F/D->0`, choose a
 nondecreasing `j(D)->infinity` slowly enough that
 
-$$
+```math
 {R_F\over D\,\theta(\eta_{j(D)})}\to0.
-$$
+```
 
 Set `eta_D=eta_{j(D)}`. Then `eta_D->0` and the same first-order coefficients in
 (LO.3)--(LO.5) survive. In particular the flat-chain turn tends to zero and the tooth
@@ -215,79 +215,79 @@ hidden-side excess tends to zero.
 
 The current proof-only orbit/detour floor is
 
-$$
+```math
 t_{42}
 ={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0013751
 =1.8208886379794447\ldots .
-$$
+```
 
 At the most permissive `delta=kappa=0`, the low-`t` theorem gives
 
-$$
+```math
 P(t_{42},0,0)=0.4944166723690961\ldots .
 \tag{LO.10}
-$$
+```
 
 Hence, on the small-residual branch at that profile,
 
-$$
+```math
 \boxed{{V_{flat}\over D}\ge0.0988833344738192\ldots-o(1),}
 \tag{LO.11}
-$$
+```
 
-$$
+```math
 \boxed{{H_{tooth}\over D}\ge0.0549351858187884\ldots-o(1),}
 \tag{LO.12}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 {C_{flat}\over D},\ {T_{tooth}\over D}
 \ge0.0380320517206997\ldots-o(1).
 }
 \tag{LO.13}
-$$
+```
 
 The old coarse flat-chain/tooth coefficient was
 
-$$
+```math
 {f_*\over13}=0.0128557418051160\ldots,
-$$
+```
 
 so (LO.13) improves that three-vertex extraction by a factor greater than `2.95` at
 the current `t_42` profile.
 
 Conditionally on any small-residual subsequence with
 
-$$
+```math
 t\le1.8585,
-$$
+```
 
 and again dropping the nonnegative `delta,kappa` bonuses, one has
 
-$$
+```math
 P\ge0.4003882673177079\ldots,
-$$
+```
 
 therefore
 
-$$
+```math
 {V_{flat}\over D}\ge0.0800776534635415\ldots-o(1),
-$$
+```
 
-$$
+```math
 {H_{tooth}\over D}\ge0.0444875852575231\ldots-o(1),
-$$
+```
 
 and
 
-$$
+```math
 {C_{flat}\over D},\ {T_{tooth}\over D}
 \ge0.0307990974859775\ldots-o(1).
 \tag{LO.14}
-$$
+```
 
 This `t<=1.8585` statement is conditional only; it does not extend the separate
 endpoint/common-cap exclusion theorem to arbitrary Type-II sequences.

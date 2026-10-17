@@ -37,34 +37,34 @@ This removes the principal one-dimensional transport loophole from the fully for
 
 Let `A` be a contact-minimal, diametrally saturated, triangle-free global minimizer in the Target C fully force-visible branch
 
-$$
+```math
 C=C_*.
 \tag{C26.1}
-$$
+```
 
 Choose a relative-interior point of the normalized KKT polytope. Then its positive contact support is exactly the full unit-contact graph:
 
-$$
+```math
 C_+=C,
 \tag{C26.2}
-$$
+```
 
 and its positive diameter support is the maximal support `H_+ = H_*`. Let
 
-$$
+```math
 B_+=V(H_+).
 \tag{C26.3}
-$$
+```
 
 At every contact vertex `x`, KKT equilibrium is
 
-$$
+```math
 \sum_{xy\in C}\alpha_{xy}(x-y)
 =
 \sum_{xz\in H_+}\beta_{xz}(x-z),
 \qquad \alpha_{xy}>0.
 \tag{C26.4}
-$$
+```
 
 The contact-minimal representative remains contact-minimal after Target C diametral saturation because that normalization moves only contact-isolated points and preserves the abstract unit-contact graph.
 
@@ -78,28 +78,28 @@ Let `Q` denote the full set of source diameter endpoints, including endpoints of
 
 If `x` is incident to a unit contact and
 
-$$
+```math
 x\notin B_+,
 \tag{C26.5}
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 x\notin Q.}
 \tag{C26.6}
-$$
+```
 
 More precisely,
 
-$$
+```math
 \boxed{
 x=
 \frac{\sum_{xy\in C}\alpha_{xy}y}
      {\sum_{xy\in C}\alpha_{xy}},}
 \tag{C26.7}
-$$
+```
 
 with every coefficient in the convex combination strictly positive.
 
@@ -107,11 +107,11 @@ with every coefficient in the convex combination strictly positive.
 
 Because `x notin B_+`, the right side of C26.4 is zero. Therefore
 
-$$
+```math
 \left(\sum_{xy\in C}\alpha_{xy}\right)x
 =
 \sum_{xy\in C}\alpha_{xy}y.
-$$
+```
 
 The denominator is positive because `x` is incident to a contact, and every incident contact coefficient is strictly positive by C26.2. This gives C26.7.
 
@@ -123,10 +123,10 @@ This is stronger than saying that `x` has no positive diameter reaction. It cann
 
 If `x` is nonisolated in the unit-contact graph and `x in Q`, then
 
-$$
+```math
 \boxed{x\in B_+.}
 \tag{C26.8}
-$$
+```
 
 Thus any weak diameter endpoint outside `B_+` must be contact-isolated.
 
@@ -142,23 +142,23 @@ Combine this with Theorem C26.1.
 
 For every contact vertex `x notin B_+`,
 
-$$
+```math
 \boxed{
 3\le \deg_C(x)\le5,
 }
 \tag{C26.9}
-$$
+```
 
 and the contact vectors at `x` positively span `R^2`.
 
 In particular,
 
-$$
+```math
 \boxed{
 \text{there is no unloaded degree-one or degree-two contact vertex.}
 }
 \tag{C26.10}
-$$
+```
 
 #### Proof
 
@@ -176,17 +176,17 @@ C21 defined a neutral chain as a contact path whose internal vertices are unload
 
 For the C21 structural skeleton,
 
-$$
+```math
 \boxed{L_E=1\qquad\text{for every skeleton edge }E.}
 \tag{C26.11}
-$$
+```
 
 Hence the C21 skeleton is exactly the full positive contact graph, and its stress-length identity reduces to the original virial identity
 
-$$
+```math
 \boxed{\sum_{e\in C}\alpha_e=D^2.}
 \tag{C26.12}
-$$
+```
 
 There are no repeated reciprocal diagonals caused by suppressed degree-two series vertices.
 
@@ -228,22 +228,22 @@ Hence no neutral suppression is needed in the bridge-block tree.
 
 Let `R` be the number of loaded bridge blocks and `I_0` the number of reaction-free bridge blocks. The usual tree identity gives
 
-$$
+```math
 \boxed{I_0\le R-2,}
 \tag{C26.13}
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{|V(T_{br})|\le2R-2\le2|B_+|-2,}
 \tag{C26.14}
-$$
+```
 
-$$
+```math
 \boxed{|E(T_{br})|\le2R-3\le2|B_+|-3.}
 \tag{C26.15}
-$$
+```
 
 The earlier `O(D)` event bound remains valid, but every tree edge now joins actual structural blocks directly; there are no hidden unit-length series vertices between events.
 
@@ -253,10 +253,10 @@ The earlier `O(D)` event bound remains valid, but every tree edge now joins actu
 
 C24 defined
 
-$$
+```math
 I_*:=\bigcap_{h\in H_+}P_h,
 \tag{C26.16}
-$$
+```
 
 where `P_h` is the bridge-block-tree path between the endpoint blocks of positive diameter edge `h`. C24 proved that `I_*` is a path and that every internal node of this path is reaction-free of degree exactly two in the whole bridge-block tree.
 
@@ -266,17 +266,17 @@ Those internal nodes are impossible by Corollary C26.6.
 
 The common positive-diameter route has exactly one of the following two forms:
 
-$$
+```math
 \boxed{I_*\text{ is one bridge block},}
 \tag{C26.17}
-$$
+```
 
 or
 
-$$
+```math
 \boxed{I_*\text{ is one bridge joining two bridge blocks}.}
 \tag{C26.18}
-$$
+```
 
 It cannot contain two or more bridge edges.
 
@@ -290,13 +290,13 @@ If C26.17 holds, all positive diameter paths meet in one block. This includes ev
 
 Thus the earlier “universal straight contact-chain core of length at most `D`” is replaced in C-II by the much sharper dichotomy
 
-$$
+```math
 \boxed{
 \text{single common block}
 \quad\text{or}\quad
 \text{single universal contact bridge}.}
 \tag{C26.19}
-$$
+```
 
 ---
 
@@ -304,29 +304,29 @@ $$
 
 C23 gives, for any common hub root `X_*`,
 
-$$
+```math
 S_{br}\le
 D\sum_{b\in B_+}s_b\,d_T(\tau(b),X_*),
 \tag{C26.20}
-$$
+```
 
 with `sum_b s_b=2`. Hence
 
-$$
+```math
 S_{br}\ge\eta D^2
 \quad\Longrightarrow\quad
 \frac12\sum_b s_b d_T(\tau(b),X_*)\ge\frac{\eta D}{2}.
 \tag{C26.21}
-$$
+```
 
 The weighted mean depth is at most the maximum tree depth, which is at most the total number of bridge-tree edges. By C26.15,
 
-$$
+```math
 \frac{\eta D}{2}
 \le |E(T_{br})|
 \le 2|B_+|-3.
 \tag{C26.22}
-$$
+```
 
 Therefore:
 
@@ -334,21 +334,21 @@ Therefore:
 
 If
 
-$$
+```math
 S_{br}\ge\eta D^2,
 \tag{C26.23}
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 |B_+|
 \ge
 \frac{\eta D}{4}+\frac32.
 }
 \tag{C26.24}
-$$
+```
 
 In particular any bridge-dominant sequence has `|B_+|=Omega(D)`.
 

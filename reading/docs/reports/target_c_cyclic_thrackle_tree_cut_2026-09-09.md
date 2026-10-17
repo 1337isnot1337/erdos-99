@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_thrackle_tree_cut_2026-09-09.md) · source SHA-256 `8dd990276d51d56ab6b1d66b324022acaf04f6b8f0b0261e5ccc7508cb46bb45`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-D885AE81B4DE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic endpoint: convex-thrackle tree cuts and reciprocal parallelograms
 
@@ -24,9 +26,9 @@ This report proves a new cyclic-order theorem:
 
 For every edge `e` of a convex straight-line thrackle tree `T`, each connected component of
 
-$$
+```math
 T-e
-$$
+```
 
 occupies at most two cyclic intervals of the ambient convex vertex order.
 
@@ -38,9 +40,9 @@ Applied to the cyclic Target C endpoint, if a full diameter-tree edge has zero K
 
 Let
 
-$$
+```math
 e=uv\in E(T)
-$$
+```
 
 and let `A,B` be the vertex sets of the two components of `T-e`.
 
@@ -50,11 +52,12 @@ If one component is a singleton, it occupies one cyclic interval and the other c
 
 Both are trees and therefore bipartite. Write their unique bipartitions, up to swapping colors, as
 
-$$
+```math
 A=A_0\sqcup A_1,
 \qquad
 B=B_0\sqcup B_1.
 \tag{1.1}
+```
 
 ---
 
@@ -62,9 +65,9 @@ B=B_0\sqcup B_1.
 
 Fix an edge
 
-\[
+```math
 xy\in E(T[A]).
-$$
+```
 
 The chord `xy` divides the convex boundary circle into two open arcs.
 
@@ -74,10 +77,11 @@ Choose any root of `T[B]`. As one traverses a B-edge, the side of the chord `xy`
 
 Consequently:
 
-$$
+```math
 \boxed{
 B_0\text{ lies entirely on one open }xy\text{-arc, and }B_1\text{ entirely on the other}.}
 \tag{2.1}
+```
 
 This holds for every edge `xy` of `T[A]`.
 
@@ -95,9 +99,9 @@ Return to one fixed A-edge `xy`, and let `I` be the open boundary arc containing
 
 Suppose, for contradiction, that two vertices
 
-\[
+```math
 b,b'\in B_0
-$$
+```
 
 have an A-vertex `a` strictly between them along the subarc of `I` from `b` to `b'`.
 
@@ -121,29 +125,30 @@ This proves Theorem TC. `square`
 
 Now enter the cyclic Target C endpoint. The positive contact graph of every normalized stress is the full convex unit cycle
 
-$$
+```math
 C_q.
-$$
+```
 
 Assume the **full** diameter graph `H` is a connected tree. This is a `d_H=1` cyclic subcase, so by CY
 
-$$
+```math
 s_Z=1,
 \qquad
 \dim\mathcal S=1.
-$$
+```
 
 Let `s` be a KKT-polytope endpoint and let
 
-$$
+```math
 h=uv\in E(H)
-$$
+```
 
 be a diameter edge with
 
-$$
+```math
 \beta_h(s)=0.
 \tag{4.1}
+```
 
 LF says `h` is not a leaf edge of the full tree.
 
@@ -151,10 +156,11 @@ Delete `h` from `H`, with components on terminal sets `A,B`. Because `H` is a tr
 
 Sum the KKT equilibrium equations of `s` over all vertices in `A`. Internal contact and diameter forces cancel. The diameter side has no crossing contribution, so the positive contact-cycle forces across the cut must have zero vector resultant:
 
-\[
+```math
 \boxed{
 \sum_{e\in\partial_C A}F_e^{A}=0.}
 \tag{4.2}
+```
 
 Here `F_e^A` is the unit-contact force exerted across cycle edge `e` from the A-side, with its natural sign.
 
@@ -166,31 +172,33 @@ TC says `A` occupies one or two cyclic terminal intervals. Therefore `partial_C 
 
 Write the convex unit cycle in counterclockwise order as
 
-\[
+```math
 p_0,p_1,\ldots,p_{q-1}
-$$
+```
 
 and define oriented unit side vectors and positive selected contact-force vectors
 
-$$
+```math
 t_i=p_{i+1}-p_i,
 \qquad
 v_i:=\alpha_i t_i,
 \qquad
 \alpha_i>0.
 \tag{5.1}
+```
 
 Suppose `A` is one proper cyclic interval
 
-\[
+```math
 A=\{p_a,p_{a+1},\ldots,p_b\}.
-$$
+```
 
 Exactly two contact edges cross the cut: `p_{a-1}p_a` and `p_bp_{b+1}`. Summed equilibrium (4.2) is
 
-$$
+```math
 \boxed{v_{a-1}=v_b.}
 \tag{5.2}
+```
 
 But the two oriented side directions `t_{a-1}` and `t_b` of a strictly convex polygon are distinct. Positive scalar multiples of distinct directions cannot be equal.
 
@@ -208,33 +216,35 @@ If a full diameter-tree edge has zero coefficient in a selected cyclic KKT stres
 
 Let the four A/B transitions occur in cyclic order at cycle-edge indices
 
-\[
+```math
 i<j<k<\ell
-$$
+```
 
 with A occupying the two intervals entered across edges `i` and `k` and exited across edges `j` and `ell`.
 
 The signed contact-force resultant (4.2) is
 
-$$
+```math
 \boxed{
 v_i-v_j+v_k-v_\ell=0.}
 \tag{6.1}
+```
 
 Equivalently,
 
-\[
+```math
 \boxed{
 v_i+v_k=v_j+v_\ell.}
 \tag{6.2}
+```
 
 Recall that the polygon with vertices `v_i=alpha_i t_i` is, up to a fixed quarter-turn and translation, the reciprocal force polygon: its consecutive side differences are the boundary reaction vectors.
 
 Equation (6.2) says the two diagonals of the four reciprocal vertices
 
-\[
+```math
 v_i,v_j,v_k,v_\ell
-$$
+```
 
 have the same midpoint. Hence these four cyclically ordered reciprocal vertices form a parallelogram.
 
@@ -264,23 +274,24 @@ The reciprocal polygons at the two stress endpoints need not coincide, so this i
 
 For later use, the positive contact network is a weighted cycle with edge conductances `alpha_i` and resistances
 
-$$
+```math
 r_i=1/\alpha_i.
-$$
+```
 
 Thus every selected transfer coefficient can be written explicitly in cyclic arc resistances. In particular, for alternating diameter chords `(a,b)` and `(c,d)` with cyclic order
 
-$$
+```math
 a<c<b<d,
-$$
+```
 
 let the four intervening cycle-resistance arcs have sums `A,B,C,D`. With consistent chord orientations,
 
-\[
+```math
 \boxed{
 K_{(a,b),(c,d)}
 =\frac{BD-AC}{A+B+C+D}.}
 \tag{8.1}
+```
 
 A future tree-endpoint exclusion can therefore combine the primal parallelogram equality (6.2) with C56-G's strict transfer inequalities in these same cycle weights.
 

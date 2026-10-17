@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_global_train_shear_2026-09-09.md) · source SHA-256 `24d86752d6ed1d889f3041c45effb774defa0f475b1c7473b4f308e2a6ff4eff`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 12 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-20EFC75416C2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZGS: an outer-to-outer global train is an exact contact shear with negative weighted diameter curvature
 
@@ -22,32 +24,32 @@ Hence those train edges are a genuine global contact cut. Rotating the common cu
 
 For this finite shear, let
 
-$$
+```math
 A_\tau=\sum_{e\in\tau}\alpha_e
-$$
+```
 
 be total contact stress on the train cut and
 
-$$
+```math
 w_\tau=\sum_{h\pitchfork\tau}\beta_h
-$$
+```
 
 be the total diameter KKT weight crossing the same shore split. Then
 
-$$
+```math
 \boxed{A_\tau>w_\tau}
-$$
+```
 
 by ZK strict terminal-cut response and a cutset Dirichlet test. More strongly, the exact `beta`-weighted crossing-diameter squared-length sum along the shear is
 
-$$
+```math
 \boxed{
 \sum_{h\pitchfork\tau}\beta_h|r_h(\theta)|^2
 =
 w_\tau D^2
 -2(A_\tau-w_\tau)(1-\cos\theta).
 }
-$$
+```
 
 Thus every nonzero shear strictly decreases the weighted diameter square sum. Local diameter minimality can survive only through a nonsmooth maximum cusp: the active crossing diameter edges must have first shear derivatives of both signs. The all-parallel/one-sided derivative case is impossible.
 
@@ -67,25 +69,27 @@ Join the two endpoint midpoints by a simple arc contained in the outer face, cho
 
 No source vertex lies on `Gamma_tau`. Let
 
-$$
+```math
 S_\tau,T_\tau
-$$
+```
 
 be the two vertex shores.
 
 Any contact edge joining the shores must cross `Gamma_tau`. By construction the only contact-graph intersections with `Gamma_tau` are train-edge midpoints. Therefore
 
-$$
+```math
 \boxed{
 \delta_C(S_\tau)=E(\tau).
 }
 \tag{ZGS1}
+```
 
 The train contact edges are all parallel. Orient the train midpoint curve consistently with the DT positive normal direction. Its tangent always has positive projection on one fixed normal `Ju_tau`, so the fixed vector `u_tau` points consistently from one Jordan shore to the other. After swapping shore labels if necessary, every cut contact edge oriented from `T_tau` to `S_tau` has vector
 
-\[
+```math
 \boxed{p_s-p_t=u_\tau.}
 \tag{ZGS2}
+```
 
 ---
 
@@ -93,29 +97,29 @@ The train contact edges are all parallel. Orient the train midpoint curve consis
 
 For real `theta`, put
 
-\[
+```math
 \Delta_\theta:=R_\theta u_\tau-u_\tau.
 \tag{2.1}
-$$
+```
 
 Define
 
-$$
+```math
 p_v(\theta)=
 \begin{cases}
  p_v+\Delta_\theta,&v\in S_\tau,\\
  p_v,&v\in T_\tau.
 \end{cases}
 \tag{2.2}
-$$
+```
 
 Every contact internal to a shore is unchanged by translation. For a cut contact `ts`, ZGS2 gives
 
-$$
+```math
 p_s(\theta)-p_t(\theta)
 =u_\tau+\Delta_\theta
 =R_\theta u_\tau,
-$$
+```
 
 which still has length one.
 
@@ -135,19 +139,20 @@ Only cross-shore distances can change.
 
 Let
 
-$$
+```math
 A_\tau:=\sum_{e\in E(\tau)}\alpha_e>0.
 \tag{3.1}
+```
 
 Sum the relative-interior KKT equilibrium equations over all vertices in `S_tau`. Internal contact and diameter forces cancel. Using ZGS2, the contact resultant across the cut is
 
-\[
+```math
 A_\tau u_\tau.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 A_\tau u_\tau
 =
@@ -155,34 +160,35 @@ A_\tau u_\tau
 \beta_h(p_s-p_t).
 }
 \tag{ZGS3}
+```
 
 The right side is nonzero. Therefore at least one actual diameter pair crosses the cut, and both shores contain loaded diameter terminals.
 
 So the terminal partition
 
-\[
+```math
 B_S=B\cap S_\tau,
 \qquad
 B_T=B\cap T_\tau
-$$
+```
 
 is nonempty and proper.
 
 Put
 
-$$
+```math
 w_\tau
 :=
 \sum_{h\pitchfork\tau}\beta_h.
 \tag{3.2}
-$$
+```
 
 Taking norms in ZGS3 gives the familiar coarse bound
 
-$$
+```math
 A_\tau\le Dw_\tau.
 \tag{3.3}
-$$
+```
 
 ---
 
@@ -190,21 +196,21 @@ $$
 
 Let
 
-$$
+```math
 C_\tau
 :=
 \sum_{b\in B_S,k\in B_T}c_{bk}
 \tag{4.1}
-$$
+```
 
 be the total contact-network response conductance across the induced terminal cut.
 
 ZK all-cut strictness gives
 
-$$
+```math
 \boxed{C_\tau>w_\tau.}
 \tag{4.2}
-$$
+```
 
 For the upper bound, prescribe terminal voltage one on `B_S` and zero on `B_T`. The harmonic extension has energy `C_tau`.
 
@@ -212,26 +218,28 @@ As a competitor, put voltage one on every contact vertex of `S_tau` and zero on 
 
 Dirichlet minimality gives
 
-$$
+```math
 C_\tau\le A_\tau.
 \tag{4.3}
-$$
+```
 
 Therefore:
 
 ### Theorem ZGS.2 — strict train-cut sandwich
 
-$$
+```math
 \boxed{
  w_\tau<C_\tau\le A_\tau\le Dw_\tau.
 }
 \tag{ZGS4}
+```
 
 In particular
 
-\[
+```math
 \boxed{A_\tau-w_\tau>0.}
 \tag{4.4}
+```
 
 ---
 
@@ -239,48 +247,48 @@ In particular
 
 For a crossing diameter edge `h=st`, orient it from `T_tau` to `S_tau` and write
 
-\[
+```math
 r_h:=p_s-p_t,
 \qquad |r_h|=D.
-$$
+```
 
 Under ZGS1,
 
-$$
+```math
 r_h(\theta)=r_h+\Delta_\theta.
-$$
+```
 
 Therefore
 
-$$
+```math
 |r_h(\theta)|^2
 =D^2+2r_h\cdot\Delta_\theta+|\Delta_\theta|^2.
 \tag{5.1}
-$$
+```
 
 Sum with `beta_h`. ZGS3 gives
 
-$$
+```math
 \sum_{h\pitchfork\tau}\beta_hr_h
 =A_\tau u_\tau.
 \tag{5.2}
-$$
+```
 
 Also
 
-$$
+```math
 \Delta_\theta\cdot u_\tau=\cos\theta-1
-$$
+```
 
 and
 
-$$
+```math
 |\Delta_\theta|^2=2(1-\cos\theta).
-$$
+```
 
 Thus
 
-$$
+```math
 \begin{aligned}
 \sum_{h\pitchfork\tau}\beta_h|r_h(\theta)|^2
 &=w_\tau D^2
@@ -289,13 +297,13 @@ $$
 &=w_\tau D^2
  -2(A_\tau-w_\tau)(1-\cos\theta).
 \end{aligned}
-$$
+```
 
 Hence:
 
 ### Theorem ZGS.3 — exact negative weighted curvature
 
-$$
+```math
 \boxed{
 \sum_{h\pitchfork\tau}\beta_h
 \bigl(D^2-|r_h(\theta)|^2\bigr)
@@ -303,25 +311,28 @@ $$
 2(A_\tau-w_\tau)(1-\cos\theta)>0
 }
 \tag{ZGS5}
+```
 
 for every sufficiently small nonzero `theta`.
 
 Differentiating at zero,
 
-\[
+```math
 \boxed{
 \sum_h\beta_h\frac d{d\theta}|r_h(\theta)|^2\Big|_0=0,
 }
 \tag{ZGS6}
+```
 
 and
 
-\[
+```math
 \boxed{
 \sum_h\beta_h\frac {d^2}{d\theta^2}|r_h(\theta)|^2\Big|_0
 =2(w_\tau-A_\tau)<0.
 }
 \tag{ZGS7}
+```
 
 ---
 
@@ -329,32 +340,32 @@ and
 
 For one crossing diameter vector, write
 
-\[
+```math
 r_h=D(\cos\phi_h\,u_\tau+\sin\phi_h\,Ju_\tau).
-$$
+```
 
 Its first squared-length derivative is
 
-$$
+```math
 \frac d{d\theta}|r_h(\theta)|^2\Big|_0
 =2D\sin\phi_h.
 \tag{6.1}
-$$
+```
 
 Suppose all crossing diameter derivatives were nonpositive for one shear sign. Then the positive weighted sum in ZGS6 would force every derivative to vanish. Thus every crossing diameter vector would be parallel to `u_tau`.
 
 With the shore orientation fixed by ZGS2 and the resultant ZGS3 positive in direction `u_tau`, all positive-weight crossing diameters must then have vector
 
-$$
+```math
 r_h=Du_\tau.
-$$
+```
 
 For such an edge, (5.1) gives
 
-$$
+```math
 |r_h(\theta)|^2-D^2
 =2(D-1)(\cos\theta-1)<0
-$$
+```
 
 for every small nonzero `theta`.
 
@@ -368,7 +379,7 @@ Therefore:
 
 Every global outer-to-outer train cut in the lexicographically normalized post-ZF source has crossing actual diameter edges with **both signs** of first shear derivative:
 
-$$
+```math
 \boxed{
 \exists h_+,h_-\pitchfork\tau:
 \quad
@@ -377,6 +388,7 @@ r_{h_+}\cdot Ju_\tau>0,
 r_{h_-}\cdot Ju_\tau<0.
 }
 \tag{ZGS8}
+```
 
 The train shear is therefore blocked by a genuine max-function cusp, not by one-sided first-order geometry.
 
@@ -390,7 +402,7 @@ For a family of global outer-to-outer trains `tau_1,...,tau_m`, each train cut d
 
 The exact contact shears can be superposed at first order. Let `theta_j` be the angular coordinate for train `tau_j`. For an active diameter pair `h=bk`, its first squared-length derivative has the form
 
-\[
+```math
 \boxed{
 D_h'(0)[\theta]
 =
@@ -399,17 +411,19 @@ D_h'(0)[\theta]
 (r_h\cdot Ju_j)\theta_j,
 }
 \tag{ZGS9}
+```
 
 where the sign `epsilon_hj` records which endpoint lies on the translated shore.
 
 Let `A` be this `h times m` derivative matrix. Restricting KKT stationarity to the exact contact-shear tangent space gives
 
-\[
+```math
 \boxed{
 A^T\beta=0,
 \qquad\beta_h>0.
 }
 \tag{ZGS10}
+```
 
 Mixed infinitesimal rigidity implies that `A` has trivial kernel on non-Euclidean shear coordinates: a nonzero `theta` with `A theta=0` would be a nontrivial mixed infinitesimal flex.
 
@@ -423,11 +437,11 @@ This is the precise object to compare against the report-level Theorem Z all-gap
 
 One shear coordinate can be locally pinned by two active diameter functions of the schematic form
 
-\[
+```math
 f_+(\theta)=a\theta-c\theta^2+O(\theta^3),
 \qquad
 f_-(\theta)=-b\theta-c'\theta^2+O(\theta^3),
-$$
+```
 
 with `a,b>0`. Their maximum has a cusp minimum at zero even though a positive weighted average has negative second derivative.
 

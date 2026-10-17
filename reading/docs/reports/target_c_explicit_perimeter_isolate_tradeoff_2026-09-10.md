@@ -22,31 +22,31 @@ branch.
 
 Put
 
-$$
+```math
 \lambda_D:=\frac{e_{BB}+2s_C}{D},
 \qquad
 p_D:=\frac{\operatorname{per}F}{D}.
-$$
+```
 
 For every asymptotic pinned/contact level
 
-$$
+```math
 0\le\lambda<
 \lambda_{\rm disk}
 :=
 \frac{\pi(\sqrt{3\pi^2+4}-1)}{2(\pi^2+1)},
-$$
+```
 
 define
 
-$$
+```math
 a:=\frac{\pi-2}{2},
 \qquad
 A:=\pi^2-a^2,
 \tag{PI.1}
-$$
+```
 
-$$
+```math
 \boxed{
  r_+(\lambda)
  :=
@@ -56,40 +56,40 @@ $$
  }{A},
 }
 \tag{PI.2}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 p_+(\lambda):=2+(\pi-2)r_+(\lambda).}
 \tag{PI.3}
-$$
+```
 
 Then any survivor sequence with `lambda_D -> lambda` satisfies
 
-$$
+```math
 \boxed{
 \limsup p_D\le p_+(\lambda)<\pi.
 }
 \tag{PI.4}
-$$
+```
 
 More generally, if `limsup lambda_D<=lambda_0<lambda_disk`, then
 
-$$
+```math
 \boxed{
 \limsup p_D\le p_+(\lambda_0)<\pi.
 }
 \tag{PI.5}
-$$
+```
 
 This turns the qualitative MP perimeter loss into an explicit one.
 
 It also forces an explicit source-population split.  If `Z_ext` is the number of
 contact-isolated source points outside the force hull, then
 
-$$
+```math
 \boxed{
 \liminf\frac{Z_{ext}}{D^2}
 \ge
@@ -97,18 +97,18 @@ $$
 \bigl(\pi^2-p_+(\lambda_0)^2\bigr),
 }
 \tag{PI.6}
-$$
+```
 
 and, since `n/D^2 -> pi/(2sqrt3)`,
 
-$$
+```math
 \boxed{
 \liminf\frac{Z_{ext}}n
 \ge
 1-\left(\frac{p_+(\lambda_0)}\pi\right)^2.
 }
 \tag{PI.7}
-$$
+```
 
 Thus every post-ZF sequence below the disk threshold either has high
 pinned/contact currency or carries a quantitatively positive fraction of completely
@@ -143,54 +143,54 @@ hull-saturation normalization is used.
 RSJ imports the exact Rogalski--Saint Raymond theorem through the FD central
 symmetral.  With
 
-$$
+```math
 c_R=\frac\pi{(\pi-2)^2},
 \qquad
 \Psi(p)=c_R\left(\frac p2-1\right)^2,
-$$
+```
 
 it gives along every convergent subsequence
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}\ge\Psi(p).
 \tag{2.1}
-$$
+```
 
 GU gives
 
-$$
+```math
 \limsup\frac{\sum_r\operatorname{area}(P_r)}{D^2}
 \le\frac\pi4\lambda^2.
 \tag{2.2}
-$$
+```
 
 The unrelaxed JC estimate gives
 
-$$
+```math
 \limsup\frac G{D^2}
 \le
 \frac{(t+m)^2}{4\pi},
 \tag{2.3}
-$$
+```
 
 where
 
-$$
+```math
 0\le t\le\lambda,
 \qquad
 m=\min\{y,p-y\}\le\frac p2.
-$$
+```
 
 Since
 
-$$
+```math
 \operatorname{area}F
 =\sum_r\operatorname{area}(P_r)+G,
-$$
+```
 
 (2.1)--(2.3) imply the necessary condition
 
-$$
+```math
 \boxed{
 \Psi(p)
 \le
@@ -198,7 +198,7 @@ $$
 +\frac{(\lambda+p/2)^2}{4\pi}.
 }
 \tag{2.4}
-$$
+```
 
 This deliberately relaxes the diameter-density variable `y`.  The point is not to
 improve RSJ's scalar lower threshold; it is to get a closed-form upper envelope for
@@ -210,32 +210,32 @@ improve RSJ's scalar lower threshold; it is to get a closed-form upper envelope 
 
 Write
 
-$$
+```math
 p=2+(\pi-2)r,
 \qquad 0\le r\le1.
 \tag{3.1}
-$$
+```
 
 Then
 
-$$
+```math
 \Psi(p)=\frac\pi4r^2,
 \qquad
 \frac p2=1+ar.
 \tag{3.2}
-$$
+```
 
 Multiply (2.4) by `4pi`:
 
-$$
+```math
 \pi^2r^2
 \le
 \pi^2\lambda^2+(1+\lambda+ar)^2.
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 A r^2
 -2a(1+\lambda)r
@@ -243,46 +243,46 @@ A r^2
 \le0,
 }
 \tag{3.3}
-$$
+```
 
 where `A=pi^2-a^2>0`.
 
 The negative root is irrelevant.  The positive root is
 
-$$
+```math
 \frac{
  a(1+\lambda)
  +\sqrt{a^2(1+\lambda)^2
  +A(\pi^2\lambda^2+(1+\lambda)^2)}
 }{A}.
-$$
+```
 
 Because `a^2+A=pi^2`, the radicand simplifies to
 
-$$
+```math
 \pi^2\bigl((1+\lambda)^2+A\lambda^2\bigr),
-$$
+```
 
 which is exactly PI.2.  Thus `r<=r_+(lambda)` and PI.4 follows.
 
 At `r=1`, equation (3.3) becomes
 
-$$
+```math
 (\pi^2+1)\lambda^2
 +\pi\lambda
 -\frac{3\pi^2}{4}\ge0.
 \tag{3.4}
-$$
+```
 
 Its positive root is precisely `lambda_disk`.  Hence
 
-$$
+```math
 r_+(\lambda)<1,
 \qquad
 p_+(\lambda)<\pi
 \quad\text{for }\lambda<\lambda_{\rm disk}.
 \tag{3.5}
-$$
+```
 
 The right side of (2.4) is increasing in `lambda`, so `p_+(lambda)` is increasing.
 This proves the `limsup lambda_D<=lambda_0` form PI.5.
@@ -293,7 +293,7 @@ This proves the `limsup lambda_D<=lambda_0` form PI.5.
 
 ER gives, for every post-ZF source,
 
-$$
+```math
 Z_{ext}
 >
 \frac2{\sqrt3}
@@ -302,27 +302,27 @@ Z_{ext}
 \right)
 -\frac12\operatorname{per}F.
 \tag{4.1}
-$$
+```
 
 Isoperimetry gives
 
-$$
+```math
 \operatorname{area}F
 \le\frac{\operatorname{per}(F)^2}{4\pi}.
 \tag{4.2}
-$$
+```
 
 Under `limsup lambda_D<=lambda_0<lambda_disk`, PI.5 and (4.2) therefore give
 
-$$
+```math
 \limsup\frac{\operatorname{area}F}{D^2}
 \le\frac{p_+(\lambda_0)^2}{4\pi}.
 \tag{4.3}
-$$
+```
 
 Divide (4.1) by `D^2`; its perimeter term vanishes.  This yields
 
-$$
+```math
 \liminf\frac{Z_{ext}}{D^2}
 \ge
 \frac2{\sqrt3}
@@ -330,16 +330,16 @@ $$
 \frac\pi4-
 \frac{p_+(\lambda_0)^2}{4\pi}
 \right),
-$$
+```
 
 which is PI.6.
 
 For global minimizers the canonical upper/lower diameter bounds imply
 
-$$
+```math
 \frac n{D^2}\longrightarrow\frac\pi{2\sqrt3}.
 \tag{4.4}
-$$
+```
 
 Dividing PI.6 by (4.4) gives exactly PI.7. `square`
 
@@ -371,23 +371,23 @@ above `0.5921405436...`.
 
 AS proves the sharper structural statement
 
-$$
+```math
 Z_{ext}
 =\frac2{\sqrt3}
 \operatorname{area}(K\setminus F)+O(D)
-$$
+```
 
 in the low-surplus branch, and external minimum separation
 
-$$
+```math
 s_{ext}=1+O(D^{-1}).
-$$
+```
 
 CP proves for the full source hull
 
-$$
+```math
 \pi D-P_K<\frac{\pi\sqrt3}{2}.
-$$
+```
 
 PI makes the previously nonexplicit MP perimeter loss quantitative.  Combining the
 three reports gives, for every fixed `lambda_0<lambda_disk`, an explicit positive
@@ -402,9 +402,10 @@ The post-ZF survivor set now has the following quantitative dichotomy:
 
 1. `liminf lambda_D>=lambda_disk`; or
 2. along any subsequence with `limsup lambda_D<=lambda_0<lambda_disk`, at least
-   $$
+   ```math
    1-\left(p_+(\lambda_0)/\pi\right)^2
-   $$
+   
+   ```
    of all source points are external contact-isolates asymptotically.
 
 The second branch is not merely "many isolates": AS forces those points to saturate

@@ -26,18 +26,18 @@ Let `A^circ` be the nonisolated contact core, with `m` vertices and `e` unit con
 and let `B_+` be the positive diameter endpoint set of a relative-interior normalized
 KKT stress.  Then
 
-$$
+```math
 \boxed{
 2|B_+|\ge \lceil D\rceil+2.
 }
 \tag{C30.1}
-$$
+```
 
 In particular
 
-$$
+```math
 |B_+|\ge \frac D2+1
-$$
+```
 
 up to the harmless ceiling convention, and the positive diameter support contains at
 least `(ceil(D)+2)/4` edges.
@@ -55,10 +55,10 @@ directly.
 Let `A` be a contact-minimal, diametrally saturated, triangle-free global minimizer in
 the fully force-visible Target C branch
 
-$$
+```math
 C=C_*.
 \tag{C30.2}
-$$
+```
 
 Choose a normalized KKT stress in the relative interior of the KKT polytope.  Then
 `C_+=C`.
@@ -76,17 +76,17 @@ is positively diameter-loaded.  The reverse inclusion is automatic because every
 vertex of `B_+` is an endpoint of a positive diameter edge and is incident to positive
 contact stress.  Hence
 
-$$
+```math
 \boxed{Q^circ=B_+.}
 \tag{C30.3}
-$$
+```
 
 Write
 
-$$
+```math
 q:=|B_+|=|Q^circ|.
 \tag{C30.4}
-$$
+```
 
 ---
 
@@ -95,19 +95,19 @@ $$
 Canonical Theorem 12.2 is stated for a minimum-contact triangle-free core with its
 nonisolated diameter endpoints pinned.  It gives
 
-$$
+```math
 \boxed{
 e\ge 2(m-|Q^circ|).}
 \tag{C30.5}
-$$
+```
 
 Using C30.3,
 
-$$
+```math
 \boxed{
 e\ge 2(m-q).}
 \tag{C30.6}
-$$
+```
 
 No local prestress-stability assertion is being inserted here.  C30.6 is exactly the
 already-proved pinned expansive-cone rank theorem, with C26 used only to identify its
@@ -125,19 +125,19 @@ nonisolated core contact graph is connected.
 The same theorem says this component contains both endpoints of every positive
 diameter edge and has Euclidean diameter exactly `D`.  Choose `b,k in B_+` with
 
-$$
+```math
 |b-k|=D.
 \tag{C30.7}
-$$
+```
 
 Every contact edge has Euclidean length one.  Thus every contact path from `b` to `k`
 has at least `D` edges.  Since graph distance is integral, the contact-graph diameter
 `delta` satisfies
 
-$$
+```math
 \boxed{\delta\ge\lceil D\rceil.}
 \tag{C30.8}
-$$
+```
 
 ---
 
@@ -146,34 +146,34 @@ $$
 The core is a connected triangle-free penny graph.  The canonical state already uses
 Eppstein's inequality in exactly this setting:
 
-$$
+```math
 \boxed{
 e\le 2m-\delta-2.}
 \tag{C30.9}
-$$
+```
 
 Combining C30.8 and C30.9,
 
-$$
+```math
 e\le 2m-\lceil D\rceil-2.
 \tag{C30.10}
-$$
+```
 
 Together with C30.6 this gives
 
-$$
+```math
 2m-2q
 \le
 2m-\lceil D\rceil-2.
-$$
+```
 
 Cancel `2m` and rearrange:
 
-$$
+```math
 \boxed{
 2q\ge\lceil D\rceil+2.
 }
-$$
+```
 
 This is C30.1. `\square`
 
@@ -185,20 +185,20 @@ This is C30.1. `\square`
 
 Every vertex of `B_+` is incident to at least one edge of `H_+`.  Hence
 
-$$
+```math
 2|H_+|\ge |B_+|.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 |H_+|
 \ge
 \frac{\lceil D\rceil+2}{4}.
 }
 \tag{C30.11}
-$$
+```
 
 So the fully force-visible branch necessarily has `Omega(D)` positive diameter edges,
 even though their individual `beta` weights can be arbitrarily small.
@@ -208,20 +208,20 @@ even though their individual `beta` weights can be arbitrarily small.
 Every point of `B_+` is a distinct convex-hull vertex of the force hull `F`.  Consecutive
 force-hull vertices are source points and hence are at distance at least one.  Thus
 
-$$
+```math
 \operatorname{per}(F)\ge |B_+|,
-$$
+```
 
 and C30.1 gives
 
-$$
+```math
 \boxed{
 \operatorname{per}(F)
 \ge
 \frac{\lceil D\rceil+2}{2}.
 }
 \tag{C30.12}
-$$
+```
 
 The upper bound `per(F)<=pi D` remains much larger, so this is structural information,
 not a packing contradiction.

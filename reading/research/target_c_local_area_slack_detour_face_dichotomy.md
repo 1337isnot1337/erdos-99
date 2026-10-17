@@ -23,29 +23,29 @@ The outcome is not another carrier-decimal improvement. It shows that a low load
 
 Use
 
-$$
+```math
 H_D:=\sum_r d_r,
 \qquad
 G_D:=2+q+m-k-H_D,
 \qquad
 k=d_H+s_Z,
-$$
+```
 
 and write
 
-$$
+```math
 t_D:={q-k\over D},
 \qquad
 \kappa_D:={k\over D},
 \qquad
 \zeta_D:={s_Z\over D}.
-$$
+```
 
 Let
 
-$$
+```math
 F_{loc}:=\sum_r f_r
-$$
+```
 
 be the number of bounded nonquadrilateral faces in the induced harmonic-cell graphs, counted cellwise. Harmonic face fidelity makes these distinct actual bounded nonquadrilateral faces of the full positive-contact core.
 
@@ -53,76 +53,76 @@ be the number of bounded nonquadrilateral faces in the induced harmonic-cell gra
 
 For one Type-II harmonic component with internal strict-rhombus area `A_{4,r}^{int}`, the independently audited LRTQ local argument gives
 
-$$
+```math
 \delta_r+r_r
 \ge {2\over5}L_r^I+{2\over5}\sqrt{R_r},
 \tag{DF.1}
-$$
+```
 
 where `L_r^I` is the occurrence-counted internal outer walk and `R_r` the internal strict-rhombus count. Combining
 
-$$
+```math
 L_r^I\ge2\sqrt{\pi A_{4,r}^{int}}-2\pi
-$$
+```
 
 with Type-II strict-rhombus area rigidity yields, for a macroscopic selected cell,
 
-$$
+```math
 \liminf {r_r+\eta_r\over D}
 \ge
 \left[
 C_{loc}\sqrt A-\lambda
 \right]_+,
 \tag{DF.2}
-$$
+```
 
 where
 
-$$
+```math
 C_{loc}:={4\over5}\sqrt\pi+{2\over5\sqrt{\sqrt3/2}}
 =1.8477910534538295\ldots .
-$$
+```
 
 On the repaired Section-118 frontier/common-cap profile the wrapping carrier has
 
-$$
+```math
 A_{4,w}^{int}/D^2\ge A_*-o(1),
 \qquad A_*=0.4703752868004241\ldots,
-$$
+```
 
 and
 
-$$
+```math
 d_w/D\to\lambda_*=0.9762439137425688\ldots .
-$$
+```
 
 Hence normalized §160's exact remainder satisfies
 
-$$
+```math
 \boxed{
 G_D\ge(g_*-o(1))D,
 \qquad
 g_*:=0.2910434605114113\ldots .
 }
 \tag{DF.3}
-$$
+```
 
 Normalized §140 gives on the same profile
 
-$$
+```math
 \boxed{
 H_D\ge(S_*-o(1))D,
 \qquad
 S_*:=2.798596312209462\ldots .
 }
 \tag{DF.4}
-$$
+```
 
 ## 2. Exact aggregate detour rewritten in `H_D,G_D,F_loc`
 
 The exact proof-only aggregate-detour decomposition on current `main` is
 
-$$
+```math
 \begin{aligned}
 E_D
 &:=\sum_r(L_r+P_{{\rm exc},r}-2d_r)\\
@@ -131,62 +131,62 @@ E_D
  -2d_{tile}-2C_{loc}^{att}+4F_{loc},
 \end{aligned}
 \tag{DF.5}
-$$
+```
 
 where `C_loc^{att}=sum c_r>=0` is the local loaded-contact occurrence count. To avoid collision with the coefficient `C_loc` in (DF.2), the superscript `att` is used only in this note.
 
 In Type II, the loaded-contact localization gives
 
-$$
+```math
 e_{BB}=q-m,
-$$
+```
 
 and the exact polygon-dissection identity gives
 
-$$
+```math
 a=q-2+2c_I-d_{tile}.
-$$
+```
 
 Therefore
 
-$$
+```math
 E_D
 =4q-2m-2k-2H_D+4c_I-4-4d_{tile}-2C_{loc}^{att}+4F_{loc}.
 \tag{DF.6}
-$$
+```
 
 Normalized §160 gives
 
-$$
+```math
 m=G_D+H_D-q+k-2.
-$$
+```
 
 Substitution into (DF.6) cancels the finite constant and gives the exact form
 
-$$
+```math
 \boxed{
 E_D
 =6q-2G_D-4H_D-4k
  +4c_I-4d_{tile}-2C_{loc}^{att}+4F_{loc}.
 }
 \tag{DF.7}
-$$
+```
 
 Canonical §75 has `c_I=o(D)`, while `d_tile,C_loc^{att}>=0`. Hence
 
-$$
+```math
 E_D
 \le
 (6t_D+2\kappa_D)D
 -2G_D-4H_D+4F_{loc}+o(D).
 \tag{DF.8}
-$$
+```
 
 ## 3. Canonical return demand forces local exceptional faces
 
 Canonical §122 gives
 
-$$
+```math
 \boxed{
 E_D
 \ge(c_{det}-o(1))D,
@@ -195,19 +195,19 @@ c_{det}:={\pi\over2}(2-\sqrt3)
 =0.4208936072384666\ldots .
 }
 \tag{DF.9}
-$$
+```
 
 Combine (DF.3), (DF.4), (DF.8), and (DF.9). Put
 
-$$
+```math
 A_{DF}:=c_{det}+2g_*+4S_*
 =12.19736577709914\ldots .
 \tag{DF.10}
-$$
+```
 
 Then every repaired Section-118 frontier/common-cap survivor satisfies
 
-$$
+```math
 \boxed{
 {F_{loc}\over D}
 \ge
@@ -217,18 +217,18 @@ $$
 \right]_+.
 }
 \tag{DF.11}
-$$
+```
 
 Equivalently, the no-linear-local-defect alternative forces
 
-$$
+```math
 \boxed{
 \liminf\left(t_D+{\kappa_D\over3}\right)
 \ge {A_{DF}\over6}
 =2.03289429618319\ldots .
 }
 \tag{DF.12}
-$$
+```
 
 Thus the endpoint carrier has a genuine structural dichotomy:
 
@@ -242,22 +242,22 @@ linear actual local exceptional-face population.
 
 Let `S_D` be the set of full-core bounded nonquadrilateral faces arising from the local harmonic faces counted by `F_loc`. Harmonic face fidelity makes the cellwise map injective, so
 
-$$
+```math
 |S_D|=F_{loc}.
-$$
+```
 
 Audited-working §151 Hall expansion gives
 
-$$
+```math
 |N(S_D)|\ge2F_{loc}-s_Z,
 \tag{DF.13}
-$$
+```
 
 where `N(S_D)` is the set of distinct complete stopped trains with a noncancelling terminal occurrence on at least one face of `S_D`.
 
 Consequently
 
-$$
+```math
 \boxed{
 {|N(S_D)|\over D}
 \ge
@@ -267,11 +267,11 @@ $$
 \right]_+.
 }
 \tag{DF.14}
-$$
+```
 
 Since `0<=zeta_D<=kappa_D`, the weaker source-only form is
 
-$$
+```math
 \boxed{
 {|N(S_D)|\over D}
 \ge
@@ -280,27 +280,27 @@ $$
 \right]_+.
 }
 \tag{DF.15}
-$$
+```
 
 For example, the subbranch
 
-$$
+```math
 t_D\le1.90+o(1),
 \qquad
 \kappa_D\le0.05+o(1)
-$$
+```
 
 forces
 
-$$
+```math
 F_{loc}\ge(0.17434\ldots-o(1))D
-$$
+```
 
 and
 
-$$
+```math
 |N(S_D)|\ge(0.29868\ldots-o(1))D.
-$$
+```
 
 The constants in this example are only a readable branch marker; (DF.11) and (DF.14) are the reusable statements.
 

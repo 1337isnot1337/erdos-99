@@ -20,63 +20,63 @@ Near the sharp weighted outer-flex endpoint, almost every bounded exceptional fa
 
 On an `R_F=o(D)` low-`t` subsequence let
 
-$$
+```math
 q={Q\over D}=2t-\pi-\delta+o(1),
-$$
+```
 
 and assume the near-equality branch
 
-$$
+```math
 {\dim K_{out}\over D}\le F(t,\delta,\kappa)+\eta+o(1)
 \tag{FN.1}
-$$
+```
 
 for fixed `eta>0`. Let `V_2` be the set of good flat pentagons carrying exactly two outer-to-flat trains. The weighted stability theorem gives
 
-$$
+```math
 \boxed{{|V_2|\over D}\ge q-2\eta-o(1).}
 \tag{FN.2}
-$$
+```
 
 Define `Gamma_2` with vertex set `V_2`, joining two vertices when one complete stopped train has one terminal occurrence on each face. Then `Gamma_2` is finite, simple, loop-free, has maximum degree three, and satisfies
 
-$$
+```math
 \boxed{{|E(\Gamma_2)|\over D}\ge {3q\over2}-9\eta-o(1),}
 \tag{FN.3}
-$$
+```
 
-$$
+```math
 \boxed{{|\{v\in V_2:\deg_{\Gamma_2}v=3\}|\over D}\ge q-14\eta-o(1),}
 \tag{FN.4}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{{\beta_1(\Gamma_2)\over D}\ge {q\over2}-9\eta-o(1).}
 \tag{FN.5}
-$$
+```
 
 At `t=t_21`, `delta=kappa=0`, and `eta=0.005`,
 
-$$
+```math
 |V_2|>0.4908901D-o(D),
-$$
+```
 
-$$
+```math
 |E(\Gamma_2)|>0.7063352D-o(D),
-$$
+```
 
-$$
+```math
 |\{\deg=3\}|>0.4308901D-o(D),
-$$
+```
 
 and
 
-$$
+```math
 \boxed{\beta_1(\Gamma_2)>0.2054450D-o(D).}
 \tag{FN.6}
-$$
+```
 
 Every vertex simultaneously carries the exact finite flat-pentagon phase-star signature: its five terminal train axes split into a majority triple and minority pair whose possible strict-rhombus crossings form a subgraph of `K_{3,2}`. Thus the weighted near-equality model reduces to a simple near-cubic graph with linear cycle rank and a five-half-edge local phase label at every vertex.
 
@@ -86,25 +86,25 @@ This does not by itself contradict mixed rigidity. It identifies a concrete next
 
 The exact-two faces are bounded exceptional faces, so `|V_2|<=f<=Q`. Combining with (FN.2) gives
 
-$$
+```math
 0\le {Q-f\over D}\le2\eta+o(1),
 \qquad
 0\le {f-|V_2|\over D}\le2\eta+o(1).
 \tag{FN.7}
-$$
+```
 
 Let `I_bad` be the total number of bounded-face boundary incidences belonging to exceptional faces outside `V_2`. Since `sum_F deg F=Q+4f` and every face in `V_2` is a pentagon,
 
-$$
+```math
 I_{bad}=Q+4f-5|V_2|=(Q-f)+5(f-|V_2|),
-$$
+```
 
 so
 
-$$
+```math
 \boxed{I_{bad}\le(12\eta+o(1))D.}
 \tag{FN.8}
-$$
+```
 
 ## 2. Three bounded-to-bounded stubs at every exact-two face
 
@@ -112,9 +112,9 @@ The train-star theorem says the five boundary sides of every good flat pentagon 
 
 At most `I_bad` of the resulting `3|V_2|` bounded-to-bounded stubs can end outside `V_2`. All remaining stubs pair between two `V_2` faces. Hence
 
-$$
+```math
 2|E(\Gamma_2)|\ge3|V_2|-I_{bad},
-$$
+```
 
 and (FN.2), (FN.8) prove (FN.3).
 
@@ -124,9 +124,9 @@ A complete train cannot return to the same bounded face, so `Gamma_2` has no loo
 
 Each `V_2` face has exactly three bounded-to-bounded stubs, so `deg v<=3`. The total deficit from degree three is
 
-$$
+```math
 \sum_{v\in V_2}(3-\deg v)=3|V_2|-2|E(\Gamma_2)|\le I_{bad}\le(12\eta+o(1))D.
-$$
+```
 
 Every vertex of degree at most two contributes at least one unit. Equations (FN.2), (FN.8) prove (FN.4).
 
@@ -134,9 +134,9 @@ Every vertex of degree at most two contributes at least one unit. Equations (FN.
 
 For any finite graph with `c` connected components,
 
-$$
+```math
 \beta_1=|E|-|V|+c\ge|E|-|V|.
-$$
+```
 
 Using (FN.3) and `|V_2|<=Q=qD+o(D)` gives (FN.5).
 

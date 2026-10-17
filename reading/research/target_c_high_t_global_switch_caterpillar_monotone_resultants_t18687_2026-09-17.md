@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_global_switch_caterpillar_monotone_resultants_t18687_2026-09-17.md) · source SHA-256 `a7416599628dda00ef82d46153fd8c239a73102f2a0c1005a709dcc60dbd7293`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b144b1f986472070c7515155d5f7debfb3249fb3", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_global_switch_caterpillar_monotone_resultants_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d7d632507fadaddc51286e664a3093e027b0a99bc94d7d1a8d8cf81045257476"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -27,31 +29,31 @@ Thus the growing injective resultant plateau is not allowed to oscillate arbitra
 
 Let
 
-$$
+```math
 \tau_0,\tau_1,\ldots,\tau_r
 \tag{GM.1}
-$$
+```
 
 be consecutive selected O--O rows from either the fixed-chain theorem or the growing-chain diagonal. Assume first that the chain lies on the pre-hub side. In the complement-dual path coordinates, every actual diameter interval is
 
-$$
+```math
 I_h=\{a_h+1,\ldots,b_h\}
-$$
+```
 
 and the common hub has index `k` with
 
-$$
+```math
 a_h\le k\le b_h
 \qquad(h\in H).
 \tag{GM.2}
-$$
+```
 
 All selected interfaces lie before the hub. Hence every switch is a unique interval **start**. Write `X_i` for the switching set at interface `i`, and put
 
-$$
+```math
 X:=\bigsqcup_{i=0}^{r-1}X_i.
 \tag{GM.3}
-$$
+```
 
 The union is disjoint because an interval has one start.
 
@@ -63,33 +65,33 @@ Let `tau_r` denote the selected boundary row nearest the hub. The post-hub case 
 
 Take `h in X_i`. Since `h` starts at interface `i`,
 
-$$
+```math
 a_h=i.
 \tag{GM.4}
-$$
+```
 
 The hub condition (GM.2) gives
 
-$$
+```math
 b_h\ge k.
 \tag{GM.5}
-$$
+```
 
 Because the selected chain lies strictly before the hub,
 
-$$
+```math
 i<r<k.
 \tag{GM.6}
-$$
+```
 
 Therefore the selected hubward cut `tau_r` belongs to the support interval `I_h`. Equivalently, the two endpoints of every edge in `X` lie on opposite shores of `tau_r`:
 
-$$
+```math
 \boxed{
 X\subseteq H_{\tau_r},
 }
 \tag{GM.7}
-$$
+```
 
 where `H_{tau_r}` denotes the complete actual-diameter subgraph crossing that train cut.
 
@@ -105,11 +107,12 @@ A proper O--O train crosscut separates the closed outer-face disk into two shore
 
 Hence `H_{tau_r}` is bipartite. The complete actual-diameter graph is a straight-line convex geometric thrackle, and every subgraph inherits that property. A bipartite straight-line thrackle has no cycle and every nontrivial tree component is a caterpillar. Therefore
 
-$$
+```math
 \boxed{
 X\text{ is a forest and every nontrivial component of }X\text{ is a caterpillar.}
 }
 \tag{GM.8}
+```
 
 Moreover the two shore endpoint sets lie in complementary cyclic intervals. The standard ordered-thrackle train-cut theorem therefore applies globally to `X`: for any two independent switch edges, the endpoint order on one shore determines the reversed compatible endpoint order on the other shore.
 
@@ -138,31 +141,31 @@ Let the two hull intervals cut by the hubward train be `P_-` and `P_+`, with all
 
 The convex-position separation lemma gives a linear functional `phi` and a constant `c` such that
 
-\[
+```math
 \phi(x)>c\quad(x\in P_-),
 \qquad
 \phi(y)<c\quad(y\in P_+).
 \tag{GM.9}
-$$
+```
 
 Orient every switching diameter vector from its hub-side endpoint toward its chain-side endpoint:
 
-$$
+```math
 n_h:=x_h-y_h,
 \qquad
 x_h\in P_-,\ y_h\in P_+.
 \tag{GM.10}
-$$
+```
 
 Then the same functional satisfies
 
-$$
+```math
 \boxed{
 \phi(n_h)>0
 \qquad(h\in X).
 }
 \tag{GM.11}
-$$
+```
 
 The key point is that `phi` depends only on the single hubward train cut. It does **not** depend on the interface `i` or on a chosen slab `[p,q]`.
 
@@ -174,62 +177,62 @@ This upgrades the slab-by-slab reaction nondegeneracy proof, where a separating 
 
 For row `tau_j`, retain the exact Section-157 resultant
 
-$$
+```math
 F_j=A_ju_j.
 \tag{GM.12}
-$$
+```
 
 Orient the indices away from the chain side and toward the hub so that the adjacent slab reaction is
 
-$$
+```math
 G_i=F_i-F_{i+1}.
 \tag{GM.13}
-$$
+```
 
 The exact cut-resultant telescoping identity gives
 
-$$
+```math
 G_i
 =\sum_{h\in X_i}\beta_h n_h.
 \tag{GM.14}
-$$
+```
 
 Canonical C65 gives
 
-$$
+```math
 \beta_h>0
 \qquad(h\in H).
 \tag{GM.15}
-$$
+```
 
 Using (GM.11),
 
-$$
+```math
 \boxed{
 \phi(G_i)
 =\sum_{h\in X_i}\beta_h\phi(n_h)>0
 \qquad(0\le i<r).
 }
 \tag{GM.16}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \phi(F_0)>\phi(F_1)>\cdots>\phi(F_r).
 }
 \tag{GM.17}
-$$
+```
 
 For every contiguous slab `p<q`, summing (GM.16) gives
 
-$$
+```math
 \boxed{
 \phi(F_p-F_q)>0.
 }
 \tag{GM.18}
-$$
+```
 
 Thus all oriented resultant chords point into the same open half-plane.
 
@@ -245,12 +248,12 @@ Join consecutive resultants by straight segments. Along every segment `F_iF_{i+1
 
 Therefore the high-`t` growing survivor contains
 
-$$
+```math
 \boxed{
 \text{an arbitrarily long strictly ordered resultant path compressed into an }o(D)\text{ ball after division by }D.
 }
 \tag{GM.19}
-$$
+```
 
 This does not provide a quantitative lower spacing between consecutive resultants; the increments may be arbitrarily small. It does remove vector oscillation/backtracking as an escape from the resultant-plateau normal form.
 

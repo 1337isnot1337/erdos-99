@@ -15,25 +15,25 @@ Source artifact: Sections 12.1–12.4 of `docs/reports/target_c_global_inverse_p
 
 **PASS — promote `C-HULL-TRAIN-FACE-END-NORMAL`.** In a canonical post-ZF C-II source, the outward normal of a bounded exceptional-face terminal edge of a hull-ended train agrees with the outward normal of its distinguished unit loaded-hull side. For sufficiently large `D`, that loaded side is a full-source hull side. With coordinates centered at the full-source circumcenter `o`, every point `y` on that side satisfies
 
-$$
+```math
 y\cdot n\ge D/2-2\eta,\qquad |y\cdot Jn|\le6D^{2/3},
 \qquad \eta=3^{1/4}\sqrt D,
-$$
+```
 
 so the side normal and radial direction `y/|y|` differ by `O(D^{-1/3})`.
 
 **PASS — promote `C-ALL-BRANCH-HULL-FACE-END-BUDGET`.** Along every unbounded canonical post-ZF C-II sequence in either exhaustive branch, let `E_HF` count bounded physical nonquadrilateral-face terminal occurrences of trains with a distinguished unit loaded-hull end. Let `Q=\sum_F(\deg F-4)` over actual bounded nonquadrilateral contact faces, let `f_5` count actual bounded unit-pentagon contact faces, and use the canonical loaded-hull variables `q,m,k,b,u_B`, where `m` counts nonunit loaded-hull sides and `u_B=b-q-m`. Then
 
-$$
+```math
 E_{HF}\le Q+f_5+O(D^{5/6}),
-$$
+```
 
 and the exact train-end count implies
 
-$$
+```math
 f_5\ge2(k-m)-O(D^{5/6}),\qquad
 q+m\ge4k+u_B-O(D^{5/6}).
-$$
+```
 
 The weaker source candidate `E_HF<=2Q+O(D^(5/6))` is already subsumed, since `f_5<=Q`. These are asymptotic bounds with universal constants; they do not assert a finite uniform two-end rule, face capacity for arbitrary packets, a source motion, or C-II/Level-I closure.
 
@@ -45,15 +45,15 @@ For any closed unit-edge polygon, if `j` edge vectors lie within `delta` of a un
 
 For `d=6`, projection first rules out four selected edges. If three are selected, the other three unit vectors `w` satisfy
 
-$$
+```math
 \sum(1+w\cdot t)\le3(1-\cos\delta)\le\tfrac32\delta^2.
-$$
+```
 
 For each remaining vector let `alpha` be its angle from `-t`. Then `1-cos(alpha)<=3delta^2/2`. The source proof's auxiliary estimate `alpha<=sqrt(3)delta` is slightly too sharp. The corrected estimate `alpha<1.75delta` follows because
 
-$$
+```math
 1-\cos(1.75\delta)\ge (1.75\delta)^2/2-(1.75\delta)^4/24>3\delta^2/2
-$$
+```
 
 at `delta=1/100`. Replace the six edges, in their cyclic order, by three `+t` and three `-t` reference steps. Their closed line walk has at most four distinct vertices among its seven partial-sum vertices, so it has a repeated pair other than just the initial/final pair. The sum of deviations over any such segment is less than `3delta+3(1.75delta)=8.25delta<9delta<1`. The corresponding two distinct actual polygon vertices would be less than one apart, contradicting unit separation. Thus at most two directed edges lie in the window. This repairs the numerical slack without changing the lemma.
 
@@ -73,15 +73,15 @@ This trivial occurrence count is valid because each terminal occurrence on a bou
 
 On a remaining face, its diameter is at most its degree, hence at most `D^(5/6)`. A short train's face-edge midpoint and loaded-hull-side midpoint are also at distance at most `D^(5/6)`, because each rhombus crossing advances the terminal midpoint by at most one. Thus all loaded-side midpoints associated with one face lie within `O(D^(5/6))` of one another. Their radial normals, and then the corresponding oriented face edges, lie in one window of width `O(D^{-1/6})`, which is eventually less than `2/100`. The face-window lemma bounds the number of short terminal occurrences by `d-4` except for an additional one when `d=5`. Summing small faces, high faces, and long trains gives
 
-$$
+```math
 E_{HF}\le Q+f_5+O(D^{5/6}).
-$$
+```
 
 At most two trains have two good loaded-hull terminal occurrences by canonical train topology. There are `g=q-m` good unit loaded-hull occurrences among the `b` outer-walk occurrences; after removing at most four good ends paired within those two trains, each remaining good end is paired with a distinct bad outer occurrence or a bounded exceptional-face end. Hence
 
-$$
+```math
 2(q-m)-b-4\le E_{HF}.
-$$
+```
 
 Using the exact loaded-hull identity `Q=2(q-k)-b` and `f_5<=Q` gives the `q+m` inequality. Using the sharper `Q+f_5` budget and the same identity gives `f_5>=2(k-m)-O(D^{5/6})`. No sign or positivity of `k-m` is inferred.
 

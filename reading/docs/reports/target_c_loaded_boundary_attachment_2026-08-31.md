@@ -17,21 +17,21 @@ C33 forces a linear positively loaded boundary. Its contact attachment has a sim
 
 Every `b in B_+` is an extreme convex-hull vertex. All unit-contact directions from `b` lie in an angular interval of width strictly less than `pi`. If `bc` and `bd` are distinct unit contacts, unit separation gives `angle cbd>=pi/3`; equality would make `bcd` a forbidden unit equilateral triangle. Hence contact directions are separated by strictly more than `pi/3`, so
 
-$$
+```math
 \boxed{1\le\deg_C(b)\le3.}
-$$
+```
 
 Delete `B_+` and let `I_1,...,I_{c_I}` be the connected components of the remaining contact graph. Let `t_r` be the number of contact edges from `I_r` to `B_+`. Summing positive contact equilibrium over `I_r` rules out `t_r=1`; if `t_r=2`, C22 makes the component a reaction-free two-terminal straight chain, which C26 excludes. Therefore
 
-$$
+```math
 \boxed{t_r\ge3.}
-$$
+```
 
 If `e_{BI}` is the total loaded-interior contact count and `e_{BB}` the loaded-loaded contact count,
 
-$$
+```math
 \boxed{e_{BI}\ge3c_I,\qquad e_{BI}+2e_{BB}\le3q.}
-$$
+```
 
 Moreover at most `2e_{BB}` loaded vertices fail to touch the unpinned interior. Combined with C33, a near-minimal boundary has only `o(D)` interior components, `o(D)` loaded-loaded contacts, and all but `o(D)` loaded vertices attached to the interior.
 
@@ -43,25 +43,25 @@ Let `b in B_+`. Since `b` is a source diameter endpoint, it is an extreme vertex
 
 For two distinct unit-contact neighbors `c,d`,
 
-$$
+```math
 |c-d|^2=2-2\cos\angle cbd.
-$$
+```
 
 Unit separation gives `angle cbd>=pi/3`. Equality would imply all three distances `bc,bd,cd` equal one, a forbidden unit triangle. Thus
 
-$$
+```math
 \angle cbd>\frac\pi3.
 \tag{C35.1}
-$$
+```
 
 Four contact directions inside a wedge of width `<pi` would make the angular difference from first to fourth exceed `pi`, impossible. Positive diameter loading guarantees at least one positive contact incidence. Therefore:
 
 ### Theorem C35.1
 
-$$
+```math
 \boxed{1\le\deg_C(b)\le3\quad(b\in B_+).}
 \tag{C35.2}
-$$
+```
 
 ---
 
@@ -77,17 +77,17 @@ If `t_r=2`, then `I_r` is a connected reaction-free positive-contact region with
 
 ### Theorem C35.2
 
-$$
+```math
 \boxed{t_r\ge3.}
 \tag{C35.3}
-$$
+```
 
 Summing gives
 
-$$
+```math
 \boxed{e_{BI}\ge3c_I.}
 \tag{C35.4}
-$$
+```
 
 ---
 
@@ -95,24 +95,24 @@ $$
 
 Sum full contact degrees over `B_+`:
 
-$$
+```math
 \sum_{b\in B_+}\deg_C(b)=e_{BI}+2e_{BB}.
 \tag{C35.5}
-$$
+```
 
 By C35.1,
 
-$$
+```math
 \boxed{e_{BI}+2e_{BB}\le3q.}
 \tag{C35.6}
-$$
+```
 
 Let `B_0` be the loaded vertices with no contact into `I`. Every `b in B_0` has positive contact degree, and every such contact is loaded-loaded. Therefore each `b in B_0` is an endpoint of at least one edge counted by `e_{BB}`, so
 
-$$
+```math
 \boxed{|B_0|\le2e_{BB}.}
 \tag{C35.7}
-$$
+```
 
 C38 will improve this factor two using quotient connectivity.
 
@@ -122,10 +122,10 @@ C38 will improve this factor two using quotient connectivity.
 
 C33 gives
 
-$$
+```math
 c_I+e_{BB}\le\sigma_B:=2q-\delta-2.
 \tag{C35.8}
-$$
+```
 
 If `sigma_B=o(D)`, then `c_I=o(D)` and `e_{BB}=o(D)`. Since canonical C30 gives `q=Omega(D)`, C35.7 shows all but `o(D)` loaded vertices have a direct contact into only `o(D)` unpinned components.
 

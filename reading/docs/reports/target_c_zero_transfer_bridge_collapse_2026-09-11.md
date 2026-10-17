@@ -19,10 +19,10 @@ Let (C) be the positive contact graph of the C-II representative and (H) its
 full actual positive diameter graph. Assume (h=|H|ge3) and that the C56
 zero-transfer alternative holds:
 
-$$
+```math
  K=Q^{\mathsf T}\Lambda^+Q=\operatorname{diag}(\beta_e^{-1}).
 \tag{ZB.1}
-$$
+```
 
 Then every contact bridge (a b) has a singleton side (for a core with at least four
 vertices). Consequently every contact bridge
@@ -32,11 +32,11 @@ block with at least three vertices, it has exactly one such block. Every branch
 attached to that block contains at most two core vertices. If (r) is the number
 of such branches, then
 
-$$
+```math
  |V(C)|=|V(B_0)|+s,
  \qquad s\le2r\le2q,
 \tag{ZB.2}
-$$
+```
 
 where (B_0) is the unique nontrivial block and (q) is the number of loaded
 diameter endpoints. In particular (s=O(D)), since (q\le\pi D).
@@ -51,14 +51,14 @@ Fix a contact bridge (ab). Deleting it partitions the contact core into (S,T),
 with (a\in S), (b\in T). Let (z\in\{-1,0,1\}^h) be the signed boundary
 indicator of this cut on the oriented diameter edges:
 
-$$
+```math
  z_e=\begin{cases}
  1,&\text{if the oriented endpoints of (e) go from (S) to (T)},\\
  -1,&\text{if they go from (T) to (S)},\\
  0,&\text{otherwise.}
  \end{cases}
 \tag{ZB.3}
-$$
+```
 
 The bridge response contributes a positive Kalmanson interval-split term with split
 vector (z). This is the standard bridge term in the circular-planar response
@@ -70,10 +70,10 @@ Under (ZB.1), C56.30 says that every positive split vector has support of size a
 most two, with the two coordinates, if present, adjacent in projective diameter
 order. Therefore
 
-$$
+```math
 \#\{e\in H:e\text{ crosses }S|T\}\le2.
 \tag{ZB.4}
-$$
+```
 
 This is the electrical part of the argument. It uses the bridge's actual positive
 resistance; it does not infer a sign for an arbitrary 2-edge-connected common block.
@@ -85,17 +85,17 @@ row of the mixed rigidity matrix redundant. A rank count across the cut therefor
 gives at least four mixed bars across (S|T). One of them is the contact bridge
 (ab), so
 
-$$
+```math
 \#\{e\in H:e\text{ crosses }S|T\}\ge3,
 \tag{ZB.5}
-$$
+```
 
 contradicting (ZB.4). Hence
 
-$$
+```math
 \boxed{\min(|S|,|T|)=1}
 \tag{ZB.6}
-$$
+```
 
 for every contact bridge in a core with at least four vertices. This is stronger than
 the 3-vertex-connectivity matching estimate: the matching estimate alone loses one
@@ -125,10 +125,10 @@ that every positive contact bridge separates endpoints of a positive diameter ed
 Distinct branches are disjoint, so (r\le q). If (s) is the total number of core
 vertices outside (B_0), then (s=r\le q), which strengthens (ZB.2) to
 
-$$
+```math
 |V(C)|=|V(B_0)|+r,\qquad r\le q\le\pi D.
 \tag{ZB.7}
-$$
+```
 
 If no block (B_0) exists, (ZB.6) says that every edge of the contact tree has a
 singleton side, so the tree is a star. The triangle-free unit-contact degree bound

@@ -17,21 +17,21 @@
 
 ZHT produces, under bridge dominance and `D epsilon->0`, one harmonic cell whose bridge-block tree contains a consecutive trunk of
 
-$$
+```math
 H\ge c_H D,
 \qquad
 c_H:=\frac{\eta^2}{16\pi},
 \tag{1}
-$$
+```
 
 physical bridges, every one satisfying
 
-$$
+```math
 \alpha_e\ge c_BD,
 \qquad
 c_B:=\frac{\eta}{32\pi}.
 \tag{2}
-$$
+```
 
 The unresolved objects are the two-edge-connected bridge blocks between those trunk edges.
 
@@ -52,17 +52,17 @@ Thus almost the entire ZHT trunk is locally a macroscopic-force corridor. The re
 
 Write the consecutive ZHT bridge trunk as
 
-$$
+```math
 f_1,\ldots,f_H.
 \tag{1.1}
-$$
+```
 
 Let
 
-$$
+```math
 X_0,X_1,\ldots,X_H
 \tag{1.2}
-$$
+```
 
 be its successive bridge blocks, so internal route block `X_i` is incident to trunk bridges `f_i` and `f_{i+1}` for `1<=i<=H-1`.
 
@@ -70,43 +70,43 @@ Let `delta_X` be the internal contact-graph diameter used by C39, with singleton
 
 C39 proves globally
 
-$$
+```math
 \sum_X\delta_X
 \le2|B|-2
 \le2\pi D.
 \tag{1.3}
-$$
+```
 
 Fix `rho in (0,1)`. Set
 
-$$
+```math
 K_{\eta,\rho}
 :=\frac{4\pi}{\rho c_H}
 =\frac{64\pi^2}{\rho\eta^2}.
 \tag{1.4}
-$$
+```
 
 The number of route blocks with
 
-$$
+```math
 \delta_{X_i}>K_{\eta,\rho}
-$$
+```
 
 is at most
 
-$$
+```math
 \frac{2\pi D}{K_{\eta,\rho}}
 =\frac{\rho c_H}{2}D
 \le\frac{\rho H}{2}.
 \tag{1.5}
-$$
+```
 
 Therefore at least
 
-$$
+```math
 (1-\rho/2)H-O(1)
 \tag{1.6}
-$$
+```
 
 internal trunk blocks have graph diameter at most `K_{eta,rho}`.
 
@@ -118,24 +118,24 @@ Every vertex of a triangle-free unit-contact graph has contact degree at most fi
 
 A connected graph of maximum degree five and graph diameter at most `K` has at most
 
-$$
+```math
 M(K):=1+5\sum_{j=0}^{K-1}4^j
 \tag{2.1}
-$$
+```
 
 vertices. Hence every block counted in (1.6) has at most
 
-$$
+```math
 M_{\eta,\rho}:=M(K_{\eta,\rho})
 \tag{2.2}
-$$
+```
 
 vertices and at most
 
-$$
+```math
 E_{\eta,\rho}:=\frac52M_{\eta,\rho}
 \tag{2.3}
-$$
+```
 
 internal contact edges.
 
@@ -149,61 +149,61 @@ For each loaded terminal `b in B`, let `tau(b)` be its global bridge-tree block.
 
 Let
 
-$$
+```math
 s_b=\sum_{bk\in H}\beta_{bk}
 \tag{3.1}
-$$
+```
 
 be the total diameter endpoint mass at `b`. Define the mass assigned to route layer `X_i` by
 
-$$
+```math
 \mu_i:=\sum_{b:\pi(b)=X_i}s_b.
 \tag{3.2}
-$$
+```
 
 The projection classes partition the loaded terminals, and
 
-$$
+```math
 \sum_{b\in B}s_b=2.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \sum_{i=0}^H\mu_i=2.
 }
 \tag{ZHN1}
-$$
+```
 
 In particular, for any sequence `lambda_D>0`, the number of route layers with `mu_i>lambda_D` is at most `2/lambda_D`.
 
 Choose
 
-$$
+```math
 \lambda_D=D^{-1/2}.
 \tag{3.3}
-$$
+```
 
 Then only `O(sqrt D)=o(D)` trunk blocks have `mu_i>D^{-1/2}`.
 
 Intersecting with (1.6), for every fixed `rho>0` at least
 
-$$
+```math
 \boxed{
 (1-\rho/2)H-o(D)
 }
 \tag{ZHN2}
-$$
+```
 
 internal route blocks have simultaneously
 
-$$
+```math
 \delta_{X_i}\le K_{\eta,\rho},
 \qquad
 \mu_i\le D^{-1/2}.
 \tag{3.4}
-$$
+```
 
 Call these **regular trunk blocks**.
 
@@ -219,35 +219,35 @@ Its two trunk bridges are the parent and child route edges. Treat every other fo
 
 The total norm of the positive diameter reaction at a loaded vertex `b` is at most `Ds_b`. All loaded vertices lying in `X` project to `X`, so
 
-$$
+```math
 \sum_{b\in B\cap X}|g_b|
 \le D\mu_i.
 \tag{4.1}
-$$
+```
 
 ### Off-trunk contact bridges
 
 Every off-trunk bridge at `X` leads into a bridge-tree subtree whose loaded terminal blocks project to `X`. For such a bridge `e`, its crossing beta mass is at most the sum of endpoint masses in that subtree. C20/C23 gives
 
-$$
+```math
 \alpha_e\le D\,w_e.
 \tag{4.2}
-$$
+```
 
 The off-trunk subtrees at `X` are disjoint, so summing over them gives
 
-$$
+```math
 \sum_{e\text{ off trunk at }X}\alpha_e
 \le D\mu_i.
 \tag{4.3}
-$$
+```
 
 Therefore the total magnitude of all nontrunk external forces on the block is at most
 
-$$
+```math
 \boxed{F_{side}(X)\le2D\mu_i\le2\sqrt D=o(D).}
 \tag{ZHN3}
-$$
+```
 
 By ZHT, both trunk bridge forces have magnitudes at least `c_BD`.
 
@@ -259,10 +259,10 @@ Let `p^-` and `p^+` be the vertices of `X` incident to its parent and child trun
 
 Otherwise take any partition
 
-$$
+```math
 V(X)=S\sqcup(V(X)\setminus S)
 \tag{5.1}
-$$
+```
 
 with `p^- in S` and `p^+ notin S`.
 
@@ -270,27 +270,27 @@ Sum mechanical equilibrium over the vertices of `S`. Internal forces cancel exce
 
 Hence the resultant carried by internal contact edges crossing the cut has norm at least
 
-$$
+```math
 c_BD-F_{side}(X).
 \tag{5.2}
-$$
+```
 
 For regular blocks and sufficiently large `D`, ZHN3 makes this at least
 
-$$
+```math
 \frac{c_B}{2}D.
 \tag{5.3}
-$$
+```
 
 The norm of a vector sum is at most the sum of its positive contact-force magnitudes. Thus every `p^---p^+` edge cut in the internal block graph has scalar alpha-capacity at least
 
-$$
+```math
 \boxed{
 \sum_{e\in\partial S}\alpha_e
 \ge\frac{c_B}{2}D.
 }
 \tag{ZHN4}
-$$
+```
 
 ---
 
@@ -300,17 +300,17 @@ Regard the internal contact graph of `X` as an undirected capacitated graph with
 
 By ZHN4, every cut separating the two trunk ports has capacity at least `c_BD/2`. Max-flow/min-cut gives a scalar port-to-port flow of value at least
 
-$$
+```math
 \frac{c_B}{2}D.
 \tag{6.1}
-$$
+```
 
 Delete flow cycles and decompose the remaining flow into simple `p^---p^+` paths. With at most `E_{eta,rho}` internal edges, at most that many path terms are needed. Hence one path carries at least
 
-$$
+```math
 \frac{c_B}{2E_{\eta,\rho}}D.
 \tag{6.2}
-$$
+```
 
 Every edge on that path has capacity at least its path-flow value. Therefore:
 
@@ -318,7 +318,7 @@ Every edge on that path has capacity at least its path-flow value. Therefore:
 
 Every non-singleton regular trunk block contains a contact path between its two trunk ports of length at most `M_{eta,rho}-1` such that every path edge satisfies
 
-$$
+```math
 \boxed{
 \alpha_e
 \ge
@@ -328,7 +328,7 @@ c_{\eta,\rho}^{path}
 :=\frac{c_B}{2E_{\eta,\rho}}>0.
 }
 \tag{ZHN5}
-$$
+```
 
 The constant is extremely small but depends only on fixed `eta,rho`, never on `D`.
 
@@ -346,24 +346,24 @@ Sum vertex equilibrium over `X` after dotting each equation with its position. I
 
 Each trunk force has magnitude at most `D` because every bridge satisfies `alpha_e<=Dw_e<=D`. Therefore
 
-$$
+```math
 \sum_{e\in E(X)}\alpha_e
 \le
 K_{\eta,\rho}
 \left(2D+F_{side}(X)\right).
 \tag{7.1}
-$$
+```
 
 For regular blocks,
 
-$$
+```math
 \boxed{
 \sum_{e\in E(X)}\frac{\alpha_e}{D}
 \le
 2K_{\eta,\rho}+o(1).
 }
 \tag{ZHN6}
-$$
+```
 
 Thus normalized internal stresses on every regular block lie in a compact bounded set.
 
@@ -389,12 +389,12 @@ Therefore the positive normalized support joining the two ports is an exact reac
 
 A linear population of regular trunk blocks has subsequential local limits in which
 
-$$
+```math
 \boxed{
 \text{all }\Theta(D)\text{-scale force is transmitted by a straight two-terminal chain.}
 }
 \tag{ZHN7}
-$$
+```
 
 Every contact/branch needed to keep the finite block genuinely two-dimensional or to satisfy C26 carries only `o(D)` stress along that local limiting subsequence.
 
@@ -406,28 +406,28 @@ This is **not yet a contradiction**: actual finite blocks may retain geometrical
 
 For every fixed `xi>0`, a contact edge with
 
-$$
+```math
 1-(|r_u-r_v|)^2\ge\xi
 \tag{9.1}
-$$
+```
 
 and stress at least `c D` contributes at least `c xi D` to C68's radial defect `Q_z`.
 
 C68 gives
 
-$$
+```math
 Q_z=o(D^2)
 \tag{9.2}
-$$
+```
 
 under `D epsilon->0`.
 
 ZHN supplies `Omega(D)` macroscopic corridor edges across the regular blocks. Hence only `o(D)` of those selected corridor edges can have a fixed radial inefficiency. Almost every selected high-stress corridor edge satisfies
 
-$$
+```math
 \bigl||r_u-r_v|\bigr|=1-o(1)
 \tag{9.3}
-$$
+```
 
 in the usual threshold sense.
 

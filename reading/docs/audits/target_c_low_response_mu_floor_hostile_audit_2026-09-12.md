@@ -19,18 +19,18 @@ Use the contact-minimal, then diameter-pair-minimal C-II representative and reta
 full source, including contact-isolated points. For a positive-contact component
 `I_r` with loaded attachment set `A_r`, put
 
-$$
+```math
  L_r=\operatorname{diam}(A_r),\qquad
  S_r=\sum_{e\text{ incident to }I_r}\alpha_e.
-$$
+```
 
 Let `S_BB` be the contact stress on direct loaded-loaded contacts, and let
 `c^{(r)}_{st}` be the Schur-response conductances of `I_r` on `A_r`. Define
 
-$$
+```math
  C_r=\sum_{s<t}c^{(r)}_{st},\qquad
  E_r=\sum_{s<t}c^{(r)}_{st}(D^2-|s-t|^2),
-$$
+```
 
 and let `\varepsilon_D=\sum_{s<t}c_{st}-1` be the C41 response defect. All sums
 are over actual source vertices or actual response pairs; no isolated source point is
@@ -43,10 +43,10 @@ coordinate functions harmonic with the loaded attachment values as boundary data
 Schur elimination therefore preserves their Dirichlet energy. Since every actual
 contact has unit length,
 
-$$
+```math
  \boxed{S_r=\sum_{s<t\in A_r}c^{(r)}_{st}|s-t|^2.}
 \tag{LR-A.1}
-$$
+```
 
 This uses only the positive KKT stress on the nonisolated contact core. It does not
 assert a lower bound on an individual multiplier and does not extend the §57 affine
@@ -54,23 +54,23 @@ kernel to contact-isolated coordinates.
 
 Because all source distances are at most `D`,
 
-$$
+```math
  E_r=D^2C_r-S_r\ge0,
 \qquad
  S_r\le L_r^2C_r.
 \tag{LR-A.2}
-$$
+```
 
 For `L_r<D`, eliminating `C_r` gives the exact finite estimate
 
-$$
+```math
  \boxed{
  E_r\ge S_r\left({D^2\over L_r^2}-1\right),
  \qquad
  S_r\le {L_r^2\over D^2-L_r^2}E_r.
  }
 \tag{LR-A.3}
-$$
+```
 
 The inequalities are in the correct direction: a component with short attachment
 diameter can carry substantial contact stress only by paying response defect.
@@ -79,7 +79,7 @@ diameter can carry substantial contact stress only by paying response defect.
 
 The C41 coordinate-energy identity and the normalized KKT virial partition give
 
-$$
+```math
  \boxed{
  D^2\varepsilon_D
  =(D^2-1)S_{BB}+\sum_rE_r,
@@ -87,22 +87,22 @@ $$
  S_{BB}+\sum_rS_r=D^2.
  }
 \tag{LR-A.4}
-$$
+```
 
 Every term is nonnegative. In particular,
 
-$$
+```math
  S_{BB}\le {D^2\over D^2-1}\varepsilon_D.
 \tag{LR-A.5}
-$$
+```
 
 For any family of components with `L_r\le L<D`, summing (LR-A.3) and using (LR-A.4)
 gives
 
-$$
+```math
  \sum S_r\le {L^2\over D^2-L^2}D^2\varepsilon_D.
 \tag{LR-A.6}
-$$
+```
 
 No hidden assumption that response conductance is supported on actual diameter pairs
 is used here; `E_r` is exactly the weighted deficit of the Schur response pairs.
@@ -112,29 +112,29 @@ is used here; `E_r` is exactly the weighted deficit of the Schur response pairs.
 Let `L_*` be the largest component attachment diameter. If `L_*<D`, set
 `T=\sum_rS_r=D^2-S_{BB}`. Equation (LR-A.6) implies
 
-$$
+```math
  {L_*^2\over D^2}\ge {T\over T+D^2\varepsilon_D}.
 \tag{LR-A.7}
-$$
+```
 
 For `D\ge2`, (LR-A.5) gives `D^2\varepsilon_D\ge S_{BB}`, hence the denominator
 in (LR-A.7) is at least `D^2`. Thus
 
-$$
+```math
  L_*\ge D\sqrt{1-\varepsilon_D}
  \qquad(0\le\varepsilon_D\le1).
 \tag{LR-A.8}
-$$
+```
 
 Canonical C40 gives `L_*\le\delta_*+2`, while the Section-62 component ledger gives
 `\sum_r\delta_r\le\mu_DD+6`. Therefore
 
-$$
+```math
  \boxed{
  \mu_D\ge\sqrt{1-\varepsilon_D}-{8\over D}.
  }
 \tag{LR-A.9}
-$$
+```
 
 The case `L_*=D` satisfies the same conclusion directly. If there were no unloaded
 component, then `S_{BB}=D^2`, contradicting (LR-A.5) for `D>\sqrt2` and
@@ -144,10 +144,10 @@ If `D\varepsilon_D\to0`, the argument with
 `\eta_D=\sqrt{\varepsilon_D/D}` is also valid. Components with
 `L_r\le(1-\eta_D)D` carry total stress at most
 
-$$
+```math
  O(D^2\varepsilon_D/\eta_D)
  =O(D^2\sqrt{D\varepsilon_D})=o(D^2),
-$$
+```
 
 and the remaining stress lies in components with `L_r=D-o(1)`. Their graph diameters
 are `D-o(1)` by C40, while `\sum_r\delta_r\le2+2\pi D`; consequently there are at
@@ -181,13 +181,12 @@ unit equilateral triangle or a same-cardinality strict sub-`D` source.
 
 The remaining theorem target is therefore source-level:
 
-$$
+```math
 \text{near-diameter attachment cell(s)}
  +\text{ concentrated contact stress}
  \Longrightarrow
  \text{exact triangle, strict competitor, or diameter contradiction}.
-$$
+```
 
 The separate high-response branch `D\varepsilon_D\not\to0` and the macroscopic
 inactive-container branch remain untouched.
-

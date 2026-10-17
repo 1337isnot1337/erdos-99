@@ -20,19 +20,19 @@ arithmetic.
 
 The safe proof-only conclusion is
 
-$$
+```math
 \boxed{
 \operatorname{diam}(P_*)
 \ge (0.9762439137425688\ldots-o(1))D
 }
-$$
+```
 
 for a quadratic-area locally rhombus-saturated harmonic carrier in every sufficiently
 large full-core Type-II survivor. The associated safe scalar window is
 
-$$
+```math
 \boxed{\sigma\le0.0088.}
-$$
+```
 
 The companion relaxation has scalar zero
 `0.0089758762244767...` and coefficient `0.9762479642481726...`, but this audit treats
@@ -48,9 +48,10 @@ No theorem-state mutation is made here. The canonical state remains
 The proof uses the following load-bearing inputs.
 
 1. Canonical Section 101 supplies
-   $$
+   ```math
    M\le C\le2\alpha\le |S|\le U
-   $$
+   
+   ```
    and therefore the exact nonnegative decomposition of `U-M`.
 2. Canonical Sections 82 and 89 supply the exact bounded-face/outer-walk/train ledgers.
 3. Canonical Section 104 supplies the finite-cover base-spacing theorem and the
@@ -74,17 +75,17 @@ macroscopic inactive-container branch.
 
 Put
 
-$$
+```math
 x=U-|S|,\qquad
 y=|S|-2\alpha,\qquad
 z=2\alpha-C,\qquad w=C-M.
-$$
+```
 
 The canonical Section-101 chain makes each term nonnegative and telescopes exactly:
 
-$$
+```math
 \boxed{x+y+z+w=U-M=\sigma.}
-$$
+```
 
 Nothing asymptotic is hidden in this decomposition. In particular, using the same
 letter `sigma` separately for every later defect is unnecessarily lossy; Section 118
@@ -94,49 +95,49 @@ is entitled to keep the four currencies correlated until the final scalar relaxa
 
 Write the largest complement gap as
 
-$$
+```math
 g_1=\theta-\delta,
 \qquad
 \phi=2\pi-2\theta.
-$$
+```
 
 The standard transfer function obeys
 
-$$
+```math
 h_\theta(\delta)\le C-M=w.
-$$
+```
 
 On the entire Section-118 window the transfer derivative on
 `0<=delta<=0.1` remains above `0.30`. The old `delta>=0.1` alternative costs more than
 `0.0326`, while `w<=sigma<=0.0088`; hence that alternative is impossible. Therefore
 
-$$
+```math
 \boxed{\delta\le{10\over3}w.}
-$$
+```
 
 Writing
 
-$$
+```math
 g_2=\phi+x_2,
 \quad g_3=\phi+x_3,
 \quad \tau=\sum_{j\ge4}g_j,
-$$
+```
 
 the exact complement-measure identity is
 
-$$
+```math
 x_2+x_3+\tau=\delta+x.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \tau\le x+{10\over3}w,
 \qquad
 C_{tail}\le{x\over2}+{5\over3}w.
 }
-$$
+```
 
 The adjacent-support-span argument also spends only `w`, giving endpoint capacity
 `20w/3` there. At `sigma=0.0088`, the coarse total perturbation
@@ -151,23 +152,23 @@ on the larger window.
 
 Pass to one further subsequence on which
 
-$$
+```math
 Q_D/D\to q,
 \qquad c_D/D\to c,
 \qquad s_D/D\to s_0.
-$$
+```
 
 The retained finite Section-101 face currency gives
 
-$$
+```math
 \boxed{2s_0+c+q\le z.}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{q+c\le z.}
-$$
+```
 
 This step must use a common subsequence. Separate limsups of `q` and `c` could not be
 added this way. The Section-118 companion explicitly uses one common subsequence, so
@@ -185,48 +186,48 @@ Canonical Section 104 decomposes micro routes into three classes.
 Each such direct side is one loaded-loaded contact from the local `c_D` currency. Its
 normalized outer-route edge density is therefore at most
 
-$$
+```math
 c+o(1).
-$$
+```
 
 ### Non-direct routes of length at least three
 
 After subtracting the ordinary two-edge baseline, their total normalized excess is at
 most
 
-$$
+```math
 z+c+o(1).
-$$
+```
 
 A route of length `k>=3` has baseline excess `k-2` and
 
-$$
+```math
 k\le3(k-2).
-$$
+```
 
 Therefore these routes have total edge-occurrence density at most
 
-$$
+```math
 3(z+c)+o(1).
-$$
+```
 
 ### Length-two routes with loaded middle vertex
 
 Both route edges are loaded-loaded contacts. Canonical Section 104 bounds their total
 outer-face occurrence density by
 
-$$
+```math
 2c+o(1).
-$$
+```
 
 Adding the three disjoint categories gives
 
-$$
+```math
 \boxed{
 \text{exceptional micro-route endpoint density}
 \le3z+6c.
 }
-$$
+```
 
 This is exactly the refinement asserted by the sharp companion. It is not obtained by
 subtracting two independently maximized limsups.
@@ -240,24 +241,24 @@ The other two non-tooth categories are
 
 Together with Section 5, their total is
 
-$$
+```math
 4z+5q+6c+C_{tail}.
-$$
+```
 
 Since `q+c<=z`,
 
-$$
+```math
 5q+6c\le6(q+c)\le6z,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 4z+5q+6c+C_{tail}
 \le10z+C_{tail}.
 }
-$$
+```
 
 The factor is safe even though the coefficients of `q` and `c` differ: replacing
 `5q+6c` by `6(q+c)` only enlarges the expression.
@@ -266,48 +267,48 @@ The factor is safe even though the coefficients of `q` and `c` differ: replacing
 
 Canonical Section 104 gives the exact micro-base excess budget
 
-$$
+```math
 \limsup_D{1\over D}
 \sum_{\rm micro\ bases}(|p_k-p_{k+1}|-1)
 \le{|S|\over2}-\alpha={y\over2}.
-$$
+```
 
 For one projective endpoint-direction interval of width `epsilon`, the hostile-audited
 tangent-window theorem gives, for either leg choice,
 
-$$
+```math
 \limsup_D{N([0,X])\over D}
 \le C_{tail}+{X+\epsilon\over2}.
-$$
+```
 
 The same quantile/bathtub calculation audited in Section 117 therefore yields for the
 two single-leg classes
 
-$$
+```math
 q_1+q_2
 \le Q_{tooth}(y)+2C_{tail}+\epsilon,
-$$
+```
 
 where `Q_tooth(y)` is the unique nonnegative solution of
 
-$$
+```math
 \sin Q+\sqrt3(1-\cos Q)-Q={y\over2}.
-$$
+```
 
 If both legs of one tooth fall into the same width-`epsilon` projective interval,
 triangle-freeness forces the apex angle onto the near-`pi` branch. The base excess is
 at least
 
-$$
+```math
 2\cos(\epsilon/2)-1,
-$$
+```
 
 so after `epsilon->0` the double-leg endpoint density costs at most `y`.
 Consequently the full regular-tooth directional capacity is
 
-$$
+```math
 \boxed{Q_{tooth}(y)+y+2C_{tail}.}
-$$
+```
 
 No full `sigma` is needed in this step.
 
@@ -315,27 +316,27 @@ No full `sigma` is needed in this step.
 
 Add Sections 3, 6, and 7:
 
-$$
+```math
 B(x,y,z,w)
 \le
 Q_{tooth}(y)+y+10z+3C_{tail}+{20\over3}w.
-$$
+```
 
 Using
 
-$$
+```math
 3C_{tail}\le{3\over2}x+5w
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{
 B(x,y,z,w)
 \le
 Q_{tooth}(y)+y+{3\over2}x+10z+{35\over3}w.
 }
-$$
+```
 
 This agrees with the post-104 reconciliation audit. Every term is an actual global
 physical endpoint-capacity budget, so the bound applies to the arbitrary bad trains in
@@ -345,76 +346,76 @@ the fixed direction interval used by the Section-117 diffuse estimate.
 
 Because
 
-$$
+```math
 {3\over2}<10<{35\over3}
-$$
+```
 
 and `x+y+z+w=sigma`,
 
-$$
+```math
 B(x,y,z,w)
 \le {35\over3}\sigma
 +Q_{tooth}(y)-{32\over3}y.
-$$
+```
 
 Let
 
-$$
+```math
 F(Q)=\sin Q+\sqrt3(1-\cos Q)-Q.
-$$
+```
 
 Then `F(Q_tooth(y))=y/2`, while
 
-$$
+```math
 F'(Q)=\cos Q+\sqrt3\sin Q-1,
-$$
+```
 
-$$
+```math
 F''(Q)=-\sin Q+\sqrt3\cos Q>0
 \qquad(0<Q<\pi/3).
-$$
+```
 
 Thus `F'` is strictly increasing on the relevant interval and
 
-$$
+```math
 {dQ_{tooth}\over dy}={1\over2F'(Q_{tooth})}
-$$
+```
 
 is strictly decreasing. The function
 
-$$
+```math
 Q_{tooth}(y)-{32\over3}y
-$$
+```
 
 therefore has one global maximum at
 
-$$
+```math
 F'(Q_0)={3\over64}.
-$$
+```
 
 Independent high-precision recomputation gives
 
-$$
+```math
 Q_0=0.0272815201203264009\ldots,
-$$
+```
 
-$$
+```math
 y_0=2F(Q_0)=0.0012822850180674681\ldots,
-$$
+```
 
-$$
+```math
 \kappa_0
 =Q_0-{32\over3}y_0
 =0.0136038132609400741\ldots .
-$$
+```
 
 Hence, in particular for the safe window,
 
-$$
+```math
 \boxed{
 B\le B_*(\sigma):={35\over3}\sigma+\kappa_0.
 }
-$$
+```
 
 The inequality is actually safe even for `sigma<y_0`: `kappa_0` is the unrestricted
 global maximum of the one-variable correction, so restricting `0<=y<=sigma` can only
@@ -424,78 +425,78 @@ lower it.
 
 From the exact gap identities,
 
-$$
+```math
 r:=x+{10\over3}w
 \le {10\over3}\sigma.
-$$
+```
 
 The circular-segment identity therefore gives
 
-$$
+```math
 A_*(\sigma)
 ={\pi\over4}
 -G(\theta)
 -2G\left(\phi_8+{10\sigma\over3}\right)
 -G\left({10\sigma\over3}\right).
-$$
+```
 
 At `sigma=0.0088`, independent high-precision computation gives
 
-$$
+```math
 \theta=2.70477923521549347\ldots,
 \qquad
 \lambda=\sin(\theta/2)=0.976243913742568741\ldots,
-$$
+```
 
-$$
+```math
 A_*=0.470375286800424054\ldots .
-$$
+```
 
 The main tangent-region extent is bounded by
 
-$$
+```math
 U(\theta)+{10\over3}\sigma
 =1.8604857318\ldots<\pi,
-$$
+```
 
 so the unique oriented tangent lift required by the finite-cover theorem survives with
 large margin.
 
 Canonical Sections 82/89 plus the face currency give the safe train ceiling
 
-$$
+```math
 {T_D\over D}
 \le C_T(\sigma)+o(1),
 \qquad
 C_T=U(\theta)+2\sigma,
-$$
+```
 
 which evaluates to
 
-$$
+```math
 C_T=1.84875239846689394\ldots .
-$$
+```
 
 The global selected-route excess is at most `zD+o(D)` and therefore, conservatively,
 
-$$
+```math
 E_D/D\le\sigma+o(1).
-$$
+```
 
 ## 11. Section 117 signed return applies unchanged
 
 The Section-117 hostile audit proves on the actual finite carrier
 
-$$
+```math
 dE_D\ge(2-\sqrt3)A_{gg,D}
-$$
+```
 
 and
 
-$$
+```math
 A_{gg,D}
 \ge A_{4,D}-2T_DM_{bad}(\epsilon)-{\Delta_D\over\epsilon}.
-$$
+```
 
 The Section-118 changes above only improve the upper bound on
 `M_bad(epsilon)/D`; they do not alter train orientation, host assignment, endpoint
@@ -505,41 +506,41 @@ Section 117's finite theorem can be reused verbatim.
 After dividing by `D^2`, taking the ordered limits, and using `d/D<=lambda`, every
 putative survivor in the window must satisfy
 
-$$
+```math
 \boxed{
 \lambda\sigma
 \ge
 (2-\sqrt3)
 \left[A_*(\sigma)-2C_T(\sigma)B_*(\sigma)\right]_+.
 }
-$$
+```
 
 ## 12. Endpoint arithmetic has a large positive margin
 
 At `sigma=0.0088`, independent recomputation gives
 
-$$
+```math
 B_*=0.116270479927606741\ldots,
-$$
+```
 
-$$
+```math
 A_*-2C_TB_*
 =0.040464629526304432\ldots>0.
-$$
+```
 
 The signed-return lower bound therefore forces normalized route excess
 
-$$
+```math
 {2-\sqrt3\over\lambda}
 \left(A_*-2C_TB_*\right)
 =0.011106307195331664\ldots .
-$$
+```
 
 The available budget is only `0.0088`, leaving contradiction margin
 
-$$
+```math
 \boxed{0.002306307195331664\ldots>0.}
-$$
+```
 
 This is too large to be a numerical-rounding artifact.
 
@@ -560,10 +561,10 @@ For increasing scalar slack on this neighborhood:
 
 Therefore
 
-$$
+```math
 {2-\sqrt3\over\lambda}
 [A_*-2C_TB_*]-\sigma
-$$
+```
 
 is strictly decreasing wherever the residual is positive. Since it remains positive at
 `0.0088`, every smaller positive slack is excluded as well. For very small slack the
@@ -571,13 +572,13 @@ constant `kappa_0` bound is deliberately coarse but still valid, as noted in Sec
 
 The scalar relaxation has its unique zero at
 
-$$
+```math
 \sigma_{env}=0.008975876224476734\ldots,
-$$
+```
 
-$$
+```math
 \mu_{env}=0.976247964248172612\ldots .
-$$
+```
 
 This audit does **not** promote the equality root as a theorem endpoint. The safe
 `0.0088` value already gives the stated explicit coefficient with a robust strict
@@ -589,14 +590,14 @@ The sharp Section-118 correlated-slack companion survives hostile review.
 
 The valid proof-only theorem is
 
-$$
+```math
 \boxed{
 \sigma\le0.0088
 \Longrightarrow
 \operatorname{diam}(P_*)
 \ge(0.9762439137425688\ldots-o(1))D
 }
-$$
+```
 
 for the full-core Type-II harmonic carrier under the canonical selection/normalization.
 This strictly supersedes the proof-only Section-117 numerical endpoint while retaining

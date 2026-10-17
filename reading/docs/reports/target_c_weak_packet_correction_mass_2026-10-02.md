@@ -54,26 +54,26 @@ audits the whole extraction stack nor promotes another PR.
 Let a unit-separated finite source have diameter `D>=2`. Fix a unit vector `u`.
 Two actual diameter bars have four distinct source endpoints, oriented vectors
 
-$$
+```math
 r_p=d_pu+q_pJu,\qquad r_n=d_nu-q_nJu,\qquad q_p,q_n>0,
-$$
+```
 
 and `d_p+d_n>=0`. Give them coefficients `w_p,w_n>0` with
 `w_p q_p=w_n q_n`. Write
 
-$$
+```math
 B=w_p+w_n,\quad \rho={w_pd_p+w_nd_n\over B}<1,\quad
 P=w_pr_p-w_nr_n.
-$$
+```
 
 Then
 
-$$
+```math
 |d_p|,|d_n|<3/2,\qquad
 {P\cdot Ju\over B}\ge Q_D:=\sqrt{D^2-9/4},\qquad
 {|P\cdot u|\over B}<X_D:={1\over2\sqrt{1-D^{-2}}}.
 \tag{WG}
-$$
+```
 
 ### Proof, including the finite angle bound
 
@@ -87,9 +87,9 @@ Thus `delta=pi-theta-psi>0`.
 
 The projective angle `delta` of the vectors `r_p,-r_n` obeys
 
-$$
+```math
 \delta\ge4\arcsin(1/(2D)). \tag{AG}
-$$
+```
 
 For completeness, put `C=D cos(delta/2)`, `S=D sin(delta/2)` and let `(a,b)`
 be the difference of their midpoints in vector-bisector coordinates. The two
@@ -97,9 +97,9 @@ opposite-endpoint distance bounds imply
 `a^2+b^2+2C|a|<=S^2`. The smaller corresponding-endpoint distance squared is
 `a^2+(S-|b|)^2`. With `t=|b|<=S`, it is at most
 
-$$
+```math
 2D^2-2C\sqrt{D^2-t^2}-2St\le2D(D-C).
-$$
+```
 
 The last inequality follows on setting `t=D sin(phi)`,
 `0<=phi<=delta/2`. Unit separation gives
@@ -108,20 +108,20 @@ This is the previously known disjoint-diameter angle bound, not a novelty claim.
 
 Set `A=(theta+psi)/2`, `T=(theta-psi)/2`. Equal transverse flow gives exactly
 
-$$
+```math
 \rho={D\cos A\over\cos T},\qquad
 {P\cdot u\over B}=-{D\sin T\over\sin A}.
-$$
+```
 
 By (AG), `D cos A>=sqrt(1-1/(4D^2))`. Since `rho<1`,
 `cos T>sqrt(1-1/(4D^2))`, hence `D|sin T|<1/2`. Also
 `D cos A=rho cos T<1`, so `sin A>sqrt(1-D^-2)`.
 This proves the bound on `P.u`. Moreover
 
-$$
+```math
 d_p=\rho\cos^2T-D\sin A\sin T,\qquad
 d_n=\rho\cos^2T+D\sin A\sin T,
-$$
+```
 
 so both longitudinal components have absolute value below `3/2`.
 Each transverse component is at least `sqrt(D^2-9/4)`, and
@@ -132,17 +132,17 @@ Each transverse component is at least `sqrt(D^2-9/4)`, and
 Let actual diameter multipliers satisfy `sum_h beta_h=1`. Suppose one actual
 contact cut has every crossed unit-contact vector oriented as
 
-$$
+```math
 v=\cos\vartheta\,u+\sin\vartheta\,Ju,\qquad
 0<\vartheta<\pi,\quad\cos\vartheta\ne0.
-$$
+```
 
 Summing full vertex equilibrium on one side of the cut gives
 
-$$
+```math
 C v=\sum_{h\text{ crossing cut}}\beta_h\widehat r_h,\quad C>0.
 \tag{CUT}
-$$
+```
 
 Choose any collection of pairs satisfying Section 2. The pair coefficients may
 split original diameter coefficients, but their total coefficient on each bar
@@ -150,17 +150,17 @@ must not exceed `beta_h`. Both bars in every pair cross this cut, and their
 cut orientations are `r_p` and `-r_n`. Let `M` be their aggregate coefficient
 mass. Define
 
-$$
+```math
 \gamma_D(\vartheta)=|\cos\vartheta|Q_D-\sin\vartheta\,X_D.
-$$
+```
 
 When `gamma_D>0`,
 
-$$
+```math
 \boxed{M\le {D\over D+\gamma_D(\vartheta)},\qquad
 1-M\ge {\gamma_D(\vartheta)\over D+\gamma_D(\vartheta)}.}
 \tag{CM}
-$$
+```
 
 Indeed (WG) shows that the chosen exported vector has `sigma Jv` projection at least
 `gamma_D M`. All remaining diameter coefficients have aggregate mass at most
@@ -170,10 +170,10 @@ at most `D(1-M)`. The `Jv` projection of (CUT) is zero, so
 
 If the projective angle is `pi/3+O(D^-1)`, this is
 
-$$
+```math
 \boxed{M\le2/3+O(D^{-1}),\qquad 1-M\ge1/3-O(D^{-1}).}
 \tag{CM60}
-$$
+```
 
 This floor is on aggregate **outside** mass. It needs no individual multiplier
 floor and is uniform over all normalized stresses satisfying the actual cut law.
@@ -204,30 +204,30 @@ their full opposite-shore support has not been established.
 There is a second, independent obstruction to treating correction mass as free.
 Let
 
-$$
+```math
 F_\vartheta(w)=\sigma(w\cdot Ju)(w\cdot Jv),\quad
 \lambda_+=(1+|\cos\vartheta|)/2,\quad
 \lambda_-=(|\cos\vartheta|-1)/2.
-$$
+```
 
 These are the eigenvalue bounds for `F` on unit vectors. Every weak-pair bar
 from Section 2 satisfies
 
-$$
+```math
 F_\vartheta(r_h)/D^2\ge
 a_D:=|\cos\vartheta|(1-9/(4D^2))-3\sin\vartheta/(2D).
-$$
+```
 
 For any normalized KKT stress, call a contact good when its projective direction
 is within `epsilon` of `u` or `v`, and let `S_bad` be the total multiplier mass
 of all other actual unit contacts. If `0<=epsilon<lambda_+`, then
 
-$$
+```math
 \boxed{
 {S_{\rm bad}\over D^2}\ge
 \left[{a_DM+\lambda_-(1-M)-\epsilon\over\lambda_+-\epsilon}\right]_+ .}
 \tag{DC}
-$$
+```
 
 Proof: `F` vanishes at `u,v` and its angular derivative has absolute value at
 most one. Good unit contacts contribute at most `epsilon` times their stress.
@@ -238,10 +238,10 @@ remaining part is at least `lambda_-(1-M)D^2`. Rearranging gives (DC).
 
 In the inverse-diameter triangular-angle regime with `epsilon=O(D^-1)`,
 
-$$
+```math
 S_{\rm bad}/D^2\ge[M-1/3-O(D^{-1})]_+.
 \tag{DC60}
-$$
+```
 
 This is a stress charge, not a population/area charge. For completeness each
 actual unit-contact coefficient is at most `D`: sum vertex equilibrium on one
@@ -260,9 +260,9 @@ cut. The following rational sources and formal systems make that failure exact.
 Put `t=1/k`, `s0=2t/(1+t^2)`, `d=(1-t^2)/(1+t^2)`,
 `D=1/(2s0)`, `q=D(1-2s0^2)`, `a=D-q`. The original four source points are
 
-$$
+```math
 (-d/2,-q/2),\ (d/2,q/2),\ (-d/2,q/2+a),\ (d/2,-q/2+a).
-$$
+```
 
 The two selected diagonals have vectors `(d,q),(d,-q)`, diameter `D`, and
 reaction `d<1`. The two short sides are unit contacts and an additional vertical
@@ -277,9 +277,9 @@ are exactly five actual diameter edges; the script retains all five. Put
 reference, weight `M/2` to each weak diagonal, and weight `b` to the correction,
 where
 
-$$
+```math
 M={1-\eta(2+|c|)\over1+|c|q/D},\qquad b=|c|(Mq/D+\eta).
-$$
+```
 
 Every actual diameter has positive weight and the weights sum to one. The weak
 export plus vertical diameter and correction equals `C_B v`, with
@@ -307,10 +307,10 @@ and tensor conditions alone; it is not a counterexample to an actual source theo
 The omitted quadratic population is not, by itself, the cure. For an unbounded
 sequence of integers `k`, put `b0=k^2`, `a0=floor(sqrt(3)b0)` and choose
 
-$$
+```math
 c_k={a_0^2-b_0^2\over a_0^2+b_0^2},\qquad
 s_k={2a_0b_0\over a_0^2+b_0^2}.
-$$
+```
 
 Then `0<c_k<1/2`, `c_k^2+s_k^2=1` and
 `c_k=1/2-O(k^-2)`. Use this direction for the boundary correction construction.
@@ -337,10 +337,10 @@ parallelogram has radius at most one and area `s_k`. Every point of the radius
 `R-1` disk belongs to a translate whose lattice center is in the radius `R` disk.
 Thus, with `N_k` interior points,
 
-$$
+```math
 N_ks_k\ge\pi(R-1)^2,\qquad
 N_k\ge{\pi\over2\sqrt3}D^2-O(D).
-$$
+```
 
 This preserves finite near-disk geometry, inverse-square angle excess, actual weak
 diameters and quadratic source population simultaneously. It does **not** preserve

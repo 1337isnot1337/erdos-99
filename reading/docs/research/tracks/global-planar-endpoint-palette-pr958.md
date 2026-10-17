@@ -22,10 +22,10 @@ transformations, dependencies, and per-file dispositions are in the
 
 ## Relation to the queued PR #960 rank barrier
 
-The uniform squared-distance interpolation and rank-$n-1$ obstruction are
+The uniform squared-distance interpolation and rank-$`n-1`$ obstruction are
 the same claim as the first section of source PR #960's
 global_planarity_and_radius_barriers_2026-10-12.md, after setting
-$t=1-\lambda$. Do not count them as independent results. PR #960 adds a
+$`t=1-\lambda`$. Do not count them as independent results. PR #960 adds a
 rank-two-truncation analysis and separate enclosing-radius / finite
 replacement results. By contrast, the contact-colour lift, its affine
 flattening criterion, the all-pair endpoint quadratics, and the finite

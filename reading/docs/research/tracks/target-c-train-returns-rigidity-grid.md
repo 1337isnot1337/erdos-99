@@ -12,16 +12,16 @@ records each result, canonical dependency, obstruction, and next obligation.
 
 The full [Worker Slot 03 report](../../reports/target_c_train_return_length_budget_worker03_2026-10-10.md)
 starts from the canonical quadratic-core C-II sequence with
-$D\to\infty$ and $R_4/D^2\to r>0$.
+$`D\to\infty`$ and $`R_4/D^2\to r>0`$.
 
 - **Positive-length return quantile.** After removing only
-  $O(D^{2/3})$ trains that meet loaded-hull sides, the report selects an
+  $`O(D^{2/3})`$ trains that meet loaded-hull sides, the report selects an
   unloaded endpoint on each remaining train's terminal unit edge. Audit 235
-  then gives $(\kappa-o(1))D$ pairwise vertex-disjoint, nontrivial actual
+  then gives $`(\kappa-o(1))D`$ pairwise vertex-disjoint, nontrivial actual
   contact paths to distinct loaded vertices. Full-source Oler population
-  bounds give linear route-length quantiles: for fixed $\theta\in(0,1)$,
-  at least $(\theta\kappa-o(1))D$ paths have length at most
-  $\pi D/(2\sqrt3(1-\theta)\kappa)+o(D)$. Contact isolates remain in the
+  bounds give linear route-length quantiles: for fixed $`\theta\in(0,1)`$,
+  at least $`(\theta\kappa-o(1))D`$ paths have length at most
+  $`\pi D/(2\sqrt3(1-\theta)\kappa)+o(D)`$. Contact isolates remain in the
   population count.
 - **Same-component Type-II grid access.** Component concentration places a
   linear return family in one unloaded component. In Type II, the report uses
@@ -29,16 +29,16 @@ $D\to\infty$ and $R_4/D^2\to r>0$.
   grid within the permitted radius of linearly many return attachments. The
   root-to-grid continuations may overlap; only the train-root-to-attachment
   segments are mutually vertex-disjoint.
-- **Rigidity brace.** For a connected set $X$ of unloaded core vertices,
-  the candidate proves $|\delta_C(X)|\ge\operatorname{diam}(X)+2$. Its
+- **Rigidity brace.** For a connected set $`X`$ of unloaded core vertices,
+  the candidate proves $`|\delta_C(X)|\ge\operatorname{diam}(X)+2`$. Its
   triangle-free planar block count is combined with canonical mixed rigidity
   on the nonisolated positive-contact core. Contact isolates are not assigned
   core coordinates or dropped from the source.
 - **Attachment-to-grid linkage.** The common grid has Euclidean diameter at
-  least $\gamma D$. The brace inequality, an endpoint-inclusive separator
+  least $`\gamma D`$. The brace inequality, an endpoint-inclusive separator
   count, and vertex Menger yield at least
-  $(\gamma/5-o(1))D$ pairwise vertex-disjoint actual-contact paths from
-  distinct loaded attachments to distinct grid vertices, with an $O(D)$
+  $`(\gamma/5-o(1))D`$ pairwise vertex-disjoint actual-contact paths from
+  distinct loaded attachments to distinct grid vertices, with an $`O(D)`$
   length quantile from full-source Oler.
 
 The report's exact constants and proof dependencies are in the full text and
@@ -73,9 +73,9 @@ Even a linear root-to-grid linkage would not be a finite competitor. The next
 obligation is to prove a linear endpoint overlap or equivalent gammoid-rank
 inequality (or establish direct source-wide flow), then construct a
 same-cardinality competitor satisfying every lower pair bound and every old or
-new actual-diameter upper bound, retaining all isolates. At diameter $D$, it
+new actual-diameter upper bound, retaining all isolates. At diameter $`D`$, it
 must remain triangle-free and strictly improve the lexicographic pair
-(unit contacts, actual diameter pairs); a strict sub-$D$ competitor is also
+(unit contacts, actual diameter pairs); a strict sub-$`D`$ competitor is also
 valid. No C-II branch or Level I endpoint is closed here.
 
 ## Regressions and nonadvancing routes

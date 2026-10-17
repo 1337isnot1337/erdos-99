@@ -21,26 +21,26 @@ Source artifact: Sections 17.1–17.3 of docs/reports/target_c_global_inverse_ph
 
 1. For every noncollinear global minimum-diameter unit-separated source with D>=216, choose one actual diameter partner independently for each actual diameter endpoint. If m_p is the midpoint of that chosen pair and o is a circumcenter of the full-source convex hull, then uniformly over all partner choices,
 
-$$
+```math
 \#\{p: |m_p-o|\ge s\}\le C D^2/s^2
 \quad\text{for }s\ge4\,3^{1/4}\sqrt D,
-$$
+```
 
-$$
+```math
 \sum_p|m_p-o|=O(D^{3/2}),\qquad
 \sum_p|m_p-o|^2=O(D^2\log D).
-$$
+```
 
 2. In the canonical C-II source, the same tail and moment estimates hold when the sum and count range over every edge of the full actual diameter graph, with its actual edge midpoints. This uses the canonical Woodall topology only to inject the edges into distinct endpoints.
 
 3. For any two distinct source points p,x with d=|p-x| at least D-s, put ν=(p-x)/d, η=3^{1/4}sqrt(D), and m=(p+x)/2. For every D>=216,
 
-$$
+```math
 |(p-o)\cdot J\nu|,\ |(x-o)\cdot J\nu|
 \le13D^{2/3}+2sD^{1/3},
 \qquad
 |(m-o)\cdot\nu|\le2\eta+s/2.
-$$
+```
 
 Thus pairs with bounded diameter deficit have midpoint distance O_s(D^{2/3}) from o. The estimate gives no count of almost-diameter pairs.
 
@@ -50,32 +50,32 @@ The source report's further loaded-leaf anchor conclusion (17.7) is not included
 
 Let h be the support function of the full-source hull about o, with angular variable θ. The canonical full-source geometry gives
 
-$$
+```math
 D/2-2\eta\le h\le D/2+\eta,\quad
 P\le\pi D,\quad
 A(K)>\pi D^2/4-(\sqrt3/4)P,
-$$
+```
 
 and for D at least 7 the circumradius is at most D. The curvature-measure identity h''+h≥0 therefore gives h''≥-D distributionally. The canonical support-function area identity gives
 
-$$
+```math
 E:=\int_0^{2\pi}(h')^2
 =\int h^2-2A(K)
 <\frac{17\pi\sqrt3}{2}D=:C_E D.
-$$
+```
 
 These are full-source bounds: every point, including contact-isolated points, remains in K. For any actual diameter pair p,p', its normal ν=(p-p')/D strictly exposes p and p'. Indeed,
 
-$$
+```math
 \nu\cdot(y-p)\le-|y-p|^2/(2D)<0
 \quad(y\ne p).
-$$
+```
 
 So h is differentiable at ν, and for m_p=(p+p')/2,
 
-$$
+```math
 m_p\cdot J\nu=h'(\nu),\qquad |m_p\cdot\nu|\le\eta.
-$$
+```
 
 The second inequality follows because h(ν)+h(-ν)=D and each support value is within the displayed full-source interval.
 
@@ -85,17 +85,17 @@ Fix a≥η and count chosen endpoints for which a≤h'(ν)<2a. Such a normal bel
 
 For a counted positive-band endpoint, its midpoint has tangential coordinate below 2a and normal coordinate at most η≤a, hence norm below 3a. For D>=216 the canonical derivative bound |h'|<6D^{2/3}≤D puts every nonempty band in a<D. Subdivide each relevant component arc into windows of width at most δ_a=a/(2D)≤1/2. On one such window, the normal-window count is O(1+Dδ_a+a)=O(a+1). If Λ is the total length of the superlevel components and N_c their number, the total window count is O(DΛ/a+N_c). Therefore the counted band contains
 
-$$
+```math
 O\bigl((a+1)(D\Lambda/a+N_c)\bigr)
 =O\bigl(DE/a^2+(a+1)DE/a^3\bigr),
-$$
+```
 
 using Λ≤4E/a² and N_c≤8DE/a³. This is bounded by the displayed looser expression C{DE/a²+(a+1)(DE/a³+E/a²)}. With E≤C_E D and a≥η, it is O(D²/a²). The negative bands obey the same estimate. Summing dyadic bands gives
 
-$$
+```math
 \#\{p:|h'(\nu_p)|\ge a\}\le C D^2/a^2
 \quad(a\ge\eta).
-$$
+```
 
 If |m_p|≥s≥4η, then |h'(ν_p)|²=|m_p|²-(m_p·ν_p)²≥s²-η², so |h'(ν_p)|≥s/2. This proves the midpoint tail. The endpoint set has size at most the hull perimeter, hence at most πD. Also the canonical midpoint bound is |m_p|≤7D^{2/3}. Integrating the endpoint count up to 4η and the tail above 4η yields the first moment O(Dη)+O(D²/η)=O(D^{3/2}). Integrating 2s times the count yields O(Dη²)+O(D² log D)=O(D² log D).
 
@@ -103,26 +103,26 @@ For the C-II edge statement, the canonical Woodall graph is either one odd cycle
 
 For the almost-diameter estimate, write the two support deficits as
 
-$$
+```math
 \delta_p=h(\nu)-(p-o)\cdot\nu,\qquad
 \delta_x=h(-\nu)+(x-o)\cdot\nu.
-$$
+```
 
 They are nonnegative and sum to h(ν)+h(-ν)-d≤D-d≤s, so each is at most s. The canonical derivative estimate makes h 6D^{2/3}-Lipschitz in angle. With ε=D^{-1/3}, let θ be the angular coordinate of ν. Support at the tilted normal gives
 
-$$
+```math
 (p-o)\cdot\nu\cos\epsilon+
 (p-o)\cdot J\nu\sin\epsilon
 \le h(\theta+\epsilon).
-$$
+```
 
 Using (p-o)·ν≥h(ν)-s, h(ν)≤D, |h(θ+ε)-h(θ)|≤6D^{2/3}ε, 1-cos ε≤ε²/2, and sin ε≥ε/2 gives the upper tangent bound 13D^{2/3}+2sD^{1/3}. Tilting by -ε gives the lower bound. Applying the same argument at -ν gives the bound for x. Finally, the support interval above implies |h(ν)-h(-ν)|≤3η. Combining this with δ_p+δ_x≤s gives
 
-$$
+```math
 |(m-o)\cdot\nu|
 \le(3\eta+s)/2
 \le2\eta+s/2.
-$$
+```
 
 ## Canonical dependencies
 

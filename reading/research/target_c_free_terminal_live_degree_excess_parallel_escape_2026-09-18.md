@@ -15,44 +15,44 @@
 
 The live detour-pinching theorem proves
 
-$$
+```math
 r:={Q-f\over D}<0.000141+o(1).
 \tag{1}
-$$
+```
 
 The bounded-pentagon no-parallel-side theorem supplies, for the residual system after
 maximal two-anchor activation,
 
-$$
+```math
 n_2\le x_U,
 \qquad
 2p_U\le x_U,
 \tag{2}
-$$
+```
 
 where `n_2` counts residual faces with two outer/activated incidences, `p_U` counts
 mutually parallel one-anchor internal links, and
 
-$$
+```math
 x_U:=\sum_{F\in U}(\deg F-5).
-$$
+```
 
 Since the total degree excess splits as
 
-$$
+```math
 x_A+x_U=Q-f
-$$
+```
 
 with `x_A,x_U>=0`, (1)--(2) immediately give
 
-$$
+```math
 \boxed{
 {n_2\over D}<0.000141+o(1),
 \qquad
 {p_U\over D}<0.0000705+o(1).
 }
 \tag{3}
-$$
+```
 
 Thus neither of the two parallel-side residual mechanisms can occur at linear density
 on the live terminal endpoint.  In particular, the explicit `p_U` flex correction in
@@ -64,9 +64,9 @@ This does not upper-bound `n_0`: the remaining low-flex obstruction may still us
 zero-anchor residual faces.  But if one simultaneously approaches the pair-shield
 counting floor, the structural excess
 
-$$
+```math
 E_U=a_F+{x_A\over2}+{n_0+n_2\over2}
-$$
+```
 
 must be `o(D)`, and then `n_0=o(D)` as well.  Such a low-flex sequence is therefore,
 up to `o(D)` exceptional residual faces, a degree-five one-anchor system with no mutual

@@ -15,9 +15,9 @@ The endpoint argument is valid under the promoted Sections 80, 82, 83, 89, and 9
 scopes. It excludes a wrapping harmonic-cell sequence with normalized diameter
 converging to
 
-$$
+```math
 \mu_4=0.936215741409583\ldots .
-$$
+```
 
 The proof uses the endpoint support saturation handoff only for its area conclusion;
 it does **not** use the corrected and rejected rhombus-count assertion in the older
@@ -35,27 +35,27 @@ and cannot create an additional area-carrying case.
 Section 96 and the endpoint geodesic-collapse handoff give, along an endpoint
 sequence,
 
-$$
+```math
  a_D/D\to\alpha_4,
  \quad
  Q_D+s_D+c_D=o(D),
  \quad
  L_D/D\to4\alpha_4,
-$$
+```
 
 where
 
-$$
+```math
 \alpha_4=3\theta_4-2\pi={3\over2}\sin\theta_4,
 \qquad
 \theta_4=2\arcsin\mu_4.
-$$
+```
 
 The three distinguished outer routes have total length
 
-$$
+```math
 3\sin\theta_4D+o(D)=2\alpha_4D+o(D),
-$$
+```
 
 and each has `o(D)` excess over its endpoint chord. Every other attachment route is
 two edges except for `o(D)` total exceptional edge occurrences.
@@ -73,12 +73,12 @@ one-half Lebesgue measure on the allowed arcs.
 The convex hulls therefore converge to the circle support with the three forbidden
 caps removed. Since `phi_4=2*pi-2*theta_4<pi/2`, the caps are disjoint and
 
-$$
+```math
  {\operatorname{area}(P_D)\over D^2}
  \to
  A_4={\pi\over4}-{3\over8}(\phi_4-\sin\phi_4)
  =0.618374879828757\ldots .
-$$
+```
 
 Canonical cell saturation supplies strict-rhombus area
 `A_{4,D}=area(P_D)-o(D^2)`. No conversion from area to a rhombus count is made.
@@ -95,18 +95,18 @@ The three long-route chord directions are pairwise distinct modulo `pi`. If two 
 parallel, their equal-length forbidden arcs would have antipodal midpoints. Let `F`
 be the union of the three forbidden arcs. Since `phi_4<pi/2`,
 
-$$
+```math
  |F\cup(F+\pi)|\le4\phi_4<2\pi.
-$$
+```
 
 Thus some `x` lies in neither `F` nor `F+pi`; both `x` and `x+pi` belong to the
 allowed support, contradicting its limiting diameter `mu_4<1`.
 
 The geodesic-excess identity
 
-$$
+```math
  \sum_k(1-q\cdot z_k)=\ell-|u-v|
-$$
+```
 
 shows that all but `o(D)` edges on each long route have direction arbitrarily close
 to its chord direction. On the ordinary two-edge routes, all but `o(D)` routes have
@@ -145,24 +145,24 @@ For each train, the sum of its rhombus transverse advances is its exact transver
 span. Both terminal edge midpoints lie in `P_D`, so every span is at most `d_D`. Each
 strict rhombus is counted by exactly two trains. Therefore
 
-$$
+```math
  2A_{4,D}
  \le (\alpha_4D+o(D))d_D+o(D^2).
-$$
+```
 
 After division by `D^2`, the endpoint would require
 
-$$
+```math
  2A_4\le\alpha_4\mu_4.
-$$
+```
 
 The scalar sides are
 
-$$
+```math
 2A_4=1.236749759657516\ldots,
 \qquad
 \alpha_4\mu_4=0.924074023352554\ldots,
-$$
+```
 
 so the inequality fails by `0.3126757363...`. This is a fixed margin; no numerical
 near-equality ambiguity remains.
@@ -179,4 +179,3 @@ branch.
 the support-saturation and distinct-direction lemmas. The endpoint exclusion does not
 close C-II; quantitative stability above `mu_4`, larger wrapping cells, and the
 macroscopic inactive-container branch remain open.
-

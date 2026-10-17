@@ -20,30 +20,30 @@ This report adds two exact full-source consequences of the same Oler plus strict
 
 First, the convex hull of **every** global minimizer has perimeter within an absolute constant of the maximum perimeter allowed by its diameter:
 
-$$
+```math
 0\le \pi D-P<\frac{\pi\sqrt3}{2}.
-$$
+```
 
 Equivalently, the integrated width deficit is absolutely bounded, so every fixed relative width deficit occurs only in an `O(D^{-1})` set of directions.
 
 Second, the proposed full-source capacity endpoint has an exact scalar form. If
 
-$$
+```math
 \Delta=\frac{\pi}{2\sqrt3},\qquad
 g_A=n-1-\Delta D^2,
-$$
+```
 
 then every global minimizer has `g_A>0` and
 
-$$
+```math
 \delta_K+\mathscr O_A=c_0P-a_0g_A.
-$$
+```
 
 Thus the desired C-II inequality `delta_K+O_A>=c_0P` is **equivalent** to `g_A<=0`; there is no hidden hull term left in that endpoint. A closure through this inequality must therefore use triangle-freeness and the lexicographic/global structure to force
 
-$$
+```math
 n-1\le\Delta D^2,
-$$
+```
 
 contradicting the strict translated-lattice comparison.
 
@@ -53,45 +53,45 @@ These are proved consequences, not a Level I solution.
 
 For a hypothetical contact/diameter-lexicographically minimal triangle-free global source, the preceding full-source report reduces one exact C-II closure to
 
-$$
+```math
 \boxed{\delta_K+\mathscr O_A\ge c_0P,}
 \tag{1.1}
-$$
+```
 
 where
 
-$$
+```math
 K=\operatorname{conv}A,\quad P=\operatorname{per}K,
 \quad a_0=\frac{\sqrt3}{2},\quad c_0=\frac{\sqrt3}{4},
-$$
+```
 
-$$
+```math
 \delta_K=\frac{\pi D^2}{4}-\operatorname{area}K,
 \qquad
 \mathscr O_A=\operatorname{area}K+c_0P-a_0(n-1).
 \tag{1.2}
-$$
+```
 
 The canonical global inputs are
 
-$$
+```math
 \operatorname{area}K+c_0P\ge a_0(n-1)
 \tag{1.3}
-$$
+```
 
 from Oler and
 
-$$
+```math
 D^2<\frac{2\sqrt3}{\pi}(n-1)
 \tag{1.4}
-$$
+```
 
 from the strict translated-triangular-lattice comparison. The latter is equivalent to
 
-$$
+```math
 a_0(n-1)>\frac{\pi D^2}{4}.
 \tag{1.5}
-$$
+```
 
 The implication attacked here is
 
@@ -116,24 +116,24 @@ NC endpoint
 
 Let `A` be any global `n`-point unit-separated minimum-diameter configuration in the plane, let `D=D(n)`, let `K=conv A`, and put `P=per K`. Then
 
-$$
+```math
 \boxed{
 P>
 \frac{\pi}{2}\left(\sqrt{4D^2+3}-\sqrt3\right).
 }
 \tag{PW.1}
-$$
+```
 
 Together with Cauchy's perimeter-diameter inequality `P<=pi D`, this gives
 
-$$
+```math
 \boxed{
 0\le \pi D-P
 <\frac{\pi}{2}\left(2D-\sqrt{4D^2+3}+\sqrt3\right)
 <\frac{\pi\sqrt3}{2}.
 }
 \tag{PW.2}
-$$
+```
 
 In particular the source-hull perimeter deficit from its diameter-maximal value is `O(1)`, not merely `O(sqrt(D))` or `o(D)`.
 
@@ -141,32 +141,32 @@ In particular the source-hull perimeter deficit from its diameter-maximal value 
 
 By Oler and the strict translated-lattice comparison,
 
-$$
+```math
 \operatorname{area}K+c_0P
 \ge a_0(n-1)
 >\frac{\pi D^2}{4}.
 \tag{PW.3}
-$$
+```
 
 The planar isoperimetric inequality gives
 
-$$
+```math
 \operatorname{area}K\le\frac{P^2}{4\pi}.
 \tag{PW.4}
-$$
+```
 
 Hence
 
-$$
+```math
 \frac{P^2}{4\pi}+c_0P>\frac{\pi D^2}{4}.
-$$
+```
 
 Multiplying by `4pi` and using `4c_0=sqrt(3)` gives
 
-$$
+```math
 P^2+\pi\sqrt3 P-\pi^2D^2>0.
 \tag{PW.5}
-$$
+```
 
 Since `P>0`, it lies above the positive root of the left side. This is exactly (PW.1).
 
@@ -176,42 +176,42 @@ Subtract (PW.1) from `pi D` to obtain the first strict bound in (PW.2). Since `s
 
 Let `w_K(theta)` be the width of `K` in direction `theta`. Then
 
-$$
+```math
 \boxed{
 \int_0^\pi\bigl(D-w_K(\theta)\bigr)\,d\theta
 =\pi D-P
 <\frac{\pi\sqrt3}{2}.
 }
 \tag{PW.6}
-$$
+```
 
 Consequently, for every `tau>0`,
 
-$$
+```math
 \boxed{
 \left|\{\theta\in[0,\pi):w_K(\theta)\le D-\tau\}\right|
 <\frac{\pi\sqrt3}{2\tau}.
 }
 \tag{PW.7}
-$$
+```
 
 In particular, for every fixed `rho>0`,
 
-$$
+```math
 \boxed{
 \left|\{\theta:w_K(\theta)\le(1-\rho)D\}\right|
 <\frac{\pi\sqrt3}{2\rho D}.
 }
 \tag{PW.8}
-$$
+```
 
 #### Proof
 
 Cauchy's width formula is
 
-$$
+```math
 P=\int_0^\pi w_K(\theta)\,d\theta.
-$$
+```
 
 Every width is at most the diameter `D`; subtract from `pi D` and use (PW.2) to obtain (PW.6). On the set in (PW.7), the nonnegative integrand is at least `tau`; Markov's inequality gives (PW.7). Put `tau=rho D` for (PW.8). `square`
 
@@ -239,36 +239,36 @@ The stronger perimeter conclusion comes from inserting the isoperimetric inequal
 
 Put
 
-$$
+```math
 \boxed{
 \Delta=\frac{\pi}{2\sqrt3},
 \qquad
 g_A=n-1-\Delta D^2.
 }
 \tag{GE.1}
-$$
+```
 
 ### Theorem GE — NC is exactly a population-excess contradiction
 
 For every global minimizer,
 
-$$
+```math
 \boxed{g_A>0}
 \tag{GE.2}
-$$
+```
 
 and the two full-source defects satisfy the exact identity
 
-$$
+```math
 \boxed{
 \delta_K+\mathscr O_A=c_0P-a_0g_A.
 }
 \tag{GE.3}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \delta_K+\mathscr O_A\ge c_0P
 \quad\Longleftrightarrow\quad
@@ -277,7 +277,7 @@ g_A\le0
 n-1\le\Delta D^2.
 }
 \tag{GE.4}
-$$
+```
 
 Thus (1.1), if proved for the triangle-free lexicographic C-II source, contradicts (GE.2) immediately.
 
@@ -285,21 +285,21 @@ Thus (1.1), if proved for the triangle-free lexicographic C-II source, contradic
 
 The strict translated-lattice inequality (1.4) rearranges to
 
-$$
+```math
 n-1>\frac{\pi}{2\sqrt3}D^2=\Delta D^2,
-$$
+```
 
 which is (GE.2).
 
 Using the definitions (1.2), cancellation of `area K` gives
 
-$$
+```math
 \begin{aligned}
 \delta_K+\mathscr O_A
 &=\frac{\pi D^2}{4}+c_0P-a_0(n-1)\\
 &=c_0P-a_0\left(n-1-\frac{\pi D^2}{4a_0}\right).
 \end{aligned}
-$$
+```
 
 Since `4a_0=2sqrt(3)`, the parenthesis is `g_A`. This proves (GE.3), and (GE.4) follows because `a_0>0`. `square`
 
@@ -307,31 +307,31 @@ Since `4a_0=2sqrt(3)`, the parenthesis is `g_A`. This proves (GE.3), and (GE.4) 
 
 Since `mathscr O_A>=0` by Oler and `g_A>0`, (GE.3) yields
 
-$$
+```math
 \delta_K<c_0P.
 \tag{GE.5}
-$$
+```
 
 The isoperimetric inequality also gives
 
-$$
+```math
 \delta_K
 \ge
 \frac{\pi^2D^2-P^2}{4\pi}
 =\frac{(\pi D-P)(\pi D+P)}{4\pi}.
 \tag{GE.6}
-$$
+```
 
 Together,
 
-$$
+```math
 \boxed{
 \frac{(\pi D-P)(\pi D+P)}{4\pi}
 +a_0g_A+\mathscr O_A
 \le c_0P.
 }
 \tag{GE.7}
-$$
+```
 
 Equation (GE.7) is a one-budget coupling between source width/perimeter deficit, triangular-lattice population excess, and Oler surplus. It is not a contradiction: all three nonnegative currencies can coexist within the right side.
 
@@ -342,21 +342,18 @@ The full-source NC route can now be stated without the redundant hull defects. A
 > **Population-excess exclusion.** Every sufficiently large contact/diameter-lexicographically minimal triangle-free global source of diameter `D` satisfies
 > 
 
-$$
-
+```math
 > n-1\le\frac{\pi}{2\sqrt3}D^2.
 > 
-$$
-
-
+```
 
 This contradicts the strict translated-lattice inequality for the same global source.
 
 PW adds a new geometric restriction under which this theorem may be attacked: the full source hull has
 
-$$
+```math
 P=\pi D-O(1)
-$$
+```
 
 with the explicit universal deficit (PW.2), and for every fixed `rho>0` only `O(D^{-1})` angular measure can have width below `(1-rho)D`.
 
@@ -366,7 +363,7 @@ The missing step is still source-specific. A density deficit for arbitrary trian
 
 A direct closure through the full-source endpoint is now exactly:
 
-$$
+```math
 \boxed{
 \textbf{PE:}\quad
 A\text{ lexicographic, triangle-free, globally minimizing, sufficiently large}
@@ -374,7 +371,7 @@ A\text{ lexicographic, triangle-free, globally minimizing, sufficiently large}
 n-1\le\frac{\pi}{2\sqrt3}D^2.
 }
 \tag{5.1}
-$$
+```
 
 It is enough to prove PE using the additional necessary conditions already available for that same source: C-I full actual support, FS.1-FS.4 after audit, PW/PW.1, and any separately audited post-ZF theorem whose hypotheses are satisfied.
 

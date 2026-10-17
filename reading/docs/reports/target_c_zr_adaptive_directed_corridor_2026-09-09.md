@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_adaptive_directed_corridor_2026-09-09.md) · source SHA-256 `064c4ad72ef43fe264f78fd16f9c8bc093839f6c0141197ecd1f3b3a500bc676`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-379DE63D810B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZDC: adaptive corridors are directed in one common star coordinate
 
@@ -27,43 +29,46 @@ Directed max-flow/min-cut then produces a port-to-port contact path all of whose
 
 Use the ZHT notation. Let the complete consecutive trunk be
 
-$$
+```math
 f_1,\ldots,f_H,
 \qquad H=\Omega_\eta(D),
 \tag{1.1}
-$$
+```
 
 oriented from the bridge block containing the C66 center `z` toward the deepest descendant cut.
 
 ZHT chooses a star diameter edge `zy_0` crossing that deepest cut and puts
 
-$$
+```math
 u_0:=\frac{y_0-z}{D}.
 \tag{1.2}
-$$
+```
 
 C18 gives a common star-direction cone of width strictly below `pi/3`. The ZHT projection argument proves that for every trunk bridge, after orienting its geometric unit vector `t_j` from the root-side block to the descendant-side block,
 
-$$
+```math
 \boxed{
  u_0\cdot t_j\ge c_{dir}>0
 }
 \tag{1.3}
+```
 
 for all sufficiently large members, where `c_dir` depends only on fixed `eta` after absorbing the `o(1)` nonstar error. For definiteness one may take a smaller fixed constant than the eventual ZHT lower projection; its exact numerical optimization is irrelevant below.
 
 Every trunk stress satisfies
 
-\[
+```math
 \alpha_{f_j}\ge c_BD,
 \qquad c_B=\frac{\eta}{32\pi}.
 \tag{1.4}
+```
 
 Thus the force exerted on an internal route block through its parent bridge has outward `u_0` projection at least
 
-\[
+```math
  c_Bc_{dir}D.
 \tag{1.5}
+```
 
 ---
 
@@ -71,32 +76,32 @@ Thus the force exerted on an internal route block through its parent bridge has 
 
 Take an internal trunk block `X` that is adaptive-regular in the sense of ZAC. Its side-force magnitude satisfies
 
-\[
+```math
 F_{side}(X)=o(D).
 \tag{2.1}
-$$
+```
 
 Let `p^-` be its parent trunk port and `p^+` its child trunk port.
 
 For any vertex shore
 
-$$
+```math
 S\subset V(X),
 \qquad p^-\in S,
 \qquad p^+\notin S,
 \tag{2.2}
-$$
+```
 
 orient each internal contact edge crossing the cut from its endpoint `x in S` to its endpoint `y notin S`, and write
 
-$$
+```math
 d_{xy}:=y-x,
 \qquad |d_{xy}|=1.
-$$
+```
 
 Sum mechanical equilibrium over the vertices of `S`. Internal forces cancel except across the cut. With the contact-force sign convention, the parent trunk force is balanced by the outward contact transfers plus side forces. Project onto `u_0`. Using (1.5) and (2.1), for all sufficiently large members,
 
-$$
+```math
 \boxed{
 \sum_{\substack{xy\in C(X)\\x\in S,y\notin S}}
 \alpha_{xy}\,u_0\cdot d_{xy}
@@ -104,14 +109,14 @@ $$
 c_P D,
 }
 \tag{ZDC1}
-$$
+```
 
 where one may take
 
-$$
+```math
 c_P:=\frac12c_Bc_{dir}>0.
 \tag{2.3}
-$$
+```
 
 The child trunk force does not occur because its port lies outside `S`; all other external forces are part of the side budget.
 
@@ -121,41 +126,41 @@ The child trunk force does not occur because its port lies outside `S`; all othe
 
 Replace every undirected internal contact `xy` by the one directed arc pointing in the positive `u_0` direction. More explicitly, give the ordered arc `x->y` capacity
 
-$$
+```math
 \kappa(x,y)
 :=
 \alpha_{xy}\max\{u_0\cdot(y-x),0\}.
 \tag{3.1}
-$$
+```
 
 The reverse arc has the analogous capacity; exactly one direction is positive unless the contact is perpendicular to `u_0`, in which case both are zero.
 
 For a cut `S` as in (2.2), the total directed capacity leaving `S` is
 
-$$
+```math
 \sum_{x\in S,y\notin S}
 \alpha_{xy}\max\{u_0\cdot(y-x),0\}.
-$$
+```
 
 This is at least the signed sum in ZDC1, because deleting negative terms can only increase the value. Therefore every directed `p^---p^+` cut has capacity at least
 
-$$
+```math
 c_PD.
 \tag{3.2}
-$$
+```
 
 Directed max-flow/min-cut gives a `p^---p^+` flow of value at least `c_PD`.
 
 If the adaptive-regular block has at most `E_D` internal edges, delete directed flow cycles and decompose the remaining flow into simple directed paths. At most `E_D` path terms are required. Hence one directed simple path `P_X` carries at least
 
-$$
+```math
 \frac{c_P}{E_D}D.
 \tag{3.3}
-$$
+```
 
 Every edge `x->y` on that path obeys
 
-$$
+```math
 \boxed{
 \alpha_{xy}\,u_0\cdot(y-x)
 \ge
@@ -164,32 +169,35 @@ $$
 \widetilde\gamma_D:=\frac{c_P}{E_D}>0.
 }
 \tag{ZDC2}
+```
 
 In particular
 
-\[
+```math
 \boxed{
 u_0\cdot(y-x)>0}
 \tag{ZDC3}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \alpha_{xy}\ge\widetilde\gamma_DD.
 }
 \tag{ZDC4}
+```
 
 The path is strictly monotone in the single global coordinate `u_0 dot p`.
 
 Because `widetilde gamma_D` differs from ZAC's `gamma_D` only by a fixed `eta`-dependent factor,
 
-\[
+```math
 \boxed{
 \frac{\delta_D}{\widetilde\gamma_D}\to0.
 }
 \tag{ZDC5}
+```
 
 ---
 
@@ -197,41 +205,41 @@ Because `widetilde gamma_D` differs from ZAC's `gamma_D` only by a fixed `eta`-d
 
 Repeat the ZAC diagonal argument with `widetilde gamma_D`. Put
 
-\[
+```math
 \widetilde\zeta_D
 :=
 \sqrt{\frac{\delta_D}{\widetilde\gamma_D}}
 \to0.
 \tag{4.1}
-$$
+```
 
 Every selected directed edge with radial defect
 
-$$
+```math
 1-(r_x-r_y)^2>\widetilde\zeta_D
-$$
+```
 
 contributes at least
 
-$$
+```math
 \widetilde\gamma_DD\widetilde\zeta_D
-$$
+```
 
 to C68's `Q_z`. Since
 
-$$
+```math
 Q_z\le C_0D^2\delta_D,
-$$
+```
 
 the number of radially bad selected directed edges over the whole trunk population is
 
-$$
+```math
 O\!\left(
 D\sqrt{\frac{\delta_D}{\widetilde\gamma_D}}
 \right)
 =o(D).
 \tag{4.2}
-$$
+```
 
 Consequently:
 
@@ -239,19 +247,20 @@ Consequently:
 
 All but `o(D)` internal ZHT trunk blocks are either singleton blocks or have a port-to-port contact path
 
-$$
+```math
 p^-=x_0,x_1,\ldots,x_m=p^+
-$$
+```
 
 such that for every selected step
 
-\[
+```math
 \boxed{
  u_0\cdot(x_{j+1}-x_j)>0,
 }
 \tag{ZDC6}
+```
 
-\[
+```math
 \boxed{
 \alpha_{x_jx_{j+1}}
 \,u_0\cdot(x_{j+1}-x_j)
@@ -259,15 +268,17 @@ such that for every selected step
 \widetilde\gamma_DD,
 }
 \tag{ZDC7}
+```
 
 and
 
-\[
+```math
 \boxed{
 \bigl||x_{j+1}-z|-|x_j-z|\bigr|
 =1-o(1)
 }
 \tag{ZDC8}
+```
 
 uniformly at the moving threshold supplied by (4.1).
 

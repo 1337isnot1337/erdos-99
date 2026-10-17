@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_weak_train_population_2026-09-09.md) · source SHA-256 `cd6064cb3d418c75f3bd798e615a71f411872060440f1d3a6290e6e6dc2d1fae`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 12 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-079BD266D9C7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZWT: quadratic weak rhombus closures force linearly many weak-rich trains
 
@@ -28,40 +30,43 @@ This is the first train-scale consequence of the ZRP/ZRI mechanical degeneration
 
 Fix the bridge-dominant ZEG-A/ZCQ sequence for a fixed `eta>0`. ZCQ and C42 give a constant
 
-$$
+```math
 c_\eta>0
-$$
+```
 
 such that the number `R=F_4` of bounded strict-rhombus faces satisfies
 
-$$
+```math
 \boxed{
 R\ge(c_\eta-o(1))D^2.
 }
 \tag{1.1}
+```
 
 ZRI supplies a sequence
 
-\[
+```math
 a_D\downarrow0
 \tag{1.2}
-$$
+```
 
 and a good-rhombus family `mathcal R_good` with
 
-$$
+```math
 \boxed{
 |\mathcal R_{good}|\ge(c_\eta-o(1))D^2
 }
 \tag{1.3}
+```
 
 such that every `F in mathcal R_good` has at least two boundary contacts `e` satisfying
 
-\[
+```math
 e\notin C_{rad},
 \qquad
 \alpha_e<a_D.
 \tag{1.4}
+```
 
 ZRI also proves that no two radial sides can be adjacent on a strict rhombus.
 
@@ -81,40 +86,42 @@ If at least three sides are nonradial, among any three sides of a four-cycle the
 
 All nonradial sides of a good rhombus have stress below `a_D` by the choice of the ZRI exceptional face family. Therefore every good rhombus contains an opposite side pair
 
-\[
+```math
 e_F,e_F'
-$$
+```
 
 with
 
-$$
+```math
 \boxed{
  e_F,e_F'\notin C_{rad},
 \qquad
 \alpha_{e_F},\alpha_{e_F'}<a_D.
 }
 \tag{ZWT1}
+```
 
 The pair `e_F,e_F'` is one train link. Choose one such pair for each good rhombus and assign `F` to that stopped train.
 
 For a train `tau`, let
 
-\[
+```math
 A_\tau
 :=
 \#\{F\in\mathcal R_{good}:F\text{ was assigned to }\tau\}.
 \tag{2.1}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \sum_{\tau=1}^T A_\tau
 =|\mathcal R_{good}|
 \ge(c_\eta-o(1))D^2.
 }
 \tag{ZWT2}
+```
 
 ---
 
@@ -124,41 +131,42 @@ Fix a stopped train `tau` and orient its unit contact-edge direction by a unit v
 
 If the train crosses `m_tau` rhombi, write its successive contact-edge midpoints as
 
-\[
+```math
 m_0,m_1,\ldots,m_{m_\tau}.
-$$
+```
 
 Each midpoint step has length one and
 
-$$
+```math
 (m_{j+1}-m_j)\cdot Ju
 >
 \cos(\pi/6)
 =
 \frac{\sqrt3}{2}.
 \tag{3.1}
-$$
+```
 
 All contact-edge midpoints lie in the convex hull of the source, whose diameter is `D`. Hence the total difference of their projections onto `Ju` is at most `D`. Summing (3.1),
 
-$$
+```math
 m_\tau\frac{\sqrt3}{2}<D.
-$$
+```
 
 Therefore every stopped train satisfies the exact strict bound
 
-$$
+```math
 \boxed{
  m_\tau<\frac{2}{\sqrt3}D.
 }
 \tag{ZWT3}
+```
 
 In particular
 
-\[
+```math
 A_\tau\le m_\tau<\frac{2}{\sqrt3}D.
 \tag{3.2}
-$$
+```
 
 This bound is valid with exceptional-face and outer-face train endpoints; no pure-disk train coordinates are used.
 
@@ -168,40 +176,41 @@ This bound is valid with exceptional-face and outer-face train endpoints; no pur
 
 DT gives
 
-$$
+```math
 T
 =\frac{b+Q}{2}+2f,
 \tag{4.1}
-$$
+```
 
 where `f` is the number of bounded nonquadrilateral faces and
 
-$$
+```math
 Q=\sum_{F\text{ non4}}(\deg F-4).
-$$
+```
 
 The exact post-ZF closing-defect identity is
 
-$$
+```math
 \frac{b+Q}{2}=h-s_Z.
 \tag{4.2}
-$$
+```
 
 Thus
 
-$$
+```math
 T=h-s_Z+2f
 \le h+2f.
 \tag{4.3}
-$$
+```
 
 The diameter graph satisfies `h<=q`, and the exact terminal partition gives `f<=q`. Therefore
 
-$$
+```math
 \boxed{
 T\le3q\le3\pi D.
 }
 \tag{ZWT4}
+```
 
 This is intentionally crude but topology-correct.
 
@@ -211,65 +220,67 @@ This is intentionally crude but topology-correct.
 
 Put
 
-\[
+```math
 \theta_\eta:=\frac{c_\eta}{12\pi}>0.
 \tag{5.1}
-$$
+```
 
 Call a train **weak-rich** if
 
-$$
+```math
 A_\tau\ge\theta_\eta D.
 \tag{5.2}
-$$
+```
 
 The total contribution of trains that are not weak-rich is at most
 
-$$
+```math
 T\theta_\eta D
 \le
 3\pi D\cdot\frac{c_\eta}{12\pi}D
 =
 \frac{c_\eta}{4}D^2.
 \tag{5.3}
-$$
+```
 
 Together with ZWT2, the weak-rich trains carry at least
 
-$$
+```math
 \left(\frac{3c_\eta}{4}-o(1)\right)D^2
 \tag{5.4}
-$$
+```
 
 assigned good rhombi.
 
 Each train carries fewer than `(2/sqrt3)D` assignments by ZWT3. Hence the number `N_wr` of weak-rich trains satisfies
 
-$$
+```math
 N_{wr}\frac{2}{\sqrt3}D
 \ge
 \left(\frac{3c_\eta}{4}-o(1)\right)D^2.
-$$
+```
 
 Therefore:
 
 ### Theorem ZWT.1 — linear weak-rich train family
 
-$$
+```math
 \boxed{
 N_{wr}
 \ge
 \left(\frac{3\sqrt3}{8}c_\eta-o(1)\right)D.
 }
 \tag{ZWT5}
+```
 
 Every one of these trains is weak at at least
 
-\[
+```math
 \boxed{
 A_\tau\ge\frac{c_\eta}{12\pi}D
 }
 \tag{ZWT6}
+```
 
 strict-rhombus crossings.
 
@@ -283,37 +294,40 @@ The contact edges of a stopped train are the vertices of a path graph, and its r
 
 A set of `k` selected links in a path is incident with at least `k+1` path vertices if the selected links are contiguous, and with even more vertices if they are separated. Therefore the `A_tau` assigned weak links on a weak-rich train touch at least
 
-\[
+```math
 A_\tau+1
-$$
+```
 
 distinct contact edges of that train.
 
 Every endpoint of an assigned link is nonradial and has stress below `a_D`. Hence every weak-rich train contains at least
 
-$$
+```math
 \boxed{
 \frac{c_\eta}{12\pi}D+1
 }
 \tag{ZWT7}
+```
 
 **distinct** contacts `e` satisfying
 
-\[
+```math
 \boxed{
  e\notin C_{rad},
 \qquad
 \alpha_e<a_D.
 }
 \tag{ZWT8}
+```
 
 Different stopped trains have disjoint contact-edge sets. Consequently ZWT5-ZWT7 recover a quadratic population of weak contacts but with additional train localization:
 
-\[
+```math
 \boxed{
 \Omega_\eta(D)\text{ disjoint trains each carry }\Omega_\eta(D)\text{ weak contacts.}
 }
 \tag{ZWT9}
+```
 
 ---
 
@@ -325,9 +339,9 @@ For every good rhombus orient the corresponding edge of `Gamma` toward one train
 
 Then ZWT2 says the total oriented indegree is
 
-\[
+```math
 (c_\eta-o(1))D^2,
-$$
+```
 
 while ZWT5-ZWT6 say that `Omega_eta(D)` train vertices have oriented indegree `Omega_eta(D)`.
 

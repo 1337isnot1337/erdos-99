@@ -27,29 +27,29 @@ The controlling canonical module is
 [`campaign_zero_transfer_and_narrow_paths_2026-09-09.md`](campaign_zero_transfer_and_narrow_paths_2026-09-09.md) and
 [`campaign_zero_transfer_defect_review_2026-09-09.md`](campaign_zero_transfer_defect_review_2026-09-09.md) audit the report-level consequences
 
-$$
+```math
 \ker\Omega=\operatorname{span}\{\mathbf 1,P_x,P_y\},
 \qquad \operatorname{rank}\Omega=v-3,
 \tag{1.1}
-$$
+```
 
 and
 
-$$
+```math
 e+h\ge 2v-2.
 \tag{1.2}
-$$
+```
 
 Here `v` counts the nonisolated contact core only. Isolated source points are retained in the global source and are not included in (1.1).
 
 The shortest scalar Level I endpoint remains
 
-$$
+```math
 \boxed{
  b+\sum_{F\text{ bounded}}(\deg F-4)>2h.
 }
 \tag{1.3}
-$$
+```
 
 By Euler, (1.3) is exactly equivalent to `e+h<2v-2`, contradicting (1.2).
 
@@ -83,42 +83,42 @@ Work with a triangle-free global minimizer in the lexicographic C-II normal form
 
 Thus
 
-$$
+```math
 \sum_{e\in C}\alpha_e=D^2,
 \qquad
 \sum_{h\in H}\beta_h=1.
 \tag{2.1}
-$$
+```
 
 Write
 
-$$
+```math
 \Omega=L_C(\alpha)-L_H(\beta).
 \tag{2.2}
-$$
+```
 
 Use the audited ZC/ZR conclusion
 
-$$
+```math
 \Omega\succeq0,
 \qquad
 \ker\Omega=\operatorname{span}\{\mathbf1,P_x,P_y\}.
 \tag{2.3}
-$$
+```
 
 Let `Lambda` be the Dirichlet response of the positive contact network on `B`, and put
 
-$$
+```math
 M=\Lambda-L_H(\beta).
 \tag{2.4}
-$$
+```
 
 Finally let
 
-$$
+```math
 J=(V,C\cup H)
 \tag{2.5}
-$$
+```
 
 be the mixed active bar graph.
 
@@ -127,40 +127,44 @@ be the mixed active bar graph.
 Under the preceding hypotheses:
 
 1. **Exact terminal kernel.**  
-   $$
+   ```math
    \ker M
    =\operatorname{span}\{\mathbf1_B,P_x|_B,P_y|_B\},
    \qquad
    \operatorname{rank}M=q-3.
    \tag{ZK1}
-   $$
+   
+   ```
 
 2. **Every proper terminal cut is strictly response-dominated.** For every nonempty proper `S subset B`, if `c_bk=-Lambda_bk`, then
-   $$
+   ```math
    \boxed{
    \sum_{b\in S,\ k\notin S}c_{bk}
    >
    \sum_{\substack{bk\in H\\b\in S,\ k\notin S}}\beta_{bk}.
    }
    \tag{ZK2}
-   $$
+   
+   ```
    In particular, every loaded terminal has strict local response excess:
-   $$
+   ```math
    d_b:=\sum_{k\ne b}c_{bk}
    >
    s_b:=\sum_{k\ne b}\beta_{bk}
    \qquad(b\in B).
    \tag{ZK3}
-   $$
+   
+   ```
    Thus the zero-excess set in C64 is empty after ZR.
 
 3. **Universal rigidity of the mixed core.** Any realization `y_i` of `J` in any Euclidean space `R^d` satisfying
-   $$
+   ```math
    |y_i-y_j|=1\quad(ij\in C),
    \qquad
    |y_i-y_j|=D\quad(ij\in H)
    \tag{ZK4}
-   $$
+   
+   ```
    is congruent to the original planar core.
 
 4. **Redundant infinitesimal rigidity.** Deleting any one bar of `C union H` leaves an infinitesimally rigid planar framework on the same `v` vertices.
@@ -173,7 +177,7 @@ Under the preceding hypotheses:
 
 Order the stress matrix by `B,I`. The contact interior Dirichlet block `L_II` is positive definite because the positive contact core is connected and `B` is nonempty. The standard Schur congruence used in C64 gives
 
-$$
+```math
 \Omega
 \sim
 \begin{pmatrix}
@@ -181,28 +185,28 @@ M&0\\
 0&L_{II}
 \end{pmatrix}.
 \tag{2.6}
-$$
+```
 
 Therefore
 
-$$
+```math
 \operatorname{nullity}M
 =
 \operatorname{nullity}\Omega
 =3.
 \tag{2.7}
-$$
+```
 
 Affine equilibrium gives
 
-$$
+```math
 M\mathbf1_B=0,
 \qquad
 M(P_x|_B)=0,
 \qquad
 M(P_y|_B)=0.
 \tag{2.8}
-$$
+```
 
 The force hull is two-dimensional, so these three terminal vectors are independent. Equation (2.7) leaves no further kernel. This proves (ZK1).
 
@@ -212,27 +216,27 @@ C34 gives `q>=6` for `D>=9`. Every terminal in `B` is an extreme vertex of the c
 
 Fix a nonempty proper `S subset B`. If the indicator `1_S` belonged to the affine kernel in (ZK1), an affine scalar function on the plane would take one constant value on `S` and the other constant value on `B\S`. Since `q>=6`, one of these two sets contains at least three terminals. Those three terminals are noncollinear, so an affine function constant on them is constant on the entire plane. This contradicts the two distinct indicator values. Therefore
 
-$$
+```math
 \mathbf1_S\notin\ker M.
 \tag{2.9}
-$$
+```
 
 Because `M` is PSD, zero quadratic energy is equivalent to membership in its kernel. Hence
 
-$$
+```math
 \mathbf1_S^{\mathsf T}M\mathbf1_S>0.
 \tag{2.10}
-$$
+```
 
 The Laplacian energy identity expands this as
 
-$$
+```math
 \mathbf1_S^{\mathsf T}M\mathbf1_S
 =
 \sum_{b\in S,k\notin S}
 (c_{bk}-\beta_{bk}),
 \tag{2.11}
-$$
+```
 
 which is (ZK2). Taking `S={b}` proves (ZK3).
 
@@ -242,7 +246,7 @@ A slightly stronger form will sometimes be useful: if `S subset B` and `|B\S|>=3
 
 Let `y_i in R^d` satisfy (ZK4), and write `y^(r)` for its `r`-th coordinate vector on `V`. By (2.1),
 
-$$
+```math
 \begin{aligned}
 \sum_{r=1}^d (y^{(r)})^{\mathsf T}\Omega y^{(r)}
 &=
@@ -255,31 +259,31 @@ $$
 &=D^2-D^2=0.
 \end{aligned}
 \tag{2.12}
-$$
+```
 
 Every summand on the left is nonnegative because `Omega>=0`. Therefore each coordinate vector belongs to the kernel in (2.3). There are a vector `a in R^d` and a linear map `A:R^2->R^d` such that
 
-$$
+```math
 y_i=a+Ap_i
 \qquad(i\in V).
 \tag{2.13}
-$$
+```
 
 There are at least three active diameter edges. Indeed `q>=6` and every terminal is incident to an active diameter edge. Their projective directions are distinct. Two disjoint diameter chords cross by the diameter-thrackle property and hence cannot be parallel. Two diameter chords sharing an endpoint cannot lie on the same projective line: the same ray would repeat the other endpoint, while opposite rays would put the two other endpoints at distance `2D>D`.
 
 For every diameter vector `r=p_i-p_j`, equation (ZK4) and (2.13) give
 
-$$
+```math
 r^{\mathsf T}(A^{\mathsf T}A-I_2)r=0.
 \tag{2.14}
-$$
+```
 
 A nonzero homogeneous quadratic form in two variables has at most two projective zero directions. Equation (2.14) holds on at least three distinct projective directions, so
 
-$$
+```math
 A^{\mathsf T}A=I_2.
 \tag{2.15}
-$$
+```
 
 Thus `A` is an isometric embedding of the original plane. Equation (2.13) preserves every pairwise distance, not merely the bar lengths. The realization `y` is congruent to the original core. This proves universal rigidity.
 
@@ -287,28 +291,28 @@ Thus `A` is an isometric embedding of the original plane. Equation (2.13) preser
 
 Let `R_J` be the planar bar-rigidity matrix of `J`. ZF gives
 
-$$
+```math
 \operatorname{rank}R_J=2v-3.
 \tag{2.16}
-$$
+```
 
 The KKT equilibrium is a nonzero left-kernel relation among its rows: use coefficient `alpha_e` on each contact row and `-beta_h` on each diameter row. Relative interior gives
 
-$$
+```math
 \alpha_e>0,
 \qquad
 \beta_h>0,
 \tag{2.17}
-$$
+```
 
 on every active row. Hence every coefficient in this row dependence is nonzero. For any chosen row `r_g`, solve the dependence for that row:
 
-$$
+```math
 r_g
 =-\frac1{\omega_g}
 \sum_{f\ne g}\omega_f r_f.
 \tag{2.18}
-$$
+```
 
 So deleting `r_g` does not change the row span or its rank `2v-3`. This holds for every active contact or diameter bar. The mixed framework is redundantly infinitesimally rigid.
 
@@ -318,10 +322,10 @@ Since `q>=6`, the graph has more than three vertices.
 
 First suppose `J` has a cut vertex `z`. Let `S` be one component of `J-z`. Give every vertex of `S` the infinitesimal velocity
 
-$$
+```math
 u_i=R_{\pi/2}(p_i-p_z),
 \tag{2.19}
-$$
+```
 
 and give every other vertex velocity zero. Every bar internal to `S` undergoes an infinitesimal rigid rotation, and every bar from `S` to `z` has zero first derivative because its velocity is perpendicular to the bar. There are no other bars leaving `S`. This is a nonzero infinitesimal flex. It is not a global Euclidean infinitesimal motion because it fixes `z` and any vertex in another component. This contradicts (2.16). Hence `J` has no cut vertex.
 
@@ -377,23 +381,23 @@ ZK changes two live C-II subfrontiers exactly.
 
 C64 defines
 
-$$
+```math
 Z=\{b:d_b=s_b\},
 \qquad T=B\setminus Z,
-$$
+```
 
 and proves only
 
-$$
+```math
 |T|\ge\frac25|B|.
-$$
+```
 
 Under ZR, ZK gives
 
-$$
+```math
 \boxed{Z=\varnothing,\qquad T=B.}
 \tag{3.1}
-$$
+```
 
 More strongly, every proper terminal cut has positive defect energy. Exact equality cannot survive on a large cut even if all singleton rows are individually very small.
 
@@ -403,17 +407,17 @@ This does **not** give a numerical lower bound on `tr M`, on any `d_b-s_b`, or o
 
 For every contact bridge:
 
-$$
+```math
 \boxed{|H(X,Y)|\ge2.}
 \tag{3.2}
-$$
+```
 
 If both contact sides are nonsingletons,
 
-$$
+```math
 \boxed{\nu(H(X,Y))\ge2.}
 \tag{3.3}
-$$
+```
 
 Thus the macroscopic bridge-cut problem can no longer be reduced to or modeled by one diameter reaction or a single diameter star on a nontrivial side. The residual exact geometry contains two vertex-disjoint crossing diameter chords, and therefore the canonical common-cut order constraints apply to a genuine matching.
 
@@ -428,15 +432,12 @@ Within the bridge-dominant subbranch, ZK sharpens the next theorem to the follow
 > **BM2 — macroscopic matching-cut exclusion.** For every fixed `c>0`, there is `D_c` such that no lexicographically normalized triangle-free C-II global minimizer of diameter `D>=D_c` has a contact bridge `e` satisfying
 > 
 
-$$
-
+```math
 > \alpha_e\ge cD,
 > \qquad
 > w_e:=\sum_{h\text{ crossing }e}\beta_h\ge c,
 > 
-$$
-
-
+```
 > where, as forced by ZK, the crossing diameter graph contains two vertex-disjoint diameter edges whenever both contact sides are nonsingletons.
 
 C27 would then exclude bridge-dominant stress. The remaining work is genuinely metric: use the two crossing diameter chords, exact bridge resultant, circular order, C18/C41 response structure, and global packing to contradict a macroscopic bridge cut. A purely topological argument is insufficient.

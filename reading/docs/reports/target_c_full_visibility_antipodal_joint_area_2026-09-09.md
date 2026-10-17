@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_visibility_antipodal_joint_area_2026-09-09.md) · source SHA-256 `09d55fb4a57aec2c497c37ce3c03d44f006b7b06b0833c4b42f7532be8577662`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 15 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-B0B9BF39F19B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_full_visibility_antipodal_joint_area_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=b9985d3b03dfb56ea9e3bbfd0be15b4e9fbb56d6; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -25,18 +27,19 @@ Therefore every Hausdorff limit of the normalized force hull is exactly the conv
 
 The resulting joint inequality raises the generic post-ZF pinned/contact floor from AAS's `0.5882283437...` to
 
-$$
+```math
 \boxed{
 \lambda_{FVA}
 =0.5937285472681860970\ldots .
 }
 \tag{FVA.1}
+```
 
 Here
 
-\[
+```math
 \lambda:=\lim\frac{e_{BB}+2s_C}{D}
-$$
+```
 
 along a convergent post-ZF subsequence.
 
@@ -46,67 +49,67 @@ along a convergent post-ZF subsequence.
 
 Let
 
-$$
+```math
 K_D:=D^{-1}(\operatorname{conv}A-c_D)
-$$
+```
 
 be the normalized complete source hull, translated as in ADA. ADA proves
 
-$$
+```math
 K_D\to B:=\overline B(0,1/2)
-$$
+```
 
 in Hausdorff distance after passage to a subsequence.
 
 Let
 
-$$
+```math
 F_D:=D^{-1}(F-c_D)=\operatorname{conv}V_D,
-$$
+```
 
 where `V_D=D^{-1}(B_+-c_D)` is the normalized loaded-terminal / force-hull vertex set.
 
 The C-II normalization has full actual diameter visibility: `H=H_*`, and C34/C65 identifies the nonisolated source diameter endpoints with `B_+`. Thus every
 
-$$
+```math
 v\in V_D
-$$
+```
 
 has a partner
 
-$$
+```math
 w\in V_D
-$$
+```
 
 with
 
-$$
+```math
 |v-w|=1.
 \tag{1.1}
-$$
+```
 
 We first prove the uniform boundary statement
 
-$$
+```math
 \boxed{
 \max_{v\in V_D}\operatorname{dist}(v,\partial B)\to0.
 }
 \tag{FVA.2}
-$$
+```
 
 If not, choose a sequence `v_D in V_D` staying at least a fixed positive distance from `partial B`. Choose diameter partners `w_D in V_D`. Since `K_D->B`, after passage to a subsequence
 
-$$
+```math
 v_D\to v\in B,
 \qquad
 w_D\to w\in B.
-$$
+```
 
 Equation (1.1) gives `|v-w|=1`. The only pair of points in the radius-`1/2` disk at distance one is an antipodal boundary pair. Hence
 
-$$
+```math
 v\in\partial B,
-$$
+```
 
 contradicting the fixed interior distance. This proves FVA.2.
 
@@ -116,48 +119,48 @@ contradicting the fixed interior distance. This proves FVA.2.
 
 The finite compact sets `V_D` all lie in a common compact set. By Blaschke selection for compact subsets, pass to a further subsequence with
 
-$$
+```math
 V_D\to U
-$$
+```
 
 in Hausdorff distance.
 
 FVA.2 gives
 
-$$
+```math
 U\subseteq\partial B.
 \tag{2.1}
-$$
+```
 
 The set `U` is antipodal. Indeed, take any `u in U` and choose `v_D in V_D` with `v_D->u`. For each `v_D`, choose a diameter partner `w_D in V_D`. Passing to a further subsequence,
 
-$$
+```math
 w_D\to w\in U.
-$$
+```
 
 Again `|u-w|=1` inside the radius-`1/2` disk, so necessarily
 
-$$
+```math
 w=-u.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{U=-U.}
 \tag{FVA.3}
-$$
+```
 
 Convex hull is continuous under Hausdorff convergence in finite dimensions, so
 
-$$
+```math
 \boxed{
 F_D=\operatorname{conv}V_D
 \to
 F_\infty:=\operatorname{conv}U.
 }
 \tag{FVA.4}
-$$
+```
 
 This is stronger than ADA: `F_infty` is **exactly** an antipodal circle hull.
 
@@ -167,65 +170,65 @@ This is stronger than ADA: `F_infty` is **exactly** an antipodal circle hull.
 
 Represent `U` by a closed projective direction set
 
-$$
+```math
 S\subset\mathbb R/\pi\mathbb Z,
-$$
+```
 
 so
 
-$$
+```math
 U=\{\pm\tfrac12u_\theta:\theta\in S\}.
-$$
+```
 
 Let
 
-$$
+```math
 s:=\mu(S).
-$$
+```
 
 Let the open complementary projective gaps have lengths
 
-$$
+```math
 g_1,g_2,\ldots,
 \qquad
 \sum_i g_i=\pi-s.
 \tag{3.1}
-$$
+```
 
 Each projective gap occurs twice on the full circle.
 
 For radius `R=1/2`, replacing the two missing circular arcs of angular length `g_i` by their chords removes total area
 
-$$
+```math
 R^2(g_i-\sin g_i).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 A_\infty:=\operatorname{area}(F_\infty)
 =
 \frac14\left(s+\sum_i\sin g_i\right).
 }
 \tag{FVA.5}
-$$
+```
 
 The boundary of `F_infty` consists of the retained circle subset plus the two chords spanning every projective gap. The retained full-circle angular measure is `2s`, contributing arc length `s` at radius `1/2`. Each projective gap pair contributes total chord length
 
-$$
+```math
 2\sin(g_i/2).
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 p:=\operatorname{per}(F_\infty)
 =s+2\sum_i\sin(g_i/2).
 }
 \tag{FVA.6}
-$$
+```
 
 Perimeter is continuous under planar convex Hausdorff convergence, so this `p` is also the limit of `P_F/D`.
 
@@ -235,70 +238,71 @@ Perimeter is continuous under planar convex Hausdorff convergence, so this `p` i
 
 Every gap obeys
 
-$$
+```math
 0\le g_i\le\sum_jg_j=\pi-s.
-$$
+```
 
 Thus
 
-$$
+```math
 \cos(g_i/2)
 \ge
 \cos((\pi-s)/2)
 =
 \sin(s/2).
-$$
+```
 
 Therefore
 
-$$
+```math
 \sin g_i
 =2\sin(g_i/2)\cos(g_i/2)
 \ge
 2\sin(s/2)\sin(g_i/2).
-$$
+```
 
 Summing and using FVA.6,
 
-$$
+```math
 \sum_i\sin g_i
 \ge
 \sin(s/2)(p-s).
-$$
+```
 
 Insert this in FVA.5:
 
-$$
+```math
 \boxed{
 A_\infty
 \ge
 \frac14\left[s+(p-s)\sin(s/2)\right].
 }
 \tag{FVA.7}
+```
 
 For fixed `p`, the function
 
-\[
+```math
 \phi_p(s):=s+(p-s)\sin(s/2)
-$$
+```
 
 is nondecreasing on `0<=s<=p`, because
 
-$$
+```math
 \phi_p'(s)
 =1-\sin(s/2)+\frac{p-s}{2}\cos(s/2)
 \ge0.
-$$
+```
 
 DDM/C67 gives
 
-$$
+```math
 s\ge y:=\lim h/D.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}(F)}{D^2}
 \ge
@@ -307,6 +311,7 @@ J(y,p)
 \frac14\left[y+(p-y)\sin(y/2)\right].
 }
 \tag{FVA.8}
+```
 
 This improves ADA whenever the actual perimeter is larger than the minimum antipodal-hull perimeter at density `y`.
 
@@ -316,73 +321,76 @@ This improves ADA whenever the actual perimeter is larger than the minimum antip
 
 From FVA.6 and the projective gaps,
 
-\[
+```math
 \sum_i\sin(g_i/2)
 \ge
 \sin\left(\frac12\sum_i g_i\right)
 =
 \cos(s/2),
-$$
+```
 
 using repeated `sin a+sin b>=sin(a+b)` on total half-gap angle at most `pi/2`.
 
 Thus
 
-$$
+```math
 p\ge s+2\cos(s/2).
-$$
+```
 
 The right side is increasing on `[0,pi]` because its derivative is `1-sin(s/2)>=0`. Since `s>=y`,
 
-$$
+```math
 \boxed{
 p\ge y+2\cos(y/2).}
 \tag{FVA.9}
+```
 
 On the other hand the exact post-ZF outer-walk identity is
 
-\[
+```math
 b=2h-Q-2s_Z\le2h,
-$$
+```
 
 and `P_F<=b`, so
 
-$$
+```math
 \boxed{p\le2y.}
 \tag{FVA.10}
-$$
+```
 
 Cauchy's perimeter-diameter inequality also gives `p<=pi`.
 
 Writing
 
-$$
+```math
 u:=p-y,
-$$
+```
 
 we therefore have
 
-$$
+```math
 \boxed{
 2\cos(y/2)
 \le u
 \le M(y):=\min\{y,\pi-y\}.
 }
 \tag{FVA.11}
+```
 
 The lower and upper endpoints first meet exactly at
 
-\[
+```math
 y_0:=2\rho,
 \qquad
 \rho=\cos\rho,
-$$
+```
 
 because
 
-$$
+```math
 2\cos(y_0/2)=2\rho=y_0.
 \tag{FVA.12}
+```
 
 ---
 
@@ -390,22 +398,22 @@ $$
 
 Let
 
-\[
+```math
 \lambda:=\lim\frac{e_{BB}+2s_C}{D}.
-$$
+```
 
 The generic ZK/C40 attachment-cell capacity gives
 
-$$
+```math
 \limsup\frac1{D^2}
 \sum_r\operatorname{area}(\operatorname{conv}A_r)
 \le\frac\pi4\lambda^2.
 \tag{6.1}
-$$
+```
 
 Hence FVA.8 gives the attachment-gap lower bound
 
-$$
+```math
 \boxed{
 \liminf\frac G{D^2}
 \ge
@@ -413,19 +421,21 @@ $$
 -\frac\pi4\lambda^2.
 }
 \tag{FVA.13}
+```
 
 Because FVA.10 gives `p-y=u<=y`, the actual-perimeter JC minimum is exactly `u`. Since `e_BB/D<=lambda`, JC gives
 
-\[
+```math
 \boxed{
 \limsup\frac G{D^2}
 \le\frac{(\lambda+u)^2}{4\pi}.
 }
 \tag{FVA.14}
+```
 
 Therefore every survivor satisfies
 
-\[
+```math
 \boxed{
 \pi\left[y+u\sin(y/2)\right]
 -(\lambda+u)^2
@@ -433,6 +443,7 @@ Therefore every survivor satisfies
 \le0.
 }
 \tag{FVA.15}
+```
 
 with `(y,u)` in the feasible region FVA.11.
 
@@ -442,34 +453,35 @@ with `(y,u)` in the feasible region FVA.11.
 
 Define
 
-\[
+```math
 y_0:=2\rho
-$$
+```
 
 and define `lambda_FVA` as the positive root of equality in FVA.15 at
 
-$$
+```math
 (y,u)=(y_0,y_0).
-$$
+```
 
 Since
 
-$$
+```math
 \sin(y_0/2)=\sin\rho,
-$$
+```
 
 this is
 
-$$
+```math
 \frac{\rho}{2}(1+\sin\rho)
 -\frac\pi4\lambda^2
 =
 \frac{(\lambda+2\rho)^2}{4\pi}.
 \tag{7.1}
+```
 
 Equivalently,
 
-\[
+```math
 \boxed{
 (\pi^2+1)\lambda^2
 +4\rho\lambda
@@ -478,15 +490,17 @@ Equivalently,
 =0.
 }
 \tag{FVA.16}
+```
 
 Its positive root is
 
-\[
+```math
 \boxed{
 \lambda_{FVA}
 =0.5937285472681860970190\ldots .
 }
 \tag{FVA.17}
+```
 
 We prove that this is the global minimum required by FVA.15.
 
@@ -496,90 +510,90 @@ For fixed `y`, the left side of FVA.15 at `lambda=lambda_FVA` is a concave quadr
 
 Put
 
-\[
+```math
 F_L(y)
 :=
 \pi(y+\sin y)
 -(\lambda_{FVA}+2\cos(y/2))^2
 -\pi^2\lambda_{FVA}^2.
-$$
+```
 
 At `y=y_0`, FVA.12 and FVA.16 give
 
-$$
+```math
 F_L(y_0)=0.
-$$
+```
 
 Differentiate:
 
-$$
+```math
 F_L'(y)
 =
 \pi(1+\cos y)
 +2(\lambda_{FVA}+2\cos(y/2))\sin(y/2)
 >0
-$$
+```
 
 for `y in[y_0,pi]`. Hence
 
-$$
+```math
 \boxed{F_L(y)\ge0.}
 \tag{7.2}
-$$
+```
 
 ### Upper endpoint below `pi/2`: `u=y`
 
 For `y in[y_0,pi/2]`, put
 
-$$
+```math
 F_{U,1}(y)
 :=
 \pi y(1+\sin(y/2))
 -(\lambda_{FVA}+y)^2
 -\pi^2\lambda_{FVA}^2.
-$$
+```
 
 Again `F_{U,1}(y_0)=0`. Its derivative is
 
-$$
+```math
 F_{U,1}'(y)
 =
 \pi\left(1+\sin(y/2)+\frac y2\cos(y/2)\right)
 -2(\lambda_{FVA}+y).
 \tag{7.3}
-$$
+```
 
 This is strictly positive on the interval. A deliberately coarse verification is enough: `lambda_FVA<0.6`, `y<=pi/2<1.6`, and `y/2>=rho>pi/6`, so `sin(y/2)>1/2`. Dropping the nonnegative last term in the parentheses,
 
-$$
+```math
 F_{U,1}'(y)
 >
 \frac{3\pi}{2}-2(0.6+1.6)
 >4.71-4.4>0.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{F_{U,1}(y)\ge0.}
 \tag{7.4}
-$$
+```
 
 ### Upper endpoint above `pi/2`: `u=pi-y`
 
 For `y in[pi/2,pi]`, put
 
-$$
+```math
 F_{U,2}(y)
 :=
 \pi\left[y+(\pi-y)\sin(y/2)\right]
 -(\lambda_{FVA}+\pi-y)^2
 -\pi^2\lambda_{FVA}^2.
-$$
+```
 
 It joins continuously to `F_{U,1}` at `pi/2`. Moreover
 
-$$
+```math
 F_{U,2}'(y)
 =
 \pi\left[
@@ -589,7 +603,7 @@ F_{U,2}'(y)
 +2(\lambda_{FVA}+\pi-y)
 >0.
 \tag{7.5}
-$$
+```
 
 Hence `F_{U,2}>0` throughout this interval.
 
@@ -603,27 +617,30 @@ This proves FVA.1.
 
 Equality in the scalar proof can occur only at
 
-$$
+```math
 \boxed{
 y\to2\rho,\qquad u\to2\rho,\qquad p\to4\rho.}
 \tag{FVA.18}
+```
 
 Thus any sequence approaching the new generic floor must simultaneously satisfy
 
-\[
+```math
 \frac hD\to2\rho,
 \qquad
 \frac{P_F}{D}\to4\rho
 =2.9563405328\ldots .
 \tag{FVA.19}
+```
 
 The limiting projective support must have measure exactly `2rho`, and equality in the gap inequalities forces its complement to be one projective interval. Therefore the limiting force hull is the convex hull of two antipodal circular arcs, separated by one antipodal pair of missing gaps.
 
 The endpoint geometry is now very different from AAS's artificial `p->pi` optimizer. In particular the force hull has two macroscopic straight chord sides spanning the two missing arcs. This gives a concrete outer-walk target: post-ZF has `P_F<=b<=2h`, and FVA equality has `P_F/D -> 2h/D`, so
 
-\[
+```math
 \boxed{(b-P_F)/D\to0,\qquad (Q+2s_Z)/D\to0.}
 \tag{FVA.20}
+```
 
 At the same time, almost the entire `O(D)` outer contact-walk budget required to replace the two macroscopic force-hull chord sides must be carried with asymptotically zero total chain-chord detour. This is the next geometric obstruction to attack.
 
@@ -645,21 +662,21 @@ At the same time, almost the entire `O(D)` outer contact-walk budget required to
 
 FVA has reduced generic near equality to a two-arc antipodal force hull with
 
-\[
+```math
 h/D\to2\rho,
 \qquad
 P_F/D\to4\rho,
 \qquad
 b-P_F=o(D).
-$$
+```
 
 The most direct next theorem should quantify the outer contact-walk cost of the two macroscopic missing-arc chord sides.
 
 Each missing projective gap has angle `pi-2rho`; its force-hull chord has normalized length
 
-$$
+```math
 \sin\frac{\pi-2\rho}{2}=\cos\rho=\rho.
-$$
+```
 
 There are two antipodal chord sides, each of Euclidean length `rho D+o(D)`.
 

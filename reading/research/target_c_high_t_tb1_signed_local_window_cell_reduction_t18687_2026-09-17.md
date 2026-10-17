@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_signed_local_window_cell_reduction_t18687_2026-09-17.md) · source SHA-256 `87073f30962018fa1ee48a48252495014befb84b776dd62301fcf8102f9b1b46`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 16 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "034c82ad3c091d43429882825c0202bb3162e050", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_signed_local_window_cell_reduction_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2bd6517e704822ef92d31da168339340e26919c86381454fc2d71f6b3e51f7be"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -16,19 +18,19 @@
 
 The LOCAL-WINDOW side of the SIGNED upper branch now contains a pairwise-properly-crossing vertex-disjoint braid
 
-$$
+```math
 F_D,
 \qquad
 |F_D|=D^{1/4-o(1)},
-$$
+```
 
 whose endpoints all lie in one path window of width `O(D/log D)`. The whole window carries one common family
 
-$$
+```math
 B_D,
 \qquad
 |B_D|>(0.6536-o(1))D,
-$$
+```
 
 of complete stopped trains crossing every selected row in the window in strict unit rhombi.
 
@@ -36,12 +38,12 @@ There is an exact uniqueness dichotomy in any such complete train rectangle whic
 
 For a complete train with transverse contact direction `[u]`, the stopped-train theorem puts every midpoint step in the open projective interval
 
-$$
+```math
 \mathcal C(u)
 =
 \left([u]+{\pi\over3},[u]+{2\pi\over3}\right)
 \pmod\pi.
-$$
+```
 
 If two trains cross in a strict unit rhombus, their transverse directions differ projectively by a directed angle in `(pi/3,2pi/3)`. Their **closed** midpoint-step cones are therefore disjoint.
 
@@ -75,61 +77,61 @@ For the ROW-UNIQUE THROUGH class, every chord supports a common selected cut, so
 
 Let `a,b` be complete stopped trains crossing in one strict unit rhombus. Write their fixed projective transverse contact directions as
 
-$$
+```math
 [u_a],\qquad [u_b].
-$$
+```
 
 Choose representatives so that
 
-$$
+```math
 [u_b]=[u_a]+\delta\pmod\pi,
 \qquad
 {\pi\over3}<\delta<{2\pi\over3}.
 \tag{LW.1}
-$$
+```
 
 The interval (LW.1) is exactly the strict-rhombus condition: for a unit rhombus both noncontact diagonals exceed one, so the directed angle between its two side directions lies strictly between `pi/3` and `2pi/3`.
 
 The midpoint-step theorem gives the open cones
 
-$$
+```math
 \mathcal C_a
 =
 \left([u_a]+{\pi\over3},[u_a]+{2\pi\over3}\right),
 \tag{LW.2}
-$$
+```
 
-$$
+```math
 \mathcal C_b
 =
 \left([u_b]+{\pi\over3},[u_b]+{2\pi\over3}\right)
 \pmod\pi.
 \tag{LW.3}
-$$
+```
 
 Normalize `[u_a]=0` on a projective circle of circumference `pi`. Then
 
-$$
+```math
 \overline{\mathcal C_a}
 =
 \left[{\pi\over3},{2\pi\over3}\right].
 \tag{LW.4}
-$$
+```
 
 Because of (LW.1), the closed cone of `b` wraps as
 
-$$
+```math
 \overline{\mathcal C_b}
 =
 \left[0,\delta-{\pi\over3}\right]
 \cup
 \left[\delta+{\pi\over3},\pi\right].
 \tag{LW.5}
-$$
+```
 
 The first interval in (LW.5) ends strictly before `pi/3`, while the second starts strictly after `2pi/3`. Therefore
 
-$$
+```math
 \boxed{
 \overline{\mathcal C_a}
 \cap
@@ -137,6 +139,7 @@ $$
 =\varnothing.
 }
 \tag{LW.6}
+```
 
 This is exact and uses only strict unit-rhombus geometry.
 
@@ -146,10 +149,10 @@ This is exact and uses only strict unit-rhombus geometry.
 
 Let `A` and `B` be two families of complete trains such that every
 
-\[
+```math
 a\in A,
 \qquad b\in B
-$$
+```
 
 crosses in a strict unit rhombus.
 
@@ -157,12 +160,13 @@ Let `ell` be any straight line with projective direction `[d]`.
 
 The line/train uniqueness theorem says
 
-$$
+```math
 [d]\notin\overline{\mathcal C(u)}
 \quad\Longrightarrow\quad
 \ell\text{ meets the complete midpoint curve of the train }u
 \text{ at most once}.
 \tag{LW.7}
+```
 
 There are two cases.
 
@@ -170,40 +174,42 @@ There are two cases.
 
 If
 
-\[
+```math
 [d]\notin\overline{\mathcal C_b}
 \qquad\forall b\in B,
-$$
+```
 
 then (LW.7) gives
 
-$$
+```math
 \boxed{
 \ell\text{ meets every }b\in B\text{ at most once}.
 }
 \tag{LW.8}
+```
 
 ### Case R
 
 Otherwise choose `b_0 in B` with
 
-\[
+```math
 [d]\in\overline{\mathcal C_{b_0}}.
-$$
+```
 
 For every `a in A`, equation (LW.6) applied to the crossing pair `(a,b_0)` gives
 
-$$
+```math
 [d]\notin\overline{\mathcal C_a}.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \ell\text{ meets every }a\in A\text{ at most once}.
 }
 \tag{LW.9}
+```
 
 Thus every straight line satisfies at least one of (LW.8)--(LW.9). No phase error or directional-capacity deletion is needed.
 
@@ -213,44 +219,46 @@ Thus every straight line satisfies at least one of (LW.8)--(LW.9). No phase erro
 
 Use the LOCAL-WINDOW outcome of the upper localization theorem. Let
 
-\[
+```math
 A_W
-$$
+```
 
 be all selected rows inside the chosen window, and let
 
-$$
+```math
 B_W
 \subseteq
 \bigcap_{a\in A_W}\Gamma_a
-$$
+```
 
 be the common column family after the window purification. Then
 
-$$
+```math
 \boxed{|B_W|>(0.6536-o(1))D}
 \tag{LW.10}
-$$
+```
 
 and every pair in
 
-$$
+```math
 A_W\times B_W
-$$
+```
 
 crosses in a strict unit rhombus. The columns in `B_W` are pairwise noncrossing and have one common order on every row.
 
 By the bounded-noncrossing-degree theorem, the localized SIGNED blocker population contains a vertex-disjoint pairwise-crossing braid `F_D` with
 
-$$
+```math
 \boxed{|F_D|=D^{1/4-o(1)}}.
 \tag{LW.11}
+```
 
 Apply Section 2 to the supporting line of each chord. Split `F_D` according to whether the line uses Case R or Case C and retain the larger class. The retained family still has size
 
-\[
+```math
 D^{1/4-o(1)}.
 \tag{LW.12}
+```
 
 ---
 
@@ -258,18 +266,18 @@ D^{1/4-o(1)}.
 
 Assume Case R. Let one retained blocker `e=xy` have endpoint path regions
 
-\[
+```math
 x\in R_p,
 \qquad y\in R_q,
 \qquad p\le q.
-$$
+```
 
 The exact path-support theorem gives
 
-$$
+```math
 I_A(e)=\{p+1,\ldots,q\}.
 \tag{LW.13}
-$$
+```
 
 For every `j in I_A(e)`, row `tau_j` separates the endpoints, so the segment meets it at least once. ROW-UNIQUE gives at most one intersection, hence exactly one.
 
@@ -277,55 +285,60 @@ For a row `tau_j` in the local window but outside (LW.13), both endpoints lie on
 
 Therefore
 
-$$
+```math
 \boxed{
  e\cap\tau_j\ne\varnothing
  \iff
  j\in I_A(e),
 }
 \tag{LW.14}
+```
 
 and every nonempty intersection consists of one point.
 
 Define the closed endpoint-region interval
 
-\[
+```math
 J_A(e)=[p,q].
 \tag{LW.15}
+```
 
 Equation (LW.14) confines the whole segment to the closed path slab indexed by `J_A(e)`.
 
 Take two retained chords `e,f`. If their intervals were disjoint, one selected row between the intervals would separate the two closed slabs, so the two segments could not cross. Since the braid is pairwise properly crossing,
 
-\[
+```math
 J_A(e)\cap J_A(f)\ne\varnothing
 \qquad\forall e,f.
 \tag{LW.16}
-$$
+```
 
 Closed intervals on a line have Helly number two. Hence
 
-$$
+```math
 \boxed{
 \bigcap_eJ_A(e)\ne\varnothing.
 }
 \tag{LW.17}
+```
 
 Choose one integer path-region rank
 
-\[
+```math
 g_D\in\bigcap_eJ_A(e).
 \tag{LW.18}
+```
 
 Every retained chord therefore has
 
-\[
+```math
 p\le g_D\le q.
 \tag{LW.19}
+```
 
 Split into the four exact types
 
-\[
+```math
 \begin{array}{ll}
 \textbf{THROUGH}:&p<g_D<q,\\
 \textbf{LEFT-ANCHORED}:&p<q=g_D,\\
@@ -333,6 +346,7 @@ Split into the four exact types
 \textbf{CELL-INTERNAL}:&p=q=g_D.
 \end{array}
 \tag{LW.20}
+```
 
 One class has size `D^(1/4-o(1))`.
 
@@ -346,54 +360,58 @@ The other three classes place at least one whole endpoint population in the fixe
 
 Assume Case C. The common columns
 
-\[
+```math
 b_1<\cdots<b_M,
 \qquad
 M=|B_W|>(0.6536-o(1))D,
 \tag{LW.21}
+```
 
 are pairwise noncrossing proper crosscuts and define ordered fence cells
 
-\[
+```math
 C_0,\ldots,C_M.
-$$
+```
 
 For a retained chord `e=xy`, let
 
-$$
+```math
 c(x)=s,
 \qquad c(y)=t,
 \qquad s\le t.
-$$
+```
 
 Every column `b_{s+1},...,b_t` separates the endpoint cells and is met at least once. COLUMN-UNIQUE makes each such meeting unique. A column outside this interval has the endpoints on the same side; all intersections are proper and at most one, so there are none.
 
 Hence
 
-$$
+```math
 \boxed{
 I_B(e)=\{s+1,\ldots,t\},
 }
 \tag{LW.22}
-$$
+```
 
 and the chord is confined to the closed fence interval
 
-\[
+```math
 J_B(e)=[s,t].
 \tag{LW.23}
+```
 
 As in Section 4, pairwise crossing forces pairwise overlap of these closed intervals. Helly gives one fixed fence-cell rank
 
-\[
+```math
 h_D\in\bigcap_eJ_B(e).
 \tag{LW.24}
+```
 
 After the same four-way split relative to `h_D`, one class of size
 
-\[
+```math
 \boxed{D^{1/4-o(1)}}
 \tag{LW.25}
+```
 
 is uniformly THROUGH, LEFT-ANCHORED, RIGHT-ANCHORED, or CELL-INTERNAL with respect to one fixed cell `C_{h_D}` of the linear common train fence.
 

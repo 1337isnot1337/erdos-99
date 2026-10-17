@@ -20,38 +20,38 @@ Date: 2026-10-09. Audit base: `origin/main=bb6e6309e5c2a639c965b97ab446cb11e1e1d
 
 Let
 
-$$
+```math
 p_{ij}=p_{00}+\sum_{s=1}^{i}u_s+\sum_{t=1}^{j}v_t,
 \qquad u_s=(\cos\alpha_s,\sin\alpha_s),\quad
 v_t=(\cos\beta_t,\sin\beta_t),
-$$
+```
 
 on a finite rectangular index domain, with real phase lifts satisfying
 
-$$
+```math
 \pi/3<\beta_t-\alpha_s\le\pi/2
 \quad\hbox{for every }s,t.
-$$
+```
 
 Let `R` be a set of index pairs. Suppose every shore increment participates in at least `cD` cells of `R`, for a fixed `c>0`, and
 
-$$
+```math
 E_R:=\sum_{(s,t)\in R}\left(\sin(\beta_t-\alpha_s)-\sqrt3/2\right)\le C_0D
-$$
+```
 
 for a fixed `C_0`. Put `c_ang=3(2-sqrt(3))/pi`, let `alpha_* = max_s alpha_s`, and choose the unit reference directions `u_0` and `v_0` of angles `alpha_*` and `alpha_*+pi/3`. Then, with
 
-$$
+```math
 a_i=\sum_{s=1}^i(u_s-u_0),\qquad
 b_j=\sum_{t=1}^j(v_t-v_0),
-$$
+```
 
 the actual chart has total shore variation
 
-$$
+```math
 \sum_i|a_i-a_{i-1}|+\sum_j|b_j-b_{j-1}|
 \le {C_0\over c\,c_{\rm ang}}.
-$$
+```
 
 The bound is independent of the rectangle dimensions and `D`.
 
@@ -63,32 +63,32 @@ There is no unbounded sequence of canonical post-ZF Type-II sources with a nonem
 
 Set
 
-$$
+```math
 x_s=\alpha_*-\alpha_s\ge0,\qquad
 y_t=\beta_t-\alpha_*-\pi/3>0.
-$$
+```
 
 The phase-window hypothesis implies `x_s+y_t=beta_t-alpha_s-pi/3` lies in `[0,pi/6]`. On this interval, concavity of sine places `sin(pi/3+z)-sqrt(3)/2` above its endpoint chord, whose slope is exactly
 
-$$
+```math
 c_{\rm ang}={1-\sqrt3/2\over\pi/6}
 ={3(2-\sqrt3)\over\pi}.
-$$
+```
 
 Hence each selected face contributes at least `c_ang*(x_s+y_t)`. Summing by increment and using the minimum incidence gives
 
-$$
+```math
 E_R\ge c_{\rm ang}\left(\sum_s\deg_R(s)x_s+\sum_t\deg_R(t)y_t\right)
 \ge c_{\rm ang}cD\left(\sum_sx_s+\sum_ty_t\right).
-$$
+```
 
 For unit vectors, chord length is at most angular difference. Therefore
 
-$$
+```math
 \sum_s|u_s-u_0|+\sum_t|v_t-v_0|
 \le\sum_sx_s+\sum_ty_t
 \le {C_0\over c\,c_{\rm ang}}.
-$$
+```
 
 This is precisely the bounded total variation required by `C-BOUNDED-VARIATION-LATTICE-ENDPOINT-COUNT`; it is not a Lipschitz bound on individual increments.
 

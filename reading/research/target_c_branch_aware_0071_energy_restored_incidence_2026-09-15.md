@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_branch_aware_0071_energy_restored_incidence_2026-09-15.md) · source SHA-256 `ea7fe8e996e45330d9d437749705171bf43116ec370df4c5b90e9f9b426c17d3`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 18 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1d543ee9ae56aeb1118833bfb0654e7de22d5066", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_branch_aware_0071_energy_restored_incidence_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3a946fcda3081d0192e05e483da77434b5add2181b0f430a4f73e9341e60eb1d"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -16,41 +18,43 @@
 The energy-restored complement-rhombus-incidence theorem was proved and hostile-audited
 with the matched train floor
 
-$$
+```math
 C_{50}=2\sqrt{\Delta_2}+0.0050,
 \qquad
 \Delta_2={\pi\over2\sqrt3},
-$$
+```
 
 and yielded
 
-$$
+```math
 \liminf {q-k\over D}\ge1.84283.
-$$
+```
 
 The branch-aware iterative-pruning theorem is now independently hostile-audited and
 supplies the stronger matched input
 
-$$
+```math
 \boxed{
 C_{71}=2\sqrt{\Delta_2}+0.0071.
 }
 \tag{P71.1}
+```
 
 No geometric step in the rhombus-incidence proof depends on the origin of the matched
 train floor.  Substituting `C71` raises the safe Type-II floor to
 
-\[
+```math
 \boxed{
 \liminf_{D\to\infty}{q-k\over D}\ge1.84323.
 }
 \tag{P71.2}
+```
 
 The scalar zero is
 
-\[
+```math
 1.8432353529344645040\ldots .
-$$
+```
 
 Only `1.84323` is claimed.
 
@@ -60,71 +64,79 @@ Only `1.84323` is claimed.
 
 Write
 
-$$
+```math
 t={q-k\over D},
 \qquad
 \kappa={k\over D},
 \qquad
 \delta={d_{out}\over D},
-$$
+```
 
 and
 
-$$
+```math
 U={9t\over2}-2\pi-2\delta-\kappa/2.
 \tag{P71.3}
+```
 
 The audited branch-aware train theorem gives
 
-\[
+```math
 \boxed{U\ge C_{71}.}
 \tag{P71.4}
+```
 
 Retain the two-bin functions
 
-\[
+```math
 m_2(U)={U+\sqrt{8\Delta_2-U^2}\over2},
 \qquad
 r_2(U)=U-m_2(U).
 \tag{P71.5}
+```
 
 The hostile-audited shared-retention and rhombus-incidence stack gives retained
 dominant outer mass `z` and retained complement O--O pair mass `p` satisfying
 
-\[
+```math
 z+p\ge
 S(t,\delta,\kappa)
 :=\pi-U-{t+\kappa\over2}+m_2(U)-o(1),
 \tag{P71.6}
+```
 
-\[
+```math
 E_{dom}\ge F(z)D-o(D),
 \qquad
 F(z)=z-6\sin(z/6),
 \tag{P71.7}
+```
 
 and
 
-\[
+```math
 p(1-\delta)-{e_c\over2}
 \le {r_2(U)^2\over2}+o(1).
 \tag{P71.8}
+```
 
 The dominant and complement selected outer-edge supports are disjoint, hence
 
-\[
+```math
 e_c\le\delta-F(z)+o(1).
 \tag{P71.9}
+```
 
 Therefore every survivor must satisfy
 
-\[
+```math
 \boxed{
 G(z):=
  z+{\delta-F(z)+r_2(U)^2\over2(1-\delta)}
 \ge S(t,\delta,\kappa)-o(1).
 }
 \tag{P71.10}
+```
 
 This is exactly the hostile-audited parent inequality with `C50` replaced only in the
 lower bound on `U`.
@@ -135,14 +147,14 @@ lower bound on `U`.
 
 On the interval
 
-\[
+```math
 1.84283\le t\le1.84324
-$$
+```
 
 the stronger floor `U>=C71` remains inside the conservative bounds used by the parent
 hostile audit:
 
-$$
+```math
 U<2.007,
 \qquad
 \delta<0.051,
@@ -151,6 +163,7 @@ r_2(U)<0.11,
 \qquad
 -0.06<m_2'(U)<0.
 \tag{P71.11}
+```
 
 Consequently the same implicit-derivative proof applies:
 
@@ -161,7 +174,7 @@ Consequently the same implicit-derivative proof applies:
 
 Thus the weakest feasible point is
 
-\[
+```math
 \boxed{
 \kappa=0,
 \qquad
@@ -170,12 +183,14 @@ U=C_{71},
 \delta={R_{71}(t)\over2},
 }
 \tag{P71.12}
+```
 
 where
 
-\[
+```math
 R_{71}(t)={9t\over2}-2\pi-C_{71}.
 \tag{P71.13}
+```
 
 ---
 
@@ -183,82 +198,87 @@ R_{71}(t)={9t\over2}-2\pi-C_{71}.
 
 Put
 
-\[
+```math
 M_{71}=m_2(C_{71}),
 \qquad
 r_{71}=C_{71}-M_{71},
-$$
+```
 
-$$
+```math
 \delta_0(t)={R_{71}(t)\over2},
 \qquad
 S_0(t)=\pi-C_{71}-{t\over2}+M_{71}.
 \tag{P71.14}
+```
 
 Let `Z_0(t)` be the unique solution of
 
-\[
+```math
 \boxed{
 Z_0+{\delta_0(t)-F(Z_0)+r_{71}^2
 \over2(1-\delta_0(t))}
 =S_0(t).
 }
 \tag{P71.15}
+```
 
 Every survivor requires
 
-\[
+```math
 \boxed{H_0(t):=F(Z_0(t))-\delta_0(t)\le0.}
 \tag{P71.16}
+```
 
 The parent derivative argument makes `H_0` strictly decreasing throughout the stated
 interval.
 
 The companion Decimal verifier gives
 
-\[
+```math
 H_0(1.84323)
 =1.2672491\times10^{-5}>0,
-$$
+```
 
-$$
+```math
 H_0(1.84324)
 =-1.1001428\times10^{-5}<0,
-$$
+```
 
 and brackets the unique root at
 
-$$
+```math
 \boxed{
 1.84323535293446450<t_*<1.84323535293446451.
 }
 \tag{P71.17}
+```
 
 At the safe endpoint,
 
-\[
+```math
 C_{71}=1.9117256137279146\ldots,
-$$
+```
 
-$$
+```math
 M_{71}=1.9046123305467757\ldots,
 \qquad
 r_{71}=0.0071132831811389\ldots,
-$$
+```
 
-$$
+```math
 \delta_0=0.0498120395462494\ldots,
-$$
+```
 
-$$
+```math
 Z_0=2.2128444131435564\ldots,
-$$
+```
 
 and the retained complement O--O mass at the minimal dominant threshold is only
 
-$$
+```math
 \boxed{p=1.9957265\times10^{-5}+o(1).}
 \tag{P71.18}
+```
 
 Thus the main structural conclusion of the parent survives: the complement O--O escape
 is negligible at the low-`t` endpoint.
@@ -267,11 +287,11 @@ is negligible at the low-`t` endpoint.
 
 Every full-core Type-II survivor sequence in the stated proof-only scope satisfies
 
-\[
+```math
 \boxed{
 \liminf_{D\to\infty}{q-k\over D}\ge1.84323.
 }
-$$
+```
 
 ---
 

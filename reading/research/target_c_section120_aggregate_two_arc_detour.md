@@ -28,13 +28,13 @@ quadratic Type-II rhombic area into one aggregate outer-walk currency.
 Let `I_r` range over the unloaded positive-contact components of the canonical post-ZF
 representative. Put
 
-$$
+```math
 A_r\subset B,
 \qquad
 P_r:=\operatorname{conv}(A_r),
 \qquad
 d_r:=\operatorname{diam}(P_r).
-$$
+```
 
 Let `H_r` be the induced positive-contact graph on `I_r\cup A_r`, including every
 loaded-loaded unit contact with both endpoints in `A_r`. Write
@@ -47,26 +47,26 @@ loaded-loaded unit contact with both endpoints in `A_r`. Write
 Canonical Section 62 gives `|A_r|>=3` and harmonic trapping `P_r\subset F`; hence
 `d_r>0` and
 
-$$
+```math
 0<d_r\le D.
 \tag{120.1}
-$$
+```
 
 Define the local two-arc detour
 
-$$
+```math
 E_r:=L_r+P_{{\rm exc},r}-2d_r.
 \tag{120.2}
-$$
+```
 
 Proof-only Section 116 gives the exact finite inequality
 
-$$
+```math
 \boxed{
 d_rE_r\ge(4-2\sqrt3)A_{4,r}.
 }
 \tag{120.3}
-$$
+```
 
 In particular `E_r>=0`.
 
@@ -87,12 +87,12 @@ assigned to two different cells.
 Let `A_{4,r}^0` be the total area of the unloaded-only rhombi assigned to `I_r`.
 Then
 
-$$
+```math
 0\le A_{4,r}^0\le A_{4,r},
 \qquad
 \boxed{\sum_r A_{4,r}^0=A_4^0.}
 \tag{120.4}
-$$
+```
 
 This is the only area sum used below. Rhombi incident to loaded vertices are simply
 discarded; no claim is made that the full local quantities `A_{4,r}` are globally
@@ -100,33 +100,33 @@ disjoint.
 
 Applying (120.3), then (120.4), gives
 
-$$
+```math
 E_r
 \ge(4-2\sqrt3){A_{4,r}\over d_r}
 \ge(4-2\sqrt3){A_{4,r}^0\over d_r}.
-$$
+```
 
 Summing over all unloaded components yields the finite aggregate theorem
 
-$$
+```math
 \boxed{
 \sum_r E_r
 \ge
 (4-2\sqrt3)\sum_r{A_{4,r}^0\over d_r}.
 }
 \tag{120.5}
-$$
+```
 
 Since `d_r<=D`, this immediately implies
 
-$$
+```math
 \boxed{
 \sum_r\bigl(L_r+P_{{\rm exc},r}-2d_r\bigr)
 \ge
 {4-2\sqrt3\over D}\,A_4^0.
 }
 \tag{120.6}
-$$
+```
 
 Equation (120.5) is strictly stronger than (120.6) whenever a positive area fraction
 lies in cells of diameter bounded away from `D`.
@@ -137,29 +137,29 @@ lies in cells of diameter bounded away from `D`.
 
 Work along a Type-II full-core sequence. Canonical Section 80 gives
 
-$$
+```math
 {A_4\over D^2}\longrightarrow{\pi\over4}.
 \tag{120.7}
-$$
+```
 
 Canonical Section 83 proves that only `O(D)` strict rhombi are incident to the loaded
 set. Every unit rhombus has area at most one, so
 
-$$
+```math
 A_4-A_4^0=O(D).
 \tag{120.8}
-$$
+```
 
 Therefore
 
-$$
+```math
 {A_4^0\over D^2}\longrightarrow{\pi\over4}.
 \tag{120.9}
-$$
+```
 
 Divide (120.6) by `D` and use (120.9):
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 {1\over D}
@@ -168,11 +168,11 @@ $$
 {\pi\over4}(4-2\sqrt3).
 }
 \tag{120.10}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 {1\over D}
@@ -182,7 +182,7 @@ $$
 =0.42089\ldots .
 }
 \tag{120.11}
-$$
+```
 
 The decimal is only for scale; (120.10) is the theorem.
 
@@ -202,9 +202,9 @@ linear with the explicit coefficient in (120.10).
 It does **not** yet contradict the canonical attachment ledgers. Summing the exact
 local face identity
 
-$$
+```math
 L_r+Q_r=4a_r-6-2s_r-2c_r
-$$
+```
 
 and using only the present global incidence bounds leaves an upper capacity of order
 `q=O(D)` with a coefficient much larger than (120.10). In particular, the coarse

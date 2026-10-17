@@ -32,7 +32,7 @@ Every edge of that contact chain is a unit edge, so `ell_P` is also its number o
 
 The main bound is
 
-$$
+```math
 \boxed{
 H_{out}
 :=\sum_P area(P)
@@ -42,7 +42,7 @@ H_{out}
 \sqrt{b-P_F}.
 }
 \tag{OD.1}
-$$
+```
 
 The square root is real because OP already proves `P_F<=b`.
 
@@ -54,9 +54,9 @@ This is exact at finite `D`; no asymptotic error occurs in OD.1.
 
 OP forms the hull-augmented graph
 
-$$
+```math
 \widehat G=C\cup\partial F
-$$
+```
 
 by adding every missing force-hull side.  It proves that
 
@@ -80,48 +80,48 @@ Its remaining boundary is therefore a simple subchain of the old unit-contact ou
 
 Let the graph-boundary degree of pocket `P` be `k_P`.  By Lemma OD.1,
 
-$$
+```math
 \ell_P=k_P-1.
 \tag{OD.2}
-$$
+```
 
 OP proves the exact incidence identity
 
-$$
+```math
 \sum_P k_P=b+2a-q.
 \tag{OD.3}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 L_{chain}:=\sum_P\ell_P
 =b+a-q
 =x_B+a.
 }
 \tag{OD.4}
-$$
+```
 
 There are `q-a` force-hull sides that were already unit-contact edges.  Their total length is exactly `q-a`.  The remaining hull sides are precisely the unique added sides of the outer pockets. Hence
 
-$$
+```math
 \boxed{
 \sum_Ps_P=P_F-(q-a).
 }
 \tag{OD.5}
-$$
+```
 
 Subtract OD.5 from OD.4:
 
 ### Lemma OD.2 — exact chain–chord detour
 
-$$
+```math
 \boxed{
 U_{det}:=\sum_P(\ell_P-s_P)=b-P_F.
 }
 \tag{OD.6}
-$$
+```
 
 Each term is nonnegative by the triangle inequality, so OD.6 also recovers `P_F<=b`.
 
@@ -133,87 +133,87 @@ Thus `b-P_F` is not an abstract perimeter slack.  It is exactly the total excess
 
 Fix one outer pocket `P`.  Write its hull-side endpoints as `A,B`, its contact-chain length as
 
-$$
+```math
 \ell:=\ell_P,
-$$
+```
 
 and its hull-side length as
 
-$$
+```math
 s:=s_P=|A-B|.
-$$
+```
 
 For any point `x` on the polygonal contact chain, let `ell_1,ell_2` be the two subchain lengths from `A` to `x` and from `x` to `B`.  Then
 
-$$
+```math
 \ell_1+\ell_2=\ell.
-$$
+```
 
 Euclidean distance is at most polygonal path length, so
 
-$$
+```math
 |A-x|+|x-B|
 \le\ell_1+\ell_2
 =\ell.
 \tag{OD.7}
-$$
+```
 
 Hence the whole contact chain lies in the closed ellipse
 
-$$
+```math
 E(A,B;\ell)
 :=\{x:|A-x|+|x-B|\le\ell\}.
-$$
+```
 
 The ellipse is convex.  OP proves `P` is convex, and `P` is the convex polygon bounded by the contact chain together with chord `AB`.  Therefore
 
-$$
+```math
 P\subseteq E(A,B;\ell).
 \tag{OD.8}
-$$
+```
 
 Moreover `P` lies in one closed half-plane bounded by the line `AB`, while the ellipse is symmetric across that line. Thus `P` occupies at most half the ellipse area.
 
 The ellipse has semimajor axis
 
-$$
+```math
 a_E=\ell/2
-$$
+```
 
 and focal distance
 
-$$
+```math
 c_E=s/2.
-$$
+```
 
 Its semiminor axis is
 
-$$
+```math
 b_E=\frac12\sqrt{\ell^2-s^2}.
-$$
+```
 
 Therefore:
 
 ### Lemma OD.3 — one-pocket ellipse bound
 
-$$
+```math
 \boxed{
 area(P)
 \le
 \frac\pi8\ell\sqrt{\ell^2-s^2}.
 }
 \tag{OD.9}
-$$
+```
 
 Since
 
-$$
+```math
 \ell^2-s^2=(\ell-s)(\ell+s)\le2\ell(\ell-s),
-$$
+```
 
 we also have
 
-$$
+```math
 \boxed{
 area(P)
 \le
@@ -221,7 +221,7 @@ area(P)
 \ell^{3/2}\sqrt{\ell-s}.
 }
 \tag{OD.10}
-$$
+```
 
 No smoothness or Dido/isoperimetric theorem is used; the polygonal chain itself supplies the ellipse containment.
 
@@ -231,46 +231,46 @@ No smoothness or Dido/isoperimetric theorem is used; the polygonal chain itself 
 
 Put
 
-$$
+```math
 u_P:=\ell_P-s_P\ge0.
-$$
+```
 
 By OD.10,
 
-$$
+```math
 H_{out}
 \le
 \frac\pi{4\sqrt2}
 \sum_P\ell_P^{3/2}\sqrt{u_P}.
 \tag{OD.11}
-$$
+```
 
 Cauchy–Schwarz gives
 
-$$
+```math
 \sum_P\ell_P^{3/2}\sqrt{u_P}
 \le
 \left(\sum_P\ell_P^3\right)^{1/2}
 \left(\sum_Pu_P\right)^{1/2}.
 \tag{OD.12}
-$$
+```
 
 For nonnegative `ell_P`,
 
-$$
+```math
 \sum_P\ell_P^3
 \le
 \left(\sum_P\ell_P\right)^3.
 \tag{OD.13}
-$$
+```
 
 Use OD.4 and OD.6:
 
-$$
+```math
 \sum_P\ell_P=x_B+a,
 \qquad
 \sum_Pu_P=b-P_F.
-$$
+```
 
 Substitution into OD.11–OD.13 proves OD.1.
 
@@ -280,51 +280,51 @@ Substitution into OD.11–OD.13 proves OD.1.
 
 The PC/ZT variables give more explicit formulas.  Put
 
-$$
+```math
 k=d_H+s_Z,
-$$
+```
 
 and let `c_B` be the number of loaded-loaded contacts that are not hull sides. PC proves
 
-$$
+```math
 e_{BB}=d_P+Q+2k+c_B,
-$$
+```
 
-$$
+```math
 a=q-e_{BB}+c_B.
-$$
+```
 
 Also ZT gives
 
-$$
+```math
 b=2h-Q-2s_Z.
 \tag{OD.14}
-$$
+```
 
 From OD.4,
 
-$$
+```math
 \boxed{
 L_{chain}
 =x_B+a
 =2h-Q-2s_Z-e_{BB}+c_B.
 }
 \tag{OD.15}
-$$
+```
 
 From OD.6,
 
-$$
+```math
 \boxed{
 U_{det}
 =2h-Q-2s_Z-P_F.
 }
 \tag{OD.16}
-$$
+```
 
 Therefore OD.1 becomes
 
-$$
+```math
 \boxed{
 H_{out}
 \le
@@ -333,7 +333,7 @@ H_{out}
 \sqrt{2h-Q-2s_Z-P_F}.
 }
 \tag{OD.17}
-$$
+```
 
 All quantities under the roots are nonnegative by their geometric definitions.
 
@@ -347,55 +347,55 @@ This form is useful together with JC/JN/GS because those theorems already constr
 
 Suppose along an unbounded post-ZF sequence
 
-$$
+```math
 b-P_F=o(D).
 \tag{OD.18}
-$$
+```
 
 Since `b=O(D)` and `a=O(D)`, OD.4 gives `L_chain=O(D)`.  Therefore OD.1 yields
 
-$$
+```math
 \boxed{H_{out}=o(D^2).}
 \tag{OD.19}
-$$
+```
 
 More quantitatively, if
 
-$$
+```math
 b-P_F=O(D^{1-\eta})
-$$
+```
 
 for some `eta>0`, then
 
-$$
+```math
 \boxed{H_{out}=O(D^{2-\eta/2}).}
 \tag{OD.20}
-$$
+```
 
 ### Corollary OD.5 — quadratic outer-pocket area forces linear detour
 
 Conversely, if
 
-$$
+```math
 H_{out}\ge\gamma D^2
-$$
+```
 
 and
 
-$$
+```math
 L_{chain}\le LD
-$$
+```
 
 for fixed positive `gamma,L`, then OD.1 implies
 
-$$
+```math
 \boxed{
 \frac{b-P_F}{D}
 \ge
 \frac{32\gamma^2}{\pi^2L^3}.
 }
 \tag{OD.21}
-$$
+```
 
 Thus a macroscopically large outer cavity must pay a positive linear chain–chord detour.  It cannot coexist with asymptotic equality `b=P_F+o(D)`.
 

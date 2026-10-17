@@ -42,10 +42,11 @@ is not the almost-rhombic shell route.  They do not yet give a Level I contradic
 The canonical state still has two active endgames.
 
 - Target A closes if the exact Schur saving
-  $$
+  ```math
   \operatorname{rank}S
   \le d_{\rm int}+|C^\partial|-\Delta_\Lambda
-  $$
+  
+  ```
   is proved, or if a strict sub-`D` competitor is constructed.
 - Target B closes by the exact shell/Oler surplus in its route map.
 
@@ -72,9 +73,9 @@ The first two arrows now have exact theorems.  The last transport remains open.
 ## 2. Fixed-cardinality diametral hull saturation
 
 Let
-$$
+```math
 Q(A)=\{p\in A:\exists q\in A,\ |p-q|=D\}
-$$
+```
 for a diameter-`D` configuration.
 
 ### Theorem C1 (contact-preserving diametral hull saturation)
@@ -84,22 +85,22 @@ Assume a triangle-free global `n`-point minimizer exists.  Choose a triangle-fre
 is another triangle-free global minimizer `A^\sharp` with the same cardinality and
 same diameter `D=D(n)` such that
 
-$$
+```math
 \boxed{C(A^\sharp)=C(A)}
 \tag{C1.1}
-$$
+```
 
 as an abstract unit-contact graph, every originally nonisolated point remains at the
 same Euclidean position, and
 
-$$
+```math
 \boxed{
 Q(A^\sharp)
 =A^\sharp\cap\partial\operatorname{conv}A^\sharp
 =\operatorname{Vert}(\operatorname{conv}A^\sharp).
 }
 \tag{C1.2}
-$$
+```
 
 In particular, no point of `A^\sharp` lies in the relative interior of a convex-hull
 edge.
@@ -111,24 +112,24 @@ same contact graph, so it remains contact-minimal among triangle-free global
 minimizers.
 
 Suppose the current configuration contains
-$$
+```math
 p\in A\cap\partial\operatorname{conv}A,
 \qquad p\notin Q(A).
-$$
+```
 We first show that `p` is contact-isolated.  Choose an outward supporting vector
 `w\ne0` at `p`, so
-$$
+```math
 (p-r)\cdot w\ge0
 \qquad(r\in A).
 \tag{C1.3}
-$$
+```
 If `p` had a unit contact, then for `t>0`
-$$
+```math
 |p+tw-r|^2
 =|p-r|^2+2t(p-r)\cdot w+t^2|w|^2
 >|p-r|^2
 \tag{C1.4}
-$$
+```
 for every `r\ne p`.  Since `p\notin Q(A)`, all distances incident to `p` have strict
 slack below `D`; for sufficiently small `t`, moving only `p` therefore preserves
 unit separation and diameter `D` while breaking every unit contact incident to `p`.
@@ -137,15 +138,15 @@ strictly increase.  This contradicts contact minimality.  Thus `p` is isolated.
 
 Now continue the same outward motion until the first diameter event.  For each
 `r\ne p`, the function
-$$
+```math
 f_r(t)=|p+tw-r|
-$$
+```
 is strictly increasing for `t>0`, starts below `D`, and tends to infinity.  Hence it
 has a unique first time `\tau_r>0` at which it equals `D`.  Put
-$$
+```math
 t_*:=\min_{r\ne p}\tau_r>0.
 \tag{C1.5}
-$$
+```
 For `0\le t\le t_*`, every distance incident to the moving point is at most `D` and
 strictly larger than its initial value.  All other distances are unchanged.  An old
 diameter pair avoids `p`, because `p\notin Q(A)`, so an old pair of length exactly
@@ -160,17 +161,17 @@ change.
 
 Repeat whenever a boundary point outside `Q` exists.  Each step strictly increases
 `|Q|`, so after at most `n` steps the process stops.  At the terminal configuration,
-$$
+```math
 A^\sharp\cap\partial\operatorname{conv}A^\sharp\subseteq Q(A^\sharp).
 \tag{C1.6}
-$$
+```
 Canonical Lemma 5.1 gives the reverse structural fact that every diameter endpoint is
 an extreme point of the convex hull.  Hence
-$$
+```math
 Q(A^\sharp)
 \subseteq\operatorname{Vert}(\operatorname{conv}A^\sharp)
 \subseteq A^\sharp\cap\partial\operatorname{conv}A^\sharp.
-$$
+```
 Together with (C1.6), this proves (C1.2).
 
 Only contact-isolated points were moved, so every originally nonisolated point kept
@@ -197,14 +198,14 @@ Canonical Theorem 12.2 gives zero pinned expansive cone for the core when `Q^\ci
 is fixed.  If a nontrivial component had no pin, translating that component would be
 a nonzero pinned contact-preserving velocity.  If it had exactly one pin `q`, rotate
 the entire component infinitesimally about `q`:
-$$
+```math
 v_i=J(p_i-q)
-$$
+```
 on that component and `v=0` elsewhere.  The pin is fixed and every internal contact
 has first variation
-$$
+```math
 (p_i-p_j)\cdot J(p_i-p_j)=0.
-$$
+```
 The velocity is nonzero because the component is nontrivial, again contradicting the
 zero cone. `\square`
 
@@ -231,42 +232,42 @@ diameter.
 
 For a diameter-`D` finite set `A`, define its one-point diameter-preserving insertion
 body
-$$
+```math
 \mathcal I_D(A)
 :=\bigcap_{p\in A}\overline B(p,D).
 \tag{C2.1}
-$$
+```
 A point `x` lies in `\mathcal I_D(A)` exactly when adjoining `x` cannot make the
 diameter exceed `D`.
 
 ### Theorem C2 (right-plateau strict insertion cover)
 
 Let `A` be any global `N`-point minimizer, with `D=D(N)`, and assume
-$$
+```math
 D(N+1)>D(N).
 \tag{C2.2}
-$$
+```
 Then
-$$
+```math
 \boxed{
 \mathcal I_D(A)
 \subseteq
 \bigcup_{p\in A}B^\circ(p,1).
 }
 \tag{C2.3}
-$$
+```
 Equivalently,
-$$
+```math
 \boxed{
 R(A):=\max_{x\in\mathcal I_D(A)}\min_{p\in A}|x-p|<1.
 }
 \tag{C2.4}
-$$
+```
 Moreover,
-$$
+```math
 \operatorname{conv}A\subseteq\mathcal I_D(A),
 \tag{C2.5}
-$$
+```
 so the convex hull itself is strictly open-unit-covered.
 
 No triangle-free hypothesis is used.
@@ -274,16 +275,16 @@ No triangle-free hypothesis is used.
 #### Proof
 
 If some `x\in\mathcal I_D(A)` satisfied
-$$
+```math
 |x-p|\ge1
 \qquad(p\in A),
-$$
+```
 then `A\cup\{x\}` would be an `(N+1)`-point unit-separated set of diameter at most
 `D`.  Since the original diameter-`D` pair in `A` remains present, its diameter is
 exactly `D`, and therefore
-$$
+```math
 D(N+1)\le D,
-$$
+```
 contradicting (C2.2).  This proves (C2.3).
 
 The insertion body is compact, and the function
@@ -291,16 +292,16 @@ The insertion body is compact, and the function
 has a strict maximum below one.  This proves (C2.4).
 
 Finally, if
-$$
+```math
 x=\sum_i\lambda_i p_i\in\operatorname{conv}A,
 \qquad \lambda_i\ge0,\quad\sum_i\lambda_i=1,
-$$
+```
 then for every `p_j\in A`,
-$$
+```math
 |x-p_j|
 \le\sum_i\lambda_i|p_i-p_j|
 \le D.
-$$
+```
 Thus `x\in\mathcal I_D(A)`, proving (C2.5). `\square`
 
 ### Relation to canonical same-hull saturation
@@ -325,32 +326,32 @@ minimizer; the canonical source warning remains binding.
 ## 4. Finite contraction rigidity of positive KKT support
 
 Fix any normalized KKT stress `(\alpha,\beta)` from canonical Theorem 4.1.  Write
-$$
+```math
 C_+=\{ij\in C:\alpha_{ij}>0\},
 \qquad
 H_+=\{ij\in H:\beta_{ij}>0\},
-$$
+```
 and let `B_+` be the endpoint set of `H_+`.
 
 ### Theorem C3 (finite contraction rigidity)
 
 Assign arbitrary points `y_i\in\mathbb R^2` to the vertices of `V(C_+)`, subject
 only to
-$$
+```math
 y_b=p_b\qquad(b\in B_+)
 \tag{C3.1}
-$$
+```
 and
-$$
+```math
 |y_i-y_j|\le1
 \qquad(ij\in C_+).
 \tag{C3.2}
-$$
+```
 Then
-$$
+```math
 \boxed{y_i=p_i\qquad(i\in V(C_+)).}
 \tag{C3.3}
-$$
+```
 
 Thus the positive contact framework is globally, not merely infinitesimally,
 rigid against contraction once the positive diameter-load vertices are fixed.
@@ -362,30 +363,30 @@ example by setting `y_i=p_i` there.  Apply the exact virtual-work identity (11.7
 `\xi_i=y_i`.
 
 For every edge in `H_+`, both endpoints lie in `B_+` and are fixed, so
-$$
+```math
 (p_i-p_j)\cdot(y_i-y_j)=D^2.
-$$
+```
 Since `\sum_H\beta=1`, the right side of virtual work is exactly `D^2`.
 
 For a positive contact `ij`, put `u_{ij}=p_i-p_j`, so `|u_{ij}|=1`.  By Cauchy and
 (C3.2),
-$$
+```math
 u_{ij}\cdot(y_i-y_j)
 \le |y_i-y_j|
 \le1.
 \tag{C3.4}
-$$
+```
 Therefore the left side of virtual work is at most
-$$
+```math
 \sum_C\alpha_{ij}=D^2.
-$$
+```
 Equality with the right side forces equality in (C3.4) on every edge carrying
 positive `\alpha`.  Hence
-$$
+```math
 y_i-y_j=p_i-p_j
 \qquad(ij\in C_+).
 \tag{C3.5}
-$$
+```
 So the displacement `y_i-p_i` is constant on every connected component of `C_+`.
 Canonical Proposition 5.4 says every nontrivial positive-contact component contains
 at least two vertices of `B_+` (one would already suffice here).  Since those vertices
@@ -398,39 +399,39 @@ contraction satisfying (C3.2) exists at all.
 ### Corollary C3.1 (positive support lies in the positive diameter hull)
 
 For every normalized KKT stress,
-$$
+```math
 \boxed{
 V(C_+)\subseteq\operatorname{conv}B_+.
 }
 \tag{C3.6}
-$$
+```
 Consequently,
-$$
+```math
 \boxed{
 \operatorname{conv}V(C_+)=\operatorname{conv}B_+.
 }
 \tag{C3.7}
-$$
+```
 
 #### Proof
 
 Let `L=\operatorname{conv}B_+` and let `P_L` be Euclidean metric projection onto
 `L`.  Projection onto a closed convex set is nonexpansive:
-$$
+```math
 |P_Lx-P_Ly|\le|x-y|.
-$$
+```
 For completeness, if `x'=P_Lx` and `y'=P_Ly`, the projection variational
 inequalities give
-$$
+```math
 (x-x')\cdot(y'-x')\le0,
 \qquad
 (y-y')\cdot(x'-y')\le0.
-$$
+```
 Adding them yields
-$$
+```math
 |x'-y'|^2\le(x-y)\cdot(x'-y')
 \le|x-y|\,|x'-y'|.
-$$
+```
 
 Apply Theorem C3 to `y_i=P_Lp_i`.  Every `b\in B_+` is fixed by projection, and
 every positive unit contact is contracted to length at most one.  Hence
@@ -451,14 +452,14 @@ out by the linear equilibrium equations, nonnegativity, and `\sum_H\beta=1`; the
 identity `\sum_C\alpha=D^2` makes the contact multipliers bounded.
 
 Define
-$$
+```math
 C_*:=\{e\in C:\alpha_e>0\text{ for some normalized KKT multiplier}\},
 \tag{C4.1}
-$$
-$$
+```
+```math
 H_*:=\{h\in H:\beta_h>0\text{ for some normalized KKT multiplier}\},
 \tag{C4.2}
-$$
+```
 and let `B_*` be the endpoint set of `H_*`.
 
 Because there are only finitely many active constraints, averaging one witness
@@ -468,35 +469,35 @@ multiplier whose positive supports are exactly `C_*` and `H_*`.
 ### Theorem C4 (canonical force hull)
 
 Put
-$$
+```math
 \boxed{F(A):=\operatorname{conv}B_*.}
 \tag{C4.3}
-$$
+```
 Then
-$$
+```math
 \boxed{
 F(A)=\operatorname{conv}V(C_*),
 \qquad
 \operatorname{diam}F(A)=D.
 }
 \tag{C4.4}
-$$
+```
 Moreover,
-$$
+```math
 \boxed{
 B_*=\operatorname{Vert}F(A).
 }
 \tag{C4.5}
-$$
+```
 Every point of `A\setminus F(A)` is incident only to active contact and diameter
 constraints whose KKT multiplier is zero in **every** normalized KKT stress.
 
 #### Proof
 
 Apply Corollary C3.1 to a maximal-support multiplier.  It gives
-$$
+```math
 \operatorname{conv}V(C_*)=\operatorname{conv}B_*=F(A).
-$$
+```
 The set `H_*` is nonempty because every normalized KKT multiplier has
 `\sum_H\beta=1`.  Hence `F(A)` contains the two endpoints of at least one diameter
 edge and has diameter at least `D`.  Since `F(A)\subseteq\operatorname{conv}A`, its
@@ -522,21 +523,21 @@ certificate; they are invisible to the entire normalized KKT multiplier polytope
 ### Corollary C4.1 (one-dimensional force hull is an exact unit chain)
 
 If `F(A)` is one-dimensional, then `D` is an integer and, after a rigid motion,
-$$
+```math
 \boxed{
 A\cap F(A)
 =V(C_*)
 =\{0,1,\ldots,D\}\times\{0\},
 }
 \tag{C4.6}
-$$
+```
 with
-$$
+```math
 \boxed{
 C_*=\{\{k,k+1\}:0\le k<D\}.
 }
 \tag{C4.7}
-$$
+```
 All remaining points of `A` lie outside this segment and are incident only to
 universally zero-KKT active constraints.
 
@@ -570,31 +571,31 @@ chords to supporting geometry without any rhombic-shell assumptions.
 ### Lemma C5 (quadratic inward support from a diameter chord)
 
 If `p,q\in A` satisfy `|p-q|=D`, put
-$$
+```math
 u=(p-q)/D.
-$$
+```
 Then every `x\in\operatorname{conv}A` satisfies
-$$
+```math
 \boxed{
 u\cdot(p-x)\ge\frac{|p-x|^2}{2D}.}
 \tag{C5.1}
-$$
+```
 In particular, the line through `p` perpendicular to `u` supports the convex hull,
 and every unit contact `px` satisfies
-$$
+```math
 \boxed{
 u\cdot(p-x)\ge\frac1{2D}.}
 \tag{C5.2}
-$$
+```
 
 #### Proof
 
 Since `x\in\operatorname{conv}A` and distance to a fixed point is convex,
 `|x-q|\le D`.  Write `x-p=s`.  Then
-$$
+```math
 D^2\ge|x-q|^2=|Du+s|^2
 =D^2+2D\,u\cdot s+|s|^2.
-$$
+```
 Rearrangement gives (C5.1), and (C5.2) is the case `|p-x|=1`. `\square`
 
 ---
@@ -602,13 +603,13 @@ Rearrangement gives (C5.1), and (C5.2) is the case `|p-x|=1`. `\square`
 ## 7. What Target C now is
 
 The new object is the nested geometry
-$$
+```math
 F(A)=\operatorname{conv}B_*
 =\operatorname{conv}V(C_*)
 \subseteq\operatorname{conv}A
 \subseteq\mathcal I_D(A).
 \tag{C6.1}
-$$
+```
 The first set has diameter exactly `D` and carries every KKT-active force.  At a right
 plateau endpoint, the last set is strictly covered by the open unit disks centered at
 **all** points of `A`.
@@ -628,14 +629,14 @@ relabeling of Target B: no rhombus, train, shell face count, or Oler surplus is 
 
 The exact obstruction exposed by this run is the coexistence of
 
-$$
+```math
 \boxed{
 \text{a same-diameter KKT force hull}
 \quad\text{and}\quad
 \text{a larger packing/covering geometry supported by universally force-free constraints}.
 }
 \tag{C6.2}
-$$
+```
 
 A proof must convert that coexistence into a strict sub-`D` replacement, or prove that
 for a large global minimizer the force-free part cannot exist at the required scale.
@@ -736,9 +737,9 @@ set difference `A\setminus F(A)`.
 Moving an isolated boundary point outward can make it a genuine diameter endpoint,
 but Lemma 5.2 forces its KKT diameter multiplier to remain zero in every stress as
 long as it stays contact-isolated.  Thus
-$$
+```math
 Q=\operatorname{Vert}(\operatorname{conv}A)
-$$
+```
 does not imply `B_+=Q` for any KKT stress.
 
 ### 11.2 Same-hull unit coverage is not the new discriminator

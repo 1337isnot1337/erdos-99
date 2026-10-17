@@ -18,10 +18,10 @@ The strict aggregate gap supplies `alpha=pi(2-sqrt(3))/20`, while the audited
 Section-118 moment profile supplies `S118`. Thus `q-k >= (S118+alpha)D-o(D)`.
 Section 172 supplies
 
-$$
+```math
 \liminf(b-\operatorname{per}(F))/D
 \ge(m/D+k/D-(\pi-S118-\alpha))_+-o(1).
-$$
+```
 
 The threshold `K0=pi-T0` is therefore used with the correct sign.
 
@@ -29,10 +29,10 @@ The threshold `K0=pi-T0` is therefore used with the correct sign.
 
 Under `m+k<K0D-o(D)`, one has `m<K0D-k+o(D)`. Since `q=(q-k)+k`,
 
-$$
+```math
 q-m\ge T0D+k-(K0D-k)-o(D)
  =(2T0-pi)D+2k-o(D).
-$$
+```
 
 This proves `e_BB/D >= 2T0-pi-o(1)`. It does not require a lower bound on `m`, and
 it does not reverse a liminf inequality.

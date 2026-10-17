@@ -80,10 +80,11 @@ No such step is proved here; the subquadratic-core branch remains separate.
 - [Audit.133](../audits/target_c_rhombus_bulk_separator_independent_audit_2026-10-08.md):
   any `R` actual rhombi in `I` yield at least `ceil(F(R))` vertex-disjoint
   contact paths to distinct actual attachments, where
-  $$
+  ```math
   F(R)={\sqrt{25+4cR}-5\over2c},\qquad c={8\pi\over\sqrt3}.
   \tag{CE1}
-  $$
+  
+  ```
 - The additional Type-II corollary in Section 6 uses
   [Section 80](../targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md)
   for rhombic saturation of `F` and
@@ -113,20 +114,20 @@ It defines two proper convex caps `C_+,C_-`.
 Choose the side containing at least half of the physical area of
 `G_0`. Let `eta` be signed unit-normal height, positive on that side.
 Then
-$$
+```math
 \operatorname{area}(G_0\cap C)\ge A_0/2,\qquad A_0=\operatorname{area}(G_0).
 \tag{CE2}
-$$
+```
 
 All face omissions below restrict the auxiliary grain complex; no
 source label or contact is changed. Omit every `G_0` rhombus meeting
 the chord line. Such a rhombus
 meets `[a,b]` and lies in its width-two tube. The tube area is at most
 `4D+4pi`; disjoint rhombus interiors give at most
-$$
+```math
 M\le{4D+4\pi\over a_0}
 \tag{CE3}
-$$
+```
 removed faces. Their area is at most `M`, since a unit rhombus has
 area at most one. The faces surviving wholly on the chosen side have
 total area at least `A_0/2-M >= A_0/3` eventually.
@@ -134,16 +135,16 @@ total area at least `A_0/2-M >= A_0/3` eventually.
 Deleting a face exposes at most four unit-edge boundary occurrences.
 The sum `P_1` of the surviving edge-connected component perimeters
 therefore satisfies
-$$
+```math
 P_1\le C_0D+4M=O(D).
 \tag{CE4}
-$$
+```
 For their areas `A_j`, isoperimetry gives
 `sum sqrt(A_j)<=P_1/(2sqrt(pi))`. Hence some one component has
-$$
+```math
 A_G\ge{4\pi(A_0/3)^2\over P_1^2}=\Omega(D^2).
 \tag{CE5}
-$$
+```
 Call it `G`. It is an epsilon-coherent subcomplex of the original
 grain, still in `I`, with perimeter at most `P_1`. Its closed faces
 lie in `int(C) intersect int(P)`. This proves the required cap/grain
@@ -152,10 +153,10 @@ extraction.
 Choose `a_* in A` maximizing `eta`, and put `H=eta(a_*)`. Convexity
 gives `eta<=H` on `P`, while `G` lies between heights zero and `H`.
 Every tangential slice of `F` has length at most `D`. Therefore
-$$
+```math
 A_G\le DH,\qquad H\ge A_G/D.
 \tag{CE6}
-$$
+```
 The maximum is positive, so `a_*` lies on the chosen force-hull arc
 between `a,b` and is an actual attachment of this same component.
 All `B` vertices lie outside `int(C)`.
@@ -163,11 +164,11 @@ All `B` vertices lie outside `int(C)`.
 ## 4. Deep complete grid and outside-region returns
 
 Set
-$$
+```math
 h={A_G\over8\pi D},\qquad s={A_G\over4D},\qquad
 W=C_{-h}\cap\{\eta\le H-s\}.
 \tag{CE7}
-$$
+```
 Keep only grain rhombi whose entire faces have distance greater than
 `h` from `partial C` and height strictly below `H-s`.
 
@@ -180,10 +181,10 @@ The convex set `W` has perimeter at most `pi D`. Every discarded
 face exposing a new retained boundary touches `partial W` and lies
 in its width-two tube. That tube has area at most `4pi(D+1)`.
 The sum `P_2` of the surviving component perimeters is bounded by
-$$
+```math
 P_2\le P(G)+{16\pi(D+1)\over a_0}=O(D).
 \tag{CE8}
-$$
+```
 The same square-root area argument gives one coherent retained
 component of quadratic area. Section 73 supplies a complete grid
 with shore sizes `u,v>=gamma D` in this component, hence entirely
@@ -197,10 +198,10 @@ For each path retain only the suffix after its last source vertex in
 endpoint, so that suffix has at least `ceil(h)-1` internal vertices.
 Every such internal vertex is in `I setminus W`. Disjointness is
 preserved. Consequently
-$$
+```math
 \boxed{|I\setminus W|\ge p\,(\lceil h\rceil-1)=\Omega(D^2).}
 \tag{CE9}
-$$
+```
 These vertices lie outside the entire cropped region, not only outside
 the crossing-rhombus vertex set. The last retained start need not be
 one of the original grid vertices.
@@ -222,11 +223,11 @@ argument still apply.
 No loaded endpoint lies in `int(P)`, because every member of `B`
 is an extreme vertex of `F`. All return paths lie in `I union A
 subset P`. Taking suffixes after their last visits to `W_0` now gives
-$$
+```math
 \boxed{\#\{x\in I:\operatorname{dist}(x,\partial P)<h_0\}
 \ge p_0\,(\lceil h_0\rceil-1)=\Omega(D^2)}
 \tag{CE10}
-$$
+```
 for `p_0=Omega(D)` disjoint paths. This is distinct source population
 in a specified cell boundary strip. It is not outside-cell population.
 

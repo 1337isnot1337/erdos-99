@@ -50,18 +50,18 @@ Let `A` be any planar global minimum-diameter unit-separated configuration, of
 diameter `D>16 sqrt(3)`. Triangles are allowed in the geometric results below.
 Let `K=conv A`, translate its circumcenter to zero, and set
 
-$$
+```math
 \eta=3^{1/4}\sqrt D,\qquad R_0=D/2+\eta,
 \qquad \mu=\sqrt{D\eta+\eta^2}.
 \tag{AG.1}
-$$
+```
 
 Section 155 gives
 
-$$
+```math
 K\subseteq B(0,R_0).
 \tag{AG.2}
-$$
+```
 
 Its proof uses full-source Oler/isodiametric saturation and Bonnesen, not the
 cardinality of the positive contact core. The same global information appears in
@@ -71,11 +71,11 @@ In particular `eta=O(D^(1/2))` and `mu=O(D^(3/4))=o(D)`.
 Choose any nonempty collection `J` of actual length-`D` source pairs. Write its
 endpoints as `E_J`, and put
 
-$$
+```math
 F_J=\operatorname{conv}E_J,\qquad
 P_J=\frac D2\operatorname{conv}\{\pm u_e:e\in J\},
 \tag{AG.3}
-$$
+```
 
 where `u_e` is either unit direction along edge `e`. Both hulls have diameter `D`.
 For a selected normalized KKT stress, take `J=H_+`; C10 identifies `F_J` with its
@@ -88,38 +88,38 @@ extension; in particular a segment of length `D` has perimeter `2D`.
 
 For every such source and collection `J`, simultaneously:
 
-$$
+```math
 \boxed{|(b+k)/2|\le\mu\quad(bk\in J),}
 \tag{AG.4}
-$$
+```
 
-$$
+```math
 \boxed{d_H(F_J,P_J)\le\mu,\qquad d_H(F_J,-F_J)\le2\mu,}
 \tag{AG.5}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{D/2\le R(F_J)\le D/2+\eta.}
 \tag{AG.6}
-$$
+```
 
 Every endpoint of `J` additionally satisfies
 
-$$
+```math
 D/2-\eta\le |b|\le D/2+\eta.
 \tag{AG.7}
-$$
+```
 
 ### Proof
 
 For `bk`, put `m=(b+k)/2` and orient `u=(b-k)/D`. Then
 `b=m+(D/2)u`, `k=m-(D/2)u`. The parallelogram identity gives
 
-$$
+```math
 |m|^2+D^2/4=(|b|^2+|k|^2)/2\le R_0^2,
-$$
+```
 
 proving AG.4. Thus each actual endpoint is within `mu` of its corresponding
 centered half-diameter vector, and conversely every generating half-diameter
@@ -147,17 +147,17 @@ finite source or force hull is not asserted.
 For every normalized KKT stress of the same source for which C10's reciprocal
 polygon is defined, its perimeter `P_*` satisfies
 
-$$
+```math
 \boxed{\frac{D^2}{D/2+\eta}\le P_*\le2D,}
 \tag{AR.1}
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{0\le2D-P_*\le\frac{4D\eta}{D+2\eta}<4\eta.}
 \tag{AR.2}
-$$
+```
 
 In particular `P_*/D -> 2`, uniformly over all normalized stresses along every
 unbounded sequence of global sources.
@@ -176,17 +176,17 @@ that the number of branching diameter edges is small.
 
 For two distinct source diameter pairs `bx,by`, their angle `theta` obeys
 
-$$
+```math
 \boxed{\sin(\theta/2)\le \min\{1,2\mu/D\}.}
 \tag{AS.1}
-$$
+```
 
 Thus, once `2mu<D`,
 
-$$
+```math
 \boxed{\theta\le2\arcsin(2\mu/D)=O(D^{-1/4}).}
 \tag{AS.2}
-$$
+```
 
 ### Proof
 
@@ -205,24 +205,24 @@ extend to `h=1` with `g_1=pi`.
 
 The centered polygon has the exact values
 
-$$
+```math
 \operatorname{per}(P)=2D\sum_i\sin(g_i/2),\qquad
 \operatorname{area}(P)=\frac{D^2}{4}\sum_i\sin g_i.
 \tag{AP.1}
-$$
+```
 
 Moreover
 
-$$
+```math
 |\operatorname{per}(F)-\operatorname{per}(P)|\le2\pi\mu,
 \tag{AP.2}
-$$
+```
 
-$$
+```math
 |\operatorname{area}(F)-\operatorname{area}(P)|
 \le\pi D\mu+\pi\mu^2.
 \tag{AP.3}
-$$
+```
 
 ### Proof
 
@@ -236,34 +236,34 @@ together with `per(F),per(P)<=pi D`, gives AP.3. QED.
 
 For `0<=g<=pi`,
 
-$$
+```math
 g-\sin g\le4\bigl(g-2\sin(g/2)\bigr).
 \tag{AP.4}
-$$
+```
 
 Indeed the difference of right and left sides is
 `f(g)=3g+sin g-8sin(g/2)`, with `f(0)=0` and
 `f'(g)=2(cos(g/2)-1)^2>=0`. Summing and using AP.1 yields
 
-$$
+```math
 \operatorname{area}(P)\ge D\operatorname{per}(P)-3\pi D^2/4.
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{\operatorname{area}(F)\ge D\operatorname{per}(F)-3\pi D^2/4
  -3\pi D\mu-\pi\mu^2.}
 \tag{AP.5}
-$$
+```
 
 In any normalized subsequential limit, writing `a=lim area(F)/D^2` and
 `p=lim per(F)/D`,
 
-$$
+```math
 \boxed{a\ge p-3\pi/4.}
 \tag{AP.6}
-$$
+```
 
 In particular `p=pi` forces `a=pi/4` and the limiting body is the disk, not
 an arbitrary body of constant width. This directly strengthens the geometric
@@ -279,11 +279,11 @@ finite geometric lemma is needed, not the report's later force-count hypotheses.
 
 Concavity of sine on `[0,pi]` gives
 
-$$
+```math
 \sum_i\sin g_i\ge(h-1)\sin\delta_D+
 \sin((h-1)\delta_D).
 \tag{AD.1}
-$$
+```
 
 For clarity, the feasible simplex has all but one gap at the lower bound at
 each extreme point. Its remaining gap is `pi-(h-1)delta_D`; the sine of this
@@ -292,20 +292,20 @@ point. This uses the entire projective circle, with no single-arc assumption.
 
 Therefore
 
-$$
+```math
 \boxed{\frac{\operatorname{area}(F)}{D^2}\ge
 \frac{(h-1)\sin\delta_D+\sin((h-1)\delta_D)}4
 -\frac{\pi\mu}{D}-\frac{\pi\mu^2}{D^2}.}
 \tag{AD.2}
-$$
+```
 
 If `h/D -> y`, then `0<=y<=pi`, and
 
-$$
+```math
 \boxed{\liminf\frac{\operatorname{area}(F)}{D^2}\ge
 \frac{y+\sin y}{4}.}
 \tag{AD.3}
-$$
+```
 
 The expression is increasing on `[0,pi]`.
 
@@ -313,12 +313,12 @@ The expression is increasing on `[0,pi]`.
 [DB report](target_c_post_zf_difference_body_perimeter_2026-09-09.md) hypotheses
 hold, then `liminf h/D>=2rho`, where `rho=cos rho` in `(0,1)`. Thus
 
-$$
+```math
 \boxed{\liminf\frac{\operatorname{area}(F)}{D^2}\ge
 A_{\rm int}:=\frac{2\rho+\sin(2\rho)}4
 =0.6184708847\ldots .}
 \tag{AD.4}
-$$
+```
 
 This improves PI's `0.4978566363...` floor by using the ambient global source,
 not by strengthening the standalone projective-circle statement. The error in
@@ -365,9 +365,9 @@ diameter edge and `alpha=D^2/N` to every unit contact. The cyclic vector sums
 verify KKT equilibrium and both normalizations directly. Each boundary reaction
 has length `4R cos^2(pi/(2N))/N`, so
 
-$$
+```math
 P_*=2D\cos(\pi/(2N)),\qquad P_*/D\longrightarrow2.
-$$
+```
 
 Yet converting its diameter graph into a matching requires deleting at least
 `(N+1)/2=Omega(D)` edges. This family is not certified globally optimal as

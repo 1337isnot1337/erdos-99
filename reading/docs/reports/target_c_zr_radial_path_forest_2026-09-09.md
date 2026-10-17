@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_radial_path_forest_2026-09-09.md) · source SHA-256 `745b9cdbc70a53b46cd422889048e93aed8ebc2b815fc615df3495da2b39b271`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-1D4D28B939FC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZRP: near-zero response forces almost all contact stress onto a radial path forest
 
@@ -19,18 +21,19 @@ ZRF shows that contacts whose radial progress exceeds `sqrt(3)/2` form a forest.
 
 Choose
 
-$$
+```math
 \boxed{c_*:=\cos(\pi/12)=\cos15^\circ.}
 \tag{1}
-$$
+```
 
 Call a unit contact `uv` **strongly radial** about `z` if
 
-$$
+```math
 \boxed{
 \bigl||u-z|-|v-z|\bigr|>c_*.
 }
 \tag{2}
+```
 
 Then every vertex other than `z` has strongly-radial degree at most two: at most one neighbor of smaller radius and at most one of larger radius. ZRF eliminates cycles. Hence every component avoiding `z` is a path, while the component containing `z` is a union of at most `deg_C(z)` outward paths meeting only at `z`.
 
@@ -44,43 +47,44 @@ C68 gives that the complementary contacts carry only `o(D^2)` stress when `D eps
 
 Fix a source vertex `v!=z` and put
 
-\[
+```math
 r=|v-z|.
-$$
+```
 
 Unit separation gives
 
-$$
+```math
 r\ge1.
 \tag{1.1}
-$$
+```
 
 Let `u` be a unit-contact neighbor with smaller radius and write
 
-$$
+```math
 d=r-|u-z|>c_*.
-$$
+```
 
 Let `n_in=(z-v)/r` be the inward radial unit vector. As in ZRF,
 
-$$
+```math
 n_{in}\cdot(u-v)
 =d+\frac{1-d^2}{2r}
 \ge d
 >c_*
 >\frac{\sqrt3}{2}.
 \tag{1.2}
-$$
+```
 
 Thus every strongly-radial edge from `v` to a smaller-radius neighbor lies within strictly less than `pi/6` of the same inward radial ray.
 
 Two such unit edges would meet at angle less than `pi/3`, forcing their other endpoints to have mutual distance less than one. Therefore
 
-$$
+```math
 \boxed{
 \text{at most one strongly-radial neighbor of }v\text{ has smaller radius.}
 }
 \tag{ZRP1}
+```
 
 ---
 
@@ -88,13 +92,13 @@ $$
 
 Now let `u` be a unit-contact neighbor with larger radius and put
 
-\[
+```math
 d=|u-z|-r>c_*.
-$$
+```
 
 Let `n_out=(v-z)/r` be the outward radial unit vector. The outward projection is
 
-$$
+```math
 \begin{aligned}
 n_{out}\cdot(u-v)
 &=
@@ -103,30 +107,30 @@ n_{out}\cdot(u-v)
  d-\frac{1-d^2}{2r}.
 \end{aligned}
 \tag{2.1}
-$$
+```
 
 For `r>=1` and `d>c_*`, the right side is strictly larger than
 
-$$
+```math
 c_*-\frac{1-c_*^2}{2}.
 \tag{2.2}
-$$
+```
 
 Numerically this is
 
-$$
+```math
 0.93243\ldots
 >
 0.86602\ldots
 =\frac{\sqrt3}{2}.
 \tag{2.3}
-$$
+```
 
 For an exact verification,
 
-$$
+```math
 c_*-\frac{1-c_*^2}{2}>\frac{\sqrt3}{2}
-$$
+```
 
 follows directly after substituting `c_*=cos(pi/12)`.
 
@@ -134,20 +138,22 @@ Therefore every strongly-radial edge from `v` to a larger-radius neighbor lies w
 
 Hence
 
-$$
+```math
 \boxed{
 \text{at most one strongly-radial neighbor of }v\text{ has larger radius.}
 }
 \tag{ZRP2}
+```
 
 Combining ZRP1 and ZRP2,
 
-\[
+```math
 \boxed{
 \deg_{C_{rad}}(v)\le2
 \qquad(v\ne z),
 }
 \tag{ZRP3}
+```
 
 where `C_rad` is the strongly-radial contact graph.
 
@@ -157,9 +163,9 @@ where `C_rad` is the strongly-radial contact graph.
 
 Because
 
-\[
+```math
 c_*>\sqrt3/2,
-$$
+```
 
 every strongly-radial edge is efficient in the sense of ZRF. ZRF.1 therefore says `C_rad` has no cycle.
 
@@ -171,9 +177,9 @@ Every connected component of `C_rad` not containing `z` is a simple path or an i
 
 The component containing `z` is a union of simple paths whose only common vertex is `z`. In fully force-visible C-II,
 
-$$
+```math
 \boxed{\deg_C(z)\le3,}
-$$
+```
 
 so at most three strongly-radial rays meet at `z`.
 
@@ -185,57 +191,60 @@ No KKT hypothesis is needed for the graph-theoretic part except the final degree
 
 For every contact outside `C_rad`,
 
-$$
+```math
 |r_u-r_v|\le c_*.
-$$
+```
 
 Its C68 radial defect is at least
 
-$$
+```math
 1-c_*^2
 =\sin^2(\pi/12)
 =:\sigma_* >0.
 \tag{4.1}
-$$
+```
 
 Therefore
 
-$$
+```math
 Q_z
 \ge
 \sigma_*
 \sum_{e\notin C_{rad}}\alpha_e.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \sum_{e\notin C_{rad}}\alpha_e
 \le
 \frac{Q_z}{\sigma_*}.
 }
 \tag{ZRP4}
+```
 
 C68 gives `Q_z<=C_0D^3 epsilon`. Thus under
 
-\[
+```math
 D\varepsilon\to0,
-$$
+```
 
-$$
+```math
 \boxed{
 \sum_{e\notin C_{rad}}\alpha_e=o(D^2).
 }
 \tag{ZRP5}
+```
 
 Since total contact stress is `D^2`,
 
-\[
+```math
 \boxed{
 \sum_{e\in C_{rad}}\alpha_e=D^2-o(D^2).
 }
 \tag{ZRP6}
+```
 
 So asymptotically all contact stress is carried by a disjoint collection of radial paths, with at most three such paths meeting at the C66 center.
 
@@ -245,18 +254,18 @@ So asymptotically all contact stress is carried by a disjoint collection of radi
 
 Since `C_rad` is a forest,
 
-\[
+```math
 |C_rad|\le v-1.
-$$
+```
 
 Exactly as in ZRF,
 
-$$
+```math
 |C\setminus C_{rad}|
 \ge e-v+1
 \ge v-h-1.
 \tag{5.1}
-$$
+```
 
 The stronger content of ZRP is geometric rather than cardinal: the high-stress support has no branching away from `z`.
 

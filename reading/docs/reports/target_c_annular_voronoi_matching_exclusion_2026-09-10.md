@@ -21,7 +21,7 @@ This report contains two new results.
 First, it proves a reusable finite packing theorem for the nonconvex region between
 two nested convex bodies:
 
-$$
+```math
 \boxed{
 |S|
 \le
@@ -32,28 +32,28 @@ $$
 \right)
 }
 \tag{AV.1}
-$$
+```
 
 for every pair of nested compact convex planar bodies `F subset K` and every finite
 unit-separated set
 
-$$
+```math
 S\subseteq K\setminus\operatorname{int}F.
-$$
+```
 
 Second, an adversarial simplification shows that AV is **not needed** to eliminate the
 post-ZF perfect-matching diameter branch.  The matching-branch theorem MB already says
 the force hull is tiled by `R` strict unit rhombi and
 
-$$
+```math
 R\le\frac{q^2}{16},
 \qquad
 q=\operatorname{per}F\le\pi D.
-$$
+```
 
 Since every unit rhombus has area at most one,
 
-$$
+```math
 \boxed{
 \operatorname{area}F
 \le R
@@ -61,11 +61,11 @@ $$
 =0.6168502750680849\ldots D^2.
 }
 \tag{M.1}
-$$
+```
 
 The newly merged FSDB theorem gives the opposite asymptotic inequality
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
@@ -74,17 +74,17 @@ A_{FS}
 =0.6184708847696858\ldots,
 }
 \tag{M.2}
-$$
+```
 
 where `rho=cos rho`.  The fixed gap
 
-$$
+```math
 \boxed{
 A_{FS}-\frac{\pi^2}{16}
 =0.00162060970160094\ldots>0
 }
 \tag{M.3}
-$$
+```
 
 excludes every unbounded perfect-matching post-ZF survivor sequence directly.
 
@@ -105,11 +105,12 @@ perfect matching, then:
 - every bounded contact face is a strict unit rhombus;
 - the force hull is tiled by those rhombi;
 - if `R` is the number of rhombi and `T` the train count, then
-  $$
+  ```math
   T=q/2,
   \qquad
   R\le T^2/4=q^2/16;
-  $$
+  
+  ```
 - `q=per(F)<=pi D`.
 
 Before FSDB, this did not contradict any universal force-hull area lower bound.  FSDB
@@ -151,77 +152,77 @@ By MB, the force hull `F` is a simply connected strict unit-rhombic disk.  Let `
 its number of rhombi and `T` its train count.  The rhombi have pairwise disjoint
 interiors and tile `F`, so
 
-$$
+```math
 \operatorname{area}F
 =
 \sum_{j=1}^{R}\operatorname{area}(\mathcal R_j).
 \tag{2.1}
-$$
+```
 
 A unit rhombus with angle `theta` has area `sin theta`, hence
 
-$$
+```math
 \operatorname{area}(\mathcal R_j)\le1.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{\operatorname{area}F\le R.}
 \tag{2.2}
-$$
+```
 
 MB also proves
 
-$$
+```math
 T=\frac q2,
 \qquad
 R\le\frac{T^2}{4}=\frac{q^2}{16}.
 \tag{2.3}
-$$
+```
 
 The same report proves `q=per(F)`.  Since `diam(F)=D`, Cauchy's
 perimeter--diameter inequality gives
 
-$$
+```math
 q=\operatorname{per}F\le\pi D.
 \tag{2.4}
-$$
+```
 
 Combining (2.2)--(2.4),
 
-$$
+```math
 \boxed{
 \operatorname{area}F
 \le\frac{\pi^2}{16}D^2.
 }
 \tag{2.5}
-$$
+```
 
 On the other hand, FSDB proves for every unbounded post-ZF survivor sequence
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 A_{FS}:=
 \frac{2\rho+\sin(2\rho)}4.
 \tag{2.6}
-$$
+```
 
 Numerically,
 
-$$
+```math
 A_{FS}=0.6184708847696858\ldots,
 \qquad
 \frac{\pi^2}{16}=0.6168502750680849\ldots,
-$$
+```
 
 and the exact expressions satisfy
 
-$$
+```math
 A_{FS}-\frac{\pi^2}{16}>0.
 \tag{2.7}
-$$
+```
 
 Hence (2.5) and (2.6) are incompatible along an unbounded sequence.  This proves the
 first statement.
@@ -266,16 +267,16 @@ any rattler analysis is needed.
 Let `F subset K` be compact convex subsets of the plane with nonempty interior.  Let
 `S` be a finite point set satisfying
 
-$$
+```math
 S\subseteq K\setminus\operatorname{int}F,
 \qquad
 |p-q|\ge1\quad(p\ne q\in S).
 \tag{3.1}
-$$
+```
 
 Then AV.1 holds:
 
-$$
+```math
 |S|
 \le
 \frac2{\sqrt3}
@@ -283,12 +284,12 @@ $$
 \operatorname{area}K-\operatorname{area}F
 +\operatorname{per}K+\operatorname{per}F+\pi
 \right).
-$$
+```
 
 More generally, if `U=K\setminus int(F)` and `U^{+1}` denotes its closed
 one-neighborhood, then
 
-$$
+```math
 \boxed{
 \operatorname{area}(U^{+1})
 \le
@@ -296,14 +297,14 @@ $$
 +\operatorname{per}K+\operatorname{per}F+\pi,
 }
 \tag{3.2}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{|S|\frac{\sqrt3}{2}\le\operatorname{area}(U^{+1}).}
 \tag{3.3}
-$$
+```
 
 ### Scope
 
@@ -319,36 +320,36 @@ Consider all unit-separated subsets of `R^2` containing `S`, ordered by inclusio
 The union of a chain is unit-separated, so Zorn's lemma gives a maximal
 unit-separated superset
 
-$$
+```math
 X\supseteq S.
 \tag{3.4}
-$$
+```
 
 If `x notin X` and every center of `X` were at distance at least one from `x`, then
 `X union {x}` would still be unit-separated.  Therefore maximality gives
 
-$$
+```math
 \boxed{
 \forall x\in\mathbb R^2\ \exists q\in X:\ |x-q|<1,
 }
 \tag{3.5}
-$$
+```
 
 with the trivial choice `q=x` when `x in X`.
 
 Unit separation makes `X` locally finite.  Let `V_p` be the closed Voronoi cell of
 `p in X`.  If `x in V_p`, choose `q` as in (3.5).  The Voronoi inequality gives
 
-$$
+```math
 |x-p|\le|x-q|<1,
-$$
+```
 
 except at a center itself where the conclusion is immediate.  Hence
 
-$$
+```math
 \boxed{V_p\subseteq\overline B(p,1).}
 \tag{3.6}
-$$
+```
 
 Every Voronoi cell is therefore bounded.
 
@@ -358,27 +359,27 @@ Mazel--Stuhl--Suhov prove that in a packing of open unit disks, equivalently cen
 separated by at least `2`, every bounded Voronoi cell has area at least `2sqrt(3)`.
 Scaling by `1/2` gives for our normalization
 
-$$
+```math
 \boxed{\operatorname{area}(V_p)\ge\frac{\sqrt3}{2}.}
 \tag{3.7}
-$$
+```
 
 The Voronoi cell interiors are disjoint.  For each original center `p in S`,
 `p in U` and (3.6) imply
 
-$$
+```math
 V_p\subseteq U^{+1}.
-$$
+```
 
 Therefore
 
-$$
+```math
 |S|\frac{\sqrt3}{2}
 \le
 \sum_{p\in S}\operatorname{area}(V_p)
 \le
 \operatorname{area}(U^{+1}),
-$$
+```
 
 which proves (3.3).
 
@@ -386,46 +387,46 @@ which proves (3.3).
 
 For `r>=0` write
 
-$$
+```math
 K^{+r}:=K+rB_2
-$$
+```
 
 and
 
-$$
+```math
 F_{-r}:=\{x\in F:\operatorname{dist}(x,\mathbb R^2\setminus F)\ge r\}.
 \tag{3.8}
-$$
+```
 
 Any point within distance one of `U=K\setminus int(F)` lies in `K^{+1}` and cannot
 lie in the interior of `F_{-1}`.  Up to null boundaries,
 
-$$
+```math
 U^{+1}\subseteq K^{+1}\setminus\operatorname{int}(F_{-1}).
 \tag{3.9}
-$$
+```
 
 Steiner's formula gives
 
-$$
+```math
 \operatorname{area}(K^{+1})
 =
 \operatorname{area}K+\operatorname{per}K+\pi.
 \tag{3.10}
-$$
+```
 
 For the inner parallel body, apply the coarea formula to the distance-to-boundary
 function on `F`.  The level sets are boundaries of convex inner parallel bodies for
 almost every depth, and convex perimeter is monotone under inclusion.  Hence the
 inner boundary strip of width one satisfies
 
-$$
+```math
 \boxed{
 \operatorname{area}F-\operatorname{area}(F_{-1})
 \le\operatorname{per}F.
 }
 \tag{3.11}
-$$
+```
 
 This also covers the case in which the erosion becomes empty before depth one.
 Combining (3.9)--(3.11) proves (3.2), and (3.2)+(3.3) prove AV. `square`
@@ -455,25 +456,25 @@ picture once FSDB is available.
 
 MB gives
 
-$$
+```math
 \liminf\frac{Z_{ext}}{D^2}
 \ge
 \Delta-\frac{\pi^2}{16}
 =0.2900494070490240\ldots.
 \tag{4.1}
-$$
+```
 
 All those points lie in `K\setminus F`.  AV, the isodiametric bound
 `area(K)<=pi D^2/4`, the two perimeter bounds `<=pi D`, and FSDB give
 
-$$
+```math
 \limsup\frac{Z_{ext}}{D^2}
 \le
 \frac2{\sqrt3}
 \left(\frac\pi4-A_{FS}\right)
 =0.1927510185016607\ldots.
 \tag{4.2}
-$$
+```
 
 Thus the annular route has a much larger quadratic contradiction margin
 `0.0972983885... D^2`.  It is retained as an independent verification of the branch
@@ -487,16 +488,16 @@ The post-ZF perfect-matching branch is closed.
 
 The exact branching identity remains
 
-$$
+```math
 2h-q=x_B+Q+2s_Z.
-$$
+```
 
 MFS rules out the zero left-hand side for all sufficiently large survivors.  This is
 qualitative; NB already proves the stronger linear lower bound
 
-$$
+```math
 \liminf\frac{2h-q}{D}\ge0.6099043189\ldots.
-$$
+```
 
 Therefore the highest-value use of MFS is not to improve that scalar constant.  It
 removes MB's entire external-shell branch from the structural ledger and frees future
@@ -504,9 +505,9 @@ work to focus on genuinely branching diameter graphs.
 
 The general C-II closing inequality remains
 
-$$
+```math
 \boxed{b+Q>2h}
-$$
+```
 
 or a strict sub-`D` competitor.
 
@@ -520,13 +521,10 @@ nonmatching branches.  A concrete target is:
 > **FSDB currency incompatibility.** Insert
 > 
 
-$$
-
+```math
 > A_{FS}=(2\rho+\sin2\rho)/4
 > 
-$$
-
-
+```
 > into the existing attachment-cell, outer-pocket, exceptional-face, and Dirichlet
 > detour inequalities, and prove that the simultaneously required lower bounds on
 > `x_B+Q+2s_Z` and `e_BB+2s_C` exceed their joint geometric capacity.
@@ -597,23 +595,23 @@ Only AV imports literature; MFS does not.
 No repository computation is a proof dependency.  The displayed constants are closed
 forms.  Decimal checks:
 
-$$
+```math
 A_{FS}=0.6184708847696858\ldots,
-$$
+```
 
-$$
+```math
 \frac{\pi^2}{16}=0.6168502750680849\ldots,
-$$
+```
 
-$$
+```math
 A_{FS}-\frac{\pi^2}{16}
 =0.00162060970160094\ldots,
-$$
+```
 
-$$
+```math
 \frac2{\sqrt3}\left(\frac\pi4-A_{FS}\right)
 =0.1927510185016607\ldots.
-$$
+```
 
 For canonical promotion, the sign in M.3 should be certified with a short interval or
 rational enclosure for the Dottie number rather than relying on printed decimals.

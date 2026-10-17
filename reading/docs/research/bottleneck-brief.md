@@ -7,8 +7,8 @@
 
 | Route | Strongest accepted working position | Exact missing obligation | First useful bounded step |
 | --- | --- | --- | --- |
-| A | Canonical through Section 177; exact locked tube/right-deficiency and zero-slack source localization | Source-specific $|O_{iso}|+\sum_i\max(0,|O_i|-|C_i|)\ge j_*+|T_Z|$, or actual global Schur deficiency / strict competitor | Derive all terms for one three-channel fan, retaining basis penalty and disjoint sinks |
-| B | Scoped phase cuts, coherent-family exclusion and GPI $\liminf\Delta\ge4\cdot10^{-17}\tau^2$ | Joint shell estimate with multi-grain virtual/interface payment and $(t+\chi-1)$ | Build a two-grain incidence/payment ledger before attempting a global sum |
+| A | Canonical through Section 177; exact locked tube/right-deficiency and zero-slack source localization | Source-specific $`|O_{iso}|+\sum_i\max(0,|O_i|-|C_i|)\ge j_*+|T_Z|`$, or actual global Schur deficiency / strict competitor | Derive all terms for one three-channel fan, retaining basis penalty and disjoint sinks |
+| B | Scoped phase cuts, coherent-family exclusion and GPI $`\liminf\Delta\ge4\cdot10^{-17}\tau^2`$ | Joint shell estimate with multi-grain virtual/interface payment and $`(t+\chi-1)`$ | Build a two-grain incidence/payment ledger before attempting a global sum |
 | C-II | Core rigidity, force/hull, harmonic/grid and finite scope reductions | Source-realized finite face move/restoration or arbitrary macroscopic-container capacity with every source label | Write one finite candidate with all lower/upper pair and population ledgers; test the known obstruction |
 
 These are research priorities, not theorem-success probabilities. Re-deriving an existing scoped bound is useful only as a genuinely independent audit or verifier. Locked stress does not imply global nullity; one-grain deficit does not imply shell stability; infinitesimal or bit feasibility does not imply finite full-source motion.
@@ -87,12 +87,12 @@ Recent current-source work includes a [formal joint stress/strain phase mechanis
 
 A stronger quantitative reserve is preserved as an **unreviewed candidate** in
 [source proposal #1008](../reports/population_reserve_independent_reconstruction_2026-10-15.md):
-for every global minimizer with $D>16384$,
-$g_A\ge\gamma D-\sqrt D/(4\sqrt2)-60$, and $g_A\ge D/600$ for
-$D\ge10^6$. It improves the order of the canonical population lower bounds
+for every global minimizer with $`D>16384`$,
+$`g_A\ge\gamma D-\sqrt D/(4\sqrt2)-60`$, and $`g_A\ge D/600`$ for
+$`D\ge10^6`$. It improves the order of the canonical population lower bounds
 if correct, but does not assume triangle-freeness and does not close the
 conjecture. Its precise Target C bridge is a uniform upper reserve bound
-$g_A\le cD+o(D)$, $c<\gamma$, for large triangle-free global minimizers,
+$`g_A\le cD+o(D)`$, $`c<\gamma`$, for large triangle-free global minimizers,
 or a source-specific strict-diameter replacement. The exact finite verifier is
 not a proof of the analytic all-radius argument or global optimality; see the
 [candidate registry](../../../docs/targets/target-c/candidate-registry.json).
@@ -144,7 +144,7 @@ incidence. All five candidate records remain unreviewed.
 ## Planar endpoints, colour lifts, and palettes
 
 Source PR #958 adds two linked global routes. Squared-distance interpolation
-gives a full-contact strict metric descent but has centered rank $n-1$;
+gives a full-contact strict metric descent but has centered rank $`n-1`$;
 triangle-free contact colouring gives a full-source strict descent in four
 dimensions, whose planar obstruction is explicit. The exact flattening
 criterion requires parallel-line colour classes in the two-colour case.

@@ -19,53 +19,53 @@ C66 proves that if the response trace defect is too small, almost all mechanical
 
 Let
 
-$$
+```math
 \varepsilon
 :=\sum_{b<k}c_{bk}-1
 =\frac12\operatorname{tr}(\Lambda-L_H),
-$$
+```
 
 where `c_bk=-Lambda_bk` are the response conductances, and for a diameter vertex `z` write
 
-$$
+```math
 S_z:=\sum_{zk\in H}\beta_{zk},
 \qquad
 \delta_z:=1-S_z.
-$$
+```
 
 Define the response mass not incident to `z` by
 
-$$
+```math
 X_z:=
 \sum_{\substack{b<k\\z\notin\{b,k\}}}c_{bk}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{X_z\le\delta_z+\varepsilon.}
 \tag{C70.1}
-$$
+```
 
 For the C66 star center,
 
-$$
+```math
 \boxed{
 X_z
 \le
 \left(1+\frac{2\pi}{\kappa_0}D\right)\varepsilon.
 }
 \tag{C70.2}
-$$
+```
 
 Hence
 
-$$
+```math
 D\varepsilon\to0
 \quad\Longrightarrow\quad
 X_z\to0.
 \tag{C70.3}
-$$
+```
 
 So the remaining near-zero phase is simultaneously
 
@@ -81,53 +81,53 @@ This is stronger than the old additive/internal-star regression. The remaining q
 
 Let
 
-$$
+```math
 d_b:=\sum_{k\ne b}c_{bk}
-$$
+```
 
 be the response degree at a loaded boundary vertex and
 
-$$
+```math
 s_b:=\sum_{bk\in H}\beta_{bk}
-$$
+```
 
 its mechanical diameter-load degree.
 
 C64 gives
 
-$$
+```math
 M:=\Lambda-L_H\succeq0.
-$$
+```
 
 Apply the singleton cut vector at `z`. Equivalently use the diagonal entry of `M`:
 
-$$
+```math
 \boxed{d_z\ge s_z=S_z.}
 \tag{C70.4}
-$$
+```
 
 The total response conductance is
 
-$$
+```math
 \sum_{b<k}c_{bk}=1+\varepsilon.
 \tag{C70.5}
-$$
+```
 
 Split this total into pairs incident and not incident to `z`:
 
-$$
+```math
 1+\varepsilon=d_z+X_z.
 \tag{C70.6}
-$$
+```
 
 Combining C70.4-C70.6 gives
 
-$$
+```math
 X_z
 =1+\varepsilon-d_z
 \le1+\varepsilon-S_z
 =\delta_z+\varepsilon.
-$$
+```
 
 This proves C70.1.
 
@@ -139,32 +139,32 @@ No circular-minor inequality is needed. C70 is the direct scalar consequence of 
 
 C66 gives a diameter vertex `z` satisfying
 
-$$
+```math
 S_z
 \ge
 1-C_0D\varepsilon,
 \qquad
 C_0:=\frac{2\pi}{\kappa_0}.
 \tag{C70.7}
-$$
+```
 
 Therefore
 
-$$
+```math
 \delta_z\le C_0D\varepsilon.
 \tag{C70.8}
-$$
+```
 
 Substitute C70.8 into C70.1:
 
-$$
+```math
 \boxed{
 X_z
 \le
 (C_0D+1)\varepsilon.
 }
 \tag{C70.9}
-$$
+```
 
 This is C70.2.
 
@@ -172,11 +172,11 @@ If `D epsilon ->0`, then both `delta_z` and `X_z` tend to zero.
 
 Moreover C70.4 and C70.5 give
 
-$$
+```math
 1-C_0D\varepsilon
 \le d_z\le1+\varepsilon,
 \tag{C70.10}
-$$
+```
 
 so the response star degree itself tends to one.
 
@@ -188,9 +188,9 @@ If `X_z=0` exactly, then the response graph on the loaded terminals has no condu
 
 Thus exact `X_z=0` would force every component of `C-z` to contain at most one loaded terminal other than `z`. Since the physical contact degree of a loaded vertex is at most three in C-II,
 
-$$
+```math
 \deg_C(z)\le3,
-$$
+```
 
 so there could be at most three other loaded terminals. This contradicts C34 for large `D`.
 
@@ -208,12 +208,12 @@ The old abstract near-star network regression does not settle this boundary-star
 
 For the same C66 center, C68 gives
 
-$$
+```math
 Q_z
 :=\sum_{ij\in C}\alpha_{ij}
 [1-(r_i-r_j)^2]
 \le C_0D^3\varepsilon.
-$$
+```
 
 Thus under `D epsilon ->0`:
 
@@ -229,25 +229,25 @@ The remaining phase can therefore be described without ambiguity as an approxima
 
 A sufficient next theorem is any bound of the form
 
-$$
+```math
 X_z\ge\frac{c}{D}
-$$
+```
 
 for every C-II force-visible contact network and every loaded terminal `z`, unless the configuration already contains a unit triangle.
 
 Combined with C70.9 this would imply
 
-$$
+```math
 (C_0D+1)\varepsilon\ge\frac cD,
-$$
+```
 
 which gives only `epsilon=Omega(D^-2)` and is not yet enough to contradict the C66 threshold. A stronger constant lower bound on `X_z`, or a direct relation between `X_z` and `Q_z`, would be preferable.
 
 More generally, if
 
-$$
+```math
 X_z\ge cD^{-a},
-$$
+```
 
 then C70 converts it into an explicit response-defect scale. The physical geometry and total conductance budget must determine the sharp exponent.
 

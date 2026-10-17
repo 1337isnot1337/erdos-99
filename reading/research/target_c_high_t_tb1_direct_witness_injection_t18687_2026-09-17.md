@@ -18,33 +18,33 @@ The Horn machinery is no longer needed to obtain a positive-density metric obstr
 
 Let
 
-$$
+```math
 s_0={791\over320{,}000{,}000}.
-$$
+```
 
 On the current one-sign branch, after the two-sign/WIDE-PAIR alternative has been excluded, the interface set `M_D` satisfies
 
-$$
+```math
 \boxed{
 |M_D|>
 \left({s_0\over2}-o(1)\right)D.
 }
 \tag{DI.1}
-$$
+```
 
 The exact-swap obstruction theorem gives every `i in M_D` a previously strict source pair `e_i` which becomes invalid at the exact contact swap of layer `R_i`. It is either
 
-$$
+```math
 1<|e_i|\le1+q_i
 \tag{DI.2}
-$$
+```
 
 or
 
-$$
+```math
 D-q_i\le|e_i|<D,
 \tag{DI.3}
-$$
+```
 
 with `q_i=O(D^{-1})` uniformly.
 
@@ -52,47 +52,47 @@ The new one-row LOWER theorem removes the only unbounded repetition mechanism. A
 
 Therefore one may choose the exact-swap witnesses so that, after deleting only `O(1)` interfaces,
 
-$$
+```math
 \boxed{
 i\ne j\Longrightarrow e_i\ne e_j.}
 \tag{DI.4}
-$$
+```
 
 Hence the source contains more than
 
-$$
+```math
 \boxed{
 \left({s_0\over2}-o(1)\right)D
 =
 (1.2359375\times10^{-6}-o(1))D
 }
 \tag{DI.5}
-$$
+```
 
 distinct exact-swap witness pairs. Splitting only once by metric type gives the direct dichotomy
 
-$$
+```math
 \boxed{
 \max\{N_L,N_U\}>
 \left({s_0\over4}-o(1)\right)D
 }
 \tag{DI.6}
-$$
+```
 
 with
 
-$$
+```math
 {s_0\over4}
 ={791\over1{,}280{,}000{,}000}
 =6.1796875\times10^{-7}.
 \tag{DI.7}
-$$
+```
 
 This is six times the pre-one-row `s0/24` equal-density Horn floor and four times the weaker `s0/16` Horn propagation recorded immediately after the one-row theorem. Those older statements remain valid but are no longer the strongest density route. Horn structure remains useful for directed dependency questions; it is unnecessary for the basic LOWER/UPPER population count.
 
 If UPPER wins, the existing flexible-scale Oler localization may be run directly on the injectively owned family. Its same-type localized coefficient becomes
 
-$$
+```math
 \boxed{
  c_{\rm dir}
  ={(s_0/4)\over6A_*}
@@ -100,41 +100,41 @@ $$
  =3.82269025889\ldots\times10^{-8},
 }
 \tag{DI.8}
-$$
+```
 
 where
 
-$$
+```math
 A_*={14\over3\sqrt3}.
-$$
+```
 
 If LOWER wins, every blocker has support depth exactly one and is the opposite diagonal of the unique strict unit rhombus on its support row. The global one-row ladder extraction then gives more than
 
-$$
+```math
 \boxed{
 \left({s_0\over8}-o(1)\right)D
 =(3.08984375\times10^{-7}-o(1))D
 }
 \tag{DI.9}
-$$
+```
 
 good one-row blocker gadgets. One fixed complete train belongs to the phase-pure transverse family of more than
 
-$$
+```math
 \boxed{
 (6.49770768665\ldots\times10^{-8}-o(1))D
 }
 \tag{DI.10}
-$$
+```
 
 of them, and a pairwise-distinct-row subfamily still has density more than
 
-$$
+```math
 \boxed{
 (3.24885384333\ldots\times10^{-8}-o(1))D.
 }
 \tag{DI.11}
-$$
+```
 
 ---
 
@@ -142,17 +142,17 @@ $$
 
 At interface `i`, write the exact contact swap as
 
-$$
+```math
 v_i=-q_iw_i,
 \qquad q_i=|a_i+b_i|>0.
-$$
+```
 
 The cone-collapse theorem gives
 
-$$
+```math
 q_i=O(D^{-1})
 \tag{DI.12}
-$$
+```
 
 uniformly over the one-sign population. The exact-swap obstruction theorem, using contact minimality at the second contact intersection, proves that some previously strict pair must hit one of the two metric boundaries at the exact swap. Thus one may choose a witness `e_i` satisfying (DI.2) or (DI.3) for every `i in M_D`.
 
@@ -164,39 +164,39 @@ Call these two possibilities LOWER and UPPER.
 
 Suppose one source pair `e` were a LOWER witness at interface `i` and an UPPER witness at interface `j`. Its original length `ell=|e|` would satisfy
 
-$$
+```math
 1<\ell\le1+q_i
-$$
+```
 
 and
 
-$$
+```math
 D-q_j\le\ell<D.
-$$
+```
 
 There is a fixed `Q` with `q_i,q_j<=Q/D` for all sufficiently large `D`. Hence repetition of different metric types would require
 
-$$
+```math
 D-{Q\over D}
 \le1+{Q\over D},
-$$
+```
 
 or
 
-$$
+```math
 D-1\le {2Q\over D},
-$$
+```
 
 which is false for all sufficiently large `D`.
 
 Therefore
 
-$$
+```math
 \boxed{
 \text{a repeated exact-swap witness must hit the same metric boundary at both interfaces.}
 }
 \tag{DI.13}
-$$
+```
 
 ---
 
@@ -206,12 +206,12 @@ Assume a source pair `e=xy` is a LOWER exact-swap witness at two distinct one-si
 
 The one-row LOWER classification proves more than short bandwidth: every LOWER exact-swap witness has exact selected-cut support depth one and is a diagonal of the unique strict unit rhombus on that support row. The same theorem combines this with the exact double-witness alignment and proves
 
-$$
+```math
 \boxed{
 N_{\rm repeated,LOWER}^{\rm exact}=0
 }
 \tag{DI.14}
-$$
+```
 
 for all sufficiently large `D`.
 
@@ -223,28 +223,28 @@ So no LOWER source pair can occur twice in the witness assignment.
 
 If a pair is an UPPER witness at two distinct one-sign interfaces, the exact double-witness theorem gives
 
-$$
+```math
 D-|e|=O(D^{-2})
-$$
+```
 
 and places its projective direction in an `O(D^{-1})` neighborhood of the common row line.
 
 The row-parallel almost-diameter packing theorem bounds the total number of source pairs with this geometry by `O(1)`. Therefore
 
-$$
+```math
 \boxed{
 N_{\rm repeated,UPPER}^{\rm exact}=O(1).
 }
 \tag{DI.15}
-$$
+```
 
 A source pair has only two endpoints and can be affected by translations of at most two physical layers. Thus the `O(1)` repeated UPPER pairs account for only `O(1)` witness-interface incidences beyond their first occurrences.
 
 Combining (DI.13)--(DI.15), the map
 
-$$
+```math
 i\longmapsto e_i
-$$
+```
 
 is injective after deleting `O(1)` members of `M_D`. This proves (DI.4)--(DI.5).
 
@@ -254,21 +254,21 @@ is injective after deleting `O(1)` members of `M_D`. This proves (DI.4)--(DI.5).
 
 Partition the distinct witnesses from (DI.5) into LOWER and UPPER sets. Then
 
-$$
+```math
 N_L+N_U>
 \left({s_0\over2}-o(1)\right)D.
 \tag{DI.16}
-$$
+```
 
 Therefore
 
-$$
+```math
 \max\{N_L,N_U\}
 >{1\over2}
 \left({s_0\over2}-o(1)\right)D
 =
 \left({s_0\over4}-o(1)\right)D,
-$$
+```
 
 which proves (DI.6).
 
@@ -280,34 +280,34 @@ Each witness keeps the interface at which it was selected as its owner. Because 
 
 Assume
 
-$$
+```math
 N_U>
 \left({s_0\over4}-o(1)\right)D.
 \tag{DI.17}
-$$
+```
 
 The flexible-scale UPPER localization proof uses only a linear family of distinct near-diameter blockers, injective owner coordinates, exact selected-cut interval support, the Oler path-row cap, and the global defect/terminal budgets. It does not require that the family was produced by the Horn graph.
 
 Thus substitute
 
-$$
+```math
 \delta_{\rm dir}:={s_0\over4}
-$$
+```
 
 for the former Horn input density. The latest Oler path-capacity form gives localized same-type coefficient
 
-$$
+```math
 {\delta_{\rm dir}\over6A_*}
 ={113\sqrt3\over5{,}120{,}000{,}000},
-$$
+```
 
 proving (DI.8).
 
 For every `L_D->infinity` with `L_D=o(D)`, one obtains either at least
 
-$$
+```math
 (c_{\rm dir}-o(1))L_D
-$$
+```
 
 SIGNED or THIN blockers on one low-defect selected row, or that many in one `2L_D+O(1)` low-cost path window. The existing `(0.6536-o(1))D` common train scaffold and circumcenter flanks are unchanged.
 
@@ -317,11 +317,11 @@ SIGNED or THIN blockers on one low-defect selected row, or that many in one `2L_
 
 Assume instead
 
-$$
+```math
 N_L>
 \left({s_0\over4}-o(1)\right)D.
 \tag{DI.18}
-$$
+```
 
 Every LOWER blocker has exact support one selected row. Injective owner coordinates imply that one support row is used by at most two blockers: its two possible owners are the adjacent path layers.
 
@@ -329,39 +329,39 @@ Let `F_k` be the full angular-defect cost on row `tau_k`. Charging `F_k` to ever
 
 Every good row has the standard phase-pure family
 
-$$
+```math
 |P(e)|>(0.6436-o(1))D.
-$$
+```
 
 The complete-train count is
 
-$$
+```math
 T_D<(T_*+o(1))D,
 \qquad T_*={6121\over2000}.
-$$
+```
 
 Averaging blocker/train incidences gives one fixed train on more than
 
-$$
+```math
 \left(
 {s_0\over8}{0.6436\over T_*}-o(1)
 \right)D
-$$
+```
 
 good blocker rows. The exact coefficient is
 
-$$
+```math
 {1{,}272{,}719\over19{,}587{,}200{,}000{,}000}
 =6.49770768665\ldots\times10^{-8},
-$$
+```
 
 which proves (DI.10).
 
 Since any support row occurs at most twice, retaining one of two row-disjoint color classes gives (DI.11) with exact coefficient
 
-$$
+```math
 {1{,}272{,}719\over39{,}174{,}400{,}000{,}000}.
-$$
+```
 
 ---
 

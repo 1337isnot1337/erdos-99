@@ -51,19 +51,19 @@ asymptotic density, or existence of one favorable minimizer per cardinality do n
 resolve the quantifiers.
 
 An important sharper input is [Target B Section 36.1](../targets/target-b/01-jammed-rhombic-branch.md):
-$$
+```math
 D(n)^2<\frac{2\sqrt3}{\pi}(n-1).
-$$
+```
 It is unconditional despite its route-specific file location. Shared Oler applied
 to all source points gives, for `K=conv(A)`, `P=per(K)`, `a_0=sqrt(3)/2`,
 `c_0=sqrt(3)/4`,
-$$
+```math
 \mathscr O_A=\operatorname{area}K+c_0P-a_0(n-1)\ge0.
-$$
+```
 Together with `delta_K=pi D^2/4-area(K)`, the strict lattice bound yields
-$$
+```math
 \delta_K+\mathscr O_A<c_0P.
-$$
+```
 This is an exact full-population contradiction target, not merely a leading-order
 density target. Writing its reverse does not prove it.
 
@@ -76,10 +76,10 @@ unit-tube sector balance. The [active A prompt](../prompts/erdos_problem_99_1.7.
 and shorter top-level navigation still emphasize Sections 163–167.
 
 The exact open inequality remains
-$$
+```math
 \operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda,
 \qquad d_{\rm sc}\ge\Delta_\Lambda.
-$$
+```
 In the locked branch, [Section 174](../targets/target-a/26-tube-shield-sector-balance.md)
 reduces this to proving that signed sector population surplus pays the entire
 nonterminal shield charge plus `s=Delta_Lambda-d_int`. Coordinate identification,
@@ -89,9 +89,9 @@ lemmas to rediscover.
 
 The [September 8 tube-only report](target_a_tube_only_cut_2026-09-08.md) is a
 useful unpromoted refinement:
-$$
+```math
 \zeta\ge t_\Sigma+\delta_\Sigma-|T_\Sigma|.
-$$
+```
 After audit it would suffice to prove
 `t_Sigma+delta_Sigma>=s+|T_Sigma|` for an admissible stress-generated shield.
 The zero-slack/descent branch still needs coverage. This report does not prove the
@@ -113,9 +113,9 @@ hypotheses. It does not show that every jammed survivor has a coherent core meet
 those coverage and near-extremality conditions.
 
 The exact sufficient shell inequality is
-$$
+```math
 G+E\ge\frac{\sqrt3}{4}B+\frac{\sqrt3}{2}(t+\chi-1).
-$$
+```
 The global-minimizer allowance is strictly smaller. Any proposed proof must control
 holes, exceptional faces, outside points, and active diameter constraints. An
 uncontrolled boundary-order loss may consume the entire useful margin. B is not a
@@ -152,10 +152,10 @@ is the only file in commit `3f37ef0`. It explicitly remains unpromoted.
 Its proof chain starts from Oler on the full source and the existing Bonnesen
 estimate, then uses containment of every selected force hull and KKT virial balance.
 It records
-$$
+```math
 R(K)=D/2+O(\sqrt D),\quad P_*=2D-O(\sqrt D),
 \quad\theta_{\text{shared diameter}}=O(D^{-1/4}),
-$$
+```
 uniformly over selected stresses and global sources, with no small-isolate premise.
 It also bounds diameter midpoints about one center and gives near radiality of the
 actual response on coordinate fields.
@@ -185,9 +185,9 @@ restoration of C53/C63 alone is not restoration of C56 or all downstream claims.
 
 With `v` core vertices, `e` contacts, and `h` actual diameter pairs, ZF gives
 `e+h>=2v-2`. Euler converts a possible contradiction into
-$$
+```math
 b+\sum_{F\text{ bounded}}(\deg F-4)>2h.
-$$
+```
 The outer walk counts multiplicity. This form keeps exceptional topology visible;
 a pure-disk exclusion cannot be silently extended to it.
 
@@ -200,10 +200,10 @@ weaker hypotheses; each proposed use must be checked separately.
 
 The [exact defect addendum](target_c_zf_exact_defect_budget_addendum_2026-09-09.md)
 resolves the surplus into finite nonnegative quantities:
-$$
+```math
 q=x_B+f+g_F+2d_H+2s_Z,
 \qquad c_I+e_{BB}+s_C=q-2+d_H+s_Z.
-$$
+```
 These identities say where a survivor spends its boundary and stress budget.
 They do not by algebra alone make the nonnegative mixed-row slack `s_Z` negative.
 
@@ -231,9 +231,9 @@ disk area `pi D^2/4`. Subsequent pocket, cavity, exact-defect, and finite-feedba
 reports improve exclusions of low pinned/contact surplus. The newest
 [Dirichlet/PI report](target_c_dirichlet_pi_feedback_surplus_04702_2026-09-09.md)
 reaches
-$$
+```math
 \liminf (e_{BB}+2s_C)/D\ge0.4702.
-$$
+```
 It explicitly says that further scalar iteration is insufficient without a new
 upper/global incompatibility. Accordingly the launch prompt makes constant chasing
 subordinate to a precise closing implication. None of these reports is promoted by

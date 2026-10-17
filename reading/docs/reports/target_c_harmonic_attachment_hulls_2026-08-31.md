@@ -18,23 +18,23 @@
 
 For an unpinned component `I_r` of `C[V(C)\setminus B_+]`, let
 
-$$
+```math
 A_r:=\{b\in B_+: \exists x\in I_r\text{ with }bx\in C\}
-$$
+```
 
 be its distinct loaded attachment vertices.
 
 Positive contact equilibrium makes both coordinate functions harmonic at every vertex of `I_r`. The discrete maximum principle gives
 
-$$
+```math
 \boxed{I_r\subseteq\operatorname{conv}A_r.}
-$$
+```
 
 One or two distinct attachment vertices are impossible; therefore
 
-$$
+```math
 \boxed{|A_r|\ge3.}
-$$
+```
 
 Moreover attachment sets of distinct components are noncrossing in the cyclic order on the force-hull boundary: there cannot be four distinct vertices `a,c in A_r`, `b,d in A_s` occurring as `a,b,c,d` cyclically.
 
@@ -44,11 +44,11 @@ Moreover attachment sets of distinct components are noncrossing in the cyclic or
 
 At every `x in I_r`, C26 gives zero positive diameter reaction, so
 
-$$
+```math
 \sum_{xy\in C}\alpha_{xy}(x-y)=0,
 \qquad \alpha_{xy}>0.
 \tag{C36.1}
-$$
+```
 
 Equivalently, `x` is a strict weighted average of its contact neighbors.
 
@@ -56,19 +56,19 @@ Fix a linear functional `ell`. Suppose `ell(x)` exceeds `max_{b in A_r}ell(b)` f
 
 Thus for every linear functional,
 
-$$
+```math
 ell(x)\le\max_{b\in A_r}\ell(b).
 \tag{C36.2}
-$$
+```
 
 The separating-hyperplane characterization of convex hulls gives:
 
 ### Theorem C36.1
 
-$$
+```math
 \boxed{V(I_r)\subseteq\operatorname{conv}A_r.}
 \tag{C36.3}
-$$
+```
 
 ---
 
@@ -80,10 +80,10 @@ If `|A_r|=2`, C36.3 places every component vertex on the line segment joining th
 
 ### Theorem C36.2
 
-$$
+```math
 \boxed{|A_r|\ge3.}
 \tag{C36.4}
-$$
+```
 
 This strengthens C35's three-edge attachment theorem to three distinct loaded pins.
 
@@ -109,10 +109,10 @@ Attachment sets may overlap at loaded vertices and may be nested; no interval or
 
 Let `a_r=|A_r|`. A loaded vertex can belong to at most `deg_C(b)` attachment sets, because each membership requires a distinct contact edge to that component. C35 gives `deg_C(b)<=3`. Therefore
 
-$$
+```math
 \boxed{3c_I\le\sum_r a_r\le3q.}
 \tag{C36.5}
-$$
+```
 
 The upper bound counts distinct attachment incidences, not contact edges.
 

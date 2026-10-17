@@ -23,59 +23,59 @@ Every point of `H` is at distance at most one from at least one of the eight bou
 
 Undo the common quarter-turn and let `u,v` be unit chord directions with angle `gamma`. Write `c_alpha=cos(alpha)`, `s_alpha=sin(alpha)`, and similarly for `beta`. The four transformed transition corners are
 
-$$
+```math
 \pm c_\alpha u\;\pm c_\beta v.
-$$
+```
 
 The other four transformed vertices are `+x,-x,+y,-y`, where
 
-$$
+```math
 x=c_\alpha u+s_\beta Jv,\qquad
 y=c_\beta v-s_\alpha Ju.
-$$
+```
 
 In the basis `u,v` these become
 
-$$
+```math
 x=(c_\alpha-s_\beta\csc\gamma)u+(s_\beta\cot\gamma)v,
 \qquad
 y=(s_\alpha\cot\gamma)u+(c_\beta-s_\alpha\csc\gamma)v.
-$$
+```
 
 The parameter interval gives `alpha,beta < pi/6` and `pi/3 < gamma < 2pi/3`, hence `sin(gamma)>sqrt(3)/2`, `|cot(gamma)|<1/sqrt(3)`, and `c_alpha,c_beta>sqrt(3)/2`. It follows that
 
-$$
+```math
 0<c_\alpha-s_\beta\csc\gamma<c_\alpha,
 \qquad |s_\beta\cot\gamma|<c_\beta,
-$$
+```
 
 and symmetrically `0<c_beta-s_alpha csc(gamma)<c_beta` and `|s_alpha cot(gamma)|<c_alpha`. Thus all four middle vertices lie strictly inside the parallelogram `P=conv{+/- c_alpha u +/- c_beta v}`. The transformed hull `H` is exactly `P`.
 
 The four middle vertices form a nondegenerate central diamond because
 
-$$
+```math
 x\mathbin\times y
 =\cos(\alpha-\beta)\{\sin\gamma-\sin(\alpha+\beta)\}>0.
-$$
+```
 
 This diamond, the four corner triangles, and the four side pockets between a chord side of `P` and its middle vertex partition `P`.
 
 Use the following covering fact. If points `v_i` lie in a disk of radius `r` about `o`, then their convex hull is covered by their radius-`r` disks. For `p=sum(lambda_i v_i)` with nonnegative coefficients summing to one,
 
-$$
+```math
 \sum_i\lambda_i|p-v_i|^2
 =\sum_i\lambda_i|v_i-o|^2-|p-o|^2\le r^2,
-$$
+```
 
 so at least one `v_i` is within distance `r` of `p`. If `r<1`, the cover is strict.
 
 For the central diamond, direct expansion gives
 
-$$
+```math
 |x|^2=c_\alpha^2+s_\beta^2-2c_\alpha s_\beta\sin\gamma,
 \qquad
 |y|^2=c_\beta^2+s_\alpha^2-2c_\beta s_\alpha\sin\gamma.
-$$
+```
 
 Both are at most one. If `alpha+beta>0`, both are strictly below one: for `beta>0`, `sin(beta)<2c_alpha sin(gamma)` because the right side is greater than `3/2` while `sin(beta)<1/2`; the expression for `|x|^2-1` is then `-s_alpha^2+s_beta(s_beta-2c_alpha sin(gamma))<0`. If `beta=0<alpha`, `|x|^2=c_alpha^2<1`. The argument for `y` is symmetric. The covering fact therefore gives a weak unit cover of the diamond, and a strict cover whenever it bows.
 

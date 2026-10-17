@@ -15,9 +15,9 @@
 
 Canonical C31 proves for every bridge block `X`
 
-$$
+```math
 \delta_X\le2q_X+k_X-2,
-$$
+```
 
 where `q_X=|B_+\cap X|`, `k_X` is bridge-tree degree, and `delta_X` is internal contact-graph diameter. The strictly positive KKT contact stress supplies additional left-kernel dependencies after the same pinning.
 
@@ -29,35 +29,35 @@ Let
 
 Then
 
-$$
+```math
 \boxed{e_X+k_X-p_X\ge2(m_X-q_X)+c_X}
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{\delta_X\le k_X+2q_X-p_X-c_X-2.}
-$$
+```
 
 Summed over all bridge blocks, with `delta_X=0` for singletons,
 
-$$
+```math
 \boxed{
 \sum_X\delta_X
 \le2|B_+|-2-\sum_X(p_X+c_X).}
-$$
+```
 
 For a nontrivial reaction-free block, `q_X=p_X=0` and `c_X=1`, so
 
-$$
+```math
 \delta_X\le k_X-3.
-$$
+```
 
 Triangle-free cyclicity gives `delta_X>=2`; therefore
 
-$$
+```math
 \boxed{k_X\ge5.}
-$$
+```
 
 This removes the reaction-free square-with-four-bridges regression left open by C28/C34.
 
@@ -67,24 +67,24 @@ This removes the reaction-free square-with-four-bridges regression left open by 
 
 Use the canonical C31 pinning: pin `B_+\cap X` and every source vertex outside `X`. Only
 
-$$
+```math
 U_X:=V(X)\setminus B_+
 \tag{C39.1}
-$$
+```
 
 moves. C31's contact-minimal straight-motion argument gives zero pinned expansive cone and therefore full column rank
 
-$$
+```math
 2(m_X-q_X).
 \tag{C39.2}
-$$
+```
 
 A contact row is identically zero on these columns exactly if it has no unpinned endpoint in `X`. Let `p_X` count these pinned-only rows. The number of effective rows is
 
-$$
+```math
 e_X+k_X-p_X.
 \tag{C39.3}
-$$
+```
 
 Let `U_{X,1},...,U_{X,c_X}` be the connected components of the induced contact graph on `U_X`.
 
@@ -94,11 +94,11 @@ Let `U_{X,1},...,U_{X,c_X}` be the connected components of the induced contact g
 
 At every `u in U_X`, C26 gives zero positive diameter reaction. KKT equilibrium is
 
-$$
+```math
 \sum_{uv\in C}\alpha_{uv}(u-v)=0,
 \qquad \alpha_{uv}>0.
 \tag{C39.4}
-$$
+```
 
 For each `U_{X,r}`, collect the effective rows incident to that component. Equation C39.4 gives a nonzero left-kernel vector with coefficients equal to the positive `alpha` values. Distinct unpinned components have disjoint effective row supports, so these `c_X` dependencies are independent.
 
@@ -106,27 +106,27 @@ Thus the left nullity is at least `c_X`, while the effective matrix has full col
 
 ### Theorem C39.1 — local self-stress row surplus
 
-$$
+```math
 \boxed{e_X+k_X-p_X\ge2(m_X-q_X)+c_X.}
 \tag{C39.5}
-$$
+```
 
 For a nontrivial block, Eppstein gives
 
-$$
+```math
 e_X\le2m_X-\delta_X-2.
 \tag{C39.6}
-$$
+```
 
 Combining yields:
 
 ### Theorem C39.2 — self-stress block diameter surplus
 
-$$
+```math
 \boxed{
 \delta_X\le k_X+2q_X-p_X-c_X-2.}
 \tag{C39.7}
-$$
+```
 
 ---
 
@@ -145,24 +145,24 @@ Thus C39.7 is valid for every bridge-block node under this convention.
 
 Let `N=|V(T)|`. Summing C39.7 gives
 
-$$
+```math
 \begin{aligned}
 \sum_X\delta_X
 &\le\sum_Xk_X+2\sum_Xq_X-\sum_Xp_X-\sum_Xc_X-2N\\
 &=2(N-1)+2|B_+|-\sum_X(p_X+c_X)-2N.
 \end{aligned}
-$$
+```
 
 Hence:
 
 ### Theorem C39.3 — global block-diameter self-stress deficit
 
-$$
+```math
 \boxed{
 \sum_X\delta_X
 \le2|B_+|-2-\sum_X(p_X+c_X).}
 \tag{C39.8}
-$$
+```
 
 This refines canonical C31's `O(D)` global block-diameter budget by an explicit nonnegative deficit.
 
@@ -172,23 +172,23 @@ This refines canonical C31's `O(D)` global block-diameter budget by an explicit 
 
 For a nontrivial reaction-free block,
 
-$$
+```math
 q_X=0,\quad p_X=0,\quad c_X=1.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{\delta_X\le k_X-3.}
 \tag{C39.9}
-$$
+```
 
 A nontrivial bridge block contains a cycle. Triangle-freeness makes the smallest cycle length four, hence its graph diameter is at least two. Therefore
 
-$$
+```math
 \boxed{k_X\ge5.}
 \tag{C39.10}
-$$
+```
 
 This improves C34's `k_X>=4` for reaction-free nontrivial blocks.
 

@@ -17,10 +17,10 @@
 
 Revised ZHC localizes the bridge-dominant near-zero phase into one unloaded harmonic component `I_*` with attachment set `A_*`. It contains an actual diameter pair `a,b in A_*` whose global contact bridge-tree route has
 
-$$
+```math
 L:=\ell(ab)\ge\eta D/2.
 \tag{1}
-$$
+```
 
 Every physical bridge on that route belongs to the closure of the same cell.
 
@@ -28,9 +28,9 @@ The first version of this report used C33 plus Eppstein to prove `|A_*|>=(L+3)/2
 
 Thus
 
-$$
+```math
 \boxed{|A_*|\ge L+1.}
-$$
+```
 
 C43 then makes the uniformly-short graph on `A_*` have independence number at most two, yielding an almost-perfect matching of uniformly-short pairs. C41 makes every such pair a strictly positive component-response pair.
 
@@ -40,19 +40,19 @@ C43 then makes the uniformly-short graph on `A_*` have independence number at mo
 
 Let `T` be the global contact bridge-block tree. Write the bridge-tree route between the blocks containing `a` and `b` as
 
-$$
+```math
 X_0,X_1,\ldots,X_L,
 \tag{1.1}
-$$
+```
 
 so the `L` tree edges between consecutive nodes are exactly the physical contact bridges separating `a` from `b`.
 
 Revised ZHC proves all these bridges belong to the component closure
 
-$$
+```math
 K_*:=I_*\cup A_*
 \tag{1.2}
-$$
+```
 
 with its component and attachment contact edges. Since `a,b in A_*`, connectedness of `I_*` supplies an `a--b` contact path `P` whose internal vertices all lie in `I_*`.
 
@@ -68,18 +68,18 @@ Fix an internal route node `X_i`, `1<=i<=L-1`.
 
 Then `X_i` contains at least one terminal of `B`. Because `P` passes through `X_i` but has no internal loaded terminal, it also contains a vertex
 
-$$
+```math
 x_i\in I_*\cap X_i.
-$$
+```
 
 The bridge block `X_i` is connected. Take a contact path inside `X_i` from `x_i` to any loaded terminal of the block, and let `t_i` be the **first** loaded terminal on that path.
 
 Every vertex before `t_i` is nonloaded and is connected to `x_i` without passing through `B`. Hence those vertices lie in the same component `I_*` of `C[V\setminus B]`. The last edge of the prefix is therefore an attachment contact from `I_*` to `t_i`, so
 
-$$
+```math
 \boxed{t_i\in A_*.}
 \tag{2.1}
-$$
+```
 
 Moreover `t_i` belongs to the route block `X_i`.
 
@@ -87,10 +87,10 @@ Moreover `t_i` belongs to the route block `X_i`.
 
 The route already uses two bridge-tree incidences at `X_i`. C26 excludes reaction-free degree-two bridge blocks, so
 
-$$
+```math
 \deg_T(X_i)\ge3.
 \tag{2.2}
-$$
+```
 
 Choose an incident bridge leading into an off-route component `U_i` of `T-X_i`.
 
@@ -98,10 +98,10 @@ C20 says both sides of every positive contact bridge contain loaded terminals. H
 
 Before `t_i`, the path contains no loaded vertex, so the entire prefix remains connected to `I_*` in `C[V\setminus B]`. Thus again the last edge is an attachment contact and
 
-$$
+```math
 \boxed{t_i\in A_*.}
 \tag{2.3}
-$$
+```
 
 This `t_i` lies in the off-route subtree `U_i`.
 
@@ -115,17 +115,17 @@ We have produced one distinct attachment for every one of the `L-1` internal rou
 
 ### Theorem ZHA.1 — exact attachment injection
 
-$$
+```math
 \boxed{|A_*|\ge L+1.}
 \tag{ZHA1}
-$$
+```
 
 For the revised ZHC route,
 
-$$
+```math
 \boxed{|A_*|\ge\frac{\eta D}{2}+1.}
 \tag{ZHA2}
-$$
+```
 
 This is stronger by a factor approaching two than the earlier Eppstein-only estimate.
 
@@ -137,26 +137,26 @@ The earlier argument remains a useful independent check.
 
 Let `m=|I_*|` and let `G_*` be the actual induced unit-contact graph on `I_* union A_*`. C33 gives at least
 
-$$
+```math
 |E_*|\ge2m+1
 \tag{3.1}
-$$
+```
 
 component contact rows. Every `a--b` path in `G_*` crosses the `L` global bridges, so its graph diameter `delta_*` is at least `L`.
 
 Eppstein gives
 
-$$
+```math
 |E(G_*)|\le2(m+|A_*|)-\delta_*-2.
 \tag{3.2}
-$$
+```
 
 Combining with `|E(G_*)|>=|E_*|>=2m+1` recovers
 
-$$
+```math
 |A_*|\ge\frac{L+3}{2}.
 \tag{3.3}
-$$
+```
 
 It is weaker than ZHA1 but uses a logically different route and catches bookkeeping errors in the bridge-tree injection.
 
@@ -166,56 +166,56 @@ It is weaker than ZHA1 but uses a logically different route and catches bookkeep
 
 Let `rho_0<1` be the canonical uniform anti-Reuleaux constant. Define the graph `S_*` on `A_*` by
 
-$$
+```math
 st\in E(S_*)
 \iff
 |s-t|\le\rho_0D.
 \tag{4.1}
-$$
+```
 
 C43 says every triple of source points contains a uniformly-short pair. Thus no three vertices of `A_*` are independent in `S_*`:
 
-$$
+```math
 \boxed{\alpha(S_*)\le2.}
 \tag{4.2}
-$$
+```
 
 Take a maximum matching `J_*` in `S_*`. It is maximal, so its unmatched vertices form an independent set. At most two remain unmatched. Therefore
 
-$$
+```math
 \boxed{|J_*|\ge\frac{|A_*|-2}{2}.}
 \tag{ZHA3}
-$$
+```
 
 Using ZHA1,
 
-$$
+```math
 \boxed{|J_*|\ge\frac{L-1}{2}.}
 \tag{ZHA4}
-$$
+```
 
 For the revised ZHC cell,
 
-$$
+```math
 \boxed{|J_*|\ge\frac{\eta D}{4}-\frac12.}
 \tag{ZHA5}
-$$
+```
 
 with integer rounding understood.
 
 Every `st in J_*` lies in the same attachment set `A_*`, so C41 strict component response gives
 
-$$
+```math
 \boxed{c_{st}^{(*)}>0,}
 \tag{ZHA6}
-$$
+```
 
 and by construction
 
-$$
+```math
 \boxed{|s-t|\le\rho_0D.}
 \tag{ZHA7}
-$$
+```
 
 The matching is terminal-disjoint.
 
@@ -225,47 +225,47 @@ The matching is terminal-disjoint.
 
 C41's normalized defect identity is
 
-$$
+```math
 \varepsilon
 =
 \sum_{u<v}c_{uv}
 \left(1-\frac{|u-v|^2}{D^2}\right).
 \tag{5.1}
-$$
+```
 
 Put
 
-$$
+```math
 \gamma_0=1-\rho_0^2>0.
 \tag{5.2}
-$$
+```
 
 For `st in J_*`, total response satisfies `c_st>=c_st^(*)` and the squared-distance deficit is at least `gamma_0`. Hence
 
-$$
+```math
 \boxed{
 \varepsilon
 \ge
 \gamma_0\sum_{st\in J_*}c_{st}^{(*)}.
 }
 \tag{ZHA8}
-$$
+```
 
 In the near-zero phase `D epsilon->0`,
 
-$$
+```math
 \boxed{
 \sum_{st\in J_*}c_{st}^{(*)}=o(1/D).
 }
 \tag{ZHA9}
-$$
+```
 
 Since `|J_*|=Omega_eta(D)`, the average component response on this terminal-disjoint uniformly-short matching is
 
-$$
+```math
 \boxed{o(1/D^2).}
 \tag{ZHA10}
-$$
+```
 
 Thus the same mechanically macroscopic cell simultaneously carries fixed exact-diameter response and an almost-perfect linear matching of uniformly-short channels whose conductances collapse quadratically on average.
 
@@ -275,24 +275,24 @@ Thus the same mechanically macroscopic cell simultaneously carries fixed exact-d
 
 For the ZHH macroscopic chain,
 
-$$
+```math
 L\ge\frac{\eta^2}{16\pi}D.
 \tag{6.1}
-$$
+```
 
 ZHA1 and ZHA4 improve the corresponding attachment and short-matching bounds to
 
-$$
+```math
 \boxed{|A_*|\ge\frac{\eta^2}{16\pi}D+1,}
 \tag{ZHA11}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{|J_*|\ge\frac{\eta^2}{32\pi}D-rac12.}
 \tag{ZHA12}
-$$
+```
 
 The ZHH cell therefore contains a linear attachment population and a linear uniformly-short matching at twice the coefficient supplied by the first Eppstein-only version.
 

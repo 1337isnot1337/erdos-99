@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_free_blockers_outer_face_2026-09-17.md) · source SHA-256 `1721617bdcad8bb58345373f1e0b09e62e76e2616fe2ea4b70e0b8bb5d64eaae`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "0d7d31e96d1b729b7e0cff86011f090f95deca65", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_free_blockers_outer_face_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "cbc570a87b7bf0aa8d98a241ad5cc94a60201d4e04322f3729af8abfcbcac850"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -18,9 +20,9 @@ The previous face-localization theorem allowed the reflection chain to lie eithe
 
 Every FREE upper blocker lies strictly outside the force hull
 
-$$
+```math
 F=\operatorname{conv}B,
-$$
+```
 
 where `B` is the complete actual-diameter endpoint set. The proof is one line of convexity: if a blocker `z` with `|z-q|>D` belonged to `F`, then some loaded vertex of `F` would be at least as far from `q`, creating a loaded blocker, forbidden by the FREE condition.
 
@@ -28,29 +30,29 @@ Therefore the root of the linear inactive chain starts outside `F`, hence in the
 
 For every fixed
 
-$$
+```math
 0<\lambda<\frac12,
-$$
+```
 
 a non-anchored FREE module thus forces an original fully inactive outer-face corridor of length
 
-$$
+```math
 \boxed{
 \left({\lambda\over1+h_*}-o(1)\right)D
 }
-$$
+```
 
 whose support-depth span is
 
-$$
+```math
 \boxed{\lambda D-O(\sqrt D),}
-$$
+```
 
 with every consecutive original distance in
 
-$$
+```math
 (1,1.3347479843\ldots+o(1)).
-$$
+```
 
 This removes the bounded-exceptional-face escape from the reflection branch and couples the survivor directly to the canonical outer-face / outer-walk geometry.
 
@@ -60,77 +62,78 @@ This removes the bounded-exceptional-face escape from the reflection branch and 
 
 Let `G` be the unique nonisolated positive contact core and let
 
-$$
+```math
 F=\operatorname{conv}V(G)=\operatorname{conv}B,
 \tag{OF.1}
-$$
+```
 
 where C65 makes `B` the complete set of actual source-diameter endpoints.
 
 Fix a FREE module with reflected apex `q` and blocker set
 
-$$
+```math
 U=\{z\in A:|z-q|>D\}.
-$$
+```
 
 The FREE theorem gives
 
-$$
+```math
 \deg_C(z)=\deg_H(z)=0
 \qquad(z\in U).
 \tag{OF.2}
-$$
+```
 
 Suppose, for contradiction, that some
 
-$$
+```math
 z\in U\cap F.
-$$
+```
 
 Because `F=conv B`, write
 
-$$
+```math
 z=\sum_{b\in B}\mu_b b,
 \qquad
 \mu_b\ge0,
 \qquad
 \sum_b\mu_b=1.
-$$
+```
 
 Convexity of the Euclidean norm gives
 
-$$
+```math
 |z-q|
 \le\sum_b\mu_b|b-q|
 \le\max_{b\in B}|b-q|.
 \tag{OF.3}
-$$
+```
 
 Since `|z-q|>D`, there exists
 
-$$
+```math
 b\in B
-$$
+```
 
 with
 
-$$
+```math
 |b-q|>D.
-$$
+```
 
 Thus `b in U`. But `b in B` is an actual diameter endpoint, so
 
-$$
+```math
 \deg_H(b)>0,
-$$
+```
 
 contradicting (OF.2).
 
 Hence
 
-$$
+```math
 \boxed{U\cap F=\varnothing.}
 \tag{OF.4}
+```
 
 This applies to every blocker, not only the canonical farthest head.
 
@@ -144,15 +147,16 @@ The straight-line embedding of `G` is planar. Its convex hull is `F`. Any point 
 
 By (OF.4), every blocker root
 
-\[
+```math
 z_0\in U
-$$
+```
 
 of the absorption parent forest lies outside `F`. Therefore
 
-$$
+```math
 \boxed{z_0\text{ lies in the outer face of }G.}
 \tag{OF.5}
+```
 
 ---
 
@@ -160,28 +164,30 @@ $$
 
 The linear inactive-chain theorem produces
 
-\[
+```math
 z_0,z_1,\ldots,z_\ell,
-$$
+```
 
 where `z_0 in U` and every parent edge satisfies
 
-$$
+```math
 |z_j-z_{j+1}|
 <1+h_*+o(1)
 <\sqrt3.
 \tag{OF.6}
+```
 
 The face-localization theorem proves that such an edge cannot cross any unit contact edge and cannot pass through a contact vertex. Therefore all chain vertices lie in one contact face.
 
 The root face is the outer face by (OF.5). Hence
 
-\[
+```math
 \boxed{
 \{z_0,\ldots,z_\ell\}
 \text{ and every parent segment lie in the outer contact face.}
 }
 \tag{OF.7}
+```
 
 The bounded exceptional-face alternative from the preceding face-localization theorem is absent in the FREE reflection setting.
 
@@ -191,47 +197,48 @@ The bounded exceptional-face alternative from the preceding face-localization th
 
 For every fixed `lambda<1/2`, the linear-chain theorem gives
 
-\[
+```math
 a_{z_0}=O(\sqrt D),
 \qquad
 a_{z_\ell}>\lambda D,
-$$
+```
 
 and
 
-$$
+```math
 \ell\ge
 \left({\lambda\over1+h_*}-o(1)\right)D.
-$$
+```
 
 Combining with (OF.7), the outer face contains a polygonal chain of old fully inactive source points whose support-depth span is
 
-$$
+```math
 \boxed{\lambda D-O(\sqrt D).}
 \tag{OF.8}
-$$
+```
 
 The chain starts outside the force hull and penetrates linearly far inward in the module support coordinate without crossing the positive contact network.
 
 For example, with `lambda=0.49`,
 
-$$
+```math
 \boxed{
 \ell\ge(0.3671105001\ldots-o(1))D,
 }
 \tag{OF.9}
+```
 
 while the support-depth span exceeds
 
-\[
+```math
 0.49D-O(\sqrt D).
-$$
+```
 
 As `lambda` tends to `1/2` from below, the chain-length coefficient approaches
 
-$$
+```math
 0.374602551093811\ldots .
-$$
+```
 
 ---
 

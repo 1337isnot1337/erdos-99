@@ -27,100 +27,100 @@ currency `Q-f` pays every exceptional face that is not a pentagon.
 
 Put
 
-$$
+```math
 X:=Q-f
-$$
+```
 
 and, for projective directions `[u],[v]` and a fixed
 
-$$
+```math
 0<\epsilon<\epsilon_5:=2\arcsin(1/10),
-$$
+```
 
 let `T_off(u,v;epsilon)` be the number of complete stopped trains whose projective
 direction lies outside both `epsilon`-windows.
 
 Then every canonical full-core Type-II survivor satisfies
 
-$$
+```math
 \boxed{
 X+2T_{off}(u,v;\epsilon)
 \ge (f_*-o(1))D,
 }
 \tag{GP.1}
-$$
+```
 
 for **every** pair `[u],[v]`, where
 
-$$
+```math
 f_*:=\sqrt{\Delta_2}-{\pi\over4}+0.00021
 =0.167124643466509\ldots,
 \qquad
 \Delta_2={\pi\over2\sqrt3}.
 \tag{GP.2}
-$$
+```
 
 Thus outer detour, singleton trains, and rhombic Mantel slack are not needed to force
 three-directional complexity.  In particular,
 
-$$
+```math
 \boxed{
 \max\left\{{Q-f\over D},{T_{off}(u,v;\epsilon)\over D}\right\}
 \ge {f_*\over3}-o(1)
 =0.055708214488836\ldots-o(1).
 }
 \tag{GP.3}
-$$
+```
 
 If `Q-f=o(D)`, then for every fixed pair of projective directions,
 
-$$
+```math
 \boxed{
 T_{off}(u,v;\epsilon)
 \ge\left({f_*\over2}-o(1)\right)D
 =0.083562321733254\ldots D-o(D).
 }
 \tag{GP.4}
-$$
+```
 
 ## 1. Degree excess pays all nonpentagons
 
 Let `n_d` be the number of bounded nonquadrilateral contact faces of degree `d>=5`.
 Then
 
-$$
+```math
 f=\sum_{d\ge5}n_d,
 \qquad
 Q=\sum_{d\ge5}(d-4)n_d,
-$$
+```
 
 so
 
-$$
+```math
 X=Q-f=\sum_{d\ge6}(d-5)n_d.
 \tag{GP.5}
-$$
+```
 
 Let
 
-$$
+```math
 p_5:=n_5,
 \qquad
 N_{\ge6}:=\sum_{d\ge6}n_d.
-$$
+```
 
 Every summand in (GP.5) for `d>=6` is at least one. Therefore
 
-$$
+```math
 N_{\ge6}\le X
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{p_5=f-N_{\ge6}\ge f-X.}
 \tag{GP.6}
-$$
+```
 
 No bounded-degree cutoff is used.
 
@@ -136,24 +136,24 @@ of the `p_5` pentagons.  These are distinct face-edge incidences.  A complete st
 train has exactly two terminal incidences in total, so one train can pay at most two of
 the chosen pentagons. Consequently
 
-$$
+```math
 \boxed{2T_{off}(u,v;\epsilon)\ge p_5.}
 \tag{GP.7}
-$$
+```
 
 Combining (GP.6) and (GP.7),
 
-$$
+```math
 X+2T_{off}(u,v;\epsilon)\ge f.
 \tag{GP.8}
-$$
+```
 
 The proof-only AG42/Section-171 face bootstrap gives
 
-$$
+```math
 {f\over D}\ge f_*-o(1),
 \tag{GP.9}
-$$
+```
 
 which proves (GP.1).
 
@@ -163,17 +163,17 @@ Equation (GP.1) has two useful forms.
 
 First, if both normalized currencies were strictly below `f_*/3`, then
 
-$$
+```math
 X+2T_{off}<f_*D,
-$$
+```
 
 contradicting (GP.1).  This proves (GP.3).
 
 Second, on any subsequence with `X=o(D)`, equation (GP.1) gives the sharper
 
-$$
+```math
 T_{off}\ge(f_*/2-o(1))D,
-$$
+```
 
 which is (GP.4).
 

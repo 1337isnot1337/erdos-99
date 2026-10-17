@@ -25,47 +25,47 @@ same cancellation in fact holds for **every** post-ZF topology.  The full
 
 Let
 
-$$
+```math
 a_0=\frac{\sqrt3}{2},
 \qquad
 c_0=\frac{\sqrt3}{4},
-$$
+```
 
 and let `F` be the force hull.  If `N_F` is the entire source population lying in `F`,
 including every contact-isolated point there, and
 
-$$
+```math
 E:=\sum_{R\text{ bounded quadrilateral face}}
 \left(\operatorname{area}R-a_0\right)\ge0,
-$$
+```
 
 then every post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 a_0N_F
 \le
 \operatorname{area}F+c_0\operatorname{per}F+a_0-E.
 }
 \tag{GR.1}
-$$
+```
 
 If `Z_ext=n-N_F` and
 
-$$
+```math
 \delta_F:=\frac{\pi D^2}{4}-\operatorname{area}F\ge0,
-$$
+```
 
 then the strict global lattice comparison gives
 
-$$
+```math
 \boxed{
 E+\delta_F
 <
 a_0Z_{ext}+c_0\operatorname{per}F.
 }
 \tag{GR.2}
-$$
+```
 
 Thus external fully inactive source points are exactly the obstruction preventing the
 cyclic boundary-order rhombus-defect transport from extending automatically to the
@@ -90,24 +90,24 @@ Use the audited post-ZF notation
 
 ZE gives exactly
 
-$$
+```math
 \boxed{b+Q=2(h-s_Z)=2(q-k).}
 \tag{1.1}
-$$
+```
 
 Euler and face incidence give in every connected plane contact core
 
-$$
+```math
 2m=2R_4+2f+b+Q+2.
 \tag{1.2}
-$$
+```
 
 Insert (1.1):
 
-$$
+```math
 \boxed{m=R_4+f+q-k+1.}
 \tag{1.3}
-$$
+```
 
 The cyclic CRE identity is the special case `k=0`; no cyclic topology is needed for
 (1.3).
@@ -118,64 +118,64 @@ The cyclic CRE identity is the special case `k=0`; no cyclic topology is needed 
 
 Let the exceptional faces be `F_i`, with
 
-$$
+```math
 r_i:=\deg(F_i)-4\ge1,
 \qquad
 \sum_i r_i=Q.
-$$
+```
 
 Let `z_i` be the number of contact-isolated source points in the interior of `F_i`.
 C51 makes every bounded contact face a strict convex unit-edge polygon, so Oler applies
 to its boundary vertices together with those `z_i` points:
 
-$$
+```math
 a_0(4+r_i+z_i-1)
 \le
 \operatorname{area}(F_i)+c_0(4+r_i).
-$$
+```
 
 Since `a_0=2c_0`, this is
 
-$$
+```math
 \boxed{
 \operatorname{area}(F_i)
 \ge a_0z_i+a_0+c_0r_i.
 }
 \tag{2.1}
-$$
+```
 
 Put
 
-$$
+```math
 Z_{def}:=\sum_i z_i,
 \qquad
 A_{exc}:=\sum_i\operatorname{area}(F_i).
-$$
+```
 
 Summing gives
 
-$$
+```math
 \boxed{A_{exc}\ge a_0(Z_{def}+f)+c_0Q.}
 \tag{2.2}
-$$
+```
 
 Every bounded quadrilateral is a strict unit rhombus, so if `A_4` is their total
 area,
 
-$$
+```math
 \boxed{A_4=a_0R_4+E.}
 \tag{2.3}
-$$
+```
 
 Let
 
-$$
+```math
 A_{bnd}=A_4+A_{exc}.
-$$
+```
 
 Use (1.3), (2.2), and (2.3):
 
-$$
+```math
 \begin{aligned}
 a_0(m+Z_{def})
 &=a_0R_4+a_0(f+Z_{def})+a_0(q-k)+a_0\\
@@ -183,7 +183,7 @@ a_0(m+Z_{def})
 &=A_{bnd}-E-c_0Q+a_0(q-k)+a_0.
 \end{aligned}
 \tag{2.4}
-$$
+```
 
 ---
 
@@ -192,38 +192,38 @@ $$
 Let `Z_in` be the contact-isolated source points lying in `F` but in the outer contact
 face, and put
 
-$$
+```math
 H_{out}:=\operatorname{area}F-A_{bnd}.
-$$
+```
 
 The general OP theorem, with no cyclic assumption, gives
 
-$$
+```math
 Z_{in}
 \le
 \frac1{a_0}H_{out}
 +\frac{\operatorname{per}F-b}{2}.
-$$
+```
 
 Multiplying by `a_0` and using `a_0/2=c_0`,
 
-$$
+```math
 \boxed{
 a_0Z_{in}
 \le H_{out}+c_0(\operatorname{per}F-b).
 }
 \tag{3.1}
-$$
+```
 
 Add (3.1) to (2.4).  The complete source population inside `F` is
 
-$$
+```math
 N_F=m+Z_{def}+Z_{in}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 a_0N_F
 &\le
@@ -233,24 +233,24 @@ a_0N_F
 +c_0\operatorname{per}F+a_0.
 \end{aligned}
 \tag{3.2}
-$$
+```
 
 Now use the exact general post-ZF identity (1.1):
 
-$$
+```math
 -c_0(Q+b)+a_0(q-k)
 =-2c_0(q-k)+2c_0(q-k)=0.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 a_0N_F
 \le
 \operatorname{area}F+c_0\operatorname{per}F+a_0-E.
 }
-$$
+```
 
 This proves GR.1.
 
@@ -262,39 +262,39 @@ The cancellation is the point: neither `d_H` nor `s_Z` leaves a remainder.
 
 Let
 
-$$
+```math
 Z_{ext}:=n-N_F.
-$$
+```
 
 The unconditional strict translated-lattice comparison for a global minimizer is
 
-$$
+```math
 \boxed{
 a_0(n-1)>\frac{\pi D^2}{4}.}
 \tag{4.1}
-$$
+```
 
 GR.1 gives
 
-$$
+```math
 a_0n
 \le
 \operatorname{area}F+c_0\operatorname{per}F+a_0-E+a_0Z_{ext}.
-$$
+```
 
 Subtract `a_0` and compare with (4.1):
 
-$$
+```math
 \frac{\pi D^2}{4}
 <
 \operatorname{area}F+c_0\operatorname{per}F-E+a_0Z_{ext}.
-$$
+```
 
 Rearrangement proves
 
 ### Theorem GR — general rhombus-excess transport
 
-$$
+```math
 \boxed{
 E+\left(\frac{\pi D^2}{4}-\operatorname{area}F\right)
 <
@@ -302,14 +302,14 @@ E+\left(\frac{\pi D^2}{4}-\operatorname{area}F\right)
 +rac{\sqrt3}{4}\operatorname{per}F.
 }
 \tag{GR.3}
-$$
+```
 
 Since `per(F)<=pi D`,
 
-$$
+```math
 \boxed{E+\delta_F<a_0Z_{ext}+\frac{\pi\sqrt3}{4}D.}
 \tag{GR.4}
-$$
+```
 
 ---
 
@@ -319,28 +319,28 @@ $$
 
 If
 
-$$
+```math
 Z_{ext}=o(D^2),
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \delta_F=o(D^2),
 \qquad
 E=o(D^2).
 }
 \tag{5.1}
-$$
+```
 
 Both terms are nonnegative and GR.4 has right side `o(D^2)`.
 
 Thus the old ER implication
 
-$$
+```math
 Z_{ext}=o(D^2)\Longrightarrow \operatorname{area}F/D^2\to\pi/4
-$$
+```
 
 strengthens to simultaneous near-isodiametricity **and** vanishing normalized rhombus
 angular-area defect.
@@ -349,16 +349,16 @@ angular-area defect.
 
 If
 
-$$
+```math
 Z_{ext}=O(D),
-$$
+```
 
 then
 
-$$
+```math
 \boxed{E+\delta_F=O(D).}
 \tag{5.2}
-$$
+```
 
 In particular a post-ZF representative with `Z_ext=0` has boundary-order total strict
 rhombus excess in every diameter topology, not only the cyclic Woodall branch.
@@ -367,21 +367,21 @@ rhombus excess in every diameter topology, not only the cyclic Woodall branch.
 
 For every `eta>0`, if
 
-$$
+```math
 \operatorname{area}F
 \le\left(\frac\pi4-\eta\right)D^2,
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 Z_{ext}
 >
 \frac{2}{\sqrt3}\left(\eta D^2+E-c_0\operatorname{per}F\right).
 }
 \tag{5.3}
-$$
+```
 
 The positive `E` term is absent from the previous external-rattler lower bound.
 

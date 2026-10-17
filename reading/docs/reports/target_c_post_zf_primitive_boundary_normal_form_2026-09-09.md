@@ -27,39 +27,39 @@ Let
 
 Then
 
-$$
+```math
 \boxed{x_B=m+u_B,}
 \tag{PN.1}
-$$
+```
 
-$$
+```math
 \boxed{e_{BB}=q-m+c_B,}
 \tag{PN.2}
-$$
+```
 
 and ZT gives
 
-$$
+```math
 \boxed{q=m+u_B+Q+2k.}
 \tag{PN.3}
-$$
+```
 
 The two main exact cancellations are
 
-$$
+```math
 \boxed{
 c_I+s_C+c_B=m+k-2,}
 \tag{PN.4}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \sum_r\delta_r+R_I+s_B+k
 =6+u_B+Q+2s_C+c_B.}
 \tag{PN.5}
-$$
+```
 
 Thus the entire post-ZF boundary/contact state can be parameterized without the composite variables `x_B` and `e_BB`.
 
@@ -69,35 +69,35 @@ Thus the entire post-ZF boundary/contact state can be parameterized without the 
 
 ZU gives
 
-$$
+```math
 c_I+e_{BB}+s_C=q-2+k.
 \tag{1.1}
-$$
+```
 
 Substitute PN.2:
 
-$$
+```math
 c_I+q-m+c_B+s_C=q-2+k.
-$$
+```
 
 Cancel `q` and rearrange:
 
-$$
+```math
 \boxed{c_I+s_C+c_B=m+k-2.}
-$$
+```
 
 This proves PN.4. `square`
 
 Every term on the left is nonnegative, so immediately
 
-$$
+```math
 \boxed{m+k\ge2.}
 \tag{PN.6}
-$$
+```
 
 More precisely,
 
-$$
+```math
 \boxed{
  c_I\le m+k-2,
 \quad
@@ -105,7 +105,7 @@ $$
 \quad
  c_B\le m+k-2.}
 \tag{PN.7}
-$$
+```
 
 This is stronger than treating these quantities as unrelated post-ZF currencies. The number of nonunit convex-hull sides and the mixed/diameter defect together pay for every unpinned contact component, every extra pinned-contact stress dimension, and every extra loaded-loaded contact chord.
 
@@ -115,15 +115,15 @@ This is stronger than treating these quantities as unrelated post-ZF currencies.
 
 ZK gives
 
-$$
+```math
 \sum_r\delta_r+R_I+s_B+3k
 =6+e_{BB}+2s_C.
 \tag{2.1}
-$$
+```
 
 Using PN.2 and PN.3,
 
-$$
+```math
 \begin{aligned}
 e_{BB}
 &=q-m+c_B\\
@@ -131,14 +131,14 @@ e_{BB}
 &=u_B+Q+2k+c_B.
 \end{aligned}
 \tag{2.2}
-$$
+```
 
 Substitute into ZK and cancel `2k` from both sides:
 
-$$
+```math
 \sum_r\delta_r+R_I+s_B+k
 =6+u_B+Q+2s_C+c_B.
-$$
+```
 
 This is PN.5. `square`
 
@@ -150,33 +150,33 @@ The striking feature is that `m` disappears completely from PN.5. The **count** 
 
 C35/ZK use
 
-$$
+```math
 s_B:=3q-e_{BI}-2e_{BB}\ge0.
-$$
+```
 
 Substituting PN.2 gives
 
-$$
+```math
 \boxed{
 e_{BI}+2c_B+s_B=q+2m.}
 \tag{PN.8}
-$$
+```
 
 Thus the contact-degree capacity left after paying the `q-m` unit hull sides is exactly `q+2m`.
 
 Equivalently,
 
-$$
+```math
 \boxed{e_{BI}\le q+2m-2c_B.}
 \tag{PN.9}
-$$
+```
 
 Since every unpinned component has at least three boundary contacts,
 
-$$
+```math
 \boxed{3c_I+2c_B\le q+2m.}
 \tag{PN.10}
-$$
+```
 
 PN.10 by itself is not closing, but it makes the local meaning of the variables explicit: a missing unit hull side releases two loaded contact-degree slots, while every extra loaded chord consumes two.
 
@@ -188,17 +188,17 @@ PN.6 says `m+k>=2`. Equality is rigid.
 
 Assume
 
-$$
+```math
 m+k=2.
 \tag{4.1}
-$$
+```
 
 Then PN.4 forces
 
-$$
+```math
 \boxed{c_I=s_C=c_B=0.}
 \tag{4.2}
-$$
+```
 
 Hence there are no unpinned vertices in the positive contact core, no extra pinned-contact stress dimensions, and no loaded-loaded contact chords beyond the unit hull sides. The complete positive contact core is therefore a subgraph of the convex hull cycle with exactly `q-m` unit side edges.
 
@@ -206,31 +206,31 @@ C12 gives connectedness of the positive contact core. A subgraph of a `q`-cycle 
 
 ### PN-E0: closed loaded shell
 
-$$
+```math
 \boxed{m=0,\qquad k=2.}
 \tag{4.3}
-$$
+```
 
 Then every force-hull side is a unit contact and
 
-$$
+```math
 C=C_q
-$$
+```
 
 on the nonisolated core.
 
 ### PN-E1: one-gap loaded path
 
-$$
+```math
 \boxed{m=1,\qquad k=1.}
 \tag{4.4}
-$$
+```
 
 Then exactly one force-hull side is nonunit, every other hull side is a unit contact, and
 
-$$
+```math
 C=P_q
-$$
+```
 
 on the nonisolated core.
 
@@ -250,16 +250,16 @@ This is a finite classification, not an asymptotic statement.
 
 If
 
-$$
+```math
 m+k=3,
-$$
+```
 
 then PN.4 gives
 
-$$
+```math
 \boxed{c_I+s_C+c_B=1.}
 \tag{5.1}
-$$
+```
 
 Exactly one of the following occurs:
 
@@ -275,35 +275,35 @@ This gives a complete discrete trichotomy at the first nontrivial primitive defe
 
 LH gives
 
-$$
+```math
 e_{BB}=Q+2k+u_B+c_B.
-$$
+```
 
 PN.4 supplies
 
-$$
+```math
 c_B=m+k-2-c_I-s_C.
-$$
+```
 
 Combining them yields the alternative exact form
 
-$$
+```math
 \boxed{
 e_{BB}
 =Q+u_B+m+3k-2-c_I-s_C.}
 \tag{PN.11}
-$$
+```
 
 This makes clear why the coarse currencies in KC are coupled: direct loaded-loaded contacts are not an independent resource once the primitive boundary topology is fixed.
 
 The exact terminal count PN.3 and contact count PN.11 together imply
 
-$$
+```math
 \boxed{
 e_{BB}-q
 =k-2-c_I-s_C.}
 \tag{PN.12}
-$$
+```
 
 Of course PN.12 is also a rearrangement of ZU; the primitive normal form explains its geometry. In particular, `e_BB>q` is possible only if the mixed/diameter defect exceeds the combined interior-component and pinned-stress budget by more than two.
 
@@ -313,9 +313,9 @@ Of course PN.12 is also a rearrangement of ZU; the primitive normal form explain
 
 LH also gives
 
-$$
+```math
 x_B=(\operatorname{per}F-q)+(b-\operatorname{per}F).
-$$
+```
 
 This does not turn `m` into a metric quantity with a uniform positive cost: a nonunit hull side can have length `1+o(1)`. PN therefore keeps `m` and `u_B` as separate integer currencies rather than replacing them by perimeter surplus.
 
@@ -329,10 +329,10 @@ This distinction is important for any stability proof near PN-E0/PN-E1.
 
 Here
 
-$$
+```math
 m=u_B=c_B=c_I=s_C=0,
 \qquad k=s_Z=2.
-$$
+```
 
 PN.4 gives `0=0`, and the configuration is exactly PN-E0.
 
@@ -340,10 +340,10 @@ PN.4 gives `0=0`, and the configuration is exactly PN-E0.
 
 Again
 
-$$
+```math
 m=u_B=c_B=c_I=s_C=0,
 \qquad k=d_H=2,
-$$
+```
 
 so the square is PN-E0, as required.
 
@@ -361,9 +361,9 @@ A nonunit hull side replaced by a two-edge unit path through an unpinned vertex 
 
 The post-ZF branch can now be organized by the primitive defect
 
-$$
+```math
 \boxed{p:=m+k=m+d_H+s_Z.}
-$$
+```
 
 rather than by several partially overlapping surpluses.
 

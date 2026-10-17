@@ -37,28 +37,28 @@ counting in PRs #603–607.
 Use the canonical full-core near-disk Type-II source and all its unloaded
 positive-contact components. For component `I_r`, retain
 
-$$
+```math
 H_r=C[I_r\cup A_r],\quad P_r=\operatorname{conv}A_r,\quad
 p_r=\operatorname{per}P_r,\quad L_r=|\text{outer walk of }H_r|,
-$$
+```
 
-$$
+```math
 Q_r=\sum_{f\text{ bounded in }H_r}(\deg f-4),\qquad
 Z_r=L_r-p_r.
-$$
+```
 
 The graph `H_r` includes actual loaded-loaded contacts on its vertices.
 `Q_r` is the induced-graph defect of Section 82, not the augmented `Q_r^+`
 of Section 123 and not a phase-cut subcomplex defect. Put
 
-$$
+```math
 Z_D=\sum_r Z_r,\qquad Q_D=\sum_r Q_r.
-$$
+```
 
 For every subsequence on which `Z_D/D -> z` and `Q_D/D -> q`, and every
 `0<epsilon<pi/8`, the new candidate theorem is
 
-$$
+```math
 \boxed{
 {\pi\over4}\le 5q+
 {\sqrt3\over6}(2\pi^2+z+5q)
@@ -66,26 +66,26 @@ $$
 +2\tan\epsilon\right].
 }
 \tag{1}
-$$
+```
 
 In particular, for `0<=z<=1/66`,
 
-$$
+```math
 \boxed{
 {\pi\over4}\le 5q+
 {\sqrt3\over6}(2\pi^2+z+5q)(66z)^{1/3}.
 }
 \tag{2}
-$$
+```
 
 Consequently every canonical full-core sequence satisfies
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}{Z_D+Q_D\over D}\ge {1\over26000}.
 }
 \tag{3}
-$$
+```
 
 No positive lower bound on `Z_D` alone is asserted. Exceptional-face defect
 can supply the cost. All contact-isolated source points remain in the source;
@@ -158,11 +158,11 @@ edges, with orientation from `a_i` to `a_{i+1}`, turn clockwise.
 
 The exact account is
 
-$$
+```math
 Z=L-p=\sum_i(\ell_i-d_i),\qquad
 \ell_i-d_i=\sum_{e\in W_i}(1-e\cdot t_i).
 \tag{4}
-$$
+```
 
 Every summand is nonnegative. This uses unit contact lengths and physical
 outer-walk occurrences.
@@ -186,10 +186,10 @@ multiplier floor.
 Different complete trains consume different physical terminal occurrences.
 Thus the number of bad ends in any selected family is at most
 
-$$
+```math
 Z/(1-\cos\epsilon).
 \tag{5}
-$$
+```
 
 ### 3.3 One train per good pair of banks
 
@@ -226,9 +226,9 @@ because each cell has perimeter at most `pi D`. By Section 3, at most
 
 For a short chord, its endpoint minor polar separation is at most
 
-$$
+```math
 2\arcsin(d_i/(2r_D))\le4\eta
-$$
+```
 
 for large `D`. Each force-hull support normal differs from its radial
 direction by at most `rho_D`. A short chord is the integral of tangents on
@@ -236,39 +236,39 @@ its short hull arc, all in the same small cone. If it has a good end from
 the family, both endpoints lie in the two polar bands centered at the
 transverse directions, each of half-width
 
-$$
+```math
 a_D=\epsilon+w+\rho_D+4\eta.
-$$
+```
 
 Except for at most one consecutive attachment gap (the gap exceeding `pi`),
 the corresponding short hull arcs are disjoint and lie in these bands.
 Projection along the family direction bounds their total length by
 
-$$
+```math
 {4R_D\sin a_D\over\cos(a_D+\rho_D)}.
-$$
+```
 
 The exceptional short chord contributes at most `eta D`. The number of
 short-bank good ends is at most this chord sum plus `Z`, by (4).
 Combining good-long pairs, bad ends, and good-short ends gives
 
-$$
+```math
 M\le {\pi^2\over2\eta^2}
 +\left(1+{1\over1-\cos\epsilon}\right)Z
 +\eta D+{4R_D\sin a_D\over\cos(a_D+\rho_D)}.
 \tag{6}
-$$
+```
 
 The constants are uniform in the component, its attachment count, the
 family's central direction, and the phase bin. In particular, if
 `Z_D/D -> z`, every such family in every component obeys
 
-$$
+```math
 {M\over D}\le
 \left(1+{1\over1-\cos\epsilon}\right)z
 +\eta+2\tan(\epsilon+w+4\eta)+o(1).
 \tag{7}
-$$
+```
 
 Here we used `Z_r<=Z_D`. We will use this *uniform maximum* in a graph
 sum, not sum the `eta D` error once for every component. This prevents an
@@ -285,10 +285,10 @@ near-disk property of each individual attachment polygon.
 If a simple triangle-free tripartite graph has part sizes `a,b,c<=M` and
 `N=a+b+c`, then
 
-$$
+```math
 \boxed{E\le\max\{a(b+c),b(a+c),c(a+b)\}\le {2M\over3}N.}
 \tag{8}
-$$
+```
 
 ### Proof
 
@@ -313,21 +313,21 @@ only the encoded graph hypotheses. QED.
 Take the full local strict-rhombus complex in each `H_r`. Its complete
 trains, including those through loaded rhombi, have total count
 
-$$
+```math
 T_D\le {1\over2}\sum_r(L_r+5Q_r)
 = {1\over2}\left(\sum_rp_r+Z_D+5Q_D\right).
 \tag{9}
-$$
+```
 
 Remove every train having an end on a bounded nonquadrilateral face.
 There are at most `5Q_D` such trains: each consumes a distinct physical
 boundary edge and the exceptional-face perimeter is at most `5Q_D`.
 The union of their incident rhombi has area at most
 
-$$
+```math
 5Q_D D.
 \tag{10}
-$$
+```
 
 Indeed each removed train's incident rhombic area is its exact transverse
 span, at most `diam(P_r)<=D`; summing spans overcounts overlaps, which is
@@ -355,12 +355,12 @@ Every counted rhombus has area `a_0+epsilon_R`, with
 subcollection, while cell disjointness bounds the full collection above
 by `area(F)=pi D^2/4+o(D^2)`. Thus (9)–(10) yield
 
-$$
+```math
 {\pi\over4}\le5q+{2a_0\over3}
 \limsup{M_D\over D}\,
 {2\pi^2+z+5q\over2}.
 \tag{11}
-$$
+```
 
 First let `D -> infinity`, at fixed `epsilon,w,eta`. Then let `eta -> 0`
 and then `w -> 0`, using the uniform bound (7). This gives (1).
@@ -378,20 +378,20 @@ their own exact roles.
 For `0<z<=1/66`, put `gamma=(66z)^(1/3)<=1` and
 `epsilon=gamma/3<pi/8`. Elementary Taylor bounds give
 
-$$
+```math
 \cos\epsilon\ge17/18,\quad
 1-\cos\epsilon\ge(107/216)\epsilon^2,\quad
 2\tan\epsilon\le(12/17)\gamma.
-$$
+```
 
 Consequently
 
-$$
+```math
 \left(1+{1\over1-\cos\epsilon}\right)z+2\tan\epsilon
 \le\left({2051\over7062}+{12\over17}\right)\gamma
 <\gamma.
 \tag{12}
-$$
+```
 
 The positive rational margin in the final coefficient is `443/120054`.
 For `z=0`, let `epsilon -> 0`. Equation (2) follows.
@@ -399,21 +399,21 @@ For `z=0`, let `epsilon -> 0`. Equation (2) follows.
 Suppose a subsequential limit has `u=z+q<=1/26000`. Then
 `z<=u<1/66` and
 
-$$
+```math
 {\pi\over4}\le5u+
 {\sqrt3\over6}(2\pi^2+6u)(66u)^{1/3}.
 \tag{13}
-$$
+```
 
 But `(137/1000)^3 > 66/26000`, while the elementary bounds
 `157/50<pi<22/7` and `sqrt(3)<26/15` give
 
-$$
+```math
 5u+{\sqrt3\over6}(2\pi^2+6u)(66u)^{1/3}
 \le {5\over26000}
 +{13\over45}\left(2(22/7)^2+{6\over26000}\right){137\over1000}
 < {157\over200}< {\pi\over4}.
-$$
+```
 
 The exact gap in the strict rational inequality is
 `84146693/28665000000`. Contradiction.

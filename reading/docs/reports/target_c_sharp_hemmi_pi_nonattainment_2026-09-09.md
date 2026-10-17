@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sharp_hemmi_pi_nonattainment_2026-09-09.md) · source SHA-256 `62862a380b4ea33956849dab0ae7b98a38ec4467f5c8756b85c7a0d56484dded`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 21 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-50BABAC43702","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — HKN: the sharp Hemmi/PI crossover threshold is uniformly unattainable
 
@@ -18,27 +20,27 @@
 
 HKS proves the explicit asymptotic lower bound
 
-$$
+```math
 \lambda:=\frac{e_{BB}+2s_C}{D}
 \ge
 \lambda_{HKS}-o(1),
 \qquad
 \lambda_{HKS}=0.4807218393889119189\ldots .
-$$
+```
 
 The crossover value is defined by
 
-$$
+```math
 p_c=3.0353123194039776374\ldots,
-$$
+```
 
-$$
+```math
 A_c
 :=
 \frac12\sin\frac{p_c}{2}
 =A_H(p_c)
 =0.4992941967756003210\ldots,
-$$
+```
 
 where `A_H` is the sharp first-branch Hemmi minimum-area function.
 
@@ -53,20 +55,21 @@ Compactness converts this incompatibility into a uniform positive surplus gap.
 
 There exists an absolute constant
 
-$$
+```math
 \boxed{\eta_H>0}
 \tag{HKN.1}
-$$
+```
 
 such that every sufficiently large audited post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
 \lambda_{HKS}+\eta_H.
 }
 \tag{HKN.2}
+```
 
 No explicit value of `eta_H` is claimed.
 
@@ -76,23 +79,25 @@ No explicit value of `eta_H` is claimed.
 
 Suppose for contradiction that there is an unbounded post-ZF survivor sequence with
 
-\[
+```math
 \lambda_j
 :=
 \frac{e_{BB,j}+2s_{C,j}}{D_j}
 \longrightarrow
 \lambda_{HKS}.
 \tag{1.1}
+```
 
 Pass to a subsequence on which
 
-\[
+```math
 p_j:=\frac{\operatorname{per}(F_j)}{D_j}\to p,
 \qquad
  y_j:=\frac{h_j}{D_j}\to y,
 \qquad
  t_j:=\frac{e_{BB,j}}{D_j}\to t.
 \tag{1.2}
+```
 
 HKS divides perimeter into three regimes:
 
@@ -102,9 +107,10 @@ HKS divides perimeter into three regimes:
 
 By continuity and strict monotonicity, (1.1) is possible only if
 
-\[
+```math
 \boxed{p=p_c.}
 \tag{HKN.3}
+```
 
 ---
 
@@ -112,46 +118,50 @@ By continuity and strict monotonicity, (1.1) is possible only if
 
 JC uses
 
-\[
+```math
 m_j:=\min\{y_j,p_j-y_j\}
 \le\frac{p_j}{2}.
 \tag{2.1}
+```
 
 At fixed area floor and perimeter, replacing `m_j` by `p_j/2` only enlarges the allowed cavity and therefore weakens the lower bound on `lambda`.
 
 At `p=p_c`, HKS's threshold equation is
 
-\[
+```math
 A_c-rac\pi4\lambda_{HKS}^2
 =
 \frac{(\lambda_{HKS}+p_c/2)^2}{4\pi}.
 \tag{2.2}
+```
 
 If along a subsequence
 
-\[
+```math
 m\le p_c/2-\xi
-$$
+```
 
 for some `xi>0`, the right side of the actual JC inequality would be smaller by a fixed amount. Since the left side is continuous and strictly decreasing in `lambda`, a fixed positive increase above `lambda_HKS` would be necessary, contradicting (1.1).
 
 Thus
 
-$$
+```math
 \boxed{m=p_c/2.}
 \tag{HKN.4}
+```
 
 But `0<=y<=p_c` and `min(y,p_c-y)=p_c/2` only when
 
-\[
+```math
 \boxed{y=p_c/2.}
 \tag{HKN.5}
+```
 
 So threshold approach forces
 
-\[
+```math
 \frac hD\to\frac{p_c}{2}.
-$$
+```
 
 ---
 
@@ -159,24 +169,26 @@ $$
 
 GU gives the attachment-cell area bound
 
-$$
+```math
 \sum_r\operatorname{area}(\operatorname{conv}A_r)
 \le
 \frac\pi4\lambda_j^2D_j^2+o(D_j^2).
 \tag{3.1}
+```
 
 The actual-perimeter JC cavity estimate and gap charging give
 
-\[
+```math
 G_j
 \le
 \frac{(t_j+\min\{y_j,p_j-y_j\})^2}{4\pi}D_j^2
 +o(D_j^2).
 \tag{3.2}
+```
 
 Since `t_j<=lambda_j`, add (3.1) and (3.2):
 
-\[
+```math
 \frac{\operatorname{area}(F_j)}{D_j^2}
 \le
 \frac\pi4\lambda_j^2
@@ -184,36 +196,39 @@ Since `t_j<=lambda_j`, add (3.1) and (3.2):
 \frac{(\lambda_j+p_j/2)^2}{4\pi}
 +o(1).
 \tag{3.3}
+```
 
 By HKN.3 and (1.1), the right side tends to `A_c` by (2.2). Therefore
 
-\[
+```math
 \limsup_j
 \frac{\operatorname{area}(F_j)}{D_j^2}
 \le A_c.
 \tag{3.4}
+```
 
 On the other hand, for all sufficiently large `j`, `p_j` lies in Hemmi's sharp first branch or arbitrarily close to its crossover neighborhood. HKS gives
 
-\[
+```math
 \frac{\operatorname{area}(F_j)}{D_j^2}
 \ge
 \max\left\{
 A_H(p_j),
 A_{PI}^*(p_j)-o(1)
 \right\},
-$$
+```
 
 and both lower floors converge to `A_c` as `p_j->p_c`.
 
 Hence
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}(F_j)}{D_j^2}
 \longrightarrow A_c.
 }
 \tag{HKN.6}
+```
 
 ---
 
@@ -221,25 +236,26 @@ $$
 
 Choose translations `x_j` and define
 
-\[
+```math
 K_j:=D_j^{-1}(F_j-x_j).
-$$
+```
 
 Then
 
-$$
+```math
 \operatorname{diam}(K_j)=1.
-$$
+```
 
 After translating into a fixed bounded region, Blaschke selection gives a Hausdorff-convergent subsequence
 
-$$
+```math
 K_j\to K_\infty.
 \tag{4.1}
+```
 
 Diameter, perimeter, and area are continuous for planar convex bodies under Hausdorff convergence. Therefore HKN.3 and HKN.6 give
 
-\[
+```math
 \boxed{
 \operatorname{diam}(K_\infty)=1,
 \qquad
@@ -248,6 +264,7 @@ Diameter, perimeter, and area are continuous for planar convex bodies under Haus
 \operatorname{area}(K_\infty)=A_c.
 }
 \tag{HKN.7}
+```
 
 Because `A_c=A_H(p_c)`, the limit body attains the sharp Hemmi minimum area for diameter one and perimeter `p_c`.
 
@@ -257,43 +274,44 @@ Because `A_c=A_H(p_c)`, the limit body attains the sharp Hemmi minimum area for 
 
 The sharp first-branch equality classification in Hemmi/Kripfganz says that for
 
-\[
+```math
 3<L/D<p_2,
-$$
+```
 
 the area-minimizing body is a six-sided Hemmi polygon. In the notation of HKS, its side lengths are
 
-$$
+```math
 2\sin\frac\alpha2
-$$
+```
 
 on three alternating sides and
 
-$$
+```math
 2\sin\left(\frac\pi6-\frac\alpha2\right)
-$$
+```
 
 on the other three, where
 
-$$
+```math
 \alpha\in(\pi/6,\pi/3)
-$$
+```
 
 for an interior perimeter `p in(3,p_2)`.
 
 Since
 
-$$
+```math
 p_c\in(3,p_2),
-$$
+```
 
 both side lengths are strictly positive. Thus every sharp Hemmi equality body at `p_c` has six genuine sides and six extreme vertices.
 
 Consequently HKN.7 implies
 
-$$
+```math
 \boxed{K_\infty\text{ is a genuine six-sided Hemmi equality body}.}
 \tag{HKN.8}
+```
 
 ---
 
@@ -301,15 +319,15 @@ $$
 
 For each `j`, let
 
-\[
+```math
 \phi_j
-$$
+```
 
 be the maximum projective angle between two actual diameter-edge directions.
 
 PI gives
 
-$$
+```math
 \phi_j
 \ge
 \min\left\{
@@ -317,53 +335,55 @@ $$
 \frac\pi2-\delta_{D_j}
 \right\},
 \tag{6.1}
+```
 
 where
 
-\[
+```math
 D_j\delta_{D_j}\to1.
-$$
+```
 
 Using HKN.5 and `p_c/2<pi/2`,
 
-$$
+```math
 \liminf\phi_j
 \ge
 \frac{p_c}{2}.
 \tag{6.2}
+```
 
 Choose two actual diameter edges realizing `phi_j`. After the normalization in Section 4, write their four endpoints as
 
-\[
+```math
 a_j,c_j,b_j,d_j\in K_j,
-$$
+```
 
 with
 
-$$
+```math
 |a_j-c_j|=|b_j-d_j|=1.
-$$
+```
 
 Pass to a further subsequence so all four endpoints converge:
 
-$$
+```math
 a_j\to a,
 \quad c_j\to c,
 \quad b_j\to b,
 \quad d_j\to d
-$$
+```
 
 in `K_infty`.
 
 Their limiting diameter segments have projective angle
 
-$$
+```math
 \phi_\infty\ge p_c/2.
-$$
+```
 
 The C67/PI two-diameter formula gives
 
-$$
+```math
 \operatorname{area}(\operatorname{conv}\{a,b,c,d\})
 =
 \frac12\sin\phi_\infty
@@ -371,23 +391,25 @@ $$
 \frac12\sin\frac{p_c}{2}
 =A_c.
 \tag{6.3}
+```
 
 But
 
-\[
+```math
 \operatorname{conv}\{a,b,c,d\}
 \subseteq K_\infty
-$$
+```
 
 and HKN.7 gives `area(K_infty)=A_c`. Therefore equality holds throughout (6.3):
 
-$$
+```math
 \boxed{
 K_\infty
 =
 \operatorname{conv}\{a,b,c,d\}.
 }
 \tag{HKN.9}
+```
 
 Indeed, if a compact convex body properly contains a full-dimensional compact convex polygon, the added point creates positive additional area. Since `A_c>0`, the endpoint hull is full-dimensional.
 
@@ -405,9 +427,10 @@ Contradiction.
 
 Therefore no unbounded post-ZF survivor sequence can satisfy
 
-\[
+```math
 \lambda_j\to\lambda_{HKS}.
 \tag{7.1}
+```
 
 This proves strict nonattainment of the HKS scalar threshold.
 
@@ -417,23 +440,23 @@ This proves strict nonattainment of the HKS scalar threshold.
 
 HKS already proves the universal asymptotic lower bound
 
-\[
+```math
 \liminf\lambda_j\ge\lambda_{HKS}
-$$
+```
 
 for every unbounded survivor sequence.
 
 If HKN.2 failed for every `eta_H>0`, then for each integer `m` one could choose a sufficiently large post-ZF survivor with
 
-$$
+```math
 \lambda<\lambda_{HKS}+\frac1m.
-$$
+```
 
 Choosing diameters increasingly large and using the HKS lower bound produces a diagonal sequence with
 
-$$
+```math
 \lambda_j\to\lambda_{HKS},
-$$
+```
 
 contradicting Sections 1–7.
 

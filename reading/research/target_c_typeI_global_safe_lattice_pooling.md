@@ -33,15 +33,15 @@ Let `F` be the force hull and `K=conv(A)` the full source hull.
 
 Inside `F`, let
 
-$$
+```math
  S_F=\bigcup_j S_j
-$$
+```
 
 be the union of the safe regions from the aggregate inactive-chamber theorem, and let
 
-$$
+```math
  Z_F:=Z_{ch}=N_F-m
-$$
+```
 
 be all contact-isolated source points assigned to those chambers.
 
@@ -50,16 +50,16 @@ If the Type-I alternative is the genuine exterior-cap branch of Sections 80/162,
 assigned contact-isolated source set, of cardinality `z_E`. Audited-working Section 165
 defines
 
-$$
+```math
  C_{E,-1}:=\{x\in C_E:dist(x,partial C_E)>1\}.
 \tag{1.1}
-$$
+```
 
 Put
 
-$$
+```math
  S_E:=C_{E,-1}.
-$$
+```
 
 If there is no selected exterior cap, set `S_E=emptyset` and `z_E=0`.
 
@@ -69,10 +69,10 @@ Their boundaries are irrelevant for area and lattice counting.
 
 Define the pooled safe region
 
-$$
+```math
  S_{all}:=S_F\cup S_E.
 \tag{1.2}
-$$
+```
 
 ---
 
@@ -80,9 +80,9 @@ $$
 
 Let `Lambda` be the unit triangular lattice, of covolume
 
-$$
+```math
  a_0={\sqrt3\over2}.
-$$
+```
 
 For every translate `Lambda+t`, every two distinct points of
 `(Lambda+t) cap S_all` have distance at least one, even if they lie in different
@@ -90,13 +90,13 @@ inactive regions.
 
 Translation averaging gives
 
-$$
+```math
  \boxed{
  \max_t |(\Lambda+t)\cap S_{all}|
  \ge\left\lfloor{area(S_{all})\over a_0}\right\rfloor.
  }
 \tag{2.1}
-$$
+```
 
 The advantage is structural: the internal chamber system and the exterior cap share
 one lattice phase and one integer floor.
@@ -117,13 +117,13 @@ regions.
 
 If
 
-$$
+```math
  \boxed{
  \left\lfloor{area(S_{all})\over a_0}\right\rfloor
  \ge Z_F+z_E+\tau(H),
  }
 \tag{3.1}
-$$
+```
 
 then the source is not a global diameter minimizer.
 
@@ -132,10 +132,10 @@ then the source is not a global diameter minimizer.
 Choose one lattice translate with at least the right-hand side of (3.1) points in
 `S_all`, retain exactly that many, and call the resulting set `Y`. Define
 
-$$
+```math
  A':=(A\setminus(Z_F\cup Z_E\cup U))\cup Y.
 \tag{3.2}
-$$
+```
 
 Pairwise disjointness of the deleted sets gives `|A'|=|A|`.
 
@@ -168,34 +168,34 @@ The competitor need not remain triangle-free.
 
 The aggregate internal-chamber theorem proves
 
-$$
+```math
  {area(S_F)\over a_0}-Z_F\ge\Xi,
 \tag{4.1}
-$$
+```
 
 with
 
-$$
+```math
  \Xi=R_F
  -\kappa_*L_c
  -\lambda_*L_{add}
  -C_*f
  -\eta_*a.
 \tag{4.2}
-$$
+```
 
 For the selected genuine exterior cap define its **real protected lattice spare**
 
-$$
+```math
  \Psi_E:={area(C_{E,-1})\over a_0}-z_E.
 \tag{4.3}
-$$
+```
 
 Set `Psi_E=0` when no exterior cap is selected.
 
 Because `Z_F+z_E` is an integer,
 
-$$
+```math
 \begin{aligned}
  \left\lfloor{area(S_{all})\over a_0}\right\rfloor-(Z_F+z_E)
  &=\left\lfloor
@@ -205,28 +205,28 @@ $$
  &\ge\lfloor\Xi+\Psi_E\rfloor.
 \end{aligned}
 \tag{4.4}
-$$
+```
 
 Hence the finite closing criterion is
 
-$$
+```math
  \boxed{
  \Xi+\Psi_E\ge\tau(H)
  \quad\Longrightarrow\quad
  \text{strict global diameter contradiction}.
  }
 \tag{4.5}
-$$
+```
 
 Every surviving Type-I configuration therefore satisfies
 
-$$
+```math
  \boxed{
  \Xi+\Psi_E<\tau(H)
  \le\left\lceil{q\over2}\right\rceil.
  }
 \tag{4.6}
-$$
+```
 
 The second inequality is audited-working Section 165's Woodall cover bound.
 
@@ -241,9 +241,9 @@ spare.
 
 Section 165's lattice baseline for the exterior cap uses only
 
-$$
+```math
  area(C_{E,-1})/a_0.
-$$
+```
 
 The pooled theorem adds all usable force-hull chamber area before lattice translation.
 It does not require separate integer packings in the two regions and therefore loses
@@ -259,9 +259,9 @@ pooling of otherwise disjoint inactive capacity.
 
 The full Type-I branch would close if canonical container geometry forced
 
-$$
+```math
  \Xi+\Psi_E\ge\tau(H)
-$$
+```
 
 in the exterior-cap case and `Xi>=tau(H)` in the internal case.
 

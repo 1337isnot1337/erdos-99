@@ -14,23 +14,23 @@
 
 The current explicit post-ZF bound from GS is
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}
 \ge0.4647922503\ldots .
-$$
+```
 
 OD supplies an independent geometric restriction on the same near-threshold cavity regime: quadratic outer-pocket area requires a linear excess of the unit-contact outer-walk length over the true force-hull perimeter.
 
 Combining OD with the actual-perimeter form of JC gives the clean explicit improvement
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
 \ge0.465.
 }
 \tag{DE.1}
-$$
+```
 
 No quantitative constant-width stability theorem is needed for DE.1.  The gain over GS is small but rigorous, and the derivation exposes a new scalar `R(lambda)` measuring how close any near-threshold survivor must be simultaneously to `h/D=pi/2` and `per(F)/D=pi`.
 
@@ -40,14 +40,14 @@ No quantitative constant-width stability theorem is needed for DE.1.  The gain o
 
 Along an arbitrary unbounded post-ZF survivor sequence, pass to a subsequence on which
 
-$$
+```math
 \lambda
 :=\lim\frac{e_{BB}+2s_C}{D}
-$$
+```
 
 exists.  If necessary pass further so the bounded normalized quantities below also converge. Put
 
-$$
+```math
 t:=\lim\frac{e_{BB}}D,
 \qquad
 y:=\lim\frac hD,
@@ -56,36 +56,36 @@ p:=\lim\frac{P_F}D,
 \qquad
 u:=\lim\frac QD,
 \tag{DE.2}
-$$
+```
 
 where `P_F=per(F)`. Then
 
-$$
+```math
 0\le t\le\lambda,
 \qquad 0\le p\le\pi.
 \tag{DE.3}
-$$
+```
 
 Also `P_F>=q>=h`, because the `q` consecutive hull sides are unit-separated and `h<=q`. Hence
 
-$$
+```math
 0\le y\le p.
 \tag{DE.4}
-$$
+```
 
 PI gives
 
-$$
+```math
 A_{PI}:=rac12\sin(2\rho)
 =0.4978566363242109995\ldots,
 \tag{DE.5}
-$$
+```
 
 where `rho=cos rho=0.7390851332...`.
 
 GU's attachment-cell estimate gives the relaxed asymptotic lower bound
 
-$$
+```math
 \boxed{
 \liminf\frac G{D^2}
 \ge
@@ -93,7 +93,7 @@ L(\lambda)
 :=A_{PI}-\frac\pi4\lambda^2.
 }
 \tag{DE.6}
-$$
+```
 
 The exact ZK form only strengthens DE.6 when `d_H+s_Z>0`; the relaxation is sufficient here.
 
@@ -103,44 +103,44 @@ The exact ZK form only strengthens DE.6 when `d_H+s_Z>0`; the relaxation is suff
 
 The actual-perimeter form of JC gives
 
-$$
+```math
 E_{out}+Q
 \le
  e_{BB}+\min\{h,P_F-h\}
 \le e_{BB}+P_F-h.
 \tag{DE.7}
-$$
+```
 
 JC's joint isoperimetric estimate and the ZG/GU charging relation therefore give
 
-$$
+```math
 \limsup\frac G{D^2}
 \le
 \frac{(t+p-y)^2}{4\pi}.
 \tag{DE.8}
-$$
+```
 
 Since `t<=lambda`, every survivor limit must satisfy
 
-$$
+```math
 L(\lambda)
 \le
 \frac{(\lambda+p-y)^2}{4\pi}.
 \tag{DE.9}
-$$
+```
 
 The quantity in parentheses is nonnegative by DE.3-DE.4. Taking square roots gives
 
-$$
+```math
 y-p
 \le
 \lambda-2\sqrt{\pi L(\lambda)}.
 \tag{DE.10}
-$$
+```
 
 Define
 
-$$
+```math
 \boxed{
 R(\lambda)
 :=
@@ -148,37 +148,37 @@ R(\lambda)
 -2\sqrt{\pi L(\lambda)}.
 }
 \tag{DE.11}
-$$
+```
 
 Write
 
-$$
+```math
 z:=y-\frac\pi2,
 \qquad
 \varepsilon:=\pi-p\ge0.
 \tag{DE.12}
-$$
+```
 
 Then DE.10 is exactly
 
-$$
+```math
 \boxed{z+\varepsilon\le R(\lambda).}
 \tag{DE.13}
-$$
+```
 
 If `R(lambda)<0`, no survivor is possible already.  Otherwise `epsilon>=0` gives
 
-$$
+```math
 z\le R(\lambda)
 \tag{DE.14}
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{2z+\varepsilon\le2R(\lambda).}
 \tag{DE.15}
-$$
+```
 
 This is the key scalar consequence of the JC lower/upper comparison.
 
@@ -188,35 +188,35 @@ This is the key scalar consequence of the JC lower/upper comparison.
 
 OD gives the exact post-ZF formulas
 
-$$
+```math
 L_{chain}
 =2h-Q-2s_Z-e_{BB}+c_B,
 \tag{DE.16}
-$$
+```
 
-$$
+```math
 U_{det}
 =b-P_F
 =2h-Q-2s_Z-P_F.
 \tag{DE.17}
-$$
+```
 
 PC gives
 
-$$
+```math
 e_{BB}=d_P+Q+2(d_H+s_Z)+c_B,
-$$
+```
 
 so in particular
 
-$$
+```math
 c_B\le e_{BB}-Q.
 \tag{DE.18}
-$$
+```
 
 Divide DE.16 by `D`, use DE.18, and discard nonpositive terms:
 
-$$
+```math
 \begin{aligned}
 \limsup\frac{L_{chain}}D
 &\le
@@ -225,11 +225,11 @@ $$
 &\le\pi+2R(\lambda)-2\nu.
 \end{aligned}
 \tag{DE.19}
-$$
+```
 
 Similarly DE.17 gives
 
-$$
+```math
 \begin{aligned}
 \limsup\frac{U_{det}}D
 &\le
@@ -238,29 +238,29 @@ $$
 &\le2R(\lambda)-\nu.
 \end{aligned}
 \tag{DE.20}
-$$
+```
 
 Since `U_det>=0`, DE.20 also implies
 
-$$
+```math
 \boxed{0\le\nu\le2R(\lambda).}
 \tag{DE.21}
-$$
+```
 
 OD states
 
-$$
+```math
 H_{out}
 \le
 C_E L_{chain}^{3/2}U_{det}^{1/2},
 \qquad
 C_E:=\frac\pi{4\sqrt2}.
 \tag{DE.22}
-$$
+```
 
 Using DE.19-DE.20 and then relaxing the negative `nu` terms gives
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}}{D^2}
 \le
@@ -269,7 +269,7 @@ C_E
 \sqrt{2R}.
 }
 \tag{DE.23}
-$$
+```
 
 where `R=R(lambda)`.
 
@@ -279,34 +279,34 @@ where `R=R(lambda)`.
 
 CC proves
 
-$$
+```math
 A_{exc}
 \le
 \frac{Q^2+O(Q)}{4\pi}.
 \tag{DE.24}
-$$
+```
 
 Together with DE.21,
 
-$$
+```math
 \boxed{
 \limsup\frac{A_{exc}}{D^2}
 \le
 \frac{R(\lambda)^2}{\pi}.
 }
 \tag{DE.25}
-$$
+```
 
 ZG/GU charges the full attachment-cell gap by the outer pockets and exceptional bounded faces up to `O(D)`:
 
-$$
+```math
 G\le H_{out}+A_{exc}+O(D).
 \tag{DE.26}
-$$
+```
 
 Therefore every survivor limit must satisfy
 
-$$
+```math
 \boxed{
 L(\lambda)
 \le
@@ -316,7 +316,7 @@ C_E(\pi+2R(\lambda))^{3/2}\sqrt{2R(\lambda)}
 +rac{R(\lambda)^2}{\pi}.
 }
 \tag{DE.27}
-$$
+```
 
 This is the new one-variable necessary condition.
 
@@ -328,31 +328,31 @@ We only need to exclude `lambda<0.465`.
 
 On the interval where `L(lambda)>0`,
 
-$$
+```math
 L'(\lambda)=-\frac\pi2\lambda<0.
 \tag{DE.28}
-$$
+```
 
 From DE.11,
 
-$$
+```math
 R'(\lambda)
 =1+
 \frac{\pi^2\lambda}{2\sqrt{\pi L(\lambda)}}
 >0.
 \tag{DE.29}
-$$
+```
 
 The right side `U(lambda)` in DE.27 is an increasing function of nonnegative `R`, while `R(lambda)` is increasing. Hence `U(lambda)` increases with `lambda`.
 
 Therefore, for every `lambda<=0.465`,
 
-$$
+```math
 L(\lambda)\ge L(0.465),
 \qquad
 U(\lambda)\le U(0.465),
 \tag{DE.30}
-$$
+```
 
 whenever `R(lambda)>=0`; if `R(lambda)<0`, DE.13 is already impossible.
 
@@ -364,54 +364,54 @@ It is enough to check the endpoint `lambda=0.465`.
 
 Using the established value of `rho`,
 
-$$
+```math
 A_{PI}
 =0.4978566363242109995909\ldots .
-$$
+```
 
 At
 
-$$
+```math
 \lambda_*=0.465
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{
 L(\lambda_*)
 =0.3280339184435977388443\ldots,
 }
 \tag{DE.31}
-$$
+```
 
-$$
+```math
 \boxed{
 R(\lambda_*)
 =0.0054771909833069851608\ldots,
 }
 \tag{DE.32}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 U(\lambda_*)
 =0.3253673216023899578757\ldots .
 }
 \tag{DE.33}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 L(\lambda_*)-U(\lambda_*)
 =0.0026665968412077809686\ldots>0.
 }
 \tag{DE.34}
-$$
+```
 
 This contradicts the necessary condition DE.27. By the monotonicity in Section 5, every smaller nonnegative `lambda` is excluded as well.
 
@@ -425,9 +425,9 @@ The margin in DE.34 is over `2.6e-3`, much larger than the displayed decimal tru
 
 GS gives the previous explicit floor
 
-$$
+```math
 0.4647922503\ldots .
-$$
+```
 
 using Groemer's quantitative stability theorem for near-maximal-perimeter convex bodies. DE instead uses the internal geometry of the OP pockets and raises the floor to the simple decimal `0.465`.
 

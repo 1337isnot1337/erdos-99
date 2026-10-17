@@ -49,9 +49,9 @@ The source uses a stronger form of the support-six common-neighbor argument.
 
 Suppose two distinct dual-value classes are `A,B`. If one vertex `i in A` had two relation neighbors `j,k in B`, then `y_j=y_k` and `y_i!=y_j`, so
 
-$$
+```math
 y_i-y_j=y_i-y_k\ne0.
-$$
+```
 
 Each difference is projectively parallel to its physical relation-train direction at face `i`. Hence two distinct pentagon sides at `i` would be projectively parallel. The audited bounded-pentagon theorem forbids this.
 
@@ -89,17 +89,17 @@ The collision argument proves the seven non-ground dual points are pairwise dist
 
 Every edge of
 
-$$
+```math
 H=K_8-\overline R
-$$
+```
 
 therefore has nonzero reciprocal difference. The support-six reciprocal construction applies without a collapsed-edge exception. Each present edge carries a signed unit-force coefficient, the seven non-ground pentagon closures give equilibrium there, and summing those equations gives the ground equilibrium.
 
 The tensor identity and trace
 
-$$
+```math
 \sum_{e\in E(H)}s_e d_e=0
-$$
+```
 
 use the same algebra as the already-audited support-five/support-six reciprocal notes.
 
@@ -129,9 +129,9 @@ Verdict: PASS.
 
 If the ground is interior, every hull vertex is non-ground and contributes angle greater than `2pi/3`. For hull size `h`,
 
-$$
+```math
 (h-2)\pi>2h\pi/3
-$$
+```
 
 forces `h>6`. With only seven non-ground points, the only possibility is `h=7`.
 
@@ -139,9 +139,9 @@ If the ground lies on the hull, `h<=4` is excluded by the same angle sum applied
 
 For ground-on-hull size `h`, the ground angle bound
 
-$$
+```math
 \phi_0<(h-4)\pi/3
-$$
+```
 
 is exact from the polygon angle sum and strict non-ground bounds.
 
@@ -155,31 +155,31 @@ All seven raw ground rays lie in the closed hull cone of width `phi_0<pi`. This 
 
 Let the smaller sign class have size `p<=3`. Move it to the other side of the unit-vector equilibrium. Projection of each majority vector onto the hull-cone bisector is at least `cos(phi_0/2)`, so the majority resultant has bisector projection at least
 
-$$
+```math
 (7-p)\cos(\phi_0/2).
-$$
+```
 
 The minority resultant has norm at most `p`. Therefore
 
-$$
+```math
 (7-p)\cos(\phi_0/2)\le p
-$$
+```
 
 is necessary.
 
 For `H5`, `phi_0<pi/3`. The weakest case is `p=3`, but
 
-$$
+```math
 4\cos(\pi/6)=2\sqrt3>3.
-$$
+```
 
 So `H5` is impossible.
 
 For `H6`, `phi_0<2pi/3`. If `p<=2`,
 
-$$
+```math
 (7-p)\cos(\phi_0/2)\ge5\cos(\phi_0/2)>5/2>2\ge p.
-$$
+```
 
 Therefore only `p=3` survives, giving ground `3+4`.
 
@@ -193,9 +193,9 @@ In the `H8` branch all eight reciprocal points are vertices of one strict convex
 
 At non-ground vertex `i`, the rays to the other seven hull vertices appear in cyclic order
 
-$$
+```math
 i+1,i+2,\ldots,i+7\pmod8.
-$$
+```
 
 Deleting the two missing complement neighbors leaves the exact five-ray order used by the local sign rule. Reversal of hull orientation does not change positions two and four as an unordered parity class; it only reflects the complete configuration.
 
@@ -231,25 +231,25 @@ Verdict: PASS.
 
 Every `H8` point is a strict convex-hull vertex, so every triangle on three of the eight points is noncollinear. Thus
 
-$$
+```math
 d_{ab}<d_{ac}+d_{bc}
-$$
+```
 
 is strict whenever `a,b,c` are distinct.
 
 For cyclically ordered convex quadrilateral `a,b,c,d`, let `X` be the intersection of diagonals `ac` and `bd`. Then
 
-$$
+```math
 d_{ab}<d_{aX}+d_{Xb},
 \qquad
 d_{cd}<d_{cX}+d_{Xd}.
-$$
+```
 
 Adding gives
 
-$$
+```math
 d_{ab}+d_{cd}<d_{ac}+d_{bd}.
-$$
+```
 
 The analogous inequality for the other opposite-side pair is identical after relabeling.
 
@@ -263,9 +263,9 @@ Verdict: PASS.
 
 The verifier identifies exactly two `C7` reflection orbits with ground `2+5` and fixes canonical representatives `A,B`. For each, it constructs
 
-$$
+```math
 L=\sum_{P}d_e-\sum_{H\setminus P}d_e.
-$$
+```
 
 It then checks coefficient-by-coefficient, using integer `Counter` arithmetic, that:
 
@@ -284,32 +284,32 @@ Verdict: PASS.
 
 For convex `H8`, the seven raw ground angles satisfy
 
-$$
+```math
 \theta_1<\cdots<\theta_7<\theta_1+\pi.
-$$
+```
 
 The source excludes minority pattern `{1,3,7}` by rewriting equilibrium as
 
-$$
+```math
 0=(u_2-u_1)+(u_4-u_3)+u_5+(u_6-u_7)
-$$
+```
 
 and dotting with `u_5`.
 
 Every difference term has positive dot product because for `0<a<b<pi`, cosine is strictly decreasing. For example
 
-$$
+```math
 (u_2-u_1)\cdot u_5
 =\cos(\theta_5-\theta_2)-\cos(\theta_5-\theta_1)>0.
-$$
+```
 
 The other two difference terms satisfy the same ordered-angle condition, and `u_5.u_5=1`.
 
 The reflected pattern `{1,5,7}` is excluded analogously by dotting
 
-$$
+```math
 0=(u_2-u_1)+u_3+(u_4-u_5)+(u_6-u_7)
-$$
+```
 
 with `u_3`.
 

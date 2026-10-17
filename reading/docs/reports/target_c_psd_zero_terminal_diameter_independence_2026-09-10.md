@@ -18,59 +18,59 @@
 
 Let `B` be the `q` loaded diameter terminals and
 
-$$
+```math
 M=\Lambda-L_H\succeq0
-$$
+```
 
 be the actual response defect.  Write
 
-$$
+```math
 d_b=\sum_{k\ne b}c_{bk},
 \qquad
 s_b=\sum_{k\ne b}\beta_{bk},
-$$
+```
 
 and split
 
-$$
+```math
 Z:=\{b:d_b=s_b\},
 \qquad
 T:=B\setminus Z.
-$$
+```
 
 C64 proved `|T|>=2q/5`.  Its own row-rigidity mechanism yields a stronger exact
 statement:
 
-$$
+```math
 \boxed{
 Z\text{ is an independent set of }H,
 \qquad
 \deg_H(b)\ge2\quad(b\in Z).
 }
 \tag{ZT.1}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{|T|\ge q-\frac h2\ge\frac q2.}
 \tag{ZT.2}
-$$
+```
 
 Since C30 gives `2q>=ceil(D)+2`,
 
-$$
+```math
 \boxed{|T|\ge\frac{\lceil D\rceil+2}{4}.}
 \tag{ZT.3}
-$$
+```
 
 In the low-surplus range of DC, the actual diameter graph is a caterpillar forest and
 Woodall gives `h=q-d_H`.  There the exact count improves to
 
-$$
+```math
 \boxed{|T|\ge\frac{q+d_H}{2}.}
 \tag{ZT.4}
-$$
+```
 
 Thus at least half of the full actual diameter boundary, and strictly more than half
 when there are many diameter components, carries genuine positive PSD response defect.
@@ -82,30 +82,30 @@ This still does not produce a numerical lower bound on each defect diagonal.
 
 C64 gives
 
-$$
+```math
 M_{bb}=d_b-s_b\ge0.
-$$
+```
 
 If `b in Z`, then `M_bb=0`.  Positivity of every `2x2` principal minor of a PSD matrix
 forces the entire row to vanish:
 
-$$
+```math
 M_{bk}=0\qquad(k\in B).
-$$
+```
 
 Since
 
-$$
+```math
 M_{bk}=-(c_{bk}-\beta_{bk})
 \quad(b\ne k),
-$$
+```
 
 we have
 
-$$
+```math
 \boxed{c_{bk}=\beta_{bk}\quad\text{for every }k.}
 \tag{1.1}
-$$
+```
 
 C64 also observed two consequences used below:
 
@@ -116,10 +116,10 @@ C64 also observed two consequences used below:
 
 Every such attachment set has
 
-$$
+```math
 |A_r|\ge3.
 \tag{1.2}
-$$
+```
 
 ---
 
@@ -129,10 +129,10 @@ $$
 
 For every `b in Z`,
 
-$$
+```math
 \boxed{\deg_H(b)\ge2.}
 \tag{2.1}
-$$
+```
 
 ### Proof
 
@@ -143,25 +143,25 @@ edges of at least one unloaded harmonic component `I_r`, so `b in A_r`.
 
 By (1.2), choose distinct
 
-$$
+```math
 k,l\in A_r\setminus\{b\}.
-$$
+```
 
 The strict harmonic component response gives
 
-$$
+```math
 c_{bk}>0,
 \qquad
 c_{bl}>0.
-$$
+```
 
 Equation (1.1) forces
 
-$$
+```math
 \beta_{bk}=c_{bk}>0,
 \qquad
 \beta_{bl}=c_{bl}>0.
-$$
+```
 
 Thus `bk,bl in H` and `deg_H(b)>=2`. `square`
 
@@ -175,25 +175,25 @@ In particular every diameter leaf belongs to `T`.
 
 No diameter edge joins two zero terminals:
 
-$$
+```math
 \boxed{H[Z]\text{ has no edges}.}
 \tag{3.1}
-$$
+```
 
 ### Proof
 
 Suppose `bk in H` with `b,k in Z`.  Relative-interior full diameter support gives
 
-$$
+```math
 \beta_{bk}>0.
-$$
+```
 
 By zero-row rigidity at `b`,
 
-$$
+```math
 c_{bk}=\beta_{bk}>0.
 \tag{3.2}
-$$
+```
 
 There is no direct loaded-loaded contact between `b` and `k` because `|b-k|=D>1`.
 Hence the positive response conductance in (3.2) is contributed by at least one
@@ -211,38 +211,38 @@ Thus every diameter edge is incident to at most one zero terminal.
 
 Sum diameter degrees over `Z`.  Lemma ZT.1 gives
 
-$$
+```math
 2|Z|\le\sum_{b\in Z}\deg_H(b).
 \tag{4.1}
-$$
+```
 
 By Lemma ZT.2, every diameter edge is counted at most once in the sum on the right.
 Therefore
 
-$$
+```math
 \sum_{b\in Z}\deg_H(b)\le h.
 \tag{4.2}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{2|Z|\le h.}
 \tag{4.3}
-$$
+```
 
 Since `q=|Z|+|T|`,
 
-$$
+```math
 |T|=q-|Z|\ge q-\frac h2.
 \tag{4.4}
-$$
+```
 
 The Hopf--Pannwitz diameter-thrackle bound gives `h<=q`, yielding
 
-$$
+```math
 \boxed{|T|\ge q/2.}
-$$
+```
 
 C30's force-visible boundary count `2q>=ceil(D)+2` then gives ZT.3.
 
@@ -255,32 +255,32 @@ contact-degree incidence.
 
 DC proves that for every fixed
 
-$$
+```math
 \lambda_0<\lambda_{\rm disk}
-$$
+```
 
 all sufficiently large post-ZF survivors with
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\le\lambda_0
-$$
+```
 
 have acyclic actual diameter graph.  The Woodall report now on `main` identifies this
 as a caterpillar forest with exactly
 
-$$
+```math
 d_H=q-h
-$$
+```
 
 components.  Therefore (4.4) becomes
 
-$$
+```math
 \boxed{
 |T|
 \ge q-\frac{q-d_H}{2}
 =\frac{q+d_H}{2}.
 }
-$$
+```
 
 Every additional diameter component thus contributes half a forced strict terminal in
 this exact counting sense.
@@ -288,10 +288,10 @@ this exact counting sense.
 In the `s_Z=0` circuit subcase, E597 simultaneously charges the same component count
 by
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}
 \ge0.597+\epsilon_{597}+3\frac{d_H}{D}.
-$$
+```
 
 ZT and E597 therefore couple the electrical strict-set size and the diameter forest
 topology to the same defect variable `d_H`.
@@ -303,18 +303,18 @@ topology to the same defect variable `d_H`.
 The response defect cannot be confined to a sparse exceptional boundary set.  At
 least half of all loaded terminals have
 
-$$
+```math
 d_b-s_b>0,
-$$
+```
 
 and in the forest branch at least `(q+d_H)/2` do.
 
 The remaining obstruction is purely quantitative.  Neither PSD nor unit-contact
 geometry currently supplies a lower bound
 
-$$
+```math
 d_b-s_b\ge c/D
-$$
+```
 
 on those strict terminals.  Near-star circular-planar networks can make individual
 strict response conductances arbitrarily small, so a proof must use the actual
@@ -322,10 +322,10 @@ unit-contact embedding, FS almost-antipodal geometry, or global source capacity.
 
 A useful next theorem would prove an aggregate estimate
 
-$$
+```math
 \sum_{b\in T}(d_b-s_b)\ge c
 \quad\text{or stronger},
-$$
+```
 
 with a scale that crosses one of the existing response/face thresholds.  Merely
 counting `T` cannot do so.

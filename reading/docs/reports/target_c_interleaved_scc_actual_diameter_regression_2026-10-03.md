@@ -64,10 +64,10 @@ boundary intervals. These are geometric crosscuts, not contact-train paths.
 
 The source has diameter `10`. Its actual diameter pairs are **exactly**
 
-$$
+```math
 ab,\ ad,\ pq,\ qc',\ cd,\ c'd',\ LR,\ LR',\ z^+z^-.
 \tag{IS.1}
-$$
+```
 
 Every other pair has length strictly between `201/200` and `199/20`.
 The exact minimum squared distance is `50-20sqrt(6)> (201/200)^2`;
@@ -93,10 +93,10 @@ regression's geometric statements is promoted to a global-minimizer claim.
 The two diameter rays from L to R and R' form a common witness star. Their
 directions bound the open projective cell
 
-$$
+```math
 J=(0,\arctan(9/40)).
 \tag{IS.2}
-$$
+```
 
 All the other projective diameter directions lie outside J. Choose the
 interior rational unit vector `e=(399/401,40/401)`. For every diameter with
@@ -106,13 +106,13 @@ layer order when `r_h dot Je>0`, and downward when it is negative.
 
 The directed edges are
 
-$$
+```math
 0\rightleftarrows6,\qquad
 1\rightleftarrows5,\qquad
 2\rightleftarrows4,\qquad
 1\longrightarrow4,\qquad5\longrightarrow2.
 \tag{IS.3}
-$$
+```
 
 The within-layer vertical diameter has zero cut support and is omitted
 from this gap graph. Its presence ensures that layer 3 also has loaded
@@ -128,15 +128,15 @@ Give each star diameter coefficient 1 and every other actual diameter
 coefficient `epsilon=1/100`. All nine coefficients are strictly positive.
 For each cut i, define
 
-$$
+```math
 R_i=\sum_{a_h<i\le b_h}\beta_h r_h,\qquad
 A_i=|R_i|>0,\qquad u_i=R_i/A_i.
 \tag{IS.4}
-$$
+```
 
 Put `B=(810/41,90/41)`. Direct addition gives
 
-$$
+```math
 \begin{aligned}
 R_1=R_6&=B,\\
 R_2&=B+\epsilon(16,U),\\
@@ -144,7 +144,7 @@ R_3=R_4&=B+\epsilon(24,0),\\
 R_5&=B+\epsilon(16,-U).
 \end{aligned}
 \tag{IS.5}
-$$
+```
 
 Every resultant lies strictly inside J, so these are positive coherent
 nonconstant open-cell phases. Every cut has an actual directed diameter
@@ -152,11 +152,11 @@ crossing in each direction, supplied already by the full-span star.
 For arbitrary `mu in J` give each diameter flow
 `beta_h |r_h dot Ju(mu)|`. Then, exactly,
 
-$$
+```math
 \Phi(P_i;\mu)=R_i\mathbin{\cdot}Ju(\mu)
 =A_i\sin(\theta_i-\mu),
 \tag{IS.6}
-$$
+```
 
 and interval divergence is the difference of its endpoint values. This
 is ordinary finite cut summation, with no actual contact KKT interpretation.
@@ -169,12 +169,12 @@ For any real `s>=1`, scale every source coordinate by s and set
 `D=10s`. Retain coefficient 1 on the two star diameters and change every
 other coefficient to `1/(100s)`. Formula IS.5 becomes
 
-$$
+```math
 R_i(s)=sB+C_i,
 \quad
 C_i\in\{0,(16,U)/100,(24,0)/100,(16,-U)/100\}.
 \tag{IS.7}
-$$
+```
 
 All phases stay strictly inside J: each wall cross-product is a positive
 linear function of s, already positive at s=1. Their nonconstant order
@@ -186,10 +186,10 @@ condensation obstruction.
 
 Every strict pair in the scaled source has
 
-$$
+```math
 |xy|-1>s/200,\qquad D-|xy|>s/20.
 \tag{IS.8}
-$$
+```
 
 Thus, for any fixed `K>0`, once `s^2>80K` there is no previously strict
 pair within `4K/D` of either activity threshold. All nine actual diameter
@@ -204,10 +204,10 @@ globally or secondarily minimal, and it has no actual contact train chart.
 At s=1, form the formal cut-angle diameter derivative matrix, scaling
 column i by its positive `A_i` to avoid additional radicals:
 
-$$
+```math
 M_{hi}=1_{a_h<i\le b_h}\,[r_h,R_i].
 \tag{IS.9}
-$$
+```
 
 Its exact rank is 4. Columns 1 and 6 coincide, as do columns 3 and 4;
 a certified nonzero 4-by-4 minor gives the matching lower bound. This

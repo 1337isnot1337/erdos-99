@@ -18,9 +18,9 @@ Date: 2026-10-09. Audit base: `origin/main=cfdc1b0c3ae94e97f6921c1a748eef0c95e5e
 
 Let `p_i=i t`, `0<=i<=6`, for a unit vector `t`, and let `Lambda` be a translate of a unit triangular lattice. Suppose `a_1,...,a_5` lie in one closed half-plane bounded by the line through the `p_i`, and
 
-$$
+```math
  |a_i-p_i|=1,\qquad |a_i-p_j|\ge1\ (0\le j\le6),\qquad a_i\ne a_{i+1}\ (1\le i<5).
-$$
+```
 
 Then `t` is one of the six unit vectors of the underlying triangular lattice. No uniqueness of the anchor displacement follows or is claimed.
 
@@ -50,16 +50,16 @@ This consequence uses only actual source anchors and actual loaded endpoints. Co
 
 In a canonical post-ZF C-II sequence, choose one actual unloaded unit neighbor at each loaded vertex except `b_0` vertices. Assign the chosen neighbors to a fixed finite set of `J` unit-triangular charts, with `R_D` changes of chart in cyclic loaded-hull order. Assume that, in every seven-vertex window where the five interior neighbors belong to one chart, those five actual points are within a common `epsilon_D->0` of one translate of that chart's reference lattice. Let `m` count nonunit loaded-hull sides. Then
 
-$$
+```math
  q\le 6m+5b_0+4R_D+o(D).
-$$
+```
 
 Indeed, each nonunit side spoils at most six centered windows, each missing neighbor at most five, and each chart transition at most four. Every remaining center has six unit sides and five same-chart anchors, so the uniform alignment theorem applies. At the central loaded endpoint, both adjacent hull sides lie in the same shrinking tangent window; its full-source normal cone, and hence its chosen actual diameter normal, lies in the perpendicular window. The actual-diameter-normal window count proved in Audit.203 bounds any oriented window of half-width `tau_D` by
 
-$$
+```math
 1+\frac{D\sin(tau_D)+2L_D}{\cos(tau_D)}=o(D),\qquad
 L_D=\sqrt{D\eta_D+\eta_D^2}=o(D),\quad \eta_D=3^{1/4}\sqrt D.
-$$
+```
 
 There are only `6J` possible oriented normal windows, so all good centers contribute `o(D)`. The stated bound follows by the three exact defect counts and a union bound. Canonical `C-ZRF` and `C-WOODALL` give `q>=h>=ceil(D)`. Thus `m=o(D)`, `b_0=o(D)`, and `R_D=o(D)` cannot hold simultaneously under this actual local atlas hypothesis.
 

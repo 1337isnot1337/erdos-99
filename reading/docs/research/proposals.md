@@ -15,7 +15,7 @@ Head `ad1bda373a5cbd8c666040f64b4f6ecd83223e31`; **unreviewed candidate**.
 - [Machine-readable candidate registry](../../../docs/targets/target-c/candidate-registry.json)
 
 The analytic candidate gives a linear-order population reserve for every global
-minimizer, stronger asymptotically than the existing $D^{2/3}$ lower bounds.
+minimizer, stronger asymptotically than the existing $`D^{2/3}`$ lower bounds.
 It is not in the theorem-state manifest and does not imply the Target C
 triangle conclusion. The current missing bridge and finite nonglobal
 counterexample are recorded in the report and registry. Source PR #956, cited
@@ -243,8 +243,8 @@ ledger](../../../docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl
 
 The [colour-lift report](../reports/global_colouring_lift_and_planar_rank_barrier_2026-10-12.md)
 proves a full-contact strict metric descent under uniform squared-distance
-interpolation, but its centered Gram rank $n-1$ prevents a planar realization
-for $n\ge4$. A separate proper three-colouring of every finite triangle-free
+interpolation, but its centered Gram rank $`n-1`$ prevents a planar realization
+for $`n\ge4`$. A separate proper three-colouring of every finite triangle-free
 contact graph gives strict full-label descent in four dimensions. The report
 characterizes exactly when this specified lift flattens into the source plane;
 the two-colour case requires parallel colour lines, which is not extracted from

@@ -16,15 +16,15 @@
 
 The preceding generic `H7b` reduction left 176 order/sign orbits after eight exact signed-distance exclusions. Adding the reciprocal triangle-angle equations among non-ground hull vertices and the full affine content of the physical equilateral-pentagon turn theorem gives
 
-$$
+```math
 \boxed{176\longrightarrow77.}
-$$
+```
 
 The final split is
 
-$$
+```math
 \boxed{47\ C_7+30\ (C_3\sqcup C_4).}
-$$
+```
 
 This is a generic-branch reduction, not a support-seven exclusion. The classified reciprocal-collinearity walls, `H7a`, `H6`, and the surviving `H8` cases remain separate.
 
@@ -34,32 +34,32 @@ For a generic interior-ground state, every non-ground reciprocal point `y_i` is 
 
 Let
 
-$$
+```math
 x_{i,k}=\delta_{i,k}/\pi,
 \qquad i=1,\ldots,7,
-$$
+```
 
 be the consecutive force-direction gaps in the signed force cycle at `i`. The exact raw-angle conversion already used in the support-six/H8 certificates expresses every reciprocal angle at a non-ground vertex as an affine form in these variables. For a counterclockwise force arc `R` between two incident edges, the raw angle is one of
 
-$$
+```math
 R,\quad 2-R,\quad R-1,\quad 1-R,
-$$
+```
 
 according to the two edge signs and raw orientation sign.
 
 Only triangles `abc` with `a,b,c\in\{1,\ldots,7\}` and all three relation edges present are used. Hence no cyclic order of the seven signed force rays at the interior ground point is assumed. Because this branch excludes reciprocal collinear triples, each such triangle is ordinary and its three affine angles satisfy
 
-$$
+```math
 T_{abc}=1.
 \tag{1}
-$$
+```
 
 Together with the seven face equations
 
-$$
+```math
 F_i:=\sum_{k=0}^4x_{i,k}=2,
 \tag{2}
-$$
+```
 
 these are exact rational-affine equalities.
 
@@ -67,10 +67,10 @@ these are exact rational-affine equalities.
 
 The audited turn-simplex theorem says that every strict physical equilateral force pentagon satisfies
 
-$$
+```math
 q_{i,k}:=x_{i,k}+x_{i,k+1}-x_{i,k+3}>\frac13.
 \tag{3}
-$$
+```
 
 Moreover those five inequalities, with (2), describe the closed convex hull of all physical pentagon turn vectors. Thus this test uses the complete affine-linear information available separately at each non-ground face.
 
@@ -80,18 +80,18 @@ For each generic order/sign orbit, form (1)-(2) and the 35 strict inequalities (
 
 For 106 of the 184 orbits, the verifier reconstructs an exact rational certificate
 
-$$
+```math
 \sum_{j\in J}\alpha_j\left(q_j-\frac13\right)=\kappa
 \qquad\text{on the affine space }(1)-(2),
 \tag{4}
-$$
+```
 
 with
 
-$$
+```math
 \alpha_j>0,\qquad \sum_j\alpha_j=1,\qquad \kappa\le0.
 \tag{5}
-$$
+```
 
 The left side is strictly positive by (3), while the right side is nonpositive. Hence every such orbit is impossible.
 
@@ -99,14 +99,14 @@ All dual coefficients are solved again from their sparse supports by exact `frac
 
 The 106 exclusions split as
 
-$$
+```math
 \boxed{72\ C_7+34\ (C_3\sqcup C_4).}
 \tag{6}
-$$
+```
 
 Of them, 54 have `kappa=0`; the other 52 have `kappa<0`, with exact census
 
-$$
+```math
 \begin{array}{c|r}
 \kappa&\#\\ \hline
 -1/30&35\\
@@ -119,14 +119,14 @@ $$
 -1/57&1
 \end{array}.
 \tag{7}
-$$
+```
 
 Before using the older signed-distance information, the angular/simplex layer leaves
 
-$$
+```math
 \boxed{78=48\ C_7+30\ (C_3\sqcup C_4)}.
 \tag{8}
-$$
+```
 
 ## 4. Union with the signed-distance trace certificates leaves 77
 
@@ -134,22 +134,22 @@ The preceding generic `H7b` note excluded eight `C7` orbits by exact signed-dist
 
 Exactly seven of those eight trace-excluded orbits are already among the 106 angular/simplex exclusions. One trace exclusion is independent. Therefore the union removes
 
-$$
+```math
 106+8-7=107
-$$
+```
 
 of the original 184 generic orbits and leaves
 
-$$
+```math
 \boxed{184-107=77=47\ C_7+30\ (C_3\sqcup C_4).}
 \tag{9}
-$$
+```
 
 Equivalently, relative to the previously committed trace-reduced state,
 
-$$
+```math
 \boxed{176\longrightarrow77,}
-$$
+```
 
 so this removes 99 additional generic `H7b` orbits by exact angular certificates.
 

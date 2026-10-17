@@ -19,9 +19,9 @@ Let a canonical post-ZF C-II source sequence have `D->infinity`, `q` actual load
 
 Assume that for every fixed block size `M`, in every run of at most `M` consecutive loaded vertices whose intervening loaded-hull sides are unit, the neighbors assigned to any one chart lie within a common error `epsilon_{D,M}->0` of one translate of that chart's reference lattice. This error is uniform over windows and charts. Then
 
-$$
+```math
  m=o(D)\quad\Longrightarrow\quad a_D=o(D).
-$$
+```
 
 The theorem does not require a small number of chart transitions or consecutive port coverage. The local atlas and `m=o(D)` are hypotheses, not consequences of canonical C-II structure.
 
@@ -43,19 +43,19 @@ Take a block with more than `2J` selected ports. Three belong to one chart, at l
 
 Every loaded vertex in a rich block that is not incident to a nonunit loaded-hull side has two unit incident sides. The block tangent result controls the sides inside the block; if a unit side crosses a block boundary, radialization at their shared loaded endpoint forces its tangent to agree with the block tangent up to `o(1)`. The nonunit boundary endpoints were already included in the `2m` charge. Thus both side normals, and hence the vertex's actual diameter normal inside their normal cone, lie in a shrinking window around one of finitely many perpendicular directions. The audited Audit.203 normal-window bound is
 
-$$
+```math
 1+\frac{D\sin(tau_{D,M})+2L_D}{\cos(tau_{D,M})}=o(D),
 \qquad L_D=\sqrt{D\eta_D+\eta_D^2}=o(D),
 \quad \eta_D=3^{1/4}\sqrt D.
-$$
+```
 
 The finite direction set depends on fixed `M` and `J`, so the number of these good loaded vertices over all rich blocks is `o_M(D)`. There are at most `2m` loaded endpoints incident to a nonunit side; charge them separately.
 
 Partition the cyclic loaded sequence into blocks of at most `M` vertices. Discard every block containing an internal nonunit side; at most `m` blocks are discarded, costing at most `Mm` vertices. Nonunit sides on block boundaries are covered by the separate `2m` endpoint charge. Each remaining nonrich block has at most `2J` selected ports, and there are at most `ceil(q/M)+1` blocks. Consequently, for every fixed `M`,
 
-$$
+```math
  a_D\le (M+2)m+2J\bigl(\lceil q/M\rceil+1\bigr)+o_M(D).
-$$
+```
 
 The explicit `2m` charge makes the finite ledger valid without assuming a partition cut avoids every nonunit side. Since the loaded hull chords have length at least one and the full-source hull perimeter is at most `pi D`, `q<=pi D`. If `m=o(D)`, divide the inequality by `D`, take the limit at fixed `M`, then let `M->infinity`; this gives `a_D=o(D)`. The order of limits is essential.
 

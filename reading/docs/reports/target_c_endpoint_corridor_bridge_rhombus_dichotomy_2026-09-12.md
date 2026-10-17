@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_endpoint_corridor_bridge_rhombus_dichotomy_2026-09-12.md) · source SHA-256 `68144b4fa5e85ae1cff7838918d2473ef0d8386c22935a17c88d97e6f542fd20`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-6C3F896ABFE5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — endpoint corridor bridge/rhombus dichotomy
 
@@ -9,9 +11,9 @@
 
 Canonical Section 96 raises the Type-II wrapping threshold to
 
-$$
+```math
 \mu_4=0.936215741409583\ldots
-$$
+```
 
 and identifies three distinguished macroscopic outer-contact routes at equality.  A
 separate corrected audit shows that those three routes individually have `o(D)` path
@@ -39,49 +41,49 @@ Work along a wrapping Type-II sequence at the canonical Section-96 endpoint.  Le
 `H_D` be the induced contact graph of the selected harmonic component and its loaded
 attachment set `A_D`, and let
 
-$$
+```math
 P_D=\operatorname{conv}(A_D).
-$$
+```
 
 Put
 
-$$
+```math
 \theta_4=2\arcsin\mu_4,
 \qquad
 s_4:=\sin\theta_4
 =0.658020712164235\ldots,
-$$
+```
 
 and
 
-$$
+```math
 \alpha_4={3\over2}s_4
 =3\theta_4-2\pi
 =0.987031068246352\ldots .
-$$
+```
 
 Canonical Section 96 gives
 
-$$
+```math
 {a_D\over D}\to\alpha_4,
 \qquad
 {Q_D\over D},{s_D\over D},{c_D\over D}\to0,
 \tag{97.1}
-$$
+```
 
 and the exact local identity
 
-$$
+```math
 L_D+Q_D=4a_D-6-2s_D-2c_D.
 \tag{97.2}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{L_D=6s_4D+o(D).}
 \tag{97.3}
-$$
+```
 
 Let `W_{1,D},W_{2,D},W_{3,D}` be the three outer-face routes corresponding to the
 three distinguished forbidden attachment gaps from Section 96.  Let `ell_{j,D}` be
@@ -89,35 +91,35 @@ their unit-edge path lengths and `d_{j,D}` their endpoint chord lengths.
 
 The Section-96 annular gap estimate gives
 
-$$
+```math
 d_{j,D}\ge s_4D-o(D).
 \tag{97.4}
-$$
+```
 
 Every remaining attachment interval costs two outer-walk edges unless it is a direct
 loaded-loaded polygon-side contact.  If `c_D^partial` is the number of such direct
 sides, then `c_D^partial<=c_D=o(D)` and
 
-$$
+```math
 L_D
 \ge
 \sum_{j=1}^3\ell_{j,D}
 +2(a_D-3)-c_D^\partial.
 \tag{97.5}
-$$
+```
 
 Insert (97.1) and (97.3) into (97.5):
 
-$$
+```math
 \sum_{j=1}^3\ell_{j,D}
 \le3s_4D+o(D).
 \tag{97.6}
-$$
+```
 
 But `ell_{j,D}>=d_{j,D}` and (97.4) give the reverse lower bound.  Hence, separately
 for `j=1,2,3`,
 
-$$
+```math
 \boxed{
 \ell_{j,D}=s_4D+o(D),
 \qquad
@@ -126,6 +128,7 @@ d_{j,D}=s_4D+o(D),
 e_{j,D}:=\ell_{j,D}-d_{j,D}=o(D).
 }
 \tag{97.7}
+```
 
 This proof uses only the canonical Section-96 route budget; it does not use the false
 claim `L_D-per(P_D)=o(D)` from the first version of the endpoint-stability report.
@@ -138,19 +141,19 @@ vectors be `z_1,...,z_m`, let `q` be the unit chord direction, and let
 
 Projection onto `q` gives the exact identity
 
-\[
+```math
 \sum_{k=1}^m(1-\cos\psi_k)=m-d=e.
 \tag{97.8}
-$$
+```
 
 Since `1-cos x >= 2x^2/pi^2` on `[-pi,pi]`,
 
-$$
+```math
 \boxed{
 \sum_{k=1}^m\psi_k^2\le {\pi^2\over2}e=o(D).
 }
 \tag{97.9}
-$$
+```
 
 Consequently, for every fixed `eta>0`, only `o(D)` edge occurrences of the route make
 angle at least `eta` with the chord direction.
@@ -158,13 +161,13 @@ angle at least `eta` with the chord direction.
 The path also lies in the ellipse with its two endpoints as foci and major-axis length
 `m`.  Hence its transverse width is at most
 
-$$
+```math
 {1\over2}\sqrt{m^2-d^2}
 =
 \sqrt{{de\over2}+{e^2\over4}}
 =o(D),
 \tag{97.10}
-$$
+```
 
 and its longitudinal overshoot is at most `e/2=o(D)`.
 
@@ -182,18 +185,18 @@ Canonical Section 82 proves that every bounded four-face is a strict unit rhombu
 that every other bounded face has degree at least five.  If `f_exc,D` is the number of
 nonquadrilateral bounded faces, then
 
-$$
+```math
 f_{exc,D}\le Q_D
-$$
+```
 
 and
 
-$$
+```math
 \sum_{f\text{ nonquad}}\deg f
 =4f_{exc,D}+Q_D
 \le5Q_D=o(D).
 \tag{97.11}
-$$
+```
 
 Therefore among **all** nonbridge outer-face edge occurrences, only `o(D)` can have a
 nonquadrilateral bounded face on their inner side.  Every other nonbridge outer
@@ -206,28 +209,28 @@ occurrences whose underlying edge is a bridge of `H_D`.
 
 For every fixed `eta` with
 
-$$
+```math
 0<\eta<s_4,
-$$
+```
 
 one of the following holds along a subsequence:
 
 ### Branch BR — bridge-rich corridor
 
-$$
+```math
 \boxed{B_D\ge\eta D.}
 \tag{97.12}
-$$
+```
 
 ### Branch RH — rhombus-rich corridor
 
-$$
+```math
 \boxed{
 \text{at least }(s_4-\eta-o(1))D
 \text{ route-edge occurrences border strict unit rhombi.}
 }
 \tag{97.13}
-$$
+```
 
 Indeed the route has `(s_4+o(1))D` edge occurrences by (97.7).  If (97.12) fails,
 all but at most `eta D` are nonbridges; by (97.11), all but another `o(D)` of those
@@ -236,22 +239,23 @@ border strict rhombi.
 Intersecting with the angular conclusion (97.9), Branch RH strengthens to:
 for every fixed angular tolerance `delta>0`,
 
-$$
+```math
 \boxed{
 \text{at least }(s_4-\eta-o(1))D
 \text{ route occurrences border strict rhombi and have exposed side direction}
 \text{ within }\delta\text{ of the corridor chord.}
 }
 \tag{97.14}
+```
 
 A single rhombus has four sides, so (97.14) contains at least
 
-\[
+```math
 \boxed{
 \left({s_4-\eta\over4}-o(1)\right)D
 }
 \tag{97.15}
-$$
+```
 
 distinct boundary strict rhombi with an exposed side in that narrow direction cone.
 No phase-coherence conclusion is asserted yet.
@@ -297,9 +301,10 @@ traversed twice within the route.
 Therefore, in Branch BR, after deleting `o(D)` backtracking bridge occurrences, at
 least
 
-\[
+```math
 \boxed{(\eta-o(1))D}
 \tag{97.16}
+```
 
 distinct bridge edges lie on the simple path in `T_D` between the endpoint blocks of
 the special route.  Their bridge cuts are nested along that tree path, and Lemmas

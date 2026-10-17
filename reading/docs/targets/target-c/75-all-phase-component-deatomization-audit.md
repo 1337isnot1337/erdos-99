@@ -12,9 +12,9 @@ current canonical post-ZF stack. The compactness prelude of that report is unnec
 a finite curvature-window argument gives a uniform estimate and the quantitative
 conclusion
 
-$$
+```math
 \boxed{c_I=O(D^{2/3})}
-$$
+```
 
 in every sufficiently large post-ZF C-II survivor, in both Woodall branches and for
 arbitrary `s_Z>=0`.
@@ -42,36 +42,41 @@ The proof uses the following canonical facts.
 1. Every unloaded positive-contact vertex has contact degree `3`, `4`, or `5`.
 2. Every loaded vertex has contact degree at most three.
 3. Harmonic trapping gives
-   $$
+   ```math
    I_r\subset\operatorname{conv}(A_r),
    \qquad |A_r|\ge3,
    \qquad \operatorname{diam}(A_r)\le\delta_r+2.
    \tag{75.1}
-   $$
+   
+   ```
 4. Canonical Section 62 gives
-   $$
+   ```math
    c_I+e_{BB}+s_C=q-2+k
    \tag{75.2}
-   $$
+   
+   ```
    and
-   $$
+   ```math
    \sum_r\delta_r+R_I+s_B+3k=6+e_{BB}+2s_C,
    \qquad R_I,s_B\ge0.
    \tag{75.3}
-   $$
+   
+   ```
 5. Canonical full-force stability gives
-   $$
+   ```math
    \liminf {\operatorname{area}(F)\over D^2}
    \ge {2\rho+\sin(2\rho)\over4}
    =0.6184708847\ldots>{3\over5},
    \tag{75.4}
-   $$
+   
+   ```
    while canonical full-source geometry places `F` inside the source circumdisk of
    radius
-   $$
+   ```math
    {D\over2}+3^{1/4}\sqrt D.
    \tag{75.5}
-   $$
+   
+   ```
 
 No KKT coefficient floor, disk-limit theorem, cap containment, or deletion of source
 isolates is used.
@@ -86,9 +91,9 @@ set. The four points cannot all lie in a strip of width strictly less than `1/2`
 **Proof.** Let `n` be a unit normal to the strip. For a unit neighbor direction `u`,
 all four points lying in a strip of width `<1/2` implies
 
-$$
+```math
 |n\cdot u|<1/2.
-$$
+```
 
 On the unit circle the allowed directions form two open arcs, each of angular width
 `pi/3`, centered on the two strip-tangent directions. Two distinct unit neighbors in
@@ -104,117 +109,117 @@ The finite theorem is easiest to state for a fat force hull.
 
 Suppose
 
-$$
+```math
 B(o,D/20)\subset F\subset B(o,11D/20).
 \tag{75.6}
-$$
+```
 
 For an integer `M>=0`, let
 
-$$
+```math
 N_M:=\#\{r:\delta_r\le M\}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{N_M\le5000\pi(M+2)^2.}
 \tag{75.7}
-$$
+```
 
 The constant is deliberately coarse and uniform in the source, stresses, component
 population, and `D`.
 
 **Proof.** Translate `o` to the origin and put
 
-$$
+```math
 L:=M+2\ge2,
 \qquad r:=D/20,
 \qquad R:=11D/20.
-$$
+```
 
 First handle `L>D/10000`. Every unloaded component has at least three distinct loaded
 attachments by (75.1). A loaded vertex belongs to at most three attachment sets because
 its full contact degree is at most three. Hence `c_I<=q`. The loaded vertices form a
 unit-separated convex polygon, so
 
-$$
+```math
 q\le\operatorname{per}(F)\le\pi D.
-$$
+```
 
 Therefore
 
-$$
+```math
 N_M\le\pi D<10000\pi L\le5000\pi L^2,
-$$
+```
 
 using `L>=2`.
 
 Assume now
 
-$$
+```math
 L\le D/10000.
 \tag{75.8}
-$$
+```
 
 For each counted component choose one representative attachment `b in A_r`. Every
 other attachment `a in A_r` satisfies `|a-b|<=L` by (75.1). Since all boundary radii
 are at least `r`, the minor polar separation `alpha` between `a` and `b` obeys
 
-$$
+```math
 2r\sin(\alpha/2)\le |a-b|\le L.
-$$
+```
 
 Using `arcsin t<=2t` for `0<=t<=1/2`,
 
-$$
+```math
 \alpha\le {2L\over r}\le {1\over250}.
 \tag{75.9}
-$$
+```
 
 Let
 
-$$
+```math
 e:={b\over|b|}.
-$$
+```
 
 Follow the local boundary arc of `F` from `b` to one other attachment `a`. At a point
 `p` of that arc let `n` be an outward unit normal. The inner and outer disk bounds give
 
-$$
+```math
 n\cdot {p\over|p|}\ge {r\over R}={1\over11}.
-$$
+```
 
 Every point of the local arc has polar direction within `alpha` of `e`, so by (75.9)
 
-$$
+```math
 n\cdot e\ge {1\over11}-{1\over250}>{1\over22}.
 \tag{75.10}
-$$
+```
 
 For the counterclockwise unit tangent `t=Jn`, (75.10) gives
 
-$$
+```math
 t\cdot Je>{1\over22}.
-$$
+```
 
 The `Je`-projection changes by at most `|a-b|<=L` between the arc endpoints. Hence the
 boundary arclength from `b` to `a` is at most
 
-$$
+```math
 w:=22L.
 \tag{75.11}
-$$
+```
 
 Thus every attachment of the counted component lies in the boundary-arclength window
 of radius `w` centered at its representative.
 
 Put
 
-$$
+```math
 \theta:=\arctan {1\over4L}.
 \tag{75.12}
-$$
+```
 
 The radius-`w` window about every representative must carry exterior turning at least
 `theta`. Otherwise all edge tangents on that convex boundary window lie in a cone of
@@ -223,9 +228,9 @@ boundary order. Their Euclidean distance is at most `L`, and tangent projection 
 the first tangent direction is monotone. The transverse variation of their intervening
 arc, hence of all attachments and their convex hull, is at most
 
-$$
+```math
 L\tan\theta={1\over4}<{1\over2}.
-$$
+```
 
 By harmonic trapping, `I_r` lies in the same strip. Any unloaded vertex of `I_r` and
 all of its contact neighbors lie in `I_r union A_r`, hence in that strip, contradicting
@@ -236,10 +241,10 @@ Choose a maximal family of representative attachments with pairwise circular bou
 arclength distance greater than `2w`. Their radius-`w` windows are disjoint, so the
 convex boundary's total exterior turning `2pi` gives at most
 
-$$
+```math
 {2\pi\over\theta}
 \tag{75.13}
-$$
+```
 
 chosen representatives. Maximality implies that every representative lies in a
 radius-`2w` window about one chosen representative.
@@ -249,24 +254,24 @@ loaded vertices, because consecutive loaded vertices are at Euclidean, hence bou
 arclength, distance at least one. Each loaded vertex can represent at most three
 components. Consequently
 
-$$
+```math
 N_M\le {2\pi\over\theta}\,3(4w+1).
 \tag{75.14}
-$$
+```
 
 Since `L>=2`,
 
-$$
+```math
 \theta=\arctan(1/(4L))\ge {1\over8L}.
-$$
+```
 
 Together with `w=22L`, (75.14) yields
 
-$$
+```math
 N_M\le48\pi L(88L+1)
 \le4248\pi L^2
 <5000\pi L^2.
-$$
+```
 
 This proves (75.7). `square`
 
@@ -277,45 +282,45 @@ This proves (75.7). `square`
 For every sufficiently large post-ZF C-II survivor, after translating by the canonical
 source circumcenter `o`,
 
-$$
+```math
 B(o,D/20)\subset F\subset B(o,11D/20).
 \tag{75.15}
-$$
+```
 
 **Proof.** By (75.4), for all sufficiently large survivors
 
-$$
+```math
 \operatorname{area}(F)>{3\over5}D^2.
 \tag{75.16}
-$$
+```
 
 By (75.5), the outer inclusion in (75.15) also holds for all sufficiently large `D`.
 
 For every unit direction `u`, the bounding rectangle of `F` with one side parallel to
 `u` gives
 
-$$
+```math
 \operatorname{area}(F)
 \le D\,\operatorname{width}_F(u).
-$$
+```
 
 Hence (75.16) implies
 
-$$
+```math
 \operatorname{width}_F(u)>{3D\over5}.
-$$
+```
 
 Writing support functions relative to `o`, the outer disk gives
 
-$$
+```math
 h_F(-u)\le {11D\over20}.
-$$
+```
 
 Therefore
 
-$$
+```math
 h_F(u)=\operatorname{width}_F(u)-h_F(-u)>{D\over20}
-$$
+```
 
 for every unit `u`. This is exactly the inner disk inclusion in (75.15). `square`
 
@@ -325,46 +330,46 @@ for every unit `u`. This is exactly the inner disk inclusion in (75.15). `square
 
 Every sufficiently large post-ZF C-II survivor satisfies
 
-$$
+```math
 \boxed{c_I=O(D^{2/3}).}
 \tag{75.17}
-$$
+```
 
 More explicitly, for every integer `M>=1`,
 
-$$
+```math
 \boxed{
 c_I
 \le5000\pi(M+2)^2
 +{2+2\pi D\over M+1}.
 }
 \tag{75.18}
-$$
+```
 
 **Proof.** Lemma 75.3 permits Theorem 75.2. It remains to control components with
 `delta_r>M`.
 
 From (75.3), eliminating `s_C` with (75.2) gives
 
-$$
+```math
 \sum_r\delta_r
 \le 2+2q-e_{BB}-k-2c_I
 \le2+2q
 \le2+2\pi D.
 \tag{75.19}
-$$
+```
 
 Every component not counted by `N_M` has integer graph diameter at least `M+1`, so
 
-$$
+```math
 c_I\le N_M+{2+2\pi D\over M+1}.
-$$
+```
 
 Use (75.7) to obtain (75.18). Taking
 
-$$
+```math
 M=\lfloor D^{1/3}\rfloor
-$$
+```
 
 proves (75.17). `square`
 
@@ -375,83 +380,83 @@ the canonical meanings of all variables straight.
 
 From (75.2),
 
-$$
+```math
 \boxed{
 e_{BB}+s_C=q+k+O(D^{2/3}).}
 \tag{75.20}
-$$
+```
 
 Let `m_B` denote the number of nonunit force-hull sides, the quantity called `m` in
 Section 63. Section 63 gives
 
-$$
+```math
 e_{BB}=q-m_B+c_B,
 \tag{75.21}
-$$
+```
 
 where `c_B>=0` counts loaded-loaded contacts beyond the unit convex-hull sides.
 Combining (75.21) with (75.2) gives the exact identity
 
-$$
+```math
 m_B+k=c_I+c_B+s_C+2,
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{m_B+k=c_B+s_C+O(D^{2/3}).}
 \tag{75.22}
-$$
+```
 
 For the canonical renormalized surplus
 
-$$
+```math
 \mu_DD:=e_{BB}+2s_C-3k,
-$$
+```
 
 (75.2) gives
 
-$$
+```math
 \boxed{
 \mu_DD
 =q+s_C-2k+O(D^{2/3})
 =2q-e_{BB}-k+O(D^{2/3}).
 }
 \tag{75.23}
-$$
+```
 
 Since `s_C>=0` and canonical difference-body density gives
 
-$$
+```math
 \liminf {q\over D}\ge\liminf {h\over D}\ge2\rho,
 \qquad \rho=\cos\rho,
-$$
+```
 
 we obtain the useful all-phase inequality
 
-$$
+```math
 \boxed{
 \liminf\left(\mu_D+{2k\over D}\right)\ge2\rho
 =1.478170\ldots .
 }
 \tag{75.24}
-$$
+```
 
 In particular, on any subsequence with `k=o(D)`,
 
-$$
+```math
 \boxed{\liminf\mu_D\ge2\rho.}
 \tag{75.25}
-$$
+```
 
 More quantitatively, if a subsequence has `mu_D->mu`, then
 
-$$
+```math
 \boxed{
 \liminf {k\over D}\ge {2\rho-\mu\over2}
 }
 \tag{75.26}
-$$
+```
 
 whenever the right side is positive. Thus a sequence approaching the old
 `z_*>0.9604` renormalized-surplus frontier must carry a genuinely linear topology/rank

@@ -13,10 +13,10 @@
 
 The lower bound
 
-$$
+```math
  d_\Sigma/D\ge S_*-o(1),
  \qquad S_*=2.798596312209462\ldots,
-$$
+```
 
 is imported only on the Section-118 endpoint/common-cap profile. It is not an
 all-Type-II theorem. The reviewed note states this restriction in its introduction,
@@ -28,15 +28,15 @@ derivation, and disposition; no universal Type-II conclusion is taken from `S_*`
 
 Section 121's exact identity is
 
-$$
+```math
 E_\Sigma=4\Delta_R+4f+2(q-k-e_{BB}+C_{\rm att})-2d_\Sigma.
-$$
+```
 
 In Type II, `c_B=0` and disjoint attachment cells imply `C_att<=e_BB`. Thus
 
-$$
+```math
 E_\Sigma\le4\Delta_R+4f+2(q-k)-2d_\Sigma.
-$$
+```
 
 The inequality direction is correct: replacing `C_att` by `e_BB` enlarges the right
 side. The proof does not identify local exceptional-face occurrences across cells.
@@ -48,23 +48,23 @@ side. The proof does not identify local exceptional-face occurrences across cell
 From `b+Q=2(q-k)` and
 `delta_D=(b-per(F))/D`,
 
-$$
+```math
 Q/D=2(q-k)/D-per(F)/D-\delta_D.
-$$
+```
 
 Since `P_exc=Q+4f`, the upper side becomes
 
-$$
+```math
 E_\Sigma/D
 \le P_{\rm exc}/D+per(F)/D+\delta_D-2d_\Sigma/D+o(1).
-$$
+```
 
 Combining the Section-122 lower bound `E_\Sigma/D>=c_0-o(1)` with the scoped
 `d_\Sigma/D>=S_*-o(1)` and `per(F)/D->pi` gives
 
-$$
+```math
 \liminf(P_{\rm exc}/D+\delta_D)\ge2S_*+c_0-\pi.
-$$
+```
 
 No division by a possibly vanishing diameter or reversal of a liminf inequality is
 used.

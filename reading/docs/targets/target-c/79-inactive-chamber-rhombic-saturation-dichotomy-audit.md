@@ -9,14 +9,14 @@
 Canonical Section 77 gives much more than a theorem for the explicitly
 subquadratic-core branch. Its finite identities hold for every post-ZF C-II survivor:
 
-$$
+```math
 a_0N_F=A_F+O(D),
 \qquad
 a_0Z_{ch}=A_{ch}+O(D),
 \qquad
 P_{ch}=O(D),
 \tag{79.1}
-$$
+```
 
 where
 
@@ -50,30 +50,30 @@ rhombic-saturation side.
 
 Retain the notation of canonical Sections 67, 68, and 77. In particular
 
-$$
+```math
 Z_{ch}=N_F-m,
 \qquad
 A_{ch}=A_F-A_4.
 \tag{79.2}
-$$
+```
 
 Canonical Section 77 proves the finite boundary-order relation
 
-$$
+```math
 \boxed{
 a_0Z_{ch}=A_{ch}+O(D).
 }
 \tag{79.3}
-$$
+```
 
 The implied constant is absolute over the post-ZF class. It also proves
 
-$$
+```math
 \boxed{
 P_{ch}:=\sum_j P_j\le13\pi D,
 }
 \tag{79.4}
-$$
+```
 
 where `C_j` are the actual convex inactive chambers, `P_j=per(C_j)`, and
 `A_j=area(C_j)`.
@@ -82,80 +82,80 @@ where `C_j` are the actual convex inactive chambers, `P_j=per(C_j)`, and
 
 Let
 
-$$
+```math
 A_{max}:=\max_jA_j.
-$$
+```
 
 For every chamber, the planar isoperimetric inequality gives
 
-$$
+```math
 \sqrt{A_j}\le{P_j\over2\sqrt\pi}.
-$$
+```
 
 Hence
 
-$$
+```math
 \sum_j\sqrt{A_j}
 \le{P_{ch}\over2\sqrt\pi}
 \le{13\sqrt\pi\over2}D.
 \tag{79.5}
-$$
+```
 
 Since
 
-$$
+```math
 A_{ch}=\sum_jA_j
 \le\sqrt{A_{max}}\sum_j\sqrt{A_j},
-$$
+```
 
 we obtain the finite concentration estimate
 
-$$
+```math
 \boxed{
 A_{max}
 \ge {4A_{ch}^2\over169\pi D^2}.
 }
 \tag{79.6}
-$$
+```
 
 Now suppose along a subsequence that for some fixed `zeta>0`,
 
-$$
+```math
 Z_{ch}\ge\zeta D^2.
 \tag{79.7}
-$$
+```
 
 Equation (79.3) gives
 
-$$
+```math
 A_{ch}\ge a_0\zeta D^2-O(D).
-$$
+```
 
 Substitution in (79.6) yields
 
-$$
+```math
 \boxed{
 \liminf {A_{max}\over D^2}
 \ge {4a_0^2\zeta^2\over169\pi}>0.
 }
 \tag{79.8}
-$$
+```
 
 Choose a chamber `C_*` attaining `A_max`. Canonical Section 77 also gives total
 isolate-only Oler slack `sum_j sigma_j=O(D)`, so `sigma_*=O(D)`. Therefore
 
-$$
+```math
 z_*={A_{max}\over a_0}+{P_*\over2}+1-\sigma_*
 ={A_{max}\over a_0}+O(D),
 \tag{79.9}
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{z_*=\Omega(D^2).}
 \tag{79.10}
-$$
+```
 
 Thus **any** quadratic inactive population in the force hull, not only the special
 branch `m=o(D^2)`, forces one actual macroscopic inactive chamber.
@@ -164,47 +164,47 @@ branch `m=o(D^2)`, forces one actual macroscopic inactive chamber.
 
 Conversely suppose an unbounded subsequence has no macroscopic inactive chamber:
 
-$$
+```math
 A_{max}=o(D^2).
 \tag{79.11}
-$$
+```
 
 Then (79.5) gives
 
-$$
+```math
 A_{ch}
 \le\sqrt{A_{max}}\,{13\sqrt\pi\over2}D
 =o(D^2).
 \tag{79.12}
-$$
+```
 
 Equation (79.3) immediately yields
 
-$$
+```math
 \boxed{Z_{ch}=o(D^2).}
 \tag{79.13}
-$$
+```
 
 Since `Z_ch=N_F-m`,
 
-$$
+```math
 \boxed{m=N_F-o(D^2).}
 \tag{79.14}
-$$
+```
 
 Canonical Section 77's force-hull population saturation is
 
-$$
+```math
 a_0N_F=A_F+O(D).
 \tag{79.15}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{a_0m=A_F-o(D^2).}
 \tag{79.16}
-$$
+```
 
 This already shows that, in the no-macroscopic-chamber branch, the positive KKT core
 itself saturates the force-hull area at the leading packing density.
@@ -213,61 +213,61 @@ itself saturates the force-hull area at the leading packing density.
 
 Canonical Section 67 gives the exact face count
 
-$$
+```math
 \boxed{m=R_4+f+q-k+1,}
 \tag{79.17}
-$$
+```
 
 where `R_4` is the number of bounded quadrilateral contact faces, `f` the number of
 bounded nonquadrilateral faces, and `k=d_H+s_Z`.
 
 Every correction in (79.17) is boundary order:
 
-$$
+```math
 q=O(D),
 \qquad
 f=O(D),
 \qquad
 k=O(D).
 \tag{79.18}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{R_4=m+O(D).}
 \tag{79.19}
-$$
+```
 
 Every quadrilateral face is a strict unit rhombus. Write
 
-$$
+```math
 A_4=a_0R_4+E_4,
 \tag{79.20}
-$$
+```
 
 where canonical Section 68 gives
 
-$$
+```math
 E_4=O(D).
 \tag{79.21}
-$$
+```
 
 Combining (79.16), (79.19), and (79.21),
 
-$$
+```math
 \boxed{
 A_4=A_F-o(D^2).
 }
 \tag{79.22}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{A_{ch}=A_F-A_4=o(D^2),}
 \tag{79.23}
-$$
+```
 
 now obtained directly from the positive-core/rhombus ledgers as well.
 
@@ -276,17 +276,17 @@ strict quadrilateral contact faces occupy all but `o(D^2)` of the force-hull are
 
 Canonical `C-FS-STABILITY` supplies
 
-$$
+```math
 \liminf {A_F\over D^2}
 \ge
 A_{SC}:={2\rho+\sin(2\rho)\over4}>0,
 \qquad \rho=\cos\rho.
 \tag{79.24}
-$$
+```
 
 Therefore (79.16) and (79.22) also give the explicit leading floors
 
-$$
+```math
 \boxed{
 \liminf {m\over D^2}
 \ge {A_{SC}\over a_0},
@@ -295,7 +295,7 @@ $$
 \ge {A_{SC}\over a_0}.
 }
 \tag{79.25}
-$$
+```
 
 Numerically `A_SC/a_0=0.714148...`, but the exact expression is the theorem.
 
@@ -303,35 +303,35 @@ Numerically `A_SC/a_0=0.714148...`, but the exact expression is the theorem.
 
 Fix `epsilon in (0,pi/6)`. Canonical Section 69 deletes only
 
-$$
+```math
 |F_\epsilon|=O_\epsilon(D)
 \tag{79.26}
-$$
+```
 
 strict rhombi to obtain `epsilon`-coherent physical grains. Every deleted unit rhombus
 has area at most one, so the retained grain union has area
 
-$$
+```math
 A_{ret}=A_4-O_\epsilon(D).
 \tag{79.27}
-$$
+```
 
 In the no-macroscopic-chamber branch, (79.22) gives
 
-$$
+```math
 \boxed{
 A_{ret}=A_F-o(D^2).
 }
 \tag{79.28}
-$$
+```
 
 Thus the coherent physical grains produced by Section 69 fill the force hull in area
 to leading order. The total physical grain perimeter remains
 
-$$
+```math
 \sum_jP_j=O_\epsilon(D).
 \tag{79.29}
-$$
+```
 
 This is stronger than the earlier statement that one quadratic coherent grain exists.
 For each fixed `epsilon`, all but `o(D^2)` of the force-hull area is carried by a
@@ -340,18 +340,18 @@ finite-perimeter polycrystalline family of `epsilon`-coherent strict-rhombus gra
 There is also a quantitative small-grain tail. Let `R_j` be the retained rhombus
 counts and suppose `R_j<eta D^2` for grains in a set `S_eta`. Section 69 gives
 
-$$
+```math
 2\sqrt{\pi a_0}\sum_j\sqrt{R_j}=O_\epsilon(D).
-$$
+```
 
 Therefore
 
-$$
+```math
 \sum_{j\in S_\eta}R_j
 \le\sqrt\eta D\sum_j\sqrt{R_j}
 =O_\epsilon(\sqrt\eta\,D^2).
 \tag{79.30}
-$$
+```
 
 So, after first fixing `epsilon` and then choosing `eta` small, finitely many
 macroscopic coherent grains carry all but an arbitrarily small fraction of the
@@ -366,7 +366,7 @@ one of the following two forms.
 
 There is one actual convex inactive chamber `C_*` with
 
-$$
+```math
 \boxed{
 area(C_*)=\Omega(D^2),
 \qquad
@@ -377,7 +377,7 @@ per(C_*)=O(D),
 \sigma_*=O(D).
 }
 \tag{79.31}
-$$
+```
 
 Every point counted by `z_*` is an actual contact-isolated source point. This branch
 includes canonical Section 77's entire `m=o(D^2)` regime, but it can also occur when
@@ -385,7 +385,7 @@ the positive core itself is quadratic.
 
 ### Branch B — rhombic force-hull saturation
 
-$$
+```math
 \boxed{
 Z_{ch}=o(D^2),
 \quad
@@ -394,7 +394,7 @@ m=N_F-o(D^2),
 A_4=A_F-o(D^2),
 }
 \tag{79.32}
-$$
+```
 
 and, for every fixed `epsilon in (0,pi/6)`, the Section-69 coherent physical grains
 cover `F` up to `o(D^2)` area while having total perimeter `O_epsilon(D)`.

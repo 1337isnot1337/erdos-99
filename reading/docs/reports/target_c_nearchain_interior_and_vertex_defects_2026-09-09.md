@@ -44,29 +44,29 @@ near-equilateral equality well at every interior degree-five path defect.
 
 Let K be a compact convex planar body of diameter D. Suppose, for one center o,
 
-$$
+```math
 B(o,D/2-2h)\subseteq K\subseteq B(o,D/2+h),\qquad 0<h<D/4.
-$$
+```
 
 Let `z=x_0,...,x_k=a` be a unit-edge polygonal path in K whose endpoints satisfy
 `a-z=D u`, `|u|=1`. Suppose every oriented edge e satisfies
 
-$$
+```math
 e\cdot u\ge c=\sqrt{1-\rho^2},\qquad |e\cdot Ju|\le\rho,
 \qquad 0\le\rho<1.
-$$
+```
 
 Put R=D/2+h and
 
-$$
+```math
 \gamma=\frac{D}{4R}-\frac\rho c.
-$$
+```
 
 **Theorem 1.** If gamma>0, every path vertex with
 
-$$
+```math
 \boxed{\min(j,k-j)>\frac{3h}{c\gamma}}
-$$
+```
 
 belongs to the interior of K. If the path lies in a diameter-D point
 configuration with convex hull K, such a vertex is not an endpoint of any
@@ -76,30 +76,30 @@ diameter pair.
 
 Write `x_j=z+p u+y Ju`. Forward projection gives
 
-$$
+```math
 p\ge cj,\qquad D-p\ge c(k-j).
-$$
+```
 
 The transverse projections of the whole path sum to zero. Therefore
 
-$$
+```math
 |y|\le\rho\min(j,k-j)\le\frac\rho c\min(p,D-p).
-$$
+```
 
 Set l=min(p,D-p), and w=z+p u. By the exact squared-norm identity for a convex
 combination of z and a,
 
-$$
+```math
 |w-o|^2\le R^2-p(D-p)=R^2-l(D-l).
-$$
+```
 
 For 0<=q<=R^2, `sqrt(R^2-q)<=R-q/(2R)`. Since l<=D/2,
 
-$$
+```math
 |x_j-o|\le |w-o|+|y|
 \le R-\frac{l(D-l)}{2R}+\frac\rho c l
 \le R-\gamma l.
-$$
+```
 
 The hypothesis on j gives gamma*l>3h. Thus
 `|x_j-o|<R-3h=D/2-2h`, proving strict interiority.
@@ -113,19 +113,19 @@ greater than D from q. This contradicts diam(K)=D. Square.
 Section 155 of `docs/targets/target-a/08-prescribed-phase-alignment.md` supplies
 the displayed concentric inclusions for the **actual source hull**, with
 
-$$
+```math
 h=3^{1/4}\sqrt D.
-$$
+```
 
 Only its source-hull conclusion is used: there is no identification with an
 independent scaffold, smaller optimum, or force hull.
 
 If D>=64*sqrt(3) and rho<=1/4, then h/D<=1/8,
 
-$$
+```math
 c\gamma=\frac{cD}{4R}-\rho
 \ge\frac{\sqrt{15}}{10}-\frac14>\frac18.
-$$
+```
 
 Hence all vertices with `min(j,k-j)>24h` are strictly interior. There are at most
 `2 floor(24h)+2` remaining vertices. In the C100 regime rho=(1-b)/b tends to zero,
@@ -139,10 +139,10 @@ boundary deep inside the convex source hull.
 Assume precisely the force-stack hypotheses of C102: ordered nested separator
 trains have unit directions a_j and forces
 
-$$
+```math
 F_j=A_j a_j=bD u+G_j,\quad A_j>0,\quad
 |G_j|\le D\eta,\quad \eta=1-b,
-$$
+```
 
 and every residual diameter contributes a fixed vector on one interval of
 indices. Set G_0=G_(k+1)=0 and a_0=a_(k+1)=u. Suppose b>1/2.
@@ -150,11 +150,11 @@ indices. Set G_0=G_(k+1)=0 and a_0=a_(k+1)=u. Suppose b>1/2.
 **Theorem 2.** Both the chordal variation and the total smaller-angle variation
 of the extended direction sequence satisfy
 
-$$
+```math
 \boxed{\operatorname{TV}_{\rm chord}(a)
 \le\operatorname{TV}_{\rm angle}(a)
 \le\frac{2\eta}{2b-1}.}
-$$
+```
 
 ### Complete proof
 
@@ -166,10 +166,10 @@ Every interpolated force lies in the convex ball `B(bD u,D eta)`. Its norm is
 at least `D(b-eta)=D(2b-1)>0`. Along any differentiable segment F(t), the
 angular derivative of F(t)/|F(t)| has magnitude
 
-$$
+```math
 \frac{|\det(F(t),F'(t))|}{|F(t)|^2}
 \le\frac{|F'(t)|}{D(2b-1)}.
-$$
+```
 
 The smaller angle between segment endpoint directions is no larger than this
 integrated angular length. Summing proves the angular bound. A chord of the
@@ -193,18 +193,18 @@ path edges.
 three incident faces lie in the larger path sector. If their angles at the
 vertex are theta_1,theta_2,theta_3, then
 
-$$
+```math
 \sum_{r=1}^3(\theta_r-\pi/3)=\tau,
 \qquad
 0<\sum_{r=1}^3(\sin\theta_r-\sqrt3/2)\le\tau/2.
-$$
+```
 
 Consequently, along a path satisfying Theorem 2, the sum of these three-face
 area surpluses over all its interior degree-five vertices is at most
 
-$$
+```math
 \boxed{\eta/(2b-1).}
-$$
+```
 
 Faces are counted with multiplicity in this statement.
 
@@ -236,15 +236,15 @@ hypothesis.
 For any 0<epsilon<=1/100, put theta=pi/3+epsilon and let v_0,...,v_4 be the
 unit vectors of respective angles
 
-$$
+```math
 0,\quad\theta,\quad2\theta,\quad3\theta,\quad4\theta.
-$$
+```
 
 Take the eleven points
 
-$$
+```math
 0,\quad v_i,\quad s_i=v_i+v_{i+1}\quad (i\bmod5).
-$$
+```
 
 Their contact graph consists exactly of the five spokes `0-v_i` and the ten
 edges `v_i-s_i-v_(i+1)`. It is triangle-free and bounds a disk of five strict
@@ -279,9 +279,9 @@ with shores `{0,s_i}` and `{v_i}`, so it contains no unit triangle.
 Let gamma_i be the cyclic angle from v_i to v_(i+1), put
 `t_i=tan(gamma_i/2)`, and set
 
-$$
+```math
 \alpha_i=t_{i-1}+t_i>0.
-$$
+```
 
 The elementary identity
 `t_i(v_i+v_(i+1))=-J(v_(i+1)-v_i)` telescopes to
@@ -293,9 +293,9 @@ triangle-freeness supplies no uniform angle gap.
 In fact the area excess of **all five** incident faces tends to zero, not just
 the three selected in Theorem 3:
 
-$$
+```math
 0<4\sin\theta+\sin\phi-5\sqrt3/2\le4\epsilon.
-$$
+```
 
 For the upper bound apply the tangent-line bounds for sine at pi/3 and 2pi/3;
 the four theta terms contribute at most 2epsilon and the phi term at most
@@ -310,9 +310,9 @@ is not claimed. This refutes the local degree-four implication, not C-II.
 
 For 0<delta<=1/100, let v_0,v_1,v_2 have unit lengths and angles
 
-$$
+```math
 0,\quad\pi-\delta,\quad3\pi/2-\delta/2.
-$$
+```
 
 Take the six points `0,v_0,v_1,v_2,v_1+v_2,v_2+v_0`. They form two strict
 unit rhombi sharing the edge `0-v_2`. The vertex 0 is on their concave boundary:

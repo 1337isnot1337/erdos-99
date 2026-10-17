@@ -29,30 +29,30 @@ or the two-shore oriented-branch proof; those have separate hostile audits.
 
 The retained-pair theorem gives
 
-$$
+```math
 P_{OO}^{dom}>0.0027D-o(D).
-$$
+```
 
 The dominant limiting orbit has at most three projective phase atoms.  Pigeonhole
 therefore gives one shrinking phase window with retained pair weight
 
-$$
+```math
 >0.0009D-o(D).
-$$
+```
 
 For one train the retained pair weight is
 
-$$
+```math
 w_\tau=\min(a_\tau,b_\tau)\le1.
-$$
+```
 
 Hence positive pair weight `W` requires at least `W` actual trains.  The post-retraction
 phase-zero audit proves that deleting the two shrinking marker neighborhoods removes
 only `o(D)` pair weight.  Therefore the cleaned family has
 
-$$
+```math
 m>0.0009D-o(D)
-$$
+```
 
 actual proper O--O crosscuts.
 
@@ -84,18 +84,18 @@ projective-energy inference.
 For a finite family of pairwise disjoint proper O--O crosscuts whose complement dual is
 a path
 
-$$
+```math
 R_0\xleftrightarrow{\tau_1}R_1
 \xleftrightarrow{\tau_2}\cdots
 \xleftrightarrow{\tau_m}R_m,
-$$
+```
 
 every source pair has contiguous selected-cut support.  If its endpoints lie in
 `R_a,R_b`, `a<b`, the separating selected cuts are exactly
 
-$$
+```math
 I=\{a+1,\ldots,b\}.
-$$
+```
 
 This exact incidence statement is topological; it does not require exact equality of
 the shrinking train phases.  The phase-zero theorem correctly removed a former
@@ -128,9 +128,9 @@ main's path retractions because its proof is conditional only on path+hub struct
 
 For one diameter interval with endpoint indices `a_h<b_h`, the hub condition is
 
-$$
+```math
 a_h\le k\le b_h.
-$$
+```
 
 At an internal middle region `R_i`, a switch is either an interval ending at `i` or an
 interval starting at `i`.  If `i<k`, an end at `i` would violate `b_h>=k`; if `i>k`, a
@@ -149,36 +149,36 @@ asymptotic density.
 Let `N_i` count actual diameter intervals which change incidence across middle region
 `R_i`.  One interval has at most one start and one end, so
 
-$$
+```math
 \sum_iN_i\le2|H|.
-$$
+```
 
 The straight-line diameter graph is a thrackle, hence Hopf--Pannwitz gives
 
-$$
+```math
 |H|\le|B_+|.
-$$
+```
 
 Every actual diameter endpoint is an extreme source-convex-hull vertex.  The convex
 polygon on the loaded endpoint subset has unit-separated consecutive vertices and
 perimeter at most the force-hull perimeter.  Cauchy's perimeter bound gives
 
-$$
+```math
 |B_+|\le\operatorname{per}(F)\le\pi D.
-$$
+```
 
 Therefore
 
-$$
+```math
 \sum_iN_i\le2\pi D.
-$$
+```
 
 Averaging over `>0.0009D-o(D)` nonhub boundaries and using
 `pi<355/113` gives
 
-$$
+```math
 {2(355/113)\over0.0009}=6981.3176\ldots<6982.
-$$
+```
 
 Since `N_i` is integral, an eventual boundary with `N_i<=6981` exists.
 
@@ -190,26 +190,26 @@ Since `N_i` is integral, an eventual boundary with `N_i<=6981` exists.
 
 Use the canonical relative-interior normalized diameter stress
 
-$$
+```math
 \sum_{h\in H}\beta_h=1,
 \qquad \beta_h>0.
-$$
+```
 
 A diameter support interval changes incidence at no more than its two endpoint
 regions.  Hence
 
-$$
+```math
 \sum_i B_i
 =\sum_i\sum_h\beta_h
  |\varepsilon_{h,i+1}-\varepsilon_{hi}|
 \le2\sum_h\beta_h=2.
-$$
+```
 
 Thus
 
-$$
+```math
 \sum_iDB_i\le2D.
-$$
+```
 
 No individual KKT multiplier lower bound is used.
 
@@ -221,37 +221,37 @@ No individual KKT multiplier lower bound is used.
 
 Let
 
-$$
+```math
 L_i=|B_+\cap R_i|.
-$$
+```
 
 Distinct complementary regions are disjoint, so every loaded diameter endpoint belongs
 to one region only.  Therefore
 
-$$
+```math
 \sum_iL_i\le|B_+|\le\pi D.
-$$
+```
 
 Combining this with the preceding two budgets gives
 
-$$
+```math
 \sum_i(N_i+DB_i+L_i)\le(3\pi+2)D.
-$$
+```
 
 The exact certificate checks
 
-$$
+```math
 {3(355/113)+2\over0.0009}
 =12694.1986\ldots<12695.
-$$
+```
 
 All three terms are nonnegative.  Thus one nonhub boundary has
 
-$$
+```math
 N_i,L_i\le12694,
 \qquad
 B_i<{12695\over D}+o(D^{-1}).
-$$
+```
 
 The integrality step is valid because the average has a fixed positive gap below the
 next integer while the asymptotic error is `o(1)`.

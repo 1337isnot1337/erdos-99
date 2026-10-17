@@ -18,22 +18,22 @@
 
 The preceding componentwise-Oler report proved
 
-$$
+```math
 \frac vn\le \mu^2+o(1)
-$$
+```
 
 for a post-ZF sequence with bounded
 
-$$
+```math
 \mu_D:=\frac{e_{BB}+2s_C-3(d_H+s_Z)}D.
-$$
+```
 
 That estimate ignores the fact that each unloaded component is itself a
 **triangle-free penny graph**.  Eppstein's stronger isoperimetric edge theorem converts
 the exact Eppstein slack already present in ZK into a square-root population charge.
 The result is
 
-$$
+```math
 \boxed{
 \limsup\frac vn
 \le
@@ -41,36 +41,36 @@ $$
 \left(\limsup\mu_D\right)^2.
 }
 \tag{ER.1}
-$$
+```
 
 Equivalently, for every fixed bounded `u`, any post-ZF sequence with
 `mu_D<=u+o(1)` has
 
-$$
+```math
 \boxed{
 \liminf\frac{n-v}{n}
 \ge
 1-\frac{4u^2}{\pi^2}.
 }
 \tag{ER.2}
-$$
+```
 
 C65 identifies `n-v` exactly with fully inactive contact-isolated source rattlers;
 none is an actual diameter endpoint.
 
 At the explicit GR scale `u=0.5947`, the formal limiting core fraction is at most
 
-$$
+```math
 \frac4{\pi^2}(0.5947)^2
 =0.1433362779\ldots,
-$$
+```
 
 so the rattler fraction is at least
 
-$$
+```math
 \boxed{0.8566637220\ldots .}
 \tag{ER.3}
-$$
+```
 
 GR itself excludes `mu<=0.5947` by a uniform positive amount.  The point of ER is the
 near-frontier normal form: any future argument confining `mu` even to `0.60+o(1)`
@@ -85,57 +85,57 @@ and supersedes that report for force-bulk population estimates.
 
 For one unloaded positive-contact component `I_r`, recall
 
-$$
+```math
 n_r=|I_r|,
 \qquad
 \delta_r=\operatorname{diam}_{C[I_r]}I_r,
-$$
+```
 
 and the exact Eppstein edge slack
 
-$$
+```math
 r_r:=2n_r-\delta_r-2-e_r\ge0.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 e_r=2n_r-(\delta_r+r_r)-2.}
 \tag{1.1}
-$$
+```
 
 Eppstein 2018 Theorem 4 says that there is an absolute constant `C_E` such that every
 `N`-vertex triangle-free penny graph satisfies
 
-$$
+```math
 \boxed{
 e\le2N-c_E\sqrt N+C_E,}
 \qquad
 c_E:=\frac12\sqrt{2\pi\sqrt3}
 =\sqrt{\frac{\pi\sqrt3}{2}}.
 \tag{1.2}
-$$
+```
 
 Apply (1.2) to each `I_r` and compare with (1.1).  With
 
-$$
+```math
 a_r:=\delta_r+r_r,
-$$
+```
 
 we obtain
 
-$$
+```math
 c_E\sqrt{n_r}\le a_r+C_E+2.
 \tag{1.3}
-$$
+```
 
 Thus the same exact component currency `delta_r+r_r` appearing in ZK controls the
 square root of the component population.
 
 Summing (1.3) after squaring gives
 
-$$
+```math
 \sum_r n_r
 \le
 \frac1{c_E^2}
@@ -143,31 +143,31 @@ $$
 \left(\sum_r a_r\right)^2+O\left(\sum_r a_r\right)+O(c_I)
 \right).
 \tag{1.4}
-$$
+```
 
 ZK/GR gives
 
-$$
+```math
 \sum_r a_r+s_B
 =\mu_DD+6,
-$$
+```
 
 so
 
-$$
+```math
 \sum_r a_r\le\mu_DD+6.
 \tag{1.5}
-$$
+```
 
 Because `q,c_I=O(D)`, the loaded vertices and all linear terms are lower order.  Since
 
-$$
+```math
 c_E^2=\frac{\pi\sqrt3}{2},
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{
 \limsup\frac v{D^2}
 \le
@@ -175,20 +175,20 @@ $$
 \left(\limsup\mu_D\right)^2.
 }
 \tag{1.6}
-$$
+```
 
 Finally
 
-$$
+```math
 \frac n{D(n)^2}\to\frac\pi{2\sqrt3},
-$$
+```
 
 so division gives ER.1 because
 
-$$
+```math
 \frac{2/(\pi\sqrt3)}{\pi/(2\sqrt3)}
 =\frac4{\pi^2}.
-$$
+```
 
 That is the entire argument.
 
@@ -203,18 +203,18 @@ and extracted as `extracted/text/463.txt`.
 
 Theorem 4 states
 
-$$
+```math
 e\le
 2N-rac12\sqrt{2\pi\sqrt3\,N}+O(1).
 \tag{2.1}
-$$
+```
 
 The preceding Lemma 4 obtains the `sqrt(N)` term from an outer-face isoperimetric
 bound; Lemma 5 converts an outer face with `k` incidences into
 
-$$
+```math
 e\le2N-k/2-2.
-$$
+```
 
 The `O(1)` in (2.1) is therefore absolute over the class of triangle-free penny graphs,
 not a component-dependent parameter.
@@ -232,14 +232,14 @@ explicitly leaves that conjecture open.
 
 Choose an absolute `K>=0` such that (1.3) holds as
 
-$$
+```math
 c_E\sqrt{n_r}\le a_r+K
 \tag{3.1}
-$$
+```
 
 for every component.  Then
 
-$$
+```math
 \begin{aligned}
 c_E^2\sum_r n_r
 &\le\sum_r(a_r+K)^2\\
@@ -248,7 +248,7 @@ c_E^2\sum_r n_r
 +2K\sum_ra_r+K^2c_I.
 \end{aligned}
 \tag{3.2}
-$$
+```
 
 There is no dangerous `K c_I` term inside one global square.  This is why a linear
 number of singleton unloaded components does not alter the leading constant.
@@ -256,19 +256,19 @@ number of singleton unloaded components does not alter the leading constant.
 C36's noncrossing attachment incidence theorem gives in particular `c_I<=q`, and
 loaded vertices are unit-separated around the convex force hull, so
 
-$$
+```math
 q\le\operatorname{per}F\le\pi D.
-$$
+```
 
 Thus `c_I=O(D)`.  If `mu_D` is bounded, (1.5) gives `sum a_r=O(D)`, and (3.2) has only
 one quadratic term:
 
-$$
+```math
 \sum_rn_r
 \le
 \frac{2}{\pi\sqrt3}\mu_D^2D^2+O(D).
 \tag{3.3}
-$$
+```
 
 Adding the `q=O(D)` loaded vertices proves (1.6).
 
@@ -278,24 +278,26 @@ Adding the `q=O(D)` loaded vertices proves (1.6).
 
 For orientation,
 
-$$
+```math
 \frac4{\pi^2}=0.4052847345\ldots .
-$$
+```
 
 Hence:
 
 - if `mu_D<=0.5947+o(1)`, then
-  $$
+  ```math
   \frac vn\le0.1433362780+o(1),
   \qquad
   \frac{n-v}{n}\ge0.8566637220-o(1);
-  $$
+  
+  ```
 - if `mu_D<=0.60+o(1)`, then
-  $$
+  ```math
   \frac vn\le0.1459025040+o(1),
   \qquad
   \frac{n-v}{n}\ge0.8540974960-o(1);
-  $$
+  
+  ```
 - if `mu_D<=\pi/(2\sqrt2)+o(1)`, at least half of the source is rattlers.
 
 The first bullet is a formal endpoint-window calculation, not an assertion that GR
@@ -308,29 +310,29 @@ allows `mu=0.5947`: GR proves a fixed positive gap above that value.
 The Oler-only estimate charges `n_r` by `delta_r^2`.  Eppstein Theorem 4 uses the
 **edge count** as well.  Because the exact ZK slack writes
 
-$$
+```math
 e_r=2n_r-\delta_r-2-r_r,
-$$
+```
 
 Eppstein's square-root edge deficit is paid by
 
-$$
+```math
 \delta_r+r_r,
-$$
+```
 
 not by `delta_r` alone.  This is precisely the component part of the GR currency.
 
 The gain in the leading core-population coefficient is from
 
-$$
+```math
 \frac\pi{2\sqrt3}=0.906899\ldots
-$$
+```
 
 to
 
-$$
+```math
 \frac2{\pi\sqrt3}=0.367552\ldots .
-$$
+```
 
 No unproved quantitative conductance, rigidity, or geometric-spreading statement is
 inserted.
@@ -393,9 +395,9 @@ The component bound (1.6) itself needs no global minimality beyond the post-ZF t
 stack.  **Global optimality enters decisively only when converting it into the source
 fraction ER.1**, through
 
-$$
+```math
 n/D(n)^2\to\pi/(2\sqrt3).
-$$
+```
 
 Dense shell-plus-isolate constructions without a certificate for `D=D(n)` do not have
 this implication available.
@@ -439,7 +441,7 @@ leading-density estimate.
 
 For any fixed `u>0.5947`, Target C now has the explicit dichotomy
 
-$$
+```math
 \boxed{
 \mu_D>u
 \quad\text{or}\quad
@@ -447,7 +449,7 @@ $$
 \ge1-\frac{4u^2}{\pi^2}-o(1).
 }
 \tag{10.1}
-$$
+```
 
 For `u=0.60`, the second branch means at least `85.4%` fully inactive rattlers.
 

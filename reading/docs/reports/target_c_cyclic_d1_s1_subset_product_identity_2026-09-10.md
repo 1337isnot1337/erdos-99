@@ -20,84 +20,84 @@ SC writes the S1 primal closure as two trigonometric equations in the ordinary s
 
 Put
 
-$$
+```math
 m:=q-2,
 \qquad
 z:=e^{i\delta},
 \qquad
 \delta=2\arcsin\frac1{2D}.
-$$
+```
 
 Let
 
-$$
+```math
 P(Z)=\sum_{k=0}^{m-1}\varepsilon_k Z^k,
 \qquad \varepsilon_k\in\{+1,-1\},
 \tag{SI.1}
-$$
+```
 
 be the ordinary S1 sign polynomial after the two defect-adjacent signs have been removed and centered as below.
 
 Define the P1 reciprocal polynomial
 
-$$
+```math
 \boxed{
 F_m(Z):=(Z^m+1)^2+4Z^{m-1}(Z-1)^2.
 }
 \tag{SI.2}
-$$
+```
 
 Then the complete S1 closure is equivalent to
 
-$$
+```math
 \boxed{
 F_m(z)=(z-1)^2P(z)^2.
 }
 \tag{SI.3}
-$$
+```
 
 If
 
-$$
+```math
 S_m(Z):=1+Z+\cdots+Z^{m-1}
-$$
+```
 
 and `Q in {0,1}[Z]` marks the negative coefficients of `P`, so
 
-$$
+```math
 P=S_m-2Q,
 \tag{SI.4}
-$$
+```
 
 then SI.3 is exactly equivalent to the 0/1 subset-product equation
 
-$$
+```math
 \boxed{
 z^{m-1}\Phi_6(z)
 +(z-1)^2Q(z)(S_m(z)-Q(z))=0,
 }
 \tag{SI.5}
-$$
+```
 
 where
 
-$$
+```math
 \Phi_6(Z)=Z^2-Z+1.
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 Q(z)(S_m(z)-Q(z))
 =-\frac{z^{m-1}\Phi_6(z)}{(z-1)^2}.
 }
 \tag{SI.6}
-$$
+```
 
 On the unit circle the right side has positive real centered phase:
 
-$$
+```math
 \boxed{
 Q(z)(S_m(z)-Q(z))
 =\lambda_D z^{m-1},
@@ -105,53 +105,53 @@ Q(z)(S_m(z)-Q(z))
 \lambda_D:=\frac{2\cos\delta-1}{4\sin^2(\delta/2)}>0.
 }
 \tag{SI.7}
-$$
+```
 
 Thus the two complementary ordinary sign subsets have centered evaluations on the same real line and an exact positive product.
 
 There is a second factorization.  Put
 
-$$
+```math
 A_-(Z):=1+(Z-1)Q(Z),
-$$
+```
 
-$$
+```math
 A_+(Z):=1+(Z-1)(S_m(Z)-Q(Z))
 =Z^m-(Z-1)Q(Z).
-$$
+```
 
 Then SI.5 is equivalent to
 
-$$
+```math
 \boxed{
 A_-(z)A_+(z)
 =-z^{m-1}(z-1)^2.
 }
 \tag{SI.8}
-$$
+```
 
 The centered-real closure implies
 
-$$
+```math
 A_+(z)=z^m\overline{A_-(z)},
-$$
+```
 
 so
 
-$$
+```math
 \boxed{|A_-(z)|=|A_+(z)|=|z-1|.}
 \tag{SI.9}
-$$
+```
 
 Each `A_+` or `A_-` is a run-boundary polynomial: if the corresponding 0/1 set is the disjoint union of intervals `[a_j,b_j]`, then
 
-$$
+```math
 \boxed{
 1+(Z-1)\sum_j\sum_{k=a_j}^{b_j}Z^k
 =1+\sum_j(Z^{b_j+1}-Z^{a_j}).
 }
 \tag{SI.10}
-$$
+```
 
 Hence S1 is reduced to a small-value equation for a sparse `0,±1` polynomial supported exactly at sign-run boundaries.
 
@@ -163,79 +163,79 @@ This is a strict strengthening of the presentation of SC: the nonlinear short-st
 
 SC fixes the two signs adjacent to the unique short antipodal state to be opposite.  Normalize them as
 
-$$
+```math
 \varepsilon_0^{full}=1,
 \qquad
 \varepsilon_1^{full}=-1.
-$$
+```
 
 For the remaining `m=q-2` ordinary difference-body edges, write
 
-$$
+```math
 \varepsilon_k:=\varepsilon_{k+2}^{full},
 \qquad 0\le k\le m-1.
-$$
+```
 
 D1/SC give their directions as
 
-$$
+```math
 \theta_{k+2}
 =\left(k+\frac32+\frac s2\right)\delta,
-$$
+```
 
 where
 
-$$
+```math
 (q+s)\delta=\pi.
-$$
+```
 
 Since `q=m+2`,
 
-$$
+```math
 \theta_{k+2}
 =\frac\pi2+\left(k-\frac{m-1}{2}\right)\delta.
 \tag{1.1}
-$$
+```
 
 Therefore
 
-$$
+```math
 \sum_{k=0}^{m-1}\varepsilon_k e^{i\theta_{k+2}}
 =i z^{-(m-1)/2}P(z).
 \tag{1.2}
-$$
+```
 
 SC's real closure equation says the real part of (1.2) is zero.  Hence
 
-$$
+```math
 z^{-(m-1)/2}P(z)\in\mathbb R.
 \tag{1.3}
-$$
+```
 
 Its imaginary closure equation gives the exact value
 
-$$
+```math
 \boxed{
 z^{-(m-1)/2}P(z)=2\sin\frac\tau2,}
 \tag{1.4}
-$$
+```
 
 where SC uses
 
-$$
+```math
 \tau=\pi-2\eta,
 \qquad
 \eta=\arcsin\left(D\sin\frac G2\right).
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 P(z)=2\sin\frac\tau2\,z^{(m-1)/2}.
 }
 \tag{1.5}
-$$
+```
 
 No parity assumption on `m` is needed; the half-power is only a convenient complex phase and disappears after squaring.
 
@@ -245,57 +245,57 @@ No parity assumption on `m` is needed; the half-power is only a convenient compl
 
 D1 gives
 
-$$
+```math
 G=(s+2)\delta.
-$$
+```
 
 Using `(m+2+s)delta=pi`,
 
-$$
+```math
 \boxed{G=\pi-m\delta.}
 \tag{2.1}
-$$
+```
 
 Also
 
-$$
+```math
 \sin\frac\tau2=\cos\eta,
-$$
+```
 
 so
 
-$$
+```math
 \sin^2\frac\tau2
 =1-D^2\sin^2\frac G2
 =1-D^2\cos^2\frac{m\delta}{2}.
 \tag{2.2}
-$$
+```
 
 Since
 
-$$
+```math
 D=\frac1{2\sin(\delta/2)},
 \tag{2.3}
-$$
+```
 
 squaring (1.5) gives
 
-$$
+```math
 P(z)^2
 =4\left(1-D^2\cos^2\frac{m\delta}{2}\right)z^{m-1}.
 \tag{2.4}
-$$
+```
 
 Multiply by `(z-1)^2`.  On the unit circle,
 
-$$
+```math
 (z-1)^2=-4z\sin^2\frac\delta2.
 \tag{2.5}
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 (z-1)^2P(z)^2
 &=-16z^m\sin^2\frac\delta2
@@ -303,7 +303,7 @@ $$
 &=4z^{m-1}(z-1)^2+(z^m+1)^2\\
 &=F_m(z).
 \end{aligned}
-$$
+```
 
 This proves SI.3.
 
@@ -315,36 +315,36 @@ The P1 boundary corresponds to `tau=0`, hence `P(z)=0`, and SI.3 reduces to the 
 
 Write
 
-$$
+```math
 P=S_m-2Q,
-$$
+```
 
 where each coefficient of `Q` is `1` exactly where the corresponding sign of `P` is `-1`.
 
 Since
 
-$$
+```math
 (z-1)S_m(z)=z^m-1,
-$$
+```
 
 we have
 
-$$
+```math
 (z-1)^2S_m(z)^2=(z^m-1)^2.
-$$
+```
 
 Thus
 
-$$
+```math
 (z-1)^2P^2
 =(z^m-1)^2
 -4(z-1)^2Q(S_m-Q).
 \tag{3.1}
-$$
+```
 
 Subtract this from SI.2:
 
-$$
+```math
 \begin{aligned}
 F_m-(z-1)^2P^2
 &=(z^m+1)^2-(z^m-1)^2\\
@@ -355,21 +355,21 @@ F_m-(z-1)^2P^2
 &=4\left[z^{m-1}\Phi_6(z)
 +(z-1)^2Q(S_m-Q)\right].
 \end{aligned}
-$$
+```
 
 Using SI.3, the left side vanishes.  This proves SI.5-SI.6.
 
 For `z=e^{i delta}`,
 
-$$
+```math
 \Phi_6(z)=z(2\cos\delta-1),
-$$
+```
 
 and
 
-$$
+```math
 (z-1)^2=-4z\sin^2(\delta/2).
-$$
+```
 
 Substitution gives SI.7.
 
@@ -379,82 +379,82 @@ Substitution gives SI.7.
 
 Set
 
-$$
+```math
 B(Z):=(Z-1)Q(Z).
-$$
+```
 
 Then
 
-$$
+```math
 A_-=1+B,
 \qquad
 A_+=Z^m-B.
-$$
+```
 
 Their product is
 
-$$
+```math
 \begin{aligned}
 A_-A_+
 &=Z^m+B(Z^m-1)-B^2\\
 &=Z^m+(Z-1)^2Q(S_m-Q).
 \end{aligned}
-$$
+```
 
 By SI.5,
 
-$$
+```math
 A_-A_+
 =Z^m-Z^{m-1}\Phi_6(Z)
 =-Z^{m-1}(Z-1)^2
-$$
+```
 
 at `Z=z`.  This is SI.8.
 
 From (1.3), both centered values
 
-$$
+```math
 z^{-(m-1)/2}P(z)
 \quad\text{and}\quad
 z^{-(m-1)/2}S_m(z)
-$$
+```
 
 are real.  Hence so are
 
-$$
+```math
 z^{-(m-1)/2}Q(z)
-$$
+```
 
 and
 
-$$
+```math
 z^{-(m-1)/2}(S_m-Q)(z).
-$$
+```
 
 A direct conjugation then gives
 
-$$
+```math
 \begin{aligned}
 z^m\overline{A_-(z)}
 &=z^m+z^m(z^{-1}-1)\overline{Q(z)}\\
 &=z^m-(z-1)Q(z)\\
 &=A_+(z).
 \end{aligned}
-$$
+```
 
 Therefore
 
-$$
+```math
 A_-(z)A_+(z)=z^m|A_-(z)|^2.
-$$
+```
 
 Compare with SI.8 and divide by `z^m`:
 
-$$
+```math
 |A_-(z)|^2
 =-z^{-1}(z-1)^2
 =|z-1|^2.
-$$
+```
 
 This proves SI.9; the same holds for `A_+`.
 
@@ -464,29 +464,29 @@ This proves SI.9; the same holds for `A_+`.
 
 Let a 0/1 polynomial `R` have support equal to a disjoint union of integer intervals
 
-$$
+```math
 [a_1,b_1]\sqcup\cdots\sqcup[a_t,b_t]
 \subseteq\{0,\ldots,m-1\}.
-$$
+```
 
 Then
 
-$$
+```math
 \begin{aligned}
 1+(Z-1)R(Z)
 &=1+\sum_{j=1}^t(Z-1)\sum_{k=a_j}^{b_j}Z^k\\
 &=1+\sum_{j=1}^t(Z^{b_j+1}-Z^{a_j}).
 \end{aligned}
-$$
+```
 
 This proves SI.10.
 
 Apply this to `R=S_m-Q`, the positions carrying ordinary sign `+1`.  The full SC sign word starts with the fixed defect pair `+,-`.  If the ordinary positive-sign set has `t_+` runs, then SC's seam convention gives the odd antipodal cycle length
 
-$$
+```math
 \boxed{\nu=1+2t_+.}
 \tag{5.1}
-$$
+```
 
 Indeed the fixed defect pair contributes one sign change, while the ordinary positive runs contribute exactly two additional sign-boundary events each, including endpoints through the projective seam convention.
 
@@ -537,13 +537,15 @@ The remaining S1 problem now has three concrete attacks.
 1. **Run-boundary/KKT spine.**  CS says both KKT endpoint facets lie on retained cycle edges of `A(F)-g`.  Translate those marked cycle edges into marked sign-run boundaries of `A_+` and combine the two EU/WT endpoint cuts with SI.9.
 
 2. **Small-value rigidity.**  Classify admissible run-boundary polynomials satisfying
-   $$
+   ```math
    |A_+(e^{i\delta})|=2\sin(\delta/2)
-   $$
+   
+   ```
    in the D1 interval
-   $$
+   ```math
    0<s<\Delta_2/\delta-2.
-   $$
+   
+   ```
    The arbitrary-polynomial problem is false; the admissible maximal-thrackle run word is the essential restriction.
 
 3. **Deformation to the P1 boundary.**  SI.3 shows S1 lies in the same algebraic family as P1.  Prove that any S1 admissible sign word preserving local shell optimality can be continued in `s` until `P(z)=0`, contradicting the completed P1 exclusion, unless it reaches the Reinhardt `s=0` endpoint first.  The obstruction must be a discrete run change or a KKT support singularity; both are now identifiable.

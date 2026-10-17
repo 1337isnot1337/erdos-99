@@ -19,13 +19,13 @@ hull and the disjoint-cell tangent-cone argument in §3.3 of the report.
 
 The audited conclusion is
 
-$$
+```math
  \sum_rG_r\le a_0Z_{\rm cell}+O(D),
  \qquad
  \sum_r(L_r+P_{{\rm exc},r}-2d_r)
  \le {10\over3}Z_{\rm cell}+O(D),
  \tag{A.1}
-$$
+```
 
 where the `O(D)` constants are uniform over the canonical post-ZF class. The first
 inequality is a finite source-level estimate; the second uses canonical Section 121.
@@ -38,17 +38,17 @@ canonical Section-122 contradiction threshold.
 
 The source Oler slack is
 
-$$
+```math
  \mathcal O_A=\operatorname{area}(K)+c_0\operatorname{per}(K)-a_0(n-1),
  \qquad a_0=2c_0.
-$$
+```
 
 The strict translated-triangular-lattice comparison gives
-$
+$`
 \operatorname{area}(K)+c_0\operatorname{per}(K)-a_0(n-1)<c_0\operatorname{per}(K)
-$, because $a_0(n-1)>\pi D^2/4\ge\operatorname{area}(K)$ for the relevant
+`$, because $`a_0(n-1)>\pi D^2/4\ge\operatorname{area}(K)`$ for the relevant
 finite global-minimum source. Cauchy's inequality gives both source and force-hull
-perimeters at most $\pi D$. The standard force-hull augmentation/cap cancellation
+perimeters at most $`\pi D`$. The standard force-hull augmentation/cap cancellation
 therefore makes the total dimensional Oler slack of bounded force-hull faces and
 exterior caps `O(D)`. Isolated points are part of those Oler sets; no coordinate is
 deleted.
@@ -61,9 +61,9 @@ counts sum to the parent count plus two. The two `+1` terms also replace the par
 `+1`, so the total dimensional Oler slack increases by exactly `ell`. The attachment
 perimeter currency gives
 
-$$
+```math
  \sum_rp_r=O(D),
-$$
+```
 
 and hence the total slack after all cell-side refinements remains `O(D)`.
 
@@ -90,30 +90,30 @@ actual disjoint convex hulls.
 
 Canonical Section 82 gives, for each local graph,
 
-$$
+```math
  L_r+Q_r=4a_r-6-2s_r-2c_r,
  \qquad Q_r\le2a_r,
  \qquad f_r\le Q_r.
-$$
+```
 
 The nonquadrilateral contact-face boundary occurrences are at most `5Q_r`. The
 attachment-side pockets have total boundary occurrence count
-$L_r+2h_r-a_r\le L_r+a_r$. Since $\sum_ra_r=O(D)$, the total bad-face boundary
+$`L_r+2h_r-a_r\le L_r+a_r`$. Since $`\sum_ra_r=O(D)`$, the total bad-face boundary
 occurrence count is `O(D)`, including bridge and repeated-vertex multiplicity.
 
 ### 2.5 Isolate term
 
 For every refined bad face `Q`, the exact Oler slack identity gives
 
-$$
+```math
  \operatorname{area}(Q)
  \le a_0(\sigma_Q+k_Q+z_Q).
-$$
+```
 
 Summing uses `O(D)` refined slack, `O(D)` boundary occurrences, and exactly the
 number `Z_cell` of contact-isolated source points in those faces. Therefore
-$\sum G_r\le a_0Z_{\rm cell}+O(D)$. Section 121 then gives the exact coefficient
-$5a_0/(3c_0)=10/3$ in the detour bound before adding the `O(D)` cell perimeters.
+$`\sum G_r\le a_0Z_{\rm cell}+O(D)`$. Section 121 then gives the exact coefficient
+$`5a_0/(3c_0)=10/3`$ in the detour bound before adding the `O(D)` cell perimeters.
 
 ## 3. Hostile checks
 
@@ -133,9 +133,9 @@ $5a_0/(3c_0)=10/3$ in the detour bound before adding the `O(D)` cell perimeters.
 
 Canonical Type-II no-chamber information is only
 
-$$
+```math
  Z_{ch}+Z_{ext}=o(D^2),
-$$
+```
 
 not `Z_cell=o(D)`. The audited theorem therefore does not turn the Section-122
 linear detour floor into a contradiction. Even after imposing `Z_cell=0`, the

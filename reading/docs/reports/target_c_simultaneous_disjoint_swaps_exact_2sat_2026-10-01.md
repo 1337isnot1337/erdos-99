@@ -27,9 +27,9 @@ points, including contact-isolated points. Let `L_1,...,L_k` be pairwise
 disjoint subsets of source points, with prescribed translation vectors
 `Delta_1,...,Delta_k`. For a binary assignment `x`, put
 
-$$
+```math
  P_x(p)=P(p)+x_i\Delta_i\quad(p\in L_i),
-$$
+```
 
 and fix every point outside their union. Assume every original unit contact
 stays exactly unit **for every binary assignment**. This hypothesis can be
@@ -53,18 +53,18 @@ squared distance in its local zero/one states.
 
 Call an assignment **strict-inactive admissible** when
 
-$$
+```math
  f_{pq}=1\quad\text{for every old contact},
-$$
-$$
+```
+```math
  f_{pq}>1\quad\text{for every old noncontact},
-$$
-$$
+```
+```math
  f_{pq}\le D^2\quad\text{for every old diameter},
-$$
-$$
+```
+```math
  f_{pq}<D^2\quad\text{for every old nondiameter}.
-$$
+```
 
 This strict policy keeps the exact old contact graph and permits no new
 diameter pair. It is a sufficient competitor criterion. It deliberately
@@ -74,9 +74,9 @@ diameter, or moves that trade old diameter pairs against new ones.
 For each local state violating these inequalities, forbid its binary
 pattern. A forbidden two-variable state `(x_i=a,x_j=b)` is the clause
 
-$$
+```math
  (x_i\ne a)\lor(x_j\ne b),                           \tag{1}
-$$
+```
 
 and a forbidden one-variable state is a unit clause. Fixed pairs require
 no variables. The conjunction `F` of these clauses is a 2-CNF formula
@@ -147,10 +147,10 @@ at least `D-2s`. Both statements include moves of both endpoints.
 For current TB1 swaps, `s<=4K/D`; every inactive blocking clause comes
 from an actual source pair satisfying
 
-$$
+```math
  1<|pq|\le1+8K/D
  \quad\text{or}\quad D-8K/D\le|pq|<D.              \tag{2}
-$$
+```
 
 Old diameter clauses represent finite compensation requirements between
 moving endpoint slabs, including the TWO-SIGN case. Formula `F` therefore
@@ -182,9 +182,9 @@ entire strict-inactive formula is therefore a directed closure system.
 
 Let `R` be the moving nodes from which `x_0` is reachable. The assignment
 
-$$
+```math
  x_i=0\ (i\in R),\qquad x_i=1\ (i\notin R)          \tag{3}
-$$
+```
 
 is admissible: its true-node set has no outgoing implication to a false
 node. It is the largest admissible true set. This follows directly from
@@ -204,9 +204,9 @@ implication path to the fixed source.
 their union by `Delta` and is admissible. Put `q=|Delta|>0`. The two inward
 contact vectors satisfy
 
-$$
+```math
  u\cdot\Delta=(-v)\cdot\Delta=-q^2/2<0.
-$$
+```
 
 Sum full-source KKT virtual work for the velocity that is `Delta` on
 this union and zero elsewhere. Internal forces cancel. Its boundary

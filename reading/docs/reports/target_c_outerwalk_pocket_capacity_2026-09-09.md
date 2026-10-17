@@ -18,27 +18,27 @@
 
 The post-ZF currency
 
-$$
+```math
 x_B=b-q
-$$
+```
 
 measures the excess length of the outer contact-face walk over one edge occurrence per loaded hull vertex. DG shows this currency is linear unless the force hull approaches the maximum-perimeter endpoint.
 
 This report gives `x_B` a direct geometric meaning. The total area of the portions of the outer contact face lying inside the force hull is at most quadratic in `x_B`:
 
-$$
+```math
 \boxed{
 H_{out}\le\frac4\pi x_B^2.
 }
-$$
+```
 
 OP then gives the same quadratic control on the contact-isolated source population in those pockets:
 
-$$
+```math
 \boxed{
 Z_{in}\le\frac8{\pi\sqrt3}x_B^2.
 }
-$$
+```
 
 Thus a sublinear outer-walk currency cannot hide a quadratic internal outer-face cavity or population. More generally, any theorem forcing a macroscopic outer cavity immediately forces an explicit linear lower bound on `x_B`.
 
@@ -60,20 +60,20 @@ Let
 
 OP proves exactly
 
-$$
+```math
 P=(q-a)+L_{add}
 \tag{1.1}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \sum_{j=1}^a L_j
 =B+2L_{add}-P.
 }
 \tag{1.2}
-$$
+```
 
 It also proves that every new pocket is convex and that their total area is precisely the part of the old outer contact face lying inside `F`.
 
@@ -83,16 +83,16 @@ It also proves that every new pocket is convex and that their total area is prec
 
 Partition the outer contact walk into its `q` subwalks between consecutive loaded hull vertices. If their positive integer lengths are
 
-$$
+```math
 \ell_1,\ldots,\ell_q,
-$$
+```
 
 then
 
-$$
+```math
 \sum_i(\ell_i-1)=x_B.
 \tag{2.1}
-$$
+```
 
 Every interval with `ell_i=1` is the straight unit contact edge joining the two consecutive hull vertices, hence that hull side is already present in the contact graph.
 
@@ -100,10 +100,10 @@ Therefore every missing hull side must correspond to an interval with `ell_i>=2`
 
 ### Lemma OW.1
 
-$$
+```math
 \boxed{a\le x_B.}
 \tag{2.2}
-$$
+```
 
 This is finite and integer exact.
 
@@ -113,52 +113,52 @@ This is finite and integer exact.
 
 From (1.1),
 
-$$
+```math
 L_{add}=P-q+a.
 \tag{3.1}
-$$
+```
 
 Insert this and `B=q+x_B` into OP.1.2:
 
-$$
+```math
 \begin{aligned}
 \sum_jL_j
 &=q+x_B+2(P-q+a)-P\\
 &=x_B+(P-q)+2a.
 \end{aligned}
 \tag{3.2}
-$$
+```
 
 The loaded hull vertices are unit-separated, so every hull side has length at least one and hence
 
-$$
+```math
 P\ge q.
 \tag{3.3}
-$$
+```
 
 OP's closed-walk perimeter theorem gives
 
-$$
+```math
 P\le B=q+x_B,
-$$
+```
 
 so
 
-$$
+```math
 0\le P-q\le x_B.
 \tag{3.4}
-$$
+```
 
 Together with `a<=x_B`, (3.2) yields:
 
 ### Theorem OW.2 — pocket-perimeter capacity
 
-$$
+```math
 \boxed{
 \sum_jL_j\le4x_B.
 }
 \tag{3.5}
-$$
+```
 
 The estimate deliberately retains no `O(D)` term. If the outer walk has little excess, the entire convex pocket boundary has little total length.
 
@@ -168,40 +168,40 @@ The estimate deliberately retains no `O(D)` term. If the outer walk has little e
 
 Each pocket is convex. The planar isoperimetric inequality gives
 
-$$
+```math
 area(P_j)\le\frac{L_j^2}{4\pi}.
 \tag{4.1}
-$$
+```
 
 Therefore
 
-$$
+```math
 H_{out}
 =\sum_jarea(P_j)
 \le\frac1{4\pi}\sum_jL_j^2
 \le\frac1{4\pi}\left(\sum_jL_j\right)^2.
-$$
+```
 
 Apply OW.2:
 
 ### Theorem OW — exact outer-pocket area capacity
 
-$$
+```math
 \boxed{
 H_{out}
 \le\frac4\pi x_B^2.
 }
 \tag{OW.1}
-$$
+```
 
 In particular
 
-$$
+```math
 x_B=o(D)
 \quad\Longrightarrow\quad
 H_{out}=o(D^2).
 \tag{OW.2}
-$$
+```
 
 This strengthens the qualitative outer-pocket collapse used after DG.
 
@@ -211,7 +211,7 @@ This strengthens the qualitative outer-pocket collapse used after DG.
 
 OP proves
 
-$$
+```math
 Z_{in}
 \le
 \frac2{\sqrt3}H_{out}
@@ -219,7 +219,7 @@ Z_{in}
 \le
 \frac2{\sqrt3}H_{out},
 \tag{5.1}
-$$
+```
 
 because `P<=B`.
 
@@ -227,14 +227,14 @@ Combine with OW.1:
 
 ### Corollary OW.3 — population capacity
 
-$$
+```math
 \boxed{
 Z_{in}
 \le
 \frac8{\pi\sqrt3}x_B^2.
 }
 \tag{OW.3}
-$$
+```
 
 Thus sublinear `x_B` forces a subquadratic invisible population in the internal outer face without any separate force-bulk hypothesis.
 
@@ -244,42 +244,42 @@ Thus sublinear `x_B` forces a subquadratic invisible population in the internal 
 
 Suppose some independent argument proves
 
-$$
+```math
 H_{out}\ge gD^2
-$$
+```
 
 for a constant `g>0` along a subsequence. OW.1 immediately gives
 
-$$
+```math
 \frac4\pi x_B^2\ge gD^2.
-$$
+```
 
 Hence:
 
 ### Corollary OW.4
 
-$$
+```math
 \boxed{
 H_{out}\ge gD^2
 \quad\Longrightarrow\quad
 x_B\ge\frac{\sqrt{\pi g}}2D.
 }
 \tag{OW.4}
-$$
+```
 
 For example, GU's component-gap localization states that a quadratic attachment-cell gap `G>=gD^2` forces either
 
-$$
+```math
 H_{out}\ge(g/2)D^2
-$$
+```
 
 or a giant bounded exceptional face. In its outer-cavity alternative, OW improves this to
 
-$$
+```math
 \boxed{
 x_B\ge\sqrt{\frac{\pi g}{8}}D.}
 \tag{6.1}
-$$
+```
 
 Thus GU's geometric cavity branch is no longer an independent uncontrolled resource: it is quantitatively paid by the same outer-walk currency that DG controls from diameter directions.
 
@@ -291,9 +291,9 @@ Combine OW with DC.
 
 If
 
-$$
+```math
 x_B=o(D),
-$$
+```
 
 then
 

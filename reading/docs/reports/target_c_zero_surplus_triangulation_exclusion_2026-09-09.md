@@ -15,9 +15,9 @@ This report closes one exact post-ZF subbranch.
 Assume the audited report-level ZR/ZF/ZS state and the exact post-ZF ledgers. If the
 contact core has an unloaded component and
 
-$$
+```math
 e_{BB}=s_C=0,
-$$
+```
 
 then the C37 incidence inequalities are all at equality. More importantly, C49.1
 supplies the geometric fact needed to use that equality safely: the attachment cells
@@ -30,10 +30,10 @@ The component-diameter ledger leaves only six units of total internal graph diam
 so the total area of those `q-2` triangles is `O(q)=O(D)`. This contradicts the
 post-ZF force-hull area theorem, which gives
 
-$$
+```math
 \operatorname{area}(F)\ge
 \left(\frac12\sin1-o(1)\right)D^2.
-$$
+```
 
 Thus the literal zero loaded-loaded/pinned-stress-surplus branch is impossible for all
 sufficiently large post-ZF survivors.
@@ -42,68 +42,68 @@ sufficiently large post-ZF survivors.
 
 Put
 
-$$
+```math
 k:=d_H+s_Z.
-$$
+```
 
 Assume `c_I>0` and
 
-$$
+```math
 e_{BB}=s_C=0.
 \tag{1.1}
-$$
+```
 
 The post-ZF incidence identity ZJ is
 
-$$
+```math
 s_C+r_Q=k+u_A+p_A+(s-1),
-$$
+```
 
 where every term is nonnegative. C38 gives `s>=1` and, under `e_BB=0`,
 
-$$
+```math
 s=1,\qquad q_{used}=q,\qquad r_Q=0.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{k=0,\qquad u_A=0,\qquad p_A=0.}
 \tag{1.2}
-$$
+```
 
 ZU gives
 
-$$
+```math
 \boxed{c_I=q-2.}
 \tag{1.3}
-$$
+```
 
 Since
 
-$$
+```math
 u_A=\sum_r(|A_r|-3)=0
-$$
+```
 
 and every `|A_r|>=3`,
 
-$$
+```math
 \boxed{|A_r|=3\quad\text{for every }r.}
 \tag{1.4}
-$$
+```
 
 The sharpened component-slack ledger ZK gives
 
-$$
+```math
 \sum_r\delta_r+R_I+s_B+3k=6+e_{BB}+2s_C.
-$$
+```
 
 Hence in the present branch
 
-$$
+```math
 \boxed{\sum_r\delta_r\le6.}
 \tag{1.5}
-$$
+```
 
 ## 2. Geometric triangulation lemma
 
@@ -113,13 +113,13 @@ The correct proof uses the actual convex attachment cells.
 
 C49.1 proves that for distinct unloaded components
 
-$$
+```math
 \boxed{
 \operatorname{int}(P_r)\cap\operatorname{int}(P_s)=\varnothing,
 \qquad P_r:=\operatorname{conv}(A_r).
 }
 \tag{2.1}
-$$
+```
 
 Its proof uses C36 noncrossing to exclude proper crossing and C37 to exclude
 containment or three shared loaded attachments. This theorem applies without the old
@@ -134,21 +134,21 @@ other loaded vertices.
 
 Let `B` consist of `q>=3` vertices in strictly convex cyclic position. Let
 
-$$
+```math
 P_1,\ldots,P_{q-2}
-$$
+```
 
 be distinct nondegenerate triangles with vertices in `B` and pairwise disjoint
 interiors. Then their union is a straight-line triangulation of `conv(B)`. In
 particular,
 
-$$
+```math
 \boxed{
 \operatorname{area}(\operatorname{conv}B)
 =\sum_{r=1}^{q-2}\operatorname{area}(P_r).
 }
 \tag{2.2}
-$$
+```
 
 ### Proof
 
@@ -178,13 +178,13 @@ are exactly the `P_r`. Hence the triangles partition `conv(B)`. `square`
 
 Apply the lemma to the C49 cells. Since `conv(B)=F`,
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)
 =\sum_r\operatorname{area}(P_r).
 }
 \tag{2.3}
-$$
+```
 
 This is the only triangulation statement used below.
 
@@ -194,28 +194,28 @@ For two attachments `a,b in A_r`, choose their contact neighbors in `I_r` and jo
 those neighbors by a shortest path inside `I_r`. This gives a contact path from `a`
 to `b` with at most `\delta_r+2` unit edges. Hence
 
-$$
+```math
 \boxed{
 \operatorname{diam}(A_r)\le\delta_r+2.
 }
 \tag{3.1}
-$$
+```
 
 A planar triangle of diameter `L` has area at most
 
-$$
+```math
 \frac{\sqrt3}{4}L^2.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \operatorname{area}(P_r)
 \le\frac{\sqrt3}{4}(\delta_r+2)^2.
 }
 \tag{3.2}
-$$
+```
 
 ## 4. Theorem ZQ — exact zero-surplus branch is impossible
 
@@ -223,75 +223,75 @@ $$
 
 For every sufficiently large post-ZF C-II survivor with `c_I>0`,
 
-$$
+```math
 \boxed{e_{BB}+s_C>0.}
 \tag{ZQ.1}
-$$
+```
 
 ### Proof
 
 Assume (1.1). From (2.3) and (3.2),
 
-$$
+```math
 \operatorname{area}(F)
 \le\frac{\sqrt3}{4}
 \sum_r(\delta_r+2)^2.
-$$
+```
 
 By (1.5),
 
-$$
+```math
 \sum_r\delta_r^2
 \le\left(\sum_r\delta_r\right)^2
 \le36.
-$$
+```
 
 Also `c_I=q-2`. Hence
 
-$$
+```math
 \begin{aligned}
 \sum_r(\delta_r+2)^2
 &=\sum_r\delta_r^2+4\sum_r\delta_r+4c_I\\
 &\le36+24+4(q-2)\\
 &=4q+52.
 \end{aligned}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)
 \le\sqrt3\,q+13\sqrt3.
 }
 \tag{ZQ.2}
-$$
+```
 
 The loaded force-hull vertices are unit separated along a convex polygon of diameter
 `D`, so
 
-$$
+```math
 q\le\operatorname{per}(F)\le\pi D.
-$$
+```
 
 Therefore
 
-$$
+```math
 \operatorname{area}(F)=O(D).
 \tag{ZQ.3}
-$$
+```
 
 But the post-ZF area upgrade ZA inserts ZS's `h>=\lceil D\rceil` into C67's audited
 projective-direction theorem and proves
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{\operatorname{area}(F)}{D^2}
 \ge\frac12\sin1>0.
 }
 \tag{ZQ.4}
-$$
+```
 
 Equations ZQ.3 and ZQ.4 contradict each other for all sufficiently large `D`. `square`
 
@@ -299,9 +299,9 @@ Equations ZQ.3 and ZQ.4 contradict each other for all sufficiently large `D`. `s
 
 If `c_I=0`, ZU gives
 
-$$
+```math
 e_{BB}+s_C=q-2+k.
-$$
+```
 
 Post-ZF `q>=\lceil D\rceil`, so the combined surplus is already linear in `D`.
 Thus the literal zero-surplus case is impossible there as well.
@@ -310,9 +310,9 @@ Thus the literal zero-surplus case is impossible there as well.
 
 Every sufficiently large post-ZF survivor satisfies
 
-$$
+```math
 \boxed{e_{BB}+s_C\ge1.}
-$$
+```
 
 The important content is the excluded equality geometry, not the integer `1`.
 

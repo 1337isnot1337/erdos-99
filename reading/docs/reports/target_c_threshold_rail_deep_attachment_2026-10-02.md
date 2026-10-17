@@ -72,25 +72,25 @@ Let a finite planar set `P` have diameter `D>0`. Let `Q` be any subset of its
 `|p-q|=D`. Let `u` be a unit vector. Suppose `Q` is contained in a strip of
 transverse width `t`, and put
 
-$$
+```math
 x_0=\min_{q\in Q}q\cdot u,\qquad
 x_1=\max_{q\in Q}q\cdot u,\qquad L=x_1-x_0.
-$$
+```
 
 Every `q` in `Q`, with `x=q dot u`, satisfies
 
-$$
+```math
 \boxed{(x-x_0)(x_1-x)\le 2Dt.} \tag{1}
-$$
+```
 
 In particular, its projection belongs to the union of the two intervals
 
-$$
+```math
 \boxed{
 [x_0,x_0+\sqrt{2Dt}]\ \cup\
 [x_1-\sqrt{2Dt},x_1].}
 \tag{2}
-$$
+```
 
 When `t=0`, this recovers the exact fact that a line contains at most two
 distinct actual diameter endpoints of a finite planar diameter-`D` set.
@@ -100,38 +100,38 @@ distinct actual diameter endpoints of a finite planar diameter-`D` set.
 The case `L=0` is immediate. Choose `q_0,q_1` attaining the projection
 extrema. For `q` with projection `x`, put
 
-$$
+```math
 \lambda={x-x_0\over L},\qquad
 q_*=(1-\lambda)q_0+\lambda q_1.
-$$
+```
 
 The vectors `q` and `q_*` have equal projection onto `u`. Since both transverse
 coordinates lie in the same width-`t` strip,
 `|q-q_*|<=t`. Choose an actual diameter partner `p` of `q`. The exact
 weighted-square identity gives
 
-$$
+```math
 \begin{aligned}
 D^2
 &\ge (1-\lambda)|p-q_0|^2+\lambda|p-q_1|^2\\
 &=|p-q_*|^2+\lambda(1-\lambda)|q_1-q_0|^2.
 \end{aligned}
 \tag{3}
-$$
+```
 
 Writing `e=q_*-q` and using `|p-q|=D`,
 
-$$
+```math
 D^2-|p-q_*|^2
 =2(p-q)\cdot e-|e|^2\le2Dt.
 \tag{4}
-$$
+```
 
 Also `|q_1-q_0|>=L`, so (3)--(4) yield
 
-$$
+```math
 (x-x_0)(x_1-x)=\lambda(1-\lambda)L^2\le2Dt.
-$$
+```
 
 If `s=min(x-x_0,x_1-x)`, the other factor is at least `s`, and therefore
 `s^2<=2Dt`. This proves (2). No source point or diameter partner is removed.
@@ -142,16 +142,16 @@ If `s=min(x-x_0,x_1-x)`, the other factor is at least `s`, and therefore
 
 Keep the hypotheses on `P,D`. Fix an affine row of markers
 
-$$
+```math
 z_j=b+j u,\qquad j\in\mathbb Z.
-$$
+```
 
 For any `d>=0`, the number of distinct integer indices `j` admitting an
 actual diameter endpoint `q_j` with `|q_j-z_j|<=d` is at most
 
-$$
+```math
 \boxed{4\sqrt{Dd}+4d+2.} \tag{5}
-$$
+```
 
 The markers need not be source points, and the assignment need not be
 injective. In particular the bound applies to an actual straight chain of
@@ -172,25 +172,25 @@ integer-spaced markers. Adding the two capacities proves (5).
 Suppose `m>=10` distinct markers have assigned actual diameter endpoints.
 Put
 
-$$
+```math
 \boxed{d_*={m^2\over256(D+m)}.} \tag{6}
-$$
+```
 
 More than `m/2` of those endpoints have distance greater than `d_*` from
 their assigned markers. Indeed
 
-$$
+```math
 4\sqrt{Dd_*}+4d_*+2
 \le {m\over4}+{m\over64}+2
 <{m\over2}.
 \tag{7}
-$$
+```
 
 Thus if `m>=cD`, these attachment distances are at least
 
-$$
+```math
 \boxed{{c^2\over256(1+c)}D}
-$$
+```
 
 for a positive fraction of the markers. The same lower bound applies to
 each corresponding unit-contact graph path. The sum of the individual graph
@@ -203,22 +203,22 @@ of distinct edges or vertices: the paths may overlap.
 
 Now also assume `P` is unit-separated. A strip of width `t` contains at most
 
-$$
+```math
 \boxed{4\sqrt{2Dt}+4t+4} \tag{12}
-$$
+```
 
 actual diameter endpoints. Hence for any subset `Q` of `r>=8` actual
 diameter endpoints, its convex hull `C` has minimum width
 
-$$
+```math
 \boxed{w(C)>{r^2\over256(D+r)}} \tag{13}
-$$
+```
 
 and area
 
-$$
+```math
 \boxed{\operatorname{area}C>{r^4\over2\cdot256^2(D+r)^2}.} \tag{14}
-$$
+```
 
 #### Proof
 
@@ -235,9 +235,9 @@ constant two. Summing gives (12).
 Apply (12) to a minimum-width strip of `C`. If its width were at most
 `r^2/(256(D+r))`, its endpoint capacity would be at most
 
-$$
+```math
 {\sqrt2\over4}r+{r\over64}+4<r\qquad(r\ge8),
-$$
+```
 
 a contradiction. This proves (13).
 
@@ -252,12 +252,12 @@ Thus `area(C)>=L w(C)/2>=w(C)^2/2`, proving (14).
 Suppose in addition `P` is a global minimum-diameter `N`-point source.
 Let `Q,C,r` be as in Theorem 3a and `K=conv(P)`. Then
 
-$$
+```math
 \boxed{
 |P\cap C|>
 {2\over\sqrt3}\operatorname{area}C-2\pi D+1.
 } \tag{15}
-$$
+```
 
 In particular, if `r>=cD`, `C` has area and actual source population
 `Omega(D^2)`. The population counts every source point in `C`, including
@@ -278,11 +278,11 @@ be counted more than once in the caps, which is harmless for an upper bound.
 Apply Oler to the source points in each cap. Their combined population is
 at most
 
-$$
+```math
 {2\over\sqrt3}(\operatorname{area}K-\operatorname{area}C)
 +{\operatorname{per}K+\operatorname{per}C\over2}+r.
 \tag{16}
-$$
+```
 
 Canonical full-source geometry uses the strict translated-lattice bound
 `D^2<(2sqrt(3)/pi)(N-1)`. Together with isodiametry it gives
@@ -329,10 +329,10 @@ consecutive chain vertices would be a unit triangle. For consecutive lower
 ports, suppose their angles satisfy `a>b`. Put
 `s=sin((a-b)/2)>0` and `h=(a+b)/2`. Their squared separation is
 
-$$
+```math
 |u+w(b)-w(a)|^2=1+4s(s+\sin h).
 \tag{8}
-$$
+```
 
 Here `s<=1/2` while `sin h<=-sqrt(3)/2`, so (8) is strictly less than one,
 which is impossible. Thus `a<=b`. Reversing the sign of the half-angle in
@@ -352,10 +352,10 @@ The precise interior statement is true, but the proposed closure is false.
 
 Consider a **filled consecutive** rectangular contact patch
 
-$$
+```math
 p_{i,j}=b+i u+\sum_{k<j}v_k,quad
 0\le i\le m,\quad0\le j\le n,
-$$
+```
 
 where `u=(1,0)`, every `v_j` is unit, and its angle `phi_j` lies strictly
 between `pi/3` and `2pi/3`. Assume positive contact stresses and equilibrium
@@ -363,26 +363,26 @@ at every interior vertex. Let `a_{i,j}` denote the horizontal stress on
 `p_{i,j}p_{i+1,j}` and `b_{i,j}` the stress on
 `p_{i,j}p_{i,j+1}`. Interior equilibrium gives
 
-$$
+```math
 \boxed{b_{i,j}\sin\phi_j=q_i>0} \tag{9}
-$$
+```
 
 independent of `j`, and
 
-$$
+```math
 \boxed{
 a_{i,j}-a_{i-1,j}=q_i(\cot\phi_{j-1}-\cot\phi_j).}
 \tag{10}
-$$
+```
 
 Consequently the pressure on the interior horizontal rows,
 `G_i=sum_{j=1}^{n-1}a_{i,j}`, satisfies
 
-$$
+```math
 \boxed{
 G_i-G_{i-1}=q_i(\cot\phi_0-\cot\phi_{n-1}).}
 \tag{11}
-$$
+```
 
 It is monotone, and is constant if the transverse shore is exact phase.
 The two boundary rows are excluded from (11), because they have extra
@@ -407,9 +407,9 @@ unit-separated rhombic rectangle. Assign every vertical edge weight one.
 Assign the interior horizontal row weight one, and the two boundary rows
 weights `(A_i-1)/2`, where
 
-$$
+```math
 (A_1,A_2,A_3)=(4,6,2).
-$$
+```
 
 Every interior vertex is in exact equilibrium and all contact weights are
 positive. The total seam pressure is exactly the displayed unimodal profile.
@@ -455,13 +455,13 @@ attachments belong in the same error. Neither error may be set to zero.
 The result therefore gives a durable alternative for a real source-level
 stress argument:
 
-$$
+```math
 \boxed{
 \text{threshold rail saturation}
 \Longrightarrow
 \text{macroscopic hidden-train displacement or macroscopic attachment depth}
 }
-$$
+```
 
 whenever the comparison to an affine marker row is specified. Local
 cap ports cannot supply the required population of actual diameter endpoints.

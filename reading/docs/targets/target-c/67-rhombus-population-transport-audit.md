@@ -33,44 +33,44 @@ representative and its relative-interior full-support KKT stress. Let
 
 Put
 
-$$
+```math
 a_0={\sqrt3\over2},
 \qquad
 c_0={\sqrt3\over4}={a_0\over2}.
 \tag{67.1}
-$$
+```
 
 For every bounded quadrilateral face `R`, define its strict-rhombus area excess
 
-$$
+```math
 \epsilon_R:=\operatorname{area}(R)-a_0\ge0,
-$$
+```
 
 and put
 
-$$
+```math
 \boxed{E_4:=\sum_R\epsilon_R\ge0.}
 \tag{67.2}
-$$
+```
 
 Let `N_F` be the number of **all source points** lying in `F`, including every
 contact-isolated point there. Let
 
-$$
+```math
 Z_{ext}:=n-N_F
-$$
+```
 
 be the number of source points outside the force hull, and define the isodiametric
 force-hull deficit
 
-$$
+```math
 \delta_F:={\pi D^2\over4}-\operatorname{area}(F)\ge0.
 \tag{67.3}
-$$
+```
 
 The main finite population inequality is
 
-$$
+```math
 \boxed{
 a_0N_F
 \le
@@ -79,18 +79,18 @@ a_0N_F
 +a_0-E_4.
 }
 \tag{67.4}
-$$
+```
 
 Combining it with the canonical strict translated-lattice comparison
 
-$$
+```math
 a_0(n-1)>{\pi D^2\over4}
 \tag{67.5}
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{
 E_4+\delta_F
 <
@@ -99,30 +99,30 @@ a_0Z_{ext}+c_0\operatorname{per}(F)
 a_0Z_{ext}+{\pi\sqrt3\over4}D.
 }
 \tag{67.6}
-$$
+```
 
 Thus the complete post-ZF defect `d_H+s_Z` cancels exactly. The only quadratic-scale
 population escape left by this theorem is source population outside `F`.
 
 In particular,
 
-$$
+```math
 Z_{ext}=o(D^2)
 \Longrightarrow
 \delta_F=o(D^2),
 \quad
 E_4=o(D^2),
 \tag{67.7}
-$$
+```
 
 and
 
-$$
+```math
 Z_{ext}=O(D)
 \Longrightarrow
 \delta_F+E_4=O(D).
 \tag{67.8}
-$$
+```
 
 No annular subtraction of Oler inequalities is used.
 
@@ -130,31 +130,31 @@ No annular subtraction of Oler inequalities is used.
 
 Euler and face incidence for the connected plane contact graph give
 
-$$
+```math
 2m=2R_4+2f+b+Q+2.
 \tag{67.9}
-$$
+```
 
 Section 57's exact post-ZF ledger is
 
-$$
+```math
 \boxed{b+Q=2(h-s_Z).}
 \tag{67.10}
-$$
+```
 
 Since `h=q-d_H`,
 
-$$
+```math
 b+Q=2(q-k).
 \tag{67.11}
-$$
+```
 
 Insert this in (67.9):
 
-$$
+```math
 \boxed{m=R_4+f+q-k+1.}
 \tag{67.12}
-$$
+```
 
 This identity is valid in both Woodall branches and for arbitrary `s_Z>=0`.
 
@@ -173,12 +173,12 @@ vertex from `B`.
 Suppose a component `S` of `G-x` contains no loaded vertex. Every vertex of `S` is
 therefore unloaded, so each Euclidean coordinate is positive-weight harmonic there:
 
-$$
+```math
 p_y={\sum_{yz\in E(G)}\alpha_{yz}p_z\over
            \sum_{yz\in E(G)}\alpha_{yz}}
 \qquad(y\in S).
 \tag{67.13}
-$$
+```
 
 Any neighbor of `S` outside `S` must be `x`, because `S` is a component of `G-x`.
 Since `G` is connected, there is at least one such boundary edge. The discrete maximum
@@ -193,16 +193,16 @@ This is the same harmonic repair used in the audited Section 60 loaded-component
 Every unloaded positive-contact vertex is a positive weighted average of its contact
 neighbors. Iterating the coordinate maximum principle shows
 
-$$
+```math
 F=\operatorname{conv}V(G)=\operatorname{conv}B.
 \tag{67.14}
-$$
+```
 
 We also need the stronger boundary statement
 
-$$
+```math
 \boxed{V(G)\cap\partial F=B.}
-$$
+```
 
 Indeed, the canonical local-structure theorem gives contact degree at least three for
 every unloaded positive-contact core vertex. Suppose such a vertex `x` lay on
@@ -265,19 +265,19 @@ A bounded quadrilateral contact face is, by Lemma 67.3, a convex equilateral
 quadrilateral, hence a unit rhombus. Let its diagonal lengths be `d_1,d_2`. Unit
 separation gives
 
-$$
+```math
 d_1,d_2\ge1,
 \qquad
 d_1^2+d_2^2=4.
 \tag{67.15}
-$$
+```
 
 Therefore
 
-$$
+```math
 \operatorname{area}(R)={d_1d_2\over2}\ge{\sqrt3\over2}=a_0.
 \tag{67.16}
-$$
+```
 
 Equality would force one diagonal to have length one and hence create a unit
 equilateral triangle with two sides of the rhombus, so the triangle-free source in
@@ -287,10 +287,10 @@ More importantly, choose the shorter diagonal `d<=sqrt(2)` and split the rhombus
 two congruent triangles with side lengths `1,1,d`. Their apex angle is at most
 `pi/2`, and their circumradius is
 
-$$
+```math
 {1\over2\cos(\theta/2)}\le{1\over\sqrt2}<1.
 \tag{67.17}
-$$
+```
 
 The three vertex-centered open unit disks cover the interior of each such triangle
 (the farthest point from the nearest triangle vertex is no farther than the
@@ -305,75 +305,75 @@ bounded nonquadrilateral faces.
 
 Let the bounded nonquadrilateral faces be `P_i`. Write
 
-$$
+```math
 r_i:=\deg(P_i)-4\ge1,
 \qquad
 \sum_i r_i=Q,
 \tag{67.18}
-$$
+```
 
 and let `z_i` be the number of contact-isolated source points in the interior of
 `P_i`. The face is a convex unit-edge polygon by Lemma 67.3. Apply Oler to its
 `4+r_i` boundary vertices together with its `z_i` interior source points:
 
-$$
+```math
 a_0(4+r_i+z_i-1)
 \le
 \operatorname{area}(P_i)+c_0(4+r_i).
-$$
+```
 
 Since `a_0=2c_0`,
 
-$$
+```math
 \boxed{
 \operatorname{area}(P_i)
 \ge a_0(z_i+1)+c_0r_i.
 }
 \tag{67.19}
-$$
+```
 
 Put
 
-$$
+```math
 Z_{def}:=\sum_i z_i,
 \qquad
 A_{exc}:=\sum_i\operatorname{area}(P_i).
-$$
+```
 
 Summing (67.19) gives
 
-$$
+```math
 \boxed{A_{exc}\ge a_0(Z_{def}+f)+c_0Q.}
 \tag{67.20}
-$$
+```
 
 For the quadrilateral faces, by definition of `E_4`,
 
-$$
+```math
 A_4=a_0R_4+E_4.
 \tag{67.21}
-$$
+```
 
 Let `A_bnd=A_4+A_exc`. Using (67.12), (67.20), and (67.21),
 
-$$
+```math
 \begin{aligned}
 a_0(m+Z_{def})
 &=a_0R_4+a_0(f+Z_{def})+a_0(q-k)+a_0\\
 &\le A_bnd-E_4-c_0Q+a_0(q-k)+a_0.
 \end{aligned}
 \tag{67.22}
-$$
+```
 
 ## 67.6 Oler absorption of inactive points in the outer face but inside `F`
 
 Let `Z_in` be the contact-isolated source points that lie in `F` and in the old outer
 face of `G`. Let
 
-$$
+```math
 H_{out}:=\operatorname{area}(F)-A_{bnd}.
 \tag{67.23}
-$$
+```
 
 Let `a` be the number of hull sides added in forming `Ghat`, let `L_add` be their total
 Euclidean length, and let the `a` new convex pockets be `P` with graph-boundary edge
@@ -382,31 +382,31 @@ count `k_P` and Euclidean perimeter `L_P`.
 The number of new pockets is exactly `a` by Euler. Face-incidence subtraction between
 `Ghat` and `G` gives
 
-$$
+```math
 \sum_P k_P=b+2a-q.
 \tag{67.24}
-$$
+```
 
 Euclidean perimeter incidence gives
 
-$$
+```math
 \sum_P L_P=b+2L_{add}-\operatorname{per}(F),
 \tag{67.25}
-$$
+```
 
 while
 
-$$
+```math
 \operatorname{per}(F)=q-a+L_{add},
 \tag{67.26}
-$$
+```
 
 and the new pockets tile the part of the old outer face inside `F`, so
 
-$$
+```math
 \sum_P\operatorname{area}(P)=H_{out}.
 \tag{67.27}
-$$
+```
 
 Assign each isolated source point in `Z_in` to a containing new pocket. If a point lies
 on an added hull side, assign it to the unique interior pocket adjacent to that side.
@@ -415,53 +415,53 @@ segment is at distance `<1` from an endpoint.
 
 Let `z_P` be the assigned population. Oler on the convex pocket gives
 
-$$
+```math
 z_P
 \le {1\over a_0}\operatorname{area}(P)
 +{1\over2}L_P+1-k_P.
 \tag{67.28}
-$$
+```
 
 Sum (67.28) and use (67.24)–(67.27):
 
-$$
+```math
 \boxed{
 Z_{in}
 \le {1\over a_0}H_{out}
 +{\operatorname{per}(F)-b\over2}.
 }
 \tag{67.29}
-$$
+```
 
 The correction is nonpositive. Indeed the outer contact-face boundary is a closed
 polygonal walk of length exactly `b`, its image lies in `F`, and it contains every
 extreme vertex of `F`. Hence its convex hull is `F`. For any closed rectifiable
 polygonal walk, projection variation plus Cauchy's width formula gives
 
-$$
+```math
 \operatorname{per}(\operatorname{conv}\gamma)
 \le\operatorname{length}(\gamma).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{\operatorname{per}(F)\le b.}
 \tag{67.30}
-$$
+```
 
 We retain the sharper signed correction (67.29), because it cancels the outer-walk
 term exactly in the next step.
 
 Multiplying (67.29) by `a_0` gives
 
-$$
+```math
 \boxed{
 a_0Z_{in}
 \le H_{out}+c_0(\operatorname{per}(F)-b).
 }
 \tag{67.31}
-$$
+```
 
 ## 67.7 Exact topology cancellation and full inside-hull population bound
 
@@ -473,20 +473,20 @@ therefore either a core vertex, an inactive point in an exceptional bounded face
 an inactive point in the old outer face. Section 67.4 excludes a fourth possibility
 inside a quadrilateral face. Thus
 
-$$
+```math
 N_F=m+Z_{def}+Z_{in}.
 \tag{67.32}
-$$
+```
 
 Add (67.31) to (67.22), and use
 
-$$
+```math
 A_{bnd}+H_{out}=\operatorname{area}(F).
-$$
+```
 
 Then
 
-$$
+```math
 \begin{aligned}
 a_0N_F
 &\le
@@ -498,18 +498,18 @@ a_0N_F
 \bigl[-c_0(Q+b)+a_0(q-k)\bigr].
 \end{aligned}
 \tag{67.33}
-$$
+```
 
 But (67.11) says `Q+b=2(q-k)`, and `a_0=2c_0`. Therefore the bracket vanishes
 **exactly**, proving (67.4):
 
-$$
+```math
 \boxed{
 a_0N_F
 \le
 \operatorname{area}(F)+c_0\operatorname{per}(F)+a_0-E_4.
 }
-$$
+```
 
 This is why neither `d_H` nor `s_Z` survives in the final population inequality.
 
@@ -517,38 +517,38 @@ This is why neither `d_H` nor `s_Z` survives in the final population inequality.
 
 Write
 
-$$
+```math
 n=N_F+Z_{ext}.
-$$
+```
 
 From (67.4),
 
-$$
+```math
 a_0(n-1)
 \le
 \operatorname{area}(F)+c_0\operatorname{per}(F)-E_4+a_0Z_{ext}.
 \tag{67.34}
-$$
+```
 
 The canonical full-source translated-lattice comparison is strict:
 
-$$
+```math
 a_0(n-1)>{\pi D^2\over4}.
-$$
+```
 
 Therefore
 
-$$
+```math
 {\pi D^2\over4}
 <
 \operatorname{area}(F)+c_0\operatorname{per}(F)-E_4+a_0Z_{ext}.
-$$
+```
 
 Rearrange:
 
-$$
+```math
 \boxed{E_4+\delta_F<a_0Z_{ext}+c_0\operatorname{per}(F).}
-$$
+```
 
 The isodiametric perimeter bound `per(F)<=pi D` gives the second inequality in (67.6).
 
@@ -561,95 +561,95 @@ external-rattler phase split without importing a separate report.
 
 From (67.4), discard the nonnegative `E_4` term. The post-ZF face ledger gives
 
-$$
+```math
 \operatorname{per}(F)\le b\le b+Q=2(h-s_Z)\le2h.
 \tag{67.35}
-$$
+```
 
 Isoperimetry therefore gives
 
-$$
+```math
 \operatorname{area}(F)
 \le {\operatorname{per}(F)^2\over4\pi}
 \le {h^2\over\pi}.
 \tag{67.36}
-$$
+```
 
 Using `c_0=a_0/2` in (67.4),
 
-$$
+```math
 \boxed{
 N_F
 \le {2h^2\over\pi\sqrt3}+h+1.
 }
 \tag{67.37}
-$$
+```
 
 Since `Z_ext=n-N_F`, this yields the exact finite external-population floor
 
-$$
+```math
 \boxed{
 Z_{ext}
 \ge n-{2h^2\over\pi\sqrt3}-h-1.
 }
 \tag{67.38}
-$$
+```
 
 The strict translated-lattice comparison used in Section 67.8 says
 
-$$
+```math
 n-1>{\pi D^2\over2\sqrt3}.
 \tag{67.39}
-$$
+```
 
 Hence along any subsequence with `h/D->y`,
 
-$$
+```math
 \boxed{
 \liminf {Z_{ext}\over D^2}
 \ge {\pi\over2\sqrt3}-{2y^2\over\pi\sqrt3}.
 }
 \tag{67.40}
-$$
+```
 
 The right side is positive exactly for `y<pi/2`.
 
 This interacts sharply with canonical Section 65. Its proof gives, for
 `M=max{e_BB,x_B}` and `h/D->y`,
 
-$$
+```math
 \liminf {M\over D}
 \ge \phi(y):={y+2\cos(y/2)\over3},
 \qquad y\ge2\rho,
 \tag{67.41}
-$$
+```
 
 where `rho=cos rho`. The function `phi` is strictly increasing on
 `[2rho,pi)`. Therefore any sequence approaching the universal primitive-boundary
 endpoint
 
-$$
+```math
 {M\over D}\to {4\rho\over3}
 \tag{67.42}
-$$
+```
 
 must satisfy
 
-$$
+```math
 \boxed{{h\over D}\to2\rho.}
 \tag{67.43}
-$$
+```
 
 Since `rho<pi/4`, one has `2rho<pi/2`. Equations (67.40)--(67.43) therefore force
 
-$$
+```math
 \boxed{
 \liminf {Z_{ext}\over D^2}
 \ge {\pi\over2\sqrt3}-{8\rho^2\over\pi\sqrt3}
 >0.
 }
 \tag{67.44}
-$$
+```
 
 Numerically the displayed constant is about `0.1038019`.
 
@@ -666,9 +666,9 @@ population once all source points inside `F` are counted correctly.
 
 What remains is genuinely external:
 
-$$
+```math
 \boxed{Z_{ext}=|A\setminus F|.}
-$$
+```
 
 If `Z_ext=o(D^2)`, then the full actual force hull is asymptotically isodiametric and
 the normalized total strict-rhombus area excess vanishes. If `Z_ext=O(D)`, both defects

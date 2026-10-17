@@ -18,10 +18,10 @@
 
 The ES report proves that the normalized nonnegative KKT stress polytope
 
-$$
+```math
 \mathcal P=
 \{x=(\alpha,\beta)\ge0:R^T(\alpha,-\beta)=0,\ \sum_H\beta=1\}
-$$
+```
 
 has affine dimension `s_Z`, and that every vertex of `P` has at most `2v-2`
 positive coordinates. The stronger fact is that an extreme support is a genuine
@@ -29,24 +29,24 @@ circuit of the actual bar-rigidity row matroid.
 
 Let `x*` be a vertex of `P` and let
 
-$$
+```math
 S:=\operatorname{supp}x^*.
-$$
+```
 
 Write `R_S` for the ordinary signed bar-rigidity rows indexed by `S` (after changing
 the sign of diameter coordinates in the stress vector). Then
 
-$$
+```math
 \boxed{\dim\ker R_S^T=1,}
 \tag{EC.1}
-$$
+```
 
 and every proper subset of `S` is row-independent. Hence
 
-$$
+```math
 \boxed{S\text{ is a rigidity-matroid circuit}.}
 \tag{EC.2}
-$$
+```
 
 This turns every extreme selected KKT stress into a minimal positive dependence, not
 merely a sparse one.
@@ -65,10 +65,10 @@ nontrivial component, contains every positive diameter endpoint, and spans Eucli
 diameter `D`. Therefore all edges of `S` live on this same `v_*`-vertex support.
 The circuit bound gives `sigma_*>=0`, and planar Euler counting gives the exact identity
 
-$$
+```math
 \boxed{b_*+Q_*=2h_*+2\sigma_*.}
 \tag{EC.3}
-$$
+```
 
 Thus an extreme selected support has two statuses:
 
@@ -88,9 +88,9 @@ this obstruction and give an exact two-dimensional regression.
 
 Let
 
-$$
+```math
 W_S:=\{w:\operatorname{supp}w\subseteq S,\ R^Tw=0\}.
-$$
+```
 
 Here the coordinates of `w` use the same signed convention as the KKT stress, so the
 strictly positive KKT vector `x*` corresponds to a nonzero vector in `W_S` after the
@@ -100,9 +100,9 @@ fixed contact/diameter sign change.
 
 For every vertex `x*` of the normalized KKT polytope,
 
-$$
+```math
 \dim W_S=1.
-$$
+```
 
 ### Proof
 
@@ -111,36 +111,36 @@ Suppose `dim W_S>=2`. Choose `w in W_S` not proportional to `x*`.
 
 Let
 
-$$
+```math
 L(\alpha,\beta)=\sum_{h\in H}\beta_h.
-$$
+```
 
 The normalized vertex satisfies `L(x*)=1`. Put
 
-$$
+```math
 w_0:=w-L(w)x^*.
-$$
+```
 
 Then
 
-$$
+```math
 R^Tw_0=0,
 \qquad
 L(w_0)=0,
 \qquad
 \operatorname{supp}w_0\subseteq S.
-$$
+```
 
 Also `w_0!=0`, because otherwise `w` would be proportional to `x*`.
 
 Every coordinate of `x*` on `S` is strictly positive, and every coordinate outside
 `S` is zero for both `x*` and `w_0`. Hence for sufficiently small `t>0`, both
 
-$$
+```math
 x^*+tw_0,
 \qquad
 x^*-tw_0
-$$
+```
 
 remain nonnegative, normalized, and in equilibrium. They are distinct points of
 `P` whose midpoint is `x*`, contradicting extremality. Therefore `dim W_S=1`.
@@ -193,51 +193,51 @@ stress vanishes are simply absent from `v_*`.
 
 Since `S` is a circuit,
 
-$$
+```math
 \operatorname{rank}R_S=|S|-1=e_*+h_*-1.
 \tag{4.1}
-$$
+```
 
 A planar bar framework on `v_*` vertices has rigidity rank at most `2v_*-3` because
 the selected support spans a nondegenerate diameter configuration. Therefore
 
-$$
+```math
 e_*+h_*-1\le2v_*-3,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{e_*+h_*\le2v_*-2.}
 \tag{4.2}
-$$
+```
 
 Define
 
-$$
+```math
 \boxed{\sigma_*:=2v_*-2-(e_*+h_*)\ge0.}
 \tag{4.3}
-$$
+```
 
 Then
 
-$$
+```math
 \operatorname{rank}R_S=2v_*-3-\sigma_*.
 \tag{4.4}
-$$
+```
 
 Hence the infinitesimal motion space of the selected equality framework has dimension
 
-$$
+```math
 2v_*-(2v_*-3-\sigma_*)=3+\sigma_*.
-$$
+```
 
 After quotienting the three Euclidean rigid motions, the selected support has exactly
 
-$$
+```math
 \boxed{\sigma_*}
 \tag{4.5}
-$$
+```
 
 non-rigid infinitesimal degrees of freedom.
 
@@ -254,52 +254,52 @@ Thus `sigma_*` has three simultaneous meanings:
 Because the positive selected contact graph is connected and triangle-free, its
 bounded face degrees are at least four. Standard Euler/face-incidence counting gives
 
-$$
+```math
 \boxed{e_*=2v_*-2-\frac{b_*+Q_*}{2}.}
 \tag{5.1}
-$$
+```
 
 On the other hand, (4.3) gives
 
-$$
+```math
 e_*=2v_*-2-\sigma_*-h_*.
 \tag{5.2}
-$$
+```
 
 Equating (5.1) and (5.2) yields
 
-$$
+```math
 \boxed{b_*+Q_*=2h_*+2\sigma_*.}
 \tag{5.3}
-$$
+```
 
 This is exact and finite.
 
 ### Corollary EC.3 — equality wall iff maximal circuit
 
-$$
+```math
 \boxed{b_*+Q_*=2h_*
 \iff
 \sigma_*=0
 \iff e_*+h_*=2v_*-2.}
 \tag{5.4}
-$$
+```
 
 ### Corollary EC.4 — every underbraced extreme support is strictly on the desired face side
 
 If `sigma_*>0`, then
 
-$$
+```math
 \boxed{b_*+Q_*>2h_*.}
 \tag{5.5}
-$$
+```
 
 This resembles the full-source C-II closing inequality, but it is a statement for the
 selected extreme support only. The full actual C65 graph still obeys
 
-$$
+```math
 b+Q=2h-2s_Z.
-$$
+```
 
 There is no contradiction until one controls the omitted actual constraints.
 
@@ -314,10 +314,10 @@ Let `U` be a proper subset of the selected support vertices and let `E_S(U)` be 
 selected mixed edges with both endpoints in `U`. Since `E_S(U)` is a proper subset of
 the circuit, it is independent. Therefore
 
-$$
+```math
 \boxed{|E_S(U)|\le2|U|-3}
 \tag{6.1}
-$$
+```
 
 whenever `|U|>=2`; if the realization on `U` is degenerate the true rank bound is only
 smaller.
@@ -339,9 +339,9 @@ rigidity circuits whose union covers the relative-interior full support. The
 full-support KKT stress is a convex combination of at most `s_Z+1` extreme circuits,
 and ES gives
 
-$$
+```math
 \ker\Omega(x^0)=\bigcap_r\ker\Omega(x^{(r)}).
-$$
+```
 
 The remaining structural problem can therefore be restated without a vague
 "high-dimensional stress space":
@@ -378,17 +378,17 @@ deficit and no extra scalar stress-matrix kernel.
 
 CT supplies the exact degeneracy parameter
 
-$$
+```math
 \kappa_*:=z_*-s_Z=2(v-v_*)+\sigma_*.
-$$
+```
 
 TP supplies the geometric tradeoff: if `h_*/D->y` and `sigma_*/D->s`, then
 
-$$
+```math
 y+s
 \ge
 \sqrt{1+\frac{\sqrt3}{2}\sin(\min\{y,\pi/2\})}.
-$$
+```
 
 Therefore the live structural target is:
 

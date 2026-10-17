@@ -18,20 +18,20 @@
 
 Put
 
-$$
+```math
 \lambda_D:=\frac{e_{BB}+2s_C}{D},
 \qquad
 \lambda_{\rm disk}
 =\frac{\pi(\sqrt{3\pi^2+4}-1)}{2(\pi^2+1)}
 =0.693272542288314\ldots .
-$$
+```
 
 The new theorem eliminates an entire topological branch of the actual diameter graph.
 For every fixed
 
-$$
+```math
 \lambda_0<\lambda_{\rm disk},
-$$
+```
 
 there is `D_0(lambda_0)` such that every post-ZF survivor with `D>=D_0` and
 `lambda_D<=lambda_0` has an **acyclic actual diameter graph**.
@@ -43,9 +43,9 @@ directions are `o(1)`-dense in every direction.  Because both the source hull `K
 force hull `F` have width exactly `D` in every actual diameter direction, their
 perimeter difference is only `o(D)`.  CP then gives
 
-$$
+```math
 \operatorname{per}F=\pi D-o(D),
-$$
+```
 
 and MP forces `liminf lambda_D>=lambda_disk`, contradicting the assumed low-surplus
 regime.
@@ -80,25 +80,25 @@ numerical refinement of the pinned/contact floor.
 
 Let
 
-$$
+```math
 v_0v_1\cdots v_{m-1}v_0
-$$
+```
 
 be a cycle in the actual diameter graph, and orient its polygonal edges
 
-$$
+```math
 u_i:=v_{i+1}-v_i,
 \qquad |u_i|=D,
-$$
+```
 
 with indices modulo `m`.
 
 Every two nonincident diameter segments properly cross.  In particular, in every
 4-path
 
-$$
+```math
 A=v_{i-1},\quad B=v_i,\quad C=v_{i+1},\quad D'=v_{i+2},
-$$
+```
 
 the segments `AB` and `CD'` cross.
 
@@ -106,12 +106,12 @@ the segments `AB` and `CD'` cross.
 
 For every `i`,
 
-$$
+```math
 \operatorname{sgn}\det(u_{i-1},u_i)
 =
 \operatorname{sgn}\det(u_i,u_{i+1}).
 \tag{2.1}
-$$
+```
 
 Hence all signed principal turns of the oriented polygonal cycle have the same sign.
 
@@ -119,27 +119,27 @@ Hence all signed principal turns of the oriented polygonal cycle have the same s
 
 Apply an orientation-preserving affine change of coordinates taking
 
-$$
+```math
 B=(0,0),\qquad C=(1,0).
-$$
+```
 
 Write
 
-$$
+```math
 A=(a_x,a_y),\qquad D'=(d_x,d_y).
-$$
+```
 
 Then
 
-$$
+```math
 \operatorname{sgn}\det(B-A,C-B)=\operatorname{sgn}(a_y),
-$$
+```
 
 and
 
-$$
+```math
 \operatorname{sgn}\det(C-B,D'-C)=\operatorname{sgn}(d_y).
-$$
+```
 
 Because `AB` and `CD'` cross properly, `A` and `D'` must lie in the same open
 half-plane bounded by the line `BC`.  If they lay in opposite half-planes, the
@@ -158,87 +158,87 @@ vector `u_{i-1}` to outgoing vector `u_i`.
 
 The skip chord satisfies
 
-$$
+```math
 |v_{i+1}-v_{i-1}|\le D.
-$$
+```
 
 Since both adjacent cycle edges have length `D`,
 
-$$
+```math
 |u_{i-1}+u_i|^2
 =2D^2+2u_{i-1}\cdot u_i
 \le D^2.
-$$
+```
 
 Therefore
 
-$$
+```math
 \frac{u_{i-1}\cdot u_i}{D^2}\le-\frac12,
-$$
+```
 
 so
 
-$$
+```math
 \frac{2\pi}{3}\le|\tau_i|<\pi.
 \tag{3.1}
-$$
+```
 
 Define the projective angle between the two incident diameter lines by
 
-$$
+```math
 \alpha_i:=\pi-|\tau_i|.
 \tag{3.2}
-$$
+```
 
 Then
 
-$$
+```math
 0<\alpha_i\le\frac\pi3.
-$$
+```
 
 The angle `alpha_i` is exactly the smaller angle at `v_i` between the two outgoing
 diameter rays `v_iv_{i-1}` and `v_iv_{i+1}`.
 
 By Lemma DC.1, after reversing the cycle orientation if necessary,
 
-$$
+```math
 \boxed{\tau_i=\pi-\alpha_i\quad\text{for every }i.}
 \tag{3.3}
-$$
+```
 
 For any closed polygonal curve with no collinear consecutive edges, the sum of signed
 principal turns is an integer multiple of `2pi`.  Hence
 
-$$
+```math
 \sum_{i=0}^{m-1}(\pi-\alpha_i)=2\pi k
 \tag{3.4}
-$$
+```
 
 for an integer `k>0`.  Thus
 
-$$
+```math
 \boxed{
 \sum_i\alpha_i=(m-2k)\pi.
 }
 \tag{3.5}
-$$
+```
 
 Every planar diameter-graph cycle is odd.  Therefore `m-2k` is a positive odd integer,
 and in particular
 
-$$
+```math
 \boxed{\sum_i\alpha_i\ge\pi.}
 \tag{3.6}
-$$
+```
 
 Passing from oriented edge vectors to their unoriented projective directions subtracts
 `pi` at each turn.  Equation (3.3) therefore says that successive projective edge
 directions move with one consistent sign through angle `alpha_i`.  By (3.5) the
 resulting closed walk in
 
-$$
+```math
 \mathbb{RP}^1\cong\mathbb R/\pi\mathbb Z
-$$
+```
 
 has nonzero odd winding number.  Consequently it traverses every projective direction
 at least once.
@@ -252,14 +252,14 @@ This is the only cycle-order fact needed below.
 FS.3 gives the uniform bound for every pair of actual diameter edges sharing an
 endpoint
 
-$$
+```math
 \alpha_i<\Theta_D
 :=2\arccos\!\left(
 \frac{D}{D+2\,3^{1/4}\sqrt D}
 \right)
 =O(D^{-1/4}).
 \tag{4.1}
-$$
+```
 
 Because the projective direction walk in Section 3 covers the whole projective circle
 and every step has length below `Theta_D`, every projective direction `theta` is within
@@ -275,23 +275,23 @@ not covered by this theorem.
 
 Let
 
-$$
+```math
 g(\theta):=w_K(\theta)-w_F(\theta)\ge0.
-$$
+```
 
 C65 puts every actual diameter endpoint in the force-visible core, so for every actual
 diameter direction `theta_h`,
 
-$$
+```math
 w_K(\theta_h)=w_F(\theta_h)=D,
-$$
+```
 
 and therefore
 
-$$
+```math
 g(\theta_h)=0.
 \tag{5.1}
-$$
+```
 
 For every diameter-`D` convex body its width function is `D`-Lipschitz on
 `RP^1`; this is the support-function bound for the difference body.  Hence `g` is
@@ -299,14 +299,14 @@ For every diameter-`D` convex body its width function is `D`-Lipschitz on
 
 By the `Theta_D`-net property, for every projective direction `theta`,
 
-$$
+```math
 0\le g(\theta)\le2D\Theta_D.
 \tag{5.2}
-$$
+```
 
 Cauchy's width formula then gives
 
-$$
+```math
 \boxed{
 0\le\operatorname{per}K-\operatorname{per}F
 =\int_0^\pi g(\theta)\,d\theta
@@ -314,24 +314,24 @@ $$
 =O(D^{3/4})=o(D).
 }
 \tag{5.3}
-$$
+```
 
 CP gives independently, for every global source,
 
-$$
+```math
 0\le\pi D-\operatorname{per}K<\frac{\pi\sqrt3}{2}.
 \tag{5.4}
-$$
+```
 
 Therefore every unbounded post-ZF sequence whose actual diameter graph contains a
 cycle satisfies
 
-$$
+```math
 \boxed{
 \frac{\operatorname{per}F}{D}\longrightarrow\pi.
 }
 \tag{5.5}
-$$
+```
 
 ---
 
@@ -342,14 +342,14 @@ $$
 Let `(A_j)` be any unbounded sequence of post-ZF C-II survivors whose actual diameter
 graphs contain cycles.  Then
 
-$$
+```math
 \boxed{
 \liminf_{j\to\infty}
 \frac{e_{BB,j}+2s_{C,j}}{D_j}
 \ge\lambda_{\rm disk}.
 }
 \tag{6.1}
-$$
+```
 
 ### Proof
 
@@ -360,11 +360,11 @@ Section 5 gives `per(F_j)/D_j->pi`.  Apply MP.1. `square`
 For every fixed `lambda_0<lambda_disk`, there is `D_0(lambda_0)` such that any
 post-ZF survivor with
 
-$$
+```math
 D\ge D_0,
 \qquad
 \frac{e_{BB}+2s_C}{D}\le\lambda_0
-$$
+```
 
 has an acyclic actual diameter graph.
 
@@ -373,17 +373,17 @@ has an acyclic actual diameter graph.
 Otherwise choose a sequence with `D_j->infinity`, `lambda_j<=lambda_0`, and a cycle in
 every `H_j`.  Theorem DC.2 gives
 
-$$
+```math
 \liminf\lambda_j\ge\lambda_{\rm disk}>\lambda_0,
-$$
+```
 
 a contradiction. `square`
 
 For a forest on `q` nonisolated diameter endpoints and `h` edges,
 
-$$
+```math
 d_H=q-h
-$$
+```
 
 is exactly the number of diameter-tree components.  Thus the low-surplus branch is now
 forced into the forest/caterpillar side of the straight-thrackle classification.
@@ -395,25 +395,25 @@ forced into the forest/caterpillar side of the straight-thrackle classification.
 The main-branch report at `ff31de4783ff49173d9f4bfdf61364735ff5a590` proves in the
 mixed-circuit phase `s_Z=0` that, for an absolute `epsilon_0>0`,
 
-$$
+```math
 \frac{e_{BB}+2s_C-3d_H}{D}
 \ge\lambda_R+\epsilon_0
 \tag{7.1}
-$$
+```
 
 for all sufficiently large survivors.
 
 DC now shows that throughout the range below `lambda_disk`, that same phase has
 `H` a forest, so
 
-$$
+```math
 \boxed{d_H=\#\{\text{diameter-tree components}\}.}
 \tag{7.2}
-$$
+```
 
 Hence in the `s_Z=0` low-surplus phase,
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
@@ -421,7 +421,7 @@ $$
 +3\frac{\#\text{diameter components}}D.
 }
 \tag{7.3}
-$$
+```
 
 This does not yet eliminate the forest phase, but it converts the formerly abstract
 `d_H` defect into a literal component count on the whole remaining low-surplus class.

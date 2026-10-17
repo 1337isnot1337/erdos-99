@@ -22,21 +22,21 @@ Because the same column order occurs on every row, the circumdisk-capacity argum
 
 For the concrete choice `sigma=mu=0.01`, every fixed chain length occurs with one common family of more than
 
-$$
+```math
 0.6436D-o(D)
-$$
+```
 
 columns, every crossing has angular defect less than
 
-$$
+```math
 {1.109\times10^8 R\over D},
-$$
+```
 
 and the same first and last
 
-$$
+```math
 (0.0547027-o(1))D
-$$
+```
 
 columns lie respectively below `-0.01D` and above `+0.01D` on **every row**.
 
@@ -48,44 +48,44 @@ This replaces the sparse `0.0783D` fixed-chain scaffold by a near-full common la
 
 Fix an integer
 
-$$
+```math
 R\ge1
 \tag{FCB.1}
-$$
+```
 
 before taking `D->infinity`. Put
 
-$$
+```math
 r_0:=0.6536,
 \qquad
 H:=1{,}109{,}000.
 \tag{FCB.2}
-$$
+```
 
 Fix constants
 
-$$
+```math
 0<\sigma<r_0,
 \qquad
 \mu\ge0
 \tag{FCB.3}
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{
 q:=r_0-\sigma-{1+2\mu\over\sqrt3}>0.
 }
 \tag{FCB.4}
-$$
+```
 
 Then along every unbounded high-`t` survivor sequence there are `R+1` consecutive nonhub selected O--O rows
 
-$$
+```math
 \tau_0,\tau_1,\ldots,\tau_R
 \tag{FCB.5}
-$$
+```
 
 whose intervening strips satisfy the usual fixed-cusp bounds and which additionally admit one common transverse train family `P_R` with the following properties.
 
@@ -93,42 +93,42 @@ whose intervening strips satisfy the usual fixed-cusp bounds and which additiona
 
 For the `R` intervening interfaces,
 
-$$
+```math
 \boxed{
 \sum_{i=0}^{R-1}(N_i+L_i+D B_i)
 <HR,
 }
 \tag{FCB.6}
-$$
+```
 
 and if
 
-$$
+```math
 F_j:=\sum_{b\in\Gamma_j}\delta_{jb}
 \tag{FCB.7}
-$$
+```
 
 is the **full** angular-defect sum of row `tau_j` over all complete trains crossing that row, then
 
-$$
+```math
 \boxed{
 \sum_{j=0}^{R}F_j<HR.
 }
 \tag{FCB.8}
-$$
+```
 
 Here `Gamma_j` is the complete-train crossing family of `tau_j`, and `delta_jb>0` is the canonical acute strict-rhombus angular defect.
 
 Consequently
 
-$$
+```math
 \sum_iN_i<HR,
 \qquad
 \sum_iL_i<HR,
 \qquad
 \sum_iB_i<{HR\over D}.
 \tag{FCB.9}
-$$
+```
 
 For fixed `R`, every quantity except the final KKT factor is therefore bounded independently of `D`.
 
@@ -136,17 +136,17 @@ For fixed `R`, every quantity except the final KKT factor is therefore bounded i
 
 There is a family
 
-$$
+```math
 C_R\subseteq\bigcap_{j=0}^{R}\Gamma_j
 \tag{FCB.10}
-$$
+```
 
 with
 
-$$
+```math
 \boxed{|C_R|>r_0D-HR-o(D)=0.6536D-o(D).}
 \tag{FCB.11}
-$$
+```
 
 The trains in `C_R` are pairwise noncrossing and occur in one common order on every row `tau_j`.
 
@@ -154,20 +154,20 @@ The trains in `C_R` are pairwise noncrossing and occur in one common order on ev
 
 There is
 
-$$
+```math
 P_R\subseteq C_R
-$$
+```
 
 with
 
-$$
+```math
 \boxed{|P_R|>(r_0-\sigma)D-o(D)}
 \tag{FCB.12}
-$$
+```
 
 such that for every row `0<=j<=R` and every column `b in P_R`,
 
-$$
+```math
 \boxed{
 0<\delta_{jb}
 \le {K_R\over D},
@@ -175,7 +175,7 @@ $$
 K_R:={HR\over\sigma}.
 }
 \tag{FCB.13}
-$$
+```
 
 Thus a **single** common column shore is inverse-`D` near-equilateral across all `R+1` rows.
 
@@ -183,29 +183,29 @@ Thus a **single** common column shore is inverse-`D` near-equilateral across all
 
 There are an initial block `P_R^-` and a terminal block `P_R^+` in the common column order such that
 
-$$
+```math
 \boxed{|P_R^-|,|P_R^+|>(q-o(1))D.}
 \tag{FCB.14}
-$$
+```
 
 Orient each row so that the common column order increases the exact train-monotone coordinate
 
-$$
+```math
 h_j(x)=\det(u_j,x-o).
 \tag{FCB.15}
-$$
+```
 
 If `z_jb` is the crossing-rhombus center of `tau_j` and `b`, then simultaneously for **every** `0<=j<=R`,
 
-$$
+```math
 \boxed{h_j(z_{jb})<-\mu D\qquad(b\in P_R^-),}
 \tag{FCB.16}
-$$
+```
 
-$$
+```math
 \boxed{h_j(z_{jb})>\mu D\qquad(b\in P_R^+).}
 \tag{FCB.17}
-$$
+```
 
 Every flank crossing still satisfies the inverse-`D` defect bound (FCB.13).
 
@@ -215,68 +215,68 @@ Every flank crossing still satisfies the inverse-`D` defect bound (FCB.13).
 
 Let
 
-$$
+```math
 A_*=(\tau_1,\ldots,\tau_m),
 \qquad
 m>cD-o(D),
 \qquad
 c=0.0000226,
 \tag{FCB.18}
-$$
+```
 
 be the consecutive high-`t` row block. For an internal interface put
 
-$$
+```math
 C_i:=N_i+L_i+D B_i.
 \tag{FCB.19}
-$$
+```
 
 The fixed-chain proof used row angular sums against a previously selected common column family. Instead define the full row defect `F_j` by (FCB.7). Every term of `F_j` is the canonical defect of one strict rhombus crossed by `tau_j`.
 
 The canonical global budgets give
 
-$$
+```math
 \sum_i C_i
 \le(10T-2\pi+2)D+o(D),
 \tag{FCB.20}
-$$
+```
 
 and
 
-$$
+```math
 \sum_j F_j
 \le C_{phase}D,
 \qquad
 C_{phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
 \tag{FCB.21}
-$$
+```
 
 Define the augmented interface cost
 
-$$
+```math
 \boxed{
 J_i^{full}:=C_i+F_i+F_{i+1}.
 }
 \tag{FCB.22}
-$$
+```
 
 Each row appears in at most two adjacent-interface costs, so
 
-$$
+```math
 \sum_iJ_i^{full}
 \le
 (10T-2\pi+2+2C_{phase})D+o(D).
 \tag{FCB.23}
-$$
+```
 
 This is **the same global constant** used in the existing fixed-cusp-chain theorem. Its exact arithmetic certificate already proves
 
-$$
+```math
 {10T-2\pi+2+2C_{phase}\over c}
 <1{,}108{,}000
 < H.
 \tag{FCB.24}
-$$
+```
 
 Thus charging the full row defect costs no new leading constant.
 
@@ -286,37 +286,37 @@ Thus charging the full row defect costs no new leading constant.
 
 Consider all admissible length-`R` windows of consecutive nonhub interfaces. Their number is
 
-$$
+```math
 cD-o(D)
-$$
+```
 
 for fixed `R`. Every interface belongs to at most `R` such windows. Hence
 
-$$
+```math
 \sum_W\sum_{i\in W}J_i^{full}
 \le
 R\sum_iJ_i^{full}.
 \tag{FCB.25}
-$$
+```
 
 Averaging and using the strict margin in (FCB.24) gives one admissible window with
 
-$$
+```math
 \boxed{
 \sum_{i=0}^{R-1}J_i^{full}<HR
 }
 \tag{FCB.26}
-$$
+```
 
 for all sufficiently large `D`.
 
 Its `C_i` part gives (FCB.6). Moreover
 
-$$
+```math
 \sum_{i=0}^{R-1}(F_i+F_{i+1})
 =F_0+2\sum_{j=1}^{R-1}F_j+F_R
 \ge\sum_{j=0}^{R}F_j,
-$$
+```
 
 so (FCB.26) also gives (FCB.8).
 
@@ -328,36 +328,36 @@ This is stronger than the previous fixed-chain phase statement: the bounded defe
 
 Each selected high-`t` row satisfies
 
-$$
+```math
 |\Gamma_j|>r_0D-o(D).
 \tag{FCB.27}
-$$
+```
 
 The adjacent-strip terminal-topology theorem gives
 
-$$
+```math
 |\Gamma_j\triangle\Gamma_{j+1}|\le L_j.
 \tag{FCB.28}
-$$
+```
 
 Start with `Gamma_0`. Passing from row `j` to row `j+1` can remove at most `L_j` trains from the running intersection. Therefore
 
-$$
+```math
 \left|\bigcap_{j=0}^{R}\Gamma_j\right|
 \ge
 |\Gamma_0|-\sum_{j=0}^{R-1}L_j.
 \tag{FCB.29}
-$$
+```
 
 Using (FCB.9) and (FCB.27),
 
-$$
+```math
 \boxed{
 \left|\bigcap_{j=0}^{R}\Gamma_j\right|
 >r_0D-HR-o(D).
 }
 \tag{FCB.30}
-$$
+```
 
 Take this intersection as `C_R`.
 
@@ -371,44 +371,44 @@ For fixed `R`, the finite loss `HR` is absorbed by `o(D)`, giving the asymptotic
 
 For `b in C_R`, define its total chain defect
 
-$$
+```math
 \Delta_b:=\sum_{j=0}^{R}\delta_{jb}.
 \tag{FCB.31}
-$$
+```
 
 Because `C_R subset Gamma_j` for every row,
 
-$$
+```math
 \sum_{b\in C_R}\Delta_b
 \le
 \sum_{j=0}^{R}F_j
 <HR.
 \tag{FCB.32}
-$$
+```
 
 Call `b` bad when
 
-$$
+```math
 \Delta_b>{HR\over\sigma D}={K_R\over D}.
 \tag{FCB.33}
-$$
+```
 
 There can be fewer than `sigma D` bad columns, since otherwise their total contribution would exceed `HR`.
 
 Delete them and call the remainder `P_R`. From (FCB.11),
 
-$$
+```math
 |P_R|>(r_0-\sigma)D-HR-o(D)
 =(r_0-\sigma)D-o(D),
-$$
+```
 
 which is (FCB.12).
 
 For every retained `b`, each individual nonnegative row defect is bounded by the total:
 
-$$
+```math
 0<\delta_{jb}\le\Delta_b\le{K_R\over D}.
-$$
+```
 
 This proves (FCB.13).
 
@@ -420,43 +420,43 @@ The important point is that the deletion is by **columns**, after the entire cha
 
 Deleting columns preserves pairwise noncrossing and the common column order. The exact train-step metric inequality gives, along every oriented row,
 
-$$
+```math
 h_j(z_{j,s+1})-h_j(z_{j,s})>{\sqrt3\over2}
 \tag{FCB.34}
-$$
+```
 
 for consecutive retained columns in their common order.
 
 The full source hull lies in
 
-$$
+```math
 B(o,R_D),
 \qquad
 R_D<{D\over2}+o(D).
 \tag{FCB.35}
-$$
+```
 
 Hence, on any one row, at most
 
-$$
+```math
 \left({1+2\mu\over\sqrt3}+o(1)\right)D
 \tag{FCB.36}
-$$
+```
 
 retained crossings can lie at coordinate at least `-mu D`; the symmetric statement holds at coordinate at most `+mu D`.
 
 Since
 
-$$
+```math
 |P_R|>(r_0-\sigma)D-o(D),
-$$
+```
 
 every row has more than
 
-$$
+```math
 \left(r_0-\sigma-{1+2\mu\over\sqrt3}-o(1)\right)D
 =(q-o(1))D
-$$
+```
 
 retained crossings below `-mu D`, and the same number above `+mu D`.
 
@@ -468,43 +468,43 @@ On every row, the below-set is an initial segment of the **same** column order. 
 
 Take
 
-$$
+```math
 \sigma=\mu={1\over100}.
 \tag{FCB.37}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{|P_R|>0.6436D-o(D).}
 \tag{FCB.38}
-$$
+```
 
 The common flank density is
 
-$$
+```math
 \boxed{
 q=0.6436-{1.02\over\sqrt3}
 =0.0547027254265\ldots .
 }
 \tag{FCB.39}
-$$
+```
 
 The angular-defect coefficient is
 
-$$
+```math
 \boxed{
 K_R={1{,}109{,}000R\over0.01}
 =110{,}900{,}000R.
 }
 \tag{FCB.40}
-$$
+```
 
 Thus for each fixed `R`, all `R+1` rows carry the same `>0.6436D` columns, every one of their `(R+1)|P_R|` crossings satisfies
 
-$$
+```math
 0<\delta<{1.109\times10^8R\over D},
-$$
+```
 
 and the same `>0.05470D` first/last columns bracket the `+-0.01D` circumcenter corridor on every row.
 
@@ -518,21 +518,21 @@ For fixed `R`, (FCB.13) tends to exact `pi/3` crossing geometry uniformly on the
 
 The standard diagonal argument can also choose a subsequence with depths
 
-$$
+```math
 R_D\to\infty
-$$
+```
 
 arbitrarily slowly. Choosing it slowly enough that `HR_D=o(D)` preserves
 
-$$
+```math
 |P_{R_D}|>(0.6436-o(1))D,
-$$
+```
 
 and the same positive flank density. The per-crossing defect bound then becomes
 
-$$
+```math
 O(R_D/D)=o(1).
-$$
+```
 
 This diagonal statement is weaker than inverse-`D` control with a fixed constant, but it produces a growing-depth near-triangular corridor with a near-full common transverse shore and sublinear total switching/terminal complexity.
 

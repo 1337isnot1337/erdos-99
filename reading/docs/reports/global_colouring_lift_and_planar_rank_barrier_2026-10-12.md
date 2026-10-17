@@ -48,9 +48,9 @@ square regression, which is a four-point global minimizer.
 
 For any finite unit-separated source with diameter D>1 and 0<lambda<1 define
 
-$$
+```math
 d_{ij}'{}^2=1+\lambda(d_{ij}^2-1)\quad(i\ne j).
-$$
+```
 
 Every unit contact remains unit, every noncontact stays strictly above one, and
 D'^2=1+lambda(D^2-1)<D^2. These distances are Euclidean: take orthogonal sums of
@@ -58,15 +58,15 @@ sqrt(lambda) times the source and sqrt(1-lambda) times a regular unit simplex.
 
 For a planar source P, put J=I-11^T/n and G=JPP^TJ. The new centred Gram matrix is
 
-$$
+```math
 G'=\lambda G+\frac{1-\lambda}{2}J.
-$$
+```
 
 For every nonzero x perpendicular to 1,
 
-$$
+```math
 x^TG'x=\lambda|P^Tx|^2+\frac{1-\lambda}{2}|x|^2>0.
-$$
+```
 
 Thus rank(G')=n-1 exactly. For n>=4 there is no planar realization. This
 obstructs this relaxation, not every possible planar competitor. For n=3 the
@@ -82,24 +82,24 @@ therefore exploit a planar restriction beyond the distance inequalities alone.
 Take any proper q-colouring c of the full contact graph. Let z_c be the vertices
 of a regular unit (q-1)-simplex and set
 
-$$
+```math
 p_i(t)=\frac{(p_i,tz_{c(i)})}{\sqrt{1+t^2}}.
-$$
+```
 
 For different colours the new squared distance is (d_ij^2+t^2)/(1+t^2); for
 equal colours it is d_ij^2/(1+t^2). Define
 
-$$
+```math
 \delta_c=\min_{i\ne j,\ c(i)=c(j)}(d_{ij}^2-1),
-$$
+```
 
 with infinity for an empty minimum. Finiteness and proper colouring give
 delta_c>0. For 0<t^2<delta_c all lower constraints hold and the complete contact
 graph is preserved. Every old actual diameter pair strictly shortens, and
 
-$$
+```math
 \operatorname{diam}P(t)^2\le\frac{D^2+t^2}{1+t^2}<D^2.
-$$
+```
 
 All inactive upper constraints are checked by the same formula. This is a
 simultaneous full-source improvement, not a stress-weighted average.
@@ -141,13 +141,13 @@ For arbitrary planar v_i and t>0 propose y_i=(p_i+t v_i)/sqrt(1+t^2). For each
 pair put u=p_i-p_j, w=v_i-v_j, d^2=|u|^2, b=u.w and c=|w|^2. The exact lower
 constraint and strict upper constraint are respectively
 
-$$
+```math
 (d^2-1)+2bt+(c-1)t^2\ge0,
-$$
+```
 
-$$
+```math
 (D^2-d^2)-2bt+(D^2-c)t^2>0.
-$$
+```
 
 One common endpoint t must satisfy both for every pair. No first-order sign or
 feasible-path premise is imposed. Assigning one target per colour leaves

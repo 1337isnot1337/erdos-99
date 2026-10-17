@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_orbit_pure_flat_center_bracing_dichotomy_2026-09-15.md) · source SHA-256 `db7166d02115708c1fd7f127abb0dfb897903183940378cd0b2af6e83eb4019f`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "203fe570c9d776abe147543a6efc404272e8a268", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_orbit_pure_flat_center_bracing_dichotomy_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f46abbefe86f8229819a7aee24ec93cf8f5723be585e8aa4196f9ffe0563e78f"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -15,10 +17,10 @@
 
 The preceding theorem gives
 
-$$
+```math
 P_{5,\mathrm{pure}}
 \ge0.4106157004\ldots D-o(D)
-$$
+```
 
 orbit-pure pentagons, each converging to the flat subdivided equilateral trapezoid.
 
@@ -44,24 +46,24 @@ This is a weight-free geometric statement.
 
 At any contact-core vertex `v`, two distinct unit-contact neighbors `x,y` satisfy
 
-$$
+```math
 |x-y|=2\sin(\angle xvy/2)\ge1.
-$$
+```
 
 Therefore
 
-$$
+```math
 \angle xvy\ge\pi/3.
-$$
+```
 
 Equality would make `vxy` a unit equilateral triangle, forbidden in the hypothetical survivor. Thus
 
-$$
+```math
 \boxed{
 \angle xvy>\pi/3
 }
 \tag{FB.1}
-$$
+```
 
 for every two distinct contact rays at one vertex.  In particular the global contact degree is at most five.
 
@@ -72,9 +74,9 @@ Choose the flatness neighborhood so every good-center face angle exceeds `5pi/6`
 
 Suppose an unloaded vertex centered two distinct good teeth.  Bounded face sectors are sectors between consecutive contact rays.  The two tooth sectors would contribute more than
 
-$$
+```math
 2\cdot{5\pi\over6}={5\pi\over3}
-$$
+```
 
 to the full angular sum.  Since an unloaded core vertex has degree at least three, there is at least one further sector between consecutive contact rays; by (FB.1) that sector has angle greater than `pi/3`.  The total would exceed `2pi`, impossible.
 
@@ -82,17 +84,19 @@ A loaded force-hull vertex lies on the outer face.  If it has degree two, at mos
 
 Therefore, for all sufficiently large sources,
 
-$$
+```math
 \boxed{
 \text{the flat-center map from good teeth to source vertices is injective.}
 }
 \tag{FB.2}
+```
 
 Consequently there are at least
 
-\[
+```math
 0.4106157004\ldots D-o(D)
 \tag{FB.3}
+```
 
 **distinct** flat centers.
 
@@ -105,39 +109,41 @@ The tooth base projective direction lies in the dominant shrinking three-axis or
 
 Assign to each loaded flat center one such incident hull side.  One hull side is assigned by at most its two endpoints.  Every force-hull side has Euclidean length at least one because all source points are unit-separated.  Thus
 
-\[
+```math
 \#\{\text{loaded flat centers}\}
 \le
 2\sum_{\substack{\text{hull sides }e\\\operatorname{dir}(e)\in W_D}}
 |e|,
 \tag{FB.4}
-$$
+```
 
 where `W_D` is a union of three projective windows whose total angular width tends to zero.
 
 Type-II near-disk perimeter-measure convergence gives
 
-$$
+```math
 {1\over D}\sum_e |e|\,\delta_{\operatorname{dir}(e)}
 \Longrightarrow d\theta
-$$
+```
 
 on the projective direction circle.  Choose the same standard diagonal subsequence used for the shrinking atomic windows.  Then the normalized perimeter mass of `W_D` tends to zero.  Equation (FB.4) yields
 
-$$
+```math
 \boxed{
 \#\{\text{loaded flat centers}\}=o(D).
 }
 \tag{FB.5}
+```
 
 Combining (FB.3)--(FB.5),
 
-\[
+```math
 \boxed{
 \#\{\text{unloaded flat centers}\}
 \ge0.4106157004\ldots D-o(D).
 }
 \tag{FB.6}
+```
 
 ## 4. Every unloaded flat center has an extra contact
 
@@ -153,9 +159,9 @@ Rotate so the tooth majority/base projective axis tends to angle zero.  The two 
 
 The chosen extra contact ray lies outside that face sector.  By (FB.1) it stays at angular separation strictly greater than `pi/3` from each base ray.  In the flat limit its directed angle therefore belongs to
 
-\[
+```math
 [4\pi/3,5\pi/3]
-$$
+```
 
 up to reversing the orientation convention, and its projective direction belongs to the interval between the two minority orbit axes.
 
@@ -163,24 +169,25 @@ If the train phase of `mx` lies in the dominant shrinking orbit windows, it cann
 
 Let `y` be the endpoint of that adjacent base edge.  Since
 
-$$
+```math
 |m-x|=|m-y|=1,
-$$
+```
 
 the law of cosines gives
 
-$$
+```math
 |x-y|
 =2\sin\left({\angle xmy\over2}\right)
 =1+o(1).
 \tag{FB.7}
-$$
+```
 
 The pair `xy` is not an old contact: if `|x-y|=1`, the three unit edges `mx,my,xy` would form a forbidden equilateral triangle.  Hence
 
-$$
+```math
 \boxed{|x-y|>1,\qquad |x-y|=1+o(1).}
 \tag{FB.8}
+```
 
 Thus every chosen **dominant-orbit** extra brace creates an additional hidden near-unit pair.
 
@@ -193,45 +200,47 @@ Partition the unloaded flat centers into
 
 Equation (FB.6) gives
 
-\[
+```math
 \boxed{
 |A_D|+|N_D|
 \ge0.4106157004\ldots D-o(D).
 }
 \tag{FB.9}
+```
 
 Every center in `A_D` yields a hidden near-unit noncontact by (FB.8).  Every center in `N_D` yields a selected contact incidence on a non-dominant stopped train.
 
 Therefore at least one alternative holds:
 
-\[
+```math
 \boxed{|A_D|\ge0.2053078D-o(D)}
 \tag{FB.10}
-$$
+```
 
 or
 
-$$
+```math
 \boxed{|N_D|\ge0.2053078D-o(D).}
 \tag{FB.11}
-$$
+```
 
 In the first branch the hidden-pair graph has maximum degree at most five: an endpoint can participate only through one of its at most five contact neighbors serving as the corresponding flat center.  A greedy edge matching therefore extracts at least
 
-$$
+```math
 {|A_D|\over9}
 \ge0.0228119D-o(D)
 \tag{FB.12}
-$$
+```
 
 endpoint-disjoint **additional** hidden `1+o(1)` pairs.
 
 In the second branch there are at least
 
-\[
+```math
 {|N_D|\over2}
 \ge0.1026539D-o(D)
 \tag{FB.13}
+```
 
  distinct selected off-orbit contact edges, since one physical edge has only two endpoints.
 

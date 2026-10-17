@@ -24,11 +24,11 @@ The audited train primitive gives each nonsingleton complete train a simple midp
 
 The three cycle trains are `01,12,02`. The exact interval certificate proves
 
-$$
+```math
 |u_{01}\cdot u_{12}|,
 |u_{12}\cdot u_{02}|,
 |u_{02}\cdot u_{01}|>{11\over20}>{1\over2}.
-$$
+```
 
 A strict unit rhombus crossing would require absolute dot product `<1/2`. Hence the three train arcs are pairwise disjoint away from their prescribed terminal faces.
 
@@ -38,13 +38,13 @@ Inside each strict convex exceptional face, the chord between the two selected s
 
 The certificate rechecks throughout the entire root box the counterclockwise orders
 
-$$
+```math
 F_0:(a,02,04,05,01),
 \quad
 F_1:(a,15,01,13,12),
 \quad
 F_2:(a,23,12,24,02).
-$$
+```
 
 Orient the Jordan cycle `0->1->2->0`. In an oriented ribbon neighborhood of a simple cycle, the counterclockwise sector from the incoming half-edge to the outgoing half-edge is the same chosen side of the curve at every vertex disk; depending on the global orientation it is either the bounded or unbounded side, which is irrelevant.
 
@@ -66,11 +66,11 @@ Since `F_3` and `F_4` lie in opposite components of the complement of the Jordan
 
 The certificate proves
 
-$$
+```math
 |u_{34}\cdot u_{01}|,
 |u_{34}\cdot u_{12}|,
 |u_{34}\cdot u_{02}|>{11\over20},
-$$
+```
 
 so all three possible rhombus crossings are forbidden. This is a direct Jordan contradiction. It does not depend on how many other trains exist outside the six-face gadget; external trains cannot repair a continuous `F_3`--`F_4` arc that itself is unable to cross the separator.
 

@@ -33,15 +33,15 @@ partner a_p, exactly two unit-contact neighbors p_-,p_+, and
 
 Let S be a collection of such leaves, independent in the old unit-contact
 graph. Suppose their actual diameter midpoints m_p=(p+a_p)/2 satisfy
-$$
+```math
 |m_p-s|\le T,\qquad T<(D-2)/(2\sqrt2).
 \tag{SR.1}
-$$
+```
 Define the complete source map, fixing every unselected point, by
-$$
+```math
 F(p)=p-(p-a_p)/D^2\quad(p\in S),\qquad F(x)=x\quad(x\notin S).
 \tag{SR.2}
-$$
+```
 This is the reflection of p in the line p_-p_+: with unit chord angle
 `a_D=2 asin(1/(2D))`, its inward displacement is exactly 1/D.
 
@@ -69,13 +69,13 @@ within T of s.
 
 **Proof.** Suppose d=|p-q|<sqrt(2). Their actual outward diameter normals are
 `n_p=(p-a_p)/D`, `n_q=(q-a_q)/D`. Since
-$$
+```math
 D(n_p-n_q)=2(p-q)-2(m_p-m_q),
-$$
+```
 the ordinary smaller angle theta between them satisfies
-$$
+```math
 \sin(\theta/2)\le(d+2T)/D<1/\sqrt2,
-$$
+```
 so theta<pi/2. They are distinct normals, since a fixed oriented normal has
 unique diameter support endpoints. Along the hull chain corresponding to this
 short normal interval, every side normal is between n_p and n_q. Projection
@@ -86,9 +86,9 @@ Since q is not either fan neighbor of p, that chain contains
 at least two full hull sides. Their endpoint distances are each >=1 by source
 separation, including sides ending at contact isolates. Summing the projections
 gives
-$$
+```math
 d\ge2\cos(\theta/2)>\sqrt2,
-$$
+```
 contradicting the assumption. QED.
 
 This lemma uses ordinary exposed-normal order, not an incident-diameter
@@ -98,24 +98,24 @@ Euler-path inference or an identification of outer-walk occurrences.
 
 For a selected p and any other original source y, put r=p-a_p. The diameter
 upper bound to a_p gives
-$$
+```math
 2(p-y)\cdot r=|p-y|^2+D^2-|y-a_p|^2\ge|p-y|^2.
-$$
+```
 Writing d=|p-y|, the exact single-reflection identity yields
-$$
+```math
 |F(p)-y|^2-d^2
 =-2(p-y)\cdot r/D^2+1/D^2\le-(d^2-1)/D^2\le0.
 \tag{SR.3}
-$$
+```
 For an old unit neighbor, its distance to a_p is D, so equality holds and
 the unit contact is preserved exactly. For d>1 the distance strictly decreases.
 
 If p,q both move, add their two single-reflection squared changes. The joint
 change has the additional term `-2(F(p)-p) dot (F(q)-q)`, at most 2/D^2. Hence
-$$
+```math
 \boxed{|F(p)-F(q)|^2-|p-q|^2\le-2(|p-q|^2-2)/D^2\le0.}
 \tag{SR.4}
-$$
+```
 The final sign is Lemma SR.1. Fixed-fixed pairs are unchanged. Thus F is a
 nonexpansive map on the **entire original source**, not just its active pairs.
 No inactive upper pair can become a new diameter. Every old diameter incident
@@ -126,10 +126,10 @@ If the new source is unit-separated, its actual diameter-pair count is exactly
 `h-|S|`; the old unchanged pairs are the only remaining diameter pairs.
 
 Furthermore
-$$
+```math
 |F(p)-F(q)|\ge\sqrt2-2/D>1\quad(p,q\in S),
 \tag{SR.5}
-$$
+```
 so no moving-moving pair creates a lower overlap or a new contact. All old
 contacts are moving-fixed or fixed-fixed and stay exactly unit.
 
@@ -137,9 +137,9 @@ contacts are moving-fixed or fixed-fixed and stay exactly unit.
 
 Let F_p be the map reflecting only p and fixing the entire rest of A. The only
 possible lower violations of the simultaneous map are
-$$
+```math
 |F(p)-y|<1,\qquad p\in S,\ y\in A\setminus S.
-$$
+```
 These are the **same** inequalities as in the corresponding solo map. Solo
 pairs with another selected leaf are also safe, by (SR.3), the triangle bound
 `|F_p(p)-q|>=sqrt2-1/D>1`, and Lemma SR.1.
@@ -167,10 +167,10 @@ assert that every canonical source has such fan leaves.
 ## 5. Distinct unary blockers and the canonical 2U/5 matching
 
 Assume in addition
-$$
+```math
 D\ge20,\qquad T\le D/6-2.
 \tag{SR.6}
-$$
+```
 A **strict-pair blocker** for p is an original source vertex y with
 `|p-y|>1` and `|F_p(p)-y|<=1`.
 
@@ -180,17 +180,17 @@ No original vertex is a strict-pair blocker for two distinct members of S.
 
 **Proof.** If y blocks p and q, the two reflected points p',q' are at distance
 <=2, hence d=|p-q|<=2+2/D. Their outward-normal angle theta satisfies
-$$
+```math
 \sin(\theta/2)\le(d+2T)/D<1/3.
-$$
+```
 Every hull side on the short normal interval has bisector-tangent projection
 at least its length times cos(theta/2)>2sqrt(2)/3. Three sides would imply
 `d>2sqrt(2)>2+2/D`. Thus the hull chain has exactly two sides, and its
 intermediate vertex r is the common unit-contact neighbor of p and q. Both
 reflections preserve those contacts: `|r-p'|=|r-q'|=1`. Moreover
-$$
+```math
 |p'-q'|\ge2\cos(\theta/2)-2/D>4\sqrt2/3-1/10>7/4>\sqrt3.
-$$
+```
 The intersection of the two closed unit disks about p',q' has diameter less
 than one: it is contained in the ball about their midpoint of radius
 `sqrt(1-|p'-q'|^2/4)`. Both r and y lie in that lens, contrary to unit
@@ -203,10 +203,10 @@ puts **every** actual diameter midpoint within
 `T=sqrt(D eta+eta^2)=O(D^(3/4))` of the full-source circumcenter,
 `eta=3^(1/4)sqrt(D)`. It satisfies (SR.6) for every D>=10000: using
 `3^(1/4)<4/3` and `sqrt(3)<7/4`,
-$$
+```math
 T^2/D^2<\frac4{3\sqrt D}+\frac7{4D}
 \le\frac4{300}+\frac7{40000}<\frac1{64},
-$$
+```
 so T<D/8<=D/6-2.
 The newer square-root bulk improves the quantitative radius but is unnecessary
 for this qualitative application; no unpromoted midpoint theorem is required.
@@ -216,20 +216,20 @@ degree two. Their induced contact graph has maximum degree two and contains
 no triangle. Each path or even cycle has an independent set of at least half
 its vertices; each odd cycle has length at least five and an independent set
 of at least two-fifths of its vertices. Thus choose
-$$
+```math
 |S|\ge\lceil2U/5\rceil.
-$$
+```
 Every solo reflection must have a strict-pair blocker, by global minimality
 and the contact/diameter-count normalization. Every blocker has old distance
 at most 1+1/D from its leaf. It cannot be another actual diameter endpoint:
 the generalized Lemma SR.1, the uniform FS.6 bound, and `1+1/D<sqrt(2)`
 exclude that possibility. Lemma SR.2 makes all selected blockers distinct.
 Hence the canonical source contains the exact disjoint matching
-$$
+```math
 \boxed{\#\{\text{disjoint loaded-to-diameter-inactive blocker pairs}\}
 \ge\lceil2U/5\rceil,\qquad1<|p-y|\le1+1/D.}
 \tag{SR.7}
-$$
+```
 No near-unit maximum-degree estimate or greedy eleven-edge loss is used.
 The theorem is conditional on the actual fan population U, not on any recent
 unpromoted theorem that forces U to be large. It does not assert that these

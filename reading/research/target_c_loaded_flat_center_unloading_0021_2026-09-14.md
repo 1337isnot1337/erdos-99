@@ -22,9 +22,9 @@ two distinct singleton stopped trains. Its numerical unloading bound used the ol
 `0.00042` all-train constant and only the older independently audited rhombic floor.
 The new minimax phase-star theorem supplies the same stronger constant
 
-$$
+```math
 g:=0.0021
-$$
+```
 
 simultaneously in the all-train face floor and the rhombic train floor. Keeping both
 copies yields a strictly larger unloaded-center population and a wider low-`t` window.
@@ -33,29 +33,29 @@ the old `1/9` matching loss in the degree-four branch.
 
 Put
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},\qquad s:=\sqrt{\Delta_2},\qquad C_g:=2s+g.
-$$
+```
 
 On a convergent Type-II subsequence write
 
-$$
+```math
 t:=\lim {q-k\over D},\qquad
 \delta:=\lim {b-P_F\over D},\qquad
 \kappa:=\lim {k\over D},
-$$
+```
 
 and assume the true force-hull residual satisfies
 
-$$
+```math
 R_F=o(D).
 \tag{U21.1}
-$$
+```
 
 Let `V_flat` be the distinct good flat centers, `L` the loaded ones, and
 `U=U_3\sqcup U_4` the unloaded degree-three/four centers. Then
 
-$$
+```math
 \boxed{
 \liminf {V_{flat}\over D}
 \ge
@@ -63,11 +63,11 @@ P_g(t,\delta,\kappa)
 :=\pi+2s+g-{5t\over2}+\delta+{\kappa\over2}.
 }
 \tag{U21.2}
-$$
+```
 
 The exact singleton payment and the `g=0.0021` rhombic train floor imply
 
-$$
+```math
 \boxed{
 \liminf {|U|\over D}
 \ge
@@ -75,7 +75,7 @@ U_g(t,\delta,\kappa)
 :=2\pi+3s+{3g\over2}-5t+2\delta+{\kappa\over2}.
 }
 \tag{U21.3}
-$$
+```
 
 Whenever `U_g>0`, at least one of two actual source-level degeneracies is forced:
 
@@ -83,44 +83,44 @@ Whenever `U_g>0`, at least one of two actual source-level degeneracies is forced
 
 There is a set `P_4` of **distinct** inactive source pairs such that
 
-$$
+```math
 \boxed{
 \liminf {|P_4|\over D}
 \ge {3\over4}U_g(t,\delta,\kappa),
 }
 \tag{U21.4}
-$$
+```
 
 and, on the same diagonal flatness scale,
 
-$$
+```math
 \boxed{
 \sum_{xy\in P_4}(|x-y|-1)=o(D),
 \qquad 1<|x-y|=1+o(1).
 }
 \tag{U21.5}
-$$
+```
 
 ### (B) Dense weak-contact branch
 
 There is a set `E_3` of distinct positive contact edges such that
 
-$$
+```math
 \boxed{
 \liminf {|E_3|\over D}
 \ge {1\over4}U_g(t,\delta,\kappa),
 }
 \tag{U21.6}
-$$
+```
 
 and, for the canonical relative-interior normalized KKT stress,
 
-$$
+```math
 \boxed{
 \sum_{e\in E_3}\alpha_e=o(D^2).
 }
 \tag{U21.7}
-$$
+```
 
 Thus the loaded class cannot absorb the flat-center sea throughout the window where
 `U_g>0`.
@@ -129,23 +129,23 @@ Thus the loaded class cannot absorb the flat-center sea throughout the window wh
 
 The minimax phase-star theorem gives
 
-$$
+```math
 \liminf {T-q/2\over D}\ge2s+g.
-$$
+```
 
 The same audited low-`t` face ledger used in the flat-center theorem therefore gives
 
-$$
+```math
 {f\over D}\ge {2s+g\over2}-{t\over4}+{\kappa\over4}-o(1).
-$$
+```
 
 Combining this with the exact degree-excess relation and the pentagon estimate gives
 
-$$
+```math
 {p_5\over D}
 \ge \pi+(2s+g)-{5t\over2}+\delta+{\kappa\over2}-o(1).
 \tag{U21.8}
-$$
+```
 
 On `R_F=o(D)`, all but `o(D)` of these pentagons are in the fixed flat-trapezoid
 stability neighborhood. The flat-center multiplicity-one theorem loses no further
@@ -156,53 +156,53 @@ factor, proving (U21.2).
 Every loaded flat center has contact degree exactly two and contributes two distinct
 singleton stopped trains. Hence
 
-$$
+```math
 2|L|\le S,
 \tag{U21.9}
-$$
+```
 
 where `S` is the total singleton train population.
 
 Write the exact train split
 
-$$
+```math
 T=T_R+S.
 \tag{U21.10}
-$$
+```
 
 The terminal occurrence ledger and `f<=Q` give the same upper bound as before,
 
-$$
+```math
 \limsup {T\over D}\le5t-2\pi-2\delta.
 \tag{U21.11}
-$$
+```
 
 The minimax theorem restricted to the rhombic train graph gives
 
-$$
+```math
 \liminf {T_R\over D}\ge2s+g.
 \tag{U21.12}
-$$
+```
 
 Therefore
 
-$$
+```math
 \limsup {S\over D}
 \le5t-2\pi-2\delta-2s-g,
 \tag{U21.13}
-$$
+```
 
 and (U21.9) yields
 
-$$
+```math
 \limsup {|L|\over D}
 \le {5t\over2}-\pi-\delta-s-{g\over2}.
 \tag{U21.14}
-$$
+```
 
 Subtracting (U21.14) from the flat-center floor (U21.2) gives exactly
 
-$$
+```math
 \begin{aligned}
 \liminf {|U|\over D}
 &\ge
@@ -211,7 +211,7 @@ $$
 &=
 2\pi+3s+{3g\over2}-5t+2\delta+{\kappa\over2},
 \end{aligned}
-$$
+```
 
 proving (U21.3).
 
@@ -219,18 +219,18 @@ proving (U21.3).
 
 The unloaded centers partition as
 
-$$
+```math
 U=U_3\sqcup U_4.
-$$
+```
 
 If `|U_4|>=|U|/2`, each degree-four center creates three inactive consecutive
 neighbor pairs with total gap at most its flatness defect. A fixed unordered source
 pair has at most two unit common neighbors, because two unit circles intersect in at
 most two points. Thus the edge-level flat-center theorem gives
 
-$$
+```math
 |P_4|\ge {3|U_4|\over2}\ge {3|U|\over4},
-$$
+```
 
 and the occurrence-counted total gap is `o(D)`. This proves (U21.4)--(U21.5).
 
@@ -238,17 +238,17 @@ If instead `|U_3|>=|U|/2`, designate the unique exterior contact at every degree
 flat center. Any actual contact edge can be designated by at most its two endpoints,
 so after deduplication
 
-$$
+```math
 |E_3|\ge {|U_3|\over2}\ge {|U|\over4}.
-$$
+```
 
 The local degree-three KKT balance gives an exterior-to-face weight ratio tending
 uniformly to zero. Summing over the distinct flat centers and using
 `sum_{e in C} alpha_e=D^2` gives the parent theorem's aggregate estimate
 
-$$
+```math
 \sum_{e\in E_3}\alpha_e=o(D^2).
-$$
+```
 
 This proves (U21.6)--(U21.7).
 
@@ -256,69 +256,69 @@ This proves (U21.6)--(U21.7).
 
 The minimax theorem's safe Section-171 endpoint is
 
-$$
+```math
 t_0=C_{146}+0.0017279,
 \qquad
 C_{146}={4\over9}(\pi+s),
-$$
+```
 
 with
 
-$$
+```math
 t_0=1.8212414379\ldots .
-$$
+```
 
 At the most permissive `delta=kappa=0`, (U21.2) gives
 
-$$
+```math
 \boxed{
 {V_{flat}\over D}
 \ge0.495214672369096\ldots-o(1),
 }
 \tag{U21.15}
-$$
+```
 
 and (U21.3) gives
 
-$$
+```math
 \boxed{
 {|U|\over D}
 \ge0.0370665378742349\ldots-o(1).
 }
 \tag{U21.16}
-$$
+```
 
 Hence every endpoint survivor has either
 
-$$
+```math
 \boxed{
 {|P_4|\over D}
 \ge0.0277999034056761\ldots-o(1),
 }
 \tag{U21.17}
-$$
+```
 
 with total activation gap `o(D)`, or
 
-$$
+```math
 \boxed{
 {|E_3|\over D}
 \ge0.0092666344685587\ldots-o(1),
 }
 \tag{U21.18}
-$$
+```
 
 with total normalized KKT weight `o(D^2)`.
 
 Even after dropping the nonnegative `delta,kappa` bonuses, the unloaded floor stays
 positive throughout
 
-$$
+```math
 \boxed{
 t< {2\pi+3s+3g/2\over5}
 =1.8286547455\ldots .}
 \tag{U21.19}
-$$
+```
 
 Thus excluding the two degeneracies (U21.4) and (U21.6) would immediately raise the
 proof-only Type-II `q-k` floor from `1.8212414...` to at least `1.8286547...` before

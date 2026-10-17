@@ -18,11 +18,11 @@ global minimizer and does not infer an exact unit triangle from a limiting equal
 Let three consecutive counterclockwise loaded-hull vertices be `p_i,p_{i+1},p_{i+2}`.
 Write
 
-$$
+```math
  b_i=|p_{i+1}-p_i|=1+e_i,
  \qquad
  \beta_i=\arccos(b_i/2).
-$$
+```
 
 For a tooth apex on the inward side of the first hull side, the ray from `p_{i+1}`
 to its apex makes angle `pi-beta_i` with the directed preceding side. For the next
@@ -30,10 +30,10 @@ tooth the corresponding ray makes angle `alpha_i+beta_{i+1}`, where `alpha_i` is
 exterior hull turn. Both rays lie in the common interior wedge, so their smaller
 separation is
 
-$$
+```math
  \gamma_i=\pi-\alpha_i-eta_i-eta_{i+1}\ge0.
 \tag{1}
-$$
+```
 
 The wedge condition is essential: without it, the displayed difference could be an
 oriented angle rather than the smaller separation. For actual convex-cell tooth
@@ -44,23 +44,23 @@ pockets, inwardness supplies the condition.
 The two apices are distinct source points. Unit separation and the equal unit radii
 give
 
-$$
+```math
  1\le|x_i-x_{i+1}|=2\sin(\gamma_i/2).
-$$
+```
 
 Since `0<=gamma_i<pi`, this implies `gamma_i>=pi/3`. Substitution into (1) yields
 
-$$
+```math
  \alpha_i
  \le {2\pi\over3}-\beta_i-\beta_{i+1}
  =f(e_i)+f(e_{i+1}),
-$$
+```
 
 where
 
-$$
+```math
  f(e)={\pi\over3}-\arccos((1+e)/2).
-$$
+```
 
 This verifies the candidate's Lemma TT.1. Strict triangle-freeness makes the apex
 separation strictly greater than one, but it supplies no uniform positive margin, so
@@ -71,18 +71,18 @@ the non-strict inequality is the correct asymptotic statement.
 Summing the local inequality over a run `r,...,s` counts interior base errors twice
 and endpoint errors once:
 
-$$
+```math
  \sum_{i=r}^{s-1}\alpha_i
  \le f(e_r)+2\sum_{i=r+1}^{s-1}f(e_i)+f(e_s).
-$$
+```
 
 For a cyclic all-tooth hull, every base error occurs twice and the exterior turns sum
 to `2pi`, hence
 
-$$
+```math
  \sum_i f(e_i)\ge\pi.
 \tag{2}
-$$
+```
 
 There is no endpoint term on the cycle and no missing turn at the cyclic cut.
 
@@ -90,37 +90,37 @@ There is no endpoint term on the cycle and no missing turn at the cyclic cut.
 
 Differentiate on `[0,1)`:
 
-$$
+```math
  f'(e)={1\over\sqrt{4-(1+e)^2}}>0,
  \qquad
  f''(e)={1+e\over(4-(1+e)^2)^{3/2}}>0.
-$$
+```
 
 Thus `f` is increasing and strictly convex, with `f(0)=0` and
 `lim_{e->1-}f(e)=pi/3`. Convexity places the graph below its endpoint chord,
 
-$$
+```math
  f(e)\le {\pi\over3}e.
-$$
+```
 
 Combining this with (2) gives the exact finite lower bound
 
-$$
+```math
  \boxed{\sum_i e_i\ge3.}
-$$
+```
 
 If `e_i<=eta<1`, the tangent bound
 
-$$
+```math
  f(e_i)\le f'(\eta)e_i
  ={e_i\over\sqrt{4-(1+\eta)^2}}
-$$
+```
 
 instead gives
 
-$$
+```math
  \boxed{\sum_i e_i\ge\pi\sqrt{4-(1+\eta)^2}.}
-$$
+```
 
 The accompanying floating-point verifier reproduces these constants and is only an
 arithmetic diagnostic; the derivative calculation above is the proof.

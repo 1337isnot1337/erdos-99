@@ -20,53 +20,53 @@ contact faces and let `Gamma` be their train-crossing multigraph: vertices are s
 rhombus trains and each bounded quadrilateral face contributes one crossing edge.
 Let
 
-$$
+```math
 a_0={\sqrt3\over2},\qquad c_0={\sqrt3\over4}.
-$$
+```
 
 Section 68 proves
 
-$$
+```math
 E_4+\delta_K<c_0\operatorname{per}(K)\le c_0\pi D,
 \tag{69.1}
-$$
+```
 
 and, if
 
-$$
+```math
 \Delta:=\sum_{R}\delta_R
-$$
+```
 
 is the total acute-angle defect of the strict unit rhombi, then
 
-$$
+```math
 \boxed{{3\Delta\over\pi}\le(2+\sqrt3)E_4=O(D).}
 \tag{69.2}
-$$
+```
 
 It also supplies a first crossing set `F_0` with
 
-$$
+```math
 |F_0|\le {3\Delta\over\pi}
 \tag{69.3}
-$$
+```
 
 such that `Gamma-F_0` has an exact real phase potential.  More precisely, with
 `L=pi/3`, every train vertex `v` has
 
-$$
+```math
 x_v\in I
-$$
+```
 
 for one interval `I` of length `L`, and a label `ell_v in Z/3`, while every retained
 oriented crossing `u->v` satisfies
 
-$$
+```math
 \boxed{x_v-x_u=\delta_e>0},
 \qquad
 \phi_v\equiv x_v+L\ell_v\pmod\pi.
 \tag{69.4}
-$$
+```
 
 Here `phi_v` is the projective train direction.
 
@@ -78,16 +78,16 @@ rhombi, and their **total physical interface perimeter is also `O_epsilon(D)`**.
 
 Fix
 
-$$
+```math
 0<\epsilon<{\pi\over6}.
 \tag{69.5}
-$$
+```
 
 For a shift `t in [0,epsilon)`, partition the real line by the boundaries
 
-$$
+```math
 t+k\epsilon,\qquad k\in\mathbb Z.
-$$
+```
 
 There are only finitely many exceptional shifts for which some train potential `x_v`
 lies exactly on a bin boundary. Restrict to the complementary full-measure set of
@@ -100,49 +100,49 @@ For one retained edge, (69.4) gives `|x_v-x_u|=delta_e`.  As `t` varies uniforml
 `[0,epsilon)`, the measure of shifts for which a bin boundary separates its endpoints
 is at most
 
-$$
+```math
 \min\{\epsilon,\delta_e\}\le\delta_e.
-$$
+```
 
 Removing the finite exceptional shift set does not change the integral. Therefore
 
-$$
+```math
 {1\over\epsilon}\int_0^\epsilon |F_t|\,dt
 \le {1\over\epsilon}\sum_{e\notin F_0}\delta_e
 \le {\Delta\over\epsilon}.
 \tag{69.6}
-$$
+```
 
 Choose a nonexceptional shift attaining the average or better and put
 
-$$
+```math
 F_\epsilon:=F_0\cup F_t.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 |F_\epsilon|
 \le\left({3\over\pi}+{1\over\epsilon}\right)\Delta.
 }
 \tag{69.7}
-$$
+```
 
 Using (69.2),
 
-$$
+```math
 \boxed{
 |F_\epsilon|
 \le (2+\sqrt3)\left(1+{\pi\over3\epsilon}\right)E_4
 =O_\epsilon(D).
 }
 \tag{69.8}
-$$
+```
 
 An explicit coarse coefficient follows from (69.1):
 
-$$
+```math
 |F_\epsilon|
 < C_{del}(\epsilon)D,
 \qquad
@@ -150,7 +150,7 @@ C_{del}(\epsilon)
 :=c_0\pi(2+\sqrt3)
 \left(1+{\pi\over3\epsilon}\right).
 \tag{69.9}
-$$
+```
 
 No minimum-degree pruning and no `lambda D^2` deletion term occurs.
 
@@ -208,44 +208,44 @@ of every grain-boundary occurrence is exactly one of:
 The old outer-face occurrences total `b`.  If there are `f` bounded
 nonquadrilateral faces and
 
-$$
+```math
 Q=\sum_P(\deg P-4),
-$$
+```
 
 their total boundary-walk degree is
 
-$$
+```math
 \sum_P\deg P=4f+Q.
-$$
+```
 
 Every deleted rhombus has four sides and can expose at most four retained-grain
 boundary occurrences.  Therefore
 
-$$
+```math
 \boxed{
 \sum_{j=1}^sP_j
 \le b+4f+Q+4|F_\epsilon|.
 }
 \tag{69.10}
-$$
+```
 
 Triangle-freeness gives `deg P>=5` for every nonquadrilateral bounded face, so
 `f<=Q`.  The canonical ZF face ledger is
 
-$$
+```math
 b+Q=2(h-s_Z).
 \tag{69.11}
-$$
+```
 
 Thus
 
-$$
+```math
 b+4f+Q\le b+5Q\le5(b+Q)=10(h-s_Z)\le10h.
-$$
+```
 
 Since `h<=q<=per(F)<=pi D`, (69.10) yields the explicit all-topology bound
 
-$$
+```math
 \boxed{
 \sum_jP_j
 \le C_{per}(\epsilon)D,
@@ -253,7 +253,7 @@ $$
 C_{per}(\epsilon):=10\pi+4C_{del}(\epsilon).
 }
 \tag{69.12}
-$$
+```
 
 This is the physical interface theorem that the older pure-disk multigrain report
 could use only conditionally on an `O(D)` deletion set.  Section 68 plus the coarea
@@ -264,72 +264,72 @@ binning now supplies that deletion set canonically.
 Every retained strict unit rhombus has area at least `a_0`.  Let `A_j` be the area of
 `G_j`.  Then
 
-$$
+```math
 A_j\ge a_0R_j.
 \tag{69.13}
-$$
+```
 
 The polygonal isoperimetric inequality, applied to a grain with all hole boundaries
 included in its perimeter, gives
 
-$$
+```math
 P_j\ge2\sqrt{\pi A_j}
 \ge2\sqrt{\pi a_0R_j}.
 \tag{69.14}
-$$
+```
 
 Summing and using (69.12),
 
-$$
+```math
 \boxed{
 2\sqrt{\pi a_0}\sum_j\sqrt{R_j}
 \le C_{per}(\epsilon)D.
 }
 \tag{69.15}
-$$
+```
 
 Let
 
-$$
+```math
 R_{ret}:=\sum_jR_j=R_4-|F_\epsilon|,
 \qquad
 R_{max}:=\max_jR_j.
-$$
+```
 
 Since
 
-$$
+```math
 R_{ret}=\sum_jR_j
 \le\sqrt{R_{max}}\sum_j\sqrt{R_j},
-$$
+```
 
 (69.15) gives the finite dominant-grain estimate
 
-$$
+```math
 \boxed{
 R_{max}
 \ge
 {4\pi a_0\,R_{ret}^2\over C_{per}(\epsilon)^2D^2}.
 }
 \tag{69.16}
-$$
+```
 
 In particular, if along a survivor sequence
 
-$$
+```math
 \liminf {R_4\over D^2}\ge r>0,
 \tag{69.17}
-$$
+```
 
 then `|F_epsilon|=O_epsilon(D)` and therefore
 
-$$
+```math
 \boxed{
 \liminf {R_{max}\over D^2}
 \ge {4\pi a_0r^2\over C_{per}(\epsilon)^2}>0.
 }
 \tag{69.18}
-$$
+```
 
 So any quadratic rhombus branch contains one **physically connected,
 `epsilon`-coherent, quadratic-size grain**.  The conclusion is stronger than merely
@@ -355,19 +355,19 @@ Every local train segment is therefore a path with exactly two terminal
 boundary-edge occurrences, and every grain-boundary unit edge terminates exactly one
 local train segment.  If `T_j` is the number of local train segments in `G_j`, then
 
-$$
+```math
 \boxed{2T_j=P_j.}
 \tag{69.19}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \sum_jT_j={1\over2}\sum_jP_j=O_\epsilon(D).
 }
 \tag{69.20}
-$$
+```
 
 A quadratic dominant grain therefore has `Theta(D^2)` rhombus crossings on only
 `O_epsilon(D)` local train segments.  Its local train-crossing density is bounded
@@ -380,32 +380,32 @@ importing a pure-disk theorem verbatim.
 Let `m` be the number of vertices in the positive contact core.  Section 67 gives the
 exact face count
 
-$$
+```math
 \boxed{m=R_4+f+q-(d_H+s_Z)+1.}
 \tag{69.21}
-$$
+```
 
 Every term besides `R_4` is boundary-order.  Indeed
 
-$$
+```math
 q\le\pi D,
 \qquad d_H\le q,
-$$
+```
 
 and the canonical difference-body defect inequality gives
 
-$$
+```math
 Q+2s_Z
 \le h+1-2D\cos((h-1)\arcsin(1/(2D)))=O(D),
 \tag{69.22}
-$$
+```
 
 so `f<=Q=O(D)` and `s_Z=O(D)`.  Hence
 
-$$
+```math
 \boxed{m=R_4+O(D).}
 \tag{69.23}
-$$
+```
 
 Therefore the asymptotic branch split is exact:
 
@@ -416,9 +416,9 @@ Therefore the asymptotic branch split is exact:
 
 Since the full global-minimizer population satisfies
 
-$$
+```math
 {n\over D^2}\longrightarrow {\pi\over2\sqrt3},
-$$
+```
 
 the second branch means that asymptotically almost the entire source population lies
 outside the positive contact core.  It does **not** mean those points may be deleted;
@@ -441,9 +441,9 @@ closure.
 
 The complementary branch is now equally sharp:
 
-$$
+```math
 \boxed{m=o(D^2).}
-$$
+```
 
 Any complete C-II proof must either
 

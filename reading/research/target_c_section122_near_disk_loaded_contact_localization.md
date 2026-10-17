@@ -17,10 +17,10 @@ carrier coefficient. In every sufficiently large Type-II survivor, a unit contac
 between two loaded vertices must be a side of the loaded convex hull. Equivalently,
 the Section-63 extra loaded-chord slack vanishes:
 
-$$
+```math
 \boxed{c_B=0.}
 \tag{122.1}
-$$
+```
 
 Thus the loaded-loaded contact graph is eventually a subgraph of the cyclic hull graph.
 No contact-isolated source point is removed or constrained by the Section-57 affine
@@ -33,89 +33,89 @@ kernel.
 Let `K` be a convex polygon and suppose for some center `o`, radius `R`, and
 `0\le\delta<R` that
 
-$$
+```math
 d_H(K,B(o,R))\le\delta.
 \tag{122.2}
-$$
+```
 
 Put
 
-$$
+```math
 r:=R-\delta,
 \qquad
 R_+:=R+\delta.
 \tag{122.3}
-$$
+```
 
 For convex compact sets, Hausdorff distance equals the uniform distance of support
 functions. Hence, after translating `o` to the origin,
 
-$$
+```math
 h_K(u)\ge r
 \qquad(|u|=1).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{B(0,r)\subset K\subset B(0,R_+).}
 \tag{122.4}
-$$
+```
 
 Define
 
-$$
+```math
 \beta:=\arccos{r\over R_+}.
 \tag{122.5}
-$$
+```
 
 If `p` is a vertex of `K` and `u` is any outward unit normal in its normal cone, then
 
-$$
+```math
 u\cdot p=h_K(u)\ge r,
 \qquad
 |p|\le R_+.
-$$
+```
 
 Consequently the angle between `u` and the radial direction `p/|p|` is at most
 `\beta`.
 
 Now let `p,q` be distinct vertices with
 
-$$
+```math
 |p-q|=1.
 \tag{122.6}
-$$
+```
 
 Because `|p|,|q|\ge r`, if `\gamma` is the smaller angle between their radial
 directions, then
 
-$$
+```math
 1=|p-q|
 \ge 2r\sin{\gamma\over2},
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \gamma\le 2\arcsin{1\over2r}.
 }
 \tag{122.7}
-$$
+```
 
 The normal cones of `p` and `q` are therefore contained in angular neighborhoods of
 their radial directions of radius `\beta`. By monotonicity of the Gauss map around a
 convex polygon, one of the two boundary arcs from `p` to `q` has all its oriented edge
 directions in an angular interval of width at most
 
-$$
+```math
 \tau:=2\beta+\gamma
 \le
 2\arccos{r\over R_+}
 +2\arcsin{1\over2r}.
 \tag{122.8}
-$$
+```
 
 This is the boundary arc corresponding to the shorter normal sweep between the two
 normal cones.
@@ -124,12 +124,12 @@ normal cones.
 
 Assume every side of `K` has length at least one and
 
-$$
+```math
 2\arccos{r\over R_+}
 +2\arcsin{1\over2r}
 < {2\pi\over3}.
 \tag{122.9}
-$$
+```
 
 Then every pair of vertices `p,q` with `|p-q|=1` are consecutive vertices of `K`.
 
@@ -139,24 +139,24 @@ Take the boundary arc supplied by (122.8). Suppose `p,q` are not consecutive. Th
 both boundary arcs between them contain at least two polygon sides, so this selected
 arc has edge vectors
 
-$$
+```math
 v_1,\ldots,v_j,
 \qquad j\ge2.
-$$
+```
 
 Every `|v_i|\ge1`, and all their direction angles lie in an interval of width at most
 `\tau<2\pi/3`. Let `w` be the unit vector in the midpoint direction of that interval.
 Then
 
-$$
+```math
 w\cdot v_i
 \ge |v_i|\cos{\tau\over2}
 \ge \cos{\tau\over2}.
-$$
+```
 
 Since the arc joins `p` to `q`,
 
-$$
+```math
 \begin{aligned}
 |q-p|
 &\ge w\cdot(q-p)\\
@@ -165,7 +165,7 @@ $$
 &\ge2\cos{\tau\over2}\\
 &>1,
 \end{aligned}
-$$
+```
 
 contradicting (122.6). Hence `p,q` are consecutive. `\square`
 
@@ -179,39 +179,39 @@ two unit vectors can sum to a unit vector precisely when their angle is `2\pi/3`
 Let `F_D` be the loaded force hull of a Type-II survivor with global diameter `D`.
 Canonical Section 80 proves that, after choosing suitable centers `o_D`,
 
-$$
+```math
 \delta_D
 :=d_H\!\left(F_D,B(o_D,D/2)\right)
 =o(D).
 \tag{122.10}
-$$
+```
 
 Set
 
-$$
+```math
 R_D={D\over2},
 \qquad
 r_D={D\over2}-\delta_D,
 \qquad
 R_{+,D}={D\over2}+\delta_D.
-$$
+```
 
 Then
 
-$$
+```math
 {r_D\over R_{+,D}}\longrightarrow1,
 \qquad
 r_D\longrightarrow\infty.
-$$
+```
 
 Therefore
 
-$$
+```math
 2\arccos{r_D\over R_{+,D}}
 +2\arcsin{1\over2r_D}
 \longrightarrow0.
 \tag{122.11}
-$$
+```
 
 In particular (122.9) holds for all sufficiently large `D`.
 
@@ -222,14 +222,14 @@ least one. Lemma 122.1 now applies. Hence:
 
 For every sufficiently large Type-II survivor,
 
-$$
+```math
 \boxed{
  b,b'\in B,\quad |b-b'|=1
  \Longrightarrow
  b,b'\text{ are consecutive vertices of }F.
 }
 \tag{122.12}
-$$
+```
 
 Thus there are no unit contact chords joining nonconsecutive loaded hull vertices.
 
@@ -248,38 +248,38 @@ Use the canonical Section-63 notation:
 
 Theorem 122.2 gives immediately
 
-$$
+```math
 \boxed{c_B=0,}
 \tag{122.13}
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{e_{BB}=q-m.}
 \tag{122.14}
-$$
+```
 
 All loaded-loaded unit contacts are exactly the unit sides of `F`.
 
 Canonical Section 63 then specializes its exact ledgers to
 
-$$
+```math
 \boxed{
 e_{BB}=Q+2k+u_B,
 }
 \tag{122.15}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 c_I+s_C=m+k-2,
 \qquad k=d_H+s_Z.
 }
 \tag{122.16}
-$$
+```
 
 In particular the high-`e_{BB}` branch can no longer store contact currency in
 nonconsecutive loaded chords. It must store it on the actual cyclic force-hull
@@ -323,9 +323,9 @@ surplus cannot hide in interior loaded chords: every loaded-loaded unit contact 
 
 The next useful target is therefore a global payment theorem for
 
-$$
+```math
 \sum_r(L_r-2d_r)
-$$
+```
 
 using the cyclic unit/nonunit side pattern of `partial F`, or an incompatibility
 between that pattern and the Woodall diameter graph/common bridge block.

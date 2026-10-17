@@ -46,15 +46,15 @@ these meshes, or an endpoint allowed to increase inactive pair distances.
 
 Let `u,v` be unit vectors with
 
-$$
+```math
 u\cdot v=c,\qquad 0\le c<1/2.
-$$
+```
 
 For a finite nonempty set of indices `J` in `Z^2`, define cells
 
-$$
+```math
 F_{ij}=\{iu+jv,(i+1)u+jv,(i+1)u+(j+1)v,iu+(j+1)v\}.
-$$
+```
 
 Assume the cell graph on `J`, in which indices differing by `(1,0)` or
 `(0,1)` are adjacent, is connected. Let `V` be the union of all cell vertices.
@@ -77,9 +77,9 @@ separation makes all four points distinct. Thus `0<|a-d|<2`, the circles
 have exactly two intersections, and `b,e` occupy opposite intersections.
 The image is a nondegenerate rhombus, and
 
-$$
+```math
 |a-d|^2+|b-e|^2=4.
-$$
+```
 
 The original diagonal squares are `2+2c` and `2-2c`, also summing to four.
 Both diagonal upper bounds therefore hold with equality. The labeled image
@@ -116,25 +116,25 @@ increase in the real problem.
 
 For each integer `k>=2`, put
 
-$$
+```math
 c_k=\frac12-\frac1k,\quad
 s_k=\sqrt{1-c_k^2},\quad
 u=(1,0),\quad v_k=(c_k,s_k),\quad R_k=16k^2.
-$$
+```
 
 Take precisely the lattice cells whose centers obey
 
-$$
+```math
 |(i+1/2)u+(j+1/2)v_k|\le R_k,
-$$
+```
 
 except the sixteen cells with `-2<=i,j<=1`. Let `V_k` be their vertices and
 set
 
-$$
+```math
 A_k=V_k\cup\{p\},\qquad p=u/10,
 \qquad n_k=|A_k|,\qquad D_k=\operatorname{diam}A_k.
-$$
+```
 
 **Theorem 2 (proved candidate regression).** For every integer `k>=2`:
 
@@ -144,10 +144,11 @@ $$
 - there exists an independent `n_k`-point unit-separated set of diameter
   at most `2(R_k-1)<D_k`;
 - along this unbounded family,
-  $$
+  ```math
   \lim_{k\to\infty}\frac{n_k}{D_k^2}
   =\frac{\pi}{2\sqrt3}.
-  $$
+  
+  ```
 
 Thus asymptotically triangular density and failure of every pairwise
 nonexpanding endpoint do not imply global optimality. The theorem makes no
@@ -157,16 +158,16 @@ sharp population-reserve, positive-stress, or canonical C-II source claim.
 
 For every lattice difference `(a,b)` its squared norm is
 
-$$
+```math
 Q_k(a,b)=a^2+b^2+2c_kab.
-$$
+```
 
 When `ab>=0`, it is at least `a^2+b^2`. When the signs oppose, writing
 `A=|a|,B=|b|` gives
 
-$$
+```math
 Q_k(a,b)=(A-B)^2+2(1-c_k)AB.
-$$
+```
 
 For `A,B>=1`, the latter is strictly greater than one, since
 `2(1-c_k)>1`. Consequently every nonzero integer difference has norm at
@@ -178,9 +179,9 @@ sites `-1<=i,j<=1` absent. All other vertices occur in a complete cell. For
 any retained lattice label, either `|j|>=2` or `|i|>=2`. Its squared distance
 to `p` is
 
-$$
+```math
 (i-1/10)^2+j^2+2c_k(i-1/10)j.
-$$
+```
 
 Minimizing this quadratic over the other real coordinate gives at least
 `s_k^2 j^2` or `s_k^2(i-1/10)^2`. Since `s_k^2>=3/4`, one of these is at
@@ -195,9 +196,9 @@ An admitted cell has `max(|alpha|,|beta|)>=5/2`. If this maximum is greater
 than `5/2`, decrease a coordinate of largest absolute value by its sign.
 The decrease in its squared physical norm is at least
 
-$$
+```math
 2(1-c_k)\max(|\alpha|,|\beta|)-1>0.
-$$
+```
 
 The step remains outside the deleted block and inside the center disk.
 Iteration reaches the square ring `max(|alpha|,|beta|)=5/2`. That ring is
@@ -207,9 +208,9 @@ The complete cell graph is therefore connected.
 The labels `+/-R_k*u` and `+/-R_k*v_k` occur. For example, the cell center
 `(R_k-1/2)u+(1/2)v_k` has squared norm
 
-$$
+```math
 R_k^2-(1-c_k)(R_k-1/2)<R_k^2.
-$$
+```
 
 The other anchors follow by symmetry and interchanging coordinates. Every
 mesh vertex is within one of its center, and hence lies in the radius
@@ -227,11 +228,11 @@ labels lie in the radius `R_k+2` disk. Conversely, the radius `R_k-2` disk
 is covered by tiles whose centers have norm at most `R_k-1`; those centers
 are source vertices except for the nine removed central sites. Therefore
 
-$$
+```math
 \frac{\pi(R_k-2)^2}{s_k}-8
 \le n_k\le
 \frac{\pi(R_k+2)^2}{s_k}+1.\tag{1}
-$$
+```
 
 Together with `s_k -> a_0=sqrt(3)/2` and the diameter bounds, this proves
 the claimed density limit and that `n_k` is unbounded.
@@ -245,40 +246,40 @@ exceeds the upper bound in (1).
 
 For `k>=2`, direct squaring gives
 
-$$
+```math
 \frac{s_k}{a_0}>1+\frac1{4k},
-$$
+```
 
 because
 
-$$
+```math
 s_k^2-a_0^2(1+1/(4k))^2
 =\frac5{8k}-\frac{67}{64k^2}>0.
-$$
+```
 
 For `R>=10`,
 
-$$
+```math
 \frac{(R+2)^2}{(R-1)^2}<1+\frac8R.
-$$
+```
 
 If `k>=3`, substituting `R=16k^2` gives
 
-$$
+```math
 \begin{aligned}
 \frac{\pi(R-1)^2}{a_0}-\frac{\pi(R+2)^2}{s_k}
 &>\frac{\pi(R-1)^2}{s_k}\frac{k-2}{4k^2}\\
 &>1,
 \end{aligned}
-$$
+```
 
 using `s_k<=1`, `pi>3`, and `R-1>=15k^2`. For `k=2`, `R=64`, `s_k=1`,
 and
 
-$$
+```math
 \frac{s_k}{a_0}=\frac2{\sqrt3}>\frac87,
 \qquad \frac{66^2}{63^2}<\frac{11}{10};
-$$
+```
 
 the same difference is greater than `3*63^2*(3/70)>1`.
 Thus some translate contains more than `n_k` sites in the smaller disk.
@@ -301,9 +302,9 @@ its four edges or two diagonals is longer at the endpoint than in the source.
 
 **Theorem 3 (proved candidate regression).** If
 
-$$
+```math
 \operatorname{diam} f(A)\le 2(R-1),
-$$
+```
 
 then there are at least `ceil(R/8)` bad cells. In particular, the independent
 replacement diameter certified above forces a linear number of cells to
@@ -350,9 +351,9 @@ It is contained in a radius-one disk. Its entire angular shadow is at most
 `2 arcsin(1/t)<=4/t<=24/R`, since `1/t<=6/R<=1/4` and
 `arcsin(x)<=2x` for `0<=x<=1/2`. Thus the shadow union has measure at most
 
-$$
+```math
 \frac{24b}{R}<3<\pi,
-$$
+```
 
 a contradiction. Consequently `b>=R/8`. QED.
 
@@ -397,10 +398,10 @@ instances without claiming exhaustive enumeration of all labelings.
 The separate Cartesian engine generates each vertex from its own adjacent
 center predicates, uses coordinates
 
-$$
+```math
 \left(\frac{2ki+(k-2)j}{2k},
 \frac{j\sqrt{3k^2+4k-4}}{2k}\right),
-$$
+```
 
 and uses a gift-wrapping hull algorithm instead of the primary monotone-chain
 algorithm. It checks every isolate upper and lower pair directly. On the

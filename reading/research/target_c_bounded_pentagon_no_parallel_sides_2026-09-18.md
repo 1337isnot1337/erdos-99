@@ -26,16 +26,16 @@ vectors are exact negatives, say `a` and `-a`.
 Let the other three oriented unit side vectors be `v_1,v_2,v_3`.  Boundary closure
 gives
 
-$$
+```math
  a-a+v_1+v_2+v_3=0,
-$$
+```
 
 hence
 
-$$
+```math
  v_1+v_2+v_3=0.
 \tag{P.1}
-$$
+```
 
 Three unit vectors summing to zero are separated by exactly `2pi/3` in oriented angle.
 Their three directions partition the circle into three open arcs of angle `2pi/3`.
@@ -46,9 +46,9 @@ the cyclic edge-direction order of the pentagon, with exterior turn exactly `2pi
 The corresponding interior angle is `pi/3`.  If the two unit boundary sides meeting at
 that vertex have other endpoints `x,z`, then
 
-$$
+```math
  |x-z|^2=1+1-2\cos(\pi/3)=1.
-$$
+```
 
 Thus `xz` is another unit contact.  Strict convexity puts the segment `xz` in the
 interior of `F`, so the complete unit-contact graph contains a chord cutting the
@@ -66,24 +66,24 @@ outer/activated side.  Maximality says their two side directions are projectivel
 parallel; otherwise the face would activate.  The lemma therefore excludes degree
 five.  Hence every `n_2` face has
 
-$$
+```math
  \deg F\ge6,
  \qquad
  x(F):=\deg F-5\ge1.
-$$
+```
 
 Writing
 
-$$
+```math
  x_U:=\sum_{F\in U}(\deg F-5),
-$$
+```
 
 we get the exact finite charge
 
-$$
+```math
 \boxed{n_2\le x_U.}
 \tag{P.2}
-$$
+```
 
 Since `x_A+x_U=Q-f`, the terminal correlated variable
 `r=(Q-f)/D` also controls the density of `n_2` residual faces.
@@ -101,10 +101,10 @@ Such links form a matching because a strictly convex face has at most one intern
 side projectively parallel to its outside anchor.  If `p_U` is their number, their
 `2p_U` endpoint faces are distinct.  Therefore
 
-$$
+```math
 \boxed{2p_U\le x_U.}
 \tag{P.3}
-$$
+```
 
 The one-anchor corank theorem shows that every such link supplies an exact finite flex.
 Equation (P.3) identifies the scalar currency that pays for those extra flexes: they
@@ -116,17 +116,17 @@ can only occur on degree-excess faces.
 
 If a stalled terminal sequence satisfies
 
-$$
+```math
  {Q-f\over D}\to0,
-$$
+```
 
 then automatically
 
-$$
+```math
  {n_2\over D}\to0,
  \qquad
  {p_U\over D}\to0.
-$$
+```
 
 Thus the degree-pure one-anchor endpoint cannot use a linear population of either
 parallel outside pairs or mutual parallel internal links.  Its remaining obstruction

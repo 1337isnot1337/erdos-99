@@ -25,9 +25,9 @@ This note derives two exact global objects from a normalized KKT stress:
 
 The force polygon gives a new scalar invariant
 
-$$
+```math
 \sqrt3\,D\le P_{\rm force}\le2D,
-$$
+```
 
 with an exact equality classification at the upper endpoint.  These statements use
 only the actual global-minimizer KKT stress and convex geometry.  They do not use the
@@ -45,45 +45,45 @@ radial carrier is the **actual unit-contact/diameter framework** of a global min
 
 Fix one normalized KKT stress `(\alpha,\beta)`.  Let
 
-$$
+```math
 C_+=\{ij\in C:\alpha_{ij}>0\},
 \qquad
 H_+=\{ij\in H:\beta_{ij}>0\},
-$$
+```
 
 let `B_+` be the endpoint set of `H_+`, and put
 
-$$
+```math
 F:=\operatorname{conv}B_+.
 \tag{C10.1}
-$$
+```
 
 By Theorem C3.1 of `target_c_force_hull_2026-08-30.md`,
 
-$$
+```math
 F=\operatorname{conv}V(C_+),
 \qquad
 \operatorname{diam}F=D.
 \tag{C10.2}
-$$
+```
 
 Every point of `B_+` is a vertex of `F`.
 
 For each `b\in B_+`, define its total positive diameter reaction
 
-$$
+```math
 \boxed{
 g_b:=\sum_{bk\in H_+}\beta_{bk}(b-k).}
 \tag{C10.3}
-$$
+```
 
 Vertex equilibrium gives the equivalent contact formula
 
-$$
+```math
 \boxed{
 g_b=\sum_{bc\in C_+}\alpha_{bc}(b-c).}
 \tag{C10.4}
-$$
+```
 
 The diameter formula is the useful one for convexity.
 
@@ -91,38 +91,38 @@ The diameter formula is the useful one for convexity.
 
 For every `b\in B_+`, `g_b\ne0` and
 
-$$
+```math
 \boxed{
 g_b\cdot(b-x)>0
 \qquad(x\in F\setminus\{b\}).}
 \tag{C10.5}
-$$
+```
 
 Hence `g_b` lies in the relative interior of the outward normal cone of `F` at `b`.
 Moreover
 
-$$
+```math
 \boxed{\sum_{b\in B_+}g_b=0.}
 \tag{C10.6}
-$$
+```
 
 #### Proof
 
 If `bk\in H_+`, then `|b-k|=D`.  Applying Lemma C5 from the preceding report with
 `p=b`, `q=k` gives, for every `x\in F\subseteq\operatorname{conv}A`,
 
-$$
+```math
 \frac{b-k}{D}\cdot(b-x)
 \ge\frac{|b-x|^2}{2D}.
-$$
+```
 
 Thus
 
-$$
+```math
 (b-k)\cdot(b-x)\ge\frac{|b-x|^2}{2}>0
 \qquad(x\ne b).
 \tag{C10.7}
-$$
+```
 
 Every coefficient in (C10.3) is positive.  Summing (C10.7) over the positive
 diameter edges incident to `b` proves (C10.5), hence also `g_b\ne0`.
@@ -138,25 +138,25 @@ Order the vertices `b_1,...,b_q` of `F` counterclockwise.  The interiors of thei
 normal cones occur in the same cyclic order and are pairwise disjoint.  Therefore the
 nonzero vectors
 
-$$
+```math
 e_i:=Jg_{b_i}
 \tag{C10.8}
-$$
+```
 
 have strictly cyclically ordered directions.  By (C10.6),
 
-$$
+```math
 \sum_i e_i=0.
 \tag{C10.9}
-$$
+```
 
 Consequently the vectors `e_i`, in that order, are the oriented side vectors of a
 convex polygon, unique up to translation.  Denote it by
 
-$$
+```math
 \boxed{F^*.}
 \tag{C10.10}
-$$
+```
 
 For a counterclockwise polygon, the outward normal to the side `e_i=Jg_{b_i}` is
 `g_{b_i}/|g_{b_i}|`.  Thus the side normals of `F^*` lie strictly inside the vertex
@@ -167,56 +167,56 @@ fans.
 
 The force polygon satisfies
 
-$$
+```math
 \boxed{
 2V(F,F^*)=D^2,
 \qquad
 V(F,F^*)=\frac{D^2}{2},
 }
 \tag{C10.11}
-$$
+```
 
 where `V` is planar mixed area.  Equivalently,
 
-$$
+```math
 \boxed{
 \sum_{b\in B_+}|g_b|\,
 h_F\!\left(\frac{g_b}{|g_b|}\right)
 =D^2.
 }
 \tag{C10.12}
-$$
+```
 
 #### Proof
 
 For convex polygons, the first variation of area under Minkowski addition gives
 
-$$
+```math
 2V(F,F^*)
 =
 \sum_{\text{sides }e\text{ of }F^*}
 |e|\,h_F(n_e),
 \tag{C10.13}
-$$
+```
 
 where `n_e` is the outward unit normal of the side.  Here the side indexed by `b` has
 length `|g_b|` and normal `g_b/|g_b|`.  Lemma C10.1 says this normal supports `F`
 uniquely at `b`, so its contribution is
 
-$$
+```math
 |g_b|\,h_F(g_b/|g_b|)=g_b\cdot b.
-$$
+```
 
 Hence
 
-$$
+```math
 2V(F,F^*)=\sum_b g_b\cdot b.
 \tag{C10.14}
-$$
+```
 
 Now group the right side by diameter edges.  An edge `bk\in H_+` contributes
 
-$$
+```math
 \beta_{bk}(b-k)\cdot b
 +
 \beta_{bk}(k-b)\cdot k
@@ -224,7 +224,7 @@ $$
 \beta_{bk}|b-k|^2
 =
 \beta_{bk}D^2.
-$$
+```
 
 Because `\sum_{H_+}\beta=1`, (C10.14) equals `D^2`. `\square`
 
@@ -237,16 +237,16 @@ of (C10.14) by `a\cdot\sum_b g_b=0`.
 
 Write
 
-$$
+```math
 P_*:=\operatorname{per}(F^*)=\sum_{b\in B_+}|g_b|.
 \tag{C10.15}
-$$
+```
 
 ### Theorem C10.2 (force-perimeter bounds)
 
 For every normalized KKT stress,
 
-$$
+```math
 \boxed{
 \frac{D^2}{R(F)}
 \le
@@ -255,42 +255,42 @@ P_*
 2D,
 }
 \tag{C10.16}
-$$
+```
 
 where `R(F)` is the circumradius of the force hull.  In particular, planar Jung gives
 
-$$
+```math
 \boxed{
 \sqrt3\,D\le P_*\le2D.
 }
 \tag{C10.17}
-$$
+```
 
 #### Proof
 
 For the upper bound, (C10.3) and the triangle inequality give
 
-$$
+```math
 |g_b|
 \le
 D\sum_{bk\in H_+}\beta_{bk}.
-$$
+```
 
 Sum over `b`.  Every diameter edge is counted at its two endpoints, so
 
-$$
+```math
 P_*
 \le
 2D\sum_{H_+}\beta
 =
 2D.
 \tag{C10.18}
-$$
+```
 
 For the lower bound, let `o` be a center of a smallest enclosing circle of `F`, of
 radius `R(F)`.  By (C10.6) and (C10.14),
 
-$$
+```math
 D^2
 =
 \sum_b g_b\cdot(b-o)
@@ -299,7 +299,7 @@ R(F)\sum_b|g_b|
 =
 R(F)P_*.
 \tag{C10.19}
-$$
+```
 
 This proves the first inequality.
 
@@ -312,26 +312,26 @@ corresponding chord has length at least `\sqrt3 R`; that chord is at most the di
 
 ### Theorem C10.3 (upper equality iff the positive diameter graph is a matching)
 
-$$
+```math
 \boxed{
 P_*=2D
 \iff
 H_+\text{ is a matching on }B_+.
 }
 \tag{C10.20}
-$$
+```
 
 #### Proof
 
 The deficit in (C10.18) is the sum, over `b`, of the nonnegative triangle-inequality
 deficits
 
-$$
+```math
 D\sum_{bk}\beta_{bk}
 -
 \left|\sum_{bk}\beta_{bk}(b-k)\right|.
 \tag{C10.21}
-$$
+```
 
 Therefore equality globally holds exactly when equality holds at every `b`.  Equality
 in the Euclidean triangle inequality for positive coefficients requires all incident
@@ -343,25 +343,25 @@ partner and `H_+` is a matching.
 Conversely, if `H_+` is a matching, each `g_b` consists of one vector of length
 `D\beta_h`.  Summing over the two endpoints of every edge gives
 
-$$
+```math
 P_*=2D\sum_h\beta_h=2D.
-$$
+```
 `\square`
 
 ### Corollary C10.4 (minimum-circumradius branch)
 
 If
 
-$$
+```math
 R(F)=D/2,
 \tag{C10.22}
-$$
+```
 
 then
 
-$$
+```math
 P_*=2D,
-$$
+```
 
 `H_+` is a matching, all vertices of `F` lie on the circle of radius `D/2` about its
 circumcenter, and every positive diameter edge joins antipodal points of that circle.
@@ -375,9 +375,9 @@ C10.3 makes `H_+` a matching.
 Let `o` be the circumcenter.  Every `b\in B_+` has a positive diameter partner `k`.
 Both lie in the closed radius-`D/2` disk and `|b-k|=D`, so
 
-$$
+```math
 D=|b-k|\le|b-o|+|k-o|\le D.
-$$
+```
 
 Equality forces `|b-o|=|k-o|=D/2` and `k-o=-(b-o)`.  Hence every vertex is paired
 with its antipode. `\square`
@@ -392,7 +392,7 @@ force-perimeter case when the force hull has minimum possible circumradius.
 
 The force-perimeter deficit has a concrete meaning:
 
-$$
+```math
 \boxed{
 2D-P_*
 =
@@ -404,27 +404,27 @@ D\sum_{bk\in H_+}\beta_{bk}
 \right].
 }
 \tag{C10.23}
-$$
+```
 
 It measures only cancellation among distinct positive diameter reactions at common
 hull vertices.  No contact-network quantity appears in (C10.23).
 
 At the same time (C10.16) gives
 
-$$
+```math
 \boxed{
 2D-P_*
 \le
 2D-\frac{D^2}{R(F)}.
 }
 \tag{C10.24}
-$$
+```
 
 Thus any theorem forcing
 
-$$
+```math
 R(F)=\frac D2+o(D)
-$$
+```
 
 would force `P_*=2D-o(D)` and hence asymptotically small total diameter-reaction
 cancellation.  This observation is conditional only: the current theorem state does
@@ -440,13 +440,13 @@ problem.
 The reciprocal polygon has a second exact formulation.  Regard every positive contact
 `ij\in C_+` as an electrical edge of conductance `\alpha_{ij}`.  Let
 
-$$
+```math
 V_+:=V(C_+),
 \qquad
 B:=B_+,
 \qquad
 I:=V_+\setminus B.
-$$
+```
 
 Let `L_C` be the weighted graph Laplacian of `C_+`.
 
@@ -454,7 +454,7 @@ Every nontrivial component of `C_+` contains at least two vertices of `B` by can
 Proposition 5.4.  Hence the Dirichlet principal block `L_C[I,I]` is nonsingular.
 Define the Kron-reduced/Dirichlet-to-Neumann response matrix
 
-$$
+```math
 \boxed{
 \Lambda
 =
@@ -463,7 +463,7 @@ L_C[B,B]
 L_C[B,I]L_C[I,I]^{-1}L_C[I,B].
 }
 \tag{C11.1}
-$$
+```
 
 Let `L_H` be the weighted Laplacian on `B` whose edges are the positive diameter pairs
 `H_+` with conductances `\beta_h`.
@@ -473,18 +473,18 @@ Write `P_B` for the `|B|\times2` matrix whose row at `b` is the coordinate vecto
 
 ### Theorem C11 (force-hull response identity)
 
-$$
+```math
 \boxed{
 \Lambda\mathbf1=L_H\mathbf1=0,
 \qquad
 \Lambda P_B=L_H P_B.
 }
 \tag{C11.2}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 M:=\Lambda-L_H
 \quad\text{satisfies}\quad
@@ -493,14 +493,14 @@ M\mathbf1=0,
 MP_B=0.
 }
 \tag{C11.3}
-$$
+```
 
 Thus `M` is an exact self-stress matrix on the convex boundary point set `B`: it
 annihilates every affine scalar function on the force hull.
 
 Moreover
 
-$$
+```math
 \boxed{
 P_B^{\mathsf T}\Lambda P_B
 =
@@ -511,50 +511,50 @@ P_B^{\mathsf T}L_HP_B
 \sum_{ij\in H_+}\beta_{ij}(p_i-p_j)(p_i-p_j)^{\mathsf T}.
 }
 \tag{C11.4}
-$$
+```
 
 #### Proof
 
 At every interior vertex `i\in I`, no positive diameter edge is incident.  KKT
 equilibrium therefore gives
 
-$$
+```math
 \sum_{j:ij\in C_+}\alpha_{ij}(p_i-p_j)=0,
-$$
+```
 
 which is exactly
 
-$$
+```math
 (L_CP)_I=0.
 \tag{C11.5}
-$$
+```
 
 Thus the two coordinate functions on the contact framework are the harmonic extensions
 of their boundary values `P_B`.  Eliminating the interior variables gives boundary
 contact current
 
-$$
+```math
 (L_CP)_B=\Lambda P_B.
 \tag{C11.6}
-$$
+```
 
 At a boundary vertex, KKT equilibrium says this contact current equals the positive
 diameter reaction
 
-$$
+```math
 \sum_{k:bk\in H_+}\beta_{bk}(b-k),
-$$
+```
 
 which is precisely `(L_HP_B)_b`.  This proves the coordinate identity in (C11.2).
 Both Laplacians annihilate constants, giving the first identity.
 
 For (C11.4), the Dirichlet energy of the harmonic coordinate extension is
 
-$$
+```math
 P_B^{\mathsf T}\Lambda P_B
 =
 \sum_{ij\in C_+}\alpha_{ij}(p_i-p_j)(p_i-p_j)^{\mathsf T}.
-$$
+```
 
 The analogous edge expansion for `L_H` gives the diameter sum.  Equality also follows
 from (C11.2), and it is the canonical KKT tensor identity restricted to the positive
@@ -569,7 +569,7 @@ matrix, or conflict graph is present.
 
 This gives a second Target C language:
 
-$$
+```math
 \boxed{
 \text{actual contact-network response}
 \times
@@ -578,7 +578,7 @@ $$
 \text{actual diameter-network response}.
 }
 \tag{C11.7}
-$$
+```
 
 The identity is exact but only on the three-dimensional affine data space spanned by
 `1,x,y`; it does not say `\Lambda=L_H` as matrices when `|B|>3`.

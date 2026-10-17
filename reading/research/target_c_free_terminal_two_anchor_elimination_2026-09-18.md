@@ -24,9 +24,10 @@ This gives an exact dichotomy:
 1. the elimination reaches every bounded exceptional face, in which case the contact
    realization space contains a smooth train-angle manifold of dimension `T-2f`, and
    its non-Euclidean dimension is exactly
-   $$
+   ```math
    T-2f-1=(q-k)-1=h-s_Z-1;
-   $$
+   
+   ```
 2. or the process stalls on a nonempty induced set `U` of bounded exceptional faces in
    which every face has at least three B--B transport neighbors inside `U`, while all
    trains from that face to the outer/solved side lie in at most one projective
@@ -42,16 +43,16 @@ the outer anchors by locally collinear boundary trains.
 
 Let `O` denote the actual outer face. Let
 
-$$
+```math
 \mathcal F=\{F_1,\ldots,F_f\}
-$$
+```
 
 be the bounded nonquadrilateral contact faces. Every complete stopped train is one
 edge of the endpoint transport multigraph on
 
-$$
+```math
 \{O\}\cup\mathcal F.
-$$
+```
 
 A train terminating on a bounded face `F` uses one side of that strictly convex unit
 polygon. Label the corresponding transport incidence by the projective direction of
@@ -64,12 +65,12 @@ for the final `|U|>=4` observation.
 
 The total train count is
 
-$$
+```math
 \boxed{
 T={b+Q\over2}+2f=h-s_Z+2f.
 }
 \tag{1.1}
-$$
+```
 
 ---
 
@@ -78,9 +79,9 @@ $$
 Start with no bounded face active. Repeatedly activate a currently inactive bounded
 face `F` if it has two incident transport edges
 
-$$
+```math
 \tau_1,\tau_2
-$$
+```
 
 such that
 
@@ -98,16 +99,16 @@ bounded endpoint.
 
 Suppose the process activates all bounded faces, in the order
 
-$$
+```math
 F_1,F_2,\ldots,F_f.
 \tag{2.1}
-$$
+```
 
 For each `F_i`, write its two chosen pivot angles as
 
-$$
+```math
 \theta_{i,1},\theta_{i,2}.
-$$
+```
 
 ---
 
@@ -115,9 +116,9 @@ $$
 
 Let
 
-$$
+```math
 \Psi:(\mathbb R/2\pi\mathbb Z)^T\longrightarrow\mathbb R^{2f}
-$$
+```
 
 be the exact bounded-exceptional-face closure map in train-angle coordinates. The
 `F_i` block is the oriented vector sum of the unit side vectors of `F_i` after each
@@ -127,20 +128,20 @@ because they vanish identically in train-angle coordinates.
 At the canonical placement, the derivative of the `F_i` block with respect to its two
 pivot variables is, up to occurrence signs,
 
-$$
+```math
 B_i=
 \begin{bmatrix}
 Ju_{i,1}&Ju_{i,2}
 \end{bmatrix},
 \tag{3.1}
-$$
+```
 
 where the two unit directions are nonparallel. Hence
 
-$$
+```math
 \det B_i\ne0.
 \tag{3.2}
-$$
+```
 
 Order the `2f` closure rows by `F_1,...,F_f` and the `2f` pivot columns in the same
 activation order. A pivot train assigned to `F_i` either goes to `O`, in which case
@@ -150,26 +151,26 @@ its column occurs only in the `F_i` closure block, or joins `F_i` to some `F_j` 
 Therefore the derivative submatrix on the pivot columns is block upper triangular:
 all entries below the diagonal `2x2` block `B_i` vanish. Its determinant is
 
-$$
+```math
 \prod_{i=1}^f\det B_i\ne0.
 \tag{3.3}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \operatorname{rank}D\Psi=2f.
 }
 \tag{3.4}
-$$
+```
 
 In particular the exact closure-corank identity forces
 
-$$
+```math
 \boxed{\sigma_C=0}
 \tag{3.5}
-$$
+```
 
 whenever a complete two-anchor activation order exists.
 
@@ -182,16 +183,16 @@ as free variables. By (3.3), the implicit-function theorem solves all pivot angl
 smoothly as functions of the free angles in a neighborhood of the canonical
 placement. Therefore
 
-$$
+```math
 \Psi^{-1}(0)
-$$
+```
 
 contains a smooth local manifold of train-angle dimension exactly
 
-$$
+```math
 \boxed{T-2f.}
 \tag{4.1}
-$$
+```
 
 Every strict rhombus closes identically under arbitrary train angles. Exact closure of
 all bounded exceptional faces therefore gives closure of every graph cycle. Fixing one
@@ -203,12 +204,12 @@ in a sufficiently small neighborhood.
 The train-angle manifold contains the one-dimensional global-rotation direction.
 After quotienting that direction, its non-Euclidean dimension is
 
-$$
+```math
 \boxed{
  m_{\rm full}=T-2f-1=h-s_Z-1=(q-k)-1.
 }
 \tag{4.2}
-$$
+```
 
 This agrees with the exact contact-flex dimension formula because (3.5) gives
 `sigma_C=0`.
@@ -217,9 +218,9 @@ Applying the existing diameter-locking theorem to this manifold gives a matching
 `m_full` pairwise distinct actual diameter bars and at least `m_full` positive and
 `m_full` negative derivative incidences. Since
 
-$$
+```math
 h=(q-k)+s_Z,
-$$
+```
 
 the matching misses at most `s_Z+1` actual diameter bars.
 
@@ -229,18 +230,18 @@ the matching misses at most `s_Z+1` actual diameter bars.
 
 Now suppose the activation process is run to maximality and leaves a nonempty set
 
-$$
+```math
 U\subset\mathcal F
-$$
+```
 
 of inactive bounded exceptional faces.
 
 Fix `F in U`. By maximality, the train directions at `F` of all transport edges from
 `F` to
 
-$$
+```math
 O\cup(\mathcal F\setminus U)
-$$
+```
 
 span at most one projective direction. Otherwise two nonparallel such edges would
 activate `F`.
@@ -248,37 +249,37 @@ activate `F`.
 Because `F` is a strictly convex polygon, at most two of its sides can lie in one
 projective direction. Therefore
 
-$$
+```math
 \boxed{
 \deg_{\rm out}(F;U)\le2.
 }
 \tag{5.1}
-$$
+```
 
 Every bounded nonquadrilateral contact face has contact degree at least five, and its
 transport degree equals that contact degree. Hence
 
-$$
+```math
 \boxed{
 \deg_U(F)\ge3.
 }
 \tag{5.2}
-$$
+```
 
 Thus the B--B transport graph induced by `U` has minimum degree at least three. Since
 the B--B graph is simple,
 
-$$
+```math
 \boxed{|U|\ge4}
 \tag{5.3}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{|E(U)|\ge{3\over2}|U|.}
 \tag{5.4}
-$$
+```
 
 More importantly, every residual face is shielded from the already solved/outer side
 by at most two terminal trains, and if there are two then they are projectively
@@ -292,22 +293,22 @@ This is an exact obstruction, not a density statement.
 
 On a terminal full-core FREE sequence the new correlated theorem gives
 
-$$
+```math
 \liminf {q-k\over D}
 \ge1.960302849540479\ldots .
 \tag{6.1}
-$$
+```
 
 Therefore a complete two-anchor activation order would produce an exact
 contact-preserving manifold with
 
-$$
+```math
 \boxed{
 \liminf {m_{\rm full}\over D}
 \ge1.960302849540479\ldots .
 }
 \tag{6.2}
-$$
+```
 
 The remaining active-diameter system would have to positively lock essentially this
 entire manifold, with a matching to the same linear number of distinct actual diameter

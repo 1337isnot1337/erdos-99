@@ -20,24 +20,24 @@
 
 Let
 
-$$
+```math
 L=e_{BB}+2s_C,
 \qquad
 \lambda_* =0.5882283437736394\ldots
-$$
+```
 
 where `lambda_*` is the positive root of
 
-$$
+```math
 (\pi^2+1)\lambda^2+\pi\lambda-\frac{\pi^2}{4}-\pi=0.
 \tag{FN.1}
-$$
+```
 
 FSJC proves
 
-$$
+```math
 \liminf \frac LD\ge\lambda_*
-$$
+```
 
 and shows that approach to this scalar endpoint forces `h/D -> pi/2`.
 The equality case is in fact impossible.
@@ -46,12 +46,12 @@ The equality case is in fact impossible.
 
 There exists an absolute constant `eta_FS>0` such that every sufficiently large audited post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}\ge\lambda_*+\eta_{FS}.
 }
 \tag{FN.2}
-$$
+```
 
 The theorem is qualitative: no explicit value of `eta_FS` is claimed.
 
@@ -63,90 +63,90 @@ The new content is not another decimal iteration.  It eliminates the entire near
 
 Assume for contradiction that there is an unbounded post-ZF survivor sequence indexed by `j` with
 
-$$
+```math
 \lambda_j:=\frac{e_{BB,j}+2s_{C,j}}{D_j}\longrightarrow\lambda_*.
 \tag{1.1}
-$$
+```
 
 Pass to a subsequence on which
 
-$$
+```math
 t_j:=\frac{e_{BB,j}}{D_j}\to t,
 \qquad
 y_j:=\frac{h_j}{D_j}\to y.
 \tag{1.2}
-$$
+```
 
 Write
 
-$$
+```math
 m(y)=\min\{y,\pi-y\},
 \qquad
 \Phi(y)=\frac{y+\sin y}{4}.
-$$
+```
 
 FSDB plus GU and JC give the necessary inequality
 
-$$
+```math
 \Phi(y)-\frac\pi4\lambda_*^2
 \le
 \frac{(t+m(y))^2}{4\pi}
 \le
 \frac{(\lambda_*+m(y))^2}{4\pi}.
 \tag{1.3}
-$$
+```
 
 FSJC proves that the threshold root of the rightmost relaxed inequality is uniquely minimized at
 
-$$
+```math
 y=\frac\pi2.
-$$
+```
 
 Therefore (1.1)--(1.3) force
 
-$$
+```math
 \boxed{y=\frac\pi2.}
 \tag{1.4}
-$$
+```
 
 At this value, FN.1 is exactly the equality
 
-$$
+```math
 \Phi(\pi/2)-\frac\pi4\lambda_*^2
 =
 \frac{(\lambda_*+\pi/2)^2}{4\pi}.
 \tag{1.5}
-$$
+```
 
 The first inequality in (1.3) can therefore hold only if `t=lambda_*`; otherwise its right side is strictly smaller than (1.5). Hence
 
-$$
+```math
 \boxed{
 t=\lambda_*,
 \qquad
 \frac{s_{C,j}}{D_j}\to0.
 }
 \tag{1.6}
-$$
+```
 
 Define the common equality value
 
-$$
+```math
 U_*:=
 \Phi(\pi/2)-\frac\pi4\lambda_*^2
 =
 \frac{(\lambda_*+\pi/2)^2}{4\pi}.
 \tag{1.7}
-$$
+```
 
 The FSDB/GU lower bound and JC upper bound now squeeze the attachment-cell gap `G_j`:
 
-$$
+```math
 \boxed{
 \frac{G_j}{D_j^2}\longrightarrow U_*.
 }
 \tag{1.8}
-$$
+```
 
 Indeed the lower normalized limit is at least the left side of (1.7), while the upper normalized limit is at most the right side.
 
@@ -156,17 +156,17 @@ Indeed the lower normalized limit is at least the left side of (1.7), while the 
 
 Retain the JC notation
 
-$$
+```math
 E_{out}=\sum_P(L_P-3),
 \qquad
 z=Q+2s_Z,
 \qquad
 d_H=q-h.
-$$
+```
 
 The exact remainder form of JC.12 is
 
-$$
+```math
 \boxed{
 E_{out}+Q
 \le
@@ -175,62 +175,62 @@ E_{out}+Q
 \left[(\pi D-P_F)+3d_H+(z-Q)\right],
 }
 \tag{2.1}
-$$
+```
 
 where `P_F=per(F)` and every term in brackets is nonnegative. Since
 
-$$
+```math
 z-Q=2s_Z,
-$$
+```
 
 write the bracket as
 
-$$
+```math
 R_j=(\pi D_j-P_{F,j})+3d_{H,j}+2s_{Z,j}\ge0.
 \tag{2.2}
-$$
+```
 
 JC also gives
 
-$$
+```math
 G_j
 \le
 H_{out,j}+A_{exc,j}+O(D_j)
 \le
 \frac{(E_{out,j}+Q_j)^2}{4\pi}+o(D_j^2).
 \tag{2.3}
-$$
+```
 
 By (1.4) and (1.6),
 
-$$
+```math
 \frac{\pi D_j-h_j+e_{BB,j}}{D_j}
 \longrightarrow
 \frac\pi2+\lambda_*.
 \tag{2.4}
-$$
+```
 
 If `R_j/D_j` did not tend to zero, some subsequence would have `R_j>=epsilon D_j` for a fixed `epsilon>0`. Equations (2.1)--(2.4) would then give
 
-$$
+```math
 \limsup\frac{G_j}{D_j^2}
 \le
 \frac{(\lambda_*+\pi/2-\epsilon)^2}{4\pi}
 <U_*,
-$$
+```
 
 contradicting (1.8). Therefore
 
-$$
+```math
 \boxed{
 \frac{R_j}{D_j}\to0.
 }
 \tag{2.5}
-$$
+```
 
 Since all three terms in (2.2) are nonnegative, individually
 
-$$
+```math
 \boxed{
 \frac{P_{F,j}}{D_j}\to\pi,
 \qquad
@@ -239,7 +239,7 @@ $$
 \frac{s_{Z,j}}{D_j}\to0.
 }
 \tag{2.6}
-$$
+```
 
 Only the first conclusion is needed for the contradiction.
 
@@ -249,63 +249,63 @@ Only the first conclusion is needed for the contradiction.
 
 Translate and rescale the force hulls:
 
-$$
+```math
 \widetilde F_j=D_j^{-1}(F_j-p_j),
-$$
+```
 
 choosing one point `p_j in F_j` as origin. Then
 
-$$
+```math
 \operatorname{diam}(\widetilde F_j)=1.
-$$
+```
 
 The normalized bodies lie in a fixed bounded region, so Blaschke selection gives a Hausdorff-convergent subsequence
 
-$$
+```math
 \widetilde F_j\to F_\infty.
 \tag{3.1}
-$$
+```
 
 Diameter, perimeter and area are continuous under Hausdorff convergence for planar convex bodies. Equation (2.6) yields
 
-$$
+```math
 \operatorname{diam}(F_\infty)=1,
 \qquad
 \operatorname{per}(F_\infty)=\pi.
 \tag{3.2}
-$$
+```
 
 Rosenthal--Szász states
 
-$$
+```math
 \operatorname{per}(K)\le\pi\operatorname{diam}(K),
-$$
+```
 
 with equality exactly for bodies of constant width equal to the diameter. Hence
 
-$$
+```math
 \boxed{F_\infty\text{ has constant width }1.}
 \tag{3.3}
-$$
+```
 
 Blaschke--Lebesgue now gives
 
-$$
+```math
 \boxed{
 \operatorname{area}(F_\infty)
 \ge
 A_{BL}:=\frac{\pi-\sqrt3}{2}.
 }
 \tag{3.4}
-$$
+```
 
 Thus
 
-$$
+```math
 \liminf_j\frac{\operatorname{area}F_j}{D_j^2}
 \ge A_{BL}.
 \tag{3.5}
-$$
+```
 
 ---
 
@@ -313,70 +313,70 @@ $$
 
 GU gives, along (1.1),
 
-$$
+```math
 \limsup_j
 \frac1{D_j^2}
 \sum_r\operatorname{area}(P_{r,j})
 \le
 \frac\pi4\lambda_*^2.
 \tag{4.1}
-$$
+```
 
 Since
 
-$$
+```math
 G_j=\operatorname{area}F_j-\sum_r\operatorname{area}(P_{r,j}),
-$$
+```
 
 (3.5)--(4.1) imply
 
-$$
+```math
 \liminf_j\frac{G_j}{D_j^2}
 \ge
 A_{BL}-\frac\pi4\lambda_*^2.
 \tag{4.2}
-$$
+```
 
 But (1.8) gives
 
-$$
+```math
 \frac{G_j}{D_j^2}\to
 \Phi(\pi/2)-\frac\pi4\lambda_*^2.
 \tag{4.3}
-$$
+```
 
 The common subtraction cancels. It remains only to compare
 
-$$
+```math
 A_{BL}
 \quad\text{and}\quad
 \Phi(\pi/2)=\frac{\pi+2}{8}.
-$$
+```
 
 Their exact difference is
 
-$$
+```math
 \boxed{
 A_{BL}-\Phi(\pi/2)
 =
 \frac{3\pi-4\sqrt3-2}{8}>0.
 }
 \tag{4.4}
-$$
+```
 
 For a completely elementary sign certificate, use `pi>3` and `sqrt(3)<7/4`:
 
-$$
+```math
 3\pi>9>4\sqrt3+2.
-$$
+```
 
 Thus (4.2) is strictly larger than (4.3), a contradiction.
 
 Numerically, only for scale,
 
-$$
+```math
 A_{BL}-\Phi(\pi/2)=0.0620718413\ldots .
-$$
+```
 
 No decimal enters the proof.
 
@@ -388,21 +388,21 @@ Therefore no unbounded post-ZF survivor sequence can satisfy (1.1). `square`
 
 FSJC already gives the universal asymptotic lower bound
 
-$$
+```math
 \liminf\frac LD\ge\lambda_*.
-$$
+```
 
 If FN.2 failed for every `eta_FS>0`, choose for each integer `m` a sufficiently large survivor with
 
-$$
+```math
 \frac LD<\lambda_*+\frac1m.
-$$
+```
 
 Using the FSJC lower bound to take the diameters increasingly large gives an unbounded diagonal sequence with
 
-$$
+```math
 \frac LD\to\lambda_*,
-$$
+```
 
 contradicting Sections 1--4. Hence some absolute `eta_FS>0` exists.
 
@@ -414,13 +414,13 @@ This proves FN.2.
 
 FN eliminates the complete near-equality class
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}=\lambda_*+o(1).
-$$
+```
 
 Any surviving unbounded C-II sequence therefore has a fixed positive separation from the FSJC floor. In particular the formal FSJC optimizer
 
-$$
+```math
 \frac hD\to\frac\pi2,
 \quad
 \frac{e_{BB}}D\to\lambda_*,
@@ -430,7 +430,7 @@ $$
 \frac{P_F}{D}\to\pi,
 \quad
 \frac{d_H+s_Z}{D}\to0
-$$
+```
 
 is impossible.
 
@@ -479,9 +479,9 @@ Regression checks:
 
 A Level I proof still needs to exclude all survivors with
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\ge\lambda_*+\eta_{FS}.
-$$
+```
 
 A useful next theorem must exploit the resulting high pinned/contact currency itself, or convert it to a strict sub-`D` competitor/source-capacity contradiction. Another isolated lower-bound decimal is not enough.
 

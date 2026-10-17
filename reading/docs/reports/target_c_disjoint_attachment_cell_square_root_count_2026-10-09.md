@@ -41,9 +41,9 @@ of pairwise interior-disjoint convex polygons whose vertices lie
 on that graph. If each polygon has minimum width at least w,
 their number is at most
 
-$$
+```math
  \boxed{12XV/w.} \tag{2.1}
-$$
+```
 
 Constants are deliberately unoptimized. The statement allows shared
 vertices or boundary chords. It is about actual planar convex cells,
@@ -82,14 +82,14 @@ secant slopes. Concavity gives `s1>=s2`. The triangle area is
 `l1*l2*(s1-s2)/2`; its perimeter is at least `2(l1+l2)`.
 Its inradius therefore satisfies
 
-$$
+```math
  r_T\le\tfrac12\min(l_1,l_2)(s_1-s_2). \tag{2.2}
-$$
+```
 
 Let `mu=-f''` be the nonnegative slope-drop measure. Direct
 integration of the two secants gives
 
-$$
+```math
  s_1-s_2=\int g_{a,b,c}(t)\,d\mu(t),
 \quad
  g_{a,b,c}(t)=
@@ -98,7 +98,7 @@ $$
  (c-t)/(c-b),&b\le t\le c,\\
  0,&\text{otherwise}.
  \end{cases} \tag{2.3}
-$$
+```
 
 The two formulas agree at b; its curvature atom is integrated
 once, not twice. For a fixed t, nonzero kernels occur along one
@@ -109,9 +109,9 @@ These charges telescope. If the chain ends at a split vertex,
 its final charge is bounded by the remaining interval length.
 Since each kernel is between zero and one,
 
-$$
+```math
  \sum_T\min(l_1,l_2)g_{a,b,c}(t)\le X.
-$$
+```
 
 Integrating and using (2.2) shows
 `sum_T r_T<=XV/2<=XV`. In particular the selected triangles
@@ -132,9 +132,9 @@ trapping. These are actual mutually unit-separated source points.
 Canonical Lemma 75.1 says that x and three unit neighbors cannot
 fit in a strip of width strictly less than `1/2`. Therefore
 
-$$
+```math
  \boxed{\operatorname{minwidth}(P_r)\ge1/2.} \tag{3.1}
-$$
+```
 
 This includes singleton components. It does not bound contact
 isolates, which are not these harmonic components.
@@ -144,18 +144,18 @@ isolates, which are not these harmonic components.
 For sufficiently large canonical C-II sources, Section 75 gives,
 about the source circumcenter o,
 
-$$
+```math
  B(o,D/20)\subset F\subset B(o,11D/20).
-$$
+```
 
 Let `delta_r` be the graph diameter of I_r, and let
 `N_M=#{r:delta_r<=M}`, with integer `M>=0`. Put `L=M+2`.
 Harmonic trapping gives `diam(A_r)<=L`. The following improvement
 holds uniformly in M:
 
-$$
+```math
  \boxed{N_M\le12,000,000\pi\,(M+2).} \tag{4.1}
-$$
+```
 
 **Proof.** If `L>D/10^6`, the elementary attachment incidence
 bound `N_M<=q<=pi D` proves (4.1). Suppose `L<=D/10^6`.
@@ -190,9 +190,9 @@ have all vertices on this same convex arc, and have minimum width
 at least `1/2` by (3.1). Lemma 2.1, with horizontal span at
 most `88L`, bounds their number by
 
-$$
+```math
  24\,(88L)\,(485\Theta)=1,024,320L\Theta.
-$$
+```
 
 The expanded arcs cover each boundary point at most five times,
 including possible curvature atoms at cut endpoints: original
@@ -210,17 +210,17 @@ handles all overlaps of their attachment spans inside one window.
 **Theorem 5.1 (proved candidate awaiting independent audit/promotion).**
 For every sufficiently large canonical C-II source,
 
-$$
+```math
  \boxed{c_I=O(\sqrt D).} \tag{5.1}
-$$
+```
 
 **Proof.** The canonical graph-diameter budget used in Section 75
 bounds the number of components with `delta_r>=M+1` by
 `(2+2pi D)/(M+1)`. Combining it with (4.1) gives
 
-$$
+```math
  c_I\le12,000,000\pi(M+2)+{2+2\pi D\over M+1}.
-$$
+```
 
 Choose `M=floor(sqrt D)`. The bound is `O(sqrt D)` with an
 absolute, deliberately coarse constant. It applies in both the
@@ -228,9 +228,9 @@ macroscopic-container and full-core alternatives. QED.
 
 In the exact pinned ledger this sharpens the error term to
 
-$$
+```math
  \mu_D=q+m-k-2c_I-4=q+m-k-O(\sqrt D),
-$$
+```
 
 where `m` counts nonunit sides of the actual loaded hull and
 `k=d_H+s_Z`. No inequality `g_A<=C c_I` is established here;

@@ -30,49 +30,49 @@ The result is a substantially smaller simultaneous finite cusp.
 Every unbounded survivor sequence in the stated scope has, for all sufficiently large
 members, two consecutive smallest-leaf O--O cuts
 
-$$
+```math
 \tau_i,\tau_{i+1}
-$$
+```
 
 on one nested non-singleton complement-dual path such that
 
-$$
+```math
 \boxed{N_i\le377,}
 \tag{Q377.1}
-$$
+```
 
 where
 
-$$
+```math
 N_i=\#\{h:\varepsilon_{h,i+1}\ne\varepsilon_{hi}\}
-$$
+```
 
 is the number of actual diameter rows whose interval incidence switches between the
 two cuts.  On the **same pair**,
 
-$$
+```math
 \boxed{
 B_i<{1.16\times10^9\over D}+o(D^{-1}),
 }
 \tag{Q377.2}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 d_{\mathbb{RP}^1}(u_i,u_{i+1})
 <{1.16\times10^9\over D}+o(D^{-1}),
 }
 \tag{Q377.3}
-$$
+```
 
 where
 
-$$
+```math
 B_i=\sum_h\beta_h
 |\varepsilon_{h,i+1}-\varepsilon_{hi}|.
-$$
+```
 
 By the current switching-thrackle theorem, the `<=377` switching diameter edges form a
 bipartite caterpillar forest.  All non-switching spanning rows see the usual opposite
@@ -90,44 +90,44 @@ Use the audited smallest-leaf retained O--O family `Q_V`.  For train `tau`, let
 `w_tau in(0,1]` be its retained pair weight and let `d_tau D` be its number of
 center-phase strict-rhombus crossings.  The hostile-audited inputs are
 
-$$
+```math
 {\sum_\tau w_\tau d_\tau\over\sum_\tau w_\tau}
 >{1851\over2500}-o(1)=0.7404-o(1),
 \tag{Q377.4}
-$$
+```
 
-$$
+```math
 {1\over D}\sum_\tau w_\tau>{53\over625}-o(1)=0.0848-o(1),
 \tag{Q377.5}
-$$
+```
 
 and
 
-$$
+```math
 N_C<{1063\over1000}D+o(D)=1.063D+o(D)
 \tag{Q377.6}
-$$
+```
 
 for the total number of center-phase complete trains.
 
 Choose
 
-$$
+```math
 \boxed{
 \lambda={133\over250}=0.532.
 }
 \tag{Q377.7}
-$$
+```
 
 Call a retained O--O leaf train **good** if
 
-$$
+```math
 d_\tau>\lambda.
-$$
+```
 
 Weighted thresholding gives good retained pair weight
 
-$$
+```math
 \begin{aligned}
 W_g
 &>{(0.7404-\lambda)(0.0848)\over1.063-\lambda}D-o(D)\\
@@ -135,7 +135,7 @@ W_g
 &=0.03328120527\ldots D-o(D).
 \end{aligned}
 \tag{Q377.8}
-$$
+```
 
 Every good train is automatically non-singleton because it crosses at least one center
 train in a strict rhombus.
@@ -161,28 +161,28 @@ actual O--O shores, are totally nested.
 There are only two marker classes.  Therefore one nested class has retained pair
 weight greater than
 
-$$
+```math
 {W_g\over2}-o(D)
 >{27613\over1659375}D-o(D).
 \tag{Q377.9}
-$$
+```
 
 Since every `w_tau<=1`, this class contains
 
-$$
+```math
 \boxed{
 m>pD-o(D),
 \qquad
 p={27613\over1659375}
 =0.01664060263\ldots .}
 \tag{Q377.10}
-$$
+```
 
 distinct non-singleton O--O trains.  Order them by nested shore inclusion:
 
-$$
+```math
 \tau_1,\ldots,\tau_m.
-$$
+```
 
 This path is obtained **without** choosing a center train that crosses all its leaves.
 
@@ -194,39 +194,39 @@ Order all actual center-phase complete trains by their real phase representative
 the frozen center window.  Split them into lower and upper halves, with the two sizes
 differing by at most one.  Choose a real threshold `alpha_0` between the two blocks, so
 
-$$
+```math
 \alpha_c\le\alpha_0
 \quad(c\text{ in the lower block}),
-$$
+```
 
 and
 
-$$
+```math
 \alpha_c\ge\alpha_0
 \quad(c\text{ in the upper block}).
-$$
+```
 
 Each block contains at most
 
-$$
+```math
 {N_C\over2}+O(1)
 <{1063\over2000}D+o(D)
 =0.5315D+o(D)
 \tag{Q377.11}
-$$
+```
 
 center trains.
 
 A good leaf has more than `0.532D` center neighbors.  Therefore it has more than
 
-$$
+```math
 \boxed{
 d_0D-o(D),
 \qquad
 d_0={133\over250}-{1063\over2000}
 ={1\over2000}=0.0005,}
 \tag{Q377.12}
-$$
+```
 
 neighbors in **each** center block.
 
@@ -234,30 +234,30 @@ Let `beta_tau` be the real phase representative of a good smallest-leaf train.  
 center/leaf phase labels have fixed orientation, so every actual center/leaf crossing
 satisfies
 
-$$
+```math
 \beta_\tau-\alpha_c>{\pi\over3}.
 \tag{Q377.13}
-$$
+```
 
 Because `tau` has an upper-block neighbor with `alpha_c>=alpha_0`, define
 
-$$
+```math
 \boxed{
 q_\tau:=
 \beta_\tau-\alpha_0-{\pi\over3}>0.
 }
 \tag{Q377.14}
-$$
+```
 
 For every lower-block neighbor, `alpha_c<=alpha_0`, so its rhombus angular defect is
 
-$$
+```math
 \delta_{c\tau}
 =\beta_\tau-\alpha_c-{\pi\over3}
 =q_\tau+(\alpha_0-\alpha_c)
 \ge q_\tau.
 \tag{Q377.15}
-$$
+```
 
 Thus the median split gives one common phase reference for **all** good leaves, even
 though no single center train need cross them all.
@@ -270,59 +270,59 @@ Every good leaf has at least `d_0D-o(D)` lower-block center neighbors by (Q377.1
 The corresponding center/leaf crossings are distinct strict rhombi.  The canonical
 global angular-defect theorem gives
 
-$$
+```math
 \sum_R\delta_R<C_{phase}D,
 \qquad
 C_{phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
 \tag{Q377.16}
-$$
+```
 
 Summing (Q377.15) first over the lower-block neighbors of each good leaf and then over
 all good leaves yields
 
-$$
+```math
 (d_0D-o(D))\sum_{\tau\ good}q_\tau
 <C_{phase}D.
-$$
+```
 Hence
 
-$$
+```math
 \boxed{
 \sum_{\tau\ good}q_\tau
 \le {C_{phase}\over d_0}+o(1).
 }
 \tag{Q377.17}
-$$
+```
 
 The selected nested chain is a subset of the good family, so the same upper bound holds
 for its `q_j=q_{tau_j}`.
 
 For adjacent selected leaves, the common reference `alpha_0` cancels:
 
-$$
+```math
 |\beta_{i+1}-\beta_i|
 =|q_{i+1}-q_i|
 \le q_i+q_{i+1}.
 \tag{Q377.18}
-$$
+```
 
 After the frozen phase windows are narrow enough to avoid projective wrap,
 
-$$
+```math
 d_{\mathbb{RP}^1}(u_i,u_{i+1})
 \le Q_i:=q_i+q_{i+1}.
 \tag{Q377.19}
-$$
+```
 
 Summing over internal path boundaries,
 
-$$
+```math
 \boxed{
 \sum_{i=1}^{m-1}Q_i
 \le {2C_{phase}\over d_0}+o(1).
 }
 \tag{Q377.20}
-$$
+```
 
 This is the phase budget that replaces the common-center `gamma` argument.
 
@@ -333,37 +333,37 @@ This is the phase budget that replaces the common-center `gamma` argument.
 Exact laminar interval support is available on the nested path.  Therefore each actual
 diameter row starts and stops at most once and
 
-$$
+```math
 \sum_{i=1}^{m-1}N_i
 \le2|H|
 \le2\pi D.
 \tag{Q377.21}
-$$
+```
 
 Call a boundary **count-bad** when
 
-$$
+```math
 N_i\ge378.
-$$
+```
 
 Using `pi<355/113`, the count-bad boundary density is at most
 
-$$
+```math
 {2(355/113)\over378}
 ={355\over21357}
 =0.01662218476\ldots .
 \tag{Q377.22}
-$$
+```
 
 But the nested-path density in (Q377.10) is
 
-$$
+```math
 p=0.01664060263\ldots .
-$$
+```
 
 The exact certificate proves the positive gap
 
-$$
+```math
 \boxed{
 \rho
 :=p-{355\over21357}
@@ -371,19 +371,19 @@ $$
 =1.8417872\ldots\times10^{-5}>0.
 }
 \tag{Q377.23}
-$$
+```
 
 The path has `m-1=pD-o(D)` internal boundaries.  Hence at least
 
-$$
+```math
 \rho D-o(D)
-$$
+```
 
 are count-good.  Since `N_i` is an integer, every count-good boundary has
 
-$$
+```math
 \boxed{N_i\le377.}
-$$
+```
 
 This proves the discrete part of (Q377.1).
 
@@ -393,58 +393,58 @@ This proves the discrete part of (Q377.1).
 
 For every internal boundary define
 
-$$
+```math
 B_i=\sum_h\beta_h
 |\varepsilon_{h,i+1}-\varepsilon_{hi}|.
-$$
+```
 
 The positive relative-interior KKT vector is normalized by
 
-$$
+```math
 \sum_h\beta_h=1.
-$$
+```
 Since one signed diameter interval switches at most twice,
 
-$$
+```math
 \boxed{
 \sum_iB_i\le2.
 }
 \tag{Q377.24}
-$$
+```
 
 Combine this with (Q377.20):
 
-$$
+```math
 \sum_iD(B_i+Q_i)
 \le
 \left(2+{2C_{phase}\over d_0}\right)D+o(D).
 \tag{Q377.25}
-$$
+```
 
 Restrict the nonnegative sum to the `rho D-o(D)` count-good boundaries.  At least one
 of them satisfies
 
-$$
+```math
 D(B_i+Q_i)
 \le
 {2+2C_{phase}/d_0\over\rho}+o(1).
 \tag{Q377.26}
-$$
+```
 
 Using the same outward enclosure employed by the current adjacent-cut certificates,
 
-$$
+```math
 C_{phase}
 <{3258689123681\over612912000000},
-$$
+```
 
 the exact verifier proves
 
-$$
+```math
 {2+2C_{phase}^{up}/d_0\over\rho}
 <1.16\times10^9.
 \tag{Q377.27}
-$$
+```
 
 Both `B_i` and `Q_i` are nonnegative.  Thus the selected count-good boundary satisfies
 (Q377.2), while (Q377.19) gives (Q377.3).
@@ -456,9 +456,9 @@ Both `B_i` and `Q_i` are nonnegative.  Thus the selected count-good boundary sat
 For any adjacent nested O--O cuts, the switching rows are exactly the actual-diameter
 graph cut across the intervening vertex layer:
 
-$$
+```math
 H_{sw}=\delta_H(L).
-$$
+```
 
 The actual diameter graph is a straight-line thrackle.  The current switching theorem
 therefore makes `H_sw` a bipartite caterpillar forest.  Applying it to the pair above

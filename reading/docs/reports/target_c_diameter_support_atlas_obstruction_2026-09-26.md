@@ -87,10 +87,10 @@ Let `Q` be a convex polygon of diameter at most `D>=1`, with unit-separated
 strict extreme vertices (collinear redundant boundary points are not vertices).
 Suppose that, after a translation, each vertex `p` satisfies
 
-$$
+```math
 r\le |p|\le R,
 \qquad 0\le r\le R\le D.
-$$
+```
 
 Write `H=R^2-r^2`. Let `S` be any subset of the vertices within distance
 `0<=epsilon<=1/8` of a translated lattice `Lambda` whose nonzero vectors have length
@@ -98,41 +98,41 @@ at least one. There is no adjacency requirement on `S`.
 
 For every `1<=M<=D`, set
 
-$$
+```math
 \alpha=\arcsin(2\epsilon),\qquad T=M+2\epsilon.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 |S|\le {\pi D\over M}
 +48T\sec\alpha
 \left[R\tan\alpha+\sqrt{H+M^2/4}\right].
 }
 \tag{AA.1}
-$$
+```
 
 If `r=D-R`, define `eta=(2R-D)/D`. Then
 
-$$
+```math
 \boxed{
 {|S|\over D}
 \le132(\sqrt\epsilon+\eta^{1/4})+35D^{-1/3}.
 }
 \tag{AA.2}
-$$
+```
 
 For every global minimum-diameter source `A`, take its circumcenter `o` and
 circumradius `R`. For **any** subset of its actual diameter endpoints within
 `epsilon` of one such lattice, canonical FS.1 implies
 
-$$
+```math
 \boxed{
 |S|\le132D\sqrt\epsilon+172D^{7/8}+35D^{2/3}.
 }
 \tag{AA.3}
-$$
+```
 
 This is uniform over the lattice shape, orientation and translation, the choice
 of endpoints, and the source. The subset can omit arbitrary endpoints, and the
@@ -153,26 +153,26 @@ be any subset of its actual diameter endpoints. Suppose every point of `S` is
 within `0<=epsilon<=1/8` of one translated lattice with minimum spacing at least
 one. For `1<=M<=D`, `T=M+2epsilon` and `alpha=arcsin(2epsilon)`,
 
-$$
+```math
 \boxed{
 |S|\le {\pi D\over M}+18T^2+48TD\tan\alpha.
 }
 \tag{DS.1}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{|S|\le128D\sqrt\epsilon+33D^{2/3}.}
 \tag{DS.2}
-$$
+```
 
 Retaining the vector-length dependence gives the stronger small-noise estimate
 
-$$
+```math
 \boxed{|S|\le136D\epsilon(1+\log(1/\epsilon))+33D^{2/3}.}
 \tag{DS.2L}
-$$
+```
 
 At `epsilon=0`, its noise term is defined by its limit zero. One can take the
 smaller noise term from DS.2 and DS.2L. This is a natural logarithm.
@@ -187,28 +187,28 @@ The strict-extremality proof in §3.1 uses only actual diameter status; apply it
 to `S` and let `P=conv(S)`. For each vertex `p_i` of `P`, choose an actual
 diameter partner `y_i` from the **same source** `A`, and set
 
-$$
+```math
 n_i=(p_i-y_i)/D.
-$$
+```
 
 For every source point `p_j`, the true diameter constraint `|p_j-y_i|<=D`
 gives
 
-$$
+```math
 n_i\cdot(p_j-p_i)\le-{|p_j-p_i|^2\over2D}.
-$$
+```
 
 In particular `n_i` is a unit outward supporting normal of `P` at `p_i`.
 Applying the same inequality with `i,j` reversed gives the exact quantitative
 normal-separation inequality
 
-$$
+```math
 \boxed{
 (n_j-n_i)\cdot(p_j-p_i)\ge {|p_j-p_i|^2\over D},
 \qquad |p_j-p_i|\le D|n_j-n_i|.
 }
 \tag{DS.0}
-$$
+```
 
 There is no first-order or integrated-motion assertion in DS.0.
 
@@ -224,10 +224,10 @@ normal cone, the angular interval between those two adjacent side normals, so
 it also lies in the interval of width `2alpha`. Thus the first and last vertices
 of the inner chain have
 
-$$
+```math
 |n_j-n_i|\le2\sin\alpha,
 \qquad |p_j-p_i|\le2D\sin\alpha
-$$
+```
 
 by DS.0. The inner chain is monotone in the tangent coordinate, with slopes at
 most `tan(alpha)` in absolute value, including all of its intervening long sides.
@@ -238,9 +238,9 @@ most `2D tan(alpha)`.
 Every assigned side has length at least `|w|-2epsilon`. It follows that the number
 of assigned short sides is at most
 
-$$
+```math
 2+{2D\tan\alpha\over |w|-2\epsilon}.
-$$
+```
 
 Using the elementary bounds `F(T)<=9T^2` and AA.7, summing over all possible
 directed `w` gives at most `18T^2+48TD tan(alpha)` short sides. There are fewer
@@ -249,9 +249,9 @@ has fewer than three points, its conclusion follows from `pi D/M>=pi`.
 
 For `epsilon<=1/8`, `T<=5M/4` and `tan(alpha)<=8epsilon/sqrt(15)`. Therefore
 
-$$
+```math
 {|S|\over D}\le{\pi\over M}+124M\epsilon+29M^2/D.
-$$
+```
 
 Choose `M=min(epsilon^(-1/2),D^(1/3))`, with `M=D^(1/3)` if `epsilon=0`.
 Then `1/M<=sqrt(epsilon)+D^(-1/3)`, `M epsilon<=sqrt(epsilon)`, and
@@ -261,40 +261,40 @@ Then `1/M<=sqrt(epsilon)+D^(-1/3)`, `M epsilon<=sqrt(epsilon)`, and
 
 For each particular vector `w`, the half-width can instead be
 
-$$
+```math
 \alpha_w=\arcsin{2\epsilon\over |w|-2\epsilon}.
-$$
+```
 
 The ratio is at most `1/3`, and
 `tan(alpha_w)<=3epsilon/[sqrt(2)(|w|-2epsilon)]`. The same chain argument gives
 at most
 
-$$
+```math
 2+{3\sqrt2 D\epsilon\over(|w|-2\epsilon)^2}
-$$
+```
 
 assigned sides. The disk count and integration by parts give
 
-$$
+```math
 \sum_{0<|w|\le T}|w|^{-2}
 ={F(T)\over T^2}+2\int_1^T{F(t)\over t^3}\,dt
 \le9+18\log T.
-$$
+```
 
 Since `|w|-2epsilon>=3|w|/4`, the reciprocal-square sum with these denominators
 is at most `16+32 log(T)`. Thus
 
-$$
+```math
 |S|\le{\pi D\over M}+18T^2+(68+136\log T)D\epsilon,
-$$
+```
 
 where `48sqrt(2)<68` and `96sqrt(2)<136` were rounded upwards.
 Use `T<=5M/4`, `18T^2<=29M^2`, and `log(5/4)<=1/4` to obtain
 
-$$
+```math
 {|S|\over D}\le{\pi\over M}+29M^2/D
 +\epsilon(102+136\log M).
-$$
+```
 
 For `epsilon>0` take `M=min(epsilon^(-1),D^(1/3))`. Then
 `1/M<=epsilon+D^(-1/3)`, `M^2/D<=D^(-1/3)`, and
@@ -329,19 +329,19 @@ Every point of `B` is a strict extreme vertex, by §3.1. Choose actual partners
 These are unit outward supporting normals at `p,q`. Since `y,z` belong to the
 same diameter-`D` source,
 
-$$
+```math
 D|n_p-n_q|
 =|(p-q)-(y-z)|\le |p-q|+|y-z|\le1+D.
-$$
+```
 
 Thus
 
-$$
+```math
 |n_p-n_q|\le1+D^{-1}\le3/2,
 \qquad
 \tau:=\angle(n_p,n_q)\le2\arcsin(3/4)<2\pi/3.
 \tag{GC.0}
-$$
+```
 
 For a strictly convex polygon, side normals rotate monotonically around its
 boundary, and the normal cone at a vertex is the interval between its adjacent
@@ -351,17 +351,17 @@ Orient that arc from one endpoint to the other. Its side tangents lie in one
 cone of the same width; if it has `N` sides, projecting onto the cone's midpoint
 direction gives
 
-$$
+```math
 1=|p-q|\ge\sum_{j=1}^N\ell_j\cos(\tau/2)
 \ge N\cos(\tau/2),
-$$
+```
 
 since every `ell_j>=1`. If `p,q` were nonconsecutive, both arcs would have at
 least two sides. But
 
-$$
+```math
 2\cos(\tau/2)\ge2\sqrt{1-(3/4)^2}=\sqrt7/2>1.
-$$
+```
 
 This is a contradiction. Thus `p,q` are consecutive. Only the short-normal arc
 is used; no assertion that the other arc has no vertices is made.
@@ -375,10 +375,10 @@ claim. Nothing here orders edges of the diameter graph into an Euler trail.
 For the canonical triangle-free C-II source, `B` is the actual positive-diameter
 endpoint set. GC.1 proves
 
-$$
+```math
 \boxed{c_B=0,\qquad e_{BB}=q-m_B}
 \tag{GC.1}
-$$
+```
 
 in **both** the full-core and macroscopic-container branches, once `D>=2`.
 Here `m_B` is the number of nonunit loaded-hull sides; it is not the outlier count
@@ -387,14 +387,14 @@ Here `m_B` is the number of nonunit loaded-hull sides; it is not the outlier cou
 Canonical §63 gives the exact identity `c_I+s_C+c_B=m_B+k-2`, with
 `k=d_H+s_Z`. Therefore, without discarding any boundary-order or component term,
 
-$$
+```math
 \boxed{
 s_C=m_B+k-c_I-2,\qquad
 \mu_DD=q+m_B-k-2c_I-4,
 \qquad q-m_B\ge Q+2k.
 }
 \tag{GC.2}
-$$
+```
 
 The last inequality is the canonical §63 loaded-contact payment. These formulas
 were canonical under the full-core near-disk hypothesis via
@@ -431,10 +431,10 @@ not replace its crossing-measure or pure-rhombic-disk hypotheses.
 
 The exact unit-separated set
 
-$$
+```math
 \{(0,0),(1,0),(1/2,1),(1/2,-1)\}
 \tag{GC.R1}
-$$
+```
 
 has diameter two and a nonconsecutive unit chord between `(0,0),(1,0)`.
 Those two points are NOT diameter endpoints: only the two points on the vertical
@@ -450,10 +450,10 @@ Suppose `p` is an endpoint of an actual diameter pair `py`, with `|p-y|=D`.
 If `p=sum_i a_i p_i` is a nontrivial convex combination of other source points,
 then
 
-$$
+```math
 \sum_i a_i|p_i-y|^2-|p-y|^2
 =\sum_i a_i|p_i-p|^2>0.
-$$
+```
 
 The left side is at most zero since every `|p_i-y|<=D`. This contradiction shows
 that `p` is a strict extreme vertex of the full source hull. Every subset of
@@ -462,10 +462,10 @@ be a convex combination of other source points. No three endpoints are collinear
 
 All actual diameter endpoints satisfy
 
-$$
+```math
 D-R\le |p-o|\le R.
 \tag{AA.4}
-$$
+```
 
 The lower bound follows from `D=|p-y|<=|p-o|+|y-o|<=|p-o|+R`.
 Since the minimum enclosing circle contains a diameter pair, `R>=D/2`; choosing
@@ -483,46 +483,46 @@ the cyclic index cut. Along this chain `x` is monotone and the polygonal graph
 Let `E` be the union of the `x` projections of sides in this chain of length at
 most `M`. For every point on such a short side with endpoints `p,q`,
 
-$$
+```math
 |(1-t)p+tq|^2
 =(1-t)|p|^2+t|q|^2-t(1-t)|p-q|^2
 \in[r^2-M^2/4,R^2].
 \tag{AA.5}
-$$
+```
 
 Put `H_M=H+M^2/4`. If `x_1<x_2` both belong to `E` and `x_1>=Ra`, then
 `|f(x_i)|<=R` and the Lipschitz bound give
 
-$$
+```math
 \begin{aligned}
 |(x_2,f(x_2))|^2-|(x_1,f(x_1))|^2
 &\ge x_2^2-x_1^2-2Ra(x_2-x_1)\\
 &=(x_2-Ra)^2-(x_1-Ra)^2\\
 &\ge(x_2-x_1)^2.
 \end{aligned}
-$$
+```
 
 Both squared radii belong to the interval in AA.5, so
 `diam(E intersect [Ra,infinity))<=sqrt(H_M)`. Reversing signs gives the same
 bound on `E intersect (-infinity,-Ra]`. The remaining part lies in an interval
 of length `2Ra`. Therefore
 
-$$
+```math
 |E|\le2Ra+2\sqrt{H_M}.
-$$
+```
 
 The projected short sides have disjoint interiors by monotonicity. The ratio of
 side length to its projected length is at most `sec(alpha)`. Consequently the
 **total length of short sides**, including sides separated by arbitrarily long
 sides in this same normal interval, is at most
 
-$$
+```math
 \boxed{
 \mathcal L_{\rm short}
 \le2\sec\alpha\left[R\tan\alpha+\sqrt{H+M^2/4}\right].
 }
 \tag{AA.6}
-$$
+```
 
 This is where disk containment is avoided. A long missing arc cannot be replaced
 by short edges for free; its interior is outside `E`. No vertex is silently
@@ -533,26 +533,26 @@ inserted in the middle of a long side.
 Let `F(t)` count the nonzero lattice vectors of length at most `t`. Disjoint
 radius-`1/2` disks around lattice points show
 
-$$
+```math
 F(t)\le4(t+1/2)^2\le9t^2\qquad(t\ge1),
-$$
+```
 
 while `F(t)=0` for `t<1`. Integration by parts for the step function gives
 
-$$
+```math
 \sum_{0<|w|\le T}{1\over|w|}
 ={F(T)\over T}+\int_1^T{F(t)\over t^2}\,dt
 \le18T.
-$$
+```
 
 Since `2epsilon<=1/4` and `|w|>=1`,
 
-$$
+```math
 \boxed{
 \sum_{0<|w|\le T}{1\over |w|-2\epsilon}\le24T.
 }
 \tag{AA.7}
-$$
+```
 
 No angle or determinant hypothesis on the lattice is used beyond minimum spacing.
 
@@ -568,10 +568,10 @@ For each vertex `p_i` choose a lattice site `z_i` within `epsilon`.
 These sites are distinct because `|p_i-p_j|>=1>2epsilon`. For a directed side
 `d_i=p_{i+1}-p_i` of length at most `M`, let `w_i=z_{i+1}-z_i`. Then
 
-$$
+```math
 0<|w_i|\le T,\qquad |d_i-w_i|\le2\epsilon,
 \qquad |d_i|\ge |w_i|-2\epsilon.
-$$
+```
 
 The angle between `d_i` and `w_i` is at most `alpha=arcsin(2epsilon)`:
 its sine is at most `2epsilon/|d_i|<=2epsilon`, and their scalar product is
@@ -580,9 +580,9 @@ positive because `|w_i|>=1` and `2epsilon<=1/4`.
 For each fixed directed lattice vector `w`, the normals of all assigned short
 sides lie in one interval of half-width `alpha`. By AA.6, their number is at most
 
-$$
+```math
 {2\sec\alpha[R\tan\alpha+\sqrt{H+M^2/4}]\over|w|-2\epsilon}.
-$$
+```
 
 Sum using AA.7. There are fewer than `pi D/M` remaining sides of length greater
 than `M`. The number of sides equals `|S|`. This proves AA.1. Overlap between
@@ -592,20 +592,20 @@ different normal intervals merely overcounts length, which is harmless.
 
 With `r=D-R`, `H=eta D^2`. For `epsilon<=1/8`,
 
-$$
+```math
 T\le{5M\over4},\quad
 \sec\alpha\le{4\over\sqrt{15}},\quad
 \sec\alpha\tan\alpha\le{32\epsilon\over15},\quad
 \sqrt{H+M^2/4}\le D\sqrt\eta+M/2.
-$$
+```
 
 Substitution in AA.1, with `R<=D`, yields the slightly rounded bound
 
-$$
+```math
 {|S|\over D}
 \le{\pi\over M}+128M\epsilon+62M\sqrt\eta+31M^2/D.
 \tag{AA.8}
-$$
+```
 
 Set `t=epsilon+sqrt(eta)`. If `0<t<=1`, choose
 `M=min(t^(-1/2),D^(1/3))`; if `t=0`, choose `M=D^(1/3)`.
@@ -616,9 +616,9 @@ If `t>1`, the elementary bound `|S|<=pi D` already implies AA.2.
 
 Canonical FS.1 gives
 
-$$
+```math
 \eta<2\,3^{1/4}D^{-1/2}.
-$$
+```
 
 Since `3^(1/4)<4/3` and `(13/10)^4>8/3`,
 `(2*3^(1/4))^(1/4)<13/10`, and `132*13/10<172`.
@@ -629,44 +629,44 @@ This proves AA.3 with all constants retained.
 Let `B` be the positively diameter-loaded endpoints of the canonical normalized
 triangle-free C-II source, and `q=|B|`. C30/C34 gives
 
-$$
+```math
 q\ge(\lceil D\rceil+2)/2.
-$$
+```
 
 For any collection of `K` translated lattices of minimum spacing at least one,
 let `m` count the endpoints farther than `epsilon` from **all** these lattices.
 Apply DS.2 to the subset covered by each lattice and use the union bound:
 
-$$
+```math
 \boxed{
 m\ge q-K[128D\sqrt\epsilon+33D^{2/3}].
 }
 \tag{DS.3}
-$$
+```
 
 In particular, for fixed `K` and `epsilon_D -> 0`,
 
-$$
+```math
 m\ge q-o(D)\ge(1/2-o(1))D.
 \tag{DS.4}
-$$
+```
 
 Using DS.2L gives the additional finite inequality
 
-$$
+```math
 \boxed{
 m\ge q-136KD\epsilon(1+\log(1/\epsilon))-33KD^{2/3}.
 }
 \tag{DS.5}
-$$
+```
 
 Therefore even a growing atlas covers only `o(D)` endpoints if
 
-$$
+```math
 K_D=o(D^{1/3}),\qquad
 K_D\epsilon_D(1+\log(1/\epsilon_D))=o(1).
 \tag{DS.6}
-$$
+```
 
 For example, `K_D=O(D^(1/4))` and `epsilon_D=O(D^(-1/3))` meet DS.6. The
 unweighted-angle DS.2 does not eliminate that regime. This changes the allowed
@@ -684,17 +684,17 @@ directed side in any oriented vector direction. Consequently it has at most
 `9M^2` sides of length at most `M`, and at most `pi D/M` longer sides. Choosing
 `M=D^(1/3)` gives
 
-$$
+```math
 |S|\le(9+\pi)D^{2/3}<13D^{2/3}.
 \tag{AA.11}
-$$
+```
 
 Thus an exact lattice atlas covering the entire canonical `B` needs
 
-$$
+```math
 \boxed{K\ge D^{1/3}/26.}
 \tag{AA.12}
-$$
+```
 
 This is an elementary lattice-polygon bound proved here, not an imported
 equality/uniqueness or lattice-optimality theorem. It also does not assume that
@@ -751,10 +751,10 @@ No ZR/ZF matrix is extended over isolated points.
 
 For integer `N>=2`, put `epsilon=N^(-2)` and
 
-$$
+```math
 p_i=(i,i^2/N^4),\qquad -N\le i\le N.
 \tag{AA.R1}
-$$
+```
 
 All `2N+1` points are strict extreme vertices of their hull: consecutive slopes
 are `(2i+1)/N^4` and increase strictly, and the closing chord is horizontal at

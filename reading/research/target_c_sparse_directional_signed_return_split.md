@@ -28,26 +28,27 @@ the total rhombus area.  Every rhombus is the crossing of exactly two complete t
 
 Partition the bad trains as
 
-$$
+```math
 \mathcal B=\mathcal B_s\cup\mathcal B_d,
-$$
+```
 
 where
 
 - `B_s` is a **sparse** class, controlled by total cardinality
   `N_s=|B_s|`; and
 - `B_d` is a **directional** class, controlled by
-  $$
+  ```math
   M_d(\epsilon)
   :=\max_I |\{\tau\in\mathcal B_d:\phi_\tau\in I\}|,
-  $$
+  
+  ```
   where `I` ranges over projective direction intervals of width `epsilon`.
 
 Let
 
-$$
+```math
 \Delta=\sum_R(\varphi_R-\pi/3)
-$$
+```
 
 be the total acute-angle excess of the rhombi.  Let `A_gg` be the total area of
 rhombi whose two crossing trains are good.
@@ -56,14 +57,14 @@ rhombi whose two crossing trains are good.
 
 For every `0<epsilon<pi/6`,
 
-$$
+```math
 \boxed{
 A_{gg}
 \ge
 A_4-dN_s-2|\mathcal T|M_d(\epsilon)-{\Delta\over\epsilon}.
 }
 \tag{1.1}
-$$
+```
 
 ### Proof
 
@@ -73,17 +74,17 @@ First remove every rhombus incident to a sparse bad train.  For one complete tra
 line.  Summing along `tau` telescopes to the transverse separation of its two terminal
 parallel lines, hence
 
-$$
+```math
 \sum_{R\ni\tau}\operatorname{area}(R)\le d.
 \tag{1.2}
-$$
+```
 
 Therefore the total area of rhombi incident to at least one train in `B_s` is at most
 
-$$
+```math
 dN_s.
 \tag{1.3}
-$$
+```
 
 Now work in the remaining rhombi, so every surviving bad incident train belongs to
 `B_d`.  Fix the other crossing train.  If a crossing has angle in
@@ -91,9 +92,9 @@ Now work in the remaining rhombi, so every surviving bad incident train belongs 
 intervals of width `epsilon`; hence there are at most `2M_d(epsilon)` such crossings
 for that fixed other train.  Summing over all complete trains gives at most
 
-$$
+```math
 2|\mathcal T|M_d(\epsilon)
-$$
+```
 
 near-`pi/3` rhombi incident to `B_d`.  This may overcount and is therefore safe.
 Every remaining bad rhombus has angular excess greater than `epsilon`, so there are at
@@ -107,7 +108,7 @@ Under the same injective physical endpoint assignment as hostile-audited §117, 
 `E` be the route excess available to trains with two good ends.  The three-host
 return theorem and its area transport proof give
 
-$$
+```math
 \boxed{
 dE
 \ge(2-\sqrt3)
@@ -116,7 +117,7 @@ A_4-dN_s-2|\mathcal T|M_d(\epsilon)-{\Delta\over\epsilon}
 \right]_+.
 }
 \tag{1.4}
-$$
+```
 
 Nothing in the proof changes the route-assignment multiplicity: every good endpoint
 is still assigned to one exact physical boundary occurrence, and every sparse bad
@@ -128,34 +129,34 @@ train is removed before any good-good return is counted.
 
 Use the exact §118 slack simplex
 
-$$
+```math
 \boxed{x+y+z+w=\sigma,}
-$$
+```
 
 with
 
-$$
+```math
 x=U-|S|,
 \quad y=|S|-2\alpha,
 \quad z=2\alpha-C,
 \quad w=C-M.
-$$
+```
 
 Pass to the common subsequence used by the corrected sharp §118 companion and write
 `q,c,s_0` for the normalized limits of `Q_D,c_D,s_D`.  Then
 
-$$
+```math
 2s_0+c+q\le z,
 \qquad q+c\le z.
 \tag{2.1}
-$$
+```
 
 Also put
 
-$$
+```math
 C_{tail}\le{x\over2}+{5\over3}w.
 \tag{2.2}
-$$
+```
 
 ### Sparse endpoint classes
 
@@ -170,26 +171,26 @@ per train:
 
 The first three classes total
 
-$$
+```math
 (4z+5q+6c+C_{tail})D+o(D).
-$$
+```
 
 Since `q+c<=z`,
 
-$$
+```math
 5q+6c\le6z,
-$$
+```
 
 so after adding the tiny spans,
 
-$$
+```math
 \boxed{
 {N_s\over D}
 \le
 10z+{x\over2}+{25\over3}w+o(1).
 }
 \tag{2.3}
-$$
+```
 
 This is a **total-count** estimate, not a directional supremum.
 
@@ -199,7 +200,7 @@ Leave only the regular two-edge tooth endpoints in `B_d`.  The audited tangent-w
 and bathtub argument of §118 gives, after `D->infinity` and then
 `epsilon->0`,
 
-$$
+```math
 \boxed{
 \lim_{\epsilon\downarrow0}\limsup_D
 {M_d(\epsilon)\over D}
@@ -207,11 +208,11 @@ $$
 Q_{tooth}(y)+y+2C_{tail}
 }
 \tag{2.4}
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{
 \lim_{\epsilon\downarrow0}\limsup_D
 {M_d(\epsilon)\over D}
@@ -219,14 +220,14 @@ $$
 Q_{tooth}(y)+y+x+{10\over3}w.
 }
 \tag{2.5}
-$$
+```
 
 Here `Q_tooth(y)` is the unique nonnegative solution of
 
-$$
+```math
 \sin Q+\sqrt3(1-\cos Q)-Q={y\over2}.
 \tag{2.6}
-$$
+```
 
 This is the key separation: `z` no longer appears inside the directional
 concentration term.
@@ -238,38 +239,38 @@ concentration term.
 Keep the sharper correlated quantities rather than immediately replacing them by
 `sigma`.  Put
 
-$$
+```math
 r=x+{10\over3}w.
-$$
+```
 
 The corrected §118 circular-segment argument gives the normalized carrier-area floor
 
-$$
+```math
 \boxed{
 A_*(x,w)
 ={\pi\over4}
 -G(\theta)-2G(\phi_8+r)-G(r),
 }
 \tag{3.1}
-$$
+```
 
 where `G(t)=(t-sin t)/8`.
 
 The exact retained train ceiling is
 
-$$
+```math
 \boxed{
 C_T(x,y,z)=U-x-y+2z.
 }
 \tag{3.2}
-$$
+```
 
 The three principal-route excess satisfies
 
-$$
+```math
 {E_D\over D}\le z+o(1),
 \tag{3.3}
-$$
+```
 
 and the carrier diameter is `d_D/D->lambda=sin(theta/2)`.
 
@@ -277,7 +278,7 @@ Combining Lemma 1.1 with (2.3)--(2.5), canonical `Delta_D=O(D)`, local rhombic
 saturation, and hostile-audited signed return gives the following necessary condition
 for every survivor in the common §118 stability window:
 
-$$
+```math
 \boxed{
 \begin{aligned}
 \lambda z
@@ -289,7 +290,7 @@ $$
 \end{aligned}
 }
 \tag{3.4}
-$$
+```
 
 Equation (3.4) is strictly stronger than putting all bad classes into one
 `2 T M_bad` term.  In particular, the route/face slack `z` now removes rhombic area at

@@ -13,22 +13,22 @@ current canonical Section-62 harmonic trapping and planar attachment-incidence t
 
 For distinct unloaded positive-contact components `I_r,I_s`, let
 
-$$
+```math
 A_r,A_s\subset B,
 \qquad
 P_r:=\operatorname{conv}(A_r),
 \qquad
 P_s:=\operatorname{conv}(A_s).
-$$
+```
 
 The main theorem is
 
-$$
+```math
 \boxed{
 \operatorname{int}P_r\cap\operatorname{int}P_s=\varnothing
 \qquad(r\ne s).
 }
-$$
+```
 
 Thus harmonic attachment cells are actual pairwise interior-disjoint convex cells, not
 merely abstract response containers. In the rhombic-saturation branch of Section 79,
@@ -45,10 +45,10 @@ Retain canonical Section-62 notation. The loaded set `B` is the vertex set of th
 convex force hull `F`. For every unloaded component `I_r`, its distinct loaded
 attachment set `A_r` has at least three vertices and harmonic trapping gives
 
-$$
+```math
 I_r\subset P_r:=\operatorname{conv}(A_r)\subset F.
 \tag{83.1}
-$$
+```
 
 Every member of `A_r` is an extreme vertex of `F` and remains an extreme vertex of
 `P_r`.
@@ -100,42 +100,42 @@ For distinct `r,s`, neither `P_r subseteq P_s` nor `P_s subseteq P_r` is possibl
 
 Assume `P_s subseteq P_r`. Let `b in A_s`. If `b notin A_r`, then
 
-$$
+```math
 A_r\subset B\setminus\{b\}.
-$$
+```
 
 Since `b` is an extreme vertex of `F=conv(B)`,
 
-$$
+```math
 b\notin\operatorname{conv}(B\setminus\{b\}),
-$$
+```
 
 and therefore `b notin conv(A_r)=P_r`, contradicting `P_s subseteq P_r`. Hence
 
-$$
+```math
 A_s\subseteq A_r.
 \tag{83.2}
-$$
+```
 
 Canonical harmonic trapping gives `|A_s|>=3`. Choose three distinct shared attachment
 vertices. Contract `I_r` and `I_s` to two interior incidence nodes and retain one edge
 from each node to each of those three loaded vertices. This is a connected bipartite
 plane incidence subgraph with
 
-$$
+```math
 q_j=3,
 \qquad
 c_j=2,
 \qquad
 e_j=6,
-$$
+```
 
 and all three loaded-side vertices lie on the outer face. The canonical Section-62
 planar incidence bound gives
 
-$$
+```math
 e_j\le q_j+2c_j-2=5,
-$$
+```
 
 contradicting `e_j=6`. `square`
 
@@ -143,12 +143,12 @@ contradicting `e_j=6`. `square`
 
 For all distinct harmonic components,
 
-$$
+```math
 \boxed{
 \operatorname{int}P_r\cap\operatorname{int}P_s=\varnothing.
 }
 \tag{83.3}
-$$
+```
 
 ### Proof
 
@@ -160,13 +160,13 @@ interiors are disjoint.
 
 Since every `P_r subset F`, finite additivity gives
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{area}(P_r)
 \le\operatorname{area}(F).
 }
 \tag{83.4}
-$$
+```
 
 This conclusion holds in every post-ZF C-II branch.
 
@@ -174,48 +174,48 @@ This conclusion holds in every post-ZF C-II branch.
 
 Canonical Section 62 already gives
 
-$$
+```math
 \sum_r\operatorname{per}(P_r)
 \le
 \pi\bigl(2+2q-e_{BB}-k\bigr)
 =O(D),
 \qquad k=d_H+s_Z.
 \tag{83.5}
-$$
+```
 
 By the planar isoperimetric inequality,
 
-$$
+```math
 2\sqrt{\pi\operatorname{area}(P_r)}
 \le\operatorname{per}(P_r).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \sum_r\sqrt{\operatorname{area}(P_r)}=O(D).
 }
 \tag{83.6}
-$$
+```
 
 This has the standard macroscopic-tail consequence. For fixed `eta>0`, let
 
-$$
+```math
 \mathcal S_\eta:=
 \{r:\operatorname{area}(P_r)<\eta D^2\}.
-$$
+```
 
 Then
 
-$$
+```math
 \sum_{r\in\mathcal S_\eta}\operatorname{area}(P_r)
 \le
 \sqrt\eta D
 \sum_r\sqrt{\operatorname{area}(P_r)}
 =O(\sqrt\eta\,D^2).
 \tag{83.7}
-$$
+```
 
 Thus whenever the total cell area is quadratic, after first choosing `eta` small only
 boundedly many macroscopic cells carry all but an arbitrarily small fraction of it.
@@ -225,10 +225,10 @@ boundedly many macroscopic cells carry all but an arbitrarily small fraction of 
 Now assume the rhombic-saturation branch of canonical Section 79 (equivalently the
 full-core branch of canonical Section 80):
 
-$$
+```math
 A_4=\operatorname{area}(F)-o(D^2),
 \tag{83.8}
-$$
+```
 
 where `A_4` is the total area of all bounded strict unit-rhombus contact faces.
 
@@ -236,19 +236,19 @@ Let `A_4^0` be the total area of those strict rhombi that are incident to no loa
 vertex. A loaded vertex has positive-contact degree at most three. The number of
 quadrilateral faces incident to the loaded set is therefore at most
 
-$$
+```math
 \sum_{b\in B}\deg_C(b)
 \le3q
 \le3\pi D.
 \tag{83.9}
-$$
+```
 
 Every unit rhombus has area at most one, so
 
-$$
+```math
 \boxed{A_4-A_4^0=O(D).}
 \tag{83.10}
-$$
+```
 
 Every rhombus counted by `A_4^0` has all four vertices unloaded. Its four contact
 edges form a connected cycle, so all four vertices lie in one unloaded component
@@ -257,53 +257,53 @@ edges form a connected cycle, so all four vertices lie in one unloaded component
 Because the cell interiors are pairwise disjoint, these rhombi are assigned to cells
 without area overlap. Consequently
 
-$$
+```math
 \sum_r\operatorname{area}(P_r)
 \ge A_4^0.
 \tag{83.11}
-$$
+```
 
 Combine (83.4), (83.8), (83.10), and (83.11):
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{area}(P_r)
 =\operatorname{area}(F)-o(D^2).
 }
 \tag{83.12}
-$$
+```
 
 Hence the harmonic attachment cells asymptotically tile the force hull in area.
 
 There is an additive local form. Let `A_{4,r}` be the total area of the unloaded-only
 strict-rhombus faces belonging to `I_r`. Then
 
-$$
+```math
 \sum_rA_{4,r}=A_4^0
-$$
+```
 
 and each `A_{4,r}<=area(P_r)`. Therefore
 
-$$
+```math
 \boxed{
 \sum_r
 \left(\operatorname{area}(P_r)-A_{4,r}\right)
 =o(D^2).
 }
 \tag{83.13}
-$$
+```
 
 Every summand is nonnegative. Thus for every fixed `tau>0`, the total area of cells
 whose local rhombic filling fraction is at most `1-tau` is subquadratic:
 
-$$
+```math
 \boxed{
 \sum_{\substack{r:\ A_{4,r}\le(1-\tau)\operatorname{area}(P_r)}}
 \operatorname{area}(P_r)
 =o(D^2).
 }
 \tag{83.14}
-$$
+```
 
 So asymptotically almost all attachment-cell area lies in cells that are themselves
 locally rhombus-saturated.
@@ -312,9 +312,9 @@ locally rhombus-saturated.
 
 Canonical Section 80 strengthens the no-macroscopic-inactive-container side to
 
-$$
+```math
 {\operatorname{area}(F)\over D^2}\to{\pi\over4}
-$$
+```
 
 and, after translation and scaling by `D`, the force hull converges to the diameter-one
 disk. In that branch, (83.12) and (83.7) say:

@@ -41,9 +41,9 @@ graph is simple and triangle-free under the existing stopped-train conventions.
 
 Thus the application yields
 
-$$
+```math
 \Delta_2\le\frac{x^2}{4}\sum_jS_j^2,
-$$
+```
 
 provided `T/D -> x` and `R_4/D^2 -> Delta_2` on the same subsequence. The proof does
 not silently replace a weak pair-measure support statement by atomization; the

@@ -40,82 +40,82 @@ Work in a sufficiently large lexicographically normalized triangle-free C-II sur
 
 C65 makes `H` the full actual diameter graph. Hopf--Pannwitz and the force-hull perimeter bound give
 
-$$
+```math
 |H|\le |B|\le\pi D.
 \tag{1.1}
-$$
+```
 
 Let `T` be the contact bridge-block tree. For `g=ab in H`, write
 
-$$
+```math
 \ell(g)=d_T(\tau(a),\tau(b)),
 \tag{1.2}
-$$
+```
 
 the number of physical contact bridges on its route.
 
 ZBD rewrites C23's rooted layer-cake identity as
 
-$$
+```math
 \sum_{e\text{ bridge}}w_e
 =
 \sum_{g\in H}\beta_g\ell(g),
 \tag{1.3}
-$$
+```
 
 and C23 gives `alpha_e<=D w_e`. Therefore
 
-$$
+```math
 \boxed{
 S_{br}:=\sum_{e\text{ bridge}}\alpha_e
 \le
 D\sum_{g\in H}\beta_g\ell(g).
 }
 \tag{1.4}
-$$
+```
 
 C27 gives at most `2|B|-3<=2pi D-3` contact bridges, so
 
-$$
+```math
 0\le\ell(g)<2\pi D.
 \tag{1.5}
-$$
+```
 
 For component response, let `I_r` be the connected components of `C[V\setminus B]`, with attachment sets `A_r subset B`. C41 gives
 
-$$
+```math
 c_{uv}=c_{uv}^{dir}+\sum_r c_{uv}^{(r)},
 \tag{1.6}
-$$
+```
 
 where `c_{uv}^{(r)}>0` exactly when `u,v in A_r`, and a direct term occurs only for a loaded-loaded unit contact.
 
 C35.1 is unconditional in fully force-visible C-II: every loaded extreme terminal has
 
-$$
+```math
 \boxed{1\le\deg_C(b)\le3.}
 \tag{1.7}
-$$
+```
 
 Thus any loaded terminal belongs to at most three harmonic attachment sets, because distinct components touching it consume distinct contact edges.
 
 Finally C66 defines
 
-$$
+```math
 \kappa_0=\frac{2\gamma_0}{1+2\gamma_0},
 \qquad
 C_0=\frac{2\pi}{\kappa_0},
 \tag{1.8}
-$$
+```
 
 and supplies a diameter vertex `z` with
 
-$$
+```math
 \boxed{
 \sum_{g\ni z}\beta_g\ge1-C_0D\varepsilon.
 }
 \tag{1.9}
-$$
+```
 
 ---
 
@@ -123,44 +123,44 @@ $$
 
 Assume
 
-$$
+```math
 S_{br}\ge\eta D^2,
 \qquad 0<\eta\le1.
 \tag{2.1}
-$$
+```
 
 Equation (1.4) gives
 
-$$
+```math
 \sum_{g\in H}\beta_g\ell(g)\ge\eta D.
 \tag{2.2}
-$$
+```
 
 Put
 
-$$
+```math
 H_{deep}=\{g\in H:\ell(g)\ge\eta D/2\},
 \qquad
 p=\sum_{g\in H_{deep}}\beta_g.
 \tag{2.3}
-$$
+```
 
 Using (1.5),
 
-$$
+```math
 \sum_g\beta_g\ell(g)
 \le
 2\pi D\,p+\frac{\eta D}{2}(1-p).
 \tag{2.4}
-$$
+```
 
 Combining with (2.2) gives
 
-$$
+```math
 \boxed{
 p\ge p_\eta:=\frac{\eta}{4\pi-\eta}>0.}
 \tag{ZHC1}
-$$
+```
 
 So bridge dominance forces a fixed fraction of the complete normalized diameter KKT measure onto actual diameter pairs whose contact bridge-tree routes have length `Omega(D)`.
 
@@ -170,57 +170,57 @@ So bridge dominance forces a fixed fraction of the complete normalized diameter 
 
 For a diameter edge `g=uv`,
 
-$$
+```math
 M_{uv}=\beta_g-c_g.
 \tag{3.1}
-$$
+```
 
 PSD gives
 
-$$
+```math
 |M_{uv}|
 \le\sqrt{M_{uu}M_{vv}}
 \le\frac{M_{uu}+M_{vv}}2
 \le\frac{\operatorname{tr}M}{2}
 =\varepsilon.
 \tag{3.2}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{|c_g-\beta_g|\le\varepsilon\qquad(g\in H).}
 \tag{3.3}
-$$
+```
 
 Define
 
-$$
+```math
 H_{resp}=\{g\in H_{deep}:\beta_g>2\varepsilon\}.
 \tag{3.4}
-$$
+```
 
 The omitted deep edges carry at most
 
-$$
+```math
 2\varepsilon |H|\le2\pi D\varepsilon
 \tag{3.5}
-$$
+```
 
 of beta mass. Therefore
 
-$$
+```math
 \sum_{g\in H_{resp}}\beta_g
 \ge p_\eta-2\pi D\varepsilon,
 \tag{3.6}
-$$
+```
 
 and every `g in H_resp` satisfies
 
-$$
+```math
 c_g\ge\beta_g-\varepsilon>\beta_g/2>0.
 \tag{3.7}
-$$
+```
 
 ---
 
@@ -228,22 +228,22 @@ $$
 
 Let `z` be the C66 center from (1.9). The total beta mass on diameter edges not incident to `z` is at most
 
-$$
+```math
 C_0D\varepsilon.
 \tag{4.1}
-$$
+```
 
 Let
 
-$$
+```math
 \mathcal S=
 \{g\in H_{resp}:z\in g\}.
 \tag{4.2}
-$$
+```
 
 Subtracting the two exceptional masses from ZHC1 gives
 
-$$
+```math
 \boxed{
 \sum_{g\in\mathcal S}\beta_g
 \ge
@@ -251,14 +251,14 @@ R_\eta(D):=
 p_\eta-(2\pi+C_0)D\varepsilon.
 }
 \tag{ZHC2}
-$$
+```
 
 Along any hypothetical sequence with
 
-$$
+```math
 D\varepsilon\to0,
 \tag{4.3}
-$$
+```
 
 we have `R_eta(D)->p_eta>0`.
 
@@ -274,61 +274,61 @@ Thus a fixed fraction of all beta mass is simultaneously:
 
 Take `g=zy in mathcal S`. Since `|z-y|=D>1`, there is no direct loaded-loaded contact term in (1.6). Since `c_{zy}>0`, at least one harmonic component satisfies
 
-$$
+```math
 z,y\in A_r,
 \qquad
 c_{zy}^{(r)}>0.
 \tag{5.1}
-$$
+```
 
 Every such component consumes a distinct contact edge incident to `z`. By C35.1, `deg_C(z)<=3`. Therefore the complete family `mathcal S` can use at most three harmonic components in total.
 
 For each `g=zy in mathcal S`, choose a common component `r(g)` maximizing `c_g^(r)`. Since at most three component terms occur,
 
-$$
+```math
 c_g^{(r(g))}
 \ge\frac{c_g}{3}
 >\frac{\beta_g}{6}.
 \tag{5.2}
-$$
+```
 
 Pigeonhole the beta masses over the at most three possible assigned components. There is one unloaded component `I_*` and a subfamily
 
-$$
+```math
 \mathcal D_*=
 \{g\in\mathcal S:r(g)=*\}
 \tag{5.3}
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{
 \sum_{g\in\mathcal D_*}\beta_g
 \ge\frac{R_\eta(D)}3.
 }
 \tag{ZHC3}
-$$
+```
 
 Summing (5.2),
 
-$$
+```math
 \boxed{
 \sum_{g\in\mathcal D_*}c_g^{(*)}
 >
 \frac{R_\eta(D)}{18}.
 }
 \tag{ZHC4}
-$$
+```
 
 Every `g in mathcal D_*` is an actual diameter edge incident to the same center `z`, has bridge depth at least `eta D/2`, and has both endpoints in the same attachment set `A_*`.
 
 Because `mathcal D_*` is nonempty for large members of a `D epsilon->0` sequence, `A_*` contains a diameter pair and therefore
 
-$$
+```math
 \operatorname{diam}A_*=D.
 \tag{5.4}
-$$
+```
 
 No C44 near-minimal hypothesis or macroscopic-component count is used.
 
@@ -338,30 +338,30 @@ No C44 near-minimal hypothesis or macroscopic-component count is used.
 
 Let `E_*` consist of all contact edges internal to `I_*` together with its attachment contacts to `B`. C41's componentwise coordinate-energy identity gives
 
-$$
+```math
 \sum_{e\in E_*}\alpha_e
 =
 \sum_{s<t\in A_*}c_{st}^{(*)}|s-t|^2.
 \tag{6.1}
-$$
+```
 
 Every edge in `mathcal D_*` has length exactly `D`. Restricting the right-hand side,
 
-$$
+```math
 \boxed{
 \sum_{e\in E_*}\alpha_e
 >
 \frac{R_\eta(D)}{18}D^2.
 }
 \tag{ZHC5}
-$$
+```
 
 Hence if `D epsilon->0`, this one unloaded harmonic cell carries asymptotically at least
 
-$$
+```math
 \frac{p_\eta}{18}D^2
 \tag{6.2}
-$$
+```
 
 of the complete `D^2` contact-stress normalization.
 
@@ -371,52 +371,52 @@ of the complete `D^2` contact-stress normalization.
 
 The family `mathcal D_*` has at most all diameter edges, so by (1.1)
 
-$$
+```math
 |\mathcal D_*|\le\pi D.
 \tag{7.1}
-$$
+```
 
 By ZHC4, some `g_*=ab in mathcal D_*` satisfies
 
-$$
+```math
 \boxed{
  c_{ab}^{(*)}
 >
 \frac{R_\eta(D)}{18\pi D}.
 }
 \tag{7.2}
-$$
+```
 
 In a sequence with `D epsilon->0`, eventually `R_eta(D)>=p_eta/2`, and therefore
 
-$$
+```math
 \boxed{
  c_{ab}^{(*)}
 \ge
 \frac{p_\eta}{36\pi D}.
 }
 \tag{ZHC6}
-$$
+```
 
 Since `c_ab>=c_ab^(*)` and `|c_ab-beta_ab|<=epsilon`, the same asymptotic regime eventually gives
 
-$$
+```math
 \boxed{
 \beta_{ab}
 \ge
 \frac{p_\eta}{72\pi D}.
 }
 \tag{ZHC7}
-$$
+```
 
 By construction,
 
-$$
+```math
 \boxed{
 \ell(ab)\ge\frac{\eta D}{2}.
 }
 \tag{ZHC8}
-$$
+```
 
 Thus one actual Euclidean-diameter pair in one unloaded harmonic cell simultaneously has
 
@@ -436,12 +436,12 @@ A physical contact bridge on the bridge-block-tree route between `a` and `b` sep
 
 Hence every route bridge belongs to `E_*`, and ZHC8 gives
 
-$$
+```math
 \boxed{
 E_*\text{ contains at least }\eta D/2
 \text{ distinct physical contact bridges on one }a\!\text{--}\!b\text{ route}.}
 \tag{ZHC9}
-$$
+```
 
 This is the route-local structural endpoint: a single unloaded harmonic cell carries quadratic contact stress and contains a response-visible actual diameter pair whose transport path crosses linearly many global articulation edges.
 
@@ -451,12 +451,12 @@ This is the route-local structural endpoint: a single unloaded harmonic cell car
 
 For every fixed `eta>0`, the conjunction
 
-$$
+```math
 S_{br}\ge\eta D^2,
 \qquad
 D\varepsilon\to0
 \tag{9.1}
-$$
+```
 
 forces one unloaded component `I_*` with all of the following:
 

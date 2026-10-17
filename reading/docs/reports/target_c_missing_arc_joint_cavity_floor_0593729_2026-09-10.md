@@ -20,14 +20,14 @@
 
 Let `rho` be the unique positive solution of
 
-$$
+```math
 \rho=\cos\rho.
-$$
+```
 
 The force-hull missing-arc theorem couples diameter density, actual perimeter, and area.
 Inserting that joint constraint into the actual-perimeter JC cavity inequality gives
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
@@ -36,11 +36,11 @@ $$
 =0.5937285472681860970\ldots .
 }
 \tag{MJ.1}
-$$
+```
 
 The constant is the positive root of
 
-$$
+```math
 \boxed{
 (\pi^2+1)\lambda^2
 +4\rho\lambda
@@ -49,19 +49,19 @@ $$
 =0.
 }
 \tag{MJ.2}
-$$
+```
 
 Unlike the preceding CAP/CQ floors, the global minimizer of the feasible region is now
 at the **existing DB lower endpoint**
 
-$$
+```math
 \boxed{
 \frac hD\to2\rho,
 \qquad
 \frac{\operatorname{per}F}{D}\to4\rho
 }
 \tag{MJ.3}
-$$
+```
 
 when equality is approached. The new value strictly improves
 `0.5933858947681038...`.
@@ -72,45 +72,45 @@ when equality is approached. The new value strictly improves
 
 Pass to a convergent post-ZF survivor subsequence and write
 
-$$
+```math
 \lambda=\lim\frac{e_{BB}+2s_C}{D},
 \qquad
 y=\lim\frac hD,
 \qquad
 p=\lim\frac{\operatorname{per}F}{D}.
 \tag{1.1}
-$$
+```
 
 MA gives
 
-$$
+```math
 y\in[2\rho,\pi],
 \qquad
 p\ge p_0(y):=y+2\cos(y/2),
 \tag{1.2}
-$$
+```
 
 and
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 \Phi(y)+s(y)[p-p_0(y)],
 \tag{1.3}
-$$
+```
 
 where
 
-$$
+```math
 \Phi(y)=\frac{y+\sin y}{4},
 \qquad
 s(y)=\cos^3\left(\frac{\pi-y}{4}\right)>\frac34.
 \tag{1.4}
-$$
+```
 
 GU's attachment-cell estimate and JC's actual-perimeter cavity bound therefore imply
 
-$$
+```math
 \boxed{
 Q_M(y,p,\lambda):=
 (\pi^2+1)\lambda^2
@@ -120,14 +120,14 @@ Q_M(y,p,\lambda):=
 \ge0,
 }
 \tag{1.5}
-$$
+```
 
 with
 
-$$
+```math
 m(y,p)=\min\{y,p-y\}.
 \tag{1.6}
-$$
+```
 
 For fixed `(y,p)`, `Q_M` is strictly increasing in `lambda>=0`. As before, its positive
 threshold root is below `pi`, because the actual force-hull area is at most `pi/4` and
@@ -139,67 +139,67 @@ substitution `lambda=pi` is far on the positive side of the necessary inequality
 
 The Dottie equation makes the comparison exact. Since the function
 
-$$
+```math
 x\mapsto x-\cos x
-$$
+```
 
 is strictly increasing on `[0,pi/2]` and vanishes at `rho`, for every
 `y>=2rho`,
 
-$$
+```math
 \frac y2\ge\rho=\cos\rho\ge\cos(y/2).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 p_0(y)=y+2\cos(y/2)\le2y,}
 \tag{2.1}
-$$
+```
 
 with equality only at `y=2rho`.
 
 Thus for
 
-$$
+```math
 p_0(y)\le p\le\min\{2y,\pi\},
-$$
+```
 
 we have `m=p-y`. At the threshold root, `lambda<pi` and `m<=pi/2`. Differentiate
 (1.5) in `p`:
 
-$$
+```math
 \partial_pQ_M
 =2(\lambda+m)-4\pi s(y).
 \tag{2.2}
-$$
+```
 
 Since `s(y)>3/4`,
 
-$$
+```math
 \partial_pQ_M
 <3\pi-3\pi=0.
 \tag{2.3}
-$$
+```
 
 Because `Q_M` increases in `lambda`, a negative `partial_pQ_M` means the threshold
 root **increases** with `p`.
 
 If `p>=2y`, then `m=y` and
 
-$$
+```math
 \partial_pQ_M=-4\pi s(y)<0,
 \tag{2.4}
-$$
+```
 
 so the threshold continues to increase. Hence for every fixed `y`, the survivor's
 most favorable perimeter is the smallest one MA permits:
 
-$$
+```math
 \boxed{p=p_0(y).}
 \tag{2.5}
-$$
+```
 
 This is the key gain over the independent FSDB/CAP/CQ bounds.
 
@@ -209,14 +209,14 @@ This is the key gain over the independent FSDB/CAP/CQ bounds.
 
 At `p=p_0(y)`, the MA area is exactly `Phi(y)`, and by (2.1)
 
-$$
+```math
 m(y,p_0(y))=p_0(y)-y=2\cos(y/2).
 \tag{3.1}
-$$
+```
 
 Thus the threshold equation reduces to
 
-$$
+```math
 \boxed{
 R(y,\lambda):=
 (\pi^2+1)\lambda^2
@@ -226,11 +226,11 @@ R(y,\lambda):=
 =0.
 }
 \tag{3.2}
-$$
+```
 
 Differentiate at fixed `lambda`:
 
-$$
+```math
 \begin{aligned}
 \partial_yR
 &=
@@ -240,23 +240,23 @@ $$
 \qquad(2\rho\le y\le\pi).
 \end{aligned}
 \tag{3.3}
-$$
+```
 
 The derivative in `lambda` is positive. Hence the positive threshold root is strictly
 increasing in `y`.
 
 Therefore the entire MA/JC feasible region has its global minimum at
 
-$$
+```math
 \boxed{y=2\rho.}
 \tag{3.4}
-$$
+```
 
 At this endpoint, `cos rho=rho`, so
 
-$$
+```math
 p_0(2\rho)=2\rho+2\cos\rho=4\rho,
-$$
+```
 
 and (3.2) becomes exactly MJ.2. This proves MJ.1. `square`
 
@@ -267,46 +267,46 @@ and (3.2) becomes exactly MJ.2. This proves MJ.1. `square`
 Every monotonicity used above is strict away from the displayed minimizer. Hence any
 survivor sequence approaching `lambda_MAJC` must satisfy
 
-$$
+```math
 \boxed{
 \frac hD\to2\rho,
 \qquad
 \frac{\operatorname{per}F}{D}\to4\rho.
 }
 \tag{4.1}
-$$
+```
 
 The JC relaxation
 
-$$
+```math
 \frac{e_{BB}}D\le
 \frac{e_{BB}+2s_C}{D}
-$$
+```
 
 must also saturate. Therefore
 
-$$
+```math
 \boxed{
 \frac{e_{BB}}D\to\lambda_{MAJC},
 \qquad
 \frac{s_C}{D}\to0.
 }
 \tag{4.2}
-$$
+```
 
 Numerically,
 
-$$
+```math
 2\rho=1.4781702664303212833\ldots,
-$$
+```
 
-$$
+```math
 4\rho=2.9563405328606425666\ldots,
-$$
+```
 
-$$
+```math
 \lambda_{MAJC}=0.5937285472681860970\ldots .
-$$
+```
 
 The force-hull missing-arc budget must simultaneously saturate: its retained projective
 circle set has measure `2rho`, its missing set has total measure `pi-2rho`, and the
@@ -319,12 +319,12 @@ This sharply identifies the next equality structure to audit.
 
 The explicit report-level post-ZF lower floor now satisfies
 
-$$
+```math
 0.5882283437736394
 <0.5932351999620735
 <0.5933858947681038
 <\boxed{0.5937285472681861}.
-$$
+```
 
 More important than the decimal is the endpoint collapse. Instead of an interior
 `(y,p)` crossover, every near-extremal survivor is forced to the DB lower-density

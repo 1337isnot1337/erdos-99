@@ -41,18 +41,18 @@ Those hypotheses, or a genuinely nonlocal relocation, are the repaired obligatio
 
 Choose any rational
 
-$$
+```math
 0<t\le1/40,\qquad
 a={1-t^2\over1+t^2},\qquad b={2t\over1+t^2},\qquad
 r=a+b,\qquad R=r+1.
-$$
+```
 
 Then a^2+b^2=1, a>0.99, 0<b<1/20, r>1, and R>2.
 Take these thirteen points:
 
-- four inner axial points ($\pm r,0$), ($0,\pm r$);
-- four corners ($\pm a,\pm a$);
-- four outer axial points ($\pm R,0$), ($0,\pm R$);
+- four inner axial points ($`\pm r,0`$), ($`0,\pm r`$);
+- four corners ($`\pm a,\pm a`$);
+- four outer axial points ($`\pm R,0`$), ($`0,\pm R`$);
 - the contact isolate z=(0,0).
 
 The inner axial points and corners, in alternating cyclic order, form a convex
@@ -69,9 +69,9 @@ bipartite and triangle-free.
 
 The convex hull is the outer diamond F:
 
-$$
+```math
 |x|+|y|\le R.
-$$
+```
 
 The ring lies strictly in it because 2a<R. The full diameter is D=2R,
 with exactly the two opposite outer pairs as actual diameters. Ring-ring and
@@ -88,9 +88,9 @@ the core move below.
 
 Move only the right inner point (r,0) and its outer endpoint (R,0) by
 
-$$
+```math
 \Delta=(-2b,0),\qquad s=2b.
-$$
+```
 
 Their new positions are (a-b,0) and (a-b+1,0). The spoke stays unit.
 The two ring contacts at the right inner point now have vectors (b,a) and
@@ -111,9 +111,9 @@ old-contact-preserving upper-feasible move, with one actual diameter removed.
 
 It is inside the ultrasmall regime:
 
-$$
+```math
 s<0.1,\qquad D<4.1,\qquad 2sD<0.82<1,
-$$
+```
 
 so s<1/(2D)<D-sqrt(D^2-1). These are strict finite bounds for the stated
 parameter interval, not numerical approximations to feasibility.
@@ -122,18 +122,18 @@ parameter interval, not numerical approximations to feasibility.
 
 Write c=a-b>0. The four post-move inner axial points are
 
-$$
+```math
 L=(-r,0),\quad U=(0,r),\quad P=(c,0),\quad V=(0,-r).
-$$
+```
 
 Their quadrilateral contains the closed radius-1/2 disk about the origin.
 The distances from the origin to its four sides are r/sqrt(2) and
 
-$$
+```math
 {cr\over\sqrt{c^2+r^2}}
 ={a^2-b^2\over\sqrt2}
 ={1-2b^2\over\sqrt2},
-$$
+```
 
 both strictly greater than 1/2.
 
@@ -144,11 +144,11 @@ one. All three squared circumcenter-vertex distances equal a^2+b^2=1.
 Every point p in either triangle is within one of a vertex. Explicitly,
 if p=sum_i lambda_i v_i is a convex combination of its vertices, then
 
-$$
+```math
 \sum_i\lambda_i|p-v_i|^2
 =\sum_i\lambda_i|v_i-z_\pm|^2-|p-z_\pm|^2
 =1-|p-z_\pm|^2\le1.
-$$
+```
 
 If all three distances were at least one, this forces p=z_\pm.
 Conversely z_\pm lie in their triangles (b<a) and are unit from all three
@@ -163,10 +163,10 @@ corner distance is sqrt(2)(a-b)>1; their outer-point distances are at least
 R-sqrt(2)b>1. Each creates exactly three new contacts with inner axial vertices
 and no unit triangle. Thus in these full-source endpoints,
 
-$$
+```math
 |C_{\rm old}|=12,\quad |H_{\rm old}|=2,\qquad
 |C_{\rm new}|=15,\quad |H_{\rm new}|=1.
-$$
+```
 
 Reducing diameter-pair count after increasing contact count does not contradict
 the canonical lexicographic normalization. A new equality at one is a blocking
@@ -223,26 +223,26 @@ Now restore one canonical local hypothesis rather than asserting a uniform
 repair. Suppose p has five actual unit-contact neighbors in a triangle-free
 unit-separated source, and another source point z satisfies
 
-$$
+```math
 1<|p-z|\le1+s,\qquad 0<s\le1/4.
-$$
+```
 
 There are exactly four consecutive contact-neighbor pairs whose angular gaps
 at p do not contain the ray pz. Call those gaps g_1,...,g_4. They satisfy
 
-$$
+```math
 g_i>\pi/3,\qquad
 \sum_{i=1}^4(g_i-\pi/3)
 \le\eta(s):=2\left({\pi\over3}
 -\arccos{1+s\over2}\right)
 \le{4s\over3}.                                      \tag{1}
-$$
+```
 
 Consequently the four corresponding strict source-pair lengths l_i obey
 
-$$
+```math
 1<l_i,\qquad \sum_{i=1}^4(l_i-1)\le{4s\over3}.       \tag{2}
-$$
+```
 
 This is an actual contact-star conclusion: each pair in (2) is joined to p
 by two original unit contacts. No near pair is assigned a KKT multiplier.
@@ -265,10 +265,10 @@ A positive equilibrium at p does not change this last limit into an exact
 triangle. For rational 0<h<=1/1000 put epsilon=2arctan(h), r_*=1+10h, and choose
 five unit vectors at the angles
 
-$$
+```math
 \pi/3-2\epsilon,\quad 2\pi/3-\epsilon,\quad \pi,\quad
 4\pi/3+\epsilon,\quad 5\pi/3+2\epsilon.
-$$
+```
 
 Add p=0 and z=(r_*,0). All four ordinary contact gaps are pi/3+epsilon.
 The remaining gap is 2pi/3-4epsilon. All source pairs are unit-separated;

@@ -33,28 +33,28 @@ Therefore CP2.2 (both diameter components are paths) and CP2.3 (each component l
 
 Let one diameter-tree component have projectively ordered edges
 
-$$
+```math
 e_1,e_2,\ldots,e_m.
-$$
+```
 
 The valid output of CP2 Section 4 is
 
-$$
+```math
 \boxed{e_i\cap e_{i+1}\ne\varnothing\quad(1\le i<m).}
 \tag{A.1}
-$$
+```
 
 This gives a Hamiltonian path through the corresponding vertices of the line graph, but it does not orient the original edges into an Euler trail.
 
 To obtain a trail one needs the additional endpoint-alternation property
 
-$$
+```math
 \boxed{
 (e_{i-1}\cap e_i)\ne(e_i\cap e_{i+1})
 \quad(1<i<m).
 }
 \tag{A.2}
-$$
+```
 
 No proof of A.2 appears in CP2.
 
@@ -64,29 +64,29 @@ The exact minimum projective gap is compatible with a same-center fan.
 
 Fix `D>1` and
 
-$$
+```math
 \delta=2\arcsin\frac1{2D}.
-$$
+```
 
 Take a point `v` and three points `a,b,c` on the radius-`D` circle centered at `v`, with consecutive angular separations `delta`. Then
 
-$$
+```math
 |va|=|vb|=|vc|=D,
-$$
+```
 
 while
 
-$$
+```math
 |a-b|=|b-c|=1.
-$$
+```
 
 Thus the three oriented diameter states can occur at consecutive radius-`D` directions with exactly the unit Minkowski-step metric used in CP2 Section 4, yet the consecutive edge pairs
 
-$$
+```math
 va,vb
 \quad\text{and}\quad
 vb,vc
-$$
+```
 
 share the same endpoint `v`.
 
@@ -102,9 +102,9 @@ The following reports use the unproved path conclusion to assign one fixed compo
 
 For example, PX begins by putting both diameter-tree components on circles of radius
 
-$$
+```math
 R_D=\frac{D}{2\cos(\delta/2)}
-$$
+```
 
 and compares the single fixed vector between their circle centers at the two P2 rectangles. That fixed-center object depends on CP2.2--CP2.3. The same dependency occurs in PSX/S2X.
 
@@ -129,9 +129,9 @@ Prove A.2 for every interior state in each actual-diameter block. Then the proje
 
 A valid proof must rule out a run
 
-$$
+```math
 va_1,va_2,va_3
-$$
+```
 
 of three consecutive actual diameter states sharing the same source vertex. Minimum direction gap alone does not do this.
 

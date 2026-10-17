@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_canonical_defect_completion_paths_2026-09-09.md) · source SHA-256 `585129099b8ca6df9a1705ec85396498948f6c967a2dff36500fd5a4d2db6cf9`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-16229A891214","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — every cyclic `d_H=2` defect phase is two circular paths joined by two canonical short states
 
@@ -31,18 +33,18 @@ are not three unrelated diameter-graph geometries. After resolving each parallel
 
 Every such tie resolution gives a maximal `q`-edge convex thrackle
 
-$$
+```math
 \boxed{T=H\cup\{g_1,g_2\}.}
 \tag{CP2.1}
-$$
+```
 
 MT forces both short states to join the two D2 diameter-tree components and to lie on the unique odd cycle of `T`.
 
 The two short states cut the projective direction cycle into two arcs. Along either arc, every adjacent pair of actual diameter states is joined by a unit Minkowski step and both states have radius `D`. Hence their projective gap is exactly
 
-$$
+```math
 \delta:=2\arcsin\frac1{2D}.
-$$
+```
 
 DG says two disjoint diameter edges require gap at least `2delta`, so each adjacent pair on such an arc shares an endpoint. Therefore each D2 tree component admits an Euler ordering of all of its edges and must be a path.
 
@@ -50,19 +52,20 @@ DG says two disjoint diameter edges require gap at least `2delta`, so each adjac
 
 For **every** primitive cyclic `d_H=2` survivor,
 
-$$
+```math
 \boxed{H=P_A\sqcup P_B}
 \tag{CP2.2}
-$$
+```
 
 is the disjoint union of two nontrivial paths. Their path vertices lie on two circles of the same universal radius
 
-$$
+```math
 \boxed{
 R_D=\frac{D}{2\cos(\delta/2)}
 =\frac{D^2}{\sqrt{4D^2-1}}.
 }
 \tag{CP2.3}
+```
 
 The only phase dependence P2/PS/S2 is the local geometry of the two short cross-component completion states:
 
@@ -77,24 +80,24 @@ Thus after the separate P2 exclusion, the entire live `d_H=2` branch PS/S2 is tw
 
 Let
 
-\[
+```math
 K=F-F.
-$$
+```
 
 AD gives
 
-$$
+```math
 r_\parallel+a_{short}=2.
 \tag{1.1}
-$$
+```
 
 Choose one projective half of the centrally symmetric K-boundary.
 
 It contains
 
-$$
+```math
 q-r_\parallel
-$$
+```
 
 K-vertices, of which
 
@@ -107,29 +110,30 @@ Resolve that tie by ordering the two support changes one at a time. There are tw
 
 If the tie comes from parallel unit shell sides `ab,cd` with opposite orientations, the two possible intermediate states are the two other rectangle chords. As in the P1/P2 rectangle calculation, their common length is
 
-$$
+```math
 \boxed{\sqrt{D^2-1}<D.}
 \tag{1.2}
+```
 
 After choosing a resolution independently at every one of the `r_parallel` ties, the refined projective half-boundary therefore has
 
-\[
+```math
 (q-r_\parallel)+r_\parallel=q
-$$
+```
 
 states and exactly `q` unit steps.
 
 Its short states are precisely
 
-$$
+```math
 a_{short}+r_\parallel=2.
-$$
+```
 
 Call the corresponding two unoriented antipodal chords
 
-$$
+```math
 g_1,g_2.
-$$
+```
 
 Every other refined state is one of the `q-2` actual diameter edges of `H`.
 
@@ -147,15 +151,16 @@ Therefore any two refined antipodal chords either share one endpoint or cross pr
 
 There are exactly `q` such chords on the `q` shell vertices. A convex thrackle has at most `q` edges, so the refined graph is maximal. Denote it
 
-$$
+```math
 T.
-$$
+```
 
 By construction
 
-$$
+```math
 \boxed{E(T)=E(H)\sqcup\{g_1,g_2\}.}
 \tag{2.1}
+```
 
 This proves CP2.1.
 
@@ -173,17 +178,19 @@ MT classifies maximal convex-thrackle completions of the `d_H=2` diameter forest
 
 Our refined `T` is a maximal completion of `H` by exactly the two short edges `g_1,g_2`. Therefore MT applies directly:
 
-\[
+```math
 \boxed{
 g_1,g_2\text{ both join }T_A\text{ to }T_B.}
 \tag{3.1}
+```
 
 and
 
-\[
+```math
 \boxed{
 g_1,g_2\text{ both lie on the unique odd cycle of }T.}
 \tag{3.2}
+```
 
 In particular the two short states are not pendant artifacts of the rotating-calipers refinement. They are precisely the two cross-component cycle edges needed to close the D2 forest into a maximal antipodal thrackle.
 
@@ -199,15 +206,16 @@ Take two consecutive actual states `e,f` on one such arc. No parallel tie and no
 
 Hence their projective angle is exactly
 
-\[
+```math
 \boxed{\angle_{proj}(e,f)=\delta.}
 \tag{4.1}
+```
 
 DG gives for vertex-disjoint actual diameter edges
 
-\[
+```math
 \angle_{proj}(e,f)\ge2\delta.
-$$
+```
 
 Thus `e,f` must share an endpoint.
 
@@ -217,11 +225,12 @@ Both components are nonempty, and all `q-2` H-edges occur. Hence the two arcs ar
 
 So:
 
-$$
+```math
 \boxed{
 \text{each diameter component occupies one contiguous block between }g_1,g_2.
 }
 \tag{4.2}
+```
 
 ---
 
@@ -229,9 +238,9 @@ $$
 
 Fix one component and list its edges in its projective block:
 
-\[
+```math
 e_1,e_2,\ldots,e_m.
-$$
+```
 
 Every consecutive pair shares an endpoint. Since each edge appears once, this is a trail traversing every edge of the tree exactly once: an Euler trail.
 
@@ -239,9 +248,10 @@ A nontrivial finite tree with a vertex of degree at least three has at least thr
 
 Therefore
 
-$$
+```math
 \boxed{T_A,T_B\text{ are paths}.}
 \tag{5.1}
+```
 
 This proves CP2.2.
 
@@ -253,38 +263,41 @@ The result is stronger than D2's ordered-caterpillar conclusion and holds unifor
 
 Write one component path in edge order as
 
-\[
+```math
 a_0a_1,a_1a_2,\ldots,a_{m-1}a_m.
-$$
+```
 
 Every path edge is an actual diameter edge:
 
-$$
+```math
 |a_{k+1}-a_k|=D.
 \tag{6.1}
+```
 
 Every consecutive pair in projective direction is separated by `delta` and shares the middle endpoint. Therefore the two nonshared endpoints satisfy
 
-\[
+```math
 |a_{k+2}-a_k|
 =2D\sin\frac\delta2
 =1.
 \tag{6.2}
+```
 
 As in the P2-specific CP calculation, convex direction order chooses one consistent orientation sign and the path-edge vectors obey
 
-\[
+```math
 a_{k+1}-a_k
 =D(-1)^k e^{i(\theta+k\delta)}.
 \tag{6.3}
+```
 
 Summing the geometric progression gives a center `C` such that
 
-\[
+```math
 |a_k-C|
 =\frac{D}{2\cos(\delta/2)}
 =:R_D
-$$
+```
 
 for every path vertex.
 
@@ -302,17 +315,17 @@ After the P2 exclusion, the two live AD branches are:
 
 One defect state comes from the unique parallel-side tie. It has fixed short length
 
-$$
+```math
 \sqrt{D^2-1}
-$$
+```
 
 and two canonical choices, corresponding to the two support-change orders across the `1 x sqrt(D^2-1)` rectangle.
 
 The other defect state is the unique genuine off-circle vertex pair of `K` and has some radius
 
-$$
+```math
 \rho<D.
-$$
+```
 
 Both are cross-component edges joining the two endpoint regions of the circular paths.
 
@@ -320,10 +333,10 @@ Both are cross-component edges joining the two endpoint regions of the circular 
 
 There are no parallel ties. The two short states are the two off-circle antipodal vertex pairs of `K`, with lengths
 
-$$
+```math
 \rho_1,
 ho_2<D.
-$$
+```
 
 The completion is canonical: it is the full vertex-vertex antipodal graph of `F`.
 
@@ -364,9 +377,9 @@ A tie is not itself a vertex of `K`. The report inserts exactly one intermediate
 
 The count is exact:
 
-$$
+```math
 r_\parallel+a_{short}=d_H=2.
-$$
+```
 
 Each tie contributes one chosen short state; each off-circle antipodal K-vertex pair contributes one fixed short state. Hence every refined completion has exactly two short edges.
 
@@ -390,17 +403,17 @@ The live PS/S2 problem is now a two-circle/two-connector problem.
 
 For each endpoint diameter edge, its component-circle center lies a fixed perpendicular distance
 
-$$
+```math
 h_D=\frac1{4\cos(\delta/2)}
-$$
+```
 
 from the edge midpoint. A short connector state between an A endpoint edge and a B endpoint edge is produced by two unit shell transitions in the refined support list.
 
 The next target is to write the exact vector relation for
 
-$$
+```math
 C_B-C_A
-$$
+```
 
 through one arbitrary short state of length `rho<D`. Equating that relation for `g_1` and `g_2` should reduce PS/S2 to a finite pair of scalar equations. P2 is the special endpoint `rho=sqrt(D^2-1)` where those equations already contradict distinct parallel directions.
 

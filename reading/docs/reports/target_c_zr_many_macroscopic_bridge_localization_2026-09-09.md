@@ -33,90 +33,92 @@ This still does not yield a contradiction. A two-dimensional source can in princ
 
 Work in the lexicographically normalized C-II source with a relative-interior stress. Normalize
 
-$$
+```math
 \sum_{h\in H}\beta_h=1,
 \qquad
 \sum_{e\in C}\alpha_e=D^2.
 \tag{1.1}
-$$
+```
 
 Let
 
-$$
+```math
 S_{\rm br}:=\sum_{e\text{ bridge of }C}\alpha_e.
 \tag{1.2}
-$$
+```
 
 C27 gives two exact inputs:
 
 - the bridge-block tree has at most
-  $$
+  ```math
   m_{\rm br}\le2|B_+|-3\le2\pi D-3
   \tag{1.3}
-  $$
+  
+  ```
   contact bridges;
 - every bridge `e` satisfies
-  $$
+  ```math
   \alpha_e\le Dw_e\le D,
   \tag{1.4}
-  $$
+  
+  ```
   where `w_e` is the total active diameter weight crossing its cut.
 
 Let
 
-$$
+```math
 \varepsilon=rac12\operatorname{tr}(\Lambda-L_H)
 \tag{1.5}
-$$
+```
 
 be the C41/C66 response defect. C66 supplies a diameter vertex `z` such that
 
-$$
+```math
 S_z:=\sum_{h\ni z}\beta_h
 \ge1-C_0D\varepsilon,
 \qquad
 C_0=\frac{2\pi}{\kappa_0},
 \tag{1.6}
-$$
+```
 
 with the canonical constant `kappa_0>0`. Put
 
-$$
+```math
 \tau_z:=1-S_z
 =\sum_{h\not\ni z}\beta_h.
 \tag{1.7}
-$$
+```
 
 Thus
 
-$$
+```math
 \tau_z\le C_0D\varepsilon.
 \tag{1.8}
-$$
+```
 
 C68, for the same center `z`, defines
 
-$$
+```math
 r_i:=|p_i-z|
 \tag{1.9}
-$$
+```
 
 and the contact radial defect
 
-$$
+```math
 Q_z:=
 \sum_{ij\in C}\alpha_{ij}
 \left[1-(r_i-r_j)^2\right]
 \ge0.
 \tag{1.10}
-$$
+```
 
 It proves
 
-$$
+```math
 Q_z\le C_0D^3\varepsilon.
 \tag{1.11}
-$$
+```
 
 ## 2. Strongest genuinely new audited theorem
 
@@ -124,29 +126,29 @@ $$
 
 Fix `eta in (0,1]` and suppose
 
-$$
+```math
 S_{\rm br}\ge\eta D^2.
 \tag{ZBL0}
-$$
+```
 
 Put
 
-$$
+```math
 c_\eta:=\frac{\eta}{4\pi}
 \tag{2.1}
-$$
+```
 
 and call a contact bridge **eta-heavy** when
 
-$$
+```math
 \alpha_e\ge c_\eta D.
 \tag{2.2}
-$$
+```
 
 Then:
 
 1. **Linearly many heavy bridges.** If `N_eta` is the number of eta-heavy bridges,
-   $$
+   ```math
    \boxed{
    N_\eta
    \ge
@@ -155,27 +157,30 @@ Then:
    \frac{\eta}{2}D+rac{3\eta}{4\pi}.
    }
    \tag{ZBL1}
-   $$
+   
+   ```
    In particular `N_eta>=eta D/2`.
 
 2. **Exact torque localization for every bridge.** Let `e=uv` be any contact bridge and let `H_e` be its crossing active diameter edges. For any diameter vertex `z`, define the crossing mass not incident to `z` by
-   $$
+   ```math
    \tau_e(z):=
    \sum_{\substack{h\in H_e\\z\notin V(h)}}\beta_h.
    \tag{2.3}
-   $$
+   
+   ```
    If `ell_e` is the infinite line through `u,v`, then
-   $$
+   ```math
    \boxed{
    \alpha_e\,\operatorname{dist}(z,\ell_e)
    \le
    D^2\tau_e(z).
    }
    \tag{ZBL2}
-   $$
+   
+   ```
 
 3. **Near-zero stress-star localization.** For the C66 center `z`, every eta-heavy bridge satisfies
-   $$
+   ```math
    \boxed{
    \frac{\operatorname{dist}(z,\ell_e)}D
    \le
@@ -184,16 +189,18 @@ Then:
    \frac{4\pi C_0}{\eta}\,D\varepsilon.
    }
    \tag{ZBL3}
-   $$
+   
+   ```
    Hence if `D epsilon -> 0`, all eta-heavy bridge lines pass within `o(D)` of the same point `z`.
 
 4. **Near-unit radial progress on almost every heavy bridge.** Fix `xi in (0,1)`. Let `N_{eta,xi}^{bad}` count eta-heavy bridges `uv` satisfying
-   $$
+   ```math
    |r_u-r_v|\le1-\xi.
    \tag{2.4}
-   $$
+   
+   ```
    Then
-   $$
+   ```math
    \boxed{
    N_{\eta,\xi}^{bad}
    \le
@@ -202,47 +209,50 @@ Then:
    \frac{C_0}{c_\eta\xi(2-\xi)}D^2\varepsilon.
    }
    \tag{ZBL4}
-   $$
+   
+   ```
    Therefore, if `D epsilon -> 0`,
-   $$
+   ```math
    N_{\eta,\xi}^{bad}=o(D),
    \tag{2.5}
-   $$
+   
+   ```
    while `N_eta>=eta D/2`. For every fixed `xi>0`, all but `o(D)` of the linearly many eta-heavy bridges satisfy
-   $$
+   ```math
    |r_u-r_v|>1-\xi.
    \tag{2.6}
-   $$
+   
+   ```
 
 ### Proof of ZBL1
 
 Let `m=m_br` be the total number of contact bridges and `N=N_eta`. By C27,
 
-$$
+```math
 m\le2\pi D-3
 \tag{2.7}
-$$
+```
 
 and every bridge has `alpha_e<=D`. Every bridge outside the eta-heavy set has `alpha_e<c_eta D`. Therefore
 
-$$
+```math
 S_{\rm br}
 \le
 ND+(m-N)c_\eta D
 \le
 ND+mc_\eta D.
 \tag{2.8}
-$$
+```
 
 Using `S_br>=eta D^2` and (2.7),
 
-$$
+```math
 N
 \ge
 \eta D-c_\eta m
 \ge
 \eta D-c_\eta(2\pi D-3).
-$$
+```
 
 Substitute `c_eta=eta/(4pi)` to obtain ZBL1. QED.
 
@@ -250,33 +260,33 @@ Substitute `c_eta=eta/(4pi)` to obtain ZBL1. QED.
 
 Orient the bridge cut so the contact side `X` contains `u` and the other side `Y` contains `v`. Orient each crossing diameter edge `h=xy` with `x in X`, `y in Y`, and regard
 
-$$
+```math
 f_h:=\beta_h(x-y)
 \tag{2.9}
-$$
+```
 
 as the force on the `X` side. Its magnitude is `beta_h D` and its line of action is the diameter line `xy`.
 
 Summing equilibrium over `X` gives the C20 bridge resultant
 
-$$
+```math
 F_e:=\sum_{h\in H_e}f_h
 =\alpha_e(u-v).
 \tag{2.10}
-$$
+```
 
 C20.13 gives the accompanying exact moment statement: the resultant line of action passes through `u`. Therefore the total moment of the crossing diameter-force system about an arbitrary point `z` is
 
-$$
+```math
 M_z=(u-z)\times F_e.
 \tag{2.11}
-$$
+```
 
 If a crossing diameter edge `h` is incident to `z`, its individual force line passes through `z`, so its moment about `z` is zero. Hence only crossing edges not incident to `z` contribute to `M_z`.
 
 For such an edge `h=xy`,
 
-$$
+```math
 |(x-z)\times f_h|
 \le
 |x-z|\,|f_h|
@@ -284,25 +294,25 @@ $$
 D\cdot(\beta_h D)
 =\beta_hD^2,
 \tag{2.12}
-$$
+```
 
 because every two source points are at distance at most `D`. Summing gives
 
-$$
+```math
 |M_z|
 \le
 D^2\tau_e(z).
 \tag{2.13}
-$$
+```
 
 On the other hand, by (2.10)–(2.11),
 
-$$
+```math
 |M_z|
 =
 \alpha_e\operatorname{dist}(z,\ell_e),
 \tag{2.14}
-$$
+```
 
 because `|u-v|=1`. Combining (2.13) and (2.14) proves ZBL2. QED.
 
@@ -310,21 +320,21 @@ because `|u-v|=1`. Combining (2.13) and (2.14) proves ZBL2. QED.
 
 At the C66 center `z`, every crossing non-`z` diameter edge is part of the global non-star tail, so
 
-$$
+```math
 \tau_e(z)\le\tau_z.
 \tag{2.15}
-$$
+```
 
 If `e` is eta-heavy, `alpha_e>=c_eta D`. Apply ZBL2:
 
-$$
+```math
 \frac{\operatorname{dist}(z,\ell_e)}D
 \le
 \frac{\tau_e(z)}{c_\eta}
 \le
 \frac{\tau_z}{c_\eta}.
 \tag{2.16}
-$$
+```
 
 Insert C66's `tau_z<=C_0D epsilon` and `c_eta=eta/(4pi)` to obtain ZBL3. If `D epsilon->0`, the right side tends to zero. QED.
 
@@ -332,42 +342,42 @@ Insert C66's `tau_z<=C_0D epsilon` and `c_eta=eta/(4pi)` to obtain ZBL3. If `D e
 
 For any unit contact `uv`, C68's radial-defect summand is
 
-$$
+```math
 \alpha_e\left[1-(r_u-r_v)^2\right].
 \tag{2.17}
-$$
+```
 
 If `|r_u-r_v|<=1-xi`, then
 
-$$
+```math
 1-(r_u-r_v)^2
 \ge
 1-(1-\xi)^2
 =\xi(2-\xi).
 \tag{2.18}
-$$
+```
 
 Every eta-heavy bad bridge therefore contributes at least
 
-$$
+```math
 c_\eta D\,\xi(2-\xi)
 \tag{2.19}
-$$
+```
 
 to `Q_z`. Since all contact contributions to `Q_z` are nonnegative,
 
-$$
+```math
 N_{\eta,\xi}^{bad}
 \,c_\eta D\,\xi(2-\xi)
 \le Q_z.
 \tag{2.20}
-$$
+```
 
 This proves the first inequality in ZBL4. Insert C68's `Q_z<=C_0D^3 epsilon` for the second. Finally
 
-$$
+```math
 D^2\varepsilon=D(D\varepsilon)=o(D)
-$$
+```
 
 when `D epsilon->0`, giving (2.5). QED.
 
@@ -375,12 +385,12 @@ when `D epsilon->0`, giving (2.5). QED.
 
 For a nonsingleton bridge cut, ZBR requires the crossing diameter bars to have relative body-bar rank three. In particular they cannot all be incident to the C66 star center `z`; at least one crossing bar has a line not through `z`. ZBL2 quantifies the only way this can coexist with a macroscopic bridge whose `beta` mass is nearly star-supported:
 
-$$
+```math
 \operatorname{dist}(z,\ell_e)
 \le
 D^2\tau_e(z)/\alpha_e.
 \tag{3.1}
-$$
+```
 
 Thus the mechanically indispensable nonconcurrent bars can rotate the resultant line away from `z` only in proportion to their **aggregate weight times the diameter lever arm**. If their total weight tends to zero, every macroscopic bridge line is forced macroscopically through the stress-star center.
 
@@ -390,19 +400,19 @@ This is a quantitative bridge between the support theorem ZBR and the weight-con
 
 Assume simultaneously
 
-$$
+```math
 S_{\rm br}\ge\eta D^2
 \qquad\text{and}\qquad
 D\varepsilon\to0.
 \tag{4.1}
-$$
+```
 
 Then, for fixed `eta>0`, the source contains at least
 
-$$
+```math
 (\eta/2+o(1))D
 \tag{4.2}
-$$
+```
 
 distinct contact bridges with all of the following properties:
 
@@ -420,27 +430,24 @@ This is substantially narrower than the old C27 endpoint of one macroscopic reci
 
 The global scalar endpoint remains
 
-$$
+```math
 \boxed{
  b+\sum_F(\deg F-4)>2h.
 }
 \tag{5.1}
-$$
+```
 
 For the bridge-dominant near-zero subbranch, the shortest geometric substitute is now:
 
 > **BR — radial macroscopic bridge exclusion.** For every fixed `eta>0`, no sufficiently large lexicographically normalized triangle-free global minimizer can simultaneously have
 > 
 
-$$
-
+```math
 > S_{\rm br}\ge\eta D^2,
 > \qquad
 > D\varepsilon=o(1),
 > 
-$$
-
-
+```
 > together with a C66 star center `z` for which a linear family of contact bridges has stress `Theta_eta(D)`, supporting-line distance `o(D)` from `z`, and radial progress `1-o(1)`, while the ZBR-required nonconcurrent crossing diameter bars carry vanishing aggregate non-star weight.
 >
 > It is enough to derive an `Omega(1/D)` response-defect lower bound, a strict sub-`D` competitor, or the face inequality (5.1).
@@ -479,10 +486,10 @@ ZBR forces nonconcurrent support at a nonsingleton bridge, but the necessary ext
 
 From C66, ZBL3 gives
 
-$$
+```math
 \operatorname{dist}(z,\ell_e)
 =O_\eta(D^2\varepsilon).
-$$
+```
 
 Under only `D epsilon->0`, this is `o(D)` but need not be `O(1)`. It is invalid to replace macroscopically radial by an exact ray or a bounded-width tube.
 

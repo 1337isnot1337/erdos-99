@@ -18,26 +18,26 @@ The existing FREE-module absorption proof records, for every parent edge in the 
 
 This gives an exact global slack budget. If
 
-$$
+```math
 z_0,z_1,\ldots,z_\ell
-$$
+```
 
 is the support-monotone outer-face ancestry chain supplied by the near-halfdepth theorem, then
 
-$$
+```math
 \boxed{
 \sum_{j=0}^{\ell-1}\bigl(|z_{j+1}-z_j|-1\bigr)
 \le t_D
 < h_*+D^{-1/3},
 }
 \tag{TS.1}
-$$
+```
 
 where
 
-$$
+```math
 h_*={\sqrt{303}\over52}=0.334747984337100\ldots .
-$$
+```
 
 Thus a chain with `(1/2-o(1))D` edges has only `O(1)` total excess over unit length. This strengthens the earlier edgewise bound `|z_{j+1}-z_j|<1+h_*+o(1)` by a factor of order `D` after summation.
 
@@ -45,71 +45,71 @@ Two consequences follow immediately.
 
 First, the near-halfdepth chain itself has almost `D/2` edges:
 
-$$
+```math
 \boxed{
 \ell\ge
 {D\over2}-3^{1/8}D^{3/4}-\omega_D\sqrt D-O(\sqrt D),
 }
 \tag{TS.2}
-$$
+```
 
 for every `omega_D -> infinity` with `omega_D=o(D^(1/4))`. The previous lower bound had leading coefficient `1/[2(1+h_*)]=0.37460255...`; the telescoping slack ledger raises the leading coefficient to `1/2` and removes the denominator-expansion `O(D^(2/3))` loss.
 
 Second, every fixed inverse-diameter threshold contains a linear matching. For fixed `K>2h_*`, the same chain contains a vertex-disjoint matching of original fully inactive pairs satisfying
 
-$$
+```math
 1<|x-y|\le1+{K\over D}
-$$
+```
 
 and having size
 
-$$
+```math
 \boxed{
 \left(
 {1\over4}-{h_*\over2K}-o(1)
 \right)D.
 }
 \tag{TS.3}
-$$
+```
 
 In particular `K=1` gives
 
-$$
+```math
 \boxed{
 \left(0.0826260078314499\ldots-o(1)\right)D
 }
 \tag{TS.4}
-$$
+```
 
 vertex-disjoint old inactive pairs with distance at most `1+1/D`.
 
 The matching is not confined to the blocker-side boundary layer. If `0<=alpha<beta<1/2` are fixed and `Delta=beta-alpha`, then for every fixed
 
-$$
+```math
 K>{h_*\over\Delta}
-$$
+```
 
 the support-depth slab from `alpha D` to `beta D` contains a vertex-disjoint matching of size
 
-$$
+```math
 \boxed{
 \left(
 {\Delta-h_*/K\over2}-o(1)
 \right)D
 }
 \tag{TS.5}
-$$
+```
 
 whose pairs again satisfy `1<|x-y|<=1+K/D` and whose endpoints are original fully inactive source points on the same outer-face corridor.
 
 For example, the quarter-depth slab `Delta=1/4` with `K=2` contains
 
-$$
+```math
 \boxed{
 \left(0.0413130039157249\ldots-o(1)\right)D
 }
 \tag{TS.6}
-$$
+```
 
 vertex-disjoint pairs of length at most `1+2/D`.
 
@@ -121,35 +121,35 @@ Use the absorption process from the linear inactive-chain theorem. Original bloc
 
 Let
 
-$$
+```math
 0=s_0<s_1<\cdots<s_\ell\le t_D
 \tag{TS.7}
-$$
+```
 
 be the absorption times along one parent ancestry chain, with `z_0` a blocker root. Put
 
-$$
+```math
 \tau_j:=s_{j+1}-s_j>0.
 \tag{TS.8}
-$$
+```
 
 At time `s_{j+1}`, the parent `z_j` has moved for exactly `tau_j`, so the first-contact equation is
 
-$$
+```math
 \left|z_j-\tau_jN-z_{j+1}\right|=1.
 \tag{TS.9}
-$$
+```
 
 The strict ordering in (TS.7) is already part of the parent-forest construction: a parent is moving before its child is first absorbed.
 
 Summing (TS.8),
 
-$$
+```math
 \boxed{
 \sum_{j=0}^{\ell-1}\tau_j=s_\ell-s_0=s_\ell\le t_D.
 }
 \tag{TS.10}
-$$
+```
 
 This is the bookkeeping point not used in the earlier length estimate.
 
@@ -159,63 +159,63 @@ This is the bookkeeping point not used in the earlier length estimate.
 
 Define the unit vector at the first-contact event
 
-$$
+```math
 c_j:=z_j-\tau_jN-z_{j+1},
 \qquad |c_j|=1.
 \tag{TS.11}
-$$
+```
 
 Then in the original source
 
-$$
+```math
 z_j-z_{j+1}=c_j+\tau_jN.
 \tag{TS.12}
-$$
+```
 
 Every `z_j` is fully inactive in the original source. Hence consecutive vertices are not old unit contacts, while global unit separation still applies:
 
-$$
+```math
 |z_j-z_{j+1}|>1.
 \tag{TS.13}
-$$
+```
 
 By the triangle inequality and (TS.12),
 
-$$
+```math
 |z_j-z_{j+1}|\le1+\tau_j.
 \tag{TS.14}
-$$
+```
 
 Therefore, with
 
-$$
+```math
 \sigma_j:=|z_j-z_{j+1}|-1>0,
-$$
+```
 
 we have
 
-$$
+```math
 0<\sigma_j\le\tau_j.
 \tag{TS.15}
-$$
+```
 
 Summing and using (TS.10),
 
-$$
+```math
 \sum_j\sigma_j
 \le\sum_j\tau_j
 \le t_D.
 \tag{TS.16}
-$$
+```
 
 The reflection clearing time is
 
-$$
+```math
 t_D=\delta+D^{-1/3},
 \qquad
 0<\delta<h_*.
 \tag{TS.17}
-$$
+```
 
 Equations (TS.16)--(TS.17) prove (TS.1).
 
@@ -227,67 +227,67 @@ No asymptotic averaging enters this step. The only asymptotic term in (TS.1) com
 
 The support-depth coordinate is
 
-$$
+```math
 a_v=H-N\cdot v.
-$$
+```
 
 Support monotonicity gives positive increments and the exact telescope
 
-$$
+```math
 a_{z_\ell}-a_{z_0}
 =\sum_{j=0}^{\ell-1}N\cdot(z_j-z_{j+1}).
 \tag{TS.18}
-$$
+```
 
 For every edge,
 
-$$
+```math
 N\cdot(z_j-z_{j+1})
 \le |z_j-z_{j+1}|=1+\sigma_j.
-$$
+```
 
 Hence
 
-$$
+```math
 a_{z_\ell}-a_{z_0}
 \le \ell+\sum_j\sigma_j
 \le\ell+t_D,
 \tag{TS.19}
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \ell\ge a_{z_\ell}-a_{z_0}-t_D.
 }
 \tag{TS.20}
-$$
+```
 
 The near-halfdepth theorem supplies
 
-$$
+```math
 a_{z_\ell}>
 {D\over2}-3^{1/8}D^{3/4}-\omega_D\sqrt D
 \tag{TS.21}
-$$
+```
 
 and
 
-$$
+```math
 a_{z_0}=O(\sqrt D).
 \tag{TS.22}
-$$
+```
 
 Since `t_D=O(1)`, substitution into (TS.20) proves (TS.2).
 
 For the concrete slow choice `omega_D=log D`,
 
-$$
+```math
 \ell\ge
 {D\over2}-3^{1/8}D^{3/4}-\sqrt D\log D-O(\sqrt D).
 \tag{TS.23}
-$$
+```
 
 ---
 
@@ -295,54 +295,54 @@ $$
 
 Fix `K>0`. Call a chain edge bad if
 
-$$
+```math
 \sigma_j>{K\over D}.
-$$
+```
 
 By (TS.1), the number `B_K` of bad edges satisfies
 
-$$
+```math
 B_K{K\over D}
 <\sum_j\sigma_j
 \le t_D,
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{
 B_K\le {t_DD\over K}
 =\left({h_*\over K}+o(1)\right)D.
 }
 \tag{TS.24}
-$$
+```
 
 Combining (TS.2) and (TS.24), the number of good edges is at least
 
-$$
+```math
 \left(
 {1\over2}-{h_*\over K}-o(1)
 \right)D.
 \tag{TS.25}
-$$
+```
 
 The edges of a path split into the even-index and odd-index parity classes, and each parity class is vertex-disjoint. One parity therefore contains at least half of the good edges. This gives a matching of size
 
-$$
+```math
 \left(
 {1\over4}-{h_*\over2K}-o(1)
 \right)D.
 \tag{TS.26}
-$$
+```
 
 The coefficient is positive exactly when `K>2h_*`. Every retained pair is an original strict noncontact by (TS.13), so its distance is in `(1,1+K/D]`. This proves (TS.3).
 
 For `K=1`,
 
-$$
+```math
 {1\over4}-{h_*\over2}
 =0.0826260078314499\ldots,
-$$
+```
 
 which proves (TS.4).
 
@@ -352,57 +352,57 @@ which proves (TS.4).
 
 Fix
 
-$$
+```math
 0\le\alpha<\beta<{1\over2},
 \qquad
 \Delta:=\beta-\alpha>0.
-$$
+```
 
 For all sufficiently large `D`, the near-halfdepth endpoint lies deeper than `beta D`. Because the support depth is strictly increasing along the chain, let `i_alpha` and `i_beta` be the first indices crossing `alpha D` and `beta D`, respectively. For `alpha=0`, take `i_alpha=0` if the root already has nonnegative depth.
 
 Every one-edge support-depth increment is at most the corresponding edge length, and the old edgewise estimate gives
 
-$$
+```math
 |z_{j+1}-z_j|<1+t_D<\frac32
 \tag{TS.27}
-$$
+```
 
 for all sufficiently large `D`. Therefore the first crossing of `alpha D` overshoots by only `O(1)`, while
 
-$$
+```math
 a_{z_{i_\beta}}>\beta D.
-$$
+```
 
 The support-depth span of the subchain from `i_alpha` to `i_beta` is consequently
 
-$$
+```math
 \ge \Delta D-O(1).
 \tag{TS.28}
-$$
+```
 
 Apply (TS.19) only to this subchain. Its slack sum is at most the global sum `t_D`, so if `m_{alpha,beta}` is its edge count,
 
-$$
+```math
 \boxed{
 m_{\alpha,\beta}\ge\Delta D-O(1).
 }
 \tag{TS.29}
-$$
+```
 
 The same bad-edge estimate (TS.24) applies inside the slab. Hence the slab contains at least
 
-$$
+```math
 \left(\Delta-{h_*\over K}-o(1)\right)D
-$$
+```
 
 good edges. Parity thinning produces the matching in (TS.5). The coefficient is positive when `K>h_*/Delta`.
 
 For `Delta=1/4` and `K=2`,
 
-$$
+```math
 {1\over2}\left({1\over4}-{h_*\over2}\right)
 =0.0413130039157249\ldots,
-$$
+```
 
 which gives (TS.6).
 

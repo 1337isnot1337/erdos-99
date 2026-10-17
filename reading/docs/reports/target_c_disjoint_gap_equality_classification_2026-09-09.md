@@ -17,11 +17,11 @@
 
 DG proves that two vertex-disjoint diameter edges in a unit-separated diameter-`D` set have acute projective angle
 
-$$
+```math
 \theta\ge4a_D,
 \qquad
 a_D:=\arcsin\frac1{2D}.
-$$
+```
 
 The proof contains a stronger equality classification that was not extracted in the original report.
 
@@ -32,9 +32,9 @@ If equality holds, the four endpoints necessarily acquire
 
 Consequently two **consecutive** projective directions in the complete actual diameter graph can never attain equality. For a vertex-disjoint consecutive pair the correct statement is the strict inequality
 
-$$
+```math
 \boxed{\theta>4a_D.}
-$$
+```
 
 The infimum is still `4a_D`; no uniform positive improvement is claimed.
 
@@ -44,64 +44,64 @@ The infimum is still `4a_D`; no uniform positive improvement is claimed.
 
 Let `AC` and `BD` be vertex-disjoint diameter edges and orient their diameter vectors
 
-$$
+```math
 u=C-A,
 \qquad
 v=D-B,
 \qquad
 |u|=|v|=D,
-$$
+```
 
 so that the angle between them is the acute projective angle `theta`.
 
 Let `m_1,m_2` be the two edge midpoints and set
 
-$$
+```math
 w=m_2-m_1,
 \qquad
 p=\frac{u-v}{2},
 \qquad
 r=\frac{u+v}{2}.
-$$
+```
 
 Then
 
-$$
+```math
 p\perp r,
 \qquad
 |p|=D\sin\frac\theta2=:P,
 \qquad
 |r|=D\cos\frac\theta2=:R.
-$$
+```
 
 After choosing orthogonal coordinates, write
 
-$$
+```math
 p=(P,0),
 \qquad
 r=(0,R),
 \qquad
 w=(x,y),
-$$
+```
 
 with `x,y>=0` after the harmless sign choices used by DG.
 
 DG proves
 
-$$
+```math
 0\le x\le P,
 \qquad
 0\le y\le\sqrt{D^2-x^2}-R,
 \tag{1.1}
-$$
+```
 
 and
 
-$$
+```math
 \min\{|A-B|,|C-D|\}
 \le2D\sin\frac\theta4.
 \tag{1.2}
-$$
+```
 
 Unit separation then gives `theta>=4a_D`.
 
@@ -111,71 +111,71 @@ Unit separation then gives `theta>=4a_D`.
 
 Assume now
 
-$$
+```math
 \theta=4a_D.
 \tag{2.1}
-$$
+```
 
 Then
 
-$$
+```math
 2D\sin\frac\theta4
 =2D\sin a_D
 =1.
-$$
+```
 
 The two cross endpoints are distinct source points, so unit separation and (1.2) force equality throughout the DG estimate:
 
-$$
+```math
 \min\{|A-B|,|C-D|\}=1.
 \tag{2.2}
-$$
+```
 
 In the DG proof one writes
 
-$$
+```math
 \frac\theta2=t,
 \qquad
 x=D\sin\phi,
 \qquad
 0\le\phi\le t,
-$$
+```
 
 and obtains
 
-$$
+```math
 \min\{|A-B|,|C-D|\}^2
 \le4D^2\sin^2\frac{t-\phi}{2}
 \le4D^2\sin^2\frac t2.
 \tag{2.3}
-$$
+```
 
 Because `t>0`, the second inequality in (2.3) is equality only when
 
-$$
+```math
 \phi=0,
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{x=0.}
 \tag{2.4}
-$$
+```
 
 Equality in the first step also forces the maximal allowed `y` from (1.1):
 
-$$
+```math
 \boxed{y=D-R.}
 \tag{2.5}
-$$
+```
 
 Thus, up to the DG sign/relabel symmetries, equality has the unique midpoint offset
 
-$$
+```math
 \boxed{w=(0,D-R).}
 \tag{2.6}
-$$
+```
 
 ---
 
@@ -183,15 +183,15 @@ $$
 
 Choose the origin at the midpoint of `AC`. Since
 
-$$
+```math
 u=p+r=(P,R),
 \qquad
 v=r-p=(-P,R),
-$$
+```
 
 and the midpoint of `BD` is `w=(0,D-R)`, the endpoints may be written
 
-$$
+```math
 \begin{aligned}
 A&=(-P/2,-R/2),\\
 C&=( P/2, R/2),\\
@@ -199,47 +199,47 @@ B&=( P/2,D-3R/2),\\
 D'&=(-P/2,D-R/2),
 \end{aligned}
 \tag{3.1}
-$$
+```
 
 where `D'` denotes the endpoint previously called `D`, to avoid confusing it with the scalar diameter.
 
 Direct subtraction gives
 
-$$
+```math
 A-B=(-P,R-D),
 \qquad
 C-D'=(P,R-D).
-$$
+```
 
 Their common squared length is
 
-$$
+```math
 P^2+(D-R)^2
 =4D^2\sin^2\frac\theta4
 =1.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{|A-B|=|C-D'|=1.}
 \tag{3.2}
-$$
+```
 
 So equality creates two actual unit contacts, not merely one.
 
 Moreover
 
-$$
+```math
 A-D'=(0,-D),
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{|A-D'|=D.}
 \tag{3.3}
-$$
+```
 
 Thus equality also creates a third actual diameter edge.
 
@@ -247,9 +247,9 @@ Its direction is the `r` direction, while the original diameter vectors are `r+p
 
 The remaining cross distance is
 
-$$
+```math
 |C-B|=|2R-D|<D
-$$
+```
 
 for `theta>0`, so the forced local active pattern is exactly the one described above unless additional coincidences are imposed by other source points.
 
@@ -261,12 +261,12 @@ for `theta>0`, so the forced local active pattern is exactly the one described a
 
 Let `AC` and `BD` be vertex-disjoint actual diameter edges whose projective directions are consecutive in the cyclic order of the **complete actual diameter graph**. Then
 
-$$
+```math
 \boxed{
 \theta>4\arcsin\frac1{2D}.
 }
 \tag{DGE.1}
-$$
+```
 
 ### Proof
 
@@ -280,22 +280,22 @@ C65 is important only when this theorem is inserted into Target C: it identifies
 
 If two diameter edges `ZA` and `ZB` share the endpoint `Z`, their projective angle `theta` satisfies
 
-$$
+```math
 |A-B|=2D\sin\frac\theta2\ge1,
-$$
+```
 
 so
 
-$$
+```math
 \theta\ge2a_D.
-$$
+```
 
 Equality is exactly
 
-$$
+```math
 \boxed{|A-B|=1.}
 \tag{5.1}
-$$
+```
 
 Thus the two local angular floors have parallel active-set interpretations:
 
@@ -310,7 +310,7 @@ This makes the asymptotic saturation result DS more concrete: a small-outer-walk
 
 Let `m` be the number of disjoint cyclic consecutive diameter-direction pairs. If `m>0`, then summing the local gap bounds gives the strict inequality
 
-$$
+```math
 \boxed{
 \pi
 >
@@ -318,16 +318,16 @@ $$
 =2a_D(h+m).
 }
 \tag{6.1}
-$$
+```
 
 Since DG.2 gives `m>=d_H=q-h`, every source with at least one diameter tree component (`d_H>0`) satisfies
 
-$$
+```math
 \boxed{
 2a_Dq<\pi.
 }
 \tag{6.2}
-$$
+```
 
 The inequality is strict but has no uniform margin: DGE equality can be approached by letting the forced intermediate cross distance tend to `D` from below. Therefore (6.2) must not be promoted into a false `pi-c/D` gap.
 

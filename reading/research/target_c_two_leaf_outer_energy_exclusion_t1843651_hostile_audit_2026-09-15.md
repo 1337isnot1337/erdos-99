@@ -20,9 +20,9 @@
 
 The candidate raises the rounded full-core Type-II exclusion endpoint from `1.84365` to
 
-$$
+```math
 \boxed{1.843651}.
-$$
+```
 
 This continuation is genuinely near the numerical ceiling of the present architecture. The exact certificate has load-bearing margins as small as `6.7e-8`, so the audit treats every scope gate and every adverse rounding as part of the proof rather than relying on floating-point agreement.
 
@@ -32,34 +32,34 @@ This continuation is genuinely near the numerical ceiling of the present archite
 
 The `g=.007707` residual theorem requires
 
-$$
+```math
 U_{net}\le2.013.
-$$
+```
 
 The candidate first uses the independent `t<=1.844` phase theorem
 
-$$
+```math
 z_C,z_U,z_V>.616-o(1),
-$$
+```
 
 so total retained dominant outer mass is above `1.848D`. The established three-well bathtub bound gives
 
-$$
+```math
 \delta\ge F(1.848)-o(1),
 \qquad F(s)=s-6\sin(s/6),
-$$
+```
 
 and the exact certificate checks `F(1.848)>.029`. Hence at `t<=1.843651`,
 
-$$
+```math
 U_{net}<1.955085<1.956<2.013.
-$$
+```
 
 Only after this gate is the residual estimate
 
-$$
+```math
 R=U_{net}-W\le1.05h
-$$
+```
 
 used.
 
@@ -71,34 +71,34 @@ used.
 
 At
 
-$$
+```math
 t=1.843651,
 \qquad h=.0003828,
 \qquad x=0,
-$$
+```
 
 the direct survivor condition fails by
 
-$$
+```math
 F(A_H)-\delta_H
 =6.7371\ldots\times10^{-8}>0.
-$$
+```
 
 The certificate derives this sign from rational Machin bounds for `pi`, integer-square-root enclosures, and alternating Taylor bounds for `sin`. It is not a binary-float comparison.
 
 The parent derivative bounds remain
 
-$$
+```math
 Q_x<-2.7,
 \qquad Q_h<-2.5,
 \qquad Q_t>0.
-$$
+```
 
 Therefore larger `h` or `x` cannot restore survival, and smaller `t` is easier. Thus
 
-$$
+```math
 h<.0003828-o(1)
-$$
+```
 
 is valid.
 
@@ -110,23 +110,23 @@ is valid.
 
 The cutoff is converted to
 
-$$
+```math
 W<1.9127155,
 \qquad
 E_{dom}>.90689964.
-$$
+```
 
 The verifier checks
 
-$$
+```math
 C_{707}+.0003828<1.9127155
-$$
+```
 
 with outward enclosures. For the crossing lower bound it subtracts the entire generic residual allowance
 
-$$
+```math
 {(1.05H)^2\over4}
-$$
+```
 
 from the lower enclosure for `Delta_2` before rounding down to `.90689964`.
 
@@ -140,15 +140,15 @@ Assume `z<=Z=2.21936`. The capped retained quantity is increasing in `z`; the ve
 
 On `delta>=F(Z)`, motion in `x` reaches the active boundary `delta=F(Z)`. At the largest allowed residual cutoff the corresponding boundary value remains positive:
 
-$$
+```math
 x>5.58\times10^{-7}.
-$$
+```
 
 Thus the proof is not evaluating an infeasible extrapolation. At the adverse endpoint `t=T,h=H`, the exact capped survivor excess is below
 
-$$
+```math
 -4.56\times10^{-6}.
-$$
+```
 
 The `delta<F(Z)` side is controlled by the already-audited negative `Q_x,Q_h` derivatives.
 
@@ -160,22 +160,22 @@ The `delta<F(Z)` side is controlled by the already-audited negative `Q_x,Q_h` de
 
 From `z>2.21936`, suppose one retained phase mass were at most
 
-$$
+```math
 A=.70202.
-$$
+```
 
 Strict convexity of
 
-$$
+```math
 f(s)=s-2\sin(s/2)
-$$
+```
 
 puts the cheapest other two phases at `(Z-A)/2`. The exact certificate gives
 
-$$
+```math
 f(A)+2f((Z-A)/2)-\delta_{max}
 =1.1093\ldots\times10^{-7}>0.
-$$
+```
 
 Hence every retained phase mass is above `.70202D` asymptotically. The positive constant margin is sufficient to absorb the source/window `o(1)` terms in the prescribed limit order.
 
@@ -189,59 +189,59 @@ This is the highest-risk logical point because the parent `1.84364/1.84365` proo
 
 Before invoking the strong pair theorem, the candidate has already proved
 
-$$
+```math
 z_V>.70202-o(1).
-$$
+```
 
 Since one train supplies at most two selected terminal occurrences,
 
-$$
+```math
 V>.35101-o(1).
-$$
+```
 
 On the contradiction branch
 
-$$
+```math
 U\ge U_0=.53052,
-$$
+```
 
 and with `W<1.9127155`,
 
-$$
+```math
 C+U=W-V<1.9127155-.35101+o(1).
-$$
+```
 
 Therefore the actual larger-leaf ratio, before any adverse replacement, satisfies
 
-$$
+```math
 {(C+U-K)_+\over U}
 \le
 {1.9127155-.35101-K_-\over.53052}+o(1).
-$$
+```
 
 The exact certificate gives
 
-$$
+```math
 0.76718118\ldots
 <0.83045479\ldots
 =\sqrt{20/29}.
-$$
+```
 
 The main center interval also has `C<1.0443<K`. For fixed `C<K`, the ratio
 
-$$
+```math
 L\mapsto{(C+L-K)_+\over L}
-$$
+```
 
 is nondecreasing, so the smaller leaf `V<=U` is automatically no worse.
 
 Only after these facts establish the strong branch for the original configuration does the proof use the already-audited monotonic adverse replacements
 
-$$
+```math
 W\mapsto W_0,
 \qquad
 U\mapsto U_0.
-$$
+```
 
 There is no reuse of the desired conclusion `U<U_0` to justify its own proof.
 
@@ -253,26 +253,26 @@ There is no reuse of the desired conclusion `U<U_0` to justify its own proof.
 
 At the reduced point the verifier explicitly checks
 
-$$
+```math
 C_{low}+U_0-K_+>0,
 \qquad
 W_0-U_0-K_+>0.
-$$
+```
 
 Thus both physical pair deficits in the reduced one-variable capacity are genuinely on their positive branches; squaring them does not replace a vanishing positive part by an artificial positive penalty.
 
 Generic center capacity excludes both center tails. On the remaining compact interval the symbolic curvature bound gives
 
-$$
+```math
 G''<-2.
-$$
+```
 
 At `c_0=.9314032`, the tangent estimate yields
 
-$$
+```math
 E_{dom}-\max G
 =1.2908\ldots\times10^{-7}>0.
-$$
+```
 
 Again this is exact outward arithmetic.
 
@@ -284,27 +284,27 @@ Again this is exact outward arithmetic.
 
 The leaf mass and retained-occurrence bounds give
 
-$$
+```math
 P_U,P_V>.1715-o(1).
-$$
+```
 
 The missing center/leaf correlation bounds the total bad retained pair weight across both leaves. With the candidate constants, the quadratic certificate for
 
-$$
+```math
 B_{bad}<.03666
-$$
+```
 
 has discriminant
 
-$$
+```math
 -1.7643959\times10^{-5}<0.
-$$
+```
 
 Therefore each individual bad weight is at most the same total `.03666` budget, and each leaf retains
 
-$$
+```math
 G_U,G_V>.13484-o(1).
-$$
+```
 
 The proof deliberately subtracts the whole total bad allowance from each leaf; it does not invent two separate bad budgets.
 
@@ -316,22 +316,22 @@ The proof deliberately subtracts the whole total bad allowance from each leaf; i
 
 Every good cross-leaf pair shares a center neighbor and is noncrossing by triangle-freeness. The hostile-audited endpoint theorem therefore supplies
 
-$$
+```math
 e_\tau+e_\sigma\ge2-\sqrt3-o(1).
-$$
+```
 
 At this endpoint the older convenient estimate `sqrt(3)<1.7321` loses more than the remaining proof margin. The candidate instead reuses the verifier's existing 100-digit integer-square-root enclosure
 
-$$
+```math
 \sqrt3< (\sqrt3)_+.
-$$
+```
 
 Hence
 
-$$
+```math
 2-(\sqrt3)_+
 <2-\sqrt3
-$$
+```
 
 is a valid lower bound on the endpoint-energy constant. This is a precision improvement only; no mathematical inequality is strengthened beyond the exact constant already proved.
 
@@ -343,10 +343,10 @@ is a valid lower bound on the endpoint-energy constant. This is a precision impr
 
 The two-leaf weighted product gives
 
-$$
+```math
 E_U+E_V
 >(2-\sqrt3)(.13484)-o(1).
-$$
+```
 
 The center one-well energy is carried by selected outer occurrences in the disjoint center phase window. The leaf payment uses selected terminal occurrences in the two disjoint leaf phase windows. These supports were already checked as physically disjoint in the parent hostile audit, so the payments add.
 
@@ -395,8 +395,8 @@ Further C-II progress should come from a stronger structural inequality, not ano
 
 **Final verdict:** **PASS** for the proof-only full-core Type-II statement
 
-$$
+```math
 \boxed{\liminf (q-k)/D\ge1.843651}
-$$
+```
 
 at the stated scope. C-II and Level I remain open.

@@ -12,22 +12,22 @@
 
 WE proved
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}\ge0.4658
-$$
+```
 
 by discarding the negative `Q,s_Z,d_H,c_B` terms in the near-equality cavity ledger.  Those losses are avoidable.  The actual-perimeter JC identity and PC exact remainder show that every one of those defects also consumes the same small near-equality budget `R(lambda)`.
 
 Keeping that coupling gives
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
 \ge0.4673.
 }
 \tag{ED.1}
-$$
+```
 
 The improvement is still not claimed optimal, but it is no longer a fourth-decimal perturbation of the original JC threshold: the surviving scalar interval has been cut by about `0.004` above JC and about `0.0025` above GS.
 
@@ -37,67 +37,67 @@ The improvement is still not claimed optimal, but it is no longer a fourth-decim
 
 Pass to a convergent post-ZF subsequence and put
 
-$$
+```math
 \lambda:=\lim\frac{e_{BB}+2s_C}{D},
 \qquad
 t:=\lim\frac{e_{BB}}D,
 \tag{ED.2}
-$$
+```
 
-$$
+```math
 y:=\lim\frac hD,
 \qquad
 p:=\lim\frac{P_F}D,
 \qquad
 u:=\lim\frac QD,
 \tag{ED.3}
-$$
+```
 
-$$
+```math
 d:=\lim\frac{d_H}{D},
 \qquad
 s:=\lim\frac{s_Z}{D},
 \qquad
 c:=\lim\frac{c_B}{D}.
 \tag{ED.4}
-$$
+```
 
 All these quantities are nonnegative, and
 
-$$
+```math
 0\le t\le\lambda,
 \qquad
 p\le\pi,
 \qquad
 p\ge q/D\ge y.
 \tag{ED.5}
-$$
+```
 
 Define as before
 
-$$
+```math
 A_{PI}:=\frac12\sin(2\rho),
 \qquad
 L(\lambda):=A_{PI}-\frac\pi4\lambda^2,
 \tag{ED.6}
-$$
+```
 
 and
 
-$$
+```math
 R(\lambda)
 :=
 \lambda+\frac\pi2
 -2\sqrt{\pi L(\lambda)}.
 \tag{ED.7}
-$$
+```
 
 PI/GU gives
 
-$$
+```math
 \liminf\frac G{D^2}\ge L(\lambda).
 \tag{ED.8}
-$$
+```
 
 ---
 
@@ -105,71 +105,71 @@ $$
 
 PC gives
 
-$$
+```math
 a=q-e_{BB}+c_B
 \tag{ED.9}
-$$
+```
 
 and
 
-$$
+```math
 x_B=q-Q-2(d_H+s_Z).
 \tag{ED.10}
-$$
+```
 
 OP's exact pocket-perimeter excess is
 
-$$
+```math
 E_{out}=x_B+P_F-q-a.
 \tag{ED.11}
-$$
+```
 
 Substitute ED.9-ED.10:
 
-$$
+```math
 \begin{aligned}
 E_{out}+Q
 &=P_F-q-2(d_H+s_Z)+e_{BB}-c_B\\
 &=P_F-h+e_{BB}-3d_H-2s_Z-c_B.
 \end{aligned}
-$$
+```
 
 Thus the exact finite identity is
 
-$$
+```math
 \boxed{
 E_{out}+Q
 =P_F-h+e_{BB}-3d_H-2s_Z-c_B.
 }
 \tag{ED.12}
-$$
+```
 
 JC used the corresponding upper bound after dropping the final nonnegative terms.  Here they are retained.
 
 The pocket/exceptional-face isoperimetric argument gives
 
-$$
+```math
 H_{out}+A_{exc}
 \le
 \frac{(E_{out}+Q)^2}{4\pi}+o(D^2).
 \tag{ED.13}
-$$
+```
 
 ZG/GU gives
 
-$$
+```math
 G\le H_{out}+A_{exc}+O(D).
 \tag{ED.14}
-$$
+```
 
 Therefore ED.8, ED.12-ED.14 imply
 
-$$
+```math
 L(\lambda)
 \le
 \frac{(p-y+t-3d-2s-c)^2}{4\pi}.
 \tag{ED.15}
-$$
+```
 
 The quantity in parentheses is nonnegative because its finite predecessor is `E_out+Q`.
 
@@ -179,39 +179,39 @@ The quantity in parentheses is nonnegative because its finite predecessor is `E_
 
 Write
 
-$$
+```math
 z:=y-\frac\pi2,
 \qquad
 \varepsilon:=\pi-p\ge0,
 \qquad
 r:=\lambda-t\ge0.
 \tag{ED.16}
-$$
+```
 
 Taking square roots in ED.15 and rearranging gives
 
-$$
+```math
 \boxed{
 z+\varepsilon+r+3d+2s+c
 \le R(\lambda).
 }
 \tag{ED.17}
-$$
+```
 
 This is the exact-defect strengthening of DE/WE's
 
-$$
+```math
 z+\varepsilon\le R(\lambda).
-$$
+```
 
 Every loss of direct loaded-contact density (`r`), every diameter tree-component defect, every extra mixed-row dependence, and every non-hull loaded-loaded contact spends the same near-JC-equality budget.
 
 Since `epsilon>=0`, ED.17 also gives
 
-$$
+```math
 z\le R-r-3d-2s-c.
 \tag{ED.18}
-$$
+```
 
 ---
 
@@ -219,83 +219,83 @@ $$
 
 WD/OD gives
 
-$$
+```math
 L_{chain}
 =2h-Q-2s_Z-e_{BB}+c_B.
 \tag{ED.19}
-$$
+```
 
 Normalize and substitute `t=lambda-r`:
 
-$$
+```math
 \frac{L_{chain}}D
 =\pi+2z-\nu-2s-\lambda+r+c.
 \tag{ED.20}
-$$
+```
 
 Apply ED.18:
 
-$$
+```math
 \begin{aligned}
 \frac{L_{chain}}D
 &\le
 \pi+2R-\lambda-\nu-r-6d-6s-c.
 \end{aligned}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \frac{L_{chain}}D
 \le
 \pi+2R(\lambda)-\lambda-\nu.
 }
 \tag{ED.21}
-$$
+```
 
 The total chain-chord detour is
 
-$$
+```math
 U_{det}
 =b-P_F
 =2h-Q-2s_Z-P_F.
 \tag{ED.22}
-$$
+```
 
 Thus
 
-$$
+```math
 \frac{U_{det}}D
 =2z+\varepsilon-\nu-2s.
 \tag{ED.23}
-$$
+```
 
 From ED.17 and `epsilon>=0`,
 
-$$
+```math
 2z+\varepsilon
 =z+(z+\varepsilon)
 \le2R-2r-6d-4s-2c.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \frac{U_{det}}D
 \le
 2R(\lambda)-\nu.
 }
 \tag{ED.24}
-$$
+```
 
 Since `U_det>=0`, necessarily
 
-$$
+```math
 \boxed{0\le\nu\le2R(\lambda).}
 \tag{ED.25}
-$$
+```
 
 The important new feature is the explicit `-lambda` in ED.21.  It survives because any attempt to recover chain length through non-hull loaded contacts `c_B` is paid twice through the exact JC budget ED.17.
 
@@ -305,26 +305,26 @@ The important new feature is the explicit `-lambda` in ED.21.  It survives becau
 
 WD gives
 
-$$
+```math
 H_{out}
 \le
 C_W L_{chain}^{3/2}U_{det}^{1/2},
 \qquad
 C_W:=\frac{\sqrt2}{\pi}.
 \tag{ED.26}
-$$
+```
 
 CC gives
 
-$$
+```math
 \limsup\frac{A_{exc}}{D^2}
 \le\frac{\nu^2}{4\pi}.
 \tag{ED.27}
-$$
+```
 
 Using ED.21, ED.24, define for fixed `lambda` and `R=R(lambda)`
 
-$$
+```math
 \boxed{
 F_{\lambda,R}(\nu)
 :=
@@ -333,24 +333,24 @@ C_W(\pi+2R-\lambda-\nu)^{3/2}
 +\frac{\nu^2}{4\pi},
 }
 \tag{ED.28}
-$$
+```
 
 for
 
-$$
+```math
 0\le\nu\le2R.
-$$
+```
 
 Then every survivor must satisfy
 
-$$
+```math
 \boxed{
 L(\lambda)
 \le
 \max_{0\le\nu\le2R(\lambda)}F_{\lambda,R(\lambda)}(\nu).
 }
 \tag{ED.29}
-$$
+```
 
 ---
 
@@ -360,15 +360,15 @@ We now show that the maximum in ED.29 occurs at `nu=0` throughout the interval n
 
 Put
 
-$$
+```math
 A:=\pi+2R-\lambda,
 \qquad
 B:=2R.
-$$
+```
 
 For `0<=nu<B`, differentiation gives
 
-$$
+```math
 \begin{aligned}
 F'(\nu)
 ={}&-
@@ -378,28 +378,28 @@ F'(\nu)
 +\frac{\nu}{2\pi}.
 \end{aligned}
 \tag{ED.30}
-$$
+```
 
 For every `nu in [0,B]`,
 
-$$
+```math
 A-\nu
 \ge A-B
 =\pi-\lambda,
 \tag{ED.31}
-$$
+```
 
 and
 
-$$
+```math
 B-\nu\le B,
 \qquad
 3(B-\nu)+(A-\nu)\ge A-\nu\ge\pi-\lambda.
-$$
+```
 
 Therefore
 
-$$
+```math
 F'(\nu)
 \le
 -
@@ -407,51 +407,51 @@ F'(\nu)
 \frac{(\pi-\lambda)^{3/2}}{\sqrt B}
 +rac{B}{2\pi}.
 \tag{ED.32}
-$$
+```
 
 For `lambda<=0.4673`, monotonicity of `R` gives
 
-$$
+```math
 R\le R(0.4673)
 =0.0129957122\ldots,
-$$
+```
 
 so
 
-$$
+```math
 B<0.026.
 \tag{ED.33}
-$$
+```
 
 Also
 
-$$
+```math
 \pi-\lambda>2.674.
-$$
+```
 
 Using `C_W=sqrt(2)/pi`, the negative term in ED.32 has magnitude greater than `6`, whereas
 
-$$
+```math
 \frac{B}{2\pi}<0.005.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{F'(\nu)<0}
 \tag{ED.34}
-$$
+```
 
 throughout the entire interval.  Hence
 
-$$
+```math
 \boxed{
 \max_{0\le\nu\le2R}F_{\lambda,R}(\nu)
 =F_{\lambda,R}(0)
 =C_W(\pi+2R-\lambda)^{3/2}\sqrt{2R}.
 }
 \tag{ED.35}
-$$
+```
 
 So a positive linear exceptional-face degree cannot rescue the near-threshold state: it reduces the available contact-chain and detour budgets faster than its own `Q^2` area term grows.
 
@@ -461,7 +461,7 @@ So a positive linear exceptional-face degree cannot rescue the near-threshold st
 
 Combining ED.29 and ED.35, every survivor with `lambda<=0.4673` must satisfy
 
-$$
+```math
 \boxed{
 L(\lambda)
 \le
@@ -472,23 +472,23 @@ V(\lambda)
 \sqrt{2R(\lambda)}.
 }
 \tag{ED.36}
-$$
+```
 
 As in DE/WE,
 
-$$
+```math
 L'(\lambda)<0,
 \qquad
 R'(\lambda)>0.
-$$
+```
 
 Moreover
 
-$$
+```math
 \frac{d}{d\lambda}
 \bigl(\pi+2R(\lambda)-\lambda\bigr)
 =2R'(\lambda)-1>0.
-$$
+```
 
 Hence `V(lambda)` is increasing wherever `R>=0`.  It is enough to check the endpoint `lambda=0.4673`.
 
@@ -498,47 +498,47 @@ Hence `V(lambda)` is increasing wherever `R>=0`.  It is enough to check the endp
 
 At
 
-$$
+```math
 \lambda_*=0.4673,
-$$
+```
 
 using the established PI constant gives
 
-$$
+```math
 \boxed{
 L(\lambda_*)
 =0.32634979701580624\ldots,
 }
 \tag{ED.37}
-$$
+```
 
-$$
+```math
 \boxed{
 R(\lambda_*)
 =0.01299571220274531\ldots,
 }
 \tag{ED.38}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 V(\lambda_*)
 =0.32202852957119010\ldots .
 }
 \tag{ED.39}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 L(\lambda_*)-V(\lambda_*)
 =0.00432126744461614\ldots>0.
 }
 \tag{ED.40}
-$$
+```
 
 This contradicts ED.36.  By the monotonicity in Section 7, every smaller `lambda` is also excluded.  Therefore ED.1 holds.
 

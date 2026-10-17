@@ -106,11 +106,11 @@ The close-to-triangular strict-lattice regression and the KKT-realizable activat
 regression show why those upgrades cannot be inferred from density or first-contact
 creation alone. The exact unresolved bridge is:
 
-$$
+```math
 \text{large anchored KKT-invisible weak component}
 \Longrightarrow
 \text{triangle, strict same-cardinality sub-`D` source, or core contradiction}.
-$$
+```
 
 ## 5. Classification
 

@@ -24,12 +24,12 @@ This forces every exact diameter star to collapse into a vanishing angular neigh
 
 Therefore
 
-$$
+```math
 \boxed{
 \Delta(H)=o(D),
 }
 \tag{NS.1}
-$$
+```
 
 where `H` is the **complete actual diameter graph** supplied by C65.
 
@@ -41,39 +41,39 @@ Consequently a disk-scale harmonic attachment block containing `Theta(D)` loaded
 
 Normalize the force hulls by `D` and translate as in DC:
 
-$$
+```math
 F_j/D_j\longrightarrow B_{1/2}
-$$
+```
 
 in Hausdorff distance.
 
 Let `uv` be any actual diameter pair. Then
 
-$$
+```math
 |u-v|=D_j.
-$$
+```
 
 After normalization, choose any convergent subsequence
 
-$$
+```math
 u_j:=u/D_j\to u_\infty,
 \qquad
 v_j:=v/D_j\to v_\infty.
-$$
+```
 
 Both limits lie in `B_{1/2}`, while
 
-$$
+```math
 |u_\infty-v_\infty|=1.
-$$
+```
 
 The only two points of the radius-`1/2` disk at mutual distance one are antipodal boundary points. Hence
 
-$$
+```math
 u_\infty,v_\infty\in\partial B_{1/2},
 \qquad
 v_\infty=-u_\infty.
-$$
+```
 
 A compactness contradiction makes this uniform.
 
@@ -81,14 +81,14 @@ A compactness contradiction makes this uniform.
 
 Let `angle_j(u,v)` denote the smaller error from antipodality in the disk-centered polar angle. Then
 
-$$
+```math
 \boxed{
 \sup_{uv\in H_j}
 |\pi-\angle(u,v)|\longrightarrow0.
 }
 \tag{1.1}
 
-$$
+```
 
 Otherwise a sequence of diameter pairs with error bounded below would have a non-antipodal limit pair at distance one in `B_{1/2}`, impossible.
 
@@ -98,21 +98,21 @@ Otherwise a sequence of diameter pairs with error bounded below would have a non
 
 Fix a loaded terminal `z`. Every diameter partner `a` of `z` is antipodal to `z` up to the uniform error in NS.1. Therefore all partners of `z` lie in one force-hull boundary arc whose disk-centered angular length is
 
-$$
+```math
 \eta_j=o(1)
 \tag{2.1}
-$$
+```
 
 uniformly in the choice of `z`.
 
 Equivalently, if `J_j(z)` is the smallest disk-angle interval containing all diameter partners of `z`, then
 
-$$
+```math
 \boxed{
 \sup_z |J_j(z)|\to0.
 }
 \tag{2.2}
-$$
+```
 
 This sharpens the fixed positive C18 star cone width only in the near-circle branch.
 
@@ -124,11 +124,11 @@ For a convex body `K`, let `sigma_K` be its perimeter measure indexed by outer n
 
 For the normalized force hulls,
 
-$$
+```math
 \sigma_{F_j/D_j}
 \Longrightarrow
 \sigma_{B_{1/2}},
-$$
+```
 
 and the limiting measure is the nonatomic uniform circular perimeter measure.
 
@@ -138,18 +138,18 @@ A standard uniform-nonatomicity consequence is:
 
 If `I_j` is any sequence of angular intervals with
 
-$$
+```math
 |I_j|\to0,
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \sigma_{F_j/D_j}(I_j)	o0
 }
 \tag{3.1}
-$$
+```
 
 uniformly over the location of `I_j`.
 
@@ -161,10 +161,10 @@ The same conclusion holds for boundary-arc length indexed by polar angle because
 
 Thus the actual force-hull boundary length contained in any partner arc `J_j(z)` is
 
-$$
+```math
 \boxed{o(D_j)}
 \tag{3.2}
-$$
+```
 
 uniformly in `z`.
 
@@ -174,33 +174,33 @@ uniformly in `z`.
 
 List the distinct diameter partners of `z` in their order along the convex force hull:
 
-$$
+```math
 a_1,\ldots,a_d,
 \qquad d=\deg_H(z).
-$$
+```
 
 All lie in `J_j(z)`. The force-hull boundary arc from `a_i` to `a_{i+1}` has length at least the Euclidean chord length, and unit separation gives
 
-$$
+```math
 |a_i-a_{i+1}|\ge1.
-$$
+```
 
 Therefore
 
-$$
+```math
 d-1
 \le
 \operatorname{length}_{\partial F_j}J_j(z).
 \tag{4.1}
-$$
+```
 
 Using (3.2), uniformly in `z`,
 
-$$
+```math
 \boxed{
 \max_z\deg_H(z)=o(D_j).
 }
-$$
+```
 
 This proves NS.1.
 
@@ -210,18 +210,18 @@ This proves NS.1.
 
 Let `I_*` be the LC/CH macroscopic harmonic component and let
 
-$$
+```math
 A_*\subset B_+
-$$
+```
 
 be its distinct loaded attachment set.
 
 At the UF crossover LC gives
 
-$$
+```math
 |A_*|
 \ge(0.7591662335-o(1))D.
-$$
+```
 
 For every fixed population parameter with LC lower endpoint `mu<1`, the attachment cell has diameter below `D` asymptotically, so there is no diameter edge with both endpoints in `A_*`.
 
@@ -229,43 +229,43 @@ Every terminal in `A_*` is incident to at least one actual diameter edge by C65.
 
 Let
 
-$$
+```math
 N_H(A_*)
 :=\{b\notin A_*:\exists a\in A_*,\ ab\in H\}.
-$$
+```
 
 NS.1 gives
 
-$$
+```math
 \max_b\deg_H(b)=o(D),
-$$
+```
 
 so
 
-$$
+```math
 |A_*|
 \le
 \sum_{b\in N_H(A_*)}\deg_H(b)
 \le
 |N_H(A_*)|\,o(D).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{|N_H(A_*)|\to\infty.}
 \tag{5.1}
-$$
+```
 
 More precisely,
 
-$$
+```math
 |N_H(A_*)|
 \ge
 \frac{|A_*|}{\Delta(H)}
 \to\infty.
 \tag{5.2}
-$$
+```
 
 A greedy matching argument also gives a diameter matching between `A_*` and its complement whose size tends to infinity.
 
@@ -295,9 +295,9 @@ NS identifies the exact missing quantitative input:
 
 The global Wegner theorem on PR #131 and the near-circle completion-shell estimates are natural candidates. A rate such as
 
-$$
+```math
 \Delta(H)=O(D^{1-\epsilon})
-$$
+```
 
 would already force a polynomially growing family of opposite carriers; an `O(1)` star bound in the UF endpoint would force a linear diameter matching across the giant attachment block and interact strongly with ZT/NM.
 

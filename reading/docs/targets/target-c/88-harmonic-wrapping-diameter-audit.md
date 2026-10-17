@@ -23,38 +23,38 @@ The current harmonic framework supplies an extra ingredient that those reports d
 not use. A harmonic cell of Euclidean diameter `d` has many distinct loaded
 attachments. Canonical Section 62 and the loaded degree cap give
 
-$$
+```math
 |A_r|\ge {d_r+1\over3}.
-$$
+```
 
 A circle-supported cell that wraps around the center but has diameter only slightly
 above `sqrt(3)/2` can place its support only in six short boundary clusters. Near the
 Type-II disk, unit separation bounds how many loaded attachments those clusters can
 contain. Combining the two facts gives a new explicit threshold
 
-$$
+```math
 \boxed{
 \mu_0=0.8896708101\ldots,
 \qquad
 {\mu_0\over3}=6\arcsin(\mu_0)-2\pi.
 }
-$$
+```
 
 The main result is
 
-$$
+```math
 \boxed{
 \liminf {1\over D}\max_r\operatorname{diam}(P_r)\ge\mu_0
 }
-$$
+```
 
 in the Type-II branch. More strongly, there are harmonic cells `P_*` with
 
-$$
+```math
 \operatorname{diam}(P_*)\ge(\mu_0-o(1))D,
 \qquad
 \operatorname{area}(P_*)\ge c_*D^2
-$$
+```
 
 for one absolute `c_*>0`, and these cells have local strict-rhombus filling fraction
 `1-o(1)`. Thus Section 82 applies to an actual macroscopic carrier whose diameter is
@@ -69,55 +69,55 @@ No contact-isolated source point is removed. The theorem is Type-II only.
 Work along a Type-II survivor sequence. Translate by the centers supplied by Section
 80 and scale by `D`. Then
 
-$$
+```math
 D^{-1}F\to B_{1/2}
 \tag{88.1}
-$$
+```
 
 in Hausdorff distance. Section 83 gives pairwise interior-disjoint harmonic cells
 
-$$
+```math
 P_r=\operatorname{conv}(A_r)\subset F
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{area}(P_r)
 =\operatorname{area}(F)-o(D^2)
 ={\pi D^2\over4}-o(D^2),
 }
 \tag{88.2}
-$$
+```
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{per}(P_r)
 \le2\pi^2D+O(1),
 }
 \tag{88.3}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \sum_r
 \bigl(\operatorname{area}(P_r)-A_{4,r}\bigr)
 =o(D^2),
 }
 \tag{88.4}
-$$
+```
 
 where `A_{4,r}` is the total area of unloaded-only strict-rhombus faces belonging to
 component `I_r`.
 
 For each cell put
 
-$$
+```math
 d_r:=\operatorname{diam}(P_r).
-$$
+```
 
 ## 88.1 Boundary arclength in an almost circular convex hull
 
@@ -127,72 +127,72 @@ The attachment-count argument needs a local boundary-length estimate.
 
 Let a convex body `K` satisfy
 
-$$
+```math
 B(0,r)\subset K\subset B(0,R),
 \qquad 0<r\le R.
-$$
+```
 
 Parameterize `partial K` radially by polar angle. If `E` is a finite union of angular
 intervals of total angular length `|E|`, then the corresponding boundary arcs have
 total Euclidean length at most
 
-$$
+```math
 \boxed{{R^2\over r}|E|.}
 \tag{88.5}
-$$
+```
 
 ### Proof
 
 Write the radial graph as
 
-$$
+```math
 p(\phi)=\rho(\phi)e_\phi.
-$$
+```
 
 The radial function of a convex body containing the origin is locally absolutely
 continuous. At almost every differentiability point let `n` be the outward unit
 normal. Since the inner disk lies in `K`,
 
-$$
+```math
 n\cdot p=h_K(n)\ge r.
-$$
+```
 
 Also `rho<=R`, so
 
-$$
+```math
 n\cdot e_\phi\ge {r\over R}.
-$$
+```
 
 For a radial graph,
 
-$$
+```math
 {ds\over d\phi}
 ={\rho\over n\cdot e_\phi}
 \le {R^2\over r}.
-$$
+```
 
 Integrate over `E`. The formula holds through the nonsmooth points by absolute
 continuity. `square`
 
 By (88.1), for every `epsilon>0` and all sufficiently large survivors,
 
-$$
+```math
 B\left(0,\left({1\over2}-\epsilon\right)D\right)
 \subset F
 \subset
 B\left(0,\left({1\over2}+\epsilon\right)D\right).
 \tag{88.6}
-$$
+```
 
 Hence for angular sets of total length `L`, the corresponding force-hull boundary
 length is
 
-$$
+```math
 \boxed{
 \left({D\over2}+o(D)\right)L.
 }
 \tag{88.7}
-$$
+```
 
 uniformly for every fixed finite number of angular intervals.
 
@@ -200,12 +200,12 @@ Consecutive loaded vertices on a force-hull boundary arc are source points at mu
 Euclidean distance at least one. Therefore an angular union of at most `M` intervals
 and total length `L` contains at most
 
-$$
+```math
 \boxed{
 \left({L\over2}+o(1)\right)D+M
 }
 \tag{88.8}
-$$
+```
 
 loaded vertices.
 
@@ -213,16 +213,16 @@ loaded vertices.
 
 Let `S` be a compact subset of the radius-`1/2` circle and suppose
 
-$$
+```math
 \operatorname{diam}(S)=\lambda<1.
-$$
+```
 
 Put
 
-$$
+```math
 \theta:=2\arcsin\lambda\in(0,\pi).
 \tag{88.9}
-$$
+```
 
 Any two points of `S` have minor angular separation at most `theta`.
 
@@ -250,10 +250,10 @@ If `S` is wrapping, then necessarily `theta>=2pi/3`. Moreover there exist three 
 `y_1,y_2,y_3 in S` such that every point of `S` lies in a union of at most six circular
 arcs whose total angular length is
 
-$$
+```math
 \boxed{6\theta-4\pi.}
 \tag{88.10}
-$$
+```
 
 ### Proof
 
@@ -264,18 +264,18 @@ interior.
 
 Put the three points in cyclic order and let their three circular gaps be
 
-$$
+```math
 g_1,g_2,g_3\in(0,\pi),
 \qquad
 g_1+g_2+g_3=2\pi.
-$$
+```
 
 Every pair of anchors is in `S`, so
 
-$$
+```math
 g_i\le\theta
 \qquad(i=1,2,3).
-$$
+```
 
 Thus `3theta>=2pi`.
 
@@ -288,17 +288,17 @@ within angular distance at most `theta` of `y_1` and `y_2`. To be within distanc
 
 These two endpoint intervals are disjoint because `theta<pi`; their total length is
 
-$$
+```math
 2\theta-g_2-g_3.
-$$
+```
 
 Repeat in the other two gaps. The total allowed angular measure is
 
-$$
+```math
 \sum_{cyc}(2\theta-g_i-g_j)
 =6\theta-2(g_1+g_2+g_3)
 =6\theta-4\pi.
-$$
+```
 
 Every member of `S` must lie in this allowed set because it is within angular
 distance `theta` of all three anchors. `square`
@@ -314,23 +314,23 @@ The preceding circle statement becomes quantitative for harmonic cells.
 
 Let `P_j=conv(A_j)` be a sequence of harmonic cells in Type II such that
 
-$$
+```math
 {d_j\over D_j}\to\lambda<1,
 \qquad
 {A_j\over D_j}\to S
-$$
+```
 
 in Hausdorff distance after passing to a subsequence of the finite attachment sets.
 If the limiting support set `S` is wrapping, then
 
-$$
+```math
 \boxed{
 {\lambda\over3}
 \le
 6\arcsin\lambda-2\pi.
 }
 \tag{88.11}
-$$
+```
 
 ### Proof
 
@@ -338,9 +338,9 @@ All loaded attachments lie on `partial F_j`. By the annular convergence (88.6), 
 Hausdorff limit of `D_j^{-1}A_j` lies on the radius-`1/2` circle, and convex-hull
 continuity gives
 
-$$
+```math
 D_j^{-1}P_j\to\operatorname{conv}(S).
-$$
+```
 
 Apply Lemma 88.3 to `S`. Put `theta=2asin(lambda)`. Choose the three anchor points
 there and attachment vertices converging to them. Since every pair of actual
@@ -351,89 +351,89 @@ to a point of `S` outside that allowed set.
 
 Equations (88.8) and (88.10) therefore give
 
-$$
+```math
 \limsup { |A_j|\over D_j}
 \le {6\theta-4\pi\over2}
 =3\theta-2\pi
 =6\arcsin\lambda-2\pi.
 \tag{88.12}
-$$
+```
 
 On the other hand canonical Section 62 gives, for the corresponding unloaded
 component,
 
-$$
+```math
 t_j\ge\delta_j+3,
 \qquad
 d_j\le\delta_j+2.
-$$
+```
 
 Thus
 
-$$
+```math
 t_j\ge d_j+1.
-$$
+```
 
 Every loaded attachment has total positive-contact degree at most three, so
 `t_j<=3|A_j|`. Hence
 
-$$
+```math
 \liminf {|A_j|\over D_j}
 \ge{\lambda\over3}.
 \tag{88.13}
-$$
+```
 
 Combine (88.12)--(88.13). `square`
 
 Define
 
-$$
+```math
 H(\lambda)
 :=6\arcsin\lambda-2\pi-{\lambda\over3}.
 \tag{88.14}
-$$
+```
 
 On `[sqrt(3)/2,1)`,
 
-$$
+```math
 H'(\lambda)
 ={6\over\sqrt{1-\lambda^2}}-{1\over3}>0.
-$$
+```
 
 Also
 
-$$
+```math
 H(\sqrt3/2)=-{\sqrt3\over6}<0,
 \qquad
 \lim_{\lambda\uparrow1}H(\lambda)=\pi-{1\over3}>0.
-$$
+```
 
 Therefore there is a unique root
 
-$$
+```math
 \boxed{
 \mu_0=0.889670810115\ldots
 }
 \tag{88.15}
-$$
+```
 
 satisfying
 
-$$
+```math
 \boxed{
 {\mu_0\over3}=6\arcsin\mu_0-2\pi.
 }
 \tag{88.16}
-$$
+```
 
 Lemma 88.4 implies:
 
-$$
+```math
 \boxed{
 \text{every wrapping harmonic-cell limit has diameter at least }\mu_0.
 }
 \tag{88.17}
-$$
+```
 
 This is the harmonic improvement beyond the pure convex-cell threshold
 `sqrt(3)/2=0.866025...`.
@@ -442,15 +442,15 @@ This is the harmonic improvement beyond the pure convex-cell threshold
 
 Fix `mu<1` and put
 
-$$
+```math
 \theta_\mu:=2\arcsin\mu<\pi.
-$$
+```
 
 Consider a finite family of pairwise interior-disjoint positive-area convex sets
 
-$$
+```math
 Q_i=\operatorname{conv}(S_i)\subset B_{1/2},
-$$
+```
 
 where every `S_i` is a compact circle subset of cap type and
 `diam(Q_i)<=mu`.
@@ -477,12 +477,12 @@ sets intersect near the crossing, contrary to the hypothesis. `square`
 Take the inclusion-maximal support arcs. Their interiors are pairwise disjoint, so if
 their angular lengths are `alpha_1,...,alpha_s`,
 
-$$
+```math
 0<\alpha_i\le\theta_\mu,
 \qquad
 \sum_i\alpha_i\le2\pi.
 \tag{88.18}
-$$
+```
 
 All cells whose support arcs lie below one maximal arc are contained in the circular
 cap cut off by that maximal arc. Interior-disjointness therefore gives total cell
@@ -490,25 +490,25 @@ area at most the sum of the maximal cap areas.
 
 For the radius-`1/2` disk, the cap cut off by an arc of angle `alpha` has area
 
-$$
+```math
 G(\alpha):={\alpha-\sin\alpha\over8}.
 \tag{88.19}
-$$
+```
 
 The function `alpha-sin(alpha)` is increasing and convex on `[0,pi]`. Thus under
 (88.18) the cap-area sum is maximized by filling as many arcs as possible to
 `theta_mu`, followed by one remainder. Put
 
-$$
+```math
 k_\mu:=\left\lfloor{2\pi\over\theta_\mu}\right\rfloor,
 \qquad
 r_\mu:=2\pi-k_\mu\theta_\mu\in[0,\theta_\mu).
 \tag{88.20}
-$$
+```
 
 Then every such cap-type family satisfies
 
-$$
+```math
 \boxed{
 \sum_i\operatorname{area}(Q_i)
 \le
@@ -518,11 +518,11 @@ $$
 +r_\mu-\sin r_\mu\right].
 }
 \tag{88.21}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \mathcal C(\mu)
 ={1\over8}
@@ -530,7 +530,7 @@ $$
 <{\pi\over4}
 }
 \tag{88.22}
-$$
+```
 
 for every fixed `mu<1`.
 
@@ -538,18 +538,18 @@ for every fixed `mu<1`.
 
 For fixed `mu<mu_0`, split the Type-II cells into
 
-$$
+```math
 \mathcal S_\mu(D):=\{r:d_r\le\mu D\},
 \qquad
 \mathcal L_\mu(D):=\{r:d_r>\mu D\}.
 \tag{88.23}
-$$
+```
 
 ### Theorem 88.6 — short-cell area ceiling
 
 For every fixed `mu<mu_0`,
 
-$$
+```math
 \boxed{
 \limsup_{D\to\infty}
 {1\over D^2}
@@ -558,23 +558,23 @@ $$
 \le\mathcal C(\mu).
 }
 \tag{88.24}
-$$
+```
 
 ### Proof
 
 Section 83 and isoperimetry give
 
-$$
+```math
 \sum_r\sqrt{\operatorname{area}(P_r)}=O(D).
 \tag{88.25}
-$$
+```
 
 Fix `eta>0`. Cells of area below `eta D^2` therefore carry only
 
-$$
+```math
 O(\sqrt\eta\,D^2)
 \tag{88.26}
-$$
+```
 
 total area. The remaining cells are finite in number, uniformly in `D` for fixed
 `eta`.
@@ -589,26 +589,26 @@ pairwise interior-disjoint.
 Every limiting short cell has diameter `lambda<=mu<mu_0`. By Lemma 88.4 it cannot be
 wrapping. It is therefore cap type. Lemma 88.5 and the capacity bound (88.21) give
 
-$$
+```math
 \limsup {1\over D^2}
 \sum_{\substack{r\in\mathcal S_\mu(D)\\
                  \operatorname{area}(P_r)\ge\eta D^2}}
 \operatorname{area}(P_r)
 \le\mathcal C(\mu).
-$$
+```
 
 Now let `eta` tend to zero and use (88.26). `square`
 
 Combining (88.2) and (88.24), define
 
-$$
+```math
 \Gamma(\mu):={\pi\over4}-\mathcal C(\mu)>0.
 \tag{88.27}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \liminf {1\over D^2}
 \sum_{r\in\mathcal L_\mu(D)}
@@ -616,7 +616,7 @@ $$
 \ge\Gamma(\mu).
 }
 \tag{88.28}
-$$
+```
 
 So a positive area fraction of the near-disk force hull lies in harmonic cells of
 diameter larger than every fixed `mu<mu_0`.
@@ -625,38 +625,38 @@ diameter larger than every fixed `mu<mu_0`.
 
 Every convex body satisfies
 
-$$
+```math
 \operatorname{per}(P_r)\ge2d_r.
-$$
+```
 
 Using the total perimeter bound (88.3),
 
-$$
+```math
 \boxed{
 |\mathcal L_\mu(D)|
 \le {\pi^2\over\mu}+o(1).
 }
 \tag{88.29}
-$$
+```
 
 for every fixed `mu>0`. Equations (88.28)--(88.29) imply that one cell in
 `mathcal L_mu(D)` has
 
-$$
+```math
 \boxed{
 \operatorname{area}(P_r)=\Omega_\mu(D^2).
 }
 \tag{88.30}
-$$
+```
 
 For such a macroscopic cell, the global local-deficit identity (88.4) gives
 
-$$
+```math
 \boxed{
 {A_{4,r}\over\operatorname{area}(P_r)}\to1
 }
 \tag{88.31}
-$$
+```
 
 along a maximizing subsequence, because its individual nonnegative deficit is at most
 the global `o(D^2)` deficit.
@@ -664,17 +664,17 @@ the global `o(D^2)` deficit.
 Let `mu_j` increase to `mu_0` sufficiently slowly. The capacity function is continuous
 at `mu_0` from below and
 
-$$
+```math
 \mathcal C(\mu_0)=0.4638645974\ldots,
 \qquad
 \Gamma(\mu_0)=0.3215335659\ldots>0.
 \tag{88.32}
-$$
+```
 
 while the long-cell count in (88.29) stays uniformly bounded. A diagonal choice of
 maximal-area long cells therefore gives one sequence `P_*` with
 
-$$
+```math
 \boxed{
 {d_*\over D}\ge\mu_0-o(1),
 \qquad
@@ -683,18 +683,18 @@ $$
 {A_{4,*}\over\operatorname{area}(P_*)}\to1
 }
 \tag{88.33}
-$$
+```
 
 for one absolute constant `c_*>0`.
 
 In particular
 
-$$
+```math
 \boxed{
 \liminf {1\over D}\max_r d_r\ge\mu_0.
 }
 \tag{88.34}
-$$
+```
 
 The exact value of `c_*` is not important. The displayed constants show that it can
 be chosen uniformly positive.
@@ -705,15 +705,15 @@ The cells selected in (88.33) are macroscopic and locally rhombus-saturated. The
 unloaded populations are quadratic by Oler capacity and the local rhombus area, while
 their attachment counts are linear because
 
-$$
+```math
 |A_*|\ge{d_*+1\over3}=\Omega(D),
 \qquad
 |A_*|\le q\le\pi D.
-$$
+```
 
 Therefore the exact Section-82 local ledger applies at macroscopic scale:
 
-$$
+```math
 \boxed{
 |I_*|=\Theta(D^2),
 \qquad
@@ -722,7 +722,7 @@ $$
 F_{4,*}=|I_*|+O(D)=\Theta(D^2),
 }
 \tag{88.35}
-$$
+```
 
 and the full strict-rhombus complex of the cell has physical boundary `O(D)`.
 After every fixed Section-68/69 phase cut, essentially all of its rhombi lie in
@@ -731,9 +731,9 @@ After every fixed Section-68/69 phase cut, essentially all of its rhombi lie in
 Thus the Type-II branch contains an actual boundary-order near-quadrangulated harmonic
 carrier whose diameter is at least
 
-$$
+```math
 0.8896708101\ldots D-o(D).
-$$
+```
 
 This is substantially stronger than merely knowing that some carrier has diameter
 `Omega(D)`.

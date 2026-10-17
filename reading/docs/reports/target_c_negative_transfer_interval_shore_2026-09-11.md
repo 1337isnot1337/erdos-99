@@ -14,22 +14,22 @@ straight-line diameter-thrackle property
 
 Let (H) be the actual loaded diameter graph in the C-II representative, and let
 
-$$
+```math
 K=Q^{\mathsf T}\Lambda^+Q.
-$$
+```
 
 Order the diameter edges in the legal C53 projective order.  If
 
-$$
+```math
 c:=K_{0,m-1}<0,
-$$
+```
 
 then some positive circular-interval split (A|A^c) has a signed split vector (z_A)
 with
 
-$$
+```math
 z_{A,0}z_{A,m-1}=-1.
-$$
+```
 
 If (k_A=|\operatorname{supp}z_A|) is its number of crossing diameter edges, then one
 of the two terminal shores contains no internal diameter edge and has at most (k_A)
@@ -44,30 +44,30 @@ large (k_A) need not have a bounded terminal shore.
 
 The circular-planar resistance split representation gives
 
-$$
+```math
 K=\sum_A\lambda_A z_Az_A^{\mathsf T},
 \qquad \lambda_A\ge0,
-$$
+```
 
 where (A) ranges over nonempty proper circular intervals of the loaded terminal
 order.  Hence
 
-$$
+```math
 K_{0,m-1}=\sum_A\lambda_Az_{A,0}z_{A,m-1}.
-$$
+```
 
 If this number is negative, at least one term with (lambda_A>0) has
 
-$$
+```math
 z_{A,0}z_{A,m-1}<0.
-$$
+```
 
 Because split-vector entries are in ({-1,0,1}), this product is (-1), and both
 diameter edges (e_0,e_{m-1}) cross (A|A^c).  Put
 
-$$
+```math
 k_A=|\{e\in H:e\text{ has one endpoint in }A	ext{ and one in }A^c\}|.
-$$
+```
 
 Then (k_A=|\operatorname{supp}z_A|).
 
@@ -82,14 +82,14 @@ Every terminal in (A) is incident with an actual diameter edge, by the definitio
 the loaded set.  Since (H[A]) is empty, every incident diameter edge crosses the cut.
 Each crossing edge has exactly one endpoint in (A), so
 
-$$
+```math
 |A|
 \le \sum_{v\in A}\deg_H(v)
 =k_A.
-$$
+```
 
 This proves the claimed small-shore bound.  The final special cases follow by putting
-(k_A=2) or (1).  $\square$
+(k_A=2) or (1).  $`\square`$
 
 ## Exact effect on C-II
 

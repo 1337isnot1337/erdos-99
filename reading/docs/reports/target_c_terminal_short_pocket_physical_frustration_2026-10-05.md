@@ -14,11 +14,11 @@
 Consider any sequence of canonical triangle-free full-core Type-II sources,
 with every source point retained, diameter tending to infinity, and
 
-$$
+```math
 q/D\longrightarrow\pi,
 \qquad u_B/D\longrightarrow0.
 \tag{1.1}
-$$
+```
 
 Here `u_B=sum_P(ell_P-2)` is the total excess contact-path length of the
 actual hull pockets. Nonunit hull-side count `m_B` need not be small;
@@ -30,10 +30,10 @@ Let `R_phys=sum_F r_F` over original bounded exceptional contact faces
 only, excluding every new hull pocket. There is a universal, nonexplicit
 constant `kappa_phys>0` such that every sequence (1.1) satisfies
 
-$$
+```math
 \boxed{\liminf R_{\rm phys}/D\ge\kappa_{\rm phys}.}
 \tag{1.2}
-$$
+```
 
 More precisely, fixed degree and angular cutoffs force a linear family of
 **original physical contact faces** with positive direction mismatch.
@@ -82,11 +82,11 @@ All original exceptional faces have unit-boundary degree at least five,
 `P_exc=4f+Q<=5pi D`, and `T<=3pi D`. Each new pocket has exactly one
 added hull side and a contact path of length `ell_P>=2`. Consequently
 
-$$
+```math
 \#\{P:\ell_P\ge3\}\le u_B,
 \qquad \sum_{\ell_P\ge3}\ell_P\le3u_B.
 \tag{2.1}
-$$
+```
 
 The added sides impose zero vector displacement only in the linear rank
 proof. Four-sided pockets keep their closure rows; they are not strict
@@ -94,11 +94,11 @@ unit rhombi. Original stopped trains are used throughout.
 
 Type-II disk convergence and (1.1) give
 
-$$
+```math
 g_B:=P_F-q=o(D),\qquad
 g_B=\sum_{e\ {\rm nonunit}}(|e|-1)\ge0.
 \tag{2.2}
-$$
+```
 
 Every source isolate remains in its uniquely assigned chamber or exterior
 cap. This includes isolates assigned on an added hull chord. Physical
@@ -110,19 +110,19 @@ Suppose a pocket path is `a-x-b` with both contacts of length one, and
 its added chord has length `c>1`. The two oriented path unit vectors are
 symmetric about the chord direction, with angle
 
-$$
+```math
 \rho=\arccos(c/2).
-$$
+```
 
 At `c=1`, `rho=pi/3`; both path directions therefore equal the chord
 phase modulo `pi/3`. For `1<c<=3/2`,
 
-$$
+```math
 0<\pi/3-\rho
 =\int_1^c\frac{dt}{\sqrt{4-t^2}}
 <c-1.
 \tag{3.1}
-$$
+```
 
 Thus a two-step pocket with `c<=1+eta`, `0<eta<1/2`, has **both**
 terminal phases within `eta` of its actual hull chord. This uses no
@@ -149,10 +149,10 @@ position. Choose one end per train; multiplicity two is retained. As
 window mass tends to zero. Canonical phase coarea, or the #699 incident
 crossing count, now gives
 
-$$
+```math
 \boxed{R_{\mathcal O}=o(D^2),}
 \tag{3.2}
-$$
+```
 
 where `mathcal O` is **all** outer-ended trains. Bad-train crossings are
 at most their count times `T=O(D)`. Far-phase crossings are `O_epsilon(D)`.
@@ -181,21 +181,21 @@ nodes have every incident train in one bin. Good pockets have valence two
 and distinct nonunit hull anchors. Outside terminals have distinct unit
 hull anchors. Hence the actual hull-side estimate gives
 
-$$
+```math
 \max_j E_j\le(6\epsilon+o_\epsilon(1))D.
 \tag{4.1}
-$$
+```
 
 The finite phase bank, the two-bin comparison with canonical coarea,
 and `T<=3pi D` imply, on a subsequence attaining the liminf,
 
-$$
+```math
 \Delta_2\le60\pi\liminf \frac{B}{D}
 +\frac{300\pi^2}{M}
 +\frac{240\pi^2\eta}{\epsilon}
 +144\pi\epsilon.
 \tag{4.2}
-$$
+```
 
 Here (1.1) removes `60pi(u_B+g_B/eta)/D` **after all cutoffs are fixed**.
 No residual estimate for the long pockets is needed. High-degree physical
@@ -203,31 +203,31 @@ terminal mass is charged by augmented rank, not discarded.
 
 For example choose the same constants for all sequences:
 
-$$
+```math
 M=100000,\quad
 n=\lceil2000\pi^2/\Delta_2\rceil,\quad
 \epsilon=\pi/(3n),\quad
 \eta=\Delta_2\epsilon/(3000\pi^2).
 \tag{4.3}
-$$
+```
 
 The last three terms of (4.2) sum to less than `Delta_2/2`: the first
 is below `0.048`, the second is `0.08Delta_2`, and the third is at most
 `0.024Delta_2`; `Delta_2>3/4` suffices. Therefore
 
-$$
+```math
 \liminf B/D\ge\frac1{240\sqrt3}.
 \tag{4.4}
-$$
+```
 
 Fixed-degree Groemer compactness assigns every such physical face a
 residual at least `sigma_M(eta)>0`. Consequently (1.2) holds with
 
-$$
+```math
 \kappa_{\rm phys}
 =\frac{\sigma_{100000}(\eta)}{240\sqrt3}>0.
 \tag{4.5}
-$$
+```
 
 No effective estimate for this compactness threshold or `D_0` is claimed.
 Each wall has at most `M` vertices; a contact vertex meets at most five
@@ -242,64 +242,64 @@ replacement. Existence of that replacement is not proved here.
 
 Let `S_U` be singleton trains not in `mathcal O`, and let
 
-$$
+```math
 U=T-|\mathcal O|-S_U.
-$$
+```
 
 Deleting `mathcal O` and these singletons leaves all but `o(D^2)` rhombi
 by (3.2). Mantel and outer angular determination give
 
-$$
+```math
 U\ge(2s-o(1))D,\qquad
 U\le2f-\max\{\sigma_C,k-m_B-d_D\}-S_U.
-$$
+```
 
 The second bound retains both `|mathcal O|>=q-k+sigma_C` and the earlier
 good-hull count `|G|=q-m_B-d_D`, with `0<=d_D<=2`. Put
 `rho_B=max(sigma_C,k-m_B)`. Thus the compulsory bank is
 
-$$
+```math
 \boxed{2f\ge2sD+\rho_B+S_U-o(D).}
 \tag{5.1}
-$$
+```
 
 With `sigma_R=2(T-S)-4sqrt(R_4)`, the exact finite identity is
 
-$$
+```math
 4S+2\sigma_R
 =2b-8\sqrt{R_4}+5U+5\sigma_C+2(Q-f)+5S_U
 +5\bigl(|\mathcal O|-(q-k+\sigma_C)\bigr).
 \tag{5.2}
-$$
+```
 
 Its last term is nonnegative and at least
 `5 max(0,k-m_B-d_D-sigma_C)`. Substitution gives the second-depletion
 form of the physical frontier:
 
-$$
+```math
 \boxed{4S+2\sigma_R
 \ge2(\pi+s)D+5(\rho_B+S_U)+2(Q-f)+2(b-P_F)-o(D).}
 \tag{5.3}
-$$
+```
 
 The `5m_B` escape on the left of (S) is canceled in this branch by spending
 all additional outer-ended trains. Equations (5.1) and (5.3) are two
 forms of the same scalar identity, not independent currencies. Combining
 `f<=Q=q-m_B-u_B-2k` with (5.1) also gives
 
-$$
+```math
 m_B+u_B+2k+\frac{\rho_B+S_U}{2}
 \le(\pi-s)D+o(D).
 \tag{5.4}
-$$
+```
 
 Finally, the actual population comparison spends (1.2):
 
-$$
+```math
 \limsup\frac{\delta_F+E_4-a_0Z_{\rm ext}}D
 \le c_0\pi-a_0\kappa_{\rm phys},\qquad c_0=a_0/2.
 \tag{5.5}
-$$
+```
 
 This is a necessary budget. Neither it nor the complete unit-wall matching
 implies a strict competitor. The general positive-residual full-core

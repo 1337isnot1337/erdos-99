@@ -16,11 +16,11 @@
 
 The current terminal FREE package has an exact scalar lower endpoint
 
-$$
+```math
 \mu_*=
 \frac\pi2+\frac25\sqrt{\frac\pi{2\sqrt3}}+\frac g5,
 \qquad g=0.007707.
-$$
+```
 
 The endpoint-stability theorem had treated equality as a possible rigid survivor. The new transport theorem then showed that such a survivor would contain about `1.56D` direction-diffuse O--O trains while essentially all quadratic strict-rhombus crossing mass is carried by one bounded-to-bounded atomic orbit.
 
@@ -28,7 +28,7 @@ Those two conclusions are incompatible with the already audited O--O train-lengt
 
 The numerical gap is not close:
 
-$$
+```math
 \boxed{
 \frac\pi2-g
 =1.563089326794897\ldots
@@ -37,7 +37,7 @@ $$
 =\frac{r(0)^2}{2}.
 }
 \tag{EX.1}
-$$
+```
 
 Therefore no terminal full-core FREE sequence can attain the matched surplus endpoint `mu_*`.
 
@@ -47,36 +47,36 @@ Therefore no terminal full-core FREE sequence can attain the matched surplus end
 
 Assume for contradiction that a terminal full-core FREE sequence satisfies
 
-$$
+```math
 \mu_D\to\mu_*.
 \tag{1.1}
-$$
+```
 
 The surplus-endpoint stability decomposition gives
 
-$$
+```math
 \delta_D:=\frac{b-P_F}{D}\to0.
 \tag{1.2}
-$$
+```
 
 This is exactly the normalized outer-route detour `d_out/D` used by the audited complement-incidence theorem.
 
 The same endpoint has
 
-$$
+```math
 \frac{R_4}{D^2}\to
 \Delta_2:=\frac\pi{2\sqrt3},
 \qquad
 s_2:=\sqrt{\Delta_2}.
 \tag{1.3}
-$$
+```
 
 Put
 
-$$
+```math
 M_*:=4s_2+2g.
 \tag{1.4}
-$$
+```
 
 ---
 
@@ -84,41 +84,41 @@ $$
 
 Pass to the transport subsequence and write
 
-$$
+```math
 e:=\lim\frac{E_{BO}}D.
-$$
+```
 
 The terminal transport theorem gives
 
-$$
+```math
 0\le e\le2g
 \tag{2.1}
-$$
+```
 
 and
 
-$$
+```math
 \frac{L_O}{D}	o p(e):=\frac{\pi-e}{2}.
 \tag{2.2}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 p(e)\ge p_*:=\frac\pi2-g
 =1.563089326794897\ldots .}
 \tag{2.3}
-$$
+```
 
 The same theorem shows that all atomic train mass is asymptotically bounded-to-bounded. Thus the O--O direction measure is nonatomic in the atomic decomposition. After freezing small disjoint phase windows around the dominant bounded-to-bounded orbit and then shrinking those windows, only `o(D)` O--O trains are lost.
 
 Let `C_D` be the retained O--O trains outside those dominant windows. Then
 
-$$
+```math
 \frac{|C_D|}{D}\to p(e).
 \tag{2.4}
-$$
+```
 
 ---
 
@@ -131,28 +131,28 @@ For `tau in C_D`, let
 
 The hostile-audited complement-incidence geometry gives the uniform train-length/terminal-energy inequality
 
-$$
+```math
 \boxed{
 \frac{r_\tau}{D}
 \ge
 1-\delta_D-\frac{e_\tau}{2}-o(1).
 }
 \tag{3.1}
-$$
+```
 
 The exact outer-route energy identity pays every terminal occurrence from the same nonnegative detour budget. Therefore
 
-$$
+```math
 \frac1D\sum_{\tau\in C_D}e_\tau
 \le
 \delta_D+o(1)
 =o(1).
 \tag{3.2}
-$$
+```
 
 Sum (3.1) over `C_D`. Since `|C_D|=O(D)` and the geometric error is uniform,
 
-$$
+```math
 \frac1{D^2}
 \sum_{\tau\in C_D}r_\tau
 \ge
@@ -160,11 +160,11 @@ p(e)(1-\delta_D)
 -
 \frac1{2D}\sum_{\tau\in C_D}e_\tau
 -o(1).
-$$
+```
 
 Using (1.2) and (3.2),
 
-$$
+```math
 \boxed{
 \liminf
 \frac1{D^2}
@@ -172,13 +172,13 @@ $$
 \ge p(e)\ge p_*.
 }
 \tag{3.3}
-$$
+```
 
 Thus the retained O--O trains demand at least
 
-$$
+```math
 (1.563089326794897\ldots-o(1))D^2
-$$
+```
 
 train-rhombus incidences.
 
@@ -188,38 +188,38 @@ train-rhombus incidences.
 
 For the transport subsequence set
 
-$$
+```math
 B(e):=\frac{M_*-e}{2}
-$$
+```
 
 and
 
-$$
+```math
 w(e):=
 \frac{B(e)+\sqrt{8\Delta_2-B(e)^2}}2,
 \qquad
 r(e):=B(e)-w(e).
 \tag{4.1}
-$$
+```
 
 The sharp dominant-orbit frontier gives total non-dominant atomic train mass at most
 
-$$
+```math
 r(e)+o(1).
 \tag{4.2}
-$$
+```
 
 Moreover
 
-$$
+```math
 0\le r(e)\le r(0)
 =0.007722656533397\ldots .
 \tag{4.3}
-$$
+```
 
 The audited complement-rhombus separation applies after the same frozen-window limit: every strict rhombus incident to a retained train in `C_D` lies outside the dominant/dominant orbit, apart from `o(D^2)` leakage. Non-dominant exact-orbit crossing mass is bounded by the square of its total mass, so if `R_comp` is the number of distinct strict rhombi incident to at least one train in `C_D`,
 
-$$
+```math
 \boxed{
 \frac{R_{comp}}{D^2}
 \le
@@ -228,27 +228,27 @@ $$
 \frac{r(0)^2}{4}+o(1).
 }
 \tag{4.4}
-$$
+```
 
 Every strict rhombus belongs to exactly two complete stopped trains. Hence it contributes at most two incidences to the sum in (3.3), and
 
-$$
+```math
 \frac1{D^2}\sum_{\tau\in C_D}r_\tau
 \le
 2\frac{R_{comp}}{D^2}
 \le
 \frac{r(0)^2}{2}+o(1).
 \tag{4.5}
-$$
+```
 
 Numerically,
 
-$$
+```math
 \boxed{
 \frac{r(0)^2}{2}
 =0.0000298197119664\ldots .}
 \tag{4.6}
-$$
+```
 
 ---
 
@@ -256,30 +256,30 @@ $$
 
 Equations (3.3) and (4.5) require
 
-$$
+```math
 p_*\le\frac{r(0)^2}{2}.
 \tag{5.1}
-$$
+```
 
 But
 
-$$
+```math
 \frac\pi2-g
 -
 \frac{r(0)^2}{2}
 =
 1.563059507082930\ldots>0.
 \tag{5.2}
-$$
+```
 
 This contradiction proves:
 
-$$
+```math
 \boxed{
 \text{No terminal full-core FREE sequence satisfies }\mu_D\to\mu_*.
 }
 \tag{5.3}
-$$
+```
 
 Equivalently, the exact matched surplus endpoint is not an attainable terminal FREE asymptotic state.
 
@@ -291,9 +291,9 @@ This is an endpoint exclusion, not a full proof of C-II. It does not yet provide
 
 The next target should quantify the exclusion. Surplus stability already gives
 
-$$
+```math
 \delta_D\le\frac52\varepsilon+o(1)
-$$
+```
 
 under `mu_D<=mu_*+epsilon`. A quantitative version of the transport theorem controlling
 
@@ -302,11 +302,11 @@ under `mu_D<=mu_*+epsilon`. A quantitative version of the transport theorem cont
 
 as explicit functions of `epsilon` would insert directly into the same incidence inequality
 
-$$
+```math
 p(1-\delta)-\frac{e_c}{2}
 \le
 2\frac{R_{comp}}{D^2}.
-$$
+```
 
 Because the equality-case gap in (5.2) is larger than `1.56`, substantial perturbation room is available. This should produce a positive explicit surplus gap without requiring a new local geometric theorem.
 

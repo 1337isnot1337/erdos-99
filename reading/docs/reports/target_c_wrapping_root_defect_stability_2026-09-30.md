@@ -14,81 +14,81 @@
 Work in the canonical full-core Type-II branch and suppose a positive-area
 center-wrapping harmonic-cell sequence `P_w` has
 
-$$
+```math
 {d_w\over D}\to\lambda\in[\lambda_1,1),
-$$
+```
 
 where current main defines `lambda_1` by
 
-$$
+```math
 A(\lambda_1)={\pi\over2},\qquad
 A(\lambda):=\lambda+4\lambda\sqrt{1-\lambda^2},
-$$
+```
 
 so
 
-$$
+```math
 \lambda_1=0.9891345915624005\ldots .
-$$
+```
 
 Put
 
-$$
+```math
 \Delta(\lambda):={\pi\over2}-A(\lambda)\ge0.
-$$
+```
 
 For the harmonic attachment cells write
 
-$$
+```math
 S_D:=\sum_r d_r,\qquad
 X_D:=q-k-S_D,
-$$
+```
 
-$$
+```math
 p_r:=\operatorname{per}(P_r),\qquad
 Z_D:=\sum_r(L_r-p_r)\ge0,
-$$
+```
 
 and let
 
-$$
+```math
 Q_D:=\sum_rQ_r.
-$$
+```
 
 Use the current-main completion notation `d_tile`, `e_BB`, and
 `C_A=sum_r c_r`, and define the completion slack
 
-$$
+```math
 Y_D:=2d_{\rm tile}-(e_{BB}-C_A)\ge0.
-$$
+```
 
 Finally set
 
-$$
+```math
 M_D:=S_D-[\lambda+A(\lambda)]D.
-$$
+```
 
 The current complement-gap diameter moment gives
 
-$$
+```math
 M_D\ge-o(D).
-$$
+```
 
 Then the rooted detour theorem and the exact global outer-walk identity imply
 
-$$
+```math
 \boxed{
 (\pi D-P_F)+(P_F-q)+k
 +{Z_D\over2}+{Q_D\over2}+Y_D+M_D
 \le \Delta(\lambda)D+o(D).
 }
 \tag{1.1}
-$$
+```
 
 Here `P_F=per(F)` is the loaded force-hull perimeter. All terms except `M_D`
 are nonnegative exactly, and the negative part of `M_D` is `o(D)`. Therefore
 
-$$
+```math
 \boxed{
 \begin{aligned}
 \pi D-P_F&\le\Delta D+o(D),\\
@@ -101,56 +101,56 @@ M_D&\le\Delta D+o(D).
 \end{aligned}
 }
 \tag{1.2}
-$$
+```
 
 At the exact current threshold `lambda=lambda_1`, `Delta=0`, so every one of
 these defect currencies is sublinear. In particular,
 
-$$
+```math
 \boxed{
 Z_D=o(D),\qquad Q_D=o(D),\qquad k=o(D),\qquad Y_D=o(D).
 }
 \tag{1.3}
-$$
+```
 
 Moreover
 
-$$
+```math
 \boxed{
 S_D=(\lambda_1+\pi/2)D+o(D),
 \qquad
 q-k=\pi D+o(D),
 }
 \tag{1.4}
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{
 X_D=(\pi/2-\lambda_1)D+o(D).
 }
 \tag{1.5}
-$$
+```
 
 The same equality chain fixes the aggregate harmonic outer detour:
 
-$$
+```math
 \boxed{
 \sum_r(L_r-2d_r)=(\pi-2\lambda_1)D+o(D),
 }
 \tag{1.6}
-$$
+```
 
 while `Z_D=o(D)` gives the identical first-order value for the pure cell-shape
 detour
 
-$$
+```math
 \boxed{
 \sum_r(p_r-2d_r)=(\pi-2\lambda_1)D+o(D).
 }
 \tag{1.7}
-$$
+```
 
 Thus equality in the new rooted carrier bound is not merely a scalar endpoint.
 It forces simultaneous first-order saturation of the loaded hull, the harmonic
@@ -165,60 +165,60 @@ equation.
 
 Current main proves the exact finite identity
 
-$$
+```math
 S_{\rm out}
 :=\sum_r(L_r-2d_r)
 =
 2X_D+4c_I-4-Q_D
 +2(e_{BB}-C_A-2d_{\rm tile}).
 \tag{2.1}
-$$
+```
 
 The completion-triangle lemma gives
 
-$$
+```math
 e_{BB}-C_A\le2d_{\rm tile},
-$$
+```
 
 so with `Y_D` as above,
 
-$$
+```math
 \boxed{
 S_{\rm out}=2X_D+4c_I-4-Q_D-2Y_D.
 }
 \tag{2.2}
-$$
+```
 
 Canonical component deatomization gives `c_I=o(D)`.
 
 The current rooted chord-dissection theorem gives, for the same wrapping carrier,
 
-$$
+```math
 \sum_r(p_r-2d_r)
 \ge(\pi-2\lambda-o(1))D.
 \tag{2.3}
-$$
+```
 
 Since
 
-$$
+```math
 S_{\rm out}
 =Z_D+\sum_r(p_r-2d_r),
-$$
+```
 
 we retain the nonnegative route excess instead of discarding it:
 
-$$
+```math
 \boxed{
 S_{\rm out}
 \ge Z_D+(\pi-2\lambda-o(1))D.
 }
 \tag{2.4}
-$$
+```
 
 Combine (2.2) and (2.4). Because `c_I=o(D)`, this yields
 
-$$
+```math
 \boxed{
 X_D
 \ge
@@ -226,7 +226,7 @@ X_D
 +{Z_D\over2}+{Q_D\over2}+Y_D-o(D).
 }
 \tag{2.5}
-$$
+```
 
 Equation (2.5) is the first new inequality. The previous rooted-detour report
 used only the first term on its right-hand side.
@@ -236,25 +236,25 @@ used only the first term on its right-hand side.
 Current main also proves for a wrapping carrier of normalized diameter `lambda`
 that
 
-$$
+```math
 S_D
 \ge
 [2\lambda+4\lambda\sqrt{1-\lambda^2}-o(1)]D.
 \tag{3.1}
-$$
+```
 
 With `A(lambda)` as in Section 1, the bracket is `lambda+A(lambda)`, so by
 construction
 
-$$
+```math
 S_D=[\lambda+A(\lambda)]D+M_D,
 \qquad M_D\ge-o(D).
 \tag{3.2}
-$$
+```
 
 Since `q-k=S_D+X_D`, equations (2.5) and (3.2) give
 
-$$
+```math
 \boxed{
 q-k
 \ge
@@ -262,7 +262,7 @@ q-k
 +M_D+{Z_D\over2}+{Q_D\over2}+Y_D-o(D).
 }
 \tag{3.3}
-$$
+```
 
 This is stronger than the scalar inequality used to define `lambda_1`: it keeps
 all first-order defect currencies instead of dropping them.
@@ -271,34 +271,34 @@ all first-order defect currencies instead of dropping them.
 
 Every loaded force-hull side has length at least one, hence
 
-$$
+```math
 q\le P_F.
 \tag{4.1}
-$$
+```
 
 Every planar convex body of diameter `D` has perimeter at most `pi D`, hence
 
-$$
+```math
 P_F\le\pi D.
 \tag{4.2}
-$$
+```
 
 The identity
 
-$$
+```math
 \pi D-(q-k)
 =(\pi D-P_F)+(P_F-q)+k
 \tag{4.3}
-$$
+```
 
 is exact. Subtract (3.3) from `pi D` and use (4.3):
 
-$$
+```math
 (\pi D-P_F)+(P_F-q)+k
 +M_D+{Z_D\over2}+{Q_D\over2}+Y_D
 \le
 [\pi/2-A(\lambda)]D+o(D).
-$$
+```
 
 This is (1.1).
 
@@ -314,43 +314,43 @@ Because every displayed currency except `M_D` is nonnegative and
 Set `lambda=lambda_1`. Then `Delta=0`. Equation (1.1) and
 `M_D^- = o(D)` imply
 
-$$
+```math
 \pi D-P_F=o(D),\quad P_F-q=o(D),\quad k=o(D),
-$$
+```
 
-$$
+```math
 Z_D=o(D),\quad Q_D=o(D),\quad Y_D=o(D),\quad M_D=o(D).
 \tag{5.1}
-$$
+```
 
 Equation (3.2) now gives
 
-$$
+```math
 S_D=(\lambda_1+\pi/2)D+o(D),
-$$
+```
 
 while (4.3) gives
 
-$$
+```math
 q-k=\pi D+o(D).
-$$
+```
 
 Subtracting yields (1.5).
 
 Finally (2.2), together with `c_I=o(D)`, `Q_D=o(D)`, `Y_D=o(D)`, and (1.5),
 gives
 
-$$
+```math
 S_{\rm out}
 =2X_D+o(D)
 =(\pi-2\lambda_1)D+o(D),
-$$
+```
 
 which is (1.6). Since `Z_D=o(D)`, equation
 
-$$
+```math
 S_{\rm out}=Z_D+\sum_r(p_r-2d_r)
-$$
+```
 
 gives (1.7).
 

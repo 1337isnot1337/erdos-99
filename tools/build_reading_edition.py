@@ -61,37 +61,98 @@ def visible_text(text: str) -> str:
     return text
 
 
-def math_delimiters(text: str) -> tuple[str, int]:
-    """Replace paired legacy delimiters, leaving every formula byte intact."""
+def math_delimiters(text: str, diagnostics: dict | None = None) -> tuple[str, int]:
+    """Protect TeX from Markdown unescaping; preserve formula content."""
     visible = visible_text(text)
-    opening = None
+    tokens = list(re.finditer(r"(?<!\\)\\[\[\]]|(?<![\\$])\$\$(?!\$)", visible))
     edits = []
-    pairs = 0
-    for match in re.finditer(r"(?<!\\)\\([\[\]()])", visible):
-        token = match[1]
-        if opening is None:
-            if token in "[(":
-                opening = match
+    pairs = repairs = 0
+    i = 0
+    while i < len(tokens):
+        opening = tokens[i]
+        if opening[0] == r"\]":
+            # An orphaned delimiter is presentation damage, not formula text.
+            edits.append((opening.start(), opening.end(), ""))
+            repairs += 1
+            i += 1
             continue
-        if (opening[1], token) not in {("[", "]"), ("(", ")")}:
-            continue
-        if opening[1] == "(":
-            left = right = "$"
+        close_token = r"\]" if opening[0] == r"\[" else "$$"
+        j = i + 1
+        while j < len(tokens) and tokens[j][0] not in (close_token, r"\["):
+            j += 1
+        if j < len(tokens) and tokens[j][0] == close_token:
+            end, consumed = tokens[j].start(), tokens[j].end()
+            next_i = j + 1
         else:
-            a = text.rfind("\n", 0, opening.start()) + 1
-            b = text.find("\n", opening.end())
-            b = len(text) if b < 0 else b
-            c = text.rfind("\n", 0, match.start()) + 1
-            d = text.find("\n", match.end())
-            d = len(text) if d < 0 else d
-            left = "$$" if not text[a:opening.start()].strip() and not text[opening.end():b].strip() else "\n\n$$\n"
-            right = "$$" if not text[c:match.start()].strip() and not text[match.end():d].strip() else "\n$$\n\n"
-        edits.extend([(opening.start(), opening.end(), left),
-                      (match.start(), match.end(), right)])
-        opening = None
+            # Several retained reports omit a closing delimiter. Bound the
+            # reading repair at the first paragraph break, never the next
+            # formula. The page header discloses this source formatting repair.
+            limit = tokens[j].start() if j < len(tokens) else len(text)
+            boundary = re.search(r"\n[ \t]*\n", visible[opening.end():limit])
+            end = opening.end() + boundary.start() if boundary else limit
+            consumed = end
+            next_i = i + 1
+            repairs += 1
+        body = text[opening.end():end]
+        line_start = text.rfind("\n", 0, opening.start()) + 1
+        prefix = text[line_start:opening.start()]
+        indent = prefix if not prefix.strip() else ""
+        before = "" if not prefix.strip() else "\n\n"
+        suffix_end = text.find("\n", consumed)
+        suffix_end = len(text) if suffix_end < 0 else suffix_end
+        after = "" if not text[consumed:suffix_end].strip() else "\n\n"
+        fenced = (before + "```math" + ("" if body.startswith("\n") else "\n") + body
+                  + ("" if body.endswith("\n") else "\n") + indent + "```" + after)
+        edits.append((opening.start(), consumed, fenced))
         pairs += 1
+        i = next_i
+        while i < len(tokens) and tokens[i].start() < consumed:
+            i += 1
     for a, b, replacement in reversed(edits):
         text = text[:a] + replacement + text[b:]
+
+    visible = visible_text(text)
+    edits = []
+    for match in re.finditer(r"(?<!\\)\\\((.*?)\\\)", visible, re.S):
+        body = text[match.start() + 2:match.end() - 2]
+        if "\n\n" not in body and "`" not in body:
+            edits.append((match.start(), match.end(), "$`" + body + "`$"))
+    for a, b, replacement in reversed(edits):
+        text = text[:a] + replacement + text[b:]
+    pairs += len(edits)
+
+    # Do not invent mathematical boundaries where an inherited inline marker
+    # is malformed. Preserve that paragraph as an explicit source excerpt.
+    visible = visible_text(text)
+    excerpts = set()
+    for match in re.finditer(r"(?<!\\)\\[()]", visible):
+        previous = list(re.finditer(r"\n[ \t]*\n|(?m:^#{1,6}[^\n]*\n)", visible[:match.start()]))
+        start = previous[-1].end() if previous else 0
+        following = re.search(r"\n[ \t]*\n|(?m:^#{1,6}[ \t])", visible[match.end():])
+        end = match.end() + following.start() if following else len(text)
+        excerpts.add((start, end))
+    for a, b in sorted(excerpts, reverse=True):
+        body = text[a:b]
+        longest = max((len(m[0]) for m in re.finditer(r"`+", body)), default=0)
+        fence = "`" * max(3, longest + 1)
+        replacement = ("\n\n**Source formatting excerpt (unbalanced inline math in the original):**\n\n"
+                       + fence + "text\n" + body + "\n" + fence + "\n\n")
+        text = text[:a] + replacement + text[b:]
+
+    # Existing dollar math needs the same protection: bare \{ is otherwise
+    # consumed by CommonMark before GitHub's MathJax renderer sees it.
+    visible = visible_text(text)
+    edits = []
+    for match in re.finditer(r"(?<![\\$])\$(?!\$)([^$]+?)(?<!\\)\$(?!\$)", visible):
+        body = text[match.start() + 1:match.end() - 1]
+        if body and not body[0].isspace() and not body[-1].isspace() and "`" not in body and "\n\n" not in body:
+            edits.append((match.start(), match.end(), "$`" + body + "`$"))
+    for a, b, replacement in reversed(edits):
+        text = text[:a] + replacement + text[b:]
+    pairs += len(edits)
+    if diagnostics is not None:
+        diagnostics["repaired_source_delimiters"] = repairs
+        diagnostics["source_excerpts"] = len(excerpts)
     return text, pairs
 
 
@@ -123,7 +184,8 @@ def render(source: str, raw: str, available: set[str], root: Path) -> tuple[str,
     if source == "docs/problem/literature_baseline.md":
         text = re.sub(r"\[([1-7])((?:, [^\]\n]+)?)\]",
                       lambda m: f"[{m[1]}{m[2]}](../BIBLIOGRAPHY.md#ref-{m[1]})", text)
-    text, pairs = math_delimiters(text)
+    diagnostics = {}
+    text, pairs = math_delimiters(text, diagnostics)
     destination = reading_path(source)
     edits = []
     for a, b, raw_target in markdown_destinations(text):
@@ -153,7 +215,13 @@ def render(source: str, raw: str, available: set[str], root: Path) -> tuple[str,
     header = (f"> Generated reading edition · [exact source]({quote(relative_link(destination, source), safe='/-._~')}) "
               f"· source SHA-256 `{digest}`.\n"
               "> Formatting and navigation only; the source and theorem ledger control mathematical status.\n\n")
-    return header + text, pairs
+    if diagnostics["repaired_source_delimiters"]:
+        header += (f"> Source formatting note: {diagnostics['repaired_source_delimiters']} unbalanced display "
+                   "delimiter(s) repaired at paragraph boundaries; consult the exact source.\n\n")
+    if diagnostics["source_excerpts"]:
+        header += (f"> Source formatting note: {diagnostics['source_excerpts']} paragraph(s) with malformed "
+                   "inline math are preserved as explicit source excerpts rather than guessed equations.\n\n")
+    return header + text.rstrip() + "\n", pairs
 
 
 def expected_files(root: Path) -> dict[str, str]:
@@ -177,6 +245,11 @@ navigation. The exact source documents remain unchanged, including frozen proofs
 and historical archives. Every page links to its source and records its SHA-256.
 The [generation manifest](manifest.json) binds all reading pages to those sources.
 No statement, hypothesis, proof, or mathematical lifecycle is promoted here.
+
+Unclosed source display delimiters are repaired only at paragraph boundaries and
+flagged on their pages. Paragraphs with ambiguous inline delimiters are shown as
+explicit source excerpts. These presentation notes preserve the underlying text
+and make source formatting damage visible rather than inventing an equation.
 
 Start with the [problem](docs/problem/statement.md), [current state](docs/STATE.md),
 [research map](docs/KNOWLEDGE_MAP.md), [glossary](docs/GLOSSARY.md), and

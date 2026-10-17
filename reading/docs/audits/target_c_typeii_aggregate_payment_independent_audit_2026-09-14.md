@@ -135,8 +135,8 @@ this arc lies in an angular interval of width
 
 If p,q were nonconsecutive hull vertices, this arc would contain at least two
 hull sides v_i. Source separation gives |v_i| ≥ 1. Let
-$w=(q-p)/|q-p|$. The sum of vectors in a cone of angular width $\tau<\pi/2$
-remains in that cone, so each $v_i$ makes angle at most $\tau$ with $w$.
+$`w=(q-p)/|q-p|`$. The sum of vectors in a cone of angular width $`\tau<\pi/2`$
+remains in that cone, so each $`v_i`$ makes angle at most $`\tau`$ with $`w`$.
 Therefore
 
 ~~~

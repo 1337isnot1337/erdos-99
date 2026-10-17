@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_low_mu_macroscopic_outer_shell_2026-09-10.md) · source SHA-256 `0a3d43d2cdfbf73f6ffcb9a00a6d816bdc699ce265d2baf2f5b024a435ba32bb`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-A8AFB62D13CE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_low_mu_macroscopic_outer_shell_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=75d2825b01a893de23e128aa3d12c852f5e47822; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -26,15 +28,15 @@ scale**.
 
 For every global minimizer `A` of diameter `D`, with
 
-$$
+```math
 K=\operatorname{conv}A,
 \qquad
 P_K=\operatorname{per}K,
-$$
+```
 
 one has the exact universal bound
 
-$$
+```math
 \boxed{
 P_K>
 \pi\left(
@@ -42,79 +44,80 @@ P_K>
 \right).
 }
 \tag{OS.1}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{
 0\le \pi D-P_K<\frac{\pi\sqrt3}{2}.
 }
 \tag{OS.2}
-$$
+```
 
 Thus the full source hull is within an **absolute constant** of the maximal
 perimeter `pi D`, not merely within `o(D)`.
 
 Now let `F=conv(B)` be the positive force hull and let
 
-$$
+```math
 \mu_D:=\frac{e_{BB}+2s_C-3(d_H+s_Z)}D.
-$$
+```
 
 If an unbounded post-ZF survivor sequence satisfies
 
-$$
+```math
 \mu_D\le0.60+o(1),
-$$
+```
 
 then the generalized RSJ inequality implies
 
-$$
+```math
 \boxed{
 P_F<3.03D
 }
 \tag{OS.3}
+```
 
 for all sufficiently large members of the sequence.  Consequently
 
-\[
+```math
 \boxed{
 P_K-P_F>0.1115D-2.75.
 }
 \tag{OS.4}
-$$
+```
 
 Equivalently, in Cauchy width form,
 
-$$
+```math
 \boxed{
 \int_0^\pi
 \bigl(w_K(\theta)-w_F(\theta)\bigr)\,d\theta
 >0.1115D-2.75.
 }
 \tag{OS.5}
-$$
+```
 
 Hence for some support direction `theta`,
 
-$$
+```math
 \boxed{
  w_K(\theta)-w_F(\theta)
  >0.03547D-0.876.
 }
 \tag{OS.6}
-$$
+```
 
 At least one of the two supporting sides in that direction therefore contains a
 source point outside `F` whose support-coordinate excess over `F` is
 
-$$
+```math
 \boxed{
 >0.01773D-0.438.
 }
 \tag{OS.7}
-$$
+```
 
 By C36 the whole nonisolated positive contact core lies in `F`; C65 says every source
 point outside that core is fully inactive: it is contact-isolated and is not a diameter
@@ -123,7 +126,7 @@ rattler**.
 
 Combining with EA gives the stronger normal form
 
-$$
+```math
 \boxed{
 \mu_D\le0.60+o(1)
 \Longrightarrow
@@ -132,7 +135,7 @@ $$
 \operatorname{dist}_{\rm support}(R,F)\ge0.0177D-O(1)
 }
 \tag{OS.8}
-$$
+```
 
 in some support direction.
 
@@ -148,74 +151,74 @@ from that configuration.
 
 Use the canonical constants
 
-$$
+```math
 a_0=\frac{\sqrt3}{2},
 \qquad
 c_0=\frac{\sqrt3}{4}.
-$$
+```
 
 For a global minimizer the strict translated triangular-lattice comparison gives
 
-$$
+```math
 D^2<\frac{2\sqrt3}{\pi}(n-1),
-$$
+```
 
 or equivalently
 
-$$
+```math
 \boxed{a_0(n-1)>\frac{\pi D^2}{4}.}
 \tag{1.1}
-$$
+```
 
 Oler gives
 
-$$
+```math
 \operatorname{area}K+c_0P_K\ge a_0(n-1).
 \tag{1.2}
-$$
+```
 
 Isoperimetry gives
 
-$$
+```math
 \operatorname{area}K\le\frac{P_K^2}{4\pi}.
 \tag{1.3}
-$$
+```
 
 Combining (1.1)--(1.3),
 
-$$
+```math
 \frac{P_K^2}{4\pi}+c_0P_K
 >\frac{\pi D^2}{4}.
-$$
+```
 
 Multiply by `4pi` and insert `4pi c_0=pi sqrt(3)`:
 
-$$
+```math
 P_K^2+\pi\sqrt3\,P_K-\pi^2D^2>0.
 \tag{1.4}
-$$
+```
 
 The positive root of the quadratic is
 
-$$
+```math
 \frac\pi2\left(\sqrt{4D^2+3}-\sqrt3\right)
 =
 \pi\left(\sqrt{D^2+\frac34}-\frac{\sqrt3}{2}\right).
-$$
+```
 
 Since `P_K>0`, (1.4) proves OS.1.
 
 Every planar convex body of diameter `D` satisfies Cauchy's perimeter-diameter bound
 
-$$
+```math
 P_K\le\pi D.
-$$
+```
 
 Also `sqrt(D^2+3/4)>D`, so OS.1 implies
 
-$$
+```math
 P_K>\pi D-\frac{\pi\sqrt3}{2},
-$$
+```
 
 which is OS.2. `square`
 
@@ -231,39 +234,39 @@ the perimeter level: the perimeter deficit is bounded by an absolute constant.
 
 For a convex body `C`, let
 
-$$
+```math
 w_C(\theta)
-$$
+```
 
 be its width in the direction with normal angle `theta`.  Cauchy's formula is
 
-$$
+```math
 \operatorname{per}C=\int_0^\pi w_C(\theta)\,d\theta.
 \tag{2.1}
-$$
+```
 
 Since every width of a diameter-`D` body is at most `D`, OS.2 is exactly
 
-$$
+```math
 \boxed{
 \int_0^\pi
 \bigl(D-w_K(\theta)\bigr)\,d\theta
 <\frac{\pi\sqrt3}{2}.
 }
 \tag{2.2}
-$$
+```
 
 Thus the source hull has only constant total width defect from a constant-width
 `D` body.
 
 Because `F subseteq K`,
 
-$$
+```math
 P_K-P_F
 =
 \int_0^\pi(w_K-w_F)\,d\theta.
 \tag{2.3}
-$$
+```
 
 This identity is the full-source-to-rattler coupling used below.
 
@@ -273,63 +276,63 @@ This identity is the full-source-to-rattler coupling used below.
 
 Pass to a convergent post-ZF subsequence and write
 
-$$
+```math
 \mu=\lim\mu_D,
 \qquad
 p=\lim\frac{P_F}{D}.
-$$
+```
 
 GR proves the all-phase necessary inequality
 
-$$
+```math
 \max\{\Phi(y),\Psi(p)\}
 \le
 \frac\pi4\mu^2+
 \frac{(\mu+p/2)^2}{4\pi},
 \tag{3.1}
-$$
+```
 
 where
 
-$$
+```math
 \Psi(p)=\frac\pi{(\pi-2)^2}\left(\frac p2-1\right)^2.
-$$
+```
 
 Assume `mu<=3/5`.  Since the right side of (3.1) increases with `mu>=0`, a necessary
 condition is
 
-$$
+```math
 \Psi(p)
 \le
 \frac\pi4\left(\frac35\right)^2
 +
 \frac{(3/5+p/2)^2}{4\pi}.
 \tag{3.2}
-$$
+```
 
 We show (3.2) fails for every `p>=303/100`.
 
 Use the already audited rational barriers
 
-$$
+```math
 \frac{6283}{2000}<\pi<\frac{3927}{1250},
 \qquad
 \frac1{4\pi}<\frac{500}{6283}.
 \tag{3.3}
-$$
+```
 
 The function `x/(x-2)^2` decreases for `x>2`, so
 
-$$
+```math
 \frac\pi{(\pi-2)^2}
 >
 \frac{3927/1250}{(3927/1250-2)^2}.
 \tag{3.4}
-$$
+```
 
 At `p_0=303/100`, exact rational arithmetic gives
 
-$$
+```math
 \begin{aligned}
 &
 \frac{3927/1250}{(3927/1250-2)^2}
@@ -346,27 +349,27 @@ $$
 }
 \tag{3.5}
 \end{aligned}
-$$
+```
 
 The left-minus-right difference in (3.2) is strictly increasing for `p>=p_0`.
 Indeed
 
-$$
+```math
 \Psi'(p)
 =
 \frac\pi{(\pi-2)^2}\left(\frac p2-1\right)
 >2\left(\frac{p_0}{2}-1\right)>1,
-$$
+```
 
 whereas throughout `p<=pi`
 
-$$
+```math
 \frac{d}{dp}
 \frac{(3/5+p/2)^2}{4\pi}
 =
 \frac{3/5+p/2}{4\pi}
 <\frac{3}{10}<1.
-$$
+```
 
 Thus (3.5) excludes every `p>=3.03`.  Hence any sequence with
 `mu_D<=0.60+o(1)` satisfies OS.3 for all sufficiently large terms. `square`
@@ -377,70 +380,70 @@ Thus (3.5) excludes every `p>=3.03`.  Hence any sequence with
 
 From OS.1 and OS.3,
 
-$$
+```math
 P_K-P_F
 >
 \pi\left(\sqrt{D^2+\frac34}-\frac{\sqrt3}{2}\right)-3.03D.
 \tag{4.1}
-$$
+```
 
 For a simple rational finite bound use
 
-$$
+```math
 \sqrt{D^2+3/4}>D,
 \qquad
 \pi>\frac{6283}{2000}=3.1415,
-$$
+```
 
 and
 
-$$
+```math
 \frac{\pi\sqrt3}{2}
 <\frac{22}{7}\cdot\frac78
 =\frac{11}{4}=2.75,
-$$
+```
 
 because `sqrt(3)/2<7/8`.  Therefore
 
-$$
+```math
 P_K-P_F
 >(3.1415-3.03)D-2.75
 =0.1115D-2.75,
-$$
+```
 
 proving OS.4.
 
 By (2.3), the nonnegative continuous function `w_K-w_F` has integral exceeding the
 right side.  Hence its maximum exceeds its average:
 
-$$
+```math
 \max_\theta(w_K-w_F)
 >
 \frac{0.1115D-2.75}{\pi}
 >
 \frac7{22}(0.1115D-2.75).
-$$
+```
 
 The right side is
 
-$$
+```math
 0.03547727\ldots D-0.875.
-$$
+```
 
 Therefore the certified rounded-down form is OS.6:
 
-$$
+```math
  w_K(\theta)-w_F(\theta)>0.03547D-0.876.
-$$
+```
 
 For the maximizing direction, write widths as sums of opposite support functions after
 any common origin:
 
-$$
+```math
 w_K-w_F
 =(h_K(\theta)-h_F(\theta))
 +(h_K(-\theta)-h_F(-\theta)).
-$$
+```
 
 Both support gaps are nonnegative because `F subseteq K`.  At least one is at least
 half their sum.  Since half of the exact rational lower bound above exceeds
@@ -459,32 +462,32 @@ the loaded force set.  This proves the macroscopic-rattler conclusion. `square`
 
 EA gives, along a bounded-`mu` sequence,
 
-$$
+```math
 \frac vn
 \le
 \frac4{\pi^2}
 \left(\mu-\frac{s_B}{D}\right)^2+o(1)
 \le
 \frac4{\pi^2}\mu^2+o(1).
-$$
+```
 
 At `mu<=0.60`,
 
-$$
+```math
 \frac vn
 \le
 \frac{1.44}{\pi^2}+o(1)
 <0.14591+o(1),
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \frac{|R|}{n}>0.85409-o(1).
 }
 \tag{5.1}
-$$
+```
 
 Together with OS.7 this proves OS.8.
 
@@ -539,16 +542,16 @@ normalization.
 
 GR gives the all-phase lower theorem
 
-$$
+```math
 \mu_D>0.5947+\epsilon_G
-$$
+```
 
 for large `D`.  OS supplies a concrete near-frontier phase normal form on the narrow but
 nonempty window
 
-$$
+```math
 0.5947+\epsilon_G<\mu_D\le0.60+o(1).
-$$
+```
 
 Every survivor in that window has simultaneously:
 

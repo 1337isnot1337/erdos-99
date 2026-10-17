@@ -35,25 +35,25 @@ Let `P` be any unit-separated planar `n`-point source, centered at its centroid.
 Let `B_0=P P^T` be its centered Gram matrix, with `P` the `n` by `2` coordinate
 matrix, and let `J=I-11^T/n`. For `0<t<=1` put
 
-$$
+```math
 B_t=(1-t)B_0+\frac t2 J.
 \tag{1}
-$$
+```
 
 This is positive semidefinite, centered, and gives squared distances
 
-$$
+```math
 d_{ij}(t)^2=(1-t)|p_i-p_j|^2+t.
 \tag{2}
-$$
+```
 
 Thus all lower distances remain at least one, every old unit distance stays
 exactly one, and if the old diameter `D>1`,
 
-$$
+```math
 \max d_{ij}(t)^2=(1-t)D^2+t<D^2.
 \tag{3}
-$$
+```
 
 So there is a genuine higher-dimensional strict competitor. This does not require
 triangle-freeness.
@@ -62,9 +62,9 @@ triangle-freeness.
 
 For every nonzero `v` perpendicular to `1`,
 
-$$
+```math
 v^TB_t v=(1-t)|P^Tv|^2+\frac t2|v|^2>0.
-$$
+```
 
 Consequently `rank B_t=n-1` for every `t>0`. Since a planar Euclidean distance
 matrix has centered Gram rank at most two, the exact distance data (2) are
@@ -85,9 +85,9 @@ therefore fails for every `n>=4`, not only at a special contact graph.
 Suppose `P` is noncollinear and has two positive Gram eigenvalues `lambda_1`
 and `lambda_2`. For `0<t<1`, the two largest eigenvalues of `B_t` are
 
-$$
+```math
 (1-t)\lambda_k+t/2\quad(k=1,2),
-$$
+```
 
 and every remaining eigenvalue on `1^perp` is `t/2`. Keeping the two largest
 eigenvalues therefore keeps the original coordinate column space. The resulting
@@ -104,34 +104,34 @@ Let `R(P)` be the minimum enclosing-circle radius of a planar source with diamet
 `D`, and let `r(n)` be the minimum possible enclosing-circle radius of any
 unit-separated `n`-point source. Suppose an endpoint has the form
 
-$$
+```math
 q_i=\alpha p_i+w_i,\qquad 0\le\alpha<1,
 \qquad |w_i|\le\tau,
 \tag{4}
-$$
+```
 
 after choosing the origin at a minimum enclosing-circle center. Then
 
-$$
+```math
 R(Q)\le\alpha R(P)+\tau,
 \qquad
 \operatorname{diam}Q\le\alpha D+2\tau.
 \tag{5}
-$$
+```
 
 A frequently suggested sufficient condition for strict diameter improvement is
 
-$$
+```math
 2\tau<(1-\alpha)D.
 \tag{6}
-$$
+```
 
 But `D<=2R(P)`, so (6) also gives
 
-$$
+```math
 R(Q)<\alpha R(P)+(1-\alpha)D/2\le R(P).
 \tag{7}
-$$
+```
 
 If the original source already has `R(P)=r(n)`, no unit-separated endpoint (4)
 can satisfy (6). This is a full-source cardinality obstruction, allowing arbitrary
@@ -149,9 +149,9 @@ triangle-free diameter minimizers are enclosing-radius minimizers.
 
 Take the regular unit hexagon, with axial triangular-lattice coordinates
 
-$$
+```math
 (1,0),(0,1),(-1,1),(-1,0),(0,-1),(1,-1),
-$$
+```
 
 where the physical basis is `(1,0),(1/2,sqrt(3)/2)`. The source is triangle-free,
 has six unit contacts, diameter two, and minimum enclosing radius one.
@@ -161,9 +161,9 @@ point is its center (which already puts that point at distance less than one fro
 all others), order the six polar angles. One consecutive angle is at most `pi/3`.
 If the two radii are `a,b<=r`, their squared distance is at most
 
-$$
+```math
 a^2+b^2-ab\le r^2<1.
-$$
+```
 
 The middle inequality follows by maximizing the separately convex function
 `a^2+b^2-ab` on `[0,r]^2`: its four corner values are `0,r^2,r^2,r^2`.
@@ -176,18 +176,18 @@ here is to distinguish a genuine planar replacement from the obstructed global
 mechanisms. All five center-to-rim distances are one.
 The squared rim distances are
 
-$$
+```math
 \frac{5-\sqrt5}{2}>1,
 \qquad
 \frac{5+\sqrt5}{2}<4.
-$$
+```
 
 Thus the complete six-point endpoint is unit-separated and has
 
-$$
+```math
 \operatorname{diam}Q=\sqrt{\frac{5+\sqrt5}{2}}<2.
 \tag{8}
-$$
+```
 
 Its contact graph is `K_{1,5}`, so this strict competitor is itself triangle-free.
 The pentagon surrounds the center; no smaller disk contains it, since its vertices

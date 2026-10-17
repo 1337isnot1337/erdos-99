@@ -24,25 +24,25 @@ These finite strict inequalities let any sufficiently small side-preserving defo
 
 Let
 
-$$
+```math
 P=(p_0,\ldots,p_{q-1})
-$$
+```
 
 be the cyclically ordered force-hull vertices of a sufficiently large cyclic C65 survivor. Then `P` is a local minimizer of diameter among convex equilateral `q`-gons of side length one.
 
 More precisely, there is a neighborhood `U` of `P` in the space of labeled vertex tuples such that every convex equilateral tuple
 
-$$
+```math
 P'=(p'_0,\ldots,p'_{q-1})\in U,
 \qquad |p'_{i+1}-p'_i|=1,
-$$
+```
 
 satisfies
 
-$$
+```math
 \boxed{\operatorname{diam}\{p'_0,\ldots,p'_{q-1}\}\ge D.}
 \tag{SL.1}
-$$
+```
 
 Since the original shell has diameter `D`, equality holds at `P`.
 
@@ -54,15 +54,15 @@ Then no original actual diameter pair may become strictly shorter than `D`.
 
 Equivalently, if
 
-$$
+```math
 H=\{ij:|p_i-p_j|=D\}
-$$
+```
 
 is the full shell diameter graph, there is no sufficiently small admissible shell deformation satisfying
 
-$$
+```math
 |p'_i-p'_j|\le D\quad(ij\in H),
-$$
+```
 
 with strict inequality for at least one `ij in H`, while every non-H shell pair remains `<D`.
 
@@ -74,56 +74,56 @@ Thus C65's diameter-pair minimality transfers to the shell as a local **active-s
 
 Write
 
-$$
+```math
 Z:=A\setminus V(F).
-$$
+```
 
 UFB gives
 
-$$
+```math
 F=\operatorname{conv}A,
-$$
+```
 
 and CY/C-I gives the complete actual unit-contact graph
 
-$$
+```math
 C(A)=C_q
-$$
+```
 
 on the shell vertices. Therefore for every `z in Z` and every distinct source point `a in A`,
 
-$$
+```math
 |z-a|>1.
 \tag{1.1}
-$$
+```
 
 C65 also says a contact-isolated point is not an actual diameter endpoint. Hence for every `z in Z` and every `a in A`,
 
-$$
+```math
 |z-a|<D.
 \tag{1.2}
-$$
+```
 
 The set of such pairs is finite. Therefore there is a source-dependent positive margin
 
-$$
+```math
 \boxed{
 \eta_Z>0
 }
 \tag{1.3}
-$$
+```
 
 such that simultaneously
 
-$$
+```math
 |z-a|\ge1+\eta_Z
-$$
+```
 
 for every relevant distinct pair involving `z`, and
 
-$$
+```math
 |z-a|\le D-\eta_Z
-$$
+```
 
 for every pair involving an interior point.
 
@@ -135,17 +135,17 @@ No uniform-in-`D` lower bound on `eta_Z` is claimed or needed.
 
 The only shell unit contacts are consecutive cycle edges. Thus every nonadjacent shell pair satisfies
 
-$$
+```math
 |p_i-p_j|>1.
 \tag{2.1}
-$$
+```
 
 Among non-diameter shell pairs one also has
 
-$$
+```math
 |p_i-p_j|<D.
 \tag{2.2}
-$$
+```
 
 Again finiteness gives a positive source-dependent margin `eta_S` from both inactive constraint levels.
 
@@ -163,22 +163,22 @@ Such a neighborhood exists by continuity and the finite margins above.
 
 Suppose for contradiction that there is a convex equilateral shell tuple
 
-$$
+```math
 P'\in U
-$$
+```
 
 with
 
-$$
+```math
 \operatorname{diam}P'<D.
 \tag{3.1}
-$$
+```
 
 Construct a new `n`-point source
 
-$$
+```math
 A':=Z\cup\{p'_0,\ldots,p'_{q-1}\},
-$$
+```
 
 holding every interior point fixed.
 
@@ -198,15 +198,15 @@ Its pair distances satisfy:
 
 Therefore
 
-$$
+```math
 \operatorname{diam}A'<D.
-$$
+```
 
 But the original source has global minimum diameter
 
-$$
+```math
 D=D(n).
-$$
+```
 
 Contradiction.
 
@@ -224,16 +224,16 @@ Now suppose `P' in U` is convex and equilateral and satisfies:
 
 As above form
 
-$$
+```math
 A'=Z\cup P'.
-$$
+```
 
 The neighborhood construction preserves the complete actual contact graph:
 
-$$
+```math
 C(A')=C_q=C(A).
 \tag{4.1}
-$$
+```
 
 In particular `A'` remains triangle-free and has the same number `q` of contacts as the contact-minimal C65 source. Hence it is still contact-minimal among global minimizers if its diameter is `D`.
 
@@ -241,16 +241,16 @@ All pair distances in `A'` are at most `D`: inactive shell pairs are `<D`; all i
 
 Thus
 
-$$
+```math
 \operatorname{diam}A'\le D.
-$$
+```
 
 Global optimality of `D(n)` rules out strict inequality, so
 
-$$
+```math
 \operatorname{diam}A'=D.
 \tag{4.2}
-$$
+```
 
 By hypothesis no new shell pair becomes diametral, and no interior point is diametral in the neighborhood. At least one old diameter pair has been lost. Therefore the number of actual diameter pairs of `A'` is strictly smaller than for `A`.
 
@@ -264,26 +264,26 @@ This proves SL+. `square`
 
 Let
 
-$$
+```math
 u=(u_0,\ldots,u_{q-1})
-$$
+```
 
 be the velocity of a differentiable convex equilateral shell path through `P`, so each cycle edge has zero first length variation.
 
 For a shell pair `ij` put
 
-$$
+```math
 \dot\ell_{ij}:=
 \frac{(p_i-p_j)\cdot(u_i-u_j)}{|p_i-p_j|}.
-$$
+```
 
 SL implies that no integrable equilateral velocity can satisfy
 
-$$
+```math
 \dot\ell_{ij}<0
 \qquad\text{for every }ij\in H,
 \tag{5.1}
-$$
+```
 
 because the shell diameter would decrease for small positive time.
 
@@ -329,27 +329,27 @@ Not used. The argument works directly on the UFB/C65 representative and therefor
 
 The complete cyclic endpoint now simultaneously has:
 
-$$
+```math
 F=\operatorname{conv}A,
-$$
+```
 
-$$
+```math
 C(A)|_{V(F)}=C_q,
-$$
+```
 
-$$
+```math
 q=\pi D-\frac\pi{24D}+O(D^{-2}),
-$$
+```
 
-$$
+```math
 D(n-q)<D(n)-\sqrt3,
-$$
+```
 
 and
 
-$$
+```math
 F\text{ is a local diameter minimizer among convex equilateral }q\text{-gons}.
-$$
+```
 
 Moreover the C65 diameter active set is locally inclusion-minimal among side-preserving same-diameter shell motions that create no new active pair.
 

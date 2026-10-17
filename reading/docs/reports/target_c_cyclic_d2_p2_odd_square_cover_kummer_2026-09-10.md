@@ -18,14 +18,14 @@
 
 ES closes all sufficiently large even `m=q-4` P2 survivors. For odd `m`, the reciprocal lift naturally becomes Gaussian only after the substitution `Z=T^2`. This introduces the fixed square-cover curve
 
-$$
+```math
 \boxed{
 \mathcal G(X,Y)
 :=\mathcal F(X^2,Y)
 =X^4Y^2+i(4X^4-6X^2+4)Y-1.
 }
 \tag{OK.1}
-$$
+```
 
 The possible new obstruction is that a primitive torus character might become a proper power after this quadratic pullback. It does not.
 
@@ -33,38 +33,38 @@ The possible new obstruction is that a primitive torus character might become a 
 
 Let
 
-$$
+```math
 K=\mathbb Q(i),
 \qquad
 C_2/K:\ \mathcal G(X,Y)=0.
-$$
+```
 
 For every primitive pair
 
-$$
+```math
 (r,s)\in\mathbb Z^2,
 \qquad \gcd(r,s)=1,
-$$
+```
 
 put
 
-$$
+```math
 \chi_{r,s}:=X^rY^s\in K(C_2)^\times.
-$$
+```
 
 Then for every prime `p`,
 
-$$
+```math
 \boxed{\chi_{r,s}\notin K(C_2)^p.}
 \tag{OK.2}
-$$
+```
 
 Consequently for every integer `k>=1`,
 
-$$
+```math
 \boxed{T^k-\chi_{r,s}\text{ is irreducible over }K(C_2).}
 \tag{OK.3}
-$$
+```
 
 The Capelli `4|k` exceptional form is also impossible.
 
@@ -74,24 +74,24 @@ As in CI, this implies:
 
 If
 
-$$
+```math
 M\in\mathbb Z^{2\times2},
 \qquad \det M\ne0,
 \qquad \gcd(\text{entries of }M)=1,
-$$
+```
 
 then the monomial pullback
 
-$$
+```math
 \phi_M^*\mathcal G
-$$
+```
 
 is irreducible in
 
-$$
+```math
 K[U^{\pm1},V^{\pm1}].
 \tag{OK.4}
-$$
+```
 
 Thus the square substitution needed for odd `m` introduces no new rank-two factorization obstruction.
 
@@ -101,32 +101,32 @@ Thus the square substitution needed for odd `m` introduces no new rank-two facto
 
 PK parameterizes the original Gaussian curve
 
-$$
+```math
 C:\ \mathcal F(x,y)=0
-$$
+```
 
 by
 
-$$
+```math
 K(C)=K(u),
 \qquad
 x=\frac{u(u-2)}{1-2u},
 \qquad
 y=-iu^{-2}.
 \tag{1.1}
-$$
+```
 
 The map
 
-$$
+```math
 C_2\longrightarrow C,
 \qquad
 (X,Y)\longmapsto(X^2,Y)
-$$
+```
 
 therefore gives
 
-$$
+```math
 \boxed{
 K(C_2)=K(u,t),
 \qquad
@@ -135,19 +135,19 @@ t^2=\frac{u(u-2)}{1-2u},
 \qquad Y=-iu^{-2}.
 }
 \tag{1.2}
-$$
+```
 
 The rational function
 
-$$
+```math
 x(u)=\frac{u(u-2)}{1-2u}
-$$
+```
 
 has simple zeros at `u=0,2` and simple poles at `u=1/2,infinity`. Hence it is not a square even in
 
-$$
+```math
 \overline K(u).
-$$
+```
 
 Therefore the quadratic extension in (1.2) is geometrically irreducible. In particular `C_2` is geometrically integral and its constant field inside `K(C_2)` is exactly `K`.
 
@@ -159,54 +159,54 @@ This also proves directly that `mathcal G` is irreducible over `K`.
 
 The quadratic cover
 
-$$
+```math
 t^2=x(u)
-$$
+```
 
 ramifies at each of the four odd-order zero/pole places of `x`:
 
-$$
+```math
 u=0,
 \qquad u=2,
 \qquad u=1/2,
 \qquad u=\infty.
-$$
+```
 
 Let the corresponding places of `K(C_2)` be denoted by the same symbols. Their ramification index over `K(u)` is two.
 
 Hence
 
-$$
+```math
 \operatorname{ord}(t)
 =(1,1,-1,-1)
 \tag{2.1}
-$$
+```
 
 at those four places.
 
 Because
 
-$$
+```math
 Y=-iu^{-2},
-$$
+```
 
 and pullback doubles the base valuation of `u`,
 
-$$
+```math
 \operatorname{ord}(Y)
 =(-4,0,0,4).
 \tag{2.2}
-$$
+```
 
 Therefore for
 
-$$
+```math
 \chi_{r,s}=X^rY^s=t^rY^s
-$$
+```
 
 we have the exact divisor-order vector
 
-$$
+```math
 \boxed{
 \bigl(
  r-4s,
@@ -216,7 +216,7 @@ $$
 \bigr).
 }
 \tag{2.3}
-$$
+```
 
 This is the square-cover analogue of PK's vector `(r-2s,r,-r,-r+2s)`.
 
@@ -226,47 +226,47 @@ This is the square-cover analogue of PK's vector `(r-2s,r,-r,-r+2s)`.
 
 Suppose
 
-$$
+```math
 \chi_{r,s}=f^p
-$$
+```
 
 for an odd prime `p`.
 
 Every valuation of a `p`th power is divisible by `p`. From the second and first entries of (2.3),
 
-$$
+```math
 p\mid r,
 \qquad
 p\mid(r-4s).
-$$
+```
 
 Thus
 
-$$
+```math
 p\mid4s.
-$$
+```
 
 Since `p` is odd,
 
-$$
+```math
 p\mid s.
-$$
+```
 
 This contradicts
 
-$$
+```math
 \gcd(r,s)=1.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \chi_{r,s}\notin K(C_2)^p
 \quad\text{for every odd prime }p.
 }
 \tag{3.1}
-$$
+```
 
 ---
 
@@ -274,21 +274,21 @@ $$
 
 Suppose
 
-$$
+```math
 \chi_{r,s}=f^2.
-$$
+```
 
 The valuation at `u=2` gives
 
-$$
+```math
 r\equiv0\pmod2.
-$$
+```
 
 Primitivity then forces `s` odd.
 
 From (1.2),
 
-$$
+```math
 \begin{aligned}
 \chi_{r,s}
 &=t^r(-i)^su^{-2s}\\
@@ -296,30 +296,30 @@ $$
 \left(t^{r/2}u^{-s}\right)^2.
 \end{aligned}
 \tag{4.1}
-$$
+```
 
 For odd `s`, the square class of the constant coefficient is exactly the square class of
 
-$$
+```math
 -i.
-$$
+```
 
 PK proves
 
-$$
+```math
 -i\notin K^2.
-$$
+```
 
 Because `C_2` is geometrically integral, `K` is algebraically closed in `K(C_2)`. Thus a square root of the algebraic constant `-i` in `K(C_2)` would already lie in `K`, impossible.
 
 Therefore
 
-$$
+```math
 \boxed{
 \chi_{r,s}\notin K(C_2)^2.
 }
 \tag{4.2}
-$$
+```
 
 Combining Sections 3-4 proves OK.2.
 
@@ -329,31 +329,31 @@ Combining Sections 3-4 proves OK.2.
 
 Apply Capelli's standard binomial irreducibility criterion to
 
-$$
+```math
 T^k-\chi_{r,s}.
-$$
+```
 
 For every prime divisor `p|k`, OK.2 says `chi_{r,s}` is not a `p`th power.
 
 If `4|k`, the exceptional possibility
 
-$$
+```math
 \chi_{r,s}=-4b^4
-$$
+```
 
 would make
 
-$$
+```math
 \chi_{r,s}=(2ib^2)^2
-$$
+```
 
 a square because `i in K`, contradicting Section 4.
 
 Thus
 
-$$
+```math
 T^k-\chi_{r,s}
-$$
+```
 
 is irreducible for every `k>=1`. This proves OK.3. `square`
 
@@ -365,9 +365,9 @@ The proof of CI now repeats verbatim with `C_2` in place of `C`.
 
 Let `M` be full rank with gcd of its entries one. Smith normal form gives
 
-$$
+```math
 UMV=\operatorname{diag}(1,k)
-$$
+```
 
 for unimodular `U,V`. Unimodular monomial changes preserve Laurent irreducibility. After those changes, the pullback is a single `k`th-root extension of a primitive target character.
 
@@ -375,11 +375,11 @@ OK.3 makes that Kummer extension irreducible over `K(C_2)`. Capelli composition 
 
 Hence
 
-$$
+```math
 \boxed{
 \phi_M^*\mathcal G\text{ irreducible whenever }\gcd(M_{ij})=1.
 }
-$$
+```
 
 This proves OK-CI. `square`
 
@@ -391,9 +391,9 @@ This proves OK-CI. `square`
 
 No. The new square root satisfies
 
-$$
+```math
 t^2=x(u),
-$$
+```
 and `x(u)` has four odd-order divisor places. It cannot be a square even over the algebraic closure of the constant field.
 
 ### Could `-i` become a square in the quadratic function field?
@@ -420,9 +420,9 @@ The odd-`m` reciprocal-lift trick requires a square root of the reciprocal varia
 
 It does not. The square-cover curve has the stronger valuation pattern
 
-$$
+```math
 (r-4s,r,-r,-r+4s),
-$$
+```
 
 which gives the same Kummer conclusion.
 
@@ -430,15 +430,15 @@ Thus all rank-two monomial pullbacks that can arise from a primitive large-gap s
 
 The next theorem should apply Schinzel 74 to
 
-$$
+```math
 \mathcal G(T,T^{2n-1})
-$$
+```
 
 and then use the degree separation in
 
-$$
+```math
 R_{2n+1}(T^2)
-$$
+```
 
 to force `H_{2n+1}` irreducible. If that goes through, P2 is eliminated completely for all sufficiently large `m`, both parities.
 

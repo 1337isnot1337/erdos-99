@@ -14,17 +14,17 @@
 The normalization is correct. For centers of nonoverlapping unit disks, the
 Thue-Groemer/Oler inequality is
 
-$$
+```math
 {A\over2\sqrt3}+{P\over4}+1\ge N.
-$$
+```
 
 Scaling centers by `1/2` gives, for a unit-separated finite point set in its convex
 hull,
 
-$$
+```math
 N\le {A\over a_0}+{P\over2}+1,
 \qquad a_0={\sqrt3\over2}.
-$$
+```
 
 The Groemer equality configurations are exactly the collinear segment case or a set
 whose convex hull is triangulated by unit equilateral triangles using the points as
@@ -38,25 +38,25 @@ content.
 For a bounded exceptional face `P` of degree `d`, with `z` assigned contact-isolated
 source points, the audited residual-conservation theorem gives
 
-$$
+```math
 r(P)={A(P)\over a_0}-{d\over2}+1-z.
-$$
+```
 
 Because the face boundary is a convex unit-edge `d`-gon, its perimeter is exactly `d`.
 For the `N=d+z` points consisting of boundary vertices plus assigned isolates,
 
-$$
+```math
 {A(P)\over a_0}+{d\over2}+1-N=r(P).
-$$
+```
 
 Hence `r(P)->0` is precisely approach to equality in the finite Oler inequality; no
 coarse chamber slack is substituted here.
 
 The imported conservation law
 
-$$
+```math
 \sum_j r_j=R_F
-$$
+```
 
 has already passed an independent algebra/sign audit. In particular every face
 residual is nonnegative and their exceptional-face sum is at most `R_F`.
@@ -80,9 +80,9 @@ The segment equality case would have scaled convex-hull perimeter `2(N-1)`, whic
 strictly larger than `d` for `N>=d>=5`. Thus the equality set is triangularly
 triangulated. Such a triangulation has
 
-$$
+```math
 E=3N-h-3\ge2N-3>d.
-$$
+```
 
 Only the `d` cyclic boundary pairs are non-hidden by definition. Hence at least one
 unit triangulation edge is hidden, contradicting the limiting hidden-pair distance
@@ -105,29 +105,29 @@ Thus every hidden pair in an actual exceptional face is strictly longer than one
 
 The arithmetic is correct. The AG42/Section-171 chain gives
 
-$$
+```math
 \liminf f/D\ge f_*=0.167124643466509\ldots .
-$$
+```
 
 From `b+Q=2(q-k)`, `q<=P_F`, `b>=P_F`, and `k>=0`,
 
-$$
+```math
 Q\le P_F.
-$$
+```
 
 A face of degree at least `K+1` contributes at least `K-3` to `Q`; hence
 
-$$
+```math
 f_{\le K}\ge f-{Q\over K-3}.
-$$
+```
 
 Since `P_F/D->pi`, for `K=42`,
 
-$$
+```math
 \liminf f_{\le42}/D\ge
 f_*-{\pi\over39}
 =0.086570985682155\ldots .
-$$
+```
 
 The regression correctly identifies `K=42` as maximizing the note's crude
 matching coefficient over the tested integer range.
@@ -148,10 +148,10 @@ so hidden pairs selected from these face-disjoint faces are pairwise vertex-disj
 
 The fixed-eta coefficient
 
-$$
+```math
 0.086570985682155\ldots/169
 =0.000512254353148\ldots
-$$
+```
 
 and the diagonal `eta_D->0` coefficient with the extra factor two are correct.
 
@@ -179,11 +179,11 @@ source-preserving deformation/rigidity argument for the boundary-involving pairs
 
 PASS. The result supplies a genuine Type-II fork:
 
-$$
+```math
 R_F=\Omega(D)
 \quad\text{or}\quad
 \Omega(D)\text{ pairwise vertex-disjoint hidden pairs at }1+o(1).
-$$
+```
 
 It does not close either branch. The main new research target is the type of the hidden
 near-contact pairs, not their mere existence.

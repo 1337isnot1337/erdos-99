@@ -31,17 +31,17 @@ Let **S** be a finite canonical contact-minimal, then diameter-pair-minimal tria
 
 Let T_gg count complete trains whose two terminal incidences lie on direct unit loaded-hull sides. Then T_gg <= 2. The consecutive loaded-vertex outer-walk intervals W_i, of occurrence lengths ell_i, also satisfy
 
-$$
+```math
 \ell_i=1\quad\Longleftrightarrow\quad |b_i-b_{i+1}|=1,
 \qquad
 \sum_{\ell_i>1}\ell_i=x_B+m_B.
-$$
+```
 
 The exact finite train-capacity inequality is
 
-$$
+```math
 \boxed{5(q-k)+x_B+m_B\ge 3P_F-2.}
-$$
+```
 
 The theorem has no Type-II near-disk, small-matching, or asymptotic hypothesis. It is a count and perimeter inequality; it supplies no source motion, strict diameter decrease, C-II closure, or Level I consequence.
 
@@ -49,31 +49,31 @@ The theorem has no Type-II near-disk, small-matching, or asymptotic hypothesis. 
 
 The canonical loaded-hull ledger gives `b+Q=2(q-k)` and partitions the occurrence-counted outer walk into intervals `W_i` joining consecutive loaded hull vertices. Each interval is a unit-contact walk, so `ell_i >= |b_i-b_{i+1}|`. If the hull side has length one, its endpoints are an actual contact. The positive-contact core lies in `F`; global unit separation rules out a third source point in the open unit side. The outer facial occurrence adjacent to the exterior of `F` is therefore that direct contact edge. Conversely, `ell_i=1` forces the hull-side length to be one. Thus the bad intervals are exactly the `m_B` nonunit hull sides, and
 
-$$
+```math
 \sum_{\ell_i>1}\ell_i
 =\sum_i(\ell_i-1)+m_B
 =b-q+m_B=x_B+m_B.
-$$
+```
 
 Let `T` be the number of complete stopped rhombus trains, including singleton contact-edge trains. The canonical face/train incidence identity is
 
-$$
+```math
 T=\frac{b+Q}{2}+2f=(q-k)+2f.
-$$
+```
 
 Let T_gg count trains with both terminal incidences on good unit hull sides. Each such train has opposite parallel terminal sides. A strictly convex polygon has at most one side in each oriented direction, and each contact edge belongs to one train, so distinct double-good trains have distinct projective directions. For directions 0 <= theta_i < theta_j < pi, the four directed hull sides occur in order theta_i, theta_j, theta_i+pi, theta_j+pi. Their endpoint pairs alternate, so the embedded train arcs must cross. The canonical triangle-free train-crossing graph therefore gives T_gg <= 2.
 
 Every other train has at least one terminal occurrence either in a bad outer interval or on a bounded nonquadrilateral face. These terminal occurrences are counted by at most `x_B+m_B` bad outer occurrences and at most `4f+Q` exceptional-face incidences. Hence
 
-$$
+```math
 T-2\le x_B+m_B+4f+Q.
-$$
+```
 
 Substituting `T=(q-k)+2f` gives `q-k-2 <= x_B+m_B+2f+Q <= x_B+m_B+3Q`. Using `Q=2(q-k)-b` yields
 
-$$
+```math
 3b\le5(q-k)+x_B+m_B+2.
-$$
+```
 
 Finally, the polygonal routes `W_i` have total length `b` and join the consecutive vertices of `F`, so `P_F <= b`. This proves the claim.
 

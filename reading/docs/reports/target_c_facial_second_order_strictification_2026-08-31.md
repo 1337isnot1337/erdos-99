@@ -18,12 +18,12 @@ C61 leaves one obstruction: a strong active vertex may lie outside the support u
 the common null face `F_0`. For a **fixed** relative-interior weak-release velocity
 `v`, the correct face is larger:
 
-$$
+```math
 \mathcal F_v
 =\{s\in\mathcal S:q_s(v)=0\},
 \qquad
 q_s(v)=\operatorname{tr}(V^{\mathsf T}\Omega_sV).
-$$
+```
 
 Universal PSD makes `q_s(v)>=0` for every normalized KKT stress, while C13.3 supplies
 one stress with `q_s(v)<=0`; hence `F_v` is a nonempty exposed face of the normalized
@@ -40,70 +40,70 @@ failure is at least third order and is confined to the zero-energy body bouquet.
 
 For an active pair `e=ij`, write
 
-$$
+```math
 r_e=p_i-p_j,
 \qquad
 u_e=v_i-v_j.
-$$
+```
 
 For every strong row, C6 gives
 
-$$
+```math
 r_e\cdot\nu_e=0.
 \tag{C62.1}
-$$
+```
 
 Let `a=(a_i)` be an acceleration field. Define the signed rigidity row
 
-$$
+```math
 (\mathcal Ra)_e=
 \begin{cases}
  r_e\cdot(a_i-a_j),&e\in C_*,\\
 -r_e\cdot(a_i-a_j),&e\in H_*,
 \end{cases}
 \tag{C62.2}
-$$
+```
 
 and the signed quadratic term
 
-$$
+```math
 b_e(v)=
 \begin{cases}
  |\nu_e|^2,&e\in C_*,\\
 -|\nu_e|^2,&e\in H_*.
 \end{cases}
 \tag{C62.3}
-$$
+```
 
 For the quadratic jet
 
-$$
+```math
 p_i(t)=p_i+t v_i+\frac12t^2a_i,
 \tag{C62.4}
-$$
+```
 
 the signed second-order coefficient of every strong feasibility inequality is
 
-$$
+```math
 (\mathcal Ra)_e+b_e(v).
 \tag{C62.5}
-$$
+```
 
 A normalized KKT stress is a nonnegative vector `s` on the strong active rows satisfying
 
-$$
+```math
 s^{\mathsf T}\mathcal R=0,
 \qquad
 \sum_{h\in H_*}\beta_h=1.
 \tag{C62.6}
-$$
+```
 
 Its second-order energy is exactly
 
-$$
+```math
 \boxed{q_s(v)=s^{\mathsf T}b(v).}
 \tag{C62.7}
-$$
+```
 
 C54 gives `q_s(v)>=0` for every `s in S`.
 
@@ -111,26 +111,26 @@ C54 gives `q_s(v)>=0` for every `s in S`.
 
 Define
 
-$$
+```math
 \mathcal F_v=\{s\in\mathcal S:s^{\mathsf T}b(v)=0\}.
 \tag{C62.8}
-$$
+```
 
 C13.3 and universal PSD imply `F_v` is nonempty. Let
 
-$$
+```math
 E_v^0=\bigcup_{s\in\mathcal F_v}\operatorname{supp}s
 \tag{C62.9}
-$$
+```
 
 and choose a relative-interior point `s^0 in F_v`. Then
 
-$$
+```math
 s^0_e>0
 \quad\Longleftrightarrow\quad
 e\in E_v^0.
 \tag{C62.10}
-$$
+```
 
 Write `E_1=E_*\setminus E_v^0`.
 
@@ -140,27 +140,27 @@ The following elementary lemma is the key facial fact.
 
 Let `y` be any real signed coefficient vector supported on `E_v^0` such that
 
-$$
+```math
 y^{\mathsf T}\mathcal R=0.
 \tag{C62.11}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{y^{\mathsf T}b(v)=0.}
 \tag{C62.12}
-$$
+```
 
 #### Proof
 
 Because `s^0` is strictly positive on all of `E_v^0`, for sufficiently large `M` both
 
-$$
+```math
 Ms^0+y,
 \qquad
 Ms^0-y
-$$
+```
 
 are coordinatewise nonnegative equilibrium stresses. Their total diameter coefficient
 is positive for large `M`; normalize each one to obtain elements of `S`.
@@ -169,11 +169,11 @@ Universal PSD says their second-order energies are nonnegative. Since
 `(s^0)^Tb(v)=0`, before the harmless positive normalization factors those two energies
 are
 
-$$
+```math
 y^Tb(v)
 \quad\text{and}\quad
 -y^Tb(v).
-$$
+```
 
 Both are nonnegative, hence both vanish. `\square`
 
@@ -183,22 +183,22 @@ Both are nonnegative, hence both vanish. `\square`
 
 There exists an acceleration field `a` satisfying
 
-$$
+```math
 \boxed{
 (\mathcal Ra)_e+b_e(v)=0
 \qquad(e\in E_v^0).
 }
 \tag{C62.13}
-$$
+```
 
 #### Proof
 
 The linear system
 
-$$
+```math
 \mathcal R_0a=-b_0
 \tag{C62.14}
-$$
+```
 
 is solvable exactly when every left-nullvector `y` of `R_0` annihilates `b_0`.
 Every such `y` is a signed equilibrium vector supported on `E_v^0`, so Lemma C62.1
@@ -214,23 +214,23 @@ single common second-order tangent acceleration.
 
 There exists an acceleration field `a` such that
 
-$$
+```math
 \boxed{
 (\mathcal Ra)_e+b_e(v)=0
 \quad(e\in E_v^0),
 }
 \tag{C62.15}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 (\mathcal Ra)_e+b_e(v)>0
 \quad(e\in E_1).
 }
 \tag{C62.16}
-$$
+```
 
 #### Proof
 
@@ -239,39 +239,39 @@ that affine space makes every row of `E_1` strict.
 
 The strict affine Farkas/Stiemke alternative then supplies coefficients
 
-$$
+```math
 y\in\mathbb R^{E_v^0},
 \qquad
 \lambda\in\mathbb R_{\ge0}^{E_1},
 \qquad
 \lambda\ne0,
 \tag{C62.17}
-$$
+```
 
 such that
 
-$$
+```math
 y^{\mathsf T}\mathcal R_0
 +\lambda^{\mathsf T}\mathcal R_1=0
 \tag{C62.18}
-$$
+```
 
 and
 
-$$
+```math
 y^{\mathsf T}b_0
 +\lambda^{\mathsf T}b_1
 \le0.
 \tag{C62.19}
-$$
+```
 
 Let `r=(y,lambda)`. Add a sufficiently large multiple of the relative-interior
 zero-face stress:
 
-$$
+```math
 x=r+Ms^0.
 \tag{C62.20}
-$$
+```
 
 For large `M`, every coordinate of `x` is nonnegative; on `E_1` it equals the
 nonnegative vector `lambda`, which is nonzero. Equation (C62.18) makes `x` an
@@ -280,10 +280,10 @@ normalization `x` is a member of `S`.
 
 Its second-order energy is
 
-$$
+```math
 x^Tb(v)=r^Tb(v)+M(s^0)^Tb(v)=r^Tb(v)\le0.
 \tag{C62.21}
-$$
+```
 
 Universal PSD forces the normalized energy to be nonnegative, so equality holds in
 (C62.21). Therefore the normalized `x` belongs to `F_v`.
@@ -305,12 +305,12 @@ constraint along (C62.4) has zero first derivative. Therefore:
 
 Hence
 
-$$
+```math
 \boxed{
 \text{all possible third- or higher-order locking is confined to }E_v^0.
 }
 \tag{C62.22}
-$$
+```
 
 There is no second-order obstruction on a strong row omitted by the zero-energy face.
 
@@ -369,9 +369,9 @@ have fixed margin.
 Even without the strict facial refinement, universal PSD gives a useful global fact.
 The ordinary non-strict Farkas alternative applied to
 
-$$
+```math
 \mathcal Ra+b(v)\ge0
-$$
+```
 
 has dual obstructions exactly the nonnegative equilibrium stresses. Every nonzero such
 stress has positive diameter total (a pure positive contact self-stress is impossible

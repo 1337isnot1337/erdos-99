@@ -29,80 +29,80 @@ inference is used.
 Work along a Type-II sequence and let `P_D=conv(A_D)` be a wrapping harmonic cell,
 with `a_D=|A_D|`, diameter `d_D`, and normalized diameter
 
-$$
+```math
  d_D/D\to\mu_4,
  \qquad \theta_4:=2\arcsin\mu_4.
-$$
+```
 
 The canonical Section-96 threshold is characterized by
 
-$$
+```math
  {3\over2}\sin\theta_4=3\theta_4-2\pi.
 \tag{97.1}
-$$
+```
 
 Put
 
-$$
+```math
  \alpha_4:=3\theta_4-2\pi={3\over2}\sin\theta_4.
 \tag{97.2}
-$$
+```
 
 For the induced contact graph on the unloaded component and `A_D`, retain the
 canonical notation `L_D` (outer-face walk length), `Q_D` (bounded-face degree
 excess), `s_D` (pinned surplus), and `c_D` (loaded-loaded attachment contacts).
 Section 96 gives
 
-$$
+```math
  L_D+Q_D=4a_D-6-2s_D-2c_D.
 \tag{97.3}
-$$
+```
 
 The three-forbidden-gap packing ceiling gives
 
-$$
+```math
  \limsup {a_D\over D}\le3\theta_4-2\pi=\alpha_4.
 \tag{97.4}
-$$
+```
 
 The Section-96 outer-walk estimate, with the three distinguished forbidden gaps,
 gives
 
-$$
+```math
  L_D\ge
  3D\sin\theta_4
 2(a_D-3)-c_D^{\partial}-o(D),
 \tag{97.5}
-$$
+```
 
 where `c_D^{partial}` counts direct loaded-loaded sides of the attachment polygon.
 Since `c_D^{partial}\le c_D`, (97.3)--(97.5) imply
 
-$$
+```math
  2a_D\ge3D\sin\theta_4+2s_D+c_D+Q_D-o(D).
 \tag{97.6}
-$$
+```
 
 Using (97.1), the lower and upper bounds squeeze
 
-$$
+```math
 \boxed{a_D/D\to\alpha_4.}
 \tag{97.7}
-$$
+```
 
 The retained nonnegative terms in (97.6) therefore vanish at linear scale:
 
-$$
+```math
 \boxed{s_D/D\to0,\qquad c_D/D\to0,\qquad Q_D/D\to0.}
 \tag{97.8}
-$$
+```
 
 Substituting (97.7)--(97.8) into (97.3) gives
 
-$$
+```math
 \boxed{L_D/D\to4\alpha_4.}
 \tag{97.9}
-$$
+```
 
 This is an outer-walk statement, not an attachment-polygon perimeter statement.
 The latter can remain smaller by a linear amount; that distinction is essential.
@@ -113,28 +113,28 @@ List the attachment vertices in cyclic order on `partial P_D` as
 `p_1,...,p_{a_D}`. The outer-face walk can be partitioned, with edge occurrences and
 bridge repetitions retained, into cyclic subwalks
 
-$$
+```math
  W_{i,D}:p_i\leadsto p_{i+1}.
-$$
+```
 
 Let `ell_{i,D}` be the unit-edge length of `W_{i,D}` and
 `d_{i,D}=|p_i-p_{i+1}|`. The regular-neighborhood boundary of a connected embedded
 plane graph proves that the subwalks can be chosen in the same cyclic order as the
 extreme attachment vertices. Consequently
 
-$$
+```math
  \ell_{i,D}\ge d_{i,D},
  \qquad
  \sum_i\ell_{i,D}=L_D.
 \tag{97.10}
-$$
+```
 
 For the three Section-96 forbidden gaps, the endpoints are separated by
 
-$$
+```math
  d_{i,D}\ge(sin\theta_4-o(1))D.
 \tag{97.11}
-$$
+```
 
 They cannot be direct unit contacts for large `D`. For every other interval, the
 canonical attachment-route rule says the route has length one only when the two
@@ -143,9 +143,9 @@ There are at most `c_D^{partial}=o(D)` such direct sides by (97.8).
 
 Subtract the lower bound
 
-$$
+```math
 3D\sin\theta_4+2(a_D-3)-c_D^{partial}-o(D)
-$$
+```
 
 from the exact total `L_D`. Equations (97.7)--(97.9) and
 `2\alpha_4=3\sin\theta_4` show that the resulting slack is `o(D)`. It is a sum of
@@ -156,22 +156,22 @@ nonnegative terms:
 
 Therefore
 
-$$
+```math
 \boxed{
  \sum_{i\in I_{special}}(\ell_{i,D}-d_{i,D})=o(D),
 }
 \tag{97.12}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
  \sum_{i\notin I_{special},\ W_{i,D}\text{ non-direct}}
  (\ell_{i,D}-2)=o(D).
 }
 \tag{97.13}
-$$
+```
 
 In particular, all but `o(D)` of the ordinary attachment intervals are two-edge
 routes, after counting the `o(D)` direct sides.
@@ -181,38 +181,38 @@ routes, after counting the `o(D)` direct sides.
 For a unit-edge path from `u` to `v`, write `m` for its length, `d=|u-v|`, and
 `e=m-d`. If `z_k` are its unit edge vectors and `q=(v-u)/d`, then
 
-$$
+```math
  \sum_k(1-q\cdot z_k)=m-d=e.
 \tag{97.14}
-$$
+```
 
 If `psi_k` is the signed angle from `q` to `z_k`, the elementary inequality
 `1-cos x\ge2x^2/pi^2` on `[-pi,pi]` yields
 
-$$
+```math
  \sum_k\psi_k^2\le {\pi^2\over2}e.
 \tag{97.15}
-$$
+```
 
 Every path point lies in the ellipse with foci `u,v` and major-axis length `m`.
 Consequently its Hausdorff distance from the chord segment is at most
 
-$$
+```math
  \sqrt{de/2+e^2/4}+e/2.
 \tag{97.16}
-$$
+```
 
 By (97.11)--(97.12), each of the three distinguished routes has `d=Theta(D)` and
 `e=o(D)`. Hence, for `j=1,2,3`,
 
-$$
+```math
 \boxed{
  d_H(W_{j,D},[u_{j,D},v_{j,D}])=o(D),
  \qquad
  \sum_{e\in W_{j,D}}\psi_e^2=o(D).
 }
 \tag{97.17}
-$$
+```
 
 Thus the endpoint carrier has three distinct macroscopic unit-contact boundary
 corridors that are geodesic at the global scale. This is a metric conclusion; it
@@ -235,13 +235,13 @@ The canonical ordered-grid theorem supplies a complete linear-by-linear phase-pu
 train grid in the same carrier. A genuine closure would require a new interaction
 lemma, for example:
 
-$$
+```math
 \text{three geodesic outer corridors}
 +\text{near-quadrangulated carrier}
 +\text{ordered grid}
 \Longrightarrow
 \text{unit triangle or strict source-preserving diameter decrease}.
-$$
+```
 
 The near-geodesic regression remains binding: a long doubled corridor can have
 `o(D)` normalized width while carrying linear contact length. No contradiction is
@@ -260,4 +260,3 @@ claimed from (97.17) alone.
 - **Contact-isolated source points:** retained; none are assigned to the carrier.
 
 **Status:** proved candidate; unpromoted research artifact. C-II remains open.
-

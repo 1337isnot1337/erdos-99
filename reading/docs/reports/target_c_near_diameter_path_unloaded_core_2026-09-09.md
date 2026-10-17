@@ -63,9 +63,9 @@ and put m=min(t,D-t). Necessarily 0<t<D, hence m>0.
 
 Set
 
-$$
+```math
 \kappa_*=2-\sqrt3=\tan(\pi/12).
-$$
+```
 
 ### Theorem L1 — a universal non-diametral diamond
 
@@ -73,48 +73,48 @@ If |h|<κ_* m, then p is not an endpoint of any diameter pair of A.
 
 More quantitatively, if |h|≤κm with 0≤κ<κ_*, then for every y in A,
 
-$$
+```math
 |p-y|^2\le D^2-A_\kappa Dm,
 \qquad
 A_\kappa=\frac{1-2\sqrt3\kappa-\kappa^2}{2}>0.
 \tag{L1}
-$$
+```
 
 ### Proof
 
 Every y=(s,v) in A lies in the lens
 
-$$
+```math
 \overline B(z,D)\cap\overline B(a,D).
-$$
+```
 
 Consequently 0≤s≤D and
 
-$$
+```math
 v^2\le\min\{D^2-s^2,D^2-(D-s)^2\}\le3D^2/4.
-$$
+```
 
 For q=(t,0), the exact convex-combination identity gives
 
-$$
+```math
 |q-y|^2
 =(1-t/D)|z-y|^2+(t/D)|a-y|^2-t(D-t)
 \le D^2-t(D-t).
-$$
+```
 
 Therefore
 
-$$
+```math
 |p-y|^2\le D^2-t(D-t)+h^2+\sqrt3D|h|.
 \tag{L2}
-$$
+```
 
 Use t(D-t)=m(D-m), |h|≤κm, and m≤D/2. The right side is at most
 
-$$
+```math
 D^2+m[-D+(1+\kappa^2)m+\sqrt3D\kappa]
 \le D^2-\frac{1-2\sqrt3\kappa-\kappa^2}{2}Dm.
-$$
+```
 
 The coefficient is positive exactly when 0≤κ<2−√3. This proves (L1).
 If |h|<κ_*m, choose κ between |h|/m and κ_* and apply (L1). Every distance from
@@ -124,10 +124,10 @@ p is strictly below D. □
 
 At diameter scale one, take
 
-$$
+```math
 z=(0,0),\quad a=(1,0),\quad
 p=(1/2,1-\sqrt3/2),\quad y=(1/2,-\sqrt3/2).
-$$
+```
 
 Four squared pair distances are 1; the other two, |p-z|² and |p-a|², are
 2−√3. In particular |p-y|=1 and |h|/m=2−√3. Thus replacing the strict
@@ -150,32 +150,32 @@ Let u=(a-z)/D. Suppose every forward unit vector e_j=x_j−x_{j−1} makes angle
 at most θ with u, for a fixed 0≤θ<π/12. Then no internal x_i is a diameter
 endpoint. In fact, with κ=tan θ, every y in A satisfies
 
-$$
+```math
 |x_i-y|^2\le D^2-A_\kappa D\cos\theta\min(i,k-i)
 \qquad(1\le i<k).
 \tag{L3}
-$$
+```
 
 ### Proof
 
 In the coordinates of Section 2, write x_i=(t_i,h_i). Forward projection gives
 
-$$
+```math
 t_i\ge i\cos\theta,\qquad D-t_i\ge(k-i)\cos\theta.
-$$
+```
 
 Summing transverse components from either endpoint gives
 
-$$
+```math
 |h_i|\le\sin\theta\min(i,k-i).
-$$
+```
 
 Thus, with m_i=min(t_i,D−t_i),
 
-$$
+```math
 |h_i|\le\tan\theta\,m_i,
 \qquad m_i\ge\cos\theta\min(i,k-i)>0.
-$$
+```
 
 Apply (L1). Since tan θ<κ_*, the resulting deficit is strictly positive. □
 
@@ -190,9 +190,10 @@ Apply (L1). Since tan θ<κ_*, the resulting deficit is strictly positive. □
 3. Under the later C100 uniform-cone theorem, put b=β_za and ρ=(1−b)/b.
    If
 
-   $$
+   ```math
    b>\frac1{1+\sin(\pi/12)},
-   $$
+   
+   ```
 
    then θ=arcsin ρ<π/12. A shortest separator path has no internal diameter
    endpoint. Thus **every** internal vertex is unloaded eventually in the C98–C102
@@ -209,10 +210,10 @@ angle bound yields the sharp constant, rather than the earlier estimate
 
 If p is another diameter endpoint of A, then
 
-$$
+```math
 \angle zpa\le5\pi/6.
 \tag{AG}
-$$
+```
 
 ### Proof
 
@@ -221,15 +222,15 @@ identity in Section 2 already gives |p−y|<D for every y in A, a contradiction.
 Thus h≠0. Put θ=∠zpa. The dot product and unsigned cross product of z−p,a−p
 give
 
-$$
+```math
 \cot\theta=\frac{t^2+h^2-Dt}{D|h|}.
-$$
+```
 
 If θ>5π/6, this is less than −√3. Equation (L2) would then give
 
-$$
+```math
 |p-y|^2\le D^2+D|h|(\cot\theta+\sqrt3)<D^2
-$$
+```
 
 for every y in A, again a contradiction. □
 
@@ -240,16 +241,16 @@ The four-point lens example attains equality: its angle at p is 150°.
 For any unit-edge path z=x_0,...,x_k=a joining diameter endpoints, put δ=k−D≥0
 and
 
-$$
+```math
 C_{\rm det}=\frac1{2-\sqrt{2+\sqrt3}}.
-$$
+```
 
 If an internal x_i is an endpoint of any diameter pair, then
 
-$$
+```math
 \min(i,k-i)\le C_{\rm det}\delta.
 \tag{L4}
-$$
+```
 
 In particular there are at most 2⌊C_det δ⌋ such internal vertices (and of course
 at most k−1). No angular, stress, train, or optimality assumption is required.
@@ -260,31 +261,31 @@ The coefficient C_det is sharp for the class of arbitrary unit-separated sets.
 Write r=min(|p-z|,|p-a|), s=max(|p-z|,|p-a|), and θ=∠zpa. By (AG) and
 the cosine law,
 
-$$
+```math
 D^2=r^2+s^2-2rs\cos\theta\le r^2+s^2+\sqrt3rs.
-$$
+```
 
 For q=s/r≥1, the function
 
-$$
+```math
 f(q)=1+q-\sqrt{1+q^2+\sqrt3q}
-$$
+```
 
 is strictly increasing: its derivative is positive because
 4(1+q²+√3q)−(2q+√3)²=1>0. Consequently, with
 γ=2−√(2+√3)=f(1)>0,
 
-$$
+```math
 r+s-D\ge\gamma r,\qquad D\le s+(1-\gamma)r.
-$$
+```
 
 The path's length k=D+δ is at least r+s, so r≤δ/γ. Let j be the number of
 path edges from the endpoint nearer p in Euclidean distance to p. The other
 piece has length at least s, hence
 
-$$
+```math
 j\le k-s\le\delta+(1-\gamma)r\le\delta/\gamma.
-$$
+```
 
 Since min(i,k−i)≤j, (L4) follows. Count integer indices at the ends for the
 cardinality bound. In the unit-scaled sharp lens example, k=2,
@@ -295,9 +296,9 @@ For δ=o(D), the path has a consecutive D−o(D) internal core with no diameter
 endpoints. Conditional on the later PSD/contact-distance bound k≤D/√b, the
 number of possibly diameter-loaded internal vertices is at most
 
-$$
+```math
 2\left\lfloor C_{\rm det}D(b^{-1/2}-1)\right\rfloor.
-$$
+```
 
 This transfers the new unloading result beyond pure-rhombic topology.
 
@@ -334,16 +335,16 @@ diameter za of weight b≥1/2. Let B be the set of **all actual diameter endpoin
 not merely endpoints with positive β. Let E' be the contact edges incident to
 B\{z,a}, and E_B all contact edges incident to B. Then
 
-$$
+```math
 \sum_{e\in E'}\alpha_e\le 8C_{\rm det}(1-b)D^2,
 \tag{LB1}
-$$
+```
 
-$$
+```math
 \sum_{e\in E_B}\alpha_e
 \le 2D(2b-1)+8C_{\rm det}(1-b)D^2.
 \tag{LB2}
-$$
+```
 
 Thus, if D→∞ and b→1, contacts whose two endpoints are non-diametral carry
 D²−o(D²) total stress. Neither PSD, full positive support, contact minimality,
@@ -367,10 +368,10 @@ decomposition has no opposite-direction cancellation, and 0≤f_e≤α_e.
 
 Set
 
-$$
+```math
 M=\sum_e f_e=\sum_P x_P k_P,
 \qquad E=\sum_Px_P(k_P-D)=M-DF.
-$$
+```
 
 Then DF≤M≤D², and the total unused contact capacity is U=D²−M.
 These facts also reprove the geodesic-flow input used here; they do not import
@@ -380,20 +381,20 @@ By L4, P visits B\{z,a} at no more than 2C_det(k_P−D) internal indices.
 Each such visit accounts for at most two path edges incident to that set.
 Consequently
 
-$$
+```math
 \sum_{e\in E'}f_e\le4C_{\rm det}E.
-$$
+```
 
 Adding unused capacity, and using 4C_det>1, gives
 
-$$
+```math
 \begin{aligned}
 \sum_{e\in E'}\alpha_e
 &\le4C_{\rm det}(M-DF)+D^2-M\\
 &\le4C_{\rm det}(D^2-DF)
 =8C_{\rm det}(1-b)D^2.
 \end{aligned}
-$$
+```
 
 A simple path has at most two additional edges incident to z or a (one at each
 end). Its E_B edge count is therefore at most two plus its preceding bound.
@@ -417,12 +418,12 @@ the heptagon-plus-center regression.
 A subsequent adversarial simplification improves L5 without using a path at all.
 Under the same KKT hypotheses, now for any 0≤b≤1, write η=1−b. Then
 
-$$
+```math
 \sum_{e\in E'}\alpha_e\le4\eta D^2,
 \qquad
 \sum_{e\in E_B}\alpha_e\le D(1+b)+5\eta D^2.
 \tag{LB3}
-$$
+```
 
 These are the preferred numerical bounds. L5's path-visit estimate remains valid
 but its constant is not competitive; its value is the geometric control of
@@ -431,17 +432,17 @@ individual paths, not a claim of a best stress estimate.
 **Proof.** For any actual diameter endpoint p choose an actual partner q.
 For every unit-contact neighbor x, the bound |q−x|≤D gives
 
-$$
+```math
 (p-q)\cdot(p-x)\ge\tfrac12.
-$$
+```
 
 Put s_p=Σ_{h incident to p}β_h and g_p=Σ_h β_h(p−p_h). Equilibrium and
 |g_p|≤Ds_p therefore give
 
-$$
+```math
 \tfrac12\sum_{e\ni p}\alpha_e
 \le(p-q)\cdot g_p\le D^2s_p.
-$$
+```
 
 Since Σ_{p∈B\{z,a}}s_p≤2η, summing proves the first bound. It also shows
 directly that an actual diameter endpoint with s_p=0 has no positive contact
@@ -451,21 +452,21 @@ For the second bound put u=(a−z)/D and let w be a perpendicular unit vector.
 The KKT tensor identity, obtained by multiplying equilibrium by the coordinate
 p·w and summing, is
 
-$$
+```math
 \sum_{e\in C}\alpha_e(e\cdot w)^2
 =\sum_{h\in H}\beta_h(h\cdot w)^2\le\eta D^2,
-$$
+```
 
 where e and h are their geometric edge vectors. At z, take outward axis −u,
 and at a take outward axis u. Each incident unit-contact direction has projection
 c≥1/(2D)>0 onto its outward axis. Thus 1−c≤1−c²=(e·w)². Summing at z and a,
 the total incident contact weight is at most
 
-$$
+```math
 g_z\cdot(-u)+g_a\cdot u
 +\sum_{e\text{ incident to }\{z,a\}}\alpha_e(e\cdot w)^2
 \le D(1+b)+\eta D^2.
-$$
+```
 
 Here za contributes 2bD to the projected reactions; each other diameter is
 incident to at most one of z,a and the sum of its possible contributions is at
@@ -488,9 +489,9 @@ All vertex equilibrium equations hold, including the endpoint equations, and
 stress is 2k, attaining (LB2) at b=1, while unloaded-to-unloaded edges carry
 k²−2k. Even the signed stress matrix is PSD: for any scalar f,
 
-$$
+```math
 k\sum_{j=0}^{k-1}(f_{j+1}-f_j)^2-(f_k-f_0)^2\ge0
-$$
+```
 
 by Cauchy–Schwarz. Thus full positive support, PSD and perfect dominant-flow
 concentration alone do not exclude arbitrarily long triangle-free chains.
@@ -514,18 +515,18 @@ is false under these local hypotheses.
 
 For rational 0<t≤1/10, set c=(1−t²)/(1+t²), s=2t/(1+t²), and take
 
-$$
+```math
 L=(-c,-s),\quad p=(0,0),\quad R=(c,-s),\quad U=(0,1).
-$$
+```
 
 The contacts are exactly Lp, pR, pU. All three have length one;
 |L−R|²=4c² and |L−U|²=|R−U|²=2+2s. Since 0<s<1/2,
 4c²>2+2s>1. Thus LR is the unique diameter and p is nondiametral.
 At p there is strictly positive equilibrium
 
-$$
+```math
 1(L-p)+1(R-p)+2s(U-p)=0.
-$$
+```
 
 The two forward path directions are (c,s),(c,−s), tending to the common diameter
 direction as t→0. Nevertheless p has degree three and only one off-path contact.
@@ -549,17 +550,17 @@ Section-167 description is also stale relative to the detailed route map.
 
 The September 5 sink-surplus report gives the exact algebraic reformulation
 
-$$
+```math
 s=|C^\partial|-|O|+j_*,\qquad
 \zeta-s=|O|-\operatorname{rank}S-j_*.
-$$
+```
 
 Its shield sufficient condition becomes
 
-$$
+```math
 \sum_i\max(0,|O_i|-|C_i|)+|O_{\rm iso}|
 \ge j_*+|\widehat W_\Sigma\setminus O|.
-$$
+```
 
 This reformulation does not prove the inequality. Nor does the boundary-order
 inner-source defect bound identify that defect with Schur demand.

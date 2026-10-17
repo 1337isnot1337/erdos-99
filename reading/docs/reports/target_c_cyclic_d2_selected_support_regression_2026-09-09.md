@@ -23,18 +23,19 @@ That route is false.
 
 For every odd `q>=5`, the regular unit `q`-gon at the exact Reinhardt diameter
 
-$$
+```math
 D_q=\frac1{2\sin(\pi/(2q))}
-$$
+```
 
 has a normalized KKT stress whose positive support consists of
 
 - all `q` unit shell contacts;
 - exactly `q-2` of its `q` actual diameter edges;
 - a diameter support graph
-  $$
+  ```math
   \boxed{K_2\sqcup P_{q-2};}
-  $$
+  
+  ```
 - strictly positive contact coefficients on every shell side;
 - strictly positive diameter coefficients on every selected diameter edge;
 - a maximal-rank PSD scalar stress matrix with affine kernel only.
@@ -64,9 +65,9 @@ Therefore the next valid attack must use the strict metric defect of those two c
 
 RSP classifies the complete normalized KKT stress polygon of the regular odd shell. At every vertex of that polygon exactly two diameter coefficients vanish:
 
-$$
+```math
 \beta_j=\beta_{j+1}=0
-$$
+```
 
 in the RSP vertex indexing, while every other diameter coefficient is strictly positive.
 
@@ -74,9 +75,9 @@ RSP also proves that every contact coefficient remains strictly positive through
 
 RSP converts the zero pattern to graph/projective diameter order: the two omitted diameter edges are separated by exactly one surviving diameter edge around the full odd diameter cycle. Removing them therefore leaves
 
-$$
+```math
 H_s=K_2\sqcup P_{q-2}.
-$$
+```
 
 This proves the selected-support statement.
 
@@ -88,13 +89,13 @@ CG proves in the cyclic endpoint that scalar stress rank does not drop anywhere 
 
 Thus at the RSP polygon vertex
 
-$$
+```math
 \Omega_s\succeq0,
 \qquad
 \ker\Omega_s=\operatorname{span}\{1,P_x,P_y\},
 \qquad
 \operatorname{rank}\Omega_s=q-3.
-$$
+```
 
 The selected signed equilibrium dependence is one-dimensional at the polytope vertex, so the `2q-2` supported rows form the same rigidity-circuit count as the true `d_H=2` singleton-stress phase.
 
@@ -118,27 +119,27 @@ This is a binding regression for the proposed D2R four-transition stress-incompa
 
 The full regular SSR source still has
 
-$$
+```math
 h=q,
 \qquad d_H=0.
-$$
+```
 
 The two zero-beta rows are omitted only from the **selected stress support**. Geometrically they remain exact diameter chords of length `D`.
 
 A true D2 source instead has
 
-$$
+```math
 h=q-2,
 \qquad d_H=2,
-$$
+```
 
 so those two completion states are absent from the actual diameter set.
 
 AD decomposes the missing difference-body states exactly as
 
-$$
+```math
 d_H=r_{parallel}+a_{short}=2.
-$$
+```
 
 The three metric branches are
 
@@ -196,9 +197,9 @@ The target is to prove that along every geometry preserving
 
 one has a one-sided obstruction
 
-$$
+```math
 \Phi(\epsilon_1,\epsilon_2)>0
-$$
+```
 
 for every nonzero admissible defect vector, where `Phi` can be any exact-attainment quantity: a selected diameter becoming longer than `D`, a shell side ceasing to be unit/convex, or failure of C56-G/PSD.
 

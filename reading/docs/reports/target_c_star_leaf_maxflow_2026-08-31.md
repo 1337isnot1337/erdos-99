@@ -19,63 +19,63 @@ C72 proves a lower bound on the special contact cuts given by graph-distance bal
 
 Fix a diameter vertex `z` in the C65 full-support normalized stress. Write
 
-$$
+```math
 L_z:=\{k:zk\in H\},
 \qquad
 S_z:=\sum_{k\in L_z}\beta_{zk},
 \qquad
 \delta_z:=1-S_z,
-$$
+```
 
 and let
 
-$$
+```math
 g_z:=\sum_{k\in L_z}\beta_{zk}(p_z-p_k)
-$$
+```
 
 be its complete diameter reaction.
 
 For every vertex set `U` in the positive contact core satisfying
 
-$$
+```math
 z\in U,
 \qquad
 U\cap L_z=\varnothing,
-$$
+```
 
 let
 
-$$
+```math
 \operatorname{cap}_\alpha(U)
 :=
 \sum_{\substack{ij\in C\\i\in U,\ j\notin U}}\alpha_{ij}.
-$$
+```
 
 ### Theorem C81.1 — arbitrary star-separating cut bound
 
-$$
+```math
 \boxed{
 \operatorname{cap}_\alpha(U)
 \ge
 |g_z|-D\delta_z.
 }
 \tag{C81.1}
-$$
+```
 
 Thus, with the contact stresses `alpha_e` used as edge capacities, the minimum cut separating `z` from the leaf set `L_z` has capacity at least
 
-$$
+```math
 F_z:=\bigl[|g_z|-D\delta_z\bigr]_+.
 \tag{C81.2}
-$$
+```
 
 By max-flow/min-cut there is an undirected contact flow of value at least `F_z` from `z` to `L_z`.
 
 Every contact path from `z` to a leaf has at least `D` unit edges. After cycle removal and path decomposition, any such flow therefore uses at least `DF_z` total edge-flow mass. Since each edge flow is bounded by `alpha_e` and C11 gives
 
-$$
+```math
 \sum_{e\in C}\alpha_e=D^2,
-$$
+```
 
 we obtain:
 
@@ -83,74 +83,74 @@ we obtain:
 
 There exists a `z`-to-`L_z` contact flow `f` satisfying
 
-$$
+```math
 \boxed{
 \sum_{e\in C}|f_e|
 \ge
 D\,[|g_z|-D\delta_z]_+,
 }
 \tag{C81.3}
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{
 \frac1{D^2}\sum_e|f_e|
 \ge
 \left[\frac{|g_z|}{D}-\delta_z\right]_+.
 }
 \tag{C81.4}
-$$
+```
 
 C14/C18 give
 
-$$
+```math
 |g_z|\ge c_DDS_z,
 \qquad
 c_D\longrightarrow c_\infty=0.90348\ldots .
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \frac1{D^2}\sum_e|f_e|
 \ge
 \bigl[c_D-(1+c_D)\delta_z\bigr]_+.
 }
 \tag{C81.5}
-$$
+```
 
 At the C66 center,
 
-$$
+```math
 \delta_z\le C_0D\varepsilon,
 \qquad
 C_0=\frac{2\pi}{\kappa_0},
-$$
+```
 
 so the near-zero response phase `D epsilon->0` admits a diameter-leaf flow consuming asymptotically at least
 
-$$
+```math
 \boxed{c_\infty=0.90348\ldots}
-$$
+```
 
 of the entire normalized contact-stress budget in edge-flow mass.
 
 The exact remaining scalar is the weighted cancellation of the star reaction. If
 
-$$
+```math
 \chi_z:=S_z-\frac{|g_z|}{D},
-$$
+```
 
 then C81.4 becomes
 
-$$
+```math
 \frac1{D^2}\sum_e|f_e|
 \ge 1-2\delta_z-\chi_z.
 \tag{C81.6}
-$$
+```
 
 Thus a near-chain certificate has only two ways not to saturate essentially all of `D^2`: nonstar diameter mass `delta_z`, already controlled by C66, or genuine angular cancellation `chi_z` among the star spokes.
 
@@ -160,42 +160,42 @@ Thus a near-chain certificate has only two ways not to saturate essentially all 
 
 For every contact-core vertex `v`, KKT equilibrium is
 
-$$
+```math
 \sum_{vw\in C}\alpha_{vw}(p_v-p_w)
 =
 \sum_{vh\in H}\beta_{vh}(p_v-p_h).
 \tag{C81.7}
-$$
+```
 
 Fix `U` with `z in U` and `U cap L_z=emptyset`. Sum C81.7 over `v in U`.
 
 Every contact edge internal to `U` cancels, as does every diameter edge with both endpoints in `U`. Therefore
 
-$$
+```math
 \sum_{\substack{ij\in C\\i\in U,j\notin U}}
 \alpha_{ij}(p_i-p_j)
 =
 \sum_{\substack{ij\in H\\i\in U,j\notin U}}
 \beta_{ij}(p_i-p_j),
 \tag{C81.8}
-$$
+```
 
 where each crossing edge is oriented from `U` to its complement.
 
 Every star edge `zk`, `k in L_z`, crosses this cut, and their vector sum is exactly `g_z`. All remaining crossing diameter edges are nonstar edges. Their total beta weight is at most `delta_z`, and each has Euclidean length `D`. Hence
 
-$$
+```math
 \left|
 \sum_{\substack{ij\in H\\i\in U,j\notin U}}
 \beta_{ij}(p_i-p_j)-g_z
 \right|
 \le D\delta_z.
 \tag{C81.9}
-$$
+```
 
 Taking norms in C81.8 and then using the triangle inequality on the contact side gives
 
-$$
+```math
 \operatorname{cap}_\alpha(U)
 \ge
 \left|
@@ -203,7 +203,7 @@ $$
 \alpha_{ij}(p_i-p_j)
 \right|
 \ge |g_z|-D\delta_z.
-$$
+```
 
 This proves C81.1.
 
@@ -219,52 +219,52 @@ Give every undirected positive contact edge `e` capacity `alpha_e`. Add a formal
 
 A finite `z`-`t` cut is exactly a vertex set `U` with
 
-$$
+```math
 z\in U,
 \qquad
 U\cap L_z=\varnothing.
-$$
+```
 
 By C81.1 every such cut has capacity at least `F_z`. The finite real-capacity max-flow/min-cut theorem therefore supplies a flow of value at least `F_z` from `z` to the star leaf set.
 
 Choose one of value exactly `F_z` if the maximum is larger. Replace any antiparallel use of one undirected edge by its net direction and remove flow cycles. The resulting flow decomposes into finitely many simple `z`-to-leaf paths `P` with nonnegative path weights `x_P` such that
 
-$$
+```math
 \sum_P x_P=F_z.
 \tag{C81.10}
-$$
+```
 
 If `m(P)` is the number of contact edges in `P`, then all edges have Euclidean length one while the path endpoint is a diameter partner of `z`. Hence
 
-$$
+```math
 D
 =|p_z-p_k|
 \le m(P).
 \tag{C81.11}
-$$
+```
 
 Therefore the total absolute edge-flow mass is
 
-$$
+```math
 \begin{aligned}
 \sum_e|f_e|
 &=\sum_P x_Pm(P)\\
 &\ge D\sum_Px_P\\
 &=DF_z.
 \end{aligned}
-$$
+```
 
 This proves C81.3.
 
 Because `|f_e|<=alpha_e`, C11 also gives the consistency bound
 
-$$
+```math
 DF_z
 \le\sum_e|f_e|
 \le\sum_e\alpha_e
 =D^2.
 \tag{C81.12}
-$$
+```
 
 ---
 
@@ -272,26 +272,26 @@ $$
 
 Normalize the center reaction by
 
-$$
+```math
 j_z:=\frac{|g_z|}{D}.
-$$
+```
 
 Then C81.4 says the transport fraction is at least `j_z-delta_z`.
 
 Since the star coefficients have total mass `S_z=1-delta_z`, define
 
-$$
+```math
 \chi_z:=S_z-j_z\ge0.
 \tag{C81.13}
-$$
+```
 
 The nonnegativity is just the triangle inequality applied to the weighted unit spoke directions. Substitution gives
 
-$$
+```math
 j_z-\delta_z
 =S_z-\chi_z-\delta_z
 =1-2\delta_z-\chi_z,
-$$
+```
 
 which proves C81.6.
 
@@ -303,16 +303,16 @@ Thus:
 
 C18 gives the unconditional cancellation bound
 
-$$
+```math
 j_z\ge c_DS_z,
-$$
+```
 
 hence
 
-$$
+```math
 \chi_z\le(1-c_D)S_z.
 \tag{C81.14}
-$$
+```
 
 This yields C81.5 and the asymptotic `0.90348...` fraction without assuming single-spoke concentration.
 
@@ -322,29 +322,29 @@ This yields C81.5 and the asymptotic `0.90348...` fraction without assuming sing
 
 If `delta_z=0` and `chi_z=0`, then `F_z=D`. C81.12 forces equality everywhere:
 
-$$
+```math
 \sum_e|f_e|=\sum_e\alpha_e=D^2.
-$$
+```
 
 Every positive-flow path has exactly `D` unit edges and therefore is a straight Euclidean geodesic from `z` to its leaf. There can be no unused positive contact capacity in the selected stress. C76-C80 identify the resulting exact face as the single straight chain and its `D`-track train atom.
 
 C81 supplies a stable version of the capacity half of that picture. Define the flow-capacity slack
 
-$$
+```math
 \mathcal S_f:=
 D^2-\sum_e|f_e|.
-$$
+```
 
 Then there exists a star-leaf flow with
 
-$$
+```math
 \boxed{
 \mathcal S_f
 \le
 D^2(2\delta_z+\chi_z).
 }
 \tag{C81.15}
-$$
+```
 
 This does not yet imply geometric closeness to one chain when `chi_z` is a fixed constant. It isolates `chi_z` as the only constant-order obstruction after C66.
 
@@ -354,23 +354,23 @@ This does not yet imply geometric closeness to one chain when `chi_z` is a fixed
 
 In a pure simply connected rhombic disk, every contact edge has one train label. For the C81 flow put
 
-$$
+```math
 f_\tau:=
 \sum_{e\text{ of train }\tau}|f_e|,
 \qquad
 A_\tau:=
 \sum_{e\text{ of train }\tau}\alpha_e.
-$$
+```
 
 Then
 
-$$
+```math
 0\le f_\tau\le A_\tau
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \sum_\tau f_\tau
 =
@@ -379,16 +379,16 @@ $$
 D^2(1-2\delta_z-\chi_z).
 }
 \tag{C81.16}
-$$
+```
 
 The Target B virtual-work identity gives
 
-$$
+```math
 A_\tau
 =
 \sum_{h\in H}\beta_h\lambda_{h\tau}.
 \tag{C81.17}
-$$
+```
 
 Therefore C81 produces a concrete capacitated transport measure on the same train set on which Sections 40--43 analyze first- and higher-order diameter blocking.
 
@@ -400,11 +400,11 @@ At the exact C80 chain face, `delta_z=chi_z=0`, and C81.16 is saturated by the `
 
 The unconditional reaction-cone bound only gives
 
-$$
+```math
 1-2\delta_z-\chi_z
 \ge
 c_D-(1+c_D)\delta_z,
-$$
+```
 
 whose limiting constant is `c_infty=0.90348...`, not one. Roughly `9.65%` of the total stress budget can still remain outside the guaranteed flow even when `delta_z->0`.
 

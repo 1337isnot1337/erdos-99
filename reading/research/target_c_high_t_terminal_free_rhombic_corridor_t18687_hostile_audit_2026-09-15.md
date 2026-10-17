@@ -27,23 +27,23 @@ No new response inequality, stress lower bound, or unproved lattice approximatio
 
 For each selected boundary train,
 
-$$
+```math
 r_tau/D\ge1-delta-e_tau/2-o(1)
 \ge0.70715-delta/2-o(1)
 >0.6536-o(1).
-$$
+```
 
 Simplicity of train crossings converts rhombi to distinct crossing neighbors. The finite-strip theorem gives
 
-$$
+```math
 |Gamma(tau_0) triangle Gamma(tau_1)|<=70954.
-$$
+```
 
 Therefore
 
-$$
+```math
 |Gamma(tau_0) cap Gamma(tau_1)|>0.6536D-o(D).
-$$
+```
 
 The subtraction of the fixed constant `70954` is correctly absorbed into `o(D)`.
 
@@ -55,15 +55,15 @@ At most `L` internal gaps are contaminated, because every contaminated open slab
 
 Hence the largest clean block has at least `M/(L+1)` columns. The exact certificate verifies
 
-$$
+```math
 0.6536/70955>9.2e-6
-$$
+```
 
 and
 
-$$
+```math
 0.0783/1109000>7e-8.
-$$
+```
 
 The theorem uses strict asymptotic inequalities, so the fixed endpoint/gap conventions do not affect the stated `cD-o(D)` bounds.
 
@@ -83,9 +83,9 @@ Contact-isolated source points may remain in interiors of rhombic contact faces.
 
 The second conclusion is obtained only by taking a subfamily of the already-audited joint-cusp family `B_0`. Therefore common order and the crossing-angle estimate
 
-$$
+```math
 0<theta-pi/3<1.416e7/D+o(D^{-1})
-$$
+```
 
 are inherited without modification. The contaminated-gap deletion does not alter any crossing angle or row choice.
 

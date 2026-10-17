@@ -14,7 +14,7 @@ STILL OPEN.
 
 The earlier first-contact absorption argument can be strengthened. Starting from
 the C65 lexicographic representative, every contact-isolated point can be moved to
-a first unit-contact event while remaining strictly below diameter $D$ from every
+a first unit-contact event while remaining strictly below diameter $`D`$ from every
 other source point. Consequently the entire original diameter graph, not only one
 fixed diameter pair, is preserved.
 
@@ -24,152 +24,152 @@ not transfer the C65 positive-core/ZF stack to the new representative.
 
 ## 1. Theorem
 
-Let $A$ be the C65 representative of a hypothetical triangle-free global
-minimizer, with diameter $D$, positive contact core $C$, and rattler set
-$$
+Let $`A`$ be the C65 representative of a hypothetical triangle-free global
+minimizer, with diameter $`D`$, positive contact core $`C`$, and rattler set
+```math
 R=A\setminus C.
-$$
+```
 
-C65 gives, for every $r\in R$,
-$$
+C65 gives, for every $`r\in R`$,
+```math
 1<|r-a|<D\qquad(a\in A\setminus\{r\}).
 \tag{SR.1}
-$$
+```
 
-Then there exists a triangle-free global minimizer $A^\circ$ with the same
+Then there exists a triangle-free global minimizer $`A^\circ`$ with the same
 cardinality and diameter such that:
 
-1. every point of $A^\circ$ has a unit contact;
-2. every original point of $C$ is fixed;
+1. every point of $`A^\circ`$ has a unit contact;
+2. every original point of $`C`$ is fixed;
 3. every original contact is preserved; and
-4. the actual diameter graph of $A^\circ$ is exactly the actual diameter graph
-   of $A$, on the original diameter endpoints.
+4. the actual diameter graph of $`A^\circ`$ is exactly the actual diameter graph
+   of $`A`$, on the original diameter endpoints.
 
 ## 2. Strict target inside the diameter disks
 
 ### Lemma SR.1
 
-Let $A$ be a two-dimensional unit-separated configuration of diameter $D>1$.
-Let $p,c\in A$ satisfy $|p-c|=1$, and let $r\in A$ satisfy
-$$
+Let $`A`$ be a two-dimensional unit-separated configuration of diameter $`D>1`$.
+Let $`p,c\in A`$ satisfy $`|p-c|=1`$, and let $`r\in A`$ satisfy
+```math
 |r-a|<D\qquad(a\in A\setminus\{r\}).
 \tag{SR.2}
-$$
+```
 There is a point
-$$
+```math
 y\in\operatorname{int}(\operatorname{conv}A)\cap B(p,1)
-$$
+```
 such that
-$$
+```math
 |y-a|<D\qquad(a\in A).
 \tag{SR.3}
-$$
+```
 
 ### Proof
 
-Put $w=c-p$, so $|w|=1$. If $|p-a|=D$, then $|c-a|\le D$ gives
-$$
+Put $`w=c-p`$, so $`|w|=1`$. If $`|p-a|=D`$, then $`|c-a|\le D`$ gives
+```math
 D^2\ge |c-a|^2
 =|p-a|^2+2w\cdot(p-a)+|w|^2
 =D^2+2w\cdot(p-a)+1.
-$$
+```
 Hence
-$$
+```math
 w\cdot(p-a)\le-\frac12.
 \tag{SR.4}
-$$
+```
 
-For $y_t=p+tw$ and sufficiently small $t>0$, (SR.4) gives
-$$
+For $`y_t=p+tw`$ and sufficiently small $`t>0`$, (SR.4) gives
+```math
 |y_t-a|^2
 =D^2+2t\,w\cdot(p-a)+t^2<D^2
-$$
-for every diameter partner $a$ of $p$. For the finitely many $a$ with
-$|p-a|<D$, strictness follows by continuity after decreasing $t$. Also
-$|y_t-p|=t<1$, and $|y_t-r|<D$ follows from (SR.2).
+```
+for every diameter partner $`a`$ of $`p`$. For the finitely many $`a`$ with
+$`|p-a|<D`$, strictness follows by continuity after decreasing $`t`$. Also
+$`|y_t-p|=t<1`$, and $`|y_t-r|<D`$ follows from (SR.2).
 
-Choose $z\in\operatorname{int}(\operatorname{conv}A)$. Every point of the
-convex hull is at distance at most $D$ from every source point. For sufficiently
-small $\varepsilon>0$,
-$$
+Choose $`z\in\operatorname{int}(\operatorname{conv}A)`$. Every point of the
+convex hull is at distance at most $`D`$ from every source point. For sufficiently
+small $`\varepsilon>0`$,
+```math
 y=(1-\varepsilon)y_t+\varepsilon z
-$$
-lies in $\operatorname{int}(\operatorname{conv}A)\cap B(p,1)$. Convexity of the
-norm and the strict inequalities for $y_t$ give
-$$
+```
+lies in $`\operatorname{int}(\operatorname{conv}A)\cap B(p,1)`$. Convexity of the
+norm and the strict inequalities for $`y_t`$ give
+```math
 |y-a|\le(1-\varepsilon)|y_t-a|+\varepsilon|z-a|<D
-$$
-for every $a\in A$. $\square$
+```
+for every $`a\in A`$. $`\square`$
 
 ## 3. Strict first-contact motion
 
 ### Lemma SR.2
 
-Under the hypotheses of Lemma SR.1, if $r$ is contact-isolated, there is a
-replacement $r'$ such that
-$$
+Under the hypotheses of Lemma SR.1, if $`r`$ is contact-isolated, there is a
+replacement $`r'`$ such that
+```math
 A'=(A\setminus\{r\})\cup\{r'\}
-$$
-is unit-separated and triangle-free, has diameter $D$, satisfies
-$$
+```
+is unit-separated and triangle-free, has diameter $`D`$, satisfies
+```math
 |r'-a|<D\qquad(a\in A\setminus\{r\}),
 \tag{SR.5}
-$$
-and gives $r'$ exactly one unit contact.
+```
+and gives $`r'`$ exactly one unit contact.
 
 ### Proof
 
-Use the point $y$ from Lemma SR.1 and the segment
-$$
+Use the point $`y`$ from Lemma SR.1 and the segment
+```math
 \gamma(t)=(1-t)r+ty,\qquad 0\le t\le1.
-$$
-It lies in $\operatorname{conv}A$. Both endpoints have distance strictly less
-than $D$ from every fixed source point, so convexity of the norm gives (SR.5)
+```
+It lies in $`\operatorname{conv}A`$. Both endpoints have distance strictly less
+than $`D`$ from every fixed source point, so convexity of the norm gives (SR.5)
 throughout the segment.
 
-Initially $r$ lies outside every closed unit disk centered at a fixed source
-point, while $y\in B(p,1)$. Thus the segment has a first intersection with the
-finite union of those disks. Choose $y$ outside the finite union of rays from
-$r$ through pairwise intersections of the finitely many unit-circle boundaries.
-The first intersection then lies on exactly one unit circle. At that point $r'$
+Initially $`r`$ lies outside every closed unit disk centered at a fixed source
+point, while $`y\in B(p,1)`$. Thus the segment has a first intersection with the
+finite union of those disks. Choose $`y`$ outside the finite union of rays from
+$`r`$ through pairwise intersections of the finitely many unit-circle boundaries.
+The first intersection then lies on exactly one unit circle. At that point $`r'`$
 has exactly one contact and all other lower-distance inequalities are strict.
 
 All fixed diameter pairs remain unchanged and (SR.5) creates no new diameter pair,
-so the diameter remains $D$. A new unit triangle would contain $r'$, impossible
-because its contact degree is one. $\square$
+so the diameter remains $`D`$. A new unit triangle would contain $`r'`$, impossible
+because its contact degree is one. $`\square`$
 
-## 4. Global absorption while preserving $H$
+## 4. Global absorption while preserving $`H`$
 
 ### Theorem SR.3
 
 Under the hypotheses of Theorem SR, there is a finite sequence
-$$
+```math
 A=A_0,A_1,\ldots,A_m=A^\circ
-$$
-of triangle-free global minimizers of diameter $D$ such that the original core
+```
+of triangle-free global minimizers of diameter $`D`$ such that the original core
 and contacts remain fixed,
-$$
+```math
 H(A_j)=H(A_0)\qquad(0\le j\le m),
 \tag{SR.6}
-$$
-and $A^\circ$ has no contact-isolated point.
+```
+and $`A^\circ`$ has no contact-isolated point.
 
 ### Proof
 
-Choose a contact edge $pc$ in the fixed positive core. At each stage select a
-currently contact-isolated point $r$. Its strict diameter inequalities are
+Choose a contact edge $`pc`$ in the fixed positive core. At each stage select a
+currently contact-isolated point $`r`$. Its strict diameter inequalities are
 maintained inductively: it was isolated in the C65 source, and every previously
-moved point was placed with strict distance $<D$ from all fixed points.
+moved point was placed with strict distance $`<D`$ from all fixed points.
 
-Apply Lemma SR.2 with the fixed edge $pc$. The moved point acquires one unit
+Apply Lemma SR.2 with the fixed edge $`pc`$. The moved point acquires one unit
 contact, no diameter equality involving it is created, and every fixed diameter
 relation is unchanged. No existing contact is lost because only an isolated point
 is moved. The number of isolated points decreases by at least one, possibly by two
 if the new contact joins two currently isolated points.
 
 After finitely many steps no isolated point remains. The original core contains a
-diameter pair, so every final configuration still has diameter exactly $D$ and is
-globally optimal. $\square$
+diameter pair, so every final configuration still has diameter exactly $`D`$ and is
+globally optimal. $`\square`$
 
 ## 5. Forest form of the absorbed contacts
 
@@ -182,9 +182,9 @@ currently isolated singleton). Once the point has acquired this edge it is
 never moved again. Consequently the edges created during the whole sequence
 form a forest when contracted against the original core.
 
-More formally, if $C$ is contracted to one root, the quotient of the final
-contact graph by the original contacts in $C$ is a rooted forest. Every edge
-outside $C$ is a bridge, and every original rattler is either a vertex of this
+More formally, if $`C`$ is contracted to one root, the quotient of the final
+contact graph by the original contacts in $`C`$ is a rooted forest. Every edge
+outside $`C`$ is a bridge, and every original rattler is either a vertex of this
 forest or is absorbed as the second endpoint of the edge created by a different
 rattler. The original diameter graph is still unchanged.
 
@@ -194,38 +194,38 @@ coordinates in the original KKT stress.
 
 ### Proof
 
-At a stage at which $r$ is selected, $r$ has no contact edge. Lemma SR.2
+At a stage at which $`r`$ is selected, $`r`$ has no contact edge. Lemma SR.2
 replaces it by a point with exactly one contact, and all other points are left
-fixed. Thus the new edge contains the previously isolated vertex $r$, so it
+fixed. Thus the new edge contains the previously isolated vertex $`r`$, so it
 cannot close a cycle in the current contact graph. If the other endpoint was
 also isolated, it becomes nonisolated at this step; neither endpoint is ever
 selected again. If the other endpoint already belonged to a component, the new
-edge attaches the singleton $r$ to that component. Induction gives a forest
+edge attaches the singleton $`r`$ to that component. Induction gives a forest
 after contracting the original core. Since each step leaves all old contacts
 untouched and creates no diameter equality, the diameter graph remains the
-original $H$. $\square$
+original $`H`$. $`\square`$
 
 ## 6. What this does and does not transfer
 
-The theorem gives a same-$n$, same-$D$, triangle-free representative with the
-full diameter graph $H$ unchanged and no contact-isolated points. It therefore
+The theorem gives a same-$`n`$, same-$`D`$, triangle-free representative with the
+full diameter graph $`H`$ unchanged and no contact-isolated points. It therefore
 removes one representative-dependent feature from the source-capacity obstruction.
 
 It does **not** imply that the newly created contacts have positive KKT multipliers.
 The C65 stress remains a valid equilibrium stress on the original core, but has
 zero coordinates on the new contacts. Consequently one cannot infer
-$$
+```math
 C=C_*,\qquad H=H_*,\qquad s_Z=e+h-(2v-2)
-$$
+```
 for the new full contact graph without a separate transfer theorem.
 
 ## 7. Failed closure attempt
 
-Applying the full-source cell-slack decomposition to $A^\circ$ and then invoking
+Applying the full-source cell-slack decomposition to $`A^\circ`$ and then invoking
 C-I fails at a precise point: C-I uses contact minimality to force positivity of
 every active contact row. The absorbed configuration is contact-richer, so C63 may
 release the newly created contacts and return to a representative with rattlers.
-Preserving $H$ does not repair this: the added contacts have zero rows in the
+Preserving $`H`$ does not repair this: the added contacts have zero rows in the
 original stress and may be invisible to the promoted response matrix.
 
 ## 8. Regression audit
@@ -243,7 +243,7 @@ original stress and may be invisible to the promoted response matrix.
 Turning SR.3 into a Level-I closure requires at least one of:
 
 1. a theorem that a newly created contact must carry positive multiplier;
-2. a source-wide packing inequality depending only on $n,D,H$, not on the
+2. a source-wide packing inequality depending only on $`n,D,H`$, not on the
    positive-contact representative; or
 3. a monotone contact/diameter selection in which rattler absorption cannot be
    undone by C63 release.

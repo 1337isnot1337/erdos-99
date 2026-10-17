@@ -46,9 +46,9 @@ PASS: rational Section-162 eta extension
 The monotonicity used in the certificate is correct. With `c=(9/2)eta` and
 `A_0=2s+c`,
 
-$$
+```math
 A_0-\frac{4s^2}{A_0}=c\frac{4s+c}{2s+c},
-$$
+```
 
 which is increasing in `s`; the displayed lower/upper rational evaluations therefore
 enclose the atom mass in the correct directions. The denominator in the
@@ -77,9 +77,9 @@ The later repair supplies both missing inputs in the needed Type-II scope. Near-
 loaded-hull convergence makes every exterior hull turn `o(1)`. Coincident adjacent
 tooth apices would force a turn
 
-$$
+```math
 \alpha_i=\pi-\beta_i-\beta_{i+1}>\pi/3,
-$$
+```
 
 so coincidence is impossible for sufficiently large Type-II sources. For distinct
 apices, the repaired ray-order argument uses unit separation from the first apex to

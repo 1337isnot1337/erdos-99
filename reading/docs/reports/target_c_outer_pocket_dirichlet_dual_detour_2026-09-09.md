@@ -14,17 +14,17 @@
 
 WD bounded one convex OP outer pocket by
 
-$$
+```math
 area(P)
 \le
 \frac{\sqrt2}{\pi}\ell^{3/2}\sqrt{\ell-s},
-$$
+```
 
 where `ell` is the length of the old unit-contact boundary chain and `s` is the length of its force-hull chord.
 
 A sharper direct functional estimate is available.  The area is controlled by the **mean transverse height**, not its `L^2` norm.  The exact Dirichlet dual of the mean functional gives
 
-$$
+```math
 \boxed{
 area(P)
 \le
@@ -32,19 +32,19 @@ area(P)
 \ell^{3/2}\sqrt{\ell-s}.
 }
 \tag{DD.1}
-$$
+```
 
 The constant improves from
 
-$$
+```math
 \frac{\sqrt2}{\pi}=0.4501581580\ldots
-$$
+```
 
 to
 
-$$
+```math
 \frac1{\sqrt6}=0.4082482904\ldots .
-$$
+```
 
 No fixed-endpoint Dido theorem or calculus-of-variations classification is required.
 
@@ -59,43 +59,43 @@ Fix one OP outer pocket `P`.  Its boundary consists of
 
 OP proves the pocket is convex.  Translate and rotate so
 
-$$
+```math
 A=(0,0),
 \qquad
 B=(s,0),
-$$
+```
 
 and `P` lies in the closed upper half-plane.
 
 Parameterize the contact chain from `A` to `B` by arclength:
 
-$$
+```math
 \gamma(t)=(x(t),y(t)),
 \qquad 0\le t\le\ell.
-$$
+```
 
 Then
 
-$$
+```math
 y(t)\ge0,
 \qquad
 y(0)=y(\ell)=0,
 \tag{DD.2}
-$$
+```
 
 and almost everywhere
 
-$$
+```math
 \boxed{x'^2+y'^2=1.}
 \tag{DD.3}
-$$
+```
 
 Also
 
-$$
+```math
 \int_0^\ell x'(t)\,dt=s.
 \tag{DD.4}
-$$
+```
 
 ---
 
@@ -103,22 +103,22 @@ $$
 
 Exactly as in WD,
 
-$$
+```math
 y'^2
 =1-x'^2
 =(1-x')(1+x')
 \le2(1-x'),
-$$
+```
 
 because `x'<=1`.  Integrating and using DD.4 gives
 
-$$
+```math
 \boxed{
 \int_0^\ell y'^2\,dt
 \le2(\ell-s).
 }
 \tag{DD.5}
-$$
+```
 
 This step is valid even if the convex boundary chain backtracks in the chord direction.
 
@@ -128,56 +128,56 @@ This step is valid even if the convex boundary chain backtracks in the chord dir
 
 Define
 
-$$
+```math
 g(t):=\frac12t(\ell-t).
 \tag{DD.6}
-$$
+```
 
 Then
 
-$$
+```math
 -g''(t)=1,
 \qquad
  g(0)=g(\ell)=0,
-$$
+```
 
 and
 
-$$
+```math
 g'(t)=\frac\ell2-t.
-$$
+```
 
 For any absolutely continuous `y` with zero endpoint values, integration by parts gives
 
-$$
+```math
 \int_0^\ell y(t)\,dt
 =\int_0^\ell y'(t)g'(t)\,dt.
 \tag{DD.7}
-$$
+```
 
 Cauchy–Schwarz therefore yields
 
-$$
+```math
 \left|\int_0^\ell y\right|^2
 \le
 \left(\int_0^\ell y'^2\right)
 \left(\int_0^\ell g'^2\right).
 \tag{DD.8}
-$$
+```
 
 A direct calculation gives
 
-$$
+```math
 \int_0^\ell g'(t)^2\,dt
 =
 \int_0^\ell\left(\frac\ell2-t\right)^2dt
 =\frac{\ell^3}{12}.
 \tag{DD.9}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \left|\int_0^\ell y(t)\,dt\right|
 \le
@@ -185,7 +185,7 @@ $$
 \int_0^\ell y'^2}.
 }
 \tag{DD.10}
-$$
+```
 
 This is the sharp `H_0^1` dual norm of the mean functional.
 
@@ -195,38 +195,38 @@ This is the sharp `H_0^1` dual norm of the mean functional.
 
 Orient the pocket boundary by traversing the upper contact chain from `A` to `B` and then the horizontal chord from `B` back to `A`.  This orientation is clockwise.  Green's theorem gives
 
-$$
+```math
 area(P)
 =\int_0^\ell y(t)x'(t)\,dt,
 \tag{DD.11}
-$$
+```
 
 because the closing chord has `y=0`.
 
 Pointwise,
 
-$$
+```math
 y(t)\ge0,
 \qquad
 x'(t)\le1.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 area(P)
 \le
 \int_0^\ell y(t)\,dt.
 }
 \tag{DD.12}
-$$
+```
 
 No monotonicity of `x(t)` is assumed.  Portions with `x'<0` only decrease the integral in DD.11 relative to the mean-height upper bound.
 
 Combine DD.5, DD.10, and DD.12:
 
-$$
+```math
 \begin{aligned}
 area(P)
 &\le
@@ -237,7 +237,7 @@ area(P)
 \frac1{\sqrt6}\ell^{3/2}\sqrt{\ell-s}
 }.
 \end{aligned}
-$$
+```
 
 This proves DD.1.
 
@@ -247,18 +247,18 @@ This proves DD.1.
 
 OD proves the exact global identities
 
-$$
+```math
 \sum_P\ell_P=x_B+a,
 \qquad
 \sum_P(\ell_P-s_P)=b-P_F.
 \tag{DD.13}
-$$
+```
 
 Applying DD.1 pocketwise and Cauchy–Schwarz as in OD gives
 
 ### Theorem DD.2 — global Dirichlet-dual detour bound
 
-$$
+```math
 \boxed{
 H_{out}
 \le
@@ -267,11 +267,11 @@ H_{out}
 \sqrt{b-P_F}.
 }
 \tag{DD.14}
-$$
+```
 
 Using the exact PC variables,
 
-$$
+```math
 \boxed{
 H_{out}
 \le
@@ -280,7 +280,7 @@ H_{out}
 \sqrt{2h-Q-2s_Z-P_F}.
 }
 \tag{DD.15}
-$$
+```
 
 This strictly supersedes WD.11/WD.12.
 
@@ -290,26 +290,26 @@ This strictly supersedes WD.11/WD.12.
 
 All OD/WD qualitative stability consequences remain valid with the improved constant. In particular, if
 
-$$
+```math
 H_{out}\ge\gamma D^2
-$$
+```
 
 and
 
-$$
+```math
 x_B+a\le LD,
-$$
+```
 
 then DD.14 gives
 
-$$
+```math
 \boxed{
 \frac{b-P_F}{D}
 \ge
 \frac{6\gamma^2}{L^3}.
 }
 \tag{DD.16}
-$$
+```
 
 Thus any quadratic outer cavity pays a quantitatively larger minimum linear detour than previously certified by WD.
 
@@ -319,21 +319,21 @@ Thus any quadratic outer cavity pays a quantitatively larger minimum linear deto
 
 For a nearly straight chain, write its small transverse displacement as `y(t)`. To leading order,
 
-$$
+```math
 \ell-s\sim\frac12\int y'^2,
-$$
+```
 
 while the enclosed area is approximately
 
-$$
+```math
 \int y.
-$$
+```
 
 The extremizer of the linear functional `integral y` at fixed Dirichlet energy solves
 
-$$
+```math
 -y''=\text{constant},
-$$
+```
 
 so the leading profile is parabolic and the dual norm is exactly `ell^3/12`. This is why the coefficient `1/sqrt(6)` appears.
 

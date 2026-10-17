@@ -20,15 +20,15 @@ No source point is discarded in the theorem.  The replacement source has exactly
 
 Let `A` be a triangle-free global minimum-diameter source with
 
-$$
+```math
 |A|=n,\qquad \min_{x\ne y}|x-y|\ge1,\qquad \operatorname{diam}A=D(n)=D,
-$$
+```
 
 chosen, among all triangle-free global minimizers of cardinality `n`, to have the minimum possible number of unit contacts.  Put
 
-$$
+```math
 K=\operatorname{conv}A.
-$$
+```
 
 Let `v in A` be any nonisolated unit-contact vertex.  Let `Z subset A\setminus\{v\}` be any finite set of contact-isolated source points.
 
@@ -36,62 +36,62 @@ Let `v in A` be any nonisolated unit-contact vertex.  Let `Z subset A\setminus\{
 
 There is no finite set `Y subset K` satisfying all three conditions
 
-$$
+```math
 |Y|=|Z|+1,
 \tag{122.1}
-$$
+```
 
-$$
+```math
 |y-y'|>1
 \qquad(y\ne y',\ y,y'\in Y),
 \tag{122.2}
-$$
+```
 
 and
 
-$$
+```math
 |y-a|>1
 \qquad
 (y\in Y,\ a\in A\setminus(Z\cup\{v\})).
 \tag{122.3}
-$$
+```
 
 #### Proof
 
 Assume such `Y` exists and form
 
-$$
+```math
 A'=(A\setminus(Z\cup\{v\}))\cup Y.
 \tag{122.4}
-$$
+```
 
 Because `|Y|=|Z|+1`,
 
-$$
+```math
 |A'|=|A|=n.
 \tag{122.5}
-$$
+```
 
 All retained old pairs remain at distance at least one.  Conditions (122.2)--(122.3) make every pair involving a point of `Y` have distance strictly greater than one.  Hence `A'` is unit-separated.
 
 Every point of `A'` lies in `K`.  Since the diameter of the convex hull of a finite set equals the diameter of that set,
 
-$$
+```math
 \operatorname{diam}K=\operatorname{diam}A=D,
-$$
+```
 
 and therefore
 
-$$
+```math
 \operatorname{diam}A'\le D.
 \tag{122.6}
-$$
+```
 
 But `A'` has cardinality `n` and is unit-separated, so by the definition of `D(n)`,
 
-$$
+```math
 \operatorname{diam}A'\ge D(n)=D.
-$$
+```
 
 Thus equality holds in (122.6): `A'` is another global minimizer.
 
@@ -113,30 +113,30 @@ This contradicts the contact-minimal choice of `A`.  `\square`
 
 Now work in the canonical post-ZF C-II representative.  Let `C` be one actual convex inactive chamber from Section 77, and let
 
-$$
+```math
 Z_C\subset A
-$$
+```
 
 be the contact-isolated source points assigned to `C`.  By the Section-77 chamber partition, every source point not in `Z_C` lies outside the interior of `C` (boundary points may lie on `partial C`).
 
 For `r>0` write
 
-$$
+```math
 C_{-r}:=\{x\in C:\operatorname{dist}(x,\partial C)>r\}.
 \tag{122.7}
-$$
+```
 
 ### Corollary 122.2 — exact unit covering of the deep chamber
 
 For every inactive chamber `C`,
 
-$$
+```math
 \boxed{
 C_{-1}\subseteq
 \bigcup_{z\in Z_C}\overline B(z,1).
 }
 \tag{122.8}
-$$
+```
 
 #### Proof
 
@@ -144,9 +144,9 @@ Choose any nonisolated contact vertex `v`; the post-ZF positive-contact core is 
 
 If `a in A\setminus Z_C`, then `a` is not in the interior of `C`.  Since `C` is convex and `x in int C`, the segment from `x` to `a` meets `partial C`.  Hence
 
-$$
+```math
 |x-a|\ge\operatorname{dist}(x,\partial C)>1.
-$$
+```
 
 Thus `x` is strictly farther than one from every point of `A\setminus\{v\}`.  Theorem 122.1 with `Z=emptyset` and `Y={x}` gives a contradiction.  `\square`
 
@@ -162,48 +162,48 @@ The one-point covering statement still understates the available consequence.
 
 Fix an inactive chamber `C`, a finite subset
 
-$$
+```math
 W\subseteq Z_C,
-$$
+```
 
 and a nonisolated contact vertex `v`.  There is no set
 
-$$
+```math
 Y\subset C_{-1}
-$$
+```
 
 with
 
-$$
+```math
 |Y|=|W|+1,
 \tag{122.9}
-$$
+```
 
 such that
 
-$$
+```math
 |y-y'|>1
 \qquad(y\ne y',\ y,y'\in Y)
 \tag{122.10}
-$$
+```
 
 and
 
-$$
+```math
 |y-z|>1
 \qquad(y\in Y,\ z\in Z_C\setminus W).
 \tag{122.11}
-$$
+```
 
 #### Proof
 
 For `y in C_{-1}`, every source point outside `Z_C` is more than one from `y` by the same convex-boundary argument used in Corollary 122.2.  Condition (122.11) handles all retained chamber isolates.  Therefore (122.10)--(122.11) imply
 
-$$
+```math
 |y-a|>1
 \qquad
 (y\in Y,\ a\in A\setminus(W\cup\{v\})).
-$$
+```
 
 Apply Theorem 122.1 with `Z=W`.  `\square`
 
@@ -215,40 +215,40 @@ We will call (122.9)--(122.11) **deep finite exchange saturation**.  This phrase
 
 Canonical Section 79 says that the macroscopic inactive-container branch contains one actual convex inactive chamber `C_*` with
 
-$$
+```math
 \operatorname{area}(C_*)=\Omega(D^2),
 \qquad
 |Z_{C_*}|=\Omega(D^2),
 \qquad
 \operatorname{per}(C_*)=O(D),
 \tag{122.12}
-$$
+```
 
 and Section 87 supplies a linear-size family of deep isolate pairs with separation
 
-$$
+```math
 1<|z-z'|\le1+{K\over D}
 \tag{122.13}
-$$
+```
 
 for a fixed constant `K` after fixing the depth parameter.
 
 For every fixed `r>0`, the boundary layer of a convex planar body satisfies
 
-$$
+```math
 \operatorname{area}(C_*\setminus (C_*)_{-r})
 \le r\operatorname{per}(C_*),
 \tag{122.14}
-$$
+```
 
 whenever the erosion is nonempty; the inequality also follows directly from the coarea formula and perimeter monotonicity.  Hence for every fixed `r`,
 
-$$
+```math
 \operatorname{area}((C_*)_{-r})
 =\operatorname{area}(C_*)-O(D)
 =\Omega(D^2).
 \tag{122.15}
-$$
+```
 
 Taking `r=1` and applying Corollaries 122.2--122.3 gives the following exact branch normal form.
 

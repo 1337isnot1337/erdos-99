@@ -33,12 +33,12 @@ Thus the surviving two-direction mechanism is an exact **cross-chain**.
 
 Fix a normalized KKT stress `s=(alpha,beta)` with exactly two positive diameter edges
 
-$$
+```math
 h_u=a_0a_D,
 \qquad
 h_v=b_0b_D,
 \tag{C24.1}
-$$
+```
 
 of length `D`.  Their lines are nonparallel: two distinct diameter segments in a
 planar diameter-`D` set cannot be collinear.
@@ -46,27 +46,27 @@ planar diameter-`D` set cannot be collinear.
 Choose unit vectors `u,v` parallel to the two diameter chords.  Assume the
 **two-direction hypothesis**
 
-$$
+```math
 \boxed{
 \text{every }ij\in C_s
 \text{ is parallel to }u\text{ or }v.
 }
 \tag{C24.2}
-$$
+```
 
 This is exactly the exceptional case left by C21.1 when a two-diameter extreme stress
 controls the critical-cone span but has no third projective stressed direction.
 
 Let the positive diameter weights be
 
-$$
+```math
 \beta_u>0,
 \qquad
 \beta_v>0,
 \qquad
 \beta_u+\beta_v=1.
 \tag{C24.3}
-$$
+```
 
 ---
 
@@ -74,13 +74,13 @@ $$
 
 At every positive-support vertex, KKT equilibrium is
 
-$$
+```math
 \sum_{ij\in C_s}\alpha_{ij}(p_i-p_j)
 -
 \sum_{ij\in H_s}\beta_{ij}(p_i-p_j)
 =0.
 \tag{C24.4}
-$$
+```
 
 Every vector in (C24.4) is parallel to `u` or `v`.  Since `u,v` are linearly
 independent, the coefficients in the two directions vanish separately.
@@ -113,33 +113,33 @@ The same proof works in the `v` direction.
 
 The complete positive `u`-contact support is
 
-$$
+```math
 \boxed{
 a_k=a_0+ku,
 \qquad k=0,1,\ldots,D,
 }
 \tag{C24.5}
-$$
+```
 
 with contacts `a_ka_{k+1}` for `0<=k<D`.  In particular `D` is an integer.  Every
 such contact has stress
 
-$$
+```math
 \boxed{
 \alpha_{a_ka_{k+1}}=D\beta_u.
 }
 \tag{C24.6}
-$$
+```
 
 Likewise the complete positive `v`-contact support is
 
-$$
+```math
 \boxed{
 b_\ell=b_0+\ell v,
 \qquad \ell=0,1,\ldots,D,
 }
 \tag{C24.7}
-$$
+```
 
 with constant contact stress `D beta_v`.
 
@@ -171,7 +171,7 @@ The `v` statement is identical. `square`
 
 Under the two-direction hypothesis,
 
-$$
+```math
 \boxed{
 C_s
 =\{a_ka_{k+1}:0\le k<D\}
@@ -179,7 +179,7 @@ C_s
 \{b_\ell b_{\ell+1}:0\le\ell<D\}.
 }
 \tag{C24.8}
-$$
+```
 
 There are no additional positive contacts on parallel translated lines.
 
@@ -198,17 +198,17 @@ The two supporting lines are nonparallel and hence have a unique intersection po
 
 There exist integers
 
-$$
+```math
 r,s\in\{0,1,\ldots,D\}
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{
 o=a_r=b_s.}
 \tag{C24.9}
-$$
+```
 
 Thus the geometric intersection of the two positive diameter chords is itself a source
 point and a vertex of both full unit chains.
@@ -224,25 +224,25 @@ Suppose the two positive diameter chords shared an endpoint `o`.  Let `a_1=o+u` 
 is the angle between the two diameter rays, then the elementary diameter inequality
 for two length-D chords sharing an endpoint gives
 
-$$
+```math
 0<\theta\le\frac\pi3.
 \tag{C24.10}
-$$
+```
 
 Therefore
 
-$$
+```math
 |a_1-b_1|
 =2\sin\frac\theta2
 \le1.
 \tag{C24.11}
-$$
+```
 
 Unit separation forbids strict inequality.  Equality would make
 
-$$
+```math
 o,a_1,b_1
-$$
+```
 
 a unit equilateral triangle, forbidden by the triangle-free hypothesis.  Hence a
 triangle-free source cannot realize the shared-endpoint cross-chain.
@@ -250,10 +250,10 @@ triangle-free source cannot realize the shared-endpoint cross-chain.
 So the two positive diameter edges are disjoint.  Their segments cross properly, and
 `o` lies in the relative interior of both diameter chords.  In particular
 
-$$
+```math
 1\le r,s\le D-1.
 \tag{C24.12}
-$$
+```
 
 ---
 
@@ -262,27 +262,27 @@ $$
 Let `phi in (0,pi/2]` be the acute angle between the two chain lines.  Since `o` is an
 interior vertex of both full chains, all four points
 
-$$
+```math
 o\pm u,
 \qquad
 o\pm v
-$$
+```
 
 belong to the source.
 
 Unit separation gives, in particular,
 
-$$
+```math
 |u-v|=2\sin\frac\phi2\ge1.
 \tag{C24.13}
-$$
+```
 
 Hence
 
-$$
+```math
 \phi\ge\frac\pi3.
 \tag{C24.14}
-$$
+```
 
 If equality held, `o,o+u,o+v` would be a unit equilateral triangle.  Therefore:
 
@@ -290,12 +290,12 @@ If equality held, `o,o+u,o+v` would be a unit equilateral triangle.  Therefore:
 
 For a triangle-free source in the two-direction phase,
 
-$$
+```math
 \boxed{
 \frac\pi3<\phi\le\frac\pi2.
 }
 \tag{C24.15}
-$$
+```
 
 Equivalently, the two full diameter chains cross at an acute angle strictly between
 `60` and `90` degrees, inclusive at `90`.
@@ -307,28 +307,28 @@ Equivalently, the two full diameter chains cross at an acute angle strictly betw
 The classification also makes C20 transparent in this exceptional phase.  Let
 `Omega_u` be the normalized one-chain matrix
 
-$$
+```math
 D L_{\rm path}(a_0,\ldots,a_D)-L_{a_0a_D},
-$$
+```
 
 and define `Omega_v` analogously.  Then
 
-$$
+```math
 \boxed{
 \Omega_s
 =\beta_u\Omega_u+\beta_v\Omega_v.
 }
 \tag{C24.16}
-$$
+```
 
 Each summand is PSD by the one-chain Cauchy–Schwarz identity.  Their scalar kernels
 consist of functions affine along the corresponding chain.  Because the chains meet at
 `o` and their directions are independent, the intersection of those two kernels is
 exactly
 
-$$
+```math
 \operatorname{span}\{\mathbf1,x,y\}.
-$$
+```
 
 Thus the cross-chain normal form independently recovers the PSD/maximal-rank conclusion
 of C20 in the exceptional two-direction case.

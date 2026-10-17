@@ -17,16 +17,16 @@
 
 Let a finite unit-separated source have a simple convex actual unit-contact face `F` with eight sides. Consider a nonconstant face-closed quarter-fold of its boundary labels, retaining every other source label, and assume the full endpoint is unit-separated and triangle-free. The four transition arcs each have two sides by `C-QUARTER-FOLD-MINIMUM-FACE-SIZE`. Let `alpha, beta >= 0` be their two outward unit-edge deflection angles, and let `gamma` be the angle between adjacent transition-parallelogram chord directions. Then
 
-$$
+```math
 \alpha+\beta<\pi/6,\qquad
 \pi/3+\alpha+\beta<\gamma<2\pi/3-\alpha-\beta,
-$$
+```
 
 and
 
-$$
+```math
 \operatorname{Area}(F)\ge4\cos\alpha\cos\beta\sin\gamma>2\sqrt3.
-$$
+```
 
 The first displayed lower bound compares the convex face with its inscribed transition parallelogram; the strict area bound is the claimed consequence. The theorem uses the actual face and full lower-feasible endpoint at the stated finite scope. It assumes neither global optimality nor a diameter or stress hypothesis.
 
@@ -36,27 +36,27 @@ The canonical convex-face classification supplies four transition vertices formi
 
 At each transition corner the old exterior turn is one of
 
-$$
+```math
 \gamma-\alpha-\beta,\qquad \pi-\gamma-\alpha-\beta,
-$$
+```
 
 alternating around the four corners. The two adjacent old boundary edges are unit and their endpoints are nonconsecutive vertices of the actual face, so their chord is strictly longer than one. Thus the old turn is strictly between `pi/3` and `2pi/3`. At a sign transition the folded turn is supplementary; its two folded edges are unit, and endpoint triangle-freeness forces their chord also to be strictly longer than one. These inequalities give the same open interval for the old turn. Applying this at all four corners yields
 
-$$
+```math
 s:=\alpha+\beta<\pi/6,\qquad \pi/3+s<\gamma<2\pi/3-s.
-$$
+```
 
 The transition parallelogram's area is `4 cos(alpha) cos(beta) sin(gamma)`, and it lies inside the convex face. Since
 
-$$
+```math
 \cos\alpha\cos\beta
 =\cos(\alpha+\beta)+\sin\alpha\sin\beta
 \ge\cos s
-$$
+```
 
-and the open symmetric interval for $\gamma$ gives $\sin\gamma>\sin(\pi/3+s)$,
+and the open symmetric interval for $`\gamma`$ gives $`\sin\gamma>\sin(\pi/3+s)`$,
 
-$$
+```math
 \begin{aligned}
 \operatorname{Area}(F)
 &\ge 4\cos\alpha\cos\beta\sin\gamma\\
@@ -64,7 +64,7 @@ $$
 &=2\{\sin(\pi/3+2s)+\sin(\pi/3)\}\\
 &\ge 2\sqrt3,
 \end{aligned}
-$$
+```
 
 because `0 <= s < pi/6`, so `pi/3+2s` lies in `[pi/3, 2pi/3]`. The strict turn inequalities are what justify promoting the strict bound even when `s=0`.
 

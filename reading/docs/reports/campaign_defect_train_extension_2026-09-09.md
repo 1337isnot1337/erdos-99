@@ -39,11 +39,11 @@ For a connected triangle-free unit-contact core write
 The later-C dependencies audited in the preceding report give, in the large
 lexicographically normalized hypothetical counterexample,
 
-$$
+```math
 e+h\ge 2v-2,
 \qquad b+Q\le2h\le2q.
 \tag{D1}
-$$
+```
 
 The second inequality improves the older pinned-rank budget `b+Q<=4q-4`.
 It still has the same linear scale. The intended implication is
@@ -76,12 +76,12 @@ Then:
 3. the train-crossing graph is simple and triangle-free;
 4. its edge count is `R`, and its vertex count `T` satisfies
 
-$$
+```math
 T=e-2R
  =\frac{b+\sum_{F\text{ non4}}k_F}{2}
  =\frac{b+Q}{2}+2f.
 \tag{D2}
-$$
+```
 
 In particular the formula counts bridges, holes in the rhombic region, separate
 rhombic components, and edges between two exceptional faces.
@@ -138,19 +138,19 @@ faces; its narrow-cone argument avoids importing a disk-wide coordinate system.
 
 Consider a sequence of graphs satisfying DT, of diameters `D->infinity`. Suppose
 
-$$
+```math
 T=\Theta(D),\qquad R/D^2\longrightarrow r>0,
 \tag{D3}
-$$
+```
 
 the sum of their rhombus area excesses is `o(D^2)`, and their convex hulls, after
 translation and division by `D`, converge to the disk of diameter one. Let `q` be
 their hull-vertex counts. Then
 
-$$
+```math
 \liminf\frac{T-q}{D}\ge 2\sqrt r-\frac\pi2.
 \tag{D4}
-$$
+```
 
 The hypotheses concern the actual core embedding. They do not require a simply
 connected rhombic region or a train-angle parametrization.
@@ -166,9 +166,9 @@ For a rhombus with acute angle `a in (pi/3,pi/2]`, its excess is
 has a positive lower bound. Since its total is `o(D^2)=o(T^2)`, the normalized
 ordered crossing measures have limits supported on
 
-$$
+```math
 \mathcal S=\{(x,y):y-x\equiv\pm\pi/3\pmod\pi\}.
-$$
+```
 
 By DT the crossing graph is simple, so its normalized ordered edge measure is
 bounded by the product of its empirical direction measures. In the limit it is
@@ -183,10 +183,10 @@ to the finite induced crossing graph on trains in the chosen neighborhoods. Firs
 pass to the sequence limit, then shrink the neighborhoods, then let `epsilon` tend
 to zero. This proves
 
-$$
+```math
 \frac r{\tau^2}\le\frac{s^2}{4}.
 \tag{D5}
-$$
+```
 
 It remains to relate `s` to the hull. The outer boundary walk can be partitioned
 into `q` walks between consecutive hull vertices, with total length `b<=2T`.
@@ -218,17 +218,17 @@ Each train has at most two outer occurrences, including the two occurrences of
 an isolated bridge. After division by `T`, passage to the sequence limit, and
 then `delta->0`, `M->infinity`, and `epsilon->0`, this gives
 
-$$
+```math
 y\le2(1-s).
 \tag{D6}
-$$
+```
 
 Combine (D5) and (D6):
 
-$$
+```math
 2\sqrt r\le\tau(1-y/2)
 =\lim\frac{T-q/2}{D}.
-$$
+```
 
 The convex-hull perimeter is at most `pi D`, and its `q` sides have lengths at
 least one, so `q/D<=pi`. Subtracting `q/(2D)` proves (D4) on every convergent
@@ -243,20 +243,20 @@ rigidity conclusion. Let `A_j` be triangle-free global minimizers, chosen first 
 minimize contact count and then diameter-pair count. Put `D_j=D(n_j)->infinity`.
 If their nonisolated cores satisfy
 
-$$
+```math
 n_j-v_j=o(D_j^2),
 \tag{D7}
-$$
+```
 
 then the number `f_j` of bounded nonquadrilateral contact faces satisfies
 
-$$
+```math
 \boxed{
 \liminf_{j\to\infty}\frac{f_j}{D_j}
 \ge \sqrt{\frac{\pi}{2\sqrt3}}-\frac\pi4
 =0.166914\ldots>0.}
 \tag{D8}
-$$
+```
 
 Consequently, under these dependencies, an asymptotically full contact core with
 only `o(D)` exceptional faces is impossible, even with holes, articulation points,
@@ -267,26 +267,26 @@ or multiple rhombic components.
 The exact global lattice bound and Oler/isodiametric upper bound give
 `n/D^2 -> Delta=pi/(2sqrt(3))`. Since `f<=Q`, (D1), `b>=q`, and `h<=q` imply
 
-$$
+```math
 T=(b+Q)/2+2f\le h+2Q\le5q-2b\le3q\le3\pi D.
 \tag{D9}
-$$
+```
 
 Euler and (D2) give the exact identity
 
-$$
+```math
 R=v+f-T-1.
 \tag{D10}
-$$
+```
 
 Thus (D7) gives `R/D^2->Delta`. DT and Mantel give `R<=T^2/4`, so also `T=Omega(D)`.
 
 Let `A_R` be the total rhombus area and `F` the core convex hull. Then
 
-$$
+```math
 \frac{\sqrt3}{2}R\le A_R\le\operatorname{area}(F)
 \le\frac\pi4 D^2.
-$$
+```
 
 Both extremes divided by `D^2` converge to `pi/4`. The rhombus excess is therefore
 `o(D^2)`, and the scaled core hull converges, up to translations, to the unit-diameter
@@ -296,9 +296,9 @@ equality case of the isodiametric inequality: every subsequential limit has area
 
 Finally (D1)-(D2) give `T-q<=2f`. Equation (D4) yields
 
-$$
+```math
 2\liminf f/D\ge2\sqrt\Delta-\pi/2,
-$$
+```
 
 which is (D8). QED.
 
@@ -324,25 +324,25 @@ family identifies the obstruction.
 
 For `0<u<=1/4`, put
 
-$$
+```math
 c=\frac{1-u^2}{1+u^2},\quad s=\frac{2u}{1+u^2},\quad
 h=\sqrt{1-(c-1/2)^2}.
-$$
+```
 
 Take the five vertices in the displayed cyclic order:
 
-$$
+```math
 (-c,0),\quad (0,-s),\quad(c,0),\quad(1/2,h),\quad(-1/2,h).
 \tag{D11}
-$$
+```
 
 They form a strictly convex, unit-separated polygon whose contact graph is exactly
 the five-cycle. Its area `A(u)` satisfies
 
-$$
+```math
 0<A(u)-\frac{3\sqrt3}{4}<3u.
 \tag{D12}
-$$
+```
 
 The term `3sqrt(3)/4` is precisely the facewise Oler lower bound for five unit
 boundary edges and no interior points.
@@ -352,10 +352,10 @@ boundary edges and no interior points.
 Here `c>=15/17>1/2`, `s>0`, `c^2+s^2=1`, and `h>sqrt(3)/2`. All five successive
 side lengths are one. The five nonedge squared distances are
 
-$$
+```math
 4c^2,\quad 1/4+(h+s)^2\quad\text{(twice)},\quad
 1+2c\quad\text{(twice)}.
-$$
+```
 
 Each exceeds one. The five successive cross products of edge vectors are
 `2cs`, `ch+s(c-1/2)`, `h`, `h`, and `ch+s(c-1/2)`, all positive. The polygon is
@@ -363,27 +363,27 @@ strictly convex and triangle-free.
 
 Its area is
 
-$$
+```math
 A(u)=(c+1/2)h+cs.
-$$
+```
 
 Write `a=sqrt(3)/2`. Since `h>a`,
 `A(u)-3a/2 > cs-a(1-c)>0`: the last inequality follows from
 `cs-a(1-c)=2u(c-au)/(1+u^2)` and `c>u>=au`.
 Also
 
-$$
+```math
 h-a=\frac{c(1-c)}{h+a}<1-c,
-$$
+```
 
 so
 
-$$
+```math
 A(u)-3a/2
 =(c-1)h+\tfrac32(h-a)+cs
 <\tfrac32(1-c)+s
 \le3u^2+2u<3u.
-$$
+```
 
 This proves (D12). QED.
 
@@ -400,18 +400,18 @@ a regular unit pentagon has diameter `(1+sqrt(5))/2<5/3<30/17<=2c`.
 There is a second exact obstruction to a count-only argument. Facewise Oler, with
 `z_F` isolated points in a bounded face, gives
 
-$$
+```math
 \operatorname{area}(F)\ge
 \frac{\sqrt3}{2}z_F+\frac{\sqrt3}{4}k_F-\frac{\sqrt3}{2}.
-$$
+```
 
 After summing all bounded faces and using Euler, the exceptional-face terms cancel:
 
-$$
+```math
 \frac{\sqrt3}{2}(v+Z_{\rm bounded}-1)
 \le A_{\rm bounded}+\frac{\sqrt3}{4}b.
 \tag{D13}
-$$
+```
 
 Thus substituting the new lower bound on `f` into ordinary facewise Oler yields no
 additional surplus at all. A new simultaneous shell/face inequality is needed.

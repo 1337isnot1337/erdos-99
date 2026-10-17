@@ -24,9 +24,9 @@ Let `A` be a contact-minimal, then actual-diameter-pair-minimal triangle-free gl
 
 There is no new point `r∉A` with `r∉int(F)` such that
 
-$$
+```math
 1\le |r-x|<D\qquad\text{for every }x\in A.
-$$
+```
 
 Consequently, for every unit-separated extension `P⊃A`, each auxiliary point in `P∩conv(A)` lies in `int(F)`. Since `F` is the convex hull of the loaded endpoints in this normalization, no auxiliary point is added in a closed exterior cap contained in `conv(A)` outside `int(F)`.
 
@@ -38,15 +38,15 @@ Under `C=C_*`, `H=H_*`, every old unit contact belongs to the positive contact s
 
 Because `r∉int(F)`, convex separation supplies a unit vector `u` such that
 
-$$
+```math
 (r-x)\cdot u\ge0\qquad(x\in V).
-$$
+```
 
 Choose a vertex `v∈V` incident to a positive unit contact, delete it, and insert `r(t)=r+tu`. For every old contact isolate `z` with `|r-z|=1`, also move that isolate by
 
-$$
+```math
 z(t)=z+t\bigl(u+z-r\bigr),
-$$
+```
 
 and keep every other retained point fixed. All old labels outside `v` remain in the source.
 
@@ -65,9 +65,9 @@ If the new diameter is less than `D`, global minimum-diameter optimality is cont
 
 Let `K=conv(A)`, and let `r∈(P∖A)∩K` for a unit-separated extension `P⊃A`. The point `r` is not a vertex of `K`, because every vertex of the finite hull `K` belongs to `A`. Thus `r` is a nontrivial convex combination of distinct vertices `a_j∈A`. For each fixed `x∈A`, strict convexity of `y↦|y-x|²` gives
 
-$$
+```math
 |r-x|^2<\sum_j\lambda_j|a_j-x|^2\le D^2.
-$$
+```
 
 Unit separation gives `|r-x|≥1`. The one-site theorem therefore forces `r∈int(F)`. This applies to the common saturated Delaunay completion in Audit.108, but it creates no site or capacity inside `F`.
 

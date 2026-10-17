@@ -19,33 +19,33 @@ SI first combined the semicircle internal-perimeter cost with UF and obtained a 
 
 Let `Q_int=Q_1+Q_2` be the bounded-face degree excess internal to the two TS semicircle-scale harmonic components. In the full-core cap-minimal regime
 
-$$
+```math
 S/D\to2,
 \qquad
 x_B=o(D),
 \qquad
 q/D\to\pi,
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{
 Q\ge Q_{int}+(2-o(1))D.
 }
 \tag{TE.1}
 
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 Q-Q_{int}\ge(2-o(1))D.
 }
 \tag{TE.2}
 
-$$
+```
 
 Thus at least two full source-diameter units of exceptional-face defect are forced **outside** the interiors of the two positive-density semicircle carriers.
 
@@ -57,7 +57,7 @@ This strictly supersedes SI's earlier numerical consequence `Q_B>=0.248576D`, al
 
 SI proves
 
-$$
+```math
 \boxed{
 R_I
 \ge
@@ -65,35 +65,35 @@ R_I
 +\frac12Q_{int}.
 }
 \tag{1.1}
-$$
+```
 
 NC proves
 
-$$
+```math
 E_{BB}=o(D).
 \tag{1.2}
-$$
+```
 
 NBd gives the exact boundary budget
 
-$$
+```math
 S+R_I+s_B+2E_{BB}+3c_I+s_C=q+2x_B.
 \tag{1.3}
-$$
+```
 
 In the cap-minimal near-circle endpoint,
 
-$$
+```math
 S=(2+o(1))D,
 \qquad
 q=(\pi+o(1))D,
 \qquad
 x_B=o(D).
-$$
+```
 
 Insert (1.1)--(1.2) into (1.3), discard `s_B>=0`, and rearrange:
 
-$$
+```math
 \boxed{
 3c_I+s_C+\frac12Q_{int}
 \le
@@ -101,7 +101,7 @@ $$
 }
 \tag{1.4}
 
-$$
+```
 
 This is already stronger than the SI bound `Q_int<=(pi-2+o(1))D` because it keeps the component-count and pinned-stress currencies instead of discarding them.
 
@@ -111,38 +111,38 @@ This is already stronger than the SI bound `Q_int<=(pi-2+o(1))D` because it keep
 
 ZU gives exactly
 
-$$
+```math
 c_I+e_{BB}+s_C=q-2+k,
 \qquad
 k:=d_H+s_Z.
 \tag{2.1}
-$$
+```
 
 NC gives
 
-$$
+```math
 e_{BB}=q+o(D)
-$$
+```
 
 in the near-circle branch. Hence
 
-$$
+```math
 \boxed{
  k=c_I+s_C+o(D).
 }
 \tag{2.2}
 
-$$
+```
 
 Since `c_I>=0`,
 
-$$
+```math
 c_I+s_C\le3c_I+s_C.
-$$
+```
 
 Equation (1.4) therefore yields
 
-$$
+```math
 \boxed{
  k
 \le
@@ -151,7 +151,7 @@ $$
 }
 \tag{2.3}
 
-$$
+```
 
 No stress coefficient lower bound enters this estimate.
 
@@ -161,29 +161,29 @@ No stress coefficient lower bound enters this estimate.
 
 ZT gives the exact terminal partition
 
-$$
+```math
 q=x_B+Q+2k.
 \tag{3.1}
-$$
+```
 
 Thus
 
-$$
+```math
 Q=q-x_B-2k.
 \tag{3.2}
-$$
+```
 
 Use
 
-$$
+```math
 q=(\pi+o(1))D,
 \qquad
 x_B=o(D),
-$$
+```
 
 and insert (2.3):
 
-$$
+```math
 \begin{aligned}
 Q
 &\ge
@@ -195,15 +195,15 @@ Q
 &=
 Q_{int}+(2-o(1))D.
 \end{aligned}
-$$
+```
 
 This proves TE.1--TE.2.
 
 The exact constant two comes from a clean cancellation:
 
-$$
+```math
 \pi-2\left(\frac\pi2-1\right)=2.
-$$
+```
 
 ---
 
@@ -216,28 +216,28 @@ Every bounded face of the full contact graph falls into one of two classes:
 
 Let
 
-$$
+```math
 Q_{small}
 :=
 \sum_{r\ge3}Q_r
-$$
+```
 
 be the internal face defect of all harmonic components other than the two TS carriers, and let `Q_B` be the defect on bounded faces incident to `B_+`. Then
 
-$$
+```math
 Q=Q_{int}+Q_{small}+Q_B.
 \tag{4.1}
-$$
+```
 
 TE.2 is therefore the exact asymptotic alternative
 
-$$
+```math
 \boxed{
 Q_{small}+Q_B\ge(2-o(1))D.
 }
 \tag{4.2}
 
-$$
+```
 
 TS proves the small components carry only `o(D^2)` vertices, but this does **not** yet imply `Q_small=o(D)`: a linear collection of bounded-size exceptional components can carry linear face defect while having subquadratic population.
 
@@ -256,24 +256,24 @@ Equation (1.4) also constrains the first alternative. Since every additional non
 
 For example, if
 
-$$
+```math
 Q_{int}=o(D),
-$$
+```
 
 then
 
-$$
+```math
 \limsup\frac{c_I}{D}
 \le
 \frac13\left(\frac\pi2-1\right)
 =0.1902654423\ldots .
-$$
+```
 
 A future theorem of the form
 
-$$
+```math
 Q_r\le C+o(1)
-$$
+```
 
 for graph-small harmonic components would immediately turn (4.2) into a quantitative loaded-interface lower bound. No such universal bound is asserted here; a component of sublinear diameter may still contain many exceptional faces.
 
@@ -283,34 +283,34 @@ for graph-small harmonic components would immediately turn (4.2) into a quantita
 
 Discarding `Q_int>=0` from TE.1 gives the simple global consequence
 
-$$
+```math
 \boxed{
 Q\ge(2-o(1))D
 }
 \tag{6.1}
-$$
+```
 
 throughout the cap-minimal full-core branch.
 
 This improves the UF full-core lower bound
 
-$$
+```math
 Q\ge
 \left(
 \frac\pi5+\frac45\sqrt\Delta-o(1)
 \right)D
 = (1.3901687762\ldots-o(1))D
-$$
+```
 
 without using UF's exposed-train estimate beyond the near-circle/full-core/cap-minimal setup that produced TS.
 
 The improved value is still compatible with ZT because `q/D->pi`; it forces
 
-$$
+```math
 \limsup\frac{k}{D}
 \le\frac{\pi-2}{2}
 =0.5707963268\ldots .
-$$
+```
 
 ---
 
@@ -331,9 +331,9 @@ $$
 
 TE reduces the cap-minimal full-core branch to a **defect-location dichotomy**:
 
-$$
+```math
 Q_{small}+Q_B\ge(2-o(1))D.
-$$
+```
 
 The two most direct continuations are:
 

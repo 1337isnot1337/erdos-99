@@ -42,24 +42,24 @@ stated explicitly in the candidate.
 
 Within a fixed gap, retain inclusion-maximal laminar support arcs of lengths
 
-$$
+```math
 0<\theta_i\le g,qquad \sum_i\theta_i\le g.
-$$
+```
 
 Canonical circular-segment geometry gives the superadditivity
 
-$$
+```math
 G(a)+G(b)\le G(a+b),
-$$
+```
 
 with strict inequality for positive (a,b) and (a+b<\pi).  Thus
 
-$$
+```math
 \text{residual area in the gap}
 \le\sum_iG(\theta_i)
 \le G\left(\sum_i\theta_i\right)
 \le G(g).
-$$
+```
 
 Area saturation forces equality.  Strict superadditivity then allows at most one
 positive maximal arc, and its length is (g).  Its endpoint support points have chord
@@ -75,10 +75,10 @@ For any finite set of gaps, the forced cells are distinct because one convex res
 cell cannot occupy two gap components.  Summing the diameter lower bounds and then
 using monotone convergence gives
 
-$$
+```math
 \liminf_D D^{-1}\sum_{r\ne w}d_r
 \ge\sum_j\sin(g_j/2).
-$$
+```
 
 Canonical Section 101 supplies the lower bound on this same complement-chord scalar,
 which yields the candidate value (M(\theta_*)) at the Section-118 endpoint.  The
@@ -91,30 +91,30 @@ wrapping carrier contributes (mu_*D+o(D)) under the common diameter cap.
 The completion-triangle payment cancels the loaded-contact and cell-dissection terms
 in the Section-124 capped-diameter inequality.  Therefore a lower bound
 
-$$
+```math
 \sum_rd_r\ge(S-o(1))D
-$$
+```
 
 gives
 
-$$
+```math
 3(h-s_Z)-2s_C
 \ge\left(S+\frac\pi4(2-\sqrt3)\right)D-o(D).
-$$
+```
 
 The additional inequalities
 
-$$
+```math
 t_r\ge d_r+1,qquad e_{BI}+2e_{BB}\le3q,qquad e_{BB}=q-m,
-$$
+```
 
 then yield (q+2m\ge SD-o(D)).  Using the proof-only Section-75/Section-125
 relation (s_C=m+k+o(D)) gives (3q-2m-5k\ge(S+c_{det}/2)D-o(D)).  Adding the two
 inequalities and substituting (q=h+d_H), (k=d_H+s_Z) gives
 
-$$
+```math
 4h-d_H-5s_Z\ge(2S+c_{det})D-o(D),
-$$
+```
 
 matching the candidate’s coefficient.  All these downstream steps are explicitly
 proof-only and Type-II conditional; none is treated as canonical here.

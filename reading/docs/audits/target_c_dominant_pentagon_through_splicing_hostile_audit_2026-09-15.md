@@ -44,22 +44,22 @@ The candidate therefore does not confuse facial-walk degree with a simple polygo
 
 Choose triangular directions
 
-$$
+```math
 a=(1,0),\qquad b=(1/2,\sqrt3/2),\qquad c=b-a.
-$$
+```
 
 For a limiting all-dominant pentagon let `r_a,r_b,r_c` be the oriented ray imbalances
 inside the three projective phase classes.  Closure gives
 
-$$
+```math
 r_a a+r_b b+r_c c=0,
-$$
+```
 
 hence
 
-$$
+```math
 r_a=r_c=-r_b=r.
-$$
+```
 
 Each phase total is congruent to `r mod 2` and at least `|r|`; the three totals sum to
 five.  Thus `r` cannot be zero and cannot have absolute value at least two.  Therefore
@@ -78,17 +78,17 @@ and every one has this `3,1,1` projective pattern.
 
 For the representative oriented pattern
 
-$$
+```math
 a,b,c,-b,-b,
-$$
+```
 
 the `+b` side midpoint is `a+b/2`, while the two `-b` side midpoints are `3b/2` and
 `b/2`.  Their connector vectors from the `+b` midpoint are
 
-$$
+```math
 c=b-a,
 \qquad -a.
-$$
+```
 
 Both are unit vectors making angle exactly `pi/6` with `Jb`, and both have positive
 `Jb` projection `sqrt(3)/2`.
@@ -151,11 +151,11 @@ original strict-rhombus train crossings.
 
 For adjacent atom labels write the contact directions as
 
-$$
+```math
 \phi_i+x_i,
 \qquad
 \phi_i+\pi/3+x_j.
-$$
+```
 
 An actual strict-rhombus crossing requires projective separation strictly greater than
 `pi/3`, hence `x_j>x_i`.  With the positive-normal orientations, the first train's
@@ -181,9 +181,9 @@ faces.  Thus the full supertrain intersection graph is simple.
 
 After `P_D` forest contractions there are
 
-$$
+```math
 N_D=M_D-P_D
-$$
+```
 
 supertrains.  Let `r_D<=P_D` be the number of nonsingleton components and
 `s_D=N_D-r_D` the singleton components.  The singleton induced graph is a subgraph of
@@ -193,29 +193,29 @@ most `s_D^2/4` edges.
 The whole quotient is simple, so edges incident to a nonsingleton component are at
 most
 
-$$
+```math
 r_Ds_D+{r_D(r_D-1)\over2}.
-$$
+```
 
 Hence
 
-$$
+```math
 E_D\le{s_D^2\over4}+r_Ds_D+{r_D(r_D-1)\over2}.
-$$
+```
 
 At fixed `N_D` this is increasing in `r_D` throughout the linear regime up to
 `r_D=P_D`; substituting `r_D=P_D` and `N_D=M_D-P_D` gives the slightly stronger finite
 bound
 
-$$
+```math
 E_D\le {M_D^2\over4}-{P_D^2\over2}-{P_D\over2}.
-$$
+```
 
 Dropping the favorable linear term yields the candidate's asymptotic
 
-$$
+```math
 d\ge p^2/2.
-$$
+```
 
 **Verdict:** PASS.
 
@@ -225,15 +225,15 @@ $$
 
 Let `f_5` be the number of pentagonal exceptional faces.  Since
 
-$$
+```math
 Q-f=\sum_F(\deg F-5),
-$$
+```
 
 the number of faces of degree at least six is at most `Q-f`, so
 
-$$
+```math
 f_5\ge2f-Q.
-$$
+```
 
 Total bounded train-terminal incidence is exactly `Q+4f`.  Dominant trains contribute
 `2M_D-K_D` bounded incidences, because every complete train has exactly two terminal
@@ -242,9 +242,9 @@ incidences and `K_D` of the dominant incidences are outer.
 Each pentagon that is not all-dominant uses at least one distinct non-dominant bounded
 terminal incidence.  Therefore
 
-$$
+```math
 H_D\ge2M_D-K_D-2Q-2f.
-$$
+```
 
 No bounded endpoint incidence is charged to two faces.
 
@@ -256,35 +256,35 @@ No bounded endpoint incidence is charged to two faces.
 
 The standard orbit inequalities give
 
-$$
+```math
 m\ge4\Delta_2/C,
 \qquad
 d\le C^2/4-\Delta_2,
 \qquad C\le U.
-$$
+```
 
 The exact ledgers are
 
-$$
+```math
 \chi=2t-\pi-\delta,
 \qquad
 2\varphi=C-t/2+\kappa/2.
-$$
+```
 
 Substitution gives
 
-$$
+```math
 p\ge8\Delta_2/C-K-C+t-U-\kappa.
-$$
+```
 
 The function `8Delta_2/C-C` is decreasing, so replacing `C` by the larger `U` weakens
 the lower bound safely.  Meanwhile `d<=C^2/4-Delta_2<=U^2/4-Delta_2`.  Combining with
 `d>=p^2/2` gives exactly
 
-$$
+```math
 K\ge {8\Delta_2\over U}-2U+t-\kappa
 -\sqrt{U^2/2-2\Delta_2}.
-$$
+```
 
 The radical is real throughout the current low-`t` region because the matched atomic
 floor already has `U>2sqrt(Delta_2)`.

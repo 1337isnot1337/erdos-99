@@ -17,15 +17,15 @@ The adjacent-strip theorem reduces every moving upper-distance constraint to a f
 
 Let `R` be one adjacent source layer.  Orient the two boundary train contact vectors from outside `R` into `R` and call them
 
-$$
+```math
 a,b,\qquad |a|=|b|=1.
-$$
+```
 
 For each switching actual diameter edge, orient the diameter vector from its endpoint outside `R` to its endpoint inside `R` and write
 
-$$
+```math
 r_h=Dd_h,\qquad |d_h|=1.
-$$
+```
 
 Translating `R` by `v` sends the two boundary contact vectors to `a+v,b+v` and every switching diameter vector to `Dd_h+v`.
 
@@ -34,38 +34,43 @@ The canonical survivor has the following finite obstruction.
 ### Theorem TR — three-ray / antipodal-two-edge blocker
 
 1. If
-   $$
+   ```math
    a+b\ne0,
-   $$
+   
+   ```
    then there is a subset of at most three rays from
-   $$
+   ```math
    \boxed{\{a,b\}\cup\{-d_h:h\in H_{sw}\}}
    \tag{TR.1}
-   $$
+   
+   ```
    whose convex hull contains the origin.  At least one selected ray is a switching-diameter ray.  Hence the failure of a strict first-order contact-opening / diameter-shortening strip translation has a certificate using at most **three switching diameter edges**, and often only one or two.
 
 2. If
-   $$
+   ```math
    b=-a,
-   $$
+   
+   ```
    then the first-order contact cone is degenerate, but the finite problem is stronger: every canonical survivor contains two switching diameter edges `h_+,h_-` with opposite transverse signs
-   $$
+   ```math
    \boxed{
    d_{h_+}\cdot Ja>0,
    \qquad
    d_{h_-}\cdot Ja<0.
    }
    \tag{TR.2}
-   $$
+   
+   ```
    A switching diameter parallel to `a` cannot replace this pair; there is at most one such diameter edge and a second-order axial correction bypasses it.
 
 3. Independently of the two cases, the exact KKT strip resultant
-   $$
+   ```math
    Aa+Bb
    =D\sum_{h\in H_{sw}}\beta_hd_h,
    \qquad A,B>0,\ \beta_h>0,
    \tag{TR.3}
-   $$
+   
+   ```
    admits a planar compressed certificate:
    - if `Aa+Bb!=0`, its direction lies in the cone of at most two switching diameter directions;
    - if `Aa+Bb=0`, the zero resultant lies in the convex hull of at most three switching diameter directions.
@@ -78,26 +83,26 @@ Thus the `<1763` switching caterpillar is globally useful for finite support and
 
 For a small translation `v`, the boundary contact squared-length changes are
 
-$$
+```math
 |a+v|^2-1=2a\cdot v+|v|^2,
-$$
+```
 
-$$
+```math
 |b+v|^2-1=2b\cdot v+|v|^2.
 \tag{TR.4}
-$$
+```
 
 For a switching diameter edge,
 
-$$
+```math
 |Dd_h+v|^2-D^2
 =2D d_h\cdot v+|v|^2.
 \tag{TR.5}
-$$
+```
 
 Suppose there were a vector `w` satisfying the strict homogeneous inequalities
 
-$$
+```math
 a\cdot w>0,
 \qquad
 b\cdot w>0,
@@ -105,13 +110,13 @@ b\cdot w>0,
 -d_h\cdot w>0
 \quad(h\in H_{sw}).
 \tag{TR.6}
-$$
+```
 
 Then for all sufficiently small `s>0`, the translation
 
-$$
+```math
 v=sw
-$$
+```
 
 would strictly open both boundary contact families and strictly shorten every switching old diameter.  By the strict-slack part of the adjacent-strip theorem, all old strict noncontacts would stay above one and all old strict nondiameter pairs would stay below `D`.  Every nonswitching old diameter is unchanged exactly.
 
@@ -125,10 +130,10 @@ Hence no `w` satisfies (TR.6).
 
 Put
 
-$$
+```math
 \mathcal N
 :=\{a,b\}\cup\{-d_h:h\in H_{sw}\}.
-$$
+```
 
 For a finite set of nonzero vectors in `R^2`, the following alternatives are equivalent by strict separation:
 
@@ -137,31 +142,31 @@ For a finite set of nonzero vectors in `R^2`, the following alternatives are equ
 
 Section 1 excludes the first alternative.  Therefore
 
-$$
+```math
 0\in\operatorname{conv}\mathcal N.
 \tag{TR.7}
-$$
+```
 
 Caratheodory's theorem in dimension two gives vectors
 
-$$
+```math
 n_1,n_2,n_3\in\mathcal N
-$$
+```
 
 with
 
-$$
+```math
 0\in\operatorname{conv}\{n_1,n_2,n_3\}.
 \tag{TR.8}
-$$
+```
 
 Some of the three may be redundant, so the witness can have size one or two.
 
 If `a+b!=0`, the two contact rays alone cannot contain the origin in their segment: for unit vectors
 
-$$
+```math
 0\in[a,b]
-$$
+```
 
 would force `b=-a`.  Thus every certificate (TR.8) contains at least one switching-diameter ray.
 
@@ -183,79 +188,79 @@ This proves part 1 of Theorem TR.
 
 Now assume
 
-$$
+```math
 b=-a.
-$$
+```
 
 Put
 
-$$
+```math
 n:=Ja.
-$$
+```
 
 The two contacts cannot both open strictly at first order because their linear terms are opposite.  But they can open simultaneously at second order.
 
 Write a small strip translation as
 
-$$
+```math
 v=x a+y n.
-$$
+```
 
 Then the two boundary contact conditions are
 
-$$
+```math
 2x+x^2+y^2>0,
 \qquad
 -2x+x^2+y^2>0.
 \tag{TR.9}
-$$
+```
 
 Set
 
-$$
+```math
 y=t,
 \qquad
 x=\kappa t^2
 \tag{TR.10}
-$$
+```
 
 for fixed
 
-$$
+```math
 -{1\over2}<\kappa<{1\over2}.
-$$
+```
 
 For all sufficiently small nonzero `t`, both inequalities (TR.9) are strict.
 
 Write a switching diameter direction as
 
-$$
+```math
 d_h=c_ha+s_hn.
-$$
+```
 
 Its squared-length change is
 
-$$
+```math
 2D(c_h\kappa t^2+s_ht)
 +t^2+\kappa^2t^4.
 \tag{TR.11}
-$$
+```
 
 If `s_h!=0`, the sign for sufficiently small `t` is governed by `s_ht`.
 
 Suppose all nonzero transverse values `s_h` had one sign.  Choose the sign of `t` so
 
-$$
+```math
 s_ht<0
-$$
+```
 
 for every nonzero `s_h`.  Then all such diameter edges shorten for sufficiently small `|t|`.
 
 It remains to handle switching edges with
 
-$$
+```math
 s_h=0.
-$$
+```
 
 Such an edge is parallel to the boundary contact projective direction `a`.  A finite planar source has at most one unordered diameter pair in a prescribed projective direction: if two distinct diameter segments were parallel, orienting them alike and comparing the two cross-distances forces them to coincide.  Hence there is at most one zero-transverse switching diameter.
 
@@ -263,21 +268,21 @@ If none exists, take `kappa=0` and all switching diameters shorten.
 
 If the unique zero-transverse direction is `d_h=a`, choose
 
-$$
+```math
 -{1\over2}<\kappa<-{1\over2D}.
-$$
+```
 
 Then its leading `t^2` coefficient in (TR.11) is
 
-$$
+```math
 1+2D\kappa<0.
-$$
+```
 
 If instead `d_h=-a`, choose
 
-$$
+```math
 {1\over2D}<\kappa<{1\over2},
-$$
+```
 
 and the leading coefficient is again negative.
 
@@ -293,50 +298,50 @@ Therefore a survivor must contain two switching diameters with opposite transver
 
 Let `alpha_e>0,beta_h>0` be the relative-interior KKT multipliers, normalized by
 
-$$
+```math
 \sum_H\beta_h=1.
-$$
+```
 
 Let
 
-$$
+```math
 A=\sum_{e\in\tau_i}\alpha_e,
 \qquad
 B=\sum_{e\in\tau_{i+1}}\alpha_e.
-$$
+```
 
 Orient both boundary contact vectors from outside the strip into the strip, as above.  Summing equilibrium over all vertices of the strip cancels every internal force and gives
 
-$$
+```math
 \boxed{
 Aa+Bb
 =D\sum_{h\in H_{sw}}\beta_hd_h.
 }
 \tag{TR.12}
-$$
+```
 
 This is the strip-oriented version of subtracting the two Section-157 cut resultants.
 
 If
 
-$$
+```math
 F:=Aa+Bb\ne0,
-$$
+```
 
 then `F/D` belongs to the positive cone generated by the switching unit directions `d_h`.  Conic Caratheodory in `R^2` says every vector in a finitely generated cone is generated by at most two generators.  Hence there are switching edges `h_1,h_2` and coefficients `lambda_1,lambda_2>=0` such that
 
-$$
+```math
 \boxed{
 F=D(\lambda_1d_{h_1}+\lambda_2d_{h_2}).
 }
 \tag{TR.13}
-$$
+```
 
 If `F=0`, divide (TR.12) by the positive switching mass
 
-$$
+```math
 B_{sw}:=\sum_{h\in H_{sw}}\beta_h.
-$$
+```
 
 Then `0` is a convex combination of the switching directions `d_h`.  Ordinary planar Caratheodory gives at most three switching directions whose convex hull contains zero.
 

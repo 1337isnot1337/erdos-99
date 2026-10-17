@@ -20,14 +20,14 @@ The preceding flat-middle theorem separated unloaded degree three from unloaded 
 
 Consequently every unloaded flat pentagon middle is an asymptotic **stress-through coupler**:
 
-$$
+```math
 \boxed{
 {\text{total external contact weight}\over
  \text{two through-chain contact weights}}
 =O(\varepsilon),
 }
 \tag{ST.1}
-$$
+```
 
 and the two through-chain weights agree to relative error `O(epsilon)`. This holds for degree three and degree four. In degree four the earlier triangular-fan / three-hidden-chord conclusion remains valid simultaneously.
 
@@ -37,23 +37,23 @@ and the two through-chain weights agree to relative error `O(epsilon)`. This hol
 
 Let `m` be an unloaded positive-contact-core vertex. Suppose `l,m,r` are consecutive boundary vertices of a bounded face and
 
-$$
+```math
 |m-l|=|m-r|=1,
 \qquad
 \theta:=\angle lmr=\pi-\delta,
 \qquad
 0\le\delta\le\varepsilon<\pi/6.
 \tag{ST.2}
-$$
+```
 
 Rotate coordinates so
 
-$$
+```math
 u_l=(1,0),
 \qquad
 u_r=(-\cos\delta,\sin\delta).
 \tag{ST.3}
-$$
+```
 
 The open bounded face lies in the sector swept counterclockwise from `u_l` to `u_r`. Every other contact ray at `m` lies in the complementary sector.
 
@@ -67,56 +67,56 @@ Triangle-freeness gives a strict angular gap greater than `pi/3` between every t
 
 Let the unique external ray have angle `xi` measured from the positive `x` axis. The two complementary gaps adjacent to it are both greater than `pi/3`, so
 
-$$
+```math
 {4\pi\over3}-\delta<\xi<{5\pi\over3}.
 \tag{ST.4}
-$$
+```
 
 For `delta<=epsilon<pi/6`, this interval lies inside `(7pi/6,5pi/3)`. Hence
 
-$$
+```math
 \boxed{\sin\xi\le-\frac12.}
 \tag{ST.5}
-$$
+```
 
 ### Degree four
 
 Write the three complementary gaps as
 
-$$
+```math
 {\pi\over3}+a,
 \qquad
 {\pi\over3}+b,
 \qquad
 {\pi\over3}+c,
-$$
+```
 
 with `a,b,c>0` and
 
-$$
+```math
 a+b+c=\delta.
 \tag{ST.6}
-$$
+```
 
 The two external ray angles are therefore
 
-$$
+```math
 \xi_x={4\pi\over3}-(b+c),
 \qquad
 \xi_y={5\pi\over3}-c.
 \tag{ST.7}
-$$
+```
 
 Again `delta<pi/6` gives
 
-$$
+```math
 \boxed{
 \sin\xi_x\le-\frac12,
 \qquad
 \sin\xi_y\le-\frac12.
 }
 \tag{ST.8}
-$$
+```
 
 So in either degree case every external contact ray contributes a negative `y` component of magnitude at least one half of its contact weight.
 
@@ -126,46 +126,46 @@ So in either degree case every external contact ray contributes a negative `y` c
 
 Let `alpha_l,alpha_r>0` be the KKT contact coefficients on `ml,mr`, and let
 
-$$
+```math
 W_{ext}:=\sum_{mx\in E_{ext}(m)}\alpha_{mx}
-$$
+```
 
 be the sum over the one or two external contact edges.
 
 Because `m` is unloaded, there is no diameter-force term in its KKT equilibrium:
 
-$$
+```math
 \alpha_lu_l+\alpha_ru_r
 +\sum_{mx\in E_{ext}(m)}\alpha_{mx}u_{mx}=0.
 \tag{ST.9}
-$$
+```
 
 Take `y` components. The `l` ray contributes zero, the `r` ray contributes `alpha_r sin delta`, and every external term is at most `-alpha_{mx}/2`. Therefore
 
-$$
+```math
 {1\over2}W_{ext}
 \le\alpha_r\sin\delta
 \le\alpha_r\sin\varepsilon.
-$$
+```
 
 Hence the finite bound
 
-$$
+```math
 \boxed{
 W_{ext}\le2\sin\varepsilon\,\alpha_r.
 }
 \tag{ST.10}
-$$
+```
 
 Since `alpha_l+alpha_r>=alpha_r`,
 
-$$
+```math
 \boxed{
 {W_{ext}\over\alpha_l+\alpha_r}
 \le2\sin\varepsilon.
 }
 \tag{ST.11}
-$$
+```
 
 This is uniform over both unloaded degree possibilities.
 
@@ -175,39 +175,39 @@ This is uniform over both unloaded degree possibilities.
 
 Take `x` components in (ST.9):
 
-$$
+```math
 \alpha_l-\alpha_r\cos\delta
 =-\sum_{mx\in E_{ext}(m)}\alpha_{mx}\cos\xi_x.
-$$
+```
 
 Therefore
 
-$$
+```math
 |\alpha_l-\alpha_r\cos\delta|
 \le W_{ext}.
-$$
+```
 
 Use (ST.10) and `1-cos(delta)<=1-cos(epsilon)`:
 
-$$
+```math
 \boxed{
 |\alpha_l-\alpha_r|
 \le
 \bigl(2\sin\varepsilon+1-\cos\varepsilon\bigr)\alpha_r.
 }
 \tag{ST.12}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{
 {|\alpha_l-\alpha_r|\over\alpha_l+\alpha_r}
 \le2\sin\varepsilon+1-\cos\varepsilon
 =O(\varepsilon).
 }
 \tag{ST.13}
-$$
+```
 
 Thus the two stopped-train terminal edges meeting at the flat middle carry asymptotically equal contact stress.
 
@@ -235,14 +235,14 @@ A long coupling component needs separate control because `epsilon` times its len
 
 For any pairwise vertex-disjoint family of unloaded flat middles with a common flatness bound `epsilon_D->0`, summing (ST.10) gives
 
-$$
+```math
 \boxed{
 \sum_m W_{ext}(m)
 \le2\sin\varepsilon_D
 \sum_m\alpha_{mr(m)}.
 }
 \tag{ST.14}
-$$
+```
 
 and summing (ST.12) gives an analogous `o(1)` relative mismatch bound on the two through-edge stress totals.
 

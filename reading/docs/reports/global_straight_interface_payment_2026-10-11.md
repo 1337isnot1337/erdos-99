@@ -45,18 +45,18 @@ the actual geometry required below.
 Write `a0=sqrt(3)/2`. For `i=A,B`, let a rank-two unit-separated lattice have
 a basis
 
-$$
+```math
 u_i=(s_i,0),\qquad v_i=(b_i,h_i),\qquad s_i,h_i>0.
-$$
+```
 
 Its covolume is `V_i=s_i h_i`; `s_i>=1` and `V_i>=a0`.
 Put `t=(b,g)` with `g>=0`. Assume **every cross-pair** between
 
-$$
+```math
 P_A=\{k u_A+jv_A:k\in\mathbb Z,\ j\le0\},\qquad
 P_B=\{t+k u_B+jv_B:k\in\mathbb Z,\ j\ge0\}
 \tag{1}
-$$
+```
 
 has distance at least one. In particular, the two populations are disjoint,
 even if `g=0`. The assumption concerns the complete half-planes, including
@@ -64,30 +64,30 @@ all their rows, not just a finite seam sample.
 
 For **every** pair of positive integers `N,M` such that
 
-$$
+```math
 Nh_A\ge1,\qquad Mh_B\ge1,
 \tag{2}
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{
 2g\ge a_0\left({1\over s_A}+{1\over s_B}\right)
 -{N(V_A-a_0)\over s_A}-{M(V_B-a_0)\over s_B}.
 }
 \tag{3}
-$$
+```
 
 No common horizontal period, commensurability, or common orientation of the
 two full lattices is required. Their front rows must be parallel as displayed.
 
 In particular, if both covolumes equal `a0`, then
 
-$$
+```math
 \boxed{g\ge {h_A+h_B\over2}.}
 \tag{4}
-$$
+```
 
 For triangular lattice polygons the lattice-point boundary credit along a
 front edge, per unit edge length, is `1/(2s_i)`. Multiplying by `a0`
@@ -99,40 +99,40 @@ interface, not an assertion that arbitrary finite convex hulls satisfy (1).
 
 Set
 
-$$
+```math
 w_A=Nv_A,\quad w_B=Mv_B,\quad q=2t+w_B,\quad
 T=q+w_A,\quad H=T_y=2g+Mh_B+Nh_A.
 \tag{5}
-$$
+```
 
 The horizontal components of `w_i` can alternatively be reduced modulo
 `s_i`; this changes no lattice row and is unnecessary for the proof.
 For every integer `r`, retain these two slabs:
 
-$$
+```math
 A_r=rT+\{ku_A+jv_A:k\in\mathbb Z,\ -N\le j\le0\},
-$$
-$$
+```
+```math
 B_r=rT+t+\{ku_B+jv_B:k\in\mathbb Z,\ 0\le j\le M\}.
 \tag{6}
-$$
+```
 
 Each slab is a subset of one unit-separated lattice. The interface from
 `A_r` to `B_r` is a translated restriction of (1). The interface from
 `B_r` to `A_(r+1)` is also valid: central inversion
 
-$$
+```math
 I_r(x)=2rT+q-x
 \tag{7}
-$$
+```
 
 fixes the set `B_r`, since `j` changes to `M-j` and `k` to `-k`.
 It sends `A_r` onto `A_(r+1)`, since
 
-$$
+```math
 q-(ku_A+jv_A)
 =T-ku_A+(-N-j)v_A,
-$$
+```
 
 where `-N-j` again runs through `[-N,0]`. Consequently all cross-pairs
 at the reflected interface inherit their lower-distance bound from (1).
@@ -141,10 +141,10 @@ Consecutive A slabs have vertical gap `2g+Mh_B>=1`; consecutive B slabs
 have vertical gap `2g+Nh_A>=1`. Pairs in any more distant slabs have at
 least these gaps. This checks every pair in the union
 
-$$
+```math
 P=\bigcup_{r\in\mathbb Z}(A_r\cup B_r).
 \tag{8}
-$$
+```
 
 There are no coincident labels: cross-interface distances are at least one,
 and same-type successive slabs have vertical separation at least one.
@@ -159,11 +159,11 @@ Rows from different types may have the same height when `g=0`, but are
 disjoint and their populations add. Counting in the square `[-L,L]^2`
 gives
 
-$$
+```math
 |P\cap[-L,L]^2|
 ={4L^2\over H}\left({N+1\over s_A}+{M+1\over s_B}\right)+O(L).
 \tag{9}
-$$
+```
 
 For this limit the two lattices, `N,M,g`, and all phases are fixed.
 Indeed each horizontal arithmetic progression contributes `2L/s_i+O(1)`
@@ -173,10 +173,10 @@ shift caused by `rT` changes only the bounded counting error of a row.
 Apply finite Oler to the square and divide by `4L^2`. Its boundary term
 vanishes as `L` tends to infinity. Therefore
 
-$$
+```math
 {1\over H}\left({N+1\over s_A}+{M+1\over s_B}\right)\le {1\over a_0}.
 \tag{10}
-$$
+```
 
 Substituting `H=2g+NV_A/s_A+MV_B/s_B` proves (3).
 The same square-counting argument applied to a single full lattice proves
@@ -186,25 +186,25 @@ the used covolume bound `V_i>=a0`; no equality classification is needed.
 
 Let `Delta_i=V_i-a0>=0`. Choose
 
-$$
+```math
 N=\lceil1/h_A\rceil,\qquad M=\lceil1/h_B\rceil.
-$$
+```
 
 Since `s_i>=1` and `V_i>=a0`,
 
-$$
+```math
 {N\over s_A}\le {1\over V_A}+{1\over s_A}\le {1\over a_0}+1,
-$$
+```
 
 and likewise for B. Thus
 
-$$
+```math
 \boxed{
 g\ge {a_0\over2}\left({1\over s_A}+{1\over s_B}\right)
 -{1+a_0^{-1}\over2}(\Delta_A+\Delta_B).
 }
 \tag{11}
-$$
+```
 
 At a seam of length `ell`, the formal area correction in (11) is at most
 `(1+a0^(-1)) ell (Delta_A+Delta_B)/2`. Thus covolume defects `O(1/D)`
@@ -216,9 +216,9 @@ The defect correction cannot simply be removed. Take both lattices with
 basis `(19/10,0),(0,1)` and let `t=(19/20,8/25)`. The front rows have
 minimum squared cross-distance
 
-$$
+```math
 (19/20)^2+(8/25)^2=10049/10000>1;
-$$
+```
 
 every other cross-row pair has vertical distance greater than one. Yet
 `g=8/25<a0/(19/10)`, so the uncorrected payment (4), extended to these
@@ -231,11 +231,11 @@ quantified cost. Keep the same lattices and `g>=0`, and choose
 `N=ceil(1/h_A)`, `M=ceil(1/h_B)`. Let `I` be **any** closed horizontal
 interval of length `ell>0`. Assume every cross-pair between the finite sets
 
-$$
+```math
 \{ku_A+jv_A:-N\le j\le0,\ x\in I\},\qquad
 \{t+ku_B+jv_B:0\le j\le M,\ x\in I\}
 \tag{12}
-$$
+```
 
 has distance at least one. These sets include **all** lattice sites in the
 specified rows and horizontal window. They can be checked as finite sets;
@@ -243,28 +243,28 @@ no valid continuation of the seam beyond `I` is assumed.
 
 Put
 
-$$
+```math
 E=a_0\left({1\over s_A}+{1\over s_B}\right)-2g
 -{N\Delta_A\over s_A}-{M\Delta_B\over s_B},
 \qquad S=s_A+s_B.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{\ell\max(E,0)\le24S.}
 \tag{13}
-$$
+```
 
 In particular, with `kappa=1+a0^(-1)`,
 
-$$
+```math
 \boxed{
 g\ell\ge {a_0\ell\over2}\left({1\over s_A}+{1\over s_B}\right)
 -{\kappa\ell\over2}(\Delta_A+\Delta_B)-12(s_A+s_B).
 }
 \tag{14}
-$$
+```
 
 Thus a finite triangular interface pays both front-row credits up to an
 endpoint cost of at most `12(s_A+s_B)`. The estimate is uniform in the
@@ -280,11 +280,11 @@ of absolute values at most `s_A/2,s_B/2`, respectively. As before set
 
 Set `K=3S/2`. These choices give
 
-$$
+```math
 |T_x|\le K,\qquad |(w_A)_x+2c|\le K,
 \qquad |q_x-2c|\le K.
 \tag{15}
-$$
+```
 
 If `ell>2K`, trim both ends of `I` by `K`, obtaining an interval `J`
 of width `W=ell-2K`. In every slab in (6), now retain only the points
@@ -299,9 +299,9 @@ All nonadjacent pairs retain the vertical guards from Section 3.
 This constructs an infinite unit-separated strip, invariant under `T`.
 Let `n0` be its population per period, and set
 
-$$
+```math
 L_0={N+1\over s_A}+{M+1\over s_B},\qquad r_0=N+M+2.
-$$
+```
 
 Counting each finite row gives `n0>=W L_0-r_0`. In the tilted coordinate
 `u=x-(T_x/H)y`, the entire strip has width at most `W+|T_x|`:
@@ -311,34 +311,34 @@ periods, a containing parallelogram has area at most
 `2k|T|+2(W+|T_x|)`. Apply Oler to its `k n0` distinct labels and let
 `k` tend to infinity. This yields
 
-$$
+```math
 n0\le {H(W+|T_x|)\over a_0}+|T|.
-$$
+```
 
 Since `a0 L_0-H=E`,
 
-$$
+```math
 \boxed{WE\le H|T_x|+a_0|T|+a_0 r_0.}
 \tag{16}
-$$
+```
 
 If `E<=0`, (13) is immediate. If `E>0`, then
 
-$$
+```math
 E\le2a_0,\quad
 H<a_0L_0\le2+4a_0<6,\quad
 r_0\le {S\over a_0}+4,\quad |T|\le H+|T_x|<6+K.
 \tag{17}
-$$
+```
 
 The bound for `H` uses `N/s_A<=1/V_A+1/s_A` and its B analogue;
 it does **not** assume an upper bound on the covolumes. Combining
 (16)--(17) and `ell=W+2K` gives
 
-$$
+```math
 \ell E\le(6+5a_0)K+S+10a_0
 <11K+S+10\le {45\over2}S<24S,
-$$
+```
 
 where `S>=2`. If instead `ell<=2K`, the direct estimate
 `ell E<=4a0 K<=6S` suffices. This proves (13). Finally the bound
@@ -349,11 +349,11 @@ where `S>=2`. If instead `ell<=2K`, the direct estimate
 For a collection of eligible physical interfaces, (14) gives a total
 shortfall from the two front-row credits of at most
 
-$$
+```math
 {\kappa\over2}\sum_e\ell_e(\Delta_{A,e}+\Delta_{B,e})
 +12\sum_e(s_{A,e}+s_{B,e}).
 \tag{18}
-$$
+```
 
 In particular this is `o(D)` if both sums are `o(D)`. A bounded primitive
 row period and `o(D)` interface segments suffice for the second sum. Neither

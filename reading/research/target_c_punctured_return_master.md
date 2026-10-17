@@ -18,7 +18,7 @@ This note does that on the **entire connected positive-contact core at once**. T
 
 The resulting finite master inequality is
 
-$$
+```math
 \boxed{
 D\bigl(
 \operatorname{per}(F)-\Pi_3
@@ -30,18 +30,18 @@ D\bigl(
 \bigl(4-w_Q(u_R)-w_Q(v_R)\bigr).
 }
 \tag{PRM}
-$$
+```
 
 All terms refer to the actual source. No source point is deleted. In particular the population term `Xi_F` explicitly retains every contact-isolated source point inside the force hull.
 
 In the Type-II near-disk branch, equilateral three-cut averaging has an exact leading-order equality constant
 
-$$
+```math
 c_{eq}=4-{6\sqrt3\over\pi},
 \qquad
 {\pi\over4}c_{eq}
 =\pi-{3\sqrt3\over2}.
-$$
+```
 
 Thus the full-core problem is not losing a positive leading-order constant: the disk / triangular-phase limit exactly saturates the averaged master inequality. The remaining obstruction is boundary order. This identifies why further carrier-decimal optimization cannot close the branch.
 
@@ -69,46 +69,46 @@ Use the canonical post-ZF representative. Let
 
 Canonical Section 67 gives
 
-$$
+```math
 b+Q=2(q-k)
 \tag{1.1}
-$$
+```
 
 and
 
-$$
+```math
 m=R_4+f+q-k+1.
 \tag{1.2}
-$$
+```
 
 Therefore the total length of the actual outer walk together with every bounded nonquadrilateral face cycle is
 
-$$
+```math
 \boxed{
 B_{route}:=b+P_{exc}
 =b+Q+4f
 =2(q-k)+4f.
 }
 \tag{1.3}
-$$
+```
 
 This quantity counts physical edge occurrences, not distinct geometric edges. That is exactly the multiplicity required by signed return.
 
 Let
 
-$$
+```math
 G_F:=\operatorname{area}(F)-A_4
 \tag{1.4}
-$$
+```
 
 be the geometric area in the force hull not occupied by bounded strict-rhombus faces. Define the full-source area/population mismatch
 
-$$
+```math
 \boxed{
 \Xi_F:={G_F\over a_0}-Z_F.
 }
 \tag{1.5}
-$$
+```
 
 No sign is assumed for `Xi_F`.
 
@@ -118,41 +118,41 @@ No sign is assumed for `Xi_F`.
 
 Canonical Section 67 proves the finite all-source force-hull packing inequality
 
-$$
+```math
 a_0N_F
 \le
 \operatorname{area}(F)
 +{a_0\over2}\operatorname{per}(F)
 +a_0-E_4.
 \tag{2.1}
-$$
+```
 
 This is exactly the GWZ/Oler-type punctured-packing inequality obtained after deleting the interiors of all strict-rhombus faces while retaining every source point.
 
 Substitute
 
-$$
+```math
 N_F=m+Z_F,
 \quad
 \operatorname{area}(F)=A_4+G_F,
 \quad
 E_4=A_4-a_0R_4,
-$$
+```
 
 and use (1.2). After cancellation of `A_4` and `R_4`, (2.1) becomes
 
-$$
+```math
 \boxed{
 f+(q-k)+Z_F
 \le
 {G_F\over a_0}+{\operatorname{per}(F)\over2}.
 }
 \tag{2.2}
-$$
+```
 
 Define its nonnegative normalized slack
 
-$$
+```math
 \boxed{
 \omega_F
 :={G_F\over a_0}+{\operatorname{per}(F)\over2}
@@ -160,38 +160,38 @@ $$
 \ge0.
 }
 \tag{2.3}
-$$
+```
 
 This is not a new packing assumption; it is simply the exact slack in canonical (2.1).
 
 Solving (2.3) for `q-k` and substituting in (1.3) gives the exact identity
 
-$$
+```math
 \boxed{
 B_{route}
 =\operatorname{per}(F)
 +2f+2\Xi_F-2\omega_F.
 }
 \tag{2.4}
-$$
+```
 
 Hence for any three cyclic outer-walk cut occurrences at vertices `p_1,p_2,p_3`, with
 
-$$
+```math
 \Pi_3
 :=|p_2-p_1|+|p_3-p_2|+|p_1-p_3|,
-$$
+```
 
 the total excess of the three open outer arcs together with all bounded nonquadrilateral face cycles is exactly
 
-$$
+```math
 \boxed{
 E_{route}
 =\operatorname{per}(F)-\Pi_3
 +2f+2\Xi_F-2\omega_F.
 }
 \tag{2.5}
-$$
+```
 
 This is the desired global payment theorem. It uses one global occurrence ledger, so there is no cross-cell multiplicity issue of the kind explicitly left open by Section 120.
 
@@ -203,84 +203,84 @@ We now rederive the finite signed-return lower bound at the global-core scope.
 
 Orient the outer-face walk with the bounded side on the left and cut it at the three chosen occurrences. Let the resulting directed arcs have displacement vectors
 
-$$
+```math
 z_1=p_2-p_1,
 \qquad
 z_2=p_3-p_2,
 \qquad
 z_3=p_1-p_3.
-$$
+```
 
 For a nonzero arc define its host `q_i=z_i/|z_i|`. If an arc has zero displacement, use host `0` instead. Orient every bounded nonquadrilateral face cycle clockwise and give it host `0`. Put
 
-$$
+```math
 Q_{host}:=\{q_1,q_2,q_3,0\},
 \tag{3.1}
-$$
+```
 
 with repeated hosts removed, and for a unit vector `u` define
 
-$$
+```math
 w_{Q_{host}}(u)
 :=\max_{q\in Q_{host}}q\cdot u
 -\min_{q\in Q_{host}}q\cdot u.
 \tag{3.2}
-$$
+```
 
 For every directed unit-edge route `W` with displacement `z` and assigned host `q=z/|z|` (or `q=0` when `z=0`),
 
-$$
+```math
 \ell(W)-|z|
 =\sum_{e\in W}(1-q\cdot v_e).
 \tag{3.3}
-$$
+```
 
 Every physical terminal edge occurrence of a complete rhombus train faces either the outer face or one bounded nonquadrilateral face. Assign it to that matching route occurrence. The assignment is injective because it is by physical edge-side occurrence. Bridges and repeated articulation vertices are already handled by outer-walk multiplicity.
 
 The two terminal orientations of one complete train are `u` and `-u`. If their route hosts are `q_i,q_j`, their contribution to route excess is at least
 
-$$
+```math
 2-(q_i-q_j)\cdot u
 \ge2-w_{Q_{host}}(u).
 \tag{3.4}
-$$
+```
 
 Thus, writing
 
-$$
+```math
 \delta_\tau:=2-w_{Q_{host}}(u_\tau)\ge0,
-$$
+```
 
 we have
 
-$$
+```math
 \boxed{
 E_{route}\ge\sum_\tau\delta_\tau.
 }
 \tag{3.5}
-$$
+```
 
 At a strict rhombus `R`, let `u_R,v_R` be the directions of its two crossing trains. Multiplying `\delta_\tau` by area and summing over rhombi, then regrouping by complete trains, gives
 
-$$
+```math
 \sum_R\operatorname{area}(R)
 \bigl(\delta_{\tau_u(R)}+\delta_{\tau_v(R)}\bigr)
 =
 \sum_\tau\delta_\tau
 \sum_{R\in\tau}\operatorname{area}(R).
 \tag{3.6}
-$$
+```
 
 Along one train the sum of rhombus areas is exactly the transverse displacement between its two terminal boundary-edge midpoints. Both midpoints lie in `F`, whose diameter is exactly `D`: at least one positive actual diameter edge has both endpoints in `B\subset F`. Hence
 
-$$
+```math
 \sum_{R\in\tau}\operatorname{area}(R)\le D.
 \tag{3.7}
-$$
+```
 
 Combining (3.5)--(3.7),
 
-$$
+```math
 \boxed{
 D E_{route}
 \ge
@@ -289,7 +289,7 @@ D E_{route}
 \bigl(4-w_{Q_{host}}(u_R)-w_{Q_{host}}(v_R)\bigr).
 }
 \tag{3.8}
-$$
+```
 
 Substitution of (2.5) proves the finite master inequality (PRM).
 
@@ -303,34 +303,34 @@ Let `Q^{eq}_\rho` consist of three unit vectors whose arguments are separated by
 
 For a projective unit direction of argument `t`, put
 
-$$
+```math
 \delta_\rho(t):=2-w_{Q^{eq}_\rho}(u_t).
 \tag{4.1}
-$$
+```
 
 The width is `\pi/3`-periodic in `t-\rho`. On one period, after shifting the origin,
 
-$$
+```math
 w_{Q^{eq}_0}(u_t)
 =\sqrt3\cos(t-\pi/6),
 \qquad 0\le t\le\pi/3.
 \tag{4.2}
-$$
+```
 
 Therefore
 
-$$
+```math
 {3\over\pi}
 \int_0^{\pi/3}\delta_0(t)\,dt
 =
 2-{3\sqrt3\over\pi}
 =:\bar\delta_{eq}.
 \tag{4.3}
-$$
+```
 
 For **any** two projective train directions `u,v`, regardless of their angle,
 
-$$
+```math
 {3\over\pi}
 \int_0^{\pi/3}
 \bigl(\delta_\rho(u)+\delta_\rho(v)\bigr)
@@ -339,11 +339,11 @@ $$
 4-{6\sqrt3\over\pi}
 =:c_{eq}.
 \tag{4.4}
-$$
+```
 
 Consequently, for any finite weighted family of strict rhombi,
 
-$$
+```math
 {3\over\pi}
 \int_0^{\pi/3}
 \sum_R\operatorname{area}(R)
@@ -351,16 +351,16 @@ $$
 \,d\rho
 =c_{eq}A_4.
 \tag{4.5}
-$$
+```
 
 There is therefore at least one rotation `\rho` whose ideal equilateral-host return satisfies
 
-$$
+```math
 \boxed{
 W^{eq}_\rho\ge c_{eq}A_4.
 }
 \tag{4.6}
-$$
+```
 
 This averaging is completely insensitive to grain orientation, phase mixtures, or rhombus angular defect. It is an all-phase statement.
 
@@ -370,50 +370,50 @@ This averaging is completely insensitive to grain orientation, phase mixtures, o
 
 Work along the Type-II branch. Canonical Section 80 gives, after suitable translation and scaling by `D`,
 
-$$
+```math
 D^{-1}F\to B(0,1/2)
 \tag{5.1}
-$$
+```
 
 in Hausdorff distance, as well as
 
-$$
+```math
 {A_4\over D^2}\to{\pi\over4}.
 \tag{5.2}
-$$
+```
 
 It also gives `F=conv(B)`, with every vertex of `F` loaded. For each rotation `\rho`, choose three supporting directions separated by `2\pi/3`, and for each direction choose a force-hull vertex attaining the support maximum. Hausdorff convergence to the radius-`1/2` disk implies uniformly in the direction that the chosen normalized support vertex approaches the corresponding disk point. Indeed its radial support coordinate tends to `1/2`, while its norm is at most `1/2+o(1)`, forcing the transverse coordinate to be `o(1)`.
 
 Hence for every `\rho` we can choose three actual loaded outer-walk vertices
 
-$$
+```math
 p_{1,D}(\rho),p_{2,D}(\rho),p_{3,D}(\rho)
-$$
+```
 
 such that their normalized positions are uniformly `o(1)` from three circle points separated by `2\pi/3`. In particular,
 
-$$
+```math
 \boxed{
 {\Pi_{3,D}(\rho)\over D}
 ={3\sqrt3\over2}+o(1)
 }
 \tag{5.3}
-$$
+```
 
 uniformly in `\rho`, and the three nonzero outer-arc hosts are uniformly `o(1)` from an equilateral host triple.
 
 Support width is Lipschitz in the host vectors. Therefore the actual return functional differs from the ideal equilateral-host functional by `o(1)` per unit rhombus area, uniformly in train direction. Since `A_4=O(D^2)`, (4.6) and a finite-net approximation in `\rho` give a sequence of **actual** three-cut choices satisfying
 
-$$
+```math
 \boxed{
 W_D\ge(c_{eq}-o(1))A_4.
 }
 \tag{5.4}
-$$
+```
 
 Apply the master inequality to those actual cuts. We obtain
 
-$$
+```math
 \boxed{
 D\left(
 \operatorname{per}(F)-\Pi_{3,D}
@@ -422,25 +422,25 @@ D\left(
 \ge(c_{eq}-o(1))A_4.
 }
 \tag{5.5}
-$$
+```
 
 Cauchy's diameter-perimeter inequality and the Type-II near-disk limit give
 
-$$
+```math
 {\operatorname{per}(F)\over D}\to\pi.
 \tag{5.6}
-$$
+```
 
 The constants now match exactly:
 
-$$
+```math
 \boxed{
 {\pi\over4}c_{eq}
 ={\pi\over4}\left(4-{6\sqrt3\over\pi}\right)
 =\pi-{3\sqrt3\over2}.
 }
 \tag{5.7}
-$$
+```
 
 Thus the leading `D^2` term of (5.5) is an equality, not a strict inequality.
 
@@ -452,13 +452,13 @@ This is the central structural conclusion of the note.
 
 Equation (5.5) can be written as
 
-$$
+```math
 2D\bigl(f+\Xi_F-\omega_F\bigr)
 \ge
 (c_{eq}-o(1))A_4
 -D\bigl(\operatorname{per}(F)-\Pi_{3,D}\bigr).
 \tag{6.1}
-$$
+```
 
 All leading quadratic terms cancel by (5.2)--(5.7). Therefore any closing argument based on this route must exploit the first nonvanishing boundary-order correction. The only currencies left are actual source/core quantities:
 
@@ -496,17 +496,17 @@ The following possible overreads are explicitly rejected.
 
 The full-core branch now has a sharper target than an unspecified detour upper bound:
 
-$$
+```math
 \boxed{
 \text{beat the exact disk equality at boundary order in (6.1).}
 }
-$$
+```
 
 The most promising next attacks are to derive a signed boundary-order inequality coupling
 
-$$
+```math
 f+\Xi_F-\omega_F
-$$
+```
 
 to the canonical punctured-packing defect `E_4+\delta_K`, or to show that any nonzero boundary-order allowance creates a source-preserving strict diameter decrease.
 

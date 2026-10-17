@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_mixed_flower_matching_splice_deficit_2026-09-15.md) · source SHA-256 `713a1b8a19b9f924628f34c52bdbe07fc39567b9bf19fc0ad38dd9c7bd7d1e04`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "db125664aea780b9de550dd410b7bb475a051e49", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_mixed_flower_matching_splice_deficit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "643741444e62bf4185b861e2eade0e226aa30614e742b0e86f1baf1a72115530"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -30,31 +32,31 @@ distinct train terminals such that, uniformly over the selected pairs,
 
 Then one can select a matching of at least
 
-$$
+```math
 \boxed{P_D\ge {L_D\over3}}
 \tag{MS.1}
-$$
+```
 
 through pairs.  Splice only those matched pairs.  The resulting two-piece supertrains
 have a simple intersection graph for all sufficiently large `D`, and
 
-$$
+```math
 \boxed{
 R_D
 \le {T_D^2\over4}-{P_D^2\over2}+O(D).
 }
 \tag{MS.2}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 {T_D^2\over4}-R_D
 \ge {L_D^2\over18}-o(D^2).
 }
 \tag{MS.3}
-$$
+```
 
 The result is phase-agnostic: different matched splices may converge to unrelated
 projective directions.  Pairwise simplicity is proved using a projection chosen
@@ -64,20 +66,20 @@ Combining with the three-dominant flower theorem, if `M_D` is a full-flower
 population and `C_D` is its complement terminal-occurrence count relative to one
 shrinking dominant orbit, then the locally through-spliceable population satisfies
 
-$$
+```math
 L_D\ge M_D-{C_D\over3}-o(D),
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{
 {T_D^2\over4}-R_D
 \ge {1\over18}
 \left(M_D-{C_D\over3}\right)_+^2-o(D^2).
 }
 \tag{MS.4}
-$$
+```
 
 This is the first quadratic train-crossing penalty in the flower branch that survives
 when the through pairs themselves have mixed complement phases.
@@ -96,10 +98,10 @@ a complete train cannot have both terminal occurrences on the same bounded face.
 Every complete train has exactly two terminal occurrences, so it is incident with at
 most two selected splice faces.  Therefore
 
-$$
+```math
 \boxed{\Delta(H_D)\le2.}
 \tag{MS.5}
-$$
+```
 
 This remains true with parallel edges; no endpoint-simplicity theorem between two
 different bounded faces is required.
@@ -114,9 +116,9 @@ edges total: itself and at most one other edge at each endpoint.
 
 Starting from `L_D` edges therefore produces a matching of size
 
-$$
+```math
 P_D\ge\lceil L_D/3\rceil,
-$$
+```
 
 which proves (MS.1).  No cycle analysis or common global phase is needed.
 
@@ -150,26 +152,26 @@ supertrains is an original strict-rhombus crossing between constituent trains.
 Take two matched supertrains `A,B`.  Let `alpha,beta` be representative projective
 contact directions of their first train pieces, chosen so that
 
-$$
+```math
 0\le d:=\beta-\alpha\le\pi/2.
-$$
+```
 
 Every train piece of `A` has direction within `O(epsilon_D)` of `alpha`; every train
 piece of `B` is within `O(epsilon_D)` of `beta`.  By the stopped-train cone theorem,
 every elementary midpoint displacement in `A` lies within
 
-$$
+```math
 \pi/6+O(\epsilon_D)
-$$
+```
 
 of the normal `n_A=Jalpha`, and similarly for `B`.  The same bound holds for each
 selected connector by hypothesis.
 
 If
 
-$$
+```math
 d<\pi/3-4\epsilon_D,
-$$
+```
 
 then every constituent train-direction pair has projective separation below `pi/3`,
 so there is no strict-rhombus crossing at all.
@@ -177,11 +179,11 @@ so there is no strict-rhombus crossing at all.
 Otherwise choose `X` along the angular bisector of `n_A,n_B`.  Since `d<=pi/2`, every
 segment of either supertrain makes angle at most
 
-$$
+```math
 {d\over2}+{\pi\over6}+O(\epsilon_D)
 \le {5\pi\over12}+O(\epsilon_D)
 < {\pi\over2}
-$$
+```
 
 with the positive `X` direction for large `D`.  Both supertrains are therefore
 strictly `X`-monotone graphs.
@@ -196,11 +198,12 @@ then gives one common graph-crossing sign at every `A`--`B` intersection.
 Two `X`-monotone graphs cannot have two transverse intersections with the same sign:
 their vertical order would have to alternate.  Hence
 
-$$
+```math
 \boxed{
 A\text{ and }B\text{ meet at most once.}
 }
 \tag{MS.6}
+```
 
 The argument includes the threshold case `d=pi/3`; no fixed angular margin from the
 triangular orbit is required.
@@ -222,9 +225,9 @@ distinct supertrains.  By (MS.6), two distinct original rhombi cannot collapse o
 the same unordered supertrain pair.  Since connectors create no intersections, the
 simple supertrain intersection graph has exactly
 
-\[
+```math
 R_D
-$$
+```
 
 edges.
 
@@ -234,51 +237,51 @@ edges.
 
 Let
 
-$$
+```math
 r=P_D
-$$
+```
 
 be the number of matched two-train supertrains and
 
-$$
+```math
 s=T_D-2P_D
-$$
+```
 
 the number of singleton supertrains.  The induced graph on the `s` singleton
 supertrains is a subgraph of the original stopped-train crossing graph, which is
 triangle-free.  Mantel gives at most
 
-$$
+```math
 {s^2\over4}
-$$
+```
 
 edges among them.
 
 Because the whole supertrain graph is simple, the number of edges with at least one of
 the `r` nonsingleton vertices is at most
 
-$$
+```math
 rs+{r(r-1)\over2}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 R_D
 &\le {s^2\over4}+rs+{r(r-1)\over2}\\
 &={T_D^2\over4}-{P_D^2\over2}-{P_D\over2}.
 \end{aligned}
 \tag{MS.7}
-$$
+```
 
 Dropping the favorable linear term gives (MS.2).  Combining with
 `P_D>=L_D/3` gives
 
-$$
+```math
 {T_D^2\over4}-R_D
 \ge {L_D^2\over18}-O(D),
-$$
+```
 
 and hence (MS.3) on the normalized scale.
 
@@ -290,9 +293,9 @@ The three-dominant local normal form proves that if `C_D` complement terminal
 occurrences occur across `M_D` full flowers, the number `L_D` of flowers carrying a
 local through pair can be selected so that
 
-$$
+```math
 L_D\ge M_D-C_D/3-o(D).
-$$
+```
 
 Insert this in (MS.3) to obtain (MS.4).
 
@@ -309,9 +312,9 @@ else:
 At the current `t<=1.8623` full-flower floor `M_D>0.1327D-o(D)`, the first branch
 alone gives an additional structurally localized deficit exceeding
 
-$$
+```math
 {0.1327^2\over72}D^2>0.0002445D^2.
-$$
+```
 
 This number is not competitive with the already-known aggregate full-flower Mantel
 deficit; the point is different.  It is obtained from actual local through mechanisms

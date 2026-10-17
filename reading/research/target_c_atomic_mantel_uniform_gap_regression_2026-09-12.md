@@ -9,17 +9,17 @@
 
 The robust near-complete-grid theorem on this branch proves that a single Type-II train-measure limit cannot satisfy
 
-$$
+```math
 x\sigma=2\sqrt{\Delta_2},
-$$
+```
 
 because equality forces one Mantel-saturated `pi/3` orbit and hence a forbidden near-complete train grid.
 
 It is tempting to infer a universal constant `eta>0` with
 
-$$
+```math
 x\sigma\ge2\sqrt{\Delta_2}+\eta
-$$
+```
 
 for every Type-II limit by compactness. That inference is not justified by weak compactness alone.
 

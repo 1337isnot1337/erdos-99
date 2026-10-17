@@ -16,9 +16,9 @@
 
 EC proves that when
 
-$$
+```math
 s_Z=e+h-(2v-2)=0,
-$$
+```
 
 the entire actual mixed row set `C union H` is one circuit of the rigidity-row matroid at the source coordinates. Because ZF simultaneously gives full planar rigidity rank `2v-3`, this coordinate-matroid statement forces the underlying mixed graph to satisfy the ordinary `(2,3)` Laman-circuit sparsity counts, even though the source coordinates are not assumed generic.
 
@@ -30,24 +30,24 @@ The same argument gives redundant infinitesimal rigidity after deleting any one 
 
 Assume throughout
 
-$$
+```math
 \boxed{s_Z=0.}
 \tag{LC.1}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{e+h=2v-2.}
 \tag{LC.2}
-$$
+```
 
 ZF gives
 
-$$
+```math
 \boxed{\operatorname{rank}R(C\cup H)=2v-3.}
 \tag{LC.3}
-$$
+```
 
 EC.4 says the full actual row set is a single circuit: its one-dimensional dependence uses every row, and every proper row subset is linearly independent.
 
@@ -59,36 +59,36 @@ For sufficiently large Target C sources `D>1`, a pair cannot be simultaneously a
 
 Let `X` be a proper vertex subset with
 
-$$
+```math
 2\le |X|<v,
-$$
+```
 
 and let
 
-$$
+```math
 m(X):=|C[X]|+|H[X]|.
-$$
+```
 
 The rows supported entirely on `X` form a proper subset of the full circuit and are therefore linearly independent.
 
 For any set of at least two distinct planar points, the rigidity matrix on those vertices has the three independent infinitesimal Euclidean motions in its kernel: two translations and one rotation. Consequently any rigidity-row family supported on `X` has rank at most
 
-$$
+```math
 2|X|-3.
-$$
+```
 
 Independence of the induced row family therefore gives
 
-$$
+```math
 \boxed{
 m(X)\le2|X|-3.
 }
 \tag{LC.4}
-$$
+```
 
 Together with the full count LC.2, this is exactly the graph-theoretic `(2,3)`-circuit count:
 
-$$
+```math
 \boxed{
 |E(C\cup H)|=2v-2,
 \qquad
@@ -96,7 +96,7 @@ $$
 \text{ for every proper }X.
 }
 \tag{LC.5}
-$$
+```
 
 ### Scope
 
@@ -108,15 +108,15 @@ LC.5 is a combinatorial consequence of the actual-coordinate circuit. It does **
 
 Let `f` be any actual contact or diameter edge. Since the full row set is a circuit,
 
-$$
+```math
 (C\cup H)\setminus\{f\}
-$$
+```
 
 is linearly independent. It has
 
-$$
+```math
 (2v-2)-1=2v-3
-$$
+```
 
 rows. Hence its rigidity matrix has rank exactly `2v-3`.
 
@@ -124,12 +124,12 @@ rows. Hence its rigidity matrix has rank exactly `2v-3`.
 
 For every mixed edge `f`,
 
-$$
+```math
 \boxed{
 \operatorname{rank}R((C\cup H)\setminus\{f\})=2v-3.
 }
 \tag{LC.6}
-$$
+```
 
 Thus deleting any single active equality bar leaves an infinitesimally rigid planar framework.
 
@@ -141,51 +141,51 @@ This is redundancy for the **equality** framework. It does not by itself integra
 
 Take one vertex `x` and apply LC.4 to
 
-$$
+```math
 X=V\setminus\{x\}.
-$$
+```
 
 Then
 
-$$
+```math
 (2v-2)-\deg_{C\cup H}(x)
 \le2(v-1)-3=2v-5.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{\deg_{C\cup H}(x)\ge3\quad\text{for every vertex }x.}
 \tag{LC.7}
-$$
+```
 
 Now partition the vertex set as
 
-$$
+```math
 V=S\sqcup T,
 \qquad |S|,|T|\ge2.
-$$
+```
 
 Let `partial(S,T)` be the mixed edges crossing the cut. Applying LC.4 to both shores,
 
-$$
+```math
 \begin{aligned}
 |\partial(S,T)|
 &=(2v-2)-m(S)-m(T)\\
 &\ge(2v-2)-(2|S|-3)-(2|T|-3)\\
 &=4.
 \end{aligned}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 |\partial(S,T)|\ge4
 \quad\text{whenever }|S|,|T|\ge2.
 }
 \tag{LC.8}
-$$
+```
 
 Singleton cuts have size at least three by LC.7. Thus the mixed graph is at least three-edge-connected, and every nontrivial nonsingleton cut has four-edge capacity.
 
@@ -195,25 +195,25 @@ Singleton cuts have size at least three by LC.7. Thus the mixed graph is at leas
 
 Let `B` be the `q` actual diameter endpoints. If the nonloaded set `I=V\setminus B` is nonempty, then `B` is a proper vertex subset. LC.4 gives
 
-$$
+```math
 \boxed{
 e_{BB}+h\le2q-3.}
 \tag{LC.9}
-$$
+```
 
 Since
 
-$$
+```math
 h=q-d_H,
-$$
+```
 
 this becomes
 
-$$
+```math
 \boxed{
 e_{BB}\le q+d_H-3.}
 \tag{LC.10}
-$$
+```
 
 The inequality is exact but is not by itself a contradiction; it is recorded because HB gives an independent lower bound on the same `e_BB` currency.
 
@@ -225,29 +225,29 @@ Similarly, every proper vertex-supported mixed subframework inherits LC.4. This 
 
 Every loaded terminal is incident to at least one diameter edge and C35 gives
 
-$$
+```math
 1\le\deg_C(b)\le3.
-$$
+```
 
 LC.7 therefore implies, in the `s_Z=0` branch,
 
-$$
+```math
 \deg_H(b)+\deg_C(b)\ge3.
 \tag{LC.11}
-$$
+```
 
 In particular a loaded vertex with only one positive/full contact incidence must satisfy
 
-$$
+```math
 \boxed{\deg_H(b)\ge2.}
 \tag{LC.12}
-$$
+```
 
 Thus contact-degree-one loaded terminals necessarily contribute to the diameter branching currency
 
-$$
+```math
 r_H=\sum_{b\in B}(\deg_H(b)-1).
-$$
+```
 
 No converse is claimed; one high-degree diameter hub can carry substantial branching.
 

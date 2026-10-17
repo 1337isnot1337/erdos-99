@@ -17,9 +17,9 @@
 This audit checks the jump from the independently audited minimax excess `g=0.002123`
 to the matched all-train/rhombic excess
 
-$$
+```math
 \boxed{g=0.0050.}
-$$
+```
 
 The gain is not decimal tuning.  It comes from a new two-shore iterative-pruning lemma
 which prevents residual missing edges from being charged independently on both shores.
@@ -37,9 +37,9 @@ than that many currently surviving missing edges.  A residual edge disappears at
 first deleted endpoint and cannot pay for a second deletion.  Therefore the total
 number of iterative-pruning deletions across both shores is at most
 
-$$
+```math
 {v\over\tau}D+o(D)=\sqrt{2v}\,D+o(D).
-$$
+```
 
 At termination every retained train misses at most `tau D+o(D)` opposite trains.
 This is a valid improvement over two independent Markov prunings.
@@ -48,16 +48,16 @@ This is a valid improvement over two independent Markov prunings.
 
 On the branch
 
-$$
+```math
 m_*:=\min(a,b)>\sqrt{2u}+{5\over\sqrt2}\sqrt v,
-$$
+```
 
 even if all inversion-cover and iterative-pruning losses fall on one shore, each
 retained family has mass greater than
 
-$$
+```math
 {5\over\sqrt2}\sqrt v-\sqrt{2v}=3\sqrt{v/2}=3\tau.
-$$
+```
 
 Every retained train misses at most `tau D+o(D)` opposite trains, so the union of the
 missing-neighbor sets of any three retained trains has size at most
@@ -76,17 +76,17 @@ loses at most
 
 With `K=2/sqrt(3)` and `g_*=(a+b-K)_+`, the audited source-diameter projection gives
 
-$$
+```math
 g_*\le\sqrt{2u}+2\sqrt{2v}\le\sqrt{10\rho}.
-$$
+```
 
 Hence the large-family branch pays `rho>=g_*^2/10`.
 If the large-family threshold fails, Cauchy gives
 
-$$
+```math
 m_*\le\sqrt{29\rho/2},
 \qquad \rho\ge2m_*^2/29.
-$$
+```
 
 The branches are exhaustive.
 
@@ -94,27 +94,27 @@ The branches are exhaustive.
 
 In the matched minimax application `a,b<=K`.  If `M=max(a,b)` and `m=min(a,b)`, then
 
-$$
+```math
 g_*=m+M-K\le m.
-$$
+```
 
 Therefore both entries of
 
-$$
+```math
 \min\{g_*^2/10,2m^2/29\}
-$$
+```
 
 are at least `2g_*^2/29`, since `1/10>2/29`.  Thus
 
-$$
+```math
 \boxed{\rho\ge{2\over29}(a+b-K)_+^2,}
-$$
+```
 
 or equivalently
 
-$$
+```math
 a+b-\sqrt{29/2}\sqrt\rho\le K.
-$$
+```
 
 This direction is correct; reversing it would invalidate the `0.0050` jump.
 
@@ -122,24 +122,24 @@ This direction is correct; reversing it would invalidate the `0.0050` jump.
 
 For dominant-orbit phases `C>=U>=V`, the already-audited triangle-free correlation is
 
-$$
+```math
 (1-V/C)x+(1-U/C)y\le h.
-$$
+```
 
 Applying the unconditional pair inequality to both leaves and taking the corresponding
 positive weighted average yields
 
-$$
+```math
 \max(F_U,F_V)\ge {W+C\over2}
 -\sqrt{29/2}\sqrt{h\,{C\over3C-W}}.
-$$
+```
 
 The outward rational verifier covers a strict superset of the actual center-imbalance
 domain and gives
 
-$$
+```math
 \max(F_U,F_V)>{2\over\sqrt3}+0.00160857.
-$$
+```
 
 The independent run of `verify_target_c_iterative_minimax_atomic_gap_0050.py` passes
 with worst interval near `z=-0.01387`.
@@ -152,34 +152,34 @@ is exactly the strict-rhombus mass, limiting crossings occur at projective separ
 `pi/3`, and the iterative pair theorem uses the same train-order/missing-crossing
 structure.  Hence
 
-$$
+```math
 \boxed{
 \liminf T_R/D\ge2\sqrt{\Delta_2}+0.0050,
 \qquad
 \liminf\sigma_R/D\ge0.0100.
 }
-$$
+```
 
 ## 7. Section-171 propagation passes independently
 
 With
 
-$$
+```math
 \epsilon_0=0.0023374,
 \qquad
 \delta_0={{9\over2}\epsilon_0-0.0050\over2}=0.00275915,
-$$
+```
 
 the Fraction certificate proves the Section-171 endpoint function negative by more
 than `2.7e-5` and its detour derivative greater than `142` on the feasible interval.
 Together with the already-audited monotonicity in `t`, this yields
 
-$$
+```math
 \boxed{
 \liminf {q-k\over D}
 \ge {4\over9}(\pi+\sqrt{\Delta_2})+0.0023374.
 }
-$$
+```
 
 The independent run of `verify_target_c_g0050_global_propagation.py` passes.
 
@@ -188,18 +188,18 @@ The independent run of `verify_target_c_g0050_global_propagation.py` passes.
 **PASS at proof-only scope.**  The matched iterative-pruning theorem supersedes the
 `g=0.002123` scalar chain:
 
-$$
+```math
 \boxed{(T-q/2)/D\ge2\sqrt{\Delta_2}+0.0050-o(1),}
-$$
+```
 
-$$
+```math
 \boxed{T_R/D\ge2\sqrt{\Delta_2}+0.0050-o(1),\quad
 \sigma_R/D\ge0.0100-o(1),}
-$$
+```
 
-$$
+```math
 \boxed{(q-k)/D\ge {4\over9}(\pi+\sqrt{\Delta_2})+0.0023374-o(1).}
-$$
+```
 
 This remains proof-only and does not close C-II.  The next useful work is to propagate
 the stronger matched rhombic floor into the source-level low-`t` structure rather than

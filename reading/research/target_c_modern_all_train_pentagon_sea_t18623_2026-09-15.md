@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_modern_all_train_pentagon_sea_t18623_2026-09-15.md) · source SHA-256 `c05b9f9596a8e29f02af899b95335e65cd326fd1297a994e329acef6bb6f0e9f`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "18a4548f42332f1304331097920e34905bc361b8", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_modern_all_train_pentagon_sea_t18623_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "1d980066af6ca1e856f1adb8a1c95a1b32f4a00909b2d427f81d355e5e0643b7"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -18,7 +20,7 @@
 The hostile-audited modern all-train theorem proves throughout the full-core train-measure
 branch
 
-$$
+```math
 \boxed{
 \liminf {T-q/2\over D}
 \ge C_{707}:=2\sqrt{\Delta_2}+0.007707,
@@ -26,7 +28,7 @@ $$
 \Delta_2={\pi\over2\sqrt3}.
 }
 \tag{MPS.1}
-$$
+```
 
 The earlier modern pentagon note first converted this to the weaker train-slack floor
 `tau/D>=rho+0.007707`, losing the direct `T-q/2` information.  That loss is unnecessary
@@ -34,44 +36,44 @@ when the goal is to count bounded exceptional faces.
 
 Use the exact stopped-train ledger
 
-$$
+```math
 T-q=2f-k
 \tag{MPS.2}
-$$
+```
 
 and put
 
-$$
+```math
 t={q-k\over D},
 \qquad
 \kappa={k\over D}.
-$$
+```
 
 Then
 
-$$
+```math
 {T-q/2\over D}
 ={t\over2}+2{f\over D}-{\kappa\over2}.
 \tag{MPS.3}
-$$
+```
 
 Consequently every survivor with `t<=1.8623` has
 
-$$
+```math
 \boxed{
 {f\over D}>0.490D-o(1),
 }
 \tag{MPS.4}
-$$
+```
 
 and degree arithmetic forces
 
-$$
+```math
 \boxed{
 {P_5\over D}>0.398D-o(1),
 }
 \tag{MPS.5}
-$$
+```
 
 where `P_5` is the number of bounded pentagonal contact faces.  More than `81%` of the
 bounded nonquadrilateral faces are pentagons.
@@ -79,25 +81,25 @@ bounded nonquadrilateral faces are pentagons.
 Every pentagon contributes five terminal face-side occurrences to the complete stopped-
 train decomposition.  Since one stopped train has only two terminal occurrences,
 
-$$
+```math
 \boxed{
 {N_5\over D}>0.99-o(1),
 }
 \tag{MPS.6}
-$$
+```
 
 where `N_5` is the number of distinct complete stopped trains touching at least one
 pentagon.
 
 The bounded exceptional faces alone also satisfy
 
-$$
+```math
 \boxed{
 {A_{exc}-a_0Z_{def}\over D}>0.637-o(1),
 \qquad a_0={\sqrt3\over2}.
 }
 \tag{MPS.7}
-$$
+```
 
 This is stronger, on the `t<=1.8623` window, than the previously advertised total
 Section-85 chamber-surplus floor `0.586223D`: the exceptional bounded faces alone already
@@ -117,24 +119,24 @@ currently proved.
 
 From (MPS.1)--(MPS.3),
 
-$$
+```math
 2{f\over D}
 \ge C_{707}-{t\over2}+{\kappa\over2}-o(1).
-$$
+```
 
 Since `kappa>=0`, for every fixed upper endpoint `t<=T`,
 
-$$
+```math
 \boxed{
 \liminf {f\over D}
 \ge f_0(T):={C_{707}\over2}-{T\over4}.
 }
 \tag{MPS.8}
-$$
+```
 
 The exact outward certificate gives
 
-$$
+```math
 \begin{array}{c|c}
 T & f_0(T)\\ \hline
 1.8500 & >0.4936663\\
@@ -143,6 +145,7 @@ T & f_0(T)\\ \hline
 1.8623 & >0.4905913.
 \end{array}
 \tag{MPS.9}
+```
 
 The key point is that this uses the modern `0.007707` all-train theorem directly.  No
 Dottie-number lower bound and no residual/low-`t` localization are required.
@@ -153,49 +156,49 @@ Dottie-number lower bound and no residual/low-`t` localization are required.
 
 Canonical loaded-hull algebra gives
 
-\[
+```math
 \boxed{b+Q=2(q-k),}
 \tag{MPS.10}
-$$
+```
 
 where `b` is the occurrence-counted old outer contact-face walk and
 
-$$
+```math
 Q=\sum_P(\deg P-4)
-$$
+```
 
 over bounded nonquadrilateral faces.
 
 The closed outer walk contains every force-hull extreme vertex, so
 
-$$
+```math
 b\ge\operatorname{per}(F).
 \tag{MPS.11}
-$$
+```
 
 Canonical Type II gives
 
-$$
+```math
 {\operatorname{per}(F)\over D}\to\pi.
 \tag{MPS.12}
-$$
+```
 
 Thus, for `t<=T`,
 
-$$
+```math
 \boxed{
 \limsup {Q\over D}
 \le Q_0(T):=2T-\pi.
 }
 \tag{MPS.13}
-$$
+```
 
 At `T=1.8623` the exact certificate gives
 
-$$
+```math
 Q/D<0.583008+o(1).
 \tag{MPS.14}
-$$
+```
 
 No assumption that `b/D` itself converges to `pi` is used.
 
@@ -206,31 +209,31 @@ No assumption that `b/D` itself converges to `pi` is used.
 Let `P_5` count degree-five bounded exceptional faces.  Every other bounded exceptional
 face has degree at least six, so
 
-$$
+```math
 Q\ge P_5+2(f-P_5)=2f-P_5.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{P_5\ge2f-Q.}
 \tag{MPS.15}
-$$
+```
 
 Using (MPS.8) and (MPS.13),
 
-$$
+```math
 \boxed{
 \liminf {P_5\over D}
 \ge p_5(T):=2f_0(T)-Q_0(T)
 =\pi+C_{707}-{5T\over2}.
 }
 \tag{MPS.16}
-$$
+```
 
 The exact staircase is
 
-$$
+```math
 \begin{array}{c|c}
 T & p_5(T)\\ \hline
 1.8500 & >0.4289252\\
@@ -239,15 +242,16 @@ T & p_5(T)\\ \hline
 1.8623 & >0.3981752.
 \end{array}
 \tag{MPS.17}
+```
 
 At the widest endpoint,
 
-\[
+```math
 \liminf {P_5\over f}
 \ge2-{Q_0(1.8623)\over f_0(1.8623)}
 >0.8116.
 \tag{MPS.18}
-$$
+```
 
 Thus the high-`t` exceptional-face population is already overwhelmingly pentagonal at
 the widest certified pentagon-sea endpoint.
@@ -265,14 +269,14 @@ occurrences.
 A complete stopped train has only two terminal occurrences in total.  If `N_5` counts
 trains with at least one pentagon terminal, then
 
-$$
+```math
 \boxed{N_5\ge{5P_5\over2}.}
 \tag{MPS.19}
-$$
+```
 
 Combining with (MPS.17),
 
-$$
+```math
 \begin{array}{c|c}
 T & N_5/D\\ \hline
 1.8500 & >1.0723\\
@@ -281,6 +285,7 @@ T & N_5/D\\ \hline
 1.8623 & >0.9954.
 \end{array}
 \tag{MPS.20}
+```
 
 This count includes singleton stopped trains when the complete-train convention does;
 it is an all-stopped-train endpoint statement, not a strict-rhombus-boundary statement.
@@ -291,25 +296,25 @@ it is an all-stopped-train endpoint statement, not a strict-rhombus-boundary sta
 
 Canonical Section 67 proves
 
-\[
+```math
 A_{exc}\ge a_0(Z_{def}+f)+c_0Q,
 \qquad
 c_0={\sqrt3\over4}.
 \tag{MPS.21}
-$$
+```
 
 Since `Q>=f`,
 
-$$
+```math
 A_{exc}-a_0Z_{def}
 \ge(a_0+c_0)f
 ={3\sqrt3\over4}f.
 \tag{MPS.22}
-$$
+```
 
 Using (MPS.9), the exact certificate gives
 
-\[
+```math
 \begin{array}{c|c}
 T & (A_{exc}-a_0Z_{def})/D\\ \hline
 1.8500 & >0.641\\
@@ -318,6 +323,7 @@ T & (A_{exc}-a_0Z_{def})/D\\ \hline
 1.8623 & >0.637.
 \end{array}
 \tag{MPS.23}
+```
 
 This does not create a new safe-packing residual.  The exact high-`t` repacking barrier
 shows that chamber Oler surplus includes mandatory internal-boundary credit.  Equation

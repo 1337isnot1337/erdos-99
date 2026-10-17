@@ -31,11 +31,12 @@ The new proved geometric statements are:
 2. Counting which consecutive directions share an endpoint converts the
    direction-gap bounds from an **edge count** into an **endpoint count**.
    If `q/D -> x`, the endpoint hull satisfies
-   $$
+   ```math
    \liminf P_F/D\ge x+2\cos(x/2),\qquad
    \liminf A_F/D^2\ge (x+\sin x)/4.
    \tag{EG.1}
-   $$
+   
+   ```
    The perimeter assertion is purely geometric. The area assertion uses the
    full-source near-minimal circumradius, with every isolated point retained.
 3. In the fully visible **cyclic diameter-graph phase**, the force hull contains
@@ -54,18 +55,18 @@ contacts and then diameter pairs, with `C=C_*` and `H=H_*`. All source points re
 present. No contact-preserving hull saturation is performed.
 
 For `K=conv A`, write
-$$
+```math
 a_0=\sqrt3/2,\quad c_0=\sqrt3/4,\quad P=\operatorname{per}K,
-$$
-$$
+```
+```math
 \delta_K=\pi D^2/4-\operatorname{area}K,\qquad
 \mathscr O_A=\operatorname{area}K+c_0P-a_0(n-1).
-$$
+```
 The canonical Oler and strict translated-lattice bounds give
-$$
+```math
 \delta_K\ge0,\quad\mathscr O_A\ge0,\qquad
 \boxed{\delta_K+\mathscr O_A<c_0P.}                 \tag{1.1}
-$$
+```
 The intended implication was
 
 ```text
@@ -104,36 +105,36 @@ lemmas do not require contact rigidity, electrical conductance bounds, or weight
 
 Two diameter chords sharing an endpoint have projective separation at least
 `2 asin(1/(2D))>=1/D`. Two disjoint diameter chords have projective separation
-$$
+```math
 \boxed{\phi\ge 2/D-8/D^3.}                         \tag{3.1}
-$$
+```
 
 **Proof.** The first statement is the chord formula for two radius-`D` vectors,
 using unit separation of their other endpoints. Their angle is at most `pi/3`
 because the other endpoints are also at distance at most `D`.
 
 For the second, use the actual crossing-chord coordinates
-$$
+```math
 A=(0,0),\quad B=(D,0),\quad C=(x,-u),\quad E=(y,v),
-$$
+```
 with `u,v>0` and `0<=x<=y<=D`, relabeling and reflecting if necessary.
 The projection bounds follow from membership in both radius-`D` endpoint disks.
 Writing `phi` for the acute projective angle,
-$$
+```math
 u+v=D\sin\phi,\quad y-x=D\cos\phi,\quad
 a=x+(D-y)=D(1-\cos\phi).
-$$
+```
 If `phi>=2/D`, (3.1) is immediate. Otherwise
 `a<=D phi^2/2<2/D<1`. Unit separation of `A,C` and `B,E` gives
-$$
+```math
 u\ge\sqrt{1-x^2}\ge\sqrt{1-a^2},\qquad
 v\ge\sqrt{1-(D-y)^2}\ge\sqrt{1-a^2}.
-$$
+```
 Consequently
-$$
+```math
 D\phi\ge D\sin\phi=u+v
 \ge2\sqrt{1-a^2}>2\sqrt{1-4/D^2}\ge2-8/D^2.
-$$
+```
 This proves (3.1). The estimate is deliberately not claimed sharp at order
 `D^-3`. For `D>=3`, its right side is at least `1/D`. ∎
 
@@ -145,9 +146,9 @@ In particular `h<=pi D`.
 
 Let `I` count the cyclic gaps whose two diameter edges share an endpoint,
 including both gaps when `h=2`. Then
-$$
+```math
 \boxed{I\le2h-q+1.}                                \tag{3.2}
-$$
+```
 
 **Proof.** At an endpoint `b`, let `d_b` be its number of incident selected
 edges. If `d_b<h`, a proper subset of `d_b` positions in a cyclic order has at
@@ -155,9 +156,9 @@ most `d_b-1` consecutive pairs within the subset. If `d_b=h`, the bound is
 `d_b`. At most one vertex can be incident to all selected edges, since the graph
 is simple and `h>=2`. Two distinct edges share at most one endpoint, so the
 counts do not overlap. Summing gives
-$$
+```math
 I\le\sum_b(d_b-1)+1=2h-q+1.
-$$
+```
 This argument works also for the length-two cyclic order, where the two
 oriented gaps between the same pair are counted separately. ∎
 
@@ -167,33 +168,33 @@ The extra `1` in (3.2) is necessary: an all-edge star attains it.
 ## 4. Finite endpoint-aware perimeter and direction-polygon area
 
 Define
-$$
+```math
 t=t(D,q):=\max\{0,(q-3)/D-8\pi/D^2\}.              \tag{4.1}
-$$
+```
 For realizable input, the argument below also shows `0<=t<=pi`.
 Let `u_i` be unit vectors in the selected projective directions and set
-$$
+```math
 G_H=\frac D2\operatorname{conv}\{\pm u_i:1\le i\le h\}.
-$$
+```
 
 ### Theorem EG.4
 
 For every configuration in Section 2,
-$$
+```math
 \boxed{P_F\ge D[t+2\cos(t/2)]-\frac{\pi}{6D},}       \tag{4.2}
-$$
-$$
+```
+```math
 \boxed{\operatorname{area}G_H
 \ge\frac{D^2}{4}(t+\sin t)-\frac\pi6.}              \tag{4.3}
-$$
+```
 
 **Proof.** Assign a gap floor `b_i=1/D` to each incident gap and
 `b_i=2/D-8/D^3` to each disjoint gap. All are positive and at most `2/D`.
 Lemmas EG.2–3 give
-$$
+```math
 \sum_i b_i=h/D+k(1/D-8/D^3)
 \ge(q-1)/D-8\pi/D^2,                              \tag{4.4}
-$$
+```
 using `h<=pi D` and `k<=h`.
 
 Minimize either concave function `sum sin(g_i)` or `sum sin(g_i/2)` on
@@ -201,21 +202,21 @@ Minimize either concave function `sum sin(g_i)` or `sum sin(g_i/2)` on
 but one gap equal their floors. If the exceptional index is `j`, put
 `S=sum_(i!=j) b_i`. Then `S>=t`, `S<=pi`, and the remaining gap is `pi-S`.
 Since `b_i<=2/D`,
-$$
+```math
 \sum_{i\ne j}b_i^3\le4\pi/D^2.
-$$
+```
 Using `sin z>=z-z^3/6`,
-$$
+```math
 \sum_i\sin g_i
 \ge S+\sin S-2\pi/(3D^2)
 \ge t+\sin t-2\pi/(3D^2),                         \tag{4.5}
-$$
+```
 and
-$$
+```math
 \sum_i\sin(g_i/2)
 \ge S/2+\cos(S/2)-\pi/(12D^2)
 \ge t/2+\cos(t/2)-\pi/(12D^2).                    \tag{4.6}
-$$
+```
 The last inequalities use monotonicity on `[0,pi]` of
 `s+sin s` and `s+2 cos(s/2)`. The minimizing exceptional index may differ
 between the two objectives; the estimates are uniform in that index.
@@ -223,10 +224,10 @@ between the two objectives; the estimates are uniform in that index.
 The cyclic polygon formula is
 `area G_H=(D^2/4) sum sin g_i`, proving (4.3).
 Also `2G_H subset F-F`, so Cauchy's perimeter formula gives
-$$
+```math
 2P_F=\operatorname{per}(F-F)
 \ge\operatorname{per}(2G_H)=4D\sum_i\sin(g_i/2).
-$$
+```
 Equation (4.6) now proves (4.2). ∎
 
 This improves the earlier edge-count direction argument by charging almost
@@ -236,24 +237,24 @@ No assumption that the diameter graph is a matching is made.
 ## 5. Transfer to actual force-hull area, using all source points
 
 For any containing disk `A subset closed B(o,R)`, let
-$$
+```math
 L=\sqrt{R^2-D^2/4}.
-$$
+```
 For a selected diameter pair, its midpoint `m` satisfies
-$$
+```math
 |m-o|^2=(|p-o|^2+|q-o|^2)/2-D^2/4\le L^2.
-$$
+```
 Its endpoints are `m +- (D/2)u`. Every endpoint and every vertex of `G_H`
 therefore have corresponding points within `L`. Convex combinations show
-$$
+```math
 \boxed{d_{\rm H}(F-o,G_H)\le L.}                    \tag{5.1}
-$$
+```
 In particular `G_H subset (F-o)+L closed B`. Steiner's formula and
 `P_F<=pi D` give
-$$
+```math
 \boxed{A_F\ge\frac{D^2}{4}(t+\sin t)
 -\frac\pi6-\pi DL-\pi L^2.}                      \tag{5.2}
-$$
+```
 This is a finite statement for arbitrary containing radius `R`.
 
 For a global minimizer, set `eta=3^(1/4) sqrt(D)`. The source-only portion of
@@ -266,9 +267,9 @@ Oler on all `n` points and the unconditional strict lattice bound give
 No source-to-scaffold or shell assumption is imported.
 
 Thus one may replace `L` in (5.2) by
-$$
+```math
 L_D=\sqrt{D\eta+\eta^2}=O(D^{3/4}).                \tag{5.3}
-$$
+```
 Along any sequence with `D->infinity` and `q/D->x`, (4.2) and (5.2) give
 exactly (EG.1). The uniform area error is `O(D^(7/4))`, not boundary order.
 It must not be used to decide a one-integer packing comparison.
@@ -277,31 +278,31 @@ It must not be used to decide a one-integer packing comparison.
 
 Let `b` be the outer contact-face walk length and `Q` its bounded-face
 quadrangulation defect, with multiplicities retained. Promoted C42 gives
-$$
+```math
 b+Q+2c_I+2e_{BB}\le4q-4.                           \tag{5.4}
-$$
+```
 The connected unit-edge outer walk surrounds the force hull, so `P_F<=b`.
 One justification is to select occurrences of all hull vertices along the
 closed walk; shortcutting between consecutive selected occurrences gives a
 closed tour, whose length is at least the convex-hull perimeter. Combining
 (4.2) and (5.4) yields the finite necessary inequality
-$$
+```math
 D[t+2\cos(t/2)]+Q+2c_I+2e_{BB}
 \le4q-4+\pi/(6D).                                \tag{5.5}
-$$
+```
 Let `x_0` be the unique root in `(0,pi)` of
-$$
+```math
 3x_0=2\cos(x_0/2).
-$$
+```
 Because `q<=pi D`, take subsequences in (5.5). Its nonnegative extra terms
 give `3x>=2 cos(x/2)`. Consequently every unbounded C-II sequence satisfies
-$$
+```math
 \boxed{\liminf q/D\ge x_0=0.6335016575\ldots,}       \tag{5.6}
-$$
-$$
+```
+```math
 \boxed{\liminf A_F/D^2\ge
 (x_0+\sin x_0)/4=0.3063680583\ldots.}              \tag{5.7}
-$$
+```
 These deductions use promoted C42, not ZF. The decimal evaluations are
 illustrations; the defining equation and formula specify the constants exactly.
 The proof of C42 uses contact minimality and force visibility, not the separate
@@ -313,9 +314,9 @@ If the separate report-level mixed rigidity input `e+h>=2v-2` is used,
 Euler gives `b+Q<=2h`. With `h<=q` for a planar diameter graph, (4.2) then
 implies `x>=2 cos(x/2)` in the limit. Thus `x>=2rho`, where `rho=cos rho`.
 The new area floor in that explicitly conditional class is
-$$
+```math
 \boxed{(2\rho+\sin(2\rho))/4=0.6184708848\ldots.}    \tag{5.8}
-$$
+```
 This is larger than the previous report-level PI floor
 `sin(2rho)/2=0.4978566363...`. It is not an automatic promotion of ZF.
 
@@ -345,31 +346,31 @@ rates or the old C-I shear separator.
 Let `A` be a global source, with the circumcenter and `eta` above. Suppose
 the selected actual diameter graph contains an odd cycle. Then, for sufficiently
 large `D`,
-$$
+```math
 \boxed{\overline B(o,D/2-3\eta)\subseteq F
 \subseteq K\subseteq\overline B(o,D/2+\eta).}        \tag{6.1}
-$$
+```
 
 **Proof.** For diameter rays `by,bz` with apex angle `theta`, the triangle
 `byz` is acute and has circumradius `D/(2 cos(theta/2))`. It lies in the
 source containing disk, so
-$$
+```math
 \theta<2\arccos\frac{D}{D+2\eta}.
-$$
+```
 Also `theta<=pi/3`. Set
-$$
+```math
 \Theta=\min\{\pi/3,2\arccos(D/(D+2\eta))\}.
-$$
+```
 By CY.1 the largest selected projective gap is at most `Theta`.
 
 For each unit vector `w`, choose a selected chord oriented as `p-k=D u`
 with angle between `u,w` at most `Theta/2`. Since `|k-o|<=R`,
-$$
+```math
 (p-o)\cdot w=D u\cdot w+(k-o)\cdot w
 \ge D\cos(\Theta/2)-R
 >\frac{D^2}{D+2\eta}-\left(\frac D2+\eta\right)
 >\frac D2-3\eta.
-$$
+```
 The support function of `F-o` is therefore at least `D/2-3eta` in every
 direction. Its supporting-half-plane representation proves the inner disk
 inclusion. The outer inclusions are the full-source circumradius bound. ∎
@@ -377,28 +378,28 @@ inclusion. The outer inclusions are the full-source circumradius bound. ∎
 In the lexicographic C-II source, `H=H_*`; thus if the actual diameter graph
 has a cycle, it has an odd cycle by the canonical diameter-graph theorem,
 and CY.2 applies to its actual force hull. In particular
-$$
+```math
 \boxed{A_F=\pi D^2/4-O(D^{3/2}),\qquad
 P_F=\pi D-O(\sqrt D).}                            \tag{6.2}
-$$
+```
 The same conclusion holds for the convex hull of the cycle's own vertices,
 by applying the argument just to that cycle.
 
 Let `z_ext=|A\setminus F|`. For `r=D/2-3eta>1/2`, the radius-`1/2` disks
 centered at these points have disjoint interiors and lie in the annulus
 between radii `r-1/2` and `D/2+eta+1/2`. Therefore
-$$
+```math
 \boxed{z_{\rm ext}\le4(4\eta+1)(D-2\eta)
 \le16\eta D+4D=O(D^{3/2}).}                      \tag{6.3}
-$$
+```
 The full source population is used in this packing estimate. Nothing in
 (6.3) bounds the number of contact-isolated points **inside** `F`.
 
 As another canonical-only consequence, (5.4) and (6.2) imply in this phase
-$$
+```math
 \liminf q/D\ge\pi/4.
 \tag{6.4}
-$$
+```
 Conditionally on ZF the analogous lower bound for `h/D` is `pi/2`.
 
 ## 7. Why these estimates still do not close C-II
@@ -422,10 +423,10 @@ points at angular step `delta=2 asin(1/D)` in an arc of span
 `s=(m-1)delta`, together with their antipodes, where `2m/D->x`. For large
 `D`, the two intervening gaps exceed `delta`, so all points are unit-separated.
 The diameter graph is an opposite matching and `q=2m`. Direct polygon formulas give
-$$
+```math
 P_F=2(m-1)+2D\cos(s/2),\qquad
 A_F=\frac{D^2}{4}[(m-1)\sin\delta+\sin s].
-$$
+```
 Their normalized limits are exactly (EG.1). The contact graph is two disjoint
 paths, so this is **not** a positive connected C-II source or a global minimizer.
 It establishes sharpness of the geometric relaxation, not a disproof of Erdős #99.

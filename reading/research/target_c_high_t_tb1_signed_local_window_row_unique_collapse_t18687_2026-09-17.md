@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_signed_local_window_row_unique_collapse_t18687_2026-09-17.md) · source SHA-256 `78a78a63451839f37223a707fe5024bdbefe1fb95af068a998ccd82f47b9b7fb`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 8 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "845135426774ac061ad2459ee6a21040e049f16f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_signed_local_window_row_unique_collapse_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0de7ad16aefc6890369071cc552d4f2d36e5f838e3e5832e5f0b6c1c410c272e"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -18,23 +20,23 @@ The ROW-UNIQUE side of the new LOCAL-WINDOW reduction does not produce a genuine
 
 That reduction gives a pairwise-crossing SIGNED braid of size
 
-$$
+```math
 D^{1/4-o(1)}
-$$
+```
 
 whose exact closed path-region intervals
 
-$$
+```math
 J_A(e)=[p(e),q(e)]
-$$
+```
 
 all contain one fixed region rank `g_D`.
 
 There are four formal interval types relative to `g_D`. The CELL-INTERNAL type
 
-$$
+```math
 p(e)=q(e)=g_D
-$$
+```
 
 can occur for at most **one** retained blocker: every Horn blocker has an injective owner coordinate which is one of its endpoint-region coordinates. If both endpoint regions equal `g_D`, its owner must equal `g_D`; two such blockers would repeat an owner.
 
@@ -49,13 +51,13 @@ A two-way pigeonhole therefore leaves a `D^(1/4-o(1))` pairwise-crossing SIGNED 
 
 Hence:
 
-$$
+```math
 \boxed{
 \text{SIGNED / LOCAL-WINDOW / ROW-UNIQUE}
 \Longrightarrow
 \text{SIGNED / COMMON-CUT at quarter-power scale}.
 }
-$$
+```
 
 The only genuinely new SIGNED LOCAL-WINDOW remainder is COLUMN-UNIQUE, where the previous theorem traps the quarter-power braid in one fixed cell of the common linear train fence.
 
@@ -65,49 +67,50 @@ The only genuinely new SIGNED LOCAL-WINDOW remainder is COLUMN-UNIQUE, where the
 
 Use the notation of the LOCAL-WINDOW cell theorem. Every retained blocker `e=xy` has endpoint path regions
 
-$$
+```math
 x\in R_p,
 \qquad y\in R_q,
 \qquad p\le q,
-$$
+```
 
 and one Horn owner coordinate
 
-$$
+```math
 o(e)\in\{p,q\}.
 \tag{RC.1}
-$$
+```
 
 The ownership map is injective on the localized blocker family:
 
-$$
+```math
 e\ne f
 \quad\Longrightarrow\quad
 o(e)\ne o(f).
 \tag{RC.2}
-$$
+```
 
 Suppose `e` is CELL-INTERNAL relative to the common Helly region `g_D`. Then
 
-$$
+```math
 p=q=g_D.
 \tag{RC.3}
-$$
+```
 
 Equation (RC.1) forces
 
-$$
+```math
 o(e)=g_D.
 \tag{RC.4}
-$$
+```
 
 By injectivity (RC.2), at most one retained blocker satisfies (RC.3). Thus
 
-$$
+```math
 \boxed{
 N_{\rm path\text{-}internal}\le1.
 }
 \tag{RC.5}
+```
 
 This uses no metric estimate.
 
@@ -117,47 +120,51 @@ This uses no metric estimate.
 
 The exact selected-cut support of a blocker with endpoint regions `p<q` is
 
-\[
+```math
 I(e)=\{p+1,\ldots,q\}.
 \tag{RC.6}
+```
 
 All retained ROW-UNIQUE intervals contain `g_D`:
 
-\[
+```math
 p\le g_D\le q.
 \tag{RC.7}
+```
 
 Delete the at most one internal blocker from (RC.5). Then `p<q`.
 
 If
 
-\[
+```math
 p<g_D,
-$$
+```
 
 then
 
-$$
+```math
 p+1\le g_D\le q,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{\tau_{g_D}\in I(e).}
 \tag{RC.8}
+```
 
 If instead
 
-\[
+```math
 p=g_D<q,
-$$
+```
 
 then
 
-\[
+```math
 \boxed{\tau_{g_D+1}\in I(e).}
 \tag{RC.9}
+```
 
 At `g_D=0`, only (RC.9) can occur; at the terminal region only (RC.8) can occur. Thus no nonexistent boundary cut is invoked.
 
@@ -169,25 +176,28 @@ The THROUGH type `p<g_D<q` satisfies both (RC.8) and (RC.9).
 
 The ROW-UNIQUE braid before this final step has size
 
-\[
+```math
 N_D=D^{1/4-o(1)}.
 \tag{RC.10}
+```
 
 After deleting at most one chord, split it into
 
-\[
+```math
 \mathcal E^-:=\{e:p(e)<g_D\},
 \qquad
 \mathcal E^+:=\{e:p(e)=g_D<q(e)\}.
 \tag{RC.11}
+```
 
 Equations (RC.8)--(RC.9) show that every chord in `E^-` supports `tau_{g_D}`, while every chord in `E^+` supports `tau_{g_D+1}`.
 
 One class has cardinality at least
 
-\[
+```math
 {N_D-1\over2}=D^{1/4-o(1)}.
 \tag{RC.12}
+```
 
 All geometric and Horn metadata survive because we only take a subset:
 

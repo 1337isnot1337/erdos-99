@@ -16,41 +16,41 @@
 
 In Type II, the proof-only Section-125 identities are
 
-$$
+```math
 e_{BB}=q-m,
 \qquad c_I+s_C=m+k-2,
-$$
+```
 
 and Section 63 gives
 
-$$
+```math
 x_B=q-Q-2k,
 \qquad u_B=x_B-m.
-$$
+```
 
 Since q-k=tD,
 
-$$
+```math
 m=tD-Q-k-u_B.
-$$
+```
 
 Therefore
 
-$$
+```math
 s_C=tD-Q-u_B-c_I-2,
-$$
+```
 
 and the exact identity is
 
-$$
+```math
 3(h-s_Z)-2s_C=tD+2Q+2u_B+2c_I+4.
-$$
+```
 
 This is correct. Section 125 also gives
 
-$$
+```math
 e_{BB}=Q+2k+u_B,
-$$
+```
 
 so Q+u_B=e_{BB}-2k is correct.
 
@@ -60,24 +60,24 @@ so Q+u_B=e_{BB}-2k is correct.
 
 Section 132 gives
 
-$$
+```math
 3(h-s_Z)-2s_C\ge2\sum_r\sqrt{R_{4,r}}+6.
-$$
+```
 
 In Type II, the unloaded-only rhombus count is at least
 \Delta_2D^2-o(D^2) and belongs to the induced harmonic cells, while loaded-touching
 rhombi contribute only O(D). Thus
 
-$$
+```math
 \sum_r\sqrt{R_{4,r}}
 \ge(\sqrt{\Delta_2}-o(1))D.
-$$
+```
 
 Combining with the exact identity gives
 
-$$
+```math
 t+2(Q+u_B)/D+o(1)\ge2\sqrt{\Delta_2}-o(1).
-$$
+```
 
 **Verdict:** PASS at the stated proof-only scope.
 
@@ -86,9 +86,9 @@ $$
 The source uses the certified value 2\sqrt{\Delta_2}=1.9046256137... for the
 1.85 example, so the margin is
 
-$$
+```math
 \frac12(2\sqrt{\Delta_2}-1.85)=0.0273128068\ldots .
-$$
+```
 
 The Section-162 low-window substitution similarly gives a margin greater than 0.0421.
 

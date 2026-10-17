@@ -53,17 +53,17 @@ whenever the remaining coordinates amount to an actual packet translation.
 
 Suppose `r_1,r_2` are vectors of length `D`. Write
 
-$$
+```math
 s=(r_1+r_2)/2,\quad w=(r_1-r_2)/2,
 \quad s\perp w,\quad |s|^2+|w|^2=D^2.
-$$
+```
 
 Suppose a vector `z` satisfies `|s+z|,|s-z|<=D`. Then for every `p` with
 `|p+w|,|p-w|<=D`,
 
-$$
+```math
 \boxed{|p+z|,|p-z|\le D.}                                 \tag{L.1}
-$$
+```
 
 If `s,w` are nonzero, `z!=w,-w`, and at least one of `|p+w|,|p-w|` is
 strictly below `D`, both conclusions are strict.
@@ -71,28 +71,28 @@ strictly below `D`, both conclusions are strict.
 **Proof.** Take orthogonal coordinates `s=(a,0)`, `w=(0,b)`, `a,b>0`.
 Put `x=|z_x|`, `y=|z_y|`. The hypothesis on `z` is exactly
 
-$$
+```math
 (a+x)^2+y^2\le D^2=a^2+b^2,
 \quad\text{so }0\le y\le b.                               \tag{L.2}
-$$
+```
 
 For `t=|p_y|`, the hypothesis on `p` implies
 
-$$
+```math
 |p_x|\le\sqrt{D^2-(t+b)^2},\qquad 0\le t\le D-b.
-$$
+```
 
 Consequently both squared distances in (L.1) are at most
 
-$$
+```math
 F(t)=\left(\sqrt{D^2-(t+b)^2}+x\right)^2+(t+y)^2.
-$$
+```
 
 For `0<t<D-b`,
 
-$$
+```math
 F'(t)=2(y-b)-\frac{2x(t+b)}{\sqrt{D^2-(t+b)^2}}\le0.
-$$
+```
 
 Continuity at the ends gives `F(t)<=F(0)=(a+x)^2+y^2<=D^2`, proving
 the inclusion. If `z!=w,-w`, (L.2) ensures either `x>0` or `y<b`, so
@@ -108,9 +108,9 @@ strictness under a shortened old bar has no instance in this case. ∎
 Let `A,C` be fixed source points and `B,E` points in one translated packet,
 with old diameters `AB,CE`. Set
 
-$$
+```math
 r_1=B-A,\quad r_2=E-C,\quad z=(A+B-C-E)/2.
-$$
+```
 
 Then the other two cross vectors are `B-C=s+z` and `E-A=s-z`. After the
 packet translation by `Delta`, replace `s` by `p=s+Delta`, leaving `w,z`
@@ -129,10 +129,10 @@ Partition an actual diameter-`D` source into nonempty packets `S,T`. Translate
 all of `S` by `Delta`, leaving `T` fixed. Write `H_ST` for the old actual
 diameters crossing this partition and define
 
-$$
+```math
 E_S=\{x\in S:x\text{ is incident with }H_{ST}\},\qquad
 E_T=\{y\in T:y\text{ is incident with }H_{ST}\}.
-$$
+```
 
 ### Theorem L.2 — complete cross-upper protection on exposed endpoints
 
@@ -164,10 +164,10 @@ lower pure joint conflicts or identify different packet pairs' exposures.
 
 Suppose
 
-$$
+```math
 \operatorname{conv}S=\operatorname{conv}E_S,\qquad
 \operatorname{conv}T=\operatorname{conv}E_T.                 \tag{L.3}
-$$
+```
 
 If all old crossing diameters strictly shorten, every new cross distance is
 strictly below `D`; internal packet distances are unchanged.
@@ -197,9 +197,9 @@ Let `B` be the set of old actual diameter endpoints, and `Z` the actual
 contact-isolated points. Suppose every old contact has a positive multiplier,
 and every point outside `B` satisfies the unloaded equilibrium equation
 
-$$
+```math
 \sum_{y:xy\in C}\alpha_{xy}(p_x-p_y)=0.                   \tag{L.4}
-$$
+```
 
 Canonical full-support KKT supplies exactly this equation; no stress equation
 is applied to the isolate coordinates.
@@ -207,9 +207,9 @@ is applied to the isolate coordinates.
 For a packet `S`, let `A_S` be its vertices incident to a unit contact crossing
 the packet boundary, and put
 
-$$
+```math
 Q_S=(B\cap S)\cup A_S\cup(Z\cap S).
-$$
+```
 
 ### Theorem L.4 — packet hull anchors and cut-force normal restriction
 
@@ -217,15 +217,15 @@ Every vertex of `conv(S)` belongs to `Q_S`; in particular
 `conv(S)=conv(Q_S)`. For an unloaded, nonisolated packet point define its
 old boundary contact force
 
-$$
+```math
 g_x=\sum_{y\notin S:\,xy\in C}\alpha_{xy}(p_x-p_y).
-$$
+```
 
 Every outward support normal `n` of that point in `conv(S)` obeys
 
-$$
+```math
 \boxed{n\cdot g_x\le0.}                                  \tag{L.5}
-$$
+```
 
 This restriction is preserved under the rigid packet translation: the packet
 normal cone and all internal difference vectors are unchanged.
@@ -318,27 +318,27 @@ remain open. No Level I quantifier is weakened.
 The following adds an actual upper blocker to the preceding rational rotation
 packet. For large integers `N`, use
 
-$$
+```math
 t=1/(2N-1),\quad c=(1-t^2)/(1+t^2),\quad s=2t/(1+t^2),
 \quad b_\pm=(Nc,\pm Ns).
-$$
+```
 
 Take the `N+7` source points
 
-$$
+```math
 \{ku:0\le k\le N\}\cup\{b_+,b_-,b_+-u,b_--u,z,z-u\},
 \quad u=(1,0),\quad
 z=\left(\tfrac35\rho,\tfrac45\rho\right),\quad
 \rho=N-\tfrac1{2N}.
-$$
+```
 
 Move precisely `Nu,b_+,b_-,z`. Put
 
-$$
+```math
 q=(1+1/N)\frac{Ns}{Nc-1},\quad
 v=\left(\frac{1-q^2}{1+q^2},\frac{2q}{1+q^2}\right),
 \quad\Delta=v-u.
-$$
+```
 
 Every old cut contact has vector `u` and ends with vector `v`. Every old
 contact is preserved; the entire endpoint is still triangle-free and unit-
@@ -359,9 +359,9 @@ is again `4/5`. This checks old feasibility and all unchanged pairs.
 
 At the endpoint `N Delta_y->2` and `N^2 Delta_x->-2`. Therefore
 
-$$
+```math
 |z+\Delta|^2-N^2\longrightarrow-1+16/5=11/5>0.
-$$
+```
 
 For chain points `ku`, `k>=1`, squared distances from `z+Delta` decrease
 by `2k(z+Delta)_x-k^2`; convexity and the leading endpoint margins check

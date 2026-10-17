@@ -20,16 +20,16 @@ have triangular-lattice density up to an `O(D)` boundary loss.
 For every sufficiently large real `D` there is a triangle-free finite set `A_D` of
 diameter exactly `D`, with minimum distance exactly one, and
 
-$$
+```math
  |A_D|\ge \frac{\pi}{2\sqrt3}D^2-O(D),
-$$
+```
 
 such that all but two points have distance strictly greater than one from every
 other point. In particular, no inequality of the form
 
-$$
+```math
  |A_D|\le (\Delta-c)D^2+O(D),\qquad c>0,
-$$
+```
 
 can follow from triangle-freeness or contact-isolation alone.
 
@@ -38,33 +38,33 @@ can follow from triangle-freeness or contact-isolation alone.
 Let `s_D=1+D^{-1}` and let `\Lambda_D` be the triangular lattice with nearest-neighbor
 distance `s_D`. Let
 
-$$
+```math
 R=D/2-3
-$$
+```
 
 and retain all lattice points in the open disk `B(0,R)`, after deleting a bounded
 neighborhood of the origin if needed. The standard fundamental-cell count gives
 
-$$
+```math
  |\Lambda_D\cap B(0,R)|
  =\frac{2}{\sqrt3s_D^2}\pi R^2+O(R/s_D)
  =\frac{\pi}{2\sqrt3}D^2-O(D).
 \tag{2.1}
-$$
+```
 
 The retained lattice points have all mutual distances strictly greater than one.
 Put a fixed unit pair at
 
-$$
+```math
 u=(-1/2,0),\qquad v=(1/2,0).
-$$
+```
 
 They have distance one. Delete the bounded number of lattice points within distance
 one of `u` or `v`; this changes (2.1) by only `O(1)`. Add the diameter pair
 
-$$
+```math
 z=(-D/2,0),qquad a=(D/2,0),
-$$
+```
 
 Delete the `O(D)` lattice points within distance one of `z` or `a`; this does not
 change (2.1) at its displayed scale. The resulting set consists of the dense lattice

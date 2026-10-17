@@ -18,12 +18,12 @@
 
 The cyclic cap theorem proves
 
-$$
+```math
 P_F/D\to\pi,
 \qquad
 (b-P_F)/D\to0,
 \tag{AE.1}
-$$
+```
 
 where `b` is the unit-edge outer contact-walk length.  This forces the projective
 direction measure of the **outer contact walk** itself to converge to uniform
@@ -38,18 +38,18 @@ incidences.
 
 Combining this endpoint capacity with the cyclic exceptional-face area budget gives
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}{e_{BB}+2s_C\over D}
 \ge
 \lambda_A,
 }
 \tag{AE.2}
-$$
+```
 
 where
 
-$$
+```math
 \boxed{
 \lambda_A
 =
@@ -58,7 +58,7 @@ $$
 =0.9955405845835427\ldots .
 }
 \tag{AE.3}
-$$
+```
 
 The decimal is diagnostic only.  This strictly strengthens the previous cyclic floor
 `pi/sqrt(pi^2+1)=0.9528905...`.
@@ -77,57 +77,57 @@ Let `gamma_D` be the closed outer-face boundary walk of the positive contact cor
 with every bridge occurrence counted separately.  Every traversed edge has length one,
 so
 
-$$
+```math
 \operatorname{len}(\gamma_D)=b.
-$$
+```
 
 Its image has convex hull exactly `F`.  Define a finite measure on the projective
 direction circle `T=R/pi Z` by
 
-$$
+```math
 \boxed{
 \mu_D^{out}:={1\over D}\sum_{e\in\gamma_D}\delta_{\theta_e},
 }
 \tag{1.1}
-$$
+```
 
 where the sum is over edge **occurrences** in the walk and `theta_e` is the unoriented
 edge direction.  Thus
 
-$$
+```math
 \mu_D^{out}(T)=b/D\to\pi
 \tag{1.2}
-$$
+```
 
 by AE.1.
 
 For a unit vector direction `alpha`, the total variation of the scalar projection of
 the closed walk is
 
-$$
+```math
 V_D(\alpha)
 :=\int_T|\cos(\theta-\alpha)|\,d\mu_D^{out}(\theta).
 \tag{1.3}
-$$
+```
 
 A closed real-valued walk whose range has width `w` has total variation at least
 `2w`.  Hence
 
-$$
+```math
 \boxed{
 V_D(\alpha)\ge {2w_F(\alpha)\over D}.
 }
 \tag{1.4}
-$$
+```
 
 The cyclic force hull has diameter `D`, perimeter `pi D-o(D)`, and by the FD/RSJ
 compactness argument its normalized translates converge to the disk of diameter one.
 Consequently
 
-$$
+```math
 {w_F(\alpha)\over D}\to1
 \tag{1.5}
-$$
+```
 
 uniformly in `alpha`.
 
@@ -137,70 +137,70 @@ uniformly in `alpha`.
 
 Take any weakly convergent subsequence
 
-$$
+```math
 \mu_D^{out}\Rightarrow\mu.
 \tag{2.1}
-$$
+```
 
 The kernel `|cos(theta-alpha)|` is continuous, so (1.4)--(1.5) give
 
-$$
+```math
 \int_T|\cos(\theta-\alpha)|\,d\mu(\theta)\ge2
 \qquad(\alpha\in T).
 \tag{2.2}
-$$
+```
 
 On the other hand, Fubini and
 
-$$
+```math
 \int_0^\pi|\cos t|\,dt=2
-$$
+```
 
 give
 
-$$
+```math
 \int_0^\pi
 \int_T|\cos(\theta-\alpha)|\,d\mu(\theta)\,d\alpha
 =2\mu(T)=2\pi.
 \tag{2.3}
-$$
+```
 
 The continuous integrand in (2.2) is everywhere at least two and has integral
 `2pi`; hence it is identically two:
 
-$$
+```math
 \boxed{
 \int_T|\cos(\theta-\alpha)|\,d\mu(\theta)=2
 \quad\forall\alpha.
 }
 \tag{2.4}
-$$
+```
 
 The projective cosine transform is injective on finite measures.  For completeness,
 write the Fourier series
 
-$$
+```math
 |\cos t|
 ={2\over\pi}
 +{4\over\pi}\sum_{n\ge1}
 {(-1)^n\over1-4n^2}\cos(2nt).
 \tag{2.5}
-$$
+```
 
 Every nonconstant Fourier coefficient is nonzero.  Equation (2.4) therefore forces
 every nonzero projective Fourier coefficient of `mu` to vanish.  Since `mu(T)=pi`,
 
-$$
+```math
 \boxed{d\mu(\theta)=d\theta.}
 \tag{2.6}
-$$
+```
 
 Every subsequential limit is the same, so the whole sequence converges:
 
-$$
+```math
 \boxed{\mu_D^{out}\Rightarrow d\theta.}
 \tag{2.7}
-$$
+```
 
 ### Consequence AE.1 — finite shrinking direction windows contain `o(D)` outer ends
 
@@ -208,12 +208,12 @@ Let `theta_1,...,theta_k` be fixed projective directions.  For any `epsilon>0`, 
 disjoint arcs `U_i` around them with total Lebesgue length below `epsilon` and
 boundaries avoiding all limiting atoms under discussion.  By (2.7),
 
-$$
+```math
 \limsup {1\over D}
 \#\{\text{outer-walk edge occurrences with direction in }U=\cup U_i\}
 \le |U|<\epsilon.
 \tag{2.8}
-$$
+```
 
 Letting the arcs shrink proves that any finite set of asymptotically fixed train
 directions carries only `o(D)` outer train-end incidences.
@@ -227,56 +227,56 @@ twice in the outer walk contributes two possible outer train-end incidences.
 
 Let the bounded exceptional faces have
 
-$$
+```math
 r_i:=\deg(F_i)-4\ge1,
 \qquad
 \sum_{i=1}^f r_i=Q.
 \tag{3.1}
-$$
+```
 
 The CC estimate starts from
 
-$$
+```math
 A_{exc}
 \le {1\over4\pi}\sum_i(r_i+4)^2.
 \tag{3.2}
-$$
+```
 
 For fixed integers `Q>=f>=1`, convexity of the square shows that the largest possible
 `sum r_i^2` occurs at
 
-$$
+```math
 (Q-f+1,1,\ldots,1).
-$$
+```
 Therefore
 
-$$
+```math
 \boxed{
 \sum_i r_i^2\le(Q-f+1)^2+(f-1).
 }
 \tag{3.3}
-$$
+```
 
 Since `Q,f=O(D)` in the cyclic branch, along a convergent subsequence put
 
-$$
+```math
 \xi:=\lim Q/D,
 \qquad
 \varphi:=\lim f/D,
 \qquad
 w:=\xi-\varphi\ge0.
 \tag{3.4}
-$$
+```
 
 Equations (3.2)--(3.3) give the sharper asymptotic capacity
 
-$$
+```math
 \boxed{
 \limsup {A_{exc}\over D^2}
 \le {w^2\over4\pi}.
 }
 \tag{3.5}
-$$
+```
 
 The previous cyclic report corresponds to discarding `f` and replacing `w` by `xi`.
 
@@ -286,58 +286,58 @@ The previous cyclic report corresponds to discarding `f` and replacing `w` by `x
 
 Pass to a subsequence on which
 
-$$
+```math
 \nu:=\lim {e_{BB}+2s_C\over D}
 \tag{4.1}
-$$
+```
 
 exists.  If `nu>=1`, AE.2 is automatic, so assume `nu<1`.
 
 The cyclic cap theorem gives
 
-$$
+```math
 H_{out}=o(D^2),
 \qquad
 {\operatorname{area}F\over D^2}\to{\pi\over4}.
 \tag{4.2}
-$$
+```
 
 The exact ZK/SZ attachment-cell estimate gives
 
-$$
+```math
 \limsup {1\over D^2}\sum_r\operatorname{area}(P_r)
 \le {\pi\over4}\nu^2.
 \tag{4.3}
-$$
+```
 
 Hence
 
-$$
+```math
 \liminf {G\over D^2}
 \ge {\pi\over4}(1-\nu^2).
 \tag{4.4}
-$$
+```
 
 ZG, (4.2), and (3.5) imply
 
-$$
+```math
 {\pi\over4}(1-\nu^2)
 \le {w^2\over4\pi}.
-$$
+```
 Thus
 
-$$
+```math
 \boxed{
 w\ge w_0(\nu):=\pi\sqrt{1-\nu^2}.}
 \tag{4.5}
-$$
+```
 
 Also `0<=varphi<=xi<=nu` because `f<=Q<=e_BB<=e_BB+2s_C`.  In particular
 
-$$
+```math
 0\le w\le\nu<1.
 \tag{4.6}
-$$
+```
 
 ---
 
@@ -345,38 +345,38 @@ $$
 
 Let `R` be the number of bounded quadrilateral contact faces.  Their total area is
 
-$$
+```math
 A_4=a_0R+E,
 \qquad a_0={\sqrt3\over2},
 \tag{5.1}
-$$
+```
 
 and CRE proves `E=O(D)`.
 
 The force hull decomposes, up to boundaries, as
 
-$$
+```math
 F=A_4\sqcup A_{exc}\sqcup H_{out}.
 \tag{5.2}
-$$
+```
 
 Using (4.2), (3.5), and CRE,
 
-$$
+```math
 \liminf {R\over D^2}
 \ge
 r_{min}(w)
 :={\pi^2-w^2\over4\pi a_0}
 ={\pi^2-w^2\over2\pi\sqrt3}.
 \tag{5.3}
-$$
+```
 
 Pass further so `R/D^2->r`; then
 
-$$
+```math
 \boxed{r\ge r_{min}(w)>0.}
 \tag{5.4}
-$$
+```
 
 ---
 
@@ -384,31 +384,31 @@ $$
 
 DT gives exactly
 
-$$
+```math
 T={b+Q\over2}+2f.
 \tag{6.1}
-$$
+```
 
 In the cyclic circuit branch `b+Q=2q`, so
 
-$$
+```math
 \boxed{T=q+2f.}
 \tag{6.2}
-$$
+```
 
 The cap theorem gives `b-P_F=o(D)` and `P_F/D->pi`; since `b+Q=2q`,
 
-$$
+```math
 \boxed{{q\over D}\to\gamma:={\pi+\xi\over2}.}
 \tag{6.3}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{\tau:=\lim T/D=\gamma+2\varphi.}
 \tag{6.4}
-$$
+```
 
 The hypotheses of DE hold:
 
@@ -422,17 +422,17 @@ Let `mu_train` be the weak limit of the empirical probability measures on projec
 train directions, and let `s` be its total atomic mass.  The proof of DE establishes
 before its final perimeter relaxation
 
-$$
+```math
 \boxed{{r\over\tau^2}\le {s^2\over4}.}
 \tag{6.5}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{s\tau\ge2\sqrt r.}
 \tag{6.6}
-$$
+```
 
 ---
 
@@ -442,11 +442,11 @@ Fix `epsilon>0`.  Choose finitely many atoms of `mu_train` carrying atomic mass 
 least `s-epsilon`.  Choose pairwise disjoint small projective arcs `U` around them,
 with boundaries of zero `mu_train` mass.  For fixed `U`, weak convergence gives
 
-$$
+```math
 \#\{\text{trains with direction in }U\}
 \ge(s-2\epsilon)T
 \tag{7.1}
-$$
+```
 
 for all sufficiently large members of the subsequence after making the arcs small
 enough that their non-atomic train mass is below `epsilon`.
@@ -455,10 +455,10 @@ Each stopped train has two endpoint incidences.  DT's endpoint count is exact:
 outer-face endpoint incidences are the `b` outer-walk edge occurrences, while bounded
 exceptional faces supply
 
-$$
+```math
 \sum_i\deg(F_i)=Q+4f
 \tag{7.2}
-$$
+```
 
 endpoint incidences.  This includes singleton trains and bridges with multiplicity in
 the same way as DT's identity `2T=b+Q+4f`.
@@ -467,25 +467,25 @@ By AE.1, after the train limit is taken and then the arcs `U` are shrunk, only `
 outer endpoint incidences can have direction in `U`.  Therefore the atomic train ends
 must satisfy
 
-$$
+```math
 2(s-2\epsilon)T
 \le Q+4f+o_U(D).
 \tag{7.3}
-$$
+```
 
 Divide by `D`, pass to the limit, shrink `U`, and then let `epsilon->0`:
 
-$$
+```math
 \boxed{2s\tau\le\xi+4\varphi.}
 \tag{7.4}
-$$
+```
 
 Combining with (6.6),
 
-$$
+```math
 \boxed{4\sqrt r\le\xi+4\varphi.}
 \tag{7.5}
-$$
+```
 
 This is the new endpoint-capacity inequality.  It is not a generic train-count bound:
 it uses the global-optimum cyclic geometry through outer-walk equidistribution.
@@ -496,94 +496,94 @@ it uses the global-optimum cyclic geometry through outer-walk equidistribution.
 
 Recall `xi=w+varphi`.  From (7.5) and (5.4),
 
-$$
+```math
 w+5\varphi
 \ge4\sqrt{r_{min}(w)},
-$$
+```
 so
 
-$$
+```math
 \boxed{
 \varphi\ge {4\sqrt{r_{min}(w)}-w\over5}.
 }
 \tag{8.1}
-$$
+```
 
 Since `nu>=xi=w+varphi`,
 
-$$
+```math
 \boxed{
 \nu\ge {4\over5}\left(w+\sqrt{r_{min}(w)}\right).
 }
 \tag{8.2}
-$$
+```
 
 On `0<=w<=1`, the function
 
-$$
+```math
 H(w):=w+\sqrt{r_{min}(w)}
-$$
+```
 
 is strictly increasing.  Indeed
 
-$$
+```math
 H'(w)
 =1-{w\over2\pi\sqrt3\sqrt{r_{min}(w)}}>0,
 \tag{8.3}
-$$
+```
 
 where the final inequality is immediate from `w<=1` and
 `r_min(w)> (pi^2-1)/(2pi sqrt3)>1/2`.
 
 By (4.5), (8.2) is weakest at `w=w_0(nu)`.  At that value,
 
-$$
+```math
 r_{min}(w_0)
 ={\pi\nu^2\over2\sqrt3}
 =\Delta\nu^2,
 \qquad
 \Delta:={\pi\over2\sqrt3}.
 \tag{8.4}
-$$
+```
 
 Therefore every `nu<1` survivor limit satisfies
 
-$$
+```math
 \nu
 \ge{4\over5}
 \left(\pi\sqrt{1-\nu^2}+\nu\sqrt\Delta\right).
 \tag{8.5}
-$$
+```
 
 Put
 
-$$
+```math
 B:={5\over4}-\sqrt\Delta>0.
 \tag{8.6}
-$$
+```
 
 Then
 
-$$
+```math
 B\nu\ge\pi\sqrt{1-\nu^2}.
 \tag{8.7}
-$$
+```
 
 Both sides are nonnegative.  Squaring and rearranging gives
 
-$$
+```math
 \nu^2\ge{\pi^2\over\pi^2+B^2}.
-$$
+```
 Thus
 
-$$
+```math
 \boxed{
 \nu\ge
 {\pi\over\sqrt{\pi^2+B^2}}
 =\lambda_A,
 }
 \tag{8.8}
-$$
+```
 
 which proves AE.2--AE.3.
 
@@ -594,7 +594,7 @@ which proves AE.2--AE.3.
 If a sequence approached `lambda_A`, every relaxation used above would be sharp.
 Writing `nu=lambda_A`, its limiting currencies would satisfy
 
-$$
+```math
 \boxed{
 w=\pi\sqrt{1-\nu^2},
 \qquad
@@ -603,11 +603,11 @@ w=\pi\sqrt{1-\nu^2},
 \xi=\nu,
 }
 \tag{9.1}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 r=\Delta\nu^2,
 \qquad
@@ -616,26 +616,26 @@ s\tau=2\sqrt r,
 2s\tau=\xi+4\varphi.
 }
 \tag{9.2}
-$$
+```
 
 Numerically only for orientation,
 
-$$
+```math
 \nu=0.99554058458\ldots,
 \quad
 w=0.29635968228\ldots,
 \quad
 \varphi=0.69918090231\ldots,
-$$
+```
 
-$$
+```math
 q/D=2.06856661909\ldots,
 \quad
 r=0.89882923223\ldots,
 \quad
 T/D=3.46692842370\ldots .
 \tag{9.3}
-$$
+```
 
 Equality in (6.5) means the atomic trains alone asymptotically attain the Mantel
 capacity for **all** `R=Theta(D^2)` train crossings.  Equality in (7.4) means their

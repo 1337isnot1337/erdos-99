@@ -25,23 +25,23 @@ in `D`.
 
 Let the high-phase good-leaf path from the parent theorem be
 
-$$
+```math
 P=(\tau_1,\ldots,\tau_m),
 \qquad m>pD-o(D),
-$$
+```
 
 where
 
-$$
+```math
 p={278778993\over78216868750}=0.0035641799\ldots .
-$$
+```
 
 Let `R_0,...,R_m` be the exact physical layers from the laminar shear theorem and, for
 an internal boundary `i`, put
 
-$$
+```math
 L_i:=|B_+\cap R_i|,
-$$
+```
 
 where `B_+` is the complete C65 loaded diameter-endpoint set.
 
@@ -51,57 +51,57 @@ For every unbounded survivor sequence in the stated scope, for all sufficiently 
 members there is an internal boundary `i` for which the consecutive smallest-leaf O--O
 trains `tau_i,tau_{i+1}` satisfy simultaneously
 
-$$
+```math
 \boxed{N_i<22060+o(1),}
 \tag{FM.1}
-$$
+```
 
-$$
+```math
 \boxed{B_i^{\rm sw}<{22060\over D}+o(D^{-1}),}
 \tag{FM.2}
-$$
+```
 
-$$
+```math
 \boxed{
 d_{\mathbb{RP}^1}(u_i,u_{i+1})
 <{22060\over D}+o(D^{-1}),
 }
 \tag{FM.3}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{L_i<22060+o(1).}
 \tag{FM.4}
-$$
+```
 
 The exact rational average is smaller than
 
-$$
+```math
 22057.339.
-$$
+```
 
 For the Section 157 cut resultants one also has
 
-$$
+```math
 \boxed{
 \|F_{i+1}-F_i\|<22060+o(1),
 \qquad
 |A_{i+1}-A_i|<22060+o(1).
 }
 \tag{FM.5}
-$$
+```
 
 Combining this with the exact middle-layer cusp theorem gives a finite interface normal
 form:
 
-$$
+```math
 \boxed{
 \mathcal S_i=\delta_H(B_+\cap R_i),
 }
 \tag{FM.6}
-$$
+```
 
 with both the number of middle loaded vertices and the number of diameter cut edges
 less than `22060+o(1)`.
@@ -109,10 +109,10 @@ less than `22060+o(1)`.
 In particular, the vertex set consisting of the middle loaded terminals together with
 all outside endpoints of switching diameter edges has size less than
 
-$$
+```math
 \boxed{44120+o(1).}
 \tag{FM.7}
-$$
+```
 
 The induced diameter graph on the middle terminals also has fewer than
 `22060+o(1)` edges.  Thus the entire diameter-graph patch incident to the moving layer
@@ -124,40 +124,40 @@ has bounded combinatorial size, independent of `D`.
 
 The exact laminar shear theorem partitions every source vertex into one of the layers
 
-$$
+```math
 R_0,R_1,\ldots,R_m.
-$$
+```
 
 Hence the loaded subsets `B_+ cap R_i` are disjoint and
 
-$$
+```math
 \sum_{i=1}^{m-1}L_i\le |B_+|=:q.
 \tag{FM.8}
-$$
+```
 
 Every loaded terminal is an extreme vertex of the C65 force hull `F`.  Consecutive
 vertices of `F` are distinct source points and therefore are at distance at least one.
 Thus
 
-$$
+```math
 q\le \operatorname{per}(F).
 \tag{FM.9}
-$$
+```
 
 The force hull has diameter `D`, so Cauchy's perimeter bound gives
 
-$$
+```math
 \operatorname{per}(F)\le\pi D.
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \sum_{i=1}^{m-1}L_i\le\pi D.
 }
 \tag{FM.10}
-$$
+```
 
 No near-disk estimate is needed; this is a finite global bound.
 
@@ -167,66 +167,66 @@ No near-disk estimate is needed; this is a finite global bound.
 
 Use the parent notation
 
-$$
+```math
 N_i=\#\{h:\varepsilon_{h,i+1}\ne\varepsilon_{hi}\},
-$$
+```
 
-$$
+```math
 B_i^{\rm sw}
 =\sum_h\beta_h
  |\varepsilon_{h,i+1}-\varepsilon_{hi}|,
-$$
+```
 
 and
 
-$$
+```math
 q_j=\beta_j-\alpha_\gamma-\pi/3>0
-$$
+```
 
 for the phase offset of leaf `tau_j` from the selected high-phase center train.
 The audited parent budgets are
 
-$$
+```math
 \sum_{i=1}^{m-1}N_i\le2\pi D,
 \tag{FM.11}
-$$
+```
 
-$$
+```math
 \sum_{i=1}^{m-1}B_i^{\rm sw}\le2,
 \tag{FM.12}
-$$
+```
 
 and
 
-$$
+```math
 \sum_{j=1}^{m}q_j
 \le{C_{phase}\over d_{low}}+o(1),
 \tag{FM.13}
-$$
+```
 
 where
 
-$$
+```math
 d_{low}={9891\over62500}=0.158256
-$$
+```
 
 and
 
-$$
+```math
 C_{phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
-$$
+```
 
 Define the four-cost quantity
 
-$$
+```math
 T_i^{(4)}
 :=N_i+D B_i^{\rm sw}+D(q_i+q_{i+1})+L_i.
 \tag{FM.14}
-$$
+```
 
 All four summands are nonnegative.  Equations (FM.10)--(FM.13) give
 
-$$
+```math
 \begin{aligned}
 \sum_{i=1}^{m-1}T_i^{(4)}
 &\le
@@ -234,49 +234,49 @@ $$
 &=\left(3\pi+2+{2C_{phase}\over d_{low}}\right)D+o(D).
 \end{aligned}
 \tag{FM.15}
-$$
+```
 
 Since `m>pD-o(D)`, one internal boundary satisfies
 
-$$
+```math
 T_i^{(4)}
 \le
 {3\pi+2+2C_{phase}/d_{low}\over p}+o(1).
 \tag{FM.16}
-$$
+```
 
 The exact certificate uses the same outward rational enclosures as the parent theorem,
 
-$$
+```math
 \pi<{355\over113},
 \qquad
 \sqrt3<{17321\over10000},
-$$
+```
 
 and proves
 
-$$
+```math
 \boxed{
 {3\pi+2+2C_{phase}/d_{low}\over p}
 <22057.339<22060.
 }
 \tag{FM.17}
-$$
+```
 
 Every summand of `T_i^(4)` is therefore less than `22060+o(1)`.
 This gives (FM.1), (FM.2), and (FM.4).  The parent phase relation
 
-$$
+```math
 d_{\mathbb{RP}^1}(u_i,u_{i+1})
 \le q_i+q_{i+1}
-$$
+```
 
 gives (FM.3).  Finally,
 
-$$
+```math
 \|F_{i+1}-F_i\|
 \le D B_i^{\rm sw}
-$$
+```
 
 and reverse triangle inequality give (FM.5).
 
@@ -286,32 +286,32 @@ and reverse triangle inequality give (FM.5).
 
 Apply the exact middle-layer cut theorem to the boundary selected in Section 2.  With
 
-$$
+```math
 B_i^{mid}:=B_+\cap R_i,
-$$
+```
 
 its switching rows are exactly
 
-$$
+```math
 \mathcal S_i=\delta_H(B_i^{mid}).
-$$
+```
 
 Equations (FM.1) and (FM.4) give
 
-$$
+```math
 |B_i^{mid}|<22060+o(1),
 \qquad
 |\delta_H(B_i^{mid})|<22060+o(1).
 \tag{FM.18}
-$$
+```
 
 Every outside endpoint adjacent to the middle layer is incident to at least one cut
 edge, so
 
-$$
+```math
 |N_H(B_i^{mid})\setminus B_i^{mid}|
 \le|\delta_H(B_i^{mid})|.
-$$
+```
 
 This proves the `44120+o(1)` vertex bound (FM.7).
 
@@ -320,11 +320,11 @@ straight-line thrackle has at most as many edges as vertices; equivalently one m
 the Hopf--Pannwitz diameter-graph bound when the induced subgraph has an edge of length
 `D`.  Therefore
 
-$$
+```math
 |E(H[B_i^{mid}])|
 \le|B_i^{mid}|<22060+o(1).
 \tag{FM.19}
-$$
+```
 
 So both the internal diameter graph of the middle layer and its complete active
 diameter interface are finite-state objects.

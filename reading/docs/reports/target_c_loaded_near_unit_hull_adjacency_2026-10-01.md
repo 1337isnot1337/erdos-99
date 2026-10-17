@@ -42,12 +42,12 @@ distance `ell<D` and actual diameter partners `c,d`, respectively, lying on
 the same side of the line `ab`. If a source point lies strictly on the other
 side, then
 
-$$
+```math
 (1+D^{-2})\ell^2+2\ell/D\ge3,
 \qquad
 \ell\ge\tau_D:=\frac{3D}{\sqrt{3D^2+4}+1}.
 \tag{1}
-$$
+```
 
 The partners may coincide. No source optimality or stress is needed.
 
@@ -56,41 +56,41 @@ The partners may coincide. No source optimality or stress is needed.
 Set `a=(-ell/2,0)`, `b=(ell/2,0)`, and orient the partner side downward.
 Write
 
-$$
+```math
 c-a=(A,-C),\qquad d-b=(-B,-E),\qquad C,E\ge0.
-$$
+```
 
 The constraints `|c-b|,|d-a|<=D`, together with `|c-a|=|d-b|=D`, give
 `A,B>=ell/2>0`. Let `alpha,beta` be their positive angles from the downward
 vertical, and put `theta=alpha+beta`. The difference of the two diameter
 vectors has length `2D sin(theta/2)`. Since
 
-$$
+```math
 |(c-a)-(d-b)|\le |c-d|+\ell\le D+\ell<2D,
-$$
+```
 
 we have `theta<pi` and
 
-$$
+```math
 2D\sin(\theta/2)\le D+\ell.
 \tag{2}
-$$
+```
 
 For a source point `z=(x,y)` above `ab`, its two upper disk constraints imply
 
-$$
+```math
 -A(x+\ell/2)+Cy\le0,\qquad B(x-\ell/2)+Ey\le0.
-$$
+```
 
 Together with `y>=0` these bound the triangle with base `ab` and base angles
 `alpha,beta`. Therefore the angle `azb` is at least `pi-theta`. For
 `r=|z-a|>=1` and `s=|z-b|>=1`, the cosine law gives
 
-$$
+```math
 \ell^2\ge r^2+s^2+2rs\cos\theta
 =(r-s)^2+2rs(1+\cos\theta)
 \ge4\cos^2(\theta/2).
-$$
+```
 
 Equation (2) now yields
 `ell^2>=4-(1+ell/D)^2`. Rearranging and taking the positive quadratic root
@@ -105,10 +105,10 @@ Let `B` be the set of all actual diameter endpoints and let `conv B` be
 two-dimensional. If distinct `a,b in B` are not consecutive on the boundary
 of `conv B` and `|ab|<D`, then
 
-$$
+```math
 |ab|\ge\tau_D.
 \tag{3}
-$$
+```
 
 In particular for `D>=6`, every pair in `B` of length at most `13/12` is a
 side of `conv B`. The near-unit graph induced by `B` is a subgraph of its
@@ -143,23 +143,23 @@ source chart or the hull of a smaller configuration.
 For integers `D>=6`, take `t=(1+1/(4D^2))/(2D)`,
 `C=(1-t^2)/(1+t^2)`, `S=2t/(1+t^2)`, and the five points
 
-$$
+```math
 c=0,\quad x=(D,0),\quad y=(D/2,\sqrt3D/2),
-$$
-$$
+```
+```math
 p=(D(1-C),DS),\quad
 q=(D(1-C)/2+\sqrt3DS/2,\sqrt3D(1-C)/2-DS/2).
-$$
+```
 
 The exact verifier certifies unit separation and diameter `D` for seven
 values through `10^4`, with actual diameter set
 `{cx,cy,xy,xp,yq}`. The loaded hull order is `c,q,x,y,p`; `p,q` are not
 consecutive. Their squared distance is
 
-$$
+```math
 |p-q|^2=D^2((1-C)^2+3S^2-2\sqrt3(1-C)S)
 =3-\sqrt3/D+O(D^{-2}).
-$$
+```
 
 Also
 `|cp|^2=|cq|^2=4D^2t^2/(1+t^2)=1+1/(4D^2)+O(D^-4)>1`.
@@ -202,9 +202,9 @@ norm at most `1/2+delta_D`; every support value is at least
 `1/2-delta_D`. For an edge whose outward normal differs from `n_0` by at
 most `eta_D`, either endpoint `p` therefore has
 
-$$
+```math
 p\cdot n_0\ge1/2-\delta_D-(1/2+\delta_D)\eta_D.
-$$
+```
 
 Its tangential coordinate is bounded in absolute value by
 `O(sqrt(delta_D+eta_D))`. Such oriented normals occur in one contiguous
@@ -224,10 +224,10 @@ For a source whose loaded hull has `q` sides, put `E=per(conv B)-q`. Suppose
 `D>=6` and `1+E<=D/4`. Then the number of source-hull extreme vertices outside
 `B` is at most
 
-$$
+```math
 \frac{24}{\sqrt{39}}E.
 \tag{4}
-$$
+```
 
 ### Proof
 
@@ -237,11 +237,11 @@ contain that cap. With `ell<=D/4`, (2) gives
 `cos(theta/2)>=sqrt(39)/8`. The sum of the two nonbase triangle side lengths,
 divided by `ell`, is
 
-$$
+```math
 \frac{\sin\alpha+\sin\beta}{\sin(\alpha+\beta)}
 =\frac{\cos((\alpha-\beta)/2)}{\cos(\theta/2)}
 \le\frac8{\sqrt{39}}.
-$$
+```
 
 Convex perimeter monotonicity bounds the expanded source-hull arc by that
 sum. If it has `t` added extreme vertices, unit separation bounds its arc

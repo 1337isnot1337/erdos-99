@@ -20,23 +20,23 @@ This report records two consequences that were not extracted in the existing Tar
 
 First, the total perimeter correction in the harmonic attachment-cell Oler decomposition is only boundary order:
 
-$$
+```math
 \sum_r \operatorname{per}(P_r)=O(D),
 \qquad P_r=\operatorname{conv}(A_r).
-$$
+```
 
 The earlier cellwise-Oler report used the cellwise bound `per(P_r)<=pi D`, leaving a potentially quadratic `D c_I` correction.  The component-diameter ledger instead makes the sum linear.
 
 Second, in the post-ZF cyclic circuit branch `s_Z=d_H=0`, the existing cyclic atomic-incidence inequalities already imply the universal defect floor
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}{Q\over D}
 \ge
 \frac45\sqrt{\frac{\pi}{2\sqrt3}}
 =0.7618502454911658\ldots .
 }
-$$
+```
 
 This does not assume the low-surplus regime `nu<1`.  It eliminates the entire `Q=o(D)` cyclic circuit subbranch, including `Q=0`.
 
@@ -66,86 +66,86 @@ Both implications are proved.  Neither is a Level I closure.
 
 Use the standard post-ZF notation.  Let `I_r` be the unloaded positive-contact components, let `A_r` be their distinct loaded attachment sets, put
 
-$$
+```math
 P_r:=\operatorname{conv}(A_r),
-$$
+```
 
 let `delta_r` be the internal contact-graph diameter of `I_r`, let `c_I` be the number of unloaded components, and put
 
-$$
+```math
 k=d_H+s_Z.
-$$
+```
 
 The harmonic-component diameter theorem gives
 
-$$
+```math
 \operatorname{diam}(A_r)\le \delta_r+2.
 \tag{AP.1}
-$$
+```
 
 Cauchy's perimeter-diameter inequality for a planar convex body therefore gives
 
-$$
+```math
 \operatorname{per}(P_r)
 \le \pi\operatorname{diam}(P_r)
 =\pi\operatorname{diam}(A_r)
 \le\pi(\delta_r+2).
 \tag{AP.2}
-$$
+```
 
 Summing over all unloaded components,
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{per}(P_r)
 \le
 \pi\left(\sum_r\delta_r+2c_I\right).
 }
 \tag{AP.3}
-$$
+```
 
 The exact ZK component-diameter ledger is
 
-$$
+```math
 \sum_r\delta_r+R_I+s_B+3k
 =6+e_{BB}+2s_C.
 \tag{AP.4}
-$$
+```
 
 All omitted terms on the left are nonnegative, so
 
-$$
+```math
 \sum_r\delta_r
 \le6+e_{BB}+2s_C-3k.
 \tag{AP.5}
-$$
+```
 
 Hence the finite explicit bound
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{per}(P_r)
 \le
 \pi\bigl(6+e_{BB}+2s_C-3k+2c_I\bigr).
 }
 \tag{AP.6}
-$$
+```
 
 The post-ZF pinned-contact identity
 
-$$
+```math
 c_I+e_{BB}+s_C=q-2+k
 \tag{AP.7}
-$$
+```
 
 and `q<=per(F)<=pi D` show that every term in AP.6 is `O(D)`.  Therefore
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{per}(P_r)=O(D).
 }
 \tag{AP.8}
-$$
+```
 
 This is uniform over all post-ZF branches and does not require `s_Z=0`.
 
@@ -153,30 +153,30 @@ This is uniform over all post-ZF branches and does not require `s_Z=0`.
 
 Apply Oler to the unit-separated set `I_r union A_r` in `P_r` and sum over the pairwise interior-disjoint attachment cells:
 
-$$
+```math
 {\sqrt3\over2}(n_I+a_{inc}-c_I)
 \le
 \operatorname{area}(F)-G
 +{\sqrt3\over4}\sum_r\operatorname{per}(P_r),
 \tag{AP.9}
-$$
+```
 
 where `n_I=sum_r|I_r|`, `a_inc=sum_r|A_r|`, and
 
-$$
+```math
 G=\operatorname{area}(F)-\sum_r\operatorname{area}(P_r).
-$$
+```
 
 If `v=n_I+q` is the nonisolated-core population, quotient connectivity gives `q-q_used<=e_BB`, while `a_inc>=q_used`.  Thus
 
-$$
+```math
 n_I+a_{inc}-c_I
 \ge v-e_{BB}-c_I.
-$$
+```
 
 Using AP.3,
 
-$$
+```math
 \boxed{
 {\sqrt3\over2}(v-e_{BB}-c_I)
 \le
@@ -184,11 +184,11 @@ $$
 +{\sqrt3\pi\over4}\left(\sum_r\delta_r+2c_I\right).
 }
 \tag{AP.10}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 v
 \le
@@ -197,7 +197,7 @@ v
 +{\pi\over2}\left(\sum_r\delta_r+2c_I\right).
 }
 \tag{AP.11}
-$$
+```
 
 The entire correction after the area term is `O(D)`.  This replaces the earlier `O(D c_I)` correction.  It is a genuine packing-capacity upgrade for the nonisolated core.
 
@@ -223,74 +223,74 @@ Consider the straight-line contact graph induced on `I_r union A_r`, including t
 
 Let `L_r` be the outer-face walk length of this induced graph.  Between two consecutive vertices of `A_r` on `partial P_r`, the outer-face route has one edge exactly when that side is one of the `c_r^partial` direct contacts; otherwise it has at least two edges.  Hence
 
-$$
+```math
 L_r\ge c_r^\partial+2(a_r-c_r^\partial)
 =2a_r-c_r^\partial.
 \tag{AS.1}
-$$
+```
 
 A connected triangle-free plane graph with `N` vertices, `M` edges, and outer-face length `L` satisfies
 
-$$
+```math
 M\le2N-2-{L\over2},
 \tag{AS.2}
-$$
+```
 
 by Euler plus the fact that every bounded face has length at least four.  Here
 
-$$
+```math
 N=n_r+a_r,
 \qquad
 M=e_r+t_r+c_r=2n_r+1+s_r+c_r.
-$$
+```
 
 Insert AS.1 into AS.2:
 
-$$
+```math
 2n_r+1+s_r+c_r
 \le2n_r+2a_r-2-a_r+{c_r^\partial\over2},
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 s_r+c_r-{c_r^\partial\over2}
 \le a_r-3.
 }
 \tag{AS.3}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{s_r\le a_r-3.}
 \tag{AS.4}
-$$
+```
 
 Summing gives
 
-$$
+```math
 \boxed{
 s_C\le u_A:=\sum_r(|A_r|-3).
 }
 \tag{AS.5}
-$$
+```
 
 Combining AS.5 with the exact ZJ identity
 
-$$
+```math
 s_C+r_Q=k+u_A+p_A+(s-1)
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{
 r_Q\ge k+p_A+(s-1)+(u_A-s_C)\ge k+s-1.
 }
 \tag{AS.6}
-$$
+```
 
 Thus mixed defect cannot be paid solely by hidden pinned-contact self-stress; it forces loaded-quotient connectivity slack unless extra attachment incidence is present.
 
@@ -300,31 +300,31 @@ This inequality is independent of AP and of the `s_Z=0` circuit sparsity lemma. 
 
 Assume now
 
-$$
+```math
 s_Z=d_H=0
-$$
+```
 
 and pass to an unbounded cyclic Woodall sequence.  Use the notation of the cyclic atomic-incidence report:
 
-$$
+```math
 \xi=\lim {Q\over D},
 \qquad
 \varphi=\lim {f\over D},
 \qquad
 w=\xi-\varphi\ge0,
 \tag{CQ.1}
-$$
+```
 
 along an arbitrary convergent subsequence.  Here `f` is the number of bounded exceptional faces.  Since `f<=Q<=q<=pi D+o(D)`, one has
 
-$$
+```math
 0\le w\le\pi.
 \tag{CQ.2}
-$$
+```
 
 The same report proves the rhombus-area lower bound
 
-$$
+```math
 r:=\lim {R\over D^2}
 \ge
 r_{min}(w)
@@ -333,65 +333,65 @@ r_{min}(w)
 \qquad
 \Delta={\pi\over2\sqrt3},
 \tag{CQ.3}
-$$
+```
 
 and the actual stopped-train endpoint-capacity inequality
 
-$$
+```math
 4\sqrt r\le\xi+4\varphi.
 \tag{CQ.4}
-$$
+```
 
 Since `xi=w+varphi`, CQ.4 and CQ.3 give
 
-$$
+```math
 w+5\varphi\ge4\sqrt{r_{min}(w)},
-$$
+```
 
 hence
 
-$$
+```math
 \xi=w+\varphi
 \ge
 {4\over5}\left(w+\sqrt{r_{min}(w)}\right).
 \tag{CQ.5}
-$$
+```
 
 It remains only to minimize the right side without importing the low-surplus condition used later in the atomic report.
 
 Write `x=w/pi in [0,1]`.  Then
 
-$$
+```math
 w+\sqrt{r_{min}(w)}
 =
 \pi x+\sqrt\Delta\sqrt{1-x^2}.
 \tag{CQ.6}
-$$
+```
 
 The right side is a concave function of `x` on `[0,1]`.  A concave function on an interval attains its minimum at an endpoint.  The endpoint values are
 
-$$
+```math
 \sqrt\Delta
 \quad\text{and}\quad
 \pi.
-$$
+```
 
 Since `sqrt(Delta)<pi`, CQ.6 yields
 
-$$
+```math
 w+\sqrt{r_{min}(w)}\ge\sqrt\Delta.
 \tag{CQ.7}
-$$
+```
 
 Substitute into CQ.5:
 
-$$
+```math
 \boxed{
 \xi\ge {4\over5}\sqrt\Delta
 ={4\over5}\sqrt{\frac\pi{2\sqrt3}}.
 }
 \tag{CQ.8}
-$$
+```
 
 Because the initial convergent subsequence was arbitrary, this proves:
 
@@ -399,7 +399,7 @@ Because the initial convergent subsequence was arbitrary, this proves:
 
 Every unbounded sequence of post-ZF cyclic circuit survivors satisfies
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}{Q\over D}
 \ge
@@ -407,7 +407,7 @@ $$
 =0.7618502454911658\ldots .
 }
 \tag{CQ.9}
-$$
+```
 
 The decimal is not used in the proof.
 
@@ -415,11 +415,11 @@ The decimal is not used in the proof.
 
 Because `Q<=e_BB`,
 
-$$
+```math
 \liminf {e_{BB}\over D}
 \ge {4\over5}\sqrt{\frac\pi{2\sqrt3}}.
 \tag{CQ.10}
-$$
+```
 
 In particular the cyclic circuit branch has `Q=Omega(D)` and `e_BB=Omega(D)` independently of whether `nu=(e_BB+2s_C)/D` is below or above one.  Thus `Q=0`, `Q=o(D)`, and the pure-rhombic cyclic circuit subbranch are all impossible for sufficiently large survivors.
 
@@ -427,9 +427,9 @@ In particular the cyclic circuit branch has `Q=Omega(D)` and `e_BB=Omega(D)` ind
 
 The cyclic atomic-incidence report uses CQ.3-CQ.4 together with the low-surplus cavity inequality
 
-$$
+```math
 w\ge\pi\sqrt{1-\nu^2}
-$$
+```
 
 and `xi<=nu` to force `nu>=0.995540...`; its endpoint is then excluded qualitatively.
 
@@ -455,9 +455,9 @@ CQ instead removes `nu` entirely and minimizes the train/area inequalities direc
 
 After CQ, the cyclic circuit branch cannot hide in a rhombic or sublinear-defect topology.  It must carry at least
 
-$$
+```math
 0.76185024549\ldots D
-$$
+```
 
 units of bounded exceptional-face degree defect.  The unresolved cyclic mechanism is therefore a boundary-order family of stopped-train exceptional faces, potentially mostly near-pentagonal, that absorbs the atomic train endpoints while preserving the global source-capacity inequalities.
 

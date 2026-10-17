@@ -24,27 +24,27 @@ Reuleaux polygon determined by the odd diameter cycle.  FS.3 makes every arc ang
 that Reuleaux polygon `O(D^{-1/4})`.  The skeleton perimeter therefore saturates
 Cauchy's diameter-perimeter inequality:
 
-$$
+```math
 \boxed{
 0\le \pi D-P_F
 \le {\pi D\over24}\Theta_D^2
 =O(\sqrt D),
 }
 \tag{CRP.1}
-$$
+```
 
 where `P_F=per(F)` is the actual force-hull perimeter and `Theta_D` is the FS.3
 shared-diameter angle bound.  In particular
 
-$$
+```math
 \boxed{P_F/D\to\pi.}
 \tag{CRP.2}
-$$
+```
 
 Feeding this forced perimeter into the exact `s_Z=0,d_H=0` SZ/RSJ cavity inequality
 raises the cyclic circuit floor from E597's `>0.597` to
 
-$$
+```math
 \boxed{
 \liminf {e_{BB}+2s_C\over D}
 \ge
@@ -53,17 +53,17 @@ $$
 =0.6932725422883145\ldots .
 }
 \tag{CRP.3}
-$$
+```
 
 The endpoint cannot occur.  Hence there are absolute `epsilon_C>0` and `D_0` such
 that every sufficiently large cyclic `s_Z=0` survivor satisfies
 
-$$
+```math
 \boxed{
 {e_{BB}+2s_C\over D}\ge\lambda_C+\epsilon_C.
 }
 \tag{CRP.4}
-$$
+```
 
 This does not close the cyclic branch: no upper bound below the right side is proved.
 The new content is that the cyclic diameter topology forces the actual response hull
@@ -77,11 +77,11 @@ low-surplus portion of that branch.
 Assume an unbounded sequence of lexicographically normalized triangle-free global
 minimizers satisfying the audited post-ZF hypotheses and
 
-$$
+```math
 s_Z=0,
 \qquad d_H=0.
 \tag{1.1}
-$$
+```
 
 By WT, the full loaded diameter graph `H` is connected and unicyclic: it contains one
 odd cycle `Gamma`, and every vertex outside `Gamma` is a pendant diameter leaf.  Write
@@ -95,48 +95,54 @@ The proof uses only the following existing statements.
 2. **FS.3.**  If two actual diameter pairs share an endpoint, their angle is at most
    `Theta_D=O(D^{-1/4})`.
 3. **SZ.**  In `s_Z=0`, with
-   $$
+   ```math
    \nu_D={e_{BB}+2s_C-3d_H\over D},
-   $$
+   
+   ```
    every subsequential limit `(nu,y,p)` satisfies the RSJ cavity inequality
-   $$
+   ```math
    A_*(y,p)-{\pi\over4}\nu^2
    \le {\bigl(\nu+m(y,p)\bigr)^2\over4\pi},
    \quad
    m(y,p)=\min\{y,p-y\},
    \tag{1.2}
-   $$
+   
+   ```
    where
-   $$
+   ```math
    y=\lim h/D,
    \quad p=\lim P_F/D,
    \quad
    A_*(y,p)=\max\{\Phi(y),\Psi(p)\},
    \tag{1.3}
-   $$
+   
+   ```
    and
-   $$
+   ```math
    \Psi(p)={\pi\over(\pi-2)^2}\left({p\over2}-1\right)^2.
    \tag{1.4}
-   $$
+   
+   ```
 4. **DD.2 and ZG.**  The outer-pocket area obeys
-   $$
+   ```math
    H_{out}\le {1\over\sqrt6}(x_B+a)^{3/2}\sqrt{b-P_F},
    \tag{1.5}
-   $$
+   
+   ```
    while the force-hull uncovered gap satisfies
-   $$
+   ```math
    G\le H_{out}+A_{exc}+O(D),
    \tag{1.6}
-   $$
+   
+   ```
    with `A_exc/D^2 <= (Q/D)^2/(4pi)+o(1)` in the asymptotic form used by SZ/E597.
 
 Since `d_H=0`, the SZ currency is simply
 
-$$
+```math
 \nu_D={e_{BB}+2s_C\over D}.
 \tag{1.7}
-$$
+```
 
 ---
 
@@ -144,28 +150,28 @@ $$
 
 Let the circular sides of `R_Gamma` have central angles
 
-$$
+```math
 \theta_1,\ldots,\theta_r>0.
 \tag{2.1}
-$$
+```
 
 Each side has radius `D`.  Its center is one cycle vertex and its two endpoints are the
 two diameter-cycle neighbors of that center in the Reuleaux indexing.  Hence each
 `theta_i` is the angle between two actual diameter chords sharing one endpoint.  FS.3
 therefore gives
 
-$$
+```math
 \boxed{0<\theta_i\le\Theta_D\quad(1\le i\le r).}
 \tag{2.2}
-$$
+```
 
 Barbier gives `per(R_Gamma)=pi D`.  Since its boundary is the disjoint union of the
 radius-`D` arcs of lengths `D theta_i`,
 
-$$
+```math
 \boxed{\sum_{i=1}^r\theta_i=\pi.}
 \tag{2.3}
-$$
+```
 
 No regularity of the Reuleaux polygon is assumed.
 
@@ -175,35 +181,35 @@ No regularity of the Reuleaux polygon is assumed.
 
 Let
 
-$$
+```math
 S_\Gamma=\operatorname{conv}V(\Gamma)
 \tag{3.1}
-$$
+```
 
 be the Reuleaux skeleton.  The chord underlying the arc of angle `theta_i` has length
 
-$$
+```math
 2D\sin(\theta_i/2),
-$$
+```
 
 and these chords are exactly the sides of `S_Gamma`.  Therefore
 
-$$
+```math
 \operatorname{per}S_\Gamma
 =2D\sum_i\sin(\theta_i/2).
 \tag{3.2}
-$$
+```
 
 For `x>=0`, `sin x>=x-x^3/6`, so
 
-$$
+```math
 0\le \theta-2\sin(\theta/2)\le {\theta^3\over24}.
 \tag{3.3}
-$$
+```
 
 Using (2.3),
 
-$$
+```math
 \begin{aligned}
 0\le\pi D-\operatorname{per}S_\Gamma
 &=D\sum_i\left(\theta_i-2\sin(\theta_i/2)\right)\\
@@ -212,18 +218,18 @@ $$
 &={\pi D\over24}\Theta_D^2.
 \end{aligned}
 \tag{3.4}
-$$
+```
 
 C17 puts the cycle vertices among the loaded force-hull terminals, so
 `S_Gamma subset F`.  Perimeter is monotone under inclusion for planar convex bodies.
 Cauchy's perimeter-diameter inequality gives `P_F<=pi D`.  Hence
 
-$$
+```math
 0\le\pi D-P_F
 \le\pi D-\operatorname{per}S_\Gamma
 \le {\pi D\over24}\Theta_D^2.
 \tag{3.5}
-$$
+```
 
 FS.3 has `Theta_D=O(D^{-1/4})`, proving CRP.1--CRP.2.
 
@@ -240,75 +246,75 @@ skeleton.
 
 Take any subsequence along which
 
-$$
+```math
 \nu_D\to\nu,
 \qquad y_D:=h/D\to y.
 \tag{4.1}
-$$
+```
 
 By CRP.2,
 
-$$
+```math
 p=P_F/D\to\pi.
 \tag{4.2}
-$$
+```
 
 Because `d_H=0`, `h=q`.  The force hull has `q` unit-separated convex vertices, so
 `q<=P_F`; hence
 
-$$
+```math
 y\le\pi.
 \tag{4.3}
-$$
+```
 
 SZ also gives `P_F<=2h` in this phase, so
 
-$$
+```math
 y\ge\pi/2.
 \tag{4.4}
-$$
+```
 
 Therefore
 
-$$
+```math
 m(y,\pi)=\min\{y,\pi-y\}=\pi-y\le\pi/2.
 \tag{4.5}
-$$
+```
 
 The RSJ symmetric area term becomes exactly
 
-$$
+```math
 \Psi(\pi)
 ={\pi\over(\pi-2)^2}\left({\pi\over2}-1\right)^2
 ={\pi\over4}.
 \tag{4.6}
-$$
+```
 
 Thus the SZ necessary inequality (1.2) implies
 
-$$
+```math
 {\pi\over4}-{\pi\over4}\nu^2
 \le {\left(\nu+m(y,\pi)\right)^2\over4\pi}
 \le {\left(\nu+\pi/2\right)^2\over4\pi}.
 \tag{4.7}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 (\pi^2+1)\nu^2+\pi\nu-{3\pi^2\over4}\ge0.
 \tag{4.8}
-$$
+```
 
 The left side is strictly increasing for `nu>=0`.  Its unique positive root is
 
-$$
+```math
 \boxed{
 \lambda_C
 ={\pi(\sqrt{3\pi^2+4}-1)\over2(\pi^2+1)}.
 }
 \tag{4.9}
-$$
+```
 
 Hence `nu>=lambda_C` on every convergent subsequence, which proves CRP.3.
 
@@ -320,85 +326,85 @@ The displayed decimal is diagnostic only; the proof uses the exact root (4.9).
 
 Assume for contradiction that an unbounded cyclic circuit sequence satisfies
 
-$$
+```math
 \nu_D\to\lambda_C.
 \tag{5.1}
-$$
+```
 
 Every relaxation in (4.7) must then be asymptotically sharp.  Since the threshold is
 strictly decreasing in the available cavity parameter `m`, (4.5) forces
 
-$$
+```math
 \boxed{y=h/D=q/D\to\pi/2.}
 \tag{5.2}
-$$
+```
 
 The exact circuit perimeter identity is
 
-$$
+```math
 b+Q=2h.
 \tag{5.3}
-$$
+```
 
 By CRP.2, `P_F/D->pi`, while `b>=P_F`.  Combining with (5.2)--(5.3) gives
 
-$$
+```math
 \boxed{
 {b\over D}\to\pi,
 \qquad {Q\over D}\to0,
 \qquad {b-P_F\over D}\to0.
 }
 \tag{5.4}
-$$
+```
 
 Also `x_B=b-q=O(D)` and `a<=q=O(D)`.  DD.2 therefore gives
 
-$$
+```math
 \boxed{H_{out}=o(D^2).}
 \tag{5.5}
-$$
+```
 
 The exceptional-face isoperimetric estimate and `Q=o(D)` give
 
-$$
+```math
 \boxed{A_{exc}=o(D^2).}
 \tag{5.6}
-$$
+```
 
 ZG now yields
 
-$$
+```math
 \boxed{G=o(D^2).}
 \tag{5.7}
-$$
+```
 
 On the other hand, (4.6) and the RSJ transfer give
 
-$$
+```math
 \operatorname{area}F=(\pi/4-o(1))D^2.
 \tag{5.8}
-$$
+```
 
 The exact ZK/SZ attachment estimate, with `d_H=0`, gives
 
-$$
+```math
 \limsup {1\over D^2}\sum_r\operatorname{area}(P_r)
 \le {\pi\over4}\lambda_C^2.
 \tag{5.9}
-$$
+```
 
 Since `lambda_C<1`, the definition
 
-$$
+```math
 G=\operatorname{area}F-\sum_r\operatorname{area}(P_r)
-$$
+```
 therefore gives the fixed lower bound
 
-$$
+```math
 \liminf {G\over D^2}
 \ge {\pi\over4}(1-\lambda_C^2)>0,
 \tag{5.10}
-$$
+```
 
 contradicting (5.7).
 
@@ -443,9 +449,9 @@ cavity inequality.
 CRP does not prove an upper bound on `e_BB+2s_C`, so the cyclic circuit branch remains
 possible only in the high-surplus regime
 
-$$
+```math
 {e_{BB}+2s_C\over D}\ge\lambda_C+\epsilon_C.
-$$
+```
 
 The Woodall forest branch remains separate and still carries the E597 component charge
 `3d_H/D`.

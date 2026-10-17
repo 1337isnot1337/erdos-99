@@ -14,13 +14,13 @@ The independent regression is
 The historical optimized joint-train candidate combines the exact Section-82/89 train budget with the joint-shore
 capacity correction. At `sigma=4.5e-4`, it verifies
 
-$$
+```math
 T_D/D<1.827,
 \qquad
 |A_D|,|B_D|\ge0.085D,
 \qquad
 \mu_{16}=0.9760511764172871\ldots .
-$$
+```
 
 The finite phase-bin margin is `0.0013366422...D^2`, the endpoint density on one
 principal corridor is above `0.0415`, and the exact-cosine contradiction margin is

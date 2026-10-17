@@ -28,19 +28,19 @@ needed by the remaining C59 collinear multi-body problem.
 Let `G` be a finite connected graph with strictly positive conductances, Laplacian
 `L`, and resistance distance
 
-$$
+```math
 R_{uv}=(e_u-e_v)^{\mathsf T}L^+(e_u-e_v).
 \tag{C60.1}
-$$
+```
 
 ### Lemma C60.1 (resistance equality is vertex separation)
 
 For distinct vertices `a,b,c`,
 
-$$
+```math
 \boxed{R_{ab}=R_{ac}+R_{cb}}
 \tag{C60.2}
-$$
+```
 
 if and only if deleting `c` puts `a` and `b` in different connected components.
 
@@ -49,20 +49,20 @@ if and only if deleting `c` puts `a` and `b` in different connected components.
 Ground `c` and send one unit of current from `a` to `c`. Let `phi_c=0` be the
 resulting voltage. Then
 
-$$
+```math
 L\phi=e_a-e_c,
 \qquad
 \phi_b=(e_b-e_c)^{\mathsf T}L^+(e_a-e_c).
 \tag{C60.3}
-$$
+```
 
 Expanding the quadratic form for
 `e_a-e_b=(e_a-e_c)-(e_b-e_c)` gives
 
-$$
+```math
 R_{ab}=R_{ac}+R_{bc}-2\phi_b.
 \tag{C60.4}
-$$
+```
 
 On every component of `G-c` not containing `a`, `phi` is harmonic with zero boundary
 value through `c`, so `phi=0`. On the component containing `a`, the strong discrete
@@ -70,11 +70,11 @@ maximum principle gives `phi>0`: `phi_a=R_ac>0`, and a zero at any other vertex 
 force zero through its positive-conductance neighbors until reaching the positive
 source. Hence
 
-$$
+```math
 \phi_b=0
 \iff
 a,b\text{ lie in different components of }G-c.
-$$
+```
 
 Together with (C60.4), this proves the claim. `\square`
 
@@ -88,19 +88,19 @@ component have center `o`, leaves `v_1,...,v_k`, and positive diameter weights
 
 C58.1 gives
 
-$$
+```math
 R_{ov_i}=\frac1{\beta_i},
 \qquad
 R_{v_iv_j}=\frac1{\beta_i}+\frac1{\beta_j}.
 \tag{C60.5}
-$$
+```
 
 Thus for every `i!=j`,
 
-$$
+```math
 R_{v_iv_j}=R_{v_io}+R_{ov_j}.
 \tag{C60.6}
-$$
+```
 
 Apply Lemma C60.1 in the actual connected positive contact graph.
 
@@ -109,12 +109,12 @@ Apply Lemma C60.1 in the actual connected positive contact graph.
 For every C56-Z diameter-star component, deleting its diameter center `o` leaves at
 most one diameter leaf in each positive-contact component. Consequently
 
-$$
+```math
 \boxed{
 \deg_{G_s}(o)\ge k=\deg_{H_s[T]}(o).
 }
 \tag{C60.7}
-$$
+```
 
 In a triangle-free source, `deg_Gs(o)<=5`, hence `k<=5`.
 
@@ -128,15 +128,15 @@ specific loaded diameter-star center, and the statement works for `k=2,3` as wel
 
 Let `P_a,P_b` be two extreme null bodies with different angular rates. C57 gives
 
-$$
+```math
 P_a\cap P_b=\{z\}.
-$$
+```
 
 The midpoint positive contact graph is exactly
 
-$$
+```math
 G_{ab}=G_a\cup G_b,
-$$
+```
 
 and this is already a graph one-sum at `z`: an edge crossing from
 `P_a-{z}` to `P_b-{z}` could not belong to either extreme positive support.
@@ -155,9 +155,9 @@ route around a pairwise hinge.
 C59 shows that three distinct rigid-motion classes `A,B,C` with pairwise distinct
 hinges
 
-$$
+```math
 z_{AB},z_{BC},z_{CA}
-$$
+```
 
 can have nonconstant angular rates only if those three source points are collinear.
 
@@ -174,14 +174,14 @@ C56-Z.
 C58-C60 consequently apply to the **full three-body union**, not merely to its
 pairwise midpoints:
 
-$$
+```math
 \boxed{
 H_A\cup H_B\cup H_C
 \text{ is a degree-}5\text{ star forest, and every nontrivial star center is a
 contact articulation of }G_A\cup G_B\cup G_C.
 }
 \tag{C60.8}
-$$
+```
 
 This is the exact graph structure that any collinear pin cycle must satisfy.
 

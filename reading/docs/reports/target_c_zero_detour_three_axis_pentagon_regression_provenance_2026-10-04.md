@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zero_detour_three_axis_pentagon_regression_provenance_2026-10-04.md) · source SHA-256 `8100dc9b89e1fa4d81ea31f0a36101b6a902bdce317b11a65c89a7eaa8bbb88e`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
+
 <!-- theorem-state: {"artifact_id":"ART-1B417242EBA0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — exact three-axis pentagon regression for the zero-detour route
 
@@ -23,29 +25,37 @@ minimum-diameter quantifier.
 
 For any sufficiently small (a>0), set (b=b(a)) by
 
-$$
+```math
 \cos b=\cos a-\tfrac12,
-$$
+```
 
 and take five oriented unit edge vectors with arguments
 
-$$
+```math
 -a,\quad a,\quad \pi-b,\quad \pi,\quad \pi+b.
-$$
+```
 
 Their vector sum is (2\cos a-2\cos b-1=0), so they close. The successive exterior
 turns are (2a,\pi-b-a,b,b,\pi-b-a); for sufficiently small positive (a), all
 are strictly between (0) and (2\pi/3). The pentagon is therefore strictly
 convex. Each diagonal joins vertices two edges apart and has length
-$2\cos(\delta/2)>1$ for its intervening turn $\delta<2\pi/3$. Thus its only
+$`2\cos(\delta/2)>1`$ for its intervening turn $`\delta<2\pi/3`$. Thus its only
 unit pairs are its five sides, and it contains no unit equilateral triangle.
 
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 As (a\downarrow0), (b\to\pi/3), and the projective edge directions approach
 the three axes (0,\pi/3,2\pi/3\). The limiting vertex polygon has area
-$3\sqrt3/4$. For the five-point face, the Oler slack is
-$A-3\sqrt3/4$, so it tends to zero. Hence neither approximate three-axis alignment
+$`3\sqrt3/4`$. For the five-point face, the Oler slack is
+$`A-3\sqrt3/4`$, so it tends to zero. Hence neither approximate three-axis alignment
 nor triangle-freeness supplies a uniform local phase gap or positive per-face Oler
 slack.
+```
+
+
 
 ## Durable consequence and limits
 

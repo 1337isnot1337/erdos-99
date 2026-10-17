@@ -21,9 +21,9 @@ a common node.  This note identifies the entire common intersection.
 Let `P_h` be the bridge-block-tree path between the endpoint blocks of a positive
 diameter edge `h in H_+`.  Then
 
-$$
+```math
 I_*:=\bigcap_{h\in H_+}P_h
-$$
+```
 
 is a nonempty tree path.  Every internal node of this path is reaction-free and has
 degree exactly two in the **whole** bridge-block tree.  C22 therefore collapses every
@@ -46,29 +46,29 @@ Fix a normalized KKT stress `(alpha,beta)`.  Let `G_+` be its unique nontrivial
 positive-contact component.  Delete all bridges of `G_+` and contract the remaining
 connected components to the bridge-block tree
 
-$$
+```math
 T.
 \tag{C24.1}
-$$
+```
 
 For every positive diameter edge `h=bk in H_+`, let `P_h` be the unique path in `T`
 between the blocks containing `b` and `k`.
 
 C23 proves
 
-$$
+```math
 \bigcap_{h\in H_+}P_h\ne\varnothing.
 \tag{C24.2}
-$$
+```
 
 Define
 
-$$
+```math
 \boxed{
 I_*:=\bigcap_{h\in H_+}P_h.
 }
 \tag{C24.3}
-$$
+```
 
 ---
 
@@ -100,18 +100,18 @@ the two incident common-route edges by `e^-` and `e^+`.
 
 `X` contains no positive diameter endpoint:
 
-$$
+```math
 \boxed{X\cap B_+=\varnothing.}
 \tag{C24.4}
-$$
+```
 
 #### Proof
 
 Suppose `b in X cap B_+`.  By definition of `B_+`, some positive diameter edge
 
-$$
+```math
 h=bk\in H_+
-$$
+```
 
 is incident to `b`.  The tree path `P_h` starts at the block `X`.  A path starting at
 `X` can leave `X` through at most one of the two distinct tree edges `e^-`,`e^+`; it
@@ -140,9 +140,9 @@ The corresponding contact bridge separates a nonempty side of the positive conta
 component.  C20.1 says **both** sides of every positive-contact bridge contain a
 positive diameter-reaction vertex.  Hence `U` contains some
 
-$$
+```math
 b\in B_+.
-$$
+```
 
 Choose a positive diameter edge `h=bk in H_+` incident to `b`.  The tree path `P_h`
 starts in `U`, reaches `X` through `f`, and after reaching `X` can continue through at
@@ -179,10 +179,10 @@ all collinear, have one common stress value, and concatenate into an exact strai
 chain.  In particular the Euclidean distance between its endpoint bridge blocks, as
 measured between the terminal bridge vertices of the chain, is exactly `L`, so
 
-$$
+```math
 \boxed{L\le D.}
 \tag{C24.5}
-$$
+```
 
 #### Proof
 
@@ -226,10 +226,10 @@ cycles.  Therefore `H_+` has no cycle. `\square`
 
 If `H_+` contains a cycle, then
 
-$$
+```math
 \boxed{|V(I_*)|=1.}
 \tag{C24.6}
-$$
+```
 
 That is, all positive diameter terminal paths meet in one common bridge block, but no
 positive contact bridge is common to all of them.
@@ -249,7 +249,7 @@ vector resultant on every common-route bridge.
 If the two loaded sides are called `B_L,B_R`, then for every bridge `e` in the common
 route,
 
-$$
+```math
 \boxed{
 \alpha_e\nu_e
 =
@@ -257,7 +257,7 @@ $$
 \beta_{bk}\frac{b-k}{D}\,D,
 }
 \tag{C24.7}
-$$
+```
 
 with consistent orientation.  Since the chain theorem already says `alpha_e` and
 `nu_e` are constant, this is a single global diameter-cut resultant transported

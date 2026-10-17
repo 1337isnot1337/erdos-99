@@ -17,64 +17,64 @@
 
 For even
 
-$$
+```math
 m=q-2=2n,
-$$
+```
 
 the auxiliary polynomial introduced in PE is not ad hoc. It is exactly a standard trace-Chebyshev/Dickson polynomial with one linear perturbation.
 
 Let
 
-$$
+```math
 C_k(x)=2T_k(x/2),
-$$
+```
 
 so
 
-$$
+```math
 C_a(C_b(x))=C_{ab}(x),
 \qquad
 C_k(-x)=(-1)^kC_k(x).
-$$
+```
 
 The P1 physical parameter
 
-$$
+```math
 u=2\sin(\delta/2)=1/D
-$$
+```
 
 satisfies
 
-$$
+```math
 G_n(u):=C_n(2-u^2)-2u=0.
-$$
+```
 
 Because
 
-$$
+```math
 2-u^2=-C_2(u),
-$$
+```
 
 we obtain the exact collapse
 
-$$
+```math
 \boxed{
 G_n(u)=(-1)^nC_{2n}(u)-2u
       =(-1)^nC_m(u)-2u.
 }
 \tag{DC.1}
 
-$$
+```
 
 Define
 
-$$
+```math
 \boxed{
 J_m(u):=(-1)^{m/2}C_m(u)-2u.
 }
 \tag{DC.2}
 
-$$
+```
 
 Then every even-`m` P1 source satisfies `J_m(1/D)=0`.
 
@@ -84,12 +84,12 @@ The rational roots of `J_m` can be classified exactly.
 
 For even `m=2n`, `J_m` has a rational root if and only if `3|n`. In that case it has exactly one rational root,
 
-$$
+```math
 \boxed{
 u=(-1)^{n/3}\in\{+1,-1\}.}
 \tag{DC.3}
 
-$$
+```
 
 Equivalently,
 
@@ -99,9 +99,9 @@ Equivalently,
 
 Since every large P1 source has
 
-$$
+```math
 0<u=1/D<1,
-$$
+```
 
 the physical P1 root is never rational.
 
@@ -113,46 +113,46 @@ Thus the experimentally observed linear factor when `3|n` is completely explaine
 
 The trace-Chebyshev family satisfies
 
-$$
+```math
 C_k(z+z^{-1})=z^k+z^{-k}.
-$$
+```
 
 Applying this twice gives the composition identity
 
-$$
+```math
 \boxed{C_a(C_b(x))=C_{ab}(x).}
 \tag{1.1}
-$$
+```
 
 Also
 
-$$
+```math
 C_k(-x)=(-1)^kC_k(x).
 \tag{1.2}
-$$
+```
 
 Now
 
-$$
+```math
 C_2(u)=u^2-2,
-$$
+```
 
 so
 
-$$
+```math
 2-u^2=-C_2(u).
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 C_n(2-u^2)
 &=C_n(-C_2(u))\\
 &=(-1)^n C_n(C_2(u))\\
 &=(-1)^n C_{2n}(u).
 \end{aligned}
-$$
+```
 
 Substituting into PE.3 proves DC.1-DC.2.
 
@@ -164,23 +164,23 @@ This normalization matters because all remaining even-P1 arithmetic is now a fac
 
 For every `m`, `C_m(x)` is monic with integer coefficients. For even `m=2n`,
 
-$$
+```math
 C_m(0)=2\cos(m\pi/2)=2(-1)^n.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{J_m(0)=2.}
 \tag{2.1}
-$$
+```
 
 The leading coefficient of `J_m` is `(-1)^n`, so the rational-root theorem implies every rational root lies in
 
-$$
+```math
 \{\pm1,\pm2\}.
 \tag{2.2}
-$$
+```
 
 ---
 
@@ -188,51 +188,51 @@ $$
 
 It is cleaner to use the equivalent PE form
 
-$$
+```math
 J_m(u)=G_n(u)=C_n(2-u^2)-2u.
-$$
+```
 
 At `u=1`,
 
-$$
+```math
 J_m(1)=C_n(1)-2
 =2\cos(n\pi/3)-2.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{J_m(1)=0\iff n\equiv0\pmod6.}
 \tag{3.1}
-$$
+```
 
 At `u=-1`,
 
-$$
+```math
 J_m(-1)=C_n(1)+2
 =2\cos(n\pi/3)+2,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{J_m(-1)=0\iff n\equiv3\pmod6.}
 \tag{3.2}
-$$
+```
 
 At `u=2`, use `C_m(2)=2` in the Dickson form:
 
-$$
+```math
 J_m(2)=2(-1)^n-4\in\{-2,-6\},
-$$
+```
 
 never zero.
 
 Since `m` is even, `C_m(-2)=2`, and
 
-$$
+```math
 J_m(-2)=2(-1)^n+4\in\{2,6\},
-$$
+```
 
 also never zero.
 
@@ -244,29 +244,29 @@ Thus the only possible rational roots are exactly those in (3.1)-(3.2). Combinin
 
 For every P1 source,
 
-$$
+```math
 u=1/D>0.
-$$
+```
 
 In the sufficiently large Target C regime, `D>1`, so
 
-$$
+```math
 0<u<1.
-$$
+```
 
 Therefore neither of the two possible rational roots `+1,-1` is physical.
 
 When `3|n`, define
 
-$$
+```math
 \varepsilon_n:=(-1)^{n/3}.
-$$
+```
 
 Then
 
-$$
+```math
 J_m(u)=(u-\varepsilon_n)K_m(u)
-$$
+```
 
 for an integer polynomial `K_m` of degree `m-1`, and the physical root must lie in `K_m`.
 
@@ -288,21 +288,21 @@ DC isolates what changes for general even `m`: the only degree-one obstruction i
 
 Combine DC with TH. The physical trace
 
-$$
+```math
 y=2\cos\delta=2-u^2
-$$
+```
 
 would have algebraic degree at most
 
-$$
+```math
 \left\lfloor\frac{m-1}{2}\right\rfloor.
-$$
+```
 
 For even `m`, all arithmetic now sits in
 
-$$
+```math
 J_m(u)=(-1)^{m/2}C_m(u)-2u.
-$$
+```
 
 The next sufficient theorem can be stated in either of two equivalent forms:
 

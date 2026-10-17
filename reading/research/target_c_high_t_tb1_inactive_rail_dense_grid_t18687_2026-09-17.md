@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_inactive_rail_dense_grid_t18687_2026-09-17.md) · source SHA-256 `a81d49349c448dc7c2eb0a1eba45ad6f05137f9997b8c16f5ec81d97590ba805`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 37 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "5f1060465f0734ab7c9f0eb8485845d3d391dafe", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_inactive_rail_dense_grid_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "fe5ab650d36768be93913d0a9520ccb236d0467bef419ce49fd2668e86ec512d"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -16,61 +18,62 @@
 
 The inactive common-cut theorem produces an ordered staircase or nested rail of
 
-$$
+```math
 (\rho-o(1))D^{1/4}
-$$
+```
 
 superthin exact-swap witnesses, where
 
-$$
+```math
 \boxed{
 \rho={s_0\over2048\,3^{1/8}}
 =1.05209848696\ldots\times10^{-9}.}
 \tag{IG.1}
+```
 
 These pairs are inactive, but they already have exact selected-cut support intervals and distinct ordered physical layer tags. The global finite-defect budget can therefore be averaged over their tag positions exactly as for the active tagged rail, with one changed scale: there are `Theta(D^(1/4))` rail positions rather than `Theta(D)`.
 
 Taking groups of
 
-\[
+```math
 k_D=\left\lfloor{D^{1/4}\over\log D}\right\rfloor
-$$
+```
 
 rail positions leaves `Theta(log D)` disjoint candidate path intervals. One candidate has total local defect `O(D/log D)=o(D)`. This is enough to retain almost the full common train population and purify it to uniform `o(1)` angular defect.
 
 The result is a single contiguous path interval containing
 
-$$
+```math
 \boxed{{D^{1/4}\over\log D}(1-o(1))}
-$$
+```
 
 ordered inactive superdiameter rail positions together with
 
-$$
+```math
 \boxed{(0.6536-o(1))D}
-$$
+```
 
 transverse trains common to every row of the interval. After deleting only `o(D)` columns, every crossing angle in the whole interval is
 
-$$
+```math
 {\pi\over3}+o(1).
-$$
+```
 
 The same common column order has the two `0.01D` circumcenter flanks of density
 
-$$
+```math
 0.0647027254\ldots D-o(D)
-$$
+```
 
 on every row.
 
 Moreover, the first half of the inactive rail and the row cuts tagged by the second half form a complete support-incidence product of size
 
-$$
+```math
 \Theta\!\left({D^{1/4}\over\log D}\right)
 \times
 \Theta\!\left({D^{1/4}\over\log D}\right).
-$$
+```
 
 Thus the inactive TB1 escape now contains a synchronized superdiameter-chord / selected-row / dense-column grid. The circumcenter location-or-angle lemma extends to these chords without using exact diameter equality: each synchronized inactive chord either crosses a row inside the common central train corridor, or its direction is separated from the common row phase by a fixed angle.
 
@@ -80,30 +83,34 @@ Thus the inactive TB1 escape now contains a synchronized superdiameter-chord / s
 
 Use the SUPERTHIN alternative after the exact-swap and superdiameter-thrackle reductions. The inactive common-cut theorem gives rail positions
 
-$$
+```math
 i_1<i_2<\cdots<i_M
 \tag{IG.2}
+```
 
 on one fixed side of a common selected cut `tau_K`, with
 
-\[
+```math
 \boxed{
 M>(\rho-o(1))D^{1/4}.}
 \tag{IG.3}
+```
 
 Every retained chord `e_s` satisfies
 
-\[
+```math
 \sqrt{D^2-1}<|e_s|<D,
 \tag{IG.4}
+```
 
 has both endpoints on the convex hull, and has selected-cut support
 
-\[
+```math
 I_s=\{i_s+1,\ldots,j_s\},
 \qquad
 j_s\ge K.
 \tag{IG.5}
+```
 
 The support endpoints form either a staircase or a nested sequence, but only the common-cut containment in (IG.5) is needed for the grid synchronization below.
 
@@ -115,18 +122,20 @@ All selected chords are pairwise vertex-disjoint and pairwise crossing.
 
 Let
 
-\[
+```math
 \boxed{
 k_D=\left\lfloor{D^{1/4}\over\log D}\right\rfloor.}
 \tag{IG.6}
+```
 
 Then
 
-\[
+```math
 k_D\to\infty,
 \qquad
 k_D=o(D^{1/4}).
 \tag{IG.7}
+```
 
 Partition the ordered rail positions into consecutive full groups of `k_D` positions. For each group, take the contiguous raw path interval from its first birth tag through its last birth tag.
 
@@ -134,17 +143,18 @@ Different group intervals are disjoint because the birth tags are strictly order
 
 The number of full groups satisfies
 
-\[
+```math
 G_D
 =\left\lfloor{M\over k_D}\right\rfloor
 \ge(\rho-o(1))\log D.
 \tag{IG.8}
+```
 
 In particular,
 
-\[
+```math
 G_D\to\infty.
-$$
+```
 
 ---
 
@@ -152,54 +162,60 @@ $$
 
 Use the audited global nonnegative local cost
 
-$$
+```math
 J_i^{\rm full}
 =N_i+L_i+DB_i+F_i+F_{i+1},
 \tag{IG.9}
+```
 
 with
 
-\[
+```math
 \boxed{
 \sum_iJ_i^{\rm full}
 \le K_{\rm glob}D+o(D).}
 \tag{IG.10}
+```
 
 The earlier full-defect audit gives
 
-\[
+```math
 {K_{\rm glob}\over c}<1{,}108{,}000,
 \qquad
 c=0.0000226.
 \tag{IG.11}
+```
 
 Since the candidate group intervals are disjoint and every local cost is nonnegative, some group interval `J_D` obeys
 
-\[
+```math
 \sum_{i\in J_D}J_i^{\rm full}
 \le{K_{\rm glob}D+o(D)\over G_D}
 <\left({K_{\rm glob}\over\rho}+o(1)\right){D\over\log D}.
 \tag{IG.12}
+```
 
 Numerically the audited constants give
 
-\[
+```math
 {K_{\rm glob}\over\rho}<2.381\times10^{10}.
 \tag{IG.13}
+```
 
 Thus, with any harmless fixed rounding such as
 
-\[
+```math
 C_I=2.4\times10^{10},
-$$
+```
 
 for all sufficiently large sources one may arrange
 
-$$
+```math
 \boxed{
 \sum_{i\in J_D}J_i^{\rm full}
 <C_I{D\over\log D}.}
 \tag{IG.14}
+```
 
 The interval contains a full group of `k_D` consecutive positions in the inactive ordered rail.
 
@@ -209,30 +225,34 @@ The interval contains a full group of `k_D` consecutive positions in the inactiv
 
 For a row `tau_j`, let `Gamma_j` be its complete-train crossing family. The audited high-`t` crossing-neighbor floor is
 
-\[
+```math
 |\Gamma_j|>(0.6536-o(1))D.
 \tag{IG.15}
+```
 
 Adjacent terminal topology gives
 
-\[
+```math
 |\Gamma_j\triangle\Gamma_{j+1}|\le L_j.
 \tag{IG.16}
+```
 
 The `L_j` part of (IG.14) gives
 
-\[
+```math
 \sum_{j\in J_D}L_j
 =O(D/\log D)=o(D).
 \tag{IG.17}
+```
 
 Starting from the first row and intersecting successively therefore loses only `o(D)` columns. Hence
 
-\[
+```math
 \boxed{
 \left|\bigcap_{j\in J_D}\Gamma_j\right|
 >(0.6536-o(1))D.}
 \tag{IG.18}
+```
 
 Call this common family `B_D`.
 
@@ -244,55 +264,62 @@ The inherited signed train geometry gives one common column order on every row o
 
 For every crossing of row `j` and common column `b`, let
 
-\[
+```math
 \delta_{jb}=\theta(\tau_j,b)-{\pi\over3}>0
 \tag{IG.19}
+```
 
 on the common oriented branch.
 
 The `F` terms in (IG.14) imply
 
-\[
+```math
 \sum_{j\in J_D}\sum_{b\in B_D}\delta_{jb}
 <C_I{D\over\log D}
 \tag{IG.20}
+```
 
 for sufficiently large sources, after harmlessly enlarging `C_I` if an endpoint row is counted once rather than twice.
 
 For each common column put
 
-\[
+```math
 \Delta_b:=\sum_{j\in J_D}\delta_{jb}.
 \tag{IG.21}
+```
 
 Delete every column with
 
-\[
+```math
 \Delta_b>{C_I\over\sqrt{\log D}}.
 \tag{IG.22}
+```
 
 By (IG.20), fewer than
 
-\[
+```math
 {D\over\sqrt{\log D}}=o(D)
 \tag{IG.23}
+```
 
 columns are deleted.
 
 Call the retained family `B_D^pure`. Then
 
-\[
+```math
 \boxed{|B_D^{pure}|>(0.6536-o(1))D,}
 \tag{IG.24}
+```
 
 and for every retained row-column crossing,
 
-\[
+```math
 \boxed{
 0<\delta_{jb}
 \le{C_I\over\sqrt{\log D}}
 =o(1).}
 \tag{IG.25}
+```
 
 Thus the entire selected path interval is crossed by one almost-full, uniformly asymptotically equilateral train family.
 
@@ -302,19 +329,19 @@ Thus the entire selected path interval is crossed by one almost-full, uniformly 
 
 Fix the metric margin
 
-\[
+```math
 \mu=0.01.
-$$
+```
 
 The exact train-step metric and the full-source circumdisk capacity depend only on the common ordered column family and its cardinality. Since (IG.24) has the same asymptotic density `0.6536` as the previous dense-ladder theorem, the same common-order argument gives initial and final column blocks
 
-$$
+```math
 B_D^-,B_D^+\subset B_D^{pure}
-$$
+```
 
 with
 
-$$
+```math
 \boxed{
 |B_D^-|,|B_D^+|
 >
@@ -322,14 +349,16 @@ $$
 0.6536-{1.02\over\sqrt3}-o(1)
 \right)D.}
 \tag{IG.26}
+```
 
 Numerically,
 
-\[
+```math
 \boxed{
 0.6536-{1.02\over\sqrt3}
 =0.0647027254265\ldots .}
 \tag{IG.27}
+```
 
 For every row `a` in the interval, the crossing-rhombus centers of the first block lie below the row-normal circumcenter level `-0.01D`, and those of the last block lie above `+0.01D`.
 
@@ -341,57 +370,62 @@ Thus the same two macroscopic column flanks bracket the source circumcenter on e
 
 Let the `k_D` inactive rail positions inside `J_D` be
 
-\[
+```math
 i_1<i_2<\cdots<i_{k_D}.
 \tag{IG.28}
+```
 
 Put
 
-\[
+```math
 h_D=\left\lfloor{k_D\over2}\right\rfloor.
-$$
+```
 
 Take the first half of the inactive rail,
 
-$$
+```math
 E_D^{in}:=\{e_1,\ldots,e_{h_D}\},
 \tag{IG.29}
+```
 
 and take selected row cuts at the latter-half rail tags,
 
-\[
+```math
 A_D^{in}:=
 \{\tau_{i_{h_D+1}},\ldots,\tau_{i_{k_D}}\}.
 \tag{IG.30}
+```
 
 For `s<=h_D<t`,
 
-\[
+```math
 i_s<i_t<K\le j_s.
-$$
+```
 
 Hence by the exact support formula (IG.5),
 
-$$
+```math
 i_t\in I_s.
-$$
+```
 
 Therefore
 
-\[
+```math
 \boxed{
 E_D^{in}\times A_D^{in}
 \text{ is complete in exact selected-cut endpoint-separation incidence.}}
 \tag{IG.31}
+```
 
 Both shores have size
 
-\[
+```math
 \boxed{
 |E_D^{in}|,|A_D^{in}|
 \ge
 \left({1\over2}-o(1)\right){D^{1/4}\over\log D}.}
 \tag{IG.32}
+```
 
 Every row in `A_D^in` is crossed by the same `(0.6536-o(1))D` pure column family and the same two circumcenter flanks.
 
@@ -415,39 +449,44 @@ Take `e in E_D^in` and `a in A_D^in`. By (IG.31), the endpoints of `e` lie on op
 
 Write
 
-\[
+```math
 e=\{m+td:-|e|/2\le t\le|e|/2\},
 \qquad |d|=1.
 \tag{IG.33}
+```
 
 The inactive near-diameter midpoint theorem gives
 
-\[
+```math
 |m-o|=O(D^{3/4})=o(D).
 \tag{IG.34}
+```
 
 If an intersection point `x` of `e` with row `a` lies outside the central row corridor between `B_D^-` and `B_D^+`, then
 
-\[
+```math
 |h_a(x)|>0.01D.
 \tag{IG.35}
+```
 
 But
 
-\[
+```math
 \begin{aligned}
 |h_a(x)|
 &\le |m-o|+|t|\,|\det(u_a,d)|\\
 &\le o(D)+{D\over2}|\det(u_a,d)|,
 \end{aligned}
 \tag{IG.36}
+```
 
 because `|e|<D`. Hence
 
-\[
+```math
 \boxed{
 |\det(u_a,d)|>0.02-o(1).}
 \tag{IG.37}
+```
 
 Equivalently, every synchronized inactive chord-row pair satisfies
 

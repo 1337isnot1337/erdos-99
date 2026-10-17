@@ -18,10 +18,10 @@
 
 The primitive normal form left one non-cyclic endpoint at `m+k=2`:
 
-$$
+```math
 \text{PN-E1:}\qquad
 m=1,\quad k=1,\quad C=P_q,
-$$
+```
 
 an all-loaded convex unit contact path with one nonunit closing hull side.
 
@@ -31,11 +31,11 @@ This report excludes PN-E1 exactly. The local reason is stronger and applies thr
 
 Consequently, if `m` force-hull sides are nonunit and these missing sides occur in `r_m` cyclic runs, then
 
-$$
+```math
 \boxed{
 e_{BI}+2c_B\ge m+r_m.}
 \tag{ME.1}
-$$
+```
 
 Here `c_B` is the LH/PN count of loaded-loaded contacts beyond the unit force-hull sides. Equation ME.1 says every loaded vertex touched by a missing unit hull side consumes at least one non-hull contact incidence.
 
@@ -45,17 +45,17 @@ Here `c_B` is the LH/PN count of loaded-loaded contacts beyond the unit force-hu
 
 Let `b,c` be consecutive loaded vertices of the convex force hull `F`, and suppose
 
-$$
+```math
 |b-c|=1.
-$$
+```
 
 Then `bc` is a positive unit contact in the full-support C-II stress.
 
 Let `n` be an inward normal to the supporting line through the hull side `bc`, chosen so
 
-$$
+```math
 n\cdot(x-b)>0
-$$
+```
 
 for every loaded hull vertex `x` other than `b,c`.
 
@@ -63,26 +63,26 @@ Such strictness holds because `B=Vert(F)` and `bc` is a side of the convex polyg
 
 Assume for contradiction that `bc` is the only contact incident to `b`. KKT equilibrium at `b` is
 
-$$
+```math
 \alpha_{bc}(b-c)
 =
 \sum_{bk\in H}\beta_{bk}(b-k).
 \tag{1.1}
-$$
+```
 
 Every coefficient in the relative-interior C-II stress is positive on every actual diameter edge. Since `D>1`, the contact neighbor `c` is not a diameter partner of `b`. Therefore every diameter partner `k` is a loaded hull vertex distinct from `b,c`, and
 
-$$
+```math
 n\cdot(k-b)>0.
-$$
+```
 
 Hence
 
-$$
+```math
 n\cdot(b-k)<0
 \qquad(bk\in H).
 \tag{1.2}
-$$
+```
 
 Taking the dot product of (1.1) with `n`, the left side is zero because `bc` lies on the supporting line, while the right side is strictly negative. Contradiction.
 
@@ -102,10 +102,10 @@ On the cyclic loaded force hull, mark the `m` sides whose Euclidean length is gr
 
 Assume `0<m<q`, and let `r_m` be the number of cyclic connected runs of marked sides. The set of loaded vertices incident to at least one marked side has cardinality
 
-$$
+```math
 \boxed{|S_m|=m+r_m.}
 \tag{2.1}
-$$
+```
 
 Indeed a run of `\ell` consecutive missing sides has `\ell+1` distinct incident vertices, and distinct runs have disjoint incident vertex sets.
 
@@ -123,9 +123,9 @@ The non-hull contacts incident to loaded vertices are precisely:
 
 Therefore
 
-$$
+```math
 \boxed{e_{BI}+2c_B\ge |S_m|=m+r_m.}
-$$
+```
 
 This proves ME.1. `square`
 
@@ -137,42 +137,42 @@ The case `m=q` cannot occur in the connected positive contact core without non-h
 
 PN gives
 
-$$
+```math
 c_I+s_C+c_B=m+k-2.
 \tag{3.1}
-$$
+```
 
 It also gives the exact component boundary-contact count
 
-$$
+```math
 e_{BI}
 =\sum_r\delta_r+3c_I+s_C+R_I,
 \tag{3.2}
-$$
+```
 
 because each unloaded component satisfies
 
-$$
+```math
 t_r=\delta_r+3+s_r+r_r.
-$$
+```
 
 Insert (3.2) into ME.1:
 
-$$
+```math
 \sum_r\delta_r+3c_I+s_C+R_I+2c_B
 \ge m+r_m.
 \tag{3.3}
-$$
+```
 
 Use (3.1) once to isolate the run count:
 
-$$
+```math
 \boxed{
  r_m
 \le
 \sum_r\delta_r+R_I+(k-2)+2c_I+c_B.}
 \tag{ME.2}
-$$
+```
 
 Thus many separated runs of missing unit hull sides require component diameter, internal Eppstein slack, mixed/diameter defect, or additional interior/chord structure. Missing sides cannot appear as mechanically isolated one-gap defects for free.
 
@@ -182,19 +182,19 @@ Thus many separated runs of missing unit hull sides require component diameter, 
 
 PN-E1 has
 
-$$
+```math
 m=1,
 \qquad
 k=1,
 \qquad
 c_I=s_C=c_B=0.
-$$
+```
 
 Its positive contact core is the convex path
 
-$$
+```math
 b_1b_2\cdots b_q
-$$
+```
 
 with every displayed edge a unit hull-side contact and the closing hull side `b_qb_1` nonunit.
 
@@ -202,9 +202,9 @@ The two path endpoints `b_1,b_q` each have exactly one contact, and that contact
 
 Equivalently, ME.1 has `m=r_m=1` and `e_BI=c_B=0`, giving
 
-$$
+```math
 0\ge2,
-$$
+```
 
 a contradiction.
 
@@ -212,18 +212,18 @@ Therefore:
 
 ### Theorem ME — one-gap primitive endpoint excluded
 
-$$
+```math
 \boxed{\text{PN-E1 does not occur in C-II for }D>1.}
 \tag{ME.3}
-$$
+```
 
 Combined with PN, the exact primitive floor `m+k=2` now has only one surviving form:
 
-$$
+```math
 \boxed{
 m=0,\quad k=2,\quad C=C_q.}
 \tag{ME.4}
-$$
+```
 
 That survivor is the all-loaded unit convex contact cycle, including the regular odd-shell regression.
 
@@ -237,10 +237,10 @@ PN proved `m+k>=2`. ME eliminates the only `m>0` equality case. Hence:
 
 If at least one loaded force-hull side is nonunit, then
 
-$$
+```math
 \boxed{m+d_H+s_Z\ge3.}
 \tag{ME.5}
-$$
+```
 
 At equality `m+k=3`, PN says exactly one of `c_I,s_C,c_B` equals one. ME.1 further removes some run patterns:
 
@@ -255,9 +255,9 @@ This turns the first stability layer above the cyclic endpoint into a finite mec
 
 LH showed
 
-$$
+```math
 x_B=m+u_B.
-$$
+```
 
 ME separates two ways for outer-walk excess to be large:
 
@@ -296,9 +296,9 @@ A loaded chord joining the two endpoints of distinct missing-side incidences con
 
 After ME, the primitive endpoint problem is reduced to the cyclic survivor
 
-$$
+```math
 m=0,\qquad k=2,\qquad C=C_q.
-$$
+```
 
 The high-`x_B` branch splits into:
 

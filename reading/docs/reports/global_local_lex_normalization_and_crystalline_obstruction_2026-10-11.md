@@ -50,9 +50,9 @@ contact-isolated endpoints; it does not mean the positive endpoints of one stres
 Every triangle-free global minimum-diameter configuration `P` with `D=D(n)>=9`
 satisfies
 
-$$
+```math
  |H(P)|\ge\lceil D\rceil,\qquad |B(P)|\ge\lceil D\rceil.       \tag{1}
-$$
+```
 
 These statements do not assume that `P` itself is contact-minimal, diameter-pair-minimal,
 or fully stress-visible. The distinction is essential to the consequences below:
@@ -67,9 +67,9 @@ in `R^(2n)` every originally inactive lower or upper pair stays inactive.
 There are finitely many pairs and each has positive slack, so such a ball exists.
 Consequently every feasible `Q in U` satisfies
 
-$$
+```math
  C(Q)\subseteq C(P),\qquad H(Q)\subseteq H(P).                 \tag{2}
-$$
+```
 
 Every unit-separated configuration in `U` of diameter at most `D` is a global optimum,
 by the definition of `D(n)`. It is also triangle-free by the contact inclusion.
@@ -102,9 +102,9 @@ At `R`, opening a weak contact contradicts its local first minimum. Once contact
 are fixed, opening a weak diameter pair contradicts its local second minimum.
 Thus
 
-$$
+```math
  C(R)=C_*,\qquad H(R)=H_*.                                    \tag{3}
-$$
+```
 
 A relative-interior normalized stress is positive on every actual contact and
 diameter pair. The positive contact graph is one connected nonisolated core `V`
@@ -136,31 +136,31 @@ C63 integrates it, and Section 3.1 forces exact preservation of all active lengt
 Pair those identities with a relative-interior stress and divide by the squared
 motion parameter. For its velocity `u`, this gives
 
-$$
+```math
  u_x^T\Omega_Vu_x+u_y^T\Omega_Vu_y=0.
-$$
+```
 
 Because `u` is zero at every diameter endpoint, the negative diameter-Laplacian
 terms vanish. The expression is the positive sum
 
-$$
+```math
  \sum_{ij\in C(R)}\alpha_{ij}|u_i-u_j|^2.
-$$
+```
 
 All contact weights are positive and the core is connected, so `u` is constant
 on the core, hence zero at its pinned vertices. Therefore
 
-$$
+```math
  e\ge2(v-q).                                                  \tag{4}
-$$
+```
 
 The contact core is a connected triangle-free penny graph of graph diameter
 `delta>=ceil(D)`. The canonical Eppstein bound gives `e<=2v-delta-2`.
 Combining it with (4) yields
 
-$$
+```math
  2q\ge\lceil D\rceil+2.                                      \tag{5}
-$$
+```
 
 This reconstructs the pre-ZF count without extending the stated scope of the
 older globally minimum-contact pinned-rank theorem by assumption.
@@ -179,9 +179,9 @@ No comparison with a distant global contact-minimal representative appears in
 that proof. Thus its strict-negative transfer conclusion applies to `R`.
 The algebraic ZR argument in the canonical module then gives
 
-$$
+```math
  \ker\Omega_V=\operatorname{span}\{\mathbf1,R_x|_V,R_y|_V\}.
-$$
+```
 
 For any mixed bar flex on `V`, extend it by zero at every omitted source label,
 integrate it by C63, and use the exact local length preservation from Section 3.1.
@@ -191,15 +191,15 @@ force the symmetric part of its affine matrix to vanish. Thus the mixed rigidity
 rank on `V` is `2v-3`, exactly as in the canonical ZF proof. A nonzero full-support
 stress gives a row dependence, so
 
-$$
+```math
  e+|H(R)|\ge2v-2.
-$$
+```
 
 Eppstein's bound now yields
 
-$$
+```math
  |H(R)|\ge\delta\ge\lceil D\rceil.                           \tag{6}
-$$
+```
 
 The diameter graph has at most as many edges as endpoints, by the canonical
 Woodall diameter-graph classification, so `|B(R)|>=|H(R)|`. Finally (2) implies
@@ -236,38 +236,38 @@ Its perimeter is at most `pi D` by the convex perimeter/diameter inequality.
 Write its oriented side vectors as `w_1,...,w_q`. They are nonzero and distinct,
 since their directions turn strictly around a convex polygon. Let
 
-$$
+```math
  \eta=\min_{i\ne j}|w_i-w_j|>0.
-$$
+```
 
 Disjoint disks of radius `eta/2` centred at side vectors of norm at most `r`
 fit in the disk of radius `r+eta/2`. There are therefore at most
 `4(r/eta+1/2)^2` such vectors. Ordering their norms gives
 
-$$
+```math
  |w|_{(j)}\ge {\eta\over2}(\sqrt j-1).
-$$
+```
 
 Sum and use `sum_{j=1}^q sqrt(j)>=(2/3)q^(3/2)`:
 
-$$
+```math
  \operatorname{per}(\operatorname{conv}B(P))
  \ge\eta\left({q^{3/2}\over3}-{q\over2}\right).
-$$
+```
 
 Since `q>=D>=9`, the positive factor can be divided out to obtain
 
-$$
+```math
  \boxed{\eta\le {3\pi\over\sqrt D-3/2}.}                     \tag{7}
-$$
+```
 
 In particular, if the actual diameter endpoints lie in a translate of a lattice
 with shortest nonzero vector at least `lambda>0`, then their side-vector
 differences have norm at least `lambda`. Hence
 
-$$
+```math
  \boxed{D\le(3\pi/\lambda+3/2)^2.}                           \tag{8}
-$$
+```
 
 The lattice need not have two unit generators. For `lambda>=1`, (8) excludes
 every triangle-free optimum in this class once `D>(3pi+3/2)^2`. The hypothesis
@@ -283,23 +283,23 @@ and may be rotated. Assign each endpoint to one covering grain and let `q_g` be
 its assigned count. Its convex hull has perimeter at most `pi D`. The same side
 vector argument gives
 
-$$
+```math
  \lambda\left({q_g^{3/2}\over3}-{q_g\over2}\right)\le\pi D.
-$$
+```
 
 For `q_g<=2` the left side is nonpositive, so this inequality holds without a
 polygon argument. Sum it and apply Jensen's inequality to the nonnegative `q_g`:
 
-$$
+```math
  \lambda\left({q^{3/2}\over3\sqrt G}-{q\over2}\right)
  \le G\pi D.
-$$
+```
 
 Divide by `q`, use `q>=D`, and rearrange:
 
-$$
+```math
  \boxed{D\le9G(G\pi/\lambda+1/2)^2.}                         \tag{9}
-$$
+```
 
 For any fixed positive `lambda`, an unbounded-diameter sequence of triangle-free
 global optima therefore needs an unbounded number of exact lattice grains covering
@@ -313,25 +313,25 @@ There is also a coarse, explicit robustness statement. Suppose every actual
 diameter endpoint is within `epsilon<=1/4` of one translate of a lattice with
 shortest vector at least one. If `D>=852`, then
 
-$$
+```math
  \boxed{\epsilon\ge {1\over2}\sin(1/1704).}                 \tag{10}
-$$
+```
 
 To prove this, first bound the turn at an actual diameter endpoint `b`. Let its
 two loaded-hull neighbours have distances `a,c>=1` from it, and choose any source
 diameter partner `r`. All source points lie in the disk `B(r,D)`, with `b` on its
 boundary. For a neighbour displacement `z`, the disk inequality gives
 
-$$
+```math
  (r-b)\mathbin{\cdot}z\ge |z|^2/2.
-$$
+```
 
 Thus the interior angle at `b` is at most
 `pi-arcsin(a/(2D))-arcsin(c/(2D))`. Every exterior turn is at least
 
-$$
+```math
  \theta_D=2\arcsin(1/(2D)).                                  \tag{11}
-$$
+```
 
 The oriented side directions consequently have circular spacing at least `theta_D`.
 Perimeter at most `pi D` leaves at least `q-pi D/(2pi)>=D/2` sides of length at
@@ -343,25 +343,25 @@ The rounded side is nonzero since the original side has length at least one and
 Unit-separated lattice vectors in a disk have the disjoint-half-disk bound used
 above. There are at most
 
-$$
+```math
  4(2\pi+2\epsilon+1/2)^2\le4(2\pi+1)^2<213=:N
-$$
+```
 
 possible rounded vectors. For each such vector the original side directions lie
 in an angular interval of length `2arcsin(2epsilon)`: the side norm is at least
 one and its vector error is at most `2epsilon`. By (11), this interval contains
 at most
 
-$$
+```math
  1+{\arcsin(2\epsilon)\over\arcsin(1/(2D))}
  \le1+2D\arcsin(2\epsilon)
-$$
+```
 
 side directions. Therefore
 
-$$
+```math
  {D\over2}\le N+2ND\arcsin(2\epsilon).
-$$
+```
 
 For `D>=4N=852` this forces `arcsin(2epsilon)>=1/(8N)=1/1704`, proving (10).
 The constant is deliberately elementary and is not optimized.
@@ -378,21 +378,21 @@ rounding hypothesis. Let `S_D` be the set of loaded-hull sides of length at most
 are covered by `M` circular intervals, each of angular length at most `w<2pi`.
 Each interval contains at most `1+w/theta_D<=1+Dw` side directions. Hence
 
-$$
+```math
  \boxed{{D\over2}\le K+M(1+Dw).}                             \tag{12}
-$$
+```
 
 In particular, for fixed `C` and `w=C/D`, a cover with `K=o(D)` requires
 
-$$
+```math
  M\ge\left({1\over2(1+C)}+o(1)\right)D.                    \tag{13}
-$$
+```
 
 With intervals of differing lengths `w_j`, the same proof gives
 
-$$
+```math
  \boxed{\sum_{j=1}^M w_j\ge {1\over2}-{K+M\over D}.}         \tag{14}
-$$
+```
 
 Thus `K=o(D)` and `M=o(D)` force an aggregate angular cover length of at least
 `1/2-o(1)` radians. Small phase width for a macroscopic grid does not extend to
@@ -426,9 +426,9 @@ vector have directions in an interval of width at most `2arcsin(delta)`.
 Apply (12) with `M=N`, `K=K_delta` and that width. After dividing by `D` and
 letting `D->infinity`, it gives
 
-$$
+```math
  {1\over2}\le2N\arcsin(\delta).
-$$
+```
 
 Choose `delta` sufficiently small to contradict this inequality. If `N=0`,
 compactness instead bounds the total number of distinct short side vectors,

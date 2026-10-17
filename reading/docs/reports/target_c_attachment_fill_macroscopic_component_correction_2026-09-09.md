@@ -23,35 +23,35 @@ The corrected theorem is stronger:
 
 In the UF near-circle phase, if
 
-$$
+```math
 \frac{v}{D^2}\to\Delta-\zeta,
 \qquad
 \Delta=\frac\pi{2\sqrt3},
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \liminf\frac{\delta_{\max}}D
 \ge
 \frac{1-\zeta/\Delta}{\pi},
 }
-$$
+```
 
 where `delta_max=max_r delta_r`.
 
 At UF's worst crossover `zeta_*=0.5572837714...`, this still forces
 
-$$
+```math
 \delta_{\max}\ge(0.1227105962...-o(1))D.
-$$
+```
 
 In the asymptotically full-core subbranch `zeta=0`,
 
-$$
+```math
 \delta_{\max}\ge(1/\pi-o(1))D.
-$$
+```
 
 This supersedes the contrary caveat in AR Sections 8--9.
 
@@ -61,23 +61,23 @@ This supersedes the contrary caveat in AR Sections 8--9.
 
 Use the AR notation. For unloaded components `I_r`, write
 
-$$
+```math
 \delta_r=\operatorname{diam}_{C[I_r]} I_r,
 \qquad
 S:=\sum_r\delta_r,
 \qquad
 \delta_{\max}:=\max_r\delta_r.
-$$
+```
 
 Let
 
-$$
+```math
 P_r=\operatorname{conv}A_r
-$$
+```
 
 be the C49 harmonic attachment cells. AR proves
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{area}(P_r)
 \ge
@@ -86,19 +86,19 @@ a_0(v-q)
 -a_0(\pi-2)c_I,
 }
 \tag{MC.1}
-$$
+```
 
 where
 
-$$
+```math
 a_0=\frac{\sqrt3}{2}.
-$$
+```
 
 The terms after `a_0(v-q)` are only boundary-order because post-ZF gives
 
-$$
+```math
 q,S,c_I=O(D).
-$$
+```
 
 ---
 
@@ -106,29 +106,29 @@ $$
 
 C44/ZG gives
 
-$$
+```math
 \operatorname{diam}(P_r)\le\delta_r+2.
-$$
+```
 
 Hence the planar isodiametric inequality gives cellwise
 
-$$
+```math
 \operatorname{area}(P_r)
 \le\frac\pi4(\delta_r+2)^2.
-$$
+```
 
 Sum and use
 
-$$
+```math
 \sum_r\delta_r^2
 \le
 \delta_{\max}\sum_r\delta_r
 =\delta_{\max}S.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{area}(P_r)
 \le
@@ -138,7 +138,7 @@ $$
 \right).
 }
 \tag{MC.2}
-$$
+```
 
 This is the step lost in the first AR writeup. Replacing `sum delta_r^2` by `S^2` proves a total-diameter floor but discards the concentration information needed to force a macroscopic component.
 
@@ -152,7 +152,7 @@ Compare MC.1 and MC.2.
 
 Every finite post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
  a_0(v-q)
 \le
@@ -161,7 +161,7 @@ $$
 +\bigl[\pi+a_0(\pi-2)\bigr]c_I.
 }
 \tag{MC.3}
-$$
+```
 
 This is exact and contains no KKT coefficient lower bound.
 
@@ -171,68 +171,68 @@ This is exact and contains no KKT coefficient lower bound.
 
 Take an unbounded subsequence with
 
-$$
+```math
 \frac v{D^2}\to r>0.
-$$
+```
 
 Post-ZF gives `S=O(D)`. Pass to a further subsequence on which
 
-$$
+```math
 \frac SD\to s,
 \qquad
 \frac{\delta_{\max}}D\to\mu
-$$
+```
 
 with finite limits after taking limsup/liminf subsequences as needed.
 
 Divide MC.3 by `D^2`. All linear terms vanish, leaving
 
-$$
+```math
 a_0r
 \le
 \frac\pi4\mu s.
-$$
+```
 
 Since
 
-$$
+```math
 \frac{4a_0}{\pi}=\frac1\Delta,
 \qquad
 \Delta=\frac\pi{2\sqrt3},
-$$
+```
 
 we obtain
 
 ### Theorem MC.2
 
-$$
+```math
 \boxed{
 \mu s\ge\frac r\Delta.
 }
 \tag{MC.4}
-$$
+```
 
 In particular, because `s` is finite and `r>0`,
 
-$$
+```math
 \boxed{
 \delta_{\max}=\Omega(D).
 }
 \tag{MC.5}
-$$
+```
 
 Thus a positive-density force-visible core cannot be carried by a linear number of bounded-diameter harmonic cells. One macroscopic harmonic component is mandatory.
 
 A safe liminf/limsup form is
 
-$$
+```math
 \boxed{
 \left(\liminf\frac{\delta_{\max}}D\right)
 \left(\limsup\frac SD\right)
 \ge\frac r\Delta
 }
 \tag{MC.6}
-$$
+```
 
 along every subsequence on which `v/D^2->r` and after the usual compact subsequence extraction.
 
@@ -242,58 +242,58 @@ along every subsequence on which `v/D^2->r` and after the usual compact subseque
 
 C40 gives for every component
 
-$$
+```math
 t_r\ge\delta_r+3,
-$$
+```
 
 where `t_r` is the number of physical contact edges from `I_r` to the loaded terminal set. Therefore
 
-$$
+```math
 S+3c_I\le e_{BI}.
 \tag{5.1}
-$$
+```
 
 The loaded degree-three cap gives
 
-$$
+```math
 e_{BI}+2e_{BB}\le3q.
 \tag{5.2}
-$$
+```
 
 HB gives the exact outer-walk coupling
 
-$$
+```math
 e_{BB}\ge q-x_B.
 \tag{5.3}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 S+3c_I
 \le e_{BI}
 \le q+2x_B.
 }
 \tag{5.4}
-$$
+```
 
 In particular, in the PR #119 near-circle phase
 
-$$
+```math
 x_B=o(D),
 \qquad
 q/D\to\pi,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \limsup\frac SD\le\pi.
 }
 \tag{5.5}
-$$
+```
 
 ---
 
@@ -301,13 +301,13 @@ $$
 
 In UF notation
 
-$$
+```math
 \frac{v}{D^2}\to r=\Delta-\zeta.
-$$
+```
 
 Combine MC.6 with (5.5):
 
-$$
+```math
 \boxed{
 \liminf\frac{\delta_{\max}}D
 \ge
@@ -317,34 +317,34 @@ $$
 }
 \tag{MC.7}
 
-$$
+```
 
 At the UF crossover
 
-$$
+```math
 \zeta_*=0.5572837714\ldots,
-$$
+```
 
 this gives
 
-$$
+```math
 \boxed{
 \liminf\frac{\delta_{\max}}D
 \ge0.1227105962\ldots .
 }
 \tag{MC.8}
-$$
+```
 
 At the asymptotically full-core endpoint `zeta=0`,
 
-$$
+```math
 \boxed{
 \liminf\frac{\delta_{\max}}D
 \ge\frac1\pi
 =0.3183098861\ldots .
 }
 \tag{MC.9}
-$$
+```
 
 These constants are conservative because (5.5) discards `3c_I` and all other post-ZF slack.
 
@@ -361,15 +361,15 @@ MC eliminates the first possibility whenever `v=Theta(D^2)`.
 
 The live positive-density branch may now focus on one component `I_*` with
 
-$$
+```math
 \delta_*\ge cD
-$$
+```
 
 for an explicit `c>0` depending on the core population fraction. C40 further gives
 
-$$
+```math
 t_*\ge\delta_*+3=\Omega(D),
-$$
+```
 
 so the component also consumes a linear number of physical loaded-contact incidences.
 
@@ -408,11 +408,11 @@ WG and TC on the same branch remain compatible with this correction; they give a
 
 The surviving positive-density near-circle branch contains a specific macroscopic harmonic component `I_*` satisfying
 
-$$
+```math
 \delta_* = \Omega(D),
 \qquad
 t_*\ge\delta_*+3=\Omega(D).
-$$
+```
 
 The next theorem should exploit the simultaneous facts that
 

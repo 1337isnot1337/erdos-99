@@ -64,11 +64,11 @@ owner-component refinement must preserve the actual upper ledger.
 Let a finite source have unit-contact graph C on a connected core V, actual
 diameter graph H, and a KKT equilibrium
 
-$$
+```math
  \sum_{j:ij\in C}\alpha_{ij}(p_i-p_j)
  =\sum_{j:ij\in H}\beta_{ij}(p_i-p_j),
  \qquad \alpha_{ij}>0,\quad\beta_{ij}\ge0.
-$$
+```
 
 All diameter endpoints considered here lie in V. Suppose a nonempty proper
 subset G can be translated by a nonzero vector d while its complement is fixed,
@@ -80,26 +80,26 @@ C[V minus G] is incident with an H-edge leaving that component, with positive
 beta. In particular each contains an actual diameter endpoint.
 For a component W of C[G], write
 
-$$
+```math
  a_W=\sum_{ij\in\delta_C(W)}\alpha_{ij},
  \qquad b_W=\sum_{ij\in\delta_H(W)}\beta_{ij}.
-$$
+```
 
 Orient its crossing pairs from W to its complement. Then
 
-$$
+```math
  \sum_{ij\in\delta_H(W)}\beta_{ij}(p_i-p_j)\cdot d
  =-{\lVert d\rVert^2\over2}a_W<0.                 \tag{CA.1}
-$$
+```
 
 ### Proof
 
 No contact joins W to another component of C[G]. Every crossing contact joins
 W to V minus G, so exact preservation under the translation gives
 
-$$
+```math
  1=|p_i-p_j+d|^2=1+2(p_i-p_j)\cdot d+|d|^2.
-$$
+```
 
 Thus every crossing contact has projection `-|d|^2/2` on d.
 Summing equilibrium over W cancels all internal contact and diameter forces.
@@ -150,12 +150,12 @@ state. Dependencies are KKT equilibrium and positivity; PSD is not used.
 Use the canonical C-II source with D>=9 and connected nonisolated core V.
 Choose its relative-interior KKT stress
 
-$$
+```math
  \Omega=L_C(\alpha)-L_H(\beta)\succeq0,
  \quad \Omega P=0,
  \quad\ker\Omega=\operatorname{span}\{1,P_x,P_y\},
  \quad \sum_H\beta_h=1,\quad\sum_C\alpha_e=D^2.
-$$
+```
 
 Let nonempty proper pairwise disjoint core sets G_i have nonzero prescribed
 translations d_i with `d_i dot d_j>0`. Suppose every original contact is
@@ -163,18 +163,18 @@ preserved in every binary owner selection. Assigned contact isolates may follow
 these owners; all of them remain subject to the separate full-source ledger.
 Set
 
-$$
+```math
  \kappa_i=1_{G_i}^{T}\Omega1_{G_i},\qquad
  b_{ij}=\sum_{h\in H[G_i,G_j]}\beta_h.
-$$
+```
 
 For a selection x, its core placement Q satisfies the exact identity
 
-$$
+```math
  \sum_{h\in H}\beta_h\bigl(D^2-|Q_h|^2\bigr)
  =\sum_i x_i\kappa_i|d_i|^2
   +2\sum_{i<j}x_i x_j b_{ij}(d_i\cdot d_j).       \tag{SG.1}
-$$
+```
 
 Every kappa_i is strictly positive. Consequently every nonzero selection
 strictly shortens at least one actual diameter edge, quantitatively by at least
@@ -192,9 +192,9 @@ two parallel lines. Their convex hull has at most four vertices. Canonical
 full-source force-hull geometry puts every loaded endpoint among the core hull
 vertices; canonical Woodall and ZRF give
 
-$$
+```math
  q\ge h\ge\lceil D\rceil\ge9.
-$$
+```
 
 This contradicts the four-vertex bound. Thus kappa_i>0.
 
@@ -202,10 +202,10 @@ Writing `U=Q-P=sum_i x_i 1_Gi d_i`, equilibrium cancels the cross term:
 `tr(Q^T Omega Q)=tr(U^T Omega U)`.
 Contact preservation and the virial normalization give
 
-$$
+```math
  \operatorname{tr}(Q^T\Omega Q)
  =D^2-\sum_h\beta_h|Q_h|^2.
-$$
+```
 
 Expanding the quadratic form in U proves (SG.1). Its diagonal terms are
 strictly positive whenever selected, and its mixed terms are nonnegative.
@@ -232,10 +232,10 @@ Take a **supplied**, subfamily-stable actual disjoint-owner O–O system in the
 canonical source, with nonempty proper core owners G_i, mutually acute d_i,
 contact preservation under every binary choice, and translation cloud
 
-$$
+```math
  s=\operatorname{diam}\{0,d_1,\ldots,d_r\}
  <\min\{D-\sqrt{D^2-1},\sqrt2-1\}.
-$$
+```
 
 Assume each parent singleton weakly shortens every actual diameter, and passes
 all its unary strict-rhombus tests. Use one fixed canonical long-pair dispatch
@@ -293,16 +293,16 @@ only one endpoint moves, the length is the parent's singleton length, assumed
 at most D. If two different parents move, orient the old diameter vector r from
 the second endpoint to the first. The two singleton squared changes are
 
-$$
+```math
  g_i=2r\cdot d_i+|d_i|^2\le0,
  \qquad g_j=-2r\cdot d_j+|d_j|^2\le0.
-$$
+```
 
 Their joint squared change is
 
-$$
+```math
  g_{ij}=g_i+g_j-2d_i\cdot d_j<0.
-$$
+```
 
 This checks every possible refined state of every old diameter. It also proves
 that acute parent singleton safety suffices for simultaneous actual-diameter
@@ -355,10 +355,10 @@ be the total number of induced `(C union H)` components in the surviving parents
 For sufficiently large D, applying canonical
 `C-OO-LOWER-WITNESS-OWNER-CAPACITY` to the refined singleton proposals gives
 
-$$
+```math
  K\le2m_B+3(x_B+Z_{\rm out}),
  \qquad K\le147(x_B+m_B)\quad\hbox{in Type II}.
-$$
+```
 
 The refinement has singleton upper safety, unary safety, strict old-diameter
 gain, fixed isolate assignment, and canonical outer-face witnesses, exactly the
@@ -403,11 +403,11 @@ rigidity, population, or diameter density.
 
 Let `t=1/(100 H^2)`, initially allow any sufficiently small positive t, and put
 
-$$
+```math
  a_A={1-9t^2\over1+9t^2},\quad\delta_A={12t\over1+9t^2},
  \qquad a_B={1-t^2\over1+t^2},\quad\delta_B={4t\over1+t^2},
  \qquad d=1-\delta_B^2/4.
-$$
+```
 
 A strip with owner I, base `(x,y)`, side sigma in {-1,1}, and three consecutive
 levels J has moving vertices `(x,y+j)` and fixed vertices
@@ -437,9 +437,9 @@ coordinates are in
 `Source.build`. Each two-edge cap joining rational endpoints p,q with
 `1<|q-p|<2` uses the algebraic middle point
 
-$$
+```math
  {p+q\over2}\ \pm\sqrt{1/|q-p|^2-1/4}\,J(q-p).
-$$
+```
 
 The four-edge lower connector between the E/F fixed columns uses two repetitions
 of each vector `(q-p)/4 +/- sqrt(1/|q-p|^2-1/16) J(q-p)`.

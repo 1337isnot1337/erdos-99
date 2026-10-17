@@ -40,10 +40,10 @@ The threshold exact-phase staircase predecessor is also credited below.
 Let G be a finite directed multigraph on an ordered vertex set
 `{0,...,m}`. Loops may be ignored. Call its directed support **antitone** if
 
-$$
+```math
 (a\to b),(c\to d),\quad a<c\quad\Longrightarrow\quad b\ge d.
 \tag{AI.1}
-$$
+```
 
 Parallel edges do not alter this condition or the SCCs.
 
@@ -233,10 +233,10 @@ has width at most `4K/D<pi/2`, for a fixed K.
 Sections 3--4, either the gap graph is strongly connected, or a previously
 strict source pair xy satisfies
 
-$$
+```math
 1<|xy|\le1+4K/D\quad\text{or}\quad D-4K/D\le|xy|<D.
 \tag{AI.2}
-$$
+```
 
 **Proof.** If the graph is not strong, Theorem AI gives a proper interval
 source or sink SCC S=`{p,...,q-1}`. It excludes layers 0,m. If it has no
@@ -288,10 +288,10 @@ ranges meeting at one endpoint, and `m_s=s`. Writing those ranges as
 from `(0,m)` to `(s-1,s)`. Every next cell increases a or decreases b
 by exactly one, so the values b-a are exactly m,m-1,...,1. Hence
 
-$$
+```math
 \sum_{\{a,b\}\in E}(b-a)=m(m+1)/2.
 \tag{AI.3}
-$$
+```
 
 All these intervals are nested, so share one retained cut. Choose one
 actual diameter of each physical orientation over each simple edge.
@@ -359,10 +359,10 @@ and no Section-57 kernel is extended.
 
 The exact surviving obligations on the fixed-star physical stack are:
 
-$$
+```math
 G_J\text{ strong with }h\ge2m
 \quad\text{or}\quad\text{an inactive pair satisfying AI.2}.
-$$
+```
 
 The first gives TWO-SIGN for every nonzero one-axis layer potential;
 the second remains a genuine finite source blocker. The next theorem

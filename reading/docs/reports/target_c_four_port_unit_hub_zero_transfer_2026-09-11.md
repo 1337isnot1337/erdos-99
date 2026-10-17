@@ -66,9 +66,9 @@ on the terminals, with
 
 the cross-transfer is
 
-$$
+```math
 \boxed{K_{ef}=0.}
-$$
+```
 
 The response conclusion remains true if arbitrary positive contact subnetworks are
 inserted at the four rhombus vertices, provided each has one terminal, no diameter
@@ -88,37 +88,37 @@ optimality.
 
 Write the unit rhombus as
 
-$$
+```math
 p_0=0,
 \quad p_1=u,
 \quad p_3=v,
 \quad p_2=u+v,
 \qquad |u|=|v|=1.
-$$
+```
 
 Put
 
-$$
+```math
 d_+=|u+v|,
 \quad a={u+v\over d_+},
 \qquad
 d_-=|v-u|,
 \quad b={v-u\over d_-}.
-$$
+```
 
 The positive terminal equilibrium at `t_0` for the diameter `t_0t_2` forces the
 terminal contact port and the diameter chord to be collinear. The same holds at
 `t_2`; likewise for `t_1,t_3`. Since the two endpoints of each port are joined by a
 diameter chord, the port geometry has the form
 
-$$
+```math
 t_0=p_0-\ell_0a,
 \quad t_2=p_2+\ell_2a,
 \qquad
 t_1=p_1-\ell_1b,
 \quad t_3=p_3+\ell_3b.
 \tag{2.1}
-$$
+```
 
 The signs in (2.1) are forced by positive equilibrium at the rhombus vertices: the
 port force must lie in the positive cone of the two rhombus contact forces there.
@@ -129,46 +129,46 @@ Let `alpha_01,alpha_12,alpha_23,alpha_30` be the positive contact stresses on th
 rhombus sides, and let `tau_i` be the constant positive contact stress in port `i`.
 At `p_0`, contact equilibrium is
 
-$$
+```math
 -\alpha_{01}u-\alpha_{30}v+\tau_0a=0.
-$$
+```
 
 Since `a=(u+v)/d_+` and `u,v` are linearly independent unless the rhombus is
 degenerate, this gives
 
-$$
+```math
 \alpha_{01}=\alpha_{30}={\tau_0\over d_+}.
 \tag{2.2}
-$$
+```
 
 At `p_1`, the equation is
 
-$$
+```math
 \alpha_{01}u-alpha_{12}v+\tau_1b=0,
-$$
+```
 
 so
 
-$$
+```math
 \alpha_{01}=\alpha_{12}={\tau_1\over d_-}.
 \tag{2.3}
-$$
+```
 
 At `p_2` and `p_3` the same calculation gives
 
-$$
+```math
 \alpha_{12}=\alpha_{23}={\tau_2\over d_+},
 \qquad
 \alpha_{23}=\alpha_{30}={\tau_3\over d_-}.
 \tag{2.4}
-$$
+```
 
 Equations (2.2)--(2.4) prove
 
-$$
+```math
 \boxed{\alpha_{01}=\alpha_{12}=\alpha_{23}=\alpha_{30}=:\alpha.}
 \tag{2.5}
-$$
+```
 
 Now compute the contact response. In the unit-current problem with source `+1` at
 `t_3` and sink `-1` at `t_1`, the ports at `t_0` and `t_2` carry zero current,
@@ -180,15 +180,15 @@ By (2.5), every rhombus edge has resistance `r=1/alpha`. The current from `p_3` 
 `p_1` splits equally between the two two-edge paths through `p_0` and `p_2`. Set
 `V(p_1)=0`. Each path carries current `1/2`, so
 
-$$
+```math
 V(p_0)=r/2=V(p_2).
-$$
+```
 
 Therefore
 
-$$
+```math
 K_{ef}=V(t_2)-V(t_0)=V(p_2)-V(p_0)=0.
-$$
+```
 
 The response part of the conclusion also holds if one-terminal positive contact
 subnetworks are attached at the four rhombus vertices, provided the equal cycle
@@ -197,7 +197,7 @@ subnetworks carry zero current, and the source and sink subnetworks inject `+1` 
 `-1` at their rhombus attachment vertices. This is only a response observation:
 arbitrary subnetwork geometry does not by itself preserve the KKT equal-stress
 conclusion, so it is not being asserted as a broader unit-contact theorem.
-$\square$
+$`\square`$
 
 ## 3. Exact target implication
 

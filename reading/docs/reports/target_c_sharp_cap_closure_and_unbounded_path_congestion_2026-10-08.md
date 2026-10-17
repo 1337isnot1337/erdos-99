@@ -46,11 +46,11 @@ normalized KKT stress. No canonical-source overlap theorem is refuted.
 Let p,a be source points at distance D>=10 in a configuration of
 diameter D. Put
 
-$$
+```math
  u=(p-a)/D,\quad s(x)=u\cdot(p-x),\quad
  \kappa=1-\sqrt3/2,\quad 0<\delta\le1/D,\quad
  H=\kappa D-\delta/4.
-$$
+```
 
 All old source points satisfy |x-a|<=D and s(x)>=0. Suppose
 s(x)<H, and translate x to x'=x-delta u while fixing y.
@@ -60,32 +60,32 @@ Proof. Translate a to zero. Write t=s(y)-s(x), and
 m=(s(x)+s(y))/2. The increase condition is exactly t<delta/2.
 The midpoint identity gives
 
-$$
+```math
  |x-y|^2\le4\{D^2-| (x+y)/2 |^2\}
           \le4(2Dm-m^2).
-$$
+```
 
 Here 0<=m<H+t/2<=H+delta/4=kappa D<D. Therefore
 
-$$
+```math
  |x'-y|^2
  \le4(2Dm-m^2)-2\delta t+\delta^2
  <F(t):=4\{2D(H+t/2)-(H+t/2)^2\}-2\delta t+\delta^2.
-$$
+```
 
 On t in [-H,delta/2], the derivative
 
-$$
+```math
  F'(t)=4(D-H-t/2)-2\delta>0,
-$$
+```
 
 since D-H-delta/4=(sqrt(3)/2)D and delta<=1/D.
 Thus
 
-$$
+```math
  |x'-y|^2<F(\delta/2)
    =4\{2D\kappa D-(\kappa D)^2\}=D^2.
-$$
+```
 
 The strict sign follows already from s(x)<H; t<delta/2 supplies
 another strict inequality. No new-point ball containment or approximate
@@ -94,10 +94,10 @@ midpoint localization is assumed.
 The leading coefficient kappa cannot be increased using only the
 diameter geometry. The old four-point source
 
-$$
+```math
  a=(0,0),\ p=(D,0),\
  x=(\sqrt3D/2,D/2),\ y=(\sqrt3D/2,-D/2)
-$$
+```
 
 is unit-separated for D>=10, has actual diameter D, and has
 s(x)=s(y)=kappa D. Moving x by -delta u makes
@@ -111,25 +111,25 @@ Use a triangle-free global minimizer selected contact-minimal and then
 actual-diameter-pair-minimal, with all source labels retained. Fix any
 actual pair pa and the parameters of Section 2. Define x -> y when
 
-$$
+```math
  \begin{cases}
  |x-\delta u-y|\le1,& |x-y|>1,\\
  |x-\delta u-y|<1,& |x-y|=1.
  \end{cases}
-$$
+```
 
 Every arrow has
 
-$$
+```math
  1\le d=|x-y|\le1+\delta,\qquad
  s(y)-s(x)>\delta/2,
-$$
+```
 
 and
 
-$$
+```math
  d-1\le\delta\{s(y)-s(x)\}-\delta^2/2.
-$$
+```
 
 Let R contain p, be closed under all arrows leaving R, and lie in
 s<H. Translate every label in R by -delta u; fix all other labels.
@@ -151,17 +151,17 @@ Following the finite arrow closure from p gives a path of distinct
 source labels ending at its first depth >=H. Its length L and gap sum
 satisfy
 
-$$
+```math
  L\ge {H\over1+\delta},\qquad
  \sum(d_j-1)<\delta(H+1+\delta)-L\delta^2/2.
-$$
+```
 
 For delta=1/D and D>=20 this gives
 
-$$
+```math
  L\ge D/8,\qquad
  \sum(d_j-1)<\kappa+1/D+3/(4D^2)-L/(2D^2).
-$$
+```
 
 All these near-unit paths are embedded, since 1+delta<sqrt(2).
 Embedding alone supplies no disjointness or bounded congestion.
@@ -178,22 +178,22 @@ no isolated-population claim there.
 
 Fix any integer q>=1. Put K=3q, M=64K^2 and
 
-$$
+```math
  \sigma={1\over4M},\quad
  D=M+{1\over16M},\quad \delta=1/D,\quad
  w={1-\sigma^2\over1+\sigma^2},\quad
  z=1-\delta^2/2+i\delta w.
-$$
+```
 
 Then |z|=1. Write z=exp(i theta), so
 delta<=theta<1.01 delta. Let a=0 and
 p_j=D z^j for -1<=j<=K+1. All these coordinates are rational.
 Consecutive p_j have distance one. Set
 
-$$
+```math
  c=1+1/K,\quad \rho=1+\delta^2/100,\quad
  r_j=(D-3+c(D-\Re p_j),\Im p_j)\quad(0\le j\le K).
-$$
+```
 
 The r_j form an inward-facing row. Adjacent distances are strictly
 greater than one and at most 1+delta. Choose the q+1 roots
@@ -204,21 +204,21 @@ For each chosen i let u_i=p_i/D and f_i=p_i-rho u_i.
 Join f_i to r_i by two almost-unit segments using a middle point m_i.
 An exact equal-length construction is
 
-$$
+```math
  v_i=r_i-f_i,\quad
  \lambda_i^2={\rho^2-|v_i|^2/4\over|v_i|^2},\quad
  m_i=(f_i+r_i)/2+\lambda_i Jv_i.
-$$
+```
 
 The radicand is positive. Replace lambda_i by its rational upper
 approximation with denominator 10^6 M^6. Both segment lengths then
 belong to [rho,1+delta^2/50). This makes the complete family rational.
 Finally add the isolate trunk
 
-$$
+```math
  t_j=(D-3-j\rho,0),\qquad
  1\le j\le T=\lceil D/7\rceil.
-$$
+```
 
 Take all the listed points as the source. There are
 N=8q+7+T<D/5 points.
@@ -237,17 +237,17 @@ three, giving tangential separation at least 2.97 before offsets.
 For completeness, |v_i| is between 1.9 and 2rho. In the equal-length
 middle construction the perpendicular offset is below .16:
 
-$$
+```math
 \rho^2-|v_i|^2/4\le4(\rho-1)+3h_i<.16^2.
-$$
+```
 
 To see positivity explicitly, put A=c+1-rho/D. Then
 
-$$
+```math
  |v_i|^2=(3-\rho)^2+
  h_i\{-2(3-\rho)A+2\rho^2/D\}
  h_i^2(A^2-\rho^2/D^2)\le(3-\rho)^2<4\rho^2.
-$$
+```
 
 The coefficient after factoring out h_i is negative using
 1.9<A<2.4, 3-rho>1.9 and h_i<.008. Thus the square root is
@@ -279,10 +279,10 @@ diameter fan leaf.
 
 For a root i use its own direction u_i and amplitude delta. The path
 
-$$
+```math
  p_i\to f_i\to m_i\to r_i\to r_{i-1}\to\cdots\to r_0
        \to t_1\to t_2\to\cdots
-$$
+```
 
 consists of strict old noncontact arrows. Its two old wall contacts
 remain exactly unit under the initial reflection.
@@ -291,20 +291,20 @@ The first and connector arrows have forward projection at least .9.
 The trunk arrows have projection at least .99rho. To check a row
 arrow j -> j-1 with 1<=j<=i, put
 
-$$
+```math
  A_j=\sin((j-1/2)\theta),\quad B_j=\cos((j-1/2)\theta).
-$$
+```
 
 Its vector is (c A_j,B_j), its squared length is
 1+(c^2-1)A_j^2, and its projection on u_i is
 c A_j cos(i theta)+B_j sin(i theta). The uniform bounds imply
 
-$$
+```math
  (c^2-1)A_j^2
  \le {5\over2}(j-1/2)\delta^2,\qquad
  2\delta\,u_i\cdot(c A_j,B_j)-\delta^2
  \ge(98j/25-99/50)\delta^2.
-$$
+```
 
 The right side exceeds the left for j>=1. Thus translating the
 parent alone produces distance strictly below one.
@@ -360,9 +360,9 @@ Let o=(D/2,0), R=D/2. All old points lie in B(o,R+.02). Let U be
 B(o,R-3) with the closed radius-(1+delta) disks about all old points
 removed. Its area is at least
 
-$$
+```math
  \pi(R-3)^2-\pi(1+\delta)^2N=\pi D^2/4-O(D).
-$$
+```
 
 Choose a translation of the triangular lattice of systole
 1+2delta that puts at least its mean number of sites in U.
@@ -376,9 +376,9 @@ at most (R-3)+(R+.02)<D from old points, and at most D-6 from
 one another. The old actual diameter star is unchanged. The total
 population is
 
-$$
+```math
  n={\pi\over2\sqrt3}D^2+O(D).
-$$
+```
 
 The [canonical Oler inequality](../theory/03-oler-shell.md), together
 with per(K)<=pi D, gives area(K)=pi D^2/4-O(D).

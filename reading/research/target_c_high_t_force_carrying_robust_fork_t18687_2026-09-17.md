@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_force_carrying_robust_fork_t18687_2026-09-17.md) · source SHA-256 `eb55268f0e27b60009155d49f7576ab92230417e31b1bd668809636efcac6a73`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cab702327724aaeec676b6e6068932d8201b690f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_force_carrying_robust_fork_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a11aed17260ea2284ce201b95d97313a472c64fb487e657d033bffa3f9c6b566"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -20,31 +22,33 @@ The direction-packing proof of the robust fork uses only opposite transverse sig
 
 Fix any constant
 
-$$
+```math
 0<\rho<{c_0\over6},
 \qquad
 c_0={113\over20{,}000{,}000}.
 \tag{FR.1}
-$$
+```
 
 Then there are families `S_D(rho)` and `E_D^{force}(rho)` satisfying
 
-$$
+```math
 \boxed{
 |E_D^{\rm force}(\rho)|+|S_D(\rho)|
 >(c_0-6\rho)D-o(D).
 }
 \tag{FR.2}
+```
 
 Here:
 
 - every `i in S_D(rho)` is a non-antipodal TB1 interface with one switching diameter vector `n_i` satisfying
-  \[
+  ```math
   n_i\cdot w\ge D\sin\rho
-  $$
+  
+  ```
   for every unit local contact-opening direction `w`;
 - every `i in E_D^{force}(rho)` has two actual switching diameter bars `h_i^-,h_i^+` whose projective angle is at least `rho`, whose positive cone strictly contains the exact axial reaction direction, and for which
-  $$
+  ```math
   \boxed{
   G_i
   =D\bigl(\lambda_i^-d_i^-+\lambda_i^+d_i^+\bigr),
@@ -52,27 +56,28 @@ Here:
   \lambda_i^-,\lambda_i^+>0.
   }
   \tag{FR.3}
-  $$
+  
+  ```
 
 For all sufficiently large `D`, every pair in `E_D^{force}(rho)` is vertex-disjoint and crossing.  Its four-endpoint hull contains the common disk
 
-$$
+```math
 \boxed{
 B\!\left(o,{D\over2}\sin{\rho\over2}-L_D\right),
 \qquad
 L_D=O(D^{3/4}),
 }
 \tag{FR.4}
-$$
+```
 
 and its two diameter diagonals intersect within
 
-$$
+```math
 \boxed{
 \left(1+{2\over\sin\rho}\right)L_D
 }
 \tag{FR.5}
-$$
+```
 
 of the common source circumcenter `o`.
 
@@ -84,12 +89,12 @@ Thus the robust exact-antipodal alternative is not merely a population of wide c
 
 At each exact-antipodal good interface `i`, the exact-force theorem supplies switching directions `d_i^-,d_i^+` such that
 
-$$
+```math
 (d_i^-\cdot Je_i)(d_i^+\cdot Je_i)<0,
 \qquad
 e_i={G_i\over|G_i|},
 \tag{FR.6}
-$$
+```
 
 and the exact positive identity (FR.3) holds.
 
@@ -97,10 +102,10 @@ All consistently oriented switching directions on the selected shore lie in the 
 
 Define
 
-$$
+```math
 \eta_i=d_{\mathbb{RP}^1}([d_i^-],[d_i^+]).
 \tag{FR.7}
-$$
+```
 
 Call this exact force pair `rho`-wide when `eta_i>=rho`.
 
@@ -118,12 +123,12 @@ The robust angle-density theorem bounded the number of exact-antipodal interface
 
 The exact force pair satisfies all five properties.  Therefore, if `N_D^{force}(rho)` is the number of interfaces with `eta_i<rho`, then
 
-$$
+```math
 \boxed{
 N_D^{\rm force}(\rho)\le2\rho D+o(D).
 }
 \tag{FR.8}
-$$
+```
 
 For completeness, the same dichotomy is as follows.  A `rho`-narrow pair which brackets the oriented row/reaction axis in one open semicircle has both projective directions either within `rho` of the shrinking row window or within `rho` of the projective boundary line of the common semicircle.  These are at most two projective arcs of total length `omega_D+4rho`.  C67 applied to the `2N_D^{force}` distinct bars gives (FR.8).
 
@@ -133,38 +138,39 @@ For completeness, the same dichotomy is as follows.  A `rho`-narrow pair which b
 
 The unstrengthened good-interface fork is
 
-$$
+```math
 |E_D|+|U_D|>c_0D-o(D).
 \tag{FR.9}
-$$
+```
 
 Exactly as in the parameterized robust theorem, at most
 
-$$
+```math
 4\rho D+o(D)
 \tag{FR.10}
-$$
+```
 
 chosen TB1 bars can fail the `rho` interior-margin condition.  Removing those and the at most `2rho D+o(D)` narrow exact force pairs gives
 
-$$
+```math
 \begin{aligned}
 |E_D^{\rm force}(\rho)|+|S_D(\rho)|
 &>(c_0-4\rho-2\rho)D-o(D)\\
 &=(c_0-6\rho)D-o(D),
 \end{aligned}
-$$
+```
 
 which proves (FR.2).
 
 Consequently
 
-$$
+```math
 \boxed{
 \max\{|E_D^{\rm force}(\rho)|,|S_D(\rho)|\}
 >{c_0-6\rho\over2}D-o(D).
 }
 \tag{FR.11}
+```
 
 The full density-angle tradeoff therefore survives after demanding exact force generation on the antipodal side.
 
@@ -174,27 +180,27 @@ The full density-angle tradeoff therefore survives after demanding exact force g
 
 For fixed `rho>0`, the source-wide shared-endpoint angle cap is
 
-\[
+```math
 \Theta_D=(4\,3^{1/8}+o(1))D^{-1/4}=o(1).
 \tag{FR.12}
-$$
+```
 
 Eventually `Theta_D<rho`, so a `rho`-wide exact force pair cannot share an endpoint.  Its two actual diameter bars are vertex-disjoint and therefore cross.
 
 The wide-dipole central-diamond theorem depends only on the two bars being actual diameter chords of length `D`, their projective angle being at least `rho`, and the common source circumradius/midpoint estimate.  It therefore applies directly to the exact force pair and gives (FR.4)--(FR.5), together with
 
-$$
+```math
 \operatorname{area}Q_i
 \ge {D^2\over2}\sin\rho
 \tag{FR.13}
-$$
+```
 
 and pairwise cross-chord endpoint separation
 
-$$
+```math
 \ge D\sin(\rho/2)-2L_D.
 \tag{FR.14}
-$$
+```
 
 The new information is simultaneous with this geometry: the same two diagonals satisfy the exact positive KKT identity (FR.3).
 
@@ -204,27 +210,28 @@ The new information is simultaneous with this geometry: the same two diagonals s
 
 If the force-diamond side wins (FR.11), then it contains more than
 
-$$
+```math
 {c_0-6\rho\over2}D-o(D)
 \tag{FR.15}
-$$
+```
 
 tagged force diamonds.  The source-wide diameter-degree bound is
 
-$$
+```math
 \Delta(H)\le(4\,3^{1/8}+o(1))D^{3/4}.
 \tag{FR.16}
-$$
+```
 
 Treat each force pair as a four-endpoint bundle.  The standard bundle-conflict greedy extraction yields at least
 
-$$
+```math
 \boxed{
 \left(
 {c_0-6\rho\over32\,3^{1/8}}-o(1)
 \right)D^{1/4}
 }
 \tag{FR.17}
+```
 
 bundles with pairwise disjoint endpoint sets.  Every selected diameter bar crosses every other selected diameter bar.  Every tagged pair still:
 
@@ -241,23 +248,24 @@ This is an unbounded **force-carrying central braid** rather than an unweighted 
 
 At
 
-\[
+```math
 \rho={c_0\over12},
 \tag{FR.18}
-$$
+```
 
 one has
 
-$$
+```math
 c_0-6\rho={c_0\over2}.
-$$
+```
 
 Hence one of the following has more than
 
-\[
+```math
 {c_0\over4}D-o(D)
 =1.4125\times10^{-6}D-o(D)
 \tag{FR.19}
+```
 
 interfaces:
 

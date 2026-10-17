@@ -59,14 +59,14 @@ so that (G=C\cup E_0) is a simple plane graph. Keep an edge once if it is
 already a contact, and then regard it as physical rather than auxiliary.
 Auxiliary edges are bookkeeping edges, never packing constraints or paths.
 
-Let $\mathcal F$ be a nonempty family of bounded faces of (G) with simple
+Let $`\mathcal F`$ be a nonempty family of bounded faces of (G) with simple
 boundary cycles and degrees (m_f\ge5). Define
 
-$$
+```math
  Q_{\mathcal F}=\sum_{f\in\mathcal F}(m_f-4),\qquad
  X_{\mathcal F}=\bigcup_{f\in\mathcal F}V(\partial f).
  \tag{2.1}
-$$
+```
 
 A separator (S\subset V) removes vertices, including possible endpoints:
 (C-S) has no path from (X_{\mathcal F}\setminus S) to (B\setminus S).
@@ -82,17 +82,17 @@ from the induced physical contact graph on (U\cup S), together with all
 auxiliary edges of (G) whose endpoints remain. Write (c_K) for the number
 of components of (K). Then
 
-$$
+```math
  \boxed{Q_{\mathcal F}\le 2k-2c_U-4c_K\le2k-4.}
  \tag{3.1}
-$$
+```
 
 In particular there are at least
 
-$$
+```math
  \boxed{\left\lceil\frac{Q_{\mathcal F}+4}{2}\right\rceil}
  \tag{3.2}
-$$
+```
 
 simultaneously vertex-disjoint actual contact paths from the selected face
 boundaries to distinct actual loaded vertices.
@@ -112,18 +112,18 @@ is zero.
 Positive equilibrium on (U_j) supplies a nonzero dependence of the same
 rows. Thus (e_j+t_j\ge2n_j+1). Summing over the disjoint components,
 
-$$
+```math
  e_U+t_U\ge2|U|+c_U. \tag{3.3}
-$$
+```
 
 Let (e_S) count physical contacts internal to (S), and (a) count retained
 auxiliary edges. Auxiliary edges have both endpoints in (S), because
 (U\cap B=\varnothing). Therefore
 
-$$
+```math
  e(K)=e_U+t_U+e_S+a\ge2|U|+c_U+e_S+a.
  \tag{3.4}
-$$
+```
 
 ### 3.2 Every separator vertex is exposed on an outer walk
 
@@ -153,9 +153,9 @@ occurrences an interval has length at least two unless it is one edge with
 both endpoints in (S). Such one-step intervals use at most (2e_S) physical
 occurrences and at most (a_{\rm out}) auxiliary occurrences. Hence
 
-$$
+```math
  b_K\ge2k-2e_S-a_{\rm out}. \tag{3.5}
-$$
+```
 
 A bridge may contribute both orientations. This is why the physical term is
 (2e_S), not (e_S). A component with one chosen occurrence contributes its
@@ -168,31 +168,31 @@ Let (F_3(K)) count bounded degree-three faces and let
 (Q^+(K)=\sum_{\deg g\ge5}(\deg g-4)). The graph is simple; bounded face walks
 have degree at least three. Exact occurrence counting gives
 
-$$
+```math
  b_K-F_3(K)+Q^+(K)=4|V(K)|-2e(K)-4c_K.
  \tag{3.6}
-$$
+```
 
 Every bounded triangular face uses an auxiliary edge, since the physical
 contact graph is triangle-free. An auxiliary edge has two side occurrences;
 (a_{\rm out}) of the total (2a) occurrences are outer. Charging a triangle
 to one auxiliary bounded-side occurrence gives
 
-$$
+```math
  F_3(K)\le2a-a_{\rm out}. \tag{3.7}
-$$
+```
 
 All vertices and edges of each selected simple face cycle are in (K).
 Its interior was empty in (G), so it remains a bounded face of its component
 of (K). Thus (Q_{\mathcal F}\le Q^+(K)). Combining (3.4)--(3.7),
 
-$$
+```math
 \begin{aligned}
  Q_{\mathcal F}
  &\le4k-2c_U-2e_S-2a-4c_K-b_K+F_3(K)\\
  &\le2k-2c_U-4c_K.
 \end{aligned}
-$$
+```
 
 The family is nonempty, so (c_K\ge1). This proves (3.1). This argument
 allows two triangular faces on opposite sides of one virtual chord; it does
@@ -215,24 +215,24 @@ Auxiliary edges are absent from this flow network.
 
 For one degree-(m\ge5) face, its full-boundary minimum separator satisfies
 
-$$
+```math
  \boxed{k\ge\left\lceil\frac{m+2}{2}\right\rceil.} \tag{4.1}
-$$
+```
 
 If (U\ne\varnothing), use (c_U\ge1) and (c_K\ge1) in (3.1), with
 (Q=m-4). If (U=\varnothing), all (m) boundary vertices are in (S), so
 (k\ge m\ge(m+2)/2). These alternatives are exhaustive.
 
-If the face has $\ell$ loaded boundary vertices, there are at least
+If the face has $`\ell`$ loaded boundary vertices, there are at least
 
-$$
+```math
  \boxed{\max\left\{0,\left\lceil\frac{m+2}{2}\right\rceil-\ell\right\}}
  \tag{4.2}
-$$
+```
 
 vertex-disjoint contact returns with unloaded starts and distinct loaded ends.
-For an unloaded-start separator, adding those $\ell$ loaded boundary vertices
-gives a full-boundary separator. Thus its size plus $\ell$ is at least (4.1).
+For an unloaded-start separator, adding those $`\ell`$ loaded boundary vertices
+gives a full-boundary separator. Thus its size plus $`\ell`$ is at least (4.1).
 
 This strengthens the face-local ((m-2\ell)/(4\pi+2)) return floor of draft
 #671 under the explicit plane-augmentation/source hypotheses above. It does
@@ -240,33 +240,33 @@ not import its cap extraction or claim any positive route-length currency.
 
 ## 5. Simultaneous quotas for every face
 
-Let $\ell_f=|V(\partial f)\cap B|$, and define the integer demand
+Let $`\ell_f=|V(\partial f)\cap B|`$, and define the integer demand
 
-$$
+```math
  r_f=\max\left\{0,\left\lfloor\frac{m_f-4}{2}\right\rfloor-\ell_f\right\}.
  \tag{5.1}
-$$
+```
 
 **Theorem GQ.2.** All demands can be realized simultaneously: for every (f)
 there are (r_f) physical contact paths starting at distinct unloaded vertices
-of $\partial f$ and ending at distinct actual loaded vertices. Paths for
+of $`\partial f`$ and ending at distinct actual loaded vertices. Paths for
 different faces are also vertex-disjoint. Each path can stop at its first
 loaded vertex. A shared boundary vertex can serve only one demand.
 
 ### Proof
 
-Discard zero-demand faces. For every subfamily $\mathcal E$, adding the union
+Discard zero-demand faces. For every subfamily $`\mathcal E`$, adding the union
 of its loaded boundary vertices to any unloaded-start separator makes a
 full-boundary separator. By (3.1), its unloaded-start minimum separator has
 size at least
 
-$$
+```math
  \frac{Q_{\mathcal E}}2+2
  -\left|\bigcup_{f\in\mathcal E}(V(\partial f)\cap B)\right|
  \ \ge\sum_{f\in\mathcal E}r_f. \tag{5.2}
-$$
+```
 
-The union is bounded by $\sum\ell_f$; hence repeated loaded occurrences do
+The union is bounded by $`\sum\ell_f`$; hence repeated loaded occurrences do
 not supply extra capacity.
 
 In the vertex-split physical network, add one node per face, an arc of
@@ -274,11 +274,11 @@ capacity (r_f) from the supersource to that node, and arcs of capacity
 (M>|V|+\sum r_f) from it to the inputs of its unloaded boundary vertices.
 Keep the unit vertex arcs and the physical-contact and sink arcs.
 
-For any cut of capacity below $\sum r_f$, no (M)-arc is cut. Let
-$\mathcal E$ be the face nodes on its source side. The cut pays
-$\sum_{f\notin\mathcal E}r_f$ on the source arcs. Its cut vertex arcs form
-a separator between the unloaded starts of $\mathcal E$ and (B), and
-by (5.2) pay at least $\sum_{f\in\mathcal E}r_f$. Contradiction. Integral
+For any cut of capacity below $`\sum r_f`$, no (M)-arc is cut. Let
+$`\mathcal E`$ be the face nodes on its source side. The cut pays
+$`\sum_{f\notin\mathcal E}r_f`$ on the source arcs. Its cut vertex arcs form
+a separator between the unloaded starts of $`\mathcal E`$ and (B), and
+by (5.2) pay at least $`\sum_{f\in\mathcal E}r_f`$. Contradiction. Integral
 flow therefore saturates every face demand. Flow decomposition and stopping
 at the first loaded vertex prove the theorem. □
 
@@ -298,16 +298,16 @@ Bounded augmented-cell faces remain faces in this global augmentation.
 
 For a family of such faces with (m_f>M\ge5), put
 
-$$
+```math
  T_M=\sum_{m_f>M}(m_f-4),\quad N_M=\#\{f:m_f>M\},\quad
  L_M=\sum_{m_f>M}\ell_f.
-$$
+```
 
 The unconditional quota consequence is
 
-$$
+```math
  \boxed{p_M\ge\sum r_f\ge\frac12T_M-\frac12N_M-L_M.} \tag{6.1}
-$$
+```
 
 The first bound is nonnegative; a negative last expression is harmless.
 This handles any number and any degrees of the faces, including degrees
@@ -315,9 +315,9 @@ This handles any number and any degrees of the faces, including degrees
 
 If each selected face has at most two loaded vertices, then
 
-$$
+```math
  \boxed{p_M\ge\left(\frac12-\frac{5}{2(M-3)}\right)T_M.} \tag{6.2}
-$$
+```
 
 Indeed (N_M\le T_M/(M-3)), because degrees are integer and (m_f>M).
 For the augmented graph built from internal and attachment contacts only,
@@ -327,15 +327,15 @@ topological statement; (6.1) requires no bound on loaded incidence. In the
 full-core graph a restored physical loaded-loaded polygon side simply
 reclassifies the corresponding auxiliary edge and changes no face.
 
-For a sequence with $T_M=\Theta(D)$, and then (M\to\infty), (6.2) gives
+For a sequence with $`T_M=\Theta(D)`$, and then (M\to\infty), (6.2) gives
 asymptotically one globally disjoint loaded return per two tail-defect units.
 More precisely, fix (M) first and use the displayed coefficient at every
-finite source. If $\liminf T_M/D\ge\tau_M$, then
+finite source. If $`\liminf T_M/D\ge\tau_M`$, then
 
-$$
+```math
  \liminf p_M/D\ge
  \left(\frac12-\frac{5}{2(M-3)}\right)\tau_M
-$$
+```
 
 whenever the coefficient is nonnegative. No unsupported diagonal choice of
 (M=M_D) is needed.
@@ -344,11 +344,11 @@ whenever the coefficient is nonnegative. No unsupported diagonal choice of
 
 The trusted proof-only #699 identity remains
 
-$$
+```math
 5m_B+4S+2\sigma_R
 \ge2(\pi+s)D+5k+2(Q-f)+2(b-P_F)-o(D),
 \quad s=\sqrt{\pi/(2\sqrt3)}.
-$$
+```
 
 The new theorem supplies **independent face-indexed return counts**. It does
 not prove that these paths are stopped trains, that incident rhombi can be

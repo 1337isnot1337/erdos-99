@@ -28,25 +28,25 @@ exact-phase contact trains. No global-minimizer counterexample is asserted.
 
 Let `s>=1`, `q=4s+1`, `theta=pi/q`, and
 
-$$
+```math
 R={1\over2\sin\theta},\qquad
 p_j=R(\cos(2j\theta),\sin(2j\theta)),\quad j\in\mathbb Z/q\mathbb Z.
-$$
+```
 
 The source is unit-separated. Its only contacts are the `q` polygon sides;
 its contact graph is a triangle-free cycle. Its actual diameter is
 
-$$
+```math
 D=2R\cos(\theta/2)={1\over2\sin(\theta/2)}.
 \tag{1}
-$$
+```
 
 The diameter graph has exactly the edges
 
-$$
+```math
 H=\{\{j,j+2s\}:j\in\mathbb Z/q\mathbb Z\}.
 \tag{2}
-$$
+```
 
 These statements follow from strict increase of the circle chord length with
 cyclic distance `1,...,2s`. Since `gcd(2s,4s+1)=1`, (2) is one odd cycle;
@@ -56,9 +56,9 @@ not a selected matching or a virtual thrackle.
 Use `u=(1,0)` and vertical crosscuts at positive x-coordinates between the
 successive values
 
-$$
+```math
 0<R\cos(2s\theta)<\cdots<R\cos(2\theta)<R.
-$$
+```
 
 There are `s+1` cuts and `s+2` layers. Assign every left-half-plane vertex
 to layer 0, assign `p_0` to layer `s+1`, and assign the right pair
@@ -69,10 +69,10 @@ rows are exact intervals.
 Every diameter with different endpoint labels joins layer 0 to a positive
 layer. Exactly one diameter has equal endpoint labels:
 
-$$
+```math
 \{p_s,p_{-s}\},\quad\text{in layer 1}.
 \tag{3}
-$$
+```
 
 Indeed the diameter neighbors of `p_j`, `1<=j<s`, have signed indices
 `j-2s` and `j+2s-q=-(2s+1-j)`, both in the left half-plane. For `j=s`,
@@ -84,10 +84,10 @@ Thus the gap graph on `0,...,s+1` is a star as a simple graph, with
 parallel branches: two rows for layer 1, four for each layer `2,...,s`,
 and two for the exterior layer `s+1`. It has `4s` nonzero rows and
 
-$$
+```math
 \operatorname{rank}M=s+1.
 \tag{4}
-$$
+```
 
 To see (4), every nonempty row is a nonzero multiple of the prefix indicator
 `1_[1,g]`, and every `g=1,...,s+1` occurs. Those prefix indicators have a
@@ -111,10 +111,10 @@ the left half-plane and every middle endpoint in the right half-plane.
 Thus every switching vector has a positive x-component, and the exact
 weighted resultant is
 
-$$
+```math
 G_i=g_i u,\qquad g_i>0.
 \tag{5}
-$$
+```
 
 There are opposite strict transverse signs in every packet. The internal
 same-layer edge (3) contributes equal and opposite endpoint forces and
@@ -124,11 +124,11 @@ gap is left-only and occupies both middle boundary arcs.
 
 For each `j=1,...,s-1`, choose the mirrored pair
 
-$$
+```math
 h_j^+=\{p_j,p_{j-2s}\},\qquad
 h_j^-=\{p_{-j},p_{-j+2s}\}.
 \tag{6}
-$$
+```
 
 All `2(s-1)` bars have mutually disjoint endpoints: their middle indices
 are `+/-1,...,+/-(s-1)` and their exterior indices are
@@ -141,9 +141,9 @@ Multiplying both by one positive scalar makes their sum equal to the entire
 packet's `G_i` in (5). Hence these are exact positive two-bar compressions
 of the actual diameter stress, not unweighted geometric pairs. There are
 
-$$
+```math
 s-1=(\pi/4+o(1))D
-$$
+```
 
 fully vertex-disjoint, force-carrying CROSS bundles. Thus even a **linear**
 complete crossing family of such pairs is possible in the remaining
@@ -154,18 +154,18 @@ geometric normal form.
 The regression also has an actual positive KKT stress for its unit-contact
 cycle and full diameter cycle. Give every unit side weight
 
-$$
+```math
 \alpha=D^2\beta.
 \tag{7}
-$$
+```
 
 At vertex `p_j`, the contact-neighbor displacement sum is
 `2(1-cos(2theta))p_j`. The diameter-neighbor displacement sum is
 `2(1+cos(theta))p_j`. Since
 
-$$
+```math
 D^2={1+\cos\theta\over1-\cos(2\theta)},
-$$
+```
 
 equilibrium holds with all contact and diameter multipliers strictly positive.
 The sum of the diameter weights is one. Summing this actual equilibrium over
@@ -176,36 +176,36 @@ two-boundary-train directions.
 Let `L_d` be the circulant graph Laplacian with edges `{j,j+d}`. The scalar
 stress matrix is
 
-$$
+```math
 \Omega=\beta(D^2L_1-L_{2s}).
 \tag{8}
-$$
+```
 
 On Fourier mode `k`, its eigenvalue divided by `4 beta` is
 
-$$
+```math
 D^2\sin^2(k\theta)-\sin^2(2sk\theta).
-$$
+```
 
 Because `2s theta=pi/2-theta/2`, for `1<=k<=q-1` the ratio of the second
 square to the first is
 
-$$
+```math
 \begin{cases}
 1/(4\sin^2(k\theta/2)),&k\text{ odd},\\
 1/(4\cos^2(k\theta/2)),&k\text{ even}.
 \end{cases}
-$$
+```
 
 For odd `k`, the denominator is minimized only at `k=1`; for even `k`,
 only at `k=q-1`. Both maximal ratios equal `D^2`. Hence
 
-$$
+```math
 \Omega\succeq0,\qquad
 \ker\Omega=\operatorname{span}\{\mathbf1,P_x,P_y\},
 \qquad\operatorname{rank}\Omega=q-3.
 \tag{9}
-$$
+```
 
 These identities are actual source-level stress facts. They do not make the
 shell a global minimizer, and no canonical theorem is invoked backwards.
@@ -220,47 +220,47 @@ Identify the plane with the complex numbers and put `zeta=exp(2i theta)`.
 Write an arbitrary velocity as `w_j=sum_k a_k zeta^(kj)`. The bar equation
 for edges of step `d` is the vanishing of
 
-$$
+```math
 \operatorname{Re}\{(\zeta^{-d}-1)\zeta^{-j}(w_{j+d}-w_j)\}.
-$$
+```
 
 For nonzero Fourier frequency `k-1`, equating it and its conjugate, then
 dividing a common nonzero factor, gives
 
-$$
+```math
 \sin(kd\theta)a_k+
 \sin((2-k)d\theta)\overline{a_{2-k}}=0.
 \tag{10}
-$$
+```
 
 Indices on `a` are taken modulo `q`; the integer sine expression is valid
 also for negative `2-k`. Use (10) for `d=1,2s`. Its determinant is
 
-$$
+```math
 \delta_k=\sin(k\theta)\sin((2-k)2s\theta)
 -\sin(2sk\theta)\sin((2-k)\theta).
-$$
+```
 
 Up to a sign, it factors as
 
-$$
+```math
 \begin{cases}
 4\cos(k\theta/2)\cos((2-k)\theta/2)
 \cos(\theta/2)\sin((k-1)\theta/2),&k\text{ odd},\\
 4\sin(k\theta/2)\sin((2-k)\theta/2)
 \cos(\theta/2)\cos((k-1)\theta/2),&k\text{ even}.
 \end{cases}
-$$
+```
 
 It is nonzero for `3<=k<=q-1`. For the paired indices `k=0,2`, (10)
 forces `a_2=0` and leaves `a_0` arbitrary, giving translations. For
 frequency zero, `k=1`, the bar equation requires `Re(a_1)=0`, giving
 rotation. Thus
 
-$$
+```math
 \operatorname{rank}R_{C\cup H}=2q-3.
 \tag{11}
-$$
+```
 
 Full-support positive KKT equilibrium makes every fixed-diameter critical
 velocity have zero first variation on all active contacts and diameters:
@@ -358,10 +358,10 @@ Take `q=12t+1`, hence `s=3t`, and put `L=floor(q/100)`. Use the first `L`
 positive-projection crosscuts from Section 1, and a rotated copy whose axial
 direction points to vertex `j=2t+1`. The two directions have angle
 
-$$
+```math
 \phi={2\pi(2t+1)\over q}={\pi\over3}+{5\pi\over3q},
 \qquad \pi/3<\phi<\pi/2.
-$$
+```
 
 Thus their separation is strictly above `pi/3` with inverse-`D` phase defect.
 The two bracing stars are distinct actual diameter vertices `p_0,p_j`.
@@ -371,10 +371,10 @@ threshold is below `R sin(2pi L/q)<2pi LR/q<=pi R/50<R/8`.
 For one cut of projection `a` in direction `u` and one of projection `b`
 in direction `v`, their intersection `z` satisfies
 
-$$
+```math
 |z|^2={a^2+b^2-2ab\cos\phi\over\sin^2\phi}
 \le {R^2\over24}.
-$$
+```
 
 The regular polygon has inradius `R cos(pi/q)>R/2`, so every intersection
 lies in its interior. Every pair of opposite-shore crosscuts crosses, each

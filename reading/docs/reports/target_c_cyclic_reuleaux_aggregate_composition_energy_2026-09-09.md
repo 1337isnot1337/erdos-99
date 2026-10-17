@@ -21,16 +21,16 @@ The resulting inequality is additive and sharp for regular Reuleaux polygons.
 
 Let `R` be the width-`D` Reuleaux completion. Let its defining arcs have normal-angle lengths
 
-$$
+```math
 \phi_0,\ldots,\phi_{r-1}>0,
 \qquad
 \sum_i\phi_i=\pi.
 \tag{AE.1}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \frac{\pi D^2}{4}-\operatorname{area}(R)
 \ge
@@ -41,39 +41,39 @@ $$
 \right).
 }
 \tag{AE.2}
-$$
+```
 
 Because
 
-$$
+```math
 2\tan\frac\phi2-\phi\ge\frac{\phi^3}{12},
 \tag{AE.3}
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{
 \frac{\pi D^2}{4}-\operatorname{area}(R)
 \ge
 \frac{D^2}{48}\sum_i\phi_i^3.
 }
 \tag{AE.4}
-$$
+```
 
 Insert the exact leaf composition
 
-$$
+```math
 \phi_i=\ell_i\frac\pi q,
 \qquad
 \ell_i\in\mathbb Z_{>0},
 \qquad
 \sum_i\ell_i=q.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \sum_i\ell_i^3
 \le
@@ -83,27 +83,27 @@ $$
 \right).
 }
 \tag{AE.5}
-$$
+```
 
 PR #118 WG gives
 
-$$
+```math
 \frac{\pi D^2}{4}-\operatorname{area}(F)
 \le(C_W+o(1))D,
-$$
+```
 
 where
 
-$$
+```math
 C_W
 =\frac\pi2-
 \frac{2-\sqrt3}{4}\sqrt{2\pi\sqrt3}
 =1.349811370903931\ldots .
-$$
+```
 
 Since `F subset R`, the Reuleaux deficit is no larger. With `q/(pi D)->1`, AE.5 yields the full cubic-energy bound
 
-$$
+```math
 \boxed{
 \sum_i\ell_i^3
 \le
@@ -111,11 +111,11 @@ $$
 = (64.7909458034\ldots+o(1))D^2.
 }
 \tag{AE.6}
-$$
+```
 
 Consequences include
 
-$$
+```math
 \boxed{
 \max_i\ell_i
 \le
@@ -123,18 +123,18 @@ $$
 =(4.0164\ldots+o(1))D^{2/3},
 }
 \tag{AE.7}
-$$
+```
 
 and hence
 
-$$
+```math
 \boxed{
 \Delta(H)
 \le
 (4.0164\ldots+o(1))D^{2/3}+1.
 }
 \tag{AE.8}
-$$
+```
 
 The same inequality also controls the complete distribution of diameter branching, not only the maximum.
 
@@ -144,31 +144,31 @@ The same inequality also controls the complete distribution of diameter branchin
 
 Write the support function of `R` as
 
-$$
+```math
 h(\theta)=\frac D2+p(\theta),
-$$
+```
 
 with the constant-width normalization
 
-$$
+```math
 p(\theta+\pi)=-p(\theta).
 \tag{1.1}
-$$
+```
 
 Translations add first harmonics to `p`; they will be quotient out automatically below.
 
 Let
 
-$$
+```math
 \rho=h+h''
-$$
+```
 
 be the radius-of-curvature density in normal-angle coordinates, interpreted piecewise on the Reuleaux arcs and vertex normal intervals. Put
 
-$$
+```math
 f:=\rho-\frac D2=p+p''.
 \tag{1.2}
-$$
+```
 
 For a Reuleaux polygon:
 
@@ -177,36 +177,36 @@ For a Reuleaux polygon:
 
 The intervals
 
-$$
+```math
 I_i\cup(I_i+\pi)
-$$
+```
 
 are pairwise disjoint up to endpoints and cover the projective normal circle.
 
 Let
 
-$$
+```math
 L:=-\partial_\theta^2-1.
-$$
+```
 
 Then
 
-$$
+```math
 Lp=-f.
-$$
+```
 
 The first-harmonic kernel of `L` is exactly the translation freedom. Since `f` is the curvature data of a closed body, it is orthogonal to that kernel.
 
 The standard support-function area formula gives
 
-$$
+```math
 \operatorname{area}(R)
 =\frac12\int_0^{2\pi}(h^2-(h')^2)\,d\theta.
-$$
+```
 
 Using antiperiodicity, the disk-area deficit is
 
-$$
+```math
 \boxed{
 \delta_R
 :=\frac{\pi D^2}{4}-\operatorname{area}(R)
@@ -214,7 +214,7 @@ $$
 =\frac12\langle f,L^{-1}f\rangle,
 }
 \tag{1.3}
-$$
+```
 
 where `L^{-1}` means the inverse on the first-harmonic orthogonal complement.
 
@@ -224,35 +224,35 @@ where `L^{-1}` means the inverse on the first-harmonic orthogonal complement.
 
 Fix one arc interval and rotate coordinates so
 
-$$
+```math
 I=[0,\phi],
 \qquad0<\phi<\pi.
-$$
+```
 
 Instead of the cosine bump used in CC, solve the exact Dirichlet variational problem
 
-$$
+```math
 -L?\quad\text{equivalently}\quad
 -g''-g=1,
 \qquad
 g(0)=g(\phi)=0.
 \tag{2.1}
-$$
+```
 
 The solution is
 
-$$
+```math
 \boxed{
  g_\phi(x)
  =\cos x+\tan\frac\phi2\sin x-1
  =\frac{\cos(x-\phi/2)}{\cos(\phi/2)}-1.
 }
 \tag{2.2}
-$$
+```
 
 It is nonnegative on the interval. Its integral is
 
-$$
+```math
 \begin{aligned}
 C(\phi)
 &:=\int_0^\phi g_\phi(x)\,dx\\
@@ -260,34 +260,34 @@ C(\phi)
 &=\boxed{2\tan\frac\phi2-\phi.}
 \end{aligned}
 \tag{2.3}
-$$
+```
 
 Since `Lg_phi=1` on the interval and `g_phi=0` at both endpoints,
 
-$$
+```math
 \boxed{
 \int_0^\phi((g_\phi')^2-g_\phi^2)\,dx
 =C(\phi).
 }
 \tag{2.4}
-$$
+```
 
 Extend `g_phi` by zero outside `I`, and impose antiperiodicity by putting
 
-$$
+```math
 g(\theta+\pi)=-g(\theta).
-$$
+```
 
 For this paired test:
 
-$$
+```math
 \boxed{
 \langle f,g\rangle=DC(\phi),
 \qquad
 \langle g,Lg\rangle=2C(\phi).
 }
 \tag{2.5}
-$$
+```
 
 Derivative jumps at the interval endpoints cause no boundary term because `g` itself vanishes there.
 
@@ -299,63 +299,63 @@ For each Reuleaux arc interval `I_i`, construct the paired antiperiodic test `g_
 
 Their supports are pairwise disjoint up to measure-zero endpoints. Therefore
 
-$$
+```math
 \langle g_i,Lg_j\rangle=0
 \qquad(i\ne j),
 \tag{3.1}
-$$
+```
 
 and for
 
-$$
+```math
 g:=\sum_i g_i
-$$
+```
 
 we have
 
-$$
+```math
 \boxed{
 \langle f,g\rangle
 =D\sum_iC(\phi_i),
 }
 \tag{3.2}
-$$
+```
 
-$$
+```math
 \boxed{
 \langle g,Lg\rangle
 =2\sum_iC(\phi_i).
 }
 \tag{3.3}
-$$
+```
 
 Project `g` orthogonally away from the first-harmonic kernel if necessary. This changes neither (3.2) nor (3.3): `f` is orthogonal to the kernel and `L` annihilates it.
 
 Cauchy-Schwarz in the positive `L` energy gives
 
-$$
+```math
 \langle f,g\rangle^2
 \le
 \langle f,L^{-1}f\rangle
 \langle g,Lg\rangle.
-$$
+```
 
 Using (1.3), (3.2), and (3.3):
 
-$$
+```math
 D^2\left(\sum_iC_i\right)^2
 \le
 (2\delta_R)\left(2\sum_iC_i\right).
-$$
+```
 
 Every `C_i>0`, so division gives
 
-$$
+```math
 \boxed{
 \delta_R
 \ge\frac{D^2}{4}\sum_iC(\phi_i).
 }
-$$
+```
 
 This proves AE.2. `square`
 
@@ -367,34 +367,34 @@ The additivity is the key gain over CC: the global positive quadratic form canno
 
 For `x>=0`,
 
-$$
+```math
 \tan x\ge x+\frac{x^3}{3}.
-$$
+```
 
 With `x=phi/2`,
 
-$$
+```math
 2\tan\frac\phi2-\phi
 \ge\frac{\phi^3}{12}.
-$$
+```
 
 Insert into AE.2 to obtain AE.4.
 
 LC gives
 
-$$
+```math
 \phi_i=\frac{\pi\ell_i}{q}.
-$$
+```
 
 Hence
 
-$$
+```math
 \delta_R
 \ge
 \frac{D^2}{48}
 \frac{\pi^3}{q^3}
 \sum_i\ell_i^3,
-$$
+```
 
 which rearranges to AE.5.
 
@@ -404,46 +404,46 @@ which rearranges to AE.5.
 
 WG gives
 
-$$
+```math
 \delta_F
 :=\frac{\pi D^2}{4}-\operatorname{area}(F)
 \le(C_W+o(1))D.
-$$
+```
 
 The exact completion has
 
-$$
+```math
 F\subset R,
-$$
+```
 
 so
 
-$$
+```math
 0\le\delta_R\le\delta_F.
-$$
+```
 
 Therefore AE.5 gives
 
-$$
+```math
 \sum_i\ell_i^3
 \le
 \frac{48(C_W+o(1))q^3}{\pi^3D}.
 \tag{5.1}
-$$
+```
 
 The exact Reinhardt relation gives
 
-$$
+```math
 q=\pi D+o(D),
-$$
+```
 
 hence AE.6.
 
 Numerically
 
-$$
+```math
 48C_W=64.7909458033887\ldots .
-$$
+```
 
 Taking cube roots gives AE.7-AE.8.
 
@@ -457,14 +457,14 @@ AE.6 is stronger than a maximum-degree estimate.
 
 For every threshold `L>0`,
 
-$$
+```math
 \boxed{
 \#\{i:\ell_i\ge L\}
 \le
 \frac{(48C_W+o(1))D^2}{L^3}.
 }
 \tag{6.1}
-$$
+```
 
 Thus, for example, only `O(D^(1/2))` cycle vertices can have `ell_i` of order `D^(1/2)`, and no part can be larger than order `D^(2/3)`.
 
@@ -472,21 +472,21 @@ Thus, for example, only `O(D^(1/2))` cycle vertices can have `ell_i` of order `D
 
 Cauchy-Schwarz/Hölder gives
 
-$$
+```math
 \left(\sum_i\ell_i^2\right)^2
 \le
 \left(\sum_i\ell_i\right)
 \left(\sum_i\ell_i^3\right).
-$$
+```
 
 Since `sum ell_i=q=Theta(D)`, AE.6 yields
 
-$$
+```math
 \boxed{
 \sum_i\ell_i^2=O(D^{3/2}).
 }
 \tag{6.2}
-$$
+```
 
 Hence the squared diameter-degree excess is subquadratic.
 
@@ -494,23 +494,23 @@ Hence the squared diameter-degree excess is subquadratic.
 
 Hölder also gives
 
-$$
+```math
 q^3
 =\left(\sum_i\ell_i\right)^3
 \le r^2\sum_i\ell_i^3.
-$$
+```
 
 Using (5.1):
 
-$$
+```math
 r^2
 \ge
 \frac{\pi^3D}{48C_W+o(1)}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \liminf\frac r{\sqrt D}
 \ge
@@ -518,7 +518,7 @@ $$
 =0.6917794379\ldots .
 }
 \tag{6.3}
-$$
+```
 
 This recovers the WG/Firey-Sallee core-size constant from the stronger composition-energy theorem.
 
@@ -528,22 +528,22 @@ This recovers the WG/Firey-Sallee core-size constant from the stronger compositi
 
 The function
 
-$$
+```math
 C(\phi)=2\tan(\phi/2)-\phi
-$$
+```
 
 is strictly convex because
 
-$$
+```math
 C'(\phi)=\tan^2(\phi/2),
 \qquad
 C''(\phi)=\tan(\phi/2)\sec^2(\phi/2)>0.
 \tag{7.1}
-$$
+```
 
 For `r` equal arc lengths `phi_i=pi/r`, AE.2 becomes
 
-$$
+```math
 \delta_R
 \ge
 \frac{D^2}{4}
@@ -551,17 +551,17 @@ $$
 2r\tan\frac\pi{2r}-\pi
 \right).
 \tag{7.2}
-$$
+```
 
 The right side is exactly the known disk-area deficit of the regular Reuleaux `r`-gon. Thus AE.2 is sharp on the regular family.
 
 More generally Jensen gives
 
-$$
+```math
 \sum_iC(\phi_i)
 \ge
 rC(\pi/r),
-$$
+```
 
 so AE.2 independently recovers the usual regular-Reuleaux maximal-area envelope for a fixed number of arcs.
 
@@ -573,24 +573,24 @@ The new information is stronger: it retains the full composition instead of disc
 
 LC gives the additional arithmetic constraint
 
-$$
+```math
 \phi_i=\frac{\pi\ell_i}{q},
 \qquad \ell_i\in\mathbb Z_{>0}.
-$$
+```
 
 For fixed integers `q,r`, strict convexity of `C` means the sum in AE.2 is minimized when the positive integer parts `ell_i` differ by at most one.
 
 Write
 
-$$
+```math
 q=ar+b,
 \qquad
 0\le b<r.
-$$
+```
 
 Then every exact Reinhardt completion with this `(q,r)` satisfies
 
-$$
+```math
 \boxed{
 \delta_R
 \ge
@@ -601,7 +601,7 @@ $$
 \right].
 }
 \tag{8.1}
-$$
+```
 
 This is strictly stronger than the continuous regular-`r` envelope whenever `r` does not divide `q`.
 

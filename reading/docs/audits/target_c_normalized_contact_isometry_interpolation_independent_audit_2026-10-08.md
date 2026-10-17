@@ -27,53 +27,53 @@ R_i(t) = (P_i+tU_i)/sqrt(s(t)).
 
 For every `0<t<=1` with `s(t)>0`, the old core contact squared length before normalization is exactly `1-t(1-t)c_e`; after normalization every old core contact has length at least one. For each old core diameter pair `h`, its normalized length is strictly below `D` if and only if
 
-$$
+```math
 \boxed{g_h+(1-t)(D^2c_*-a_h)<0.}
-$$
+```
 
 This is an exact finite family of linear tests in `t`, plus `s(t)>0`. It tests only old contacts and old diameter pairs on `V`. Every other source pair, including pairs involving contact isolates, still needs its own lower and upper check before `R(t)` can be a full-source competitor.
 
 Set
 
-$$
+```math
 E_C=\sum_C\alpha_ec_e,\qquad E_H=\sum_H\beta_ha_h,
 \qquad G=E_C-E_H=\operatorname{tr}(U^T\Omega U)\ge0,
 \qquad A_*=D^2c_*-E_C\ge0.
-$$
+```
 
 The `beta`-weighted sum of the left sides of the diameter tests is exactly
 
-$$
+```math
 A_*-t(A_*+G).
-$$
+```
 
 If `A_*+G>0`, simultaneous strict shortening of every old core diameter requires
 
-$$
+```math
 \boxed{t>\frac{A_*}{A_*+G}.}
-$$
+```
 
 If `A_*+G=0`, the weighted sum is zero for every `t`, so simultaneous strict shortening is impossible. The threshold is necessary, not sufficient; it is source- and move-dependent and has no uniform lower bound. Also, if a contact-isometry is affine in the source, its core stress energy is zero. Hence a noncongruent contact-isometry that does not lengthen any old core diameter cannot be affine: otherwise positive diameter weights and the zero weighted slack force every old diameter length to remain `D`, and `C-MIXED-CORE-FINITE-RIGIDITY` gives congruence.
 
 For the stress-mass refinement, let (F_C={ein C:c_e>0}) and
 
-$$
+```math
 f_C=\frac{\sum_{e\in F_C}\alpha_e}{D^2}.
-$$
+```
 
 Whenever the threshold is defined,
 
-$$
+```math
 \boxed{\frac{A_*}{A_*+G}\ge1-f_C.}
-$$
+```
 
 Here `f_C` is moved contact **stress mass**, not a fraction of contact edges; no lower bound on individual stress coefficients or source-independent stress-mass estimate follows.
 
 For the two-valued slab restriction, suppose all core displacements have values in `{0,Delta}` with `Delta!=0`, at least one old contact crosses the two classes, and some old core diameter has `g_h>=0` at the endpoint. Then (c_*=|\Delta|^2), every (a_h\in\{0,|\Delta|^2\}), and for `D>1`
 
-$$
+```math
 D^2c_*-a_h\ge(D^2-1)|\Delta|^2>0.
-$$
+```
 
 For the blocked old diameter, the strict test is positive at every `0<t<1` and equals `g_h>=0` at `t=1`. Thus no parameter in the normalized straight interpolation strictly shortens all old core diameters. If `g_h=0`, every interior interpolant has diameter greater than `D` on that pair. The statement is conditional on the exact two-class endpoint assignment; it does not extract such an endpoint from a source or move isolates for it.
 
@@ -81,35 +81,35 @@ For the blocked old diameter, the strict test is positive at every `0<t<1` and e
 
 For an old contact vector `r=P_i-P_j` and displacement difference `d=U_i-U_j`, both endpoint lengths are one. The polarization identity gives
 
-$$
+```math
 |r+td|^2=(1-t)|r|^2+t|r+d|^2-t(1-t)|d|^2
        =1-t(1-t)c_e.
-$$
+```
 
 Since `c_e<=c_*`, division by the positive `s(t)=1-t(1-t)c_*` gives a squared length at least one.
 
 For an old diameter edge, put `r=P_i-P_j` and `d=U_i-U_j`. Then `|r|^2=D^2`, `|d|^2=a_h`, and `|r+d|^2=D^2+g_h`. Another polarization identity gives
 
-$$
+```math
 |r+td|^2=D^2+t g_h-t(1-t)a_h.
-$$
+```
 
 Comparing this with (D^2s(t)=D^2-t(1-t)D^2c_*), subtracting and dividing by `t>0` gives exactly the displayed strict test. Its linearity in `t` is literal; only positivity of `s(t)` is an additional nonlinear domain restriction.
 
 From Audit.120,
 
-$$
+```math
 \sum_H\beta_h g_h=-G,
 \qquad \sum_H\beta_h=1,
-$$
+```
 
 so the weighted test sum is
 
-$$
+```math
 -G+(1-t)(D^2c_*-E_H)
 =(1-t)A_*-tG
 =A_*-t(A_*+G).
-$$
+```
 
 Positive `beta_h` makes this sum strictly negative whenever every row test is strict. This proves the necessary threshold. If `c_*>0`, then `A_*+G=D^2c_*-E_H<=D^2c_*`; also (A_*=\sum_C\alpha_e(c_*-c_e)\ge(1-f_C)D^2c_*). Dividing by the positive threshold denominator proves the stress-mass bound; the zero-`c_*` case has `A_*+G=0` and is excluded by “whenever the threshold is defined.”
 

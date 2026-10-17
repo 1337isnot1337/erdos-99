@@ -18,11 +18,11 @@ The candidate propagates the recently proved singleton/full-pentagon-flower dich
 
 The hostile audit of the `g=0.007707` matched all-train theorem explicitly records its scope as the canonical full-core Type-II train-measure branch, with no upper `t` cutoff.  The extended pentagon-sea audit separately verifies
 
-$$
+```math
 P_5/D\ge p_5(X)-o(1),
 \qquad
 p_5(X)=C_{707}+\pi-{5X\over2}
-$$
+```
 
 for every fixed endpoint `t<=X` where this lower bound is used.
 
@@ -38,9 +38,9 @@ If a pentagon is not fully rhombic, some boundary edge has a non-rhombus face on
 
 Hence finitely
 
-$$
+```math
 P_5-F_5^{full}\le2S.
-$$
+```
 
 No phase concentration, path topology, or asymptotic assumption appears.
 
@@ -50,29 +50,29 @@ No phase concentration, path topology, or asymptotic assumption appears.
 
 For a known lower bound `P_5>=pD-o(D)`, suppose one wants a common lower floor `sD-o(D)` for the alternative
 
-$$
+```math
 S\ge sD-o(D)
 \quad\text{or}\quad
 F_5^{full}\ge sD-o(D).
-$$
+```
 
 If `S<sD`, the finite inequality gives
 
-$$
+```math
 F_5^{full}> (p-2s)D-o(D).
-$$
+```
 
 Thus one needs `p-2s>=s`, i.e.
 
-$$
+```math
 s\le p/3.
-$$
+```
 
 The candidate takes exactly
 
-$$
+```math
 s(X)=p_5(X)/3,
-$$
+```
 
 so no balancing slack is lost beyond the already rounded pentagon floor.
 
@@ -82,33 +82,33 @@ so no balancing slack is lost beyond the already rounded pentagon floor.
 
 The exact modern identities are
 
-$$
+```math
 \rho_{rec}=2S,
 \qquad
 2\tau_D=\rho_{rec}+\sigma_R,
-$$
+```
 
 and the hostile-audited uniform train-slack theorem gives
 
-$$
+```math
 \tau_D\ge(\tau_0-o(1))D,
 \qquad
 \tau_0=0.7467921.
-$$
+```
 
 On the **full-flower side** of the balanced dichotomy, the singleton alternative has failed, so
 
-$$
+```math
 S<s(X)D+o(D).
-$$
+```
 
 Therefore
 
-$$
+```math
 \sigma_R
 =2\tau_D-2S
 >2[\tau_0-s(X)]D-o(D).
-$$
+```
 
 The inequality is used only conditionally on failure of the singleton branch.  The theorem does not assert this large `sigma_R` in every source.
 
@@ -118,23 +118,23 @@ The inequality is used only conditionally on failure of the singleton branch.  T
 
 The strict-rhombus stopped-train crossing graph satisfies
 
-$$
+```math
 \sigma_R=2T_R-4\sqrt{R_4}.
-$$
+```
 
 Solving for `T_R` and substituting gives the finite identity
 
-$$
+```math
 {T_R^2\over4}-R_4
 ={\sigma_R\sqrt{R_4}\over2}+{\sigma_R^2\over16}.
-$$
+```
 
 Since `R_4/D^2->Delta_2`, a lower bound `sigma_R/D>=s_0-o(1)` gives
 
-$$
+```math
 \liminf D^{-2}\left({T_R^2\over4}-R_4\right)
 \ge {s_0\sqrt{\Delta_2}\over2}+{s_0^2\over16}.
-$$
+```
 
 No convergence of `sigma_R/D` is assumed.
 
@@ -144,9 +144,9 @@ No convergence of `sigma_R/D` is assumed.
 
 Each fully rhombic pentagon supplies five terminal face-side occurrences belonging to non-singleton rhombic trains.  One complete stopped train has at most two terminal occurrences.  Hence
 
-$$
+```math
 N_{full}\ge{5\over2}F_5^{full}.
-$$
+```
 
 This remains valid if one train terminates twice on the same flower or on two different flowers; the division by two already allows the worst reuse.
 

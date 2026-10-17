@@ -18,36 +18,36 @@ The source uses two independently audited finite identities.
 
 First, Type-II loaded-contact localization gives
 
-$$
+```math
 e_{BB}=q-m=Q+2k+u_B.
-$$
+```
 
 Therefore
 
-$$
+```math
 Q+u_B=q-m-2k.
 \tag{1.1}
-$$
+```
 
 Second, audited §160 defines
 
-$$
+```math
 G_D=2+q+m-k-\sum_r d_r.
 \tag{1.2}
-$$
+```
 
 Adding `(1.1)`, `k`, and `sum d_r+G_D` gives exactly
 
-$$
+```math
 \sum_r d_r+G_D+Q+u_B+k
 =2+2q-2k.
-$$
+```
 
 Hence
 
-$$
+```math
 2(q-k)+2=\sum_r d_r+G_D+Q+u_B+k.
-$$
+```
 
 There is no asymptotic replacement and no hidden sign change.  **PASS.**
 
@@ -55,52 +55,52 @@ There is no asymptotic replacement and no hidden sign change.  **PASS.**
 
 The loaded outer-walk ledger has
 
-$$
+```math
 b=q+x_B,
 \qquad x_B=m+u_B,
-$$
+```
 
 so `b=q+m+u_B`.  Equation (1.2) gives
 
-$$
+```math
 q+m=\sum_r d_r+G_D+k-2.
-$$
+```
 
 Thus
 
-$$
+```math
 b-P_F
 =\sum_r d_r+G_D+k+u_B-P_F-2.
-$$
+```
 
 This is exact.  **PASS.**
 
 For
 
-$$
+```math
 \chi_D=q+m-P_F,
-$$
+```
 
 write the `q-m` unit hull-side lengths as one and the `m` nonunit hull-side lengths as
 `s_i>1`.  Then
 
-$$
+```math
 P_F=q-m+\sum_i s_i,
-$$
+```
 
 so
 
-$$
+```math
 \chi_D=\sum_i(2-s_i).
-$$
+```
 
 A nonunit hull side can be longer than two if its old outer interval has at least three
 unit edges.  Therefore `chi_D` is **not** nonnegative.  The source explicitly retains
 this.  Since
 
-$$
+```math
 b-P_F=u_B+\chi_D\ge0,
-$$
+```
 
 negative `chi_D` implies only `u_B>=-chi_D`; it does not by itself contradict Type II.
 **PASS with this warning binding.**
@@ -109,51 +109,51 @@ negative `chi_D` implies only `u_B>=-chi_D`; it does not by itself contradict Ty
 
 The exact train ledger is
 
-$$
+```math
 T=q+2f-k.
-$$
+```
 
 Since every bounded nonquadrilateral face has degree at least five, `f<=Q`. Hence
 
-$$
+```math
 T-q/2=q/2+2f-k
 \le q/2+2(Q+u_B)-k.
 \tag{3.1}
-$$
+```
 
 Using
 
-$$
+```math
 Q+u_B=q-m-2k
-$$
+```
 
 and
 
-$$
+```math
 m=P_F-q+\chi_D,
-$$
+```
 
 we get
 
-$$
+```math
 Q+u_B=2(q-k)-P_F-\chi_D.
 \tag{3.2}
-$$
+```
 
 Substituting (3.2) in (3.1),
 
-$$
+```math
 T-q/2
 \le {9\over2}(q-k)-{1\over2}k-2P_F-2\chi_D.
-$$
+```
 
 Therefore
 
-$$
+```math
 q-k
 \ge
 {2\over9}(T-q/2)+{1\over9}k+{4\over9}(P_F+\chi_D).
-$$
+```
 
 All coefficients in the candidate are correct.  **PASS.**
 
@@ -161,33 +161,33 @@ All coefficients in the candidate are correct.  **PASS.**
 
 The merged proof-only finite-diagonal theorem gives one absolute `eta_grid>0` such that
 
-$$
+```math
 {T-q/2\over D}
 \ge2\sqrt{\Delta_2}+\eta_{grid}-o(1),
 \qquad
 \Delta_2={\pi\over2\sqrt3}.
-$$
+```
 
 Multiplying by `2/9` contributes
 
-$$
+```math
 {4\over9}\sqrt{\Delta_2}+{2\over9}\eta_{grid}.
-$$
+```
 
 Type-II perimeter convergence contributes `4pi/9`.  Their sum is
 
-$$
+```math
 C_{146}+{2\over9}\eta_{grid},
 \qquad
 C_{146}={4\over9}(\pi+\sqrt{\Delta_2}).
-$$
+```
 
 Thus the safe combined form is
 
-$$
+```math
 {q-k\over D}-{k\over9D}-{4\chi_D\over9D}
 \ge C_{146}+{2\over9}\eta_{grid}-o(1).
-$$
+```
 
 The source's separated-liminf formulation is valid only along a common subsequence; the
 pointwise/asymptotic form above is the preferred statement.  **PASS.**

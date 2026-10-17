@@ -38,38 +38,38 @@ k = d_H+s_Z.
 
 Define `E_r` as the unloaded core vertices incident with any bounded augmented face that either has degree at least five or has degree three or four and is not a strict unit rhombus. If `t_n(x)<1/2`, the sector containing `n` at `x` has angle greater than `2pi/3`, so its face is in this direction-independent set. A bounded quadrilateral all of whose sides are actual unit contacts is a unit rhombus; triangle-freeness excludes the limiting `pi/3` and `2pi/3` angles. A low-degree charged face contains a nonunit polygon-side occurrence. Each such side is adjacent to at most one bounded face; triangles use distinct such side occurrences and contain at most one unloaded vertex, while quadrilaterals contain at most two. A degree-`j>=5` face has at most `j<=5(j-4)` unloaded vertex occurrences. Therefore
 
-$$
+```math
 |E_r|\le 2M_r-T_r+5Q_r^+.
-$$
+```
 
 Write `w_n(x)=(1-2t_n(x))_+`. Then
 
-$$
+```math
 \sum_r\sum_{x\in I_r}w_n(x)
 \le \mathcal B
 :=\sum_r(2M_r-T_r+5Q_r^+)
 =a+10(e_{BB}-k-d_{tile})-4U_A-2C_{partial}
 \le a+10(e_{BB}-k).
-$$
+```
 
 The equality uses the canonical Section-123 identity
-$$
+```math
 \sum_r((a_r-T_r)+Q_r^+)=2(e_{BB}-k-d_{tile}),
-$$
+```
 and `d_tile,U_A,C_partial>=0`. The last bound is the same global augmented-cell currency as Section 123, not a new face bank for each route.
 
 For a successor route `gamma` from `z` to its first loaded attachment `b`, with `ell` unit edges and `Delta h=n dot(b-z)>0`, every edge is charged to its unloaded tail. Hence
 
-$$
+```math
 \ell-2\Delta h=\sum_{x\in\gamma\setminus\{b\}}(1-2t_n(x))
 \le \sum_{x\in\gamma\setminus\{b\}}w_n(x).
-$$
+```
 
 Thus `ell<=2 Delta h+2M_r-T_r+5Q_r^+` for one route. For a family with different projection directions, use the same charged sets `E_r`: a positive term `w_n(x)` can occur only at a slow vertex in `E_r`, and pairwise disjoint tails count each such vertex at most once; each weight is less than one. Therefore for any family of routes with pairwise disjoint unloaded tails, even if cells or directions differ,
 
-$$
+```math
 \sum_\gamma(\ell_\gamma-2\Delta h_\gamma)_+\le\mathcal B\le a+10(e_{BB}-k).
-$$
+```
 
 For overlapping routes in one fixed successor forest, the valid bound is instead `sum_x m(x) w_n(x)`, where `m(x)` is the number of selected routes visiting `x`. No bound on `m` follows from this audit. Since `Delta h<=D`, the one-route estimate also gives `ell<=2D+2M_r-T_r+5Q_r^+`.
 
@@ -85,20 +85,20 @@ The shared bank algebra uses only the canonical finite Section-123 defect identi
 
 For positive integers `p,q` with `q^2-3p^2=-2`, starting at `(3,5)` and iterating `(p,q)->(2p+q,3p+2q)`, define
 
-$$
+```math
 c=\frac{p^2-1}{2p^2-1},\qquad s=\frac{pq}{2p^2-1},\qquad
 u=(1,0),\quad v=(c,s),\quad N=p^2.
-$$
+```
 
 Then `c^2+s^2=1` and `0<c<1/2`. Every lattice displacement has squared length `i^2+j^2+2cij`; its minimum over nonzero integer pairs is one, attained only on the two axes. Indeed, if `i^2+j^2>=3`, the quadratic form is at least `(1-c)(i^2+j^2)>1`; the only remaining non-axis case has `|i|=|j|=1` and length squared `2-2c>1` for opposite signs or `2+2c>1` for equal signs. The unit-contact graph is therefore the rhombic grid, whose bounded faces are strict rhombi and whose interior vertices have positive equilibrium with the four unit neighbors.
 
 From `(N-1)u+v`, take `N-2` steps of `-u` and then `N-1` steps of `v`; this ends at the boundary pin `u+Nv`, so the full successor route has `ell=2N-3` edges. With `n=(v-u)/|v-u|`, both step projections equal `g=sqrt((1-c)/2)>1/2`; every route tail is an interior grid vertex and every debit vanishes. Direct calculation gives
 
-$$
+```math
 D_N=N\sqrt{2+2c},\qquad
 \Delta h=(2N-3)g,\qquad
 \left(\frac{\ell}{\Delta h}\right)^2=\frac1{g^2}=4-\frac2{p^2}\longrightarrow4.
-$$
+```
 
 The family is an exact local pinned regression. Its pins are not asserted to be the canonical loaded set, and no global minimum-diameter optimality is claimed. The frozen verifier checks all pairs in its finite rational grids and the listed Pell identities; the all-`p` pair-distance claim above is established by the displacement calculation, not by enumeration.
 

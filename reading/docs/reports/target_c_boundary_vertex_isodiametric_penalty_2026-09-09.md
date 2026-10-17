@@ -26,30 +26,32 @@ Let `P subset K` be planar compact convex sets such that
 2. every vertex of `P` is an extreme point of `K`;
 3. `diam(K)=1`;
 4. with
-   $$
+   ```math
    r:=\operatorname{diam}(P),
-   $$
+   
+   ```
    one has
-   $$
+   ```math
    \frac{12}{25}=0.48\le r\le\frac12.
-   $$
+   
+   ```
 
 Then
 
-$$
+```math
 \boxed{
 \operatorname{area}(P)
 <
 \frac\pi4r^2-\frac1{2500}.
 }
 \tag{BVP.1}
-$$
+```
 
 Thus a nested attachment polygon in this diameter range loses at least
 
-$$
+```math
 \boxed{0.0004}
-$$
+```
 
 of normalized area from the ordinary isodiametric disk bound.
 
@@ -61,113 +63,113 @@ The constant is deliberately conservative. The point is that it is explicit and 
 
 Put
 
-$$
+```math
 A:=\operatorname{area}(P),
 \qquad
 \Delta:=\frac\pi4r^2-A\ge0.
 \tag{1.1}
-$$
+```
 
 Assume for contradiction
 
-$$
+```math
 \Delta\le\frac1{2500}.
 \tag{1.2}
-$$
+```
 
 Bonnesen's theorem gives a center `c` and concentric closed disks
 
-$$
+```math
 B(c,a)\subseteq P\subseteq B(c,b)
 \tag{1.3}
-$$
+```
 
 such that
 
-$$
+```math
 (b-a)^2
 \le
 \frac{\operatorname{per}(P)^2-4\pi A}{4\pi}.
 \tag{1.4}
-$$
+```
 
 The planar perimeter-diameter inequality gives
 
-$$
+```math
 \operatorname{per}(P)\le\pi r.
-$$
+```
 
 Therefore
 
-$$
+```math
 \frac{\operatorname{per}(P)^2-4\pi A}{4\pi}
 \le
 \frac{\pi^2r^2-4\pi A}{4\pi}
 =\Delta.
-$$
+```
 
 So, writing
 
-$$
+```math
 w:=b-a,
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{w\le\sqrt\Delta\le\frac1{50}=0.02.}
 \tag{BVP.2}
-$$
+```
 
 Because `P` contains the radius-`a` disk and has diameter `r`,
 
-$$
+```math
 a\le\frac r2.
 \tag{1.5}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{b\le\frac r2+\frac1{50}.}
 \tag{BVP.3}
-$$
+```
 
 On the other hand `P subset B(c,b)` gives
 
-$$
+```math
 A\le\pi b^2.
-$$
+```
 
 Using (1.1)--(1.2),
 
-$$
+```math
 b^2
 \ge
 \frac{A}{\pi}
 =\frac{r^2}{4}-\frac{\Delta}{\pi}
 \ge
 \frac{r^2}{4}-\frac{1}{2500\pi}.
-$$
+```
 
 Since `pi>3`,
 
-$$
+```math
 \boxed{
 b>
 \sqrt{\frac{r^2}{4}-\frac1{7500}}.}
 \tag{BVP.4}
-$$
+```
 
 Combining with `a=b-w` and BVP.2,
 
-$$
+```math
 \boxed{
 a>
 \sqrt{\frac{r^2}{4}-\frac1{7500}}
 -\frac1{50}.}
 \tag{BVP.5}
-$$
+```
 
 ---
 
@@ -175,37 +177,37 @@ $$
 
 Choose diameter endpoints `x,y in K` with
 
-$$
+```math
 |x-y|=1.
-$$
+```
 
 For any point `c`, the triangle inequality gives
 
-$$
+```math
 1=|x-y|\le|x-c|+|y-c|,
-$$
+```
 
 so one endpoint, call it `z`, satisfies
 
-$$
+```math
 \boxed{d:=|z-c|\ge\frac12.}
 \tag{BVP.6}
-$$
+```
 
 BVP.3 and `r<=1/2` give
 
-$$
+```math
 b\le\frac14+\frac1{50}=0.27<\frac12\le d.
-$$
+```
 
 Thus `z notin P`.
 
 Let
 
-$$
+```math
 Q:=\operatorname{conv}(P\cup\{z\})\subseteq K.
 \tag{2.1}
-$$
+```
 
 Every vertex of `P` is extreme in `K`, hence remains extreme in `Q`: if a vertex of `P` were a convex combination of other points of `Q`, the same combination would witness that it is not extreme in `K`.
 
@@ -222,27 +224,27 @@ Every vertex strictly inside the complementary visible chain ceases to be a vert
 
 Here no vertex of `P` may disappear. Therefore the visible chain contains no intermediate polygon vertex. Its tangent endpoints `u,v` are adjacent vertices of `P`, and
 
-$$
+```math
 \boxed{uv\text{ is one edge of }P.}
 \tag{BVP.7}
-$$
+```
 
 The segments `zu,zv` are supporting edges of `Q`. Hence the cone at `z` bounded by the rays `zu,zv` contains all of `P`, and therefore contains the inner disk `B(c,a)`.
 
 Let
 
-$$
+```math
 \gamma:=\angle uzv.
-$$
+```
 
 The smallest cone with apex at distance `d` from the center of a radius-`a` disk and containing that disk is bounded by its two tangent rays. Thus
 
-$$
+```math
 \boxed{
 \gamma\ge2\arcsin\frac ad.
 }
 \tag{BVP.8}
-$$
+```
 
 ---
 
@@ -250,68 +252,68 @@ $$
 
 Because `u,v in P subset B(c,b)`,
 
-$$
+```math
 |z-u|\ge d-b,
 \qquad
 |z-v|\ge d-b.
 \tag{4.1}
-$$
+```
 
 For two rays separated by angle `gamma`, the distance between points whose radial distances from the apex are both at least `ell` is minimized when both radial distances equal `ell`. Therefore
 
-$$
+```math
 |u-v|
 \ge
 2(d-b)\sin\frac\gamma2.
-$$
+```
 
 Use BVP.8:
 
-$$
+```math
 \boxed{
 |u-v|
 \ge
 2(d-b)\frac ad.
 }
 \tag{BVP.9}
-$$
+```
 
 Since `d>=1/2`,
 
-$$
+```math
 \frac{d-b}{d}=1-\frac bd\ge1-2b,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{|u-v|\ge2a(1-2b).}
 \tag{BVP.10}
-$$
+```
 
 On the other hand `uv` is a supporting edge of `P`. Since `B(c,a) subset P`, the supporting line through `uv` has distance at least `a` from `c`. Since `u,v` lie in the radius-`b` disk,
 
-$$
+```math
 \boxed{|u-v|\le2\sqrt{b^2-a^2}.}
 \tag{BVP.11}
-$$
+```
 
 Combining BVP.10-BVP.11 gives the necessary inequality
 
-$$
+```math
 \boxed{
 a(1-2b)\le\sqrt{b^2-a^2}.}
 \tag{BVP.12}
-$$
+```
 
 But BVP.2 gives
 
-$$
+```math
 b^2-a^2
 =(b-a)(b+a)
 \le\frac1{50}(2b).
 \tag{BVP.13}
-$$
+```
 
 The remaining contradiction is a three-interval rational check.
 
@@ -325,49 +327,49 @@ All decimal numbers below terminate and therefore denote exact rationals.
 
 From BVP.5 and `pi>3`,
 
-$$
+```math
 a>
 \sqrt{0.24^2-1/7500}-0.02.
-$$
+```
 
 Now
 
-$$
+```math
 0.24^2-1/7500
 =0.057466\ldots
 >0.2397^2,
-$$
+```
 
 so
 
-$$
+```math
 a>0.2197.
-$$
+```
 
 BVP.3 gives
 
-$$
+```math
 b\le0.49/2+0.02=0.265,
-$$
+```
 
 hence
 
-$$
+```math
 a(1-2b)>0.2197(0.47)=0.103259.
 \tag{5.1}
-$$
+```
 
 But BVP.13 gives
 
-$$
+```math
 b^2-a^2\le0.04(0.265)=0.0106<0.103^2,
-$$
+```
 
 so
 
-$$
+```math
 \sqrt{b^2-a^2}<0.103,
-$$
+```
 
 contradicting BVP.12.
 
@@ -375,35 +377,35 @@ contradicting BVP.12.
 
 Similarly
 
-$$
+```math
 0.245^2-1/7500
 >0.2447^2,
-$$
+```
 
 so
 
-$$
+```math
 a>0.2247.
-$$
+```
 
 Also
 
-$$
+```math
 b\le0.495/2+0.02=0.2675.
-$$
+```
 
 Thus
 
-$$
+```math
 a(1-2b)>0.2247(0.465)=0.1044855.
 \tag{5.2}
-$$
+```
 
 While
 
-$$
+```math
 b^2-a^2\le0.04(0.2675)=0.0107<0.1035^2,
-$$
+```
 
 so the right side of BVP.12 is below `0.1035`. Contradiction.
 
@@ -411,35 +413,35 @@ so the right side of BVP.12 is below `0.1035`. Contradiction.
 
 Here
 
-$$
+```math
 0.2475^2-1/7500
 >0.2472^2,
-$$
+```
 
 so
 
-$$
+```math
 a>0.2272.
-$$
+```
 
 Also
 
-$$
+```math
 b\le0.25+0.02=0.27.
-$$
+```
 
 Hence
 
-$$
+```math
 a(1-2b)>0.2272(0.46)=0.104512.
 \tag{5.3}
-$$
+```
 
 But
 
-$$
+```math
 b^2-a^2\le0.04(0.27)=0.0108<0.104^2,
-$$
+```
 
 so the right side of BVP.12 is below `0.104`. Contradiction.
 
@@ -451,21 +453,21 @@ The three intervals cover the entire required range. Therefore assumption (1.2) 
 
 For every unloaded component `I_r`, C49 gives the attachment polygon
 
-$$
+```math
 P_r:=\operatorname{conv}(A_r)\subseteq F.
-$$
+```
 
 C26/C42 give
 
-$$
+```math
 B_+=\operatorname{Vert}(F).
-$$
+```
 
 Since every attachment belongs to `B_+`, every vertex of `P_r` is a vertex of `F`: if an attachment point were nonextreme in `P_r`, it would be a convex combination of other attachment points and therefore could not be extreme in `F`.
 
 After scaling by `D`, `K=F/D` has diameter one. Thus every attachment cell whose normalized diameter lies in `[0.48,0.50]` satisfies
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}(P_r)}{D^2}
 \le
@@ -474,7 +476,7 @@ $$
 -\frac1{2500}.
 }
 \tag{BVP.14}
-$$
+```
 
 This is a fixed quadratic penalty, unlike the previous qualitative ESN compactness argument.
 
@@ -499,15 +501,15 @@ Insert BVP.14 into the ZK/GU attachment-area estimate. In the ENS slope window `
 
 Therefore the entire attachment-cell capacity should improve from
 
-$$
+```math
 \frac\pi4\lambda^2D^2
-$$
+```
 
 to
 
-$$
+```math
 \left(\frac\pi4\lambda^2-\frac1{2500}\right)D^2+o(D^2)
-$$
+```
 
 throughout the relevant scalar window. Feeding that into ENS/JC should raise the explicit pinned/contact floor by about `3.7e-4`, orders of magnitude larger than the earlier four-point stability increment.
 

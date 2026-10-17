@@ -21,9 +21,9 @@
 
 The all-degree Groemer stability theorem proves that, on the branch
 
-$$
+```math
 R_F=o(D),
-$$
+```
 
 linearly many bounded exceptional contact faces contain hidden source pairs of length
 `1+o(1)`. Its first extraction makes the *entire faces* vertex-disjoint. That is
@@ -36,13 +36,13 @@ and removes the reason for fixing the degree cutoff at `K=42` for the matching s
 
 Put
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},
 \qquad
 f_*:=\sqrt{\Delta_2}-{\pi\over4}+0.00021
 =0.167124643466509\ldots .
 \tag{PM.1}
-$$
+```
 
 ## 1. Fixed-degree input from Groemer stability
 
@@ -53,28 +53,28 @@ hidden pairs are all at least `1+eta` has local residual at least
 
 The same note proves
 
-$$
+```math
 \liminf {f_{\le K}\over D}
 \ge
 \ell_K:=f_*-{\pi\over K-3}.
 \tag{PM.2}
-$$
+```
 
 On `R_F=o(D)`, the number of `eta`-clean degree-at-most-`K` faces is therefore `o(D)`.
 Consequently
 
-$$
+```math
 N_{K,\eta}
 \ge(\ell_K-o(1))D
 \tag{PM.3}
-$$
+```
 
 exceptional faces each contain at least one hidden actual source pair
 
-$$
+```math
 1<|x-y|<1+\eta.
 \tag{PM.4}
-$$
+```
 
 Choose one such pair from every face counted in `N_{K,eta}`.
 
@@ -91,10 +91,10 @@ Now let `x` be a boundary vertex of an exceptional contact face. In a triangle-f
 unit-separated source, distinct unit neighbors of `x` subtend angles strictly larger
 than `pi/3`; equality would make a unit equilateral triangle. Hence
 
-$$
+```math
 \deg_C(x)\le5.
 \tag{PM.5}
-$$
+```
 
 In a plane embedding, the number of distinct bounded faces incident with `x` is at
 most the number of contact-edge sectors, hence at most its contact degree. Therefore at
@@ -102,10 +102,10 @@ most five exceptional faces can have a chosen pair containing `x`. For a chosen 
 `{x,y}`, there are at most four *other* chosen pairs through `x` and at most four
 through `y`. Thus its conflict degree is at most
 
-$$
+```math
 \boxed{8.}
 \tag{PM.6}
-$$
+```
 
 No bound on the degrees of the containing exceptional faces enters (PM.6).
 
@@ -113,13 +113,13 @@ A greedy independent set in a graph of maximum degree eight contains at least on
 ninth of its vertices. The chosen source pairs corresponding to that independent set
 are pairwise vertex-disjoint. Hence for every fixed `K,eta`,
 
-$$
+```math
 \boxed{
 \liminf {\nu_\eta\over D}
 \ge {\ell_K\over9},
 }
 \tag{PM.7}
-$$
+```
 
 where `nu_eta` is the maximum number of pairwise vertex-disjoint source pairs lying in
 distinct exceptional faces and having distance in `(1,1+eta)`.
@@ -129,20 +129,20 @@ distinct exceptional faces and having distance in `(1,1+eta)`.
 The quantity `nu_eta` in (PM.7) does not depend on `K`. Since (PM.7) holds for every
 fixed `K` with positive `ell_K`, we may take the supremum over fixed cutoffs:
 
-$$
+```math
 \sup_K\ell_K=f_*.
-$$
+```
 
 Therefore, on every Type-II subsequence with `R_F=o(D)`, for every fixed `eta>0`,
 
-$$
+```math
 \boxed{
 \liminf {\nu_\eta\over D}
 \ge {f_*\over9}
 =0.018569404829612\ldots .
 }
 \tag{PM.8}
-$$
+```
 
 This is more than 36 times the parent theorem's fixed-`eta` coefficient
 `0.0005122543...`.
@@ -154,16 +154,16 @@ parent note.
 
 Choose increasing integers `K_j` so that
 
-$$
+```math
 {\ell_{K_j}\over9}>{f_*\over9}-{1\over j}.
-$$
+```
 
 Set `eta_j=1/j`. For each fixed `j`, Groemer stability and `R_F/D->0` imply that for
 all sufficiently large `D`, after the pair-conflict extraction there are at least
 
-$$
+```math
 \left({f_*\over9}-{2\over j}\right)D
-$$
+```
 
 pairwise vertex-disjoint hidden pairs with lengths in `(1,1+eta_j)`. Choose increasing
 thresholds `D_j` on which this conclusion is valid, and for
@@ -171,14 +171,14 @@ thresholds `D_j` on which this conclusion is valid, and for
 
 Then `eta_D->0` and
 
-$$
+```math
 \boxed{
 \liminf {\nu_{\eta_D}\over D}
 \ge {f_*\over9}
 =0.018569404829612\ldots .
 }
 \tag{PM.9}
-$$
+```
 
 Thus the small-residual branch contains a vertex-disjoint matching of genuine
 noncontacts of asymptotic size at least `1.8569%` of `D`, with every gap tending to
@@ -186,9 +186,9 @@ zero.
 
 Relative to the parent diagonal coefficient
 
-$$
+```math
 0.000256127176574\ldots,
-$$
+```
 
 this is an improvement by a factor greater than 72.
 

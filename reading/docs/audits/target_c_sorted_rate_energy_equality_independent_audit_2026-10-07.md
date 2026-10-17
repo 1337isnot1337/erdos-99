@@ -25,7 +25,7 @@ Here (E_s) is exactly the ring-plus-radial-chain quantity in canonical claim `C-
 
 ## Independent reconstruction
 
-Identify the plane with $\mathbb C$, set (u=1), (v=e^{i\pi/3}), and (w=v-u). Put
+Identify the plane with $`\mathbb C`$, set (u=1), (v=e^{i\pi/3}), and (w=v-u). Put
 [
 z_h=e^{i\tau_h\theta},\quad
 S_r=\sum_{h<r}z_h,
@@ -57,7 +57,7 @@ This holds for every ordering, every ring, and every fixed (M\ge3).
 
 The packet has actual unit triangles. It refutes a strict ring-energy gap derived solely from the physical unit lower constraints and the six guard expansion. It does not refute a stronger statement whose hypotheses already require a triangle-free packet, and it supplies no triangle-free competitor or canonical-source extraction.
 
-The exact source verifier was rerun at the immutable snapshot. It checks 14 cases for (M=3,4,5,6): 37,773 full-pair distances, 2,412 unit-row first variations, 1,016 subset sums, all reported ring energies, and full pinned ranks modulo (10^9+7) for those sampled matrices. Exact arithmetic is in $\mathbb Q(\sqrt3)$ and rationals. The finite rank checks do not prove the all-(M) theorem; the explicit construction and counting argument above do. The certificate does not verify arbitrary-cloud compactness, local pinned equilibrium continuation, highest-population exclusion, global optimality, or Level I.
+The exact source verifier was rerun at the immutable snapshot. It checks 14 cases for (M=3,4,5,6): 37,773 full-pair distances, 2,412 unit-row first variations, 1,016 subset sums, all reported ring energies, and full pinned ranks modulo (10^9+7) for those sampled matrices. Exact arithmetic is in $`\mathbb Q(\sqrt3)`$ and rationals. The finite rank checks do not prove the all-(M) theorem; the explicit construction and counting argument above do. The certificate does not verify arbitrary-cloud compactness, local pinned equilibrium continuation, highest-population exclusion, global optimality, or Level I.
 
 After the audited snapshot, the branch advanced to `bf288c82e8a62466d5580025c94e750a177e63e2`. The sorted-rate report and saved certificate are unchanged. The verifier diff only adds an optional tangent override to its geometry helper; its default sampled run and the claim audited here are unchanged. The separate one-deficit root-release lead on that newer tip is outside this audit.
 

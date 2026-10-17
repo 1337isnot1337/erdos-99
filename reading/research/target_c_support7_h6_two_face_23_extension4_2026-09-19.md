@@ -15,15 +15,15 @@ Status: exact finite reduction inside the generic H6 branch. The theorem-state a
 
 The previous explicit exact generic-H6 endpoint is
 
-$$
+```math
 4805=3823\,C_7+982\,(C_3\sqcup C_4).
-$$
+```
 
 Continuing the fixed physical-face pair `(2,3)` scan beyond the previously completed first 700 positions of the 4,944-cell one-face-adaptive endpoint gives 101 further exact exclusions. Therefore the explicit exact endpoint becomes
 
-$$
+```math
 \boxed{4704=3760\,C_7+944\,(C_3\sqcup C_4)}.
-$$
+```
 
 The 101 new exclusions split as
 
@@ -72,9 +72,9 @@ Thus every accepted cell exclusion covers all `20*20` local branch products. Num
 
 The 101 cells use exactly
 
-$$
+```math
 2657+5589=\boxed{8246}
-$$
+```
 
 exact rational certificates:
 
@@ -134,9 +134,9 @@ At the new 4,704 endpoint the forced additional reflected exclusions are at leas
 
 Hence the reflection-closed generic-H6 survivor set satisfies the rigorous bound
 
-$$
+```math
 \boxed{|S_{H6}^{\rm refl}|\le 4704-122=4582}.
-$$
+```
 
 This is an upper bound, not an explicit 4,582-cell census. A state-level reflection map would identify the actual reflected union and can only improve the bound.
 

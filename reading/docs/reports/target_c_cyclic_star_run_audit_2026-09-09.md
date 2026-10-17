@@ -32,15 +32,15 @@ The ordinary-gap argument does prove an exact replacement theorem.
 
 Let `H` be a spanning diameter tree on `q` loaded shell terminals with `h=q-1`. Suppose its `q-1` actual diameter states occur in one projective linear block
 
-$$
+```math
 e_0,e_1,\ldots,e_{q-2}
-$$
+```
 
 and every consecutive projective gap is the ordinary radius-`D` unit-chord gap
 
-$$
+```math
 \delta=2\arcsin\frac1{2D}.
-$$
+```
 
 Then:
 
@@ -61,11 +61,11 @@ For a vertex `v` of degree `d_v`, at most `d_v-1` adjacent pairs of the global l
 
 Because `H` is a spanning tree,
 
-$$
+```math
 \sum_v(d_v-1)
 =2(q-1)-q
 =q-2.
-$$
+```
 
 There are exactly `q-2` adjacent pairs in the direction block, and each has one unique shared endpoint. Hence the sum of realized star adjacencies reaches the sum of all vertexwise upper bounds. Equality therefore holds for every vertex, proving contiguity and the exact ownership count.
 
@@ -81,23 +81,23 @@ The `q-2` H-H transitions certify `q-2` distinct shell sides. The only two shell
 
 AC still gives
 
-$$
+```math
 A(F)=H\cup\{g\},
-$$
+```
 
 with `A(F)` one odd cycle plus direct leaves and `g` on the odd cycle. Therefore `H` is an opened-cycle caterpillar whose stars are projectively contiguous. A star run
 
-$$
+```math
 zy_0,zy_1,\ldots,zy_r
-$$
+```
 
 has
 
-$$
+```math
 |zy_j|=D,
 \qquad
 |y_jy_{j+1}|=1,
-$$
+```
 
 so its opposite endpoints form an exact unit chain on the radius-`D` circle centered at `z`.
 
@@ -119,9 +119,9 @@ Thus P1 is an exact two-side parallel defect of the same local Reinhardt pattern
 
 The following implication must not be used:
 
-$$
+```math
 \text{star-run saturation}\Longrightarrow H\text{ is a path}.
-$$
+```
 
 The correct structural object is a caterpillar/staircase with contiguous star runs. Any circular-path theorem must separately prove every star has degree at most two.
 

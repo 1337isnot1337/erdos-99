@@ -19,9 +19,9 @@ Fix `epsilon` with `0<epsilon<pi/12`, let `gamma=pi/3+epsilon`, and choose unit 
 
 For any lattice offset `ku+lv` with `|k|,|l|<=2`, the squared norm is
 
-$$
+```math
 k^2+l^2+2kl\cos\gamma.
-$$
+```
 
 Among nonbasis offsets the minimum is `2-2cos(gamma)>1`; all offsets with one coefficient of magnitude two have squared norm at least `5-4cos(gamma)>3`, and offsets with both magnitudes two have squared norm at least `8-8cos(gamma)>4`. Thus every nonconsecutive old boundary pair is strictly longer than one. For the endpoint basis `u,-v`, the dot product is `-cos(gamma)`; the minimum among the nonbasis offsets `(1,1)` and `(1,-1)` is again `2-2cos(gamma)>1`, and offsets with a coefficient of magnitude two remain strictly longer than one by the same bounds. Therefore its full noncontact ledger is strict as well.
 
@@ -31,16 +31,16 @@ For this fixed `epsilon`, the alpha-zero old and folded configurations have a fi
 
 The face area is the corner parallelogram plus four outward isosceles caps:
 
-$$
+```math
 \operatorname{Area}(F_{\epsilon,\alpha})
 =4\cos^2\alpha\sin\gamma+4\cos\alpha\sin\alpha.
-$$
+```
 
 For each fixed `epsilon`, choose `alpha` positive and small enough for the strict pair ledgers and for the cap-area term to tend to zero. Then let `epsilon` tend to zero. The areas tend to
 
-$$
+```math
 4\sin(\pi/3)=2\sqrt3.
-$$
+```
 
 Together with Audit.223's strict lower bound, this proves the infimum is exactly `2 sqrt(3)` and that no positive uniform gap exists.
 
@@ -48,9 +48,9 @@ Together with Audit.223's strict lower bound, this proves the infimum is exactly
 
 Along this sequence, the old corner diagonal has squared length
 
-$$
+```math
 L^2|u+v|^2=4\cos^2\alpha(2+2\cos\gamma)\longrightarrow12.
-$$
+```
 
 It is therefore greater than `7` for sufficiently small `epsilon,alpha`. A regular unit octagon has squared diameter `4+2sqrt(2)<7`, so those finite eight-point sources are strictly nonglobal. This is a scope check, not a global-minimizer counterexample.
 

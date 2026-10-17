@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_penetration_matching_deep_purity_2026-09-15.md) · source SHA-256 `adecc44d05003ff4f8960172eea7425d62ddf0a851913aa8548cc0343a571a02`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "5138e7e7e75d1f14f6216001f5357a25c44a6a9f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_penetration_matching_deep_purity_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "31e726334d17968a044955bf9b0dcec920b402ca522da6aecd47a1fc4a8d1a21"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -29,46 +31,46 @@ same number of loaded-to-unloaded tooth attachments.
 
 For one shallow tooth, use coordinates
 
-$$
+```math
 a=(-u,0),\qquad b=(u,0),\qquad x=(0,h),
-$$
+```
 
 with
 
-$$
+```math
 u=\cos\alpha,\qquad h=\sin\alpha,\qquad
 0<\alpha\le\alpha_\eta<\pi/6.
 \tag{DP.1}
-$$
+```
 
 Let `w` be its matched inner endpoint and write
 
-$$
+```math
 w-x=(r,v),\qquad r^2+v^2=1.
-$$
+```
 
 The audited shallow-tooth geometry gives
 
-$$
+```math
 v>\sin(\pi/3-\alpha),
 \tag{DP.2}
-$$
+```
 
 so
 
-$$
+```math
 |r|<\cos(\pi/3-\alpha),
 \tag{DP.3}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \operatorname{depth}_{ab}(w)=h+v>\sqrt3/2.
 }
 \tag{DP.4}
-$$
+```
 
 ---
 
@@ -78,18 +80,18 @@ Suppose a loaded vertex `c` satisfies `|c-w|=1`.
 
 First, `c` cannot equal `a` or `b`. If `c=a`, then
 
-$$
+```math
 |a-x|=|x-w|=|w-a|=1,
-$$
+```
 
 which is a forbidden unit equilateral triangle; similarly for `b`.
 
 Also
 
-$$
+```math
 |c-a|\le |c-w|+|w-x|+|x-a|=3.
 \tag{DP.5}
-$$
+```
 
 Thus `a,b,c` lie in one fixed-scale loaded-boundary window. Section-124 local flatness
 puts all loaded-hull sides on the short boundary arc in an `o(1)` tangent cone around
@@ -100,12 +102,13 @@ vertex, convex cyclic order places `c` beyond `a` or beyond `b`. Every interveni
 loaded-hull side has length at least one by source separation and tangent projection
 `1-o(1)`. Therefore, with `M=(a+b)/2`,
 
-$$
+```math
 \boxed{
 |t\cdot(c-M)|
 \ge u+1-o(1).
 }
 \tag{DP.6}
+```
 
 The bound is asymptotically sharp when `c` is the loaded vertex immediately adjacent
 to `a` or `b` beyond the tooth base.
@@ -117,30 +120,31 @@ to `a` or `b` beyond the tooth base.
 The normal coordinate of `c` relative to the base line is `o(1)`, while (DP.4) puts
 `w` at depth greater than `sqrt(3)/2`. Since `|c-w|=1`,
 
-\[
+```math
 |t\cdot(c-w)|<1/2+o(1).
 \tag{DP.7}
-$$
+```
 
 Equation (DP.3) gives
 
-$$
+```math
 |t\cdot(w-M)|<\cos(\pi/3-\alpha).
 \tag{DP.8}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 |t\cdot(c-M)|
 <\cos(\pi/3-\alpha)+{1\over2}+o(1).
 }
 \tag{DP.9}
+```
 
 But for every `alpha<pi/6`,
 
-\[
+```math
 \cos\alpha+1
 -
 \left(\cos(\pi/3-\alpha)+{1\over2}\right)
@@ -148,6 +152,7 @@ But for every `alpha<pi/6`,
 {1\over2}+\cos\alpha-\cos(\pi/3-\alpha)
 >{1\over2}.
 \tag{DP.10}
+```
 
 For fixed `eta` this has a fixed positive lower bound. Equations (DP.6) and (DP.9)
 therefore contradict one another for all sufficiently large `D`.
@@ -167,35 +172,36 @@ unloaded component.
 C26 gives every unloaded contact vertex full degree between three and five. By DP.1,
 for every matched deep endpoint
 
-\[
+```math
 \boxed{3\le\deg_I(w)\le5.}
 \tag{DP.11}
-$$
+```
 
 Let `M` be a penetration matching of size `Z`, with shallow endpoint set `X` and deep
 endpoint set `W`. Then
 
-$$
+```math
 |X|=|W|=Z,
 \qquad X\cap W=\varnothing.
 \tag{DP.12}
-$$
+```
 
 Every `x in X` has at least its matched internal edge, so `deg_I(x)>=1`. Every
 `w in W` has internal degree at least three. Therefore
 
-$$
+```math
 \sum_{v\in X\cup W}\deg_I(v)
 \ge4Z.
 \tag{DP.13}
-$$
+```
 
 Each physical internal contact edge contributes at most two incidences to this sum.
 Hence the unloaded components containing the matching carry at least
 
-$$
+```math
 \boxed{2Z}
 \tag{DP.14}
+```
 
 distinct internal contact edges incident to `X union W`.
 
@@ -203,9 +209,10 @@ Independently, every shallow tooth apex has exactly its two loaded base endpoint
 loaded contact neighbors. Different apexes give different physical attachment edges,
 so the same matching components carry at least
 
-\[
+```math
 \boxed{2Z}
 \tag{DP.15}
+```
 
 distinct loaded-to-unloaded contact edges incident to `X`.
 
@@ -218,47 +225,49 @@ incident to `X union W` when internal and loaded-to-unloaded contacts are combin
 
 The matching theorem gives
 
-\[
+```math
 {Z\over D}
 \ge0.4255744656201161781\ldots-o(1).
 \tag{DP.16}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 {2Z\over D}
 \ge0.8511489312402323562\ldots-o(1)
 }
 \tag{DP.17}
+```
 
 distinct internal contact edges are incident to matching endpoints, and at least the
 same number of distinct loaded-to-unloaded tooth attachment edges occur.
 
 Consequently the union of these two edge classes has size at least
 
-\[
+```math
 \boxed{
 1.7022978624804647124\ldots D-o(D).
 }
 \tag{DP.18}
+```
 
 For `eta=4/15`,
 
-\[
+```math
 \sin\alpha_\eta={2\sqrt{14}\over15}
 =0.4988876515698588514\ldots .
-$$
+```
 
 Thus every matched deep endpoint satisfies
 
-$$
+```math
 {\sqrt3\over2}
 <\operatorname{depth}(w)
 <1+{2\sqrt{14}\over15}+o(1),
 \tag{DP.19}
-$$
+```
 
 so it lies in a fixed local shell between about `0.8660` and `1.4989` inside its tooth
 support line.
@@ -266,11 +275,11 @@ support line.
 The loaded-neighbor contradiction retains a fixed margin even at this widened
 threshold:
 
-$$
+```math
 {1\over2}+{13\over15}-{13+2\sqrt{42}\over30}
 =0.5012839534394759846\ldots .
 \tag{DP.20}
-$$
+```
 
 ---
 

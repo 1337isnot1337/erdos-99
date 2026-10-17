@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_bridge_hinge_peeling_2026-09-09.md) · source SHA-256 `79e39ae3a647f06bcf73f7142ffa6543343f839f8c1081cdcd72caa9da0d051d`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-6E626A5A4BA2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZHP: hinge rank forces diameter-path peeling along every long bridge segment
 
@@ -21,17 +23,17 @@ Apply those facts to an arbitrary consecutive `L`-bridge segment. Every diameter
 
 Hence at least
 
-$$
+```math
 \boxed{L-4}
-$$
+```
 
 active diameter rows must enter, leave, or terminate inside every `L`-bridge segment.
 
 Taking `L=H` for a complete macroscopic trunk gives the stronger global support statement
 
-$$
+```math
 \boxed{m_{\rm peel}\ge H-4,}
-$$
+```
 
 where `m_peel` counts distinct active diameter rows whose trunk interval is nonempty but does not cover the whole trunk.
 
@@ -43,10 +45,10 @@ This is a local theorem for arbitrary subtrunks such as the ZHT macroscopic trun
 
 Take any consecutive physical bridge segment
 
-$$
+```math
 J=\{f_{s+1},f_{s+2},\ldots,f_{s+L}\}
 \tag{1.1}
-$$
+```
 
 inside a contact bridge-tree path. Root the tree on the side before `f_{s+1}` and define the `L` descendant hinge rotations exactly as in ZHI.
 
@@ -54,26 +56,26 @@ The ZHI proof is local to a consecutive bridge chain. Therefore these `L` hinge 
 
 Let
 
-$$
+```math
 G_J
 \tag{1.2}
-$$
+```
 
 be the active diameter first-derivative matrix restricted to these `L` hinge coordinates.
 
 ZF mixed infinitesimal rigidity gives
 
-$$
+```math
 \boxed{\operatorname{rank}G_J\ge L-1.}
 \tag{ZHP1}
-$$
+```
 
 If the root shore of the first bridge in the segment contains at least two vertices, the stronger anchored form gives
 
-$$
+```math
 \boxed{\operatorname{rank}G_J=L.}
 \tag{ZHP2}
-$$
+```
 
 ---
 
@@ -83,17 +85,17 @@ Call an active diameter edge `h=xy` a **full traverser of J** if its bridge-tree
 
 For such a row, the same endpoint remains on the descendant side throughout all `L` cuts. ZHAI's exact coefficient formula on the segment is
 
-$$
+```math
 G_{h,j}=c_h-2d_h\cdot Jp_{a_j},
 \qquad j\in J,
 \tag{2.1}
-$$
+```
 
 with `d_h=p_x-p_y` and one row-dependent scalar `c_h`.
 
 Hence, after restriction to `J`, all full-traverser rows lie in the common three-dimensional space
 
-$$
+```math
 \operatorname{span}
 \left\{
 (1)_{j\in J},
@@ -101,14 +103,14 @@ $$
 (a_{j,y})_{j\in J}
 \right\}.
 \tag{2.2}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{\operatorname{rank}G_J^{\rm full}\le3.}
 \tag{ZHP3}
-$$
+```
 
 This includes arbitrarily many full-traversing diameter edges. Their count can be large, but their first-order action on the bridge hinges has only three degrees of freedom.
 
@@ -123,17 +125,17 @@ Let `P_J` be the set of active diameter rows that
 
 Put
 
-$$
+```math
 m_J:=|P_J|.
 \tag{3.1}
-$$
+```
 
 Zero rows do not affect rank. Every row in `P_J` increases row rank by at most one, while all full traversers together contribute rank at most three. Thus
 
-$$
+```math
 \operatorname{rank}G_J\le3+m_J.
 \tag{3.2}
-$$
+```
 
 Combining with ZHP1 proves:
 
@@ -141,15 +143,17 @@ Combining with ZHP1 proves:
 
 For every consecutive `L`-bridge segment,
 
-$$
+```math
 \boxed{m_J\ge L-4.}
 \tag{ZHP4}
+```
 
 In the anchored rank-`L` case,
 
-\[
+```math
 \boxed{m_J\ge L-3.}
 \tag{ZHP5}
+```
 
 Every counted row has a topological trunk interval that overlaps `J` but does not cover it. Consequently at least one endpoint of that interval lies inside the closed segment `J`: the corresponding diameter path enters or leaves the trunk within the segment.
 
@@ -163,11 +167,12 @@ C23 gives a common bridge-block-tree hub for all active diameter paths. C24 iden
 
 Canonical C26 later eliminates unloaded degree-one/two contact vertices and reaction-free two-terminal regions in fully force-visible C-II. Therefore the active canonical stack already implies:
 
-\[
+```math
 \boxed{
 \text{the common intersection is either one bridge block or one universal physical bridge.}
 }
 \tag{4.1}
+```
 
 So ZHP is not used to improve the universal common-route length. Its role begins strictly beyond the common intersection, on long branch/trunk segments through nontrivial bridge blocks where different diameter paths peel at different depths.
 
@@ -177,35 +182,38 @@ So ZHP is not used to improve the universal common-route length. Its role begins
 
 Apply ZHP directly to the complete ZHT trunk of length `H`. Let
 
-\[
+```math
 P_{\rm peel}
-$$
+```
 
 be the set of active diameter rows that act nontrivially on the trunk but do not traverse all `H` trunk bridges. ZHP4 with `L=H` gives immediately
 
-$$
+```math
 \boxed{|P_{\rm peel}|\ge H-4.}
 \tag{ZHP6}
+```
 
 In the anchored case,
 
-\[
+```math
 \boxed{|P_{\rm peel}|\ge H-3.}
 \tag{ZHP7}
+```
 
 Thus essentially one distinct non-full-traversing diameter row is required per physical bridge hinge. Every such row has at least one trunk-interval endpoint in the corridor.
 
 For the PR #111 ZHT trunk,
 
-\[
+```math
 H\ge\frac{\eta^2}{16\pi}D,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{|P_{\rm peel}|\ge\frac{\eta^2}{16\pi}D-O(1).}
 \tag{ZHP8}
+```
 
 This is stronger than the first fixed-window `H/4-O(1)` corollary and requires no secondary double counting.
 
@@ -219,9 +227,9 @@ ZHA already assigns a distinct loaded attachment to every internal route block o
 
 ZHAI gives
 
-\[
+```math
 H-1\le2N_{star}+m_{ns}.
-$$
+```
 
 ZHP adds a routing restriction: even a large star or nonstar support cannot obtain the necessary hinge rank if nearly all of its rows traverse the same full trunk. At least `H-4` distinct active rows must have a proper trunk interval.
 

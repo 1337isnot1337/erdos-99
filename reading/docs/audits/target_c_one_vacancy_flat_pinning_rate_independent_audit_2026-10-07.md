@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_vacancy_flat_pinning_rate_independent_audit_2026-10-07.md) · source SHA-256 `b30a40c20e8d27f396a547d83bd38c93f450850b2250b606178e2c05e7139c86`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 2 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
+
 <!-- theorem-state: {"artifact_id":"ART-056E4002057F","canonical":true,"claim_ids":["C-ONE-VACANCY-FLAT-PINNING-RATE"],"claim_statuses":{"C-ONE-VACANCY-FLAT-PINNING-RATE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: flat one-vacancy pinning and the curved-wall rate
 
@@ -11,49 +13,57 @@ Source artifact: `docs/reports/target_c_one_deficit_flat_pinning_and_solidity_re
 ## Exact theorem promoted
 
 Let (u=(1,0)), (v=(1/2,\sqrt3/2)), and
-$$
+```math
 H_M=\{iu+jv:\max(|i|,|j|,|i+j|)\le M\},\quad B_M=\partial H_M,\quad P_M=H_M\setminus B_M,
-$$
+```
 where (M\ge2). For any vacancy (h\in P_M), set the moving chart to (P_M\setminus\{h\}), pin every point of (B_M), and impose the unit-distance lower constraints on every surviving unit-neighbor edge with a moving endpoint.
 
 **Claim `C-ONE-VACANCY-FLAT-PINNING-RATE`.**
 
 1. The surviving unit-edge row matrix (R), in the moving coordinates, has full column rank (2(|P_M|-1)). Its static first-order feasible cone is therefore ({0}).
 2. With the flat boundary fixed, the vacancy chart is locally isolated among placements satisfying those edge constraints.
-3. Replace the pinned boundary vertices by any family (q_b(\theta)=b+O(\theta)). For any feasible placements of the moving points that converge, after relabeling, to the same vacancy chart as $\theta\downarrow0$, their displacement from that chart is (O(\theta)), with constants allowed to depend on (M) and (h). Every such sequence has a subsequence with bounded displacement divided by $\theta$; when the normalized boundary displacements converge, the limiting moving velocity satisfies the associated inhomogeneous first-order inequalities for all surviving unit-neighbor pairs.
+3. Replace the pinned boundary vertices by any family (q_b(\theta)=b+O(\theta)). For any feasible placements of the moving points that converge, after relabeling, to the same vacancy chart as $`\theta\downarrow0`$, their displacement from that chart is (O(\theta)), with constants allowed to depend on (M) and (h). Every such sequence has a subsequence with bounded displacement divided by $`\theta`$; when the normalized boundary displacements converge, the limiting moving velocity satisfies the associated inhomogeneous first-order inequalities for all surviving unit-neighbor pairs.
 
 This is an auxiliary finite-chart theorem. It does not say an arbitrary source or one-deficit cloud can be relabeled into one of these charts.
 
 ## Independent proof reconstruction
 
 Use axial coordinates for the triangular lattice and directions
-$(1,0),(0,1),(-1,1),(-1,0),(0,-1),(1,-1)$. Every moving point in the unpunctured interior has all six lattice neighbors in (H_M). Give each surviving unit edge weight one and add one to each of the six edges joining consecutive neighbors of (h); edges with both endpoints pinned can be dropped.
+$`(1,0),(0,1),(-1,1),(-1,0),(0,-1),(1,-1)`$. Every moving point in the unpunctured interior has all six lattice neighbors in (H_M). Give each surviving unit edge weight one and add one to each of the six edges joining consecutive neighbors of (h); edges with both endpoints pinned can be dropped.
 
 For a moving vertex (p) not adjacent to (h), the six unit-edge row gradients sum to zero. For (p=h+e_i), the omitted (ph) edge has gradient (e_i) in the full lattice stress, so the retained base rows sum to (-e_i). The two added ring-edge gradients incident to (p) sum to (e_i). Thus each moving column is equilibrated. Every retained edge weight is strictly positive, so if (R\delta\ge0) then
-$$
+```math
 0=\lambda^T R\delta,\quad \lambda>0,
-$$
+```
 forces (R\delta=0).
 
 To prove full column rank, triangulate (H_M) into elementary unit triangles and remove the six triangles incident to (h). If (h) has lattice radius at most (M-2), the removed one-ring is an interior hexagonal hole. If its radius is (M-1), that one-ring meets the outer boundary only in one boundary edge or in two consecutive boundary edges; it cannot join opposite sides when (M\ge2). In either case the remaining polygonal region is connected, so the edge-adjacency graph of its elementary triangles is connected. Every moving vertex lies in a remaining triangle: a vertex adjacent to (h) loses only the two triangles sharing the edge (ph). At least one surviving outer boundary edge remains because the one-ring removes at most two consecutive boundary edges while the outer hexagon has (6M\ge12).
 
 A zero bar-variation on one nondegenerate triangle is an infinitesimal rigid motion. Two such motions agreeing on a shared edge agree everywhere. Connected triangle adjacency propagates one rigid motion across the remaining triangulation; its values vanish at the two fixed endpoints of a surviving outer edge, so that rigid motion is zero. This proves full column rank. The propagation argument also covers boundary-row and corner-adjacent vacancies.
 
-For a finite feasible displacement $\delta$ with fixed wall, each unit-edge inequality gives
-$$
+For a finite feasible displacement $`\delta`$ with fixed wall, each unit-edge inequality gives
+```math
 (R\delta)_e\ge-\tfrac12|\delta_p-\delta_q|^2\ge-c\|\delta\|^2.
-$$
-The positive equilibrium makes the weighted sum of these linear rows zero. Since there are finitely many rows and all weights are positive, every row is also bounded above by (c'\|\delta\|^2). A left inverse of (R) gives $\|\delta\|\le c''\|\delta\|^2$, which forces $\delta=0$ in a sufficiently small neighborhood.
+```
+The positive equilibrium makes the weighted sum of these linear rows zero. Since there are finitely many rows and all weights are positive, every row is also bounded above by (c'\|\delta\|^2). A left inverse of (R) gives $`\|\delta\|\le c''\|\delta\|^2`$, which forces $`\delta=0`$ in a sufficiently small neighborhood.
 
-For a moving wall, write the pinned displacements as $\eta=O(\theta)$. The same old unit-edge constraints imply
-$$
+For a moving wall, write the pinned displacements as $`\eta=O(\theta)`$. The same old unit-edge constraints imply
+```math
 R\delta\ge-C(\theta+\|\delta\|^2)
-$$
+```
 rowwise, since each wall contribution is linear (O(\theta)) and the squared edge displacement is (O(\|\delta\|^2+\theta^2)). The same positive equilibrium and full-rank left inverse give
-$$
+```math
 \|\delta\|\le C'(\theta+\|\delta\|^2).
-$$
-The assumed convergence makes $\delta\to0$, so the quadratic term is absorbed and $\delta=O(\theta)$. A bounded subsequence of the normalized moving and wall displacements then satisfies the linearized inequalities by division by $\theta). This proves the rate reduction without assuming a first-order feasible velocity integrates to a finite motion.
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
+The assumed convergence makes $`\delta\to0`$, so the quadratic term is absorbed and $`\delta=O(\theta)`$. A bounded subsequence of the normalized moving and wall displacements then satisfies the linearized inequalities by division by \(\theta). This proves the rate reduction without assuming a first-order feasible velocity integrates to a finite motion.
+```
+
+
 
 ## Adversarial checks and computation
 
@@ -65,4 +75,11 @@ The theorem does not use the canonical ZR/ZF affine-kernel theorem and does not 
 
 ## Canonical disposition and frontier effect
 
-Promote only `C-ONE-VACANCY-FLAT-PINNING-RATE` with no canonical dependencies. Record the verifier as exact finite support, not as the universal proof. The result can be used to normalize convergent curved-wall vacancy-chart sequences to scale \(\theta$, but supplies no arbitrary-cloud extraction, no exclusion of the top wall populations, and no Level I consequence by itself. Target C C-II remains open and its global endpoint is unchanged.
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
+
+Promote only `C-ONE-VACANCY-FLAT-PINNING-RATE` with no canonical dependencies. Record the verifier as exact finite support, not as the universal proof. The result can be used to normalize convergent curved-wall vacancy-chart sequences to scale \(\theta\), but supplies no arbitrary-cloud extraction, no exclusion of the top wall populations, and no Level I consequence by itself. Target C C-II remains open and its global endpoint is unchanged.
+
+```

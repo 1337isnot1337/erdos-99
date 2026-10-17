@@ -48,34 +48,34 @@ The first arrow is unproved. The other arrows are exact.
 Let A be an n-point unit-separated source of actual diameter D > 1. Choose
 1 < R <= D and a vertex cover T of
 
-$$
+```math
 J_R(A)=\{ij:|a_i-a_j|\ge R\}.
-$$
+```
 
 For R = D this covers every actual diameter pair. For R < D it also covers
 all formerly inactive pairs reaching the new threshold. Put A0 = A minus T.
 Let X be a finite unit-separated cloud of diameter strictly less than R.
 Make a bipartite graph B on A0 and X, with an edge precisely when
 
-$$
+```math
 |a-x|<1\quad\text{or}\quad |a-x|\ge R.
 \tag{1}
-$$
+```
 
 If nu(B) is its maximum matching size, the largest compatible union formed
 from A0 and X has exactly
 
-$$
+```math
 \boxed{n-|T|+|X|-\nu(B)}
 \tag{2}
-$$
+```
 
 points. Consequently
 
-$$
+```math
 \boxed{|X|-\nu(B)\ge|T|}
 \tag{3}
-$$
+```
 
 gives an n-point unit-separated competitor with diameter < R <= D.
 
@@ -103,18 +103,18 @@ improvement.
 
 Every global minimizer satisfies, for every admissible R, T, X,
 
-$$
+```math
 |X|-\nu(B)\le |T|-1.
 \tag{4}
-$$
+```
 
 In Hall form, if N(S) includes **both** lower and upper conflicts of a packet
 S subset X, then
 
-$$
+```math
 |N(S)|\ge |S|-|T|+1\qquad(S\subseteq X).
 \tag{5}
-$$
+```
 
 The maximum right-side Hall deficiency is |X|-nu(B). One proof is to use
 the same alternating-path construction starting on the right: the unmatched
@@ -134,11 +134,11 @@ unit-contact graph is triangle-free. No affine image improves its diameter:
 writing u,v for the affine map's column vectors, the old neighbor pairs force
 |u|,|v| >= 1, while its two corner diagonals force
 
-$$
+```math
 \operatorname{diam}(F(A_k))^2
 \ge(k-1)^2(|u|^2+|v|^2+2|u\cdot v|)
 \ge2(k-1)^2.
-$$
+```
 
 The verifier nevertheless certifies these simultaneous replacements:
 
@@ -162,9 +162,9 @@ regressions against affine optimality implying global optimality.
 
 For every k >= 33 set c = floor((k-1)/2). The triangular-lattice cloud
 
-$$
+```math
 X=(c,c)+\{(i+j/2,j\sqrt3/2):i^2+ij+j^2<225\}
-$$
+```
 
 has exactly 817 points within radius 15 of (c,c). Every source point at
 distance < 1 from X lies in the open radius-16 disk around (c,c), which has
@@ -175,9 +175,9 @@ Delete those at most 793 labels and the two left corners, covering both
 original diameter pairs. Every retained source point is at least one from
 X. For every mixed pair,
 
-$$
+```math
 |a-x|<15+\sqrt2\lceil(k-1)/2\rceil<\sqrt2(k-1).
-$$
+```
 
 The second inequality follows from floor((k-1)/2) >= 16 and 15 < 16 sqrt(2).
 The cloud's diameter is < 30, also below the original diameter. The union

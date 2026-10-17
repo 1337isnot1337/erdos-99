@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_dcjc_endpoint_one_gap_moment_exclusion_2026-09-10.md) · source SHA-256 `4f1ca5b81ed644abdd432bb2a73d6ce69049199358a488efeeff5c01289c14f6`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-99E538416F60","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — DCJC endpoint excluded by one-gap moment rigidity
 
@@ -17,38 +19,38 @@
 
 The DCJC endpoint
 
-$$
+```math
 \lambda_{DCJC}=0.6340575990818539559\ldots
-$$
+```
 
 is not asymptotically attainable. Hence there is an absolute, presently nonexplicit
 constant `eta_DC>0` such that every sufficiently large audited post-ZF survivor obeys
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
 \lambda_{DCJC}+\eta_{DC}.
 }
 \tag{OG.1}
-$$
+```
 
 The contradiction is much stronger than the earlier paired-pocket exclusion. DCJC
 equality forces MA perimeter equality, hence exactly one missing projective circle
 interval. Therefore only two force-hull sides have macroscopic normalized chord length;
 they are antipodal and both have length
 
-$$
+```math
 cD+o(D),
 \qquad c=\cos(y_D/2).
-$$
+```
 
 All other force-hull sides have `o(D)` length. Since the total chain--chord detour is
 only `uD+o(D)`, the DD cubic moment is then at most
 
-$$
+```math
 (c+u)^3+c^3
-$$
+```
 
 after normalization, not the much larger abstract diameter-capped value used in DCJC.
 This leaves far too little outer-pocket area to carry the required attachment-cell gap.
@@ -59,14 +61,14 @@ This leaves far too little outer-pocket area to carry the required attachment-ce
 
 Assume for contradiction that an unbounded audited survivor sequence satisfies
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to\lambda_{DCJC}.
 \tag{1.1}
-$$
+```
 
 DCJC endpoint localization gives
 
-$$
+```math
 \boxed{
 \frac hD\to y_D,
 \qquad
@@ -75,59 +77,59 @@ $$
 \frac{P_F}{D}\to p_0(y_D),
 }
 \tag{1.2}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \frac{e_{BB}}D\to\lambda_{DCJC},
 \qquad
 \frac{s_C}{D}\to0.
 }
 \tag{1.3}
-$$
+```
 
 Here
 
-$$
+```math
 p_0(y)=y+2\cos(y/2),
 \qquad
 u(y)=y-2\cos(y/2),
-$$
+```
 
 and
 
-$$
+```math
 y_D=1.5852324139288403018\ldots .
-$$
+```
 
 Put
 
-$$
+```math
 c:=\cos(y_D/2),
 \qquad
 u_*:=\nu(y_D)=y_D-2c.
 \tag{1.4}
-$$
+```
 
 Numerically
 
-$$
+```math
 c=0.7019844778468146049\ldots,
 \qquad
 \nu_*=0.1812634582352110920\ldots .
-$$
+```
 
 ZE and (1.2) give the exact total normalized outer-pocket detour limit
 
-$$
+```math
 \boxed{
 \frac{b-P_F}{D}\to
 2y_D-p_0(y_D)=\nu_*.
 }
 \tag{1.5}
-$$
+```
 
 ---
 
@@ -139,58 +141,59 @@ hull of a closed subset of the boundary circle.
 
 Let its missing projective-circle intervals have lengths `alpha_i`, with total
 
-$$
+```math
 X=\sum_i\alpha_i\le M:=\pi-y_D.
 \tag{2.1}
-$$
+```
 
 The exact cyclic perimeter formula is
 
-$$
+```math
 \operatorname{per}K_\infty
 =
 \pi-X+2\sum_i\sin(\alpha_i/2).
 \tag{2.2}
-$$
+```
 
 For fixed total `X`, merging two positive gaps strictly decreases the sine sum, so
 
-$$
+```math
 \sum_i\sin(\alpha_i/2)\ge\sin(X/2),
 \tag{2.3}
-$$
+```
 
 with equality only when at most one gap has positive length. Also
 
-$$
+```math
 f(X):=\pi-X+2\sin(X/2)
-$$
+```
 
 is strictly decreasing on `(0,pi)`. Thus
 
-$$
+```math
 \operatorname{per}K_\infty
 \ge f(X)\ge f(M)=p_0(y_D).
 \tag{2.4}
-$$
+```
 
 DCJC has perimeter equality in (1.2), so equality holds throughout (2.4). Hence
 
-$$
+```math
 \boxed{
 X=M=\pi-y_D,
 \qquad
 \text{there is exactly one positive projective gap.}
 }
 \tag{2.5}
+```
 
 The ordinary-circle lift consists of two antipodal missing arcs, each of angle `M`.
 Their two chord sides in `K_infty` both have length
 
-\[
+```math
 \sin(M/2)=\cos(y_D/2)=c.
 \tag{2.6}
-$$
+```
 
 Every other boundary point of `K_infty` lies on one of the two retained circular arcs.
 
@@ -202,12 +205,12 @@ For every fixed `epsilon>0`, (2.5) implies that for all sufficiently large `D`, 
 but two force-hull sides have length at most `epsilon D`, while the two exceptional
 sides have lengths
 
-$$
+```math
 s_1=cD+o(D),
 \qquad
 s_2=cD+o(D).
 \tag{3.1}
-$$
+```
 
 Proof: if a third sequence of sides had normalized length bounded below by a positive
 constant, pass to its endpoint directions. FS radial localization places both endpoint
@@ -226,37 +229,37 @@ two distinct OP outer pockets.
 
 For each outer pocket `P`, write
 
-$$
+```math
 \ell_P=s_P+d_P,
 \qquad d_P\ge0,
-$$
+```
 
 where `s_P` is its force-hull chord and `d_P` its chain--chord detour. OD gives
 
-$$
+```math
 \sum_Pd_P=b-P_F.
 \tag{4.1}
-$$
+```
 
 Let `P_1,P_2` be the two exceptional macroscopic-chord pockets from (3.1). Put
 
-$$
+```math
 d_i/D\to\delta_i
 \qquad(i=1,2)
-$$
+```
 
 after passing further, and let
 
-$$
+```math
 \delta_0:=\nu_*-\delta_1-\delta_2\ge0
 \tag{4.2}
-$$
+```
 
 be the remaining normalized detour.
 
 We claim
 
-$$
+```math
 \boxed{
 \limsup\frac{1}{D^3}
 \sum_P\ell_P^3
@@ -264,80 +267,80 @@ $$
 (c+\delta_1)^3+(c+\delta_2)^3+\delta_0^3.
 }
 \tag{4.3}
-$$
+```
 
 To prove it, fix `epsilon>0` and let `S_epsilon` be the other pockets, whose chords
 satisfy `s_P<=epsilon D` for large `D`. Minkowski's inequality in `l^3` gives
 
-$$
+```math
 \left(\sum_{P\in S_\epsilon}\ell_P^3\right)^{1/3}
 \le
 \left(\sum_{P\in S_\epsilon}s_P^3\right)^{1/3}
 +
 \left(\sum_{P\in S_\epsilon}d_P^3\right)^{1/3}.
 \tag{4.4}
-$$
+```
 
 The total force-hull perimeter is `O(D)`, so
 
-$$
+```math
 \sum_{P\in S_\epsilon}s_P^3
 \le
 (\epsilon D)^2\sum_Ps_P
 =O(\epsilon^2D^3).
 \tag{4.5}
-$$
+```
 
 Also convexity gives
 
-$$
+```math
 \sum_{P\in S_\epsilon}d_P^3
 \le
 \left(\sum_{P\in S_\epsilon}d_P\right)^3.
 \tag{4.6}
-$$
+```
 
 Divide (4.4) by `D`, let `D->infinity`, then `epsilon->0`. Equations (4.1)--(4.2)
 give
 
-$$
+```math
 \limsup\frac1{D^3}
 \sum_{P\in S_\epsilon}\ell_P^3
 \le\delta_0^3.
-$$
+```
 
 Together with `ell_i/D->c+delta_i`, this proves (4.3).
 
 The right side of (4.3) is a convex function on the simplex
 
-$$
+```math
 \delta_0+\delta_1+\delta_2=\nu_*,
 \qquad\delta_i\ge0.
-$$
+```
 
 A convex function achieves its maximum on this compact simplex at a vertex. Allocating
 all detour to one of the two `c`-based chains gives
 
-$$
+```math
 (c+\nu_*)^3+c^3,
-$$
+```
 
 while allocating all detour to the zero-chord class gives
 
-$$
+```math
 2c^3+\nu_*^3.
-$$
+```
 
 Their difference is
 
-$$
+```math
 (c+\nu_*)^3-c^3-\nu_*^3
 =3c\nu_*(c+\nu_*)>0.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \limsup\frac1{D^3}
 \sum_P\ell_P^3
@@ -345,7 +348,7 @@ $$
 M_{1g}:=(c+\nu_*)^3+c^3.
 }
 \tag{4.7}
-$$
+```
 
 ---
 
@@ -353,38 +356,38 @@ $$
 
 DCJC used the abstract diameter-capped moment
 
-$$
+```math
 M_D
 =(1+\nu_*)^3+1+[p_0(y_D)-2]^3.
 \tag{5.1}
-$$
+```
 
 All three displayed terms are positive. Since `c<1`,
 
-$$
+```math
 (c+\nu_*)^3<(1+\nu_*)^3
-$$
+```
 
 and
 
-$$
+```math
 c^3<1.
-$$
+```
 
 Hence already
 
-$$
+```math
 \boxed{M_{1g}<M_D.}
 \tag{5.2}
-$$
+```
 
 Numerically,
 
-$$
+```math
 M_{1g}=1.0345708774\ldots,
 \qquad
 M_D=3.6162680516\ldots .
-$$
+```
 
 The loss is macroscopic and does not depend on a delicate rounding margin.
 
@@ -394,61 +397,61 @@ The loss is macroscopic and does not depend on a delicate rounding margin.
 
 DD before its scalar moment relaxation gives
 
-$$
+```math
 H_{out}
 \le
 \frac1{\sqrt6}
 \left(\sum_P\ell_P^3\right)^{1/2}
 (b-P_F)^{1/2}.
 \tag{6.1}
-$$
+```
 
 Using (1.5) and (4.7),
 
-$$
+```math
 \limsup\frac{H_{out}}{D^2}
 \le
 \frac1{\sqrt6}\sqrt{M_{1g}\nu_*}.
 \tag{6.2}
-$$
+```
 
 Since `Q/D->0`, CC gives
 
-$$
+```math
 A_{exc}=o(D^2).
 \tag{6.3}
-$$
+```
 
 On the other hand DCJC defines its crossover by
 
-$$
+```math
 \boxed{
 \Phi(y_D)-\frac\pi4\lambda_{DCJC}^2
 =
 \frac1{\sqrt6}\sqrt{M_D\nu_*}.
 }
 \tag{6.4}
-$$
+```
 
 MA/GU therefore give
 
-$$
+```math
 \liminf\frac GD^2
 \ge
 \frac1{\sqrt6}\sqrt{M_D\nu_*}.
 \tag{6.5}
-$$
+```
 
 But ZG/GU, (6.2), and (6.3) give
 
-$$
+```math
 \limsup\frac GD^2
 \le
 \frac1{\sqrt6}\sqrt{M_{1g}\nu_*}
 <
 \frac1{\sqrt6}\sqrt{M_D\nu_*},
 \tag{6.6}
-$$
+```
 
 contradicting (6.5). Therefore the DCJC endpoint is impossible. `square`
 
@@ -496,9 +499,9 @@ The qualitative endpoint proof is now robust enough to expose the next quantitat
 object. Let the normalized cyclic force hull have projective missing gaps `alpha_i`.
 The exact DD cubic moment can be bounded in terms of the **cubic chord mass**
 
-$$
+```math
 \sum_i 2\sin^3(\alpha_i/2)
-$$
+```
 
 and the total detour. The MA perimeter formula already fixes the first chord moment
 `sum 2sin(alpha_i/2)` in terms of `(X,p)`.

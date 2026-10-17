@@ -21,17 +21,17 @@ Status: proof-only regression/repair plus a new exact coupling lemma; no promoti
 The newest threshold exact-phase report on main proves that the selected physical
 diameter forest F has
 
-$$
+```math
 |E(F)|=2m+1,\qquad
 |V(F)|=2m+1+c(F),
-$$
+```
 
 and, if n_j is the number of physical vertices in collapsed layer j,
 
-$$
+```math
 \sum_{j=0}^m(n_j-1)=m+c(F).
 \tag{1}
-$$
+```
 
 It interprets (1) as a linear amount of physical layer-fiber splitting which should
 next be coupled to the opposite complete O--O shore.
@@ -64,18 +64,20 @@ The only facts imported are:
 - the simple threshold gap graph T is a tree on 0,...,m;
 - every simple edge {a,b}, a<b, has two distinct physical diameter
   representatives
-  $$
+  ```math
   L_aU_b,\qquad L_bU_a;
-  $$
+  
+  ```
 - all those representatives and the parallel full-support diameter h_0 cross one
   common retained train;
 - the resulting physical graph F is a forest;
 - for the two shores A,B of the complete O--O rectangle, every actual diameter
   edge h satisfies
-  $$
+  ```math
   t_A(h)+t_B(h)\le2,
   \tag{2}
-  $$
+  
+  ```
   where t_A,t_B count internal adjacent selected interfaces at which signed cut
   incidence changes.
 
@@ -89,23 +91,23 @@ distinct physical vertices of F in collapsed complement-dual layer j.
 ### Lemma 3.1 -- every interior layer already has two physical vertices
 
 For every
-$$
+```math
 1\le j\le m-1,
-$$
+```
 one has
-$$
+```math
 \boxed{n_j\ge2.}
 \tag{3}
-$$
+```
 
 #### Proof
 
 Because T is a spanning tree, layer j is incident with some simple edge {a,b}.
 
 If j=a, the paired-staircase theorem supplies the two physical representatives
-$$
+```math
 L_aU_b,\qquad L_bU_a.
-$$
+```
 Their layer-j endpoints lie respectively on the hull arcs L and U.
 
 If j=b, the same two representatives have their layer-j endpoints on U and L,
@@ -120,9 +122,9 @@ each.
 
 Thus the paired orientation theorem alone forces the baseline occupancy
 
-$$
+```math
 1,\underbrace{2,\ldots,2}_{m-1\ {\rm layers}},1,
-$$
+```
 
 containing exactly 2m physical vertices before any excess is counted.
 
@@ -130,26 +132,26 @@ containing exactly 2m physical vertices before any excess is counted.
 
 Define the normalized collapsed-fiber excess
 
-$$
+```math
 E_{\rm norm}
 :=
 (n_0-1)+(n_m-1)
 +\sum_{j=1}^{m-1}(n_j-2).
 \tag{4}
-$$
+```
 
 By Lemma 3.1 this is nonnegative.
 
 ### Theorem 4.1 -- the genuine excess is component count plus one
 
-$$
+```math
 \boxed{E_{\rm norm}=c(F)+1.}
 \tag{5}
-$$
+```
 
 Equivalently, the current-main identity decomposes exactly as
 
-$$
+```math
 \boxed{
 \sum_{j=0}^m(n_j-1)
 =
@@ -158,32 +160,32 @@ $$
 \underbrace{(c(F)+1)}_{\text{normalized excess}}.
 }
 \tag{6}
-$$
+```
 
 #### Proof
 
 The layers partition V(F), so
 
-$$
+```math
 \sum_{j=0}^m n_j=|V(F)|.
-$$
+```
 
 The selected graph has 2m+1 edges and is a forest with c(F) nontrivial
 components. Hence
 
-$$
+```math
 |V(F)|=2m+1+c(F).
-$$
+```
 
 Subtracting the baseline 2m from (4) gives
 
-$$
+```math
 E_{\rm norm}
 =
 |V(F)|-2m
 =
 c(F)+1.
-$$
+```
 
 Equation (6) is the same identity after adding back the m-1 mandatory interior
 duplications.
@@ -192,9 +194,9 @@ duplications.
 
 The statement
 
-$$
+```math
 \sum_j(n_j-1)\ge m+1
-$$
+```
 
 does not by itself exhibit Omega(m) genuine side-level splitting. Even with
 c(F)=1, the left side is m+1, while the normalized excess is only 2.
@@ -244,14 +246,14 @@ Now use the complete O--O rectangle and call the threshold exact-phase shore A.
 Let the opposite retained shore be B.
 
 For a simple tree edge
-$$
+```math
 e=\{a,b\},\qquad 0\le a<b\le m,
-$$
+```
 define
-$$
+```math
 k(e):=\mathbf1_{\{a=0\}}+\mathbf1_{\{b=m\}}\in\{0,1,2\}.
 \tag{7}
-$$
+```
 
 The two paired physical representatives over e have the same A-support
 interval (a,b].
@@ -260,12 +262,12 @@ interval (a,b].
 
 For either physical representative h_e^\pm,
 
-$$
+```math
 \boxed{
 t_A(h_e^\pm)=2-k(e).
 }
 \tag{8}
-$$
+```
 
 #### Proof
 
@@ -275,10 +277,10 @@ constant nonzero on positions a+1,\ldots,b, and zero after b.
 There is an internal start switch exactly when a>0, and an internal stop switch
 exactly when b<m. Therefore
 
-$$
+```math
 t_A=\mathbf1_{\{a>0\}}+\mathbf1_{\{b<m\}}
 =2-k(e).
-$$
+```
 
 Combining (8) with the joint complete-grid bound (2) gives the requested
 cross-shore coupling.
@@ -287,12 +289,12 @@ cross-shore coupling.
 
 For every paired representative,
 
-$$
+```math
 \boxed{
 t_B(h_e^\pm)\le k(e).
 }
 \tag{9}
-$$
+```
 
 In particular:
 
@@ -306,48 +308,48 @@ constant on the whole selected B shore: its B-incidence is either empty or full.
 
 Let d_0,d_m be the degrees of the extreme vertices 0,m in T, and let
 
-$$
+```math
 \epsilon_{0m}:=\mathbf1_{\{\{0,m\}\in E(T)\}}.
-$$
+```
 
 Then the number of simple tree edges incident with neither extreme is exactly
 
-$$
+```math
 m-d_0-d_m+\epsilon_{0m}.
 \tag{10}
-$$
+```
 
 Hence at least
 
-$$
+```math
 \boxed{
 2\bigl(m-d_0-d_m+\epsilon_{0m}\bigr)
 }
 \tag{11}
-$$
+```
 
 of the selected paired actual diameters have t_B=0.
 
 Moreover, summing (9) over both physical representatives of every tree edge gives
 
-$$
+```math
 \sum_{h\in F\setminus\{h_0\}} t_B(h)
 \le
 2(d_0+d_m).
 \tag{12}
-$$
+```
 
 The reference full-support diameter has t_A(h_0)=0, so (2) gives
 t_B(h_0)\le2. Thus
 
-$$
+```math
 \boxed{
 \sum_{h\in F}t_B(h)
 \le
 2(d_0+d_m)+2.
 }
 \tag{13}
-$$
+```
 
 #### Proof
 
@@ -360,38 +362,38 @@ Each remaining simple edge has two physical representatives and k(e)=0, proving
 (11).
 
 Finally
-$$
+```math
 \sum_{e\in E(T)}k(e)=d_0+d_m,
-$$
+```
 so summing the two copies of (9) gives (12); add h_0 to obtain (13).
 
 ## 6. A clean extreme-star / opposite-constant dichotomy
 
 For every fixed
-$$
+```math
 0<\theta<\frac12,
-$$
+```
 Theorem 5.2 gives the following exact alternative.
 
 ### Corollary 6.1
 
 Either
 
-$$
+```math
 \boxed{
 \max(d_0,d_m)\ge\theta m,
 }
 \tag{14}
-$$
+```
 
 or more than
 
-$$
+```math
 \boxed{
 2(1-2\theta)m
 }
 \tag{15}
-$$
+```
 
 selected paired actual diameter bars are constant on the entire opposite retained
 shore B.
@@ -400,30 +402,30 @@ shore B.
 
 If (14) fails, then d_0+d_m<2\theta m. Equation (11) gives
 
-$$
+```math
 2(m-d_0-d_m+\epsilon_{0m})
 >
 2(1-2\theta)m.
-$$
+```
 
 This is the correct immediate two-shore consequence of the paired staircase.
 
 It replaces the unsupported heuristic
 
-$$
+```math
 \text{linear collapsed fiber splitting must couple to the opposite shore}
-$$
+```
 
 by the exact fork
 
-$$
+```math
 \boxed{
 \text{large extreme gap-star}
 \quad\text{or}\quad
 \text{linear family of paired diameter rows with zero B-switching}.
 }
 \tag{16}
-$$
+```
 
 ## 7. Hostile audit
 
@@ -449,7 +451,7 @@ threshold shore.
 The threshold exact-phase branch now has the following rigorously separated data,
 conditional on the October proof-only stack:
 
-$$
+```math
 \begin{aligned}
 &\text{positive KKT circulation}\\
 &\Longrightarrow
@@ -463,7 +465,7 @@ E_{\rm norm}=c(F)+1\\
 &\Longrightarrow
 \text{either an extreme gap-star or many B-constant paired diameter rows.}
 \end{aligned}
-$$
+```
 
 Neither terminal alternative is currently contradictory.
 

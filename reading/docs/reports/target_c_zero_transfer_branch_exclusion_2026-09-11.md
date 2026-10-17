@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zero_transfer_branch_exclusion_2026-09-11.md) · source SHA-256 `6bde50c54962d2915f94c84dcdd1e4d9889311e67ebadb20fcd199940689dd21`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-E31E564A117E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — conditional exclusion of the zero-transfer branch
 
@@ -20,10 +22,10 @@ authoritative C-II stack.
 Let (C) be the positive contact graph and (H) the full actual diameter graph
 of a sufficiently large fully force-visible C-II source. Assume
 
-$$
+```math
 K=Q^{\mathsf T}\Lambda^+Q=\operatorname{diag}(\beta_e^{-1}).
 \tag{1.1}
-$$
+```
 
 Assume:
 
@@ -49,27 +51,28 @@ open half-plane contains both rays, and orient the two chords from (p) to
 (a,b). For the unit-current potential (V) with source (p) and sink (b),
 the bridge carries one unit and therefore
 
-$$
+```math
 V(p)-V(u)=1/\alpha_{pu}.
-$$
+```
 
 On the far side of the bridge, (u) is the maximum-potential vertex, so
 (V(u)ge V(a)). Hence
 
-$$
+```math
 K_{pa,pb}=V(p)-V(a)ge1/\alpha_{pu}>0.
 \tag{2.1}
 ]
+```
 
 The diagonal identity (1.1) is invariant under changing legal chord orientations,
 because (K) changes by (Kmapsto SKS) for a diagonal sign matrix (S). It
 therefore requires the same off-diagonal entry to be zero. This contradiction
 excludes all contact bridges:
 
-\[
+```math
 \boxed{C	ext{ is bridgeless}.}
 \tag{2.2}
-$$
+```
 
 ## 3. Large diameter stars are impossible
 
@@ -82,15 +85,15 @@ of (C-z) contains at most one of these terminals.
 Since (C) is bridgeless, each component of (C-z) has at least two contact
 edges to (z). If (z) is unloaded, this gives
 
-$$
+```math
 \deg_C(z)\ge2(k+1)\ge8>5.
-$$
+```
 
 If (z) is loaded, the (k) other terminals give
 
-$$
+```math
 \deg_C(z)\ge2k\ge6>3.
-$$
+```
 
 Thus no component has three or more edges.
 
@@ -100,16 +103,18 @@ It remains to exclude a two-edge star with center (p) and leaves (a,b). The
 three terminal points are loaded. Choose a legal C53 cut so that both vectors
 (a-p) and (b-p) have the same orientation from (p). Since (K) is diagonal,
 
-$$
+```math
 q_{pa}^{\mathsf T}\Lambda^+q_{pb}=0.
 \tag{4.1}
+```
 
 Consider the unit-current potential (V) with source (p) and sink (b). With
 (q_{pa}=\mathbf e_p-\mathbf e_a), (4.1) says
 
-\[
+```math
 V(p)=V(a).
 \tag{4.2}
+```
 
 The source (p) is a maximum of the potential, while (a) has zero injection.
 The discrete maximum principle propagates equality from (a) through the entire
@@ -119,9 +124,9 @@ potential is strictly smaller. Therefore (p) separates (a) and (b) in (C).
 Because (C) is bridgeless, every component of (C-p) has at least two contact
 edges to (p). At least two components contain (a) and (b), so
 
-\[
+```math
 \deg_C(p)\ge4.
-$$
+```
 
 But (p) is loaded and the fully force-visible degree bound is
 (deg_C(p)le3). This contradiction excludes every two-edge star.
@@ -137,31 +142,31 @@ Every component of (H) is now a one-edge star. Since (H) is the full diameter
 graph on its loaded vertices, this is a perfect matching. The report-level
 force-hull area comparison for the perfect-matching branch gives
 
-$$
+```math
 \operatorname{area}F\le\frac{\pi^2}{16}D^2,
 \qquad
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge A_{FS},
-$$
+```
 
 where
 
-$$
+```math
 A_{FS}=0.6184708847\ldots>
 \frac{\pi^2}{16}=0.6168502750\ldots.
-$$
+```
 
 This fixed gap excludes an unbounded perfect-matching sequence. Therefore the
 zero-transfer branch has no unbounded C-II sequence, conditional on the listed
-report-level inputs. $\square$
+report-level inputs. $`\square`$
 
 ## 6. What this does not prove
 
 The argument does not exclude the strict-negative alternative
 
-$$
+```math
 \min_{e\ne f}K_{ef}<0.
-$$
+```
 
 The weighted four-cycle response regression shows that a bridgeless common block
 can have negative cross-transfer, so bridge positivity cannot be extended to that

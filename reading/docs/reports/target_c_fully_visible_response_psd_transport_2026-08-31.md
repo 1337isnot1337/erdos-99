@@ -25,16 +25,16 @@ In the fully force-visible branch `C=C_*`, choose a relative-interior normalized
 stress. Every unit contact has positive stress, its positive contact graph is the
 connected nonisolated contact core, and C54 gives
 
-$$
+```math
 \Omega=L_C(\alpha)-L_H(\beta)\succeq0.
-$$
+```
 
 Schur complementation of the unloaded contact vertices now gives the exact boundary
 comparison
 
-$$
+```math
 \boxed{M:=\Lambda-L_H\succeq0.}
-$$
+```
 
 This is a genuine C-II Loewner theorem. It immediately turns each non-diameter response
 conductance into diagonal defect mass and gives quantitative charging bounds for
@@ -44,17 +44,17 @@ terminal-disjoint response transport.
 
 Assume the C63 conclusion
 
-$$
+```math
 C=C_*.
 \tag{C64.1}
-$$
+```
 
 Choose a relative-interior point of the normalized KKT polytope. Then
 
-$$
+```math
 \alpha_e>0\qquad(e\in C)
 \tag{C64.2}
-$$
+```
 
 and its positive contact graph is the entire nonisolated contact core. By the promoted
 support-connectivity theorem this graph is connected and contains both endpoints of
@@ -62,59 +62,59 @@ every positive diameter edge.
 
 Let
 
-$$
+```math
 B=B_+=V(H_+)
-$$
+```
 
 be the loaded boundary vertices and let
 
-$$
+```math
 I=V(C)\setminus B.
-$$
+```
 
 Partition the positive contact Laplacian as
 
-$$
+```math
 L_C=
 \begin{pmatrix}
 A_{BB}&A_{BI}\\
 A_{IB}&A_{II}
 \end{pmatrix}.
 \tag{C64.3}
-$$
+```
 
 The diameter Laplacian is supported only on `B`.
 
 Because the positive contact graph is connected and `B` is nonempty, the grounded
 interior block is positive definite:
 
-$$
+```math
 \boxed{A_{II}\succ0.}
 \tag{C64.4}
-$$
+```
 
 Indeed, for `z in R^I`, extending it by zero on `B` gives
 
-$$
+```math
 z^{\mathsf T}A_{II}z
 =\sum_{ij\in C}\alpha_{ij}(\tilde z_i-\tilde z_j)^2,
-$$
+```
 
 which vanishes only when the extension is constant on the connected contact graph;
 the zero boundary values then force that constant to be zero.
 
 The Dirichlet response of the positive contact network on `B` is
 
-$$
+```math
 \Lambda=A_{BB}-A_{BI}A_{II}^{-1}A_{IB}.
 \tag{C64.5}
-$$
+```
 
 ## 2. Boundary Loewner theorem
 
 C54 gives, for this same normalized stress,
 
-$$
+```math
 \Omega
 =
 \begin{pmatrix}
@@ -123,29 +123,29 @@ A_{IB}&A_{II}
 \end{pmatrix}
 \succeq0.
 \tag{C64.6}
-$$
+```
 
 Since `A_II` is positive definite, the Schur complement theorem gives:
 
 ### Theorem C64 (fully visible response PSD)
 
-$$
+```math
 \boxed{
 M:=\Lambda-L_H
 =A_{BB}-L_H-A_{BI}A_{II}^{-1}A_{IB}
 \succeq0.
 }
 \tag{C64.7}
-$$
+```
 
 The affine response identities remain
 
-$$
+```math
 M\mathbf1=0,
 \qquad
 MP_B=0.
 \tag{C64.8}
-$$
+```
 
 Thus `M` is PSD with the three forced scalar affine zero modes. No generic strictness
 is asserted.
@@ -157,50 +157,50 @@ that treated `Lambda-L_H` as an indefinite response defect in C-II.
 
 Write the Kron-reduced contact response as a weighted boundary Laplacian:
 
-$$
+```math
 \Lambda_{ij}=-c_{ij}\quad(i\ne j),
 \qquad c_{ij}\ge0,
 \tag{C64.9}
-$$
+```
 
 and let
 
-$$
+```math
 s_i=\sum_{j:ij\in H_+}\beta_{ij}.
 \tag{C64.10}
-$$
+```
 
 Define
 
-$$
+```math
 d_i=M_{ii}=\Lambda_{ii}-s_i.
 \tag{C64.11}
-$$
+```
 
 Theorem C64 gives
 
-$$
+```math
 \boxed{d_i\ge0,}
 \tag{C64.12}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \sum_i d_i=\operatorname{tr}M.
 }
 \tag{C64.13}
-$$
+```
 
 Since `Lambda` and `L_H` are Laplacians,
 
-$$
+```math
 \operatorname{tr}M
 =2\left(\sum_{i<j}c_{ij}-\sum_{h\in H_+}\beta_h\right)
 =2\left(\sum_{i<j}c_{ij}-1\right).
 \tag{C64.14}
-$$
+```
 
 Thus C41's strict inequality `sum c_ij>1` is also immediate from nonzero PSD defect,
 while its geometric trace identity remains the quantitative form.
@@ -209,16 +209,16 @@ while its geometric trace identity remains the quantitative form.
 
 If `ij` is not a positive diameter edge, then `(L_H)_{ij}=0`, so
 
-$$
+```math
 M_{ij}=-c_{ij}.
 \tag{C64.15}
-$$
+```
 
 Every `2x2` principal minor of a PSD matrix is PSD. Hence
 
-$$
+```math
 d_i d_j-M_{ij}^2\ge0,
-$$
+```
 
 which gives:
 
@@ -226,7 +226,7 @@ which gives:
 
 For every boundary pair outside the positive diameter support,
 
-$$
+```math
 \boxed{
 c_{ij}^2\le d_i d_j,
 \qquad
@@ -234,25 +234,25 @@ c_{ij}\le\sqrt{d_i d_j}
 \le\frac{d_i+d_j}{2}.
 }
 \tag{C64.16}
-$$
+```
 
 In particular any response pair of length strictly less than `D` satisfies C64.16,
 because a positive diameter edge has length exactly `D`.
 
 For a positive diameter edge one instead has
 
-$$
+```math
 M_{ij}=\beta_{ij}-c_{ij},
-$$
+```
 
 so PSD gives the companion estimate
 
-$$
+```math
 \boxed{
 |\beta_{ij}-c_{ij}|\le\sqrt{d_i d_j}.
 }
 \tag{C64.17}
-$$
+```
 
 Thus the contact response conductance differs from the diameter conductance only by
 an amount controlled by the two endpoint defect masses.
@@ -262,7 +262,7 @@ an amount controlled by the two endpoint defect masses.
 Let `E_0` be any set of boundary pairs containing no positive diameter edge. Suppose
 the graph `(B,E_0)` has maximum degree `Delta`. Summing C64.16 gives
 
-$$
+```math
 \begin{aligned}
 \sum_{ij\in E_0}c_{ij}
 &\le\frac12\sum_{ij\in E_0}(d_i+d_j)\\
@@ -270,7 +270,7 @@ $$
 &\le\frac\Delta2\operatorname{tr}M.
 \end{aligned}
 \tag{C64.18}
-$$
+```
 
 Hence:
 
@@ -278,20 +278,20 @@ Hence:
 
 If `E_0` is a matching of non-diameter boundary pairs, then
 
-$$
+```math
 \boxed{
 \sum_{ij\in E_0}c_{ij}
 \le\frac12\operatorname{tr}M.
 }
 \tag{C64.19}
-$$
+```
 
 More generally a union of `r` matchings carries total response mass at most
 
-$$
+```math
 \frac r2\operatorname{tr}M.
 \tag{C64.20}
-$$
+```
 
 This gives the missing numerical currency for terminal-disjoint response transport:
 strict circular minors or disjoint short-response pairs can no longer carry arbitrary
@@ -306,28 +306,28 @@ absolute trace gap.
 C43 supplies `rho_0<1` for sufficiently large sources. Every C44 short-response pair
 satisfies
 
-$$
+```math
 |b_i-b_j|\le\rho_0D<D,
-$$
+```
 
 so it is automatically outside `H_+` and C64.16 applies.
 
 If `E_short` is any matching of short response pairs,
 
-$$
+```math
 \boxed{
 \sum_{ij\in E_{\rm short}}c_{ij}
 \le\frac12\operatorname{tr}M.
 }
 \tag{C64.21}
-$$
+```
 
 This is compatible with C44 Branch A, where total short response mass at least `1/2`
 already gives the stronger geometric trace lower bound
 
-$$
+```math
 \operatorname{tr}M\ge\gamma_0.
-$$
+```
 
 The new content is localization: a large amount of short response mass on disjoint
 terminal pairs consumes distinct diagonal defect mass and cannot be hidden by
@@ -337,11 +337,11 @@ cancellation elsewhere in the response matrix.
 
 C64.17 can also be summed over a matching `J` of positive diameter edges:
 
-$$
+```math
 \sum_{ij\in J}|\beta_{ij}-c_{ij}|
 \le\frac12\operatorname{tr}M.
 \tag{C64.22}
-$$
+```
 
 Thus on any pairwise terminal-disjoint subset of the positive diameter graph, the
 contact-response conductances and diameter reaction weights agree in total variation
@@ -363,9 +363,9 @@ changes.
 
 If
 
-$$
+```math
 \operatorname{tr}M\ge\gamma
-$$
+```
 
 for an absolute `gamma>0`, one needs to turn a fixed PSD boundary defect with affine
 kernel into a packing/container contradiction.
@@ -374,9 +374,9 @@ kernel into a packing/container contradiction.
 
 If
 
-$$
+```math
 \operatorname{tr}M=o(1),
-$$
+```
 
 then C64 gives all of the following simultaneously:
 
@@ -399,9 +399,9 @@ C64 suggests two concrete closing routes.
 
 Prove that a nonzero PSD boundary matrix `M` with
 
-$$
+```math
 M\mathbf1=MP_B=0,
-$$
+```
 
 arising as the response defect of a fully visible triangle-free global minimizer must
 have an absolute trace lower bound that contradicts the global packing geometry, or
@@ -437,15 +437,15 @@ aggregate lower bound; the extra input must come from force-hull geometry, the
 
 **C64:** in the fully force-visible relative-interior stress,
 
-$$
+```math
 \boxed{\Lambda-L_H\succeq0.}
-$$
+```
 
 For diagonal defect `d_i=(Lambda-L_H)_{ii}` and every non-diameter response pair,
 
-$$
+```math
 c_{ij}\le\sqrt{d_i d_j}\le(d_i+d_j)/2.
-$$
+```
 
 Hence a matching of non-diameter response pairs carries at most
 `tr(Lambda-L_H)/2` conductance, and a degree-`Delta` family carries at most

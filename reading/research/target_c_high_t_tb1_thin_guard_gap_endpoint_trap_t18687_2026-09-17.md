@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_thin_guard_gap_endpoint_trap_t18687_2026-09-17.md) · source SHA-256 `7895e32a5159930a7972311887e05a30b4cfa322ab45d4974d718acf9ef3baa8`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "62691ff3610516cc8bf32d29467553aa2d8a1c38", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_thin_guard_gap_endpoint_trap_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "529622e6981bf9723c60b7be01424448ed77b896cacd3d16c4e65224b5181ed0"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -16,15 +18,15 @@
 
 The asymmetric unique-grid theorem leaves, in its GUARD-UNIQUE branch,
 
-$$
+```math
 \left({1\over24\log5}-o(1)\right)\sqrt{\log D}
-$$
+```
 
 pairwise-crossing THIN chords with one identical exact incidence interval against
 
-$$
+```math
 2\sqrt{\log D}+o(\sqrt{\log D})
-$$
+```
 
 ordered noncrossing train guards.  The endpoint-rank proof contains a stronger
 conclusion which was not recorded there: after the orientation split, an identical
@@ -50,63 +52,63 @@ Use the GUARD-UNIQUE system from the asymmetric theorem.  Fix one common row and
 `P,Q` be its complementary outer-boundary shores.  Write the fixed guards in their
 compatible noncrossing order as
 
-$$
+```math
 g_1,\ldots,g_m,
 \qquad
 m=(2+o(1))\sqrt{\log D}.
 \tag{GT.1}
-$$
+```
 
 Let their boundary endpoints be
 
-$$
+```math
 p_1,\ldots,p_m\in P,
 \qquad
 q_1,\ldots,q_m\in Q,
 \tag{GT.2}
-$$
+```
 
 in compatible orders.
 
 For a THIN chord `e`, define the endpoint gap ranks
 
-$$
+```math
 \alpha(e)=\#\{j:p_j\text{ precedes }p(e)\},
 \qquad
 \beta(e)=\#\{j:q_j\text{ precedes }q(e)\}.
 \tag{GT.3}
-$$
+```
 
 The exact incidence theorem gives
 
-$$
+```math
 I(e)=
 \{\min(\alpha,\beta)+1,\ldots,\max(\alpha,\beta)\}.
 \tag{GT.4}
-$$
+```
 
 Order the pairwise-crossing chords by their `P` endpoints.  Then
 
-$$
+```math
 \alpha_1\le\alpha_2\le\cdots,
 \qquad
 \beta_1\ge\beta_2\ge\cdots.
 \tag{GT.5}
-$$
+```
 
 The asymmetric theorem retained one orientation class, either
 
-$$
+```math
 \alpha_i\le\beta_i\quad\forall i
 \tag{GT.6}
-$$
+```
 
 or
 
-$$
+```math
 \alpha_i>\beta_i\quad\forall i.
 \tag{GT.7}
-$$
+```
 
 It then retained a sub-braid `H_D` on which `I(e)` is one fixed set `I_*`.
 
@@ -116,22 +118,22 @@ It then retained a sub-braid `H_D` on which `I(e)` is one fixed set `I_*`.
 
 Assume first that
 
-$$
+```math
 I_*=\{a+1,a+2,\ldots,b\}
 \tag{GT.8}
-$$
+```
 
 is nonempty, so `0<=a<b<=m`.
 
 In orientation (GT.6), (GT.4) reads
 
-$$
+```math
 I(e)=\{\alpha(e)+1,\ldots,\beta(e)\}.
-$$
+```
 
 Equality with (GT.8) therefore forces
 
-$$
+```math
 \boxed{
 \alpha(e)=a,
 \qquad
@@ -139,10 +141,11 @@ $$
 \quad(e\in H_D).
 }
 \tag{GT.9}
+```
 
 In orientation (GT.7), the same argument gives
 
-\[
+```math
 \boxed{
 \alpha(e)=b,
 \qquad
@@ -150,6 +153,7 @@ In orientation (GT.7), the same argument gives
 \quad(e\in H_D).
 }
 \tag{GT.10}
+```
 
 Thus a nonempty homogeneous incidence interval fixes both endpoint gaps exactly, not
 only the set of crossed guards.
@@ -160,35 +164,36 @@ only the set of crossed guards.
 
 Suppose now
 
-\[
+```math
 I_*=\varnothing.
 \tag{GT.11}
-$$
+```
 
 Equation (GT.4) gives
 
-$$
+```math
 \alpha_i=\beta_i
 \quad\text{for every retained chord.}
 \tag{GT.12}
-$$
+```
 
 Together with (GT.5),
 
-$$
+```math
 \alpha_1\le\alpha_2\le\cdots
 \quad\text{and}\quad
 \alpha_1\ge\alpha_2\ge\cdots.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \alpha_1=\cdots=\alpha_h
 =\beta_1=\cdots=\beta_h=:a.
 }
 \tag{GT.13}
+```
 
 So even when every selected chord avoids every fixed guard, all chord endpoints lie in
 the same rank-`a` guard gap on `P` and the corresponding rank-`a` gap on `Q`.
@@ -204,18 +209,20 @@ Define `W_Q(b)` analogously.
 Sections 2--3 prove that there are fixed ranks `a,b` such that every chord in `H_D`
 has
 
-\[
+```math
 \boxed{
 p(e)\in W_P(a),
 \qquad
 q(e)\in W_Q(b).}
 \tag{GT.14}
+```
 
 Moreover
 
-\[
+```math
 I_*=\{\min(a,b)+1,\ldots,\max(a,b)\}.
 \tag{GT.15}
+```
 
 The endpoint windows are therefore source-level objects determined by two consecutive
 members of the fixed train fence.  They do not depend on the chord.
@@ -226,12 +233,13 @@ orders are reversed in the compatible shore coordinates.
 
 The size from the asymmetric theorem is
 
-\[
+```math
 \boxed{
 |H_D|\ge
 \left({1\over24\log5}-o(1)\right)\sqrt{\log D}.
 }
 \tag{GT.16}
+```
 
 Thus the FENCE-UNIQUE branch contains a growing reversed matching between two fixed
 fence cells.
@@ -246,27 +254,28 @@ consecutive selected vertices, the hull subarc has Euclidean arclength at least 
 straight-line distance, which is at least one by source separation.  The selected
 subarcs are internally disjoint, so
 
-\[
+```math
 \operatorname{len} W_P(a)\ge |H_D|-1.
 \tag{GT.17}
-$$
+```
 
 The same argument on `Q` gives
 
-$$
+```math
 \operatorname{len} W_Q(b)\ge |H_D|-1.
 \tag{GT.18}
-$$
+```
 
 Consequently
 
-\[
+```math
 \boxed{
 \operatorname{len}W_P(a),\operatorname{len}W_Q(b)
 \ge
 \left({1\over24\log5}-o(1)\right)\sqrt{\log D}.
 }
 \tag{GT.19}
+```
 
 This lower bound is not yet contradictory: the outer boundary has `Theta(D)` scale.
 Its value is structural.  Any future attempt to close FENCE-UNIQUE may now work with

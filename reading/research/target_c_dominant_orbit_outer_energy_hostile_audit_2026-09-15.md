@@ -17,9 +17,9 @@
 
 The candidate raises the current proof-only floor for
 
-$$
+```math
 t=(q-k)/D
-$$
+```
 
 from `t42=1.8208886379...` to the safe explicit value `1.82428` by coupling the
 atomic train-phase orbit structure to the uniformly rotating perimeter measure of the
@@ -36,23 +36,23 @@ the bathtub optimization, and the two-parameter scalar minimization.
 
 Audited §142 uses
 
-$$
+```math
 x=T/D,
 \qquad y=q/T,
-$$
+```
 
 and proves
 
-$$
+```math
 y\le2(1-\sigma),
-$$
+```
 
 where `sigma` is total atomic mass of the probability train-phase measure.  Hence
 
-$$
+```math
 x\sigma\le x(1-y/2)
 ={T-q/2\over D}=C.
-$$
+```
 
 Thus the candidate's `A=x sigma<=C` is exactly the audited exposed-hull inequality in
 absolute-mass units.  No new semicontinuity claim is inserted.
@@ -65,27 +65,27 @@ absolute-mass units.  No new semicontinuity claim is inserted.
 
 For the exact `pi/3` atomic orbits, audited §168 supplies
 
-$$
+```math
 E_r\le M_r^2/4,
 \qquad
 \sum_rE_r=\Delta_2,
 \qquad
 \sum_rM_r=A.
-$$
+```
 
 If `M=max M_r`, then
 
-$$
+```math
 4\Delta_2
 \le\sum_rM_r^2
 \le M\sum_rM_r=MA.
-$$
+```
 
 Therefore
 
-$$
+```math
 M\ge4\Delta_2/A\ge4\Delta_2/C.
-$$
+```
 
 The factor is `4 Delta2`, not `2 sqrt(Delta2)`: `M` is absolute train population in
 one orbit, while the latter is the total atomic-Mantel floor.  The units are
@@ -101,9 +101,9 @@ The stopped-train auxiliary graph is a forest of paths.  Every complete train ha
 terminal face incidences, with singleton trains included by the same endpoint
 convention.  The exact identity
 
-$$
+```math
 2T=b+Q+4f
-$$
+```
 
 is precisely the count of these terminal incidences.
 
@@ -114,9 +114,9 @@ rather than exceeds, the factor two.
 
 Thus if `(M-o(1))D` complete trains lie in the dominant-orbit windows,
 
-$$
+```math
 K_D\ge b-2(T-MD)-o(D)
-$$
+```
 
 is valid.
 
@@ -142,19 +142,19 @@ last.  This is the same order-of-limits discipline as audited §§164/168.
 
 On loaded-hull interval `i`, let
 
-$$
+```math
 n_i=\text{dominant-window outer occurrences},
 \qquad
 s_i=|b_i-b_{i+1}|,
 \qquad
 \ell_i=|W_i|.
-$$
+```
 
 Then `n_i<=ell_i`.  Define the real retained mass
 
-$$
+```math
 m_i=\min(n_i,s_i).
-$$
+```
 
 Although `s_i` need not be integral, fractional retention is legitimate because the
 argument is an inequality on nonnegative edge energies: distribute total weight
@@ -162,16 +162,16 @@ argument is an inequality on nonnegative edge energies: distribute total weight
 
 Moreover
 
-$$
+```math
 n_i-m_i=(n_i-s_i)_+
 \le(\ell_i-s_i)=d_i.
-$$
+```
 
 After summing,
 
-$$
+```math
 \sum_i m_i\ge K_D-d_{out}.
-$$
+```
 
 No integer rounding term is omitted.
 
@@ -184,25 +184,25 @@ No integer rounding term is omitted.
 Place mass `m_i/D` at the projective direction `theta_i` of hull side `i`.  Since
 `m_i<=s_i`, the resulting measure satisfies pointwise
 
-$$
+```math
 \nu_D\le
 \mu_D:={1\over D}\sum_i s_i\delta_{\theta_i}.
-$$
+```
 
 The Type-II near-disk argument already used in audited §142 gives
 
-$$
+```math
 \mu_D\Rightarrow d\theta
-$$
+```
 
 on the projective direction circle, with total mass `pi`.  If
 `nu_D=>nu` along a subsequence, then for every nonnegative continuous test function
 `phi`,
 
-$$
+```math
 \int\phi\,d\nu
 \le\int\phi\,d\theta.
-$$
+```
 
 Hence `nu<=dtheta` as measures.  Its total mass is at least `K-delta` by the preceding
 section.
@@ -219,37 +219,37 @@ necessary because the limiting circular perimeter measure is length-weighted.
 For an oriented route edge `v` and chord unit vector `u`, its exact contribution to
 outer detour is
 
-$$
+```math
 1-u\cdot v.
-$$
+```
 
 If `d` is the projective angular distance between their directions, then
 
-$$
+```math
 |u\cdot v|=\cos d,
-$$
+```
 
 and therefore
 
-$$
+```math
 1-u\cdot v
 \ge1-|u\cdot v|
 =1-\cos d.
-$$
+```
 
 So an edge pointing backward along its route does not evade the estimate; it pays
 more energy.  If its train phase lies within projective distance `rho` of the dominant
 orbit `O`, the triangle inequality gives the candidate's continuous lower integrand
 
-$$
+```math
 1-\cos(d(\theta,O)-\rho)_+.
-$$
+```
 
 Sending `rho->0` yields
 
-$$
+```math
 \delta\ge\int[1-\cos d(\theta,O)]\,d\nu.
-$$
+```
 
 **Verdict:** PASS.
 
@@ -265,13 +265,13 @@ For a submeasure `0<=nu<=dtheta` of mass `z`, the minimum of the integral of the
 nonnegative increasing distance cost is obtained by filling the lowest-cost directions
 first.  With `a=z/6`,
 
-$$
+```math
 \begin{aligned}
 F(z)
 &=3\cdot2\int_0^a(1-\cos u)\,du\\
 &=z-6\sin(z/6).
 \end{aligned}
-$$
+```
 
 This remains a valid lower bound if fewer than all three orbit atoms have positive
 mass, because allowing all three orbit directions can only lower the cost.
@@ -284,10 +284,10 @@ mass, because allowing all three orbit directions can only lower the cost.
 
 The dominant-orbit occurrence count is
 
-$$
+```math
 K\ge
 \pi+\delta-t-\kappa-2C+8\Delta_2/C.
-$$
+```
 
 The route-capacity reduction retains mass at least `K-delta`.  These two occurrences
 of `delta` come from different exact facts:
@@ -306,21 +306,21 @@ Their cancellation is therefore exact, not reuse of one budget with the wrong si
 
 Set
 
-$$
+```math
 g(C)=-2C+{8\Delta_2\over C}.
-$$
+```
 
 Then
 
-$$
+```math
 g'(C)=-2-{8\Delta_2\over C^2}<0.
-$$
+```
 
 Since `C<=U`,
 
-$$
+```math
 g(C)\ge g(U).
-$$
+```
 
 Thus replacing `C` by `U` weakens the lower bound on dominant-orbit outer mass and is
 safe.
@@ -333,28 +333,28 @@ safe.
 
 Put
 
-$$
+```math
 k=\pi-t-\kappa-2U+{8\Delta_2\over U},
 \qquad
 U={9t\over2}-2\pi-2\delta-\kappa/2.
-$$
+```
 
 For fixed `t,delta`,
 
-$$
+```math
 {\partial k\over\partial\kappa}
 ={4\Delta_2\over U^2}>0.
-$$
+```
 
 Since `F` is increasing, the contradiction margin `F(k)-delta` is smallest at
 `kappa=0`.
 
 For fixed `t,kappa`,
 
-$$
+```math
 {\partial k\over\partial\delta}
 =4+{16\Delta_2\over U^2}<8
-$$
+```
 
 because `U>=C0>2sqrt(Delta2)`.
 
@@ -362,52 +362,52 @@ A minor implicit point in the candidate is that `k` is positive throughout the o
 interval being excluded.  Its minimum there occurs at `delta=kappa=0` and the largest
 `t`, namely `t=1.82428`; direct substitution gives
 
-$$
+```math
 k>1.23.
-$$
+```
 
 Also
 
-$$
+```math
 k<\pi-t\le\pi-t_{42}=1.320705\ldots .
-$$
+```
 
 Hence
 
-$$
+```math
 F'(k)=1-\cos(k/6)<0.024129.
-$$
+```
 
 The independent Decimal certificate gives
 
-$$
+```math
 \left(4+{16\Delta_2\over C_0^2}\right)
 [1-\cos((\pi-t_{42})/6)]
 <0.193<1.
-$$
+```
 
 Therefore
 
-$$
+```math
 {\partial\over\partial\delta}[F(k)-\delta]<0.
-$$
+```
 
 The margin is minimized by taking the largest allowed `delta`.  With `kappa=0`,
 `U>=C0` is exactly
 
-$$
+```math
 \delta\le R(t)/2.
-$$
+```
 
 Thus the global minimum is indeed
 
-$$
+```math
 \kappa=0,
 \qquad
 \delta=R(t)/2,
 \qquad
 U=C_0.
-$$
+```
 
 **Verdict:** PASS.  The positivity detail above should be regarded as an explicit
 completion of the terse sentence in the candidate, not a change to the argument.
@@ -418,34 +418,34 @@ completion of the terse sentence in the candidate, not a change to the argument.
 
 At the weakest feasible point define
 
-$$
+```math
 k_0(t)=\pi-t-2C_0+8\Delta_2/C_0,
-$$
+```
 
-$$
+```math
 H_0(t)=k_0(t)-6\sin(k_0(t)/6)-R(t)/2.
-$$
+```
 
 Then
 
-$$
+```math
 H_0'(t)=-[1-\cos(k_0(t)/6)]-9/4<0.
-$$
+```
 
 The committed high-precision Taylor certificate gives
 
-$$
+```math
 H_0(1.82428)
 =2.808709054\times10^{-6}>0,
-$$
+```
 
 and brackets the zero by
 
-$$
+```math
 1.82428123517075213
 <t_*
 <1.82428123517075215.
-$$
+```
 
 A separate Pyroam execution reproduced the signs at `1.82428`, `1.8242812`, and
 `1.8242813`.

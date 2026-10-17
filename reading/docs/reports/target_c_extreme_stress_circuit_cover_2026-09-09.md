@@ -30,42 +30,42 @@ Furthermore, the full actual contact/diameter row set is covered by at most `s_Z
 
 Let
 
-$$
+```math
 E:=C\sqcup H,
 \qquad m:=|E|=e+h,
-$$
+```
 
 on the `v` vertices of the nonisolated C65 core. Let `R` be the ordinary planar bar-rigidity matrix of the equality framework on `E`.
 
 ZF gives
 
-$$
+```math
 \boxed{\operatorname{rank}R=2v-3.}
 \tag{EC.1}
-$$
+```
 
 Let `W=ker(R^T)` be the signed self-stress space after changing the sign convention on the diameter coordinates as in ES. Then
 
-$$
+```math
 \dim W=s_Z+1.
 \tag{EC.2}
-$$
+```
 
 Let
 
-$$
+```math
 \mathcal P
 =\left\{x=(\alpha,\beta)\in W\cap\mathbb R^m_{\ge0}:
 L(x):=\sum_{h\in H}\beta_h=1\right\}.
 \tag{EC.3}
-$$
+```
 
 C65 gives a relative-interior point `x^0 in P` with all `m` coordinates positive. ES proves
 
-$$
+```math
 \dim_{aff}\mathcal P=s_Z.
 \tag{EC.4}
-$$
+```
 
 ---
 
@@ -73,23 +73,23 @@ $$
 
 Fix a vertex `x*` of `P` and write
 
-$$
+```math
 S:=\operatorname{supp}x^*\subseteq E.
-$$
+```
 
 Define the linear self-stress subspace supported on `S` by
 
-$$
+```math
 W_S:=\{w\in W:\operatorname{supp}w\subseteq S\}.
 \tag{2.1}
-$$
+```
 
 ### Theorem EC.1 — an extreme support has one-dimensional stress space
 
-$$
+```math
 \boxed{\dim W_S=1.}
 \tag{EC.2a}
-$$
+```
 
 ### Proof
 
@@ -97,33 +97,33 @@ Certainly `x* in W_S`, so `dim W_S>=1`.
 
 Suppose `dim W_S>=2`. Choose `w in W_S` not proportional to `x*` and put
 
-$$
+```math
 u:=w-L(w)x^*.
 \tag{2.2}
-$$
+```
 
 Then
 
-$$
+```math
 u\in W_S,
 \qquad L(u)=0.
-$$
+```
 
 Also `u!=0`: otherwise `w=L(w)x*`, contradicting the choice of `w`.
 
 Every coordinate of `x*` on `S` is strictly positive, and `u` vanishes outside `S`. Hence for sufficiently small `epsilon>0`,
 
-$$
+```math
 x^*+\epsilon u\ge0,
 \qquad
 x^*-\epsilon u\ge0.
-$$
+```
 
 Both perturbed vectors remain in `W`, both have normalization `L=1`, and they are distinct. Therefore
 
-$$
+```math
 x^*=\frac12(x^*+\epsilon u)+\frac12(x^*-\epsilon u)
-$$
+```
 
 is a nontrivial convex decomposition in `P`, contradicting that `x*` is a vertex.
 
@@ -141,24 +141,24 @@ Every coordinate of `x*` on `S` is nonzero. Therefore no proper subset of `S` ca
 
 For every extreme normalized KKT stress `x*`,
 
-$$
+```math
 \boxed{S=\operatorname{supp}x^*\text{ is a circuit of the actual rigidity row matroid}.}
 \tag{EC.3a}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \operatorname{rank}R_S=|S|-1,
-$$
+```
 
 and
 
-$$
+```math
 \operatorname{rank}R_{S'}=|S'|
 \qquad(S'\subsetneq S).
 \tag{EC.4a}
-$$
+```
 
 This is an embedded statement at the actual source coordinates; no generic-position assumption is used.
 
@@ -166,10 +166,10 @@ This is an embedded statement at the actual source coordinates; no generic-posit
 
 Let `U` be a vertex subset and suppose the supported edges with both endpoints in `U` form a proper subset of `S`. Those rows are independent by EC.2. Every planar rigidity matrix on `|U|>=2` vertices has rank at most `2|U|-3`. Hence
 
-$$
+```math
 \boxed{|S[U]|\le2|U|-3.}
 \tag{EC.5}
-$$
+```
 
 Thus every extreme support obeys Laman sparsity on every proper induced supported edge set, even though special source geometry may make the full circuit smaller than the generic count `2|V(S)|-2`.
 
@@ -179,10 +179,10 @@ Thus every extreme support obeys Laman sparsity on every proper induced supporte
 
 C53 applies to every normalized KKT stress, so
 
-$$
+```math
 \Omega(x^*)\succeq0.
 \tag{4.1}
-$$
+```
 
 The canonical positive-support theorem also applies to every normalized stress: its positive contact graph has exactly one nontrivial component, contains every endpoint of every positive diameter edge, and spans Euclidean diameter `D`.
 
@@ -202,17 +202,17 @@ The circuit may leave some source-core vertices isolated. EC does not silently a
 
 Because `x^0` lies in the relative interior of the `s_Z`-dimensional polytope `P`, Caratheodory gives vertices
 
-$$
+```math
 x^{(1)},\ldots,x^{(k)},
 \qquad k\le s_Z+1,
-$$
+```
 
 and positive coefficients `lambda_i` summing to one such that
 
-$$
+```math
 x^0=\sum_{i=1}^k\lambda_i x^{(i)}.
 \tag{5.1}
-$$
+```
 
 Since every coordinate of `x^0` is strictly positive, each actual row belongs to the support of at least one `x^(i)`. Hence:
 
@@ -220,14 +220,14 @@ Since every coordinate of `x^0` is strictly positive, each actual row belongs to
 
 The complete actual mixed support satisfies
 
-$$
+```math
 \boxed{
 C\cup H
 =\bigcup_{i=1}^k\operatorname{supp}x^{(i)},
 \qquad k\le s_Z+1,
 }
 \tag{EC.6}
-$$
+```
 
 where every member of the cover is a PSD, diameter-spanning rigidity circuit in the sense of Sections 3-4.
 
@@ -239,18 +239,18 @@ This strengthens ES.18. ES proved that one can choose at most `s_Z+1` extreme PS
 
 If
 
-$$
+```math
 s_Z=0,
-$$
+```
 
 then `P` has affine dimension zero. Thus its unique normalized stress is the C65 full-positive stress itself. Its support is all of `C union H`.
 
 ZF gives
 
-$$
+```math
 e+h=2v-2.
 \tag{6.1}
-$$
+```
 
 By EC.2 the full mixed row family is a rigidity circuit. Therefore:
 
@@ -258,18 +258,18 @@ By EC.2 the full mixed row family is a rigidity circuit. Therefore:
 
 If `s_Z=0`, then
 
-$$
+```math
 \boxed{e+h=2v-2,}
-$$
+```
 
 all mixed rows lie in one unique full-support dependence, and every proper edge subset is independent at the actual embedding.
 
 Consequently the abstract mixed graph obeys
 
-$$
+```math
 \boxed{|E(U)|\le2|U|-3}
 \tag{6.2}
-$$
+```
 
 for every vertex subset `U` whose induced edge set is proper, while the full edge set has `2v-2` edges. Thus the full mixed graph is a `(2,3)`-circuit in the ordinary Laman count sense.
 
@@ -281,9 +281,9 @@ The unit square with its two diagonals is the small binding regression: its mixe
 
 ZL proves the exact closing defect
 
-$$
+```math
 (b+Q)-2h=-2s_Z.
-$$
+```
 
 Thus the global contradiction must eliminate all nonnegative `s_Z` survivors.
 
@@ -333,9 +333,9 @@ The most promising continuation is now a **circuit capacity theorem** rather tha
 
 A theorem forcing `Omega(D)` or more circuit carriers with an explicit coefficient can be compared directly with `s_Z+1`, while the exact identity
 
-$$
+```math
 (b+Q)-2h=-2s_Z
-$$
+```
 
 tracks the cost of that circuit complexity in the closing defect.
 

@@ -58,10 +58,10 @@ Write `q=|B|`, `b` for the occurrence-counted outer-face walk length of
 `G`, `x_B=b-q`, `Q=sum_{bounded nonquadrilateral faces}(degree-4)`, and
 `k=d_H+s_Z`. Canonical Section 63 gives
 
-$$
+```math
 \boxed{q-2k=Q+x_B.}
 \tag{GF.1}
-$$
+```
 
 The cap family below may be any finite collection `S` of distinct cells
 with these properties. Their interiors are disjoint by canonical
@@ -116,10 +116,10 @@ occurrence-counted `a`-to-`b` subwalk `W_r` on the boundary of `F_r`
 whose internal vertex occurrences are all unloaded vertices of `I_r`,
 and
 
-$$
+```math
 |W_r|\ge\lceil\ell_r\rceil.
 \tag{GF.2}
-$$
+```
 
 Consequently exactly one of the following applies:
 
@@ -162,24 +162,24 @@ retained in the walk lengths.
 
 For any family `S` of distinct unit-arc cap cells,
 
-$$
+```math
 \boxed{\quad
 q-2k=Q+x_B
 \ge\sum_{r\in S}\bigl(\lceil\ell_r\rceil-4\bigr).
 \quad}
 \tag{GF.3}
-$$
+```
 
 Every side of `F` has length at least one, so `q<=per(F)<=pi D`.
 Thus (GF.3) also gives the finite source inequality
 
-$$
+```math
 \boxed{\quad
 2k+\sum_{r\in S}\lceil\ell_r\rceil
 \le\pi D+4|S|.
 \quad}
 \tag{GF.3a}
-$$
+```
 
 **Proof.** Partition `S` according to whether `F_r` is bounded or
 outer. The routes `W_r` use pairwise disjoint physical contact edges:
@@ -191,17 +191,17 @@ family, its degree is at least the sum of `|W_r|` assigned to it;
 subtracting four for that face costs at most four per assigned cap.
 Therefore
 
-$$
+```math
 Q\ge\sum_{r:F_r\text{ bounded}}(|W_r|-4).
-$$
+```
 
 For outer routes, their internal unloaded vertex occurrences are
 distinct (including multiplicity within each walk) and are additional
 to the `q` loaded vertex occurrences. Thus
 
-$$
+```math
 x_B\ge\sum_{r:F_r\text{ outer}}(|W_r|-1).
-$$
+```
 
 Combine these inequalities, use (GF.2), and weaken the outer subtraction
 from one to four. Equation (GF.1) gives (GF.3). `square`
@@ -209,10 +209,10 @@ from one to four. Equation (GF.1) gives (GF.3). `square`
 If `|S|=o(D)` and
 `sum_{r in S} ell_r >= cD` along a survivor sequence, (GF.3) forces
 
-$$
+```math
 \limsup {k\over D}\le{\pi-c\over2}.
 \tag{GF.4}
-$$
+```
 
 This is a source-level restriction on the Woodall/mixed-stress defect,
 not a contradiction: the canonical stack has no matching positive
@@ -225,31 +225,31 @@ Let `m_B` be the number of nonunit sides of the loaded force hull and
 loaded-chord theorem gives `e_BB=q-m_B`; the canonical pinned ledger
 `c_I+e_BB+s_C=q-2+k` therefore yields
 
-$$
+```math
 \mu_DD:=e_{BB}+2s_C-3k
 =q+m_B-k-2c_I-4.
 \tag{GF.6a}
-$$
+```
 
 Substituting (GF.3) into (GF.6a) gives the **finite** inequality
 
-$$
+```math
 \boxed{\quad
 \mu_DD\ge
 {q+\sum_{r\in S}\lceil\ell_r\rceil\over2}
 +m_B-2c_I-2|S|-4.
 \quad}
 \tag{GF.6}
-$$
+```
 
 In particular, along a canonical full-core sequence with `q/D->pi`,
 `|S|=o(D)`, and `liminf D^{-1}sum_{r in S}ell_r>=c`, canonical
 Section 75 gives `c_I=o(D)` and hence
 
-$$
+```math
 \boxed{\liminf\mu_D\ge(\pi+c)/2.}
 \tag{GF.7}
-$$
+```
 
 If `c>pi/5`, the right side exceeds `3pi/5`. Therefore a cap family
 of this size cannot be used to realize the below-`3pi/5` low-surplus
@@ -265,22 +265,22 @@ The same finite inequality has a useful **global outer-walk escape**
 form without assuming `q/D->pi`. Section 63 gives
 `u_B=x_B-m_B=b-q-m_B` and `b>=P_F:=per(F)`. Rearranging (GF.6),
 
-$$
+```math
 \boxed{\quad
 u_B-m_B\ge
 P_F-2\mu_DD+\sum_{r\in S}\lceil\ell_r\rceil
 -4c_I-4|S|-8.
 \quad}
 \tag{GF.8}
-$$
+```
 
 In the near-disk branch `P_F/D->pi`. Thus if `|S|=o(D)`, its cap
 chords total at least `cD`, and `limsup mu_D<=mu_0`, then
 
-$$
+```math
 \liminf {u_B-m_B\over D}\ge\pi-2\mu_0+c.
 \tag{GF.9}
-$$
+```
 
 Whenever `c>2mu_0-pi`, a low-surplus cap tail forces a **linear
 extra global outer-walk surplus**, even if `q/D` is smaller than `pi`.
@@ -292,13 +292,13 @@ There is a sharper finite exclusion when the bounded chord faces are
 pairwise distinct and none is outer. Then the two routes of GF.4 can be
 charged independently in `Q`, giving
 
-$$
+```math
 \boxed{\quad
 2k+2\sum_{r\in S}\lceil\ell_r\rceil
 \le q+4|S|\le\pi D+4|S|.
 \quad}
 \tag{GF.5}
-$$
+```
 
 In particular, no canonical sequence can have such a family with
 `|S|=o(D)` and `liminf D^{-1} sum_r ell_r>pi/2`. If a family has more
@@ -341,9 +341,9 @@ A sufficient cap-specific next theorem would be: for some fixed
 `c>0`, every canonical Type-II survivor with a sublinear family of
 unit-arc caps of total closing-chord length at least `cD` has
 
-$$
+```math
 \liminf k/D>(\pi-c)/2.
-$$
+```
 
 Together with (GF.4), this would exclude that entire cap family.
 The statement is deliberately source-specific; the odd-shell

@@ -23,12 +23,12 @@ Let `m>=1`. Let `P` and `N` each be a strictly nested chain of nonempty
 integer intervals in `{1,...,m}`, both containing `[1,m]`. Form a directed
 graph on gap vertices `{0,...,m}` by adding
 
-$$
+```math
 [a,b]\in P:\ (a-1)\longrightarrow b,
 \qquad
 [a,b]\in N:\ b\longrightarrow(a-1).
 \tag{NC.1}
-$$
+```
 
 Repeated edges of a given type may be collapsed; multiplicity does not
 affect this theorem.
@@ -58,12 +58,12 @@ flow for each internal edge has the required property. Across each
 prefix cut, circulation gives equality of the positive and negative
 interval profiles:
 
-$$
+```math
 \sum_{I\in P_0}\lambda_I\mathbf1_I
 =\sum_{I\in N_0}\gamma_I\mathbf1_I,
 \qquad\lambda_I,\gamma_I>0.
 \tag{NC.2}
-$$
+```
 
 Here `P_0,N_0` are the interval types of internal edges. A positive
 profile on a strictly nested chain has a unique decomposition: its
@@ -88,12 +88,12 @@ The converse follows because all edges of that tree are bidirected.
 
 Write the common intervals as endpoint pairs
 
-$$
+```math
 (l_1,r_1),\ldots,(l_s,r_s),
 \quad l_1=0, r_1=m,quad
 l_j\le l_{j+1}<r_{j+1}\le r_j.
 \tag{NC.3}
-$$
+```
 
 The pair `(l,r)` denotes the cut interval `[l+1,r]`.
 Successive common edges belong to the same SCC precisely when they
@@ -109,10 +109,10 @@ is a source or sink, conclusion 2 holds immediately. Assume none is.
 Between successive common endpoint pairs, every noncommon interval
 of either chain has endpoints in
 
-$$
+```math
 [l_j,l_{j+1}]\ \cup\ [r_{j+1},r_j].
 \tag{NC.4}
-$$
+```
 
 The interior vertices of these two bands are singleton SCCs. They have
 no neighbors outside this block, apart from its two boundary common
@@ -167,20 +167,20 @@ explicit hypotheses in the **same physical source**:
 
 Under these hypotheses, NC plus the rederived finite flux identity
 
-$$
+```math
 \Phi(\{p,\ldots,q-1\};\mu)
 =A_q\sin(\theta_q-\mu)-A_p\sin(\theta_p-\mu)
 \tag{NC.5}
-$$
+```
 
 gives this conditional fork:
 
-$$
+```math
 \boxed{G_J\text{ strongly connected}quad\text{or}quad
 1<|xy|\le1+s\ \text{or}\ D-s\le|xy|<D,}
 \quad s\le4K/D.
 \tag{NC.6}
-$$
+```
 
 Indeed a nonisolated interval source/sink SCC invokes the ONE-SIGN
 finite block argument and produces the inactive pair. An isolated

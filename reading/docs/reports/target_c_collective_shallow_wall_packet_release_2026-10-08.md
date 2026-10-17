@@ -58,10 +58,10 @@ Orient the unit path with `Q` on its left. Its edge directions have
 monotone lifted angles `theta_0,...,theta_{m-1}` and total turn
 `T=theta_{m-1}-theta_0`. Assume
 
-$$
+```math
 T<2\pi/3.
 \tag{CW1}
-$$
+```
 
 Let `Y subset int(Q)` be finite and unit-separated. Every site has
 distance at least one from every wall vertex and strictly greater than
@@ -87,41 +87,41 @@ For a unit packet-to-wall contact at an internal `v_j` put
 `u=x-v_j`, `|u|=1`, and let its lifted angle be `alpha`.
 The tangent cone of `Q` gives
 
-$$
+```math
 \theta_j<\alpha<\theta_{j-1}+\pi.
-$$
+```
 
 The weak guards at the two adjacent wall vertices give
 
-$$
+```math
 |u-e_{\theta_j}|^2\ge1,\qquad
 |u+e_{\theta_{j-1}}|^2\ge1.
-$$
+```
 
 Because the relevant angles lie in the interior half-plane, these
 inequalities imply
 
-$$
+```math
 \boxed{\theta_j+\pi/3\le\alpha\le\theta_{j-1}+2\pi/3.}
 \tag{CW2}
-$$
+```
 
 This calculation uses all adjacent internal guards; it must not be
 applied at an omitted guard. Tip contacts are excluded by hypothesis.
 Taking the union over all sites and internal wall contacts,
 
-$$
+```math
 \alpha\in[\theta_0+\pi/3,\theta_{m-1}+2\pi/3].
 \tag{CW3}
-$$
+```
 
 This one interval has width `T+pi/3<pi`. Let `n` be its unit bisector.
 Every inward contact vector satisfies the uniform bound
 
-$$
+```math
 n\cdot u\ge c_T:=\cos((T+\pi/3)/2)>0.
 \tag{CW4}
-$$
+```
 
 No relation between different packet sites was needed. Packet size,
 internal contacts, and internal triangles do not change the direction.
@@ -129,10 +129,10 @@ internal contacts, and internal triangles do not change the direction.
 Translate the entire packet by `t n`, with `t>0` sufficiently small.
 At each former wall contact,
 
-$$
+```math
 |x+tn-v_j|^2=1+2t(n\cdot u)+t^2>1.
 \tag{CW5}
-$$
+```
 
 All strict noncontact margins, tip guards and membership in `int(Q)`
 persist by finiteness. Translation preserves every internal distance.
@@ -170,12 +170,12 @@ barrier: the present theorem omits no internal guard at all.
 
 One capacity corollary is
 
-$$
+```math
 \operatorname{Pack}_1\{x\in\operatorname{int}Q:
  |x-v_j|\ge1\ (0<j<m),\ |x-v_0|,|x-v_m|>1\}
 =\operatorname{Pack}_1(E_Q)=|S_Q|,
 \tag{CW6}
-$$
+```
 
 under CW1 and canonical strict cell capacity. The release takes any
 finite weak packet of the left-hand cardinality into the all-strict
@@ -192,18 +192,18 @@ unit steps, 25 steps `(7/25,24/25)`, and one final unit step
 `(16/65,63/65)`. Its end is `(528+16/65,24+63/65)`.
 Its total turn is
 
-$$
+```math
 T=2\arccos(16/65)\in(2\pi/3,\pi).
-$$
+```
 
 Let `c=(264,1)`. The moving packet consists of the 529 distinct
 interior sites along two 265-step unit chains from `(0,24)` and
 `(528,24)` to `c`, omitting the two fixed tips and counting `c` once.
 Their unit directions toward `c` are
 
-$$
+```math
 u_L=(264,-23)/265,\qquad u_R=(-264,-23)/265.
-$$
+```
 
 The packet-to-wall contacts are exactly the two former tips (now
 internal guarded vertices of the extended wall) and the vertical

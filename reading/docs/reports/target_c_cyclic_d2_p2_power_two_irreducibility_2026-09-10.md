@@ -18,15 +18,15 @@
 
 P2N left one possible arithmetic escape when
 
-$$
+```math
 m=q-4=2^k:
-$$
+```
 
 the trace polynomial
 
-$$
+```math
 H_m(X)=2T_m(X/2)+16X^2-48X+34
-$$
+```
 
 might split into two degree-`m/2` factors.  That escape is impossible.
 
@@ -34,24 +34,24 @@ might split into two degree-`m/2` factors.  That escape is impossible.
 
 For every
 
-$$
+```math
 \boxed{m=2^k\ge4,}
-$$
+```
 
 the polynomial
 
-$$
+```math
 \boxed{H_m(X)=2T_m(X/2)+16X^2-48X+34}
 \tag{P2I.1}
-$$
+```
 
 is irreducible over `Q_2`, hence irreducible over `Q`.
 
 Consequently its physical factor has degree
 
-$$
+```math
 r_m=m.
-$$
+```
 
 P2A then gives an immediate geometric consequence:
 
@@ -59,16 +59,16 @@ P2A then gives an immediate geometric consequence:
 
 No sufficiently large cyclic P2 survivor can satisfy
 
-$$
+```math
 \boxed{q-4=2^k.}
 \tag{P2I.2}
-$$
+```
 
 Thus P2 is rigorously eliminated for the infinite shell-cardinality subsequence
 
-$$
+```math
 q=2^k+4.
-$$
+```
 
 This is an actual subphase closure, not computational evidence.
 
@@ -78,27 +78,27 @@ This is an actual subphase closure, not computational evidence.
 
 Put
 
-$$
+```math
 S_j(X):=2T_j(X/2).
-$$
+```
 
 Then
 
-$$
+```math
 S_{2j}(X)=S_j(X)^2-2.
 \tag{1.1}
-$$
+```
 
 Write
 
-$$
+```math
 m=2n,
 \qquad n=2^{k-1}.
-$$
+```
 
 Using (1.1),
 
-$$
+```math
 \begin{aligned}
 H_{2n}(X)
 &=S_{2n}(X)+16X^2-48X+34\\
@@ -106,27 +106,27 @@ H_{2n}(X)
 &=\boxed{S_n(X)^2+16(X-1)(X-2).}
 \end{aligned}
 \tag{1.2}
-$$
+```
 
 After the translation
 
-$$
+```math
 X=2+Y,
-$$
+```
 put
 
-$$
+```math
 A_n(Y):=S_n(2+Y),
 \qquad
 F_m(Y):=H_m(2+Y).
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{F_m(Y)=A_n(Y)^2+16Y(Y+1).}
 \tag{1.3}
-$$
+```
 
 Translation preserves irreducibility, so it is enough to prove `F_m` irreducible over `Q_2`.
 
@@ -136,29 +136,29 @@ Translation preserves irreducibility, so it is enough to prove `F_m` irreducible
 
 P2N proved by the doubling recurrence that for every power of two `r>=2`,
 
-$$
+```math
 S_r(2+Y)
 \equiv
 2+4Y^{r/2}+Y^r
 \pmod8.
 \tag{2.1}
-$$
+```
 
 Apply this first with `r=n`:
 
-$$
+```math
 \boxed{
 A_n(Y)
 =2+Y^n+4Y^{n/2}+8B(Y)
 }
 \tag{2.2}
-$$
+```
 
 for some `B(Y) in Z[Y]`.
 
 Apply P2N directly with `r=m=2n` to the shifted trace polynomial.  Equivalently square (2.2) in (1.3).  One obtains
 
-$$
+```math
 \boxed{
 F_m(Y)
 \equiv
@@ -166,7 +166,7 @@ F_m(Y)
 \pmod8.
 }
 \tag{2.3}
-$$
+```
 
 Thus:
 
@@ -181,70 +181,70 @@ Thus:
 
 Let
 
-$$
+```math
 \alpha\in\overline{\mathbb Q}_2
-$$
+```
 
 be any root of `F_m`, and normalize the 2-adic valuation by
 
-$$
+```math
 v(2)=1.
-$$
+```
 
 We claim
 
-$$
+```math
 \boxed{v(\alpha)=1/n.}
 \tag{3.1}
-$$
+```
 
 First `v(alpha)>0`.  If `v(alpha)<0`, the monic leading term `alpha^{2n}` has strictly smaller valuation than every lower-degree term and cannot cancel.  If `v(alpha)=0`, (2.3) shows the leading term has valuation zero while every lower coefficient has positive valuation, again giving a unique lowest-valuation term.
 
 Now put
 
-$$
+```math
 t:=v(\alpha)>0.
-$$
+```
 
 From (2.3), the valuations of the three distinguished terms are
 
-$$
+```math
 2nt,
 \qquad
 2+nt,
 \qquad
 2.
-$$
+```
 
 Every other term has valuation at least
 
-$$
+```math
 3+jt>3.
-$$
+```
 
 If `t<1/n`, then
 
-$$
+```math
 2nt<2
-$$
+```
 
 and the leading term is uniquely of smallest valuation.
 
 If `t>1/n`, then the constant term has valuation `2`, while
 
-$$
+```math
 2nt>2,
 \qquad
 2+nt>3,
-$$
+```
 
 so the constant term is uniquely smallest.
 
 Both cases contradict the nonarchimedean cancellation rule for a zero sum. Therefore necessarily
 
-$$
+```math
 t=1/n.
-$$
+```
 
 This proves (3.1) directly; no Newton-polygon theorem is required. `square`
 
@@ -254,60 +254,60 @@ This proves (3.1) directly; no Newton-polygon theorem is required. `square`
 
 Since
 
-$$
+```math
 v(\alpha)=1/n>0,
-$$
+```
 we have
 
-$$
+```math
 v(1+\alpha)=0.
-$$
+```
 
 At a root of `F_m`, equation (1.3) gives
 
-$$
+```math
 A_n(\alpha)^2=-16\alpha(1+\alpha).
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 v(A_n(\alpha))
 =2+\frac1{2n}.}
 \tag{4.1}
-$$
+```
 
 Now use the exact congruence (2.2):
 
-$$
+```math
 A_n(\alpha)-(2+\alpha^n)
 =4\alpha^{n/2}+8B(\alpha).
-$$
+```
 
 The first term on the right has valuation
 
-$$
+```math
 2+\frac12=\frac52,
-$$
+```
 
 and the second has valuation at least `3`, because `B` has integral coefficients and `v(alpha)>0`.
 
 For `n>=2`,
 
-$$
+```math
 2+\frac1{2n}<\frac52.
-$$
+```
 
 Therefore the correction from `A_n(alpha)` to `2+alpha^n` has strictly larger valuation than `A_n(alpha)` itself.  The ultrametric inequality is then exact and gives
 
-$$
+```math
 \boxed{
 v(\alpha^n+2)
 =2+\frac1{2n}
 =\frac{4n+1}{2n}.}
 \tag{4.2}
-$$
+```
 
 Since `4n+1` is odd and coprime to `n`, the fraction in (4.2) is in lowest terms and has denominator exactly `2n`.
 
@@ -319,86 +319,86 @@ This is the second 2-adic layer that P2N did not use.
 
 Let
 
-$$
+```math
 K:=\mathbb Q_2(\alpha),
 \qquad
 d:=[K:\mathbb Q_2],
-$$
+```
 
 and let `e` be the ramification index of `K/Q_2`.
 
 The value group of `K` is
 
-$$
+```math
 \frac1e\mathbb Z.
 \tag{5.1}
-$$
+```
 
 Because
 
-$$
+```math
 v(\alpha)=1/n,
-$$
+```
 we must have
 
-$$
+```math
 n\mid e.
 \tag{5.2}
-$$
+```
 
 Also
 
-$$
+```math
 e\mid d,
 \qquad
 d\le\deg F_m=2n.
-$$
+```
 
 Thus the degree of the minimal polynomial of any root is a multiple of `n`; the only possibilities below the total degree are
 
-$$
+```math
 d=n
 \quad\text{or}\quad
 d=2n.
 \tag{5.3}
-$$
+```
 
 Suppose for contradiction that
 
-$$
+```math
 d=n.
-$$
+```
 
 Then (5.2) forces
 
-$$
+```math
 e=n,
-$$
+```
 so every element of `K` must have valuation in
 
-$$
+```math
 \frac1n\mathbb Z.
-$$
+```
 
 But the element
 
-$$
+```math
 \alpha^n+2\in K
-$$
+```
 has, by (4.2), valuation
 
-$$
+```math
 \frac{4n+1}{2n},
-$$
+```
 whose reduced denominator is `2n`. This is not an element of `(1/n)Z`.
 
 Contradiction.
 
 Therefore every root has degree
 
-$$
+```math
 \boxed{d=2n=m.}
-$$
+```
 
 Hence `F_m`, and therefore `H_m`, is irreducible over `Q_2`. This proves P2I. `square`
 
@@ -408,34 +408,34 @@ Hence `F_m`, and therefore `H_m`, is irreducible over `Q_2`. This proves P2I. `s
 
 P2A shows that a P2 survivor with
 
-$$
+```math
 m=L_A+L_B
-$$
+```
 forces
 
-$$
+```math
 \max(L_A,L_B)\ge r_m+1,
-$$
+```
 where `r_m` is the degree of the rational irreducible factor of `H_m` containing the physical root.
 
 P2I gives
 
-$$
+```math
 r_m=m.
-$$
+```
 
 Thus P2A would require
 
-$$
+```math
 \max(L_A,L_B)\ge m+1,
-$$
+```
 which is impossible because
 
-$$
+```math
 L_A+L_B=m,
 \qquad
 L_A,L_B\ge0.
-$$
+```
 
 Therefore no P2 survivor exists when `m=q-4` is a power of two. `square`
 
@@ -445,16 +445,16 @@ Therefore no P2 survivor exists when `m=q-4` is a power of two. `square`
 
 P2N obtained a one-segment ordinary Newton polygon of slope
 
-$$
+```math
 -1/n.
-$$
+```
 Its residual polynomial is inseparable over `F_2`, so that first polygon alone permits a split into two degree-`n` factors.
 
 P2I resolves exactly that repeated residual root.  Instead of constructing the formal second-order Newton polygon, it computes the refined value
 
-$$
+```math
 v(\alpha^n+2)=2+1/(2n).
-$$
+```
 
 A hypothetical degree-`n` field has value group `(1/n)Z`, so this single refined value already detects the missing ramification factor `2` and forces total ramification index at least `2n`.
 

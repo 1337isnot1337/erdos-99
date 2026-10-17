@@ -73,19 +73,19 @@ unit-separated `P` with `m(P)=1`, there are sources `Q_k` with:
 In particular, let `D_tf(n)` be the **infimum**, not an assumed minimum, of
 diameters of triangle-free unit-separated `n`-point configurations. Then
 
-$$
+```math
 D_{\rm tf}(n)=D(n)\qquad(n\ge3).
-$$
+```
 
 ### Proof
 
 Set `v_i=(3^i,0)` and `p_i(t)=p_i+t v_i`, for `i=1,...,n` and positive `t`.
 For each unordered pair `i<j`, its squared distance is the degree-two polynomial
 
-$$
+```math
 s_{ij}(t)=|p_i-p_j|^2+
 2t(p_i-p_j)\mathbin\cdot(v_i-v_j)+t^2(3^j-3^i)^2.
-$$
+```
 
 The positive numbers `3^j-3^i` are pairwise distinct. Indeed their 3-adic
 valuation is `i`, which determines the smaller index, and the remaining factor
@@ -97,9 +97,9 @@ The union of these finitely many root sets is finite. Choose `t_k -> 0+`
 avoiding this set. All pair distances of `P(t_k)` are then distinct. Continuity
 gives `m(P(t_k)) -> 1`, so that minimum stays positive for large `k`. Define
 
-$$
+```math
 q_i^{(k)}={p_i+t_kv_i\over m(P(t_k))}.
-$$
+```
 
 Exactly one pair has distance one after this scaling; every other pair has
 distance greater than one. A unit triangle needs three unit pairs, so these
@@ -120,16 +120,16 @@ in the triangle-free class.
 If `E=t max_i |v_i|<1/2`, then every label moves at most `E` before normalization,
 and the triangle inequality gives
 
-$$
+```math
 m(P(t))\ge1-2E,\qquad d(P(t))\le d(P)+2E.
-$$
+```
 
 Hence the normalized source satisfies
 
-$$
+```math
 d(Q(t))\le{d(P)+2E\over1-2E}
 =d(P)+{2E(d(P)+1)\over1-2E}.
-$$
+```
 
 This estimate is per finite source. It does not claim a perturbation scale
 uniform in `n`, a source-independent minimum gap, or diameter at most `d(P)`.
@@ -140,23 +140,23 @@ uniform in `n`, a source-independent minimum gap, or diameter at most `d(P)`.
 
 Let `M>=3`, put `k=floor(M/sqrt(3))+1`, and `u=k/M`. The rational points
 
-$$
+```math
 (0,0),\quad(1,0),\quad
 \left({1-u^2\over1+u^2},{2u\over1+u^2}\right)
-$$
+```
 
 have pair squared distances
 
-$$
+```math
 1,\quad1,\quad {4u^2\over1+u^2}>1.
-$$
+```
 
 They have minimum distance one and no unit triangle. Their squared diameter
 excess over `D(3)^2=1` equals
 
-$$
+```math
 {3k^2-M^2\over M^2+k^2}>0,
-$$
+```
 
 and tends to zero as `M -> infinity`. The formula for `k` is computed exactly as
 `isqrt(M*M//3)+1`. The inequality `k<=M/sqrt(3)+1` gives squared excess at most
@@ -173,21 +173,21 @@ optima. No asymptotic conclusion is drawn from `n=3`.
 
 For a unit-separated `n`-point source, `n>=3`, define its unit-triangle defect
 
-$$
+```math
 \tau(P)=\min_{\{i,j,k\}}
 \max\{|p_i-p_j|-1,|p_j-p_k|-1,|p_i-p_k|-1\}.
-$$
+```
 
 This is continuous and nonnegative; it vanishes exactly when the source
 contains a unit triangle. For `eta>0`, minimize diameter on the compact class
 with one fixed label at zero, unit separation, diameter at most `D(n)+1`, and
 `tau>=eta`; let `R_n(eta)=+infinity` if the class is empty. Then
 
-$$
+```math
 \text{every global }n\text{-point minimizer has a unit triangle}
 \quad\Longleftrightarrow\quad
 R_n(\eta)>D(n)\ \text{for every }\eta>0.
-$$
+```
 
 If every optimum has a triangle, the compact constrained class contains no
 optimum, so its attained minimum is strictly larger. Conversely a triangle-free

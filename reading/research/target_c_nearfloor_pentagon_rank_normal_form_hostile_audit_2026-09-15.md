@@ -20,9 +20,9 @@ floor.  Current main now contains the stronger hostile-audited direct
 `dominant/complement` energy theorem with safe floor `t>=1.83236`.  The candidate has
 therefore been rebased conceptually onto that theorem and now treats the nonempty band
 
-$$
+```math
 1.83236\le t\le1.8325.
-$$
+```
 
 This audit attacks the revised load-bearing steps: margin stability for the *minimized*
 direct energy functional, the face-ledger identification of unused network slack,
@@ -35,33 +35,33 @@ slightly wider detour range, and the strengthened correlated train split.  All p
 
 Current main defines
 
-$$
+```math
 G(t,\delta,\kappa)
 =\min_K\{F(K-\delta)+J(\pi-K-N_*)\}-\delta.
-$$
+```
 
 Its hostile audit proves the minimizing split is unique and interior on the relevant
 region, so the envelope theorem applies.  It gives
 
-$$
+```math
 \partial_\kappa G>0
-$$
+```
 
 and
 
-$$
+```math
 \partial_\delta G
 =-F'(z)+2\left(1+{4\Delta_2\over U^2}\right)J'(p)-1.
-$$
+```
 
 The parent verifier uses `p<0.72`, `U>=C0` to show this is `<-0.76`.  The present
 independent certificate recomputes the coarser expression obtained by dropping the
 nonpositive `-F'(z)` term and obtains
 
-$$
+```math
 2\left(1+{4\Delta_2\over C_0^2}\right)J'(0.72)-1
 =-0.77130338\ldots<-0.76.
-$$
+```
 
 Thus the round slope `0.76` used by the candidate is conservative.
 
@@ -73,48 +73,48 @@ Thus the round slope `0.76` used by the candidate is conservative.
 
 For fixed `t` put
 
-$$
+```math
 \delta_{max}=R(t)/2
-$$
+```
 
 and let
 
-$$
+```math
 G_0(t)=G(t,\delta_{max},0).
-$$
+```
 
 Since `G` increases with `kappa`, every survivor satisfies
 
-$$
+```math
 G(t,\delta,0)
 \le G(t,\delta,\kappa)
 \le0.
-$$
+```
 
 Since `partial_delta G<-0.76`, for `delta<delta_max`,
 
-$$
+```math
 G(t,\delta,0)
 >G_0(t)+0.76(\delta_{max}-\delta).
-$$
+```
 
 The parent theorem proves `G_0(t)` strictly decreases with `t`.  The independent
 certificate evaluates
 
-$$
+```math
 G_0(1.8325)
 =-0.0003109891582858596\ldots .
-$$
+```
 
 Hence any survivor with `t<=1.8325` obeys
 
-$$
+```math
 \boxed{
 \delta_{max}-\delta
 <{-G_0(1.8325)\over0.76}
 =0.000409196260902447\ldots .
 }
-$$
+```
 
 The direction is correct: reducing detour makes the contradiction margin more
 positive, so a survivor must remain close to maximum detour.
@@ -127,62 +127,62 @@ positive, so a survivor must remain close to maximum detour.
 
 The network simplex is
 
-$$
+```math
 2\delta+\kappa/2\le R(t),
-$$
+```
 
 or
 
-$$
+```math
 \delta+\kappa/4\le\delta_{max}.
-$$
+```
 
 Thus
 
-$$
+```math
 \kappa/4\le\delta_{max}-\delta,
-$$
+```
 
 which yields
 
-$$
+```math
 \boxed{
 \kappa<0.00163678504360979\ldots .
 }
-$$
+```
 
 The face ledger gives
 
-$$
+```math
 Q/D=2t-\pi-\delta+o(1)
-$$
+```
 
 and
 
-$$
+```math
 f/D\ge C_0/2-t/4+\kappa/4-o(1).
-$$
+```
 
 Subtracting,
 
-$$
+```math
 {Q-f\over D}
 \le
 {9t\over4}-\pi-{C_0\over2}-\delta-\kappa/4+o(1).
-$$
+```
 
 The first three terms equal `delta_max`, so
 
-$$
+```math
 {Q-f\over D}
 \le\delta_{max}-\delta-\kappa/4+o(1).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{(Q-f)/D<0.000409196260902447+o(1).}
-$$
+```
 
 This is an exact algebraic coupling of the two ledgers, not a heuristic
 identification.
@@ -195,28 +195,28 @@ identification.
 
 Every bounded exceptional face has degree at least five, and
 
-$$
+```math
 Q-f=\sum_F(\deg F-5).
-$$
+```
 
 Thus each face of degree at least six spends at least one unit of `Q-f`, so
 
-$$
+```math
 f_{>=6}\le Q-f.
-$$
+```
 
 For `t<=1.8325`, `kappa>=0` gives
 
-$$
+```math
 f/D\ge C_0/2-1.8325/4-o(1)
 =0.4966878068639573\ldots-o(1).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{p_5/D>0.4962786106030549\ldots-o(1).}
-$$
+```
 
 The high-degree fraction among the guaranteed exceptional-face population is below
 `0.000824`, so the `99.9176%` purity statement is conservative.
@@ -229,26 +229,26 @@ The high-degree fraction among the guaranteed exceptional-face population is bel
 
 Canonical notation is
 
-$$
+```math
 k=d_H+s_Z,
 \qquad d_H,s_Z\ge0,
-$$
+```
 
 so `s_Z<=k`.  The exact closure-corank identity is
 
-$$
+```math
 2f-\operatorname{rank}C_{face}
 =\sigma_C\le s_Z.
-$$
+```
 
 Using the certified `f` floor and `kappa=k/D` cap gives
 
-$$
+```math
 \boxed{
 \operatorname{rank}C_{face}/D
 >0.9917388286843049\ldots-o(1).
 }
-$$
+```
 
 The theorem correctly makes no smallest-singular-value claim.  Nearly flat pentagon
 blocks can remain badly conditioned while the exact row rank is almost maximal.
@@ -262,42 +262,42 @@ blocks can remain badly conditioned while the exact row rank is almost maximal.
 A potentially invalid shortcut would be to identify the direct theorem's optimizing
 value
 
-$$
+```math
 p_{opt}\approx0.57104
-$$
+```
 
 with a universal complement-train population.  The candidate explicitly does not do
 this.
 
 Instead it reuses the independently audited complement-capacity lower bound
 
-$$
+```math
 p_c
 \ge
 \pi-Q_\Phi(\delta)-U-(t+\kappa)/2+4\Delta_2/U.
-$$
+```
 
 The older certificate only needed `Q_Phi<1.62`; the present band extends beyond that.
 The new verifier checks instead
 
-$$
+```math
 Q_\Phi(\delta)<1.81,
-$$
+```
 
 and
 
-$$
+```math
 \Phi'(1.81)=0.04383765\ldots<0.044,
 \qquad
 1/\Phi'(1.81)>22.7.
-$$
+```
 
 Meanwhile the magnitude of the complement-count derivative with respect to `delta` is
 less than `4`.  Hence
 
-$$
+```math
 \partial_\delta p_c<-18.7<0
-$$
+```
 
 throughout the band.  The original algebra still gives `partial_kappa p_c>0`, and on
 the maximum-detour boundary `p_c` decreases with `t`.
@@ -305,9 +305,9 @@ the maximum-detour boundary `p_c` decreases with `t`.
 Thus the worst point is `t=1.8325`, `kappa=0`, `delta=delta_max`, where the certificate
 gives
 
-$$
+```math
 \boxed{p_c=0.4081989620519120\ldots .}
-$$
+```
 
 Since retained weight on one train is at most one, this implies at least the same
 normalized count of actual complement outer-to-outer trains.  Section 157 supplies
@@ -321,57 +321,57 @@ actual diameter bracing of both transverse signs for each.
 
 Exact train bookkeeping gives
 
-$$
+```math
 \rho_{rec}+\sigma_R=2T-4\sqrt{R_4}.
-$$
+```
 
 The hostile-audited `g=0.0050` theorem and rhombic saturation imply
 
-$$
+```math
 (\rho_{rec}+\sigma_R-q)/D\ge0.0100-o(1).
-$$
+```
 
 Current main now proves
 
-$$
+```math
 t=(q-k)/D\ge1.83236-o(1),
-$$
+```
 
 and `k>=0`, hence
 
-$$
+```math
 q/D\ge1.83236-o(1).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{(\rho_{rec}+\sigma_R)/D\ge1.84236-o(1).}
-$$
+```
 
 The branch split is then
 
-$$
+```math
 S/D\ge0.46059-o(1)
-$$
+```
 
 or
 
-$$
+```math
 \sigma_R/D\ge0.92118-o(1).
-$$
+```
 
 The exact Mantel rationalization gives
 
-$$
+```math
 \boxed{M_R/D^2>0.4916615427-o(1)}
-$$
+```
 
 in the rhombic branch.  The post-endpoint surplus identity gives
 
-$$
+```math
 \boxed{\liminf\mu_D\ge1.8217981841815002\ldots .}
-$$
+```
 
 There remains no universal upper bound on `mu_D` below this value.
 

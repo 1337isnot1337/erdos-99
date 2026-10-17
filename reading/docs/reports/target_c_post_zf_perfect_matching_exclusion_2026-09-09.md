@@ -22,9 +22,9 @@ The perfect-matching branch of the full actual diameter graph is impossible once
 
 Let a post-ZF C-II survivor have full actual diameter graph `H` on loaded terminal set `B_+`, and suppose `H` is a perfect matching. Then
 
-$$
+```math
 D\le2.
-$$
+```
 
 Consequently no sufficiently large triangle-free global minimizer in the audited post-ZF branch can have a perfect-matching diameter graph.
 
@@ -42,36 +42,36 @@ Let
 
 If `H` is a perfect matching, MB proves
 
-$$
+```math
 h=\frac q2,
 \qquad
 x_B=f=g_F=s_Z=0.
 \tag{MC.1}
-$$
+```
 
 Hence
 
-$$
+```math
 b=q,
 \qquad Q=0,
 \tag{MC.2}
-$$
+```
 
 and the outer contact-face boundary walk is exactly the convex force-hull cycle. Every hull side is a unit contact edge, every bounded contact face is a strict unit rhombus, and the positive contact core is a simply connected strict-rhombic disk.
 
 DT then gives
 
-$$
+```math
 T=\frac{b+Q}{2}+2f=\frac q2.
 \tag{MC.3}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{T=h=q/2.}
 \tag{MC.4}
-$$
+```
 
 All statements in this section concern only the fixed positive core. Contact-isolated source points outside the force hull may still exist, but they do not alter its rhombic disk or train tracks.
 
@@ -83,10 +83,10 @@ C77 defines a train track by continuing through opposite edges of successive str
 
 All entry and exit edges of one train are parallel, so its two boundary-end edges have one common unoriented direction
 
-$$
+```math
 [u_T]\in\mathbb{RP}^1.
 \tag{MC.5}
-$$
+```
 
 Because the outer boundary is a strict convex polygon, an oriented boundary-edge direction occurs at most once while traversing the boundary counterclockwise. Therefore an unoriented direction can occur on at most two boundary edges: once in orientation `u` and once in orientation `-u`.
 
@@ -104,31 +104,31 @@ Since every boundary edge of a pure rhombic disk is the end of exactly one train
 
 Write the oriented edge vectors of the convex outer polygon in increasing direction order. After rotating the angular origin, the `T` distinct unoriented train directions can be represented by
 
-$$
+```math
 0\le\theta_1<\theta_2<\cdots<\theta_T<\pi.
-$$
+```
 
 The full oriented boundary edge directions are then necessarily
 
-$$
+```math
 \theta_1,\ldots,\theta_T,
 \theta_1+\pi,\ldots,\theta_T+\pi.
 \tag{MC.6}
-$$
+```
 
 Thus the two boundary ends of train `i` occur at cyclic edge positions
 
-$$
+```math
 i,\qquad T+i.
 \tag{MC.7}
-$$
+```
 
 For two trains `i<j`, their four boundary ends occur in the order
 
-$$
+```math
 i<j<T+i<T+j.
 \tag{MC.8}
-$$
+```
 
 So the endpoint pairs alternate around the boundary circle.
 
@@ -148,10 +148,10 @@ Hence **every pair of distinct trains crosses**.
 
 A crossing of two rhombic train tracks occurs in exactly one common rhombus by C77. Thus the train-intersection graph `Gamma_R` satisfies
 
-$$
+```math
 \boxed{\Gamma_R=K_T.}
 \tag{MC.9}
-$$
+```
 
 ---
 
@@ -161,29 +161,29 @@ C77 proves that the train-intersection graph of a triangle-free unit-contact rho
 
 But (MC.9) says the graph is complete. Therefore
 
-$$
+```math
 \boxed{T\le2.}
 \tag{MC.10}
-$$
+```
 
 On the other hand ZS gives for every post-ZF survivor
 
-$$
+```math
 h\ge\delta\ge\lceil D\rceil.
 \tag{MC.11}
-$$
+```
 
 Using `T=h` from MC.4,
 
-$$
+```math
 T\ge\lceil D\rceil.
-$$
+```
 
 Together with MC.10,
 
-$$
+```math
 \boxed{D\le2.}
-$$
+```
 
 This proves Theorem MC. `square`
 
@@ -226,27 +226,27 @@ The regression therefore remains useful and should be retained.
 
 The post-ZF diameter graph has no isolated terminal vertices. Therefore
 
-$$
+```math
 \sum_{b\in B_+}(\deg_H(b)-1)=2h-q\ge0.
-$$
+```
 
 DB/ZT identify this exactly as
 
-$$
+```math
 2h-q=x_B+Q+2s_Z.
 \tag{MC.12}
-$$
+```
 
 Equality `2h-q=0` is equivalent to every diameter-terminal degree being exactly one, hence to `H` being a perfect matching.
 
 MC excludes equality for every sufficiently large survivor. Thus
 
-$$
+```math
 \boxed{
 2h-q=x_B+Q+2s_Z\ge1
 }
 \tag{MC.13}
-$$
+```
 
 for every sufficiently large post-ZF survivor.
 
@@ -286,13 +286,10 @@ The natural stability problem is now exact:
 > **Near-matching train stability.** Show that a post-ZF survivor with
 > 
 
-$$
-
+```math
 > 2h-q=x_B+Q+2s_Z=o(D)
 > 
-$$
-
-
+```
 > inherits enough of the alternating train-end structure of MC to force either a train triangle or a linear number of contact/face defects.
 
 Since the left side is literally the total diameter degree excess above one, this is equivalent to saying that all but `o(D)` loaded terminals are diameter leaves.

@@ -17,10 +17,10 @@
 
 The load-bearing claim is
 
-$$
+```math
 \operatorname{rank}(H_P|_{\ker C_{face}})
 \ge {7p\over3}-2f+\sigma_C.
-$$
+```
 
 I checked the following points independently.
 
@@ -44,9 +44,10 @@ I checked the following points independently.
    common rate through the component.  Hence the combined local row rank is `n-1`.
    Simplicity and degree at most five give
 
-   $$
+   ```math
    e\le\min\{\binom{s}{2},\lfloor5s/2\rfloor\},
-   $$
+   
+   ```
 
    and direct checking for `s<=5`, followed by the degree bound for `s>=6`, gives
    `n-1>=7s/3`.  Equality can occur in the abstract bound at `s=6`; a pure
@@ -56,17 +57,19 @@ I checked the following points independently.
 5. **Global rank subtraction.**  Different selected components have disjoint train
    variable supports.  Since the selected closure rows are a subset of `C_face`,
 
-   $$
+   ```math
    \operatorname{rank}\binom{C_{face}}{H_P}
    \ge {7p\over3}.
-   $$
+   
+   ```
 
    The exact linear identity
 
-   $$
+   ```math
    \operatorname{rank}(H_P|_{\ker C_{face}})
    =\operatorname{rank}\binom{C_{face}}{H_P}-\operatorname{rank}C_{face}
-   $$
+   
+   ```
 
    and `rank C_face=2f-sigma_C` prove the claimed bound.
 

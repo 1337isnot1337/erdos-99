@@ -22,17 +22,17 @@ is an exact integer inequality.
 
 To verify sufficiency, Euler and double-counting face incidences give
 
-$$
+```math
 2e=b+\sum_F\deg F,
 \qquad f=e-v+1,
-$$
+```
 
 and therefore
 
-$$
+```math
 e=2v-2-\frac12\left(b+\sum_F(\deg F-4)\right).
 \tag{L1}
-$$
+```
 
 The asserted strict inequality is equivalent to `e+h<2v-2`, contradicting ZF.
 An unbounded sequence of source cardinalities has unbounded diameter, since
@@ -50,10 +50,10 @@ For a regular unit odd `q`-gon, `C` is its boundary cycle and `H` its diameter
 cycle. Then `v=e=h=q`, the outer walk has length `b=q`, and the sole bounded
 face has degree `q`. Consequently
 
-$$
+```math
 b+\sum_F(\deg F-4)=2q-4<2q=2h.
 \tag{L2}
-$$
+```
 
 This violates the proposed closing inequality at arbitrarily large diameter,
 while satisfying exact positive KKT scalar and tensor identities. The normalized
@@ -79,10 +79,10 @@ The canonical exposed-hull theorem proves it with a positive linear margin.
 If train segments are terminated at exceptional faces, their naive count is
 `T_ext=(b+sum_exceptional deg F)/2`; the Euler currency is instead
 
-$$
+```math
 \frac12\left(b+\sum_F(\deg F-4)\right)
 =T_{\rm ext}-2 f_{\rm exc}.
-$$
+```
 
 Thus even where that train interpretation is valid, the necessary extension is
 `T_ext-h>2 f_exc`, not merely `T_ext>h`. The canonical bound `f_exc=O(D)` is at

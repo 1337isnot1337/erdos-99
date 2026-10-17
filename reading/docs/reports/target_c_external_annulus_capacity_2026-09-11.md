@@ -27,12 +27,12 @@ hull.
 In the perfect-matching branch, the matching report gives a pure strict-rhombic force
 core with vertex count
 
-$$
+```math
 v\le \frac{q^2}{16}+\frac q2+1,
 \tag{EA.1}
-$$
+```
 
-and every source point not in the core lies outside the force hull $F$. The matching
+and every source point not in the core lies outside the force hull $`F`$. The matching
 report only used this to state that a quadratic external population is required. The
 closing implication is
 
@@ -46,11 +46,11 @@ external points outside F + full-source diameter-D hull K
 
 ### Theorem EA — external-annulus capacity
 
-Let $K$ and $F$ be compact convex planar sets with $F\subseteq K$, and let
-$X\subseteq K\setminus F$ be a finite set with pairwise distances at least one.
+Let $`K`$ and $`F`$ be compact convex planar sets with $`F\subseteq K`$, and let
+$`X\subseteq K\setminus F`$ be a finite set with pairwise distances at least one.
 Then
 
-$$
+```math
 \boxed{
 |X|\frac{\pi}{4}
 \le
@@ -59,138 +59,139 @@ $$
  +\frac\pi4.
 }
 \tag{EA.2}
-$$
+```
 
-In particular, if both sets have diameter at most $D$, then
+In particular, if both sets have diameter at most $`D`$, then
 
-$$
+```math
 \boxed{
 |X|\le \frac4\pi\bigl(\operatorname{area}(K)-\operatorname{area}(F)\bigr)+4D+1.
 }
 \tag{EA.3}
-$$
+```
 
 ### Scope
 
-This is an exact finite packing statement. It does not assume that $F$ is a
-scaffold, that $X$ is globally optimal, or that the points of $X$ have contacts.
+This is an exact finite packing statement. It does not assume that $`F`$ is a
+scaffold, that $`X`$ is globally optimal, or that the points of $`X`$ have contacts.
 It applies to points outside a convex force hull. It does not bound isolated points
-lying inside $F$.
+lying inside $`F`$.
 
 ### Proof
 
-Put $r=1/2$, let $B_r$ be the closed radius-$r$ disk, and define the outer
-parallel body $K_r=K+B_r$. Define the inner parallel body
+Put $`r=1/2`$, let $`B_r`$ be the closed radius-$`r`$ disk, and define the outer
+parallel body $`K_r=K+B_r`$. Define the inner parallel body
 
-$$
+```math
 F_{-r}:=\{y\in F:y+rB_1\subseteq F\}.
-$$
+```
 
-The disks $x+B_r$, $x\in X$, have pairwise disjoint interiors. Their union is
+The disks $`x+B_r`$, $`x\in X`$, have pairwise disjoint interiors. Their union is
 contained in
 
-$$
+```math
 K_r\setminus F_{-r}.
 \tag{EA.4}
-$$
+```
 
-Indeed, every disk is contained in $K_r$. If a point of $x+B_r$ belonged to
-$F_{-r}$, its distance from the point $x\in K\setminus F\subseteq F^c$ would be
-less than or equal to $r$, contradicting the definition of $F_{-r}$ (the harmless
+Indeed, every disk is contained in $`K_r`$. If a point of $`x+B_r`$ belonged to
+$`F_{-r}`$, its distance from the point $`x\in K\setminus F\subseteq F^c`$ would be
+less than or equal to $`r`$, contradicting the definition of $`F_{-r}`$ (the harmless
 boundary equality is removed by using open disks and then taking limits).
 
 For every convex planar body, the elementary inner-parallel estimate is
 
-$$
+```math
 \operatorname{area}(F)-\operatorname{area}(F_{-r})
 \le r\operatorname{per}F.
 \tag{EA.5}
-$$
+```
 
-If the inner parallel body becomes empty before distance $r$, (EA.5) follows by
+If the inner parallel body becomes empty before distance $`r`$, (EA.5) follows by
 integrating the nonincreasing perimeters of the inner parallels up to the inradius.
-Otherwise it follows from the same coarea integral over $[0,r]$. Steiner's formula
+Otherwise it follows from the same coarea integral over $`[0,r]`$. Steiner's formula
 gives
 
-$$
+```math
 \operatorname{area}(K_r)=\operatorname{area}(K)+r\operatorname{per}K+\pi r^2.
 \tag{EA.6}
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 |X|\pi r^2
 &\le \operatorname{area}(K_r)-\operatorname{area}(F_{-r})\\
 &\le \operatorname{area}(K)-\operatorname{area}(F)
  +r(\operatorname{per}K+\operatorname{per}F)+\pi r^2.
 \end{aligned}
-$$
+```
 
-Substitute $r=1/2$ to obtain EA.2. For a convex body of diameter at most $D$,
-$\operatorname{per}\le\pi D$; EA.3 follows. $\square$
+Substitute $`r=1/2`$ to obtain EA.2. For a convex body of diameter at most $`D`$,
+$`\operatorname{per}\le\pi D`$; EA.3 follows. $`\square`$
 
 ## 3. Perfect-matching closure
 
-Let $F$ be the C65 force hull, $K=\operatorname{conv}A$, and let $X$ be the
-source points outside $F$. In the perfect-matching branch:
+Let $`F`$ be the C65 force hull, $`K=\operatorname{conv}A`$, and let $`X`$ be the
+source points outside $`F`$. In the perfect-matching branch:
 
 1. the matching report proves that every source point outside the positive contact
-   core lies outside $F$;
+   core lies outside $`F`$;
 2. the core-size bound is EA.1;
-3. the full-source and force-hull diameters are at most $D$;
+3. the full-source and force-hull diameters are at most $`D`$;
 4. FSDB gives
-   $$
+   ```math
    \liminf\frac{\operatorname{area}F}{D^2}
    \ge A_{FS}:=\frac{2\rho+\sin(2\rho)}4,
    \qquad \rho=\cos\rho.
    \tag{EA.7}
-   $$
+   
+   ```
 
-Theorem EA and the isodiametric inequality for $K$ give
+Theorem EA and the isodiametric inequality for $`K`$ give
 
-$$
+```math
 \limsup\frac{|X|}{D^2}
 \le 1-\frac{4A_{FS}}\pi.
 \tag{EA.8}
-$$
+```
 
-The matching core bound and $q\le\pi D$ give
+The matching core bound and $`q\le\pi D`$ give
 
-$$
+```math
 \limsup\frac v{D^2}\le\frac{\pi^2}{16}.
 \tag{EA.9}
-$$
+```
 
-Since $n=v+|X|$ in this branch and every global minimizer satisfies
+Since $`n=v+|X|`$ in this branch and every global minimizer satisfies
 
-$$
+```math
 \frac n{D^2}\longrightarrow\Delta:=\frac\pi{2\sqrt3},
 \tag{EA.10}
-$$
+```
 we obtain
 
-$$
+```math
 \Delta
 \le
 \frac{\pi^2}{16}+1-rac{4A_{FS}}\pi.
 \tag{EA.11}
-$$
+```
 
 But the right side is
 
-$$
+```math
 0.8293886873\ldots,
-$$
+```
 
 whereas
 
-$$
+```math
 \Delta=0.9068996821\ldots.
-$$
+```
 
-The strict gap is approximately $0.0775109948$. This contradiction excludes every
+The strict gap is approximately $`0.0775109948`$. This contradiction excludes every
 unbounded perfect-matching sequence.
 
 ## 4. Exact target implication
@@ -200,8 +201,8 @@ external points. The stronger finite inequality is EA.2, which charges the exter
 population to the area deficit between the full diameter hull and the force hull,
 with only a linear boundary error.
 
-This does not close the forest branch with $d_H>0$, the cyclic branch with
-$d_H=0$ and nonzero pinned/contact surplus, or the $s_Z>0$ branch. In particular,
+This does not close the forest branch with $`d_H>0`$, the cyclic branch with
+$`d_H=0`$ and nonzero pinned/contact surplus, or the $`s_Z>0`$ branch. In particular,
 it does not solve the global problem.
 
 ## 5. Dependencies
@@ -210,7 +211,7 @@ it does not solve the global problem.
   normal form and EA.1.
 - `docs/reports/target_c_fs_symmetric_difference_body_area_2026-09-10.md`, FSDB area
   floor (EA.7).
-- `docs/problem/literature_baseline.md`, $n/D^2\to\pi/(2\sqrt3)$.
+- `docs/problem/literature_baseline.md`, $`n/D^2\to\pi/(2\sqrt3)`$.
 - The planar Steiner formula and perimeter-diameter inequality.
 
 ## 6. Audit classification
@@ -226,8 +227,8 @@ it does not solve the global problem.
 ## 7. Regression tests
 
 - A thin force hull: EA remains valid; its boundary error is only (O(D)), but the
-  theorem gives no quadratic saving if $F$ has small area.
-- Points inside $F$: deliberately excluded from EA. They are the binding rattler
+  theorem gives no quadratic saving if $`F`$ has small area.
+- Points inside $`F`$: deliberately excluded from EA. They are the binding rattler
   regression for the general C-II branch.
 - A disk force hull: EA reduces to the expected outer-annulus capacity estimate.
 - The perfect matching shell: all non-core points are external by the matching ledger,
@@ -236,9 +237,9 @@ it does not solve the global problem.
 ## 8. Failed routes and no-go
 
 Applying EA to all contact-isolated source points in the general C-II branch is invalid:
-the force-bulk audit permits contact-isolated points inside $F$. The inclusion (EA.4)
-fails for centers in $F$, and no source-preserving transfer theorem currently moves
-them outside $F$ while retaining the C65 positive support.
+the force-bulk audit permits contact-isolated points inside $`F`$. The inclusion (EA.4)
+fails for centers in $`F`$, and no source-preserving transfer theorem currently moves
+them outside $`F`$ while retaining the C65 positive support.
 
 Thus EA is not a general rattler-elimination theorem.
 
@@ -259,10 +260,10 @@ The reusable part is EA.2, not a change to the authoritative status.
 The next decisive statement would have to extend EA.2 to the full source by proving an
 interior-rattler capacity/transfer inequality of the form
 
-$$
+```math
 |A\cap\operatorname{int}F| - |V(C)|
 \le \text{capacity charged to the uncovered source region},
-$$
+```
 
 with enough strictness to beat the asymptotic packing density. The present reports do
 not prove such a transfer, and assuming it would be circular.

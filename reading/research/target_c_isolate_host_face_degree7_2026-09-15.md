@@ -21,93 +21,93 @@ This is stronger than the high-`t` pentagon population theorem needs: **both pen
 
 Let
 
-$$
+```math
 P=(v_1,\ldots,v_d)
-$$
+```
 
 be one canonical bounded nonquadrilateral contact face, in cyclic order.  Thus `P` is convex and
 
-$$
+```math
 |v_{i+1}-v_i|=1
-$$
+```
 
 for every `i` modulo `d`.
 
 Suppose a contact-isolated source point `z` lies in `int P`.  Put
 
-$$
+```math
 r_i:=|v_i-z|.
-$$
+```
 
 Because the full source is unit-separated,
 
-$$
+```math
 r_i\ge1.
-$$
+```
 
 Because `z` is contact-isolated and each `v_i` is another source point, equality is impossible:
 
-$$
+```math
 \boxed{r_i>1\qquad(1\le i\le d).}
 \tag{IF.1}
-$$
+```
 
 Let `theta_i` be the smaller angle at `z` from `v_i-z` to `v_{i+1}-z` in the cyclic order around the convex polygon.  Since `z` is in the interior of a convex polygon,
 
-$$
+```math
 0<\theta_i<\pi,
 \qquad
 \sum_{i=1}^d\theta_i=2\pi.
 \tag{IF.2}
-$$
+```
 
 Apply the cosine rule to the unit side `v_iv_{i+1}`:
 
-$$
+```math
 1=r_i^2+r_{i+1}^2-2r_ir_{i+1}\cos\theta_i.
-$$
+```
 
 Hence
 
-$$
+```math
 \cos\theta_i
 ={r_i^2+r_{i+1}^2-1\over2r_ir_{i+1}}.
 \tag{IF.3}
-$$
+```
 
 Now
 
-$$
+```math
 r_i^2-r_ir_{i+1}+r_{i+1}^2
 =(r_i-r_{i+1})^2+r_ir_{i+1}>1,
 \tag{IF.4}
-$$
+```
 
 where strictness uses `r_i r_{i+1}>1`.  Equation (IF.4) is exactly
 
-$$
+```math
 r_i^2+r_{i+1}^2-1>r_ir_{i+1}.
-$$
+```
 
 Substituting in (IF.3) gives
 
-$$
+```math
 \boxed{\cos\theta_i>{1\over2},\qquad\theta_i<{\pi\over3}.}
 \tag{IF.5}
-$$
+```
 
 Summing (IF.5) and using (IF.2),
 
-$$
+```math
 2\pi=\sum_i\theta_i<d{\pi\over3}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{d>6.}
 \tag{IF.6}
-$$
+```
 
 Since `d` is an integer:
 
@@ -115,17 +115,17 @@ Since `d` is an integer:
 
 If a bounded canonical contact face contains a contact-isolated source point in its interior, then
 
-$$
+```math
 \boxed{d\ge7.}
 \tag{IF.7}
-$$
+```
 
 In particular, if `z_P` denotes the assigned contact-isolate population of a bounded exceptional face `P`, then
 
-$$
+```math
 \boxed{\deg P\in\{5,6\}\Longrightarrow z_P=0.}
 \tag{IF.8}
-$$
+```
 
 No asymptotic argument, KKT multiplier estimate, or triangle-free angle gap is used after canonical face convexity is supplied.
 
@@ -133,31 +133,31 @@ No asymptotic argument, KKT multiplier estimate, or triangle-free angle gap is u
 
 Let `f_d` be the number of bounded exceptional faces of degree `d`,
 
-$$
+```math
 f=\sum_{d\ge5}f_d,
 \qquad
 Q=\sum_{d\ge5}(d-4)f_d.
-$$
+```
 
 Then
 
-$$
+```math
 Q-f=\sum_{d\ge6}(d-5)f_d.
 \tag{IF.9}
-$$
+```
 
 Every face that can contain an assigned contact-isolate has `d>=7`, and therefore contributes at least two units to the right side of (IF.9).  If
 
-$$
+```math
 f_{iso}:=\#\{P:z_P>0\},
-$$
+```
 
 then finitely
 
-$$
+```math
 \boxed{f_{iso}\le {Q-f\over2}.}
 \tag{IF.10}
-$$
+```
 
 This is a host-count statement, not an isolate-count statement: a single degree-`>=7` face may contain many assigned isolates.
 
@@ -165,7 +165,7 @@ This is a host-count statement, not an isolate-count statement: a single degree-
 
 The current modern high-`t` pentagon theorem gives, in the remaining full-core/no-macroscopic-container Type-II branch, the certified endpoint bounds
 
-$$
+```math
 \begin{array}{c|c|c|c}
 T & f/D\text{ lower} & Q/D\text{ upper} & P_5/D\text{ lower}\\ \hline
 1.850 & 0.4007088 & 0.558408 & 0.243\\
@@ -173,34 +173,34 @@ T & f/D\text{ lower} & Q/D\text{ upper} & P_5/D\text{ lower}\\ \hline
 1.860 & 0.3957088 & 0.578408 & 0.213.
 \end{array}
 \tag{IF.11}
-$$
+```
 
 Combining (IF.10) with the same certified `f,Q` bounds gives the safe host-count staircase
 
-$$
+```math
 \boxed{
 t\le1.850\Longrightarrow f_{iso}<0.07886D+o(D),}
 \tag{IF.12}
-$$
+```
 
-$$
+```math
 \boxed{
 t\le1.855\Longrightarrow f_{iso}<0.08510D+o(D),}
 \tag{IF.13}
-$$
+```
 
-$$
+```math
 \boxed{
 t\le1.860\Longrightarrow f_{iso}<0.09136D+o(D).}
 \tag{IF.14}
-$$
+```
 
 At the same time every one of the linearly many pentagons from the high-`t` theorem is isolate-free.  For example, throughout `t<=1.855`,
 
-$$
+```math
 \boxed{P_5>0.228D-o(D)\quad\text{and all of those pentagonal chambers have }z_P=0.}
 \tag{IF.15}
-$$
+```
 
 Thus the high-`t` exceptional-face system splits sharply:
 

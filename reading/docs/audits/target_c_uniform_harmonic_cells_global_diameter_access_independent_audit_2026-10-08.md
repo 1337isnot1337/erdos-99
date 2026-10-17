@@ -56,9 +56,9 @@ For `a in A_r`, choose an actual diameter partner `k_a`, set
 `n_a=(a-k_a)/D`, and `m_a=(a+k_a)/2`. The diameter constraint gives, for every
 other source point `x`,
 
-$$
+```math
 n_a\cdot(x-a)\le -|x-a|^2/(2D)<0.
-$$
+```
 
 Thus each attachment is a strict source-hull support point. Every `a in A_r` is a
 vertex of `P_r` by Section 62. If `x in I_r` is a unit neighbor of `a`, every other
@@ -75,10 +75,10 @@ Every cell angle is strictly greater than `pi/6`.
 
 Let `d_r=diam(P_r)`. From the common-center midpoint localization in `C-FS-GEOM`,
 
-$$
+```math
 |n_a-n_b|\le 2d_r/D+4r_D/D,
 \qquad r_D=\sqrt{D\eta_D+\eta_D^2}=o(D).
-$$
+```
 Choose one normal `n_0`, its quarter-turn `t`, and an attachment `a` minimizing
 `t dot a`. For every `b in A_r` the strict support inequalities at `a,b` put
 `b-a` in a half-plane and in the strip
@@ -86,18 +86,18 @@ Choose one normal `n_0`, its quarter-turn `t`, and an attachment `a` minimizing
 All outgoing attachment chords therefore lie in a cone of opening at most
 `2 asin(2d_r/D+4r_D/D)`. The angle bound just proved implies
 
-$$
+```math
 d_r>(D/2)\sin(\pi/12)-2r_D.
-$$
+```
 
 Every attachment lies one unit from `I_r`, so `diam(I_r)>=d_r-2`. Its contact-graph
 diameter `delta_r` is at least this Euclidean diameter. The exact pinned ledger
 ` t_r-delta_r-3=s_r+r_r >= 0 ` from Section 62 and the loaded contact-degree cap
 three give
 
-$$
+```math
 t_r\ge d_r+1,\qquad |A_r|\ge t_r/3\ge(d_r+1)/3.
-$$
+```
 In particular, for every fixed `c<sin(pi/12)/2`, eventually
 `d_r>=cD` and `|A_r|>=cD/3`, uniformly over all nonempty components.
 
@@ -126,9 +126,9 @@ contact-isolated source points and allows no unloaded component.
 
 In Type II, `C-HARMONIC-CELL-TILING` gives nonnegative local deficits
 
-$$
+```math
 \Delta_r=area(P_r)-A_{4,r},\qquad \sum_r\Delta_r=o(D^2),
-$$
+```
 where `A_{4,r}` is the area of unloaded-only actual strict rhombi assigned to `I_r`.
 The number and total area of rhombi incident to loaded endpoints are `O(D)` by the
 loaded degree-three bound, so discard them. `C-COHERENT-GRAINS` supplies, for each
@@ -138,9 +138,9 @@ rhombi, with total physical-grain interface perimeter `O_epsilon(D)`.
 Fix any `rho in (0,1)`, any cell `P_r`, and any attachment `a in A_r`. Use the
 **cell** crop
 
-$$
+```math
 Q=(1-rho)a+rho P_r.
-$$
+```
 It lies in `P_r` by convexity, satisfies `Q subset closed_ball(a,rho D)` because
 `diam(P_r)<=D`, has area `rho^2 area(P_r)>=rho^2 alpha D^2`, and has perimeter
 `rho per(P_r)<=rho pi D` by the convex perimeter-diameter inequality. It lies inside the cell; its intersection with the cell boundary is contained in the
@@ -162,11 +162,11 @@ contain `R_j` rhombi, their areas are at least `a_0R_j`; planar isoperimetry yie
 `P_j>=2 sqrt(pi a_0 R_j)`. Thus `sum_j sqrt(R_j)=O_{epsilon,rho}(D)`. Since
 `sum_j R_j>=c_{epsilon,rho}D^2`,
 
-$$
+```math
 \max_j R_j\ge
 \left(\frac{\sum_jR_j}{\sum_j\sqrt{R_j}}\right)^2
 \ge c'_{epsilon,rho}D^2.
-$$
+```
 
 Choose such a single retained physical grain. `C-PSEUDO-GRID` applies with its
 rhombus mass and perimeter bounds, giving a complete epsilon-coherent train grid
@@ -227,24 +227,24 @@ to an interval of length `4rho+o(1)`. Each incident diameter direction is itself
 localization. Enlarging the arcs by `o(1)`, applying the direction-spacing bound,
 and counting both endpoints gives, uniformly over such faces,
 
-$$
+```math
 \sum_{b\in B:\ dist(b,f)\le rho D+ell_D}deg_H(b)
 \le (48\sqrt{rho}+o(1))D.
-$$
+```
 
 Take `M=5`, and for each selected `b` define
 
-$$
+```math
 \Psi_b=\sum_{\substack{f\in J^+_{r(b)},\ d(f)>5\\
               dist(a_b,f)\le rho D}}(d(f)-4).
-$$
+```
 Every charged face is within `rho D+ell_D` of `b`. Swapping the endpoint and face sums and using the preceding bound together with the one global tail gives
 
-$$
+```math
 \sum_{b\in B}deg_H(b)\Psi_b
 \le(48\sqrt{rho}+o(1))D T_5
 \le(144 pi\sqrt{rho}+o(1))D^2,
-$$
+```
 where `T_5<=2(e_{BB}-k)<=3 pi D` by Sections 62, 123, and the loaded
 contact-degree cap.
 
@@ -252,10 +252,10 @@ Set `C=4/sqrt(3)+30 pi`, `C_0=90 pi+30`,
 `K_5=C+200(5.5)/pi`, and `B_5=C_0+100(5.5)^2`. For every grid vertex `z` in
 `Q_{r(b)}` the Audit.134 fixed-port estimate gives
 
-$$
+```math
 contact\_dist_C(b,z)
 \le ell_D+K_5 rho D+B_5+5\Psi_b.
-$$
+```
 Choose fixed `rho` so that `K_5rho<lambda/4` and
 `(2880 pi/lambda)sqrt(rho)<eta`. For large `D`, both `ell_D+B_5<lambda D/4`
 and the incidence-sum error is small. Every endpoint with

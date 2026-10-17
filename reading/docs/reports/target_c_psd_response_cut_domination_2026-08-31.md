@@ -18,9 +18,9 @@ Gate C-I is closed. In Gate C-II choose a relative-interior normalized KKT stres
 
 The later universal PSD theorem C53 upgrades the older C41 response picture to
 
-$$
+```math
 \boxed{M:=\Lambda-L_H\succeq0.}
-$$
+```
 
 This has two exact consequences.
 
@@ -28,15 +28,15 @@ First, the response conductance dominates the diameter stress across **every** b
 
 Second, equality at one terminal is rigid: a zero diagonal entry of a PSD matrix forces the entire row to vanish. Combining that row rigidity with C41's strict response cliques, C36's attachment size at least three, the absence of a diameter triangle, and the terminal contact-degree cap three gives a global count:
 
-$$
+```math
 \boxed{|T|\ge \frac{2}{5}|B|,}
-$$
+```
 
 where `T` is the set of loaded terminals with **strict** local response-degree excess. Since C30 gives `2|B|>=ceil(D)+2`,
 
-$$
+```math
 \boxed{|T|\ge \frac{\lceil D\rceil+2}{5}.}
-$$
+```
 
 Thus C41's strict defect cannot be confined to finitely many exceptional terminals. It occurs at linearly many force-hull vertices. No quantitative lower bound on the individual excesses is claimed.
 
@@ -44,9 +44,9 @@ Thus C41's strict defect cannot be confined to finitely many exceptional termina
 
 Work with a sufficiently large contact-minimal triangle-free global minimizer after Gate C-I, so
 
-$$
+```math
 C=C_*.
-$$
+```
 
 Choose a relative-interior normalized KKT stress. Then
 
@@ -57,52 +57,52 @@ Choose a relative-interior normalized KKT stress. Then
 
 Write
 
-$$
+```math
 c_{bk}:=-\Lambda_{bk}\ge0\qquad(b\ne k),
-$$
+```
 
 and extend the diameter weights by
 
-$$
+```math
 \beta_{bk}=0\qquad(bk\notin H_+).
-$$
+```
 
 Define local response and diameter degrees
 
-$$
+```math
 d_b:=\sum_{k\ne b}c_{bk},
 \qquad
 s_b:=\sum_{k\ne b}\beta_{bk}>0.
-$$
+```
 
 Since both `Lambda` and `L_H` are Laplacians,
 
-$$
+```math
 M_{bb}=d_b-s_b,
 \qquad
 M_{bk}=-(c_{bk}-\beta_{bk})\quad(b\ne k).
 \tag{C64.1}
-$$
+```
 
 ## 2. C53 descends through the contact Schur complement
 
 Order the full selected stress matrix by boundary `B` and contact-interior vertices `I`:
 
-$$
+```math
 \Omega
 =L_C(\alpha)-L_H(\beta).
-$$
+```
 
 C53-C54 give
 
-$$
+```math
 \Omega\succeq0.
 \tag{C64.2}
-$$
+```
 
 The positive contact Dirichlet block `L_{II}` is positive definite. The usual block Gaussian congruence for Kron reduction gives
 
-$$
+```math
 \Omega
 \sim
 \begin{pmatrix}
@@ -110,30 +110,30 @@ $$
 0&L_{II}
 \end{pmatrix}.
 \tag{C64.3}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{M=\Lambda-L_H\succeq0.}
 \tag{C64.4}
-$$
+```
 
 The affine response identity still gives
 
-$$
+```math
 M\mathbf1=0,
 \qquad
 MP_B=0.
 \tag{C64.5}
-$$
+```
 
 C41 gives the independent strict trace statement
 
-$$
+```math
 \operatorname{tr}M>0.
 \tag{C64.6}
-$$
+```
 
 So `M` is a nonzero PSD equilibrium stress on the convex loaded boundary.
 
@@ -141,12 +141,12 @@ So `M` is a nonzero PSD equilibrium stress on the convex loaded boundary.
 
 For `S subset B`, let `1_S` be its indicator. The Laplacian energy identity gives
 
-$$
+```math
 \mathbf1_S^{\mathsf T}M\mathbf1_S
 =
 \sum_{b\in S,\ k\notin S}
 (c_{bk}-\beta_{bk}).
-$$
+```
 
 Since `M>=0`,
 
@@ -154,28 +154,28 @@ Since `M>=0`,
 
 For every boundary subset `S`,
 
-$$
+```math
 \boxed{
 \sum_{b\in S,\ k\notin S}c_{bk}
 \ge
 \sum_{b\in S,\ k\notin S}\beta_{bk}.
 }
 \tag{C64.7}
-$$
+```
 
 In particular, taking `S={b}`,
 
-$$
+```math
 \boxed{d_b\ge s_b\qquad(b\in B).}
 \tag{C64.8}
-$$
+```
 
 Moreover C41.6 implies
 
-$$
+```math
 \sum_{b\in B}(d_b-s_b)=\operatorname{tr}M>0,
 \tag{C64.9}
-$$
+```
 
 so at least one terminal has strict excess.
 
@@ -183,24 +183,24 @@ so at least one terminal has strict excess.
 
 Define
 
-$$
+```math
 Z:=\{b\in B:d_b=s_b\},
 \qquad
 T:=B\setminus Z.
 \tag{C64.10}
-$$
+```
 
 For a PSD matrix, every `2x2` principal minor is nonnegative:
 
-$$
+```math
 |M_{bk}|^2\le M_{bb}M_{kk}.
-$$
+```
 
 Hence if `b in Z`, then `M_bb=0` and
 
-$$
+```math
 M_{bk}=0\qquad\text{for every }k.
-$$
+```
 
 By C64.1,
 
@@ -208,10 +208,10 @@ By C64.1,
 
 If `b in Z`, then
 
-$$
+```math
 \boxed{c_{bk}=\beta_{bk}\qquad\text{for every }k\ne b.}
 \tag{C64.11}
-$$
+```
 
 Consequently the response support seen from `b` is **exactly** its positive-diameter neighbor set.
 
@@ -226,30 +226,30 @@ Thus every harmonic component touching a zero-excess terminal attaches all of it
 
 C36 gives
 
-$$
+```math
 |A_r|\ge3
 \tag{C64.12}
-$$
+```
 
 for every unpinned component.
 
 Suppose distinct `b,k in Z` both belonged to `A_r`. Choose
 
-$$
+```math
 l\in A_r\setminus\{b,k\}.
-$$
+```
 
 By zero-row rigidity at `b`, strict clique response from `I_r` gives
 
-$$
+```math
 bk,bl\in H_+.
-$$
+```
 
 By zero-row rigidity at `k`, it also gives
 
-$$
+```math
 kl\in H_+.
-$$
+```
 
 Therefore `b,k,l` are three source points with all three pair distances equal to `D`. This is excluded for all sufficiently large global minimizers by C15, and a fortiori by the uniform C43 theorem.
 
@@ -257,10 +257,10 @@ Therefore `b,k,l` are three source points with all three pair distances equal to
 
 Every unpinned harmonic component attachment set contains at most one zero-excess terminal:
 
-$$
+```math
 \boxed{|A_r\cap Z|\le1.}
 \tag{C64.13}
-$$
+```
 
 ## 6. Double counting forces linearly many strict terminals
 
@@ -272,58 +272,58 @@ For the component assigned to `b`, C36 gives at least three distinct attachments
 
 On the other hand, a strict terminal `t in T` belongs to at most three distinct attachment sets. Each membership `t in A_r` requires at least one distinct contact edge from `t` into `I_r`, and C35 gives
 
-$$
+```math
 \deg_C(t)\le3.
 \tag{C64.14}
-$$
+```
 
 Therefore
 
-$$
+```math
 2|Z|\le3|T|.
 \tag{C64.15}
-$$
+```
 
 Since `|B|=|Z|+|T|`,
 
 ### Theorem C64.4 (linear strict-terminal set)
 
-$$
+```math
 \boxed{|T|\ge\frac25|B|.}
 \tag{C64.16}
-$$
+```
 
 C30 gives
 
-$$
+```math
 2|B|\ge\lceil D\rceil+2.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 |T|
 \ge
 \frac{\lceil D\rceil+2}{5}.
 }
 \tag{C64.17}
-$$
+```
 
 Thus every sufficiently large C-II survivor has `Omega(D)` loaded force-hull terminals with
 
-$$
+```math
 \boxed{d_b>s_b.}
 \tag{C64.18}
-$$
+```
 
 ## 7. Stronger support interpretation
 
 At every `b in T`, positive excess means the defect stress has
 
-$$
+```math
 M_{bb}>0.
-$$
+```
 
 Equivalently, at least one of the following happens:
 
@@ -338,9 +338,9 @@ This partitions the boundary into a linearly large set of terminals where the po
 
 C64 does not yet give a numerical trace gap. A sequence can have
 
-$$
+```math
 d_b-s_b\downarrow0
-$$
+```
 
 at every one of the `Omega(D)` strict terminals. Thus the theorem does not contradict the near-star response regression by itself.
 

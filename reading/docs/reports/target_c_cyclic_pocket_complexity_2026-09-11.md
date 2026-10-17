@@ -55,27 +55,27 @@ Let a post-ZF fully force-visible source satisfy the outer-pocket identities abo
 and write `d_H` for the loaded diameter-graph defect and `s_Z` for the mixed-rank
 surplus.  Then
 
-$$
+```math
 \boxed{
  0\le \sum_P(k_P-3)
  \le e_{BB}-Q-2d_H-2s_Z.
 }
 \tag{CP.1}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{e_{BB}\ge Q+2d_H+2s_Z.}
 \tag{CP.2}
-$$
+```
 
 In the cyclic circuit branch `s_Z=d_H=0`, let
-$$
+```math
 \nu_D=\frac{e_{BB}+2s_C}{D}.
-$$
+```
 If an unbounded sequence has `limsup nu_D <= 1`, then
-$$
+```math
 \boxed{
 \liminf\frac aD
 \ge
@@ -83,15 +83,15 @@ $$
 =0.9517214495\ldots .
 }
 \tag{CP.3}
-$$
+```
 
 If, more specifically, `nu_D -> lambda_A`, where
-$$
+```math
 \lambda_A=
 \frac{\pi}{\sqrt{\pi^2+(5/4-\sqrt{\pi/(2\sqrt3)})^2}},
-$$
+```
 then
-$$
+```math
 \boxed{
 \frac QD\to\lambda_A,
 \qquad
@@ -100,93 +100,93 @@ $$
 \frac1D\sum_P(k_P-3)\to0.
 }
 \tag{CP.4}
-$$
+```
 Thus all but `o(D)` of the `a=Theta(D)` pockets have `k_P=3` at that endpoint.
 
 ### Proof
 
 The exact outer-pocket decomposition gives
-$$
+```math
 x_B=a+\sum_P(k_P-3).
 \tag{CP.5}
-$$
+```
 The missing-side/contact coupling gives `a>=q-e_{BB}`.  The exact post-ZF
 terminal partition is
-$$
+```math
 q=x_B+Q+2d_H+2s_Z.
 \tag{CP.6}
-$$
+```
 Therefore
-$$
+```math
 \begin{aligned}
 \sum_P(k_P-3)
 &=x_B-a\\
 &\le x_B-(q-e_{BB})\\
 &=e_{BB}-Q-2d_H-2s_Z.
 \end{aligned}
-$$
+```
 The left side is nonnegative, proving (CP.1) and (CP.2).
 
 Now assume the cyclic branch.  Its identities give
-$$
+```math
 q=x_B+Q,
 \qquad b+Q=2q,
 \qquad b/D\to\pi.
 \tag{CP.7}
-$$
+```
 Writing `xi=Q/D`, (CP.7) gives
-$$
+```math
 \frac qD\to\frac{\pi+\xi}{2}.
 \tag{CP.8}
-$$
+```
 Since `a>=q-e_{BB}`, `e_{BB}<=e_{BB}+2s_C=nu_D D`, and the cyclic exceptional-face
 floor gives `liminf xi >= (4/5)sqrt(pi/(2sqrt(3)))`, (CP.3) follows.
 
 For (CP.4), use the atomic endpoint inequalities.  In the notation of the cyclic
 atomic report, `w=xi-phi` satisfies
-$$
+```math
 w\ge\pi\sqrt{1-\nu^2},
 \qquad
 \nu\ge\frac45\left(w+\sqrt{r_{\min}(w)}\right),
 \tag{CP.9}
-$$
+```
 where
-$$
+```math
 r_{\min}(w)=\frac{\pi^2-w^2}{2\pi\sqrt3}.
-$$
+```
 For `0<=w<=1`, the right side of the second inequality is increasing in `w`.
 Consequently every limit with `nu<1` satisfies
-$$
+```math
 \xi\ge \frac45\left(
 \pi\sqrt{1-\nu^2}+\nu\sqrt{\frac\pi{2\sqrt3}}
 \right).
 \tag{CP.10}
-$$
+```
 At `nu=lambda_A` the right side equals `lambda_A` by the defining equation for
 `lambda_A`.  On the other hand, always
-$$
+```math
 \xi=\lim Q/D\le\lim e_{BB}/D\le\lim\nu_D=\lambda_A.
 \tag{CP.11}
-$$
+```
 Hence `xi->lambda_A`.  The two inequalities
 `Q<=e_{BB}<=e_{BB}+2s_C` then force `e_{BB}/D->lambda_A` as well.  Apply (CP.1)
 with `d_H=s_Z=0` to get
-$$
+```math
 0\le D^{-1}\sum_P(k_P-3)
 \le e_{BB}/D-Q/D\to0.
-$$
+```
 Since the summands are nonnegative integers, only `o(D)` pockets can have
-`k_P>3`.  This proves (CP.4).  $\square$
+`k_P>3`.  This proves (CP.4).  $`\square`$
 
 ## 3. Exact endpoint obstruction exposed by CP
 
 At `nu_D -> lambda_A`, CP and the cyclic identities imply
-$$
+```math
 \frac aD\to\frac{\pi-\lambda_A}{2}>1,
 \qquad
 \frac{x_B}D\to\frac{\pi-\lambda_A}{2}.
 \tag{CP.12}
-$$
+```
 Thus the formal endpoint consists asymptotically of a linear number of triangular
 outer pockets and no linear graph-boundary degree surplus.  The outer-walk saturation
 `b-P_F=o(D)` further says that the aggregate path-versus-hull-chord detour of these
@@ -197,9 +197,9 @@ boundary chain of **degree three**, exact collinearity of the two chain edges is
 incompatible with a strictly positive equilibrium coefficient on the third contact
 edge: if the two unit contact vectors are `u` and `-u`, then force balance with
 positive coefficients `alpha,beta,gamma` would read
-$$
+```math
 (alpha-beta)u+gamma w=0,
-$$
+```
 forcing `gamma=0` whenever the third unit vector `w` is not parallel to `u`.
 Near-straight degree-three chains already give the binding escape.  Take the two
 chain rays at directions `0` and `pi-epsilon`, and the third ray at `3pi/2`.  For
@@ -233,10 +233,10 @@ through exceptional faces, or an individual stress lower bound.
 ## 5. Failed closure and exact remaining lemma
 
 The tempting implication
-$$
+```math
 \text{CP.4 + }b-P_F=o(D)
 \Longrightarrow\text{a fixed positive area/stress cost per pocket}
-$$
+```
 is not proved and is false if interpreted as a local geometric statement.  Near-
 straight oblique-rhombic boundary strips realize the required limiting local geometry
 with positive stresses whose third-edge coefficients tend to zero.

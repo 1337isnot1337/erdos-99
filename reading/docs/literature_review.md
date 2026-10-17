@@ -133,9 +133,9 @@ was not found or because the paper is more peripheral than the curated collectio
   [author PDF](https://faculty.uml.edu/dklain/Klain-Isoperimetric.pdf),
   [DOI](https://doi.org/10.1215/ijm/1258138231). Section 4, equation (6), records the
   classical Bonnesen inequality
-  $P^2-4\pi A\ge\pi^2(R-r)^2$ for compact convex planar sets, with $R$ and
-  $r$ the circumradius and inradius. Section 155 uses exactly this statement to
-  turn the canonical isoperimetric deficit into an $O(\sqrt D)$ annular-thickness
+  $`P^2-4\pi A\ge\pi^2(R-r)^2`$ for compact convex planar sets, with $`R`$ and
+  $`r`$ the circumradius and inradius. Section 155 uses exactly this statement to
+  turn the canonical isoperimetric deficit into an $`O(\sqrt D)`$ annular-thickness
   bound.
 - Charles Payan, “Packing of Equal Disks in an Equilateral Triangle: On a Conjecture
   of Erdős–Oler,” *Discrete Mathematics* 165–166 (1997), 555–565,
@@ -235,12 +235,12 @@ The audited manuscript establishes these **scoped** results:
 - Every global diameter minimizer has a normalized nonnegative KKT equilibrium
   stress. An adapted stress can put positive weight only on contacts frozen by
   every infinitesimal contact flex that fixes all diametral-pair relative
-  displacements. With $s$ stressed vertices, $m$ unit contacts, and $k$
-  diameter edges, its rank argument gives $m\ge2s-6k$. This does **not**
-  prove that the stress spine covers all but $O(\sqrt n)$ source vertices.
-- If the spine covers $n-O(\sqrt n)$ vertices, the contact graph has
-  $n-O(\sqrt n)$ strict unit-rhombus faces with total angular excess
-  $O(\sqrt n)$. The co-large-spine premise remains open.
+  displacements. With $`s`$ stressed vertices, $`m`$ unit contacts, and $`k`$
+  diameter edges, its rank argument gives $`m\ge2s-6k`$. This does **not**
+  prove that the stress spine covers all but $`O(\sqrt n)`$ source vertices.
+- If the spine covers $`n-O(\sqrt n)`$ vertices, the contact graph has
+  $`n-O(\sqrt n)`$ strict unit-rhombus faces with total angular excess
+  $`O(\sqrt n)`$. The co-large-spine premise remains open.
 - A sufficiently large source wholly contained in a two-direction unit
   lattice cannot be a triangle-free global minimizer **with an ordinarily
   infinitesimally rigid active bar framework**. A separate exact convex-hull
@@ -253,10 +253,10 @@ The audited manuscript establishes these **scoped** results:
 first-order stationarity, not a finite boundary-pinning certificate.
 Question 8.1's claimed equivalence between stationarity and pinning is not
 proved. The audited entry supplies an exact nine-point strict-rhombus disk
-with $0$ in the convex hull of its diameter gradients and a finite,
-contact-preserving strict diameter decrease. The paper's $T=\Theta(\sqrt n)$
+with $`0`$ in the convex hull of its diameter gradients and a finite,
+contact-preserving strict diameter decrease. The paper's $`T=\Theta(\sqrt n)`$
 description needs an upper-bound hypothesis beyond its general lower bound
-$T\ge2\sqrt n-2$.
+$`T\ge2\sqrt n-2`$.
 
 The paper's KKT theorem, near-rhombic reductions, and train-angle equilibrium
 overlap substantially with existing canonical work in

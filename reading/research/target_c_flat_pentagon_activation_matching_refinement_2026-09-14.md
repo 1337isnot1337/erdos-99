@@ -27,31 +27,31 @@ separate committed theorems record complementary information about them:
 Keeping both pieces simultaneously improves the extraction constants. On a convergent
 Type-II subsequence write
 
-$$
+```math
 t=\lim{q-k\over D},\qquad
 \delta=\lim{b-P_F\over D},\qquad
 \kappa=\lim{k\over D},
-$$
+```
 
 and put
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},\qquad
 C_0=2\sqrt{\Delta_2}+0.00042,
-$$
+```
 
-$$
+```math
 A(t,\delta,\kappa)
 =\pi+C_0-{5t\over2}+\delta+{\kappa\over2}.
 \tag{AM.1}
-$$
+```
 
 Fix any constant
 
-$$
+```math
 0<c<{2\over3}.
 \tag{AM.2}
-$$
+```
 
 There is a fixed residual threshold `theta_c>0` such that, after deleting at most
 `R_F/theta_c` pentagons, every retained pentagon has:
@@ -61,19 +61,19 @@ There is a fixed residual threshold `theta_c>0` such that, after deleting at mos
 - two hidden center-to-shoulder diagonals `x,y>1`; and
 - residual
 
-$$
+```math
 r(P)\ge c[(x-1)+(y-1)].
 \tag{AM.3}
-$$
+```
 
 Let `G_c` be the retained population. The low-`t` pentagon floor gives
 
-$$
+```math
 \boxed{
 G_c\ge A(t,\delta,\kappa)D-{R_F\over\theta_c}-o(D).
 }
 \tag{AM.4}
-$$
+```
 
 Choose from every retained pentagon the shorter hidden center-to-shoulder chord and
 the corresponding two-contact tooth. Then there are simultaneously:
@@ -84,20 +84,20 @@ the corresponding two-contact tooth. Then there are simultaneously:
 
 satisfying
 
-$$
+```math
 \boxed{|H_{act}|\ge {G_c\over4},}
 \tag{AM.5}
-$$
+```
 
-$$
+```math
 \boxed{|T_{act}|\ge {G_c\over12},\qquad
        |C_{flat}|\ge {G_c\over12}.}
 \tag{AM.6}
-$$
+```
 
 The activation families also keep the global `L^1` gap budget
 
-$$
+```math
 \boxed{
 \sum_{e\in H_{act}}(|e|-1)
 \le {R_F\over2c},
@@ -106,7 +106,7 @@ $$
 \le {R_F\over2c}.
 }
 \tag{AM.7}
-$$
+```
 
 For example `c=3/5` gives the safe coefficient `5R_F/6` in (AM.7). Since `c` may be
 chosen arbitrarily close to `2/3`, the coefficient may be taken arbitrarily close to
@@ -114,21 +114,21 @@ chosen arbitrarily close to `2/3`, the coefficient may be taken arbitrarily clos
 
 Equivalently, the finite-source tradeoffs are
 
-$$
+```math
 \boxed{
 4|H_{act}|+{R_F\over\theta_c}
 \ge A(t,\delta,\kappa)D-o(D),
 }
 \tag{AM.8}
-$$
+```
 
-$$
+```math
 \boxed{
 12|T_{act}|+{R_F\over\theta_c}
 \ge A(t,\delta,\kappa)D-o(D),
 }
 \tag{AM.9}
-$$
+```
 
 and the same factor-12 inequality holds for `C_flat`.
 
@@ -137,21 +137,21 @@ and the same factor-12 inequality holds for `C_flat`.
 Use the flat-trapezoid cyclic labels `l,m,r,a,b`, where `m` is the almost-flat
 middle and `a,b` are the two shoulders. Put
 
-$$
+```math
 x=|m-a|,\qquad y=|m-b|.
-$$
+```
 
 The committed hidden-gap theorem gives the exact area parametrization
 
-$$
+```math
 A(P)=F(x)+G(x,y)+F(y)
-$$
+```
 
 and endpoint derivatives
 
-$$
+```math
 \partial_x r(1,1)=\partial_y r(1,1)={2\over3}.
-$$
+```
 
 Therefore for every fixed `c<2/3`, continuity gives a neighborhood in which (AM.3)
 holds. Tighten the flat-pentagon residual threshold so that retained pentagons lie in
@@ -159,24 +159,24 @@ that neighborhood and have the angular bounds used below.
 
 If
 
-$$
+```math
 g(P)=\min\{x-1,y-1\},
-$$
+```
 
 then
 
-$$
+```math
 g(P)\le{(x-1)+(y-1)\over2}\le {r(P)\over2c}.
 \tag{AM.10}
-$$
+```
 
 Choose the corresponding shorter hidden chord. Summing (AM.10) over all retained
 pentagons and using nonnegativity of the face residuals gives
 
-$$
+```math
 \sum_{P\in G_c}g(P)\le {R_F\over2c}.
 \tag{AM.11}
-$$
+```
 
 Every subsequent extraction is a subset of this chosen family, so the same upper
 bound survives and proves (AM.7).
@@ -199,9 +199,9 @@ the shoulder endpoint has chosen-chord incidence at most three.
 
 Hence one chosen chord conflicts with at most
 
-$$
+```math
 (2-1)+(3-1)=3
-$$
+```
 
 other chosen chords. Greedy matching retains at least `G_c/4`, proving (AM.5).
 This argument does not need a global bound of five on both endpoints; it uses the
@@ -231,10 +231,10 @@ incidences, hence at most four other selected teeth.
 
 Thus the tooth-conflict graph has maximum degree at most
 
-$$
+```math
 3+4+4=11.
 \tag{AM.12}
-$$
+```
 
 A greedy independent set retains at least `G_c/12`, proving the first part of
 (AM.6).
@@ -245,16 +245,16 @@ For the near-straight middle chain `l-m-r`, the middle vertex is again the flat
 center and each endpoint is a generic boundary leaf. The same incidence bounds give
 at most
 
-$$
+```math
 3+4+4=11
-$$
+```
 
 conflicts with other selected middle chains. Therefore
 
-$$
+```math
 |C_{flat}|\ge {G_c\over12}.
 \tag{AM.13}
-$$
+```
 
 This improves the previous generic denominator `13`. No uniqueness theorem for flat
 centers is required for this particular improvement; the large sector of the selected
@@ -264,50 +264,50 @@ pentagon already reduces the middle-vertex incidence by one.
 
 The current proof-only orbit/detour floor is
 
-$$
+```math
 t_{42}={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0013751
 =1.8208886379794447\ldots .
-$$
+```
 
 At the permissive endpoint profile `delta=kappa=0`,
 
-$$
+```math
 A(t_{42},0,0)=0.4944166723690961\ldots .
-$$
+```
 
 On `R_F=o(D)`, (AM.5)--(AM.6) give
 
-$$
+```math
 \boxed{{|H_{act}|\over D}
 \ge0.1236041680922740\ldots-o(1),}
 \tag{AM.14}
-$$
+```
 
-$$
+```math
 \boxed{{|T_{act}|\over D},\ {|C_{flat}|\over D}
 \ge0.0412013893640913\ldots-o(1).}
 \tag{AM.15}
-$$
+```
 
 Throughout `t<=1.8585`, dropping the nonnegative `delta,kappa` bonuses gives
 
-$$
+```math
 A(t,\delta,\kappa)\ge0.4003882673177079\ldots,
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{{|H_{act}|\over D}
 \ge0.1000970668294269\ldots-o(1),}
 \tag{AM.16}
-$$
+```
 
-$$
+```math
 \boxed{{|T_{act}|\over D},\ {|C_{flat}|\over D}
 \ge0.0333656889431423\ldots-o(1).}
 \tag{AM.17}
-$$
+```
 
 Thus the strongest current small-residual pentagon endpoint has, simultaneously, a
 roughly `0.1236D` endpoint-disjoint near-contact matching with `O(R_F)` total gap and
@@ -317,33 +317,33 @@ a roughly `0.0412D` vertex-disjoint tooth/flat-chain family.
 
 Let `N=|H_act|` and let
 
-$$
+```math
 B={R_F\over2c}.
-$$
+```
 
 For every fixed `0<lambda<1`, Markov's inequality applied to the nonnegative hidden
 gaps shows that at least `(1-lambda)N` chords satisfy
 
-$$
+```math
 |e|-1\le {B\over\lambda N}.
 \tag{AM.18}
-$$
+```
 
 For `c=3/5` and `lambda=1/2`, at least half of `H_act` has gap at most
 
-$$
+```math
 {5R_F\over3N}.
 \tag{AM.19}
-$$
+```
 
 Near `t_42`, using `N/D>=A(t_42,0,0)/4-o(1)`, this gives at least
 `0.0618020840...D-o(D)` endpoint-disjoint hidden chords with gap at most
 
-$$
+```math
 \left({20\over3A(t_{42},0,0)}+o(1)\right){R_F\over D}
 <13.49{R_F\over D}
 \tag{AM.20}
-$$
+```
 
 along the small-residual branch. This is stronger than a bare `1+o(1)` statement: the
 near-contact scale is explicitly tied to the normalized residual.

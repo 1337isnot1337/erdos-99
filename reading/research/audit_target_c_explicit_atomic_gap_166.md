@@ -21,21 +21,21 @@ Let the two pre-pruning family sizes be `aD+o(D)` and `bD+o(D)`, with at most
 
 The tie-safe inversion pruning removes at most
 
-$$
+```math
 \sqrt\rho\sqrt{a/b}\,D+o(D)
-$$
+```
 
 from the first shore and
 
-$$
+```math
 \sqrt\rho\sqrt{b/a}\,D+o(D)
-$$
+```
 
 from the second. This is the exact Markov bound
 
-$$
+```math
 \sqrt{M|A|/|B|},\qquad \sqrt{M|B|/|A|}.
-$$
+```
 
 With missing-degree threshold `sqrt(rho)D`, a second Markov pruning removes at most
 `sqrt(rho)D+o(D)` vertices from each shore. Every retained train then misses at most
@@ -43,16 +43,16 @@ With missing-degree threshold `sqrt(rho)D`, a second Markov pruning removes at m
 
 Thus the two vertex-pruning costs total
 
-$$
+```math
 \sqrt\rho\left(\sqrt{a/b}+\sqrt{b/a}+2\right)D+o(D),
-$$
+```
 
 and the two corner-degree deficits in the projected path cost another
 `2sqrt(rho)D+o(D)`. Hence the total coefficient is exactly
 
-$$
+```math
 \sqrt{a/b}+\sqrt{b/a}+4.
-$$
+```
 
 The explicit size condition in §166.5 ensures every pair and every triple on either
 retained shore has a common opposite neighbor. Therefore the §163 `K_{2,2}` order
@@ -63,37 +63,37 @@ reintroduced.
 
 For a finite triangle-free graph with
 
-$$
+```math
 e=n^2/4-d,
-$$
+```
 
 choose a maximum-degree vertex and set `X=N(v)`, `Y=V\X`. Then `X` is independent and
 
-$$
+```math
 e(X,Y)+2e(Y)\le |X||Y|.
-$$
+```
 
 Therefore
 
-$$
+```math
 e\le |X||Y|,
 \qquad
 \bigl||X|-n/2\bigr|\le\sqrt d,
-$$
+```
 
 and
 
-$$
+```math
 e(Y)\le |X||Y|-e\le d.
-$$
+```
 
 The number of missing `X x Y` pairs is consequently
 
-$$
+```math
 |X||Y|-e(X,Y)
 =|X||Y|-e+e(Y)
 \le2d.
-$$
+```
 
 These constants are exact.
 
@@ -101,11 +101,11 @@ For three atom windows, every same-window `X x Y` pair is missing because projec
 window diameter is below `pi/3`. Thus each window's minority shore population is at
 most `sqrt(2 delta)D`. After deleting the three minorities, each shore retains at least
 
-$$
+```math
 L_*D,
 \qquad
 L_*={M\over2}-(1+3\sqrt2)\sqrt\delta.
-$$
+```
 
 With at most three nonempty assigned windows spread over two nonempty shores, one shore
 has a single window of mass at least `L_*`, and the other has a window of mass at least
@@ -116,17 +116,17 @@ has a single window of mass at least `L_*`, and the other has a window of mass a
 For total absolute atomic mass `A=x sigma`, orbit masses `M_r`, crossing masses `E_r`,
 and orbit deficits `delta_r=M_r^2/4-E_r`,
 
-$$
+```math
 {A^2\over4}-s_2^2
 ={A^2-\sum_rM_r^2\over4}+\sum_r\delta_r.
-$$
+```
 
 Every term on the right is nonnegative. Hence every orbit deficit is bounded by the
 total scalar deficit. Also, if `M=max M_r`,
 
-$$
+```math
 MA\ge\sum_rM_r^2\ge4s_2^2,
-$$
+```
 
 so `M>=4s_2^2/A`. No compactness or atomic-mass semicontinuity enters this step.
 
@@ -134,68 +134,68 @@ so `M>=4s_2^2/A`. No compactness or atomic-mass semicontinuity enters this step.
 
 Assume
 
-$$
+```math
 A\le2s_2+10^{-4}.
-$$
+```
 
 Using only `0.95<s_2<0.96`,
 
-$$
+```math
 G={A^2\over4}-s_2^2<10^{-4},
-$$
+```
 
 hence `delta<10^-4`, `sqrt(delta)<0.01`, and
 
-$$
+```math
 M>2s_2-10^{-4}>1.8999.
-$$
+```
 
 Since `1+3sqrt(2)<5.245`,
 
-$$
+```math
 L_*>0.94995-0.05245=0.8975.
-$$
+```
 
 Thus the chosen atom families can be labeled so that
 
-$$
+```math
 a\ge0.8975,
 \qquad b\ge0.44875,
 \qquad a,b<1.9201.
-$$
+```
 
 Consequently
 
-$$
+```math
 \sqrt{a/b}<2.07,
 \qquad
 \sqrt{b/a}<1.464,
 \qquad
 \sqrt{a/b}+\sqrt{b/a}<4.
-$$
+```
 
 With `rho<=2delta<2e-4`, `sqrt(rho)<0.01415`. The common-neighbor hypotheses are not
 close:
 
-$$
+```math
 \sqrt\rho(\sqrt{a/b}+4)<0.086<0.8975\le a,
-$$
+```
 
-$$
+```math
 \sqrt\rho(\sqrt{b/a}+4)<0.078<0.44875\le b.
-$$
+```
 
 The quantitative robust-grid bound therefore gives
 
-$$
+```math
 a+b<1.155+8(0.01415)=1.2682,
-$$
+```
 
 whereas the near-Mantel extraction gives
 
-$$
+```math
 a+b\ge{3\over2}L_*>1.34625.
-$$
+```
 
 The contradiction margin exceeds `0.078` even under these coarse bounds.
 
@@ -215,9 +215,9 @@ not resurrect the rejected semicontinuity argument from the §164 regression.
 
 With `x sigma > 2s_2+10^-4`, the §142 relation
 
-$$
+```math
 q/T\le2(1-\sigma)
-$$
+```
 
 gives the displayed `10^-4` improvement in `(T-q/2)/D`. The exact ledger
 `T-q=2f-k` gives the same improvement in the defect floor. Repeating §146 algebra adds

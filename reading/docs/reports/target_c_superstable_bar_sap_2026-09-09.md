@@ -33,32 +33,32 @@ source as ZR and ZF. Let `V` be the `v` vertices of the nonisolated contact core
 `C` be the full unit-contact graph on that core, and let `H` be the full actual
 diameter graph. Choose the relative-interior normalized KKT stress. Thus
 
-$$
+```math
 \alpha_e>0\quad(e\in C),\qquad
 \beta_h>0\quad(h\in H),
-$$
+```
 
 and
 
-$$
+```math
 \Omega=L_C(\alpha)-L_H(\beta)\succeq0.
 \tag{U1}
-$$
+```
 
 ZR gives
 
-$$
+```math
 \ker\Omega=\operatorname{span}\{\mathbf 1,P_x,P_y\},
 \qquad
 \operatorname{rank}\Omega=v-3.
 \tag{U2}
-$$
+```
 
 ZF proves that the ordinary bar framework whose edge set is
 
-$$
+```math
 E:=C\cup H
-$$
+```
 
 is infinitesimally rigid in the plane, so its bar rigidity matrix has rank
 `2v-3`.
@@ -79,11 +79,11 @@ sign restriction. By (U2), the stress matrix is PSD of maximal planar rank `v-3`
 It remains to check the conic-at-infinity condition. If a nonzero symmetric `2 x 2`
 matrix `S` satisfied
 
-$$
+```math
 (p_i-p_j)^T S(p_i-p_j)=0
 \qquad(ij\in E),
 \tag{U3}
-$$
+```
 
 then the affine velocity field `u_i=S p_i` (or, equivalently, a suitable nonzero
 linear field obtained from `S`) would have zero first variation on every bar. This is
@@ -102,9 +102,9 @@ all edges of `C union H`, then it is congruent to the source core.
 This is stronger than ZF's infinitesimal equality-bar rigidity, but it does **not**
 say that every configuration satisfying
 
-$$
+```math
 |ij|\ge1\ (ij\in C),\qquad |hk|\le D\ (hk\in H)
-$$
+```
 
 is congruent.
 
@@ -121,10 +121,10 @@ With the weighted-Laplacian convention used by Oba--Tanigawa and Connelly, a pro
 stress is nonnegative on cables and nonpositive on struts. Our KKT/bar weights are
 instead
 
-$$
+```math
 \omega_e=+\alpha_e>0\quad(e\in C),\qquad
 \omega_h=-\beta_h<0\quad(h\in H),
-$$
+```
 
 the opposite signs. Hence this stress is strictly *anti-proper* for the actual
 packing inequalities.
@@ -142,21 +142,21 @@ The valid implication is only the equality-bar statement in Theorem U1.
 
 Let `P` be the `v x 3` affine-coordinate matrix whose `i`th row is
 
-$$
+```math
 \widehat p_i^T=(1,p_{i,x},p_{i,y}).
-$$
+```
 
 Then (U2) says `ker Omega = col(P)`.
 
 Recall the SAP condition for a symmetric matrix with support graph `G=(V,E)`: if a
 symmetric matrix `X` satisfies
 
-$$
+```math
 \Omega X=0,
 \qquad X_{ii}=0,
 \qquad X_{ij}=0\quad(ij\in E),
 \tag{U4}
-$$
+```
 
 then `X=0`.
 
@@ -170,39 +170,39 @@ support graph `G=(V,C union H)`.
 Assume (U4). Since every column of `X` lies in `ker Omega=col(P)` and `X` is
 symmetric, there is a symmetric `3 x 3` matrix `A` such that
 
-$$
+```math
 X=PAP^T.
 \tag{U5}
-$$
+```
 
 One direct construction is to let `L=(P^TP)^{-1}P^T` and put `A=LXL^T`; symmetry of
 `X` and the fact that both its row and column spaces lie in `col(P)` give (U5).
 
 Write
 
-$$
+```math
 A=\begin{pmatrix}a&b^T\\ b&Q\end{pmatrix},
-$$
+```
 
 where `Q` is symmetric `2 x 2`. For an edge `ij in E`, the diagonal and edge zeros in
 (U4) imply
 
-$$
+```math
 0=X_{ii}+X_{jj}-2X_{ij}
 =(p_i-p_j)^TQ(p_i-p_j).
 \tag{U6}
-$$
+```
 
 Thus all mixed-framework edge directions lie on the conic at infinity defined by
 `Q`. ZF infinitesimal rigidity forces `Q=0`.
 
 Now the diagonal condition becomes
 
-$$
+```math
 0=X_{ii}=a+2b\cdot p_i
 \qquad(i\in V).
 \tag{U7}
-$$
+```
 
 The core affinely spans the plane because it contains a two-dimensional force hull.
 Hence the affine function in (U7) vanishes identically, so `a=0` and `b=0`. Therefore
@@ -217,20 +217,20 @@ Define a signed graph `(G,Sigma)` on the mixed support by declaring
 
 Because `D>1`, `C` and `H` are disjoint. Off diagonal,
 
-$$
+```math
 \Omega_{ij}<0\quad(ij\in C),
 \qquad
 \Omega_{ij}>0\quad(ij\in H),
-$$
+```
 
 so `Omega` belongs to the signed matrix class `S(G,Sigma)` of
 Arav--Hall--Li--van der Holst. It is PSD, has SAP by U2, and has nullity three by ZR.
 Therefore
 
-$$
+```math
 \boxed{\nu(G,\Sigma)\ge3.}
 \tag{U8}
-$$
+```
 
 Their exact excluded-minor theorem says a signed graph has `nu<=2` iff it has no
 minor isomorphic to either
@@ -245,10 +245,10 @@ Taking the contrapositive gives:
 
 The mixed contact/diameter signed support graph contains a signed minor isomorphic to
 
-$$
+```math
 \boxed{K_4^o\quad\text{or}\quad K_3^=.}
 \tag{U9}
-$$
+```
 
 This is an exact topological consequence of ZR/ZF. It is not yet a geometric
 contradiction: signed contractions/switchings do not preserve the literal distinction
@@ -271,9 +271,9 @@ Neither source contains an Erdős #99 packing theorem.
 
 The direct closing inequality remains
 
-$$
+```math
  b+\sum_F(\deg F-4)>2h.
-$$
+```
 
 U1/U2 add two pieces of structure that were not previously recorded:
 

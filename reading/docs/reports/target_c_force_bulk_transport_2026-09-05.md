@@ -54,36 +54,36 @@ vertex lemma; it does not apply in C-I, where C_+ may differ from C.
 ## Combined C49 consequence
 
 Insert (FB1) into the refined C49 capacity estimate
-$$
+```math
 m\le \frac{\pi}{2\sqrt3}D^2-\frac{2}{\sqrt3}G+7q+O(1),
-$$
-and use $q\le\pi D$. Every C-II survivor therefore obeys
-$$
+```
+and use $`q\le\pi D`$. Every C-II survivor therefore obeys
+```math
 n\le \frac{\pi}{2\sqrt3}D^2-\frac{2}{\sqrt3}G+8\pi D+O(1).
 \tag{FB2}
-$$
+```
 Since the translated triangular-lattice comparison gives
-$n>D^2/c$ with $c=2\sqrt3/\pi$, the quadratic terms cancel and (FB2)
+$`n>D^2/c`$ with $`c=2\sqrt3/\pi`$, the quadratic terms cancel and (FB2)
 forces
-$$
+```math
 G<4\sqrt3\,\pi D+O(1).
 \tag{FB3}
-$$
+```
 Thus the remaining C-II problem is exactly a linear area-gap problem: any
-uniform lower bound for $G$ exceeding the explicit coefficient in (FB3), or
+uniform lower bound for $`G`$ exceeding the explicit coefficient in (FB3), or
 an independent strict response defect, would finish the branch.
 
-The endpoint bookkeeping can be sharpened. The $q=|B_+|$ nonisolated diameter
-endpoints and the $n-m$ isolated diameter endpoints are disjoint vertices of
+The endpoint bookkeeping can be sharpened. The $`q=|B_+|`$ nonisolated diameter
+endpoints and the $`n-m`$ isolated diameter endpoints are disjoint vertices of
 the same convex hull. Therefore
-$$
+```math
 (n-m)+q\le |Q|\le\pi D.
 \tag{FB4}
-$$
-Replacing $n-m\le\pi D$ by (FB4) in C49 lowers the linear error to $7\pi D$
+```
+Replacing $`n-m\le\pi D`$ by (FB4) in C49 lowers the linear error to $`7\pi D`$
 and gives
-$$
+```math
 G<\frac72\sqrt3\,\pi D+O(1).
 \tag{FB5}
-$$
+```
 This remains a linear bound, so it still does not close C-II.

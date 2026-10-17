@@ -44,26 +44,26 @@ The global Target C proof must use information beyond the isolated shell equalit
 
 Take
 
-$$
+```math
 q=13,
 \qquad
 m=q-2=11.
-$$
+```
 
 Use the two fixed defect-adjacent full signs
 
-$$
+```math
 +,-
-$$
+```
 
 and the ordinary SI/SC sign word
 
-$$
+```math
 \boxed{
 (-,+,-,-,+,+,+,-,-,+,-).
 }
 \tag{R13.1}
-$$
+```
 
 The ordinary word is palindromic, so the centered-real SC equation is automatic for every real `delta`.
 
@@ -75,97 +75,97 @@ Its positive-sign run structure gives a canonical antipodal odd-cycle length sev
 
 Insert (R13.1) into the SI subset-product equation.  After removing a trivial factor `Z`, the resulting reciprocal polynomial is
 
-$$
+```math
 \begin{aligned}
 J(Z)=\;&Z^{20}-2Z^{19}+2Z^{18}-2Z^{16}+2Z^{15}-Z^{14}+Z^{13}-Z^{12}\\
 &-2Z^{11}+5Z^{10}-2Z^9-Z^8+Z^7-Z^6+2Z^5-2Z^4+2Z^2-2Z+1.
 \end{aligned}
 \tag{R13.2}
-$$
+```
 
 It is reciprocal of degree twenty.  Writing
 
-$$
+```math
 T=Z+Z^{-1}
-$$
+```
 
 gives the exact trace polynomial
 
-$$
+```math
 \boxed{
 \begin{aligned}
 H(T)=\;&T^{10}-2T^9-8T^8+18T^7+17T^6-52T^5+T^4\\
 &+51T^3-22T^2-13T+11.
 \end{aligned}}
 \tag{R13.3}
-$$
+```
 
 The relevant real root is
 
-$$
+```math
 \boxed{
 T_*=1.94199413054336852922749320256483167619\ldots
 }
 \tag{R13.4}
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 \delta_*=\arccos(T_*/2)
 =0.24143000751202257239399313530418313626\ldots .
 }
 \tag{R13.5}
-$$
+```
 
 For `q=13`, the strict S1 interval is
 
-$$
+```math
 \delta_{P1}<\delta<\frac\pi{13},
-$$
+```
 
 where numerically
 
-$$
+```math
 \delta_{P1}=0.2413833791241437\ldots,
 \qquad
 \frac\pi{13}=0.2416609733530610\ldots .
-$$
+```
 
 Thus (R13.5) lies strictly inside the S1 interval, not at either P1 or Reinhardt boundary.
 
 The associated exact D1 quantities are
 
-$$
+```math
 D=4.15206390869976241099491081968056393\ldots,
 \tag{R13.6}
-$$
+```
 
-$$
+```math
 G=\pi-m\delta
 =0.485862570957544942128718894933488385\ldots,
 \tag{R13.7}
-$$
+```
 
-$$
+```math
 \tau
 =0.0990340932801865191022759741709044905\ldots,
 \tag{R13.8}
-$$
+```
 
 and the canonical short antipodal edge has length
 
-$$
+```math
 |g|=4.07964378821875417587381298479031122\ldots<D.
 \tag{R13.9}
-$$
+```
 
 The short edge is also strictly above the P1 tie length:
 
-$$
+```math
 |g|>\sqrt{D^2-1}.
-$$
+```
 
 So this is genuinely S1.
 
@@ -175,24 +175,24 @@ So this is genuinely S1.
 
 Use the D1/SC projective half-edge directions
 
-$$
+```math
 \theta_0=-\tau/2,
 \qquad
 \theta_1=\tau/2,
-$$
+```
 
 and, for `0<=k<=10`,
 
-$$
+```math
 \theta_{k+2}
 =\frac\pi2+(k-5)\delta.
-$$
+```
 
 Multiply these thirteen unit directions by the full signs
 
-$$
+```math
 (+,-,-,+,-,-,+,+,+,-,-,+,-),
-$$
+```
 
 sort the resulting oriented side vectors cyclically, and take cumulative sums.
 
@@ -200,13 +200,13 @@ The closure residual at 50-digit evaluation is below `10^-45`; the double-precis
 
 The reconstructed polygon is strictly convex.  Direct distance classification gives exactly the cycle contacts
 
-$$
+```math
 (0,1),(1,2),\ldots,(11,12),(12,0)
-$$
+```
 
 at length one and exactly the following twelve diameter pairs:
 
-$$
+```math
 \boxed{
 \begin{array}{llll}
 (0,6),&(0,7),&(1,7),&(1,8),\\
@@ -214,16 +214,16 @@ $$
 (4,10),&(4,11),&(5,11),&(5,12).
 \end{array}}
 \tag{R13.10}
-$$
+```
 
 Every other pair lies strictly between one and `D` at the numerical certificate precision.
 
 The graph in (R13.10) is a spanning tree on thirteen vertices.  Its degree sequence in shell order is
 
-$$
+```math
 (2,3,1,1,3,2,1,2,1,4,1,2,1).
 \tag{R13.11}
-$$
+```
 
 Thus it is an honest `d_H=1` diameter tree, not a hidden unicyclic or disconnected case.
 
@@ -235,30 +235,30 @@ Form the ordinary planar bar-rigidity matrix with the 13 cycle contacts followed
 
 Numerically,
 
-$$
+```math
 \boxed{\operatorname{rank}R=23=2q-3.}
 \tag{R13.12}
-$$
+```
 
 There are 25 mixed rows, so the self-stress space has dimension two.
 
 Use the Target C sign convention
 
-$$
+```math
 \omega=(\alpha,-\beta),
-$$
+```
 
 where `alpha` is positive on contacts and `beta` positive on diameter constraints.  The self-stress plane intersects this sign orthant in a nondegenerate cone.  Normalizing
 
-$$
+```math
 \sum_h\beta_h=1
-$$
+```
 
 gives a line segment.
 
 A symmetric interior point of that segment has contact weights
 
-$$
+```math
 \begin{aligned}
 \alpha\approx(&1.2849780367,
 1.2480632991,
@@ -275,11 +275,11 @@ $$
 1.3639305825),
 \end{aligned}
 \tag{R13.13}
-$$
+```
 
 and diameter weights, in the order (R13.10),
 
-$$
+```math
 \begin{aligned}
 \beta\approx(&0.1022450943,
 0.1051513978,
@@ -295,7 +295,7 @@ $$
 0.1022450943).
 \end{aligned}
 \tag{R13.14}
-$$
+```
 
 All coefficients are well separated from zero.  In particular this is not a near-boundary numerical artifact.
 
@@ -305,15 +305,15 @@ All coefficients are well separated from zero.  In particular this is not a near
 
 Let
 
-$$
+```math
 \Omega=L_C(\alpha)-L_H(\beta)
-$$
+```
 
 be the Target C stress matrix of the interior normalized stress.
 
 Its eigenvalues are numerically
 
-$$
+```math
 \begin{aligned}
 &-1.1\times10^{-15},\quad
 1.3\times10^{-16},\quad
@@ -330,14 +330,14 @@ $$
 5.2174739221.
 \end{aligned}
 \tag{R13.15}
-$$
+```
 
 Thus, at numerical precision,
 
-$$
+```math
 \boxed{\Omega\succeq0,\qquad \operatorname{rank}\Omega=10=q-3.}
 \tag{R13.16}
-$$
+```
 
 The first three values are the affine kernel and are at floating-point roundoff scale; the positive spectrum has a gap above `1.10`.
 
@@ -347,51 +347,51 @@ The first three values are the affine kernel and are at floating-point roundoff 
 
 Parameterize the normalized stress line so that the interior midpoint is `t=0`.  The positivity interval is numerically
 
-$$
+```math
 -0.4690501007991555\ldots
 \le t\le
 0.4690501007991708\ldots .
 \tag{R13.17}
-$$
+```
 
 At the negative endpoint, exactly the diameter edge
 
-$$
+```math
 \boxed{(1,7)}
-$$
+```
 
 has zero beta coefficient.  At the positive endpoint, exactly
 
-$$
+```math
 \boxed{(4,11)}
-$$
+```
 
 has zero beta coefficient.
 
 All contact coefficients remain at least
 
-$$
+```math
 1.1529\ldots>0,
-$$
+```
 
 and all other diameter coefficients remain positive, with the smallest nonzero endpoint beta above
 
-$$
+```math
 0.0160.
-$$
+```
 
 At both endpoints the smallest positive stress-matrix eigenvalue is
 
-$$
+```math
 1.0508556\ldots,
-$$
+```
 
 while the three affine eigenvalues remain at roundoff scale.  Hence both endpoints satisfy the same numerical PSD/rank pattern
 
-$$
+```math
 \boxed{\Omega_{\pm}\succeq0,\qquad\operatorname{rank}\Omega_{\pm}=q-3.}
 \tag{R13.18}
-$$
+```
 
 Because the stress matrix depends affinely on the normalized stress parameter and the PSD cone is convex, the entire normalized KKT segment is numerically PSD once the endpoint certification is accepted.
 

@@ -28,149 +28,149 @@ without assuming that a loaded interior point has contact degree at least three.
 
 ### Repaired GS
 
-Let $A$ be the selected C-II source, let $G$ be its full nonisolated
-unit-contact core, and let $H$ be the full actual diameter graph. Use the
+Let $`A`$ be the selected C-II source, let $`G`$ be its full nonisolated
+unit-contact core, and let $`H`$ be the full actual diameter graph. Use the
 [C65](../targets/target-c/21-full-diameter-visibility-frontier.md) full-support
-representative: every edge of $H$ has positive diameter coefficient, every
+representative: every edge of $`H`$ has positive diameter coefficient, every
 diameter endpoint lies in the unique nontrivial positive
 contact component, and therefore no contact-isolated source point is a
-diameter endpoint. Also use $H=H_*$. For $z\in V(G)$, form $J_z$ by contracting the
-contact components of $G-z$, retaining every diameter edge between the
+diameter endpoint. Also use $`H=H_*`$. For $`z\in V(G)`$, form $`J_z`$ by contracting the
+contact components of $`G-z`$, retaining every diameter edge between the
 components and retaining internal diameter edges as loops.
 
-Then no connected component of $J_z$ is bipartite. This includes the case
-where $z$ is loaded and includes contact-isolated points elsewhere in $A$.
+Then no connected component of $`J_z`$ is bipartite. This includes the case
+where $`z`$ is loaded and includes contact-isolated points elsewhere in $`A`$.
 
 The assertion is a theorem about the selected source, not a claim about an
 arbitrary stress support.
 
 ## 2. Grounding and sign conjugation
 
-Translate $p_z$ to $0$. Let $T$ be a connected bipartite component of
-$J_z$, and let $U$ be the union of the corresponding contact components of
-$G-z$. Since $T$ has no loop, there is no diameter edge internal to one
-contact component in $U$. Since $T$ is a component of $J_z$, there is no
-diameter edge from $U$ to a different contact component of $G-z$. C65 also
-rules out a diameter edge from $U$ to a contact-isolated source point.
+Translate $`p_z`$ to $`0`$. Let $`T`$ be a connected bipartite component of
+$`J_z`$, and let $`U`$ be the union of the corresponding contact components of
+$`G-z`$. Since $`T`$ has no loop, there is no diameter edge internal to one
+contact component in $`U`$. Since $`T`$ is a component of $`J_z`$, there is no
+diameter edge from $`U`$ to a different contact component of $`G-z`$. C65 also
+rules out a diameter edge from $`U`$ to a contact-isolated source point.
 
-Give the contact components in $T$ the signs of a bipartition, and let $E$
+Give the contact components in $`T`$ the signs of a bipartition, and let $`E`$
 be the diagonal matrix carrying that sign on each component. In
-$\Omega_{UU}$, contact off-diagonal entries are negative and diameter
-off-diagonal entries are positive. After conjugation by $E$, all off-diagonal
+$`\Omega_{UU}`$, contact off-diagonal entries are negative and diameter
+off-diagonal entries are positive. After conjugation by $`E`$, all off-diagonal
 entries are nonpositive. The negative-entry graph is connected: contact edges
-connect each contact component, and the diameter edges of $T$ connect the
+connect each contact component, and the diameter edges of $`T`$ connect the
 components.
 
-The two coordinate columns restricted to $U$ are in the kernel of
-$\Omega_{UU}$. This is the grounded affine-kernel identity: the only omitted
-coordinate is the coordinate of $z$, which is $0$, and there are no
-diameter edges from $U$ to the omitted components. Conjugation preserves
+The two coordinate columns restricted to $`U`$ are in the kernel of
+$`\Omega_{UU}`$. This is the grounded affine-kernel identity: the only omitted
+coordinate is the coordinate of $`z`$, which is $`0`$, and there are no
+diameter edges from $`U`$ to the omitted components. Conjugation preserves
 positive semidefiniteness and kernel dimension. The irreducible grounded
 M-matrix lemma therefore gives
 
-$$
+```math
 \operatorname{rank}\{(p_i)_{i\in U,x},(p_i)_{i\in U,y}\}\leq 1.
-$$
+```
 
-Thus all points in $U$ lie on one line through $z$.
+Thus all points in $`U`$ lie on one line through $`z`$.
 
 ## 3. The complete collinear classification
 
-Every component of $G-z$ has a contact edge to $z$, since $G$ is
-connected. On the line through $z$, all source points other than $z$ have
-absolute coordinate at least $1$. A contact component therefore lies on one
+Every component of $`G-z`$ has a contact edge to $`z`$, since $`G`$ is
+connected. On the line through $`z`$, all source points other than $`z`$ have
+absolute coordinate at least $`1`$. A contact component therefore lies on one
 ray and is a consecutive unit chain:
 
-$$
+```math
 \{u,2u,\ldots,ru\}
 \quad\text{or}\quad
 \{-u,-2u,\ldots,-su\},
 \qquad |u|=1.
 \tag{3.1}
-$$
+```
 
 There cannot be two different contact components on the same ray. A component
-not containing the point at distance $1$ from $z$ could not be connected to
-$z$ in the contact graph, while a component containing that point contains
+not containing the point at distance $`1`$ from $`z`$ could not be connected to
+$`z`$ in the contact graph, while a component containing that point contains
 every consecutive contact point on the ray.
 
-Consequently $U$ contains at most two contact components, one on each ray.
-Write their lengths as $r$ and $s$, omitting one of them if it is absent.
+Consequently $`U`$ contains at most two contact components, one on each ray.
+Write their lengths as $`r`$ and $`s`$, omitting one of them if it is absent.
 
 ### One ray is impossible
 
-Suppose $U=\{u,2u,\ldots,ru\}$. If $r\geq2$, the point $u$ has contact
-neighbors only $z$ and $2u$. It has no diameter edge to another point of
-$U$, because $T$ has no loop, and no diameter edge to a different
-component of $G-z$, because $T$ is a component of $J_z$. It also cannot
-have a diameter edge to $z$, since $|u-z|=1<D$. Hence $u$ is unloaded
+Suppose $`U=\{u,2u,\ldots,ru\}`$. If $`r\geq2`$, the point $`u`$ has contact
+neighbors only $`z`$ and $`2u`$. It has no diameter edge to another point of
+$`U`$, because $`T`$ has no loop, and no diameter edge to a different
+component of $`G-z`$, because $`T`$ is a component of $`J_z`$. It also cannot
+have a diameter edge to $`z`$, since $`|u-z|=1<D`$. Hence $`u`$ is unloaded
 and has contact degree two, contradicting the full-degree bound for an unloaded
 core vertex.
 
-If $r=1$, the only point of $U$ is $u$. It has no possible diameter
-partner: its distance to $z$ is $1$, and there are no diameter edges to
+If $`r=1`$, the only point of $`U`$ is $`u`$. It has no possible diameter
+partner: its distance to $`z`$ is $`1`$, and there are no diameter edges to
 other components. It is therefore unloaded with contact degree one, the same
 contradiction. Equivalently, its positive contact force cannot be balanced.
 
 ### Two rays with a long chain are impossible
 
 Now suppose
-$$
+```math
 U=\{u,2u,\ldots,ru,-u,-2u,\ldots,-su\}.
-$$
-Because $T$ is connected, at least one diameter edge joins the two rays.
-The greatest distance among points of $U$ is $r+s$, so that edge forces
-$$
+```
+Because $`T`$ is connected, at least one diameter edge joins the two rays.
+The greatest distance among points of $`U`$ is $`r+s`$, so that edge forces
+```math
 D=r+s.
 \tag{3.2}
-$$
-Indeed all source distances are at most $D$, while a diameter edge has
-length $D$, and the largest cross-ray distance is $r+s$.
+```
+Indeed all source distances are at most $`D`$, while a diameter edge has
+length $`D`$, and the largest cross-ray distance is $`r+s`$.
 
 The only possible diameter edge between the two chains is then
-$$
+```math
 ru\;-\;(-su);
 \tag{3.3}
-$$
+```
 all other cross-ray distances are strictly smaller. In particular, if
-$r\geq2$, the first point $u$ has no diameter partner: its farthest
-point in $U$ is $-su$, at distance $1+s<r+s=D$, and it has no
-diameter edge outside $U$. It has exactly the two contacts $z,2u$, so it
+$`r\geq2`$, the first point $`u`$ has no diameter partner: its farthest
+point in $`U`$ is $`-su`$, at distance $`1+s<r+s=D`$, and it has no
+diameter edge outside $`U`$. It has exactly the two contacts $`z,2u`$, so it
 is an unloaded degree-two core vertex, a contradiction. The same argument
-applies to $-u$ when $s\geq2$.
+applies to $`-u`$ when $`s\geq2`$.
 
-Thus $r=s=1$. We have exactly
-$$
+Thus $`r=s=1`$. We have exactly
+```math
 u=z+a,\qquad v=z-a,\qquad |a|=1,
 \tag{3.4}
-$$
-and $D=2$. The only diameter edge incident to either $u$ or $v$ is
-$uv$. This also covers the case that $z$ itself is diameter-loaded:
-$u$ and $v$ have no diameter edge to $z$, and the definition of the
-component $T$ excludes all other diameter partners.
+```
+and $`D=2`$. The only diameter edge incident to either $`u`$ or $`v`$ is
+$`uv`$. This also covers the case that $`z`$ itself is diameter-loaded:
+$`u`$ and $`v`$ have no diameter edge to $`z`$, and the definition of the
+component $`T`$ excludes all other diameter partners.
 
 ## 4. The finite release
 
-Rotate $u$ about $z$ through a sufficiently small nonzero angle $t$, and
+Rotate $`u`$ about $`z`$ through a sufficiently small nonzero angle $`t`$, and
 fix every other source point, including every contact-isolated point. The
-contact $uz$ remains of length one. Since $u$ has no other contact, all
-other distances from $u$ were strictly between $1$ and $2$, except for
-$$
+contact $`uz`$ remains of length one. Since $`u`$ has no other contact, all
+other distances from $`u`$ were strictly between $`1`$ and $`2`$, except for
+```math
 |u-v|=2.
-$$
+```
 Finiteness gives a positive margin for all those strict inequalities. For small
-$t$,
-$$
+$`t`$,
+```math
 1<|u(t)-v|=2|\cos(t/2)|<2,
-$$
+```
 and all other inequalities remain strict. Hence the contact graph is unchanged,
-the diameter graph loses exactly the edge $uv$, and no new contact or
+the diameter graph loses exactly the edge $`uv`$, and no new contact or
 diameter edge is created.
 
-If another diameter edge exists elsewhere, the diameter remains $2$ and the
+If another diameter edge exists elsewhere, the diameter remains $`2`$ and the
 secondary diameter-pair count decreases, contradicting the selected source. If
 no other diameter edge exists, every remaining pair is strictly shorter than
-$2$, so the same motion decreases the diameter, contradicting global
+$`2`$, so the same motion decreases the diameter, contradicting global
 minimality. Both cases are impossible.
 
 This proves repaired GS.
@@ -179,13 +179,13 @@ This proves repaired GS.
 
 - **Loaded interior chain vertex:** not discarded. The proof uses the first
   point of a long ray, whose diameter status is checked by the exact maximum
-  distance $r+s$; it does not apply C26 to an arbitrary interior loaded
+  distance $`r+s`$; it does not apply C26 to an arbitrary interior loaded
   point.
-- **Loaded $z$:** allowed. Diameter edges incident to $z$ remain in the
+- **Loaded $`z`$:** allowed. Diameter edges incident to $`z`$ remain in the
   grounded diagonal, and the final two-point case has no such edge because
-  both distances to $z$ are one.
+  both distances to $`z`$ are one.
 - **Repeated outer-walk edges and shared diameter endpoints:** irrelevant to
-  the grounded calculation; $J_z$ retains parallel interactions and the
+  the grounded calculation; $`J_z`$ retains parallel interactions and the
   argument only uses the connected component containing the chosen bipartite
   block.
 - **Exceptional faces:** no outer-face or disk train is used.
@@ -193,7 +193,7 @@ This proves repaired GS.
   endpoints, so the quotient has no omitted diameter edge to an isolate.
   During the release they are fixed; a unit distance would put one in the
   same contact core, and all their distances from the moving point are
-  strictly below $D=2$.
+  strictly below $`D=2`$.
 - **Odd shells:** an odd shell has an internal diameter interaction after
   deletion of any shell vertex, so this argument does not exclude it by
   falsely calling its quotient bipartite.
@@ -207,6 +207,6 @@ common bridge-block hub is unloaded, has three to five contact components, and
 its connected diameter-interaction quotient contains a 3- or 5-cycle.
 
 This repair does not exclude that odd interaction junction, a nontrivial common
-bridge block, the $s_Z>0$ branch, or the high-surplus cyclic and forest
-$s_Z=0$ branches. It is therefore a theorem-level repair of one structural
+bridge block, the $`s_Z>0`$ branch, or the high-surplus cyclic and forest
+$`s_Z=0`$ branches. It is therefore a theorem-level repair of one structural
 obstruction, not a settlement of C-II or of Erdős Problem #99.

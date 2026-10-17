@@ -21,96 +21,96 @@ network is squeezed into a narrow linear band.
 
 Put
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},\qquad
 s=\sqrt{\Delta_2},\qquad
 C_0=2s+0.00042,
-$$
+```
 
 and on a convergent Type-II subsequence write
 
-$$
+```math
 t={q-k\over D},\quad
 \kappa={k\over D},\quad
 \delta={b-P_F\over D},\quad
 \varphi={f\over D},\quad
 \chi={Q\over D}.
-$$
+```
 
 The proof-only AG42 input and audited §171 give
 
-$$
+```math
 C\ge C_0,
 \tag{NS.1}
-$$
+```
 
-$$
+```math
 C\le {9t\over2}-2\pi-2\delta-{\kappa\over2}.
 \tag{NS.2}
-$$
+```
 
 The exact identities are
 
-$$
+```math
 \chi=2t-\pi-\delta,
 \qquad
 C={t\over2}+2\varphi-{\kappa\over2}.
 \tag{NS.3}
-$$
+```
 
 ## 1. Tiny outer-detour and topology budget
 
 Define
 
-$$
+```math
 R(t):={9\over2}t-2\pi-C_0.
 \tag{NS.4}
-$$
+```
 
 Equations (NS.1)--(NS.2) give the exact asymptotic necessary condition
 
-$$
+```math
 \boxed{2\delta+{\kappa\over2}\le R(t).}
 \tag{NS.5}
-$$
+```
 
 Hence separately
 
-$$
+```math
 \boxed{
 0\le\delta\le {R(t)\over2},
 \qquad
 0\le\kappa\le2R(t).
 }
 \tag{NS.6}
-$$
+```
 
 Let
 
-$$
+```math
 C_{146}={4\over9}(\pi+s),
 \qquad
 t_{42}=C_{146}+0.0013751
 =1.8208886379794447\ldots .
-$$
+```
 
 Since `(9/2)C146-2pi=2s`,
 
-$$
+```math
 R(t_{42})={9\over2}(0.0013751)-0.00042=0.00576795.
-$$
+```
 
 Therefore at the current floor profile
 
-$$
+```math
 \boxed{\delta\le0.002883975+o(1),}
 \tag{NS.7}
-$$
+```
 
-$$
+```math
 \boxed{{d_H+s_Z\over D}=\kappa\le0.0115359+o(1).}
 \tag{NS.8}
-$$
+```
 
 Thus both the Woodall deficiency `d_H` and the mixed-rigidity surplus `s_Z` are at
 most `0.0115359D+o(D)`.
@@ -119,31 +119,31 @@ most `0.0115359D+o(D)`.
 
 The exact identities
 
-$$
+```math
 q=(t+\kappa)D,
 \qquad
 h=q-d_H=tD+s_Z
 \tag{NS.9}
-$$
+```
 
 show that the smallest possible normalized edge/vertex density at fixed `t,kappa`
 occurs for `s_Z=0`, `d_H=k`.  Hence
 
-$$
+```math
 \boxed{
 {h\over q}\ge {t\over t+\kappa}+o(1).
 }
 \tag{NS.10}
-$$
+```
 
 At `t=t42`, (NS.8) gives
 
-$$
+```math
 \boxed{
 {h\over q}\ge0.9937045702232735\ldots-o(1).
 }
 \tag{NS.11}
-$$
+```
 
 Canonical Woodall topology now makes this metric count structural.
 
@@ -153,20 +153,20 @@ Canonical Woodall topology now makes this metric count structural.
 
 In the forest branch, using `q>=tD` and `d_H<=k`, the average component size satisfies
 
-$$
+```math
 {q\over d_H}
 \ge {t\over\kappa}+o(1).
 \tag{NS.12}
-$$
+```
 
 At the current floor this gives
 
-$$
+```math
 \boxed{
 {q\over d_H}\ge157.8453903015\ldots-o(1)
 }
 \tag{NS.13}
-$$
+```
 
 whenever the forest branch is present.  Thus the low-`t` forest cannot be a sea of
 small matching-like diameter components.
@@ -176,30 +176,30 @@ small matching-like diameter components.
 Let `P_5` be the set of pentagonal bounded exceptional contact faces and `p_5=|P_5|`.
 The preceding low-`t` theorem gives at `t=t42`
 
-$$
+```math
 {p_5\over D}\ge
 0.4944166723690961\ldots-o(1).
 \tag{NS.14}
-$$
+```
 
 For any face set `S`, audited §156 gives
 
-$$
+```math
 \operatorname{rank}C_S\ge2|S|-\sigma_C,
 \qquad
 \sigma_C\le s_Z.
 \tag{NS.15}
-$$
+```
 
 Apply this to `P_5` and use (NS.8):
 
-$$
+```math
 \boxed{
 {\operatorname{rank}C_{P_5}\over D}
 \ge0.9772974447381923\ldots-o(1).
 }
 \tag{NS.16}
-$$
+```
 
 So the pentagon sea is not an incidence-only artifact.  Its train-angle closure rows
 carry almost one full scalar rank per unit diameter, even after allowing the entire
@@ -209,34 +209,34 @@ pure-contact stress corank.
 
 For every exceptional face of degree `d>=6`,
 
-$$
+```math
 d\le6(d-5).
-$$
+```
 
 Therefore the total number `B_{>=6}` of stopped-train terminal occurrences on
 nonpentagonal bounded faces satisfies
 
-$$
+```math
 B_{\ge6}
 \le6\sum_{\deg F\ge6}(\deg F-5)
 =6(Q-f).
 \tag{NS.17}
-$$
+```
 
 At `t=t42`, the low-`t` theorem gives
 
-$$
+```math
 {Q-f\over D}\le0.002883975+o(1),
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{
 {B_{\ge6}\over D}\le0.01730385+o(1).
 }
 \tag{NS.18}
-$$
+```
 
 Thus essentially all bounded stopping-face endpoint mass is carried by actual
 pentagons.
@@ -245,19 +245,19 @@ Each pentagon has five terminal face-side occurrences.  A stopped train has exac
 two terminal occurrences in total.  Hence the number `N_5` of distinct complete
 stopped trains touching at least one pentagon obeys
 
-$$
+```math
 N_5\ge {5p_5\over2}.
 \tag{NS.19}
-$$
+```
 
 At the current floor,
 
-$$
+```math
 \boxed{
 {N_5\over D}\ge1.2360416809227404\ldots-o(1).
 }
 \tag{NS.20}
-$$
+```
 
 This count is independent of the closure-rank estimate (NS.16).
 
@@ -265,66 +265,66 @@ This count is independent of the closure-rank estimate (NS.16).
 
 Let
 
-$$
+```math
 B:=Q+4f
-$$
+```
 
 be the total bounded-face terminal occurrence count.  Since `Q>=f`,
 
-$$
+```math
 B\ge5f.
 \tag{NS.21}
-$$
+```
 
 The low-`t` theorem gives
 
-$$
+```math
 {f\over D}\ge {C_0\over2}-{t\over4}+o(1),
-$$
+```
 
 while audited §171 gives
 
-$$
+```math
 {B\over D}\le10t-5\pi-5\delta.
 \tag{NS.22}
-$$
+```
 
 At `t=t42` this yields
 
-$$
+```math
 \boxed{
 2.4865032368454808\ldots
 \le {B\over D}
 \le2.5009231118454808\ldots
 }
 \tag{NS.23}
-$$
+```
 
 up to `o(1)` errors.
 
 The outer occurrence count satisfies
 
-$$
+```math
 {b\over D}=\pi+\delta,
-$$
+```
 
 and every complete stopped train has two terminal occurrences, so
 
-$$
+```math
 2T=b+B.
 \tag{NS.24}
-$$
+```
 
 Using (NS.7), (NS.21), and (NS.22),
 
-$$
+```math
 \boxed{
 2.8140479452176370\ldots
 \le {T\over D}
 \le2.8212578827176370\ldots
 }
 \tag{NS.25}
-$$
+```
 
 at the current floor profile.  The width of this admissible train-count band is only
 about `0.00721D`.
@@ -334,39 +334,39 @@ about `0.00721D`.
 On the narrower repaired Section-118/common-cap profile, the proof-only local
 area-slack/detour theorem gives
 
-$$
+```math
 {F_{loc}\over D}
 \ge {A_{DF}-6t-2\kappa\over4}-o(1),
-$$
+```
 
-$$
+```math
 {|N(S_D)|\over D}
 \ge {A_{DF}\over2}-3t-2\kappa-o(1),
-$$
+```
 
 where `A_DF=12.19736577709914...`.
 
 At `t=t42`, using the worst allowed `kappa=0.0115359`, this becomes
 
-$$
+```math
 \boxed{{F_{loc}\over D}\ge0.3122405373056179\ldots-o(1),}
 \tag{NS.26}
-$$
+```
 
-$$
+```math
 \boxed{{|N(S_D)|\over D}\ge0.6129451746112358\ldots-o(1).}
 \tag{NS.27}
-$$
+```
 
 Since globally at most `0.002883975D+o(D)` exceptional faces can be nonpentagonal,
 at least
 
-$$
+```math
 \boxed{
 0.3093565623056179\ldots D-o(D)
 }
 \tag{NS.28}
-$$
+```
 
 of these local harmonic-cell exceptional faces are pentagons.
 

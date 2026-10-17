@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_common_lower_run_trunk_cycle_fork_2026-09-17.md) · source SHA-256 `252d8172a1eb2fc04a0540802bebea851d4c039977a6b685856486f32cb0223d`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "fd55c330279b781ecab3c028fd0ff2bf4cfcf84f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_common_lower_run_trunk_cycle_fork_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a362b3c63f102f4c938baca0c65cf604f566380c5438693fe898622f444aaa9e"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -18,31 +20,31 @@ The small-external theorem reduces a residual multi-module FREE survivor to two 
 
 Let
 
-$$
+```math
 P:=R_i,
 \qquad
 Q:=R_j
-$$
+```
 
 be the two all-lower runs supplied by `COMMON-LOWER-RUNS`, and let
 
-$$
+```math
 \mathcal M:=Q^*_{ij}
-$$
+```
 
 be their shared vertex-disjoint matching. Write
 
-$$
+```math
 q:=|\mathcal M|.
-$$
+```
 
 Then `q->infinity` in the `Z_D=o(sqrt(D))` residual branch.
 
 Let
 
-$$
+```math
 I:=P\cap Q
-$$
+```
 
 be the graph intersection: it contains every vertex and edge used by both paths. Since `P` and `Q` are simple paths, `I` is a forest whose components are paths or isolated vertices.
 
@@ -52,9 +54,10 @@ For every real threshold `s>=1`, at least one of the following occurs.
 
 One connected component of `I` contains at least
 
-$$
+```math
 \boxed{s}
 \tag{TC.1}
+```
 
 edges from the selected matching `mathcal M`. That intersection component is a contiguous path shared by both FREE lower runs. Every selected edge on it is the same old fully inactive inverse-`D` source pair in both module repairs.
 
@@ -62,55 +65,58 @@ edges from the selected matching `mathcal M`. That intersection component is a c
 
 The union
 
-\[
+```math
 H:=P\cup Q
-$$
+```
 
 has cycle rank
 
-$$
+```math
 \boxed{
 \beta(H):=|E(H)|-|V(H)|+1
 \ge {q\over s}-1.
 }
 \tag{TC.2}
+```
 
 Because `H` is a connected plane graph, its number of bounded faces equals `beta(H)`. Thus CYCLE-RANK gives at least
 
-\[
+```math
 \boxed{{q\over s}-1}
 \tag{TC.3}
+```
 
 bounded planar regions cut out using only the two all-lower inactive runs.
 
 Taking
 
-\[
+```math
 s=\sqrt q
-$$
+```
 
 gives the balanced fork
 
-$$
+```math
 \boxed{
 \text{a common trunk containing at least }\sqrt q\text{ selected gates}
 \quad\text{or}\quad
 \beta(P\cup Q)\ge\sqrt q-1.
 }
 \tag{TC.4}
+```
 
 Both alternatives diverge because `q->infinity`.
 
 In the tuned small-external branch,
 
-\[
+```math
 q
 =\Omega\left({\kappa_DD^{1/4}\over Z_D+1}\right),
-$$
+```
 
 so (TC.4) gives
 
-$$
+```math
 \boxed{
 \Omega\left(
 \sqrt{\kappa_D}\,
@@ -118,36 +124,39 @@ $$
 \right)
 }
 \tag{TC.5}
+```
 
 shared-trunk gates or independent planar cycles. With the canonical choice
 
-\[
+```math
 \kappa_D\ge\sqrt{Z_D+1},
-$$
+```
 
 this is at least
 
-$$
+```math
 \boxed{
 \Omega\left({D^{1/8}\over(Z_D+1)^{1/4}}
 ight)
 \longrightarrow\infty
 }
 \tag{TC.6}
+```
 
 under `Z_D=o(sqrt(D))`.
 
 The metric information is unchanged by this purely graph-theoretic extraction. Every selected common-trunk edge still satisfies
 
-\[
+```math
 1<|e|\le1+{K\over D}
 \tag{TC.7}
+```
 
 and is an exact lower gate in each of the two separated reflection repairs. Every edge of `H`, selected or not, is a lower-gate source pair of length below
 
-\[
+```math
 1+h_*+o(1)<\sqrt2,
-$$
+```
 
 so the union is embedded in the common plane short-edge graph and the face count in CYCLE-RANK is an actual geometric planar face count, not an abstract crossing drawing.
 
@@ -164,15 +173,15 @@ The next useful geometric step can treat these separately. On the trunk side, co
 
 Both `P` and `Q` are simple paths. Any subgraph of a path is a forest, so
 
-$$
+```math
 I=P\cap Q
-$$
+```
 
 is a disjoint union of path components and isolated vertices. Let
 
-$$
+```math
 c(I)
-$$
+```
 
 be its number of connected components.
 
@@ -182,9 +191,10 @@ If one component contains at least `s` selected edges, COMMON-TRUNK holds.
 
 Otherwise each component of `I` contains fewer than `s` selected edges. Since there are `q` selected edges total,
 
-$$
+```math
 \boxed{c(I)\ge q/s.}
 \tag{TC.8}
+```
 
 Integer ceilings only strengthen this bound up to the harmless final `-1` in (TC.2).
 
@@ -194,27 +204,28 @@ Integer ceilings only strengthen this bound up to the harmless final `-1` in (TC
 
 For a finite graph `G`, write
 
-\[
+```math
 \chi(G)=|V(G)|-|E(G)|.
-$$
+```
 
 Graph Euler characteristic satisfies inclusion-exclusion:
 
-$$
+```math
 \chi(P\cup Q)
 =
 \chi(P)+\chi(Q)-\chi(P\cap Q).
 \tag{TC.9}
+```
 
 Each nonempty simple path has Euler characteristic one, while the forest `I` has
 
-\[
+```math
 \chi(I)=c(I).
-$$
+```
 
 The paths share the selected matching, so their union `H=P union Q` is connected. Therefore
 
-$$
+```math
 \begin{aligned}
 \beta(H)
 &=|E(H)|-|V(H)|+1\\
@@ -223,12 +234,13 @@ $$
 &=c(I)-1.
 \end{aligned}
 \tag{TC.10}
+```
 
 Combining (TC.8) and (TC.10) proves
 
-\[
+```math
 \beta(H)\ge q/s-1.
-$$
+```
 
 This identity is exact; no geometric estimate is used.
 
@@ -240,17 +252,18 @@ Every edge of `P` and `Q` is a lower gate. The global short-edge theorem places 
 
 Euler's plane formula gives
 
-$$
+```math
 |V(H)|-|E(H)|+|F(H)|=2.
-$$
+```
 
 Thus
 
-$$
+```math
 |F(H)|-1
 =|E(H)|-|V(H)|+1
 =\beta(H).
 \tag{TC.11}
+```
 
 The left side is exactly the number of bounded faces. This proves (TC.3).
 
@@ -260,22 +273,22 @@ The left side is exactly the number of bounded faces. This proves (TC.3).
 
 The preceding common-run theorem gives
 
-\[
+```math
 q
 =\Omega\left({\kappa_DD^{1/4}\over Z_D+1}\right).
-$$
+```
 
 Taking square roots yields (TC.5). Because
 
-$$
+```math
 \kappa_D\ge\sqrt{Z_D+1},
-$$
+```
 
 one obtains (TC.6). Finally,
 
-$$
+```math
 {D^{1/8}\over(Z_D+1)^{1/4}}\to\infty
-$$
+```
 
 is equivalent to `Z_D=o(sqrt(D))`.
 

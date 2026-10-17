@@ -54,9 +54,9 @@ interval A let z_h=1_A(head h)-1_A(tail h).
 
 **Lemma.** For the ordered chords e<f<g,
 
-$$
+```math
 z_g(z_e-z_f)\le0,\qquad z_e(z_g-z_f)\le0.                 \tag{1}
-$$
+```
 
 ### Why finitely many endpoint models suffice
 
@@ -70,11 +70,11 @@ Translate an interior point to the origin and write p_i=r_i u_i in angular order
 The angular gaps delta_i lie in (0,pi). The strict left-turn condition at p_i,
 divided by r_(i-1) r_i r_(i+1), is
 
-$$
+```math
 \frac{\sin\delta_{i-1}}{r_{i+1}}
 +\frac{\sin\delta_i}{r_{i-1}}
 -\frac{\sin(\delta_{i-1}+\delta_i)}{r_i}>0.             \tag{2}
-$$
+```
 
 This is linear in the reciprocal radii. Interpolating them to a common positive
 constant preserves (2), because the terminal circular polygon is strictly convex.
@@ -153,15 +153,15 @@ have the circular-planar embedding in their actual convex-hull order. Let Lambda
 be its positive-Laplacian Dirichlet response and R=Lambda^+. Let Q be oriented
 diameter incidence, Beta=diag(beta), P centered terminal coordinates, and
 
-$$
+```math
 L_H=Q\mathrm{Beta}Q^T,\quad U=Q^TP,\quad K=Q^TRQ.
-$$
+```
 
 Equilibrium and harmonic elimination give
 
-$$
+```math
 \Lambda P=L_HP,\qquad K\mathrm{Beta}U=U.                \tag{3}
-$$
+```
 
 For a connected circular-planar positive network, its effective-resistance metric
 has a nonnegative circular-interval split representation. This is exactly Forcey's
@@ -179,24 +179,24 @@ and an independent coordinate m such that
 `a_e=ell(U_e)>0`, `t_e=m(U_e)/a_e` are strictly increasing. Set E=diag(a_e).
 In these coordinates U=E[1,t]. Put
 
-$$
+```math
 N=\mathrm{Beta}-\mathrm{Beta}K\mathrm{Beta},\qquad M=ENE.
-$$
+```
 
 Equation (3) gives M1=Mt=0. Its off-diagonal entries are
 `-gamma_e gamma_f K_ef`, with gamma_e=a_e beta_e>0. Section 3 proves M>=0.
 Undoing the invertible congruences gives
 
-$$
+```math
 \mathrm{Beta}^{-1}-Q^T\Lambda^+Q\succeq0.              \tag{4}
-$$
+```
 
 On 1-perpendicular, put B_0=Lambda^{-1/2} Q Beta^{1/2}. Equation (4) says
 `B_0^T B_0<=I`, hence `B_0 B_0^T<=I`. Congruence yields
 
-$$
+```math
 \Lambda-L_H\succeq0.
-$$
+```
 
 The full contact Dirichlet block is positive definite; the Schur complement of
 `Omega=L_C(alpha)-L_H(beta)` is exactly Lambda-L_H. Thus Omega is PSD.
@@ -208,9 +208,9 @@ positive contact Laplacian forces every contact vertex onto the line. Unit
 separation makes the network a straight unit chain of D edges, each of weight D,
 with diameter weight one. Its quadratic form is
 
-$$
+```math
 D\sum_{j=0}^{D-1}(f_{j+1}-f_j)^2-(f_D-f_0)^2\ge0
-$$
+```
 
 by Cauchy–Schwarz. This is a selected-support calculation, not a reopening of
 the canonically excluded one-dimensional *maximal* force hull.
@@ -233,9 +233,9 @@ mass. Otherwise the virial identity would give a nonnegative pure contact
 stress with sum(alpha)=0. Dividing by that positive mass makes lambda an actual
 normalized KKT stress. Section 4 therefore proves
 
-$$
+```math
 \lambda^TQ_*(x)\ge0\quad\hbox{for every displacement }x. \tag{5}
-$$
+```
 
 Farkas duality now makes `A_*y>=-g_*(x)` feasible for every x. For this fixed
 matrix, Hoffman's error bound provides H<infinity and a feasible correction with
@@ -245,9 +245,9 @@ over source configurations; see Peña–Vera–Zuluaga, Proposition 1,
 
 Let epsilon(x)=|[g_*(x)]_-|. Since the quadratic map is fixed, some L satisfies
 
-$$
+```math
 \epsilon(x+y)\le L(H|x|\epsilon(x)+H^2\epsilon(x)^2).   \tag{6}
-$$
+```
 
 Start at x_0=tv, whose error is O(t^2). Choose t so small that the right side
 of (6) is at most epsilon(x)/2 whenever |x|<=2C_0t and epsilon(x)<=C_1t^2,
@@ -277,9 +277,9 @@ is needed. The same release argument excludes weak diameter pairs: if contacts
 also opened it would violate the first minimum, and otherwise it violates the
 second. Hence this representative satisfies
 
-$$
+```math
 C=C_*,\qquad H=H_*.
-$$
+```
 
 Every mixed critical velocity consequently has zero first variation on all actual
 active constraints. The construction in Section 5 integrates it at fixed diameter.
@@ -304,10 +304,10 @@ actual active pair), and set Z=ker(Omega_(s_bar)) on all n source vertices.
 Contact-isolated vertices contribute their full independent scalar coordinates.
 Then
 
-$$
+```math
 Z=\bigcap_{s\in S}\ker\Omega_s,\qquad
 \ker A\subseteq Z\otimes\mathbb R^2.                   \tag{7}
-$$
+```
 
 Moreover every sufficiently nearby unit-separated configuration of diameter at
 most D differs from p by an element of `Z tensor R^2` and preserves every active
@@ -322,10 +322,10 @@ Take any sufficiently small feasible displacement x. Inactive pairs stay strict;
 global and lexicographic minimality force every active signed constraint g_e(x)
 to be zero, just as in Section 6. For any s, equilibrium gives
 
-$$
+```math
 0=\sum_e\lambda_e g_e(x)
 =x_x^T\Omega_s x_x+x_y^T\Omega_s x_y.
-$$
+```
 
 Each summand is nonnegative. Thus both coordinate displacements lie in every
 ker(Omega_s), proving the finite local statement. Finally every v in ker A is

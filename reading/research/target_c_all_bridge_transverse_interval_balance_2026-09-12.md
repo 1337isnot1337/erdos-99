@@ -41,28 +41,28 @@ with the full actual unit-contact graph, and C65 identifies the positive diamete
 support with the actual diameter graph.  Let `uv` be a bridge of this full contact
 graph.  Orient it from the shore `T` to the shore `S` and write
 
-$$
+```math
 u_0:=p_v-p_u,
 \qquad |u_0|=1.
-$$
+```
 
 Let `alpha>0` be the contact multiplier on `uv`.  Summing equilibrium over `S` gives
 the exact bridge cut resultant
 
-$$
+```math
 \alpha u_0
  =\sum_{h=xy\in H,\ x\in T,\ y\in S}
        \beta_h(p_y-p_x).
 \tag{1.1}
-$$
+```
 
 For a crossing diameter write `r_h=p_y-p_x`.  Taking the scalar product with `Ju_0`
 gives
 
-$$
+```math
 \sum_{h\pitchfork uv}\beta_h(r_h\mathbin\cdot Ju_0)=0.
 \tag{1.2}
-$$
+```
 
 We use the elementary fact that a finite set of diameter `D` has at most one
 unordered diameter pair in a fixed projective direction.  Indeed, if
@@ -77,21 +77,21 @@ Equation (1.1) then forces its shore-oriented vector to be `D u_0`.
 
 Translate the entire shore `S` by
 
-$$
+```math
 \Delta_\theta=R_\theta u_0-u_0.
 \tag{1.3}
-$$
+```
 
 The bridge remains a unit contact, every same-shore contact is unchanged, and all
 other old noncontacts retain strict distance greater than one for sufficiently small
 `theta`, by finiteness.  There is only one crossing diameter pair, and it changes to
 `D u_0+\Delta_\theta`; exactly
 
-$$
+```math
 |D u_0+\Delta_\theta|^2
  =D^2-2(D-1)(1-\cos\theta)<D^2
 \tag{1.4}
-$$
+```
 
 for `D>1` and nonzero sufficiently small `theta`.
 
@@ -101,12 +101,12 @@ normalization.  If none remains, the source diameter drops below `D`, contradict
 global minimality.  Hence every positive bridge has crossing diameter pairs `h_+`
 and `h_-` with
 
-$$
+```math
 r_{h_+}\mathbin\cdot Ju_0>0,
 \qquad
 r_{h_-}\mathbin\cdot Ju_0<0.
 \tag{1.5}
-$$
+```
 
 This is stronger in scope than the audited outer-to-outer train theorem: a bridge
 whose two incident face occurrences are bounded is included.  No response-conductance
@@ -116,9 +116,9 @@ claim or individual KKT-weight lower bound is used.
 
 Let
 
-$$
+```math
 x_0,x_1,\ldots,x_L
-$$
+```
 
 be a straight constant-stress bridge corridor, with consecutive bridge edges
 `e_j=x_{j-1}x_j` and common oriented contact vector `u_0`, `1\le j\le L`.  Orient
@@ -127,9 +127,9 @@ the shore of the `e_j`-cut containing `x_0` as `S_j`.  These shores are nested.
 For a positive diameter edge `h`, the path in the bridge-block tree intersects this
 corridor in a (possibly empty) consecutive interval of cuts.  Write that interval as
 
-$$
+```math
 I_h=[\ell_h,r_h]\subseteq[1,L]
-$$
+```
 
 when it is nonempty, and orient its fixed diameter vector `r_h` from the endpoint on
 the `S_j` side to the endpoint on the complementary side.  The orientation is
@@ -137,26 +137,26 @@ independent of `j\in I_h` because the cuts are nested.
 
 Applying the bridge cut law to `e_j` gives
 
-$$
+```math
 \alpha_j u_0
  =\sum_{h:\,\ell_h\le j\le r_h}\beta_h r_h.
 \tag{2.1}
-$$
+```
 
 Taking the transverse coordinate gives the exact zero-sum equations
 
-$$
+```math
 F_j:=
 \sum_{h:\,\ell_h\le j\le r_h} y_h=0,
 \qquad
 y_h:=\beta_h(r_h\mathbin\cdot Ju_0),
 \qquad 1\le j\le L.
 \tag{2.2}
-$$
+```
 
 The finite difference of (2.2), with `F_0=F_{L+1}=0`, is
 
-$$
+```math
 \boxed{
 \sum_{h:\,\ell_h=j}y_h
  =
@@ -164,7 +164,7 @@ $$
 \qquad 1\le j\le L+1.
 }
 \tag{2.3}
-$$
+```
 
 Thus the signed transverse mass entering a corridor level is exactly the signed mass
 leaving the preceding level.  This is an equality of the actual positive KKT weights,
@@ -179,13 +179,13 @@ levels at which at least one interval starts or ends, the corridor is partitione
 into at most `E+1` maximal blocks on which `Y_j` is constant.  Hence, for every
 integer `M>=1`,
 
-$$
+```math
 \boxed{
 \text{either some constant-profile block has length at least }M,
 \quad\text{or }E\ge\left\lceil {L\over M}\right\rceil-1.
 }
 \tag{3.1}
-$$
+```
 
 On a constant-profile block, the same actual diameter paths cross every bridge cut and
 their signed transverse KKT mass is zero at every level.  By (1.5) this fixed profile
@@ -201,13 +201,13 @@ diameter graph, so this note does not silently promote the exclusion to all subs
 
 The new finite quantity is the signed endpoint balance (2.3).  Its intended use is
 
-$$
+```math
 \text{corridor endpoint events or a long common bracing profile}
 longrightarrow
 \text{Woodall/topological restriction or source-preserving descent}
 longrightarrow
 \text{upper control of }\sum_r(L_r-2d_r)\text{ or an exact unit triangle}.
-$$
+```
 
 What is proved here:
 

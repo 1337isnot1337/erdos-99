@@ -45,10 +45,10 @@ bounding actual O–O trains be `tau_p,tau_q`, with coherently oriented
 unit contact vectors `u_p,u_q`, whose projective angle is less than `pi/3`.
 Their middle slab is `M`. Move every point of `M` by
 
-$$
+```math
 \Delta=u_q-u_p,\qquad s=|\Delta|<\sqrt2-1.
 \tag{1}
-$$
+```
 
 Initially keep other points fixed. The exact cutsets make every old contact
 unchanged: the lower cut vector changes from `u_p` to `u_q`, and the upper cut
@@ -99,19 +99,19 @@ each other.
 **Proof.** Write the coherently oriented direction of `sigma` as `v`. Before
 the move the diagonal squares of `F` are
 
-$$
+```math
 |u_p\pm v|^2=2\pm2u_p\cdot v>1.
-$$
+```
 
 Since the two bounding trains have projective separation less than `pi/3`,
 they cannot cross each other in a strict unit rhombus. Thus `F` meets only the
 lower boundary, and its two moving corners differ from its two fixed corners
 by `u_p`. After the move its diagonal squares are exactly
 
-$$
+```math
 2\pm2u_q\cdot v.
 \tag{2}
-$$
+```
 
 At the actual crossing of `sigma` with `tau_q`, source unit separation and
 triangle-freeness give `2\pm2u_q\cdot v>1`. Thus both new diagonals are
@@ -155,10 +155,10 @@ complement occurs at one of the two projective boundary directions offset
 by `+/-pi/3`. This gives exactly the asserted two intervals. Each has
 angular length
 
-$$
+```math
 |\theta_q-\theta_p|=2\arcsin(s/2).
 \tag{3}
-$$
+```
 
 Endpoint equality in (2) creates a unit equilateral triangle at the new
 endpoint; it does not imply one existed in the source. QED.
@@ -245,10 +245,10 @@ and let `z_F` be the number of source isolates in its open region. Let
 `l_F` be the number of previously strict pairs of length at most `1+s`
 whose old open segments lie in that face. Then
 
-$$
+```math
 \boxed{l_F\le d_F-3+3z_F.}
 \tag{4}
-$$
+```
 
 To prove this, insert all these edges in the face. Lemma 1 makes them
 noncrossing. Adding `l_F` edges can reduce the number of connected components
@@ -258,9 +258,9 @@ replaced by at least `l_F-z_F+1` regions, all with boundary degree at least
 three. The sum of their degrees is `d_F+2l_F`, including bridge and
 articulation occurrences. Hence
 
-$$
+```math
 d_F+2l_F\ge3(l_F-z_F+1),
-$$
+```
 
 which is (4). If `l_F<z_F`, (4) already follows from `d_F>=5`; the same
 inequality still applies. A component disjoint from the old boundary must
@@ -268,16 +268,16 @@ contain a source isolate, so no hidden component loss was omitted.
 
 Writing the **global** exceptional-face currency
 
-$$
+```math
 Q=\sum_F(d_F-4),\qquad f=\#\{F\},\qquad z_{\rm bd}=\sum_Fz_F,
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{\sum_Fl_F\le Q+f+3z_{\rm bd}\le2Q+3z_{\rm bd}.}
 \tag{5}
-$$
+```
 
 This does not count witnesses in the unbounded face. It also does not replace
 global `Q` by the sum `Q_D` of harmonic-cell defects from the rooted-threshold
@@ -297,11 +297,11 @@ and strictly inactive upper constraints at their endpoints. Keep a fixed
 isolate dispatch if one is used. Unless some swap is lower-feasible with no
 new contact, every failed swap has a witness. At most
 
-$$
+```math
 \boxed{(Q+4f)+2(Q+f+3z_{\rm bd})
 =3Q+6f+6z_{\rm bd}\le9Q+6z_{\rm bd}}
 \tag{8}
-$$
+```
 
 of the attempts can be explained by an internal-strip rhombus or bounded
 nonquadrilateral face. Every remaining attempt has either an outer-end
@@ -326,23 +326,23 @@ than one under the finite contact-preserving transposition.
 
 Let `t` be rational with `0<t<=1/100`, put `eta=2 atan(t)`, and define
 
-$$
+```math
 u=(1,0),\qquad w=R_{2\eta}u,\qquad
 v=R_\eta(1/2,\sqrt3/2),\qquad
 a=R_{3\eta}(1/2,\sqrt3/2).
-$$
+```
 
 All coordinates are in `Q(sqrt3)`, using
 `cos eta=(1-t^2)/(1+t^2)` and `sin eta=2t/(1+t^2)`.
 The labeled source is
 
-$$
+```math
 \begin{array}{c|ccccccc}
 \text{label}&0&1&2&3&4&5&6\\\hline
 \text{point}&0&u&v&u+v&u+v+w&u+v+a&u+v+w+a.
 \end{array}
 \tag{6}
-$$
+```
 
 Its only unit contacts are
 
@@ -367,11 +367,11 @@ L={0,2}, M={1,3,5}, R={4,6}.
 Move `M` by `Delta=w-u`. Both old cutsets exchange direction, and all
 eight actual contacts remain unit. But
 
-$$
+```math
 |p'_1-p'_2|=|w-v|
 =2\sin((\pi/3-\eta)/2)<1,
 \tag{7}
-$$
+```
 
 where the original `12` length was `2 sin((pi/3+eta)/2)>1`.
 The opposite `v`-train crosses only the lower bounding train and ends in
@@ -483,12 +483,12 @@ hull and is nonextreme. For any nonextreme source point `z`, write
 coefficients summing to one. For every other source point `p`, variance
 and unit separation give
 
-$$
+```math
 |z-p|^2
 =\sum_i\lambda_i|a_i-p|^2-\sum_i\lambda_i|a_i-z|^2
 \le D^2-1.
 \tag{9}
-$$
+```
 
 Since relative binary displacement is at most `s`, all such pairs remain
 strictly shorter than `D` under the stated bound. Reassigning these isolates
@@ -518,10 +518,10 @@ face. Use the grid vertices `(i,j)`, `0<=i,j<=6`, except the nine points
 with `2<=i,j<=4`. Replace column 6 by `(5+w_x,j+w_y)`, where
 `w=R_eta(1,0)` and `eta=2 atan(t)`. Add the contact isolate
 
-$$
+```math
 z=(1+\sqrt3/2+t/10,\ 7/2),\qquad 0<t\le1/1000.
 \tag{10}
-$$
+```
 
 The resulting source has forty core points, sixty actual unit contacts,
 and one isolate in the bounded central face. The complete O–O trains
@@ -544,10 +544,10 @@ count by `Q_J,f_J`. Across disjoint `A` swap slabs, all bad rhombi in
 internal `B` gaps inject into the **local** bounded terminal occurrences
 of `J`. Their total count is at most
 
-$$
+```math
 \boxed{Q_J+4f_J\le5Q_J.}
 \tag{11}
-$$
+```
 
 **Proof.** A bad rhombus belongs to `J` by the hypothesis on the bounding
 `A` train. Follow its opposite train inside the middle slab in the

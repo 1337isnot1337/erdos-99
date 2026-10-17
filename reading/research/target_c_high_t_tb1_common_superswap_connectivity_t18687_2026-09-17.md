@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_common_superswap_connectivity_t18687_2026-09-17.md) · source SHA-256 `9803957cb4c743d017ecd2fed073ce80e1b4e24ad1414c6ca5c276378091058e`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 13 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2183e9b06ad0ee694bef20e48a08195d2244bda4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_common_superswap_connectivity_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "8e65dd2a08045a676ff052422ca839ed99077a6a0e49339a89ca6394b33a6eaf"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -18,9 +20,9 @@ The parity simultaneous-swap theorem showed that a linear family of nonadjacent 
 
 There is one fixed inverse-`D` displacement
 
-$$
+```math
 V_D=-Q_Dw_*,\qquad Q_D={K\over D},
-$$
+```
 
 with `K` independent of the source, such that **any chosen subset** of one-sign strong-TB1 layers may be translated by this same vector. Under this common translation
 
@@ -35,19 +37,19 @@ Encode each one-sign layer as a vertex and all source points outside the one-sig
 
 If the one-sign population has size `m_D`, there are therefore at least `m_D` distinct inverse-`D` inactive pairs. On the current one-sign winner
 
-$$
+```math
 m_D>{s_0\over2}D-o(D),\qquad
 s_0={791\over320{,}000{,}000},
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 N_{\rm inactive}\ >\ {791\over640{,}000{,}000}D-o(D)
 =(1.2359375\times10^{-6})D-o(D).
 }
-$$
+```
 
 This doubles the previous unconditional distinct-witness floor on the one-sign branch and, more importantly, replaces one-witness-per-layer bookkeeping by a global cut-connectivity statement.
 
@@ -57,57 +59,57 @@ This doubles the previous unconditional distinct-witness floor on the one-sign b
 
 Let `M_D` be the one-sign strong-TB1 layer population. For `i in M_D`, orient the two unit boundary-contact vectors from the fixed side into the physical layer `R_i` and write
 
-$$
+```math
 |a_i|=|b_i|=1,
 \qquad
 q_i:=|a_i+b_i|>0,
 \qquad
 w_i:={a_i+b_i\over q_i}.
 \tag{CSU.1}
-$$
+```
 
 The cone-collapse theorem gives one common **oriented** transverse axis `w_*` and fixed constants `C_q,C_w` such that, uniformly over `M_D`,
 
-$$
+```math
 q_i\le {C_q+o(1)\over D},
 \qquad
 |w_i-w_*|\le {C_w+o(1)\over D}.
 \tag{CSU.2}
-$$
+```
 
 The explicit local cone theorem allows `C_q=31.4\times10^6`; no explicit value of `C_w` is needed here.
 
 The one-sign host theorem gives every switching actual diameter at `R_i` an inward vector `n_{h,i}`, `|n_{h,i}|=D`, satisfying
 
-$$
+```math
 \boxed{
 n_{h,i}\cdot w_i\ge(c_H-o(1))D,
 \qquad
 c_H=0.453819885927\ldots .
 }
 \tag{CSU.3}
-$$
+```
 
 Choose once and for all a fixed constant
 
-$$
+```math
 K>C_q+2C_w+2
 \tag{CSU.4}
-$$
+```
 
 and put
 
-$$
+```math
 \boxed{Q_D={K\over D},\qquad V_D=-Q_Dw_*.}
 \tag{CSU.5}
-$$
+```
 
 For all sufficiently large sources,
 
-$$
+```math
 Q_D>q_i+2|w_i-w_*|
 \tag{CSU.6}
-$$
+```
 
 for every `i in M_D`.
 
@@ -117,16 +119,16 @@ for every `i in M_D`.
 
 Take any subset
 
-$$
+```math
 \varnothing\ne S\subseteq M_D
-$$
+```
 
 and put
 
-$$
+```math
 U_S:=\bigcup_{i\in S}R_i.
 \tag{CSU.7}
-$$
+```
 
 Translate every source point in `U_S` by the **same** vector `V_D`, leaving all other source points fixed.
 
@@ -136,28 +138,28 @@ Now take an old contact crossing `U_S`. By the audited path-layer/contact-bounda
 
 Because
 
-$$
+```math
 a_i+b_i=q_iw_i,
-$$
+```
 
 both boundary vectors have the same `w_i` projection:
 
-$$
+```math
 a_i\cdot w_i=b_i\cdot w_i={q_i\over2}.
 \tag{CSU.8}
-$$
+```
 
 Hence
 
-$$
+```math
 c\cdot w_*
 \le {q_i\over2}+|w_i-w_*|.
 \tag{CSU.9}
-$$
+```
 
 After the common translation the contact vector is `c-Q_Dw_*`, so
 
-$$
+```math
 \begin{aligned}
 |c-Q_Dw_*|^2-1
 &=Q_D^2-2Q_D(c\cdot w_*)\\
@@ -165,18 +167,18 @@ $$
 &>0
 \end{aligned}
 \tag{CSU.10}
-$$
+```
 
 for all sufficiently large `D`, by (CSU.6).
 
 Thus
 
-$$
+```math
 \boxed{
 \text{every old contact crossing }U_S\text{ is strictly opened,}
 }
 \tag{CSU.11}
-$$
+```
 
 while every old contact internal to either side is unchanged.
 
@@ -192,7 +194,7 @@ If its endpoints are both in `U_S`, or both outside `U_S`, it is unchanged.
 
 Suppose exactly one endpoint lies in `U_S`, say in `R_i`, `i in S`. Then `h` is a switching diameter for the layer translation at `i`. Let `n=n_{h,i}` be its inward vector. From (CSU.2)--(CSU.3),
 
-$$
+```math
 \begin{aligned}
 n\cdot w_*
 &=n\cdot w_i+n\cdot(w_*-w_i)\\
@@ -200,29 +202,29 @@ n\cdot w_*
 &=(c_H-o(1))D.
 \end{aligned}
 \tag{CSU.12}
-$$
+```
 
 The relative diameter vector therefore changes by `-Q_Dw_*`, and
 
-$$
+```math
 \begin{aligned}
 |h|_{\rm new}^2-D^2
 &=-2Q_D(n\cdot w_*)+Q_D^2\\
 &<0
 \end{aligned}
 \tag{CSU.13}
-$$
+```
 
 for every sufficiently large `D`.
 
 Consequently
 
-$$
+```math
 \boxed{
 \text{every old actual diameter is unchanged or strictly shortened.}
 }
 \tag{CSU.14}
-$$
+```
 
 This is stronger than the parity exact-swap conclusion in one respect: it holds for **every subset** `S`, including adjacent one-sign layers, because all selected layers receive one common translation.
 
@@ -247,21 +249,21 @@ Therefore some previously strict pair `xy` must violate one of the two metric bo
 
 A pair with both endpoints in `U_S`, or both outside it, is unchanged. Thus every such witness has exactly one endpoint in `U_S`. Its relative displacement has norm exactly `Q_D`, so the triangle inequality gives
 
-$$
+```math
 \boxed{
 1<|xy|\le1+{K\over D}
 }
 \tag{CSU.15}
-$$
+```
 
 or
 
-$$
+```math
 \boxed{
 D-{K\over D}\le|xy|<D.
 }
 \tag{CSU.16}
-$$
+```
 
 We have proved:
 
@@ -275,18 +277,18 @@ The witness is allowed to depend on the subset.
 
 Partition the source points into the one-sign physical layers
 
-$$
+```math
 \{R_i:i\in M_D\}
-$$
+```
 
 and one residual class containing every source point outside those layers. Introduce a root vertex `*` for the residual class.
 
 Define a multigraph `G_D^{slack}` on
 
-$$
+```math
 V(G_D^{slack})=M_D\cup\{*\}
 \tag{CSU.17}
-$$
+```
 
 as follows. For every previously strict source pair satisfying (CSU.15) or (CSU.16):
 
@@ -297,55 +299,58 @@ as follows. For every previously strict source pair satisfying (CSU.15) or (CSU.
 
 Take any nonempty vertex subset
 
-$$
+```math
 S\subseteq M_D.
-$$
+```
 
 By the cut theorem, translating `U_S` forces a near-active strict pair with exactly one endpoint in `U_S`. Its graph edge has exactly one endpoint in `S`. Thus **every** cut
 
-$$
+```math
 S\mid (M_D\setminus S)\cup\{*\}
-$$
+```
 
 is crossed by an edge of `G_D^{slack}`.
 
 Equivalently,
 
-$$
+```math
 \boxed{G_D^{slack}\text{ is connected.}}
 \tag{CSU.18}
+```
 
 If
 
-\[
+```math
 m_D:=|M_D|,
-$$
+```
 
 then a connected graph on `m_D+1` vertices has at least `m_D` distinct pair-edges. Hence
 
-$$
+```math
 \boxed{
 N_{\rm inactive}\ge m_D.
 }
 \tag{CSU.19}
+```
 
 On the one-sign winner of the strong-TB1 split,
 
-\[
+```math
 m_D>{s_0\over2}D-o(D),
 \qquad
 s_0={791\over320{,}000{,}000},
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 N_{\rm inactive}>
 {s_0\over2}D-o(D)
 =(1.2359375\times10^{-6})D-o(D).
 }
 \tag{CSU.20}
+```
 
 This count uses the entire cut system; it does not choose one witness independently at each interface.
 
@@ -359,28 +364,29 @@ At least half of the edges in any spanning set from (CSU.20) have the same activ
 
 Suppose at least
 
-\[
+```math
 {m_D\over2}
-$$
+```
 
 distinct graph edges satisfy (CSU.15). Since `K/D=o(1)`, the graph of all source pairs with
 
-$$
+```math
 1<|xy|\le1+K/D
-$$
+```
 
 has maximum degree at most `6` for all sufficiently large `D`: among seven neighbors of one vertex, two rays subtend angle at most `2pi/7<pi/3`, and their mutual distance is eventually below `1`.
 
 Greedy matching therefore yields at least
 
-$$
+```math
 {m_D/2\over 2\cdot6-1}
 ={m_D\over22}
 \tag{CSU.21}
+```
 
 vertex-disjoint inactive near-unit pairs. Using `m_D>(s_0/2)D-o(D)`,
 
-\[
+```math
 \boxed{
 N_{\rm unit\ matching}
 >
@@ -388,19 +394,21 @@ N_{\rm unit\ matching}
 =(5.61789772727\ldots\times10^{-8})D-o(D).
 }
 \tag{CSU.22}
+```
 
 ### 6.2 Near-diameter side
 
 Suppose instead at least `m_D/2` distinct graph edges satisfy (CSU.16). The existing inactive near-diameter degree theorem applies to every fixed `K`:
 
-\[
+```math
 \Delta
 \le(8\,3^{1/8}+o(1))D^{3/4}.
 \tag{CSU.23}
+```
 
 Hence greedy matching yields
 
-\[
+```math
 \boxed{
 N_{\rm diameter\ matching}
 >
@@ -409,15 +417,17 @@ N_{\rm diameter\ matching}
 \right)D^{1/4},
 }
 \tag{CSU.24}
+```
 
 with numerical coefficient
 
-\[
+```math
 \boxed{
 {s_0\over64\,3^{1/8}}
 =3.36671515826\ldots\times10^{-8}.
 }
 \tag{CSU.25}
+```
 
 Every such near-diameter edge retains the existing `O(D^{3/4})` midpoint localization.
 
@@ -429,63 +439,68 @@ The common displacement gives more than the inverse-`D` length window.
 
 Take an upper witness and orient its old relative vector `r` from the fixed endpoint toward the translated endpoint. Then
 
-\[
+```math
 |r-Q_Dw_*|\ge D.
 \tag{CSU.26}
+```
 
 Write
 
-\[
+```math
 \xi:=D-|r|>0.
-$$
+```
 
 For any fixed `0<tau<1`, expansion of (CSU.26) gives
 
-$$
+```math
 r\cdot w_*
 \le
 -{D^2-|r|^2-Q_D^2\over2Q_D}.
 \tag{CSU.27}
-$$
+```
 
 If
 
-$$
+```math
 \xi\ge\tau Q_D,
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 r\cdot w_*
 \le-(\tau-o(1))D.
 }
 \tag{CSU.28}
+```
 
 Otherwise
 
-\[
+```math
 0<\xi<\tau Q_D.
 \tag{CSU.29}
+```
 
 Choose
 
-\[
+```math
 \tau={1\over4K}.
 \tag{CSU.30}
+```
 
 Since `Q_D=K/D`, the thin alternative becomes
 
-\[
+```math
 D-|r|<{1\over4D}.
 \tag{CSU.31}
+```
 
 For large `D`,
 
-\[
+```math
 D-{1\over4D}>\sqrt{D^2-1},
-$$
+```
 
 so every thin upper witness belongs to the geometric superdiameter thrackle.
 

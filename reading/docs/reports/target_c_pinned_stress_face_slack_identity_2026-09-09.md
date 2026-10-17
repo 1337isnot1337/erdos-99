@@ -12,16 +12,16 @@
 
 The C42 quadrangulation-defect theorem states
 
-$$
+```math
 b+Q\le4q-2c_I-2e_{BB}-4,
-$$
+```
 
 where `Q=sum_F(deg F-4)` over bounded contact faces. The post-ZF ledger introduces the
 pinned-contact stress surplus
 
-$$
+```math
 s_C=(e-e_{BB})-2(v-q)-c_I\ge0.
-$$
+```
 
 These are not separate currencies. Euler shows that the entire slack in C42's face
 inequality is exactly twice `s_C`.
@@ -30,41 +30,41 @@ inequality is exactly twice `s_C`.
 
 Every fully force-visible C-II source in the post-C63 normalization satisfies
 
-$$
+```math
 \boxed{
  b+Q
  =4q-2c_I-2e_{BB}-2s_C-4.
 }
 \tag{ZL.1}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 2s_C
 =4q-2c_I-2e_{BB}-4-(b+Q).
 }
 \tag{ZL.2}
-$$
+```
 
 ### Proof
 
 Euler and face-incidence counting for the connected contact core give
 
-$$
+```math
 \boxed{
 e=2v-2-\frac{b+Q}{2}.}
 \tag{ZL.3}
-$$
+```
 
 The definition of the pinned-contact surplus gives
 
-$$
+```math
 \boxed{
 e=2(v-q)+c_I+e_{BB}+s_C.}
 \tag{ZL.4}
-$$
+```
 
 Equate ZL.3 and ZL.4 and rearrange. `square`
 
@@ -75,9 +75,9 @@ combined with the later `s_Z,d_H` ledgers.
 
 C42's bound is equality if and only if
 
-$$
+```math
 \boxed{s_C=0.}
-$$
+```
 
 Thus the zero-surplus branch excluded by ZQ is exactly the branch in which the pinned
 contact network saturates C42's planar face-defect inequality after the loaded-loaded
@@ -87,33 +87,33 @@ contact term is fixed.
 
 The desired Level I face inequality is
 
-$$
+```math
 b+Q>2h.
-$$
+```
 
 Insert ZL.1 and `h=q-d_H`:
 
-$$
+```math
 \begin{aligned}
 (b+Q)-2h
 &=2q-2c_I-2e_{BB}-2s_C+2d_H-4.
 \end{aligned}
-$$
+```
 
 Using the post-ZF pinned ledger
 
-$$
+```math
 c_I+e_{BB}+s_C=q-2+d_H+s_Z
-$$
+```
 
 gives the exact identity
 
-$$
+```math
 \boxed{
 (b+Q)-2h=-2s_Z.
 }
 \tag{ZL.5}
-$$
+```
 
 This recovers the known fact that a post-ZF survivor lies on the wrong side of the
 closing inequality by exactly `2s_Z`, but it now resolves the contact-side part of
@@ -123,20 +123,20 @@ that defect into the geometric C42 face slack `2s_C`.
 
 Write
 
-$$
+```math
 x_B=b-q,
 \qquad
 g_F=Q-f.
-$$
+```
 
 Then `b+Q=q+x_B+f+g_F`. Substitute ZL.1 and the ZU relation for
 `c_I+e_BB+s_C`; after cancellation one recovers
 
-$$
+```math
 \boxed{
 q=x_B+f+g_F+2d_H+2s_Z.
 }
-$$
+```
 
 Thus ZT's terminal partition can be viewed as the equality between two exact planar
 slack decompositions: C42/pinned-contact slack on one side and diameter/mixed-stress

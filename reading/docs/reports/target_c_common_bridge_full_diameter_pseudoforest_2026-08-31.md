@@ -21,9 +21,9 @@ The full source diameter graph may contain zero-`beta` edges, so `H_+` cannot si
 
 Let the bridge split the positively loaded force-hull boundary into complementary cyclic intervals
 
-$$
+```math
 A=(a_1,\ldots,a_p),\qquad B=(b_1,\ldots,b_q).
-$$
+```
 
 Then every full diameter edge whose endpoints are nonisolated crosses the cut `A|B`, with at most one exception: one interval may have a single **cap edge** joining its two extreme vertices. The two intervals cannot both have caps.
 
@@ -35,43 +35,43 @@ Consequently, after deleting that possible cap, the full core diameter graph is 
 
 Assume C-II and choose a relative-interior normalized KKT stress. By C26,
 
-$$
+```math
 Q^circ=B_+,
 \tag{C32.1}
-$$
+```
 
 so every source diameter endpoint belonging to the nonisolated contact core is a vertex of `B_+`, and every point of `B_+` is a convex vertex of the force hull.
 
 Assume the C24 common positive-diameter route is the nontrivial C26 case: exactly one positive contact bridge `e`. Removing it partitions `B_+` into complementary boundary intervals
 
-$$
+```math
 A=(a_1,\ldots,a_p),\qquad
 B=(b_1,\ldots,b_q),
 \tag{C32.2}
-$$
+```
 
 listed in the same cyclic direction around the convex force hull.
 
 C24 gives
 
-$$
+```math
 H_+\subseteq A\times B,
 \tag{C32.3}
-$$
+```
 
 and by definition
 
-$$
+```math
 V(H_+)=B_+=A\sqcup B.
 \tag{C32.4}
-$$
+```
 
 Let `H^circ` denote the full source diameter graph induced by the nonisolated core. By C32.1,
 
-$$
+```math
 V(H^circ)=B_+,
 \tag{C32.5}
-$$
+```
 
 although `E(H^circ)` can strictly contain `H_+` because some full diameter edges may have zero `beta` weight.
 
@@ -83,17 +83,17 @@ although `E(H^circ)` can strictly contain `H_+` because some full diameter edges
 
 If
 
-$$
+```math
 a_i a_k\in E(H^circ),\qquad 1\le i<k\le p,
 \tag{C32.6}
-$$
+```
 
 then
 
-$$
+```math
 \boxed{i=1,\qquad k=p.}
 \tag{C32.7}
-$$
+```
 
 Symmetrically, if `b_jb_l` is a full diameter edge with `j<l`, then `j=1` and `l=q`.
 
@@ -101,9 +101,9 @@ Symmetrically, if `b_jb_l` is a full diameter edge with `j<l`, then `j=1` and `l
 
 Take any `a_r in A\setminus\{a_i,a_k\}`. By C32.4, `a_r` is incident to a positive diameter edge
 
-$$
+```math
 a_r b_s\in H_+
-$$
+```
 
 for some `b_s in B`.
 
@@ -111,16 +111,16 @@ The full diameter edges `a_i a_k` and `a_r b_s` have four distinct endpoints. Th
 
 The force-hull vertices occur in convex cyclic order with all of `A` consecutive and all of `B` consecutive. For `i<k`, the chord `a_i a_k` cuts the boundary into two arcs. The arc from `a_i` to `a_k` through increasing `A` indices contains exactly
 
-$$
+```math
 a_i,a_{i+1},\ldots,a_k,
-$$
+```
 
 while every `B` vertex lies on the complementary arc. Two chords of a convex polygon cross exactly when their endpoints alternate. Since `b_s` lies on the complementary arc, crossing forces `a_r` to lie strictly on the first arc:
 
-$$
+```math
 i<r<k.
 \tag{C32.8}
-$$
+```
 
 This must hold for every `r` distinct from `i,k`. Hence there is no `A` vertex before `a_i` or after `a_k`. Therefore `i=1` and `k=p`. `square`
 
@@ -134,10 +134,10 @@ Thus each side has at most one possible same-side full diameter, namely its inte
 
 At most one of
 
-$$
+```math
 a_1a_p,\qquad b_1b_q
 \tag{C32.9}
-$$
+```
 
 is a full diameter edge.
 
@@ -147,12 +147,12 @@ If both existed, they would be vertex-disjoint diameter edges. Their endpoints o
 
 Therefore
 
-$$
+```math
 \boxed{
 E(H^circ)\subseteq (A\times B)\cup\{e_{cap}\}
 }
 \tag{C32.10}
-$$
+```
 
 for at most one cap edge `e_cap`.
 
@@ -162,10 +162,10 @@ for at most one cap edge `e_cap`.
 
 Define
 
-$$
+```math
 K:=H^circ\cap(A\times B).
 \tag{C32.11}
-$$
+```
 
 ### Lemma C32.3
 
@@ -181,10 +181,10 @@ The C25 order argument applies verbatim to `K`, because it uses only convex boun
 
 If `a_i b_j` and `a_k b_l` are vertex-disjoint edges of `K` and `i<k`, then
 
-$$
+```math
 \boxed{j<l.}
 \tag{C32.12}
-$$
+```
 
 ### Theorem C32.5 (full cross-cut caterpillar forest)
 
@@ -222,13 +222,13 @@ Because the cap endpoints lie in the same side of the bipartition, their `K`-pat
 
 If the cap creates a cycle of length `r`, C17 applies to that full source diameter cycle and gives
 
-$$
+```math
 \boxed{
 r>
 \frac{\pi D}{\sqrt{12(2D+1)}}.
 }
 \tag{C32.13}
-$$
+```
 
 Thus any cyclic full-diameter structure in the universal-bridge phase is unique and has length `Omega(sqrt(D))`.
 

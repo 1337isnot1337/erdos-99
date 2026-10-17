@@ -15,25 +15,25 @@
 
 The five-arc pin-delay report gives the all-phase lower bound
 
-$$
+```math
  \liminf\mu_D\ge z_* >0.9604,
  \qquad
  10\arcsin z_*-4\pi=z_*/3,
-$$
+```
 
 for
 
-$$
+```math
  \mu_D={e_{BB}+2s_C-3(d_H+s_Z)\over D}.
-$$
+```
 
 It also identifies the only possible endpoint geometry: one macroscopic unloaded
 component has normalized graph diameter and attachment count
 
-$$
+```math
  {\delta_r\over D}\to z_* ,
  \qquad {|A_r|\over D}\to z_*/3,
-$$
+```
 
 and its actual attachment directions saturate five wrapping arcs.  The new theorem
 below excludes that endpoint exactly.  Consequently there is a nonexplicit absolute
@@ -43,28 +43,28 @@ gap above `z_*`.  This does not close the unrestricted high-surplus branch.
 
 Let `I` be one unloaded positive-contact component, with
 
-$$
+```math
  n=|I|,
  \qquad
  A=\{b\in B: b\text{ has a contact edge into }I\},
  \qquad a=|A|.
-$$
+```
 
 Let `e` be the number of contacts internal to `I`, and `t` the number of contacts
 between `I` and `A`.  Put
 
-$$
+```math
  P_A=\operatorname{per}(\operatorname{conv}A).
-$$
+```
 
 ### Theorem APC
 
 In the fully force-visible C-II branch,
 
-$$
+```math
 \boxed{P_A\le 4a-6.}
 \tag{APC.1}
-$$
+```
 
 ### Proof
 
@@ -77,10 +77,10 @@ The pinned-rigidity argument used in C40 applies to this component.  The positiv
 contact stress restricted to the `e+t` rows gives a nonzero left-kernel relation,
 whereas the pinned contact matrix has rank `2n`.  Therefore
 
-$$
+```math
  e+t\ge 2n+1.
 \tag{APC.2}
-$$
+```
 
 All vertices of `I` lie in `\operatorname{conv}A` by the harmonic attachment-hull
 theorem.  Every member of `A` is a vertex of `\operatorname{conv}A`, because the
@@ -91,47 +91,47 @@ twice.  The geometric image of that walk contains all vertices of `A` and all ot
 vertices lie in `\operatorname{conv}A`; hence the convex-hull perimeter inequality for
 a closed polygonal walk gives
 
-$$
+```math
  b\ge P_A.
 \tag{APC.3}
-$$
+```
 
 If `f` is the number of bounded faces, Euler's formula gives
 
-$$
+```math
  f=e+t-(n+a)+1.
-$$
+```
 
 Every bounded face has length at least four, since `G_I` is simple and triangle-free.
 Thus
 
-$$
+```math
  2(e+t)\ge b+4f
  =b+4(e+t-n-a+1),
-$$
+```
 
 or
 
-$$
+```math
  e+t\le 2(n+a)-2-b/2.
 \tag{APC.4}
-$$
+```
 
 Combining (APC.2) and (APC.4) gives `b\le4a-6`.  Together with (APC.3), this is
 (APC.1). `square`
 
 There is also a retained-defect form. Define the component pinned-stress slack
 
-$$
+```math
  s_I:=e+t-2n-1\ge0.
-$$
+```
 
 Replacing (APC.2) by `e+t=2n+1+s_I` in (APC.4) gives the exact strengthening
 
-$$
+```math
 \boxed{P_A\le4a-6-2s_I.}
 \tag{APC.10}
-$$
+```
 
 Thus any extra pinned-contact nullity makes the attachment-perimeter capacity
 strictly tighter. This uses no Eppstein equality or near-equality classification.
@@ -140,10 +140,10 @@ More generally, suppose a macroscopic attachment set has `m` cyclic inter-block 
 of angular size at least `2\varphi+o(1)`, with all those gaps asymptotically below
 `\pi`. If `a/D\to\alpha`, then APC gives the necessary density inequality
 
-$$
+```math
 \boxed{m\sin\varphi\le4\alpha.}
 \tag{APC.11}
-$$
+```
 
 Indeed each such gap contributes `D\sin\varphi+o(D)` to the perimeter of the
 attachment polygon, and the remaining edges contribute nonnegatively. This is an
@@ -158,9 +158,9 @@ rejected a quadrangulation conclusion.
 
 Use the five-arc endpoint notation from the pin-delay report.  Let
 
-$$
+```math
  \varphi_*:=\pi-2\arcsin z_*.
-$$
+```
 
 The five wrapping arcs are separated cyclically by gaps of angular size at least
 `2\varphi_*`.  The endpoint saturation statement means that the actual attachment
@@ -169,58 +169,58 @@ the attachment polar directions differ by `o(1)` uniformly.
 
 Since `0.9604<z_*<0.961`,
 
-$$
+```math
  2\varphi_*<\pi,
  \qquad
  2\pi-8\varphi_*<\pi.
 \tag{APC.5}
-$$
+```
 
 Therefore the five inter-arc gaps between consecutive attachment points are all in
 `(0,\pi)` for sufficiently large sources.  All attachment points lie at radius
 `D/2+o(D)` from the common full-source center.  A chord spanning an angular gap
 `\gamma` consequently has length
 
-$$
+```math
  D\sin(\gamma/2)+o(D).
-$$
+```
 
 Each of the five inter-arc gaps is at least `2\varphi_*+o(1)`, so the perimeter of
 the attachment hull satisfies
 
-$$
+```math
  \liminf {P_{A_r}\over D}
  \ge 5\sin\varphi_* .
 \tag{APC.6}
-$$
+```
 
 On the other hand, endpoint pin saturation gives
 
-$$
+```math
  {|A_r|\over D}\to {z_*\over3}.
 \tag{APC.7}
-$$
+```
 
 APC.1 and (APC.7) imply
 
-$$
+```math
  \limsup {P_{A_r}\over D}\le {4z_*\over3}.
 \tag{APC.8}
-$$
+```
 
 The two limits are incompatible.  Indeed,
 
-$$
+```math
 5\sin\varphi_*
  =10z_*\sqrt{1-z_*^2},
-$$
+```
 
 and `z_*<0.961` gives `\sqrt{1-z_*^2}>2/15`, whereas
 
-$$
+```math
  10z_*\sqrt{1-z_*^2}>{4z_*over3}.
 \tag{APC.9}
-$$
+```
 
 This proves:
 
@@ -228,10 +228,10 @@ This proves:
 
 There is no unbounded post-ZF C-II survivor sequence with
 
-$$
+```math
  \mu_D\to z_*.
 \tag{APE.1}
-$$
+```
 
 ### Proof
 
@@ -244,9 +244,9 @@ which gives a contradiction. `square`
 The five-arc pin-delay theorem already gives `\liminf\mu_D\ge z_*`.  If there were
 no uniform gap, there would be an unbounded sequence with
 
-$$
+```math
  z_*\le\mu_D<z_*+1/j
-$$
+```
 
 for its `j`th member.  Passing to the endpoint subsequence invokes APE, a
 contradiction.  Hence:
@@ -256,10 +256,10 @@ contradiction.  Hence:
 There exist absolute `\varepsilon_{AP}>0` and `D_0<\infty` such that every
 sufficiently large post-ZF survivor satisfies
 
-$$
+```math
 \boxed{\mu_D\ge z_*+\varepsilon_{AP}.}
 \tag{APG.1}
-$$
+```
 
 The gap is nonexplicit because the current five-arc theorem supplies endpoint
 compactness but not a quantitative stability rate for the saturation statement.

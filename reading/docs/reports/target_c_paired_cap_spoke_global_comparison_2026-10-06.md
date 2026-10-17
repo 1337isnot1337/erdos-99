@@ -31,31 +31,31 @@ vacancy inequality for a canonical source.
 
 Let M>=20 be an integer. Work in the unit triangular lattice
 
-$$
+```math
 \Lambda=\{i e_1+j e_2:i,j\in\mathbb Z\},\quad
 e_1=(1,0),\quad e_2=(1/2,\sqrt3/2).
-$$
+```
 
 Let v_0,...,v_5 be its six cyclic unit vectors. Put
 
-$$
+```math
 T_M=\{k v_j:1\le k\le M,\ 0\le j<6\},\qquad
 s=1+\frac1{100M^2},\qquad R_0=M-\frac14.
-$$
+```
 
 Define the lattice guards and the available cloud indices by
 
-$$
+```math
 G_M=\{\ell\in\Lambda:\operatorname{dist}(\ell,T_M)\le1\},
 \quad L_M=\Lambda\cap\overline B(0,R_0),
 \quad I_M=L_M\setminus G_M.
-$$
+```
 
 The full source is
 
-$$
+```math
 A_M=T_M\cup s I_M.                             \tag{1}
-$$
+```
 
 These are rational/algebraic coordinates: the only radical is sqrt(3),
 and i^2+ij+j^2 is the squared norm in lattice coordinates. The guard
@@ -74,9 +74,9 @@ Distinct cloud points have distance >=s>1. Every ell in I_M has distance
 at least sqrt(3) from every old core point, because the first positive
 lattice norm after one is three. Its scaling displacement has size
 
-$$
+```math
 |s\ell-\ell|\le\frac{R_0}{100M^2}<\frac1{100M},
-$$
+```
 
 so all cloud-core distances exceed one. Every cloud point is therefore
 an actual contact isolate in the *full* source.
@@ -87,9 +87,9 @@ is D=2M, and its pairs are exactly the three opposite pairs
 M v_j,-M v_j. In particular all exterior cloud points have strict upper
 slack. The actual loaded hull is the regular hexagon
 
-$$
+```math
 F_M=\operatorname{conv}\{M v_j:0\le j<6\}.       \tag{2}
-$$
+```
 
 ### Positive equilibrium on every actual core contact and diameter
 
@@ -116,9 +116,9 @@ equal in each opposite pair, rather than merely equal to leading order.
 
 Here is an elementary uniform support estimate:
 
-$$
+```math
 B(0,M-4)\subseteq K_M\subseteq B(0,M)\qquad(M\ge20). \tag{3}
-$$
+```
 
 For a unit direction n let delta<=pi/6 be its angular distance from the
 nearest radial ray. If delta<=4/(M-3), its loaded vertex supplies support
@@ -132,19 +132,19 @@ by support functions. The upper inclusion was established above.
 Consequently, normalized by D=2M, K_M tends to the radius-1/2 disk and
 each cap tends to its circular segment of angle pi/3. Hence
 
-$$
+```math
 \frac{\operatorname{area}(C_j)}{D^2}
 \longrightarrow a_{\rm cap}
 =\frac{\pi/3-\sqrt3/2}{8}>0.                  \tag{4}
-$$
+```
 
 Each cap has perimeter O(D). A triangular-lattice cell count gives,
 uniformly over these six convex caps,
 
-$$
+```math
 z_j=\frac{\operatorname{area}(C_j)}{a_0}+O(D),
 \qquad a_0=\sqrt3/2.                          \tag{5}
-$$
+```
 
 For completeness the lattice count follows by covering cells of bounded
 diameter: cells touching the boundary lie in a fixed-width tube of area
@@ -170,9 +170,9 @@ Use the orthonormal coordinates along its first bounding ray v_j. The
 closing normal is (sqrt(3)/2,1/2). Writing x=t v_j+y Jv_j, its height
 condition says
 
-$$
+```math
 y>\sqrt3(M-t)+2>\sqrt3+2.                    \tag{6}
-$$
+```
 
 The same inequality holds for distance from the other bounding spoke
 line. The point is in the angular sector between those rays; those are
@@ -184,18 +184,18 @@ Choose an unscaled lattice point ell with |ell-x|<=1/sqrt(3). Then
 dist(ell,T_M)>sqrt(3)+2-1/sqrt(3)>1. Thus ell is not a guard. Its actual
 source point q=s ell satisfies
 
-$$
+```math
 |q-x|<=|ell-x|+(s-1)|ell|<=1/sqrt(3)+1/(100M)<3/5,
-$$
+```
 
 using |ell|<M and M>=20. Therefore q remains in this very cap: x is more
 than one from its boundary and |q-x|<3/5.
 
 Therefore
 
-$$
+```math
 \boxed{(C_j)_{-1}\subseteq\bigcup_{z\in Z_j}B(z,3/5).} \tag{7}
-$$
+```
 
 This verifies the cap-covering feature with a strict margin. It supplies
 no spare strict site in that deep cap. Contacts with the six radial core
@@ -206,11 +206,11 @@ spokes cannot be inferred from the near contacts of this isolated cloud.
 There are at least 12M-18 guard indices in L_M. Two explicit disjoint
 families are
 
-$$
+```math
 \{k v_j:1\le k\le M-1\},
 \qquad
 \{k v_j+v_{j+1}:1\le k\le M-2\}.              \tag{8}
-$$
+```
 
 The first has 6(M-1) members. The second has 6(M-2), one group in the
 interior of each of the six angular sectors. These groups neither overlap
@@ -220,17 +220,17 @@ All first-family points also lie in L_M. Hence (8) proves the guard count.
 
 Writing N=|A_M|, the exact count is
 
-$$
+```math
 N=6M+|L_M|-|G_M\cap L_M|
 \le |L_M|-6M+18\le |L_M|.                    \tag{9}
-$$
+```
 
 Choose exactly N distinct points of the **unscaled** unit lattice L_M.
 They are unit-separated, and their diameter is at most
 
-$$
+```math
 2R_0=2M-\frac12=D-\frac12<D.                 \tag{10}
-$$
+```
 
 This deletes/replaces the old diameter-carrying frame and the cap cloud
 together. It keeps the exact original cardinality. Its unit triangles
@@ -271,9 +271,9 @@ instances). No canonical loading density is assumed by the script.
 
 This family has h=3, q=6 and v=6M. Its active count is
 
-$$
+```math
 e+h=6M+3<2v-2=12M-2.
-$$
+```
 
 It cannot satisfy canonical mixed rigidity or the affine-kernel theorem,
 and it violates the canonical h>=ceil(D) and stronger linear density.

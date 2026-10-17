@@ -19,9 +19,9 @@ The section claims that, after proof-only Section 124 gives `c_B=0`, the number 
 full-core strict-rhombus faces not realized as local quadrilateral faces of the
 canonical harmonic graphs satisfies
 
-$$
+```math
 0\le R_4-\sum_rR_r\le3c_I+5=o(D).
-$$
+```
 
 It also claims the same `o(D)` bound for missing strict-rhombus area.
 
@@ -97,17 +97,17 @@ empty for all sufficiently large members.
 
 The classification gives exactly
 
-$$
+```math
 0\le R_4-\sum_rR_r\le3c_I+5.
-$$
+```
 
 Canonical Section 75 supplies `c_I=O(D^(2/3))`, hence the count loss is `o(D)`.
 
 For the area statement the safe universal fact is
 
-$$
+```math
 \operatorname{area}(\text{unit rhombus})=\sin\theta\le1.
-$$
+```
 
 Therefore the missing-area sum is at most the missing-face count and is also `o(D)`.
 No stronger area cap is used.

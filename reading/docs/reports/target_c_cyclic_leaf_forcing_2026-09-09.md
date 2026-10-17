@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_leaf_forcing_2026-09-09.md) · source SHA-256 `27cdf6167c443f03d73d50b798cdc96634bb2147fb79e48beb33f4b3a5f2b224`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-FF5ED9DF3604","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic endpoint: diameter leaves are KKT-face rigid
 
@@ -20,34 +22,36 @@ In the cyclic primitive endpoint every selected positive diameter graph covers a
 
 Let `H` be the full actual diameter graph and let
 
-$$
+```math
 L_H^{leaf}:=\{h\in E(H): h\text{ has an endpoint of full-H degree }1\}.
-$$
+```
 
 Then:
 
-$$
+```math
 \boxed{
 \beta_h(s)>0
 \quad
 (h\in L_H^{leaf},\ s\in\mathcal S).}
 \tag{LF.1}
+```
 
 Thus full-H leaf edges never define KKT-polytope boundary faces.
 
 If
 
-\[
+```math
 d:=\dim\mathcal S=s_Z=2-d_H,
-$$
+```
 
 then a `d`-dimensional compact polytope has at least `d+1` facets, and CG says every facet is created by a diameter coefficient reaching zero. Consequently the full diameter graph contains at least `d+1` edges that are **not** incident to a full-H leaf:
 
-$$
+```math
 \boxed{
 |\{uv\in E(H):\deg_Hu\ge2,\ \deg_Hv\ge2\}|
 \ge s_Z+1=3-d_H.}
 \tag{LF.2}
+```
 
 This is a finite topological restriction on the full diameter pseudoforest.
 
@@ -57,38 +61,39 @@ This is a finite topological restriction on the full diameter pseudoforest.
 
 Let `u` be a terminal with
 
-\[
+```math
 \deg_H(u)=1
-$$
+```
 
 in the full actual diameter graph, and let its unique incident diameter edge be
 
-$$
+```math
 h=uv.
-$$
+```
 
 Fix any normalized KKT stress `s`. CY.2 says the selected positive diameter support `H_s` is an edge cover of the complete terminal set `B_+`. Hence `u` must be incident to some edge of `H_s`.
 
 But `H_s\subseteq H`, and `h` is the only full diameter edge at `u`. Therefore
 
-$$
+```math
 h\in H_s,
-$$
+```
 
 so
 
-$$
+```math
 \beta_h(s)>0.
-$$
+```
 
 This proves LF.1. `square`
 
 Because `S` is compact and `beta_h` is continuous, every full-H leaf edge in fact has a fixed-source positive floor
 
-$$
+```math
 \boxed{
 \min_{s\in\mathcal S}\beta_h(s)>0.}
 \tag{1.1}
+```
 
 No uniform-in-`D` lower bound is claimed.
 
@@ -105,15 +110,15 @@ Let `d=dim S`. A full-dimensional compact `d`-polytope has at least `d+1` distin
 
 Take one facet `F`. By CG it lies in at least one coordinate hyperplane
 
-\[
+```math
 \beta_h=0.
-$$
+```
 
 The set
 
-$$
+```math
 \mathcal S\cap\{\beta_h=0\}
-$$
+```
 
 is itself a face. Since it contains the facet `F`, maximality of a facet implies that this coordinate face equals `F`.
 
@@ -121,9 +126,9 @@ Therefore two distinct facets cannot be supplied solely by the same diameter coo
 
 By LF.1 none of those edges is incident to a full-H leaf. Thus the full graph has at least `d+1` nonleaf-nonleaf edges. Since CY gives
 
-$$
+```math
 d=s_Z=2-d_H,
-$$
+```
 
 we obtain LF.2. `square`
 
@@ -133,17 +138,17 @@ we obtain LF.2. `square`
 
 Recall
 
-$$
+```math
 (d_H,s_Z)\in\{(0,2),(1,1),(2,0)\}.
-$$
+```
 
 ### `d_H=0`, `s_Z=2`
 
 The normalized stress polytope is two-dimensional. Therefore the full diameter graph has at least
 
-$$
+```math
 3
-$$
+```
 
 edges joining two nonleaf diameter vertices.
 
@@ -151,9 +156,9 @@ edges joining two nonleaf diameter vertices.
 
 The stress polytope is a line segment. Therefore the full diameter graph has at least
 
-$$
+```math
 2
-$$
+```
 
 nonleaf-nonleaf edges.
 
@@ -172,10 +177,10 @@ The KKT polytope is a singleton, so the facet argument is vacuous. CY already gi
 
 Let
 
-$$
+```math
 H^{core}
 :=H[\{v:\deg_H(v)\ge2\}]
-$$
+```
 
 with its edge set consisting of full diameter edges whose two endpoints are nonleaves.
 
@@ -183,9 +188,9 @@ LF.1 says every leaf edge coefficient remains positive throughout `S`. Therefore
 
 More precisely, if `s_0,s_1 in S`, every full-H leaf edge belongs to
 
-$$
+```math
 H_{s_0}\cap H_{s_1}.
-$$
+```
 
 Thus the one- or two-dimensional stress freedom in the cyclic endpoint is carried entirely by reweighting and deleting edges inside the nonleaf diameter spine/cycle.
 

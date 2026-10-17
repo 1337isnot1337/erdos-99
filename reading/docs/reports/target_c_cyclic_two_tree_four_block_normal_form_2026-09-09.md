@@ -24,20 +24,20 @@ The block argument inside TC therefore applies directly to the two full componen
 
 Let the two full diameter-tree components be `T_A,T_B`, with unique bipartitions
 
-$$
+```math
 A=A_0\sqcup A_1,
 \qquad
 B=B_0\sqcup B_1.
-$$
+```
 
 Each of the four color classes is a single nonempty cyclic interval of the convex force-hull order. After swapping color names and rotating the cyclic order,
 
-$$
+```math
 \boxed{
 A_0\;|\;B_0\;|\;A_1\;|\;B_1
 }
 \tag{D2.1}
-$$
+```
 
 are the four consecutive terminal blocks around the boundary.
 
@@ -45,19 +45,19 @@ Thus each diameter component occupies exactly two cyclic intervals, and those in
 
 Moreover, if the four contact-cycle transitions occur at indices
 
-$$
+```math
 i<j<k<\ell,
-$$
+```
 
 then the unique normalized KKT stress satisfies
 
-$$
+```math
 \boxed{
 v_i+v_k=v_j+v_\ell,
 \qquad
 v_r:=\alpha_r t_r.}
 \tag{D2.2}
-$$
+```
 
 So the four transition vertices in the reciprocal force polygon form an exact parallelogram.
 
@@ -69,29 +69,29 @@ This is the exact `d_H=2` normal form.
 
 DC gives
 
-$$
+```math
 H=T_A\sqcup T_B,
-$$
+```
 
 where both components are nontrivial trees and every loaded terminal belongs to one of them.
 
 Take
 
-$$
+```math
 e\in E(T_A),
 \qquad
 f\in E(T_B).
-$$
+```
 
 They share no endpoint. The full diameter graph is a straight-line geometric thrackle on strictly convex vertices, so `e` and `f` cross properly.
 
 Hence
 
-$$
+```math
 \boxed{
 \text{every A-edge crosses every B-edge}.}
 \tag{1.1}
-$$
+```
 
 This is exactly the cross-component hypothesis used in TC after a tree edge was deleted.
 
@@ -101,31 +101,31 @@ This is exactly the cross-component hypothesis used in TC after a tree edge was 
 
 Fix one A-edge
 
-$$
+```math
 xy\in E(T_A).
-$$
+```
 
 The chord `xy` divides the convex boundary into two open arcs. Every B-edge crosses `xy`, so every B-edge has one endpoint on each arc.
 
 Because `T_B` is connected and bipartite, side relative to `xy` toggles across every B-edge. Therefore, up to swapping the bipartition labels,
 
-$$
+```math
 B_0
-$$
+```
 
 lies entirely on one `xy`-arc and
 
-$$
+```math
 B_1
-$$
+```
 
 lies entirely on the other.
 
 Now take two vertices
 
-$$
+```math
 b,b'\in B_0.
-$$
+```
 
 They lie on the same side of every A-edge, because the same argument works for every edge of `T_A`. Thus the straight chord `bb'` crosses no A-edge.
 
@@ -135,9 +135,9 @@ No B1 vertex lies between two B0 vertices either, since B1 lies on the other `xy
 
 The same argument applies to
 
-$$
+```math
 B_1,A_0,A_1.
-$$
+```
 
 Thus all four bipartition classes are single cyclic blocks. `square`
 
@@ -151,9 +151,9 @@ An A-edge joins `A_0` to `A_1`. Every B-edge must cross every A-edge, so its end
 
 The same statement with A and B interchanged gives the alternating order. After cyclic relabeling and color swaps,
 
-$$
+```math
 A_0,B_0,A_1,B_1
-$$
+```
 
 occur consecutively around the hull.
 
@@ -161,10 +161,10 @@ This proves D2.1.
 
 A useful consequence is that the component labels themselves alternate in exactly four runs:
 
-$$
+```math
 A\;|\;B\;|\;A\;|\;B.
 \tag{3.1}
-$$
+```
 
 There is no higher-run two-tree endpoint.
 
@@ -174,9 +174,9 @@ There is no higher-run two-tree endpoint.
 
 CY gives
 
-$$
+```math
 s_Z=0
-$$
+```
 
 in the `d_H=2` phase, so the normalized KKT stress is unique and strictly positive on every cycle contact and every full diameter edge.
 
@@ -186,23 +186,23 @@ Every diameter force is internal to `T_A` because there are no diameter edges be
 
 By D2.1, exactly four cycle contacts cross the cut `A|B`. If their indices in cyclic order are
 
-$$
+```math
 i<j<k<\ell,
-$$
+```
 
 and A is entered across `i,k` and exited across `j,ell`, then the signed contact-force sum is
 
-$$
+```math
 v_i-v_j+v_k-v_\ell=0,
 \qquad
 v_r=\alpha_rt_r.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{v_i+v_k=v_j+v_\ell.}
-$$
+```
 
 This proves D2.2. `square`
 
@@ -228,9 +228,9 @@ Thus D2 is not merely a four-color partition. It reduces the full diameter graph
 
 The full mixed graph has
 
-$$
+```math
 q+(q-2)=2q-2
-$$
+```
 
 rows and rigidity rank `2q-3`, with one full-support KKT dependence. It is therefore a realized rigidity circuit.
 

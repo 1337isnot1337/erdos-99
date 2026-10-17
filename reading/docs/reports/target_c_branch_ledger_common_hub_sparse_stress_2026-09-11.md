@@ -37,22 +37,22 @@ triangle-free global minimizer or construct a strict sub-`D` competitor.
 
 The route-level face contradiction would require the actual mixed-row inequality
 
-$$
+```math
 e+h\le 2v-3,
-$$
+```
 
 equivalently, by Euler for the contact core,
 
-$$
+```math
 b+Q\ge 2h+2,
-$$
+```
 
 where `b` is the outer contact-face walk and `Q` is the bounded-face degree excess.
 The exact ZF slack is
 
-$$
+```math
 s_Z=e+h-(2v-2)\ge0.
-$$
+```
 
 Thus the circuit identity `b+Q=2h` belongs only to `s_Z=0`; it cannot be extended to
 the `s_Z>0` branch.
@@ -65,15 +65,15 @@ Assume the promoted C-II force-support hypotheses, at least two selected diamete
 edges, and the C24 common-route theorem. Let `I_*` be the intersection of the
 bridge-block-tree paths joining the endpoints of all selected diameter edges. Then
 
-$$
+```math
 \boxed{I_*\text{ contains no positive contact bridge}.}
-$$
+```
 
 Since C24 says `I_*` is a nonempty tree path, it follows that
 
-$$
+```math
 \boxed{I_*\text{ is a single 2-edge-connected contact block}.}
-$$
+```
 
 This applies to both diameter-topology branches and does not assume `s_Z=0`.
 
@@ -82,10 +82,10 @@ This applies to both diameter-topology branches and does not assume `s_Z=0`.
 Suppose a positive contact bridge `uv` belongs to `I_*`. Removing it separates the
 positive contact graph into sides `L` and `R`, with nonempty loaded sets
 
-$$
+```math
 B_L=B\cap L,
 \qquad B_R=B\cap R.
-$$
+```
 
 C20/C22 identify these as complementary cyclic intervals of the strictly convex
 loaded boundary, and the definition of `I_*` says every selected diameter pair has
@@ -96,10 +96,10 @@ the line through interior points of the two transition edges of the intervals cu
 strictly convex polygon into the two open boundary arcs containing `B_L` and `B_R`.
 Choose a normal `ell` with
 
-$$
+```math
 \ell(p_r-p_l)>0
 \quad(l\in B_L,\ r\in B_R).
-$$
+```
 
 Orient every selected diameter edge from `B_L` to `B_R`. All oriented diameter
 vectors then lie in one open half-plane, so this is one legal C53 projective cut and
@@ -107,88 +107,88 @@ orientation.
 
 Let `Lambda` be the positive contact Dirichlet response and
 
-$$
+```math
 K=Q^{\mathsf T}\Lambda^+Q
-$$
+```
 
 the transfer kernel on the selected diameter edges. For a unit current demand along
 any cross-bridge pair `f=(r',l')`, cut conservation sends exactly one unit through
 `uv`. If `alpha` is its conductance and `u in L, v in R`, then
 
-$$
+```math
 V(v)-V(u)=1/\alpha.
-$$
+```
 
 On the `R` side, the maximum principle gives `V(r)-V(v)>=0` for every loaded
 `r in B_R`; on the `L` side it gives `V(u)-V(l)>=0` for every `l in B_L`. Therefore
 for every other cross-bridge pair `e=(r,l)`,
 
-$$
+```math
 K_{ef}=V(r)-V(l)\ge1/\alpha>0. \tag{A.1}
-$$
+```
 
 It remains to compare this with the promoted C53 response identities. Write the
 oriented diameter vectors in the legal projective order as
 
-$$
+```math
 u_i=a_i(1,t_i),\qquad a_i>0,
-$$
+```
 
 and let `beta_i` be the diameter weights. Put
 
-$$
+```math
 \gamma_i=a_i\beta_i,
 \quad \Gamma=\operatorname{diag}(\gamma_i),
 \quad G=\sum_i\gamma_i.
-$$
+```
 
 C53 gives
 
-$$
+```math
 M:=\Gamma(B^{-1}-K)\Gamma\succeq0,
 \qquad M\mathbf1=0,
 \qquad Mt=0,
-$$
+```
 
 where `B=diag(beta_i)`. If
 
-$$
+```math
 c=\min_{i\ne j}K_{ij}>0,
-$$
+```
 
 define `A_ij=K_ij-c>=0` for `i ne j` and let `L_A` be the weighted Laplacian
 
-$$
+```math
 (L_A)_{ij}=-\gamma_i\gamma_jA_{ij},
 \qquad L_A\mathbf1=0.
-$$
+```
 
 Then `L_A` is positive semidefinite and direct comparison of off-diagonal and
 diagonal entries gives
 
-$$
+```math
 L_A=M-c(G\Gamma-\gamma\gamma^{\mathsf T}). \tag{A.2}
-$$
+```
 
 Set
 
-$$
+```math
 t^0=t-\frac{\gamma^{\mathsf T}t}{G}\mathbf1.
-$$
+```
 
 Because the slopes are not all equal, `t^0 ne 0`; also
 `gamma^T t^0=0`. From (A.2) and `M t^0=0`,
 
-$$
+```math
 (t^0)^{\mathsf T}L_A t^0
 =-cG(t^0)^{\mathsf T}\Gamma t^0<0,
-$$
+```
 
 contradicting `L_A succeq 0`. Hence
 
-$$
+```math
 \min_{i\ne j}K_{ij}\le0. \tag{A.3}
-$$
+```
 
 Equations (A.1) and (A.3) contradict each other. No universal common positive
 contact bridge exists. Since C24 makes `I_*` a path in a bridge-block tree, removing
@@ -201,23 +201,23 @@ This theorem is conditional on the report-level ZF rank conclusion
 be the nonisolated contact-core vertex, contact-edge, and actual diameter-edge counts,
 and set
 
-$$
+```math
 s_Z=e+h-(2v-2)\ge0.
-$$
+```
 
 Let `P` be the normalized nonnegative KKT stress polytope on the actual rows
 `C cup H`, normalized by `sum_H beta=1`. Then
 
-$$
+```math
 \boxed{\dim_{aff}P=s_Z.}
-$$
+```
 
 If `x^*` is any vertex of `P`, then at least `s_Z` actual mixed rows have zero
 multiplier:
 
-$$
+```math
 \boxed{|supp(x^*)|\le2v-2.}
-$$
+```
 
 In particular, if `z_C,z_H` count zero contact and zero diameter multipliers in an
 extreme stress, then `z_C+z_H>=s_Z`, so one of them is at least `s_Z/2`.
@@ -227,9 +227,9 @@ extreme stress, then `z_C+z_H>=s_Z`, so one of them is at least `s_Z/2`.
 Let `W` be the signed planar equilibrium/self-stress space on `C cup H`, after
 reversing the sign of the diameter rows. ZF gives `rank R=2v-3`, so
 
-$$
+```math
 \dim W=(e+h)-(2v-3)=s_Z+1. \tag{B.1}
-$$
+```
 
 Let `L(alpha,beta)=sum_H beta`. If a nonzero nonnegative equilibrium stress had
 `L=0`, then `beta=0`; taking the scalar virial identity for the contact equilibrium
@@ -239,9 +239,9 @@ the nonnegative stress cone, and the normalized slice is compact.
 C65 supplies a normalized stress with every actual row positive. Consequently the
 nonnegative cone has full relative dimension in `W`, and slicing by `L=1` gives
 
-$$
+```math
 \dim_{aff}P=\dim W-1=s_Z. \tag{B.2}
-$$
+```
 
 Now let `x^*` be a vertex and let `Z` be its zero-coordinate set. If
 `|Z|<s_Z`, the `s_Z`-dimensional tangent space of `aff P` contains a nonzero vector
@@ -279,7 +279,7 @@ accounts and are not assumed diametral.
 
 One of the following is still required:
 
-$$
+```math
 \boxed{
 \begin{array}{l}
 \text{(i) a global packing/response theorem giving }L/D<1-o(1)\text{ in the cyclic branch;}\\
@@ -287,7 +287,7 @@ $$
 \text{(iii) a support-to-motion theorem for the }s_Z>0\text{ extreme stress;}\\
 \text{or (iv) a strict sub-}D\text{ competitor accounting for every isolate.}
 \end{array}}
-$$
+```
 
 The shortest unresolved statement is not a generic PSD or planarity claim. It must
 couple the actual full source population to the actual contact/diameter response with

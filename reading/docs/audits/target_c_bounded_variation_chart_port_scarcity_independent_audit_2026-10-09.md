@@ -18,9 +18,9 @@ Date: 2026-10-09. Audit base: `origin/main=85e17a4fab2460f58d32b30e840cec2290cd4
 
 Let `A` be any finite unit-separated planar source of diameter `D>0`, and let `E` consist of source points that occur in at least one actual diameter pair. For any strip of width `w>=0`,
 
-$$
+```math
  |E\cap S|\le 4\sqrt{2Dw}+4w+4.
-$$
+```
 
 This statement uses actual diameter endpoints, not arbitrary points in the source.
 
@@ -28,27 +28,27 @@ This statement uses actual diameter endpoints, not arbitrary points in the sourc
 
 Every actual diameter endpoint `q`, with partner `p`, is a strict exposed vertex of `conv(A)`: for every `x!=q`,
 
-$$
+```math
  |x-p|^2\le D^2=|q-p|^2
  \quad\Longrightarrow\quad
  (x-q)\cdot(q-p)<0.
-$$
+```
 
 Thus the diameter endpoints are in convex position. Their own convex hull has perimeter at least their number, because its sides join distinct unit-separated source points, and its perimeter is at most that of `conv(A)`, hence at most `pi D`. If `w>=D/2`, this global estimate is already below `4 sqrt(2Dw)+4w+4`.
 
 Now suppose `w<D/2`. Use longitudinal and transverse coordinates parallel and perpendicular to the strip. Choose `x_0,x_1` in `E intersect S` at its two extreme longitudinal coordinates, say `s_0<=s_1`. For any `q` in the strip set, let `q_*` be the convex interpolation of `x_0,x_1` with the same longitudinal coordinate as `q`. Then `|q-q_*|<=w`. If `p` is an actual diameter partner of `q` and `lambda=(s-s_0)/(s_1-s_0)`, the weighted square identity gives
 
-$$
+```math
  D^2\ge \lambda|p-x_0|^2+(1-\lambda)|p-x_1|^2
  =|p-q_*|^2+\lambda(1-\lambda)|x_1-x_0|^2
  \ge |p-q_*|^2+(s-s_0)(s_1-s).
-$$
+```
 
 Since `|p-q_*|>=D-w`,
 
-$$
+```math
  (s-s_0)(s_1-s)\le D^2-(D-w)^2\le 2Dw.
-$$
+```
 
 Therefore each selected longitudinal coordinate is within `sqrt(2Dw)` of at least one extreme. Split the endpoints into the two resulting groups. Each group lies in a rectangle of width at most `sqrt(2Dw)` and height `w`. Its convex hull has perimeter at most twice the sum of these side lengths. If a group has at least three points, they are all vertices of its hull and consecutive vertices are unit-separated, so its population is at most that perimeter; groups of one or two points are covered by an additive two. Summing the two group bounds gives the displayed estimate. If the extreme longitudinal coordinates coincide, the selected set lies in one rectangle of width zero and height `w`, and the same bound follows directly.
 
@@ -56,11 +56,11 @@ Therefore each selected longitudinal coordinate is within `sqrt(2Dw)` of at leas
 
 Consider an unbounded canonical post-ZF C-II sequence in either branch, `D->infinity`, with all source points retained, loaded-hull vertex count `q`, perimeter `P_F`, and `P_F-q=o(D)`. Fix constants `J,C<infinity`. For each source, take at most `J` finite rectangular additive charts
 
-$$
+```math
  x_{ij}=x_{00}+iu+jv+a_i+b_j,
  \qquad a_0=b_0=0,
  \qquad \sum_i|a_i-a_{i-1}|+\sum_j|b_j-b_{j-1}|\le C,
-$$
+```
 
 where `u,v` are unit rhombic bases with angle in `[pi/3,2pi/3]`. The bases may vary with `D`. A chart position may be unoccupied; every occupied position is a distinct actual source point. At each counted loaded vertex choose one actual unloaded unit neighbor that occupies a position in one of these charts. Then the number `a_D` of such loaded vertices is `o(D)`. The loaded vertex need only have the chosen neighbor; it may have other unit neighbors as well.
 

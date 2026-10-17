@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/82-harmonic-cell-near-quadrangulation-audit.md) · source SHA-256 `40a76b34aae32c02204266d45353afc0fbfa6af4da277321bfcb10783a626c29`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 # Target C — harmonic carrier near-quadrangulation audit
 
 **Date:** 2026-09-12
@@ -15,9 +17,9 @@ The result is exact before asymptotics. For any unloaded harmonic component, the
 bounded-face defect of the induced graph is controlled solely by its loaded attachment
 set. Applied to the Section-78 carrier, this gives
 
-$$
+```math
 F_{4,*}=n_*+O(D)=\Theta(D^2),
-$$
+```
 
 where `n_*=|I_*|` and `F_{4,*}` is the number of bounded quadrilateral faces in the
 induced contact graph on `I_* union A_*`. Moreover the outer boundary plus all
@@ -59,29 +61,29 @@ is a vertex of `P`.
 
 It also gives
 
-$$
+```math
 \boxed{e+t=2n+1+s,}
 \tag{82.1}
-$$
+```
 
-$$
+```math
 \boxed{t-delta-3=s+r_{pen},}
 \tag{82.2}
-$$
+```
 
 and, if `L` is the outer-face walk length of `H`,
 
-$$
+```math
 \boxed{L\ge2a-c_{partial}.}
 \tag{82.3}
-$$
+```
 
 Finally its local attachment-stress inequality is
 
-$$
+```math
 \boxed{s+c-{c_{partial}\over2}\le a-3.}
 \tag{82.4}
-$$
+```
 
 All identities below are finite consequences of these canonical facts.
 
@@ -150,111 +152,111 @@ Every other bounded face has degree at least five.
 
 Let `F_b` be the number of bounded faces of `H`, and define
 
-$$
+```math
 Q:=\sum_{f\text{ bounded}}(deg f-4)\ge0.
 \tag{82.5}
-$$
+```
 
 The vertex and edge counts are
 
-$$
+```math
 N=n+a,
 \qquad
 M=e+t+c=2n+1+s+c.
 \tag{82.6}
-$$
+```
 
 Euler gives
 
-$$
+```math
 \boxed{F_b=M-N+1=n+2+s+c-a.}
 \tag{82.7}
-$$
+```
 
 Counting face-edge incidences, with multiplicity on the outer walk,
 
-$$
+```math
 2M=L+4F_b+Q.
-$$
+```
 
 Substitution of (82.6)--(82.7) gives the exact identity
 
-$$
+```math
 \boxed{
 L+Q=4a-6-2s-2c.
 }
 \tag{82.8}
-$$
+```
 
 This is the local quadrangulation-defect ledger.
 
 Using (82.3),
 
-$$
+```math
 Q
 \le2a-6-2s-2c+c_{partial}
 \le2a-6-2s-c,
 \tag{82.9}
-$$
+```
 
 because `c_partial<=c`.
 
 Let `f_exc` be the number of bounded nonquadrilateral faces. Corollary 82.2 gives
 
-$$
+```math
 f_{exc}\le Q.
 \tag{82.10}
-$$
+```
 
 If `F_4` denotes the number of bounded quadrilateral faces, then
 
-$$
+```math
 F_4=F_b-f_{exc}
 \ge F_b-Q.
-$$
+```
 
 Using (82.7) and (82.9),
 
-$$
+```math
 \boxed{
 F_4
 \ge n+8+3s+2c-3a
 \ge n-3a+8.
 }
 \tag{82.11}
-$$
+```
 
 There is also a matching coarse upper bound. From (82.4) and
 `c_partial<=c`,
 
-$$
+```math
 s+{c\over2}\le a-3,
-$$
+```
 
 so
 
-$$
+```math
 s+c\le2a-6.
 \tag{82.12}
-$$
+```
 
 Equation (82.7) therefore gives
 
-$$
+```math
 F_4\le F_b\le n+a-4.
 \tag{82.13}
-$$
+```
 
 Combining (82.11) and (82.13),
 
-$$
+```math
 \boxed{
  n-3a+8
 \le F_4
 \le n+a-4.
 }
 \tag{82.14}
-$$
+```
 
 Thus the number of strict-rhombus faces differs from the unloaded population by at
 most a linear function of the attachment count.
@@ -263,19 +265,20 @@ The physical boundary of the full local strict-rhombus complex is boundary-order
 the same currency. Every boundary occurrence has on its other side either the outer
 face of `H` or one bounded nonquadrilateral face. Since
 
-$$
+```math
 \sum_{f\text{ nonquad}}deg f
 =4f_{exc}+Q
 \le5Q,
-$$
+```
 
 its total physical boundary `P_R` satisfies
 
-$$
+```math
 \boxed{
 P_R\le L+5Q\le5(L+Q)\le20a.
 }
 \tag{82.15}
+```
 
 (The harmless additive constant from (82.8) is suppressed in the final coarse bound.)
 
@@ -284,29 +287,29 @@ P_R\le L+5Q\le5(L+Q)\le20a.
 Now take the canonical Section-78 carrier component `I_*`, attachment set `A_*`, cell
 `P_*`, and quadratic coherent subgrain `G_* subset P_*`. Write
 
-\[
+```math
 n_*=|I_*|,
 \qquad
 a_*=|A_*|,
 \qquad
 d_*=diam(P_*).
-$$
+```
 
 Section 78 gives
 
-$$
+```math
 R(G_*)=\Omega(D^2),
 \qquad
 d_*=\Omega(D).
 \tag{82.16}
-$$
+```
 
 ### Lemma 82.3 — the carrier population is quadratic
 
-$$
+```math
 \boxed{n_*=\Omega(D^2).}
 \tag{82.17}
-$$
+```
 
 ### Proof
 
@@ -318,40 +321,40 @@ contact face and contains no source vertex or contact edge.
 For a connected simple triangle-free plane graph with `V>=3`, the number of bounded
 faces is at most `V-3`. Hence
 
-$$
+```math
 |V(G_*)|\ge R(G_*)+3.
-$$
+```
 
 All vertices of `G_*` lie in `I_*` by Section 78, so
 
-$$
+```math
 n_*\ge |V(G_*)|\ge R(G_*)+3=\Omega(D^2).
-$$
+```
 `\square`
 
 ### Lemma 82.4 — the attachment set is linear
 
-$$
+```math
 \boxed{
 a_*=\Theta(D),
 \qquad
 a_*\ge {d_*+1\over3}.}
 \tag{82.18}
-$$
+```
 
 ### Proof
 
 Canonical harmonic trapping gives
 
-$$
+```math
 d_*\le\delta_*+2.
-$$
+```
 
 Equation (82.2) gives
 
-$$
+```math
 t_*\ge\delta_*+3\ge d_*+1.
-$$
+```
 
 Every loaded attachment vertex has total positive-contact degree at most three, so
 `t_*<=3a_*`. Therefore `a_*>=(d_*+1)/3=Omega(D)`. The global loaded-hull bound gives
@@ -359,21 +362,21 @@ Every loaded attachment vertex has total positive-contact degree at most three, 
 
 Substitute (82.17)--(82.18) in the exact local face bounds. We obtain
 
-$$
+```math
 \boxed{
 F_{4,*}=n_*+O(D)=\Theta(D^2),
 }
 \tag{82.19}
-$$
+```
 
-$$
+```math
 \boxed{
 L_*+Q_*=O(D),
 \qquad
 P_{R,*}=O(D).
 }
 \tag{82.20}
-$$
+```
 
 So the entire induced positive-contact graph of the macroscopic harmonic carrier has
 only boundary-order outer/nonquadrilateral defect and has one strict-rhombus face per
@@ -386,26 +389,26 @@ This is stronger than the mere existence of the selected Section-78 subgrain.
 Let `mathcal R_*` be the set of all `F_{4,*}` strict-rhombus faces from (82.19). Their
 total angular defect is a sub-sum of the canonical Section-68 global defect, hence
 
-$$
+```math
 \Delta_*:=\sum_{R\in\mathcal R_*}\delta_R=O(D).
 \tag{82.21}
-$$
+```
 
 Fix
 
-$$
+```math
 0<\epsilon<\pi/6.
-$$
+```
 
 Repeat the Section-68/69 phase-cut construction on the finite rhombic complex
 `mathcal R_*`. The proof uses only train directions and the defect sum (82.21): first
 cut the reduced direction circle, then perform the `epsilon`-bin coarea cut. Therefore
 only
 
-$$
+```math
 \boxed{|F_{epsilon,*}|=O_\epsilon(D)}
 \tag{82.22}
-$$
+```
 
 rhombi are deleted, and every surviving physical grain is `epsilon`-coherent in one
 three-phase frame.
@@ -414,46 +417,46 @@ Before this phase deletion, (82.15) gives physical boundary `O(D)`. Each deleted
 rhombus creates at most four new boundary-edge occurrences. Hence the surviving
 physical grains `G_1,...,G_s` satisfy
 
-$$
+```math
 \boxed{
 \sum_jP_j=O_\epsilon(D).
 }
 \tag{82.23}
-$$
+```
 
 Their retained rhombus count is
 
-$$
+```math
 \boxed{
 \sum_jR_j=F_{4,*}-O_\epsilon(D)
 =n_*+O_\epsilon(D).
 }
 \tag{82.24}
-$$
+```
 
 Each grain has area at least `a_0R_j`. Isoperimetry therefore yields
 
-$$
+```math
 \boxed{
 \sum_j\sqrt{R_j}=O_\epsilon(D).
 }
 \tag{82.25}
-$$
+```
 
 Consequently, for any fixed `eta>0`, the grains with
 
-$$
+```math
 R_j<\eta D^2
-$$
+```
 
 carry at most
 
-$$
+```math
 \boxed{
 O_\epsilon(\sqrt\eta\,D^2)
 }
 \tag{82.26}
-$$
+```
 
 rhombi. In particular, after fixing `epsilon` and then taking `eta` small, a bounded
 number of macroscopic coherent grains carry all but an arbitrarily small fraction of

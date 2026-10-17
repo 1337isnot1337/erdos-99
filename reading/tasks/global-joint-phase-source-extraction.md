@@ -7,7 +7,7 @@
 
 ## Exact objective
 
-For an **arbitrary sufficiently large triangle-free global minimum-diameter configuration**, can the discrete source geometry be converted into a globally compatible, bounded strain field $F$ and divergence-free stress field $S$ in **one controlled material reference frame**, with grain rotations, seam jumps, boundary work, inactive pair constraints and all source labels accounted for? Either prove a rigorous source-extraction and strict same-cardinality diameter-improvement implication, or produce a precisely scoped counterexample to a proposed extraction lemma.
+For an **arbitrary sufficiently large triangle-free global minimum-diameter configuration**, can the discrete source geometry be converted into a globally compatible, bounded strain field $`F`$ and divergence-free stress field $`S`$ in **one controlled material reference frame**, with grain rotations, seam jumps, boundary work, inactive pair constraints and all source labels accounted for? Either prove a rigorous source-extraction and strict same-cardinality diameter-improvement implication, or produce a precisely scoped counterexample to a proposed extraction lemma.
 
 This is an exploratory route, not a canonical reduction. Proving field-phase rigidity only for a chart supplied as an additional hypothesis is not the objective.
 
@@ -20,13 +20,13 @@ This is an exploratory route, not a canonical reduction. Proving field-phase rig
 - [Global joint stress/strain phase mechanism](../docs/reports/global_joint_stress_strain_phase_mechanism_2026-10-12.md): **unreviewed, noncanonical** formal candidate and counterexamples
 - [Global separable-distortion obstruction](../docs/reports/global_separable_distortion_obstruction_2026-10-12.md): **unreviewed, noncanonical** transformation obstruction and planar-realizability warning
 
-Use exactly the boundedness, periodic/zero-trace boundary conditions and common-frame hypotheses in the joint-phase report. In phase $i$, $S_i$ is supported on two triangular directions, and $\operatorname{sym} F_i=t_i E_i$ with $t_i>0$. The formal cross-phase product is negative only when stress and strain are expressed in the **same** material frame. Independently rotated grains can admit a compatible laminate even when each local phase looks favorable.
+Use exactly the boundedness, periodic/zero-trace boundary conditions and common-frame hypotheses in the joint-phase report. In phase $`i`$, $`S_i`$ is supported on two triangular directions, and $`\operatorname{sym} F_i=t_i E_i`$ with $`t_i>0`$. The formal cross-phase product is negative only when stress and strain are expressed in the **same** material frame. Independently rotated grains can admit a compatible laminate even when each local phase looks favorable.
 
 The reports are proposed mathematical arguments, not audited canonical dependencies. Independently reconstruct any report lemma before using it in a new theorem.
 
 ## Relation to Level I
 
-A successful global result must apply to all sufficiently large triangle-free **global** minimizers and force a unit equilateral triangle or a same-cardinality unit-separated planar configuration of diameter strictly below $D(n)$. Formal fields, infinitesimal strains, approximate densities and nonglobal examples cannot close the question by themselves.
+A successful global result must apply to all sufficiently large triangle-free **global** minimizers and force a unit equilateral triangle or a same-cardinality unit-separated planar configuration of diameter strictly below $`D(n)`$. Formal fields, infinitesimal strains, approximate densities and nonglobal examples cannot close the question by themselves.
 
 ## Existing obstructions
 
@@ -39,7 +39,7 @@ A successful global result must apply to all sufficiently large triangle-free **
 
 ## First bounded experiment and falsification
 
-Choose one proposed discrete-to-continuum extraction rule for a **two-grain finite source**. State its scale, geometric interpolation, orientation frame, $F/S$ bounds, exact lower unit-separation constraints and all actual diameter-pair tests.
+Choose one proposed discrete-to-continuum extraction rule for a **two-grain finite source**. State its scale, geometric interpolation, orientation frame, $`F/S`$ bounds, exact lower unit-separation constraints and all actual diameter-pair tests.
 
 Compute the seam jump/traction and resulting boundary work before discarding any interface. Stress-test against the report's independently rotated laminate and the odd-rim nonglobal full-source family. If the extraction silently changes material frame or allows source labels to vanish, exhibit the exact failure and stop. A proof-only path can instead independently verify the periodic double-integral argument and derive the required quantitative bounds, identifying the precise missing source hypothesis.
 
@@ -49,7 +49,7 @@ Methods: exact symbolic linear algebra, distributional integration identities wi
 
 - A precise, independently reviewable extraction lemma with actual source hypotheses, common-frame selection, uniform bounds and seam/boundary costs, **or** a reproducible counterexample to one necessary proposed bridge.
 - Explicit accounting for every source point, including contact isolates, and all relevant separation and diameter constraints.
-- A correct implication either to an actual same-cardinality strict-sub-$D$ competitor or to a clearly isolated **remaining** lemma.
+- A correct implication either to an actual same-cardinality strict-sub-$`D`$ competitor or to a clearly isolated **remaining** lemma.
 - A statement separating what was proved about formal fields from what was proved about planar global minimizers.
 
 ## Falsification and stopping
@@ -73,7 +73,7 @@ The first two checks were independently replayed on Python 3.12 with SymPy 1.14.
 
 ## Remaining lemma and limitations
 
-Extract and control a common compatible $F/S$ field from **every** canonical source to which the method claims to apply, including source realization, phase rotation, seams, transition amplitudes, isolates, and boundary-work terms. Then derive the strict full-source competitor or forced triangle. Both implications are currently unproved.
+Extract and control a common compatible $`F/S`$ field from **every** canonical source to which the method claims to apply, including source realization, phase rotation, seams, transition amplitudes, isolates, and boundary-work terms. Then derive the strict full-source competitor or forced triangle. Both implications are currently unproved.
 
 A finite model, an independently agent-checked formal-field theorem, a nonglobal example or a restricted periodic-domain result is not Level I closure.
 

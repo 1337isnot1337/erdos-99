@@ -23,15 +23,15 @@ This addendum strengthens the preceding Eppstein rattler-fraction report in two 
 
 Let
 
-$$
+```math
 a_r:=\delta_r+r_r,
 \qquad
 A:=\sum_r a_r.
-$$
+```
 
 For every non-singleton unloaded component `I_r`,
 
-$$
+```math
 \boxed{
  n_r
  \le
@@ -39,11 +39,11 @@ $$
  \frac{2}{\pi\sqrt3}a_r^2.
 }
 \tag{EA.1}
-$$
+```
 
 If `c_1` is the number of singleton unloaded components, then
 
-$$
+```math
 \boxed{
  v
  \le
@@ -51,44 +51,44 @@ $$
  \frac{2}{\pi\sqrt3}A^2.
 }
 \tag{EA.2}
-$$
+```
 
 ZK/GR gives the exact currency split
 
-$$
+```math
 A+s_B=\mu_DD+6,
 \tag{EA.3}
-$$
+```
 
 and `q,c_1=O(D)`.  Therefore, if
 
-$$
+```math
 \mu_D\to\mu,
 \qquad
 \frac{s_B}{D}\to\sigma_B,
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \limsup\frac v{D^2}
 \le
 \frac{2}{\pi\sqrt3}(\mu-\sigma_B)^2,
 }
 \tag{EA.4}
-$$
+```
 
 and global optimality converts this to
 
-$$
+```math
 \boxed{
 \limsup\frac vn
 \le
 \frac4{\pi^2}(\mu-\sigma_B)^2.
 }
 \tag{EA.5}
-$$
+```
 
 Thus loaded degree slack is pure boundary currency: it makes `mu` larger but cannot
 support a quadratic positive-core population.  Any force-bulk argument should use
@@ -108,35 +108,35 @@ least `n-k` vertices are not on the outer face, because the number of distinct o
 vertices is at most the incidence count `k`.  Their disjoint Voronoi cells are enclosed
 by the outer-face curve, so that curve encloses area at least
 
-$$
+```math
 2\sqrt3(n-k).
-$$
+```
 
 Eppstein's proof of Lemma 4 observes that each outer-face incidence contributes exactly
 two units of length to this curve.  Its length is therefore `2k`.  Isoperimetry gives
 
-$$
+```math
 (2k)^2
 \ge
 4\pi\,2\sqrt3(n-k),
-$$
+```
 
 or
 
-$$
+```math
 \boxed{k^2\ge2\pi\sqrt3(n-k).}
 \tag{1.1}
-$$
+```
 
 If `n<=k`, the inequality needed below is already automatic.  Combining the two cases
 we obtain the exact finite estimate
 
-$$
+```math
 \boxed{
  n\le k+\frac{k^2}{2\pi\sqrt3}.
 }
 \tag{1.2}
-$$
+```
 
 No asymptotic notation occurs in (1.2).
 
@@ -147,38 +147,38 @@ No asymptotic notation occurs in (1.2).
 Because `I_r` is a connected triangle-free plane graph, let `Q_r` be the sum of
 `deg(f)-4` over its bounded faces.  Euler and double-counting face incidences give
 
-$$
+```math
  e=2n-2-\frac{k+Q_r}{2}.
 \tag{2.1}
-$$
+```
 
 On the other hand the ZK/Eppstein slack definition is
 
-$$
+```math
  e=2n-\delta_r-2-r_r
    =2n-a_r-2.
 \tag{2.2}
-$$
+```
 
 Comparing (2.1) and (2.2) yields the useful exact identity
 
-$$
+```math
 \boxed{
  a_r=\delta_r+r_r=\frac{k+Q_r}{2}.
 }
 \tag{EA.6}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{k\le2a_r.}
 \tag{2.3}
-$$
+```
 
 Insert (2.3) into (1.2).  The right side is increasing in `k>=0`, so
 
-$$
+```math
  n_r
  \le
  2a_r+
@@ -186,7 +186,7 @@ $$
  =
  2a_r+
  \frac{2}{\pi\sqrt3}a_r^2.
-$$
+```
 
 This proves EA.1.
 
@@ -199,13 +199,13 @@ separate `c_1` term in EA.2.
 
 The positive core is
 
-$$
+```math
 v=q+\sum_rn_r.
-$$
+```
 
 Apply EA.1 to non-singletons and add the `c_1` singleton vertices:
 
-$$
+```math
 \begin{aligned}
 v
 &\le
@@ -215,27 +215,27 @@ q+c_1+2\sum_ra_r
 q+c_1+2A
 +\frac{2}{\pi\sqrt3}A^2,
 \end{aligned}
-$$
+```
 
 because all `a_r>=0`.  This is EA.2.
 
 The exact ZK identity is
 
-$$
+```math
 A+s_B
 =
 \sum_r(\delta_r+r_r)+s_B
 =\mu_DD+6.
-$$
+```
 
 Therefore
 
-$$
+```math
 \frac AD
 =
 \mu_D-rac{s_B}{D}+O(D^{-1}).
 \tag{3.1}
-$$
+```
 
 Loaded vertices satisfy `q<=per(F)<=pi D`.  The singleton count is at most the total
 component count, and C36 gives `c_I=O(D)`.  Divide EA.2 by `D^2` and use (3.1) to prove
@@ -243,9 +243,9 @@ EA.4.
 
 Finally global minimizers satisfy
 
-$$
+```math
 \frac n{D^2}\to\frac\pi{2\sqrt3},
-$$
+```
 
 so division proves EA.5.
 
@@ -255,20 +255,20 @@ so division proves EA.5.
 
 EA.5 can be inverted.  If
 
-$$
+```math
 \frac vn\to\eta>0,
-$$
+```
 
 then every convergent subsequence obeys
 
-$$
+```math
 \boxed{
 \mu-\sigma_B
 \ge
 \frac\pi2\sqrt\eta.
 }
 \tag{EA.7}
-$$
+```
 
 Thus a positive-density force core has a quantitative component-topology cost before
 any loaded-degree slack is counted.
@@ -327,7 +327,7 @@ certificate cannot invoke that conversion.
 
 The low-`mu` force-bulk normal form is now
 
-$$
+```math
 \boxed{
 \frac vn
 \le
@@ -335,7 +335,7 @@ $$
 \left(\mu-\frac{s_B}{D}
 ight)^2+o(1).
 }
-$$
+```
 
 At the GR scale, taking `s_B=0` already gives the `85.66%` rattler obligation from the
 preceding report.  Any positive linear loaded slack makes the positive core even
@@ -367,30 +367,30 @@ outer-shell phase.
 For any fixed `u>0.5947`, a C-II closure can now target the two-dimensional phase
 variables
 
-$$
+```math
 \left(\mu,\sigma_B\right),
 \qquad
 \sigma_B:=s_B/D.
-$$
+```
 
 If an independent topology theorem forces
 
-$$
+```math
 \mu-\sigma_B\le w,
-$$
+```
 
 then EA.5 forces at least
 
-$$
+```math
 1-4w^2/\pi^2
-$$
+```
 
 of the whole source into C65 rattlers.  If instead the force core has density at least
 `eta`, EA.7 forces
 
-$$
+```math
 \mu\ge\sigma_B+\frac\pi2\sqrt\eta.
-$$
+```
 
 The missing step is still an outer-shell packing/rearrangement theorem or a global
 upper tradeoff from Woodall/attachment geometry.

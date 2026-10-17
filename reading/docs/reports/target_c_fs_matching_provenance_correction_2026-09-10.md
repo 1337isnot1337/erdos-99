@@ -20,18 +20,18 @@ The September 10 report
 `target_c_annular_voronoi_matching_exclusion_2026-09-10.md` proves a valid new
 **independent** exclusion of the perfect-matching diameter branch:
 
-$$
+```math
 \operatorname{area}F\le\frac{\pi^2}{16}D^2
 \quad\text{under MB matching topology,}
-$$
+```
 
 while FSDB gives
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge\frac{2\rho+\sin2\rho}{4}
 >\frac{\pi^2}{16}.
-$$
+```
 
 Its exact rational sign certificate remains correct.
 
@@ -39,12 +39,12 @@ However, that branch had already been excluded at report level on September 9 by
 NB theorem in `target_c_db_nm_branching_constant_2026-09-09.md`, which proves the
 strictly stronger quantitative conclusion
 
-$$
+```math
 \boxed{
 \liminf\frac{2h-q}{D}
 \ge0.6099043189\ldots>0.
 }
-$$
+```
 
 A perfect matching has `q=2h`, so it is impossible along any unbounded post-ZF
 survivor sequence directly from NB.

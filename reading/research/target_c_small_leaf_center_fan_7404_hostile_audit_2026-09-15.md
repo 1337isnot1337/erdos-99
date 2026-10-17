@@ -26,19 +26,19 @@ fan-density-floor normalization that was retracted on September 12.
 
 The candidate reuses exactly the parent safe constants
 
-$$
+```math
 W_0=1.915963,
 \quad E_0=0.9068958,
 \quad C>0.8538,
 \quad z_V>0.616,
-$$
+```
 
 and the already-proved reduction
 
-$$
+```math
 R(C,V)=C-{CH(C)\over(2C+V-W_0)(0.616-V)},
 \qquad H(C)=C(W_0-C)-E_0.
-$$
+```
 
 The feasible domain and the concavity reduction in `V` are unchanged. Hence the only
 new obligation is to prove `R(C,V)>0.7404` at the two endpoint families.
@@ -53,15 +53,15 @@ At `V=0.308`, clearing the positive denominator gives the cubic `N_lo,L` with
 `L=0.7404`. The exact verifier proves strict convexity, brackets the unique critical
 point in
 
-$$
+```math
 (0.88341,0.88342),
-$$
+```
 
 and gives the rigorous lower bound
 
-$$
+```math
 N_{lo,L}>0.00233998.
-$$
+```
 
 Both feasible interval endpoints are positive as well.
 
@@ -74,15 +74,15 @@ Both feasible interval endpoints are positive as well.
 At `V=(W_0-C)/2`, the exact verifier similarly proves strict convexity, brackets the
 unique critical point in
 
-$$
+```math
 (0.90484,0.90485),
-$$
+```
 
 and gives
 
-$$
+```math
 N_{hi,L}>4.47\times10^{-6}.
-$$
+```
 
 The margin is much smaller than at the low-leaf endpoint but is exact. The certificate
 uses only `Fraction` arithmetic; no floating-point root or sign is used in the proof.
@@ -99,9 +99,9 @@ value is diagnostic only.
 
 The theorem concludes
 
-$$
+```math
 {\sum_\tau w_\tau d_\tau\over\sum_\tau w_\tau}>0.7404-o(1)
-$$
+```
 
 for positive retained pair weights `w_tau`. Therefore some positive-weight train must
 have `d_tau>0.7404-o(1)`.

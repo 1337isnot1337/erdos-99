@@ -20,25 +20,25 @@
 
 The September 10 FSJC theorem gives the explicit post-ZF bound
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}
 \ge\lambda_{FSJC}
 =0.5882283437736394\ldots
-$$
+```
 
 and proves that equality can be approached only if `h/D -> pi/2`.  This report proves
 that the FSJC endpoint itself is impossible.
 
 The new structural input is a direct consequence of FS.4:
 
-$$
+```math
 \boxed{
 \frac{\operatorname{per}F}{D}\to\pi
 \quad\Longrightarrow\quad
 \frac{\operatorname{area}F}{D^2}\to\frac\pi4.
 }
 \tag{FD.1}
-$$
+```
 
 Thus a post-ZF force hull with asymptotically maximal perimeter is asymptotically a
 disk in area.  No Groemer stability theorem or Blaschke--Lebesgue theorem is needed;
@@ -47,20 +47,20 @@ FS.4 supplies the missing approximate central symmetry.
 Combining FD.1 with the **unrelaxed actual-perimeter** JC cavity inequality shows that
 no unbounded survivor sequence can satisfy
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to\lambda_{FSJC}.
-$$
+```
 
 Consequently there exist absolute constants `epsilon_FS>0` and `D_0<infinity` such
 that every post-ZF survivor with `D>=D_0` satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge\lambda_{FSJC}+\epsilon_{FS}.
 }
 \tag{FD.2}
-$$
+```
 
 The gap is nonexplicit.  This is a structural endpoint exclusion, not another finite
 iteration of the old scalar detour bootstrap.
@@ -71,41 +71,41 @@ iteration of the old scalar detour bootstrap.
 
 Let `o` be the full-source circumcenter supplied by FS and translate
 
-$$
+```math
 F_0:=F-o.
-$$
+```
 
 Define the central symmetral
 
-$$
+```math
 \boxed{
 S:=\frac12(F_0-F_0).
 }
 \tag{1.1}
-$$
+```
 
 Then `S` is centrally symmetric about the origin.
 
 ### Lemma FD.1 — exact diameter and perimeter of the symmetral
 
-$$
+```math
 \boxed{
 \operatorname{diam}S=D,
 \qquad
 \operatorname{per}S=\operatorname{per}F.
 }
 \tag{1.2}
-$$
+```
 
 #### Proof
 
 Every element of `S` is `(a-b)/2` with `a,b in F`.  For two such elements,
 
-$$
+```math
 \left|\frac{a-b}{2}-\frac{c-d}{2}\right|
 \le\frac{|a-c|+|b-d|}{2}
 \le D,
-$$
+```
 
 so `diam(S)<=D`.  Since `F` itself has diameter `D`, choose `a,b in F` with
 `|a-b|=D`.  Then `(a-b)/2` and `(b-a)/2` both lie in `S` and are distance `D` apart.
@@ -114,11 +114,11 @@ Thus `diam(S)=D`.
 For perimeter, Cauchy's width formula and width additivity under Minkowski addition
 give
 
-$$
+```math
 \operatorname{per}(F_0-F_0)
 =\operatorname{per}(F_0)+\operatorname{per}(-F_0)
 =2\operatorname{per}F.
-$$
+```
 
 Scaling by `1/2` proves `per(S)=per(F)`. `square`
 
@@ -126,15 +126,15 @@ Scaling by `1/2` proves `per(S)=per(F)`. `square`
 
 Let
 
-$$
+```math
 L_D=\sqrt{D\eta+\eta^2},
 \qquad
 \eta=3^{1/4}\sqrt D.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 0\le\operatorname{area}S-\operatorname{area}F
 \le
@@ -142,13 +142,13 @@ L_D\operatorname{per}F+\pi L_D^2
 =o(D^2).
 }
 \tag{1.3}
-$$
+```
 
 #### Proof
 
 Brunn--Minkowski gives
 
-$$
+```math
 \operatorname{area}(S)^{1/2}
 \ge
 \frac12\left(
@@ -158,38 +158,38 @@ $$
 \right)
 =
 \operatorname{area}(F)^{1/2},
-$$
+```
 
 so `area(S)>=area(F)`.
 
 FS.4 gives
 
-$$
+```math
 d_H(F_0,-F_0)\le2L_D,
-$$
+```
 
 hence
 
-$$
+```math
 -F_0\subseteq F_0+2L_DB_2.
-$$
+```
 
 By convexity,
 
-$$
+```math
 S=\frac12(F_0+(-F_0))
 \subseteq F_0+L_DB_2.
-$$
+```
 
 Steiner's formula therefore yields
 
-$$
+```math
 \operatorname{area}S
 \le
 \operatorname{area}F
 +L_D\operatorname{per}F
 +\pi L_D^2.
-$$
+```
 
 Since `per(F)<=pi D` and `L_D=O(D^{3/4})`, the error is `O(D^{7/4})=o(D^2)`.
 This proves (1.3). `square`
@@ -202,15 +202,15 @@ This proves (1.3). `square`
 
 For every unbounded post-ZF survivor sequence,
 
-$$
+```math
 \frac{\operatorname{per}F}{D}\to\pi
-$$
+```
 
 implies
 
-$$
+```math
 \frac{\operatorname{area}F}{D^2}\to\frac\pi4.
-$$
+```
 
 In fact the normalized central symmetrals `D^{-1}S` converge in Hausdorff distance to
 the radius-`1/2` disk after passage to any subsequence.
@@ -219,16 +219,16 @@ the radius-`1/2` disk after passage to any subsequence.
 
 Normalize
 
-$$
+```math
 \widetilde S:=D^{-1}S.
-$$
+```
 
 By Lemma FD.1, `widetilde S` is centrally symmetric, has diameter one, and
 
-$$
+```math
 \operatorname{per}(\widetilde S)	o\pi.
 \tag{2.1}
-$$
+```
 
 A centrally symmetric diameter-one body is contained in the radius-`1/2` disk centered
 at its symmetry center: if `x in widetilde S`, then `-x in widetilde S`, so
@@ -238,42 +238,42 @@ Hausdorff convergence along a subsequence to a compact convex centrally symmetri
 
 Planar convex perimeter is continuous under Hausdorff convergence.  Thus
 
-$$
+```math
 \operatorname{per}(S_\infty)=\pi.
 \tag{2.2}
-$$
+```
 
 Its diameter is at most one.  Cauchy's width formula gives for every diameter-at-most-
 one convex body
 
-$$
+```math
 \operatorname{per}(K)
 =
 \int_0^\pi w_K(\theta)\,d\theta
 \le\pi,
-$$
+```
 
 because `w_K(theta)<=1` pointwise.  Equality in (2.2), together with continuity of the
 width function, forces
 
-$$
+```math
 w_{S_\infty}(\theta)=1
 \qquad\text{for every }\theta.
 \tag{2.3}
-$$
+```
 
 Thus `S_infty` has constant width one.  Central symmetry says its support function
 satisfies
 
-$$
+```math
 h(-u)=h(u).
-$$
+```
 
 Constant width gives
 
-$$
+```math
 h(u)+h(-u)=1.
-$$
+```
 
 Therefore `h(u)=1/2` for every unit direction `u`, so `S_infty` is exactly the closed
 radius-`1/2` disk.
@@ -281,15 +281,15 @@ radius-`1/2` disk.
 Every convergent subsequence has the same limit; hence the normalized symmetrals tend
 to that disk.  In particular
 
-$$
+```math
 \frac{\operatorname{area}S}{D^2}\to\frac\pi4.
-$$
+```
 
 Lemma FD.2 now gives
 
-$$
+```math
 \frac{\operatorname{area}F}{D^2}\to\frac\pi4.
-$$
+```
 
 This proves FD. `square`
 
@@ -306,7 +306,7 @@ constant width into the disk.
 
 Write along a hypothetical endpoint sequence
 
-$$
+```math
 \lambda_D:=\frac{e_{BB}+2s_C}{D},
 \qquad
  t_D:=\frac{e_{BB}}D,
@@ -315,55 +315,55 @@ $$
 \qquad
  p_D:=\frac{\operatorname{per}F}{D}.
 \tag{3.1}
-$$
+```
 
 Assume
 
-$$
+```math
 \lambda_D\to\lambda_*:=\lambda_{FSJC}.
 \tag{3.2}
-$$
+```
 
 FSJC proves
 
-$$
+```math
 y_D\to\frac\pi2.
 \tag{3.3}
-$$
+```
 
 Let
 
-$$
+```math
 A_D:=\frac{\operatorname{area}F}{D^2},
 \qquad
 C_D:=\frac{1}{D^2}\sum_r\operatorname{area}(P_r),
 \qquad
 G_D:=A_D-C_D.
-$$
+```
 
 FSDB and GU give
 
-$$
+```math
 \liminf G_D
 \ge
 \Phi(\pi/2)-\frac\pi4\lambda_*^2,
 \qquad
 \Phi(y)=\frac{y+\sin y}{4}.
 \tag{3.4}
-$$
+```
 
 By the defining equation for `lambda_*`, the right side equals
 
-$$
+```math
 \boxed{
 U_*:=\frac{(\lambda_*+\pi/2)^2}{4\pi}.
 }
 \tag{3.5}
-$$
+```
 
 Now retain JC's actual-perimeter form rather than replacing `p_D` by `pi`:
 
-$$
+```math
 G_D
 \le
 \frac{
@@ -371,49 +371,49 @@ G_D
 }{4\pi}
 +o(1).
 \tag{3.6}
-$$
+```
 
 Here `t_D<=lambda_D`, `p_D<=pi`, and (3.3) gives
 
-$$
+```math
 \limsup\min\{y_D,p_D-y_D\}\le\frac\pi2.
-$$
+```
 
 Therefore (3.6) gives
 
-$$
+```math
 \limsup G_D\le U_*.
 \tag{3.7}
-$$
+```
 
 Together with (3.4),
 
-$$
+```math
 G_D\to U_*.
 \tag{3.8}
-$$
+```
 
 Every inequality in the upper chain must therefore asymptotically saturate.  In
 particular
 
-$$
+```math
 t_D\to\lambda_*
 \tag{3.9}
-$$
+```
 
 and
 
-$$
+```math
 \min\{y_D,p_D-y_D\}\to\frac\pi2.
 \tag{3.10}
-$$
+```
 
 Since `y_D->pi/2`, (3.10) forces
 
-$$
+```math
 \boxed{p_D\to\pi.}
 \tag{3.11}
-$$
+```
 
 Thus every FSJC endpoint sequence lies in the maximal-perimeter regime of Theorem FD.
 
@@ -423,36 +423,36 @@ Thus every FSJC endpoint sequence lies in the maximal-perimeter regime of Theore
 
 Theorem FD and (3.11) give
 
-$$
+```math
 A_D\to\frac\pi4.
 \tag{4.1}
-$$
+```
 
 GU still gives
 
-$$
+```math
 \limsup C_D\le\frac\pi4\lambda_*^2.
 \tag{4.2}
-$$
+```
 
 Hence
 
-$$
+```math
 \liminf G_D
 \ge
 \frac\pi4-\frac\pi4\lambda_*^2.
 \tag{4.3}
-$$
+```
 
 But (3.8) gives `G_D->U_*`.  Subtract the FSJC defining equality (3.5), equivalently
 
-$$
+```math
 U_*=\Phi(\pi/2)-\frac\pi4\lambda_*^2,
-$$
+```
 
 from (4.3).  The excess is exactly
 
-$$
+```math
 \begin{aligned}
 \frac\pi4-\Phi(\pi/2)
 &=
@@ -461,7 +461,7 @@ $$
 \boxed{\frac{\pi-2}{8}>0.}
 \end{aligned}
 \tag{4.4}
-$$
+```
 
 Thus (4.3) is larger than the forced limit `U_*` by a fixed positive amount,
 contradiction.
@@ -472,10 +472,10 @@ Therefore:
 
 There is no unbounded post-ZF survivor sequence with
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to\lambda_{FSJC}.
 \tag{4.5}
-$$
+```
 
 ---
 
@@ -486,19 +486,19 @@ $$
 There exist `epsilon_FS>0` and `D_0<infinity` such that every post-ZF survivor with
 `D>=D_0` satisfies FD.2:
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}
 \ge\lambda_{FSJC}+\epsilon_{FS}.
-$$
+```
 
 #### Proof
 
 If no such constants existed, then for every integer `j` there would be a post-ZF
 survivor with `D_j>=j` and
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D_j}<\lambda_{FSJC}+\frac1j.
-$$
+```
 
 FSJC already says every unbounded sequence has liminf at least `lambda_FSJC`.  Hence,
 after choosing one such survivor for each `j`, the ratios would converge to
@@ -512,9 +512,9 @@ No numerical value for `epsilon_FS` is claimed.
 
 The report-level statement
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}\ge0.5882283437\ldots
-$$
+```
 
 is now strengthened in two ways:
 

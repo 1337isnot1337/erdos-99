@@ -13,7 +13,7 @@
 ## 1. Checkpoints and exact new frontier
 
 This run independently derived the exact contiguity of diameter stars and the
-cover of all but $2d_H$ loaded hull sides by consecutive diameter V's.
+cover of all but $`2d_H`$ loaded hull sides by consecutive diameter V's.
 A concurrent independent contiguity proof appeared on remote branch
 `proof/target-c-global-diameter-star-contiguity-v2-20260930` at `c2f1850d`.
 It was not on main when first inspected and was subsequently merged into
@@ -24,28 +24,29 @@ The concurrent quantitative near-endpoint V-cover at `c00bb080` was also
 checked on its proof branch; it quantifies the same direction-excess budget
 and does not supply the missing source replacement.
 
-An analytic regular-Reuleaux-polygon shell then showed that $o(D)$
-ordinary contiguous stars can carry $(\pi+o(1))D$ incidences, even with
-an exact V-cover, $q/D\to\pi$, and a disk limit. The shell is not a
+An analytic regular-Reuleaux-polygon shell then showed that $`o(D)`$
+ordinary contiguous stars can carry $`(\pi+o(1))D`$ incidences, even with
+an exact V-cover, $`q/D\to\pi`$, and a disk limit. The shell is not a
 global-minimizer or harmonic-core certificate.
 
 The train-boundary arguments subsequently proved candidates for:
 
 1. four opposite straight support faces under sublinear route/face defect;
 2. the finite symmetry estimate
-   $$
+   ```math
    d_{\rm BL}(\nu_P,\sigma_\#\nu_P)
    \le2\sqrt{2LZ}+2Z+20Q;
-   $$
+   
+   ```
 3. a centrally symmetric parallelogram limit under those defects;
 4. exclusion of **every** positive-area circle-supported carrier with
-   $Z+Q=o(D)$, including diameter-one wrapping limits, because a cyclic
+   $`Z+Q=o(D)`$, including diameter-one wrapping limits, because a cyclic
    parallelogram is a rectangle while the forced phase directions differ by
-   $\pi/3$.
+   $`\pi/3`$.
 
 For a fixed positive carrier-area floor and the canonical uniform constants,
-the last result gives an existential $\epsilon>0$ with
-$Z+Q\ge\epsilon D$. It does not construct a shorter source.
+the last result gives an existential $`\epsilon>0`$ with
+$`Z+Q\ge\epsilon D`$. It does not construct a shorter source.
 The exact rooted threshold is conditionally excluded through the current
 unpromoted defect-stability package. Positive linear defects remain allowed.
 
@@ -59,55 +60,55 @@ differences telescope over the entire side chain.
 
 ## 2. Exact finite source quantity
 
-Let $A$ be the **entire** canonical C-II source, including contact isolates,
-let $D=\operatorname{diam}A$, $K=\operatorname{conv}A$, and let $H$
-contain every actual source diameter pair. For a vertex cover $S$ of $H$,
+Let $`A`$ be the **entire** canonical C-II source, including contact isolates,
+let $`D=\operatorname{diam}A`$, $`K=\operatorname{conv}A`$, and let $`H`$
+contain every actual source diameter pair. For a vertex cover $`S`$ of $`H`$,
 define
-$$
+```math
 \nu_A(S)=\max\bigl\{|T|:
 T\subset\operatorname{int}K,\quad
 \operatorname{sep}T\ge1,\quad
 |t-a|\ge1\ (t\in T,a\in A\setminus S)\bigr\}.
 \tag{2.1}
-$$
+```
 This is an integer packing capacity of actual vacant sites after removing
 the specified source points. Auxiliary scaffolds, single-site feasibility,
 and area budgets do not compute it.
 
-If $\nu_A(S)\ge|S|$ for any such cover, choose exactly $|S|$ sites.
-They yield $A'=(A\setminus S)\cup T$ with exactly $|A|$ points and
-unit separation. Every remaining old-old pair is strictly below $D$.
-Since finite $T$ lies in $\operatorname{int}K$, its minimum depth
-$\rho>0$ is positive. For $t\in T,a\in K$, the support-width bound
-gives $|t-a|\le D-\rho$; for two new points it gives
-$|t-t'|\le D-2\rho$. Thus $\operatorname{diam}A'<D$.
+If $`\nu_A(S)\ge|S|`$ for any such cover, choose exactly $`|S|`$ sites.
+They yield $`A'=(A\setminus S)\cup T`$ with exactly $`|A|`$ points and
+unit separation. Every remaining old-old pair is strictly below $`D`$.
+Since finite $`T`$ lies in $`\operatorname{int}K`$, its minimum depth
+$`\rho>0`$ is positive. For $`t\in T,a\in K`$, the support-width bound
+gives $`|t-a|\le D-\rho`$; for two new points it gives
+$`|t-t'|\le D-2\rho`$. Thus $`\operatorname{diam}A'<D`$.
 
 This cover/refill mechanism is known; the unmerged PR #581 already proves
 a source-level version. It is restated here to identify the actual missing
 capacity, not claimed as a new solution mechanism.
 
 Woodall's exact classification gives a cover of size at most
-$\lceil q/2\rceil$: color a forest, or remove one odd-cycle vertex and
+$`\lceil q/2\rceil`$: color a forest, or remove one odd-cycle vertex and
 color the remaining forest. With the non-star angular bound
-$q\le\pi/(2\arcsin(1/(2D)))$, it is at most
-$\pi D/2+1/2$. High-degree star concentration can reduce this number;
+$`q\le\pi/(2\arcsin(1/(2D)))`$, it is at most
+$`\pi D/2+1/2`$. High-degree star concentration can reduce this number;
 it cannot provide the required new sites.
 
 ## 3. Exact missing theorem for the surviving full-core branch
 
 **Defect-to-refill lemma (unproved).** Fix a positive carrier-area floor
-$\Gamma$ and the canonical uniform constants. There exists $D_0$ such
+$`\Gamma`$ and the canonical uniform constants. There exists $`D_0`$ such
 that for every canonical triangle-free full-core global source with
-$D\ge D_0$, if an actual harmonic carrier satisfies
-$$
+$`D\ge D_0`$, if an actual harmonic carrier satisfies
+```math
 \operatorname{area}P\ge\Gamma D^2,\qquad Z_P+Q_P\ge\epsilon D
-$$
+```
 with the forced positive defect from this run, then
-$$
+```math
 \boxed{\exists S\text{ a vertex cover of the full }H:
 \quad\nu_A(S)\ge|S|.}
 \tag{3.1}
-$$
+```
 
 The candidate no-zero-defect theorem forces the antecedent on a quadratic
 carrier. Formula (3.1) supplies an exact same-cardinality strict competitor
@@ -128,15 +129,15 @@ The existence of a near-capacity isolate chamber alone has not proved it.
 | Direction runs and diameter-star incidence | Contiguity is exact, so re-entry is absent. Small ordinary hub populations still have linear incidence mass in the analytic shell regression. |
 | Common antipodes, curvature, constant width, and winding | The regular Reuleaux shells realize the complete V-cover, support-width behavior, and cyclic topology. These shell hypotheses supply no contradiction or source vacancies. |
 | Harmonic trains and equality classification | The zero-defect regime is excluded by the new symmetry and convex train-topology arguments. Their estimates allow positive linear defect; the rooted ledger allows that regime too. |
-| First-order deformation | Full-support KKT makes every feasible fixed-diameter critical variation zero on every active row. Canonical ZF has rank $2v-3$, so on the nonisolated core it is rigid. No nonrigid infinitesimal decrease was found. |
+| First-order deformation | Full-support KKT makes every feasible fixed-diameter critical variation zero on every active row. Canonical ZF has rank $`2v-3`$, so on the nonisolated core it is rigid. No nonrigid infinitesimal decrease was found. |
 | Stress duality | The same positive stress freezes the critical cone. The new boundary defect supplies no additional null vector or integrable release. Contact-isolate kernel directions do not move the diameter-carrying core. |
-| Triangular-lattice averaging and source count | Linear non-rhombic area is not empty source area: its isolate population and interface guards must be retained. The leading $D^2$ density and an unspecified positive boundary cost do not give the needed exact capacity. |
+| Triangular-lattice averaging and source count | Linear non-rhombic area is not empty source area: its isolate population and interface guards must be retained. The leading $`D^2`$ density and an unspecified positive boundary cost do not give the needed exact capacity. |
 | Local refill and inactive-chamber motion | A unit-rhombus face supplies no extra unit-clear interior site (canonical Section 67). Deep isolate contact creation can preserve the old diameter core and KKT polytope (proof-only Section 95). Neither operation establishes (3.1). |
 
-For the deformation failure, use signed active rows $\phi_e(u)\ge0$
+For the deformation failure, use signed active rows $`\phi_e(u)\ge0`$
 and a stress positive on all of them. Stationarity gives
-$\sum_e\lambda_e\phi_e(u)=0$, so all $\phi_e(u)=0$. ZF then
-restricts $u|_V$ to Euclidean rigid motions. This is an obstruction to
+$`\sum_e\lambda_e\phi_e(u)=0`$, so all $`\phi_e(u)=0`$. ZF then
+restricts $`u|_V`$ to Euclidean rigid motions. This is an obstruction to
 the attempted **first-order** motion, not a theorem against all finite
 nonlocal replacements.
 
@@ -153,8 +154,8 @@ closing attempts stop.
 | --- | --- |
 | C-I | Canonically closed before the run. |
 | C-II macroscopic inactive chamber / exterior cap | Open; core replacement plus full population refill still missing. |
-| C-II full core with sublinear total local $Z+Q$ | Excluded by a proved candidate from this run, pending independent audit and promotion. |
-| Exact rooted wrapping threshold $\lambda_1$ | Conditionally excluded using the unpromoted rooted stability input. |
+| C-II full core with sublinear total local $`Z+Q`$ | Excluded by a proved candidate from this run, pending independent audit and promotion. |
+| Exact rooted wrapping threshold $`\lambda_1`$ | Conditionally excluded using the unpromoted rooted stability input. |
 | Positive-defect wrapping carrier, including diameter-one limits | Open; (3.1) or another exact strict source replacement remains. |
 | Positive-defect two-half-disk groups | Open; the defining diameter-scale cells need not have quadratic area and cannot inherit group hypotheses. |
 | Target A | Open at the canonical right-deficiency / Schur-nullity endpoint. |

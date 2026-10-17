@@ -53,10 +53,10 @@ Put Delta_W=pi D^2/4-area(W). For two source partners q_1,q_2 of z with
 |z-q_j|>=D-epsilon, assume 0<epsilon<=D/10. Let theta be the angle between
 the two rays z-q_j. Then
 
-$$
+```math
  \boxed{\theta\le\max\left\{
        \sqrt{96\epsilon/D},\ (192\Delta_W/D^2)^{1/3}\right\}.}       \tag{1}
-$$
+```
 
 This is an extension of the one-vertex argument in canonical Audit.126 to
 epsilon that may exceed a fixed inverse-D scale. The extension needs no
@@ -67,9 +67,9 @@ the inverse-D theorem outside its promoted parameter range.
 
 The source diameter gives
 
-$$
+```math
  \cos\theta\ge1-\frac{D^2}{2(D-\epsilon)^2}>0,
-$$
+```
 
 so theta<pi/2. Set a=theta/2<pi/4 and center the normal interval I=[-a,a]
 between the two rays. The support function h of W satisfies
@@ -87,33 +87,33 @@ j^2-1>=0, so E is positive semidefinite and its first-harmonic kernel causes
 no difficulty. The support-area formula gives E(p)=2Delta_W. Polarization
 and semidefinite Cauchy--Schwarz give
 
-$$
+```math
  |\langle f,g\rangle|^2=|E(p,g)|^2\le2\Delta_W E(g).             \tag{2}
-$$
+```
 
 On I set g(t)=cos(t)/cos(a)-1, set its negative on I+pi, and zero elsewhere.
 It is antiperiodic and H^1. Direct integration, with k=tan(a)-a, gives
 
-$$
+```math
  E(g)=4k,\quad\int_Ig=2k,\quad k\ge a^3/3.                     \tag{3}
-$$
+```
 
 The last inequality follows by differentiating tan(a)-a-a^3/3: its derivative
 is tan^2(a)-a^2>=0 since tan(a)>=a. Integration by parts using y''+y=rho_W,
 g''+g=-1, g(+-a)=0 and g'(+-a)=mp tan(a) gives
 
-$$
+```math
  \int_I\rho_Wg=\tan(a)(y(-a)+y(a))-\int_Iy
  \le2\epsilon\tan(a).
-$$
+```
 
 Antiperiodicity therefore gives
 
-$$
+```math
  -\langle f,g\rangle
  =2Dk-2\int_I\rho_Wg
  \ge2Dk-4\epsilon\tan(a)\ge2Dk-8\epsilon a.                    \tag{4}
-$$
+```
 
 Here tan(a)<=2a for 0<=a<=pi/4: the derivative of 2a-tan(a) is
 2-sec^2(a)>=0 and its value at zero is zero. If a^2>=24epsilon/D,
@@ -127,9 +127,9 @@ Delta_W<=delta_K=pi D^2/4-area(conv(A)). For canonical global sources,
 `C-FS-GEOM` gives delta_K<pi sqrt(3)D/4. Thus (1) has the explicit global
 upper bound
 
-$$
+```math
  \Theta=\max\{\sqrt{96\epsilon/D},\ (48\pi\sqrt3/D)^{1/3}\}.      \tag{5}
-$$
+```
 
 In particular epsilon=o(D) gives Theta=o(1). No uniform near-diameter degree
 bound is inferred; Audit.126's inactive-star regression remains binding.
@@ -165,16 +165,16 @@ For each owner fix a finite nonempty anchor set A_i of loaded labels z in G_i.
 For each z in A_i choose an actual crossing diameter z h_z, with h_z outside
 G_i, and write n_z=(z-h_z)/D. Parent singleton upper safety gives
 
-$$
+```math
  n_z\cdot v_i\le-\delta_i/(2D)<0\qquad(z\in A_i).              \tag{6}
-$$
+```
 
 Choose rho>0. Call p in G_i upper-relevant if some q outside G_i has
 |p-q|>=D-rho. **Local coverage hypothesis:** every upper-relevant p satisfies
 
-$$
+```math
  \min_{z\in A_i}|p-z|\le R.                                    \tag{7}
-$$
+```
 
 It is essential that (7) cover upper-relevant assigned isolates as well as
 core points. Merely knowing that an owner contains a loaded endpoint does not
@@ -185,24 +185,24 @@ their owner require no coverage, since the triangle inequality handles them.
 Assume R+rho<=D/10. Put epsilon=R+rho. Use Theta from (5), or the tighter
 bound (1) if a completion's actual deficit is known, and set
 
-$$
+```math
  \Phi=w/2+\Theta+
        \arcsin\frac{R}{D-\rho}+
        \arcsin\frac{\rho}{2(D-\rho)}<\pi/2.                     \tag{8}
-$$
+```
 
 Discard an owner if any of its chosen n_z lies in either closed normal window
 of half-width Phi around Jv or -Jv. With L_D=7D^{2/3} and
 
-$$
+```math
  F_D(\Phi)=1+\frac{D\sin\Phi+2L_D}{\cos\Phi},
-$$
+```
 
 at most 2 floor(F_D(Phi)) owners are discarded. Every full-source placement
 
-$$
+```math
  Q_p=P_p+s_i v\ (p\in G_i),\quad 0\le s_i\le\rho,              \tag{9}
-$$
+```
 
 with discarded groups and all other labels fixed, has diameter at most D.
 Every old inactive upper pair remains strictly below D throughout this box.
@@ -215,9 +215,9 @@ For a retained owner and every chosen anchor z, the angle between v_i and v
 is at most w/2. By (6), n_z cannot lie on the positive-v side outside the
 perpendicular window. Since it is outside the closed windows in (8),
 
-$$
+```math
  n_z\cdot v<-\sin\Phi.
-$$
+```
 
 First translate only G_i by rho v, and fix all other labels. For p in G_i,
 q outside G_i, put r=p-q. If |r|<D-rho, the triangle inequality makes the
@@ -232,10 +232,10 @@ Thus the normal r/|r| lies within Theta+arcsin(R/(D-rho)) of n_z and remains
 on the negative-v side by a margin greater than arcsin(rho/[2(D-rho)]).
 Consequently
 
-$$
+```math
  \frac{r\cdot v}{|r|}<-\frac{\rho}{2(D-\rho)},
  \qquad r\cdot v<-\rho/2.
-$$
+```
 
 Therefore |r+rho v|^2=|r|^2+2rho r dot v+rho^2<|r|^2<=D^2. This proves
 strict upper safety for **every** moved/fixed pair, including all isolates
@@ -281,9 +281,9 @@ degree bound. Woodall is not needed for this vertex charge.
 
 If R=o(D), rho=o(D), and w=o(1), (8) has Phi=o(1), and
 
-$$
+```math
  2\lfloor F_D(\Phi)\rfloor=O(D\Phi+D^{2/3})=o(D).               \tag{10}
-$$
+```
 
 Thus a supplied linear-sized locally covered family retains a linear-sized
 upper-safe family. The theorem does not prove that such a family exists.
@@ -295,9 +295,9 @@ uncovered upper-relevant labels does not qualify.
 
 If w<=pi/3, the same retained family also has the upper-safe box
 
-$$
+```math
  Q_p=P_p+s_i v_i\quad(p\in G_i),\qquad 0\le s_i\le\rho.          \tag{12}
-$$
+```
 
 Every originally inactive pair stays strict. This protects each parent's
 original contact-preserving displacement whenever delta_i<=rho; it does not
@@ -313,10 +313,10 @@ At a native box vertex, if a pair with |r|>=D-rho has both owner groups i,j
 moving, apply this conclusion from both endpoints:
 r dot v_i<-rho/2 and r dot v_j>rho/2. Its squared change is
 
-$$
+```math
  2\rho r\cdot(v_i-v_j)+\rho^2|v_i-v_j|^2
  <-2\rho^2+2\rho^2(1-v_i\cdot v_j)<0.
-$$
+```
 
 The last inequality uses v_i dot v_j>=1/2. If |r|<D-rho, the two-owner
 relative displacement has length rho|v_i-v_j|<=rho; the triangle inequality
@@ -343,10 +343,10 @@ F contains a disk centered at c of radius r_-=(1/2-eta)D, where
 most D. If rho<r_- and a source point p has a source partner q with
 |p-q|>=D-rho, then there is an actual loaded vertex z of F with
 
-$$
+```math
  \boxed{|p-z|\le R_{\rm global}
        :=D\bigl(2\eta+\sqrt{2\eta}\bigr)+\rho.}                \tag{11}
-$$
+```
 
 This covers contact isolates outside F, not just positive-contact coordinates.
 
@@ -366,10 +366,10 @@ The boundary point x lies on a loaded hull side zz', or is already a loaded
 vertex. The side's supporting line has distance h>=r_- from c. Its endpoints
 lie in the disk of radius r_+, so
 
-$$
+```math
  |z-z'|\le2\sqrt{r_+^2-h^2}
           \le2\sqrt{r_+^2-r_-^2}=2D\sqrt{2\eta}.
-$$
+```
 
 Choose the nearer endpoint, at distance at most D sqrt(2eta) from x. The
 triangle inequality proves (11). No packing density or omitted source labels
@@ -399,9 +399,9 @@ phase coverage.
 In (9) choose inclusive contact floors F_i computed from the actual common
 direction v. They satisfy
 
-$$
+```math
  F_i\le\delta_i+4\sin(w/4),
-$$
+```
 
 because each cut unit vector has projection -delta_i/2 on v_i and differs in
 projection on v by at most |v-v_i|<=2sin(w/4). A choice
@@ -433,9 +433,9 @@ assuming its inactive upper tests, assume AS's local port coverage with
 R=o(D), w=o(1), and rho=o(D), where max_i delta_i<=rho. Let Phi be (8).
 Then, for sufficiently large D, its original number r of owners obeys
 
-$$
+```math
  \boxed{r\le2\lfloor F_D(\Phi)\rfloor+147(x_B+m_B).}             \tag{13}
-$$
+```
 
 There is no d_H term. In particular x_B+m_B=o(D) implies r=o(D), excluding
 every such linear-sized family even when d_H is linear in D.
@@ -463,9 +463,9 @@ without extracting one or establishing low boundary defect in every survivor.
 For D in {300,500,1000}, let delta=2/D, rho=3/D, a=sqrt(1-1/D^2), and use
 the circle of radius D/2 centered at (0,D/2). Put
 
-$$
+```math
  p=(0,0),\ q=(0,D),\ l=(-a,1/D),\ r=(a,1/D).
-$$
+```
 
 The only contacts involving p are pl,pr. Their floor is delta. Reflection by
 delta v with v=(0,1) preserves both; height rho opens both to squared length
@@ -485,19 +485,19 @@ pair.
 
 **Far-label regression:** instead of the horizontal circle pair and u, add
 
-$$
+```math
  b=(-L/2,D/2-\delta/4),\quad c=(L/2,D/2+\delta/4),
  \qquad L^2=D^2-\delta^2/2.
-$$
+```
 
 All six original points lie in the same circle and are unit-separated. Move
 G={p,b}; p still supplies the good actual anchor. The parent height delta
 preserves contacts and is upper-safe for every source pair. Its diameter is
 strictly smaller than D. However, the common release height rho has
 
-$$
+```math
  |b+\rho v-c|^2=D^2+\delta^2/2>D^2.
-$$
+```
 
 The blocking pair was inactive, with original squared length D^2-delta^2/4.
 The distance |b-p| is of order D, so (7) with subdiameter R fails. A good

@@ -33,37 +33,37 @@ No KKT statement is extended to isolate coordinates.
 If one fixed isolate `z` first-blocks motions indexed by `I`, every auxiliary blocked
 position `x_i'` satisfies
 
-$$
+```math
 |x_i'-z|=1,
 \qquad
 |x_i-x_i'|<K_w/D.
-$$
+```
 
 For distinct matching pairs, the original moving endpoints are distinct contact
 isolates and therefore satisfy
 
-$$
+```math
 |x_i-x_j|>1.
-$$
+```
 
 Consequently
 
-$$
+```math
 |x_i'-x_j'|>1-2K_w/D.
-$$
+```
 
 Seven points on a unit circle contain a pair with angular separation at most `2pi/7`,
 so their chord is at most
 
-$$
+```math
 2\sin(\pi/7)=0.867767\ldots .
-$$
+```
 
 For fixed `K_w`, eventually
 
-$$
+```math
 1-2K_w/D>2\sin(\pi/7).
-$$
+```
 
 Thus seven blocked positions around one `z` are impossible and the multiplicity is at
 most six.
@@ -81,27 +81,27 @@ unit vector `z`, with the original moving endpoint `x=-te`, `t>0`.
 
 Original isolation gives
 
-$$
+```math
 |z-x|^2=1+t^2+2t(z\cdot e)>1,
-$$
+```
 
 hence
 
-$$
+```math
 z\cdot e>-t/2.
-$$
+```
 
 Likewise
 
-$$
+```math
 |z-y|^2=1+r^2-2r(z\cdot e)>1
-$$
+```
 
 implies
 
-$$
+```math
 z\cdot e<r/2.
-$$
+```
 
 Since `t=O(1/D)` and `r=1+O(1/D)`, the angle lies between
 `pi/3-O(1/D)` and `pi/2+O(1/D)` after reflection.

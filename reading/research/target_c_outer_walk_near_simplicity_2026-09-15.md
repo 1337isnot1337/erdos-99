@@ -24,16 +24,16 @@ isoperimetry makes the bridge population tiny.
 Consequently almost every straight occurrence occurs at a different physical unloaded
 vertex. At the current endpoint there are at least
 
-$$
+```math
 \boxed{1.2776514506993147\ldots D-o(D)}
-$$
+```
 
 distinct unloaded straight outer vertices, and the entire outer-face walk contains at
 least
 
-$$
+```math
 \boxed{3.0985400886787594\ldots D-o(D)}
-$$
+```
 
 distinct physical vertices. Equivalently, fewer than about `1.461%` of outer-walk
 occurrences can be lost to repetition or to the nonstraight residue at the current
@@ -43,16 +43,16 @@ worst low-`t` point.
 
 Fix
 
-$$
+```math
 0<\beta\le\pi/6,
 \qquad
 c_\beta:=1-\cos\beta.
-$$
+```
 
 Let `S_beta` be the number of `beta`-straight internal occurrences on all Section-63
 distinguished outer routes. The global directional-energy theorem gives
 
-$$
+```math
 \boxed{
 S_\beta
 \ge x_B-{2d_{out}\over c_\beta},
@@ -60,7 +60,7 @@ S_\beta
 x_B=b-q.
 }
 \tag{NS.1}
-$$
+```
 
 The hostile-audited loaded-route exclusion says every internal route vertex is
 unloaded, so C26 gives contact degree between three and five.
@@ -72,10 +72,10 @@ supporting exactly two such occurrences.
 The outer-sector argument already proves that one physical vertex supports at most two
 straight occurrences. Therefore
 
-$$
+```math
 \boxed{V_\beta=S_\beta-R_\beta.}
 \tag{NS.2}
-$$
+```
 
 ## 2. A double-straight vertex has degree exactly three
 
@@ -83,10 +83,10 @@ Take a physical vertex `x` supporting two distinct `beta`-straight outer-face
 occurrences. Each occurrence occupies one angular outer-face sector whose measure is
 strictly greater than
 
-$$
+```math
 \pi-2\beta\ge {2\pi\over3}.
 \tag{NS.3}
-$$
+```
 
 The two occurrences correspond to two distinct disjoint cyclic sectors at `x`.
 
@@ -96,17 +96,17 @@ the two straight outer sectors, the cyclic rotation at `x` contains at least two
 angular gaps, each strictly greater than `pi/3`. The total angular measure would then
 be strictly larger than
 
-$$
+```math
 2\cdot{2\pi\over3}+2\cdot{\pi\over3}=2\pi,
-$$
+```
 
 impossible. Since `x` is unloaded and internal, C26 already gives `deg_C(x)>=3`.
 Therefore
 
-$$
+```math
 \boxed{\deg_C(x)=3.}
 \tag{NS.4}
-$$
+```
 
 This uses strict triangle-freeness at equality: a `pi/3` gap would make the two
 corresponding contact neighbors unit distance apart and create a unit equilateral
@@ -126,10 +126,10 @@ single bridge edge.
 Let `B_br` be the number of physical contact bridges. Charging a double-straight
 vertex to one incident bridge gives the safe incidence bound
 
-$$
+```math
 \boxed{R_\beta\le2B_{br},}
 \tag{NS.5}
-$$
+```
 
 because one bridge has only two endpoints.
 
@@ -140,105 +140,105 @@ face, so `B_br=B_o`, the outer-bridge count used by bridge-subtracted isoperimet
 
 On a convergent full-core Type-II subsequence write
 
-$$
+```math
 \delta:=\lim {d_{out}\over D}.
-$$
+```
 
 The bridge-subtracted isoperimetric theorem, combined with full-core near-disk area
 saturation and `per(F)/D->pi`, gives
 
-$$
+```math
 \boxed{
 \limsup {2B_o\over D}\le\delta.
 }
 \tag{NS.6}
-$$
+```
 
 Equations (NS.2), (NS.5), and (NS.6) therefore imply
 
-$$
+```math
 \liminf {V_\beta\over D}
 \ge
 \liminf {S_\beta\over D}-\delta.
 \tag{NS.7}
-$$
+```
 
 Using
 
-$$
+```math
 {x_B\over D}=\pi+\delta-t-\kappa+o(1),
 \qquad
 \kappa={k\over D},
-$$
+```
 
 and (NS.1), this becomes
 
-$$
+```math
 \boxed{
 \liminf {V_\beta\over D}
 \ge
 \pi-t-\kappa-{2\delta\over1-\cos\beta}.
 }
 \tag{NS.8}
-$$
+```
 
 ## 5. Current low-`t` distinct-vertex floor
 
 Take `beta=pi/6`, so
 
-$$
+```math
 c_*:=1-{\sqrt3\over2}.
-$$
+```
 
 The low-`t` network squeeze is
 
-$$
+```math
 2\delta+{\kappa\over2}\le R(t).
-$$
+```
 
 To minimize the right side of (NS.8), maximize
 
-$$
+```math
 \kappa+{2\delta\over c_*}.
-$$
+```
 
 As in the global contact theorem, the detour endpoint is more expensive per unit
 network budget, so the worst point is
 
-$$
+```math
 \delta={R(t)\over2},
 \qquad
 \kappa=0.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \liminf {V_{\pi/6}\over D}
 \ge
 \pi-t-{R(t)\over1-\sqrt3/2}.
 }
 \tag{NS.9}
-$$
+```
 
 At the current proof-only endpoint
 
-$$
+```math
 t_{42}=1.8208886379794447041\ldots,
 \qquad
 R(t_{42})=0.00576795,
-$$
+```
 
 this gives
 
-$$
+```math
 \boxed{
 {V_{\pi/6}\over D}
 \ge1.2776514506993147228\ldots-o(1).
 }
 \tag{NS.10}
-$$
+```
 
 These are distinct physical **unloaded** vertices on the outer face, each supporting a
 locally near-straight distinguished-route occurrence.
@@ -249,69 +249,69 @@ Let `V_out` be the number of distinct physical vertices incident with the unboun
 face. All `q` loaded force-hull vertices are distinct outer-face vertices, and the
 vertices counted by `V_beta` are unloaded, so the two sets are disjoint. Hence
 
-$$
+```math
 V_{out}\ge q+V_\beta.
 \tag{NS.11}
-$$
+```
 
 Using (NS.8) and `q/D=t+kappa`,
 
-$$
+```math
 \boxed{
 \liminf {V_{out}\over D}
 \ge
 \pi-{2\delta\over1-\cos\beta}.
 }
 \tag{NS.12}
-$$
+```
 
 At `beta=pi/6` and `delta<=R(t)/2`,
 
-$$
+```math
 \boxed{
 \liminf {V_{out}\over D}
 \ge
 \pi-{R(t)\over1-\sqrt3/2}.
 }
 \tag{NS.13}
-$$
+```
 
 At `t=t_42`,
 
-$$
+```math
 \boxed{
 {V_{out}\over D}
 \ge3.0985400886787594269\ldots-o(1).
 }
 \tag{NS.14}
-$$
+```
 
 Meanwhile
 
-$$
+```math
 {b\over D}=\pi+\delta+o(1)
 \le3.1444766285897932385\ldots+o(1)
-$$
+```
 
 at the same worst detour endpoint. Thus
 
-$$
+```math
 \boxed{
 {b-V_{out}\over D}
 \le0.0459365399110338116\ldots+o(1).
 }
 \tag{NS.15}
-$$
+```
 
 and consequently
 
-$$
+```math
 \boxed{
 {V_{out}\over b}
 \ge0.9853913559117038\ldots-o(1).
 }
 \tag{NS.16}
-$$
+```
 
 So at least `98.539%` of outer-walk occurrence mass survives as distinct physical
 outer vertices at the worst current low-`t` point.

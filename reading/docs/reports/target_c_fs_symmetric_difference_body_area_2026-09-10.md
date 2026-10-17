@@ -27,7 +27,7 @@ rather than the general Rogers--Shephard factor `1/6`.
 
 For every unbounded post-ZF survivor sequence,
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\frac{\operatorname{area}F}{D^2}
 \ge
@@ -36,22 +36,22 @@ A_{FS}:=
 =0.6184708847696858\ldots,
 }
 \tag{FSDB.1}
-$$
+```
 
 where `rho` is the positive solution of
 
-$$
+```math
 \rho=\cos\rho
 \qquad
 (\rho=0.7390851332151606\ldots).
 \tag{FSDB.2}
-$$
+```
 
 The previous best universal post-ZF force-hull area floor in the report stack was
 
-$$
+```math
 \frac12\sin(2\rho)=0.497856636324211\ldots
-$$
+```
 
 from the projective-circle theorem PI.  The new bound is strictly stronger.  It does
 not itself settle Level I; regular odd shells satisfy an even larger normalized area.
@@ -71,10 +71,10 @@ post-ZF branch let
 
 The September 9 difference-body theorem DB defines
 
-$$
+```math
 P_H:=D\,\operatorname{conv}\{\pm u_e:e\in E(H)\},
 \tag{1.1}
-$$
+```
 
 where `u_e` is a unit vector along the projective direction of diameter edge `e`, and
 proves `P_H\subseteq F-F`.  Using only the planar Rogers--Shephard inequality gives a
@@ -98,26 +98,26 @@ FS.4 approximate central symmetry of F
 
 Put
 
-$$
+```math
 \eta=3^{1/4}\sqrt D,
 \qquad
 L_D=\sqrt{D\eta+\eta^2},
 \tag{2.1}
-$$
+```
 
 as in FS.4, and put
 
-$$
+```math
 \delta_D=2\arcsin\frac1{2D}.
 \tag{2.2}
-$$
+```
 
 ### Theorem FSDB — finite symmetric difference-body area bound
 
 Every post-ZF survivor for which the September 10 FS.4 theorem and the audited C67
 diameter-direction separation apply satisfies
 
-$$
+```math
 \boxed{
 \begin{aligned}
 \operatorname{area}F
@@ -132,14 +132,14 @@ $$
 \end{aligned}
 }
 \tag{FSDB.3}
-$$
+```
 
 Consequently, after inserting DB's
 
-$$
+```math
 \liminf h/D\ge2\rho,
 \tag{2.3}
-$$
+```
 
 one obtains FSDB.1.
 
@@ -157,27 +157,27 @@ FSDB.3 is exact under the cited finite inputs.
 
 Translate by the full-source circumcenter `o` from FS.4 and write
 
-$$
+```math
 F_0:=F-o.
-$$
+```
 
 FS.4 gives
 
-$$
+```math
 d_{\rm Haus}(F_0,-F_0)\le2L_D.
 \tag{2.4}
-$$
+```
 
 Hence
 
-$$
+```math
 -F_0\subseteq F_0+2L_DB_2,
 \tag{2.5}
-$$
+```
 
 where `B_2` is the closed unit Euclidean disk.  Therefore
 
-$$
+```math
 \begin{aligned}
 \frac12(F_0-F_0)
 &=\frac12(F_0+(-F_0))\\
@@ -186,78 +186,78 @@ $$
 &=F_0+L_DB_2,
 \end{aligned}
 \tag{2.6}
-$$
+```
 
 using convexity of `F_0`, so `F_0+F_0=2F_0`.
 
 Every diameter vector `\pm Du_e` is a difference of two force-hull vertices.  Thus DB's
 polygon satisfies
 
-$$
+```math
 P_H\subseteq F_0-F_0.
 \tag{2.7}
-$$
+```
 
 Combining (2.6) and (2.7),
 
-$$
+```math
 \boxed{\frac12P_H\subseteq F_0+L_DB_2.}
 \tag{2.8}
-$$
+```
 
 Area monotonicity and Steiner's formula now give
 
-$$
+```math
 \frac14\operatorname{area}(P_H)
 \le
 \operatorname{area}(F+L_DB_2)
 =
 \operatorname{area}F+L_D\operatorname{per}F+\pi L_D^2.
 \tag{2.9}
-$$
+```
 
 Since `diam(F)=D`, Cauchy's perimeter--diameter inequality gives
 
-$$
+```math
 \operatorname{per}F\le\pi D.
 \tag{2.10}
-$$
+```
 
 It remains to evaluate `area(P_H)`.  Order the `h` projective diameter directions
 cyclically on the projective circle of circumference `pi`, and let their gaps be
 
-$$
+```math
 g_1,\ldots,g_h,
 \qquad
 \sum_i g_i=\pi.
 \tag{2.11}
-$$
+```
 
 C67 gives
 
-$$
+```math
 g_i\ge\delta_D.
 \tag{2.12}
-$$
+```
 
 The vertices of `P_H` are the `2h` points `\pm Du_e` on the circle of radius `D`.
 The projective gap list occurs twice around the Euclidean circle.  The signed area
 formula for an inscribed polygon therefore gives the exact identity
 
-$$
+```math
 \boxed{
 \operatorname{area}(P_H)
 =D^2\sum_{i=1}^h\sin g_i.
 }
 \tag{2.13}
-$$
+```
 
 The function `sin` is concave on `[0,pi]`.  Under `g_i>=delta_D` and fixed sum `pi`,
 its sum is minimized at an extreme point of the feasible simplex: all but one gaps
 are equal to `delta_D`.  Equivalently one may transfer mass between any two gaps
 until one reaches the lower bound; concavity never increases the sum.  Hence
 
-$$
+```math
 \begin{aligned}
 \sum_i\sin g_i
 &\ge
@@ -270,50 +270,50 @@ $$
 \sin\bigl((h-1)\delta_D\bigr).
 \end{aligned}
 \tag{2.14}
-$$
+```
 
 Substitute (2.13)--(2.14) into (2.9) and use (2.10).  This proves FSDB.3.
 
 For the asymptotic conclusion, the convex diameter-graph bound and
 `per(F)<=pi D` give `h=O(D)`.  From any unbounded sequence take a subsequence with
 
-$$
+```math
 \frac hD\to y.
-$$
+```
 
 DB gives `y>=2rho`; the projective packing gives `y<=pi`.  Also
 
-$$
+```math
 D\delta_D\to1,
 \qquad
 \sin\delta_D\sim\delta_D,
 \qquad
 \frac{L_D}{D}=O(D^{-1/4}).
 \tag{2.15}
-$$
+```
 
 Divide FSDB.3 by `D^2` and pass to the limit:
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 \frac{y+\sin y}{4}.
 \tag{2.16}
-$$
+```
 
 On `[0,pi]`,
 
-$$
+```math
 \frac d{dy}(y+\sin y)=1+\cos y\ge0.
-$$
+```
 
 Thus the right side of (2.16) is minimized at `y=2rho`, giving
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 \frac{2\rho+\sin(2\rho)}4.
-$$
+```
 
 This is FSDB.1. `square`
 
@@ -334,23 +334,23 @@ No external theorem beyond those already present in the repository is imported.
 
 The September 9 difference-body area route uses only
 
-$$
+```math
 P_H\subseteq F-F
-$$
+```
 
 and the general planar Rogers--Shephard inequality
 
-$$
+```math
 \operatorname{area}(F-F)\le6\operatorname{area}F,
-$$
+```
 
 which loses a factor `6`.  PI bypasses the difference body and uses one pair of
 well-separated diameter chords.  FS.4, committed on September 10, supplies the missing
 near-central-symmetry needed to convert **the entire** difference body back to `F`:
 
-$$
+```math
 \tfrac12(F-F)\subseteq F-o+o(D)B_2.
-$$
+```
 
 That is the new step.  A repository search at the starting commit found no prior use
 of this `1/4` conversion or the constant `0.6184708847...`.
@@ -361,20 +361,20 @@ of this `1/4` conversion or the constant `0.6184708847...`.
 
 The universal post-ZF force-hull area floor improves from PI's
 
-$$
+```math
 0.4978566363\ldots D^2
-$$
+```
 
 to
 
-$$
+```math
 0.6184708847\ldots D^2.
-$$
+```
 
 Therefore the maximum source-hull area lying outside the force hull is asymptotically
 at most
 
-$$
+```math
 \boxed{
 \left(
 \frac\pi4-A_{FS}
@@ -382,7 +382,7 @@ $$
 =0.1669272786277625\ldots D^2+o(D^2).
 }
 \tag{3.1}
-$$
+```
 
 This is especially relevant to MB's perfect-matching branch, where every non-core
 source point is already known to lie outside `F` and MB requires a quadratic external
@@ -400,26 +400,23 @@ For the perfect-matching subbranch, the immediate sufficient theorem is:
 > `per(F)+per(K)=O(D)`, and `S subset K\setminus F` is unit-separated, then
 > 
 
-$$
-
+```math
 > |S|\le\frac2{\sqrt3}
 > \bigl(\operatorname{area}K-\operatorname{area}F\bigr)+o(D^2).
 > 
-$$
-
-
+```
 
 Combined with (3.1), this would give
 
-$$
+```math
 |S|\le0.1927510185\ldots D^2+o(D^2),
-$$
+```
 
 whereas MB requires
 
-$$
+```math
 |S|\ge0.2900494070\ldots D^2-o(D^2).
-$$
+```
 
 The margin is about `0.0972983885 D^2`, so a boundary error of order `O(D)` is more
 than sufficient.
@@ -477,11 +474,11 @@ None.
 
 Only decimal evaluation of the closed-form constant was used:
 
-$$
+```math
 \rho=0.7390851332151606\ldots,
 \quad
 A_{FS}=0.6184708847696858\ldots .
-$$
+```
 
 The proof depends only on the defining equation `rho=cos rho`, not on the decimals.
 

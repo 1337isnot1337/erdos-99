@@ -29,30 +29,30 @@ canonical C-II source existence.
 
 Put `u=(1,0)` and
 
-$$
+```math
  c=391/409,\qquad s=120/409,
  \quad v_1=(c,s),\ v_2=(c,-s),\ v_3=(c,s).
-$$
+```
 
 Define `q_0=0` and `q_j=sum_{i=1}^j(v_i-u)`. Use the three interval
 packets
 
-$$
+```math
  ([1,2],d_{12})=([1,2],(4/5,3/5)),
-$$
-$$
+```
+```math
  ([2,3],d_{23})=([2,3],(3/5,4/5)),
  \qquad ([1,3],d_{13})=([1,3],(12/13,5/13)).
-$$
+```
 
 For a packet `[a,b]` and each sign `eta in {-1,+1}`, write
 `d_eta=(d_x,eta d_y)` and set
 
-$$
+```math
  z_{ab}=-{q_{a-1}+q_b\over8},
  \quad p^-_{ab,\eta}=z_{ab}-{D\over2}d_\eta,
  \quad p^+_{ab,\eta}=z_{ab}+{D\over2}d_\eta.          \tag{1}
-$$
+```
 
 Give these points labels `a-1` and `b`, respectively. Add the four chain
 points `p_j=(j-3/2,0)`, with label `j`, for `j=0,1,2,3`.
@@ -62,9 +62,9 @@ The contact graph has exactly the three chain edges `p_{j-1}p_j`. The
 diameter graph has exactly the six pairs in (1), each of length `D`.
 All twelve diameter endpoints are contact-isolated. Define nested subsets
 
-$$
+```math
  S_i=\{p:\operatorname{label}(p)\ge i\},\qquad i=1,2,3.
-$$
+```
 
 Every original contact crosses exactly one `S_i` and is oriented as `u`
 from outside into the subset. These are actual contact cutsets. They are
@@ -76,10 +76,10 @@ Move each point of label `j` by `q_j`. Every chain edge is replaced by
 `v_j`, so all three old contacts remain exactly unit. Every diameter pair
 has the interval change
 
-$$
+```math
  p^{+\prime}_{ab,\eta}-p^{-\prime}_{ab,\eta}
  =Dd_\eta+q_b-q_{a-1}.                              \tag{2}
-$$
+```
 
 The old derivative matrix in the three independent train-angle coordinates
 is exactly the full-rank matrix of the previous report. Weights `1/6`
@@ -94,17 +94,17 @@ and the old and new contact graphs are both exactly the three-edge chain.
 have the form `Da+b` for rational vectors `a,b`. Each squared pair distance
 therefore has a rational quadratic polynomial
 
-$$
+```math
  P(D)=AD^2+BD+C.
-$$
+```
 
 For every one of the 120 source pairs, the verifier forms `P_old-1`,
 `P_new-1`, `D^2-P_old`, and `D^2-P_new`. For every required nonnegative
 polynomial it checks
 
-$$
+```math
  A\ge0,\qquad 26A+B\ge0,\qquad P(13)\ge0,
-$$
+```
 
 with the last inequality strict whenever that source pair is required to
 remain strict. These inequalities prove monotonicity and positivity on
@@ -115,9 +115,9 @@ strict at 13 and remain strict on the ray. This proves the proposition.
 
 At `D=13` the new squared diameter is exactly
 
-$$
+```math
  {28248541\over167281}=169-{21948\over167281}<169.
-$$
+```
 
 The smallest new noncontact squared distance at this diameter is
 `61741/32720>1`. The certificate uses rational arithmetic only.

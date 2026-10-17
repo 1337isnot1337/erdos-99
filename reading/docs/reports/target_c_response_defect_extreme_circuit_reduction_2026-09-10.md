@@ -24,9 +24,9 @@ matroid.
 
 Consequently, if a full-support relative-interior stress satisfies
 
-$$
+```math
 D\varepsilon\to0,
-$$
+```
 
 then on the same source there is an **extreme PSD circuit stress** with response defect
 no larger, hence also satisfying `D epsilon -> 0`. C66 may then be rerun with the fixed
@@ -42,20 +42,20 @@ on an arbitrary high-dimensional full-support stress.
 
 Work on the fixed C65 actual core. Let
 
-$$
+```math
 B=V(H)
-$$
+```
 
 be the full actual diameter-endpoint set and let
 
-$$
+```math
 I=V(C)\setminus B.
-$$
+```
 
 For any nonnegative contact-weight vector `alpha` arising from a normalized selected
 KKT stress, and for boundary data `u in R^B`, define
 
-$$
+```math
 \mathcal E_\alpha(u)
 :=
 \min_{v\in\mathbb R^I}
@@ -64,19 +64,19 @@ $$
 w|_B=u,
 \quad w|_I=v.
 \tag{REC.1}
-$$
+```
 
 Zero contact coefficients are allowed. Interior zero-conductance components make the
 minimizer nonunique, but they do not make the minimum energy ambiguous. The minimum
 is a positive-semidefinite quadratic form in `u`. Hence there is a unique symmetric
 PSD Laplacian `Lambda(alpha)` on `B` such that
 
-$$
+```math
 \boxed{
 \mathcal E_\alpha(u)=u^T\Lambda(\alpha)u.
 }
 \tag{REC.2}
-$$
+```
 
 Terminals disconnected in the selected contact support simply contribute zero rows
 and columns. This energy definition is the singular-conductance extension of ordinary
@@ -85,30 +85,30 @@ interior block is invertible.
 
 Write
 
-$$
+```math
 c_{bk}(\alpha):=-\Lambda(\alpha)_{bk}\ge0
 \qquad(b\ne k).
-$$
+```
 
 Because `Lambda(alpha) 1=0`,
 
-$$
+```math
 \frac12\operatorname{tr}\Lambda(\alpha)
 =
 \sum_{b<k}c_{bk}(\alpha).
 \tag{REC.3}
-$$
+```
 
 For a normalized KKT stress `x=(alpha,beta)`, put
 
-$$
+```math
 \boxed{
 \varepsilon(x)
 :=
 \frac12\operatorname{tr}\Lambda(\alpha)-1.
 }
 \tag{REC.4}
-$$
+```
 
 The normalization is `sum_H beta=1`.
 
@@ -119,60 +119,60 @@ The normalization is `sum_H beta=1`.
 Every vertex in `I` is not an endpoint of any actual diameter edge. Its KKT equilibrium
 therefore has zero diameter reaction:
 
-$$
+```math
 \sum_{ij\in C}\alpha_{ij}(p_i-p_j)=0.
 \tag{REC.5}
-$$
+```
 
 Thus the two Euclidean coordinate functions are energy-minimizing harmonic extensions
 of their boundary values even when some selected contact weights vanish.
 
 Summing the two coordinate energies gives
 
-$$
+```math
 \sum_{b<k}c_{bk}(\alpha)|p_b-p_k|^2
 =
 \sum_{ij\in C}\alpha_{ij}|p_i-p_j|^2.
 \tag{REC.6}
-$$
+```
 
 Every contact has length one. The normalized KKT virial identity gives
 
-$$
+```math
 \sum_{ij\in C}\alpha_{ij}=D^2\sum_{h\in H}\beta_h=D^2.
 \tag{REC.7}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 D^2
 =
 \sum_{b<k}c_{bk}(\alpha)|p_b-p_k|^2.
 }
 \tag{REC.8}
-$$
+```
 
 Since every source distance is at most `D`,
 
-$$
+```math
 D^2
 \le
 D^2\sum_{b<k}c_{bk}(\alpha).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{\varepsilon(x)\ge0}
 \tag{REC.9}
-$$
+```
 
 for every normalized nonnegative KKT stress, not only the C65 relative-interior one.
 Moreover
 
-$$
+```math
 \boxed{
 \varepsilon(x)
 =
@@ -180,7 +180,7 @@ $$
 \left(1-\frac{|p_b-p_k|^2}{D^2}\right).
 }
 \tag{REC.10}
-$$
+```
 
 This is the selected-stress version of C41.
 
@@ -190,22 +190,22 @@ This is the selected-stress version of C41.
 
 Let `alpha^0,alpha^1` be two nonnegative contact-weight vectors and let
 
-$$
+```math
 \alpha^t=(1-t)\alpha^0+t\alpha^1,
 \qquad 0\le t\le1.
-$$
+```
 
 For fixed boundary data `u` and an arbitrary interior extension `v`, the unreduced
 energy is linear in the conductances:
 
-$$
+```math
 E_{\alpha^t}(u,v)
 =(1-t)E_{\alpha^0}(u,v)+tE_{\alpha^1}(u,v).
-$$
+```
 
 Taking the minimum over `v` gives
 
-$$
+```math
 \begin{aligned}
 \mathcal E_{\alpha^t}(u)
 &=
@@ -214,18 +214,18 @@ $$
 (1-t)\min_vE_{\alpha^0}(u,v)
 +t\min_vE_{\alpha^1}(u,v).
 \end{aligned}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \Lambda(\alpha^t)
 \succeq
 (1-t)\Lambda(\alpha^0)+t\Lambda(\alpha^1)
 }
 \tag{REC.11}
-$$
+```
 
 in Loewner order.
 
@@ -235,14 +235,14 @@ Taking traces yields:
 
 On the normalized KKT polytope `P`,
 
-$$
+```math
 \boxed{
 \varepsilon((1-t)x^0+tx^1)
 \ge
 (1-t)\varepsilon(x^0)+t\varepsilon(x^1).
 }
 \tag{REC.12}
-$$
+```
 
 Thus `epsilon` is a nonnegative concave function on `P`.
 
@@ -252,42 +252,42 @@ Thus `epsilon` is a nonnegative concave function on `P`.
 
 Let the vertices of the compact polytope `P` be
 
-$$
+```math
 x^{(1)},\ldots,x^{(N)}.
-$$
+```
 
 For any
 
-$$
+```math
 x=\sum_{r=1}^N\lambda_rx^{(r)},
 \qquad
 \lambda_r\ge0,
 \quad\sum_r\lambda_r=1,
-$$
+```
 
 concavity gives
 
-$$
+```math
 \varepsilon(x)
 \ge
 \sum_r\lambda_r\varepsilon(x^{(r)})
 \ge
 \min_r\varepsilon(x^{(r)}).
 \tag{REC.13}
-$$
+```
 
 Because the vertices themselves belong to `P`, this proves:
 
 ### Theorem REC.2 - extreme minimizer
 
-$$
+```math
 \boxed{
 \inf_{x\in\mathcal P}\varepsilon(x)
 =
 \min_{x\in\operatorname{Vert}(\mathcal P)}\varepsilon(x).
 }
 \tag{REC.14}
-$$
+```
 
 No continuity claim at singular support changes is needed. In particular, every
 selected full-support stress has an extreme KKT stress on the same source with no
@@ -304,41 +304,41 @@ fixed sign orthant in `W` with `sum_H beta=1`.
 
 Let `x*` be a vertex of `P` and let
 
-$$
+```math
 S=\operatorname{supp}(x^*).
-$$
+```
 
 Let
 
-$$
+```math
 W_S:=\{w\in W:\operatorname{supp}(w)\subseteq S\}.
-$$
+```
 
 Suppose `dim W_S>=2`. Choose `w in W_S` not proportional to `x*` and replace it by
 
-$$
+```math
 \widetilde w
 :=w-L(w)x^*,
 \qquad
 L(w):=\sum_{h\in H}w_h.
-$$
+```
 
 Then `widetilde w` is nonzero, is supported in `S`, lies in the signed stress space,
 and satisfies `L(widetilde w)=0`. Since every coordinate of `x*` on `S` is strictly
 inside the prescribed sign orthant, for sufficiently small `t>0` both
 
-$$
+```math
 x^*+t\widetilde w,
 \qquad
 x^*-t\widetilde w
-$$
+```
 
 remain normalized nonnegative KKT stresses. This contradicts extremality. Therefore
 
-$$
+```math
 \boxed{\dim W_S=1.}
 \tag{REC.15}
-$$
+```
 
 If a proper subset `T subsetneq S` of mixed rigidity rows were dependent, there would
 be a nonzero signed bar self-stress supported in `T`. That vector belongs to `W_S`
@@ -349,12 +349,12 @@ Thus:
 
 ### Theorem REC.3 - extreme support is one actual rigidity circuit
 
-$$
+```math
 \boxed{
 S\text{ is a circuit of the actual mixed rigidity-row matroid.}
 }
 \tag{REC.16}
-$$
+```
 
 The circuit dependence is unique up to scale and every coefficient on `S` is nonzero.
 This gives a direct proof of the circuit statement needed here; it does not rely on an
@@ -362,12 +362,12 @@ unmerged circuit-cover report.
 
 C53 applies to every normalized selected stress, so
 
-$$
+```math
 \boxed{
 \Omega(x^*)=L_C(\alpha^*)-L_H(\beta^*)\succeq0.
 }
 \tag{REC.17}
-$$
+```
 
 The canonical selected-support theorem also gives one nontrivial positive contact
 component containing every positive diameter endpoint and spanning Euclidean diameter
@@ -381,7 +381,7 @@ Keep the full actual diameter-endpoint set `B=V(H)` as boundary, even if some bo
 vertices have zero selected beta incidence. Write the selected PSD stress matrix in
 boundary/interior block form:
 
-$$
+```math
 \Omega(x^*)=
 \begin{pmatrix}
 L_{BB}(\alpha^*)-L_H(\beta^*)&L_{BI}(\alpha^*)\\
@@ -389,35 +389,35 @@ L_{IB}(\alpha^*)&L_{II}(\alpha^*)
 \end{pmatrix}
 \succeq0.
 \tag{REC.18}
-$$
+```
 
 For a PSD block matrix, every vector in `ker L_II` is annihilated by the cross block;
 otherwise a vector supported on that kernel direction and an arbitrarily small
 boundary perturbation would make the quadratic form negative. Hence the generalized
 Schur complement is PSD:
 
-$$
+```math
 L_{BB}-L_H-L_{BI}L_{II}^{\dagger}L_{IB}\succeq0.
 \tag{REC.19}
-$$
+```
 
 But by the minimum-energy definition REC.1--REC.2,
 
-$$
+```math
 \Lambda(\alpha^*)
 =
 L_{BB}(\alpha^*)
 -L_{BI}(\alpha^*)L_{II}(\alpha^*)^{\dagger}L_{IB}(\alpha^*).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 M(x^*):=\Lambda(\alpha^*)-L_H(\beta^*)\succeq0.
 }
 \tag{REC.20}
-$$
+```
 
 This is the selected-stress version of C64. It is important that no zero-beta actual
 boundary terminal was demoted to the interior.
@@ -436,26 +436,26 @@ continuity step.
 Let `x_D^ri` be any sequence of full-support relative-interior normalized KKT stresses
 on hypothetical C-II sources with
 
-$$
+```math
 D\varepsilon(x_D^{ri})\to0.
 \tag{REC.21}
-$$
+```
 
 By REC.2 choose a polytope vertex `x_D^*` with
 
-$$
+```math
 0\le\varepsilon(x_D^*)
 \le\varepsilon(x_D^{ri}).
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 D\varepsilon(x_D^*)\to0.
 }
 \tag{REC.22}
-$$
+```
 
 By REC.3 its entire positive mixed support is one actual rigidity circuit, and by C53
 its selected stress matrix is PSD. REC.20 gives the fixed-boundary PSD response defect
@@ -471,7 +471,7 @@ Rerun C66 using the selected positive diameter edges. Its proof needs only:
 
 Therefore the same C66 constant `C_0` gives a selected diameter vertex `z_D` with
 
-$$
+```math
 \boxed{
 \sum_{\substack{h\in H\\z_D\in h}}\beta_h^*
 \ge
@@ -479,7 +479,7 @@ $$
 =1-o(1).
 }
 \tag{REC.23}
-$$
+```
 
 ### Corollary REC.4 - circuit-star reduction
 
@@ -493,15 +493,15 @@ whose diameter weights converge to one star.
 
 If an extreme stress has
 
-$$
+```math
 \varepsilon(x^*)=0,
-$$
+```
 
 then C66 on its selected support gives exact star support:
 
-$$
+```math
 \sum_{h\ni z}\beta_h^*=1.
-$$
+```
 
 The C68/C80 exact-star argument applies to the positive selected support: zero radial
 defect forces every positive contact onto radial rays from `z`; the large-D star-angle

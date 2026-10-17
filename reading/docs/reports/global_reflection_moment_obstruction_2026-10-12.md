@@ -22,24 +22,24 @@ not give the exact nonattainment statement required for Level I.
 Let `P_j` be finite unit-separated planar sources with all `n_j` labels,
 diameter `D_j->infinity`, and
 
-$$
+```math
 \frac{n_j}{D_j^2}\longrightarrow\eta_0:=\frac{\pi}{2\sqrt3}.
-$$
+```
 
 Center each source at its empirical centroid. Choose arbitrary unit normal and
 tangent coordinates `X_i,Y_i`, line offset `c_j`, and positive squared scales
 `A_j,B_j`. For arbitrary independent signs let
 
-$$
+```math
 q_i=(\sqrt{A_j}\,\sigma_i|X_i-c_j|,\sqrt{B_j}\,Y_i).
-$$
+```
 
 Suppose these actual planar endpoints retain every label, are unit-separated,
 and have diameter at most `(1+o(1))D_j`. Then
 
-$$
+```math
 \boxed{A_j\longrightarrow1,\qquad B_j\longrightarrow1.}
-$$
+```
 
 No a priori bound on the offsets or scales is assumed. In particular the
 statement applies to every unbounded global-minimizer sequence and any
@@ -56,16 +56,16 @@ lower-order diameter improvement.
 Use canonical Oler Lemma 21.1 in
 [`../theory/03-oler-shell.md`](../theory/03-oler-shell.md):
 
-$$
+```math
 N\le |K|/a_0+\operatorname{per}(K)/2+1,\qquad a_0=\sqrt3/2.
-$$
+```
 
 For a diameter-`D_j` source, Cauchy's perimeter bound and the isodiametric
 inequality imply
 
-$$
+```math
 a_0n_j-O(D_j)\le |\operatorname{conv}P_j|\le\pi D_j^2/4.
-$$
+```
 
 Thus the centered normalized convex hulls have area tending to `pi/4` and
 diameter at most one. They lie in a fixed compact ball because their centroid
@@ -103,11 +103,11 @@ Divide all coordinates and the offset by `D_j`. The source coordinates have
 zero mean exactly. Unit normals may vary with `j`; disk isotropy makes their
 limiting moments independent of those directions. For the uniform disk put
 
-$$
+```math
 s=\mathbb E X^2=\mathbb E Y^2=1/16,\quad
 t=\mathbb E X^2Y^2=1/384,\quad
 \mathbb E XY^2=0.
-$$
+```
 
 The endpoint tangent centroid is exactly zero. Its tangent variance is
 `B_j E Y^2`, while the empirical disk limit makes it tend to `s`. Therefore
@@ -116,9 +116,9 @@ The endpoint tangent centroid is exactly zero. Its tangent variance is
 First suppose the normalized offsets `gamma_j=c_j/D_j` remain bounded.
 The variance of the signed normal coordinate is at least
 
-$$
+```math
 A_j\operatorname{Var}(|X-\gamma_j|),
-$$
+```
 
 because its absolute mean cannot exceed `sqrt(A_j) E|X-gamma_j|`.
 The latter variance has a uniformly positive limit on any compact offset
@@ -131,19 +131,19 @@ the endpoint disk limit. The normal centroid `m_j=E q_x` is also bounded.
 Take a subsequence with limits `A,gamma,m`. Absolute normal coordinate
 preservation gives two equations, regardless of the signs:
 
-$$
+```math
 A(s+\gamma^2)=s+m^2,
 \qquad
 A(t+\gamma^2s)=t+m^2s.
-$$
+```
 
 The first is the second normal moment. The second is the normal-square times
 tangent-square moment; the source and endpoint centered odd mixed moments
 vanish in the limit. Eliminating `m^2` gives
 
-$$
+```math
 (A-1)(t-s^2)=0,\qquad t-s^2=-1/768\ne0.
-$$
+```
 
 Hence every subsequential limit is `A=1`, and `m^2=gamma^2`.
 
@@ -166,20 +166,20 @@ finishes the proof. QED.
 
 For a centered finite source, write
 
-$$
+```math
 S_x=\mathbb EX^2,\quad S_y=\mathbb EY^2,\quad
 T=\mathbb EX^2Y^2,\quad U=\mathbb EXY^2.
-$$
+```
 
 For its reflected-scale endpoint write `m=E q_x`,
 `V_x=E(q_x-m)^2`, `V_y=E q_y^2`,
 `W=E(q_x-m)^2q_y^2`, and `L=E(q_x-m)q_y^2`. Then exactly
 
-$$
+```math
 \boxed{
 W+2mL-V_xV_y=AB(T-S_xS_y-2cU).
 }
-$$
+```
 
 This follows by expanding the uncentered mixed fourth moment and eliminating
 `m^2=A(S_x+c^2)-V_x`. It shows the specific finite odd-moment terms that

@@ -18,21 +18,21 @@ exact post-ZF identities in fact remove that restriction. Conditional on the
 audited but still unpromoted FSDB force-hull area theorem, every unbounded C-II
 sequence satisfies the explicit positive bound
 
-$$
+```math
 \boxed{\liminf_{D\to\infty}\frac{x_B+Q}{D}\ge\varepsilon_0,}
 \tag{A.1}
-$$
+```
 
 where `\varepsilon_0` is the positive root of
 
-$$
+```math
 \frac14\left(\frac\pi2+\frac52\varepsilon\right)^2
  +\frac{37}{4\pi}\varepsilon^2=A_{FS},
 \qquad
 A_{FS}=\frac{2\rho+\sin(2\rho)}4,
 \quad \rho=\cos\rho.
 \tag{A.2}
-$$
+```
 
 Numerically, `\varepsilon_0=0.0008238119818\ldots`. The numerical value is not
 needed: (A.2) defines a strictly positive constant because
@@ -48,10 +48,10 @@ Let `D_j\to\infty` be a sequence of triangle-free C-II global minimizers in the
 post-ZF normal form. Let `x=x_B`, let `Q` be the total bounded-face defect, and
 let `f` be the number of bounded nonquadrilateral faces. Assume FSDB.1:
 
-$$
+```math
 \liminf_j\frac{\operatorname{area}F_j}{D_j^2}\ge A_{FS}.
 \tag{A.3}
-$$
+```
 
 Then (A.1) holds.
 
@@ -59,104 +59,104 @@ Then (A.1) holds.
 
 Put
 
-$$
+```math
 d_H=q-h,\qquad k=d_H+s_Z.
-$$
+```
 
 The exact post-ZF incidence identity is
 
-$$
+```math
 q=x+Q+2k.
 \tag{A.4}
-$$
+```
 
 The stopped-train identity, valid with exceptional faces and arbitrary `s_Z`, is
 
-$$
+```math
 T=\frac{b+Q}{2}+2f=h-s_Z+2f.
 \tag{A.5}
-$$
+```
 
 Using `h=q-d_H` and `k=d_H+s_Z`, (A.5) becomes
 
-$$
+```math
 T=q-k+2f
  =\frac q2+\frac x2+\frac Q2+2f.
 \tag{A.6}
-$$
+```
 
 Since every exceptional face contributes at least one to `Q`, `f\le Q`, and since
 the loaded vertices are unit-separated vertices of the diameter hull,
 
-$$
+```math
 q\le\operatorname{per}F\le\pi D.
 \tag{A.7}
-$$
+```
 
 Consequently, with `r=(x+Q)/D`,
 
-$$
+```math
 \frac TD\le\frac\pi2+\frac{x+5Q}{2D}
 \le\frac\pi2+\frac52r.
 \tag{A.8}
-$$
+```
 
 The actual stopped-train crossing graph is simple and triangle-free. Mantel's
 theorem therefore gives, for the number `R` of bounded quadrilateral faces,
 
-$$
+```math
 R\le\frac{T^2}{4}.
 \tag{A.9}
-$$
+```
 
 Every strict unit rhombus has area at most one, so the total quadrilateral area is
 at most `R`.
 
 For outer pockets, OP gives `a\le x` missing force-hull sides and
 
-$$
+```math
 \sum_P k_P=x+2a\le3x.
 \tag{A.10}
-$$
+```
 
 The closing chord has length at most `k_P`, so `\operatorname{per}P\le2k_P` and
 the planar isoperimetric inequality gives
 
-$$
+```math
 \sum_P\operatorname{area}P\le\frac1\pi\sum_P k_P^2
 \le\frac{9x^2}{\pi}.
 \tag{A.11}
-$$
+```
 
 For exceptional bounded faces, write `r_i=\deg(F_i)-4`. Then
 `\sum_i r_i=Q` and `f\le Q`. C51 makes the faces convex, hence
 
-$$
+```math
 \sum_i\operatorname{area}F_i
 \le\frac1{4\pi}\sum_i(r_i+4)^2
 \le\frac{Q^2+24Q}{4\pi}.
 \tag{A.12}
-$$
+```
 
 The augmented contact subdivision partitions the force hull into these pockets,
 exceptional faces, and quadrilateral faces. Combining (A.8)--(A.12), and taking
 `D_j\to\infty` along any subsequence on which `r_j\to r<\infty`, gives
 
-$$
+```math
 \limsup_j\frac{\operatorname{area}F_j}{D_j^2}
 \le U(r):=\frac14\left(\frac\pi2+\frac52r\right)^2
  +\frac{37}{4\pi}r^2.
 \tag{A.13}
-$$
+```
 
 The term `24Q/(4\pi D^2)` vanishes, and the coefficient `37/(4\pi)` is
 `9/\pi+1/(4\pi)`. The function `U` is strictly increasing for `r\ge0`. At
 `r=0`,
 
-$$
+```math
 U(0)=\frac{\pi^2}{16}<A_{FS}.
 \tag{A.14}
-$$
+```
 
 Let `\varepsilon_0` be the unique positive solution of `U(\varepsilon_0)=A_{FS}`.
 If a subsequence had `r_j\to r<\varepsilon_0`, (A.13) would contradict (A.3).
@@ -195,10 +195,10 @@ must not be treated as a promoted unconditional C-II theorem.
 
 The theorem leaves the mandatory regime
 
-$$
+```math
 x_B+Q\ge\varepsilon_0D-o(D),
 \tag{A.15}
-$$
+```
 
 along with the independent post-ZF surplus constraints on
 `e_{BB}+2s_C` and `x_B+Q+2s_Z`. No current theorem gives an upper bound on the

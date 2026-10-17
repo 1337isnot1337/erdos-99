@@ -34,10 +34,10 @@ into a finite boundary statics problem.
 
 Keep the notation of Theorems C6-C7.  Thus
 
-$$
+```math
 \mathcal K_D(A)=\{v:Rv\ge0\}
 \tag{C9.1}
-$$
+```
 
 is the fixed-diameter critical cone, `E_*=C_*\cup H_*` is the maximal KKT support,
 and `W` is the universally zero-KKT active set.
@@ -45,42 +45,42 @@ and `W` is the universally zero-KKT active set.
 By Theorem C6, every row in `E_*` vanishes identically on `\mathcal K_D(A)`, while
 there is a point of the cone where every row in `W` is strictly positive.  Therefore
 
-$$
+```math
 \operatorname{ri}\mathcal K_D(A)
 =
 \{v\in\mathcal K_D(A):\phi_e(v)>0\text{ for every }e\in W\},
 \tag{C9.2}
-$$
+```
 
 where relative interior is taken in the linear span of the cone.
 
 For `h=ij\in H_*`, put
 
-$$
+```math
 \omega_h(v)
 =
 \frac{J(p_i-p_j)\cdot(v_i-v_j)}{D^2}.
 \tag{C9.3}
-$$
+```
 
 Since the radial first variation of every strong diameter edge is zero throughout the
 critical cone, this is its exact first-order angular velocity.
 
 Let
 
-$$
+```math
 Y:=\mathbb R^{H_*}/\langle\mathbf1\rangle
 \tag{C9.4}
-$$
+```
 
 and define the shear map
 
-$$
+```math
 \Omega:\mathcal K_D(A)\to Y,
 \qquad
 \Omega(v)=[(\omega_h(v))_{h\in H_*}].
 \tag{C9.5}
-$$
+```
 
 The common-rotation class is quotiented out.  Theorem C7 says that any
 `v\in\operatorname{ri}\mathcal K_D(A)` with `\Omega(v)=0` integrates to a same-`D`
@@ -98,12 +98,12 @@ Exactly one of the following alternatives holds.
 
 There exists
 
-$$
+```math
 v\in\operatorname{ri}\mathcal K_D(A)
 \qquad\text{with}\qquad
 \Omega(v)=0.
 \tag{C9.6}
-$$
+```
 
 Then Theorem C7 gives a finite same-diameter release of every weak active constraint.
 
@@ -111,30 +111,30 @@ Then Theorem C7 gives a finite same-diameter release of every weak active constr
 
 There exist coefficients
 
-$$
+```math
 \gamma_h\in\mathbb R
 \qquad(h\in H_*),
 \tag{C9.7}
-$$
+```
 
 not all zero, and nonnegative coefficients
 
-$$
+```math
 \lambda_e\ge0
 \qquad(e\in C\cup H),
 \tag{C9.8}
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{
 \sum_{h\in H_*}\gamma_h=0,
 }
 \tag{C9.9}
-$$
+```
 
-$$
+```math
 \boxed{
 \sum_{h=ij\in H_*}
 \frac{\gamma_h}{D^2}
@@ -147,29 +147,29 @@ J(p_i-p_j)\cdot(v_i-v_j)
 (p_i-p_j)\cdot(v_i-v_j)
 }
 \tag{C9.10}
-$$
+```
 
 for every velocity `v`, and at least one weak coordinate is used:
 
-$$
+```math
 \boxed{
 \lambda_e>0
 \quad\text{for some }e\in W.
 }
 \tag{C9.11}
-$$
+```
 
 Moreover the left side is strictly positive on every relative-interior critical
 velocity:
 
-$$
+```math
 \boxed{
 \sum_{h\in H_*}\gamma_h\omega_h(v)>0
 \qquad
 (v\in\operatorname{ri}\mathcal K_D(A)).
 }
 \tag{C9.12}
-$$
+```
 
 Thus persistent diameter shear is witnessed by a signed angular functional that has
 one sign on the entire strict weak-release stratum.
@@ -178,49 +178,49 @@ one sign on the entire strict weak-release stratum.
 
 The linear image
 
-$$
+```math
 L:=\Omega(\mathcal K_D(A))\subseteq Y
 \tag{C9.13}
-$$
+```
 
 is a polyhedral convex cone.  A standard relative-interior property of linear maps on
 polyhedral convex sets gives
 
-$$
+```math
 \Omega(\operatorname{ri}\mathcal K_D(A))
 =
 \operatorname{ri}L.
 \tag{C9.14}
-$$
+```
 
 If the release alternative fails, then
 
-$$
+```math
 0\notin\operatorname{ri}L.
 \tag{C9.15}
-$$
+```
 
 For a convex cone, the origin lies in its relative interior exactly when the cone is a
 linear subspace.  Hence `L` is not a subspace.  Separate `L` from a direction opposite
 its pointed part.  Equivalently, there is a nonzero functional
 `\bar\gamma\in Y^*` satisfying
 
-$$
+```math
 \bar\gamma(y)\ge0\quad(y\in L),
 \qquad
 \bar\gamma(y)>0\quad(y\in\operatorname{ri}L).
 \tag{C9.16}
-$$
+```
 
 Represent `\bar\gamma` by a vector `\gamma\in\mathbb R^{H_*}`.  Because it descends
 to the quotient by the common-rotation vector, it necessarily satisfies (C9.9).
 Pulling (C9.16) back by `\Omega` gives
 
-$$
+```math
 (\Omega^{\mathsf T}\bar\gamma)(v)\ge0
 \qquad(v\in\mathcal K_D(A)),
 \tag{C9.17}
-$$
+```
 
 with strict inequality on the relative interior.
 
@@ -228,12 +228,12 @@ The dual cone of
 `\mathcal K_D(A)=\{v:Rv\ge0\}` is the nonnegative row cone of `R`.  Therefore there
 is `\lambda\ge0` such that
 
-$$
+```math
 \Omega^{\mathsf T}\bar\gamma
 =
 R^{\mathsf T}\lambda.
 \tag{C9.18}
-$$
+```
 
 Expanding the definitions of the signed contact and diameter rows gives exactly
 (C9.10).
@@ -250,27 +250,27 @@ inequality in (C9.16).  Hence some weak coordinate has positive `\lambda`, provi
 
 For each oriented strong diameter edge `h=ij`, write
 
-$$
+```math
 r_h=p_i-p_j.
-$$
+```
 
 The left side of (C9.10) is the virtual work of the endpoint force pair
 
-$$
+```math
  f_i^{(h)}=\frac{\gamma_h}{D^2}Jr_h,
 \qquad
  f_j^{(h)}=-\frac{\gamma_h}{D^2}Jr_h.
 \tag{C9.19}
-$$
+```
 
 Each pair has zero resultant.  Its scalar moment about any origin is
 
-$$
+```math
 (p_i-p_j)\times\frac{\gamma_h}{D^2}Jr_h
 =
 \gamma_h.
 \tag{C9.20}
-$$
+```
 
 Therefore (C9.9) says exactly that the entire tangential diameter load has zero total
 torque.
@@ -282,7 +282,7 @@ forces and the tangential diameter loads.
 
 Hence the separator branch can be read as
 
-$$
+```math
 \boxed{
 \text{nonconstant force-hull diameter shear}
 \Longrightarrow
@@ -290,7 +290,7 @@ $$
 \text{ carried by nonnegative radial active forces}.
 }
 \tag{C9.21}
-$$
+```
 
 At least one universally zero-KKT active constraint participates in the radial
 carrier.

@@ -17,15 +17,15 @@
 
 **PASS — promote `C-GLOBAL-POPULATION-EXCESS-SQRT-RESERVE`.** For every finite planar unit-separated `n`-point global diameter minimizer with diameter `D>=3`, letting
 
-$$
+```math
  g_A=n-1-\frac{\pi D^2}{2\sqrt3},
-$$
+```
 
 one has
 
-$$
+```math
  g_A\ge \frac{3^{5/4}}{256\pi}\sqrt D>\frac{\sqrt D}{256}.
-$$
+```
 
 This statement applies to every global minimizer, including triangle-bearing ones. It has no triangle-free, contact-minimality, contact-isolate, KKT, stress, or source-subset hypothesis. It is a necessary population comparison and yields no source-preserving move, triangle conclusion, C-II closure, or Level I result.
 
@@ -33,43 +33,43 @@ This statement applies to every global minimizer, including triangle-bearing one
 
 Let `Lambda` be the triangular lattice with minimum spacing one and covolume `a0=sqrt(3)/2`; let `F` be a fundamental parallelogram. For `R=D/2`, define the periodic disk count
 
-$$
+```math
  N_R(t)=\#((\Lambda-t)\cap B(0,R)),\qquad \mu_R=\pi R^2/a_0,
-$$
+```
 
 using the open disk. Unfolding the finite lattice sum gives mean `mu_R`. For every nonzero reciprocal vector `k`, its Fourier coefficient is
 
-$$
+```math
  \widehat{N_R-\mu_R}(k)=\frac{R}{a_0|k|}J_1(2\pi R|k|).
-$$
+```
 
 This follows directly by polar integration: DLMF 10.9.1 gives the angular `J_0` integral and DLMF 10.22.1 at order zero gives `int_0^x t J_0(t)dt=xJ_1(x)`. No Fourier-series convergence or Poisson summation is used.
 
 For almost every translation, no lattice point lies on the disk boundary. If such a disk contained `n` lattice points, those points would be unit-separated and strictly inside a disk of diameter `D`, hence would have diameter strictly below `D`; that contradicts global minimality. Therefore `N_R(t)<=n-1` almost everywhere. For the mean-zero function `f_R=N_R-mu_R`, this implies
 
-$$
+```math
  g_A\ge \operatorname{ess\,sup} f_R.
-$$
+```
 
 Also, any nonzero Fourier coefficient satisfies
 
-$$
+```math
  |\widehat f_R(k)|\le \int_F|f_R|=2\int_F(f_R)_+\le2\operatorname{ess\,sup}f_R,
-$$
+```
 
 where integration is normalized on `F`.
 
 Take a shortest reciprocal vector with `|k|=2/sqrt(3)` and its double. Put `z=2*pi*R*|k|=2*pi*D/sqrt(3)`, `theta=z-3*pi/4`, and `A_R=3^(1/4)*sqrt(R)/(pi*sqrt(2))`. NIST DLMF 10.17(iii), with real order `nu=1` and one retained Hankel term, gives for every real `z>0`
 
-$$
+```math
  \left|\sqrt{\frac{\pi z}{2}}J_1(z)-\cos(z-3\pi/4)\right|\le\frac{3}{8z}.
-$$
+```
 
 The first and doubled Fourier modes, divided by `A_R`, have leading terms `cos(theta)` and `2^(-3/2)cos(2theta+3pi/4)`. Their remainders are at most `3/(8z)` and `2^(-3/2)*3/(16z)`. The phase inequality
 
-$$
+```math
  \max\{|\cos\theta|,2^{-3/2}|\cos(2\theta+3\pi/4)|\}\ge3/32
-$$
+```
 
 holds for every real `theta`: if `|cos(theta)|>=1/4`, the first term suffices; otherwise writing `c=cos(theta)`, `s=sin(theta)` makes the second term `|2c^2-1+2cs|/4>=3/32`.
 

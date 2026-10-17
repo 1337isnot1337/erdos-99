@@ -17,31 +17,31 @@ Frozen source: PR #663, branch `research/sol-collar-pentagon-rank-20261004`, tip
 
 ## 1. Exact finite theorem audited
 
-Take a canonical contact-minimal, then diameter-pair-minimal C-II source, retain every source point, and let $D$ be its diameter. Let $F$ be the actual loaded force hull. After translation, assume
+Take a canonical contact-minimal, then diameter-pair-minimal C-II source, retain every source point, and let $`D`$ be its diameter. Let $`F`$ be the actual loaded force hull. After translation, assume
 
-$$
+```math
 B\bigl(0,(1/2-\sigma)D\bigr)\subset F\subset B\bigl(0,(1/2+\sigma)D\bigr),\qquad 0\le\sigma<1/2.
-$$
+```
 
-Let $\mathcal T$ be all complete stopped trains in the canonical positive-contact core, including singleton trains, and put $T=|\mathcal T|$. Select exactly one exterior outer-face occurrence from each actual unit side of $F$; each physical contact side belongs to one train. Let $H\subset\mathcal T$ be the trains with at least one selected side and $N_0=T-|H|$. Let $R_4$ be the number of bounded strict-rhombus faces and
+Let $`\mathcal T`$ be all complete stopped trains in the canonical positive-contact core, including singleton trains, and put $`T=|\mathcal T|`$. Select exactly one exterior outer-face occurrence from each actual unit side of $`F`$; each physical contact side belongs to one train. Let $`H\subset\mathcal T`$ be the trains with at least one selected side and $`N_0=T-|H|`$. Let $`R_4`$ be the number of bounded strict-rhombus faces and
 
-$$
+```math
 A_{\rm ang}=\sum_{R}(\alpha_R-\pi/3),
-$$
+```
 
-where $\alpha_R\in(\pi/3,\pi/2]$ is the acute projective side angle. For $0<\varepsilon<\pi/6$, define
+where $`\alpha_R\in(\pi/3,\pi/2]`$ is the acute projective side angle. For $`0<\varepsilon<\pi/6`$, define
 
-$$
+```math
 C(\varepsilon,\sigma)=4\left[(1/2+\sigma)\tan\varepsilon+\frac{\sqrt{2\sigma}}{\cos\varepsilon}\right].
-$$
+```
 
-If $E_H$ is the number of rhombus crossings incident to at least one train in $H$, then
+If $`E_H`$ is the number of rhombus crossings incident to at least one train in $`H`$, then
 
-$$
+```math
 \boxed{E_H\le \frac{A_{\rm ang}}{\varepsilon}+2TD C(\varepsilon,\sigma)},
 \qquad
 \boxed{N_0\ge 2\sqrt{\max\left(0,R_4-\frac{A_{\rm ang}}{\varepsilon}-2TD C(\varepsilon,\sigma)\right)}}.
-$$
+```
 
 This is finite and conditional on the displayed annulus. It counts actual hull sides and actual train crossings. Contact-isolated source points remain in the source and are not counted as trains or removed.
 
@@ -49,46 +49,46 @@ This is finite and conditional on the displayed annulus. It counts actual hull s
 
 ### Unit hull sides in a direction window
 
-Write $r=(1/2-\sigma)D$ and $R=(1/2+\sigma)D$. At a point $p$ on a hull side with outward unit normal $n'$, its support height is at least $r$, while $\lVert p\rVert\le R$. In the decomposition
+Write $`r=(1/2-\sigma)D`$ and $`R=(1/2+\sigma)D`$. At a point $`p`$ on a hull side with outward unit normal $`n'`$, its support height is at least $`r`$, while $`\lVert p\rVert\le R`$. In the decomposition
 
-$$
+```math
 p=h n'+sJ n',
-$$
+```
 
-we have $h\ge r$ and
+we have $`h\ge r`$ and
 
-$$
+```math
 |s|\le\sqrt{R^2-r^2}=D\sqrt{2\sigma}.
-$$
+```
 
-For normals in an oriented interval of radius $\varepsilon$ about $n$, projection onto $Jn$ therefore satisfies
+For normals in an oriented interval of radius $`\varepsilon`$ about $`n`$, projection onto $`Jn`$ therefore satisfies
 
-$$
+```math
 |p\cdot Jn|\le D\left[(1/2+\sigma)\sin\varepsilon+\sqrt{2\sigma}\right].
-$$
+```
 
-Those normals form one contiguous convex boundary chain. Every unit side in the chain advances that projection by at least $\cos\varepsilon$, so the chain contains at most
+Those normals form one contiguous convex boundary chain. Every unit side in the chain advances that projection by at least $`\cos\varepsilon`$, so the chain contains at most
 
-$$
+```math
 \frac{2D[(1/2+\sigma)\sin\varepsilon+\sqrt{2\sigma}]}{\cos\varepsilon}
-$$
+```
 
-unit sides. A projective window has two oriented chains; shifting normal direction by $\pi/2$ to side direction does not change the uniform bound. This yields at most $D C(\varepsilon,\sigma)$ unit hull sides in any projective window of radius $\varepsilon$.
+unit sides. A projective window has two oriented chains; shifting normal direction by $`\pi/2`$ to side direction does not change the uniform bound. This yields at most $`D C(\varepsilon,\sigma)`$ unit hull sides in any projective window of radius $`\varepsilon`$.
 
 This count includes only physical unit sides. Each such side is an actual contact and is assigned to one train; if a contact is a bridge, selecting one exterior occurrence prevents counting that same physical edge twice.
 
 ### Crossing charge and Mantel step
 
-Every crossing with angular defect greater than $\varepsilon$ consumes more than $\varepsilon$ from $A_{\rm ang}$, so there are at most $A_{\rm ang}/\varepsilon$ of them. For any remaining crossing, the two train directions have projective separation in $(\pi/3,\pi/3+\varepsilon]$. Fix either train as an anchor: the other direction lies in one of the two projective windows centered at $\theta+\pi/3$ or $\theta-\pi/3$, each of radius $\varepsilon$. For a crossing incident to $H$, choose the non-$H$ endpoint as anchor when there is one; if both endpoints lie in $H$, choose either. The number of $H$-neighbors in these two windows is bounded by the number of selected hull sides there, at most $2DC(\varepsilon,\sigma)$. Summing over all $T$ possible anchors counts every such crossing at least once. This proves the bound for $E_H$; double counting $H$-to-$H$ crossings only enlarges the upper bound.
+Every crossing with angular defect greater than $`\varepsilon`$ consumes more than $`\varepsilon`$ from $`A_{\rm ang}`$, so there are at most $`A_{\rm ang}/\varepsilon`$ of them. For any remaining crossing, the two train directions have projective separation in $`(\pi/3,\pi/3+\varepsilon]`$. Fix either train as an anchor: the other direction lies in one of the two projective windows centered at $`\theta+\pi/3`$ or $`\theta-\pi/3`$, each of radius $`\varepsilon`$. For a crossing incident to $`H`$, choose the non-$`H`$ endpoint as anchor when there is one; if both endpoints lie in $`H`$, choose either. The number of $`H`$-neighbors in these two windows is bounded by the number of selected hull sides there, at most $`2DC(\varepsilon,\sigma)`$. Summing over all $`T`$ possible anchors counts every such crossing at least once. This proves the bound for $`E_H`$; double counting $`H`$-to-$`H`$ crossings only enlarges the upper bound.
 
-Delete $H$ from the canonical simple triangle-free train-crossing graph. The remaining $N_0$ vertices have exactly $R_4-E_H$ crossing edges. Mantel gives $R_4-E_H\le N_0^2/4$, hence the stated square-root inequality, including the zero-edge case through the positive part.
+Delete $`H`$ from the canonical simple triangle-free train-crossing graph. The remaining $`N_0`$ vertices have exactly $`R_4-E_H`$ crossing edges. Mantel gives $`R_4-E_H\le N_0^2/4`$, hence the stated square-root inequality, including the zero-edge case through the positive part.
 
-The constants, the two-window count, and the order of counting are valid at the endpoint cases $\sigma=0$ and $\varepsilon<\pi/6$; the former annulus is only vacuous for a finite polygon, while the inequality remains correct. The argument does not infer an annulus from any source theorem and does not assume a rate of convergence to a disk.
+The constants, the two-window count, and the order of counting are valid at the endpoint cases $`\sigma=0`$ and $`\varepsilon<\pi/6`$; the former annulus is only vacuous for a finite polygon, while the inequality remains correct. The argument does not infer an annulus from any source theorem and does not assume a rate of convergence to a disk.
 
 ## 3. Exact pentagon regression
 
 The frozen verifier uses exact rational arithmetic in
-$\mathbb Q(\sqrt5,\sqrt{(5+\sqrt5)/8})$. It checks every pair distance in the regular unit pentagon and the five added outward unit squares, all exact contacts, the plane face walks, hull support, and train decomposition. The 15-point flower has 20 unit contacts, five strict square faces, one central pentagonal face, ten extreme hull vertices, and five actual unit hull sides. The five distinct trains incident to the central pentagon each contain exactly one selected unit hull side. Every pair is at least unit-separated and the contact graph has no triangle. Adding a distant retained isolate preserves the fixture.
+$`\mathbb Q(\sqrt5,\sqrt{(5+\sqrt5)/8})`$. It checks every pair distance in the regular unit pentagon and the five added outward unit squares, all exact contacts, the plane face walks, hull support, and train decomposition. The 15-point flower has 20 unit contacts, five strict square faces, one central pentagonal face, ten extreme hull vertices, and five actual unit hull sides. The five distinct trains incident to the central pentagon each contain exactly one selected unit hull side. Every pair is at least unit-separated and the contact graph has no triangle. Adding a distant retained isolate preserves the fixture.
 
 Thus the following local statement is false: a convex physical pentagon with a strict rhombus on every side can be incident to at most two complete trains that have selected actual unit hull-side ends. This regression is compatible with canonical `C-FULL-FLOWER-PROJECTIVE-BLOCKER`, which allows five projectively distinct flower terminals. The trains in the fixture share pentagon vertices, and the fixture is not a canonical global minimizer; it says nothing about simultaneous motion, global wall capacity, or Level I.
 
@@ -98,16 +98,16 @@ The verifier was copied byte-for-byte from the frozen source snapshot and rerun.
 
 The source report's exact identity
 
-$$
+```math
 5t_DD+x_B+m_B+d=3b+2g_F+N_0
-$$
+```
 
-is the same as the already promoted finite ledger in `C-FULLCORE-HULL-DEPLETION-FLOOR`: substitute $x_B=b-q$, $t_DD=q-k$, and $\mu_DD=t_DD+m_B-2c_I-4$ into its equation (A.11), then both reduce to
+is the same as the already promoted finite ledger in `C-FULLCORE-HULL-DEPLETION-FLOOR`: substitute $`x_B=b-q`$, $`t_DD=q-k`$, and $`\mu_DD=t_DD+m_B-2c_I-4`$ into its equation (A.11), then both reduce to
 
-$$
+```math
 4q+m_B+d=2b+2g_F+N_0+5k.
-$$
+```
 
-The source's asymptotic $N_0\ge(2\sqrt{\Delta_2}-o(1))D$, full-core surplus floor, and low-$x_B$ high-$t_D$ exclusion are also already supplied by that canonical theorem. We do not import the source's separate product-measure proof or create duplicate IDs. The new finite annular estimate can reproduce the same asymptotic lower bound using $A_{\rm ang}=O(D)$, $T=O(D)$, and $\sigma=o(1)$, but it does not improve the active C-II endpoint.
+The source's asymptotic $`N_0\ge(2\sqrt{\Delta_2}-o(1))D`$, full-core surplus floor, and low-$`x_B`$ high-$`t_D`$ exclusion are also already supplied by that canonical theorem. We do not import the source's separate product-measure proof or create duplicate IDs. The new finite annular estimate can reproduce the same asymptotic lower bound using $`A_{\rm ang}=O(D)`$, $`T=O(D)`$, and $`\sigma=o(1)`$, but it does not improve the active C-II endpoint.
 
 The source's exploratory collar-to-pentagon transport note remains unreviewed. Its conditional application is not promoted. No discovery branch was modified.

@@ -28,18 +28,18 @@ interior vertex count.
 
 Let
 
-$$
+```math
 L_*:=e_{BB,*}+2s_{C,*},
 \qquad
 s_{B,*}:=3q_*-e_{BI,*}-2e_{BB,*}\ge0,
 \tag{BS.1}
-$$
+```
 
 and let
 
-$$
+```math
 L:=e_{BB}+2s_C
-$$
+```
 
 be the full C65 currency.
 
@@ -48,42 +48,42 @@ be the full C65 currency.
 There exists an absolute constant `epsilon_B>0` such that every sufficiently large
 maximal cyclic extreme circuit satisfies
 
-$$
+```math
 \boxed{
 {L_*-(2/3)s_{B,*}\over D}
 \ge
 \lambda_A+\epsilon_B,
 }
 \tag{BS.2}
-$$
+```
 
 where
 
-$$
+```math
 \lambda_A
 ={\pi\over
 \sqrt{\pi^2+\left(\frac54-
 \sqrt{\frac{\pi}{2\sqrt3}}\right)^2}}
 =0.9955405845835427\ldots .
 \tag{BS.3}
-$$
+```
 
 ### Theorem BS.2 — exact full/selected boundary transfer
 
 For every maximal cyclic extreme circuit in a full post-ZF C65 source,
 
-$$
+```math
 \boxed{
 L
 \ge
 L_*-\frac23s_{B,*}+2d_H+2s_Z.
 }
 \tag{BS.4}
-$$
+```
 
 Consequently **no low-degeneracy hypothesis is needed**:
 
-$$
+```math
 \boxed{
 \liminf {e_{BB}+2s_C\over D}
 \ge
@@ -91,14 +91,14 @@ $$
 >0.9955405845\ldots
 }
 \tag{BS.5}
-$$
+```
 
 along every unbounded post-ZF sequence whose normalized KKT polytope contains a
 maximal cyclic extreme circuit.
 
 Even more sharply,
 
-$$
+```math
 \boxed{
 {e_{BB}+2s_C\over D}
 \ge
@@ -106,7 +106,7 @@ $$
 +2{d_H+s_Z\over D}-o(1).
 }
 \tag{BS.6}
-$$
+```
 
 Thus any full diameter-component or mixed-stress defect only raises the full surplus
 above the selected cyclic threshold.
@@ -117,75 +117,75 @@ above the selected cyclic threshold.
 
 MX proves the selected ZK identity
 
-$$
+```math
 \sum_r\delta_r+R_{I,*}+s_{B,*}
 =6+L_*
 \tag{1.1}
-$$
+```
 
 because `d_*=0`. Therefore
 
-$$
+```math
 \sum_r\delta_r
 \le6+L_*-s_{B,*}.
 \tag{1.2}
-$$
+```
 
 The selected attachment-hull area estimate consequently has the sharper asymptotic
 form
 
-$$
+```math
 \limsup {1\over D^2}
 \sum_r\operatorname{area}(P_{r,*})
 \le
 {\pi\over4}\eta^2,
 \tag{1.3}
-$$
+```
 
 where along a convergent subsequence
 
-$$
+```math
 \lambda:=\lim {L_*\over D},
 \qquad
 u:=\lim {s_{B,*}\over D},
 \qquad
 \boxed{\eta:=\lambda-\nu\ge0.}
 \tag{1.4}
-$$
+```
 
 Nonnegativity of `eta` follows from (1.1).
 
 The selected cyclic force hull still satisfies
 
-$$
+```math
 {\operatorname{area}F_*\over D^2}\to{\pi\over4},
 \qquad
 H_{out,*}=o(D^2).
 \tag{1.5}
-$$
+```
 
 Hence the refined exceptional-face argument in CRC now gives
 
-$$
+```math
 \boxed{
 w\ge\pi\sqrt{1-\eta^2}}
 \tag{1.6}
-$$
+```
 
 whenever `eta<1`, where
 
-$$
+```math
 w:=\lim(Q_*-f_*)/D.
-$$
+```
 
 If `eta>=1`, the target BS.2 is already immediate because
 
-$$
+```math
 \lambda-\frac23\nu
 =\eta+\frac13\nu
 \ge1>\lambda_A.
 \tag{1.7}
-$$
+```
 
 Thus only `eta<1` needs further analysis.
 
@@ -198,20 +198,20 @@ rhombus density and exceptional-face endpoint capacity, not on `s_{B,*}`.
 
 As in AE, if
 
-$$
+```math
 r:=\lim R_{4,*}/D^2,
-$$
+```
 
 then
 
-$$
+```math
 r\ge {\pi^2-w^2\over2\pi\sqrt3}.
 \tag{2.1}
-$$
+```
 
 Atomic train incidence gives
 
-$$
+```math
 4\sqrt r\le\xi+4\varphi,
 \qquad
 \xi:=\lim Q_*/D,
@@ -220,17 +220,17 @@ $$
 \qquad
 w=\xi-\varphi.
 \tag{2.2}
-$$
+```
 
 Since selected PC gives
 
-$$
+```math
 Q_*\le e_{BB,*}\le L_*,
-$$
+```
 
 we have `xi<=lambda`. Eliminating `xi,phi,r` exactly as in AE yields
 
-$$
+```math
 \boxed{
 \lambda
 \ge
@@ -240,53 +240,53 @@ F(w):=rac45
 \right).
 }
 \tag{2.3}
-$$
+```
 
 Also simply
 
-$$
+```math
 \boxed{\lambda\ge w}
 \tag{2.4}
-$$
+```
 
 because `w<=xi<=lambda`.
 
 The function `F(w)` is strictly increasing on the relevant interval `0<=w<=1` used
 at the low endpoint. Combining (1.6) and (2.3),
 
-$$
+```math
 \lambda
 \ge
 F\bigl(\pi\sqrt{1-\eta^2}\bigr)
 \tag{2.5}
-$$
+```
 
 whenever the right-hand `w` lies at most one. If it exceeds one, (2.4) is already the
 stronger branch for the optimization below.
 
 Substitute
 
-$$
+```math
 \Delta:=\frac\pi{2\sqrt3}.
-$$
+```
 
 At the lower value
 
-$$
+```math
 w_0(\eta):=\pi\sqrt{1-\eta^2},
-$$
+```
 
 the square-root term in (2.3) simplifies exactly:
 
-$$
+```math
 \sqrt{\frac{\pi^2-w_0(\eta)^2}{2\pi\sqrt3}}
 =\sqrt\Delta\,\eta.
 \tag{2.6}
-$$
+```
 
 Hence define
 
-$$
+```math
 \boxed{
 F_0(\eta)
 :=\frac45
@@ -295,14 +295,14 @@ F_0(\eta)
 \right).
 }
 \tag{2.7}
-$$
+```
 
 The original atomic threshold `lambda_A` is exactly the unique solution in `(0,1)` of
 
-$$
+```math
 \boxed{\lambda_A=F_0(\lambda_A).}
 \tag{2.8}
-$$
+```
 
 ---
 
@@ -310,36 +310,36 @@ $$
 
 The quantity relevant for transfer to the full graph is
 
-$$
+```math
 J:=\lambda-\frac23\nu.
-$$
+```
 
 Since `nu=lambda-eta`,
 
-$$
+```math
 \boxed{J={\lambda+2\eta\over3}.}
 \tag{3.1}
-$$
+```
 
 We prove
 
-$$
+```math
 \boxed{J\ge\lambda_A.}
 \tag{3.2}
-$$
+```
 
 If `eta>=lambda_A`, then `lambda>=eta` because `nu>=0`, so
 
-$$
+```math
 J\ge eta\ge\lambda_A.
 \tag{3.3}
-$$
+```
 
 Assume now `0<=eta<=lambda_A` and put
 
-$$
+```math
 w_0=\pi\sqrt{1-\eta^2}.
-$$
+```
 
 There are two subranges.
 
@@ -347,23 +347,23 @@ There are two subranges.
 
 Then (2.4) gives `lambda>=w_0`, hence
 
-$$
+```math
 3J\ge w_0+2\eta.
 \tag{3.4}
-$$
+```
 
 The function
 
-$$
+```math
 K(\eta):=\pi\sqrt{1-\eta^2}+2\eta
-$$
+```
 
 is concave on `[0,1]`. Therefore its minimum on the closed Range-I interval occurs at
 an endpoint. At `eta=0`,
 
-$$
+```math
 K(0)=\pi>3\lambda_A.
-$$
+```
 
 At the other endpoint, where `w_0=F_0(eta)`, the value agrees with the Range-II lower
 bound below and is strictly larger than `3lambda_A` because that crossing occurs
@@ -375,16 +375,16 @@ Thus `J>lambda_A` throughout Range I.
 
 Now (2.5) gives `lambda>=F_0(eta)`, so
 
-$$
+```math
 3J\ge F_0(\eta)+2\eta.
 \tag{3.5}
-$$
+```
 
 The function
 
-$$
+```math
 H(\eta):=F_0(\eta)+2\eta
-$$
+```
 
 is also concave on `[0,1]`, being a positive multiple of
 `sqrt(1-eta^2)` plus a linear term. Hence its minimum on the Range-II interval
@@ -393,28 +393,28 @@ intersected with `[0,lambda_A]` occurs at an endpoint.
 At the lower endpoint it equals the Range-I value and is strictly larger than
 `3lambda_A`. At the upper endpoint `eta=lambda_A`, equation (2.8) gives
 
-$$
+```math
 H(\lambda_A)
 =F_0(\lambda_A)+2\lambda_A
 =3\lambda_A.
 \tag{3.6}
-$$
+```
 
 Therefore
 
-$$
+```math
 J\ge\lambda_A,
-$$
+```
 with equality possible only when
 
-$$
+```math
 \boxed{
 \eta=\lambda=\lambda_A,
 \qquad
 \nu=0.
 }
 \tag{3.7}
-$$
+```
 
 Thus the formal minimum of the retained quantity occurs at **zero selected loaded
 contact-degree slack** and exactly at the old AX endpoint.
@@ -425,19 +425,19 @@ contact-degree slack** and exactly at the old AX endpoint.
 
 Suppose there were an unbounded sequence with
 
-$$
+```math
 {L_*-(2/3)s_{B,*}\over D}	o\lambda_A.
 \tag{4.1}
-$$
+```
 
 The equality analysis in Section 3 forces
 
-$$
+```math
 {s_{B,*}\over D}\to0,
 \qquad
 {L_*\over D}\to\lambda_A.
 \tag{4.2}
-$$
+```
 
 But MX transplants AX's endpoint exclusion to the selected graph: no selected maximal
 cyclic circuit sequence can satisfy `L_*/D->lambda_A`.
@@ -453,22 +453,22 @@ This proof does not need a numerical value of `epsilon_B`.
 
 Let
 
-$$
+```math
 g:=q-q_*\ge0,
 \qquad
 B_0:=e_{BB}-e_{BB,*}\ge0,
 \qquad
 M_0:=e_{BI}-e_{BI,*}\ge0.
 \tag{5.1}
-$$
+```
 
 LI gives
 
-$$
+```math
 I_*=V_*\cap I,
 \qquad I:=V\setminus B.
 \tag{5.2}
-$$
+```
 
 Let `c_I,c_{I,*}` be the full and selected interior-component counts.
 
@@ -481,108 +481,108 @@ three full contact edges to the loaded set `B` by the canonical C36/C40 attachme
 theorem. Every one of those attachment edges is absent from the selected contact
 support, because its interior endpoint is not in `V_*`. Therefore
 
-$$
+```math
 3r_0\le M_0.
 \tag{5.3}
-$$
+```
 
 Since
 
-$$
+```math
 c_I-c_{I,*}\le r_0,
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{2(c_I-c_{I,*})\le\frac23M_0.}
 \tag{5.4}
-$$
+```
 
 Now subtract the full and selected ZU ledgers. Full ZU is
 
-$$
+```math
 c_I+e_{BB}+s_C=q-2+d_H+s_Z,
 \tag{5.5}
-$$
+```
 
 while selected cyclic ZU is
 
-$$
+```math
 c_{I,*}+e_{BB,*}+s_{C,*}=q_*-2.
 \tag{5.6}
-$$
+```
 
 A direct rearrangement gives
 
-$$
+```math
 \boxed{
 L_*-L
 =B_0-2g+2(c_I-c_{I,*})-2d_H-2s_Z.
 }
 \tag{5.7}
-$$
+```
 
 Use (5.4):
 
-$$
+```math
 L_*-L
 \le
 B_0+\frac23M_0-2g-2d_H-2s_Z.
 \tag{5.8}
-$$
+```
 
 The full and selected loaded contact-degree slacks are
 
-$$
+```math
 s_B=3q-e_{BI}-2e_{BB}\ge0,
 \tag{5.9}
-$$
+```
 
-$$
+```math
 s_{B,*}=3q_*-e_{BI,*}-2e_{BB,*}\ge0.
 \tag{5.10}
-$$
+```
 
 Subtracting gives
 
-$$
+```math
 \boxed{M_0+2B_0=3g+s_{B,*}-s_B.}
 \tag{5.11}
-$$
+```
 
 Since
 
-$$
+```math
 B_0+\frac23M_0
 \le\frac23(M_0+2B_0),
-$$
+```
 
 and `s_B>=0`,
 
-$$
+```math
 B_0+\frac23M_0
 \le2g+\frac23s_{B,*}.
 \tag{5.12}
-$$
+```
 
 Insert into (5.8). The `2g` cancels exactly:
 
-$$
+```math
 L_*-L
 \le
 \frac23s_{B,*}-2d_H-2s_Z.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 L
 \ge
 L_*-\frac23s_{B,*}+2d_H+2s_Z,
 }
-$$
+```
 
 which is BS.4.
 
@@ -595,12 +595,12 @@ interior vertices and of the circuit rank gap `kappa_*`.
 
 Combine BS.2 and BS.4:
 
-$$
+```math
 {L\over D}
 \ge
 \lambda_A+\epsilon_B
 +2{d_H+s_Z\over D}-o(1).
-$$
+```
 
 This proves BS.5--BS.6.
 
@@ -640,11 +640,11 @@ high-surplus conclusion:
 The next theorem should attack the selected maximal forest case. A direct selected SZ
 identity already gives
 
-$$
+```math
 {e_{BB,*}+2s_{C,*}\over D}
 \ge
 \lambda_R+\epsilon_0+3{d_*\over D}
-$$
+```
 
 once the selected support-local version is rebuilt; ENB/EDB additionally force
 `h_*` and branching unless `d_*` itself is large. Combining the `3d_*` penalty with

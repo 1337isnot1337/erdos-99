@@ -28,9 +28,9 @@ The newly created contacts need not be KKT-positive. Thus this theorem does not 
 
 Let
 
-$$
+```math
 A=C\sqcup R
-$$
+```
 
 be the C65 lexicographically normalized triangle-free global minimizer of cardinality `n` and diameter `D`.
 
@@ -43,11 +43,11 @@ C65 gives:
 
 The earlier Target C force-hull theorem also gives a fixed pair
 
-$$
+```math
 u,v\in C,
 \qquad |u-v|=D.
 \tag{1.1}
-$$
+```
 
 Only (3) and the fixed core pair (1.1) are needed in the finite construction below. In fact the argument tolerates a rattler becoming diametral during the reconfiguration because the core pair keeps the global diameter equal to `D`.
 
@@ -59,37 +59,37 @@ Only (3) and the fixed core pair (1.1) are needed in the finite construction bel
 
 If a finite set `A` has diameter `D`, then every point
 
-$$
+```math
 x\in\operatorname{conv}A
-$$
+```
 
 satisfies
 
-$$
+```math
 |x-a|\le D
 \qquad(a\in A).
 \tag{RA.1}
-$$
+```
 
 #### Proof
 
 Write
 
-$$
+```math
 x=\sum_i\lambda_i a_i,
 \qquad \lambda_i\ge0,
 \qquad \sum_i\lambda_i=1.
-$$
+```
 
 For fixed `a in A`, convexity of the norm gives
 
-$$
+```math
 |x-a|
 \le
 \sum_i\lambda_i|a_i-a|
 \le
 D.
-$$
+```
 
 `square`
 
@@ -116,49 +116,49 @@ If `A` was triangle-free, the new configuration is also triangle-free.
 
 Choose any fixed source point `p in A\setminus{r}`. Because `conv A` is two-dimensional, the set
 
-$$
+```math
 U=\operatorname{int}(\operatorname{conv}A)\cap B^\circ(p,1)
-$$
+```
 
 is nonempty after choosing a point sufficiently close to `p` on an inward segment.
 
 For `y in U`, consider the segment
 
-$$
+```math
 \gamma_y(t)=(1-t)r+ty,
 \qquad 0\le t\le1.
-$$
+```
 
 It lies in `conv A`. By Lemma RA.1,
 
-$$
+```math
 |\gamma_y(t)-a|\le D
 \qquad(a\in A\setminus\{r\})
 \tag{RA.2}
-$$
+```
 
 throughout the motion.
 
 Initially `r` is outside every closed unit disk centered at a fixed source point, while the endpoint `y` lies inside the open unit disk centered at `p`. Therefore the segment has a first intersection with
 
-$$
+```math
 \bigcup_{a\ne r}\overline B(a,1).
-$$
+```
 
 There are only finitely many pairwise intersections of the unit-circle boundaries. If the first intersection of the segment lies on two or more unit circles, the target `y` lies on one of finitely many rays beginning at `r` and passing through such a circle-intersection point. Choose `y in U` outside this finite union of rays.
 
 For that generic choice, the first intersection point `r'` lies on exactly one unit circle. Hence
 
-$$
+```math
 |r'-p_*|=1
-$$
+```
 
 for one fixed source point `p_*`, while
 
-$$
+```math
 |r'-a|>1
 \qquad(a\ne r,p_*).
-$$
+```
 
 Thus the new set is unit-separated and `r'` has exactly one contact.
 
@@ -174,11 +174,11 @@ If the old configuration was triangle-free, any new unit triangle would have to 
 
 Assume a C65 triangle-free C-II global minimizer exists. Then there is another triangle-free global minimizer `A^+` with
 
-$$
+```math
 |A^+|=|A|=n,
 \qquad
 \operatorname{diam}(A^+)=D(n),
-$$
+```
 
 such that
 
@@ -226,9 +226,9 @@ This is a finite source-wide statement. It goes beyond the local product-germ ob
 
 The new contacts created at first events may have zero multiplier in every KKT stress. Therefore
 
-$$
+```math
 V(C_+)\ne A^+
-$$
+```
 
 may still occur. RA does **not** prove:
 

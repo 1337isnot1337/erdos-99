@@ -22,9 +22,9 @@ In a connected plane graph each bridge has the same face on both sides. An outer
 bridge contributes exactly two occurrences to the boundary walk and no positive-area
 boundary edge to `U`. Hence the non-bridge occurrence budget is `L-2B_o`, proving
 
-$$
+```math
 \sum_jp_j\le L-2B_o.
-$$
+```
 
 The argument is by physical edge occurrences. Articulation vertices and repeated
 outer-walk vertices do not create an extra perimeter occurrence that is not already in
@@ -50,15 +50,15 @@ closed bounded-face union, so no shared edge is counted twice across the decompo
 
 For each finite-perimeter planar component,
 
-$$
+```math
 \operatorname{area}(U_j)\le p_j^2/(4\pi).
-$$
+```
 
 Summing and applying `sum p_j^2 <= (sum p_j)^2` gives
 
-$$
+```math
 A\le(L-2B_o)^2/(4\pi).
-$$
+```
 
 Taking the nonnegative square root and rearranging gives the stated upper bound on
 `B_o`. No convexity or simple-boundary assumption is needed.
@@ -117,9 +117,9 @@ outer bridge has the unbounded face on both sides and cannot be a rhombus bounda
 edge. Assigning each rhombus-boundary edge to its outer-face occurrence or to the
 opposite bounded-face occurrence gives
 
-$$
+```math
 P_R\le(b-2B_o)+P_{exc}.
-$$
+```
 
 This assignment is occurrence-safe. An exceptional face may have repeated boundary
 vertices, but its degree counts the needed edge-side occurrences. A strict-rhombus
@@ -128,9 +128,9 @@ edge cannot be a graph bridge.
 Applying planar isoperimetry to the rhombus union and using
 `A_4=pi D^2/4-o(D^2)` in the full-core Type-II branch gives
 
-$$
+```math
 (b-\pi D)+P_{exc}-2B_o\ge-o(D).
-$$
+```
 
 The result is an all-detour relation, not a bridge-free conclusion when
 `b-pi D` is linear.

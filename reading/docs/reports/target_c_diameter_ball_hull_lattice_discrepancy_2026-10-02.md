@@ -31,11 +31,11 @@ canonical state, route, prompt, or theorem dependency is changed here.
 The geometric theorem below concerns **any** finite unit-separated planar source,
 and any subset of its **actual diameter endpoints**. Its lattice is
 
-$$
+```math
 \Lambda=t+\mathbb Zu+\mathbb Zv,
 \qquad |u|=|v|=1,\qquad \pi/3\le\angle(u,v)\le2\pi/3.
 \tag{1}
-$$
+```
 
 The lattice may depend on the source. All constants are uniform in its phase,
 angle, orientation and translation. The source need not be a lattice subset,
@@ -74,10 +74,10 @@ of diameter `D >= 1`. Let `S` be any subset of its actual diameter endpoints,
 and let `0 <= epsilon <= 1/8`. If every member of `S` is within `epsilon` of
 one lattice (1), then
 
-$$
+```math
 \boxed{|S|\le C\bigl(D\epsilon+D^{2/3}\bigr).}
 \tag{BH.1}
-$$
+```
 
 The constant does not depend on the number of source points, supporting disks,
 boundary corners, or selected endpoints. This is a finite analytic theorem,
@@ -87,63 +87,63 @@ not a computation or an optimality certificate.
 
 Put
 
-$$
+```math
 W=\bigcap_{a\in A}\overline B(a,D).
 \tag{2}
-$$
+```
 
 Every source point belongs to `W`. If `p` has an actual diameter partner `y`,
 then `p` is on the circle `partial B(y,D)` and therefore on `partial W`.
 Indeed, for `n_p=(p-y)/D` and every `x in A`, the actual source constraint
 `|x-y| <= D` gives
 
-$$
+```math
 n_p\cdot(x-p)\le-\frac{|x-p|^2}{2D}.
 \tag{3}
-$$
+```
 
 The same normal supports all of `W` at `p`, because `W subset B(y,D)`.
 This uses partners from the same source, never an independent packing.
 
 Choose a diameter pair `z,a` and its midpoint `o`. For every source point `x`,
 
-$$
+```math
 2|x-o|^2+D^2/2=|x-z|^2+|x-a|^2\le2D^2.
-$$
+```
 
 Consequently
 
-$$
+```math
 \overline B(o,(1-\sqrt3/2)D)\subset W
 \subset\overline B(a,D),\qquad \operatorname{per}(W)\le2\pi D.
 \tag{4}
-$$
+```
 
 In particular `W` has nonempty interior, without any near-disk assumption.
 Its boundary is a finite union of circular arcs of radius `D`, with convex
 corners; redundant disks cause no difficulty. In tangent-angle measure its
 arclength satisfies
 
-$$
+```math
 ds\le D\,d\theta.
 \tag{5}
-$$
+```
 
 At a corner the tangent angle jumps and the arclength contribution is zero.
 
 For `r` smaller than the inradius in (4), write
 
-$$
+```math
 W_r^+=W+r\overline B(0,1),\qquad
 W_r^-=\{x:x+r\overline B(0,1)\subset W\}.
-$$
+```
 
 Erosion distributes over intersections, so
 
-$$
+```math
 W_r^-=\bigcap_{a\in A}\overline B(a,D-r).
 \tag{6}
-$$
+```
 
 Its boundary satisfies `ds <= (D-r)dtheta`. The outer parallel body has
 arcs of radius `D+r` and rounded corner arcs of radius `r`, so it satisfies
@@ -155,28 +155,28 @@ arcs of radius `D+r` and rounded corner arcs of radius `r`, so it satisfies
 convex corners, and suppose its boundary arclength in tangent-angle measure
 satisfies `ds <= R dtheta`. With Fourier convention
 
-$$
+```math
 \widehat f(\xi)=\int_{\mathbb R^2} f(x)e^{-2\pi i x\cdot\xi}\,dx,
-$$
+```
 
 one has, for `xi != 0`,
 
-$$
+```math
 |\widehat{\mathbf1_E}(\xi)|\le C_F\sqrt R\,|\xi|^{-3/2},
 \tag{7}
-$$
+```
 
 where `C_F` is absolute and independent of the corners.
 
 **Proof.** Rotate the integration coordinates so `xi = rho(1,0)`, with
 `rho > 0`. The divergence theorem gives
 
-$$
+```math
 \widehat{\mathbf1_E}(\xi)
 =-\frac1{2\pi i\rho}\int_{\partial E}n_1(s)
   e^{-2\pi i\rho x_1(s)}\,ds.
 \tag{8}
-$$
+```
 
 Let `theta` be a nondecreasing lift of the tangent angle. The stationary
 parts, where `|cos(theta)| <= eta`, have total angular measure at most
@@ -212,9 +212,9 @@ Choose a fixed nonnegative smooth function `psi`, supported in the open unit
 disk, with integral one, and put `psi_delta(x)=delta^(-2)psi(x/delta)`.
 Its Fourier transform satisfies
 
-$$
+```math
 |\widehat\psi(\zeta)|\le C_N(1+|\zeta|)^{-N}.
-$$
+```
 
 For (1), the basis matrix has squared singular values
 `1 +/- |cos(theta)|`, in `[1/2,3/2]`; its determinant is in
@@ -223,11 +223,11 @@ at least `sqrt(2/3)`, uniformly. Disjoint disks around its points give
 `#{k: |k| <= T} <= C T^2` for `T >= 1`, and there are only boundedly
 many points below one. Dyadic summation, for `0 < delta <= 1`, gives
 
-$$
+```math
 \sum_{k\in\Lambda_0^*\setminus\{0\}}
 |k|^{-3/2}(1+\delta|k|)^{-3}\le C\delta^{-1/2}.
 \tag{9}
-$$
+```
 
 Indeed shells of radius `2^j <= delta^(-1)` contribute `O(2^(j/2))`;
 the later shells contribute `O(delta^(-3)2^(-5j/2))`. Both geometric
@@ -243,11 +243,11 @@ at most `2 epsilon < 1`.
 
 Define smooth compactly supported functions
 
-$$
+```math
 F_+=\mathbf1_{W_r^+}*\psi_\delta,\qquad
 F_-=\mathbf1_{W_r^-}*\psi_\delta.
 \tag{10}
-$$
+```
 
 They satisfy `F_+ >= F_- >= 0`. At each rounded endpoint `l_p`, every point
 in the open delta-ball lies in `W_r^+`, so `F_+(l_p)=1`. On the other
@@ -257,34 +257,34 @@ around `l_p` has projection strictly greater than `h_W(n_p)-r`, whereas
 every point of `W_r^-` has projection at most that quantity. Consequently
 `F_-(l_p)=0`. Thus
 
-$$
+```math
 |S|\le\sum_{l\in\Lambda}(F_+(l)-F_-(l)).
 \tag{11}
-$$
+```
 
 Poisson summation applies to the smooth functions (10), with absolutely
 convergent sums. Translation contributes phases of modulus one. The zero
 frequency is the area difference divided by `det Lambda_0`. Steiner's
 formula and inner parallel coarea give
 
-$$
+```math
 \begin{split}
 \operatorname{area}(W_r^+)-\operatorname{area}(W_r^-)
 &\le 2r\operatorname{per}(W)+\pi r^2\\
 &\le C D(\epsilon+\delta).
 \end{split}
 \tag{12}
-$$
+```
 
 For the inner loss, integrate `per(W_t^-) <= per(W)` over `0 <= t <= r`;
 all the bodies here have interior. Lemma BH.F applies to both parallel
 bodies with `R <= D+r <= 2D`. Equations (7), (9) and the determinant
 lower bound control the nonzero frequencies by
 
-$$
+```math
 C\sqrt D\,\delta^{-1/2}.
 \tag{13}
-$$
+```
 
 Combining (11)--(13) and `delta=D^(-1/3)` proves BH.1.
 For `1 <= D < 64`, the actual endpoints are strictly extreme source-hull
@@ -299,20 +299,20 @@ completes the theorem. QED.
 the `q` loaded actual diameter endpoints are within `epsilon_D <= 1/8`
 of a union of `K_D` lattices (1). Then
 
-$$
+```math
 \boxed{q-b_D\le C K_D(D\epsilon_D+D^{2/3}).}
 \tag{BH.2}
-$$
+```
 
 Assign each covered endpoint to one chart and apply BH.1 to those disjoint
 subsets. No contact or co-embedding compatibility between charts is required.
 Since canonical `q >= ceil(D)`, there is no survivor sequence with
 
-$$
+```math
 b_D=o(D),\qquad K_D\epsilon_D\longrightarrow0,
 \qquad K_DD^{-1/3}\longrightarrow0.
 \tag{14}
-$$
+```
 
 This removes the old sufficient condition
 `K_D epsilon_D log(1/epsilon_D) -> 0` for the restricted atlas (1).
@@ -338,10 +338,10 @@ Take `u=(1,0)`, `v=(c,s)`, `c^2+s^2=1`, `0 < c < 1/2`, `s > 0`.
 Let `w=2u-v`, so `3 < L=|w|^2=5-4c < 5`. Restrict to `c > 1/4`,
 so `L < 4`, and set
 
-$$
+```math
 p=\frac w2+Jw\sqrt{\frac{4-L}{4L}}.
 \tag{15}
-$$
+```
 
 Then `|p|=|p-w|=1`. Both neighbors `0,w` belong to the one unit-rhombic
 chart `Zu+Zv`, but `p` does not: if `p=iu+jv` had norm one, the open
@@ -360,10 +360,10 @@ The three-point source is unit separated and triangle-free, since
 This can be made an actual diameter-endpoint example for arbitrarily large
 `D`. Write `n=(p-w/2)/|p-w/2|` and add `y=p-Dn`. Then `|p-y|=D` and
 
-$$
+```math
 |y|^2=|y-w|^2=D^2-2D\sqrt{1-L/4}+1<D^2
 \tag{16}
-$$
+```
 
 for sufficiently large `D`. All lower distance constraints also hold for
 large `D`. Thus `p` is an actual diameter endpoint with two contacts to
@@ -385,11 +385,11 @@ with unit basis vectors and `c=u dot v in [9/20,1/2]`. Suppose a point `p`
 has unit contacts to two distinct points of this chart, and those three
 points are part of one unit-separated triangle-free source. Then
 
-$$
+```math
 \boxed{\operatorname{dist}(p,t+\mathbb Zu+\mathbb Zv)
        \le20(1/2-c).}
 \tag{BH.3}
-$$
+```
 
 The point need not be a diameter endpoint for this local statement. The
 endpoint hypothesis enters only when applying BH.1 afterwards. The bound
@@ -401,11 +401,11 @@ The two unit circles meet only if `|w|<=2`. The Gram minimum eigenvalue
 is at least `1/2`, so `i^2+j^2<=8`. Enumerating this fixed integer disk
 gives, up to sign, only
 
-$$
+```math
 u,\quad v,\quad u-v,\quad u+v,\quad 2u-v,\quad u-2v,
 \quad 2u,\quad 2v,
 \tag{17}
-$$
+```
 
 and `2(u-v)` at `c=1/2` only. For example the other mixed vectors have
 squared norm at least `5+4c>=34/5>4`, while
@@ -421,19 +421,19 @@ These cases have zero error.
 
 For each of the remaining types the intersections are
 
-$$
+```math
 p_\pm(c)=w(c)/2\pm Jw(c)a(L(c)),\qquad
 a(L)=\tfrac12\sqrt{(4-L)/L},\qquad L=|w|^2.
 \tag{18}
-$$
+```
 
 Throughout the allowed interval, `1<=L<=16/5`, `|L'|<=4`,
 `|w|<2`, and `|w'|<=12/5`. Also
 
-$$
+```math
 |v'|=1/\sqrt{1-c^2}<6/5,\qquad
 |a|<1,\qquad |a'|=1/(L^{3/2}\sqrt{4-L})<5/4.
-$$
+```
 
 Consequently `|p_+'|,|p_-'|<14`. At `c=1/2` their chart coordinates
 are, up to sign,
@@ -456,10 +456,10 @@ subset of actual diameter endpoints of a unit-separated triangle-free
 source, each having two unit contacts to one fixed chart in the above
 angle range. If `delta_c=1/2-c<=1/160`, then BH.1 and BH.3 give
 
-$$
+```math
 \boxed{|B_2|\le C(20D\delta_c+D^{2/3}).}
 \tag{BH.4}
-$$
+```
 
 For `delta_c=O(1/D)`, this is `|B_2|=O(D^(2/3))`. In a canonical
 source with `q>=D`, linearly many loaded endpoints therefore have
@@ -504,17 +504,17 @@ other two have differences `a=(i,j)`, `b=(k,l)` in the integer disk
 `0<i^2+j^2<=8` of the preceding proof. The centers cannot be collinear:
 a circle and a line have at most two distinct intersection points. Put
 
-$$
+```math
 Q_c(i,j)=i^2+j^2+2ijc,\qquad d=il-jk\ne0.
-$$
+```
 
 Each of `Q_c(a),Q_c(b),Q_c(a-b)` is at most four, and circumradius
 one is exactly
 
-$$
+```math
 Q_c(a)Q_c(b)Q_c(a-b)-4(1-c^2)d^2=0.
 \tag{19}
-$$
+```
 
 Every factor is affine in `c`. Enumerate the finite integer disk and retain
 the unordered independent pairs for which each of the three squared lengths
@@ -570,10 +570,10 @@ fix a normalized KKT stress. Let `L_1` be a set of source vertices `p`
 having exactly one actual unit neighbor `l`, with positive contact
 multiplier. If every such neighbor lies in one chart (1), then
 
-$$
+```math
 \boxed{|L_1|=O(D^{2/3}).}
 \tag{BH.6}
-$$
+```
 
 The estimate is uniform in the source and chart. It needs no floor on
 any positive multiplier. It applies to canonical contact leaves, where
@@ -595,21 +595,21 @@ is an actual endpoint and `|p|>=D-R`. Write `e=p/|p|`.
 For any `a in A` with `d=|p-a|>=D-2`, let `u_a=(p-a)/d`. Since
 `|a|<=R`,
 
-$$
+```math
 u_a\cdot e
 =\frac{|p|^2+d^2-|a|^2}{2d|p|}
 \ge\frac{D^2/2-D\eta-2D+2}{D^2/2+D\eta}
 \ge1-t,\qquad t=\frac{4(\eta+1)}D.
 \tag{20}
-$$
+```
 
 Use `D>=65536`, so the numerator is positive and `t<1`.
 At `p`, the leaf equilibrium is
 
-$$
+```math
 \alpha(p-l)=\sum_y\beta_{py}(p-y),\qquad \alpha>0.
 \tag{21}
-$$
+```
 
 All summands on the right are actual diameter vectors with nonnegative
 weights. Hence the unit contact direction `n=p-l` satisfies `n dot e>=1-t`:
@@ -617,28 +617,28 @@ its unnormalized projection is at least `1-t` times the sum of vector
 lengths, while its norm is at most that same sum. For every near-diameter
 `u_a`, the triangle inequality between these unit vectors and `e` gives
 
-$$
+```math
 u_a\cdot n\ge1-4t.
-$$
+```
 
 Set `zeta=4t`, `epsilon_1=2 zeta=32(eta+1)/D`. For `d>=D-2`,
 
-$$
+```math
 |l-a|^2\le(d-1)^2+2d\zeta,
 \qquad |l-a|\le d-1+2\zeta\le D-1+\epsilon_1.
 \tag{22}
-$$
+```
 
 The middle inequality follows by squaring, since `d>=2`. If `d<D-2`,
 the triangle inequality gives `|l-a|<=d+1<D-1`. Therefore, for all source
 points, including every isolate,
 
-$$
+```math
 l\in W_{1-\epsilon_1}^-=
 \bigcap_{a\in A}\overline B(a,D-1+\epsilon_1),
 \qquad \epsilon_1=O(D^{-1/2})<1/2.
 \tag{23}
-$$
+```
 
 In particular `l` itself cannot be an actual diameter endpoint in this
 regime. That latter qualitative exclusion is prior scope of PR #620;
@@ -650,10 +650,10 @@ Let `K=W_1^-`. Each positive diameter vector at `p` is an outward
 normal of `W` at `p`, so their positive sum in (21) is also a supporting
 normal there. Thus `h_W(n)=n dot p`. Since `K+B(0,1) subset W`,
 
-$$
+```math
 h_K(n)\le h_W(n)-1=n\cdot l.
 \tag{24}
-$$
+```
 
 Consequently `l` is on or outside a supporting line of `K`, not in its
 interior. Formula (4), with midpoint `o` of any actual diameter pair,
@@ -662,21 +662,21 @@ puts a ball of radius
 For any `x` in the larger body in (23), contract it toward `o` by the
 factor `lambda=r_*/(r_*+epsilon_1)`. For every disk center `a`,
 
-$$
+```math
 |o+\lambda(x-o)-a|
 \le\lambda(D-1+\epsilon_1)+(1-\lambda)|o-a|
 \le D-1,
-$$
+```
 
 because `|o-a| <= (sqrt(3)/2)D` and the last two error terms cancel.
 The contracted point is in `K`. Also `|x-o|<2D`, so its displacement
 is at most `16 epsilon_1`. Apply this to `x=l`. Together with (24),
 this proves
 
-$$
+```math
 \operatorname{dist}(l,\partial K)\le16\epsilon_1=O(D^{-1/2}).
 \tag{25}
-$$
+```
 
 This controls distance to the actual inner ball-hull boundary. It does
 not replace that boundary by a circumcircle of width `O(sqrt(D))`.
@@ -692,9 +692,9 @@ perimeter at most `2 pi D`, and inradius at least `D/8`. Its relevant
 outer/inner parallels therefore meet every uniform Fourier and smoothing
 hypothesis. It follows that the number of distinct possible neighbors is
 
-$$
+```math
 O(D\rho+D^{2/3})=O(D^{2/3}).
-$$
+```
 
 A single unit-separated source point has at most six unit neighbors,
 by the elementary angle packing on its unit circle. Thus at most six

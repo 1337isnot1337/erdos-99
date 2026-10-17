@@ -28,7 +28,7 @@ deficit.
   no-go, and the support-radius formulation of the quantitative Kuperberg question
   (Sections 148–151).
 - [06 — Activation/monomer compatibility regression](06-activation-monomer-regression.md):
-  exact rational family showing that $\Theta(D^2)$ independent one-at-a-time
+  exact rational family showing that $`\Theta(D^2)`$ independent one-at-a-time
   activation constraints can coexist with a Hall-neutral coherent monomer scaffold;
   this rules out a purely local activation-rank-to-Schur-nullity theorem (Section 152).
 - [07 — Activation KKT-stress invariance](07-activation-stress-invariance.md): exact
@@ -46,8 +46,8 @@ deficit.
 - [10 — Quantitative Kuperberg rate](10-quantitative-kuperberg-rate.md): exact
   reconstruction of the aligned five-block move, quartic one-step gap gain,
   factor-three recursive nesting, the explicit support bound
-  $W(d)\le C_1\exp(C_2d^{-3})$, and the resulting vanishing-strain same-hull regime
-  $\alpha_L^{-3}=o(\log L)$ (Section 157).
+  $`W(d)\le C_1\exp(C_2d^{-3})`$, and the resulting vanishing-strain same-hull regime
+  $`\alpha_L^{-3}=o(\log L)`$ (Section 157).
 - [09b — Activation fixed-hull flat](09-activation-fixed-hull-flat.md): a complementary
   bridge-forest correction and super-boundary-dimensional affine family of
   triangle-free global optima in one fixed terminal hull (Section 156).
@@ -61,16 +61,16 @@ deficit.
 - [12 — Toe-out Kuperberg improvement](12-toeout-kuperberg-improvement.md): a new
   feasible translation of the same five blocks with eightfold larger leading quartic
   gain, the explicit canonical support constant
-  $\limsup d^3\log W(d)\le\sqrt3\log3/8$, and a same-hull add-one theorem on a
-  nonempty part of the critical $(\log L)^{-1/3}$ strain scale (Section 160).
+  $`\limsup d^3\log W(d)\le\sqrt3\log3/8`$, and a same-hull add-one theorem on a
+  nonempty part of the critical $`(\log L)^{-1/3}`$ strain scale (Section 160).
 - [13 — Local five-block quartic optimality](13-five-block-local-optimality.md): an
   exact quadratic-cage theorem for arbitrary asymmetric simultaneous translations of
   the same five rigid blocks, proving that every identity-convergent positive-gap
-  branch has gain $O(d^4)$; combined with Section 160,
-  $V_5^{\rm loc}(d)=\Theta(d^4)$ (Section 161).
+  branch has gain $`O(d^4)`$; combined with Section 160,
+  $`V_5^{\rm loc}(d)=\Theta(d^4)`$ (Section 161).
 - [14 — Sharp symmetric five-block coefficient](14-sharp-symmetric-five-block.md):
   every feasible local reflection-symmetric translation branch satisfies
-  $\limsup v(d)/d^4\le\sqrt3/9$, with equality attained by Section 160; the
+  $`\limsup v(d)/d^4\le\sqrt3/9`$, with equality attained by Section 160; the
   toe-out leading profile is therefore asymptotically optimal in the full symmetric
   rigid-translation class (Section 162).
 - [15 — Planar two-shadow transport](15-two-shadow-planarity.md): strict-conflict
@@ -151,19 +151,19 @@ deficit.
 
 ## Exact remaining endpoint
 
-With $g=\Delta_\Lambda-d_{\rm sc}$, a hypothetical survivor has $g\ge1$. The
+With $`g=\Delta_\Lambda-d_{\rm sc}`$, a hypothetical survivor has $`g\ge1`$. The
 preferred closure remains
-$$
+```math
 \operatorname{rank}S
 \le d_{\rm int}+|C^\partial|-\Delta_\Lambda,
-$$
-equivalently $d_{\rm sc}\ge\Delta_\Lambda$. The theorem is not currently proved.
+```
+equivalently $`d_{\rm sc}\ge\Delta_\Lambda`$. The theorem is not currently proved.
 
 The fixed-source same-hull Hall route has been exhausted exactly: for every
-unit-separated $Q\subset H$,
-$$
+unit-separated $`Q\subset H`$,
+```math
 |Q|-|N_A(Q)|\le\widehat p_H.
-$$
+```
 The source-capacity flag reaches this bound but cannot exceed it. Section 168 shows
 that this does not prevent replacing the source, after finitely many exact
 cardinality-increasing fixed-hull steps, by either a globally locked transition or a
@@ -171,14 +171,14 @@ triangle-free zero-slack capacity endpoint.
 
 The geometric strain route is quantitatively sharp for the current local five-block
 translation architecture. Section 157 gives a free aligned support bound
-$W(d)\le C_1\exp(C_2d^{-3})$. Section 160 improves the leading support constant to
-$$
+$`W(d)\le C_1\exp(C_2d^{-3})`$. Section 160 improves the leading support constant to
+```math
 \boxed{
 \limsup_{d\downarrow0}d^3\log W(d)
 \le\frac{\sqrt3\log3}{8},
 }
-$$
-and reaches a nonempty part of the critical $(\log L)^{-1/3}$ fixed-shape strain
+```
+and reaches a nonempty part of the critical $`(\log L)^{-1/3}`$ fixed-shape strain
 scale. Sections 161--162 prove the quartic exponent and the symmetric leading
 coefficient are already optimal for the same local five-block rigid-translation
 architecture. A better support exponent therefore requires a different architecture,
@@ -201,18 +201,21 @@ separator/source refinements.
    `Y_in` has a source match, every Schur terminal has a distinct source label, and all
    but at most `12D+9` response-lattice vertices see a deep source monomer/lozenge
    cell. Section 176 sharpens the source geometry further:
-   $$
+   ```math
    r=m^*-|A^0\cap K^*|\le12d+9,
-   $$
+   
+   ```
    and for any finite contact shield the saturating source matching is sector-local
    outside at most
-   $$
+   ```math
    5|V(\Sigma)|+12d+9
-   $$
+   
+   ```
    response vertices. Section 177 additionally gives at least
-   $$
+   ```math
    \frac1{10}\max\{0,|C^\partial|+|O|-20d-25\}
-   $$
+   
+   ```
    pairwise disjoint actual `C^partial-A^0-O` source gates. These gates are a
    transport resource, not Schur nullity by themselves.
 2. **Actual-response locked branch.** A locked unit triangle can be taken in the
@@ -228,53 +231,53 @@ separator/source refinements.
 
 For a stress-generated shield `Sigma`, let
 
-$$
+```math
 T_Z=T_\Sigma\cap Z,
 \qquad
 Q_\Sigma=\sum_i\max\{0,|O_i|-|C_i|\},
-$$
+```
 
 and let `O_iso` be the surviving exterior sinks with no surviving response neighbor.
 Section 175 proves
 
-$$
+```math
 \boxed{
 h(G)=|O|-\operatorname{rank}S
 \ge |O_{\rm iso}|+Q_\Sigma-|T_Z|.}
-$$
+```
 
 Using the exact plateau bookkeeping
 
-$$
+```math
 \zeta-s=h(G)-j_*,
 \qquad
 j_*=N-|Y_0|-m^*,
-$$
+```
 
 the locked branch closes once
 
-$$
+```math
 \boxed{
 |O_{\rm iso}|+
 \sum_i\max\{0,|O_i|-|C_i|\}
 \ge j_*+|T_Z|.
 }
-$$
+```
 
 Exterior tube sinks cancel exactly; only interior tube sites cost right deficiency.
 Pointwise,
 
-$$
+```math
 |T_\Sigma|\le9|E(\Sigma)|,
-$$
+```
 
 and translation averaging gives
 
-$$
+```math
 \mathbb E|T_Z|
 \le {\operatorname{area}(K^*\cap N_1(|\Sigma|))\over\sqrt3/2}
 \le {2\pi\over\sqrt3}+{4\over\sqrt3}|E(\Sigma)|.
-$$
+```
 
 For the three-channel fan `|E(Sigma)|=|V(Sigma)|`.
 
@@ -287,20 +290,20 @@ lenses of its unit contact edges and let
 
 Section 177 proves
 
-$$
+```math
 |L_\Sigma|\le2|E(\Sigma)|,
 \qquad
 \zeta\ge\delta_\Sigma^{\rm lens}-|L_\Sigma|-\beta_\Sigma.
-$$
+```
 
 Thus the lens route closes once
 
-$$
+```math
 \boxed{
 \delta_\Sigma^{\rm lens}
 \ge s+|L_\Sigma|+\beta_\Sigma.
 }
-$$
+```
 
 For the locked three-channel fan with `v` vertices,
 `|L_Sigma|<=2v-2` and the crude total penalty is at most `3v-2`. This route keeps
@@ -310,9 +313,9 @@ automatically dominate the full-tube route.
 For an arbitrary straight geometric crosscut of length `L`, Section 177 also gives an
 admissible midrow response phase with
 
-$$
+```math
 |T_Z|\le2\left\lceil L+\frac{\sqrt{13}}2\right\rceil.
-$$
+```
 
 This is a pointwise `2L+O(1)` alternative to the full-torus averaged straight-cut
 cost, but the required right-sector surplus remains unproved.
@@ -328,9 +331,9 @@ turn repeated plateau descent into a genuine strict source-cardinality competito
 The source-backbone obstruction remains complementary. In the plateau-endpoint common
 placement, the number of source-matching edges forced to end in genuine strict rattlers
 is at least
-$$
+```math
 \max\{0,\tau_D(A)-\widehat p_H+(m^*-m)\},
-$$
+```
 and at least one fifth as many can be made vertex-disjoint response certificates. This
 may be zero when the diameter-cover number is small, so regular-shell and diameter-star
 regressions remain active.

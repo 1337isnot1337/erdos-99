@@ -22,58 +22,58 @@ outer-pocket chain lower bounds occur in pairs.
 
 If
 
-$$
+```math
 X:=\sum_i\alpha_i,
 \qquad
 c_X:=\sin(X/2),
-$$
+```
 
 and the total normalized old-contact chain length is at most `L`, then the paired gap
 obligations imply
 
-$$
+```math
 \boxed{
 \limsup\frac{\sum_P\ell_P^3}{D^3}
 \le
 (L-c_X)^3+c_X^3,
 }
 \tag{PG.1}
-$$
+```
 
 provided `c_X<=L/2`.
 
 For the post-ZF source, perimeter feasibility itself lower-bounds `X`. On the critical
 range `2rho<=y<pi/2`, if
 
-$$
+```math
 y=\lim h/D,
 \qquad
 z=\lim(Q+2s_Z)/D,
-$$
+```
 
 let `theta(y,z)` be the unique solution in `(0,pi/2)` of
 
-$$
+```math
 \boxed{
 \theta-\sin\theta
 =\frac\pi2-y+\frac z2.
 }
 \tag{PG.2}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{X\ge2\theta(y,z),}
 \tag{PG.3}
-$$
+```
 
 so PG.1 holds with the smaller, explicit lower bound
 
-$$
+```math
 \boxed{c_X\ge c(y,z):=\sin\theta(y,z).}
 \tag{PG.4}
-$$
+```
 
 This is the missing structural input that the scalar DD bound discarded.
 
@@ -88,17 +88,17 @@ boundary circle.
 Let the complementary open intervals of its circle set on the projective circle have
 lengths
 
-$$
+```math
 \alpha_1,\alpha_2,\ldots>0.
-$$
+```
 
 A projective gap of length `alpha_i` lifts to two antipodal ordinary-circle gaps of the
 same angular length. The convex hull replaces each missing arc by a chord of length
 
-$$
+```math
 \boxed{c_i=\sin(\alpha_i/2)}
 \tag{1.1}
-$$
+```
 
 in the normalization where the circle radius is `1/2`.
 
@@ -112,12 +112,12 @@ Each chord has physical length `c_iD+o(D)`, hence is not a unit contact. OP ther
 assigns each of the two sides to a distinct outer pocket. If the corresponding contact
 chain lengths are `ell_i^+` and `ell_i^-`, the triangle inequality gives
 
-$$
+```math
 \boxed{
 \ell_i^\pm/D\ge c_i-o(1).
 }
 \tag{1.2}
-$$
+```
 
 ---
 
@@ -125,56 +125,56 @@ $$
 
 Put
 
-$$
+```math
 S:=\sum_i c_i,
 \qquad
 c_{max}:=\sup_i c_i.
-$$
+```
 
 The total paired lower-bound mass is `2S`.
 
 For any one outer pocket `P`, even if `P` is one of the two pockets associated with a
 largest gap, the other pockets have total normalized chain length at least
 
-$$
+```math
 2S-c_{max}-o(1).
 \tag{2.1}
-$$
+```
 
 If `P` is not one of those paired gap pockets, the lower bound is even `2S-o(1)`.
 
 Now repeated gap merging gives
 
-$$
+```math
 S=\sum_i\sin(\alpha_i/2)
 \ge\sin\left(\frac12\sum_i\alpha_i\right)
 =\sin(X/2).
 \tag{2.2}
-$$
+```
 
 Also `c_max<=S`, so
 
-$$
+```math
 2S-c_{max}\ge S\ge\sin(X/2).
 \tag{2.3}
-$$
+```
 
 Consequently, writing
 
-$$
+```math
 c_X:=\sin(X/2),
-$$
+```
 
 we have the asymptotic **outside-every-pocket** bound
 
-$$
+```math
 \boxed{
 \sum_{P'\ne P}\frac{\ell_{P'}}D
 \ge c_X-o(1)
 \qquad\text{for every outer pocket }P.
 }
 \tag{2.4}
-$$
+```
 
 For countably many projective gaps, apply the finite argument to the first `N` gaps and
 then let `N->infinity`; monotone convergence gives (2.2)--(2.4).
@@ -188,20 +188,20 @@ then let `N->infinity`; monotone convergence gives (2.2)--(2.4).
 Let `r_1,r_2,...>=0` have total at most `L`, and suppose every coordinate leaves at
 least `c` in the others:
 
-$$
+```math
 \sum_{j\ne i}r_j\ge c
 \qquad\text{for every }i.
 \tag{3.1}
-$$
+```
 
 If `0<=c<=L/2`, then
 
-$$
+```math
 \boxed{
 \sum_i r_i^3\le(L-c)^3+c^3.
 }
 \tag{3.2}
-$$
+```
 
 ### Proof
 
@@ -221,67 +221,67 @@ Apply the lemma to `r_P=ell_P/D`, use (2.4), and pass to the limit. This proves 
 
 Let
 
-$$
+```math
 p:=\lim P_F/D.
-$$
+```
 
 The exact cyclic gap formula from MA is
 
-$$
+```math
 p
 =\pi-X+2\sum_i\sin(\alpha_i/2).
 \tag{4.1}
-$$
+```
 
 By (2.2),
 
-$$
+```math
 \boxed{
 p\ge f(X):=\pi-X+2\sin(X/2).}
 \tag{4.2}
-$$
+```
 
 On the other hand ZE and OP give
 
-$$
+```math
 p\le\lim b/D=2y-z.
 \tag{4.3}
-$$
+```
 
 On `2rho<=y<pi/2`, DB gives `0<=z<=u(y)`, so `2y-z<pi`. The function
 
-$$
+```math
 f(X)=\pi-X+2\sin(X/2)
-$$
+```
 
 has
 
-$$
+```math
 f(0)=\pi,
 \qquad
 f'(X)=-1+\cos(X/2)<0
 \quad(X>0).
-$$
+```
 
 Hence there is a unique `X_0 in (0,pi)` with
 
-$$
+```math
 f(X_0)=2y-z.
 \tag{4.4}
-$$
+```
 
 Equation (4.2)--(4.3) forces
 
-$$
+```math
 \boxed{X\ge X_0.}
 \tag{4.5}
-$$
+```
 
 Write `X_0=2theta`. Then (4.4) is exactly
 
-$$
+```math
 \pi-2\theta+2\sin\theta=2y-z,
-$$
+```
 
 or PG.2. Since `sin` is increasing on `(0,pi/2)`, (4.5) gives PG.4.
 
@@ -291,47 +291,47 @@ or PG.2. Since `sin` is increasing on `(0,pi/2)`, (4.5) gives PG.4.
 
 PC/DD give the total chain-length bound
 
-$$
+```math
 \limsup\frac{L_{chain}}D\le2(y-z).
 \tag{5.1}
-$$
+```
 
 For the critical range considered here, `c(y,z)<1<y-z` whenever the source is feasible,
 so the `c<=L/2` condition in Lemma PG.1 is automatic in the nontrivial limit.
 
 Combining PG.1, PG.4, and (5.1) gives
 
-$$
+```math
 \boxed{
 \limsup\frac{\sum_P\ell_P^3}{D^3}
 \le
 [2(y-z)-c(y,z)]^3+c(y,z)^3.
 }
 \tag{5.2}
-$$
+```
 
 DD before its scalar cubic relaxation gives
 
-$$
+```math
 H_{out}
 \le
 \frac1{\sqrt6}
 \left(\sum_P\ell_P^3\right)^{1/2}
 (b-P_F)^{1/2}.
 \tag{5.3}
-$$
+```
 
 MA gives `P_F/D>=p_0(y)-o(1)`, so
 
-$$
+```math
 \limsup\frac{b-P_F}{D}
 \le u(y)-z.
 \tag{5.4}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}}{D^2}
 \le
@@ -340,7 +340,7 @@ $$
 \sqrt{u(y)-z}.
 }
 \tag{5.5}
-$$
+```
 
 This strictly improves scalar DD whenever `c(y,z)>0` and `u(y)>z`.
 
@@ -350,38 +350,38 @@ This strictly improves scalar DD whenever `c(y,z)>0` and `u(y)>z`.
 
 For later explicit optimization define `theta_0(y)=theta(y,0)` and
 
-$$
+```math
 c_0(y):=\sin\theta_0(y),
 \qquad
 \theta_0-\sin\theta_0=\frac\pi2-y.
 \tag{6.1}
-$$
+```
 
 Equation PG.2 shows `theta(y,z)>=theta_0(y)`, hence
 
-$$
+```math
 c(y,z)\ge c_0(y).
 \tag{6.2}
-$$
+```
 
 Also
 
-$$
+```math
 2(y-z)\le2y,
 \qquad
 u(y)-z\le u(y).
-$$
+```
 
 For `c<y`, the function
 
-$$
+```math
 M(L,c)=(L-c)^3+c^3
-$$
+```
 
 is increasing in `L` and decreasing in `c` on `c<=L/2`. Thus (5.5) implies the
 simpler universal bound
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}}{D^2}
 \le
@@ -390,16 +390,16 @@ $$
 \sqrt{u(y)}.
 }
 \tag{6.3}
-$$
+```
 
 CC separately gives
 
-$$
+```math
 \limsup\frac{A_{exc}}{D^2}
 \le\frac{z^2}{4\pi}
 \le\frac{u(y)^2}{4\pi}.
 \tag{6.4}
-$$
+```
 
 Equations (6.3)--(6.4) produce a one-variable cavity capacity used in the adjacent
 explicit-floor report.

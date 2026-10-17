@@ -76,9 +76,9 @@ For `x in int(Q)`, assume `|x-v|>=1` and `|x-u|>=1` for every
 `u in W_Q\{v}`. For any `q in K\\Q` that is unit-clear of all vertices of
 `W_Q`,
 
-$$
+```math
 |x-q|>1.
-$$
+```
 
 The statement applies to retained old source points by source separation. It
 also applies to other proposed points when their distances to the whole path are
@@ -90,9 +90,9 @@ between angles `theta-pi` and `theta`. If `|x|>=1`, every path vertex is at
 distance at least one from `x`. On a first-exit crossing of a unit wall edge
 `cd`, at parameter `s`, the identity
 
-$$
+```math
 |z-((1-s)c+sd)|^2=(1-s)|z-c|^2+s|z-d|^2-s(1-s)
-$$
+```
 
 puts each endpoint at distance at least `sqrt(3)/2` from the crossing point;
 the crossed segment therefore has length at least `sqrt(3)`. A vertex exit has
@@ -104,9 +104,9 @@ outside the `Q` cone has direction in `[theta-pi,0]`. Since the angle between
 `x` and that direction is in `(0,pi)`, the scalar product is maximized uniquely
 on the ray `w`; together with `|q|>=1`, this gives
 
-$$
+```math
 |x-q|^2\ge r^2+1-2(x\cdot w)\ge1,
-$$
+```
 
 with equality possible only at `q=w`, which is on `partial Q` and hence is not
 an exterior point. If `q` is inside the cone but outside `Q`, the segment exits
@@ -135,23 +135,23 @@ claimed.
 
 Define
 
-$$
+```math
 E_Q=\{x\in int(Q): |x-u|>1\text{ for every }u\in W_Q\},
-$$
+```
 
 and let `Pack_1(E_Q)` be the largest cardinality of a finite unit-separated
 subset. For a canonical contact-minimal source and an actual face cell `Q` as
 above, with
 
-$$
+```math
 S_Q=(A\cap Q)\setminus W_Q,
-$$
+```
 
 the exact identity is
 
-$$
+```math
 \boxed{Pack_1(E_Q)=|S_Q|.}
-$$
+```
 
 For the lower bound, all points of `S_Q` are contact isolates, so all their
 mutual, wall, and exterior distances are strictly greater than one. Contract

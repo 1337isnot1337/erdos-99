@@ -41,15 +41,15 @@ No exact contact, unit triangle, or strict sub-`D` competitor is claimed.
 The proof-only residual-conservation note
 `research/target_c_inactive_chamber_residual_conservation.md` defines, for every inactive chamber `C_j`,
 
-$$
+```math
 r_j={A_j\over a_0}+{P_j\over2}+1-z_j-k_j\ge0,
 \qquad a_0={\sqrt3\over2},
 \tag{GS.1}
-$$
+```
 
 where `k_j` is the number of fixed augmented boundary source vertices. It proves the exact conservation law
 
-$$
+```math
 \boxed{
 \sum_j r_j
 =R_F
@@ -57,45 +57,45 @@ $$
 \ge0.
 }
 \tag{GS.2}
-$$
+```
 
 For a bounded nonquadrilateral contact face `P` of degree `d` containing `z` assigned contact-isolated source points, every boundary side is a unit contact and `P_P=d`, `k_P=d`. Hence
 
-$$
+```math
 \boxed{
 r(P)
 ={A(P)\over a_0}-{d\over2}+1-z.
 }
 \tag{GS.3}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 a_0r(P)
 =A(P)-a_0(z+1)-c_0(d-4),
 \qquad c_0={a_0\over2}.
 }
 \tag{GS.4}
-$$
+```
 
 Thus `r(P)` is exactly the local slack in canonical §67.19.
 
 The hostile-audited Oler-gluing identity gives
 
-$$
+```math
 \Sigma_F+\Sigma_{ext}=\Sigma_K+L_{cap},
-$$
+```
 
 where `Sigma_F=R_F+E_4/a_0` and `Omega_K=Sigma_K-E_4/a_0`. Therefore the residual-level global relation is
 
-$$
+```math
 \boxed{
 R_F+\Sigma_{ext}=\Omega_K+L_{cap}.
 }
 \tag{GS.5}
-$$
+```
 
 Every term in (GS.5) is nonnegative. This is the correct gluing invariant; the much larger raw chamber slack contains mandatory boundary/train credit and is not the quantity used below.
 
@@ -103,10 +103,10 @@ Every term in (GS.5) is nonnegative. This is the correct gluing invariant; the m
 
 Böröczky–Ruzsa restate the Thue–Groemer inequality: if a convex compact set `C` contains the centers of `N` pairwise nonoverlapping unit disks, then
 
-$$
+```math
 {A(C)\over2\sqrt3}+{P(C)\over4}+1\ge N.
 \tag{GS.6}
-$$
+```
 
 They also restate Groemer's equality classification. Equality holds only when either
 
@@ -117,12 +117,12 @@ Their perimeter convention for a segment is twice its length.
 
 Scale coordinates by `1/2`. For a unit-separated finite point set `X` in its convex hull `K`, (GS.6) becomes exactly
 
-$$
+```math
 \boxed{
 |X|\le {A(K)\over a_0}+{P(K)\over2}+1.
 }
 \tag{GS.7}
-$$
+```
 
 Equality in (GS.7) occurs only when
 
@@ -144,30 +144,30 @@ Call a pair in `X(P)` **hidden** if it is not one of the `d` cyclic boundary-edg
 
 Fix an integer `K>=5` and `eta>0`. There exists
 
-$$
+```math
 \sigma_K(\eta)>0
-$$
+```
 
 such that every canonical bounded nonquadrilateral contact face `P` with
 
-$$
+```math
 5\le d=\deg(P)\le K
-$$
+```
 
 and
 
-$$
+```math
 |x-y|\ge1+\eta
 \qquad\text{for every hidden pair }\{x,y\}\subset X(P)
 \tag{GS.8}
-$$
+```
 
 satisfies
 
-$$
+```math
 \boxed{r(P)\ge\sigma_K(\eta).}
 \tag{GS.9}
-$$
+```
 
 #### Proof
 
@@ -175,40 +175,40 @@ Suppose not. Then there is a sequence `P_j` with degrees at most `K`, hidden-pai
 
 There are finitely many possible degrees. Pass to a subsequence with fixed degree `d`. Canonical §67.3 says `P_j` is a convex unit-edge `d`-gon, so its perimeter is exactly `d`; isoperimetry gives
 
-$$
+```math
 A(P_j)\le {d^2\over4\pi}.
-$$
+```
 
 Oler on the `d+z_j` source points in `P_j` gives
 
-$$
+```math
 z_j\le {A(P_j)\over a_0}-{d\over2}+1,
-$$
+```
 
 so `z_j` is bounded in terms of `d`. Pass again so `z_j=z` is fixed.
 
 Normalize the first boundary edge to join `(0,0)` to `(1,0)`. All boundary and interior points lie in a fixed compact disk depending only on `K`. Global unit separation is closed under limits. After a subsequence, all `d+z` points and the convex polygons converge. Area and convex perimeter are continuous, including degenerate limits. Since `r(P_j)->0`, the limiting convex hull `P_infty` has perimeter `d` and
 
-$$
+```math
 A(P_\infty)=a_0\left(z+{d\over2}-1\right).
 \tag{GS.10}
-$$
+```
 
 Thus the `N=d+z` limiting points attain equality in (GS.7).
 
 The segment equality case is impossible: its Groemer perimeter after scaling would be
 
-$$
+```math
 2(N-1)=2(d+z-1)>d
-$$
+```
 
 for `d>=5`, contradicting perimeter continuity.
 
 Hence the limiting point set admits a triangulation by unit equilateral triangles. If `h` points lie on the convex hull, a triangulation using all `N` points has
 
-$$
+```math
 E=3N-h-3\ge2N-3>d
-$$
+```
 
 edges because `N>=d>=5`. Only `d` pairs are designated cyclic boundary edges, so at least one unit triangulation edge is hidden. This contradicts the closed limiting form of (GS.8), which keeps every hidden pair at distance at least `1+eta`. Therefore (GS.9) holds. `square`
 
@@ -220,53 +220,53 @@ No hidden pair in an actual canonical exceptional face can already have distance
 
 The proof-only AG42 bootstrap gives
 
-$$
+```math
 \liminf {f\over D}
 \ge
 f_*:=\sqrt{\Delta_2}-{\pi\over4}+0.00021
 =0.167124643466509\ldots .
 \tag{GS.11}
-$$
+```
 
 There is also a finite upper bound on total excess degree. The canonical identity
 
-$$
+```math
 b+Q=2(q-k)
-$$
+```
 
 combined with `k>=0`, `q<=P_F`, and `b>=P_F` gives
 
-$$
+```math
 \boxed{Q\le P_F.}
 \tag{GS.12}
-$$
+```
 
 Let `f_{<=K}` count exceptional bounded faces of degree at most `K`. Every face of degree at least `K+1` contributes at least `K-3` to `Q`, so
 
-$$
+```math
 f_{\le K}\ge f-{Q\over K-3}.
 \tag{GS.13}
-$$
+```
 
 In Type II, `P_F/D->pi`. Hence
 
-$$
+```math
 \boxed{
 \liminf {f_{\le K}\over D}
 \ge
 \ell_K:=f_*-{\pi\over K-3}.
 }
 \tag{GS.14}
-$$
+```
 
 Take `K=42`. Then
 
-$$
+```math
 \boxed{
 \ell_{42}=0.086570985682155\ldots>0.
 }
 \tag{GS.15}
-$$
+```
 
 Thus at least `0.08657D-o(D)` actual exceptional faces have degree at most 42.
 
@@ -274,55 +274,55 @@ Thus at least `0.08657D-o(D)` actual exceptional faces have degree at most 42.
 
 Fix `eta>0`. Among the degree-at-most-42 faces, call a face `eta`-clean if all of its hidden pairs are at least `1+eta`. By Theorem GS.1, every such face consumes at least `sigma_42(eta)` of residual. The exceptional-face residuals are nonnegative and sum to at most `R_F`, so
 
-$$
+```math
 N_{clean}(\eta)\le {R_F\over\sigma_{42}(\eta)}.
 \tag{GS.16}
-$$
+```
 
 Suppose along a Type-II subsequence
 
-$$
+```math
 \boxed{R_F=o(D).}
 \tag{GS.17}
-$$
+```
 
 Then for each fixed `eta>0`, (GS.16) is `o(D)`. Therefore at least
 
-$$
+```math
 (\ell_{42}-o(1))D
-$$
+```
 
 degree-at-most-42 exceptional faces contain a hidden actual source pair satisfying
 
-$$
+```math
 1<|x-y|<1+\eta.
 \tag{GS.18}
-$$
+```
 
 Every vertex of a triangle-free unit-contact graph has contact degree at most five. A degree-at-most-42 bounded face therefore shares a boundary vertex with at most
 
-$$
+```math
 4\cdot42=168
-$$
+```
 
 other bounded faces: at each of its boundary vertices there are at most four other incident face sectors. The conflict graph on these faces has maximum degree at most 168, so a greedy independent set contains at least a `1/169` fraction of them. Assigned interior isolates belong to only one face. Hidden pairs chosen from the independent faces are therefore pairwise vertex-disjoint.
 
 For every fixed `eta>0`,
 
-$$
+```math
 \boxed{
 \liminf {\nu_\eta\over D}
 \ge {\ell_{42}\over169}
 =0.000512254353148\ldots,
 }
 \tag{GS.19}
-$$
+```
 
 where `nu_eta` is the maximum number of pairwise vertex-disjoint actual source pairs, contained in distinct bounded exceptional faces, with distance in `(1,1+eta)`.
 
 A diagonal subsequence makes the scale vanish. Set `eta_j=1/j`. Since `R_F/D->0`, for each fixed `j` the clean-face loss is eventually less than `ell_42 D/2`. Choosing these thresholds successively produces `eta_D->0` such that
 
-$$
+```math
 \boxed{
 \nu_{\eta_D}
 \ge c_{near}D-o(D),
@@ -331,7 +331,7 @@ c_{near}:={\ell_{42}\over2\cdot169}
 =0.000256127176574\ldots .
 }
 \tag{GS.20}
-$$
+```
 
 Thus the small-residual branch contains a linear matching of genuine noncontacts whose gaps tend to zero.
 
@@ -343,26 +343,26 @@ Every Type-II survivor sequence has a subsequence in one of two forms.
 
 For some `c>0`,
 
-$$
+```math
 \boxed{R_F\ge cD}
 \tag{GS.21}
-$$
+```
 
 along the subsequence. This is genuine Oler spare after the entire rhombus-area term and all mandatory fixed-boundary credits have been removed. By (GS.5), it must be balanced by the full-source punctured slack, exterior-cap residual, and cap-chord correction.
 
 ### Branch B — force-hull residual vanishes at first order
 
-$$
+```math
 \boxed{R_F=o(D).}
 \tag{GS.22}
-$$
+```
 
 Then (GS.20) gives `Omega(D)` pairwise vertex-disjoint actual source pairs in bounded exceptional faces with
 
-$$
+```math
 \boxed{1<|x-y|\le1+o(1).}
 \tag{GS.23}
-$$
+```
 
 This is a Type-II analogue of the canonical Type-I near-contact matching theorem, but its mechanism is different: here the matching is forced by linearly many low-degree contact faces approaching Groemer equality, not by a quadratic cloud of contact-isolated points.
 

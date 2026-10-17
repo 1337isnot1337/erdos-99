@@ -15,13 +15,13 @@
 
 Let `Lambda` be the C11 Dirichlet-to-Neumann response of the fully positive contact network on the loaded force-hull boundary `B_+`, and write
 
-$$
+```math
 c_{bk}:=-\Lambda_{bk}\ge0\qquad(b\ne k).
-$$
+```
 
 Let `L_H` be the `beta`-weighted positive-diameter Laplacian. Then every sufficiently large fully force-visible triangle-free survivor satisfies the exact identity
 
-$$
+```math
 \boxed{
 \frac{D^2}{2}\operatorname{tr}(\Lambda-L_H)
 =
@@ -29,23 +29,23 @@ $$
 >0.
 }
 \tag{C41.1}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{\operatorname{tr}\Lambda>2=\operatorname{tr}L_H.}
 \tag{C41.2}
-$$
+```
 
 At the same time C11 still gives
 
-$$
+```math
 (\Lambda-L_H)\mathbf1=0,
 \qquad
 (\Lambda-L_H)P_B=0.
 \tag{C41.3}
-$$
+```
 
 Thus the response defect is a nonzero equilibrium stress on the convex loaded boundary, annihilates the three affine scalar modes, and has strictly positive trace.
 
@@ -57,81 +57,81 @@ The strictness decomposes componentwise: every unpinned harmonic component contr
 
 Work in the contact-minimal fully force-visible branch and choose a relative-interior normalized KKT stress. Then `C_+=C`, every contact conductance `alpha_e` is positive, and C26 gives
 
-$$
+```math
 Q^\circ=B_+.
 \tag{C41.4}
-$$
+```
 
 Let
 
-$$
+```math
 I=V(C)\setminus B_+
-$$
+```
 
 and let `I_1,...,I_{c_I}` be the connected components of `C[I]`. For each component define its loaded attachment set
 
-$$
+```math
 A_r:=N_C(I_r)\cap B_+.
 \tag{C41.5}
-$$
+```
 
 C36 proves
 
-$$
+```math
 |A_r|\ge3.
 \tag{C41.6}
-$$
+```
 
 Order the weighted contact Laplacian by `B_+,I_1,...,I_{c_I}`. The interior Dirichlet block is block diagonal across the `I_r`, so the Schur complement decomposes as
 
-$$
+```math
 \Lambda=L_{BB}^{\rm dir}+\sum_{r=1}^{c_I}\Lambda^{(r)},
 \tag{C41.7}
-$$
+```
 
 where `L_{BB}^{dir}` is the Laplacian of direct loaded-loaded unit contacts and `Lambda^(r)` is the response contribution obtained by eliminating only `I_r`.
 
 Write
 
-$$
+```math
 c^{(r)}_{st}:=-\Lambda^{(r)}_{st}
 \qquad(s\ne t,\ s,t\in A_r).
 \tag{C41.8}
-$$
+```
 
 ### Lemma C41.1 — each harmonic attachment set is a strict response clique
 
 For every `r` and every distinct `s,t in A_r`,
 
-$$
+```math
 \boxed{c^{(r)}_{st}>0.}
 \tag{C41.9}
-$$
+```
 
 #### Proof
 
 The principal Dirichlet block `L_{I_rI_r}` is an irreducible nonsingular M-matrix because `I_r` is connected, all contact conductances are positive, and `I_r` is attached to the Dirichlet boundary. Hence
 
-$$
+```math
 L_{I_rI_r}^{-1}>0
-$$
+```
 
 entrywise.
 
 The off-diagonal Schur contribution is
 
-$$
+```math
 -\,L_{B I_r}L_{I_rI_r}^{-1}L_{I_rB}.
-$$
+```
 
 Both `s` and `t` have a strictly negative contact-Laplacian entry to at least one vertex of `I_r`; strict positivity of the inverse makes the `(s,t)` entry strictly negative. Therefore `c^{(r)}_{st}>0`. `square`
 
 Thus the full response conductance on a boundary pair is
 
-$$
+```math
 c_{st}=\alpha^{BB}_{st}+\sum_r c^{(r)}_{st},
 \tag{C41.10}
-$$
+```
 
 with absent terms interpreted as zero.
 
@@ -143,26 +143,26 @@ For sufficiently large triangle-free global minimizers, C15 excludes three pairw
 
 Fix an unpinned component `I_r`. By C41.6 choose three distinct vertices `a,b,c in A_r`. Lemma C41.1 gives positive response conductance on all three pairs. C15 says at least one of
 
-$$
+```math
 |a-b|,\ |b-c|,\ |c-a|
-$$
+```
 
 is strictly smaller than `D`. Therefore
 
-$$
+```math
 \boxed{
 E_r:=\sum_{s<t\in A_r}c^{(r)}_{st}\bigl(D^2-|s-t|^2\bigr)>0.
 }
 \tag{C41.11}
-$$
+```
 
 Every direct loaded-loaded contact `bk` contributes
 
-$$
+```math
 \alpha_{bk}(D^2-|b-k|^2)
 =\alpha_{bk}(D^2-1)>0
 \tag{C41.12}
-$$
+```
 
 because `D>1` in the sufficiently large regime.
 
@@ -170,23 +170,23 @@ The connected contact core is nontrivial. Hence either `I` is nonempty, so some 
 
 Consequently
 
-$$
+```math
 \boxed{
 \sum_{b<k}c_{bk}(D^2-|b-k|^2)>0.
 }
 \tag{C41.13}
-$$
+```
 
 More precisely, C41.7 gives the decomposition
 
-$$
+```math
 \sum_{b<k}c_{bk}(D^2-|b-k|^2)
 =
 (D^2-1)\sum_{bk\in C[B_+]}\alpha_{bk}
 +
 \sum_{r=1}^{c_I}E_r.
 \tag{C41.14}
-$$
+```
 
 Every term on the right is nonnegative and every present response source contributes strictly positively.
 
@@ -196,57 +196,57 @@ Every term on the right is nonnegative and every present response source contrib
 
 C11 says the actual coordinate functions are the harmonic extensions of their boundary values and gives
 
-$$
+```math
 P_B^{\mathsf T}\Lambda P_B
 =
 \sum_{ij\in C}\alpha_{ij}(p_i-p_j)(p_i-p_j)^{\mathsf T}.
 \tag{C41.15}
-$$
+```
 
 Taking traces and using `|p_i-p_j|=1` on contacts and the normalized identity `sum_C alpha=D^2`,
 
-$$
+```math
 \boxed{
 \sum_{b<k}c_{bk}|b-k|^2=D^2.
 }
 \tag{C41.16}
-$$
+```
 
 Let
 
-$$
+```math
 C_{\rm resp}:=\sum_{b<k}c_{bk}.
-$$
+```
 
 Subtract C41.16 from `D^2 C_resp`:
 
-$$
+```math
 D^2(C_{\rm resp}-1)
 =
 \sum_{b<k}c_{bk}(D^2-|b-k|^2).
 \tag{C41.17}
-$$
+```
 
 The right side is strictly positive by C41.13, so
 
-$$
+```math
 \boxed{C_{\rm resp}>1.}
 \tag{C41.18}
-$$
+```
 
 A weighted graph Laplacian has trace twice its total conductance, hence
 
-$$
+```math
 \operatorname{tr}\Lambda=2C_{\rm resp}>2.
 \tag{C41.19}
-$$
+```
 
 On the diameter side `sum_H beta=1`, so
 
-$$
+```math
 \operatorname{tr}L_H=2.
 \tag{C41.20}
-$$
+```
 
 Combining C41.17-C41.20 proves C41.1-C41.2. `square`
 

@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/26-tube-shield-sector-balance.md) · source SHA-256 `15e470ca494ddf19b5a7fe80a558b2cff01bab824539a0367a2b628436367798`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 # Target A — tube-shield sector balance and basis closure
 
 Section 173 uses the smallest natural contact shield: delete contact vertices and all
@@ -20,24 +22,24 @@ vertices and interior lattice rows.
 
 Retain the response notation of Sections 170 and 173.  Let `Sigma` be a finite
 unit-contact subgraph of `X^*` with no isolated vertices, and let
-$$
+```math
 D_1,\ldots,D_k
 \tag{174.1}
-$$
+```
 be the connected components of `K^*\setminus|Sigma|`.
 
 Define the right-shore unit tube
-$$
+```math
 T_\Sigma
 =
 \{y\in Y_{\rm in}:\operatorname{dist}(y,|\Sigma|)<1\}
 \tag{174.2}
-$$
+```
 and the preliminary shield
-$$
+```math
 W_\Sigma^0=V(\Sigma)\sqcup T_\Sigma.
 \tag{174.3}
-$$
+```
 
 ## 174.1 A uniform finite tube bound
 
@@ -46,26 +48,23 @@ $$
 > distance strictly below one from `e`.  Consequently
 > 
 
-$$
-
+```math
 > \boxed{|T_\Sigma|\le11|E(\Sigma)|.}
 > \tag{174.4}
 > 
-$$
-
-
+```
 
 ### Proof
 
 The sites within distance below one from `e` lie in the compact stadium
-$$
+```math
 S_e=e+\overline B(0,1).
 \tag{174.5}
-$$
+```
 The stadium has area `pi+2` and perimeter `2pi+2`.  Apply Oler's finite packing
 inequality to the unit-separated lattice sites in `S_e`, with
 `a_0=sqrt(3)/2`:
-$$
+```math
 \begin{aligned}
 |\Lambda\cap S_e|
 &\le
@@ -75,10 +74,10 @@ $$
 <12.
 \end{aligned}
 \tag{174.6}
-$$
+```
 The cardinality is an integer, hence at most eleven.  Every point of `|Sigma|` lies on
 one of its contact edges because there are no isolated vertices.  A union bound over
-those edges proves (174.4).  $\square$
+those edges proves (174.4).  $`\square`$
 
 No sharpness of the constant eleven is claimed.
 
@@ -93,10 +92,10 @@ No sharpness of the constant eleven is claimed.
 
 If a response edge `xy` met `|Sigma|` at a point `z`, then `z` lies on the segment
 `xy`, so
-$$
+```math
 |y-z|\le|y-x|<1.
 \tag{174.7}
-$$
+```
 This would put `y` in `T_Sigma`.  Thus every surviving response edge avoids the
 contact subgraph.
 
@@ -105,28 +104,28 @@ Now suppose a surviving right vertex `y` had neighbors `x_i in D_i` and
 joins two different components of `K^*\setminus|Sigma|`, it intersects `|Sigma|` at
 some point `z`.  Both `x_i` and `x_j` belong to the open unit disk `B(y,1)`, and that
 disk is convex.  Hence the whole chord `x_ix_j`, in particular `z`, lies in `B(y,1)`.
-Thus `dist(y,|Sigma|)<1`, contradicting survival of `y`.  $\square$
+Thus `dist(y,|Sigma|)<1`, contradicting survival of `y`.  $`\square`$
 
 Therefore the sets
-$$
+```math
 O_i
 =
 \{o\in O\setminus T_\Sigma:
  o\text{ has a surviving neighbor in }D_i\}
 \tag{174.8}
-$$
+```
 are pairwise disjoint.  The same uniqueness holds for surviving `Z` vertices.
 
 ## 174.3 Close the shield under the `Z`-basis matching
 
 Let
-$$
+```math
 \mu_0:B\longrightarrow Z
 \tag{174.9}
-$$
+```
 be the fixed perfect basis matching used to orient the Schur gammoid.  Define the
 basis-closed shield
-$$
+```math
 \widehat W_\Sigma
 =
 W_\Sigma^0
@@ -135,88 +134,84 @@ W_\Sigma^0
 \cup
 \mu_0^{-1}(Z\cap W_\Sigma^0).
 \tag{174.10}
-$$
+```
 Here `mu_0(B cap W)` means the matched `Z` partners of shielded basis vertices, and
 the inverse term means the matched `B` partners of shielded `Z` vertices.
 
 Since `mu_0` is a bijection,
-$$
+```math
 \boxed{
 |\widehat W_\Sigma|
 \le2|W_\Sigma^0|
 \le2|V(\Sigma)|+22|E(\Sigma)|.
 }
 \tag{174.11}
-$$
+```
 Deleting additional vertices cannot reconnect geometric sectors, so Lemma 174.2
 continues to hold after basis closure.
 
 For each sector put
-$$
+```math
 B_i=(B\setminus\widehat W_\Sigma)\cap D_i,
 \qquad
 Z_i=(Z\setminus\widehat W_\Sigma)\cap D_i.
 \tag{174.12}
-$$
+```
 
 > **Lemma 174.3 (exact sector basis balance).**  For every `i`,
 > 
 
-$$
-
+```math
 > \boxed{|B_i|=|Z_i|.}
 > \tag{174.13}
 > 
-$$
-
-
+```
 
 ### Proof
 
 Basis closure guarantees that a matched pair `b,mu_0(b)` has either both endpoints in
 `widehat W_Sigma` or neither.  For a surviving pair, the matching edge is a response
 edge, so Lemma 174.2 puts both endpoints in the same geometric sector.  Restricting
-`mu_0` therefore gives a bijection `B_i->Z_i`.  $\square$
+`mu_0` therefore gives a bijection `B_i->Z_i`.  $`\square`$
 
 ## 174.4 Sector terminal surplus equals local response population surplus
 
 Define
-$$
+```math
 C_i^\circ=(C^\circ\setminus\widehat W_\Sigma)\cap D_i,
 \qquad
 C_i^\partial=(C^\partial\setminus\widehat W_\Sigma)\cap D_i,
 \tag{174.14}
-$$
+```
 and let `O_i` now mean the exterior sinks surviving the basis-closed shield and
 adjacent to sector `D_i`.  The `O_i` remain pairwise disjoint.
 
 Let
-$$
+```math
 X_i=(X^*\setminus\widehat W_\Sigma)\cap D_i.
 \tag{174.15}
-$$
+```
 Then
-$$
+```math
 X_i=B_i\sqcup C_i^\circ\sqcup C_i^\partial.
 \tag{174.16}
-$$
+```
 
 > **Proposition 174.4 (local population identity).**  For every sector,
 > 
 
-$$
-
+```math
 > \boxed{
 > |C_i^\partial|-|O_i|
 > =
 > |X_i|-|Z_i|-|O_i|-|C_i^\circ|.
 > }
 > \tag{174.17}
-$$
+```
 
 ### Proof
 
-Use (174.16) and cancel `|B_i|=|Z_i|` by Lemma 174.3.  $\square$
+Use (174.16) and cancel `|B_i|=|Z_i|` by Lemma 174.3.  $`\square`$
 
 Thus the sign relevant to Schur nullity is a genuine local left-versus-right population
 surplus after subtracting only the already-accounted interior nonbasis nullity.
@@ -230,8 +225,7 @@ set `O_i`.
 > **Theorem 174.5 (tube-shield sector nullity).**
 > 
 
-$$
-
+```math
 > \boxed{
 > \operatorname{rank}S
 > \le
@@ -241,14 +235,11 @@ $$
 > }
 > \tag{174.18}
 > 
-$$
-
-
+```
 > Consequently
 > 
 
-$$
-
+```math
 > \boxed{
 > \zeta
 > \ge
@@ -259,14 +250,11 @@ $$
 > }
 > \tag{174.19}
 > 
-$$
-
-
+```
 > By Proposition 174.4 this is equivalently
 > 
 
-$$
-
+```math
 > \boxed{
 > \zeta
 > \ge
@@ -278,6 +266,7 @@ $$
 > |\widehat W_\Sigma\setminus C^\partial|.
 > }
 > \tag{174.20}
+```
 
 ### Proof
 
@@ -289,24 +278,24 @@ surviving sink sets `O_i` are disjoint.  Hence at most
 
 The terminal set decomposes into the shielded terminals and the sector terminals.
 Subtract (174.18) from `|C^partial|`; exactly as in Section 170, shielded terminals
-cancel from the loss and give (174.19).  Substitute (174.17) for (174.20).  \(\square\)
+cancel from the loss and give (174.19).  Substitute (174.17) for (174.20).  $`\square`$
 
 ## 174.6 Locked three-channel specialization and new target
 
 For the locked three-channel fan of Section 172, let `Sigma` be the union of the three
 spokes and the locked triangle.  It is a connected unicyclic contact graph, so
-\[
+```math
 |E(\Sigma)|=|V(\Sigma)|.
 \tag{174.21}
-$$
+```
 The basis-closed tube shield therefore satisfies the explicit crude bound
-$$
+```math
 \boxed{
 |\widehat W_\Sigma|
 \le24|V(\Sigma)|.
 }
 \tag{174.22}
-$$
+```
 The useful point is not this constant but the exact decomposition (174.20): after the
 shield is removed, the three outer sectors have no shared response rows and no hidden
 basis imbalance.
@@ -317,8 +306,7 @@ language:
 > **Three-sector population theorem.**  For the stress-generated fan, prove
 > 
 
-$$
-
+```math
 > \sum_i
 > \max\{0,
 > |X_i|-|Z_i|-|O_i|-|C_i^\circ|
@@ -327,9 +315,7 @@ $$
 > s+|\widehat W_\Sigma\setminus C^\partial|,
 > \tag{174.23}
 > 
-$$
-
-
+```
 > or derive a strict-diameter competitor.
 
 Equation (174.23) is sufficient for the exact Target A endpoint by Theorem 174.5.  In

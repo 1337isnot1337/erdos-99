@@ -19,25 +19,25 @@
 This report removes the entire low-`mu` outer-shell phase from the preceding GR/PT
 split.  Let
 
-$$
+```math
 k:=d_H+s_Z,
 \qquad
 \mu_D:=\frac{e_{BB}+2s_C-3k}{D},
 \qquad
 y_D:=\frac hD.
-$$
+```
 
 The previous all-phase theorem GR proved only
 
-$$
+```math
 \liminf\mu_D>0.5947.
-$$
+```
 
 The new input is the opposite-pocket pairing forced by the full-source midpoint
 polygon.  Combining that pairing with two exact PC identities gives a much stronger
 renormalized pocket budget in which `k` cancels completely.  The result is
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\mu_D
 \ge
@@ -47,22 +47,22 @@ $$
 =0.7811638359065726\ldots .
 }
 \tag{RP.1}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{\mu_{RP}>0.78>0.70>u_\pi,}
 \tag{RP.2}
-$$
+```
 
 where the preceding PT report proved
 
-$$
+```math
 u_\pi
 =\frac{\pi(\sqrt{3\pi^2+4}-1)}{2(\pi^2+1)}
 =0.6932725422\ldots .
-$$
+```
 
 Thus **PT-L is empty**: no sufficiently large post-ZF survivor can lie in any fixed
 window `mu_D<=u<u_pi`.  The inactive outer-shell theorem remains a valid conditional
@@ -93,54 +93,54 @@ Use the current post-ZF notation:
 
 Put
 
-$$
+```math
 X:=d_P+Q.
 \tag{1.1}
-$$
+```
 
 The preceding GR theorem supplies the all-phase attachment-cell bound
 
-$$
+```math
 \limsup\frac{C_{att}}{D^2}
 \le\frac\pi4\mu^2
 \tag{1.2}
-$$
+```
 
 along every convergent subsequence `mu_D->mu`, and FSDB supplies
 
-$$
+```math
 \liminf\frac{area(F)}{D^2}
 \ge
 \Phi(y):=\frac{y+\sin y}{4}
 \tag{1.3}
-$$
+```
 
 when `y_D->y`.  DB gives
 
-$$
+```math
 2\rho\le y\le\pi,
 \qquad
 \rho=\cos\rho.
 \tag{1.4}
-$$
+```
 
 Write
 
-$$
+```math
 G:=area(F)-C_{att}.
 \tag{1.5}
-$$
+```
 
 Then (1.2)-(1.3) give the lower cavity requirement
 
-$$
+```math
 \boxed{
 \liminf\frac G{D^2}
 \ge
 \Phi(y)-\frac\pi4\mu^2.
 }
 \tag{1.6}
-$$
+```
 
 The goal is to replace GR's generic isoperimetric cavity upper bound by an
 opposite-pocket bound expressed directly in `mu` and `y`.
@@ -151,46 +151,46 @@ opposite-pocket bound expressed directly in `mu` and `y`.
 
 PC gives the finite exact identity
 
-$$
+```math
 \boxed{
 e_{BB}=d_P+Q+2k+c_B.}
 \tag{2.1}
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 \mu_DD
 &=e_{BB}+2s_C-3k\\
 &=X-k+c_B+2s_C,
 \end{aligned}
-$$
+```
 
 so
 
-$$
+```math
 \boxed{X\le\mu_DD+k.}
 \tag{2.2}
-$$
+```
 
 The exact PC/TN boundary ledger also gives
 
-$$
+```math
 \boxed{q=a+d_P+Q+2k.}
 \tag{2.3}
-$$
+```
 
 Since `a>=0`,
 
-$$
+```math
 X+2k\le q.
 \tag{2.4}
-$$
+```
 
 But `q=h+d_H` and `k=d_H+s_Z`, hence
 
-$$
+```math
 \begin{aligned}
 X
 &\le h+d_H-2(d_H+s_Z)\\
@@ -198,7 +198,7 @@ X
 &\le h-k.
 \end{aligned}
 \tag{2.5}
-$$
+```
 
 Add (2.2) and (2.5):
 
@@ -206,21 +206,21 @@ Add (2.2) and (2.5):
 
 For every finite post-ZF source,
 
-$$
+```math
 \boxed{
 2(d_P+Q)\le\mu_DD+h.
 }
 \tag{RP.3}
-$$
+```
 
 More precisely, retaining the discarded `s_Z` gives
 
-$$
+```math
 \boxed{
 2(d_P+Q)\le\mu_DD+h-s_Z.
 }
 \tag{2.6}
-$$
+```
 
 The key point is that the coefficient-three charge in `mu_D` is exactly strong enough
 to cancel the apparently helpful `2k` term in PC.  A large diameter-tree or mixed-
@@ -228,20 +228,20 @@ stress defect cannot create unlimited outer-pocket degree.
 
 Along a subsequence with `mu_D->mu` and `h/D->y`, write
 
-$$
+```math
 \tau:=\lim\frac{d_P}{D},
 \qquad
 \nu:=\lim\frac QD
-$$
+```
 
 after refining once if necessary.  RP.3 gives
 
-$$
+```math
 \boxed{
 \tau+\nu\le\frac{\mu+y}{2}.
 }
 \tag{2.7}
-$$
+```
 
 ---
 
@@ -252,43 +252,43 @@ No scalar theorem from PR #173 is imported.
 
 For each actual diameter edge `e=bk`, orient
 
-$$
+```math
 p_b-p_k=Du_e,
 \qquad |u_e|=1,
-$$
+```
 
 and put
 
-$$
+```math
 P_H:=D\,conv\{\pm u_e:e\in H\}.
 \tag{3.1}
-$$
+```
 
 FS.4 supplies one full-source circumcenter `o` and an error `L_D=o(D)` such that every
 actual diameter midpoint
 
-$$
+```math
 m_e=\frac{p_b+p_k}{2}
-$$
+```
 
 satisfies `|m_e-o|<=L_D`.  Hence
 
-$$
+```math
 p_b-o=\frac D2u_e+(m_e-o),
 \qquad
 p_k-o=-\frac D2u_e+(m_e-o).
 \tag{3.2}
-$$
+```
 
 Every force-hull vertex is an actual positively loaded diameter endpoint in the C-II
 source.  Taking convex hulls in both directions gives
 
-$$
+```math
 \boxed{
 d_{Haus}\left(F-o,\frac12P_H\right)\le L_D=o(D).
 }
 \tag{3.3}
-$$
+```
 
 Every actual force-hull vertex also has radius `D/2+o(D)` from `o`, uniformly.
 Since `P_H/2` is centrally symmetric, every force-hull side whose length is
@@ -311,25 +311,25 @@ one.
 Let an OP pocket have old unit-contact-chain length `ell_P` and force-hull chord
 `s_P`.  Recall
 
-$$
+```math
 x_P:=\ell_P-2,
 \qquad
 \sum_Px_P=d_P.
 \tag{4.1}
-$$
+```
 
 ### Lemma RP.2 — equal-chord pair
 
 If two convex pockets have the same chord length `s` and old-chain lengths
 `ell_1,ell_2`, then
 
-$$
+```math
 \boxed{
 area(P_1)+area(P_2)
 \le\frac{(\ell_1+\ell_2)^2}{4\pi}.
 }
 \tag{RP.4}
-$$
+```
 
 #### Proof
 
@@ -345,42 +345,42 @@ quadratic scale.
 For a macroscopic pocket with `s_P=o(D)`, its own chain together with its chord is a
 Jordan curve of perimeter `ell_P+o(D)`.  Isoperimetry gives
 
-$$
+```math
 area(P)\le\frac{\ell_P^2}{4\pi}+o(D^2).
 \tag{4.2}
-$$
+```
 
 ### Theorem RP.3 — paired outer-pocket capacity
 
 Along every bounded-`mu` post-ZF sequence for which
 
-$$
+```math
 \frac{d_P}{D}\to\tau,
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}}{D^2}
 \le\frac{\tau^2}{4\pi}.
 }
 \tag{RP.5}
-$$
+```
 
 #### Proof
 
 Fix `epsilon>0` and call a pocket small when `x_P<epsilon D`.  The reflection bound
 
-$$
+```math
 area(P)\le\frac{\ell_P^2}{2\pi}
-$$
+```
 
 and
 
-$$
+```math
 \sum_P\ell_P=d_P+2a=O(D)
-$$
+```
 
 show that all small pockets together have area `O(epsilon D^2)+O(D)`.  Here
 `d_P=O(D)` follows from RP.3 and `h=O(D)`, while `a<=q=O(D)`.
@@ -392,17 +392,17 @@ Section 3 and use RP.4.  Treat every zero-limiting-chord pocket by (4.2).
 If the normalized total chain lengths of the resulting disjoint groups are
 `m_1,...,m_t`, then
 
-$$
+```math
 \limsup\frac{H_{out}}{D^2}
 \le\frac1{4\pi}\sum_jm_j^2+O(\epsilon).
-$$
+```
 
 The retained macroscopic chain mass is at most `tau+o(1)`, because each retained
 `ell_P=x_P+2` and there are only `O_epsilon(1)` retained pockets.  Therefore
 
-$$
+```math
 \sum_jm_j^2\le\left(\sum_jm_j\right)^2\le\tau^2.
-$$
+```
 
 Let `epsilon downarrow0`. `square`
 
@@ -412,48 +412,48 @@ Let `epsilon downarrow0`. `square`
 
 The canonical exceptional-face estimate gives
 
-$$
+```math
 \limsup\frac{A_{exc}}{D^2}
 \le\frac{\nu^2}{4\pi}.
 \tag{5.1}
-$$
+```
 
 RP.5 and (5.1) imply
 
-$$
+```math
 \limsup\frac{H_{out}+A_{exc}}{D^2}
 \le\frac{\tau^2+\nu^2}{4\pi}
 \le\frac{(\tau+\nu)^2}{4\pi}.
 \tag{5.2}
-$$
+```
 
 Insert (2.7):
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}+A_{exc}}{D^2}
 \le
 \frac{(\mu+y)^2}{16\pi}.
 }
 \tag{5.3}
-$$
+```
 
 ZG charges the gap region to the outer pockets and exceptional faces up to `o(D^2)`,
 so
 
-$$
+```math
 \boxed{
 \limsup\frac G{D^2}
 \le
 \frac{(\mu+y)^2}{16\pi}.
 }
 \tag{5.4}
-$$
+```
 
 Combine with the whole-source lower requirement (1.6).  Every survivor subsequential
 limit must satisfy
 
-$$
+```math
 \boxed{
 \Phi(y)
 \le
@@ -464,7 +464,7 @@ $$
 2\rho\le y\le\pi.
 }
 \tag{RP.6}
-$$
+```
 
 This is the new all-phase feasible-region inequality.
 
@@ -474,7 +474,7 @@ This is the new all-phase feasible-region inequality.
 
 For fixed `mu>=0`, define
 
-$$
+```math
 F_\mu(y)
 :=
 \frac{y+\sin y}{4}
@@ -483,18 +483,18 @@ F_\mu(y)
 -
 \frac{(\mu+y)^2}{16\pi}.
 \tag{6.1}
-$$
+```
 
 RP.6 requires `F_mu(y)<=0` for at least one `y in [2rho,pi]`.
 
 Differentiate twice:
 
-$$
+```math
 F_\mu''(y)
 =-\frac{\sin y}{4}-\frac1{8\pi}<0
 \qquad(0<y<\pi).
 \tag{6.2}
-$$
+```
 
 Thus `F_mu` is strictly concave on the entire DB interval.  Its minimum occurs at an
 endpoint.
@@ -503,39 +503,39 @@ endpoint.
 
 At `y=pi`,
 
-$$
+```math
 F_\mu(\pi)
 =
 \frac{3\pi^2-2\pi\mu-(4\pi^2+1)\mu^2}{16\pi}.
 \tag{6.3}
-$$
+```
 
 The numerator is strictly decreasing for `mu>=0`, is positive at `mu=0`, and has the
 unique positive root
 
-$$
+```math
 \boxed{
 \mu_{RP}
 =
 \frac{\pi\left(2\sqrt{3\pi^2+1}-1\right)}{4\pi^2+1}.
 }
 \tag{6.4}
-$$
+```
 
 Hence
 
-$$
+```math
 \mu<\mu_{RP}
 \quad\Longrightarrow\quad
 F_\mu(\pi)>0.
 \tag{6.5}
-$$
+```
 
 Also `mu_RP<4/5`: at `mu=4/5`, the numerator of (6.3) is
 
-$$
+```math
 \frac1{25}(11\pi^2-40\pi-16)<0,
-$$
+```
 
 because `pi<4` gives `11pi^2<44pi` and then `4pi-16<0`.
 
@@ -543,46 +543,46 @@ because `pi<4` gives `11pi^2<44pi` and then `4pi-16<0`.
 
 Since `F_mu(2rho)` strictly decreases with `mu`, it is enough to show
 
-$$
+```math
 F_{4/5}(2\rho)>0.
-$$
+```
 
 Use the elementary audited bracket
 
-$$
+```math
 \frac{739}{1000}<\rho<\frac{37}{50}.
 \tag{6.6}
-$$
+```
 
 The bracket follows directly from the alternating Taylor bounds for cosine at the two
 rational endpoints.  Since `rho<37/50`,
 
-$$
+```math
 \sin\rho=\sqrt{1-\rho^2}
 >
 \frac{84}{125},
-$$
+```
 
 because
 
-$$
+```math
 \left(\frac{84}{125}\right)^2
 <1-\left(\frac{37}{50}\right)^2.
-$$
+```
 
 Therefore
 
-$$
+```math
 \sin(2\rho)=2\rho\sin\rho
 >
 2\frac{739}{1000}\frac{84}{125}
 =
 \frac{15519}{15625}.
-$$
+```
 
 Thus
 
-$$
+```math
 \Phi(2\rho)
 >
 \frac14\left(
@@ -592,11 +592,11 @@ $$
 \frac{154451}{250000}
 =0.617804.
 \tag{6.7}
-$$
+```
 
 On the other hand, using `pi<22/7`, `pi>3`, and `2rho<37/25`,
 
-$$
+```math
 \frac\pi4\left(\frac45\right)^2
 +
 \frac{(4/5+2\rho)^2}{16\pi}
@@ -604,24 +604,24 @@ $$
 \frac{42781}{70000}
 =0.6111571428\ldots .
 \tag{6.8}
-$$
+```
 
 The exact rational margin is
 
-$$
+```math
 \frac{154451}{250000}-\frac{42781}{70000}
 =
 \frac{727}{109375}>0.
 \tag{6.9}
-$$
+```
 
 Hence
 
-$$
+```math
 F_\mu(2\rho)>0
 \qquad(0\le\mu\le\mu_{RP}).
 \tag{6.10}
-$$
+```
 
 ### 6.3 Conclusion
 
@@ -631,17 +631,17 @@ This proves RP.1.
 
 The exact root has numerical value
 
-$$
+```math
 \mu_{RP}=0.7811638359065726\ldots .
-$$
+```
 
 For a proof-level rational bracket, the numerator in (6.3) is positive at
 `mu=39/50=0.78` (already using `pi>3.14`) and negative at `mu=4/5`, so
 
-$$
+```math
 \boxed{0.78<\mu_{RP}<0.8.}
 \tag{6.11}
-$$
+```
 
 ---
 
@@ -649,43 +649,43 @@ $$
 
 PT defined
 
-$$
+```math
 u_\pi
 =\frac{\pi(\sqrt{3\pi^2+4}-1)}{2(\pi^2+1)}.
-$$
+```
 
 For completeness, `u_pi<0.70` follows from `pi<22/7`, `pi>157/50`, and
 
-$$
+```math
 \sqrt{1648}<\frac{203}{5}.
-$$
+```
 
 Indeed
 
-$$
+```math
 u_\pi
 <
 \frac{528}{35}\frac{1250}{27149}
 <\frac7{10}.
 \tag{7.1}
-$$
+```
 
 Together with (6.11),
 
-$$
+```math
 \boxed{\mu_{RP}>0.78>0.70>u_\pi.}
 \tag{7.2}
-$$
+```
 
 Therefore the preceding phase split collapses to the high-renormalized-surplus side:
 for every sufficiently large post-ZF survivor,
 
-$$
+```math
 \boxed{
 \mu_D>u_\pi+\Omega(1).
 }
 \tag{7.3}
-$$
+```
 
 The macroscopic inactive outer-shell theorem is still correct as a conditional
 statement, but it is no longer a live survivor branch.
@@ -696,22 +696,22 @@ statement, but it is no longer a live survivor branch.
 
 A sequence approaching `mu_RP` must approach the binding concavity endpoint
 
-$$
+```math
 \boxed{h/D\to\pi.}
 \tag{8.1}
-$$
+```
 
 because the other endpoint has a fixed positive margin and strict concavity excludes
 interior equality.
 
 Equality in (5.2) and RP.3 further forces, at leading order,
 
-$$
+```math
 \tau\nu\to0,
 \qquad
 \tau+\nu\to\frac{\mu_{RP}+\pi}{2},
 \tag{8.2}
-$$
+```
 
 and equality in the two PC-derived bounds used in RP.3.  Since `h/D->pi`, the
 projective diameter-direction set is asymptotically maximally dense.  This is a very
@@ -775,17 +775,17 @@ If promoted, update:
 The highest-value next theorem is a **strict renormalized paired-pocket stability
 upgrade**.  RP.1 has a clean endpoint `h/D->pi`.  Retain instead of discarding:
 
-$$
+```math
 2(d_P+Q)\le\mu_DD+h-s_Z,
-$$
+```
 
 `q<=P_F<=pi D`, and the actual pocket chord/detour budget.  Any fixed deficit
 `pi-h/D` or positive `s_Z/D` lowers the cavity capacity.  A quantitative argument
 should either raise `mu_RP` again or force
 
-$$
+```math
 h/D\to\pi,\quad s_Z/D\to0,
-$$
+```
 
 where the diameter graph and force hull are near the maximally dense projective
 configuration and may admit a direct structural contradiction.

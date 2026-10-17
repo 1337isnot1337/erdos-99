@@ -41,10 +41,10 @@ The geometric results below concern an arbitrary finite unit-separated source
 `A` of diameter `D>=4`. A fan is an ordered sequence of distinct actual source
 points `p_0,...,p_g` with a source carrier `a`, satisfying
 
-$$
+```math
 |p_i-a|=D,\qquad |p_{i+1}-p_i|=1.
 \tag{1}
-$$
+```
 
 Its order agrees with angular order on one arc of width at most `pi/3` about
 `a`. This is the source geometry of the same-carrier fan branch. No source
@@ -78,33 +78,33 @@ an unpromoted atlas, nor any uniform KKT multiplier lower bound is assumed.
 
 Put
 
-$$
+```math
 \epsilon={1\over2D},\qquad \tau=\sqrt{1-\epsilon^2},\qquad
 u_i={p_i-a\over D},\qquad \delta={1\over D}.
-$$
+```
 
 For an internal index `i`, choose the unit tangent `t_i` so that
 
-$$
+```math
 p_i-p_{i-1}=\epsilon u_i+\tau t_i,
 \qquad p_i-p_{i+1}=\epsilon u_i-\tau t_i.
 \tag{2}
-$$
+```
 
 Define the **finite flipped position**
 
-$$
+```math
 p_i^\flat=p_i-\delta u_i=p_{i-1}+p_{i+1}-p_i.
 \tag{3}
-$$
+```
 
 **Theorem FF.1 (proved candidate).** The replacement (3) preserves both
 adjacent unit contacts. It satisfies
 
-$$
+```math
 |p_i^\flat-x|<D\qquad(x\in A).
 \tag{4}
-$$
+```
 
 **Proof.** Subtracting `delta u_i=2 epsilon u_i` from both vectors in (2)
 reverses their radial component, so their lengths remain one.
@@ -112,12 +112,12 @@ reverses their radial component, so their lengths remain one.
 The midpoint of the two adjacent fan vertices is
 `a+(D-epsilon)u_i`. For `D>1`,
 
-$$
+```math
 p_i^\flat
 =\eta a+{1-\eta\over2}(p_{i-1}+p_{i+1}),\qquad
 \eta={\epsilon\over D-\epsilon}\in(0,1).
 \tag{5}
-$$
+```
 
 Thus the flipped point is a convex combination with strictly positive
 coefficients of three distinct noncollinear actual source points. For any
@@ -136,11 +136,11 @@ the entire diameter drops below `D`, primary global minimality already
 gives the contradiction. Thus every canonical degree-two fan leaf forces
 a source point other than `p_i,p_{i-1},p_{i+1}` with
 
-$$
+```math
 |z-p_i^\flat|\le1,
 \qquad 1<|z-p_i|\le1+\delta.
 \tag{6}
-$$
+```
 
 The non-strict inequality at the new position is deliberate: creation of
 an extra unit contact can increase the primary contact count, so a final
@@ -151,11 +151,11 @@ equality cannot be discarded by secondary minimality alone.
 **Theorem FF.2 (proved candidate).** Suppose `z in A` is distinct from
 `p_i,p_{i-1},p_{i+1}` and satisfies `|z-p_i^flat|<=1`. For `D>=4`,
 
-$$
+```math
 z\in\operatorname{int}\operatorname{conv}\{a,p_{i-1},p_{i+1}\},
 \qquad |z-x|<D\quad(x\in A).
 \tag{7}
-$$
+```
 
 In particular `z` is never an actual diameter endpoint. This conclusion
 holds for inactive blockers and for actual third-contact neighbors.
@@ -163,17 +163,17 @@ holds for inactive blockers and for actual third-contact neighbors.
 **Proof.** Write `v=p_i-z=r u_i+s t_i`. Unit separation and the new-disk
 condition imply
 
-$$
+```math
 1\le |v|\le1+\delta\le5/4.
 \tag{8}
-$$
+```
 
 The source pair `az` has distance at most `D`, so
 
-$$
+```math
 r\ge\epsilon |v|^2\ge\epsilon.
 \tag{9}
-$$
+```
 
 Equality `r=epsilon` in (9) forces `|v|=1` and
 `v=epsilon u_i +/- tau t_i`, making `z` one of the excluded adjacent
@@ -181,28 +181,28 @@ vertices. Thus `r>epsilon`.
 
 Separation from both adjacent fan vertices and the new-disk condition give
 
-$$
+```math
 2\tau |s|\le |v|^2-2\epsilon r,
 \qquad |v|^2\le1+4\epsilon r-4\epsilon^2.
-$$
+```
 
 Because `r<=1+delta`, these imply
 
-$$
+```math
 |s|\le{1+\delta\over2\tau}\le {40\over63}.
 \tag{10}
-$$
+```
 
 Here `epsilon<=1/8` and `tau>=63/64` were used. The triangle in (7) has
 vertices `0,(D-epsilon)u_i +/- tau t_i` after subtracting `a`. At radial
 coordinate `D-r`, its open transverse width is
 
-$$
+```math
 \tau{D-r\over D-\epsilon}
 \ge {63\over64}{D-5/4\over D}
 \ge {693\over1024}>{40\over63}.
 \tag{11}
-$$
+```
 
 Also `0<D-r<D-epsilon`. Equations (10)--(11) put `z` strictly inside
 the triangle. The positive convex-combination squared-norm argument of
@@ -225,11 +225,11 @@ neighbors are included as blockers.
 on the radius-`R` circle about `a`, with angular step `2x`. If indices
 differ by at least three, monotonicity of sine on the fan arc gives
 
-$$
+```math
 |p_i^\flat-p_j^\flat|
 \ge (1-D^{-2})(3-D^{-2})>2\quad(D\ge4).
 \tag{12}
-$$
+```
 
 They cannot share a radius-one blocker.
 
@@ -237,20 +237,20 @@ For indices `i,i+2`, let `m` be the midpoint of their flipped positions.
 The intersection of their two closed unit disks is contained, by the
 parallelogram identity, in the disk about `m` of radius
 
-$$
+```math
 b_D={3-D^{-2}\over2D}.
 \tag{13}
-$$
+```
 
 Indeed their half-separation is `tau(1-D^{-2})`, and
 `1-tau^2(1-D^{-2})^2=b_D^2`. The original middle fan point `p_{i+1}`
 is at distance exactly `b_D` from `m`. Any common blocker would therefore
 have distance at most
 
-$$
+```math
 2b_D={3\over D}-{1\over D^3}<1
 \tag{14}
-$$
+```
 
 from that unchanged source point, violating unit separation. QED.
 
@@ -260,22 +260,22 @@ write their midpoint as `m`, their unit-base tangent as `t`, and their
 outward radial normal as `n`. Write `z=m+s t-y n`. Both original
 endpoint distances lie in `[1,1+delta]`, so
 
-$$
+```math
 |s|\le\delta+\delta^2/2,
 \qquad
 3/4-s^2\le y^2\le3/4+2\delta+\delta^2-s^2.
 \tag{15}
-$$
+```
 
 The outward choice `y<0` is impossible: (15) gives `|y|>4/5`, while
 `|m-a|=D tau` and `D-D tau<1/16` for `D>=4`, contradicting
 `|z-a|<=D`. Dividing the squared-height differences by the sum of the
 heights gives `|y-sqrt(3)/2|<=3delta`. Together with (15),
 
-$$
+```math
 |z-(m-(\sqrt3/2)n)|<5/D.
 \tag{16}
-$$
+```
 
 This is a near-triangle statement only; no exact unit triangle is inferred.
 
@@ -287,10 +287,10 @@ justify merely counting them as immovable obstructions.
 Fix one canonical degree-two leaf `p=p_i`, put `u=u_i` and
 `w=-delta u`, and define its additional blocker set
 
-$$
+```math
 Z=\{z\in A\setminus\{p,p_{i-1},p_{i+1}\}:|z-(p+w)|\le1\}.
 \tag{17}
-$$
+```
 
 On `A\setminus\{p\}`, form the **actual-source augmented near-contact
 graph** whose edges satisfy `|x-y|<=1+delta`. Let `S` be the union of
@@ -305,20 +305,22 @@ in particular it is not restricted to the contact core.
 2. all of `S` consists of contact-isolated points, and there are `z in S`
    and `x in A\setminus(S\cup\{p\})` with
 
-   $$
+   ```math
    D-\delta\le|z-x|<D,\qquad |z+w-x|\ge D,
    \qquad (z-a)\cdot u\le {\sqrt3\over2}D+\delta.
    \tag{18}
-   $$
+   
+   ```
 
    The component of this `z` contains a blocker `z_0 in Z`, and any
    near-contact path from `z_0` to `z` has at least
 
-   $$
+   ```math
    { (1-\sqrt3/2)D-1-2\delta\over 1+\delta}
    =(1-\sqrt3/2)D-O(1)
    \tag{19}
-   $$
+   
+   ```
 
    edges. All its vertices are actual isolated source points, and every
    path edge is an inactive source pair within `1/D` of contact activity.
@@ -327,11 +329,11 @@ in particular it is not restricted to the contact core.
 Suppose alternative 1 fails, so every point in `S` is isolated. It does
 not contain the two adjacent fan vertices. Perform the finite move
 
-$$
+```math
 p\mapsto p+w,
 \qquad z\mapsto z+w\quad(z\in S),
 \tag{20}
-$$
+```
 
 fixing every other source point.
 
@@ -367,17 +369,17 @@ write `r=z dot u`. If `r>(sqrt(3)/2)D+delta`, then `|z+w|<D`, because
 translation decreases its squared distance to `a`. Expanding the failed
 diameter constraint gives
 
-$$
+```math
 (z-x)\cdot u<\delta/2,
-$$
+```
 
 since `|z-x|<D`. Thus both `z+w` and `x` belong to the disk `B(a,D)`
 and to its cap `u dot y >= c`, for some `c>(sqrt(3)/2)D` (one may take
 `c=r-delta`). Any point of this cap lies in
 
-$$
+```math
 B(a+c u,\sqrt{D^2-c^2}),
-$$
+```
 
 because `|y-c u|^2<=D^2-2c(u dot y)+c^2<=D^2-c^2`.
 That cap has diameter less than `D`, contradicting the failed cross
@@ -407,10 +409,10 @@ short rational unit-chord fan of even cardinality. Group its consecutive
 vertices in disjoint pairs. For each pair, let `m` be its midpoint and
 `n=m/(D tau)` its radial unit normal. Add the rational source point
 
-$$
+```math
 z=m-h n,\qquad h>\sqrt3/2,
 \tag{21}
-$$
+```
 
 with `h-sqrt(3)/2` chosen smaller than `1/(100D^2)`. The exact certificate
 uses an integer square-root construction of this rational `h`.
@@ -418,10 +420,10 @@ uses an integer square-root construction of this rational `h`.
 Every pair endpoint has squared distance `h^2+1/4>1` from its blocker.
 The corresponding two flipped endpoints have squared distance
 
-$$
+```math
 (h-\tau/D)^2+{1\over4}(1-D^{-2})^2<1.
 \tag{22}
-$$
+```
 
 The checked sources are unit-separated, triangle-free, and have only
 the fan edges as unit contacts and only the carrier-star edges as
@@ -441,10 +443,10 @@ why a movable isolated blocker must not be treated as a closing obstruction.
 
 Take a short circular fan centered about `(D,0)` and put
 
-$$
+```math
 v=(1,0),\qquad z_i=p_i-v.
 \tag{23}
-$$
+```
 
 For a fan of sufficiently small angular width and `D>=4`, the source
 `{a,p_i,z_i}` is unit-separated and triangle-free. Its exact contact
@@ -456,34 +458,34 @@ instances below, including every nonlocal source pair.
 There is an exact strictly positive local KKT equilibrium at every
 internal vertex in both rows. Let
 
-$$
+```math
 \zeta_i={1\over y_{i+1}-y_i}>0,
 \qquad C>\max_i\zeta_i,
 \qquad \lambda_i=C-\zeta_i>0.
 \tag{24}
-$$
+```
 
 The inner-row reaction at `z_i` is
 
-$$
+```math
 \zeta_{i-1}(z_i-z_{i-1})+\zeta_i(z_i-z_{i+1})
 =\gamma_i v,\quad
 \gamma_i={x_i-x_{i-1}\over y_i-y_{i-1}}
          -{x_{i+1}-x_i\over y_{i+1}-y_i}>0.
 \tag{25}
-$$
+```
 
 The horizontal-circle graph `x=sqrt(D^2-y^2)` is strictly concave on
 this short arc, proving the strict positivity. The unit spoke supplies
 `-gamma_i v` at `z_i`. At the outer row, its positive spoke force and
 the two row-contact forces sum to
 
-$$
+```math
 \lambda_{i-1}(p_i-p_{i-1})+\lambda_i(p_i-p_{i+1})+\gamma_i v
 =C(2p_i-p_{i-1}-p_{i+1})
 ={C\over D^2}(p_i-a).
 \tag{26}
-$$
+```
 
 Thus each pendant diameter has the positive local weight `C/D^2`.
 All inward spokes satisfy the exact third-contact cone. The combined

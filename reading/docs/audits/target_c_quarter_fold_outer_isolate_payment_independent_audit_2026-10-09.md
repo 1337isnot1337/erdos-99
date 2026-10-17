@@ -26,10 +26,10 @@ Assume every bounded face is of one of these types:
 
 For each type-(2) face `F_i`, let `z_i(A)` be the number of old source isolates in its interior. Let `Z_out(A)` and `Z_out(A')` count isolate labels outside the union of the bounded face interiors in the respective embeddings. Then
 
-$$
+```math
 \boxed{Z_{\rm out}(A')\;\ge\;Z_{\rm out}(A)
        +\sum_{i:\,F_i\text{ is type (2)}} z_i(A).}
-$$
+```
 
 No upper-diameter bound on `A'`, endpoint optimality, or fixed placement of any isolate is needed for this population implication. Exact graph preservation supplies unit separation, preserves the isolate labels, and ensures the folded boundary remains triangle-free. The conclusion is conditional on the endpoint and embedding; it does not assert that either exists.
 

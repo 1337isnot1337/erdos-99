@@ -35,104 +35,104 @@ sublinear.
 
 Put
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},
 \qquad
 s_2=\sqrt{\Delta_2},
 \qquad
 g=0.007707,
-$$
+```
 
-$$
+```math
 C_0:=2s_2+g
 =1.912332613727914\ldots,
-$$
+```
 
-$$
+```math
 M_*:=4s_2+2g
 =3.824665227455829\ldots,
-$$
+```
 
 and
 
-$$
+```math
 \mu_*:={\pi\over2}+{2s_2\over5}+{g\over5}
 =1.953262849540479\ldots .
-$$
+```
 
 The latest terminal theorem proves
 
-$$
+```math
 \boxed{
 \liminf t_D\ge t_*:=\mu_*+0.00659
 =1.959852849540479\ldots,
 }
 \tag{NF.1}
-$$
+```
 
 where
 
-$$
+```math
 t_D={q-k\over D}.
-$$
+```
 
 Its exact asymptotic decomposition is stronger than the number. On a convergent
 terminal subsequence write
 
-$$
+```math
 r:=\lim {Q-f\over D}\ge0,
 \qquad
 \delta:=\lim {b-P_F\over D}\ge0,
-$$
+```
 
 and
 
-$$
+```math
 a:=\lim\left({\tau_D\over D}-\left({\pi\over2}+g\right)\right)\ge0,
 \qquad
 \tau_D:=T-2\sqrt{R_4}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \lim(t_D-\mu_*)={2\over5}(r+\delta)+{1\over5}a.
 }
 \tag{NF.2}
-$$
+```
 
 Fix a terminal window parameter `eta_t>=0` and suppose
 
-$$
+```math
 \limsup t_D\le t_*+\eta_t.
 \tag{NF.3}
-$$
+```
 
 Set
 
-$$
+```math
 e:=0.00659+\eta_t.
 \tag{NF.4}
-$$
+```
 
 Equations (NF.2)--(NF.3) give the single budget
 
-$$
+```math
 \boxed{
 2(r+\delta)+a\le5e.
 }
 \tag{NF.5}
-$$
+```
 
 In particular
 
-$$
+```math
 r+\delta\le{5e\over2},
 \qquad
 a\le5e.
 \tag{NF.6}
-$$
+```
 
 Thus the new `t` endpoint still has small superpentagonal degree excess, small outer
 detour, and nearly minimal train slack whenever `eta_t` is small. Unlike the old
@@ -146,58 +146,58 @@ Let `A` be the total atomic stopped-train mass in absolute `D` normalization. Gr
 train-direction atoms into exact projective `pi/3` orbits. Write `M_j` for the atomic
 mass of orbit `j`, `E_j` for its strict-rhombus crossing mass, and
 
-$$
+```math
 W:=\sup_jM_j.
-$$
+```
 
 The audited atomic orbit decomposition gives
 
-$$
+```math
 E_j\le {M_j^2\over4},
 \qquad
 \sum_jE_j=\Delta_2.
 \tag{NF.7}
-$$
+```
 
 Audited §166, through the exposed-hull inequality, gives
 
-$$
+```math
 A\le C,
 \qquad
 C:=\lim {T-q/2\over D}.
 \tag{NF.8}
-$$
+```
 
 Since
 
-$$
+```math
 {T-q/2\over D}=C_0+a+o(1),
-$$
+```
 
 (NF.5) yields
 
-$$
+```math
 C\le C_0+5e.
 \tag{NF.9}
-$$
+```
 
 Now
 
-$$
+```math
 4\Delta_2
 \le\sum_jM_j^2
 \le WA
 \le W(C_0+5e).
-$$
+```
 
 Hence some exact `pi/3` orbit carries atomic train mass at least
 
-$$
+```math
 \boxed{
 W\ge W(e):={4\Delta_2\over C_0+5e}.
 }
 \tag{NF.10}
-$$
+```
 
 This is the positive-detour replacement for the exact-surplus dominant-orbit estimate.
 
@@ -208,47 +208,47 @@ This is the positive-detour replacement for the exact-surplus dominant-orbit est
 Let the limiting occurrence-counted outer direction measure be `nu`. Terminality gives
 its total mass
 
-$$
+```math
 M=\pi+\delta.
 \tag{NF.11}
-$$
+```
 
 Audited §166 proves that an outer-direction atom of mass `w` has cubic detour cost
 
-$$
+```math
 \boxed{
 w^3\le3M^2\delta.
 }
 \tag{NF.12}
-$$
+```
 
 Assume on the subsequence that
 
-$$
+```math
 \delta\le d
 \tag{NF.13}
-$$
+```
 
 for some fixed `d>0`. Each of the at most three direction atoms in the dominant orbit
 therefore has outer occurrence mass at most
 
-$$
+```math
 \boxed{
 \omega(d):=\left(3(\pi+d)^2d\right)^{1/3}.
 }
 \tag{NF.14}
-$$
+```
 
 Shrink three projective neighborhoods onto the dominant orbit. Every dominant-orbit
 train has two terminal face-side occurrences. In the sequential limit
 `D->infinity` followed by neighborhood radius `theta->0`, at least
 
-$$
+```math
 \boxed{
 2W(e)-3\omega(d)
 }
 \tag{NF.15}
-$$
+```
 
 bounded exceptional-face occurrences remain in those neighborhoods.
 
@@ -262,42 +262,42 @@ directions, exactly the quantity controlled by §166.
 
 Let
 
-$$
+```math
 B:=\lim {Q+4f\over D}.
-$$
+```
 
 The exact route/train handshake gives
 
-$$
+```math
 \boxed{
 B+\delta=M_*+2a.
 }
 \tag{NF.16}
-$$
+```
 
 Also
 
-$$
+```math
 {f\over D}\to {M_*+2a-\delta-r\over5}.
 \tag{NF.17}
-$$
+```
 
 If `P_5` is the number of bounded pentagonal contact faces, degree arithmetic gives
 
-$$
+```math
 P_5\ge2f-Q=f-(Q-f).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \liminf {P_5\over D}
 \ge
 {M_*\over5}+{2a\over5}-{\delta\over5}-{6r\over5}.
 }
 \tag{NF.18}
-$$
+```
 
 For a small projective radius `theta`, let `P_5^{near}(theta)` count bounded pentagons
 whose five side directions all lie within `theta` of the dominant three-line orbit.
@@ -305,7 +305,7 @@ Every pentagon not counted by `P_5^{near}(theta)` consumes at least one bounded
 exceptional-face occurrence outside those neighborhoods. Combining (NF.15), (NF.16),
 and (NF.18), then shrinking `theta`, gives
 
-$$
+```math
 \begin{aligned}
 \lim_{\theta\downarrow0}\liminf {P_5^{near}(\theta)\over D}
 \ge{}&
@@ -317,26 +317,26 @@ $$
 -3\left(3(\pi+\delta)^2\delta\right)^{1/3}.
 \end{aligned}
 \tag{NF.19}
-$$
+```
 
 The right side can be minimized exactly over the simple stability budget (NF.5).
 For fixed `delta`, moving one unit of budget from `r` to `a` means replacing
 `r` by `r-h` and `a` by `a+2h`; this strictly decreases the right side. Hence the
 minimum has
 
-$$
+```math
 r=0,
 \qquad
 a=5e-2\delta.
 \tag{NF.20}
-$$
+```
 
 If `0<=delta<=d`, the resulting one-variable expression is decreasing throughout the
 small concrete range used below. Thus its minimum is at `delta=d`.
 
 Define
 
-$$
+```math
 \boxed{
 \begin{aligned}
 N(e,d):={}&-{4M_*\over5}
@@ -346,17 +346,17 @@ N(e,d):={}&-{4M_*\over5}
 \end{aligned}
 }
 \tag{NF.21}
-$$
+```
 
 Then, in the stated small-window regime,
 
-$$
+```math
 \boxed{
 \lim_{\theta\downarrow0}\liminf {P_5^{near}(\theta)\over D}
 \ge N(e,d).
 }
 \tag{NF.22}
-$$
+```
 
 The certificate checks the monotonicity used above and the concrete constants below.
 
@@ -368,19 +368,19 @@ The five-root closure lemma from the existing dominant-orbit theorem is finite. 
 strict convex unit pentagon has every projective side direction within `theta` of one
 three-line `pi/3` orbit and
 
-$$
+```math
 10\sin(\theta/2)<1,
 \tag{NF.23}
-$$
+```
 
 then it contains two disjoint ears whose diagonals satisfy
 
-$$
+```math
 \boxed{
 1<d_{ear}\le2\cos(\pi/3-\theta).
 }
 \tag{NF.24}
-$$
+```
 
 Select one such ear from each near-orbit pentagon. As in the existing near-contact
 proof, the selected diagonals are distinct and the auxiliary diagonal graph has maximum
@@ -388,24 +388,24 @@ degree at most five. A greedy matching therefore retains at least one ninth of t
 
 Consequently, whenever `N(e,d)>0`, for every
 
-$$
+```math
 0<\kappa<{N(e,d)\over9}
-$$
+```
 
 and every metric tolerance `eps_geom>0`, after passing to the corresponding terminal
 subsequence and then taking sufficiently large sources, there are at least
 
-$$
+```math
 \boxed{\kappa D}
 \tag{NF.25}
-$$
+```
 
 pairwise vertex-disjoint core-core nonedges with lengths in
 
-$$
+```math
 \boxed{(1,1+\mathrm{eps}_{geom}).}
 \tag{NF.26}
-$$
+```
 
 Each is an ear diagonal of an empty bounded pentagonal contact face. The emptiness is
 from the existing isolate-host theorem: a bounded positive-contact face containing a
@@ -420,55 +420,55 @@ nonunit force-hull-side currency that was eliminated from the new `t` theorem.
 
 Take
 
-$$
+```math
 \eta_t=10^{-4},
 \qquad
 e=0.00669,
 \qquad
 d=10^{-5}.
-$$
+```
 
 Then
 
-$$
+```math
 W(e)=1.864339162491712\ldots,
-$$
+```
 
-$$
+```math
 \omega(d)=0.066651192127147\ldots,
-$$
+```
 
 and the optimized bound (NF.21) is
 
-$$
+```math
 \boxed{
 N(0.00669,10^{-5})
 =0.415550892775345\ldots .
 }
 \tag{NF.27}
-$$
+```
 
 Thus every terminal sequence satisfying
 
-$$
+```math
 \limsup t_D
 \le1.959952849540479\ldots
 \tag{NF.28}
-$$
+```
 
 and
 
-$$
+```math
 \limsup {b-P_F\over D}\le10^{-5}
 \tag{NF.29}
-$$
+```
 
 has the following property: for every `eps_geom>0` and every
 
-$$
+```math
 \boxed{\kappa<0.046172321419482\ldots,}
 \tag{NF.30}
-$$
+```
 
 all sufficiently large members after the standard subsequence extraction contain at
 least `kappa D` pairwise vertex-disjoint noncontact pairs at distances in
@@ -476,10 +476,10 @@ least `kappa D` pairwise vertex-disjoint noncontact pairs at distances in
 
 A conservative repository-facing coefficient is
 
-$$
+```math
 \boxed{0.0461D.}
 \tag{NF.31}
-$$
+```
 
 Equivalently, the live terminal near-floor branch now has the source-level split
 

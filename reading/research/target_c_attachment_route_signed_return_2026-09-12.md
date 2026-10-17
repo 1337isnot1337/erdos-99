@@ -17,63 +17,63 @@ Let `A={p_1,...,p_a}` be the attachment occurrences in cyclic order, `P=conv(A)`
 `P_exc` for the total degree of bounded nonquadrilateral face occurrences.  For the
 outer route `W_i:p_i\to p_{i+1}`, put
 
-$$
+```math
 \ell_i=|W_i|,\qquad z_i=p_{i+1}-p_i,\qquad q_i=z_i/|z_i|.
-$$
+```
 
 The inherited Section-101 route partition gives
 
-$$
+```math
 \sum_i\ell_i=L,\qquad \sum_i|z_i|=\operatorname{per}(P).
-$$
+```
 
 Give each bounded nonquadrilateral face its clockwise closed route and host `0`, and
 set
 
-$$
+```math
 Q_{att}=\{q_1,\ldots,q_a,0\},\qquad
 w_{Q_{att}}(u)=\max_{q\in Q_{att}}q\cdot u-\min_{q\in Q_{att}}q\cdot u.
-$$
+```
 
 Define the exact attachment-route excess
 
-$$
+```math
 E_{att}=L+P_{exc}-\operatorname{per}(P).
 \tag{AR.1}
-$$
+```
 
 For the complete strict-rhombus trains `\mathcal T`, with terminal direction `u_\tau`,
 
-$$
+```math
 \boxed{E_{att}\ge\sum_{\tau\in\mathcal T}
        \bigl(2-w_{Q_{att}}(u_\tau)\bigr).}
 \tag{AR.2}
-$$
+```
 
 If `\mathcal R` is the strict-rhombus complex and `u_R,v_R` are the two train
 directions through `R`, exact train-span transport gives
 
-$$
+```math
 \boxed{dE_{att}\ge\sum_{R\in\mathcal R}\operatorname{area}(R)
        \bigl[4-w_{Q_{att}}(u_R)-w_{Q_{att}}(v_R)\bigr].}
 \tag{AR.3}
-$$
+```
 
 The face ledger (`L+Q=4a-6-2s-2c` and `P_exc=4f_exc+Q`) also gives the finite identity
 
-$$
+```math
 \boxed{E_{att}=4a-6-2s-2c+4f_{exc}-\operatorname{per}(P).}
 \tag{AR.4}
-$$
+```
 
 ## Proof and scope
 
 For a directed unit-edge route of displacement `z`, with `q=z/|z|` (and `q=0` for a
 closed route),
 
-$$
+```math
 |W|-|z|=\sum_{e\in W}(1-q\cdot v_e)\ge0.
-$$
+```
 
 Summing over all attachment routes and defect-face cycles gives (AR.1).  A physical
 train end is incident either with one outer-face occurrence or with one bounded
@@ -85,10 +85,10 @@ disconnected rhombus components are included by the same occurrence ledger.
 The two terminal orientations of a train are `u` and `-u`.  If their assigned hosts are
 `q_i,q_j`, their contribution is
 
-$$
+```math
 (1-q_i\cdot u)+(1-q_j\cdot(-u))
  =2-(q_i-q_j)\cdot u\ge2-w_{Q_{att}}(u),
-$$
+```
 
 which proves (AR.2) after summing.  The span of a complete train equals its total
 transverse rhombus area; both terminal midpoints lie in `P`, hence that span is at most

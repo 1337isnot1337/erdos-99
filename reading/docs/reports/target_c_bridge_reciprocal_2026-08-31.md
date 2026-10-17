@@ -37,47 +37,47 @@ actual reciprocal diagonals, where the next quantitative theorem can operate.
 
 Fix a normalized KKT stress `(alpha,beta)`.  Use the canonical notation
 
-$$
+```math
 C_+=\{ij:\alpha_{ij}>0\},
 \qquad
 H_+=\{ij:\beta_{ij}>0\},
 \tag{C20.1}
-$$
+```
 
-$$
+```math
 B_+=V(H_+),
 \qquad
 F=\operatorname{conv}B_+
  =\operatorname{conv}V(C_+),
 \tag{C20.2}
-$$
+```
 and
-$$
+```math
 g_b=\sum_{bk\in H_+}\beta_{bk}(b-k)
    =\sum_{bc\in C_+}\alpha_{bc}(b-c)
 \qquad(b\in B_+).
 \tag{C20.3}
-$$
+```
 At a positive-contact vertex not in `B_+`, the corresponding right-hand side is zero.
 Theorem C12 makes `C_+` connected, and every `g_b` lies strictly in the outward normal
 cone of the force hull at `b`.
 
 Order `B_+=\{b_1,\ldots,b_q\}` cyclically around `partial F`.  The reciprocal force
 polygon `F^*` has, in this order, side vectors
-$$
+```math
 e_b=Jg_b,
 \tag{C20.4}
-$$
+```
 where `J` is rotation by `pi/2`.  Its perimeter is
-$$
+```math
 P_*=\sum_{b\in B_+}|g_b|\le2D.
 \tag{C20.5}
-$$
+```
 The normalized virial identity gives
-$$
+```math
 \sum_{e\in C_+}\alpha_e=D^2.
 \tag{C20.6}
-$$
+```
 
 ---
 
@@ -85,12 +85,12 @@ $$
 
 Let `uv in C_+` be a bridge of the positive contact graph.  Removing it gives two
 connected components `S,T`, with `u in S`, `v in T`.  Put
-$$
+```math
 B_S=B_+\cap S,
 \qquad
 B_T=B_+\cap T.
 \tag{C20.7}
-$$
+```
 
 ### Lemma C20.1 (bridge-side reaction sets are cyclic intervals)
 
@@ -100,11 +100,11 @@ Both `B_S` and `B_T` are nonempty cyclic intervals in the boundary order of `B_+
 
 First sum KKT equilibrium over the vertices of `S`.  All positive contact forces
 internal to `S` cancel.  The only positive contact edge leaving `S` is the bridge, so
-$$
+```math
 \sum_{b\in B_S}g_b
 =\alpha_{uv}(u-v)\ne0.
 \tag{C20.8}
-$$
+```
 Thus `B_S` is nonempty.  The symmetric equation for `T` makes `B_T` nonempty.
 
 Suppose the two sets alternate on the force-hull boundary: there are boundary vertices
@@ -126,72 +126,72 @@ resultant diameter reaction of either side.
 ## 3. Reciprocal diagonal theorem
 
 Choose the orientation of the cyclic order so that
-$$
+```math
 B_S=\{b_i,b_{i+1},\ldots,b_j\}
 \tag{C20.9}
-$$
+```
 for one consecutive arc, with indices interpreted cyclically.  Let `z_i,z_{j+1}` be
 the reciprocal-polygon vertices immediately before and after that arc, so
-$$
+```math
 z_{j+1}-z_i
 =\sum_{b\in B_S}e_b.
 \tag{C20.10}
-$$
+```
 
 ### Theorem C20.2 (positive contact bridge = reciprocal diagonal)
 
 For every positive contact bridge `uv`,
-$$
+```math
 \boxed{
 z_{j+1}-z_i
 =\alpha_{uv}J(u-v).}
 \tag{C20.11}
-$$
+```
 Consequently the reciprocal chord closing the `B_S` boundary arc is perpendicular to
 the primal bridge and has length
-$$
+```math
 \boxed{|z_{j+1}-z_i|=\alpha_{uv}.}
 \tag{C20.12}
-$$
+```
 
 Moreover the resultant reaction of the side `S` has its line of action through the
 bridge endpoint `u`:
-$$
+```math
 \boxed{
 \sum_{b\in B_S}(b-u)\times g_b=0.
 }
 \tag{C20.13}
-$$
+```
 The symmetric resultant on `T` has line of action through `v`.
 
 #### Proof
 
 Rotate (C20.8) by `J` and use (C20.4):
-$$
+```math
 \sum_{b\in B_S}e_b
 =J\sum_{b\in B_S}g_b
 =\alpha_{uv}J(u-v),
-$$
+```
 which is (C20.11).  Since `|u-v|=1`, (C20.12) follows.
 
 For the moment identity, take scalar moments of the vertex equilibrium equations over
 all vertices of `S`.  An internal contact edge `xy` contributes
-$$
+```math
 \alpha_{xy}\bigl(x\times(x-y)+y\times(y-x)\bigr)=0.
 \tag{C20.14}
-$$
+```
 The bridge contributes
-$$
+```math
 \alpha_{uv}u\times(u-v).
 \tag{C20.15}
-$$
+```
 Hence
-$$
+```math
 \sum_{b\in B_S}b\times g_b
 =\alpha_{uv}u\times(u-v)
 =u\times\sum_{b\in B_S}g_b,
 \tag{C20.16}
-$$
+```
 where the last equality uses (C20.8).  Rearranging gives (C20.13).  The `T` statement
 is symmetric. `\square`
 
@@ -209,7 +209,7 @@ components `S_r` by choosing one component of `C_+-e_r` for each edge.
 ### Theorem C20.3 (disjoint bridge-side budget)
 
 Suppose the chosen components `S_1,...,S_k` are pairwise vertex-disjoint.  Then
-$$
+```math
 \boxed{
 \sum_{r=1}^k\alpha_{e_r}
 \le
@@ -218,17 +218,17 @@ $$
 \le2D.
 }
 \tag{C20.17}
-$$
+```
 
 #### Proof
 
 For each `r`, Theorem C20.2 and the triangle inequality give
-$$
+```math
 \alpha_{e_r}
 =\left|\sum_{b\in B_{S_r}}g_b\right|
 \le\sum_{b\in B_{S_r}}|g_b|.
 \tag{C20.18}
-$$
+```
 The vertex-disjointness of the `S_r` makes the boundary-reaction sets `B_{S_r}`
 pairwise disjoint.  Summing (C20.18) and using the definition of `P_*` proves
 (C20.17). `\square`
@@ -242,22 +242,22 @@ Contract every maximal 2-edge-connected subgraph of `C_+` to obtain its bridge t
 For each leaf edge choose the component on the leaf side.  These leaf-side components
 are pairwise disjoint (with the one-edge bridge-tree case handled by choosing either
 orientation once).  Therefore
-$$
+```math
 \boxed{
 \sum_{e\in E_{\rm leaf}}\alpha_e\le P_*\le2D.
 }
 \tag{C20.19}
-$$
+```
 
 Since the total positive contact stress is `D^2`,
-$$
+```math
 \boxed{
 \frac{\sum_{e\in E_{\rm leaf}}\alpha_e}
      {\sum_{e\in C_+}\alpha_e}
 \le\frac2D.
 }
 \tag{C20.20}
-$$
+```
 Thus asymptotically none of the normalized contact-stress mass can be carried by leaf
 bridges.
 
@@ -284,10 +284,10 @@ survivor must instead place `D^2-O(D)` stress in
 If a positive fraction `eta D^2` of the stress lies on bridges, root the bridge tree
 and group bridge edges by depth.  Each depth frontier is an antichain, so C20.3 gives
 at most `2D` stress per depth.  Hence the bridge tree must have depth at least
-$$
+```math
 \boxed{\frac{\eta D}{2}.}
 \tag{C20.21}
-$$
+```
 This is consistent with a long force-transmission chain and is not yet a
 contradiction, but it is now an exact reciprocal-geometric alternative rather than an
 unstructured articulation case.

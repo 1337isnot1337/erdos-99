@@ -25,38 +25,38 @@ Thus a constant fraction of one macroscopic carrier can be retained at inverse-d
 
 Work along a canonical Type-II survivor sequence and choose the harmonic cells `P_D` supplied by `C-HARMONIC-WRAPPING`. Let `mathcal R_D` be the full strict-rhombus complex carried by `P_D`, and let
 
-$$
+```math
 R_D:=|\mathcal R_D|,
 \qquad
 T_D:=\text{total number of local train segments in }\mathcal R_D.
-$$
+```
 
 The canonical carrier conclusions imply that there are fixed constants
 
-$$
+```math
 r>0,
 \qquad
 C_T>0
 \tag{90.1}
-$$
+```
 
 such that, for all sufficiently large members of the selected sequence,
 
-$$
+```math
 \boxed{R_D\ge rD^2,\qquad T_D\le C_TD.}
 \tag{90.2}
-$$
+```
 
 One may take `C_T=10 pi` from the coarse canonical Section-82 estimate `P_R<=20a`, because `2T_D=P_R`, `a<=q`, and `q<=pi D`. No use of Section 89 is needed.
 
 Canonical Section 68 gives a fixed constant `C_phase` such that the total acute-angle defect over the entire source satisfies
 
-$$
+```math
 \boxed{
 \sum_R\delta_R\le C_{phase}D.
 }
 \tag{90.3}
-$$
+```
 
 The sum over `mathcal R_D` is therefore bounded by the same quantity.
 
@@ -64,80 +64,80 @@ The sum over `mathcal R_D` is therefore bounded by the same quantity.
 
 Apply the canonical phase-circle cut. It deletes only `O(D)` crossing rhombi and assigns every remaining global train direction a real reduced phase
 
-$$
+```math
 x_\tau\in(s,s+\pi/3).
 \tag{90.4}
-$$
+```
 
 Every local train segment inherits the phase of its global train. Every retained oriented crossing edge `uv` satisfies
 
-$$
+```math
 x_v-x_u=\delta_e>0.
 \tag{90.5}
-$$
+```
 
 Also assign to each train the unique phase label
 
-$$
+```math
 \ell(\tau)\in\mathbb Z/3\mathbb Z
 \tag{90.6}
-$$
+```
 
 such that its projective direction is congruent to
 
-$$
+```math
 x_\tau+\ell(\tau){\pi\over3}\pmod\pi.
 \tag{90.7}
-$$
+```
 
 At every retained crossing the two labels are distinct. There are only three unordered label pairs.
 
 Because the phase cut deletes only `O(D)` rhombi, after increasing the lower threshold on `D` we may retain at least
 
-$$
+```math
 {3r\over4}D^2
 \tag{90.8}
-$$
+```
 
 carrier crossings.
 
 Fix a constant `K>0` and call a retained crossing **K-good** when
 
-$$
+```math
 \delta_e\le {K\over D}.
 \tag{90.9}
-$$
+```
 
 By (90.3), the number of retained crossings violating (90.9) is at most
 
-$$
+```math
 {C_{phase}D\over K/D}
 ={C_{phase}\over K}D^2.
 \tag{90.10}
-$$
+```
 
 Choose once and for all
 
-$$
+```math
 K\ge {4C_{phase}\over r}.
 \tag{90.11}
-$$
+```
 
 Then at least
 
-$$
+```math
 \boxed{{r\over2}D^2}
 \tag{90.12}
-$$
+```
 
 carrier crossings are K-good for all sufficiently large `D`.
 
 One unordered phase-label pair therefore supports at least
 
-$$
+```math
 \boxed{E_0\ge {r\over6}D^2}
 \tag{90.13}
-$$
+```
 
 K-good crossings. Denote the two corresponding train shores by `A` and `B`, and retain only those K-good crossing edges.
 
@@ -147,80 +147,80 @@ Canonical train pseudosegment geometry implies that two train segments cross at 
 
 Put
 
-$$
+```math
 h:={K\over D},
 \qquad
 W:=4h={4K\over D}.
 \tag{90.14}
-$$
+```
 
 For a shift `t in [0,W)`, partition the real reduced-phase axis into half-open bins
 
-$$
+```math
 I_j(t)=[t+jW,t+(j+1)W).
 \tag{90.15}
-$$
+```
 
 For one K-good edge `ab`, equation (90.5) gives
 
-$$
+```math
 |x_a-x_b|\le h.
-$$
+```
 
 As `t` is uniform in `[0,W)`, a bin boundary separates the two endpoint phases with probability exactly `|x_a-x_b|/W`, hence at most `1/4`. Therefore the expected number of K-good edges whose endpoints lie in one common bin is at least `3E_0/4`.
 
 Choose a shift attaining at least this expectation. Then the total number of **internal-bin** edges satisfies
 
-$$
+```math
 \boxed{
 E_{bin}\ge {r\over8}D^2.
 }
 \tag{90.16}
-$$
+```
 
 For each occupied bin `I_j`, let
 
-$$
+```math
 a_j:=|A\cap I_j|,
 \qquad
 b_j:=|B\cap I_j|,
 \qquad
 e_j:=\#\{K\text{-good edges internal to }I_j\}.
 \tag{90.17}
-$$
+```
 
 The total number of local train segments is at most `C_TD`, so
 
-$$
+```math
 \sum_j a_j\le C_TD,
 \qquad
 \sum_j b_j\le C_TD.
 \tag{90.18}
-$$
+```
 
 ## 90.3 One inverse-diameter phase bin has linear shores and quadratic crossing mass
 
 Set
 
-$$
+```math
 \gamma:={r\over8},
 \qquad
 \alpha:={\gamma\over4C_T}={r\over32C_T}.
 \tag{90.19}
-$$
+```
 
 Call a bin **large on both shores** when
 
-$$
+```math
 a_j\ge\alpha D,
 \qquad
 b_j\ge\alpha D.
 \tag{90.20}
-$$
+```
 
 The edges in bins with `a_j<alpha D` satisfy
 
-$$
+```math
 \sum_{a_j<\alpha D}e_j
 \le
 \sum_{a_j<\alpha D}a_jb_j
@@ -229,62 +229,62 @@ $$
 \le
 \alpha C_TD^2.
 \tag{90.21}
-$$
+```
 
 Among the remaining bins, those with `b_j<alpha D` similarly carry at most
 
-$$
+```math
 \alpha C_TD^2.
 \tag{90.22}
-$$
+```
 
 By the definition of `alpha`, the two small-shore classes together carry at most
 
-$$
+```math
 2\alpha C_TD^2={\gamma\over2}D^2.
 \tag{90.23}
-$$
+```
 
 Equation (90.16) therefore implies that bins large on both shores carry at least
 
-$$
+```math
 {\gamma\over2}D^2
 \tag{90.24}
-$$
+```
 
 K-good edges in total.
 
 There are at most
 
-$$
+```math
 {C_TD\over\alpha D}={C_T\over\alpha}
 ={4C_T^2\over\gamma}
 \tag{90.25}
-$$
+```
 
 such bins. Hence one bin `I_*` satisfies simultaneously
 
-$$
+```math
 \boxed{|A_*|,|B_*|\ge\alpha D}
 \tag{90.26}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 e(A_*,B_*)\ge\eta D^2,}
 \qquad
 \eta:={\gamma^2\over8C_T^2}>0.
 \tag{90.27}
-$$
+```
 
 Every train in `A_* union B_*` has reduced phase in the same interval `I_*` of length
 
-$$
+```math
 \boxed{|I_*|={4K\over D}.}
 \tag{90.28}
-$$
+```
 
 Every edge counted in (90.27) is an actual strict-rhombus crossing inside the same harmonic cell and has individual angular defect at most `K/D`.
 
@@ -294,41 +294,41 @@ This is already an explicit dense inverse-diameter phase core. It does not use a
 
 The core can be made robust. Let
 
-$$
+```math
 N_*:=|A_*|+|B_*|\le 2C_TD.
 \tag{90.29}
-$$
+```
 
 Starting from the graph in (90.27), repeatedly delete any vertex whose current degree is smaller than
 
-$$
+```math
 \kappa D,
 \qquad
 \kappa:={\eta\over2C_T}>0.
 \tag{90.30}
-$$
+```
 
 If every vertex were deleted, the total number of deleted edges would be strictly less than
 
-$$
+```math
 N_*\kappa D
 \le 2C_TD\,{\eta\over2C_T}D
 =\eta D^2,
-$$
+```
 
 contradicting (90.27). Thus a nonempty bipartite subgraph `G_*` survives and obeys
 
-$$
+```math
 \boxed{\delta(G_*)\ge\kappa D.}
 \tag{90.31}
-$$
+```
 
 Consequently both surviving shores have at least `kappa D` vertices, and
 
-$$
+```math
 \boxed{e(G_*)\ge\kappa^2D^2.}
 \tag{90.32}
-$$
+```
 
 All surviving train reduced phases remain in the same interval of width `4K/D`, and every retained edge remains K-good.
 

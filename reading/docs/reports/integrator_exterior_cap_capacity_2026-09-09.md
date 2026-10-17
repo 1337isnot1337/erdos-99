@@ -31,10 +31,10 @@ convex hull `F=conv E` is two-dimensional. In particular, `E` may be the endpoin
 set of a selected normalized KKT diameter support, or the full actual diameter
 endpoint set in C-II. Write
 
-$$
+```math
 a_0=\sqrt3/2,\quad P_K=\operatorname{per}(K),\quad
 P_F=\operatorname{per}(F),\quad Z=|A\setminus F|.
-$$
+```
 
 The desired bridge is
 
@@ -65,15 +65,15 @@ The caps have pairwise disjoint interiors and partition `K\F` up to their chord
 boundaries. Every external source point belongs to exactly one cap away from its
 closing chord. If `A_i=area(K_i)` and `P_i=per(K_i)`, then
 
-$$
+```math
 \sum_i A_i=\operatorname{area}(K)-\operatorname{area}(F),
 \tag{EC.1}
-$$
+```
 
-$$
+```math
 \sum_i P_i=P_K+P_F-2P_{\rm com}.
 \tag{EC.2}
-$$
+```
 
 ### Proof
 
@@ -97,19 +97,19 @@ Let `z_i` count the external source points assigned to `K_i`, so `sum z_i=Z`.
 The two chord endpoints are additional, distinct source points. Applying Oler
 to these `z_i+2` points inside the convex cap gives
 
-$$
+```math
 z_i\le A_i/a_0+P_i/2-1.
 \tag{EC.3}
-$$
+```
 
 Summing EC.3 proves
 
-$$
+```math
 \boxed{Z\le
 \frac{\operatorname{area}(K)-\operatorname{area}(F)}{a_0}
 +\frac{P_K+P_F}{2}-P_{\rm com}-k.}
 \tag{EC.4}
-$$
+```
 
 No source points are deleted in this argument. Endpoints shared by several
 containers are counted separately within each Oler application and canceled
@@ -117,46 +117,46 @@ explicitly by the `-k` and perimeter terms.
 
 Since both hulls have diameter at most `D`, EC.4 gives the simpler bound
 
-$$
+```math
 \boxed{Z\le
 \frac{\pi D^2/4-\operatorname{area}(F)}{a_0}+\pi D.}
 \tag{EC.5}
-$$
+```
 
 ## 4. Theorem EP — the external density equals the missing area density
 
 The strict global comparison `D(n)^2<(2sqrt(3)/pi)n` gives
 `n>pi D^2/(4a_0)`. Oler inside `F` gives
 
-$$
+```math
 n-Z\le\operatorname{area}(F)/a_0+P_F/2+1.
-$$
+```
 
 Thus
 
-$$
+```math
 Z>\frac{\pi D^2/4-\operatorname{area}(F)}{a_0}-P_F/2-1.
 \tag{EP.1}
-$$
+```
 
 Combining with EC.5,
 
-$$
+```math
 \boxed{-\pi D/2-1
 < Z-\frac{\pi D^2/4-\operatorname{area}(F)}{a_0}
 \le\pi D.}
 \tag{EP.2}
-$$
+```
 
 The stronger canonical `n-1` comparison improves the harmless constant `1`, but
 is not needed here. In particular, for any unbounded sequence of global sources,
 
-$$
+```math
 \boxed{\frac{Z}{D^2}
 =\frac{2}{\sqrt3}\left(\frac\pi4-
 \frac{\operatorname{area}(F)}{D^2}\right)+O(D^{-1}),}
 \tag{EP.3}
-$$
+```
 
 uniformly over the chosen extreme-vertex subsets `E`.
 
@@ -171,19 +171,19 @@ using that direction. EC supplies the needed missing upper direction.
 For a convex body `L` containing a specified unit-separated population `N_L`,
 write its dimensionless Oler slack as
 
-$$
+```math
 \sigma(L,N_L)=\operatorname{area}(L)/a_0+
 \operatorname{per}(L)/2+1-N_L\ge0.
-$$
+```
 
 Let `sigma_K=sigma(K,n)`, `sigma_F=sigma(F,n-Z)`, and
 `sigma_i=sigma(K_i,z_i+2)`. Then
 
-$$
+```math
 \boxed{\sigma_F+\sum_i\sigma_i
 =\sigma_K+P_F-P_{\rm com}-k.}
 \tag{ES.1}
-$$
+```
 
 ### Proof
 
@@ -194,25 +194,25 @@ population is `(n-Z)+sum(z_i+2)=n+2k`. Substitution gives ES.1. QED.
 Global optimality and isodiametry imply
 `sigma_K<P_K/2+1`. Consequently
 
-$$
+```math
 \boxed{0\le\sigma_F+\sum_i\sigma_i
 < P_K/2+P_F-P_{\rm com}-k+1
 \le3\pi D/2+1.}
 \tag{ES.2}
-$$
+```
 
 This transports Target B's exact shell accounting into Target A's finite
 container-capacity language on the actual Target C source. If `alpha_1(L)` is
 the maximum unit-separated population in `L`, then Oler also gives
 
-$$
+```math
 0\le\alpha_1(F)-(n-Z)\le\sigma_F,
-$$
+```
 
-$$
+```math
 0\le\alpha_1(K_i)-(z_i+2)\le\sigma_i.
 \tag{ES.3}
-$$
+```
 
 Therefore the sum of these independent container-capacity deficits is bounded
 by ES.2. This is not a simultaneous realizability claim: separate optimal cap
@@ -221,10 +221,10 @@ packings may collide across their shared interfaces.
 For any cap sequence with `A_i=Omega(D^2)`, the uniform perimeter bound from
 EC.2 and ES.2 imply
 
-$$
+```math
 z_i=A_i/a_0+O(D).
 \tag{ES.4}
-$$
+```
 
 Thus every macroscopic external cap is filled at asymptotically triangular bulk
 density. Exact unit triangles need not occur: the near-equilateral equality
@@ -236,19 +236,19 @@ Under the additional report-level DB assumptions, the
 [ambient-force theorem](integrator_ambient_force_geometry_2026-09-09.md), AD.4,
 gives `liminf area(F)/D^2>=A_int=0.6184708847...`. Hence EP.3 gives
 
-$$
+```math
 \boxed{\limsup\frac{Z_{\rm ext}}{D^2}\le
 \frac{2}{\sqrt3}\left(\frac\pi4-A_{\rm int}\right).}
 \tag{EN.1}
-$$
+```
 
 Since `n/D^2 -> pi/(2sqrt(3))`, equivalently
 
-$$
+```math
 \boxed{\limsup\frac{Z_{\rm ext}}n
 \le1-\frac{4A_{\rm int}}\pi<0.213.}
 \tag{EN.2}
-$$
+```
 
 Over 78.7 percent of the source population is therefore inside the force hull
 in this conditional regime. These points need not be in the force-carrying

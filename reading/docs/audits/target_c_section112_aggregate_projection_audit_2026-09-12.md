@@ -15,23 +15,23 @@ The key improvement is to retain the full principal-corridor endpoint mass from 
 disjoint phase families before selecting a corridor. At `sigma=10^-3`, the leakage
 bound with `h=0.0413` leaves
 
-$$
+```math
 P=0.0836069307802826\ldots
-$$
+```
 
 principal endpoint density per family. The two-family metric argument forces aggregate
 projection cost at least
 
-$$
+```math
 P\,2\left(1-\cos\frac{m}{2}\right)
 =0.0017800942587230\ldots,
-$$
+```
 
 while the available route slack is only `0.001`. The resulting carrier coefficient is
 
-$$
+```math
 \mu_{16}=0.9760638978066385\ldots .
-$$
+```
 
 This remains conditional on proof-only Sections 107 and 111 and the audited Section-104
 leakage theorem. It excludes only the full-core branch under the stated cap; it does

@@ -68,16 +68,16 @@ Use a symmetric `2x2` strain `E` and periodic label velocities `v_i`, modulo
 their common translation. There are `3+2N-2=2N+1` variables. For a contact
 vector `r=p_j+Bz-p_i`, impose the bar equation
 
-$$
+```math
 r\mathbin\cdot(Er+v_j-v_i)=0.
-$$
+```
 
 There are at most `2N` equations, so a nonzero solution exists. If necessary
 reverse its sign to obtain `tr(E)<=0`. Define
 
-$$
+```math
 B(t)=(I+tE)B,\qquad p_i(t)=(I+tE)p_i+t v_i.
-$$
+```
 
 Every old contact vector becomes `r+t w`, where `w=Er+v_j-v_i`, and its squared
 length is exactly `1+t^2|w|^2`. Thus all old lower constraints hold at finite
@@ -88,9 +88,9 @@ periodic velocities.
 
 For a symmetric matrix,
 
-$$
+```math
 {\det B(t)\over\det B}=1+t\operatorname{tr}E+t^2\det E.
-$$
+```
 
 If the trace is negative, area strictly decreases for small positive `t`.
 If it is zero and `E!=0`, symmetry gives `det E<0`, again strictly decreasing
@@ -110,9 +110,9 @@ artifact unreviewed.
 
 Let `u,v` be unit vectors with `u.v=-1/7`, and use periods
 
-$$
+```math
 g_1=3u+v,\qquad g_2=u+3v.
-$$
+```
 
 Their squared lengths are `64/7`, and their mutual inner product is `32/7`,
 so this period cell is triangular. There are eight lattice labels modulo the
@@ -132,19 +132,19 @@ limiting infinitesimal strut motion, which was just excluded.
 
 Nevertheless take, in Cartesian coordinates,
 
-$$
+```math
 u=(1,0),\quad v=(-1/7,4\sqrt3/7),\qquad
 E=\begin{pmatrix}0&2\sqrt3\\2\sqrt3&1\end{pmatrix}.
-$$
+```
 
 Both `u.Eu` and `v.Ev` vanish. Apply `I-tE` and divide all lengths, including
 the periods, by `sqrt(1+12t^2)`. The new unit-basis inner product and cell-area
 ratio are
 
-$$
+```math
 c(t)={-1-48t+12t^2\over7(1+12t^2)},\qquad
 a(t)={1-t-12t^2\over1+12t^2}.
-$$
+```
 
 For `0<t<1/18`, one has `-1/2<c(t)<-1/7` and `0<a(t)<1`.
 At `t=1/18`, `c=-1/2` and `a=7/8`, and unit triangles appear.
@@ -152,9 +152,9 @@ At `t=1/18`, `c=-1/2` and `a=7/8`, and unit triangles appear.
 All infinitely many lower pair constraints hold. For any integer pair
 `(a,b)!=(0,0)` and `|c|<=1/2`,
 
-$$
+```math
 |au+bv|^2=a^2+b^2+2cab\ge a^2+b^2-|ab|\ge1.
-$$
+```
 
 In the open angle interval only `(+/-1,0),(0,+/-1)` give equality. Thus the
 entire initial segment is triangle-free and strictly denser, despite the
@@ -166,15 +166,15 @@ initial fixed-cell collective jamming. The period-cell shape changes.
 
 For the same basis, the finite `m by m` crop
 
-$$
+```math
 P_m(c)=\{iu+jv:0\le i,j\le m\}
-$$
+```
 
 has `(m+1)^2` labels, minimum distance one, and diameter squared
 
-$$
+```math
 d(P_m(c))^2=2m^2(1+|c|).
-$$
+```
 
 Convexity of squared norm puts the maximum on the corners of the difference
 box `[-m,m]^2`, proving the formula. The cell-compression path of Section 3
@@ -186,9 +186,9 @@ square, which is triangle-free. A symmetric shear followed by normalization
 to unit sides decreases the square-lattice cell area but changes this finite
 square's diameter squared to
 
-$$
+```math
 {2(1+|t|)^2\over1+t^2}>2\quad(0<|t|<1).
-$$
+```
 
 To check optimality of the old square, any convex quadrilateral has an angle
 at least `pi/2`, whose opposite diagonal has length at least `sqrt(2)` by the
@@ -211,9 +211,9 @@ at most **three distinct old diameter pairs**.
 
 Indeed
 
-$$
+```math
 |\lambda+q-p|\ge|\lambda|-|q-p|\ge(D+1)-D=1.
-$$
+```
 
 Equality requires a shortest lattice vector of length `D+1` and an old
 diameter vector antiparallel to it. Distinct shortest lattice vectors have
@@ -225,9 +225,9 @@ There can be at most one old diameter pair per unoriented direction. If two
 different such pairs are `p,p+Du` and `q,q+Du`, with `w=q-p!=0`, then the two
 cross-pair squared distances have sum
 
-$$
+```math
 |Du+w|^2+|Du-w|^2=2D^2+2|w|^2>2D^2,
-$$
+```
 
 contrary to diameter `D`. This proves the bound. If the shortest lattice
 vector is strictly longer than `D+1`, there are no cross-copy unit contacts.

@@ -56,13 +56,13 @@ The load-bearing inputs are:
 
 Let `W` be any nonempty subset of `B`. Define
 
-$$
+```math
 f_b(s)=\sum_{h\ni b}\beta_h,\quad
 F_b=P\cap\{f_b=0\},\quad
 P_0=\bigcap_{b\in W}F_b,\quad
 E_0=H[B\setminus W],\quad b_0=|E_0|.
 \tag{AC1}
-$$
+```
 
 All these are actual source objects. Each `f_b` is affine and
 nonnegative on `P`. `P_0` is an exposed face, possibly empty.
@@ -71,10 +71,10 @@ nonnegative on `P`. `P_0` is an exposed face, possibly empty.
 
 Equilibrium is
 
-$$
+```math
 R_C^T\alpha=R_H^T\beta.
 \tag{AC2}
-$$
+```
 
 If two stresses have the same `beta`, their contact difference
 satisfies `R_C^T(delta alpha)=0`. Since `rank R_C=e`, that
@@ -84,10 +84,10 @@ on the full affine equilibrium space.
 Every stress in `P_0` has `beta` supported in `E_0` and normalized
 by `sum beta=1`. If `P_0` is nonempty, necessarily `b_0>=1` and
 
-$$
+```math
 \boxed{\dim_{\rm aff}P_0\le b_0-1.}
 \tag{AC3}
-$$
+```
 
 The canonical relative-interior stress is positive on every actual
 diameter row. Since `W` is nonempty, `P_0` is also a proper face of
@@ -105,27 +105,27 @@ Let `f_w,g_y` be finite families of nonnegative affine functions
 on `P`. Put `P_0=P intersect all {f_w=0}`. Suppose `P_0` is
 nonempty of dimension `p` and
 
-$$
+```math
 P_0\cap\bigcap_y\{g_y=0\}=\varnothing.
 \tag{AC4}
-$$
+```
 
 Choose an inclusion-minimal set `Y_0` whose `g_y` zero faces
 already have empty intersection with `P_0`, and write `k=|Y_0|`.
 For every `i in Y_0` minimality gives a witness `s_i in P_0` with
 
-$$
+```math
 g_i(s_i)>0,\qquad g_j(s_i)=0\quad(j\ne i,\ j\in Y_0).
 \tag{AC5}
-$$
+```
 
 Applying the `g_j` to an affine dependence of these witnesses
 shows that they are affinely independent. Hence
 
-$$
+```math
 k\le p+1.
 \tag{AC6}
-$$
+```
 
 Let `F=P intersect all_{i in Y_0}{g_i=0}`. If `F` is empty,
 `Y_0` alone kills every point of `P` and `k<=p+1<=d+1`.
@@ -135,20 +135,20 @@ the vectors `s_j-t` as a diagonal matrix with strictly positive
 diagonal. They therefore have rank `k` on the affine direction
 space of `P`. Consequently
 
-$$
+```math
 \boxed{\dim_{\rm aff}F\le d-k.}
 \tag{AC7}
-$$
+```
 
 Because `F intersect P_0` is empty, finite Helly on `F` selects
 at most `dim F+1<=d-k+1` of the `f_w` zero faces whose
 intersection with `F` is empty. Call their indices `W_0`.
 Thus
 
-$$
+```math
 \boxed{|Y_0|\le p+1,\qquad |Y_0|+|W_0|\le d+1.}
 \tag{AC8}
-$$
+```
 
 The codimension step is essential: simply adding two independent
 Helly bounds would add `p+1` to the total deletion budget.
@@ -157,10 +157,10 @@ Helly bounds would add `p+1` to the total deletion budget.
 
 For every `r in I` define
 
-$$
+```math
 g_r(s)=\sum_{c\ni r}\alpha_c.
 \tag{AC9}
-$$
+```
 
 These are nonnegative affine functions. A stress with every
 `g_r=0` is supported wholly on loaded vertices. Audit.111 says
@@ -171,10 +171,10 @@ Thus AC4 holds with the actual unloaded label set `I`.
 If `P_0` is nonempty, apply Sections 3–4. There are `Y_0 subset I`
 and `U subset W` such that
 
-$$
+```math
 \boxed{|Y_0|\le\min\{b_0,s_Z\},\qquad |Y_0|+|U|\le s_Z+1,}
 \tag{AC10}
-$$
+```
 
 and no normalized source stress has both zero contact reaction
 on `Y_0` and zero diameter reaction on `U`.
@@ -183,14 +183,14 @@ If `P_0` is empty, ordinary Helly gives `U subset W`,
 `|U|<=s_Z+1`, and take `Y_0` empty. Therefore for every nonempty
 actual loaded set `W` there is a deletion `R=U union Y_0` with
 
-$$
+```math
 \boxed{
 |R|\le s_Z+1,\qquad
 R\cap B\subseteq W,\qquad
 |R\cap I|\le\min\{b_0,s_Z\}.
 }
 \tag{AC11}
-$$
+```
 
 Every normalized stress on the retained source extends by zero to
 a source stress with all the deleted incident coefficients zero.

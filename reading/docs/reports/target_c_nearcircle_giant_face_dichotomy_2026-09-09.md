@@ -25,17 +25,17 @@ Facewise Oler then forces a macroscopic convex exceptional face.
 
 Precisely, if
 
-$$
+```math
 \zeta:=\liminf\frac{n-v}{D^2}>0,
-$$
+```
 
 then along a subsequence some bounded exceptional face has perimeter
 
-$$
+```math
 \boxed{
  k_{max}\ge\left(\frac{2\sqrt3}{5}\zeta-o(1)\right)D.
 }
-$$
+```
 
 Thus the `x_B=o(D)` endpoint has only two population regimes:
 
@@ -54,11 +54,11 @@ Let `v=|V(C)|` be the C65 positive contact-core population. Every source point o
 
 Therefore exactly
 
-$$
+```math
 \boxed{
 n-v=Z_{def}+Z_{in}+Z_{ext}.}
 \tag{1.1}
-$$
+```
 
 Quadrilateral contact faces contain no isolated points in this decomposition; all bounded-face rattlers lie in exceptional faces.
 
@@ -68,49 +68,49 @@ Quadrilateral contact faces contain no isolated points in this decomposition; al
 
 Assume
 
-$$
+```math
 x_B=o(D).
-$$
+```
 
 OW proves
 
-$$
+```math
 Z_{in}
 \le\frac8{\pi\sqrt3}x_B^2
 =o(D^2).
 \tag{2.1}
-$$
+```
 
 DC proves
 
-$$
+```math
 Z_{ext}=o(D^2).
 \tag{2.2}
-$$
+```
 
 Hence (1.1) becomes
 
-$$
+```math
 \boxed{
 Z_{def}=n-v-o(D^2).
 }
 \tag{2.3}
-$$
+```
 
 In particular, if along a subsequence
 
-$$
+```math
 n-v\ge(\zeta-o(1))D^2
-$$
+```
 
 for some `zeta>0`, then
 
-$$
+```math
 \boxed{
 Z_{def}\ge(\zeta-o(1))D^2.
 }
 \tag{2.4}
-$$
+```
 
 ---
 
@@ -124,51 +124,51 @@ Let `f` be one bounded exceptional contact face. C51 makes its closure a strict 
 
 The `k_f+z_f` points consisting of its boundary vertices and assigned isolated points are unit-separated inside the convex body `f`. Oler gives
 
-$$
+```math
 k_f+z_f
 \le
 \frac2{\sqrt3}A_f+rac12k_f+1.
-$$
+```
 
 Therefore
 
-$$
+```math
 z_f
 \le
 \frac2{\sqrt3}A_f+1-\frac{k_f}{2}
 \le
 \frac2{\sqrt3}A_f,
-$$
+```
 
 because `k_f>=5`.
 
 Thus
 
-$$
+```math
 \boxed{
 A_f\ge\frac{\sqrt3}{2}z_f.
 }
 \tag{3.1}
-$$
+```
 
 Summing over all exceptional faces,
 
-$$
+```math
 \boxed{
 A_{exc}:=\sum_fA_f
 \ge\frac{\sqrt3}{2}Z_{def}.
 }
 \tag{3.2}
-$$
+```
 
 Hence (2.4) implies
 
-$$
+```math
 A_{exc}
 \ge
 \left(\frac{\sqrt3}{2}\zeta-o(1)\right)D^2.
 \tag{3.3}
-$$
+```
 
 ---
 
@@ -176,44 +176,44 @@ $$
 
 Let
 
-$$
+```math
 Q=\sum_f(k_f-4).
-$$
+```
 
 If `f_count` is the number of exceptional faces, their total perimeter is
 
-$$
+```math
 K_{exc}:=\sum_fk_f
 =Q+4f_{count}.
-$$
+```
 
 Since every exceptional face has `k_f>=5`,
 
-$$
+```math
 f_{count}\le Q,
-$$
+```
 
 so
 
-$$
+```math
 K_{exc}\le5Q.
 \tag{4.1}
-$$
+```
 
 DB proves post-ZF
 
-$$
+```math
 Q<\pi D+O(1).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 K_{exc}\le5\pi D+O(1).
 }
 \tag{4.2}
-$$
+```
 
 ---
 
@@ -221,34 +221,34 @@ $$
 
 Let
 
-$$
+```math
 k_{max}:=\max_fk_f.
-$$
+```
 
 Every exceptional face is convex, so the isoperimetric inequality gives
 
-$$
+```math
 A_f\le\frac{k_f^2}{4\pi}.
-$$
+```
 
 Hence
 
-$$
+```math
 A_{exc}
 \le
 \frac1{4\pi}\sum_fk_f^2
 \le
 \frac{k_{max}}{4\pi}K_{exc}.
 \tag{5.1}
-$$
+```
 
 Combine (3.3) and (4.2):
 
-$$
+```math
 \left(\frac{\sqrt3}{2}\zeta-o(1)\right)D^2
 \le
 \left(\frac54+o(1)\right)k_{max}D.
-$$
+```
 
 Therefore:
 
@@ -256,30 +256,30 @@ Therefore:
 
 If `x_B=o(D)` and
 
-$$
+```math
 \liminf\frac{n-v}{D^2}=\zeta>0,
-$$
+```
 
 then along a subsequence
 
-$$
+```math
 \boxed{
 \liminf\frac{k_{max}}D
 \ge\frac{2\sqrt3}{5}\zeta.
 }
 \tag{GF.1}
-$$
+```
 
 Since any convex body of perimeter `k` has diameter at least `k/pi`, the same face has
 
-$$
+```math
 \boxed{
 \operatorname{diam}(f)
 \ge
 \left(\frac{2\sqrt3}{5\pi}\zeta-o(1)\right)D.
 }
 \tag{GF.2}
-$$
+```
 
 Thus the invisible quadratic population cannot be dispersed among microscopic defect faces.
 
@@ -289,7 +289,7 @@ Thus the invisible quadratic population cannot be dispersed among microscopic de
 
 Before using `Q<=pi D`, (3.3), (4.1), and (5.1) give
 
-$$
+```math
 k_{max}
 \ge
 \frac{4\pi A_{exc}}{5Q}
@@ -300,18 +300,18 @@ k_{max}
 -o(1)
 \right)D.
 \tag{6.1}
-$$
+```
 
 Thus if `Q/D->xi>0`,
 
-$$
+```math
 \boxed{
 \liminf\frac{k_{max}}D
 \ge
 \frac{2\pi\sqrt3}{5\xi}\zeta.
 }
 \tag{6.2}
-$$
+```
 
 The universal coefficient in GF.1 is the weaker specialization `xi<=pi`.
 
@@ -323,13 +323,13 @@ GF leaves exactly two branches in the DG endpoint.
 
 ### Branch I — full core
 
-$$
+```math
 n-v=o(D^2).
-$$
+```
 
 Then the existing DE/DF train asymptotics apply directly. In addition DG/DC already provide the stronger near-circle boundary profile
 
-$$
+```math
 q/D\to\pi,
 \quad
 per(F)/D\to\pi,
@@ -337,7 +337,7 @@ per(F)/D\to\pi,
 area(F)/D^2\to\pi/4,
 \quad
 e_{BB}/D\to\pi.
-$$
+```
 
 ### Branch II — giant defect face
 

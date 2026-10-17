@@ -23,16 +23,16 @@
 
 The canonical sufficient endpoint is
 
-$$
+```math
 \zeta=|C^\partial|-\operatorname{rank}S\ge
 s=\Delta_\Lambda-d_{\rm int}.
-$$
+```
 
 Section 175 supplies the alternative sufficient inequality
 
-$$
+```math
 |O_{\rm iso}|+\sum_i(|O_i|-|C_i|)_+\ge j_*+|T_Z|.
-$$
+```
 
 The attempted bridge was to force a positive Schur nullity from a **coembedded**
 locked positive-contact network, exact maximum packing in the response hull, and
@@ -51,18 +51,18 @@ global minimum-diameter response optimum and its coupling to a triangle-free sou
 
 Write
 
-$$
+```math
 e_1=(1,0),\quad e_2=(1/2,\sqrt3/2),\quad
 \Lambda=\mathbb Ze_1+\mathbb Ze_2,
 \quad Q(i,j)=i^2+ij+j^2.
-$$
+```
 
 For every integer `m>=2`, put
 
-$$
+```math
 X_m=\{ie_1+je_2:\max(|i|,|j|,|i+j|)\le m\},
 \qquad K_m=\operatorname{conv}X_m.
-$$
+```
 
 There is a nonempty **open** set `U` of response translations, independent of `m`,
 such that all of the following hold.
@@ -74,18 +74,20 @@ such that all of the following hold.
    velocity cone is `{0}`. In particular every unit triangle is universally locked.
    The labeled placement is locally isolated among feasible packings in this hull.
 3. In the actual radial conflict graph
-   $$
+   ```math
    G_m\subseteq X_m\times Y_m,\quad
    Y_m=(\Lambda+v)\cap\operatorname{int}(K_m+\mathbb B),
    \quad xy\in E(G_m)\iff |x-y|<1,
-   $$
+   
+   ```
    put `Z_m=(Lambda+v) cap int K_m` and `O_m=Y_m\setminus Z_m`.
    Then
-   $$
+   ```math
    |Z_m|=3m^2,\quad d_{\rm int}=0,\quad
    |C^\partial|=3m+1,\quad
    \boxed{\operatorname{rank}S_m=3m+1,\quad\zeta_m=0.}
-   $$
+   
+   ```
    These rank statements hold for **every assignment of nonzero real edge entries**
    to the incidence matrix, not only generic independent entries.
 4. There is a positive-contact three-spoke fan from an interior unit triangle to
@@ -124,25 +126,25 @@ this regression.
 
 The hexagon has axial-coordinate vertices
 
-$$
+```math
 (m,0),(0,m),(-m,m),(-m,0),(0,-m),(m,-m).
-$$
+```
 
 Its six sides have length `m`. Its area is `3sqrt(3)m^2/2`, and its perimeter is
 `6m`. Counting successive hexagonal lattice shells gives
 
-$$
+```math
 |X_m|=1+\sum_{r=1}^m6r=3m^2+3m+1.
-$$
+```
 
 Distinct lattice differences have a positive integer squared norm `Q`, so the points
 are unit-separated. The canonical finite Oler inequality, shared Lemma 21.1, gives
 for any unit-separated `P subset K_m`
 
-$$
+```math
 |P|\le\frac{\operatorname{area}K_m}{\sqrt3/2}
 +\frac{\operatorname{per}K_m}{2}+1=3m^2+3m+1.
-$$
+```
 
 Thus the fixed-hull maximum is exact. The hull is a regular hexagon of circumradius
 `m`, with opposite vertices `2m` apart, so its diameter is `2m`.
@@ -153,11 +155,11 @@ No equality-uniqueness theorem for Oler is used or claimed.
 Use the six unnormalized facet covectors `+/-i`, `+/-j`, `+/-(i+j)`.
 Their Euclidean gradients, in the `e_1,e_2` basis, are
 
-$$
+```math
 \nabla i=(4/3,-2/3),\quad
 \nabla j=(-2/3,4/3),\quad
 \nabla(i+j)=(2/3,2/3).
-$$
+```
 
 Give every unit edge contact weight one. At a noncorner boundary point give its
 single active facet weight `3/2`; at a corner give each of its two active facets
@@ -166,9 +168,9 @@ converted to unit normals by multiplying the reaction weights by their lengths.
 
 The six full-lattice neighbor displacement vectors sum to zero. Therefore the force
 
-$$
+```math
 f_p=\sum_{q\in X_m:|p-q|=1}(p-q)
-$$
+```
 
 is the sum of the **missing** outward neighbor displacements. On the side `i=m`
 away from the corners it is `(2,-1)=(3/2)nabla i`; at the corner `(m,0)` it is
@@ -177,18 +179,18 @@ At every interior point it is zero. This proves equilibrium at every label.
 
 Let `u_p` be any fixed-hull infinitesimally feasible velocity. Every unit contact has
 
-$$
+```math
 (p-q)\cdot(u_p-u_q)\ge0,
-$$
+```
 
 and every active outward facet has `nabla phi dot u_p<=0`. Summing the contact
 variations and using equilibrium gives
 
-$$
+```math
 0\le\sum_{pq\in E_1(X_m)}(p-q)\cdot(u_p-u_q)
 =\sum_p f_p\cdot u_p
 =\sum_{p,f}\mu_{pf}\nabla\phi_f\cdot u_p\le0.
-$$
+```
 
 Every contact variation is consequently zero, and every positively weighted facet
 variation is zero. The elementary triangular faces triangulate the hexagon. A
@@ -211,26 +213,26 @@ of global uniqueness among all packings in the hull.
 
 Let `v=ae_1+be_2`. Take the following open set, independent of `m`:
 
-$$
+```math
 U=\{(a,b):0<a<b,\ a+b<1/10,
 \quad Q(a,b)<\min(b-a,2a+b,a+2b)\}.
-$$
+```
 
 It is nonempty: `(a,b)=(1/1000,2/1000)` belongs to it. Also `|v|<1/10`.
 
 For any lattice difference `k`, `|k+v|<1` holds exactly for
 
-$$
+```math
 \boxed{k\in\{0,-e_1,-e_2,e_1-e_2\}.}
-$$
+```
 
 Indeed for the three nonzero displayed differences the squared norms are respectively
 
-$$
+```math
 1-(2a+b)+Q(v),\quad
 1-(a+2b)+Q(v),\quad
 1+(a-b)+Q(v),
-$$
+```
 
 all strictly below one. The opposite unit directions have squared norm strictly above
 one. Every other nonzero lattice vector has length at least `sqrt(3)`, so the reverse
@@ -239,9 +241,9 @@ no source-to-lattice distance is zero or one.
 
 Every right vertex `z+v` therefore has source neighbors among
 
-$$
+```math
 z,\quad z+e_1,\quad z+e_2,\quad z-e_1+e_2,
-$$
+```
 
 with precisely those belonging to `X_m` retained. Equivalently every left source
 point has all four strict lattice neighbors. They all lie in `Y_m`, because their
@@ -255,10 +257,10 @@ points of `X_m`, precisely the three positive sides `i=m`, `j=m`, `i+j=m` transl
 outside the hull. Each side has `m+1` lattice points; the two neighboring corner
 overlaps are `(m,0)` and `(0,m)`, and there is no third overlap. Hence
 
-$$
+```math
 B=\{z\in X_m:z+v\in\operatorname{int}K_m\},\quad
 |X_m\setminus B|=3m+1,\quad |Z_m|=|B|=3m^2.
-$$
+```
 
 There are no response lattice sites on the hull boundary: each of `a,b,a+b` lies
 strictly between zero and one, while the old axial coordinates are integers.
@@ -272,9 +274,9 @@ to `B` is a perfect `Z_m`-basis matching.
 There is a stronger matrix certificate. Order the source indices and their own rows
 by the integer functional
 
-$$
+```math
 \ell(i,j)=i+2j,
-$$
+```
 
 breaking ties arbitrarily but identically on rows and columns. The selected square
 matrix with columns `X_m` and rows `X_m+v` is upper triangular. Its diagonal entries
@@ -289,16 +291,16 @@ independent. This is a valid Section-102 basis choice extending the deep basis, 
 
 Apply the Schur determinant identity to the exterior rows
 
-$$
+```math
 O_0=(X_m\setminus B)+v\subset O_m.
-$$
+```
 
 The square Schur minor on `O_0,C^partial` has determinant, up to the ordering sign,
 
-$$
+```math
 \det S_m[O_0,C^\partial]
 =\pm\frac{\det A[X_m+v,X_m]}{\det A[Z_m,B]}\ne0.
-$$
+```
 
 Thus `rank S_m=|C^partial|=3m+1` for every nonzero edge weighting. In particular the
 canonical generic matrix and its alternating gammoid have zero nullity. No KKT or
@@ -308,15 +310,15 @@ conductance weights have been identified with the generic matrix entries.
 
 Take the triangle with axial vertices `(0,0),(1,0),(0,1)`. Use these three spokes:
 
-$$
+```math
 (0,0),(-1,0),\ldots,(-m,0);
-$$
-$$
+```
+```math
 (1,0),(2,0),\ldots,(m,0);
-$$
-$$
+```
+```math
 (0,1),(-1,2),\ldots,(1-m,m).
-$$
+```
 
 They are vertex-disjoint, including their three distinct starting points. Each stops
 at its first hull vertex. The triangle vertices are interior when `m>=2`. Together
@@ -330,9 +332,9 @@ triangle's vertices lie in that triangle and properly cross no old lattice conta
 The radial segment from `z-e_1+e_2` crosses exactly the short lozenge diagonal
 `[z,z+e_2]`; in axial coordinates the crossing point is
 
-$$
+```math
 z+\frac{a+b}{1+a}e_2,
-$$
+```
 
 strictly inside that diagonal. If this fourth old neighbor is absent, the crossing
 edge is simply absent. These are all radial edges, so this classifies **all** their
@@ -371,9 +373,9 @@ fan. It does not claim sector uniqueness for exterior sinks.
 Let `L` be the linear part of an affine map whose image of `X_m` is unit-separated.
 The source contains unit pairs in each direction `e_1,e_2,e_1-e_2`. Thus
 
-$$
+```math
 |Le_1|,|Le_2|,|L(e_1-e_2)|\ge1.
-$$
+```
 
 It also contains opposite hexagon corners whose differences are `2m` times those
 three directions. The image diameter is at least `2m`. This is an exact restriction
@@ -384,25 +386,25 @@ and covering radius `r_0=1/sqrt(3)`. The cells of lattice sites in the closed di
 `B(0,R)` cover `B(0,R-r_0)`: a nearest lattice site to any point in the latter disk
 is at distance at most `r_0` and has norm at most `R`. Therefore
 
-$$
+```math
 \#(\Lambda\cap\overline B(0,R))\ge
 \frac{\pi(R-r_0)^2}{a_0}.
-$$
+```
 
 Use the elementary strict bounds `pi>25/8`, `sqrt(3)<7/4`, and `r_0<3/5`. For
 `m>=32` this gives
 
-$$
+```math
 \#(\Lambda\cap\overline B(0,19m/20))
 >\frac{25}{7}\left(\frac{19m}{20}-\frac35\right)^2
 =\frac{(19m-12)^2}{112}.
-$$
+```
 
 The difference between the last quantity and `n_m` is
 
-$$
+```math
 \frac{25m^2-792m+32}{112}>0\qquad(m\ge32).
-$$
+```
 
 At `m=32` its numerator is `288`; its successive increment is `50m-767>0` for
 `m>=32`. Select any `n_m` sites in this disk. They are unit-separated and have
@@ -504,9 +506,9 @@ The smallest exact closing obligation remains: for a genuine Target A survivor, 
 the actual global-minimizer and triangle-free-source coupling to produce one generic
 phase and stress-generated fan with
 
-$$
+```math
 \boxed{|O_{\rm iso}|+\sum_i(|O_i|-|C_i|)_+\ge j_*+|T_Z|,}
-$$
+```
 
 or a same-cardinality strict-sub-diameter competitor. The independent zero-slack
 branch still needs its source-to-Schur or finite-descent bridge. The family supplies

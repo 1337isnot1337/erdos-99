@@ -19,9 +19,9 @@ The C37 attachment-incidence graph and the actual diameter graph have so far mos
 
 Let `J` be the planar bipartite attachment-incidence graph obtained by contracting every unloaded contact component and retaining one edge from that component node to each distinct loaded attachment. Let
 
-$$
+```math
 J_1,\ldots,J_s
-$$
+```
 
 be its connected components containing an unloaded node, and let `B_j` be the loaded boundary vertices belonging to `J_j`.
 
@@ -29,12 +29,12 @@ be its connected components containing an unloaded node, and let `B_j` be the lo
 
 At most one `J_j` can contain both endpoints of an actual diameter edge. Equivalently,
 
-$$
+```math
 \boxed{
 \#\{j:E(H[B_j])\ne\varnothing\}\le1.
 }
 \tag{AD.1}
-$$
+```
 
 Thus, except for one possible distinguished attachment-incidence block, every actual diameter edge incident to a terminal used by an unloaded component must leave that incidence block.
 
@@ -54,16 +54,16 @@ We use the following standard disk-topology fact.
 
 Let `X,Y` be two disjoint connected finite plane graphs embedded in a closed disk, with all their boundary vertices lying on the boundary circle. There do not exist distinct boundary vertices
 
-$$
+```math
 a,b\in X,
 \qquad c,d\in Y
-$$
+```
 
 occurring in alternating cyclic order
 
-$$
+```math
 a,c,b,d.
-$$
+```
 
 #### Proof
 
@@ -79,21 +79,21 @@ The same statement can be phrased as the familiar noncrossing-partition property
 
 Assume for contradiction that two distinct incidence components `J_i` and `J_j` each contain the endpoints of an actual diameter edge:
 
-$$
+```math
 ab\in E(H),\qquad a,b\in B_i,
-$$
+```
 
-$$
+```math
 cd\in E(H),\qquad c,d\in B_j.
-$$
+```
 
 The loaded sets `B_i` and `B_j` are disjoint because `J_i,J_j` are distinct connected components of the incidence graph. Hence the two diameter edges have four distinct endpoints.
 
 The full actual diameter graph of a planar point set is a straight-line convex geometric thrackle: any two diameter edges with disjoint endpoints cross. Therefore the chords `ab` and `cd` cross in the interior of the force hull. Their four endpoints consequently occur in alternating cyclic order on `partial F`, say
 
-$$
+```math
 a,c,b,d.
-$$
+```
 
 But `J_i` and `J_j` are disjoint connected plane subgraphs containing `a,b` and `c,d`, respectively. Lemma AD.1 forbids such alternating boundary pairs. Contradiction.
 
@@ -107,33 +107,33 @@ If a distinguished incidence block exists, denote it by `J_*` and its loaded set
 
 Every loaded terminal is incident to at least one actual diameter edge. Hence every terminal in
 
-$$
+```math
 \left(\bigcup_jB_j\right)\setminus B_*
-$$
+```
 
 is incident to a diameter edge that leaves its incidence block. In particular, if `h_cross` counts diameter edges whose endpoints do not lie in one common incidence block, then
 
-$$
+```math
 \boxed{
 2h_{cross}\ge q_{used}-|B_*|.
 }
 \tag{3.1}
-$$
+```
 
 This inequality is deliberately weak but unconditional: a cross-block diameter edge can serve two terminals from two different nondistinguished blocks.
 
 In the Woodall forest branch, the internal diameter graph `H[B_*]` is a forest, so
 
-$$
+```math
 |E(H[B_*])|\le |B_*|-1
-$$
+```
 whenever `B_*` is nonempty. Thus
 
-$$
+```math
 \boxed{
 h_{cross}\ge h-|B_*|+1.}
 \tag{3.2}
-$$
+```
 
 Neither (3.1) nor (3.2) is by itself a contradiction; their role is to prevent diameter edges from being distributed independently inside many attachment cells.
 
@@ -143,46 +143,46 @@ Neither (3.1) nor (3.2) is by itself a contradiction; their role is to prevent d
 
 In the `s_Z=0` circuit phase, the companion report proves the exact quotient ledger
 
-$$
+```math
 m_{cross}=2u_0+3s-2+\sum_{j=1}^s\delta_j,
 \tag{4.1}
-$$
+```
 
 outside the single-block/no-unused whole-circuit exception. Here `u_0=q-q_used`, `delta_j>=0`, and `m_cross` counts loaded-loaded mixed edges not internal to an incidence block.
 
 Split
 
-$$
+```math
 m_{cross}=h_{cross}+c_{cross},
 \tag{4.2}
-$$
+```
 
 where `c_cross` counts loaded-loaded unit contacts crossing the incidence-block partition or touching unused loaded vertices.
 
 AD.1 says every internal diameter edge is contained in the single possible block `B_*`. Therefore
 
-$$
+```math
 \boxed{
 c_{cross}
 =2u_0+3s-2+\sum_j\delta_j-h+h_*}
 \tag{4.3}
-$$
+```
 
 where
 
-$$
+```math
 h_*:=|E(H[B_*])|
-$$
+```
 (with `h_*=0` if no distinguished block exists).
 
 Since `c_cross>=0`, this records the exact feasibility condition
 
-$$
+```math
 \boxed{
 h-h_*
 \le2u_0+3s-2+\sum_j\delta_j.}
 \tag{4.4}
-$$
+```
 
 Conversely, if the right side of (4.3) has a positive linear lower bound after subtracting the maximum possible diameter payment, that lower bound is automatically loaded-contact currency `e_{BB}`.
 
@@ -198,11 +198,11 @@ AD.1 also does **not** bound the number of diameter edges between two different 
 
 Therefore the tempting implication
 
-$$
+```math
 \text{many incidence blocks}
 \Longrightarrow
 \text{many loaded-loaded contacts}
-$$
+```
 
 is not established by topology alone. The missing ingredient must constrain the cross-block diameter family by metric direction gaps, response transport, or the common contact-route block.
 
@@ -212,9 +212,9 @@ is not established by topology alone. The missing ingredient must constrain the 
 
 The companion forest report proves that vertex-disjoint diameter edges have projective direction separation at least
 
-$$
+```math
 4\arcsin\frac1{2D},
-$$
+```
 
 twice the generic shared-endpoint separation. Since AD.1 forces almost every diameter edge, in a multi-block attachment decomposition, to run between blocks rather than remain internal, this supplies a natural next coupling:
 

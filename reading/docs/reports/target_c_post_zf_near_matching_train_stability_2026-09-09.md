@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_post_zf_near_matching_train_stability_2026-09-09.md) · source SHA-256 `676140ba8863f14f57189fa28346c39e1a23c4b2693d305f689afdd7ef0eaaab`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-4E744BE863E4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — post-ZF near-matching train stability forces linear diameter branching
 
@@ -20,48 +22,48 @@ MC excludes the exact perfect-matching diameter graph. This report proves the qu
 
 Let
 
-$$
+```math
 \boxed{r_H:=2h-q
 =\sum_{b\in B_+}(\deg_H(b)-1)
 =x_B+Q+2s_Z.}
 \tag{NM.1}
-$$
+```
 
 Then every sufficiently large post-ZF survivor satisfies the exact finite inequality
 
-$$
+```math
 \boxed{
 3r_H\ge h-2.
 }
 \tag{NM.2}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 r_H\ge\frac{\lceil D\rceil-2}{3},}
 \tag{NM.3}
-$$
+```
 
 and, using DB's stronger diameter-edge density,
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\frac{r_H}{D}
 \ge\frac{2\rho}{3}
 =0.4927234221\ldots ,
 }
 \tag{NM.4}
-$$
+```
 
 where `rho` is the positive solution of `rho=cos rho`.
 
 Thus the low-branching regime
 
-$$
+```math
 2h-q=o(D)
-$$
+```
 
 is completely eliminated. The post-ZF diameter graph must carry a definite linear amount of degree excess above a perfect matching.
 
@@ -71,50 +73,50 @@ is completely eliminated. The post-ZF diameter graph must carry a definite linea
 
 Write the loaded force-hull vertices in cyclic order as
 
-$$
+```math
 b_1,\ldots,b_q.
-$$
+```
 
 The outer contact-face boundary walk encounters these extreme vertices in the same cyclic order, possibly with repeated vertices/bridge excursions between consecutive hull vertices. Choose one cyclic pass and split the outer walk into `q` subwalks
 
-$$
+```math
 W_i:b_i\leadsto b_{i+1}.
-$$
+```
 
 Let `ell_i` be the number of contact-edge occurrences in `W_i`. Every consecutive hull pair is distinct and every contact path has at least one edge, so
 
-$$
+```math
 ell_i\ge1.
-$$
+```
 
 Since
 
-$$
+```math
 b=q+x_B,
-$$
+```
 
 we have
 
-$$
+```math
 \sum_{i=1}^q(\ell_i-1)=x_B.
 \tag{1.1}
-$$
+```
 
 Call `W_i` **good** if `ell_i=1` and **bad** otherwise. Let `m_bad` be the number of bad intervals. Then
 
-$$
+```math
 m_{bad}\le x_B.
 \tag{1.2}
-$$
+```
 
 The total number of outer-walk edge occurrences lying in bad intervals is
 
-$$
+```math
 \sum_{W_i\ bad}\ell_i
 =m_{bad}+\sum_{W_i\ bad}(\ell_i-1)
 \le2x_B.
 \tag{1.3}
-$$
+```
 
 If `W_i` is good, its unique edge joins two consecutive vertices of the convex force hull. The straight segment between those vertices is the hull side itself. Hence every good interval is one **unit convex-hull side contact**.
 
@@ -132,27 +134,27 @@ Let
 
 Then
 
-$$
+```math
 Q=f+g_F.
 \tag{2.1}
-$$
+```
 
 The total boundary length of all exceptional bounded faces is not merely bounded by `5Q`; it is exactly
 
-$$
+```math
 \boxed{
 L_{exc}:=\sum_{F\ exc}\deg F
 =5f+g_F.
 }
 \tag{2.2}
-$$
+```
 
 Every rhombic train end not on the outer contact face lies on an edge incident to a bounded nonquadrilateral face. Counting by face incidences therefore gives at most
 
-$$
+```math
 5f+g_F
 \tag{2.3}
-$$
+```
 
 such bad train-end incidences.
 
@@ -171,19 +173,19 @@ A strict convex polygon has strictly increasing oriented edge direction around i
 
 Take two good trains with projective directions represented by
 
-$$
+```math
 0\le\theta_i<\theta_j<\pi.
-$$
+```
 
 Their four oriented hull-side directions occur cyclically as
 
-$$
+```math
 \theta_i,
 \theta_j,
 \theta_i+\pi,
 \theta_j+\pi.
 \tag{3.1}
-$$
+```
 
 Hence their two pairs of boundary edges alternate around the convex hull.
 
@@ -193,12 +195,12 @@ C77 says the train-intersection graph is triangle-free. Thus there cannot be thr
 
 ### Lemma NM.1
 
-$$
+```math
 \boxed{
 T_{good}\le2.
 }
 \tag{3.2}
-$$
+```
 
 This is the stable form of the complete-crossing argument used in MC.
 
@@ -213,25 +215,26 @@ C77 proves every train has exactly two boundary ends. A train that is not good h
 
 By (1.3) and (2.3), the total number of available bad train-end incidences is at most
 
-$$
+```math
 2x_B+5f+g_F.
 \tag{4.1}
-$$
+```
 
 Different train ends are distinct track states, so charging each nongood train to one bad end gives
 
-$$
+```math
 T-T_{good}
 \le2x_B+5f+g_F.
-$$
+```
 
 Using `T_good<=2`,
 
-$$
+```math
 \boxed{
 T-2\le2x_B+5f+g_F.
 }
 \tag{4.2}
+```
 
 This is the key stability inequality.
 
@@ -241,55 +244,55 @@ This is the key stability inequality.
 
 DT and ZE give the exact train count
 
-\[
+```math
 T=\frac{b+Q}{2}+2f
 =h-s_Z+2f.
 \tag{5.1}
-$$
+```
 
 Insert this into (4.2):
 
-$$
+```math
 h-s_Z+2f-2
 \le2x_B+5f+g_F.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 h-2
 \le2x_B+3f+g_F+s_Z.}
 \tag{5.2}
-$$
+```
 
 ZT/DB give the exact diameter branching currency
 
-$$
+```math
 \boxed{
 r_H=2h-q=x_B+Q+2s_Z
 =x_B+f+g_F+2s_Z.}
 \tag{5.3}
-$$
+```
 
 Multiply (5.3) by three. Since all currencies are nonnegative,
 
-$$
+```math
 \begin{aligned}
 3r_H-(2x_B+3f+g_F+s_Z)
 &=x_B+2g_F+5s_Z\\
 &\ge0.
 \end{aligned}
 \tag{5.4}
-$$
+```
 
 Combine (5.2)-(5.4):
 
-$$
+```math
 \boxed{
 3r_H\ge h-2.
 }
-$$
+```
 
 This proves NM.2.
 
@@ -299,39 +302,41 @@ This proves NM.2.
 
 ZS gives
 
-$$
+```math
 h\ge\delta\ge\lceil D\rceil.
-$$
+```
 
 Hence NM.2 immediately gives the finite bound
 
-$$
+```math
 \boxed{
 2h-q
 \ge
 \frac{\lceil D\rceil-2}{3}.
 }
 \tag{6.1}
+```
 
 Since the left side is an integer one may insert a ceiling on the right if desired.
 
 DB strengthens the diameter-edge density to
 
-\[
+```math
 \liminf\frac hD\ge2\rho,
 \qquad
 \rho=\cos\rho.
-$$
+```
 
 Divide NM.2 by `D` and pass to an unbounded sequence:
 
-$$
+```math
 \boxed{
 \liminf\frac{2h-q}{D}
 \ge\frac{2\rho}{3}
 =0.4927234221\ldots .
 }
 \tag{6.2}
+```
 
 This is NM.4.
 
@@ -341,51 +346,51 @@ This is NM.4.
 
 Since
 
-\[
+```math
 d_H=q-h
-$$
+```
 
 and
 
-$$
+```math
 r_H=2h-q=q-2d_H,
-$$
+```
 
 NM.2 gives
 
-$$
+```math
 q-2d_H
 \ge\frac{q-d_H-2}{3}.
-$$
+```
 
 Rearranging,
 
-$$
+```math
 \boxed{
 5d_H\le2q+2.
 }
 \tag{7.1}
-$$
+```
 
 Thus asymptotically
 
-$$
+```math
 \boxed{
 \frac{d_H}{q}\le\frac25+o(1).
 }
 \tag{7.2}
-$$
+```
 
 The canonical planar diameter pseudoforest interpretation identifies `d_H` with the number of tree components of `H`. Therefore a post-ZF survivor cannot decompose into almost all two-vertex matching components: at least a linear fraction of the terminal budget must be absorbed inside larger tree components and/or the possible odd-unicyclic component.
 
 Equivalently, the average diameter degree satisfies
 
-$$
+```math
 \frac{2h}{q}
 =1+\frac{r_H}{q}
 \ge\frac65-o(1),
 \tag{7.3}
-$$
+```
 
 where the final asymptotic form follows from (7.2).
 
@@ -405,13 +410,14 @@ linear branching
 
 NM eliminates the first side completely. Every unbounded post-ZF survivor now lies in the **linear branching/contact-defect phase**:
 
-$$
+```math
 \boxed{
  x_B+Q+2s_Z
  =2h-q
  =\Omega(D).
 }
 \tag{8.1}
+```
 
 Thus future work does not need a near-matching stability theorem; NM is that theorem.
 
@@ -475,9 +481,9 @@ If the ZF/ZE/ZT/DB stack is promoted, NM should replace both MC and the former l
 
 After NM the exact survivor class satisfies
 
-\[
+```math
 x_B+Q+2s_Z\ge(2\rho/3-o(1))D.
-$$
+```
 
 The next split should use which currency is large:
 

@@ -34,29 +34,29 @@ below are elementary and do not assume that the constructed sources are canonica
 
 Let `q>=5` be odd, `m=(q-1)/2`, and put
 
-$$
+```math
 x={\pi\over2q},\quad z=e^{4ix},\quad
 R={1\over2\sin(2x)},\quad p_j=Rz^j\quad(0\le j<q).
-$$
+```
 
 The shortest nonzero chords are exactly the consecutive sides, of length one.
 The longest chords are exactly the pairs at cyclic step `m`, of length
 
-$$
+```math
 D={1\over2\sin x}=2R\cos x.
 \tag{1}
-$$
+```
 
 Thus the unit-contact graph is `C_q`, and the actual diameter graph is also a
 `q`-cycle, with step `m`. In particular the contact graph is triangle-free.
 
 Give every diameter edge weight `beta=1/q`, and every contact edge weight
 
-$$
+```math
 \alpha={1-\cos(4mx)\over q(1-\cos(4x))}
        ={D^2\over q}.
 \tag{2}
-$$
+```
 
 The total diameter weight is one. At every vertex both contact neighbors have
 radial resultant `2alpha(1-cos(4x))p_j`, and both diameter neighbors have radial
@@ -68,14 +68,14 @@ contact and diameter edge has strictly positive weight.
 Let `Omega=alpha L_1-beta L_m`, where `L_k` is the unweighted cyclic step-`k`
 Laplacian. Its Fourier eigenvalue at frequency `l` is
 
-$$
+```math
 \lambda_l=4\alpha\sin^2(2lx)-4\beta\sin^2(2mlx).
-$$
+```
 
 For `1<=l<=q-1`, division by the positive factor
 `4beta sin^2(2lx)` gives
 
-$$
+```math
 {\lambda_l\over4\beta\sin^2(2lx)}
 =D^2-
 \begin{cases}
@@ -83,18 +83,18 @@ $$
 1/(4\cos^2(lx)),&l\text{ even}.
 \end{cases}
 \tag{3}
-$$
+```
 
 Here `0<lx<pi/2`. The odd case is zero precisely at `l=1`; the even
 case is zero precisely at `l=q-1`. Every other value is positive.
 Frequency zero is the constant kernel. Consequently
 
-$$
+```math
 \Omega\succeq0,\qquad
 \ker\Omega=\operatorname{span}\{1,P_x,P_y\},\qquad
 \operatorname{rank}\Omega=q-3.
 \tag{4}
-$$
+```
 
 This conclusion is an exact formula for all odd `q`, not a numerical eigenvalue
 test or an appeal to the canonical global-minimizer theorem.
@@ -104,41 +104,41 @@ test or an appeal to the canonical global-minimizer theorem.
 Write a real velocity as `u_j=z^j(a_j+i b_j)`. The zero first variation of a
 step-`k` bar, after division by its nonzero sine factor, is
 
-$$
+```math
 \tan(2kx)(a_j+a_{j+k})+b_{j+k}-b_j=0,
 \quad k\in\{1,m\}.
 \tag{5}
-$$
+```
 
 Complexify the two real sequences and take frequency `l`. The two equations
 have coefficient rows
 
-$$
+```math
 (\tan(2kx)(1+e^{4ilkx}),\ e^{4ilkx}-1).
-$$
+```
 
 Up to nonzero phase and constant factors, their determinant is
 
-$$
+```math
 T_l=\tan(2x)\cos(2lx)\sin(2mlx)
     -\cot(x)\cos(2mlx)\sin(2lx).
-$$
+```
 
 For odd `l`, up to an irrelevant sign this factors as
 
-$$
+```math
 2(\tan(2x)+\cot x)\cos(lx)
        (\sin^2x-\sin^2(lx));
 \tag{6}
-$$
+```
 
 for even nonzero `l`, up to sign it factors as
 
-$$
+```math
 2(\tan(2x)+\cot x)\sin(lx)
        (\sin^2x-\cos^2(lx)).
 \tag{7}
-$$
+```
 
 The identity used in both factorizations is
 `tan(2x)/(2(tan(2x)+cot x))=sin^2 x`.
@@ -147,10 +147,10 @@ complex dimension one. At frequency zero, (5) forces `a=0` and leaves the
 one rotational mode. The real flex space therefore has dimension three,
 and consists of translations and rotation:
 
-$$
+```math
 \operatorname{rank}R_{C\cup H}=2q-3.
 \tag{8}
-$$
+```
 
 ## 4. Local optimality, with its exact scope
 
@@ -171,20 +171,20 @@ obstruction intact, while those extra labels remain freely movable.
 
 Put `a=pi/(2sqrt(3))`. For all sufficiently large odd `q`, define
 
-$$
+```math
 n_q=\lfloor a(D-4)^2\rfloor,\qquad s=1+q^{-2},\qquad r=D/2-2.
 \tag{9}
-$$
+```
 
 A triangular lattice of spacing `s` has covolume `sqrt(3)s^2/2`.
 Translation averaging over one fundamental cell gives a translate containing at
 least
 
-$$
+```math
 \left\lceil{\pi r^2\over(\sqrt3/2)s^2}\right\rceil
 =\left\lceil{a(D-4)^2\over s^2}\right\rceil
 \tag{10}
-$$
+```
 
 points in the radius-`r` disk. The difference between `a(D-4)^2` and the
 unrounded expression in (10) stays bounded as `q` grows, because `D/q->1/pi`.
@@ -200,10 +200,10 @@ of the polygon. No new contact or diameter edge is created.
 
 The full source has exactly `n_q` labels and
 
-$$
+```math
 {n_q\over D^2}\longrightarrow {\pi\over2\sqrt3}.
 \tag{11}
-$$
+```
 
 Its hull is the regular polygon, whose inradius and circumradius differ from
 `D/2` by `O(1/D)`. Its active core retains (2), (4), and (8), with all actual
@@ -214,10 +214,10 @@ the full source.
 The sources are nevertheless **strictly nonglobal**. The strict
 translated-triangular-lattice comparison gives, for their cardinalities,
 
-$$
+```math
 D(n_q)^2 < {n_q-1\over a} < (D-4)^2.
 \tag{12}
-$$
+```
 
 Therefore a competing source of the same cardinality has diameter less than
 `D-4`. This also supplies an explicit reason these sources are compatible with

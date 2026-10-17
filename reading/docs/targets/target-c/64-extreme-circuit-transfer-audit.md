@@ -24,22 +24,22 @@ representative. On its nonisolated equality core write
 
 Section 57 gives
 
-$$
+```math
 \operatorname{rank}R_{C\cup H}=2v-3,
-$$
+```
 
 and the canonical relative-interior normalized KKT stress is strictly positive on
 every actual contact and diameter row.
 
 Let
 
-$$
+```math
 \mathcal P=
 \left\{x=(\alpha,\beta)\ge0:
 R^T(\alpha,-\beta)=0,
 \ \sum_{h\in H}\beta_h=1
 \right\}
-$$
+```
 
 be the normalized nonnegative KKT stress polytope.
 
@@ -56,74 +56,74 @@ For a vertex `x_*` of `P`, let `S_*` be its positive mixed support. Write
 
 Define
 
-$$
+```math
 \boxed{\sigma_*:=2v_*-2-(e_*+h_*)}
 \tag{64.1}
-$$
+```
 
 and let `z_*` be the number of full actual mixed rows omitted by this extreme stress.
 The **excess degeneracy** is
 
-$$
+```math
 \boxed{\kappa_*:=z_*-s_Z.}
 \tag{64.2}
-$$
+```
 
 The main exact conclusions are:
 
-$$
+```math
 \boxed{\dim_{\rm aff}\mathcal P=s_Z,}
 \tag{64.3}
-$$
+```
 
-$$
+```math
 \boxed{S_*\text{ is a rigidity-matroid circuit},}
 \tag{64.4}
-$$
+```
 
-$$
+```math
 \boxed{\kappa_*=2(v-v_*)+\sigma_*\ge0,}
 \tag{64.5}
-$$
+```
 
-$$
+```math
 \boxed{b_*+Q_*=2h_*+2\sigma_*,}
 \tag{64.6}
-$$
+```
 
 and, with `d_*:=q_*-h_*>=0`,
 
-$$
+```math
 \boxed{q_*+2\sigma_*=x_*^B+Q_*+2d_*.}
 \tag{64.7}
-$$
+```
 
 The selected loaded boundary also obeys the exact primitive inequality
 
-$$
+```math
 \boxed{e_{BB,*}+x_*^B\ge q_*.}
 \tag{64.8}
-$$
+```
 
 The selected stopped-train and difference-body arguments then give
 
-$$
+```math
 \boxed{3(2h_*-q_*)+5\sigma_*\ge h_*-2,}
 \tag{64.9}
-$$
+```
 
-$$
+```math
 \boxed{
 Q_*
 \le h_*+2\sigma_*+1
 -2D\cos\!\left((h_*-1)\arcsin{1\over2D}\right),
 }
 \tag{64.10}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 2h_*-q_*
 \ge
@@ -131,42 +131,42 @@ D\cos\!\left((h_*-1)\arcsin{1\over2D}\right)
 -{5\over2}\sigma_*-{3\over2}.
 }
 \tag{64.11}
-$$
+```
 
 Consequently, along any unbounded sequence of extreme circuits with
 
-$$
+```math
 \boxed{\kappa_*=o(D),}
 \tag{64.12}
-$$
+```
 
 one has simultaneously
 
-$$
+```math
 \boxed{
 \liminf {h_*\over D}\ge2\rho,
 \qquad \rho=\cos\rho,
 }
 \tag{64.13}
-$$
+```
 
-$$
+```math
 \boxed{
 \liminf {2h_*-q_*\over D}\ge c_*,
 \qquad c_*=\cos(3c_*/2),
 \qquad 0.6099<c_*<0.61,
 }
 \tag{64.14}
-$$
+```
 
 and the selected analogue of Section 63's primitive boundary split,
 
-$$
+```math
 \boxed{
 \liminf {1\over D}\max\{e_{BB,*},x_*^B\}\ge\rho.
 }
 \tag{64.15}
-$$
+```
 
 Thus a single low-degeneracy extreme KKT circuit already carries the same DB-scale
 diameter density, NB-scale nonmatching excess, and loaded-contact/outer-detour split
@@ -181,27 +181,27 @@ that every extreme circuit has `kappa_*=Omega(D)`.
 Let `W` be the signed mixed self-stress space in KKT multiplier coordinates. Section 57
 gives
 
-$$
+```math
 \dim W
 =(e+h)-(2v-3)
 =s_Z+1.
 \tag{64.16}
-$$
+```
 
 Let
 
-$$
+```math
 L(\alpha,\beta)=\sum_H\beta.
-$$
+```
 
 A nonzero nonnegative equilibrium stress cannot have `L=0`. Indeed `L=0` forces
 `beta=0`. Dot the contact-only equilibrium equations with the vertex positions and
 sum over vertices. Every unit contact contributes its nonnegative multiplier times
 squared length one, so
 
-$$
+```math
 \sum_C\alpha=0.
-$$
+```
 
 Hence all contact multipliers also vanish, contradiction.
 
@@ -209,9 +209,9 @@ The canonical relative-interior KKT stress is strictly positive and has `L=1`.
 Therefore the nonnegative stress cone has full relative dimension in `W`, and the
 normalization hyperplane cuts it transversely. Hence
 
-$$
+```math
 \dim_{\rm aff}\mathcal P=s_Z,
-$$
+```
 
 proving (64.3).
 
@@ -222,34 +222,34 @@ stronger circuit statement below is what will be used.
 
 Fix a vertex `x_*` of `P` and write `S_*=supp(x_*)`. Let
 
-$$
+```math
 W_{S_*}:=\{w\in W:\operatorname{supp}w\subseteq S_*\}.
-$$
+```
 
 Certainly `dim W_{S_*}>=1`. If it were at least two, choose `w` not proportional to
 `x_*` and set
 
-$$
+```math
 w_0=w-L(w)x_*.
-$$
+```
 
 Then `w_0` is nonzero, supported in `S_*`, satisfies equilibrium, and has `L(w_0)=0`.
 Every coordinate of `x_*` on `S_*` is strictly positive, so for sufficiently small
 `t>0` both
 
-$$
+```math
 x_*+tw_0,
 \qquad
 x_*-tw_0
-$$
+```
 
 remain nonnegative normalized equilibrium stresses. This contradicts extremality.
 Thus
 
-$$
+```math
 \boxed{\dim W_{S_*}=1.}
 \tag{64.17}
-$$
+```
 
 If a proper subset of `S_*` were row-dependent, its nonzero supported self-stress would
 belong to `W_{S_*}` but could not be proportional to `x_*`, because `x_*` is nonzero on
@@ -257,15 +257,15 @@ every row of `S_*`. Therefore every proper subset is independent. This proves (6
 
 Circuit minimality gives
 
-$$
+```math
 \operatorname{rank}R_{S_*}=e_*+h_*-1.
-$$
+```
 
 Since the selected realization is two-dimensional,
 
-$$
+```math
 e_*+h_*-1\le2v_*-3,
-$$
+```
 
 so `sigma_*>=0` as claimed in (64.1).
 
@@ -295,25 +295,25 @@ Hence the positive selected contact graph `C_*` has exactly one nontrivial conne
 component. Normalization gives at least one positive diameter edge, both endpoints lie
 in that component, and their distance is `D`. Thus
 
-$$
+```math
 \boxed{\operatorname{diam}V(C_*)=D.}
 \tag{64.18}
-$$
+```
 
 Harmonic trapping of unloaded positive-contact vertices gives
 
-$$
+```math
 F_*:=\operatorname{conv}V(C_*)=\operatorname{conv}B_*.
 \tag{64.19}
-$$
+```
 
 Every selected diameter endpoint is a vertex of `F_*`: if `b` with partner `b'` at
 distance `D` were a nontrivial convex combination of other points of `F_*`, equality
 in the convexity estimate
 
-$$
+```math
 |b-b'|\le\sum_i\lambda_i|x_i-b'|\le D
-$$
+```
 
 would force every `x_i=b`. Thus the selected loaded endpoints occur in strict convex
 cyclic order on `F_*`.
@@ -322,41 +322,41 @@ cyclic order on `F_*`.
 
 The full mixed row count is
 
-$$
+```math
 e+h=2v-2+s_Z.
-$$
+```
 
 The selected circuit count is
 
-$$
+```math
 e_*+h_*=2v_*-2-\sigma_*.
-$$
+```
 
 Subtracting gives
 
-$$
+```math
 \boxed{
 z_*=2(v-v_*)+s_Z+\sigma_*,}
-$$
+```
 
 hence (64.5):
 
-$$
+```math
 \boxed{\kappa_*=z_*-s_Z=2(v-v_*)+\sigma_*.}
-$$
+```
 
 For the connected triangle-free selected contact graph, Euler and face incidence give
 
-$$
+```math
 e_*=2v_*-2-{b_*+Q_*\over2}.
 \tag{64.20}
-$$
+```
 
 Comparing with `e_*+h_*=2v_*-2-sigma_*` proves (64.6):
 
-$$
+```math
 \boxed{b_*+Q_*=2h_*+2\sigma_*.}
-$$
+```
 
 The positive selected diameter graph is a straight-line subthrackle of the source
 diameter graph. Woodall therefore gives exactly two selected branches:
@@ -367,30 +367,30 @@ diameter graph. Woodall therefore gives exactly two selected branches:
 
 In both cases `h_*<=q_*`, so `d_*=q_*-h_*>=0`. Put
 
-$$
+```math
 x_*^B=b_*-q_*.
-$$
+```
 
 Substitute `b_*=q_*+x_*^B` and `h_*=q_*-d_*` into (64.6). This gives the exact selected
 terminal ledger (64.7):
 
-$$
+```math
 \boxed{q_*+2\sigma_*=x_*^B+Q_*+2d_*.}
-$$
+```
 
 It is useful to write
 
-$$
+```math
 \boxed{r_*:=2h_*-q_*=x_*^B+Q_*-2\sigma_*\ge0.}
 \tag{64.21}
-$$
+```
 
 In the forest branch,
 
-$$
+```math
 r_*=\sum_j(q_j-2).
 \tag{64.22}
-$$
+```
 
 ## 64.5 Selected loaded-boundary split
 
@@ -399,24 +399,24 @@ the selected outer contact-face walk. Split that walk into `q_*` subwalks betwee
 consecutive selected loaded vertices and let their positive-contact edge-occurrence
 lengths be `ell_i>=1`. Then
 
-$$
+```math
 \sum_i(\ell_i-1)=b_*-q_*=x_*^B.
 \tag{64.23}
-$$
+```
 
 At most `x_*^B` intervals have `ell_i>=2`. Every remaining interval has `ell_i=1`, so
 its unique positive contact edge joins two consecutive vertices of the selected convex
 force hull. It is therefore a selected loaded-loaded contact. Hence
 
-$$
+```math
 e_{BB,*}\ge q_*-x_*^B,
-$$
+```
 
 which proves (64.8):
 
-$$
+```math
 \boxed{e_{BB,*}+x_*^B\ge q_*.}
-$$
+```
 
 This argument does not assume that every actual unit contact remains positive at the
 extreme stress; it uses only the positive selected outer walk.
@@ -427,17 +427,17 @@ Section 61's train construction is local to a connected triangle-free unit-conta
 plane graph, so it applies verbatim to `C_*`. Let `f_*` be the number of bounded
 nonquadrilateral selected contact faces and put
 
-$$
+```math
 Q_*=f_*+g_*.
-$$
+```
 
 The selected train count is
 
-$$
+```math
 T_*={b_*+Q_*\over2}+2f_*
 =h_*+\sigma_*+2f_*,
 \tag{64.24}
-$$
+```
 
 where the second equality uses (64.6).
 
@@ -445,30 +445,30 @@ Exactly as in Section 61, at most `2x_*^B` outer train-end incidences lie in bad
 intervals, exceptional bounded faces supply at most `5f_*+g_*` train-end incidences,
 and at most two trains have two good convex-hull ends. Therefore
 
-$$
+```math
 T_*-2\le2x_*^B+5f_*+g_*.
-$$
+```
 
 Using (64.24),
 
-$$
+```math
 h_*+\sigma_*-2
 \le2x_*^B+3f_*+g_*.
 \tag{64.25}
-$$
+```
 
 By (64.21),
 
-$$
+```math
 3r_*+6\sigma_*
 =3x_*^B+3f_*+3g_*,
-$$
+```
 
 whose right side exceeds the right side of (64.25) by `x_*^B+2g_*>=0`. Hence
 
-$$
+```math
 \boxed{3r_*+5\sigma_*\ge h_*-2,}
-$$
+```
 
 which is (64.9).
 
@@ -476,160 +476,160 @@ which is (64.9).
 
 Section 59 gives projective separation
 
-$$
+```math
 2a_D,
 \qquad
 a_D:=\arcsin{1\over2D},
-$$
+```
 
 between every two distinct actual diameter directions. A selected subset inherits the
 same separation.
 
 For the `h_*` selected projective diameter directions `u_j`,
 
-$$
+```math
 D\operatorname{conv}\{\pm u_j\}\subseteq F_*-F_*.
-$$
+```
 
 Ordering their projective gaps `g_i`, with `g_i>=2a_D` and `sum g_i=pi`, perimeter
 monotonicity and the same concave gap minimization as Section 59 give
 
-$$
+```math
 \operatorname{per}(F_*)
 \ge
 h_*-1+2D\cos((h_*-1)a_D).
 \tag{64.26}
-$$
+```
 
 The selected positive contact outer walk has geometric length `b_*`, so
 
-$$
+```math
 \operatorname{per}(F_*)\le b_*.
 \tag{64.27}
-$$
+```
 
 Using `b_*=2h_*+2\sigma_*-Q_*` from (64.6), (64.26)–(64.27) give
 
-$$
+```math
 \boxed{
 Q_*
 \le h_*+2\sigma_*+1
 -2D\cos((h_*-1)a_D),
 }
-$$
+```
 
 proving (64.10).
 
 To obtain the branching feedback, use (64.21) to write
 
-$$
+```math
 x_*^B=r_*-Q_*+2\sigma_*.
-$$
+```
 
 Then the right side of (64.25) satisfies
 
-$$
+```math
 2x_*^B+3f_*+g_*
 \le2x_*^B+3Q_*
 =2r_*+Q_*+4\sigma_*.
-$$
+```
 
 Thus
 
-$$
+```math
 h_*-2\le2r_*+Q_*+3\sigma_*.
-$$
+```
 
 Insert (64.10) and cancel `h_*`. The result is (64.11):
 
-$$
+```math
 \boxed{
 r_*
 \ge
 D\cos((h_*-1)a_D)-{5\over2}\sigma_*-{3\over2}.}
-$$
+```
 
 ## 64.8 Low-degeneracy transfer of Sections 59, 61, and 63
 
 Assume `kappa_*=o(D)` along an unbounded sequence. Equation (64.5) immediately gives
 
-$$
+```math
 \sigma_*=o(D).
 \tag{64.28}
-$$
+```
 
 Pass to a subsequence on which `h_*/D->y`. Divide (64.10) by `D` and use `Q_*>=0` and
 
-$$
+```math
 a_D={1\over2D}+O(D^{-3}).
-$$
+```
 
 Then
 
-$$
+```math
 y\ge2\cos(y/2).
-$$
+```
 
 The smallest nonnegative solution is `y=2rho`, where `rho=cos rho`. Therefore
 
-$$
+```math
 \liminf {h_*\over D}\ge2\rho,
-$$
+```
 
 proving (64.13).
 
 Now divide (64.9) and (64.11) by `D`. Any subsequential limits `y=h_*/D` and
 `r=r_*/D` satisfy
 
-$$
+```math
 r\ge {y\over3},
 \qquad
 r\ge\cos(y/2).
-$$
+```
 
 Hence
 
-$$
+```math
 r\ge\max\{y/3,\cos(y/2)\}.
-$$
+```
 
 The Section 61 optimization has unique crossover
 
-$$
+```math
 y/3=\cos(y/2),
-$$
+```
 
 or `y=3c_*`, and minimum value `c_*`, where
 
-$$
+```math
 c_*=\cos(3c_*/2),
 \qquad 0.6099<c_*<0.61.
-$$
+```
 
 Since `3c_*>2rho`, the already-proved restriction `y>=2rho` does not change that
 minimum. This proves (64.14).
 
 Finally the selected Woodall bound gives `q_*>=h_*`. By (64.8),
 
-$$
+```math
 \max\{e_{BB,*},x_*^B\}
 \ge {q_*\over2}
 \ge {h_*\over2}.
-$$
+```
 
 Combine with (64.13):
 
-$$
+```math
 \boxed{
 \liminf {1\over D}\max\{e_{BB,*},x_*^B\}\ge\rho,
 }
-$$
+```
 
 which proves (64.15).
 
 Thus every low-degeneracy extreme circuit inherits on one support:
 
-$$
+```math
 \boxed{
  h_*\ge(2\rho-o(1))D,
 \quad
@@ -638,7 +638,7 @@ $$
 \max\{e_{BB,*},x_*^B\}\ge(\rho-o(1))D.
 }
 \tag{64.29}
-$$
+```
 
 ## 64.9 Regressions and rejected shortcuts
 

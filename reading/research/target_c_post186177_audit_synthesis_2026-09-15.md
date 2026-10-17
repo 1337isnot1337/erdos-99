@@ -31,37 +31,37 @@ contains a logically separate replacement for the retracted low-energy path argu
 
 The exact verifier was rerun during this audit. It gives
 
-$$
+```math
 P_{OO}^{dom}/D>0.0027-o(1)
-$$
+```
 
 at `T=1.865`, with the exact rounded computation producing the stronger numerical margin
 
-$$
+```math
 P_{OO}^{dom}/D>0.0027121826889\ldots-o(1).
-$$
+```
 
 Pigeonholing among at most three dominant projective phase classes therefore leaves a single shrinking phase window with retained pair weight
 
-$$
+```math
 >0.0009D-o(D).
-$$
+```
 
 The separate phase-zero argument survives the September 15 path retractions because it does not infer oriented terminal branches from projective endpoint energy. Instead it applies the two-sided Section-157 bracing statement separately to the two Jordan shores of each O--O train. After deleting only `o(D)` pair weight near the two limiting antipodal phase-zero markers, every surviving crosscut separates the same two fixed boundary markers. Pairwise noncrossing then makes the crosscuts totally nested, so the complement dual is a path.
 
 The corresponding exact interface verifier was also rerun. It yields one nonhub strip with either
 
-$$
+```math
 N_i\le 6981
-$$
+```
 
 when optimizing switching count alone, or simultaneously
 
-$$
+```math
 N_i,L_i\le12694,
 \qquad
 B_i<{12695\over D}+o(D^{-1}).
-$$
+```
 
 Thus the phase-zero path/hub/one-sided-interface theorem through `t<=1.865` is a valid independent structural result. It is no longer the repository frontier because main now contains a stronger route through `1.8687`.
 
@@ -69,15 +69,15 @@ Thus the phase-zero path/hub/one-sided-interface theorem through `t<=1.865` is a
 
 For a set of fully rhombic pentagons, let `M_flower` denote the number of distinct complement trains terminating on those flowers, `P_c` the complement O--O population, and `N_c` the total complement-train population. Because an O--O train has both terminals outer while a flower-terminal train has a bounded terminal, these two train populations are disjoint. This gives the exact elementary bound
 
-$$
+```math
 P_{all}\ge M_{flower}+P_c-N_c.
-$$
+```
 
 Combined with the existing flower allocation and complement O--O inequalities, this does force a through-splice lower bound. However, at the live endpoint near `t=1.86177`, the resulting normalized `K` floor is only about `1.3535`. The already audited general pentagon through-splice theorem forces approximately
 
-$$
+```math
 K\gtrsim1.7110.
-$$
+```
 
 Therefore the new composition is quantitatively dominated. It should not be promoted as a separate theorem unless coupled to additional information that changes the objective, such as localized crossing deficit, phase allocation, or diameter blocking.
 
@@ -90,11 +90,11 @@ The separate flower branch contains two sound structural results:
 
 The first gives, for a flower set of size `F`, the exact train-network estimate
 
-$$
+```math
 E_{esc}\ge F/2
 \quad\text{or}\quad
 \dim\mathcal V_{flower}\ge F/4-1.
-$$
+```
 
 The second localizes crossing loss: an external train crosses at most three members of one five-train flower fan.
 
@@ -112,10 +112,10 @@ One-sided path topology fixes which side of the path interval contains the exter
 
 The phase-zero marker geometry eliminates the non-antipodal TB2 regression: for adjacent selected trains with nonzero phase gap, a minimal two-bar tangent obstruction would force both endpoints of each blocker into shrinking marker neighborhoods, while a switching blocker must have one endpoint in the marker-free middle region. Hence the surviving local alternative is
 
-$$
+```math
 \text{TB1}
 \quad\text{or exact parallelism of the adjacent train directions.}
-$$
+```
 
 Exact parallelism is not excluded merely by the common-hub one-sided order. This is the correct residual obstruction on the older `t<=1.865` phase-zero path.
 

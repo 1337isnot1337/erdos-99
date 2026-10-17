@@ -15,16 +15,16 @@ It does **not** assert an exact new unit contact. Instead it proves that near-un
 pairs are quantitatively unavoidable. At scale `1+epsilon`, the chamber contains a
 large vertex-disjoint matching of pairs whose distances lie in
 
-$$
+```math
 (1,1+\epsilon].
-$$
+```
 
 In particular, for a suitable fixed `K`, the canonical Section-77 chamber contains
 `Omega(D)` vertex-disjoint pairs at distance
 
-$$
+```math
 1<|x-y|\le1+{K\over D}.
-$$
+```
 
 The proof is finite and uses only Oler's inequality plus the chamber's exact Oler
 slack. No lattice stability theorem, Voronoi theorem, or KKT multiplier estimate is
@@ -37,49 +37,49 @@ used.
 Let `C` be any convex body containing a specified set `Z` of `z` source points. Assume
 these points are contact-isolated in the full unit-separated source, so
 
-$$
+```math
 |x-y|>1\qquad(x\ne y\in Z).
 \tag{81.1}
-$$
+```
 
 Write
 
-$$
+```math
 A:=\operatorname{area}(C),
 \qquad
 P:=\operatorname{per}(C),
 \qquad
 a_0:={\sqrt3\over2},
 \tag{81.2}
-$$
+```
 
 and define the isolate-only Oler slack
 
-$$
+```math
 \boxed{
 \sigma:={A\over a_0}+{P\over2}+1-z\ge0.
 }
 \tag{81.3}
-$$
+```
 
 Canonical Section 77 supplies exactly such a triple `(C,Z,sigma)` for every inactive
 chamber.
 
 For `epsilon>0`, define the **epsilon-near-contact graph** `G_epsilon` on `Z` by
 
-$$
+```math
 xy\in E(G_\epsilon)
 \quad\Longleftrightarrow\quad
 |x-y|\le1+\epsilon.
 \tag{81.4}
-$$
+```
 
 Because of (81.1), every edge of this graph has strict length
 
-$$
+```math
 1<|x-y|\le1+\epsilon.
 \tag{81.5}
-$$
+```
 
 Let `nu_epsilon` denote the maximum matching number of `G_epsilon`.
 
@@ -89,7 +89,7 @@ Let `nu_epsilon` denote the maximum matching number of `G_epsilon`.
 
 For every `epsilon>0`,
 
-$$
+```math
 \boxed{
 2\nu_\epsilon
 \ge
@@ -100,7 +100,7 @@ $$
 -\sigma.
 }
 \tag{81.6}
-$$
+```
 
 Equivalently, since `nu_epsilon>=0`, the right side may be replaced by its positive
 part.
@@ -110,38 +110,38 @@ part.
 Fix a maximum matching `M` in `G_epsilon`, with `|M|=nu_epsilon`, and let `U` be the
 unmatched vertex set. Then
 
-$$
+```math
 |U|=z-2\nu_\epsilon.
 \tag{81.7}
-$$
+```
 
 A maximum matching is maximal. Therefore two unmatched vertices cannot be adjacent in
 `G_epsilon`; otherwise their edge could be added to `M`. Hence
 
-$$
+```math
 |x-y|>1+\epsilon
 \qquad(x\ne y\in U).
 \tag{81.8}
-$$
+```
 
 Scale the chamber and the unmatched set by the factor `(1+epsilon)^(-1)` about any
 fixed origin. The scaled copy of `U` is unit-separated and lies in the scaled convex
 body. Oler's finite packing inequality gives
 
-$$
+```math
 |U|
 \le
 {A\over a_0(1+\epsilon)^2}
 +{P\over2(1+\epsilon)}+1.
 \tag{81.9}
-$$
+```
 
 Substitute (81.7), then use the exact slack identity (81.3),
 
-$$
+```math
 z={A\over a_0}+{P\over2}+1-\sigma.
 \tag{81.10}
-$$
+```
 
 Subtracting (81.9) from (81.10) gives exactly (81.6). `square`
 
@@ -151,23 +151,23 @@ Subtracting (81.9) from (81.10) gives exactly (81.6). `square`
 
 For `0<epsilon<=1`,
 
-$$
+```math
 1-{1\over(1+\epsilon)^2}
 ={\epsilon(2+\epsilon)\over(1+\epsilon)^2}
 \ge {3\over4}\epsilon.
 \tag{81.11}
-$$
+```
 
 The perimeter contribution in (81.6) is nonnegative, so
 
-$$
+```math
 \boxed{
 \nu_\epsilon
 \ge {3A\over8a_0}\,\epsilon-{\sigma\over2}
 \qquad(0<\epsilon\le1).
 }
 \tag{81.12}
-$$
+```
 
 Thus the matching count is controlled by the bulk-area gain obtained by scaling the
 packing, with only the original Oler slack as a loss.
@@ -176,35 +176,35 @@ packing, with only the original Oler slack as a loss.
 
 Suppose along an unbounded sequence
 
-$$
+```math
 A\ge\alpha D^2,
 \qquad
 \sigma\le SD
 \tag{81.13}
-$$
+```
 
 for fixed `alpha>0` and `S<infinity`. Let `epsilon_D<=1` satisfy
 
-$$
+```math
 \epsilon_DD\longrightarrow\infty.
 \tag{81.14}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \nu_{\epsilon_D}=\Omega(\epsilon_DD^2).
 }
 \tag{81.15}
-$$
+```
 
 Indeed (81.12) gives
 
-$$
+```math
 \nu_{\epsilon_D}
 \ge {3\alpha\over8a_0}\epsilon_DD^2-{S\over2}D,
-$$
+```
 
 and the second term is lower order under (81.14).
 
@@ -222,20 +222,20 @@ enough.
 
 Assume (81.13). If
 
-$$
+```math
 K>{4a_0S\over3\alpha},
 \tag{81.16}
-$$
+```
 
 then for all sufficiently large `D`, with
 
-$$
+```math
 \epsilon={K\over D},
-$$
+```
 
 we have
 
-$$
+```math
 \boxed{
 \nu_{K/D}
 \ge
@@ -243,17 +243,17 @@ $$
 =\Omega(D).
 }
 \tag{81.17}
-$$
+```
 
 Consequently there are `Omega(D)` pairwise vertex-disjoint pairs of actual source
 points satisfying
 
-$$
+```math
 \boxed{
 1<|x-y|\le1+{K\over D}.
 }
 \tag{81.18}
-$$
+```
 
 No pair in (81.18) is an actual contact: every chamber point under consideration is
 contact-isolated in the full source.
@@ -265,40 +265,40 @@ contact-isolated in the full source.
 In canonical Section 77's subquadratic-core branch, the selected chamber `C_*`
 satisfies
 
-$$
+```math
 A_*\ge\alpha_*D^2
 \tag{81.19}
-$$
+```
 
 for some absolute `alpha_*>0` along all sufficiently large survivors; Section 77 gives
 the explicit asymptotic choice
 
-$$
+```math
 \alpha_*<{4A_{SC}^2\over169\pi},
 \qquad
 A_{SC}:={2\rho+\sin(2\rho)\over4},
 \quad \rho=\cos\rho,
 \tag{81.20}
-$$
+```
 
 with any fixed smaller positive constant valid eventually. It also gives
 
-$$
+```math
 \sigma_*=O(D).
 \tag{81.21}
-$$
+```
 
 The implied constant is absolute over the canonical post-ZF class. Therefore there is
 an absolute constant `K_0<infinity` such that every sufficiently large survivor in the
 Section-77 subquadratic-core branch contains, inside one actual inactive chamber, at
 least `cD` vertex-disjoint pairs for some absolute `c>0`, each satisfying
 
-$$
+```math
 \boxed{
 1<|x-y|\le1+{K_0\over D}.
 }
 \tag{81.22}
-$$
+```
 
 This is stronger than the qualitative statement that the minimum isolate-isolate
 distance tends to one.
@@ -315,20 +315,20 @@ Section 79 is not needed for the canonical Section-77 application above.
 Theorem 81.1 also quantifies how impossible a uniformly expanded isolate packing is.
 If `nu_epsilon=0`, then
 
-$$
+```math
 {A\over a_0}
 \left(1-{1\over(1+\epsilon)^2}\right)
 \le\sigma,
 \tag{81.23}
-$$
+```
 
 after dropping the nonnegative perimeter term. If `A>=alpha D^2` and
 `sigma<=SD`, this forces
 
-$$
+```math
 \epsilon=O(D^{-1}).
 \tag{81.24}
-$$
+```
 
 Thus a macroscopic boundary-slack chamber cannot keep all of its isolated points at a
 common separation `1+omega(1/D)`.

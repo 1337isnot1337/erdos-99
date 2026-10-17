@@ -28,53 +28,53 @@ produces a linear family of distinct near-tangent physical contact edges.
 
 For consecutive loaded force-hull vertices `b_i,b_{i+1}`, write
 
-$$
+```math
 s_i:=|b_i-b_{i+1}|,
 \qquad
 u_i:={b_{i+1}-b_i\over s_i},
-$$
+```
 
 and orient the distinguished outer-face contact route `W_i` from `b_i` to
 `b_{i+1}`. If its unit edge-occurrence vectors are
 
-$$
+```math
 v_{i,1},\ldots,v_{i,\ell_i},
 \qquad |v_{i,j}|=1,
-$$
+```
 
 then
 
-$$
+```math
 \sum_{j=1}^{\ell_i}v_{i,j}=s_i u_i.
-$$
+```
 
 Taking the scalar product with `u_i` gives
 
-$$
+```math
 \ell_i-s_i
 =\sum_{j=1}^{\ell_i}(1-v_{i,j}\cdot u_i).
 \tag{DC.1}
-$$
+```
 
 Let `theta_{i,j} in[-pi,pi]` be the oriented angle from `u_i` to `v_{i,j}`. Then
 
-$$
+```math
 \boxed{
 \ell_i-s_i
 =\sum_{j=1}^{\ell_i}(1-\cos\theta_{i,j}).
 }
 \tag{DC.2}
-$$
+```
 
 Summing over the distinguished outer-route partition gives the exact finite identity
 
-$$
+```math
 \boxed{
 d_{out}:=b-\operatorname{per}(F)
 =\sum_i\sum_{j=1}^{\ell_i}(1-\cos\theta_{i,j}).
 }
 \tag{DC.3}
-$$
+```
 
 No simplicity of the route is required. Bridge excursions and repeated articulation
 occurrences are already included with outer-walk multiplicity.
@@ -84,18 +84,18 @@ occurrences are already included with outer-walk multiplicity.
 Fix `beta in(0,pi)`. Let `A_beta` be the number of outer-route edge occurrences for
 which
 
-$$
+```math
 |\theta_{i,j}|\ge\beta.
-$$
+```
 
 Every such occurrence contributes at least `1-cos(beta)` to (DC.3). Hence
 
-$$
+```math
 \boxed{
 A_\beta\le {d_{out}\over1-\cos\beta}.
 }
 \tag{DC.4}
-$$
+```
 
 This is a deterministic Markov bound for physical contact-edge directions. It uses no
 stress coefficient and no face-area estimate.
@@ -104,32 +104,32 @@ stress coefficient and no face-area estimate.
 
 Let
 
-$$
+```math
 J:=\{i:s_i>2\},
 \qquad
 L_{>2}:=\sum_{i\in J}(s_i-2).
-$$
+```
 
 The number of outer-route edge occurrences belonging to these long-side intervals is
 
-$$
+```math
 M_J:=\sum_{i\in J}\ell_i.
-$$
+```
 
 Since `ell_i>=s_i`,
 
-$$
+```math
 M_J\ge\sum_{i\in J}s_i
 =2|J|+L_{>2}
 \ge L_{>2}.
 \tag{DC.5}
-$$
+```
 
 Delete every occurrence counted by `A_beta`. At least
 
-$$
+```math
 L_{>2}-{d_{out}\over1-\cos\beta}
-$$
+```
 
 occurrences remain on long-side routes with oriented angle strictly less than `beta`
 from the corresponding loaded-hull side.
@@ -138,7 +138,7 @@ An undirected edge has at most two occurrences in one face-boundary walk: one fo
 side of the embedded edge. Therefore, if `E_tan(beta)` denotes the number of distinct
 physical contact edges represented by these remaining occurrences,
 
-$$
+```math
 \boxed{
 E_{tan}(\beta)
 \ge {1\over2}
@@ -147,7 +147,7 @@ L_{>2}-{d_{out}\over1-\cos\beta}
 \right)_+.
 }
 \tag{DC.6}
-$$
+```
 
 This is again finite. It converts the metric long-side currency directly into
 physical unit contacts rather than another scalar ledger variable.
@@ -156,43 +156,43 @@ physical unit contacts rather than another scalar ledger variable.
 
 At the present proof-only floor `t=t_42`, the low-`t` squeeze gives
 
-$$
+```math
 {d_{out}\over D}\le0.002883975+o(1),
-$$
+```
 
 and the outer-tooth/long-side dichotomy gives the long-side alternative
 
-$$
+```math
 {L_{>2}\over D}\ge
 0.4363893718701161781\ldots-o(1).
 \tag{DC.7}
-$$
+```
 
 Choose
 
-$$
+```math
 \beta={\pi\over6}.
-$$
+```
 
 Then `1-cos(beta)=1-sqrt(3)/2`, and (DC.4) permits at most
 
-$$
+```math
 \boxed{
 {A_{\pi/6}\over D}
 \le0.02152628245551690578\ldots+o(1)
 }
 \tag{DC.8}
-$$
+```
 
 bad outer-route occurrences. Therefore (DC.6) gives
 
-$$
+```math
 \boxed{
 {E_{tan}(\pi/6)\over D}
 \ge0.2074315447072996361\ldots-o(1).
 }
 \tag{DC.9}
-$$
+```
 
 So the long-side branch contains at least `0.2074D-o(D)` distinct outer-face unit
 contacts whose oriented directions lie within 30 degrees of the corresponding long
@@ -202,36 +202,36 @@ loaded-hull side.
 
 The exact tooth/long-side burden gives
 
-$$
+```math
 \max\{N_2,L_{>2}\}
 \ge0.4363893718701161781\ldots D-o(D).
-$$
+```
 
 If the tooth alternative holds, shallow-tooth apex injectivity with `eta=1/15` gives
 
-$$
+```math
 {E_{pen}\over D}
 \ge0.1965648734350580890\ldots-o(1),
-$$
+```
 
 where every selected penetration contact has inward normal component greater than
 
-$$
+```math
 {29\sqrt3-\sqrt{59}\over60}
 =0.7091387945271472222\ldots .
-$$
+```
 
 If the long-side alternative holds, (DC.9) gives
 
-$$
+```math
 {E_{tan}(\pi/6)\over D}
 \ge0.2074315447072996361\ldots-o(1).
-$$
+```
 
 Hence every current-floor low-`t` survivor satisfies the following purely physical
 contact-edge alternative:
 
-$$
+```math
 \boxed{
 \begin{array}{ll}
 \text{either}&\ge0.1965648734D-o(D)\text{ distinct strongly inward contacts},\\[2mm]
@@ -239,13 +239,13 @@ $$
 \end{array}
 }
 \tag{DC.10}
-$$
+```
 
 In particular, regardless of branch, at least
 
-$$
+```math
 \boxed{0.1965648734350580890\ldots D-o(D)}
-$$
+```
 
 distinct unit contacts belong to one of two explicit robust geometric families.
 

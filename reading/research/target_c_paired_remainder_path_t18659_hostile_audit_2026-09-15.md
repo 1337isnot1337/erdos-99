@@ -48,26 +48,26 @@ The displayed decimals are diagnostics only.
 
 At `T=1.8659` the verifier recomputes
 
-$$
+```math
 U_0={9T\over2}-2\pi,
 \qquad
 \delta_{max}={U_0-C_{76}\over2}.
-$$
+```
 
 It checks `delta_max<0.101`, `U0<2.114`, the discriminant gate
 `5 U0^2<32 Delta_2`, and the same derivative bounds used by the parent corrected
 feasibility theorem.  For `z0=2.0675` it checks
 
-$$
+```math
 F'(z_0)<1/16,
-$$
+```
 
 through the same elementary square bound and obtains an exact negative outward upper
 bound for `H(z0)`.  Therefore the parent monotonicity argument gives
 
-$$
+```math
 z>2.0675-o(1)
-$$
+```
 
 on the enlarged endpoint box.  No old `1.865` numerical sign is reused.
 
@@ -77,30 +77,30 @@ on the enlarged endpoint box.  No old `1.865` numerical sign is reused.
 
 The parent hostile audit proves for
 
-$$
+```math
 L(P)=P-{\delta-F(z-2P)\over\lambda}
-$$
+```
 
 that
 
-$$
+```math
 L_P=1-{2F'(z-2P)\over\lambda}>0
-$$
+```
 
 whenever the residual mass lies in `[0,pi]` and `lambda>2-sqrt(3)`.
 The new threshold is `lambda=0.4887`, so the same strict inequality holds.
 
 The certificate checks the adverse floor
 
-$$
+```math
 P_0=z_0-U_0+2\delta_{max}>0
-$$
+```
 
 and
 
-$$
+```math
 2P_0<z_0.
-$$
+```
 
 Thus its residual mass is nonnegative.  It is explicitly below `pi` because the exact
 outward quantities give `r0<z0<2.068<pi`.  Therefore the parent derivative bound is
@@ -116,37 +116,37 @@ weights, so no omitted negative-residual case survives.
 
 After inserting
 
-$$
+```math
 P_0=z-U_0+2\delta+\kappa/2,
-$$
+```
 
 the parent audit computes
 
-$$
+```math
 L_z=1-F'(r)/\lambda>0,
-$$
+```
 
-$$
+```math
 L_\kappa={1\over2}-F'(r)/\lambda>0,
-$$
+```
 
-$$
+```math
 L_\delta=2-{1\over\lambda}-{4F'(r)\over\lambda}<0,
-$$
+```
 
 and
 
-$$
+```math
 L_{U_0}=-1+{2F'(r)\over\lambda}<0.
-$$
+```
 
 The first, second, and fourth inequalities follow from
 `lambda>2-sqrt(3)`; the third is even stricter because `lambda<1/2`.
 Both hold for `lambda=0.4887`.  Hence the adverse substitution
 
-$$
+```math
 t=T,\quad z=z_0,\quad\kappa=0,\quad\delta=\delta_{max}
-$$
+```
 
 is valid throughout the new box.
 
@@ -162,10 +162,10 @@ measure and has total mass `z-2P`.
 
 The three-well bathtub lower bound
 
-$$
+```math
 E_{res}\ge F(z-2P)-o(1),
 \qquad F(s)=s-6\sin(s/6),
-$$
+```
 
 uses no extra energy budget.  This was the load-bearing new step in the parent `1.865`
 audit and is unchanged here.
@@ -176,17 +176,17 @@ audit and is unchanged here.
 
 For terminal energy at most `lambda`, the same-oriented chord upper bound is
 
-$$
+```math
 {r_\tau^2\over D^2}
 \le\lambda-\lambda^2/4+o(1),
-$$
+```
 
 while Section 157 gives
 
-$$
+```math
 {r_\tau\over D}
 \ge1-\delta-\lambda/2-o(1).
-$$
+```
 
 The verifier evaluates the adverse `delta_max` and proves the squared difference is
 strictly positive.  The diagnostic margin is `1.37e-4`, larger than at the `1.865`
@@ -205,23 +205,23 @@ trains.
 The inherited path/hub theorem makes their crosscut dual a path with a single hub.
 The complete diameter graph contributes at most two interval endpoints per edge, so
 
-$$
+```math
 \sum_i N_i\le2\pi D+o(D).
-$$
+```
 
 After removing the one hub boundary, the number of eligible boundaries is still
 `>0.0002D-o(D)`.  The exact rational estimate
 
-$$
+```math
 {2(355/113)\over0.0002}=31415.9292\ldots<31416
-$$
+```
 
 implies that, for all sufficiently large sources, one integer `N_i` is strictly below
 `31416`, hence
 
-$$
+```math
 N_i\le31415.
-$$
+```
 
 **Verdict:** PASS.
 

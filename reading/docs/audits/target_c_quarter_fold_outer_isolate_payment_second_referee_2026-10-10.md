@@ -22,15 +22,15 @@ For a constant-sign face, the endpoint carries its boundary and interior by a ri
 
 Let `B_old` and `B_new` be the total isolate counts inside all bounded face interiors before and after the endpoint. Summing the two facewise conclusions gives
 
-$$
+```math
 B_{new}\le B_{old}-\sum_{F_i\text{ nonconstant}}z_i(A).
-$$
+```
 
 The exact contact graph preserves the total number `Z_total` of isolate labels, so `Z_out=Z_total-B` at both endpoints. Subtracting yields
 
-$$
+```math
 Z_{out}(A')\ge Z_{out}(A)+\sum_{F_i\text{ nonconstant}}z_i(A),
-$$
+```
 
 including when a nonconstant face contains several old isolates. The face-interior/outer-region partition is valid at both endpoints: the preserved plane embedding makes the bounded faces disjoint, and a degree-zero label cannot lie on a unit cycle edge.
 

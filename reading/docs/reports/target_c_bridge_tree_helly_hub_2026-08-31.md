@@ -43,24 +43,24 @@ reaction vertices.
 Delete every bridge of `G_+` and contract each remaining connected component to one
 node.  The result is the bridge-block tree
 
-$$
+```math
 T=T_{br}.
 \tag{C23.1}
-$$
+```
 
 For `b in B_+`, write `tau(b)` for the node of `T` containing `b`.
 
 For every positive diameter edge
 
-$$
+```math
 h=bk\in H_+,
-$$
+```
 let
 
-$$
+```math
 P_h
 \tag{C23.2}
-$$
+```
 
 be the unique tree path in `T` from `tau(b)` to `tau(k)`.  A path is allowed to have
 length zero when both endpoints lie in one bridge block.
@@ -73,10 +73,10 @@ length zero when both endpoints lie in one bridge block.
 
 For any `h_1,h_2 in H_+`,
 
-$$
+```math
 \boxed{P_{h_1}\cap P_{h_2}\ne\varnothing.}
 \tag{C23.3}
-$$
+```
 
 #### Proof
 
@@ -85,12 +85,12 @@ the bridge block of that endpoint.
 
 Assume therefore that
 
-$$
+```math
 h_1=ac,
 \qquad
 h_2=bd
 \tag{C23.4}
-$$
+```
 
 have four distinct endpoints.  Every point of `B_+` is a vertex of the convex force
 hull `F`.  The classical planar diameter-graph theorem says that straight diameter
@@ -126,20 +126,20 @@ two members intersect, then all members have a common vertex.  Applied to the pa
 
 There exists a bridge block
 
-$$
+```math
 \boxed{X_*\in V(T)}
 \tag{C23.5}
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{
 X_*\in P_h
 \qquad\text{for every }h\in H_+.
 }
 \tag{C23.6}
-$$
+```
 
 Equivalently, every positive diameter pair is routed through one common node of the
 positive-contact bridge-block tree.
@@ -148,9 +148,9 @@ positive-contact bridge-block tree.
 
 By Lemma C23.1 the finite family of tree paths
 
-$$
+```math
 \{P_h:h\in H_+\}
-$$
+```
 
 is pairwise intersecting.  The tree-Helly property gives a common vertex `X_*`.
 `\square`
@@ -164,9 +164,9 @@ one choice of hub.
 
 Root `T` at `X_*`.  Let `U` be any connected component of
 
-$$
+```math
 T-X_*.
-$$
+```
 
 ### Corollary C23.2
 
@@ -191,42 +191,42 @@ edge incident to any of them exits that branch.
 Let `e=uv` be a positive contact bridge, oriented so that its descendant side `S_e`
 does not contain the hub `X_*`.  Let
 
-$$
+```math
 B_e:=B_+\cap S_e.
 \tag{C23.7}
-$$
+```
 
 For each loaded vertex put
 
-$$
+```math
 s_b:=\sum_{bk\in H_+}\beta_{bk}.
 \tag{C23.8}
-$$
+```
 
 Define the scalar endpoint mass below `e` by
 
-$$
+```math
 \boxed{
 w_e:=\sum_{b\in B_e}s_b.}
 \tag{C23.9}
-$$
+```
 
 By Corollary C23.2 there is no positive diameter edge internal to `B_e`.  Therefore
 every positive diameter incidence counted by `w_e` crosses the bridge cut exactly once.
 Hence
 
-$$
+```math
 \boxed{
 w_e
 =
 \sum_{\substack{bk\in H_+\\b\in B_e,\ k\notin B_e}}
 \beta_{bk}.}
 \tag{C23.10}
-$$
+```
 
 Combining this with the diameter-cut flow identity C22.5 gives
 
-$$
+```math
 \boxed{
 \alpha_e(u-v)
 =
@@ -234,16 +234,16 @@ $$
 \beta_{bk}(b-k),
 }
 \tag{C23.11}
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 \alpha_e\le D w_e.
 }
 \tag{C23.12}
-$$
+```
 
 The scalar quantities `w_e` behave as an ordinary nonnegative rooted-tree flow.  At a
 reaction-free non-root branch node the incoming endpoint mass is the sum of the
@@ -252,29 +252,29 @@ incoming/outgoing difference is exactly the sum of their `s_b` masses.
 
 Since
 
-$$
+```math
 \sum_{b\in B_+}s_b
 =2\sum_{h\in H_+}\beta_h
 =2,
 \tag{C23.13}
-$$
+```
 
 any antichain of rooted bridge edges satisfies
 
-$$
+```math
 \boxed{
 \sum_{e\in\mathcal A}w_e\le2.
 }
 \tag{C23.14}
-$$
+```
 
 Equation C23.12 then recovers the `2D` bridge-frontier stress bound, now as a direct
 corollary of a scalar terminal-mass flow:
 
-$$
+```math
 \sum_{e\in\mathcal A}\alpha_e\le2D.
 \tag{C23.15}
-$$
+```
 
 C20 is stronger in that it obtains the stress frontier bound directly from reciprocal
 perimeter and does not need the hub theorem.  The point here is the new rooted-flow
@@ -287,62 +287,62 @@ interpretation.
 Let `d_T(tau(b),X_*)` be the number of contact bridges between the block of `b` and the
 hub.  Summing C23.9 over every rooted bridge edge gives the exact layer-cake identity
 
-$$
+```math
 \boxed{
 \sum_{e\in E(T)}w_e
 =
 \sum_{b\in B_+}s_b\,d_T(\tau(b),X_*).
 }
 \tag{C23.16}
-$$
+```
 
 Indeed a fixed endpoint mass `s_b` is counted once for every bridge on its unique path
 to `X_*`.
 
 Let
 
-$$
+```math
 S_{br}:=\sum_{e\text{ bridge of }G_+}\alpha_e.
 \tag{C23.17}
-$$
+```
 
 Then C23.12 and C23.16 give
 
-$$
+```math
 \boxed{
 S_{br}
 \le
 D\sum_{b\in B_+}s_b\,d_T(\tau(b),X_*).
 }
 \tag{C23.18}
-$$
+```
 
 Consequently, if
 
-$$
+```math
 S_{br}\ge\eta D^2,
 \tag{C23.19}
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \sum_{b\in B_+}s_b\,d_T(\tau(b),X_*)
 \ge\eta D.
 }
 \tag{C23.20}
-$$
+```
 
 Since the total `s_b` mass is two, the `s_b/2`-weighted mean bridge depth of the
 positive diameter endpoints is at least
 
-$$
+```math
 \boxed{
 \frac{\eta D}{2}.
 }
 \tag{C23.21}
-$$
+```
 
 Thus bridge-dominant stress forces the positive-diameter endpoint incidence measure to
 have mean bridge depth `Omega(D)` from the common hub.  This is stronger than merely

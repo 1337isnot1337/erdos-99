@@ -18,25 +18,25 @@ two-direction lattice exclusion.
 
 ## 1. The actual source theorem
 
-Let $A$ be a finite triangle-free subset of any translated and rotated
-unit triangular lattice. Put $n=|A|\ge2$,
-$D=\operatorname{diam}A$, and $a_0=\sqrt3/2$.
-Then there is a unit-separated $n$-point source $A'$ with
-$$
+Let $`A`$ be a finite triangle-free subset of any translated and rotated
+unit triangular lattice. Put $`n=|A|\ge2`$,
+$`D=\operatorname{diam}A`$, and $`a_0=\sqrt3/2`$.
+Then there is a unit-separated $`n`$-point source $`A'`$ with
+```math
 \boxed{
 \operatorname{diam}A'
 \le\sqrt{2/3}\,(D+2)+2/\sqrt3.
 }
 \tag{1.1}
-$$
+```
 Consequently if
-$$
+```math
 \sqrt{2/3}\,(D+2)+2/\sqrt3<D,
 \tag{1.2}
-$$
-then $A$ is not a global minimizer. The safe sufficient threshold
-$D\ge16$ works. Equivalently, every triangle-free source in this
-exact lattice class with $n\ge1090$ is excluded from global
+```
+then $`A`$ is not a global minimizer. The safe sufficient threshold
+$`D\ge16`$ works. Equivalently, every triangle-free source in this
+exact lattice class with $`n\ge1090`$ is excluded from global
 minimum-diameter optimality.
 
 This is a competitor for the full source, including contact-isolated
@@ -45,71 +45,71 @@ one exact lattice.
 
 ## 2. A finite elementary-face count
 
-Let $K=\operatorname{conv}A$. Let $\mathcal T$ consist of
+Let $`K=\operatorname{conv}A`$. Let $`\mathcal T`$ consist of
 all elementary triangular faces of the lattice having at least one
-vertex in $A$. Each lattice site belongs to exactly six such faces,
+vertex in $`A`$. Each lattice site belongs to exactly six such faces,
 so
-$$
+```math
 6n=\sum_{T\in\mathcal T}|A\cap\operatorname{vert}T|.
 \tag{2.1}
-$$
-Because $A$ has no unit equilateral triangle, each summand is at
-most two. Thus $|\mathcal T|\ge3n$.
+```
+Because $`A`$ has no unit equilateral triangle, each summand is at
+most two. Thus $`|\mathcal T|\ge3n`$.
 
-Every face in $\mathcal T$ lies within distance one of one of its
-source vertices. The faces have disjoint interiors and area $a_0/2$.
-Therefore their union lies in $K+B(0,1)$, and
-$$
+Every face in $`\mathcal T`$ lies within distance one of one of its
+source vertices. The faces have disjoint interiors and area $`a_0/2`$.
+Therefore their union lies in $`K+B(0,1)`$, and
+```math
 \frac{3na_0}{2}
 \le\frac{|\mathcal T|a_0}{2}
 \le\operatorname{area}(K+B(0,1)).
 \tag{2.2}
-$$
-The latter body has diameter $D+2$. The elementary isodiametric
+```
+The latter body has diameter $`D+2`$. The elementary isodiametric
 inequality yields the exact finite estimate
-$$
+```math
 \boxed{n\le\frac{\pi(D+2)^2}{6a_0}.}
 \tag{2.3}
-$$
+```
 No boundary points were discarded; all six faces of every source point
 are counted, including at the boundary and around holes. This explains
 the finite radius-one boundary correction explicitly.
 
 ## 3. Exact competitor cardinality
 
-The unit triangular lattice has Voronoi-cell area $a_0$ and covering
-radius $\rho=1/\sqrt3$. These follow from its fundamental
+The unit triangular lattice has Voronoi-cell area $`a_0`$ and covering
+radius $`\rho=1/\sqrt3`$. These follow from its fundamental
 parallelogram area and the circumradius of an elementary unit equilateral
-triangle. If $N(r)$ counts its sites in a closed disk of radius
-$r\ge\rho$, the Voronoi cells of those sites cover the disk of
-radius $r-\rho$. Indeed a nearest site to a point in that smaller
-disk has distance at most $\rho$ and hence lies in the larger disk.
+triangle. If $`N(r)`$ counts its sites in a closed disk of radius
+$`r\ge\rho`$, the Voronoi cells of those sites cover the disk of
+radius $`r-\rho`$. Indeed a nearest site to a point in that smaller
+disk has distance at most $`\rho`$ and hence lies in the larger disk.
 Disjoint cell interiors give
-$$
+```math
 N(r)a_0\ge\pi(r-\rho)^2.
 \tag{3.1}
-$$
-Choose $r=\rho+\sqrt{a_0n/\pi}$. There are at least $n$
-sites in that disk. Any $n$ of them form a feasible exact-cardinality
+```
+Choose $`r=\rho+\sqrt{a_0n/\pi}`$. There are at least $`n`$
+sites in that disk. Any $`n`$ of them form a feasible exact-cardinality
 competitor whose diameter is at most
-$$
+```math
 2\rho+2\sqrt{a_0n/\pi}
 \le2/\sqrt3+\sqrt{2/3}\,(D+2),
-$$
+```
 by (2.3). This proves (1.1). The competitor is allowed to contain
 triangles; global minimum-diameter optimality is over all feasible sources.
 
-For the safe threshold, $\sqrt{2/3}<49/60$ and
-$1/\sqrt3<7/12$, as checked by squaring positive rational numbers.
-For $D\ge16$,
-$$
+For the safe threshold, $`\sqrt{2/3}<49/60`$ and
+$`1/\sqrt3<7/12`$, as checked by squaring positive rational numbers.
+For $`D\ge16`$,
+```math
 \sqrt{2/3}(D+2)+2/\sqrt3
 <\frac{49}{60}D+\frac{14}{5}<D.
 \tag{3.2}
-$$
-Finally the disjoint radius-$1/2$ source disks inside a disk of radius
-$D+1/2$ give $n\le4(D+1/2)^2$. Thus $n\ge1090$
-implies $D>16$, proving the cardinality version.
+```
+Finally the disjoint radius-$`1/2`$ source disks inside a disk of radius
+$`D+1/2`$ give $`n\le4(D+1/2)^2`$. Thus $`n\ge1090`$
+implies $`D>16`$, proving the cardinality version.
 
 ## 4. Consequence for the complete exact-lattice subroute
 
@@ -119,8 +119,8 @@ gives the following candidate.
 
 **Restricted closure.** No finite triangle-free source contained in one
 translated lattice generated by two unit vectors at an angle in
-$[\pi/3,2\pi/3]$ can be a global minimizer when $D\ge2292$.
-The same holds whenever its cardinality is at least $21{,}022{,}226$.
+$`[\pi/3,2\pi/3]`$ can be a global minimizer when $`D\ge2292`$.
+The same holds whenever its cardinality is at least $`21{,}022{,}226`$.
 
 The open-angle proof handles arbitrary finite subsets by a contact-preserving
 motion. The two endpoint lattices are the triangular lattice up to basis

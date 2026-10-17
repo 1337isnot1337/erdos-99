@@ -18,11 +18,11 @@
 
 In P2 both D2C cells are parallel:
 
-$$
+```math
 G_1=G_2=\Delta_2:=2\arcsin(1/D),
 \qquad
 W_1=W_2=0.
-$$
+```
 
 Thus SCE has **zero error**, rather than merely `O(1/D)` error.  The resulting exact complex closure can be eliminated against the P2 angular equation and converted into a low-degree integer polynomial vanishing at the physical direction parameter.
 
@@ -30,7 +30,7 @@ This yields a sharp degree sieve.
 
 Put
 
-$$
+```math
 \delta:=2\arcsin\frac1{2D},
 \qquad
 m:=q-4,
@@ -38,27 +38,27 @@ m:=q-4,
 z:=e^{i\delta},
 \qquad
 w:=e^{i\Delta_2}.
-$$
+```
 
 Let
 
-$$
+```math
 a:=L_A,
 \qquad
 b:=L_B,
 \qquad
 a+b=m,
-$$
+```
 
 and let the two staircase Littlewood polynomials be
 
-$$
+```math
 P_A(Z)=\sum_{j=0}^{a-1}\varepsilon^A_jZ^j,
 \qquad
 P_B(Z)=\sum_{j=0}^{b-1}\varepsilon^B_jZ^j,
 \qquad
 \varepsilon^X_j\in\{\pm1\},
-$$
+```
 
 with the convention `P_X=0` when the corresponding length is zero.
 
@@ -66,106 +66,106 @@ with the convention `P_X=0` when the corresponding length is zero.
 
 Every P2 survivor satisfies
 
-$$
+```math
 \boxed{
 P_A(z)+z^a wP_B(z)=0,
 }
 \tag{P2A.1}
-$$
+```
 
-$$
+```math
 \boxed{
 z^m w^2=-1,
 }
 \tag{P2A.2}
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 P_A(z)^2+z^{a-b}P_B(z)^2=0.
 }
 \tag{P2A.3}
-$$
+```
 
 After clearing a possible negative exponent, `z` is a root of the nonzero integer polynomial
 
-$$
+```math
 \boxed{
 Q_{A,B}(Z)
 :=Z^{(b-a)_+}P_A(Z)^2
  +Z^{(a-b)_+}P_B(Z)^2,
 }
 \tag{P2A.4}
-$$
+```
 
 with
 
-$$
+```math
 \boxed{
 \deg Q_{A,B}\le2\max(a,b)-2
 }
 \tag{P2A.5}
-$$
+```
 
 when `a,b>0`.  If one staircase length is zero, the unsquared closure already gives a Littlewood polynomial of degree `m-1` vanishing at `z`.
 
 Now put
 
-$$
+```math
 x:=z+z^{-1}=2\cos\delta
-$$
+```
 
 and define the monic trace polynomial
 
-$$
+```math
 \boxed{
 H_m(X)
 :=2T_m(X/2)+16X^2-48X+34.
 }
 \tag{P2A.6}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{H_m(x)=0.}
 \tag{P2A.7}
-$$
+```
 
 Let `h_m` be the irreducible factor of `H_m` over `Q` containing this physical root `x`, and put
 
-$$
+```math
 r_m:=\deg h_m.
-$$
+```
 
 Since `x` is real while `z=e^{i\delta}` is nonreal and satisfies
 
-$$
+```math
 z^2-xz+1=0,
-$$
+```
 
 we have the exact degree doubling
 
-$$
+```math
 \boxed{[\mathbb Q(z):\mathbb Q]=2r_m.}
 \tag{P2A.8}
-$$
+```
 
 Consequently, if `a,b>0`,
 
-$$
+```math
 \boxed{\max(a,b)\ge r_m+1.}
 \tag{P2A.9}
-$$
+```
 
 In particular:
 
-$$
+```math
 \boxed{r_m\ge m-1\quad\Longrightarrow\quad\text{P2 is impossible}.}
 \tag{P2A.10}
-$$
+```
 
 The implication also covers the zero-length staircase case, because then `P_X(z)=0` would give a polynomial of degree `m-1<2r_m`.
 
@@ -177,83 +177,83 @@ Thus the complete P2 geometry is reduced to one explicit arithmetic statement ab
 
 SCE gives, after rotating by the A phase,
 
-$$
+```math
 P_A(z)+e^{i(a\delta+G_1)}P_B(z)=E.
-$$
+```
 
 In P2,
 
-$$
+```math
 G_1=\Delta_2,
 \qquad
 W_1=W_2=0,
-$$
+```
 
 so the transition error vector is exactly zero. Therefore
 
-$$
+```math
 P_A(z)+z^a wP_B(z)=0,
-$$
+```
 
 which is P2A.1.
 
 The P2 half-circle angle equation is
 
-$$
+```math
 (q-4)\delta+2\Delta_2=\pi.
-$$
+```
 
 Since `m=q-4`, exponentiation gives
 
-$$
+```math
 z^mw^2=e^{i(m\delta+2\Delta_2)}=-1,
-$$
+```
 
 which is P2A.2.
 
 Squaring P2A.1 gives
 
-$$
+```math
 P_A(z)^2=z^{2a}w^2P_B(z)^2.
-$$
+```
 
 Use
 
-$$
+```math
 w^2=-z^{-m}=-z^{-(a+b)}
-$$
+```
 
 to obtain
 
-$$
+```math
 P_A(z)^2=-z^{a-b}P_B(z)^2.
-$$
+```
 
 This proves P2A.3.
 
 If `a>=b`, P2A.3 is already polynomial and equals
 
-$$
+```math
 P_A(z)^2+z^{a-b}P_B(z)^2=0.
-$$
+```
 
 If `b>a`, multiply by `z^{b-a}`. This is exactly P2A.4.
 
 For `a>b`, its two summands have degrees
 
-$$
+```math
 2a-2
 \quad\text{and}\quad
 (a-b)+(2b-2)=a+b-2=m-2,
-$$
+```
 
 so the degree is at most `2a-2`. The symmetric argument handles `b>a`; if `a=b`, the degree is at most `2a-2`. Thus P2A.5 holds.
 
 The polynomial is nonzero. If `a\ne b`, the summand belonging to the longer staircase has strictly larger degree and leading coefficient `1`. If `a=b`, its constant coefficient is
 
-$$
+```math
 (\varepsilon^A_0)^2+(\varepsilon^B_0)^2=2.
-$$
+```
 
 ---
 
@@ -261,78 +261,78 @@ $$
 
 The chord definitions give
 
-$$
+```math
 \sin(\Delta_2/2)=\frac1D
 =2\sin(\delta/2).
-$$
+```
 
 Hence
 
-$$
+```math
 \cos\Delta_2
 =1-2\sin^2(\Delta_2/2)
 =1-\frac2{D^2}.
-$$
+```
 
 Also
 
-$$
+```math
 \cos\delta=1-\frac1{2D^2},
-$$
+```
 
 so
 
-$$
+```math
 \boxed{\cos\Delta_2=4\cos\delta-3.}
 \tag{2.1}
-$$
+```
 
 With
 
-$$
+```math
 x=z+z^{-1}=2\cos\delta,
-$$
+```
 we get
 
-$$
+```math
 w+w^{-1}=2\cos\Delta_2=4x-6.
 \tag{2.2}
-$$
+```
 
 From P2A.2,
 
-$$
+```math
 w^2=-z^{-m},
 \qquad
 w^{-2}=-z^m.
-$$
+```
 
 Therefore
 
-$$
+```math
 (w+w^{-1})^2
 =w^2+w^{-2}+2
 =2-z^m-z^{-m}.
-$$
+```
 
 Insert (2.2):
 
-$$
+```math
 z^m+z^{-m}+(4x-6)^2-2=0.
 \tag{2.3}
-$$
+```
 
 The standard trace identity is
 
-$$
+```math
 z^m+z^{-m}=2T_m(x/2).
-$$
+```
 
 Thus
 
-$$
+```math
 2T_m(x/2)+16x^2-48x+34=0,
-$$
+```
 which proves P2A.7.
 
 For `m>=3`, `2T_m(X/2)` is a monic integer polynomial of degree `m`, so `H_m` is monic of degree `m`.
@@ -343,24 +343,24 @@ For `m>=3`, `2T_m(X/2)` is a monic integer polynomial of degree `m`, so `H_m` is
 
 The trace polynomial has an unexpectedly rigid reciprocal lift. Define
 
-$$
+```math
 R_m(Z):=Z^mH_m(Z+Z^{-1}).
-$$
+```
 
 A direct expansion gives
 
-$$
+```math
 \boxed{
 R_m(Z)
 =(Z^m-1)^2
 +Z^{m-2}(4Z^2-6Z+4)^2.
 }
 \tag{3.1}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \begin{aligned}
 R_m(Z)
 ={}&Z^{2m}+1
@@ -369,27 +369,27 @@ R_m(Z)
 +66Z^m.
 \end{aligned}
 \tag{3.2}
-$$
+```
 
 The physical `z` is a unit-circle root of this explicit reciprocal polynomial.
 
 For even `m`, (3.1) factors over the Gaussian rationals as
 
-$$
+```math
 R_m(Z)
 =F_m^+(Z)F_m^-(Z),
-$$
+```
 
 where
 
-$$
+```math
 \boxed{
 F_m^\pm(Z)
 =Z^m-1
 \pm iZ^{m/2-1}(4Z^2-6Z+4).
 }
 \tag{3.3}
-$$
+```
 
 This Gaussian factorization is exact and may be the most efficient route to the missing arithmetic lemma for even `m`.
 
@@ -401,32 +401,32 @@ Let `h_m` be the irreducible `Q`-factor of `H_m` containing the physical real ro
 
 Since
 
-$$
+```math
 x=2\cos\delta\in\mathbb R,
-$$
+```
 all elements of `Q(x)` are real under the physical embedding.
 
 But
 
-$$
+```math
 z=e^{i\delta}\notin\mathbb R
-$$
+```
 for a genuine large shell, and `z` is a root of
 
-$$
+```math
 Z^2-xZ+1.
-$$
+```
 
 Therefore `z` cannot belong to `Q(x)`. Hence
 
-$$
+```math
 [\mathbb Q(z):\mathbb Q(x)]=2,
-$$
+```
 so
 
-$$
+```math
 [\mathbb Q(z):\mathbb Q]=2r_m.
-$$
+```
 
 This proves P2A.8.
 
@@ -436,48 +436,48 @@ This proves P2A.8.
 
 Assume first that `a,b>0`. Since the nonzero integer polynomial `Q_{A,B}` vanishes at `z`, the minimal polynomial of `z` divides it. Thus
 
-$$
+```math
 2r_m
 \le\deg Q_{A,B}
 \le2\max(a,b)-2.
-$$
+```
 
 Therefore
 
-$$
+```math
 \max(a,b)\ge r_m+1,
-$$
+```
 which is P2A.9.
 
 Now suppose
 
-$$
+```math
 r_m\ge m-1.
-$$
+```
 
 If both staircase lengths are positive, then
 
-$$
+```math
 \max(a,b)\le m-1,
-$$
+```
 contradicting P2A.9.
 
 If, say, `a=0`, P2A.1 becomes
 
-$$
+```math
 wP_B(z)=0.
-$$
+```
 
 Thus
 
-$$
+```math
 P_B(z)=0,
-$$
+```
 where `P_B` has degree `m-1`. But the minimal polynomial of `z` has degree
 
-$$
+```math
 2r_m\ge2m-2>m-1
-$$
+```
 for `m>1`, impossible. The case `b=0` is identical.
 
 Hence `r_m>=m-1` excludes P2 completely. This proves P2A.10. `square`
@@ -488,45 +488,48 @@ Hence `r_m>=m-1` excludes P2 completely. This proves P2A.10. `square`
 
 Factoring `H_m` over `Q` exactly for every
 
-$$
+```math
 3\le m\le60
-$$
+```
 produces the following uniform pattern:
 
 1. if
-   $$
+   ```math
    m\not\equiv3\pmod6,
-   $$
+   
+   ```
    then `H_m` is irreducible of degree `m`;
 2. if
-   $$
+   ```math
    m\equiv3\pmod6,
-   $$
+   
+   ```
    then
-   $$
+   ```math
    H_m(X)=(X-1)J_m(X),
-   $$
+   
+   ```
    where `J_m` is irreducible of degree `m-1`.
 
 The linear factor is explained exactly:
 
-$$
+```math
 H_m(1)
 =2T_m(1/2)+2
 =2\cos(m\pi/3)+2,
-$$
+```
 so `X-1` occurs precisely when `m=3 mod 6`.
 
 The physical root satisfies
 
-$$
+```math
 x=2\cos\delta\to2,
-$$
+```
 so it is not the root `x=1`.  Thus every checked `m<=60` has
 
-$$
+```math
 r_m\ge m-1,
-$$
+```
 and P2A.10 rigorously excludes P2 for every corresponding `q=m+4` once the exact factorization has been independently reproduced.
 
 This finite computation is evidence, not a proof of the eventual statement.
@@ -535,19 +538,19 @@ This finite computation is evidence, not a proof of the eventual statement.
 
 Prove for every sufficiently large `m` that the physical factor of
 
-$$
+```math
 H_m(X)=2T_m(X/2)+16X^2-48X+34
-$$
+```
 has degree at least `m-1`.
 
 The observed stronger statement is:
 
-$$
+```math
 \boxed{
 H_m\text{ is irreducible unless }m\equiv3\pmod6,
 \text{ in which case }H_m/(X-1)\text{ is irreducible}.}
 \tag{P2-I}
-$$
+```
 
 P2-I would close the complete P2 subphase immediately.
 

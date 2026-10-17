@@ -25,56 +25,56 @@ This is an exact two-dimensional Helly reduction. It does **not** say that the s
 
 Use the notation of the adjacent-strip opening theorem. Let `R` be the translated middle layer and let `a,b` be the two unit boundary-contact vectors, each oriented from the fixed side into `R`, so a translation by `v` changes the two boundary contact vectors to
 
-$$
+```math
 a+v,
 \qquad
 b+v.
 \tag{TB.1}
-$$
+```
 
 For every moving actual diameter edge `h=xy`, choose any orientation and write
 
-$$
+```math
 r_h=p_y-p_x,
 \qquad
 \delta_h=\mathbf 1_R(y)-\mathbf 1_R(x)\in\{+1,-1\}.
-$$
+```
 
 Define its inward signed diameter vector
 
-$$
+```math
 \boxed{n_h:=\delta_h r_h.}
 \tag{TB.2}
-$$
+```
 
 Reversing the orientation of `h` changes both `r_h` and `delta_h`, so `n_h` is orientation-independent. Geometrically, `n_h` is the length-`D` vector from the endpoint outside `R` toward the endpoint inside `R`.
 
 Then there exists a set
 
-$$
+```math
 J\subseteq E(H_{sw}),
 \qquad
 1\le |J|\le2,
 \tag{TB.3}
-$$
+```
 
 such that every nonzero vector `w` satisfying
 
-$$
+```math
 a\cdot w\ge0,
 \qquad
 b\cdot w\ge0
 \tag{TB.4}
-$$
+```
 
 also satisfies
 
-$$
+```math
 \boxed{
 \max_{h\in J} n_h\cdot w\ge0.
 }
 \tag{TB.5}
-$$
+```
 
 Equivalently, among all switching diameter bars, one or two already certify the absence of a translation **tangent direction** which opens both boundary train families and strictly shortens every moving diameter bar.
 
@@ -84,48 +84,48 @@ Equivalently, among all switching diameter bars, one or two already certify the 
 
 Take a nonzero direction `w` and a scalar `s>0`, and translate the middle layer by
 
-$$
+```math
 v=sw.
-$$
+```
 
 For the two boundary train contacts,
 
-$$
+```math
 |a+sw|^2
 =1+2s(a\cdot w)+s^2|w|^2,
 \tag{TB.6}
-$$
+```
 
-$$
+```math
 |b+sw|^2
 =1+2s(b\cdot w)+s^2|w|^2.
 \tag{TB.7}
-$$
+```
 
 Hence if (TB.4) holds, both boundary contact families become **strictly longer than one** for every `s>0`. Equality in one of the linear terms causes no problem because the positive quadratic term opens that contact family.
 
 For a moving old diameter edge, the exact strip formula gives
 
-$$
+```math
 r_h(sw)=r_h+\delta_h sw,
-$$
+```
 
 so, using `|r_h|=D` and (TB.2),
 
-$$
+```math
 \boxed{
 |r_h(sw)|^2
 =D^2+2s(n_h\cdot w)+s^2|w|^2.
 }
 \tag{TB.8}
-$$
+```
 
 Therefore if
 
-$$
+```math
 n_h\cdot w<0
 \tag{TB.9}
-$$
+```
 
 for every moving diameter edge, then one can choose `s>0` small enough that every moving old diameter is strictly shorter than `D`.
 
@@ -133,20 +133,20 @@ Because the source is finite, the same sufficiently small `s` preserves every st
 
 Thus a vector `w` satisfying
 
-$$
+```math
 a\cdot w\ge0,
 \quad
 b\cdot w\ge0,
 \quad
 n_h\cdot w<0\quad\forall h\in E(H_{sw})
 \tag{TB.10}
-$$
+```
 
 would give a unit-separated same-cardinality source of diameter at most `D` with both boundary train contact families removed. If some nonswitching old diameter remains, this contradicts canonical contact minimality. If none remains, the diameter becomes strictly smaller than `D`, contradicting global minimality.
 
 Consequently a canonical survivor satisfies
 
-$$
+```math
 \boxed{
 \nexists w\ne0:
 \ a\cdot w\ge0,
@@ -154,7 +154,7 @@ $$
 \ n_h\cdot w<0\ \forall h\in E(H_{sw}).
 }
 \tag{TB.11}
-$$
+```
 
 In particular `H_sw` is nonempty.
 
@@ -164,50 +164,51 @@ In particular `H_sw` is nonempty.
 
 Assume first
 
-$$
+```math
 b\ne-a.
-$$
+```
 
 Normalize directions to the unit circle and put
 
-$$
+```math
 \Omega
 :=\{w\in S^1:\ a\cdot w\ge0,\ b\cdot w\ge0\}.
 \tag{TB.12}
-$$
+```
 
 The intersection of the two closed half-planes through the origin is one convex cone. Since `b` is not antipodal to `a`, its unit directions form one nonempty closed circular arc of length at most `pi`.
 
 For every moving diameter edge define
 
-$$
+```math
 I_h
 :=\{w\in\Omega:\ n_h\cdot w<0\}.
 \tag{TB.13}
-$$
+```
 
 The set
 
-$$
+```math
 \{w:n_h\cdot w<0\}
-$$
+```
 
 is an open half-plane through the origin. Its intersection with the opening cone is convex. Therefore `I_h`, viewed in a linear angular parametrization of the arc `Omega`, is an interval, possibly empty and with any combination of open/closed endpoints inherited from `Omega`.
 
 Equation (TB.11) says exactly
 
-$$
+```math
 \bigcap_{h\in E(H_{sw})} I_h=\varnothing.
 \tag{TB.14}
-$$
+```
 
 Finite intervals on a line have Helly number two. Hence either
 
 1. some `I_h` is already empty; or
 2. there are two edges `h_1,h_2` with
-   $$
+   ```math
    I_{h_1}\cap I_{h_2}=\varnothing.
-   $$
+   
+   ```
 
 Take `J={h}` in the first case and `J={h_1,h_2}` in the second. By the definition of the `I_h`, this is precisely (TB.5).
 
@@ -217,22 +218,22 @@ Take `J={h}` in the first case and `J={h_1,h_2}` in the second. By the definitio
 
 Now suppose
 
-$$
+```math
 b=-a.
-$$
+```
 
 Then (TB.4) forces
 
-$$
+```math
 a\cdot w=0,
-$$
+```
 
 so after normalization
 
-$$
+```math
 \Omega=\{Ja,-Ja\}.
 \tag{TB.15}
-$$
+```
 
 Because the total intersection in (TB.14) is empty, at least one moving diameter edge excludes the direction `Ja`, and at least one moving diameter edge excludes `-Ja`. If one edge excludes both, it alone is a certificate. Otherwise the two edges excluding the two opposite directions form a two-bar certificate.
 
@@ -248,16 +249,16 @@ The theorem leaves only two load-bearing tangent types.
 
 One actual switching diameter vector `n_h` satisfies
 
-$$
+```math
 n_h\cdot w\ge0
-$$
+```
 
 for every contact-opening tangent direction `w` in the cone (TB.4). Equivalently, in the non-antipodal case its inward normal belongs to the dual opening cone
 
-$$
+```math
  n_h\in\operatorname{cone}\{a,b\}.
 \tag{TB.16}
-$$
+```
 
 A single old diameter bar already blocks every tangent ray that opens both train boundaries.
 

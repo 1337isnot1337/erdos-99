@@ -16,28 +16,28 @@
 
 Use the representative physical order cone
 
-$$
+```math
 x_0\le x_2\le x_3\le x_4\le x_1,
 \qquad
 \sum_{i=0}^4x_i=2.
 \tag{1}
-$$
+```
 
 The average turn is `2/5`. The exact rank-conditioned secant theorem gives
 
-$$
+```math
 x_{k+2}+x_{k+3}\le \frac23+\frac{x_k}{3}
 \qquad(0\le x_k\le 2/5),
 \tag{2}
-$$
+```
 
 and
 
-$$
+```math
 x_{k+2}+x_{k+3}\le \frac12+\frac{3x_k}{4}
 \qquad(2/5\le x_k\le 2/3).
 \tag{3}
-$$
+```
 
 The new point is that the order structure forces the second-smallest gap into the low regime and the second-largest gap into the high regime.
 
@@ -45,41 +45,41 @@ The new point is that the order structure forces the second-smallest gap into th
 
 Because `x_0` is the minimum of five numbers averaging `2/5`,
 
-$$
+```math
 x_0\le\frac25,
-$$
+```
 
 so (2) is valid at `k=0`:
 
-$$
+```math
 C_0:=\frac23+\frac{x_0}{3}-x_2-x_3\ge0.
-$$
+```
 
 Let
 
-$$
+```math
 O_{02}:=x_2-x_0\ge0,
 \qquad
 O_{23}:=x_3-x_2\ge0.
-$$
+```
 
 Then the exact identity
 
-$$
+```math
 \boxed{
 \frac25-x_2
 =
 \frac35C_0+rac15O_{02}+rac35O_{23}
 }
 \tag{4}
-$$
+```
 
 proves
 
-$$
+```math
 \boxed{x_2\le\frac25.}
 \tag{5}
-$$
+```
 
 Thus the minimum and second-smallest physical turns are always on the low side of the average.
 
@@ -89,27 +89,27 @@ If `x_3\ge2/5`, then (1) already gives `x_4\ge2/5`.
 
 Otherwise `x_3\le2/5`, so (2) is valid at `k=3`:
 
-$$
+```math
 C_3:=\frac23+\frac{x_3}{3}-x_0-x_1\ge0.
-$$
+```
 
 Using
 
-$$
+```math
 O_{23}=x_3-x_2\ge0,
 \qquad
 O_{34}=x_4-x_3\ge0,
-$$
+```
 
 and the turn-sum equality
 
-$$
+```math
 E:=x_0+x_1+x_2+x_3+x_4-2=0,
-$$
+```
 
 we have the exact identity
 
-$$
+```math
 \boxed{
  x_4-\frac25
  =
@@ -119,71 +119,71 @@ $$
  +\frac3{10}E.
 }
 \tag{6}
-$$
+```
 
 Hence in the `x_3\le2/5` branch,
 
-$$
+```math
 x_4\ge\frac25.
-$$
+```
 
 Together with the trivial `x_3\ge2/5` branch,
 
-$$
+```math
 \boxed{x_4\ge\frac25.}
 \tag{7}
-$$
+```
 
 Therefore every physical pentagon in the representative order cone satisfies
 
-$$
+```math
 \boxed{x_2\le\frac25\le x_4.}
 \tag{8}
-$$
+```
 
 By cyclic relabeling and reflection, this means:
 
-$$
+```math
 \boxed{
 \text{second-smallest turn}\le\frac{2\pi}{5}
 \le\text{second-largest turn}.
 }
 \tag{9}
-$$
+```
 
 ## 3. Equality is rigid
 
 If `x_2=2/5`, every term on the right side of (4) must vanish. Hence
 
-$$
+```math
 x_0=x_2=x_3=\frac25.
-$$
+```
 
 The turn sum and order then force
 
-$$
+```math
 x_4=x_1=\frac25.
-$$
+```
 
 If `x_4=2/5`, equation (6) forces `x_2=x_3=x_4=2/5`, after which the previous argument again gives all five gaps equal.
 
 Thus
 
-$$
+```math
 \boxed{
  x_2=\frac25\ \text{or}\ x_4=\frac25
  \Longrightarrow
  x_0=x_1=x_2=x_3=x_4=\frac25.
 }
 \tag{10}
-$$
+```
 
 For every non-regular strict physical pentagon,
 
-$$
+```math
 \boxed{x_2<\frac25<x_4.}
 \tag{11}
-$$
+```
 
 ## 4. Only the median turn still needs a `2/5` branch
 
@@ -196,12 +196,12 @@ After the exact physical order is fixed, four of the five secant regimes are now
 
 Only the median `x_3` can lie on either side of `2/5`. Therefore each physical order cone needs only two strong rational closure branches:
 
-$$
+```math
 x_3\le\frac25
 \qquad\text{or}\qquad
 x_3\ge\frac25.
 \tag{12}
-$$
+```
 
 This replaces the naive independent low/high splitting of the three middle ranks by one binary branch. Since there are ten physical order cones, the strongest exact `2/5`-secant layer has at most twenty local branches per pentagon rather than eighty.
 
@@ -213,7 +213,7 @@ The companion certificate also combines the turn-simplex facets, order facets, t
 
 If the median is low, `x_3\le2/5`, then
 
-$$
+```math
 \boxed{
 0\le x_0\le\frac25,
 \quad
@@ -226,11 +226,11 @@ $$
 \frac25\le x_4\le\frac23.
 }
 \tag{13}
-$$
+```
 
 If the median is high, `x_3\ge2/5`, then
 
-$$
+```math
 \boxed{
 \frac1{15}\le x_0\le\frac25,
 \quad
@@ -243,7 +243,7 @@ $$
 \frac25\le x_4\le\frac35.
 }
 \tag{14}
-$$
+```
 
 Every endpoint in (13)-(14) is checked by an explicit nonnegative rational Farkas identity in the verifier. These are valid outer bounds; no claim of physical attainability of every endpoint is made.
 

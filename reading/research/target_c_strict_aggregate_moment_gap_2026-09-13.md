@@ -23,81 +23,81 @@ occurrence-counted outer-face walk length, `d_r=diam(conv(A_r))`,
 and let `f_r` and `Q_r` be its bounded nonquadrilateral-face count and degree
 excess.  Set
 
-$$
+```math
 S_D:=\sum_r d_r,\qquad S_{\rm out}:=\sum_r(L_r-2d_r),
 \qquad F_{\rm loc}:=\sum_r f_r,\qquad Q_{\rm loc}:=\sum_r Q_r,
-$$
+```
 
 and `X:=q-k-S_D`.  The component outer-walk inequality and the exact
 aggregate decomposition are
 
-$$
+```math
 S_{\rm out}\ge0,
 \tag{SMG.1a}
-$$
+```
 
-$$
+```math
 S_{\rm out}
  =2\sum_r(a_r-d_r)+2(e_{BB}-k)-2d_{\rm tile}
    -2C_{\rm loc}-Q_{\rm loc}.
 \tag{SMG.1b}
-$$
+```
 
 The audited Type-II completion-side payment `e_BB-C_loc<=2d_tile`, together
 with `a=q-2+2c_I-d_tile`, therefore gives
 
-$$
+```math
 0\le S_{\rm out}
  \le 2X+4c_I-4-Q_{\rm loc}.
 \tag{SMG.2}
-$$
+```
 
 In particular,
 
-$$
+```math
 Q_{\rm loc}\le 2X+4c_I-4.
 \tag{SMG.3}
-$$
+```
 
 The canonical aggregate two-arc payment is
 
-$$
+```math
 E_{\rm agg}:=\sum_r(L_r+4f_r+Q_r-2d_r)
              =S_{\rm out}+4F_{\rm loc}+Q_{\rm loc},
 \tag{SMG.4}
-$$
+```
 
 with
 
-$$
+```math
 \liminf_{D\to\infty}E_{\rm agg}/D
 \ge c_{\rm det}:=\frac\pi2(2-\sqrt3).
 \tag{SMG.5}
-$$
+```
 
 Every bounded nonquadrilateral face has degree at least five, so
 `F_loc<=Q_loc`.  Substituting (SMG.2)--(SMG.3) into
 (SMG.4) gives the finite estimate
 
-$$
+```math
 E_{\rm agg}
  \le 10X+20c_I-20.
 \tag{SMG.6}
-$$
+```
 
 ## 2. Strict aggregate moment gap
 
 The canonical component-count estimate `c_I=O(D^(2/3))` makes
 `c_I/D->0`.  Dividing (SMG.6) by `D` and using (SMG.5) yields
 
-$$
+```math
 \boxed{\displaystyle
 \liminf_{D\to\infty}\frac{(q-k)-\sum_r d_r}{D}
 \ge \frac{c_{\rm det}}{10}
 =\frac\pi{20}(2-\sqrt3)
 =0.0420893607\ldots .}
 \tag{SMG.7}
-$$
+```
 
 Thus the detour payment cannot be made asymptotically compatible with
 `q-k=\sum_r d_r+o(D)`.  More precisely, on any subsequence with
@@ -111,20 +111,20 @@ therefore appear in the outer-walk surplus or in the (q-k) excess itself.
 On the proof-only Section-118 common-cap moment profile, the independently
 audited complement-gap argument supplies
 
-$$
+```math
 \liminf_{D\to\infty}\frac{\sum_r d_r}{D}
 \ge S_{118}:=2.798596312209462\ldots .
 \tag{SMG.8}
-$$
+```
 
 Combining (SMG.7) and (SMG.8) gives the scoped endpoint floor
 
-$$
+```math
 \boxed{\displaystyle
 \liminf_{D\to\infty}\frac{q-k}{D}
 \ge 2.8406856729\ldots >2.8406.}
 \tag{SMG.9}
-$$
+```
 
 The decimal is certified conservatively by the accompanying exact-rational
 arithmetic script.  This specialization is only for the named Section-118

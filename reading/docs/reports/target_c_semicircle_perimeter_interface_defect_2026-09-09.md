@@ -17,17 +17,17 @@
 
 TS proves that in the full-core, cap-minimal equality regime
 
-$$
+```math
 S/D\to2,
-$$
+```
 
 there are two harmonic components `I_1,I_2` with
 
-$$
+```math
 \delta_i/D\to1,
 \qquad
 n_i/D^2\to\Delta/2,
-$$
+```
 
 whose attachment cells converge to complementary semicircular caps.
 
@@ -35,13 +35,13 @@ This report uses the **actual semicircle perimeter**, rather than the shape-free
 
 Let `Q_i` be the total bounded-face degree excess of the internal plane graph `C[I_i]`, and put
 
-$$
+```math
 Q_{int}:=Q_1+Q_2.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 R_I
 \ge
@@ -49,11 +49,11 @@ R_I
 +\frac12Q_{int}.
 }
 \tag{SI.1}
-$$
+```
 
 The exact near-circle boundary budget consequently gives
 
-$$
+```math
 \boxed{
 Q_{int}
 \le
@@ -61,11 +61,11 @@ Q_{int}
 }
 \tag{SI.2}
 
-$$
+```
 
 UF at the full-core endpoint gives
 
-$$
+```math
 \boxed{
 Q
 \ge
@@ -76,17 +76,17 @@ Q
 }
 \tag{SI.3}
 
-$$
+```
 
 Every bounded face of the full contact graph that is not internal to an unloaded component is incident to a loaded terminal. Therefore, if `Q_B` denotes the total degree excess of bounded faces incident to `B_+`,
 
-$$
+```math
 Q_B\ge Q-Q_{int}.
-$$
+```
 
 Combining SI.2--SI.3 yields the explicit interface obligation
 
-$$
+```math
 \boxed{
 Q_B
 \ge
@@ -97,7 +97,7 @@ Q_B
 }
 \tag{SI.4}
 
-$$
+```
 
 Thus the cap-minimal full-core survivor cannot hide all of its linear exceptional-face defect inside the two dense half-disk carriers. A definite linear amount must live on the loaded boundary/interface itself.
 
@@ -107,33 +107,33 @@ Thus the cap-minimal full-core survivor cannot hide all of its linear exceptiona
 
 Let
 
-$$
+```math
 K_i:=\operatorname{conv}(I_i).
-$$
+```
 
 C36 gives
 
-$$
+```math
 K_i\subseteq P_i,
-$$
+```
 
 where `P_i` is the attachment cell. TS/repaired TD give
 
-$$
+```math
 P_i/D\to C_i
-$$
+```
 
 for complementary radius-`1/2` semicircular caps `C_1,C_2`.
 
 TS gives
 
-$$
+```math
 n_i/D^2\to\Delta/2.
-$$
+```
 
 Apply Oler to the `n_i` unit-separated vertices inside `K_i`:
 
-$$
+```math
 a_0(n_i-1)
 \le
 \operatorname{area}(K_i)
@@ -141,41 +141,41 @@ a_0(n_i-1)
 \qquad
  a_0=\frac{\sqrt3}{2}.
 \tag{1.1}
-$$
+```
 
 Since `diam(K_i)<=D+o(D)`, its perimeter is `O(D)`. Divide by `D^2`. Because
 
-$$
+```math
 a_0\frac\Delta2=\frac\pi8,
-$$
+```
 
 we obtain
 
-$$
+```math
 \liminf\frac{\operatorname{area}(K_i)}{D^2}\ge\frac\pi8.
-$$
+```
 
 But `K_i subset P_i` and `area(P_i)/D^2->pi/8`, so
 
-$$
+```math
 \boxed{
 \operatorname{area}(K_i)/D^2\to\pi/8.
 }
 \tag{1.2}
-$$
+```
 
 Now take any Hausdorff-convergent subsequence of `K_i/D`. Its limit is a compact convex subset of `C_i` with the same area `pi/8` as `C_i`, hence equals `C_i`. Therefore the full sequence converges:
 
-$$
+```math
 \boxed{K_i/D\to C_i}
 \tag{1.3}
-$$
+```
 
 in Hausdorff distance.
 
 Perimeter is continuous under Hausdorff convergence of planar convex bodies, so
 
-$$
+```math
 \boxed{
 \frac{\operatorname{per}(K_i)}D
 \to
@@ -183,7 +183,7 @@ $$
 }
 \tag{1.4}
 
-$$
+```
 
 The `1` is the flat diameter edge of the limiting semicircle and `pi/2` is its half-circular arc.
 
@@ -199,14 +199,14 @@ Every extreme vertex of `K_i=conv(I_i)` lies on the outer face of the straight-l
 
 The closed-walk convex-hull perimeter lemma used in OP therefore gives
 
-$$
+```math
 \boxed{k_i\ge\operatorname{per}(K_i).}
 \tag{2.1}
-$$
+```
 
 Combining with (1.4),
 
-$$
+```math
 \boxed{
 \frac{k_i}D
 \ge
@@ -214,7 +214,7 @@ $$
 }
 \tag{2.2}
 
-$$
+```
 
 This is stronger in the present semicircle geometry than Eppstein's shape-free isoperimetric outer-face lower bound.
 
@@ -224,40 +224,40 @@ This is stronger in the present semicircle geometry than Eppstein's shape-free i
 
 Let `f_i` be the number of bounded faces of `G_i`, and define
 
-$$
+```math
 Q_i:=
 \sum_{F\text{ bounded face of }G_i}
 (\deg F-4).
 \tag{3.1}
-$$
+```
 
 The graph is simple and triangle-free. Bounded face walks therefore have length at least four; bridges may occur only on the outer walk and are counted with multiplicity in `k_i`.
 
 Face-edge incidence gives
 
-$$
+```math
 2e_i
 =k_i+4f_i+Q_i.
 \tag{3.2}
-$$
+```
 
 Euler for the connected plane graph gives
 
-$$
+```math
 n_i-e_i+f_i=1.
 \tag{3.3}
-$$
+```
 
 Eliminating `f_i` yields the exact identity
 
-$$
+```math
 \boxed{
  e_i
 =2n_i-2-rac{k_i+Q_i}{2}.
 }
 \tag{SI.5}
 
-$$
+```
 
 This is the component-level version of the familiar global triangle-free face ledger.
 
@@ -267,24 +267,24 @@ This is the component-level version of the familiar global triangle-free face le
 
 ZK defines
 
-$$
+```math
 r_i:=2n_i-\delta_i-2-e_i.
-$$
+```
 
 Insert SI.5:
 
-$$
+```math
 \boxed{
  r_i
 =\frac{k_i+Q_i}{2}-\delta_i.
 }
 \tag{4.1}
 
-$$
+```
 
 TS gives `delta_i/D->1`, while (2.2) gives `k_i/D>=1+pi/2-o(1)`. Hence
 
-$$
+```math
 \boxed{
  r_i
 \ge
@@ -293,30 +293,30 @@ $$
 }
 \tag{4.2}
 
-$$
+```
 
 Summing `i=1,2` and discarding all other nonnegative `r_r` gives SI.1:
 
-$$
+```math
 R_I
 \ge
 \left(\frac\pi2-1-o(1)\right)D
 +\frac{Q_{int}}2.
-$$
+```
 
 Numerically,
 
-$$
+```math
 \frac\pi2-1
 =0.5707963268\ldots .
-$$
+```
 
 This supersedes TS's weaker shape-free charge
 
-$$
+```math
 R_I\ge(\pi/\sqrt2-2-o(1))D
 =0.2214414690\ldots D.
-$$
+```
 
 ---
 
@@ -324,23 +324,23 @@ $$
 
 The pinned-stress identity is
 
-$$
+```math
 s_i=e_i+t_i-2n_i-1.
-$$
+```
 
 Using SI.5,
 
-$$
+```math
 \boxed{
  t_i
 =3+s_i+\frac{k_i+Q_i}{2}.
 }
 \tag{5.1}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
  t_i
 \ge
@@ -348,20 +348,20 @@ $$
 +\frac{Q_i}{2}+s_i.
 }
 \tag{5.2}
-$$
+```
 
 Even when `Q_i=s_i=0`, each semicircle carrier uses at least
 
-$$
+```math
 \left(\frac12+\frac\pi4\right)D
 =1.2853981634\ldots D
-$$
+```
 
 loaded attachment contacts.
 
 Across both carriers,
 
-$$
+```math
 \boxed{
  t_1+t_2
 \ge
@@ -369,7 +369,7 @@ $$
 +\frac{Q_{int}}2+s_1+s_2.
 }
 \tag{5.3}
-$$
+```
 
 This is the precise boundary-contact cost of filling two semicircular caps with triangle-free penny graphs.
 
@@ -379,31 +379,31 @@ This is the precise boundary-contact cost of filling two semicircular caps with 
 
 NC gives `E_BB=o(D)`. NBd gives
 
-$$
+```math
 S+R_I+s_B+2E_{BB}+3c_I+s_C
 =(\pi+o(1))D.
 \tag{6.1}
-$$
+```
 
 In the cap-minimal branch `S/D->2`. Insert SI.1 and discard the remaining nonnegative currencies:
 
-$$
+```math
 2D
 +\left(\frac\pi2-1-o(1)\right)D
 +\frac{Q_{int}}2
 \le
 (\pi+o(1))D.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 Q_{int}
 \le
 (\pi-2+o(1))D.
 }
-$$
+```
 
 This proves SI.2.
 
@@ -431,37 +431,37 @@ Thus no full contact vertex or edge subdivides the interior of `F`. It remains a
 
 Consequently
 
-$$
+```math
 \boxed{Q_{int}\le Q.}
 \tag{7.1}
-$$
+```
 
 Moreover every global bounded face not counted in the internal bounded faces of some unloaded component is incident to at least one loaded terminal: if its boundary contained no loaded vertex, all consecutive boundary vertices would remain connected after deleting `B_+` and hence would belong to one `I_r`, making it an internal face of that component.
 
 Define
 
-$$
+```math
 Q_B:=
 \sum_{\substack{F\text{ bounded face of }C\\F\cap B_+\ne\varnothing}}
 (\deg F-4).
 \tag{7.2}
-$$
+```
 
 Then exactly
 
-$$
+```math
 \boxed{
 Q=Q_{all-int}+Q_B,
 }
 \tag{7.3}
-$$
+```
 
 where `Q_all-int` sums the internal face defects over **all** unloaded components. In particular
 
-$$
+```math
 \boxed{Q_B\ge Q-Q_{int}.}
 \tag{7.4}
-$$
+```
 
 The other small components may contribute additional internal defect, so (7.4) is the safe inequality needed below.
 
@@ -471,26 +471,26 @@ The other small components may contribute additional internal defect, so (7.4) i
 
 UF gives in the near-circle branch
 
-$$
+```math
 \frac QD
 \ge
 \frac\pi5+rac45\sqrt{\Delta-\zeta}-o(1).
-$$
+```
 
 At full core `zeta=0`,
 
-$$
+```math
 \boxed{
 \frac QD
 \ge
 \frac\pi5+rac45\sqrt\Delta-o(1).
 }
 \tag{8.1}
-$$
+```
 
 Subtract SI.2 using (7.4):
 
-$$
+```math
 \begin{aligned}
 \frac{Q_B}{D}
 &\ge
@@ -498,17 +498,17 @@ $$
 &=
 2-\frac{4\pi}{5}+rac45\sqrt\Delta-o(1).
 \end{aligned}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 Q_B
 \ge
 (0.2485761226\ldots-o(1))D.
 }
-$$
+```
 
 This proves SI.4.
 

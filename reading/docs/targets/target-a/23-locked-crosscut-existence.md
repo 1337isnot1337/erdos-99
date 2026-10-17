@@ -18,12 +18,12 @@ itself forces such a crosscut.
 Assume the actual-response locked branch of Section 169.  Thus `m^*>=3`,
 `K^*=conv X^*` is a full-dimensional convex polygon, and there is a nonnegative
 contact/facet equilibrium
-$$
+```math
 \sum_{j:ij\in E_1(X^*)}\alpha_{ij}(p_i-p_j)
 -
 \sum_{f:n_f\cdot p_i=c_f}\mu_{if}n_f=0
 \tag{171.1}
-$$
+```
 with strictly positive coefficients on the three edges of a unit equilateral triangle
 `T_*`.  Let `G_+` be the graph of positive contact edges `alpha_ij>0`, and let
 `K_T` be its connected component containing `T_*`.
@@ -52,20 +52,20 @@ The finite set of geometric vertices of `B_0` has a convex-hull extreme vertex
 least three vertices, its convex hull has at least two extreme vertices, so at most one
 can be `w`.  Choose a vector `u` exposing `z` uniquely among `V(B_0)`.  Then for every
 positive-contact neighbor `j` of `z`,
-$$
+```math
 u\cdot(p_z-p_j)>0.
 \tag{171.2}
-$$
+```
 At `z` the reaction term in (171.1) is zero and all positive-contact neighbors lie in
 `B_0`.  Dotting (171.1) with `u` gives
-$$
+```math
 0
 =
 \sum_j\alpha_{zj}\,u\cdot(p_z-p_j)
 >0,
 \tag{171.3}
-$$
-a contradiction.  $\square$
+```
+a contradiction.  $`\square`$
 
 The same exposing-direction argument also shows directly that if `K_T` consists of a
 single block, its convex-hull extreme vertices must be reaction vertices.  In
@@ -107,7 +107,7 @@ block-cut tree.  Let `c` be its unique cut vertex.  Lemma 171.1 supplies a react
 vertex `r_- in B_T\setminus{c}`, while the unique external branch ends in another leaf
 block containing a reaction vertex `r_+`.  Two-connectivity of `B_T` gives a simple
 `r_-`--`c` path through `t`, and concatenating with a simple path along the external
-block-tree branch to `r_+` proves the claim.  $\square$
+block-tree branch to `r_+` proves the claim.  $`\square`$
 
 ## 171.3 Proper crosscut existence
 
@@ -122,27 +122,21 @@ arc.
 > 169: a simple positive-contact path
 > 
 
-$$
-
+```math
 > Q=(q_0,\ldots,q_L)
 > \tag{171.4}
 > 
-$$
-
-
+```
 > with
 > 
 
-$$
-
+```math
 > q_0,q_L\in\partial K^*,
 > \qquad
 > |Q|\setminus\{q_0,q_L\}\subset\operatorname{int}K^*.
 > \tag{171.5}
 > 
-$$
-
-
+```
 
 ### Proof
 
@@ -161,21 +155,21 @@ in `int K^*`.  It is the required crosscut.
 It remains to consider the case in which all three vertices of `T_*` lie on
 `partial K^*`.  If every one of the three unit sides of `T_*` were contained in
 `partial K^*`, convexity would force
-$$
+```math
 K^*=\operatorname{conv}T_*.
 \tag{171.6}
-$$
+```
 That unit equilateral triangle has diameter one, so any fourth point in it is at
 distance strictly below one from at least one triangle vertex; hence it cannot contain
 four unit-separated points.  This would give `m^*=3`, contrary to hypothesis.
 Therefore at least one triangle side `q_0q_1` is not contained in the hull boundary.
 For two boundary points of a convex body, if their joining segment is not a boundary
 segment, its relative interior lies in `int K^*`.  The one-edge path
-$$
+```math
 Q=(q_0,q_1)
 \tag{171.7}
-$$
-is therefore a proper positive-contact crosscut.  $\square$
+```
+is therefore a proper positive-contact crosscut.  $`\square`$
 
 The exceptional case `m^*=3` is irrelevant to the eventual-large-cardinality problem;
 it is also already an equilateral-triangle optimum rather than a triangle-free
@@ -190,8 +184,7 @@ the actual-response locked branch for every `m^*>3`.
 > crosscut `Q` for which
 > 
 
-$$
-
+```math
 > \boxed{
 > \zeta
 > \ge
@@ -201,26 +194,21 @@ $$
 > }
 > \tag{171.8}
 > 
-$$
-
-
+```
 > with
 > 
 
-$$
-
+```math
 > \boxed{|W_Q|\le5|V(Q)|.}
 > \tag{171.9}
 > 
-$$
-
-
+```
 
 The remaining locked-branch obligation is now purely quantitative.  Proper-crosscut
 existence is no longer open.  One must derive enough side imbalance relative to the
 crosscut shielding cost to reach
-$$
+```math
 s=\Delta_\Lambda-d_{\rm int},
 \tag{171.10}
-$$
+```
 or combine several stress-generated crosscuts with a sharper union-cost estimate.

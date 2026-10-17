@@ -53,26 +53,26 @@ Use the Euclidean norm on the full `2m`-dimensional displacement space. Let `T` 
 three-dimensional space of translations and infinitesimal rotations of `P`, and put
 `S=T^perp`. Define signed squared-length derivatives
 
-$$
+```math
 \phi_c(u)=2(p_i-p_j)\cdot(u_i-u_j),\qquad
 \phi_h(u)=-2(p_i-p_j)\cdot(u_i-u_j).
-$$
+```
 
 Define the source-specific constant
 
-$$
+```math
 \kappa(P):=
 \min_{\substack{u\in S\\\|u\|=1}}
 \max_{e\in C\cup H}\{-\phi_e(u)\}.
 \tag{EB.1}
-$$
+```
 
 For another labeled core configuration `X`, let
 
-$$
+```math
 r(X):=\inf_{g\in SE(2)}\|gX-P\|.
 \tag{EB.2}
-$$
+```
 
 Here `SE(2)` consists of translations and rotations; no relabeling is allowed.
 
@@ -80,33 +80,33 @@ Here `SE(2)` consists of translations and rotations; no relabeling is allowed.
 
 The constant `kappa(P)` is strictly positive. Every unit-separated `X` with
 
-$$
+```math
 0<r(X)<\kappa(P)/2
-$$
+```
 
 satisfies
 
-$$
+```math
 \boxed{\operatorname{diam}(X)^2\ge D^2+\kappa(P)r(X).}
 \tag{EB.3}
-$$
+```
 
 In particular, every unit-separated `X` of diameter strictly below `D` must satisfy
 
-$$
+```math
 \boxed{r(X)\ge\kappa(P)/2.}
 \tag{EB.4}
-$$
+```
 
 ### Proof
 
 Equilibrium gives the exact row dependence
 
-$$
+```math
 \sum_{c\in C}\alpha_c\phi_c(u)
 +\sum_{h\in H}\beta_h\phi_h(u)=0.
 \tag{EB.5}
-$$
+```
 
 If every signed derivative were nonnegative, strict positivity of all the
 coefficients would force every derivative to vanish. The mixed rigidity rank then
@@ -114,49 +114,49 @@ makes `u` an infinitesimal Euclidean motion. No unit vector in `S` has that prop
 Consequently the maximum in (EB.1) is positive at every point of the compact unit
 sphere in `S`. Continuity proves `kappa(P)>0`, and homogeneity gives
 
-$$
+```math
 \max_e\{-\phi_e(u)\}\ge\kappa(P)\|u\|
 \qquad(u\in S).
 \tag{EB.6}
-$$
+```
 
 Choose a minimizing rigid alignment in (EB.2). Such a minimum exists: remove the
 centroid difference first and minimize over the compact rotation group. Write the
 aligned configuration as `P+u`. First-order optimality with respect to translations
 gives `sum_i u_i=0`. First-order optimality with respect to rotation gives
 
-$$
+```math
 0=\sum_i u_i\cdot J(p_i+u_i)
 =\sum_i u_i\cdot Jp_i,
-$$
+```
 
 because `u_i dot Ju_i=0`. Hence `u in S` and `||u||=r(X)`.
 
 Set `tau=diam(X)^2-D^2`; initially `tau` may have either sign. For an original unit
 pair, unit separation of `X` and the exact squared-length expansion give
 
-$$
+```math
 \phi_c(u)+|u_i-u_j|^2\ge0,
 \qquad
 -\phi_c(u)\le |u_i-u_j|^2\le2\|u\|^2.
 \tag{EB.7}
-$$
+```
 
 For an original diameter pair, its new squared length is at most `D^2+tau`, giving
 
-$$
+```math
 -\phi_h(u)+|u_i-u_j|^2\le\tau,
 \qquad
 -\phi_h(u)\le\tau.
 \tag{EB.8}
-$$
+```
 
 Combine (EB.6)--(EB.8):
 
-$$
+```math
 \kappa(P)r\le\max\{2r^2,\tau\}.
 \tag{EB.9}
-$$
+```
 
 When `0<r<kappa(P)/2`, the first entry on the right is strictly smaller than the
 left. Thus `tau>=kappa(P)r`, proving (EB.3). If `r=0`, the cores are congruent and
@@ -190,10 +190,10 @@ Any continuous unit-separated full-source path from the original source to a
 configuration whose core has `r>=kappa(P)/4` passes through a source of diameter at
 least
 
-$$
+```math
 \boxed{\sqrt{D^2+\kappa(P)^2/4}>D.}
 \tag{EB.10}
-$$
+```
 
 Proof: continuity supplies a point with `r=kappa(P)/4`. Apply (EB.3) to its core;
 the full-source diameter is at least the core diameter. `square`

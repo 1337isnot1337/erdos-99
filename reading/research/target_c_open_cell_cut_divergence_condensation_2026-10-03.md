@@ -61,37 +61,37 @@ No computation, verifier execution, or CI result is used.
 For an arbitrary layer set `S subset {0,...,m}`, let `x_j=1_S(j)` and define
 `Phi(S;mu)=F_out(S)-F_in(S)`. The prefix identity (1) implies
 
-$$
+```math
 \Phi(S;\mu)=\sum_{i=1}^m(x_{i-1}-x_i)A_i\sin(\theta_i-\mu)
 =C_S\cdot Ju(\mu),
-$$
+```
 where
-$$
+```math
 C_S=\sum_{i=1}^m(x_{i-1}-x_i)A_i u_i.
-$$
+```
 This is a finite telescoping identity and applies to interleaved as well as
 contiguous layer sets.
 
 If `S` is a source ideal with an outgoing edge, every crossing edge contributes
 positively, so `Phi(S;mu)>0` throughout the open phase cell. For
 `theta_- = min_i theta_i` and `theta_+ = max_i theta_i`, this forces
-$$
+```math
 \arg C_S\in(\theta_+,\theta_-+\pi).
-$$
+```
 For a sink ideal with an incoming edge, the same interval condition holds for
 `arg(-C_S)`. In particular, no nontrivial source or sink ideal can have all its
 layer-boundary transitions at one common phase.
 
 Writing `R={i:x_{i-1}=1,x_i=0}` and `L={i:x_{i-1}=0,x_i=1}`, source ideals
 also satisfy the two endpoint moment reversals
-$$
+```math
 \sum_{i\in R}A_i\sin(\theta_i-\theta_-)>
 \sum_{i\in L}A_i\sin(\theta_i-\theta_-),
-$$
-$$
+```
+```math
 \sum_{i\in L}A_i\sin(\theta_+-\theta_i)>
 \sum_{i\in R}A_i\sin(\theta_+-\theta_i).
-$$
+```
 Both inequalities reverse for sink ideals. This constrains every interleaved
 extremal SCC in the remaining condensation branch, but supplies no contradiction
 with four-host geometry or the opposite complete shore. C-II and Level I remain

@@ -11,9 +11,9 @@
 This audit checks `102-phase-corridor-endpoint-exclusion-audit.md`, including the
 claim that the Section-101 endpoint
 
-$$
+```math
 \mu_8=0.9760407652670519821\ldots
-$$
+```
 
 cannot be approached by a macroscopic locally rhombus-saturated wrapping Type-II
 harmonic carrier.  The argument survives hostile review.  The compactness step then
@@ -28,12 +28,12 @@ final compactness upgrade.
 
 Section 101 and its independent hostile audit give
 
-$$
+```math
 2\alpha\le |S|\le U,
 \qquad
 2\alpha\ge\sum_j\sin(g_j/2)
 \ge\sin(\theta/2)+2\sin\theta,
-$$
+```
 
 where `U=3theta-2pi`.  At `theta=theta_8` the two scalar endpoints are equal, so every
 inequality is sharp.
@@ -41,11 +41,11 @@ inequality is sharp.
 Strict concavity of `sin(x/2)` on `(0,pi)` forces the positive complement-gap vector,
 up to cyclic order, to be exactly
 
-$$
+```math
 (\theta_8,\phi_8,\phi_8),
 \qquad
 \phi_8=2\pi-2\theta_8.
-$$
+```
 
 There are therefore exactly three connected support components.  The two components
 adjacent to the `theta_8` gap are singletons.  To see this directly, move a point by a
@@ -56,9 +56,9 @@ for `epsilon<phi_8`.  This violates the angular-diameter condition.  The third s
 component has no internal complement interval and carries all support measure, hence
 is one closed circular arc of angular length
 
-$$
+```math
 U_8=3\theta_8-2\pi<\pi.
-$$
+```
 
 Thus the Section-102 one-arc-plus-two-points normal form is correct.
 
@@ -66,29 +66,29 @@ Thus the Section-102 one-arc-plus-two-points normal form is correct.
 
 At the endpoint,
 
-$$
+```math
 2a_D=U_8D+o(D).
-$$
+```
 
 The three complement gaps contribute chord currency
 
-$$
+```math
 D\bigl(\sin(\theta_8/2)+2\sin\theta_8\bigr)+o(D)
 =U_8D+o(D).
-$$
+```
 
 Together with the ordinary two-edge attachment-interval floor and the exact canonical
 Section-82 identity
 
-$$
+```math
 L_D+Q_D=4a_D-6-2s_D-2c_D,
-$$
+```
 
 the inequalities squeeze all extensive slack to zero.  In particular
 
-$$
+```math
 Q_D=o(D),\qquad s_D=o(D),\qquad c_D=o(D),
-$$
+```
 
 and each of the three macroscopic complement routes has `o(D)` path excess above its
 endpoint chord.
@@ -127,9 +127,9 @@ projective directions lie in an `o(1)` interval has only `o(D)` members.
 The tooth geometry is correct: for a retained base of length `1+o(1)`, either unit leg
 makes projective angle
 
-$$
+```math
 \pi/3+o(1)
-$$
+```
 
 with the base.  Splitting by which leg is selected therefore turns a linear family of
 nearly fixed projective leg directions into a linear family of polygon bases with
@@ -139,9 +139,9 @@ One sentence should be made explicit at this point.  Projective closeness alone 
 oriented directions that differ by almost `pi`.  That alternative cannot occur here.
 All retained bases lie on the single positive support arc, whose angular length is
 
-$$
+```math
 U_8=3\theta_8-2\pi<\pi.
-$$
+```
 
 Along a convex polygon approximating that arc, the total variation of the oriented
 boundary-side direction over the retained arc is `U_8+o(1)<pi`.  Consequently two
@@ -168,13 +168,13 @@ on the hypothetical endpoint carrier.  That rerun is legitimate.
 
 Section 90 uses only the following three carrier-local estimates:
 
-$$
+```math
 R_D\ge rD^2,
 \qquad
 T_D\le C_TD,
 \qquad
 \sum_{R\subset P_D}\delta_R\le C_{phase}D.
-$$
+```
 
 They all hold here:
 
@@ -193,9 +193,9 @@ Section 90 then selects one unordered pair of distinct labels in `Z/3Z` and one
 reduced-phase bin of width `O(1/D)`, leaving two linear train families.  If their
 labels are distinct, their projective physical directions differ by
 
-$$
+```math
 \pi/3
-$$
+```
 
 because a label difference of `2pi/3` is the same projective separation as `pi/3`.
 Section 102's equation (102.26) is therefore correct.
@@ -227,9 +227,9 @@ linear endpoint mass being counted.
 For a corridor with unit route-edge vectors `z_j`, oriented chord direction `q_D`,
 route length `ell_D`, and chord length `d_D`, projection gives exactly
 
-$$
+```math
 \sum_j(1-q_D\cdot z_j)=\ell_D-d_D=o(D).
-$$
+```
 
 If `Omega(D)` route-edge occurrences from one phase family had limiting projective
 direction separated from the chord by a fixed positive amount, each would contribute
@@ -247,17 +247,17 @@ have to be separated projectively by `pi/3`.
 For complement gaps `(theta_8,phi_8,phi_8)`, the three chord directions have pairwise
 projective separations
 
-$$
+```math
 \left\{\theta_8/2,\theta_8/2,\pi-\theta_8\right\}.
-$$
+```
 
 Since `theta_8>2pi/3`,
 
-$$
+```math
 \theta_8/2>\pi/3,
 \qquad
 \pi-\theta_8<\pi/3.
-$$
+```
 
 No pair differs by `pi/3`.  The numerical angular margin is fixed, not asymptotically
 zero.  This contradicts the two-phase requirement and excludes the endpoint.
@@ -278,9 +278,9 @@ fraction of that positive gap.  This contradicts the Type-II area identity.
 
 Therefore there are absolute constants
 
-$$
+```math
 \epsilon_*>0,\qquad c_*>0
-$$
+```
 
 such that every sufficiently large Type-II survivor contains a locally
 rhombus-saturated harmonic cell of area at least `c_*D^2` and diameter at least

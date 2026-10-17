@@ -26,68 +26,68 @@ these canonical proof inputs unchanged.
 Retain every source point in a canonical contact-minimal, then
 diameter-pair-minimal triangle-free global minimizer. Use the actual positive
 contact core and all occurrence-counted boundaries, not a lattice scaffold.
-For a Type-II sequence with $D\to\infty$, let $f$ count bounded
-nonquadrilateral contact faces and let $k=d_H+s_Z$.
-Write $p$ for loaded-hull perimeter and $z=b-p\ge0$, where $b$ is
+For a Type-II sequence with $`D\to\infty`$, let $`f`$ count bounded
+nonquadrilateral contact faces and let $`k=d_H+s_Z`$.
+Write $`p`$ for loaded-hull perimeter and $`z=b-p\ge0`$, where $`b`$ is
 the full outer contact-face walk length.
 
 Put
-$$
+```math
 s_2=\sqrt{\pi/(2\sqrt3)},\qquad A=2s_2.
-$$
+```
 
 The new candidate is
-$$
+```math
 \boxed{\liminf {2f-k\over D}\ge A.}
 \tag{FC1}
-$$
+```
 
-Audit.131 proves $\liminf(2f-k+m)/D\ge A$, with $m$ the number
+Audit.131 proves $`\liminf(2f-k+m)/D\ge A`$, with $`m`$ the number
 of nonunit loaded-hull sides. FC1 removes that loss by using whole hull
 chains and an auxiliary vertex for interior terminal occurrences.
 
-Since every exceptional bounded face contributes at least one to $Q$,
+Since every exceptional bounded face contributes at least one to $`Q`$,
 the canonical identities give
-$$
+```math
 \boxed{\liminf {4(q-k)-k-2z\over D}\ge2\pi+A.}
 \tag{FC2}
-$$
+```
 In particular
-$$
+```math
 \boxed{
 \liminf {f\over D}\ge s_2,\qquad
 \liminf {q-k\over D}\ge {\pi\over2}+{s_2\over2}
 =2.0469527302\ldots.
 }
 \tag{FC3}
-$$
+```
 
 Thus the entire Type-II branch with
-$(q-k)/D\le1.860+o(1)$ is excluded if this candidate is promoted.
-No small-$x_B$, small-$m$, or stress-weight floor is assumed.
+$`(q-k)/D\le1.860+o(1)`$ is excluded if this candidate is promoted.
+No small-$`x_B`$, small-$`m`$, or stress-weight floor is assumed.
 
 Keeping the exceptional faces separate strengthens this to
-$$
+```math
 \boxed{\liminf {f-k\over D}\ge {3A\over5}={6s_2\over5},\qquad
 \liminf {2(q-k)-k-z\over D}\ge\pi+{6s_2\over5}.}
 \tag{FC9}
-$$
+```
 Consequently
-$$
+```math
 \boxed{\liminf {q-k\over D}\ge{\pi\over2}+{3s_2\over5}
 =2.1421840109\ldots>{2\pi\over3}.}
 \tag{FC10}
-$$
-The entire positive one-cell collar range $4\pi-6(q-k)/D>0$
+```
+The entire positive one-cell collar range $`4\pi-6(q-k)/D>0`$
 is excluded, without a small-boundary-excess assumption.
 The proof of this refinement is in Section 6a.
 
 The canonical [full-core hull depletion floor](../../../docs/archive/source-e99-main-42f0296d/docs/reports/target_c_fullcore_hull_train_depletion_floor_2026-10-04.md.source),
 promoted at Audit.52, controls
-$\mu_D=(e_{BB}+2s_C-3k)/D=(q-k+m)/D-o(1)$.
-Its floor has the same number as FC3, but its quantity includes $m/D$.
-FC3 and FC10 control $(q-k)/D$ itself. The new claim is not a
-reclassification of that already canonical $\mu_D$ theorem.
+$`\mu_D=(e_{BB}+2s_C-3k)/D=(q-k+m)/D-o(1)`$.
+Its floor has the same number as FC3, but its quantity includes $`m/D`$.
+FC3 and FC10 control $`(q-k)/D`$ itself. The new claim is not a
+reclassification of that already canonical $`\mu_D`$ theorem.
 
 The proof chain is
 
@@ -99,35 +99,36 @@ The proof chain is
       -> FC1 and the exact Euler consequence FC2
       -> exclude the full low-(q-k)/D Type-II branch.
 
-The high-$(q-k)/D$ Type-II branch and the macroscopic-container branch
+The high-$`(q-k)/D`$ Type-II branch and the macroscopic-container branch
 remain open. This is a scoped branch exclusion, not Level I closure.
 
 ## 2. Canonical dependencies
 
 - [Section 63](../targets/target-c/63-loaded-hull-slack-audit.md):
   the actual loaded vertices occur in cyclic order on one distinguished
-  outer walk; its chains $W_i$ partition all $b$ occurrences;
-  their hull chords have length at least one; $b+Q=2(q-k)$.
+  outer walk; its chains $`W_i`$ partition all $`b`$ occurrences;
+  their hull chords have length at least one; $`b+Q=2(q-k)`$.
 - [Section 67](../targets/target-c/67-rhombus-population-transport-audit.md):
   the connected positive contact core is inside
-  $F=\operatorname{conv}B=\operatorname{conv}V(G)$;
+  $`F=\operatorname{conv}B=\operatorname{conv}V(G)`$;
   bounded four-faces are actual strict unit rhombi.
 - Canonical Type-II near-disk and rhombus population results, as used in
   [Audit.129](../audits/target_c_atomic_track_boundary_cost_independent_audit_2026-10-08.md):
-  $F/D\to B_{1/2}$, $p/D\to\pi$, the rhombus population is quadratic,
+  $`F/D\to B_{1/2}`$, $`p/D\to\pi`$, the rhombus population is quadratic,
   and every fixed joint direction-measure limit has actual-track atomic
-  mass at least $A$.
+  mass at least $`A`$.
 - [Audit.131](../audits/target_c_atomic_one_end_train_boundary_independent_audit_2026-10-08.md):
   count every actual rhombus track and every contact edge incident to no
-  rhombus as a singleton train. Their exact number $\mathcal T_D$ is
-  $$
+  rhombus as a singleton train. Their exact number $`\mathcal T_D`$ is
+  ```math
   2\mathcal T_D=b+Q+4f,\qquad \mathcal T_D=q-k+2f.
   \tag{FC4}
-  $$
+  
+  ```
 - [Theory 01, Theorem 10.6](../theory/01-local-structure.md):
   actual tracks have two terminals, at most one crossing per pair, and
-  terminal-midpoint distance at most their number $d_\tau$ of crossed
-  rhombi. For a singleton, $d_\tau=0$ and the two midpoints coincide.
+  terminal-midpoint distance at most their number $`d_\tau`$ of crossed
+  rhombi. For a singleton, $`d_\tau=0`$ and the two midpoints coincide.
 
 The new graph argument extends the proof in
 [the Target B terminal-cancellation candidate](target_b_terminal_cancellation_boundary_graph_2026-10-08.md).
@@ -136,46 +137,46 @@ that unreviewed report is not imported as an independent canonical premise.
 
 ## 3. Atomic selection also controls physical train length
 
-Place mass $1/D$ at each complete train's projective direction, including
-singletons. Pass jointly to a weak limit $\lambda$, and let
-$a=\lambda_{\rm at}(S^1/\{\pm1\})$. The actual rhombus-track measure
-is dominated by this measure, so Audit.129 gives $a\ge A$.
+Place mass $`1/D`$ at each complete train's projective direction, including
+singletons. Pass jointly to a weak limit $`\lambda`$, and let
+$`a=\lambda_{\rm at}(S^1/\{\pm1\})`$. The actual rhombus-track measure
+is dominated by this measure, so Audit.129 gives $`a\ge A`$.
 
-All train counts and the outer walk are $O(D)$: $q\le p=O(D)$,
-$Q=2(q-k)-b\le2q$, $f\le Q$, and FC4 suffice.
+All train counts and the outer walk are $`O(D)`$: $`q\le p=O(D)`$,
+$`Q=2(q-k)-b\le2q`$, $`f\le Q`$, and FC4 suffice.
 
-Let $\eta_D$ be the ordered rhombus-crossing measure, with mass
-$1/D^2$ on each orientation of each physical crossing. It is dominated
-in the weak limit by $\lambda\times\lambda$, because the crossing graph
-is simple. If $E_4$ is the rhombus area excess, then
-$0\le E_4\le\operatorname{area}(F)-a_0R_4=o(D^2)$:
+Let $`\eta_D`$ be the ordered rhombus-crossing measure, with mass
+$`1/D^2`$ on each orientation of each physical crossing. It is dominated
+in the weak limit by $`\lambda\times\lambda`$, because the crossing graph
+is simple. If $`E_4`$ is the rhombus area excess, then
+$`0\le E_4\le\operatorname{area}(F)-a_0R_4=o(D^2)`$:
 the rhombus interiors are disjoint and the two leading area densities
-agree. The sine-chord bound on $[\pi/3,\pi/2]$ bounds angular defect
-by a constant times $E_4$. Thus total angular defect is $o(D^2)$,
+agree. The sine-chord bound on $`[\pi/3,\pi/2]`$ bounds angular defect
+by a constant times $`E_4`$. Thus total angular defect is $`o(D^2)`$,
 so the crossing-measure limit is
-supported on the projective $60^\circ$ relation.
+supported on the projective $`60^\circ`$ relation.
 A product measure assigns mass to that relation only through pairs of
-atoms. Hence $\eta$ is supported on atom pairs.
+atoms. Hence $`\eta`$ is supported on atom pairs.
 
 The finite-atom diagonal selection from the Target B argument therefore
-gives sets $\mathcal A_D$ of complete trains with
-$$
+gives sets $`\mathcal A_D`$ of complete trains with
+```math
 {|\mathcal A_D|\over D}\to a,\qquad
 {1\over D}\sum_{\tau\in\mathcal A_D}\delta_{\phi_\tau}
 \Rightarrow\lambda_{\rm at},\qquad
 \sum_{\tau\notin\mathcal A_D}d_\tau=o(D^2).
 \tag{FC5}
-$$
-For precision, take finite atom sets exhausting $\lambda_{\rm at}$;
+```
+For precision, take finite atom sets exhausting $`\lambda_{\rm at}`$;
 shrink their neighborhoods to null-boundary sets capturing vanishing
 extra mass; let this finite selection grow slowly after applying weak
-convergence to each fixed choice. The mass of $\eta$ incident outside
+convergence to each fixed choice. The mass of $`\eta`$ incident outside
 these neighborhoods tends to zero, which gives the last bound. No
 convergence rate is assumed.
 
-Call the complementary trains $\mathcal N_D$, with count $N_D$.
-Apart from $o(D)$ long trains, their terminal midpoints are at distance
-at most $\epsilon_DD$, for some $\epsilon_D\to0$, by Markov and FC5.
+Call the complementary trains $`\mathcal N_D`$, with count $`N_D`$.
+Apart from $`o(D)`$ long trains, their terminal midpoints are at distance
+at most $`\epsilon_DD`$, for some $`\epsilon_D\to0`$, by Markov and FC5.
 Singletons automatically satisfy this distance bound.
 
 ## 4. Include every interior boundary in one auxiliary graph vertex
@@ -187,61 +188,61 @@ Each actual train's terminal vectors are opposite. The two facial
 occurrences of a singleton contact edge are opposite as well, including
 an edge traversed twice as a bridge of the outer face.
 
-Make graph vertices $1,\ldots,q$ for the actual outer chains $W_i$,
-and one extra vertex $*$. Map every terminal occurrence on a bounded
-nonquadrilateral facial walk to $*$. This includes every such face,
-however many there are. An outer terminal maps to its containing $W_i$.
-For each train in $\mathcal N_D$, insert an edge between its two mapped
+Make graph vertices $`1,\ldots,q`$ for the actual outer chains $`W_i`$,
+and one extra vertex $`*`$. Map every terminal occurrence on a bounded
+nonquadrilateral facial walk to $`*`$. This includes every such face,
+however many there are. An outer terminal maps to its containing $`W_i`$.
+For each train in $`\mathcal N_D`$, insert an edge between its two mapped
 terminals. Retain loops, parallel edges, and isolated vertices.
 
-The vertex $*$ is bookkeeping. It is not a source point, an identified
+The vertex $`*`$ is bookkeeping. It is not a source point, an identified
 physical face, a new contact, or a proposed motion.
-Let $c_D$ be this graph's number of connected components. Graph
+Let $`c_D`$ be this graph's number of connected components. Graph
 connectivity alone gives
-$$
+```math
 N_D\ge(q+1)-c_D.
 \tag{FC6}
-$$
+```
 
-At most one component contains $*$. We prove that all the other
-components together number $o(D)$.
+At most one component contains $`*`$. We prove that all the other
+components together number $`o(D)`$.
 
-Fix $M,L$. There are at most $(q+1)/(M+1)$ components with more than
-$M$ vertices. At most $b/(L+1)$ further components contain an outer
-chain with more than $L$ unit occurrences. At most $o(D)$ components
-contain a long $\mathcal N_D$ train. The component containing $*$
+Fix $`M,L`$. There are at most $`(q+1)/(M+1)`$ components with more than
+$`M`$ vertices. At most $`b/(L+1)`$ further components contain an outer
+chain with more than $`L`$ unit occurrences. At most $`o(D)`$ components
+contain a long $`\mathcal N_D`$ train. The component containing $`*`$
 costs only one in the component count, regardless of its size.
 
-In every remaining component $\mathcal C$, both terminals of each
-incident $\mathcal N_D$ train are outer terminals of chains in
-$\mathcal C$. Their unit vectors cancel exactly. Thus
-$$
+In every remaining component $`\mathcal C`$, both terminals of each
+incident $`\mathcal N_D`$ train are outer terminals of chains in
+$`\mathcal C`$. Their unit vectors cancel exactly. Thus
+```math
 \sum_{i\in\mathcal C}(b_{i+1}-b_i)
 =\sum_{\substack{\mathcal A_D\text{ outer terminals}\\
                  \text{in chains of }\mathcal C}}e.
 \tag{FC7}
-$$
+```
 No interior terminal has been dropped: a component with one would
-contain $*$ and was already counted separately.
+contain $`*`$ and was already counted separately.
 
-The bounded number of bounded-length chains in $\mathcal C$ are
-$o(D)$ apart: follow its short train edges, and add at most $2L$
+The bounded number of bounded-length chains in $`\mathcal C`$ are
+$`o(D)`$ apart: follow its short train edges, and add at most $`2L`$
 for the distances from terminal midpoints to chain base vertices.
-The disk limit then makes their hull normals differ by $o(1)$.
+The disk limit then makes their hull normals differ by $`o(1)`$.
 Their positively oriented hull chords have length at least one.
 Their sum is nonzero and has their common limiting tangent direction.
 
 ## 5. Count the small components without a finite-direction error
 
 Record one chosen hull-side normal and the ordered list of
-$\mathcal A_D$ terminal vectors in FC7 for each such small component.
-Each list has at most $ML$ vectors. Normalize these finite record
-measures by $1/D$ and pass to weak limits for each list length.
+$`\mathcal A_D`$ terminal vectors in FC7 for each such small component.
+Each list has at most $`ML`$ vectors. Normalize these finite record
+measures by $`1/D`$ and pass to weak limits for each list length.
 
 Every vector-coordinate marginal is dominated by the measure of all
-directed $\mathcal A_D$ terminal vectors divided by $D$. FC5 gives
+directed $`\mathcal A_D`$ terminal vectors divided by $`D`$. FC5 gives
 an atomic limit, supported on the countably many signed atom directions
-of $\lambda$. Every finite list therefore uses only those atoms in
+of $`\lambda`$. Every finite list therefore uses only those atoms in
 the limit.
 
 The chosen-normal marginal is dominated by the perimeter-weighted
@@ -255,123 +256,123 @@ such lists. Thus the normal marginal is both atomless and supported on
 a countable set; it is zero. Empty lists are impossible because the
 aligned positive hull chords have nonzero sum.
 
-Consequently these small components number $o(D)$ for fixed $M,L$.
+Consequently these small components number $`o(D)`$ for fixed $`M,L`$.
 The previous counts give
-$$
+```math
 \limsup {c_D\over D}
 \le\limsup {(q+1)/D\over M+1}
   +\limsup {b/D\over L+1}.
-$$
-Send $M,L\to\infty$. Hence $c_D=o(D)$.
+```
+Send $`M,L\to\infty`$. Hence $`c_D=o(D)`$.
 
 Combining FC5, FC6 and FC4,
-$$
+```math
 a\le\lim {\mathcal T_D-q\over D}
 =\lim {2f-k\over D}
-$$
-along every joint subsequence. Since $a\ge A$, this proves FC1.
+```
+along every joint subsequence. Since $`a\ge A`$, this proves FC1.
 
 ## 6. Exact face and metric consequences
 
-The identities $Q=2(q-k)-b$, $Q\ge f$, and $b=p+z$ give
-$$
+The identities $`Q=2(q-k)-b`$, $`Q\ge f`$, and $`b=p+z`$ give
+```math
 4(q-k)-k-2p-2z
 =2Q-k
 \ge2f-k.
 \tag{FC8}
-$$
-Divide by $D$, use FC1 and $p/D\to\pi$, and obtain FC2.
-Nonnegativity of $k,z$ then gives FC3.
+```
+Divide by $`D`$, use FC1 and $`p/D\to\pi`$, and obtain FC2.
+Nonnegativity of $`k,z`$ then gives FC3.
 
-For a sequence with $(q-k)/D\le1.860+o(1)$, FC2 would imply
-$$
+For a sequence with $`(q-k)/D\le1.860+o(1)`$, FC2 would imply
+```math
 7.440\ge2\pi+2s_2=8.1878109209\ldots,
-$$
+```
 which is impossible. This is a fixed strict contradiction, with no
 uncontrolled boundary-order term.
 
 ## 6a. Keep each exceptional face as a separate recipient
 
-Replace $*$ by $f$ distinct vertices, one for each bounded
+Replace $`*`$ by $`f`$ distinct vertices, one for each bounded
 nonquadrilateral face. A train terminal belongs to its actual facial
-recipient. Keep the same $\mathcal N_D$ edges. Let $c_\partial$
-count components meeting an outer chain; let $f_\partial$ count
-exceptional faces in those components. Let $N_\partial$ and
-$N_\circ$ count their non-atomic train edges and the train edges
-of the remaining, interior-only components. Let $Q_\circ$ be the
-excess $\sum(\deg F-4)$ of the interior-only faces.
+recipient. Keep the same $`\mathcal N_D`$ edges. Let $`c_\partial`$
+count components meeting an outer chain; let $`f_\partial`$ count
+exceptional faces in those components. Let $`N_\partial`$ and
+$`N_\circ`$ count their non-atomic train edges and the train edges
+of the remaining, interior-only components. Let $`Q_\circ`$ be the
+excess $`\sum(\deg F-4)`$ of the interior-only faces.
 
-We first prove $c_\partial=o(D)$. For fixed $M,L$, discard
-components with more than $M$ recipients, components containing a
-chain or face walk with more than $L$ occurrences, and components
-containing a long $\mathcal N_D$ train. Their numbers are bounded by
-$$
+We first prove $`c_\partial=o(D)`$. For fixed $`M,L`$, discard
+components with more than $`M`$ recipients, components containing a
+chain or face walk with more than $`L`$ occurrences, and components
+containing a long $`\mathcal N_D`$ train. Their numbers are bounded by
+```math
 {q+f\over M+1}+{b+4f+Q\over L+1}+o(D).
-$$
-The two numerators are $O(D)$. In each remaining boundary component,
+```
+The two numerators are $`O(D)`$. In each remaining boundary component,
 every recipient has bounded walk length. Short train edges therefore
-place all its chain bases and face walks within $o(D)$ of one another.
+place all its chain bases and face walks within $`o(D)`$ of one another.
 Each complete bounded facial walk sums to zero; all paired
-$\mathcal N_D$ terminal vectors cancel. Thus
-$$
+$`\mathcal N_D`$ terminal vectors cancel. Thus
+```math
 \sum_{\substack{W_i\text{ in}\\\text{the component}}}
  (b_{i+1}-b_i)
 =\sum_{\substack{\mathcal A_D\text{ terminal occurrences}\\
                   \text{in the component}}}e.
 \tag{FC11}
-$$
+```
 There is at least one outer chain on the left. The disk limit aligns
 all those hull chords, whose lengths are at least one. Their sum has
 norm bounded below and the common limiting hull tangent direction.
-The right side has at most $ML$ unit vectors.
+The right side has at most $`ML`$ unit vectors.
 The marked-measure proof of Section 5 now applies with the inner-face
 vectors included in the record. Each vector-coordinate marginal still
 has atomic support, and the chosen hull-normal marginal is still
 dominated by the atomless hull-side surface measure. Hence the retained
-boundary components number $o(D)$. Sending $M,L$ to infinity proves
-$$
+boundary components number $`o(D)`$. Sending $`M,L`$ to infinity proves
+```math
 c_\partial=o(D).
 \tag{FC12}
-$$
+```
 Interior-only components are not claimed to be sublinear.
 
-Write $a_\partial$ for the number of atomic terminal occurrences
+Write $`a_\partial`$ for the number of atomic terminal occurrences
 in boundary components. The connected-component edge bound and
 incidence handshake are exact:
-$$
+```math
 N_\partial\ge q+f_\partial-c_\partial,\qquad
 a_\partial=b+4f_\partial+Q-Q_\circ-2N_\partial.
-$$
-Using $b+Q=2(q-k)$ yields
-$$
+```
+Using $`b+Q=2(q-k)`$ yields
+```math
 0\le a_\partial\le
 2f_\partial-Q_\circ-2k+2c_\partial.
-$$
+```
 Every interior-only exceptional face has excess at least one, so
-$$
+```math
 3f_\partial\ge f+2k-2c_\partial.
 \tag{FC13}
-$$
+```
 In particular linearly many of the actual exceptional faces must lie
 in non-atomic train components reaching the outer boundary.
 
 The number of atomic ends in the interior-only components is exactly
-$4(f-f_\partial)+Q_\circ-2N_\circ$.
+$`4(f-f_\partial)+Q_\circ-2N_\circ`$.
 Adding both populations gives
-$$
+```math
 |\mathcal A_D|+N_\circ
 \le2f-f_\partial-k+c_\partial.
-$$
+```
 Combine this with FC13:
-$$
+```math
 3(|\mathcal A_D|+N_\circ)\le5(f-k+c_\partial).
 \tag{FC14}
-$$
-Divide by $D$, use FC5, FC12, and $a\ge A$. This proves
+```
+Divide by $`D`$, use FC5, FC12, and $`a\ge A`$. This proves
 the first inequality of FC9. Finally
-$$
+```math
 2(q-k)-k-p-z=Q-k\ge f-k
-$$
+```
 gives the second inequality and FC10.
 
 Recipient connectivity here is a statement about train terminal
@@ -385,7 +386,7 @@ The finite exact
 checks contact graphs with holes and bridge excursions, their actual
 quadrilateral faces, physical trains and singleton edges, facial
 terminal orientations, distinguished outer chains, the auxiliary graph,
-and FC7 in every component not containing $*$.
+and FC7 in every component not containing $`*`$.
 It passed 7,252 source lower-pair checks, 108 physical terminal-pair
 checks, and 620 component identities in 354 auxiliary graphs of eight
 nonglobal fixtures. The fixtures contain 52 interior terminal
@@ -395,14 +396,14 @@ occurrences. All source lower pairs are checked.
 The refinement also checks 354 graphs with all exceptional faces
 separate, 886 component cancellation identities, and the exact finite
 inequalities in Section 6a. In these nonglobal fixtures the algebraic
-quantity $q-\mathcal T_D+2f$ need not be a nonnegative KKT defect;
+quantity $`q-\mathcal T_D+2f`$ need not be a nonnegative KKT defect;
 the checker verifies the counting identities and does not assert
 canonical-source hypotheses.
 
 The script does not prove the atom-selection or marked-measure argument,
 the circular limit, source optimality, or a Level I result.
 
-Merging interior occurrences into $*$ never supplies a physical path.
+Merging interior occurrences into $`*`$ never supplies a physical path.
 It only reduces the number of graph components eligible for the
 cancellation argument. FC6 is the elementary edge count of that actual
 auxiliary graph; its edges still count distinct actual complete trains.
@@ -414,7 +415,7 @@ in every full-source canonical premise. Their positions are not moved
 or counted as singleton edges.
 
 The macroscopic-container branch lacks the circular core-hull premise
-used here. The high-$(q-k)/D$ Type-II branch is compatible with FC9--FC10.
+used here. The high-$`(q-k)/D`$ Type-II branch is compatible with FC9--FC10.
 Neither is declared closed.
 
 ## 8. Promotion recommendation

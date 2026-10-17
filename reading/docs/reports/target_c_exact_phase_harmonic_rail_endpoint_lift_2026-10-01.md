@@ -47,28 +47,30 @@ Let the selected cuts be `E_1,...,E_m`. Every edge in their union is a unit
 contact parallel to one unit vector `u`. Delete these edges from the positive
 contact graph and let `S` be one remaining connected component. Define
 
-$$
+```math
 y_x=p_x\cdot Ju.
-$$
+```
 
 Then:
 
 1. `y` is positive-weight harmonic at every vertex of `S` not in `B`;
 2. if `y` is nonconstant on `S`, then `B_S=B cap S` contains at least two
    distinct vertices and
-   $$
+   ```math
    \min_{B_S}y=\min_S y<\max_S y=\max_{B_S}y;
    \tag{1}
-   $$
+   
+   ```
 3. with the actual outward diameter reaction
    `g_x=sum_{xy in H} beta_xy(p_x-p_y)`,
-   $$
+   ```math
    \sum_{x\in S}g_x\cdot Ju=0,
    \qquad
    \sum_{x\in S}y_x(g_x\cdot Ju)
    =\sum_{xz\in C[S]}\alpha_{xz}(y_x-y_z)^2;
    \tag{2}
-   $$
+   
+   ```
 4. if `y` is constant on `S`, every vertex of `S` is loaded, under the
    canonical unloaded degree-at-least-three hypothesis.
 
@@ -76,10 +78,10 @@ Then:
 
 Source equilibrium says
 
-$$
+```math
 \sum_{xz\in C}\alpha_{xz}(p_x-p_z)=g_x.
 \tag{3}
-$$
+```
 
 Every deleted contact has zero `Ju` projection. Thus (3), projected on `Ju`,
 retains only the internal edges of `S`. At an unloaded vertex its right side
@@ -117,11 +119,11 @@ unit edges. The rails lie respectively in gaps `i-1` and `i`.
 
 If train `i` contains `r_i` strict rhombi, each rail has transverse span
 
-$$
+```math
 L_i=\sum_{F\text{ on train }i}\sin\theta_F>
 {\sqrt3\over2}r_i.
 \tag{4}
-$$
+```
 
 In particular, if every selected train crosses all `n` trains of the opposite
 retained shore, then `r_i>=n`.
@@ -131,22 +133,22 @@ edge was deleted. Each whole rail lies in one component from Section 2. It
 follows that **every gap contains at least two loaded vertices**, and more
 precisely
 
-$$
+```math
 \begin{aligned}
 \operatorname{span}_y(B_0)&\ge L_1,\\
 \operatorname{span}_y(B_j)&\ge\max(L_j,L_{j+1}) &&(0<j<m),\\
 \operatorname{span}_y(B_m)&\ge L_m.
 \end{aligned}
 \tag{5}
-$$
+```
 
 Thus an all-crossing opposite shore of size `n` gives
 
-$$
+```math
 \boxed{q\ge2(m+1),\qquad
 \operatorname{span}_y(B_j)>{\sqrt3\over2}n\quad(0\le j\le m).}
 \tag{6}
-$$
+```
 
 ### Proof of the rail assertions
 
@@ -181,10 +183,10 @@ A-layer and an internal B-layer.
 
 Hence, for `m,n>=1`,
 
-$$
+```math
 \boxed{q\ge2(m-1)+2(n-1)=2(m+n-2).}
 \tag{7}
-$$
+```
 
 Combine (7) with each of the separate bounds `q>=2(m+1)` and `q>=2(n+1)`.
 Do not add the two extreme-gap counts: an extreme A-gap may contain loaded
@@ -209,10 +211,10 @@ diameters can supply endpoints.
 
 The full diameter graph satisfies `q=h+d_H`. Therefore (6) gives
 
-$$
+```math
 h\ge2m+2-d_H.
 \tag{8}
-$$
+```
 
 In the cyclic `d_H=0` branch this needs at least one diameter beyond the
 `2m+1` selected threshold bars. It does not exclude that branch. In the
@@ -231,9 +233,9 @@ vertices; `q=4`, `h=2`, `d_H=2`.
 
 The stress matrix is
 
-$$
+```math
 \Omega={1\over2}(1,-1,1,-1)^{\mathsf T}(1,-1,1,-1)
-$$
+```
 
 in cyclic vertex order, so it is PSD with affine kernel dimension three.
 The count (6) is attained; (8) is attained. Dropping `d_H` would incorrectly

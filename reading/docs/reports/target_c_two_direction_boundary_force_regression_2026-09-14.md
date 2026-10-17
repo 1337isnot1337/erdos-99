@@ -27,12 +27,12 @@ global polygon shortcut. No canonical theorem is changed.
 
 The live C-II full-core endpoint remains
 
-$$
+```math
  \liminf {1\over D}\sum_r(L_r+P_{{\rm exc},r}-2d_r)
  \ge {\pi\over2}(2-\sqrt3),
  \qquad
  \sum_rP_{{\rm exc},r}\le10(e_{BB}-k).
-$$
+```
 
 The attempted chain was
 
@@ -49,32 +49,32 @@ equilibrium.
 
 ## 2. Valid local lemma
 
-Let $A$ be the full vertex set of a simply connected edge-to-edge complex of
-unit rhombi using two unit directions $u,v$, with
-$\angle(u,v)\in(\pi/3,2\pi/3)$. Assume every actual contact edge has a strictly
+Let $`A`$ be the full vertex set of a simply connected edge-to-edge complex of
+unit rhombi using two unit directions $`u,v`$, with
+$`\angle(u,v)\in(\pi/3,2\pi/3)`$. Assume every actual contact edge has a strictly
 positive contact multiplier in a global mixed KKT stress. If a vertex is not an
 endpoint of a positive diameter row, then its contact vectors must have a strictly
 positive linear combination equal to zero.
 
 The only unit directions in the two-direction lattice are
 
-$$
+```math
  u,\ -u,\ v,\ -v.
-$$
+```
 
 No set of at most three of these vectors has the origin in the relative interior
 of its convex hull. The four directions have cyclic gaps
-$\theta,\pi-\theta,\theta,\pi-\theta$, where
-$\theta=\angle(u,v)$; after deleting any one direction, the remaining set lies
+$`\theta,\pi-\theta,\theta,\pi-\theta`$, where
+$`\theta=\angle(u,v)`$; after deleting any one direction, the remaining set lies
 in a closed half-plane with a strict one-sided component. Therefore:
 
-$$
+```math
 \boxed{\text{every non-loaded vertex of the full two-direction contact graph has
 degree four.}}
 \tag{2.1}
-$$
+```
 
-In particular, a convex $\pi/2$ boundary corner of the corresponding square
+In particular, a convex $`\pi/2`$ boundary corner of the corresponding square
 complex, which has degree two, must be loaded. A straight boundary vertex, which
 has degree three, must also be loaded. Since every positive diameter endpoint is
 a source-hull vertex, every such low-degree boundary vertex is a source-hull
@@ -87,30 +87,30 @@ boundary vertex of an orthogonal polygon is a convex-hull vertex.
 
 Take the five unit squares whose lower-left corners are
 
-$$
+```math
  (0,1),\ (1,1),\ (2,1),\ (1,0),\ (1,2)
-$$
+```
 
 in the ordinary square lattice. Their union is a simply connected plus-shaped
 square complex. Its twelve source vertices are
 
-$$
+```math
 \begin{aligned}
 A_{\boxplus}=\{&
 (1,3),(1,2),(0,2),(0,1),(1,1),(1,0),\\
 &(2,0),(2,1),(3,1),(3,2),(2,2),(2,3)\}.
 \end{aligned}
 \tag{3.1}
-$$
+```
 
 The contact graph is exactly the 1-skeleton of the five squares. It is
 triangle-free and all unit contacts are horizontal or vertical. The boundary
 has eight convex corners, all of which are vertices of
-$\operatorname{conv}(A_{\boxplus})$, and four reflex vertices
+$`\operatorname{conv}(A_{\boxplus})`$, and four reflex vertices
 
-$$
+```math
  (1,2),(1,1),(2,1),(2,2),
-$$
+```
 
 each of degree four. Thus the claim that a non-square orthogonal disk must have a
 non-hull convex or straight boundary vertex is false.
@@ -118,20 +118,20 @@ non-hull convex or straight boundary vertex is false.
 The example also passes the relevant positive-stress test. Its four diameter
 edges are
 
-$$
+```math
 \begin{aligned}
 &(0,2)(3,1),\qquad (0,1)(3,2),\\
 &(1,0)(2,3),\qquad (1,3)(2,0),
 \end{aligned}
 \tag{3.2}
-$$
+```
 
-each of squared length $10$. These eight endpoints are precisely the eight
-convex vertices of the source hull. Give every diameter edge multiplier $1$.
-Give the outer contact edges alternating multipliers $1$ and $3$ according to
+each of squared length $`10`$. These eight endpoints are precisely the eight
+convex vertices of the source hull. Give every diameter edge multiplier $`1`$.
+Give the outer contact edges alternating multipliers $`1`$ and $`3`$ according to
 the following complete list of boundary edge weights:
 
-$$
+```math
 \begin{array}{c|cccccccccccc}
 \text{edge in cyclic boundary order}
 &(1,3)(1,2)&(1,2)(0,2)&(0,2)(0,1)&(0,1)(1,1)&
@@ -143,33 +143,33 @@ $$
 \text{weight}&3&3&1&3&3&1
 \end{array}
 \tag{3.3}
-$$
+```
 
 and give each of the four central-square edges
 
-$$
+```math
  (1,1)(1,2),\quad (1,2)(2,2),\quad
  (2,2)(2,1),\quad (2,1)(1,1)
-$$
+```
 
-multiplier $3$. At each reflex vertex the opposite horizontal contact weights
+multiplier $`3`$. At each reflex vertex the opposite horizontal contact weights
 are equal and the opposite vertical contact weights are equal, so its contact
 force balances exactly. At each convex hull vertex, the two incident contact
-forces balance the corresponding diameter force. For example, at $(1,3)$,
-the contact weights on the edges to $(1,2)$ and $(2,3)$ are $3$ and $1$,
-while the diameter partner is $(2,0)$; with the convention
+forces balance the corresponding diameter force. For example, at $`(1,3)`$,
+the contact weights on the edges to $`(1,2)`$ and $`(2,3)`$ are $`3`$ and $`1`$,
+while the diameter partner is $`(2,0)`$; with the convention
 
-$$
+```math
 \sum_{y\sim x}\alpha_{xy}(y-x)+
 \sum_{z:\,xz\ {\rm diameter}}\beta_{xz}(x-z)=0,
 \tag{3.4}
-$$
+```
 
 the three contributions are
 
-$$
+```math
 3(0,-1)+(1,0)+((-1,3))=(0,0).
-$$
+```
 
 The other seven convex vertices are the rotations/reflections of this same
 calculation. Thus the example has a strictly positive contact/diameter
@@ -183,21 +183,21 @@ diameter pairs, strict positivity of every displayed multiplier, equilibrium at 
 of the displayed arithmetic, not a global-optimality certificate.
 
 It is not a global minimizer for its cardinality, which is essential. Its
-diameter is $\sqrt{10}$. The following twelve points in the unit triangular
-lattice are unit-separated and have diameter $3$:
+diameter is $`\sqrt{10}`$. The following twelve points in the unit triangular
+lattice are unit-separated and have diameter $`3`$:
 
-$$
+```math
 \{(a,b):
 (a,b)\in
 \{(0,1),(0,2),(0,3),(1,0),(1,1),(1,2),(1,3),
 (2,0),(2,1),(2,2),(3,0),(3,1)\}\},
 \tag{3.5}
-$$
+```
 
-where $(a,b)$ denotes $a(1,0)+b(1/2,\sqrt3/2)$. Their squared distance
-form is $a^2+ab+b^2$, and a direct finite check gives values between $1$ and
-$9$ on distinct listed pairs. Hence they form a same-cardinality feasible source
-of diameter $3<\sqrt{10}$.
+where $`(a,b)`$ denotes $`a(1,0)+b(1/2,\sqrt3/2)`$. Their squared distance
+form is $`a^2+ab+b^2`$, and a direct finite check gives values between $`1`$ and
+$`9`$ on distinct listed pairs. Hence they form a same-cardinality feasible source
+of diameter $`3<\sqrt{10}`$.
 
 This example therefore refutes the attempted polygon closure while remaining
 compatible with the global problem: positive local stress and diametral-hull
@@ -231,7 +231,7 @@ The corrected target is:
 > For a quadratic full-core triangle-free global minimizer with a dominant
 > two-direction phase, prove that the reflex degree-four boundary mechanism either
 > creates a linear exceptional/interface cost that closes Sections 122–123, or
-> admits an explicit same-cardinality strict sub-$D$ deformation. The proof must
+> admits an explicit same-cardinality strict sub-$`D`$ deformation. The proof must
 > retain all source points, including contact-isolated points, and cannot replace
 > the source by the rhombic carrier.
 
@@ -247,7 +247,7 @@ No version of this stability/global-minimality statement is proved here.
 | Every low-degree boundary vertex is source-hull loaded | proved conditional | Degree two/three plus the preceding rows |
 | Every non-square orthogonal disk has a non-hull convex/straight boundary vertex | rejected | Five-square plus counterexample |
 | Positive stress eliminates all non-square two-direction disks | rejected | The plus complex has a positive stress |
-| Plus complex is globally optimal for $n=12$ | rejected | Triangular-lattice source of diameter $3<\sqrt{10}$ |
+| Plus complex is globally optimal for $`n=12`$ | rejected | Triangular-lattice source of diameter $`3<\sqrt{10}`$ |
 | General full-core source has one global two-direction phase | unresolved | Current route permits grains and interfaces |
 | Level I | open | Original quantifiers remain undischarged |
 

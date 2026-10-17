@@ -29,25 +29,25 @@ full-core branch.
 
 The canonical full-core inputs are
 
-$$
+```math
  \liminf_{D\to\infty}{1\over D}
  \sum_r(L_r+P_{{\rm exc},r}-2d_r)
  \ge {\pi\over2}(2-\sqrt3),
  \tag{IP.1}
-$$
+```
 
 and
 
-$$
+```math
  \sum_rP_{{\rm exc},r}\le10(e_{BB}-k),
  \qquad k=d_H+s_Z.
  \tag{IP.2}
-$$
+```
 
 The residual is the occurrence-counted outer-walk detour
-$$
+```math
  T_{\rm out}:=\sum_r(L_r-2d_r).
-$$
+```
 The attempted bridge was
 
 ```text
@@ -68,53 +68,53 @@ The source is the full canonical source. Contact-isolated points are retained.
 Let `G` be the nonisolated positive-contact core of a canonical C-II representative,
 let `F=conv(V(G))` be its force hull, and let
 
-$$
+```math
  P_r=\operatorname{conv}(A_r),\qquad
  p_r=\operatorname{per}(P_r),\qquad
  d_r=\operatorname{diam}(P_r)
-$$
+```
 
 be the canonical harmonic attachment cells. Let `A_{4,r}` be the total area of
 strict quadrilateral contact faces in the induced graph on `I_r\cup A_r`, and put
 
-$$
+```math
  G_r:=\operatorname{area}(P_r)-A_{4,r}.
-$$
+```
 
 Let `Z_cell` be the number of contact-isolated source points assigned to the portions
-of the global force-hull dissection lying in $\bigcup_rP_r$. Then, in the Type-II
+of the global force-hull dissection lying in $`\bigcup_rP_r`$. Then, in the Type-II
 full-core branch,
 
-$$
+```math
  \boxed{
  \sum_rG_r\le a_0 Z_{\rm cell}+C_0D+C_1,
  }
  \tag{IP.3}
-$$
+```
 
-for universal constants `C_0,C_1`; here $a_0=\sqrt3/2$. The constants are not
+for universal constants `C_0,C_1`; here $`a_0=\sqrt3/2`$. The constants are not
 optimized. The bound is finite for every source and does not delete isolates.
 
 Using canonical Section 121,
 
-$$
+```math
  G_r\ge {3c_0\over5}(L_r+P_{{\rm exc},r}-p_r),
  \qquad c_0={\sqrt3\over4},
  \tag{IP.4}
-$$
+```
 
-and the canonical perimeter bound $\sum_rp_r=O(D)$, (IP.3) implies
+and the canonical perimeter bound $`\sum_rp_r=O(D)`$, (IP.3) implies
 
-$$
+```math
  \boxed{
  \sum_r(L_r+P_{{\rm exc},r}-2d_r)
  \le {10\over3}Z_{\rm cell}+C_2D+C_3.
  }
  \tag{IP.5}
-$$
+```
 
 The coefficient `10/3` is only the exact isolate coefficient forced by
-$a_0=2c_0$; the boundary constants are deliberately left coarse.
+$`a_0=2c_0`$; the boundary constants are deliberately left coarse.
 
 Thus any super-boundary-order aggregate detour must be paid by contact-isolated
 population inside the attachment-cell region. In particular, if a separate argument
@@ -140,28 +140,28 @@ the convex force hull `F`. Its bounded faces are convex; let `sigma_Q` denote th
 canonical Oler slack of a bounded face `Q`, including any assigned isolated source
 points in that face. The full-source cap/slack identity gives
 
-$$
+```math
  W_F+W_{\rm ext}=\mathcal O_A+a_0L_F,
  \tag{IP.6}
-$$
+```
 
 where `W_F,W_ext` are the sums of the nonnegative face and exterior-cap slacks,
-$\mathcal O_A$ is the global Oler slack, and `L_F` is the total force-hull-side
+$`\mathcal O_A`$ is the global Oler slack, and `L_F` is the total force-hull-side
 defect from the common source hull. The strict triangular-lattice comparison gives
 
-$$
+```math
  \mathcal O_A<c_0P_K,
  \qquad L_F\le P_F,
  \qquad P_K,P_F\le\pi D.
  \tag{IP.7}
-$$
+```
 
 Consequently
 
-$$
+```math
  W_F\le W_F+W_{\rm ext}< (c_0+a_0)\pi D.
  \tag{IP.8}
-$$
+```
 
 Only the boundary-order conclusion is needed below. This use of the full-source
 slack is valid with contact-isolated points because their populations are included in
@@ -171,20 +171,20 @@ the face/cap Oler slacks.
 
 Add every side of every `P_r` that is not already an edge of the global augmented
 graph. The attachment cells have pairwise interior-disjoint interiors, so these
-segments form a noncrossing refinement. Let $\ell_{\rm add}$ be their total
+segments form a noncrossing refinement. Let $`\ell_{\rm add}`$ be their total
 Euclidean length. Since every pre-existing contact side has length one,
 
-$$
+```math
  \ell_{\rm add}\le\sum_rp_r.
  \tag{IP.9}
-$$
+```
 
 Canonical Section 62 gives
 
-$$
+```math
  \sum_rp_r\le2\pi(q+1-k)\le2\pi(q+1)=O(D),
  \tag{IP.10}
-$$
+```
 
 because `q<=pi D` and `k>=0`.
 
@@ -193,11 +193,11 @@ child Oler slacks exceeds the parent slack by exactly `ell`: the two child perim
 gain `2ell`, while their boundary-vertex counts gain two. Applying this sequentially
 to all added attachment sides gives
 
-$$
+```math
  \sum_{Q\ {\rm refined\ inside}\ F}\sigma_Q
  \le W_F+\ell_{\rm add}=O(D).
  \tag{IP.11}
-$$
+```
 
 This identity is an occurrence-counted planar refinement identity; it does not
 identify distinct local outer-walk occurrences.
@@ -236,7 +236,7 @@ Its bounded faces consist of:
 2. nonquadrilateral contact faces and the added-side pockets.
 
 These faces partition `P_r` up to boundaries. Therefore the sum of the areas in
-class 2 over all `r` is exactly $\sum_rG_r$. If a global face is further split by
+class 2 over all `r` is exactly $`\sum_rG_r`$. If a global face is further split by
 an attachment side, the corresponding pieces are the refined faces in (IP.11).
 No contact rhombus is counted as class 2: a convex unit four-face is a strict unit
 rhombus in the triangle-free source, and every such face inside `P_r` belongs to the
@@ -248,38 +248,38 @@ For one local graph write `L_r` for its occurrence-counted outer walk, `Q_r` for
 the sum of `deg-4` over bounded nonquadrilateral faces, and `f_r` for their number.
 Canonical Section 82 gives
 
-$$
+```math
  L_r+Q_r=4a_r-6-2s_r-2c_r,
  \qquad Q_r\le2a_r,
  \tag{IP.12}
-$$
+```
 
-and $f_r\le Q_r$. Hence the total boundary-vertex occurrences on local
+and $`f_r\le Q_r`$. Hence the total boundary-vertex occurrences on local
 nonquadrilateral contact faces are at most
 
-$$
+```math
  4f_r+Q_r\le5Q_r.
  \tag{IP.13}
-$$
+```
 
 If `h_r` attachment sides are added, the sum of boundary-edge/vertex occurrences
 over the resulting outer pockets is
 
-$$
+```math
  L_r+2h_r-a_r\le L_r+a_r.
  \tag{IP.14}
-$$
+```
 
 Thus the total boundary-vertex occurrence count `K_bad` over all refined non-rhombic
 faces satisfies, with a deliberately coarse bound,
 
-$$
+```math
  K_{\rm bad}
  \le\sum_r(5Q_r+L_r+a_r)=O\!\left(\sum_ra_r\right)=O(D).
  \tag{IP.15}
-$$
+```
 
-The last step uses (IP.12), the canonical $\sum_ra_r\le\sum_rp_r=O(D)$, and
+The last step uses (IP.12), the canonical $`\sum_ra_r\le\sum_rp_r=O(D)`$, and
 nonnegativity. Repeated vertices and bridge occurrences are counted in `L_r` and
 therefore only increase the right side.
 
@@ -289,43 +289,43 @@ For a refined non-rhombic face `Q`, let `k_Q` be its boundary source-vertex
 occurrence count, `z_Q` the assigned isolate count, and `sigma_Q` its Oler slack.
 The definition of the slack gives
 
-$$
+```math
  {\operatorname{area}(Q)\over a_0}
  =\sigma_Q-{\operatorname{per}(Q)\over2}-1+k_Q+z_Q
  \le\sigma_Q+k_Q+z_Q.
  \tag{IP.16}
-$$
+```
 
 Sum (IP.16) over all refined non-rhombic faces. The refined slack sum is `O(D)` by
 (IP.11), the boundary-occurrence sum is `O(D)` by (IP.15), and the isolate sum is
 exactly `Z_cell`. This proves
 
-$$
+```math
  \sum_rG_r
  \le a_0Z_{\rm cell}+C_0D+C_1,
  \tag{IP.17}
-$$
+```
 
 which is (IP.3).
 
 ### 3.6 Convert area payment to aggregate detour payment
 
 Canonical Section 121 gives the finite local inequality (IP.4). Summing and using
-(IP.17), with $a_0/c_0=2$, gives
+(IP.17), with $`a_0/c_0=2`$, gives
 
-$$
+```math
  \sum_r(L_r+P_{{\rm exc},r}-p_r)
  \le {5\over3c_0}\sum_rG_r
  \le {10\over3}Z_{\rm cell}+O(D).
  \tag{IP.18}
-$$
+```
 
 Finally `d_r>=0`, so
 
-$$
+```math
  L_r+P_{{\rm exc},r}-2d_r
  \le (L_r+P_{{\rm exc},r}-p_r)+p_r.
-$$
+```
 
 Sum this, apply (IP.10), and obtain (IP.5).
 

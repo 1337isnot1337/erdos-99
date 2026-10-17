@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_gate_jam_amplification_2026-09-17.md) · source SHA-256 `096a2ac8417816366f54649837b069722c4bb6b0cae74d18c7b04d607d5a1368`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "46dff289e03e494c6d0fabc02f07e4b8b3661982", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_gate_jam_amplification_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4cfc72709d01db4ee5b4a5e5272a2536ee04cc73dd94acd8850be359aae6792d"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -18,38 +20,39 @@ The previous reduction leaves one genuinely new local object: a FREE module whos
 
 Let
 
-$$
+```math
 d:=\deg_C(x)\in\{3,4,5\}
-$$
+```
 
 for the original shallow apex. Then every non-exact module satisfies the following sharper alternative:
 
-$$
+```math
 \boxed{
 \begin{array}{ll}
 \text{GATE-TRIANGLE:}&\text{the newly created inactive gate graph contains a triangle;}\\[1mm]
 \text{OVERFULL-GATE:}&\text{the repair creates at least }d+1\text{ distinct inactive gate edges.}
 \end{array}}
 \tag{GJ.1}
-$$
+```
 
 In particular every surviving non-exact module contains either a gate triangle or at least four inactive gate edges.
 
 Every gate edge `uv`, viewed back in the original source, is a strict noncontact satisfying
 
-$$
+```math
 \boxed{
 1<|u-v|\le1+t_D
 <1+h_*+o(1)
 =1.3347479843\ldots+o(1),
 }
 \tag{GJ.2}
+```
 
 where
 
-\[
+```math
 h_*={\sqrt{303}\over52}.
-$$
+```
 
 All gate vertices are original fully inactive rattlers. Until (GJ.1) occurs, there are at most five gate edges, so every absorbed vertex stays in the same `O(\sqrt D)` support cap and all upper-distance safety estimates remain uniform.
 
@@ -59,9 +62,9 @@ All gate vertices are original fully inactive rattlers. Until (GJ.1) occurs, the
 
 Fix a FREE module with canonical translation direction `-N` and terminal clearing time
 
-$$
+```math
 t_D=\delta+D^{-1/3}<1/2
-$$
+```
 
 for large `D`.
 
@@ -89,33 +92,34 @@ Only case 3 needs exclusion.
 
 Before either stopping event in (GJ.1),
 
-$$
+```math
 |E(G_g)|\le d\le5.
 \tag{GJ.3}
-$$
+```
 
 Every absorption event adds at least one previously fixed vertex and at least one new gate edge. Hence at most five absorption stages occur before the theorem has already concluded.
 
 The original blockers have support depth
 
-$$
+```math
 a_z\le B_D=O(\sqrt D).
-$$
+```
 
 If a new inactive guard `v` first meets a moving point `p` at unit distance, then exactly as in the one- and two-gate proofs,
 
-$$
+```math
 a_v\le a_p+t_D+1.
 \tag{GJ.4}
-$$
+```
 
 After at most five stages,
 
-$$
+```math
 \boxed{
 a_v\le B_D+5(t_D+1)=O(\sqrt D)
 }
 \tag{GJ.5}
+```
 
 for every moving point.
 
@@ -129,31 +133,33 @@ Every absorbed guard also remains strictly between distances `1` and `D` from `q
 
 Suppose a gate edge is created when a moving point `p` meets a still-fixed inactive point `v` at time `s`. If `p` entered the moving cluster at time `sigma_p`, then
 
-\[
+```math
 |p-(s-\sigma_p)N-v|=1,
 \qquad
 0\le s-\sigma_p\le t_D.
 \tag{GJ.6}
+```
 
 The original pair was not a unit contact because both endpoints were old fully inactive points. Therefore
 
-\[
+```math
 |p-v|>1.
-$$
+```
 
 The triangle inequality in (GJ.6) gives
 
-$$
+```math
 |p-v|\le1+s-\sigma_p\le1+t_D,
-$$
+```
 
 which proves (GJ.2).
 
 Thus if `G_g` acquires a triangle, its three vertices were already, in the original source, a strict triangle with all three side lengths in
 
-$$
+```math
 \boxed{(1,1+h_*+o(1)).}
 \tag{GJ.7}
+```
 
 The gate triangle is therefore a bounded, explicitly localized deformation of an equilateral unit triangle, not an arbitrary contact triangle elsewhere in the source.
 
@@ -163,11 +169,12 @@ The gate triangle is therefore a bounded, explicitly localized deformation of an
 
 Assume the repair reaches `t_D` while
 
-\[
+```math
 G_g\text{ is triangle-free},
 \qquad
 k:=|E(G_g)|\le d.
 \tag{GJ.8}
+```
 
 All upper blockers have been cleared. By the current non-exact branch assumptions, there is no `Q-DIAMETER` equality. The existing `q`-slack argument therefore permits replacing the shallow apex `x` by its reflected point `q` and then moving `q` a sufficiently small distance farther across the base, so that **all** old contacts incident to `x`, including the two base contacts, are opened.
 
@@ -175,9 +182,10 @@ No gate edge is lost: gate vertices are in the moving cluster and their relative
 
 Hence the final contact count is exactly
 
-\[
+```math
 \boxed{|C'|=|C|-d+k.}
 \tag{GJ.9}
+```
 
 The final source is unit-separated and has diameter at most `D`; global optimality forces diameter exactly `D`.
 
@@ -185,9 +193,9 @@ The final source is unit-separated and has diameter at most `D`; global optimali
 
 Equation (GJ.9) gives
 
-\[
+```math
 |C'|<|C|,
-$$
+```
 
 and the final contact graph is triangle-free by (GJ.8). This contradicts the primary contact-minimal normalization among triangle-free global minimizers.
 
@@ -195,9 +203,9 @@ and the final contact graph is triangle-free by (GJ.8). This contradicts the pri
 
 Now
 
-$$
+```math
 |C'|=|C|.
-$$
+```
 
 The final source is another contact-minimal triangle-free global minimizer.
 
@@ -220,13 +228,13 @@ Both cases in (GJ.8) are impossible. This proves (GJ.1).
 
 Because
 
-$$
+```math
 3\le d\le5,
-$$
+```
 
 (GJ.1) gives:
 
-$$
+```math
 \boxed{
 \begin{array}{c|c}
 \deg_C(x)&\text{non-exact, no-triangle gate count}\\
@@ -236,7 +244,7 @@ $$
 5&\ge6
 \end{array}}
 \tag{GJ.10}
-$$
+```
 
 So the previous universal `TRIPLE-GATE` endpoint was not terminal. A triangle-free inactive gate jam must have at least four edges, and higher shallow-apex degree forces still more.
 
@@ -246,12 +254,13 @@ So the previous universal `TRIPLE-GATE` endpoint was not terminal. A triangle-fr
 
 The current slow-scale reflection family has
 
-$$
+```math
 M_D>
 (c_*-o(1)){D^{1/4}\over\kappa_D},
 \qquad
 c_*=0.129220199818177\ldots .
 \tag{GJ.11}
+```
 
 After the ANCHORED, `Q-DIAMETER`, and CORE-GATE conversions, every module lies in one of two effective classes:
 
@@ -260,45 +269,47 @@ After the ANCHORED, `Q-DIAMETER`, and CORE-GATE conversions, every module lies i
 
 Hence one class occurs on at least
 
-\[
+```math
 \boxed{
 \left({c_*\over2}-o(1)\right){D^{1/4}\over\kappa_D}
 }
 \tag{GJ.12}
+```
 
 modules, with
 
-\[
+```math
 {c_*\over2}=0.0646100999090885\ldots .
-$$
+```
 
 If the inactive-jam class wins, one additional two-way split gives at least
 
-$$
+```math
 \boxed{
 \left({c_*\over4}-o(1)\right){D^{1/4}\over\kappa_D}
 }
 \tag{GJ.13}
+```
 
 pairwise module-disjoint gate triangles or four-plus-edge jams. Here
 
-\[
+```math
 {c_*\over4}=0.03230504995454425\ldots .
-$$
+```
 
 All jam vertices lie within `O(1)` near-unit gate distance of their own module's blocker cap before the bounded stopping threshold, whereas different module caps are separated by
 
-$$
+```math
 \Omega(\kappa_DD^{3/4}).
-$$
+```
 
 Thus the finite jams from distinct retained modules are vertex-disjoint.
 
 For subpolynomial divergent `kappa_D=D^{o(1)}`, every surviving population above has size
 
-$$
+```math
 D^{1/4-o(1)}.
-$$
+```
 
 ---
 

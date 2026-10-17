@@ -23,11 +23,11 @@
 
 The original quantifiers remain untouched:
 
-$$
+```math
 \exists n_0\ \forall n\ge n_0\ \forall A\quad
  A\text{ a global }D(n)\text{-minimizer}
  \Longrightarrow A\text{ contains a unit equilateral triangle}.
-$$
+```
 
 No construction in this run is asserted to be a global minimizer, and no asymptotic
 packing statement is promoted to a theorem about every minimizer.
@@ -36,18 +36,18 @@ packing statement is promoted to a theorem about every minimizer.
 
 The selected route was the canonical C-II full-core branch. The live endpoint was
 
-$$
+```math
 \liminf_{D\to\infty}\frac1D\sum_r
  (L_r+P_{{\rm exc},r}-2d_r)
  \ge \frac\pi2(2-\sqrt3),
-$$
+```
 
 with the exact Section-123 payment
 
-$$
+```math
 \sum_rP_{{\rm exc},r}\le 10(e_{BB}-k),
 \qquad k=d_H+s_Z.
-$$
+```
 
 The required chain was written before pursuing the bridge:
 
@@ -71,21 +71,21 @@ Under the canonical post-ZF normal form, in the full-core near-disk Type-II bran
 and with no loaded-loaded interior chord in any attachment polygon, the finite
 cellwise ledger gives
 
-$$
+```math
 \sum_r(L_r+P_{{\rm exc},r}-2a_r)
 \le 10(e_{BB}-k-d_{\rm tile})
        -4M_{\rm miss}-6C_\partial,
 \tag{2.1}
-$$
+```
 
 and hence
 
-$$
+```math
 \sum_r(L_r+P_{{\rm exc},r}-2d_r)
 \le 10(e_{BB}-k-d_{\rm tile})
  +2\sum_r(a_r-d_r)-4M_{\rm miss}-6C_\partial.
 \tag{2.2}
-$$
+```
 
 Here `L_r` is occurrence-counted, `a_r=|A_r|`, `d_r=diam(conv(A_r))`,
 `M_miss` is the missing-side defect, `C_partial` counts actual loaded contacts on
@@ -100,9 +100,9 @@ occur as an interior attachment-polygon chord. The local identity follows by
 partitioning augmented faces into missing-side, actual-contact-side, and ordinary
 faces, then using
 
-$$
+```math
 P_{{\rm exc},r}\le5(Q_{C,r}+Q_{I,r}).
-$$
+```
 
 The exact remaining quantity is not eliminated: no sign or sufficiently small upper
 bound for `Σ_r(a_r-d_r)` has been proved. The full proof and independent audit are in
@@ -119,11 +119,11 @@ the displayed promoted constraints from Sections 61–63, 80, 85, 122, and 123,
 including the repaired Type-II payment, while retaining positive outer detour. One
 near-disk scalar witness has
 
-$$
+```math
 \sum_r(L_r-2d_r)=\frac{163}{100}D-12,
 \qquad
 P_{\rm exc}=\frac54D,
-$$
+```
 
 at `D=10^6`, and satisfies the local zero-host, train-end, area–train, and
 Section-123 inequalities with rational margins. This proves only that the listed
@@ -132,11 +132,11 @@ contact graph, KKT stress, source, or global-minimality certificate.
 
 The exact identity audited in the same certificate is
 
-$$
+```math
 L_r+Q_r=4a_r-6-2s_r-2c_r,
 \qquad
 L_r+P_{{\rm exc},r}=4a_r-6-2s_r-2c_r+4f_r,
-$$
+```
 
 with repeated outer-walk and bridge occurrences counted. The certificate is in
 [`target_c_scalar_ledger_compatibility_2026-09-14.md`](target_c_scalar_ledger_compatibility_2026-09-14.md).
@@ -149,10 +149,10 @@ For a convex inactive chamber or exterior cap `C` with area `Ω(D²)`, perimeter
 `O(D)`, and a unit-separated actual source population `S` satisfying the canonical
 Oler-scale population lower bound, the convex hull `H=conv(S)` obeys
 
-$$
+```math
 \operatorname{area}(C\setminus H)=O(D),
 \qquad d_H(C,H)=O(\sqrt D),
-$$
+```
 
 and contains a disk of radius `Ω(D)`. This is a finite convex-geometric consequence
 of Oler's inequality and a cap-area estimate. It applies to the actual external
@@ -160,9 +160,9 @@ source points, not to a scaffold.
 
 Contact minimality also gives the exact covering statement
 
-$$
+```math
 C_{-1}\subseteq\bigcup_{s\in S}\overline B(s,1)
-$$
+```
 
 when all nonisolated source points lie outside the interior of `C`. The proof deletes
 one nonisolated point and inserts an uncovered point, preserving cardinality and
@@ -183,22 +183,22 @@ and hence has at most `2v-4` edges when it is a simple planar graph. That count 
 does not imply a diameter-decreasing motion. An exact finite regression is the unit
 square
 
-$$
+```math
 (0,0),(1,0),(1,1),(0,1),
-$$
+```
 
 with its four unit sides and one active diameter pair, the diagonal from `(0,0)` to
 `(1,1)`. If the four vertex velocities are `a,b,c,d`, side preservation forces
 
-$$
+```math
 b_x=a_x,\quad c_y=b_y,\quad d_x=c_x,\quad a_y=d_y,
-$$
+```
 
 and diagonal preservation adds
 
-$$
+```math
 (c_x-a_x)+(c_y-a_y)=0.
-$$
+```
 
 The solution space has dimension exactly three, the Euclidean rigid motions. Thus a
 triangle-free contact framework plus an active diameter constraint can already be
@@ -218,64 +218,64 @@ the surrounding synthesis remains unreviewed.
 There is an additional source-level consequence of the canonical full-core area and
 cell-tiling hypotheses. Define
 
-$$
+```math
  \mu_D:=\frac{e_{BB}+2s_C-3(d_H+s_Z)}{D}.
-$$
+```
 
 For every unbounded sequence in the canonical full-core branch,
 
-$$
+```math
 \boxed{\liminf_{D\to\infty}\mu_D\ge1.}
 \tag{2.5.1}
-$$
+```
 
 Let `P_r=conv(A_r)`, `u_r=area(P_r)`, and `d_r=diam(P_r)`. Canonical near-disk
 saturation and cell tiling give a fixed finite constant `C` with
 
-$$
+```math
  \sum_r u_r=\frac\pi4D^2-o(D^2),
  \qquad
  \sum_r\sqrt{u_r}\le CD.
 \tag{2.5.2}
-$$
+```
 
 Fix `eta>0`, and call a cell large when `u_r >= eta D^2`. The small cells
 have total area at most `C sqrt(eta) D^2`, so the large cells carry at least
 
-$$
+```math
  \left(\frac\pi4-C\sqrt\eta-o(1)\right)D^2.
-$$
+```
 
 The planar isodiametric inequality therefore gives
 
-$$
+```math
  \sum_{\mathrm{large}}d_r^2
  \ge\frac4\pi\sum_{\mathrm{large}}u_r
  \ge\left(1-\frac{4C}{\pi}\sqrt\eta-o(1)\right)D^2.
 \tag{2.5.3}
-$$
+```
 
 There are at most `C/sqrt(eta)` large cells, hence
 
-$$
+```math
  \sum_{\mathrm{large}}d_r
  \ge\left(\sum_{\mathrm{large}}d_r^2\right)^{1/2}.
-$$
+```
 
 The exact attachment currency ledger supplies `d_r <= delta_r + 2` and
 
-$$
+```math
  \sum_r\delta_r+R_I+s_B+3(d_H+s_Z)=6+e_{BB}+2s_C.
 \tag{2.5.4}
-$$
+```
 
 The residual terms are nonnegative, so `sum_r delta_r <= 6 + mu_D D`. Combining
 this with (2.5.3), then dividing by `D` and sending `D -> infinity`, yields
 
-$$
+```math
  \liminf\mu_D
  \ge\sqrt{1-\frac{4C}{\pi}\sqrt\eta}.
-$$
+```
 
 Finally let `eta -> 0`. The additive `2C/sqrt(eta) + 6` term disappears because
 `eta` was fixed before `D -> infinity`. This proves (2.5.1). The
@@ -303,10 +303,10 @@ independent audit are in the separately registered report and audit.
 
 In the Type-II near-disk branch the actual loaded force hull satisfies
 
-$$
+```math
 B(0,r_D)\subset F\subset B(0,R_D),
 \qquad r_D/D,R_D/D\to1/2.
-$$
+```
 
 If two loaded hull vertices at unit distance had an intervening hull vertex, the
 short hull arc between them would have at least two unit-separated side occurrences.
@@ -314,42 +314,42 @@ All side directions on that arc lie in a cone of width (o(1)), so projection ont
 the cone bisector would give a chord projection at least (2\cos(o(1))>1), a
 contradiction. Hence every loaded-loaded unit contact is a hull side, so
 
-$$
+```math
 c_B=0,
 \qquad e_{BB}=q-m_B.
-$$
+```
 
 The exact loaded-hull/pinned ledger then gives
 
-$$
+```math
 \mu_DD=q+m_B-k-2c_I-4,
 \qquad k=d_H+s_Z,
-$$
+```
 
 and canonical component deatomization gives (c_I=O(D^{2/3})). If
 
-$$
+```math
 u_D=(q-k)/D,\quad p_D=P_F/D,\quad x_D=f/D,
 \quad r_D^{(4)}=R_4/D^2,
-$$
+```
 
 the occurrence-counted outer ledger and train-boundary currency imply
 
-$$
+```math
 u_D\ge p_D/2+x_D/2,
 \qquad
 u_D\ge2\sqrt{r_D^{(4)}}-2x_D.
-$$
+```
 
 The (4/5,1/5) convex combination cancels (x_D), while
-$p_D\to\pi$ and (r_D^{(4)}\to\pi/(2\sqrt3)). Therefore
+$`p_D\to\pi`$ and (r_D^{(4)}\to\pi/(2\sqrt3)). Therefore
 
-$$
+```math
 \boxed{
 \liminf\mu_D\ge
 \frac{2\pi+2\sqrt{\pi/(2\sqrt3)}}5
 =1.6375621841815\ldots.}
-$$
+```
 
 This strengthens the prior floor but does not change the endpoint: the scalar
 witness in `target_c_scalar_ledger_compatibility_2026-09-14.md` still satisfies
@@ -370,8 +370,8 @@ The run advances the research ledger in four precise ways:
 2. the remaining displayed scalar package is certified compatible with positive
    outer detour, so scalar constant optimization cannot by itself close the route;
 3. full-core area saturation plus the exact attachment currency forces
-   $\liminf\mu_D\ge1$, and loaded-chord/train coupling strengthens this to
-   $\liminf\mu_D\ge1.6375621841815\ldots$ in the same Type-II branch;
+   $`\liminf\mu_D\ge1`$, and loaded-chord/train coupling strengthens this to
+   $`\liminf\mu_D\ge1.6375621841815\ldots`$ in the same Type-II branch;
 4. the exact scalar regression remains compatible with the strengthened floor and
    positive detour, so scalar optimization is exhausted for the displayed package;
 5. the macroscopic-cap hull/cover facts are source-specific but are shown compatible

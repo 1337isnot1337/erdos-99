@@ -52,9 +52,9 @@ minimal global source A with D>=9, connected positive-contact core V, full actua
 diameter graph H, and d_H=|V(H)|-|H|. All source labels, including contact
 isolates, remain. Put
 
-$$
+```math
  L=\sqrt{D^2-1},\qquad \gamma=D-L.
-$$
+```
 
 Supply disjoint nonempty proper core owners G_1,...,G_r, leaving a core label
 fixed. Supply nonzero d_i=delta_i v_i with unit v_i in one oriented interval of
@@ -67,9 +67,9 @@ and bounded-face isolates have the compatible rigid face assignment. Other
 isolates follow the fixed canonical long-pair anchor map, or remain fixed if
 unanchored. Let
 
-$$
+```math
  s=\operatorname{diam}\{0,d_1,\ldots,d_r\}.
-$$
+```
 
 Each original parent singleton is assumed weakly upper-safe on every actual H
 pair. This is a supplied geometric hypothesis, not inferred from stress gain.
@@ -87,9 +87,10 @@ Canonical inputs are:
   partners, the number of loaded endpoints with selected oriented normal in
   a window of half-width theta<pi/2 is at most
 
-  $$
+  ```math
   F_D(\theta)=1+{D\sin\theta+2L_D\over\cos\theta}.
-  $$
+  
+  ```
 
 - `C-FS-DIAMETER-MIDPOINT-D2-3`, Audit.206: one common center has all actual
   diameter midpoints within L_D=7D^(2/3). This is full-source geometry.
@@ -123,24 +124,24 @@ partner choices, so the endpoint count used by AB and IM is uniform.
 
 Fix M>1 with Ms<min(gamma,sqrt(2)-1), and put
 
-$$
+```math
  \theta_M={w\over2}+\arcsin{Ms\over2D}<\pi/2.
-$$
+```
 
 After discarding at most
 
-$$
+```math
  2d_H+4\lfloor F_D(\theta_M)\rfloor                 \tag{AB.1}
-$$
+```
 
 supplied owners, every full-source endpoint with amplitudes
 `0<=x_i<=M` and displacement `x_i d_i` passes every upper bound. Old contact
 lower bounds pass whenever each x_i belongs to `{0} union [1,M]`. A cut contact
 of owner i has exact squared length
 
-$$
+```math
  1+x_i(x_i-1)\delta_i^2.                           \tag{AB.2}
-$$
+```
 
 Thus a strict lower-feasible endpoint in this domain is a contact-loss
 contradiction if some x_i>1. If all nonzero amplitudes are one, the strict
@@ -154,10 +155,10 @@ If an actual H pair can grow at amplified singleton i, orient its vector r
 from the moving endpoint to the fixed endpoint. Original singleton safety and
 amplified failure say
 
-$$
+```math
  r\cdot v_i\le-\delta_i/2,
  \qquad r\cdot v_i>-M\delta_i/2.
-$$
+```
 
 Since |r|=D and delta_i<=s, the projective direction of this pair is within
 `arcsin(Ms/(2D))` of Jv_i, hence in the projective window centered at Jv with
@@ -175,9 +176,9 @@ For an old H pair joining two distinct surviving owners, let g_i and g_j be
 the singleton squared changes at amplitude M. Both are <=0, and the joint
 change is
 
-$$
+```math
  g_i+g_j-2M^2d_i\cdot d_j<0.
-$$
+```
 
 Pairs internal to an owner are unchanged; one moving endpoint has the checked
 singleton state. Thus every vertex of the amplitude cube `{0,M}^r` is safe for
@@ -215,23 +216,23 @@ interpolation from zero.
 
 Suppose there is rho with
 
-$$
+```math
  \delta_{\max}+4\sin(w/4)<\rho<\min\{\gamma,\sqrt2-1\}.
                                                                \tag{CT.1}
-$$
+```
 
 Let b=rho v and
 
-$$
+```math
  \theta_b=w/2+\arcsin(\rho/(2D))<\pi/2.
-$$
+```
 
 Discard the E owners as above and every owner whose singleton translation by
 b grows any actual H pair. At most
 
-$$
+```math
  2d_H+4\lfloor F_D(\theta_b)\rfloor                 \tag{CT.2}
-$$
+```
 
 parents are discarded. Then every binary common-b choice of the survivors:
 
@@ -268,16 +269,16 @@ pair remains strictly shorter than D.
 
 For a crossing unit vector r of owner i,
 
-$$
+```math
  r\cdot v\ge r\cdot v_i-|v-v_i|
  \ge-\delta_i/2-2\sin(w/4).
-$$
+```
 
 Consequently
 
-$$
+```math
  |r+b|^2-1\ge\rho\bigl(\rho-\delta_i-4\sin(w/4)\bigr)>0. \tag{CT.3}
-$$
+```
 
 No old contact joins distinct parents. Internal contacts move rigidly and all
 fixed contacts stay unit. Each selected owner has an old contact to the fixed
@@ -287,10 +288,10 @@ Consider an old noncontact joining labels of two different surviving owners,
 or their assigned isolates. Orient r from the second to the first and put
 c=|r|^2-1>0. Its local squared lower slacks at choices 00,10,01,11 are
 
-$$
+```math
  c,\quad c+2r\cdot b+\rho^2,\quad
  c-2r\cdot b+\rho^2,\quad c.                        \tag{CT.4}
-$$
+```
 
 The two singleton slacks sum to `2c+2rho^2>0`, so at most one is <=0.
 If 10 is bad the clause is i=>j; if 01 is bad it is j=>i. Choice 11 can never
@@ -331,10 +332,10 @@ No canonical phase theorem is claimed to extract such a family.
 Retain all definitions and labels of the preceding report's family. For
 integer H, put t=1/(100H^2),
 
-$$
+```math
  \delta_A={12t\over1+9t^2},\qquad
  \delta_B={4t\over1+t^2},\qquad D^2=H^2+25.
-$$
+```
 
 There are H+79 source labels, eight three-rung actual O–O trains, and two
 repeated owners A,B. Its binary formula realizes `A=>B`, `B=>A`, and
@@ -349,9 +350,9 @@ Move every A-owned label by delta_A upwards and every B-owned label by
 `1+2delta_B^2`; all other old contacts remain unit. Every old noncontact is
 strictly longer than one. The exact new squared diameter is
 
-$$
+```math
  D^2-4H\delta_B+4\delta_B^2<D^2.                  \tag{AR.1}
-$$
+```
 
 The unique longest endpoint pair is the old right diameter pair. No isolate
 or source label is dropped. This repairs the repeated-owner sink without
@@ -363,17 +364,17 @@ Translate every A- and B-owned label upwards by the common displacement
 b=(0,2delta_A), fixing all zero labels. Exactly 24 old rungs open. Their
 squared lengths are
 
-$$
+```math
  1+2\delta_A^2\quad(A),\qquad
  1+2\delta_A(2\delta_A-\delta_B)\quad(B).
-$$
+```
 
 Every other old contact remains unit. Every old noncontact is strictly longer
 than one, and the exact new squared diameter is
 
-$$
+```math
  D^2-4H\delta_A+4\delta_A^2<D^2.                  \tag{CR.1}
-$$
+```
 
 Both old diameter pairs attain this new maximum. The cloud 2delta_A is below
 gamma, certified by `4D delta_A<1`, which implies
@@ -417,9 +418,9 @@ coordinates `(plus-or-minus (5-a_i),delta_i/2)`. Its squared distance to the
 top chain label is `(5-a_i)^2+(H-delta_i/2)^2`. For H>=30, a_i>0.9, so the
 gap from either stated new maximum to this distance is at least
 
-$$
+```math
  25-4.1^2-4H\delta_A-\delta_A^2/4>8.
-$$
+```
 
 The bottom moving labels have |x|=5. In AR, delta_A>2delta_B and both are <H,
 so the right label uniquely gives AR.1. In CR their heights equal 2delta_A,
@@ -481,39 +482,39 @@ Use the canonical positive contact stress alpha and nonnegative actual-diameter
 stress beta. Every crossing contact vector, oriented from G_i to its
 complement, has one of the two forms
 
-$$
+```math
  r=-{\delta_i\over2}v_i
        \mathbin{\pm}\sqrt{1-\delta_i^2/4}\,Jv_i.       \tag{IM.1}
-$$
+```
 
 Let A_i^+,A_i^- be the sums of alpha in these two classes, A_i=A_i^++A_i^->0,
 and define the weighted orientation imbalance
 
-$$
+```math
  \sigma_i={|A_i^+-A_i^-|\over A_i}\in[0,1].
-$$
+```
 
 For every such owner there is a crossing actual diameter with positive beta
 and oriented normal n_i at its endpoint in G_i such that
 
-$$
+```math
  0<-n_i\cdot v_i
  \le {\delta_i\over
           2\sqrt{\delta_i^2/4+(1-\delta_i^2/4)\sigma_i^2}}. \tag{IM.2}
-$$
+```
 
 Consequently, for any sigma_0>0 with
 
-$$
+```math
  z_0={s\over2\sigma_0\sqrt{1-s^2/4}}<1,
  \qquad \theta_0=w/2+\arcsin z_0<\pi/2,
-$$
+```
 
 the number of supplied owners with sigma_i>=sigma_0 is at most
 
-$$
+```math
  \boxed{2\lfloor F_D(\theta_0)\rfloor.}              \tag{IM.3}
-$$
+```
 
 In particular, singleton-upper-safe owners whose crossing contact forces are
 all parallel with one orientation have sigma_i=1 and number at most this bound
@@ -527,11 +528,11 @@ the two possible transverse coordinates of a unit vector give IM.1.
 Summing KKT equilibrium over G_i cancels every internal contact and diameter
 force. The full crossing-contact resultant is therefore
 
-$$
+```math
  F_i=-{A_i\delta_i\over2}v_i
        +(A_i^+-A_i^-)\sqrt{1-\delta_i^2/4}\,Jv_i
      =\sum_{h\in\delta_H(G_i)}\beta_h r_h.
-$$
+```
 
 Put `B_i=sum beta_h` on these crossing actual diameters and
 `c_i=sqrt(delta_i^2/4+(1-delta_i^2/4)sigma_i^2)`. The resultant has norm
@@ -541,9 +542,9 @@ inequality gives `A_i c_i<=D B_i`. Its negative v_i projection is
 `r_h dot v_i<=-delta_i/2<0` for every crossing actual H pair, even if beta_h=0.
 For the positive-beta pairs the weighted mean of `-n_h dot v_i` is
 
-$$
+```math
  {A_i\delta_i\over2D B_i}\le{\delta_i\over2c_i}.
-$$
+```
 
 At least one positive-beta pair is no larger than this mean, proving IM.2.
 For sigma_i>=sigma_0 its right side is <=z_0. Its projective normal is thus
@@ -562,9 +563,9 @@ full-source geometry used to bound the actual diameter normals. QED.
 If s<gamma and w=O(D^(-1/3)), take sigma_0=D^(-2/3). Since gamma<=1/D,
 `z_0=O(D^(-1/3))`, `theta_0=O(D^(-1/3))`, and L_D=7D^(2/3), IM.3 gives
 
-$$
+```math
  \#\{i:\sigma_i\ge D^{-2/3}\}=O(D^{2/3}).           \tag{IM.4}
-$$
+```
 
 Thus all but O(D^(2/3)) owners in any supplied linear-size family have both
 cut orientations present and their positive contact stress masses equal to
@@ -586,26 +587,26 @@ with the required stress balance, or through a different finite mechanism.
 
 Define the dimensionless transverse-to-longitudinal ratio
 
-$$
+```math
  R_i={\sigma_i\sqrt{1-\delta_i^2/4}\over\delta_i}.
-$$
+```
 
 IM.2 is exactly `-n_i dot v_i<=1/sqrt(1+4R_i^2)`. For every T>0 with
 `w/2+arctan(1/(2T))<pi/2`, the same distinct-endpoint proof yields
 
-$$
+```math
  \#\{i:R_i\ge T\}
  \le2\left\lfloor F_D\left(w/2+\arctan{1\over2T}\right)\right\rfloor.
                                                                \tag{IM.5}
-$$
+```
 
 For exactly parallel translation directions (w=0), trigonometric substitution
 gives the particularly simple finite inequality
 
-$$
+```math
  \boxed{\#\{i:R_i\ge T\}
  \le2+{D\over T}+4L_D\sqrt{1+{1\over4T^2}}.}        \tag{IM.6}
-$$
+```
 
 For w=O(1/D), fixed T>=1, and L_D=7D^(2/3), this is
 `# {R_i>=T}<=D/T+O(D^(2/3))`. In a family with r>=cD, taking T=2/c
@@ -634,10 +635,10 @@ Let eps=200/10001, eta=9999/10001, so eps^2+eta^2=1, and
 `d=2eps(eps,eta)`. All four old contacts remain exactly unit. The two old
 diameter squared changes are respectively
 
-$$
+```math
  -4\epsilon\eta=-{7999200\over100020001},\qquad
  +4\epsilon\eta=+{7999200\over100020001}.
-$$
+```
 
 Contact and diameter weights are all 1/2; equilibrium is positive and its
 PSD stress is `Omega=(1,-1,1,-1)(1,-1,1,-1)^T/2`, with affine kernel and rank

@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_p1_anchored_endpoint_cut_2026-09-09.md) · source SHA-256 `1876ed7cb3298528f61df2b9985e590dfae32200b7bd6b7d8a60edfca0320193`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-F8C842D457EB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 — P1 rectangle diagonals are KKT-frozen leaves and every endpoint cut is side-anchored
 
@@ -17,19 +19,19 @@
 
 PR gives the P1 rectangle
 
-$$
+```math
 a,b,c,d
-$$
+```
 
 in cyclic shell order, with
 
-$$
+```math
 |ab|=|cd|=1,
 \qquad
 |ac|=|bd|=D,
 \qquad
 |ad|=|bc|=\sqrt{D^2-1}.
-$$
+```
 
 The two short rectangle sides `ad,bc` separately complete the diameter tree `H` to maximal convex thrackles.
 
@@ -37,9 +39,10 @@ This report proves two stronger facts.
 
 1. Each rectangle diagonal `ac,bd` is incident to a full-`H` leaf. Hence its beta coefficient is positive throughout the entire KKT interval.
 2. Every zeroed KKT endpoint edge therefore separates the rectangle vertices as
-   $$
+   ```math
    \boxed{\{a,c\}\mid\{b,d\},}
-   $$
+   
+   ```
    so the two parallel unit hull sides `ab,cd` are permanently two of the four TC transition contacts.
 
 This converts every P1 KKT endpoint into a four-force wrench system anchored on the same exact rectangle.
@@ -50,65 +53,65 @@ This converts every P1 KKT endpoint into a four-force wrench system anchored on 
 
 Assume for contradiction that
 
-$$
+```math
 \deg_H(a)\ge2,
 \qquad
 \deg_H(c)\ge2.
 \tag{1.1}
-$$
+```
 
 Choose diameter edges
 
-$$
+```math
 ax\in H,
 \qquad
 cy\in H
-$$
+```
 with
 
-$$
+```math
 ax\ne ac,
 \qquad
 cy\ne ac.
-$$
+```
 
 Because `ab` is a unit contact side and `ad` is short, `x` is neither `b` nor `d`; similarly `y` is neither `b` nor `d` in the degenerate ways that would identify one of the rectangle sides.
 
 PR proves that
 
-$$
+```math
 H+bc
-$$
+```
 is a convex thrackle. The edge `ax` is vertex-disjoint from `bc`, so it must cross `bc` properly. In the cyclic order
 
-$$
+```math
 a,b,\ldots,c,d,\ldots,
-$$
+```
 this forces
 
-$$
+```math
 \boxed{x\in(b,c),}
 \tag{1.2}
-$$
+```
 where `(b,c)` denotes the open shell arc from `b` to `c`.
 
 Likewise PR proves that
 
-$$
+```math
 H+ad
-$$
+```
 is a convex thrackle. The edge `cy` is vertex-disjoint from `ad`, so it must cross `ad`. Therefore
 
-$$
+```math
 \boxed{y\in(d,a).}
 \tag{1.3}
-$$
+```
 
 Now the four endpoints of `ax` and `cy` occur around the convex boundary in the order
 
-$$
+```math
 a,\ldots,x,\ldots,c,\ldots,y.
-$$
+```
 
 The chords `ax` and `cy` do **not** have alternating endpoints. They are vertex-disjoint, so they do not meet at an endpoint either. Hence they do not intersect.
 
@@ -116,27 +119,28 @@ But both are diameter edges of `H`, and `H` is a convex geometric thrackle. Any 
 
 Thus
 
-$$
+```math
 \boxed{
 \min\{\deg_H(a),\deg_H(c)\}=1.
 }
 \tag{AE.1}
-$$
+```
 
 By the same argument after the half-turn relabeling
 
-$$
+```math
 a\leftrightarrow b,
 \qquad
 c\leftrightarrow d,
-$$
+```
 we obtain
 
-$$
+```math
 \boxed{
 \min\{\deg_H(b),\deg_H(d)\}=1.
 }
 \tag{AE.2}
+```
 
 So both rectangle diagonals `ac` and `bd` are full-`H` leaf edges.
 
@@ -148,7 +152,7 @@ LF.1 says every diameter edge incident to a full-`H` leaf occurs with positive c
 
 Applying LF to AE.1-AE.2 gives
 
-\[
+```math
 \boxed{
 \beta_{ac}(s)>0,
 \qquad
@@ -156,6 +160,7 @@ Applying LF to AE.1-AE.2 gives
 \quad\text{for all }s\in\mathcal S.
 }
 \tag{AE.3}
+```
 
 In particular neither rectangle diagonal can define either endpoint facet of the one-dimensional KKT polytope.
 
@@ -167,58 +172,59 @@ This is stronger than PR's common-path localization: the two most geometrically 
 
 Let
 
-\[
+```math
 e\in E(H)
-$$
+```
 be any diameter edge with
 
-$$
+```math
 \beta_e(s)=0
-$$
+```
 at a KKT endpoint stress `s`.
 
 PR says `e` lies on the common twin-cycle path
 
-$$
+```math
 J=P_H(a,d)\cap P_H(b,c).
-$$
+```
 
 Therefore deleting `e` separates
 
-$$
+```math
 a\text{ from }d
-$$
+```
 and
-$$
+```math
 b\text{ from }c.
 \tag{3.1}
-$$
+```
 
 AE.3 gives
 
-$$
+```math
 e\ne ac,
 \qquad
 e\ne bd.
-$$
+```
 
 Because `H` is a tree, `e` is the only full-H edge crossing the component cut of `H-e`. Since `ac` and `bd` remain edges distinct from `e`, their endpoints must lie in common components:
 
-$$
+```math
 a\sim c,
 \qquad
 b\sim d
 \quad\text{in }H-e.
 \tag{3.2}
-$$
+```
 
 Together with (3.1), the two components therefore separate the rectangle vertices exactly as
 
-$$
+```math
 \boxed{
 \{a,c\}\mid\{b,d\}.
 }
 \tag{AE.4}
+```
 
 No other pairing is possible.
 
@@ -235,14 +241,14 @@ By AE.4:
 
 Hence the unit side
 
-\[
+```math
 ab
-$$
+```
 always crosses the `A|B` cut, and so does the opposite parallel unit side
 
-$$
+```math
 cd.
-$$
+```
 
 TC says each component of a zeroed nonleaf tree-edge cut occupies exactly two cyclic intervals. Thus there are exactly four cycle-contact transition sides.
 
@@ -253,10 +259,11 @@ The other two transitions consist of
 
 Therefore every P1 endpoint cut has the exact cyclic transition pattern
 
-$$
+```math
 \boxed{
 ab,\ f,\ cd,\ h.}
 \tag{AE.5}
+```
 
 The first and third transition sides are the fixed parallel rectangle sides; only `f,h` move as the zeroed core edge varies along `J`.
 
@@ -266,34 +273,35 @@ The first and third transition sides are the fixed parallel rectangle sides; onl
 
 Orient all shell sides counterclockwise and put
 
-\[
+```math
 t:=b-a,
 \qquad
 t_{cd}=d-c=-t.
-$$
+```
 
 Let
 
-$$
+```math
 v_r:=\alpha_r t_r
-$$
+```
 be the positive contact-force vector attached to side `r` in the TC convention.
 
 For the component coloring in Section 4, the transition directions alternate `A->B,B->A,A->B,B->A`. The TC cut resultant is
 
-$$
+```math
 v_{ab}-v_f+v_{cd}-v_h=0.
-$$
+```
 
 Using `t_cd=-t`,
 
-$$
+```math
 \boxed{
 (\alpha_{ab}-\alpha_{cd})t
 =\alpha_f t_f+\alpha_h t_h.
 }
 \tag{AE.6
 }
+```
 
 This is the two-dimensional force part of the anchored WM wrench dependence.
 
@@ -301,11 +309,12 @@ Because P1 has a **unique** parallel pair of hull sides, `f` and `h` are not par
 
 Hence every P1 KKT endpoint stress satisfies the strict asymmetry
 
-\[
+```math
 \boxed{
 \alpha_{ab}\ne\alpha_{cd}.
 }
 \tag{AE.7}
+```
 
 The unique parallel primal side pair can never carry equal contact stress at a KKT endpoint.
 
@@ -315,14 +324,14 @@ The unique parallel primal side pair can never carry equal contact stress at a K
 
 WM adds the scalar moment balance. Write the oriented line-wrench vector of a shell side `r` as
 
-\[
+```math
 \ell_r=(t_{r,x},t_{r,y},p_r\times t_r),
-$$
+```
 where `p_r` is either endpoint of its supporting line.
 
 Then the complete endpoint relation is
 
-$$
+```math
 \boxed{
 \alpha_{ab}\ell_{ab}
 -\alpha_f\ell_f
@@ -332,14 +341,15 @@ $$
 }
 \tag{AE.8
 }
+```
 
 IB proves these four line wrenches have rank exactly three, so their coefficient ratio is unique up to scale.
 
 There is a useful mechanical interpretation. The nonparallel forces on `f,h` have a resultant whose line of action passes through the intersection of the two supporting lines of `f,h`. Equation AE.6 says this resultant is parallel to the rectangle sides. The two forces on `ab,cd` have the opposite horizontal resultant. Thus AE.8 fixes the ratio
 
-\[
+```math
 \alpha_{ab}:\alpha_{cd}
-$$
+```
 from the height of that `f/h` line intersection relative to the two parallel rectangle support lines.
 
 This gives a direct projective coordinate for comparing the two endpoint stresses along the common path `J`.
@@ -352,13 +362,13 @@ The one-dimensional KKT polytope has two distinct coordinate facets. PR places b
 
 Thus the two endpoint stresses produce
 
-$$
+```math
 (ab,f_-,cd,h_-)
-$$
+```
 and
-$$
+```math
 (ab,f_+,cd,h_+)
-$$
+```
 with the same fixed parallel pair and two possibly different moving side pairs.
 
 At each endpoint:
@@ -404,11 +414,11 @@ If the two KKT-polytope endpoints correspond to opposite ends of the allowed coo
 
 A second target is to insert AE.6-AE.8 directly into WT. The two frozen rectangle diameter edges `ac,bd` have four cyclic resistance arcs in which the first and third arcs are the single resistances
 
-$$
+```math
 r_{ab}=1/\alpha_{ab},
 \qquad
 r_{cd}=1/\alpha_{cd}.
-$$
+```
 
 Thus their transfer is an explicit expression involving the anchored unequal pair and the two long-arc resistance sums.
 

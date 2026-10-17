@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_s1_circular_path_exclusion_2026-09-09.md) · source SHA-256 `330f2f2aff96d0027c0d378261742118dd3e6f0fa679f6a313e93f84d644dae7`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-E38D9638857A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=1` S1: correct ordinary-gap saturation and two-defect shell normal form
 
@@ -36,9 +38,9 @@ The ordinary-gap information still gives a sharp exact theorem.
 
 Let `F` be a cyclic S1 survivor. Write the `q-1` actual diameter edges in the linear projective order obtained by deleting the unique short antipodal state `g` from AC's maximal antipodal graph:
 
-$$
+```math
 e_0,e_1,\ldots,e_{q-2}.
-$$
+```
 
 Then, for all sufficiently large `D`:
 
@@ -56,32 +58,34 @@ Thus S1 is not yet excluded, but it is an exact **two-shell-side defect** of the
 
 AC gives
 
-$$
+```math
 A(F)=H\cup\{g\},
-$$
+```
 
 where `A(F)` is the complete vertex-vertex antipodal graph, `H` is the connected spanning diameter tree with
 
-$$
+```math
 |E(H)|=q-1,
-$$
+```
 
 and `g` is the unique short antipodal edge.
 
 S1 has no parallel shell sides. In one projective half-boundary of `K=F-F`, deleting the unique short K-vertex state leaves all actual diameter states in one linear block
 
-$$
+```math
 e_0,e_1,\ldots,e_{q-2}.
 \tag{1.1}
+```
 
 Every K-edge between two consecutive states in this block has length one and both endpoints lie on the radius-`D` circle. Hence
 
-\[
+```math
 \boxed{
 \angle_{proj}(e_j,e_{j+1})
 =\delta:=2\arcsin\frac1{2D}.
 }
 \tag{1.2}
+```
 
 ---
 
@@ -89,15 +93,16 @@ Every K-edge between two consecutive states in this block has length one and bot
 
 DG proves that two vertex-disjoint actual diameter edges satisfy
 
-\[
+```math
 \angle_{proj}(e,f)\ge2\delta.
-$$
+```
 
 Equation (1.2) is smaller. Therefore
 
-$$
+```math
 \boxed{e_j\cap e_{j+1}\ne\varnothing}
 \tag{2.1}
+```
 
 for every `0<=j<=q-3`.
 
@@ -105,9 +110,10 @@ The two edges are distinct in a simple graph and therefore share exactly one end
 
 There are exactly
 
-\[
+```math
 q-2
 \tag{2.2}
+```
 
 such ordinary transitions.
 
@@ -119,35 +125,38 @@ This is the point at which the withdrawn proof incorrectly called the list an Eu
 
 For a terminal `v` of diameter degree `d_v`, its `d_v` incident edges can account for at most
 
-\[
+```math
 d_v-1
 \tag{3.1}
+```
 
 consecutive pairs in a linear list of distinct edges. Equality holds if and only if all `d_v` incident edges occur as one contiguous block in that list.
 
 Because `H` is spanning, every terminal has `d_v>=1`. Since `H` is a tree on `q` vertices,
 
-\[
+```math
 \sum_v d_v=2(q-1).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \sum_v(d_v-1)=2(q-1)-q=q-2.
 }
 \tag{3.2}
+```
 
 Every one of the `q-2` consecutive pairs in (1.1) has a unique shared terminal by Section 2. Thus the total number of realized shared-terminal adjacencies is exactly `q-2`, equal to the sum of all upper capacities (3.2).
 
 Consequently equality holds termwise in the capacity accounting: every terminal realizes all `d_v-1` possible internal adjacencies. Hence
 
-\[
+```math
 \boxed{
 \text{the diameter edges incident to every terminal form one contiguous projective run.}
 }
 \tag{3.3}
+```
 
 This permits arbitrary star runs. It is exactly the correction missing from the false path argument.
 
@@ -157,23 +166,24 @@ This permits arbitrary star runs. It is exactly the correction missing from the 
 
 Take two consecutive actual diameter states that share terminal `z`:
 
-\[
+```math
 zy,
 \qquad
 zw.
-$$
+```
 
 The corresponding two difference-body vertices are oriented diameter vectors with one support endpoint fixed at `z`. The K-boundary step between them changes only the opposite support vertex and is one of the strict unit Minkowski edges of S1. Thus that step is, up to sign,
 
-$$
+```math
 y-w.
-$$
+```
 
 Its K-edge length is one, so
 
-$$
+```math
 \boxed{|y-w|=1.}
 \tag{4.1}
+```
 
 Because this support change is one step in the strict merge of the side directions of `F` and `-F`, `yw` is an actual shell side of `F`.
 
@@ -191,23 +201,26 @@ The `q-2` H-H edges of that half-boundary are the certified sides from Section 4
 
 AC's endpoint-switch theorem writes the local antipodal states, after orientation, as
 
-\[
+```math
 (u_-,v),\quad (u,v)=g,\quad (u,v_+),
 \tag{5.1}
+```
 
 so the two defect-adjacent shell sides are
 
-\[
+```math
 u_-u,
 \qquad
 vv_+.
 \tag{5.2}
+```
 
 Every other shell side `ab` has a unique opposite diameter center `z` satisfying
 
-\[
+```math
 \boxed{|z-a|=|z-b|=D.}
 \tag{5.3}
+```
 
 Thus the S1 shell is a local side/antipode equality polygon at all but two shell sides.
 
@@ -223,17 +236,17 @@ Section 3 adds a transverse ordering property absent from the earlier AC stateme
 
 A run
 
-\[
+```math
 zy_0,zy_1,\ldots,zy_r
-$$
+```
 
 forces
 
-$$
+```math
 |y_j-y_{j+1}|=1,
 \qquad
 |z-y_j|=D.
-$$
+```
 
 Hence its opposite shell vertices lie on one radius-`D` circle about `z` with exact angular step `delta`.
 
@@ -283,9 +296,9 @@ This report does not claim #141 is entirely false. It identifies the exact unsup
 
 Take a three-edge star with direction order
 
-$$
+```math
 za,zb,zc.
-$$
+```
 
 Both consecutive pairs share endpoint `z`, and all three edges form one contiguous star run. But there is no graph trail traversing the three edges in that order: after traversing `za` and `zb`, one is at `b`, not at `z` to traverse `zc`.
 
@@ -297,7 +310,7 @@ This example satisfies the combinatorial premise of the rejected inference and i
 
 What is proved:
 
-$$
+```math
 \boxed{
 \begin{array}{l}
 \text{all S1 ordinary diameter gaps equal }\delta;\\
@@ -305,14 +318,14 @@ $$
 \text{every H-star is one contiguous direction run;}\\
 \text{all but two shell sides have an exact common diameter center.}
 \end{array}}
-$$
+```
 
 What is not proved:
 
-$$
+```math
 \boxed{
 H\text{ is a path, the shell is concyclic, or S1 is excluded.}
 }
-$$
+```
 
 The shortest next theorem is to classify the allowed sequence of star runs in the opened odd-cycle caterpillar. A valid proof must either show star runs collapse for a geometric reason or propagate their exact circular-arc/trapezoid geometry through the two defect sides.

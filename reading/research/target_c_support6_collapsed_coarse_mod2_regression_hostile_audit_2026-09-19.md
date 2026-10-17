@@ -16,11 +16,11 @@
 
 The verifier deliberately over-relaxes each coarse rotation cell. A train-pair crossing variable is forced to zero only when neither strict crossing window
 
-$$
+```math
 1<x_e-x_f<2,
 \qquad
 1<x_f-x_e<2
-$$
+```
 
 intersects the base rational angle cell. If either window intersects, the crossing bit remains completely free.
 

@@ -31,20 +31,20 @@ For a contact-minimal, then diameter-pair-minimal, triangle-free global
 minimizer, the canonical C-II full-core route supplies occurrence-counted local
 outer walks and the two inequalities
 
-$$
+```math
  \liminf_{D\to\infty}{1\over D}
  \sum_r\left(L_r+P_{{\rm exc},r}-2d_r\right)
  \ge {\pi\over2}(2-\sqrt3),
  \tag{1}
-$$
+```
 
 and
 
-$$
+```math
  \sum_rP_{{\rm exc},r}\le 10(e_{BB}-k),
  \qquad k=d_H+s_Z.
  \tag{2}
-$$
+```
 
 The intended chain was
 
@@ -57,7 +57,7 @@ full-core carrier geometry
 
 The canonical Section-118 carrier estimate, together with the proof-only
 sparse/directional return split, eliminates only the safe endpoint-slack window
-$\sigma\le 0.0088$. The remaining question attacked here was whether a
+$`\sigma\le 0.0088`$. The remaining question attacked here was whether a
 quadratic rhombus mass could evade that endpoint argument by splitting into many
 phase-separated grains. The answer is no, subject to the explicitly listed
 proof-only carrier hypotheses below.
@@ -69,67 +69,70 @@ noncanonical.
 
 ### Statement
 
-Let $D\to\infty$ and let $\mathcal K_D$ be the retained crossing graph of
-a proof-only Section-118 full-core carrier. Let $n_i$ and $e_i$ denote the
+Let $`D\to\infty`$ and let $`\mathcal K_D`$ be the retained crossing graph of
+a proof-only Section-118 full-core carrier. Let $`n_i`$ and $`e_i`$ denote the
 number of train vertices and crossing edges in its surviving connected
 components. Assume the following normalized hypotheses.
 
 1. The carrier has at least
-   $$
+   ```math
    (0.4703752-o(1))D^2
-   $$
+   
+   ```
    strict-rhombus crossing edges before pruning.
 
 2. The total number of complete trains is at most
-   $$
+   ```math
    (1.8488+o(1))D.
-   $$
+   
+   ```
 
 3. The total positive reduced-phase defect is at most
-   $5.317D+o(D)$. After deleting crossings with defect greater than
-   $K/D$, where $K=10000$, and repeatedly deleting vertices of current
-   degree less than $\eta D$, where $\eta=10^{-5}$, the surviving graph
-   retains at least $(0.4697-o(1))D^2$ edges and every surviving component
-   has minimum degree at least $\eta D$.
+   $`5.317D+o(D)`$. After deleting crossings with defect greater than
+   $`K/D`$, where $`K=10000`$, and repeatedly deleting vertices of current
+   degree less than $`\eta D`$, where $`\eta=10^{-5}`$, the surviving graph
+   retains at least $`(0.4697-o(1))D^2`$ edges and every surviving component
+   has minimum degree at least $`\eta D`$.
 
 4. The proof-only phase lift has at most three projective phase labels. Within
    each surviving connected component and each label, the phase width tends to
    zero, and the Section-118 bad-train estimate bounds the trains in one such
-   phase window by $(0.1163+o(1))D$.
+   phase window by $`(0.1163+o(1))D`$.
 
 5. The two endpoint occurrences of each retained train are charged with their
    physical boundary multiplicity, and the total principal-route endpoint
-   capacity is at most $(1.8693+o(1))D$.
+   capacity is at most $`(1.8693+o(1))D`$.
 
 6. The retained crossing graph is simple and triangle-free.
 
-Then no such sequence $\mathcal K_D$ exists. More precisely, if
+Then no such sequence $`\mathcal K_D`$ exists. More precisely, if
 
-$$
+```math
  x_i={n_i\over D},\qquad
  K_0=3(0.1163)=0.3489,qquad
  S=\sum_i\max\{x_i-K_0,0\},
- $$
+ 
+```
 
 the endpoint accounting forces
 
-$$
+```math
  2S\le 1.8693+o(1),
  \tag{3}
-$$
+```
 
 whereas Mantel's theorem and the retained edge mass force
 
-$$
+```math
  S>0.9499,
  \tag{4}
-$$
+```
 
-so the two bounds differ by a strict margin greater than $0.0305-o(1)$.
+so the two bounds differ by a strict margin greater than $`0.0305-o(1)`$.
 
 The statement is an asymptotic proof-only exclusion. It is not a claim that the
 canonical theorem state has already promoted hypotheses 1–5, and it supplies no
-explicit numerical threshold for the original $n$-quantifier.
+explicit numerical threshold for the original $`n`$-quantifier.
 
 ### Scope and normalization
 
@@ -144,59 +147,59 @@ with exactly these hypotheses.
 
 ### Proof
 
-Write $T_D$ for the pre-pruning number of trains and $E_D$ for the number
-of crossing edges. A crossing with positive defect greater than $K/D$
-accounts for more than $K/D$ of the defect budget. Hence the number of such
+Write $`T_D`$ for the pre-pruning number of trains and $`E_D`$ for the number
+of crossing edges. A crossing with positive defect greater than $`K/D`$
+accounts for more than $`K/D`$ of the defect budget. Hence the number of such
 crossings is at most
 
-$$
+```math
  {5.317D+o(D)\over K/D}
  =\left({5.317\over10000}+o(1)\right)D^2.
  \tag{5}
-$$
+```
 
-During the low-degree pruning, each deleted train removes fewer than $\eta D$
+During the low-degree pruning, each deleted train removes fewer than $`\eta D`$
 currently surviving incident edges. Since there are at most
-$(1.8488+o(1))D$ trains in total, the number of removed edge occurrences is
+$`(1.8488+o(1))D`$ trains in total, the number of removed edge occurrences is
 at most
 
-$$
+```math
  \eta D T_D\le (0.000018488+o(1))D^2.
  \tag{6}
-$$
+```
 
 Therefore the retained graph has normalized edge mass at least
 
-$$
+```math
  0.4703752-0.0005317-0.000018488-o(1)
  >0.4697-o(1).
  \tag{7}
-$$
+```
 
 Now take two vertices in one surviving component and a shortest graph path
 between them. Vertices at path positions differing by at least three have
 disjoint closed graph neighborhoods. Every such neighborhood contains at least
-$\eta D+1$ vertices. Since the whole graph has only
-$(1.8488+o(1))D$ train vertices, every shortest path has bounded length,
-independently of $D$. Each retained edge changes reduced phase by at most
-$K/D$. Thus the phase diameter of a surviving component is $O(D^{-1})$.
+$`\eta D+1`$ vertices. Since the whole graph has only
+$`(1.8488+o(1))D`$ train vertices, every shortest path has bounded length,
+independently of $`D`$. Each retained edge changes reduced phase by at most
+$`K/D`$. Thus the phase diameter of a surviving component is $`O(D^{-1})`$.
 
 This is the only graph-connectedness argument used. The proof-only three-label
 phase lift then places the trains of each component in at most three projective
 windows of vanishing width. Hypothesis 4 applies the one-window bad-train bound
 to each of these windows.
 
-For a surviving component put $x_i=n_i/D$. At most
-$3(0.1163+o(1))D$ of its trains can be charged as bad in those windows. Thus
-the excess $\max\{x_i-K_0,0\}D$ must be represented by endpoint occurrences
+For a surviving component put $`x_i=n_i/D`$. At most
+$`3(0.1163+o(1))D`$ of its trains can be charged as bad in those windows. Thus
+the excess $`\max\{x_i-K_0,0\}D`$ must be represented by endpoint occurrences
 on the principal routes. Charging each train's two occurrences and summing over
 all components gives
 
-$$
+```math
  2\sum_i\max\{x_i-K_0,0\}
  \le 1.8693+o(1),
  \tag{8}
-$$
+```
 
 which is (3). This charge is deliberately componentwise; overlapping phase
 windows only make the right-hand side of the allowed off-route population
@@ -205,53 +208,54 @@ larger, so no disjointness between different components is assumed.
 For the lower bound, apply Mantel's theorem to each simple triangle-free
 component:
 
-$$
+```math
  e_i\le {n_i^2\over4}.
  \tag{9}
-$$
+```
 
-Set $C_0=1.8488$, and note $\sum_i x_i\le C_0+o(1)$. For
-$x_i\le K_0$, $x_i^2\le K_0x_i$. For $x_i>K_0$, write
-$x_i=K_0+y_i$. Then
+Set $`C_0=1.8488`$, and note $`\sum_i x_i\le C_0+o(1)`$. For
+$`x_i\le K_0`$, $`x_i^2\le K_0x_i`$. For $`x_i>K_0`$, write
+$`x_i=K_0+y_i`$. Then
 
-$$
+```math
  \sum_i x_i^2
  \le K_0C_0+K_0S+S^2+o(1),
  \tag{10}
-$$
+```
 
-because $\sum y_i=S$ and $\sum y_i^2\le S^2$. Combining (7), (9),
+because $`\sum y_i=S`$ and $`\sum y_i^2\le S^2`$. Combining (7), (9),
 and (10) yields
 
-$$
+```math
  S^2+K_0S+K_0C_0-4(0.4697)+o(1)\ge0.
  \tag{11}
-$$
+```
 
-The polynomial on the left without $o(1)$ is strictly increasing for
-$S\ge0$. At $S=0.9499$, its exact rational value is negative; the exact
+The polynomial on the left without $`o(1)`$ is strictly increasing for
+$`S\ge0`$. At $`S=0.9499`$, its exact rational value is negative; the exact
 certificate records this as
 
-$$
+```math
  S^2+0.3489S+0.3489(1.8488)-4(0.4697)<0.
  \tag{12}
-$$
+```
 
 Since the value at zero is also negative, (11) forces
-$S>0.9499-o(1)$, proving (4). But (3) gives
+$`S>0.9499-o(1)`$, proving (4). But (3) gives
 
-$$
+```math
  2S\le1.8693+o(1),
  \qquad
  2S>1.8998-o(1),
- $$
+ 
+```
 
 and the exact limiting gap is
 
-$$
+```math
  1.8998-1.8693=0.0305>0.
  \tag{13}
-$$
+```
 
 This contradiction proves the conditional scalar sublemma.
 
@@ -289,12 +293,12 @@ safe Section-118 carrier
 
 It does not advance the canonical state because the sparse/directional extraction
 and its safe-window endpoint estimates remain proof-only. Even if that dependency
-were promoted, the theorem would cover only $\sigma\le0.0088$. It gives no
+were promoted, the theorem would cover only $`\sigma\le0.0088`$. It gives no
 upper bound on the aggregate detour
 
-$$
+```math
  \sum_r(L_r-2d_r),
-$$
+```
 
 for the remaining full-core slack regime, and it creates no source-preserving
 finite deformation.
@@ -305,15 +309,15 @@ The first uncovered C-II obligation is:
 
 > For every Type-II full-core triangle-free global minimizer with endpoint slack
 > beyond the safe Section-118 window, prove either an upper bound on
-> $\sum_r(L_r-2d_r)$ strong enough to contradict (1) after the exact payment
+> $`\sum_r(L_r-2d_r)`$ strong enough to contradict (1) after the exact payment
 > (2), an explicitly source-preserving same-cardinality unit-separated
 > competitor with smaller diameter, or an exact unit equilateral triangle.
 
 The separate Type-I obligation is:
 
 > Exclude an actual internal inactive chamber or exterior cap containing
-> $\Omega(D^2)$ retained source points with only linear perimeter/slack by an
-> exact triangle, a source-preserving strict sub-$D$ competitor, or a theorem
+> $`\Omega(D^2)`$ retained source points with only linear perimeter/slack by an
+> exact triangle, a source-preserving strict sub-$`D`$ competitor, or a theorem
 > that globally changes the diameter-carrying core while preserving the source
 > cardinality.
 
@@ -385,7 +389,7 @@ checked only to confirm that the underlying Erdős Problem #99 is still presente
 as open: <https://www.erdosproblems.com/99>. The Bezdek–Fodor paper
 “Minimal Diameter of Certain Sets in the Plane,” JCTA 85 (1999), 105–111,
 was checked only as historical finite context (it determines finite cases such as
-the known $n=8$ result); it supplies no large-$n$ every-minimizer theorem:
+the known $`n=8`$ result); it supplies no large-$`n`$ every-minimizer theorem:
 <https://www.sciencedirect.com/science/article/pii/S0097316598928898>.
 
 ## 8. Computation
@@ -397,8 +401,8 @@ python3 research/verify_target_c_multigrain_endpoint_capacity_exact.py
 ```
 
 This uses only `fractions.Fraction`. It checks the outward-rounded retained edge
-floor, the negativity of the Mantel polynomial at $S=0.9499$, and the exact
-endpoint margin $2(0.9499)-1.8693=0.0305$. It omits every geometric and
+floor, the negativity of the Mantel polynomial at $`S=0.9499`$, and the exact
+endpoint margin $`2(0.9499)-1.8693=0.0305`$. It omits every geometric and
 global-optimality hypothesis.
 
 ### Floating-point diagnostic
@@ -458,7 +462,7 @@ full-core and Type-I branches must remain open.
 ## 11. Handoff
 
 1. **Strongest result:** a conditional multi-grain endpoint-capacity exclusion of
-   the proof-only $\sigma\le0.0088$ full-core carrier window, with exact scalar
+   the proof-only $`\sigma\le0.0088`$ full-core carrier window, with exact scalar
    margin `0.0305`.
 2. **Canonical dependency chain:** `C-ZRF` → `C-ATTACH-CURRENCY` →
    `C-LOADED-HULL` → `C-FULLCORE-NEAR-DISK` → `C-HARMONIC-CELL-TILING` →

@@ -30,47 +30,47 @@ C53 projective orientation.
 
 For the contact Dirichlet response `Lambda`, let
 
-$$
+```math
 K=Q^T\Lambda^+Q
-$$
+```
 
 be C53's diameter-edge transfer kernel.  Unit current sent along any one cross-cut pair
 must cross the unique contact bridge.  The discrete maximum principle on the two
 bridge sides shows that every other cross-cut terminal pair sees at least the bridge
 voltage drop.  Thus
 
-$$
+```math
 \boxed{K_{ef}\ge 1/\alpha>0\qquad\text{for all selected diameter edges }e,f.}
 \tag{CB.1}
-$$
+```
 
 In particular every off-diagonal entry is positive.  C56, for the same legitimate
 projective orientation, proves
 
-$$
+```math
 \boxed{\min_{e\ne f}K_{ef}\le0.}
 \tag{CB.2}
-$$
+```
 
 For the sufficiently large C-II source there are at least two selected diameter edges,
 so (CB.1) and (CB.2) contradict each other.
 
 Therefore:
 
-$$
+```math
 \boxed{
 I_*\text{ contains no positive contact bridge.}
 }
 \tag{CB.3}
-$$
+```
 
 Since C24 already proves that `I_*` is a nonempty path in the contact bridge-block
 tree, it follows that
 
-$$
+```math
 \boxed{I_*\text{ is exactly one bridge block}.}
 \tag{CB.4}
-$$
+```
 
 This holds whether the selected diameter graph is cyclic or a forest.  In the Woodall
 forest branch it removes the entire universal-straight-common-chain subcase: all
@@ -94,12 +94,12 @@ Assume for contradiction that the C24 common route `I_*` contains a positive con
 bridge `uv`.  Removing that bridge partitions the positive contact graph into sides
 `L` and `R`.  Put
 
-$$
+```math
 B_L=B\cap L,
 \qquad
 B_R=B\cap R.
 \tag{1.1}
-$$
+```
 
 C20/C22 prove that `B_L` and `B_R` are nonempty complementary cyclic intervals in the
 strictly convex loaded-boundary order.  Because `uv` lies in every diameter route
@@ -108,10 +108,10 @@ strictly convex loaded-boundary order.  Because `uv` lies in every diameter rout
 The post-ZF/C34 regime has `q=|B|>=6`, and ZS gives `h>=ceil(D)` for sufficiently large
 sources.  In particular
 
-$$
+```math
 |H_+|\ge2.
 \tag{1.2}
-$$
+```
 
 The C53 force hull is two-dimensional, so its affine-span hypothesis holds.
 
@@ -124,11 +124,11 @@ The C53 force hull is two-dimensional, so its affine-span hypothesis holds.
 Let `B_L,B_R` be two nonempty complementary cyclic intervals of the vertices of a
 strictly convex polygon.  Then there is a linear functional `ell` such that
 
-$$
+```math
 \boxed{
 ell(r-l)>0\quad\text{for every }l\in B_L,\ r\in B_R.}
 \tag{2.1}
-$$
+```
 
 ### Proof
 
@@ -141,15 +141,15 @@ that line.  One arc contains all vertices of `B_L` and the other all vertices of
 
 Choose the sign of a normal covector `ell` so that
 
-$$
+```math
 \ell(r)>c>\ell(l)
-$$
+```
 
 for every `r in B_R`, `l in B_L`, with `c=ell(x)=ell(y)`.  Then
 
-$$
+```math
 ell(r-l)>0,
-$$
+```
 
 proving (2.1).  `square`
 
@@ -158,10 +158,10 @@ proving (2.1).  `square`
 Orient every selected diameter edge `e=rl`, with `r in B_R,l in B_L`, so its oriented
 chord vector is
 
-$$
+```math
 u_e=p_r-p_l.
 \tag{2.2}
-$$
+```
 
 Lemma CB.1 gives `ell(u_e)>0` for every edge.  Thus all oriented chord vectors lie in
 one open half-plane.  C53 explicitly permits choosing any projective cut avoiding the
@@ -172,17 +172,17 @@ incompatible orientation imposed after the fact.
 
 With this choice, the incidence column of edge `e=rl` is
 
-$$
+```math
 q_e=\mathbf e_r-\mathbf e_l,
 \tag{2.3}
-$$
+```
 
 and
 
-$$
+```math
 K_{ef}=q_e^T\Lambda^+q_f.
 \tag{2.4}
-$$
+```
 
 ---
 
@@ -194,36 +194,36 @@ Let a connected positive weighted graph have a bridge `uv` of conductance `alpha
 with `u` on side `L` and `v` on side `R`.  Let `Lambda` be its Dirichlet response on a
 terminal set meeting both sides.  For any two terminal pairs
 
-$$
+```math
 e=(r,l),\qquad f=(r',l'),
-$$
+```
 
 with `r,r' in R` and `l,l' in L`, orient their incidence vectors from `L` to `R`:
 
-$$
+```math
 q_e=\mathbf e_r-\mathbf e_l,
 \qquad
 q_f=\mathbf e_{r'}-\mathbf e_{l'}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 q_e^T\Lambda^+q_f\ge {1\over\alpha}.
 }
 \tag{3.1}
-$$
+```
 
 ### Proof
 
 Let `V` be a boundary potential vector, extended harmonically to all graph vertices,
 for the unit current demand
 
-$$
+```math
 \Lambda V=q_f.
 \tag{3.2}
-$$
+```
 
 Potentials are defined only up to an additive constant, which does not affect the
 voltage differences below.
@@ -233,47 +233,47 @@ bridge `uv` is the unique graph edge between the two sides, cut conservation for
 exactly one unit of current through the bridge from `R` to `L`.  Therefore Ohm's law
 gives
 
-$$
+```math
 \boxed{V(v)-V(u)={1\over\alpha}.}
 \tag{3.3}
-$$
+```
 
 Now restrict the electrical problem to the `R` side after deleting the bridge.  There
 is one unit source at `r'`, one unit sink at the bridge vertex `v`, and zero injection
 at every other vertex.  By the discrete maximum principle, `v` is a global minimum of
 the side potential.  Hence
 
-$$
+```math
 V(r)-V(v)\ge0
 \qquad(r\in B_R).
 \tag{3.4}
-$$
+```
 
 Likewise on the `L` side there is one unit source at the bridge vertex `u`, one unit
 sink at `l'`, and zero injection elsewhere.  Thus `u` is a global maximum and
 
-$$
+```math
 V(u)-V(l)\ge0
 \qquad(l\in B_L).
 \tag{3.5}
-$$
+```
 
 For any other cross-cut pair `e=(r,l)`, combine (3.3)--(3.5):
 
-$$
+```math
 \begin{aligned}
 V(r)-V(l)
 &=[V(r)-V(v)]+[V(v)-V(u)]+[V(u)-V(l)]\\
 &\ge {1\over\alpha}.
 \end{aligned}
 \tag{3.6}
-$$
+```
 
 Since `V=Lambda^+q_f` modulo constants and `q_e` has zero sum,
 
-$$
+```math
 V(r)-V(l)=q_e^T\Lambda^+q_f.
-$$
+```
 
 This proves (3.1).  `square`
 
@@ -294,29 +294,29 @@ Apply Lemma CB.2 to the positive contact graph and the common bridge `uv`.  Ever
 selected diameter edge crosses `(B_L,B_R)`, and Section 2 gives one legal C53
 orientation in which all such edges point from `B_L` to `B_R`.  Hence
 
-$$
+```math
 \boxed{
 K_{ef}\ge{1\over\alpha_{uv}}>0
 \quad\text{for all }e,f\in H_+.
 }
 \tag{4.1}
-$$
+```
 
 Since `|H_+|>=2`,
 
-$$
+```math
 \boxed{
 c:=\min_{e\ne f}K_{ef}>0.}
 \tag{4.2}
-$$
+```
 
 But C56 is an exact theorem for the same C53 edge-space data.  It proves, for every
 legitimate common-half-plane projective orientation,
 
-$$
+```math
 \boxed{c\le0.}
 \tag{4.3}
-$$
+```
 
 Equations (4.2) and (4.3) contradict each other.  Therefore the assumed common
 positive-contact bridge cannot exist.
@@ -330,18 +330,18 @@ sign conclusion of C56 before the generic/zero-transfer dichotomy is entered.
 
 C24 proves that
 
-$$
+```math
 I_*:=\bigcap_{h\in H_+}P_h
-$$
+```
 
 is a nonempty path in the contact bridge-block tree.  If it contained two distinct
 block nodes, it would contain their intervening bridge edge.  Section 4 excludes every
 such common bridge.  Therefore
 
-$$
+```math
 \boxed{|V(I_*)|=1.}
 \tag{5.1}
-$$
+```
 
 for every sufficiently large two-dimensional C-II source in the restored maximal
 support setting.

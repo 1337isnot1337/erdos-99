@@ -40,15 +40,15 @@ C-II source, retaining every source point. Define `q,h,d_H,s_Z,k,Q,f,b,x_B`
 as in canonical Sections 61 and 63, and put `t_D=(q-k)/D`.
 Then
 
-$$
+```math
 \boxed{5(q-k)+2\ge3q+x_B,}                                  \tag{GE.1}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{5(q-k)+2x_B+2\ge3\operatorname{per}(F).}               \tag{GE.2}
-$$
+```
 
 These are finite statements. They require neither the full-core dichotomy,
 near-disk convergence, the loaded-chord elimination, a matching bound, nor
@@ -56,18 +56,18 @@ an affine-kernel theorem on isolated coordinates.
 
 Thus, for every C-II sequence with `D->infinity` and `per(F)/D->pi`,
 
-$$
+```math
 \liminf\left(5t_D+2x_B/D\right)\ge3\pi.                      \tag{GE.3}
-$$
+```
 
 In particular **no such sequence** can satisfy both
 `t_D<=93/50+o(1)` and `x_B=o(D)`. Every sequence with the first inequality
 instead obeys
 
-$$
+```math
 \boxed{\liminf x_B/D\ge(3\pi-93/10)/2
 =0.0623889803846898\ldots.}                                  \tag{GE.4}
-$$
+```
 
 The same argument excludes any fixed upper bound `t_D<=t_0+o(1)` with
 `t_0<3pi/5` when `x_B=o(D)`.
@@ -76,32 +76,32 @@ The same argument excludes any fixed upper bound `t_D<=t_0+o(1)` with
 
 Canonical Section 61.7 gives the complete stopped-train count
 
-$$
+```math
 N=(b+Q)/2+2f=q-k+2f.
-$$
+```
 
 Section 61.9 pays at most `2x_B` bad exterior endpoint occurrences.
 Section 61.10 pays `4f+Q` bounded exceptional-face occurrences.
 Section 61.12 proves at most two trains have two good loaded-hull ends.
 Consequently its canonical equation 61.13 is
 
-$$
+```math
 N-2\le2x_B+4f+Q.
-$$
+```
 
 Put `s_end=2x_B+4f+Q-(N-2)>=0`. Substituting
 `b=q+x_B`, `Q=q-x_B-2k`, and `N=q-k+2f` yields the exact identity
 
-$$
+```math
 \boxed{5(q-k)+2-3q-x_B=s_{\rm end}+2(Q-f)\ge0.}              \tag{GE.5}
-$$
+```
 
 This proves GE.1. Since `b=q+x_B>=per(F)`, another exact identity is
 
-$$
+```math
 \boxed{5(q-k)+2x_B+2-3\operatorname{per}(F)
 =s_{\rm end}+2(Q-f)+3(b-\operatorname{per}(F))\ge0.}          \tag{GE.6}
-$$
+```
 
 This proves GE.2 with every discarded term identified. Divide by `D` to get
 GE.3. If `limsup t_D<=93/50`, rearrange GE.2 and use the actual perimeter
@@ -120,9 +120,9 @@ The October high-t fan/collar reports explicitly assume, in one and the
 same source, `per(F)/D->pi`, `t_D<=1.860+o(1)`, and
 `x_B=O(sqrt(D))`. Those assumptions alone contradict GE.2:
 
-$$
+```math
 9.3+o(1)\ge3\pi,
-$$
+```
 
 which is false. No lower bound on `sum Q_r^+ +2d_tile` is needed for this
 branch; its supposed positive allowance describes an infeasible source regime.
@@ -163,10 +163,10 @@ source branch's `audit.52` promotion transaction or change current theorem state
 
 The candidate near-disk obstruction is
 
-$$
+```math
 \boxed{t_D\ge3\pi/5-o(1)\quad\text{or}\quad
 2x_B/D\ge3\pi-5t_D-o(1).}
-$$
+```
 
 At `t_D<=1.860`, the second branch is compulsory. The highest-value next
 lemma must turn this **actual linear global outer-walk excess** into a

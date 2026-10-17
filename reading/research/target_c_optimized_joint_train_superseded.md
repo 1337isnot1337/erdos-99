@@ -13,10 +13,10 @@
 
 The original proof was introduced under the label "Section 112" and proved the finite-window carrier bound
 
-$$
+```math
 \sigma\le 4.5\times10^{-4},\qquad
 \mu=0.976051176417287175\ldots .
-$$
+```
 
 That proof is preserved verbatim at
 [`legacy/target_c_section112_optimized_joint_train_gap_original.md`](legacy/target_c_section112_optimized_joint_train_gap_original.md).

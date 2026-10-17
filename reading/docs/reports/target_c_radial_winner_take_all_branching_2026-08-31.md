@@ -19,17 +19,17 @@ The post-C76 audit correctly moves the mature rhombic train-track machinery back
 
 Fix the C66 center `z`. Put
 
-$$
+```math
 r_x:=|p_x-z|.
-$$
+```
 
 For a unit contact `vw`, orient it outward when `r_w>r_v` and define
 
-$$
+```math
 d_{vw}:=r_w-r_v\in(0,1],
 \qquad
 q_{vw}:=1-d_{vw}^2.
-$$
+```
 
 For every vertex with `r_v>=10`:
 
@@ -37,53 +37,53 @@ For every vertex with `r_v>=10`:
 
 There is at most one outward contact `vw` with
 
-$$
+```math
 \boxed{q_{vw}<\frac15.}
 \tag{C79.1}
-$$
+```
 
 Call that edge the **primary radial edge** when it exists. Every other outward contact from such a vertex has `q>=1/5`.
 
 If `E_sec` is the set of all nonprimary outward contacts whose inner endpoint has radius at least ten, then
 
-$$
+```math
 \boxed{
 \sum_{e\in E_{sec}}\alpha_e\le5Q_z,
 \qquad
 \sum_{e\in E_{sec}}\alpha_e d_e\le5Q_z,
 }
 \tag{C79.2}
-$$
+```
 
 where C68's radial defect is
 
-$$
+```math
 Q_z=
 \sum_{ij\in C}\alpha_{ij}
 \left[1-(r_i-r_j)^2\right].
-$$
+```
 
 At the C66 center,
 
-$$
+```math
 Q_z\le D^2(1-S_z)\le C_0D^3\varepsilon,
 \qquad
 C_0=\frac{2\pi}{\kappa_0}.
 \tag{C79.3}
-$$
+```
 
 Hence `D epsilon->0` implies
 
-$$
+```math
 \boxed{
 \sum_{e\in E_{sec}}\alpha_e=o(D^2).
 }
 \tag{C79.4}
-$$
+```
 
 More sharply, fix `lambda>0`. Let `N_split(lambda)` be the number of vertices `v` with `r_v>=10` that have at least two outward contacts of stress at least `lambda D`. Then
 
-$$
+```math
 \boxed{
 N_{split}(\lambda)
 \le
@@ -92,11 +92,11 @@ N_{split}(\lambda)
 \frac5\lambda D(1-S_z).
 }
 \tag{C79.5}
-$$
+```
 
 At the C66 center,
 
-$$
+```math
 \boxed{
 N_{split}(\lambda)
 \le
@@ -104,7 +104,7 @@ N_{split}(\lambda)
 =o(D)
 }
 \tag{C79.6}
-$$
+```
 
 whenever `D epsilon->0`.
 
@@ -116,38 +116,38 @@ Thus the near-chain KKT certificate has only sublinearly many macroscopic forwar
 
 Fix `v!=z` and put
 
-$$
+```math
 n_v:=\frac{p_v-p_z}{r_v}.
-$$
+```
 
 For an outward unit contact, write
 
-$$
+```math
 e:=p_w-p_v,
 \qquad |e|=1,
 \qquad d:=r_w-r_v>0,
 \qquad q:=1-d^2.
-$$
+```
 
 The exact C74 identity is
 
-$$
+```math
 \boxed{
 n_v\cdot e
 =d-\frac{q}{2r_v}.
 }
 \tag{C79.7}
-$$
+```
 
 If `q<1/5`, then
 
-$$
+```math
 d>\sqrt{4/5}.
-$$
+```
 
 If `r_v>=10`, C79.7 gives
 
-$$
+```math
  n_v\cdot e
 >
 \sqrt{4/5}-\frac1{100}
@@ -155,7 +155,7 @@ $$
 >
 \frac{\sqrt3}{2}.
 \tag{C79.8}
-$$
+```
 
 Therefore any such contact makes angle strictly less than `pi/6` with the outward radial direction `n_v`.
 
@@ -167,19 +167,19 @@ Suppose two distinct outward contacts `vw_1,vw_2` both satisfied `q<1/5`. By C79
 
 Both endpoints are source points at unit distance from `v`, so
 
-$$
+```math
 |p_{w_1}-p_{w_2}|
 =2\sin\frac{\angle w_1vw_2}{2}
 <1,
-$$
+```
 
 contradicting unit separation. This proves C79.1.
 
 The constants are deliberately coarse. More generally, for radius threshold `R`, any `eta` satisfying
 
-$$
+```math
 \sqrt{1-\eta}-\frac{\eta}{2R}>\frac{\sqrt3}{2}
-$$
+```
 
 gives at most one outward edge with defect below `eta` from radii at least `R`.
 
@@ -189,18 +189,18 @@ gives at most one outward edge with defect below `eta` from radii at least `R`.
 
 Every edge in `E_sec` has
 
-$$
+```math
 q_e\ge\frac15.
-$$
+```
 
 Since every contact has a unique inner endpoint unless the two radii agree, and equal-radius edges are not outward, each secondary edge is charged once. Therefore
 
-$$
+```math
 Q_z
 =\sum_{ij\in C}\alpha_{ij}q_{ij}
 \ge
 \frac15\sum_{e\in E_{sec}}\alpha_e.
-$$
+```
 
 This proves the first part of C79.2. The second follows from `0<d_e<=1`.
 
@@ -212,18 +212,18 @@ C68 and C66 then give C79.3-C79.4.
 
 At a `lambda D` split vertex, at most one of the two heavy outward contacts can be primary. Hence at least one heavy contact is secondary and contributes at least
 
-$$
+```math
 \frac15\lambda D
-$$
+```
 
 to `Q_z`.
 
 Choose one such secondary heavy edge for every split vertex. Distinct split vertices give distinct chosen oriented edges because an outward edge has a unique inner endpoint. Thus
 
-$$
+```math
 N_{split}(\lambda)\frac{\lambda D}{5}
 \le Q_z,
-$$
+```
 
 which proves C79.5. C66 gives C79.6.
 
@@ -233,10 +233,10 @@ which proves C79.5. C66 gives C79.6.
 
 Fix `lambda>0` and retain the outward contacts with
 
-$$
+```math
 \alpha_e\ge\lambda D,
 \qquad r_{\rm inner}(e)\ge10.
-$$
+```
 
 Delete the secondary ones. C79.5 says only `o(D)` heavy edges are deleted in the `D epsilon->0` phase. Every remaining vertex has outdegree at most one. Radius strictly increases along every directed edge, so directed cycles are impossible.
 

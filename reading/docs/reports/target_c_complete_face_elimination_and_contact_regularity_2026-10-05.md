@@ -11,18 +11,18 @@ after independent promotion audit. **LEVEL I STATUS: STILL OPEN. C-II REMAINS OP
 
 ## 1. Universal source theorem and exact frontier change
 
-Let $A$ be any canonical triangle-free C-II source in the Section-57
-mixed-rigidity regime, with full $C=C_*$, $H=H_*$. Let $V$ be
-its connected nonisolated positive-contact core, $v=|V|$, $e=|C|$,
-$f$ the bounded nonquadrilateral contact-face count, and $T$ the
+Let $`A`$ be any canonical triangle-free C-II source in the Section-57
+mixed-rigidity regime, with full $`C=C_*`$, $`H=H_*`$. Let $`V`$ be
+its connected nonisolated positive-contact core, $`v=|V|`$, $`e=|C|`$,
+$`f`$ the bounded nonquadrilateral contact-face count, and $`T`$ the
 complete stopped-train count. Then
 
-$$
+```math
 \boxed{\operatorname{rank}C_{\rm face}=2f,
 \qquad \operatorname{rank}R_C=e,
 \qquad \sigma_C=0.}
 \tag{E.1}
-$$
+```
 
 Every physical exceptional face admits a complete two-anchor elimination
 order. There is no stalled bounded-face core of any size or degree.
@@ -30,16 +30,16 @@ No residual, phase, degree-tail, all-pentagon, disk-limit or terminal
 hypothesis is imposed.
 
 The exact unit-contact realization space near the source is a smooth
-manifold of dimension $q-k+2$, including two translations and rotation.
+manifold of dimension $`q-k+2`$, including two translations and rotation.
 After fixing a core translation, a complete train chart has dimension
-$q-k$; modulo core Euclidean motions it has dimension $q-k-1$.
+$`q-k`$; modulo core Euclidean motions it has dimension $`q-k-1`$.
 Every original source point, including each contact isolate, is retained.
 
 This strengthens the preceding
 [pentagon elimination candidate](target_c_all_pentagon_closure_core_elimination_2026-10-05.md).
 Higher-degree faces cannot carry its former remaining pure-corank
-alternative. The $s_C$ in the full-core surplus is the distinct
-pinned-component slack; (E.1) supplies no upper bound on $s_C$.
+alternative. The $`s_C`$ in the full-core surplus is the distinct
+pinned-component slack; (E.1) supplies no upper bound on $`s_C`$.
 The all-phase scalar survivor therefore remains compatible.
 
 ## 2. Actual positive-contact faces are strictly convex
@@ -52,13 +52,13 @@ three, and bounded augmented faces are convex simple polygons. All
 actual core contact forces are positive.
 
 A bounded-face sector at a loaded vertex is inside its strictly convex
-hull tangent cone, so its angle is less than $\pi$. Suppose a sector
-at an unloaded vertex had angle $\pi$. Every incident contact ray
+hull tangent cone, so its angle is less than $`\pi`$. Suppose a sector
+at an unloaded vertex had angle $`\pi`$. Every incident contact ray
 is in the complementary closed half-plane. Projection of the positive
 equilibrium equation on its normal forces **every** contact ray onto the
 boundary line. Unit length and distinct source points permit at most
 the two opposite neighbors on that line, contradicting degree at least
-three. Thus these face angles are also less than $\pi$.
+three. Thus these face angles are also less than $`\pi`$.
 
 Every bounded physical contact face is therefore strictly convex. This
 strengthens the ordinary convexity needed for Oler in Section 67 without
@@ -81,26 +81,26 @@ sets every auxiliary hull vector and every outside-ended train rate to
 zero, fixes all loaded velocities and invokes canonical mixed rigidity.
 It retains every pocket, including nonunit-chord four-sided pockets.
 
-Restrict to any nonempty set $U$ of physical exceptional faces. The
+Restrict to any nonempty set $`U`$ of physical exceptional faces. The
 two coordinate-sum row dependencies give
 
-$$
+```math
 e(U)\le2|U|-2.
 \tag{E.2}
-$$
+```
 
-There are no internal loops. Hence some $F\in U$ has internal
+There are no internal loops. Hence some $`F\in U`$ has internal
 train degree at most three. Its external terminal count is at least
-$\deg F-3$.
+$`\deg F-3`$.
 
-- If $\deg F=5$, at least two external trains are present and their
+- If $`\deg F=5`$, at least two external trains are present and their
   directions are nonparallel.
-- If $\deg F\ge6$, at least three external trains are present. Since
+- If $`\deg F\ge6`$, at least three external trains are present. Since
   one projective direction has at most two physical side occurrences,
   two of these trains are nonparallel.
 
-Activate $F$ using those two external trains and remove it from
-$U$. The other endpoint is the actual outer face or a face activated
+Activate $`F`$ using those two external trains and remove it from
+$`U`$. The other endpoint is the actual outer face or a face activated
 earlier. Continue. This constructs a complete order for all exceptional
 faces, including arbitrarily high-degree faces. Terminal occurrences
 determine the incidence degree, with repeated boundary vertices retained.
@@ -111,17 +111,17 @@ Select the two external train columns when each face enters the order.
 A pivot train cannot be selected twice: at its earlier endpoint, its
 later endpoint was still inactive and the train was not external.
 The full face-row/pivot-column matrix is block upper triangular, with
-diagonal blocks $[Jw_1\ Jw_2]$ of nonzero determinant. Thus
-$C_{\rm face}$ has rank $2f$.
+diagonal blocks $`[Jw_1\ Jw_2]`$ of nonzero determinant. Thus
+$`C_{\rm face}`$ has rank $`2f`$.
 
 Train-angle integration on the actual contact graph gives
-$\ker R_C/\mathrm{Trans}\cong\ker C_{\rm face}$. Euler and
-$T=e-2R$, where $R$ is the strict-rhombus count, then give
+$`\ker R_C/\mathrm{Trans}\cong\ker C_{\rm face}`$. Euler and
+$`T=e-2R`$, where $`R`$ is the strict-rhombus count, then give
 
-$$
+```math
 e-\operatorname{rank}R_C
 =2f-\operatorname{rank}C_{\rm face}=0.
-$$
+```
 
 This checks the identity of the audited-working
 [Section 156](../targets/target-c/156-157-face-closure-and-outer-train-bracing-audited.md)
@@ -141,18 +141,18 @@ excluded by (E.1), conditional on this new candidate's audit.
 For each bounded physical exceptional face, impose the exact rotated
 unit-edge closure
 
-$$
+```math
 \Psi_F(\theta)=\sum_{e\in\partial F}
 \operatorname{Rot}(\theta_{\tau(e)})w_e=0.
-$$
+```
 
 Opposite sides of each original rhombus cancel identically. The pivot
 Jacobian of all remaining equations is invertible by Section 4. The
 implicit function theorem supplies a smooth exact train chart with
-$T-2f=q-k$ free angles. Integrating the closed edge vectors gives
+$`T-2f=q-k`$ free angles. Integrating the closed edge vectors gives
 every nearby core realization up to translation. Alternatively, full
 row rank of the actual contact constraints directly gives dimension
-$2v-e=q-k+2$ in position coordinates.
+$`2v-e=q-k+2`$ in position coordinates.
 
 All selected and unselected original contacts remain exactly unit.
 Contact isolates are held at their original positions. Every initially
@@ -176,17 +176,17 @@ the proof above does not import a salvage artifact as a premise.
 
 ## 6. Exact finite square energy on the complete chart
 
-Let $\Omega=L_C^\alpha-L_H^\beta$ be a normalized relative-interior
+Let $`\Omega=L_C^\alpha-L_H^\beta`$ be a normalized relative-interior
 canonical stress on the nonisolated core, with
-$\sum_H\beta_h=1$, $\sum_C\alpha_e=D^2$, $\Omega p=0$ and
-$\Omega\ge0$. For **any** labelled realization $p'$ preserving
-all original contact lengths, put $\delta=p'-p$. The exact identity is
+$`\sum_H\beta_h=1`$, $`\sum_C\alpha_e=D^2`$, $`\Omega p=0`$ and
+$`\Omega\ge0`$. For **any** labelled realization $`p'`$ preserving
+all original contact lengths, put $`\delta=p'-p`$. The exact identity is
 
-$$
+```math
 \boxed{\sum_{h\in H}\beta_h|p'_i-p'_j|^2
 =D^2-\sum_{c=1}^2\delta_c^T\Omega\delta_c.}
 \tag{E.3}
-$$
+```
 
 This follows by expanding the stress quadratic form, using equilibrium
 to cancel the cross term, and using the preserved contact lengths.
@@ -200,20 +200,20 @@ an affine map; preserving three distinct unit directions makes its
 linear Gram matrix the identity. The statement concerns the core,
 without extending that kernel to isolated coordinates.
 
-For a chart path with core tangent $u$, differentiation gives
-$\sum_h\beta_h(|p_i(t)-p_j(t)|^2)''_{t=0}
-=-2\sum_cu_c^T\Omega u_c$. Weighted second-order contraction is
+For a chart path with core tangent $`u`$, differentiation gives
+$`\sum_h\beta_h(|p_i(t)-p_j(t)|^2)''_{t=0}
+=-2\sum_cu_c^T\Omega u_c`$. Weighted second-order contraction is
 therefore explicit. It still is not contraction of every pair.
 
 Two exact five-point regressions keep that boundary visible. For the
-unit regular pentagon, $D^2=(3+\sqrt5)/2$, $\beta_h=1/5$:
+unit regular pentagon, $`D^2=(3+\sqrt5)/2`$, $`\beta_h=1/5`$:
 
 1. A triangular trapezoid preserving all five old cycle contacts is
-   unit-separated and has weighted old-diameter mean $12/5<D^2$,
-   but its maximum squared distance is $4>D^2$.
+   unit-separated and has weighted old-diameter mean $`12/5<D^2`$,
+   but its maximum squared distance is $`4>D^2`$.
 2. A three-colour triangle collapse preserves all five old cycle bars
    and has every pair at distance at most one, with weighted mean
-   $3/5<D^2$, but two labelled vertex pairs coincide. It is a
+   $`3/5<D^2`$, but two labelled vertex pairs coincide. It is a
    three-point set and fails both lower separation and cardinality.
 
 Thus a source replacement must check the full maximum and every lower
@@ -224,7 +224,7 @@ constraint, even when (E.3) is strict.
 [The verifier](../../../research/verify_target_c_complete_face_closure_elimination_2026_10_05.py)
 checks 84 glued-pentagon and 4,734 positive-equilibrium hexagon-packet
 source pairs, their full face/contact ranks, 31,549 abstract
-$(2,2)$-sparse endpoint graphs and 94,647 mixed-valence elimination
+$`(2,2)`$-sparse endpoint graphs and 94,647 mixed-valence elimination
 orders. Its pins are not actual diameter loads and its abstract graphs
 need not be embedded sources. It certifies the finite contracts, not
 the analytic implicit-function theorem or a uniform radius.

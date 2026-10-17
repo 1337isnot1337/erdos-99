@@ -12,94 +12,94 @@ Frozen source: `origin/research/sol/target-c-level1-gpt61-2026-10-04` at `9875cd
 
 ## 1. Exact statements
 
-Let $m,n\ge2$, let $u=(1,0)$, $v=(\cos\phi,\sin\phi)$, and let
-$$
+Let $`m,n\ge2`$, let $`u=(1,0)`$, $`v=(\cos\phi,\sin\phi)`$, and let
+```math
   \pi/3<\phi<2\pi/3,\qquad
   K=\{iu+jv:0\le i\le m,\ 0\le j\le n\}.
-$$
-Let $W$ be the complete labeled boundary grid, and choose integers
+```
+Let $`W`$ be the complete labeled boundary grid, and choose integers
 `0<a<m`, `0<b<n`. The source labels are every grid label except the one
 interior label `(a,b)`.
 
-**Theorem V.1 — `C-OBLIQUE-ONE-VACANCY-STRICTIFICATION`.** There is a two-stage piecewise-linear motion which fixes every label in $W$, retains every other label, keeps all interior labels strictly inside $K$, and remains unit-separated throughout. At the endpoint, every pair involving at least one interior label has distance strictly greater than one.
+**Theorem V.1 — `C-OBLIQUE-ONE-VACANCY-STRICTIFICATION`.** There is a two-stage piecewise-linear motion which fixes every label in $`W`$, retains every other label, keeps all interior labels strictly inside $`K`$, and remains unit-separated throughout. At the endpoint, every pair involving at least one interior label has distance strictly greater than one.
 
-The audited angle range is enlarged from the source report's acute range: the proof only needs $\pi/3<\phi<2\pi/3$. At either excluded endpoint a nonbasis lattice direction becomes an additional unit contact, so the contact classification used below changes.
+The audited angle range is enlarged from the source report's acute range: the proof only needs $`\pi/3<\phi<2\pi/3`$. At either excluded endpoint a nonbasis lattice direction becomes an additional unit contact, so the contact classification used below changes.
 
-**Corollary V.2 — `C-OBLIQUE-ONE-VACANCY-STRICT-CAPACITY-GAP`.** Write $K_0=(m-1)(n-1)$. For every fixed $m,n\ge3$, there is a positive, non-effective angle window above $\pi/3$ in which the fixed-wall capacities satisfy
-$$
+**Corollary V.2 — `C-OBLIQUE-ONE-VACANCY-STRICT-CAPACITY-GAP`.** Write $`K_0=(m-1)(n-1)`$. For every fixed $`m,n\ge3`$, there is a positive, non-effective angle window above $`\pi/3`$ in which the fixed-wall capacities satisfy
+```math
   \operatorname{cap}_{\ge1}(K;W)=K_0,
   \qquad
   \operatorname{cap}_{>1}(K;W)=K_0-1.
-$$
-Here weak capacity counts added points in $\operatorname{int}K$, mutually separated and separated from $W$ by at least one; strict capacity uses strict inequalities for every pair involving an added point. This is a fixed-container theorem, not a canonical-source counterexample.
+```
+Here weak capacity counts added points in $`\operatorname{int}K`$, mutually separated and separated from $`W`$ by at least one; strict capacity uses strict inequalities for every pair involving an added point. This is a fixed-container theorem, not a canonical-source counterexample.
 
 ## 2. Independent proof of V.1
 
-For a nonzero integer displacement $ru+sv$, the squared length is
-$r^2+s^2+2rs\cos\phi$. If $rs>0$, then for $\phi\le\pi/2$
-the length squared is at least $r^2+s^2\ge2$; for $\phi>\pi/2$,
-use $\cos\phi>-1/2$ to get
-$r^2+s^2+2rs\cos\phi>r^2+s^2-|rs|\ge1$. If $rs<0$, the
+For a nonzero integer displacement $`ru+sv`$, the squared length is
+$`r^2+s^2+2rs\cos\phi`$. If $`rs>0`$, then for $`\phi\le\pi/2`$
+the length squared is at least $`r^2+s^2\ge2`$; for $`\phi>\pi/2`$,
+use $`\cos\phi>-1/2`$ to get
+$`r^2+s^2+2rs\cos\phi>r^2+s^2-|rs|\ge1`$. If $`rs<0`$, the
 same two cases give respectively
-$r^2+s^2-2|rs|\cos\phi>r^2+s^2-|rs|\ge1$, or
-$r^2+s^2-2|rs|\cos\phi\ge r^2+s^2\ge2$. Thus the only unit
-grid steps are $\pm u,\pm v$. This also proves the starting grid is
+$`r^2+s^2-2|rs|\cos\phi>r^2+s^2-|rs|\ge1`$, or
+$`r^2+s^2-2|rs|\cos\phi\ge r^2+s^2\ge2`$. Thus the only unit
+grid steps are $`\pm u,\pm v`$. This also proves the starting grid is
 unit-separated and has no unit triangles.
 
-Let $J$ be counterclockwise rotation by a quarter-turn. In stage one,
-move only the surviving interior labels in row $j=b$ or column $i=a$.
+Let $`J`$ be counterclockwise rotation by a quarter-turn. In stage one,
+move only the surviving interior labels in row $`j=b`$ or column $`i=a`$.
 For the row assign
-$$
+```math
  w_{i,b}=-(i/a)Jv\ (i<a),\qquad
  w_{i,b}=((m-i)/(m-a))Jv\ (i>a),
-$$
+```
 and for the column assign
-$$
+```math
  w_{a,j}=(j/b)Ju\ (j<b),\qquad
  w_{a,j}=-((n-j)/(n-b))Ju\ (j>b).
-$$
+```
 All other velocities, including the wall, are zero. The row coefficients
-strictly decrease with $i$, and $u\cdot Jv=-\sin\phi<0$, so the
+strictly decrease with $`i`$, and $`u\cdot Jv=-\sin\phi<0`$, so the
 squared length of every horizontal unit contact on this punctured row has
 positive derivative. The column coefficients strictly increase with
-$j$, and $v\cdot Ju=\sin\phi>0$, so every vertical contact on the
+$`j`$, and $`v\cdot Ju=\sin\phi>0`$, so every vertical contact on the
 punctured column also has positive derivative. Each other unit contact
 touching a mover is perpendicular to its velocity: a row mover's
-remaining contact direction is $v$, and a column mover's is $u$.
+remaining contact direction is $`v`$, and a column mover's is $`u`$.
 The relative velocity is nonzero, so that squared length becomes
-$1+s^2|\Delta w|^2>1$. No unit contact joins two moved labels across
+$`1+s^2|\Delta w|^2>1`$. No unit contact joins two moved labels across
 the row and column, since their intersection is the missing label.
 
 Every original noncontact has positive slack, and every interior label
-starts strictly inside $K$. Finiteness therefore permits a sufficiently
+starts strictly inside $`K`$. Finiteness therefore permits a sufficiently
 small positive first amplitude whose whole segment preserves all lower
 constraints and interior containment while making every contact touching
 the row or column strict.
 
 The remaining stationary interior labels lie in up to four rectangular
 blocks. Define the dual basis
-$$
+```math
  u^*=(1,-\cot\phi),\qquad v^*=(0,\csc\phi),
  \quad u\cdot u^*=v\cdot v^*=1,
  \quad u\cdot v^*=v\cdot u^*=0.
-$$
-For a label in a block, let $I$ be its positive integer distance from
-the adjacent vertical outer side and $J_0$ its positive integer
+```
+For a label in a block, let $`I`$ be its positive integer distance from
+the adjacent vertical outer side and $`J_0`$ its positive integer
 distance from the adjacent horizontal outer side. Set
-$$
+```math
  z_{ij}=s_x Iu^*+s_yJ_0v^*,
-$$
-where $s_x,s_y\in\{+1,-1}$ point away from the two adjacent sides.
+```
+where $`s_x,s_y\in\{+1,-1}`$ point away from the two adjacent sides.
 Every remaining horizontal unit contact, including a contact to its
-outer wall, has outward radial component $u\cdot\Delta z=1$; every
-remaining vertical contact has $v\cdot\Delta z=1$. Their squared
+outer wall, has outward radial component $`u\cdot\Delta z=1`$; every
+remaining vertical contact has $`v\cdot\Delta z=1`$. Their squared
 lengths therefore increase to first order. Distinct blocks have no
 unit contact avoiding the already released row or column. All pairs
 involving the first-stage movers and all original noncontacts are
 already strict; by finiteness, a sufficiently small second amplitude
 preserves those inequalities and strict interior containment. At its
 endpoint every interior-involving pair is strict. This includes empty
-blocks and the smallest case $m=n=2$.
+blocks and the smallest case $`m=n=2`$.
 
 This proof uses neither a first-order direction as a finite endpoint nor
 one-at-a-time moves: the two displayed stages are simultaneous finite
@@ -108,32 +108,32 @@ slacks.
 
 ## 3. Exact capacity-gap deduction
 
-For fixed $m,n\ge3$, the already canonical
+For fixed $`m,n\ge3`$, the already canonical
 `C-LARGE-WALL-LOCK-REGRESSION` gives a positive angle window in which
-every unit-separated $N$-point packing in $K$ containing the full
-prescribed wall $W$, where
-$N=(m+1)(n+1)$, is the original grid. Choose a smaller positive
+every unit-separated $`N`$-point packing in $`K`$ containing the full
+prescribed wall $`W`$, where
+$`N=(m+1)(n+1)`$, is the original grid. Choose a smaller positive
 window so that also
-$$
+```math
   mn\left(\frac{\sin\phi}{\sqrt3/2}-1\right)<1.
-$$
+```
 This is possible by continuity at \,`phi=pi/3`\,. Oler's canonical
 finite inequality (Lemma 21.1 in `docs/theory/03-oler-shell.md`) gives
-for any unit-separated subset of $K$
-$$
+for any unit-separated subset of $`K`$
+```math
  |X|\le \frac{2mn\sin\phi}{\sqrt3}+(m+n)+1<N+1.
-$$
-Integer rounding yields $|X|\le N$, so the full grid shows ordinary
-interior capacity is exactly $K_0$. A strict packing of $K_0$
-interior points together with $W$ would have $N$ points; lock
+```
+Integer rounding yields $`|X|\le N`$, so the full grid shows ordinary
+interior capacity is exactly $`K_0`$. A strict packing of $`K_0`$
+interior points together with $`W`$ would have $`N`$ points; lock
 uniqueness forces it to be the original grid, whose interior contains
-unit contacts. Hence strict capacity is at most $K_0-1$. V.1, applied
-to the grid with any one interior vacancy, supplies $K_0-1$ strict
+unit contacts. Hence strict capacity is at most $`K_0-1`$. V.1, applied
+to the grid with any one interior vacancy, supplies $`K_0-1`$ strict
 interior points and proves equality.
 
-Taking square frames $m=n\to\infty$ inside their respective
-non-effective angle windows gives $Theta(D^2)$ strict, hence
-contact-isolated, interior points behind $O(D)$ fixed wall vertices.
+Taking square frames $`m=n\to\infty`$ inside their respective
+non-effective angle windows gives $`Theta(D^2)`$ strict, hence
+contact-isolated, interior points behind $`O(D)`$ fixed wall vertices.
 The ordinary capacity exceeds strict capacity by exactly one. The fixed
 wall is not certified as an actual diameter boundary, and none of these
 packings is claimed to be globally diameter-optimal.
@@ -141,7 +141,7 @@ packings is claimed to be globally diameter-optimal.
 ## 4. Verifier boundary and hostile checks
 
 Re-ran the frozen verifier on its source commit. It uses exact
-$\mathbb Q(\sqrt3)$ arithmetic and rational halving and passes four
+$`\mathbb Q(\sqrt3)`$ arithmetic and rational halving and passes four
 finite fixtures: 1,915 exact source-pair checks, 46 interior labels,
 fixed wall coordinates, retained labels, and strict container
 inequalities. Its endpoint checks do not certify the analytic segment
@@ -167,7 +167,7 @@ Adversarial scope checks:
   (K_0-1)-point strict packing.
 - The theorem supplies no source-wall extraction, actual-diameter
   loading, diameter upper-pair feasibility, canonical source
-  normalization, strict-sub-$D$ competitor, C-II closure, or Level I
+  normalization, strict-sub-$`D`$ competitor, C-II closure, or Level I
   conclusion.
 
 ## 5. Claim and frontier disposition

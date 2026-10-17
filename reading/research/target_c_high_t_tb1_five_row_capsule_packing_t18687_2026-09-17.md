@@ -17,74 +17,62 @@ That bound is not sharp for this capsule. A finite exact packing certificate pro
 > **Five-row capsule theorem.** Let
 > 
 
-$$
-
+```math
 > S_L:=([0,L]\times\{0\})+B(0,1/2).
 > 
-$$
-
-
+```
 > If
 > 
 
-$$
-
+```math
 > L\le {21\over20},
 > 
-$$
-
-
+```
 > and `X subset S_L` satisfies
 > 
 
-$$
-
+```math
 > |x-x'|\ge {\sqrt3\over2}
 > \qquad(x\ne x'),
 > 
-$$
-
-
+```
 > then
 > 
 
-$$
-
+```math
 > \boxed{|X|\le5.}
 > \tag{FP.1}
 > 
-$$
-
-
+```
 >
 > The number five is sharp already for `L=1`.
 
 Consequently every source pair with
 
-$$
+```math
 1<|x-y|\le1+{K\over D}
-$$
+```
 
 crosses at most five selected O--O rows once `D>=20K`. In particular every inverse-`D` near-unit LOWER exact-swap blocker has
 
-$$
+```math
 \boxed{
 |\operatorname{reg}(x)-\operatorname{reg}(y)|\le5
 }
 \tag{FP.2}
-$$
+```
 
 for all sufficiently large sources.
 
 This changes the Horn thinning scale again. One residue class modulo six is enough. The retained one-sign exact-swap system can therefore be taken with density
 
-$$
+```math
 \boxed{
 \gamma_6={791\over3{,}840{,}000{,}000}
 =2.05989583333\ldots\times10^{-7},
 }
 \tag{FP.3}
-$$
+```
 
 which is exactly `7/6` times the seven-spaced density. The poison-forest and local-ladder conclusions propagate with the same factor.
 
@@ -94,42 +82,44 @@ which is exactly `7/6` times the seven-spaced density. The poison-forest and loc
 
 Use the ordered selected O--O crosscuts
 
-$$
+```math
 R_0\xleftrightarrow{\tau_1}R_1
 \xleftrightarrow{\tau_2}\cdots
 \xleftrightarrow{\tau_m}R_m.
 \tag{FP.4}
-$$
+```
 
 Let source vertices `x,y` lie in regions `R_p,R_q`, `p<q`, and put
 
-$$
+```math
 L=|x-y|,
 \qquad
 N=q-p.
-$$
+```
 
 The segment `xy` meets every separating selected row. For every crossed row choose one strict unit rhombus whose midpoint centerline meets `xy`, and let `c_j` be its rhombus center.
 
 The previous center-capsule proof gives two facts that do not use TB1 or KKT stress:
 
 1. the midpoint centerline has length one and its midpoint is `c_j`, so
-   $$
+   ```math
    \operatorname{dist}(c_j,xy)\le {1\over2};
-   $$
+   
+   ```
 2. every strict unit rhombus has inradius greater than `sqrt(3)/4`, and distinct selected rows use distinct contact faces with disjoint interiors, so
-   $$
+   ```math
    |c_i-c_j|\ge {\sqrt3\over2}
    \qquad(i\ne j).
-   $$
+   
+   ```
 
 After a rigid motion taking `xy` to `[0,L] x {0}`, the `N` centers form a `sqrt(3)/2`-separated subset of `S_L`. Thus (FP.1) immediately implies `N<=5` whenever `L<=21/20`.
 
 For a near-unit blocker with
 
-$$
+```math
 L\le1+{K\over D},
-$$
+```
 
 we have `L<=21/20` as soon as `D>=20K`. This proves (FP.2).
 
@@ -141,73 +131,73 @@ The certificate uses a rational square cover; no floating-point decision enters 
 
 Take the grid of closed squares
 
-$$
+```math
 Q_{ij}
 =
 \left[{i\over24},{i+1\over24}\right]
 \times
 \left[{j\over24},{j+1\over24}\right].
 \tag{FP.5}
-$$
+```
 
 Retain every square whose closure intersects `S_{21/20}`. The exact segment-distance test leaves
 
-$$
+```math
 \boxed{1096}
 \tag{FP.6}
-$$
+```
 
 squares. The test is performed after scaling all coordinates by `24*20=480`, so it is an integer comparison against the squared radius.
 
 Every grid square has squared diameter
 
-$$
+```math
 {2\over24^2}={1\over288}<{3\over4}.
 \tag{FP.7}
-$$
+```
 
 Therefore a `sqrt(3)/2`-separated set contains at most one point in each retained square.
 
 Build a graph `G` on the 1096 retained squares. Two squares are adjacent only when their containing rectangles could possibly hold two points at distance at least `sqrt(3)/2`. Explicitly, for rectangles
 
-$$
+```math
 Q=[x_0,x_1]\times[y_0,y_1],
 \qquad
 Q'=[X_0,X_1]\times[Y_0,Y_1],
-$$
+```
 
 set
 
-$$
+```math
 \Delta_x=
 \max\{|x_0-X_1|,|x_1-X_0|\},
 \qquad
 \Delta_y=
 \max\{|y_0-Y_1|,|y_1-Y_0|\}.
-$$
+```
 
 The edge is retained exactly when
 
-$$
+```math
 \Delta_x^2+\Delta_y^2\ge {3\over4}.
 \tag{FP.8}
-$$
+```
 
 Because the grid coordinates have denominator 24, (FP.8) is the integer test
 
-$$
+```math
 4(a^2+b^2)\ge3\cdot24^2.
 \tag{FP.9}
-$$
+```
 
 Any six admissible points would occupy six distinct retained squares, and every pair of those squares would satisfy (FP.8). Hence six admissible points would create a `K_6` in `G`.
 
 The certificate performs an exhaustive branch-and-bound clique decision using Python integer bitsets. A greedy coloring is used only as a rigorous upper bound for pruning; absence of `K_6` is not inferred from a heuristic coloring. The search visits 320050 recursive nodes and returns
 
-$$
+```math
 \boxed{G\text{ contains no }K_6.}
 \tag{FP.10}
-$$
+```
 
 The clique routine is also checked against brute-force enumeration on deterministic small random graphs before it is used on `G`.
 
@@ -217,7 +207,7 @@ Equations (FP.5)--(FP.10) prove the upper bound `|X|<=5`.
 
 The following five rational points all lie in `S_1`:
 
-$$
+```math
 \left(-{1\over2},0\right),
 \quad
 \left({1\over4},{1\over2}\right),
@@ -228,7 +218,7 @@ $$
 \quad
 \left({6\over5},-{9\over20}\right).
 \tag{FP.11}
-$$
+```
 
 A direct rational check gives squared pairwise distances at least `3/4`. Thus the packing number is exactly five at `L=1`; the certificate is proving a genuine packing threshold, not merely improving the previous Oler arithmetic.
 
@@ -238,25 +228,25 @@ A direct rational check gives squared pairwise distances at least `3/4`. Thus th
 
 Let
 
-$$
+```math
 s_0={791\over320{,}000{,}000}.
-$$
+```
 
 The one-sign strong-TB1 population satisfies
 
-$$
+```math
 |M_D|>{s_0\over2}D-o(D).
 \tag{FP.12}
-$$
+```
 
 Partition its layer indices into the six residue classes modulo six and retain a largest class `P_D^0`. Then
 
-$$
+```math
 |P_D^0|
 >{s_0\over12}D-o(D)
 =(\gamma_6-o(1))D,
 \tag{FP.13}
-$$
+```
 
 and distinct retained indices differ by at least six.
 
@@ -278,7 +268,7 @@ Spacing six plus (FP.2) satisfies all three.
 
 Substituting `gamma_6` for `gamma_7`, the poison-forest theorem forces one of
 
-$$
+```math
 \boxed{
 N_{\rm permanent\ lower}
 >
@@ -287,9 +277,9 @@ N_{\rm permanent\ lower}
 (5.14973958333\ldots\times10^{-8}-o(1))D,
 }
 \tag{FP.14}
-$$
+```
 
-$$
+```math
 \boxed{
 N_{\rm permanent\ upper}
 >
@@ -298,11 +288,11 @@ N_{\rm permanent\ upper}
 (2.57486979167\ldots\times10^{-8}-o(1))D,
 }
 \tag{FP.15}
-$$
+```
 
 or
 
-$$
+```math
 \boxed{
 N_{\rm implication\ forest}
 >
@@ -311,36 +301,36 @@ N_{\rm implication\ forest}
 (1.02994791667\ldots\times10^{-7}-o(1))D.
 }
 \tag{FP.16}
-$$
+```
 
 In the permanent LOWER branch, orient blockers by which side contains the nonowner endpoint. The owners are six-spaced and every support interval has depth at most five. Hence the oriented support intervals are pairwise disjoint. The same global train-defect/terminal-variation extraction gives more than
 
-$$
+```math
 \boxed{
 \left({\gamma_6\over16}-o(1)\right)D
 =
 (1.28743489583\ldots\times10^{-8}-o(1))D
 }
 \tag{FP.17}
-$$
+```
 
 good five-deep windows, each with a pure common column family of size
 
-$$
+```math
 (0.6436-o(1))D.
-$$
+```
 
 Using the complete-train bound
 
-$$
+```math
 T_D<(T_*+o(1))D,
 \qquad
 T_*={6121\over2000},
-$$
+```
 
 one fixed train threads more than
 
-$$
+```math
 \boxed{
 \left(
 {\gamma_6\over16}{0.6436\over T_*}-o(1)
@@ -350,13 +340,13 @@ $$
 \right)D
 }
 \tag{FP.18}
-$$
+```
 
 such pairwise-disjoint local ladders. Numerically the coefficient is
 
-$$
+```math
 2.70737820277\ldots\times10^{-9}.
-$$
+```
 
 The local geometric seam is correspondingly smaller: every permanent LOWER blocker now crosses at most five inverse-`D` near-equilateral selected rows.
 
@@ -366,21 +356,21 @@ The local geometric seam is correspondingly smaller: every permanent LOWER block
 
 Every upper Horn extraction whose input coefficient is linear in the retained density improves by the exact factor
 
-$$
+```math
 {\gamma_6\over\gamma_7}={7\over6}.
 \tag{FP.19}
-$$
+```
 
 In particular, combine six-spacing with the current Oler O--O path-capacity coefficient
 
-$$
+```math
 A_*={14\over3\sqrt3}.
 \tag{FP.20}
-$$
+```
 
 The same-type localized upper family obtained by the path-incidence argument can use coefficient
 
-$$
+```math
 \widehat c_{*,6}
 ={\gamma_6\over48A_*}
 =
@@ -389,7 +379,7 @@ $$
 }
 =1.59278760787\ldots\times10^{-9}.
 \tag{FP.21}
-$$
+```
 
 This is exactly `7/6` times the current seven-spaced Oler-path coefficient. The flexible-scale COMMON-CUT/LOCAL-WINDOW alternatives are unchanged structurally; only their input-density constants improve.
 

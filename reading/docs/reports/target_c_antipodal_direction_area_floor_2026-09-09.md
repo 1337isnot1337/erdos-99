@@ -27,20 +27,20 @@ Let
 
 Suppose along an unbounded post-ZF subsequence
 
-$$
+```math
 \frac hD\to y.
 \tag{ADA.1}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}(F)}{D^2}
 \ge A_{AD}(y):=\frac{y+\sin y}{4}.
 }
 \tag{ADA.2}
-$$
+```
 
 Since DB gives `y>=2rho`, where `rho=cos rho`, this is already strictly stronger than the existing DB/PI force-area floors.
 
@@ -50,47 +50,47 @@ Since DB gives `y>=2rho`, where `rho=cos rho`, this is already strictly stronger
 
 Normalize by `D` and translate each source hull so that it lies in a fixed bounded set. Write
 
-$$
+```math
 \widehat K_D:=D^{-1}(K-c_D).
-$$
+```
 
 The canonical global asymptotic gives
 
-$$
+```math
 \frac n{D^2}\to\Delta:=\frac\pi{2\sqrt3}.
 \tag{1.1}
-$$
+```
 
 Oler's finite packing inequality applied to the `n` source points in `K` gives
 
-$$
+```math
 n\le\frac2{\sqrt3}\operatorname{area}(K)+\frac12\operatorname{per}(K)+1.
 \tag{1.2}
-$$
+```
 
 Cauchy's perimeter-diameter inequality gives `per(K)<=pi D`. Divide (1.2) by `D^2` and use (1.1). The perimeter term vanishes, so
 
-$$
+```math
 \liminf\frac{\operatorname{area}(K)}{D^2}
 \ge\frac{\sqrt3}{2}\Delta
 =\frac\pi4.
-$$
+```
 
 The isodiametric inequality gives the reverse bound. Hence
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}(K)}{D^2}\to\frac\pi4.
 }
 \tag{ADA.3}
-$$
+```
 
 By Blaschke selection, every normalized subsequence has a Hausdorff-convergent further subsequence. Diameter and area are continuous for planar convex bodies. Every limit therefore has diameter one and area `pi/4`. Equality in the planar isodiametric inequality is unique, so after translation the limit is the radius-`1/2` disk
 
-$$
+```math
 \boxed{B:=\overline B(0,1/2).}
 \tag{ADA.4}
-$$
+```
 
 ---
 
@@ -98,45 +98,45 @@ $$
 
 Use the same translations for
 
-$$
+```math
 \widehat F_D:=D^{-1}(F-c_D)\subseteq\widehat K_D.
-$$
+```
 
 Pass to a further Hausdorff-convergent subsequence
 
-$$
+```math
 \widehat F_D\to F_\infty.
-$$
+```
 
 Then `F_infty subset B`.
 
 C67 proves that distinct actual diameter edges have distinct projective directions and that those directions are separated by at least
 
-$$
+```math
 \delta_D:=2\arcsin\frac1{2D}.
 \tag{2.1}
-$$
+```
 
 Since `D delta_D ->1`, ADA.1 gives
 
-$$
+```math
 h\delta_D\to y.
 \tag{2.2}
-$$
+```
 
 DDM from PR #130 applies to the exact diameter-direction sets of `widehat F_D`. Therefore the projective set `S(F_infty)` of exact unit-diameter chord directions of `F_infty` has Haar length at least
 
-$$
+```math
 \boxed{\mu(S(F_\infty))\ge y.}
 \tag{ADA.5}
-$$
+```
 
 Now use `F_infty subset B`. A chord of length one inside the radius-`1/2` disk must be a full disk diameter. Consequently, for every projective direction `theta in S(F_infty)`,
 
-$$
+```math
 \boxed{\pm\frac12u_\theta\in F_\infty.}
 \tag{ADA.6}
-$$
+```
 
 Thus `F_infty` contains the convex hull of a positive-measure antipodal subset of the boundary circle.
 
@@ -148,17 +148,17 @@ Thus `F_infty` contains the convex hull of a positive-measure antipodal subset o
 
 Let `S subset R/pi Z` be a nonempty closed projective direction set of measure `s`. Put
 
-$$
+```math
 U:=\{\pm Ru_\theta:\theta\in S\}\subset\partial B(0,R),
 \qquad P:=\operatorname{conv}(U).
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{\operatorname{area}(P)\ge R^2(s+\sin s).}
 \tag{ADA.7}
-$$
+```
 
 Equality is attained when `S` is one projective interval, up to null sets and closure.
 
@@ -166,42 +166,42 @@ Equality is attained when `S` is one projective interval, up to null sets and cl
 
 Lift `S` to the antipodal closed subset of the full angular circle. Its open complement is a countable union of disjoint circular gaps. Antipodality pairs the gaps. Choose one gap from each pair and let their angular lengths be `g_i`. Then
 
-$$
+```math
 \sum_i g_i=\pi-s,
 \qquad 0\le g_i<\pi.
 \tag{3.1}
-$$
+```
 
 The convex hull `P` is obtained from the radius-`R` disk by replacing each missing boundary gap by its chord. A full-circle gap of angle `g` cuts off a circular segment of area
 
-$$
+```math
 \frac{R^2}{2}(g-\sin g).
-$$
+```
 
 Each projective gap occurs twice antipodally. Hence
 
-$$
+```math
 \operatorname{area}(P)
 =R^2\left[s+\sum_i\sin g_i\right].
 \tag{3.2}
-$$
+```
 
 For nonnegative `a,b` with `a+b<=pi`,
 
-$$
+```math
 \sin a+\sin b-\sin(a+b)
 =4\sin\frac a2\sin\frac b2\sin\frac{a+b}{2}\ge0.
 \tag{3.3}
-$$
+```
 
 Iterating (3.3), then passing to the countable limit,
 
-$$
+```math
 \sum_i\sin g_i
 \ge\sin\left(\sum_i g_i\right)
 =\sin(\pi-s)=\sin s.
 \tag{3.4}
-$$
+```
 
 Substitution into (3.2) proves ADA.7. `square`
 
@@ -211,21 +211,21 @@ Substitution into (3.2) proves ADA.7. `square`
 
 Take `S=S(F_infty)` and `R=1/2`. By ADA.6,
 
-$$
+```math
 \operatorname{conv}\{\pm\tfrac12u_\theta:\theta\in S\}\subseteq F_\infty.
-$$
+```
 
 Let `s=mu(S)>=y`. ADA.1 gives
 
-$$
+```math
 \operatorname{area}(F_\infty)\ge\frac{s+\sin s}{4}.
-$$
+```
 
 The function `s+sin s` is nondecreasing on `[0,pi]`, because its derivative is `1+cos s>=0`. Therefore
 
-$$
+```math
 \operatorname{area}(F_\infty)\ge\frac{y+\sin y}{4}.
-$$
+```
 
 Area is continuous under planar Hausdorff convergence. This proves ADA.2.
 
@@ -235,10 +235,10 @@ Area is continuous under planar Hausdorff convergence. This proves ADA.2.
 
 At `y=pi/2`,
 
-$$
+```math
 \boxed{A_{AD}(\pi/2)=\frac{\pi+2}{8}=0.642699\ldots .}
 \tag{ADA.8}
-$$
+```
 
 At the universal DB endpoint `y=2rho=1.47817...`, ADA is already above `0.618`.
 

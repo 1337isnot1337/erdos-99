@@ -12,52 +12,52 @@
 Let `F` be a fully rhombic bounded pentagonal face.  Its five unit boundary contacts
 belong to five distinct non-singleton strict-rhombus stopped trains; denote this set by
 
-$$
+```math
 I(F)=\{\tau_1,\ldots,\tau_5\}.
-$$
+```
 
 The key local fact is purely metric:
 
-$$
+```math
 \boxed{
 \text{no projective arc of length }\pi/3\text{ contains four side directions of }F.
 }
 \tag{FB.1}
-$$
+```
 
 A strict-rhombus crossing between two complete trains requires projective direction
 separation strictly greater than `pi/3`.  For one fixed train direction, the set of
 projective directions that can satisfy this necessary crossing condition is one open
 arc of length exactly `pi/3`.  Therefore (FB.1) implies
 
-$$
+```math
 \boxed{
 \text{every train }\sigma\notin I(F)
 \text{ is noncrossing with at least two members of }I(F).
 }
 \tag{FB.2}
-$$
+```
 
 Equivalently, every external train crosses at most three of the five flower trains.
 This gives an exact degree inequality in the strict-rhombus train-crossing graph
 `G_R` with `T_R` vertices and `R_4` edges:
 
-$$
+```math
 \boxed{
 \sum_{\tau\in I(F)}d_R(\tau)\le3(T_R-5).
 }
 \tag{FB.3}
-$$
+```
 
 If `M` fully rhombic pentagons are present and
 
-$$
+```math
 s_\tau:=\#\{F:\tau\in I(F),\ F\text{ fully rhombic pentagon}\}\in\{0,1,2\},
-$$
+```
 
 then summing (FB.3) gives the weighted endpoint-degree bound
 
-$$
+```math
 \boxed{
 \sum_\tau s_\tau d_R(\tau)
 \le3M(T_R-5),
@@ -65,37 +65,37 @@ $$
 \sum_\tau s_\tau=5M.
 }
 \tag{FB.4}
-$$
+```
 
 Thus the average crossing degree seen from a full-flower terminal occurrence is at
 most
 
-$$
+```math
 \boxed{{3\over5}(T_R-5).}
 \tag{FB.5}
-$$
+```
 
 There is also a global blocker consequence.  Any train `sigma` is incident to at most
 two fully rhombic pentagons.  For every other full flower, (FB.2) supplies two blocker
 terminal occurrences; one blocker train can account for at most its two endpoints.
 Hence
 
-$$
+```math
 \boxed{
 \bar d_R(\sigma)\ge M-2
 \qquad\text{for every strict-rhombus train }\sigma,
 }
 \tag{FB.6}
-$$
+```
 
 where `bar d_R` is nondegree among the other strict-rhombus trains.  Consequently
 
-$$
+```math
 \boxed{
 {T_R\choose2}-R_4\ge {T_R(M-2)\over2}.
 }
 \tag{FB.7}
-$$
+```
 
 The useful new information is not another scalar Mantel floor: the modern full-flower
 branch already has a much larger aggregate Mantel deficit.  The gain is localization.
@@ -110,32 +110,32 @@ and phase-resolved train allocation arguments such as dominant-pentagon splicing
 
 Orient the boundary of `F` counterclockwise and let its successive unit side vectors be
 
-$$
+```math
 e_1,\ldots,e_5,
 \qquad |e_i|=1,
 \qquad \sum_i e_i=0.
-$$
+```
 
 Let `g_i in (0,pi)` be the positive turning angle from `e_i` to `e_{i+1}`.  The
 corresponding two-edge diagonal has length
 
-$$
+```math
 |e_i+e_{i+1}|=2\cos(g_i/2).
-$$
+```
 
 It joins two nonconsecutive source vertices, so unit separation and the fact that the
 pentagon has no diagonal contact give
 
-$$
+```math
 |e_i+e_{i+1}|>1.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{0<g_i<2\pi/3\quad(1\le i\le5).}
 \tag{FB.8}
-$$
+```
 
 This is exactly the strict-turn fact used below.
 
@@ -146,9 +146,9 @@ This is exactly the strict-turn fact used below.
 Assume for contradiction that at least four projective side directions lie in a
 closed projective arc `A` of width
 
-$$
+```math
 w\le\pi/3.
-$$
+```
 
 Rotate coordinates so the midpoint axis of `A` is horizontal.  Every oriented side
 whose projective direction lies in `A` lies either in the lifted cone `A_+` around the
@@ -156,19 +156,19 @@ positive horizontal axis or in the antipodal cone `A_-`.  Each cone has angular 
 at most `pi/3`, so every such side has horizontal projection of absolute value at
 least
 
-$$
+```math
 c:=\cos(w/2)\ge\cos(\pi/6)={\sqrt3\over2}.
 \tag{FB.9}
-$$
+```
 
 First suppose all five projective directions lie in `A`.  Among five oriented vectors,
 one of the two cones contains at least three sides and the other at most two.  Taking
 the sign of the majority cone positive, the total horizontal projection has magnitude
 at least
 
-$$
+```math
 3c-2>0,
-$$
+```
 
 contradicting `sum e_i=0`.
 
@@ -184,9 +184,9 @@ For a `3+1` split, orient the majority cone positively.  The three positive side
 contribute at least `3c`; the one selected negative side and the fifth arbitrary unit
 side contribute at worst `-1` each.  Hence the total horizontal projection is at least
 
-$$
+```math
 3c-2\ge {3\sqrt3\over2}-2>0,
-$$
+```
 
 again contradicting closure.  The reflected `1+3` and `0+4` cases are identical.
 
@@ -197,10 +197,10 @@ oriented direction circle, the two lifted cones are antipodal and each has width
 most `w`.  The two complementary gaps between them therefore each have angular length
 at least
 
-$$
+```math
 \pi-w\ge2\pi/3.
 \tag{FB.10}
-$$
+```
 
 The fifth side has projective direction outside `A`, so its oriented direction lies
 outside `A_+ union A_-`.  It can lie in only one of the two complementary gaps.  The
@@ -221,9 +221,9 @@ other two approach the two adjacent triangular-lattice phases.  Thus `three` in
 Fix a complete strict-rhombus train `sigma` with projective contact direction `phi`.
 On the projective direction circle of circumference `pi`, define
 
-$$
+```math
 C_\phi:=\{\psi:d_{proj}(\phi,\psi)>\pi/3\}.
-$$
+```
 
 Because `d_proj<=pi/2`, `C_phi` is one open arc of length exactly `pi/3`.
 A strict unit-rhombus crossing of `sigma` with another train can occur only if that
@@ -242,28 +242,28 @@ other four trains in `I(F)` anyway.
 
 Count incidences
 
-$$
+```math
 (\sigma,\tau),
 \qquad
 \sigma\notin I(F),\quad
 \tau\in I(F),\quad
 \sigma\pitchfork\tau.
-$$
+```
 
 There are `T_R-5` choices for `sigma`, and by (FB.2) at most three choices for a
 crossing `tau`.  Since the five trains in `I(F)` are pairwise noncrossing by the
 bounded-face endpoint fan, this incidence count is exactly
 
-$$
+```math
 \sum_{\tau\in I(F)}d_R(\tau).
-$$
+```
 
 Hence
 
-$$
+```math
 \sum_{\tau\in I(F)}d_R(\tau)
 \le3(T_R-5),
-$$
+```
 
 which is (FB.3).
 
@@ -271,9 +271,9 @@ Summing over all `M` fully rhombic pentagons counts `d_R(tau)` exactly `s_tau` t
 Every complete train has two terminal occurrences, so `s_tau<=2`, while the five
 terminal occurrences at each flower give
 
-$$
+```math
 \sum_\tau s_\tau=5M.
-$$
+```
 
 This proves (FB.4)--(FB.5).
 
@@ -290,21 +290,21 @@ A fixed blocker train has only two terminal occurrences, so it can be supplied b
 most two different flowers.  Therefore the at least `2(M-2)` blocker occurrences use
 at least `M-2` distinct blocker trains.  Thus
 
-$$
+```math
 \bar d_R(\sigma)\ge M-2.
-$$
+```
 
 Summing this nondegree floor over all `T_R` vertices and dividing by two proves
 (FB.7).
 
 A slightly more informative finite form is
 
-$$
+```math
 \boxed{
 R_4\le {T_R(T_R-M+1)\over2}.
 }
 \tag{FB.11}
-$$
+```
 
 No endpoint-simplicity theorem between two bounded faces is needed for this argument;
 the two-terminal capacity of one complete train is enough.

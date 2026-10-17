@@ -19,57 +19,57 @@
 Let `R_4` be the number of bounded quadrilateral contact faces.  C51 makes every such
 face a strict convex unit rhombus.  Put
 
-$$
+```math
 a_0={\sqrt3\over2},\qquad c_0={\sqrt3\over4},
-$$
+```
 
 and define its total angular-area excess by
 
-$$
+```math
 \boxed{
 E:=\sum_{F\ {
 m quadrilateral}}
 \bigl(\operatorname{area}F-a_0\bigr)\ge0.
 }
 \tag{CRE.1}
-$$
+```
 
 The cyclic circuit identities let the facewise Oler inequalities be summed without
 losing this positive excess.  If `N_F` is the **entire source population lying in the
 force hull** `F`, including contact-isolated points in bounded contact faces and in the
 outer contact face, then
 
-$$
+```math
 \boxed{
 a_0N_F
 \le
 \operatorname{area}F+c_0P_F+a_0-E.
 }
 \tag{CRE.2}
-$$
+```
 
 The C17 Reuleaux container `mathcal R` traps all remaining source points in the convex
 caps between `F` and `partial mathcal R`.  Oler on those caps gives, with
 
-$$
+```math
 \delta_{\mathcal R}:={\pi D^2\over4}-\operatorname{area}(\mathcal R)\ge0,
-$$
+```
 
-$$
+```math
 \boxed{
 E+\delta_{\mathcal R}
 <
 c_0\bigl(2P_F+\pi D-2q\bigr).
 }
 \tag{CRE.3}
-$$
+```
 
 In particular, since `P_F<=pi D`,
 
-$$
+```math
 \boxed{E=O(D)}
 \tag{CRE.4}
-$$
+```
 
 uniformly throughout the cyclic circuit branch.
 
@@ -93,38 +93,38 @@ Let
 
 Face incidence and Euler give
 
-$$
+```math
 4R_4+4f+Q=2e-b,
 \tag{1.1}
-$$
+```
 
-$$
+```math
 e=m+R_4+f-1.
 \tag{1.2}
-$$
+```
 
 Eliminating `e`,
 
-$$
+```math
 2m=2R_4+2f+b+Q+2.
 \tag{1.3}
-$$
+```
 
 In the exact cyclic circuit branch,
 
-$$
+```math
 s_Z=d_H=0,
 \qquad h=q,
 \qquad b+Q=2h=2q.
 \tag{1.4}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{m=R_4+f+q+1.}
 \tag{1.5}
-$$
+```
 
 No simplicity assumption on the outer contact walk is used.
 
@@ -135,57 +135,57 @@ No simplicity assumption on the outer contact walk is used.
 Let `z_i` be the number of contact-isolated source points in the interior of the
 exceptional bounded face `F_i`, and put
 
-$$
+```math
 r_i:=\deg(F_i)-4,
 \qquad k_i=r_i+4.
 \tag{2.1}
-$$
+```
 
 C51 makes `F_i` a convex unit-edge `k_i`-gon.  Oler gives
 
-$$
+```math
 a_0(k_i+z_i-1)
 \le
 \operatorname{area}(F_i)+c_0k_i.
 \tag{2.2}
-$$
+```
 
 Since `c_0=a_0/2`, this rearranges to
 
-$$
+```math
 \operatorname{area}(F_i)
 \ge
 a_0z_i+a_0+{a_0\over2}r_i.
 \tag{2.3}
-$$
+```
 
 Summing over exceptional faces and writing
 
-$$
+```math
 Z_{def}:=\sum_i z_i,
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{
 A_{exc}
 \ge
 a_0(Z_{def}+f)+c_0Q.
 }
 \tag{2.4}
-$$
+```
 
 The quadrilateral faces have total area exactly
 
-$$
+```math
 A_4=a_0R_4+E.
 \tag{2.5}
-$$
+```
 
 Hence, using (1.5),
 
-$$
+```math
 \begin{aligned}
 a_0(m+Z_{def})
 &=a_0R_4+a_0(f+Z_{def})+a_0q+a_0\\
@@ -193,7 +193,7 @@ a_0(m+Z_{def})
 &=A_{bnd}-E-c_0Q+a_0q+a_0.
 \end{aligned}
 \tag{2.6}
-$$
+```
 
 ---
 
@@ -202,27 +202,27 @@ $$
 Let `Z_in` be the contact-isolated source points lying in `F` and in the outer
 contact face.  OP.1 gives the exact inequality
 
-$$
+```math
 Z_{in}
 \le
 {1\over a_0}H+{P_F-b\over2},
 \qquad
 H=\operatorname{area}F-A_{bnd}.
 \tag{3.1}
-$$
+```
 
 Multiplying by `a_0` and using `c_0=a_0/2`,
 
-$$
+```math
 a_0Z_{in}
 \le H+c_0(P_F-b).
 \tag{3.2}
-$$
+```
 
 Add (2.6) and (3.2).  The exact circuit identity `b+Q=2q` and
 `a_0=2c_0` cancel the full graph-boundary contribution:
 
-$$
+```math
 \begin{aligned}
 a_0(m+Z_{def}+Z_{in})
 &\le
@@ -233,7 +233,7 @@ a_0(m+Z_{def}+Z_{in})
 \operatorname{area}F+c_0P_F+a_0-E.
 \end{aligned}
 \tag{3.3}
-$$
+```
 
 The left side is `a_0N_F`.  This proves CRE.2.
 
@@ -259,40 +259,40 @@ Every such source point is contact-isolated, but that fact is not needed for Ole
 set consisting of the two chord endpoints and those `z_j` points is unit-separated in
 `C_j`.  Therefore
 
-$$
+```math
 a_0(z_j+1)
 \le
 \operatorname{area}(C_j)
 +c_0(s_j+D\phi_j).
 \tag{4.1}
-$$
+```
 
 Hence
 
-$$
+```math
 a_0z_j
 \le
 \operatorname{area}(C_j)
 +c_0(s_j+D\phi_j)-a_0.
 \tag{4.2}
-$$
+```
 
 The cap interiors are disjoint and exhaust `mathcal R\setminus F`; moreover
 
-$$
+```math
 \sum_js_j=P_F,
 \qquad
 D\sum_j\phi_j=\pi D.
 \tag{4.3}
-$$
+```
 
 Thus, for
 
-$$
+```math
 Z_{ext}:=\sum_jz_j=n-N_F,
-$$
+```
 
-$$
+```math
 \boxed{
 a_0Z_{ext}
 \le
@@ -300,7 +300,7 @@ a_0Z_{ext}
 +c_0(P_F+\pi D)-a_0q.
 }
 \tag{4.4}
-$$
+```
 
 A source point on a force-hull chord is already in `F`; a source point on a Reuleaux
 arc belongs to the unique adjacent cap up to harmless endpoint assignment.  No source
@@ -312,18 +312,18 @@ point is double counted.
 
 Add CRE.2 and (4.4):
 
-$$
+```math
 a_0n
 \le
 \operatorname{area}(\mathcal R)
 +2c_0P_F+c_0\pi D
 +a_0-a_0q-E.
 \tag{5.1}
-$$
+```
 
 Subtract `a_0` and use `a_0=2c_0`:
 
-$$
+```math
 \boxed{
 a_0(n-1)
 \le
@@ -331,42 +331,42 @@ a_0(n-1)
 +c_0(2P_F+\pi D-2q)-E.
 }
 \tag{5.2}
-$$
+```
 
 The canonical strict translated-lattice comparison for a global minimizer is
 
-$$
+```math
 a_0(n-1)>{\pi D^2\over4}.
 \tag{5.3}
-$$
+```
 
 Write
 
-$$
+```math
 \delta_{\mathcal R}:={\pi D^2\over4}-\operatorname{area}(\mathcal R)\ge0,
 \tag{5.4}
-$$
+```
 
 where nonnegativity is the planar isodiametric inequality because `mathcal R` has
 diameter `D`.  Comparing (5.2) and (5.3) gives exactly
 
-$$
+```math
 \boxed{
 E+\delta_{\mathcal R}
 <
 c_0(2P_F+\pi D-2q).
 }
 \tag{5.5}
-$$
+```
 
 This proves CRE.3.
 
 Since `q>=0` and `P_F<=pi D`,
 
-$$
+```math
 E<3\pi c_0D,
 \tag{5.6}
-$$
+```
 
 which proves CRE.4.  One may retain the favorable `-2q` and
 `delta_{mathcal R}` terms in later cyclic estimates.
@@ -377,27 +377,27 @@ which proves CRE.4.  One may retain the favorable `-2q` and
 
 For a strict unit rhombus with acute angle `theta in (pi/3,pi/2]`, its area excess is
 
-$$
+```math
 \sin\theta-a_0>0.
-$$
+```
 
 The Target B phase-cut theorem PC applies to any finite strict unit-rhombus complex
 satisfying the shared train geometry; it does not require the complex itself to be a
 global minimizer for its purely combinatorial/angular conclusion.  Its angular-defect
 budget `Delta_train` satisfies
 
-$$
+```math
 {3\Delta_{train}\over\pi}
 \le(2+\sqrt3)E.
 \tag{6.1}
-$$
+```
 
 Therefore CRE.4 implies
 
-$$
+```math
 \boxed{\Delta_{train}=O(D).}
 \tag{6.2}
-$$
+```
 
 and PC deletes only `O(D)` rhombus-crossing relations to obtain an exact acyclic real
 phase potential on the remaining train graph.

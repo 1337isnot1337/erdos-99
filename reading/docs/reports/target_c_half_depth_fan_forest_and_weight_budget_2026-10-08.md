@@ -32,13 +32,13 @@ diameter `D` and an actual diameter pair `pa`. Write
 `u=(p-a)/D` and `s(x)=u dot (p-x)`. Suppose
 `A subset B(c,R)`, where `R>=D/2`. Put
 
-$$
+```math
 P=u\cdot(p-c),\qquad E=\sqrt{R^2-D^2/4}.
-$$
+```
 
 For a displacement length `delta>0` define
 
-$$
+```math
 A(E,\delta)=
 \begin{cases}
 E^2/\delta+\delta/2,&0\le E\le\delta/2,\\
@@ -46,7 +46,7 @@ E+\delta/4,&E\ge\delta/2,
 \end{cases}
 \qquad H=P-A(E,\delta).
 \tag{1}
-$$
+```
 
 Assume `H>0` when applying the closure theorem.
 The geometry lemma uses neither KKT equilibrium nor optimality.
@@ -73,40 +73,40 @@ then `|x'-y|<D`.
 Let `t=s(y)-s(x)=u dot (x-y)`. Distance increase means
 `t<delta/2`. The old midpoint `m=(x+y)/2` has outward projection
 
-$$
+```math
 u\cdot(m-c)=P-s(x)-t/2>A(E,\delta)-t/2>0.
-$$
+```
 
 The last inequality uses `A>=delta/2` and `t<delta/2`.
 Since both old points lie in the radius-`R` ball,
 
-$$
+```math
 |x-y|^2/4+|m-c|^2
 =(|x-c|^2+|y-c|^2)/2\le R^2.
-$$
+```
 
 The exact translated squared distance is therefore strictly below
 
-$$
+```math
 F(t)=4R^2-4(A-t/2)^2-2\delta t+\delta^2.
 \tag{2}
-$$
+```
 
 For `E<=delta/2` the first branch of (1) gives
 
-$$
+```math
 F(t)=D^2-(t-2E^2/\delta)^2\le D^2.
 \tag{3}
-$$
+```
 
 For `E>=delta/2`,
 
-$$
+```math
 F(\delta/2)=D^2,\qquad
 F'(t)=4E-\delta-2t\ge4E-2\delta\ge0
 \quad(t\le\delta/2).
 \tag{4}
-$$
+```
 
 Equations (2)--(4) prove strict upper safety. The calculation concerns
 the old midpoint; it does not assume the translated point remains
@@ -116,35 +116,35 @@ in the circumcircle. No inactive upper pair is omitted.
 
 The diameter midpoint satisfies
 
-$$
+```math
 |(p+a)/2-c|^2+D^2/4
 =(|p-c|^2+|a-c|^2)/2\le R^2.
-$$
+```
 
 Consequently `P>=D/2-E` and
 
-$$
+```math
 H\ge H_0:=D/2-E-A(E,\delta).
 \tag{5}
-$$
+```
 
 In particular, when `R=D/2`, the midpoint is `c` and
 `H=H_0=D/2-delta/2`. This finite correction is sharp for the
 standalone geometry lemma. Set `c=0`, `p=(D/2,0)`,
 `a=(-D/2,0)` and take
 
-$$
+```math
 x=(\epsilon,\sqrt{D^2/4-\epsilon^2}),\qquad
 y=(\epsilon,-\sqrt{D^2/4-\epsilon^2}),
 \quad 0<\epsilon<\delta/2.
-$$
+```
 
 The old four-point source has diameter `D`, while
 
-$$
+```math
 |x-\delta u-y|^2=D^2-4\epsilon^2+\delta^2>D^2.
 \tag{6}
-$$
+```
 
 For any proposed threshold larger than `D/2-delta/2`, choose
 `epsilon` above its corresponding outward margin and below `delta/2`.
@@ -183,21 +183,21 @@ Therefore no such closed set exists. For `H>0` and `0<delta<2D`,
 the closure from `p` must reach `H`. Parent arrows give a
 distinct-vertex path to its first depth crossing, with
 
-$$
+```math
 1\le d_j\le1+\delta,\qquad
 \Delta s_j>\delta/2,\qquad
 d_j-1\le\delta\Delta s_j-\delta^2/2.
 \tag{7}
-$$
+```
 
 Its length `L` and total edge excess satisfy
 
-$$
+```math
 L\ge H/(1+\delta),\qquad
 \sum_j(d_j-1)
 <\delta(H+1+\delta)-L\delta^2/2.
 \tag{8}
-$$
+```
 
 This has the same finite endpoint as the previous
 [diameter-ball cap estimate](target_c_sharp_cap_closure_and_unbounded_path_congestion_2026-10-08.md).
@@ -208,19 +208,19 @@ No path disjointness is assumed.
 
 Canonical FS.1 gives
 
-$$
+```math
 R_{\rm circ}\le D/2+\eta,\qquad
 \eta=3^{1/4}\sqrt D.
-$$
+```
 
 Use the actual circumradius in (1). For `delta=1/D`, (5) gives
 `H_0=D/2-o(D)`. A conservative explicit threshold follows by
 using the larger radius `D/2+eta`, for which `E>delta/2`:
 
-$$
+```math
 \widehat H=D/2-2\sqrt{D\eta+\eta^2}-1/(4D).
 \tag{9}
-$$
+```
 
 The canonical midpoint estimate has
 `sqrt(D eta+eta^2)<D/8` for `D>=10000`, as verified in the
@@ -228,11 +228,11 @@ centered-fan source report. Thus (9) is positive there. The
 closure must reach this uniform threshold, and along an unbounded
 canonical source sequence
 
-$$
+```math
 \liminf L/D\ge1/2,\qquad
 \limsup\sum_j(d_j-1)\le1/2.
 \tag{10}
-$$
+```
 
 For a degree-two centered fan seed at `delta=1/D` its old two
 contacts are preserved exactly. Its first arrow is a strict old
@@ -277,11 +277,11 @@ satisfies SR.6. Every solo reflection needs a strict-pair blocker,
 and Lemma SR.2 makes these blockers distinct. None is an actual
 diameter endpoint. Consequently
 
-$$
+```math
 \boxed{\text{disjoint loaded-to-diameter-inactive blocker pairs}
 \ \ge\ \lceil U/2\rceil.}
 \tag{11}
-$$
+```
 
 All leaves, blockers and carriers are original source labels.
 A blocker is not asserted to be a contact isolate. Equation (11)
@@ -292,28 +292,28 @@ half-depth paths disjoint.
 
 For any normalized KKT stress, `sum_H beta=1` and
 
-$$
+```math
 \sum_C\alpha=D^2.
 \tag{12}
-$$
+```
 
 At a fan leaf its only diameter reaction is `beta_pa(p-a)`.
 The contact vectors `p-p_-` and `p-p_+` have outward radial
 projection `1/(2D)` and opposite nonzero tangent projections.
 Equilibrium gives
 
-$$
+```math
 \boxed{\alpha_{pp_-}=\alpha_{pp_+}=D^2\beta_{pa}.}
 \tag{13}
-$$
+```
 
 For an independent fan set `S` its incident contact edges are
 all distinct, so (12)--(13) imply
 
-$$
+```math
 2\sum_{p\in S}\beta_{pa}\le1.
 \tag{14}
-$$
+```
 
 The bound is strict if any other contact has positive multiplier.
 Every fan contact is loaded-loaded, so its weight is paid by
@@ -325,10 +325,10 @@ including both nonfan endpoint contacts, each have weight
 `D^2 beta_r`. These contact sets are disjoint between components.
 Therefore
 
-$$
+```math
 \sum_{\text{fan components}}(r+1)\beta_r\le1.
 \tag{15}
-$$
+```
 
 This stress restriction is missing from an isolated loaded-carrier
 geometric fixture. It has no integer population consequence

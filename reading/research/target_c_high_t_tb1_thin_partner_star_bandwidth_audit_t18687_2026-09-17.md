@@ -20,9 +20,9 @@ The candidate combines two independent controls on the extreme leaves of one rep
 
 The combination gives
 
-$$
+```math
 d<\left({16\,3^{1/8}\over15}+o(1)\right)D^{3/4}.
-$$
+```
 
 The proof survives review. The important scope restrictions are recorded below.
 
@@ -32,44 +32,44 @@ The proof survives review. The important scope restrictions are recorded below.
 
 Let the common partner be `q` and two leaves be `p,p'`. Put
 
-$$
+```math
 a=|qp|,
 \qquad b=|qp'|,
 \qquad c=|pp'|.
-$$
+```
 
 THIN gives
 
-$$
+```math
 a,b>D-{1\over4D}=:\ell_D,
-$$
+```
 
 while source separation and diameter give
 
-$$
+```math
 1\le c\le D.
-$$
+```
 
 At `q`,
 
-$$
+```math
 a^2+b^2>2\ell_D^2>D^2\ge c^2
-$$
+```
 
 for `D>1`. At either leaf,
 
-$$
+```math
 \ell_D^2+1-D^2
 ={1\over2}+{1\over16D^2}>0,
-$$
+```
 
 so
 
-$$
+```math
 a^2+c^2>b^2,
 \qquad
 b^2+c^2>a^2.
-$$
+```
 
 Thus the triangle is acute, and its minimum enclosing radius is its ordinary circumradius. Since the whole source lies in the canonical circumdisk, the triangle circumradius is at most that source circumradius.
 
@@ -81,42 +81,42 @@ Thus the triangle is acute, and its minimum enclosing radius is its ordinary cir
 
 If `theta=angle pqp'`, then
 
-$$
+```math
 c^2=(a-b)^2+4ab\sin^2(\theta/2)
 \ge4\ell_D^2\sin^2(\theta/2).
-$$
+```
 
 With
 
-$$
+```math
 R_\triangle={c\over2\sin\theta},
-$$
+```
 
 this yields
 
-$$
+```math
 R_\triangle\ge {\ell_D\over2\cos(\theta/2)}.
-$$
+```
 
 The canonical source bound
 
-$$
+```math
 R_\triangle\le R_D<{D\over2}+\eta_D
-$$
+```
 
 therefore gives
 
-$$
+```math
 \cos(\theta/2)>{\ell_D\over D+2\eta_D}.
-$$
+```
 
 Using `c=2R_triangle sin(theta)` and `sin(theta)<=2sin(theta/2)` gives exactly
 
-$$
+```math
 \boxed{
 c<2\sqrt{(D+2\eta_D)^2-\ell_D^2}.
 }
-$$
+```
 
 There is no missing factor of two. The regression certificate checks the expansion and a numerical grid of admissible acute triangles.
 
@@ -128,38 +128,38 @@ There is no missing factor of two. The regression certificate checks the expansi
 
 With
 
-$$
+```math
 \eta_D=3^{1/4}D^{1/2},
 \qquad
 \ell_D=D-{1\over4D},
-$$
+```
 
 one has
 
-$$
+```math
 (D+2\eta_D)^2-\ell_D^2
 =4D\eta_D+4\eta_D^2+{1\over2}-{1\over16D^2}.
-$$
+```
 
 Hence
 
-$$
+```math
 \Xi_D
 =2\,3^{1/8}D^{3/4}(1+o(1)).
-$$
+```
 
 The path-bandwidth inequality contributes the factor `4` in front of the leaf distance, so
 
-$$
+```math
 15(d-1)<8\Xi_D+2\pi\sqrt3
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 d<\left({16\,3^{1/8}\over15}+o(1)\right)D^{3/4}.}
-$$
+```
 
 The ratio against the generic inactive near-diameter coefficient `8*3^(1/8)` is exactly `15/2=7.5`.
 
@@ -173,21 +173,21 @@ The bandwidth theorem is a statement about an arbitrary straight segment between
 
 For a repeated-partner star, order the distinct owner coordinates
 
-$$
+```math
 i_1<\cdots<i_d.
-$$
+```
 
 They belong to the retained Horn coordinate set, so
 
-$$
+```math
 i_d-i_1\ge15(d-1).
-$$
+```
 
 The extreme owner vertices lie in `R_{i_1}` and `R_{i_d}`. A source vertex never lies on a selected train centerline, so the region labels are unambiguous. The extreme-owner segment crosses every separating selected O--O row, and the bandwidth theorem gives
 
-$$
+```math
 i_d-i_1<4|p_1-p_d|+2\pi\sqrt3.
-$$
+```
 
 No same-host hypothesis is needed for this star bound.
 
@@ -216,29 +216,29 @@ Selected train centerlines contain no source vertices, so no source vertex lies 
 
 The blocker-rich row contains
 
-$$
+```math
 |T_*|>({\gamma\over80}-o(1))D.
-$$
+```
 
 The owner-shore split retains `gamma/160` density. Dividing by the sharpened star coefficient gives
 
-$$
+```math
 \boxed{
 {15\gamma\over2560\,3^{1/8}}
 =4.20839394782\ldots\times10^{-10}
 }
-$$
+```
 
 as the `D^(1/4)` matching coefficient.
 
 Fixing one physical owner host and one monotone side of the one-turn partner-region word costs two further factors of two, giving
 
-$$
+```math
 \boxed{
 {15\gamma\over10240\,3^{1/8}}
 =1.05209848696\ldots\times10^{-10}
 }
-$$
+```
 
 for the synchronized endpoint-disjoint staircase/nested rail.
 
@@ -252,9 +252,9 @@ The local regression certificate checks these constants directly.
 
 The new star cap does **not** improve the exponent `D^(3/4)` in the common-partner degree bound. That exponent comes from the current canonical circumradius error
 
-$$
+```math
 R_D-{D\over2}=O(\sqrt D).
-$$
+```
 
 Consequently the endpoint-disjoint synchronized rail remains only `Omega(D^(1/4))`. The older unsynchronized superdiameter rail has a larger coefficient; the gain here is that the new matching/rail lives on the same blocker-rich row with inverse-`D` phase purification and common circumcenter flanks.
 

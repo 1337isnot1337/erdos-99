@@ -84,10 +84,10 @@ deformation, two intersecting distinct chords never have equal projective direct
 distinct unit outward normal n_i strictly inside the normal cone at p_i. Put
 p_i(t)=(1−t)p_i+t n_i, for 0≤t≤1. For j≠i,
 
-$$
+```math
 n_i\cdot(p_i(t)-p_j(t))
 =(1-t)n_i\cdot(p_i-p_j)+t(1-n_i\cdot n_j)>0.
-$$
+```
 
 Thus every p_i(t) remains a uniquely exposed vertex of the convex hull of these
 points. In particular all are distinct and no three are collinear. Cyclic order
@@ -110,10 +110,10 @@ orient all three into its corresponding open half-plane, and order by increasing
 direction there. For any circular interval I of polygon vertices, set
 z_h=1_I(head h)−1_I(tail h). Then
 
-$$
+```math
 z_g(z_e-z_f)\le0,\qquad z_e(z_g-z_f)\le0.
 \tag{S}
-$$
+```
 
 **Proof.** Delete vertices that are not among the three chords' endpoints. There
 are m=3,4,5 or 6 remaining vertices. Restriction of I is still a circular interval
@@ -130,7 +130,7 @@ sends z to −z and leaves both products in (S) unchanged.
 It remains a finite integer check. In the parabola representative, orient every
 chord ij from smaller to larger index. Its slope is i+j. For intersecting chords
 these slopes are distinct. Enumerate all three-element subsets of the
-$\binom m2$ chords whose pairs either share an endpoint or alternate in cyclic
+$`\binom m2`$ chords whose pairs either share an endpoint or alternate in cyclic
 order. Sort by slope. The three projective cuts are its three cyclic rotations,
 reversing every edge moved from the beginning to the end. For each start index
 0≤a<m and each length 0≤l≤m use I={a,a+1,...,a+l−1} modulo m.
@@ -209,9 +209,9 @@ Congruence gives B_H⁻¹−K≽0. With Y=R¹/²QB_H¹/² on 1-perp, this means
 YᵀY≼I, hence YYᵀ≼I, equivalently L_H≼Λ. Schur complementing the positive
 Dirichlet interior block then gives
 
-$$
+```math
 \Omega=L_C-L_H\succeq0
-$$
+```
 
 on all scalar vertex fields, including zero blocks outside the positive component.
 
@@ -242,9 +242,9 @@ of this feasible right-hand side, allowing a correction with
 |y|≤H ε(x), where ε(x)=|[g_*(x)]_-|. Choose Euclidean norms. The fixed quadratic
 map obeys |Q_*(x+y)−Q_*(x)|≤L(|x||y|+|y|²), so
 
-$$
+```math
 \varepsilon(x+y)\le LH|x|\varepsilon(x)+LH^2\varepsilon(x)^2.
-$$
+```
 
 Start at x_0=tv with ε(x_0)≤C t². For sufficiently small t (depending on this
 fixed configuration and v), the displayed factor is at most 1/2 throughout

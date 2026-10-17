@@ -16,9 +16,9 @@
 
 Put
 
-$$
+```math
 \boxed{S:=e_{BB}+2s_C.}
-$$
+```
 
 The GU/PI low-surplus branch is governed by `S/D`.  The PC ledger resolves `S` into nonnegative geometric currencies.  This note pushes that resolution to the actual contact graph.
 
@@ -42,26 +42,26 @@ Use the PC notation
 
 PC proves
 
-$$
+```math
 e_{BB}=d_P+Q+2k+c_B.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 S=d_P+Q+2k+c_B+2s_C.
 }
 \tag{TN.1}
-$$
+```
 
 Every term on the right is nonnegative.  Consequently
 
-$$
+```math
 \boxed{
 d_P,Q,c_B\le S,\qquad k,s_C\le S/2.}
 \tag{TN.2}
-$$
+```
 
 This simple equality is the source of all stability estimates below.
 
@@ -71,35 +71,35 @@ This simple equality is the source of all stability estimates below.
 
 PC also gives
 
-$$
+```math
 q=a+d_P+Q+2k.
 \tag{TN.3}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{0\le q-a=d_P+Q+2k\le S.}
 \tag{TN.4}
-$$
+```
 
 So at least `q-S` force-hull sides are missing contact edges and therefore create OP outer pockets.
 
 A nontriangular outer pocket has degree at least four and contributes at least one to `d_P`. Thus
 
-$$
+```math
 \boxed{
 \#\{P:\deg P\ge4\}\le d_P\le S.
 }
 \tag{TN.5}
-$$
+```
 
 Therefore at least
 
-$$
+```math
 \boxed{a-S\ge q-2S}
 \tag{TN.6}
-$$
+```
 
 outer pockets are triangles.
 
@@ -111,42 +111,42 @@ No positive lower area per triangular pocket is claimed: a two-unit-edge pocket 
 
 PC gives
 
-$$
+```math
 a+k=c_I+c_B+s_C+2.
 \tag{TN.7}
-$$
+```
 
 Eliminate `a` using TN.3:
 
-$$
+```math
 \begin{aligned}
 q-c_I
 &=d_P+Q+k+c_B+s_C+2.
 \end{aligned}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 q-c_I=d_P+Q+k+c_B+s_C+2.
 }
 \tag{TN.8}
-$$
+```
 
 By TN.1,
 
-$$
+```math
 \boxed{2\le q-c_I\le S+2.}
 \tag{TN.9}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{c_I\ge q-S-2.}
 \tag{TN.10}
-$$
+```
 
 So a low-`S` source has almost one unloaded component per loaded terminal, just as in the exact zero-surplus triangulation branch.
 
@@ -156,51 +156,51 @@ So a low-`S` source has almost one unloaded component per loaded terminal, just 
 
 Use the ZJ incidence slacks
 
-$$
+```math
 u_A:=\sum_r(|A_r|-3)\ge0,
-$$
+```
 
-$$
+```math
 p_A:=q_{used}+2c_I-2s-a_{inc}\ge0,
-$$
+```
 
 `u_0=q-q_used>=0`, and let `s` be the number of nontrivial connected components of the attachment-incidence graph.  ZJ proves
 
-$$
+```math
 \boxed{
 e_{BB}+s_C-k
 =u_A+p_A+2(s-1)+u_0.
 }
 \tag{TN.11}
-$$
+```
 
 The left side is nonnegative and is at most `e_BB+s_C<=S`. Therefore
 
-$$
+```math
 \boxed{
 u_A,p_A,u_0\le S,
 \qquad
 2(s-1)\le S.
 }
 \tag{TN.12}
-$$
+```
 
 Every component with more than three distinct loaded attachments contributes at least one to `u_A`. Hence
 
-$$
+```math
 \boxed{
 \#\{r:|A_r|>3\}\le S.
 }
 \tag{TN.13}
-$$
+```
 
 At least `c_I-S` unloaded components therefore have exactly three distinct loaded attachments.
 
 C49.1 gives pairwise disjoint interiors for the convex attachment cells
 
-$$
+```math
 P_r:=\operatorname{conv}(A_r).
-$$
+```
 
 Thus the `|A_r|=3` components produce a family of pairwise interior-disjoint nondegenerate triangles on the convex terminal set `B_+`.
 
@@ -210,39 +210,39 @@ Thus the `|A_r|=3` components produce a family of pairwise interior-disjoint non
 
 ZK gives the exact component-diameter ledger
 
-$$
+```math
 \sum_r\delta_r+R_I+s_B+3k
 =6+e_{BB}+2s_C
 =6+S.
 \tag{TN.14}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \sum_r\delta_r\le6+S-3k\le6+S.
 }
 \tag{TN.15}
-$$
+```
 
 A connected unloaded component with at least two vertices has graph diameter at least one. Hence
 
-$$
+```math
 \boxed{
 \#\{r:|I_r|>1\}\le6+S.
 }
 \tag{TN.16}
-$$
+```
 
 Combining TN.10, TN.13, and TN.16, at least
 
-$$
+```math
 \boxed{
 q-3S-8
 }
 \tag{TN.17}
-$$
+```
 
 unloaded components are simultaneously
 
@@ -257,37 +257,37 @@ The constant is deliberately crude but finite and explicit.
 
 For a singleton component `I_r={z}`, there are no internal contact edges and `delta_r=0`.  ZK's component identity is
 
-$$
+```math
 t_r-\delta_r-3=s_r+r_r.
-$$
+```
 
 For a singleton,
 
-$$
+```math
 r_r=2|I_r|-\delta_r-2-e_r=0,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{t_r-3=s_r.}
 \tag{TN.18}
-$$
+```
 
 ZK also proves
 
-$$
+```math
 \sum_rs_r=s_C.
-$$
+```
 
 Thus at most `s_C<=S/2` singleton components have more than three loaded contact edges.  Combining with TN.17 gives at least
 
-$$
+```math
 \boxed{
 q-\frac72S-8
 }
 \tag{TN.19}
-$$
+```
 
 unloaded vertices `z` with exactly three unit contacts, all to three distinct loaded terminals, and no other contact.
 
@@ -305,36 +305,36 @@ Let `T` be one of the attachment triangles from TN.19 and let `z` be its singlet
 
 Write the three central gaps between the contact directions at `z` as
 
-$$
+```math
 \theta_1+\theta_2+\theta_3=2\pi.
-$$
+```
 
 Acuteness gives `theta_i<pi`, while unit separation plus triangle-freeness gives `theta_i>pi/3`.  The area is
 
-$$
+```math
 \operatorname{area}(T)
 =\frac12\sum_{i=1}^3\sin\theta_i.
 \tag{TN.20}
-$$
+```
 
 On the open polytope
 
-$$
+```math
 \theta_i\in(\pi/3,\pi),\qquad \sum\theta_i=2\pi,
-$$
+```
 
 the infimum occurs at the boundary configuration `(pi,pi/3,2pi/3)` up to permutation. Hence
 
-$$
+```math
 \boxed{
 \operatorname{area}(T)>\frac{\sqrt3}{2}.
 }
 \tag{TN.21}
-$$
+```
 
 The inequality is strict, but the constant is only an infimum.  Therefore the regular tripod cells already contribute at least
 
-$$
+```math
 \boxed{
 \sum_{r\ regular}\operatorname{area}(P_r)
 >
@@ -342,7 +342,7 @@ $$
 \max\left\{0,q-\frac72S-8\right\}.
 }
 \tag{TN.22}
-$$
+```
 
 This is only `Omega(D)` area because `q=Theta(D)`; it is not a force-bulk closure.  It is nevertheless a useful exact regression against treating the attachment triangles as arbitrarily thin.
 
@@ -352,17 +352,17 @@ This is only `Omega(D)` area because `q=Theta(D)`; it is not a force-bulk closur
 
 Assume
 
-$$
+```math
 S=o(D).
 \tag{TN.23}
-$$
+```
 
 DB gives `q>=h>=(2rho-o(1))D`, so `q=Theta(D)`.  Then the preceding finite estimates imply
 
-$$
+```math
 \boxed{a=q-o(D),\qquad c_I=q-o(D),}
 \tag{TN.24}
-$$
+```
 
 and:
 
@@ -375,18 +375,18 @@ and:
 
 At the same time the ZK attachment-cell area upper bound gives
 
-$$
+```math
 \sum_r\operatorname{area}(P_r)=o(D^2),
 \tag{TN.25}
-$$
+```
 
 while PI gives
 
-$$
+```math
 \operatorname{area}(F)
 \ge(0.4978566363\ldots-o(1))D^2.
 \tag{TN.26}
-$$
+```
 
 Thus a sublinear-surplus survivor has a paradoxical but not yet contradictory form:
 
@@ -407,21 +407,21 @@ For completeness, the Eppstein diameter edge bound has an exact stability certif
 
 Fix a graph-diameter pair `u,w` in a connected triangle-free penny graph `G` with `n` vertices, `e` edges and graph diameter `delta`.  Unroll Eppstein's induction: while the graph contains a cycle, remove a non-articulation vertex `v_i` of current degree `d_i<=2`, avoiding `u,w`.  Stop at a tree `T` on `t` vertices.  Then
 
-$$
+```math
 e=(t-1)+\sum_i d_i,
 \qquad
 n=t+\#\{i\}.
-$$
+```
 
 Since deletion cannot shorten the fixed `u-w` distance, `t>=delta+1`.  Therefore the exact Eppstein slack is
 
-$$
+```math
 \boxed{
 2n-\delta-2-e
 =(t-\delta-1)+\sum_i(2-d_i).
 }
 \tag{TN.27}
-$$
+```
 
 Every term is nonnegative.  Thus small Eppstein slack means the terminal tree has few vertices off a diameter geodesic and only few peeling steps have degree below two.  It does **not** imply a path-like original graph: square grids have zero slack and quadratic many degree-two peeling steps.  This is why TN.27 is recorded only as a shelling certificate, not as a closure.
 

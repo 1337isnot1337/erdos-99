@@ -53,9 +53,9 @@ minimum pair distance exactly one and diameter D. Given epsilon > 0 there
 is a unit-separated n-point set A_epsilon with exactly one unit-contact
 edge, hence no unit triangle, and
 
-$$
+```math
 \operatorname{diam}(A_\varepsilon)\le D+\varepsilon.
-$$
+```
 
 The construction retains all n labels and converges to A as epsilon tends
 to zero. It is a whole-source construction, not a scaffold or a subset.
@@ -64,15 +64,15 @@ to zero. It is a whole-source construction, not a scaffold or a subset.
 
 Choose an actual contact pair a,b, set u=b-a (so |u|=1), and choose
 
-$$
+```math
 0<t<\tfrac12.
-$$
+```
 
 Replace just these two positions by
 
-$$
+```math
 a_t=a+tu,\qquad b_t=b-tu,
-$$
+```
 
 and leave every other position fixed. Call the resulting labeled set B_t.
 The chosen distance is exactly 1-2t. Every other distance involving a moved
@@ -88,16 +88,16 @@ diam(B_t) <= D.
 
 Dilate B_t about the old midpoint m=(a+b)/2 by factor (1-2t)^(-1):
 
-$$
+```math
 A_t=m+\frac{B_t-m}{1-2t}.
-$$
+```
 
 The selected distance is now one, and every other distance is strictly
 greater than one. Moreover diam(A_t) <= D/(1-2t). Set
 
-$$
+```math
 t=\frac{\varepsilon}{2(D+\varepsilon)}.
-$$
+```
 
 Then 0<t<1/2 and D/(1-2t)=D+epsilon. This proves the assertion. Since
 t tends to zero, every labeled position converges to its old position.
@@ -108,13 +108,13 @@ the other labels expand about m. No genericity argument is required. QED.
 
 For every integer n >= 2,
 
-$$
+```math
 \begin{aligned}
 D(n)
 &=\inf\{\operatorname{diam}A: |A|=n,\ A\text{ unit-separated and triangle-free}\}\\
 &=\inf\{\operatorname{diam}A: |A|=n,\ A\text{ unit-separated with exactly one unit contact}\}.
 \end{aligned}
-$$
+```
 
 To justify applying Proposition 1, a global minimizer exists: translate one
 label to the origin, use any finite feasible competitor for an upper
@@ -169,17 +169,17 @@ to (1-s)x, with s > 0 small.
 For such a label, both old endpoint distances are strictly greater than
 one. Squaring the smaller one gives
 
-$$
+```math
 |x|^2+\tfrac14-|x\cdot u|>1,
 \quad\text{hence}\quad |x|^2>\tfrac34+|x\cdot u|.
-$$
+```
 
 For e=a or e=b, the derivative at s=0 is
 
-$$
+```math
 \left.\frac{d}{ds}|(1-s)x-e|^2\right|_{s=0}
 =-2(|x|^2-x\cdot e)<0,
-$$
+```
 
 because |x dot e| <= |x dot u|/2. Every distance between two contracted
 labels also strictly decreases, and the sole fixed-fixed distance stays
@@ -247,10 +247,10 @@ convex pentagon one corner angle is at least 3pi/5. Since both adjoining
 sides are at least one and cos(3pi/5)<0, the opposite two-step diagonal
 has squared length at least
 
-$$
+```math
 2-2\cos(3\pi/5)=\frac{3+\sqrt5}{2}=\varphi^2,
 \qquad \varphi=\frac{1+\sqrt5}{2}<\sqrt3.
-$$
+```
 
 The regular unit pentagon attains phi. Thus D(5)=phi. At equality every
 corner angle is at most 3pi/5, so all five equal 3pi/5; equality of the
@@ -296,26 +296,26 @@ Here is an exact reconstruction of a particular full-source family.
 Put theta=pi/7, R=1/(2 sin(theta)), H=R cos(theta), and let the
 regular unit heptagon have vertices
 
-$$
+```math
 v_k=(R\sin((2k+1)\theta), R\cos((2k+1)\theta)),
 \qquad k=0,\ldots,6.
-$$
+```
 
 The top adjacent pair is v_0=(1/2,H), v_6=(-1/2,H). Since
 theta<pi/6, R>1 and H>sqrt(3)/2. Define
 
-$$
+```math
 s=H-\frac{\sqrt3}{2}>0,\qquad
 A_t=\{v_0,\ldots,v_6,(0,t)\},\qquad 0\le t\le s.
-$$
+```
 
 The eighth label lies on the segment from the center to the top-edge
 midpoint, so the convex hull stays fixed. For either top endpoint its
 squared distance from that label is
 
-$$
+```math
 \tfrac14+(H-t)^2\ge\tfrac14+(H-s)^2=1.
-$$
+```
 
 Every other heptagon vertex has y-coordinate strictly less than H.
 For t>0 its squared distance R^2+t^2-2t y is therefore strictly greater
@@ -355,10 +355,10 @@ small finite contraction in Proposition 2. It also checks the equilateral
 three-point example symbolically: for t in (0,1/2), its normalized squared
 diameter is
 
-$$
+```math
 \frac{1-t+t^2}{(1-2t)^2}
 =1+\frac{3t(1-t)}{(1-2t)^2}>1.
-$$
+```
 
 It also checks every pair in an exact regular unit pentagon using arithmetic
 in Q(sqrt(5)) for the squared distances. The proofs above, rather than

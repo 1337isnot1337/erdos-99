@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_p2_odd_m_and_full_closure_2026-09-10.md) · source SHA-256 `7f2cfa4b69368f03436fa4fa91da7eca888f7344dab3d1309efda26f2e984913`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-1349EAD9D1A8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=2`, P2: odd-`m` square-lift closure and complete sufficiently-large P2 exclusion
 
@@ -18,15 +20,15 @@
 
 ES excludes P2 for all sufficiently large even
 
-$$
+```math
 m=q-4.
-$$
+```
 
 For odd `m`, the reciprocal lift does not factor over `Q(i)[Z]` using an integral half-power of `Z`. After the harmless substitution
 
-$$
+```math
 Z=T^2,
-$$
+```
 
 it does. The resulting factors are specializations of the fixed square-cover curve `mathcal G`, and OK proves all primitive rank-two monomial pullbacks of that curve irreducible.
 
@@ -36,18 +38,18 @@ This closes the remaining parity and therefore the entire sufficiently-large P2 
 
 For every sufficiently large odd integer
 
-$$
+```math
 m=q-4,
-$$
+```
 
 the trace polynomial
 
-$$
+```math
 \boxed{
 H_m(X)=2T_m(X/2)+16X^2-48X+34
 }
 \tag{OS.1}
-$$
+```
 
 is irreducible over `Q`.
 
@@ -59,26 +61,26 @@ Combining with ES gives:
 
 There is an integer `M_0` such that for every
 
-$$
+```math
 \boxed{m=q-4\ge M_0,}
-$$
+```
 
 there is **no** cyclic `d_H=2` P2 survivor.
 
 Equivalently, the branch
 
-$$
+```math
 (r_\parallel,a_{short})=(2,0)
-$$
+```
 
 is eliminated completely in the asymptotic Target C regime.
 
 The surviving `d_H=2` branches are only
 
-$$
+```math
 \boxed{PS=(1,1),\qquad S2=(0,2).}
 \tag{P2X.1}
-$$
+```
 
 ---
 
@@ -86,57 +88,57 @@ $$
 
 P2A gives for every `m`
 
-$$
+```math
 R_m(Z)
 :=Z^mH_m(Z+Z^{-1})
 =(Z^m-1)^2+Z^{m-2}A(Z)^2,
 \tag{1.1}
-$$
+```
 
 where
 
-$$
+```math
 A(Z)=4Z^2-6Z+4.
-$$
+```
 
 Assume now
 
-$$
+```math
 m\ge3
-$$
+```
 
 is odd. Substitute
 
-$$
+```math
 Z=T^2.
-$$
+```
 
 Then
 
-$$
+```math
 \begin{aligned}
 R_m(T^2)
 &=(T^{2m}-1)^2+T^{2m-4}A(T^2)^2\\
 &=G_m^+(T)G_m^-(T),
 \end{aligned}
 \tag{1.2}
-$$
+```
 
 with
 
-$$
+```math
 \boxed{
 G_m^\pm(T)
 :=T^{2m}-1\pm iT^{m-2}A(T^2).
 }
 \tag{1.3}
-$$
+```
 
 Each factor has degree exactly
 
-$$
+```math
 2m.
-$$
+```
 
 ---
 
@@ -144,48 +146,48 @@ $$
 
 OK defines
 
-$$
+```math
 \boxed{
 \mathcal G(X,Y)
 =X^4Y^2+iA(X^2)Y-1.
 }
 \tag{2.1}
-$$
+```
 
 Put
 
-$$
+```math
 N:=m-2.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \mathcal G(T,T^N)
 =T^{4+2N}+iA(T^2)T^N-1
 =G_m^+(T),
 }
 \tag{2.2}
-$$
+```
 
 because
 
-$$
+```math
 4+2N=4+2m-4=2m.
-$$
+```
 
 Thus `G_m^+` is exactly the one-parameter Schinzel specialization of the **fixed** polynomial `mathcal G` along the primitive exponent vector
 
-$$
+```math
 (1,N).
-$$
+```
 
 OK proves `mathcal G` geometrically irreducible over
 
-$$
+```math
 K=\mathbb Q(i)
-$$
+```
 
 and, more strongly, proves every full-rank monomial pullback whose exponent matrix has first Smith invariant one is irreducible over `K`.
 
@@ -195,38 +197,38 @@ and, more strongly, proves every full-rank monomial pullback whose exponent matr
 
 Apply the arbitrary-field finite-matrix theorem from ES to the fixed polynomial `mathcal G` and the specialization
 
-$$
+```math
 \mathcal G(T,T^N).
-$$
+```
 
 If a nontrivial nonreciprocal factorization persists for arbitrarily large `N`, Schinzel supplies a bounded integer matrix of rank
 
-$$
+```math
 r\le2
-$$
+```
 
 whose row lattice contains
 
-$$
+```math
 (1,N).
-$$
+```
 
 ### Rank one
 
 Exactly as in ES, a rank-one row `(a,b)` satisfying
 
-$$
+```math
 (1,N)=\lambda(a,b),
 \qquad\lambda\in\mathbb Z,
-$$
+```
 
 must have
 
-$$
+```math
 \lambda=\pm1,
 \quad a=\pm1,
 \quad b=\pm N.
-$$
+```
 
 This contradicts the fixed Schinzel entry bound for sufficiently large `N`.
 
@@ -234,9 +236,9 @@ This contradicts the fixed Schinzel entry bound for sufficiently large `N`.
 
 The primitive row-lattice vector `(1,N)` forces
 
-$$
+```math
 \gcd(\text{entries of }M)=1.
-$$
+```
 
 OK-CI proves every such rank-two monomial pullback of `mathcal G` irreducible over `Q(i)`.
 
@@ -244,9 +246,9 @@ Therefore no rank-two factorization source remains.
 
 Hence the nonreciprocal part of
 
-$$
+```math
 G_m^+
-$$
+```
 
 is irreducible for every sufficiently large odd `m`.
 
@@ -258,13 +260,13 @@ The reciprocal calculation is exact and parallel to GC-R.
 
 Since
 
-$$
+```math
 T^4A(T^{-2})=A(T^2),
-$$
+```
 
 we have
 
-$$
+```math
 \begin{aligned}
 T^{2m}G_m^+(T^{-1})
 &=1-T^{2m}+iT^{m+2}A(T^{-2})\\
@@ -272,59 +274,60 @@ T^{2m}G_m^+(T^{-1})
 &=-G_m^-(T).
 \end{aligned}
 \tag{4.1}
+```
 
 Thus the reciprocal of `G_m^+` is `-G_m^-`.
 
 Any common factor of `G_m^+` and `G_m^-` divides both
 
-\[
+```math
 T^{2m}-1
-$$
+```
 
 and
 
-$$
+```math
 T^{m-2}A(T^2).
-$$
+```
 
 The root `T=0` does not divide `T^{2m}-1`. If a root of unity `T` were a zero of `A(T^2)`, then
 
-$$
+```math
 \rho:=T^2
-$$
+```
 
 would be a root of unity satisfying
 
-$$
+```math
 2\rho^2-3\rho+2=0,
-$$
+```
 
 hence
 
-$$
+```math
 \rho+\rho^{-1}=\frac32.
-$$
+```
 
 But a root of unity and its inverse are algebraic integers, so their sum is an algebraic integer; the rational number `3/2` is not an integer and therefore not a rational algebraic integer. Contradiction.
 
 Hence
 
-$$
+```math
 \boxed{\gcd(G_m^+,G_m^-)=1.}
 \tag{4.2}
-$$
+```
 
 If `G_m^+` had a nonconstant reciprocal factor, that factor would also divide its reciprocal `-G_m^-`, contradicting (4.2).
 
 Thus `G_m^+` has no nonconstant reciprocal factor. Schinzel's nonreciprocal-part conclusion from Section 3 upgrades to
 
-$$
+```math
 \boxed{
 G_m^+\text{ irreducible over }Q(i)
 \quad\text{for all sufficiently large odd }m.
 }
 \tag{4.3}
-$$
+```
 
 By conjugation the same holds for `G_m^-`, and (4.2) keeps the two factors coprime.
 
@@ -334,91 +337,91 @@ By conjugation the same holds for `G_m^-`, and (4.2) keeps the two factors copri
 
 Suppose for contradiction that an odd-degree
 
-$$
+```math
 H_m\in\mathbb Q[X],
 \qquad\deg H_m=m,
-$$
+```
 
 is reducible.
 
 Choose a nonconstant irreducible factor
 
-$$
+```math
 h(X)\in\mathbb Q[X]
-$$
+```
 
 of minimal degree
 
-$$
+```math
 r.
-$$
+```
 
 Because `m` is odd and the complementary factor is nonconstant,
 
-$$
+```math
 \boxed{r\le\frac{m-1}{2}.}
 \tag{5.1}
-$$
+```
 
 Form its reciprocal trace lift
 
-$$
+```math
 U(Z):=Z^rh(Z+Z^{-1}).
 \tag{5.2}
-$$
+```
 
 This is a nonconstant polynomial of degree
 
-$$
+```math
 2r
-$$
+```
 
 which divides
 
-$$
+```math
 R_m(Z)=Z^mH_m(Z+Z^{-1}).
-$$
+```
 
 Substitute `Z=T^2`. Then
 
-$$
+```math
 U(T^2)
-$$
+```
 
 is a nonconstant polynomial dividing
 
-$$
+```math
 R_m(T^2)=G_m^+(T)G_m^-(T),
-$$
+```
 
 and
 
-$$
+```math
 \deg U(T^2)=4r.
-$$
+```
 
 By (5.1),
 
-$$
+```math
 \boxed{
 4r\le2m-2<2m.
 }
 \tag{5.3}
-$$
+```
 
 But Sections 3-4 give the complete factorization of `R_m(T^2)` over `Q(i)` into two coprime irreducible factors, each of degree exactly
 
-$$
+```math
 2m.
-$$
+```
 
 Every nonconstant divisor therefore has degree at least `2m`, contradicting (5.3).
 
 Hence
 
-$$
+```math
 \boxed{H_m\text{ is irreducible over }Q}
-$$
+```
 
 for every sufficiently large odd `m`. This proves OS. `square`
 
@@ -428,23 +431,23 @@ for every sufficiently large odd `m`. This proves OS. `square`
 
 P2A lets `r_m` denote the degree of the irreducible factor of `H_m` containing the physical root
 
-$$
+```math
 x=2\cos\delta.
-$$
+```
 
 OS gives
 
-$$
+```math
 \boxed{r_m=m}
-$$
+```
 
 for all sufficiently large odd `m`.
 
 P2A then requires, for positive staircase lengths `a,b` with `a+b=m`,
 
-$$
+```math
 \max(a,b)\ge r_m+1=m+1,
-$$
+```
 
 impossible.
 
@@ -494,31 +497,31 @@ Before this report, P2 was reduced to arithmetic and rigorously excluded only on
 
 Now:
 
-$$
+```math
 \boxed{
 P2=(r_\parallel,a_{short})=(2,0)
 \text{ is impossible for every sufficiently large cyclic survivor.}
 }
-$$
+```
 
 Thus a large `d_H=2` counterexample must contain at least one **genuine short antipodal difference-body vertex pair**:
 
-$$
+```math
 \boxed{a_{short}\ge1.}
 \tag{8.1}
-$$
+```
 
 Equivalently at least one of the two D2C defect parameters is strict interior:
 
-$$
+```math
 0<s_j<s_P(D),
-$$
+```
 
 so at least one completion chord has
 
-$$
+```math
 \sqrt{D^2-1}<L_j<D.
-$$
+```
 
 The complete `d_H=2` frontier is now PS/S2, where the SCE error is genuinely nonzero and carries geometric information. The next attack should use that nonzero defect rather than continue P2 arithmetic.
 

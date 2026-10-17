@@ -31,10 +31,10 @@ Now let the partition have at least three blocks and choose any block `B`.  List
 elements of `B` in cyclic order.  The open cyclic gaps between consecutive elements of
 `B` have the following property:
 
-$$
+```math
 \boxed{\text{every other block is contained entirely in one such gap.}}
 \tag{A12.1}
-$$
+```
 
 Indeed, if another block `L` met two distinct gaps, choose two elements of `L` in
 those gaps and two suitable consecutive elements of `B` separating the gaps.  Around
@@ -72,8 +72,8 @@ half-plane and cannot have zero sum, contradicting the component reaction balanc
 
 Thus Theorem C12 remains:
 
-$$
+```math
 \boxed{C_+\text{ has exactly one nontrivial connected component}}
-$$
+```
 
 for every normalized KKT stress.

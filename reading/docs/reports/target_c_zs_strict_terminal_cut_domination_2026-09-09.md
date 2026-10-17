@@ -42,23 +42,23 @@ For the connected nonisolated contact core, write
 
 Euler gives
 
-$$
+```math
 e=2v-2-\frac{b+Q}{2}.
-$$
+```
 
 Thus the shortest retained scalar closing theorem is
 
-$$
+```math
 \boxed{b+Q>2h,}
-$$
+```
 
 equivalently `e+h<2v-2`, contradicting ZF.
 
 The response side still had an exact equality subcase. C64 proves only
 
-$$
+```math
 \mathbf 1_S^T(\Lambda-L_H)\mathbf 1_S\ge0
-$$
+```
 
 for every boundary cut and shows that at least `2|B|/5` singleton cuts are strict. The new theorem removes every cut-equality case once ZR is available.
 
@@ -72,32 +72,35 @@ Assume the audited September 9 C-II hypotheses used by ZC and ZR. In particular,
 
 Let `B=B_+` be the loaded terminal set of the connected positive contact network, let `q=|B|`, let `Lambda` be its Dirichlet response, and let `L_H` be the positive-diameter weighted Laplacian. Put
 
-$$
+```math
 M_B:=\Lambda-L_H.
-$$
+```
 
 Then:
 
 1. the terminal defect has maximal affine kernel,
-   $$
+   ```math
    \boxed{\ker M_B=\operatorname{span}\{\mathbf1,P_x,P_y\},\qquad
    \operatorname{rank}M_B=q-3;}
    \tag{ZS.1}
-   $$
+   
+   ```
 2. if `S subset B` and `|B\setminus S|>=3`, then the principal submatrix `M_B[S,S]` is positive definite;
 3. for every nonempty proper terminal set `S subsetneq B`, response domination across the cut is strict:
-   $$
+   ```math
    \boxed{
    \sum_{b\in S,\ k\notin S}c_{bk}
    >
    \sum_{b\in S,\ k\notin S}\beta_{bk};}
    \tag{ZS.2}
-   $$
+   
+   ```
 4. in particular every loaded terminal has strict local response excess,
-   $$
+   ```math
    \boxed{d_b>s_b\qquad(b\in B).}
    \tag{ZS.3}
-   $$
+   
+   ```
 
 Here `c_bk=-Lambda_bk`, `d_b=sum_{k!=b}c_bk`, and `s_b=sum_{k!=b}beta_bk`.
 
@@ -111,64 +114,64 @@ ZC excludes C56-Z for this relative-interior stress when `D>=9`. Therefore the s
 
 The ZR proof already performs the required terminal-space nullity calculation before Schur elimination to the full scalar stress. On the zero-sum terminal space it sets
 
-$$
+```math
 Y=\Lambda^{-1/2}QB_H^{1/2}.
-$$
+```
 
 C56-G gives a two-dimensional zero eigenspace for `I-Y^T Y`. The singular-value identity gives the same zero-eigenvalue multiplicity for `I-YY^T`. Congruence identifies the latter with `M_B=Lambda-L_H` on the zero-sum terminal space. Restoring constants adds one kernel dimension. Hence
 
-$$
+```math
 \dim\ker M_B=3.
-$$
+```
 
 The affine response identities give
 
-$$
+```math
 M_B\mathbf1=0,
 \qquad
 M_BP_x=0,
 \qquad
 M_BP_y=0.
-$$
+```
 
 The force hull is two-dimensional, so `1,P_x,P_y` are linearly independent. This proves (ZS.1).
 
 Now let `S subset B` with `|B\setminus S|>=3`. Suppose `M_B[S,S]` were not positive definite. Since `M_B` is PSD, there would be a nonzero vector `x` supported on `S` with
 
-$$
+```math
 x^TM_Bx=x_S^TM_B[S,S]x_S=0.
-$$
+```
 
 For a PSD matrix, zero quadratic energy implies `M_Bx=0`. By (ZS.1), there is an affine function
 
-$$
+```math
 f(p)=a+u p_x+v p_y
-$$
+```
 
 whose values on the terminal points equal `x`. But `x` vanishes on every point of `B\setminus S`. The loaded terminals are vertices of a strictly convex polygon, so any three distinct terminals are noncollinear. Since the complement contains at least three terminals, `f` vanishes at three noncollinear points and is therefore identically zero. This contradicts `x!=0`. Thus `M_B[S,S]` is positive definite.
 
 For a nonempty proper cut `S`, C64's Laplacian identity is
 
-$$
+```math
 \mathbf1_S^TM_B\mathbf1_S
 =
 \sum_{b\in S,\ k\notin S}(c_{bk}-\beta_{bk}).
 \tag{ZS.4}
-$$
+```
 
 It remains only to prove the left side is nonzero. If it were zero, PSD would imply `1_S in ker M_B`, so by (ZS.1) the binary terminal function `1_S` would be affine. Because `q>=6`, at least one of `S` and `B\setminus S` contains three terminals. If three terminals lie in `S`, the affine function `1_S` equals one at three noncollinear points and hence is identically one, contradicting the nonempty complement. If three terminals lie in the complement, the same argument with value zero makes the function identically zero, contradicting nonempty `S`. Therefore
 
-$$
+```math
 \mathbf1_S^TM_B\mathbf1_S>0,
-$$
+```
 
 which is exactly (ZS.2).
 
 Taking `S={b}` gives
 
-$$
+```math
 M_{B,bb}=d_b-s_b>0,
-$$
+```
 
 proving (ZS.3). QED.
 
@@ -210,21 +213,21 @@ This removes the zero-row/equality-terminal subbranch and every exact saturated 
 
 It does **not** provide a quantitative cut gap. The exact global face endpoint remains
 
-$$
+```math
 \boxed{b+Q>2h.}
-$$
+```
 
 Equivalently, using the stopped-train identity
 
-$$
+```math
 T=\frac{b+Q}{2}+2f,
-$$
+```
 
 the missing inequality remains
 
-$$
+```math
 \boxed{T-h>2f.}
-$$
+```
 
 ## 4. Exact remaining lemma
 
@@ -232,20 +235,20 @@ $$
 
 There exists `n_0` such that every triangle-free global `n`-point minimum-diameter source with `n>=n_0`, chosen first to minimize contacts and then diameter pairs, satisfies on its nonisolated contact core
 
-$$
+```math
 \boxed{
  b+\sum_{F\text{ bounded}}(\deg F-4)>2|H|.
 }
 \tag{GF}
-$$
+```
 
 This is still the shortest scalar Level I endpoint. ZS is useful only if its strict response cuts can be converted into an exact combinatorial or geometric surplus contributing to (GF); mere positivity with no lower magnitude is insufficient.
 
 A comparably strong substitute would also suffice, for example an exact stopped-train theorem
 
-$$
+```math
 T-|H|>2f_{\rm exc}.
-$$
+```
 
 ## 5. Audit classification of other claims
 
@@ -270,49 +273,49 @@ The mandatory Theorem Z regression is unchanged. A two-edge crossing support can
 
 Let
 
-$$
+```math
 p_j=(\cos(j\pi/3),\sin(j\pi/3)),\qquad j=0,\ldots,5.
-$$
+```
 
 The six consecutive sides have length one and the three opposite pairs have length `D=2`. Put contact weight
 
-$$
+```math
 \alpha=\frac23
-$$
+```
 
 on every cycle edge and diameter weight
 
-$$
+```math
 \beta=\frac13
-$$
+```
 
 on every opposite pair. Then
 
-$$
+```math
 \sum_C\alpha=6\cdot\frac23=4=D^2,
 \qquad
 \sum_H\beta=3\cdot\frac13=1.
-$$
+```
 
 At each vertex the two contact vectors sum to the radial vector `p_j`, while the opposite diameter vector is `2p_j`, so equilibrium is
 
-$$
+```math
 \frac23p_j=\frac13(2p_j).
-$$
+```
 
 Thus this is an exact normalized KKT stress on the contact cycle and opposite matching.
 
 Let `P` be the orthogonal projector in `R^6` onto the complement of
 
-$$
+```math
 \operatorname{span}\{\mathbf1,P_x,P_y\}.
-$$
+```
 
 Its entries are
 
-$$
+```math
 P_{ij}=\delta_{ij}-\frac16-\frac13\cos((i-j)\pi/3).
-$$
+```
 
 Hence
 
@@ -323,17 +326,17 @@ Hence
 
 The signed stress matrix is therefore exactly
 
-$$
+```math
 L_C(2/3)-L_H(1/3)=2P.
-$$
+```
 
 It is PSD, has rank `3=q-3`, has affine kernel, and is strict on every nontrivial cut. Its positive off-diagonal entries occur exactly on the diameter matching. Therefore maximal affine-kernel PSD plus the contact/diameter off-diagonal sign pattern is algebraically and mechanically consistent.
 
 This does not challenge ZS or Level I: the regular unit hexagon has diameter `2`, while the known exact optimum is
 
-$$
+```math
 D(6)=2\sin72^\circ<2.
-$$
+```
 
 It is not a global six-point minimizer. The regression shows that a closing theorem cannot come from terminal rank and sign pattern alone; it must use the large-`D` global-minimum geometry.
 

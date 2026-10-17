@@ -34,11 +34,11 @@ The test retains the exact surplus/moment identity, nonnegative currencies, the
 Type-II loaded-hull bound `q/D=t+kappa<=pi`, the half-disk remainder floor
 `S+G>=pi/sqrt(2)`, the retained §161 inequality, the half-disk stopped-train floor
 
-$$
+```math
 T-\frac{t+\kappa}{2}\ge2\sqrt{2\Delta_2},
 \qquad
 \Delta_2=\frac{\pi}{2\sqrt3},
-$$
+```
 
 the strict stopped-train phase floor `2f-kappa>2sqrt(Delta_2)-pi/2`, the new
 perimeter floor `T>=1+pi/2`, and the §123 payment `4f+Q<=10(e-kappa)`.

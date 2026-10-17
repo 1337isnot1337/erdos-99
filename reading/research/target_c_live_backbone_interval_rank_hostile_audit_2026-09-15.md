@@ -31,32 +31,32 @@ All claims pass.  The proof does not inherit the now-excluded `t<=1.8436` two-le
 
 The audited `0.7404D` fan profile gives, for a good-leaf threshold `lambda`,
 
-$$
+```math
 g(\lambda)
 ={ (0.7404-\lambda)(0.0848)\over1.063-\lambda}
-$$
+```
 
 retained good-leaf weight per `D`.  Since every retained pair weight is at most one, the distinct good-leaf train count is at least `g(lambda)D-o(D)`.
 
 Every good leaf has more than `lambda D` center neighbors, while the total center count is below `1.063D+o(D)`.  Averaging therefore produces one center train whose crossing set in the good-leaf complement dual has path length
 
-$$
+```math
 s(\lambda)D-o(D),
 \qquad
 s(\lambda)={\lambda g(\lambda)\over1.063}.
-$$
+```
 
 At the candidate's exact choice `lambda=477/1000`,
 
-$$
+```math
 g={69801\over1831250}
 =0.0381165870\ldots,
-$$
+```
 
-$$
+```math
 s={33295077\over1946618750}
 =0.01710405645\ldots>0.017104.
-$$
+```
 
 The center train's crossing set is a simple dual-tree path by the already-audited rectangle topology.  No complete-neighborhood block estimate is needed.
 
@@ -80,21 +80,21 @@ This is an exact graph/tree fact and does not use near-parallel train directions
 
 Section 157 permits swapping the two Jordan shores and reversing the train contact vector.  Thus each selected train can be oriented according to the rooted tree indicator without changing the positive cut stress
 
-$$
+```math
 A_i=\sum_{e\in E(\tau_i)}\alpha_e.
-$$
+```
 
 With fixed diameter-edge orientations,
 
-$$
+```math
 F_i=A_i u_i=\sum_h\beta_h\varepsilon_{hi}r_h.
-$$
+```
 
 The usual normalization `sum beta_h=1`, diameter length `D`, and interval variation at most two give
 
-$$
+```math
 \sum_i\|F_{i+1}-F_i\|\le2D.
-$$
+```
 
 No diameter edge is counted with an unsigned incidence inside the vector identity; the signs are exactly the rooted shore signs.
 
@@ -108,15 +108,15 @@ The exact one-train shear rotates only the contact edges of its own train cut to
 
 The diameter derivative matrix is, up to a common factor two,
 
-$$
+```math
 M_{hi}=\varepsilon_{hi}(r_h\cdot Ju_i).
-$$
+```
 
 If `M theta=0`, canonical mixed rigidity makes the superposed flex Euclidean.  The center train used to construct the backbone is outside the selected smallest-leaf family and has angular rate zero.  A Euclidean rotation would have the same nonzero angular rate on every complete train, so the rotation rate must vanish.  Translation also has zero train rates.  Therefore every selected coefficient is zero and
 
-$$
+```math
 \operatorname{rank}M=m.
-$$
+```
 
 This closes the only potential Euclidean-kernel loophole.
 
@@ -128,9 +128,9 @@ This closes the only potential Euclidean-kernel loophole.
 
 For a diameter edge crossing every selected cut, its signed incidence is one fixed sign.  Its row is
 
-$$
+```math
 s_h(r_h\cdot Ju_1,\ldots,r_h\cdot Ju_m).
-$$
+```
 
 As the planar vector `r_h` varies, these rows lie in the two-dimensional span of the two coordinate sequences of `Ju_i`.  Thus all full-span braces together contribute row rank at most two.
 
@@ -148,11 +148,11 @@ If actual diameter incidence changes only at `s` internal boundaries, the `m` cu
 
 On one block, every diameter row is a linear combination of the two masked coordinate sequences of `Ju_i`.  Across all blocks the complete row space therefore has dimension at most `2(s+1)`.  Full column rank gives
 
-$$
+```math
 m\le2(s+1),
 \qquad
 s\ge\lceil m/2\rceil-1.
-$$
+```
 
 The argument remains exact when the leaf train directions vary; inverse-`D` phase collapse is not needed for this rank statement.
 
@@ -176,36 +176,36 @@ C65 places every actual diameter endpoint in the loaded positive core.  The theo
 
 From
 
-$$
+```math
 m>0.017104D-o(D),
-$$
+```
 
 one gets
 
-$$
+```math
 m/2>0.008552D-o(D).
-$$
+```
 
 The exact backbone density is `0.01710405645...`, so the rounded constants lose positive room.
 
 For switching multiplier masses
 
-$$
+```math
 q_i=\sum_h\beta_h|\varepsilon_{h,i+1}-\varepsilon_{hi}|,
-$$
+```
 
 the internal sum is at most two.  Thus some adjacent pair has
 
-$$
+```math
 \|F_{i+1}-F_i\|
 \le {2D\over m-1}.
-$$
+```
 
 The candidate uses
 
-$$
+```math
 {2\over0.017104}=116.9317\ldots<117,
-$$
+```
 
 so `<117+o(1)` is safe.
 
@@ -217,9 +217,9 @@ so `<117+o(1)` is safe.
 
 Current main now excludes `t<=1.8436`, but all inputs to this candidate were proved uniformly for `t<=1.844`.  Therefore the theorem remains live on
 
-$$
+```math
 1.8436<t\le1.844.
-$$
+```
 
 It does not use the two-leaf mass bounds that became vacuous after the exclusion.
 

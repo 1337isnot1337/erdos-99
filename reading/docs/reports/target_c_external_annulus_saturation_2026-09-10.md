@@ -18,9 +18,9 @@
 
 MP proves that every fixed pinned/contact-surplus regime below
 
-$$
+```math
 \lambda_{\rm disk}=0.693272542288314\ldots
-$$
+```
 
 has a uniform linear force-hull perimeter deficit.  This report pushes that geometric
 loss through the full-source population rather than stopping at perimeter.
@@ -44,15 +44,15 @@ force-visible core.
 
 Let
 
-$$
+```math
 Z_{ext}:=|A\setminus F|
-$$
+```
 
 for the contact-isolated source points outside the force hull, and put
 
-$$
+```math
 A_{ann}:=\operatorname{area}K-\operatorname{area}F.
-$$
+```
 
 The new chain is
 
@@ -81,44 +81,44 @@ contact and is not used as a false compactness shortcut.
 
 For the full source hull `K`, the exact whole-source notation is
 
-$$
+```math
 \delta_K=\frac\pi4D^2-\operatorname{area}K,
-$$
+```
 
-$$
+```math
 \mathscr O_A
 =\operatorname{area}K+rac{\sqrt3}{4}\operatorname{per}K
 -\frac{\sqrt3}{2}(n-1).
-$$
+```
 
 Oler gives `mathscr O_A>=0`, while the strict translated-lattice comparison at the
 actual global optimum gives
 
-$$
+```math
 \delta_K+\mathscr O_A
 <\frac{\sqrt3}{4}\operatorname{per}K.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 0\le\delta_K
 <\frac{\sqrt3}{4}\operatorname{per}K
 \le\frac{\sqrt3\pi}{4}D.
 }
 \tag{AS.1}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{
 \operatorname{area}K
 =\frac\pi4D^2-O(D).
 }
 \tag{AS.2}
-$$
+```
 
 This is a full-source global-optimality statement; it is not inferred from force-hull
 geometry.
@@ -127,7 +127,7 @@ geometry.
 
 The report `target_c_external_rattler_force_area_dichotomy_2026-09-09.md` proves
 
-$$
+```math
 \boxed{
 Z_{ext}
 >
@@ -136,24 +136,24 @@ Z_{ext}
 -\frac12\operatorname{per}F.
 }
 \tag{AS.3}
-$$
+```
 
 Since
 
-$$
+```math
 \frac\pi4D^2-\operatorname{area}F
 =A_{ann}+\delta_K,
-$$
+```
 
 and `delta_K>=0`, ER immediately yields the weaker but annulus-aligned lower bound
 
-$$
+```math
 \boxed{
 Z_{ext}>
 \frac2{\sqrt3}A_{ann}-\frac12\operatorname{per}F.
 }
 \tag{AS.4}
-$$
+```
 
 ### 2.3 AV upper bound
 
@@ -161,7 +161,7 @@ The September 10 report
 `target_c_annular_voronoi_matching_exclusion_2026-09-10.md` proves for any
 unit-separated set in `K\setminus int(F)`
 
-$$
+```math
 \boxed{
 |S|\le
 \frac2{\sqrt3}
@@ -171,11 +171,11 @@ $$
 \right).
 }
 \tag{AS.5}
-$$
+```
 
 Applying this to the external isolated source points gives
 
-$$
+```math
 \boxed{
 Z_{ext}\le
 \frac2{\sqrt3}
@@ -184,7 +184,7 @@ A_{ann}+\operatorname{per}K+\operatorname{per}F+\pi
 \right).
 }
 \tag{AS.6}
-$$
+```
 
 AV's only non-elementary input is the planar local Voronoi-cell bound: in a packing of
 unit disks, a bounded Voronoi cell has area at least `2sqrt(3)`.  The cited
@@ -201,7 +201,7 @@ hypothesis matches.
 
 Every post-ZF C-II survivor satisfies
 
-$$
+```math
 \boxed{
 \frac2{\sqrt3}A_{ann}-\frac12\operatorname{per}F
 < Z_{ext}
@@ -210,26 +210,26 @@ $$
 \left(A_{ann}+\operatorname{per}K+\operatorname{per}F+\pi\right).
 }
 \tag{AS.7}
-$$
+```
 
 Consequently, uniformly over every unbounded survivor sequence,
 
-$$
+```math
 \boxed{
 Z_{ext}
 =\frac2{\sqrt3}A_{ann}+O(D).
 }
 \tag{AS.8}
-$$
+```
 
 ### Proof
 
 The lower half is AS.4 and the upper half is AS.6.  Cauchy's
 perimeter--diameter inequality gives
 
-$$
+```math
 \operatorname{per}F,\operatorname{per}K\le\pi D,
-$$
+```
 
 so the two error terms in AS.7 are `O(D)`. `square`
 
@@ -248,48 +248,48 @@ global-optimality certificate.
 
 Fix
 
-$$
+```math
 \lambda_0<\lambda_{\rm disk}.
-$$
+```
 
 Then there exist constants
 
-$$
+```math
 \eta(\lambda_0)>0,
 \qquad
 c(\lambda_0)>0,
 \qquad
 D_0(\lambda_0)<\infty
-$$
+```
 
 such that every post-ZF survivor with `D>=D_0` and
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\le\lambda_0
 \tag{AS.9}
-$$
+```
 
 satisfies
 
-$$
+```math
 \boxed{A_{ann}\ge\eta(\lambda_0)D^2,}
 \tag{AS.10}
-$$
+```
 
-$$
+```math
 \boxed{Z_{ext}\ge c(\lambda_0)D^2,}
 \tag{AS.11}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \frac{Z_{ext}}{A_{ann}}
 \longrightarrow\frac2{\sqrt3}
 }
 \tag{AS.12}
-$$
+```
 
 uniformly along any unbounded sequence satisfying AS.9.
 
@@ -298,63 +298,63 @@ uniformly along any unbounded sequence satisfying AS.9.
 By MP.2 there is `epsilon=epsilon(lambda_0)>0` such that for all sufficiently large
 such survivors
 
-$$
+```math
 \operatorname{per}F\le(\pi-\epsilon)D.
 \tag{AS.13}
-$$
+```
 
 The planar isoperimetric inequality gives
 
-$$
+```math
 \operatorname{area}F
 \le\frac{\operatorname{per}(F)^2}{4\pi}
 \le
 \frac{(\pi-\epsilon)^2}{4\pi}D^2.
 \tag{AS.14}
-$$
+```
 
 Define
 
-$$
+```math
 \eta_0
 :=\frac\pi4-
 \frac{(\pi-\epsilon)^2}{4\pi}
 =\frac{2\pi\epsilon-\epsilon^2}{4\pi}>0.
 \tag{AS.15}
-$$
+```
 
 AS.2 gives
 
-$$
+```math
 \operatorname{area}K
 =\frac\pi4D^2-O(D).
-$$
+```
 
 Subtract AS.14:
 
-$$
+```math
 A_{ann}\ge\eta_0D^2-O(D).
-$$
+```
 
 After increasing `D_0`, AS.10 holds with, for example,
 
-$$
+```math
 \eta(\lambda_0)=\eta_0/2.
-$$
+```
 
 Insert AS.10 into the lower half of AS.7.  Since `per(F)=O(D)`, for large `D`
 
-$$
+```math
 Z_{ext}\ge\frac{\eta(\lambda_0)}{\sqrt3}D^2,
-$$
+```
 
 after another harmless increase in `D_0`; this proves AS.11.
 
 Finally AS.7 says
 
-$$
+```math
 Z_{ext}=\frac2{\sqrt3}A_{ann}+O(D),
-$$
+```
 
 while AS.10 gives `A_ann=Omega(D^2)`.  Divide by `A_ann` to obtain AS.12. `square`
 
@@ -368,32 +368,32 @@ quadratic external population.
 
 Let
 
-$$
+```math
 s_{ext}:=\min\{|x-y|:x,y\in A\setminus F,\ x\ne y\}.
-$$
+```
 
 In the AS.2 regime `Z_ext=Theta(D^2)`, so this is defined for large `D`.  Because the
 points are contact-isolated,
 
-$$
+```math
 s_{ext}>1.
-$$
+```
 
 ### Theorem AS.3
 
 Under the hypotheses of AS.2,
 
-$$
+```math
 \boxed{s_{ext}=1+O_{\lambda_0}(D^{-1}).}
 \tag{AS.16}
-$$
+```
 
 ### Proof
 
 Set `s=s_ext` and scale `K,F` and the external point set by `1/s`.  The scaled external
 points are unit-separated, so AV gives
 
-$$
+```math
 Z_{ext}\le\frac2{\sqrt3}
 \left(
 \frac{A_{ann}}{s^2}
@@ -401,42 +401,42 @@ Z_{ext}\le\frac2{\sqrt3}
 +\pi
 \right).
 \tag{AS.17}
-$$
+```
 
 AS.4 gives simultaneously
 
-$$
+```math
 Z_{ext}>
 \frac2{\sqrt3}A_{ann}-\frac12\operatorname{per}F.
 \tag{AS.18}
-$$
+```
 
 Compare the two and multiply by `sqrt(3)/2`:
 
-$$
+```math
 A_{ann}\left(1-\frac1{s^2}\right)
 <
 \frac{\sqrt3}{4}\operatorname{per}F
 +\frac{\operatorname{per}K+\operatorname{per}F}{s}
 +\pi.
 \tag{AS.19}
-$$
+```
 
 Since `s>=1`, both perimeters are at most `pi D`, and AS.10 gives
 `A_ann>=eta D^2`,
 
-$$
+```math
 0\le1-\frac1{s^2}
 \le\frac{C(\lambda_0)}D
 \tag{AS.20}
-$$
+```
 
 for a fixed constant `C(lambda_0)`.  For large `D` the right side is below `1/2`, so
 
-$$
+```math
 s\le\left(1-\frac{C(\lambda_0)}D\right)^{-1/2}
 =1+O_{\lambda_0}(D^{-1}).
-$$
+```
 
 Together with `s>1`, this proves AS.16. `square`
 
@@ -451,26 +451,26 @@ with the nonisolated core.
 For every fixed `lambda_0<lambda_disk`, a sufficiently large survivor satisfying
 AS.9 is now forced into all of the following simultaneously:
 
-$$
+```math
 \pi D-\operatorname{per}F=\Omega(D),
-$$
+```
 
-$$
+```math
 \operatorname{area}(K\setminus F)=\Omega(D^2),
-$$
+```
 
-$$
+```math
 Z_{ext}=\Theta(D^2),
 \qquad
 Z_{ext}
 =\frac2{\sqrt3}\operatorname{area}(K\setminus F)+O(D),
-$$
+```
 
 and
 
-$$
+```math
 1<s_{ext}\le1+O(D^{-1}).
-$$
+```
 
 This is stronger than the old ER dichotomy.  ER allowed either a near-isodiametric
 force hull or a quadratic external population.  MP excludes the near-isodiametric
@@ -479,9 +479,9 @@ population as an annular packing that is asymptotically density-saturated.
 
 It still does not prove
 
-$$
+```math
 b+Q>2h
-$$
+```
 
 or construct a strict sub-`D` competitor.  The missing information is now microscopic:
 one must convert `O(D)` total annular packing defect, together with strict noncontact
@@ -499,15 +499,12 @@ another macroscopic area estimate.
 > survivor in the AS.2 regime, use
 > 
 
-$$
-
+```math
 > Z_{ext}=\frac2{\sqrt3}A_{ann}+O(D),
 > \qquad
 > s_{ext}=1+O(D^{-1}),
 > 
-$$
-
-
+```
 > together with the fixed force-visible core to construct an `n`-point unit-separated
 > set of diameter `<D`, or prove an exact boundary surplus that implies
 > `b+Q>2h`.

@@ -21,18 +21,18 @@ Let `f_0,...,f_4` be the five unit force directions of a strict physical pentago
 
 The previously audited turn bounds give
 
-$$
+```math
 0<\delta_i<2\pi/3,
 \qquad
 2\pi/3<\delta_i+\delta_{i+1}<\pi.
-$$
+```
 
 Fix `f_i`. The counterclockwise angle from `f_i` to `f_{i+1}` is `delta_i`, hence is in `(0,pi)`. The counterclockwise angle to `f_{i+2}` is `delta_i+delta_{i+1}`, also in `(0,pi)`. The complementary two-turn bound gives
 
-$$
+```math
 \angle_{ccw}(f_i,f_{i+3})
 =2\pi-(\delta_{i+3}+\delta_{i+4})>\pi,
-$$
+```
 
 and similarly `f_{i+4}` lies on the opposite side. Therefore exactly two determinant signs from each force ray are positive and two are negative.
 
@@ -42,23 +42,23 @@ No converse is used. A rank-two balanced five-ray configuration need not be a cl
 
 At reciprocal vertex `v`, write the raw ray toward `a` as
 
-$$
+```math
 r_{va}=y_a-y_v.
-$$
+```
 
 The signed unit-force construction uses
 
-$$
+```math
 {y_v-y_a\over\lambda_{va}}
 =-\operatorname{sgn}(\lambda_{va})\,{r_{va}\over|r_{va}|}.
-$$
+```
 
 Thus, if `s_va=sgn(lambda_va)`, the actual force direction differs from `s_va r_va` by the same global minus sign for every edge incident to `v`. Pair determinants therefore satisfy
 
-$$
+```math
 \operatorname{sgn}\det(f_{va},f_{vb})
 =s_{va}s_{vb}\operatorname{sgn}\det(r_{va},r_{vb}).
-$$
+```
 
 The global minus sign cancels. The certificate's product rule is correct.
 

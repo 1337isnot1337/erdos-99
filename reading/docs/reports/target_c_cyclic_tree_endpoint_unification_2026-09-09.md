@@ -26,44 +26,46 @@ The useful geometric theorem survives intact and is slightly cleaner when stated
 
 Let `H` be the full spanning diameter tree in the cyclic `d_H=1` phase. Let `s` be a KKT endpoint and let
 
-$$
+```math
 e=uv\in E(H),\qquad \beta_e(s)=0,
-$$
+```
 
 be any zeroed nonleaf full-tree edge. Put
 
-$$
+```math
 H-e=T_A\sqcup T_B.
-$$
+```
 
 Then:
 
 1. `T_A,T_B` are nontrivial trees covering all `q` terminals;
 2. their bipartition classes form four nonempty cyclic blocks, after relabeling,
-   $$
+   ```math
    \boxed{A_0\mid B_0\mid A_1\mid B_1;}
    \tag{EU.1}
-   $$
+   
+   ```
 3. the four cycle contacts crossing the `A|B` cut satisfy the endpoint reciprocal parallelogram
-   $$
+   ```math
    \boxed{v_i+v_k=v_j+v_\ell,\qquad v_r=\alpha_r t_r;}
    \tag{EU.2}
-   $$
+   
+   ```
 4. the zeroed actual diameter chord `e=uv` joins opposite corners of the four-block partition. In particular `u` and `v` are endpoints of their respective color blocks.
 
 The selected positive diameter support at `s` may be a proper subgraph of
 
-$$
+```math
 H-e.
-$$
+```
 
 What CG does guarantee at the endpoint is
 
-$$
+```math
 C_s=C_q,
 \qquad B_s=B_+,
 \qquad \operatorname{rank}\Omega_s=q-3,
-$$
+```
 
 and C56-G. No selected mixed-rigidity rank is asserted.
 
@@ -73,21 +75,21 @@ and C56-G. No selected mixed-rigidity rank is asserted.
 
 DC says the full `d_H=1` diameter graph is one spanning tree on `q` terminals, so
 
-$$
+```math
 |E(H)|=q-1.
-$$
+```
 
 TC/LF show that each endpoint lies on at least one diameter-coordinate facet corresponding to a nonleaf full-tree edge. Fix such an edge
 
-$$
+```math
 e=uv.
-$$
+```
 
 Deleting a tree edge gives exactly two connected components. Since `e` is nonleaf, each component contains at least one remaining diameter edge. Hence
 
-$$
+```math
 H-e=T_A\sqcup T_B
-$$
+```
 
 with two nontrivial trees.
 
@@ -101,11 +103,11 @@ This conclusion uses the full graph only and is unaffected if additional beta co
 
 Write the tree bipartitions as
 
-$$
+```math
 A=A_0\sqcup A_1,
 \qquad
 B=B_0\sqcup B_1.
-$$
+```
 
 Fix an A-edge `xy`. Every B-edge crosses `xy`, so its endpoints lie on opposite open boundary arcs cut by `x,y`. Connectivity and bipartiteness of `T_B` imply, up to swapping colors, that all of `B_0` lies on one arc and all of `B_1` on the other.
 
@@ -113,9 +115,9 @@ Thus two same-color B vertices lie on the same side of every A-edge. Their joini
 
 Since each tree contains an edge, all four classes are nonempty. Cross-component crossing then forces the two B blocks to separate the two A blocks, and conversely. After cyclic rotation and color swaps,
 
-$$
+```math
 \boxed{A_0\mid B_0\mid A_1\mid B_1.}
-$$
+```
 
 This is EU.1.
 
@@ -125,25 +127,25 @@ This is EU.1.
 
 The full tree edge `e` is the **only full diameter edge** crossing the cut `A|B`. Since
 
-$$
+```math
 \beta_e(s)=0,
-$$
+```
 
 no selected positive diameter force crosses that cut. Any additional zeroed diameter rows lie inside `A` or inside `B` and are irrelevant to the cut sum.
 
 Sum the KKT equilibrium equations of the endpoint stress over all vertices in `A`. Internal contact and selected diameter forces cancel. Four cycle contacts cross the cut because of the four-block order. With cyclic transition indices `i<j<k<ell`, the signed contact-force resultant is
 
-$$
+```math
 v_i-v_j+v_k-v_\ell=0,
 \qquad
 v_r=\alpha_rt_r.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{v_i+v_k=v_j+v_\ell.}
-$$
+```
 
 This is EU.2 and is exactly TC's reciprocal parallelogram.
 
@@ -155,9 +157,9 @@ Let `u` lie in `T_A`, say in block `A_0`. Because `e` is nonleaf in the full tre
 
 Assume first that `v` lies in `B_0`, with cyclic order
 
-$$
+```math
 A_0\mid B_0\mid A_1\mid B_1.
-$$
+```
 
 Take any `a in A_0\setminus\{u\}`. Since `T_A` is connected and nontrivial, `a` is incident to an A-edge joining `A_0` to `A_1`. Unless that edge is incident to `u`, it is vertex-disjoint from the full diameter chord `uv` and therefore crosses `uv`.
 
@@ -165,20 +167,20 @@ A chord from `A_0` to `A_1` crosses `uv` only if its A0 endpoint lies on the `u 
 
 The symmetric argument with B-edges shows that `v` is the B0 endpoint adjacent to `A_1`. Thus `uv` joins the opposite block corners
 
-$$
+```math
 (B_1|A_0)
 \quad\text{and}\quad
 (B_0|A_1).
-$$
+```
 
 If `v in B_1`, the other pair of opposite corners results. Singleton blocks cause no exception because their unique vertex is both block endpoints.
 
 Therefore
 
-$$
+```math
 \boxed{\text{every zeroed nonleaf full-tree edge at a KKT endpoint is an opposite-corner chord.}}
 \tag{EU.3}
-$$
+```
 
 ---
 
@@ -202,17 +204,17 @@ So the two tree phases share a four-block geometric skeleton, not necessarily th
 
 The normalized KKT polytope is a line segment. LF/TC show its two endpoint facets involve distinct nonleaf full-tree diameter coordinates. Therefore there exist distinct full-tree edges
 
-$$
+```math
 e_-,e_+
-$$
+```
 
 with
 
-$$
+```math
 \beta_{e_-}(s_-)=0,
 \qquad
 \beta_{e_+}(s_+)=0.
-$$
+```
 
 EU applies independently to each. Hence the same spanning convex-thrackle tree admits two distinct nonleaf edge cuts such that:
 

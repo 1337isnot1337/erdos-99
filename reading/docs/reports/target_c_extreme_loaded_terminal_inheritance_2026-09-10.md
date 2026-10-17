@@ -19,64 +19,64 @@
 Let `B` be the full relative-interior loaded terminal set, i.e. the endpoints of all
 actual diameter edges, and let
 
-$$
+```math
 F=\operatorname{conv}B.
-$$
+```
 
 For an extreme normalized KKT stress, let `B_* subseteq B` be its positive diameter
 endpoints and let `V_*` be the vertex set of its connected positive contact component.
 The selected force-hull theorem gives
 
-$$
+```math
 V_*\subseteq\operatorname{conv}B_*.
-$$
+```
 
 Every point of `B` is an extreme point of the full force hull `F`. Therefore an omitted
 loaded terminal cannot remain in the selected positive contact support:
 
-$$
+```math
 \boxed{B\cap V_*=B_*.}
 \tag{LI.1}
-$$
+```
 
 Consequently, with
 
-$$
+```math
 u_*:=v-v_*,
 \qquad
 q:=|B|,
 \qquad
 q_*:=|B_*|,
-$$
+```
 
 we have the exact support-loss bound
 
-$$
+```math
 \boxed{u_*\ge q-q_*.}
 \tag{LI.2}
-$$
+```
 
 CT defines
 
-$$
+```math
 \kappa_*:=z_*-s_Z=2u_*+\sigma_*.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \kappa_*\ge2(q-q_*)+\sigma_*.
 }
 \tag{LI.3}
-$$
+```
 
 This upgrades the interpretation of low circuit degeneracy: if
 `kappa_*=o(D)`, then the extreme circuit omits only `o(D)` full loaded terminals and
 has `sigma_*=o(D)`. EDB then forces at least DB-scale positive diameter support.
 Thus every low-degeneracy extreme circuit satisfies
 
-$$
+```math
 \boxed{
 q_*=q-o(D),
 \qquad
@@ -85,28 +85,28 @@ h_*\ge(2\rho-o(1))D,
 \sigma_*=o(D),
 }
 \tag{LI.4}
-$$
+```
 
 where `rho=cos rho`.
 
 At the full DB endpoint `h/D->2rho`, the transfer becomes stronger:
 
-$$
+```math
 \boxed{
 h-h_*=o(D),\qquad q-q_*=o(D).}
 \tag{LI.5}
-$$
+```
 
 Hence a low-degeneracy extreme ray in the minimal full-diameter-density phase contains
 all but `o(D)` actual diameter edges and all but `o(D)` loaded terminals. Together
 with EDB, its selected force hull also has
 
-$$
+```math
 Q_*=o(D),
 \qquad
 \operatorname{per}F_*/D\to4\rho.
 \tag{LI.6}
-$$
+```
 
 This is the first direct support-transfer statement from the full C65 force hull to one
 extreme positive circuit.
@@ -118,32 +118,32 @@ extreme positive circuit.
 The full C65 relative-interior normalization makes every actual diameter edge positive,
 so its endpoint set is exactly `B`. The force-hull theorem gives
 
-$$
+```math
 F=\operatorname{conv}B
-$$
+```
 
 and every member of `B` is a convex-hull vertex.
 
 Fix an extreme selected stress. Its positive contact support is one connected component
 on vertex set `V_*`, and the selected force-hull trapping theorem gives
 
-$$
+```math
 V_*\subseteq\operatorname{conv}B_*.
 \tag{1.1}
-$$
+```
 
 Certainly `B_* subseteq B cap V_*`. Conversely suppose
 
-$$
+```math
 b\in(B\cap V_*)\setminus B_*.
-$$
+```
 
 Then (1.1) gives
 
-$$
+```math
 b\in\operatorname{conv}B_*
 \subseteq\operatorname{conv}(B\setminus\{b\}).
-$$
+```
 
 This contradicts the fact that `b` is an extreme point of `conv B`. Therefore
 `B cap V_*=B_*`, proving LI.1.
@@ -153,9 +153,9 @@ core vertex set has cardinality `u_*=v-v_*`, so LI.2 follows.
 
 Insert LI.2 into CT's exact identity
 
-$$
+```math
 \kappa_*=2u_*+\sigma_*
-$$
+```
 
 to obtain LI.3. `square`
 
@@ -165,38 +165,38 @@ to obtain LI.3. `square`
 
 Assume along an unbounded sequence
 
-$$
+```math
 \kappa_*=o(D).
-$$
+```
 
 All quantities in
 
-$$
+```math
 \kappa_*=2u_*+\sigma_*
-$$
+```
 
 are nonnegative integers, so
 
-$$
+```math
 u_*=o(D),
 \qquad
 \sigma_*=o(D).
 \tag{2.1}
-$$
+```
 
 LI.2 then gives
 
-$$
+```math
 q-q_*=o(D).
 \tag{2.2}
-$$
+```
 
 EDB proves that `sigma_*=o(D)` forces
 
-$$
+```math
 h_*\ge(2\rho-o(1))D,
 \tag{2.3}
-$$
+```
 
 which proves LI.4.
 
@@ -211,63 +211,63 @@ full loaded boundary, even though the full stress polytope may have dimension
 
 Every selected diameter endpoint has positive selected diameter degree, so
 
-$$
+```math
 q_*\le2h_*.
 \tag{3.1}
-$$
+```
 
 DB gives for the full support
 
-$$
+```math
 q\ge h\ge(2\rho-o(1))D.
 \tag{3.2}
-$$
+```
 
 Hence LI.3 gives, if `h_*/D->y` and `sigma_*/D->s`,
 
-$$
+```math
 \boxed{
 \liminf\frac{\kappa_*}{D}
 \ge
 4\max\{0,\rho-y\}+s.
 }
 \tag{3.3}
-$$
+```
 
 EDB independently gives
 
-$$
+```math
 s\ge\max\{0,\cos(y/2)-y/2\}.
 \tag{3.4}
-$$
+```
 
 Therefore every extreme ray with `y<2rho` has a quantitatively linear degeneracy. For
 `0<=y<=rho` the stronger combined form is
 
-$$
+```math
 \boxed{
 \liminf\frac{\kappa_*}{D}
 \ge
 4(\rho-y)+\cos(y/2)-y/2.
 }
 \tag{3.5}
-$$
+```
 
 For `rho<=y<2rho`, EDB alone gives the positive lower bound
 
-$$
+```math
 \boxed{
 \liminf\frac{\kappa_*}{D}
 \ge\cos(y/2)-y/2.
 }
 \tag{3.6}
-$$
+```
 
 Thus the only way `kappa_*/D` can tend to zero is for
 
-$$
+```math
 h_*/D\ge2rho-o(1)
-$$
+```
 
 and for the selected boundary terminal set to be asymptotically full.
 
@@ -277,40 +277,40 @@ and for the selected boundary terminal set to be asymptotically full.
 
 Assume additionally
 
-$$
+```math
 \frac hD\to2\rho.
 \tag{4.1}
-$$
+```
 
 Since `H_* subseteq H`,
 
-$$
+```math
 h_*\le h.
-$$
+```
 
 EDB plus `sigma_*=o(D)` gives the reverse asymptotic inequality
 
-$$
+```math
 h_*\ge(2\rho-o(1))D.
-$$
+```
 
 Therefore
 
-$$
+```math
 h-h_*=o(D),
-$$
+```
 
 which is the first half of LI.5. LI.2 and `u_*=o(D)` give the second half.
 
 EDB Section 6 then gives
 
-$$
+```math
 Q_*=o(D),
 \qquad
 b_* - \operatorname{per}F_*=o(D),
 \qquad
 \operatorname{per}F_*/D\to4\rho.
-$$
+```
 
 Thus at the full DB endpoint, a low-degeneracy extreme circuit is simultaneously near
 full support on `H`, near full support on the loaded boundary, and near equality in its

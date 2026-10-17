@@ -16,24 +16,24 @@
 
 The parent detour/face theorem supplies
 
-$$
+```math
 F_{loc}/D\ge
 \left[(A_{DF}-6t_D-2\kappa_D)/4-o(1)\right]_+.
-$$
+```
 
 The loaded-hull identity `q-x_B=Q+2k`, with `x_B\ge0`, gives
 
-$$
+```math
 Q/D\le(q-k)/D-k/D=t_D-\kappa_D.
-$$
+```
 
 Every local face of degree greater than `K` contributes at least `K-3` to the same
 global degree excess `Q`.  Under the recorded local-face fidelity, these charges are
 injective, so
 
-$$
+```math
 F_{loc,>K}/D\le(t_D-\kappa_D)/(K-3).
-$$
+```
 
 Subtracting yields exactly (BD.2).  No sign is reversed and no local face is counted
 twice.
@@ -42,19 +42,19 @@ twice.
 
 For `K=22`, subtracting `Q/19` changes the coefficients to
 
-$$
+```math
 \frac{A_{DF}}4-
 \left(\frac32+\frac1{19}\right)t_D-
 \left(\frac12-\frac1{19}\right)\kappa_D.
-$$
+```
 
 At `t_D\le1.90` and `\kappa_D\le0.05`, with
 `A_{DF}=12.19736577709914...`, the lower coefficient is
 
-$$
+```math
 3.049341444274785-2.950000000000000-0.022368421052632
 =0.076973023222153...,
-$$
+```
 
 which is strictly above the displayed `0.0769730` marker.  The arithmetic is safe
 under the stated `o(1)` convention.

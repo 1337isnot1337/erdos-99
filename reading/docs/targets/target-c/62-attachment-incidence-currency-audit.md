@@ -31,10 +31,10 @@ Use the canonical post-ZF C-II notation:
 
 The main exact theorem is
 
-$$
+```math
 \boxed{e_{BB}\ge d_H+s_Z.}
 \tag{62.1}
-$$
+```
 
 Thus every unit of diameter-component or mixed-row defect is already visible as at
 least one loaded-loaded unit contact. The theorem holds whether or not unloaded
@@ -42,7 +42,7 @@ contact components exist.
 
 A second exact theorem gives the total perimeter of all harmonic attachment cells:
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{per}(P_r)
 \le
@@ -51,18 +51,18 @@ $$
 P_r:=\operatorname{conv}(A_r).
 }
 \tag{62.2}
-$$
+```
 
 In particular, using (62.1) and `q<=pi D`,
 
-$$
+```math
 \boxed{
 \sum_r\operatorname{per}(P_r)
 \le2\pi(q+1-k)
 \le2\pi^2D+2\pi.
 }
 \tag{62.3}
-$$
+```
 
 So the entire attachment-cell perimeter correction is boundary order with an explicit
 constant; there is no `D c_I` loss.
@@ -89,58 +89,58 @@ vertices of `A_r` on `partial P_r`, the outer-face route has length one exactly 
 that polygon side is one of the `c_r^partial` direct contacts; otherwise it has length
 at least two. Hence
 
-$$
+```math
 L_r\ge c_r^partial+2(a_r-c_r^partial)
 =2a_r-c_r^partial.
 \tag{62.4}
-$$
+```
 
 For any connected triangle-free plane graph with `N` vertices, `M` edges, and
 outer-face walk length `L`, Euler plus bounded-face length at least four gives
 
-$$
+```math
 M\le2N-2-{L\over2}.
 \tag{62.5}
-$$
+```
 
 Here
 
-$$
+```math
 N=n_r+a_r,
 \qquad
 M=e_r+t_r+c_r=2n_r+1+s_r+c_r.
-$$
+```
 
 Insert (62.4) into (62.5):
 
-$$
+```math
 2n_r+1+s_r+c_r
 \le
 2n_r+2a_r-2-a_r+{c_r^partial\over2}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 s_r+c_r-{c_r^partial\over2}\le a_r-3.
 }
 \tag{62.6}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{s_r\le a_r-3.}
 \tag{62.7}
-$$
+```
 
 Summing over unloaded components gives
 
-$$
+```math
 \boxed{s_C\le a-3c_I.}
 \tag{62.8}
-$$
+```
 
 This is an exact finite theorem. It does not assume `s_Z=0` or any diameter-topology
 branch.
@@ -158,26 +158,26 @@ incidence edges, and `f_j` faces, every loaded node lies on the outer face. Beca
 graph is bipartite, its outer-face walk has length at least `2q_j`, while every bounded
 face has length at least four. Thus
 
-$$
+```math
 2e_j\ge2q_j+4(f_j-1).
-$$
+```
 
 Euler gives `q_j+c_j-e_j+f_j=2`, hence
 
-$$
+```math
 e_j\le q_j+2c_j-2.
-$$
+```
 
 Summing over the `s` pieces gives
 
-$$
+```math
 \boxed{
 a=\sum_r|A_r|
 \le q_{used}+2c_I-2s
 \le q+2c_I-2.
 }
 \tag{62.9}
-$$
+```
 
 This rederives the exact C37 incidence bound inside the present proof.
 
@@ -185,39 +185,39 @@ This rederives the exact C37 incidence bound inside the present proof.
 
 The canonical post-ZF pinned ledger is
 
-$$
+```math
 \boxed{
 c_I+e_{BB}+s_C=q-2+k,
 \qquad k=d_H+s_Z.}
 \tag{62.10}
-$$
+```
 
 If `c_I>0`, combine (62.8) and (62.9):
 
-$$
+```math
 s_C\le a-3c_I
 \le q-c_I-2.
-$$
+```
 
 Insert this in (62.10):
 
-$$
+```math
 q-2+k
 =c_I+e_{BB}+s_C
 \le e_{BB}+q-2,
-$$
+```
 
 so
 
-$$
+```math
 e_{BB}\ge k.
-$$
+```
 
 If `c_I=0`, then by definition `s_C=0`, and (62.10) gives
 
-$$
+```math
 e_{BB}=q-2+k\ge k,
-$$
+```
 
 because a normalized KKT stress has a positive diameter edge and therefore `q>=2`.
 This proves (62.1) in every post-ZF C-II branch.
@@ -226,42 +226,42 @@ This proves (62.1) in every post-ZF C-II branch.
 
 For `c_I>0`, define
 
-$$
+```math
 u_A:=a-3c_I\ge0.
-$$
+```
 
 Let `p_A>=0` be the planar-incidence slack in
 
-$$
+```math
 a=q_{used}+2c_I-2s-p_A,
-$$
+```
 
 let `u_0=q-q_used>=0`, and let `r_Q>=0` be the excess loaded-loaded quotient
 connectivity in
 
-$$
+```math
 e_{BB}=s+u_0-1+r_Q.
-$$
+```
 
 Subtracting the two exact expressions for `q` obtained from these definitions and
 (62.10) gives
 
-$$
+```math
 \boxed{
 s_C+r_Q
 =k+u_A+p_A+(s-1).}
 \tag{62.11}
-$$
+```
 
 Since (62.8) says `u_A-s_C>=0`,
 
-$$
+```math
 \boxed{
 r_Q
 =k+(u_A-s_C)+p_A+(s-1)
 \ge k.}
 \tag{62.12}
-$$
+```
 
 Thus the stronger statement behind (62.1) is that the loaded-loaded contacts needed
 *in excess of bare quotient connectivity* already pay the complete topology defect.
@@ -271,86 +271,86 @@ Thus the stronger statement behind (62.1) is that the loaded-loaded contacts nee
 Let `delta_r` be the graph diameter of `C[I_r]`, with zero for a singleton. Define the
 triangle-free penny-graph slack
 
-$$
+```math
 r_r:=2n_r-\delta_r-2-e_r\ge0,
 \qquad
 R_I:=\sum_rr_r.
-$$
+```
 
 Equation (62.7)'s pinned-nullity definition gives
 
-$$
+```math
 e_r+t_r=2n_r+1+s_r.
-$$
+```
 
 Therefore
 
-$$
+```math
 t_r-\delta_r-3=s_r+r_r.
 \tag{62.13}
-$$
+```
 
 Let
 
-$$
+```math
 s_B:=3q-e_{BI}-2e_{BB}\ge0,
 \qquad e_{BI}=\sum_rt_r,
-$$
+```
 
 using the canonical loaded contact-degree cap three. Summing (62.13) gives
 
-$$
+```math
 e_{BI}
 =\sum_r\delta_r+3c_I+s_C+R_I.
-$$
+```
 
 Substitute this and (62.10) into the definition of `s_B`. The `3q` terms cancel and
 yield the exact component-diameter ledger
 
-$$
+```math
 \boxed{
 \sum_r\delta_r+R_I+s_B+3k
 =6+e_{BB}+2s_C.
 }
 \tag{62.14}
-$$
+```
 
 Hence
 
-$$
+```math
 \sum_r\delta_r
 \le6+e_{BB}+2s_C-3k.
 \tag{62.15}
-$$
+```
 
 Harmonic trapping and the unit contact paths imply
 
-$$
+```math
 \operatorname{diam}(A_r)\le\delta_r+2.
-$$
+```
 
 Cauchy's planar perimeter-diameter inequality gives
 
-$$
+```math
 \operatorname{per}(P_r)
 \le\pi(\delta_r+2).
-$$
+```
 
 Summing and using (62.15),
 
-$$
+```math
 \sum_r\operatorname{per}(P_r)
 \le
 \pi\bigl(6+e_{BB}+2s_C-3k+2c_I\bigr).
 \tag{62.16}
-$$
+```
 
 Eliminate `c_I` with (62.10):
 
-$$
+```math
 6+e_{BB}+2s_C-3k+2c_I
 =2+2q-e_{BB}-k.
-$$
+```
 
 This proves (62.2). Applying (62.1) proves the first inequality in (62.3), and
 `q<=per(F)<=pi D` proves the second.
@@ -359,56 +359,56 @@ This proves (62.2). Applying (62.1) proves the first inequality in (62.3), and
 
 The independently audited all-phase surplus theorem states, with
 
-$$
+```math
 \mu_D:={e_{BB}+2s_C-3k\over D},
-$$
+```
 
 that
 
-$$
+```math
 \liminf\mu_D\ge z_*>0.9604,
 \qquad
 10\arcsin z_*-4\pi={z_*\over3}.
 \tag{62.17}
-$$
+```
 
 Using (62.1),
 
-$$
+```math
 2(e_{BB}+s_C)
 =(e_{BB}+2s_C)+e_{BB}
 \ge4k+\mu_DD.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 {e_{BB}+s_C-2(d_H+s_Z)\over D}
 \ge {z_*\over2}>0.4802.
 }
 \tag{62.18}
-$$
+```
 
 Also
 
-$$
+```math
 3\max\{e_{BB},s_C\}
 \ge e_{BB}+2s_C
 =3k+\mu_DD,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 {\max\{e_{BB},s_C\}-(d_H+s_Z)\over D}
 \ge {z_*\over3}>0.32013.
 }
 \tag{62.19}
-$$
+```
 
 These are retained-currency statements: even after paying the complete Woodall/mixed
 defect, a universal linear amount remains in actual loaded-loaded contacts and/or

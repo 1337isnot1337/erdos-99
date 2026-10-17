@@ -36,9 +36,9 @@ Let `Lambda` be the unit triangular lattice, with covolume
 that, for every translation and every `r>=2`, both open and closed
 radius-r disk counts obey
 
-$$
+```math
  \left|N_r-\pi r^2/a_0\right|\le C_{disk}r^{2/3}. \tag{2.1}
-$$
+```
 
 Only this classical exponent is needed; no sharp Gauss-circle estimate
 or explicit optimal constant is claimed.
@@ -49,9 +49,9 @@ unit-integral function `psi` supported in the open unit disk, and
 divergence theorem and a stationary/nonstationary split of its boundary
 give
 
-$$
+```math
  |\widehat{1_{B_R}}(\xi)|\le C\sqrt R\,|\xi|^{-3/2}.
-$$
+```
 
 Indeed, after rotating the frequency, boundary arcs within angular
 distance `eta` of the two stationary tangents have length `O(R eta)`.
@@ -66,20 +66,20 @@ the direct perimeter bound covers its remaining bounded range.
 The reciprocal lattice is uniformly separated and has `O(T^2)`
 points in a radius-T disk. Dyadic summation and smooth bump decay give
 
-$$
+```math
  \sum_{k\in\Lambda^*\setminus0}|k|^{-3/2}
                  (1+t|k|)^{-3}=O(t^{-1/2}).
-$$
+```
 
 Periodize the smooth compactly supported convolution
 `1_(B_R)*psi_t` over the lattice. Its Fourier series converges
 absolutely by the preceding estimate, giving, uniformly in translation,
 
-$$
+```math
  \left|\sum_{x\in\Lambda+z}(1_{B_R}*\psi_t)(x)
                 -\pi R^2/a_0\right|
        \le C\sqrt R\,t^{-1/2}. \tag{2.2}
-$$
+```
 
 Sandwich the open and closed disk counts between the convolutions for
 radius `r-t` and `r+t`. The inner convolution is supported inside
@@ -99,9 +99,9 @@ and closed counts satisfy the same bound.
 For radius `S` and center separation `d<=2S`, put `epsilon=2S-d`.
 The intersection of their disks has area at most
 
-$$
+```math
  A_{lens}(S,d)\le(4/3)\sqrt S\,\epsilon^{3/2}. \tag{3.1}
-$$
+```
 
 To see this, center the disks at `(+d/2,0),(-d/2,0)`.
 At abscissa `x` with `|x|<=epsilon/2`, their common half-height
@@ -110,21 +110,21 @@ bound over the two half-intervals gives (3.1).
 
 Choose a fixed parameter `0<c<=1`, put
 
-$$
+```math
  \delta=cD^{-1/3},\qquad S=D/2+\delta,
  \quad D\ge2.
-$$
+```
 
 A pair of lattice sites in the open radius-S disk whose separation
 is at least D has a difference vector in
 
-$$
+```math
  \mathcal W=\{w\in\Lambda:D\le|w|<D+2\delta\}.
-$$
+```
 
 By (2.1), applied with an open inner and closed outer count,
 
-$$
+```math
  \begin{aligned}
  |\mathcal W|
  &\le {\pi\over a_0}\{(D+2\delta)^2-D^2\}
@@ -132,7 +132,7 @@ $$
  &\le K_0D^{2/3},\qquad
  K_0=8\pi/a_0+3C_{disk}. \tag{3.2}
  \end{aligned}
-$$
+```
 
 We used `D+2delta<=2D`, `c<=1`, and `D>=2`. Difference
 vectors of length *exactly* D are included, as strict diameter
@@ -141,29 +141,29 @@ below D is needed at the endpoint.
 For every `w in W`, (3.1), `S<=D`, and `2S-|w|<=2delta`
 give
 
-$$
+```math
  A_{lens}(S,|w|)\le(8\sqrt2/3)c^{3/2}. \tag{3.3}
-$$
+```
 
 Translate the lattice uniformly over a fundamental parallelogram.
 Let `N(z)` count its points in the open radius-S disk, and let
 `E(z)` count unordered pairs among these points at distance at
 least D. Unfolding the lattice sums gives exactly
 
-$$
+```math
  \mathbb EN=\pi S^2/a_0,\qquad
  \mathbb EE={1\over2a_0}\sum_{w\in\mathcal W}
                               A_{lens}(S,|w|).
-$$
+```
 
 The factor two removes ordered-pair duplication. All sums are finite,
 so no limiting interchange or pointwise Poisson assertion is required
 for these expectations. Equations (3.2)--(3.3) imply
 
-$$
+```math
  \mathbb EE\le K_1c^{3/2}D^{2/3},\qquad
  K_1={4\sqrt2\over3a_0}K_0. \tag{3.4}
-$$
+```
 
 ## 4. Keep the population gain by deleting one vertex per conflict
 
@@ -172,23 +172,23 @@ absolute constants `kappa>0` and `D0` such that, for every
 `D>=D0`, some finite unit-separated subset of the triangular
 lattice has diameter strictly below D and cardinality at least
 
-$$
+```math
  \boxed{\pi D^2/(2\sqrt3)+\kappa D^{2/3}.} \tag{4.1}
-$$
+```
 
 The finite constants established above permit `D0=2`; leaving the
 onset unnamed does not affect the asymptotic application.
 
 **Proof.** Set `A1=pi/a0`, choose
 
-$$
+```math
  c=\min\{1,(A_1/(2K_1))^2\},\qquad
  \kappa=A_1c/2>0.
-$$
+```
 
 Then (3.4) and the exact mean count give
 
-$$
+```math
  \begin{aligned}
  \mathbb E(N-E)
  &\ge {\pi D^2\over4a_0}
@@ -196,7 +196,7 @@ $$
         +\pi\delta^2/a_0\\
  &\ge {\pi D^2\over4a_0}+\kappa D^{2/3}. \tag{4.2}
  \end{aligned}
-$$
+```
 
 Choose a translation for which the integer `N-E` is at least
 its mean. In its finite conflict graph delete one chosen endpoint
@@ -241,9 +241,9 @@ loaded contact/stress geometry.
 absolute kappa and onset, every planar unit-separated global
 n-point diameter minimizer with diameter D satisfies
 
-$$
+```math
  \boxed{g_A:=n-1-\pi D^2/(2\sqrt3)\ge\kappa D^{2/3}.} \tag{5.1}
-$$
+```
 
 **Proof.** The comparison configuration in Theorem 4.1 has some
 integer cardinality M and diameter strictly below D. If `M>=n`,
@@ -254,11 +254,11 @@ with (4.1) proves (5.1), with no rounding loss. QED.
 The same bound transports into the exact canonical full-source Oler
 ledger, retaining every isolate:
 
-$$
+```math
  \delta_K+O_A=c_0P-a_0g_A
        \le c_0P-a_0\kappa D^{2/3},
  \quad c_0=\sqrt3/4.
-$$
+```
 
 This strengthens the sublinear reserve, while the leading allowance
 is still of order D. Existing linear face/interface deficits are
@@ -269,10 +269,10 @@ solution is claimed.
 As a diameter upper bound, put `d0=pi/(2sqrt(3))` and
 `T=sqrt((n-1)/d0)`. For all sufficiently large n, (5.1) yields
 
-$$
+```math
  D(n)\le T-c_1T^{-1/3},\qquad
  c_1=\kappa/(2^{5/3}d_0)>0.
-$$
+```
 
 Indeed, if `D>T/2`, divide
 `d0(T^2-D^2)>=kappa D^(2/3)` by `d0(T+D)`; if
@@ -317,16 +317,16 @@ Only a fixed circle, or its fixed elliptical image after changing
 lattice coordinates, is needed here. Its boundary is smooth with
 strictly positive curvature. Fix any
 
-$$
+```math
  131/208<\theta<2/3.
-$$
+```
 
 The input gives, uniformly in the translation `z`,
 
-$$
+```math
  \#\big((z+\Lambda)\cap\overline B(o,r)\big)
   ={\pi r^2\over a_0}+O(1+r^\theta).                 \tag{7.1}
-$$
+```
 
 Closed boundaries can equivalently be handled by enlarging the radius
 by `r^(-2)` and passing the upper bound to the limit; the resulting area
@@ -343,18 +343,18 @@ Let F be a convex polygon whose successive vertices are source points
 and whose boundary edges all have length one. Every other source point
 `x` in F has
 
-$$
+```math
  \operatorname{dist}(x,\partial F)\ge a_0=\sqrt3/2. \tag{7.2}
-$$
+```
 
 Indeed, a closest boundary point is either a vertex, at distance at
 least one, or an interior point of a unit edge. In the latter case
 write the projection coordinate as `t in [0,1]` and the perpendicular
 distance as h. Separation from both endpoints gives
 
-$$
+```math
  h^2\ge\max\{1-t^2,1-(1-t)^2\}\ge3/4.
-$$
+```
 
 This includes all retained isolates, independently of contact loading.
 It also shows that there are no other source points on these edges.
@@ -366,9 +366,9 @@ q unit boundary edges, and every non-hull source point belongs to one
 translated, rotated triangular lattice of spacing `lambda>=1`.
 Let R be the radius of any disk containing F. For large diameter D,
 
-$$
+```math
  \boxed{R^2-D^2/4\ \ge c D^{2/3}}                 \tag{7.3}
-$$
+```
 
 for an absolute `c>0` and sufficiently large onset (depending on the
 fixed discrepancy constant). In particular the circumradius cannot
@@ -379,23 +379,23 @@ be `D/2+o(D^(-1/3))` in this scope.
 `x+a0 B subset F subset B(o,R)` gives `|x-o|<=R-a0`. Equation
 (7.1), including the spacing reduction, bounds their number by
 
-$$
+```math
  {\pi(R-a_0)^2\over a_0}+O(1+R^\theta).
-$$
+```
 
 The convex perimeter inequality gives `q=P(F)<=2pi R`. Consequently
 
-$$
+```math
  n\le {\pi R^2\over a_0}+\pi a_0+O(1+R^\theta).   \tag{7.4}
-$$
+```
 
 If `R>=D`, (7.3) follows immediately. Otherwise `R=O(D)`, and
 Theorem 5.1 and (7.4) yield
 
-$$
+```math
  \kappa D^{2/3}\le g_A
  \le {\pi\over a_0}(R^2-D^2/4)+O(1+D^\theta).
-$$
+```
 
 Since `theta<2/3`, choose for example `c=a0 kappa/(2pi)` after
 increasing the onset. This proves (7.3). QED.
@@ -405,11 +405,11 @@ increasing the onset. This proves (7.3). QED.
 For odd `q>=3`, let B be the vertices of the regular q-gon of unit
 side. Its circumradius and diameter satisfy exactly
 
-$$
+```math
  R={1\over2\sin(\pi/q)},\qquad
  D={1\over2\sin(\pi/(2q))},\qquad
  R^2-D^2/4={1\over16\cos^2(\pi/(2q))}\le1/12.      \tag{7.5}
-$$
+```
 
 If every additional source point is inside this polygon and belongs
 to one triangular lattice of spacing at least one, the complete source
@@ -460,10 +460,10 @@ the intersection of two radius-S disks with centers separated by s.
 It is nonincreasing on `[D,2S]` and zero at `2S`. The uniform
 near-tangency expansion is
 
-$$
+```math
  L_S(2S-d)={4\over3}\sqrt S\,d^{3/2}
                     (1+O(d/S)),\qquad 0\le d\le2\delta. \tag{9.1}
-$$
+```
 
 For example, write the lens as twice the circular cap integral
 `2 int_0^(d/2) 2sqrt(2St-t^2) dt`; expanding the square root
@@ -472,11 +472,11 @@ uniformly gives (9.1), including its coefficient.
 The disk count `N(r)=pi r^2/a0+O(1+r^theta)` and Stieltjes
 integration by parts give
 
-$$
+```math
  \sum_{w\in\Lambda:\ D\le|w|<2S}L_S(|w|)
   ={1\over a_0}\int_D^{2S}2\pi s L_S(s)\,ds
        +O(D^\theta L_S(D)).                         \tag{9.2}
-$$
+```
 
 Use the left limit of N at D, so every distance-D tie is included.
 The endpoint at `2S` has zero weight. The total variation of `L_S`
@@ -486,18 +486,18 @@ circle is substituted for this weighted estimate.
 
 Equations (9.1)--(9.2) imply
 
-$$
+```math
  \int_D^{2S} L_S(s)\,ds
      ={32\over15}\sqrt D\,\delta^{5/2}(1+o(1)),
-$$
+```
 
 and, for the exact translated-lattice conflict expectation,
 
-$$
+```math
  \mathbb EE
   ={32\pi\over15a_0^2}c^{5/2}D^{2/3}+O_c(D^\theta).
                                                                \tag{9.3}
-$$
+```
 
 The error from replacing `s` by D and `sqrt(S)` by `sqrt(D/2)`
 is smaller than the displayed discrepancy error. The positive
@@ -506,28 +506,28 @@ Consequently some translation, followed by at most one deletion
 per conflict edge as in Section 4, has strict diameter below D and
 population at least
 
-$$
+```math
  {\pi D^2\over4a_0}
  +\left({\pi\over a_0}c
             -{32\pi\over15a_0^2}c^{5/2}\right)D^{2/3}
  -C_cD^\theta.                                      \tag{9.4}
-$$
+```
 
 Optimize the elementary expression in parentheses. Its maximum is
 at
 
-$$
+```math
  c_*=(3a_0/16)^{2/3},\qquad
  \kappa_0={3\pi\over5a_0}(3a_0/16)^{2/3}
                       =0.647826\ldots.              \tag{9.5}
-$$
+```
 
 Thus every sufficiently large global diameter minimizer obeys
 
-$$
+```math
  \boxed{g_A\ge\kappa_0D^{2/3}-C D^\theta,\qquad
   \liminf_{D\to\infty}{g_A\over D^{2/3}}\ge\kappa_0.} \tag{9.6}
-$$
+```
 
 The liminf is along any sequence of global minimizers with growing
 diameters; the finite bound has one absolute C for the fixed
@@ -537,10 +537,10 @@ triangular lattice and chosen theta. The integer comparison is again
 If `T=sqrt((n-1)/(pi/(4a0)))`, the corresponding asymptotic
 diameter bound is
 
-$$
+```math
  D(n)\le T-{6\over5}(3a_0/16)^{2/3}T^{-1/3}
                     +o(T^{-1/3}).                   \tag{9.7}
-$$
+```
 
 Indeed, if the deficit `T-D` is already larger than a fixed multiple
 of `T^(-1/3)`, this holds directly. Otherwise `D/T ->1` and dividing

@@ -32,21 +32,21 @@ Work with the canonical contact-minimal, then diameter-pair-minimal C-II source.
 
 Define the **nonmatching excess**
 
-$$
+```math
 \boxed{r_H:=2h-q.}
 \tag{61.1}
-$$
+```
 
 The main conclusions are the exact finite inequality
 
-$$
+```math
 \boxed{3r_H\ge h-2,}
 \tag{61.2}
-$$
+```
 
 and the sharper asymptotic theorem
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}{r_H\over D}\ge c_*,
 \qquad
@@ -55,7 +55,7 @@ c_* = \cos\!\left({3c_*\over2}\right),
 0.6099<c_*<0.61.
 }
 \tag{61.3}
-$$
+```
 
 The root `c_*` is unique in `(0,1)`; numerically it is approximately
 `0.6099043189`.
@@ -63,10 +63,10 @@ The root `c_*` is unique in `(0,1)`; numerically it is approximately
 In the Woodall forest branch, if the caterpillar components have vertex counts
 `q_1,...,q_{d_H}`, then
 
-$$
+```math
 r_H=q-2d_H=\sum_{j=1}^{d_H}(q_j-2).
 \tag{61.4}
-$$
+```
 
 Thus every sufficiently large forest survivor has a fixed linear amount of aggregate
 caterpillar excess beyond disjoint matching edges.
@@ -75,26 +75,26 @@ caterpillar excess beyond disjoint matching edges.
 
 Euler plus canonical ZF gives
 
-$$
+```math
 {b+Q\over2}=h-s_Z.
 \tag{61.5}
-$$
+```
 
 Since `b=q+x_B`,
 
-$$
+```math
 q+x_B+Q=2h-2s_Z.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 r_H=2h-q=x_B+Q+2s_Z
 =x_B+f+g_F+2s_Z.
 }
 \tag{61.6}
-$$
+```
 
 This is the exact currency identity used throughout the proof.
 
@@ -132,30 +132,30 @@ Let `R` be the number of bounded quadrilateral faces and `T` the number of train
 including isolated contact-edge trains. The train-link graph has `e` vertices and
 `2R` links and is a forest, so
 
-$$
+```math
 T=e-2R.
-$$
+```
 
 Face incidence gives
 
-$$
+```math
 2e=4R+b+\sum_{F\text{ non4}}\deg F.
-$$
+```
 
 Since
 
-$$
+```math
 \sum_{F\text{ non4}}\deg F=5f+g_F=4f+Q,
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{
 T={b+Q\over2}+2f=h-s_Z+2f.
 }
 \tag{61.7}
-$$
+```
 
 The second equality uses (61.5).
 
@@ -166,41 +166,41 @@ regions, and arbitrary bounded exceptional faces.
 
 List the loaded force-hull vertices in cyclic order as
 
-$$
+```math
 b_1,\ldots,b_q.
-$$
+```
 
 Choose their distinguished exterior occurrences on the outer contact-face boundary
 walk. They occur in the same cyclic order. Split that cyclic walk into `q` subwalks
 
-$$
+```math
 W_i:b_i\leadsto b_{i+1}
-$$
+```
 
 and let `ell_i` be the number of contact-edge occurrences in `W_i`. Then
 
-$$
+```math
 ell_i\ge1,
 \qquad
 \sum_i\ell_i=b=q+x_B,
-$$
+```
 
 so
 
-$$
+```math
 \sum_i(\ell_i-1)=x_B.
 \tag{61.8}
-$$
+```
 
 Call `W_i` good if `ell_i=1` and bad otherwise. The number of bad intervals is at
 most `x_B`, and the total number of outer-walk edge occurrences in bad intervals is
 
-$$
+```math
 \sum_{W_i\,\mathrm{bad}}\ell_i
 \le x_B+x_B
 =2x_B.
 \tag{61.9}
-$$
+```
 
 A good interval is one unit contact edge joining consecutive convex-hull vertices,
 so it is exactly a unit force-hull side.
@@ -213,12 +213,12 @@ sides.
 Every train end that is not on the outer face lies on an edge incident to a bounded
 nonquadrilateral face. Their total face-incidence capacity is
 
-$$
+```math
 \boxed{
 \sum_{F\text{ non4}}\deg F=5f+g_F.
 }
 \tag{61.10}
-$$
+```
 
 This is an upper bound on the number of such train-end incidences, including singleton
 trains between two exceptional faces.
@@ -235,16 +235,16 @@ unoriented direction appears at most twice.
 
 Take two distinct good trains with projective directions represented by
 
-$$
+```math
 0\le\theta_i<\theta_j<\pi.
-$$
+```
 
 Their four oriented hull-side directions occur cyclically as
 
-$$
+```math
 \theta_i,\ \theta_j,\ \theta_i+\pi,\ \theta_j+\pi.
 \tag{61.11}
-$$
+```
 
 Thus the endpoint pairs alternate on the boundary of the convex disk `F`.
 
@@ -254,10 +254,10 @@ cannot join alternating boundary pairs. Hence every two good trains cross.
 
 But the train-crossing graph is triangle-free. Therefore
 
-$$
+```math
 \boxed{T_{\rm good}\le2.}
 \tag{61.12}
-$$
+```
 
 This is the topological step that turns train geometry into quantitative diameter
 branching.
@@ -266,48 +266,48 @@ branching.
 
 Every nongood train consumes at least one bad end. By (61.9), (61.10), and (61.12),
 
-$$
+```math
 T-2\le2x_B+5f+g_F.
 \tag{61.13}
-$$
+```
 
 Insert the exact train count (61.7):
 
-$$
+```math
 h-s_Z+2f-2
 \le2x_B+5f+g_F,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 h-2\le2x_B+3f+g_F+s_Z.}
 \tag{61.14}
-$$
+```
 
 Multiply (61.6) by three. Since
 
-$$
+```math
 3r_H-(2x_B+3f+g_F+s_Z)
 =x_B+2g_F+5s_Z\ge0,
-$$
+```
 
 we obtain the exact finite theorem
 
-$$
+```math
 \boxed{3(2h-q)\ge h-2.}
 \tag{61.15}
-$$
+```
 
 In particular canonical ZR/ZF gives `h>=ceil(D)`, hence
 
-$$
+```math
 \boxed{
 2h-q\ge{\lceil D\rceil-2\over3}.
 }
 \tag{61.16}
-$$
+```
 
 So linear nonmatching topology already follows without any asymptotic area theorem.
 
@@ -315,123 +315,123 @@ So linear nonmatching topology already follows without any asymptotic area theor
 
 Put
 
-$$
+```math
 z:=Q+2s_Z=f+g_F+2s_Z.
 \tag{61.17}
-$$
+```
 
 Then `r_H=x_B+z`. From (61.14),
 
-$$
+```math
 3f+g_F+s_Z\le3z,
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{h-2\le2r_H+z.}
 \tag{61.18}
-$$
+```
 
 The canonical Section 59 difference-body theorem gives the exact finite inequality
 
-$$
+```math
 \boxed{
 z
 \le h+1-2D\cos((h-1)a_D),
 \qquad
 a_D=\arcsin{1\over2D}.}
 \tag{61.19}
-$$
+```
 
 Substituting (61.19) into (61.18) and cancelling `h` gives
 
-$$
+```math
 \boxed{
 r_H
 \ge D\cos((h-1)a_D)-{3\over2}.}
 \tag{61.20}
-$$
+```
 
 Equation (61.15) also gives
 
-$$
+```math
 \boxed{r_H\ge{h-2\over3}.}
 \tag{61.21}
-$$
+```
 
 Because the loaded diameter graph is a planar diameter pseudoforest, `h<=q`, while
 `q<=per(F)<=pi D`; hence `h/D` is bounded. Pass to any subsequence on which
 
-$$
+```math
 {h\over D}\to y.
-$$
+```
 
 Since
 
-$$
+```math
 a_D={1\over2D}+O(D^{-3}),
-$$
+```
 
 we have `(h-1)a_D -> y/2`. Divide (61.20)-(61.21) by `D`. Every subsequential limit
 `r` of `r_H/D` obeys
 
-$$
+```math
 \boxed{
 r\ge\max\left\{{y\over3},\cos{y\over2}\right\}.}
 \tag{61.22}
-$$
+```
 
 On `0<y<pi`, `y/3` increases strictly and `cos(y/2)` decreases strictly. Their
 maximum is minimized at the unique crossover
 
-$$
+```math
 {y_*\over3}=\cos{y_*\over2}.
 \tag{61.23}
-$$
+```
 
 Set
 
-$$
+```math
 c_*:={y_*\over3}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{c_*=\cos(3c_*/2),}
 \tag{61.24}
-$$
+```
 
 and (61.22) yields
 
-$$
+```math
 \boxed{
 \liminf {2h-q\over D}\ge c_*.
 }
 \tag{61.25}
-$$
+```
 
 Uniqueness follows because
 
-$$
+```math
 F(c)=c-\cos(3c/2)
-$$
+```
 
 has
 
-$$
+```math
 F'(c)=1+{3\over2}\sin(3c/2)>0
-$$
+```
 
 for `0<c<1`, while `F(0)<0<F(1)`.
 
 The registered exact certificate proves
 
-$$
+```math
 \boxed{0.6099<c_*<0.61}
 \tag{61.26}
-$$
+```
 
 using rational alternating Taylor bounds for cosine; no decimal transcendental
 evaluation is used by the certificate.
@@ -441,42 +441,42 @@ evaluation is used by the certificate.
 The constant `c_*` is not an artifact of a loose rearrangement. For fixed normalized
 edge density `y=h/D`, write normalized currencies
 
-$$
+```math
 x={x_B\over D},\quad
 u={f\over D},\quad
 g={g_F\over D},\quad
 s={s_Z\over D}.
-$$
+```
 
 Ignoring vanishing `O(1/D)` terms, the train-end inequality requires
 
-$$
+```math
 2x+3\nu+g+s\ge y,
 \tag{61.27}
-$$
+```
 
 while the DB defect capacity gives
 
-$$
+```math
 \nu+g+2s\le y-2\cos(y/2).
 \tag{61.28}
-$$
+```
 
 The branching cost is
 
-$$
+```math
 r=x+\nu+g+2s.
 \tag{61.29}
-$$
+```
 
 Among the DB-controlled currencies, `nu` supplies the most train-end capacity per unit
 branching cost. Solving the resulting fixed-`y` linear relaxation gives
 
-$$
+```math
 \boxed{
 r_{\min}(y)=\max\{y/3,\cos(y/2)\}.}
 \tag{61.30}
-$$
+```
 
 Thus `c_*` is the best universal constant obtainable from the audited train-end and DB
 inequalities alone. A stronger constant requires new geometry, not algebraic
@@ -487,20 +487,20 @@ rearrangement.
 In the Woodall forest branch, `d_H` is exactly the number of caterpillar components,
 and each component has at least two vertices. Since `h=q-d_H`,
 
-$$
+```math
 2h-q=q-2d_H
 =\sum_j(q_j-2).
 \tag{61.31}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \liminf {1\over D}\sum_j(q_j-2)\ge c_*>0.6099.
 }
 \tag{61.32}
-$$
+```
 
 This is much stronger than merely excluding a perfect matching. A survivor cannot
 hide its nonmatching topology in finitely many bounded-size caterpillars or in an
@@ -508,17 +508,17 @@ hide its nonmatching topology in finitely many bounded-size caterpillars or in a
 
 The exact finite inequality also gives
 
-$$
+```math
 5d_H\le2q+2,
 \tag{61.33}
-$$
+```
 
 so asymptotically
 
-$$
+```math
 \boxed{{d_H\over q}\le{2\over5}+o(1).}
 \tag{61.34}
-$$
+```
 
 In the Woodall cyclic branch `d_H=0` and `r_H=q`; Section 61 is primarily a forest
 stability theorem there.
@@ -548,15 +548,15 @@ components, or positive KKT mass on the excess topology.
 
 The next useful theorem should couple
 
-$$
+```math
 r_H=x_B+Q+2s_Z
-$$
+```
 
 to the independently audited renormalized contact currency
 
-$$
+```math
 e_{BB}+2s_C-3(d_H+s_Z),
-$$
+```
 
 or to the common bridge-block/negative-transfer structure, without double charging
 `x_B`, `Q`, or `s_Z`.

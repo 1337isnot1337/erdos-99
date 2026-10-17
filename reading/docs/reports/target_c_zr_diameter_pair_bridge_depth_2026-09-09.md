@@ -27,64 +27,64 @@ This is stronger than merely finding one endpoint at depth `eta D/2`, and it is 
 
 Let `T` be the positive-contact bridge-block tree and let `X_*` be the C23 Helly hub common to every active diameter path. For a loaded endpoint `b`, let
 
-$$
+```math
 d_b:=d_T(\tau(b),X_*).
 \tag{1.1}
-$$
+```
 
 For an active diameter edge
 
-$$
+```math
 h=bk\in H
-$$
+```
 
 let `P_h` be the unique tree path joining `tau(b)` and `tau(k)`, and write
 
-$$
+```math
 \ell_T(h):=|E(P_h)|.
 \tag{1.2}
-$$
+```
 
 Because C23 proves
 
-$$
+```math
 X_*\in P_h
 \qquad(h\in H),
 \tag{1.3}
-$$
+```
 
 the hub lies between the endpoint blocks on every diameter route. Therefore
 
-$$
+```math
 \boxed{
 \ell_T(bk)=d_b+d_k.
 }
 \tag{1.4}
-$$
+```
 
 For each endpoint let
 
-$$
+```math
 s_b:=\sum_{bk\in H}\beta_{bk},
 \qquad
 \sum_b s_b=2,
 \tag{1.5}
-$$
+```
 
 and for each rooted bridge edge let `w_e` be the C23 descendant endpoint mass. C23 gives
 
-$$
+```math
 \sum_e w_e
 =\sum_b s_b d_b
 \tag{1.6}
-$$
+```
 
 and
 
-$$
+```math
 \alpha_e\le D w_e.
 \tag{1.7}
-$$
+```
 
 ## 2. Strongest genuinely new audited theorem
 
@@ -92,50 +92,50 @@ $$
 
 Under the C23 bridge-tree hypotheses,
 
-$$
+```math
 \boxed{
 \sum_{e\in E(T)}w_e
 =
 \sum_{h\in H}\beta_h\,\ell_T(h).
 }
 \tag{ZBD1}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 S_{\rm br}:=\sum_{e\in E(T)}\alpha_e
 \le
 D\sum_{h\in H}\beta_h\ell_T(h).
 }
 \tag{ZBD2}
-$$
+```
 
 If, for fixed `eta>0`,
 
-$$
+```math
 S_{\rm br}\ge\eta D^2,
 \tag{ZBD3}
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 \sum_{h\in H}\beta_h\ell_T(h)\ge\eta D
 }
 \tag{ZBD4}
-$$
+```
 
 and, because `sum_H beta_h=1`, there exists an actual active diameter edge `h_*` such that
 
-$$
+```math
 \boxed{
 \ell_T(h_*)\ge\eta D.
 }
 \tag{ZBD5}
-$$
+```
 
 Thus one actual diameter pair of Euclidean length `D` is separated, in the positive-contact block tree, by at least `eta D` distinct contact bridges.
 
@@ -143,7 +143,7 @@ Thus one actual diameter pair of Euclidean length `D` is separated, in the posit
 
 Expand the endpoint expression in C23.16 using (1.5):
 
-$$
+```math
 \begin{aligned}
 \sum_b s_b d_b
 &=
@@ -152,35 +152,35 @@ $$
 \sum_{bk\in H}\beta_{bk}(d_b+d_k).
 \end{aligned}
 \tag{2.1}
-$$
+```
 
 By the Helly-hub property (1.3), the unique tree path from `tau(b)` to `tau(k)` passes through `X_*`, so (1.4) gives
 
-$$
+```math
 d_b+d_k=\ell_T(bk).
 \tag{2.2}
-$$
+```
 
 Insert (2.2) into (2.1) and combine with C23.16 to obtain ZBD1.
 
 Now sum C23.12 over all contact bridges:
 
-$$
+```math
 S_{\rm br}
 =\sum_e\alpha_e
 \le
 D\sum_e w_e.
 \tag{2.3}
-$$
+```
 
 Use ZBD1 to get ZBD2. Under ZBD3, divide by `D` to obtain ZBD4.
 
 Finally the normalized diameter weights satisfy
 
-$$
+```math
 \sum_{h\in H}\beta_h=1.
 \tag{2.4}
-$$
+```
 
 Thus the left side of ZBD4 is a weighted average of the nonnegative integers `ell_T(h)`. At least one term is no smaller than the average, proving ZBD5. QED.
 
@@ -188,10 +188,10 @@ Thus the left side of ZBD4 is a weighted average of the nonnegative integers `el
 
 The old C23 conclusion from bridge dominance was
 
-$$
+```math
 \frac12\sum_b s_b d_b\ge\frac\eta2D,
 \tag{3.1}
-$$
+```
 
 a weighted endpoint-depth statement. ZBD identifies the same quantity as half of the `beta`-weighted diameter-pair route length and therefore produces one concrete diameter pair with bridge depth at least `eta D`.
 
@@ -206,12 +206,12 @@ Under the additional C66 hypothesis `D epsilon->0`, ZBC gives more geometry on a
 
 The global scalar endpoint remains
 
-$$
+```math
 \boxed{
  b+\sum_F(\deg F-4)>2h.
 }
 \tag{4.1}
-$$
+```
 
 For the bridge-dominant branch, the route-local target can now be stated without endpoint-mass language:
 

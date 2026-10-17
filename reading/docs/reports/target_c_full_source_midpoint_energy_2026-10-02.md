@@ -77,19 +77,19 @@ The unique support point with normal `n=(cos theta,sin theta)` is
 
 Integrating the signed boundary area, then integrating `h h''` by parts, gives
 
-$$
+```math
  \delta_W:=\pi D^2/4-\operatorname{area}W
  =\frac12\int_0^{2\pi}(f'^2-f^2).                    \tag{ME.1}
-$$
+```
 
 Only odd Fourier modes k>=3 remain. If their real coefficients are a_k,b_k,
 Parseval gives
 
-$$
+```math
  \delta_W=\frac\pi2\sum_{k\ge3\text{ odd}}
  (k^2-1)(a_k^2+b_k^2),\qquad
  \int f'^2\le\frac94\delta_W.                      \tag{ME.2}
-$$
+```
 
 At any theta, Cauchy--Schwarz in this series and the telescoping identity
 
@@ -97,9 +97,9 @@ At any theta, Cauchy--Schwarz in this series and the telescoping identity
 
 give
 
-$$
+```math
  \|f\|_\infty\le F_W:=\sqrt{\delta_W/(2\pi)}.        \tag{ME.3}
-$$
+```
 
 The weighted Cauchy--Schwarz estimate also proves absolute uniform convergence,
 so point evaluation of the Fourier series is legitimate. Since
@@ -110,10 +110,10 @@ its negative, because f' is antiperiodic. Their distance is pi, so
 `T<=pi L_W/2`. The two Lipschitz tents of height T and half-width T/L_W
 centered at these points have disjoint interiors. Hence
 
-$$
+```math
  \int_0^{2\pi}f'^2\ge\frac{4T^3}{3L_W},\qquad
  T^3\le\frac{27}{16}L_W\delta_W.                   \tag{ME.4}
-$$
+```
 
 This is a uniform finite inequality, not a numerical observation.
 
@@ -121,20 +121,20 @@ This is a uniform finite inequality, not a numerical observation.
 
 For a finite planar source A of diameter D, set
 
-$$
+```math
  \delta=\pi D^2/4-\operatorname{area}(\operatorname{conv}A),\quad
  F=\sqrt{\delta/(2\pi)},\quad L=D/2+F,
  \quad B=\sqrt{F^2+\left(27L\delta/16\right)^{2/3}}.    \tag{ME.5}
-$$
+```
 
 ### Theorem ME.1
 
 There is one point s, the Steiner point of any chosen completion, such that
 every actual source diameter pq satisfies
 
-$$
+```math
  \left|\frac{p+q}{2}-s\right|\le B.                 \tag{ME.6}
-$$
+```
 
 **Proof.** Let `n=(p-q)/D`. For every x in W, `|x-q|<=D`, so
 
@@ -143,9 +143,9 @@ $$
 Thus p is the unique support point with normal n, and q is the unique support
 point with normal -n. Antiperiodicity in the boundary formula gives
 
-$$
+```math
  \frac{p+q}{2}-s=f(\theta)n+f'(\theta)Jn.           \tag{ME.7}
-$$
+```
 
 Apply (ME.3)--(ME.4), and use `delta_W<=delta` since `K subset W`.
 All functions defining F,L,B are increasing in the deficit. This proves (ME.6).
@@ -156,9 +156,9 @@ objects; the constrained pairs in (ME.6) are the original source pairs. ∎
 
 For every unit-separated global minimizer with D>=1,
 
-$$
+```math
  B<\tfrac32 D^{2/3}.                               \tag{ME.8}
-$$
+```
 
 Indeed `F<sqrt(sqrt(3)/8)sqrt(D)<sqrt(D)/2`, hence `L<D`.
 The cube-root term in (ME.5) is smaller than `(4/3)D^(2/3)` because
@@ -172,10 +172,10 @@ Canonical Bonnesen geometry gives `|j-o|<=R_K-r_K<eta` and
 
 Consequently every actual diameter midpoint obeys
 
-$$
+```math
  \boxed{\left|\frac{p+q}{2}-o\right|<B+F+2\eta
  <\frac{14}{3}D^{2/3}<5D^{2/3}.}                    \tag{ME.9}
-$$
+```
 
 Here `3^(1/4)<4/3` and `sqrt(D)<=D^(2/3)` for D>=1. The theorem is
 uniform over every global minimizer; contact or diameter minimization is not
@@ -187,18 +187,18 @@ For a normalized stress let `s_b=sum_k beta_bk>0` and
 `g_b=sum_k beta_bk(p_b-p_k)`, on its positive diameter endpoints. Then
 `sum_b s_b=2`. The original source midpoint identity gives
 
-$$
+```math
  |g_b-2s_b(p_b-s)|\le2s_bB,\qquad
  \sum_b|g_b-2s_b(p_b-s)|\le4B<6D^{2/3}.             \tag{ME.10}
-$$
+```
 
 For its actual contact Dirichlet response, let `X_b=(p_b-s)/D`.
 The exact harmonic coordinate identity is `Lambda X=g/D`. Thus
 
-$$
+```math
  \boxed{\sum_b|(\Lambda X-2\operatorname{diag}(s_b)X)_b|
  \le4B/D<6D^{-1/3}.}                               \tag{ME.11}
-$$
+```
 
 The response acts only on its positive contact core, with grounded unloaded
 vertices. Isolated source coordinates stay in the full source constraints;
@@ -211,16 +211,16 @@ There is also a stronger norm-of-force estimate. Define
 All partners of b lie in the radius-2B ball centered at `2s-p_b`. Their
 beta-normalized variance is at most `4B^2`; hence
 
-$$
+```math
  \sum_b V_b/s_b\le8B^2<18D^{4/3}.                  \tag{ME.12}
-$$
+```
 
 The exact identity `|g_b|^2=D^2s_b^2-V_b` yields, with `P_*=sum_b|g_b|`,
 
-$$
+```math
  \boxed{0\le2D-P_*\le D^{-1}\sum_bV_b/s_b
  \le8B^2/D<18D^{1/3}.}                             \tag{ME.13}
-$$
+```
 
 This improves the canonical `O(sqrt(D))` reciprocal perimeter error uniformly
 over all normalized stresses, without a lower bound on any individual weight.
@@ -261,35 +261,35 @@ It has linear population and no asserted global optimality or KKT stress.
 
 Take `D=q^3`, `q>=8`, `R=D/2`, `a=1/q`, and
 
-$$
+```math
  \phi(t)=(1-t^2)^2/16\quad(-1\le t\le1).
-$$
+```
 
 Define `f(theta)=Ra^2 phi(theta/a)` for `|theta|<=a`, its negative
 antipodal copy on `|theta-pi|<=a`, and zero elsewhere. Extend periodically.
 The support `h=R+f` is C^(1,1). Since `0<=phi<=1/16` and
 `-1/4<=phi''<=1/2`, its curvature obeys
 
-$$
+```math
  7R/16\le h+h''\le25R/16.                          \tag{ME.14}
-$$
+```
 
 Thus h defines a strictly convex constant-width-D body W. It need not be
 translated to its Steiner point for this construction. Direct polynomial
 integration gives
 
-$$
+```math
  \int\phi=1/15,\quad\int\phi^2=1/315,
  \quad\int\phi'^2=1/105,
  \quad\delta_W=D/420-D^{1/3}/1260.                  \tag{ME.15}
-$$
+```
 
 The first-harmonic translation has size at most `2Ra^3/(15pi)=1/(15pi)`.
 At `theta=a/2`, the actual antipodal support pair has midpoint m with
 
-$$
+```math
  f=9q/512,\quad f'=-3q^2/64,\quad |m|\ge3q^2/64.  \tag{ME.16}
-$$
+```
 
 Thus the midpoint is Omega(D^(2/3)) from the Steiner point, even though the
 completion's radial support error is only O(D^(1/3)). The first-harmonic
@@ -320,10 +320,10 @@ and its closing chord is at most `v ell^2/4`. Indeed its double-integral
 formula is `1/2 int_(t<s) sin(theta(s)-theta(t)) dt ds`, bounded by
 `v ell^2/4`. Since `ell<=rho_max v`, summing the `2k` arcs gives
 
-$$
+```math
  \operatorname{area}W-\operatorname{area}K
  \le\frac\pi2\rho_{\max}^2v^2\le5625\pi/128.        \tag{ME.17}
-$$
+```
 
 In addition every normal is within v of a selected mesh normal. The support
 loss is at most `rho_max v^2/2<=225/(8R)`, by integrating
@@ -332,15 +332,15 @@ The source hull therefore contains the centered disk of radius
 `R-F_0-225/(8R)` and lies in the centered disk of radius `R+F_0`.
 Its actual circumcenter o obeys
 
-$$
+```math
  |o|\le2F_0+225/(8R)=q/16+225/(4q^3).               \tag{ME.18}
-$$
+```
 
 Combining (ME.16) and (ME.18), for q>=8,
 
-$$
+```math
  \boxed{|m-o|\ge q^2/32=D^{2/3}/32.}              \tag{ME.19}
-$$
+```
 
 Also `delta_K<=delta_W+5625pi/128<D` for q>=8, smaller than
 the canonical allowance `(pi sqrt(3)/4)D`. This proves that the exponent
@@ -369,10 +369,10 @@ Laplacians act on coordinate modes with the same eigenvalue
 `span{1,P_x,P_y}`. To check the latter claim in every mode `1<=j<=q-1`,
 multiply its eigenvalue by q/4. The required inequality is
 
-$$
+```math
  \frac{\sin^2(2jt)}{4\sin^2t}
  \ge\sin^2(j\pi/2-jt).                             \tag{ME.20}
-$$
+```
 
 For j even its difference is
 `sin^2(jt)[cos^2(jt)/sin^2(t)-1]>=0`, with equality only j=q-1.
@@ -383,17 +383,17 @@ This proves the complete PSD and kernel assertion analytically.
 Every source point is loaded; its contact response is simply `Lambda=L_C`.
 Let `S=diag(s_b)=(2/q)I` and `X=P/D`. Then
 
-$$
+```math
  \sum_b|(\Lambda X-2SX)_b|
  =2\sin^2t/\cos t<10/q^2,                          \tag{ME.21}
-$$
+```
 
 while on the high-frequency mode j=(q-1)/2,
 
-$$
+```math
  \boxed{\|\Lambda-2S\|_{\rm op}
  \ge(\cot^2t-4)/q>q/4.}                            \tag{ME.22}
-$$
+```
 
 For the last bound, `sin t<=t`, `cos t>=1-t^2/2`, and `pi^2<10`
 give `(cot^2t-4)/q>=4q/pi^2-5/q>q/4` for q>=7.

@@ -24,17 +24,17 @@ These statements compose without another geometric loss beyond the chosen local 
 
 Let
 
-$$
+```math
 c_0={113\over20{,}000{,}000}=5.65\times10^{-6}.
 \tag{TNB.1}
-$$
+```
 
 The concrete half-retention specialization below gives a nested rail of density
 
-$$
+```math
 \boxed{{c_0\over4}D-o(D)=1.4125\times10^{-6}D-o(D)}
 \tag{TNB.2}
-$$
+```
 
 whose every position carries more than `0.6436D` common adjacent-row columns, all inverse-`D` near-equilateral, including common circumcenter flanks of more than `0.05470D` columns on each side.
 
@@ -44,25 +44,25 @@ whose every position carries more than `0.6436D` common adjacent-row columns, al
 
 There is a family of actual diameter bars
 
-$$
+```math
 h_s=x_sy_s,
 \qquad s=1,\ldots,M,
 \tag{TNB.3}
-$$
+```
 
 born at increasing good-interface indices
 
-$$
+```math
 i_1<i_2<\cdots<i_M
 \tag{TNB.4}
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{M>{c_0\over4}D-o(D).}
 \tag{TNB.5}
-$$
+```
 
 After choosing one fixed physical birth host `A`, all of the following hold simultaneously.
 
@@ -70,19 +70,19 @@ After choosing one fixed physical birth host `A`, all of the following hold simu
 
 If `I_s` is the selected-cut support of `h_s`, then
 
-$$
+```math
 \boxed{
 I_1\supsetneq I_2\supsetneq\cdots\supsetneq I_M.
 }
 \tag{TNB.6}
-$$
+```
 
 Every partner endpoint lies on the complementary physical destination segment
 
-$$
+```math
 Q^B\cup T_m,
 \tag{TNB.7}
-$$
+```
 
 where `B` is the opposite host.
 
@@ -90,26 +90,26 @@ where `B` is the opposite host.
 
 Orient each bar outward at its birth endpoint,
 
-$$
+```math
 n_s={x_s-y_s\over D}.
 \tag{TNB.8}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{n_s\in N_K(x_s),\qquad -n_s\in N_K(y_s)}
 \tag{TNB.9}
-$$
+```
 
 exactly, and after one global choice of lifted host-normal orientation,
 
-$$
+```math
 \boxed{
 \arg n_1<\arg n_2<\cdots<\arg n_M.
 }
 \tag{TNB.10}
-$$
+```
 
 Thus the same rail is ordered simultaneously by birth layer, selected-cut support, birth support normal, and partner antipodal support normal.
 
@@ -117,40 +117,40 @@ Thus the same rail is ordered simultaneously by birth layer, selected-cut suppor
 
 Write the two adjacent selected rows at interface `i_s` as
 
-$$
+```math
 \tau_{i_s},\tau_{i_s+1}.
-$$
+```
 
 There is one common transverse family `P_s` with
 
-$$
+```math
 \boxed{|P_s|>0.6436D-o(D)}
 \tag{TNB.11}
-$$
+```
 
 which is pairwise noncrossing and occurs in the same order on both rows. For every `b in P_s`, the acute strict-rhombus angular defects on **both** adjacent rows satisfy
 
-$$
+```math
 \boxed{
 0<\delta(\tau_{i_s},b),\delta(\tau_{i_s+1},b)
 <{7.54\times10^8\over D}+o(D^{-1}).
 }
 \tag{TNB.12}
-$$
+```
 
 The same family contains common initial and terminal blocks
 
-$$
+```math
 P_s^-,P_s^+\subset P_s
-$$
+```
 
 with
 
-$$
+```math
 \boxed{|P_s^-|,|P_s^+|>
 (0.0547027-o(1))D,}
 \tag{TNB.13}
-$$
+```
 
 such that, in the monotone row-normal coordinate about the source circumcenter `o`, the crossings of every column in `P_s^-` lie below `-0.01D` on both rows, while the crossings of every column in `P_s^+` lie above `+0.01D` on both rows.
 
@@ -160,9 +160,10 @@ Every `s` is tagged either `EA` or `TB1`.
 
 - At an `EA` position, `h_s` is one member of an actual exact-antipodal switching pair which positively generates the nonzero exact strip reaction `G_{i_s}`. Both pair bars retain the host-forced transverse margin `arcsin(0.4143)-o(1)` from the row/reaction axis.
 - At a `TB1` position, `h_s` blocks every unit local contact-opening tangent with first-order margin at least
-  $$
+  ```math
   (0.4143-o(1))D.
-  $$
+  
+  ```
 
 No tag is lost in the local phase/bracket thinning.
 
@@ -172,19 +173,19 @@ No tag is lost in the local phase/bracket thinning.
 
 The corrected good-interface fork gives
 
-$$
+```math
 |E_D|+|U_D|>c_0D-o(D),
 \tag{TNB.14}
-$$
+```
 
 where `E_D` is exact-antipodal and `U_D` is non-antipodal TB1. Choose one actual switching bar at each good interface, keeping the omitted exact-force companion as metadata on `E_D`.
 
 The full tagged-rail theorem chooses one physical birth host and retains a family `R_D` with
 
-$$
+```math
 \boxed{|R_D|>{c_0\over2}D-o(D).}
 \tag{TNB.15}
-$$
+```
 
 All selected bars in `R_D` have distinct ordered births on that host, their partners lie in `Q^B cup T_m`, and their selected-cut supports are strictly nested. Every member of `R_D` is still a fixed-good interface, so its adjacent stopped-train terminal cost is `O(1)` and hence `o(D)` uniformly.
 
@@ -196,7 +197,7 @@ The exact diameter-normal theorem applies to the same selected bars and yields (
 
 Apply the local phase/bracket fusion theorem to the already nested interface set `R_D` with
 
-$$
+```math
 \gamma={c_0\over2},
 \qquad
 \eta={1\over2},
@@ -205,14 +206,14 @@ $$
 \qquad
 \mu={1\over100}.
 \tag{TNB.16}
-$$
+```
 
 Its retained interface density is
 
-$$
+```math
 (1-\eta)\gamma
 ={c_0\over4},
-$$
+```
 
 which proves (TNB.5).
 
@@ -220,32 +221,32 @@ Deleting rail positions preserves strict support nesting and strict exact-normal
 
 For these parameters the retained common column density is
 
-$$
+```math
 r-\sigma
 =0.6536-0.01
 =0.6436,
 \tag{TNB.17}
-$$
+```
 
 and the common flank density is
 
-$$
+```math
 \begin{aligned}
 q
 &=0.6536-0.01-{1.02\over\sqrt3}\\
 &=0.0547027254265\ldots .
 \end{aligned}
 \tag{TNB.18}
-$$
+```
 
 The phase constant is
 
-$$
+```math
 K={2C_{\rm phase}\over(1/2)(c_0/2)(0.01)}
 ={800C_{\rm phase}\over c_0}
 =7.527802448\ldots\times10^8,
 \tag{TNB.19}
-$$
+```
 
 which gives (TNB.11)--(TNB.13).
 
@@ -257,17 +258,17 @@ The phase/bracket theorem deletes whole interface positions based only on their 
 
 Partition the retained rail positions into
 
-$$
+```math
 R_D^{EA}\cup R_D^{TB1}.
-$$
+```
 
 By (TNB.5), one tag occupies more than
 
-$$
+```math
 \boxed{{c_0\over8}D-o(D)
 =7.0625\times10^{-7}D-o(D)}
 \tag{TNB.20}
-$$
+```
 
 positions.
 
@@ -293,27 +294,27 @@ This is stronger than separately knowing that a mechanism population, a nested r
 
 Same-host diameter exclusion leaves only two partner pieces for the retained rail:
 
-$$
+```math
 Q^B\quad\text{or}\quad T_m.
-$$
+```
 
 Pigeonholing the destination after all previous structure is imposed gives one physical branch of size
 
-$$
+```math
 \boxed{{c_0\over8}D-o(D)
 =7.0625\times10^{-7}D-o(D).}
 \tag{TNB.21}
-$$
+```
 
 Every bar in this fixed-destination subrail remains strictly nested and exact-normal ordered and every birth interface retains its fused local ladder.
 
 If one additionally insists on a single EA/TB1 tag, one branch still has density
 
-$$
+```math
 \boxed{{c_0\over16}D-o(D)
 =3.53125\times10^{-7}D-o(D).}
 \tag{TNB.22}
-$$
+```
 
 This yields four fully synchronized physical/mechanism possibilities, each now carrying the same types of order and local grid data:
 
@@ -330,40 +331,40 @@ At least one occurs at the density in (TNB.22).
 
 If a fixed projective gap is needed on the EA side, use the narrow exact-force-pair capacity
 
-$$
+```math
 \#\{i\in E_D:\eta_i<\rho\}
 \le2\rho D+o(D).
 \tag{TNB.23}
-$$
+```
 
 On the full fused nested rail of density `c0/4`, let `T` be its TB1 density and `E_w` its density of EA positions with force-pair gap at least `rho`. Then
 
-$$
+```math
 T+E_w
 >{c_0\over4}-2\rho-o(1).
 \tag{TNB.24}
-$$
+```
 
 Hence one of these two mechanisms has density
 
-$$
+```math
 \boxed{>{c_0\over8}-\rho-o(1).}
 \tag{TNB.25}
-$$
+```
 
 For the clean choice
 
-$$
+```math
 \rho={c_0\over16},
-$$
+```
 
 one gets either a host-strong TB1 fused nested rail or a `c0/16`-wide exact-force fused nested rail with density
 
-$$
+```math
 \boxed{{c_0\over16}D-o(D)
 =3.53125\times10^{-7}D-o(D).}
 \tag{TNB.26}
-$$
+```
 
 The exact-force alternative still carries the positive two-ray reaction identity and fixed individual host transverse margin.
 

@@ -19,43 +19,43 @@ diameter pair with `|p_a-p_z|=D`. Let `Gamma` be either outer-boundary arc from 
 to `a`, directed from `z` to `a`, and let `L=|Gamma|`. For each separating train
 `tau`, write
 
-$$
+```math
 a_\tau=d_\tau u_\tau,
 \qquad
 \lambda_\tau=(p_a-p_z)\cdot a_\tau.
-$$
+```
 
 If `P_0` is the set of tangent separating trains, `P_-` the backward separating
 trains, and
 
-$$
+```math
 S_-:=\sum_{\tau\in P_-}(-\lambda_\tau),
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 L-D\ge |P_0|+|P_-|+{S_-\over D}.
 }
 \tag{120.A1}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 S_-\le {D\over2}(L-D),
 }
 \tag{120.A2}
-$$
+```
 
 which is the previously unproved boundary-backtracking estimate, and
 
-$$
+```math
 \boxed{|P_0|+|P_-|\le L-D.}
 \tag{120.A3}
-$$
+```
 
 ## Crosscut/orientation audit
 
@@ -79,15 +79,15 @@ charge distinct boundary-edge occurrences. The charge is injective.
 Write the directed unit edges of `Gamma` as `v_1,...,v_L` and
 `q=(p_a-p_z)/D`. Their sum is `Dq`, so exactly
 
-$$
+```math
 L-D=\sum_{j=1}^L(1-q\cdot v_j).
-$$
+```
 
 Every summand is nonnegative. The terminal edge charged to `tau` contributes
 
-$$
+```math
 1-q\cdot a_\tau=1-\lambda_\tau/D.
-$$
+```
 
 Thus a tangent train contributes exactly `1`, while a backward train with
 `x_tau=-lambda_tau/D in (0,1]` contributes `1+x_tau`. Summing the injective charges
@@ -101,25 +101,25 @@ proves (120.A1). Since `1+x>=2x` on `[0,1]`, (120.A2) follows with the exact fac
 For a first-order-neutral train-angle velocity `v`, the exact signed-variance formula
 is
 
-$$
+```math
 \mathrm d^2f_{za}[v,v]
 =-\sum_\tau\lambda_\tau(v_\tau-\bar v)^2.
-$$
+```
 
 Only backward coefficients contribute positively, so
 
-$$
+```math
 \mathrm d^2f_{za}[v,v]
 \le {D\over2}(L-D)\|v-\bar v\|_\infty^2.
-$$
+```
 
 The same boundary charge gives `|P_0|<=L-D`. For the specific Section-43.1 paired
 quartic regression, which uses two distinct tangent trains per paired variable, this
 implies
 
-$$
+```math
 s\le\lfloor(L-D)/2\rfloor.
-$$
+```
 
 This last inequality is **not** promoted as a universal rank theorem for arbitrary
 quartic blockers.

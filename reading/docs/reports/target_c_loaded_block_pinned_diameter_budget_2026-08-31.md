@@ -24,20 +24,20 @@ For a bridge block `X`, let `m_X` be its number of vertices, `e_X` its internal 
 
 The new estimates are
 
-$$
+```math
 \boxed{\delta_X\le k_X+2q_X-2}
 \tag{C31.1}
-$$
+```
 
 for every nontrivial block, and
 
-$$
+```math
 \boxed{\sum_{X\text{ nontrivial}}\delta_X
 \le 2|B_+|-2-q_{sing}
 \le 2|B_+|-2
 \le 2\pi D-2,}
 \tag{C31.2}
-$$
+```
 
 where `q_sing` is the number of loaded singleton bridge blocks. Thus the entire two-edge-connected block decomposition, loaded blocks included, has only `O(D)` total internal graph diameter.
 
@@ -47,19 +47,19 @@ where `q_sing` is the number of loaded singleton bridge blocks. Thus the entire 
 
 Assume the contact-minimal fully force-visible Target C branch and choose a relative-interior normalized KKT stress, so `C_+=C`. Let `G=(A^circ,C)` be the nonisolated contact core. C26 gives
 
-$$
+```math
 Q^circ=B_+,
 \tag{C31.3}
-$$
+```
 
 where `Q^circ` is the full set of source diameter endpoints belonging to the core.
 
 Delete every bridge of `G`. The connected components are the bridge blocks; contracting them gives a tree `T`. For a block `X`, set
 
-$$
+```math
 k_X=\deg_T(X),\qquad q_X=|V(X)\cap B_+|.
 \tag{C31.4}
-$$
+```
 
 ---
 
@@ -69,10 +69,10 @@ $$
 
 For every bridge block `X`,
 
-$$
+```math
 \boxed{e_X+k_X\ge2(m_X-q_X).}
 \tag{C31.5}
-$$
+```
 
 #### Proof
 
@@ -90,29 +90,29 @@ No diameter row is counted. The diameter endpoints are removed from the variable
 
 A nontrivial bridge block is a connected triangle-free penny graph. The Eppstein inequality already used in C28 gives
 
-$$
+```math
 e_X\le2m_X-\delta_X-2.
 \tag{C31.6}
-$$
+```
 
 Combining C31.5 and C31.6,
 
-$$
+```math
 2m_X-2q_X\le e_X+k_X\le2m_X-\delta_X-2+k_X,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{\delta_X\le k_X+2q_X-2.}
-$$
+```
 
 Every contact edge has Euclidean length one, hence also
 
-$$
+```math
 \operatorname{diam}_{Eucl}(X)\le\delta_X\le k_X+2q_X-2.
 \tag{C31.7}
-$$
+```
 
 For `q_X=0` this recovers the C28 estimate `delta_X<=k_X-2`. The new content is the loaded case.
 
@@ -122,30 +122,30 @@ For `q_X=0` this recovers the C28 estimate `delta_X<=k_X-2`. The new content is 
 
 Let `N` be the nontrivial blocks and `S` the singleton blocks. Put
 
-$$
+```math
 q_N=\sum_{X\in N}q_X,\qquad q_S=\sum_{X\in S}q_X=:q_{sing}.
 \tag{C31.8}
-$$
+```
 
 The tree identity gives
 
-$$
+```math
 \sum_{X\in V(T)}(k_X-2)=-2.
 \tag{C31.9}
-$$
+```
 
 For each singleton block,
 
-$$
+```math
 k_X-2\ge-q_X.
 \tag{C31.10}
-$$
+```
 
 Indeed, a loaded singleton has `q_X=1` and tree degree at least one, so `k_X-2>=-1`. A reaction-free singleton is not a leaf by C20 and is not degree two by C26, so `k_X>=3` and `k_X-2>=1>=0=-q_X`. The one-node tree cannot be a singleton because the positive contact core is nontrivial.
 
 Summing C31.1 over `N`,
 
-$$
+```math
 \begin{aligned}
 \sum_{X\in N}\delta_X
 &\le\sum_{X\in N}(k_X-2)+2q_N\\
@@ -154,7 +154,7 @@ $$
 &=2|B_+|-2-q_{sing}.
 \end{aligned}
 \tag{C31.11}
-$$
+```
 
 This proves C31.2. The same bound holds for the sum of Euclidean block diameters. `square`
 

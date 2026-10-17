@@ -16,19 +16,19 @@
 
 JC and GS obtained explicit lower bounds on
 
-$$
+```math
 \lambda:=\frac{e_{BB}+2s_C}{D}
-$$
+```
 
 by replacing PI's force-hull area with a universal constant. PI actually gives a stronger area floor as a function of the normalized number of actual diameter edges
 
-$$
+```math
 y:=\frac hD.
-$$
+```
 
 Keeping this dependence throughout the joint cavity inequality produces the stronger explicit bound
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\frac{e_{BB}+2s_C}{D}
 \ge
@@ -36,7 +36,7 @@ $$
 =0.465351845396014\ldots .
 }
 \tag{DS.1}
-$$
+```
 
 No new external theorem is required.
 
@@ -46,48 +46,48 @@ No new external theorem is required.
 
 PI proves the finite inequality
 
-$$
+```math
 area(F)
 \ge
 \frac{D^2}{2}
 \sin\left(
 \min\left\{(h-1)\delta_D,\frac\pi2-\delta_D\right\}
 \right),
-$$
+```
 
 where
 
-$$
+```math
 \delta_D=2\arcsin\frac1{2D},
 \qquad
 D\delta_D\to1.
-$$
+```
 
 Pass to a subsequence with
 
-$$
+```math
 \frac hD\to y.
-$$
+```
 
 DB gives
 
-$$
+```math
 y\ge2\rho=1.4781702664\ldots .
-$$
+```
 
 Since `2rho<pi/2`, PI yields the density-sensitive asymptotic floor
 
-$$
+```math
 \boxed{
 \liminf\frac{area(F)}{D^2}
 \ge A(y),
 }
 \tag{DS.2}
-$$
+```
 
 with
 
-$$
+```math
 \boxed{
 A(y)=
 \begin{cases}
@@ -96,7 +96,7 @@ A(y)=
 \end{cases}
 }
 \tag{DS.3}
-$$
+```
 
 The second branch follows because PI's projective angle approaches `pi/2` once `(h-1)delta_D` passes that threshold.
 
@@ -106,44 +106,44 @@ The second branch follows because PI's projective angle approaches `pi/2` once `
 
 JC proves, along the same subsequence, the necessary inequality
 
-$$
+```math
 \boxed{
 A(y)-\frac\pi4\lambda^2
 \le
 \frac{(t+m(y))^2}{4\pi},
 }
 \tag{DS.4}
-$$
+```
 
 where
 
-$$
+```math
 t:=\lim\frac{e_{BB}}D,
 \qquad
 0\le t\le\lambda,
-$$
+```
 
 and
 
-$$
+```math
 \boxed{m(y):=\min\{y,\pi-y\}.}
 \tag{DS.5}
-$$
+```
 
 Replacing `t` by its largest possible value `lambda` gives the necessary one-variable condition
 
-$$
+```math
 \boxed{
 A(y)-\frac\pi4\lambda^2
 \le
 \frac{(\lambda+m(y))^2}{4\pi}.
 }
 \tag{DS.6}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 (\pi^2+1)\lambda^2
 +2m(y)\lambda
@@ -152,7 +152,7 @@ $$
 \ge0.
 }
 \tag{DS.7}
-$$
+```
 
 For each fixed `y`, the left side is strictly increasing in positive `lambda`. Hence the smallest allowed `lambda` is the positive root of equality in DS.7.
 
@@ -164,7 +164,7 @@ It is enough to prove directly that, at the candidate root for `y=pi/2`, DS.7 fa
 
 Let `lambda_*` be the positive solution of
 
-$$
+```math
 \boxed{
 (\pi^2+1)\lambda^2
 +\pi\lambda
@@ -172,74 +172,74 @@ $$
 -2\pi=0.
 }
 \tag{DS.8}
-$$
+```
 
 This is exactly DS.7 at
 
-$$
+```math
 y=\frac\pi2,
 \qquad A(y)=\frac12,
 \qquad m(y)=\frac\pi2.
-$$
+```
 
 ### Left half: `2rho<=y<=pi/2`
 
 Here
 
-$$
+```math
 A(y)=\frac12\sin y,
 \qquad m(y)=y.
-$$
+```
 
 Define
 
-$$
+```math
 F_-(y)
 :=(\pi^2+1)\lambda_*^2
 +2y\lambda_*+y^2-2\pi\sin y.
-$$
+```
 
 By DS.8,
 
-$$
+```math
 F_-(\pi/2)=0.
-$$
+```
 
 Differentiate:
 
-$$
+```math
 F_-'(y)
 =2\lambda_*+2y-2\pi\cos y.
 \tag{DS.9}
-$$
+```
 
 On the interval `y>=2rho`,
 
-$$
+```math
 y\ge2\rho=1.47817\ldots,
 \qquad
 \pi\cos y\le\pi\cos(2\rho)=0.2909\ldots .
-$$
+```
 
 Hence
 
-$$
+```math
 \lambda_*+y-\pi\cos y>0,
-$$
+```
 
 so
 
-$$
+```math
 F_-'(y)>0.
-$$
+```
 
 Therefore
 
-$$
+```math
 F_-(y)<0
 \qquad(2\rho\le y<\pi/2).
 \tag{DS.10}
-$$
+```
 
 Thus `lambda=lambda_*` violates the necessary condition DS.7 for every density strictly below `pi/2`.
 
@@ -247,47 +247,47 @@ Thus `lambda=lambda_*` violates the necessary condition DS.7 for every density s
 
 Put
 
-$$
+```math
 z:=\pi-y\in[0,\pi/2].
-$$
+```
 
 Here
 
-$$
+```math
 A(y)=\frac12,
 \qquad m(y)=z.
-$$
+```
 
 The DS.7 left side becomes
 
-$$
+```math
 F_+(z)
 =(\pi^2+1)\lambda_*^2
 +2z\lambda_*+z^2-2\pi.
-$$
+```
 
 This is strictly increasing in `z>=0`, while DS.8 gives
 
-$$
+```math
 F_+(\pi/2)=0.
-$$
+```
 
 Therefore
 
-$$
+```math
 F_+(z)<0
 \qquad(0\le z<\pi/2),
 \tag{DS.11}
-$$
+```
 
 which again violates DS.7 for every `y>pi/2`.
 
 Hence the global minimum over all admissible diameter densities is attained uniquely at
 
-$$
+```math
 \boxed{y=\pi/2.}
 \tag{DS.12}
-$$
+```
 
 ---
 
@@ -295,7 +295,7 @@ $$
 
 Solving DS.8 gives
 
-$$
+```math
 \boxed{
 \lambda_{PI}^*
 =
@@ -304,25 +304,25 @@ $$
 {2(\pi^2+1)}.
 }
 \tag{DS.13}
-$$
+```
 
 Numerically,
 
-$$
+```math
 \boxed{
 \lambda_{PI}^*
 =0.465351845396014\ldots .
 }
 \tag{DS.14}
-$$
+```
 
 Therefore every unbounded post-ZF survivor sequence satisfies DS.1.
 
 This supersedes the explicit Groemer split constant
 
-$$
+```math
 0.464792250394\ldots
-$$
+```
 
 as the best current numerical lower bound. Groemer/JN remain useful for equality/stability information near maximal force-hull perimeter, but are no longer needed merely to beat the original JC scalar constant.
 
@@ -332,15 +332,15 @@ as the best current numerical lower bound. Groemer/JN remain useful for equality
 
 ZK and DB give the slope constraint
 
-$$
+```math
 \frac{r_H}{D}
 +\frac13\frac{e_{BB}+2s_C}{D}
 \ge2\rho-o(1).
-$$
+```
 
 Insert DS.1:
 
-$$
+```math
 \boxed{
 \frac{r_H}{D}
 \ge
@@ -348,7 +348,7 @@ $$
 =1.3230529846\ldots-o(1)
 }
 \tag{DS.15}
-$$
+```
 
 for sequences approaching the minimum permitted pinned/contact currency.
 
@@ -360,21 +360,21 @@ The universal NB lower bound remains `0.609904...`; DS.15 describes the much mor
 
 The scalar optimization identifies the only density at which the explicit floor can be approached:
 
-$$
+```math
 \boxed{h/D\to\pi/2.}
 \tag{DS.16}
-$$
+```
 
 Moreover the relaxation `t<=lambda` must be tight at equality, so an extremizing sequence would require
 
-$$
+```math
 \boxed{
 \frac{e_{BB}}D\to\lambda_{PI}^*,
 \qquad
 \frac{s_C}{D}\to0.
 }
 \tag{DS.17}
-$$
+```
 
 Thus the numerical worst case is no longer diffuse. It is a high-diameter-density, direct-loaded-contact-dominated shell with negligible pinned stress surplus.
 
@@ -409,7 +409,7 @@ JN's constant-width argument may further exclude exact attainment, but DS does n
 
 The strongest explicit near-threshold normal form is now:
 
-$$
+```math
 h/D\approx\pi/2,
 \qquad
  e_{BB}/D\approx0.46535,
@@ -417,6 +417,6 @@ h/D\approx\pi/2,
  s_C/D\approx0,
 \qquad
  r_H/D\gtrsim1.32305.
-$$
+```
 
 This points directly to the `s_C`-small attachment-cell geometry and the loaded-loaded contact shell, rather than to a diffuse pinned-stress obstruction.

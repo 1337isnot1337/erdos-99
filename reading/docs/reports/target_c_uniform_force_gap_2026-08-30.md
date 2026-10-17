@@ -17,9 +17,9 @@
 
 The preceding report excluded the exact lower force-perimeter endpoint
 
-$$
+```math
 P_*=\sqrt3D
-$$
+```
 
 for `n\ge362`.  This note proves a genuinely stronger asymptotic statement: the lower
 endpoint cannot even be approached by KKT stresses of large global minimizers.
@@ -28,23 +28,23 @@ endpoint cannot even be approached by KKT stresses of large global minimizers.
 
 There exist absolute constants
 
-$$
+```math
 \boxed{\varepsilon_0>0,
 \qquad n_0<\infty}
 \tag{C16.1}
-$$
+```
 
 such that for every `n\ge n_0`, every planar global `n`-point minimizer `A`, and every
 normalized KKT stress of `A`,
 
-$$
+```math
 \boxed{
 P_*
 \ge
 (\sqrt3+\varepsilon_0)D(n).
 }
 \tag{C16.2}
-$$
+```
 
 No triangle-free hypothesis is used.
 
@@ -57,7 +57,7 @@ strictly smaller than the coefficient forced by global minimum-diameter packing.
 
 The two constants behind the contradiction are
 
-$$
+```math
 \boxed{
 \frac{\pi-\sqrt3}{2}
 =0.704770\ldots
@@ -66,7 +66,7 @@ $$
 =0.785398\ldots.
 }
 \tag{C16.3}
-$$
+```
 
 ---
 
@@ -74,22 +74,22 @@ $$
 
 Fix one normalized KKT stress.  At `b\in B_+`, let
 
-$$
+```math
 s_b=\sum_{bk\in H_+}\beta_{bk}>0
 \tag{C16.4}
-$$
+```
 
 and normalize the incident diameter directions by
 
-$$
+```math
 u_{bk}:=\frac{b-k}{D},
 \qquad |u_{bk}|=1.
 \tag{C16.5}
-$$
+```
 
 Define
 
-$$
+```math
 \boxed{
 \rho_b
 :=
@@ -101,13 +101,13 @@ $$
 \right|.
 }
 \tag{C16.6}
-$$
+```
 
 Target C Lemma C14.1 says all incident diameter directions at `b` have pairwise angular
 distance at most `\pi/3`.  If `\theta_b\le\pi/3` is the width of a shortest closed
 angular interval containing them, projection onto the interval bisector gives
 
-$$
+```math
 \boxed{
 \rho_b
 \ge
@@ -118,11 +118,11 @@ $$
 \frac{\sqrt3}{2}.
 }
 \tag{C16.7}
-$$
+```
 
 The force perimeter is exactly
 
-$$
+```math
 \boxed{
 \frac{P_*}{D}
 =
@@ -131,7 +131,7 @@ $$
 \sum_{b\in B_+}s_b=2.
 }
 \tag{C16.8}
-$$
+```
 
 Thus `P_*/(2D)` is the `s_b/2`-weighted mean of the local coherence parameters
 `\rho_b`.
@@ -145,32 +145,32 @@ Thus `P_*/(2D)` is the `s_b/2`-weighted mean of the local coherence parameters
 Let `(A_m)` be any sequence of diameter-`D_m` configurations with normalized KKT
 stresses satisfying
 
-$$
+```math
 \frac{P_{*,m}}{D_m}\longrightarrow\sqrt3.
 \tag{C16.9}
-$$
+```
 
 Then there exist, for every `m`, three points
 
-$$
+```math
 b_m,y_m,z_m\in A_m
-$$
+```
 
 such that
 
-$$
+```math
 |b_m-y_m|=|b_m-z_m|=D_m
 \tag{C16.10}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \frac{|y_m-z_m|}{D_m}\longrightarrow1.
 }
 \tag{C16.11}
-$$
+```
 
 Equivalently, after scaling by `D_m`, the three points converge modulo Euclidean
 motions to a unit equilateral triangle.
@@ -179,24 +179,24 @@ motions to a unit equilateral triangle.
 
 By (C16.8),
 
-$$
+```math
 \min_{b\in B_{+,m}}\rho_b
 \le
 \frac{P_{*,m}}{2D_m}.
 \tag{C16.12}
-$$
+```
 
 Together with the universal lower bound `\rho_b\ge\sqrt3/2` and (C16.9), there is a
 choice `b_m` with
 
-$$
+```math
 \rho_{b_m}\longrightarrow\frac{\sqrt3}{2}.
 \tag{C16.13}
-$$
+```
 
 Let `\theta_m=\theta_{b_m}`.  From (C16.7),
 
-$$
+```math
 \frac{\sqrt3}{2}
 \le
 \cos(\theta_m/2)
@@ -204,27 +204,27 @@ $$
 \rho_{b_m}
 \longrightarrow
 \frac{\sqrt3}{2}.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{\theta_m\longrightarrow\frac\pi3.}
 \tag{C16.14}
-$$
+```
 
 The endpoint directions of a shortest containing interval are actual incident diameter
 directions because the support is finite.  Choose corresponding diameter partners
 `y_m,z_m`.  The angle between `b_m-y_m` and `b_m-z_m` is `\theta_m`, so
 
-$$
+```math
 \frac{|y_m-z_m|}{D_m}
 =
 2\sin(\theta_m/2)
 \longrightarrow
 2\sin(\pi/6)
 =1.
-$$
+```
 
 This proves the lemma. `\square`
 
@@ -238,30 +238,30 @@ equality case.
 
 Scale the triple in Lemma C16.1 by `D_m` and apply a rigid motion so that
 
-$$
+```math
 \tilde b_m=(0,0),
 \qquad
 \tilde y_m=(1,0),
 \qquad
 \tilde z_m=(\cos\theta_m,\sin\theta_m),
 \tag{C16.15}
-$$
+```
 
 with `\theta_m\to\pi/3`.
 
 Every normalized source point `\tilde a=a/D_m` lies within distance one of all three
 centers because the original source diameter is `D_m`.  Therefore
 
-$$
+```math
 \frac1{D_m}\operatorname{conv}A_m
 \subseteq
 K_m,
 \tag{C16.16}
-$$
+```
 
 where
 
-$$
+```math
 K_m
 :=
 \overline B(\tilde b_m,1)
@@ -270,7 +270,7 @@ K_m
 \cap
 \overline B(\tilde z_m,1).
 \tag{C16.17}
-$$
+```
 
 As `\theta_m\to\pi/3`, the three disk centers converge to the vertices of a unit
 equilateral triangle.  Hence the compact convex sets `K_m` converge in Hausdorff
@@ -279,14 +279,14 @@ distance to the unit Reuleaux triangle `\mathcal R_1`.
 For convex bodies, area and perimeter are continuous under Hausdorff convergence.
 Consequently
 
-$$
+```math
 \boxed{
 \operatorname{area}(K_m)
 \longrightarrow
 \frac{\pi-\sqrt3}{2},
 }
 \tag{C16.18}
-$$
+```
 
 and the perimeters remain uniformly bounded; in fact they converge to `\pi`.
 
@@ -301,31 +301,31 @@ stability theorem is being imported.
 Assume now, toward contradiction, that Theorem C16 is false.  Then there is a sequence
 of cardinalities
 
-$$
+```math
 n_m\to\infty,
-$$
+```
 
 global minimizers `A_m`, and normalized KKT stresses such that
 
-$$
+```math
 \frac{P_{*,m}}{D_m}\longrightarrow\sqrt3,
 \qquad
 D_m:=D(n_m).
 \tag{C16.19}
-$$
+```
 
 The canonical lower diameter estimate implies `D_m\to\infty`.
 
 Let
 
-$$
+```math
 t_m:=\frac1{2D_m}\longrightarrow0.
 \tag{C16.20}
-$$
+```
 
 Scaling the parallel-body inclusion obtained from (C16.16) gives
 
-$$
+```math
 \frac1{D_m}
 \left(
 \operatorname{conv}A_m+B(0,1/2)
@@ -333,22 +333,22 @@ $$
 \subseteq
 K_m+B(0,t_m).
 \tag{C16.21}
-$$
+```
 
 By Steiner's formula,
 
-$$
+```math
 \operatorname{area}(K_m+B(0,t_m))
 =
 \operatorname{area}(K_m)
 +t_m\operatorname{per}(K_m)
 +\pi t_m^2.
 \tag{C16.22}
-$$
+```
 
 Using (C16.18), bounded perimeter, and `t_m\to0`,
 
-$$
+```math
 \limsup_{m\to\infty}
 \frac{
 \operatorname{area}(\operatorname{conv}A_m+B(0,1/2))
@@ -358,37 +358,37 @@ $$
 \frac{\pi-\sqrt3}{2}.
 }
 \tag{C16.23}
-$$
+```
 
 But Fejes Tóth gives
 
-$$
+```math
 \operatorname{area}(\operatorname{conv}A_m+B(0,1/2))
 \ge
 \frac{\sqrt3}{2}n_m.
 \tag{C16.24}
-$$
+```
 
 For a global minimizer the strict canonical upper diameter bound
 
-$$
+```math
 D_m^2
 <
 \frac{n_m}{\Delta_2},
 \qquad
 \Delta_2=\frac\pi{2\sqrt3},
 \tag{C16.25}
-$$
+```
 
 implies
 
-$$
+```math
 \frac{n_m}{D_m^2}>\Delta_2.
-$$
+```
 
 Therefore every `m` satisfies
 
-$$
+```math
 \boxed{
 \frac{
 \operatorname{area}(\operatorname{conv}A_m+B(0,1/2))
@@ -399,18 +399,18 @@ $$
 \frac\pi4.
 }
 \tag{C16.26}
-$$
+```
 
 The constants satisfy
 
-$$
+```math
 \frac{\pi-\sqrt3}{2}
 <
 \frac\pi4
 \iff
 \pi<2\sqrt3,
 \tag{C16.27}
-$$
+```
 
 which is true.  Equations (C16.23) and (C16.26) are incompatible.  This contradiction
 proves Theorem C16. `\square`
@@ -421,16 +421,16 @@ proves Theorem C16. `\square`
 
 Theorem C15 only said
 
-$$
+```math
 P_*>\sqrt3D
-$$
+```
 
 for each sufficiently large minimizer.  Such pointwise strictness would still permit a
 sequence with
 
-$$
+```math
 P_*/D\downarrow\sqrt3.
-$$
+```
 
 Theorem C16 rules that out.  There is an absolute macroscopic separation between the
 KKT force polygon of a large global minimizer and the maximally cancelling equilateral
@@ -447,20 +447,20 @@ explicit pair of constants.
 
 Write
 
-$$
+```math
 \rho_b=\frac{|g_b|}{Ds_b}\in[\sqrt3/2,1].
-$$
+```
 
 Theorem C16 says that for every large global minimizer and every normalized KKT stress,
 
-$$
+```math
 \boxed{
 \sum_b\frac{s_b}{2}\rho_b
 \ge
 \frac{\sqrt3+\varepsilon_0}{2}.
 }
 \tag{C16.28}
-$$
+```
 
 Thus a positive amount of endpoint-incidence mass, in a stress-weighted sense, must be
 bounded away from maximal `60`-degree cancellation.

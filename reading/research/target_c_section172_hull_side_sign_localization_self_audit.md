@@ -15,18 +15,18 @@
 
 Audited §160 defines
 
-$$
+```math
 G_D=2+q+m-k-\sum_r d_r.
-$$
+```
 
 Therefore `q+m=sum d_r+G_D+k-2`, and subtracting `per(F)` gives (172.1). This is
 finite and does not assume a sign for `chi_D`.
 
 The audited Type-II outer ledger is `b=q+m+u_B`. Hence
 
-$$
+```math
 b-\operatorname{per}(F)=u_B+\chi_D.
-$$
+```
 
 The occurrence-counted outer walk is a concatenation of unit-edge paths joining the
 consecutive loaded-hull vertices, so each path is at least its chord length. Thus the
@@ -39,9 +39,9 @@ left side is nonnegative, and `chi_D\le-\varepsilon D` forces `u_B\ge\varepsilon
 Audited §160 proves, for a carrier with internal strict-rhombus area `A D^2+o(D^2)`
 and diameter `lambda D+o(D)`,
 
-$$
+```math
 G_D/D\ge[\sqrt{\pi A}-\lambda]_+-o(1).
-$$
+```
 
 Substitution into (172.2), together with `sum d_r/D>=S-o(1)` and `k/D->kappa`, gives
 (172.8). The same-carrier requirement is stated explicitly, so no independent
@@ -53,17 +53,17 @@ optimization of incompatible profiles occurs.
 
 Using the displayed proof-only endpoint values gives
 
-$$
+```math
 \sqrt{\pi(0.4703752868004241)}-0.9762439137425688
 =0.239374260456223\ldots,
-$$
+```
 
 and
 
-$$
+```math
 2.798596312209462+0.239374260456223-\pi
 =-0.103622080924108\ldots.
-$$
+```
 
 The decimals are diagnostic evaluations of exact expressions/previously audited
 profiles, not new canonical premises.

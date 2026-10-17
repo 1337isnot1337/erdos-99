@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_minimal_interface_exclusion_by_halfdisk_train_atoms_2026-09-09.md) · source SHA-256 `44141b1b5df8d5e564e891f803a4a6e1bb41f6ffa985ca1f9291105b12e25cd1`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-77C735329406","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_minimal_interface_exclusion_by_halfdisk_train_atoms_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=fdd597e7436d571cfd7b8d91d2e20502ea8472c9; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -20,9 +22,9 @@
 
 GP proves that every full-core near-circle survivor satisfies
 
-$$
+```math
 Q_B\ge(2-o(1))D,
-$$
+```
 
 where `Q_B` is the bounded-face degree excess on faces incident to loaded terminals.
 
@@ -30,82 +32,82 @@ The equality coefficient `2` is **not attainable**.
 
 Assume for contradiction that a full-core near-circle survivor sequence satisfies
 
-$$
+```math
 \frac{Q_B}{D}\to2.
 \tag{HA.1}
-$$
+```
 
 Corrected FS and AS/CF then give two dominant harmonic components `I_1,I_2` with
 
-$$
+```math
 |I_i|=\left(\frac\Delta2+o(1)\right)D^2,
 \qquad
 \Delta=\frac\pi{2\sqrt3},
 \tag{HA.2}
-$$
+```
 
 and component outer-walk lengths
 
-$$
+```math
 k_i=\left(1+\frac\pi2+o(1)\right)D.
 \tag{HA.3}
-$$
+```
 
 Each component has a shell-facing boundary arc containing
 
-$$
+```math
 \left(\frac\pi2-o(1)\right)D
 \tag{HA.4}
-$$
+```
 
 unit contact edges that are exact translates of distinct consecutive unit sides of the near-circular loaded shell.
 
 Run the DE atomic train-direction argument **inside each component**. If
 
-$$
+```math
 \tau_i:=\lim\frac{T_i}{D}
-$$
+```
 
 and `s_i` is the total atomic mass of a weak limit of the empirical projective train-direction measure, then the curved shell-facing ends give
 
-$$
+```math
 \boxed{
 \frac\pi2\le\tau_i(1-s_i),
 }
 \tag{HA.5}
-$$
+```
 
 while the rhombus crossing density and weighted Mantel give
 
-$$
+```math
 \boxed{
 \sqrt{\frac\pi{\sqrt3}}
 =2\sqrt{\frac\Delta2}
 \le\tau_i s_i.
 }
 \tag{HA.6}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \tau_i\ge
 \frac\pi2+\sqrt{\frac\pi{\sqrt3}}
 =2.91757001388\ldots .
 }
 \tag{HA.7}
-$$
+```
 
 DT gives exactly
 
-$$
+```math
 2T_i=k_i+Q_i+4f_i.
-$$
+```
 
 Therefore each dominant component satisfies
 
-$$
+```math
 \boxed{
 \frac{Q_i+4f_i}{D}
 \ge
@@ -113,11 +115,11 @@ $$
 =3.26434370097\ldots-o(1).
 }
 \tag{HA.8}
-$$
+```
 
 Summing the two components,
 
-$$
+```math
 \boxed{
 \frac{K_{\rm dom}}D
 :=\frac{(Q_1+4f_1)+(Q_2+4f_2)}D
@@ -126,39 +128,40 @@ $$
 =6.52868740194\ldots-o(1).
 }
 \tag{HA.9}
+```
 
 But HBd gives in the same sharp-interface branch
 
-\[
+```math
 Q_{\rm int}+2s_C=(\pi-2+o(1))D,
-$$
+```
 
 so
 
-$$
+```math
 Q_{\rm int}\le(\pi-2+o(1))D.
 \tag{HA.10}
-$$
+```
 
 Every internal exceptional face has degree at least five, hence `f_int<=Q_int` and
 
-$$
+```math
 K_{\rm int}:=Q_{\rm int}+4f_{\rm int}
 \le5Q_{\rm int}
 \le5(\pi-2+o(1))D
 =5.70796326795\ldots D+o(D).
 \tag{HA.11}
-$$
+```
 
 Since the two dominant components are internal harmonic components,
 
-$$
+```math
 K_{\rm dom}\le K_{\rm int}.
-$$
+```
 
 Equations HA.9 and HA.11 contradict one another by the fixed linear margin
 
-$$
+```math
 \boxed{
 4\left(
 \sqrt{\frac\pi{\sqrt3}}-(\pi-2)
@@ -166,7 +169,7 @@ $$
 =0.820724133995\ldots D-o(D).
 }
 \tag{HA.12}
-$$
+```
 
 Therefore HA.1 is impossible.
 
@@ -174,23 +177,24 @@ Therefore HA.1 is impossible.
 
 No full-core near-circle triangle-free post-ZF survivor sequence satisfies
 
-$$
+```math
 Q_B/D\to2.
-$$
+```
 
 Together with GP, this implies a qualitative uniform gap: there exists an absolute
 
-$$
+```math
 \boxed{\eta_{IF}>0}
-$$
+```
 
 such that every sufficiently large full-core near-circle survivor satisfies
 
-$$
+```math
 \boxed{
 Q_B\ge(2+\eta_{IF})D-o(D).
 }
 \tag{HA.13}
+```
 
 The present proof does not compute `eta_IF`; FS's fragmentation stability and the atomic-direction compactness are qualitative. The equality contradiction itself has the explicit margin HA.12.
 
@@ -202,39 +206,39 @@ Assume HA.1.
 
 FS proves that the total attachment-cell perimeter satisfies
 
-\[
+```math
 P_A=(\pi+2+o(1))D
-$$
+```
 
 and that each of the two HG half-disk groups contains one dominant attachment cell `P_i` with
 
-$$
+```math
 \operatorname{area}(P_i)
 =\left(\frac\pi8+o(1)\right)D^2,
 \qquad
 |I_i|=\left(\frac\Delta2+o(1)\right)D^2.
-$$
+```
 
 AS proves
 
-$$
+```math
 \sum_rk_r=(\pi+2+o(1))D,
-$$
+```
 
 while convex perimeter continuity gives for the two dominant component hulls
 
-$$
+```math
 \operatorname{per}(\operatorname{conv}I_i)
 =\left(1+\frac\pi2+o(1)\right)D.
-$$
+```
 
 Since each `k_i` dominates its convex-hull perimeter and all other outer-walk lengths are nonnegative, equality forces HA.3 for both `i=1,2`.
 
 AS/PT also gives a shell-facing block for each dominant component. All but `o(D)` loaded shell terminals have one interior spoke, component labels change on only `o(D)` shell edges, and regular quadrilateral annular faces give exact translated inner edges
 
-$$
+```math
 u_{j+1}-u_j=b_{j+1}-b_j.
-$$
+```
 
 The dominant loaded attachment block spans one semicircle. Hence the number of regular translated unit inner boundary edges is HA.4.
 
@@ -272,9 +276,9 @@ This gives the crude lower bound `T_i>=(pi/2-o(1))D`, but the atomic refinement 
 
 Pass to a subsequence on which
 
-$$
+```math
 T_i/D\to\tau_i
-$$
+```
 
 and the empirical probability measures of projective train directions converge weakly to a probability measure `mu_i` on the projective circle. Let `s_i` be the total mass of the atoms of `mu_i`.
 
@@ -282,25 +286,25 @@ Fix `epsilon>0`. Choose finitely many atoms carrying mass at least `s_i-epsilon`
 
 The curved good shell sides have the semicircular tangent-direction distribution. For fixed finitely many neighborhoods of total angular width `O(delta)`, convex perimeter-measure convergence gives only
 
-$$
+```math
 O(\delta D)+o(D)
-$$
+```
 
 curved good edges whose projective directions lie in `U_delta`.
 
 Every remaining curved good edge has direction outside `U_delta`, and by Section 3 each train outside `U_delta` supplies at most one such edge, up to the already discarded `o(D)` endpoint sides. Hence
 
-$$
+```math
 \left(\frac\pi2-o_delta(1)\right)D
 \le
 T_i\bigl(1-\mu_i(U_delta)+o(1)\bigr).
-$$
+```
 
 Divide by `D`, let the source sequence tend to infinity, then `delta->0`, and finally `epsilon->0`. This proves
 
-$$
+```math
 \boxed{\frac\pi2\le\tau_i(1-s_i).}
-$$
+```
 
 This is the half-disk analogue of DE's exposed-hull atomic-mass inequality, with coefficient one rather than DE's two-occurrence full-hull estimate because a projective train direction occurs at most once on an open semicircular boundary arc.
 
@@ -312,19 +316,19 @@ Let `R_i` be the number of bounded quadrilateral faces of `C[I_i]`.
 
 DT gives the exact Euler/train identity
 
-$$
+```math
 R_i=n_i+f_i-T_i-1.
 \tag{5.1}
-$$
+```
 
 All post-ZF face currencies are `O(D)`, and HA.3 gives `T_i=O(D)`. Thus HA.2 and (5.1) imply
 
-$$
+```math
 \boxed{
 R_i/D^2\to\Delta/2.
 }
 \tag{5.2}
-$$
+```
 
 The full-core area argument used by CE/UF gives total strict-rhombus area excess `o(D^2)`. The internal rhombi of `I_i` are a subset of all strict rhombi, so their total area excess is also `o(D^2)`.
 
@@ -335,21 +339,21 @@ Therefore the DE limiting crossing argument applies verbatim to the stopped-trai
 - the finite crossing graph is triangle-free;
 - weighted Mantel on finitely many atomic neighborhoods gives
 
-$$
+```math
 \frac{\Delta/2}{\tau_i^2}
 \le\frac{s_i^2}{4}.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \tau_i s_i
 \ge2\sqrt{\Delta/2}
 =\sqrt{2\Delta}
 =\sqrt{\frac\pi{\sqrt3}}.
 }
-$$
+```
 
 This proves HA.6.
 
@@ -361,27 +365,27 @@ No disk-shaped component hull is needed for the crossing half of DE; only DT, po
 
 HA.5 and HA.6 concern disjoint parts of the same train-direction probability measure:
 
-$$
+```math
 \tau_i
 =\tau_i(1-s_i)+\tau_i s_i.
-$$
+```
 
 Therefore
 
-$$
+```math
 \tau_i
 \ge
 \frac\pi2+\sqrt{\frac\pi{\sqrt3}},
-$$
+```
 
 proving HA.7.
 
 This is much stronger than the raw stopped-train/Mantel lower bound. Numerically,
 
-$$
+```math
 \frac\pi2+\sqrt{\frac\pi{\sqrt3}}
 =2.91757001388\ldots .
-$$
+```
 
 The two terms have clear geometric meanings:
 
@@ -396,19 +400,19 @@ The same train population cannot cheaply serve both roles.
 
 DT gives for component `I_i`
 
-$$
+```math
 T_i=\frac{k_i+Q_i}{2}+2f_i,
-$$
+```
 
 or
 
-$$
+```math
 Q_i+4f_i=2T_i-k_i.
-$$
+```
 
 Use HA.3 and HA.7:
 
-$$
+```math
 \begin{aligned}
 \liminf\frac{Q_i+4f_i}{D}
 &\ge
@@ -417,7 +421,7 @@ $$
 &=\frac\pi2-1+2\sqrt{\frac\pi{\sqrt3}}\\
 &=3.26434370097\ldots .
 \end{aligned}
-$$
+```
 
 This proves HA.8. Summing `i=1,2` proves HA.9.
 
@@ -427,53 +431,53 @@ This proves HA.8. Summing `i=1,2` proves HA.9.
 
 HBd proves throughout the full-core near-circle branch
 
-$$
+```math
 Q+2s_C=(\pi+o(1))D.
-$$
+```
 
 Under HA.1,
 
-$$
+```math
 Q=Q_B+Q_{int}
 =(2+o(1))D+Q_{int}.
-$$
+```
 
 Therefore
 
-$$
+```math
 Q_{int}+2s_C=(\pi-2+o(1))D.
-$$
+```
 
 Since `s_C>=0`, HA.10 follows.
 
 Every internal bounded nonquadrilateral face has degree at least five. Hence each contributes at least one to `Q_int`, so
 
-$$
+```math
 f_{int}\le Q_{int}.
-$$
+```
 
 Therefore
 
-$$
+```math
 K_{int}=Q_{int}+4f_{int}\le5Q_{int},
-$$
+```
 
 which proves HA.11.
 
 The two dominant component exceptional faces are a subset of the internal faces, so
 
-$$
+```math
 K_{dom}\le K_{int}.
-$$
+```
 
 But the coefficient lower and upper bounds are
 
-$$
+```math
 6.52868740194\ldots
 \le\liminf K_{dom}/D
 \le\limsup K_{int}/D
 \le5.70796326795\ldots,
-$$
+```
 
 impossible.
 
@@ -487,9 +491,9 @@ GP supplies the universal asymptotic lower endpoint `2` in the full-core near-ci
 
 If there were no absolute positive separation above `2`, one could choose for each integer `m` a sufficiently large full-core near-circle survivor with
 
-$$
+```math
 Q_B/D<2+1/m
-$$
+```
 
 while also making the defining near-circle/full-core errors smaller than `1/m`. A diagonal sequence would then satisfy HA.1, contradicting Theorem HA.
 
@@ -538,9 +542,9 @@ This is a genuine branch improvement: a linear amount of additional loaded-inter
 
 It still does not close the whole full-core near-circle branch because `eta_IF` is not known to be large enough to exceed the remaining terminal budget. The exact HBd identity only gives
 
-$$
+```math
 Q_B\le Q\le(\pi+o(1))D.
-$$
+```
 
 The next target is to quantify HA's stability gap, or iterate the same half-disk train-atom argument away from exact equality using FS's fragmentation alternative.
 

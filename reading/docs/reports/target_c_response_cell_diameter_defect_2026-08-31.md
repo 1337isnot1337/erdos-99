@@ -50,14 +50,14 @@ Consequently, if `M=Lambda-L_H` is the C11 response-minus-diameter matrix and
 
 then `mu_BB+sum_r mu_r=1` and
 
-$$
+```math
 \boxed{
 \frac12\operatorname{tr}M
 \ge
 \mu_{BB}(D^2-1)
 +
 \sum_r\mu_r\left(\frac{D^2}{d_r^2}-1\right).}
-$$
+```
 
 C46 says at most three cells have `d_r=D` exactly. Thus all contact-stress mass outside at most three exact-diameter cells and the loaded-loaded contacts pays a strictly positive response-defect factor.
 
@@ -96,13 +96,13 @@ The reduced complete-graph energy is
 
 Therefore
 
-$$
+```math
 \boxed{
 W_r
 =
 \sum_{s<t\in A_r}c_{st}^{(r)}|b_s-b_t|^2.}
 \tag{C47.1}
-$$
+```
 
 ---
 
@@ -114,13 +114,13 @@ Put
 
 The component's unscaled C41 diameter defect is
 
-$$
+```math
 \mathcal D_r
 :=
 \sum_{s<t\in A_r}c_{st}^{(r)}(D^2-|b_s-b_t|^2)
 =D^2C_r-W_r.
 \tag{C47.2}
-$$
+```
 
 Every attachment chord has length at most `d_r=diam(P_r)`, so C47.1 gives
 
@@ -130,13 +130,13 @@ Hence `C_r>=W_r/d_r^2`, and
 
 ### Theorem C47.1 — component diameter-defect bound
 
-$$
+```math
 \boxed{
 \mathcal D_r
 \ge
 W_r\left(\frac{D^2}{d_r^2}-1\right).}
 \tag{C47.3}
-$$
+```
 
 The right side is zero exactly at the level of this estimate when `d_r=D`; C41 remains strictly positive even then because a response clique on at least three distinct attachment vertices contains subdiameter pairs.
 
@@ -146,10 +146,10 @@ The right side is zero exactly at the level of this estimate when `d_r=D`; C41 r
 
 A direct loaded-loaded contact has source length exactly one and response conductance `alpha_e`. Its C41 defect contribution is
 
-$$
+```math
 \boxed{\alpha_e(D^2-1).}
 \tag{C47.4}
-$$
+```
 
 Let
 
@@ -157,10 +157,10 @@ Let
 
 The contact edges partition into the direct loaded-loaded edges and the sets `E_r`, so the KKT virial identity `sum_C alpha_e=D^2` gives
 
-$$
+```math
 \boxed{W_{BB}+\sum_rW_r=D^2.}
 \tag{C47.5}
-$$
+```
 
 Define normalized stress masses
 
@@ -190,7 +190,7 @@ Summing C47.3 and C47.4 yields:
 
 ### Theorem C47 — stress-weighted attachment-cell diameter defect
 
-$$
+```math
 \boxed{
 \frac12\operatorname{tr}M
 \ge
@@ -198,7 +198,7 @@ $$
 +
 \sum_r\mu_r\left(\frac{D^2}{d_r^2}-1\right).}
 \tag{C47.6}
-$$
+```
 
 Every term is nonnegative.
 

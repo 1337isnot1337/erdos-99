@@ -35,87 +35,87 @@ not close the C-I diameter-shear separator or the fully force-visible C-II branc
 
 Let `q>=2`, and let
 
-$$
+```math
 p_0,p_1,\ldots,p_{2q-1}
-$$
+```
 
 be distinct vertices in strict convex cyclic order. Pair them by
 
-$$
+```math
 H=\{\,i(i+q):0\le i<q\,\}.
-$$
+```
 
 Put
 
-$$
+```math
 q_i=e_i-e_{i+q},\qquad
 Q=(q_0\ \cdots\ q_{q-1}),\qquad
 B=\operatorname{diag}(\beta_0,\ldots,\beta_{q-1}),
-$$
+```
 
 with every `beta_i>0`, and define
 
-$$
+```math
 L_H=QBQ^{\mathsf T}.
-$$
+```
 
 Translate the coordinate matrix `P` so that
 `1^T P=0`, and put
 
-$$
+```math
 U=Q^{\mathsf T}P.
-$$
+```
 
 Thus row `i` of `U` is the directed opposite chord
 
-$$
+```math
 u_i=p_i-p_{i+q}.
-$$
+```
 
 Let `Lambda` be the Dirichlet response of a connected circular-planar
 positive-conductance network on these `2q` terminals, let
 
-$$
+```math
 R=\Lambda^+,
 \qquad
 W_{ab}=R_{aa}+R_{bb}-2R_{ab},
-$$
+```
 
 and assume the C11 affine response identity
 
-$$
+```math
 \Lambda P=L_HP.
 \tag{C52.1}
-$$
+```
 
 Assume, equivalently to the circular-planar input already used in C50-C51,
 that `W` lies in the Kalmanson cone for this cyclic terminal order. Set
 
-$$
+```math
 K=Q^{\mathsf T}RQ.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{B^{-1}-K\succeq0.}
 \tag{C52.2}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{\Lambda-L_H\succeq0\quad\text{on }\mathbf1^\perp.}
 \tag{C52.3}
-$$
+```
 
 In the selected-stress C30 setting, if `L_C(alpha)` is the positive-contact
 Laplacian whose Kron response is `Lambda`, then
 
-$$
+```math
 \boxed{L_C(\alpha)-L_H(\beta)\succeq0.}
 \tag{C52.4}
-$$
+```
 
 Because distinct diameter edges in the plane intersect, every selected positive
 diameter support with maximum degree one is, after cyclic relabeling of its
@@ -126,61 +126,61 @@ strictly convex endpoints, exactly the opposite matching above. Hence C52 closes
 
 For `0<=i<j<q`, the four vertices
 
-$$
+```math
 p_i,p_j,p_{i+q},p_{j+q}
-$$
+```
 
 occur in this cyclic order and form a strict convex quadrilateral. The directed
 diagonals `u_i=p_i-p_{i+q}` and `u_j=p_j-p_{j+q}` therefore have a common strict
 orientation. After choosing the orientation once,
 
-$$
+```math
 \det(u_i,u_j)>0\qquad(i<j).
 \tag{C52.5}
-$$
+```
 
 Thus all `u_i` lie in one open half-plane and occur there in strict angular order.
 Choose covectors `ell,m` with `ell(u_i)>0` for every `i`, orient `(ell,m)`
 consistently with (C52.5), and write
 
-$$
+```math
 a_i=\ell(u_i)>0,
 \qquad
 t_i=\frac{m(u_i)}{\ell(u_i)}.
-$$
+```
 
 Then
 
-$$
+```math
 t_0<t_1<\cdots<t_{q-1},
 \qquad
 u_i=a_i(1,t_i)
 \tag{C52.6}
-$$
+```
 
 in these affine coordinates. With
 
-$$
+```math
 E=\operatorname{diag}(a_0,\ldots,a_{q-1}),
 \qquad
 V=\begin{pmatrix}1&t_0\\\vdots&\vdots\\1&t_{q-1}\end{pmatrix},
-$$
+```
 
 we have `U=EV`.
 
 The centered affine response identity gives, exactly as in C50-C51,
 
-$$
+```math
 KBU=U.
 \tag{C52.7}
-$$
+```
 
 Indeed `R Lambda P=P` on centered coordinate columns, so
 `RQB U=P`, and premultiplication by `Q^T` gives (C52.7).
 
 Define
 
-$$
+```math
 N=B-BKB,
 \qquad
 M=ENE,
@@ -189,27 +189,27 @@ M=ENE,
 \qquad
 \Gamma=\operatorname{diag}(\gamma_i).
 \tag{C52.8}
-$$
+```
 
 Equation (C52.7) gives `NU=0`, hence
 
-$$
+```math
 M\mathbf1=0,
 \qquad
 Mt=0,
 \qquad
 t=(t_0,\ldots,t_{q-1})^{\mathsf T}.
 \tag{C52.9}
-$$
+```
 
 For `i!=j`,
 
-$$
+```math
 M_{ij}=a_ia_jN_{ij}
        =-a_i\beta_i\,a_j\beta_jK_{ij}
        =-\gamma_i\gamma_jK_{ij}.
 \tag{C52.10}
-$$
+```
 
 Thus the response problem has become a weighted Laplacian problem. It remains to
 use circular planarity to control the order structure of the similarities `K_ij`.
@@ -220,54 +220,54 @@ Use the promoted C50 Kalmanson-cone decomposition. Modulo a sum matrix, which is
 annihilated by `Q^T(\cdot)Q`, the effective-resistance matrix is a nonnegative
 combination of circular interval cut metrics. For one circular interval `A`, put
 
-$$
+```math
 z_i=\mathbf1_A(i)-\mathbf1_A(i+q).
 \tag{C52.11}
-$$
+```
 
 Its contribution to `K=Q^T RQ` is `z z^T`.
 
 Fix `i<j<k`. The six points
 
-$$
+```math
 i,j,k,i+q,j+q,k+q
-$$
+```
 
 occur in this cyclic order. Restricting a circular interval indicator to these six
 points still gives a circular consecutive-ones pattern. Up to complement, hence up
 to the harmless global sign `z -> -z`, the possible triples
 `(z_i,z_j,z_k)` are
 
-$$
+```math
 000,\ 001,\ 010,\ 011,\ 100,\ 110,\ 111,\
 1\bar1\bar1,\ 10\bar1,\ 11\bar1,
 \tag{C52.12}
-$$
+```
 
 where `bar1=-1`. Directly in this ten-case list,
 
-$$
+```math
 z_k(z_i-z_j)\le0,
 \qquad
 z_i(z_k-z_j)\le0.
 \tag{C52.13}
-$$
+```
 
 Summing (C52.13) over the nonnegative interval-split coefficients gives
 
-$$
+```math
 K_{ik}-K_{jk}\le0,
 \qquad
 K_{ik}-K_{ij}\le0.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{K_{ik}\le\min(K_{ij},K_{jk})
        \qquad(i<j<k).}
 \tag{C52.14}
-$$
+```
 
 So the off-diagonal matrix `K_ij` is a Robinson similarity in the strict slope
 order (C52.6).
@@ -280,39 +280,39 @@ The remaining statement is purely linear algebra.
 
 Let `s_ij=s_ji` for `i!=j` satisfy
 
-$$
+```math
 s_{ik}\le\min(s_{ij},s_{jk})\qquad(i<j<k).
 \tag{C52.R1}
-$$
+```
 
 Let `gamma_i>0`, and let `L` be the symmetric matrix with
 
-$$
+```math
 L_{ij}=-\gamma_i\gamma_js_{ij}\quad(i\ne j),
 \qquad
 L\mathbf1=0.
 \tag{C52.R2}
-$$
+```
 
 If there is a strictly increasing vector
 
-$$
+```math
 t_0<t_1<\cdots<t_{q-1}
-$$
+```
 
 such that
 
-$$
+```math
 Lt=0,
 \tag{C52.R3}
-$$
+```
 
 then
 
-$$
+```math
 \boxed{L\succeq0.}
 \tag{C52.R4}
-$$
+```
 
 #### Proof
 
@@ -321,47 +321,47 @@ We first prove the weighted Fiedler fact needed below.
 Suppose temporarily that every `s_ij>0`. Then `L` is the Laplacian of a complete
 positive weighted graph with edge weights `gamma_i gamma_j s_ij`. Put
 
-$$
+```math
 A=\Gamma^{-1}L.
-$$
+```
 
 The generalized eigenvalues of `(L,Gamma)` are the eigenvalues of `A`; they are
 real because `A` is similar to the symmetric matrix
 `Gamma^{-1/2} L Gamma^{-1/2}`. Write them as
 
-$$
+```math
 0=\lambda_1<\lambda_2\le\cdots\le\lambda_q.
-$$
+```
 
 Let `D` be the `(q-1) x q` first-difference matrix,
 
-$$
+```math
 (Dx)_i=x_{i+1}-x_i,
-$$
+```
 
 and let `T` be the `q x (q-1)` cumulative matrix
 
-$$
+```math
 (Ty)_0=0,
 \qquad
 (Ty)_r=\sum_{h<r}y_h.
-$$
+```
 
 Then
 
-$$
+```math
 DT=I,
 \qquad
 TDx=x-x_0\mathbf1.
 \tag{C52.R5}
-$$
+```
 
 Set
 
-$$
+```math
 H=DAT.
 \tag{C52.R6}
-$$
+```
 
 Because `A1=0`, the spectrum of `H` is exactly
 `lambda_2,...,lambda_q`. For completeness: if `Ax=lambda x` with
@@ -373,19 +373,19 @@ with eigenvalue `lambda`.
 The Robinson inequalities make every off-diagonal entry of `H` nonpositive.
 Indeed, for `k<i`, use the zero row sums of `A` to obtain
 
-$$
+```math
 H_{ik}
 =-\sum_{r\le k}\gamma_r(s_{ir}-s_{i+1,r})\le0,
 \tag{C52.R7}
-$$
+```
 
 because `r<i<i+1` implies `s_{r,i+1}<=s_{r,i}`. For `k>i`,
 
-$$
+```math
 H_{ik}
 =\sum_{r>k}\gamma_r(s_{ir}-s_{i+1,r})\le0,
 \tag{C52.R8}
-$$
+```
 
 because `i<i+1<r` implies `s_{i,r}<=s_{i+1,r}`.
 
@@ -396,9 +396,9 @@ Choose `alpha` so large that `alpha I-H` is entrywise nonnegative and
 spectral radius. Hence `Hy=lambda_2 y`. Reconstructing the corresponding
 `A`-eigenvector `x` as above gives
 
-$$
+```math
 Dx=y\ge0.
-$$
+```
 
 Thus the smallest positive generalized eigenvalue has a nonconstant
 **nondecreasing** eigenvector `x`.
@@ -407,78 +407,78 @@ Now return to possibly signed Robinson similarities and suppose, for contradicti
 that `L` is not positive semidefinite. Since `L1=0`, the generalized Rayleigh
 quotient on the weighted-mean-zero space
 
-$$
+```math
 \gamma^{\mathsf T}x=0
-$$
+```
 
 has a negative minimum `lambda_*<0`.
 
 Let
 
-$$
+```math
 G=\sum_i\gamma_i.
-$$
+```
 
 Choose `c>0` large enough that
 
-$$
+```math
 s'_{ij}=s_{ij}+c>0\quad(i\ne j)
-$$
+```
 
 and `cG+lambda_*>0`. Adding the same constant preserves the Robinson
 inequalities. The corresponding weighted Laplacian is
 
-$$
+```math
 L'=L+c(G\Gamma-\gamma\gamma^{\mathsf T}).
 \tag{C52.R9}
-$$
+```
 
 On `gamma^T x=0`, all generalized eigenvalues are shifted by exactly `cG`.
 Therefore the smallest positive generalized eigenvalue of `(L',Gamma)` is
 
-$$
+```math
 \lambda_2'=cG+\lambda_*<cG.
 \tag{C52.R10}
-$$
+```
 
 The weighted Fiedler argument above supplies a nonconstant nondecreasing eigenvector
 `x` for `lambda_2'`. Since `lambda_2'>0`, it is weighted-orthogonal to the
 constant kernel:
 
-$$
+```math
 \sum_i\gamma_i x_i=0.
 \tag{C52.R11}
-$$
+```
 
 Center the strictly increasing vector `t` by
 
-$$
+```math
 t^0=t-\frac{\sum_i\gamma_i t_i}{G}\mathbf1.
-$$
+```
 
 Equations (C52.R3) and (C52.R9) give
 
-$$
+```math
 L't^0=cG\,\Gamma t^0.
 \tag{C52.R12}
-$$
+```
 
 The generalized eigenvalues in (C52.R10) and (C52.R12) are distinct. Symmetry of
 `L'` therefore gives generalized orthogonality,
 
-$$
+```math
 \sum_i\gamma_i x_i t_i=0.
 \tag{C52.R13}
-$$
+```
 
 But the weighted covariance identity and (C52.R11) give
 
-$$
+```math
 \sum_i\gamma_i x_i t_i
 =\frac1{2G}\sum_{i,j}\gamma_i\gamma_j
  (x_i-x_j)(t_i-t_j).
 \tag{C52.R14}
-$$
+```
 
 Every term on the right is nonnegative because both sequences are nondecreasing,
 and at least one is strictly positive because `x` is nonconstant and `t` is strictly
@@ -492,36 +492,36 @@ Apply C52.R to `L=M`, `s_ij=K_ij`, and the positive weights `gamma_i` from
 (C52.8). Equations (C52.9), (C52.10), and the Robinson inequalities (C52.14)
 verify every hypothesis. Hence
 
-$$
+```math
 M\succeq0.
-$$
+```
 
 Because `E` is positive diagonal,
 
-$$
+```math
 N=E^{-1}ME^{-1}\succeq0.
-$$
+```
 
 Finally
 
-$$
+```math
 B^{-1}-K
 =B^{-1}NB^{-1}\succeq0,
-$$
+```
 
 which is (C52.2).
 
 Let `Y=R^{1/2}QB^{1/2}` on `1^perp`. Then
 
-$$
+```math
 Y^{\mathsf T}Y=B^{1/2}KB^{1/2}\preceq I.
-$$
+```
 
 Hence `YY^T<=I`, i.e.
 
-$$
+```math
 R^{1/2}L_HR^{1/2}\preceq I.
-$$
+```
 
 On `1^perp`, `R=Lambda^{-1}`, so congruence gives
 `L_H<=Lambda`, proving (C52.3). The positive interior contact block in the
@@ -537,13 +537,13 @@ Before C52, the selected response audit was finite:
 
 C52 removes the cardinality parameter completely:
 
-$$
+```math
 \boxed{
 \text{selected positive diameter support is a matching}
 \Longrightarrow
 L_C(\alpha)-L_H(\beta)\succeq0.}
 \tag{C52.15}
-$$
+```
 
 Thus an arbitrarily large matching cannot furnish the negative response/Schur mode
 needed to evade the affine contact response.

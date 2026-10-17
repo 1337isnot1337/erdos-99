@@ -72,18 +72,18 @@ Write `f` for the number of bounded nonquadrilateral contact faces and
 `Delta=pi/(2sqrt(3))`. Under the stated C dependencies, every hypothetical
 lexicographic sequence with `n-v=o(D^2)` must satisfy
 
-$$
+```math
 \liminf f/D\ge\sqrt\Delta-\pi/4
 =0.166914643466509\ldots.
-$$
+```
 
 The short proof chain is fully accounted for:
 
-$$
+```math
 T=(b+Q)/2+2f\le h+2f\le q+2f,
 \qquad
 \liminf(T-q)/D\ge2\sqrt\Delta-\pi/2.
-$$
+```
 
 The second inequality uses `R/D^2->Delta`, vanishing normalized rhombus excess,
 and a round limiting core hull. These follow from `n-v=o(D^2)` and the exact
@@ -101,9 +101,9 @@ A simultaneous shell/source inequality is still missing.
 
 The shortest sufficient scalar endpoint retained by this campaign is
 
-$$
+```math
 b+\sum_{F\text{ bounded}}(\deg F-4)>2|H|
-$$
+```
 
 for every sufficiently large hypothetical lexicographic global source. Euler
 would then give `e+h<2v-2`, contradicting ZF. Regular shells disprove this
@@ -115,9 +115,9 @@ or formal independence certificate is supplied.
 The [tube-only cut report](target_a_tube_only_cut_2026-09-08.md) improves the
 Section-174 charge to
 
-$$
+```math
 \zeta\ge t_\Sigma+\delta_\Sigma-|T_\Sigma|.
-$$
+```
 
 Its directed-path proof uses actual basis matching: a path meeting a shielded
 basis vertex must first enter through its matched tube row; a shielded terminal's

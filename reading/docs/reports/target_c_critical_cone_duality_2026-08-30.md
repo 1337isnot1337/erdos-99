@@ -39,51 +39,51 @@ contacts and `H` its diameter pairs.
 
 For a velocity `v=(v_1,...,v_n)`, define the signed active first variations
 
-$$
+```math
 \phi_{ij}(v)
 =(p_i-p_j)\cdot(v_i-v_j)
 \qquad(ij\in C),
 \tag{C6.1}
-$$
+```
 
-$$
+```math
 \phi_{ij}(v)
 =-(p_i-p_j)\cdot(v_i-v_j)
 \qquad(ij\in H).
 \tag{C6.2}
-$$
+```
 
 Thus positive `\phi` means movement into the feasible side at fixed diameter:
 contacts lengthen and diameter pairs shorten.
 
 Define
 
-$$
+```math
 \boxed{
 \mathcal K_D(A)
 =\{v:\phi_e(v)\ge0\text{ for every }e\in C\cup H\}.
 }
 \tag{C6.3}
-$$
+```
 
 This is the linearized feasible cone with the diameter variable held fixed.
 
 Let `R` be the matrix whose rows are the linear functionals `\phi_e`.  Then
 
-$$
+```math
 \mathcal K_D(A)=\{v:Rv\ge0\}.
 \tag{C6.4}
-$$
+```
 
 Let `C_*`, `H_*` be the maximal normalized KKT supports from Theorem C4 of the
 preceding report, and put
 
-$$
+```math
 E_*:=C_*\cup H_*,
 \qquad
 W:=(C\cup H)\setminus E_*.
 \tag{C6.5}
-$$
+```
 
 The members of `E_*` will be called **strong** active constraints and those of `W`
 **weak** active constraints.  By definition, a weak active constraint has multiplier
@@ -97,28 +97,28 @@ zero in every normalized KKT stress.
 
 For every active constraint `e\in C\cup H`,
 
-$$
+```math
 \boxed{
 e\in E_*
 \iff
 \phi_e(v)=0\text{ for every }v\in\mathcal K_D(A).
 }
 \tag{C6.6}
-$$
+```
 
 Equivalently, the maximal KKT support is exactly the set of active constraints that
 are frozen to first order throughout the fixed-`D` critical cone.
 
 Furthermore there exists one velocity `v^\circ\in\mathcal K_D(A)` such that
 
-$$
+```math
 \boxed{
 \phi_e(v^\circ)=0\quad(e\in E_*),
 \qquad
 \phi_e(v^\circ)>0\quad(e\in W).
 }
 \tag{C6.7}
-$$
+```
 
 Thus **all** universally zero-KKT active constraints can be released strictly and
 simultaneously at first order.
@@ -127,10 +127,10 @@ simultaneously at first order.
 
 A nonnegative vector `\lambda=(\lambda_e)_{e\in C\cup H}` satisfies
 
-$$
+```math
 R^{\mathsf T}\lambda=0
 \tag{C6.8}
-$$
+```
 
 exactly when its contact and diameter coordinates give a nonnegative equilibrium
 dependence of the signed active rows.  A nonzero such dependence must contain a
@@ -146,26 +146,26 @@ normalized KKT stress: the vertex equilibrium equations are (4.2), and the usual
 trace argument gives `\sum_C\alpha=D^2`.  Conversely every normalized KKT stress is
 such a nonnegative dependence.  Therefore
 
-$$
+```math
 E_*
 =
 \bigcup_{\substack{\lambda\ge0\\R^{\mathsf T}\lambda=0}}
 \operatorname{supp}\lambda.
 \tag{C6.9}
-$$
+```
 
 Suppose first that `e\in E_*`.  Choose a nonnegative dependence `\lambda` with
 `\lambda_e>0`.  For any `v\in\mathcal K_D(A)`, every coordinate of `Rv` is
 nonnegative, while
 
-$$
+```math
 0
 =
 \lambda^{\mathsf T}Rv
 =
 \sum_f\lambda_f\phi_f(v).
 \tag{C6.10}
-$$
+```
 
 Every term is nonnegative, so the term with positive coefficient `\lambda_e` must
 vanish.  Hence `\phi_e(v)=0` for every `v\in\mathcal K_D(A)`.
@@ -174,18 +174,18 @@ Conversely suppose `\phi_e(v)=0` for every `v\in\mathcal K_D(A)`.  Write `r_e` f
 the row vector representing `\phi_e`.  Since both `r_e` and `-r_e` vanish on the cone
 `\{v:Rv\ge0\}`, the vector `-r_e` belongs to its dual cone.  Farkas duality gives
 
-$$
+```math
 -r_e=\sum_f\mu_f r_f
 \qquad(\mu_f\ge0).
 \tag{C6.11}
-$$
+```
 
 Therefore
 
-$$
+```math
 (1+\mu_e)r_e+\sum_{f\ne e}\mu_f r_f=0,
 \tag{C6.12}
-$$
+```
 
 which is a nonzero nonnegative dependence with a strictly positive `e` coordinate.
 By (C6.9), `e\in E_*`.  This proves (C6.6).
@@ -193,17 +193,17 @@ By (C6.9), `e\in E_*`.  This proves (C6.6).
 Now take any weak constraint `e\in W`.  By the contrapositive of (C6.6), there is a
 velocity `v^{(e)}\in\mathcal K_D(A)` with
 
-$$
+```math
 \phi_e(v^{(e)})>0.
 \tag{C6.13}
-$$
+```
 
 Set
 
-$$
+```math
 v^\circ:=\sum_{e\in W}v^{(e)}.
 \tag{C6.14}
-$$
+```
 
 The cone is convex, so `v^\circ\in\mathcal K_D(A)`.  For a fixed weak `f`, every
 summand satisfies `\phi_f(v^{(e)})\ge0` and the `e=f` summand is strictly positive;
@@ -226,23 +226,23 @@ The obstruction is therefore necessarily second-order or higher.
 
 Fix any `v\in\mathcal K_D(A)` satisfying
 
-$$
+```math
 \phi_e(v)>0\qquad(e\in W).
 \tag{C7.1}
-$$
+```
 
 Theorem C6 guarantees at least one such `v` whenever `W` is nonempty.
 
 For every strong diameter edge `h=ij\in H_*`, Theorem C6 gives
 
-$$
+```math
 (p_i-p_j)\cdot(v_i-v_j)=0.
 \tag{C7.2}
-$$
+```
 
 In the plane there is therefore a unique scalar `\omega_h(v)` such that
 
-$$
+```math
 \boxed{
 v_i-v_j
 =
@@ -250,16 +250,16 @@ v_i-v_j
 \qquad(h=ij\in H_*),
 }
 \tag{C7.3}
-$$
+```
 
 where `J` is the quarter-turn.  Explicitly,
 
-$$
+```math
 \omega_h(v)
 =
 \frac{J(p_i-p_j)\cdot(v_i-v_j)}{D^2}.
 \tag{C7.4}
-$$
+```
 
 These are the first-order angular velocities of the KKT-supported diameter chords.
 
@@ -268,28 +268,28 @@ These are the first-order angular velocities of the KKT-supported diameter chord
 Assume the weak-releasing velocity `v` has a common angular rate on the strong
 diameter support:
 
-$$
+```math
 \boxed{
 \omega_h(v)=\omega
 \qquad\text{for every }h\in H_*.
 }
 \tag{C7.5}
-$$
+```
 
 Then there is `\varepsilon>0` and a straight family
 
-$$
+```math
 A(t)=\{p_i+t\widetilde v_i:1\le i\le n\},
 \qquad0\le t<\varepsilon,
 \tag{C7.6}
-$$
+```
 
 of global minimizers of diameter exactly `D`, where
 
-$$
+```math
 \widetilde v_i=v_i-\omega Jp_i.
 \tag{C7.7}
-$$
+```
 
 Every weak active constraint becomes strict for every sufficiently small `t>0`.
 No new unit contact or diameter pair appears for sufficiently small `t`.
@@ -299,32 +299,32 @@ No new unit contact or diameter pair appears for sufficiently small `t`.
 Subtracting the infinitesimal rigid rotation `\omega Jp_i` does not change any signed
 first variation, since for every pair vector `r`
 
-$$
+```math
 r\cdot Jr=0.
 \tag{C7.8}
-$$
+```
 
 Hence `\widetilde v` still satisfies (C7.1), and all strong constraints still have
 zero signed first variation.
 
 For a strong diameter pair `h=ij`, equations (C7.3) and (C7.5) give
 
-$$
+```math
 \widetilde v_i-\widetilde v_j=0.
 \tag{C7.9}
-$$
+```
 
 Therefore every strong diameter pair remains **exactly** at distance `D` along the
 straight family (C7.6).
 
 For a weak diameter pair `ij`,
 
-$$
+```math
 (p_i-p_j)\cdot(\widetilde v_i-\widetilde v_j)<0.
-$$
+```
 Thus
 
-$$
+```math
 |p_i(t)-p_j(t)|^2
 =
 D^2
@@ -332,7 +332,7 @@ D^2
 +t^2|\widetilde v_i-\widetilde v_j|^2
 <D^2
 \tag{C7.10}
-$$
+```
 
 for all sufficiently small positive `t`.
 
@@ -340,13 +340,13 @@ For a weak unit contact, the linear term has the opposite strict sign, so its sq
 length is strictly larger than one for small positive `t`.  For a strong unit contact,
 the linear term vanishes and
 
-$$
+```math
 |p_i(t)-p_j(t)|^2
 =
 1+t^2|\widetilde v_i-\widetilde v_j|^2
 \ge1.
 \tag{C7.11}
-$$
+```
 
 Every initially inactive pair has strict slack between `1` and `D`, so all inactive
 inequalities remain strict after shrinking `\varepsilon` uniformly.
@@ -370,29 +370,29 @@ simultaneous weak release can have one common angular rate on `H_*`.
 
 Equivalently, for every `v\in\mathcal K_D(A)` with
 
-$$
+```math
 \phi_e(v)>0\qquad(e\in W),
-$$
+```
 
 there exist `h,k\in H_*` with
 
-$$
+```math
 \boxed{
 \omega_h(v)\ne\omega_k(v).
 }
 \tag{C7.12}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{
 |H_*|=1
 \quad\Longrightarrow\quad
 C_*=C
 }
 \tag{C7.13}
-$$
+```
 
 for every contact-minimal triangle-free global minimizer.
 
@@ -407,7 +407,7 @@ unit contact can exist. `\square`
 
 Thus a contact-minimal counterexample has the exact dichotomy
 
-$$
+```math
 \boxed{
 C_*=C
 \quad\text{or}\quad
@@ -415,7 +415,7 @@ C_*=C
 H_*.
 }
 \tag{C7.14}
-$$
+```
 
 The second branch is the **diameter-shear obstruction**.
 
@@ -426,18 +426,18 @@ The second branch is the **diameter-shear obstruction**.
 Theorem C6 implies that every strong diameter row vanishes on the whole critical cone,
 so (C7.4) defines a linear map
 
-$$
+```math
 \Omega:\mathcal K_D(A)\longrightarrow
 \mathbb R^{H_*}/\langle\mathbf1\rangle,
 \qquad
 \Omega(v)=[(\omega_h(v))_{h\in H_*}].
 \tag{C8.1}
-$$
+```
 
 The quotient removes the common infinitesimal rotation of the whole configuration.
 Theorem C7 says exactly
 
-$$
+```math
 \boxed{
 \Omega(v)=0
 \text{ for one strictly weak-releasing }v
@@ -445,18 +445,18 @@ $$
 \text{all weak active constraints admit a finite same-}D\text{ release}.
 }
 \tag{C8.2}
-$$
+```
 
 For a contact-minimal triangle-free minimizer with a weak contact,
 
-$$
+```math
 \boxed{
 \Omega(v)\ne0
 \qquad
 \text{for every }v\text{ with }\phi_W(v)>0.
 }
 \tag{C8.3}
-$$
+```
 
 This is a much narrower obstruction than arbitrary nonlinear rigidity.  The entire
 failure of first-order weak release to integrate is carried by relative angular motion
@@ -500,25 +500,19 @@ statement is now:
 > 
 > 
 
-$$
-
+```math
 > C_*=C,
 > 
-$$
-
-
+```
 > 
 > or find a strictly weak-releasing `v\in\mathcal K_D(A)` with
 > 
 > 
 
-$$
-
+```math
 > \Omega(v)=0.
 > 
-$$
-
-
+```
 > 
 > The second alternative contradicts contact minimality by Theorem C7.  Therefore a
 > proof of Target C3 would force every unit contact into the support of the maximal KKT
@@ -539,14 +533,14 @@ class than the present Target A/B source class.
 The next mathematical object to analyze is therefore not the entire weak constraint
 set but the image cone
 
-$$
+```math
 \boxed{
 \Omega(\mathcal K_D(A))
 \subseteq
 \mathbb R^{H_*}/\langle\mathbf1\rangle.
 }
 \tag{C8.4}
-$$
+```
 
 A useful theorem would show that this cone contains the origin in the image of the
 strict weak-release stratum, or else derive an exact signed boundary certificate from

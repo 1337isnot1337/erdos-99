@@ -16,46 +16,46 @@ regression is `research/verify_target_c_strong_phase_shore_gap.py`.
 
 The certificate reproduces the stated root of
 
-$$
+```math
 3\theta-2\pi-\sin(\theta/2)-2\sin\theta=1.2\times10^{-5}
-$$
+```
 
 and obtains
 
-$$
+```math
 \theta=2.7029105818462229\ldots,
 \qquad
 \mu=\sin(\theta/2)=0.9760410429297388\ldots .
-$$
+```
 
 It independently checks the phase-shore arithmetic:
 
-$$
+```math
 0.179-5.317/1000=0.173683,
-$$
+```
 
-$$
+```math
 \frac{19}{20}\frac{0.173683}{3}=0.0549996166\ldots>0.054,
-$$
+```
 
 so the bin argument with two total train shores bounded by `6D` supports shore
 density `0.0045` and endpoint density `0.009`.
 
 At `h=0.00455`, the inherited leakage expression gives
 
-$$
+```math
 L=0.005604304520\ldots,
 \qquad
 \rho=\frac{0.009-L}{3}=0.001131898493\ldots>0.00113.
-$$
+```
 
 Exact cosine inversion then gives
 
-$$
+```math
 \Delta<0.14586513,
 \qquad
 m-2\Delta>0.0123802,
-$$
+```
 
 where `m` is the Section-102 principal-corridor separation lower bound.  The numerical
 inequalities in the candidate therefore have strict margins.

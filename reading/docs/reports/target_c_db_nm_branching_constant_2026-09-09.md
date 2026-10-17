@@ -18,15 +18,15 @@
 
 NM proves the post-ZF diameter graph has linear degree excess above a matching:
 
-$$
+```math
 r_H:=2h-q=x_B+Q+2s_Z.
-$$
+```
 
 Its first universal constant was
 
-$$
+```math
 \liminf r_H/D\ge2\rho/3=0.4927234221\ldots .
-$$
+```
 
 That estimate uses DB only to lower-bound `h`. A stronger result follows by feeding DB's **defect-dependent** inequality back into the NM train-end count.
 
@@ -34,31 +34,31 @@ That estimate uses DB only to lower-bound `h`. A stronger result follows by feed
 
 Every unbounded post-ZF survivor sequence satisfies
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\frac{2h-q}{D}
 \ge c_*
 =0.6099043189\ldots ,
 }
 \tag{NB.1}
-$$
+```
 
 where `c_*` is the unique positive solution of
 
-$$
+```math
 \boxed{
 c_*=\cos\left(\frac{3c_*}{2}\right).}
 \tag{NB.2}
-$$
+```
 
 Equivalently, if `y_*=3c_*`, then `y_*=1.8297129568...` is the unique positive solution of
 
-$$
+```math
 \boxed{
 \frac{y_*}{3}=\cos\frac{y_*}{2}.
 }
 \tag{NB.3}
-$$
+```
 
 This is the optimal universal constant obtainable from the current NM train-end inequality together with the current DB defect inequality: the underlying two-variable linear program attains equality at the crossover in NB.3.
 
@@ -68,46 +68,46 @@ This is the optimal universal constant obtainable from the current NM train-end 
 
 Write
 
-$$
+```math
 \boxed{
 z:=Q+2s_Z=f+g_F+2s_Z.}
 \tag{1.1}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{r_H=x_B+z.}
 \tag{1.2}
-$$
+```
 
 NM proves
 
-$$
+```math
 h-2\le2x_B+3f+g_F+s_Z.
 \tag{1.3}
-$$
+```
 
 For fixed `z`, the right side is at most
 
-$$
+```math
 2x_B+3z,
-$$
+```
 
 because
 
-$$
+```math
 3z-(3f+g_F+s_Z)
 =2g_F+5s_Z\ge0.
-$$
+```
 
 Using `x_B=r_H-z`,
 
-$$
+```math
 \boxed{
 h-2\le2r_H+z.}
 \tag{1.4}
-$$
+```
 
 This retains the distinction between outer-walk excess and the face/mixed-row defect that DB directly controls.
 
@@ -117,44 +117,44 @@ This retains the distinction between outer-walk excess and the face/mixed-row de
 
 Put
 
-$$
+```math
 a_D:=\arcsin\frac1{2D}.
-$$
+```
 
 DB proves the exact finite inequality
 
-$$
+```math
 \boxed{
 z=Q+2s_Z
 \le
 h+1-2D\cos((h-1)a_D).}
 \tag{2.1}
-$$
+```
 
 Insert (2.1) into (1.4):
 
-$$
+```math
 h-2
 \le2r_H+h+1-2D\cos((h-1)a_D).
-$$
+```
 
 Cancel `h` and rearrange:
 
-$$
+```math
 \boxed{
 r_H
 \ge
 D\cos((h-1)a_D)-\frac32.}
 \tag{2.2}
-$$
+```
 
 NM independently gives
 
-$$
+```math
 \boxed{
 r_H\ge\frac{h-2}{3}.}
 \tag{2.3}
-$$
+```
 
 Thus every finite survivor obeys both lower bounds.
 
@@ -164,66 +164,66 @@ Thus every finite survivor obeys both lower bounds.
 
 The diameter thrackle bound and force-hull perimeter give `h=O(D)`. Pass to a subsequence on which
 
-$$
+```math
 \frac hD\to y.
-$$
+```
 
 DB already implies `y>=2rho`, but the exact lower endpoint will not be needed separately.
 
 Since
 
-$$
+```math
 a_D=\frac1{2D}+O(D^{-3}),
-$$
+```
 
 we have
 
-$$
+```math
 (h-1)a_D\to\frac y2.
-$$
+```
 
 Divide (2.2)-(2.3) by `D` and pass to the limit. Any subsequential limit `r` of `r_H/D` satisfies
 
-$$
+```math
 \boxed{
 r\ge\max\left\{\frac y3,\cos\frac y2\right\}.}
 \tag{3.1}
-$$
+```
 
 On the relevant interval `0<y<pi`, the first function is strictly increasing and the second strictly decreasing. Therefore their maximum is minimized at their unique intersection
 
-$$
+```math
 \frac y3=\cos\frac y2.
 \tag{3.2}
-$$
+```
 
 Let `y_*` denote that intersection. Then
 
-$$
+```math
 \inf_y\max\left\{\frac y3,\cos\frac y2\right\}
 =\frac{y_*}{3}
 =:c_*.
-$$
+```
 
 Substituting `y_*=3c_*` gives
 
-$$
+```math
 c_*=\cos(3c_*/2),
-$$
+```
 
 proving NB.1-NB.3.
 
 Uniqueness is immediate because
 
-$$
+```math
 F(c)=c-\cos(3c/2)
-$$
+```
 
 has
 
-$$
+```math
 F'(c)=1+\frac32\sin(3c/2)>0
-$$
+```
 
 on the relevant positive interval, while `F(0)<0` and `F(1)>0`.
 
@@ -235,7 +235,7 @@ The asymptotic optimization can be written as a two-currency linear program.
 
 For fixed normalized diameter-edge count `y=h/D`, let
 
-$$
+```math
 x=x_B/D,
 \qquad
 f'=f/D,
@@ -243,28 +243,28 @@ f'=f/D,
 g=g_F/D,
 \qquad
 s=s_Z/D.
-$$
+```
 
 Ignoring vanishing `O(1/D)` terms, NM requires
 
-$$
+```math
 2x+3f'+g+s\ge y,
 \tag{4.1}
-$$
+```
 
 while DB gives the capacity
 
-$$
+```math
 f'+g+2s\le u(y):=y-2\cos(y/2).
 \tag{4.2}
-$$
+```
 
 The branching cost is
 
-$$
+```math
 r=x+f'+g+2s.
 \tag{4.3}
-$$
+```
 
 Among the DB-controlled currencies, `f'` supplies the most NM train-end capacity per unit branching cost: coefficient three in (4.1) for unit cost and unit DB capacity. Outer excess `x` supplies coefficient two without using DB capacity. The variables `g,s` are strictly less efficient for minimizing `r`.
 
@@ -272,18 +272,19 @@ Hence the optimum at fixed `y` is:
 
 - if `u(y)>=y/3`, use `f'=y/3`, `x=0`, giving `r=y/3`;
 - if `u(y)<y/3`, saturate `f'=u(y)` and pay the remainder with `x`, giving
-  $$
+  ```math
   r=u(y)+\frac{y-3u(y)}2
    =\cos(y/2).
-  $$
+  
+  ```
 
 Thus the exact asymptotic optimum permitted by DB+NM is
 
-$$
+```math
 \boxed{
 r_{min}(y)=\max\{y/3,\cos(y/2)\}.}
 \tag{4.4}
-$$
+```
 
 Its global minimum is exactly `c_*`.
 
@@ -295,43 +296,43 @@ Therefore improving NB's constant requires genuinely new geometry/topology, not 
 
 NB gives
 
-$$
+```math
 \boxed{
 x_B+Q+2s_Z\ge(c_*-o(1))D.}
 \tag{5.1}
-$$
+```
 
 Hence at least one of the three nonnegative weighted currencies is linear. A crude explicit three-way split is
 
-$$
+```math
 \boxed{
  x_B\ge(c_*/3-o(1))D
 }
-$$
+```
 
 or
 
-$$
+```math
 \boxed{
  Q\ge(c_*/3-o(1))D
 }
-$$
+```
 
 or
 
-$$
+```math
 \boxed{
  s_Z\ge(c_*/6-o(1))D.
 }
-$$
+```
 
 Numerically these thresholds are
 
-$$
+```math
 c_*/3=0.2033014396\ldots,
 \qquad
 c_*/6=0.1016507198\ldots .
-$$
+```
 
 The weighted split is intentionally conservative; future work should exploit the distinct geometry of the three currencies rather than pigeonholing them.
 
@@ -341,16 +342,16 @@ The weighted split is intentionally conservative; future work should exploit the
 
 Since
 
-$$
+```math
 r_H=q-2d_H,
-$$
+```
 
 NB gives
 
-$$
+```math
 q-2d_H\ge(c_*-o(1))D.
 \tag{6.1}
-$$
+```
 
 Unlike NM's ratio-only bound `d_H/q<=2/5+o(1)`, NB supplies an absolute diameter-scale deficit from the matching-component endpoint.
 

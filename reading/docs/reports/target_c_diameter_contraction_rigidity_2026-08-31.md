@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_contraction_rigidity_2026-08-31.md) · source SHA-256 `90903fdfd2791896c0c1a0be9f8bf8236a4693a5d7db90256df86cdd434ea16d`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-76F0B92FBF5C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C addendum: diameter-contracted contact rigidity
 
@@ -29,9 +31,9 @@ common translations.  This forces a two-per-cut contact-connectivity condition o
 quotient and, combined with Eppstein's triangle-free penny-graph edge bound, gives the
 exact necessary inequality
 
-$$
+```math
 \boxed{2r_D\ge \delta_C+m_{\rm same}\ge\lceil D\rceil,}
-$$
+```
 
 where `r_D` is the connectivity rank contributed by the full diameter graph on the
 contact component, `delta_C` is its contact-graph diameter, and `m_same` counts unit
@@ -47,96 +49,96 @@ contact-minimal configuration needs diameter-graph connectivity rank at least
 
 Let `A` be a contact-minimal, diametrally saturated, triangle-free global minimizer of
 diameter `D>1`, and assume the Target C-II condition
-$$
+```math
 C=C_*.
 \tag{C23.1}
-$$
+```
 Choose a relative-interior normalized KKT stress.  Then every unit contact has positive
 stress, so the canonical support-connectivity theorem implies that all nonisolated
 unit contacts form one connected component
-$$
+```math
 G_C=(V,C),
 \qquad v=|V|,
 \tag{C23.2}
-$$
+```
 and this component contains a pair of vertices at Euclidean distance `D`.
 Vertices outside `V` are contact-isolated and will play no role in the contact count.
 
 Let `H` be the **full** diameter graph of `A`, not merely its KKT-positive or strong
 subgraph.  Define an equivalence relation on `V` by
-$$
+```math
 x\sim_D y
 \iff
 x=y\text{ or }x,y\text{ lie in the same connected component of }H.
 \tag{C23.3}
-$$
+```
 Thus a contact vertex not incident with any diameter edge is a singleton class.  Let
-$$
+```math
 \mathcal Q=V/{\sim_D},
 \qquad k=|\mathcal Q|,
 \qquad r_D=v-k.
 \tag{C23.4}
-$$
+```
 Equivalently, if `q_D` contact vertices belong to nontrivial components of `H` and
 `c_D` distinct components of `H` meet `V`, then
-$$
+```math
 r_D=q_D-c_D.
 \tag{C23.5}
-$$
+```
 Components meeting `V` in only one vertex contribute zero, as they should.
 
 For a contact edge `ij`, call it **diameter-internal** when
-$$
+```math
 [i]=[j]\in\mathcal Q.
 \tag{C23.6}
-$$
+```
 Let
-$$
+```math
 m_{\rm same}
 =|\{ij\in C:[i]=[j]\}|,
 \qquad
 m_\times=|C|-m_{\rm same}.
 \tag{C23.7}
-$$
+```
 
 ---
 
 ## 2. Diameter-class translation framework
 
 Assign a translation vector
-$$
+```math
 t_Q\in\mathbb R^2
 \qquad(Q\in\mathcal Q).
 \tag{C23.8}
-$$
+```
 For every `x in V`, define
-$$
+```math
 w_x=t_{[x]}.
 \tag{C23.9}
-$$
+```
 Extend `w` to every point of `A` as follows.  On a component of the full diameter graph
 that meets `V`, use the translation assigned to its class on all vertices of that
 diameter component.  On a diameter component disjoint from `V`, use zero translation.
 On a vertex outside `V` and outside the diameter graph, also use zero.
 
 Then for every diameter pair `ij in H`,
-$$
+```math
 \boxed{w_i=w_j.}
 \tag{C23.10}
-$$
+```
 Therefore every active diameter pair remains exactly at distance `D` along the straight
 motion `p_i(s)=p_i+s w_i`.
 
 For each contact `ij in C`, impose the tangency equation
-$$
+```math
 (p_i-p_j)\cdot(t_{[i]}-t_{[j]})=0.
 \tag{C23.11}
-$$
+```
 Diameter-internal contacts give the zero row automatically.  Let
-$$
+```math
 T_D:\mathbb R^{2\mathcal Q}\longrightarrow\mathbb R^{C}
 \tag{C23.12}
-$$
+```
 be the matrix of these contact tangency rows.
 
 ---
@@ -146,44 +148,45 @@ be the matrix of these contact tangency rows.
 ### Theorem C23.1 (diameter-contracted contact rigidity)
 
 For a contact-minimal C-II source,
-$$
+```math
 \boxed{
 \ker T_D
 =
 \{(t_Q)_Q:t_Q=t\text{ for one }t\in\mathbb R^2\}.
 }
 \tag{C23.13}
-$$
+```
 Consequently
-$$
+```math
 \boxed{
 \operatorname{rank}T_D=2k-2=2(v-r_D)-2.
 }
 \tag{C23.14}
+```
 
 #### Proof
 
 Common translations plainly lie in the kernel.  Suppose conversely that
 `t=(t_Q)` lies in `ker T_D` and is not common.  Because the contact graph `G_C` is
 connected, some contact edge `ij` has
-\[
+```math
 t_{[i]}\ne t_{[j]}.
 \tag{C23.15}
-$$
+```
 Extend the class translations to the full source as above and consider
-$$
+```math
 p_x(s)=p_x+s w_x.
 \tag{C23.16}
-$$
+```
 For every full diameter pair, (C23.10) gives
-$$
+```math
 |p_i(s)-p_j(s)|=D
 \tag{C23.17}
-$$
+```
 for all `s`.
 
 For a unit contact `ij`, the tangency equation gives
-$$
+```math
 \begin{aligned}
 |p_i(s)-p_j(s)|^2
 &=1
@@ -193,7 +196,7 @@ $$
 \ge1.
 \end{aligned}
 \tag{C23.18}
-$$
+```
 The contact from (C23.15) is strictly longer than one for every `s ne0`.
 
 Every pair that is neither a contact nor a diameter pair has a strict distance margin
@@ -215,10 +218,10 @@ is one connected force-carrying component.
 ## 4. Every partition needs two contact constraints per relative translation
 
 Let
-$$
+```math
 \mathcal P=\{P_1,\ldots,P_p\}
 \tag{C23.19}
-$$
+```
 be any partition of the diameter classes `mathcal Q`.  Let `e_C(mathcal P)` denote the
 number of unit-contact edges whose two diameter classes lie in different parts of the
 partition.
@@ -226,19 +229,20 @@ partition.
 ### Theorem C23.2 (two-per-partition contact connectivity)
 
 For every partition with `p>=1`,
-$$
+```math
 \boxed{
 e_C(\mathcal P)\ge2(p-1).}
 \tag{C23.20}
+```
 
 #### Proof
 
 Restrict the class translations to be constant inside each partition block:
-\[
+```math
 t_Q=s_a\in\mathbb R^2
 \qquad(Q\in P_a).
 \tag{C23.21}
-$$
+```
 There are `2p` scalar variables.  Contact edges internal to one partition block impose
 no condition on this restricted space.  The crossing edges impose at most
 `e_C(mathcal P)` homogeneous scalar equations.
@@ -251,10 +255,11 @@ Theorem C23.1 then deletes that contact while fixing every diameter pair exactly
 contradicting contact minimality.  Hence (C23.20). `\square`
 
 For the discrete partition into all `k` diameter classes,
-$$
+```math
 \boxed{
 m_\times\ge2k-2=2(v-r_D)-2.}
 \tag{C23.22}
+```
 
 This is stronger than merely requiring the quotient contact graph to be connected or
 bridgeless.
@@ -264,56 +269,58 @@ bridgeless.
 ## 5. Combine with the triangle-free penny-graph deficit
 
 Let
-\[
+```math
 \delta_C=\operatorname{diam}_{\rm graph}(G_C).
 \tag{C23.23}
-$$
+```
 The component contains two points at Euclidean distance `D`, and every contact edge has
 length one, so
-$$
+```math
 \boxed{\delta_C\ge\lceil D\rceil.}
 \tag{C23.24}
-$$
+```
 Eppstein's connected triangle-free penny-graph bound gives
-$$
+```math
 \boxed{|C|\le2v-\delta_C-2.}
 \tag{C23.25}
-$$
+```
 On the other hand (C23.22) and (C23.7) give
-$$
+```math
 |C|
 =m_\times+m_{\rm same}
 \ge
 2(v-r_D)-2+m_{\rm same}.
 \tag{C23.26}
-$$
+```
 Comparing the two inequalities proves the main numerical consequence.
 
 ### Theorem C23.3 (diameter-rank lower bound)
 
 Every contact-minimal triangle-free C-II source satisfies
-$$
+```math
 \boxed{
 2r_D\ge\delta_C+m_{\rm same}
 \ge\lceil D\rceil+m_{\rm same}.
 }
 \tag{C23.27}
-$$
+```
 In particular
-$$
+```math
 \boxed{
 2r_D\ge\lceil D\rceil,
 \qquad
 r_D\ge\left\lceil\frac{\lceil D\rceil}{2}\right\rceil.
 }
 \tag{C23.28}
+```
 
 Since connecting `q_D` marked contact vertices into `c_D` diameter components requires
 at least `q_D-c_D=r_D` diameter edges even when paths are allowed to use vertices
 outside the contact component,
-\[
+```math
 \boxed{|H|\ge r_D\ge\left\lceil\frac{\lceil D\rceil}{2}\right\rceil.}
 \tag{C23.29}
+```
 
 Every contact whose endpoints already lie in one diameter component strengthens the
 required diameter rank by one half through the `m_same` term.
@@ -379,11 +386,11 @@ does not assume `H=H_*`.
 ## 8. Exact next Target C question
 
 C-II now has an additional global requirement:
-\[
+```math
 \boxed{
 r_D\ge\lceil\lceil D\rceil/2\rceil.}
 \tag{C23.30}
-$$
+```
 The highest-value continuation is to combine this macroscopic diameter connectivity
 with the already-promoted diameter geometry:
 

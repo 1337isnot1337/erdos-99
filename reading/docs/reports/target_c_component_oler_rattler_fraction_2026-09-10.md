@@ -18,25 +18,25 @@
 
 Let `v` be the number of vertices in the nonisolated positive contact core and let
 
-$$
+```math
 \mu_D:=\frac{e_{BB}+2s_C-3(d_H+s_Z)}D.
-$$
+```
 
 The GR report proves
 
-$$
+```math
 \mu_DD+6
 =
 \sum_r\delta_r+R_I+s_B,
 \tag{CO.1}
-$$
+```
 
 where every term on the right is nonnegative.  The previous ZK population estimate
 used the crude disk count `n_r<=4(delta_r+1)^2` for an unloaded component.  Applying
 Oler directly to the convex hull of each component improves the leading constant by a
 factor `8/(pi sqrt(3))` and gives the source-scale statement
 
-$$
+```math
 \boxed{
 \limsup\frac v{D^2}
 \le
@@ -44,51 +44,51 @@ $$
 \left(\limsup\mu_D\right)^2
 }
 \tag{CO.2}
-$$
+```
 
 whenever the right-hand limsup is finite.
 
 Since every global minimizer satisfies
 
-$$
+```math
 \frac n{D(n)^2}\longrightarrow\frac\pi{2\sqrt3},
-$$
+```
 
 we obtain the particularly simple population ratio
 
-$$
+```math
 \boxed{
 \limsup\frac vn
 \le
 \left(\limsup\mu_D\right)^2.
 }
 \tag{CO.3}
-$$
+```
 
 Thus, for every fixed `u<1`, any post-ZF sequence with `mu_D<=u+o(1)` has
 
-$$
+```math
 \boxed{
 \liminf\frac{n-v}{n}\ge1-u^2.
 }
 \tag{CO.4}
-$$
+```
 
 C65 identifies all `n-v` points as fully inactive contact-isolated rattlers which are
 not actual diameter endpoints.  In particular a hypothetical sequence lying at the
 new explicit GR scale
 
-$$
+```math
 \mu_D\le0.5947+o(1)
-$$
+```
 
 would have at least
 
-$$
+```math
 \boxed{
 1-0.5947^2=0.64633191
 }
-$$
+```
 
 of its entire source population outside the positive force core.  GR excludes that
 exact endpoint from below, but CO remains useful in any near-frontier window above it:
@@ -131,25 +131,25 @@ The leading constant is exact.  No force-hull area estimate is used.
 
 Let `I_r` be one unloaded connected component of the positive contact graph.  Write
 
-$$
+```math
 n_r:=|I_r|,
 \qquad
 \delta_r:=\operatorname{diam}_{C[I_r]} I_r.
-$$
+```
 
 Every edge of `C[I_r]` is a unit segment.  For any `x,y in I_r`, choose a shortest
 contact path of length at most `delta_r`.  The Euclidean triangle inequality gives
 
-$$
+```math
 |x-y|\le\delta_r.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{\operatorname{diam}(I_r)\le\delta_r.}
 \tag{CO.5}
-$$
+```
 
 For a singleton component `delta_r=0`, as in the canonical convention.
 
@@ -159,27 +159,27 @@ For a singleton component `delta_r=0`, as in the canonical convention.
 
 Apply canonical Oler 21.1 to
 
-$$
+```math
 X=I_r,
 \qquad
 K_r=\operatorname{conv}(I_r).
-$$
+```
 
 The source is unit-separated, so the Oler hypothesis holds.  By the isodiametric and
 Cauchy perimeter inequalities applied with (CO.5),
 
-$$
+```math
 \operatorname{area}(K_r)
 \le\frac\pi4\delta_r^2,
 \qquad
 \operatorname{per}(K_r)
 \le\pi\delta_r.
 \tag{CO.6}
-$$
+```
 
 Oler gives
 
-$$
+```math
 \begin{aligned}
 n_r
 &\le
@@ -192,7 +192,7 @@ n_r
 }
 \end{aligned}
 \tag{CO.7}
-$$
+```
 
 For `delta_r=0`, (CO.7) reads `n_r<=1` and is exact.
 
@@ -205,45 +205,45 @@ This is the only new geometric estimate needed.
 The nonisolated core decomposes as the loaded terminal set `B` together with the
 unloaded components:
 
-$$
+```math
 v=q+\sum_r n_r.
 \tag{CO.8}
-$$
+```
 
 Summing (CO.7) gives
 
-$$
+```math
 v
 \le
 q+c_I
 +\frac\pi2\sum_r\delta_r
 +\frac\pi{2\sqrt3}\sum_r\delta_r^2.
 \tag{CO.9}
-$$
+```
 
 All `delta_r` are nonnegative, hence
 
-$$
+```math
 \sum_r\delta_r^2
 \le
 \left(\sum_r\delta_r\right)^2.
 \tag{CO.10}
-$$
+```
 
 From GR/ZK (CO.1),
 
-$$
+```math
 \sum_r\delta_r\le\mu_DD+6.
 \tag{CO.11}
-$$
+```
 
 The loaded set lies on the force hull and is unit-separated, so consecutive loaded
 vertices have hull distance at least one.  Therefore
 
-$$
+```math
 q\le\operatorname{per}F\le\pi D.
 \tag{CO.12}
-$$
+```
 
 C36 gives every unloaded component at least three distinct loaded attachments and the
 noncrossing incidence bound in particular implies `c_I<=q`; the weaker
@@ -253,7 +253,7 @@ Insert (CO.10)–(CO.12) into (CO.9):
 
 ### Theorem CO.1 — finite core-population bound
 
-$$
+```math
 \boxed{
  v
 \le
@@ -262,7 +262,7 @@ q+c_I
 +\frac\pi{2\sqrt3}(\mu_DD+6)^2.
 }
 \tag{CO.13}
-$$
+```
 
 Whenever `mu_D` remains bounded along an unbounded sequence, the first three terms are
 `O(D)`.  Taking limsups proves CO.2.
@@ -279,25 +279,25 @@ shows `mu_DD+6=sum delta_r+R_I+s_B>=0`.  Along every unbounded sequence
 
 The standard global-minimizer packing asymptotic is
 
-$$
+```math
 \boxed{
 \frac n{D(n)^2}	o\Delta_2:=\frac\pi{2\sqrt3}.
 }
 \tag{CO.14}
-$$
+```
 
 It follows from the Oler lower bound for `D(n)` and the strict translated triangular-
 lattice upper comparison; no triangle-free assumption is involved.
 
 Let
 
-$$
+```math
 u:=\limsup\mu_D<\infty.
-$$
+```
 
 CO.2 and CO.14 give
 
-$$
+```math
 \limsup\frac vn
 =
 \limsup
@@ -305,7 +305,7 @@ $$
 \le
 \frac{\Delta_2u^2}{\Delta_2}
 =u^2.
-$$
+```
 
 This proves CO.3.  Since C65 identifies the complement of the positive core with the
 fully inactive rattler set `R`, `|R|=n-v`, and CO.4 follows.
@@ -317,13 +317,15 @@ fully inactive rattler set `R`, `|R|=n-v`, and CO.4 follows.
 The theorem is most informative below `mu=1`.
 
 - `mu<=0.5947+o(1)` implies
-  $$
+  ```math
   \liminf |R|/n\ge0.64633191.
-  $$
+  
+  ```
 - `mu<=0.60+o(1)` implies
-  $$
+  ```math
   \liminf |R|/n\ge0.64.
-  $$
+  
+  ```
 - `mu<=2^{-1/2}+o(1)` implies at least half of all source points are rattlers.
 
 The new all-phase GR theorem says `mu>0.5947+epsilon_G` for every sufficiently large
@@ -395,9 +397,9 @@ recombine to the full isodiametric disk area.
 
 Thus CO does not manufacture the missing whole-source inequality
 
-$$
+```math
 \delta_K+\mathscr O_A\ge c_0P.
-$$
+```
 
 A closing outer-shell theorem still has to remove the boundary-order allowance or give
 a finite rearrangement.
@@ -428,9 +430,9 @@ For any fixed `u in (0.5947,1)`, every post-ZF survivor satisfies one of:
 
 A Level I closure can therefore be obtained by proving, for one such `u`, both:
 
-$$
+```math
 \mu_D\le u+o(1)
-$$
+```
 
 from the force/contact topology and an outer-shell theorem excluding
 `1-u^2` source-density in fully inactive rattlers; or by directly excluding the

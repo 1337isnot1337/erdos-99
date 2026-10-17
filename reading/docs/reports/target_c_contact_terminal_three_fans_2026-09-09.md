@@ -13,15 +13,15 @@
 
 MC proves that the mixed support graph
 
-$$
+```math
 G_M=C\cup H
-$$
+```
 
 is 3-vertex-connected.  Since every diameter edge has both endpoints in the loaded force-hull set
 
-$$
+```math
 B:=B_+,
-$$
+```
 
 this immediately strengthens the contact-only topology in a way not captured by the old component attachment count.
 
@@ -29,9 +29,9 @@ this immediately strengthens the contact-only topology in a way not captured by 
 
 For every set `S subset V(C)` with `|S|<=2`, every connected component of
 
-$$
+```math
 C-S
-$$
+```
 
 contains at least one loaded terminal from `B\setminus S`.
 
@@ -59,17 +59,17 @@ No diameter edge is used in those three paths.
 
 Let
 
-$$
+```math
 S\subseteq V(C),
 \qquad |S|\le2.
-$$
+```
 
 Then every connected component `K` of `C-S` satisfies
 
-$$
+```math
 \boxed{V(K)\cap(B\setminus S)\ne\varnothing.}
 \tag{TF.1}
-$$
+```
 
 ### Proof
 
@@ -81,9 +81,9 @@ By definition of a contact component of `C-S`, there is also no contact edge fro
 
 Hence `K` is a connected component of
 
-$$
+```math
 G_M-S.
-$$
+```
 
 For the sufficiently large C-II sources under consideration, `q=|B|>=3`, so after deleting at most two vertices there is a loaded terminal outside `S`. Thus `G_M-S` contains a vertex outside `K`.
 
@@ -97,9 +97,9 @@ For `|S|=1`, TF.1 recovers and strengthens the articulation conclusion used in C
 
 Fix
 
-$$
+```math
 x\in V(C)\setminus B.
-$$
+```
 
 Consider vertex-disjoint paths in the contact graph `C` from `x` to the terminal set `B`.
 
@@ -107,33 +107,33 @@ Consider vertex-disjoint paths in the contact graph `C` from `x` to the terminal
 
 There exist three contact paths
 
-$$
+```math
 P_1,P_2,P_3
-$$
+```
 
 from `x` to three distinct terminals
 
-$$
+```math
 b_1,b_2,b_3\in B
-$$
+```
 
 such that the paths are pairwise internally vertex-disjoint and intersect one another only at their common initial vertex `x`.
 
 Equivalently,
 
-$$
+```math
 \boxed{\kappa_C(x,B)\ge3.}
 \tag{TF.2}
-$$
+```
 
 ### Proof
 
 Use the vertex form of Menger's theorem for a vertex and a target set. If no three-fan existed, there would be a set
 
-$$
+```math
 S\subseteq V(C)\setminus\{x\},
 \qquad |S|\le2,
-$$
+```
 
 whose deletion separates `x` from every terminal in `B\setminus S`.
 
@@ -147,15 +147,15 @@ Their terminal endpoints are distinct: if two ended at the same terminal, they w
 
 Let `I_r` be a connected component of
 
-$$
+```math
 C[V\setminus B]
-$$
+```
 
 with loaded attachment set
 
-$$
+```math
 A_r\subseteq B.
-$$
+```
 
 Every contact path from a vertex of `I_r` to `B` must first leave `I_r` through a vertex of `A_r`. Therefore TF.2 immediately gives:
 
@@ -163,25 +163,25 @@ Every contact path from a vertex of `I_r` to `B` must first leave `I_r` through 
 
 For every
 
-$$
+```math
 x\in I_r,
-$$
+```
 
 there are three internally vertex-disjoint contact paths from `x` to three distinct vertices of `A_r`.
 
 In particular
 
-$$
+```math
 |A_r|\ge3,
-$$
+```
 
 recovering the old attachment lower bound, but now with vertexwise disjoint-route structure.
 
 If
 
-$$
+```math
 |A_r|=3,
-$$
+```
 
 then every vertex of `I_r` has three disjoint contact routes to **all three** attachment terminals.
 
@@ -195,10 +195,10 @@ A useful equivalent formulation is the following.
 
 Let `X` be a nonempty connected set of unloaded vertices. If every contact path from `X` to `B` must pass through a set `S`, then
 
-$$
+```math
 \boxed{|S|\ge3.}
 \tag{TF.3}
-$$
+```
 
 Here vertices of `S` may lie inside or outside `X`; the only requirement is that deleting `S` separates some surviving vertex of `X` from `B`.
 
@@ -214,9 +214,9 @@ MC also gives a direct strengthening of the old bridge cut statement.
 
 Let `uv` be a bridge of the contact graph `C`, and let
 
-$$
+```math
 V=A\sqcup B'
-$$
+```
 
 be the corresponding contact-edge cut, with `u in A`, `v in B'`.  The only contact edge crossing the cut is `uv`.
 
@@ -231,40 +231,40 @@ Hence:
 
 ### Corollary TF.5 — double diameter bypass of every contact bridge
 
-$$
+```math
 \boxed{
 |E_H(A,B')|\ge2.
 }
 \tag{TF.4}
-$$
+```
 
 So the old statement “every positive contact bridge is crossed by at least one positive diameter edge” improves to **at least two** actual diameter bypasses.
 
 Because two distinct planar diameter segments cannot be collinear, the exact bridge cut law
 
-$$
+```math
 \alpha_{uv}(u-v)
 =
 \sum_{bk\in E_H(A,B')}
 \beta_{bk}(b-k)
-$$
+```
 
 always contains at least two nonparallel positive diameter vectors. Consequently the old scalar estimate
 
-$$
+```math
 \alpha_{uv}\le D\sum_{bk\in E_H(A,B')}\beta_{bk}
-$$
+```
 
 is in fact strict for every contact bridge:
 
-$$
+```math
 \boxed{
 \alpha_{uv}
 <
 D\sum_{bk\in E_H(A,B')}\beta_{bk}.
 }
 \tag{TF.5}
-$$
+```
 
 No uniform quantitative gap is claimed because one bypass weight may be arbitrarily small and distinct diameter directions may be separated by only `Theta(1/D)`.
 

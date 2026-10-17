@@ -20,77 +20,77 @@ The existing outer-flat hinge theorem extracts one localized contact flex from e
 
 Let `G` be the number of good flat pentagons, let `d_O(P)` be the number of terminal trains of `P` whose other endpoint is the actual outer face, and put
 
-$$
+```math
 L_{OF}=\sum_P d_O(P).
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{\dim W_{OF}^{\rm priv}\ge\sum_P(d_O(P)-2)_+\ge L_{OF}-2G.}
 \tag{PF.1}
-$$
+```
 
 On the outer-flat branch the existing train gate gives
 
-$$
+```math
 L_{OF}\ge(m(t)-o(1))D,
 \qquad
 m(t):={7\pi\over3}+C_0-{9t\over2},
-$$
+```
 
 while `G<=p_5<=f<=Q` and the outer ledger gives `Q/D<=q_0(t)+o(1)`, where `q_0(t):=2t-pi`. Therefore
 
-$$
+```math
 \boxed{{\dim W_{OF}^{\rm priv}\over D}\ge m(t)-2q_0(t)-o(1).}
 \tag{PF.2}
-$$
+```
 
 Use the current minimax atomic gap
 
-$$
+```math
 C_0=2\sqrt{\Delta_2}+0.0021
-$$
+```
 
 and its safe Section-171 endpoint
 
-$$
+```math
 t_{21}:={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0017279
 =1.82124143797944\ldots .
-$$
+```
 
 The companion certificate gives
 
-$$
+```math
 m(t_{21})=1.0415220011965977\ldots,
 \qquad
 q_0(t_{21})=0.5008902223690962\ldots,
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{\dim W_{OF}^{\rm priv}\ge(0.0397415564584054\ldots-o(1))D.}
 \tag{PF.3}
-$$
+```
 
 This is algebraically three times the previous one-selected-mode floor at the same endpoint.
 
 The low-t ledger simultaneously gives
 
-$$
+```math
 {L_{OO}\over D}\ge3\pi-5t_{21}
 =0.318570770872156\ldots-o(1).
 \tag{PF.4}
-$$
+```
 
 Outer-to-outer shear coordinates and outer-to-flat private columns are disjoint train sets, so their contact-flex spaces sum directly:
 
-$$
+```math
 \boxed{\dim\bigl(W_{OO}\oplus W_{OF}^{\rm priv}\bigr)
 \ge(0.358312327330561\ldots-o(1))D.}
 \tag{PF.5}
-$$
+```
 
 This is not a row-count contradiction. It is an exact amplification of the disjoint-support train-coordinate space that the actual diameter-thrackle must lock.
 
@@ -102,10 +102,10 @@ Audited Section 156 represents infinitesimal contact flexes by train angular rat
 
 Every train in `J_P` has exactly one bounded endpoint, namely `P`. Thus the restriction of the closure matrix to the two rows of `P` and columns `J_P` is a real `2 x j_P` matrix, while those columns are zero in every other bounded-face row. Therefore
 
-$$
+```math
 \dim\ker(C_P|_{J_P})\ge(j_P-2)_+.
 \tag{PF.6}
-$$
+```
 
 Extend a vector in this local kernel by zero on all other train coordinates. The extension lies in the global kernel of `C_face`, hence integrates by audited Section 156.6 to an infinitesimal contact flex modulo translations.
 
@@ -113,17 +113,17 @@ Extend a vector in this local kernel by zero on all other train coordinates. The
 
 If `P` and `P'` are distinct bounded faces, then `J_P` and `J_{P'}` are disjoint: an outer-to-flat train has only one bounded terminal occurrence. Hence the extended local kernels have disjoint coordinate supports and sum directly:
 
-$$
+```math
 \dim W_{OF}^{\rm priv}\ge\sum_P(j_P-2)_+.
-$$
+```
 
 Since `(j-2)_+ >= j-2` for every nonnegative integer `j`,
 
-$$
+```math
 \sum_P(j_P-2)_+
 \ge\sum_Pj_P-2G
 =L_{OF}-2G,
-$$
+```
 
 which proves (PF.1). No three-train selection is required.
 
@@ -131,23 +131,23 @@ which proves (PF.1). No three-train selection is required.
 
 At `g=0.0021` and `t=t_21`, the same arithmetic gives the two-outer-face count
 
-$$
+```math
 {N_2\over D}\ge0.135157944706875\ldots-o(1).
-$$
+```
 
 Thus the almost-parallel/near-60-degree hinge pigeonhole still supplies at least
 
-$$
+```math
 0.0675789723534377D-o(D)
-$$
+```
 
 pairwise train-disjoint hinges of one coherent type.
 
 The previous one-selected-mode argument gave
 
-$$
+```math
 {N_3\over D}\ge0.0132471854861351\ldots-o(1).
-$$
+```
 
 The identity `m(t)-2q_0(t)=3N_3(t)` explains the factor-three gain in (PF.3).
 

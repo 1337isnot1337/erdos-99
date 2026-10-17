@@ -24,25 +24,25 @@ Projective phase alone does **not** determine whether `u_j=v_j` or `u_j=-v_j`. T
 
 Let `gamma` be a canonically oriented train which crosses, in order, pairwise noncrossing leaf trains
 
-$$
+```math
 \tau_1,\ldots,\tau_m.
-$$
+```
 
 Assume every `gamma x tau_j` crossing lies in the phase-pure Section-76 regime, and let `v_j` be the oriented leaf unit-edge vector supplied by the real lift there. Root the complement-dual path at the region containing the incoming end of the oriented centerline of `gamma`.
 
 Then for every selected leaf cut,
 
-$$
+```math
 \boxed{u_j=v_j.}
 \tag{TS.1}
-$$
+```
 
 In particular, if `beta_j` is the real argument of `v_j`, then
 
-$$
+```math
 \boxed{\arg u_j=\beta_j\pmod{2\pi},}
 \tag{TS.2}
-$$
+```
 
 not merely modulo `pi`.
 
@@ -56,19 +56,19 @@ Apply this with `A=gamma` and `B=tau_j`. As the oriented centerline of `gamma` p
 
 Because the selected leaves are pairwise noncrossing and `gamma` crosses each exactly once, their complement regions met by `gamma` form the simple dual path
 
-$$
+```math
 R_0\xleftrightarrow{\tau_1}R_1
 \xleftrightarrow{\tau_2}\cdots
 \xleftrightarrow{\tau_m}R_m
-$$
+```
 
 in this forward order. Root the path at `R_0`. Removing dual edge `tau_j` leaves a root-side component containing `R_0` and a far-side component containing `R_j,\ldots,R_m`.
 
 The Section-157/rooted-shore convention orients the train contact vector from the root-side shore into the far-side shore. But the forward crossing of `gamma` across `tau_j` is exactly from the root-side region to the far-side region, and Section 76.3 says that forward displacement has Euclidean sign `v_j`. Therefore the rooted-shore contact vector is
 
-$$
+```math
 u_j=v_j.
-$$
+```
 
 This proves (TS.1)--(TS.2). `square`
 
@@ -78,31 +78,31 @@ This proves (TS.1)--(TS.2). `square`
 
 For the physical layer between consecutive nested cuts `tau_j,tau_{j+1}`, orient both boundary contacts from the fixed exterior into the middle layer. The left boundary vector is
 
-$$
+```math
 a=u_j=v_j,
-$$
+```
 
 while the right boundary vector is
 
-$$
+```math
 b=-u_{j+1}=-v_{j+1}.
-$$
+```
 
 Hence, whenever the real leaf phases satisfy
 
-$$
+```math
 |\beta_{j+1}-\beta_j|<\pi,
-$$
+```
 
 the physical contact-opening cone has angular width exactly
 
-$$
+```math
 \boxed{
 \pi-\angle(a,b)
 =|\beta_{j+1}-\beta_j|.
 }
 \tag{TS.3}
-$$
+```
 
 This validates the physical-sign step used by `target_c_phase_optimized_two_bar_localization_2026-09-15.md`.
 

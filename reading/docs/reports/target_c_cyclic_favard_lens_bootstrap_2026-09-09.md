@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_favard_lens_bootstrap_2026-09-09.md) · source SHA-256 `571fac9ecb0fb1530caf13f26af349b3b76dd16970fa852aa0256dda4743c835`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 19 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-B1D362799280","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic endpoint: Favard lens bootstrap
 
@@ -18,31 +20,31 @@
 
 The cyclic primitive endpoint has a special perimeter identity unavailable in the generic post-ZF branch:
 
-$$
+```math
 \operatorname{per}(F)=q,
 \qquad
 h=q-d_H,
 \qquad
 0\le d_H\le2.
-$$
+```
 
 Main now contains the difference-body lower bound DA. Along a subsequence with
 
-$$
+```math
 \frac hD\to y,
-$$
+```
 
 DA gives
 
-$$
+```math
 \frac{\operatorname{area}(F)}{D^2}
 \ge
 \frac{y+\sin y}{6}+o(1).
-$$
+```
 
 The ordinary isoperimetric upper bound already bootstraps this to `y>=2.55131...`. Favard's sharp perimeter-area-diameter theorem gives a strictly stronger upper envelope and raises the cyclic threshold to
 
-$$
+```math
 \boxed{
 \liminf\frac hD
 =\liminf\frac qD
@@ -50,10 +52,11 @@ $$
  y_F
 =2.6189005339279606\ldots .}
 \tag{FL.1}
+```
 
 Consequently
 
-\[
+```math
 \boxed{
 \liminf
 \frac{\operatorname{area}(F)}{D^2}
@@ -61,6 +64,7 @@ Consequently
 A_F^*
 =0.5196858569093050\ldots .}
 \tag{FL.2}
+```
 
 This is stronger inside the cyclic endpoint than the new universal PI floor `0.4978566363...D^2` on current main.
 
@@ -72,39 +76,40 @@ Let a symmetric lens be the intersection of two equal-radius disks. Write `R` fo
 
 The lens boundary consists of two congruent circular arcs. Its perimeter, diameter, and area are
 
-\[
+```math
 P=4R\theta,
 \tag{1.1}
-$$
+```
 
-$$
+```math
 D=2R\sin\theta,
 \tag{1.2}
-$$
+```
 
 and
 
-$$
+```math
 A=R^2(2\theta-\sin2\theta).
 \tag{1.3}
-$$
+```
 
 Therefore, with
 
-$$
+```math
 y:=\frac PD,
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{
 y=Y(\theta):=\frac{2\theta}{\sin\theta}.}
 \tag{1.4}
+```
 
 The normalized lens area is
 
-\[
+```math
 \boxed{
 L(y)
 :=\frac A{D^2}
@@ -114,14 +119,15 @@ L(y)
 \qquad
 Y(\theta)=y.}
 \tag{1.5}
+```
 
 The map `Y` is strictly increasing because
 
-\[
+```math
 Y'(\theta)
 =
 \frac{2(\sin\theta-\theta\cos\theta)}{\sin^2\theta}>0
-$$
+```
 
 for `0<theta<=pi/2`. It maps `(0,pi/2]` onto `(2,pi]`.
 
@@ -135,58 +141,60 @@ Campi's statement of Favard's theorem is:
 
 Let `K` be any planar convex body with perimeter `P`, area `A`, and diameter `D`. Let the Favard lens with the same `P,A` have parameter `eta`. Favard gives
 
-$$
+```math
 D\le D_{lens}(P,A).
 \tag{2.1}
+```
 
 For a symmetric lens of fixed perimeter `P`, its normalized area relative to `P^2` is
 
-\[
+```math
 a_P(\theta)
 :=
 \frac A{P^2}
 =
 \frac{2\theta-\sin2\theta}{16\theta^2}.
 \tag{2.2}
+```
 
 Its derivative is
 
-\[
+```math
 a_P'(\theta)
 =
 \frac{2\cos\theta(\sin\theta-\theta\cos\theta)}{8\theta^3}>0
-$$
+```
 
 for `0<theta<pi/2`. Thus lens area increases strictly with `theta` at fixed perimeter, while its diameter
 
-$$
+```math
 D_{lens}=P\frac{\sin\theta}{2\theta}
-$$
+```
 
 decreases strictly.
 
 Let `theta` be defined from the actual ratio `y=P/D` by `Y(theta)=y`. Inequality (2.1) gives
 
-$$
+```math
 \frac PD
 \ge
 \frac{P}{D_{lens}(P,A)}
 =Y(\eta).
-$$
+```
 
 Since `Y` is increasing,
 
-$$
+```math
 \eta\le\theta.
-$$
+```
 
 Since `a_P` is increasing,
 
-$$
+```math
 \frac A{P^2}
 =a_P(\eta)
 \le a_P(\theta).
-$$
+```
 
 Multiplying by `P^2/D^2=y^2` gives:
 
@@ -194,12 +202,13 @@ Multiplying by `P^2/D^2=y^2` gives:
 
 Every planar convex body with perimeter `P`, diameter `D`, and `2<=P/D<=pi` satisfies
 
-$$
+```math
 \boxed{
 \frac A{D^2}
 \le
 L(P/D),}
 \tag{FL.3}
+```
 
 where `L` is the symmetric-lens function (1.5).
 
@@ -211,74 +220,81 @@ Equality holds only for the corresponding symmetric lens.
 
 Differentiate `L(theta)` and `Y(theta)`. A direct cancellation gives
 
-\[
+```math
 \boxed{
 \frac{dL}{dy}
 =
 \frac1{2\sin\theta},
 \qquad Y(\theta)=y.}
 \tag{FL.4}
+```
 
 Hence on `2<y<pi`,
 
-\[
+```math
 \boxed{L'(y)>\frac12.}
 \tag{FL.5}
+```
 
 By contrast, the asymptotic DA lower envelope
 
-\[
+```math
 A_{DB}(y):=\frac{y+\sin y}{6}
-$$
+```
 
 has derivative
 
-$$
+```math
 A_{DB}'(y)=\frac{1+\cos y}{6}
 \le\frac13.
 \tag{FL.6}
+```
 
 Therefore
 
-\[
+```math
 \boxed{
 F(y):=L(y)-A_{DB}(y)
 \text{ is strictly increasing on }(2,\pi).}
 \tag{FL.7}
+```
 
 At `y->2+`, `L(y)->0` while `A_DB(y)->(2+sin2)/6>0`, so `F<0`. At `y=pi`,
 
-\[
+```math
 L(\pi)=\frac\pi4,
 \qquad
 A_{DB}(\pi)=\frac\pi6,
-$$
+```
 
 so `F>0`. Thus there is exactly one root
 
-$$
+```math
 \boxed{y_F\in(2,\pi)}
 \tag{FL.8}
+```
 
 of
 
-\[
+```math
 \boxed{
 L(y_F)=\frac{y_F+\sin y_F}{6}.}
 \tag{FL.9}
+```
 
 Numerically,
 
-\[
+```math
 \boxed{
 y_F=2.6189005339279606\ldots .}
 \tag{FL.10}
+```
 
 The associated lens parameter is
 
-\[
+```math
 \theta_F=1.2373074829148963\ldots .
-$$
+```
 
 ---
 
@@ -286,37 +302,39 @@ $$
 
 Consider any unbounded sequence of cyclic primitive survivors. Put
 
-$$
+```math
 y_j:=\frac{h_j}{D_j}.
-$$
+```
 
 The diameter-thrackle bound and convex perimeter bound make `y_j` bounded. Pass to a subsequence realizing its lower limit and then to a convergent subsubsequence
 
-$$
+```math
 y_j\to y.
-$$
+```
 
 In the cyclic endpoint
 
-$$
+```math
 q_j-h_j=d_H\le2,
-$$
+```
 
 so
 
-$$
+```math
 \frac{q_j}{D_j}\to y.
 \tag{4.1}
+```
 
 Because every force-hull side is a unit contact,
 
-\[
+```math
 P_j=\operatorname{per}(F_j)=q_j.
 \tag{4.2}
+```
 
 The main-branch DA theorem gives
 
-\[
+```math
 \liminf
 \frac{\operatorname{area}(F_j)}{D_j^2}
 \ge
@@ -324,47 +342,50 @@ A_{DB}(y)
 =
 \frac{y+\sin y}{6}.
 \tag{4.3}
+```
 
 Favard FL.3 gives on the same sequence
 
-\[
+```math
 \limsup
 \frac{\operatorname{area}(F_j)}{D_j^2}
 \le
 L(y).
 \tag{4.4}
+```
 
 Therefore necessarily
 
-\[
+```math
 A_{DB}(y)\le L(y).
 \tag{4.5}
+```
 
 By the strict crossing result FL.7-FL.9,
 
-\[
+```math
 y\ge y_F.
-$$
+```
 
 Since the subsequence realized the global lower limit, this proves FL.1.
 
 Finally `A_DB` is nondecreasing on `[0,pi]`, so (4.3) and `y>=y_F` give
 
-$$
+```math
 \liminf
 \frac{\operatorname{area}(F)}{D^2}
 \ge
 A_{DB}(y_F).
-$$
+```
 
 Numerically,
 
-$$
+```math
 \boxed{
 A_{DB}(y_F)
 =L(y_F)
 =0.5196858569093050\ldots ,}
-$$
+```
 
 proving FL.2. `square`
 
@@ -374,30 +395,30 @@ proving FL.2. `square`
 
 Ordinary isoperimetry gives
 
-$$
+```math
 \frac A{D^2}
 \le
 \frac1{4\pi}\left(\frac PD\right)^2.
-$$
+```
 
 Combined with DA, this forces the weaker root of
 
-$$
+```math
 y^2
 =\frac{2\pi}{3}(y+\sin y),
-$$
+```
 
 namely
 
-$$
+```math
 y=2.5513100241\ldots .
-$$
+```
 
 Favard raises the threshold by about
 
-$$
+```math
 0.06759
-$$
+```
 
 because a disk cannot simultaneously have perimeter ratio `y<pi` and diameter `D`; the symmetric lens is the correct sharp area envelope in the intermediate perimeter/diameter regime.
 
@@ -407,24 +428,24 @@ because a disk cannot simultaneously have perimeter ratio `y<pi` and diameter `D
 
 Current main also proves the projective-circle area floor PI. Since FL.1 gives
 
-$$
+```math
 y_F>\pi/2,
-$$
+```
 
 the PI spread saturates asymptotically near a right angle in the cyclic endpoint and yields
 
-$$
+```math
 \operatorname{area}(F)
 \ge
 \left(\frac12-o(1)\right)D^2.
-$$
+```
 
 DA is stronger after the Favard bootstrap:
 
-$$
+```math
 A_{DB}(y_F)
 =0.5196858569\ldots>\frac12.
-$$
+```
 
 Thus PI supplies a useful geometric interpretation—cyclic survivors have almost perpendicular actual diameter directions—while DA+Favard supplies the best current area constant.
 
@@ -434,16 +455,16 @@ Thus PI supplies a useful geometric interpretation—cyclic survivors have almos
 
 If a cyclic sequence had
 
-$$
+```math
 \frac hD\to y_F,
-$$
+```
 
 then the lower and upper area envelopes squeeze:
 
-$$
+```math
 \frac{\operatorname{area}(F)}{D^2}
 \to A_{DB}(y_F)=L(y_F).
-$$
+```
 
 Hence such a threshold sequence must asymptotically saturate both:
 
@@ -462,9 +483,9 @@ A quantitative incompatibility between these two near-equality structures would 
 
 For a large regular odd unit polygon,
 
-$$
+```math
 q/D\to\pi,
-$$
+```
 
 which is above `y_F`. FL does not falsely exclude the canonical shell regression.
 
@@ -486,18 +507,18 @@ Only Favard's classical planar theorem is imported. The inversion and all one-va
 
 The cyclic primitive endpoint now has
 
-$$
+```math
 \liminf q/D
 =
 \liminf h/D
 \ge2.6189005339\ldots
-$$
+```
 
 and force-hull area at least
 
-$$
+```math
 0.5196858569\ldots D^2.
-$$
+```
 
 The highest-value next theorem is a **DA/Favard stability incompatibility**: show that a convex equilateral force hull with `Theta(D)` actual diameter directions separated as in DB cannot approach the symmetric-lens Favard envelope at the same time that its difference-body direction polygon approaches DA equality.
 

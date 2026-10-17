@@ -19,21 +19,21 @@
 
 This report proves that a contact-minimal triangle-free global minimizer has **no weak unit contacts**:
 
-$$
+```math
 \boxed{C=C_*.}
-$$
+```
 
 The proof is substantially shorter than the preceding body-hinge route and removes the final jet-stitching issue from C62.
 
 The key observation is that universal PSD is not merely a second-order statement. For every normalized KKT stress `s`, the weighted sum of the exact signed active distance gaps under an arbitrary displacement `Y` is the PSD quadratic form
 
-$$
+```math
 \boxed{
 \sum_e\lambda_e G_e(Y)
 =
 \operatorname{tr}(Y^{\mathsf T}\Omega_sY)\ge0.
 }
-$$
+```
 
 This identity rules out a Farkas obstruction at **every formal Taylor order**. Starting with C6's relative-interior velocity that strictly releases every weak row, one recursively chooses all higher formal coefficients so that every strong active signed gap has nonnegative first nonzero coefficient. This gives a feasible configuration over the ordered formal Laurent-series field.
 
@@ -47,114 +47,114 @@ Let `A={p_1,...,p_n}` be a contact-minimal triangle-free global minimizer of dia
 
 For an active pair `e=ij`, write
 
-$$
+```math
 d_e=p_i-p_j.
-$$
+```
 
 Set
 
-$$
+```math
 \sigma_e=
 \begin{cases}
 +1,&e\in C,\\
 -1,&e\in H.
 \end{cases}
 \tag{C63.1}
-$$
+```
 
 For a displacement field
 
-$$
+```math
 Y=(y_1,\ldots,y_n),
-$$
+```
 
 define the signed linear row
 
-$$
+```math
 r_e(Y)=\sigma_e\,d_e\cdot(y_i-y_j)
 \tag{C63.2}
-$$
+```
 
 and the **exact signed active gap**
 
-$$
+```math
 \boxed{
 G_e(Y)
 =\sigma_e\left(|d_e+y_i-y_j|^2-|d_e|^2\right).
 }
 \tag{C63.3}
-$$
+```
 
 Because active contacts have length one and active diameter pairs have length `D`, feasibility of the active row is exactly
 
-$$
+```math
 G_e(Y)\ge0.
-$$
+```
 
 Expanding,
 
-$$
+```math
 \boxed{
 G_e(Y)=2r_e(Y)+\sigma_e|y_i-y_j|^2.
 }
 \tag{C63.4}
-$$
+```
 
 The fixed-diameter critical cone is the linearized system
 
-$$
+```math
 r_e(v)\ge0
 \qquad(e\in C\cup H).
 \tag{C63.5}
-$$
+```
 
 ## 2. Start with the C6 relative-interior release velocity
 
 Assume for contradiction that there is at least one weak unit contact:
 
-$$
+```math
 C\setminus C_*\ne\varnothing.
 \tag{C63.6}
-$$
+```
 
 C6 supplies
 
-$$
+```math
 v\in\operatorname{ri}\mathcal K_D(A)
 \tag{C63.7}
-$$
+```
 
 such that
 
-$$
+```math
 r_e(v)=0\qquad(e\in E_*=C_*\cup H_*),
 \tag{C63.8}
-$$
+```
 
 while
 
-$$
+```math
 r_e(v)>0
 \qquad(e\in (C\cup H)\setminus E_*).
 \tag{C63.9}
-$$
+```
 
 In particular every weak unit contact is already strict at the first formal order.
 
 We shall construct a formal displacement
 
-$$
+```math
 Y(t)=\sum_{m\ge1}t^mY_m,
 \qquad
 Y_1=v,
 \tag{C63.10}
-$$
+```
 
 such that
 
-$$
+```math
 G_e(Y(t))\ge0
-$$
+```
 
 in the ordered formal-power-series sense for every active row.
 
@@ -164,16 +164,16 @@ Weak rows are done at order one. Only the strong rows require recursion.
 
 Let
 
-$$
+```math
 \lambda=(\alpha,\beta)\ge0
-$$
+```
 
 be any nonzero nonnegative dependence among a subset of the signed active rows:
 
-$$
+```math
 \sum_e\lambda_e r_e(\cdot)=0.
 \tag{C63.11}
-$$
+```
 
 Equivalently, the corresponding signed edge forces satisfy vertex equilibrium.
 
@@ -181,28 +181,28 @@ A nonzero nonnegative equilibrium dependence cannot be supported only on contact
 
 Hence
 
-$$
+```math
 \sum_H\beta_h>0.
-$$
+```
 
 Normalize it to one. Dotting equilibrium with the source coordinates gives the scalar and tensor KKT identities, so the normalized dependence is a normalized KKT stress. By C53-C54,
 
-$$
+```math
 \Omega_\lambda
 =L_C(\alpha)-L_H(\beta)
 \succeq0.
 \tag{C63.12}
-$$
+```
 
 Now sum the exact signed gaps (C63.4). The linear part cancels by equilibrium:
 
-$$
+```math
 \sum_e\lambda_e r_e(Y)=0.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \sum_e\lambda_eG_e(Y)
 =
@@ -213,23 +213,23 @@ $$
 \operatorname{tr}(Y^{\mathsf T}\Omega_\lambda Y).
 }
 \tag{C63.13}
-$$
+```
 
 Because `Omega_lambda` is PSD, choose a real matrix square root
 
-$$
+```math
 \Omega_\lambda=B_\lambda^{\mathsf T}B_\lambda.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \sum_e\lambda_eG_e(Y)
 =\|B_\lambda Y\|_F^2\ge0
 }
 \tag{C63.14}
-$$
+```
 
 for **every** displacement field `Y`, with no smallness, criticality, or support assumption.
 
@@ -239,48 +239,48 @@ This identity is the engine of the formal induction.
 
 Suppose real coefficient fields
 
-$$
+```math
 Y_1,\ldots,Y_{k-1}
-$$
+```
 
 have been chosen. Let
 
-$$
+```math
 Y_{<k}(t)=\sum_{m=1}^{k-1}t^mY_m.
-$$
+```
 
 Let `F_{k-1}` be the set of strong active rows whose signed gap has vanished through every order below `k`:
 
-$$
+```math
 [t^j]G_e(Y_{<k}(t))=0
 \qquad(1\le j<k).
 \tag{C63.15}
-$$
+```
 
 Rows that have already acquired a positive leading coefficient need no further control.
 
 For `e in F_{k-1}`, the coefficient of `t^k` after adding `t^kY_k` is
 
-$$
+```math
 \boxed{
 2r_e(Y_k)+c_{e,k},
 }
 \tag{C63.16}
-$$
+```
 
 where `c_{e,k}` is the coefficient of `t^k` in the quadratic term
 
-$$
+```math
 \sigma_e|\Delta Y_{<k}(t)|^2.
-$$
+```
 
 Thus the next coefficient can be made nonnegative precisely when the finite linear system
 
-$$
+```math
 2r_e(Y_k)+c_{e,k}\ge0
 \qquad(e\in F_{k-1})
 \tag{C63.17}
-$$
+```
 
 is feasible.
 
@@ -292,41 +292,41 @@ System (C63.17) is feasible for every `k>=2`.
 
 Suppose it were infeasible. Farkas' alternative gives nonnegative coefficients
 
-$$
+```math
 \lambda_e\ge0
 \qquad(e\in F_{k-1}),
-$$
+```
 
 not all zero, such that
 
-$$
+```math
 \sum_{e\in F_{k-1}}\lambda_e r_e(\cdot)=0
 \tag{C63.18}
-$$
+```
 
 and
 
-$$
+```math
 \sum_{e\in F_{k-1}}\lambda_ec_{e,k}<0.
 \tag{C63.19}
-$$
+```
 
 By Section 3, normalize `lambda` to a KKT stress with PSD stress matrix.
 
 Every row in its support lies in `F_{k-1}`. Hence every coefficient below order `k` of each individual signed gap is zero. Therefore the weighted sum
 
-$$
+```math
 S_\lambda(t)
 :=
 \sum_e\lambda_eG_e(Y_{<k}(t))
 \tag{C63.20}
-$$
+```
 
 has zero coefficients below order `k`.
 
 By (C63.13),
 
-$$
+```math
 S_\lambda(t)
 =
 \operatorname{tr}
@@ -336,35 +336,35 @@ Y_{<k}(t)^{\mathsf T}\Omega_\lambda Y_{<k}(t)
 =
 \|B_\lambda Y_{<k}(t)\|_F^2.
 \tag{C63.21}
-$$
+```
 
 This is a sum of squares of real polynomials in `t`. Its first nonzero coefficient, if any, occurs at an even order and is strictly positive. Since all coefficients below `k` vanish, its coefficient at order `k` cannot be negative.
 
 But the linear weighted contribution of `Y_k` cancels by (C63.18), and `Y_{<k}` has no order-`k` linear term. Therefore
 
-$$
+```math
 [t^k]S_\lambda(t)
 =
 \sum_e\lambda_ec_{e,k},
-$$
+```
 
-contradicting (C63.19). $\square$
+contradicting (C63.19). $`\square`$
 
 ## 5. Recursive formal integrability
 
 Set
 
-$$
+```math
 Y_1=v.
-$$
+```
 
 Every weak active row has a positive order-one coefficient by (C63.9). Every strong active row has zero order-one coefficient.
 
 Apply Lemma C63.1 successively for
 
-$$
+```math
 k=2,3,4,\ldots
-$$
+```
 
 to choose `Y_k`.
 
@@ -372,11 +372,11 @@ At each step, for every still-unresolved strong row choose a nonnegative order-`
 
 This constructs
 
-$$
+```math
 Y(t)=\sum_{m\ge1}t^mY_m
 \in\mathbb R[[t]]^{2n}.
 \tag{C63.22}
-$$
+```
 
 For every active row `e`, exactly one of the following holds:
 
@@ -385,19 +385,19 @@ For every active row `e`, exactly one of the following holds:
 
 Hence in the standard ordering of the formal Laurent-series field,
 
-$$
+```math
 \boxed{
 G_e(Y(t))\ge0
 \quad\text{for every active row}.}
 \tag{C63.23}
-$$
+```
 
 Moreover every weak active row satisfies
 
-$$
+```math
 \boxed{G_e(Y(t))>0}
 \tag{C63.24}
-$$
+```
 
 because its order-one coefficient was already positive.
 
@@ -407,9 +407,9 @@ No convergence of the formal series is asserted or needed.
 
 Let
 
-$$
+```math
 \mathbb K_0=\mathbb R((t))
-$$
+```
 
 be the formal Laurent-series field ordered by the sign of the first nonzero coefficient, with `t>0` infinitesimal.
 
@@ -417,58 +417,58 @@ Every coordinate of `Y(t)` lies in `t\mathbb R[[t]]`, so it is infinitesimal.
 
 For any pair `ij` that was not a unit contact at the source,
 
-$$
+```math
 |p_i-p_j|^2-1>0
-$$
+```
 
 is a positive real constant. Hence
 
-$$
+```math
 |p_i+Y_i(t)-p_j-Y_j(t)|^2-1>0
 \tag{C63.25}
-$$
+```
 
 in `K_0`.
 
 Likewise, for any pair that was not a diameter pair,
 
-$$
+```math
 D^2-|p_i-p_j|^2>0
-$$
+```
 
 is a positive real constant, so
 
-$$
+```math
 D^2-|p_i+Y_i(t)-p_j-Y_j(t)|^2>0.
 \tag{C63.26}
-$$
+```
 
 Combining (C63.23)-(C63.26), the formal configuration
 
-$$
+```math
 A(t)=\{p_i+Y_i(t):1\le i\le n\}
 \tag{C63.27}
-$$
+```
 
 satisfies
 
-$$
+```math
 1\le |p_i(t)-p_j(t)|\le D
 \qquad(i\ne j)
 \tag{C63.28}
-$$
+```
 
 inside the ordered field.
 
 Furthermore, every pair outside the strong contact set satisfies
 
-$$
+```math
 \boxed{
 |p_i(t)-p_j(t)|>1
 \qquad(ij\notin C_*).
 }
 \tag{C63.29}
-$$
+```
 
 Indeed:
 
@@ -481,55 +481,55 @@ Thus the formal contact graph is a subgraph of `C_*`.
 
 The ordered field `K_0` need not be real closed. Let
 
-$$
+```math
 \mathbb K
-$$
+```
 
 be a real closure of `K_0` with the given ordering. Then `K` contains `R` as an ordered real-closed subfield and still contains the positive infinitesimal `t` and the formal configuration (C63.27).
 
 Fix any real
 
-$$
+```math
 \varepsilon>0.
-$$
+```
 
 Because every `Y_i(t)` is infinitesimal,
 
-$$
+```math
 \sum_i|Y_i(t)|^2<\varepsilon^2
 \tag{C63.30}
-$$
+```
 
 holds in `K`.
 
 Consider the finite first-order formula over the language of ordered fields, with parameters given by the real source coordinates and `D`, asserting the existence of points `x_1,...,x_n` such that
 
-$$
+```math
 \sum_i|x_i-p_i|^2<\varepsilon^2,
 \tag{C63.31}
-$$
+```
 
-$$
+```math
 1\le|x_i-x_j|\le D
 \qquad(i\ne j),
 \tag{C63.32}
-$$
+```
 
 and
 
-$$
+```math
 |x_i-x_j|>1
 \qquad(ij\notin C_*).
 \tag{C63.33}
-$$
+```
 
 The formal configuration makes this formula true in `K`.
 
 The theory of real closed fields admits quantifier elimination. Consequently the ordered embedding
 
-$$
+```math
 \mathbb R\hookrightarrow\mathbb K
-$$
+```
 
 is elementary. The same existential formula is therefore true over `R`.
 
@@ -539,15 +539,15 @@ We have proved:
 
 For every real `epsilon>0`, there is a real configuration
 
-$$
+```math
 A_\varepsilon=\{x_1,\ldots,x_n\}
-$$
+```
 
 with
 
-$$
+```math
 \sum_i|x_i-p_i|^2<\varepsilon^2,
-$$
+```
 
 all pair distances in `[1,D]`, and contact graph contained in `C_*`.
 
@@ -557,24 +557,24 @@ No analytic convergence or curve-selection theorem is required.
 
 The real configuration `A_epsilon` is unit-separated and has diameter at most `D`. Since `D=D(n)` is the global minimum possible diameter for `n` unit-separated points,
 
-$$
+```math
 \operatorname{diam}A_\varepsilon\ge D.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \operatorname{diam}A_\varepsilon=D.
 }
 \tag{C63.34}
-$$
+```
 
 Its contact graph is a subgraph of `C_*`. If the source had a weak unit contact, then
 
-$$
+```math
 C_*\subsetneq C,
-$$
+```
 
 so `A_epsilon` has strictly fewer unit contacts than the contact-minimal source.
 
@@ -584,17 +584,17 @@ Because deleting contacts cannot create a unit triangle, `A_epsilon` is still tr
 
 For a contact-minimal triangle-free global diameter minimizer,
 
-$$
+```math
 \boxed{C=C_*.}
 \tag{C63.35}
-$$
+```
 
 Equivalently, every unit contact carries positive multiplier in some normalized KKT stress, and a relative-interior normalized KKT stress can be chosen with
 
-$$
+```math
 \boxed{\alpha_e>0\quad\text{for every unit contact }e.}
 \tag{C63.36}
-$$
+```
 
 Target C Gate C-I is closed.
 

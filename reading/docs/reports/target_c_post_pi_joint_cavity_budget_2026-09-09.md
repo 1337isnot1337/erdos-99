@@ -16,30 +16,30 @@
 
 The first post-PI currency theorem bounded outer-pocket area and exceptional-face area separately, obtaining
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}\ge0.4198649147\ldots .
-$$
+```
 
 There is a stronger joint bound. The total excess perimeter available to the convex outer pockets and the total exceptional-face degree cannot both independently use the full force-hull perimeter budget. Two elementary upper bounds on `per(F)` imply
 
-$$
+```math
 \boxed{
 E_{out}+Q
 \le e_{BB}+\min\{h,\pi D-h\}
 \le e_{BB}+\frac{\pi D}{2},
 }
 \tag{JC.1}
-$$
+```
 
 where
 
-$$
+```math
 E_{out}:=\sum_P(L_P-3).
-$$
+```
 
 This collapses the two quadratic cavity capacities into one square and raises the unconditional post-ZF pinned/contact floor to
 
-$$
+```math
 \boxed{
 \liminf\frac{e_{BB}+2s_C}{D}
 \ge
@@ -47,7 +47,7 @@ $$
 =0.4633168953789\ldots .
 }
 \tag{JC.2}
-$$
+```
 
 ---
 
@@ -62,54 +62,54 @@ Retain the notation
 
 OP/PC gives
 
-$$
+```math
 \boxed{
 E_{out}:=\sum_P(L_P-3)
 =x_B+P_F-q-a.
 }
 \tag{JC.3}
-$$
+```
 
 PC gives
 
-$$
+```math
 \boxed{a+e_{BB}\ge q,}
 \tag{JC.4}
-$$
+```
 
 hence
 
-$$
+```math
 E_{out}
 \le x_B+P_F-2q+e_{BB}.
 \tag{JC.5}
-$$
+```
 
 Let
 
-$$
+```math
 z:=Q+2s_Z.
-$$
+```
 
 The exact post-ZF identities are
 
-$$
+```math
 r_H:=2h-q=x_B+z,
 \qquad
 q-h=:d_H\ge0.
 \tag{JC.6}
-$$
+```
 
 Thus
 
-$$
+```math
 h=r_H+d_H,
 \qquad
 q=r_H+2d_H,
 \qquad
 x_B=r_H-z.
 \tag{JC.7}
-$$
+```
 
 ---
 
@@ -117,28 +117,28 @@ $$
 
 The outer contact walk has length
 
-$$
+```math
 b=q+x_B=2h-z,
-$$
+```
 
 and its convex hull is `F`, so OP gives
 
-$$
+```math
 P_F\le b=q+x_B.
 \tag{JC.8}
-$$
+```
 
 Insert JC.8 into JC.5:
 
-$$
+```math
 E_{out}
 \le2x_B-q+e_{BB}.
 \tag{JC.9}
-$$
+```
 
 Add `Q`. Since `Q<=z`,
 
-$$
+```math
 \begin{aligned}
 E_{out}+Q
 &\le2(r_H-z)-(r_H+2d_H)+e_{BB}+Q\\
@@ -147,14 +147,14 @@ E_{out}+Q
 &=h-3d_H+e_{BB}\\
 &\le h+e_{BB}.
 \end{aligned}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{E_{out}+Q\le h+e_{BB}.}
 \tag{JC.10}
-$$
+```
 
 The dropped terms are all explicitly nonnegative; no asymptotic relaxation occurs before the last line.
 
@@ -164,14 +164,14 @@ The dropped terms are all explicitly nonnegative; no asymptotic relaxation occur
 
 Cauchy's perimeter-diameter inequality gives
 
-$$
+```math
 P_F\le\pi D.
 \tag{JC.11}
-$$
+```
 
 Insert this in JC.5 and add `Q`:
 
-$$
+```math
 \begin{aligned}
 E_{out}+Q
 &\le x_B+\pi D-2q+e_{BB}+Q\\
@@ -181,27 +181,27 @@ E_{out}+Q
 &=\pi D-h-3d_H+e_{BB}\\
 &\le\pi D-h+e_{BB}.
 \end{aligned}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{E_{out}+Q\le\pi D-h+e_{BB}.}
 \tag{JC.12}
-$$
+```
 
 Combining JC.10 and JC.12 proves the first inequality in JC.1:
 
-$$
+```math
 E_{out}+Q
 \le e_{BB}+\min\{h,\pi D-h\}.
-$$
+```
 
 For every real `h`,
 
-$$
+```math
 \min\{h,\pi D-h\}\le\frac{\pi D}{2},
-$$
+```
 
 which proves the second inequality in JC.1.
 
@@ -213,39 +213,39 @@ This is the new coupling. The outer pockets and the bounded exceptional faces ar
 
 For each OP pocket, write
 
-$$
+```math
 L_P=3+u_P,
 \qquad u_P\ge0.
-$$
+```
 
 As in the first currency theorem,
 
-$$
+```math
 H_{out}
 \le
 \frac{E_{out}^2+O(D)}{4\pi}.
 \tag{JC.13}
-$$
+```
 
 For bounded exceptional faces, writing `r_i=k_i-4>=1`, one has
 
-$$
+```math
 A_{exc}
 \le
 \frac{Q^2+O(D)}{4\pi}.
 \tag{JC.14}
-$$
+```
 
 Since `E_out,Q>=0`,
 
-$$
+```math
 E_{out}^2+Q^2
 \le(E_{out}+Q)^2.
-$$
+```
 
 Thus JC.1 gives the **joint** cavity capacity
 
-$$
+```math
 \boxed{
 H_{out}+A_{exc}
 \le
@@ -253,11 +253,11 @@ H_{out}+A_{exc}
 +o(D^2).
 }
 \tag{JC.15}
-$$
+```
 
 More sharply, retaining the actual diameter-edge density,
 
-$$
+```math
 \boxed{
 H_{out}+A_{exc}
 \le
@@ -265,7 +265,7 @@ H_{out}+A_{exc}
 +o(D^2).
 }
 \tag{JC.16}
-$$
+```
 
 The first post-PI theorem used two independent squares. JC.15 is strictly smaller in the low-surplus range.
 
@@ -275,56 +275,56 @@ The first post-PI theorem used two independent squares. JC.15 is strictly smalle
 
 Put
 
-$$
+```math
 L:=e_{BB}+2s_C,
 \qquad
 \lambda:=\lim\frac LD,
 \qquad
 t:=\lim\frac{e_{BB}}D
-$$
+```
 
 along a convergent subsequence. Then `0<=t<=lambda`.
 
 PI/GU gives
 
-$$
+```math
 \liminf\frac G{D^2}
 \ge
 A_{PI}-\frac\pi4\lambda^2,
 \qquad
 A_{PI}:=\frac12\sin(2\rho).
 \tag{JC.17}
-$$
+```
 
 ZG/GU gives
 
-$$
+```math
 G\le H_{out}+A_{exc}+2q.
-$$
+```
 
 Because `q=O(D)`, JC.15 yields
 
-$$
+```math
 \boxed{
 A_{PI}-\frac\pi4\lambda^2
 \le
 \frac{(t+\pi/2)^2}{4\pi}.
 }
 \tag{JC.18}
-$$
+```
 
 This two-parameter inequality is already stronger than the first currency theorem.
 
 Since `t<=lambda`, every survivor must satisfy the weaker one-variable necessary condition
 
-$$
+```math
 \boxed{
 A_{PI}-\frac\pi4\lambda^2
 \le
 \frac{(\lambda+\pi/2)^2}{4\pi}.
 }
 \tag{JC.19}
-$$
+```
 
 ---
 
@@ -332,17 +332,17 @@ $$
 
 The left side of JC.19 is strictly decreasing for positive `lambda`; the right side is strictly increasing. Their unique positive intersection is
 
-$$
+```math
 \boxed{
 \lambda_1
 =0.4633168953789\ldots .
 }
 \tag{JC.20}
-$$
+```
 
 Equivalently, `lambda_1` is the positive root of
 
-$$
+```math
 \boxed{
 (\pi^2+1)\lambda^2
 +\pi\lambda
@@ -350,22 +350,22 @@ $$
 -4\pi A_{PI}=0.
 }
 \tag{JC.21}
-$$
+```
 
 Thus no unbounded post-ZF subsequence can satisfy
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}	o\lambda<\lambda_1.
-$$
+```
 
 This proves JC.2.
 
 Numerically, the improvement over the first currency theorem is
 
-$$
+```math
 0.4633168954-0.4198649147
 =0.0434519807\ldots .
-$$
+```
 
 ---
 
@@ -373,20 +373,20 @@ $$
 
 JC.16 should be retained for future optimization. If
 
-$$
+```math
 \frac hD\to y,
-$$
+```
 
 then the same proof gives
 
-$$
+```math
 \boxed{
 A_{PI}-\frac\pi4\lambda^2
 \le
 \frac{(t+\min\{y,\pi-y\})^2}{4\pi}.
 }
 \tag{JC.22}
-$$
+```
 
 Together with DB/NB constraints on `(y,r_H/D)`, this is a sharper feasible-region inequality than the universal threshold JC.20. It may be possible to raise the floor further by optimizing the actual diameter density rather than replacing the minimum by `pi/2`.
 
@@ -396,52 +396,52 @@ Together with DB/NB constraints on `(y,r_H/D)`, this is a sharper feasible-regio
 
 Every post-ZF survivor now satisfies
 
-$$
+```math
 \boxed{
 \frac{x_B+Q+2s_Z}{D}
 \ge0.6099043189\ldots-o(1)
 }
 \tag{JC.23}
-$$
+```
 
 from NB and
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge0.4633168954\ldots-o(1)
 }
 \tag{JC.24}
-$$
+```
 
 from JC.
 
 ZK also gives
 
-$$
+```math
 3(d_H+s_Z)\le6+e_{BB}+2s_C.
-$$
+```
 
 Since `h=r_H+d_H` and `s_Z>=0`, one obtains the additional asymptotic slope constraint
 
-$$
+```math
 \boxed{
 \frac{r_H}{D}
 +\frac13\frac{e_{BB}+2s_C}{D}
 \ge2\rho-o(1).
 }
 \tag{JC.25}
-$$
+```
 
 Thus a survivor near the minimum allowed pinned/contact currency must have very large diameter branching. At `lambda=lambda_1`, JC.25 gives
 
-$$
+```math
 \frac{r_H}{D}
 \ge
 2\rho-\frac{\lambda_1}{3}-o(1)
 =1.3237313013\ldots-o(1).
 \tag{JC.26}
-$$
+```
 
 This is far stronger than the universal NB floor `0.609904...` in that part of parameter space.
 

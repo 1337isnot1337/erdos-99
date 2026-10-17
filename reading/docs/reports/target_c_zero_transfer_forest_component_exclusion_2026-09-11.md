@@ -20,13 +20,13 @@ graph.
 
 The resulting theorem is
 
-$$
+```math
 \boxed{
 \text{C-II, }s_Z=0,\text{ C56-Z, and forest }H
 \quad\Longrightarrow\quad d_H\le2, h\le8, q\le10.
 }
 \tag{ZF-M.1}
-$$
+```
 
 Since promoted C34 gives `2q\ge\lceil D\rceil+2`, this rules out the complete
 zero-transfer forest branch for `D>18`.  It leaves the cyclic `s_Z=0` branch,
@@ -46,10 +46,10 @@ call them `e_0,e_1,e_2`, and let `T` be the six endpoints.
 The claim is that the effective-resistance matrix restricted to `T` is
 additive:
 
-$$
+```math
 W_{xy}=r_x+r_y\qquad(x\ne y, x,y\in T).
 \tag{ZF-M.2}
-$$
+```
 
 SEPq then contradicts the C-II degree caps, because a separator for six
 terminals needs degree at least six if it is not one of `T`, and at least five
@@ -78,20 +78,20 @@ lemma to them in their projective order.
 If the adjacent supported pair is the first two, then the third coordinate is
 zero and
 
-$$
+```math
 z_0(z_2-z_1)\le0
 \quad\Longrightarrow\quad
 z_0z_1\ge0.
-$$
+```
 
 If it is the last two, the other C53 inequality gives the same conclusion.
 The two supported coordinates are nonzero, so their signs agree.  Therefore a
 positive split contributes a nonnegative amount to the corresponding off-
 diagonal entry of
 
-$$
+```math
 K_T:=Q_T^{\mathsf T}RQ_T.
-$$
+```
 
 But C56-Z gives `K=B_H^{-1}` on the full edge space, hence every off-diagonal
 entry of `K_T` is zero.  Nonnegative split coefficients imply that no positive
@@ -106,9 +106,9 @@ separate at least one of the three crossing pairs.
 
 The six selected endpoints occur in the two-block order
 
-$$
+```math
 t_0,t_1,t_2,u_0,u_1,u_2
-$$
+```
 
 after cyclic relabeling, because the three selected chords pairwise cross.  A
 cyclic interval whose indicator changes on exactly one of these three matching
@@ -138,10 +138,10 @@ terminals in `T` are loaded, so both cases are impossible:
 
 Hence a C56-Z forest in C-II has at most two nontrivial components:
 
-$$
+```math
 \boxed{d_H\le2.}
 \tag{ZF-M.3}
-$$
+```
 
 ## 4. Star size and the finite diameter bound
 
@@ -153,24 +153,24 @@ has at most four edges.
 
 With at most two nontrivial star components,
 
-$$
+```math
 h\le4d_H\le8.
 \tag{ZF-M.4}
-$$
+```
 
 In the forest branch, `q=h+d_H`, so
 
-$$
+```math
 q\le8+2=10.
 \tag{ZF-M.5}
-$$
+```
 
 The promoted C34 endpoint count is
 
-$$
+```math
 2q\ge\lceil D\rceil+2.
 \tag{ZF-M.6}
-$$
+```
 
 Together with (ZF-M.5), this gives `\lceil D\rceil+2\le20`, hence `D\le18`.
 Therefore the exact zero-transfer forest branch is absent for every C-II

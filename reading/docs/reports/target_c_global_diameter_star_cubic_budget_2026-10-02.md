@@ -43,10 +43,11 @@ The new universal result needs only the following inputs.
 3. For a global minimizer, the canonical complete-source area allowance
    from [Section 58, §1](../targets/target-c/58-full-source-geometry-audit.md):
    with `K=conv(A)`,
-   $$
+   ```math
    0\le\delta_K:=\pi D^2/4-\operatorname{area}K
    <{\pi\sqrt3\over4}D.                                      \tag{1}
-   $$
+   
+   ```
    Its dependencies are finite Oler, strict translated-lattice comparison,
    and `per(K)<=pi D`. This premise is canonical and does not use C-I, ZR/ZF,
    a full-core hypothesis, or contact minimality.
@@ -72,9 +73,9 @@ for the universal theorem.
 Choose a constant-width-`D` body `W` containing `A`. Write its support function
 as `h(theta)`, and put `R=D/2`, `p=h-R`. Thus
 
-$$
+```math
 p(\theta+\pi)=-p(\theta).                                   \tag{2}
-$$
+```
 
 For a source vertex `v` with `d_v=deg_H(v)>=2`, let `theta_v` be the angular
 span of its actual diameter-partner rays. These rays lie in one arc of length
@@ -87,23 +88,23 @@ to be at most `pi/3`.
 For any diameter partner `q`, the direction `n=(v-q)/D` supports `W` at `v`.
 Indeed for every `x` in `W`, `|x-q|<=D=|v-q|`, hence
 
-$$
+```math
 n\cdot(x-v)\le-{|x-v|^2\over2D}.                            \tag{3}
-$$
+```
 
 In particular the support point is unique. Positive combinations of the two
 extreme support normals show that `v` is the support point on the intervening
 open normal interval `I_v`, of length `theta_v`. There
 
-$$
+```math
 h(\theta)=v\cdot n(\theta),\qquad \rho:=h+h''=0.             \tag{4}
-$$
+```
 
 Constant width gives, in curvature-measure form,
 
-$$
+```math
 \rho(\theta)+\rho(\theta+\pi)=D.                            \tag{5}
-$$
+```
 
 The curvature measure of a convex body is nonnegative. Since its sum with its
 antipodal translate is the absolutely continuous measure `D dtheta`, it has
@@ -125,43 +126,43 @@ for an additive budget. No diameter Euler-path inference is used.
 For any finite planar diameter-`D` set `A`, define `theta_v` as above for every
 actual diameter vertex of degree at least two. Then
 
-$$
+```math
 \boxed{
 {D^2\over2}\sum_{v:d_v\ge2}
 \left[\tan{\theta_v\over2}-{\theta_v\over2}\right]
 \le {\pi D^2\over4}-\operatorname{area}(\operatorname{conv}A).
 }                                                           \tag{6}
-$$
+```
 
 This needs neither separation nor optimality. In particular
 
-$$
+```math
 \boxed{{D^2\over48}\sum_v\theta_v^3\le\delta_K.}              \tag{7}
-$$
+```
 
 ### Proof
 
 For a constant-width body the support-area formula, obtained from the boundary
 parametrization `x=h n+h' Jn` and integration by parts, is
 
-$$
+```math
 \delta_W={\pi D^2\over4}-\operatorname{area}W
 ={1\over2}\int_0^{2\pi}[(p')^2-p^2].                        \tag{8}
-$$
+```
 
 Set `f=p+p''=rho-R` and define
 
-$$
+```math
 E(g)=\int_0^{2\pi}[(g')^2-g^2].
-$$
+```
 
 On the antiperiodic `H^1` space, the Fourier modes are odd. The quadratic form
 `E` is nonnegative, with precisely the translation first harmonics in its
 kernel. Polarization and Cauchy–Schwarz therefore give
 
-$$
+```math
 \langle f,g\rangle^2\le2\delta_W E(g)                        \tag{9}
-$$
+```
 
 for every antiperiodic `g`. This also follows by integrating
 `<f,g>=-int(p'g'-pg)` and applying the same positive semidefinite form.
@@ -170,35 +171,35 @@ Translation modes contribute zero to both sides.
 For each `v`, rotate so `I_v=(-a_v,a_v)`, `a_v=theta_v/2`, and define `g_v`
 on `I_v` by
 
-$$
+```math
 g_v(t)={\cos t\over\cos a_v}-1,
-$$
+```
 
 on `I_v+pi` by its negative antipodal copy, and elsewhere by zero. The function
 is continuous and in `H^1`; its derivative may jump at the support endpoints.
 On the interior of `I_v`, `-g_v''-g_v=1`. Since its endpoint values vanish,
 integration by parts on the two intervals gives, with `k_v=tan(a_v)-a_v>0`,
 
-$$
+```math
 E(g_v)=4k_v,\qquad \langle f,g_v\rangle=-2Dk_v.              \tag{10}
-$$
+```
 
 The second equality uses `f=-R` on `I_v` and `f=R` on `I_v+pi`.
 The sign is immaterial in (9), but is the same for every vertex.
 
 By the disjointness proved in §2, for `g=sum_v g_v`,
 
-$$
+```math
 E(g)=4\sum_v k_v,\qquad
 \langle f,g\rangle=-2D\sum_v k_v.
-$$
+```
 
 If there is at least one star, substitute these expressions into (9) and
 divide by the positive sum to obtain
 
-$$
+```math
 \delta_W\ge {D^2\over2}\sum_v k_v.
-$$
+```
 
 If there are no stars the conclusion is immediate. As `conv(A) subset W`,
 `delta_K>=delta_W`, proving (6). Finally `tan(a)-a>=a^3/3` for `a>=0`,
@@ -215,17 +216,17 @@ individual deficit inequalities without proving their supports are disjoint.
 Let `A` be any planar unit-separated global minimum-diameter configuration,
 with `D>=1`. Put
 
-$$
+```math
 a_D=2\arcsin{1\over2D},\qquad
 \mathcal B_D={12\pi\sqrt3\over D a_D^3}.
-$$
+```
 
 Then its **full actual** diameter graph satisfies
 
-$$
+```math
 \boxed{\sum_{v:d_v\ge1}(d_v-1)^3<\mathcal B_D
 \le12\pi\sqrt3\,D^2.}                                    \tag{11}
-$$
+```
 
 Vertices with `d_v=0` are excluded from this sum, rather than assigned a
 negative summand. They are not removed from the source configuration.
@@ -246,18 +247,18 @@ Let `S` consist of `N>=1` distinct actual diameter vertices, and suppose a
 specified collection of actual diameter edges has at least `J` endpoint
 incidences in `S`. An edge with both ends in `S` counts twice. Then
 
-$$
+```math
 \boxed{(J-N)_+^3<\mathcal B_D N^2.}                         \tag{12}
-$$
+```
 
 Indeed `sum_{v in S}(d_v-1)>=J-N`, and Hölder gives
 `[sum(d_v-1)]^3<=N^2 sum(d_v-1)^3`. If `J=Omega(D)` and `N<=J/2`, (11) gives
 
-$$
+```math
 \boxed{
 N>{J^{3/2}\over\sqrt{96\pi\sqrt3}\,D}=\Omega(\sqrt D).
 }                                                           \tag{13}
-$$
+```
 
 If `N>J/2`, the stronger linear lower bound already holds. This is a counting
 statement about actual source vertices, not KKT weights or repeated boundary
@@ -266,9 +267,9 @@ occurrences.
 For several packets on pairwise disjoint actual vertex sets, the same proof
 gives the simultaneous bound
 
-$$
+```math
 \boxed{\sum_i{(J_i-N_i)_+^3\over N_i^2}<\mathcal B_D.}        \tag{13a}
-$$
+```
 
 No such sum is justified if two packets reuse a source vertex. Shared paths,
 outer-walk occurrences, and phase labels are not disjoint vertex sets.
@@ -281,15 +282,15 @@ actual diameter representatives for each incident tree edge. Consequently
 that layer contains more than `m/2` actual endpoint incidences. Its `N_*`
 distinct diameter vertices satisfy
 
-$$
+```math
 \boxed{(m/2-N_*)_+^3<\mathcal B_D N_*^2.}                    \tag{14}
-$$
+```
 
 Thus either `N_*>m/4`, or
 
-$$
+```math
 \boxed{N_*>{m^{3/2}\over\sqrt{768\pi\sqrt3}\,D}.}           \tag{15}
-$$
+```
 
 For `m>=cD`, the threshold fork strengthens to:
 
@@ -302,9 +303,9 @@ eliminated, and the open-cell exact-phase branch is outside that threshold fork.
 There is a further exact consequence for the **selected** forest `F`. The
 transverse-rail report gives
 
-$$
+```math
 (n_0-1)+(n_m-1)+\sum_{j=1}^{m-1}(n_j-2)=c(F)+1.
-$$
+```
 
 All terms on the left are nonnegative. In the boundary-heavy case,
 `n_0` or `n_m` is at least `N_*`; hence `c(F)>=N_*-2=Omega(sqrt(D))`.
@@ -318,10 +319,10 @@ the moment, full diameter-edge count, and the forest/caterpillar topology.
 For every integer `k>=2`, take `k` disjoint stars with `k` leaves each, and
 set the formal diameter scale to `D=k^2`. Their degree data are
 
-$$
+```math
 h=k^2=D,\quad q=k^2+k,\quad N_{\rm hubs}=k=\sqrt D,\quad
 \sum_v(d_v-1)^3=k(k-1)^3<D^2.
-$$
+```
 
 The hub packet has `J=D`, and each component is a caterpillar. The moment
 allowance (11), a linear edge floor, and a linear vertex ceiling all survive.
@@ -343,45 +344,45 @@ a Level I counterexample.
 
 For `0<t<=1/4`, let
 
-$$
+```math
 a=\arcsin t,\quad b=\arcsin(2t),\quad
 C=2\cos a-\cos b,\quad R=D/2.
-$$
+```
 
 Define `p` on `[-pi/2,pi/2]` by
 
-$$
+```math
 p(\phi)=
 \begin{cases}
 R(C\cos\phi-1),&|\phi|\le a,\\
 R[1-\cos(b-|\phi|)],&a\le|\phi|\le b,\\
 0,&b\le|\phi|\le\pi/2,
 \end{cases}
-$$
+```
 
 extend antiperiodically, and put `h=R+p`. This is the support function of a
 convex constant-width-`D` body `W_t`. It has a corner `v=(RC,0)` whose diameter
 partners include the entire circular arc
 
-$$
+```math
 v-D(\cos\phi,\sin\phi),\qquad |\phi|\le a.                  \tag{16}
-$$
+```
 
 Its exact disk-area deficit is
 
-$$
+```math
 \boxed{
 \delta(W_t)={D^2\over2}
 \left[2t\bigl(2\sqrt{1-t^2}-\sqrt{1-4t^2}\bigr)
 -\arcsin(2t)\right].
 }                                                           \tag{17}
-$$
+```
 
 Furthermore
 
-$$
+```math
 \boxed{{D^2t^3\over3}\le\delta(W_t)\le{D^2t^3\over2}.}       \tag{18}
-$$
+```
 
 ### Proof and sharpness check
 
@@ -399,7 +400,7 @@ For completeness, `rho-R=-R` on the central interval, `R` on its two
 neighboring intervals, and zero outside; its antipodal copy has the opposite
 sign. The energy formula gives
 
-$$
+```math
 \begin{aligned}
 \delta(W_t)
 &=2R\left[\int_0^a p(\phi)\,d\phi-
@@ -407,21 +408,21 @@ $$
 &=2R^2[Ct-a-(b-a-\sin(b-a))]\\
 &=2R^2(2Ct-b),
 \end{aligned}
-$$
+```
 
 which is (17). To bound it, put `F(t)=2Ct-arcsin(2t)`,
 `u=(1-2t^2)/sqrt(1-t^2)`, `w=sqrt(1-4t^2)`. Direct differentiation gives
 
-$$
+```math
 F'(t)=4(u-w),\qquad
 u^2-w^2={t^2\over1-t^2}.
-$$
+```
 
 For `0<=t<=1/4`, `7/8<=u<=1` and `3/4<=w<=1`. Hence
 
-$$
+```math
 2t^2\le F'(t)={4t^2\over(1-t^2)(u+w)}\le3t^2.
-$$
+```
 
 Integrate from zero and multiply by `D^2/2` to get (18). ∎
 
@@ -431,17 +432,17 @@ between `D/3` and `D/2`, inside the canonical numerical allowance
 unit-separated diameter partners. An exact rational subfamily, translated so
 the corner is the origin, is
 
-$$
+```math
 q_j=D\left({s_j^2-1\over1+s_j^2},
            {-2s_j\over1+s_j^2}\right),\qquad
 s_j={j\over D},\quad |j|\le\lfloor L^2/4\rfloor.             \tag{19}
-$$
+```
 
 All `|q_j|=D`. For distinct indices
 
-$$
+```math
 |q_i-q_j|^2={4D^2(s_i-s_j)^2\over(1+s_i^2)(1+s_j^2)}>1,
-$$
+```
 
 and it is less than `D^2`. Their angles are in (16), because
 `2|s_j|/(1+s_j^2)<=1/(2L)<t`. These finite sets are triangle-free and have
@@ -466,9 +467,9 @@ boundary arclengths are in `[19/10,4]`. Let `A_L` be their endpoints.
 Here is a full separation check. From `C<=5/4`, `|h'|<=D/4`, and the explicit
 support function,
 
-$$
+```math
 B(0,D/3)\subset W_t\subset B(0,3D/4).
-$$
+```
 
 Consequently the boundary arclength per unit polar angle is at most `2D`,
 because `ds/dphi=|x|^2/h<=27D/16`. Given two sample points, take their
@@ -487,19 +488,19 @@ and its chord is at most `s^3/(12r)<=8s/(3D)`, by
 `x-sin(x)<=x^3/6`. The corner points are included, so summing the disjoint
 segment areas over the entire boundary yields
 
-$$
+```math
 0\le\operatorname{area}W_t-\operatorname{area}(\operatorname{conv}A_L)
 \le{8\pi\over3}.
-$$
+```
 
 Combining this with (18), for `D=L^3>=512`,
 
-$$
+```math
 \boxed{
 \delta_{\operatorname{conv}A_L}\le D/2+8\pi/3
 <{\pi\sqrt3\over4}D.
 }                                                           \tag{20}
-$$
+```
 
 Thus the **actual source hull** meets the same numerical area allowance (1),
 with a unit-separated actual diameter star of order `D^(2/3)` and only `O(D)`

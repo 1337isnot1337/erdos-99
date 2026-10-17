@@ -20,34 +20,34 @@ extraction.
 
 Work in one physical grain after the canonical Section-68/69 phase cuts. Put
 
-$$
+```math
 L={\pi\over3}.
-$$
+```
 
 Every train `v` in the grain has a real phase potential `x_v` in one common real bin
 and a label `ell_v in Z/3`, with
 
-$$
+```math
 \phi_v\equiv x_v+L\ell_v\pmod\pi.
 \tag{74.1}
-$$
+```
 
 For every retained rhombus crossing, Section 68 orients the crossing `u->v` so that
 
-$$
+```math
 \phi_v-\phi_u\equiv L+\delta_{uv}\pmod\pi,
 \qquad
 x_v-x_u=\delta_{uv}>0.
 \tag{74.2}
-$$
+```
 
 Here `delta_{uv}` is the acute-angle excess above `pi/3`.
 
 Let `A,B` be the phase-pure complete train families supplied by Section 73. Write
 
-$$
+```math
 a=|A|,\qquad b=|B|.
-$$
+```
 
 Every `A` train crosses every `B` train exactly once, while each family is internally
 noncrossing.
@@ -56,40 +56,40 @@ noncrossing.
 
 Substitute (74.1) into the first congruence in (74.2) and use the second:
 
-$$
+```math
 L(\ell_v-\ell_u)+\delta_{uv}
 \equiv L+\delta_{uv}\pmod{3L}.
-$$
+```
 
 Therefore every oriented retained crossing satisfies
 
-$$
+```math
 \boxed{\ell_v-\ell_u\equiv1\pmod3.}
 \tag{74.3}
-$$
+```
 
 The families `A,B` have two fixed distinct labels. Hence exactly one of the two label
 orders occurs on every `A x B` crossing. After interchanging the names if necessary,
 we may assume
 
-$$
+```math
 \ell_B-\ell_A\equiv1\pmod3.
-$$
+```
 
 Then **every** complete-grid crossing is oriented from `A` to `B` and
 
-$$
+```math
 \boxed{\delta_{ab}=x_b-x_a>0
 \qquad(a\in A,\ b\in B).}
 \tag{74.4}
-$$
+```
 
 In particular
 
-$$
+```math
 \max_{a\in A}x_a<\min_{b\in B}x_b.
 \tag{74.5}
-$$
+```
 
 This uniform sign is the key extra information supplied by phase purity.
 
@@ -97,53 +97,53 @@ This uniform sign is the key extra information supplied by phase purity.
 
 Define
 
-$$
+```math
 S_{AB}:=\sum_{a\in A}\sum_{b\in B}\delta_{ab}.
 \tag{74.6}
-$$
+```
 
 Every pair `a,b` corresponds to a distinct retained rhombus, so `S_AB` is a sub-sum
 of the global strict-rhombus angular defect
 
-$$
+```math
 \Delta_{train}:=\sum_R\delta_R.
-$$
+```
 
 Canonical (68.14) gives
 
-$$
+```math
 {3\Delta_{train}\over\pi}
 <(2+\sqrt3)c_0\operatorname{per}(K)
 \le(2+\sqrt3)c_0\pi D,
 \qquad c_0={\sqrt3\over4}.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 S_{AB}\le\Delta_{train}<C_{phase}D,
 \qquad
 C_{phase}:={\pi^2\sqrt3(2+\sqrt3)\over12}.
 }
 \tag{74.7}
-$$
+```
 
 Put
 
-$$
+```math
 \lambda:={S_{AB}\over ab}.
 \tag{74.8}
-$$
+```
 
 If `a,b>=gamma D` for some fixed `gamma>0`, then
 
-$$
+```math
 \boxed{
 \lambda<{C_{phase}\over\gamma^2D}.
 }
 \tag{74.9}
-$$
+```
 
 Thus the mean defect on the complete product is already `O(1/D)`. The next step
 upgrades this to a uniform bound on a still-linear complete subgrid.
@@ -152,88 +152,88 @@ upgrades this to a uniform bound on a still-linear complete subgrid.
 
 Let
 
-$$
+```math
 x_A^+:=\max_{a\in A}x_a,
 \qquad
 x_B^-:=\min_{b\in B}x_b.
-$$
+```
 
 By (74.5), `x_B^- - x_A^+>0`. Since every pair contributes at least this gap,
 
-$$
+```math
 \boxed{x_B^- - x_A^+\le\lambda.}
 \tag{74.10}
-$$
+```
 
 Also, for every `a in A` and every `b in B`,
 
-$$
+```math
 x_b-x_a\ge x_A^+-x_a,
-$$
+```
 
 so summing gives
 
-$$
+```math
 {1\over a}\sum_{a\in A}(x_A^+-x_a)\le\lambda.
 \tag{74.11}
-$$
+```
 
 Similarly
 
-$$
+```math
 {1\over b}\sum_{b\in B}(x_b-x_B^-)\le\lambda.
 \tag{74.12}
-$$
+```
 
 By Markov's inequality there are subfamilies
 
-$$
+```math
 A_0\subseteq A,
 \qquad
 B_0\subseteq B,
-$$
+```
 
 with
 
-$$
+```math
 |A_0|\ge {a\over2},
 \qquad
 |B_0|\ge {b\over2},
 \tag{74.13}
-$$
+```
 
 such that
 
-$$
+```math
 x_A^+-x_a\le2\lambda
 \quad(a\in A_0),
 \qquad
 x_b-x_B^-\le2\lambda
 \quad(b\in B_0).
 \tag{74.14}
-$$
+```
 
 For every `a in A_0`, `b in B_0`, combine (74.10) and (74.14):
 
-$$
+```math
 \begin{aligned}
 \delta_{ab}
 &=x_b-x_a\\
 &=(x_b-x_B^-)+(x_B^--x_A^+)+(x_A^+-x_a)\\
 &\le5\lambda.
 \end{aligned}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \delta_{ab}\le {5C_{phase}\over\gamma^2D}
 \qquad
 (a\in A_0,\ b\in B_0),
 }
 \tag{74.15}
-$$
+```
 
 whenever `a,b>=gamma D`.
 
@@ -247,21 +247,21 @@ At the same time, all `A_0` phase potentials lie in an interval of width at most
 Every pair in `A_0 x B_0` still crosses, so the subgrid remains complete. Its two
 shores satisfy
 
-$$
+```math
 |A_0|,|B_0|\ge{\gamma\over2}D.
 \tag{74.16}
-$$
+```
 
 Every one of its rhombi has acute angle
 
-$$
+```math
 \boxed{
 {\pi\over3}
 <\theta_{ab}
 \le {\pi\over3}+{5C_{phase}\over\gamma^2D}.
 }
 \tag{74.17}
-$$
+```
 
 Therefore the quadratic-core branch contains an actual linear-by-linear complete grid
 that is not merely phase coherent: it is **uniformly inverse-diameter close to the

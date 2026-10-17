@@ -38,18 +38,18 @@ to the conjecture's quantifiers.
 
 Let X be a finite unit-separated set in a disk B(o,S), where
 
-$$
+```math
 S=D/2+\delta<D/\sqrt2,\qquad \delta>0.
-$$
+```
 
 Put an edge xy in G_D(X) precisely when |x-y| >= D. In particular distance-D
 ties are edges. Write N=|X|, tau(G) for minimum vertex-cover cardinality,
 and nu(G) for maximum matching cardinality. Then the maximum cardinality
 of a strict-sub-D subset of this particular X is exactly
 
-$$
+```math
 \boxed{M_D(X)=N-\tau(G_D(X)).}
-$$
+```
 
 Indeed, a deletion set leaves diameter strictly below D if and only if it
 covers every conflict edge. Unit separation survives deletion. This is an
@@ -66,24 +66,24 @@ for actual maximal-distance pairs cannot be imported for G.
 
 Let V_ann be the source labels in the radial band
 
-$$
+```math
 D-S\le |x-o|\le S,
 \qquad N_{\rm ann}=|V_{\rm ann}|,
-$$
+```
 
 and put alpha=2 arccos(D/(2S)). There is a subset Z of V_ann with
 
-$$
+```math
 |Z|\le r:=\left\lfloor\frac{\alpha}{\pi}N_{\rm ann}\right\rfloor
-$$
+```
 
 such that G_D(X)-Z is bipartite. Consequently
 
-$$
+```math
 \boxed{\nu(G)\le\tau(G)\le\nu(G)+r,}
 \qquad
 N-\nu(G)-r\le M_D(X)\le N-\nu(G).
-$$
+```
 
 ### Proof
 
@@ -93,10 +93,10 @@ between two conflict endpoints, phi is obtuse, since an acute or right
 angle gives squared distance at most 2S^2<D^2. In the obtuse range the
 squared distance is increasing in both radii. Therefore
 
-$$
+```math
 D^2\le |x-y|^2\le4S^2\sin^2(\phi/2),
 \quad\text{so}\quad \phi\ge\pi-\alpha.
-$$
+```
 
 Choose an oriented ray u and use its full line to divide the plane into
 two open half-planes. Take a generic u so no source label is on the line.
@@ -146,22 +146,22 @@ regular q-gon is not asserted globally optimal for large q.
 If D-S>1/2, disjoint radius-1/2 disks about V_ann fit in the expanded
 annulus from radius D-S-1/2 to S+1/2. Comparing their areas gives
 
-$$
+```math
 N_{\rm ann}\le4D(1+2\delta).
-$$
+```
 
 The elementary inequality 1-cos x >= 2x^2/pi^2 on [0,pi/2] yields
 
-$$
+```math
 \alpha\le2\pi\sqrt{\frac{\delta}{D+2\delta}}.
-$$
+```
 
 For delta=c D^(-1/3), with c fixed, Proposition 1 therefore gives the
 following explicit bound for arbitrary unit-separated X in the stated disk:
 
-$$
+```math
 \boxed{r\le\left\lfloor8\sqrt c\,D^{1/3}+16c^{3/2}\right\rfloor.}
-$$
+```
 
 For a translated unit triangular-lattice disk packet the bound improves
 to r=O_c(1). The precise additional input is the uniform-over-translations
@@ -182,17 +182,17 @@ The O(D^(1/3)) matching-cover error for general unit-separated clouds is
 optimal in order. For q=k^3 with k odd and k>=3, take a regular unit
 q-gon of radius S=1/(2 sin(pi/q)), set l=k, and use the threshold
 
-$$
+```math
 D=2S\cos(\pi l/q),\qquad \alpha=2\pi l/q.
-$$
+```
 
 This obeys S<D/sqrt(2) and delta=S-D/2=Theta(D^(-1/3)). More precisely,
 delta D^(1/3) tends to pi^(2/3)/4. At this threshold the conflict graph
 has maximum matching (q-1)/2 and maximum independent-set cardinality
 
-$$
+```math
 \frac{q+1}{2}-l.
-$$
+```
 
 Consequently tau-nu=l=k=Theta(D^(1/3)). To prove the independent-set
 bound, put h=2pi/q and thicken each selected circular point to an arc of
@@ -204,11 +204,11 @@ this neighborhood is not the whole circle and its length is at least
 |B|+2(l-1)h: at least one complementary gap survives enlargement, and
 that gap alone loses 2(l-1)h. Thus
 
-$$
+```math
 2Mh+2(l-1)h\le2\pi,
 \quad M\le q/2-l+1,
 \quad M\le(q+1)/2-l.
-$$
+```
 
 Consecutive (q+1)/2-l labels attain the bound. The actual diameter cycle
 of the odd polygon supplies a matching of (q-1)/2 edges, which is already
@@ -221,9 +221,9 @@ delta=c D^(-1/3). Take instead l=floor(beta k), with
 delta_0,D_0 satisfy delta_0 D_0^(1/3) -> pi^(2/3)beta^2/4<c. Dilate the
 entire polygon and threshold by
 
-$$
+```math
 t_k=\left(\frac{c}{\delta_0D_0^{1/3}}\right)^{3/4}\ge1
-$$
+```
 
 for sufficiently large k. Unit separation is preserved, the conflict
 graph is unchanged, and the rescaled values obey delta D^(1/3)=c
@@ -256,18 +256,18 @@ cover; optimality is not inferred merely from solver status.
 **Classification:** regression. For each integer k>=2 put m=k^3 and take
 the triangular-lattice points with physical coordinates
 
-$$
+```math
 X_k=\{(j,\pm\sqrt3 m):-k\le j\le k\}.
-$$
+```
 
 Use D=2sqrt(3)m and S=sqrt(3)(m+1/(6k)). They obey S<D/sqrt(2), are
 unit-separated, and lie strictly inside B_S. Same-row distances are
 less than D; every cross-row distance is at least D. Thus G_D(X_k)
 is exactly K_(2k+1,2k+1), with
 
-$$
+```math
 E=(2k+1)^2,\qquad \tau=\nu=2k+1.
-$$
+```
 
 Here delta=(1/12)^(1/3) D^(-1/3). The edge-count deletion allowance loses
 E-tau=4k^2+2k=Theta(D^(2/3)), while actual required deletion is only
@@ -320,16 +320,16 @@ D(42344)<=sqrt(46641). These are upper bounds, not exact values of D(n).
 For an exact triangle-free variant, let q_max<D^2 be the packet's squared
 diameter and B the product of its two index-coordinate spans. Put
 
-$$
+```math
 \rho=\min\{1/4,(D^2-q_{\max})/[4(B+1)]\},\qquad a=1/2-\rho.
-$$
+```
 
 Replace the triangular basis by two unit vectors with dot product a.
 For an integer index difference (m,n), the new squared length is
 
-$$
+```math
 m^2+n^2+2amn=(m^2+n^2+mn)-2\rho mn.
-$$
+```
 
 If mn>0 it is at least m^2+n^2>1. If mn<0 it strictly exceeds the old
 positive integral squared norm, so is greater than one. If mn=0 it is
@@ -353,11 +353,11 @@ nonglobal. They are comparison packets, not counterexamples to Level I.
 For any global n-point minimizer A of diameter D, the new competitor
 quantity imposes the exact full-cardinality inequality
 
-$$
+```math
 n-1\ge M_D(X),\qquad
 g_A:=n-1-\frac{\pi D^2}{2\sqrt3}
 \ge M_D(X)-\frac{\pi D^2}{2\sqrt3}.
-$$
+```
 
 This can improve finite comparison bounds relative to N-E by an entire
 D^(2/3) order. No universal improvement of Audit.243's asymptotic constant

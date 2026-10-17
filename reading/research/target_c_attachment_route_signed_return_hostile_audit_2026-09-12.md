@@ -47,4 +47,3 @@ global optimality assertion.  Contact-isolated source points are untouched.  The
 result is therefore valid only as a proof-only/audited-working carrier lemma.  Since
 `Q_att` may contain many directions, the audit finds no universal positive return
 constant; the source-specific host-capacity comparison remains open.
-

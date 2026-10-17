@@ -22,12 +22,12 @@ STILL OPEN.
 
 The canonical full-core branch has the necessary floor
 
-$$
+```math
 \liminf\mu_D\ge\mu_{\rm TC}=1.6375621841815\ldots,
 \qquad
 \mu_DD=e_{BB}+2s_C-3k,
 \quad k=d_H+s_Z.
-$$
+```
 
 The exact floor endpoint has been excluded, but larger surplus remains. The
 candidate chain tested here is
@@ -62,34 +62,34 @@ Use the actual force hull `F` and canonical notation:
 
 Then the **finite** inequality
 
-$$
+```math
 \boxed{\quad
 5\mu_DD+2u_B-3m_B+10c_I+22\ \ge\ 3P_F.
 \quad}
 \tag{OW.1}
-$$
+```
 
 Consequently every canonical full-core survivor sequence satisfies
 
-$$
+```math
 \boxed{\quad
 \liminf_{D\to\infty}
 \left(5\mu_D+\frac{2u_B-3m_B}{D}\right)
 \ge3\pi.
 \quad}
 \tag{OW.2}
-$$
+```
 
 In particular, if along a survivor sequence
 `limsup mu_D <= mu_0 < 3pi/5`, then
 
-$$
+```math
 \boxed{\quad
 \liminf\frac{u_B-\frac32m_B}{D}
 \ge\frac{3\pi-5\mu_0}{2}>0.
 \quad}
 \tag{OW.3}
-$$
+```
 
 At the promoted floor value `mu_TC`, the right side is
 `(3pi-5mu_TC)/2 = 0.6184835199...`; that endpoint itself is already
@@ -102,86 +102,86 @@ instead forces `liminf mu_D>=3pi/5=1.8849555921...`.
 Canonical Section 61 counts all train ends with occurrence multiplicity. Its
 exact train count and good-end estimate are
 
-$$
+```math
 T=\frac{b+Q}{2}+2f,
 \qquad
 T-2\le2x_B+5f+g_F
        =2x_B+4f+Q,
-$$
+```
 
 where `Q=f+g_F`. Substitute `b=q+x_B`, multiply by two, and rearrange:
 
-$$
+```math
 q\le3x_B+4f+Q+4\le3x_B+5Q+4,
 \tag{OW.4}
-$$
+```
 
 because every nonquadrilateral face contributes at least one to `Q`, so `f<=Q`.
 Thus
 
-$$
+```math
 Q\ge\frac{q-3x_B-4}{5}.
 \tag{OW.5}
-$$
+```
 
 Canonical Section 63 gives the exact outer-walk defect identity
 
-$$
+```math
 q-x_B=Q+2k.
 \tag{OW.6}
-$$
+```
 
 In the full-core near-disk branch, the promoted loaded-chord theorem makes
 every loaded-loaded unit contact a hull side. Hence `e_BB=q-m_B`.
 The exact pinned ledger of Section 62 gives
 
-$$
+```math
 c_I+e_{BB}+s_C=q-2+k,
 \qquad
 s_C=m_B+k-c_I-2.
 \tag{OW.7}
-$$
+```
 
 Substitute (OW.6)–(OW.7) into the definition of `mu_D`:
 
-$$
+```math
 \mu_DD
 =q+m_B-k-2c_I-4
 =\frac{q+x_B+Q}{2}+m_B-2c_I-4.
 \tag{OW.8}
-$$
+```
 
 Apply (OW.5) in (OW.8):
 
-$$
+```math
 5\mu_DD
 \ge3q+x_B+5m_B-10c_I-22.
 \tag{OW.9}
-$$
+```
 
 As `q+x_B=b>=P_F`, we have `3q+x_B=3b-2x_B>=3P_F-2x_B`.
 Insert this into (OW.9), then use `x_B=m_B+u_B`. The result is
 
-$$
+```math
 5\mu_DD+2u_B-3m_B+10c_I+22\ge3P_F,
-$$
+```
 
 which is (OW.1). No outer-walk occurrences have been identified or dropped.
 In fact the proof has an exact nonnegative-slack decomposition. Define
 
-$$
+```math
 s_{\rm end}:=2x_B+4f+Q-(T-2)\ge0.
-$$
+```
 
 Substitution of the exact train count and (OW.8) gives
 
-$$
+```math
 \boxed{\quad
 5\mu_DD+2u_B-3m_B+10c_I+22-3P_F
 =s_{\rm end}+2(Q-f)+3(b-P_F).
 \quad}
 \tag{OW.10}
-$$
+```
 
 Thus every term discarded in (OW.1) is identified: good-train end capacity,
 exceptional-face degree above five, and metric detour of the global contact

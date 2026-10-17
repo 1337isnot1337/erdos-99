@@ -14,13 +14,13 @@ That claim is invalid and is withdrawn.
 
 The local geometric lemma discovered during the attempt is correct:
 
-$$
+```math
 \boxed{
 \text{a strict bounded unit-contact pentagon contains at most two sides in one}
 \text{ exact projective }\pi/3\text{ orbit.}
 }
 \tag{FR.1}
-$$
+```
 
 The failure is the next step.  A positive atom in a limiting train-direction measure
 does **not** imply that the corresponding finite-source trains have exactly the atomic
@@ -46,13 +46,13 @@ been removed from the repository.
 
 Fix one exact projective `pi/3` orbit.  After rotation choose unit representatives
 
-$$
+```math
 u_0=1,
 \qquad
 u_1=e^{i\pi/3},
 \qquad
 u_2=e^{2i\pi/3}.
-$$
+```
 
 The bounded-pentagon no-parallel-side theorem says that a strict bounded unit-contact
 pentagon has no projectively parallel pair of sides.
@@ -60,31 +60,31 @@ pentagon has no projectively parallel pair of sides.
 Suppose three pentagon sides belonged exactly to the orbit.  They must use three
 distinct projective axes.  Their oriented side vectors are
 
-$$
+```math
 s_0u_0,\quad s_1u_1,\quad s_2u_2,
 \qquad s_j\in\{\pm1\}.
-$$
+```
 
 For
 
-$$
+```math
 S=s_0u_0+s_1u_1+s_2u_2,
-$$
+```
 
 a direct calculation gives
 
-$$
+```math
 |S|^2
 =3+s_0s_1+s_1s_2-s_0s_2
 \in\{0,4\}.
 \tag{1.1}
-$$
+```
 
 If `v,w` are the two remaining unit side vectors, polygon closure gives
 
-$$
+```math
 v+w=-S.
-$$
+```
 
 If `|S|=0`, then `v=-w`; if `|S|=2`, equality in the triangle inequality gives
 `v=w`.  Either way the last two sides are projectively parallel, contradiction.
@@ -135,9 +135,9 @@ five projective side directions all lie within `eta` of one three-line `pi/3` or
 Closure forces a discrete near-sixth-root pattern, producing two `120 degree` ears.
 The corresponding nonedge diagonals satisfy
 
-$$
+```math
 1<d\le2\cos(\pi/3-\eta),
-$$
+```
 
 so `d->1` as `eta->0`.
 
@@ -160,18 +160,18 @@ The earlier live detour-pinching theorem in
 exact-direction transfer.  Its certificate and hostile audit remain valid.  In the
 live `epsilon=0.00710` window it proves
 
-$$
+```math
 \delta>0.017609,
 \qquad
 a+2r<0.000282,
 \qquad r<0.000141,
-$$
+```
 
 raises the universal pair-shield exact-flex floor to
 
-$$
+```math
 \liminf m_D/D>1.1988388040,
-$$
+```
 
 and tightens the one-anchor corank base to `0.15230481`.
 

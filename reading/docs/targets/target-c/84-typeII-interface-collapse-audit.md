@@ -13,19 +13,19 @@ No mathematical statement is changed.
 
 Work in the Type-II branch of Section 80:
 
-$$
+```math
 n-m=o(D^2),\qquad
 A_F={\pi D^2\over4}-o(D^2),\qquad
 A_4={\pi D^2\over4}-o(D^2),
 \tag{84.1}
-$$
+```
 
 and, after translations,
 
-$$
+```math
 D^{-1}F\to B_{1/2}
 \tag{84.2}
-$$
+```
 
 in Hausdorff distance.
 
@@ -52,19 +52,19 @@ regression remains binding.
 
 Let
 
-$$
+```math
 K=\operatorname{conv}A,
 \qquad
 F=\operatorname{conv}V(G).
 \tag{84.3}
-$$
+```
 
 Canonical Section 68 gives
 
-$$
+```math
 0\le {\pi D^2\over4}-\operatorname{area}K=O(D).
 \tag{84.4}
-$$
+```
 
 ## 84.1 The source hull and force hull have the same disk limit
 
@@ -72,16 +72,16 @@ Use the translations in (84.2). Since `F subset K` and `diam K=D`, every Hausdor
 limit `K_infty` of `D^{-1}K` contains `B_{1/2}` and has diameter at most one. If
 `x in K_infty` had `|x|>1/2`, then the antipodal disk point
 
-$$
+```math
 y=-{x\over2|x|}\in B_{1/2}
-$$
+```
 
 would satisfy `|x-y|=|x|+1/2>1`, contradiction. Hence
 
-$$
+```math
 \boxed{D^{-1}K\to B_{1/2}}
 \tag{84.5}
-$$
+```
 
 with the same limiting center as `F`.
 
@@ -90,21 +90,21 @@ with the same limiting center as `F`.
 Let `K_i` be the convex exterior caps of canonical Section 77. Their interiors lie in
 `K\setminus F` and Type II gives
 
-$$
+```math
 A_{ext}:=\operatorname{area}K-\operatorname{area}F=o(D^2).
 \tag{84.6}
-$$
+```
 
 ### Theorem 84.1
 
-$$
+```math
 \boxed{
 \max_i\operatorname{diam}(K_i)=o(D),
 \qquad
 \max_i\operatorname{per}(K_i)=o(D).
 }
 \tag{84.7}
-$$
+```
 
 ### Proof
 
@@ -121,28 +121,28 @@ no nondegenerate segment. This proves the diameter assertion. Cauchy's bound
 
 Let `C_j` be internal inactive chambers with
 
-$$
+```math
 {\operatorname{per}(C_j)\over D_j}\to\lambda>0.
 \tag{84.8}
-$$
+```
 
 Type II gives total internal inactive area `A_ch=o(D^2)`, so
 `area(C_j)=o(D_j^2)`. After scaling and a Blaschke subsequence,
 
-$$
+```math
 D_j^{-1}C_j\to S\subset B_{1/2}.
-$$
+```
 
 The limit has zero area. Perimeter is continuous under Hausdorff convergence of
 planar convex bodies by Cauchy's width formula, including degenerate limits, so
 `per(S)=lambda`. Therefore `S` is a segment of length `lambda/2`, and
 
-$$
+```math
 \boxed{
 {\operatorname{diam}(C_j)\over D_j}\to{\lambda\over2}.
 }
 \tag{84.9}
-$$
+```
 
 ## 84.4 Exceptional bounded faces are doubled near-geodesics
 
@@ -151,21 +151,21 @@ Suppose `C_j` is a bounded nonquadrilateral contact face of degree `k_j` with
 `per(C_j)=k_j`. Choose a farthest pair of boundary vertices `a_j,b_j`. Equation
 (84.9) gives
 
-$$
+```math
 |a_j-b_j|=\left({\lambda\over2}+o(1)\right)D_j.
 \tag{84.10}
-$$
+```
 
 The two unit-contact boundary arcs between `a_j,b_j` have lengths `L_j^+,L_j^-`.
 Each is at least the chord, while their sum is `(lambda+o(1))D_j`. Hence
 
-$$
+```math
 \boxed{
 L_j^+=L_j^-
 =\left({\lambda\over2}+o(1)\right)D_j.
 }
 \tag{84.11}
-$$
+```
 
 Both arcs are therefore near-geodesic at the global scale.
 
@@ -175,10 +175,10 @@ Both arcs are therefore near-geodesic at the global scale.
 
 If `s_max(F)` is the largest force-hull side length, then
 
-$$
+```math
 \boxed{s_{max}(F)=o(D).}
 \tag{84.12}
-$$
+```
 
 ### Proof
 
@@ -193,17 +193,17 @@ a contradiction. `square`
 Let `C_j` be a convex outer pocket with force-hull closing side `[u_j,v_j]` of length
 `s_j` and complementary unit-contact path `W_j`. Assume
 
-$$
+```math
 {\operatorname{per}(C_j)\over D_j}\to\lambda>0.
 \tag{84.13}
-$$
+```
 
 Lemma 84.2 gives `s_j=o(D_j)`, so the contact-path length is
 
-$$
+```math
 \ell_j=(\lambda+o(1))D_j.
 \tag{84.14}
-$$
+```
 
 By Section 84.3 the pocket converges to a segment of length `lambda/2`. The normalized
 closing-side endpoints coalesce at a point `p in partial B_{1/2}`. Since the limiting
@@ -212,23 +212,23 @@ the segment.
 
 Choose a pocket vertex `w_j` farthest from `u_j`. Hausdorff convergence then gives
 
-$$
+```math
 |u_j-w_j|=|v_j-w_j|
 =\left({\lambda\over2}+o(1)\right)D_j,
 \tag{84.15}
-$$
+```
 
 where the second equality also uses `|u_j-v_j|=o(D_j)`. Splitting `W_j` at `w_j`
 produces two unit-contact path lengths `L_j^u,L_j^v`; each dominates its chord and
 their sum is (84.14). Therefore
 
-$$
+```math
 \boxed{
 L_j^u=L_j^v
 =\left({\lambda\over2}+o(1)\right)D_j.
 }
 \tag{84.16}
-$$
+```
 
 So a linear-perimeter outer pocket is an out-and-back doubled near-geodesic corridor
 from an `o(D)` force-hull side to one common deep extreme.
@@ -237,17 +237,17 @@ from an `o(D)` force-hull side to one common deep extreme.
 
 Canonical Section 77 gives
 
-$$
+```math
 \sum_{C\text{ internal inactive}}\operatorname{per}(C)\le13\pi D.
 \tag{84.17}
-$$
+```
 
 For fixed `eta>0`, at most
 
-$$
+```math
 \boxed{13\pi/\eta}
 \tag{84.18}
-$$
+```
 
 internal inactive chambers can have perimeter at least `eta D`. Every such chamber has
 one of the two corridor forms above after subsequence extraction. All other chambers

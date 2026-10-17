@@ -39,18 +39,18 @@ The load-bearing September 10 report is
 
 For a missing force-hull side `AB`, it considers the OP outer pocket `P` bounded by `AB` and an old unit-contact chain of length `ell`. It then asserts that `P` lies in the minor radius-`D` circular segment between `AB` and the corresponding Reuleaux boundary arc, and concludes by perimeter monotonicity that
 
-$$
+```math
 \ell\le D\phi.
 \tag{1.1}
-$$
+```
 
 That containment has the side of `AB` reversed.
 
 OP constructs the hull-augmented graph by adding missing sides of the force hull `F`. Its new bounded faces are precisely the portions of the old outer contact face **inside `F`**. Thus an OP pocket has
 
-$$
+```math
 P\subset F
-$$
+```
 
 and lies on the inward side of its closing force-hull chord `AB`.
 
@@ -58,9 +58,9 @@ By contrast, because `F` is an inscribed polygon in the cyclic Reuleaux containe
 
 Therefore the nondegenerate interiors of the two regions are on opposite sides of `AB`. The claimed inclusion
 
-$$
+```math
 P\subset C_{AB}
-$$
+```
 
 is false.
 
@@ -74,33 +74,33 @@ The later full-source cell-slack report already contains a useful exact regressi
 
 Take a regular pentagon on the unit circle,
 
-$$
+```math
 p_j=(\cos(2\pi j/5),\sin(2\pi j/5)),\qquad 0\le j<5,
-$$
+```
 
 and its center `o=0`. The six-point set
 
-$$
+```math
 A=\{o,p_0,\ldots,p_4\}
-$$
+```
 
 has spoke contacts `op_j` and diameter pairs `p_jp_{j+2}`. For consecutive outer vertices `A=p_0`, `B=p_1`, the OP pocket is the triangle `AoB`, so its old contact-chain length is
 
-$$
+```math
 \ell=2.
-$$
+```
 
 The corresponding Reuleaux boundary arc has angle `phi=pi/5`, while the source diameter is
 
-$$
+```math
 D=2\sin(2\pi/5).
-$$
+```
 
 Hence
 
-$$
+```math
 D\phi=\frac{2\pi}{5}\sin\frac{2\pi}{5}<2=\ell.
-$$
+```
 
 So (1.1) itself fails on an exact force-visible positive-equilibrium finite source. The example need not be an asymptotic counterexample to show that CRC's purported universal local lemma is false.
 
@@ -112,9 +112,9 @@ The same geometry can be made with arbitrarily small circular arc angle in a loc
 
 A repository-wide search for general cyclic conclusions of the form
 
-$$
+```math
 b-P_F=o(D),\qquad b-P_F=O(\sqrt D),\qquad H_{out}=o(D^2)
-$$
+```
 
 found three types of sources:
 
@@ -140,38 +140,38 @@ contains a valid argument that does **not** use outer pockets.
 
 Let `Gamma` be the odd diameter cycle. Its Reuleaux side angles `theta_i` satisfy
 
-$$
+```math
 \sum_i\theta_i=\pi,
 \qquad
 0<\theta_i\le\Theta_D=O(D^{-1/4})
-$$
+```
 
 by C17 and the FS.3 shared-diameter angle bound.
 
 The convex hull of the cycle vertices has perimeter
 
-$$
+```math
 2D\sum_i\sin(\theta_i/2).
-$$
+```
 
 Since
 
-$$
+```math
 0\le\theta-2\sin(\theta/2)\le\theta^3/24,
-$$
+```
 
-$$
+```math
 0\le\pi D-\operatorname{per}(\operatorname{conv}V(\Gamma))
 \le\frac{\pi D}{24}\Theta_D^2
 =O(\sqrt D).
-$$
+```
 
 The cycle skeleton lies in `F`, and planar convex perimeter is monotone under inclusion, while Cauchy gives `P_F<=pi D`. Hence
 
-$$
+```math
 \boxed{0\le\pi D-P_F=O(\sqrt D).}
 \tag{4.1}
-$$
+```
 
 This argument is independent of `s_Z` and of CRC's bad cap containment. It therefore survives for arbitrary mixed surplus in the Woodall cyclic topology.
 
@@ -183,32 +183,32 @@ The FS maximal-perimeter theorem is also independent of CRC.
 
 For the central symmetral
 
-$$
+```math
 S=(F-F)/2,
-$$
+```
 
 one has exactly
 
-$$
+```math
 \operatorname{diam}S=D,
 \qquad
 \operatorname{per}S=P_F.
-$$
+```
 
 FS.4 gives
 
-$$
+```math
 0\le\operatorname{area}S-\operatorname{area}F=o(D^2).
-$$
+```
 
 Normalize by `D`. A centrally symmetric diameter-one convex body is contained in the radius-`1/2` disk. If its perimeter tends to `pi`, every Hausdorff limit has width at most one in every direction and perimeter `pi`; continuity of width forces width one in every direction. Central symmetry then forces support function `1/2`, hence the radius-`1/2` disk.
 
 Using (4.1),
 
-$$
+```math
 \boxed{\operatorname{area}F/D^2\to\pi/4.}
 \tag{5.1}
-$$
+```
 
 Thus the disk-limit portion of PR #191 survives.
 
@@ -218,32 +218,32 @@ Thus the disk-limit portion of PR #191 survives.
 
 PR #191 Section 3 observes the exact face identity
 
-$$
+```math
 m=R_4+f+q-s_Z+1
-$$
+```
 
 and combines it with
 
-$$
+```math
 b+Q=2(q-s_Z).
-$$
+```
 
 The `s_Z` terms cancel in the full-source Oler ledger. That algebra is correct.
 
 More importantly, the separate September 11 full-source cell-slack theorem proves the stronger fact
 
-$$
+```math
 \boxed{E=O(D)}
 \tag{6.1}
-$$
+```
 
 for **every** C-II branch, without ZF, cyclic topology, or the CRC detour.
 
 Its proof is exact. After adding the force-hull cycle, Oler is applied to every bounded augmented contact cell and every exterior source-hull cap. If `W` is the sum of those dimensional Oler slacks, the incidence/perimeter sums give
 
-$$
+```math
 W=\mathcal O_A+a_0(P_F-P_{com}-k).
-$$
+```
 
 Every original quadrilateral contact face contributes exactly its rhombic area excess to `W`, so `E<=W`. Combining with the strict translated-lattice comparison and `P_K,P_F<=pi D` yields `E=O(D)`.
 
@@ -255,30 +255,30 @@ Therefore `E=O(D)` is not damaged by the CRC failure.
 
 PR #191 Section 2 repeats CRC and obtains
 
-$$
+```math
 b-P_F=O(\sqrt D)
 \tag{7.1}
-$$
+```
 
 from the invalid inward-cap containment. It then uses DD to claim
 
-$$
+```math
 H_{out}=o(D^2).
 \tag{7.2}
-$$
+```
 
 Without (7.2), Section 4 cannot delete the outer-pocket area from
 
-$$
+```math
 G\le H_{out}+A_{exc}+O(D).
-$$
+```
 
 Thus the claimed necessary inequality
 
-$$
+```math
 w\ge\pi\sqrt{1-\nu^2}
 \tag{7.3}
-$$
+```
 
 is not established.
 
@@ -288,9 +288,9 @@ The scalar minimization in Section 6 starts from (7.3) and the train inequalitie
 
 Consequently the claims
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}\ge0.99554058458\ldots
-$$
+```
 
 and a uniform positive gap above that number are **not proved** by PR #191.
 
@@ -302,35 +302,35 @@ The same dependency invalidates the corresponding `s_Z=0` atomic floor reports w
 
 After removing the bad detour dependency, every audited Woodall-cyclic survivor still has
 
-$$
+```math
 \boxed{P_F=\pi D-O(\sqrt D),}
-$$
+```
 
-$$
+```math
 \boxed{\operatorname{area}F=(\pi/4+o(1))D^2,}
-$$
+```
 
 and the full-source cell-slack theorem supplies
 
-$$
+```math
 \boxed{E=O(D).}
-$$
+```
 
 The exact post-ZF ledgers remain available under their own dependency status.
 
 What is **not** currently controlled in the general cyclic branch is the inward outer-contact region:
 
-$$
+```math
 \boxed{b-P_F\text{ may be linear under the proved inequalities, and }H_{out}\text{ may be quadratic.}}
-$$
+```
 
 No construction is asserted to realize those asymptotics as a global survivor; they are simply not excluded by the audited theorem stack.
 
 If the independently audited PR #188 renormalized-surplus theorem is promoted, it gives the safe stronger general lower bound
 
-$$
+```math
 \frac{e_{BB}+2s_C-3s_Z}{D}>0.9604+o(1)
-$$
+```
 
 in the cyclic branch `d_H=0`, and hence the same `>0.9604` lower bound on ordinary surplus. That theorem does not use CRC.
 
@@ -340,9 +340,9 @@ in the cyclic branch `d_H=0`, and hence the same `>0.9604` lower bound on ordina
 
 To recover the PR #191 route, one needs a theorem about the **inward contact path**, not the exterior Reuleaux cap. A sufficient statement would be
 
-$$
+```math
 \boxed{b-P_F=o(D)}
-$$
+```
 
 for every sufficiently large Woodall-cyclic C-II global survivor, proved from contact equilibrium/global optimality rather than exterior-cap containment.
 

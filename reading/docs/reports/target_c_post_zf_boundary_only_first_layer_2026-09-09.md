@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_post_zf_boundary_only_first_layer_2026-09-09.md) · source SHA-256 `fee90211a6cf7a58585378fbf4a64e25ddd706b4753959571076ba761085b398`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-3D7E451EE05A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — boundary-only primitive defect: exact first layer
 
@@ -20,9 +22,9 @@ This note classifies the first primitive-defect layer above the cyclic endpoint 
 
 Let
 
-$$
+```math
 p:=m+k=m+d_H+s_Z,
-$$
+```
 
 with PN notation:
 
@@ -33,43 +35,43 @@ with PN notation:
 
 Assume
 
-$$
+```math
 \boxed{c_I=0,}
 \tag{BO.0}
-$$
+```
 
 so there are no unpinned vertices in the positive contact core.
 
 Then necessarily
 
-$$
+```math
 \boxed{s_C=0}
 \tag{BO.1}
-$$
+```
 
 and the PN/ME identities reduce to
 
-$$
+```math
 \boxed{c_B=m+k-2=p-2,}
 \tag{BO.2}
-$$
+```
 
 and, whenever `m>0`,
 
-$$
+```math
 \boxed{2c_B\ge m+r_m.}
 \tag{BO.3}
-$$
+```
 
 At the first layer `p=3`, these constraints have one and only one realization:
 
-$$
+```math
 \boxed{
  m=0,
  \qquad k=3,
  \qquad c_B=1.}
 \tag{BO.4}
-$$
+```
 
 Thus a boundary-only post-ZF source with primitive defect three has every force-hull side as a unit contact and exactly one additional loaded-loaded unit chord.
 
@@ -79,32 +81,32 @@ Thus a boundary-only post-ZF source with primitive defect three has every force-
 
 If `c_I=0`, then every nonisolated positive-contact vertex lies in `B_+`. Hence
 
-$$
+```math
 v=q,
 \qquad e=e_{BB}.
-$$
+```
 
 By definition
 
-$$
+```math
 s_C=(e-e_{BB})-2(v-q)-c_I,
-$$
+```
 
 so `s_C=0`, proving BO.1.
 
 PN gives
 
-$$
+```math
 c_I+s_C+c_B=m+k-2.
-$$
+```
 
 With `c_I=s_C=0`, this becomes BO.2.
 
 ME gives
 
-$$
+```math
 e_{BI}+2c_B\ge m+r_m.
-$$
+```
 
 Here `e_{BI}=0`, so BO.3 follows. `square`
 
@@ -114,27 +116,27 @@ Here `e_{BI}=0`, so BO.3 follows. `square`
 
 Combining BO.2 and BO.3 gives, for `m>0`,
 
-$$
+```math
 2(m+k-2)\ge m+r_m.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
  m+2k\ge r_m+4.}
 \tag{BO.5}
-$$
+```
 
 This is an exact finite restriction on how missing unit hull sides can occur in a boundary-only core.
 
 Equivalently,
 
-$$
+```math
 \boxed{
  k\ge 2+\frac{r_m-m}{2}.}
 \tag{BO.6}
-$$
+```
 
 The bound is useful when the missing sides occur in many separated runs: separation consumes primitive diameter/mixed defect.
 
@@ -144,17 +146,17 @@ The bound is useful when the missing sides occur in many separated runs: separat
 
 Assume
 
-$$
+```math
 p=m+k=3.
 \tag{3.1}
-$$
+```
 
 BO.2 gives
 
-$$
+```math
 \boxed{c_B=1.}
 \tag{3.2}
-$$
+```
 
 We now exclude every case with `m>0`.
 
@@ -162,15 +164,15 @@ We now exclude every case with `m>0`.
 
 Every nonempty set of two missing hull sides has
 
-$$
+```math
 r_m\ge1.
-$$
+```
 
 ME/BO.3 requires
 
-$$
+```math
 2c_B=2\ge m+r_m\ge3,
-$$
+```
 
 a contradiction.
 
@@ -178,15 +180,15 @@ a contradiction.
 
 There is one missing hull side, so
 
-$$
+```math
 r_m=1.
-$$
+```
 
 ME/BO.3 reads
 
-$$
+```math
 2c_B=2\ge m+r_m=2,
-$$
+```
 
 so equality holds.
 
@@ -196,9 +198,9 @@ There are no loaded-interior contacts. Since `c_B=1`, there is exactly one extra
 
 But the straight segment `ab` is the missing force-hull side itself. By definition of `m`,
 
-$$
+```math
 |a-b|>1,
-$$
+```
 
 whereas an edge counted by `c_B` is a unit contact. Contradiction.
 
@@ -216,10 +218,10 @@ Therefore BO.4 is the unique boundary-only primitive-defect-three state. `square
 
 In BO.4 the positive contact graph is
 
-$$
+```math
 \boxed{C=C_q+e_*}
 \tag{BO.7}
-$$
+```
 
 where `e_*` is one unit chord between nonconsecutive vertices of the convex loaded cycle.
 
@@ -229,10 +231,10 @@ Thus the cyclic distance of the chord endpoints is at least three on both sides 
 
 The mixed defect satisfies
 
-$$
+```math
 \boxed{d_H+s_Z=3.}
 \tag{BO.8}
-$$
+```
 
 This is the exact first boundary-only branch after the `p=2` cycle classified in CY/CG.
 
@@ -246,22 +248,22 @@ The boundary-only normal form now begins:
 
 ME/CY leave only
 
-$$
+```math
 C=C_q,
 \qquad m=0,
 \qquad k=2.
-$$
+```
 
 ### `p=3`
 
 BO leaves only
 
-$$
+```math
 C=C_q+e_*,
 \qquad m=0,
 \qquad k=3,
 \qquad c_B=1.
-$$
+```
 
 Hence the first two primitive levels have **no nonunit force-hull sides at all**. The first deviation from the pure unit hull cycle is an interior loaded-loaded contact chord, not a boundary gap.
 
@@ -275,12 +277,13 @@ Since `c_I=0`, the nonisolated core has exactly the `q` loaded vertices for ever
 
 Thus all `n-q` remaining source points are contact-isolated. The universal perimeter bound `q<=pi D` gives
 
-\[
+```math
 \boxed{
  n-q>\Delta D^2-\pi D,
  \qquad
  \Delta=\frac\pi{2\sqrt3}.}
 \tag{BO.9}
+```
 
 So the entire boundary-only primitive hierarchy coexists with the same quadratic force-invisible population identified in CY.
 

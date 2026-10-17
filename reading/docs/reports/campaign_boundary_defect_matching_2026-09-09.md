@@ -21,17 +21,17 @@
 
 The Z -> ZC -> ZR -> ZF route survives the dependency audit already recorded in the September 9 campaign reports. The exact face inequality
 
-$$
+```math
 b+\sum_{F\text{ bounded}}(\deg F-4)>2|H|
-$$
+```
 
 is still not proved.
 
 This run proves a new exact response consequence of ZR. The Schur-reduced boundary defect
 
-$$
+```math
 M=\Lambda-L_H
-$$
+```
 
 has **exact** kernel equal to the three affine boundary modes and exact rank `q-3`. In particular every terminal has positive diagonal defect and every terminal row of `M` contains both signs off the diagonal. Combining this with the geometric-thrackle bound on the full diameter graph and the C41 harmonic-response decomposition gives a terminal-disjoint matching of at least `q/16` strictly non-diameter response pairs. Since C33 gives `q >= (ceil(D)+2)/2`, this supplies linearly many terminal-disjoint subdiameter response channels.
 
@@ -46,45 +46,45 @@ Under the audited report-level Z route, a sufficiently large lexicographically n
 - a relative-interior normalized KKT stress `(alpha,beta)` with every contact and diameter row positive in support;
 - scalar stress matrix
 
-$$
+```math
 \Omega=L_C(\alpha)-L_H(\beta)\succeq0;
-$$
+```
 
 - ZR:
 
-$$
+```math
 \ker\Omega=\operatorname{span}\{\mathbf1,P_x,P_y\},
 \qquad
 \operatorname{rank}\Omega=v-3;
-$$
+```
 
 - ZF:
 
-$$
+```math
 e+|H|\ge2v-2.
-$$
+```
 
 The exact scalar closure remains
 
-$$
+```math
 \boxed{b+\sum_F(\deg F-4)>2|H|,}
-$$
+```
 
 which is equivalent by Euler to `e+|H|<2v-2` and would contradict ZF.
 
 The response-side alternative remained less sharp. C64 gives only
 
-$$
+```math
 M=\Lambda-L_H\succeq0,
 \qquad
 M\mathbf1=MP_B=0,
-$$
+```
 
 and its transport inequality for any matching `J` of non-diameter response pairs:
 
-$$
+```math
 \sum_{ij\in J}c_{ij}\le\frac12\operatorname{tr}M.
-$$
+```
 
 The missing combinatorial question was whether the actual source necessarily supplies a large terminal-disjoint family to which this inequality can be applied.
 
@@ -119,56 +119,56 @@ Then:
 
 1. **Exact boundary rank**
 
-$$
+```math
 \boxed{
 \ker M=\operatorname{span}\{\mathbf1,P_{B,x},P_{B,y}\},
 \qquad
 \operatorname{rank}M=q-3.
 }
 \tag{ZM.1}
-$$
+```
 
 2. **Strict terminal defect**. For every `b in B`,
 
-$$
+```math
 \boxed{d_b:=M_{bb}>0.}
 \tag{ZM.2}
-$$
+```
 
 3. **Mixed terminal signs**. Every terminal row has at least one positive and one negative off-diagonal entry. Since `M_{bk}=-c_{bk}<=0` off the diameter support, every `b` is incident to a diameter edge `bk` satisfying
 
-$$
+```math
 \boxed{\beta_{bk}>c_{bk}.}
 \tag{ZM.3}
-$$
+```
 
 4. **Low diameter degree forces non-diameter response**. If `deg_H(b)<=2`, then `b` is nonisolated in `G_0`.
 
 5. **Linear terminal-disjoint response matching**. The graph `G_0` has a matching `J` with
 
-$$
+```math
 \boxed{|J|\ge\frac q{16}.}
 \tag{ZM.4}
-$$
+```
 
 Every edge of `J` is a strictly subdiameter terminal pair with strictly positive response conductance. Consequently, using C33,
 
-$$
+```math
 \boxed{|J|\ge\frac{\lceil D\rceil+2}{32}.}
 \tag{ZM.5}
-$$
+```
 
 up to the harmless integer rounding implicit in the displayed real lower bounds.
 
 Finally C64 applies to this matching:
 
-$$
+```math
 \boxed{
 0<\sum_{ij\in J}c_{ij}
 \le\frac12\operatorname{tr}(\Lambda-L_H).
 }
 \tag{ZM.6}
-$$
+```
 
 ### Scope
 
@@ -182,52 +182,52 @@ ZM is exact. No asymptotic lower bound on any conductance is claimed.
 
 Order the positive contact core by `B,I`, where `I=V(C)\setminus B`. Write the positive contact Laplacian as
 
-$$
+```math
 L_C=
 \begin{pmatrix}
 A_{BB}&A_{BI}\\
 A_{IB}&A_{II}
 \end{pmatrix}.
-$$
+```
 
 C64 proves `A_{II}` is positive definite. Since the diameter Laplacian is supported only on `B`,
 
-$$
+```math
 \Omega=
 \begin{pmatrix}
 A_{BB}-L_H&A_{BI}\\
 A_{IB}&A_{II}
 \end{pmatrix}.
-$$
+```
 
 The Schur complement of `A_{II}` is
 
-$$
+```math
 M=A_{BB}-L_H-A_{BI}A_{II}^{-1}A_{IB}
 =\Lambda-L_H.
-$$
+```
 
 Standard block congruence gives
 
-$$
+```math
 \Omega\sim
 \begin{pmatrix}
 M&0\\0&A_{II}
 \end{pmatrix}.
 \tag{ZM.7}
-$$
+```
 
 Because `A_{II}` is nonsingular,
 
-$$
+```math
 \operatorname{nullity}M=\operatorname{nullity}\Omega.
-$$
+```
 
 ZR gives `nullity Omega=3`. C11 gives
 
-$$
+```math
 M\mathbf1=MP_{B,x}=MP_{B,y}=0.
-$$
+```
 
 The terminals are vertices of a strictly convex force hull, so the three affine boundary columns are independent. Hence they already span the whole kernel. This proves ZM.1.
 
@@ -235,17 +235,17 @@ The terminals are vertices of a strictly convex force hull, so the three affine 
 
 C64 gives `M succeq 0`. For a PSD matrix,
 
-$$
+```math
 |M_{ij}|^2\le M_{ii}M_{jj}.
-$$
+```
 
 Suppose `M_{bb}=0`. Then the entire `b`-row and `b`-column vanish, so the coordinate vector `e_b` belongs to `ker M`.
 
 By ZM.1 this would mean that there is an affine function
 
-$$
+```math
 f(x,y)=a+ux+vy
-$$
+```
 
 whose values on the terminal polygon are `1` at `b` and `0` at every other terminal. Since `q>=6` in the ZC regime, at least five distinct vertices of the strictly convex polygon would lie on the zero line of `f`. A line contains at most two vertices of a strictly convex polygon unless `f` is identically zero. Either alternative contradicts `f(b)=1`.
 
@@ -255,17 +255,17 @@ Therefore `M_{bb}>0` for every `b`, proving ZM.2.
 
 The affine kernel identity gives, row by row,
 
-$$
+```math
 \sum_{k\ne b}M_{bk}(p_k-p_b)=0.
 \tag{ZM.8}
-$$
+```
 
 Because `b` is a vertex of a strictly convex polygon, there is a strict supporting functional `n_b` such that
 
-$$
+```math
 n_b\cdot(p_k-p_b)>0
 \qquad(k\ne b)
-$$
+```
 
 after choosing the inward sign of `n_b`.
 
@@ -273,23 +273,23 @@ If every off-diagonal `M_{bk}` were nonpositive, dotting ZM.8 with `n_b` would g
 
 On the other hand `M\mathbf1=0` and `M_{bb}>0`, so
 
-$$
+```math
 \sum_{k\ne b}M_{bk}=-M_{bb}<0.
-$$
+```
 
 Thus some off-diagonal entry is negative as well.
 
 For `bk notin H`,
 
-$$
+```math
 M_{bk}=\Lambda_{bk}=-c_{bk}\le0.
-$$
+```
 
 Therefore every positive off-diagonal entry lies on `H`, and there is an incident diameter edge with
 
-$$
+```math
 M_{bk}=\beta_{bk}-c_{bk}>0.
-$$
+```
 
 This proves ZM.3.
 
@@ -299,9 +299,9 @@ Fix `b` with `deg_H(b)<=2`. Suppose for contradiction that `b` is isolated in `G
 
 By Step 3 the row has both a positive and a negative off-diagonal entry. Thus `deg_H(b)=2`, with distinct diameter neighbors `k,l`, and ZM.8 becomes a nontrivial linear relation between the two vectors
 
-$$
+```math
 p_k-p_b,\qquad p_l-p_b.
-$$
+```
 
 Those two vectors are linearly independent. Indeed both have length `D`. If they were collinear, equal orientation would force `k=l`, while opposite orientation would give `|p_k-p_l|=2D>D`, impossible in a source of diameter `D`.
 
@@ -311,51 +311,51 @@ This contradicts ZM.8. Hence every terminal of diameter degree at most two is no
 
 The full diameter graph is a straight-line geometric thrackle on the convex terminal set, so the Hopf-Pannwitz bound gives
 
-$$
+```math
 |E(H)|\le q.
 \tag{ZM.9}
-$$
+```
 
 There are no isolated vertices of `H` by the definition of `B`. Let `r` be the number of terminals with diameter degree at least three. Then
 
-$$
+```math
 2|E(H)|
 =\sum_b\deg_H(b)
 \ge3r+(q-r)
 =q+2r.
-$$
+```
 
 Using ZM.9,
 
-$$
+```math
 q+2r\le2q,
-$$
+```
 
 so `r<=q/2`. Therefore at least `q/2` terminals have diameter degree at most two. By Step 4,
 
-$$
+```math
 N_0:=|\{b:\deg_{G_0}(b)>0\}|\ge q/2.
 \tag{ZM.10}
-$$
+```
 
 #### Step 6. The C41 response decomposition forces a large matching in `G_0`
 
 Use the C41 decomposition. Let `I_1,...,I_s` be the connected components of the unloaded contact graph. Each component has a loaded attachment set `A_r`, and C41 proves
 
-$$
+```math
 c^{(r)}_{uv}>0
 \qquad(u\ne v\in A_r).
 \tag{ZM.11}
-$$
+```
 
 The remaining response atoms are direct loaded-loaded contact edges. Such an edge has length one, so for `D>1` it is automatically a non-diameter edge and belongs to `G_0`.
 
 A terminal `b` is incident to at most three response atoms in the following sense. Each component `A_r` containing `b` requires at least one actual contact from `b` into `I_r`; each direct loaded-loaded response atom is itself one actual contact at `b`. Distinct atoms consume distinct actual contact edges. C35 gives
 
-$$
+```math
 \deg_C(b)\le3.
 \tag{ZM.12}
-$$
+```
 
 Hence `b` belongs to at most three such atoms.
 
@@ -363,10 +363,10 @@ Now take a maximum matching `J` in `G_0`, write `m=|J|`, and let `U` be the set 
 
 For every harmonic attachment set `A_r`,
 
-$$
+```math
 |U\cap A_r|\le2.
 \tag{ZM.13}
-$$
+```
 
 Indeed, if three unmatched vertices `u,v,w` lay in one `A_r`, C41.11 would give positive response conductance on all three pairs. Since `U` is independent in `G_0`, each of `uv,uw,vw` would then have to be a diameter edge. That would be a three-vertex diameter clique, excluded for sufficiently large global minimizers by C15 (and a fortiori by C43).
 
@@ -374,52 +374,52 @@ A direct loaded-loaded contact atom contains at most one vertex of `U`, because 
 
 Fix one matched endpoint `x`. Every unmatched neighbor `u` of `x` in `G_0` is supported by at least one response atom containing both `x,u`. By ZM.13 a harmonic atom contributes at most two such unmatched neighbors; a direct-contact atom contributes at most one. Since `x` belongs to at most three atoms, it has at most six unmatched neighbors:
 
-$$
+```math
 |N_{G_0}(x)\cap U|\le6.
 \tag{ZM.14}
-$$
+```
 
 There is a standard extra saving for a **maximum** matching. If `xy in J` and there were distinct unmatched vertices
 
-$$
+```math
 u\in N(x)\cap U,
 \qquad
 v\in N(y)\cap U,
 \qquad u\ne v,
-$$
+```
 
 then
 
-$$
+```math
 u-x-y-v
-$$
+```
 
 would be an augmenting path, contradicting maximal cardinality of `J`. Therefore the two endpoint neighborhoods of one matched edge cannot contain distinct unmatched vertices on opposite sides. Together with ZM.14,
 
-$$
+```math
 |(N(x)\cup N(y))\cap U|\le6
 \qquad(xy\in J).
 \tag{ZM.15}
-$$
+```
 
 Every `u in U` has a neighbor because `U` contains only nonisolated vertices. Every such neighbor is matched, again by maximality. Charge `u` to one matched edge incident to one of its matched neighbors. Equation ZM.15 allows at most six charges per matched edge. Thus
 
-$$
+```math
 |U|\le6m.
 \tag{ZM.16}
-$$
+```
 
 The nonisolated vertices of `G_0` are exactly the `2m` matched endpoints together with `U`, so
 
-$$
+```math
 N_0=2m+|U|\le8m.
-$$
+```
 
 Using ZM.10 gives
 
-$$
+```math
 m\ge\frac{N_0}{8}\ge\frac q{16}.
-$$
+```
 
 This proves ZM.4. C33 gives `2q>=ceil(D)+2`, proving ZM.5.
 
@@ -464,27 +464,27 @@ Step 1 is now exact. There is always a matching `J` of size at least `q/16=Omega
 
 Thus the small-trace response obstruction is reduced to **weight only**:
 
-$$
+```math
 \boxed{
 \text{prove a source-specific lower bound on }
 \sum_{ij\in J}c_{ij}
 \text{ for some ZM matching }J.
 }
-$$
+```
 
 C64 would immediately turn any absolute lower bound `mu>0` into
 
-$$
+```math
 \operatorname{tr}M\ge2\mu.
-$$
+```
 
 Even a bound of order `1/D` would be new quantitative information at the current large-defect/near-zero boundary.
 
 The face/rank endpoint remains unchanged:
 
-$$
+```math
 \boxed{b+\sum_F(\deg F-4)>2|H|.}
-$$
+```
 
 ## 4. Exact remaining lemma
 
@@ -493,21 +493,18 @@ The shortest new response-side lemma is:
 > **ZM mass lemma.** There is a function `mu(D)` strong enough for the C44/C64 phase split, ideally `mu(D)>=c/D` and preferably `mu(D)>=c>0`, such that every sufficiently large C-II survivor has a ZM matching `J` of non-diameter response pairs satisfying
 > 
 
-$$
-
+```math
 > \sum_{ij\in J}c_{ij}\ge\mu(D).
 > 
-$$
-
-
+```
 
 The theorem must use the actual unit-contact embedding/global-minimum hypothesis. Positivity of the response support alone cannot supply such a bound because individual positive conductances may tend to zero.
 
 For direct Level I closure, the shortest scalar lemma is still the stronger global statement
 
-$$
+```math
 \boxed{b+\sum_F(\deg F-4)>2|H|.}
-$$
+```
 
 ## 5. Audit of Z, ZC, ZR, ZF, and ZB
 
@@ -538,27 +535,27 @@ The rank/sign part alone cannot force more than an edge-cover-type positive supp
 
 Take the regular hexagon
 
-$$
+```math
 p_j=(\cos(j\pi/3),\sin(j\pi/3)),\qquad j=0,\ldots,5,
-$$
+```
 
 and let `P_aff` be the orthogonal projector onto the three-dimensional span of the sampled affine functions `1,x,y`. Put
 
-$$
+```math
 M=I-P_{aff}.
-$$
+```
 
 Then `M succeq0`, `rank M=3=6-3`, and its kernel is exactly the affine span. Orthogonality of the Fourier modes gives
 
-$$
+```math
 M_{jj}=\frac12,
-$$
+```
 
 and for cyclic separation `s`,
 
-$$
+```math
 M_{j,j+s}=-\frac{1+2\cos(s\pi/3)}6.
-$$
+```
 
 Hence
 
@@ -574,9 +571,9 @@ Thus the positive off-diagonal support is exactly the three opposite diagonals, 
 
 **Failure:** C64 gives an upper bound
 
-$$
+```math
 \sum_{J}c_{ij}\le\operatorname{tr}M/2,
-$$
+```
 
 but ZM provides only `c_{ij}>0`, not a uniform lower bound. A linear number of positive response channels can carry arbitrarily small total mass absent an additional source-specific conductance theorem.
 
@@ -598,9 +595,9 @@ but ZM provides only `c_{ij}>0`, not a uniform lower bound. A linear number of p
 
 **Failure:** ZM does not bound `e+h` from above and does not control exceptional-face loss. The exact Euler currency remains
 
-$$
+```math
 \frac12\left(b+\sum_F(\deg F-4)\right).
-$$
+```
 
 **Disposition:** ZM is a parallel response reduction, not a substitute for the face theorem.
 
@@ -646,9 +643,9 @@ Two concrete routes survive the regressions:
 
 The direct face route remains the other highest-value target: prove
 
-$$
+```math
 b+\sum_F(\deg F-4)>2|H|
-$$
+```
 
 with the full `2f_exc` exceptional-face loss retained.
 

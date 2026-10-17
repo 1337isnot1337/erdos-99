@@ -21,23 +21,23 @@
 
 The preceding Dido report proves
 
-$$
+```math
 \liminf_{D\to\infty}\frac{e_{BB}+2s_C}{D}
 \ge
 \lambda_{DIDO}
 =0.8316870417755330\ldots .
-$$
+```
 
 and identifies the equality endpoint: `h/D -> y_*`, `d_P/D -> lambda_DIDO`, all normalized `Q,s_C,d_H,s_Z,c_B` vanish, and one outer pocket carries asymptotically all macroscopic chain length.
 
 This report proves that the equality endpoint is impossible. The decisive new finite theorem is stronger than the one-sided inclusion used in FSDB:
 
-$$
+```math
 \boxed{
  d_{\rm Haus}\left(F-o,\frac12P_H\right)\le L_D=o(D).
 }
 \tag{MP.1}
-$$
+```
 
 Here `P_H=D conv{+-u_e}` is the full actual diameter-direction polygon and `o,L_D` are the common source circumcenter and midpoint error from FS.4.
 
@@ -45,14 +45,14 @@ At the Dido endpoint, equality in the FSDB area floor then forces the diameter-d
 
 Therefore there exist absolute constants `epsilon_MP>0` and `D_0<infinity` such that every sufficiently large post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
 \lambda_{DIDO}+\epsilon_{MP}.
 }
 \tag{MP.2}
-$$
+```
 
 The gap is nonexplicit. Level I remains open above it.
 
@@ -67,41 +67,41 @@ Use the exact notation of
 
 For every actual diameter edge `e=bk`, choose one orientation
 
-$$
+```math
 p_b-p_k=D u_e,
 \qquad |u_e|=1,
-$$
+```
 
 and define
 
-$$
+```math
 P_H:=D\,conv\{\pm u_e:e\in E(H)\}.
 \tag{1.1}
-$$
+```
 
 FS.4 gives a common full-source circumcenter `o` and
 
-$$
+```math
 L_D=O(D^{3/4})=o(D)
-$$
+```
 
 such that every actual diameter midpoint satisfies
 
-$$
+```math
 \left|\frac{p_b+p_k}{2}-o\right|<L_D.
 \tag{1.2}
-$$
+```
 
 It also gives the radial annulus, uniformly for every actual diameter endpoint `b`:
 
-$$
+```math
 \boxed{
 \frac D2-\eta<|p_b-o|<\frac D2+\eta,
 \qquad
 \eta=3^{1/4}\sqrt D=o(D).
 }
 \tag{1.3}
-$$
+```
 
 The implication attacked is
 
@@ -124,12 +124,12 @@ FS midpoint localization
 
 For every C-II source to which FS.4 applies,
 
-$$
+```math
 \boxed{
  d_{\rm Haus}\left(F-o,\frac12P_H\right)\le L_D.
 }
 \tag{MP.3}
-$$
+```
 
 This is an exact finite statement.
 
@@ -137,50 +137,50 @@ This is an exact finite statement.
 
 Fix an actual diameter edge `e=bk` and orient it so
 
-$$
+```math
 p_b-p_k=D u_e.
-$$
+```
 
 Let
 
-$$
+```math
 m_e:=\frac{p_b+p_k}{2}.
-$$
+```
 
 Then
 
-$$
+```math
 p_b-o=\frac D2u_e+(m_e-o),
 \qquad
 p_k-o=-\frac D2u_e+(m_e-o).
 \tag{2.1}
-$$
+```
 
 By FS.4, `|m_e-o|<L_D`. Hence both generator points
 
-$$
+```math
 \pm\frac D2u_e
-$$
+```
 
 lie within `L_D` of actual points of `F-o`. Taking convex hulls over all diameter edges gives
 
-$$
+```math
 \frac12P_H\subseteq (F-o)+L_DB_2.
 \tag{2.2}
-$$
+```
 
 Conversely, every vertex used to form the force hull is an actual positive diameter endpoint, because the relative-interior stress has the full actual diameter support in the lexicographic C-II source. Thus for every such endpoint `b` there is an actual diameter edge `bk`. Equation (2.1) gives
 
-$$
+```math
 p_b-o\in\frac12P_H+L_DB_2.
-$$
+```
 
 Taking the convex hull of all force-hull vertices gives
 
-$$
+```math
 F-o\subseteq\frac12P_H+L_DB_2.
 \tag{2.3}
-$$
+```
 
 Together (2.2)-(2.3) are MP.3. `square`
 
@@ -188,25 +188,25 @@ Together (2.2)-(2.3) are MP.3. `square`
 
 Along every unbounded C-II sequence,
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)
 =
 \frac14\operatorname{area}(P_H)+o(D^2),
 }
 \tag{2.4}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \operatorname{per}(F)
 =
 \frac12\operatorname{per}(P_H)+o(D).
 }
 \tag{2.5}
-$$
+```
 
 #### Proof
 
@@ -218,56 +218,56 @@ This strengthens FSDB's one-sided use of `(1/2)P_H subset F-o+L_DB_2`. It identi
 
 Assume for contradiction that an unbounded survivor sequence satisfies
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to\lambda_{DIDO}.
 \tag{3.1}
-$$
+```
 
 DIDO gives
 
-$$
+```math
 \frac hD\to y_*,
 \tag{3.2}
-$$
+```
 
 where `y_*` is the unique Dido minimizer. It also gives
 
-$$
+```math
 \frac QD,\frac{s_C}D,\frac{d_H}D,\frac{s_Z}D,\frac{c_B}D\to0,
 \qquad
 \frac{d_P}D\to\lambda_{DIDO}.
 \tag{3.3}
-$$
+```
 
 Let `C_att` be the total attachment-cell area appearing in GU, so
 
-$$
+```math
 G=\operatorname{area}(F)-C_{att}.
 \tag{3.4}
-$$
+```
 
 DIDO gives the endpoint cavity upper bound
 
-$$
+```math
 \limsup\frac G{D^2}
 \le
 \lambda_{DIDO}^2
 \widehat f\left(\frac{g(y_*)}{\lambda_{DIDO}}\right).
 \tag{3.5}
-$$
+```
 
 GU gives
 
-$$
+```math
 \limsup\frac{C_{att}}{D^2}
 \le
 \frac\pi4\lambda_{DIDO}^2.
 \tag{3.6}
-$$
+```
 
 By the defining Dido endpoint equality,
 
-$$
+```math
 \Phi(y_*)
 =
 \lambda_{DIDO}^2
@@ -276,130 +276,130 @@ $$
 \widehat f\left(\frac{g(y_*)}{\lambda_{DIDO}}\right)
 \right].
 \tag{3.7}
-$$
+```
 
 Thus (3.4)-(3.7) give
 
-$$
+```math
 \limsup\frac{\operatorname{area}(F)}{D^2}
 \le\Phi(y_*).
 \tag{3.8}
-$$
+```
 
 FSDB gives the opposite inequality
 
-$$
+```math
 \liminf\frac{\operatorname{area}(F)}{D^2}
 \ge\Phi(y_*).
 \tag{3.9}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \frac{\operatorname{area}(F)}{D^2}
 \to\Phi(y_*).
 }
 \tag{3.10}
-$$
+```
 
 By MP.1,
 
-$$
+```math
 \frac{\operatorname{area}(P_H)}{D^2}
 \to4\Phi(y_*)=y_*+\sin y_*.
 \tag{3.11}
-$$
+```
 
 ## 4. Stability of the projective-gap concavity minimum
 
 Let
 
-$$
+```math
 \delta_D=2\arcsin\frac1{2D}.
-$$
+```
 
 Order the `h` projective diameter directions and write their gaps
 
-$$
+```math
 \gamma_1,\ldots,\gamma_h,
 \qquad
 \gamma_i\ge\delta_D,
 \qquad
 \sum_i\gamma_i=\pi.
 \tag{4.1}
-$$
+```
 
 DB/FSDB gives
 
-$$
+```math
 \frac{\operatorname{area}(P_H)}{D^2}
 =\sum_i\sin\gamma_i.
 \tag{4.2}
-$$
+```
 
 Put
 
-$$
+```math
 B_D:=\pi-(h-1)\delta_D.
 \tag{4.3}
-$$
+```
 
 The exact concavity minimum is
 
-$$
+```math
 M_D:=(h-1)\sin\delta_D+\sin B_D.
 \tag{4.4}
-$$
+```
 
 Because `h/D->y_*` and `D delta_D->1`,
 
-$$
+```math
 B_D\to B_*:=\pi-y_*>0,
 \qquad
 M_D\to y_*+\sin y_*.
 \tag{4.5}
-$$
+```
 
 Equations (3.11), (4.2), and (4.5) imply
 
-$$
+```math
 \sum_i\sin\gamma_i-M_D\to0.
 \tag{4.6}
-$$
+```
 
 ### Lemma MP.2 — one-gap stability
 
 After cyclic relabeling,
 
-$$
+```math
 \boxed{
 \gamma_1\to B_*=\pi-y_*;
 }
 \tag{4.7}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \sum_{i=2}^h(\gamma_i-\delta_D)\to0.
 }
 \tag{4.8}
-$$
+```
 
 #### Proof
 
 Write
 
-$$
+```math
 e_i:=\gamma_i-\delta_D\ge0.
-$$
+```
 
 First, the second-largest `e_i` tends to zero. If two excesses `x,y` were both at least some fixed `epsilon>0` along a subsequence, merging them into one gap while resetting the other to `delta_D` would preserve the gap sum and decrease the sine sum by exactly
 
-$$
+```math
 \begin{aligned}
 &\sin(\delta_D+x)+\sin(\delta_D+y)
 -\sin\delta_D-\sin(\delta_D+x+y)\\
@@ -408,47 +408,47 @@ $$
 \sin\left(\delta_D+\frac{x+y}{2}\right)>0.
 \end{aligned}
 \tag{4.9}
-$$
+```
 
 The decrease has a positive lower bound depending only on `epsilon`, because here the total excess tends to `pi-y_*<pi`. The merged gap remains feasible. This contradicts (4.6) and the fact that `M_D` is the global minimum. Hence every excess except the largest is `o(1)` uniformly.
 
 Let
 
-$$
+```math
 r_D:=\sum_{i=2}^h e_i
-$$
+```
 
 after labeling `e_1=max e_i`. Pass to a subsequence on which `r_D->r>=0`. Because the maximum of the remaining gaps tends to zero,
 
-$$
+```math
 \sum_{i=2}^h(\gamma_i-\sin\gamma_i)\to0;
 \tag{4.10}
-$$
+```
 
 indeed `0<=x-sin x<=x^3/6` and the sum of all gaps is `pi`.
 
 Since the total excess is `pi-h delta_D`,
 
-$$
+```math
 \gamma_1
 =B_D-r_D.
 \tag{4.11}
-$$
+```
 
 Therefore
 
-$$
+```math
 \sum_i\sin\gamma_i-M_D
 \to
 r+\sin(B_*-r)-\sin B_*.
 \tag{4.12}
-$$
+```
 
 The right side vanishes only at `r=0`: its derivative with respect to `r` is
 
-$$
+```math
 1-\cos(B_*-r)\ge0,
-$$
+```
 
 and it is strictly positive after integration over every interval of positive length. Equation (4.6) therefore forces `r=0`. This proves (4.8), and (4.11) gives (4.7). `square`
 
@@ -468,85 +468,85 @@ Let `Q_D` be a convex polygon with vertices on the radius-`D/2` circle centered 
 
 Then `F_D` has a side of length
 
-$$
+```math
 D\sin(B/2)+o(D).
 \tag{5.1}
-$$
+```
 
 #### Proof
 
 Rotate so the side endpoints of `Q_D` have polar angles `+-B_D/2`. Its outward unit normal is the positive `x` direction, and its supporting line is
 
-$$
+```math
 x=\frac D2\cos(B_D/2).
 \tag{5.2}
-$$
+```
 
 Hausdorff closeness gives
 
-$$
+```math
 h_{F_D}(1,0)
 \le
 \frac D2\cos(B_D/2)+o(D).
 \tag{5.3}
-$$
+```
 
 Let `v` be any vertex of `F_D` whose polar angle `phi` lies between the two endpoint directions. Its radius is `D/2+o(D)`, so (5.3) gives
 
-$$
+```math
 \left(\frac D2+o(D)\right)\cos\phi
 \le
 \frac D2\cos(B_D/2)+o(D).
-$$
+```
 
 Since `|phi|<=B_D/2` and `B` is bounded away from zero, this forces
 
-$$
+```math
 |\phi|\ge B_D/2-o(1).
 \tag{5.4}
-$$
+```
 
 Thus no force-hull vertex lies a fixed angular distance inside the open side sector; every such vertex is asymptotically in one of the two endpoint clusters.
 
 There is at least one `F_D` vertex in each endpoint cluster. For an endpoint direction `u`, Hausdorff closeness gives
 
-$$
+```math
 h_{F_D}(u)\ge D/2-o(D).
-$$
+```
 
 A maximizing vertex has radius at most `D/2+o(D)`, so its angular distance from `u` is `o(1)`.
 
 For large `D`, `Q_D` contains a centered disk of radius `cD` for some fixed `c>0`, because its largest angular gap is bounded below `pi`; Hausdorff closeness then gives positive support in every direction for `F_D`, so the origin lies in the interior of `F_D`. Hence the cyclic order of vertices agrees with their polar-angle order. By (5.4), the last vertex in one endpoint cluster and the first vertex in the other are consecutive hull vertices. Their angular separation is `B_D-o(1)` and both radii are `D/2+o(D)`. Their distance is therefore
 
-$$
+```math
 2\frac D2\sin(B_D/2)+o(D)
 =D\sin(B/2)+o(D).
-$$
+```
 
 This consecutive pair is the required side. `square`
 
 Apply MP.3 with
 
-$$
+```math
 Q_D=\frac12P_H,
 \qquad
 F_D=F-o.
-$$
+```
 
 MP.3 supplies hypothesis 1, FS radial localization (1.3) supplies hypothesis 2, and MP.2 supplies two antipodal sides with
 
-$$
+```math
 B_D\to B_*=\pi-y_*.
-$$
+```
 
 Therefore `F` has two distinct opposite-side sectors containing actual hull sides of lengths
 
-$$
+```math
 \boxed{
 \left(\cos(y_*/2)+o(1)\right)D
 }
 \tag{5.5}
-$$
+```
 
 each.
 
@@ -554,50 +554,50 @@ each.
 
 The Dido endpoint lies in the active Dido range, so
 
-$$
+```math
 \frac{g(y_*)}{\lambda_{DIDO}}<z_0<1,
 \qquad
 \lambda_{DIDO}<1.
-$$
+```
 
 Consequently
 
-$$
+```math
 g(y_*)<1.
 \tag{6.1}
-$$
+```
 
 Since `g` is strictly increasing and
 
-$$
+```math
 g(2\pi/3)=\frac{2\pi}{3}-1>1
-$$
+```
 
 (using only `pi>3`),
 
-$$
+```math
 \boxed{y_*<2\pi/3.}
 \tag{6.2}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{2\cos(y_*/2)>1>\lambda_{DIDO}.}
 \tag{6.3}
-$$
+```
 
 The two sides in (5.5) have length linear in `D`, hence exceed one for all sufficiently large `D`. They are therefore not unit-contact sides. Each is a missing force-hull side and, by OP, corresponds to a distinct outer pocket.
 
 If the two pocket contact-chain lengths are `ell_1,ell_2`, the triangle inequality gives
 
-$$
+```math
 \ell_j\ge s_j.
-$$
+```
 
 Since the pocket degree excess is `x_j=ell_j-2`, the total outer-pocket degree excess obeys
 
-$$
+```math
 \begin{aligned}
 d_P
 &\ge x_1+x_2\\
@@ -606,22 +606,22 @@ d_P
 \left(2\cos(y_*/2)+o(1)\right)D.
 \end{aligned}
 \tag{6.4}
-$$
+```
 
 Hence
 
-$$
+```math
 \liminf\frac{d_P}{D}
 \ge2\cos(y_*/2)>1.
 \tag{6.5}
-$$
+```
 
 But DIDO endpoint stability gave
 
-$$
+```math
 \frac{d_P}{D}\to\lambda_{DIDO}<1.
 \tag{6.6}
-$$
+```
 
 Equations (6.5)-(6.6) contradict each other. Therefore:
 
@@ -629,10 +629,10 @@ Equations (6.5)-(6.6) contradict each other. Therefore:
 
 There is no unbounded post-ZF C-II survivor sequence satisfying
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to\lambda_{DIDO}.
 \tag{6.7}
-$$
+```
 
 ## 7. Uniform nonexplicit gap
 
@@ -640,23 +640,23 @@ $$
 
 There exist absolute constants `epsilon_MP>0` and `D_0<infinity` such that every post-ZF C-II survivor with `D>=D_0` satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
 \lambda_{DIDO}+\epsilon_{MP}.
 }
 \tag{7.1}
-$$
+```
 
 #### Proof
 
 If no such constants existed, choose for every integer `j` a survivor with `D_j>=j` and
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D_j}
 <\lambda_{DIDO}+\frac1j.
-$$
+```
 
 DIDO.1 says every unbounded survivor sequence has liminf at least `lambda_DIDO`. Thus the chosen ratios converge to `lambda_DIDO`, contradicting MPE. `square`
 
@@ -666,13 +666,13 @@ No explicit value of `epsilon_MP` is claimed.
 
 The current report-level C-II state is now strictly stronger than a scalar lower bound:
 
-$$
+```math
 \boxed{
 \liminf\frac{e_{BB}+2s_C}{D}
 >\lambda_{DIDO}
 =0.8316870417755330\ldots
 }
-$$
+```
 
 in the uniform sense of (7.1).
 
@@ -680,10 +680,10 @@ The new finite theorem MP.3 also changes the structural interpretation of FS.4: 
 
 The shortest remaining Level I implication is still an upper/global incompatibility for the high-surplus regime. A sufficient next theorem is any universal post-ZF bound
 
-$$
+```math
 \limsup\frac{e_{BB}+2s_C}{D}
 \le\lambda_{DIDO}
-$$
+```
 
 (or any smaller constant), which would now immediately contradict MPE.1. Alternatively, a quantitative version of the two-flat-side argument may push the explicit lower bound upward enough to meet an existing planar upper ledger.
 
@@ -729,9 +729,9 @@ If promoted, update the Target C route map and active continuation prompt to rec
 
 Quantify the flat-side argument away from exact Dido equality. The current contradiction has a large endpoint margin:
 
-$$
+```math
 2\cos(y_*/2)>1>\lambda_{DIDO}.
-$$
+```
 
 A stability inequality converting an FSDB area excess above its concavity minimum into a lower bound on the second macroscopic gap, and then into `d_P`, should turn the nonexplicit endpoint exclusion into a larger explicit surplus floor. This is the highest-value continuation before attempting a new route.
 

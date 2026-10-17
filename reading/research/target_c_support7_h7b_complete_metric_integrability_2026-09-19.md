@@ -19,50 +19,50 @@ The full-angle reduction leaves 27 necessary affine cells. Its endpoint descript
 
 Work in one generic `H7b` cell. The reciprocal ground is
 
-$$
+```math
 y_0=0,
-$$
+```
 
 and `y_1,...,y_7` form a strict convex heptagon containing the origin. For every ordered pair of distinct hull vertices `i,j`, let
 
-$$
+```math
 A_{ij}\in(0,\pi)
-$$
+```
 
 be the ordinary interior angle at `y_i` of triangle `0ij`, between rays `i0` and `ij`. The full-angle affine system already determines each `A_ij` as an affine function of its raw angular gaps, even when `ij` is a missing relation edge.
 
 Put
 
-$$
+```math
 \rho_i=|y_i|>0.
-$$
+```
 
 The sine law in triangle `0ij` gives
 
-$$
+```math
 \boxed{
 \frac{\rho_j}{\rho_i}
 =
 \frac{\sin A_{ij}}{\sin A_{ji}}.
 }
 \tag{1.1}
-$$
+```
 
 Define the antisymmetric edge cochain on the complete graph `K7`
 
-$$
+```math
 g_{ij}
 :=
 \log\sin A_{ij}-\log\sin A_{ji}.
 \tag{1.2}
-$$
+```
 
 For an actual reciprocal,
 
-$$
+```math
 g_{ij}=\log\rho_j-\log\rho_i,
 \tag{1.3}
-$$
+```
 
 so `g` must be exact on all 21 hull-pair edges, not merely on the 14 present relation edges.
 
@@ -70,44 +70,44 @@ so `g` must be exact on all 21 hull-pair edges, not merely on the 14 present rel
 
 The cycle rank of `K7` is
 
-$$
+```math
 21-7+1=15.
-$$
+```
 
 A convenient basis is given by the fifteen root-fan triangles
 
-$$
+```math
 (1,i,j),
 \qquad 2\le i<j\le7.
-$$
+```
 
 Thus complete radial integrability is equivalent to
 
-$$
+```math
 \boxed{
 g_{1i}+g_{ij}+g_{j1}=0}
 \qquad(2\le i<j\le7),
 \tag{2.1}
-$$
+```
 
 or, without logarithms,
 
-$$
+```math
 \boxed{
 \sin A_{1i}\,\sin A_{ij}\,\sin A_{j1}
 =
 \sin A_{i1}\,\sin A_{ji}\,\sin A_{1j}.
 }
 \tag{2.2}
-$$
+```
 
 There are exactly fifteen independent equations of this form.
 
 For every surviving generic `H7b` state, the missing relation graph is a Hamiltonian `C7`. Hence the present non-ground relation graph has 14 edges. It is connected, so its cycle rank is
 
-$$
+```math
 14-7+1=8.
-$$
+```
 
 The previously identified relation-only sine layer therefore checks only eight independent cycle conditions.
 
@@ -115,10 +115,10 @@ Fix any spanning tree `T` of the 14-edge present graph. The eight present non-tr
 
 Consequently
 
-$$
+```math
 \boxed{15=8+7.}
 \tag{2.3}
-$$
+```
 
 The exact certificate checks this rank statement for all 360 undirected Hamiltonian `C7` missing graphs and independently verifies rank 15 for the root-fan triangle basis.
 
@@ -128,67 +128,67 @@ The complete sine-cycle system is stronger than a list of necessary radius ident
 
 Let the positive ground angular gaps determine the cyclic ray directions
 
-$$
+```math
 \phi_1,\ldots,\phi_7
-$$
+```
 
 up to a common rotation. Set `phi_1=0`. The ground chirotope inequalities in the affine cell ensure that, for each pair `i,j`, the smaller included angle between rays `0i` and `0j` is exactly the prescribed triangle angle
 
-$$
+```math
 G_{ij}\in(0,\pi).
-$$
+```
 
 Assume the fifteen root-fan equations (2.1). Set
 
-$$
+```math
 \rho_1=1,
 \qquad
 \rho_i=\frac{\sin A_{1i}}{\sin A_{i1}}
 \quad(i=2,\ldots,7).
 \tag{3.1}
-$$
+```
 
 Equation (2.1) then gives, for every pair `i,j`,
 
-$$
+```math
 \frac{\rho_j}{\rho_i}
 =
 \frac{\sin A_{ij}}{\sin A_{ji}}.
 \tag{3.2}
-$$
+```
 
 Define
 
-$$
+```math
 y_i=\rho_i(\cos\phi_i,\sin\phi_i).
 \tag{3.3}
-$$
+```
 
 It remains to check that these coordinates realize the prescribed non-ground triangle angles, rather than merely their sine ratios. The full affine triangle equations already give
 
-$$
+```math
 A_{ij}+A_{ji}=\pi-G_{ij}=:S_{ij},
 \qquad 0<S_{ij}<\pi.
 \tag{3.4}
-$$
+```
 
 For fixed `S` in `(0,pi)`, define
 
-$$
+```math
 f(a)=\frac{\sin a}{\sin(S-a)},
 \qquad 0<a<S.
-$$
+```
 
 Then
 
-$$
+```math
 \frac{d}{da}\log f(a)
 =
 \cot a+\cot(S-a)
 =
 \frac{\sin S}{\sin a\,\sin(S-a)}>0.
 \tag{3.5}
-$$
+```
 
 Thus `f` is strictly increasing. For a fixed included ground angle `G_ij` and fixed positive radial ratio `rho_j/rho_i`, there is at most one pair of positive triangle angles summing to `S_ij=pi-G_ij` with the required sine ratio. The coordinate triangle from (3.3) has the same included angle and the same radial ratio, so its two remaining angles must equal `A_ij,A_ji`.
 
@@ -198,39 +198,39 @@ Therefore the coordinates (3.3) realize every prescribed triangle angle and henc
 
 For every present reciprocal edge `ij`, let `s_ij` be its common edge sign and define its signed unit contribution at `i` by
 
-$$
+```math
 f_{ij}
 =
 s_{ij}\frac{y_j-y_i}{|y_j-y_i|}.
-$$
+```
 
 Then
 
-$$
+```math
 f_{ji}=-f_{ij}.
-$$
+```
 
 Let
 
-$$
+```math
 F_i=\sum_{j:ij\text{ present}} f_{ij}.
-$$
+```
 
 Summing over all eight reciprocal vertices cancels every edge contribution pairwise:
 
-$$
+```math
 \sum_{i=0}^{7}F_i=0.
 \tag{4.1}
-$$
+```
 
 At each non-ground hull vertex there are five present edges, so `F_i=0` is exactly its equilateral force-pentagon vector-closure condition. Hence
 
-$$
+```math
 F_1=\cdots=F_7=0
 \quad\Longrightarrow\quad
 F_0=0.
 \tag{4.2}
-$$
+```
 
 The seven-force ground closure is therefore automatic once a common reciprocal metric exists and all seven non-ground pentagons close. It should not be treated as an additional independent nonlinear target.
 

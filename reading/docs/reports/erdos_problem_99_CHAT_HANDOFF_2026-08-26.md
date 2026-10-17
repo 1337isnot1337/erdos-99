@@ -27,16 +27,16 @@ v1.3.0 theorem-state file controls.
 
 For
 
-$$
+```math
 D(n)=\min\{\operatorname{diam}(A):A\subset\mathbb R^2,
 \ |A|=n,
 \ |x-y|\ge1\ (x\ne y)\},
-$$
+```
 
-Erdős Problem #99 asks whether there exists $n_0$ such that for every $n\ge n_0$,
-**every** global minimizer of $D(n)$ contains a unit equilateral triangle.
+Erdős Problem #99 asks whether there exists $`n_0`$ such that for every $`n\ge n_0`$,
+**every** global minimizer of $`D(n)`$ contains a unit equilateral triangle.
 
-Equivalently, if $G(A)$ is the unit-contact graph of a minimizing configuration,
+Equivalently, if $`G(A)`$ is the unit-contact graph of a minimizing configuration,
 must every sufficiently large minimizing contact graph contain a triangle?
 
 The quantifiers matter enormously:
@@ -44,9 +44,9 @@ The quantifiers matter enormously:
 - proving that some minimizer contains a triangle is not enough;
 - constructing an arbitrarily large triangle-free local minimum is not a disproof;
 - constructing dense asymptotically optimal triangle-free sets is not a disproof;
-- a disproof needs triangle-free **global minimizers** for infinitely many $n$;
+- a disproof needs triangle-free **global minimizers** for infinitely many $`n`$;
 - a proof must rule out every triangle-free global minimizer for all sufficiently large
-  $n$.
+  $`n`$.
 
 This distinction has repeatedly killed superficially plausible routes.
 
@@ -158,7 +158,7 @@ The project has gone through four canonical stages.
 The early long investigation established the global/KKT framework, almost-rhombic
 structure, hybrid normal form, translated-lattice improvement, phase-energy machinery,
 train-angle Hessian, backward-flip reduction, and the first quantitative separation
-between train count $T$ and hull count $q$.
+between train count $`T`$ and hull count $`q`$.
 
 The important lesson from v1.0 was that naive rigidity/density ideas do not close the
 problem. The surviving counterexample would be extremely structured but could still
@@ -205,7 +205,7 @@ The pure branch also sharpened:
 - vector closure became componentwise;
 - cyclic one-closure components were classified as exactly two-direction systems;
 - common component rotations of the inverse blocker became a stochastic width system
-  with rank at most $c(\Theta)-1$.
+  with rank at most $`c(\Theta)-1`$.
 
 v1.2 therefore changed Target A from a forest-flex problem into a global packing/
 grafting problem for many genuine strict rattlers.
@@ -215,9 +215,9 @@ grafting problem for many genuine strict rattlers.
 The latest work pushed Target A much further:
 
 - the smaller optimum and lattice replacement can be put in the **same** open
-  diameter-$D$ scaffold;
-- only $O(D)$ points remain missing;
-- a saturated survivor has only $O(D)$ total nearest-neighbor clearance;
+  diameter-$`D`$ scaffold;
+- only $`O(D)`$ points remain missing;
+- a saturated survivor has only $`O(D)`$ total nearest-neighbor clearance;
 - a super-boundary rattler population produces a linear matching of near-unit strong
   Delaunay edges;
 - their adjacent faces collapse into two exact equality wells;
@@ -234,58 +234,58 @@ independently embedded geometries.
 
 These are used repeatedly.
 
-$$
+```math
 a_0=\frac{\sqrt3}{2}\approx0.8660254038,
 \qquad
 c_0=\frac{\sqrt3}{4}\approx0.4330127019,
-$$
+```
 
-$$
+```math
 c=\frac{2\sqrt3}{\pi}\approx1.10265779,
 \qquad
 C_0=\sqrt{2\pi\sqrt3}\approx3.29890833.
-$$
+```
 
 A useful product is
 
-$$
+```math
 c_0C_0\approx1.4284692103.
-$$
+```
 
 The translated-lattice improvement is
 
-$$
+```math
 \boxed{D(n)^2<c(n-1).}
-$$
+```
 
 The strict `n-1` is important. It sharpened the exact shell threshold.
 
 For a pure rhombic disk,
 
-$$
+```math
 \boxed{c_0(B-P)\le G+E<c_0B.}
-$$
+```
 
 Therefore the exact pure Target B contradiction is
 
-$$
+```math
 \boxed{G+E\ge c_0B.}
-$$
+```
 
 There is no longer a `+a0` residue.
 
 The topology-corrected shell inequality is
 
-$$
+```math
 \boxed{
  c_0(B-P)+a_0(t+\chi-1)
  \le G_{\mathcal R}+E_{\mathcal R}
  <c_0B+a_0(t+\chi-1).
 }
-$$
+```
 
 Any final topology argument has to interact with that exact residual rather than
-throwing away an uncontrolled $O(D)$ error.
+throwing away an uncontrolled $`O(D)`$ error.
 
 ---
 
@@ -305,8 +305,8 @@ has very high cyclomatic number.
 
 ## Hybrid representative
 
-There is a representative with a fixed jammed backbone $K$ and all contact edges
-outside $K$ bridges. Every contact component contains a diameter endpoint, and all
+There is a representative with a fixed jammed backbone $`K`$ and all contact edges
+outside $`K`$ bridges. Every contact component contains a diameter endpoint, and all
 pinned flexibility lies in the quotient bridge forest attached to the fixed core/
 diameter roots.
 
@@ -322,35 +322,38 @@ existential normal forms. They need not be the same minimizer.
 In the jammed triangle-free branch:
 
 - every hull vertex is diametral;
-- $q=|Q|=\Theta(D)=\Theta(\sqrt n)$;
+- $`q=|Q|=\Theta(D)=\Theta(\sqrt n)`$;
 - the contact graph has
-  $$
+  ```math
   e=2n-\Theta(\sqrt n);
-  $$
-- all but $O(D)$ bounded faces are strict unit rhombi;
+  
+  ```
+- all but $`O(D)`$ bounded faces are strict unit rhombi;
 - a strict rhombus has angle
-  $$
+  ```math
   \pi/3<\theta\le\pi/2;
-  $$
+  
+  ```
 - total angular defect
-  $$
+  ```math
   \sum_F(\theta_F-\pi/3)=O(D);
-  $$
+  
+  ```
 - almost all vertices have degree four.
 
-Train tracks form a simple triangle-free pseudoline arrangement. If $T$ is the
-number of tracks and $B=2T$ the rhombic boundary-edge count,
+Train tracks form a simple triangle-free pseudoline arrangement. If $`T`$ is the
+number of tracks and $`B=2T`$ the rhombic boundary-edge count,
 
-$$
+```math
 R\le\frac{T^2}{4}=\frac{B^2}{16},
 \qquad
 B\ge4\sqrt R.
-$$
+```
 
 At most two tracks are hull-to-hull. Many train ends therefore terminate in the
 non-hull shell.
 
-A true additive Cartesian $a\times b$ train block in a global minimizer satisfies an
+A true additive Cartesian $`a\times b`$ train block in a global minimizer satisfies an
 exact global capacity inequality; this remains the endpoint used to kill sufficiently
 large exact two-family/Ferrers blocks.
 
@@ -363,16 +366,16 @@ These initially looked promising because total terminal support depth is quadrat
 
 But the exact pocket support-turning theorem gives
 
-$$
+```math
 H_\partial=2G+J,
-$$
+```
 
 and the mixed-area identity gives
 
-$$
+```math
 J
 =\frac D2(B-P)+M(K)-\Delta_\tau.
-$$
+```
 
 This causes the apparent quadratic support-depth gain to cancel against the Oler
 currency.
@@ -390,38 +393,38 @@ Do not revive this route without a genuinely new invariant.
 
 Assign train phase
 
-$$
+```math
 z_\tau=e^{6i\phi_\tau}.
-$$
+```
 
 Crossing defect controls phase differences. Since total angular defect is only
-$O(D)$ over $\Theta(D^2)$ crossings, after deleting lower-order faults the train
+$`O(D)`$ over $`\Theta(D^2)`$ crossings, after deleting lower-order faults the train
 system decomposes into a bounded number of macroscopic near-triangular phase grains.
 
 The key quantitative consequence eventually obtained was a generalized exposed-hull
 interpolation theorem giving
 
-$$
+```math
 \frac qT\le0.9039456812\ldots+o(1),
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{
 T-q\ge0.0960543188\ldots T-o(T)
 }
-$$
+```
 
 and in diameter scale
 
-$$
+```math
 \boxed{
 T-q
 \ge
 0.3338292869\ldots D-o(D).
 }
-$$
+```
 
 Thus the common first-order-neutral train-angle space is macroscopically large.
 
@@ -432,47 +435,47 @@ first-order train locking.
 
 # 11. Train-angle Hessian, backward coordinates, and quartic tangency
 
-For an active diameter bar $h=ij$, with train decomposition
+For an active diameter bar $`h=ij`$, with train decomposition
 
-$$
+```math
 r_h=\sum_\tau d_{h\tau}u_\tau,
 \qquad
 d_{h\tau}\in\{-1,0,1\},
-$$
+```
 
 put
 
-$$
+```math
 \lambda_{h\tau}=d_{h\tau}r_h\cdot u_\tau.
-$$
+```
 
 The first-order bar-rotation potential is
 
-$$
+```math
 s_h(v)=\frac1{D^2}\sum_\tau\lambda_{h\tau}v_\tau,
-$$
+```
 
 and
 
-$$
+```math
 \ell_{h\tau}(v)=v_\tau-s_h(v).
-$$
+```
 
 On the first-order-neutral space,
 
-$$
+```math
 \boxed{
 \nabla^2f_h[v,v]
 =-\sum_\tau\lambda_{h\tau}\ell_{h\tau}(v)^2.
 }
-$$
+```
 
-A strict backward train has $\lambda<0$. Its coordinate flip would create a distance
-larger than $D$, so backward rows encode exact missing coordinate flips.
+A strict backward train has $`\lambda<0`$. Its coordinate flip would create a distance
+larger than $`D`$, so backward rows encode exact missing coordinate flips.
 
 Important correction discovered during audit:
 
-> Tangent incidences $\lambda=0$ can generate genuine positive quartic blocking.
+> Tangent incidences $`\lambda=0`$ can generate genuine positive quartic blocking.
 > Therefore the old slogan “higher-order obstruction = backward or invisible” is
 > false.
 
@@ -493,17 +496,17 @@ transport becomes a positive averaging system. Terminal potential classes are ri
 sinks.
 
 The number of terminal potential classes is at most six because each nonfree/
-terminal coordinate class consumes at least $D$ trains while $T<2\pi D$.
+terminal coordinate class consumes at least $`D`$ trains while $`T<2\pi D`$.
 
 The resulting exact structure includes:
 
-$$
+```math
 \dim K+1\le I+r,
 \qquad
 rD\le T-I,
 \qquad
 r\le6.
-$$
+```
 
 Thus visible tangent quartic locking has at most five nonrotational terminal-potential
 degrees. It cannot hide a macroscopic equality kernel.
@@ -518,30 +521,30 @@ This converted the pure branch into a backward/Dirichlet shell-rank problem.
 
 # 13. Terminal direction network
 
-The two terminal edges of each train define a graph $\Theta$ on hull chains.
+The two terminal edges of each train define a graph $`\Theta`$ on hull chains.
 
 The train directions satisfy an exact vector-incidence relation. The terminal
 direction map
 
-$$
+```math
 (\mathcal Dv)_j
 =
 \sum_\tau\partial_{j\tau}Ju_\tau v_\tau
-$$
+```
 
 is injective under pinned jamming.
 
 This yields direction sparsity and the scalar cycle-space dimension
 
-$$
+```math
 \dim\ker\partial
 =T-q+c(\Theta).
-$$
+```
 
 A tempting proposed argument claimed that restricting the direction map to a
 constraint subspace would create a kernel. This was rejected:
 
-- $\mathcal D$ is already injective;
+- $`\mathcal D`$ is already injective;
 - restricting an injective map cannot create a kernel;
 - the scalar cycle space is not the same space as the diameter-neutral train-angle
   space.
@@ -557,63 +560,63 @@ lifted through actual affine direction changes along terminal chains.
 
 The terminal graph components admit a geometric interpretation:
 
-$$
+```math
 \boxed{K=\sum_CK_C}
-$$
+```
 
 up to translation.
 
-For local terminal turn spaces $L_j$ and
+For local terminal turn spaces $`L_j`$ and
 
-$$
+```math
 s_C=\dim\operatorname{span}_{j\in J_C}L_j,
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{
 |E(C)|-|V(C)|+1
 \le
 \sum_{j\in J_C}t_j-s_C.
 }
-$$
+```
 
 The exact classification is:
 
-- $s_C=0$: one-direction tree;
-- cyclic $s_C=1$: exactly two train directions;
-- $s_C=2$: genuine two-dimensional phase turning.
+- $`s_C=0`$: one-direction tree;
+- cyclic $`s_C=1`$: exactly two train directions;
+- $`s_C=2`$: genuine two-dimensional phase turning.
 
 Thus every cyclic component that fails to pay two vector closures is precisely an
 ordered two-family/Ferrers object.
 
 Common component rotations satisfy a stochastic Minkowski-width formula. If
-$\alpha_C$ is the common angular velocity of component $C$, then
+$`\alpha_C`$ is the common angular velocity of component $`C`$, then
 
-$$
+```math
 s_h(\alpha)
 =
 \sum_C\frac{w_{K_C}(e_h)}D\alpha_C.
-$$
+```
 
-Define the component-rotation row span $\mathscr S_\alpha$ and
+Define the component-rotation row span $`\mathscr S_\alpha`$ and
 
-$$
+```math
 \boxed{
 r_\alpha=\dim\mathscr S_\alpha\le c(\Theta)-1.
 }
-$$
+```
 
 After quotienting it, the remaining internal blocker family is
-$\overline{\mathcal B}_\xi$, with
+$`\overline{\mathcal B}_\xi`$, with
 
-$$
+```math
 \operatorname{rank}\mathcal B
 \le
 r_\alpha+
 \operatorname{rank}\overline{\mathcal B}_\xi.
-$$
+```
 
 This bookkeeping was explicitly corrected in the v1.2 audit. The component-rotation
 rank is controlled but **not free**.
@@ -624,66 +627,66 @@ rank is controlled but **not free**.
 
 The established lower bound is
 
-$$
+```math
 \boxed{
 \operatorname{rank}\mathcal B+I+r
 \ge T-q+1.
 }
-$$
+```
 
 The required total upper bound is
 
-$$
+```math
 \boxed{
 \operatorname{rank}\mathcal B+I+r
 \le T-q.
 }
-$$
+```
 
 After isolating component rotations, it is sufficient to prove
 
-$$
+```math
 \boxed{
 \operatorname{rank}\overline{\mathcal B}_\xi+I+r
 \le T-q-r_\alpha.
 }
-$$
+```
 
 A stronger universal sufficient form is
 
-$$
+```math
 \boxed{
 \operatorname{rank}\overline{\mathcal B}_\xi+I+r
 \le T-q-c(\Theta)+1.
 }
-$$
+```
 
 The proof should split by component type:
 
-- $s_C=2$: pay both vector closures;
-- cyclic $s_C=1$: use exact two-family order and Ferrers;
+- $`s_C=2`$: pay both vector closures;
+- cyclic $`s_C=1`$: use exact two-family order and Ferrers;
 - one-direction tree: no scalar cycle;
-- common component rotations: reserve exactly $r_\alpha$.
+- common component rotations: reserve exactly $`r_\alpha`$.
 
 The Ferrers endpoint already has a leading-order gap:
 
-$$
+```math
 0.8944923195\ldots D^2
 <
 0.9068996821\ldots D^2,
-$$
+```
 
 with
 
-$$
+```math
 \boxed{0.0124073626\ldots D^2}
-$$
+```
 
 room. No better numerical constant is currently needed.
 
 After the pure disk is closed, the exact same rank theorem must be transported through
 nonquadrilateral faces, holes, multiple components, pinches, and outside vertices.
-The contradiction is one integer, so losing $O(D)$ rank is unacceptable.
+The contradiction is one integer, so losing $`O(D)`$ rank is unacceptable.
 
 ---
 
@@ -691,37 +694,37 @@ The contradiction is one integer, so losing $O(D)$ rank is unacceptable.
 
 Let the quotient bridge forest have:
 
-- $u$ unpinned vertices;
-- $r$ incident fixed roots;
-- $c$ nonempty components;
-- pinned equality matrix $R_F$;
-- lineality $\ell=\dim\ker R_F$;
-- self-stress dimension $\sigma=\dim\ker R_F^T$.
+- $`u`$ unpinned vertices;
+- $`r`$ incident fixed roots;
+- $`c`$ nonempty components;
+- pinned equality matrix $`R_F`$;
+- lineality $`\ell=\dim\ker R_F`$;
+- self-stress dimension $`\sigma=\dim\ker R_F^T`$.
 
 Then
 
-$$
+```math
 \boxed{
 \ell=u-r+c+\sigma,
 \qquad
 0\le\sigma\le r-c.
 }
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 u-r+c\le\ell\le u,}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{0\le u-\ell\le r-c=O(D).}
-$$
+```
 
-This is sharp: a one-root tree can have $\ell=u$.
+This is sharp: a one-root tree can have $`\ell=u`$.
 
 This theorem killed the idea that large forest lineality might come from some exotic
 linear self-stress phenomenon. A super-boundary flat has essentially one dimension per
@@ -732,49 +735,49 @@ moving forest vertex.
 # 17. Root-skeleton exactification
 
 In each rooted forest component, take the minimal subtree spanning the roots. Pin
-branch vertices of degree at least three. Their total number $b$ satisfies
+branch vertices of degree at least three. Their total number $`b`$ satisfies
 
-$$
+```math
 b\le r-c.
-$$
+```
 
 Cut one edge on each root-skeleton path. At most
 
-$$
+```math
 2(r-c)
-$$
+```
 
 old forest contacts are lost, and the remaining graph is a union of one-root unit-bar
 trees.
 
 The resulting exact-contact realization manifold has dimension
 
-$$
+```math
 \boxed{
 \dim\mathcal M=u-b\ge u-r+c.
 }
-$$
+```
 
-This corrected an earlier overstatement that a full $u$-dimensional exact-bar
+This corrected an earlier overstatement that a full $`u`$-dimensional exact-bar
 manifold always survives. Branch junctions can be caged and may need to be pinned.
 
 ---
 
 # 18. Affine forest factor exclusion and rattlerization
 
-On the straight affine same-$D$ forest flat, each retained rooted-tree edge has an
+On the straight affine same-$`D`$ forest flat, each retained rooted-tree edge has an
 independent infinitesimal coordinate. For a pair of labels, the pair-distance
 quadratic depends on an edge coordinate exactly when the descendant-subtree indicator
 differs between the two labels.
 
 The cross-component definition was audited and corrected in v1.2: use
 
-$$
+```math
 \epsilon_e^{ab}=\eta_e(a)-\eta_e(b),
-$$
+```
 
-where $\eta_e(a)$ indicates membership in the descendant subtree below edge $e$.
-Do not use a wording that assumes $a,b$ lie in the same rooted component.
+where $`\eta_e(a)`$ indicates membership in the descendant subtree below edge $`e`$.
+Do not use a wording that assumes $`a,b`$ lie in the same rooted component.
 
 The triangle-factor theorem then shows:
 
@@ -782,33 +785,33 @@ The triangle-factor theorem then shows:
 > side lying entirely in the fixed part.
 
 This is different from the exact-bar torus. On the exact-bar torus, a long chain can
-have $u-O(1)$ independent length-two triangle walls. Do not conflate the two
+have $`u-O(1)`$ independent length-two triangle walls. Do not conflate the two
 spaces.
 
 More importantly, choose a generic affine velocity with every forest-edge coordinate
 nonzero. Every retained unit forest edge opens quadratically:
 
-$$
+```math
 |p_i(t)-p_j(t)|^2=1+t^2x_e^2>1.
-$$
+```
 
 All active diameter endpoints remain fixed. Therefore a nearby triangle-free global
 minimizer has
 
-$$
+```math
 \boxed{
 \rho\ge u-r+c\ge\ell-\pi D
 }
-$$
+```
 
 genuine strict rattlers, each with no unit contact and no active diameter incidence.
 They move independently in local two-dimensional neighborhoods.
 
-Thus the same-$D$ minimizer set locally contains dimension at least
+Thus the same-$`D`$ minimizer set locally contains dimension at least
 
-$$
+```math
 \boxed{2\rho\ge2\ell-2\pi D.}
-$$
+```
 
 This is why forest kinematics are considered finished.
 
@@ -816,8 +819,8 @@ This is why forest kinematics are considered finished.
 
 # 19. Same-diameter saturation theorem
 
-Starting from a triangle-free global minimizer $A$ with hull $K$, repeatedly add a
-point $y\in K$ that is strictly farther than one from every existing point.
+Starting from a triangle-free global minimizer $`A`$ with hull $`K`$, repeatedly add a
+point $`y\in K`$ that is strictly farther than one from every existing point.
 
 Each insertion:
 
@@ -831,9 +834,9 @@ The process terminates at a unit-covering saturated set.
 
 The exact plateau theorem implies fewer than
 
-$$
+```math
 \boxed{\frac\pi2D}
-$$
+```
 
 points are added.
 
@@ -846,18 +849,18 @@ large strict-rattler population.
 
 If
 
-$$
+```math
 D(m)=D(n)=D,
 \qquad m<n,
-$$
+```
 
 then
 
-$$
+```math
 \boxed{
 n-m<\frac\pi2D.
 }
-$$
+```
 
 This combines finite Oler, isodiametricity, perimeter-diameter, and the strict
 translated-lattice theorem.
@@ -871,7 +874,7 @@ same-diameter population growth into a contradiction or into a bounded residual.
 
 For the saturated survivor, set
 
-$$
+```math
 \rho=|\mathscr R|,
 \qquad
 m=N-\rho,
@@ -879,52 +882,52 @@ m=N-\rho,
 d=D(m),
 \qquad
 t=\frac{D-d}{2}.
-$$
+```
 
 Define
 
-$$
+```math
 \boxed{
 C_{\rm col}
 =\pi\left(\frac12+\frac2{\sqrt3}\right)
 =5.198395055263\ldots .
 }
-$$
+```
 
 The collar inequality gives
 
-$$
+```math
 D^2-d^2
 >
 c\left(\rho-\frac{\pi D}{2}\right).
-$$
+```
 
-If $t\le1$, then
+If $`t\le1`$, then
 
-$$
+```math
 D^2-d^2=2t(D+d)\le4D,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{\rho<C_{\rm col}D.}
-$$
+```
 
-Therefore a super-boundary survivor automatically has $t>1$.
+Therefore a super-boundary survivor automatically has $`t>1`$.
 
-Choose an independently optimal $m$-point configuration $X_m$ with hull $K_m$.
+Choose an independently optimal $`m`$-point configuration $`X_m`$ with hull $`K_m`$.
 Its safe collar is
 
-$$
+```math
 \Omega=
 \operatorname{int}(K_m+t\mathbb B)
 \setminus(K_m+\mathbb B).
-$$
+```
 
 Steiner's formula and the perimeter deficit give the exact lower estimate
 
-$$
+```math
 \frac{|\Omega|}{a_0}
 >
 \rho-C_{\rm col}D
@@ -932,55 +935,55 @@ $$
 \pi\left(\frac4{\sqrt3}-1\right)t
 +
 \pi\left(1-\frac2{\sqrt3}\right).
-$$
+```
 
-For $t\ge1$,
+For $`t\ge1`$,
 
-$$
+```math
 \boxed{
 \frac{|\Omega|}{a_0}
 >
 \rho-C_{\rm col}D+\frac{2\pi}{\sqrt3}.
 }
-$$
+```
 
 Strict triangular-lattice translation averaging yields a translate with
 
-$$
+```math
 k>
 \rho-C_{\rm col}D+\frac{2\pi}{\sqrt3}
-$$
+```
 
-lattice sites in $\Omega$.
+lattice sites in $`\Omega`$.
 
 These sites are mutually unit-separated and are strictly more than one from every
-point of $X_m$. Their union lies in the open parallel body
+point of $`X_m`$. Their union lies in the open parallel body
 
-$$
+```math
 L=\operatorname{int}(K_m+t\mathbb B),
-$$
+```
 
-whose closed hull has diameter exactly $D$. Any finite subset of the interior has
-diameter strictly less than $D$.
+whose closed hull has diameter exactly $`D`$. Any finite subset of the interior has
+diameter strictly less than $`D`$.
 
 Thus the scaffold already contains
 
-$$
+```math
 >N-C_{\rm col}D+\frac{2\pi}{\sqrt3}
-$$
+```
 
 points.
 
 A surviving counterexample therefore has exact residual demand
 
-$$
+```math
 \boxed{
 j=\rho-k,
 \qquad
 1\le j< C_{\rm col}D-\frac{2\pi}{\sqrt3}.}
-$$
+```
 
-This is substantially more precise than “only $O(D)$ missing points.”
+This is substantially more precise than “only $`O(D)`$ missing points.”
 
 ---
 
@@ -988,73 +991,73 @@ This is substantially more precise than “only $O(D)$ missing points.”
 
 For a saturated minimizer, define
 
-$$
+```math
 \delta(p)=\min_{q\ne p}|p-q|-1.
-$$
+```
 
 Let
 
-$$
+```math
 B_\partial
 =\{p:\operatorname{dist}(p,\partial K)\le1\}.
-$$
+```
 
-If $p\notin B_\partial$, then
+If $`p\notin B_\partial`$, then
 
-$$
+```math
 \boxed{V_p\subset K.}
-$$
+```
 
-Proof idea: if a Voronoi ray escaped $K$, the first boundary point on the segment
-from $p$ would still lie in $V_p$, be farther than one from $p$, but saturation
+Proof idea: if a Voronoi ray escaped $`K`$, the first boundary point on the segment
+from $`p`$ would still lie in $`V_p`$, be farther than one from $`p`$, but saturation
 would give another site at distance at most one, contradiction.
 
 Thus every Delaunay triangle incident to a deep vertex has circumradius at most one.
 
 For such a triangle,
 
-$$
+```math
 \boxed{
 \operatorname{area}(T)-\frac{\sqrt3}{4}
 \ge
 \frac{\sqrt3}{6}
 \sum_{v\in T}\mu_T(v).
 }
-$$
+```
 
 Equality is exactly
 
-$$
+```math
 \boxed{\{1,1,1\}\quad\text{or}\quad\{1,1,\sqrt3\}.}
-$$
+```
 
 The boundary-layer count is
 
-$$
+```math
 b\le12D+9,
 \qquad
 h\le\pi D,
 \qquad
 f_0\le2b.
-$$
+```
 
 The total deep Delaunay excess is bounded by
 
-$$
+```math
 E_{\rm deep}
 <
 \frac{a_0}{2}(h+f_0).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \sum_{p\in A}\delta(p)
 <
 \left(24+\frac\pi2\right)D+18.
 }
-$$
+```
 
 This theorem is conceptually important: a large strict-rattler population cannot have
 macroscopic individual slack. Almost all of its strictness becomes vanishingly small.
@@ -1065,87 +1068,87 @@ macroscopic individual slack. Almost all of its strictness becomes vanishingly s
 
 Let
 
-$$
+```math
 L_D=\left(24+\frac\pi2\right)D+18.
-$$
+```
 
-If $\rho\ge20L_D$, at least $\rho/2$ rattlers have
+If $`\rho\ge20L_D`$, at least $`\rho/2`$ rattlers have
 
-$$
+```math
 \delta(p)\le\frac{2L_D}{\rho}.
-$$
+```
 
 After discarding the boundary layer, join each selected deep rattler to a nearest
 neighbor.
 
-All selected edges have length at most $1.1$. The selected graph has degree at most
+All selected edges have length at most $`1.1`$. The selected graph has degree at most
 six because seven neighbors would force a pair closer than one:
 
-$$
+```math
 \frac1{100}
 +
 \frac{121}{25}\sin^2\frac\pi7
 =0.9211546795\ldots<1.
-$$
+```
 
 A maximal matching therefore has
 
-$$
+```math
 \boxed{
 |M|\ge\frac\rho{24}-D-\frac34.
 }
-$$
+```
 
 Each edge has length
 
-$$
+```math
 1<|e|\le1+\frac{2L_D}{\rho}.
-$$
+```
 
 Because each is a nearest-neighbor edge, its closed diameter disk is empty of third
 points. Therefore it is a strong Gabriel/Delaunay edge. Rechoose a Delaunay
 triangulation containing all matching edges.
 
-The total deep area-excess bound implies that, for any $\eta>0$, only
+The total deep area-excess bound implies that, for any $`\eta>0`$, only
 
-$$
+```math
 <
 \frac{a_0((24+\pi)D+18)}{2\eta}
-$$
+```
 
-matching edges can have an incident face with excess greater than $\eta$.
+matching edges can have an incident face with excess greater than $`\eta`$.
 
 Taking
 
-$$
+```math
 \eta=\sqrt{D/\rho}
-$$
+```
 
-along $\rho/D\to\infty$ leaves
+along $`\rho/D\to\infty`$ leaves
 
-$$
+```math
 \boxed{\rho/24-o(\rho)}
-$$
+```
 
 vertex-disjoint matching edges whose two incident faces approach one of the two
 exact equality wells
 
-$$
+```math
 \boxed{
 \{1,1,1\}
 \quad\text{or}\quad
 \{1,1,\sqrt3\}.
 }
-$$
+```
 
 Important permanent warning:
 
 > The exact unit equilateral triangle is forbidden, but the near-equilateral well is
 > not.
 
-An equilateral triangle of side $1+\varepsilon$ is triangle-free and approaches the
+An equilateral triangle of side $`1+\varepsilon`$ is triangle-free and approaches the
 local inequality with quadratic error. This regression invalidates every
-“low excess = only $120^\circ$ wedges” argument.
+“low excess = only $`120^\circ`$ wedges” argument.
 
 ---
 
@@ -1153,50 +1156,50 @@ local inequality with quadratic error. This regression invalidates every
 
 Use the same lattice translate in the entire open scaffold body
 
-$$
+```math
 L=\operatorname{int}(K_m+t\mathbb B),
 \qquad
 Y=(\Lambda+v)\cap L.
-$$
+```
 
-Build the bipartite graph between $X_m$ and $Y$ with an edge iff the cross-distance
+Build the bipartite graph between $`X_m`$ and $`Y`$ with an edge iff the cross-distance
 is less than one.
 
 Both sides are internally unit-separated. Hence an independent set in this graph is
-exactly a unit-separated subset of $X_m\cup Y$.
+exactly a unit-separated subset of $`X_m\cup Y`$.
 
 By Kőnig,
 
-$$
+```math
 \alpha(G)=m+|Y|-\nu,
-$$
+```
 
-where $\nu$ is maximum matching size.
+where $`\nu`$ is maximum matching size.
 
-Every independent set lies in the open diameter-$D$ body, so global optimality
+Every independent set lies in the open diameter-$`D`$ body, so global optimality
 forces
 
-$$
+```math
 \boxed{m+|Y|-\nu\le N-1.}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{|S|-|N(S)|\le\rho-1\quad(S\subseteq Y).}
-$$
+```
 
-Let $Y_0=Y\cap\Omega$ be the $k$ safe-collar sites and
-$Y_{\rm in}=Y\setminus Y_0$. Because $N(Y_0)=\varnothing$, every
-$Q\subseteq Y_{\rm in}$ satisfies
+Let $`Y_0=Y\cap\Omega`$ be the $`k`$ safe-collar sites and
+$`Y_{\rm in}=Y\setminus Y_0`$. Because $`N(Y_0)=\varnothing`$, every
+$`Q\subseteq Y_{\rm in}`$ satisfies
 
-$$
+```math
 \boxed{
 |Q|-|N(Q)|\le\rho-k-1=j-1.
 }
-$$
+```
 
-Thus the inner band admits a conflict matching into $X_m$ leaving at most $j-1$
+Thus the inner band admits a conflict matching into $`X_m`$ leaving at most $`j-1`$
 lattice sites unmatched.
 
 Interpretation:
@@ -1208,15 +1211,15 @@ This is a very rigid necessary condition.
 
 The exact contradiction criterion is now
 
-$$
+```math
 \boxed{
 \exists Q\subseteq Y_{\rm in}:
 |Q|-|N(Q)|\ge j.
 }
-$$
+```
 
-That one-integer excess produces an independent set of size at least $N$, hence an
-$N$-point unit-separated set of diameter strictly below $D$.
+That one-integer excess produces an independent set of size at least $`N`$, hence an
+$`N`$-point unit-separated set of diameter strictly below $`D`$.
 
 ---
 
@@ -1224,16 +1227,16 @@ $N$-point unit-separated set of diameter strictly below $D$.
 
 The two strongest v1.3 structures live in different configurations.
 
-## Original saturated minimizer $A$
+## Original saturated minimizer $`A`$
 
 Contains:
 
 - the strict rattlers;
-- the $O(D)$ clearance budget;
-- the $\rho/24-o(\rho)$ matched Gabriel edges;
+- the $`O(D)`$ clearance budget;
+- the $`\rho/24-o(\rho)`$ matched Gabriel edges;
 - the near-equilateral / near-120 two-well Delaunay geometry.
 
-## Independent smaller optimum $X_m$
+## Independent smaller optimum $`X_m`$
 
 Contains:
 
@@ -1241,7 +1244,7 @@ Contains:
 - the translated lattice;
 - the conflict graph;
 - the inner-band near-perfect conflict matching;
-- the exact residual demand $j=O(D)$.
+- the exact residual demand $`j=O(D)`$.
 
 There is no canonical coordinate identification between these.
 
@@ -1259,23 +1262,23 @@ surplus in the second.
 
 Along a super-boundary survivor,
 
-$$
+```math
 |M|=\rho/24-o(\rho),
 \qquad
 j=O(D),
 \qquad
 \rho/D\to\infty.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \frac{|M|}{j}\to\infty
 }
-$$
+```
 
-whenever $j>0$.
+whenever $`j>0`$.
 
 There are asymptotically arbitrarily many two-well local structures per missing
 scaffold point.
@@ -1285,16 +1288,13 @@ The exact target is:
 > **Two-well configuration-transfer / inner-band Hall-rigidity theorem.**
 > Show that the simultaneous existence of the huge two-well supply in the original
 > minimizer and the near-saturating inner-band conflict matching in the independent
-> scaffold is impossible for $\rho/D\to\infty$, or produces
+> scaffold is impossible for $`\rho/D\to\infty`$, or produces
 > 
 
-$$
-
+```math
 > |Q|-|N(Q)|\ge j.
 > 
-$$
-
-
+```
 
 Promising subroutes:
 
@@ -1315,12 +1315,12 @@ Do not regard these as established. They are the recommended frontier.
 # 27. Intermediate isolated triangle-wall basis-exchange observation
 
 One intermediate run obtained a useful local lemma on exactified one-root trees:
-when a generic first triangle event occurs on a length-two path $a-v-b$, one can
+when a generic first triangle event occurs on a length-two path $`a-v-b`$, one can
 replace one old tree edge by the new triangle side and rotate the far subtree across
 the wall, immediately reopening the removed unit edge while preserving the new one.
 
 This shows an isolated generic triangle wall is a graphic-matroid basis-exchange facet,
-not necessarily a terminal wall of the union of same-$D$ linkage manifolds.
+not necessarily a terminal wall of the union of same-$`D`$ linkage manifolds.
 
 This was useful conceptually, but it is no longer central because forest
 rattlerization bypasses the exact-bar wall complex entirely.
@@ -1346,7 +1346,7 @@ Exact support-turning cancellation removes the apparent gain.
 
 ## 28.3 Every higher-order blocker is backward/invisible — false
 
-Tangent $\lambda=0$ quartic locking exists.
+Tangent $`\lambda=0`$ quartic locking exists.
 
 ## 28.4 Two bar-potential values imply exact global flex — not established
 
@@ -1355,7 +1355,7 @@ block.
 
 ## 28.5 Restricting the terminal direction map creates a cycle-lift kernel — false
 
-$\mathcal D$ is injective. Restricting its domain cannot create a kernel.
+$`\mathcal D`$ is injective. Restricting its domain cannot create a kernel.
 
 ## 28.6 Scalar cycle space equals diameter-neutral train space — false
 
@@ -1366,24 +1366,24 @@ They are defined by different equations.
 A single tangent bar can quartically lock many paired tangent velocities in isolation.
 The minimal-face averaging theorem is what eventually compresses this capacity.
 
-## 28.8 Full $u$-dimensional exact-bar forest always survives — false
+## 28.8 Full $`u`$-dimensional exact-bar forest always survives — false
 
 Caged branch junctions may have to be pinned. Root-skeleton exactification retains
-only $u-O(D)$ dimensions.
+only $`u-O(D)`$ dimensions.
 
-## 28.9 Triangle-wall normals have only $O(D)$ rank — false
+## 28.9 Triangle-wall normals have only $`O(D)`$ rank — false
 
-Long exact-bar chains can have $u-O(1)$ independent length-two triangle walls.
+Long exact-bar chains can have $`u-O(1)`$ independent length-two triangle walls.
 
 ## 28.10 Deletion inheritance is automatic — false/unproved
 
 Deleting rattlers gives a feasible smaller configuration, not necessarily an optimum.
-Do not assume $D(n-\rho)=D(n)$.
+Do not assume $`D(n-\rho)=D(n)`$.
 
 ## 28.11 Strict rattlers have uniform slack — false
 
 The v1.3 clearance theorem proves the opposite asymptotically: total slack is only
-$O(D)$.
+$`O(D)`$.
 
 ## 28.12 Low Delaunay excess means only the 120-degree well — false
 
@@ -1396,7 +1396,7 @@ The original minimizer and the independent smaller optimum are not co-embedded.
 
 ## 28.14 Component-rotation rank can be ignored — false bookkeeping
 
-It is bounded by $c(\Theta)-1$, but must be explicitly reserved as $r_\alpha$.
+It is bounded by $`c(\Theta)-1`$, but must be explicitly reserved as $`r_\alpha`$.
 
 ---
 
@@ -1406,7 +1406,7 @@ Any new theorem should be mentally or explicitly tested against:
 
 1. **Unit square.** Small exact rhombic minimizer.
 2. **Regular unit pentagon / small exact minima.** Avoid asymptotic claims that fail
-   at small $n$.
+   at small $`n`$.
 3. **Heptagon + center rattler (n=8).** Demonstrates genuine rattlers in a finite
    minimizer-type configuration.
 4. **Regular odd-prime polygons.** Arbitrarily large triangle-free strict local
@@ -1424,12 +1424,12 @@ Any new theorem should be mentally or explicitly tested against:
     counting.
 11. **Parallel tangent quartic construction.** One bar can higher-order lock many
     tangent modes in isolation.
-12. **Long one-root exact-bar chains.** Triangle-wall normal rank can be $u-O(1)$.
-13. **Singly rooted trees with $\ell=u$.** Rooted-forest linear algebra alone cannot
+12. **Long one-root exact-bar chains.** Triangle-wall normal rank can be $`u-O(1)`$.
+13. **Singly rooted trees with $`\ell=u`$.** Rooted-forest linear algebra alone cannot
     prove a coefficient smaller than one.
 14. **Caged branch junctions.** Prevent a naive full-dimensional exactification.
-15. **Scaled equilateral Delaunay faces.** Side $1+\varepsilon$; remain
-    triangle-free while approaching the $\{1,1,1\}$ equality well.
+15. **Scaled equilateral Delaunay faces.** Side $`1+\varepsilon`$; remain
+    triangle-free while approaching the $`\{1,1,1\}`$ equality well.
 
 A new global theorem may exclude a regression model, but it must identify the global
 hypothesis the model lacks.
@@ -1460,7 +1460,7 @@ Unless a genuinely new ingredient changes them, avoid spending a run on:
 - deletion optimality;
 - generic one-ray first-event arguments;
 - low rank of all triangle walls;
-- a full $u$-dimensional exact-bar forest at every branch junction;
+- a full $`u`$-dimensional exact-bar forest at every branch junction;
 - population-only parallel-body estimates;
 - uniform rattler clearance;
 - direct transplantation of original Voronoi cells to the scaffold;
@@ -1516,18 +1516,18 @@ Good prompts identify the one formula the run must reach.
 
 Target A:
 
-$$
+```math
 |Q|-|N(Q)|\ge j
-$$
+```
 
-or an explicit $N$-point sub-$D$ configuration.
+or an explicit $`N`$-point sub-$`D`$ configuration.
 
 Target B:
 
-$$
+```math
 \operatorname{rank}\overline{\mathcal B}_\xi+I+r
 \le T-q-r_\alpha.
-$$
+```
 
 Reason: otherwise the model produces more structural lemmas without checking whether
 they can ever close the theorem.
@@ -1602,9 +1602,9 @@ Map the pasted notation to canonical notation before judging novelty.
 
 Common collisions encountered:
 
-- $R$ once meant rhombus count and was later reused for rattler set; canonical v1.2+
-  uses $\mathscr R$ for the strict-rattler set and $\rho=|\mathscr R|$;
-- component rotation must use $r_\alpha$, not be silently absorbed into internal
+- $`R`$ once meant rhombus count and was later reused for rattler set; canonical v1.2+
+  uses $`\mathscr R`$ for the strict-rattler set and $`\rho=|\mathscr R|`$;
+- component rotation must use $`r_\alpha`$, not be silently absorbed into internal
   blocker rank.
 
 ## Step 2: classify each claim
@@ -1630,7 +1630,7 @@ For a new Target A theorem, ask:
 For Target B, ask:
 
 - does the rank map act on the actual inverse blocker?
-- is $r_\alpha$ accounted for?
+- is $`r_\alpha`$ accounted for?
 - is topology correction exact?
 
 ## Step 4: run regressions
@@ -1711,17 +1711,19 @@ Target A as closed and focus on Target B.
 The strongest next strategy is to exploit the exact tension between:
 
 - a **huge supply** in the original saturated minimizer:
-  $$
+  ```math
   |M|=\rho/24-o(\rho),
-  $$
+  
+  ```
   with two-well local geometry; and
 - a **tiny demand** in the scaffold:
-  $$
+  ```math
   j=O(D),
-  $$
-  with an inner-band conflict matching deficient by at most $j-1$.
+  
+  ```
+  with an inner-band conflict matching deficient by at most $`j-1`$.
 
-Since $\rho/D\to\infty$, the supply/demand ratio diverges.
+Since $`\rho/D\to\infty`$, the supply/demand ratio diverges.
 
 The missing theorem should be sought as a configuration-independent capacity or
 stability result rather than a literal pointwise map between the two configurations.
@@ -1744,12 +1746,12 @@ positive amount of:
 - boundary interface length;
 - or train/rhombic shell currency.
 
-Since total Delaunay excess is $O(D)$, only $O(D)$ independent obstructions could
-survive, contradicting the $\Omega(\rho)$ supply.
+Since total Delaunay excess is $`O(D)`$, only $`O(D)`$ independent obstructions could
+survive, contradicting the $`\Omega(\rho)`$ supply.
 
 ## 35.2 Near-120 wedge chains
 
-A face near $\{1,1,\sqrt3\}$ is approximately a two-contact 120-degree wedge.
+A face near $`\{1,1,\sqrt3\}`$ is approximately a two-contact 120-degree wedge.
 Chains of such wedges have an ordered two-family flavor.
 
 Try to derive an actual monotone/Ferrers structure or a family of independent cavities
@@ -1763,7 +1765,7 @@ Target B.
 Prove that transitions between the 60 and 120 wells carry a fixed positive cost unless
 they organize into a very rigid exact pattern.
 
-A linear number of transitions would violate the $O(D)$ excess budget. Few
+A linear number of transitions would violate the $`O(D)`$ excess budget. Few
 transitions would force macroscopic coherent domains, reducing to 35.1 or 35.2.
 
 ## 35.4 Alternating components of the conflict matching
@@ -1777,15 +1779,15 @@ geometry, that can be compared to a configuration-independent packing bound.
 
 ## 35.5 Hall surplus via finite-area overload
 
-A subset $Q$ with too few distinct blockers may force many lattice cells into a
-region controlled by only a small number of $X_m$ points. Try to turn this into an
+A subset $`Q`$ with too few distinct blockers may force many lattice cells into a
+region controlled by only a small number of $`X_m`$ points. Try to turn this into an
 Oler-type local overload.
 
 The exact needed threshold is only one integer:
 
-$$
+```math
 |Q|-|N(Q)|\ge j.
-$$
+```
 
 This is more promising than trying to construct every missing site explicitly.
 
@@ -1795,7 +1797,7 @@ This is more promising than trying to construct every missing site explicitly.
 
 Target B is more algebraic/combinatorial now.
 
-The internal relative-angle coordinates $\xi$ live inside terminal components after
+The internal relative-angle coordinates $`\xi`$ live inside terminal components after
 common component rotations are quotiented.
 
 The goal is an injective/intertwining map from:
@@ -1839,7 +1841,7 @@ Do not write `+O(D)` and hope it disappears. The final contradiction is one inte
 # 37. What would count as Level I solved
 
 An affirmative Level I solution must present a complete proof that for some explicit or
-implicit $n_0$, every minimizing $n$-point configuration for $n\ge n_0$ contains
+implicit $`n_0`$, every minimizing $`n`$-point configuration for $`n\ge n_0`$ contains
 a unit equilateral triangle.
 
 Within the current architecture that means:
@@ -1903,7 +1905,7 @@ The highest-value audits in this project caught:
 - the invalid cycle-lift kernel inference;
 - the overly strong full-forest exactification claim;
 - the cross-component descendant-subtree notation bug;
-- the missing $r_\alpha$ rank budget;
+- the missing $`r_\alpha`$ rank budget;
 - the false 120-degree-only equality conclusion.
 
 Continue that standard.
@@ -1937,18 +1939,18 @@ If you are the new chat instance receiving this handoff:
 
 The investigation has reduced Erdős #99 to two exact global capacity statements. In
 Target A, a hypothetical super-boundary hybrid minimizer can be converted into a
-saturated triangle-free global minimizer with $\rho=\omega(D)$ strict rattlers, yet
-its total nearest-neighbor clearance is only $O(D)$. It therefore contains
-$\rho/24-o(\rho)$ disjoint near-unit strong-Delaunay edges whose adjacent faces
+saturated triangle-free global minimizer with $`\rho=\omega(D)`$ strict rattlers, yet
+its total nearest-neighbor clearance is only $`O(D)`$. It therefore contains
+$`\rho/24-o(\rho)`$ disjoint near-unit strong-Delaunay edges whose adjacent faces
 collapse into either a near-equilateral or near-120-degree equality well. Independently,
-removing those rattlers and choosing an $m=N-\rho$ optimum creates a common strict
-sub-$D$ scaffold in which a safe triangular-lattice collar already supplies all but
-$j=O(D)$ points. The complete scaffold conflict graph obeys an exact Hall--Kőnig
+removing those rattlers and choosing an $`m=N-\rho`$ optimum creates a common strict
+sub-$`D`$ scaffold in which a safe triangular-lattice collar already supplies all but
+$`j=O(D)`$ points. The complete scaffold conflict graph obeys an exact Hall--Kőnig
 expansion law, and its inner band can be conflict-matched into the smaller optimum
-with at most $j-1$ unmatched sites. The missing Target A theorem must transfer the
-enormous two-well supply into a Hall surplus $|Q|-|N(Q)|\ge j$ or actual scaffold
+with at most $`j-1`$ unmatched sites. The missing Target A theorem must transfer the
+enormous two-well supply into a Hall surplus $`|Q|-|N(Q)|\ge j`$ or actual scaffold
 cavities, despite the original and scaffold configurations not being co-embedded. In
 Target B, all common terminal-component rotations are already isolated with rank cost
-$r_\alpha\le c(\Theta)-1$; the exact remaining pure theorem is
-$\operatorname{rank}\overline{\mathcal B}_\xi+I+r\le T-q-r_\alpha$, followed by an
+$`r_\alpha\le c(\Theta)-1`$; the exact remaining pure theorem is
+$`\operatorname{rank}\overline{\mathcal B}_\xi+I+r\le T-q-r_\alpha`$, followed by an
 exact topology-corrected transfer. No Level I proof or disproof is known yet.

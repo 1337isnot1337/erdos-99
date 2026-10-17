@@ -60,9 +60,9 @@ share a physical contact edge, `xy` does not cross the `tau_f` shore split.
 Therefore the endpoint region root paths differ by exactly dual edge `e`, not by a
 larger path.  Their relative translation is precisely
 
-$$
+```math
 R_{\theta_e}u_e-u_e.
-$$
+```
 
 This is the key point that makes the finite construction exact.
 
@@ -106,9 +106,9 @@ each source.
 For rooted dual edge `e`, the indicator `chi_e` is the child-component indicator.
 Therefore
 
-$$
+```math
 \chi_e(v_y)-\chi_e(v_x)\ne0
-$$
+```
 
 exactly when deleting `e` separates the two endpoint regions.  In a tree this is
 exactly the condition that `e` lies on the unique region path `P(v_x,v_y)`.
@@ -126,25 +126,25 @@ approximation.
 
 The theorem orients `u_e` from the root shore into the child shore.  With
 
-$$
+```math
 \varepsilon_{he}=\chi_e(v_y)-\chi_e(v_x),
-$$
+```
 
 a diameter edge contributes the oriented vector `epsilon_he r_h` to the child-shore
 KKT sum.  Internal active edges cancel.  Hence
 
-$$
+```math
 A_eu_e=\sum_h\beta_h\varepsilon_{he}r_h
-$$
+```
 
 with the same sign convention used in the pair displacement formula.
 
 The linear term in the weighted square expansion is consequently
 
-$$
+```math
 2\sum_e A_eu_e\cdot(R_{\theta_e}u_e-u_e)
 =-2\sum_eA_e(1-\cos\theta_e).
-$$
+```
 
 No response inequality is needed.
 
@@ -157,10 +157,10 @@ No response inequality is needed.
 A dangerous false shortcut would sum the one-train negative-curvature formulas and
 ignore cross terms.  The theorem does not do that.  It retains the exact term
 
-$$
+```math
 \sum_h\beta_h
 \left|\sum_e\varepsilon_{he}\Delta_e\right|^2,
-$$
+```
 
 which contains every diagonal and cross correlation between selected shears.
 Consequently the theorem makes no sign claim for the multi-shear weighted energy.
@@ -176,19 +176,19 @@ It also explicitly refuses to import the old unaudited response conclusion
 
 For a one-parameter ray `theta_e=t x_e`,
 
-$$
+```math
 \Delta_e
 =t x_eJu_e-{t^2x_e^2\over2}u_e+O(t^3).
-$$
+```
 
 Thus
 
-$$
+```math
 {1\over2}\Psi''(0)[x,x]
 =\sum_h\beta_h
 \left|\sum_e\varepsilon_{he}x_eJu_e\right|^2
 -\sum_eA_ex_e^2.
-$$
+```
 
 The factor `1/2` and the sign of the `A_e` term in (MS.14) are correct.
 
@@ -221,9 +221,9 @@ already makes the core motion non-Euclidean.
 `G` has `|L|` columns and full column rank.  The strictly positive KKT vector `beta`
 is a nonzero vector in `ker G^T`.  Therefore the number of rows satisfies
 
-$$
+```math
 |H|-|L|=\dim\ker G^T\ge1.
-$$
+```
 
 No stronger diameter-edge count is inferred.  This avoids double-counting one diameter
 edge across many selected cuts.
@@ -236,10 +236,10 @@ edge across many selected cuts.
 
 The parent phase theorem gives retained pair weight
 
-$$
+```math
 P_V={1\over D}\sum_\tau w_\tau>0.0848-o(1),
 \qquad 0<w_\tau\le1.
-$$
+```
 
 Therefore the number of distinct positive-weight trains exceeds
 `0.0848D-o(D)`.  Those trains are outer-to-outer and lie in one leaf phase; the parent

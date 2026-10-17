@@ -24,19 +24,19 @@ but explicitly leaves uniqueness of the equality case as an open problem.
 
 Consequently the currently justified conclusion from the RSJ optimization is
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\frac{e_{BB}+2s_C}{D}
 \ge \lambda_R
 =0.5921405436062881570\ldots,
 }
-$$
+```
 
 with `lambda_R` defined exactly in the RSJ report.  The stronger assertion
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\ge\lambda_R+\epsilon_R
-$$
+```
 
 for some absolute `epsilon_R>0` is not established by the cited equality theorem.
 It becomes valid if one supplies the missing equality classification or another
@@ -51,30 +51,30 @@ optimization.  It removes only the unsupported uniqueness-based strict-gap step.
 
 The parent report combines the central symmetral
 
-$$
+```math
 S=\frac12\bigl((F-o)-(F-o)\bigr)
-$$
+```
 
 with Rogalski–Saint Raymond's inequality
 
-$$
+```math
 \operatorname{area}S
 \ge
 c_R\left(\frac{\operatorname{per}S}{2}-D\right)^2,
 \qquad
 c_R=\frac{\pi}{(\pi-2)^2}.
 \tag{1.1}
-$$
+```
 
 Together with FSDB and the unrelaxed joint-cavity inequality, the parent report
 minimizes the limiting feasible region and obtains the unique parameter point
 
-$$
+```math
 p_R=2y_R<\pi,
 \qquad
 \lambda_R=0.5921405436062881570\ldots .
 \tag{1.2}
-$$
+```
 
 Its Section 5 then attempts the implication
 
@@ -130,13 +130,13 @@ is stronger than the cited theorem and cannot presently be used as a dependency.
 Assume the report-level FS.4, FD.1–FD.2, FSDB, GU, and JC inputs used by the parent
 RSJ report.  Then every unbounded post-ZF survivor sequence satisfies
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}\frac{e_{BB}+2s_C}{D}
 \ge\lambda_R,
 }
 \tag{RA.1}
-$$
+```
 
 where `lambda_R` is the positive root specified by RSJ.2 and RSJ.5.
 
@@ -145,17 +145,17 @@ where `lambda_R` is the positive root specified by RSJ.2 and RSJ.5.
 The proof through Sections 1–4 of the parent report uses only the inequality (1.1),
 not its equality classification.  For every convergent parameter subsequence with
 
-$$
+```math
 y=\lim h/D,
 \qquad
 p=\lim \operatorname{per}(F)/D,
 \qquad
 \lambda=\lim (e_{BB}+2s_C)/D,
-$$
+```
 
 that proof establishes
 
-$$
+```math
 \max\left\{
 \frac{y+\sin y}{4},
 \frac{\pi}{(\pi-2)^2}\left(\frac p2-1\right)^2
@@ -164,7 +164,7 @@ $$
 \le
 \frac{(\lambda+\min\{y,p-y\})^2}{4\pi}.
 \tag{RA.2}
-$$
+```
 
 The analytic minimization in parent Sections 3–4 proves that the least nonnegative
 `lambda` compatible with (RA.2) is `lambda_R`, attained in parameter space only at
@@ -193,12 +193,12 @@ The parent Section 5 argument becomes valid under either of the following statem
 
 Under either statement there exists an absolute `epsilon_R>0` and `D_0` such that
 
-$$
+```math
 D\ge D_0
 \Longrightarrow
 \frac{e_{BB}+2s_C}{D}\ge\lambda_R+\epsilon_R.
 \tag{RA.3}
-$$
+```
 
 #### Proof
 
@@ -206,11 +206,11 @@ Assume no such uniform gap exists.  Choose survivors with `D_j>=j` and normalize
 currency below `lambda_R+1/j`.  RA.1 forces convergence to `lambda_R`.  The unique
 parameter minimization in the parent report gives
 
-$$
+```math
 y_j\to y_R,
 \qquad
 p_j\to p_R.
-$$
+```
 
 The equality chain then forces the normalized central symmetrals to converge along a
 subsequence to a centrally symmetric diameter-one body `S_infty` with perimeter
@@ -248,15 +248,15 @@ It is therefore recorded as a targeted literature lead, not imported as a theore
 
 A general Santaló-diagram summary gives the classical lower bound
 
-$$
+```math
 16A^2\ge p(p-2D)^2(4D-p)
-$$
+```
 
 only on `2D<=p<=3D`.  The RSJ optimizer has
 
-$$
+```math
 p_R=3.0200342875\ldots D>3D,
-$$
+```
 
 so that classical branch does not reach the required endpoint.
 
@@ -266,14 +266,14 @@ so that classical branch does not reach the required endpoint.
 
 The justified frontier after this audit is
 
-$$
+```math
 \boxed{
 \lambda:=\liminf\frac{e_{BB}+2s_C}{D}\ge\lambda_R,
 \qquad
 \lambda_R=0.5921405436062881570\ldots .
 }
 \tag{6.1}
-$$
+```
 
 The claim `lambda>=lambda_R+epsilon_R` should not be treated as proved unless a later
 source supplies the missing equality theorem.
@@ -340,9 +340,9 @@ Target C module should promote the `epsilon_R` statement in its present form.
 The highest-value immediate theorem is the centrally symmetric fixed
 `(perimeter,diameter)` area lower boundary in the narrow range containing
 
-$$
+```math
 p/D=p_R=3.0200342875\ldots .
-$$
+```
 
 First extract the exact 2002 centrally symmetric complete-system theorem and its
 equality cases.  If it improves (1.1) at `p_R`, feed it into the retained RSJ

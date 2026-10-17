@@ -20,9 +20,9 @@
 
 The MAJC endpoint exclusion can be made quantitative. Keep the exact DB defect
 
-$$
+```math
 z:=\frac{Q+2s_Z}{D}
-$$
+```
 
 inside the Dirichlet outer-pocket estimate and use CC's sharp exceptional-face area
 bound. On the only interval where the new competition can beat the MA/JC floor, the
@@ -30,7 +30,7 @@ largest possible cavity capacity occurs at `z=0`.
 
 The result is
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
@@ -39,13 +39,13 @@ $$
 =0.5997852332423223371\ldots .
 }
 \tag{MD.1}
-$$
+```
 
 This is a strict explicit improvement over
 
-$$
+```math
 \lambda_{MAJC}=0.5937285472681860970\ldots .
-$$
+```
 
 The constant `lambda_MADD` is defined analytically below as the unique crossover of
 two monotone one-variable thresholds. No numerical optimization is a proof input.
@@ -57,66 +57,66 @@ two monotone one-variable thresholds. No numerical optimization is a proof input
 Take an arbitrary unbounded audited post-ZF survivor sequence. Pass to a subsequence on
 which
 
-$$
+```math
 \lambda:=\lim\frac{e_{BB}+2s_C}{D},
 \qquad
 y:=\lim\frac hD
-$$
+```
 
 exist. DB gives
 
-$$
+```math
 y\ge2\rho,
 \qquad
 \rho=\cos\rho.
 \tag{1.1}
-$$
+```
 
 Pass further so
 
-$$
+```math
 z:=\lim\frac{Q+2s_Z}{D}
-$$
+```
 
 exists. DB's exact defect inequality gives
 
-$$
+```math
 \boxed{
 0\le z\le u(y):=y-2\cos(y/2).
 }
 \tag{1.2}
-$$
+```
 
 The function `u` is strictly increasing and vanishes at `y=2rho`.
 
 MA gives the force-hull area floor
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 \Phi(y):=\frac{y+\sin y}{4},
 \tag{1.3}
-$$
+```
 
 while GU gives
 
-$$
+```math
 \limsup
 \frac{\sum_r\operatorname{area}(P_r)}{D^2}
 \le\frac\pi4\lambda^2.
 \tag{1.4}
-$$
+```
 
 Hence the attachment-cell gap obeys
 
-$$
+```math
 \boxed{
 \liminf\frac GD^2
 \ge
 \Phi(y)-\frac\pi4\lambda^2.
 }
 \tag{1.5}
-$$
+```
 
 ---
 
@@ -124,74 +124,74 @@ $$
 
 Write `P_F=per(F)`. ZE gives
 
-$$
+```math
 \frac{b-P_F}{D}
 =2y-z-\frac{P_F}{D}+o(1).
 \tag{2.1}
-$$
+```
 
 MA's perimeter part gives
 
-$$
+```math
 \frac{P_F}{D}
 \ge
 p_0(y)-o(1),
 \qquad
 p_0(y):=y+2\cos(y/2).
 \tag{2.2}
-$$
+```
 
 Since
 
-$$
+```math
 2y-p_0(y)=u(y),
-$$
+```
 
 (2.1)--(2.2) imply
 
-$$
+```math
 \boxed{
 \limsup\frac{b-P_F}{D}
 \le u(y)-z.
 }
 \tag{2.3}
-$$
+```
 
 For the total old-contact chain length, DD/OD give exactly
 
-$$
+```math
 L_{chain}
 =2h-(Q+2s_Z)-e_{BB}+c_B.
 \tag{2.4}
-$$
+```
 
 PC gives
 
-$$
+```math
 e_{BB}=d_P+Q+2(d_H+s_Z)+c_B
 =d_P+2d_H+(Q+2s_Z)+c_B.
 \tag{2.5}
-$$
+```
 
 Thus
 
-$$
+```math
 c_B\le e_{BB}-(Q+2s_Z)
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 \limsup\frac{L_{chain}}D
 \le2(y-z).
 }
 \tag{2.6}
-$$
+```
 
 DD's global Dirichlet-dual detour theorem now yields
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}}{D^2}
 \le
@@ -199,36 +199,36 @@ $$
 [2(y-z)]^{3/2}\sqrt{u(y)-z}.
 }
 \tag{2.7}
-$$
+```
 
 CC gives the exact exceptional-face estimate
 
-$$
+```math
 A_{exc}
 \le\frac{Q^2+24Q}{4\pi}.
 \tag{2.8}
-$$
+```
 
 Since `Q/D<=z+o(1)`, this gives
 
-$$
+```math
 \boxed{
 \limsup\frac{A_{exc}}{D^2}
 \le\frac{z^2}{4\pi}.
 }
 \tag{2.9}
-$$
+```
 
 Finally ZG/GU gives
 
-$$
+```math
 G\le H_{out}+A_{exc}+O(D).
 \tag{2.10}
-$$
+```
 
 Consequently every survivor limit satisfies
 
-$$
+```math
 \boxed{
 \Phi(y)-\frac\pi4\lambda^2
 \le
@@ -237,7 +237,7 @@ U(y,z):=
 +\frac{z^2}{4\pi}
 }
 \tag{2.11}
-$$
+```
 
 for some `z in [0,u(y)]`.
 
@@ -247,13 +247,13 @@ for some `z in [0,u(y)]`.
 
 We only need
 
-$$
+```math
 I=[2\rho,3/2].
-$$
+```
 
 First note `2rho>7/5`. Also `u` is increasing. The alternating Taylor lower bound
 
-$$
+```math
 \cos(3/4)
 >
 1-\frac{(3/4)^2}{2}
@@ -261,26 +261,26 @@ $$
 -\frac{(3/4)^6}{720}
 =\frac{239759}{327680}
 >\frac{29}{40}
-$$
+```
 
 gives
 
-$$
+```math
 0\le u(y)\le u(3/2)<\frac1{20}
 \qquad(y\in I).
 \tag{3.1}
-$$
+```
 
 Fix `y in I` and put
 
-$$
+```math
 x=y-z,
 \qquad v=u(y)-z.
-$$
+```
 
 For `0<=z<u(y)`, differentiation of (2.11)'s capacity gives
 
-$$
+```math
 \begin{aligned}
 \partial_zU
 ={}&-rac1{\sqrt6}
@@ -291,45 +291,45 @@ $$
 +\frac{z}{2\pi}.
 \end{aligned}
 \tag{3.2}
-$$
+```
 
 Now
 
-$$
+```math
 x\ge y-u(y)=2\cos(y/2)\ge2\cos(3/4)>\frac{29}{20},
-$$
+```
 
 so `(2x)^(3/2)>4`. Also `sqrt(v)<1/4`, `1/sqrt(6)>2/5`,
 `z<1/20`, and `pi>3`. Keeping only the second negative term in (3.2) gives
 
-$$
+```math
 \partial_zU
 <-rac25\cdot8+\frac1{120}<0.
 \tag{3.3}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \max_{0\le z\le u(y)}U(y,z)=U(y,0)
 }
 \tag{3.4}
-$$
+```
 
 throughout the critical interval.
 
 Define
 
-$$
+```math
 H(y):=
 \frac1{\sqrt6}(2y)^{3/2}\sqrt{u(y)}
 \tag{3.5}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 T(y):=
 \sqrt{
@@ -337,14 +337,14 @@ T(y):=
 }
 }
 \tag{3.6}
-$$
+```
 
 whenever the radicand is nonnegative. Equations (2.11) and (3.4) imply
 
-$$
+```math
 \boxed{\lambda\ge T(y).}
 \tag{3.7}
-$$
+```
 
 ---
 
@@ -352,42 +352,42 @@ $$
 
 Write
 
-$$
+```math
 H(y)=\frac1{\sqrt6}(2y)^{3/2}u(y)^{1/2},
 \qquad
 u'(y)=u'(y)=1+\sin(y/2)>1.
-$$
+```
 
 For `y>2rho`,
 
-$$
+```math
 H'(y)
 >
 \frac1{\sqrt6}
 \frac{(2y)^{3/2}}{2\sqrt{u(y)}}.
 \tag{4.1}
-$$
+```
 
 On `I`, `2y>14/5`, hence `(2y)^(3/2)>4`, while (3.1) gives
 `2sqrt(u)<1/2`. Therefore
 
-$$
+```math
 H'(y)>\frac25\cdot8>3.
 \tag{4.2}
-$$
+```
 
 But
 
-$$
+```math
 0\le\Phi'(y)=\frac{1+\cos y}{4}\le\frac12.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{[T(y)^2]' <0}
 \tag{4.3}
-$$
+```
 
 wherever `T` is real. Thus `T` is strictly decreasing on the critical interval.
 
@@ -398,14 +398,14 @@ wherever `T` is real. Thus `T` is strictly decreasing on the critical interval.
 The MA/JC report already proves that after minimizing over the actual force-hull
 perimeter, every survivor with diameter density `y` satisfies
 
-$$
+```math
 \boxed{\lambda\ge R(y),}
 \tag{5.1}
-$$
+```
 
 where `R(y)` is the positive root of
 
-$$
+```math
 \boxed{
 (\pi^2+1)R^2
 +4\cos(y/2)R
@@ -413,133 +413,133 @@ $$
 -\pi(y+\sin y)=0.
 }
 \tag{5.2}
-$$
+```
 
 and `R(y)` is strictly increasing for `y>=2rho`.
 
 At the left endpoint `u(2rho)=0`, so
 
-$$
+```math
 T(2\rho)^2=\frac4\pi\Phi(2\rho).
-$$
+```
 
 The defining MAJC equality gives
 
-$$
+```math
 \Phi(2\rho)-\frac\pi4R(2\rho)^2
 =\frac{(R(2\rho)+2\rho)^2}{4\pi}>0.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{R(2\rho)<T(2\rho).}
 \tag{5.3}
-$$
+```
 
 At `y=3/2` the inequalities reverse. First, the alternating Taylor estimates
 
-$$
+```math
 \cos(3/4)
 <1-\frac{(3/4)^2}{2}+\frac{(3/4)^4}{24}
 =\frac{1499}{2048},
-$$
+```
 
-$$
+```math
 \sin(3/2)
 >
 \frac32-\frac{(3/2)^3}{6}+\frac{(3/2)^5}{120}
 -\frac{(3/2)^7}{5040}
 =\frac{71493}{71680}
-$$
+```
 
 and `3141/1000<pi<22/7` give
 
-$$
+```math
 Q_R(3/2,3/5)
 <-rac{926114759}{32112640000}<0,
-$$
+```
 
 where `Q_R` denotes the left side of (5.2). Since `Q_R` increases in `R`,
 
-$$
+```math
 \boxed{R(3/2)>3/5.}
 \tag{5.4}
-$$
+```
 
 Second, the same cosine upper bound gives
 
-$$
+```math
 u(3/2)>
 \frac32-2\frac{1499}{2048}
 =\frac{37}{1024}
 >\frac9{250}.
-$$
+```
 
 Hence
 
-$$
+```math
 \sqrt{u(3/2)}>\frac3{16}.
-$$
+```
 
 Using `1/sqrt(6)>2/5`, `3^(3/2)>5`, and `Phi(3/2)<5/8`,
 
-$$
+```math
 H(3/2)>
 \frac25\cdot5\cdot\frac3{16}
 =\frac38.
-$$
+```
 
 Therefore
 
-$$
+```math
 T(3/2)^2
 <\frac4\pi\left(\frac58-\frac38\right)
 =\frac1\pi
 <\frac13
 <\left(\frac35\right)^2.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{T(3/2)<3/5<R(3/2).}
 \tag{5.5}
-$$
+```
 
 By continuity, strict monotonicity of `R`, and strict decrease of `T`, there is a
 unique
 
-$$
+```math
 \boxed{y_*\in(2\rho,3/2)}
 \tag{5.6}
-$$
+```
 
 such that
 
-$$
+```math
 R(y_*)=T(y_*).
 \tag{5.7}
-$$
+```
 
 For `y in I`, every survivor satisfies
 
-$$
+```math
 \lambda\ge\max\{R(y),T(y)\},
-$$
+```
 
 whose unique global minimum is the crossover value
 
-$$
+```math
 \boxed{\lambda_{MADD}:=R(y_*)=T(y_*).}
 \tag{5.8}
-$$
+```
 
 For `y>=3/2`, monotonicity gives
 
-$$
+```math
 \lambda\ge R(y)\ge R(3/2)>3/5>\lambda_{MADD},
-$$
+```
 
 so (5.8) is the global threshold for all `y>=2rho`. This proves MD.1. `square`
 
@@ -549,29 +549,29 @@ so (5.8) is the global threshold for all `y>=2rho`. This proves MD.1. `square`
 
 Solving the two analytic equations (5.2) and (5.7) gives
 
-$$
+```math
 \boxed{
 y_*=1.4937010344306311087\ldots,}
 \tag{6.1}
-$$
+```
 
-$$
+```math
 \boxed{
 \lambda_{MADD}=0.5997852332423223371\ldots .
 }
 \tag{6.2}
-$$
+```
 
 At this point
 
-$$
+```math
 u(y_*)=0.02603694249391398686\ldots .
-$$
+```
 
 Every sequence approaching the new endpoint must force all inequalities used in the
 minimization to equality. In particular
 
-$$
+```math
 \boxed{
 \frac hD\to y_*,
 \qquad
@@ -580,26 +580,26 @@ $$
 \frac{\operatorname{per}F}{D}\to p_0(y_*),
 }
 \tag{6.3}
-$$
+```
 
 and the MA/JC relaxation gives
 
-$$
+```math
 \boxed{
 \frac{e_{BB}}D\to\lambda_{MADD},
 \qquad
 \frac{s_C}{D}\to0.
 }
 \tag{6.4}
-$$
+```
 
 The normalized chain--chord detour tends to
 
-$$
+```math
 \frac{b-P_F}{D}
 \to u(y_*)>0.
 \tag{6.5}
-$$
+```
 
 Thus the new endpoint is not the DB-equality regime. It is a zero-face-defect,
 positive-detour regime in which the full quadratic attachment-cell gap must be carried
@@ -642,9 +642,9 @@ DB's exact topology defect, and the PC/DD outer-pocket decomposition.
 
 At the MADD endpoint, `z=o(1)` but the normalized detour
 
-$$
+```math
 u_*:=y_*-2\cos(y_*/2)=0.02603694249\ldots
-$$
+```
 
 is positive. Equality requires the DD outer-pocket bound to carry essentially the
 entire attachment-cell gap while the force hull simultaneously approaches MA's
@@ -654,10 +654,10 @@ The next closing implication is therefore an **outer-pocket equality incompatibi
 prove that a unit-contact outer walk in the MA one-gap force-hull geometry cannot
 asymptotically saturate
 
-$$
+```math
 H_{out}
 \le\frac1{\sqrt6}L_{chain}^{3/2}\sqrt{b-P_F}
-$$
+```
 
 at the required MADD values. A fixed positive loss would exclude the endpoint and
 raise the threshold again; an exact structural conflict with the one-gap force hull

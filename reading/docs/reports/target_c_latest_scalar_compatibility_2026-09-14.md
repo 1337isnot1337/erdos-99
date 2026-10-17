@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_latest_scalar_compatibility_2026-09-14.md) · source SHA-256 `c941a0967a7f9bb0ed6bce5f1ce747dac84bd3da99653d6b65b659ac5057e443`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 5 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
+
 <!-- theorem-state: {"artifact_id":"ART-8A83749A39EA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_latest_scalar_compatibility_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=b3ccc234ddc6dc996feb8c53d39b6918b2a91cb3; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -35,19 +37,19 @@ loaded-chord elimination + train-coupled mu floor
 
 The current canonical inputs are, in their exact scopes,
 
-$$
+```math
 \liminf\mu_D\ge
 \mu_{TC}:=\frac{2\pi+2\sqrt{\pi/(2\sqrt3)}}5,
 \qquad
 \sum_r P_{{\rm exc},r}\le10(e_{BB}-k),
-$$
+```
 
 and
 
-$$
+```math
 \liminf_D\frac1D\sum_r(L_r+P_{{\rm exc},r}-2d_r)
 \ge\frac\pi2(2-\sqrt3).
-$$
+```
 
 The loaded-chord companion supplies (c_B=0) and
 (e_{BB}=q-m_B) in the full-core near-disk branch. The regression below satisfies
@@ -57,77 +59,109 @@ detour.
 ## 2. Exact scalar witness
 
 Take (D=10^6), (q=8D/5), (d_H=0), (s_Z=2), (k=2), (c_I=2), and
-$$
+```math
 m_B=D/2,
 \qquad e_{BB}=q-m_B=11D/10,
 \qquad s_C=D/2-2.
-$$
+```
 Then the pinned and loaded-hull identities hold exactly:
 
-$$
+```math
 c_I+e_{BB}+s_C=q-2+k,
 \quad q-x_B=Q_B+2k,
 \quad c_B=0,
 \quad c_I+s_C+c_B=m_B+k-2.
-$$
+```
 
 The renormalized surplus is
-$$
+```math
 \mu_D=\frac{e_{BB}+2s_C-3k}{D}=2.09999,
-$$
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 which is strictly above the current train-coupled floor. Indeed (\pi<22/7) and
-$\sqrt3>5/3) imply
-\[
+\(\sqrt3>5/3) imply
+```
+
+
+```math
 \mu_{TC}<\frac{58}{35}<2.09999.
-\]
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 
 The near-disk perimeter annotation is also scalar-compatible: (q/D=8/5<\pi),
 and the hull-walk excess (x_B=q-4) exceeds
 \((\pi-8/5)D<(54/35)D). This is only a scalar perimeter decomposition; no
 polygon or outer contact walk is asserted.
+```
+
+
 
 For two abstract actual cells set
-\[
+```math
 a_r=3D/4,\quad s_r=D/4-1,\quad c_r^\partial=0,
 \quad f_r=Q_r=D/8,
-\]
+```
 with (T_r=0), (Q_r^+=D/4-4), and (P_{{\rm exc},r}=5D/8). The exact
 local Euler identity gives
-\[
+```math
 L_r=19D/8-4,
 \qquad
 L_r+P_{{\rm exc},r}-2D=D-4.
-\]
+```
 Thus the aggregate Section-122 expression is (2D-8), which is strictly larger
 than the canonical lower demand because
-\[
+```math
 \frac\pi2(2-\sqrt3)D<\frac{11}{21}D<2D-8.
-\]
+```
 
 The same cells satisfy the augmented Section-123 identity. Their dissection slack is
-\[
+```math
 d_{\rm tile}=q-2-2(a_r-2)=D/10+2,
-\]
+```
 and, writing (X_r=a_r-T_r+Q_r^+=D-4),
-\[
+```math
 e_{BB}-k=\frac12\sum_rX_r+d_{\rm tile}=11D/10-2.
-\]
+```
 The exact augmented payment inequality is met with equality:
-\[
+```math
 \sum_r(L_r+P_{{\rm exc},r}-2a_r)
 =10(e_{BB}-k-d_{\rm tile})-4\sum_rM_r,
-\]
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+````text
+```
 where (M_r=7D/8-4). Also
 \(sum_rP_{{\rm exc},r}=5D/4\le10(e_{BB}-k)).
+````
+
+
 
 The Section-85 train-end inequality is compatible: with total (f=D/4),
-\[
+```math
 q-k+2f>\frac{49}{25}D,
-\]
-while (R_4/D^2$ may have its canonical near-disk value
-$\pi/(2\sqrt3)), for which (2\sqrt{R_4}<(49/25)D) under the elementary
+```
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
+while (R_4/D^2\) may have its canonical near-disk value
+\(\pi/(2\sqrt3)), for which (2\sqrt{R_4}<(49/25)D) under the elementary
 rational bounds used by the certificate. The Section-89 same-cell train budget and
 the local zero-host area inequalities have similarly strict rational margins.
+```
+
+
 
 Every assertion is checked by `Fraction` arithmetic in the certificate. The
 occurrence-counted boundary and repeated-vertex conventions are not silently
@@ -177,12 +211,20 @@ second-order loss. It likewise does not supply global optimality.
 
 The full-core branch still requires a theorem of one of these forms:
 
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 1. an upper bound on the actual occurrence-counted
-   \(\sum_r(L_r-2d_r)$ strong enough to contradict Section 122 after the exact
+   \(\sum_r(L_r-2d_r)\) strong enough to contradict Section 122 after the exact
    Section-123 payment;
 2. a source-preserving finite deformation with the same cardinality, all pairwise
    distances at least one, and diameter strictly below (D(n)); or
 3. an exact unit equilateral triangle forced by the source geometry.
+```
+
+
 
 The Type-I macroscopic internal-chamber/exterior-cap branch remains separately open;
 the scalar witness does not address it.
@@ -233,7 +275,7 @@ Thue's triangular-lattice construction only as an asymptotic benchmark; it does 
 provide the required every-cardinality/every-minimizer theorem. The primary paper
 by Pach, Radoičić, and Vondrák, *On the diameter of separated point sets with many
 nearly equal distances*, Theorem 1.1, proves a lower bound of order
-$n^{2/(d-1)}$ when $\Omega(n^2)$ pairs have distances in one interval of
+$`n^{2/(d-1)}`$ when $`\Omega(n^2)`$ pairs have distances in one interval of
 length one. That hypothesis is not supplied by the C-II contact/cell ledgers: they
 give unit contacts and local rhombic faces, not a quadratic population of nearly
 equal long distances. Consequently the result does not bound the occurrence-counted

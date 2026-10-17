@@ -115,4 +115,3 @@ Regression coverage:
 test needs the actual Python 3.14/Bubblewrap sandbox and has not been
 independently executed in the available Python 3.12 environment. The private
 source worker reports complete verification of the corresponding fix.
-

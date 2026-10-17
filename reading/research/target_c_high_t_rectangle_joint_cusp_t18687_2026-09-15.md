@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_rectangle_joint_cusp_t18687_2026-09-15.md) · source SHA-256 `9a88f748bde245709a990de8d808783124ffb4f4645f0c93ca887436668758e6`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e934e1807b08f42ac4d2a176fb547eac34b6ae32", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_rectangle_joint_cusp_t18687_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "5f56ae53dde1ac59d0c2c32f9ad2a69fba9b5c686cfbfd7759bd60d198ea1091"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -16,17 +18,17 @@
 
 The high-`t` rectangle contains a consecutive row block
 
-$$
+```math
 A_*=(\tau_1,\ldots,\tau_m),
 \qquad m>0.0000226D-o(D),
-$$
+```
 
 and, after deleting only `O(1)` orientation-ambiguous transverse trains and choosing the larger oriented side, a common column family
 
-$$
+```math
 B_+,
 \qquad |B_+|>0.1567D-o(D),
-$$
+```
 
 such that every row crosses every column.
 
@@ -39,18 +41,18 @@ This note spends four global currencies on one **adjacent row pair inside this s
 
 For some nonhub adjacent pair
 
-$$
+```math
 \tau_i,\tau_{i+1}
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{
 N_i+L_i+D B_i+S_i+S_{i+1}<1{,}109{,}000,
 }
 \tag{JC.1}
-$$
+```
 
 where
 
@@ -61,45 +63,46 @@ where
 
 Consequently the same adjacent pair has
 
-$$
+```math
 N_i,L_i\le1{,}108{,}999,
 \qquad
 B_i<{1{,}109{,}000\over D},
 \tag{JC.2}
-$$
+```
 
-$$
+```math
 \|F_{i+1}-F_i\|<1{,}109{,}000,
 \tag{JC.3}
-$$
+```
 
 and projective row-phase gap
 
-$$
+```math
 \boxed{
 d_{\mathbb{RP}^1}(u_i,u_{i+1})
 <{7.08\times10^6\over D}+o(D^{-1}).}
 \tag{JC.4}
-$$
+```
 
 Moreover, after discarding at most half of `B_+`, there remains a common transverse family
 
-$$
+```math
 B_0,
 \qquad
 \boxed{|B_0|>0.0783D-o(D),}
 \tag{JC.5}
-$$
+```
 
 such that every `b in B_0` crosses **both** selected rows with angular excess
 
-$$
+```math
 \boxed{
 0<\theta(\tau_i,b)-{\pi\over3},
 \theta(\tau_{i+1},b)-{\pi\over3}
 <{1.416\times10^7\over D}+o(D^{-1}).
 }
 \tag{JC.6}
+```
 
 The columns in `B_0` are pairwise noncrossing and occur in the same order along both rows. Thus the unresolved high-`t` obstruction is now a bounded-complexity KKT/terminal cusp embedded in a macroscopic ordered near-triangular ladder.
 
@@ -109,40 +112,41 @@ The columns in `B_0` are pairwise noncrossing and occur in the same order along 
 
 For an internal row interface put
 
-\[
+```math
 C_i:=N_i+L_i+D B_i.
-$$
+```
 
 The already-audited global budgets give
 
-$$
+```math
 \sum_iN_i\le2\pi D,
-$$
+```
 
-$$
+```math
 \sum_iL_i\le(10T-4\pi)D+o(D),
-$$
+```
 
 and
 
-$$
+```math
 \sum_iD B_i\le2D.
-$$
+```
 
 Therefore, even after restricting to the rectangle block,
 
-$$
+```math
 \boxed{
 \sum_{i\in A_*}C_i
 \le(10T-2\pi+2)D+o(D).
 }
 \tag{JC.7}
+```
 
 At `T=1.8687`, the coefficient is
 
-\[
+```math
 10T-2\pi+2=14.40381469\ldots .
-$$
+```
 
 ---
 
@@ -150,35 +154,35 @@ $$
 
 Use the consistent oriented representatives from the rectangle phase theorem. For a row `tau_j` and column `b in B_+`, write
 
-$$
+```math
 \delta_{jb}
 :=\theta(\tau_j,b)-{\pi\over3}>0
-$$
+```
 
 on the common oriented branch, and set
 
-$$
+```math
 S_j:=\sum_{b\in B_+}\delta_{jb}.
 \tag{JC.8}
-$$
+```
 
 All these crossings are distinct strict rhombi. Hence the canonical global angular-defect budget gives
 
-$$
+```math
 \sum_jS_j<C_{phase}D,
 \qquad
 C_{phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
 \tag{JC.9}
-$$
+```
 
 Summing adjacent two-row costs,
 
-$$
+```math
 \boxed{
 \sum_j(S_j+S_{j+1})<2C_{phase}D.
 }
 \tag{JC.10}
-$$
+```
 
 ---
 
@@ -186,59 +190,59 @@ $$
 
 For each internal rectangle interface define
 
-$$
+```math
 J_i:=C_i+S_i+S_{i+1}.
 \tag{JC.11}
-$$
+```
 
 Delete the unique hub region if it lies inside the block, and delete the `O(1)` end indices. This changes the available row-boundary count by only `O(1)`, while
 
-$$
+```math
 |A_*|>0.0000226D-o(D).
-$$
+```
 
 By (JC.7) and (JC.10),
 
-$$
+```math
 \sum_iJ_i
 <\left(10T-2\pi+2+2C_{phase}\right)D+o(D).
-$$
+```
 
 The exact certificate proves
 
-$$
+```math
 {10T-2\pi+2+2C_{phase}\over0.0000226}
 <1{,}108{,}000.
 \tag{JC.12}
-$$
+```
 
 Thus for every sufficiently large source some eligible nonhub interface satisfies the deliberately rounded bound
 
-$$
+```math
 J_i<1{,}109{,}000.
-$$
+```
 
 This proves (JC.1)--(JC.2).
 
 The exact Section-157 cut resultants are
 
-$$
+```math
 F_j=\sum_h\beta_h\varepsilon_{hj}r_h,
 \qquad |r_h|=D.
-$$
+```
 
 Therefore
 
-$$
+```math
 \|F_{i+1}-F_i\|
 \le D B_i,
-$$
+```
 
 which gives (JC.3). The reverse triangle inequality also gives
 
-$$
+```math
 |A_{i+1}-A_i|<1{,}109{,}000.
-$$
+```
 
 ---
 
@@ -246,38 +250,38 @@ $$
 
 Let their real oriented contact phases be `alpha_i,alpha_{i+1}`. For every common column `b`,
 
-$$
+```math
 \delta_{ib}-\delta_{i+1,b}
 =\alpha_{i+1}-\alpha_i.
-$$
+```
 
 Hence
 
-$$
+```math
 |\alpha_{i+1}-\alpha_i|
 \le\delta_{ib}+\delta_{i+1,b}.
-$$
+```
 
 Sum over `B_+`:
 
-$$
+```math
 |B_+|\,|\alpha_{i+1}-\alpha_i|
 \le S_i+S_{i+1}
 <1{,}109{,}000.
-$$
+```
 
 Using
 
-$$
+```math
 |B_+|>0.1567D-o(D),
-$$
+```
 
 the exact certificate yields
 
-$$
+```math
 |\alpha_{i+1}-\alpha_i|
 <{7.08\times10^6\over D}+o(D^{-1}),
-$$
+```
 
 which is (JC.4).
 
@@ -287,33 +291,33 @@ which is (JC.4).
 
 For `b in B_+` put
 
-$$
+```math
 x_b:=\delta_{ib}+\delta_{i+1,b}\ge0.
-$$
+```
 
 Then
 
-$$
+```math
 \sum_{b\in B_+}x_b=S_i+S_{i+1}<1{,}109{,}000.
-$$
+```
 
 By Markov, at least half of `B_+` satisfies
 
-$$
+```math
 x_b\le{2(1{,}109{,}000)\over|B_+|}.
-$$
+```
 
 Call this retained family `B_0`. Then
 
-$$
+```math
 |B_0|>|B_+|/2>0.0783D-o(D),
-$$
+```
 
 and the exact certificate gives
 
-$$
+```math
 x_b<{1.416\times10^7\over D}+o(D^{-1}).
-$$
+```
 
 Since each summand in `x_b` is nonnegative, both individual row-column angular defects satisfy (JC.6).
 
@@ -327,19 +331,19 @@ The selected interface is nonhub. Hence every switching actual diameter interval
 
 The region contains at most
 
-$$
+```math
 \left\lfloor{1{,}108{,}999\over5}\right\rfloor
 =221{,}799
-$$
+```
 
 bounded nonquadrilateral faces, because each contributes at least five terminal face-side incidences.
 
 The terminal-topology argument gives
 
-$$
+```math
 |\Gamma(\tau_i)\triangle\Gamma(\tau_{i+1})|
 \le L_i\le1{,}108{,}999.
-$$
+```
 
 The exact layer reaction is nonzero by adjacent-strip reaction nondegeneracy and is generated by one or two actual switching diameter bars by planar conic Caratheodory.
 

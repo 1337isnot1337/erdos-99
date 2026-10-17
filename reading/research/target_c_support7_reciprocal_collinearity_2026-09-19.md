@@ -15,11 +15,11 @@
 
 The audited support-seven endpoint theorem gives pairwise distinct non-ground reciprocal values `y_1,...,y_7` and relation graph
 
-$$
+```math
 R=K_7-L,
 \qquad
 L=C_7\ \text{or}\ C_3\sqcup C_4.
-$$
+```
 
 The remaining nonconvex `H6/H7` branches can contain collinear reciprocal points. This note classifies exactly which non-ground collinearities are even combinatorially possible.
 
@@ -29,16 +29,16 @@ The remaining nonconvex `H6/H7` branches can contain collinear reciprocal points
 
 Let `S` be a set of at least three pairwise distinct non-ground reciprocal points lying on one line. If some `i in S` had two relation neighbors `j,k in S`, then
 
-$$
+```math
 y_i-y_j\parallel y_i-y_k.
-$$
+```
 
 The two corresponding nonzero relation sides of the physical pentagon `F_i` would be projectively parallel. The bounded-pentagon no-parallel-side theorem forbids this. Hence
 
-$$
+```math
 \boxed{\Delta(R[S])\le1.}
 \tag{1.1}
-$$
+```
 
 Equivalently, every vertex of `L[S]` is missing all but at most one of the other vertices in `S`.
 
@@ -56,14 +56,14 @@ A collinear triple can only be three consecutive vertices of the missing 7-cycle
 
 Thus
 
-$$
+```math
 \boxed{
 L=C_7:\quad
 |S|\ge3\text{ collinear}\Longrightarrow
 |S|=3\text{ and }L[S]\cong P_3.
 }
 \tag{2.1}
-$$
+```
 
 ### Missing graph `L=C_3\sqcup C_4`
 
@@ -78,7 +78,7 @@ A collinear four-set, if it occurs, must be exactly the four vertices of the mis
 
 Hence
 
-$$
+```math
 \boxed{
 L=C_3\sqcup C_4:\quad
 S\text{ collinear},\ |S|\ge3
@@ -86,7 +86,7 @@ S\text{ collinear},\ |S|\ge3
 L[S]\in\{C_3,P_3,C_4\},
 }
 \tag{2.2}
-$$
+```
 
 with `C_4` occurring only when `S` is the entire missing four-cycle.
 
@@ -102,17 +102,17 @@ If `ij` were a relation edge with `i,j in S`, then the reciprocal difference `y_
 
 Thus
 
-$$
+```math
 \boxed{R[S]\text{ has no edges}.}
 \tag{3.1}
-$$
+```
 
 Equivalently `L[S]` is complete. Since `L` is 2-regular,
 
-$$
+```math
 \boxed{|S|\le3.}
 \tag{3.2}
-$$
+```
 
 More precisely:
 

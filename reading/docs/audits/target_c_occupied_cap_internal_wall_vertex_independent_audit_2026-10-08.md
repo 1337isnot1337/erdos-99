@@ -28,9 +28,9 @@ Let `A` be a canonical Target C-II source in contact-minimal, then actual-diamet
 
 Then `P` has at least two edges, so it has an internal vertex `v` whose two incident `Q` sides are actual unit contacts. Consequently the exact one-guard capacity theorem `C-EXTERIOR-INTERNAL-WALL-ONE-GUARD-CAPACITY` applies to `Q,v`: with `S_Q` the complete set of source labels in `Q` off the unit-contact path,
 
-$$
+```math
 \operatorname{Pack}_1\{x\in\operatorname{int}(Q):|x-w|>1\text{ for every path vertex }w\ne v\}=|S_Q|.
-$$
+```
 
 In particular, no fixed-cell strict packet of size `|S_Q|+1` can replace `S_Q` and `v` after omitting only that internal guard. All labels on the cap's source-hull arc remain included in `S_Q`.
 
@@ -40,10 +40,10 @@ The canonical hull-augmentation theorem gives a simple actual-unit-contact path 
 
 The canonical occupied-cap chord threshold `C-LOADED-EXTERIOR-CAP-CHORD-THRESHOLD` gives
 
-$$
+```math
 |a-b|\ge \tau_D=\frac{3D}{\sqrt{3D^2+4}+1}>\frac32>1
 \qquad(D\ge9).
-$$
+```
 
 If `P` had exactly one edge, that edge would join `b` directly to `a`. Since each edge of `P` is an actual unit contact, it would give `|a-b|=1`, contradicting the occupied-cap chord bound. Hence `P` has at least two edges. Any simple path with at least two edges has an internal vertex, and both incident path edges are actual unit contacts by the definition of `P`.
 

@@ -36,9 +36,9 @@ The hostile audit of Section 126 explicitly states that canonical Section 63 cho
 one distinguished exterior occurrence of **every** loaded force-hull vertex in cyclic
 order and partitions one full outer-face boundary walk into consecutive intervals
 
-$$
+```math
 W_i:b_i\leadsto b_{i+1}.
-$$
+```
 
 Hence an internal occurrence of a loaded physical vertex cannot be its distinguished
 occurrence.  The same physical vertex has at least two occurrences on the outer-face
@@ -54,19 +54,19 @@ Let `z` be positively diameter-loaded in the fully force-visible contact core `G
 Translate `z` to the origin.  Since `z` is an extreme source-hull vertex, choose a
 linear functional `ell` such that
 
-$$
+```math
 f_i:=\ell(p_i)>0
-$$
+```
 
 for every other core vertex.
 
 For the actual selected-stress matrix
 
-$$
+```math
 \Omega=L_C(\alpha)-L_H(\beta)\succeq0,
 \qquad
 \Omega P_x=\Omega P_y=0,
-$$
+```
 
 let `M` be the principal matrix obtained by deleting the row and column of `z`.
 Because `p_z=0`, both coordinate columns remain in `ker M`, hence so does `f`.
@@ -74,16 +74,16 @@ Because `p_z=0`, both coordinate columns remain in `ker M`, hence so does `f`.
 Suppose `G-z` has contact components `V_1,...,V_k`.  Put arbitrary constants `a_r` on
 the components and set `w_i=a_r f_i` for `i in V_r`.  The matrix
 
-$$
+```math
 N=\operatorname{diag}(f)M\operatorname{diag}(f)
-$$
+```
 
 is PSD and has zero row sums.  Its quadratic-form identity is
 
-$$
+```math
 a^TNa
 =-\sum_{i<j}N_{ij}(a_{r(i)}-a_{r(j)})^2.
-$$
+```
 
 There are no contact edges between distinct `V_r`; a positive diameter edge across
 two components has `M_{ij}=+\beta_{ij}` and therefore contributes a strictly negative
@@ -129,28 +129,28 @@ An internal Section-63 route vertex is therefore unloaded.  C26 makes its full c
 degree at least three, so the degree-two straight-event population is exactly zero.
 The current main inequality
 
-$$
+```math
 2V_2(\beta)+10E_\perp(\beta)\ge S_\beta
-$$
+```
 
 reduces to
 
-$$
+```math
 10E_\perp(\beta)\ge S_\beta.
-$$
+```
 
 At `beta=pi/6`, main's certified
 
-$$
+```math
 S_{\pi/6}/D\ge0.3933368069590823665\ldots-o(1)
-$$
+```
 
 gives
 
-$$
+```math
 E_\perp(\pi/6)/D
 \ge0.03933368069590823665\ldots-o(1).
-$$
+```
 
 The factor-ten loss remains legitimate: a triangle-free contact vertex has degree at
 most five, so it supports at most five outer-face occurrences, and one selected extra

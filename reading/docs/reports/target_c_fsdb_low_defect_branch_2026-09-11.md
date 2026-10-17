@@ -24,29 +24,29 @@ whose route-map status remains unpromoted.
 
 The excluded subbranch is
 
-$$
+```math
 s_Z=0,
 \qquad x_B+Q=o(D),
 \tag{1.1}
-$$
+```
 
 where `x_B=b-q` is outer-walk excess and `Q` is bounded-face defect. The proof gives
 
-$$
+```math
 \operatorname{area}F\le
 \left(\frac{\pi^2}{16}+o(1)\right)D^2,
 \tag{1.2}
-$$
+```
 
 while FSDB gives
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 A_{FS}:=\frac{2\rho+\sin(2\rho)}4
 >\frac{\pi^2}{16}.
 \tag{1.3}
-$$
+```
 
 The strict constant gap is exact, not numerical.
 
@@ -60,64 +60,64 @@ Assume a sequence of C-II post-ZF sources satisfies (1.1), with `s_Z=0`, and let
 Write `h=|H|`, `q=|B_+|`, and `b` for the outer contact-face walk length. The exact
 post-ZF circuit identity is
 
-$$
+```math
 b+Q=2h.
 \tag{2.1}
-$$
+```
 
 By definition `b=q+x_B`, hence
 
-$$
+```math
 2h=q+x_B+Q.
 \tag{2.2}
-$$
+```
 
 The loaded vertices are consecutive vertices of the convex force hull and are
 unit-separated. Therefore
 
-$$
+```math
 q\le\operatorname{per}F\le\pi D.
 \tag{2.3}
-$$
+```
 
 From (1.1)--(2.3),
 
-$$
+```math
 \frac hD\le\frac\pi2+o(1).
 \tag{2.4}
-$$
+```
 
 Let `f` be the number of bounded nonquadrilateral faces. Since every such face
 contributes at least one to `Q`,
 
-$$
+```math
 f\le Q=o(D).
 \tag{2.5}
-$$
+```
 
 The stopped-train count in the actual contact complex is
 
-$$
+```math
 T=\frac{b+Q}{2}+2f=h+2f.
 \tag{2.6}
-$$
+```
 
 Thus
 
-$$
+```math
 T\le\frac\pi2D+o(D).
 \tag{2.7}
-$$
+```
 
 The train-crossing graph is triangle-free. In the strict-rhombus part, each bounded
 quadrilateral face is the crossing of two train tracks, so if `R` is the number of
 bounded quadrilateral faces, Mantel's theorem gives
 
-$$
+```math
 R\le\frac{T^2}{4}
 \le\left(\frac{\pi^2}{16}+o(1)\right)D^2.
 \tag{2.8}
-$$
+```
 
 Every strict unit rhombus has area at most one, so the total quadrilateral area is at
 most `R`.
@@ -128,48 +128,48 @@ For the outer pockets, OP adds each missing force-hull side and obtains `a` conv
 pockets, where `a\le x_B`. If `k_P` is the number of original unit-contact edges on
 the boundary chain of a pocket `P`, OP's exact incidence identity gives
 
-$$
+```math
 \sum_P k_P=x_B+2a=o(D).
 \tag{2.9}
-$$
+```
 
 The closing force-hull chord has length at most `k_P`, by the triangle inequality
 along the unit contact chain. Hence
 
-$$
+```math
 \operatorname{per}P\le2k_P,
 \qquad
 \operatorname{area}P\le\frac{\operatorname{per}(P)^2}{4\pi}
 \le\frac{k_P^2}{\pi}.
 \tag{2.10}
-$$
+```
 
 Summing and using (2.9),
 
-$$
+```math
 \sum_P\operatorname{area}P
 \le\frac1\pi\left(\sum_P k_P\right)^2
 =o(D^2).
 \tag{2.11}
-$$
+```
 
 For exceptional bounded faces, let their boundary lengths be `\ell_i`. The finite
 face-defect budget gives
 
-$$
+```math
 \sum_i(\ell_i-4)=Q=o(D),
 \tag{2.12}
-$$
+```
 
 so the number of exceptional faces and their total boundary length are `o(D)`. Each
 exceptional face has area at most `\ell_i^2/(4\pi)`, and therefore
 
-$$
+```math
 \sum_i\operatorname{area}F_i
 \le\frac1{4\pi}\left(\sum_i\ell_i\right)^2
 =o(D^2).
 \tag{2.13}
-$$
+```
 
 The augmented contact subdivision partitions `F` into its bounded quadrilateral
 faces, bounded exceptional faces, and outer pockets. Combining (2.8), (2.11), and
@@ -177,10 +177,10 @@ faces, bounded exceptional faces, and outer pockets. Combining (2.8), (2.11), an
 
 FSDB supplies (1.3). Since
 
-$$
+```math
 \frac{2\rho+\sin(2\rho)}4-rac{\pi^2}{16}>0,
 \tag{2.14}
-$$
+```
 
 the two asymptotic bounds contradict each other. `square`
 
@@ -188,27 +188,27 @@ the two asymptotic bounds contradict each other. `square`
 
 The FSDB reports provide a rational certificate. The Dottie root satisfies
 
-$$
+```math
 \frac{739}{1000}<\rho<\frac{37}{50},
-$$
+```
 
 which implies
 
-$$
+```math
 A_{FS}>\frac{154451}{250000}.
-$$
+```
 
 Also `\pi<22/7`, hence
 
-$$
+```math
 \frac{\pi^2}{16}<\frac{121}{196}.
-$$
+```
 
 Finally
 
-$$
+```math
 154451\cdot196=30272396>30250000=121\cdot250000.
-$$
+```
 
 Therefore (2.14) is proved without decimal evaluation.
 
@@ -236,10 +236,10 @@ partition because `F` is the convex hull of the nonisolated core.
 
 The low-defect circuit subbranch is excluded:
 
-$$
+```math
 \boxed{s_Z=0\quad\Longrightarrow\quad x_B+Q\not=o(D).}
 \tag{5.1}
-$$
+```
 
 This is independent of the previously known near-matching stability bound. It uses a
 global force-hull area contradiction rather than a train-end count.
@@ -268,9 +268,9 @@ are still:
 The next useful inequality would be a quantitative upper bound on force-hull area in
 the remaining linear-defect phase, for example one coupling
 
-$$
+```math
 x_B+Q+2s_Z\ge(2\rho/3-o(1))D
-$$
+```
 
 to a strict area loss below `A_FS`, while retaining the exceptional-face and isolate
 terms. No such upper tradeoff is currently proved.

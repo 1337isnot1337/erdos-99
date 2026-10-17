@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_global_straight_event_unloaded_refinement_2026-09-15.md) · source SHA-256 `8b08c2458e55650918edd17f8fe66b256465477eaac0b6d086f610391d0aee80`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cc39302c3cb55815b9d55d7a25a66293faa6714b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_global_straight_event_unloaded_refinement_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6bdaa5b1dfba3cc9a9dbf85e13dd0895a361662713f021518b23786dca2b97b7"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -19,9 +21,9 @@ That term is actually zero in the same proof-only stack. The previously proved l
 
 At the present low-`t` endpoint the transverse-contact floor becomes
 
-$$
+```math
 \boxed{0.6402677128496573613\ldots D-o(D)}.
-$$
+```
 
 The numerical gain over current main is modest. The structural gain is exact: there is no loaded degree-two or bridge-mediated straight-event branch.
 
@@ -31,39 +33,39 @@ The numerical gain over current main is modest. The structural gain is exact: th
 
 Let
 
-$$
+```math
 W_i:b_i\leadsto b_{i+1}
-$$
+```
 
 be the distinguished Section-63 outer routes and let
 
-$$
+```math
 x_B=b-q
-$$
+```
 
 be their total number of internal outer-walk occurrences. Fix
 
-$$
+```math
 0<\beta\le\pi/6,
 \qquad
 c_\beta:=1-\cos\beta.
-$$
+```
 
 The exact directional-energy identity on all distinguished routes gives
 
-$$
+```math
 A_\beta\le {d_{out}\over c_\beta}
-$$
+```
 
 bad edge occurrences. Since one bad edge occurrence spoils at most two internal occurrences, the current global theorem proves
 
-$$
+```math
 \boxed{
 S_\beta
 \ge x_B-{2d_{out}\over c_\beta},
 }
 \tag{GU.1}
-$$
+```
 
 where `S_beta` is the number of `beta`-straight internal occurrences.
 
@@ -86,28 +88,28 @@ The proved loaded-internal-route exclusion theorem uses the actual Section-63 oc
 
 Hence
 
-$$
+```math
 \boxed{
 \text{every physical internal vertex of every }W_i\text{ is unloaded.}
 }
 \tag{GU.2}
-$$
+```
 
 Canonical C26 then gives
 
-$$
+```math
 \boxed{3\le\deg_C(x)\le5}
 \tag{GU.3}
-$$
+```
 
 for every internal route vertex `x`.
 
 In particular the degree-two straight-event subcount in the current global theorem vanishes identically:
 
-$$
+```math
 \boxed{S_2(\beta)=0.}
 \tag{GU.4}
-$$
+```
 
 This is stronger than bounding `S_2` by outer bridges.
 
@@ -119,23 +121,23 @@ At each physical vertex supporting one or two straight occurrences, use the curr
 
 One physical undirected contact edge has only two endpoints. Therefore
 
-$$
+```math
 \boxed{
 2E_\perp(\beta)\ge S_\beta,
 }
 \tag{GU.5}
-$$
+```
 
 and (GU.1) gives the finite inequality
 
-$$
+```math
 \boxed{
 2E_\perp(\beta)
 \ge
 x_B-{2d_{out}\over1-\cos\beta}.
 }
 \tag{GU.6}
-$$
+```
 
 No bridge count appears. For `beta=pi/6`, every selected contact has absolute transverse component strictly greater than `1/2` relative to the chord direction of its associated loaded-hull interval.
 
@@ -147,26 +149,26 @@ The residual factor two in (GU.5) is genuine local multiplicity: one transverse 
 
 On a convergent full-core Type-II subsequence write
 
-$$
+```math
 t={q-k\over D},
 \qquad
 \kappa={k\over D},
 \qquad
 \delta={d_{out}\over D}.
-$$
+```
 
 Near-disk perimeter convergence gives
 
-$$
+```math
 {x_B\over D}
 ={b-q\over D}
 =\pi+\delta-t-\kappa+o(1).
 \tag{GU.7}
-$$
+```
 
 Divide (GU.6) by `D`. For every fixed `beta<=pi/6`,
 
-$$
+```math
 \boxed{
 \liminf {E_\perp(\beta)\over D}
 \ge {1\over2}
@@ -176,7 +178,7 @@ $$
 \right].
 }
 \tag{GU.8}
-$$
+```
 
 The `+delta` from the total outer-walk internal-occurrence count is now retained instead of being canceled by a bridge allowance.
 
@@ -186,50 +188,50 @@ The `+delta` from the total outer-walk internal-occurrence count is now retained
 
 Take
 
-$$
+```math
 \beta={\pi\over6},
 \qquad
 c_*:=1-{\sqrt3\over2}.
-$$
+```
 
 Then
 
-$$
+```math
 {2\over c_*}-1
 =7+4\sqrt3
 =13.928203230275509\ldots .
 \tag{GU.9}
-$$
+```
 
 The low-`t` network squeeze is
 
-$$
+```math
 2\delta+{\kappa\over2}\le R(t),
 \qquad
 R(t):={9t\over2}-2\pi-C_0.
 \tag{GU.10}
-$$
+```
 
 To minimize the right side of (GU.8), maximize
 
-$$
+```math
 \kappa+(7+4\sqrt3)\delta
-$$
+```
 
 under (GU.10). Since the coefficient of `delta` is greater than four, the worst point is
 
-$$
+```math
 \boxed{
 \delta={R(t)\over2},
 \qquad
 \kappa=0.
 }
 \tag{GU.11}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \liminf {E_\perp\over D}
 \ge
@@ -240,7 +242,7 @@ $$
 \right].
 }
 \tag{GU.12}
-$$
+```
 
 The current-main global theorem has the coefficient `1/(1-sqrt3/2)=4+2sqrt3` on `R(t)` inside the brackets. Equation (GU.12) is smaller by exactly `R(t)/2` inside the brackets, hence improves the final contact density by `R(t)/4`.
 
@@ -250,34 +252,35 @@ The current-main global theorem has the coefficient `1/(1-sqrt3/2)=4+2sqrt3` on 
 
 At
 
-$$
+```math
 t_{42}=C_{146}+0.0013751
 =1.8208886379794447\ldots,
 \qquad
 R(t_{42})=0.00576795,
-$$
+```
 
 (GU.12) gives
 
-$$
+```math
 \boxed{
 {E_\perp\over D}
 \ge
 0.64026771284965736138024\ldots-o(1).
 }
 \tag{GU.13}
+```
 
 The improvement over the current-main value
 
-\[
+```math
 0.6388257253496573613\ldots
-$$
+```
 
 is exactly
 
-$$
+```math
 {R(t_{42})\over4}=0.0014419875.
-$$
+```
 
 Every counted contact has absolute transverse component strictly greater than `1/2`.
 

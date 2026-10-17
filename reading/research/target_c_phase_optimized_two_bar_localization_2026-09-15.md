@@ -18,32 +18,32 @@ Once the adjacent-strip translation obstruction has been reduced to one or two l
 
 Re-optimize the common-center path only for this phase width. A simple rational choice gives an adjacent physical strip whose contact-opening cone has angular width
 
-$$
+```math
 \boxed{
 \varepsilon<{18782\over D}+o(D^{-1}).
 }
 \tag{PO.1}
-$$
+```
 
 For any **minimal two-bar** tangent certificate on that strip, the two actual diameter edges therefore have projective angle
 
-$$
+```math
 \boxed{
 \eta<{18782\over D}+o(D^{-1})
 }
 \tag{PO.2}
-$$
+```
 
 and, after orienting the two unordered diameter segments to realize that projective angle, their corresponding endpoint pairs satisfy
 
-$$
+```math
 \boxed{
 |x_2-x_1|<18782+o(1),
 \qquad
 |y_2-y_1|<18782+o(1).
 }
 \tag{PO.3}
-$$
+```
 
 Thus the TB2 obstruction is no longer merely finite-dimensional. It is spatially localized at `O(1)` scale inside a source whose diameter tends to infinity.
 
@@ -55,38 +55,38 @@ The one-bar branch remains separate and is not claimed to satisfy this two-chord
 
 Use the audited fan inputs
 
-$$
+```math
 {\sum_\tau w_\tau d_\tau\over\sum_\tau w_\tau}
 >0.7404-o(1),
 \tag{PO.4}
-$$
+```
 
-$$
+```math
 {1\over D}\sum_\tau w_\tau>0.0848-o(1),
 \tag{PO.5}
-$$
+```
 
 and
 
-$$
+```math
 N_C<1.063D+o(D).
 \tag{PO.6}
-$$
+```
 
 Fix the rational good-leaf threshold and upper-center quantile
 
-$$
+```math
 \boxed{
 \lambda={6794\over10000}=0.6794,
 \qquad
 r={4803\over10000}=0.4803.
 }
 \tag{PO.7}
-$$
+```
 
 The usual weighted thresholding gives distinct good-leaf density
 
-$$
+```math
 \begin{aligned}
 g
 &={ (0.7404-\lambda)(0.0848)\over1.063-\lambda}\\
@@ -94,11 +94,11 @@ g
 &=0.01348488008\ldots .
 \end{aligned}
 \tag{PO.8}
-$$
+```
 
 Every good leaf has at least
 
-$$
+```math
 \begin{aligned}
 d_{top}
 &=\lambda-(1-r)(1.063)\\
@@ -106,11 +106,11 @@ d_{top}
 &=0.1269589
 \end{aligned}
 \tag{PO.9}
-$$
+```
 
 neighbors in the top center block, and at least
 
-$$
+```math
 \begin{aligned}
 d_{low}
 &=\lambda-r(1.063)\\
@@ -118,27 +118,27 @@ d_{low}
 &=0.1688411
 \end{aligned}
 \tag{PO.10}
-$$
+```
 
 neighbors below the selected top-block center phase.
 
 Double counting exactly as in the triple-small theorem gives one center train `gamma` crossing a simple complement-dual path
 
-$$
+```math
 P=(\tau_1,\ldots,\tau_m)
-$$
+```
 
 with
 
-$$
+```math
 \boxed{
 m>pD-o(D),}
 \tag{PO.11}
-$$
+```
 
 where
 
-$$
+```math
 \begin{aligned}
 p
 &={d_{top}g\over r(1.063)}\\
@@ -146,7 +146,7 @@ p
 &=0.003353238073\ldots .
 \end{aligned}
 \tag{PO.12}
-$$
+```
 
 No switch-count budget is spent in this selection.
 
@@ -156,89 +156,89 @@ No switch-count budget is spent in this selection.
 
 Use the same real phase representatives as in the audited triple-small proof. Let
 
-$$
+```math
 \alpha_\gamma
-$$
+```
 
 be the chosen center phase and
 
-$$
+```math
 \beta_j
-$$
+```
 
 be the real phase of leaf train `tau_j`, coherently oriented with the Section-157 rooted shore vector `u_j`. Put
 
-$$
+```math
 q_j:=\beta_j-\alpha_\gamma-{\pi\over3}>0.
 \tag{PO.13}
-$$
+```
 
 Each path leaf has at least `d_low D-o(D)` center neighbors with phase at most `alpha_gamma`. Every corresponding strict-rhombus angular excess is at least `q_j`. The global strict-rhombus angular-defect budget therefore gives
 
-$$
+```math
 \boxed{
 \sum_{j=1}^m q_j
 \le {C_{phase}\over d_{low}}+o(1),
 }
 \tag{PO.14}
-$$
+```
 
 where
 
-$$
+```math
 C_{phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
-$$
+```
 
 For adjacent path leaves,
 
-$$
+```math
 |\beta_{j+1}-\beta_j|
 =|q_{j+1}-q_j|
 \le q_j+q_{j+1}.
 \tag{PO.15}
-$$
+```
 
 Summing over internal boundaries gives
 
-$$
+```math
 \sum_{j=1}^{m-1}(q_j+q_{j+1})
 \le2\sum_{j=1}^{m}q_j.
 \tag{PO.16}
-$$
+```
 
 Hence some adjacent pair obeys
 
-$$
+```math
 q_j+q_{j+1}
 \le {2C_{phase}\over d_{low}pD}+o(D^{-1}).
 \tag{PO.17}
-$$
+```
 
 The exact certificate uses the standard outward enclosure
 
-$$
+```math
 C_{phase}
 <{3258689123681\over612912000000}
-$$
+```
 
 and proves
 
-$$
+```math
 \boxed{
 {2C_{phase}\over d_{low}p}<18782.
 }
 \tag{PO.18}
-$$
+```
 
 Therefore the selected adjacent pair has
 
-$$
+```math
 \boxed{
 |\beta_{j+1}-\beta_j|
 <{18782\over D}+o(D^{-1}).
 }
 \tag{PO.19}
-$$
+```
 
 ---
 
@@ -248,46 +248,46 @@ This is the sign point that must be stated explicitly.
 
 The real phases `beta_j` in Section 2 are not arbitrary projective representatives. They are the **same coherently oriented rooted-shore contact vectors** used in the Section-157 resultants:
 
-$$
+```math
 u_j=(\cos\beta_j,\sin\beta_j).
 \tag{PO.20}
-$$
+```
 
 For the physical layer between consecutive nested shores, the adjacent-strip opening theorem orients both boundary contact vectors from the fixed exterior into the middle layer. With the rooted shore convention this gives
 
-$$
+```math
 \boxed{
 a=u_j,
 \qquad
 b=-u_{j+1}.
 }
 \tag{PO.21}
-$$
+```
 
 For sufficiently large `D`, (PO.19) is smaller than `pi`, so
 
-$$
+```math
 \angle(a,b)
 =\pi-|\beta_{j+1}-\beta_j|.
 \tag{PO.22}
-$$
+```
 
 The unit tangent directions satisfying
 
-$$
+```math
 a\cdot w\ge0,
 \qquad
 b\cdot w\ge0
-$$
+```
 
 therefore form a closed arc of width
 
-$$
+```math
 \varepsilon
 =\pi-\angle(a,b)
 =|\beta_{j+1}-\beta_j|.
 \tag{PO.23}
-$$
+```
 
 Combining (PO.19) and (PO.23) proves (PO.1).
 
@@ -301,20 +301,20 @@ Apply the one/two-bar tangent theorem to this selected physical strip. If the ta
 
 Otherwise choose a minimal two-bar certificate with inward diameter vectors `n_1,n_2`. The two-bar geometry theorem gives
 
-$$
+```math
  d_{\mathbb{RP}^1}(n_1,n_2)
 \le\varepsilon.
 \tag{PO.24}
-$$
+```
 
 Use (PO.1):
 
-$$
+```math
 \boxed{
  d_{\mathbb{RP}^1}(n_1,n_2)
 <{18782\over D}+o(D^{-1}).
 }
-$$
+```
 
 This is (PO.2).
 
@@ -324,27 +324,27 @@ This is (PO.2).
 
 Write the two unordered diameter segments, after the orientation choice realizing their projective angle `eta`, as
 
-$$
+```math
 y_k-x_k=D u_k,
 \qquad k=1,2,
 \qquad
 \angle(u_1,u_2)=\eta.
-$$
+```
 
 The quantitative parallel-diameter lemma gives
 
-$$
+```math
 |x_2-x_1|,\ |y_2-y_1|
 \le2D\sin(\eta/2)
 \le D\eta.
 \tag{PO.25}
-$$
+```
 
 By (PO.2),
 
-$$
+```math
 D\eta<18782+o(1).
-$$
+```
 
 This proves (PO.3).
 

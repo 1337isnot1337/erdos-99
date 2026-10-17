@@ -18,11 +18,11 @@
 
 RE proves that the cyclic `d_H=0` phase lies exactly on the Reinhardt equality locus:
 
-$$
+```math
 \delta:=\frac\pi q,
 \qquad
 D=\frac1{2\sin(\delta/2)},
-$$
+```
 
 all projective diameter directions are separated by exactly `delta`, and every local normal cone is packed without angular slack.
 
@@ -32,7 +32,7 @@ That equality geometry determines one normalized KKT stress explicitly.
 
 For every exact `d_H=0` cyclic survivor, the coefficients
 
-$$
+```math
 \boxed{
 \beta_h=\frac1q
 \quad(h\in H),
@@ -40,35 +40,35 @@ $$
 \alpha_e=\frac{D^2}{q}
 \quad(e\in C_q)}
 \tag{US.1}
-$$
+```
 
 satisfy KKT equilibrium at every loaded vertex. In particular they define a strictly positive normalized full-support stress.
 
 Equivalently, if `L_C` is the unweighted Laplacian of the boundary contact cycle and `L_H` the unweighted Laplacian of the full diameter graph, then the corresponding scalar stress matrix is
 
-$$
+```math
 \boxed{
 \Omega_{\rm unif}
 =\frac1q\left(D^2L_C-L_H\right).}
 \tag{US.2}
-$$
+```
 
 By CY/CG this stress is PSD and maximal-rank:
 
-$$
+```math
 \boxed{
 D^2L_C-L_H\succeq0,}
 \tag{US.3}
-$$
+```
 
-$$
+```math
 \boxed{
 \ker(D^2L_C-L_H)
 =\operatorname{span}\{\mathbf1,P_x,P_y\},
 \qquad
 \operatorname{rank}(D^2L_C-L_H)=q-3.}
 \tag{US.4}
-$$
+```
 
 Thus the exact Reinhardt endpoint contains a canonical stress with completely uniform contact and diameter weights. This is a strong warning against trying to exclude the branch from KKT positivity alone.
 
@@ -78,16 +78,16 @@ Thus the exact Reinhardt endpoint contains a canonical stress with completely un
 
 Fix a loaded vertex `b` and write
 
-$$
+```math
 d:=\deg_H(b)\ge1.
-$$
+```
 
 RE gives the exact exterior angle
 
-$$
+```math
 \boxed{\theta_b=d\delta.}
 \tag{1.1}
-$$
+```
 
 The pre-RE local diameter theorem gives three nonnegative angular costs inside the normal cone at `b`:
 
@@ -97,9 +97,9 @@ The pre-RE local diameter theorem gives three nonnegative angular costs inside t
 
 For `d` incident diameter rays their mandatory total width is therefore
 
-$$
+```math
 \frac\delta2+(d-1)\delta+\frac\delta2=d\delta.
-$$
+```
 
 Equation (1.1) says the available cone width is exactly the same number. Hence every local angular inequality is equality.
 
@@ -107,17 +107,17 @@ Equation (1.1) says the available cone width is exactly the same number. Hence e
 
 The `d` unit diameter directions
 
-$$
+```math
 n_j:=\frac{b-k_j}{D}
-$$
+```
 
 are symmetrically placed about the outward normal-cone bisector with offsets
 
-$$
+```math
 \left(j-\frac{d+1}{2}\right)\delta,
 \qquad 1\le j\le d.
 \tag{1.2}
-$$
+```
 
 Equivalently, the extreme rays have boundary clearance exactly `delta/2` and every internal gap is exactly `delta`.
 
@@ -127,23 +127,23 @@ Equivalently, the extreme rays have boundary clearance exactly `delta/2` and eve
 
 Let `n_b` denote the unit vector along the outward bisector of the normal cone at `b`. By the elementary finite geometric-series identity,
 
-$$
+```math
 \sum_{j=1}^d n_j
 =
 \frac{\sin(d\delta/2)}{\sin(\delta/2)}\,n_b.
 \tag{2.1}
-$$
+```
 
 Therefore equal diameter coefficients `B>0` contribute the vector
 
-$$
+```math
 \boxed{
 B\sum_{bk\in H}(b-k)
 =
 BD\,
 \frac{\sin(d\delta/2)}{\sin(\delta/2)}\,n_b.}
 \tag{2.2}
-$$
+```
 
 No global information about the degree sequence is needed: only the exact local fan matters.
 
@@ -153,33 +153,33 @@ No global information about the degree sequence is needed: only the exact local 
 
 Let `t_-` be the incoming unit boundary-side vector ending at `b` and `t_+` the outgoing unit side vector starting at `b`. Their oriented turning angle is the exterior angle
 
-$$
+```math
 \theta_b=d\delta.
-$$
+```
 
 The two contact contributions at `b` with a common coefficient `A>0` are
 
-$$
+```math
 A(b-p_-)+A(b-p_+)
 =A(t_- - t_+).
 \tag{3.1}
-$$
+```
 
 Because `t_-` and `t_+` are unit vectors separated by turning angle `d delta`, their difference lies on the same outward bisector `n_b` and has magnitude
 
-$$
+```math
 |t_- - t_+|
 =2\sin(d\delta/2).
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 A(t_- - t_+)
 =2A\sin(d\delta/2)\,n_b.}
 \tag{3.2}
-$$
+```
 
 The orientation of `n_b` is chosen so both (2.2) and (3.2) point in the same KKT-equilibrium direction.
 
@@ -189,69 +189,69 @@ The orientation of `n_b` is chosen so both (2.2) and (3.2) point in the same KKT
 
 KKT equilibrium at `b` asks for equality of (2.2) and (3.2):
 
-$$
+```math
 2A\sin(d\delta/2)
 =BD\frac{\sin(d\delta/2)}{\sin(\delta/2)}.
-$$
+```
 
 Since `1<=d<q` in a strictly convex finite shell,
 
-$$
+```math
 \sin(d\delta/2)>0,
-$$
+```
 
 so it cancels. We obtain
 
-$$
+```math
 2A
 =\frac{BD}{\sin(\delta/2)}.
 \tag{4.1}
-$$
+```
 
 RE gives
 
-$$
+```math
 D=\frac1{2\sin(\delta/2)},
-$$
+```
 
 hence
 
-$$
+```math
 \frac{D}{\sin(\delta/2)}=2D^2.
-$$
+```
 
 Equation (4.1) is therefore simply
 
-$$
+```math
 \boxed{A=BD^2.}
 \tag{4.2}
-$$
+```
 
 This relation is independent of `d`. Thus the same pair of constants balances every vertex, no matter how many leaves are attached to a diameter-cycle vertex.
 
 In the `d_H=0` phase,
 
-$$
+```math
 |H|=q.
-$$
+```
 
 Normalize by
 
-$$
+```math
 \sum_{h\in H}\beta_h=1.
-$$
+```
 
 Choosing
 
-$$
+```math
 B=1/q
-$$
+```
 
 and then (4.2) gives
 
-$$
+```math
 A=D^2/q.
-$$
+```
 
 This proves US.1. `square`
 
@@ -261,10 +261,10 @@ This proves US.1. `square`
 
 For scalar coordinates, a contact edge of coefficient `alpha` contributes `+alpha L_e` and a diameter edge of coefficient `beta` contributes `-beta L_h` to the signed stress matrix. Substituting US.1 gives
 
-$$
+```math
 \Omega_{\rm unif}
 =\frac{D^2}{q}L_C-\frac1qL_H,
-$$
+```
 
 which is US.2.
 
@@ -272,29 +272,29 @@ CY/CG prove that every normalized KKT stress in the cyclic endpoint is PSD with 
 
 Equivalently, on the zero-sum space,
 
-$$
+```math
 \boxed{
 L_H\preceq D^2L_C.}
 \tag{5.1}
-$$
+```
 
 The generalized eigenvalue `D^2` of the pair `(L_H,L_C)` has multiplicity exactly two, represented by the two coordinate functions:
 
-$$
+```math
 \boxed{
 L_HP_x=D^2L_CP_x,
 \qquad
 L_HP_y=D^2L_CP_y.}
 \tag{5.2}
-$$
+```
 
 All other nonconstant generalized eigenvalues are strictly smaller than `D^2`.
 
 This turns the remaining exact Reinhardt/KKT problem into a spectral graph-embedding problem on the pair
 
-$$
+```math
 (C_q,H).
-$$
+```
 
 ---
 
@@ -310,10 +310,10 @@ Thus:
 
 If the boundary cycle edges adjacent to a full-H leaf `b` are `e_-` and `e_+`, then for every normalized KKT stress
 
-$$
+```math
 \boxed{\alpha_{e_-}(s)=\alpha_{e_+}(s).}
 \tag{6.1}
-$$
+```
 
 By the Reinhardt equality classification, the full diameter graph is an odd cycle with degree-one vertices attached to its cycle vertices. Hence `alpha` is constant along every boundary run whose internal vertices are diameter leaves.
 
@@ -341,11 +341,11 @@ US explicitly disproves any proposed route claiming that a nonregular exact Rein
 
 RE converted the `d_H=0` source into an exact Reinhardt equality problem. US shows that this equality family is also mechanically self-consistent at the most basic KKT level:
 
-$$
+```math
 \alpha\equiv D^2/q,
 \qquad
 \beta\equiv1/q.
-$$
+```
 
 Therefore the next attack cannot be just
 
@@ -355,9 +355,9 @@ Therefore the next attack cannot be just
 
 The useful new structure is instead the exact Loewner equality
 
-$$
+```math
 L_H\preceq D^2L_C
-$$
+```
 
 with a two-dimensional top generalized eigenspace generated by the Euclidean coordinates, plus the leaf-run constancy (6.1).
 
@@ -373,11 +373,11 @@ Two concrete targets remain.
 
 Classify convex-thrackle unicyclic graphs `H` on the cyclically ordered vertices of `C_q` for which
 
-$$
+```math
 L_H\preceq D_q^2L_{C_q},
 \qquad
 D_q=\frac1{2\sin(\pi/(2q))},
-$$
+```
 
 has top nonconstant generalized eigenspace of dimension exactly two and admits a convex unit-side embedding realizing that eigenspace.
 

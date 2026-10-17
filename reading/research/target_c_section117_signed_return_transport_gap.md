@@ -14,24 +14,24 @@ constraint converts quadratic rhombic area into a linear lower bound for route e
 
 The resulting explicit window is
 
-$$
+```math
 \boxed{\sigma(\theta)\le 2.9\times10^{-3}},
 \qquad
 \sigma(\theta)=3\theta-2\pi-\sin(\theta/2)-2\sin\theta,
-$$
+```
 
 with carrier coefficient
 
-$$
+```math
 \boxed{\mu_{20}=0.9761078160770649\ldots .}
-$$
+```
 
 The corresponding decoupled scalar envelope is approximately
 
-$$
+```math
 \boxed{\sigma_{\rm SR}=0.0029068729001\ldots,\qquad
 \mu_{\rm SR}=0.9761079748635\ldots .}
-$$
+```
 
 No theorem-state mutation is proposed here.
 
@@ -41,31 +41,31 @@ No theorem-state mutation is proposed here.
 
 Let `theta_8` and `mu_8` be the canonical Section-101 endpoint. Let `theta_20` solve
 
-$$
+```math
 \sigma(\theta_{20})=2.9\times10^{-3}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \theta_{20}=2.703524766763678\ldots,
 \qquad
 \mu_{20}=\sin(\theta_{20}/2)=0.9761078160770649\ldots .
 }
 \tag{117.1}
-$$
+```
 
 The Section-113 transfer derivative is uniformly greater than `0.30` on
 `0\le\delta\le0.1`; the present slack is still far below `0.03`. Hence the same
 largest-gap and tail estimates remain valid:
 
-$$
+```math
 0\le\delta\le{10\over3}\sigma,
 \qquad
 0\le x_2,x_3,\tau\le{13\over3}\sigma.
 \tag{117.2}
-$$
+```
 
 At the endpoint, `(13/3)sigma=0.0125666...`, while the mandatory principal-gap scale
 is above `0.876`. Thus the adjacent-span/fourth-gap argument remains valid.
@@ -74,12 +74,12 @@ The oriented tangent lift used later also has a large margin. After deleting the
 principal gaps and the two tiny spans adjacent to the largest principal gap, the main
 support-region extent is at most
 
-$$
+```math
 |S|+\tau
 \le U(\theta)+{13\over3}\sigma
 =1.8399556597781\ldots<\pi,
 \tag{117.3}
-$$
+```
 
 where `U(theta)=3theta-2pi`.
 
@@ -87,61 +87,61 @@ where `U(theta)=3theta-2pi`.
 
 Put
 
-$$
+```math
 G(x)={x-\sin x\over8},
 \qquad
 \phi_8=2\pi-2\theta_8,
 \qquad
 q={13\over3}\sigma.
-$$
+```
 
 The hostile-audited Section-107 circular-segment identity and the Section-113
 majorization give the normalized area floor
 
-$$
+```math
 A(\sigma)
 :={\pi\over4}-G(\theta)-2G(\phi_8+q)-G(q).
 \tag{117.4}
-$$
+```
 
 At `sigma=0.0029`,
 
-$$
+```math
 \boxed{A=0.4722552235794338\ldots .}
 \tag{117.5}
-$$
+```
 
 Local rhombic saturation therefore gives
 
-$$
+```math
 {A_{4,D}\over D^2}\ge A(\sigma)-o(1),
 \tag{117.6}
-$$
+```
 
 where `A_{4,D}` is the total area of the strict unit rhombi in the carrier.
 
 Retaining the favorable Section-101 face currency gives
 
-$$
+```math
 {Q_D\over D}\le\sigma+o(1).
-$$
+```
 
 Canonical Sections 82 and 89 then imply
 
-$$
+```math
 {T_D\over D}
 \le C_T(\sigma)+o(1),
 \qquad
 C_T(\sigma)=U(\theta)+2\sigma.
 \tag{117.7}
-$$
+```
 
 At the endpoint,
 
-$$
+```math
 \boxed{C_T=1.833188993111448\ldots .}
 \tag{117.8}
-$$
+```
 
 Let the three principal complement-gap routes be directed in their outer-face
 orientation. A physical rhombus-boundary occurrence on such a route is eligible to be
@@ -152,16 +152,16 @@ canonical Section-102 endpoint proof.
 
 Write the three route lengths and displacements as `(ell_i,z_i)` and put
 
-$$
+```math
 E_D=\sum_{i=1}^3(\ell_i-|z_i|).
-$$
+```
 
 The full complement-route exhaustion gives
 
-$$
+```math
 \boxed{{E_D\over D}\le\sigma+o(1).}
 \tag{117.9}
-$$
+```
 
 Indeed the total excess over all positive complement-gap chords is at most
 `2alpha-C<=sigma`.
@@ -179,10 +179,10 @@ parallel rhombus edges.
 If `u_tau` is either unit orientation of the parallel edges of a complete train `tau`,
 its two physical boundary ends have oriented vectors
 
-$$
+```math
 u_\tau,\qquad -u_\tau.
 \tag{117.10}
-$$
+```
 
 This follows from monotone transverse motion of a complete train: the retained rhombi
 lie on opposite sides of its two terminal parallel lines. The argument is local and is
@@ -195,39 +195,39 @@ orientation. All other selected endpoints are bad.
 
 Define
 
-$$
+```math
 w_Q(u)=\max_j q_j\cdot u-\min_j q_j\cdot u.
-$$
+```
 
 ### Lemma 117.2 — signed return
 
 For the trains whose two ends are both good,
 
-$$
+```math
 \boxed{
 E\ge
 \sum_{\tau\in\mathcal T_{gg}}
 \bigl(2-w_Q(u_\tau)\bigr),
 }
 \tag{117.11}
-$$
+```
 
 where `E=sum_j(ell_j-|z_j|)`.
 
 **Proof.** For a directed unit-edge walk with chord direction `q`,
 
-$$
+```math
 \ell-|z|=\sum_e(1-q\cdot v_e).
-$$
+```
 
 Every term is nonnegative. If the two ends of one train are assigned to walks `i,j`,
 their combined contribution is
 
-$$
+```math
 (1-q_i\cdot u_\tau)+(1+q_j\cdot u_\tau)
 =2-(q_i-q_j)\cdot u_\tau
 \ge2-w_Q(u_\tau).
-$$
+```
 
 Injectivity permits summation over trains. `square`
 
@@ -236,14 +236,14 @@ Injectivity permits summation over trains. `square`
 Let `u,v` be unit vectors at projective angle `varphi`, and let `a,b>0`. For any set
 `Q` of at most three unit host directions,
 
-$$
+```math
 \boxed{
 a(2-w_Q(u))+b(2-w_Q(v))
 \ge
 a+b-\sqrt{a^2+b^2+2ab\cos\varphi}.
 }
 \tag{117.12}
-$$
+```
 
 To see this, write the weighted width sum as the four support maxima for
 `au,-au,bv,-bv`. With at most three hosts, at least two of those four vectors share a
@@ -254,13 +254,13 @@ bound is attained by hosts parallel to `au+bv`, `-u`, and `-v`.
 At a strict unit-rhombus crossing the projective train angle is strictly greater than
 `pi/3`. Taking `a=b=1` gives
 
-$$
+```math
 \boxed{
 (2-w_Q(u))+(2-w_Q(v))
 \ge c_{ret}:=2-\sqrt3.
 }
 \tag{117.13}
-$$
+```
 
 ### Lemma 117.3 — area transport
 
@@ -268,10 +268,10 @@ Retain only trains with two good ends, and let `A_gg` be the sum of areas of rho
 whose two crossing trains are both retained. If the whole rhombus complex lies in a
 convex container of diameter `d`, then
 
-$$
+```math
 \boxed{dE\ge c_{ret}A_{gg}.}
 \tag{117.14}
-$$
+```
 
 **Proof.** Multiply (117.13) by each retained-retained rhombus area and sum. For one
 complete train, the sum of rhombus areas along it is its transverse endpoint
@@ -288,9 +288,9 @@ of bad trains whose projective directions lie in one closed interval of angular 
 
 Let
 
-$$
+```math
 \Delta_D=\sum_R(\varphi_R-\pi/3)
-$$
+```
 
 be the canonical total rhombus-angle defect; Section 68 gives `Delta_D=O(D)`.
 
@@ -302,17 +302,17 @@ overcount but remains an upper bound. Crossings at angle greater than
 
 Since every unit-rhombus area is at most one,
 
-$$
+```math
 \boxed{
 A_{gg,D}\ge
 A_{4,D}-2T_DM_{bad}(\epsilon)-{\Delta_D\over\epsilon}.
 }
 \tag{117.15}
-$$
+```
 
 Combining with (117.14),
 
-$$
+```math
 \boxed{
 d_DE_D\ge
 c_{ret}
@@ -321,7 +321,7 @@ A_{4,D}-2T_DM_{bad}(\epsilon)-{\Delta_D\over\epsilon}
 \right)_+.
 }
 \tag{117.16}
-$$
+```
 
 The limit order is fixed throughout:
 
@@ -350,10 +350,10 @@ capacities:
 
 where
 
-$$
+```math
 C_{tail}\le{13\over6}\sigma.
 \tag{117.17}
-$$
+```
 
 Any principal-route occurrence whose orientation does not match the physical
 incident-rhombus-left orientation is included among the bad occurrences; the canonical
@@ -364,61 +364,61 @@ currency rather than silently treating them as good.
 
 For a regular unit-unit tooth with base `b=1+e`, set
 
-$$
+```math
 x={\pi\over3}-\arccos(b/2),
 \qquad
 \psi(x)=\cos x+\sqrt3\sin x-1=e.
 \tag{117.18}
-$$
+```
 
 For one leg choice, endpoint directions in `I` and offset at most `X` force the base
 directions into one oriented interval of width at most `X+epsilon+o(1)`. The audited
 convex tangent-window theorem therefore gives
 
-$$
+```math
 \limsup_{D\to\infty}{N([0,X])\over D}
 \le C_{tail}+{X+\epsilon\over2}.
 \tag{117.19}
-$$
+```
 
 Let `F_epsilon=C_tail+epsilon/2`. After removing teeth contributing both legs, the
 quantile/bathtub argument gives, for the two leg classes,
 
-$$
+```math
 q_1+q_2\le Q(\sigma)+2F_\epsilon,
 \tag{117.20}
-$$
+```
 
 where `Q(sigma)` is the unique nonnegative solution of
 
-$$
+```math
 \boxed{
 \sin Q+\sqrt3(1-\cos Q)-Q={\sigma\over2}.
 }
 \tag{117.21}
-$$
+```
 
 For a tooth contributing both selected endpoint legs in the same interval `I`, their
 projective separation is at most `epsilon`. Since the apex angle is greater than
 `pi/3` and `epsilon<pi/6`, the apex angle is at least `pi-epsilon`. Hence the base
 excess is at least
 
-$$
+```math
 c_\epsilon=2\cos(\epsilon/2)-1.
-$$
+```
 
 The global micro-base excess is at most `(sigma/2+o(1))D`, so all double-leg teeth
 contribute at most
 
-$$
+```math
 \left({\sigma\over c_\epsilon}+o(1)\right)D
-$$
+```
 
 selected endpoint occurrences.
 
 Combining all categories,
 
-$$
+```math
 \limsup_{D\to\infty}{M_{bad}(\epsilon)\over D}
 \le
 Q(\sigma)
@@ -427,18 +427,18 @@ Q(\sigma)
 +\epsilon
 +{\sigma\over c_\epsilon}.
 \tag{117.22}
-$$
+```
 
 Letting `epsilon->0`,
 
-$$
+```math
 \boxed{
 \lim_{\epsilon\downarrow0}
 \limsup_{D\to\infty}{M_{bad}(\epsilon)\over D}
 \le B(\sigma):=Q(\sigma)+{175\over6}\sigma.
 }
 \tag{117.23}
-$$
+```
 
 No inverse-phase extraction is used.
 
@@ -450,7 +450,7 @@ Fix `epsilon`, apply (117.16), divide by `D^2`, and take `D->infinity`; then let
 `epsilon->0`. Using (117.6)--(117.9) and (117.23), every surviving wrapping carrier
 must satisfy
 
-$$
+```math
 \boxed{
 \lambda\sigma
 \ge
@@ -460,17 +460,17 @@ A(\sigma)-2C_T(\sigma)B(\sigma)
 \right]_+,
 }
 \tag{117.24}
-$$
+```
 
 where
 
-$$
+```math
 \lambda=\sin(\theta/2).
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \sigma
 \ge
@@ -480,7 +480,7 @@ A(\sigma)-2C_T(\sigma)B(\sigma)
 \right]_+.
 }
 \tag{117.25}
-$$
+```
 
 This is the new bridge: quadratic rhombic area is transported directly into signed
 return loss, without selecting a phase pair.
@@ -489,37 +489,37 @@ return loss, without selecting a phase pair.
 
 At the endpoint,
 
-$$
+```math
 \boxed{
 Q=0.0410840313512094\ldots,
 \qquad
 B=0.1256673646845427\ldots .
 }
 \tag{117.26}
-$$
+```
 
 Together with (117.5) and (117.8),
 
-$$
+```math
 \boxed{
 A-2C_TB=0.0115111641133817\ldots>0.
 }
 \tag{117.27}
-$$
+```
 
 Since `lambda=mu_20`, the right side of (117.25) is
 
-$$
+```math
 \boxed{0.00315990413899035\ldots,}
 \tag{117.28}
-$$
+```
 
 which exceeds the available `sigma=0.0029` by
 
-$$
+```math
 \boxed{2.59904138990\ldots\times10^{-4}.}
 \tag{117.29}
-$$
+```
 
 The guaranteed right side deteriorates as `sigma` increases: the area floor decreases,
 the train ceiling and bad-direction concentration increase, and `lambda` increases.
@@ -528,13 +528,13 @@ Thus contradiction at the top endpoint closes the whole interval.
 Therefore every full-core Type-II survivor contains a quadratic-area locally
 rhombus-saturated harmonic carrier `P_*` satisfying
 
-$$
+```math
 \boxed{
 \operatorname{diam}(P_*)
 \ge(0.9761078160770649\ldots-o(1))D.
 }
 \tag{117.30}
-$$
+```
 
 C-II remains open.
 
@@ -542,31 +542,31 @@ C-II remains open.
 
 Define
 
-$$
+```math
 H(s)=
 {2-\sqrt3\over\lambda(s)}
 \left[A(s)-2C_T(s)B(s)\right]-s.
 \tag{117.31}
-$$
+```
 
 On the live neighborhood the bracket decreases, while `lambda` and `s` increase, so
 `H` decreases. The regression certificate finds its unique zero at
 
-$$
+```math
 \boxed{\sigma_{\rm SR}=0.0029068729001\ldots .}
 \tag{117.32}
-$$
+```
 
 The corresponding values are
 
-$$
+```math
 \boxed{
 \theta_{\rm SR}=2.7035262283044\ldots,
 \qquad
 \mu_{\rm SR}=0.9761079748635\ldots .
 }
 \tag{117.33}
-$$
+```
 
 This is only the envelope of the current separately worst-case scalar inputs. The
 structural result is more important than the last digits: the argument now spends the

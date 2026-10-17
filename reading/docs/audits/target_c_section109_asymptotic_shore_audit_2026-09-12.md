@@ -13,18 +13,18 @@ The independent regression
 constants and the strict finite margins. With carrier rhombus density `r` and train
 budget `C_T`, the bin argument gives every shore density
 
-$$
+```math
 a<\frac{r}{6C_T}.
-$$
+```
 
 Using `r=0.472`, `C_T=6`, and `a=0.0131` gives endpoint density `0.0262`. The
 certificate obtains
 
-$$
+```math
 \theta_{13}=2.7029186637961029\ldots,
 \qquad
 \mu_{13}=0.9760419221833405\ldots,
-$$
+```
 
 and verifies the leakage/projection contradiction margin
 `0.0107208601...` radians at `sigma=5e-5`.

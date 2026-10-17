@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_bridge_hinge_affine_interval_2026-09-09.md) · source SHA-256 `4503d6894b1e0a8a06df032e89b5de88639bd7712a56dd79c35a0665379df46e`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 10 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-14F0E228B44F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZHAI: affine interval classes and the star-cutoff/nonstar-blocker dichotomy
 
@@ -21,11 +23,11 @@ The coefficients have more structure than an arbitrary interval matrix.  On a fi
 
 Combining this with ZHI gives the exact dichotomy
 
-$$
+```math
 \boxed{
 H-1\le 2N_{\rm star}+m_{\rm ns},
 }
-$$
+```
 
 where `N_star` is the number of distinct trunk cutoff depths used by `z`-star diameter edges and `m_ns` is the number of nonstar diameter rows with nonzero hinge action.  Thus a macroscopic trunk cannot be blocked by a bounded number of star attachment depths plus a sublinear nonstar support.
 
@@ -37,41 +39,41 @@ C23 further says all nonempty topological trunk intervals pass through one commo
 
 Use the ZHI consecutive physical bridge trunk
 
-$$
+```math
 f_1,\ldots,f_H,
 \qquad f_j=a_jb_j,
-$$
+```
 
 with nested descendant shores
 
-$$
+```math
 S_1\supset\cdots\supset S_H.
-$$
+```
 
 Let `phi_j` be the descendant rotation about `a_j`, and let
 
-$$
+```math
 G_{hj}=2(p_x-p_y)\cdot(\phi_j(x)-\phi_j(y))
 \tag{1.1}
-$$
+```
 
 for an active diameter edge `h=xy`.
 
 ZF and ZHI give
 
-$$
+```math
 \operatorname{rank}G\ge H-1,
 \tag{1.2}
-$$
+```
 
 with equality improved to full rank `H` when the first root shore contains at least two vertices.
 
 For every row there is a topological separating interval
 
-$$
+```math
 I_h=\{l_h+1,\ldots,r_h\}
 \tag{1.3}
-$$
+```
 
 such that `G_hj=0` outside `I_h`.  Entries inside `I_h` may vanish.
 
@@ -81,46 +83,47 @@ such that `G_hj=0` outside `I_h`.  Entries inside `I_h` may vanish.
 
 Fix one active diameter edge `h=xy`, and suppose throughout its separating interval that `x` is on the descendant shore and `y` on the root shore.  Put
 
-$$
+```math
 d_h=p_x-p_y.
-$$
+```
 
 For `j in I_h`,
 
-$$
+```math
 \phi_j(x)=J(p_x-p_{a_j}),
 \qquad
 \phi_j(y)=0.
-$$
+```
 
 Hence
 
-$$
+```math
 \begin{aligned}
 G_{hj}
 &=2d_h\cdot J(p_x-p_{a_j})\\
 &=2d_h\cdot J(p_y-p_{a_j}),
 \end{aligned}
 \tag{ZHAI1}
-$$
+```
 
 because `d_h dot Jd_h=0`.
 
 Thus
 
-$$
+```math
 \boxed{
 G_{hj}
 =c_h-2d_h\cdot Jp_{a_j}
 \qquad(j\in I_h),
 }
 \tag{ZHAI2}
+```
 
 where
 
-\[
+```math
 c_h:=2d_h\cdot Jp_y.
-$$
+```
 
 If `y` rather than `x` is descendant, the same formula holds after changing the row parameters by an overall sign and exchanging the endpoint used in the constant term.  In either orientation, the dependence on `j` is affine in the two coordinates of the pivot `p_{a_j}`.
 
@@ -132,28 +135,28 @@ No approximation or near-radial hypothesis is used.
 
 Fix one interval
 
-$$
+```math
 I=\{l+1,\ldots,r\}.
-$$
+```
 
 Define three vectors in `R^H`, supported on `I`, by
 
-$$
+```math
 \mathbf 1_I,
 \qquad
 A_I^{(x)}=(a_{j,x})_{j\in I},
 \qquad
 A_I^{(y)}=(a_{j,y})_{j\in I},
 \tag{3.1}
-$$
+```
 
 and zero outside `I`.
 
 Equation ZHAI2 shows that every diameter row whose topological separating interval is exactly `I` belongs to
 
-$$
+```math
 \operatorname{span}\{\mathbf1_I,A_I^{(x)},A_I^{(y)}\}.
-$$
+```
 
 Therefore:
 
@@ -161,25 +164,27 @@ Therefore:
 
 For every fixed topological trunk interval `I`,
 
-$$
+```math
 \boxed{
 \dim\operatorname{span}\{G_{h,*}:I_h=I\}\le3.
 }
 \tag{ZHAI3}
+```
 
 Let `N_int` be the number of distinct nonempty topological intervals represented by active diameter rows.  Then
 
-\[
+```math
 \operatorname{rank}G\le3N_{int}.
-$$
+```
 
 Combining with ZHI gives
 
-$$
+```math
 \boxed{
 N_{int}\ge\frac{H-1}{3}.
 }
 \tag{ZHAI4}
+```
 
 Thus a linear bridge trunk forces linearly many distinct diameter routing intervals unless the first-shore Euclidean exception changes only the harmless additive constant.
 
@@ -189,49 +194,51 @@ Thus a linear bridge trunk forces linearly many distinct diameter routing interv
 
 Now fix a terminal `z` in the root block `X_0` of the trunk and translate coordinates so
 
-\[
+```math
 p_z=0.
-$$
+```
 
 Take an active diameter edge
 
-$$
+```math
 h=zy,
 \qquad |p_y|=D.
-$$
+```
 
 If its partner `y` lies beyond trunk cutoff `r_y`, then its topological interval is the prefix
 
-$$
+```math
 I_h=\{1,\ldots,r_y\}.
-$$
+```
 
 For every `j<=r_y`, ZHAI1 becomes
 
-$$
+```math
 \boxed{
 G_{zy,j}
 =-2p_y\cdot Jp_{a_j}.
 }
 \tag{ZHAI5}
+```
 
 There is no independent constant term.  For one fixed cutoff `r`, all such rows lie in the two-dimensional space spanned by the truncated pivot-coordinate sequences
 
-\[
+```math
 (a_{j,x})_{1\le j\le r},
 \qquad
 (a_{j,y})_{1\le j\le r}.
-$$
+```
 
 ### Theorem ZHAI.2 — two-dimensional star-cutoff bound
 
 Let `N_star` be the number of distinct positive cutoff indices represented by active diameter edges incident to `z`.  Then the complete `z`-star submatrix satisfies
 
-$$
+```math
 \boxed{
 \operatorname{rank}G_{star}\le2N_{star}.
 }
 \tag{ZHAI6}
+```
 
 Rows with the same cutoff can be numerous, but they contribute at most two new hinge-rank dimensions in total.
 
@@ -241,42 +248,45 @@ Rows with the same cutoff can be numerous, but they contribute at most two new h
 
 Let `m_ns` be the number of active diameter edges not incident to `z` whose ZHI row is nonzero.  Each such row can increase rank by at most one, so
 
-\[
+```math
 \operatorname{rank}G
 \le
 \operatorname{rank}G_{star}+m_{ns}
 \le
 2N_{star}+m_{ns}.
 \tag{5.1}
-$$
+```
 
 Use ZHI5:
 
 ### Theorem ZHAI.3 — finite blocking dichotomy
 
-$$
+```math
 \boxed{
 H-1\le2N_{star}+m_{ns}.
 }
 \tag{ZHAI7}
+```
 
 If the first root shore contains at least two vertices, then
 
-\[
+```math
 \boxed{
 H\le2N_{star}+m_{ns}.
 }
 \tag{ZHAI8}
+```
 
 Consequently at least one of the following holds:
 
-\[
+```math
 \boxed{
 N_{star}\ge\frac{H-1}{4}
 \quad\text{or}\quad
 m_{ns}\ge\frac{H-1}{2}.
 }
 \tag{ZHAI9}
+```
 
 The constants are deliberately nonoptimized; ZHAI7 is the exact useful statement.
 
@@ -295,9 +305,9 @@ Let `T_br` be the full contact bridge-block tree, and let `X_*` be the C23 Helly
 
 Let the trunk blocks be
 
-\[
+```math
 X_0,X_1,\ldots,X_H,
-$$
+```
 
 where `f_j` joins `X_{j-1}` to `X_j`.  Let `X_k` be the unique projection of `X_*` to this trunk path: the path from `X_*` to the trunk first meets it at `X_k`.
 
@@ -311,17 +321,19 @@ Every nonempty topological separating interval has closed block span containing 
 
 Equivalently, if the endpoint projections of a diameter path onto the trunk are `X_l,X_r` with `l<=r`, then
 
-\[
+```math
 \boxed{l\le k\le r.}
 \tag{ZHAI10}
+```
 
 Thus the interval family underlying `G` is a common-hub family.
 
 If `z in X_0`, then every active star edge `zy` whose row meets the trunk has cutoff
 
-\[
+```math
 \boxed{r_y\ge k.}
 \tag{ZHAI11}
+```
 
 So all star-prefix rows reach at least the projected Helly hub before they are allowed to terminate.
 

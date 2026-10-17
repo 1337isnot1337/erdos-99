@@ -22,38 +22,38 @@ LC/TR uses the inclusion-maximal attachment caps only to bound the **largest** c
 
 Every inclusion-maximal cap is defined by one harmonic component. If the cap's normalized boundary chord has length `mu`, C44 forces that defining component to have graph diameter at least `mu D-O(1)`. Therefore macroscopic cap area has a direct additive cost in
 
-$$
+```math
 S:=\sum_r\delta_r.
-$$
+```
 
 The cap area per diameter cost is strictly increasing, so the cheapest way to accommodate a prescribed total cell area is to concentrate that area into as many full semicircular caps as needed and at most one partial cap.
 
 In the UF near-circle notation
 
-$$
+```math
 \frac{n-v}{D^2}\to\zeta,
 \qquad
 \Delta=\frac\pi{2\sqrt3},
-$$
+```
 
 put
 
-$$
+```math
 A_\zeta:=\frac\pi4\left(1-\frac\zeta\Delta\right).
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 \liminf\frac SD\ge\Sigma_{cap}(A_\zeta),
 }
 \tag{TD.1}
-$$
+```
 
 where, since `0<=A_zeta<=pi/4`,
 
-$$
+```math
 \boxed{
 \Sigma_{cap}(A)=
 \begin{cases}
@@ -62,41 +62,41 @@ $$
 \end{cases}
 }
 \tag{TD.2}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 f(\mu)=\frac14\left(\arcsin\mu-\mu\sqrt{1-\mu^2}\right),
 \qquad 0\le\mu\le1.}
 \tag{TD.3}
-$$
+```
 
 At UF's worst crossover `zeta_*=0.5572837714...`,
 
-$$
+```math
 A_{\zeta_*}=0.3027762602\ldots<\pi/8,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \liminf\frac SD
 \ge0.9835132379\ldots .
 }
 \tag{TD.4}
-$$
+```
 
 At the asymptotically full-core endpoint `zeta=0`,
 
-$$
+```math
 \boxed{
 \liminf\frac SD\ge2.
 }
 \tag{TD.5}
-$$
+```
 
 Moreover equality at the full-core leading scale forces the maximal cap pattern to converge to two complementary semicircles, so there are two harmonic components whose graph diameters are each `(1-o(1))D`.
 
@@ -110,64 +110,64 @@ Normalize the limiting force hull to the radius-`1/2` disk.
 
 For a circular arc of central angle
 
-$$
+```math
 \theta\in[0,\pi],
-$$
+```
 
 the chord length is
 
-$$
+```math
 \mu=\sin\frac\theta2\in[0,1],
 \tag{1.1}
-$$
+```
 
 and the circular-segment area is
 
-$$
+```math
 A_{cap}(\theta)
 =\frac18(\theta-\sin\theta).
 \tag{1.2}
-$$
+```
 
 Writing `theta=2asin(mu)` gives
 
-$$
+```math
 \boxed{
 A_{cap}=f(\mu)
 =\frac14\left(\arcsin\mu-\mu\sqrt{1-\mu^2}\right).
 }
 \tag{1.3}
-$$
+```
 
 The function is continuous, strictly increasing on `[0,1]`, with
 
-$$
+```math
 f(0)=0,
 \qquad
 f(1)=\frac\pi8.
 \tag{1.4}
-$$
+```
 
 Let one inclusion-maximal attachment interval be defined by a component `I_r`, and let its two extreme attachment terminals be `a,b`. If its normalized cap chord tends to `mu`, then
 
-$$
+```math
 |a-b|=(\mu+o(1))D.
-$$
+```
 
 C44 gives
 
-$$
+```math
 \operatorname{diam}(A_r)\le\delta_r+2.
-$$
+```
 
 Since `a,b in A_r`,
 
-$$
+```math
 \boxed{
 \delta_r\ge\mu D-o(D)
 }
 \tag{1.5}
-$$
+```
 
 for every macroscopic maximal cap.
 
@@ -179,36 +179,36 @@ There may be `O(D)` inclusion-maximal caps, so summing the finite `-2` error in 
 
 Fix `epsilon>0`. Call a maximal cap **large** if its normalized central angle satisfies
 
-$$
+```math
 \theta\ge\epsilon.
-$$
+```
 
 Because the maximal cap arcs have disjoint interiors on the circle,
 
-$$
+```math
 N_{large}\le\frac{2\pi}{\epsilon}.
 \tag{2.1}
-$$
+```
 
 Thus the total finite C44 endpoint error over all large caps is `O_epsilon(1)=o(D)`.
 
 For a small cap `theta<epsilon`,
 
-$$
+```math
 A_{cap}(\theta)=\frac18(\theta-\sin\theta)
 \le\frac{\theta^3}{48}.
-$$
+```
 
 Since the maximal arc lengths sum to at most `2pi`,
 
-$$
+```math
 \sum_{small}A_{cap}(\theta_j)
 \le
 \frac{\epsilon^2}{48}\sum_j\theta_j
 \le
 \frac{\pi}{24}\epsilon^2.
 \tag{2.2}
-$$
+```
 
 Therefore the small caps carry arbitrarily little normalized area as `epsilon->0`. All macroscopic area can be assigned to finitely many large caps, for which the additive graph-diameter cost (1.5) is valid without accumulated linear error.
 
@@ -218,30 +218,30 @@ Therefore the small caps carry arbitrarily little normalized area as `epsilon->0
 
 We need to minimize total chord cost
 
-$$
+```math
 \sum_j\mu_j
-$$
+```
 
 subject to a required total cap area
 
-$$
+```math
 \sum_j f(\mu_j)\ge A,
 \qquad
 0\le\mu_j\le1,
-$$
+```
 
 and the circle-angle budget
 
-$$
+```math
 \sum_j2\arcsin\mu_j\le2\pi.
 \tag{3.1}
-$$
+```
 
 The relevant efficiency ratio is
 
-$$
+```math
 \frac{f(\mu)}\mu.
-$$
+```
 
 ### Lemma TD.1
 
@@ -251,29 +251,29 @@ $$
 
 Put `mu=sin x`, `x in (0,pi/2]`. Then
 
-$$
+```math
 f(\sin x)=\frac14(x-\sin x\cos x).
-$$
+```
 
 It is enough to show
 
-$$
+```math
 \frac{x-\sin x\cos x}{\sin x}
-$$
+```
 
 is increasing. Differentiate. After multiplication by the positive factor `sin^2 x`, the numerator becomes
 
-$$
+```math
 2\sin^3x-\cos x(x-\sin x\cos x)
 =
 \sin x(1+\sin^2x)-x\cos x.
-$$
+```
 
 Its derivative is
 
-$$
+```math
 3\sin^2x\cos x+x\sin x>0,
-$$
+```
 
 and it vanishes at `x=0`. Hence it is positive for `x>0`. `square`
 
@@ -285,9 +285,9 @@ Thus larger caps provide strictly more area per unit chord/diameter cost.
 
 Because `f(mu)/mu` increases, if two partial cap costs satisfy
 
-$$
+```math
 0<\mu_1\le\mu_2<1,
-$$
+```
 
 then moving a small amount of diameter cost from `mu_1` to `mu_2` while keeping total cost fixed increases total cap area, until `mu_1=0` or `mu_2=1`.
 
@@ -295,9 +295,9 @@ Equivalently, for a prescribed required area, total cost is minimized by concent
 
 A full cap `mu=1` is a semicircle, with
 
-$$
+```math
 f(1)=\frac\pi8
-$$
+```
 
 and angular cost `pi`. Two full caps exactly exhaust the circle angle budget and have total area `pi/4`, the whole disk.
 
@@ -316,33 +316,33 @@ This proves the continuum cost formula TD.2.
 
 The repaired LC/TR decomposition gives inclusion-maximal cap arcs whose interiors are disjoint, and all harmonic attachment cells are contained in their union. AR gives the lower area obligation
 
-$$
+```math
 \liminf
 \frac1{D^2}\sum_r\operatorname{area}(P_r)
 \ge A_\zeta.
 \tag{5.1}
-$$
+```
 
 The union of cells in one maximal group has area no larger than that maximal circular cap in the disk limit. By Section 2, after discarding caps of angular size below `epsilon`, the discarded normalized cap area is `O(epsilon^2)`, while the remaining number of caps is bounded independently of `D`.
 
 For every remaining maximal cap `j`, let `mu_j` be its limiting normalized chord length. Its defining component contributes
 
-$$
+```math
 \delta_{r_j}/D\ge\mu_j-o(1).
-$$
+```
 
 Hence
 
-$$
+```math
 \liminf\frac SD
 \ge\sum_j\mu_j-o_epsilon(1).
-$$
+```
 
 Their cap areas must total at least
 
-$$
+```math
 A_\zeta-O(\epsilon^2).
-$$
+```
 
 Apply the continuum optimization of Section 4 and then let `epsilon->0`. This proves TD.1-TD.2.
 
@@ -352,46 +352,46 @@ Apply the continuum optimization of Section 4 and then let `epsilon->0`. This pr
 
 At
 
-$$
+```math
 \zeta_*=0.5572837714\ldots,
-$$
+```
 
 UF/AR gives
 
-$$
+```math
 A_{\zeta_*}
 =0.302776260248\ldots
 <\frac\pi8.
-$$
+```
 
 Therefore the cost is one partial cap. The equation
 
-$$
+```math
 f(\mu)=0.302776260248\ldots
-$$
+```
 
 has the unique solution
 
-$$
+```math
 \boxed{
 \mu=0.9835132379\ldots .
 }
 \tag{6.1}
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 \liminf S/D\ge0.9835132379\ldots .
 }
-$$
+```
 
 This is substantially stronger than the first AR bound
 
-$$
+```math
 S/D\ge0.6208918647\ldots .
-$$
+```
 
 It is also stronger than merely knowing one component has diameter `0.759166D`; it says the total harmonic graph-diameter cost is almost one full source diameter already at the worst UF population split.
 
@@ -401,36 +401,36 @@ It is also stronger than merely knowing one component has diameter `0.759166D`; 
 
 If
 
-$$
+```math
 \zeta=0,
-$$
+```
 
 then
 
-$$
+```math
 A_0=\frac\pi4=2f(1).
-$$
+```
 
 TD.2 gives
 
-$$
+```math
 \boxed{
 \liminf S/D\ge2.
 }
-$$
+```
 
 Moreover the strict increase of `f(mu)/mu` shows that leading-order equality requires the cap-cost distribution to converge to two full caps `mu_1=mu_2=1`. Their arcs each have length `pi` and, because the maximal arcs have disjoint interiors and exhaust total angle `2pi`, they are complementary semicircles.
 
 Thus any asymptotically full-core near-circle survivor contains two harmonic components `I_1,I_2` with
 
-$$
+```math
 \boxed{
 \delta_1/D\to1,
 \qquad
 \delta_2/D\to1,
 }
 \tag{7.1}
-$$
+```
 
 whose attachment hulls asymptotically occupy complementary semicircular caps.
 
@@ -442,27 +442,27 @@ This is a much sharper full-core normal form than CH's existence of one diameter
 
 AR gives
 
-$$
+```math
 S+R_I+s_B=x_B+Q+4-c_I+s_C.
-$$
+```
 
 In the near-circle branch `x_B=o(D)`, TD therefore yields the additional necessary condition
 
-$$
+```math
 \boxed{
 \liminf\frac{Q+s_C}{D}
 \ge\Sigma_{cap}(A_\zeta).
 }
 \tag{8.1}
-$$
+```
 
 This is independent of UF's direct lower bound on `Q`.
 
 The loaded-degree/C40 budget and the mandatory direct hull-side contacts still give only
 
-$$
+```math
 S\le\pi D+o(D),
-$$
+```
 
 so TD does not close the scalar system by itself.
 

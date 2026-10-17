@@ -19,9 +19,9 @@ The pentagonal subcase is already covered more strongly by `C-PENTAGON-TRAIN-COM
 
 Let `A` be a finite unit-separated source whose full actual unit-contact graph has a simple convex face `F` with `m>=5` sides, each an actual unit contact. Let `q_i` be its cyclic oriented side vectors. Give the sides signs `s_i` in `{+1,-1}` with `sum_i s_i q_i=0`, and define the quarter-fold by
 
-$$
+```math
 U_{i+1}-U_i=s_iJq_i,\qquad J(x,y)=(-y,x).
-$$
+```
 
 Replace the labels on `F` by these folded positions and retain every other source label. Assume this full endpoint is unit-separated and triangle-free. Then every one of the four transition arcs in a nonconstant sign pattern has at least two sides. Hence `m>=8`; for `m=8` all four arcs have exactly two sides. In particular, on an actual face with five, six, or seven sides, every endpoint-feasible sign pattern is constant.
 
@@ -35,16 +35,16 @@ If one transition arc has one side, its chord has length one. The opposite arc h
 
 Assume such a short pair exists. Write the parallelogram corners as
 
-$$
+```math
 a=0,\quad b=Lt,\quad d=v,\quad c=Lt+v,
-$$
+```
 
 where `t` and `v` are unit vectors and the angle `gamma` from `t` to `v` lies in `(0,pi)`. The two long face arcs run from `a` to `b` and from `d` to `c`. Their first unit edge vectors can be written
 
-$$
+```math
 e=(\cos\alpha)t-(\sin\alpha)Jt,\qquad
 f=(\cos\beta)t+(\sin\beta)Jt,
-$$
+```
 
 with `alpha,beta>=0`, because convexity puts the two arcs on opposite sides of their equal chord.
 
@@ -52,21 +52,21 @@ At a transition vertex with exterior turn `theta`, the old two-step boundary cho
 
 At `a` and `d`, the old turns are respectively `pi-gamma-alpha` and `gamma-beta`. The lower turn bounds give
 
-$$
+```math
 \gamma<2\pi/3-\alpha,\qquad \gamma>\pi/3+\beta.
-$$
+```
 
 Put `delta=(alpha+beta)/2` and `d0=(beta-alpha)/2`. These inequalities imply `0<=delta<pi/6` and
 
-$$
+```math
 \pi/3+\delta<\gamma-d_0<2\pi/3-\delta.
-$$
+```
 
 Apply the inverse common quarter-turn to the folded coordinates, so each folded edge has increment `s_i q_i`. Up to reversing every sign, the long arcs have sign `+1` and the short arcs have sign `-1`. The bottom long arc stays in place, while the top long arc is translated by `-2v`. Thus the two first internal vertices have folded difference `f-e-v`, and direct expansion gives
 
-$$
+```math
 |f-e-v|^2=1+4\sin^2\!\delta-4\sin\delta\sin(\gamma-d0).
-$$
+```
 
 If `delta>0`, the displayed angle interval implies `sin(gamma-d0)>sin(delta)`, so this squared distance is strictly below one. If `delta=0`, then `alpha=beta=0`; the two old first internal vertices are separated by the unit vector `v`. They are nonconsecutive vertices of `F`, again contradicting its face property. Both cases are impossible. Therefore no transition arc has one side.
 

@@ -33,79 +33,79 @@ Let `E_pen(eta)` and `E_in^(4)` have the meanings from
 `target_c_double_unit_flat_center_overlap_2026-09-14.md`, and let `L_flat^bd` be its
 loaded flat-center population.  On every convergent Type-II subsequence with
 
-$$
+```math
 R_F=o(D),
-$$
+```
 
 there is a subfamily `L_diag subseteq L_flat^bd` with
 
-$$
+```math
 |L_{diag}|=|L_{flat}^{bd}|-o(D)
 \tag{BR.1}
-$$
+```
 
 and an endpoint-disjoint inactive-pair matching `H_ref` such that
 
-$$
+```math
 \boxed{|H_{ref}|\ge {|L_{diag}|\over13},}
 \tag{BR.2}
-$$
+```
 
-$$
+```math
 \boxed{\sum_{xy\in H_{ref}}(|x-y|-1)=o(D).}
 \tag{BR.3}
-$$
+```
 
 For the admissible tooth threshold `eta=0.06`, the endpoint form of `66d738ba` gives
 
-$$
+```math
 4|E_{pen}(0.06)|+|L_{flat}^{bd}|+|E_{in}^{(4)}|
 \ge (0.442242872369096\ldots-o(1))D.
 \tag{BR.4}
-$$
+```
 
 Combining (BR.1)--(BR.4),
 
-$$
+```math
 \boxed{
 4|E_{pen}(0.06)|+13|H_{ref}|+|E_{in}^{(4)}|
 \ge (0.442242872369096\ldots-o(1))D.
 }
 \tag{BR.5}
-$$
+```
 
 Let
 
-$$
+```math
 E_{in}^*:=E_{pen}(0.06)\cup E_{in}^{(4)}.
-$$
+```
 
 Both parent families consist of actual source unit-contact edges with quantitative
 inward penetration.  Since each parent family is contained in the union,
 
-$$
+```math
 4|E_{pen}(0.06)|+|E_{in}^{(4)}|\le5|E_{in}^*|.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 5|E_{in}^*|+13|H_{ref}|
 \ge (0.442242872369096\ldots-o(1))D,
 }
 \tag{BR.6}
-$$
+```
 
 and hence the current safe endpoint satisfies the two-currency source alternative
 
-$$
+```math
 \boxed{
 \max\{|E_{in}^*|,|H_{ref}|\}
 \ge (0.0245690484649497\ldots-o(1))D.
 }
 \tag{BR.7}
-$$
+```
 
 Thus a small-residual survivor near the present scalar endpoint must expose either a
 linear family of actual strongly inward unit contacts or a linear endpoint-disjoint
@@ -116,30 +116,30 @@ matching of inactive source pairs with sublinear total gap to activation.
 Let `m` be a loaded distinguished middle vertex of a sufficiently flat pentagonal
 exceptional face, with cyclic neighbors `l,r` satisfying
 
-$$
+```math
 |l-m|=|m-r|=1,
 \qquad
 \angle lmr=\pi-\epsilon_m.
-$$
+```
 
 Reflect `m` across the line `lr` and call the reflected point `m^*`.  Since the two
 incident bars have equal length,
 
-$$
+```math
 |m^*-l|=|m^*-r|=1,
 \qquad
 |m-m^*|=2\sin(\epsilon_m/2).
 \tag{BR.8}
-$$
+```
 
 In the flat-trapezoid limit, the midpoint of `lr` has a positive inward segment inside
 the quadrilateral formed by `l,r` and the two opposite pentagon vertices.  Trapezoid
 stability therefore implies that for sufficiently small `epsilon_m`,
 
-$$
+```math
 m^*\in\operatorname{int}(\operatorname{conv}A).
 \tag{BR.9}
-$$
+```
 
 The loaded flat-center theorem gives `deg_C(m)=2`, so every source point
 `z notin {m,l,r}` satisfies `|m-z|>1`.
@@ -157,20 +157,20 @@ diameter pair, and creates exactly as many unit contacts as were lost at loaded 
 
 Consequently there is a blocker
 
-$$
+```math
 z(m)\notin\{m,l,r\},
 \qquad |m^*-z(m)|\le1.
-$$
+```
 
 Using (BR.8),
 
-$$
+```math
 \boxed{
 1<|m-z(m)|
 \le1+2\sin(\epsilon_m/2).
 }
 \tag{BR.10}
-$$
+```
 
 This is an inactive near-contact in the original source.
 
@@ -181,20 +181,20 @@ source point `z` and suppose it blocks seven distinct centers.  Their rays about
 have two consecutive angular directions separated by at most `2pi/7`, while their
 radii lie in `(1,1+eta_D]`, where
 
-$$
+```math
 \eta_D:=2\sin(\epsilon_D/2)\to0.
-$$
+```
 
 For a completely finite bound, once `eta_D<=1/20`, two such adjacent centers at radii
 `r,s` and radial unit vectors `u,v` satisfy
 
-$$
+```math
 |ru-sv|
 \le |r-s|+s|u-v|
 \le {1\over20}+{21\over20}\,2\sin(\pi/7)
 <0.962<1.
 \tag{BR.11}
-$$
+```
 
 This contradicts source unit separation.  Thus every blocker is assigned to at most
 six centers.
@@ -204,9 +204,9 @@ center at most once and a blocker at most six times, so this assignment multigra
 maximum degree at most seven.  Greedy edge matching deletes at most `2*7-1=13`
 assignment edges per chosen edge, proving
 
-$$
+```math
 |H_{ref}|\ge |L_{diag}|/13.
-$$
+```
 
 The matching is endpoint-disjoint by construction.
 
@@ -220,10 +220,10 @@ For each fixed `j`, trapezoid stability gives a positive residual threshold
 `theta_j` guaranteeing middle-angle error at most `1/j`.  Because `R_F/D->0`, choose
 an integer `j(D)->infinity` slowly enough that
 
-$$
+```math
 {R_F\over D\,\theta_{j(D)}}\to0.
 \tag{BR.12}
-$$
+```
 
 Delete from `L_flat^bd` every center whose incident pentagon has residual at least
 `theta_{j(D)}`.  At most `R_F/theta_{j(D)}=o(D)` centers are deleted, because the
@@ -236,11 +236,11 @@ By (BR.10), every edge of the matching then has gap at most
 force-hull vertices, whose unit separation and convex-hull perimeter bound give
 `O(D)` vertices.  Therefore
 
-$$
+```math
 \sum_{xy\in H_{ref}}(|x-y|-1)
 \le |H_{ref}|\,2\sin(\epsilon_D/2)
 =o(D),
-$$
+```
 
 proving (BR.3).
 
@@ -248,10 +248,10 @@ proving (BR.3).
 
 The contact-converted form of `66d738ba`, at `eta=0.06`, is
 
-$$
+```math
 4|E_{pen}(0.06)|+|L_{flat}^{bd}|+|E_{in}^{(4)}|
 \ge (0.442242872369096\ldots-o(1))D.
-$$
+```
 
 Replace `|L_flat^bd|` by `|L_diag|+o(D)` and then use
 `|L_diag|<=13|H_ref|`.  This gives (BR.5).  Passing to the union `E_in^*` gives
@@ -259,10 +259,10 @@ Replace `|L_flat^bd|` by `|L_diag|+o(D)` and then use
 
 The numerical division is
 
-$$
+```math
 {0.442242872369096\ldots\over18}
 =0.0245690484649497\ldots .
-$$
+```
 
 ## 5. Frontier effect
 

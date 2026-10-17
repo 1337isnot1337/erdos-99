@@ -23,41 +23,41 @@ disprove C-II.
 
 Put
 
-$$
+```math
 w={\sqrt{15}\over4},\qquad \delta={1\over2},
 \qquad v=(\delta,w),
-$$
+```
 
 so `|v|=sqrt(19)/4>1`. Let `u_1,u_2` be the two unit vectors symmetric about
 `v` whose sum is `v`. Explicitly,
 
-$$
+```math
 u_1=\left({1\over4}+{15\sqrt3\over8\sqrt{19}},
  {\sqrt{15}\over8}-{3\sqrt5\over4\sqrt{19}}\right),
-$$
+```
 
-$$
+```math
 u_2=\left({1\over4}-{15\sqrt3\over8\sqrt{19}},
  {\sqrt{15}\over8}+{3\sqrt5\over4\sqrt{19}}\right).
-$$
+```
 
 For an integer `N`, take the two chains
 
-$$
+```math
 B_i=(i,0),\qquad T_i=(i+\delta,w),\qquad 0\le i\le N,
-$$
+```
 
 and add cap vertices
 
-$$
+```math
 R=B_N+u_1,\qquad L=T_0-u_1.
-$$
+```
 
 The convex polygon is traversed in the order
 
-$$
+```math
 B_0,B_1,\ldots,B_N,R,T_N,T_{N-1},\ldots,T_0,L.
-$$
+```
 
 Its boundary edges are the horizontal unit edges, followed by the four unit cap
 edges `B_N R`, `R T_N`, `T_0 L`, and `L B_0`.
@@ -70,10 +70,10 @@ certificate checks the required signs algebraically.
 
 For a bottom/top pair,
 
-$$
+```math
 |B_i-T_j|^2=(i-j-\delta)^2+w^2
 \ge {1\over4}+{15\over16}={19\over16}>1.
-$$
+```
 
 The cap coordinates have `u_{1x}>1/2`, so every cap-to-chain pair other than its
 two designated boundary neighbors has horizontal separation greater than one.
@@ -90,24 +90,24 @@ or KKT stress can be attached to it.
 The parallelogram between the two long chains has area `wN`. The two cap triangles
 have total area
 
-$$
+```math
 |u_1\times u_2|={3\sqrt{95}\over32}.
-$$
+```
 
 Thus
 
-$$
+```math
 \operatorname{area}(C_N)=wN+{3\sqrt{95}\over32}.
-$$
+```
 
 The horizontal span is `N+O(1)` and the vertical span is bounded, so
 `diam(C_N)=N+O(1)`. With no source points in the face interior,
 
-$$
+```math
 {\operatorname{area}(C_N)-a_0 Z(C_N)\over\operatorname{diam}(C_N)}
 \longrightarrow {\sqrt{15}\over4}
 > {867\over5000}.
-$$
+```
 
 The limiting coefficient is substantially larger than the promoted
 `C-TRAIN-INTERFACE-CURRENCY` Type-II floor.

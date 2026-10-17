@@ -20,14 +20,14 @@ The existing audited certificate proves that every global degree-pure collapsed
 support-six block has at least seven internal strict-rhombus crossings. This note
 checks the only new endpoint, exactly seven crossings, and eliminates it.
 
-If $X_K$ is the number of strict-rhombus crossings whose two complete trains are
-among the twelve internal relation trains of one collapsed support-six block $K$,
+If $`X_K`$ is the number of strict-rhombus crossings whose two complete trains are
+among the twelve internal relation trains of one collapsed support-six block $`K`$,
 then
 
-$$
+```math
 \boxed{X_K\ge 8.}
 \tag{EC.1}
-$$
+```
 
 The new computation uses the same exact necessary conditions as the committed
 seven-crossing-floor certificate: MI.1 mod-2 relation-cycle equations, one common
@@ -42,9 +42,9 @@ The same sign-preserving face relabelings and common-anchor-line reflection used
 by that census split them into 15 and 27 conservative symmetry orbits.
 
 These symmetries preserve the seven-crossing question. Face/train relabeling merely
-renames the MI.1 variables. Reflection sends every projective angle $x_e$ to
-$3-x_e$ while reversing coherent train orientation, so the strict crossing
-condition $1<|x_e-x_f|<2$ is invariant. The determinant sign defining the
+renames the MI.1 variables. Reflection sends every projective angle $`x_e`$ to
+$`3-x_e`$ while reversing coherent train orientation, so the strict crossing
+condition $`1<|x_e-x_f|<2`$ is invariant. The determinant sign defining the
 crossing rotation transforms together with the train orientations, and relabeling
 or reflection preserves genus zero of the planarized rotation system.
 
@@ -57,13 +57,13 @@ asserts representative counts 15 and 27.
 
 There are 66 unordered pairs among the twelve internal relation trains. Row
 reduction of all edge-disjoint relation-cycle MI.1 equations gives one binary
-target $t$ and syndrome columns $s_j$. A selected seven-set $S$ satisfies all
+target $`t`$ and syndrome columns $`s_j`$. A selected seven-set $`S`$ satisfies all
 MI.1 equations exactly when
 
-$$
+```math
 \bigoplus_{j\in S}s_j=t.
 \tag{EC.2}
-$$
+```
 
 The verifier enumerates every increasing seven-subset exactly once by a 3+4
 meet-in-the-middle split. It stores every increasing triple by XOR syndrome,
@@ -79,7 +79,7 @@ orientable genus is computed from Euler characteristic.
 
 Executed exact result:
 
-$$
+```math
 \begin{array}{c|r|r|r}
 \text{matching type}&\text{MI.1 seven-sets}&\text{joint-angle seven-sets}&
 \text{planar seven-sets}\\ \hline
@@ -87,12 +87,12 @@ $$
 \text{mixed}&543490&1580&0
 \end{array}
 \tag{EC.3}
-$$
+```
 
 Total: 868124 MI.1-consistent seven-sets, 2544 jointly angle-feasible seven-sets,
 and zero planar seven-sets across all 42 cell orbits.
 
-All logical decisions are exact: bit arithmetic over $\mathbf F_2$, integer
+All logical decisions are exact: bit arithmetic over $`\mathbf F_2`$, integer
 strict-difference feasibility, finite permutation enumeration, and integer
 Euler-characteristic genus. No floating-point comparison is used.
 
@@ -105,36 +105,36 @@ Different collapsed support-six blocks have disjoint internal relation-train set
 and a bounded strict rhombus belongs to exactly one pair of complete trains. The
 same counting argument used for the previous seven-crossing floor now gives
 
-$$
+```math
 \boxed{R_4\ge 8c_6,\qquad c_6\le R_4/8.}
 \tag{EC.4}
-$$
+```
 
 Combining this with the committed tangent payment
 
-$$
+```math
 d_C\ge M_0+2c_6+(c_6-1)_+,\qquad
 M_0=(b-f)/2+E_U+p_U
 \tag{EC.5}
-$$
+```
 
-gives, on the branch $c_6>0$,
+gives, on the branch $`c_6>0`$,
 
-$$
+```math
 c_6\le (d_C-M_0+1)/3.
 \tag{EC.6}
-$$
+```
 
 Thus the current support accounting sharpens to
 
-$$
+```math
 \boxed{
 \sigma_C\le
 2n_0+n_2+n_1/7+x_U/7+
 \min\{(d_C-M_0+1)/21,\ R_4/56\}.
 }
 \tag{EC.7}
-$$
+```
 
 This is a strict strengthening of the collapsed support-six payment. It does not
 exclude collapsed support-six blocks outright and does not close C-II by itself.

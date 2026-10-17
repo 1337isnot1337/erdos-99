@@ -43,9 +43,9 @@ on its opposite side by the claim above.  If a strict rhombus from the residual
 same-labelled part is present, the edge is internal to that selected group; otherwise
 it is a physical boundary occurrence of the complete complex.  Hence
 
-$$
+```math
 P_1+P_2\le P_R.
-$$
+```
 
 This comparison is occurrence-counted.  A shared edge inside one group contributes
 twice to the internal cancellation and is not counted as a physical boundary; a
@@ -58,30 +58,30 @@ The physical boundary of the full rhombus complex can be charged to the global o
 walk and bounded nonquadrilateral face boundaries. With `b` the outer-walk length,
 `f` the number of bounded nonquadrilateral faces, and `Q` their degree excess,
 
-$$
+```math
 P_R\le b+4f+Q.
-$$
+```
 
 The Type-II loaded-hull identity is `b+Q=2(q-k)`. The audited two-half-disk physical
 boundary theorem gives, for each group,
 
-$$
+```math
 P_i\ge(2+\gamma-o(1))D,
 \qquad
 \gamma=\frac{\pi}{8}(4-2\sqrt3).
-$$
+```
 
 Combining the three displayed inequalities yields
 
-$$
+```math
 2(q-k)+4f\ge(4+2\gamma-o(1))D,
-$$
+```
 
 or equivalently
 
-$$
+```math
 \frac{q-k}{D}+2\frac fD\ge2+\gamma-o(1).
-$$
+```
 
 The identity `T=q+2f-k` makes this exactly the train-count floor
 `T/D\ge2+\gamma-o(1)` in this branch.

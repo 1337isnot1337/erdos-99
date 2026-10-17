@@ -16,22 +16,22 @@ The outer-walk measure and Fourier calculation in §§149.1--149.2 are valid at 
 stated subsequential scope. If `nu` is the weak limit of the occurrence-counted
 projective outer measure and
 
-$$
+```math
 g(\alpha)=\int|\cos(\theta-\alpha)|\,d\nu(\theta)-2\ge0,
-$$
+```
 
 then its mean is `2 delta/pi`. The Fourier coefficient of `g` at frequency `n` has
 modulus
 
-$$
+```math
 \frac{2}{\pi(4n^2-1)}|\widehat\nu(n)|,
-$$
+```
 
 so positivity gives
 
-$$
+```math
 |\widehat\nu(n)|\le \delta(4n^2-1).
-$$
+```
 
 Pushing forward by `theta -> 6 theta` and applying the nonnegative Fejer kernel also
 validly gives (149.9)--(149.10), an upper bound for the squared masses of **outer
@@ -45,9 +45,9 @@ unproved endpoint-capacity theorem in §149.4 is granted.
 Section 149.3 defines `S_j` only from the atoms of the weak limiting stopped-train
 direction measure after quotienting directions modulo `pi/3`. It then asserts
 
-$$
+```math
 \sum_j S_j^2\ge \frac{4\Delta_2}{x^2}. \tag{A149.1}
-$$
+```
 
 The cited §142 saturation input, as recorded in the current proof-only source, says
 only that all but `o(D^2)` rhombus crossings have projective direction separation
@@ -58,9 +58,9 @@ atomic fibers.
 
 A non-atomic coupling can be supported on the relation
 
-$$
+```math
 \eta=\xi+\pi/3
-$$
+```
 
 while its marginal on the quotient parameter `xi mod (pi/3)` is non-atomic. In that
 measure-level situation every `S_j` is zero although the crossing pair measure can
@@ -83,16 +83,16 @@ phase of train `tau`, and let `E_D^{far}(epsilon)` count crossing edges whose qu
 phase separation exceeds `epsilon`. One would need to prove, from the actual
 geometric crossing rules and triangle-free graph alone, that
 
-$$
+```math
 E_D^{far}(\epsilon)=o(D^2)\quad(\epsilon>0\text{ fixed})
-$$
+```
 
 and `|E_D|/D^2 -> Delta_2` imply
 
-$$
+```math
 \limsup_D\frac{|E_D|}{D^2}
 \le \frac{x^2}{4}\sum_j S_j^2. \tag{A149.2}
-$$
+```
 
 The factor `1/4` would require a localized Mantel argument after isolating the
 atomic quotient neighborhoods; the ordinary degree-neighborhood estimate gives only

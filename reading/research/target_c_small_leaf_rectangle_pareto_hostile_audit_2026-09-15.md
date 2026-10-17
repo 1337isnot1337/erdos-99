@@ -24,25 +24,25 @@ The candidate does not introduce new topology. It keeps the parent theorem's con
 
 The corrected parent theorem gives a dual-tree backbone of `s=s_D` smallest-leaf outer-to-outer trains with
 
-$$
+```math
 s>s_0D-o(D),
 \qquad
 s_0={627\over42520},
-$$
+```
 
 each crossed by more than `d_0D-o(D)` center trains, where
 
-$$
+```math
 d_0={57\over100}.
-$$
+```
 
 The total center family satisfies
 
-$$
+```math
 N_C<n_0D+o(D),
 \qquad
 n_0={1063\over1000}.
-$$
+```
 
 For every center train, the backbone intersection is a consecutive interval because it is the intersection of two paths in the same tree. These are exactly the already-audited parent inputs; no global linear ordering of all leaf cuts is reintroduced.
 
@@ -54,29 +54,29 @@ For every center train, the backbone intersection is a consecutive interval beca
 
 For fixed `rho>0`, put `r=floor(rho D)`. The parent block-counting argument gives
 
-$$
+```math
 \sum_B \#\{\gamma:B\subset N(\gamma)\cap P_0\}
 \ge I_0-(r-1)N_C,
-$$
+```
 
 with
 
-$$
+```math
 I_0>d_0sD-o(D^2).
-$$
+```
 
 There are `s-r+1<=s` blocks. Hence some block has common center neighborhood
 
-$$
+```math
 >{d_0sD-rN_C\over s}-o(D).
-$$
+```
 
 Because `s=Theta(D)` uniformly (`s/D` has positive lower limit `s_0`) and `r=rho D+O(1)`, division does not magnify the error beyond `o(D)`. Therefore
 
-$$
+```math
 |N(B)|>
 \left(d_0-{\rho n_0\over s/D}\right)D-o(D).
-$$
+```
 
 This is the correct normalization.
 
@@ -88,36 +88,36 @@ This is the correct normalization.
 
 The penalty is
 
-$$
+```math
 {\rho n_0\over s/D}.
-$$
+```
 
 For positive `rho,n_0` this is decreasing in `s/D`. Since
 
-$$
+```math
 {s\over D}\ge s_0-o(1),
-$$
+```
 
 the worst asymptotic penalty occurs at the smallest allowed backbone density. Thus
 
-$$
+```math
 d_0-{\rho n_0\over s/D}
 \ge d_0-{\rho n_0\over s_0}-o(1).
-$$
+```
 
 The candidate therefore weakens the actual block bound when it substitutes `s_0`; it does not reverse an inequality.
 
 With
 
-$$
+```math
 \alpha={n_0\over s_0}={1129969\over15675},
-$$
+```
 
 the claimed profile
 
-$$
+```math
 |C_\rho|>(d_0-\alpha\rho)D-o(D)
-$$
+```
 
 is valid.
 
@@ -129,17 +129,17 @@ is valid.
 
 The displayed center lower bound is positive exactly for
 
-$$
+```math
 0<\rho<{d_0\over\alpha}
 ={35739\over4519876}
 =0.0079070753\ldots .
-$$
+```
 
 This upper endpoint is strictly smaller than
 
-$$
+```math
 s_0=0.0147460\ldots,
-$$
+```
 
 so `r<s` automatically for every fixed `rho` in the advertised range and all sufficiently large `D`. No separate block-existence condition is missing.
 
@@ -153,30 +153,30 @@ The theorem correctly notes that the topological extraction itself can be run fa
 
 Solving
 
-$$
+```math
 \rho=d_0-\alpha\rho
-$$
+```
 
 gives
 
-$$
+```math
 \rho_{bal}={35739\over4582576}
 =0.00779888866\ldots .
-$$
+```
 
 The theorem uses the smaller rational value
 
-$$
+```math
 \rho={779\over100000}=0.00779.
-$$
+```
 
 The exact certificate gives
 
-$$
+```math
 d_0-\alpha\rho
 ={696271\over82500000}
 =0.00843964848\ldots>0.00779.
-$$
+```
 
 Thus both shores are at least `0.00779D-o(D)`. The rounding has a substantial margin and is not sensitive to hidden decimal error.
 
@@ -188,23 +188,23 @@ Thus both shores are at least `0.00779D-o(D)`. The rounding has a substantial ma
 
 The guaranteed product profile is
 
-$$
+```math
 P(\rho)=\rho(d_0-\alpha\rho).
-$$
+```
 
 Since `alpha>0`, this is strictly concave and has unique critical point
 
-$$
+```math
 \rho_*={d_0\over2\alpha}
 ={35739\over9039752}
 =0.0039535376634\ldots .
-$$
+```
 
 At this point
 
-$$
+```math
 d_0-\alpha\rho_*={d_0\over2}={57\over200}=0.285.
-$$
+```
 
 The exact product is `0.001126758234...`, as certified independently in Pyroam. The nearby simple value `rho=.00395` also has center lower bound `0.2852550207...`.
 

@@ -19,25 +19,25 @@ For a vertex of degree `d<=5`, the source keeps the vertex when at most three ne
 precede it in a uniformly random ordering.  The rank among the vertex and its neighbors
 is uniform, so the retention probability is
 
-$$
+```math
 \min\{1,4/(d+1)\}.
-$$
+```
 
 The exclusion probabilities are therefore exactly
 
-$$
+```math
 0,0,0,0,1/5,1/3
-$$
+```
 
 for degrees zero through five.  Reversing the retained order gives at most three later
 retained neighbors, which is the orientation required by the existing pentagon pivot
 argument.  Hence
 
-$$
+```math
 |U_5\setminus W|
 \le z_4/5+z_5/3
 \le u_5/5+2z_5/15
-$$
+```
 
 for some ordering.  This is an expectation/existence argument, not an assertion that
 every ordering has the displayed bound.
@@ -53,9 +53,9 @@ residual pentagons.  There is no sixth terminal occurrence available for an oute
 activated endpoint, or for a residual nonpentagonal endpoint.  Thus every such vertex
 is counted by `n_0`, and
 
-$$
+```math
 z_5\le n_0.
-$$
+```
 
 This step would fail without endpoint-pair simplicity; that hypothesis is explicitly
 in scope and was already used by the preceding pentagon-bootstrap theorem.
@@ -87,11 +87,11 @@ Ordering the activated blocks first and the retained pentagons in the weighted
 3-degeneracy order therefore gives the same block-upper-triangular square minor with
 invertible `2x2` diagonal blocks.  Thus
 
-$$
+```math
 \operatorname{rank}C_{face}\ge2(f-|S|),
 \qquad
 \sigma_C\le2|S|.
-$$
+```
 
 No nonlinear integration of seed rows is asserted.
 
@@ -101,19 +101,19 @@ No nonlinear integration of seed rows is asserted.
 
 The seed estimate gives
 
-$$
+```math
 \sigma_C
 \le2u_6+{2\over5}u_5+{4\over15}z_5.
-$$
+```
 
 Since `u_5+u_6=f-a_F`, `u_6<=Q-f`, and `z_5<=n_0`, this becomes
 
-$$
+```math
 \sigma_C
 \le {2\over5}(f-a_F)
  +{8\over5}(Q-f)
  +{4\over15}n_0.
-$$
+```
 
 The coefficient conversion is correct: the extra `8/5` comes from
 `2-2/5`, not from double-counting the degree excess.
@@ -124,25 +124,25 @@ The coefficient conversion is correct: the extra `8/5` comes from
 
 The pair-shield manifold already contains
 
-$$
+```math
 E_U=a_F+x_A/2+(n_0+n_2)/2
-$$
+```
 
 additional exact finite dimensions beyond `(b-f)/2`, up to the separately nonnegative
 `p_U` term.  Hence `n_0<=2E_U`.  Dropping the favorable negative term
 `-(2/5)a_F` gives
 
-$$
+```math
 \sigma_C
 \le {2\over5}f+{8\over5}(Q-f)+{8\over15}E_U.
-$$
+```
 
 Rearrangement yields
 
-$$
+```math
 E_U\ge {15\over8}
 \left(\sigma_C-{2f\over5}-{8(Q-f)\over5}\right)_+.
-$$
+```
 
 There is no dimension double-counting here.  The weighted row minor is used only to
 bound `sigma_C`; the dimensions added to `m_D` are exactly the already proved
@@ -155,33 +155,33 @@ pair-shield dimensions represented by `E_U`.
 The certified live bounds `f/D<0.76152405+o(1)` and
 `(Q-f)/D<0.000141+o(1)` give
 
-$$
+```math
 B_0={2\over5}(0.76152405)+{8\over5}(0.000141)
 =0.30483522.
-$$
+```
 
 The pair-shield baseline then yields
 
-$$
+```math
 {m_D\over D}
 >1.1988388040
 +{15\over8}(\sigma_C/D-B_0)_+-o(1).
-$$
+```
 
 Taking the maximum with the independently audited sealed-component inequality
 
-$$
+```math
 {m_D\over D}>1.1988388040+\sigma_C/(4D)-o(1)
-$$
+```
 
 is legitimate; the two lower bounds need not arise from independent flex coordinates.
 They are alternative lower bounds on the same `m_D`.
 
 The scalar certificate verifies the crossover
 
-$$
+```math
 \sigma_C/D=(15/13)B_0=0.351732946153846\ldots .
-$$
+```
 
 **Disposition:** PASS.
 
@@ -189,10 +189,10 @@ $$
 
 Let
 
-$$
+```math
 x_D=(d_H+p_D)/D,
 \qquad s_D=\sigma_C/D.
-$$
+```
 
 The exact partition is `k/D=x_D+s_D`.  If `s_D>B_0`, adding
 `(15/8)x_D` to the weighted flex inequality cancels `s_D` against the exact defect
@@ -200,19 +200,19 @@ partition.  If `s_D<=B_0`, the pair-shield baseline and `x_D>=k/D-B_0` give the 
 bound.  With the certified safe live lower bound `k/D>1.1812298040-o(1)`, both cases
 give
 
-$$
+```math
 {m_D\over D}+{15\over8}x_D
 >2.8420786490-o(1).
-$$
+```
 
 The exact-rational certificate verifies the decimal.  Intersecting this line with the
 previous audited quarter-weight line gives
 
-$$
+```math
 x_*=0.829496857846153\ldots,
 \qquad
 m_*=1.286772040538461\ldots .
-$$
+```
 
 The safest interpretation is the half-plane statement itself.  For convergent live
 subsequences, the two safe half-planes imply that the pair `(M,X)` cannot lie strictly

@@ -21,39 +21,39 @@ The promoted theorem is an exact source-level no-go statement for strict-safe ar
 
 ## 1. Setup
 
-Let $A$ be a finite noncollinear triangle-free global minimum-diameter source of cardinality $n$, chosen among such global minimizers to minimize the number of unit contacts. Put
+Let $`A`$ be a finite noncollinear triangle-free global minimum-diameter source of cardinality $`n`$, chosen among such global minimizers to minimize the number of unit contacts. Put
 
-$$
+```math
 K=\operatorname{conv}A,
 \qquad
 D=\operatorname{diam}A=D(n),
 \qquad
 a_0=\frac{\sqrt3}{2}.
-$$
+```
 
-Let $R\subseteq A$ be any finite deletion set.
+Let $`R\subseteq A`$ be any finite deletion set.
 
 Define
-$$
+```math
 E_C(R)
 =
 \{xy:\ |x-y|=1,\ \{x,y\}\cap R\ne\varnothing\}.
-$$
+```
 
 A bounded measurable set
-$$
+```math
 S\subset\operatorname{int}K
-$$
-is **strict-safe relative to $R$** if
-$$
+```
+is **strict-safe relative to $`R`$** if
+```math
 \boxed{
 |y-a|>1
 \qquad
 (y\in S,\ a\in A\setminus R).
 }
-$$
+```
 
-No convexity, chamber structure, wall structure, or KKT property of $S$ is assumed.
+No convexity, chamber structure, wall structure, or KKT property of $`S`$ is assumed.
 
 Assume the source has at least one unit contact, as every canonical post-ZF Target C source does.
 
@@ -61,54 +61,54 @@ Assume the source has at least one unit contact, as every canonical post-ZF Targ
 
 The promoted statement is
 
-$$
+```math
 \boxed{
 E_C(R)=\varnothing
 \quad\Longrightarrow\quad
 \operatorname{area}S\le a_0|R|,
 }
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 E_C(R)\ne\varnothing
 \quad\Longrightarrow\quad
 \operatorname{area}S\le a_0(|R|-1).
 }
-$$
+```
 
-The second formula is meaningful because $E_C(R)\ne\varnothing$ forces $R\ne\varnothing$.
+The second formula is meaningful because $`E_C(R)\ne\varnothing`$ forces $`R\ne\varnothing`$.
 
 ### 2.1 No-contact deletion case
 
 Suppose
-$$
+```math
 E_C(R)=\varnothing.
-$$
+```
 
-Then every point of $R$ is contact-isolated.
+Then every point of $`R`$ is contact-isolated.
 
 Because the source has at least one contact, choose a contact-active vertex
-$$
+```math
 v\in A\setminus R.
-$$
+```
 
 Assume for contradiction that
-$$
+```math
 \operatorname{area}S>a_0|R|.
-$$
+```
 
-Choose $\lambda>1$ sufficiently close to one that
-$$
+Choose $`\lambda>1`$ sufficiently close to one that
+```math
 \frac{\operatorname{area}S}{a_0\lambda^2}>|R|.
-$$
+```
 
-Let $\Lambda_\lambda$ be the triangular lattice of minimum distance $\lambda$ and covolume $a_0\lambda^2$.
+Let $`\Lambda_\lambda`$ be the triangular lattice of minimum distance $`\lambda`$ and covolume $`a_0\lambda^2`$.
 
 Translation averaging gives
-$$
+```math
 \mathbb E_t
 \left|
 (t+\Lambda_\lambda)\cap S
@@ -117,151 +117,151 @@ $$
 \frac{\operatorname{area}S}{a_0\lambda^2}
 >
 |R|.
-$$
+```
 
 Because the count is integer-valued, some translate contains at least
-$$
+```math
 |R|+1
-$$
-points of $S$. Choose exactly that many and call the set $Y$.
+```
+points of $`S`$. Choose exactly that many and call the set $`Y`$.
 
 Define
-$$
+```math
 A'
 =
 (A\setminus(R\cup\{v\}))\cup Y.
-$$
+```
 
 Cardinality is unchanged.
 
-Distinct points of $Y$ are at distance at least $\lambda>1$, and strict safety gives
-$$
+Distinct points of $`Y`$ are at distance at least $`\lambda>1`$, and strict safety gives
+```math
 |y-a|>1
 \qquad
 (y\in Y,\ a\in A\setminus(R\cup\{v\})).
-$$
+```
 
 Thus the inserted points create no unit contact.
 
-Every point of $Y$ lies in $\operatorname{int}K$. A diameter endpoint of a compact convex set is an extreme boundary point, so every distance involving a point of $Y$ is strictly below $D$. Retained old-old distances remain at most $D$. Hence
-$$
+Every point of $`Y`$ lies in $`\operatorname{int}K`$. A diameter endpoint of a compact convex set is an extreme boundary point, so every distance involving a point of $`Y`$ is strictly below $`D`$. Retained old-old distances remain at most $`D`$. Hence
+```math
 \operatorname{diam}A'\le D.
-$$
+```
 
-If the diameter is strictly below $D$, global diameter minimality is contradicted.
+If the diameter is strictly below $`D`$, global diameter minimality is contradicted.
 
-If it remains $D$, then $A'$ is another global minimizer. The points of $R$ had no contacts, while $v$ had at least one. The inserted set creates no new contacts. Hence $A'$ has fewer unit contacts than $A$, contradicting contact minimality.
+If it remains $`D`$, then $`A'`$ is another global minimizer. The points of $`R`$ had no contacts, while $`v`$ had at least one. The inserted set creates no new contacts. Hence $`A'`$ has fewer unit contacts than $`A`$, contradicting contact minimality.
 
 Therefore
-$$
+```math
 \operatorname{area}S\le a_0|R|.
-$$
+```
 
 ## 3. One-cell improvement when the deletion already removes a contact
 
 Now suppose
-$$
+```math
 E_C(R)\ne\varnothing.
-$$
+```
 
 Assume
-$$
+```math
 \operatorname{area}S>a_0(|R|-1).
-$$
+```
 
-Choose $\lambda>1$ so close to one that
-$$
+Choose $`\lambda>1`$ so close to one that
+```math
 \frac{\operatorname{area}S}{a_0\lambda^2}>|R|-1.
-$$
+```
 
-Some translate of $\Lambda_\lambda$ then contains at least $|R|$ points of $S$. Choose exactly $|R|$ and call the set $Y$.
+Some translate of $`\Lambda_\lambda`$ then contains at least $`|R|`$ points of $`S`$. Choose exactly $`|R|`$ and call the set $`Y`$.
 
 Set
-$$
+```math
 A'=(A\setminus R)\cup Y.
-$$
+```
 
 Again:
 
 - cardinality is unchanged;
-- every new-new distance is $>1$;
-- every new-old distance is $>1$;
-- every new-involving upper distance is $<D$;
+- every new-new distance is $`>1`$;
+- every new-old distance is $`>1`$;
+- every new-involving upper distance is $`<D`$;
 - retained old-old distances are unchanged.
 
 Thus
-$$
+```math
 \operatorname{diam}A'\le D.
-$$
+```
 
-If the diameter drops, global minimality fails. If it remains $D$, contact minimality fails because $E_C(R)\ne\varnothing$ and no new unit contact is created.
+If the diameter drops, global minimality fails. If it remains $`D`$, contact minimality fails because $`E_C(R)\ne\varnothing`$ and no new unit contact is created.
 
 Hence
-$$
+```math
 \boxed{
 \operatorname{area}S\le a_0(|R|-1).
 }
-$$
+```
 
 This is the exact one-cell improvement.
 
 ## 4. Pointwise covering consequence
 
 Take
-$$
+```math
 R=\{v\}
-$$
-where $v$ is contact-active.
+```
+where $`v`$ is contact-active.
 
-Then $E_C(R)\ne\varnothing$, so every strict-safe measurable set relative to $R$ has area at most zero.
+Then $`E_C(R)\ne\varnothing`$, so every strict-safe measurable set relative to $`R`$ has area at most zero.
 
 Suppose there were
-$$
+```math
 y\in\operatorname{int}K
-$$
+```
 with
-$$
+```math
 |y-a|>1
 \qquad
 \forall a\in A\setminus\{v\}.
-$$
+```
 
-The finitely many strict inequalities persist in a small open ball around $y$, producing a positive-area strict-safe set. Contradiction.
+The finitely many strict inequalities persist in a small open ball around $`y`$, producing a positive-area strict-safe set. Contradiction.
 
 Therefore:
 
-$$
+```math
 \boxed{
 \operatorname{int}K
 \subseteq
 \bigcup_{a\in A\setminus\{v\}}
 \overline B(a,1)
 }
-$$
+```
 
-for every contact-active $v$.
+for every contact-active $`v`$.
 
 Equivalently, deleting one contact-active vertex never opens even one positive-radius strict-safe hole in the old hull.
 
 ## 5. Adaptive wall deletion cannot create net strict lattice credit
 
-Let $Z$ be any assigned set of $z$ contact-isolated source points and let $B$ be any nonempty finite set of contact-active wall/guard vertices. Put
-$$
+Let $`Z`$ be any assigned set of $`z`$ contact-isolated source points and let $`B`$ be any nonempty finite set of contact-active wall/guard vertices. Put
+```math
 R=Z\cup B.
-$$
+```
 
 Then
-$$
+```math
 E_C(R)\ne\varnothing,
-$$
-and every strict-safe region relative to $R$ obeys
-$$
+```
+and every strict-safe region relative to $`R`$ obeys
+```math
 \boxed{
 \operatorname{area}S
 \le
 a_0(z+|B|-1).
 }
-$$
+```
 
 This remains true if the region is chosen **after** the deletion set and arises by:
 
@@ -275,13 +275,13 @@ The theorem depends only on strict safety relative to the retained source.
 
 Therefore the strategy
 
-$$
+```math
 \text{delete }O(D)\text{ wall guards}
 +
 \text{recover }O(D)\text{ strict-safe area}
 +
 \text{average a }\lambda>1\text{ triangular lattice}
-$$
+```
 
 cannot produce net refill credit beyond the deletion cost.
 
@@ -300,13 +300,13 @@ That theorem assumes an **actual certified finite packet** of enough unit-separa
 
 The theorem also does not conflict with audit.58 centered fan reflections. A fan blocker is a discrete near-unit obstruction. Repairing it may still be possible, but not merely because deleting its contact-active source points creates positive strict-safe area.
 
-Audit.57 already proves that preserved walls with at most six unit edges have empty $W_C$. The present theorem is stronger in a different direction: even after contact-active wall vertices are deleted, strict-safe **area averaging** cannot create net capacity.
+Audit.57 already proves that preserved walls with at most six unit edges have empty $`W_C`$. The present theorem is stronger in a different direction: even after contact-active wall vertices are deleted, strict-safe **area averaging** cannot create net capacity.
 
 ## 7. Scope audit
 
 The promoted theorem does **not** claim:
 
-- that non-strict unit-packing capacity is bounded by $|R|$;
+- that non-strict unit-packing capacity is bounded by $`|R|`$;
 - that exact unit-contact refill packets do not exist;
 - that a finite explicit strict packet cannot beat a mean-area estimate;
 - that deleting a contact-active point leaves no isolated strict-safe point on the boundary of the covered disks;

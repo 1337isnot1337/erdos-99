@@ -16,7 +16,7 @@
 
 Fix one unloaded positive-contact component `I_r`. Put
 
-$$
+```math
 G_r:=C[I_r],
 \qquad
 A_r\subset B,
@@ -24,14 +24,14 @@ A_r\subset B,
 P_r:=\operatorname{conv}(A_r),
 \qquad
 K_r:=\operatorname{conv}(I_r).
-$$
+```
 
 Canonical Section 82 gives the strict harmonic trapping
 
-$$
+```math
 I_r\subset\operatorname{int}P_r.
 \tag{1.1}
-$$
+```
 
 ### Lemma HOF
 
@@ -39,13 +39,13 @@ For every contact edge of the induced harmonic graph on `I_r union A_r` that is 
 an internal edge of `G_r`, its relative interior lies in the outer face of `G_r`.
 In particular, for every attachment contact `au`, with `a in A_r` and `u in I_r`,
 
-$$
+```math
 \boxed{
 \operatorname{relint}[a,u]
 \subset \text{the outer face of }G_r.
 }
 \tag{HOF.1}
-$$
+```
 
 The same conclusion holds for every loaded-loaded contact with both endpoints in
 `A_r`.
@@ -56,14 +56,14 @@ region, but it cannot alter any original bounded face. Hence the bounded faces o
 `G_r` are exactly the all-unloaded bounded faces of the canonical induced harmonic
 graph on `I_r union A_r`. In particular,
 
-$$
+```math
 \boxed{
 \text{bounded four-faces of }G_r
 =
 \text{unloaded-only strict rhombi assigned to }I_r.
 }
 \tag{HOF.2}
-$$
+```
 
 This is the face-preservation fact needed to localize the Section-85 train-boundary
 count inside one response-selected harmonic component.
@@ -72,19 +72,19 @@ count inside one response-selected harmonic component.
 
 Because `I_r` is finite, (1.1) implies
 
-$$
+```math
 K_r=\operatorname{conv}(I_r)
 \subset\operatorname{int}P_r.
 \tag{2.1}
-$$
+```
 
 Every member of `A_r` is an extreme vertex of `P_r`, since every attachment is a
 loaded force-hull vertex. Therefore
 
-$$
+```math
 \boxed{A_r\cap K_r=\varnothing.}
 \tag{2.2}
-$$
+```
 
 ## 3. Proof of HOF.1 and the loaded-loaded variant
 
@@ -146,34 +146,34 @@ Let
 
 The exact Eppstein component identity gives
 
-$$
+```math
 \boxed{k_r+Q_r=2(\delta_r+r_r).}
 \tag{5.1}
-$$
+```
 
 Every edge of the outer-face walk has Euclidean length one, so
 
-$$
+```math
 \operatorname{per}(K_r)\le k_r.
 \tag{5.2}
-$$
+```
 
 Harmonic trapping gives `K_r subset P_r`. Conversely every attachment vertex has a
 unit contact to `I_r`, so
 
-$$
+```math
 P_r\subset K_r+B(0,1).
 \tag{5.3}
-$$
+```
 
 Cauchy's width formula then yields
 
-$$
+```math
 \boxed{
 \operatorname{per}(P_r)\le k_r+2\pi.
 }
 \tag{5.4}
-$$
+```
 
 Equations (5.1) and (5.4) are the exact local analogue of the global loaded-hull
 identities used in the new Type-II `q-k` train/hull floor on `main`.

@@ -20,7 +20,7 @@ DE's exposed-hull theorem uses only the fact that each train has at most two out
 
 For an asymptotically full core this yields
 
-$$
+```math
 \boxed{
 \liminf\frac{T-q}{D}
 \ge
@@ -29,25 +29,25 @@ $$
 \Delta:=\frac\pi{2\sqrt3}.
 }
 \tag{CE.1}
-$$
+```
 
 Numerically
 
-$$
+```math
 2\sqrt\Delta=1.9046256137\ldots .
-$$
+```
 
 Consequently every such survivor satisfies
 
-$$
+```math
 \boxed{
 \liminf\frac fD\ge\sqrt\Delta
 =0.9523128069\ldots,
 }
 \tag{CE.2}
-$$
+```
 
-$$
+```math
 \boxed{
 \liminf\frac hD
 \ge
@@ -55,11 +55,11 @@ $$
 =2.2658807149\ldots,
 }
 \tag{CE.3}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \liminf\frac{Q+2s_Z}{D}
 \ge
@@ -67,7 +67,7 @@ $$
 =1.3901687762\ldots .
 }
 \tag{CE.4}
-$$
+```
 
 This supersedes FC.1-FC.3 in the same branch. The improvement is not an algebraic rearrangement: it uses the one-good-end-per-train geometry that becomes available only after DG/DC.
 
@@ -77,12 +77,12 @@ This supersedes FC.1-FC.3 in the same branch. The improvement is not an algebrai
 
 Assume a post-ZF sequence satisfies
 
-$$
+```math
 x_B=o(D),
 \qquad
 n-v=o(D^2).
 \tag{1.1}
-$$
+```
 
 The second hypothesis is the one used by DE/DF. As in DE, let
 
@@ -92,43 +92,43 @@ The second hypothesis is the one used by DE/DF. As in DE, let
 
 Then
 
-$$
+```math
 \frac{R}{D^2}\to\Delta,
 \tag{1.2}
-$$
+```
 
 the total rhombus area excess is `o(D^2)`, the force hulls scaled by `D` converge to the diameter-one disk, and `T=Theta(D)`.
 
 After taking a subsequence, write
 
-$$
+```math
 \frac TD\to\tau
-$$
+```
 
 and let `mu_D` converge weakly to `mu`. Let
 
-$$
+```math
 s:=\text{total atomic mass of }\mu.
 \tag{1.3}
-$$
+```
 
 DE's finite-Mantel argument is unchanged and gives
 
-$$
+```math
 \boxed{
 \frac\Delta{\tau^2}\le\frac{s^2}{4}.
 }
 \tag{1.4}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \tau s\ge2\sqrt\Delta.
 }
 \tag{1.5}
-$$
+```
 
 The only point improved below is DE's relation between `s` and the hull-end population.
 
@@ -138,36 +138,36 @@ The only point improved below is DE's relation between `s` and the hull-end popu
 
 Partition the outer contact-face walk into its `q` subwalks between consecutive loaded force-hull vertices. Write their positive integer lengths as
 
-$$
+```math
 \ell_1,\ldots,\ell_q.
-$$
+```
 
 Then
 
-$$
+```math
 \sum_i(\ell_i-1)=x_B=o(D).
 \tag{2.1}
-$$
+```
 
 Hence all but `o(D)` intervals have length one. Every length-one interval is exactly the straight unit contact joining two consecutive force-hull vertices, so it is a **good hull side** in the terminology of NM.
 
 Thus the number of good hull-side train-end incidences is
 
-$$
+```math
 \boxed{
 q-o(D).
 }
 \tag{2.2}
-$$
+```
 
 DG/DC also gives
 
-$$
+```math
 \boxed{
 q/D\to\pi.
 }
 \tag{2.3}
-$$
+```
 
 ---
 
@@ -175,10 +175,10 @@ $$
 
 NM proves that a train with two good hull-side ends is a good train and that
 
-$$
+```math
 \boxed{T_{good}\le2.}
 \tag{3.1}
-$$
+```
 
 Therefore every train contributes at most one good hull endpoint, except that at most two trains contribute one additional good endpoint.
 
@@ -190,9 +190,9 @@ This is the exact finite statement that DE did not have in its general outer-wal
 
 Fix `epsilon>0`. Choose finitely many atoms of `mu` carrying total mass at least
 
-$$
+```math
 s-\epsilon.
-$$
+```
 
 Let `U_delta` be a union of sufficiently small disjoint projective-direction neighborhoods of those atoms, with `mu`-null boundaries.
 
@@ -200,50 +200,50 @@ A good hull endpoint on a train in `U_delta` is a unit hull side whose projectiv
 
 Because the normalized force hulls converge to the disk, their perimeter measures converge weakly to the nonatomic circular perimeter measure. Each good hull side has length exactly one. Therefore, for fixed chosen atoms,
 
-$$
+```math
 \#\{\text{good hull sides with direction in }U_\delta\}
 =O(\delta D)+o_\delta(D).
 \tag{4.1}
-$$
+```
 
 In particular, after first taking the sequence limit and then `delta->0`, trains in the selected atomic neighborhoods contribute only `o(D)` good hull endpoints.
 
 The number of trains outside `U_delta` is at most
 
-$$
+```math
 (1-s+\epsilon+o(1))T.
 \tag{4.2}
-$$
+```
 
 By NM.3.1, those trains contribute at most one good endpoint each, plus at most two extra endpoints globally.
 
 Combining with (2.2),
 
-$$
+```math
 q-o(D)
 \le
 (1-s+\epsilon+o(1))T
 +O(\delta D)+o_\delta(D)+2.
 \tag{4.3}
-$$
+```
 
 Divide by `D`, pass to the sequence limit, then `delta->0`, then `epsilon->0`. Using `q/D->pi`, we obtain the strengthened exposed-hull inequality
 
-$$
+```math
 \boxed{
 \pi\le\tau(1-s).
 }
 \tag{4.4}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \tau s\le\tau-\pi.
 }
 \tag{4.5}
-$$
+```
 
 Compare DE's general factor-two relation, which gives only `q/T<=2(1-s)`.
 
@@ -253,39 +253,39 @@ Compare DE's general factor-two relation, which gives only `q/T<=2(1-s)`.
 
 Combine (1.5) and (4.5):
 
-$$
+```math
 2\sqrt\Delta
 \le\tau s
 \le\tau-\pi.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \tau\ge\pi+2\sqrt\Delta.
 }
 \tag{5.1}
-$$
+```
 
 Since `q/D->pi`, this is exactly
 
-$$
+```math
 \boxed{
 \liminf\frac{T-q}{D}
 \ge2\sqrt\Delta.
 }
-$$
+```
 
 This proves CE.1.
 
 Numerically
 
-$$
+```math
 \pi+2\sqrt\Delta
 =5.0462182673\ldots .
 \tag{5.2}
-$$
+```
 
 Thus the near-circle full-core survivor requires more than five stopped trains per diameter unit.
 
@@ -295,35 +295,35 @@ Thus the near-circle full-core survivor requires more than five stopped trains p
 
 ZE gives the exact identity
 
-$$
+```math
 2f=(T-q)+d_H+s_Z.
 \tag{6.1}
-$$
+```
 
 Since `d_H,s_Z>=0`, CE.1 gives immediately
 
-$$
+```math
 \boxed{
 \liminf\frac fD
 \ge\sqrt\Delta.
 }
 \tag{6.2}
-$$
+```
 
 This proves CE.2.
 
 The old DF lower bound in a general full-core phase was
 
-$$
+```math
 f/D\ge\sqrt\Delta-\pi/4
 =0.1669146\ldots .
-$$
+```
 
 The near-circle good-end theorem raises it to
 
-$$
+```math
 0.9523128\ldots .
-$$
+```
 
 The improvement is large because essentially every train beyond the two clean exceptions must spend at least one endpoint in the defect network.
 
@@ -333,80 +333,80 @@ The improvement is large because essentially every train beyond the two clean ex
 
 Pass to a subsequence on which
 
-$$
+```math
 \frac hD\to y,
 \qquad
 \frac{s_Z}{D}\to\sigma.
-$$
+```
 
 Because `q/D->pi`,
 
-$$
+```math
 \frac{d_H}{D}=\frac{q-h}{D}\to\pi-y.
 \tag{7.1}
-$$
+```
 
 From (6.1) and CE.1,
 
-$$
+```math
 \liminf\frac fD
 \ge
 \sqrt\Delta+\frac{\pi-y+\sigma}{2}.
 \tag{7.2}
-$$
+```
 
 The exact terminal ledger with `x_B=o(D)` gives
 
-$$
+```math
 \frac QD
 =2y-\pi-2\sigma+o(1).
 \tag{7.3}
-$$
+```
 
 Every exceptional face contributes at least one unit to `Q`, so `Q>=f`. Hence
 
-$$
+```math
 2y-\pi-2\sigma
 \ge
 \sqrt\Delta+\frac{\pi-y+\sigma}{2}.
 \tag{7.4}
-$$
+```
 
 Multiply by two:
 
-$$
+```math
 4y-2\pi-4\sigma
 \ge
 2\sqrt\Delta+\pi-y+\sigma.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 5y\ge3\pi+2\sqrt\Delta+5\sigma.
 }
 \tag{7.5}
-$$
+```
 
 In particular
 
-$$
+```math
 y\ge\frac{3\pi+2\sqrt\Delta}{5},
-$$
+```
 
 proving CE.3.
 
 Numerically
 
-$$
+```math
 \frac{3\pi+2\sqrt\Delta}{5}
 =2.2658807149\ldots .
-$$
+```
 
 As before, the retained surplus form is stronger:
 
-$$
+```math
 \boxed{
 \frac hD
 \ge
@@ -414,7 +414,7 @@ $$
 +\frac{s_Z}{D}-o(1).
 }
 \tag{7.6}
-$$
+```
 
 ---
 
@@ -422,29 +422,29 @@ $$
 
 Since `q/D->pi`, CE.3 gives
 
-$$
+```math
 \liminf\frac{2h-q}{D}
 \ge
 2\frac{3\pi+2\sqrt\Delta}{5}-\pi
 =
 \frac\pi5+\frac45\sqrt\Delta.
 \tag{8.1}
-$$
+```
 
 The exact branching identity is
 
-$$
+```math
 2h-q=x_B+Q+2s_Z.
-$$
+```
 
 With `x_B=o(D)`, this proves CE.4.
 
 Numerically
 
-$$
+```math
 \frac\pi5+\frac45\sqrt\Delta
 =1.3901687762\ldots .
-$$
+```
 
 ---
 
@@ -452,27 +452,27 @@ $$
 
 The total exceptional bounded-face perimeter is
 
-$$
+```math
 K_{exc}=Q+4f.
 \tag{9.1}
-$$
+```
 
 DT gives exactly
 
-$$
+```math
 2T=b+K_{exc}.
 \tag{9.2}
-$$
+```
 
 In the present phase
 
-$$
+```math
 b=q+x_B=\pi D+o(D).
-$$
+```
 
 Using CE.5.1,
 
-$$
+```math
 \boxed{
 \liminf\frac{K_{exc}}D
 \ge
@@ -480,7 +480,7 @@ $$
 =6.9508438810\ldots .
 }
 \tag{9.3}
-$$
+```
 
 Thus the near-circle full-core branch carries nearly seven units of exceptional-face perimeter per diameter unit, despite its force hull itself having perimeter only `pi D+o(D)`.
 

@@ -19,48 +19,48 @@ The prior P1 arithmetic target asked for a degree-`m` irreducibility theorem. Th
 
 Put
 
-$$
+```math
 m=q-2,
 \qquad z=e^{i\delta},
 \qquad y=z+z^{-1}=2\cos\delta.
-$$
+```
 
 CF gives the trace polynomial
 
-$$
+```math
 \boxed{
 H_m(Y):=C_m(Y)+4Y-6,
 \qquad H_m(y)=0,
 }
 \tag{TH.1}
-$$
+```
 
 where `C_m(Y)=2T_m(Y/2)`.
 
 SC requires a Littlewood polynomial of degree `m-1` to vanish at `z`. Therefore
 
-$$
+```math
 [\mathbb Q(z):\mathbb Q]\le m-1.
 \tag{TH.2}
-$$
+```
 
 But the real trace field has exact index two in the P1 phase:
 
-$$
+```math
 \boxed{
 [\mathbb Q(z):\mathbb Q(y)]=2.
 }
 \tag{TH.3}
-$$
+```
 
 Hence every P1 survivor must satisfy
 
-$$
+```math
 \boxed{
 [\mathbb Q(y):\mathbb Q]\le\frac{m-1}{2}.
 }
 \tag{TH.4}
-$$
+```
 
 Equivalently, the physical root `y=2cos(delta)` must lie in an irreducible factor of `H_m` of degree at most `floor((m-1)/2)`.
 
@@ -76,42 +76,42 @@ No full irreducibility theorem is required.
 
 CF derives from the squared P1 angle equation
 
-$$
+```math
 \cos(m\delta)+4\cos\delta-3=0.
-$$
+```
 
 Since
 
-$$
+```math
 C_m(2\cos\delta)=2\cos(m\delta),
-$$
+```
 
 putting
 
-$$
+```math
 y=2\cos\delta
-$$
+```
 
 gives
 
-$$
+```math
 C_m(y)+4y-6=0.
-$$
+```
 
 This is TH.1.
 
 The physical root satisfies
 
-$$
+```math
 0<\delta<\pi/m,
-$$
+```
 
 so
 
-$$
+```math
 2\cos(\pi/m)<y<2.
 \tag{1.1}
-$$
+```
 
 In particular `y` is real and `z=e^{i delta}` is nonreal.
 
@@ -121,42 +121,42 @@ In particular `y` is real and `z=e^{i delta}` is nonreal.
 
 The element `z` satisfies
 
-$$
+```math
 X^2-yX+1=0
 \tag{2.1}
-$$
+```
 
 over `Q(y)`. Hence
 
-$$
+```math
 [\mathbb Q(z):\mathbb Q(y)]\le2.
-$$
+```
 
 Equality is forced by reality. Under the distinguished embedding determined by the physical root, every element of
 
-$$
+```math
 \mathbb Q(y)
-$$
+```
 
 is real because `y` is real. But
 
-$$
+```math
 z=e^{i\delta}\notin\mathbb R
-$$
+```
 
 for `0<delta<pi`.
 
 Therefore
 
-$$
+```math
 z\notin\mathbb Q(y),
-$$
+```
 
 and (2.1) is irreducible over `Q(y)`. Thus
 
-$$
+```math
 \boxed{[\mathbb Q(z):\mathbb Q(y)]=2.}
-$$
+```
 
 This argument avoids any discriminant-square subtlety: the physical embedding alone rules out `z in Q(y)`.
 
@@ -166,42 +166,42 @@ This argument avoids any discriminant-square subtlety: the physical embedding al
 
 SC proves that P1 requires
 
-$$
+```math
 P(z)=0
-$$
+```
 
 for a nonzero Littlewood polynomial
 
-$$
+```math
 P(Z)=\sum_{k=0}^{m-1}\varepsilon_kZ^k,
 \qquad \varepsilon_k\in\{+1,-1\}.
-$$
+```
 
 Therefore the minimal polynomial of `z` over `Q` divides `P`, so
 
-$$
+```math
 [\mathbb Q(z):\mathbb Q]\le m-1.
-$$
+```
 
 The tower law and TH.3 give
 
-$$
+```math
 2[\mathbb Q(y):\mathbb Q]
 =[\mathbb Q(z):\mathbb Q]
 \le m-1.
-$$
+```
 
 Hence TH.4.
 
 Since the degree is an integer,
 
-$$
+```math
 \boxed{
 [\mathbb Q(y):\mathbb Q]
 \le\left\lfloor\frac{m-1}{2}\right\rfloor.
 }
 \tag{TH.5}
-$$
+```
 
 ---
 
@@ -209,24 +209,24 @@ $$
 
 Let `R_m(Y)` be the minimal polynomial of the physical trace
 
-$$
+```math
 y=2\cos\delta.
-$$
+```
 
 Then
 
-$$
+```math
 R_m\mid H_m
-$$
+```
 
 and P1 forces
 
-$$
+```math
 \boxed{
 \deg R_m\le\left\lfloor\frac{m-1}{2}\right\rfloor.
 }
 \tag{TH.6}
-$$
+```
 
 CF already proves that the only trace-cyclotomic factor is `Y-1`, occurring exactly when `6|m`. The physical root lies in `(2cos(pi/m),2)`, so for large `m` it is not `1`.
 
@@ -242,9 +242,9 @@ PE proves a stronger degree statement when `m` is a power of two: the auxiliary 
 
 TH explains what must be shown for general `m`. It is enough to establish
 
-$$
+```math
 \deg R_m>\frac{m-1}{2},
-$$
+```
 
 not `deg R_m=m`.
 

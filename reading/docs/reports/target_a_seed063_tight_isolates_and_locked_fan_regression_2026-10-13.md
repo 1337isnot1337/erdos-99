@@ -33,10 +33,10 @@ shared Lemma 21.1 only for the chamber capacity certificate
 
 The canonical locked endpoint is
 
-$$
+```math
 \Xi_\Sigma=|O_{\rm iso}|+\sum_i(|O_i|-|C_i|)_+
 \ge j_*+|T_Z|.
-$$
+```
 
 It implies `h(G)>=j_*`, hence `d_sc>=Delta_Lambda`, and the canonical
 global competitor. The zero-slack branch remains a separate obligation.
@@ -80,10 +80,10 @@ from a different representative is silently carried over.
 
 Let `Z` be any finite unit-separated subset of `int K` such that
 
-$$
+```math
 |z-x|\ne1\qquad(z\in Z,\ x\in X).
 \tag{1}
-$$
+```
 
 In particular this includes every admissible generic triangular-lattice interior
 shore. Write `N(Q)={x in X: |x-z|<1 for some z in Q}` for `Q subseteq Z`.
@@ -92,18 +92,18 @@ in the complete physical source `X`.
 
 **Theorem 1 (proved candidate).** For every `Q subseteq Z`,
 
-$$
+```math
 |N(Q)|\ge |Q|.
 \tag{2}
-$$
+```
 
 If equality holds, every point of `N(Q)` is a strict isolate. Equivalently,
 
-$$
+```math
 N(Q)\text{ meets an active source pair}
 \quad\Longrightarrow\quad |N(Q)|\ge |Q|+1.
 \tag{3}
-$$
+```
 
 **Proof.** Set `U=N(Q)`. The finite set `(X\U) union Q` is unit-separated:
 the two shores are individually separated, and every cross distance is strictly
@@ -113,10 +113,10 @@ diameter at most `d`, contradicting `D(m+1)>d`. This proves (2).
 
 Suppose `|Q|=|U|>0`. Choose any `c in int K` and put
 
-$$
+```math
 Q_\epsilon=\{c+(1+\epsilon)(z-c):z\in Q\}.
 \tag{4}
-$$
+```
 
 For all sufficiently small positive `epsilon`, every point of `Q_epsilon`
 remains in `int K`, and every cross distance to `X\U` remains strictly above
@@ -184,10 +184,10 @@ QED.
 **Exact Schur consequence.** This contraction does not alter `S`. Order rows
 as `T,Z\T` and any allowed basis as `U,B\U`. The interior basis matrix is
 
-$$
+```math
 \begin{pmatrix} A[T,U]&0\\ A[Z\setminus T,U]&A[Z\setminus T,B\setminus U]
 \end{pmatrix}.
-$$
+```
 
 The upper block is invertible and `A[T,C]=0`, so elimination of nonbasis
 columns gives zero coefficients on `U`. The Schur formula is exactly the
@@ -207,17 +207,17 @@ Schur nullity, or the sector-surplus endpoint.
 Use `e1=(1,0)`, `e2=(1/2,sqrt(3)/2)` and squared norm
 `q(a,b)=a^2+ab+b^2`. For every integer `M>=4`, let
 
-$$
+```math
 X_M=\{i e_1+j e_2:i,j\ge0,\ i+j\le M\},\qquad K_M=\operatorname{conv}X_M.
 \tag{5}
-$$
+```
 
 Its cardinality is `n_M=(M+1)(M+2)/2`, separation is one, and diameter is `M`.
 The convex hull is an equilateral triangle of side `M`. Oler gives
 
-$$
+```math
 \alpha_1(K_M)\le M^2/2+3M/2+1=n_M,
-$$
+```
 
 so this is **exact fixed-container capacity**, including strict insertion
 saturation. It is not a global diameter certificate.
@@ -254,11 +254,11 @@ Consequently `nu(G)=n_M`. Fixed-container capacity supplies the
 `Z`-perfect matching as above. Deep columns are independent under the
 same injection, so
 
-$$
+```math
 d_{\rm int}=d_{\rm sc}=\zeta=0,
 \qquad \operatorname{rank}S=n_M-|Z|
 \tag{6}
-$$
+```
 
 for every admissible generic translation at this orientation. Rotation of
 the response lattice is not asserted.
@@ -267,10 +267,10 @@ the response lattice is not asserted.
 deficiency.** Put `v=(1/5)e1+(1/7)e2`. Each source `(i,j)` has exactly the
 three strict lattice neighbors
 
-$$
+```math
 (i,j)+v,\quad(i-1,j)+v,\quad(i,j-1)+v.
 \tag{7}
-$$
+```
 
 Indeed the three squared distances are `109/1225,669/1225,739/1225`;
 all other lattice displacements have squared norm above one. Hull and
@@ -285,16 +285,16 @@ so no lattice row is on a hull facet.
 
 In particular,
 
-$$
+```math
 Z=\{(i,j)+v:i,j\ge0,\ i+j\le M-1\},\quad |Z|=M(M+1)/2.
-$$
+```
 
 Start with the basis `B0={(i,j):i+j<=M-1}` matched to identical row
 coordinates. Delete `(0,1),(2,0)` from the basis and add the two top-side
 vertices `(2,M-2),(M-1,1)`. Match the following rows differently, leaving
 all other rows matched to their identical source coordinates:
 
-$$
+```math
 \begin{array}{ll}
 (0,1)\mapsto(1,1), &(2,0)\mapsto(2,1),\\
 (1,j)\mapsto(1,j+1)&(1\le j\le M-3),\\
@@ -302,16 +302,16 @@ $$
 (i,1)\mapsto(i+1,1)&(2\le i\le M-2).
 \end{array}
 \tag{8}
-$$
+```
 
 These are distinct valid matched neighbors by (7). All deep columns
 remain in the basis. All three channel endpoints are nonbasis boundary
 terminals. The fan's lens rows are exactly
 
-$$
+```math
 L_\Sigma=\{(1,1),(0,1),(2,0)\}\cup\{(1,j):2\le j\le M-2\}+v.
 \tag{9}
-$$
+```
 
 They are interior rows, and `|L_Sigma|=M`. Every basis fan vertex is
 matched to one of them by (8), so `beta_Sigma=0`.
@@ -322,10 +322,10 @@ exterior sink `(i,j)+v`. None of these edges touches the shield or its
 contracted lens pairs. They give a matching saturating the entire left
 shore of the coarse sector graph. Hence
 
-$$
+```math
 \boxed{\beta_\Sigma=0,\qquad\delta_\Sigma^{\rm lens}=0,\qquad\zeta=0.}
 \tag{10}
-$$
+```
 
 Thus even exact saturation, full positive locked stress, pinned rigidity,
 an interior three-channel reaction fan, actual source-response coembedding,
@@ -337,17 +337,17 @@ triangle-free activation-forest regression of Section 152.
 **Explicit global exclusion of this family.** For `M>=33`, put
 `r=ceil(2M/3)+1`, `s=ceil(3M/4)+2`, and take the staggered lattice rectangle
 
-$$
+```math
 P_M=\{(i+(j\bmod2)/2,(\sqrt3/2)j):0\le i<r,\ 0\le j<s\}.
-$$
+```
 
 It is unit-separated, has `rs>=n_M`, and has diameter at most
 
-$$
+```math
 \sqrt{(r-1/2)^2+\tfrac34(s-1)^2}
 <\sqrt{\tfrac{499}{576}M^2+\tfrac{17}{4}M+\tfrac{21}{4}}<M.
 \tag{11}
-$$
+```
 
 The first strict inequality uses `ceil x<x+1`. The last holds at `M=33`
 with exact squared gap `5/64`, and its gap is strictly increasing for

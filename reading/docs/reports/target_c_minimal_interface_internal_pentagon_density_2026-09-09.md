@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_minimal_interface_internal_pentagon_density_2026-09-09.md) · source SHA-256 `d87ef0d6397e7acf611a1fab2bbe3361d0b7a613ab7da5911dae5165ee3e6882`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 12 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-FDED21FAE4E2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_minimal_interface_internal_pentagon_density_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=c2540e0f9592ac926015455d39810484f027b1e1; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -22,109 +24,116 @@ The minimal loaded-interface equality branch is much more internally defective t
 
 CE proves that every full-core near-circle survivor has at least
 
-$$
+```math
 \boxed{
 f\ge(\sqrt\Delta-o(1))D,
 \qquad
 \Delta=\frac\pi{2\sqrt3},
 }
 \tag{IP.1}
+```
 
 bounded nonquadrilateral contact faces in total.
 
 CF proves that when
 
-\[
+```math
 Q_B=(2+o(1))D,
-$$
+```
 
 one central loaded-interface face `F_*` carries
 
-$$
+```math
 Q_{F_*}=(2+o(1))D,
 \qquad
 Q_B-Q_{F_*}=o(D).
-$$
+```
 
 Every other loaded-interface exceptional face contributes at least one unit to `Q_B-Q_{F_*}`. Hence there are only `o(D)` such faces. The single central face adds only one more. Therefore the number `f_int` of bounded exceptional faces containing no loaded terminal satisfies
 
-$$
+```math
 \boxed{
 f_{int}\ge(\sqrt\Delta-o(1))D
 = (0.9523128069\ldots-o(1))D.
 }
 \tag{IP.2}
+```
 
 Since each internal exceptional face contributes at least one to the internal degree excess,
 
-\[
+```math
 \boxed{
 Q_{int}\ge(\sqrt\Delta-o(1))D.
 }
 \tag{IP.3}
+```
 
 HBd gives the exact near-circle terminal relation
 
-\[
+```math
 Q+2s_C=(\pi+o(1))D.
-$$
+```
 
 At minimal interface defect,
 
-$$
+```math
 Q=Q_B+Q_{int}.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 Q_{int}\le(\pi-2+o(1))D,
 }
 \tag{IP.4}
+```
 
 and
 
-\[
+```math
 \boxed{
 s_C\le
 \frac{\pi-2-\sqrt\Delta}{2}D+o(D)
 = (0.09463992336\ldots+o(1))D.
 }
 \tag{IP.5}
+```
 
 Consequently
 
-\[
+```math
 \boxed{
 d_H+s_Z\le(0.09463992336\ldots+o(1))D,}
 \tag{IP.6}
+```
 
 using HBd's `d_H+s_Z=s_C+o(D)`. In particular
 
-\[
+```math
 \boxed{
 h\ge(3.0469527302\ldots-o(1))D,}
 \tag{IP.7}
+```
 
 because `q=(pi+o(1))D` and `d_H=q-h`.
 
 Even more, most internal exceptional faces must be pentagons. Let `p_5` be the number of internal bounded faces of degree exactly five. Every pentagon contributes one unit to `Q_int`, while every nonpentagonal exceptional face contributes at least two. Therefore
 
-\[
+```math
 Q_{int}\ge p_5+2(f_{int}-p_5)=2f_{int}-p_5.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 p_5\ge2f_{int}-Q_{int}.}
-$$
+```
 
 Using IP.2 and IP.4,
 
-$$
+```math
 \boxed{
 \frac{p_5}{D}
 \ge
@@ -132,6 +141,7 @@ $$
 =0.7630329601\ldots-o(1).
 }
 \tag{IP.8}
+```
 
 Thus the sharp loaded-interface equality model necessarily contains at least `0.763D` internal convex unit pentagons, while the diameter graph simultaneously has edge deficit plus mixed-stress surplus below `0.095D`.
 
@@ -143,21 +153,21 @@ This is a substantial tightening of the endpoint. The surviving configuration is
 
 CE is the one-good-end-per-train theorem on PR #119. In the full-core near-circle phase it proves
 
-\[
+```math
 T-q\ge(2\sqrt\Delta-o(1))D.
-$$
+```
 
 The exact identity
 
-$$
+```math
 2f=(T-q)+d_H+s_Z
-$$
+```
 
 and nonnegativity of `d_H,s_Z` give
 
-$$
+```math
 f\ge(\sqrt\Delta-o(1))D.
-$$
+```
 
 This is IP.1. No face-area gap is used.
 
@@ -167,39 +177,40 @@ This is IP.1. No face-area gap is used.
 
 Assume the sharp interface endpoint
 
-$$
+```math
 Q_B=(2+o(1))D.
-$$
+```
 
 CF gives one loaded-interface exceptional face `F_*` with
 
-$$
+```math
 Q_{F_*}=(2+o(1))D
-$$
+```
 
 and
 
-$$
+```math
 Q_B-Q_{F_*}=o(D).
-$$
+```
 
 Let `f_B` count bounded nonquadrilateral faces incident to at least one loaded terminal. Every member of `f_B` other than `F_*` contributes at least one to `Q_B-Q_{F_*}`. Therefore
 
-$$
+```math
 f_B-1\le Q_B-Q_{F_*}=o(D),
-$$
+```
 
 so
 
-$$
+```math
 \boxed{f_B=o(D).}
 \tag{2.1}
+```
 
 Every bounded exceptional face is either internal to one harmonic component or touches a loaded terminal. Therefore
 
-\[
+```math
 f=f_{int}+f_B.
-$$
+```
 
 Combine CE and (2.1) to prove IP.2.
 
@@ -211,64 +222,66 @@ Since `Q_int>=f_int`, IP.3 follows.
 
 HBd gives
 
-$$
+```math
 Q+2s_C=(\pi+o(1))D.
 \tag{3.1}
+```
 
 Both terms on the left are nonnegative. Under `Q_B=(2+o(1))D`,
 
-\[
+```math
 Q=Q_B+Q_{int}
 =(2+o(1))D+Q_{int}.
-$$
+```
 
 Equation (3.1) gives
 
-$$
+```math
 Q_{int}+2s_C=(\pi-2+o(1))D.
 \tag{3.2}
+```
 
 Therefore
 
-\[
+```math
 Q_{int}\le(\pi-2+o(1))D,
-$$
+```
 
 which is IP.4.
 
 Combine (3.2) with IP.3:
 
-$$
+```math
 2s_C
 \le
 (\pi-2-\sqrt\Delta+o(1))D.
-$$
+```
 
 This proves IP.5.
 
 HBd also gives
 
-$$
+```math
 d_H+s_Z=s_C+o(D),
-$$
+```
 
 so IP.6 follows.
 
 Because `d_H=q-h` and `q=(pi+o(1))D`,
 
-$$
+```math
 h=q-d_H
 \ge q-(d_H+s_Z)
 \ge
 \left(\pi-rac{\pi-2-\sqrt\Delta}{2}-o(1)\right)D.
-$$
+```
 
 The coefficient simplifies to
 
-$$
+```math
 \frac{\pi+2+\sqrt\Delta}{2}
 =3.0469527302\ldots,
-$$
+```
 
 proving IP.7.
 
@@ -278,35 +291,35 @@ proving IP.7.
 
 Let `p_5` be the internal degree-five face count and let `f_{>=6}=f_int-p_5`. Then
 
-$$
+```math
 Q_{int}
 =\sum_{F\text{ int}}(\deg F-4)
 \ge p_5+2f_{>=6}
 =2f_{int}-p_5.
-$$
+```
 
 Hence
 
-$$
+```math
 p_5\ge2f_{int}-Q_{int}.
-$$
+```
 
 Use IP.2 and IP.4:
 
-$$
+```math
 \begin{aligned}
 \frac{p_5}{D}
 &\ge
 2\sqrt\Delta-(\pi-2)-o(1)\\
 &=0.7630329601\ldots-o(1).
 \end{aligned}
-$$
+```
 
 This proves IP.8.
 
 A companion excess bound is
 
-$$
+```math
 \boxed{
 Q_{int}-f_{int}
 \le
@@ -314,6 +327,7 @@ Q_{int}-f_{int}
 =0.1892798467\ldots D+o(D).
 }
 \tag{4.1}
+```
 
 Thus the total degree excess above the pentagonal baseline is at most `0.18928D`.
 
@@ -323,30 +337,30 @@ Thus the total degree excess above the pentagonal baseline is at most `0.18928D`
 
 For the complete diameter graph on the loaded convex terminals, put
 
-\[
+```math
 d_H=q-h.
-$$
+```
 
 IP.6 gives
 
-$$
+```math
 d_H\le(0.09463992336\ldots+o(1))D.
-$$
+```
 
 Since
 
-$$
+```math
 q=(\pi+o(1))D,
-$$
+```
 
 we have
 
-$$
+```math
 \frac{h}{q}
 \ge
 1-rac{0.09463992336\ldots}{\pi}-o(1)
 =0.969875\ldots-o(1).
-$$
+```
 
 Thus the full diameter graph has at least about `96.99%` of the maximum `q` edges allowed by a convex geometric thrackle.
 
@@ -358,15 +372,15 @@ This does not force a single odd cycle: convex-thrackle equality and near-equali
 
 IT previously proved only
 
-$$
+```math
 Q_{int}\ge0.0491004189\ldots D-o(D)
-$$
+```
 
 from the stopped-train inequality applied to the two dominant components. IP.3 supersedes that numerical lower bound by almost a factor of twenty:
 
-$$
+```math
 Q_{int}\ge0.9523128069\ldots D-o(D).
-$$
+```
 
 IT remains useful because it is local to each dominant component and does not rely on CE's global exceptional-face count. IP, in contrast, allows the internal pentagons to live in any harmonic component.
 
@@ -392,14 +406,16 @@ IT remains useful because it is local to each dominant component and does not re
 The sharp equality branch now couples two highly constrained networks on the same `q~pi D` loaded shell:
 
 1. a diameter graph with edge deficit
-   $$
+   ```math
    d_H\le0.09464D+o(D),
-   $$
+   
+   ```
    hence almost maximal convex-thrackle density;
 2. an internal contact complex containing at least
-   $$
+   ```math
    0.76303D-o(D)
-   $$
+   
+   ```
    pentagonal bounded faces, with only `0.18928D+o(D)` total higher-degree excess above the pentagon baseline.
 
 A promising continuation is a near-extremal convex-thrackle classification coupled to the two half-disk attachment blocks. If near-maximality forces almost all loaded terminals into one odd-cycle-like diameter backbone, the KKT response and annular spoke structure may become one-dimensional enough to conflict with the two positive-density half-disk harmonic components.

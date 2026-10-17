@@ -17,30 +17,30 @@
 
 Let a convex disk Ω be cut by proper, pairwise-disjoint crosscuts τ₁,…,τ_m whose complementary regions form a path
 
-$$
+```math
 R_0\xleftrightarrow{\tau_1}R_1\xleftrightarrow{\tau_2}\cdots
 \xleftrightarrow{\tau_m}R_m.
-$$
+```
 
 Assume each crosscut, where it lies in Ω, follows midpoint-centerline segments of actual strict unit-rhombus faces in a unit-separated planar source. Assume every crossing of a segment `xy` with a row τ_i occurs on one of that row's rhombus centerlines, distinct rows use distinct rhombi, and the selected rhombus interiors are pairwise disjoint. For source points `x` in `R_p` and `y` in `R_q`, with `p<q`, put `L=|x-y|` and `N=q-p`. Then
 
-$$
+```math
 \boxed{N\le 1+\frac{14L+5\pi}{3\sqrt3}.}
 \tag{1}
-$$
+```
 
 Consequently, for any fixed `K>0`, if the source diameter is `D`, `D>10K`, and
 
-$$
+```math
 |x-y|\le 1+\frac K D,
-$$
+```
 
 then
 
-$$
+```math
 \boxed{|p-q|\le6.}
 \tag{2}
-$$
+```
 
 In particular, every noncontact pair with `1<|x-y|<=1+K/D` in these path regions is at most six row steps apart. The geometric statement needs no high-`t`, KKT, stress, TB1, or global-minimality hypothesis beyond the existence of the specified source geometry and crosscut path.
 
@@ -66,30 +66,30 @@ The center of a unit-length centerline segment is at distance at most `1/2` from
 
 Write `s=√3/2` for the minimum separation of the chosen centers. Rescale the center set and capsule by `1/s` and apply finite Oler, in the unit-separation form `n <= (2/√3) area + (1/2) perimeter + 1`:
 
-$$
+```math
 \begin{aligned}
 N&\le \frac{2}{\sqrt3\,s^2}\left(L+\frac\pi4\right)
  +\frac{1}{2s}(2L+\pi)+1\\
  &=1+\frac{14L+5\pi}{3\sqrt3}.
 \end{aligned}
-$$
+```
 
 Here `s=√3/2`; the inradius lower bound `√3/4` is used only to obtain this center-separation bound, not as the Oler rescaling length.
 
 For the threshold, `\sqrt3>265/153` because `3*153^2-265^2=2`, and `\pi<22/7`. Hence
 
-$$
+```math
 \frac{14}{3\sqrt3}<\frac{714}{265},\qquad
 1+\frac{5\pi}{3\sqrt3}<\frac{1493}{371}.
-$$
+```
 
 When `D>10K`, `L<=1+K/D<11/10`, and so
 
-$$
+```math
 N<\frac{714}{265}\frac{11}{10}+\frac{1493}{371}
  =\frac{64814}{9275}
  =7-\frac{111}{9275}<7.
-$$
+```
 
 Since `N` is an integer, `N<=6`.
 

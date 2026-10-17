@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_p2_exclusion_2026-09-09.md) · source SHA-256 `52c9acadeddce1e5c079fe186a2ea429f417bd92446154662b8da9efe4e43514`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-C8988A30562A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=2` P2 is impossible
 
@@ -21,54 +23,55 @@ The P2 branch does not merely reduce to two circular zigzag paths. The two endpo
 
 For
 
-$$
+```math
 D>\sqrt2,
-$$
+```
 
 the primitive cyclic endpoint cannot lie in AD subcase P2.
 
 Equivalently, for all sufficiently large Target C sources,
 
-$$
+```math
 \boxed{
 (d_H,r_\parallel,a_{short})\ne(2,2,0).
 }
 \tag{PX.1}
+```
 
 ### Proof in one paragraph
 
 CP puts the two diameter-tree paths on circles with the same radius
 
-\[
+```math
 R_D=\frac{D}{2\cos(\delta/2)},
 \qquad
 \delta=2\arcsin\frac1{2D}.
-$$
+```
 
 For a path diameter edge of length `D`, its component-circle center lies at perpendicular distance
 
-$$
+```math
 h_D=\sqrt{R_D^2-D^2/4}
 =\frac1{4\cos(\delta/2)}
-$$
+```
 
 from the edge midpoint. At either P2 rectangle, the A and B endpoint diameter edges are its two diagonals, hence have the same midpoint and acute line angle
 
-$$
+```math
 \Delta=2\arcsin\frac1D.
-$$
+```
 
 Therefore the fixed vector joining the two component-circle centers has one of exactly two lengths,
 
-$$
+```math
 2h_D\sin(\Delta/2)=\frac{2h_D}{D}
-$$
+```
 
 or
 
-$$
+```math
 2h_D\cos(\Delta/2)=\frac{2h_D\sqrt{D^2-1}}{D},
-$$
+```
 
 and is parallel respectively to the long or short rectangle axis. For `D>sqrt2` the two lengths differ, so both P2 rectangles use the same type. The center-difference vector is the same nonzero vector at both rectangles, hence the corresponding axes are parallel. In either type the unit shell-side axes of the two rectangles are parallel. But those unit sides are exactly the two supposedly distinct P2 parallel-side pairs. A strictly convex polygon has at most one side in each oriented direction, so two distinct unordered parallel pairs cannot have the same direction. Contradiction. `square`
 
@@ -78,20 +81,20 @@ and is parallel respectively to the long or short rectangle axis. For `D>sqrt2` 
 
 CP gives one diameter component as a path
 
-$$
+```math
 a_0a_1,\ldots,a_{m-1}a_m
-$$
+```
 
 whose vertices lie on one circle of radius
 
-$$
+```math
 R_D=\frac{D}{2\cos(\delta/2)}.
 \tag{1.1}
-$$
+```
 
 Every path edge has chord length `D`. Therefore the perpendicular distance from the component-circle center `C` to the midpoint `M` of any path edge is
 
-$$
+```math
 \begin{aligned}
 h_D
 &=\sqrt{R_D^2-\frac{D^2}{4}}\\
@@ -99,28 +102,29 @@ h_D
 \frac{D^2}{4\cos^2(\delta/2)}-\frac{D^2}{4}}\\
 &=\frac D2\tan\frac\delta2.
 \end{aligned}
-$$
+```
 
 Since
 
-$$
+```math
 \sin\frac\delta2=\frac1{2D},
-$$
+```
 
 this is
 
-$$
+```math
 \boxed{
 h_D=\frac1{4\cos(\delta/2)}.}
 \tag{1.2}
-$$
+```
 
 Thus for an unoriented path diameter chord with unit tangent `u`,
 
-$$
+```math
 \boxed{C=M+\sigma h_D Ju,
 \qquad \sigma\in\{+1,-1\},}
 \tag{1.3}
+```
 
 where `J` is quarter-turn. The sign is determined by which side of the chord contains the rest of that component circle.
 
@@ -132,68 +136,72 @@ Both P2 components have the same `D` and the same ordinary gap `delta`, hence th
 
 Take one P2 rectangle. P2R labels its four shell vertices cyclically as
 
-\[
+```math
 a\in A,\quad b\in B,\quad c\in A,\quad d\in B,
-$$
+```
 
 with unit parallel shell sides `ab,cd` and actual diameter diagonals
 
-$$
+```math
 ac\in T_A,\qquad bd\in T_B.
-$$
+```
 
 Let `O` be the rectangle center. Then
 
-$$
+```math
 O=\frac{a+c}{2}=\frac{b+d}{2},
-$$
+```
 
 so `O` is the midpoint of both endpoint path edges `ac` and `bd`.
 
 The rectangle dimensions are
 
-$$
+```math
 1\times L,
 \qquad
 L:=\sqrt{D^2-1}.
-$$
+```
 
 Choose coordinates with the long side horizontal and the unit shell side vertical. Unit tangent vectors along the two diameter diagonals may be chosen as
 
-$$
+```math
 u_A=\frac1D(L,1),
 \qquad
 u_B=\frac1D(L,-1).
 \tag{2.1}
+```
 
 Their acute angle is
 
-\[
+```math
 \Delta=2\arcsin\frac1D,
-$$
+```
 
 because
 
-$$
+```math
 \sin\frac\Delta2=\frac1D,
 \qquad
 \cos\frac\Delta2=\frac LD.
 \tag{2.2}
+```
 
 By (1.3), for signs `sigma_A,sigma_B`,
 
-\[
+```math
 C_A=O+\sigma_A h_D J u_A,
 \qquad
 C_B=O+\sigma_B h_D J u_B.
 \tag{2.3}
+```
 
 Hence
 
-\[
+```math
 C_B-C_A
 =h_D(\sigma_BJu_B-\sigma_AJu_A).
 \tag{2.4}
+```
 
 There are two geometric possibilities, according to whether the signs agree.
 
@@ -201,18 +209,19 @@ There are two geometric possibilities, according to whether the signs agree.
 
 If `sigma_A=sigma_B`, then using (2.1)
 
-\[
+```math
 Ju_B-Ju_A
 =\frac1D(2,0)
-$$
+```
 
 up to a global sign. Thus
 
-$$
+```math
 \boxed{
 |C_B-C_A|=\frac{2h_D}{D}
 =2h_D\sin\frac\Delta2,}
 \tag{2.5}
+```
 
 and `C_B-C_A` is parallel to the long rectangle axis.
 
@@ -220,18 +229,19 @@ and `C_B-C_A` is parallel to the long rectangle axis.
 
 If `sigma_A=-sigma_B`, then
 
-\[
+```math
 Ju_B+Ju_A
 =\frac1D(0,2L)
-$$
+```
 
 up to sign. Thus
 
-$$
+```math
 \boxed{
 |C_B-C_A|=\frac{2h_DL}{D}
 =2h_D\cos\frac\Delta2,}
 \tag{2.6}
+```
 
 and `C_B-C_A` is parallel to the short rectangle axis, i.e. to the unit P2 shell sides.
 
@@ -243,37 +253,38 @@ So every P2 rectangle forces the same global vector `C_B-C_A` into one of two di
 
 The Type-L and Type-S lengths are equal exactly when
 
-\[
+```math
 \frac{2h_D}{D}
 =
 \frac{2h_D\sqrt{D^2-1}}{D},
-$$
+```
 
 or
 
-$$
+```math
 \sqrt{D^2-1}=1.
-$$
+```
 
 Thus equality occurs only at
 
-$$
+```math
 D=\sqrt2.
-$$
+```
 
 For every
 
-$$
+```math
 \boxed{D>\sqrt2,}
 \tag{3.1}
+```
 
 Type L and Type S are metrically distinct.
 
 The two component circles are fixed objects, so the vector
 
-\[
+```math
 s:=C_B-C_A
-$$
+```
 
 is identical when computed from either of the two P2 rectangles. In particular its length is identical.
 
@@ -291,10 +302,11 @@ If both rectangles are Type L, the fixed vector `s` is parallel to the long axis
 
 Thus in either case
 
-\[
+```math
 \boxed{
 \text{the two purported P2 parallel-side pairs have one common direction}.}
 \tag{4.1}
+```
 
 ---
 
@@ -327,10 +339,11 @@ S2: r_parallel=0, a_short=2.
 
 PX eliminates P2 for every sufficiently large source. Therefore the complete `d_H=2` cyclic endpoint now satisfies
 
-\[
+```math
 \boxed{
 a_{short}\ge1.}
 \tag{6.1}
+```
 
 Equivalently, every surviving `d_H=2` source must have at least one antipodal vertex pair of `F-F` strictly inside the radius-`D` circle.
 

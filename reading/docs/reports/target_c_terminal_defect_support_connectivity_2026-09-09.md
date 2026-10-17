@@ -17,13 +17,13 @@
 
 ZR/ZS give the terminal defect
 
-$$
+```math
 M:=\Lambda-L_H\succeq0,
 \qquad
 \ker M=\operatorname{span}\{\mathbf1,P_x,P_y\},
 \qquad
 \operatorname{rank}M=q-3.
-$$
+```
 
 Because the `q` terminals are vertices of a strict convex polygon, no three are collinear. This maximal PSD rank has a graph-theoretic consequence that was not recorded in the response campaign:
 
@@ -39,49 +39,49 @@ The theorem is coefficient-free. It does not give a conductance floor.
 
 Let
 
-$$
+```math
 P=
 \begin{pmatrix}
 1&p_{1x}&p_{1y}\\
 \vdots&\vdots&\vdots\\
 1&p_{qx}&p_{qy}
 \end{pmatrix}
-$$
+```
 
 be the `q x 3` affine-coordinate matrix of the terminal set. ZR/ZS say
 
-$$
+```math
 \ker M=\operatorname{col}P.
 \tag{1.1}
-$$
+```
 
 Choose a Gale matrix
 
-$$
+```math
 Z\in\mathbb R^{q\times(q-3)}
-$$
+```
 
 whose columns form `ker(P^T)`. Since `M` is PSD of rank `q-3` and has column space `ker(P^T)`, there is a positive-definite matrix
 
-$$
+```math
 \Psi\in\mathbb S_{++}^{q-3}
-$$
+```
 
 such that
 
-$$
+```math
 \boxed{M=Z\Psi Z^T.}
 \tag{1.2}
-$$
+```
 
 Because no three terminals are collinear, every three rows of `P` are independent. By matroid duality, every `q-3` rows of `Z` are independent. Hence every subset of at most `q-3` rows of `Z` is independent.
 
 Equivalently, if `U subset B_+` and `|U|<=q-3`, then
 
-$$
+```math
 \boxed{\dim\operatorname{span}\{Z_u:u\in U\}=|U|.}
 \tag{1.3}
-$$
+```
 
 ---
 
@@ -89,21 +89,21 @@ $$
 
 Define the simple graph `G_M` on `B_+` by
 
-$$
+```math
 ij\in E(G_M)
 \iff
 i\ne j\text{ and }M_{ij}\ne0.
 \tag{2.1}
-$$
+```
 
 ### Theorem TC.1
 
 For `q>=4`,
 
-$$
+```math
 \boxed{G_M\text{ is 3-vertex-connected}.}
 \tag{TC.1}
-$$
+```
 
 ### Proof
 
@@ -111,54 +111,54 @@ Suppose a vertex set `S` with `|S|<=2` separates two nonempty vertex sets `A` an
 
 Then for every `a in A`, `b in B`,
 
-$$
+```math
 0=M_{ab}=Z_a\Psi Z_b^T.
 \tag{2.2}
-$$
+```
 
 Thus the row spans
 
-$$
+```math
 U_A:=\operatorname{span}\{Z_a:a\in A\},
 \qquad
 U_B:=\operatorname{span}\{Z_b:b\in B\}
-$$
+```
 
 are orthogonal under the positive-definite inner product
 
-$$
+```math
 \langle x,y\rangle_\Psi=x\Psi y^T.
-$$
+```
 
 Hence
 
-$$
+```math
 \dim U_A+\dim U_B\le q-3.
 \tag{2.3}
-$$
+```
 
 If `|A|<=q-3`, (1.3) gives `dim U_A=|A|`; if `|A|>q-3`, its row span is all of `R^{q-3}` and in particular has dimension `q-3`. The same holds for `B`.
 
 Neither `A` nor `B` can have size greater than `q-3`, because then its span would be the whole Gale space and could not be orthogonal to the nonzero rows on the other side. Therefore
 
-$$
+```math
 \dim U_A=|A|,
 \qquad
 \dim U_B=|B|.
-$$
+```
 
 Equation (2.3) becomes
 
-$$
+```math
 |A|+|B|\le q-3.
 \tag{2.4}
-$$
+```
 
 But
 
-$$
+```math
 |A|+|B|=q-|S|\ge q-2,
-$$
+```
 
 contradicting (2.4). Therefore no separator of size at most two exists. `square`
 
@@ -170,19 +170,19 @@ This is the usual maximal-rank PSD/Gale connectivity mechanism, proved here dire
 
 For distinct terminals,
 
-$$
+```math
 M_{ij}=\beta_{ij}-c_{ij},
 \tag{3.1}
-$$
+```
 
 where `c_ij>=0` is the Kron-reduced contact conductance and `beta_ij>0` exactly on actual diameter edges by C65.
 
 Let
 
-$$
+```math
 G_0:=\{ij\notin H:c_{ij}>0\}
 \tag{3.2}
-$$
+```
 
 be the non-diameter response graph used by ZM.
 
@@ -193,40 +193,40 @@ Every edge of `G_M` is either
 
 Thus
 
-$$
+```math
 E(G_M)\subseteq E(G_0)\cup E(H).
 \tag{3.3}
-$$
+```
 
 Since a 3-connected graph has minimum degree at least three,
 
-$$
+```math
 2|E(G_M)|\ge3q.
-$$
+```
 
 Using `|H|=h`, (3.3) gives the coefficient-free edge count
 
 ### Corollary TC.2
 
-$$
+```math
 \boxed{
 |E(G_0)|
 \ge
 \frac{3q-2h}{2}.
 }
 \tag{TC.2}
-$$
+```
 
 Equivalently, with `d_H=q-h`,
 
-$$
+```math
 \boxed{
 |E(G_0)|
 \ge
 \frac q2+d_H.
 }
 \tag{TC.3}
-$$
+```
 
 This strengthens the mere existence of a linear matching as a raw support-edge count, but not as a disjointness or mass theorem: one harmonic attachment component can create a dense response clique.
 
@@ -261,9 +261,9 @@ Thus large-scale connectivity missing from the sparse diameter support must be s
 
 ZS proves for every nonempty proper terminal set `U`
 
-$$
+```math
 \mathbf1_U^TM\mathbf1_U>0.
-$$
+```
 
 TC is independent of the numerical size of those cut defects. It upgrades the support topology:
 

@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_weighted_cycle_transfer_2026-09-09.md) · source SHA-256 `14dd5b9e30b8cfb171e3b309bbc2cdf0919209a733d8c0de503c9f17303a9281`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-0F149E05BB71","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic endpoint: exact weighted-cycle transfer formulas
 
@@ -20,27 +22,27 @@ In the cyclic primitive endpoint every normalized KKT stress has positive contac
 
 Let the unit cycle edges in cyclic order have conductances
 
-$$
+```math
 \alpha_0,\ldots,\alpha_{q-1}>0
-$$
+```
 
 and resistances
 
-$$
+```math
 r_i:=\alpha_i^{-1}.
-$$
+```
 
 For a cyclic boundary arc `I`, write
 
-$$
+```math
 R(I):=\sum_{i\in I}r_i,
-$$
+```
 
 and let
 
-$$
+```math
 R:=\sum_{i=0}^{q-1}r_i.
-$$
+```
 
 Then:
 
@@ -56,46 +58,48 @@ These formulas convert the C56 transfer phase into finite multiplicative inequal
 
 Let `x,y` be two terminals. The two simple `x-y` arcs of the cycle have total resistances
 
-$$
+```math
 s,
 \qquad
 R-s.
-$$
+```
 
 They are in parallel, so
 
-$$
+```math
 \boxed{
 W_{xy}=\frac{s(R-s)}{R}.}
 \tag{WT.1}
+```
 
 This formula is independent of which of the two arcs is called `s`.
 
 Let `Lambda` be the weighted cycle Laplacian and `Lambda^+` its pseudoinverse. For oriented terminal pairs
 
-\[
+```math
 e=(a,b),
 \qquad
 f=(c,d),
-$$
+```
 
 put
 
-$$
+```math
 q_e=e_a-e_b,
 \qquad
 q_f=e_c-e_d.
-$$
+```
 
 The transfer coefficient is
 
-$$
+```math
 K_{ef}=q_e^{\mathsf T}\Lambda^+q_f.
 \tag{1.1}
+```
 
 The standard resistance polarization identity gives
 
-\[
+```math
 \boxed{
 K_{ef}
 =\frac12
@@ -103,22 +107,23 @@ K_{ef}
 W_{ad}+W_{bc}-W_{ac}-W_{bd}
 \right).}
 \tag{WT.2}
+```
 
 ### Proof
 
 Using
 
-\[
+```math
 W_{xy}
 =\Lambda^+_{xx}+\Lambda^+_{yy}-2\Lambda^+_{xy},
-$$
+```
 
 the diagonal terms cancel in the displayed combination and leave
 
-$$
+```math
 \Lambda^+_{ac}-\Lambda^+_{ad}-\Lambda^+_{bc}+\Lambda^+_{bd}
 =q_e^{\mathsf T}\Lambda^+q_f.
-$$
+```
 `\square`
 
 ---
@@ -127,13 +132,13 @@ $$
 
 Assume the four endpoints occur in cyclic order
 
-$$
+```math
 a<c<b<d.
-$$
+```
 
 Let the four consecutive cycle-resistance arcs be
 
-$$
+```math
 A=R(a,c),
 \quad
 B=R(c,b),
@@ -141,65 +146,68 @@ B=R(c,b),
 C=R(b,d),
 \quad
 D=R(d,a),
-$$
+```
 
 so
 
-$$
+```math
 R=A+B+C+D.
-$$
+```
 
 Choose chord orientations
 
-$$
+```math
 e=(a,b),
 \qquad
 f=(c,d).
-$$
+```
 
 Using WT.1,
 
-$$
+```math
 \begin{aligned}
 W_{ad}&=\frac{D(A+B+C)}R,\\
 W_{bc}&=\frac{B(A+C+D)}R,\\
 W_{ac}&=\frac{A(B+C+D)}R,\\
 W_{bd}&=\frac{C(A+B+D)}R.
 \end{aligned}
-$$
+```
 
 Substitute into WT.2. The numerator is
 
-$$
+```math
 2(BD-AC),
-$$
+```
 
 so:
 
 ### Theorem WT.1 — crossing-chord product formula
 
-$$
+```math
 \boxed{
 K_{(a,b),(c,d)}
 =\frac{BD-AC}{A+B+C+D}.}
 \tag{WT.3}
+```
 
 Reversing either chord orientation changes the sign, as it must.
 
 Hence the unsigned zero-transfer condition between these two crossing chords is exactly
 
-\[
+```math
 \boxed{AC=BD.}
 \tag{WT.4}
+```
 
 For the displayed orientation,
 
-\[
+```math
 \boxed{
 K_{ef}<0
 \iff
 AC>BD.}
 \tag{WT.5}
+```
 
 Thus negative transfer is a strict multiplicative imbalance between opposite cyclic resistance-arc products.
 
@@ -209,40 +217,40 @@ Thus negative transfer is a strict multiplicative imbalance between opposite cyc
 
 Now let the two chords be
 
-\[
+```math
 e=(a,b),
 \qquad
 f=(a,c),
-$$
+```
 
 and suppose the cyclic order is
 
-$$
+```math
 a<c<b.
-$$
+```
 
 Let
 
-$$
+```math
 A=R(a,c),
 \quad
 B=R(c,b),
 \quad
 C=R(b,a),
-$$
+```
 
 with
 
-$$
+```math
 R=A+B+C.
-$$
+```
 
 WT.2 becomes
 
-$$
+```math
 K_{ef}
 =\frac12(W_{ac}+W_{ab}-W_{bc}).
-$$
+```
 
 Using WT.1 and simplifying gives:
 
@@ -250,19 +258,21 @@ Using WT.1 and simplifying gives:
 
 With both chords oriented away from their common endpoint `a`,
 
-$$
+```math
 \boxed{
 K_{(a,b),(a,c)}
 =\frac{AC}{A+B+C}>0.}
 \tag{WT.6}
+```
 
 Again reversing one orientation changes the sign.
 
 The transfer magnitude is therefore
 
-\[
+```math
 \boxed{|K_{ef}|=AC/R.}
 \tag{WT.7}
+```
 
 No shared-endpoint pair has zero transfer in the weighted positive cycle.
 
@@ -272,29 +282,29 @@ No shared-endpoint pair has zero transfer in the weighted positive cycle.
 
 For four alternating endpoints, WT.3 can be normalized by `R`:
 
-\[
+```math
 K_{ef}
 =R\left(
 \frac BR\frac DR
 -
 \frac AR\frac CR
 \right).
-$$
+```
 
 Thus transfer sign compares the two products of opposite normalized resistance arcs.
 
 Equivalently, defining the positive ratio
 
-$$
+```math
 \chi:=\frac{AC}{BD},
-$$
+```
 
 we have
 
-$$
+```math
 \operatorname{sgn}K_{ef}
 =\operatorname{sgn}(1-\chi)
-$$
+```
 
 for the displayed orientation.
 
@@ -321,17 +331,18 @@ No matrix inversion remains in the cyclic endpoint once the contact stresses are
 
 In TC, a zeroed full diameter-tree edge at a KKT endpoint gives a `2+2` cyclic cut and an exact reciprocal-force parallelogram
 
-$$
+```math
 v_i+v_k=v_j+v_\ell,
 \qquad
 v_r=\alpha_r t_r.
 \tag{6.1}
+```
 
 WT provides the complementary electrical language in the reciprocal edge variables
 
-\[
+```math
 r_r=1/\alpha_r.
-$$
+```
 
 The primal equality (6.1) is linear in the conductances `alpha`, while WT.3 is multiplicative in sums of their reciprocals. This mismatch is potentially rigid: the same endpoint stress must satisfy both simultaneously, together with C56-G's strict negative-transfer ordering.
 
@@ -343,10 +354,10 @@ The next tree-endpoint theorem should exploit this conductance/resistance dualit
 
 Suppose a selected diameter support is a perfect matching on `q=2m` cyclic terminals. Pairwise crossing of all diameter chords forces, after cyclic relabeling, the matching
 
-$$
+```math
 (i,i+m),
 \qquad 0\le i<m.
-$$
+```
 
 For such a matching, every off-diagonal transfer is given by WT.3. The entire C56 matrix is therefore an explicit function of the `2m` positive cycle resistances.
 

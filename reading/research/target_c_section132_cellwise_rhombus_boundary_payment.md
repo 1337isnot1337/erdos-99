@@ -22,16 +22,16 @@ For each unloaded positive-contact component `I_r`, let
 
 Then the finite local theorem is
 
-$$
+```math
 \boxed{
 L_r+P_{{\rm exc},r}\ge4\sqrt{R_{4,r}}.
 }
 \tag{132.1}
-$$
+```
 
 Summing and using the exact Sections-124/127 payment gives
 
-$$
+```math
 \boxed{
 4\sum_r\sqrt{R_{4,r}}
 \le
@@ -39,18 +39,18 @@ $$
 \qquad k=d_H+s_Z.
 }
 \tag{132.2}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 3(h-s_Z)-2s_C
 \ge
 2\sum_r\sqrt{R_{4,r}}+6.
 }
 \tag{132.3}
-$$
+```
 
 This is partition-sensitive: splitting a fixed number of rhombi among several macroscopic harmonic cells increases the right-hand side.  It does not assume that local boundary occurrences are globally injective.
 
@@ -62,10 +62,10 @@ Canonical Section 82 proves that every bounded quadrilateral face of `H_r` is a 
 
 The canonical strict-rhombus boundary theorem applies to an arbitrary finite collection of strict unit rhombi, with holes and disconnected pieces allowed.  Applied to the bounded quadrilateral faces of `H_r`, it gives
 
-$$
+```math
 \boxed{B_{4,r}\ge4\sqrt{R_{4,r}}.}
 \tag{132.4}
-$$
+```
 
 Every occurrence counted by `B_{4,r}` has a quadrilateral face on one side and no quadrilateral face on the other.  In the plane graph `H_r`, the other side is either
 
@@ -74,10 +74,10 @@ Every occurrence counted by `B_{4,r}` has a quadrilateral face on one side and n
 
 The outer-face recipients contribute at most `L_r` occurrences.  The bounded nonquadrilateral recipients contribute at most their total boundary degree `P_exc,r`.  Hence
 
-$$
+```math
 \boxed{B_{4,r}\le L_r+P_{{\rm exc},r}.}
 \tag{132.5}
-$$
+```
 
 Combining (132.4) and (132.5) proves (132.1).
 
@@ -89,64 +89,64 @@ No disk topology is used.  Bridges and repeated outer-walk vertices are handled 
 
 Proof-only Section 124 gives
 
-$$
+```math
 \sum_r(L_r+P_{{\rm exc},r}-2a_r)
 \le
 10(e_{BB}-k-d_{tile})-6C_A,
 \tag{132.6}
-$$
+```
 
 where `a_r=|A_r|`, `a=sum a_r`, and `C_A=sum c_r` is the summed local loaded-loaded contact count.
 
 Therefore
 
-$$
+```math
 \sum_r(L_r+P_{{\rm exc},r})
 \le
 10(e_{BB}-k-d_{tile})-6C_A+2a.
 \tag{132.7}
-$$
+```
 
 The exact attachment-incidence identity is
 
-$$
+```math
 a=3q-6-2(e_{BB}-k)-2s_C-d_{tile}.
 \tag{132.8}
-$$
+```
 
 Substitution gives
 
-$$
+```math
 \boxed{
 \sum_r(L_r+P_{{\rm exc},r})
 \le
 6(q-k)+6e_{BB}-4s_C-12d_{tile}-6C_A-12.
 }
 \tag{132.9}
-$$
+```
 
 The hostile-audited completion-triangle payment of Section 127 is
 
-$$
+```math
 \boxed{e_{BB}-C_A\le2d_{tile}.}
 \tag{132.10}
-$$
+```
 
 Thus
 
-$$
+```math
 6e_{BB}-6C_A-12d_{tile}\le0,
-$$
+```
 
 and (132.9) reduces to the exact upper bound
 
-$$
+```math
 \boxed{
 \sum_r(L_r+P_{{\rm exc},r})
 \le6(q-k)-4s_C-12.
 }
 \tag{132.11}
-$$
+```
 
 Combining (132.1), summed over `r`, with (132.11) proves (132.2).
 
@@ -160,40 +160,40 @@ The strength of (132.3) is its dependence on the distribution of rhombi among ce
 
 Canonical Section 83 shows that every strict rhombus with no loaded vertex belongs to one harmonic component and lies inside its attachment cell.  Only `O(D)` global strict rhombi touch loaded vertices, because loaded positive-contact degree is at most three and `q=O(D)`.  Therefore
 
-$$
+```math
 \sum_rR_{4,r}\ge R_4-O(D).
 \tag{132.12}
-$$
+```
 
 In Type II,
 
-$$
+```math
 {R_4\over D^2}\longrightarrow
 \Delta_2:={\pi\over2\sqrt3}.
 \tag{132.13}
-$$
+```
 
 Since all `R_{4,r}` are nonnegative,
 
-$$
+```math
 \sum_r\sqrt{R_{4,r}}
 \ge
 \sqrt{\sum_rR_{4,r}}.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \liminf {1\over D}\sum_r\sqrt{R_{4,r}}
 \ge\sqrt{\Delta_2}.
 }
 \tag{132.14}
-$$
+```
 
 Equation (132.3) therefore gives the universal Type-II tradeoff
 
-$$
+```math
 \boxed{
 \liminf {3(h-s_Z)-2s_C\over D}
 \ge
@@ -201,7 +201,7 @@ $$
 =1.9046256137\ldots .
 }
 \tag{132.15}
-$$
+```
 
 This is **not** the withdrawn statement `(q-k)/D>=1.9046256...`.  The left side here is `3(q-k)-2s_C`, and the negative pinned-surplus term is essential.
 
@@ -211,30 +211,30 @@ This is **not** the withdrawn statement `(q-k)/D>=1.9046256...`.  The left side 
 
 Let `\mathcal G_1,...,\mathcal G_t` be disjoint groups of harmonic components.  From nonnegativity,
 
-$$
+```math
 \sum_{r\in\mathcal G_j}\sqrt{R_{4,r}}
 \ge
 \sqrt{\sum_{r\in\mathcal G_j}R_{4,r}}.
 \tag{132.16}
-$$
+```
 
 Thus whenever geometry supplies groupwise rhombus-population floors
 
-$$
+```math
 \sum_{r\in\mathcal G_j}R_{4,r}
 \ge(\rho_j-o(1))D^2,
-$$
+```
 
 Section 132 immediately upgrades (132.3) to
 
-$$
+```math
 \boxed{
 \liminf {3(h-s_Z)-2s_C\over D}
 \ge
 2\sum_{j=1}^t\sqrt{\rho_j}.
 }
 \tag{132.17}
-$$
+```
 
 This is the intended use with the repaired Section-130 complement-gap decomposition: the wrapping cell and distinct gap segments give disjoint macroscopic regions, so their rhombic areas can be charged separately rather than collapsed into the single global square root.
 

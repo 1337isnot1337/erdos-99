@@ -16,65 +16,65 @@
 
 Let `P` be a bounded pentagonal contact face whose five boundary train variables are all private outer-to-flat trains. Label its cyclically oriented unit side vectors
 
-$$
+```math
 e_i=p_{i+1}-p_i,\qquad i\in\mathbb Z/5\mathbb Z.
-$$
+```
 
 Every incident complete train `tau_i` has its other terminal occurrence on the actual outer face. The audited bounded-face endpoint-fan theorem says the five `tau_i` are pairwise noncrossing.
 
 Set
 
-$$
+```math
 \omega_{\tau_i}=1\quad(i=1,\ldots,5),
 \qquad
 \omega_\tau=0\quad\text{for every other train}.
 \tag{DR.1}
-$$
+```
 
 Then (DR.1) is an actual contact-flex train-rate vector. Call the corresponding flex `v_P`, modulo translation.
 
 Traverse the actual outer-face walk. Between consecutive outer terminal occurrences of the five selected trains, every traversed contact edge has train rate zero. Hence `v_P` is constant on every resulting outer sector. At the outer terminal of `tau_i`, the velocity jump is
 
-$$
+```math
 \boxed{-J e_i}
 \tag{DR.2}
-$$
+```
 
 with the sign fixed by the opposite boundary orientations at the two ends of one train. The five selected terminal occurrences may appear in an arbitrary cyclic permutation if other bounded holes intervene; no order-preservation assertion is needed.
 
 Consequently, after subtracting one translation, every outer-sector velocity is of the form
 
-$$
+```math
 \boxed{V_S=-J\sum_{i\in S}e_i}
 \tag{DR.3}
-$$
+```
 
 for a subset `S` obtained as an initial segment of the five selected outer occurrences. In particular every difference of two outer-sector velocities is
 
-$$
+```math
 \boxed{V_T-V_S=-J w,
 \qquad
 w=\sum_{i\in I}e_i}
 \tag{DR.4}
-$$
+```
 
 for some subset `I subset {1,...,5}`.
 
 If an active diameter edge `h=xy` has endpoints in sectors with velocity difference `-Jw`, its radial first-variation numerator is
 
-$$
+```math
 \boxed{
 (p_y-p_x)\cdot(v_P(y)-v_P(x))
 =-(p_y-p_x)\cdot Jw.
 }
 \tag{DR.5}
-$$
+```
 
 Thus every diameter derivative of the degree-five hidden-null mode is an oriented-area determinant between the diameter vector and a subset sum of the five pentagon sides.
 
 The mode is non-Euclidean in the asymptotic Type-II branch. Mixed rigidity makes its diameter derivative vector nonzero, while relative-interior KKT stationarity gives positive-weighted sum zero. Therefore
 
-$$
+```math
 \boxed{
 \exists h_+,h_-\in H:\quad
 \dot d_{h_+}(v_P)>0,
@@ -82,7 +82,7 @@ $$
 \dot d_{h_-}(v_P)<0.
 }
 \tag{DR.6}
-$$
+```
 
 This is the degree-five analogue of two-sided bracing for one outer-to-outer train shear.
 
@@ -90,10 +90,10 @@ This is the degree-five analogue of two-sided bracing for one outer-to-outer tra
 
 The five selected columns occur only in the two closure rows of `P`: their other endpoints are outer and contribute no bounded-face row. On `P`,
 
-$$
+```math
 \sum_{i=1}^5\omega_{\tau_i}Je_i
 =J\sum_{i=1}^5e_i=0.
-$$
+```
 
 Every other bounded-face row sees zero selected coordinates. Hence (DR.1) lies in `ker C_face`, and the audited train-angle/contact-flex isomorphism produces `v_P`.
 
@@ -111,10 +111,10 @@ No claim is made that the outer cyclic order of the five terminals equals their 
 
 Actual diameter endpoints are loaded extreme vertices of the positive core and lie on its outer face. If `x,y` have outer-sector velocity difference `-Jw`, differentiating squared distance gives
 
-$$
+```math
 {1\over2}{d\over dt}|p_y-p_x|^2
 =(p_y-p_x)\cdot(-Jw),
-$$
+```
 
 which is (DR.5).
 
@@ -122,9 +122,9 @@ The train-rate vector (DR.1) is not the all-trains rotation vector once the comp
 
 For a relative-interior KKT stress every actual diameter multiplier satisfies `beta_h>0`, and stationarity gives
 
-$$
+```math
 \sum_{h\in H}\beta_h\dot d_h(v_P)=0.
-$$
+```
 
 A nonzero vector with strictly positive weighted sum zero contains both signs, proving (DR.6).
 
@@ -132,19 +132,19 @@ A nonzero vector with strictly positive weighted sum zero contains both signs, p
 
 At the flat trapezoid limit take
 
-$$
+```math
 e_1=e_2=(1,0),
 \quad e_3=(-1/2,\sqrt3/2),
 \quad e_4=(-1,0),
 \quad e_5=(-1/2,-\sqrt3/2).
-$$
+```
 
 Every subset sum `w=sum_{i in I}e_i` has vertical coordinate in `{-sqrt3/2,0,sqrt3/2}` and half-integral horizontal coordinate. Direct finite inspection gives, for every nonzero subset sum, projective direction in
 
-$$
+```math
 \boxed{\{0,\ \pm\pi/6,\ \pm\pi/3\}.}
 \tag{DR.7}
-$$
+```
 
 For sufficiently flat actual pentagons the corresponding nonzero directions lie in an `o(1)` neighborhood of this five-direction alphabet. Therefore each degree-five blocking column has a finite limiting sign geometry even without controlling the order of its five outer terminals.
 

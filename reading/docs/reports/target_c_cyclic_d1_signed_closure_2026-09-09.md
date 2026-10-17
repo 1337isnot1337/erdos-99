@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_signed_closure_2026-09-09.md) · source SHA-256 `174de996210a390786b3981f32c3b4759f1ed4c7a9f17504a259a01a6c55ea2f`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-BFBE2E32790D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 — exact signed closure equations for the cyclic `d_H=1` one-defect shell
 
@@ -18,9 +20,9 @@
 
 D1 reduces the complete `d_H=1` difference body to a one-parameter defect. The remaining reconstruction problem is to decide whether that centrally symmetric difference body can actually be written as
 
-$$
+```math
 K=F-F
-$$
+```
 
 for a closed convex equilateral `q`-gon `F` with the Target C antipodal graph.
 
@@ -41,33 +43,33 @@ The oriented edge-direction list of `K=F+(-F)` is the strict cyclic merge of
 
 Choose any projective half of the boundary of `K`. It contains exactly `q` unit edge vectors
 
-$$
+```math
 w_0,\ldots,w_{q-1},
 \qquad |w_j|=1,
-$$
+```
 
 one from each antipodal pair `{t,-t}` coming from a side vector `t` of `F`.
 
 Hence there is a unique sign word
 
-$$
+```math
 \varepsilon_j\in\{+1,-1\}
-$$
+```
 
 such that the `q` primal side vectors of `F` are exactly
 
-$$
+```math
 \varepsilon_0w_0,\ldots,\varepsilon_{q-1}w_{q-1}.
-$$
+```
 
 Since `F` closes,
 
-$$
+```math
 \boxed{
 \sum_{j=0}^{q-1}\varepsilon_jw_j=0.
 }
 \tag{SC.1}
-$$
+```
 
 Conversely, for the fixed strict edge-direction merge, SC.1 is the vector closure condition for the chosen signed unit sides.
 
@@ -86,7 +88,7 @@ AC identifies the complete antipodal graph as a maximal convex thrackle, hence a
 
 On a projective half-word the seam has the central-symmetry sign reversal: the edge immediately before `w_0` on the full boundary is the antipode of `w_{q-1}` and therefore carries sign `-epsilon_{q-1}`. Consequently the odd-cycle length is
 
-$$
+```math
 \boxed{
 \nu
 =
@@ -95,17 +97,18 @@ $$
 \mathbf1_{\{\varepsilon_{q-1}=\varepsilon_0\}}.
 }
 \tag{SC.2}
-$$
+```
 
 The right side is automatically odd. The run lengths of the sign word are therefore exactly the dihedral-composition data of the maximal antipodal cycle, up to the projective seam convention.
 
 In particular AC says the unique short S1 antipodal chord is a cycle edge, so if it is placed at the state between `w_0,w_1`, then
 
-$$
+```math
 \boxed{
 \varepsilon_0=-\varepsilon_1.
 }
 \tag{SC.3}
+```
 
 ---
 
@@ -113,71 +116,72 @@ $$
 
 Use D1 notation
 
-\[
+```math
 \delta=2\arcsin\frac1{2D},
 \qquad
 q_R=\frac\pi\delta,
 \qquad
 s=q_R-q,
-$$
+```
 
 and let the unique short difference-body vertex have circular neighbors separated by
 
-$$
+```math
 G=(s+2)\delta.
 \tag{3.1}
-$$
+```
 
 Put
 
-$$
+```math
 \eta:=\arcsin\left(D\sin\frac G2\right),
 \qquad
 \tau:=\pi-2\eta.
 \tag{3.2}
-$$
+```
 
 The two unit K-edges adjacent to the short vertex meet at angle `tau`. Rotate the edge-vector coordinate system so their mean direction is zero. Then
 
-$$
+```math
 \boxed{
 \theta_0=-\frac\tau2,
 \qquad
 \theta_1=\frac\tau2.
 }
 \tag{SC.4}
-$$
+```
 
 Every remaining K-edge joins two radius-`D` circular vertices at unit chord length, so consecutive ordinary edge directions differ by exactly `delta`.
 
 The first ordinary edge after the defect has direction
 
-$$
+```math
 \frac G2+\frac\delta2
 =\left(\frac32+\frac s2\right)\delta.
-$$
+```
 
 Therefore, for `2<=j<=q-1`,
 
-$$
+```math
 \boxed{
 \theta_j
 =\left(j-\frac12+\frac s2\right)\delta.
 }
 \tag{SC.5}
+```
 
 The final ordinary direction is the reflection of the first about `pi/2`, since
 
-\[
+```math
 (q+s)\delta=\pi.
-$$
+```
 
 At `s=0`, one has `tau=delta` and SC.4-SC.5 become the regular arithmetic half-direction list
 
-$$
+```math
 -\frac\delta2,\frac\delta2,\frac{3\delta}2,\ldots,
 \pi-\frac{3\delta}2.
-$$
+```
 
 ---
 
@@ -185,42 +189,42 @@ $$
 
 Write
 
-$$
+```math
 w_j=e^{i\theta_j}.
-$$
+```
 
 After reversing all signs if necessary, take
 
-$$
+```math
 \varepsilon_0=1,
 \qquad
 \varepsilon_1=-1.
 \tag{4.1}
-$$
+```
 
 The two defect-edge contributions are
 
-$$
+```math
 e^{-i\tau/2}-e^{i\tau/2}
 =-2i\sin\frac\tau2,
-$$
+```
 
 which is purely imaginary.
 
 Thus SC.1 is equivalent to the exact pair
 
-$$
+```math
 \boxed{
 \sum_{j=2}^{q-1}
 \varepsilon_j
 \cos\left(\left(j-\frac12+\frac s2\right)\delta\right)=0,
 }
 \tag{SC.6}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \sum_{j=2}^{q-1}
 \varepsilon_j
@@ -228,7 +232,7 @@ $$
 =2\sin\frac\tau2.
 }
 \tag{SC.7}
-$$
+```
 
 If the global sign normalization in (4.1) is reversed, the right side of SC.7 reverses with it; SC.6 is unchanged up to an overall sign.
 
@@ -240,63 +244,64 @@ The key structural point is SC.6: the nonlinear short-vertex angle `tau` disappe
 
 For
 
-$$
+```math
 \alpha_j:=\left(j-\frac12+\frac s2\right)\delta,
-$$
+```
 
 the involution
 
-$$
+```math
 j^*:=q+1-j
-$$
+```
 
 satisfies
 
-$$
+```math
 \alpha_{j^*}=\pi-\alpha_j
-$$
+```
 
 because `(q+s)delta=pi`. Hence
 
-$$
+```math
 \cos\alpha_{j^*}=-\cos\alpha_j,
 \qquad
 \sin\alpha_{j^*}=\sin\alpha_j.
-$$
+```
 
 Therefore SC.6 becomes
 
 ### even `q`
 
-$$
+```math
 \boxed{
 \sum_{j=2}^{q/2}
 (\varepsilon_j-\varepsilon_{q+1-j})
 \cos\alpha_j=0.
 }
 \tag{SC.8e}
-$$
+```
 
 ### odd `q`
 
 The fixed index `(q+1)/2` has `alpha=pi/2` and contributes zero to SC.6, so
 
-$$
+```math
 \boxed{
 \sum_{j=2}^{(q-1)/2}
 (\varepsilon_j-\varepsilon_{q+1-j})
 \cos\alpha_j=0.
 }
 \tag{SC.8o}
+```
 
 Thus the real closure only sees the antisymmetric part of the sign word under reflection across the defect axis.
 
 The corresponding imaginary equation sees the symmetric part:
 
-\[
+```math
 \sum_{j<j^*}
 (\varepsilon_j+\varepsilon_{j^*})\sin\alpha_j
-$$
+```
 
 plus the possible odd-`q` central sign, and must equal `2 sin(tau/2)` after the normalization (4.1).
 
@@ -306,53 +311,53 @@ plus the possible odd-`q` central sign, and must equal `2 sin(tau/2)` after the 
 
 At P1 the two unit defect edges become collinear and merge into one length-two K-edge. Geometrically
 
-$$
+```math
 \tau=0,
 \qquad
 G=\Delta_2,
 \qquad
 (q-2)\delta+\Delta_2=\pi.
 \tag{6.1}
-$$
+```
 
 The two corresponding primal sides are oppositely directed parallel unit vectors and therefore cancel in primal closure.
 
 Put
 
-$$
+```math
 x:=\frac\delta2.
-$$
+```
 
 Since `Delta_2/2=pi/2-(q-2)x` and `sin(Delta_2/2)=1/D=2 sin x`, P1 geometry is equivalently
 
-$$
+```math
 \boxed{
 \cos((q-2)x)=2\sin x.
 }
 \tag{SC.9}
-$$
+```
 
 For the remaining `q-2` primal sides, SC.5 becomes
 
-$$
+```math
 \theta_j
 =\frac\pi2+(2j-q-1)x,
 \qquad 2\le j\le q-1.
 \tag{6.2}
-$$
+```
 
 Therefore their exact closure is
 
-$$
+```math
 \sum_{j=2}^{q-1}
 \varepsilon_j e^{i(2j-q-1)x}=0.
-$$
+```
 
 Multiplying by the nonzero phase `e^{-i(3-q)x}` and setting
 
-$$
+```math
 z:=e^{2ix}=e^{i\delta}
-$$
+```
 
 gives:
 
@@ -360,20 +365,22 @@ gives:
 
 A P1 survivor can exist only if there is a Littlewood polynomial
 
-$$
+```math
 \boxed{
 P(z)=\sum_{k=0}^{q-3}\epsilon_k z^k,
 \qquad \epsilon_k\in\{+1,-1\},
 }
 \tag{SC.10}
+```
 
 such that
 
-\[
+```math
 \boxed{
 P(e^{i\delta})=0,
 }
 \tag{SC.11}
+```
 
 where `delta` is the unique P1 angle satisfying SC.9.
 
@@ -385,17 +392,19 @@ This is substantially more rigid than arbitrary polygon closure: the root point 
 
 Although SC.10 does not by itself imply that the unimodular root is cyclotomic, all candidate polynomials have the same reduction modulo two:
 
-\[
+```math
 \boxed{
 P(z)\equiv1+z+\cdots+z^{q-3}\pmod2.
 }
 \tag{SC.12}
+```
 
 Equivalently,
 
-\[
+```math
 (z-1)P(z)\equiv z^{q-2}-1\pmod2.
 \tag{SC.13}
+```
 
 This gives an arithmetic handle for a future exclusion. No claim is made here that every unimodular Littlewood zero is a root of unity; that statement is false in general.
 
@@ -449,17 +458,17 @@ The next target is now finite and arithmetic.
 
 Combine the fixed-angle equation
 
-\[
+```math
 \cos((q-2)\delta/2)=2\sin(\delta/2)
-$$
+```
 
 with the necessary Littlewood zero
 
-$$
+```math
 P(e^{i\delta})=0,
 \qquad
 \deg P=q-3.
-$$
+```
 
 Possible approaches are:
 

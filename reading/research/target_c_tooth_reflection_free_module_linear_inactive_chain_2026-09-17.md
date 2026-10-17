@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_free_module_linear_inactive_chain_2026-09-17.md) · source SHA-256 `19807bcbb073e644911d7bd29941613b1f39b73fd067d02f0964b3e4a9ad97cb`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 17 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f041aec552b0617a9c11942722085039e27b721b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_free_module_linear_inactive_chain_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0b93e2dce928fabf4b611a5b8a0a8202f883683170d5e7d7d8c774e11d3c7853"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -18,52 +20,54 @@ The finite gate-jam theorem can be pushed much farther. A finite gate network ma
 
 Fix any constant
 
-$$
+```math
 0<\lambda<\frac12.
-$$
+```
 
 Then every FREE module which does **not** convert to the exact source-diameter braid forces a simple chain of original fully inactive vertices
 
-$$
+```math
 z_0,z_1,\ldots,z_\ell
-$$
+```
 
 with
 
-$$
+```math
 \boxed{z_0\in U,}
 \tag{LC.1}
-$$
+```
 
-$$
+```math
 \boxed{
 1<|z_{j+1}-z_j|
 <1+h_*+o(1)
 =1.3347479843\ldots+o(1),
 }
 \tag{LC.2}
+```
 
 and support-depth penetration
 
-\[
+```math
 \boxed{
 a_{z_\ell}>\lambda D,
 \qquad
 a_{z_0}=O(\sqrt D),
 }
 \tag{LC.3}
+```
 
 where
 
-\[
+```math
 a_v:=H-N\cdot v
-$$
+```
 
 is depth from the module's canonical blocker support line.
 
 Consequently
 
-$$
+```math
 \boxed{
 \ell\ge
 \left(
@@ -71,15 +75,17 @@ $$
 \right)D.
 }
 \tag{LC.4}
+```
 
 Since `lambda` may be any fixed constant below `1/2`, the coefficient can be taken arbitrarily close to
 
-\[
+```math
 \boxed{
 {1\over2(1+h_*)}
 =0.374602551093811\ldots .
 }
 \tag{LC.5}
+```
 
 Thus the surviving FREE obstruction is no longer a bounded gate jam. It contains a **linear-length chain of old contact- and diameter-isolated source points** running from the blocker-side boundary layer to any prescribed support depth strictly below `D/2`.
 
@@ -89,24 +95,24 @@ Thus the surviving FREE obstruction is no longer a bounded gate jam. It contains
 
 Fix one FREE module. Let
 
-\[
+```math
 U=\{z\in A:|z-q|>D\}
-$$
+```
 
 and let `N` be the exact canonical support normal at the farthest blocker head `y`. Write
 
-$$
+```math
 H=h_A(N),
 \qquad
 a_v=H-N\cdot v,
-$$
+```
 
 and use the usual clearing time
 
-$$
+```math
 t_D=\delta+D^{-1/3}<\frac12.
 \tag{LC.6}
-$$
+```
 
 All original blockers move with velocity `-N`. Whenever a moving point reaches a still-fixed source point at unit distance:
 
@@ -127,75 +133,77 @@ The earlier absorbed-guard arguments used the convenient depth scale `O(sqrt(D))
 
 The canonical width theorem gives
 
-$$
+```math
 W_K(N)>D-h_*,
 \tag{LC.7}
-$$
+```
 
 while the full-source circumradius bound gives one center `o` with
 
-$$
+```math
 K\subset B(o,R_D),
 \qquad
 R_D={D\over2}+O(\sqrt D).
 \tag{LC.8}
-$$
+```
 
 Let
 
-$$
+```math
 c=N\cdot o.
-$$
+```
 
 Since the opposite support value is at least `c-R_D`, (LC.7) implies
 
-$$
+```math
 \boxed{
 H-c\ge {D\over2}-O(\sqrt D).
 }
 \tag{LC.9}
+```
 
 Now consider original source points with
 
-\[
+```math
 a_v\le\lambda D+O(1),
 \qquad
 0<\lambda<\frac12.
-$$
+```
 
 Their `N`-coordinate relative to `o` is at least
 
-$$
+```math
 N\cdot(v-o)
 \ge
 \left({1\over2}-\lambda\right)D-O(\sqrt D).
 \tag{LC.10}
-$$
+```
 
 Inside the disk (LC.8), the diameter of this cap is therefore at most
 
-$$
+```math
 \boxed{
 \left(
 2\sqrt{\lambda-\lambda^2}+o(1)
 \right)D.
 }
 \tag{LC.11}
+```
 
 Because `lambda<1/2`,
 
-\[
+```math
 \rho_\lambda:=2\sqrt{\lambda-\lambda^2}<1.
 \tag{LC.12}
-$$
+```
 
 So the cap has a fixed positive subdiameter margin:
 
-$$
+```math
 \operatorname{diam}(\text{cap})
 \le(\rho_\lambda+o(1))D<D.
 \tag{LC.13}
-$$
+```
 
 This is the key extension.
 
@@ -203,41 +211,41 @@ This is the key extension.
 
 Suppose an absorbed original point `p` has
 
-$$
+```math
 a_p\le\lambda D
-$$
+```
 
 and has moved by `tau N`, with
 
-$$
+```math
 0\le\tau<t_D<\frac12.
-$$
+```
 
 If for a fixed source point `v`
 
-$$
+```math
 |p-\tau N-v|\ge D,
 \tag{LC.14}
-$$
+```
 
 while originally `|p-v|<D`, then squaring gives
 
-$$
+```math
 N\cdot(p-v)<{\tau\over2}<\frac14.
 \tag{LC.15}
-$$
+```
 
 Hence
 
-$$
+```math
 a_v-a_p=N\cdot(p-v)<\frac14,
-$$
+```
 
 so `v` also lies in the depth-`lambda D+O(1)` cap. Equation (LC.13) then gives
 
-$$
+```math
 |p-v|\le(\rho_\lambda+o(1))D,
-$$
+```
 
 and adding the displacement `<1/2` still leaves the moved distance strictly below `D`, contradicting (LC.14).
 
@@ -249,12 +257,13 @@ If two absorbed points both have original support depth at most `lambda D`, thei
 
 Therefore:
 
-$$
+```math
 \boxed{
 \text{as long as every absorbed vertex has }a_v\le\lambda D,
 \text{ the entire repair is strictly upper-safe.}
 }
 \tag{LC.16}
+```
 
 No bound on the **number** of absorbed vertices is needed.
 
@@ -264,28 +273,30 @@ No bound on the **number** of absorbed vertices is needed.
 
 Every newly absorbed guard was originally outside `U`, hence
 
-\[
+```math
 |q-v|\le D.
-$$
+```
 
 Also
 
-$$
+```math
 N\cdot(v-q)=L-a_v.
-$$
+```
 
 If `a_v\le\lambda D` with `lambda<1/2`, then
 
-$$
+```math
 N\cdot(v-q)
 \ge(1-\lambda)D-o(D)>1.
 \tag{LC.17}
+```
 
 Moving `v` by `-N` strictly decreases its distance from `q`, but by only `O(1)`. Consequently throughout the repair
 
-\[
+```math
 oxed{1<|q-v(s)|<D}
 \tag{LC.18}
+```
 
 for every absorbed guard, unless the module had already entered the separate `Q-DIAMETER` exact-anchor branch before absorption.
 
@@ -303,11 +314,11 @@ The source is finite. Let `G_g` be the final gate graph. Every nontrivial compon
 
 For one nontrivial component with current vertex positions `p_1,...,p_m`, let `c_G` be its centroid and apply the arbitrarily small expansion
 
-\[
+```math
 p_j\longmapsto
 c_G+(1+\varepsilon)(p_j-c_G).
 \tag{LC.19}
-$$
+```
 
 for `epsilon>0`.
 
@@ -317,9 +328,9 @@ Thus **all** newly created gate contacts can be opened while preserving feasibil
 
 Now replace `x` by `q` and use the existing arbitrarily small base-opening perturbation of `q`. Since there is no `q`-diameter equality, all nonbase `q`-distances are strict. The perturbation removes every one of the
 
-$$
+```math
 d=\deg_C(x)\ge3
-$$
+```
 
 old contacts at `x`, and no new gate contact remains.
 
@@ -329,12 +340,13 @@ Therefore the assumed terminal repair is impossible.
 
 We have proved:
 
-$$
+```math
 \boxed{
 \text{before clearing, some absorbed inactive vertex }v
 \text{ must satisfy }a_v>\lambda D.
 }
 \tag{LC.20}
+```
 
 ---
 
@@ -342,28 +354,28 @@ $$
 
 Let `z_ell` be the first absorbed vertex with
 
-\[
+```math
 a_{z_\ell}>\lambda D.
-$$
+```
 
 Follow its parent ancestry back to a blocker root
 
-$$
+```math
 z_0\in U.
-$$
+```
 
 The chain is simple because join times strictly increase.
 
 Suppose `z_{j+1}` is absorbed when its parent `z_j` has already moved for a time `tau_j<=t_D`. At the event,
 
-$$
+```math
 |z_j-\tau_jN-z_{j+1}|=1.
 \tag{LC.21}
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 a_{z_{j+1}}-a_{z_j}
 &=N\cdot(z_j-z_{j+1})\\
@@ -371,31 +383,32 @@ a_{z_{j+1}}-a_{z_j}
 &\le1+t_D.
 \end{aligned}
 \tag{LC.22}
+```
 
 The blocker root satisfies
 
-\[
+```math
 a_{z_0}=O(\sqrt D).
 \tag{LC.23}
-$$
+```
 
 Summing (LC.22),
 
-$$
+```math
 \lambda D-O(\sqrt D)
 < a_{z_\ell}-a_{z_0}
 \le\ell(1+t_D).
-$$
+```
 
 Since
 
-$$
+```math
 t_D\le h_*+o(1),
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{
 \ell\ge
 \left(
@@ -403,28 +416,30 @@ $$
 \right)D,
 }
 \tag{LC.24}
+```
 
 which is (LC.4).
 
 Finally, every parent-child pair was an old strict noncontact. Equation (LC.21) gives
 
-\[
+```math
 1<|z_{j+1}-z_j|
 \le1+\tau_j
 \le1+t_D
 <1+h_*+o(1),
-$$
+```
 
 proving (LC.2).
 
 Every chain vertex is fully inactive in the original canonical source, so
 
-$$
+```math
 \boxed{
 \deg_C(z_j)=\deg_H(z_j)=0
 \qquad(0\le j\le\ell).
 }
 \tag{LC.25}
+```
 
 ---
 
@@ -434,28 +449,30 @@ The theorem holds for every fixed `lambda<1/2`.
 
 For example, `lambda=1/4` gives
 
-\[
+```math
 \boxed{
 \ell\ge
 (0.1873012755\ldots-o(1))D.
 }
 \tag{LC.26}
+```
 
 Taking `lambda=0.49` gives
 
-\[
+```math
 \boxed{
 \ell\ge
 (0.3671105001\ldots-o(1))D.
 }
 \tag{LC.27}
+```
 
 As `lambda` approaches `1/2` from below, the coefficient approaches
 
-\[
+```math
 {1\over2(1+h_*)}
 =0.374602551093811\ldots .
-$$
+```
 
 The barrier at `lambda=1/2` is geometric: the circumdisk cap of depth `D/2` can itself have diameter `D`, so the strict upper-safety argument no longer follows from cap geometry alone.
 
@@ -465,12 +482,13 @@ The barrier at `lambda=1/2` is geometric: the circumdisk cap of depth `D/2` can 
 
 The slow-scale reflection family has
 
-\[
+```math
 M_D>
 (c_*-o(1)){D^{1/4}\over\kappa_D},
 \qquad
 c_*=0.129220199818177\ldots .
 \tag{LC.28}
+```
 
 Every selected module is now in one of two effective classes:
 
@@ -479,11 +497,12 @@ Every selected module is now in one of two effective classes:
 
 One class therefore contains at least
 
-\[
+```math
 \boxed{
 \left({c_*\over2}-o(1)\right){D^{1/4}\over\kappa_D}
 }
 \tag{LC.29}
+```
 
 modules.
 

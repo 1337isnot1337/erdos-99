@@ -22,9 +22,9 @@ A nontrivial positive-contact bridge block has no internal bridges, so its inter
 
 C26 says an unloaded contact vertex in fully force-visible C-II has full contact degree at least three. Therefore every one of those four internal degree-two vertices is either positively diameter-loaded or incident to a bridge leaving the block. Distinct vertices require distinct bridge edges. Thus, for every nontrivial bridge block `X`,
 
-$$
+```math
 \boxed{q_X+k_X\ge4,}
-$$
+```
 
 where `q_X=|B_+\cap X|` and `k_X` is bridge-tree degree.
 
@@ -38,10 +38,10 @@ Let `G_X=C[V(X)]` be the internal contact graph of a nontrivial bridge block. Ev
 
 Thus Eppstein supplies four distinct vertices
 
-$$
+```math
 Z_X=\{z_1,z_2,z_3,z_4\}
 \tag{C34.1}
-$$
+```
 
 of internal degree exactly two.
 
@@ -49,20 +49,20 @@ If `z in Z_X\setminus B_+`, then C26 gives full contact degree at least three, s
 
 Let `l=|Z_X\cap B_+|`. Then
 
-$$
+```math
 q_X\ge l,
 \qquad
 k_X\ge4-l,
-$$
+```
 
 and hence:
 
 ### Theorem C34
 
-$$
+```math
 \boxed{q_X+k_X\ge4.}
 \tag{C34.2}
-$$
+```
 
 ---
 
@@ -70,7 +70,7 @@ $$
 
 For a nontrivial bridge block:
 
-$$
+```math
 \begin{array}{c|c}
 k_X&\text{forced }q_X\\ \hline
 1&q_X\ge3\\
@@ -79,7 +79,7 @@ k_X&\text{forced }q_X\\ \hline
 q_X=0&k_X\ge4
 \end{array}
 \tag{C34.3}
-$$
+```
 
 Thus:
 
@@ -96,21 +96,21 @@ C39 below will sharpen the last statement to `k_X>=5` using the positive self-st
 
 Canonical C31 gives
 
-$$
+```math
 \delta_X\le2q_X+k_X-2.
-$$
+```
 
 Since a nontrivial triangle-free bridge block has `delta_X>=2`, this only implies
 
-$$
+```math
 2q_X+k_X\ge4.
-$$
+```
 
 C34 improves the coefficient of the loaded term:
 
-$$
+```math
 q_X+k_X\ge4.
-$$
+```
 
 The gain comes from four distinct low-degree vertices, not from the total edge count.
 

@@ -18,34 +18,34 @@ Let `G_r^0` contain only internal contacts of `I_r` and attachment contacts from
 
 Canonical Section 62 gives
 
-$$
+```math
 e_r+t_r=2n_r+1+s_r.
-$$
+```
 
 Thus
 
-$$
+```math
 V=n_r+a_r,
 \qquad E=2n_r+1+s_r,
-$$
+```
 
 and Euler gives
 
-$$
+```math
 F_b=n_r+2+s_r-a_r.
-$$
+```
 
 The graph is a simple triangle-free contact graph. Section 62 already uses the same fact to assert every bounded face-walk has length at least four even when the graph is not 2-connected. Therefore with occurrence-counted outer length `Ltilde_r` and bounded-face excess `Qtilde_r>=0`,
 
-$$
+```math
 2E=Ltilde_r+4F_b+Qtilde_r.
-$$
+```
 
 Substitution gives
 
-$$
+```math
 Ltilde_r+Qtilde_r=4a_r-6-2s_r.
-$$
+```
 
 No bridge or articulation correction is missing because face incidence and the outer walk both count edge occurrences.
 
@@ -55,30 +55,30 @@ No bridge or articulation correction is missing because face incidence and the o
 
 Canonical Section 123 proves for the augmented graph `J_r^+`
 
-$$
+```math
 a_r-3-s_r={a_r-T_r+Q_r^+\over2}.
-$$
+```
 
 Hence
 
-$$
+```math
 2a_r-6-2s_r=a_r-T_r+Q_r^+.
-$$
+```
 
 Insert this in the preceding exact identity:
 
-$$
+```math
 Ltilde_r+Qtilde_r
 =2a_r+a_r-T_r+Q_r^+.
-$$
+```
 
 Therefore
 
-$$
+```math
 Ltilde_r-2a_r
 =a_r-T_r+Q_r^+-Qtilde_r
 \le a_r-T_r+Q_r^+.
-$$
+```
 
 The proof does not require any one-to-one matching of augmented faces to outer routes.
 
@@ -97,9 +97,9 @@ An added edge cannot be a bridge because its endpoints were already connected. M
 
 Therefore
 
-$$
+```math
 L_r\le Ltilde_r.
-$$
+```
 
 **Verdict:** valid.
 
@@ -107,23 +107,23 @@ $$
 
 Summing the local inequality gives
 
-$$
+```math
 \sum_r(L_r-2a_r)
 \le\sum_r(a_r-T_r+Q_r^+).
-$$
+```
 
 Canonical Section 123 gives exactly
 
-$$
+```math
 e_{BB}-k={1\over2}\sum_r(a_r-T_r+Q_r^+)+d_{tile}.
-$$
+```
 
 Thus
 
-$$
+```math
 \sum_r(L_r-2a_r)
 \le2(e_{BB}-k-d_{tile}).
-$$
+```
 
 No local edge occurrence is identified across cells; only scalar local face ledgers are summed.
 
@@ -133,9 +133,9 @@ No local edge occurrence is identified across cells; only scalar local face ledg
 
 Every attachment vertex is extreme in `P_r` and occurs on the outer-face walk of the actual induced harmonic graph. Choose an attachment diameter pair `p,q` with `|p-q|=d_r` and occurrences of them on one cyclic outer walk. The two outer-walk arcs between those occurrences each have Euclidean path length at least `d_r`, because all outer edges are unit segments and each arc joins the same endpoints. Hence
 
-$$
+```math
 L_r\ge2d_r.
-$$
+```
 
 This proves the finite compatibility corollary in Section 125 without assuming a simple outer boundary.
 
@@ -145,37 +145,37 @@ This proves the finite compatibility corollary in Section 125 without assuming a
 
 Canonical Section 122 gives
 
-$$
+```math
 \liminf D^{-1}\sum_r(L_r+P_{exc,r}-2d_r)\ge R_0.
-$$
+```
 
 Canonical Section 123 gives the cellwise bound
 
-$$
+```math
 P_{exc,r}\le5Q_r^+.
-$$
+```
 
 The Section-125 route bound gives
 
-$$
+```math
 L_r-2d_r
 \le(a_r-T_r+Q_r^+)+2(a_r-d_r).
-$$
+```
 
 Summing yields the pointwise upper bound
 
-$$
+```math
 \sum_r(L_r+P_{exc,r}-2d_r)
 \le2\Delta_{ad}+A_*+6Q_*.
-$$
+```
 
 Since the right side is pointwise at least the canonical detour quantity, its normalized liminf is at least `R_0`. Division by two gives
 
-$$
+```math
 \liminf D^{-1}
 \left(\Delta_{ad}+{A_*\over2}+3Q_*\right)
 \ge {\pi\over4}(2-\sqrt3).
-$$
+```
 
 No `liminf` inequality is reversed.
 

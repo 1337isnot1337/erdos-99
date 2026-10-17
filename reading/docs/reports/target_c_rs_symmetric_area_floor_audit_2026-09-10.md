@@ -15,10 +15,10 @@
 
 The FSRS proof survives this audit.  The strongest audited report-level conclusion is
 
-$$
+```math
 \liminf\frac{e_{BB}+2s_C}{D}\ge
 \lambda_{RS}=0.5921405436062881\ldots,
-$$
+```
 
 and the exact endpoint is unattainable.  Hence an absolute nonexplicit
 `epsilon_RS>0` exists above this explicit base value.
@@ -33,9 +33,9 @@ Rogalski--Saint Raymond Theorem 1 applies to a centrally symmetric compact conve
 planar set with area `I`, perimeter `L`, and diameter `D`.  In the paper's half-graph
 notation `I=2S` and `L=2l`; the displayed theorem is equivalent to
 
-$$
+```math
 I\ge \frac\pi{(\pi-2)^2}(L/2-D)^2.
-$$
+```
 
 The Euclidean disk gives equality and fixes the best constant.  The paper's Problem 2
 explicitly asks whether equality implies the disk.  Therefore the main report is
@@ -45,9 +45,9 @@ correct not to use equality uniqueness.
 
 For `F_0=F-o` and
 
-$$
+```math
 S=(F_0+(-F_0))/2=(F-F)/2,
-$$
+```
 
 Minkowski additivity of widths gives `w_S=w_F` in every direction.  Hence
 `diam S=D`, and Cauchy's width formula gives `per S=per F=P` exactly.
@@ -58,21 +58,21 @@ FS.4 gives `d_H(F_0,-F_0)<=2L_D`.  Support functions then give
 For the endpoint argument one needs **two-sided** area closeness.  It follows directly
 from the Hausdorff estimate:
 
-$$
+```math
 S\subset F_0+L_DB_2,
 \qquad
 F_0\subset S+L_DB_2.
-$$
+```
 
 Since both bodies have perimeter `P`, Steiner's formula yields
 
-$$
+```math
 \boxed{
 |\operatorname{area}S-\operatorname{area}F|
 \le P L_D+\pi L_D^2=o(D^2).
 }
 \tag{A.1}
-$$
+```
 
 The main report explicitly states the first inclusion/one-sided bound because that is
 all the area floor needs; equation (A.1) supplies the symmetric form used later in
@@ -83,28 +83,28 @@ inserted if the theorem is promoted.
 
 The necessary relaxed inequality is
 
-$$
+```math
 (\pi^2+1)\lambda^2+2m\lambda+m^2
 -4\pi\max\{\Phi(y),\Psi(p)\}\ge0,
-$$
+```
 
 with
 
-$$
+```math
 \Phi(y)=(y+\sin y)/4,
 \quad
 \Psi(p)=\frac\pi{(\pi-2)^2}(p/2-1)^2,
 \quad
 m=\min\{y,p-y\}.
-$$
+```
 
 The domain is `2rho<=y<=pi`, `max(2,y)<=p<=pi`.
 
 The crossover
 
-$$
+```math
 p_c(y)=2+2(\pi-2)\sqrt{\Phi(y)/\pi}
-$$
+```
 
 is feasible.  For `y>=2`, `Phi(y)-Psi(y)` is concave, positive at `2`, and zero at
 `pi`; for `y<2`, `p_c>2>y`.
@@ -112,9 +112,9 @@ is feasible.  For `y>=2`, `Phi(y)-Psi(y)` is concave, positive at `2`, and zero 
 The fixed-`y` root decreases while `Phi` is active and `m` grows.  Once `Psi` is
 active before `p=2y`, differentiating the defining polynomial gives
 
-$$
+```math
 H_p=2(\lambda+p-y)-4\pi C_{RS}(p/2-1)<0,
-$$
+```
 
 because `p_c>3`, the root has `lambda<1`, and `C_RS>2`.  Since the polynomial is
 increasing in `lambda`, its root increases after the crossover.  Beyond `p=2y`, `m`
@@ -148,24 +148,24 @@ The grid diagnostic is not used as proof.
 
 If `L/D->lambda_RS`, uniqueness of the relaxed minimizer forces
 
-$$
+```math
 h/D\to y_0,
 \qquad
 P/D\to2y_0.
-$$
+```
 
 Retaining the exact ZK correction gives a lower gap term
 
-$$
+```math
 A_0-\frac\pi4(\lambda_{RS}-3\kappa)^2,
 \qquad
 \kappa=\lim(k/D),
-$$
+```
 
 while JC gives an upper term `(t+y_0)^2/(4pi)` with `t<=lambda_RS`.
 The threshold equation is equality only at `kappa=0,t=lambda_RS`; hence
 
-$$
+```math
 k/D\to0,
 \quad
 s_C/D\to0,
@@ -173,7 +173,7 @@ s_C/D\to0,
 e_{BB}/D\to\lambda_{RS},
 \quad
 q/D\to y_0.
-$$
+```
 
 Combining the cell upper bound and JC gap upper bound then forces
 `area(F)/D^2->A_0`.  Equation (A.1) gives the same limit for `S`.
@@ -187,35 +187,35 @@ cavity upper bound smaller.  Both move in the contradictory direction.
 Let `gamma_i>=delta_D` be the `h` projective direction gaps and put
 `x_i=gamma_i-delta_D`, `E_D=sum x_i`, `M_D=max x_i`.  For
 
-$$
+```math
 g_D(x)=\sin(\delta_D+x)-\sin\delta_D,
-$$
+```
 
 strict concavity on `[0,E_D]` and `g_D(0)=0` imply
 
-$$
+```math
 \sum_i g_D(x_i)
 \ge \frac{E_D}{M_D}g_D(M_D)
 \ge g_D(E_D).
-$$
+```
 
 If the area approaches the one-large-gap minimum but `M_D` stays below `E_D` by a
 fixed amount, a convergent subsequence gives
 
-$$
+```math
 \frac{E}{M}\sin M>\sin E,
 \qquad 0\le M<E<\pi,
-$$
+```
 
 because `sin x/x` is strictly decreasing.  This is a fixed positive area defect.
 Therefore `M_D/E_D->1`; all nonmaximal excess gap mass tends to zero.
 
 This justifies the perimeter limit
 
-$$
+```math
 \operatorname{per}(Q_H)/D
 \to y_0+2\cos(y_0/2).
-$$
+```
 
 There is no assumption that every finite gap except one is exactly minimal.
 Asymptotic area saturation is enough.
@@ -231,9 +231,9 @@ under Hausdorff convergence.
 
 Thus the endpoint would require
 
-$$
+```math
 2y_0=y_0+2\cos(y_0/2).
-$$
+```
 
 The function `y-2cos(y/2)` is strictly increasing and vanishes at `2rho` because
 `rho=cos rho`.  Since `y_0>2rho`, the equality is impossible.
@@ -260,9 +260,9 @@ eliminates every remaining value above the new threshold.
 
 The nearest quantitative target is to turn the endpoint perimeter discrepancy
 
-$$
+```math
 y_0-2\cos(y_0/2)=0.05348580587756\ldots
-$$
+```
 
 into an explicit area penalty for `Q_H subset S`; this would replace the compactness
 `epsilon_RS` by an explicit increment and can then be fed through the exact PC/ZK

@@ -41,9 +41,9 @@ nondegenerate exterior caps. Then, for all sufficiently large sources along the
 sequence, the number `N` of distinct contact-isolated source points within distance
 `5/4` of the boundary of at least one such region satisfies
 
-$$
+```math
 \boxed{N\le 48(x_B+a).}
-$$
+```
 
 The onset is sequence-dependent through the Type-II near-disk convergence. If in
 addition `x_B+a=o(D)`, the number of distinct isolate endpoints available to obstruct
@@ -51,9 +51,9 @@ the audited small O–O lower clauses is `o(D)`.
 
 The lower-clause interpretation is conditional on the canonical small O–O move scope:
 the displacement cloud has diameter
-$$
+```math
 s<\min\{D-\sqrt{D^2-1},\sqrt2-1\},
-$$
+```
 bounded-face isolates are transported by their common core owner, outer-pocket isolates
 are fixed, exterior isolates use the canonical long-pair dispatch with unanchored
 isolates fixed, and unary rhombus blockers are handled separately. Under these
@@ -67,15 +67,15 @@ bound how many owners one isolate can obstruct.
 
 The Section 67 hull augmentation adds exactly `a` missing loaded-hull sides and creates
 exactly `a` convex pockets. With `P_F=per(F)`, its Euclidean incidence identities give
-$$
+```math
 P_F=q-a+L_{add},\qquad
 \sum_{P\text{ pocket}}P_P=b+2L_{add}-P_F.
-$$
+```
 The convex hull of the occurrence-counted outer contact walk has perimeter at most its
 walk length, so `b>=P_F`. Hence `L_add<=x_B+a` and
-$$
+```math
 \sum_P P_P=x_B+a+L_{add}\le2(x_B+a).
-$$
+```
 These are the actual convex pockets inside `F`; bounded physical contact faces are not
 included.
 
@@ -94,19 +94,19 @@ an outward support normal `n`; because `F\subset K` and `B(0,r_D)\subset F`,
 `n·z=h_K(n)>=r_D`, so `n` is also within `alpha_D` of `z`. Each arc edge direction
 therefore differs from the chord direction by at most `2 alpha_D`. Projection onto the
 chord direction, summed along the convex arc, gives
-$$
+```math
 \operatorname{length}(\text{arc})\le L/\cos(2\alpha_D),
-$$
+```
 where `L` is the chord length. Since `alpha_D->0`, every cap perimeter is at most
 `(1+sec(2 alpha_D))L<=3L` for all sufficiently large sources. A positive-area cap
 cannot have a unit chord: its source-hull arc contains at least two source-hull sides,
 each of length at least one, whereas the projection estimate would make that arc
 shorter than two. Therefore positive caps occur only at the `a` nonunit loaded-hull
 sides, and
-$$
+```math
 \#\{\text{caps}\}\le a,\qquad
 \sum_C P_C\le3L_{add}\le3(x_B+a).
-$$
+```
 
 Combining the two perimeter estimates, all pocket and cap regions together have total
 perimeter at most `5(x_B+a)`, and their number is at most `2a`.
@@ -122,15 +122,15 @@ If a source isolate is within `5/4` of a region boundary, its open radius-`1/2` 
 contained in that region's radius-`7/4` boundary tube. Those disks are pairwise
 disjoint by unit separation. Summing the tube areas over at most `2a` regions and using
 the total perimeter bound gives
-$$
+```math
 \frac\pi4N\le
 2\frac74\,5(x_B+a)+\pi\left(\frac74\right)^2 2a,
-$$
+```
 so
-$$
+```math
 N\le\frac{70}{\pi}(x_B+a)+\frac{49}{2}a
 <48(x_B+a),
-$$
+```
 using `pi>3` and `a<=x_B+a`. If `x_B+a=0`, there are no pockets or positive caps and
 `N=0`.
 

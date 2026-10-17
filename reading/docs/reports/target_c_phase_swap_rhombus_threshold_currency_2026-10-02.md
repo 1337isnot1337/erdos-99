@@ -46,10 +46,10 @@ is an exact regression and finite audit, not a global-optimality certificate.
 Put `L=pi/3`. Let `A={a_1,...,a_r}` be distinct actual stopped trains with
 pairwise distinct projective contact directions. Their real lifts satisfy
 
-$$
+```math
 x_1<\cdots<x_r,\qquad W=x_r-x_1<L.
 \tag{2.1}
-$$
+```
 
 They are internally noncrossing. Choose one representative for each distinct
 phase if the original shore has repeats. Every `A` train crosses every train
@@ -71,10 +71,10 @@ When the global O–O cutset hypotheses hold, this direction exchange is exactly
 the source-preserving slab translation between these two trains, even if they
 are far apart in path order. Its amplitude is
 
-$$
+```math
 s_i=2\sin((x_{i+1}-x_i)/2)\le x_{i+1}-x_i.
 \tag{2.2}
-$$
+```
 
 The following assertions concern only the old rhombus diagonal constraints.
 They do not assert feasibility of every source pair after the move.
@@ -86,20 +86,20 @@ whose crossing with one of `a_i,a_{i+1}` supplies the blocked diagonal. The
 chosen trains are all distinct. Train `c_i` has no strict-rhombus crossing
 with any train of `B`, and it omits crossings with at least
 
-$$
+```math
 w_i:=\min(i,r-i)
 \tag{3.1}
-$$
+```
 
 trains of `A`.
 
 **Proof.** A unit parallelogram with side directions `x,y` has diagonal
 squares `2+2cos(x-y)` and `2-2cos(x-y)`. Both exceed one exactly when
 
-$$
+```math
 |\cos(x-y)|<1/2.
 \tag{3.2}
-$$
+```
 
 On the projective direction circle, for fixed `y` the admissible directions
 are the open arc `(y-2L,y-L)` modulo `3L`. It has length `L`. On the real
@@ -130,23 +130,23 @@ external.
 For completeness, lift every direction of `B` to the common admissible
 interval
 
-$$
+```math
 x_r+L<y_b<x_1+2L.
 \tag{3.3}
-$$
+```
 
 This interval exists because `W<L`. In the upper-bound case lift the
 external direction as `y_c=t+L`. Then
 
-$$
+```math
 0<y_b-y_c<L+x_1-t\le L.
-$$
+```
 
 In the lower-bound case lift it as `y_c=t+2L`. Then
 
-$$
+```math
 0<y_c-y_b<L+t-x_r\le L.
-$$
+```
 
 The inequalities with `L` are strict even at an endpoint, because (3.3) is
 strict. Thus the external/B projective angle is less than `L`; (3.2) fails.
@@ -160,26 +160,26 @@ actual Euclidean projective direction.
 Let `C_G={c_i:i in G}` be any choices from Theorem 3.1. Count omissions only
 between `A` and these distinct actual trains:
 
-$$
+```math
 M_A(C_G)=|\{(a,c)\in A\times C_G:a,c
 \text{ have no old strict-rhombus crossing}\}|.
-$$
+```
 
 **Theorem 4.1.**
 
-$$
+```math
 M_A(C_G)\ge\sum_{i\in G}\min(i,r-i)
 \ge\left\lfloor{(k+1)^2\over4}\right\rfloor,
 \qquad M_B(C_G)=|B|k.
 \tag{4.1}
-$$
+```
 
 In particular, if every phase-consecutive swap is rhombus-blocked, then
 
-$$
+```math
 M_A(C_G)\ge\lfloor r^2/4\rfloor.
 \tag{4.2}
-$$
+```
 
 **Proof.** The external trains are distinct, so the missing pairs paid by
 different gap witnesses are distinct. This proves the first inequality and
@@ -199,20 +199,20 @@ allocation errors paid. That step is not inferred here.
 Suppose a number `M` bounds `M_A(C_G)` for the chosen witnesses (for example,
 a proved bound on all `A`/external crossing omissions). Then
 
-$$
+```math
 k<2\sqrt{M+1},\qquad
 q:=r-1-k>r-1-2\sqrt{M+1}.
 \tag{5.1}
-$$
+```
 
 If `q>0`, at least `q` phase-consecutive swaps preserve both diagonals of
 **every old bounded four-face** strictly above one. Since the sum of all
 phase gaps is `W`, at least one safe swap has
 
-$$
+```math
 s\le W/q.
 \tag{5.2}
-$$
+```
 
 **Proof.** From `floor((k+1)^2/4)<=M` we get `(k+1)^2/4<M+1`, which implies
 the slightly weaker displayed bound. The `q` safe gaps have total width at
@@ -226,10 +226,10 @@ not only diagonals in the retained `A x B` product. `square`
 In particular, if `r>=gamma D`, `W<=4K/D`, and `M=o(D^2)`, then there
 are `r-o(D)` safe phase gaps and some safe swap satisfies
 
-$$
+```math
 s\le{4K\over(\gamma-o(1))D^2}.
 \tag{5.3}
-$$
+```
 
 Under the open witness-cell hypotheses, the proof-only arbitrary block
 transposition theorem applies at this exact amplitude. It gives an actual
@@ -249,9 +249,9 @@ For each selected train `a_i`, intersect the open admissible arcs of every
 old rhombus it crosses with the phase window. This gives an interval `I_i`
 containing `x_i`. If it crosses no rhombus, use the whole window. Define
 
-$$
+```math
 J_i=\{j:x_j\in I_i\}.
-$$
+```
 
 Each `J_i` is a consecutive interval of phase ranks containing `i`.
 Because selected trains do not cross each other, a permutation `pi` of
@@ -284,9 +284,9 @@ constraints to pair tests: those couple translations at different layers.
 exchanges does not imply that the identity is the only admissible
 permutation. The exact rank intervals
 
-$$
+```math
 J_1=\{1,2,3\},\quad J_2=\{2\},\quad J_3=\{1,2,3\}
-$$
+```
 
 block both consecutive exchanges but permit exchange `1<->3`. The
 quadratic bound in Section 4 is a necessary price for consecutive blocking,
@@ -299,24 +299,24 @@ false-lock regression.
 Let `M>=20`, `theta=2 arctan(1/M)`, and let `R` denote rotation through
 `theta`, with rational matrix entries
 
-$$
+```math
 \cos\theta={M^2-1\over M^2+1},\qquad
 \sin\theta={2M\over M^2+1}.
-$$
+```
 
 Put
 
-$$
+```math
 a=(1,0),\quad b=R^2a,\quad
 v=R(1/2,\sqrt3/2),\quad w=R^3(1/2,\sqrt3/2).
-$$
+```
 
 Take the eight points
 
-$$
+```math
 0,a,a+b,w,a+w,a+b+w,-v,a-v,
 \tag{6.1}
-$$
+```
 
 and, to realize an arbitrarily large full-source diameter, the ninth point
 `z=(-M,-M)`. The three bounded contact four-faces are the two retained
@@ -329,10 +329,10 @@ Translate precisely `a,a+w,a-v` by `b-a`. Every old unit contact remains
 unit. The two retained cells exchange shapes, but the external cell's
 short diagonal becomes `b-v`, with
 
-$$
+```math
 |b-v|^2=2-2\cos(L-\theta)<1.
 \tag{6.2}
-$$
+```
 
 Originally `|a-v|^2=2-2cos(L+theta)>1`. The retained crossing angles are
 `L+3theta` and `L+theta`, so both are strict and remain so after exchange.

@@ -31,34 +31,34 @@ The theorem changes only how the already-valid scalar inequalities are combined.
 
 For an actual source write
 
-$$
+```math
 U={9t\over2}-2\pi-2\delta-\kappa/2,
 \qquad \kappa\ge0.
-$$
+```
 
 The corrected parent theorem already proves that, for fixed retained mass and detour, the weakest shared-retention/complement feasibility inequality over `t<=T` is obtained at `t=T` and `kappa=0`.  The present `G(delta,z)` is exactly that endpoint relaxation.
 
 For the paired-remainder lower bound, after replacing pair weight by its endpoint-count floor,
 
-$$
+```math
 P_0=z-U_0(t)+2\delta+\kappa/2,
 \qquad
 s_0=2U_0(t)-z-4\delta-\kappa.
-$$
+```
 
 On the certified box, `F'(s_0)<0.058` and the strict adaptive threshold exceeds `0.4836`.  Therefore
 
-$$
+```math
 {\partial L\over\partial U_0}
 =-1+{2F'(s_0)\over\lambda}<0,
-$$
+```
 
 while
 
-$$
+```math
 {\partial L\over\partial\kappa}
 ={1\over2}-{F'(s_0)\over\lambda}>0.
-$$
+```
 
 Thus the adverse choices are again `t=T` and `kappa=0`.  No favorable endpoint has been substituted.
 
@@ -68,34 +68,34 @@ Thus the adverse choices are again `t=T` and `kappa=0`.  No favorable endpoint h
 
 The certificate proves on five rational detour intervals covering
 
-$$
+```math
 0.0398\le\delta<0.106
-$$
+```
 
 that
 
-$$
+```math
 G_\delta<-1.3.
-$$
+```
 
 It also gives `0<G_z<1`.  Hence along
 
-$$
+```math
 z_{line}(\delta)=2.0527+1.3(\delta-0.0398)
-$$
+```
 
 we have
 
-$$
+```math
 {d\over d\delta}G(\delta,z_{line}(\delta))
 =G_\delta+1.3G_z<0.
-$$
+```
 
 The separately certified anchor is
 
-$$
+```math
 G(0.0398,2.0527)<-4.9\times10^{-5}.
-$$
+```
 
 Therefore `G` is strictly negative on the whole affine line.  Since feasibility requires `G>=-o(1)` and `G` is increasing in `z`, every survivor lies above that line up to `o(1)`.
 
@@ -109,15 +109,15 @@ The interval bounds used for `r(U)` and `r'(U)` have the correct orientation: `r
 
 The new theorem inherits the exact paired-remainder decomposition.  For each retained train, subtract the pair weight `w=min(a,b)` from both terminal occurrence weights.  The pair and remainder occurrence weights partition the original retained measure pointwise.  Therefore
 
-$$
+```math
 E_{pair}+E_{res}=E_{dom},
-$$
+```
 
 and the residual measure remains dominated by the hull-perimeter measure.  Applying the three-well bathtub theorem only to that residual gives
 
-$$
+```math
 E_{pair}+F(z-2P)\le\delta+o(1).
-$$
+```
 
 No outer-energy unit is charged to both terms.
 
@@ -127,29 +127,29 @@ No outer-energy unit is charged to both terms.
 
 For fixed `z,delta`, define
 
-$$
+```math
 \Phi(P)=P-{\delta-F(z-2P)\over\lambda}.
-$$
+```
 
 Then
 
-$$
+```math
 \Phi'(P)=1-{2F'(z-2P)\over\lambda}.
-$$
+```
 
 The certified bounds `F'<0.058` and `lambda>0.4836` make this strictly positive.  Therefore replacing `P` by its lower bound
 
-$$
+```math
 P\ge z-U
-$$
+```
 
 weakens the conclusion and is safe.
 
 After that substitution, the functional is also increasing in `z` because
 
-$$
+```math
 1-{F'(s_0)\over\lambda}>0.
-$$
+```
 
 Thus replacing `z` by the affine lower barrier is again adverse, not favorable.
 
@@ -159,22 +159,22 @@ Thus replacing `z` by the affine lower barrier is again adverse, not favorable.
 
 The equality threshold
 
-$$
+```math
 \lambda_*(\delta)
 =2-\delta-\sqrt{2-\delta^2}
-$$
+```
 
 is the lower root of the exact same-oriented branch equality.  The theorem does **not** select at equality.  It uses
 
-$$
+```math
 \lambda(\delta)=\lambda_*(\delta)-10^{-4}.
-$$
+```
 
 The side certificate proves
 
-$$
+```math
 0.4836<\lambda(\delta)<0.547
-$$
+```
 
 throughout the detour interval and `lambda(0.0398)>0.5464`.  Hence every train selected by terminal energy `<lambda(delta)` has a strict physical contradiction in the same-oriented branch.
 
@@ -186,40 +186,40 @@ The uniform upper bound `0.547` is also below the adaptive-path parent's certifi
 
 Along the affine feasibility barrier the theorem has
 
-$$
+```math
 P'=3.3,
 \qquad
 s_0'=-5.3.
-$$
+```
 
 Writing
 
-$$
+```math
 A=\delta-F(s_0),
-$$
+```
 
 we have `A<=delta`, and the adaptive threshold satisfies
 
-$$
+```math
 -1<\lambda'(\delta)<0.
-$$
+```
 
 Therefore
 
-$$
+```math
 L'
 =3.3-{1+5.3F'(s_0)\over\lambda}
 +{A\lambda'\over\lambda^2}
-$$
+```
 
 has the rigorous lower bound
 
-$$
+```math
 L'
 \ge3.3-{1+5.3(0.058)\over0.483}
 -{0.106\over0.483^2}
 >0.138.
-$$
+```
 
 If `A<0`, the last term is positive and the displayed lower bound only becomes safer.  Thus the minimum is indeed the lower-detour boundary, not an interior numerical minimizer.
 
@@ -229,33 +229,33 @@ If `A<0`, the last term is positive and the displayed lower bound only becomes s
 
 At `delta=0.0398,z=2.0527` the exact certificate gives
 
-$$
+```math
 P_0>0.0094853,
 \quad
 s_0>2.033729,
 \quad
 F(s_0)>0.0387195,
-$$
+```
 
 and finally
 
-$$
+```math
 P_{low}>0.0075065D-o(D)>0.007D-o(D).
-$$
+```
 
 Pigeonholing among the at most three dominant phase windows gives more than `0.0023D-o(D)` actual selected O–O trains in one window.  Pair weight per train is at most one, so this conversion does not inflate the train count.
 
 The inherited pseudosegment/path theorems then apply: same-window selected trains are noncrossing, their opposite physical terminal arcs are separated, every dual-path region is diameter-loaded, all diameter intervals share one hub, and nonhub switching is one-sided.  Averaging
 
-$$
+```math
 \sum_iN_i\le2\pi D+o(D)
-$$
+```
 
 over more than `0.0023D-o(D)` internal boundaries gives an average below `2732`, hence some integer switching count satisfies
 
-$$
+```math
 N_i\le2731.
-$$
+```
 
 The exact local KKT reduction to one or two switching bars is an inherited theorem and does not depend on the older `1.8623` density.
 

@@ -21,15 +21,15 @@ input or extend it to Type I.
 
 With
 
-$$
+```math
 U_2(\lambda)=((\pi+\lambda)^2+1225\lambda^2)/2,
-$$
+```
 
 the coefficient of
 
-$$
+```math
 H(\lambda)=(4\sqrt{\Delta_2}+\lambda-153/1250)^2-U_2(\lambda)
-$$
+```
 
 is `-612`. A concave function on a compact interval has its minimum at an endpoint.
 Using `4 sqrt(Delta_2)>3.8092` and `pi<3.14160`, the endpoint lower margins are

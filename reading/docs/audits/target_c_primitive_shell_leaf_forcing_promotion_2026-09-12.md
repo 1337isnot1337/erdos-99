@@ -11,9 +11,9 @@
 
 This audit covers only the exact primitive all-loaded unit-shell normal form
 
-$$
+```math
 m=0,\qquad d_H+s_Z=2,\qquad C=C_q,
-$$
+```
 
 with the CG/LF conclusions restricted to `q>=6`. It does not promote the primitive-shell reduction as a general Woodall theorem and does not claim a uniform lower bound on any individual KKT weight.
 

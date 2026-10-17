@@ -27,9 +27,9 @@ internal train edge.
 Fix one component of `Xi` and choose an orientation `u` of its common projective
 contact-edge direction. For every contact edge `e` in this component, let
 
-$$
+```math
 h(e):=J u\cdot m(e),
-$$
+```
 
 where `m(e)` is the midpoint of `e`.
 
@@ -53,9 +53,9 @@ cycle consistently: every vertex would have indegree one and outdegree one. But 
 every directed link the scalar `h` strictly increases. Following the directed cycle
 would therefore give
 
-$$
+```math
 h(e_0)<h(e_1)<\cdots<h(e_m)=h(e_0),
-$$
+```
 
 an impossibility.
 
@@ -63,9 +63,9 @@ Hence `Xi` has no cycle. Since its maximum degree is two, every component is a p
 a contact edge incident to no strict rhombus is a singleton path. Thus, with `e`
 vertices and exactly `2R` opposite-edge links,
 
-$$
+```math
 T=e-2R.
-$$
+```
 
 This supplies the missing orientation argument used by the exact stopped-train ledger.
 No other part of the all-defect theorem depends on the erroneous wording.

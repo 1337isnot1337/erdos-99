@@ -33,19 +33,19 @@ Let `F_0` be the exposed C54 null face and let `L` be the infinitesimal-flex spa
 
 By C57, every extreme stress `s^a in F_0` has one connected positive contact component `P_a` on which `v` is an infinitesimal rigid motion
 
-$$
+```math
 v(p)=t_a+\omega_aJp.
 \tag{C61.1}
-$$
+```
 
 Any two extreme bodies intersect in at least one source vertex. If two bodies have the same angular rate, equality of their velocities at a shared source vertex forces the same translation, so they have exactly the same rigid velocity field. Merge all such bodies into one **motion class**.
 
 If two motion classes `A,B` are distinct, their rigid velocity fields are distinct. They can agree at at most one point in the plane. Since the underlying extreme bodies intersect, the class vertex sets satisfy
 
-$$
+```math
 P_A\cap P_B=\{x_{AB}\},
 \tag{C61.2}
-$$
+```
 
 where `x_AB` is the unique instantaneous center of the relative rigid motion and is an actual source vertex.
 
@@ -55,10 +55,10 @@ Positive diameter supports of distinct motion classes are disjoint: sharing one 
 
 Take three distinct motion classes `A,B,C`, represented by extreme null-face stresses `s^A,s^B,s^C`. Suppose for contradiction that
 
-$$
+```math
 x:=x_{AB}\ne y:=x_{AC}.
 \tag{C61.3}
-$$
+```
 
 Let `z=x_{BC}`. Then `x,y,z` are all distinct. For example, if `z=x`, then `x` belongs to both `A` and `C` in addition to `y`, so `A` and `C` would share two vertices and have the same rigid motion.
 
@@ -66,10 +66,10 @@ The positive contact component of `B` contains a positive-conductance path from 
 
 Kron-reducing that union onto `{x,y}` produces one effective conductance
 
-$$
+```math
 g>0.
 \tag{C61.4}
-$$
+```
 
 Thus, from the electrical viewpoint of body `A`, adding bodies `B,C` adds a strict positive shunt `g` between the two distinct attachment vertices `x,y`.
 
@@ -79,10 +79,10 @@ C60's articulation theorem is compatible with this setup but is not needed below
 
 Set
 
-$$
+```math
 \bar s=\frac13(s^A+s^B+s^C).
 \tag{C61.5}
-$$
+```
 
 This is still in the null face, so `v` lies in the vector stress kernel of `Omega_bar`.
 
@@ -90,72 +90,72 @@ The three positive diameter supports are disjoint, and their angular rates under
 
 Therefore C56 applies. The generic C56 phase would force one common selected diameter angular rate, impossible here. Hence `bar s` lies in C56-Z:
 
-$$
+```math
 \boxed{
 Q^{\mathsf T}\bar L^+Q=\bar B^{-1},
 }
 \tag{C61.6}
-$$
+```
 
 where `bar L` is the positive contact Laplacian of the averaged stress and `bar B` its diagonal positive diameter weight matrix.
 
 For every positive diameter edge `h` of body `A`, its coefficient in the average is `beta_h^A/3`, so (C61.6) gives the full-network unit-current energy
 
-$$
+```math
 q_h^{\mathsf T}\bar L^+q_h
 =\frac{3}{\beta_h^A}.
 \tag{C61.7}
-$$
+```
 
 ## 4. Saturation plus Rayleigh monotonicity kills the shunt
 
 Let `L_A` be the positive contact Laplacian of the extreme stress `s^A`, on its connected component. The part of the averaged contact network inside `A` has Laplacian
 
-$$
+```math
 L_0=\frac13L_A.
-$$
+```
 
 By universal response contraction for `s^A`,
 
-$$
+```math
 q_h^{\mathsf T}L_A^+q_h\le\frac1{\beta_h^A}.
 \tag{C61.8}
-$$
+```
 
 Therefore the same current in the isolated scaled body has energy
 
-$$
+```math
 q_h^{\mathsf T}L_0^+q_h
 =3q_h^{\mathsf T}L_A^+q_h
 \le\frac3{\beta_h^A}.
 \tag{C61.9}
-$$
+```
 
 Adding the positive shunt through `B union C` can only decrease effective resistance. Hence
 
-$$
+```math
 q_h^{\mathsf T}\bar L^+q_h
 \le q_h^{\mathsf T}L_0^+q_h
 \le\frac3{\beta_h^A}.
 \tag{C61.10}
-$$
+```
 
 But the left side is exactly `3/beta_h^A` by (C61.7). Thus equality holds throughout (C61.10) for every `h in H_A`.
 
 After Kron reduction of the rest of the three-body network, the Laplacian seen on `P_A` is
 
-$$
+```math
 L_0+gq_{xy}q_{xy}^{\mathsf T},
 \qquad
 q_{xy}=e_x-e_y,
 \tag{C61.11}
-$$
+```
 
 with `g>0`.
 
 On the centered space, the rank-one inverse identity gives for any zero-sum current `j`
 
-$$
+```math
 \begin{aligned}
 j^{\mathsf T}(L_0+gq_{xy}q_{xy}^{\mathsf T})^+j
 &=j^{\mathsf T}L_0^+j\\
@@ -164,24 +164,24 @@ j^{\mathsf T}(L_0+gq_{xy}q_{xy}^{\mathsf T})^+j
 {1+gq_{xy}^{\mathsf T}L_0^+q_{xy}}.
 \end{aligned}
 \tag{C61.12}
-$$
+```
 
 Equality in (C61.10) therefore implies
 
-$$
+```math
 q_{xy}^{\mathsf T}L_0^+q_h=0
 \qquad(h\in H_A).
-$$
+```
 
 Since `L_0^+=3L_A^+` on zero-sum currents,
 
-$$
+```math
 \boxed{
 q_{xy}^{\mathsf T}L_A^+q_h=0
 \qquad(h\in H_A).
 }
 \tag{C61.13}
-$$
+```
 
 So every positive diameter dipole of body `A` produces exactly the same electrical potential at its two distinct hinge attachments `x,y`.
 
@@ -189,16 +189,16 @@ So every positive diameter dipole of body `A` produces exactly the same electric
 
 Let `P_A` denote the full vertex-coordinate matrix of the positive contact component of `s^A`, and let `Q_A` be the full vertex-by-positive-diameter incidence matrix. The KKT affine equilibrium equation is
 
-$$
+```math
 L_AP_A=Q_AB_AU_A,
 \qquad
 U_A=Q_A^{\mathsf T}P_A.
 \tag{C61.14}
-$$
+```
 
 Apply `q_xy^T L_A^+`. Since `q_xy` is zero-sum, the harmless constant projection disappears:
 
-$$
+```math
 \begin{aligned}
 p_x-p_y
 &=q_{xy}^{\mathsf T}P_A\\
@@ -209,13 +209,13 @@ p_x-p_y
 \,u_h.
 \end{aligned}
 \tag{C61.15}
-$$
+```
 
 Every coefficient in the last sum is zero by (C61.13). Hence
 
-$$
+```math
 p_x=p_y,
-$$
+```
 
 contradicting that `x,y` are distinct source vertices.
 
@@ -225,10 +225,10 @@ We have proved:
 
 For three distinct null-face rigid-motion classes,
 
-$$
+```math
 \boxed{x_{AB}=x_{AC}=x_{BC}.}
 \tag{C61.16}
-$$
+```
 
 There is no flexible null-body triangle with three different source hinges, collinear or otherwise. This strictly sharpens the C59 instantaneous-center collinearity statement and closes the covered collinear-cycle branch left by C60.
 
@@ -236,16 +236,16 @@ There is no flexible null-body triangle with three different source hinges, coll
 
 Take any finite collection of distinct motion classes. If there is only one, there is no internal null-body shear; if there are two, C59 handles them. If there are at least three, choose two classes `A,B` and write their hinge as `x`. For any third class `C`, Theorem C61.1 applied to `A,B,C` gives
 
-$$
+```math
 x_{AC}=x_{BC}=x.
-$$
+```
 
 Repeating for every class gives one common source vertex
 
-$$
+```math
 \boxed{x\in P_a\quad\text{for every motion class }a,}
 \tag{C61.17}
-$$
+```
 
 and distinct classes meet only at `x`.
 
@@ -255,30 +255,30 @@ Thus every null-body shear is a **bouquet of rigid bodies about one common sourc
 
 Subtract the rigid motion of one reference class. Since every class contains the same source vertex `x`, each class velocity has the form
 
-$$
+```math
 v(p)=\delta_aJ(p-x)
 \qquad(p\in P_a)
 \tag{C61.18}
-$$
+```
 
 for a class-dependent scalar `delta_a`.
 
 Define the finite motion
 
-$$
+```math
 p(t)=x+R_{t\delta_a}(p-x)
 \qquad(p\in P_a),
 \tag{C61.19}
-$$
+```
 
 and keep `x` fixed. Distinct classes intersect only at `x`, so this is well-defined.
 
 For `p in P_a\setminus\{x\}` and `q in P_b\setminus\{x\}`, applying the inverse rotation of class `b` preserves distance and reduces the cross distance to
 
-$$
+```math
 |R_{t(\delta_a-\delta_b)}(p-x)-(q-x)|.
 \tag{C61.20}
-$$
+```
 
 This is exactly the two-body formula of C59. Therefore every stationary cross-class unit contact lengthens, every stationary cross-class diameter pair shortens, strict first-order rows stay strict, and inactive rows retain slack.
 
@@ -294,7 +294,7 @@ Hence a contact-minimal minimizer with a weak contact cannot satisfy this strong
 
 The covered strong vertices are handled by (C61.19) and the C59 pairwise sign argument. A vertex outside the body union is, by hypothesis, incident to no strong active row. Move such a vertex by its original relative-interior velocity to first order. Every active row involving it is weak and therefore has a strict feasible first derivative; the `O(t^2)` difference between the hybrid path and its tangent cannot reverse that sign for sufficiently small positive `t`. Inactive rows have strict slack.
 
-At least one positive diameter edge lies inside a null-face body and is preserved exactly by its rigid rotation, so the new diameter remains exactly `D`. Every weak contact becomes strict. $\square$
+At least one positive diameter edge lies inside a null-face body and is preserved exactly by its rigid rotation, so the new diameter remains exactly `D`. Every weak contact becomes strict. $`\square`$
 
 ## 8. Exact remaining Gate C-I obstruction
 

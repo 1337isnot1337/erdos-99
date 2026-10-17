@@ -44,17 +44,17 @@ Fix a normalized KKT stress `s=(alpha,beta)` in the Target C setting. Let
 `G_s` be its connected positive unit-contact graph and let `H_s` be its positive
 diameter graph on the loaded boundary set `B=V(H_s)`. Assume
 
-$$
+```math
 \operatorname{aff} B=\mathbb R^2.
 \tag{C53.1}
-$$
+```
 
 Let `Lambda` be the connected positive-contact Dirichlet response on `B`,
 `R=Lambda^+`, and let `P` be the centered boundary coordinate matrix. Give each
 positive diameter edge `e` an arbitrary orientation for the moment and let `Q` be
 the resulting boundary-by-edge incidence matrix. Put
 
-$$
+```math
 B_H=\operatorname{diag}(\beta_e:e\in H_s),
 \qquad
 L_H=Q B_H Q^{\mathsf T},
@@ -63,37 +63,37 @@ U=Q^{\mathsf T}P,
 \qquad
 K=Q^{\mathsf T}RQ.
 \tag{C53.2}
-$$
+```
 
 The C11 affine response identity is
 
-$$
+```math
 \Lambda P=L_HP.
 \tag{C53.3}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{B_H^{-1}-K\succeq0.}
 \tag{C53.4}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{\Lambda-L_H\succeq0\quad\text{on }\mathbf1^\perp,}
 \tag{C53.5}
-$$
+```
 
 and the full selected stress matrix satisfies
 
-$$
+```math
 \boxed{
 \Omega_s=L_{C_s}(\alpha)-L_{H_s}(\beta)\succeq0.
 }
 \tag{C53.6}
-$$
+```
 
 No restriction on `|H_s|`, maximum diameter degree, acyclicity, matching topology,
 or equality of the KKT weights is required.
@@ -118,57 +118,57 @@ Choose a point of the projective direction circle that is not one of the finitel
 many diameter-edge directions. Orient every edge vector into the corresponding open
 half-plane and order the edges by their projective direction:
 
-$$
+```math
 e_0<e_1<\cdots<e_{m-1},
 \qquad m=|H_s|.
 \tag{C53.7}
-$$
+```
 
 Let
 
-$$
+```math
 u_r=p_{a_r}-p_{b_r}
-$$
+```
 
 be the oriented vector of `e_r=a_rb_r`. Choose covectors `ell,m_0` positive on
 that half-plane and write
 
-$$
+```math
 a_r=\ell(u_r)>0,
 \qquad
 t_r=\frac{m_0(u_r)}{\ell(u_r)}.
-$$
+```
 
 After orienting `(ell,m_0)` consistently with (C53.7),
 
-$$
+```math
 t_0<t_1<\cdots<t_{m-1},
 \qquad
 u_r=a_r(1,t_r).
 \tag{C53.8}
-$$
+```
 
 Thus, with
 
-$$
+```math
 E=\operatorname{diag}(a_r),
 \qquad
 V=\begin{pmatrix}1&t_0\\\vdots&\vdots\\1&t_{m-1}\end{pmatrix},
-$$
+```
 
 we have
 
-$$
+```math
 U=EV.
 \tag{C53.9}
-$$
+```
 
 The response identity gives exactly the same edge-space affine equations as in C52:
 
-$$
+```math
 K B_H U=U.
 \tag{C53.10}
-$$
+```
 
 Indeed `R Lambda P=P` on centered coordinate columns, and premultiplication of
 `R Q B_H U=P` by `Q^T` gives (C53.10). This derivation does not require the
@@ -176,30 +176,30 @@ columns of `Q` to have disjoint supports.
 
 Define
 
-$$
+```math
 N=B_H-B_H K B_H,
 \qquad
 M=ENE,
 \qquad
 \gamma_r=a_r\beta_r>0.
 \tag{C53.11}
-$$
+```
 
 Then
 
-$$
+```math
 M\mathbf1=0,
 \qquad
 Mt=0,
 \tag{C53.12}
-$$
+```
 
 and, for distinct edges `r,s`,
 
-$$
+```math
 M_{rs}=-\gamma_r\gamma_sK_{rs}.
 \tag{C53.13}
-$$
+```
 
 Therefore C52.R will prove `M>=0`, and hence C53, once `K` is shown to be a
 Robinson similarity in the edge-direction order.
@@ -214,23 +214,23 @@ Let `e<f<g` be three pairwise-intersecting chords of a strictly convex polygon,
 ordered and oriented by projective direction as in (C53.7). For any circular
 boundary interval `A`, put
 
-$$
+```math
 z_h=\mathbf1_A(\operatorname{head}h)
      -\mathbf1_A(\operatorname{tail}h)
 \qquad(h=e,f,g).
 \tag{C53.T1}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 z_g(z_e-z_f)\le0,
 \qquad
 z_e(z_g-z_f)\le0.
 }
 \tag{C53.T2}
-$$
+```
 
 #### Proof
 
@@ -252,7 +252,7 @@ three hull vertices becoming collinear.
 Thus each type may be checked on a regular polygon representative. Representatives
 before orientation are
 
-$$
+```math
 \begin{array}{c|c}
 \text{type}&\text{representative edges in cyclic labels}\\ \hline
 \text{triangle}&01,12,02\\
@@ -262,7 +262,7 @@ $$
 \text{disjoint matching}&03,14,25.
 \end{array}
 \tag{C53.T3}
-$$
+```
 
 For any cut of the projective direction circle, orient the three representatives
 into the selected half-plane and list them by increasing direction. Restricting a
@@ -270,14 +270,14 @@ circular boundary interval to the three-to-six endpoint set gives a circular
 consecutive-ones pattern. Across all five types and the three possible placements of
 the projective cut, the resulting signed triples are contained in
 
-$$
+```math
 \begin{gathered}
 (-1,-1,-1),(-1,-1,0),(-1,-1,1),(-1,0,0),(-1,0,1),(-1,1,1),\\
 (0,-1,-1),(0,-1,0),(0,0,-1),(0,0,0),(0,0,1),(0,1,0),(0,1,1),\\
 (1,-1,-1),(1,0,-1),(1,0,0),(1,1,-1),(1,1,0),(1,1,1).
 \end{gathered}
 \tag{C53.T4}
-$$
+```
 
 This list is the same nineteen-pattern list already implicit in the six-endpoint
 matching check of C52; the shared-endpoint types only remove patterns from it.
@@ -299,21 +299,21 @@ combination of circular interval cut metrics.
 
 For one interval `A`, let
 
-$$
+```math
 z_A=Q^{\mathsf T}\mathbf1_A.
 \tag{C53.14}
-$$
+```
 
 Its contribution to
 
-$$
+```math
 K=Q^{\mathsf T}RQ
-$$
+```
 
 is `z_A z_A^T`. The positive diameter graph is a geometric thrackle, so every
 three of its edges satisfy Lemma C53.T. Therefore, for every `e<f<g`,
 
-$$
+```math
 \begin{aligned}
 K_{eg}-K_{fg}
  &=\sum_A\lambda_A z_g(z_e-z_f)\le0,\\
@@ -321,17 +321,17 @@ K_{eg}-K_{ef}
  &=\sum_A\lambda_A z_e(z_g-z_f)\le0,
 \end{aligned}
 \tag{C53.15}
-$$
+```
 
 with all `lambda_A>=0`. Hence
 
-$$
+```math
 \boxed{
 K_{eg}\le\min(K_{ef},K_{fg})
 \qquad(e<f<g).
 }
 \tag{C53.16}
-$$
+```
 
 So `K` is a Robinson similarity in the projective diameter-edge order.
 
@@ -344,51 +344,51 @@ Equations (C53.12)-(C53.13) put `M` in the hypotheses of the weighted Robinson
 equilibrium lemma C52.R, with the strictly increasing vector `t` from (C53.8).
 Therefore
 
-$$
+```math
 M\succeq0.
 \tag{C53.17}
-$$
+```
 
 Since `E` and `B_H` are positive diagonal,
 
-$$
+```math
 N=E^{-1}ME^{-1}\succeq0
-$$
+```
 
 and
 
-$$
+```math
 B_H^{-1}-K
 =B_H^{-1}NB_H^{-1}\succeq0.
 \tag{C53.18}
-$$
+```
 
 This proves (C53.4).
 
 As in C52, set
 
-$$
+```math
 Y=R^{1/2}Q B_H^{1/2}
-$$
+```
 
 on `1^perp`. Then
 
-$$
+```math
 Y^{\mathsf T}Y=B_H^{1/2}KB_H^{1/2}\preceq I,
-$$
+```
 
 so `YY^T<=I`. Hence
 
-$$
+```math
 R^{1/2}L_HR^{1/2}\preceq I,
-$$
+```
 
 which is equivalent to `L_H<=Lambda` on the centered boundary space. The
 positive interior contact block in the C30 Schur congruence then gives
 
-$$
+```math
 L_{C_s}(\alpha)-L_{H_s}(\beta)\succeq0.
-$$
+```
 
 This proves C53. `square`
 
@@ -399,7 +399,7 @@ a negative response mode. C50, C51, and C52 progressively removed finite forests
 four opposite pairs, and then every matching. C53 removes **all** selected positive
 diameter topologies at once:
 
-$$
+```math
 \boxed{
 \operatorname{aff}V(H_s)=\mathbb R^2
 \Longrightarrow
@@ -407,24 +407,24 @@ $$
 \quad\text{for every normalized KKT stress }s.
 }
 \tag{C53.19}
-$$
+```
 
 Now take a relative-interior weak-release critical velocity `v`. The canonical
 second-order theorem C13.3 supplies a normalized KKT stress `s(v)` satisfying
 
-$$
+```math
 \operatorname{tr}(V^{\mathsf T}\Omega_{s(v)}V)\le0.
 \tag{C53.20}
-$$
+```
 
 Whenever the selected support of `s(v)` is two-dimensional, C53 and (C53.20) force
 
-$$
+```math
 \operatorname{tr}(V^{\mathsf T}\Omega_{s(v)}V)=0,
 \qquad
 \Omega_{s(v)}V_x=\Omega_{s(v)}V_y=0.
 \tag{C53.21}
-$$
+```
 
 Thus the second-order inequality has become an exact **stress-kernel condition**.
 The earlier warning remains binding: C53 does not by itself classify that kernel.
@@ -448,11 +448,11 @@ integration theorem and eliminate every weak unit contact.
 For the normalized KKT stress selected by C13.3 for a relative-interior weak-release
 velocity, prove that
 
-$$
+```math
 \Omega_s\succeq0,
 \qquad
 \Omega_sV=0
-$$
+```
 
 forces the angular rates of all strong diameter chords to agree.
 

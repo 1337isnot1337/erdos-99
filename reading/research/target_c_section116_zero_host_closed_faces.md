@@ -23,57 +23,57 @@ added.
 
 For a harmonic carrier with outer-walk length `L`, bounded-nonquadrilateral perimeter
 
-$$
+```math
 P_{\rm exc}:=\sum_{f\ \rm nonquad}\deg f,
-$$
+```
 
 strict-rhombus area `A_4`, and convex attachment-cell diameter `d`, choose three cyclic
 cut occurrences on the outer walk at vertices `p_1,p_2,p_3` and put
 
-$$
+```math
 \Pi_3(p_1,p_2,p_3)
 =|p_1-p_2|+|p_2-p_3|+|p_3-p_1|.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
  d\bigl(L+P_{\rm exc}-\Pi_3(p_1,p_2,p_3)\bigr)
  \ge (2-\sqrt3)A_4.
 }
 \tag{116.1}
-$$
+```
 
 In particular, maximizing over the three cuts,
 
-$$
+```math
 \boxed{
  d\bigl(L+P_{\rm exc}-\Pi_3^{\max}\bigr)
  \ge (2-\sqrt3)A_4.
 }
 \tag{116.2}
-$$
+```
 
 Canonical Section 82 gives `P_exc<=5Q`, and the attachment polygon has three vertices
 and contains a diameter pair, so `Pi_3^max>=2d`.  Hence
 
-$$
+```math
 \boxed{
  d(L+5Q-2d)\ge(2-\sqrt3)A_4.
 }
 \tag{116.3}
-$$
+```
 
 Using `L+Q=4a-6-2s-2c`, this also gives
 
-$$
+```math
 \boxed{
  d\bigl(4a-6-2s-2c+4Q-2d\bigr)
  \ge(2-\sqrt3)A_4.
 }
 \tag{116.4}
-$$
+```
 
 These are source-level finite inequalities on the actual harmonic carrier.  They do
 not close C-II by themselves: the outer-walk detour `L-Pi_3^max` can still be linear.
@@ -87,69 +87,69 @@ not a diffuse internal-endpoint theorem.
 
 Let `W` be any directed unit-edge walk with steps `v_1,...,v_ell` and displacement
 
-$$
+```math
 z=\sum_{r=1}^{\ell}v_r.
-$$
+```
 
 Define its host vector by
 
-$$
+```math
 q(W)=
 \begin{cases}
 z/|z|,&z\ne0,\\
 0,&z=0.
 \end{cases}
 \tag{116.5}
-$$
+```
 
 Then in both cases
 
-$$
+```math
 \boxed{
 \ell-|z|
 =\sum_{r=1}^{\ell}(1-q(W)\cdot v_r).
 }
 \tag{116.6}
-$$
+```
 
 For `z!=0`, this is the exact projection identity from the signed-return theorem.  For
 `z=0`, it is simply `ell=sum_r 1`.
 
 Thus the finite signed-return proof needs only
 
-$$
+```math
 |q(W)|\le1,
-$$
+```
 
 not that every host vector have norm exactly one.
 
 Let `Q` be the set of distinct host vectors of a collection of walks, now allowed to
 contain `0`, and put
 
-$$
+```math
 w_Q(u)=\max_{q\in Q}q\cdot u-\min_{q\in Q}q\cdot u.
 \tag{116.7}
-$$
+```
 
 The two physical ends of a complete train have opposite induced boundary orientations
 `u,-u`.  If they are assigned injectively to occurrences on walks with hosts `q_i,q_j`,
 their exact contribution to the total route excess is
 
-$$
+```math
 (1-q_i\cdot u)+(1+q_j\cdot u)
 =2-(q_i-q_j)\cdot u
 \ge2-w_Q(u).
 \tag{116.8}
-$$
+```
 
 Therefore the signed-return inequality remains valid verbatim:
 
-$$
+```math
 \boxed{
 E\ge\sum_{\tau\in\mathcal T_{gg}}(2-w_Q(u_\tau)).
 }
 \tag{116.9}
-$$
+```
 
 A zero host cannot create width two.  Since every `q in Q` lies in the closed unit
 disk, `q dot u` lies in `[-1,1]`; if `w_Q(u)=2`, the extrema must be `+1` and `-1`,
@@ -163,12 +163,12 @@ The signed-return report proves the following optimization for at most three uni
 vectors.  If `u,v` are unit train directions at projective angle
 `phi in (0,pi/2]` and `a,b>0`, then
 
-$$
+```math
 \min
 \{a(2-w_Q(u))+b(2-w_Q(v))\}
 =a+b-\sqrt{a^2+b^2+2ab\cos\phi}.
 \tag{116.10}
-$$
+```
 
 The same minimum holds when the common zero host is also allowed.
 
@@ -176,22 +176,22 @@ The same minimum holds when the common zero host is also allowed.
 
 Let
 
-$$
+```math
 Q=Q_1\cup\{0\},
 \qquad |Q_1|\le3,
 \qquad Q_1\subset S^1.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
  a(2-w_Q(u))+b(2-w_Q(v))
  \ge
  a+b-\sqrt{a^2+b^2+2ab\cos\phi}.
 }
 \tag{116.11}
-$$
+```
 
 Moreover the bound is sharp.
 
@@ -199,33 +199,33 @@ Moreover the bound is sharp.
 
 Choose the sign of `v` so `u dot v=cos phi>=0`, and put
 
-$$
+```math
 \mathcal P=\{au,-au,bv,-bv\}.
-$$
+```
 
 As in the original three-host proof,
 
-$$
+```math
 a w_Q(u)+b w_Q(v)
 =\sum_{p\in\mathcal P}\max_{q\in Q}p\cdot q.
 \tag{116.12}
-$$
+```
 
 Write
 
-$$
+```math
 \Lambda
 :=a+b-\sqrt{a^2+b^2+2ab\cos\phi}.
-$$
+```
 
 If, for some `p in P`, zero is the only possible maximizing host, then that support
 maximum is zero rather than its unconstrained value `|p|`.  The loss is `a` or `b`.
 But
 
-$$
+```math
 \Lambda\le\min(a,b),
 \tag{116.13}
-$$
+```
 
 because the square root is at least `max(a,b)`.  Thus the desired total support loss
 already occurs.
@@ -239,17 +239,17 @@ least `Lambda`, an obtuse cross pair loses more, and an opposite pair loses `2a`
 
 For sharpness use
 
-$$
+```math
 r={au+bv\over|au+bv|},
 \qquad
 Q_1=\{r,-u,-v\}.
-$$
+```
 
 The original three-host theorem attains equality on `Q_1`.  Also
 
-$$
+```math
 |au+bv|\,r+a(-u)+b(-v)=0,
-$$
+```
 
 so `0` lies in `conv(Q_1)`.  Adding `0` therefore does not change any support maximum,
 and equality remains attained. `square`
@@ -258,12 +258,12 @@ For `a=b=1` and a strict unit rhombus, the two crossing train directions have
 projective angle strictly greater than `pi/3`.  Hence for three unit outer hosts plus
 the common zero host,
 
-$$
+```math
 \boxed{
 (2-w_Q(u))+(2-w_Q(v))\ge2-\sqrt3=:c_{ret}>0.
 }
 \tag{116.14}
-$$
+```
 
 The weak endpoint constant is sufficient and is uniform over all strict rhombi.
 
@@ -289,13 +289,13 @@ are harmless additional walk occurrences and receive no train endpoint assignmen
 
 Do this for every bounded nonquadrilateral face.  Their total walk length is
 
-$$
+```math
 P_{\rm exc}
 =\sum_{f\ \rm nonquad}\deg f
 =4f_{\rm exc}+Q
 \le5Q,
 \tag{116.15}
-$$
+```
 
 where the final inequality is canonical Section 82's `f_exc<=Q`.
 
@@ -319,35 +319,35 @@ every complete train in `mathcal R` is now good, and the assignment is injective
 
 The three outer arcs have displacements
 
-$$
+```math
 z_1=p_2-p_1,
 \qquad z_2=p_3-p_2,
 \qquad z_3=p_1-p_3.
-$$
+```
 
 Therefore
 
-$$
+```math
 \sum_{i=1}^3|z_i|
 =\Pi_3(p_1,p_2,p_3).
 \tag{116.16}
-$$
+```
 
 Their total route excess is
 
-$$
+```math
 L-\Pi_3(p_1,p_2,p_3).
-$$
+```
 
 Every bounded defect-face cycle has zero displacement, hence excess equal to its full
 length.  Thus the total excess of all designated walks is exactly
 
-$$
+```math
 \boxed{
 E=L+P_{\rm exc}-\Pi_3(p_1,p_2,p_3).
 }
 \tag{116.17}
-$$
+```
 
 There are at most three nonzero unit hosts from the outer arcs, together with the
 common zero host from all closed cycles.
@@ -360,27 +360,27 @@ bound (116.14).
 
 For a train `tau` write
 
-$$
+```math
 \delta_\tau=2-w_Q(u_\tau).
-$$
+```
 
 Multiply (116.14) by the rhombus area and sum over every strict rhombus.  Reorganizing
 by trains gives
 
-$$
+```math
 c_{ret}A_4
 \le
 \sum_\tau\delta_\tau
 \sum_{R\in\tau}\operatorname{area}(R).
 \tag{116.18}
-$$
+```
 
 Along one complete train with edge direction `u`, crossing a rhombus increases the
 transverse coordinate `h_u=det(u,x)` by exactly the area of that rhombus.  Hence
 
-$$
+```math
 \sum_{R\in\tau}\operatorname{area}(R)
-$$
+```
 
 is exactly the transverse displacement between the two terminal boundary-edge
 midpoints.  Both points lie in the convex attachment cell of diameter `d`, so this
@@ -388,11 +388,11 @@ sum is at most `d`.
 
 The zero-host signed-return inequality (116.9), with every train double-good, now gives
 
-$$
+```math
 c_{ret}A_4
 \le d\sum_\tau\delta_\tau
 \le dE.
-$$
+```
 
 Substituting (116.17) proves the exact finite theorem (116.1).
 
@@ -405,57 +405,57 @@ Every attachment vertex is an extreme vertex of the convex attachment polygon an
 on the outer face of `H`.  The attachment set has at least three vertices.  Choose a
 diameter pair `p_1,p_2` of the attachment polygon, so
 
-$$
+```math
 |p_1-p_2|=d,
-$$
+```
 
 and choose any third attachment vertex `p_3`.  The triangle inequality gives
 
-$$
+```math
 |p_1-p_3|+|p_3-p_2|\ge d.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{\Pi_3^{\max}\ge2d.}
 \tag{116.19}
-$$
+```
 
 Together with `P_exc<=5Q`, (116.2) gives
 
-$$
+```math
 d(L+5Q-2d)\ge c_{ret}A_4,
-$$
+```
 
 which is (116.3).
 
 Finally canonical Section 82 gives the exact local face ledger
 
-$$
+```math
 L+Q=4a-6-2s-2c.
-$$
+```
 
 Hence
 
-$$
+```math
 L+5Q=4a-6-2s-2c+4Q,
-$$
+```
 
 and (116.4) follows.
 
 These inequalities should be compared with the older train-span estimate
 
-$$
+```math
 2A_4\le T_Rd,
 \qquad 2T_R=P_R\le L+5Q.
-$$
+```
 
 That route implies only
 
-$$
+```math
 d(L+5Q)\ge4A_4.
-$$
+```
 
 Section 116 spends the same actual boundary occurrences differently: it retains the
 three-cut outer displacement and uses oriented train return.  Depending on the ratio
@@ -470,9 +470,9 @@ face cycles are used as zero-displacement hosts.
 
 The remaining all-regime full-core problem is therefore sharper.  One must control
 
-$$
+```math
 L+P_{\rm exc}-\Pi_3^{\max}
-$$
+```
 
 from above strongly enough to contradict the area lower bound, or exploit more of the
 outer-walk structure than its scalar length.  Equivalently, the hard quantity is now

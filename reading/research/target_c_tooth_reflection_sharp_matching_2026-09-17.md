@@ -16,30 +16,30 @@
 
 The first fixed-slack blocker-matching theorem used the branch-independent matching/reflection choice
 
-$$
+```math
 \eta={15\over56}.
-$$
+```
 
 That choice is convenient for the coupled tooth/long-side floor, but it is not optimal once the proof is already inside the tooth branch. The dedicated reflection/perimeter theorem has the stronger choice
 
-$$
+```math
 \boxed{\eta={4\over15}.}
 \tag{SM.1}
-$$
+```
 
 At this threshold the shallow-apex population is
 
-$$
+```math
 \boxed{
 U_D>
 (0.4255744656201161781\ldots-o(1))D.
 }
 \tag{SM.2}
-$$
+```
 
 Every surviving apex has an upper reflection blocker whose original length satisfies
 
-$$
+```math
 \boxed{
 |xy|>D-C_4,
 \qquad
@@ -47,52 +47,52 @@ C_4={4\sqrt{14}\over15}
 =0.997775303139718\ldots .
 }
 \tag{SM.3}
-$$
+```
 
 The decisive arithmetic is exact:
 
-$$
+```math
 C_4^2={224\over225},
 \qquad
 1-C_4^2={1\over225},
 \qquad
 \sqrt{1-C_4^2}={1\over15}.
 \tag{SM.4}
-$$
+```
 
 Therefore the fixed-slack near-diameter degree theorem gives
 
-$$
+```math
 \boxed{
 \Delta_{C_4}(D)
 \le
 \left(120\,3^{1/8}+o(1)\right)D^{3/4}.
 }
 \tag{SM.5}
-$$
+```
 
 Choosing one blocker from every apex and greedily extracting a matching now yields
 
-$$
+```math
 \boxed{
 |M_D|>
 (0.001545696287901749\ldots-o(1))D^{1/4}.
 }
 \tag{SM.6}
-$$
+```
 
 This improves the earlier `eta=15/56` matching coefficient
 
-$$
+```math
 0.0002364408355527397\ldots
-$$
+```
 
 by a factor
 
-$$
+```math
 \boxed{6.53734911859\ldots .}
 \tag{SM.7}
-$$
+```
 
 The exponent is unchanged. The point is that the dedicated tooth normalization simultaneously gives many more blocked apices and a much larger angular-separation margin in the fixed-slack star.
 
@@ -102,7 +102,7 @@ The exponent is unchanged. The point is that the dedicated tooth normalization s
 
 The reflection/perimeter collapse theorem uses
 
-$$
+```math
 \eta={4\over15},
 \qquad
 \cos\alpha_\eta={13\over15},
@@ -111,24 +111,24 @@ $$
 \qquad
 \alpha_\eta<\frac\pi6.
 \tag{SM.8}
-$$
+```
 
 At the current low-`t` endpoint it proves
 
-$$
+```math
 {N_{sh}(4/15)\over D}
 \ge
 0.4255744656201161781\ldots-o(1).
 \tag{SM.9}
-$$
+```
 
 The global-turn theorem makes all but `O(1)` of those occurrences distinct apices, and the perimeter-collapse argument makes all but `o(D)` of them upper-blocked. This is (SM.2).
 
 For one such tooth, reflecting the apex moves it by
 
-$$
+```math
 2h\le2h_\eta={4\sqrt{14}\over15}=C_4.
-$$
+```
 
 The reflected point has an upper blocker at distance greater than `D`, so the original apex-blocker pair has length greater than `D-C_4`. This proves (SM.3).
 
@@ -138,37 +138,37 @@ The reflected point has an upper blocker at distance greater than `D`, so the or
 
 For every fixed `0<C<1`, the fixed-slack theorem gives
 
-$$
+```math
 \Delta_C(D)
 \le
 \left(
 {8\,3^{1/8}\over\sqrt{1-C^2}}+o(1)
 \right)D^{3/4}.
 \tag{SM.10}
-$$
+```
 
 Substituting (SM.4),
 
-$$
+```math
 {8\over\sqrt{1-C_4^2}}
 =8\cdot15
 =120.
-$$
+```
 
 Hence (SM.5) follows immediately.
 
 Numerically,
 
-$$
+```math
 120\,3^{1/8}=137.664322852785\ldots .
 \tag{SM.11}
-$$
+```
 
 This is substantially smaller than the previous leading degree coefficient
 
-$$
+```math
 448\,3^{1/8}=513.946805317\ldots .
-$$
+```
 
 ---
 
@@ -178,30 +178,30 @@ Choose one upper reflection blocker edge from every apex in the family (SM.2), o
 
 A source vertex is the head of at most `Delta_{C_4}(D)` chosen edges, and is the tail of at most one. Thus one source vertex is incident to at most
 
-$$
+```math
 \Delta_{C_4}(D)+1
-$$
+```
 
 chosen edges.
 
 When a greedy algorithm retains one chosen edge `xy`, deleting every chosen edge incident with `x` or `y` removes at most
 
-$$
+```math
 2\Delta_{C_4}(D)+1
-$$
+```
 
 chosen edges. Consequently
 
-$$
+```math
 |M_D|
 \ge
 {U_D\over2\Delta_{C_4}(D)+1}.
 \tag{SM.12}
-$$
+```
 
 Using (SM.2) and (SM.5),
 
-$$
+```math
 |M_D|>
 \left(
 {0.4255744656201161781\ldots
@@ -209,15 +209,15 @@ over240\,3^{1/8}}
 -o(1)
 \right)D^{1/4}.
 \tag{SM.13}
-$$
+```
 
 The coefficient is
 
-$$
+```math
 \boxed{
 0.0015456962879017491010\ldots,
 }
-$$
+```
 
 which proves (SM.6).
 

@@ -15,27 +15,27 @@ Status: exact symmetry/counting reduction inside the generic H6 branch. The theo
 
 The exact generic-H6 interior-force census contains
 
-$$
+```math
 14174=10670\,C_7+3504\,(C_3\sqcup C_4)
-$$
+```
 
 labelled cells. The current committed exact reductions leave
 
-$$
+```math
 4805=3823\,C_7+982\,(C_3\sqcup C_4).
-$$
+```
 
 The current 4,805-cell ground-pattern census is not invariant under the exact H6 hull reflection. Closing the already-proved exclusions under that reflection forces at least
 
-$$
+```math
 \boxed{80}
-$$
+```
 
 further generic-H6 exclusions. Therefore the reflection-closed generic-H6 survivor set has size at most
 
-$$
+```math
 \boxed{4725}.
-$$
+```
 
 This is a rigorous upper bound, not an exact new survivor census. It uses only the exact 14,174-cell combinatorial universe, the current certified ground-pattern census, and an exact relabeling symmetry. No new floating-point LP output is used.
 
@@ -43,11 +43,11 @@ This is a rigorous upper bound, not an exact new survivor census. It uses only t
 
 Use the reciprocal-label involution
 
-$$
+```math
 \rho=(1\ 5)(2\ 4),
 \qquad
 \rho(0)=0,\quad \rho(3)=3,\quad \rho(6)=6,\quad \rho(7)=7.
-$$
+```
 
 Geometrically this is reflection of the reciprocal hexagonal hull through the axis through hull vertices `0` and `3`, followed by the displayed relabeling. It preserves the generic-H6 class and gives a bijection on the 14,174-cell interior-force state space:
 
@@ -66,15 +66,15 @@ The later affine and branch conditions are also geometric and therefore reflecti
 
 At ground vertex `0`, reflection reverses the seven-entry CCW radial order. A normalized positive-position pattern
 
-$$
+```math
 P\subset\{1,\ldots,7\}
-$$
+```
 
 therefore maps to
 
-$$
+```math
 \rho_P(P)=\{8-p:p\in P\}.
-$$
+```
 
 On the surviving pattern names:
 
@@ -125,23 +125,23 @@ The current exact 4,805-cell survivor census is
 
 Fix a non-self-mirror pattern pair `{p,rho_P(p)}`. Let the 14,174-cell universe contain `U` cells on each side. Let the current exact exclusion counts be `e_p` and `e_r`. Reflection closure of the excluded set has at least
 
-$$
+```math
 \max(e_p,e_r)
-$$
+```
 
 excluded cells on each side. Relative to the current exclusion list, this forces at least
 
-$$
+```math
 2\max(e_p,e_r)-(e_p+e_r)=|e_p-e_r|
-$$
+```
 
 additional exclusions.
 
 Equivalently, because `e_p=U-s_p` and `e_r=U-s_r`, where `s_p,s_r` are current survivor counts, the forced gain is
 
-$$
+```math
 |s_p-s_r|.
-$$
+```
 
 Applying this to the current census gives
 
@@ -156,15 +156,15 @@ pair       current survivors   forced new
 
 The self-mirror pattern `345` contributes no lower bound from this aggregate argument. Therefore
 
-$$
+```math
 1+74+5=\boxed{80}
-$$
+```
 
 additional exclusions are forced, and
 
-$$
+```math
 4805-80=\boxed{4725}.
-$$
+```
 
 ## Why the bound is conservative
 

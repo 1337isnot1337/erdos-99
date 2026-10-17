@@ -23,33 +23,33 @@ The existing C18 theorem gives a universal linear bound on the degree of one dia
 
 Let `A` be any global `n`-point minimum-diameter unit-separated source, let
 
-$$
+```math
 D=D(n),
 \qquad
 K=\operatorname{conv}A,
-$$
+```
 
 and let `H_all` be its complete actual diameter graph.
 
 Then
 
-$$
+```math
 \boxed{
 \Delta(H_{all})=O(D^{3/4}).
 }
 \tag{GD.1}
 
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{
 \Delta(H_{all})/D\to0.
 }
 \tag{GD.2}
 
-$$
+```
 
 This holds for every sufficiently large global minimizer, with or without the triangle-free hypothesis. In the C65 normalization, `H_all=H`, so it applies directly to the complete KKT-visible diameter support.
 
@@ -61,67 +61,67 @@ The result gives the first source-wide sublinear diameter-star bound in the curr
 
 Put
 
-$$
+```math
 a_0:=\frac{\sqrt3}{2},
 \qquad
 \Delta:=\frac\pi{2\sqrt3}.
-$$
+```
 
 The strict translated-lattice comparison used throughout the repository gives
 
-$$
+```math
 D^2<\frac{2\sqrt3}{\pi}(n-1),
-$$
+```
 
 or equivalently
 
-$$
+```math
 \boxed{n-1>\Delta D^2.}
 \tag{1.1}
-$$
+```
 
 Oler applied to the full source hull gives
 
-$$
+```math
 a_0(n-1)
 \le
 \operatorname{area}(K)
 +\frac{a_0}{2}\operatorname{per}(K).
 \tag{1.2}
-$$
+```
 
 The convex perimeter-diameter inequality gives
 
-$$
+```math
 \operatorname{per}(K)\le\pi D.
 \tag{1.3}
-$$
+```
 
 Because
 
-$$
+```math
 a_0\Delta=\frac\pi4,
-$$
+```
 
 (1.1)--(1.3) imply
 
-$$
+```math
 \operatorname{area}(K)
 >
 \frac\pi4D^2
 -\frac{a_0\pi}{2}D.
 \tag{1.4}
-$$
+```
 
 The isodiametric inequality supplies the opposite bound
 
-$$
+```math
 \operatorname{area}(K)\le\frac\pi4D^2.
-$$
+```
 
 Therefore the full source hull satisfies the finite deficit estimate
 
-$$
+```math
 \boxed{
 0\le
 \frac\pi4D^2-\operatorname{area}(K)
@@ -130,7 +130,7 @@ $$
 }
 \tag{GD.3}
 
-$$
+```
 
 No triangle-free, KKT, or contact-graph hypothesis is used.
 
@@ -140,22 +140,22 @@ No triangle-free, KKT, or contact-graph hypothesis is used.
 
 Normalize the area deficit by the disk of diameter `D`:
 
-$$
+```math
 \delta_{iso}(K)
 :=
 1-
 \frac{4\operatorname{area}(K)}{\pi D^2}.
-$$
+```
 
 GD.3 gives immediately
 
-$$
+```math
 \boxed{
 0\le\delta_{iso}(K)<\frac{\sqrt3}{D}.
 }
 \tag{2.1}
 
-$$
+```
 
 Thus every global minimizer is quantitatively near the equality case of the planar isodiametric inequality at rate `D^{-1}` in relative area.
 
@@ -167,7 +167,7 @@ Maggi--Ponsiglione--Pratelli prove in the planar case that, after translating a 
 
 Applying their theorem to the convex hull `K`, there is a center `c` and an absolute constant `C_0` such that
 
-$$
+```math
 \boxed{
  d_H\left(D^{-1}(K-c),B_{1/2}\right)
 \le
@@ -175,13 +175,13 @@ C_0D^{-1/2}.
 }
 \tag{3.1}
 
-$$
+```
 
 Equivalently, with
 
-$$
+```math
 \rho:=C_0D^{-1/2},
-$$
+```
 
 the normalized source hull lies within a `rho` Hausdorff neighborhood of the radius-`1/2` disk.
 
@@ -193,65 +193,65 @@ The exact constant is irrelevant for the exponent below.
 
 Let `u,v in A` satisfy
 
-$$
+```math
 |u-v|=D.
-$$
+```
 
 Every diameter endpoint is an extreme point of `K`. Normalize around the center from (3.1):
 
-$$
+```math
 x=\frac{u-c}{D},
 \qquad
 y=\frac{v-c}{D}.
-$$
+```
 
 Then
 
-$$
+```math
 |x-y|=1
-$$
+```
 
 and
 
-$$
+```math
 |x|,|y|\le\frac12+\rho.
-$$
+```
 
 Write the angle between `x` and `y` as
 
-$$
+```math
 \pi-\phi,
 \qquad
 0\le\phi\le\pi.
-$$
+```
 
 For fixed angular separation, the distance is maximized by taking both radii equal to `1/2+rho`. Hence
 
-$$
+```math
 1=|x-y|
 \le
 (1+2\rho)\cos\frac\phi2.
 \tag{4.1}
-$$
+```
 
 Therefore
 
-$$
+```math
 \cos\frac\phi2
 \ge
 \frac1{1+2\rho}.
-$$
+```
 
 For sufficiently small `rho`, the elementary bound `1-cos t >= c t^2` on a fixed neighborhood of zero yields
 
-$$
+```math
 \boxed{
 \phi\le C_1\sqrt\rho
 =O(D^{-1/4}).
 }
 \tag{4.2}
 
-$$
+```
 
 uniformly over **all** diameter pairs.
 
@@ -263,9 +263,9 @@ Thus every actual diameter pair is uniformly within `O(D^{-1/4})` angular error 
 
 Fix one diameter vertex `z` and let
 
-$$
+```math
 a_1,\ldots,a_m
-$$
+```
 
 be all of its diameter partners.
 
@@ -273,10 +273,10 @@ By (4.2), every normalized partner direction around the common source center lie
 
 The vectors from `z` to its partners therefore lie in a cone of angular width
 
-$$
+```math
 \boxed{O(D^{-1/4}).}
 \tag{5.1}
-$$
+```
 
 A direct coordinate argument avoids any ambiguity between polar angle and the star angle: both `z` and every `a_i` lie `O(D^{1/2})` in absolute distance from the appropriate circle points, while `|z-a_i|=D`; perturbing two endpoints by `O(D^{1/2})` changes the direction of their length-`D` chord by `O(D^{-1/2})`, which is smaller than the already sufficient `O(D^{-1/4})` bound.
 
@@ -286,41 +286,41 @@ A direct coordinate argument avoids any ambiguity between polar angle and the st
 
 Every partner `a_i` lies on the Euclidean circle of radius `D` centered at `z`, because
 
-$$
+```math
 |z-a_i|=D.
-$$
+```
 
 Distinct partners are distinct source points and satisfy
 
-$$
+```math
 |a_i-a_j|\ge1.
-$$
+```
 
 If their angular separation at `z` is `theta`, then
 
-$$
+```math
 2D\sin\frac\theta2\ge1,
-$$
+```
 
 so
 
-$$
+```math
 \theta
 \ge
 2\arcsin\frac1{2D}
 \ge
 \frac{c}{D}
-$$
+```
 
 for an absolute `c>0` and all large `D`.
 
 Packing angularly `c/D`-separated partner rays into the star cone (5.1) gives
 
-$$
+```math
 \deg_{H_{all}}(z)
 \le
 C_2D^{3/4}+1.
-$$
+```
 
 Taking the maximum over `z` proves GD.1.
 
@@ -330,22 +330,22 @@ Taking the maximum over `z` proves GD.1.
 
 In the C65 lexicographic normalization every actual diameter pair is KKT-visible, so
 
-$$
+```math
 H=H_{all}.
-$$
+```
 
 Hence every post-C65 survivor satisfies
 
-$$
+```math
 \boxed{\Delta(H)=O(D^{3/4}).}
 \tag{7.1}
-$$
+```
 
 This strengthens C18's universal bound
 
-$$
+```math
 \Delta(H)\le(0.885943\ldots+o(1))D.
-$$
+```
 
 Several immediate support consequences follow.
 
@@ -353,10 +353,10 @@ Several immediate support consequences follow.
 
 If `X subseteq B_+` has at least `cD` incident diameter edges leaving `X`, then the opposite endpoint set has cardinality at least
 
-$$
+```math
 \boxed{\Omega(D^{1/4}).}
 \tag{7.2}
-$$
+```
 
 because each opposite terminal receives at most `O(D^{3/4})` such edges.
 
@@ -364,16 +364,16 @@ because each opposite terminal receives at most `O(D^{3/4})` such edges.
 
 For the PR #128 LC giant component with
 
-$$
+```math
 |A_*|\ge cD
-$$
+```
 
 and normalized cell diameter `<1`, no diameter edge has both endpoints in `A_*`. Every `a in A_*` is a diameter endpoint by C65 and therefore has a diameter edge leaving the block. Thus
 
-$$
+```math
 \boxed{|N_H(A_*)|=\Omega(D^{1/4}).}
 \tag{7.3}
-$$
+```
 
 This removes the need to assume `x_B=o(D)` merely to obtain a diverging carrier family; the polynomial lower bound comes from the full source hull.
 
@@ -393,9 +393,9 @@ A stress may place almost all normalized diameter weight on `O(D^{3/4})` edges o
 
 The post-synthesis report already proves the full source hull has perimeter
 
-$$
+```math
 \pi D-O(1)
-$$
+```
 
 and uniform width `D-o(D)`. GD is complementary: it uses the **area** closeness forced directly by Oler plus global density and then invokes quantitative isodiametric stability to obtain one common near-disk center and a rate strong enough to control every exact diameter star.
 
@@ -421,9 +421,9 @@ No claim is made that the exponent `3/4` is optimal. Combining the stronger glob
 
 The source-wide exponent can likely be improved because the repository already has the much stronger perimeter estimate
 
-$$
+```math
 \pi D-\operatorname{per}(K)=O(1).
-$$
+```
 
 A direct stability theorem for convex bodies simultaneously near equality in perimeter-diameter and isodiametric area may give Hausdorff error `O(1)` or `O(D^alpha)` with `alpha<1/2`, improving the star exponent.
 

@@ -36,37 +36,37 @@ This quantitatively rules out approximate first-order softening inside the exact
 
 Use the selected corridor from the vanishing-mass theorem. Relabel its rows as
 
-$$
+```math
 \tau_0,\tau_1,\ldots,\tau_m,
 \qquad m=m_n\to\infty,
 \tag{VK.1}
-$$
+```
 
 so there are `m` internal interfaces. Exact antipodality throughout gives one common oriented row phase
 
-$$
+```math
 u_0=u_1=\cdots=u_m=:v_n.
 \tag{VK.2}
-$$
+```
 
 For a row-shear coefficient vector
 
-$$
+```math
 c=(c_0,\ldots,c_m),
-$$
+```
 
 the derivative of the full-span displacement is
 
-$$
+```math
 DG(0)[c]
 =J\sum_{j=0}^m c_ju_j
 =Jv_n\sum_{j=0}^m c_j.
 \tag{VK.3}
-$$
+```
 
 Therefore the exact first-order full-support cancellation kernel is
 
-$$
+```math
 \boxed{
 \mathcal K_n
 =\left\{c\in\mathbb R^{m+1}:\sum_{j=0}^m c_j=0\right\},
@@ -74,29 +74,29 @@ $$
 \dim\mathcal K_n=m\to\infty.
 }
 \tag{VK.4}
-$$
+```
 
 For each internal interface `i=0,...,m-1`, let
 
-$$
+```math
 d^{(i)}:=e_i-e_{i+1}.
 \tag{VK.5}
-$$
+```
 
 These adjacent dipoles are a basis of `K_n`. Every `c in K_n` therefore has a unique representation
 
-$$
+```math
 \boxed{
 c=\sum_{i=0}^{m-1}s_i d^{(i)}.}
 \tag{VK.6}
-$$
+```
 
 Explicitly,
 
-$$
+```math
 s_i=\sum_{j=0}^i c_j.
 \tag{VK.7}
-$$
+```
 
 ---
 
@@ -104,56 +104,56 @@ $$
 
 Let `X_i` be the actual-diameter switching set at interface `i`. The antipodal direct-sum theorem gives
 
-$$
+```math
 \boxed{
 X_i\cap X_j=\varnothing
 \qquad(i\ne j),
 }
 \tag{VK.8}
-$$
+```
 
 and, for the actual-diameter squared-length derivative operator `L_D`,
 
-$$
+```math
 \boxed{
 L_D\!\left(\sum_js_jd^{(j)}\right)\big|_{X_i}
 =s_iL_D(d^{(i)})\big|_{X_i}.
 }
 \tag{VK.9}
-$$
+```
 
 Every corridor interface has an exact positive force pair
 
-$$
+```math
 h_i^-,h_i^+\in X_i
-$$
+```
 
 on opposite transverse sides of the common reaction/row axis. The coupled host theorem applies to every switching diameter and gives, uniformly over the corridor,
 
-$$
+```math
 |d_{h_i^\pm}\cdot Jv_n|
 \ge c_H-o(1),
 \qquad
 c_H=0.453819885927\ldots .
 \tag{VK.10}
-$$
+```
 
 For the elementary dipole coordinate,
 
-$$
+```math
 L_D(d^{(i)})_{h_i^\pm}
 =\pm(2c_H-o(1))D_n
-$$
+```
 
 in magnitude, with opposite signs. More precisely,
 
-$$
+```math
 \boxed{
 |L_D(d^{(i)})_{h_i^\pm}|
 \ge(2c_H-o(1))D_n,
 }
 \tag{VK.11}
-$$
+```
 
 and the two selected entries have opposite signs.
 
@@ -165,39 +165,39 @@ By (VK.8), all `2m` distinguished entries in (VK.11) are different actual diamet
 
 Let
 
-$$
+```math
 s=(s_0,\ldots,s_{m-1}).
-$$
+```
 
 Choose `i_*` with
 
-$$
+```math
 |s_{i_*}|=\|s\|_\infty.
-$$
+```
 
 The two selected bars at `i_*`, together with (VK.9)--(VK.11), give simultaneously
 
-$$
+```math
 \boxed{
 \max_h(L_D(c)_h)_+
 \ge(2c_H-o(1))D_n\|s\|_\infty,
 }
 \tag{VK.12}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \max_h(-L_D(c)_h)_+
 \ge(2c_H-o(1))D_n\|s\|_\infty.
 }
 \tag{VK.13}
-$$
+```
 
 Summing the squares of all distinguished two-entry blocks gives
 
-$$
+```math
 \begin{aligned}
 \|L_D(c)\|_2^2
 &\ge
@@ -209,25 +209,25 @@ $$
 &\ge
 (8c_H^2-o(1))D_n^2\|s\|_2^2.
 \end{aligned}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \|L_D(c)\|_2
 \ge(2\sqrt2\,c_H-o(1))D_n\|s\|_2.
 }
 \tag{VK.14}
-$$
+```
 
 Numerically,
 
-$$
+```math
 2\sqrt2\,c_H
 =1.2835964751\ldots .
 \tag{VK.15}
-$$
+```
 
 This is the direct-sum coercivity estimate applied to every interface of the selected consecutive force corridor.
 
@@ -237,64 +237,64 @@ This is the direct-sum coercivity estimate applied to every interface of the sel
 
 The basis map in (VK.6) is the incidence matrix of a path. Componentwise,
 
-$$
+```math
 c_0=s_0,
 \qquad
 c_j=s_j-s_{j-1}\ (1\le j\le m-1),
 \qquad
 c_m=-s_{m-1}.
 \tag{VK.16}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \|c\|_\infty\le2\|s\|_\infty,
 \qquad
 \|c\|_2\le2\|s\|_2.
 }
 \tag{VK.17}
-$$
+```
 
 Combining (VK.12)--(VK.14) with (VK.17) yields a basis-independent statement on the whole zero-sum cancellation space:
 
-$$
+```math
 \boxed{
 \max_h(L_D(c)_h)_+
 \ge(c_H-o(1))D_n\|c\|_\infty,
 }
 \tag{VK.18}
-$$
+```
 
-$$
+```math
 \boxed{
 \max_h(-L_D(c)_h)_+
 \ge(c_H-o(1))D_n\|c\|_\infty,
 }
 \tag{VK.19}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \left\|{1\over D_n}L_D(c)\right\|_2
 \ge(\sqrt2\,c_H-o(1))\|c\|_2
 \qquad(c\in\mathcal K_n).
 }
 \tag{VK.20}
-$$
+```
 
 The Euclidean singular-value floor is therefore
 
-$$
+```math
 \boxed{
 \sqrt2\,c_H
 =0.64179823755\ldots .
 }
 \tag{VK.21}
-$$
+```
 
 It is independent of the corridor depth `m_n`.
 
@@ -306,13 +306,13 @@ Thus the complete first-order cancellation kernel has no sequence of normalized 
 
 The preceding coercivity is carried entirely by switching sets
 
-$$
+```math
 X_0\sqcup X_1\sqcup\cdots\sqcup X_{m-1}.
-$$
+```
 
 For the selected corridor, the vanishing-mass theorem gives
 
-$$
+```math
 \boxed{
 \sum_{i=0}^{m-1}\sum_{h\in X_i}\beta_h
 =\sum_{i=0}^{m-1}B_i
@@ -320,23 +320,23 @@ $$
 \longrightarrow0.
 }
 \tag{VK.22}
-$$
+```
 
 Hence the entire actual-diameter row set used in the direct-sum coercivity proof carries asymptotically zero mass in the canonical positive KKT stress.
 
 After the refined diagonal choice from the same theorem, even the local compressed exact-force coefficients obey
 
-$$
+```math
 \boxed{
 \sum_{i=0}^{m-1}(\lambda_i^-+\lambda_i^+)
 \longrightarrow0.
 }
 \tag{VK.23}
-$$
+```
 
 Equations (VK.20), (VK.22), and (VK.23) are the main synthesis:
 
-$$
+```math
 \boxed{
 \begin{array}{c}
 \dim\mathcal K_n\to\infty,\\[2mm]
@@ -347,7 +347,7 @@ $$
 \end{array}
 }
 \tag{VK.24}
-$$
+```
 
 Small multiplier mass therefore gives no approximate geometric softness, even when imposed simultaneously across the whole growing exact cancellation kernel.
 

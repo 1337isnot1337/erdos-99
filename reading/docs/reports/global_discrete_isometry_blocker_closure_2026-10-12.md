@@ -46,24 +46,24 @@ diameter `D`. The cardinality condition excludes the vacuous singleton case,
 whose diameter zero cannot be strictly decreased.
 Let `T` be any Euclidean isometry. Each label chooses
 
-$$
+```math
 q_i=T^{x_i}p_i,\qquad x_i\in\{0,1\},
-$$
+```
 
 where `T^0` means identity, not an assumption that `T` is involutive.
 For each `i<j` and state pair `(a,b)`, forbid the pair exactly when
 
-$$
+```math
 |T^a p_i-T^b p_j|<1\quad\text{or}\quad
 |T^a p_i-T^b p_j|\ge D. \tag{1}
-$$
+```
 
 There is a full-source unit-separated endpoint of diameter strictly below
 `D` if and only if the clauses
 
-$$
+```math
 (x_i\ne a)\lor(x_j\ne b) \tag{2}
-$$
+```
 
 for these forbidden pairs are satisfiable.
 
@@ -85,9 +85,9 @@ interpolation or stress claim is required.
 For rational source coordinates, rational nonzero `v`, and
 `T_t(p)=p+t v`, the unequal-state distances have squares
 
-$$
+```math
 |p_i-p_j|^2\pm2t\,v\cdot(p_i-p_j)+t^2|v|^2. \tag{3}
-$$
+```
 
 All coefficients and `D^2` are rational. Forbidden pairs change only at
 the real roots of (3) equal to `1` or `D^2`. There are `O(n^2)` roots.
@@ -119,9 +119,9 @@ the translation plane are excluded.
 
 On **all** source labels put an arc `i -> j` exactly when
 
-$$
+```math
 |T p_i-p_j|<1\quad\text{or}\quad |T p_i-p_j|>D. \tag{4}
-$$
+```
 
 It forbids `(x_i,x_j)=(1,0)`, equivalently `x_i<=x_j`. Feasible moved sets
 for the non-strict interval `[1,D]` are exactly forward-closed sets of this
@@ -165,10 +165,10 @@ number of translations leaves `m` labels on each row of an `m by k` unit
 grid. Unit separation forces each row's span to be at least `m-1`.
 For bottom extremes `a,b` and top extremes `c,d`,
 
-$$
+```math
 \max\{|d-a|,|b-c|\}\ge m-1,
 \qquad (d-a)+(b-c)=(b-a)+(d-c)\ge2(m-1).
-$$
+```
 
 Those cross-row pairs have vertical separation `k-1`, so some endpoint
 distance squared is at least `(m-1)^2+(k-1)^2`, the original diameter.
@@ -192,9 +192,9 @@ into a universal source theorem.
 
 The hostile source
 
-$$
+```math
 (0,0),(10,0),(9,1),(1,1),(1,2)
-$$
+```
 
 has diameter `10`, a single diameter pair `0,1`, and a single unit contact
 `3,4`. Translate only labels `0,2` by `(21/10,0)`. Every lower constraint

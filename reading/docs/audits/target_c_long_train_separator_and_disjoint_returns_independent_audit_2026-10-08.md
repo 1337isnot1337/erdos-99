@@ -32,30 +32,30 @@ Let `A` be a canonical contact-minimal, then actual-diameter-pair-minimal, trian
 
 **`C-CORE-UNLOADED-SEPARATOR-AREA-BOUND` (CB12).** For any terminal set `X subset V` and endpoint-inclusive vertex separator `S subset V`, `|S|=k`, between `X` and `B`, let `U` be the union of components of `C-S` meeting `X-S`. Then
 
-$$
+```math
 |U|\le {16\over\pi^2}k^2+{8\over\pi}k.
-$$
+```
 
 **`C-LONG-TRAIN-SEPARATOR-INEQUALITY` (CB11).** For any `a` distinct complete physical tracks of strict unit rhombi, each of degree at least an integer `L>=1`, choose one rail endpoint for each train. If `k` is the minimum endpoint-inclusive `C`-vertex separator from the resulting terminal set to `B`, then
 
-$$
+```math
 (a-5k)_+(L+1)\le {80\over\pi^2}k^2+{40\over\pi}k.
-$$
+```
 
 In particular Menger's theorem gives `k` mutually vertex-disjoint actual contact paths from distinct chosen train terminals to distinct loaded vertices, with paths counted in the full positive-contact graph `C`.
 
 **`C-QUADRATIC-CORE-DISJOINT-TRAIN-RETURNS` (CB13).** Along any unbounded sequence in the same canonical source scope with `R4/D^2 -> r>0`, fix `epsilon in (0,r)`, and put
 
-$$
+```math
 a_*={2\over3}\sqrt{r-\epsilon},\qquad \ell={\epsilon\over3\pi}.
-$$
+```
 
 For the long bank from Audit.179, the minimum separator size obeys
 
-$$
+```math
 \liminf {k\over D}\ge {\pi^2\over32}
 \left(\sqrt{\ell^2+{64a_*\ell\over5\pi^2}}-\ell\right)>0.
-$$
+```
 
 Thus a linear-size subfamily of long bank trains has mutually vertex-disjoint actual-contact returns to distinct loaded vertices. The coefficient is for fixed `epsilon`; it is not uniform as `epsilon` tends to zero.
 
@@ -67,9 +67,9 @@ Fix a component `U_j` of `C-S` meeting `X-S`, with `n_j` vertices, `e_j` interna
 
 Positive full-support equilibrium gives a nonzero dependence among those same rows when restricted to the `U_j` columns: sum each contact row with its positive KKT coefficient, and equilibrium cancels every `U_j` coordinate. Thus
 
-$$
+```math
 e_j+t_j\ge 2n_j+1.
-$$
+```
 
 This is a pinned-rank deduction from canonical mixed rigidity and stress, not a generic planarity inference.
 
@@ -77,18 +77,18 @@ Put `K=C[U union S]`, and let `c_U,c_K` count the components of `C[U]` and `K`; 
 
 For disconnected `K`, “total outer-face boundary-walk length” means the sum of the outer boundary-walk lengths of its connected components, each considered as a plane graph by itself. Likewise, `Q_K` sums bounded-face excesses componentwise. This convention matters when the drawing has nested components: it is not merely the boundary walks incident with the single global unbounded face. Applying connected Euler to each component and summing gives the displayed identity.
 
-$$
+```math
 b_K+Q_K=4(|U|+k)-2|E(K)|-4c_K
 \le4k-2c_U-4c_K-2e_S\le4k.
-$$
+```
 
 The equality uses bounded facial walks of degree at least four; it also covers bridge edges, disconnected graphs, and isolated separator vertices. Every component of `K` contains a separator vertex. Otherwise it would be a closed component of the positive-contact core with no loaded vertex, and dotting its positive equilibrium equations with the source positions would give `sum_e alpha_e |p_i-p_j|^2=0`, impossible for a nonempty contact component. Hence `c_K<=k`.
 
 For each component `K_j` of `K`, let `p_j,A_j` be the perimeter and area of its convex hull. The unit disks of radius `1/2` about its source vertices have disjoint interiors and lie in the hull's radius-`1/2` parallel body. Steiner's formula, the planar isoperimetric inequality, and `p_j<=b_j` give
 
-$$
+```math
 |V(K_j)|\le {p_j^2\over\pi^2}+{2p_j\over\pi}+1.
-$$
+```
 
 Summing, using `sum p_j<=b_K<=4k` and `c_K<=k`, yields `|U|+k<=16k^2/pi^2+8k/pi+k`, hence CB12. Degenerate point and segment hulls obey the same parallel-body formula.
 
@@ -98,9 +98,9 @@ At a source vertex, six distinct unit neighbors would have all six circular gaps
 
 Each rail has one actual contact edge per rhombus and its transverse coordinate increases strictly by `sin(theta)>sqrt(3)/2` per rhombus. It has at least `L+1` distinct vertices. A separator of size `k` meets at most `5k` chosen rails. Every remaining rail starts outside `S` and lies in a component counted by `U`. Counting rail vertices with multiplicity at most five gives
 
-$$
+```math
 (a-5k)_+(L+1)\le5|U|.
-$$
+```
 
 CB12 gives CB11. The endpoint-inclusive vertex-split form of Menger's theorem identifies `k` with the maximum number of vertex-disjoint `X`-to-`B` paths. The paths have distinct start vertices. Since each train contributed exactly one chosen start, assign each path to one train with that start; these are distinct trains. All path edges are actual positive unit contacts.
 
@@ -112,9 +112,9 @@ The exact train-occurrence identity gives `T=q-k_0+2f`, where `k_0=d_H+s_Z`; usi
 
 Divide CB11 by `D^2` along a subsequence attaining the liminf of `k/D`. If that ratio is unbounded, the claimed bound is immediate. Otherwise, with `a/D>=a_*-o(1)` and `(L+1)/D>=ell`, any limiting `x=k/D<a_*/5` satisfies
 
-$$
+```math
 \ell(a_*-5x)\le {80\over\pi^2}x^2.
-$$
+```
 
 Solving the quadratic gives the displayed constant. If `x>=a_*/5`, the same lower bound follows because the positive root is smaller than `a_*/5`. Menger yields the disjoint returns.
 

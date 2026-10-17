@@ -18,80 +18,80 @@ The first multi-rhombic pentagon theorem was written on the then-current `t<=1.8
 
 Let
 
-$$
+```math
 X_2=\#\{P\in\mathcal P_5:d_R(P)\ge2\},
 \qquad
 X_3=\#\{P\in\mathcal P_5:d_R(P)\ge3\}.
-$$
+```
 
 The finite counting theorem gives
 
-$$
+```math
 X_2\ge{I_5-Q\over4},
 \qquad
 X_3\ge{I_5-2Q\over3}.
 \tag{MER.1}
-$$
+```
 
 Using the uniform endpoint envelopes
 
-$$
+```math
 P_5/D\ge C_{707}+\pi-{5t\over2}-o(1),
-$$
+```
 
-$$
+```math
 Q/D\le2t-\pi+o(1),
-$$
+```
 
 and the Branch-R incidence floor
 
-$$
+```math
 I_5/D\ge5\left(C_{707}+\pi-{5t\over2}\right)-\tau_0-o(1),
-$$
+```
 
 one obtains
 
-$$
+```math
 \boxed{
 \liminf {X_2\over D}
 \ge {5C_{707}+6\pi-\tau_0-(29/2)t\over4},
 }
 \tag{MER.2}
-$$
+```
 
-$$
+```math
 \boxed{
 \liminf {X_3\over D}
 \ge {5C_{707}+7\pi-\tau_0-(33/2)t\over3}.
 }
 \tag{MER.3}
-$$
+```
 
 Consequently the scalar positivity thresholds are
 
-$$
+```math
 \boxed{
 t<{5C_{707}+6\pi-\tau_0\over29/2}
 =1.90789\ldots
 \Longrightarrow X_2=\Omega(D),}
 \tag{MER.4}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 t<{5C_{707}+7\pi-\tau_0\over33/2}
 =1.86703\ldots
 \Longrightarrow X_3=\Omega(D).}
 \tag{MER.5}
-$$
+```
 
 The exact certificate proves safe lower enclosures `>1.9078` and `>1.8670` respectively.
 
 Representative safe finite endpoints are
 
-$$
+```math
 \begin{array}{c|c|c}
 T & X_2/D\text{ lower} & X_3/D\text{ lower}\\ \hline
 1.865 & 0.1518 & 0.0111\\
@@ -101,7 +101,7 @@ T & X_2/D\text{ lower} & X_3/D\text{ lower}\\ \hline
 1.907 & 0.0032 & -.
 \end{array}
 \tag{MER.6}
-$$
+```
 
 Every face counted here is source-empty.  Every `X_3` face contains at least one double-rhombic pentagon corner because three marked sides on a five-cycle cannot be independent.
 

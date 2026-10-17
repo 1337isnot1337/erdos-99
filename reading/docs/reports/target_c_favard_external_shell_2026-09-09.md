@@ -40,70 +40,70 @@ No property specific to electrical networks or KKT stresses enters this imported
 
 Let `0<alpha<=pi/2`. A symmetric lens of diameter `D` is bounded by two equal circular arcs, each subtending central angle `2alpha`. Its circle radius is
 
-$$
+```math
 R=\frac{D}{2\sin\alpha}.
-$$
+```
 
 Each boundary arc has length
 
-$$
+```math
 2\alpha R
 = D\frac{\alpha}{\sin\alpha},
-$$
+```
 
 so the total perimeter is
 
-$$
+```math
 \boxed{
 P=2D\frac{\alpha}{\sin\alpha}.
 }
 \tag{FL.1}
-$$
+```
 
 The two equal circular segments have total area
 
-$$
+```math
 \boxed{
 A_{\rm lens}
 =\frac{D^2}{2\sin^2\alpha}
 \left(\alpha-\sin\alpha\cos\alpha\right).
 }
 \tag{FL.2}
-$$
+```
 
 The map `alpha/sin(alpha)` increases from `1` to `pi/2` on `[0,pi/2]`. Thus for every normalized half-perimeter
 
-$$
+```math
 x:=\frac{P}{2D}\in[1,\pi/2]
-$$
+```
 
 there is a unique `alpha=alpha(x)` satisfying
 
-$$
+```math
 \boxed{
 \frac{\alpha}{\sin\alpha}=x.
 }
 \tag{FL.3}
-$$
+```
 
 Define
 
-$$
+```math
 \mathcal L(x)
 :=
 \frac{\alpha(x)-\sin\alpha(x)\cos\alpha(x)}
 {2\sin^2\alpha(x)}.
 \tag{FL.4}
-$$
+```
 
 Favard then gives the sharp area bound
 
-$$
+```math
 \boxed{
 \operatorname{area}(K)\le D^2\mathcal L(P/(2D))
 }
 \tag{FL.5}
-$$
+```
 
 for every convex diameter-`D` body with perimeter at most `P<=pi D`.
 
@@ -113,35 +113,35 @@ At `x=pi/2`, `alpha=pi/2` and `mathcal L=pi/4`, recovering the disk. For every `
 
 In the post-ZF C65 source, the force hull `F` contains actual diameter endpoints and therefore has diameter exactly `D`. The survivor inequality and the outer-walk perimeter bound give
 
-$$
+```math
 \operatorname{per}(F)\le b\le b+Q\le2h.
 \tag{3.1}
-$$
+```
 
 Assume `h<=pi D/2`. Put
 
-$$
+```math
 x=\frac hD.
-$$
+```
 
 Favard with `P=2h` yields
 
-$$
+```math
 \boxed{
 \operatorname{area}(F)
 \le D^2\mathcal L(x).
 }
 \tag{FL.6}
-$$
+```
 
 Current-main OP gives
 
-$$
+```math
  v+Z_{def}+Z_{in}
 \le
 \frac2{\sqrt3}\operatorname{area}(F)
 +\frac12\operatorname{per}(F)+1.
-$$
+```
 
 Since `per(F)<=2h`, subtract from `n`.
 
@@ -149,7 +149,7 @@ Since `per(F)<=2h`, subtract from `n`.
 
 For `h<=pi D/2`,
 
-$$
+```math
 \boxed{
 Z_{ext}
 \ge
@@ -158,7 +158,7 @@ n-
 -h-1.
 }
 \tag{FL.7}
-$$
+```
 
 This improves ZX.1, which used the weaker area bound `h^2/pi`.
 
@@ -166,72 +166,72 @@ This improves ZX.1, which used the weaker area bound `h^2/pi`.
 
 Let
 
-$$
+```math
 \Delta=\frac\pi{2\sqrt3}
-$$
+```
 
 and pass to a subsequence with
 
-$$
+```math
 \frac hD\to x\in[1,\pi/2].
-$$
+```
 
 The global packing asymptotic `n/D^2->Delta` gives
 
-$$
+```math
 \boxed{
 \liminf\frac{Z_{ext}}{D^2}
 \ge
 \Delta-rac2{\sqrt3}\mathcal L(x).
 }
 \tag{FL.8}
-$$
+```
 
 The right side is positive for every `x<pi/2` and vanishes at `x=pi/2`. Thus the phase threshold remains sharp:
 
-$$
+```math
 \boxed{
 h/D<\pi/2
 \quad\Longrightarrow\quad
 Z_{ext}=\Omega(D^2).
 }
 \tag{FL.9}
-$$
+```
 
 At the current general post-ZF endpoint
 
-$$
+```math
 \tau_*=1.4781702664\ldots,
-$$
+```
 
 the unique solution of
 
-$$
+```math
 \alpha/\sin\alpha=\tau_*
-$$
+```
 
 is
 
-$$
+```math
 \alpha=1.4707837101\ldots,
-$$
+```
 
 and
 
-$$
+```math
 \mathcal L(\tau_*)=0.6926232518\ldots .
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \liminf\frac{Z_{ext}}{D^2}
 \ge
 0.1071272403\ldots
 }
 \tag{FL.10}
-$$
+```
 
 at that endpoint. The ordinary-isoperimetric ZX coefficient was `0.1038019123...`.
 
@@ -250,9 +250,9 @@ This is an exact no-go statement for the current perimeter-capacity route. To pu
 
 The threshold has a natural shell interpretation. Large regular even polygons have opposite-pair diameter matchings with
 
-$$
+```math
 h/D\to\pi/2
-$$
+```
 
 and convex hulls tending to the disk. They are not post-ZF global survivors—the clean-train theorem excludes their matching row count—but they show why the convex perimeter/diameter extremal itself loses all quantitative area deficit at `pi/2`.
 

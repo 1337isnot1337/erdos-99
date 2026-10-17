@@ -42,121 +42,121 @@ closure claim.
 
 ### 1. Finite normalization of contact isolates
 
-Let $Q=(Q_i)_{i\in V\sqcup Z}\subset\mathbb R^2$ be a finite unit-separated labelled
-placement with all pair distances at most $D>0$. Assume $V\ne\varnothing$ and every
-label in $Z$ is a contact isolate, so each pair with at least one endpoint in $Z$ has
-length strictly greater than one. If $Z\ne\varnothing$, set
+Let $`Q=(Q_i)_{i\in V\sqcup Z}\subset\mathbb R^2`$ be a finite unit-separated labelled
+placement with all pair distances at most $`D>0`$. Assume $`V\ne\varnothing`$ and every
+label in $`Z`$ is a contact isolate, so each pair with at least one endpoint in $`Z`$ has
+length strictly greater than one. If $`Z\ne\varnothing`$, set
 
-$$
+```math
  w=\frac1{|V|}\sum_{i\in V}Q_i,
  \qquad
  \sigma=\min_{\{i,j\}:\{i,j\}\cap Z\ne\varnothing}
              (|Q_i-Q_j|^2-1)>0.
-$$
+```
 
-For every $0<t\le\sigma/(8D^2)$, keep $Q_i$ fixed on $V$ and put
+For every $`0<t\le\sigma/(8D^2)`$, keep $`Q_i`$ fixed on $`V`$ and put
 
-$$
+```math
  Q_z(t)=(1-t)Q_z+tw\qquad (z\in Z).
-$$
+```
 
 Then the full placement remains unit-separated, its complete unit-contact graph is
-unchanged, and every pair incident to $Z$ satisfies
+unchanged, and every pair incident to $`Z`$ satisfies
 
-$$
+```math
  1+\sigma/2\le |Q_i(t)-Q_j(t)|^2<D^2.
-$$
+```
 
-More precisely, a core-isolate distance is at most $D(1-t/|V|)$, and an
-isolate-isolate distance is at most $D(1-t)$. If $Z=\varnothing$, the identity
+More precisely, a core-isolate distance is at most $`D(1-t/|V|)`$, and an
+isolate-isolate distance is at most $`D(1-t)`$. If $`Z=\varnothing`$, the identity
 placement is the normalization and there are no isolate-involving pairs.
 
 ### 2. Diameter replacements must lie in the core
 
-Let $P$ be the canonical contact-minimal, then actual-diameter-pair-minimal
-triangle-free global minimizer in Target C's normal form, with $D=D(n)\ge9$. Let
-$V$ be its nonisolated positive-contact core and retain all source labels. Suppose
-$Q$ is a unit-separated placement of the same labels, has diameter at most $D$,
-preserves the complete contact graph of $P$, and $Q|_V$ is noncongruent to $P|_V$.
-Normalize the contact isolates of $Q$ as in part 1, obtaining $Q'$. Let $L$ be
-the number of old diameter pairs of $P$ whose lengths in $Q'$ are below $D$, and
-let $N_V$ be the number of formerly non-diameter unordered pairs with both endpoints
-in $V$ that have length $D$ in $Q'$. Then
+Let $`P`$ be the canonical contact-minimal, then actual-diameter-pair-minimal
+triangle-free global minimizer in Target C's normal form, with $`D=D(n)\ge9`$. Let
+$`V`$ be its nonisolated positive-contact core and retain all source labels. Suppose
+$`Q`$ is a unit-separated placement of the same labels, has diameter at most $`D`$,
+preserves the complete contact graph of $`P`$, and $`Q|_V`$ is noncongruent to $`P|_V`$.
+Normalize the contact isolates of $`Q`$ as in part 1, obtaining $`Q'`$. Let $`L`$ be
+the number of old diameter pairs of $`P`$ whose lengths in $`Q'`$ are below $`D`$, and
+let $`N_V`$ be the number of formerly non-diameter unordered pairs with both endpoints
+in $`V`$ that have length $`D`$ in $`Q'`$. Then
 
-$$
+```math
  \boxed{N_V\ge L\ge1.}
-$$
+```
 
 This is a theorem about an already feasible endpoint. It does not assert that such a
-placement $Q$ exists.
+placement $`Q`$ exists.
 
 ## Independent proof reconstruction
 
-Because $V$ and $Z$ are both nonempty, the set of isolate-involving pairs is
-nonempty and $0<\sigma\le D^2-1$, so $0<t\le\sigma/(8D^2)<1/8$.
-For each $z\in Z$, convexity of the norm gives
+Because $`V`$ and $`Z`$ are both nonempty, the set of isolate-involving pairs is
+nonempty and $`0<\sigma\le D^2-1`$, so $`0<t\le\sigma/(8D^2)<1/8`$.
+For each $`z\in Z`$, convexity of the norm gives
 
-$$
+```math
  |Q_z-w|=\left|\frac1{|V|}\sum_{i\in V}(Q_z-Q_i)\right|\le D.
-$$
+```
 
-Thus each moved label has displacement at most $tD$; for any pair meeting $Z$,
-the difference vector changes by at most $2tD$. If $a=Q_i-Q_j$ is the old pair
-vector and $b=Q_i(t)-Q_j(t)-a$, then
+Thus each moved label has displacement at most $`tD`$; for any pair meeting $`Z`$,
+the difference vector changes by at most $`2tD`$. If $`a=Q_i-Q_j`$ is the old pair
+vector and $`b=Q_i(t)-Q_j(t)-a`$, then
 
-$$
+```math
  |a+b|^2\ge |a|^2-2|a||b|
            \ge 1+\sigma-4tD^2
            \ge 1+\sigma/2.
-$$
+```
 
 Core-core pairs are fixed. Therefore all lower-distance constraints are preserved,
 and no isolate-involving pair becomes a new unit contact.
 
-For $i\in V$,
+For $`i\in V`$,
 
-$$
+```math
  |w-Q_i|=\left|\frac1{|V|}\sum_{j\in V,\,j\ne i}(Q_j-Q_i)\right|
        \le \frac{|V|-1}{|V|}D.
-$$
+```
 
 Consequently
 
-$$
+```math
  |Q_z(t)-Q_i|
  \le (1-t)|Q_z-Q_i|+t|w-Q_i|
  \le D(1-t/|V|)<D.
-$$
+```
 
-For two isolates their difference is multiplied exactly by $1-t$, so it is at most
-$D(1-t)<D$. These estimates are simultaneous for every full-source pair; no
+For two isolates their difference is multiplied exactly by $`1-t`$, so it is at most
+$`D(1-t)<D`$. These estimates are simultaneous for every full-source pair; no
 contact-isolated point is deleted or left unchecked.
 
-For the second statement, $Q$ has the same cardinality as a global minimizer and
-$\operatorname{diam}Q\le D(n)$, so it is itself a global minimizer. The normalization
+For the second statement, $`Q`$ has the same cardinality as a global minimizer and
+$`\operatorname{diam}Q\le D(n)`$, so it is itself a global minimizer. The normalization
 keeps all labels, lower constraints, and the exact contact graph, and gives
-$\operatorname{diam}Q'\le D(n)$; hence $Q'$ is also a global minimizer. The
-contact graph is the same triangle-free graph as $P$, so $Q'$ ties the minimal
-contact count. Every isolate-involving pair is now strictly below $D$.
+$`\operatorname{diam}Q'\le D(n)`$; hence $`Q'`$ is also a global minimizer. The
+contact graph is the same triangle-free graph as $`P`$, so $`Q'`$ ties the minimal
+contact count. Every isolate-involving pair is now strictly below $`D`$.
 
-By canonical `C-ZRF`, every old diameter pair of $P$ has both endpoints in $V$.
-The restriction $Q'|_V=Q|_V$ is noncongruent. Every old diameter pair is bounded
-above by $D$, so the audited `C-FINITE-CONTACT-ISOMETRY-DIAMETER-GAIN` theorem gives
-$L\ge1$. The diameter-pair-minimal choice of $P$ gives
+By canonical `C-ZRF`, every old diameter pair of $`P`$ has both endpoints in $`V`$.
+The restriction $`Q'|_V=Q|_V`$ is noncongruent. Every old diameter pair is bounded
+above by $`D`$, so the audited `C-FINITE-CONTACT-ISOMETRY-DIAMETER-GAIN` theorem gives
+$`L\ge1`$. The diameter-pair-minimal choice of $`P`$ gives
 
-$$
+```math
  |H(P)|\le |H(Q')|=|H(P)|-L+N_V,
-$$
+```
 
-because all diameter pairs of $Q'$ also lie in $V$. Thus $N_V\ge L\ge1$. The
+because all diameter pairs of $`Q'`$ also lie in $`V`$. Thus $`N_V\ge L\ge1`$. The
 argument uses the full-source lexicographic minimum and counts every old source pair;
-the normalization is what localizes every surviving/new diameter equality to $V$.
+the normalization is what localizes every surviving/new diameter equality to $`V`$.
 
 ## Hostile checks and exact limits
 
-- **Exact contact graph:** the strict lower margin $1+\sigma/2$ prevents new unit
+- **Exact contact graph:** the strict lower margin $`1+\sigma/2`$ prevents new unit
   contacts; old core contacts are unchanged. A label with an incident unit edge cannot
-  be put in $Z$.
+  be put in $`Z`$.
 - **All lower and upper pairs:** the proof bounds every pair incident to an isolate;
   core-core pairs do not move. It does not assume an external scaffold or move only the
   positive-contact core.
@@ -168,7 +168,7 @@ the normalization is what localizes every surviving/new diameter equality to $V$
 - **Endpoint existence:** neither statement constructs a contact-isometric placement or
   proves its feasibility. The source's Section 4 moment estimate and all its corollaries
   are outside this audit.
-- **Uniformity:** $t$ depends on the actual finite-source slack σ; no positive
+- **Uniformity:** $`t`$ depends on the actual finite-source slack σ; no positive
   uniform contraction size across a sequence is claimed.
 
 A useful closure chain is
@@ -195,10 +195,10 @@ canonical optimality, the core replacement corollary, the cubic moment, or endpo
 existence.
 
 An additional exact rational edge case with two isolates, a retained unit contact, and
-minimum isolate slack $\sigma=2001/1000000$ was checked at the endpoint value
-$t=\sigma/(8\cdot9)=667/24000000$. All six squared distances stayed in $[1,9]$,
+minimum isolate slack $`\sigma=2001/1000000`$ was checked at the endpoint value
+$`t=\sigma/(8\cdot9)=667/24000000`$. All six squared distances stayed in $`[1,9]`$,
 and all five isolate-involving pairs were strictly below the diameter bound and at
-squared distance at least $1+\sigma/2$.
+squared distance at least $`1+\sigma/2`$.
 
 ## Canonical dependencies and disposition
 

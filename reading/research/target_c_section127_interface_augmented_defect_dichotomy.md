@@ -16,42 +16,42 @@ Canonical Section 85 forces a linear physical boundary for the global strict-rho
 
 Put
 
-$$
+```math
 A_*:=\sum_r(a_r-T_r),
 \qquad
 Q_*:=\sum_rQ_r^+,
 \qquad
 J_{aug}:=A_*+Q_*+2d_{tile}.
 \tag{127.1}
-$$
+```
 
 Canonical Section 123 gives
 
-$$
+```math
 \boxed{J_{aug}=2(e_{BB}-k).}
 \tag{127.2}
-$$
+```
 
 Let `R_4` be the number of global bounded strict-rhombus contact faces, `f` the number of global bounded nonquadrilateral contact faces, and `q=|B|`. Then every finite post-ZF C-II source satisfies
 
-$$
+```math
 \boxed{
 (q-k)+J_{aug}\ge2\sqrt{R_4}.
 }
 \tag{127.3}
-$$
+```
 
 Consequently, in the canonical Type-II full-core branch, where
 
-$$
+```math
 {R_4\over D^2}\to\Delta,
 \qquad
 \Delta={\pi\over2\sqrt3},
-$$
+```
 
 one has
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 {(q-k)+J_{aug}\over D}
@@ -61,31 +61,31 @@ $$
 =1.9046\ldots .
 }
 \tag{127.4}
-$$
+```
 
 This produces the exact structural split
 
-$$
+```math
 \boxed{
 J_{aug}=o(D)
 \quad\Longrightarrow\quad
 \liminf{q-k\over D}\ge2\sqrt\Delta.
 }
 \tag{127.5}
-$$
+```
 
 More generally, for every fixed `eta>0`, any Type-II subsequence with
 
-$$
+```math
 {q-k\over D}\le2\sqrt\Delta-\eta+o(1)
-$$
+```
 
 must satisfy
 
-$$
+```math
 \boxed{J_{aug}\ge(\eta-o(1))D.}
 \tag{127.6}
-$$
+```
 
 Thus the full-core survivor cannot simultaneously have a low loaded-hull count and a nearly pure triangular-tooth augmentation. The live branch is now explicitly either
 
@@ -100,35 +100,35 @@ This does not close either branch. It is a source-level incompatibility between 
 
 Canonical Section 63 gives the exact loaded-contact decomposition
 
-$$
+```math
 \boxed{
 e_{BB}=Q+2k+u_B+c_B,}
 \tag{127.7}
-$$
+```
 
 where `Q=sum_f(deg f-4)` is the global bounded-face degree excess and `u_B,c_B>=0`. Therefore
 
-$$
+```math
 \boxed{
 e_{BB}-k=Q+k+u_B+c_B\ge Q.}
 \tag{127.8}
-$$
+```
 
 Every bounded nonquadrilateral contact face has degree at least five, so it contributes at least one to `Q`. Hence
 
-$$
+```math
 \boxed{Q\ge f,}
 \qquad
 \boxed{e_{BB}-k\ge f.}
 \tag{127.9}
-$$
+```
 
 Combining (127.2) and (127.9),
 
-$$
+```math
 \boxed{J_{aug}\ge2f.}
 \tag{127.10}
-$$
+```
 
 No local/global face identification is needed: `f` and `Q` are the global contact-face quantities from the canonical post-ZF ledger, while `J_aug` is linked to them only through the exact scalar `e_BB-k`.
 
@@ -138,18 +138,18 @@ No local/global face identification is needed: `f` and `Q` are the global contac
 
 Canonical Section 85 proves the finite interface inequality
 
-$$
+```math
 \boxed{q-k+2f\ge2\sqrt{R_4}.}
 \tag{127.11}
-$$
+```
 
 Equation (127.10) gives
 
-$$
+```math
 (q-k)+J_{aug}
 \ge(q-k)+2f
 \ge2\sqrt{R_4},
-$$
+```
 
 which is (127.3).
 
@@ -161,12 +161,12 @@ The proof uses no carrier diameter coefficient, phase-bin constant, or noncanoni
 
 Canonical Sections 79--85 give, in the full-core Type-II branch,
 
-$$
+```math
 R_4=(\Delta+o(1))D^2,
 \qquad
 \Delta={\pi\over2\sqrt3}.
 \tag{127.12}
-$$
+```
 
 Therefore `2sqrt(R_4)/D -> 2sqrt(Delta)`. Divide (127.3) by `D` and pass to `liminf` to obtain (127.4). Equations (127.5)--(127.6) follow immediately.
 
@@ -176,14 +176,14 @@ Therefore `2sqrt(R_4)/D -> 2sqrt(Delta)`. Divide (127.3) by `D` and pass to `lim
 
 Section 125 independently forces
 
-$$
+```math
 \liminf {1\over D}
 \left[
 \Delta_{ad}+{A_*\over2}+3Q_*
 \right]
 \ge {\pi\over4}(2-\sqrt3),
 \tag{127.13}
-$$
+```
 
 where `Delta_ad=sum_r(a_r-d_r)`.
 
@@ -194,24 +194,24 @@ Sections 125 and 127 constrain different projections of the same augmented state
 
 In particular, if
 
-$$
+```math
 A_*+Q_*+d_{tile}=o(D),
-$$
+```
 
 then both conclusions sharpen simultaneously to
 
-$$
+```math
 \liminf {q-k\over D}\ge2\sqrt\Delta
 \tag{127.14}
-$$
+```
 
 and
 
-$$
+```math
 \liminf {\Delta_{ad}\over D}
 \ge{\pi\over4}(2-\sqrt3).
 \tag{127.15}
-$$
+```
 
 This is the precise **high-density triangular-tooth regression** left by the two ledgers.
 
@@ -221,18 +221,18 @@ This is the precise **high-density triangular-tooth regression** left by the two
 
 The current noncanonical low-response research note records the independently elementary Type-II consequence
 
-$$
+```math
 \liminf{q-k\over D}\ge{\pi\over2}=1.57079\ldots,
-$$
+```
 
 from `per(F)<=q+x_B`, `q-x_B>=2k`, and `per(F)/D->pi`.
 
 Section 127 does not depend on that note. If the half-perimeter floor is later promoted, the two statements give a useful quantitative picture: at the smallest permitted loaded density, the interface theorem would require augmented/tile defect density at least
 
-$$
+```math
 2\sqrt\Delta-\frac\pi2
 =0.3338\ldots .
-$$
+```
 
 As `J_aug/D` tends to zero, the required loaded density rises to `2sqrt(Delta)=1.9046...`.
 

@@ -22,23 +22,23 @@ The source tip and all three hashes were rechecked after the proof audit. The di
 
 Take any unbounded canonical contact-minimal, then diameter-pair-minimal, triangle-free global-source sequence in the full-core Type-II near-disk branch, with diameter (D\to\infty). Retain every source point, including all contact isolates. Use the canonical loaded hull and actual positive-contact rhombus trains. Let (f) be the number of bounded nonquadrilateral contact faces, (Q=\sum_F(\deg F-4)) their total excess, (q) the number of loaded hull vertices, (k=d_H+s_Z\ge0), (p) the loaded-hull perimeter, and (z=b-p\ge0) the excess of the occurrence-counted outer contact walk over the perimeter. Put
 
-$$
+```math
 s_2=\sqrt{\frac{\pi}{2\sqrt3}}.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{\liminf\frac{f-k}{D}\ge\frac{6s_2}{5}},\qquad
 \boxed{\liminf\frac{2(q-k)-k-z}{D}\ge\pi+\frac{6s_2}{5}}.
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{\liminf\frac{q-k}{D}\ge\frac\pi2+\frac{3s_2}{5}
       =2.1421840109\ldots>\frac{2\pi}{3}}.
-$$
+```
 
 Thus the positive one-cell collar range (4\pi-6(q-k)/D>0) is empty in this Type-II branch. The bound is a new scoped asymptotic exclusion; it gives no face-width or area lower bound, source move, C-II closure, or Level I result.
 
@@ -61,14 +61,14 @@ For each sequence member, place mass (1/D) at the projective direction of every 
 
 The ordered physical crossing measure, with mass (D^{-2}) on each orientation of each crossing, is dominated in the limit by the product of the train measure with itself: the physical crossing graph is simple, and singleton trains have no crossings. Disjointness of rhombus interiors and the near-disk population equality give (E_4=o(D^2)). On the allowed rhombus-angle interval, the sine area excess controls the angular deviation from (\pi/3); hence the limiting crossing measure is supported on the projective (60^\circ) relation. A product measure charges that relation only on pairs of atoms.
 
-Choose finite neighborhoods exhausting the atoms and shrink them with null boundary so that their excess limiting mass tends to zero. A diagonal choice gives selected complete trains $\mathcal A_D$ with
+Choose finite neighborhoods exhausting the atoms and shrink them with null boundary so that their excess limiting mass tends to zero. A diagonal choice gives selected complete trains $`\mathcal A_D`$ with
 
-$$
+```math
 \frac{|\mathcal A_D|}{D}\to a,\qquad
 \sum_{\tau\notin\mathcal A_D}d_\tau=o(D^2),
-$$
+```
 
-where (d_\tau) is the number of actual rhombi crossed by train $\tau$. This is a compactness/diagonal argument and assumes no convergence rate. Markov's inequality then leaves only (o(D)) complementary trains with terminal-midpoint separation larger than $\epsilon_DD$ for some $\epsilon_D\to0$; singleton trains have coincident midpoints.
+where (d_\tau) is the number of actual rhombi crossed by train $`\tau`$. This is a compactness/diagonal argument and assumes no convergence rate. Markov's inequality then leaves only (o(D)) complementary trains with terminal-midpoint separation larger than $`\epsilon_DD`$ for some $`\epsilon_D\to0`$; singleton trains have coincident midpoints.
 
 ### 2. Separate-face recipient graph and boundary cancellation
 
@@ -78,11 +78,11 @@ Let (c_\partial) be the number of components meeting an outer-chain recipient, a
 
 In each remaining boundary component, short train edges and bounded recipient walks put all its outer-chain bases and face boundary occurrences within (o(D)) of one another. Its outer hull chords have length at least one and share a limiting tangent direction. Every bounded facial boundary sums to zero, and the two terminal vectors of every complementary train edge in the component cancel. Therefore
 
-$$
+```math
 \sum_{W_i\text{ in }C}(b_{i+1}-b_i)
 =\sum_{\text{selected atomic terminal occurrences in }C}e.
 \tag{1}
-$$
+```
 
 The left side is nonzero and has the common limiting hull-tangent direction.
 
@@ -94,11 +94,11 @@ Each vector-coordinate marginal is dominated by the selected train terminal-vect
 
 Equation (1) determines each chosen normal as a right rotation of the normalized sum of its finite vector list. There are only countably many possible lists of limiting atomic vectors, so the normal marginal is countably supported. It is also atomless, hence zero. Thus, for each fixed (M,L), the retained boundary components number (o(D)). The discarded-component bounds imply
 
-$$
+```math
 \limsup\frac{c_\partial}{D}
 \le \frac{\limsup(q+f)/D}{M+1}
  +\frac{\limsup(b+4f+Q)/D}{L+1}.
-$$
+```
 
 Letting (M,L\to\infty) gives (c_\partial=o(D)). This argument bounds only components meeting the outer boundary; interior-only face components are not discarded.
 
@@ -106,35 +106,35 @@ Letting (M,L\to\infty) gives (c_\partial=o(D)). This argument bounds only compon
 
 Let (N_\partial) be the number of complementary-train edges in boundary components, (N_\circ) their number in interior-only components, and (Q_\circ) the face excess in interior-only components. The component edge bound and exact terminal-occurrence handshake give
 
-$$
+```math
 N_\partial\ge q+f_\partial-c_\partial,
 \qquad
 a_\partial=b+4f_\partial+Q-Q_\circ-2N_\partial,
-$$
+```
 
 where (a_\partial\ge0) counts selected atomic terminal occurrences on boundary components. Using (b+Q=2(q-k)),
 
-$$
+```math
 0\le a_\partial\le 2f_\partial-Q_\circ-2k+2c_\partial.
-$$
+```
 
 Every interior-only exceptional face contributes at least one to (Q_\circ), so (Q_\circ\ge f-f_\partial). Hence
 
-$$
+```math
 3f_\partial\ge f+2k-2c_\partial.\tag{2}
-$$
+```
 
 The interior-only atomic terminal count is exactly (4(f-f_\partial)+Q_\circ-2N_\circ). Adding both atomic-end populations and dividing by two gives
 
-$$
+```math
 |\mathcal A_D|+N_\circ\le 2f-f_\partial-k+c_\partial.
-$$
+```
 
 Combining with (2),
 
-$$
+```math
 3(|\mathcal A_D|+N_\circ)\le5(f-k+c_\partial).
-$$
+```
 
 Divide by (D), use (|\mathcal A_D|/D\to a\ge2s_2), (N_\circ\ge0), and (c_\partial=o(D)). This proves (liminf(f-k)/D\ge6s_2/5) along every subsequential limit, hence for the full sequence.
 

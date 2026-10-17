@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_minimal_interface_piecewise_translation_annulus_2026-09-09.md) · source SHA-256 `11d7ced2751e826128cd3f7d4fe04ffd8f514ac011263f216e4a342005e20d19`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-E16082311506","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_minimal_interface_piecewise_translation_annulus_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=854167e1b10d3e7e37a2e2e54839d01ca5adec75; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -22,23 +24,24 @@ AS shows that in the sharp interface branch all but `o(D)` loaded terminals have
 
 For a regular shell edge `b_i b_{i+1}`, let the unique unloaded neighbors of its endpoints be `u_i,u_{i+1}`. If the adjacent bounded interface face is a quadrilateral, its boundary is
 
-$$
+```math
 b_i,b_{i+1},u_{i+1},u_i.
-$$
+```
 
 All four boundary edges are unit contacts. Therefore the face is a nondegenerate rhombus, hence a parallelogram, and
 
-$$
+```math
 \boxed{
 u_i-b_i=u_{i+1}-b_{i+1}.}
 \tag{PT.1}
+```
 
 Thus the spoke vector
 
-\[
+```math
 w_i:=u_i-b_i,
 \qquad |w_i|=1,
-$$
+```
 
 is exactly constant along every consecutive run of quadrilateral annular faces.
 
@@ -54,9 +57,10 @@ In the `Q_B/D->2` branch the first two classes have total cardinality `o(D)`, an
 
 After deleting `o(D)` loaded shell vertices/edges, the remaining near-complete unit shell decomposes into disjoint cyclic runs on each of which
 
-$$
+```math
 \boxed{u_i=b_i+w}
 \tag{PT.2}
+```
 
 for one fixed unit vector `w` depending only on the run.
 
@@ -64,26 +68,27 @@ Equivalently, away from `o(D)` phase-jump locations, the inner boundary chain of
 
 Moreover triangle-freeness gives a local phase interval. If
 
-\[
+```math
 e_i:=b_{i+1}-b_i,
 \qquad |e_i|=1,
-$$
+```
 
 then the two rhombus diagonals are `e_i+w` and `e_i-w`. Both are noncontact pairs and therefore have length strictly greater than one. Hence
 
-$$
+```math
 |e_i-w|^2=2-2e_i\cdot w>1,
-$$
+```
 
-$$
+```math
 |e_i+w|^2=2+2e_i\cdot w>1,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{-\frac12<e_i\cdot w<\frac12.}
 \tag{PT.3}
+```
 
 Equivalently, the oriented shell-side direction on one translation run stays strictly between `60` and `120` degrees from its fixed spoke vector.
 
@@ -103,21 +108,21 @@ Take a shell edge `b_i b_{i+1}` satisfying all AS regularity conditions:
 
 AS proves that the face boundary is
 
-\[
+```math
 b_i\to b_{i+1}\to u_{i+1}\leadsto u_i\to b_i,
-$$
+```
 
 where the internal `u_{i+1}`-to-`u_i` contact path has length `L_i>=1` and
 
-$$
+```math
 Q_F=L_i-1.
-$$
+```
 
 Thus `Q_F=0` exactly when `L_i=1`, i.e. exactly when the face is the four-cycle
 
-$$
+```math
 b_i,b_{i+1},u_{i+1},u_i.
-$$
+```
 
 All four sides are active unit contacts.
 
@@ -129,15 +134,15 @@ A Euclidean quadrilateral with all four sides equal is a parallelogram: the diag
 
 Suppose two consecutive regular shell faces sharing the loaded terminal `b_{i+1}` are both quadrilateral. PT.1 for the first gives
 
-$$
+```math
 u_i-b_i=u_{i+1}-b_{i+1},
-$$
+```
 
 and for the second gives
 
-$$
+```math
 u_{i+1}-b_{i+1}=u_{i+2}-b_{i+2}.
-$$
+```
 
 Thus the spoke vector is identical across both faces. Induction gives one constant vector on an entire quadrilateral run.
 
@@ -153,39 +158,40 @@ Delete the union of these exceptional locations. Its size is `o(D)`, and every r
 
 On one quadrilateral face write
 
-$$
+```math
 e=b_{i+1}-b_i,
 \qquad
 w=u_i-b_i=u_{i+1}-b_{i+1}.
-$$
+```
 
 Then the two diagonals are
 
-$$
+```math
 u_i-b_{i+1}=w-e,
-$$
+```
 
 and
 
-$$
+```math
 u_{i+1}-b_i=w+e.
-$$
+```
 
 If either diagonal had length one, one diagonal endpoint together with either adjacent face vertex would form a unit equilateral triangle because the two incident rhombus sides are already unit. More directly, every source pair has distance at least one and triangle-freeness makes both diagonal inequalities strict:
 
-$$
+```math
 |w-e|>1,
 \qquad
 |w+e|>1.
-$$
+```
 
 Since `|e|=|w|=1`, squaring gives PT.3.
 
 Thus if `theta_i` is the oriented angle from `e_i` to `w` chosen in `(0,pi)`,
 
-\[
+```math
 \boxed{\frac\pi3<\theta_i<\frac{2\pi}{3}.}
 \tag{3.1}
+```
 
 On a fixed translation run, `w` is constant while the convex shell-side direction turns monotonically. Consequently the total side-direction turn inside one run is strictly less than `pi/3`.
 

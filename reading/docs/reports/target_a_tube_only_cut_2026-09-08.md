@@ -33,24 +33,24 @@ Write `T=T_Sigma`, `W=widehat W_Sigma`, and
 
 In exactly the setting of Section 174,
 
-$$
+```math
 \operatorname{rank}S\le |T_\Sigma|
   +\sum_i\min\{|C_i^\partial|,|O_i|\},
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{\zeta\ge t_\Sigma+\delta_\Sigma-|T_\Sigma|.}
-$$
+```
 
 Compared with (174.20), this improves the lower bound by exactly
 
-$$
+```math
 |V(\Sigma)\cap C^\partial|
 +|V(\Sigma)\cap C^\circ|
 +|T_\Sigma\cap Z|.
-$$
+```
 
 ### Proof
 
@@ -58,12 +58,12 @@ If `b in B intersect V(Sigma)`, its matched row `mu_0(b)` has distance less
 than one from `b`, hence belongs to `T`. Consequently basis closure adds no
 right vertex beyond `T`, and
 
-$$
+```math
 W=T\ \sqcup\ \mu_0^{-1}(T\cap Z)
   \ \sqcup\ (V(\Sigma)\cap C^\circ)
   \ \sqcup\ (V(\Sigma)\cap C^\partial).
 \tag{1}
-$$
+```
 
 Consider a directed path from `C^partial` to `O` that meets `W`.
 
@@ -96,10 +96,10 @@ Subtracting the old lower bound gives the stated exact improvement. QED.
 For `s=Delta_Lambda-d_int>0`, it now suffices to find an admissible
 stress-generated shield with
 
-$$
+```math
 \boxed{t_\Sigma+\delta_\Sigma\ge s+|T_\Sigma|.}
 \tag{2}
-$$
+```
 
 Section 174.1 also gives the coarser sufficient condition
 `t_Sigma+delta_Sigma >= s+11|E(Sigma)|`.

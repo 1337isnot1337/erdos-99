@@ -21,20 +21,20 @@ as follows.  For every fixed degree cutoff `K` and every fixed `eta>0`, all but 
 of the degree-at-most-`K` exceptional faces contain an **anchored almost-equilateral
 triple**
 
-$$
+```math
 (u,v,w)
-$$
+```
 
 with
 
-$$
+```math
 |u-v|=1,
 \qquad
 1\le |u-w|<1+\eta,
 \qquad
 1\le |v-w|<1+\eta,
 \tag{AT.1}
-$$
+```
 
 where `uv` is an actual cyclic boundary contact of that face.
 
@@ -47,17 +47,17 @@ infinity after the asymptotic estimate.
 
 Put
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},
 \qquad
 f_*:=\sqrt{\Delta_2}-{\pi\over4}+0.00021
 =0.167124643466509\ldots .
 \tag{AT.2}
-$$
+```
 
 The conclusion is
 
-$$
+```math
 \boxed{
 R_F=o(D)
 \Longrightarrow
@@ -67,7 +67,7 @@ R_F=o(D)
 =0.012855741805116\ldots,
 }
 \tag{AT.3}
-$$
+```
 
 where `N_triangle(eta)` is the maximum number of pairwise vertex-disjoint triples
 satisfying (AT.1) in distinct exceptional faces.
@@ -77,12 +77,12 @@ satisfying (AT.1) in distinct exceptional faces.
 For a fixed integer `K>=5`, let `f_{<=K}` count exceptional bounded faces of degree at
 most `K`.  The AG42 face floor and `Q<=P_F` give
 
-$$
+```math
 \liminf {f_{\le K}\over D}
 \ge
 \ell_K:=f_*-{\pi\over K-3}.
 \tag{AT.4}
-$$
+```
 
 The hostile-audited anchored Groemer theorem says that for every fixed `K,eta` there is
 `tau_K(eta)>0` such that a degree-at-most-`K` exceptional face without a triple (AT.1)
@@ -92,10 +92,10 @@ On the branch `R_F=o(D)`, all exceptional-face residuals are nonnegative and the
 is at most `R_F`.  Therefore only `o(D)` degree-at-most-`K` faces can fail (AT.1).
 Thus, for every fixed `K,eta`, there are at least
 
-$$
+```math
 (\ell_K-o(1))D
 \tag{AT.5}
-$$
+```
 
 good exceptional faces.  Choose one anchored triple from each.
 
@@ -110,10 +110,10 @@ with a triple selected from another face.
 
 For a positive-core boundary vertex `x`, triangle-freeness gives
 
-$$
+```math
 \deg_C(x)\le5.
 \tag{AT.6}
-$$
+```
 
 Indeed, distinct unit neighbors around `x` have angular separation strictly greater
 than `pi/3`; equality would create an exact unit equilateral triangle and smaller
@@ -127,10 +127,10 @@ exceptional faces.
 Take one chosen triple `{u,v,w}`.  Through each of its three source vertices there are
 at most four *other* selected triples.  Union-bounding the three conflict sets gives
 
-$$
+```math
 \boxed{\Delta(G_{triple})\le12.}
 \tag{AT.7}
-$$
+```
 
 Repeated faces around a bridge or articulation vertex do not increase the number of
 distinct selected-face triples, and overlaps between the three conflict sets only
@@ -139,34 +139,34 @@ improve (AT.7).
 A graph of maximum degree twelve has an independent set containing at least one
 thirteenth of its vertices.  Hence, for fixed `K,eta`,
 
-$$
+```math
 \boxed{
 \liminf {N_{\triangle}(\eta)\over D}
 \ge {\ell_K\over13}.
 }
 \tag{AT.8}
-$$
+```
 
 ## 3. Remove the cutoff loss
 
 The left side of (AT.8) does not depend on `K`.  The estimate holds for every fixed
 cutoff with positive `ell_K`, while
 
-$$
+```math
 \ell_K\uparrow f_*
 \qquad(K\to\infty).
-$$
+```
 
 Therefore for every fixed `eta>0`, on `R_F=o(D)`,
 
-$$
+```math
 \boxed{
 \liminf {N_{\triangle}(\eta)\over D}
 \ge {f_*\over13}
 =0.012855741805116\ldots .
 }
 \tag{AT.9}
-$$
+```
 
 The previous hostile-audit extraction gave `0.000512254353148...D` for fixed `eta`.
 Thus (AT.9) improves the fixed-gap coefficient by a factor greater than `25`.
@@ -175,28 +175,28 @@ Thus (AT.9) improves the fixed-gap coefficient by a factor greater than `25`.
 
 Choose increasing fixed cutoffs `K_j` satisfying
 
-$$
+```math
 {\ell_{K_j}\over13}>{f_*\over13}-{1\over j},
-$$
+```
 
 and set `eta_j=1/j`.  For each fixed `j`, (AT.8) holds asymptotically.  Choose increasing
 thresholds `D_j` such that for all `D>=D_j` in the subsequence the extracted matching
 has size at least
 
-$$
+```math
 \left({f_*\over13}-{2\over j}\right)D.
-$$
+```
 
 For `D_j<=D<D_{j+1}`, put `eta_D=eta_j`.  Then `eta_D->0` and
 
-$$
+```math
 \boxed{
 \liminf {N_{\triangle}(\eta_D)\over D}
 \ge {f_*\over13}
 =0.012855741805116\ldots .
 }
 \tag{AT.10}
-$$
+```
 
 The hostile audit's conservative vanishing-gap coefficient was
 `0.000256127176574...`; (AT.10) is larger by a factor greater than `50`.
@@ -205,13 +205,13 @@ The hostile audit's conservative vanishing-gap coefficient was
 
 Every extracted triple has one exact side and two asymptotically unit sides:
 
-$$
+```math
 |u-v|=1,
 \qquad
 |u-w|=1+o(1),
 \qquad
 |v-w|=1+o(1),
-$$
+```
 
 with at least one of the last two distances strictly greater than one in every actual
 triangle-free source.

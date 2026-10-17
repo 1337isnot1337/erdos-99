@@ -27,32 +27,32 @@ The corrected theorem still proves the matched gap `0.0076`.
 
 For `C<=W/2`, every leaf mass `L` satisfies `L<=C`, so
 
-$$
+```math
 {(C+L-K)_+\over L}
 \le 2-{K\over C}
 \le2-{2K\over W}
 \le2-{2K\over A_0}.
-$$
+```
 
 The exact certificate gives
 
-$$
+```math
 2-{2K\over A_0}<0.793<\sqrt{20/29}.
-$$
+```
 
 Also `C<=A_0/2<K`, so the physical pair theorem is in scope.
 
 For `C>W/2`, define
 
-$$
+```math
 C_s(W)=W-{W-K\over\sqrt{20/29}}.
-$$
+```
 
 The certificate proves over the entire dominant-mass interval
 
-$$
+```math
 1.0000<C_s(W)<1.0032<K=1.1547\ldots .
-$$
+```
 
 Thus both center/leaf pairs satisfy the strong `1/10` branch throughout the entire interval used to locate the capacity maximizer, without violating the pair theorem's size hypothesis.
 
@@ -62,19 +62,19 @@ Thus both center/leaf pairs satisfy the strong `1/10` branch throughout the enti
 
 On `W/3<=C<=W/2`, the strong capacity is
 
-$$
+```math
 \Phi_{1/10}(W,C)
 =C(W-C)-{1\over10}{3C-W\over C}
 \left({W+C\over2}-K\right)^2.
-$$
+```
 
 Its second derivative is at most `-2`, its derivative at `C=W/3` is uniformly above `0.6255`, and its derivative at `C=W/2` is negative.  Hence it has one maximizer strictly in `(W/3,W/2)`, entirely inside the strong pair branch and below `K`.
 
 The strong-concavity tangent certificate at `c_0=0.935343` gives
 
-$$
+```math
 \Delta_2-\Psi_1(A_0)>9.84\times10^{-5}.
-$$
+```
 
 **Verdict:** PASS.
 
@@ -84,15 +84,15 @@ On `C_s(W)<=C<=K`, the universal coefficient `2/29` is valid because every phase
 
 The moving boundary satisfies `C_s'(W)<0`, while `Phi_C<0`, so its contribution to the `W` derivative is positive.  After the residual-orbit derivative is deducted, the exact lower bound remains
 
-$$
+```math
 Q_0'(W)>0.8364.
-$$
+```
 
 At `W=A_0`,
 
-$$
+```math
 \Delta_2-B_0(A_0)>1.49\times10^{-3}.
-$$
+```
 
 **Verdict:** PASS.
 
@@ -100,27 +100,27 @@ $$
 
 For `C>K`, the corrected proof uses no physical pair theorem.  Since `A_0<2K`, one has `K>W/2` throughout the contradiction domain.  Therefore
 
-$$
+```math
 E\le C(W-C)\le K(W-K).
-$$
+```
 
 Including the residual orbit capacity gives
 
-$$
+```math
 Q_H(W)=K(W-K)+{(A_0-W)^2\over4}.
-$$
+```
 
 Its derivative is
 
-$$
+```math
 K-{A_0-W\over2}>1.147,
-$$
+```
 
 so its maximum is at `W=A_0`.  The exact endpoint margin is
 
-$$
+```math
 \Delta_2-K(A_0-K)>0.03218.
-$$
+```
 
 The repaired branch is therefore much farther from saturation than either low-center branch.
 
@@ -130,29 +130,29 @@ The repaired branch is therefore much farther from saturation than either low-ce
 
 The generic square argument gives
 
-$$
+```math
 W\ge M_0={4\Delta_2\over A_0}
-$$
+```
 
 and residual exact-orbit crossing mass at most `(A_0-W)^2/4`.  Each of the three possible dominant-orbit capacities, after this residual term is added, is strictly increasing in `W`:
 
-$$
+```math
 Q_1'(W)>0.5968,
 \qquad
 Q_0'(W)>0.8364,
 \qquad
 Q_H'(W)>1.147.
-$$
+```
 
 Thus all three are worst at `W=A_0`, where the residual mass vanishes.  The three certified endpoint deficits are respectively
 
-$$
+```math
 9.84\times10^{-5},
 \qquad
 1.49\times10^{-3},
 \qquad
 3.21\times10^{-2}.
-$$
+```
 
 No incompatible endpoint choices are combined.
 
@@ -182,15 +182,15 @@ All asserted signs are separated from zero by large rational margins relative to
 
 The proof is rerun on the strict-rhombus train graph, not inferred by deleting singleton trains.  The pair theorem is used only on phase families inside its `<=K` size scope; the high-center branch again uses only triangle-freeness.  Hence
 
-$$
+```math
 T_R/D\ge2\sqrt{\Delta_2}+0.0076-o(1)
-$$
+```
 
 and the standard exact transfer gives
 
-$$
+```math
 \sigma_R/D\ge0.0152-o(1).
-$$
+```
 
 **Verdict:** PASS.
 
@@ -198,14 +198,14 @@ $$
 
 The repaired theorem validly establishes
 
-$$
+```math
 \boxed{(T-q/2)/D\ge2\sqrt{\Delta_2}+0.0076-o(1)},
-$$
+```
 
-$$
+```math
 \boxed{T_R/D\ge2\sqrt{\Delta_2}+0.0076-o(1),\qquad
 \sigma_R/D\ge0.0152-o(1)}.
-$$
+```
 
 The initial center-size scope bug is closed.  The next useful work is downstream propagation into the current energy-restored complement-rhombus-incidence and dominant-boundary structure, not further decimal tuning of the atomic capacity.
 

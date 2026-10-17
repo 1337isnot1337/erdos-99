@@ -20,10 +20,10 @@ c_h=r_h dot Ju, and let beta_h>0 be a relative-interior KKT multiplier.
 The positive gap circulation on current main has collapsed simple graph T. Deleting
 e and summing node balance over either component of T-e therefore gives the exact
 edgewise balance
-$$
+```math
 \boxed{\sum_{h\in H_e}\beta_h c_h=0.}
 \tag{1}
-$$
+```
 Both signs occur.
 
 Now take an internal edge 1<=a<b<=m-1. The four-host argument used in the current
@@ -32,58 +32,58 @@ A-layer, the diameter-thrackle property puts the endpoints on opposite hull arcs
 and those two internal A-host arcs have B-layers 0 and n. Hence every h in H_e has
 full B-support.
 
-Reorient h from B-layer 0 to B-layer n and call the vector $\widehat r_h$. The
+Reorient h from B-layer 0 to B-layer n and call the vector $`\widehat r_h`$. The
 paired-staircase sign rule gives
-$$
+```math
 \widehat r_h=\operatorname{sgn}(c_h)r_h,\qquad
 \widehat r_h\cdot Ju=|c_h|.
 \tag{2}
-$$
+```
 Thus the packet resultant
-$$
+```math
 P_e=\sum_{h\in H_e}\beta_h\widehat r_h
-$$
+```
 satisfies
-$$
+```math
 \boxed{P_e\cdot Ju=\sum_{h\in H_e}\beta_h|c_h|>0.}
 \tag{3}
-$$
+```
 So the packet cancels in the A-shear equation but not as a physical vector load
 when viewed across B.
 
 Let I be the internal tree edges and
-$$
+```math
 P_{\rm int}=\sum_{e\in I}P_e.
-$$
+```
 If I is nonempty, then
-$$
+```math
 \boxed{P_{\rm int}\cdot Ju>0.}
 \tag{4}
-$$
+```
 
 For B-train sigma_j orient its shore cut from B-layer 0 to n, let v_j be its unit
 contact direction, and let C_j>0 be its total contact KKT mass. The exact cut
 resultant identity gives
-$$
+```math
 \boxed{C_jv_j=P_{\rm int}+R_j,}
 \tag{5}
-$$
+```
 where R_j contains only actual diameter rows outside the internal A-packets. Indeed,
 each internal row has full B-support and signed incidence +1 on every B-cut in its
 B-orientation, so its contribution is independent of j.
 
 Dotting (5) with Jv_j gives
-$$
+```math
 \boxed{R_j\cdot Jv_j=-P_{\rm int}\cdot Jv_j.}
 \tag{6}
-$$
+```
 Thus every B-direction not parallel to P_int requires a transverse correction from
 an outside diameter row.
 
 Subtracting (5) for adjacent B-cuts gives
-$$
+```math
 C_{j+1}v_{j+1}-C_jv_j=R_{j+1}-R_j.
-$$
+```
 If no outside row changes B-incidence at that interface, then R_{j+1}=R_j, so
 C_{j+1}v_{j+1}=C_jv_j. Positivity of the contact masses and unit length of the
 coherently oriented train vectors force v_{j+1}=v_j. Therefore every adjacent
@@ -92,7 +92,7 @@ internal A-packets.
 
 Writing H_int=union_{e in I} H_e and s_B^ph for the number of adjacent B phase
 changes,
-$$
+```math
 \boxed{
 s_B^{\rm ph}\le
 \sum_{h\notin H_{\rm int}}t_B(h)
@@ -100,7 +100,7 @@ s_B^{\rm ph}\le
 \sum_{h\notin H_{\rm int}}(2-t_A(h)).
 }
 \tag{7}
-$$
+```
 The second inequality is the current joint per-edge switch theorem.
 
 Every h in H_int has two internal A-support endpoints, so t_A(h)=2. Its full

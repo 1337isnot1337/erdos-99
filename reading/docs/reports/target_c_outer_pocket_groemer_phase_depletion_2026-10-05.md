@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_outer_pocket_groemer_phase_depletion_2026-10-05.md) · source SHA-256 `f72078b55ebc5d9f35a74922e1e1149321eeab9abf71e2e70e628463c92e601e`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 2 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
+
 <!-- theorem-state: {"artifact_id":"ART-CDB4A193FF43","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — Groemer phase depletion of every outer-ended train
 
@@ -39,18 +41,18 @@ with diameters (D\to\infty). Use the actual contact-minimal, then
 diameter-pair-minimal source. Every contact-isolated source point is retained.
 Write (F) for the actual loaded force hull and use the current synthesis's
 
-$$
+```math
 q,m_B,u_B,b,Q,f,k,R_4,T,S,\sigma_R,
 \qquad s=\sqrt{\pi/(2\sqrt3)}.
-$$
+```
 
 In particular, (b=q+m_B+u_B), (h_B=q-m_B) is the number of unit
 loaded-hull sides, (P_{\rm exc}=4f+Q), and
 
-$$
+```math
 2T=b+P_{\rm exc},\qquad T=q-k+2f\le3\pi D.
 \tag{2.1}
-$$
+```
 
 Dependencies personally used are canonical [Section 67](../targets/target-c/67-rhombus-population-transport-audit.md)
 (hull augmentation, convex pockets, source assignment),
@@ -71,35 +73,35 @@ For pocket (j), let (\ell_j\ge2) be the number of actual unit contact
 edges in its remaining boundary path, (c_j) its added hull side, (z_j)
 its assigned isolated population, and
 
-$$
+```math
 r_j=\frac{A_j}{a_0}+\frac{\ell_j+|c_j|}{2}+1-(\ell_j+1)-z_j\ge0,
 \qquad a_0=\sqrt3/2.
 \tag{2.2}
-$$
+```
 
 An isolated point on the added side is assigned to its unique interior
 pocket, as in Section 67. It remains included in (z_j). The conservation
 identity gives (\sum_j r_j\le R_F), where
 
-$$
+```math
 R_F=\frac{A_F}{a_0}+\frac{P_F}{2}+1-N_F-\frac{E_4}{a_0}\ge0.
 \tag{2.3}
-$$
+```
 
 The hypotheses of the new theorem are
 
-$$
+```math
 \frac{R_F}{D}\longrightarrow0,
 \tag{H1}
-$$
+```
 
 and uniform integrability of the *occurrence lengths* of the pockets:
 
-$$
+```math
 \boxed{\lim_{K\to\infty}\limsup_{D\to\infty}
  \frac1D\sum_{j:\ell_j>K}\ell_j=0.}
 \tag{H2}
-$$
+```
 
 A fixed bound on all (\ell_j) is sufficient for (H2); it is not required.
 No bound on physical exceptional-face degrees is part of (H2).
@@ -108,34 +110,39 @@ No bound on physical exceptional-face degrees is part of (H2).
 
 For projective directions define reduced phase distance by
 
-$$
+```math
 \operatorname{dist}_{60}(\phi,\psi)
 =\min_{n\in\mathbb Z}|\phi-\psi-n\pi/3|.
-$$
+```
 
 **Lemma OP.1.** Fix (K\ge2) and (\eta>0). There is
 
-$$
+```math
 \sigma_K(\eta)>0
-$$
+```
 
 such that any convex polygon with (2\le\ell\le K), a unit-contact
 boundary path, a distinguished straight boundary chord of length at least one, and any
 unit-separated assigned source population satisfies
 
-$$
+```math
 r<\sigma_K(\eta)
 \quad\Longrightarrow\quad
 \operatorname{dist}_{60}(\arg e,\arg c)<\eta
 \quad\hbox{for every contact edge }e\hbox{ of the path}.
 \tag{3.1}
-$$
+```
 
 The chord may be an added pocket side or an actual unit hull side of a
 bounded contact face. This is a statement about directions, not contact
 activation or KKT support.
 
 ### Proof
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 
 Suppose the conclusion fails along a sequence with residual tending to zero.
 Pass to a fixed path length (\ell\). Since the contact path has length
@@ -145,15 +152,18 @@ the assigned population uniformly. Pass to a fixed population and normalize
 one chord endpoint to the origin and its direction to the positive real axis.
 All source coordinates lie in a fixed compact set. Unit separation keeps the
 labelled points distinct in every limit.
+```
+
+
 
 The pocket is the convex hull of its path vertices; adding its assigned
 points does not change that hull. Area and convex perimeter are continuous,
 also at a segment limit. The limiting set thus attains equality in
 
-$$
+```math
 N\le A/a_0+P/2+1.
 \tag{3.2}
-$$
+```
 
 The equality classification, checked in the authors' original
 [Böröczky–Ruzsa manuscript, page 2](https://users.renyi.hu/~carlos/wegner.pdf),
@@ -177,10 +187,10 @@ occurrences; count both. Every such occurrence is either a unit hull side or
 a contact edge on exactly one pocket boundary. Indeed hull augmentation
 puts every other old outer-side occurrence on a new bounded pocket. Thus
 
-$$
+```math
 b=h_B+\sum_j\ell_j.
 \tag{4.1}
-$$
+```
 
 **Theorem OP.2.** Under (H1)--(H2), the number of actual strict rhombi
 incident with at least one train of (\mathcal O_D) is (o(D^2)).
@@ -206,11 +216,11 @@ length. Uniformly in the shifted reduced interval, the side count in a
 width-(w) bin is ((3w+o_w(1))D). Consequently each width-(\epsilon)
 train bin contains at most
 
-$$
+```math
 g_j\le (3+9K)\epsilon D+o_{K,\epsilon}(D)
        +\sum_{\ell_i>K}\ell_i
 \tag{4.2}
-$$
+```
 
 members of (\mathcal O_D). Associate each train with one of its outer
 terminal occurrences to obtain this upper bound; distinct trains cannot
@@ -220,19 +230,19 @@ Section 69 deletes (O_\epsilon(D)) rhombus crossing edges to put every
 remaining edge into a common real phase bin. The train graph is simple, so
 the number of retained crossings touching (\mathcal O_D) is at most
 
-$$
+```math
 \sum_j g_jT_j\le(\max_j g_j)T\le3\pi D\max_j g_j.
 \tag{4.3}
-$$
+```
 
 Writing (\beta_K=\limsup_D D^{-1}\sum_{\ell_i>K}\ell_i), (4.2)--(4.3)
 and the deleted edges give
 
-$$
+```math
 \limsup_D\frac{R_{\mathcal O}}{D^2}
 \le3\pi[(3+9K)\epsilon+\beta_K].
 \tag{4.4}
-$$
+```
 
 First take the source sequence limit with (K,\epsilon) fixed. Then let
 (\epsilon\downarrow0), still with (K) fixed. Finally let
@@ -249,19 +259,19 @@ two terminal occurrences on bounded nonquadrilateral faces. Let
 (T_{\rm mix}) count trains with one outer end and one such bounded end.
 Exact terminal counting gives
 
-$$
+```math
 \boxed{P_{\rm exc}=2T_{\rm int}+T_{\rm mix}.}
 \tag{5.1}
-$$
+```
 
 After OP.2, the induced crossing graph on the internal bank retains
 ((\Delta_2-o(1))D^2) rhombi. Mantel yields
 
-$$
+```math
 \boxed{T_{\rm int}\ge(2s-o(1))D,\qquad
  P_{\rm exc}\ge(4s-o(1))D+T_{\rm mix}.}
 \tag{5.2}
-$$
+```
 
 Thus no sequence satisfying (H1)--(H2) has
 (\limsup T_{\rm int}/D<2s), or
@@ -285,21 +295,21 @@ cardinality is (z_O=|\mathcal O_D|-|G_D|\ge0).
 
 Substituting it immediately into (S) gives
 
-$$
+```math
 \boxed{
 5m_B+4S+2\sigma_R\ge2(\pi+s)D
  +5z_O+5k+2(Q-f)+2(b-P_F)-o(D).
 }
 \tag{6.1}
-$$
+```
 
 Every train has at most two outer ends, so (|\mathcal O_D|\ge b/2).
 Since (b=q+m_B+u_B),
 
-$$
+```math
 \boxed{z_O\ge\max\{0,(3m_B+u_B-q)/2+d_D\}.}
 \tag{6.2}
-$$
+```
 
 In particular a live large-(m_B) branch satisfying
 (3m_B+u_B-q\ge cD) pays an additional (5cD/2) in (S).
@@ -316,11 +326,11 @@ Fix an integer (K\ge5). Let (\mathcal B_{K,D}) be **all** bounded
 nonquadrilateral physical contact faces of degree at most (K) having an
 actual unit loaded-hull side. Put
 
-$$
+```math
 P_{B,K}=\sum_{f\in\mathcal B_{K,D}}\deg f,
 \qquad P_{U,K}=P_{\rm exc}-P_{B,K}.
 \tag{6.3}
-$$
+```
 
 Choose one unit hull side as an anchor for each selected face. These anchors
 are distinct: an actual hull side has only one inside face. They are also
@@ -343,12 +353,12 @@ exactly of trains whose two ends lie on unselected exceptional faces.
 If its size is (T_{U,K}), and (T_{\rm mix,K}) counts trains with one
 unselected-face end and one marked end, then
 
-$$
+```math
 \boxed{T_{U,K}\ge(2s-o(1))D,\qquad
 P_{U,K}=2T_{U,K}+T_{\rm mix,K}
 \ge(4s-o(1))D+T_{\rm mix,K}.}
 \tag{6.4}
-$$
+```
 
 Thus boundary Groemer faces cannot supply the surviving quadratic bank.
 For every fixed (K), a sequence with (H1)--(H2) and
@@ -360,11 +370,11 @@ conditional branch elimination.
 There are (b+P_{B,K}) marked terminal occurrences, and each train has at
 most two. Hence the extra deletion beyond (G_D), denoted (z_K), obeys
 
-$$
+```math
 \boxed{z_K=|\mathcal D_{K,D}|-|G_D|
 \ge\max\{0,(3m_B+u_B-q+P_{B,K})/2+d_D\}.}
 \tag{6.5}
-$$
+```
 
 Replace (z_O) by this stronger (z_K) in (6.1). This is the requested
 phase second depletion on a concrete family of bounded-degree exceptional
@@ -373,6 +383,11 @@ The large unselected-face perimeter in (6.4) still needs a contradiction
 or finite source replacement.
 
 ## 7. Hostile checks and exact surviving gap
+
+
+**Source formatting excerpt (unbalanced inline math in the original):**
+
+```text
 
 - A pocket has one added side by the finite incidence argument, not by an
   assumed source path being Eulerian. Bridges retain both occurrences.
@@ -389,6 +404,9 @@ or finite source replacement.
   by a possibly small carrier diameter.
 - Actual source global optimality supplies the canonical Type-II/phase/force
   hull inputs. This result is not an all-constraints deformation theorem.
+```
+
+
 
 The companion [exact verifier](../../../research/verify_target_c_outer_pocket_phase_depletion_2026_10_05.py)
 checks rational triangular pockets approaching Groemer equality, an explicit

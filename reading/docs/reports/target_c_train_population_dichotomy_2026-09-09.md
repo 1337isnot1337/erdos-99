@@ -37,51 +37,51 @@ Use the post-ZF notation:
 
 DT gives
 
-$$
+```math
 T=\frac{b+Q}{2}+2f,
 \tag{1.1}
-$$
+```
 
 and Euler gives
 
-$$
+```math
 R=v+f-T-1.
 \tag{1.2}
-$$
+```
 
 ZF gives
 
-$$
+```math
 b+Q\le2h.
 \tag{1.3}
-$$
+```
 
 Every bounded nonquadrilateral face has degree at least five, so
 
-$$
+```math
 f\le Q.
 \tag{1.4}
-$$
+```
 
 The distinguished outer-walk decomposition gives
 
-$$
+```math
 b\ge \operatorname{per}(F).
 \tag{1.5}
-$$
+```
 
 Finally the diameter-direction perimeter theorem from the companion report gives, with
 
-$$
+```math
 a_D:=\arcsin\frac1{2D},
-$$
+```
 
-$$
+```math
 \operatorname{per}(F)
 \ge
 (h-1)+2D\cos((h-1)a_D).
 \tag{1.6}
-$$
+```
 
 ## 2. Exact train-count upper bound from diameter support
 
@@ -89,52 +89,52 @@ $$
 
 Every post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 T\le5h-2\operatorname{per}(F).
 }
 \tag{ZP.1}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 T\le
 3h+2-4D\cos((h-1)a_D).
 }
 \tag{ZP.2}
-$$
+```
 
 ### Proof
 
 From (1.1), (1.3), and `f<=Q`,
 
-$$
+```math
 T
 =\frac{b+Q}{2}+2f
 \le h+2Q.
-$$
+```
 
 Equation (1.3) also gives
 
-$$
+```math
 Q\le2h-b.
-$$
+```
 
 Hence
 
-$$
+```math
 T\le h+2(2h-b)=5h-2b
 \le5h-2\operatorname{per}(F),
-$$
+```
 
 proving ZP.1. Substitute (1.6):
 
-$$
+```math
 T
 \le5h-2(h-1)-4D\cos((h-1)a_D),
-$$
+```
 
 which is ZP.2. QED.
 
@@ -144,16 +144,16 @@ The bound is finite and retains every exceptional-face and bridge term through t
 
 DT proves that the train-crossing graph is simple and triangle-free, with `T` vertices and `R` edges. Mantel therefore gives
 
-$$
+```math
 R\le\frac{T^2}{4}.
 \tag{3.1}
-$$
+```
 
 Euler (1.2) gives
 
-$$
+```math
 v=R-f+T+1\le R+T+1.
-$$
+```
 
 Thus:
 
@@ -161,30 +161,30 @@ Thus:
 
 Every post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 v\le\frac{T^2}{4}+T+1.}
 \tag{ZP.3}
-$$
+```
 
 Combining with ZP.2 gives the explicit finite estimate
 
-$$
+```math
 \boxed{
  v\le
  \frac14 U_D(h)^2+U_D(h)+1,
 }
 \tag{ZP.4}
-$$
+```
 
 where
 
-$$
+```math
 \boxed{
 U_D(h):=3h+2-4D\cos((h-1)\arcsin(1/(2D))).
 }
 \tag{ZP.5}
-$$
+```
 
 The estimate is useful precisely because `v`, not the full source cardinality `n`, appears on the left. Contact-isolated points are retained as the complementary population `n-v`.
 
@@ -192,52 +192,52 @@ The estimate is useful precisely because `v`, not the full source cardinality `n
 
 The standard global packing bounds give
 
-$$
+```math
 \frac{n}{D^2}\longrightarrow
 \Delta:=\frac{\pi}{2\sqrt3}.
 \tag{4.1}
-$$
+```
 
 Consider any subsequence for which
 
-$$
+```math
 \frac hD\longrightarrow x.
 \tag{4.2}
-$$
+```
 
 The diameter-direction packing has `h=O(D)`, and the post-ZF theorem gives `x>=tau_*`, where
 
-$$
+```math
 \tau_*=1.4781702664\ldots
-$$
+```
 
 is the root of `tau=2cos(tau/2)`.
 
 Since
 
-$$
+```math
 D\arcsin\frac1{2D}\longrightarrow\frac12,
-$$
+```
 
 ZP.2 yields
 
-$$
+```math
 \limsup\frac TD
 \le
 A(x):=3x-4\cos\frac x2.
 \tag{4.3}
-$$
+```
 
 Therefore ZP.3 gives
 
-$$
+```math
 \boxed{
 \limsup\frac v{D^2}
 \le
 \frac14\left(3x-4\cos\frac x2\right)^2.
 }
 \tag{ZP.6}
-$$
+```
 
 Subtract from (4.1):
 
@@ -245,48 +245,48 @@ Subtract from (4.1):
 
 Along every subsequence with `h/D->x`,
 
-$$
+```math
 \boxed{
 \liminf\frac{n-v}{D^2}
 \ge
 \Delta-rac14\left(3x-4\cos\frac x2\right)^2.
 }
 \tag{ZP.7}
-$$
+```
 
 whenever the displayed right side is positive.
 
 Let `x_0` be the unique root above `tau_*` of
 
-$$
+```math
 3x-4\cos\frac x2=2\sqrt\Delta.
 \tag{4.4}
-$$
+```
 
 Numerically,
 
-$$
+```math
 \boxed{x_0=1.5754757611\ldots .}
 \tag{ZP.8}
-$$
+```
 
 Thus every hypothetical sequence with
 
-$$
+```math
 \limsup\frac hD<x_0
-$$
+```
 
 has a **positive quadratic density** of contact-isolated source points.
 
 At the smallest diameter-edge density allowed by the new perimeter bootstrap, `x=tau_*`, the explicit lower coefficient is
 
-$$
+```math
 \boxed{
 \Delta-rac14A(\tau_*)^2
 =0.3606528479\ldots .
 }
 \tag{ZP.9}
-$$
+```
 
 So a survivor near the new `h/D` endpoint would have at least about `0.36065 D^2` contact-isolated source points. This is not an `O(D)` bookkeeping effect.
 
@@ -294,20 +294,21 @@ So a survivor near the new `h/D` endpoint would have at least about `0.36065 D^2
 
 Now impose the existing DF hypothesis
 
-$$
+```math
 n-v=o(D^2).
 \tag{5.1}
-$$
+```
 
 The reviewed proof of DF establishes two facts in this branch:
 
 1. after scaling by `D`, the force/contact-core hull converges to the disk of diameter one, hence
-   $$
+   ```math
    \frac{\operatorname{per}(F)}D\longrightarrow\pi;
    \tag{5.2}
-   $$
+   
+   ```
 2. the exceptional-face count obeys
-   $$
+   ```math
    \liminf\frac fD
    \ge
    \kappa,
@@ -316,17 +317,18 @@ The reviewed proof of DF establishes two facts in this branch:
    \sqrt\Delta-\frac\pi4
    =0.166914643466509\ldots .
    \tag{5.3}
-   $$
+   
+   ```
 
 Since `Q>=f`, `b>=per(F)`, and a ZF survivor has `b+Q<=2h`,
 
-$$
+```math
 \frac{2h}{D}
 \ge
 \frac{b}{D}+\frac{Q}{D}
 \ge
 \frac{\operatorname{per}(F)}D+rac fD.
-$$
+```
 
 Take lower limits.
 
@@ -334,7 +336,7 @@ Take lower limits.
 
 Every post-ZF sequence with `n-v=o(D^2)` satisfies
 
-$$
+```math
 \boxed{
 \liminf\frac hD
 \ge
@@ -343,7 +345,7 @@ $$
 =1.6542536485\ldots .
 }
 \tag{ZP.10}
-$$
+```
 
 The same lower bound holds for `q/D`, because `q>=h`.
 
@@ -363,19 +365,19 @@ The gap between `x_0` and the dense-core floor is not a contradiction: the hypot
 
 The exact ZE/ZT ledger on current main writes
 
-$$
+```math
 q=x_B+f+g_F+2d_H+2s_Z,
-$$
+```
 
 and
 
-$$
+```math
 T-q=2q-2x_B-2g_F-5(d_H+s_Z).
-$$
+```
 
 ZP does not replace these identities. It supplies an independent **metric upper bound** on `T` in terms of the actual diameter-direction support. Combining the exact ledger with ZP is therefore a plausible next route for controlling `s_Z`: equality or near equality in ZP forces simultaneous near equality in
 
-$$
+```math
 f\le Q,
 \qquad
 Q\le2h-b,
@@ -383,7 +385,7 @@ Q\le2h-b,
 b\ge\operatorname{per}(F),
 \qquad
 R\le T^2/4.
-$$
+```
 
 That is a much narrower equality regime than the raw exact ledger.
 
@@ -409,9 +411,9 @@ No uniform local Oler charge is introduced. The argument uses only exact train c
 
 The direct Level I endpoint remains
 
-$$
+```math
 \boxed{b+Q>2h.}
-$$
+```
 
 Equivalently, in the exact post-ZF ledger, one must rule out `s_Z>=0`.
 

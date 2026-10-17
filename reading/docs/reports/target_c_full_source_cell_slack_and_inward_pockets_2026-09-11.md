@@ -46,22 +46,22 @@ No authoritative theorem status is changed by this report.
 
 Write
 
-$$
+```math
 a_0=\frac{\sqrt3}{2},\qquad c_0=\frac{\sqrt3}{4},\qquad
 K=\operatorname{conv}A,\quad P_K=\operatorname{per}K,
-$$
+```
 
-$$
+```math
 \delta_K=\frac{\pi D^2}{4}-\operatorname{area}K,
 \qquad
 \mathcal O_A=\operatorname{area}K+c_0P_K-a_0(n-1).
-$$
+```
 
 The strict global lattice comparison gives
 
-$$
+```math
 \delta_K+\mathcal O_A<c_0P_K.                 \tag{1.1}
-$$
+```
 
 The attempted closure was to prove the opposite inequality from actual
 source cell slacks and the C-II geometry. It must recover the entire boundary
@@ -79,10 +79,10 @@ contacts are minimized first and diameter pairs second, with `C=C_*` and
 `H=H_*`. Retain every source point. Let `G` be the connected nonisolated
 contact core, `v=|V(G)|`, `e=|E(G)|`, and
 
-$$
+```math
 F=\operatorname{conv}V(G),\qquad P_F=\operatorname{per}F,
 \qquad q=|\operatorname{Vert}F|.
-$$
+```
 
 The promoted force-hull/C26 inputs identify these hull vertices with the
 loaded vertices. They are also extreme vertices of `K`. Every other core
@@ -95,21 +95,21 @@ number of graph-boundary vertices and let `z_T` count the assigned source
 isolates in that cell. Points on an added hull side are assigned to its
 unique bounded cell. Define
 
-$$
+```math
 \sigma_T=\frac{\operatorname{area}T}{a_0}
           +\frac{\operatorname{per}T}{2}+1-k_T-z_T.       \tag{2.1}
-$$
+```
 
 For every side of `F` that is not a common side of `K`, let `K_i` be the
 convex exterior cap between that side and the corresponding source-hull arc.
 Let `k` count these nondegenerate caps, `P_com` be the total common-side
 length, and `z_i=|A cap (K_i setminus F)|`. Set
 
-$$
+```math
 \sigma_i=\frac{\operatorname{area}K_i}{a_0}
           +\frac{\operatorname{per}K_i}{2}-1-z_i,
 \qquad L=P_F-P_{\rm com}-k.                         \tag{2.2}
-$$
+```
 
 If `F=K`, set `k=0`, `P_com=P_F`, and `L=0`.
 
@@ -117,35 +117,35 @@ If `F=K`, set `k=0`, `P_com=P_F`, and `L=0`.
 
 All the slacks in (2.1)--(2.2) are nonnegative, and
 
-$$
+```math
 \boxed{
 W:=a_0\left(\sum_{T\in\mathcal T}\sigma_T+\sum_i\sigma_i\right)
   =\mathcal O_A+a_0L.
 }                                                        \tag{2.3}
-$$
+```
 
 Let `mathcal R` consist of the original bounded quadrilateral contact faces,
 and put
 
-$$
+```math
 E=\sum_{R\in\mathcal R}(\operatorname{area}R-a_0).
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 0\le E\le W,\qquad
 \delta_K+E<c_0P_K+a_0L
 \le c_0P_K+a_0(P_F-q).
 }                                                        \tag{2.4}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{E<3\pi c_0D-a_0q=O(D).}                           \tag{2.5}
-$$
+```
 
 No circuit identity, diameter-topology classification, small-isolate bound,
 or simultaneous hull saturation is assumed.
@@ -183,22 +183,22 @@ Let `a` be the number of added hull sides and `L_add` their total length.
 Let `fhat=e+a-v+1` be the number of bounded augmented faces. Euler and
 edge incidence, retaining repeated original outer-walk occurrences, give
 
-$$
+```math
 \sum_T k_T=2(e+a)-q,
 \qquad
 \sum_T\operatorname{per}T=2(e+L_{\rm add})-P_F.          \tag{2.6}
-$$
+```
 
 The `q-a` existing hull sides are unit contacts, so
 
-$$
+```math
 P_F=q-a+L_{\rm add}.                                    \tag{2.7}
-$$
+```
 
 Write `N_F=|A cap F|=v+sum_T z_T`. Summing (2.1) and using
 (2.6)--(2.7) yields exactly
 
-$$
+```math
 \begin{aligned}
 \sum_T\sigma_T
 &=\frac{\operatorname{area}F}{a_0}
@@ -206,7 +206,7 @@ $$
   +(e+a-v+1)-[2(e+a)-q]-(N_F-v)\\
 &=\frac{\operatorname{area}F}{a_0}+\frac{P_F}{2}+1-N_F.
 \end{aligned}                                           \tag{2.8}
-$$
+```
 
 This is an identity of actual source slacks, not a replacement packing.
 
@@ -218,21 +218,21 @@ apart from their closing chords. Each cap contains its two chord endpoints
 and `z_i` external source points. Oler proves `sigma_i>=0`. The exact sums
 are
 
-$$
+```math
 \sum_i\operatorname{area}K_i=\operatorname{area}K-\operatorname{area}F,
 \qquad
 \sum_i\operatorname{per}K_i=P_K+P_F-2P_{\rm com},
 \qquad
 \sum_i z_i=n-N_F.                                       \tag{2.9}
-$$
+```
 
 Combining (2.8)--(2.9) proves
 
-$$
+```math
 \sum_T\sigma_T+\sum_i\sigma_i
 =\frac{\operatorname{area}K}{a_0}+\frac{P_K}{2}+1-n
  +P_F-P_{\rm com}-k,
-$$
+```
 
 which is (2.3).
 
@@ -248,9 +248,9 @@ Round `t,s` to `i,j in {0,1}`. The residual coefficients lie in
 
 Thus its slack is exactly
 
-$$
+```math
 a_0\sigma_R=\operatorname{area}R-a_0.
-$$
+```
 
 Every other summand of `W` is nonnegative, giving `E<=W`. Combine this
 with (1.1) and (2.3) to obtain the strict bound in (2.4). There are `q-k`
@@ -288,9 +288,9 @@ Oler inequality and not a closure by itself.
 The remote [CRC report, Section 3](https://github.com/1337isnot1337/e-99/blob/053e1e1b85643b738b4cde306838d150ea325783/docs/reports/target_c_cyclic_reuleaux_cap_detour_2026-09-10.md)
 asserts for an OP pocket behind a missing hull side `AB` that
 
-$$
+```math
 P\subset K\cap H_{AB}^{\rm out}.                         \tag{3.1}
-$$
+```
 
 But an OP pocket is a bounded face of `G union partial F`, obtained by
 cutting the original outer contact face **inside** `F`. Thus it is on the
@@ -302,19 +302,19 @@ The fact that `K` lies in the Reuleaux container proves containment of the
 external source cap. It does not identify that cap with the internal contact
 pocket. In particular the following claimed implication fails:
 
-$$
+```math
 \text{Reuleaux arc above }AB\quad\Longrightarrow\quad
 \ell_{\rm contact}(A,B)\le D\phi.                         \tag{3.2}
-$$
+```
 
 ### Exact force-visible circuit regression
 
 Let
 
-$$
+```math
 p_j=(\cos(2\pi j/5),\sin(2\pi j/5)),\quad 0\le j<5,
 \qquad o=(0,0).
-$$
+```
 
 The configuration `A={o,p_0,...,p_4}` is unit-separated and triangle-free.
 Its contacts are the five spokes `op_j`. Its diameter is
@@ -324,9 +324,9 @@ minimizer. Moreover `e+h=10=2v-2`, so its mixed surplus is zero.
 
 There is a normalized fully positive KKT stress
 
-$$
+```math
 \beta_h=\frac15,\qquad \alpha_{op_j}=\frac{D^2}{5}.
-$$
+```
 
 Indeed
 `(p_j-p_{j+2})+(p_j-p_{j-2})=D^2 p_j`, and the five radial vectors sum to
@@ -337,9 +337,9 @@ For consecutive outer vertices `A=p_0`, `B=p_1`, the OP pocket is the
 triangle `AoB` and its contact-chain length is `ell=2`. The corresponding
 Reuleaux arc is centered at `p_3` and has angle `phi=pi/5`. But
 
-$$
+```math
  D\phi=\frac{2\pi}{5}\sin\frac{2\pi}{5}<2=\ell.        \tag{3.3}
-$$
+```
 
 Thus the purported local inequality is false even on this actual global
 minimizer. The example is finite, so it does not disprove a theorem with a
@@ -350,20 +350,20 @@ containment/monotonicity step used in its supplied proof.
 
 For any `D>=2`, set
 
-$$
+```math
 A=(-1/\sqrt2,0),\quad B=(1/\sqrt2,0),\quad
 x=(0,-1/\sqrt2),\quad c=(0,-\sqrt{D^2-1/2}).
-$$
+```
 
 Then `|A-x|=|B-x|=1`, `|A-B|=sqrt(2)`, and
 `|A-c|=|B-c|=D`. The convex triangle `AxB` lies in the radius-`D` disk
 centered at `c`, but on the opposite side of `AB` from its minor cap.
 Here
 
-$$
+```math
 \phi_D=2\arcsin\frac{1}{\sqrt2D}\longrightarrow0,
 \qquad D\phi_D\longrightarrow\sqrt2<2=\ell.
-$$
+```
 
 This is a regression for the proposed geometric inference only. It is not a
 large C-II realization or a global-optimality certificate.
@@ -399,15 +399,15 @@ No unrestricted high-surplus contradiction was obtained.
 
 FSCS gives the exact new expression
 
-$$
+```math
 \delta_K+\mathcal O_A=\delta_K+W-a_0L.
-$$
+```
 
 To contradict global optimality it would suffice to prove
 
-$$
+```math
 \boxed{\delta_K+W\ge c_0P_K+a_0L}                       \tag{4.1}
-$$
+```
 
 for every sufficiently large C-II source. This is the exact surviving
 obligation for the new ledger. Nonnegativity of all local slacks only gives

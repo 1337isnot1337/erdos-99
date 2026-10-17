@@ -48,16 +48,16 @@ cross or share an endpoint. Suppose `H` has `m>=3` edges. Orient and order these
 edges in a common open projective half-plane, and let `Q` be their incidence
 matrix. If `R=Lambda^+` and
 
-$$
+```math
 K=Q^{\mathsf T}RQ
-$$
+```
 
 is diagonal, the effective-resistance metric on **all** of `B` is additive:
 
-$$
+```math
 W_{bc}=r_b+r_c\quad(b\ne c),\qquad r_b\ge0.
 \tag{Z1}
-$$
+```
 
 The assertion includes disconnected diameter graphs. It is stronger than
 componentwise additivity of a zero-transfer star forest.
@@ -66,19 +66,19 @@ componentwise additivity of a zero-transfer star forest.
 
 The circular-planar resistance split theorem gives
 
-$$
+```math
 W=\sum_A\lambda_A\delta_A,\qquad \lambda_A\ge0,
 \tag{Z2}
-$$
+```
 
 where `A` is a nonempty proper circular interval of terminals and `delta_A` is
 one between the two shores and zero within a shore. For
 `z_A=Q^T 1_A`, centering the resistance matrix gives
 
-$$
+```math
 K=\sum_A\lambda_A z_Az_A^{\mathsf T}.
 \tag{Z3}
-$$
+```
 
 This also follows from the weighted spanning-two-forest formula for effective
 resistance. Two disjoint trees in a disk cannot have alternating terminal sets;
@@ -86,34 +86,34 @@ their nontrivial terminal partition is a circular split.
 
 For any ordered three chords `e<f<g`, the interval-sign inequalities are
 
-$$
+```math
 z_g(z_e-z_f)\le0,\qquad z_e(z_g-z_f)\le0.
 \tag{Z4}
-$$
+```
 
 These are C53.T. Their complete endpoint-type check is audited in Section 5.
 Because `K` is diagonal, for `r<i` we have
 
-$$
+```math
 0=K_{ri}-K_{r,i+1}
  =\sum_A\lambda_A z_r(z_i-z_{i+1}).
-$$
+```
 
 Each summand is nonnegative by (Z4), so every positive split has
 `z_r(z_i-z_{i+1})=0`. Similarly, for `r>i+1`,
 
-$$
+```math
 0=K_{ir}-K_{i+1,r}
  =\sum_A\lambda_A z_r(z_i-z_{i+1}),
-$$
+```
 
 where every summand is nonpositive. Thus, for every positive split and every gap,
 
-$$
+```math
 z_i\ne z_{i+1}\quad\Longrightarrow\quad
 \operatorname{supp}z\subseteq\{i,i+1\}.
 \tag{Z5}
-$$
+```
 
 Apply this at **all** gaps. If `z` is not constant, choose a gap where it changes.
 By (Z5) its support has size at most two. If it has size two, both entries at
@@ -139,11 +139,11 @@ terminal split. Collecting its nonnegative weights proves (Z1). QED.
 
 ### Exact invariant change
 
-$$
+```math
 K=B_H^{-1}
 \Longrightarrow W\text{ additive on the complete terminal set}
 \Longrightarrow\text{SEPq degree contradiction if }|B|\ge6.
-$$
+```
 
 The existing C56.7 conclusion allowed one-edge or two-adjacent-edge split support.
 Applying its equality condition at every gap eliminates the two-edge option.
@@ -175,9 +175,9 @@ changing the older route map's gates.
 In the contact-minimal, fully force-visible C-II source, choose a relative-interior
 normalized KKT stress. If `D>=9`, C34 gives
 
-$$
+```math
 2q\ge\lceil D\rceil+2,
-$$
+```
 
 so `q>=6` and `m=|H_+|>=3`. The actual positive contact graph is connected and
 circular-planar with terminal set `B_+`. All terminals are extreme and all
@@ -195,18 +195,18 @@ smaller support.
 Under the same hypotheses the scalar stress matrix on the `v` nonisolated core
 vertices has
 
-$$
+```math
 \ker\Omega=\operatorname{span}\{\mathbf1,P_x,P_y\},
 \qquad \operatorname{rank}\Omega=v-3.
 \tag{ZR1}
-$$
+```
 
 Proof: ZC excludes C56-Z, so C56-G says that the edge defect has nullity two.
 On the zero-sum terminal space set
 
-$$
+```math
 Y=\Lambda^{-1/2}QB_H^{1/2}.
-$$
+```
 
 The matrices `I-Y^T Y` and `I-YY^T` have the same multiplicity of the zero
 eigenvalue, namely two, by the singular-value decomposition. Congruence identifies
@@ -224,10 +224,10 @@ nonisolated core with both contact and diameter pairs treated as bars is
 infinitesimally rigid. In particular, writing `e` for the number of contacts and
 `h` for the number of diameter pairs,
 
-$$
+```math
 e+h\ge2v-2.
 \tag{ZF1}
-$$
+```
 
 Proof: C63 integrates every relative-interior critical velocity by an `O(t^2)`
 correction. Contact minimality eliminates weak contacts; minimizing diameter-pair
@@ -240,11 +240,11 @@ diameter pair can be lost, by the two minimality choices. The resulting points
 Sum the signed squared-length identities with the relative-interior stress.
 Since `Omega p=0`,
 
-$$
+```math
 0=\sum_C\alpha_e(|(p+x)_e|^2-1)
  -\sum_H\beta_h(|(p+x)_h|^2-D^2)
  =\sum_{k=1}^2x_k^{\mathsf T}\Omega x_k.
-$$
+```
 
 PSD and division by `t^2` give `Omega u_k=0` for both coordinates. By ZR,
 `u_i=b+Ap_i`. Each active diameter has zero radial first variation, so
@@ -260,10 +260,10 @@ points are not counted in `v`; they are not mistakenly made rigid by this proof.
 Combining (ZF1) with the canonical penny-graph bound
 `e<=2v-delta-2` yields the additional necessary condition
 
-$$
+```math
 h\ge\delta\ge\lceil D\rceil.
 \tag{ZF2}
-$$
+```
 
 ### Corollary ZB: pure rhombic disk exclusion
 
@@ -282,18 +282,18 @@ global minimizer.
 
 Let `R,T,q` denote rhombi, trains, and hull vertices. The exact identities are
 
-$$
+```math
 v=R+T+1,\qquad e=2R+T=2v-T-2,\qquad h\le q.
-$$
+```
 
 Equation (ZF1) implies `h>=T`, hence `q>=T`. But the audited exposed-hull
 theorem in Target B Section 39 gives along every such unbounded sequence
 
-$$
+```math
 \liminf\frac{T-q}{D}
 \ge\frac{4-\pi\sqrt{2\sqrt3/\pi}}
  {2\sqrt{2\sqrt3/\pi}}>0.
-$$
+```
 
 Its positive leading coefficient makes `T>q` for all sufficiently large members,
 a contradiction. Here an asymptotic estimate is used only with a fixed linear
@@ -316,24 +316,24 @@ No internal path vertex is incident to a diameter pair of `A`.
 More precisely, for `x=(t,h)` with `0<t<D`, put `m=min(t,D-t)` and suppose
 `|h|<=r m`, where `0<=r<2-sqrt(3)`. Then for every `y in A`,
 
-$$
+```math
 |x-y|^2\le D^2-Dm\left(\frac12-\sqrt3r-\frac{r^2}{2}\right)<D^2.
 \tag{P1}
-$$
+```
 
 Proof: `y` belongs to the intersection of the two radius-`D` endpoint disks, so
 `|y_2|<=sqrt(3)D/2`. With `x_0=(t,0)`, the exact convex-combination identity is
 
-$$
+```math
 |x_0-y|^2
 =(1-t/D)|z-y|^2+(t/D)|a-y|^2-t(D-t).
-$$
+```
 
 Thus
 
-$$
+```math
 |x-y|^2\le D^2-t(D-t)+\sqrt3D|h|+h^2.
-$$
+```
 
 Since `t(D-t)=m(D-m)`, `m<=D/2`, and `|h|<=rm`, the deficit from `D^2` is at
 least `Dm[1/2-sqrt(3)r-r^2/2]`. The bracket is positive exactly in the stated
@@ -345,10 +345,10 @@ the slope bound separately from each endpoint gives
 
 Let `M>=2` be an integer, `c=cos(pi/12)`, `s=sin(pi/12)`, and set
 
-$$
+```math
 x_j=(jc,js)\quad(0\le j\le M),
 \qquad x_{M+j}=((M+j)c,(M-j)s)\quad(0\le j\le M).
-$$
+```
 
 Adjoin `y=(Mc,-sqrt(3)Mc)`. The diameter is `D=2Mc`. The four corners
 `x_0,x_M,x_{2M},y` have all pairwise distances at most `D`; in particular
@@ -397,10 +397,10 @@ the same active graph as the original minimizer.
 C100's separator path has angle bound `arcsin((1-b)/b)` when the primary diameter
 weight is `b`. If
 
-$$
+```math
 b>\frac1{1+\sin(\pi/12)},
 \tag{P2}
-$$
+```
 
 Theorem P makes every internal path vertex non-diametral. In a fully visible core
 it is consequently an unloaded, nonextreme vertex. This removes that particular
@@ -458,16 +458,16 @@ The affine response identity gives `M1=Mt=0` for a symmetric matrix with
 increasing `t`. Let `D_0` be first differences and `T_0` their cumulative right
 inverse with first coordinate zero. Set
 
-$$
+```math
 H_0=D_0\Gamma^{-1}MT_0.
-$$
+```
 
 For `k<i` and `k>i`, respectively, its off-diagonal entries are
 
-$$
+```math
 -(\sum_{r\le k}\gamma_r(K_{ir}-K_{i+1,r})),\qquad
 \sum_{r>k}\gamma_r(K_{ir}-K_{i+1,r}).
-$$
+```
 
 Both are nonpositive by Robinson monotonicity. Also
 `H_0(D_0t)=0` with `D_0t>0`. Positive diagonal similarity therefore makes `H_0`
@@ -495,9 +495,9 @@ The complete weighted proof is in
 The decisive checks are these. Put `c=min_{i!=j}K_ij` and `A_ij=K_ij-c`.
 Then
 
-$$
+```math
 L_A=M-c(G\Gamma-\gamma\gamma^{\mathsf T}),\qquad G=\sum_i\gamma_i.
-$$
+```
 
 Centering `t` in the weighted mean gives eigenvalue `-cG`, so `c<=0`.
 If `c=0`, the energy sum with distinct `t_i` makes every off-diagonal `K_ij`
@@ -524,10 +524,10 @@ Farkas consequently makes `A_* y>=-g(x)` feasible at every iterate. The fixed
 matrix Hoffman bound supplies a solution with
 `||y||<=H ||g(x)_-||`. For a constant `L`,
 
-$$
+```math
 \|Q_*(x+y)-Q_*(x)\|
 \le L(\|x\|\|y\|+\|y\|^2).
-$$
+```
 
 Starting at `x_0=tu`, `A_*u=0`, gives violation `O(t^2)`. Choose `t` so small
 that all iterates within `2t||u||+O(t^2)` have contraction factor below `1/2`.

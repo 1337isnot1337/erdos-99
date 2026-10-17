@@ -29,22 +29,22 @@ close the surplus or triangle-free population obstruction.
 
 For a C-II source (A_j) in the C65 full-diameter-visible normalization, write
 
-$$
+```math
 D_j=\operatorname {diam}A_j,
 \qquad K_j=\operatorname {conv}A_j,
 \qquad F_j=\operatorname {conv}B_j,
 \qquad q_j=|B_j|,
-$$
+```
 
 where (B_j) is the loaded terminal set of the actual relative-interior KKT
 stress. C65 ensures that every actual diameter endpoint belongs to (B_j), so
 (F_j) has the full source diameter. Let (P_{K,j}) and (P_{F,j}) be the two perimeters. The exact endpoint
 under examination is the post-ZF forest branch with (s_Z=0), (d_H>0), and
 
-$$
+```math
 \frac{q_j}{D_j}\longrightarrow \pi.
 \tag{1.1}
-$$
+```
 
 The desired closing implication was
 
@@ -66,17 +66,17 @@ turns those points into positive contact vertices.
 Let (A_j) be any unbounded sequence of C-II sources satisfying (1.1), with all
 source points retained. Then
 
-$$
+```math
 \boxed{
 0\le P_{K,j}-P_{F,j}
 \le \pi D_j-q_j=o(D_j).
 }
 \tag{2.1}
-$$
+```
 
 Moreover,
 
-$$
+```math
 \boxed{
 \frac{\operatorname {area}K_j-\operatorname {area}F_j}{D_j^2}
 \longrightarrow0,
@@ -84,12 +84,12 @@ $$
 \frac{|A_j\setminus F_j|}{D_j^2}\longrightarrow0.
 }
 \tag{2.2}
-$$
+```
 
 Consequently the full source population in the force hull has the global triangular
 density:
 
-$$
+```math
 \boxed{
 \frac{|A_j\cap F_j|}{D_j^2}
 \longrightarrow \frac{\pi}{2\sqrt3},
@@ -98,7 +98,7 @@ $$
 \longrightarrow\frac\pi4.
 }
 \tag{2.3}
-$$
+```
 
 Every normalized Hausdorff limit of (F_j) and (K_j) is the unit-diameter disk.
 No conclusion is made that the positive contact core has quadratic size.
@@ -118,47 +118,47 @@ for arbitrary (s_Z>0) sources.
 
 Put
 
-$$
+```math
 a_0=\frac{\sqrt3}{2},
 \qquad c_0=\frac{\sqrt3}{4}.
-$$
+```
 
 The strict translated-triangular-lattice comparison for a global (n)-point
 minimum-diameter source is
 
-$$
+```math
 D_j^2<\frac{2\sqrt3}{\pi}(n_j-1).
 \tag{3.1}
-$$
+```
 
 Finite Oler and isoperimetry give
 
-$$
+```math
 a_0(n_j-1)
 \le \operatorname {area}K_j+c_0P_{K,j}
 \le \frac{P_{K,j}^2}{4\pi}+c_0P_{K,j}.
 \tag{3.2}
-$$
+```
 
 Since (a_0\cdot \pi/(2\sqrt3)=\pi/4), (3.1)--(3.2) imply
 
-$$
+```math
 P_{K,j}^2+\pi\sqrt3 P_{K,j}>\pi^2D_j^2.
-$$
+```
 
 Taking the positive root gives the finite bound
 
-$$
+```math
 P_{K,j}>\frac\pi2\left(\sqrt{4D_j^2+3}-\sqrt3\right).
 \tag{3.3}
-$$
+```
 
 In particular,
 
-$$
+```math
 0\le \pi D_j-P_{K,j}<\frac{\pi\sqrt3}{2}.
 \tag{3.4}
-$$
+```
 
 This is the global perimeter theorem already available in the Target B theorem
 stack; (3.1)--(3.4) are included to make the present C-II use auditable.
@@ -169,25 +169,25 @@ All loaded terminals lie on the boundary of (F_j) and occur in cyclic order.
 Consecutive terminals are distinct source points, so each consecutive chord has
 length at least one. Therefore
 
-$$
+```math
 q_j\le P_{F,j}.
 \tag{3.5}
-$$
+```
 
 Since (F_j\subseteq K_j), monotonicity of convex perimeter and the diameter
 perimeter inequality give
 
-$$
+```math
 q_j\le P_{F,j}\le P_{K,j}\le \pi D_j.
 \tag{3.6}
-$$
+```
 
 Subtracting the middle terms proves the exact finite transfer inequality
 
-$$
+```math
 0\le P_{K,j}-P_{F,j}\le \pi D_j-q_j.
 \tag{3.7}
-$$
+```
 
 The hypothesis (1.1) proves (2.1), and also (P_{F,j}/D_j\to\pi).
 
@@ -196,15 +196,15 @@ The hypothesis (1.1) proves (2.1), and also (P_{F,j}/D_j\to\pi).
 Translate and scale by (D_j), choosing one point of (F_j) as the origin. Both
 normalized convex bodies lie in a fixed bounded disk. Pass to a subsequence with
 
-$$
+```math
 \widetilde F_j:=D_j^{-1}F_j\longrightarrow F_\infty,
 \qquad
 \widetilde K_j:=D_j^{-1}K_j\longrightarrow K_\infty
-$$
+```
 
 in the Hausdorff metric. Convex perimeter is continuous under this convergence, so
 
-$$
+```math
 \operatorname {diam}F_\infty\le1,
 \quad
 \operatorname {diam}K_\infty\le1,
@@ -213,94 +213,94 @@ F_\infty\subseteq K_\infty,
 \quad
 \operatorname {per}F_\infty=\pi.
 \tag{3.8}
-$$
+```
 
 The width formula gives
 
-$$
+```math
 \operatorname {per}F_\infty
  =\int_0^\pi w_{F_\infty}(u)\,du.
-$$
+```
 
 Every width is at most the diameter, hence at most one. Equation (3.8) forces
 
-$$
+```math
 w_{F_\infty}(u)=1\quad\text{for every direction }u.
 \tag{3.9}
-$$
+```
 
 Thus (F_\infty) has constant width one. It is maximal among convex bodies of
 diameter at most one. To see this directly, if (x\in K_\infty\setminus F_\infty),
 strict separation supplies a unit vector (u) with
 
-$$
+```math
 u\cdot x>h_{F_\infty}(u).
-$$
+```
 
 Choose (y\in F_\infty) with
 
-$$
+```math
 u\cdot y=-h_{F_\infty}(-u).
-$$
+```
 
 By (3.9), (h_{F_\infty}(u)+h_{F_\infty}(-u)=1). Therefore
 
-$$
+```math
 u\cdot(x-y)>1,
-$$
+```
 
-contradicting $\operatorname {diam}K_\infty\le1$. Hence
+contradicting $`\operatorname {diam}K_\infty\le1`$. Hence
 
-$$
+```math
 K_\infty=F_\infty.
 \tag{3.10}
-$$
+```
 
 Every subsequential pair of normalized hulls has the same limit. Continuity of
 convex area therefore proves the first assertion in (2.2):
 
-$$
+```math
 \operatorname {area}K_j-\operatorname {area}F_j=o(D_j^2).
 \tag{3.11}
-$$
+```
 
 ### 3.4 The external source population is subquadratic
 
 We use the following finite annular capacity estimate. If (F\subseteq K) are
 convex and (X\subseteq K\setminus F) is unit-separated, then
 
-$$
+```math
 |X|\frac\pi4
 \le \operatorname {area}K-\operatorname {area}F
  +\frac12(\operatorname {per}K+\operatorname {per}F)+\frac\pi4.
 \tag{3.12}
-$$
+```
 
 For completeness, put (r=1/2). The open disks (x+rB), (x\in X), have
 disjoint interiors and lie in (K+rB\setminus F_{-r}), where (F_{-r}) is the
 inner parallel body. Steiner's formula and
 
-$$
+```math
 \operatorname {area}F-\operatorname {area}F_{-r}
 \le r\operatorname {per}F
-$$
+```
 
 give
 
-$$
+```math
 |X|\pi r^2
 \le \operatorname {area}K-\operatorname {area}F
  +r(P_K+P_F)+\pi r^2.
-$$
+```
 
 Substituting (r=1/2) proves (3.12).
 
 Apply (3.12) to (X=A_j\setminus F_j). The area term is (o(D_j^2)) by
 (3.11), and both perimeter terms are (O(D_j)). Hence
 
-$$
+```math
 |A_j\setminus F_j|=o(D_j^2),
-$$
+```
 
 which proves the second assertion in (2.2). Notice that no contact-isolated point
 was omitted: every point outside (F_j) is in (X), regardless of whether it has
@@ -310,53 +310,53 @@ unit contacts.
 
 The standard global asymptotic for minimum-diameter unit-separated sources is
 
-$$
+```math
 \frac{n_j}{D_j^2}\longrightarrow \Delta_2:=\frac\pi{2\sqrt3}.
 \tag{3.13}
-$$
+```
 
 By the preceding step,
 
-$$
+```math
 \frac{|A_j\cap F_j|}{D_j^2}
 =\frac{n_j}{D_j^2}-o(1)
 \longrightarrow\Delta_2.
 \tag{3.14}
-$$
+```
 
 Apply Oler inside (F_j) to all source points (A_j\cap F_j), including
 contact-isolated points:
 
-$$
+```math
 a_0|A_j\cap F_j|
 \le \operatorname {area}F_j+c_0P_{F,j}+a_0.
 \tag{3.15}
-$$
+```
 
 Divide by (D_j^2), use (3.14), (P_{F,j}=O(D_j)), and
 
-$$
+```math
 a_0\Delta_2=\frac\pi4.
-$$
+```
 
 This yields
 
-$$
+```math
 \liminf\frac{\operatorname {area}F_j}{D_j^2}\ge\frac\pi4.
 \tag{3.16}
-$$
+```
 
 The isodiametric inequality gives the reverse inequality, so
 
-$$
+```math
 \frac{\operatorname {area}F_j}{D_j^2}\longrightarrow\frac\pi4.
 \tag{3.17}
-$$
+```
 
 Together with (3.11), the full hull has the same normalized area. Equality in the
 normalized isodiametric inequality forces every Hausdorff limit in (3.10) to be the
 unit-diameter disk. This proves (2.3) and the final assertion of the theorem.
-$\square$
+$`\square`$
 
 ## 4. Exact target implication
 
@@ -374,9 +374,9 @@ hull. The force-hull source population is asymptotically Oler-saturated.
 
 The theorem changes no surplus inequality. In particular it does not improve
 
-$$
+```math
 \frac{e_{BB}+2s_C-3d_H}{D}\ge0.597+\varepsilon_{597}
-$$
+```
 
 or the cyclic lower endpoint (lambda_A+\varepsilon_A), and it gives no bound on
 the positive contact-core population. The exact remaining implication would be one
@@ -403,21 +403,21 @@ compactness argument supplies no rate that crosses the linear surplus ledger.
 
 A tempting strengthening would be
 
-$$
+```math
 \operatorname {area}(K)-\operatorname {area}(F)
 \le \frac{D}{2}\bigl(\operatorname {per}K-\operatorname {per}F\bigr)
 \tag{5.1}
-$$
+```
 
 for all nested diameter-(D) convex bodies. It is false. Let (K) be the unit
 disk, (D=2), and let (F_\epsilon) be the ellipse with semiaxes (1) and
 (\epsilon), contained in (K). As (\epsilon\downarrow0),
 
-$$
+```math
 \operatorname {area}K-\operatorname {area}F_\epsilon\to\pi,
 \qquad
 \operatorname {per}K-\operatorname {per}F_\epsilon\to2\pi-4.
-$$
+```
 
 The right side of (5.1) tends to (2\pi-4<\pi). The counterexample is not in the
 near-π endpoint because (P_F/D\to2); it shows that (2.1) alone cannot be
@@ -427,54 +427,54 @@ converted into a quantitative area rate without using the near-π geometry.
 
 For (m\ge2), let
 
-$$
+```math
 \theta_m=\frac\pi3+m^{-2},
 \qquad
 u=(1,0),
 \qquad
 v=(\cos\theta_m,\sin\theta_m),
-$$
+```
 
 and
 
-$$
+```math
 A_m=\{iu+jv:0\le i,j\le m,\ i,j\in\mathbb Z\}.
-$$
+```
 
 Every nonzero difference (au+bv) has norm at least one. If (ab<0), writing
 (x=|a|,y=|b|) gives
 
-$$
+```math
 |au+bv|^2=(x-y)^2+2xy(1-\cos\theta_m)>1;
-$$
+```
 
 the same-sign case is larger, and the unit vectors are only (pm u,pm v).
 Thus (A_m) is unit-separated, its only unit differences are the grid edges, and
 it has no unit equilateral triangle. Its convex hull is a parallelogram with
 
-$$
+```math
 |A_m|=(m+1)^2,
 \quad
 \operatorname {per}(\operatorname {conv}A_m)=4m,
 \quad
 \operatorname {area}(\operatorname {conv}A_m)=m^2\sin\theta_m.
-$$
+```
 
 Since (sin(\pi/3+m^{-2})=\sqrt3/2+\frac12m^{-2}+O(m^{-4})),
 
-$$
+```math
 a_0|A_m|-\operatorname {area}(\operatorname {conv}A_m)
 =\sqrt3\,m+O(1).
 \tag{5.2}
-$$
+```
 
 Therefore a linear Oler boundary term cannot be removed merely from unit boundary
 edges, triangle-freeness, and a positive contact graph. This example has
 
-$$
+```math
 \frac{\operatorname {per}(\operatorname {conv}A_m)}{\operatorname {diam}A_m}
 \longrightarrow\frac4{\sqrt3}<\pi,
-$$
+```
 
 so it does not refute the near-π theorem. It is a regression against the stronger
 local boundary claim that would be needed to turn (2.3) into a contact-transport

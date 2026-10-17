@@ -26,10 +26,10 @@ are not counterexamples to Erdős #99 or to the canonical jammed shell theorem.
 
 The canonical Target B endpoint is
 
-$$
+```math
  G+E\ge c_0B+a_0(t+\chi-1),\qquad
  a_0=\sqrt3/2,\quad c_0=a_0/2.
-$$
+```
 
 Section 36 gives the strict reverse inequality for a global minimizer.
 The intended chain was
@@ -82,64 +82,71 @@ having all the following properties.
    `K_k` tends to the disk of diameter one. Uniformly in direction,
    `w(K_k)=D_k-O(1)`, `pi D_k-per(K_k)=O(1)`, and
    `pi D_k^2/4-area(K_k)=O(D_k)`. Also
-   $$
+   ```math
    n_k={\pi\over2\sqrt3}D_k^2+O(D_k),\qquad
    D_k^2<{2\sqrt3\over\pi}(n_k-1).
    \tag{2.1}
-   $$
+   
+   ```
 3. Let `R_k` be the rhombus count, `B_k` its boundary-edge occurrence
    count, `chi_k` the Euler characteristic of the actual rhombic complex,
    and `t_k` the source population outside that complex. Then
-   $$
+   ```math
    n_k=R_k+B_k/2+\chi_k+t_k,\quad
    G_k=O(D_k),\quad E_k=o(1),\quad
    B_k=O(D_k),\quad |\chi_k|+t_k=O(D_k).
    \tag{2.2}
-   $$
+   
+   ```
    In particular the *strict* shell upper side holds:
-   $$
+   ```math
    G_k+E_k<c_0B_k+a_0(t_k+\chi_k-1).
    \tag{2.3}
-   $$
+   
+   ```
    The usual Oler lower side holds too, since the sources are unit-separated.
 4. For the actual rhombic trains in the two chart regions, put
-   $$
+   ```math
    M_{\rm inter}=
    \sum_{\tau\text{ in lower},\ \sigma\text{ in upper}}
        |\det(u_\tau,u_\sigma)|.
-   $$
+   
+   ```
    All these pairs are physically noncrossing. Their mass satisfies
-   $$
+   ```math
    {M_{\rm inter}\over D_k^2}\longrightarrow
       {1\over2}+{1\over\sqrt3}>0.
    \tag{2.4}
-   $$
+   
+   ```
    Each chart contains a macroscopic coherent train component; neither
    relies on a vanishing-deficit endpoint. If `M>=b` are its two direction
    populations and `R_j` its rhombus count, then
-   $$
+   ```math
    {Mb-R_j\over M^2}\longrightarrow
    {4\sqrt3+6-3\pi\over7\sqrt3+12}\in(1/8,1/6).
    \tag{2.5}
-   $$
+   
+   ```
    Here train counts refer to all rhombic trains in each chart region;
    any boundary components outside its macroscopic component affect the
    normalized quantities by `o(1)`.
 5. There is an explicitly identified unit-separated triangular-lattice
    source `A_k^0` with **the same number of labels** and
-   $$
+   ```math
       \operatorname{diam}(A_k^0)<D_k.
    \tag{2.6}
-   $$
+   
+   ```
    Thus every `A_k` is rigorously nonglobal.
 
 Consequently, for every fixed constant `C`, the proposed estimate
 
-$$
+```math
  M_{\rm inter}\le
  C\bigl(G+E+B+|t+\chi-1|+1\bigr)
  \tag{2.7}
-$$
+```
 
 is false on the class just specified, even after imposing connected
 contacts, near-disk geometry and (2.1)--(2.3). A static proof using only
@@ -153,20 +160,20 @@ with actual global-minimizer/jammed hypotheses is falsified.
 Let `Lambda` be the unit triangular lattice. For each sufficiently large
 integer `m`, set
 
-$$
+```math
  r=\sqrt{a_0m/\pi}.
-$$
+```
 
 Use the translated open-disk counting argument of canonical Target B
 Section 36: the lattice count has integer mean `m`, is nonconstant, and
 some translation contains at least `m+1` sites. Take **all** those sites
 as `A^0`; put `n=|A^0|` and `D_0=diam(A^0)`. Then
 
-$$
+```math
  D_0<2r,\qquad 4r^2={2\sqrt3\over\pi}m
       \le {2\sqrt3\over\pi}(n-1).
  \tag{3.1}
-$$
+```
 
 An elementary fundamental-cell cover gives
 `n=pi r^2/a_0+O(r)`, uniformly in the chosen translation. Represent the
@@ -185,9 +192,9 @@ Take an actual diameter difference of `A^0`. In a triangular basis
 length is `N=a^2+ab+b^2=D_0^2`. Under the three 60-degree changes of
 basis, the coefficient products are
 
-$$
+```math
  ab,\quad -b(a+b),\quad -a(a+b).
-$$
+```
 
 Their sum is `-N`. Choose the basis for which
 `ab<=-N/3<0`. In particular the diameter endpoints have different row
@@ -196,26 +203,26 @@ selection of a different source.
 
 Replace `v_0` by
 
-$$
+```math
  v=(\cos\theta,\sin\theta),\qquad
  \theta=\pi/3+\delta,\quad 0<\delta<\pi/12,
-$$
+```
 
 and keep `u` unit and horizontal. Map every original label `(i,j)` to
 `p_{ij}=t+i u+j v`, with the same fixed translation `t`.
 The selected pair has squared length
 
-$$
+```math
  |a u+b v|^2=N+2ab(\cos\theta-1/2)>N.
  \tag{3.2}
-$$
+```
 
 Every nonzero vector of this lattice has length at least one, and its only
 unit vectors are `+/-u,+/-v`: for integers `i,j`,
 
-$$
+```math
  i^2+j^2+2ij\cos\theta\ge i^2+j^2-|ij|\ge1,
-$$
+```
 
 and equality in the interior angle range requires an axis unit vector.
 Thus the sheared source is unit-separated and its contact graph is a
@@ -232,9 +239,9 @@ Choose a row cut `s+1/2` between the two selected old diameter endpoints,
 within half a row of their row midpoint. The physical midpoint of a
 diameter pair is at distance `O(sqrt(r))` from the disk center, because
 
-$$
+```math
  |(x+y)/2|^2+|x-y|^2/4=(|x|^2+|y|^2)/2\le r^2,
-$$
+```
 
 and `|x-y|=2r-O(1)`. Thus both sides of this cut contain macroscopic
 half-disk populations. Partition labels into lower `j<=s` and upper
@@ -250,23 +257,23 @@ by `eta>0` about `q_*`.
 For a former cross contact with upper endpoint `q_i=q_*+k u`, `k=i-i_*<=0`,
 the new difference is exactly
 
-$$
+```math
  v+k w,\qquad w=(R_{-\eta}-I)u.
-$$
+```
 
 For `0<eta<pi/2` and `pi/3<theta<pi/2`,
 
-$$
+```math
  v\cdot w=\cos\theta(\cos\eta-1)-\sin\theta\sin\eta<0.
-$$
+```
 
 Therefore
 
-$$
+```math
  |v+k w|^2=1+2k(v\cdot w)+k^2|w|^2
  \begin{cases}=1,&k=0,\\>1,&k<0.\end{cases}
  \tag{3.3}
-$$
+```
 
 This is a simultaneous exact check of **all** old seam contacts, not a
 collection of one-at-a-time moves. Unit contacts within either chart are
@@ -279,10 +286,10 @@ selected pair's length increase in (3.2). Rotation about `q_*` moves any
 upper label by at most `eta M`; pair distances change by at most `2 eta M`.
 Choose
 
-$$
+```math
  0<\eta<\min\{\pi/4,\delta r^{-4},\ell/(4M),g/(4M),h/(4M)\}.
  \tag{3.4}
-$$
+```
 
 Every remaining pair stays strictly above one; **every** pair stays below
 `2r`; the selected old diameter remains strictly above `D_0`. These finite
@@ -294,10 +301,10 @@ all `n` labels. Its only contacts are the internal `u/v` grid contacts
 and that bridge, hence it is triangle-free. Equations (3.1)--(3.4) give
 both the strict scalar comparison and the smaller-diameter competitor:
 
-$$
+```math
  D_0<D<2r\le\sqrt{{2\sqrt3\over\pi}(n-1)}.
  \tag{3.5}
-$$
+```
 
 ### 3.4 Connectivity and face accounting
 
@@ -329,10 +336,10 @@ and vertices. Count its actual Euler characteristic `chi` and boundary
 edge occurrences `B`, and let `t=|A\V(U)|`. Since
 `4R=2e_U-B` and `chi=|V(U)|-e_U+R`, exactly
 
-$$
+```math
  n=R+B/2+\chi+t.
  \tag{3.6}
-$$
+```
 
 This includes any thin extremal rows, bridge residue and vertices outside
 the rhombic complex. No source label is thrown away.
@@ -353,11 +360,11 @@ All rhombi have area `sin(theta)`, so
 
 Using (3.5), the isodiametric inequality and (3.6),
 
-$$
+```math
  G+E=\operatorname{area}(K)-a_0R
  <a_0(n-1-R)=c_0B+a_0(t+\chi-1).
  \tag{3.7}
-$$
+```
 
 Oler gives the lower side
 `G+E>=c_0(B-per(K))+a_0(t+chi-1)`. Thus these sources satisfy the
@@ -383,11 +390,11 @@ discarded slices lie in arbitrarily small normalized neighborhoods of
 the projection endpoints. Squeezing, then letting those neighborhoods
 shrink, gives
 
-$$
+```math
  M=(1+2/\sqrt3)r+o(r),\qquad b=(2/\sqrt3)r+o(r),\qquad
  R_j={\pi\over\sqrt3}r^2+o(r^2).
  \tag{3.8}
-$$
+```
 
 For a fixed positive `epsilon`, cell centers at least `epsilon r` inside
 the limiting half-disk can be joined to one central cell by lattice
@@ -411,10 +418,10 @@ the only cross contact is the bridge. Identically oriented cross pairs
 have determinant `o(1)`, and differently oriented ones have determinant
 `a_0+o(1)`. Hence
 
-$$
+```math
  M_{\rm inter}=2a_0 Mb+o(r^2)
  =(2+4\sqrt3/3)r^2+o(r^2).
-$$
+```
 
 Since `D/r->2`, this proves (2.4). Equations (2.2) and (2.4) disprove
 (2.7) for every fixed `C`. Equation (3.5) separately certifies
@@ -437,16 +444,16 @@ occupied row and column **path segments**, and denote their total by
 `L_j`. With one, put `L_j=|A_j|+(number of path segments)`; with zero,
 put `L_j=2|A_j|`. Then
 
-$$
+```math
  e_j\le2|A_j|-L_j,\qquad L_j\ge2\sqrt{|A_j|}.
-$$
+```
 
 The pinned contact-preserving velocity space has dimension at least
 
-$$
+```math
  \sum_j L_j-e_X-2q.
  \tag{4.1}
-$$
+```
 
 Indeed there are `2(n-q)` free velocity coordinates and at most
 `sum e_j+e_X` contact equations. Each positive kernel vector integrates

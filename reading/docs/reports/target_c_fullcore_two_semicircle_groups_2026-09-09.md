@@ -22,17 +22,17 @@ TD/TS identified two complementary semicircle carriers under the additional cap-
 
 Assume only the full-core near-circle hypotheses
 
-$$
+```math
 x_B=o(D),
 \qquad
 \frac{n-v}{D^2}\to0.
-$$
+```
 
 Then the repaired maximal-cap decomposition contains two inclusion-maximal attachment arcs whose normalized angular lengths tend to `pi`, while every other maximal cap has total normalized area tending to zero.
 
 Grouping every harmonic component under the inclusion-maximal cap containing its attachment arc, there are two dominant groups `G_1,G_2` such that
 
-$$
+```math
 \boxed{
 \sum_{r\in G_i}\frac{n_r}{D^2}
 \to\frac\Delta2,
@@ -40,13 +40,13 @@ $$
 }
 \tag{HG.1}
 
-$$
+```
 
 where
 
-$$
+```math
 \Delta=\frac\pi{2\sqrt3}.
-$$
+```
 
 Each group lies asymptotically in one semicircular cap, and the two caps are complementary. Every remaining maximal-cap group contains only `o(D^2)` unloaded vertices.
 
@@ -58,50 +58,50 @@ The component defining each dominant maximal arc has attachment diameter `(1-o(1
 
 Let `P_r=conv(A_r)` be the C49 attachment cells. AR gives
 
-$$
+```math
 \sum_r\operatorname{area}(P_r)
 \ge
  a_0(v-q)-O(S+c_I),
 \qquad a_0=\frac{\sqrt3}{2}.
 \tag{1.1}
-$$
+```
 
 In the near-circle branch, NBd gives `S=O(D)` and HBd gives `c_I=o(D)`, while `q=O(D)`. Full core gives
 
-$$
+```math
 \frac v{D^2}\to\Delta.
-$$
+```
 
 Since
 
-$$
+```math
 a_0\Delta=\frac\pi4,
-$$
+```
 
 we obtain
 
-$$
+```math
 \liminf\frac1{D^2}\sum_r\operatorname{area}(P_r)
 \ge\frac\pi4.
 \tag{1.2}
-$$
+```
 
 But the cell interiors are pairwise disjoint and lie in the force hull, while DC gives
 
-$$
+```math
 \operatorname{area}(F)/D^2\to\pi/4.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \frac1{D^2}\sum_r\operatorname{area}(P_r)
 \to\frac\pi4.
 }
 \tag{HG.2}
 
-$$
+```
 
 Thus the harmonic attachment cells asymptotically fill the entire force-hull disk in area.
 
@@ -111,9 +111,9 @@ Thus the harmonic attachment cells asymptotically fill the entire force-hull dis
 
 Use the repaired LC/TR construction. Let
 
-$$
+```math
 J_{1,D},\ldots,J_{m_D,D}
-$$
+```
 
 be the inclusion-maximal supporting intervals of the attachment cells along the loaded convex boundary. Their relative interiors are disjoint. Let `theta_{j,D}` be their normalized disk-centered angular lengths.
 
@@ -121,40 +121,40 @@ Every attachment cell in the group below `J_j` lies inside the corresponding cir
 
 For macroscopic limiting arcs with angles
 
-$$
+```math
 0\le\theta_j\le\pi,
 \qquad
 \sum_j\theta_j\le2\pi,
-$$
+```
 
 the radius-`1/2` cap areas sum to
 
-$$
+```math
 \sum_j\frac18(\theta_j-\sin\theta_j)
 =
 \frac18\sum_j\theta_j-rac18\sum_j\sin\theta_j.
 \tag{2.1}
-$$
+```
 
 HG.2 forces this sum to approach `pi/4`. Since
 
-$$
+```math
 \frac18\sum_j\theta_j\le\frac\pi4
-$$
+```
 
 and every `sin(theta_j)>=0`, equality at leading order requires simultaneously
 
-$$
+```math
 \sum_j\theta_j\to2\pi
 \tag{2.2}
-$$
+```
 
 and
 
-$$
+```math
 \sum_j\sin\theta_j\to0.
 \tag{2.3}
-$$
+```
 
 On `[0,pi]`, `sin theta` vanishes only at `0` and `pi`. Therefore every macroscopic maximal arc has limiting angle `pi`; all other maximal arcs have angle tending to zero.
 
@@ -172,53 +172,53 @@ The complementarity follows from disjointness of maximal arc interiors and total
 
 Let
 
-$$
+```math
 N_i:=\sum_{r\in G_i}n_r.
-$$
+```
 
 The cells in one dominant group are interior-disjoint and lie in one semicircular cap of normalized area `pi/8+o(1)`.
 
 Apply the AR/Oler lower bound componentwise but sum only over the group:
 
-$$
+```math
 a_0N_i
 \le
 \sum_{r\in G_i}\operatorname{area}(P_r)
 +O\left(\sum_{r\in G_i}\delta_r+c_{I,i}+D\right).
 \tag{3.1}
-$$
+```
 
 The group diameter sum is at most global `S=O(D)` and `c_{I,i}<=c_I=o(D)`, so the error is `o(D^2)`. Therefore
 
-$$
+```math
 \limsup\frac{N_i}{D^2}
 \le
 \frac{\pi/8}{a_0}
 =rac\Delta2.
 \tag{3.2}
-$$
+```
 
 The remaining maximal groups have total cap area `o(D^2)`. The same groupwise Oler estimate shows their total unloaded population is `o(D^2)`.
 
 Full core gives
 
-$$
+```math
 \sum_rn_r=(\Delta+o(1))D^2.
-$$
+```
 
 Thus
 
-$$
+```math
 N_1+N_2=(\Delta+o(1))D^2,
-$$
+```
 
 and the two separate upper bounds (3.2) force
 
-$$
+```math
 \boxed{
 N_1=N_2=(\Delta/2+o(1))D^2.
 }
-$$
+```
 
 This proves HG.1.
 
@@ -232,26 +232,26 @@ Let `I_i^*` be the harmonic component whose attachment interval is the inclusion
 
 The two extreme attachment terminals of `I_i^*` converge to the endpoints of a semicircle, so their Euclidean distance is
 
-$$
+```math
 (1-o(1))D.
-$$
+```
 
 C44 gives
 
-$$
+```math
 \operatorname{diam}(A_i^*)\le\delta_i^*+2.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \delta_i^*/D\to1,
 \qquad i=1,2.
 }
 \tag{4.1}
 
-$$
+```
 
 Thus two diameter-scale harmonic components exist without assuming `S/D->2`.
 
@@ -265,41 +265,41 @@ Without cap-minimality, a dominant semicircle group may contain nested mesoscopi
 
 Eppstein's triangle-free penny-graph edge theorem gives, for every component,
 
-$$
+```math
 \delta_r+r_r
 \ge
 c_E\sqrt{n_r}-O(1),
 \qquad
 c_E:=\frac12\sqrt{2\pi\sqrt3}.
 \tag{5.1}
-$$
+```
 
 Sum over one dominant group. HBd gives `c_I=o(D)`, so the accumulated `O(1)` error is `o(D)`. Since
 
-$$
+```math
 \sum_{r\in G_i}\sqrt{n_r}
 \ge
 \sqrt{\sum_{r\in G_i}n_r},
-$$
+```
 
 HG.1 gives
 
-$$
+```math
 \sum_{r\in G_i}(\delta_r+r_r)
 \ge
 c_E\sqrt{\Delta/2}\,D-o(D).
-$$
+```
 
 The coefficient simplifies to
 
-$$
+```math
 c_E\sqrt{\Delta/2}
 =rac\pi{2\sqrt2}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \sum_{r\in G_i}(\delta_r+r_r)
 \ge
@@ -307,11 +307,11 @@ $$
 }
 \tag{HG.3}
 
-$$
+```
 
 and globally
 
-$$
+```math
 \boxed{
 S+R_I
 \ge
@@ -320,7 +320,7 @@ S+R_I
 }
 \tag{HG.4}
 
-$$
+```
 
 This bound is weaker than SI/TS in the cap-minimal equality branch but holds throughout the full-core near-circle branch.
 
@@ -330,13 +330,13 @@ This bound is weaker than SI/TS in the cap-minimal equality branch but holds thr
 
 NC and HBd simplify NBd to
 
-$$
+```math
 S+R_I+s_B+s_C=(\pi+o(1))D.
-$$
+```
 
 Insert HG.4:
 
-$$
+```math
 \boxed{
  s_B+s_C
 \le
@@ -345,17 +345,17 @@ $$
 }
 \tag{6.1}
 
-$$
+```
 
 HBd also gives
 
-$$
+```math
 Q+2s_C=(\pi+o(1))D.
-$$
+```
 
 Discarding `s_B>=0` therefore gives the independent full-core floor
 
-$$
+```math
 \boxed{
 Q
 \ge
@@ -365,7 +365,7 @@ Q
 }
 \tag{6.2}
 
-$$
+```
 
 UF's exposed-train bound `1.390168...D` is stronger numerically, but HG.4 is structurally different: it comes entirely from the two half-density harmonic groups and the penny-graph edge deficit.
 

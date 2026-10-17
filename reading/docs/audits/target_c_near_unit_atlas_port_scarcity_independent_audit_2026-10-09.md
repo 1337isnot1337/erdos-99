@@ -17,16 +17,16 @@ Date: 2026-10-09. Audit base: `origin/main=eebbd5dfbd70b7264c0a7a83e776b8ded71dd
 
 Let `a_0,a_1,a_2` be arbitrary planar anchors, which may coincide, and let integers `0<r<s`. For a unit direction `t`, put
 
-$$
+```math
  p_0=z,\qquad p_r=z+rt,\qquad p_s=z+st.
-$$
+```
 
 Assume
 
-$$
+```math
  |p_0-a_0|=|p_r-a_1|=|p_s-a_2|=1,
  \qquad |p_r-a_0|\ge1.
-$$
+```
 
 Then at most ten distinct directions `t` are feasible. Several translations at one direction are allowed. The extra cross-pair lower bound is essential to the stated proof scope and is not inferred from the three unit contacts.
 
@@ -34,10 +34,10 @@ Then at most ten distinct directions `t` are feasible. Several translations at o
 
 Translate `a_0` to zero and write `A=a_1-a_0`, `B=a_2-a_0`, `C=sA-rB`. The two equations after subtracting `|z|^2=1` are
 
-$$
+```math
  z\cdot(rt-A)=-\tfrac12|rt-A|^2,
  \qquad z\cdot(st-B)=-\tfrac12|st-B|^2.
-$$
+```
 
 Their determinant is `d(t)=det(t,C)+det(A,B)`. If it vanishes identically, `C=0`, so `A/r=B/s=c`; comparing the equations forces `t=c`, giving at most one direction. Otherwise there are at most two singular directions. On every other direction, Cramer's rule makes `z(t)` rational with an affine denominator and quadratic numerators. The equation `|z(t)|^2=1` has degree at most four on the unit circle; unless it is an identity, it has at most eight regular roots. It remains to rule out the identity case.
 
@@ -53,9 +53,9 @@ Consider a canonical post-ZF C-II sequence in either branch, with `D->infinity`,
 
 Assume that on every bounded physical loaded-hull window, for each chart the actual chosen neighbors in that chart are within `epsilon_{D,M}->0` of one common translate of its reference lattice, uniformly over windows, for every fixed window size `M`. No common translation between different windows is required. Then
 
-$$
+```math
  P_F-q=o(D)\quad\Longrightarrow\quad a_D=o(D).
-$$
+```
 
 Consequently, along any sequence with `a_D>=gamma D` for a fixed `gamma>0`, the loaded-hull excess ratio `(P_F-q)/D` has positive liminf. This supplies no numerical positive constant.
 
@@ -63,9 +63,9 @@ Consequently, along any sequence with `a_D>=gamma D` for a fixed `gamma>0`, the 
 
 Write the loaded-hull side lengths as `ell_i>=1`, so
 
-$$
+```math
  E_D=P_F-q=\sum_i(ell_i-1)=o(D).
-$$
+```
 
 Choose `delta_D=sqrt(E_D/D)+D^(-1/10)`. Then `delta_D->0` and `E_D/delta_D=o(D)`. At most `E_D/delta_D=o(D)` sides have length greater than `1+delta_D`. For each fixed block size `M`, discard blocks touching any such side; this removes `o(D)` loaded vertices. Every remaining side has length in `[1,1+delta_D]`. For large `D` it is below a fixed threshold `t<sqrt(2)`, so `C-NEARBY-DIAMETER-ENDPOINTS-FULL-HULL-SIDE` makes it an actual full-source hull side.
 
@@ -75,9 +75,9 @@ Fix `M`. A remaining block with more than `2J` chosen ports contains three assig
 
 All loaded endpoints in rich blocks, except the `o(D)` endpoints touching discarded sides, have both adjacent loaded-hull sides in the same shrinking tangent window. At a block boundary, a near-unit side in the neighboring block has its outward normal radialized at the same loaded endpoint, so it shares the rich block's tangent window; endpoints adjacent to discarded sides were already charged. The full-source diameter normal at such an endpoint lies in the corresponding normal cone. Audit.203's actual-diameter-normal window estimate bounds the number of endpoints in each shrinking window by `o_M(D)`. There are finitely many limiting directions, so all rich blocks contribute `o_M(D)` ports. Each nonrich block has at most `2J` ports, and the number of blocks is at most `ceil(q/M)+1`. Thus
 
-$$
+```math
  a_D\le 2J(\lceil q/M\rceil+1)+o_M(D)
-$$
+```
 
 for every fixed `M`. The loaded hull's perimeter is at most `pi D`, so `q<=pi D`. Divide by `D`, first let `D->infinity` at fixed `M`, then let `M->infinity` to get `a_D=o(D)`. The order of limits is essential.
 

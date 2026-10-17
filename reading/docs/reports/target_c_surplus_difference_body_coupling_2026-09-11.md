@@ -18,53 +18,53 @@ closure.
 
 Write
 
-$$
+```math
  \mu_D=\frac{e_{BB}+2s_C-3(d_H+s_Z)}D,
  \qquad y_D=\frac hD,
  \qquad p_D=\frac{P_F}{D}.
-$$
+```
 
-Let $\rho$ be the positive solution of $\rho=\cos\rho$, and let
+Let $`\rho`$ be the positive solution of $`\rho=\cos\rho`$, and let
 
-$$
+```math
  c_* \text{ be the positive solution of }
  c_* = \cos(3c_*/2),
  \qquad c_*=0.6099043189\ldots .
-$$
+```
 
 The post-ZF train/difference-body theorem gives, after passing to a subsequence if
 needed,
 
-$$
+```math
  \liminf \frac{2h-q}{D}\ge c_* .
 \tag{1}
-$$
+```
 
-Since $2h-q=x_B+Q+2s_Z$, the elementary three-way split has an infinite
+Since $`2h-q=x_B+Q+2s_Z`$, the elementary three-way split has an infinite
 subsequence in one of three branches; the branch treated here is
 
-$$
+```math
  \liminf \frac{s_Z}{D}\ge \sigma_0:=\frac{c_*}{6}
  =0.1016507198\ldots .
 \tag{2}
-$$
+```
 
 In that branch, every post-ZF subsequential limit satisfies
 
-$$
+```math
  \boxed{\liminf\mu_D\ge 0.60727\ldots}
 \tag{3}
-$$
+```
 
 and therefore
 
-$$
+```math
  \boxed{
  \liminf\frac{e_{BB}+2s_C}{D}
  \ge 0.60727\ldots+3\sigma_0
  =0.91222\ldots .}
 \tag{4}
-$$
+```
 
 The numerical values in (3)--(4) are only evaluations of the exact monotone
 functions below.  The conclusion is a necessary lower bound, not an upper bound and
@@ -74,114 +74,114 @@ not a contradiction.
 
 Let
 
-$$
+```math
  a_D=\arcsin\frac1{2D}.
-$$
+```
 
 The difference body of the force hull contains the centrally symmetric polygon formed
 by the actual diameter directions.  The exact perimeter minimization over their
 projective gaps gives
 
-$$
+```math
  Q+2s_Z
  \le h+1-2D\cos((h-1)a_D).
 \tag{5}
-$$
+```
 
-Because $Q\ge0$, any subsequence with $s_Z/D\to\sigma$ and $h/D\to y$
+Because $`Q\ge0`$, any subsequence with $`s_Z/D\to\sigma`$ and $`h/D\to y`$
 satisfies
 
-$$
+```math
  2\sigma\le y-2\cos(y/2).
 \tag{6}
-$$
+```
 
-The function on the right is strictly increasing on $[0,\pi]$.  Thus, if
-$\sigma\ge\sigma_0$,
+The function on the right is strictly increasing on $`[0,\pi]`$.  Thus, if
+$`\sigma\ge\sigma_0`$,
 
-$$
+```math
  y\ge y_0,
  \qquad
  y_0-2\cos(y_0/2)=2\sigma_0.
 \tag{7}
-$$
+```
 
 For the value in (2),
 
-$$
+```math
  y_0=1.5980867220\ldots .
 \tag{8}
-$$
+```
 
 The all-phase cavity calculation supplies, for every subsequential limit
-$(\mu,y,p)$,
+$`(\mu,y,p)`$,
 
-$$
+```math
  A_*(y,p)-\frac\pi4\mu^2
  \le \frac{(\mu+p/2)^2}{4\pi},
 \tag{9}
-$$
+```
 
 where
 
-$$
+```math
  A_*(y,p)=\max\left\{
  \frac{y+\sin y}{4},
  \frac\pi{(\pi-2)^2}\left(\frac p2-1\right)^2
  \right\},
 \tag{10}
-$$
+```
 
 and the exact domain is
 
-$$
+```math
  2\rho\le y\le p\le\pi,
  \qquad p\le2y.
 \tag{11}
-$$
+```
 
-For fixed $y$, let $R(y,p)$ be the least nonnegative $u$ for which (9)
-holds with $\mu=u$.  The same derivative calculation used in the all-phase
-renormalization theorem shows that for $y\ge y_R$, where
+For fixed $`y`$, let $`R(y,p)`$ be the least nonnegative $`u`$ for which (9)
+holds with $`\mu=u`$.  The same derivative calculation used in the all-phase
+renormalization theorem shows that for $`y\ge y_R`$, where
 
-$$
+```math
  y_R=1.5100171437\ldots
-$$
+```
 
 solves
 
-$$
+```math
  \frac{y+\sin y}{4}
  =\frac\pi{(\pi-2)^2}(y-1)^2,
 \tag{12}
-$$
+```
 
 the minimum over the allowed perimeter variable is attained at the crossover
 
-$$
+```math
  p_e(y)=2+2\sqrt{
  \frac{(y+\sin y)/4}{\pi/(\pi-2)^2}}
 \tag{13}
-$$
+```
 
-and this minimized root is strictly increasing in $y$.  Since (8) is larger than
-$y_R$, (7)--(13) give
+and this minimized root is strictly increasing in $`y`$.  Since (8) is larger than
+$`y_R`$, (7)--(13) give
 
-$$
+```math
  \mu\ge R(y_0,p_e(y_0))
  =0.6072748575\ldots .
 \tag{14}
-$$
+```
 
-This proves (3).  Finally, by definition of $\mu_D$,
+This proves (3).  Finally, by definition of $`\mu_D`$,
 
-$$
+```math
  \frac{e_{BB}+2s_C}{D}
  =\mu_D+3\frac{d_H+s_Z}{D}
  \ge\mu_D+3\frac{s_Z}{D},
-$$
+```
 
-which, with (2) and (14), proves (4).  $\square$
+which, with (2) and (14), proves (4).  $`\square`$
 
 ## What this does and does not remove
 
@@ -220,9 +220,9 @@ implication is still a genuine support-to-motion or global-population theorem.
 
 To settle C-II, one still needs at least one of:
 
-$$
+```math
  \sum_r(\delta_r+r_r)+s_B<u_\pi D-o(D),
-$$
+```
 
 for the high-defect population branch; a common-2-connected-hub response/bypass
 inequality in the forest branch; a finite feasible release/competitor from the
@@ -240,13 +240,13 @@ contact graph is the six-cycle, and its three opposite pairs are the three cross
 diameter chords.  With unit conductances on the contact cycle, the response kernel
 on the oriented pairs
 
-$$
+```math
  (0,3),\quad(1,4),\quad(2,5)
-$$
+```
 
 is, by solving the cycle Laplacian with zero-sum normalization,
 
-$$
+```math
  K=
  \begin{pmatrix}
   3/2&1/2&-1/2\\
@@ -254,7 +254,7 @@ $$
   -1/2&1/2&3/2
  \end{pmatrix}.
 \tag{15}
-$$
+```
 
 Thus a 2-edge-connected common block can have a negative off-diagonal transfer.
 The bridge proof cannot be extended by replacing a bridge resistance with an

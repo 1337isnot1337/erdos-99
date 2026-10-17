@@ -23,7 +23,7 @@ can be solved exactly.
 
 The result is
 
-$$
+```math
 \boxed{
 \liminf_{D\to\infty}
 \frac{e_{BB}+2s_C}{D}
@@ -32,30 +32,30 @@ $$
 =0.5894611562694627\ldots .
 }
 \tag{QJ.1}
-$$
+```
 
 This replaces the previous explicit FSJC floor
 
-$$
+```math
 \lambda_{FSJC}=0.5882283437736394\ldots
-$$
+```
 
 by an exact implicit constant larger by approximately
 
-$$
+```math
 0.0012328124958233.
-$$
+```
 
 The new minimizing normalized diameter-edge density and force-hull perimeter are
 
-$$
+```math
 \boxed{
 y_c=1.5534703643186141\ldots,
 \qquad
 p_c=2y_c=3.1069407286372283\ldots .
 }
 \tag{QJ.2}
-$$
+```
 
 No decimal is a proof dependency.
 
@@ -65,77 +65,77 @@ No decimal is a proof dependency.
 
 Pass to a convergent post-ZF subsequence and write
 
-$$
+```math
 \lambda=\lim\frac{e_{BB}+2s_C}{D},
 \qquad
 y=\lim\frac hD,
 \qquad
 p=\lim\frac{\operatorname{per}F}{D}.
 \tag{1.1}
-$$
+```
 
 DB and Cauchy's perimeter bound give
 
-$$
+```math
 \boxed{
 2\rho\le y\le\pi,
 \qquad
 g(y):=y+2\cos(y/2)\le p\le\pi.
 }
 \tag{1.2}
-$$
+```
 
 FSDB and QPD give the joint area floor
 
-$$
+```math
 \boxed{
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 A(y,p):=\max\{\Phi(y),\Omega(p)\},
 }
 \tag{1.3}
-$$
+```
 
 where
 
-$$
+```math
 \Phi(y)=\frac{y+\sin y}{4}
 \tag{1.4}
-$$
+```
 
 and `Omega` is the QPD perimeter/area function.
 
 Let
 
-$$
+```math
 m(y,p):=\min\{y,p-y\}.
 \tag{1.5}
-$$
+```
 
 The actual-perimeter JC inequality retained in FD gives
 
-$$
+```math
 A(y,p)-\frac\pi4\lambda^2
 \le
 \frac{(\lambda+m(y,p))^2}{4\pi}.
 \tag{1.6}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 H(\lambda;A,m)
 :=(\pi^2+1)\lambda^2+2m\lambda+m^2-4\pi A
 \ge0.
 }
 \tag{1.7}
-$$
+```
 
 For fixed `(A,m)` in the feasible region, `H` is strictly increasing in `lambda>=0`.
 Let
 
-$$
+```math
 \boxed{
 R(A,m):=
 \frac{
@@ -143,41 +143,41 @@ R(A,m):=
 }{\pi^2+1}
 }
 \tag{1.8}
-$$
+```
 
 be the positive threshold root.  Then every survivor satisfies
 
-$$
+```math
 \lambda\ge R(A(y,p),m(y,p)).
 \tag{1.9}
-$$
+```
 
 The relevant monotonicities are
 
-$$
+```math
 \boxed{
 \frac{\partial R}{\partial A}>0,
 \qquad
 \frac{\partial R}{\partial m}<0.
 }
 \tag{1.10}
-$$
+```
 
 Indeed, implicit differentiation of `H=0` gives
 
-$$
+```math
 \frac{\partial R}{\partial A}
 =
 \frac{2\pi}{(\pi^2+1)R+m}>0,
 \tag{1.11}
-$$
+```
 
-$$
+```math
 \frac{\partial R}{\partial m}
 =-
 \frac{R+m}{(\pi^2+1)R+m}<0.
 \tag{1.12}
-$$
+```
 
 ---
 
@@ -185,72 +185,72 @@ $$
 
 QPD proves
 
-$$
+```math
 \Omega(g(y))
 =\frac14\left[y\sin^2(y/2)+\sin y\right],
 \tag{2.1}
-$$
+```
 
 hence
 
-$$
+```math
 \boxed{
 \Phi(y)-\Omega(g(y))
 =\frac y4\cos^2(y/2)>0
 \qquad(0<y<\pi).
 }
 \tag{2.2}
-$$
+```
 
 Also
 
-$$
+```math
 \Omega(\pi)=\frac\pi4,
 \qquad
 \Phi(y)<\frac\pi4
 \qquad(y<\pi).
 \tag{2.3}
-$$
+```
 
 Since `Omega` is strictly increasing, for every `y in [2rho,pi)` there is a unique
 
-$$
+```math
 \boxed{
 c(y)\in(g(y),\pi)
 \quad\text{such that}\quad
 \Omega(c(y))=\Phi(y).
 }
 \tag{2.4}
-$$
+```
 
 Set `c(pi)=pi` by continuity.
 
 QPD also proves on the entire post-ZF perimeter range
 
-$$
+```math
 \boxed{
 \Omega'(p)>\frac12.
 }
 \tag{2.5}
-$$
+```
 
 Since
 
-$$
+```math
 \Phi'(y)=\frac{1+\cos y}{4}\le\frac12,
 \tag{2.6}
-$$
+```
 
 implicit differentiation of (2.4) gives
 
-$$
+```math
 \boxed{
 0\le c'(y)
 =\frac{\Phi'(y)}{\Omega'(c(y))}<1
 \qquad(2\rho\le y<\pi).
 }
 \tag{2.7}
-$$
+```
 
 Thus the crossover perimeter grows strictly more slowly than `y`.
 
@@ -260,16 +260,16 @@ Thus the crossover perimeter grows strictly more slowly than `y`.
 
 Fix `y`.  The feasible perimeter interval is
 
-$$
+```math
 g(y)\le p\le\pi.
-$$
+```
 
 Before the crossover, `p<=c(y)`, one has
 
-$$
+```math
 A(y,p)=\Phi(y).
 \tag{3.1}
-$$
+```
 
 As `p` increases, `m=min(y,p-y)` increases until `p=2y` and then remains equal to
 `y`.  By (1.10), the threshold `R` therefore decreases until `p=2y` and is constant
@@ -277,71 +277,71 @@ thereafter as long as QPD has not become active.
 
 After the crossover, `p>=c(y)`, one has
 
-$$
+```math
 A(y,p)=\Omega(p).
 \tag{3.2}
-$$
+```
 
 If `p>=2y`, then `m=y` is constant while `Omega` increases, so `R` increases.
 
 It remains to exclude a second decrease in the region
 
-$$
+```math
 c(y)<p<2y.
 \tag{3.3}
-$$
+```
 
 There `m=p-y`, and differentiating through (1.11)--(1.12) gives
 
-$$
+```math
 \frac{d}{dp}R(\Omega(p),p-y)
 =
 \frac{
 2\pi\Omega'(p)-(R+m)
 }{(\pi^2+1)R+m}.
 \tag{3.4}
-$$
+```
 
 The numerator is positive uniformly.  First, `A<=pi/4`, so evaluating (1.7) at
 `lambda=1` gives
 
-$$
+```math
 H(1;A,m)
 \ge1+2m+m^2>0.
-$$
+```
 
 Hence every positive threshold root satisfies
 
-$$
+```math
 R<1.
 \tag{3.5}
-$$
+```
 
 In the region `p<2y`, one always has
 
-$$
+```math
 0\le m\le\frac\pi2.
 \tag{3.6}
-$$
+```
 
 Indeed, if `y<=pi/2` then `m=p-y<y<=pi/2`; if `y>=pi/2`, then
 `p<=pi` gives `m=p-y<=pi-y<=pi/2`.
 
 Using QPD.6.6,
 
-$$
+```math
 \Omega'(p)>\frac{7}{12},
-$$
+```
 
 so
 
-$$
+```math
 2\pi\Omega'(p)
 >\frac{7\pi}{6}
 >1+\frac\pi2
 >R+m.
 \tag{3.7}
-$$
+```
 
 Thus (3.4) is strictly positive.
 
@@ -358,66 +358,66 @@ Therefore the fixed-`y` optimum has the following exact form:
 
 At the DB lower endpoint `y=2rho`, the defining equation `rho=cos rho` gives
 
-$$
+```math
 g(2\rho)=2\rho+2\cos\rho=4\rho=2(2\rho).
 \tag{4.1}
-$$
+```
 
 By (2.2), `Omega(g(2rho))<Phi(2rho)`, hence
 
-$$
+```math
 c(2\rho)>4\rho=2(2\rho).
 \tag{4.2}
-$$
+```
 
 At `y=pi/2`,
 
-$$
+```math
 2y=\pi,
-$$
+```
 
 while
 
-$$
+```math
 \Omega(\pi)=\frac\pi4
 >
 \frac{\pi/2+1}{4}
 =\Phi(\pi/2),
-$$
+```
 
 so
 
-$$
+```math
 c(\pi/2)<\pi=2(\pi/2).
 \tag{4.3}
-$$
+```
 
 Finally (2.7) implies
 
-$$
+```math
 \frac d{dy}(c(y)-2y)<-1.
 \tag{4.4}
-$$
+```
 
 Therefore there is a unique
 
-$$
+```math
 \boxed{
 y_c\in(2\rho,\pi/2)
 \quad\text{such that}\quad
 c(y_c)=2y_c.
 }
 \tag{4.5}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \Omega(2y_c)=\Phi(y_c).
 }
 \tag{4.6}
-$$
+```
 
 This is the exact definition of the new optimizing diameter density.
 
@@ -429,32 +429,32 @@ This is the exact definition of the new optimizing diameter density.
 
 Here `c(y)>=2y`, so the optimized threshold is
 
-$$
+```math
 M_-(y)=R(\Phi(y),y).
 \tag{5.1}
-$$
+```
 
 This is exactly the left-hand per-`y` threshold in FSJC.  FSJC proves that for
 `lambda=lambda_FSJC`,
 
-$$
+```math
 \partial_y H(\lambda_{FSJC};\Phi(y),y)>0
 \qquad(2\rho\le y\le\pi/2).
 \tag{5.2}
-$$
+```
 
 It also proves `M_-(y)>=lambda_FSJC`.  Since `partial_y H` is increasing in `lambda`,
 
-$$
+```math
 \partial_y H(M_-(y);\Phi(y),y)>0.
-$$
+```
 
 As `partial_lambda H>0`, implicit differentiation gives
 
-$$
+```math
 \boxed{M_-'(y)<0.}
 \tag{5.3}
-$$
+```
 
 Thus the optimized threshold strictly decreases up to `y_c`.
 
@@ -462,32 +462,32 @@ Thus the optimized threshold strictly decreases up to `y_c`.
 
 Here `c(y)<=2y`, so the optimized threshold is
 
-$$
+```math
 M_+(y)=R(\Phi(y),c(y)-y).
 \tag{5.4}
-$$
+```
 
 The area variable `Phi(y)` is increasing, while by (2.7)
 
-$$
+```math
 \frac d{dy}(c(y)-y)=c'(y)-1<0.
 \tag{5.5}
-$$
+```
 
 By the monotonicities (1.10), both changes increase `R`.  Hence
 
-$$
+```math
 \boxed{M_+(y)\text{ is strictly increasing on }[y_c,\pi].}
 \tag{5.6}
-$$
+```
 
 Therefore the global minimum of the complete `(y,p)` feasible region occurs exactly
 at
 
-$$
+```math
 \boxed{y=y_c,\qquad p=2y_c.}
 \tag{5.7}
-$$
+```
 
 ---
 
@@ -495,17 +495,17 @@ $$
 
 Define
 
-$$
+```math
 \boxed{
 \lambda_{QPD}:=R(\Phi(y_c),y_c),
 }
 \tag{6.1}
-$$
+```
 
 where `y_c` is the unique solution of QJ.4.6 in `(2rho,pi/2)`.
 Equivalently, `lambda_QPD` is the positive root of
 
-$$
+```math
 \boxed{
 (\pi^2+1)\lambda^2
 +2y_c\lambda
@@ -513,26 +513,26 @@ $$
 -\pi(y_c+\sin y_c)=0.
 }
 \tag{6.2}
-$$
+```
 
 Sections 1--5 prove that every post-ZF subsequential limit satisfies
 
-$$
+```math
 \lambda\ge\lambda_{QPD},
-$$
+```
 
 which proves QJ.1.
 
 The improvement over FSJC is strict without any numerical evaluation.  Since
 
-$$
+```math
 y_c<\pi/2
-$$
+```
 
 and the FSJC left-branch threshold `R(Phi(y),y)` is strictly decreasing up to
 `pi/2`,
 
-$$
+```math
 \boxed{
 \lambda_{QPD}
 >
@@ -540,21 +540,21 @@ R(\Phi(\pi/2),\pi/2)
 =\lambda_{FSJC}.
 }
 \tag{6.3}
-$$
+```
 
 High-precision evaluation gives only for orientation
 
-$$
+```math
 y_c=1.55347036431861416947\ldots,
-$$
+```
 
-$$
+```math
 2y_c=3.10694072863722833895\ldots,
-$$
+```
 
-$$
+```math
 \lambda_{QPD}=0.58946115626946273690\ldots .
-$$
+```
 
 The exact characterization (4.6), (6.1) is the theorem.
 
@@ -564,45 +564,45 @@ The exact characterization (4.6), (6.1) is the theorem.
 
 If an unbounded survivor sequence were to satisfy
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to\lambda_{QPD},
-$$
+```
 
 then the strict optimization above forces simultaneously
 
-$$
+```math
 \boxed{
 \frac hD\to y_c,
 \qquad
 \frac{\operatorname{per}F}{D}\to2y_c,
 }
 \tag{7.1}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \Phi(y_c)=\Omega(2y_c).
 }
 \tag{7.2}
-$$
+```
 
 The replacement `t=e_BB/D<=lambda` in JC must also saturate, so
 
-$$
+```math
 \boxed{
 \frac{s_C}{D}\to0.
 }
 \tag{7.3}
-$$
+```
 
 Moreover `p=2y` is exactly the balance point of the two actual-perimeter JC branches:
 
-$$
+```math
 \min\{y,p-y\}=y=p-y.
 \tag{7.4}
-$$
+```
 
 Thus the new endpoint has a substantially sharper normal form than FSJC's old
 `y=pi/2` endpoint: its diameter density, actual force-hull perimeter, active pair of

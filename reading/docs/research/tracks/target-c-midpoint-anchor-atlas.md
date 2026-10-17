@@ -18,10 +18,10 @@ each actual diameter endpoint, let (m_p) be its midpoint, and let (o) be a
 circumcenter of the full-source hull. Uniformly over partner choices, the
 number of midpoints at distance at least (s) obeys
 
-$$
+```math
 \#\{p:|m_p-o|\ge s\}\le C D^2/s^2
 \quad(s\ge4\,3^{1/4}\sqrt D),
-$$
+```
 
 with first and second absolute moments (O(D^{3/2})) and (O(D^2\log D)).
 The proof scope retains all source points, including contact isolates. It
@@ -35,16 +35,16 @@ pair multiplicity bound.
 
 The same audit claims a separate localization for any source pair (p,x) with
 
-$$
+```math
 |p-x|\ge D-s,\qquad \nu=(p-x)/|p-x|,\qquad
 \eta=3^{1/4}\sqrt D,\qquad m=(p+x)/2:
-$$
+```
 
-$$
+```math
 |(p-o)\cdot J\nu|,\ |(x-o)\cdot J\nu|
 \le 13D^{2/3}+2sD^{1/3},\qquad
 |(m-o)\cdot\nu|\le2\eta+s/2.
-$$
+```
 
 Bounded-deficit pairs therefore have midpoint distance (O_s(D^{2/3})), but
 the report explicitly leaves their number uncontrolled. The
@@ -55,11 +55,11 @@ records the source proof clarification for its dyadic angular band width.
 
 [Audit.247](../../audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md)
 proposes strengthening the destination's canonical positive-leaf bound from
-$O(D^{-1/2})$ to $O(D^{-2/3})$. The source hypotheses require a
+$`O(D^{-1/2})`$ to $`O(D^{-2/3})`$. The source hypotheses require a
 noncollinear global minimum-diameter source, an actual diameter endpoint with
 exactly one actual unit neighbor, positive coefficient for that contact in a
 normalized full-source KKT stress, and retention of every source point in
-$K_D$, the intersection of source-centered disks of radius $D-1$. The
+$`K_D`$, the intersection of source-centered disks of radius $`D-1`$. The
 proof uses the near-diameter localization above, the narrow cone of positive
 KKT normals, and a full-source inner-ball contraction. It gives boundary
 localization only: no vacancy, packet, source motion, or capacity payment.
@@ -90,7 +90,7 @@ The corrected inverse-phase argument in
 [Audit.236](../../audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md)
 claims only (q=o(D)) from its original global phase and face-tail premises.
 The fixed-cutoff proof's additive tail term does not give a global
-$K'/D$-Lipschitz chart or (q=O(D^{4/5})). Those historical inferences
+$`K'/D`$-Lipschitz chart or (q=O(D^{4/5})). Those historical inferences
 remain withdrawn in [Audit.202](../../audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md)
 and in the [current frontier](../../targets/target-c/CURRENT.md). Audit.236
 does not supply the atlas assumed by Audit.254.
@@ -101,15 +101,15 @@ does not supply the atlas assumed by Audit.254.
 records two separate finite statements. For each fixed (m,n\ge3), after
 deleting (p_{1,0}) and fixing every other boundary pin, both weak and strict
 capacity inside the open reference parallelogram are exactly
-$(m-1)(n-1)$ for all angles in a frame-dependent interval immediately above
-$\pi/3$. The interval is not uniform as the frame grows and the result
+$`(m-1)(n-1)`$ for all angles in a frame-dependent interval immediately above
+$`\pi/3`$. The interval is not uniform as the frame grows and the result
 counts no exterior sites.
 
 The same report proves a displacement gap in the restored-pin model: if the
 deleted boundary pin and all interior labels may move inside the old closed
 wall while all other boundary labels stay fixed and all pair distances remain
 at least one, then the maximum displacement is zero or at least
-$\sqrt3/(4(m+n+1))$. This blocks continuous local restoration in that
+$`\sqrt3/(4(m+n+1))`$. This blocks continuous local restoration in that
 fixed-wall model; distant alternatives and changed walls remain open. The
 existing Audit.187 verifier does not encode these universal analytic claims.
 

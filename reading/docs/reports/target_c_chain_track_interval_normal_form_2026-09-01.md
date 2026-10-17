@@ -21,28 +21,28 @@ contradiction, but it removes arbitrary coefficient patterns on the chain atom.
 Assume the pure simply connected strict-rhombic train-coordinate setting of Target B
 and the exact C80 chain face. Thus one active diameter bar
 
-$$
+```math
 h_0=za,
 \qquad |z-a|=D,
-$$
+```
 
 is the literal straight `D`-edge unit-contact chain
 
-$$
+```math
 z=x_0,x_1,\ldots,x_D=a.
-$$
+```
 
 Write
 
-$$
+```math
 u=\frac{a-z}{D}.
-$$
+```
 
 C80 gives `D` distinct train tracks
 
-$$
+```math
 P=\{\tau_1,\ldots,\tau_D\}
-$$
+```
 
 such that
 
@@ -54,29 +54,29 @@ such that
 
 For any ordered vertex pair `h=xy`, retain Target B's train-coordinate notation
 
-$$
+```math
 r_h=p_x-p_y,
 \qquad
  d_{h\tau}=\epsilon_\tau(x)-\epsilon_\tau(y)\in\{-1,0,1\},
-$$
+```
 
 and, for an active diameter bar, the gradient/Hessian formulas
 
-$$
+```math
 (g_h)_\tau=r_h\cdot J(d_{h\tau}u_\tau),
 \tag{C83.1}
-$$
+```
 
 and
 
-$$
+```math
 (H_h)_{\tau\tau}=d_{h\tau}^2-r_h\cdot(d_{h\tau}u_\tau),
 \qquad
 (H_h)_{\tau\sigma}
 =(d_{h\tau}u_\tau)\cdot(d_{h\sigma}u_\sigma)
 \quad(\tau\ne\sigma).
 \tag{C83.2}
-$$
+```
 
 ## 2. Ordered separator lemma
 
@@ -85,38 +85,38 @@ $$
 After orienting every track in `P` so that `z` lies on its `0` side and `a` lies on
 its `1` side, there is, for every source vertex `v`, an index
 
-$$
+```math
 k(v)\in\{0,1,\ldots,D\}
-$$
+```
 
 such that
 
-$$
+```math
 \epsilon_{\tau_j}(v)=
 \begin{cases}
 1,&j\le k(v),\\
 0,&j>k(v),
 \end{cases}
 \tag{C83.3}
-$$
+```
 
 up to reversing all `0/1` conventions simultaneously.
 
 Consequently, for every ordered pair `h=xy`, there are integers
 
-$$
+```math
 0\le a_h\le b_h\le D
-$$
+```
 
 and a sign `\sigma_h\in\{\pm1\}` such that
 
-$$
+```math
 \boxed{
  d_{h\tau_j}
  =\sigma_h\,\mathbf 1_{\{a_h<j\le b_h\}}.
 }
 \tag{C83.4}
-$$
+```
 
 The empty interval is allowed when no chain track separates `x` and `y`.
 
@@ -130,9 +130,9 @@ Let `Z_j` be the component of the disk cut by `\tau_j` that contains `z`. By the
 Jordan separation theorem and pairwise disjointness, the `Z_j` are nested in chain
 order: after choosing the indexing above,
 
-$$
+```math
 Z_1\subset Z_2\subset\cdots\subset Z_D.
-$$
+```
 
 Indeed, if two disjoint `z`–`a` separators were not nested, a path from `z` to the
 first separator and a path from the second separator to `a` would force the two
@@ -148,51 +148,51 @@ two threshold vectors for `x` and `y` gives one signed consecutive interval, pro
 
 For a nonempty interval
 
-$$
+```math
 I_h=\{a_h+1,\ldots,b_h\}
 \subseteq\{1,\ldots,D\},
-$$
+```
 
 put
 
-$$
+```math
 c_h:=\sigma_h\,r_h\cdot u,
 \qquad
 \eta_h:=\sigma_h\,r_h\cdot Ju.
 \tag{C83.5}
-$$
+```
 
 ### Theorem C83.2 (interval normal form)
 
 For every active diameter bar `h`, its restriction to the C80 chain tracks is
 
-$$
+```math
 \boxed{
  g_h|_P=\eta_h\,\mathbf 1_{I_h},
 }
 \tag{C83.6}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
  H_h[P,P]
  =\mathbf 1_{I_h}\mathbf 1_{I_h}^{\mathsf T}
   -c_h I_{I_h},
 }
 \tag{C83.7}
-$$
+```
 
 where `I_{I_h}` is the diagonal projector onto the interval coordinates.
 Moreover, for every `\tau\in I_h`,
 
-$$
+```math
 \boxed{
 \lambda_{h\tau}=r_h\cdot(d_{h\tau}u)=c_h.
 }
 \tag{C83.8}
-$$
+```
 
 Thus one active diameter bar is **uniformly forward, uniformly backward, or uniformly
 tangent on its entire chain-track interval**. It cannot change sign from one chain
@@ -204,15 +204,15 @@ On `P`, all unit-edge direction vectors equal `u`, and Lemma C83.1 gives
 `d_{h\tau}=\sigma_h` on `I_h` and zero off `I_h`. Equation (C83.1) immediately gives
 (C83.6). For `\tau,\sigma\in I_h`, `\tau\ne\sigma`, equation (C83.2) gives
 
-$$
+```math
 (H_h)_{\tau\sigma}=\sigma_h^2(u\cdot u)=1,
-$$
+```
 
 while on the diagonal
 
-$$
+```math
 (H_h)_{\tau\tau}=1-\sigma_h r_h\cdot u=1-c_h.
-$$
+```
 
 All rows and columns off `I_h` vanish in the `P\times P` restriction. This is exactly
 (C83.7), and (C83.8) is the definition of the Target B radial coefficient. `\square`
@@ -221,23 +221,23 @@ All rows and columns off `I_h` vanish in the `P\times P` restriction. This is ex
 
 For a chain-track velocity `v\in\mathbb R^P`, define prefix variables
 
-$$
+```math
 X_0=0,
 \qquad
 X_k=\sum_{j=1}^k v_{\tau_j}
 \quad(1\le k\le D).
 \tag{C83.9}
-$$
+```
 
 Then (C83.6) gives
 
-$$
+```math
 \boxed{
  g_h\cdot v
  =\eta_h(X_{b_h}-X_{a_h}).
 }
 \tag{C83.10}
-$$
+```
 
 Hence every nonparallel active diameter bar imposes only one equality between two
 prefix variables. The arbitrary `D`-coordinate gradient matrix collapses to an
@@ -245,28 +245,28 @@ interval-endpoint graph on the `D+1` prefix indices.
 
 Let
 
-$$
+```math
 W_P=\left\{v\in\mathbb R^P:\sum_{\tau\in P}v_\tau=0\right\},
 \tag{C83.11}
-$$
+```
 
 so `X_D=X_0=0`. The C80 chain bar has
 
-$$
+```math
 I_{h_0}=P,
 \qquad c_{h_0}=D,
 \qquad \eta_{h_0}=0,
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 H_{h_0}[v,v]=-D\|v\|^2
 \qquad(v\in W_P).
 }
 \tag{C83.12}
-$$
+```
 
 This recovers C80 directly from the interval normal form.
 
@@ -277,9 +277,9 @@ There cannot be a second distinct active diameter segment in that direction: if 
 parallel length-`D` segments differ by a nonzero translation `s`, then the two cross
 vectors are `r+s` and `r-s`, and
 
-$$
+```math
 |r+s|^2+|r-s|^2=2D^2+2|s|^2>2D^2,
-$$
+```
 
 so one source distance exceeds `D`.
 
@@ -287,15 +287,15 @@ Thus every active diameter bar `h\ne h_0` that meets `P` has `\eta_h\ne0`. For a
 velocity supported on `P` and first-order neutral for all active diameter bars,
 (C83.10) therefore gives
 
-$$
+```math
 X_{b_h}=X_{a_h}
 \qquad(h\ne h_0).
 \tag{C83.13}
-$$
+```
 
 Substituting into (C83.7) yields the exact scalar sign law
 
-$$
+```math
 \boxed{
 H_h[v,v]
 =-c_h\sum_{\tau\in I_h}v_\tau^2
@@ -303,7 +303,7 @@ H_h[v,v]
 (h\ne h_0,\ v\text{ supported on }P,\ g_k\cdot v=0\ \forall k).
 }
 \tag{C83.14}
-$$
+```
 
 Therefore:
 

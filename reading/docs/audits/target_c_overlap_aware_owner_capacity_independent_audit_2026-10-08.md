@@ -23,14 +23,14 @@ Use the finite actual O–O system in the canonical localization theorem on the 
 Pairwise disjointness is an explicit hypothesis. The promoted acute-binary laminarity result excludes crossing in its stated actual binary model, and C-OWNER-REGION-TREE-RECURRENCE supplies the dual-tree statement for disjoint proper crosscuts. This audit does not infer disjointness for a generic crossing multishear model. Let T_OO be the number of selected complete stopped O–O trains. For each owner i, let T_i count the selected trains whose two adjacent region labels are zero and i. Let r_i be the number of cyclic runs of owner i on the loaded-hull word. Let I be any set of owners whose outer-walk word has a nonempty complement, and let J be a set of owners for which an active unary strict-rhombus root is specified. Here a root for i is a bounded strict unit rhombus with two adjacent vertices of owner i, the other two fixed, and the resulting opposite moving/fixed contact edges in the selected train system.
 
 Then
-$$
+```math
 \boxed{\sum_{i\in I} r_i + |J\setminus I| \le T_{\rm OO}.}
-$$
+```
 
 In particular, if each i in I occurs on the loaded hull, then
-$$
+```math
 |I\cup J| \le T_{\rm OO}.
-$$
+```
 With the canonical acute-binary terminal bound, the right side is at most x_B+m_B+1. This is a finite capacity statement. It does not establish a beneficial pin, a simultaneous feasible motion, or a full-source competitor.
 
 The statement does not apply to arbitrary crossing multishears, to a post-hoc contraction that identifies distinct source vertices as owners, or to owners charged only through unloaded endpoints. Contact-isolated source points remain in the full configuration and are outside this core train count.
@@ -40,10 +40,10 @@ The statement does not apply to arbitrary crossing multishears, to a post-hoc co
 ### One selected train has one owner bank
 
 Suppose an old contact joins distinct moving owners i and j, with contact vector v and translations Delta_i, Delta_j. Exact unit-contact preservation in the four independent binary states gives
-$$
+```math
 |v+\Delta_i-\Delta_j|^2-|v+\Delta_i|^2-|v-\Delta_j|^2+|v|^2
 =-2\Delta_i\cdot\Delta_j=0.
-$$
+```
 This contradicts the acute hypothesis. Thus an old contact cannot join two distinct moving owners.
 
 Across a selected cut, equal region translations would give zero increment, excluded by hypothesis. Its adjacent regions therefore cannot both have label zero or the same owner. They also cannot have distinct nonzero owner labels, by the identity above. Every selected cut consequently separates label zero from one unique owner i. Since each stopped train is one of these actual cuts, assigning that train to i partitions the selected train set into disjoint banks T_i, with sum_i T_i=T_OO.
@@ -55,9 +55,9 @@ This is the missing step that the earlier Audit.63 properly withheld: the genera
 Let r_out(i) be the number of maximal cyclic outer-walk runs carrying owner i. A change of owner across an outer contact occurrence must lie on a selected cut edge: otherwise its endpoints remain in one component after the selected cut edges are deleted and have the same translation label. The cut-bank argument assigns each such boundary occurrence to the unique bank T_i.
 
 Every outer run of i with nonempty complement has two distinct boundary occurrences. They are terminal occurrences of complete stopped trains. A selected train has exactly two terminal occurrences, counted with facial multiplicity for a singleton bridge. Distinct run boundaries are distinct outer-walk occurrences, so
-$$
+```math
 r_{\rm out}(i)\le T_i.
-$$
+```
 Restricting the outer walk to the distinguished loaded-hull occurrences cannot split one outer run into two, and distinct loaded runs remain separated by a retained loaded vertex of another owner. Hence r_i<=r_out(i)<=T_i.
 
 ### A unary rhombus root spends a train from its owner's bank

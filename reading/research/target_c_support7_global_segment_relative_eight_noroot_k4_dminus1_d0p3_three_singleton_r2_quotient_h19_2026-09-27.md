@@ -19,35 +19,35 @@ Target C-II, or Erdos Problem #99.
 
 Current main gives
 
-$$
+```math
 \operatorname{rank} P=4,\qquad
 (d_1,d_2,d_3,d_4)(P)\ge (2,4,5,7).
-$$
+```
 
 The incomplete-root profile consists of exactly three singleton blocks.
 Distinct projective weight-two lines of `P` have disjoint supports.
 If `M` is the support of a weight-two line, then every selected singleton
 block `b` satisfies
 
-$$
+```math
 |I_b\setminus M|\ge2
-$$
+```
 
 and the sharper puncture condition
 
-$$
+```math
 E_b\not\subset P+K_{M\cup\{j\}}
-$$
+```
 
 for every `j notin M`.
 
 Assume exactly two projective weight-two lines occur. Write their disjoint
 supports as `M1,M2`, let `g_i` span the line supported on `M_i`, and put
 
-$$
+```math
 A=\langle g_1,g_2\rangle,\qquad
 U=[8]\setminus(M_1\cup M_2).
-$$
+```
 
 Thus `dim A=2` and `supp(A)=M1 union M2`.
 
@@ -55,26 +55,26 @@ Thus `dim A=2` and `supp(A)=M1 union M2`.
 
 Consider the coordinate projection
 
-$$
+```math
 \pi_U:P\to\mathbf Q^U.
-$$
+```
 
 Its kernel is exactly `A`. Certainly `A<=ker(pi_U)`. If the kernel
 contained any `v notin A`, then the three-dimensional subspace
 `A+<v>` would be supported on the four coordinates `M1 union M2`.
 That would give
 
-$$
+```math
 d_3(P)\le4,
-$$
+```
 
 contrary to `d_3(P)>=5`.
 
 Hence
 
-$$
+```math
 \ker(\pi_U|_P)=A,\qquad \operatorname{rank}\pi_U(P)=2.
-$$
+```
 
 In particular, the four unmatched coordinates carry a genuine rank-two
 projection of the residual coefficient geometry.
@@ -85,21 +85,21 @@ Quotient `Q^8` by `A`. Each matched pair `M_i` contributes one
 residual quotient coordinate because `Q^{M_i}/<g_i>` is one-dimensional;
 the four unmatched coordinates remain ordinary coordinates. Therefore
 
-$$
+```math
 \mathbf Q^8/A\cong\mathbf Q^6
-$$
+```
 
 with coordinates
 
-$$
+```math
 (q_1,q_2,u_1,u_2,u_3,u_4).
-$$
+```
 
 Let
 
-$$
+```math
 R=P/A\le\mathbf Q^6.
-$$
+```
 
 Then `rank R=2`.
 
@@ -115,9 +115,9 @@ contain a nonzero word of weight at most two outside `A`. Weight one is
 excluded by `d_1(P)>=2`; weight two would be a third projective weight-two
 line, contrary to the definition of the r=2 subcase. Hence
 
-$$
+```math
 \boxed{d_1(R)\ge3.}
-$$
+```
 
 The restriction of `R` to the four unmatched coordinates has rank two by
 Section 2. Also at least three unmatched coordinate columns are nonzero:
@@ -146,9 +146,9 @@ The selected constraint row lies in `P`, so its weight is at least two.
 Each of the two nonselected local rows represents `W_b`, so its weight is
 also at least two. Since the three multiplicities sum to three, this forces
 
-$$
+```math
 (m_0,m_1,m_2)=(1,1,1).
-$$
+```
 
 The two nonselected quotient rows then have two distinct weight-two supports.
 By the preceding localization, both supports lie in `U`, so all three
@@ -183,9 +183,9 @@ rank-two empty block has incidence at least four by `d_2(P)>=4`.
 If `e` is the number of touched actual-empty blocks, their total incidence
 is therefore at least
 
-$$
+```math
 3e-2.
-$$
+```
 
 ## 6. Improved touched-block bound
 
@@ -193,50 +193,50 @@ Let `h,e,c` be the numbers of touched blocks, touched actual-empty blocks,
 and touched complete blocks. There are exactly three touched singleton
 blocks, so
 
-$$
+```math
 h=e+3+c.
-$$
+```
 
 Because `d_root=0`, the touched complete triangle rows are independent.
 The committed face-local containment of the four external relation directions
 gives
 
-$$
+```math
 \operatorname{rank}H(T)-\operatorname{rank}H(C)\ge4.
-$$
+```
 
 The triangle boundary space on seven labels has rank at most 15. Hence
 
-$$
+```math
 c\le11,\qquad e\ge h-14.
-$$
+```
 
 Each selected singleton has at least two touches, so the three singleton
 blocks contribute at least six incidences. Complete touched blocks contribute
 at least one incidence each. The eight no-root four-cycles contribute exactly
 32 cycle-block incidences. Combining this with Section 5 gives
 
-$$
+```math
 32\ge (3e-2)+6+c.
-$$
+```
 
 Using `h=e+3+c`,
 
-$$
+```math
 32\ge h+2e+1.
-$$
+```
 
 Since `e>=h-14`,
 
-$$
+```math
 32\ge 3h-27,
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{h\le19.}
-$$
+```
 
 This improves the previous coarse r=2 bound `h<=21` by two touched blocks.
 

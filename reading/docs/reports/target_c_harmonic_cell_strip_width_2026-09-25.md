@@ -54,11 +54,11 @@ no triangle. Let `I` be a nonempty connected set of contact vertices, and let
 `I subset conv(T)`. Then, with `P=conv(T)` and `d=diam(P)`, the minimum width
 of `P` satisfies
 
-$$
+```math
 \boxed{\operatorname{width}(P)>\sqrt3/2,\qquad
        \operatorname{area}(P)>(\sqrt3/4)d.}
 \tag{SW.1}
-$$
+```
 
 In particular (SW.1) holds for every actual harmonic attachment cell
 `P_r=conv(A_r)` of canonical Target C: Section 62 supplies a connected
@@ -82,10 +82,10 @@ the vertical coordinate zero of `p`. On either the right or left open
 semicircle about `p`, the available directions occupy an angular interval
 of length
 
-$$
+```math
 \arcsin s+\arcsin t\le\arcsin(s+t)\le\pi/3.
 \tag{SW.2}
-$$
+```
 
 The first inequality follows from the addition formula, or by observing
 that `arcsin s+arcsin(w-s)` has its maximum at an endpoint for
@@ -120,10 +120,10 @@ The constants cannot be increased under these hypotheses. Put an unloaded
 point at the origin and three loaded attachment points on the unit circle
 at angles
 
-$$
+```math
 0,\quad \pi/3+\varepsilon,\quad 4\pi/3-\varepsilon,
 \qquad 0<\varepsilon<\pi/6.
-$$
+```
 
 All three origin-to-attachment edges are unit contacts. Their pairwise
 angular gaps are `pi/3+epsilon`, `pi-2epsilon`, and
@@ -151,24 +151,24 @@ consecutive unit loaded-hull sides and one closing nonunit attachment
 chord of length `ell_r>3` (this is a chord length, not Section 123's
 local surplus `s_r`). Thus `a_r=M_r+1`. Then
 
-$$
+```math
 \boxed{\quad
 2(e_{BB}-k)\ge
 \sum_{r\in S}\bigl(M_r+\lceil \ell_r\rceil-3\bigr).
 \quad}
 \tag{CC.1}
-$$
+```
 
 For a short convex cap whose closing chord realizes its diameter
 `d_r=ell_r`, this implies
 
-$$
+```math
 \boxed{\quad
 e_{BB}-k\ge
 \sum_{r\in S}d_r-\frac32|S|.
 \quad}
 \tag{CC.2}
-$$
+```
 
 The proof uses the actual augmented graph `J_r^+` of Section 123. Every
 edge except the closing chord is a unit edge: internal and attachment
@@ -180,10 +180,10 @@ walk joins its endpoints using unit edges and therefore has at least
 `ceil(ell_r)+1`, so its contribution to the augmented degree defect is at
 least `ceil(ell_r)-3`:
 
-$$
+```math
 Q_r^+\ge\lceil \ell_r\rceil-3.
 \tag{CC.3}
-$$
+```
 
 Every edge of `J_r^+` other than the closing chord is an actual unit
 contact of the source. A triangular face omitting the chord would
@@ -191,19 +191,19 @@ therefore be a forbidden source unit triangle. Every triangular face
 must contain the closing chord, which borders only one bounded face;
 hence `T_r<=1`. Consequently
 
-$$
+```math
 a_r-T_r+Q_r^+
 \ge M_r+\lceil \ell_r\rceil-3.
 \tag{CC.4}
-$$
+```
 
 Canonical Section 123's exact identity is
 
-$$
+```math
 2(e_{BB}-k)
 =\sum_r(a_r-T_r+Q_r^+)+2d_{tile},
 \qquad d_{tile}\ge0.
-$$
+```
 
 Each omitted cell summand is nonnegative by its local Section-123 identity.
 Keeping only cells in `S` and using (CC.4) proves (CC.1). Since the
@@ -218,11 +218,11 @@ The geometric cap construction in open PR #583 uses blocks of
 `M=floor(sqrt(D))` consecutive unit sides of a regular near-disk polygon.
 Its cap sagitta is
 
-$$
+```math
 h={D\over2}\bigl(1-\cos(M\arcsin(1/D))\bigr)
   \longrightarrow {1\over4}.
 \tag{SW.3}
-$$
+```
 
 The cap lies in a strip of width `h`. For large `D`, (SW.3) is below
 `sqrt(3)/2`; no such cap can be an actual harmonic attachment cell with

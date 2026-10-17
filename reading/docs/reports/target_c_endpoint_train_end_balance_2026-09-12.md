@@ -21,58 +21,58 @@ obstruction and is now isolated as a separate target.
 
 Use the canonical Section-96 endpoint notation
 
-$$
+```math
 \theta_4=2.423405458475313\ldots,
 \qquad
 \sigma_4:=\sin\theta_4=0.658020712164235\ldots,
-$$
+```
 
 so that
 
-$$
+```math
 \frac32\sigma_4=3\theta_4-2\pi=:\alpha_4
 =0.987031068246352\ldots .
 \tag{97.1}
-$$
+```
 
 Along a wrapping sequence with normalized cell diameter tending to
 `\mu_4`, Section 96 gives
 
-$$
+```math
 \frac{a_D}{D}\to\alpha_4,
 \qquad
 \frac{s_D+c_D+Q_D}{D}\to0,
 \tag{97.2}
-$$
+```
 
 and the exact local face identity gives
 
-$$
+```math
 \frac{L_D}{D}\to4\alpha_4=6\sigma_4.
 \tag{97.3}
-$$
+```
 
 The three distinguished forbidden gaps have outer contact routes of total length
 
-$$
+```math
 S_D=3\sigma_4D+o(D)=2\alpha_4D+o(D).
 \tag{97.4}
-$$
+```
 
 The equality in (97.4) uses the endpoint equality case in the Section-96 route lower
 bound. The remaining attachment intervals have total route length
 
-$$
+```math
 L_D-S_D=2\alpha_4D+o(D)=3\sigma_4D+o(D).
 \tag{97.5}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{S_D=\frac12L_D+o(D).}
 \tag{97.6}
-$$
+```
 
 This is the endpoint train-end balance at the outer-walk level. It uses the new
 Section-96 outer-walk charge; the older Section-94 endpoint has a different constant
@@ -83,16 +83,16 @@ and does not imply (97.6).
 Let `\mathcal R_D` be the strict-rhombus complex in the harmonic carrier, including
 all components and hole boundaries, and let
 
-$$
+```math
 B_D:=\text{the number of physical boundary-edge occurrences of }\mathcal R_D.
-$$
+```
 
 The canonical train theorem gives
 
-$$
+```math
 \boxed{B_D=2T_D,}
 \tag{97.7}
-$$
+```
 
 where `T_D` is the number of local train segments. Every edge occurrence of the outer
 contact walk that is incident to a strict rhombus is one boundary occurrence of
@@ -101,54 +101,54 @@ contact walk that is incident to a strict rhombus is one boundary occurrence of
 Let `b_D` count outer-walk edge occurrences that are incident to no strict rhombus.
 Split it as
 
-$$
+```math
 b_D=b_D^{\mathrm{bridge}}+b_D^{\mathrm{exc}},
 \tag{97.8a}
-$$
+```
 
 where `b_D^{bridge}` counts edge occurrences whose two sides are in the outer face
 (equivalently, bridge occurrences in the induced carrier graph), and
 `b_D^{exc}` counts occurrences facing a bounded nonquadrilateral face. The exact
 Section-82 face ledger gives
 
-$$
+```math
 \sum_{f\text{ nonquadrilateral}}\deg f
 \le5Q_D.
-$$
+```
 
 Consequently the finite boundary accounting inequality is
 
-$$
+```math
 \boxed{b_D^{\mathrm{exc}}\le5Q_D,\qquad
 L_D\le B_D+5Q_D+b_D^{\mathrm{bridge}}.}
 \tag{97.8}
-$$
+```
 
 This inequality allows repeated outer-face occurrences and bridges. It is therefore
 safe in the current carrier topology.
 
 If `b_D=o(D)`, (97.2), (97.3), and (97.8) imply
 
-$$
+```math
 B_D\ge L_D-o(D).
-$$
+```
 
 The reverse inequality is the canonical Section-82/89 boundary estimate
 `B_D\le L_D+5Q_D`. Hence `B_D=L_D+o(D)` and
 
-$$
+```math
 \frac{B_D}{D}\to6\sigma_4,
 \qquad
 \frac{T_D}{D}\to3\sigma_4.
 \tag{97.9}
-$$
+```
 
 In this rhombically visible subcase, the three distinguished corridors contain
 
-$$
+```math
 3\sigma_4D+o(D)=T_D+o(D)
 \tag{97.10}
-$$
+```
 
 train-end edge occurrences, exactly half of all `2T_D` train ends. At least half of
 these occurrences belong to distinct trains, and at least one of the three corridors
@@ -189,14 +189,14 @@ full-source bridge, would therefore be invalid.
 
 The precise next lemma is
 
-$$
+```math
 \boxed{
 b_D=\Omega(D)
 \Longrightarrow
 \text{a source-preserving deformation decreases the actual global diameter,}
 }
 \tag{97.11}
-$$
+```
 
 under the canonical contact-minimal and diameter-pair-minimal normalization, with all
 contact-isolated points retained. If (97.11) is proved, the remaining `b_D=o(D)`
@@ -223,4 +223,3 @@ Dependencies are canonical `C-WRAP-OUTER-WALK-GAP`,
 `C-HARMONIC-CARRIER-QUAD`, `C-HARMONIC-TRAIN-BUDGET`, and
 `C-EXPLICIT-ORDERED-GRID`. The note retains bridges, repeated outer-face edges, and
 contact-isolated source points throughout.
-

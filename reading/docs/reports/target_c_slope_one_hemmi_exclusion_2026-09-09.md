@@ -20,41 +20,41 @@ This report closes one complete endpoint of the near-zero response phase.
 
 Let
 
-$$
+```math
 \varepsilon:=\sum_{b<k}c_{bk}-1
 =\tfrac12\operatorname{tr}(\Lambda-L_H),
-$$
+```
 
 and
 
-$$
+```math
 L:=e_{BB}+2s_C.
-$$
+```
 
 RCC proves that `epsilon -> 0` forces `liminf L/D >= 1`. The remaining equality endpoint was
 
-$$
+```math
 D\varepsilon\to0,
 \qquad
 \frac{L}{D}\to1.
 \tag{SHX.1}
-$$
+```
 
 SAC and SOD reduce any such sequence to
 
-$$
+```math
 \frac hD=\frac qD+o(1)=:y+o(1),
 \qquad
 1.5336\le y\le1.6349643789\ldots,
 \tag{SHX.2}
-$$
+```
 
 and, crucially,
 
-$$
+```math
 \sum_r\operatorname{area}(\operatorname{conv}A_r)=o(D^2).
 \tag{SHX.3}
-$$
+```
 
 The sharp Hemmi perimeter-area theorem now contradicts the JC cavity capacity everywhere in the interval SHX.2.
 
@@ -64,7 +64,7 @@ There is no unbounded sequence of post-ZF Target C survivors satisfying SHX.1.
 
 Equivalently,
 
-$$
+```math
 \boxed{
 D\varepsilon\to0
 \quad\Longrightarrow\quad
@@ -72,7 +72,7 @@ D\varepsilon\to0
 \text{ in the sense that slope-one approach is impossible.}
 }
 \tag{SHX.4}
-$$
+```
 
 More precisely, no subsequence can have `(e_BB+2s_C)/D -> 1`.
 
@@ -84,70 +84,70 @@ This statement does **not** yet provide an explicit uniform gap `1+eta`; obtaini
 
 Under SHX.1, SAC proves SHX.3. Hence the C49 attachment gap
 
-$$
+```math
 G:=\operatorname{area}(F)
 -
 \sum_r\operatorname{area}(\operatorname{conv}A_r)
-$$
+```
 
 satisfies
 
-$$
+```math
 \boxed{
 G=\operatorname{area}(F)-o(D^2).
 }
 \tag{SHX.5}
-$$
+```
 
 Pass to a subsequence along which
 
-$$
+```math
 y:=\lim h/D,
 \qquad
 p:=\lim P_F/D,
 \qquad
 P_F:=\operatorname{per}(F),
-$$
+```
 
 and
 
-$$
+```math
 t:=\lim e_{BB}/D
-$$
+```
 
 exist. Since `L/D -> 1` and `s_C>=0`,
 
-$$
+```math
 0\le t\le1.
 \tag{1.1}
-$$
+```
 
 S1E gives `q-h=o(D)`, so `q/D -> y`. Consecutive force-hull vertices are unit-separated, hence `q<=P_F`; therefore
 
-$$
+```math
 p\ge y.
 \tag{1.2}
-$$
+```
 
 ZT gives
 
-$$
+```math
 b=2h-Q-2s_Z\le2h,
-$$
+```
 
 and the outer contact walk has `P_F<=b`. Thus
 
-$$
+```math
 p\le2y.
 \tag{1.3}
-$$
+```
 
 Consequently
 
-$$
+```math
 \min\{y,p-y\}=p-y.
 \tag{1.4}
-$$
+```
 
 ---
 
@@ -155,7 +155,7 @@ $$
 
 PI gives the force-hull area lower bound
 
-$$
+```math
 A_{PI}(y)
 :=
 \begin{cases}
@@ -163,65 +163,66 @@ A_{PI}(y)
 \frac12,&y\ge\pi/2.
 \end{cases}
 \tag{2.1}
-$$
+```
 
 so
 
-$$
+```math
 \liminf\frac{\operatorname{area}(F)}{D^2}
 \ge A_{PI}(y).
 \tag{2.2}
-$$
+```
 
 The actual-perimeter JC capacity gives
 
-$$
+```math
 \limsup\frac G{D^2}
 \le
 \frac{(t+\min\{y,p-y\})^2}{4\pi}.
 \tag{2.3}
-$$
+```
 
 Use SHX.5, (1.1), and (1.4):
 
-$$
+```math
 \boxed{
 A_{PI}(y)
 \le
 \frac{(1+p-y)^2}{4\pi}.
 }
 \tag{SHX.6}
-$$
+```
 
 All quantities are positive. Therefore every hypothetical slope-one survivor must satisfy
 
-$$
+```math
 \boxed{
 p\ge p_{req}(y):=y-1+\sqrt{4\pi A_{PI}(y)}.}
 \tag{SHX.7}
-$$
+```
 
 SOD gives `y>=1.5336`. On the entire SOD interval, `p_req` is increasing. Indeed:
 
 - for `y<=pi/2`,
-  $$
+  ```math
   p_{req}'(y)
   =1+\frac{\pi\cos y}{\sqrt{2\pi\sin y}}>1;
-  $$
+  
+  ```
 - for `y>=pi/2`, `A_PI=1/2`, so `p_req'(y)=1`.
 
 Thus
 
-$$
+```math
 p\ge p_{req}(1.5336).
-$$
+```
 
 A conservative direct evaluation gives
 
-$$
+```math
 \boxed{p>3.039.}
 \tag{SHX.8}
-$$
+```
 
 (The actual value is about `3.0393612`.)
 
@@ -233,151 +234,151 @@ Hence the full hypothetical slope-one interval lies inside the perimeter range w
 
 Put
 
-$$
+```math
 p_2:=12\sin\frac\pi{12}
 =3.1058285412\ldots .
 \tag{3.1}
-$$
+```
 
 On the sharp first Hemmi branch
 
-$$
+```math
 3<p\le p_2,
-$$
+```
 
 HKS records
 
-$$
+```math
 \boxed{
 A_H(p)
 =3\left(\frac p{p_2}\right)^2
 -\frac{3+\sqrt3}{2}.
 }
 \tag{SHX.9}
-$$
+```
 
 Therefore every diameter-one normalized force hull with perimeter `p` in this interval satisfies
 
-$$
+```math
 \operatorname{area}(F)/D^2\ge A_H(p).
 \tag{3.2}
-$$
+```
 
 Fix `y` in the SOD interval and suppose first that
 
-$$
+```math
 p_{req}(y)\le p\le p_2.
-$$
+```
 
 Consider
 
-$$
+```math
 \Phi_y(p)
 :=A_H(p)-\frac{(1+p-y)^2}{4\pi}.
 \tag{3.3}
-$$
+```
 
 Its derivative is
 
-$$
+```math
 \Phi_y'(p)
 =
 \frac{6p}{p_2^2}
 -
 \frac{1+p-y}{2\pi}.
 \tag{3.4}
-$$
+```
 
 On
 
-$$
+```math
 p\ge3.039,
 \qquad
 y\ge1.5336,
 \qquad p\le p_2,
-$$
+```
 
 we have the crude bounds
 
-$$
+```math
 \frac{6p}{p_2^2}>1.89,
-$$
+```
 
 while
 
-$$
+```math
 \frac{1+p-y}{2\pi}<0.41.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{\Phi_y'(p)>1.48>0.}
 \tag{SHX.10}
-$$
+```
 
 So it is enough to test the smallest allowed perimeter `p=p_req(y)`.
 
 By definition of `p_req`,
 
-$$
+```math
 \frac{(1+p_{req}(y)-y)^2}{4\pi}=A_{PI}(y).
-$$
+```
 
 Thus
 
-$$
+```math
 \Phi_y(p_{req}(y))
 =A_H(p_{req}(y))-A_{PI}(y).
 \tag{3.5}
-$$
+```
 
 Define
 
-$$
+```math
 R(y):=A_H(p_{req}(y))-A_{PI}(y).
-$$
+```
 
 For `y<=pi/2`, `p_req'(y)>1` and
 
-$$
+```math
 A_{PI}'(y)=\tfrac12\cos y<0.019
-$$
+```
 
 throughout `y>=1.5336`. Also `A_H'(p)>1.89`. Hence
 
-$$
+```math
 R'(y)>1.89-0.019>0.
-$$
+```
 
 For `y>=pi/2`, `A_PI` is constant and `p_req'(y)=1`, so again `R'(y)>0`.
 
 Therefore the smallest value occurs at `y=1.5336`. A conservative evaluation gives
 
-$$
+```math
 \boxed{
 R(1.5336)>0.007.
 }
 \tag{SHX.11}
-$$
+```
 
 (The actual margin is about `0.00729`.)
 
 Consequently, for every
 
-$$
+```math
 1.5336\le y\le1.634964\ldots,
 \qquad
 p_{req}(y)\le p\le p_2,
-$$
+```
 
 we have
 
-$$
+```math
 A_H(p)
 >
 \frac{(1+p-y)^2}{4\pi},
-$$
+```
 
 contradicting the JC upper capacity SHX.6.
 
@@ -387,17 +388,17 @@ contradicting the JC upper capacity SHX.6.
 
 It remains to exclude
 
-$$
+```math
 p\ge p_2.
-$$
+```
 
 HKI records the simple `n=2` Hemmi lower bound, valid for
 
-$$
+```math
 p\in[p_2,\pi],
-$$
+```
 
-$$
+```math
 \boxed{
 A(F)/D^2
 \ge
@@ -405,23 +406,23 @@ A(F)/D^2
 -rac{\sqrt3}{2}.
 }
 \tag{SHX.12}
-$$
+```
 
 The right side is increasing in `p`, so at `p=p_2` it already equals
 
-$$
+```math
 \frac{3-\sqrt3}{2}
 =0.6339745962\ldots .
 \tag{4.1}
-$$
+```
 
 By contrast, throughout the entire SOD interval and with `p<=pi`, the JC capacity is at most
 
-$$
+```math
 \frac{(1+\pi-1.5336)^2}{4\pi}
 <0.542.
 \tag{4.2}
-$$
+```
 
 Thus SHX.12 and JC are separated by more than `0.09`; no `p>=p_2` case is possible.
 
@@ -444,11 +445,11 @@ Therefore there is no sequence satisfying SHX.1. This proves SHX.
 
 RCC previously gave only
 
-$$
+```math
 D\varepsilon\to0
 \Longrightarrow
 \liminf L/D\ge1.
-$$
+```
 
 S1E/SCC classified the equality endpoint. SOC/SAC/SOD made that endpoint progressively more rigid. SHX now deletes it completely.
 
@@ -456,9 +457,9 @@ The surviving C66 branch must therefore stay **strictly above slope one** in the
 
 What is not yet proved is a numerical constant `eta>0` such that
 
-$$
+```math
 L\ge(1+\eta)D
-$$
+```
 
 for all sufficiently large near-zero survivors. Compactness of scalar variables alone is insufficient because SCC/SAC used equality-scale geometric conclusions. A quantitative off-slope stability theorem is required.
 
@@ -482,24 +483,24 @@ The natural next theorem is a **quantitative off-slope stability version of SCC/
 
 Write
 
-$$
+```math
 \eta_D:=L/D-1\ge-o(1).
-$$
+```
 
 RCC and the response-energy concentration imply one harmonic component still has an attachment pair at distance `D-o(D)` and graph diameter at least `D-o(D)`. ZK leaves at most approximately `eta_D D` graph-diameter budget outside that carrier.
 
 A useful quantitative target is to prove
 
-$$
+```math
 \sum_r\operatorname{area}(\operatorname{conv}A_r)
 \le C\sqrt{\eta_D}\,D^2+O(\eta_D^2D^2)+o(D^2)
-$$
+```
 
 for an absolute `C`, while retaining the PI/JC/Hemmi lower-vs-upper comparison above. Since SHX has a fixed area margin at slope one, any such continuous estimate would produce an explicit `eta_*>0` and upgrade RCC to
 
-$$
+```math
 L/D\ge1+\eta_*.
-$$
+```
 
 That is now the shortest response-side quantitative target.
 

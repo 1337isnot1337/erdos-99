@@ -37,12 +37,12 @@ vertex of `P`. Thus `P` is exactly the contact graph's convex hull.
 Let `L` be its occurrence-counted outer contact walk, let `f` count its
 bounded nonquadrilateral faces, and put
 
-$$
+```math
 Q=\sum_{F\text{ nonquad}}(\deg F-4),\qquad
 Z=L-\operatorname{per}(P)\ge0,
 \qquad E=Q+4f\le5Q.
 \tag{1}
-$$
+```
 
 All bounded four-faces are actual strict unit rhombi. We rederive the
 oriented pairing from these rhombi, rather than promote a train-end theorem
@@ -68,10 +68,10 @@ its mass is `L`. For any measure `mu` let `mu^op` be its translate by `pi`.
 
 **Lemma 1.** The actual boundary satisfies
 
-$$
+```math
 \boxed{\|\nu-\nu^{op}\|_{TV}\le2E.}
 \tag{2}
-$$
+```
 
 **Proof.** Opposite edges in each strict unit rhombus have the same contact
 direction. Join their two physical face-side occurrences. Each complete
@@ -113,23 +113,23 @@ used by the canonical harmonic-cell route ledgers.
 For a route of length `ell`, chord length `d`, and oriented chord unit
 vector `q`, its directed unit edges `e_k` satisfy
 
-$$
+```math
 \sum_ke_k=dq,\qquad
 \sum_k|e_k-q|^2=2(\ell-d).
 \tag{3}
-$$
+```
 
 Summing the route excesses gives exactly `Z`. Consequently, for a
 function `phi` on the direction circle with sup norm at most `a` and
 angular Lipschitz constant at most `b`,
 
-$$
+```math
 \boxed{
 \left|\int\phi\,d(\nu-\mu_P)\right|
 \le {\pi b\over2}\sqrt{2LZ}+aZ.
 }
 \tag{4}
-$$
+```
 
 Indeed angular distance between unit vectors is at most `(pi/2)|e-q|`.
 Replace each route's edge mass by `ell` copies of its chord direction,
@@ -141,38 +141,38 @@ is charged to `Z` rather than discarded.
 
 Define the continuous antiperiodic kernel `K` by
 
-$$
+```math
 K(t)={ (\pi-2t)\sin t-\cos t\over4\pi}
 \quad(0\le t\le\pi),\qquad K(t+\pi)=-K(t).
 \tag{5}
-$$
+```
 
 The endpoint values fit. Direct differentiation, including the derivative
 jumps at `0,pi`, gives the distribution identity
 
-$$
+```math
 K''+K={1\over2}(\delta_0-\delta_\pi)-{1\over\pi}\cos t.
 \tag{6}
-$$
+```
 
 Its first sine and cosine coefficients vanish, by direct integration.
 The nonzero Fourier coefficients are those of the antiperiodic inverse
 on odd modes `n>=3`; explicitly
 
-$$
+```math
 K(t)={1\over\pi}\sum_{j\ge1}
 {\cos((2j+1)t)\over1-(2j+1)^2}.
-$$
+```
 
 The series is absolutely convergent and
 `sum_(j>=1)1/[4j(j+1)]=1/4`. Also differentiating (5) bounds its slope.
 Thus
 
-$$
+```math
 \boxed{\|K\|_\infty\le {1\over4\pi},\qquad
 \operatorname{Lip}(K)\le {\pi+1\over4\pi}.}
 \tag{7}
-$$
+```
 
 Let `h` be the support function of `P`. For a polygon, `h''+h=mu_P`:
 on each vertex-normal interval `h` is a sine/cosine solution; at a side
@@ -185,21 +185,21 @@ give `R=K*g` with `R''+R=g`. Since
 `h(t)-h(t+pi)` satisfies the same equation, their difference is a first
 harmonic:
 
-$$
+```math
 h(t)-h(t+\pi)=R(t)+2c\cdot(\cos t,\sin t)
 \tag{8}
-$$
+```
 
 for one vector `c`. Combining (2), (4), and (7) yields
 
-$$
+```math
 \boxed{
 \|R\|_\infty
 \le {E+Z\over2\pi}
  +{\pi+1\over4}\sqrt{2LZ}.
 }
 \tag{9}
-$$
+```
 
 To check the factors, the term `K*(nu-nu^op)` is at most `2E/(4pi)`.
 The two differences between `nu` and `mu_P` each cost (4). Their summed
@@ -212,23 +212,23 @@ First suppose exactly that the vertices of `P` lie on a circle of radius
 `rho`, centered at zero, with `0 in P`. Let `d=diam P`.
 At the radial direction `e=x/rho` of any vertex `x`,
 
-$$
+```math
 h(e)=\rho,\qquad h(-e)\le d-\rho,
-$$
+```
 
 because width is at most diameter. Equation (8) gives
 
-$$
+```math
 R(e)\ge2\rho-d-2c\cdot e.
-$$
+```
 
 Take a convex combination of the vertex directions equal to zero, which
 exists because `0 in P`. Its average right side is `2rho-d`; therefore
 
-$$
+```math
 \boxed{\|R\|_\infty\ge2\rho-d.}
 \tag{10}
-$$
+```
 
 For Type-II annular attachment sequences, divide by `D` and pass to the
 circle-supported wrapping limit. Supports and normal measures converge
@@ -236,14 +236,14 @@ in their distribution identity; convolution with continuous `K` converges
 uniformly since perimeter masses stay bounded. Apply (10) to the limit.
 Combining (9)--(10), with `rho/D->1/2`, gives the new necessary defect law
 
-$$
+```math
 \boxed{
 (1-\lambda-o(1))D
 \le {Q+4f+Z\over2\pi}
  +{\pi+1\over4}\sqrt{2LZ}.
 }
 \tag{11}
-$$
+```
 
 In particular, `Q=o(D)` and `Z=o(D)` force `lambda=1`.
 This is independent of phase extraction, global O–O transfer, diameter
@@ -265,15 +265,15 @@ from near equality.
 Let `Delta(lambda)=pi/2-lambda-4lambda sqrt(1-lambda^2)` on the current
 rooted branch. The unpromoted rooted defect stability report gives
 
-$$
+```math
 Q_{\rm tot}+Z_{\rm tot}\le2\Delta(\lambda)D+o(D).
-$$
+```
 
 Use the same macroscopic wrapping carrier in (11). Its local quantities
 are bounded by these sums; `f<=Q`, and
 `L=per(P)+Z<=pi lambda D+2Delta D+o(D)`. Hence every such survivor obeys
 
-$$
+```math
 \boxed{
 1-\lambda
 \le {5\over\pi}\Delta(\lambda)
@@ -281,7 +281,7 @@ $$
  \sqrt{\Delta(\lambda)\bigl(\pi\lambda+2\Delta(\lambda)\bigr)}.
 }
 \tag{12}
-$$
+```
 
 At `lambda=lambda_1`, the exact root equation gives `Delta=0`, whereas
 `1-lambda_1>0`. Thus the rooted zero-defect endpoint is impossible under
@@ -290,9 +290,9 @@ O–O/star branch. The right side increases and the left side decreases
 on `[lambda_1,1)`; the derivative of `Delta` is positive there. The
 exact verifier certifies failure of (12) at the rational value
 
-$$
+```math
 \lambda=0.9891349.
-$$
+```
 
 Therefore this conditional composition gives the safe strict improvement
 `liminf lambda>0.9891349` (a stronger real threshold is the first crossing
@@ -375,10 +375,10 @@ small-direction-window sense, its actual rhombi have side directions
 approaching the two perpendicular rectangle directions. If its rhombus
 count is bounded below by `c D^2`, then
 
-$$
+```math
 \boxed{A_4/R_4\to1.}
 \tag{13}
-$$
+```
 
 Here the counts are for this carrier, not the full source.
 
@@ -459,9 +459,9 @@ endpoint argument, rather than quoting Corollary 10.7 outside its scope.
 In the canonical full-core Type-II regime, the global strict-rhombus
 area/count asymptotics give
 
-$$
+```math
 A_4-{\sqrt3\over2}R_4=o(D^2).
-$$
+```
 
 Each summand is nonnegative. Hence the same absolute error is `o(D^2)`
 for any carrier subset. If its count is `Omega(D^2)`, it has

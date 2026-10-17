@@ -31,23 +31,23 @@ existing notes. The first-order KKT locking argument requires only `nu_D`, not
 nonlinear integration of the newly added directions. Thus the tangent transfer is
 
 
-$$
+```math
 \boxed{
  \nu_D\ge {b-f\over2}
  +{1\over4}\bigl(\sigma_C-(Q-f)\bigr)_+-1+2c.
 }
 \tag{TF.1}
-$$
+```
 
 In the live terminal window this gives
 
-$$
+```math
 \boxed{
  {\nu_D\over D}>1.1988388040
  +{1\over4}{\sigma_C\over D}+2{c\over D}-o(1).
 }
 \tag{TF.2}
-$$
+```
 
 The result is an infinitesimal contact-flex statement; it does not claim that the
 two-dimensional local nonlinear family certified elsewhere globally embeds. It uses
@@ -64,12 +64,12 @@ vector of the internal train joining faces `i` and `j`. The restriction of the
 linearized face-closure map to the twelve internal train-angle rates has one column
 of the form
 
-$$
+```math
   \begin{array}{c|cc}
   &i&j\\ \hline
   C_B(ij)&J u_{ij}&-J u_{ij}
   \end{array}
-$$
+```
 
 and zero entries in the other face rows. This is an exact occurrence-counted formula;
 rhombus closure has already been eliminated by complete-train coordinates.
@@ -78,12 +78,12 @@ Summing the first-coordinate row of all six face closures annihilates every inte
 column, because its two endpoint occurrences have opposite vectors. The same holds
 for the second-coordinate rows. Therefore
 
-$$
+```math
  \operatorname{rank} C_B\le 10,
  \qquad
  \dim\ker C_B\ge2.
 \tag{TF.3}
-$$
+```
 
 No local numerical root, regularity assumption, sign/order classification, or metric
 realization is used in (TF.3). It holds for every actual collapsed block in the
@@ -114,50 +114,50 @@ loss in the existing count.
 This gives, with `g` the number of sealed nonzero one-anchor relation components and
 `c` the number of collapsed blocks,
 
-$$
+```math
  \nu_D\ge {b-f\over2}+a_F+{x_A\over2}+{n_0+n_2\over2}+p_U
  +(g-1)_+ +2c.
 \tag{TF.4}
-$$
+```
 
 ## 3. Elimination and live propagation
 
 The existing degree-excess argument gives
 
-$$
+```math
 g\ge\bigl(\sigma_C-2n_0-n_2-x_U\bigr)_+,
 \qquad x_U\le Q-f.
-$$
+```
 
 The same elementary optimization used in the existing dual-component flex note gives
 
-$$
+```math
  {n_0+n_2\over2}
  +\bigl(\sigma_C-x_U-2n_0-n_2\bigr)_+
  \ge {1\over4}(\sigma_C-x_U)_+.
-$$
+```
 
 Dropping nonnegative terms and using the conservative global-rotation loss yields
 
-$$
+```math
  \nu_D\ge {b-f\over2}
  +{1\over4}\bigl(\sigma_C-(Q-f)\bigr)_+-1+2c,
-$$
+```
 
 which is (TF.1).
 
 In the current terminal window, the audited correlated pair-shield ledger supplies
 
-$$
+```math
  {b-f\over2D}
  \ge 1.1988388040+{Q-f\over2D}-o(1).
-$$
+```
 
 The pointwise inequality
 
-$$
+```math
  {r\over2}+{1\over4}(s-r)_+\ge {s\over4}
-$$
+```
 
 with (r=(Q-f)/D), (s=\sigma_C/D), gives (TF.2).
 
@@ -167,15 +167,15 @@ At the pair-shield endpoint, a linear collapsed-block population is therefore ev
 more expensive in the positively locked diameter system than the previous one-charge
 statement recorded. In particular, any terminal sequence with
 
-$$
+```math
  \nu_D/D\le1.1988388040+\eta+o(1)
-$$
+```
 
 obeys
 
-$$
+```math
  {\sigma_C\over D}+8{c\over D}\le4\eta+o(1).
-$$
+```
 
 This is a genuine shrinkage of the low-flex C-II frontier. It does not by itself
 exclude collapsed blocks, because the remaining full-core obstruction may have
@@ -184,13 +184,13 @@ two-parameter certificate to a global source realization.
 
 **Dependency chain:**
 
-$$
+```math
 \text{actual collapsed block}
 \to \operatorname{rank}C_B\le10
 \to 2\text{ internal contact-flexes/block}
 \to \text{positive diameter locking}
 \to \text{(TF.1)--(TF.2)}.
-$$
+```
 
 **Disposition:** new proved candidate at the infinitesimal stopped-train scope; no
 theorem-state change; C-II remains open.

@@ -59,6 +59,14 @@ BASELINE_ENTRIES = {
     ".github/workflows/migration-namespace-canary.yml": [
         "100644",
         "0db51fcefd1dedf2c4883c7cc739b82d9378e8ee"
+    ],
+    ".gitattributes": [
+        "100644",
+        "5e6c655e97456081fc0fdf78a0cb8f76be90b26a"
+    ],
+    "tools/verify_frozen_target_c_813_migration.py": [
+        "100644",
+        "76aed04e7996f7b0123cf91c60c67ee43a4669df"
     ]
 }
 

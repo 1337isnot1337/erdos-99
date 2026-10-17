@@ -15,22 +15,24 @@
 
 Use the finite canonical O--O owner system of `C-OO-LOWER-BLOCKER-LOCALIZATION`, after its compatible bounded-face isolate reassignment. The positive contact core is connected, every old unit contact is preserved under each binary owner state, the owner translations are nonzero and pairwise acute, and their cloud has diameter
 
-$$
+```math
 s<\gamma_D:=D-\sqrt{D^2-1}.
-$$
+```
 
 Let `B` be the actual loaded diameter-endpoint set, `q=|B|`, and `b` the occurrence-counted outer contact-face boundary-walk length. Let `Z_out` be the number of contact-isolated source points in that outer contact face. All source points, including contact isolates, remain in the source and in the owner system. The lower formula is the post-dispatch intergroup binary formula; unary strict-rhombus blockers are kept separate.
 
 For pairwise disjoint internally incompatible binary sink SCCs `S_a`, choose the Audit.184 covering packet of `|S_a|+1` distinct physical lower-witness pairs. Let `u(S_a)` count packet pairs with at least one endpoint outside `B`, and let `R(S_a)` be the sum of cyclic loaded-hull owner-run counts. Then:
 
 1. For `D>=6`,
-   $$
+   ```math
    \sum_a u(S_a)\le 6(b-q+Z_{out}).
-   $$
+   
+   ```
 2. For `D>=7`, the canonical Audit.184 payment also gives
-   $$
+   ```math
    t\le 6(b-q+Z_{out})+\sum_a(R(S_a)-|S_a|),
-   $$
+   
+   ```
    where `t` is the number of counted sinks. In particular, the number of these sinks with `R(S_a)=|S_a|` is at most `6(b-q+Z_out)`.
 
 These are finite conditional owner-system bounds. They do not establish satisfiability, nonzero-move feasibility, an upper-diameter test, or an asymptotic bound on `b-q+Z_out`.
@@ -41,29 +43,29 @@ These are finite conditional owner-system bounds. They do not establish satisfia
 
 An old lower-witness pair is a noncontact pair that violates the lower bound in some binary state. Its relative displacement changes by less than `s`, so its old length `ell` satisfies
 
-$$
+```math
 1<\ell<1+s<1+\gamma_D.
-$$
+```
 
 Since `\gamma_D=1/(D+\sqrt{D^2-1})<1/(2D-1)`, for `D>=6` we have `ell<12/11`. Also
 
-$$
+```math
 \frac{1}{2\sin(\pi/7)}>\frac{49}{44}>\frac{12}{11},
-$$
+```
 
 using `sin(\pi/7)<\pi/7<22/49`. Thus all such witnesses belong to the canonical near-unit graph `N_\tau` with `\tau=1+s<1/(2 sin(pi/7))`.
 
 The canonical `C-NEAR-UNIT-CONFLICT-GEOMETRY` result gives degree at most six in this range. Its angular argument is exact: for neighbor radii `a,b in [1,\tau]`, unit separation implies
 
-$$
+```math
 \cos\theta\le \frac{a^2+b^2-1}{2ab}.
-$$
+```
 
 When `\tau^2<2`, the right side increases in both radii on `[1,\tau]`, so it is at most `(2\tau^2-1)/(2\tau^2)`. Hence
 
-$$
+```math
 \theta\ge 2\arcsin(1/(2\tau))>2\pi/7.
-$$
+```
 
 Seven distinct neighbor directions cannot fit around a point with every cyclic angular gap greater than `2pi/7`. The report's strict cutoff is necessary: at `\tau=1/(2 sin(pi/7))`, a regular unit-edge heptagon with its center has seven neighbors at distance `\tau` from the center and unit pairwise separation around the ring.
 
@@ -71,10 +73,10 @@ Seven distinct neighbor directions cannot fit around a point with every cyclic a
 
 Write `U_out` for the distinct unloaded, nonisolated source vertices incident with the outer contact face. The canonical loaded-hull occurrence theorem supplies one distinguished outer-walk occurrence for each of the `q` loaded vertices. Select also one occurrence for each vertex in `U_out`. These are distinct positions in the length-`b` outer walk because their source labels are distinct and `U_out` is disjoint from `B`. Therefore
 
-$$
+```math
 |U_{out}|+q\le b,
 \qquad |U_{out}|\le b-q.
-$$
+```
 
 This count allows bridge and articulation repetitions: those add walk positions. Outer-face contact isolates are not boundary-walk vertices and are counted separately by `Z_out`.
 
@@ -82,17 +84,17 @@ By canonical `C-OO-LOWER-BLOCKER-LOCALIZATION`, every intergroup full-source low
 
 Assign each distinct selected witness pair with an unloaded endpoint to one such endpoint. A source endpoint is incident with at most six witness pairs by the near-unit degree bound. Audit.184's `C-ACUTE-BINARY-SINK-WITNESS-DEBT` ensures that packet witnesses are distinct physical pairs, both within and across the disjoint sink SCCs. Thus
 
-$$
+```math
 \sum_a u(S_a)\le 6(|U_{out}|+Z_{out})\le 6(b-q+Z_{out}),
-$$
+```
 
 proving item 1. The factor six is a vertex-degree charge, not an assumption that different witnesses have different unloaded endpoints.
 
 For `D>=7`, sum Audit.184's exact sink payment
 
-$$
+```math
 u(S_a)+R(S_a)-|S_a|\ge1
-$$
+```
 
 over the `t` sink components and substitute item 1. This gives item 2. If `R(S_a)=|S_a|`, the same payment forces `u(S_a)>=1`; distinct selected packets then give the stated cap on single-run sinks.
 

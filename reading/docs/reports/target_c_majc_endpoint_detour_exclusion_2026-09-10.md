@@ -20,27 +20,27 @@
 
 The explicit MAJC lower endpoint
 
-$$
+```math
 \lambda_{MAJC}=0.5937285472681860970\ldots
-$$
+```
 
 cannot be approached by an audited post-ZF survivor sequence.
 
 More precisely, there is an absolute nonexplicit constant `eta_MA>0` such that every
 sufficiently large audited survivor satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
 \lambda_{MAJC}+\eta_{MA}.
 }
 \tag{ME.1}
-$$
+```
 
 The endpoint localization from MAJC forces simultaneous equality in DB:
 
-$$
+```math
 \frac hD\to2\rho,
 \qquad
 \frac{\operatorname{per}F}{D}\to4\rho,
@@ -48,7 +48,7 @@ $$
 \frac{e_{BB}}D\to\lambda_{MAJC},
 \qquad
 \frac{s_C}{D}\to0.
-$$
+```
 
 DB then makes the face/mixed defect `Q+2s_Z` sublinear and the outer contact-walk
 length asymptotic to the true force-hull perimeter. OD therefore collapses all outer
@@ -62,39 +62,39 @@ MA/GU.
 
 Assume for contradiction that an unbounded audited survivor sequence satisfies
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to\lambda_{MAJC}.
 \tag{1.1}
-$$
+```
 
 MAJC endpoint localization gives
 
-$$
+```math
 \boxed{
 \frac hD\to y_0:=2\rho,
 \qquad
 \frac{P_F}{D}\to p_0:=4\rho,
 }
 \tag{1.2}
-$$
+```
 
 where `P_F=per(F)`, and
 
-$$
+```math
 \boxed{
 \frac{e_{BB}}D\to\lambda_{MAJC},
 \qquad
 \frac{s_C}{D}\to0.
 }
 \tag{1.3}
-$$
+```
 
 The Dottie identity `rho=cos rho` gives
 
-$$
+```math
 p_0=2y_0.
 \tag{1.4}
-$$
+```
 
 ---
 
@@ -102,61 +102,61 @@ $$
 
 Put
 
-$$
+```math
 z:=Q+2s_Z\ge0.
 \tag{2.1}
-$$
+```
 
 DB's exact finite defect inequality is
 
-$$
+```math
 z
 \le
 h+1-2D\cos\left((h-1)\arcsin\frac1{2D}\right).
 \tag{2.2}
-$$
+```
 
 Divide by `D` and use (1.2). Since
 
-$$
+```math
 (h-1)\arcsin\frac1{2D}\to\rho
-$$
+```
 
 and `rho=cos rho`,
 
-$$
+```math
 0\le\limsup\frac zD
 \le
 2\rho-2\cos\rho
 =0.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 Q=o(D),
 \qquad
 s_Z=o(D).
 }
 \tag{2.3}
-$$
+```
 
 ZE gives
 
-$$
+```math
 b=2h-Q-2s_Z=2h-z.
 \tag{2.4}
-$$
+```
 
 Therefore (1.2)--(2.3) imply
 
-$$
+```math
 \boxed{
 \frac{b-P_F}{D}\to0.
 }
 \tag{2.5}
-$$
+```
 
 ---
 
@@ -164,29 +164,29 @@ $$
 
 OD proves the exact finite estimate
 
-$$
+```math
 H_{out}
 \le
 \frac{\pi}{4\sqrt2}
 (x_B+a)^{3/2}\sqrt{b-P_F}.
 \tag{3.1}
-$$
+```
 
 Here `x_B+a=O(D)` for every post-ZF survivor. Indeed OD gives
 
-$$
+```math
 x_B+a
 =2h-Q-2s_Z-e_{BB}+c_B
 \le2h=O(D),
 \tag{3.2}
-$$
+```
 
 using `c_B<=e_BB` and nonnegativity. Combining (2.5), (3.1), and (3.2),
 
-$$
+```math
 \boxed{H_{out}=o(D^2).}
 \tag{3.3}
-$$
+```
 
 This is exactly OD's near-perimeter stability regime.
 
@@ -197,23 +197,23 @@ This is exactly OD's near-perimeter stability regime.
 Let the bounded nonquadrilateral contact faces have degrees `k_1,...,k_f>=5`.
 Recall
 
-$$
+```math
 Q=\sum_{j=1}^f(k_j-4)=f+g_F.
 \tag{4.1}
-$$
+```
 
 Thus `f<=Q` and their total unit-edge perimeter is
 
-$$
+```math
 L_{exc}:=\sum_jk_j
 =4f+Q
 \le5Q.
 \tag{4.2}
-$$
+```
 
 By the planar isoperimetric inequality applied face by face,
 
-$$
+```math
 A_{exc}
 :=\sum_j\operatorname{area}(F_j)
 \le
@@ -223,14 +223,14 @@ A_{exc}
 \le
 \frac{25Q^2}{4\pi}.
 \tag{4.3}
-$$
+```
 
 Using (2.3),
 
-$$
+```math
 \boxed{A_{exc}=o(D^2).}
 \tag{4.4}
-$$
+```
 
 No bound on the number of isolated source points is used.
 
@@ -240,77 +240,77 @@ No bound on the number of isolated source points is used.
 
 Let
 
-$$
+```math
 G
 =
 \operatorname{area}F-
 \sum_r\operatorname{area}(P_r)
 \tag{5.1}
-$$
+```
 
 be the attachment-cell gap.
 
 At the endpoint, MA gives the force-hull area floor
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 \Phi(2\rho)
 =
 \frac{2\rho+\sin2\rho}{4}.
 \tag{5.2}
-$$
+```
 
 GU and (1.1) give
 
-$$
+```math
 \limsup
 \frac{\sum_r\operatorname{area}(P_r)}{D^2}
 \le
 \frac\pi4\lambda_{MAJC}^2.
 \tag{5.3}
-$$
+```
 
 Hence
 
-$$
+```math
 \liminf\frac GD^2
 \ge
 \Phi(2\rho)-\frac\pi4\lambda_{MAJC}^2.
 \tag{5.4}
-$$
+```
 
 The defining equation for `lambda_MAJC`,
 
-$$
+```math
 (\pi^2+1)\lambda^2
 +4\rho\lambda+4\rho^2
 -\pi(2\rho+\sin2\rho)=0,
-$$
+```
 
 is equivalent to
 
-$$
+```math
 \boxed{
 \Phi(2\rho)-\frac\pi4\lambda_{MAJC}^2
 =
 \frac{(\lambda_{MAJC}+2\rho)^2}{4\pi}>0.
 }
 \tag{5.5}
-$$
+```
 
 Numerically the positive coefficient is
 
-$$
+```math
 0.3416073603065\ldots .
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{G=\Omega(D^2).}
 \tag{5.6}
-$$
+```
 
 ---
 
@@ -318,10 +318,10 @@ $$
 
 The JC/PC cavity decomposition gives
 
-$$
+```math
 G\le H_{out}+A_{exc}+O(D).
 \tag{6.1}
-$$
+```
 
 Equations (3.3) and (4.4) make the right side `o(D^2)`, contradicting (5.6).
 Therefore no endpoint sequence (1.1) exists. `square`
@@ -329,10 +329,10 @@ Therefore no endpoint sequence (1.1) exists. `square`
 If no positive `eta_MA` in (ME.1) existed, choose for each integer `m` a survivor with
 `D>=m` and
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}
 <\lambda_{MAJC}+\frac1m.
-$$
+```
 
 MAJC's universal liminf bound would force the selected sequence to converge to
 `lambda_MAJC`, contradicting the endpoint exclusion. This proves ME.1. `square`
@@ -346,62 +346,62 @@ stability.
 
 From (2.3), DB/NB place essentially all diameter branching into outer-walk excess:
 
-$$
+```math
 2h-q=x_B+o(D).
 \tag{7.1}
-$$
+```
 
 At `h/D->2rho`, NB's defect-dependent bound gives
 
-$$
+```math
 \liminf\frac{x_B}{D}\ge\rho.
 \tag{7.2}
-$$
+```
 
 PC/ZK are sharper for the unloaded-core side. Their exact component ledger gives
 
-$$
+```math
 \sum_r\delta_r+R_I+s_B+3(d_H+s_Z)
 =6+e_{BB}+2s_C.
 \tag{7.3}
-$$
+```
 
 Thus at the endpoint
 
-$$
+```math
 3\frac{d_H}{D}
 \le\lambda_{MAJC}+o(1),
 \tag{7.4}
-$$
+```
 
 and ZU gives
 
-$$
+```math
 \frac{c_I}{D}
 =
 2\rho+2\frac{d_H}{D}-\lambda_{MAJC}+o(1).
 \tag{7.5}
-$$
+```
 
 In particular
 
-$$
+```math
 \liminf\frac{c_I}{D}
 \ge2\rho-\lambda_{MAJC}
 =0.8844417191621\ldots .
 \tag{7.6}
-$$
+```
 
 Since every nonsingleton unloaded component has graph diameter at least one, (7.3)
 and (7.5) imply that the number `N_1` of singleton unloaded components satisfies
 
-$$
+```math
 \liminf\frac{N_1}{D}
 \ge
 2\rho-2\lambda_{MAJC}
 =0.2907131718939\ldots .
 \tag{7.7}
-$$
+```
 
 Because `s_C=o(D)`, all but `o(D)` of these singletons have contact degree exactly
 three. Thus the impossible endpoint also carries a linear family of exact harmonic
@@ -448,12 +448,12 @@ DB/FS/MA/GU/PC/OD/JC.
 
 The next useful step is quantitative, not another equality-only restatement. Keep
 
-$$
+```math
 z=\frac{Q+2s_Z}{D},
 \qquad
 u=\frac{b-P_F}{D}
 =2y-z-p
-$$
+```
 
 inside the cavity estimate. OD gives outer-pocket area proportional to `sqrt(nu)`, and
 exceptional faces contribute at most `25z^2/(4pi)`. Combining those two explicit terms

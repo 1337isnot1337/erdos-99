@@ -23,11 +23,11 @@
 The canonical chamber reduction gives an actual convex inactive chamber `C` whose
 contact-isolated population `Z` has isolate-only Oler slack
 
-$$
+```math
 \sigma={\operatorname{area}(C)\over a_0}
        +{\operatorname{per}(C)\over2}+1-|Z|,
 \qquad a_0={\sqrt3\over2},
-$$
+```
 
 with `sigma=O(D)` and, on the macroscopic branch, `area(C)=Omega(D^2)`.
 Proof-only Section 122 shows that a protected replacement of `Z` by one additional
@@ -64,20 +64,20 @@ Let `A` be a contact-minimal triangle-free global minimizer of diameter `D`, wit
 
 Set `A_C=area(C)`, `P_C=per(C)`, `z=|Z|`, and
 
-$$
+```math
 \sigma={A_C\over a_0}+{P_C\over2}+1-z.
-$$
+```
 
 If
 
-$$
+```math
 \boxed{
 \sigma>
 {A_C\over a_0}\left(1-{1\over\lambda^2}\right)
  +P_C\left({\lambda\over a_0}+{1\over2}\right)+2,
 }
 \tag{PLE.1}
-$$
+```
 
 then no such chamber can occur in `A`.
 
@@ -85,14 +85,14 @@ In particular, for an internal macroscopic chamber in the canonical branch, take
 `lambda=1+D^{-2}`. Since `area(C)<=pi D^2/4`, (PLE.1) implies the necessary
 boundary-order restriction
 
-$$
+```math
 \boxed{
 \sigma\le
 \left({1\over a_0}+{1\over2}\right)P_C+O(1)
  =\left({2\over\sqrt3}+{1\over2}\right)P_C+O(1).
 }
 \tag{PLE.2}
-$$
+```
 
 Thus the remaining macroscopic chamber branch is not merely an arbitrary `O(D)`
 Oler-slack branch: its slack must be no larger than the cost of eroding one unit
@@ -104,11 +104,11 @@ Let `Lambda` be a triangular lattice of nearest-neighbor spacing `lambda`; its
 fundamental-cell area is `a_0 lambda^2`. Translation averaging over one fundamental
 cell gives a translate `Lambda+t` with at least
 
-$$
+```math
 |Y|\ge
 \left\lfloor {\operatorname{area}(C_{-lambda})\over a_0\lambda^2}\right\rfloor
 \tag{PLE.3}
-$$
+```
 
 lattice points in `C_{-lambda}`. Distinct points of `Y` are at distance at least
 `lambda>1`, so they create no unit contacts or unit triangles.
@@ -116,25 +116,25 @@ lattice points in `C_{-lambda}`. Distinct points of `Y` are at distance at least
 For any `a in A\setminus Z`, the segment from a point `y in C_{-lambda}` to `a`
 meets `partial C` before it can leave `C`. Consequently
 
-$$
+```math
 |y-a|\ge dist(y,partial C)\ge lambda>1.
 \tag{PLE.4}
-$$
+```
 
 So `Y` is strictly unit-separated from every retained old point outside `Z`.
 
 For a convex body, inner parallel perimeter is nonincreasing. Integrating the
 perimeter of the inner parallel bodies gives
 
-$$
+```math
 area(C_{-lambda})
 \ge A_C-lambda P_C.
 \tag{PLE.5}
-$$
+```
 
 Therefore (PLE.3) and the slack definition imply
 
-$$
+```math
 \begin{aligned}
 |Y|-z
 &\ge {A_C-lambda P_C\over a_0\lambda^2}-1
@@ -143,7 +143,7 @@ $$
  -P_C\left({lambda\over a_0}+{1\over2}\right)-2.
 \end{aligned}
 \tag{PLE.6}
-$$
+```
 
 Under (PLE.1), `|Y|>=z+1`. Select a subset `Y' subset Y` with `|Y'|=z+1`.
 

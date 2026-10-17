@@ -59,9 +59,9 @@ Let a finite planar set have diameter `D`, and let `vx_-`, `vx_+` be distinct
 actual diameter edges. Let `u` lie strictly between the oriented rays from `v`
 to `x_-` and `x_+`. Orient `Ju` so that
 
-$$
+```math
 (x_--v)\cdot Ju<0<(x_+-v)\cdot Ju.
-$$
+```
 
 Two disjoint proper crosscuts divide the outer-face disk into coarse layers
 `L,M,R`. Suppose `v` lies in `L` and both `x_-`, `x_+` lie in `R` (the reversed
@@ -122,11 +122,11 @@ For a rigid translation of the entire middle slab, the only crossing old
 contacts belong to the two cutsets. Their outside-to-middle vectors are `u`
 and `-u`. Summing vertex equilibrium over **all** source vertices in `M` gives
 
-$$
+```math
 \sum_{h\in H_{sw}}\beta_h n_h=(A-B)u,
 \qquad A,B>0,\quad\beta_h>0.
 \tag{1}
-$$
+```
 
 Internal contacts and diameters cancel. Isolated source vertices contribute
 zero and are retained. The transverse projection of (1) is zero.
@@ -157,10 +157,10 @@ other. The same statement holds for their closed gap intervals `[p_h,q_h]`.
 If two distinct supports are not nested, after exchanging them their endpoints
 satisfy
 
-$$
+```math
 p<r,\qquad q<s.
 \tag{2}
-$$
+```
 
 Set `i=min(q,r)` and `j=max(q,r)+1`. Both selected cuts exist:
 `1<=i<j<=m`. The slab between cuts `i,j` consists of layers
@@ -177,10 +177,10 @@ supports; no interval Helly premise was assumed. QED.
 Assume the current exact-phase rank theorem, so `Gamma_u` is connected on
 `0,...,m`. Then its **distinct** support-endpoint pairs are exactly
 
-$$
+```math
 [p_0,q_0]\supset[p_1,q_1]\supset\cdots\supset[p_{m-1},q_{m-1}],
 \tag{3}
-$$
+```
 
 where `[p_0,q_0]=[0,m]`, every step increases the left endpoint by one or
 decreases the right endpoint by one, and the last interval has length one.
@@ -191,10 +191,10 @@ actual diameter rows in its parallel class, with both transverse signs.
 More precisely, if `I` is one of the `m` distinct geometric train supports
 `I_h` and `M_h=c_h 1_I`, allowing `c_h=0`, then
 
-$$
+```math
 \boxed{\sum_{h:I_h=I}\beta_hc_h=0.}
 \tag{4}
-$$
+```
 
 In particular at least `2m` actual transversely active diameter edges occur.
 
@@ -219,10 +219,10 @@ The `m` nested train indicators, of lengths `m,m-1,...,1`, form a basis:
 successive differences remove one train coordinate, and the last indicator
 is one coordinate. KKT virtual work on every exact train shear gives
 
-$$
+```math
 0=\sum_h\beta_hM_h
  =\sum_I\left(\sum_{h:I_h=I}\beta_hc_h\right)1_I.
-$$
+```
 
 Basis independence proves (4). A diameter parallel to `u`, if present,
 is the unique full-span parallel witness and contributes zero to (4).
@@ -240,19 +240,19 @@ parallel class. It cannot be released by dropping a redundant row.
 For two distinct retained directions `u_i,u_j` in the same open witness cell,
 suppose their slab has both switch orientations. Let
 
-$$
+```math
 a=u_i,\quad b=-u_j,\quad q=|a+b|>0,\quad
 w=(a+b)/q,\quad v_{sw}=-(a+b).
-$$
+```
 
 The midpoint projective direction lies between the same full-support witness
 rays, and `w` is one choice of its transverse unit direction. Lemma 1 and
 the one-arc argument give a uniform strict sign of `n_h dot w`. Moreover
 
-$$
+```math
 \sum_h\beta_hn_h\cdot w=Aa\cdot w+Bb\cdot w
  ={q\over2}(A+B)>0.
-$$
+```
 
 Hence **every** moving diameter has positive projection on `w`: the TWO-SIGN
 case is impossible for a mixed-switch slab.
@@ -263,9 +263,9 @@ every actual diameter direction lies outside the open witness cell, while
 the phase midpoint has distance greater than half the phase separation from
 each cell boundary. Thus
 
-$$
+```math
 |n_h+v_{sw}|^2-D^2=-2q(n_h\cdot w)+q^2<0.
-$$
+```
 
 The old boundary contacts are swapped exactly (`a+v_sw=-b`,
 `b+v_sw=-a`), all other old contacts are unchanged, and the displacement
@@ -279,11 +279,11 @@ pairs, contradicting the canonical lexicographic choice.
 Consequently a mixed-switch phase-changing slab forces an actual inactive
 source pair with
 
-$$
+```math
 1<|xy|\le1+4K/D
 \quad\text{or}\quad D-4K/D\le|xy|<D.
 \tag{5}
-$$
+```
 
 This converts one part of the prior bilateral-diameter fork into its inactive
 blocker branch; it does not eliminate those blockers or cover one-sided slabs.
@@ -301,10 +301,10 @@ are incident, `delta_-+delta_+<=pi/3`.
 
 In the exact finite contact-preserving train chart
 
-$$
+```math
 p_z(\theta)=p_z+\sum_{i\le\operatorname{layer}(z)}(R_{\theta_i}u-u),
 \tag{6}
-$$
+```
 
 suppose every `theta_i` stays in `[-delta_-,delta_+]`. If no old actual
 diameter lengthens, then `theta=0`. This is a finite statement on the entire
@@ -322,17 +322,17 @@ relative to `u` as `alpha in (0,pi)`. The only possible diameter direction
 strictly between the witness rays is parallel to `u`, and hence cannot be
 the chosen nonzero transverse row. Therefore
 
-$$
+```math
 delta_+\le alpha\le pi-delta_-.
-$$
+```
 
 With `0<theta<=delta_+`,
 
-$$
+```math
 n\cdot(R_{theta}u-u)
 =2D\sin(theta/2)\sin(alpha-theta/2)>0.
 \tag{7}
-$$
+```
 
 Indeed `0<alpha-theta/2<pi`. The squared diameter change is this positive
 quantity times two, plus `|R_theta u-u|^2`, so that actual diameter strictly
@@ -363,29 +363,29 @@ does not assert that the abstract chart has the missing source embedding.
 Let `F_i` be the positive sum of contact multipliers on selected cut `i`.
 For each distinct interval `I`, put
 
-$$
+```math
 B_I=\sum_{h:I_h=I}\beta_h,
 \qquad
 A_I=\sum_{h:I_h=I}\beta_h\sigma_h(r_h\cdot u).
-$$
+```
 
 Here the orientation in `sigma_h r_h` points from the lower endpoint layer
 to the higher one. These sums include the full-span parallel diameter
 when present, even though its transverse derivative row is zero.
 The actual source cut equilibrium gives
 
-$$
+```math
 F_i=\sum_{I\ni i}A_I.
 \tag{8}
-$$
+```
 
 Canonical C53 and `C-ZRF` imply
 
-$$
+```math
 Q:=\operatorname{diag}(F_i)-\sum_I B_I1_I1_I^T\succeq0,
 \qquad \ker Q\subseteq\operatorname{span}\{\mathbf1_m\}.
 \tag{9}
-$$
+```
 
 To check this directly, assign the scalar field
 `f_theta(z)=sum_{i<=layer(z)} theta_i` to every core vertex. Its difference
@@ -411,16 +411,16 @@ close the branch.
 
 For every integer `m>=1`, set `D=100m`, `v=(0,0)`, and
 
-$$
+```math
 a=D(6/13,-1/2),\qquad b=D(6/13,1/2),\qquad
 t_j={m-j+1\over10m},
-$$
-$$
+```
+```math
 p_j=D\left({1-t_j^2\over1+t_j^2},{2t_j\over1+t_j^2}\right),
 \qquad
 n_j=D\left({1-t_j^2\over1+t_j^2},{-2t_j\over1+t_j^2}\right).
 \tag{10}
-$$
+```
 
 These `2m+3` rational points are strictly unit separated. Their actual
 diameter graph consists exactly of the `2m` edges `vp_j,vn_j` and the
@@ -436,10 +436,10 @@ are strictly between one and `D`. Star neighbors lie in an angular arc
 of aperture `4 atan(1/10)<pi/3`, so their pair distances are less than
 `D`. Same-sign distinct neighbors have distance
 
-$$
+```math
 {2D|t_j-t_k|\over\sqrt{(1+t_j^2)(1+t_k^2)}}
 \ge {20\over1.01}>1.
-$$
+```
 
 Opposite-sign neighbor distances are at least the innermost symmetric
 pair distance `4D t_m/(1+t_m^2)>39`. The specified diameters have length
@@ -465,12 +465,12 @@ For `[1,1]` it is exactly `13959D/16261`. Both exceed `m`. Thus the
 hypothetical positive contact cut masses `F_i=sum_{I contains i}A_I`
 produce a strictly positive definite `Q`: Cauchy--Schwarz gives
 
-$$
+```math
 \theta^TQ\theta
 \ge\sum_I(A_I-|I|B_I)\sum_{i\in I}\theta_i^2>0
 \qquad(\theta\ne0).
 \tag{11}
-$$
+```
 
 This is an exact regression against a closure from these geometric,
 aggregate-force, rank, and restricted quadratic tests **alone**. It is not

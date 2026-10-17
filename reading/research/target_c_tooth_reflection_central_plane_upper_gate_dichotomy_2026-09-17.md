@@ -16,42 +16,42 @@
 
 The preceding near-halfdepth theorem stopped the inactive absorption process at
 
-$$
+```math
 {D\over2}-(3^{1/8}+o(1))D^{3/4}
-$$
+```
 
 because the circular-cap argument used there must keep every possible upper pair strictly below diameter without inspecting when an upper equality is actually created. That loss is avoidable if upper equalities are treated as events rather than excluded a priori.
 
 Let `o` be the audited full-source circumcenter. For one non-anchored FREE module let `N` be its canonical blocker support direction,
 
-$$
+```math
 H=h_A(N),\qquad c=N\cdot o,\qquad a_v:=H-N\cdot v,
-$$
+```
 
 and put
 
-$$
+```math
 \boxed{C_D:=H-c.}
 \tag{CP.1}
-$$
+```
 
 Thus `a_v=C_D` is exactly the support line through `o` perpendicular to `N`.
 The same-center disk sandwich and the canonical support-width estimate give
 
-$$
+```math
 \boxed{
 {D\over2}-3^{1/4}\sqrt D-h_*
 <C_D
 <{D\over2}+3^{1/4}\sqrt D,
 }
 \tag{CP.2}
-$$
+```
 
 where
 
-$$
+```math
 h_*={\sqrt{303}\over52}=0.334747984337\ldots .
-$$
+```
 
 Run the existing inactive-guard absorption repair, but stop at the first occurrence of one of the following:
 
@@ -64,7 +64,7 @@ The fourth alternative cannot occur first. Consequently every surviving FREE mod
 
 For the slow-scale module family this gives a four-way source-wide reduction:
 
-$$
+```math
 \boxed{
 \text{NORMAL-EXACT},\quad
 \text{CENTER-CORRIDOR},\quad
@@ -72,7 +72,7 @@ $$
 \text{TANGENT-INACTIVE}.
 }
 \tag{CP.3}
-$$
+```
 
 The two tangent classes themselves form central crossing braids after one pigeonhole step.
 
@@ -82,11 +82,11 @@ The two tangent classes themselves form central crossing braids after one pigeon
 
 Use the same clearing time as in the existing FREE repair,
 
-$$
+```math
 t_D=\delta+D^{-1/3}
 \le h_*+D^{-1/3}.
 \tag{CP.4}
-$$
+```
 
 All initially moving blockers and every subsequently absorbed inactive guard translate with velocity `-N`. If a moving point first reaches an old nonisolated contact-core vertex at unit distance, the existing CORE-GATE theorem converts the module to an actual source-diameter anchor. If it reaches an old inactive source point, absorb that point and continue it with the same velocity. The existing `Q-DIAMETER` event is also kept as an exact-anchor stop.
 
@@ -98,12 +98,12 @@ All lower equalities involving moved old-inactive vertices are exactly the recor
 
 Hence:
 
-$$
+```math
 \boxed{
 \text{before clearing, every non-anchored FREE module has either event 2 or event 3.}
 }
 \tag{CP.5}
-$$
+```
 
 No upper-safety estimate beyond the first upper equality is used.
 
@@ -113,57 +113,57 @@ No upper-safety estimate beyond the first upper equality is used.
 
 Assume event 3 occurs before any new upper equality. Let
 
-$$
+```math
 z_0,z_1,\ldots,z_\ell
-$$
+```
 
 be the parent ancestry from an original FREE blocker `z_0` to the first absorbed vertex `z_ell` with
 
-$$
+```math
 a_{z_\ell}>C_D.
-$$
+```
 
 The existing first-contact calculation gives strict support monotonicity,
 
-$$
+```math
 a_{z_0}<a_{z_1}<\cdots<a_{z_\ell},
 \tag{CP.6}
-$$
+```
 
 and the parent increment bound
 
-$$
+```math
 0<a_{z_{j+1}}-a_{z_j}\le1+t_D.
 \tag{CP.7}
-$$
+```
 
 By first crossing,
 
-$$
+```math
 a_{z_{\ell-1}}\le C_D<a_{z_\ell}\le C_D+1+t_D.
 \tag{CP.8}
-$$
+```
 
 Since
 
-$$
+```math
 N\cdot(z-o)=C_D-a_z,
-$$
+```
 
 ( CP.8 ) gives the exact endpoint localization
 
-$$
+```math
 \boxed{
 -(1+t_D)\le N\cdot(z_\ell-o)<0.
 }
 \tag{CP.9}
-$$
+```
 
 Thus the original fully inactive corridor actually crosses the support hyperplane through the full-source circumcenter and its first crossing vertex lies only `O(1)` beyond that hyperplane. The previous `O(D^{3/4})` central gap disappears on this branch.
 
 The root still satisfies `a_{z_0}=O(sqrt D)`. Combining (CP.2), (CP.4), and (CP.7),
 
-$$
+```math
 \ell
 \ge
 {C_D-O(\sqrt D)\over1+h_*+D^{-1/3}}
@@ -172,21 +172,21 @@ $$
 {D\over2(1+h_*)}-O(D^{2/3}).
 }
 \tag{CP.10}
-$$
+```
 
 Numerically,
 
-$$
+```math
 {1\over2(1+h_*)}
 =0.374602551093811\ldots .
 \tag{CP.11}
-$$
+```
 
 Every chain vertex is an original contact- and diameter-isolated source point, every original parent edge has length in
 
-$$
+```math
 (1,1+h_*+o(1)),
-$$
+```
 
 the polygonal chain is simple and strictly `N`-monotone, and the FREE-blocker outer-face theorem keeps the entire chain in the unbounded face of the old positive contact graph. These properties do not depend on the old fixed-`lambda` cap bound.
 
@@ -196,54 +196,54 @@ the polygonal chain is simple and strictly `N`-monotone, and the FREE-blocker ou
 
 Assume the first new upper equality occurs before the circumcenter plane is crossed. Let `p` be the original position of the moving old-inactive vertex involved in this first equality, let `v` be the still-fixed original source point, and let
 
-$$
+```math
 p(s)=p-\tau N,
 \qquad
 0<\tau\le t_D.
-$$
+```
 
 At the event,
 
-$$
+```math
 |p-\tau N-v|=D.
 \tag{CP.12}
-$$
+```
 
 The strict inequality `tau>0` follows because `p` was diameter-isolated in the original source.
 
 Fix
 
-$$
+```math
 \boxed{C_g={17\over50}=0.34>h_*.}
 \tag{CP.13}
-$$
+```
 
 For all sufficiently large `D`, (CP.4) gives `t_D<C_g`. The triangle inequality applied to (CP.12) yields
 
-$$
+```math
 |p-v|>D-C_g.
-$$
+```
 
 Because `p` was originally diameter-isolated,
 
-$$
+```math
 \boxed{
 D-C_g<|p-v|<D.
 }
 \tag{CP.14}
-$$
+```
 
 Thus a first upper gate is already an original fixed-slack near-diameter pair, not a newly manufactured long pair.
 
 Let
 
-$$
+```math
 r=p-v,\qquad \ell=|r|,\qquad m={p+v\over2}.
-$$
+```
 
 The fixed-slack midpoint theorem gives
 
-$$
+```math
 \boxed{
 |m-o|
 \le
@@ -252,7 +252,7 @@ L_{g,D}
 =(3^{1/8}+o(1))D^{3/4},
 }
 \tag{CP.15}
-$$
+```
 
 where `eta_D=3^(1/4)sqrt D`.
 
@@ -262,94 +262,94 @@ where `eta_D=3^(1/4)sqrt D`.
 
 Square (CP.12):
 
-$$
+```math
 D^2
 =\ell^2-2\tau N\cdot r+\tau^2.
 \tag{CP.16}
-$$
+```
 
 Since `ell<=D`,
 
-$$
+```math
 \boxed{N\cdot r\le {\tau\over2}=O(1).}
 \tag{CP.17}
-$$
+```
 
 Event 2 occurs before event 3, so the moving vertex has original support depth
 
-$$
+```math
 a_p\le C_D,
-$$
+```
 
 or equivalently
 
-$$
+```math
 N\cdot(p-o)\ge0.
 \tag{CP.18}
-$$
+```
 
 But
 
-$$
+```math
 p-o=(m-o)+{r\over2}.
-$$
+```
 
 Therefore
 
-$$
+```math
 N\cdot r
 =2N\cdot(p-o)-2N\cdot(m-o)
 \ge-2|m-o|.
 \tag{CP.19}
-$$
+```
 
 Combining (CP.15), (CP.17), and (CP.19),
 
-$$
+```math
 \boxed{
 |N\cdot r|
 \le(2\,3^{1/8}+o(1))D^{3/4}.
 }
 \tag{CP.20}
-$$
+```
 
 Since `ell>D-C_g`, the projective direction of the original gate pair satisfies
 
-$$
+```math
 \boxed{
  d_{\mathbb{RP}^1}([p-v],[JN])
 \le
 (2\,3^{1/8}+o(1))D^{-1/4},
 }
 \tag{CP.21}
-$$
+```
 
 where `J` is rotation by `pi/2`. Numerically,
 
-$$
+```math
 2\,3^{1/8}=2.294405380879754\ldots .
-$$
+```
 
 The gate chord is therefore asymptotically tangent to the module's support line. This is a different direction class from the existing reflection blocker / normal exact braid, whose long chords are asymptotically parallel to `N`.
 
 Equation (CP.15) also gives the two-shore form. After choosing one sign `sigma in {+1,-1}`,
 
-$$
+```math
 \boxed{
  p-o=\sigma {D\over2}JN+O(D^{3/4}),
 \qquad
  v-o=-\sigma {D\over2}JN+O(D^{3/4}).
 }
 \tag{CP.22}
-$$
+```
 
 Each endpoint in fact has radial norm `D/2+O(sqrt D)`. Indeed the same-center outer radius gives `|p-o|,|v-o|<=D/2+eta_D`, while (CP.14) and the triangle inequality give, for either endpoint,
 
-$$
+```math
 |p-o|,|v-o|
 \ge {D\over2}-\eta_D-C_g.
 \tag{CP.23}
-$$
+```
 
 ---
 
@@ -359,53 +359,53 @@ Suppose the fixed gate endpoint `v` is not fully inactive.
 
 If `v` is already a source-diameter endpoint, keep one actual diameter incident to it. Otherwise `v` is a nonisolated unloaded contact-core vertex. Put
 
-$$
+```math
 S={v-o\over|v-o|}.
-$$
+```
 
 By (CP.23) and the same-center outer radius,
 
-$$
+```math
 h_A(S)-S\cdot v=O(\sqrt D).
 \tag{CP.24}
-$$
+```
 
 The support-ascent argument from the CORE-GATE theorem applies verbatim in direction `S`: C26 positive contact equilibrium forces an unloaded contact-core vertex to have a contact neighbor strictly farther outward in `S`; iterating this strict ascent terminates at an actual source-diameter endpoint `w`. Support depth decreases along the ascent, so `w` remains in the same `O(sqrt D)` cap. Hence
 
-$$
+```math
 |w-v|=O(D^{3/4}).
 \tag{CP.25}
-$$
+```
 
 Choose an actual diameter partner `t` of `w`. The actual-diameter midpoint theorem gives
 
-$$
+```math
 \left|{w+t\over2}-o\right|=O(D^{3/4}).
 \tag{CP.26}
-$$
+```
 
 The gate midpoint bound gives
 
-$$
+```math
 \left|{p+v\over2}-o\right|=O(D^{3/4}).
 \tag{CP.27}
-$$
+```
 
 Subtracting the two midpoint relations and using (CP.25),
 
-$$
+```math
 \boxed{|t-p|=O(D^{3/4}).}
 \tag{CP.28}
-$$
+```
 
 Thus `wt` is an actual source diameter occupying the same two tangent shores as the gate pair. In particular,
 
-$$
+```math
 \boxed{
  d_{\mathbb{RP}^1}([w-t],[JN])=O(D^{-1/4}).
 }
 \tag{CP.29}
-$$
+```
 
 Call this outcome `TANGENT-EXACT`.
 
@@ -417,20 +417,20 @@ If `v` is fully inactive instead, both endpoints `p,v` of (CP.14) are old contac
 
 Return to the slow-scale reflection family. For
 
-$$
+```math
 \kappa_D\to\infty,
 \qquad
 \kappa_D=o(D^{1/4}),
-$$
+```
 
 the selected module normals lie in one quadrant and satisfy
 
-$$
+```math
  d_{\mathbb{RP}^1}([N_i],[N_j])
 \ge(2-o(1))\kappa_DD^{-1/4}
 \qquad(i\ne j).
 \tag{CP.30}
-$$
+```
 
 Rotation by `J` preserves projective angular separation. The `O(D^-1/4)` errors in (CP.21) and (CP.29) are negligible compared with (CP.30).
 
@@ -438,26 +438,26 @@ Rotation by `J` preserves projective angular separation. The `O(D^-1/4)` errors 
 
 Every retained gate edge has length in `(D-C_g,D)`, midpoint in `B(o,O(D^(3/4)))`, and line direction within `O(D^-1/4)` of `JN_i`. Its two endpoints lie in the corresponding antipodal tangent shore caps by (CP.22). Different module shore caps are separated by
 
-$$
+```math
 \Omega(\kappa_DD^{3/4}),
-$$
+```
 
 whereas the localization error is only `O(D^(3/4))`. Thus the selected gate edges are pairwise vertex-disjoint.
 
 For two such edges, their supporting-line angle is at least
 
-$$
+```math
 (2-o(1))\kappa_DD^{-1/4}.
-$$
+```
 
 Their midpoint separation is `O(D^(3/4))`, so the supporting-line intersection lies at distance
 
-$$
+```math
 O\!\left({D^{3/4}\over\kappa_DD^{-1/4}}\right)
 =
 \boxed{O(D/\kappa_D)=o(D)}
 \tag{CP.31}
-$$
+```
 
 from either midpoint. Since every half-length is `(1/2-o(1))D`, the intersection lies in the relative interior of both finite segments. Hence the `TANGENT-INACTIVE` edges are pairwise properly crossing inside one `O(D/kappa_D)` central region.
 
@@ -473,12 +473,12 @@ Thus both tangent upper-gate outcomes have an exact central braid normal form; t
 
 The controlled slow-scale family has
 
-$$
+```math
 |I_D|=(\rho_*-o(1)){D^{1/4}\over\kappa_D},
 \qquad
 \rho_*=0.129220199818177\ldots .
 \tag{CP.32}
-$$
+```
 
 Every selected module belongs to one of four classes:
 
@@ -489,19 +489,19 @@ Every selected module belongs to one of four classes:
 
 One class therefore has size at least
 
-$$
+```math
 \boxed{
 \left({\rho_*\over4}-o(1)\right){D^{1/4}\over\kappa_D},
 }
 \tag{CP.33}
-$$
+```
 
 where
 
-$$
+```math
 \boxed{{\rho_*\over4}=0.03230504995454425\ldots .}
 \tag{CP.34}
-$$
+```
 
 For every subpolynomial divergent `kappa_D=D^{o(1)}`, the surviving class has size `D^(1/4-o(1))`.
 

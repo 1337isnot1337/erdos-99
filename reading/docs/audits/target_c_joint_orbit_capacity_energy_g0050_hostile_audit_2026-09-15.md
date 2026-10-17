@@ -23,31 +23,31 @@ This audit checks two possible failure points: whether the old side-branch atomi
 
 The imported iterative-pruning pair theorem does not merely tune a previous numerical optimization. After the phase-inversion cover, it prunes the residual missing graph iteratively across both shores. Each residual missing edge disappears at its first deleted endpoint and therefore pays for at most one pruning deletion. This gives the total residual pruning loss
 
-$$
+```math
 \sqrt{2v}\,D+o(D)
-$$
+```
 
 rather than two separately charged `sqrt(v)D` losses.
 
 The resulting exhaustive pair branches are
 
-$$
+```math
 \rho\ge {g_*^2\over10}
-$$
+```
 
 or
 
-$$
+```math
 \rho\ge {2m_*^2\over29}.
-$$
+```
 
 For train families bounded by `2/sqrt(3)`, positive pair excess satisfies `g_*<=m_*`, so both branches imply the unconditional physical inequality
 
-$$
+```math
 \boxed{
 \rho\ge {2\over29}(a+b-2/\sqrt3)_+^2.
 }
-$$
+```
 
 The inequality direction is correct: `1/10 > 2/29`, so the minimum of the two branch lower bounds is still at least `2g_*^2/29`.
 
@@ -61,23 +61,23 @@ The dominant three-phase calculation uses the same triangle-free two-leaf correl
 
 The exact outward rational verifier covers a strict superset of the center-imbalance domain with 15,000 rational intervals. It proves a worst-case leaf lower bound exceeding the geometric cap `2/sqrt(3)` by more than
 
-$$
+```math
 0.0015.
-$$
+```
 
 This is far larger than the final `0.0000578...` distance between the claimed `0.0050` gap and the non-load-bearing numerical ceiling of the architecture.
 
 The theorem is also rerun on the strict-rhombus train graph rather than inferred by deleting singleton trains after an all-train argument. Thus the matched consequences
 
-$$
+```math
 {T-q/2\over D}\ge2\sqrt{\Delta_2}+0.0050-o(1),
-$$
+```
 
-$$
+```math
 {T_R\over D}\ge2\sqrt{\Delta_2}+0.0050-o(1),
 \qquad
 {\sigma_R\over D}\ge0.0100-o(1)
-$$
+```
 
 are valid at the stated proof-only scope.
 
@@ -89,36 +89,36 @@ are valid at the stated proof-only scope.
 
 The merged joint orbit-capacity/phase-energy proof uses
 
-$$
+```math
 C_0\le C={T-q/2\over D}\le U
-$$
+```
 
 and then derives
 
-$$
+```math
 2\delta+\kappa/2\le 4.5t-2\pi-C_0.
-$$
+```
 
 Its exact dominant-orbit lower bound is
 
-$$
+```math
 K_*(t,\delta,\kappa)
 =\pi+\delta-t-\kappa-2U+{8\Delta_2\over U}.
-$$
+```
 
 Its route dual is
 
-$$
+```math
 \delta\ge\Phi(K_*),
 \qquad
 \Phi(z)=z-6\arcsin(\tanh(z/6)).
-$$
+```
 
 None of these derivations uses `0.00042` except through the numerical assignment of `C0`. Replacing the old lower bound by the stronger hostile-audited value
 
-$$
+```math
 C_0=2\sqrt{\Delta_2}+0.0050
-$$
+```
 
 therefore preserves every inequality.
 
@@ -132,15 +132,15 @@ A dangerous shortcut would be to infer an exact three-point atomic orbit from on
 
 Canonical hostile-audited Section 168 already proves, after the finite-to-limit atomization repair, that the entire limiting strict-rhombus crossing mass is carried by exact atomic `pi/3` orbits:
 
-$$
+```math
 \sum_r E_r=\Delta_2.
-$$
+```
 
 The dominant-orbit estimate
 
-$$
+```math
 M\ge {4\Delta_2\over C}
-$$
+```
 
 therefore remains legitimate. The stronger `C0` changes only the scalar feasible interval, not the atomization theorem.
 
@@ -152,57 +152,57 @@ therefore remains legitimate. The stronger `C0` changes only the scalar feasible
 
 With the stronger `C0`, the feasible region is
 
-$$
+```math
 2\delta+\kappa/2\le R_{50}(t).
-$$
+```
 
 At fixed `t,delta`,
 
-$$
+```math
 \partial K_*/\partial\kappa=4\Delta_2/U^2>0,
-$$
+```
 
 so `Phi(K_*)-delta` is minimized at `kappa=0`.
 
 At fixed `t,kappa`,
 
-$$
+```math
 {\partial K_*\over\partial\delta}
 =5+{16\Delta_2\over U^2}
 \le
 5+{16\Delta_2\over C_0^2}
 =8.9790809080\ldots<9.
-$$
+```
 
 For the relevant orbit masses `K<1.33`,
 
-$$
+```math
 \Phi'(K)=1-\operatorname{sech}(K/6)<0.025.
-$$
+```
 
 Hence
 
-$$
+```math
 {\partial\over\partial\delta}
 [\Phi(K_*)-\delta]
 <9(0.025)-1<0.
-$$
+```
 
 The easiest feasible point is therefore still
 
-$$
+```math
 \kappa=0,
 \qquad
 \delta=R_{50}(t)/2,
 \qquad
 U=C_0.
-$$
+```
 
 The verifier gives the sharper derivative product
 
-$$
+```math
 0.21618\ldots<1.
-$$
+```
 
 **Verdict:** PASS.
 
@@ -212,57 +212,57 @@ $$
 
 At the boundary endpoint define
 
-$$
+```math
 K_{50}(t)
 =\pi+R_{50}(t)/2-t-2C_0+8\Delta_2/C_0
-$$
+```
 
 and
 
-$$
+```math
 H_{50}(t)=\Phi(K_{50}(t))-R_{50}(t)/2.
-$$
+```
 
 The exact derivative relation
 
-$$
+```math
 K_{50}'(t)=5/4
-$$
+```
 
 and `Phi'<0.025` give
 
-$$
+```math
 H_{50}'(t)<0.
-$$
+```
 
 The independent high-precision certificate checks
 
-$$
+```math
 H_{50}(1.82515)
 =2.5373341\times10^{-5}>0,
-$$
+```
 
-$$
+```math
 H_{50}(1.82516)
 =3.1640100\times10^{-6}>0,
-$$
+```
 
-$$
+```math
 H_{50}(1.82517)
 =-1.9045315\times10^{-5}<0,
-$$
+```
 
 and brackets the zero by
 
-$$
+```math
 1.82516142463113334<t_*<1.82516142463113335.
-$$
+```
 
 The theorem claims only
 
-$$
+```math
 \boxed{t\ge1.82515-o(1),}
-$$
+```
 
 leaving more than `2.5e-5` contradiction margin at the displayed round endpoint.
 
@@ -278,11 +278,11 @@ The result remains proof-only. It depends on the proof-only iterative-pruning at
 
 The joint route relaxation has already optimized the simultaneous local inequalities
 
-$$
+```math
 d_i\ge n_i g_i,
 \qquad
 d_i\ge n_i-s_i.
-$$
+```
 
 The remaining gap is structural, not another algebraic recombination of those same two costs. The most plausible next interfaces are dominant-orbit terminal routing, outer-to-outer train bracing, exceptional-face closure rank, and simultaneous train shears.
 

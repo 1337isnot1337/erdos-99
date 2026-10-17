@@ -18,9 +18,9 @@ projective-direction contradiction.
 The conclusion is that Section 106 is mathematically sound at proof-only scope.  Its
 explicit coefficient
 
-$$
+```math
 \mu_{11}=0.9760410429297387484\ldots
-$$
+```
 
 is a valid carrier-diameter lower bound in the full-core Type-II branch, conditional on
 the canonical Section-103 common-cap contradiction and the independently audited
@@ -30,29 +30,29 @@ Section-104 technical lemmas.  It does not close C-II.
 
 Section 106 assumes
 
-$$
+```math
 0\le \sigma(\theta)\le1.2\times10^{-5}.
-$$
+```
 
 Canonical Section 103 records the explicit fixed neighborhood
 
-$$
+```math
 \theta\le\theta_8+0.03
-$$
+```
 
 on which the unique wrapping carrier has area greater than `0.1905D^2` and one may use
 
-$$
+```math
 R_D\ge0.18D^2,
 \qquad T_D\le6D,
 \qquad \sum_R\delta_R<5.317D.
-$$
+```
 
 Since Section 106 has
 
-$$
+```math
 \theta-\theta_8\le{4\over15}\sigma<3.2\times10^{-6},
-$$
+```
 
 its entire contradiction window lies more than four orders of magnitude inside the
 certified Section-103 neighborhood.  There is no continuity-modulus gap here.
@@ -61,11 +61,11 @@ certified Section-103 neighborhood.  There is no continuity-modulus gap here.
 
 The Section-104 proofs of
 
-$$
+```math
 0\le\delta\le{10\over3}\sigma,
 \qquad
 0\le x_2,x_3,\tau\le{13\over3}\sigma
-$$
+```
 
 use only three fixed smallness barriers after the scalar chain is established:
 
@@ -89,9 +89,9 @@ For any fixed finite family `J` of positive complement gaps, select the correspo
 finite consecutive-attachment intervals.  The Section-82 exact outer-walk identity and
 the ordinary two-edge floor on every unselected interval give
 
-$$
+```math
 \sum_{j\in J}\ell_j\le2\alpha.
-$$
+```
 
 The selected routes are distinct outer-walk subchains.  The potentially linear
 loaded-loaded contact correction has favorable sign because
@@ -102,26 +102,26 @@ Enumerate the positive complement components.  A diagonal subsequence gives the
 normalized route lengths for every fixed component.  Since every route length is
 nonnegative, monotone exhaustion yields
 
-$$
+```math
 \sum_{j\ge1}\ell_j\le2\alpha.
-$$
+```
 
 Canonical Section 101 gives
 
-$$
+```math
 C:=\sum_j\sin(g_j/2)\le2\alpha,
 \qquad 2\alpha-C\le\sigma.
-$$
+```
 
 Every route dominates its endpoint chord, so subtraction is termwise nonnegative and
 therefore
 
-$$
+```math
 \boxed{
 \sum_j\bigl(\ell_j-\sin(g_j/2)\bigr)
 \le2\alpha-C\le\sigma.
 }
-$$
+```
 
 In particular the three principal routes have total normalized path excess at most
 `sigma`.  The countable limiting order is therefore sound; Section 106 is not
@@ -133,9 +133,9 @@ From `R_D>=0.18D^2`, the phase-circle cut deletes only `O(D)` crossings, so for 
 sufficiently large `D` at least `0.179D^2` remain.  With `K=1000`, the global defect
 bound removes at most
 
-$$
+```math
 {5.317D\over1000/D}=0.005317D^2
-$$
+```
 
 nongood crossings.  Thus at least `0.173683D^2` good crossings remain, and one of the
 three unordered phase-label pairs supports at least `0.173683D^2/3`.
@@ -143,20 +143,20 @@ three unordered phase-label pairs supports at least `0.173683D^2/3`.
 Bins of width `20K/D` retain at least `19/20` of those crossings for one shift, hence
 more than
 
-$$
+```math
 0.0549996D^2
-$$
+```
 
 internal-bin crossings.
 
 Let `a_j,b_j` be the two shore sizes in a bin.  Simplicity of the train-crossing graph
 gives `e_j<=a_jb_j`, and the total local-train bound gives
 
-$$
+```math
 \sum_j a_j\le6D,
 \qquad
 \sum_j b_j\le6D.
-$$
+```
 
 If every bin were small on at least one shore at threshold `0.0045D`, then the bins
 small on the first shore would carry at most `0.027D^2` edges and the remaining bins,
@@ -199,16 +199,16 @@ For one selected phase family, the inherited leakage terms are:
 
 The fixed coefficients sum to
 
-$$
+```math
 5+{19\over6}+9+{20\over3}+{13\over3}={169\over6},
-$$
+```
 
 so
 
-$$
+```math
 L(\sigma,h)
 =w(h)+\left({1\over h}+{169\over6}\right)\sigma
-$$
+```
 
 is the correct occurrence-density bound.
 
@@ -224,9 +224,9 @@ For good unloaded-apex two-edge teeth, a base `b in [1,1+h]` makes either leg an
 `beta(b)=arccos(b/2)` from the base.  Splitting by the two leg choices gives two
 oriented base-direction windows, each of width at most
 
-$$
+```math
 w(h)=\pi/3-\arccos((1+h)/2).
-$$
+```
 
 The Section-104 convex tangent-window lemma bounds each class by boundary length, and
 unit separation converts that length bound to a base-count bound.  Counting both
@@ -247,25 +247,25 @@ projection is at most `cos Delta+o(1)`; if it points the opposite way, the proje
 is smaller and the loss is larger.  Therefore every selected occurrence contributes
 at least
 
-$$
+```math
 1-\cos\Delta-o(1),
 \qquad
 \Delta=\operatorname{dist}_{RP^1}(u,q).
-$$
+```
 
 to the exact identity
 
-$$
+```math
 \sum_e(1-q\cdot z_e)=\operatorname{len}(\text{route})-
 \operatorname{len}(\text{chord}).
-$$
+```
 
 Distinct selected trains give distinct physical endpoint occurrences, so these losses
 may be summed without overcounting.  The principal-route excess bound then gives
 
-$$
+```math
 \rho(1-\cos\Delta)\le\sigma.
-$$
+```
 
 At the Section-106 endpoint this yields `Delta<0.145866`.  The two phase families
 cannot select the same principal corridor because their limiting directions are
@@ -274,12 +274,12 @@ cannot select the same principal corridor because their limiting directions are
 If they select distinct corridors, the reverse triangle inequality in the projective
 circle metric gives
 
-$$
+```math
 \left|
 \operatorname{dist}_{RP^1}(q_i,q_j)-\pi/3
 \right|
 <2\Delta<0.291732.
-$$
+```
 
 The complement-gap stability gives the incompatible lower bound `>0.3041104` for every
 principal-corridor pair.  The final contradiction therefore has genuine positive
@@ -290,12 +290,12 @@ angular margin.
 Section 106 survives a full geometric hostile audit.  The valid proof-only consequence
 is:
 
-$$
+```math
 \boxed{
 \operatorname{diam}(P_*)
 \ge(0.9760410429297387484\ldots-o(1))D
 }
-$$
+```
 
 for some quadratic-area locally rhombus-saturated harmonic carrier in every sufficiently
 large Type-II survivor.

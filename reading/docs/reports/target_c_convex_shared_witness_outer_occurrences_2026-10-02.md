@@ -35,10 +35,10 @@ the connected positive-contact core G and the occurrence-counted outer length b.
 Canonical [Section 85](../targets/target-c/85-train-boundary-interface-currency-audit.md)
 supplies
 
-$$
+```math
  b=q+x_B,\quad q-x_B=Q_{\rm global}+2\kappa,
  \quad\kappa=d_H+s_Z,\quad q=|B|.                 \tag{1}
-$$
+```
 
 Q_global is the full contact-face deficiency. It is not the defect of one induced
 harmonic-cell graph. No small bound on x_B or Q_global is inferred here.
@@ -113,24 +113,24 @@ be one component in that order, let theta_j be the phase of p_{j+1}-p_j, and
 let I(v) denote the phase interval of the owner of v. The singleton inequalities
 give exactly
 
-$$
+```math
  \sup I(p_j)<\theta_j<\inf I(p_{j+1}).              \tag{2}
-$$
+```
 
 Consequently at every internal vertex
 
-$$
+```math
  \theta_{j-1}<\inf I(p_j)<\sup I(p_j)<\theta_j.     \tag{3}
-$$
+```
 
 **Theorem 1.** A U component has strictly increasing edge phases, hence is a
 strictly convex polygonal arc. Its owners are all distinct, their phase intervals
 are strictly ordered and pairwise disjoint, and
 
-$$
+```math
  \sum_{j=0}^l\varepsilon_{\operatorname{owner}(p_j)}\le W.
 \tag{4}
-$$
+```
 
 An opposite common swap orientation reverses the inequalities and the sign of
 turning; the unoriented convex-arc conclusion and distinctness remain.
@@ -144,18 +144,18 @@ turn have one strict sign. QED.
 
 Let L be the Euclidean length of the arc. Projection along u gives
 
-$$
+```math
  l<L\le\frac D{\cos W},\qquad
  \operatorname{width}_{Ju}(\text{arc})\le D\tan W,
 \tag{5}
-$$
+```
 
 and, writing c for its endpoint chord length,
 
-$$
+```math
  0\le L-c\le\frac{D(1-\cos W)}{\cos W},\qquad
  \sum_{e\in\text{arc}}(|e|-1)<2Ds\tan W.          \tag{6}
-$$
+```
 
 Indeed each edge has positive u projection at least its length times cos W;
 the endpoint projection is at most D. The normal variation and chord estimates
@@ -176,15 +176,15 @@ lengths R_+,R_- are at most 11/10.
 For every old unit-contact vector a at p, unit separation from the two U
 neighbors gives
 
-$$
+```math
  a\cdot d_+\le R_+/2,\qquad a\cdot d_-\le R_-/2.
-$$
+```
 
 Thus
 
-$$
+```math
  \boxed{|a\cdot u|\le\frac{13}{20}.}              \tag{7}
-$$
+```
 
 All unit-contact directions lie in the two disjoint arcs centered at w,-w
 with |a dot u|<=13/20. Each such arc has width 2 arcsin(13/20)<pi. The two
@@ -209,10 +209,10 @@ Let mu_out(p) count occurrences of p on the old outer contact walk, with
 multiplicity. Each occurrence is one exterior angular sector. By Lemma 2 and
 d_U(p)<=2,
 
-$$
+```math
  \boxed{d_U(p)\le\mu_{out}(p)\quad(p\in V(G)\setminus B).}
 \tag{8}
-$$
+```
 
 In particular an unloaded internal U vertex occurs at least twice on the outer
 walk. It is a contact articulation vertex: in a connected plane graph, distinct
@@ -227,24 +227,24 @@ loaded vertices of U-degree one and two, respectively. All loaded vertices are
 core vertices incident to the old outer face, and occur at least once there.
 Therefore
 
-$$
+```math
  \sum_{p\in V(G)\setminus B}\mu_{out}(p)
  = b-\sum_{b\in B}\mu_{out}(b)\le b-q=x_B.
-$$
+```
 
 Summing (8), retaining the loaded incidences and at most two incidences per moving
 isolate, proves
 
-$$
+```math
  \boxed{2|U|\le x_B+l_B+2i_B+2z.}                 \tag{9}
-$$
+```
 
 The singleton witness count in the preceding packet satisfies N_1+|U|>=k',
 so
 
-$$
+```math
  \boxed{N_1\ge k'-\frac{x_B+l_B}{2}-i_B-z.}       \tag{10}
-$$
+```
 
 This is an actual source population charge to the canonical outer excess x_B.
 It does not suppress loaded endpoint occurrences or isolate coordinates.
@@ -269,9 +269,9 @@ Here is the needed small-window count. Let delta_D be the normalized Hausdorff
 error from the disk, and let eta_D tend to zero. A normalized hull-side endpoint
 whose outward side normal is within eta_D of n_0 has
 
-$$
+```math
  p\cdot n_0\ge\frac12-\delta_D-(\frac12+\delta_D)\eta_D.
-$$
+```
 
 Its tangential coordinate is O(sqrt(delta_D+eta_D)). Side normals in the window
 occur on a contiguous convex boundary arc. The projection of each oriented side
@@ -281,9 +281,9 @@ has length at least one. Assign each internal loaded vertex its preceding hull
 side; this is injective and lies in the same pair of small direction windows.
 It follows that the number i_B^good of retained internal loaded vertices is
 
-$$
+```math
  \boxed{i_B^{good}=o(D),\qquad i_B\le i_B^{good}+2z.} \tag{11}
-$$
+```
 
 This includes loaded internal vertices whose two U neighbors are unloaded, so it
 is not just a count of loaded-loaded near-unit edges.
@@ -301,9 +301,9 @@ arbitrary exterior cloud.
 Let c_U be the number of nontrivial U path components. Since l_B<=2c_U, (9)
 becomes
 
-$$
+```math
  \boxed{|U|\le\frac{x_B}{2}+c_U+o(D).}            \tag{12}
-$$
+```
 
 No sublinear component bound is claimed. A matching of many separate unloaded
 outer-pocket witnesses remains possible under these estimates. The phase widths
@@ -322,17 +322,17 @@ s=4t^2/(1+t^4). Let cr,sr be those unit-circle parameters at t^4. Put
 c=120/241, h=209/241, and R=1+4h sr. Take p=0,q=(R,0). The three unit contacts
 at p have vectors
 
-$$
+```math
  a_+=(-c\,cr+h\,sr,h\,cr+c\,sr),\quad
  a_-=(c\,cr+h\,sr,-h\,cr+c\,sr),\quad (-1,0),
-$$
+```
 
 and those at q have vectors
 
-$$
+```math
  b_+=(-c\,cr-h\,sr,h\,cr-c\,sr),\quad
  b_-=(c\,cr-h\,sr,-h\,cr-c\,sr),\quad (1,0).
-$$
+```
 
 All six neighbors are separate source points. At p the positive weights
 (h cr-c sr,h cr+c sr,2cr sr) give exact contact balance; at q interchange the

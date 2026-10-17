@@ -175,4 +175,3 @@ from mathematical review and are not silently waived by this policy.
 
 This document itself does not change repository visibility, access-control
 settings, CI billing, release permissions, or licensing.
-

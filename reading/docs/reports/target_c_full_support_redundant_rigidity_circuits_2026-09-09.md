@@ -17,9 +17,9 @@ ZR/ZF use a relative-interior normalized KKT stress whose coefficient is nonzero
 every actual contact and every actual diameter bar. ZF also proves that the equality
 bar framework on
 
-$$
+```math
 E=C\cup H
-$$
+```
 
 has full planar infinitesimal-rigidity rank `2v-3`.
 
@@ -34,26 +34,26 @@ inequalities they impose.
 Let `R` be the ordinary equality-bar rigidity matrix of the nonisolated core on the
 edge set `E=C union H`. ZF gives
 
-$$
+```math
 \boxed{\operatorname{rank}R=2v-3.}
 \tag{RR.1}
-$$
+```
 
 The relative-interior KKT stress gives one left-kernel vector `omega` with
 
-$$
+```math
 \omega_e=\alpha_e>0\quad(e\in C),
 \qquad
 \omega_h=-\beta_h<0\quad(h\in H).
 \tag{RR.2}
-$$
+```
 
 Because the support is full,
 
-$$
+```math
 \boxed{\omega_a\ne0\quad(a\in E).}
 \tag{RR.3}
-$$
+```
 
 ## 2. Theorem RR — every active bar is redundant
 
@@ -61,12 +61,12 @@ $$
 
 For every active bar `a in E`, deleting its row leaves the rigidity rank unchanged:
 
-$$
+```math
 \boxed{
 \operatorname{rank}R_{E\setminus\{a\}}=2v-3.
 }
 \tag{RR.4}
-$$
+```
 
 Hence the mixed equality framework is redundantly infinitesimally rigid.
 
@@ -74,17 +74,17 @@ Hence the mixed equality framework is redundantly infinitesimally rigid.
 
 The stress dependence says
 
-$$
+```math
 \sum_{x\in E}\omega_xR_x=0.
-$$
+```
 
 Fix `a`. Since `omega_a!=0`,
 
-$$
+```math
 R_a
 =-\frac1{\omega_a}
 \sum_{x\ne a}\omega_xR_x.
-$$
+```
 
 Thus row `a` is in the span of all other rows. Deleting it does not change the row
 span or rank. `square`
@@ -97,12 +97,12 @@ This conclusion uses only the one full-support dependence; no genericity is requ
 
 Every core vertex has mixed active degree at least three:
 
-$$
+```math
 \boxed{
 \deg_C(x)+\deg_H(x)\ge3.
 }
 \tag{RR.5}
-$$
+```
 
 ### Proof
 
@@ -117,12 +117,12 @@ perpendicular flex. Contradiction. `square`
 For unloaded vertices this is already implied by C26. The new content is at loaded
 vertices. Since every loaded vertex has at least one diameter edge,
 
-$$
+```math
 \boxed{
 \deg_H(b)=1\Longrightarrow\deg_C(b)\ge2.
 }
 \tag{RR.6}
-$$
+```
 
 C35 also gives `deg_C(b)<=3`.
 
@@ -130,34 +130,34 @@ C35 also gives `deg_C(b)<=3`.
 
 The full diameter graph has no isolated loaded vertices and
 
-$$
+```math
 h=q-d_H.
-$$
+```
 
 Let `n_1` be the number of loaded vertices of diameter degree one. Since
 
-$$
+```math
 \sum_b(\deg_H(b)-1)=2h-q=q-2d_H,
-$$
+```
 
 and every vertex of degree at least two contributes at least one to the left side,
 there are at most `q-2d_H` such vertices. Therefore
 
-$$
+```math
 \boxed{n_1\ge2d_H.}
 \tag{RR.7}
-$$
+```
 
 RR.6 then gives the loaded contact-degree lower bound
 
-$$
+```math
 \boxed{
  e_{BI}+2e_{BB}
  =\sum_{b\in B}\deg_C(b)
  \ge q+2d_H.
 }
 \tag{RR.8}
-$$
+```
 
 This is exact. It is compatible with the ZK degree-slack ledger and does not by
 itself close the face inequality.
@@ -166,19 +166,19 @@ itself close the face inequality.
 
 The mixed row-nullity is
 
-$$
+```math
 |E|-\operatorname{rank}R
 =(e+h)-(2v-3)
 =1+s_Z.
 \tag{RR.9}
-$$
+```
 
 If
 
-$$
+```math
 \boxed{s_Z=0,}
 \tag{RR.10}
-$$
+```
 
 then the left kernel of `R` is one-dimensional. RR.3 says its unique nonzero
 relation has support all of `E`.
@@ -188,21 +188,21 @@ relation has support all of `E`.
 Under `s_Z=0`, `E=C union H` is a single circuit of the actual planar rigidity row
 matroid. In particular
 
-$$
+```math
 \boxed{|E|=2v-2}
 \tag{RR.11}
-$$
+```
 
 and every proper edge subset `E' proper subset E` is row-independent.
 
 For any proper vertex set `X` with at least two vertices, the induced active bars obey
 
-$$
+```math
 \boxed{
 |E(X)|\le2|X|-3.
 }
 \tag{RR.12}
-$$
+```
 
 ### Proof
 
@@ -228,9 +228,10 @@ Fix one unloaded component `I_r`, with
 - internal contacts `e_r`;
 - attachment contacts `t_r`;
 - pinned stress surplus
-  $$
+  ```math
   s_r=e_r+t_r-2n_r-1\ge0.
-  $$
+  
+  ```
 
 Let
 
@@ -241,32 +242,32 @@ Assume `s_Z=0` and `I_r union A_r` is a proper vertex subset of the core. Its in
 active bars include all `e_r+t_r` component contacts plus the `h_r+b_r` loaded-loaded
 bars. RR.12 gives
 
-$$
+```math
 e_r+t_r+h_r+b_r
 \le2(n_r+a_r)-3.
-$$
+```
 
 Insert `e_r+t_r=2n_r+1+s_r`.
 
 ### Corollary RR.4
 
-$$
+```math
 \boxed{
  h_r+b_r+s_r\le2a_r-4.
 }
 \tag{RR.13}
-$$
+```
 
 For the common three-attachment case,
 
-$$
+```math
 \boxed{
 a_r=3
 \Longrightarrow
 h_r+b_r+s_r\le2.
 }
 \tag{RR.14}
-$$
+```
 
 Since C43 excludes a diameter triangle, `h_r<=2` independently; RR.14 says that
 attaining those two local diameter edges leaves **zero** room for a loaded-loaded

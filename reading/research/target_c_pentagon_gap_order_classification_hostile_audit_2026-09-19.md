@@ -19,34 +19,34 @@ The audited claim is local: the consecutive direction gaps of any strict closed 
 
 Let the unit directions be `u_0,...,u_4` in cyclic order with gaps `T,A,B,D,E`. From
 
-$$
+```math
 u_4+u_0+u_1=-(u_2+u_3),
-$$
+```
 
 squared norms give
 
-$$
+```math
 3+2\{\cos E+\cos T+\cos(E+T)\}
 =2+2\cos B,
-$$
+```
 
 hence
 
-$$
+```math
 \cos B=\frac12+\cos E+\cos T+\cos(E+T).
-$$
+```
 
 Likewise
 
-$$
+```math
 u_0+u_1+u_2=-(u_3+u_4)
-$$
+```
 
 gives
 
-$$
+```math
 \cos D=\frac12+\cos T+\cos A+\cos(T+A).
-$$
+```
 
 So the two identities used by the source have the correct constants and pairings.
 
@@ -54,37 +54,37 @@ So the two identities used by the source have the correct constants and pairings
 
 For fixed `T`, write
 
-$$
+```math
 R_T(z)=\frac12+\cos T+\cos z+\cos(T+z).
-$$
+```
 
 Then
 
-$$
+```math
 R_T'(z)
 =-\sin z-\sin(T+z)
 =-2\cos(T/2)\sin(z+T/2).
-$$
+```
 
 The physical pentagon bounds give `0<T<2pi/3`, so `cos(T/2)>0`. They also give `T+A<pi` and `T+E<pi`. Every `z` between `A` and `E` therefore satisfies
 
-$$
+```math
 0<z+T/2<\pi.
-$$
+```
 
 Thus `R_T'(z)<0` on the entire interval used in the comparison.
 
 At the endpoints, `R_T(E)=cos B` and `R_T(A)=cos D`, with physical `0<B,D<2pi/3`. Hence both endpoint values lie strictly in `(-1,1)`. Since `R_T` is monotone, its whole interval image lies between those endpoint values, so there is no hidden arccos domain or branch failure. Therefore
 
-$$
+```math
 f_T(z)=\arccos R_T(z)
-$$
+```
 
 is real and strictly increasing. The source's conclusion
 
-$$
+```math
 \operatorname{sgn}(A-E)=\operatorname{sgn}(D-B)
-$$
+```
 
 has the correct direction. In particular equality is biconditional, not merely one-way.
 
@@ -92,11 +92,11 @@ has the correct direction. In particular equality is biconditional, not merely o
 
 With `(T,A,B,D,E)=(x_k,x_{k+1},x_{k+2},x_{k+3},x_{k-1})`, the preceding relation becomes
 
-$$
+```math
 \operatorname{sgn}(x_{k+1}-x_{k-1})
 =
 \operatorname{sgn}(x_{k+3}-x_{k+2}),
-$$
+```
 
 exactly as stated. Rotating `k` gives five constraints; no reflection convention or reciprocal-edge sign enters this local lemma.
 
@@ -104,21 +104,21 @@ exactly as stated. Rotating `k` gives five constraints; no reflection convention
 
 The verifier enumerates all `120` strict permutations of five labelled gaps. Exactly ten satisfy all five sign constraints. It independently checks that these ten form one full dihedral orbit and that the canonical cyclic rank vector is
 
-$$
+```math
 (1,5,2,3,4).
-$$
+```
 
 The minimum/maximum adjacency corollary is checked directly on all ten orders.
 
 For equality cases the verifier does not assume that a weak order is the limit of a strict admissible order. It first enumerates all `541` ordered set partitions on five labelled entries and applies the three-valued sign relation directly. Exactly `21` survive, with number-of-level distribution
 
-$$
+```math
 10\text{ with five levels},
 \qquad
 10\text{ with three levels},
 \qquad
 1\text{ with one level}.
-$$
+```
 
 So the claims that two-level and four-level cases are impossible do not come from a genericity argument.
 
@@ -128,50 +128,50 @@ The verifier then separately checks that every surviving weak order is a coarsen
 
 Every three-level weak order has multiplicities `1+2+2`, and the singleton rank is always an extreme rank. The ten patterns split into two five-element dihedral orbits according to whether the singleton is the minimum or maximum. Representatives in cyclic `(T,A,B,D,E)` coordinates are
 
-$$
+```math
 (0,2,1,1,2)
 \quad\text{and}\quad
 (2,0,1,1,0).
-$$
+```
 
 Thus a nonregular equality case can be relabelled as
 
-$$
+```math
 A=E,\qquad B=D,
-$$
+```
 
 with exactly one of
 
-$$
+```math
 T<B=D<A=E
-$$
+```
 
 or
 
-$$
+```math
 A=E<B=D<T.
-$$
+```
 
 ## 6. Equality-wall parameterization
 
 Under `A=E`, strict monotonicity gives `B=D`. Put `gamma=A+T/2`. The turn sum gives `B=pi-gamma`. Substitution into the exact cosine identity gives
 
-$$
+```math
 -\cos\gamma
 =\frac12+\cos T+2\cos\gamma\cos(T/2).
-$$
+```
 
 Writing `c=cos(T/2)` and `cos T=2c^2-1` yields
 
-$$
+```math
 -(1+2c)\cos\gamma=2c^2-\frac12.
-$$
+```
 
 Since `c>0`, division by `1+2c` is safe, and factorization gives
 
-$$
+```math
 \cos\gamma=\frac12-c.
-$$
+```
 
 The source parameterization follows. Because `0<gamma<pi`, the principal `arccos` is the correct branch.
 

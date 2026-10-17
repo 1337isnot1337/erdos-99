@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_chain_atom_weighted_mantel_2026-08-31.md) · source SHA-256 `e98f2cb3261727c83becf3380115623940dd474dd72097afcdb8dbf7940f74b8`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-ECB23883EA4C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C82: prescribed chain atom sharpens the pure-rhombic shell constants
 
@@ -21,56 +23,56 @@ that only the atomic part of the train-direction measure can carry positive-dens
 rhombus crossings, that its limiting crossing graph is triangle-free, and that exposed
 hull chains force the total atomic train mass to satisfy
 
-$$
+```math
 s\le1-\frac y2,
 \qquad
 y:=\lim\frac qT.
-$$
+```
 
 C82 inserts the **known atom of mass at least `D/T`** into the weighted Mantel step.
 This gives a small but strict improvement of the pure-rhombic constants.
 
 Put
 
-$$
+```math
 c:=\frac{2\sqrt3}{\pi},
 \qquad
 \Delta_2:=\frac1c=\frac\pi{2\sqrt3},
 \qquad
 A:=1+\Delta_2.
-$$
+```
 
 Then every pure-rhombic asymptotic sequence admitting the exact C80 chain face obeys
 
-$$
+```math
 \boxed{
 \frac TD
 \ge
 \frac{A}{1-y/2}+o(1).
 }
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \liminf\frac TD
 \ge
 \frac43(1+\Delta_2)
 =2.5425329094\ldots,
 }
-$$
+```
 
 improving Target B Section 39.7's `2.5395008183...`, and
 
-$$
+```math
 \boxed{
 \liminf\frac{T-q}{D}
 \ge
 1+\Delta_2-\frac\pi2
 =0.3361033553\ldots,
 }
-$$
+```
 
 improving Section 39.10's `0.3338292869...`.
 
@@ -94,24 +96,24 @@ Use Target B Section 39 notation in a pure rhombic disk:
 
 Global minimum-diameter packing gives
 
-$$
+```math
 \frac{R}{D^2}\longrightarrow\Delta_2=\frac1c.
 \tag{C82.1}
-$$
+```
 
 Therefore
 
-$$
+```math
 \frac{R}{T^2}\longrightarrow\frac1{cx^2}.
 \tag{C82.2}
-$$
+```
 
 Target B Section 39 proves
 
-$$
+```math
 \boxed{s\le1-\frac y2}
 \tag{C82.3}
-$$
+```
 
 from exposed-hull chains.
 
@@ -122,10 +124,10 @@ from exposed-hull chains.
 C80 gives `D` distinct train tracks in one exact projective direction. Therefore the
 limiting train-direction measure has an atom of mass at least
 
-$$
+```math
 \boxed{a\ge\frac DT=\frac1x+o(1).}
 \tag{C82.4}
-$$
+```
 
 There may be additional trains with the same direction; only the lower bound is used.
 
@@ -148,12 +150,12 @@ If `a>s/2`, then
 
 ### Lemma C82.1 — heavy-vertex weighted Mantel
 
-$$
+```math
 \boxed{
 \sum_{ij\in E}w_iw_j\le a(s-a).
 }
 \tag{C82.5}
-$$
+```
 
 ### Proof
 
@@ -172,15 +174,15 @@ If there are two adjacent residual vertices of weights `b,c`, with
 `b+c=s-a`, triangle-freeness prevents the distinguished vertex from being adjacent to
 both. Assuming it is adjacent to `b`, the edge weight is at most
 
-$$
+```math
 ab+bc=b(a+c)=b(s-b).
-$$
+```
 
 Since
 
-$$
+```math
 0\le b\le s-a<s/2,
-$$
+```
 
 the function `b(s-b)` is increasing on this interval, and its maximum occurs at
 `b=s-a`, giving `a(s-a)`. The case of no distinguished adjacency is smaller. `square`
@@ -194,9 +196,9 @@ approximation, exactly as in Target B Section 39's weighted Mantel argument.
 
 Set
 
-$$
+```math
 S:=1-\frac y2.
-$$
+```
 
 By C82.3, `s<=S`.
 
@@ -206,56 +208,56 @@ There are two cases.
 
 Then
 
-$$
+```math
 x\ge\frac2s\ge\frac2S.
 \tag{C82.6}
-$$
+```
 
 Since
 
-$$
+```math
 A=1+\frac1c<2,
-$$
+```
 
 this implies
 
-$$
+```math
 x\ge\frac AS.
 \tag{C82.7}
-$$
+```
 
 ### Case II: `1/x > s/2`
 
 The actual distinguished atom satisfies `a>=1/x>s/2`. Lemma C82.1 gives
 
-$$
+```math
 \frac1{cx^2}
 \le a(s-a).
-$$
+```
 
 For `a>s/2`, the function `a(s-a)` decreases as `a` increases. Therefore
 
-$$
+```math
 \frac1{cx^2}
 \le
 \frac1x\left(s-\frac1x\right)
 \le
 \frac1x\left(S-\frac1x\right).
-$$
+```
 
 Multiplying by `x^2` gives
 
-$$
+```math
 \frac1c\le xS-1,
-$$
+```
 
 hence again
 
-$$
+```math
 \boxed{
 x\ge\frac{1+1/c}{S}=\frac A{1-y/2}.}
 \tag{C82.8}
-$$
+```
 
 Thus both cases yield the same universal chain-face refinement.
 
@@ -263,26 +265,26 @@ Thus both cases yield the same universal chain-face refinement.
 
 For every pure-rhombic asymptotic survivor admitting the exact C80 chain face,
 
-$$
+```math
 \boxed{
 \frac TD
 \ge
 \frac{1+\Delta_2}{1-y/2}+o(1).
 }
 \tag{C82.9}
-$$
+```
 
 Target B Section 39.6 has the same form with numerator
 
-$$
+```math
 \frac2{\sqrt c}=1.9046\ldots;
-$$
+```
 
 C82 replaces it by
 
-$$
+```math
 1+\frac1c=1.9068996821\ldots .
-$$
+```
 
 ---
 
@@ -290,13 +292,13 @@ $$
 
 Target B pinned rigidity gives
 
-$$
+```math
 y\ge\frac12+o(1).
-$$
+```
 
 The right side of C82.9 increases with `y`, so
 
-$$
+```math
 \boxed{
 \liminf\frac TD
 \ge
@@ -306,6 +308,7 @@ $$
 =2.5425329094\ldots .
 }
 \tag{C82.10}
+```
 
 This is a strict improvement of Section 39.7.
 
@@ -315,26 +318,26 @@ This is a strict improvement of Section 39.7.
 
 Target B also gives
 
-\[
+```math
 q\le\pi D+o(D),
-$$
+```
 
 or in `(x,y)` variables
 
-$$
+```math
 xy\le\pi+o(1).
 \tag{C82.11}
-$$
+```
 
 Combine with C82.9:
 
-$$
+```math
 \frac{Ay}{1-y/2}\le\pi.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \limsup\frac qT
 \le
@@ -342,28 +345,28 @@ $$
 =0.9033545903\ldots .
 }
 \tag{C82.12}
-$$
+```
 
 This slightly improves Target B Section 39.9's `0.9039456812...`.
 
 Finally,
 
-$$
+```math
 \frac{T-q}{D}=x(1-y).
-$$
+```
 
 Using C82.9,
 
-$$
+```math
 \frac{T-q}{D}
 \ge
 A\frac{1-y}{1-y/2}+o(1).
-$$
+```
 
 The function on the right decreases in `y`, so insert the largest allowed value from
 C82.12. The algebra collapses exactly:
 
-$$
+```math
 \boxed{
 \liminf\frac{T-q}{D}
 \ge
@@ -373,12 +376,13 @@ A-\frac\pi2
 =0.3361033553\ldots .
 }
 \tag{C82.13}
+```
 
 Since Target B Section 40 gives
 
-\[
+```math
 \dim\mathcal L\ge T-q,
-$$
+```
 
 the same constant improves the macroscopic first-order-neutral train-space bound.
 

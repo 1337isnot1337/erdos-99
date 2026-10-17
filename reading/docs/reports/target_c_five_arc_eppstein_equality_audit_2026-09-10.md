@@ -13,11 +13,11 @@
 
 The five-arc theorem itself, including
 
-$$
+```math
 \liminf \mu_D\ge z_*>0.9604,
 \qquad
 10\arcsin z_*-4\pi=z_*/3,
-$$
+```
 
 is unchanged.
 
@@ -27,9 +27,9 @@ nearly minimum outer-face boundary.
 
 Eppstein's bound
 
-$$
+```math
 e\le2n-\delta-2
-$$
+```
 
 is proved by induction on the number of vertices. Fix a graph-diameter pair `u,w`.
 When the graph has a cycle, Eppstein's degree theorem supplies a degree-at-most-two
@@ -39,9 +39,9 @@ inductively. The proof is not an Euler/outer-face equality argument.
 
 Therefore near equality
 
-$$
+```math
 r_r:=2n_r-\delta_r-2-e_r=o(D)
-$$
+```
 
 should be interpreted only through that elimination proof: along a suitable recursive
 reduction preserving a fixed diameter pair, the total loss from deletions of degree
@@ -52,21 +52,21 @@ bounded faces as quadrilaterals.
 
 At a hypothetical `mu_D->z_*` endpoint, the preceding report still proves:
 
-$$
+```math
 \frac{\delta_r}{D}\to z_*,
 \qquad
 \frac{|A_r|}{D}\to z_*/3,
 \qquad
 \frac{t_r}{D}\to z_*,
-$$
+```
 
 for one giant unloaded component, while
 
-$$
+```math
 R_I/D\to0,
 \qquad
 s_B/D\to0.
-$$
+```
 
 Hence almost every one of the giant component's attachment pins uses all three loaded
 contact slots into that component. Equality in the projective packing also saturates
@@ -90,9 +90,9 @@ step that RP/RLE previously stated only informally.
 
 The result is:
 
-$$
+```math
 \boxed{\liminf\mu_D\ge z_*>0.9604}
-$$
+```
 
 with the original exact bracket `0.9604<z_*<0.961` certified as a valid report-level
 Target C theorem.
@@ -105,17 +105,17 @@ than `pi/3`, wrapping forces the actual attachment limit to meet at least three 
 components. Three actual inter-component gaps already contradict the direct planar
 attachment-perimeter bound
 
-$$
+```math
 P_A\le4|A|-6.
-$$
+```
 
 Therefore no endpoint sequence `mu_D->z_*` exists. In particular there is a
 nonexplicit absolute `epsilon_AP>0` such that every sufficiently large post-ZF C-II
 survivor satisfies
 
-$$
+```math
 \boxed{\mu_D\ge z_*+\epsilon_{AP}.}
-$$
+```
 
 This endpoint repair uses neither Eppstein equality structure nor a five-populated-arc
 claim.

@@ -16,16 +16,16 @@ Frozen candidate: `origin/research/level-i-fused-review-20261009` at `6132201c1d
 
 For every sufficiently large canonical post-ZF C-II source in either canonical alternative, let `I_r` range over the unloaded connected components of the nonisolated positive-contact core, let `delta_r` be their positive-contact graph diameters, and let `c_I` count only these components. Contact-isolated source points remain in the full source and are outside this count. For every integer `M>=0`, the claim is
 
-$$
+```math
 N_M:=\#\{r:\delta_r\le M\}\le12{,}000{,}000\pi(M+2).
-$$
+```
 
 With the canonical budget `sum_r delta_r<=2+2*pi*D`, this implies
 
-$$
+```math
 c_I\le12{,}000{,}000\pi(\lfloor\sqrt D\rfloor+2)
  +\frac{2+2\pi D}{\lfloor\sqrt D\rfloor+1}=O(\sqrt D).
-$$
+```
 
 Canonical dependencies are `C-COMP-DEATOMIZATION` (harmonic trapping, degree and graph-diameter facts, local arc control, and eventual force-hull fatness) and `C-HARMONIC-CELL-TILING` (interior disjointness of the actual attachment cells). No selected-grid proxy is used.
 
@@ -41,9 +41,9 @@ Place pairwise interior-disjoint cells with vertices on a concave piecewise-affi
 
 Root that triangulation at the endpoint chord. At a triangle with horizontal runs `l_1,l_2` and adjacent secant slopes `s_1>=s_2`, area and semiperimeter give
 
-$$
+```math
 r_T\le\frac12\min(l_1,l_2)(s_1-s_2).
-$$
+```
 
 Writing the nonnegative slope-drop measure as `mu=-f''`, the secant difference is the integral against `mu` of the triangular tent kernel supported on the interval of that triangle. For a fixed curvature location `t`, triangles with nonzero kernels follow the single rooted path through the nested interval tree: at a split vertex the parent kernel is one and the path terminates. At each step, `min(l_1,l_2)` is no greater than the horizontal length removed when passing to the child interval containing `t`; these lengths telescope to at most the original interval length `X`. Since each kernel is at most one, integration yields `sum_T r_T<=XV/2`, where `V` is total slope drop. Therefore the number of cells is at most `6XV/w`, and in particular at most the canonical loose bound `12XV/w`.
 

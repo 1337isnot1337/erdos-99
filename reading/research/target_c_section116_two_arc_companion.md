@@ -21,33 +21,33 @@ For a strict-rhombus carrier with attachment-cell diameter `d`, outer-walk lengt
 strict-rhombus area `A_4`, and total bounded-nonquadrilateral face perimeter
 `P_exc`,
 
-$$
+```math
 \boxed{
  d\bigl(L+P_{\rm exc}-2d\bigr)
  \ge(4-2\sqrt3)A_4.
 }
 \tag{116.TA}
-$$
+```
 
 Since canonical Section 82 gives `P_exc<=5Q`,
 
-$$
+```math
 \boxed{
  d(L+5Q-2d)
  \ge(4-2\sqrt3)A_4.
 }
 \tag{116.TB}
-$$
+```
 
 Equivalently, using `L+Q=4a-6-2s-2c`,
 
-$$
+```math
 \boxed{
  d\bigl(4a-6-2s-2c+4Q-2d\bigr)
  \ge(4-2\sqrt3)A_4.
 }
 \tag{116.TC}
-$$
+```
 
 This doubles the area coefficient of the coarse three-cut corollary while retaining
 the same universal displacement subtraction `2d`.
@@ -56,26 +56,26 @@ the same universal displacement subtraction `2d`.
 
 Choose attachment vertices `p_-,p_+` with
 
-$$
+```math
 |p_+-p_-|=d.
-$$
+```
 
 Both are extreme vertices of the attachment polygon and hence occur on the outer-face
 walk.  Cutting that closed occurrence-counted walk at these two vertices gives two
 directed arcs.  Orient the outer walk with the bounded side on the left.  Their
 displacements are
 
-$$
+```math
 z=p_+-p_-,
 \qquad -z,
-$$
+```
 
 so their unit chord hosts are
 
-$$
+```math
 q={z\over d},
 \qquad -q.
-$$
+```
 
 As in the main Section 116 theorem, orient every bounded nonquadrilateral face boundary
 clockwise.  Each such cycle is closed and therefore has host vector `0`.  Every
@@ -85,44 +85,44 @@ complete train has two good ends.
 
 The exact total walk excess is
 
-$$
+```math
 \boxed{
 E=L+P_{\rm exc}-2d.
 }
 \tag{116.T1}
-$$
+```
 
 ## 2. Exact local return cost for two antipodal hosts plus zero
 
 For the host set
 
-$$
+```math
 Q=\{q,-q,0\},
-$$
+```
 
 one has, for any unit train direction `u`,
 
-$$
+```math
 w_Q(u)=2|q\cdot u|,
-$$
+```
 
 and hence
 
-$$
+```math
 2-w_Q(u)=2-2|q\cdot u|.
 \tag{116.T2}
-$$
+```
 
 Let `u,v` be the two train directions crossing in one strict unit rhombus, and let
 `varphi in (pi/3,pi/2]` be their projective angle.  Choose signs so the oriented angle
 between them is `varphi`.  Then
 
-$$
+```math
 \max_{|q|=1}
 \left(|q\cdot u|+|q\cdot v|\right)
 =2\cos(\varphi/2).
 \tag{116.T3}
-$$
+```
 
 Indeed, after choosing the two signs that make both scalar products nonnegative, the
 maximum is the norm of `u+v`; the alternative sign gives `|u-v|<=|u+v|` because
@@ -130,7 +130,7 @@ maximum is the norm of `u+v`; the alternative sign gives `|u-v|<=|u+v|` because
 
 Therefore every strict rhombus satisfies
 
-$$
+```math
 \begin{aligned}
 &(2-w_Q(u))+(2-w_Q(v))\\
 &\qquad=4-2\left(|q\cdot u|+|q\cdot v|\right)\\
@@ -138,14 +138,14 @@ $$
 &\qquad>4-2\sqrt3.
 \end{aligned}
 \tag{116.T4}
-$$
+```
 
 The weak uniform constant
 
-$$
+```math
 \boxed{c_2:=4-2\sqrt3=2(2-\sqrt3)}
 \tag{116.T5}
-$$
+```
 
 is sharp as `varphi downarrow pi/3`.
 
@@ -153,37 +153,37 @@ is sharp as `varphi downarrow pi/3`.
 
 For each complete train `tau` put
 
-$$
+```math
 \delta_\tau=2-w_Q(u_\tau).
-$$
+```
 
 Multiply (116.T4) by rhombus area and sum over the full strict-rhombus complex.  After
 reorganizing by trains,
 
-$$
+```math
 c_2A_4
 \le
 \sum_\tau\delta_\tau
 \sum_{R\in\tau}\operatorname{area}(R).
-$$
+```
 
 The exact train transverse-span identity gives
 
-$$
+```math
 \sum_{R\in\tau}\operatorname{area}(R)\le d.
-$$
+```
 
 The zero-host signed-return theorem gives
 
-$$
+```math
 E\ge\sum_\tau\delta_\tau.
-$$
+```
 
 Consequently
 
-$$
+```math
 c_2A_4\le dE.
-$$
+```
 
 Substitution of (116.T1) proves (116.TA).
 
@@ -191,25 +191,25 @@ Substitution of (116.T1) proves (116.TA).
 
 Using the entire outer walk as one closed zero-displacement host gives
 
-$$
+```math
 d(L+P_{\rm exc})\ge4A_4,
-$$
+```
 
 which is the exact signed-return form of the ordinary train-span inequality.
 
 The two-arc theorem gives
 
-$$
+```math
 L+P_{\rm exc}
 \ge2d+(4-2\sqrt3){A_4\over d}.
-$$
+```
 
 The three-arc theorem gives instead
 
-$$
+```math
 L+P_{\rm exc}
 \ge\Pi_3^{\max}+(2-\sqrt3){A_4\over d}.
-$$
+```
 
 Thus the two- and three-arc bounds are complementary.  The two-arc bound has the
 larger universal area coefficient; the three-arc bound can win when the actual best
@@ -217,16 +217,16 @@ outer three-cut triangle has perimeter substantially larger than `2d`.
 
 Compared with the one-arc train-span bound, the two-arc theorem is stronger whenever
 
-$$
+```math
 {A_4\over d^2}<{1\over\sqrt3}.
-$$
+```
 
 Indeed this is exactly the condition
 
-$$
+```math
 2+(4-2\sqrt3){A_4\over d^2}
 >4{A_4\over d^2}.
-$$
+```
 
 The near-disk wrapping carriers occurring in the current Target-C quantitative chain
 lie on this side of the comparison, so the two-arc inequality is a genuinely new
@@ -241,9 +241,9 @@ stability, or near-endpoint assumption.
 The remaining full-core question is whether global minimality or the canonical Oler /
 interface currencies can force an upper bound on the same detour
 
-$$
+```math
 L+P_{\rm exc}-2d
-$$
+```
 
 that conflicts with (116.TA), or whether a carrier with the required linear detour can
 be deformed source-preservingly to smaller global diameter.

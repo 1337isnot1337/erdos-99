@@ -12,24 +12,24 @@
 
 The audited theorem is exact:
 
-$$
+```math
 \boxed{
 \text{every simple polygonal wall with at most six edges of length }\le1
 \text{ has }W_C=\varnothing.
 }
-$$
+```
 
 The proof is independent of all asymptotic Target C machinery.
 
-For an interior candidate $x$, every wall vertex has radius $r_i>1$. The edge-length bound and cosine law imply each principal angular increment about $x$ satisfies
+For an interior candidate $`x`$, every wall vertex has radius $`r_i>1`$. The edge-length bound and cosine law imply each principal angular increment about $`x`$ satisfies
 
-$$
+```math
 |\theta_i|<\pi/3.
-$$
+```
 
-But a simple polygon containing $x$ has winding number $\pm1$, hence the signed angular increments sum to $\pm2\pi$. With $n\le6$,
+But a simple polygon containing $`x`$ has winding number $`\pm1`$, hence the signed angular increments sum to $`\pm2\pi`$. With $`n\le6`$,
 
-$$
+```math
 2\pi
 \le
 \sum_i|\theta_i|
@@ -37,19 +37,19 @@ $$
 n\pi/3
 \le
 2\pi,
-$$
+```
 
 which is impossible.
 
 The threshold is sharp because the center of a regular unit heptagon lies at distance
 
-$$
+```math
 1/(2\sin(\pi/7))>1
-$$
+```
 
 from every wall vertex.
 
-The audit also checked the Target C route consequence against canonical \`C-EMBEDDED-WALL-REFILL\`: that theorem certifies packet points inside the original wall-safe set $W_C$, so later deletion of diameter-cover vertices does not create retroactive packet capacity.
+The audit also checked the Target C route consequence against canonical \`C-EMBEDDED-WALL-REFILL\`: that theorem certifies packet points inside the original wall-safe set $`W_C`$, so later deletion of diameter-cover vertices does not create retroactive packet capacity.
 
 Therefore direct refill of the canonical terminal pentagon walls from \`C-PENTAGON-WALL-DISJOINT-BULK\`, while preserving their five boundary contacts, is impossible.
 

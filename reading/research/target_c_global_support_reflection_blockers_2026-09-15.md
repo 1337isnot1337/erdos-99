@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_global_support_reflection_blockers_2026-09-15.md) · source SHA-256 `81ca9df47b243e510e13ad8b397f754bf8ea8a109f2634ce8629188e4d495611`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "6ca5b401c636b0987573adacb1838a67cff5b3ee", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_global_support_reflection_blockers_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "7b3dd04462a921af0fe4668727d38c18dc0c5dabcab97e07ff0eb9a664cf3729"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -27,12 +29,12 @@ strictly.
 
 Consequently every internal outer-route occurrence has an exact finite alternative:
 
-$$
+```math
 \boxed{
 \text{diameter blocker}
 \quad\text{or}\quad
 \text{exterior contact-isolated reflection witness}.}
-$$
+```
 
 No straightness, two-edge tooth, rhombus, phase, KKT coefficient floor, or asymptotic
 counting is used in the reflection lemma.
@@ -43,9 +45,9 @@ counting is used in the reflection lemma.
 
 Let
 
-$$
+```math
 W_i:b_i\leadsto b_{i+1}
-$$
+```
 
 be one distinguished Section-63 outer route between consecutive loaded force-hull
 vertices. Let `L_i` be the supporting line through the loaded hull side
@@ -53,40 +55,40 @@ vertices. Let `L_i` be the supporting line through the loaded hull side
 
 Choose coordinates with
 
-$$
+```math
 L_i=\{(p,q):q=0\}
-$$
+```
 
 and the force hull in
 
-$$
+```math
 F\subset\{q\ge0\}.
 \tag{SR.1}
-$$
+```
 
 Canonical Section 67 proves
 
-$$
+```math
 V(G)\cap\partial F=B,
 \tag{SR.2}
-$$
+```
 
 where `G` is the positive-contact core and `B=Vert(F)` is the loaded set. Therefore
 every physical internal route vertex `x` is unloaded and lies in `int(F)`.
 
 Write
 
-$$
+```math
 x=(p,h),\qquad h>0.
 \tag{SR.3}
-$$
+```
 
 and reflect it across `L_i`:
 
-$$
+```math
 x^-=(p,-h).
 \tag{SR.4}
-$$
+```
 
 All other source points remain fixed.
 
@@ -96,18 +98,18 @@ All other source points remain fixed.
 
 For any source point
 
-$$
+```math
 y=(r,q),
-$$
+```
 
 direct expansion gives
 
-$$
+```math
 \boxed{
 |y-x^-|^2-|y-x|^2=4hq.
 }
 \tag{SR.5}
-$$
+```
 
 Thus reflection cannot decrease the distance from `x` to any source point in the
 closed inward half-plane `q>=0`, and it strictly increases the distance to every point
@@ -137,23 +139,23 @@ canonical positive contact graph.
 
 Call a source point `z` a **strict lower blocker** for this reflection if
 
-$$
+```math
 |z-x^-|<1.
 \tag{SR.6}
-$$
+```
 
 The original source is unit-separated, so
 
-$$
+```math
 |z-x|\ge1.
-$$
+```
 
 Equation (SR.5) then rules out `q_z>=0`. Therefore
 
-$$
+```math
 \boxed{q_z<0.}
 \tag{SR.7}
-$$
+```
 
 Since the force hull is contained in `q>=0`, every strict lower blocker lies outside
 `F`.
@@ -178,38 +180,39 @@ canonical representative was chosen contact-minimal among diameter minimizers.
 Therefore the reflected configuration cannot have strictly fewer actual unit contacts.
 It must acquire at least one new unit contact
 
-$$
+```math
 |z-x^-|=1
 \tag{SR.8}
-$$
+```
 
 from a source point that was not an old contact neighbor of `x`.
 
 For any point with `q_z>=0`, (SR.5) gives
 
-$$
+```math
 |z-x^-|\ge|z-x|.
-$$
+```
 
 Since an old noncontact has `|z-x|>1`, it cannot become a new unit contact. Hence every
 new contact forced by contact minimality satisfies
 
-$$
+```math
 q_z<0.
-$$
+```
 
 It lies outside `F` and is contact-isolated in the original source.
 
 We call either a strict lower blocker (SR.6) or an exact new contact (SR.8) an
 **exterior reflection witness**. In both cases
 
-$$
+```math
 \boxed{
 z\notin F,
 \qquad z\text{ is contact-isolated in the original canonical source},
 \qquad |z-x^-|\le1.
 }
 \tag{SR.9}
+```
 
 ---
 
@@ -217,34 +220,36 @@ z\notin F,
 
 Call a source point `y` an **upper/diameter blocker** if
 
-\[
+```math
 |y-x^-|>D.
 \tag{SR.10}
-$$
+```
 
 The original diameter constraint gives `|y-x|<=D`. Equation (SR.5) therefore implies
 
-$$
+```math
 4h q_y
 =|y-x^-|^2-|y-x|^2
 >0,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{q_y>0.}
 \tag{SR.11}
+```
 
 Thus a diameter blocker lies on the inward side of the same loaded support line.
 
 The reflection displacement is exactly `2h`, so triangle inequality also gives
 
-\[
+```math
 \boxed{
 |x-y|>D-2h.
 }
 \tag{SR.12}
+```
 
 Unlike the two-edge shallow-tooth theorem, no uniform normal cone is asserted here:
 an arbitrary internal route vertex need not project to the midpoint of the loaded
@@ -263,16 +268,18 @@ For every internal physical occurrence `x` of every distinguished Section-63 rou
 force-hull side. Then at least one of the following holds:
 
 1. **diameter blocker:** there exists a source point `y` with
-   \[
+   ```math
    |y-x^-|>D,
    \qquad q_y>0,
    \qquad |x-y|>D-2h;
-   $$
+   
+   ```
 2. **exterior-isolate witness:** there exists a source point `z` with
-   $$
+   ```math
    q_z<0,
    \qquad |z-x^-|\le1,
-   $$
+   
+   ```
    and `z` is contact-isolated in the original canonical source.
 
 The theorem is finite and source-preserving. It uses the canonical contact-minimal
@@ -286,11 +293,12 @@ diameter remains exactly `D`.
 The theorem applies to every internal route vertex, so in particular it applies to the
 near-30-degree distinct straight-tail family from the current branch. That family has
 
-\[
+```math
 \boxed{
 1.2558820685257019\ldots D-o(D)
 }
 \tag{SR.13}
+```
 
 distinct physical tails.
 

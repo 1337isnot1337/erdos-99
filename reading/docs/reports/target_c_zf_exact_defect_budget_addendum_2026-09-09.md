@@ -36,26 +36,26 @@ Use the notation of the ZS report:
 
 ZS defines
 
-$$
+```math
 r_E:=2v-\delta-2-e\ge0,
 \qquad
 s_Z:=e+h-(2v-2)\ge0,
 \tag{1.1}
-$$
+```
 
 and proves
 
-$$
+```math
 \boxed{h=\delta+r_E+s_Z.}
 \tag{1.2}
-$$
+```
 
 Define
 
-$$
+```math
 \boxed{d_H:=q-h\ge0.}
 \tag{1.3}
-$$
+```
 
 For the connected plane contact core let
 
@@ -66,26 +66,26 @@ For the connected plane contact core let
 
 C42/C51 give
 
-$$
+```math
 \boxed{b\ge q,}
 \tag{1.4}
-$$
+```
 
 and every bounded nonquadrilateral face has degree at least five. DT gives
 
-$$
+```math
 \boxed{
 T=\frac{b+Q}{2}+2f.
 }
 \tag{1.5}
-$$
+```
 
 The campaign's remaining scalar closing inequality is
 
-$$
+```math
 \boxed{b+Q>2h.}
 \tag{1.6}
-$$
+```
 
 ---
 
@@ -93,64 +93,64 @@ $$
 
 Every post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 q-\delta=d_H+r_E+s_Z,
 }
 \tag{ZE.1}
-$$
+```
 
-$$
+```math
 \boxed{
 \sigma_B=2q-\delta-2
 =q-2+d_H+r_E+s_Z,
 }
 \tag{ZE.2}
-$$
+```
 
 and, wherever DT applies,
 
-$$
+```math
 \boxed{
 2f=(T-q)+d_H+s_Z.
 }
 \tag{ZE.3}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{s_Z=2f-(T-q+d_H).}
 \tag{ZE.4}
-$$
+```
 
 ### Proof
 
 By definition,
 
-$$
+```math
 q-\delta=(q-h)+(h-\delta).
-$$
+```
 
 The first term is `d_H`; (1.2) gives `h-delta=r_E+s_Z`. This proves ZE.1. Then
 
-$$
+```math
 \sigma_B=q+(q-\delta)-2
-$$
+```
 
 gives ZE.2.
 
 Euler and face incidence give
 
-$$
+```math
 \boxed{
 e=2v-2-\frac{b+Q}{2}.}
 \tag{ZE.5}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 s_Z=h-\frac{b+Q}{2},}
 \qquad
@@ -158,19 +158,19 @@ s_Z=h-\frac{b+Q}{2},}
 \frac{b+Q}{2}=h-s_Z.
 }
 \tag{ZE.6}
-$$
+```
 
 Substitute this into DT:
 
-$$
+```math
 T=h-s_Z+2f.
-$$
+```
 
 Thus
 
-$$
+```math
 2f=T-h+s_Z=(T-q)+(q-h)+s_Z,
-$$
+```
 
 which is ZE.3. ZE.4 is a rearrangement. `square`
 
@@ -180,82 +180,82 @@ which is ZE.3. ZE.4 is a rearrangement. `square`
 
 Define
 
-$$
+```math
 \boxed{x_B:=b-q\ge0}
 \tag{ZT.1}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 g_F:=Q-f
 =\sum_{F\text{ exceptional}}(\deg F-5)\ge0.}
 \tag{ZT.2}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 q=x_B+f+g_F+2d_H+2s_Z.
 }
 \tag{ZT.3}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{f=q-x_B-g_F-2d_H-2s_Z,}
 \tag{ZT.4}
-$$
+```
 
-$$
+```math
 \boxed{f\le q-2d_H-2s_Z,}
 \tag{ZT.5}
-$$
+```
 
-$$
+```math
 \boxed{d_H+s_Z\le q/2,}
 \tag{ZT.6}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 T-q=2q-2x_B-2g_F-5(d_H+s_Z).
 }
 \tag{ZT.7}
-$$
+```
 
 ### Proof
 
 Every exceptional bounded face has degree at least five, so
 
-$$
+```math
 Q=f+g_F.
-$$
+```
 
 Also `b=q+x_B`. Thus
 
-$$
+```math
 b+Q=q+x_B+f+g_F.
 \tag{ZT.8}
-$$
+```
 
 ZE.6 and `h=q-d_H` give
 
-$$
+```math
 b+Q=2q-2d_H-2s_Z.
 \tag{ZT.9}
-$$
+```
 
 Equating ZT.8 and ZT.9 proves ZT.3. ZT.4–ZT.6 follow by rearrangement and nonnegativity. Finally ZE.3 gives
 
-$$
+```math
 T-q=2f-d_H-s_Z,
-$$
+```
 
 and substitution of ZT.4 proves ZT.7. `square`
 
@@ -283,37 +283,37 @@ Let
 
 C33 proves
 
-$$
+```math
 e-e_{BB}\ge2(v-q)+c_I.
-$$
+```
 
 Define its exact nonnegative slack
 
-$$
+```math
 \boxed{
 s_C:=(e-e_{BB})-2(v-q)-c_I\ge0.}
 \tag{ZU.1}
-$$
+```
 
 Then every post-ZF survivor satisfies
 
-$$
+```math
 \boxed{
 c_I+e_{BB}+s_C=q-2+d_H+s_Z.}
 \tag{ZU.2}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{
 c_I+e_{BB}+s_C\ge q-2\ge\lceil D\rceil-2,}
 \tag{ZU.3}
-$$
+```
 
 so at least one of the three quantities obeys
 
-$$
+```math
 \boxed{
 \max\{c_I,e_{BB},s_C\}
 \ge
@@ -322,30 +322,30 @@ $$
 \frac{\lceil D\rceil-2}{3}.
 }
 \tag{ZU.4}
-$$
+```
 
 Combining ZU.2 with ZT.3 gives the dual exact balance
 
-$$
+```math
 \boxed{
  c_I+e_{BB}+s_C+2
  =x_B+f+g_F+3(d_H+s_Z).
 }
 \tag{ZU.5}
-$$
+```
 
 ### Proof
 
 By definition of `s_C`,
 
-$$
+```math
 e=2v-2q+c_I+e_{BB}+s_C.
 \tag{ZU.6}
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 r_E
 &=2v-\delta-2-e\\
@@ -353,25 +353,25 @@ r_E
 &=\sigma_B-c_I-e_{BB}-s_C.
 \end{aligned}
 \tag{ZU.7}
-$$
+```
 
 ZE.2 gives
 
-$$
+```math
 \sigma_B=q-2+d_H+r_E+s_Z.
-$$
+```
 
 Insert this in ZU.7 and cancel `r_E` from both sides:
 
-$$
+```math
 0=q-2+d_H+s_Z-c_I-e_{BB}-s_C.
-$$
+```
 
 This proves ZU.2. ZU.3 follows from nonnegativity of `d_H,s_Z` and `q>=h>=delta>=ceil(D)`. ZU.4 is pigeonhole. Finally substitute
 
-$$
+```math
 q=x_B+f+g_F+2(d_H+s_Z)
-$$
+```
 
 from ZT.3 into ZU.2, which gives ZU.5. `square`
 
@@ -379,18 +379,18 @@ from ZT.3 into ZU.2, which gives ZU.5. `square`
 
 C33 pins every loaded terminal. The pinned contact rigidity matrix is block diagonal over the `c_I` interior components, and each block has full column rank `2|I_r|`. Therefore the total pinned-contact left-nullity is
 
-$$
+```math
 (e-e_{BB})-2(v-q)=c_I+s_C.
 \tag{ZU.8}
-$$
+```
 
 C33's positive KKT stress supplies one mandatory nonzero left-kernel vector on each interior component. Hence
 
-$$
+```math
 \boxed{
 s_C=\text{the number of additional pinned-contact left-kernel dimensions beyond those }c_I\text{ mandatory ones}.}
 \tag{ZU.9}
-$$
+```
 
 Thus ZU is not merely a reparameterization of `sigma_B`: it says the post-ZF linear boundary surplus must materialize as a linear number of interior components, direct loaded-loaded contacts, or extra pinned-contact stress dependencies.
 
@@ -400,24 +400,24 @@ Thus ZU is not merely a reparameterization of `sigma_B`: it says the post-ZF lin
 
 The canonical planar diameter-graph structure says each component is a caterpillar whose spine is a path or one odd cycle, with at most one unicyclic component. Therefore
 
-$$
+```math
 \boxed{d_H=q-h=\text{number of tree components of }H.}
 \tag{5.1}
-$$
+```
 
 ZF gives mixed active rigidity rank `2v-3`, so its left-nullity is
 
-$$
+```math
 (e+h)-(2v-3)=s_Z+1.
 \tag{5.2}
-$$
+```
 
 The mandatory KKT dependence accounts for one dimension. Hence
 
-$$
+```math
 \boxed{s_Z=\text{extra mixed-framework row dependencies beyond the mandatory KKT dependence}.}
 \tag{5.3}
-$$
+```
 
 So ZT/ZU track two different stress redundancies: `s_C` before matching boundary reactions to the diameter system, and `s_Z` after the full contact/diameter equilibrium constraints are imposed.
 
@@ -427,45 +427,45 @@ So ZT/ZU track two different stress redundancies: `s_C` before matching boundary
 
 The desired face inequality
 
-$$
+```math
 b+Q>2h
-$$
+```
 
 is, by ZE.6, equivalent to
 
-$$
+```math
 s_Z<0,
-$$
+```
 
 which contradicts ZF.
 
 In stopped-train variables it is equivalent to
 
-$$
+```math
 \boxed{T-q+d_H>2f,}
 \tag{6.1}
-$$
+```
 
 or by integrality
 
-$$
+```math
 \boxed{T-q+d_H\ge2f+1.}
 \tag{6.2}
-$$
+```
 
 ZE.3 identifies the exact survivor obstruction:
 
-$$
+```math
 \boxed{T-q+d_H=2f-s_Z\le2f.}
 \tag{6.3}
-$$
+```
 
 ZT.7 gives the corresponding exact terminal-budget expression
 
-$$
+```math
 \boxed{T-q=2q-2x_B-2g_F-5(d_H+s_Z).}
 \tag{6.4}
-$$
+```
 
 A closing theorem must therefore add genuinely new geometric/global-optimality information; the exact linear ledger itself cannot change the sign of `s_Z`.
 
@@ -475,31 +475,31 @@ A closing theorem must therefore add genuinely new geometric/global-optimality i
 
 Let
 
-$$
+```math
 \Delta=\frac{\pi}{2\sqrt3},
 \qquad
 c_0:=2\sqrt\Delta-\frac\pi2
 =0.333829286933018\ldots.
 \tag{7.1}
-$$
+```
 
 Under the existing DE/DF hypothesis
 
-$$
+```math
 n-v=o(D^2),
 \tag{7.2}
-$$
+```
 
 the reviewed train theorem gives
 
-$$
+```math
 \liminf\frac{T-q}{D}\ge c_0.
 \tag{7.3}
-$$
+```
 
 ZE.3 then gives
 
-$$
+```math
 \boxed{
 \liminf
 \frac{f-(d_H+s_Z)/2}{D}
@@ -508,11 +508,11 @@ $$
 =0.166914643466509\ldots.
 }
 \tag{7.4}
-$$
+```
 
 Using ZT.7 also gives
 
-$$
+```math
 \boxed{
 \limsup
 \frac{2x_B+2g_F+5(d_H+s_Z)}{D}
@@ -520,11 +520,11 @@ $$
 2\limsup\frac qD-c_0.
 }
 \tag{7.5}
-$$
+```
 
 and hence, from `q<=pi D`,
 
-$$
+```math
 \boxed{
 \limsup
 \frac{2x_B+2g_F+5(d_H+s_Z)}{D}
@@ -532,7 +532,7 @@ $$
 2\pi-c_0.
 }
 \tag{7.6}
-$$
+```
 
 The useful content is structural: a dense-core sequence near the exposed-hull train lower bound cannot simultaneously spend a linear terminal budget on outer repetition, high-degree exceptional faces, diameter tree components, and extra mixed dependencies.
 
@@ -554,15 +554,15 @@ For a regular unit odd `q`-gon with the contact graph equal to the boundary cycl
 
 ZT.3 gives
 
-$$
+```math
 0+1+(q-5)+0+4=q,
-$$
+```
 
 and ZU.2 gives
 
-$$
+```math
 0+q+0=q-2+0+2.
-$$
+```
 
 Both are exact. Thus the new identities correctly retain the regular-shell regression instead of deriving a false topological contradiction.
 
@@ -634,10 +634,10 @@ Do not promote these consequences independently of their ZF dependency.
 
 The exact closing theorem remains
 
-$$
+```math
 \boxed{T-q+d_H\ge2f+1.}
 \tag{12.1}
-$$
+```
 
 The new ledgers reduce the post-ZF general topology to explicit currencies.
 

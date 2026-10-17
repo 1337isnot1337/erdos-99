@@ -19,49 +19,49 @@ The `d_H=2` endpoint is substantially more rigid than the statement “two diame
 
 Let
 
-$$
+```math
 H=T_A\sqcup T_B
-$$
+```
 
 be the two full diameter-tree components from D2, with vertex sets `A,B`. Then:
 
-$$
+```math
 \boxed{
 G[A]=T_A\cup C[A]
 \text{ has }2|A|-3\text{ independent rigidity rows},
 }
 \tag{RB.1}
-$$
+```
 
 and symmetrically
 
-$$
+```math
 \boxed{
 G[B]=T_B\cup C[B]
 \text{ has }2|B|-3\text{ independent rigidity rows}.
 }
 \tag{RB.2}
-$$
+```
 
 Hence both induced frameworks are infinitesimally rigid.
 
 Exactly four shell contacts join `A` to `B`, namely the four transitions between the cyclic blocks
 
-$$
+```math
 A_0\mid B_0\mid A_1\mid B_1.
-$$
+```
 
 After quotienting the internal Euclidean motions of the two rigid subframeworks, these four contact rows have rank exactly three in the three-dimensional relative rigid-motion space and have one full-support positive dependence.
 
 Thus:
 
-$$
+```math
 \boxed{
 \text{cyclic }d_H=2
 =
 \text{two planar rigid bodies joined by a positive four-bar circuit}.}
 \tag{RB.3}
-$$
+```
 
 Deleting any one of the four transition contacts still leaves the full mixed framework infinitesimally rigid; deleting any two leaves at least one relative infinitesimal degree of freedom.
 
@@ -73,34 +73,34 @@ This isolates the remaining geometric obstruction to one finite four-contact bod
 
 D2 gives four nonempty cyclic blocks
 
-$$
+```math
 A_0\mid B_0\mid A_1\mid B_1,
-$$
+```
 
 where `A=A_0\sqcup A_1` is the vertex set of the tree `T_A` and `B=B_0\sqcup B_1` is the vertex set of `T_B`.
 
 Because `A_0` and `A_1` are two distinct nonempty intervals of the shell cycle, the shell contacts with both endpoints in `A` are precisely the path edges internal to these two intervals. Therefore
 
-$$
+```math
 |C[A]|
 =(|A_0|-1)+(|A_1|-1)
 =|A|-2.
 \tag{1.1}
-$$
+```
 
 Since `T_A` is a tree on `A`,
 
-$$
+```math
 |E(T_A)|=|A|-1.
 \tag{1.2}
-$$
+```
 
 Thus the induced mixed row set on `A` contains exactly
 
-$$
+```math
 \boxed{|C[A]|+|E(T_A)|=2|A|-3}
 \tag{1.3}
-$$
+```
 
 rows. The same calculation gives `2|B|-3` rows on `B`.
 
@@ -110,21 +110,21 @@ rows. The same calculation gives `2|B|-3` rows on `B`.
 
 In the `d_H=2` cyclic phase,
 
-$$
+```math
 s_Z=0.
-$$
+```
 
 The full mixed framework has
 
-$$
+```math
 q+(q-2)=2q-2
-$$
+```
 
 rows. ZF gives rigidity rank
 
-$$
+```math
 2q-3.
-$$
+```
 
 Therefore the row-dependence space is one-dimensional.
 
@@ -148,23 +148,23 @@ The row set of `G[A]` is a proper subset of the full row set because `B` is none
 
 A planar framework on `|A|` vertices has rigidity rank at most
 
-$$
+```math
 2|A|-3.
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{\operatorname{rank}R(G[A])=2|A|-3.}
 \tag{3.1}
-$$
+```
 
 This is exactly infinitesimal rigidity of the induced framework on `A`. The same proof yields
 
-$$
+```math
 \boxed{\operatorname{rank}R(G[B])=2|B|-3.}
 \tag{3.2}
-$$
+```
 
 No generic-coordinate assumption is used. These are rigidity statements at the actual Target C coordinates.
 
@@ -174,9 +174,9 @@ No generic-coordinate assumption is used. These are rigidity statements at the a
 
 The cyclic order
 
-$$
+```math
 A_0\mid B_0\mid A_1\mid B_1
-$$
+```
 
 has exactly four transitions between an A vertex and a B vertex. Since the complete contact graph is the shell cycle, those four transition edges are exactly all A-B contact rows.
 
@@ -186,30 +186,30 @@ Hence, after the two induced rigid frameworks are treated as rigid bodies, the f
 
 Fix body `B` modulo a common global Euclidean motion. An infinitesimal relative rigid motion of body `A` has three parameters:
 
-$$
+```math
 \xi=(v_x,v_y,\omega)\in\mathbb R^3.
-$$
+```
 
 Each transition contact gives one linear first-derivative constraint on `xi`. Let
 
-$$
+```math
 W\in\mathbb R^{4\times3}
-$$
+```
 
 be this relative contact matrix.
 
 Internal rigidity contributes rank
 
-$$
+```math
 (2|A|-3)+(2|B|-3)=2q-6.
-$$
+```
 
 The full mixed rigidity rank is `2q-3`. Therefore
 
-$$
+```math
 \boxed{\operatorname{rank}W=3.}
 \tag{4.1}
-$$
+```
 
 Thus the four relative rows span the complete relative rigid-motion dual space and have exactly one linear dependence.
 
@@ -221,20 +221,20 @@ Restrict the unique full mixed KKT row dependence to the quotient by the interna
 
 All four KKT contact coefficients satisfy
 
-$$
+```math
 \alpha_i>0.
-$$
+```
 
 Hence, using the natural length-derivative row convention for the relative motion,
 
-$$
+```math
 \boxed{
 \alpha_1 W_1+\alpha_2 W_2+\alpha_3 W_3+\alpha_4 W_4=0,
 \qquad
 \alpha_i>0.
 }
 \tag{5.1}
-$$
+```
 
 The row orientation is immaterial: a squared-distance rigidity row is unchanged by swapping its two endpoints. Equivalently, after fixing which body moves, (5.1) is the summed force-and-torque equilibrium of one rigid block.
 
@@ -244,9 +244,9 @@ Thus the origin lies in the relative interior of the tetrahedral convex hull of 
 
 D2.2 is the translational two-coordinate projection of (5.1): if the four transition contact tangents are `t_i,t_j,t_k,t_l` in cyclic order, then
 
-$$
+```math
 \alpha_i t_i-\alpha_jt_j+\alpha_kt_k-\alpha_lt_l=0.
-$$
+```
 
 The third coordinate of (5.1) is the corresponding torque identity, which D2 did not need to state explicitly.
 
@@ -256,9 +256,9 @@ The third coordinate of (5.1) is the corresponding torque identity, which D2 did
 
 Because the full row set is a circuit, deleting **any one** row leaves an independent set of size
 
-$$
+```math
 2q-3.
-$$
+```
 
 In particular, deleting any one of the four A-B contacts leaves the full framework with rank `2q-3`; it remains infinitesimally rigid.
 
@@ -268,13 +268,13 @@ If any two transition contacts are deleted, at most two relative rows remain. Th
 
 Thus:
 
-$$
+```math
 \boxed{
 4\text{ interbody contacts: positive circuit};
 \quad3:\text{ rigid};
 \quad2:\text{ at least one relative infinitesimal mode}.}
 \tag{6.1}
-$$
+```
 
 This is an exact finite reduction, not a counting heuristic.
 
@@ -324,9 +324,9 @@ The next `d_H=2` target is now a three-variable finite problem.
 
 Let the four transition contact rows be the boundary shell edges at the four block corners. Use their actual convex cyclic order and the exact positive wrench dependence (5.1) to classify the local feasible set
 
-$$
+```math
 \{g_r(\xi)\ge0:r=1,2,3,4\}
-$$
+```
 
 in relative `SE(2)` coordinates through second order.
 

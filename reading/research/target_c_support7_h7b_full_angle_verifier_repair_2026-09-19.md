@@ -90,15 +90,15 @@ Thus the `184 -> 27 C7` mathematical reduction survives independent exact recert
 
 For each of the 27 survivors, the 92-row equality matrix has exact rational rank
 
-$$
+```math
 57
-$$
+```
 
 inside the 84-variable full-angle space. The augmented matrix has the same rank in every case. Hence each surviving affine equality cell has dimension
 
-$$
+```math
 84-57=27.
-$$
+```
 
 This is only an equality-space dimension statement. It does not imply that the subsequent nonlinear equations are independent or that the cell is empty.
 

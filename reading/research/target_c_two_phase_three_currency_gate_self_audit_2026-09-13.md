@@ -15,32 +15,32 @@
 
 The carrier-scope input inequalities have the same occurrence convention:
 
-$$
+```math
 N_o\le P_{exc}+2B_o,
 \qquad
 2B_o\le(b-\pi D)+P_{exc}+o(D).
-$$
+```
 
 Substitution gives
 
-$$
+```math
 (4-\pi)D-o(D)
 \le(b-\pi D)+2P_{exc}.
-$$
+```
 
 The Type-II augmented-cell payment is
 
-$$
+```math
 P_{exc}\le5(e_{BB}-2k)+o(D),
-$$
+```
 
 so the carrier-scope final coefficient is `10`, not `5` or `20`:
 
-$$
+```math
 \delta+\rho+10(e_{BB}-2k)/D\ge4-\pi-o(1),
 \qquad
 \rho={\operatorname{per}(F)-\pi D\over D}.
-$$
+```
 
 The force-hull residual `rho` is `o(1)` in the Type-II near-disk limit. It must be
 carried explicitly before taking that limit: `delta=(b-per(F))/D` is not itself

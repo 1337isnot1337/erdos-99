@@ -22,9 +22,9 @@ The calculation is correct.  The audit adds one strategic warning: positive full
 
 The triple-small theorem bounds only projective angle.  The candidate does not silently identify the two oriented contact vectors.  It chooses `s in {+1,-1}` so that
 
-$$
+```math
 |u-su'|=2\sin(\eta/2)\le\eta,
-$$
+```
 
 where `eta=d_RP1(u,u')`.  The shear coefficients are then `(1,-s)`.
 
@@ -40,13 +40,13 @@ For two adjacent coordinates of a laminar interval system, an interval contains 
 
 With coefficients `(1,-s)`, the first displacement coefficient is respectively
 
-$$
+```math
 0,
 \qquad
 J(u-su'),
 \qquad
 Ju\text{ or }-sJu'.
-$$
+```
 
 Thus non-switching spanning rows have coefficient norm at most `21200/D+o(D^-1)`, while switching rows have coefficient norm one.
 
@@ -60,23 +60,23 @@ The switching rows are exactly those counted by the triple-small boundary theore
 
 For an active diameter vector `r_h`, `|r_h|=D` and
 
-$$
+```math
 L_h'(0)=2r_h\cdot A_h.
-$$
+```
 
 Hence spanning rows satisfy
 
-$$
+```math
 |L_h'(0)|
 \le2D|u-su'|
 <42400+o(1).
-$$
+```
 
 A switching row satisfies the coarse sharp-scale bound
 
-$$
+```math
 |L_h'(0)|\le2D.
-$$
+```
 
 Multiplying the latter by the total switching beta mass `<21200/D+o(D^-1)` gives weighted absolute contribution `<42400+o(1)`.
 
@@ -104,39 +104,39 @@ This point is not a flaw in the candidate, but it is essential for downstream us
 
 Let `M` be the active-diameter first-derivative matrix on any selected exact train-shear coordinates.  Relative-interior KKT gives
 
-$$
+```math
 M^T\beta=0,
 \qquad
 \beta_h>0\text{ for every actual diameter row}.
-$$
+```
 
 Suppose a nonzero shear direction `c` satisfied
 
-$$
+```math
 Mc\le0
-$$
+```
 
 componentwise.  Then
 
-$$
+```math
 0=\beta^TMc.
-$$
+```
 
 Because every `beta_h` is strictly positive and every component of `Mc` is nonpositive, every component must vanish:
 
-$$
+```math
 Mc=0.
-$$
+```
 
 Canonical mixed infinitesimal rigidity then makes the contact-preserving motion Euclidean.  For the selected one-phase block an outside train has zero angular rate, eliminating Euclidean rotation; translation has zero train rates.  Hence `c=0`, a contradiction.
 
 Therefore
 
-$$
+```math
 \boxed{
 \text{there is no nonzero first-order diameter-feasible direction in this train-shear subspace.}
 }
-$$
+```
 
 In particular, one must not interpret the small switching beta mass as permission to ignore those active constraints.
 

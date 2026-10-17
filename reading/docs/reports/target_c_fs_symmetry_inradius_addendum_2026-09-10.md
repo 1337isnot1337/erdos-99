@@ -22,35 +22,35 @@ This addendum makes one scope point in the preceding SC report explicit and extr
 
 In the lexicographically normalized C-II source, C65 supplies a relative-interior normalized KKT stress whose positive support is the full actual support:
 
-$$
+```math
 C_+=C=C_*,\qquad H_+=H=H_*.
-$$
+```
 
 Choose this stress when applying FS.4. Its selected force hull is therefore
 
-$$
+```math
 F_s=\operatorname{conv}(B_s)=\operatorname{conv}(B_+)=:F,
-$$
+```
 
 where `F` is exactly the full actual force hull used in DB and DA. Hence FS.4 gives, for that same full hull and the common source circumcenter `o`,
 
-$$
+```math
 \boxed{
 d_H(F-o,-(F-o))\le2L_D,
 }
 \tag{SI.1}
-$$
+```
 
 with
 
-$$
+```math
 L_D=\sqrt{D\eta+\eta^2},
 \qquad
 \eta=3^{1/4}\sqrt D,
 \qquad
 L_D=o(D).
 \tag{SI.2}
-$$
+```
 
 Thus the preceding SC difference-body argument really does apply to the full actual diameter-direction polygon `P_H`; it is not mixing two different selected supports.
 
@@ -58,95 +58,95 @@ Thus the preceding SC difference-body argument really does apply to the full act
 
 Let
 
-$$
+```math
 a_D:=\arcsin\frac1{2D}.
-$$
+```
 
 Order the `h` projective diameter directions cyclically and write their gaps as
 
-$$
+```math
 g_1,\ldots,g_h,
 \qquad
 \sum_i g_i=\pi,
 \qquad
 g_i\ge2a_D.
 \tag{SI.3}
-$$
+```
 
 Put
 
-$$
+```math
 P_H:=D\operatorname{conv}\{\pm u_e:e\in H\}.
-$$
+```
 
 Let `g_max=max_i g_i`. Since the other `h-1` gaps are each at least `2a_D`,
 
-$$
+```math
 \boxed{
 g_{\max}\le\pi-2(h-1)a_D.}
 \tag{SI.4}
-$$
+```
 
 The vertices of `P_H/2` lie on the circle of radius `D/2`. For a centrally symmetric inscribed polygon with largest successive angular gap `g_max`, its centered inradius is
 
-$$
+```math
 r(P_H/2)=\frac D2\cos\frac{g_{\max}}2.
-$$
+```
 
 Indeed each side joining consecutive radius-`D/2` vertices is at distance `(D/2)cos(g/2)` from the origin, and the largest gap gives the nearest side. Hence SI.4 gives
 
-$$
+```math
 \boxed{
 B\!\left(0,\frac D2\sin((h-1)a_D)\right)
 \subseteq\frac12P_H.
 }
 \tag{SI.5}
-$$
+```
 
 ## 3. FS transports that disk into the actual force hull
 
 The difference-body inclusion and FS half-turn estimate give
 
-$$
+```math
 P_H\subseteq F-F
 \subseteq2(F-o)+2L_DB.
-$$
+```
 
 Dividing by two,
 
-$$
+```math
 \boxed{
 \frac12P_H\subseteq(F-o)+L_DB.
 }
 \tag{SI.6}
-$$
+```
 
 For any unit vector `u`, support functions therefore satisfy
 
-$$
+```math
 h_{P_H/2}(u)\le h_{F-o}(u)+L_D.
-$$
+```
 
 By SI.5,
 
-$$
+```math
 h_{P_H/2}(u)\ge\frac D2\sin((h-1)a_D)
-$$
+```
 
 for every `u`. Hence
 
-$$
+```math
 h_{F-o}(u)
 \ge
 \frac D2\sin((h-1)a_D)-L_D
 \qquad\text{for every unit }u.
-$$
+```
 
 The support-function characterization of convex containment now gives the finite theorem:
 
 ### Theorem SI — common-center force-hull inradius
 
-$$
+```math
 \boxed{
 B\!\left(
  o,
@@ -155,7 +155,7 @@ B\!\left(
 \subseteq F,
 }
 \tag{SI.7}
-$$
+```
 
 whenever the displayed radius is positive.
 
@@ -165,33 +165,33 @@ No symmetry of `F` is assumed; the only symmetry input is the quantitative FS.4 
 
 Along any unbounded post-ZF subsequence with
 
-$$
+```math
 \frac hD\to y,
-$$
+```
 
 we have
 
-$$
+```math
 (h-1)a_D\to\frac y2,
 \qquad
 \frac{L_D}{D}\to0.
-$$
+```
 
 Therefore SI.7 gives
 
-$$
+```math
 \boxed{
 \liminf\frac{r_o(F)}D
 \ge\frac12\sin\frac y2,
 }
 \tag{SI.8}
-$$
+```
 
 where `r_o(F)` is the radius of the largest disk centered at the common source circumcenter `o` and contained in `F`.
 
 DB gives `y>=2rho`, where `rho=cos rho=0.7390851332...`, while every projective diameter-direction family has `y<=pi`. Since `sin(y/2)` is increasing on `[0,pi]`,
 
-$$
+```math
 \boxed{
 \liminf\frac{r_o(F)}D
 \ge
@@ -199,7 +199,7 @@ $$
 =0.3368060145916074\ldots .
 }
 \tag{SI.9}
-$$
+```
 
 Thus every post-ZF survivor force hull contains, about the same center that contains the entire source in radius `D/2+O(sqrt D)`, a concentric disk of radius at least `0.336806D-o(D)`.
 
@@ -207,14 +207,14 @@ Thus every post-ZF survivor force hull contains, about the same center that cont
 
 ER leaves the contact-isolated source population outside `F` as the force-bulk obstruction. SI shows that this population cannot occupy an arbitrary region inside the source circumdisk: every external point lies in the completion region
 
-$$
+```math
 K\setminus F
 \subseteq
 B\!\left(o,\frac D2+\eta\right)
 \setminus
 B\!\left(o,\frac D2\sin((h-1)a_D)-L_D\right).
 \tag{SI.10}
-$$
+```
 
 The annular area bound obtained by discarding the actual shape of `F` is still too weak to close the Oler population inequality. The new information is therefore a geometric localization theorem, not a completed external-population bound.
 

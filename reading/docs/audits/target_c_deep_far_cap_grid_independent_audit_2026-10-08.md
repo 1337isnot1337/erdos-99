@@ -26,16 +26,16 @@ Work along a canonical contact-minimal, then actual-diameter-pair-minimal triang
 
 Set `h = A_G/(8 pi D)`, `s = A_G/(4D)`, and retain the rhombi whose entire faces have distance greater than `h` from `partial C` and lie strictly below height `H-s`. For all sufficiently large `D`, the retained complex contains an `epsilon`-coherent subgrain of area `Omega_{alpha,epsilon,C_epsilon}(D^2)`, and hence a complete train grid with both shores `Omega_{alpha,epsilon,C_epsilon}(D)`, entirely inside
 
-$$
+```math
 W=C_{-h}\cap\{\eta\le H-s\},
-$$
+```
 where `C_{-h} = {x in C: dist(x, partial C) >= h}`. Every grid vertex is farther than `h` from every loaded endpoint and farther than `s` from `a_*`.
 
 Writing `X` for the grid-vertex set and `a,b >= gamma D` for its two shore sizes, its `ab` crossing rhombi yield at least
 
-$$
+```math
 p\ge\lceil F(ab)\rceil=\Omega_{\alpha,\epsilon,C_\epsilon}(D)
-$$
+```
 pairwise vertex-disjoint actual contact paths in the induced contact graph on `I union A`, stopped at their first loaded endpoint, from distinct grid vertices to distinct actual loaded attachments. Each path has more than `h` edges from its last vertex in `X` to its loaded endpoint. Consequently these paths contain `Omega_{alpha,epsilon,C_epsilon}(D^2)` distinct internal vertices in `I setminus X`, counted across all paths. Here `F(R) = (sqrt(25 + 4 C_0 R) - 5)/(2 C_0)` with `C_0 = 8 pi/sqrt(3)`, as in canonical `C-RHOMBUS-BULK-LOADED-RETURN-BOUND`.
 
 This is a conditional structural theorem. It does not assert that canonical sources supply `C`, `G`, and `a_*`, and it produces no finite source motion, strict-`D` competitor, or C-II closure.
@@ -44,36 +44,36 @@ This is a conditional structural theorem. It does not assert that canonical sour
 
 Let `a_0 = sqrt(3)/2`, the minimum area of a strict unit rhombus. The cap perimeter obeys `per(C) <= pi D`. A rhombus omitted because it meets the boundary strip lies wholly within distance `h+2` of `partial C`, since its diameter is less than two. The inner boundary strip of a convex body of width `t` has area at most `t per(C)`, so these omissions have area at most
 
-$$
+```math
 \pi D(h+2)=A_G/8+2\pi D.
-$$
+```
 
 Also `G subset conv(A)` and `H = max_A eta` imply `eta <= H` on every grain face. If a face fails the strict height cutoff, its whole face lies in the slab `H-s-2 <= eta <= H`. Every parallel slice of `C` has length at most `D`, so this slab has area at most
 
-$$
+```math
 D(s+2)=A_G/4+2D.
-$$
+```
 
 The two discarded unions therefore have area at most `3A_G/8 + (2pi+2)D <= A_G/2` once `A_G >= 16(pi+1)D`, which follows eventually from `A_G >= alpha D^2`. The retained rhombi have total area at least `A_G/2`.
 
 The set `W` is convex and has diameter at most `D`. Every discarded grain rhombus that can create a new boundary edge of the retained subcomplex meets `partial W`; because its diameter is less than two, it lies in the two-neighborhood of `partial W`. For a convex `W`, the two-sided width-two boundary tube has area at most `4 per(W) + 4pi <= 4pi(D+1)`. Disjoint rhombus interiors and their area lower bound `a_0` give at most `4pi(D+1)/a_0` such crossing rhombi. Each exposes at most four unit edges. Thus the sum `P_0` of the retained edge-connected component perimeters obeys
 
-$$
+```math
 P_0\le P(G)+\frac{16\pi(D+1)}{a_0}=O_{\epsilon,C_\epsilon}(D).
-$$
+```
 
 If the retained component areas are `A_j`, planar isoperimetry gives
 
-$$
+```math
 \sum_j\sqrt{A_j}\le\frac{P_0}{2\sqrt\pi},\qquad
 \sum_j A_j\ge A_G/2.
-$$
+```
 
 Using `sum_j A_j <= sqrt(max_j A_j) sum_j sqrt(A_j)`, some one component has area at least
 
-$$
+```math
 \max_jA_j\ge\frac{\pi A_G^2}{P_0^2}=\Omega_{\alpha,\epsilon,C_\epsilon}(D^2).
-$$
+```
 
 It remains a subcomplex of the original coherent grain, so its trains inherit the same phase labels and local geometry. Each strict unit rhombus has area at most one, so the component also has `Omega(D^2)` rhombi. Its perimeter is `O(D)`; canonical `C-PSEUDO-GRID` (the Section-73 extraction used in Section 78.3) yields two linear-size distinct-phase shores and the complete grid within this component and hence within `W`. No train is joined across a deleted rhombus.
 

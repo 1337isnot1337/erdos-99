@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_two_body_four_bar_circuit_2026-09-09.md) · source SHA-256 `c4213567530a9bb20a50936ebf584400cd5bd6298e5349eaeb5c4ddffa54d416`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-F042D5F19F3F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — every cyclic `d_H=2` transition-bar triple is independent
 
@@ -23,53 +25,53 @@ This forces a stronger general-position statement which IB does not record:
 
 Let the four `A|B` transition contacts be
 
-$$
+```math
 c_0,c_1,c_2,c_3,
-$$
+```
 
 and let
 
-$$
+```math
 L_i\in\mathbb R^3
-$$
+```
 
 be their planar body-bar line/wrench rows after quotienting the two isostatic shores. Then for every `j`,
 
-$$
+```math
 \boxed{
 \operatorname{rank}\{L_i:i\ne j\}=3.
 }
 \tag{GT.1}
-$$
+```
 
 Equivalently all four complementary `3x3` determinants are nonzero:
 
-$$
+```math
 \boxed{
 \Delta_{ijk}:=\det(L_i,L_j,L_k)\ne0
 \quad\text{for all distinct }i,j,k.
 }
 \tag{GT.2}
-$$
+```
 
 Hence no three of the four transition-contact carrier lines are concurrent in the projective plane, including concurrency at infinity.
 
 Moreover the four determinant signs are fixed by the positive alternating KKT stress. With the shell transition order chosen so that the body stress is
 
-$$
+```math
 \alpha_0L_0-\alpha_1L_1+\alpha_2L_2-\alpha_3L_3=0,
 \qquad \alpha_i>0,
 \tag{GT.3}
-$$
+```
 
 Cramer's/cofactor identity gives
 
-$$
+```math
 (\alpha_0,-\alpha_1,\alpha_2,-\alpha_3)
 \propto
 (-\Delta_{123},\Delta_{023},-\Delta_{013},\Delta_{012}).
 \tag{GT.4}
-$$
+```
 
 Since every `alpha_i` is strictly positive and every determinant is nonzero, the four signed complementary minors alternate strictly. There is no zero-minor boundary case left in `d_H=2`.
 
@@ -79,25 +81,25 @@ Since every `alpha_i` is strictly positive and every determinant is nonzero, the
 
 In the `d_H=2` cyclic endpoint,
 
-$$
+```math
 |C_q|+|H|=q+(q-2)=2q-2.
-$$
+```
 
 The mixed rigidity rank is
 
-$$
+```math
 2q-3.
-$$
+```
 
 Thus the complete row-dependence space is one-dimensional.
 
 The normalized KKT polytope has dimension zero, so its unique KKT stress is relative-interior and has
 
-$$
+```math
 \alpha_e>0\quad(e\in C_q),
 \qquad
 \beta_h>0\quad(h\in H).
-$$
+```
 
 Therefore the unique nonzero row dependence has full support.
 
@@ -119,39 +121,39 @@ Thus the complete actual mixed row set is a realized rigidity circuit directly f
 
 IB identifies internally isostatic row sets `G_A,G_B` on the two diameter-component shores and exactly four transition contacts. Their internal ranks sum to
 
-$$
+```math
 (2|A|-3)+(2|B|-3)=2q-6.
-$$
+```
 
 Fix any one transition contact `c_j` and consider
 
-$$
+```math
 G_A\cup G_B\cup
 \{c_i:i\ne j\}.
 \tag{2.1}
-$$
+```
 
 This is a proper subset of the complete mixed row set, with exactly
 
-$$
+```math
 (2q-6)+3=2q-3
-$$
+```
 
 rows. By Lemma GT.1 those rows are independent. Therefore their rank is exactly `2q-3`.
 
 Quotienting the two independent internal body row spaces leaves the three transition rows
 
-$$
+```math
 \{L_i:i\ne j\}
-$$
+```
 
 with rank three. Since `j` was arbitrary, GT.1 follows for all four triples. `square`
 
 This is stronger than the statement
 
-$$
+```math
 \operatorname{rank}[L_0,L_1,L_2,L_3]=3,
-$$
+```
 
 which alone permits one or more dependent triples.
 
@@ -161,28 +163,28 @@ which alone permits one or more dependent triples.
 
 For one transition contact from `a in A` to `b in B`, put
 
-$$
+```math
 d=b-a.
-$$
+```
 
 Fix shore `A`. A relative rigid motion of `B` is
 
-$$
+```math
 u(x)=t+\omega Jx.
-$$
+```
 
 The first bar-length equation is, up to a nonzero scalar,
 
-$$
+```math
 d\cdot t+\omega d\cdot Jb=0.
-$$
+```
 
 Thus the body-bar row is
 
-$$
+```math
 L(a,b)=(d_x,d_y,d\cdot Jb),
 \tag{3.1}
-$$
+```
 
 which is an invertible coordinate representation of the carrier line in the projective dual plane.
 
@@ -190,12 +192,12 @@ Three such row vectors are dependent exactly when the three carrier lines meet a
 
 GT.2 therefore implies:
 
-$$
+```math
 \boxed{
 \text{no three transition-contact side lines are concurrent or mutually parallel.}
 }
 \tag{3.2}
-$$
+```
 
 This removes every rank-two triple degeneration from the `d_H=2` body-bar endpoint.
 
@@ -205,19 +207,19 @@ This removes every rank-two triple degeneration from the `d_H=2` body-bar endpoi
 
 Four vectors in `R^3` of rank three have the canonical cofactor dependence
 
-$$
+```math
 -\Delta_{123}L_0
 +\Delta_{023}L_1
 -\Delta_{013}L_2
 +\Delta_{012}L_3=0.
 \tag{4.1}
-$$
+```
 
 The body-level KKT relation, after orienting successive shell transitions consistently across `A|B`, is
 
-$$
+```math
 \alpha_0L_0-\alpha_1L_1+\alpha_2L_2-\alpha_3L_3=0
-$$
+```
 
 with every `alpha_i>0`.
 
@@ -225,12 +227,13 @@ Both span the same one-dimensional dependence space. Hence GT.4 holds.
 
 Because no complementary minor vanishes, the sign information is strict. After one common sign choice,
 
-\[
+```math
 \boxed{
 \Delta_{123},\Delta_{023},\Delta_{013},\Delta_{012}
 \text{ have the alternating signs required by (GT.4).}
 }
 \tag{4.2}
+```
 
 Thus positivity of the KKT stress is equivalent, at body scale, to a strict oriented-matroid sign condition on the four transition side lines.
 

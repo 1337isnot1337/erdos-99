@@ -28,44 +28,48 @@ The strongest genuinely new theorem stack is the following.
 
 For every post-ZF survivor define
 
-$$
+```math
 \boxed{
 \mu_D:=\frac{e_{BB}+2s_C-3(d_H+s_Z)}D.
 }
 \tag{0.1}
-$$
+```
 
 Then:
 
 1. **all-phase coefficient-three renormalization:**
-   $$
+   ```math
    \boxed{
    \liminf_{D\to\infty}\mu_D>0.5947;
    }
    \tag{0.2}
-   $$
+   
+   ```
 2. **exact force-bulk population conversion:** if along a subsequence
    `mu_D->mu` and `s_B/D->sigma_B`, then
-   $$
+   ```math
    \boxed{
    \limsup\frac vn
    \le\frac4{\pi^2}(\mu-\sigma_B)^2;
    }
    \tag{0.3}
-   $$
+   
+   ```
 3. **exact outer-shell phase threshold:** put
-   $$
+   ```math
    \boxed{
    u_\pi=
    \frac{\pi(\sqrt{3\pi^2+4}-1)}{2(\pi^2+1)}
    =0.6932725422\ldots .
    }
    \tag{0.4}
-   $$
+   
+   ```
    For every fixed `u<u_pi`, every sequence with `mu_D<=u+o(1)` has more than
-   $$
+   ```math
    1-\frac{4u^2}{\pi^2}-o(1)
-   $$
+   
+   ```
    of the whole source in C65 fully inactive rattlers, while the source hull gains
    linear perimeter/support beyond the positive force hull.
 
@@ -95,25 +99,25 @@ contacts and then diameter pairs, retaining all contact-isolated source points.
 
 The first requested whole-source endpoint was
 
-$$
+```math
 \delta_K+\mathscr O_A\ge c_0P_K.
 \tag{1.1}
-$$
+```
 
 A useful algebraic observation made at the start of the run is that (1.1) is exactly
 
-$$
+```math
 D^2\ge\frac{2\sqrt3}{\pi}(n-1).
 \tag{1.2}
-$$
+```
 
 Indeed
 
-$$
+```math
 \delta_K+\mathscr O_A-c_0P_K
 =
 \frac{\pi D^2}{4}-a_0(n-1),
-$$
+```
 
 because the source-hull area cancels.  The canonical strict translated-lattice
 comparison gives the strict reverse inequality.  Consequently any proof of (1.1) must
@@ -122,9 +126,9 @@ area alone cannot reach it.
 
 The alternate post-ZF exact endpoint was
 
-$$
+```math
 b+Q>2h,
-$$
+```
 
 while ZF gives the opposite stress-rank requirement.  The run therefore attacked the
 exact post-ZF defect ledgers rather than trying to derive (1.1) from near-radiality.
@@ -154,33 +158,33 @@ normalization, and use the canonical quantities `e_BB,s_C,d_H,s_Z,D`.  Define `m
 by (0.1).  Then there are absolute constants `epsilon_G>0` and `D_0<infinity` such
 that every such source with `D>=D_0` satisfies
 
-$$
+```math
 \boxed{
 \mu_D\ge0.5947+\epsilon_G.
 }
 \tag{GR.1}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
  e_{BB}+2s_C
  \ge
  (0.5947+\epsilon_G)D+3(d_H+s_Z).
 }
 \tag{GR.2}
-$$
+```
 
 Using the exact ZK identity, this is also
 
-$$
+```math
 \boxed{
 \sum_r(\delta_r+r_r)+s_B
 \ge(0.5947+\epsilon_G)D+6.
 }
 \tag{GR.3}
-$$
+```
 
 The theorem has **no `s_Z=0` hypothesis**.
 
@@ -196,94 +200,94 @@ currency are finite and exact.
 
 Write
 
-$$
+```math
 k:=d_H+s_Z,
 \qquad
 M_G:=e_{BB}+2s_C-3k=D\mu_D.
-$$
+```
 
 The exact ZK component-slack identity is
 
-$$
+```math
 \sum_r\delta_r+R_I+s_B+3k
 =6+e_{BB}+2s_C.
 \tag{2.1}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 M_G+6
 =\sum_r(\delta_r+r_r)+s_B\ge0.
 }
 \tag{2.2}
-$$
+```
 
 In particular every subsequential limit of `mu_D` is nonnegative.
 
 Let `P_F=per(F)`.  The exact JC outer-pocket identity is
 
-$$
+```math
 E_{out}=x_B+P_F-q-a,
 \tag{2.3}
-$$
+```
 
 while PC gives
 
-$$
+```math
 q=x_B+Q+2k.
 \tag{2.4}
-$$
+```
 
 Subtracting gives
 
-$$
+```math
 E_{out}+Q=P_F-a-2k.
 \tag{2.5}
-$$
+```
 
 PC also gives
 
-$$
+```math
 e_{BB}=q-a+c_B,
 \qquad q=h+d_H.
 \tag{2.6}
-$$
+```
 
 Substitution into (2.5) yields the new exact all-phase identity
 
-$$
+```math
 \boxed{
 E_{out}+Q
 =e_{BB}-c_B+P_F-h-3d_H-2s_Z.
 }
 \tag{2.7}
-$$
+```
 
 The post-ZF face identity is
 
-$$
+```math
 b+Q=2h-2s_Z.
 \tag{2.8}
-$$
+```
 
 Set
 
-$$
+```math
 r_{out}:=b-P_F\ge0.
-$$
+```
 
 Then
 
-$$
+```math
 h=\frac{P_F+r_{out}+Q}{2}+s_Z.
 \tag{2.9}
-$$
+```
 
 Insert (2.9) into (2.7) and group the renormalized numerator.  One obtains
 
-$$
+```math
 \boxed{
 E_{out}+Q
 =M_G+\frac{P_F}{2}
@@ -292,16 +296,16 @@ E_{out}+Q
 \right).
 }
 \tag{2.10}
-$$
+```
 
 Every term in parentheses is nonnegative.  Consequently
 
-$$
+```math
 \boxed{
 E_{out}+Q\le M_G+\frac{P_F}{2}.
 }
 \tag{2.11}
-$$
+```
 
 This is the decisive extension beyond the old circuit-only renormalization.  The
 coefficient `3s_Z` is not inserted by normalization: one copy of `s_Z` that appears to
@@ -312,93 +316,93 @@ be lost in (2.7) is recovered exactly from half of the `-2s_Z` outer-walk defect
 
 ZK/GU bounds the attachment-cell area by
 
-$$
+```math
 \sum_r\operatorname{area}(P_r)
 \le
 \frac\pi4(M_G+6)^2+\pi(M_G+6)+\pi^2D.
 \tag{2.12}
-$$
+```
 
 Hence on a convergent sequence with `mu_D->mu`,
 
-$$
+```math
 \limsup\frac{1}{D^2}
 \sum_r\operatorname{area}(P_r)
 \le\frac\pi4\mu^2.
 \tag{2.13}
-$$
+```
 
 JC gives
 
-$$
+```math
 H_{out}+A_{exc}
 \le\frac{(E_{out}+Q)^2}{4\pi}+o(D^2),
 \tag{2.14}
-$$
+```
 
 and ZG gives
 
-$$
+```math
 G:=\operatorname{area}F-\sum_r\operatorname{area}(P_r)
 \le H_{out}+A_{exc}+O(D).
 \tag{2.15}
-$$
+```
 
 Write
 
-$$
+```math
 y=\lim\frac hD,
 \qquad
 p=\lim\frac{P_F}{D}.
-$$
+```
 
 Using (2.11)--(2.15),
 
-$$
+```math
 \limsup\frac{\operatorname{area}F}{D^2}
 \le
 \frac\pi4\mu^2+
 \frac{(\mu+p/2)^2}{4\pi}.
 \tag{2.16}
-$$
+```
 
 FSDB and the symmetric Rogalski--Saint Raymond inequality give independently
 
-$$
+```math
 \liminf\frac{\operatorname{area}F}{D^2}
 \ge
 A_*(y,p),
 \tag{2.17}
-$$
+```
 
 where
 
-$$
+```math
 \Phi(y)=\frac{y+\sin y}{4},
 \qquad
 \Psi(p)=\frac\pi{(\pi-2)^2}\left(\frac p2-1\right)^2,
 \qquad
 A_*:=\max\{\Phi,\Psi\}.
-$$
+```
 
 Therefore every post-ZF limit satisfies
 
-$$
+```math
 \boxed{
 A_*(y,p)-\frac\pi4\mu^2
 \le
 \frac{(\mu+p/2)^2}{4\pi}.
 }
 \tag{2.18}
-$$
+```
 
 The geometric domain includes
 
-$$
+```math
 2\rho\le y\le p\le\pi,
 \qquad p\le2y,
 \tag{2.19}
-$$
+```
 
 with `rho=cos rho`.  The last inequality is exact from
 `P_F<=b=2h-Q-2s_Z`.
@@ -407,47 +411,47 @@ with `rho=cos rho`.  The last inequality is exact from
 
 For `A>0,m>=0`, let `R(A,m)` be the least nonnegative `u` satisfying
 
-$$
+```math
 A\le\frac\pi4u^2+rac{(u+m)^2}{4\pi}.
-$$
+```
 
 The RSJ calculus gives
 
-$$
+```math
 \partial_A R>0,
 \qquad
 \partial_mR<0.
 \tag{2.20}
-$$
+```
 
 Let `y_R` be the unique solution of
 
-$$
+```math
 \Phi(y_R)=\Psi(2y_R),
 \qquad
 \frac32<y_R<\frac\pi2,
-$$
+```
 
 and set
 
-$$
+```math
 \lambda_R:=R(\Phi(y_R),y_R)
 =0.592140543606288\ldots .
-$$
+```
 
 For `2rho<=y<=y_R`, the minimizing perimeter in (2.18) is `p=2y`, and the threshold
 is `R(Phi(y),y)`, strictly decreasing in `y`.  For `y>=y_R`, the minimizing perimeter
 is the crossover
 
-$$
+```math
 p_e(y)=2+2\sqrt{\Phi(y)/c_R},
 \qquad c_R=\frac\pi{(\pi-2)^2},
-$$
+```
 
 and differentiating the root equation shows the threshold is strictly increasing in
 `y`.  Thus the relaxed problem has the unique minimum
 
-$$
+```math
 \boxed{
 \mu\ge\lambda_R,
 \qquad
@@ -455,77 +459,77 @@ $$
 \text{ at equality.}
 }
 \tag{2.21}
-$$
+```
 
 Equality cannot occur for an actual survivor sequence.  Suppose
 `mu_D->lambda_R`.  The strict minimization forces
 
-$$
+```math
 y_D\to y_R,
 \qquad
 P_F/D\to2y_R.
 \tag{2.22}
-$$
+```
 
 Return to the exact remainder in (2.10):
 
-$$
+```math
 R_D:=2s_C+c_B+\frac Q2+\frac{b-P_F}{2}\ge0.
-$$
+```
 
 If `R_D/D` had a positive subsequential limit, the effective cavity variable in
 (2.18) would be strictly smaller than `p/2=y_R`; by `partial_mR<0`, the required
 surplus would then be strictly larger than `lambda_R`, contradicting the assumed
 limit.  Hence
 
-$$
+```math
 R_D=o(D),
-$$
+```
 
 and termwise
 
-$$
+```math
 s_C,c_B,Q,b-P_F=o(D).
 \tag{2.23}
-$$
+```
 
 DD gives
 
-$$
+```math
 H_{out}
 \le\frac1{\sqrt6}(x_B+a)^{3/2}\sqrt{b-P_F}.
 \tag{2.24}
-$$
+```
 
 The exact PC identities give `x_B+a=O(D)`, so (2.23) implies
 
-$$
+```math
 H_{out}=o(D^2).
-$$
+```
 
 The exceptional-face isoperimetric estimate similarly gives
 
-$$
+```math
 A_{exc}=o(D^2).
-$$
+```
 
 ZG therefore forces
 
-$$
+```math
 G=o(D^2).
 \tag{2.25}
-$$
+```
 
 But FSDB and the attachment estimate give
 
-$$
+```math
 \liminf\frac GD^2
 \ge
 \Phi(y_R)-\frac\pi4\lambda_R^2
 =
 \frac{(\lambda_R+y_R)^2}{4\pi}>0,
 \tag{2.26}
-$$
+```
 
 where the equality is the defining root equation.  This contradicts (2.25).  Hence
 the endpoint is excluded without any classification of equality in the RSR theorem.
@@ -541,56 +545,56 @@ makes a portion of that gap explicit.
 
 It first proves that any hypothetical limit with
 
-$$
+```math
 \mu\le u_0:=5947/10000
-$$
+```
 
 must have
 
-$$
+```math
 1.478<y<1.5245.
-$$
+```
 
 It partitions this interval into 465 rational cells of width `10^-4`.  On each cell it
 uses the generalized RSJ inequality to give a rational upper barrier
 
-$$
+```math
 \delta:=2y-p<d_j
-$$
+```
 
 and then compares:
 
-$$
+```math
 \text{FSDB/ZK force-gap lower bound}
 \quad
 \Phi(y)-\frac\pi4u_0^2
-$$
+```
 
 against
 
-$$
+```math
 \text{DD + exceptional-face upper bound}
 \quad
 \frac1{\sqrt6}(2y)^{3/2}\sqrt\delta
 +\frac{\delta^2}{4\pi}.
-$$
+```
 
 All transcendental quantities are enclosed by rational barriers.  Every cell has
 strictly positive margin.  The smallest localization margin is
 
-$$
+```math
 \boxed{
 \frac{127118647}{76966750000000000}>0,
 }
-$$
+```
 
 and the smallest final cavity-capacity margin is
 
-$$
+```math
 \boxed{
 \frac{1466294867848439}{307867000000000000}>0.
 }
-$$
+```
 
 The script uses `fractions.Fraction` and integer square roots only.  It was rerun
 independently during this completion audit and all 465 assertions passed.  Therefore no
@@ -610,15 +614,15 @@ classification is used.
 The previous promoted/recent frontier had the coefficient-three renormalization only
 in the `s_Z=0` Laman-circuit phase:
 
-$$
+```math
 (e_{BB}+2s_C-3d_H)/D.
-$$
+```
 
 GR proves that the same coefficient applies to the full mixed defect
 
-$$
+```math
 d_H+s_Z
-$$
+```
 
 for every post-ZF survivor.  This removes the `s_Z>0` branch separation from this
 quantitative obstruction.
@@ -631,64 +635,64 @@ quantitative obstruction.
 
 Let
 
-$$
+```math
 a_r:=\delta_r+r_r,
 \qquad
 A:=\sum_ra_r.
-$$
+```
 
 For every nonsingleton unloaded component `I_r` with `n_r` vertices,
 
-$$
+```math
 \boxed{
  n_r\le2a_r+
  \frac{2}{\pi\sqrt3}a_r^2.
 }
 \tag{EA.1}
-$$
+```
 
 If `c_1` is the number of singleton unloaded components, then
 
-$$
+```math
 \boxed{
  v\le q+c_1+2A+
  \frac{2}{\pi\sqrt3}A^2.
 }
 \tag{EA.2}
-$$
+```
 
 Since GR/ZK gives
 
-$$
+```math
 A+s_B=\mu_DD+6,
 \tag{3.1}
-$$
+```
 
 any convergent bounded-`mu` subsequence with `s_B/D->sigma_B` satisfies
 
-$$
+```math
 \boxed{
 \limsup\frac v{D^2}
 \le\frac{2}{\pi\sqrt3}(\mu-\sigma_B)^2.
 }
 \tag{EA.3}
-$$
+```
 
 For global minimizers
 
-$$
+```math
 \frac n{D^2}\to\frac\pi{2\sqrt3},
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \limsup\frac vn
 \le\frac4{\pi^2}(\mu-\sigma_B)^2.
 }
 \tag{EA.4}
-$$
+```
 
 ### Proof
 
@@ -696,43 +700,43 @@ For a connected nonsingleton unloaded component, let `k_r` be its outer-face inc
 count with multiplicity and let `Q_r` be the sum of `deg(f)-4` over its bounded faces.
 Euler and face-degree double counting give
 
-$$
+```math
 e_r=2n_r-2-\frac{k_r+Q_r}{2}.
 \tag{3.2}
-$$
+```
 
 By definition of the canonical Eppstein slack,
 
-$$
+```math
 e_r=2n_r-\delta_r-2-r_r
 =2n_r-a_r-2.
 \tag{3.3}
-$$
+```
 
 Comparing (3.2) and (3.3) yields the new exact face identity
 
-$$
+```math
 \boxed{
 a_r=\frac{k_r+Q_r}{2}.
 }
 \tag{3.4}
-$$
+```
 
 In particular `k_r<=2a_r`.
 
 Eppstein's Lemmas 3--4 give the finite outer-face isoperimetric estimate
 
-$$
+```math
 n_r\le k_r+rac{k_r^2}{2\pi\sqrt3}.
 \tag{3.5}
-$$
+```
 
 This statement uses outer-face incidences with multiplicity and therefore allows
 bridges.  Substituting `k_r<=2a_r` into (3.5) proves EA.1.
 
 Sum over nonsingleton components and add the singleton components separately:
 
-$$
+```math
 \begin{aligned}
 v
 &=q+\sum_rn_r\\
@@ -741,7 +745,7 @@ v
 &\le q+c_1+2A+
 \frac{2}{\pi\sqrt3}A^2.
 \end{aligned}
-$$
+```
 
 This proves EA.2.  C36 gives `c_1<=c_I=O(D)`, while loaded vertices are
 unit-separated on the convex force hull, so `q<=P_F<=pi D`.  Equation (3.1) then gives
@@ -755,12 +759,12 @@ The detailed finite derivation is in
 
 At `mu<=0.60+o(1)`, even after discarding the favorable `s_B` term,
 
-$$
+```math
 \frac{|R|}{n}
 \ge1-\frac{4(0.60)^2}{\pi^2}-o(1)
 >0.85409-o(1).
 \tag{3.6}
-$$
+```
 
 Thus more than 85% of the actual global source is fully inactive in any such window.
 This is a source-population conclusion, not merely a statement about the positive
@@ -772,9 +776,9 @@ EA.1--EA.3 are contact-graph/packing consequences once the post-ZF state is reac
 The decisive additional use of **global minimum-diameter optimality** is the conversion
 from EA.3 to EA.4 through
 
-$$
+```math
 n/D(n)^2\to\pi/(2\sqrt3).
-$$
+```
 
 An odd shell with an arbitrarily dense isolated filling but no certificate that
 `D=D(n)` cannot invoke this source-density conclusion.
@@ -791,52 +795,52 @@ rediscovery/independent verification, not counted as the strongest new theorem.
 
 For every global minimizer source hull `K`,
 
-$$
+```math
 \boxed{
 P_K>
 \pi\left(\sqrt{D^2+\frac34}-\frac{\sqrt3}{2}\right).
 }
 \tag{4.1}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 0\le\pi D-P_K<\frac{\pi\sqrt3}{2}.
 }
 \tag{4.2}
-$$
+```
 
 ### Proof
 
 Strict translated triangular-lattice comparison gives
 
-$$
+```math
 \frac{\sqrt3}{2}(n-1)>\frac{\pi D^2}{4}.
 \tag{4.3}
-$$
+```
 
 Oler gives
 
-$$
+```math
 \operatorname{area}K+rac{\sqrt3}{4}P_K
 \ge\frac{\sqrt3}{2}(n-1).
 \tag{4.4}
-$$
+```
 
 Isoperimetry gives
 
-$$
+```math
 \operatorname{area}K\le\frac{P_K^2}{4\pi}.
 \tag{4.5}
-$$
+```
 
 Combining (4.3)--(4.5),
 
-$$
+```math
 P_K^2+\pi\sqrt3P_K-\pi^2D^2>0.
-$$
+```
 
 Taking the positive root proves (4.1).  Cauchy's diameter-perimeter inequality
 `P_K<=pi D` and `sqrt(D^2+3/4)>D` prove (4.2).
@@ -845,89 +849,89 @@ Taking the positive root proves (4.1).  Cauchy's diameter-perimeter inequality
 
 Define `u_pi` by (0.4).  Fix `u<u_pi`.  Let `p_u in(2,pi)` be the unique root of
 
-$$
+```math
 \boxed{
 \Psi(p_u)=
 \frac\pi4u^2+
 \frac{(u+p_u/2)^2}{4\pi}.
 }
 \tag{4.6}
-$$
+```
 
 Then any post-ZF sequence satisfying `mu_D<=u+o(1)` has
 
-$$
+```math
 \boxed{
 \limsup\frac{P_F}{D}\le p_u<\pi.
 }
 \tag{4.7}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 P_K-P_F\ge(\pi-p_u)D-O(1),
 }
 \tag{4.8}
-$$
+```
 
 and some C65 fully inactive source point has one-sided support excess beyond `F` at
 least
 
-$$
+```math
 \boxed{
 \frac{\pi-p_u}{2\pi}D-O(1).
 }
 \tag{4.9}
-$$
+```
 
 Simultaneously EA gives
 
-$$
+```math
 \boxed{
 \liminf\frac{|R|}{n}
 \ge1-\frac{4u^2}{\pi^2}.
 }
 \tag{4.10}
-$$
+```
 
 ### Proof
 
 Discard the FSDB term `Phi(y)` from the generalized necessary inequality (2.18).  If
 `mu<=u`, then
 
-$$
+```math
 \Psi(p)
 \le
 \frac\pi4u^2+
 \frac{(u+p/2)^2}{4\pi}.
 \tag{4.11}
-$$
+```
 
 Define
 
-$$
+```math
 g_u(p)=
 \Psi(p)-
 \frac\pi4u^2-
 \frac{(u+p/2)^2}{4\pi}.
-$$
+```
 
 This is a quadratic in `p` with positive leading coefficient, and `g_u(2)<0`.
 At `p=pi`, using `Psi(pi)=pi/4`, the inequality `g_u(pi)>0` is equivalent to
 
-$$
+```math
 (\pi^2+1)u^2+\pi u-rac{3\pi^2}{4}<0.
 \tag{4.12}
-$$
+```
 
 The positive root of the left side is exactly
 
-$$
+```math
 u_\pi=
 \frac{\pi(\sqrt{3\pi^2+4}-1)}{2(\pi^2+1)}.
-$$
+```
 
 Therefore `g_u(2)<0<g_u(pi)` precisely for `0<=u<u_pi`.  Because the quadratic is
 convex, it has exactly one zero above `2`; call it `p_u`.  Equation (4.11) then forces
@@ -935,10 +939,10 @@ convex, it has exactly one zero above `2`; call it `p_u`.  Equation (4.11) then 
 
 Combine (4.7) with (4.2) to obtain (4.8).  Cauchy's width formula gives
 
-$$
+```math
 P_K-P_F=
 \int_0^\pi(w_K-w_F)\,d\theta.
-$$
+```
 
 The integrand is nonnegative because `F subseteq K`, so some direction has width gap
 at least `(pi-p_u)D/pi-O(1)`.  One of the two opposite support gaps is at least half,
@@ -959,23 +963,23 @@ The detailed phase proof is in
 
 The all-phase ZK identity and GR reduce the entire post-ZF defect currency to
 
-$$
+```math
 \boxed{
 \mu_DD+6
 =\sum_r(\delta_r+r_r)+s_B.
 }
 \tag{5.1}
-$$
+```
 
 Using the component face identity (3.4), this can also be written as
 
-$$
+```math
 \boxed{
 \mu_DD+6
 =\frac12\sum_r(k_r+Q_r)+s_B.
 }
 \tag{5.2}
-$$
+```
 
 Thus the high-surplus branch is pure unloaded-component outer-boundary/internal-face
 defect plus unused loaded contact-degree capacity.  The mixed stress surplus `s_Z` and
@@ -1001,22 +1005,22 @@ Even as `u` approaches `u_pi`, the guaranteed rattler fraction remains above 80%
 
 Any sequence not lying in any fixed PT-L window must satisfy
 
-$$
+```math
 \boxed{
 \liminf\mu_D\ge u_\pi.
 }
 \tag{5.3}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
 \sum_r(\delta_r+r_r)+s_B
 \ge u_\pi D+o(D).
 }
 \tag{5.4}
-$$
+```
 
 This is the precise current C-II dichotomy produced by the run.
 
@@ -1033,9 +1037,9 @@ silently dispose of the other.
 There exist fixed constants `u<u_pi` and `eta(u)>0` such that every sufficiently large
 post-ZF global source satisfying
 
-$$
+```math
 \mu_D\le u,
-$$
+```
 
 and therefore the conclusions of PT, admits an `n`-point unit-separated configuration
 of diameter strictly less than `D`.
@@ -1052,26 +1056,26 @@ with a dense strict filling; leading packing density alone is insufficient.
 
 Prove
 
-$$
+```math
 \boxed{
 \sum_r(\delta_r+r_r)+s_B
 <u_\pi D-o(D)
 }
 \tag{6.1}
-$$
+```
 
 for every sufficiently large post-ZF triangle-free global source, or prove any
 strictly stronger source-specific upper tradeoff that contradicts (5.4).
 
 By (5.2), an equivalent planar form is
 
-$$
+```math
 \boxed{
 \frac12\sum_r(k_r+Q_r)+s_B
 <u_\pi D-o(D).
 }
 \tag{6.2}
-$$
+```
 
 The strongest available inputs for PT-HU are Woodall's exact diameter-thrackle
 topology, C36--C40 attachment incidence/harmonic diameter control, mixed
@@ -1135,9 +1139,9 @@ source-dependent.
 
 The target
 
-$$
+```math
 \delta_K+\mathscr O_A\ge c_0P_K
-$$
+```
 
 cancels `area(K)` exactly and reduces to (1.2).  A theorem only about `F` or about
 near-circular area therefore has no direct sign leverage on the endpoint.
@@ -1148,9 +1152,9 @@ C37--C40 control attachment incidences and harmonic component graph diameter, bu
 giant unloaded component can attach to many/all loaded vertices while carrying large
 internal face defect `Q_r`.  The exact identity
 
-$$
+```math
 \delta_r+r_r=(k_r+Q_r)/2
-$$
+```
 
 shows why: attachment counts do not control `Q_r`.  Treating C40 as a bound on
 `delta_r+r_r` would be false.
@@ -1256,9 +1260,10 @@ bound on the internal component-face currency was derived from it.
 - arithmetic: exact rational/integer
 - cells: 470
 - proposition certified:
-  $$
+  ```math
   \nu=(e_{BB}+2s_C-3d_H)/D>0.5981+o(1)
-  $$
+  
+  ```
   in the circuit phase
 - weakest localization margin:
   `133924761/9620843750000000>0`
@@ -1332,16 +1337,16 @@ If the stack is promoted, update:
 
 The highest-value theorem is **PT-HU**, not a further scalar lower-bound iteration:
 
-$$
+```math
 \sum_r(\delta_r+r_r)+s_B<u_\pi D-o(D).
-$$
+```
 
 The most concrete remaining route is to use Woodall's exact diameter topology together
 with C36--C40 attachment structure to attack the internal face term `sum Q_r` in
 
-$$
+```math
 2(\mu_DD+6-s_B)=\sum_r(k_r+Q_r).
-$$
+```
 
 The route must add geometry not present in a giant near-rhombic penny-graph component;
 plain planarity, attachment incidence, harmonic diameter, and minimum degree have all

@@ -26,9 +26,9 @@ The candidate theorem uses only such a block. Deleting one path edge separates t
 dual tree into two components. Choosing the component toward one fixed path endpoint
 gives nested shores
 
-$$
+```math
 S_1\supseteq S_2\supseteq\cdots\supseteq S_m.
-$$
+```
 
 No statement about off-path branches is needed: every branch is carried with the path
 vertex to which it is attached.
@@ -64,23 +64,23 @@ the selected train directions to be equal or approximately equal.
 For cut `i`, orient its train contacts from `T_i` to `S_i` with unit vector `u_i` and
 put
 
-$$
+```math
 \Delta_i=R_{\theta_i}u_i-u_i.
-$$
+```
 
 Move a source vertex by the sum of `Delta_i` over all selected shores containing it.
 For a contact on `tau_j`, all `i!=j` contributions cancel between its endpoints, while
 the `j`th contribution changes the contact vector from
 
-$$
+```math
 u_j
-$$
+```
 
 to
 
-$$
+```math
 u_j+\Delta_j=R_{\theta_j}u_j.
-$$
+```
 
 Its length is therefore exactly one. A nonselected contact receives equal endpoint
 translations and is unchanged.
@@ -115,28 +115,28 @@ The theorem needs no uniform radius.
 
 Define
 
-$$
+```math
 \ell(v)=\#\{i:v\in S_i\}.
-$$
+```
 
 Nestedness implies that the shore membership vector of every source vertex is a prefix:
 
-$$
+```math
 v\in S_i\iff i\le\ell(v).
-$$
+```
 
 Thus if `ell(x)=a<ell(y)=b`, the cuts separating `x,y` are exactly
 
-$$
+```math
 a+1,a+2,\ldots,b.
-$$
+```
 
 Subtracting the explicit placements gives
 
-$$
+```math
 p_y(\theta)-p_x(\theta)
 =p_y-p_x+\sum_{i=a+1}^b\Delta_i.
-$$
+```
 
 Hence every pair row has consecutive support. This includes actual diameter pairs,
 and it is stronger than merely saying each diameter edge crosses a connected subset of
@@ -150,52 +150,52 @@ the dual path: it gives the exact finite displacement formula on that interval.
 
 For one interval row
 
-$$
+```math
 r(\theta)=r+\sum_i(R_{\theta_i}u_i-u_i),
-$$
+```
 
 at the origin
 
-$$
+```math
 \partial_i r=Ju_i,
 \qquad
 \partial_{ii}r=-u_i,
 \qquad
 \partial_{ij}r=0\quad(i\ne j).
-$$
+```
 
 For `L=|r|^2`, this gives
 
-$$
+```math
 \partial_iL=2r\cdot Ju_i,
-$$
+```
 
-$$
+```math
 \partial_{ii}L=2-2r\cdot u_i,
-$$
+```
 
-$$
+```math
 \partial_{ij}L=2u_i\cdot u_j.
-$$
+```
 
 Along `theta_i=t c_i`, Taylor expansion yields
 
-$$
+```math
 r(t)=r+tA-{t^2\over2}B+O(t^3),
-$$
+```
 
-$$
+```math
 |r(t)|^2
 =|r|^2+2t r\cdot A+t^2(|A|^2-r\cdot B)+O(t^3),
-$$
+```
 
 with
 
-$$
+```math
 A=\sum c_iJu_i,
 \qquad
 B=\sum c_i^2u_i.
-$$
+```
 
 These formulas are exact consequences of the rotation expansion. The companion
 randomized regression script checks the same identities numerically but is not used as

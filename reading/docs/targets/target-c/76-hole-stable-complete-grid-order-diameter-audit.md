@@ -29,42 +29,42 @@ identities; proof-only Section 74 is a compatible precursor but is **not** a dep
 
 Put
 
-$$
+```math
 L={\pi\over3}.
-$$
+```
 
 Fix one Section-69 physical grain and let `A,B` be the internally noncrossing,
 distinct-phase, all-crossing train families supplied by canonical Section 73.  Write
 
-$$
+```math
 a=|A|,\qquad b=|B|.
-$$
+```
 
 Every train in the grain has a reduced real phase potential `x_v` in one common
 half-open bin of width `epsilon`, where
 
-$$
+```math
 0<\epsilon<L/2,
 \tag{76.1}
-$$
+```
 
 and a phase label `ell_v in Z/3`.  Thus a real argument of its projective unit-edge
 direction can be written
 
-$$
+```math
 \phi_v\equiv x_v+L\ell_v\pmod\pi.
 \tag{76.2}
-$$
+```
 
 Canonical (68.16) says that every retained crossing has one orientation `u->v` for
 which
 
-$$
+```math
 \ell_v-\ell_u\equiv1\pmod3,
 \qquad
 x_v-x_u=\delta_{uv}>0,
 \tag{76.3}
-$$
+```
 
 where `delta_uv` is the acute-angle excess of that rhombus above `pi/3`.
 
@@ -74,51 +74,51 @@ The phase labels are constant on the two shores and are distinct.  Hence one of 
 two label differences is `+1 mod 3` and the other is `-1 mod 3`.  Interchange the
 names `A,B` if necessary so that
 
-$$
+```math
 \ell_B-\ell_A\equiv1\pmod3.
 \tag{76.4}
-$$
+```
 
 Then (76.3) forces **every** retained `A x B` crossing to be oriented from `A` to `B`.
 Consequently
 
-$$
+```math
 \boxed{
 \delta_{ab}=x_b-x_a>0
 \qquad(a\in A,\ b\in B).
 }
 \tag{76.5}
-$$
+```
 
 In particular
 
-$$
+```math
 \boxed{
 \max_{a\in A}x_a<\min_{b\in B}x_b.
 }
 \tag{76.6}
-$$
+```
 
 Choose integer representatives of the two labels with `ell_B=ell_A+1`, including
 adding `pi=3L` to the `B` lift if the labels wrap around modulo three.  Define real
 edge-direction arguments
 
-$$
+```math
 \alpha_a=x_a+L\ell_A,
 \qquad
 \beta_b=x_b+L\ell_B.
 \tag{76.7}
-$$
+```
 
 Because all potentials lie in one bin of width `epsilon`, (76.5) gives, for every
 pair,
 
-$$
+```math
 \boxed{
 L<\beta_b-\alpha_a=L+(x_b-x_a)<L+\epsilon<3L/2<2L.
 }
 \tag{76.8}
-$$
+```
 
 Let `u_a` and `v_b` be the oriented unit edge vectors with arguments `alpha_a` and
 `beta_b` respectively.  Then `det(u_a,v_b)>0` for every pair.
@@ -127,17 +127,17 @@ Let `u_a` and `v_b` be the oriented unit edge vectors with arguments `alpha_a` a
 
 Canonical Theorem 10.6 orients a train with unit edge direction `u` so that
 
-$$
+```math
 h_u(p)=\det(u,p)
-$$
+```
 
 strictly increases along its centerline.  Every elementary centerline displacement
 then has an argument in the strict cone
 
-$$
+```math
 (\arg u+L,\arg u+2L).
 \tag{76.9}
-$$
+```
 
 Indeed, in the crossed strict unit rhombus the other side direction has projective
 separation strictly larger than `L`; choosing its sign by the positive determinant
@@ -147,44 +147,44 @@ Orient every `A` train in this canonical direction.  Orient every `B` train in t
 **reverse** of its canonical direction.  Therefore the elementary displacements lie
 in
 
-$$
+```math
 (\alpha_a+L,\alpha_a+2L)
 \quad(a\in A),
 \tag{76.10}
-$$
+```
 
 and
 
-$$
+```math
 (\beta_b-2L,\beta_b-L)
 \quad(b\in B).
 \tag{76.11}
-$$
+```
 
 Put
 
-$$
+```math
 \alpha_+=\max_{a\in A}\alpha_a,
 \qquad
 \beta_-=\min_{b\in B}\beta_b,
 \qquad
 \psi={\alpha_++\beta_-\over2},
 \tag{76.12}
-$$
+```
 
 and let `e` be the unit vector with argument `psi`.  Equation (76.8) is exactly the
 strict angular hypothesis needed for the standard projection cone estimate.  In
 particular, for every `a,b`,
 
-$$
+```math
 \alpha_a+{L\over2}<\psi<\alpha_a+{5L\over2},
 \tag{76.13}
-$$
+```
 
-$$
+```math
 \beta_b-{5L\over2}<\psi<\beta_b-{L\over2}.
 \tag{76.14}
-$$
+```
 
 For example, the lower bound in (76.13) follows from
 `beta_- - alpha_+>L`; the remaining bounds follow from the pairwise upper bound
@@ -194,17 +194,17 @@ oriented train has **strictly positive** projection onto `e`.
 
 Hence the common scalar coordinate
 
-$$
+```math
 X(p):=e\cdot p
 \tag{76.15}
-$$
+```
 
 strictly increases along every selected oriented train centerline.  Each selected
 centerline is therefore the graph of a continuous piecewise-linear function
 
-$$
+```math
 Y=f(X)
-$$
+```
 
 over one interval, where `Y=(Je)\cdot p`.
 
@@ -219,21 +219,21 @@ displacement is `u_a`.
 
 Thus, at every cross-shore crossing,
 
-$$
+```math
 \det(v_b,u_a)<0.
 \tag{76.16}
-$$
+```
 
 Both vectors have positive `X` component.  In `(X,Y)` coordinates, (76.16) says that
 the slope of the `A` centerline is larger than the slope of the `B` centerline.
 Therefore, as `X` increases through their unique crossing,
 
-$$
+```math
 \boxed{
 A\text{ passes from below }B\text{ to above }B.
 }
 \tag{76.17}
-$$
+```
 
 The sign is the same for every pair in the complete product.
 
@@ -265,17 +265,17 @@ which crossing occurs first on every `A` arc.
 Suppose instead that their interiors overlap.  On the open overlap the two graphs are
 disjoint, so their vertical order is constant.  Relabel for this paragraph so that
 
-$$
+```math
 B_1(X)>B_2(X)
 \tag{76.18}
-$$
+```
 
 throughout the overlap.  Let one `A` arc cross `B_i` at `X=x_i`.  We claim
 
-$$
+```math
 x_2<x_1.
 \tag{76.19}
-$$
+```
 
 If instead `x_1<x_2`, the open interval `(x_1,x_2)` meets the common domain of
 `B_1,B_2`.  To see this, write `J=int(I_1) cap int(I_2)`, which is nonempty.  If
@@ -289,9 +289,9 @@ the right of `x_2`, the symmetric argument would force the left endpoint of
 By the uniform crossing sign, after crossing `B_1` the `A` graph is above `B_1` at
 `X_0`, while before crossing `B_2` it is below `B_2` there.  This would give
 
-$$
+```math
 A(X_0)>B_1(X_0)>B_2(X_0)>A(X_0),
-$$
+```
 
 an impossibility.  Thus (76.19) holds for every `A` arc.
 
@@ -303,19 +303,19 @@ along every `B` arc.  `square`
 
 Apply Lemma 76.1 using (76.15)--(76.17).  We obtain common orders
 
-$$
+```math
 B_1,\ldots,B_b
 \quad\text{along every oriented }A,
 \tag{76.20}
-$$
+```
 
 and, in the fixed increasing-`X` orientation of every `B`,
 
-$$
+```math
 A_1,\ldots,A_a
 \quad\text{along every oriented }B.
 \tag{76.21}
-$$
+```
 
 This is the order conclusion that the older Target-B proof obtained from proper
 crosscuts of a topological disk.  Here it follows without a disk and without deleting
@@ -331,43 +331,43 @@ oriented `B_b` through the common order (76.21) to the center `p_11` of
 Both endpoints are centers of source rhombi, hence belong to the convex hull of the
 source.  The convex hull has diameter `D`, so
 
-$$
+```math
 |p_{11}-p_{00}|\le D.
 \tag{76.22}
-$$
+```
 
 Every intervening centerline displacement on both legs has nonnegative, in fact
 positive, projection on `e`.  The selected `B` crossings on the first leg contribute
 
-$$
+```math
 {v_1\over2}+v_2+\cdots+v_{b-1}+{v_b\over2}
-$$
+```
 
 when `b>=2`; for `b=1` that leg is empty.  Thus, uniformly in `b>=1`, its selected
 contribution is at least
 
-$$
+```math
 e\cdot\sum_{j=1}^b v_j-1.
 \tag{76.23}
-$$
+```
 
 Likewise the selected `A` crossings on the second leg contribute at least
 
-$$
+```math
 e\cdot\sum_{i=1}^a u_i-1.
 \tag{76.24}
-$$
+```
 
 Projecting the endpoint displacement and using (76.22) gives the hole-stable analogue
 of the Target-B CR estimate:
 
-$$
+```math
 \boxed{
 D\ge
  e\cdot\left(\sum_{a\in A}u_a+\sum_{b\in B}v_b\right)-2.
 }
 \tag{76.25}
-$$
+```
 
 The proof used neither an outer-boundary crosscut nor a penetration-to-boundary
 argument.  Hole boundaries may terminate other trains arbitrarily; they do not affect
@@ -377,110 +377,110 @@ argument.  Hole boundaries may terminate other trains arbitrarily; they do not a
 
 The complete product carries more quantitative information than (76.25) alone.  Define
 
-$$
+```math
 S_{AB}:=\sum_{a\in A}\sum_{b\in B}\delta_{ab}
        =\sum_{a,b}(x_b-x_a).
 \tag{76.26}
-$$
+```
 
 Every pair corresponds to a distinct retained rhombus, so `S_AB` is a sub-sum of the
 global train angular defect.  Canonical (68.14), `c_0=sqrt(3)/4`, and
 `per(K)<=pi D` give
 
-$$
+```math
 \boxed{
 S_{AB}<C_{phase}D,
 \qquad
 C_{phase}:={\pi^2\sqrt3(2+\sqrt3)\over12}.
 }
 \tag{76.27}
-$$
+```
 
 Put
 
-$$
+```math
 x_A^+=\max_Ax_a,
 \qquad
 x_B^-=\min_Bx_b,
 \qquad
 g=x_B^--x_A^+>0,
 \tag{76.28}
-$$
+```
 
 and
 
-$$
+```math
 r_a=x_A^+-x_a\ge0,
 \qquad
 q_b=x_b-x_B^-\ge0.
 \tag{76.29}
-$$
+```
 
 Then every product defect is exactly
 
-$$
+```math
 \delta_{ab}=g+r_a+q_b,
 \tag{76.30}
-$$
+```
 
 so
 
-$$
+```math
 S_{AB}=abg+b\sum_ar_a+a\sum_bq_b.
 \tag{76.31}
-$$
+```
 
 The direction `e` from (76.12) satisfies the exact angle identities
 
-$$
+```math
 \psi-\alpha_a={L\over2}+{g\over2}+r_a,
 \tag{76.32}
-$$
+```
 
-$$
+```math
 \beta_b-\psi={L\over2}+{g\over2}+q_b.
 \tag{76.33}
-$$
+```
 
 Since `cos(L/2)=sqrt(3)/2` and `|cos'|<=1`,
 
-$$
+```math
 e\cdot u_a
 \ge {\sqrt3\over2}-{g\over2}-r_a,
 \tag{76.34}
-$$
+```
 
-$$
+```math
 e\cdot v_b
 \ge {\sqrt3\over2}-{g\over2}-q_b.
 \tag{76.35}
-$$
+```
 
 Let
 
-$$
+```math
 m_0=\min\{a,b\}.
-$$
+```
 
 Equation (76.31) implies
 
-$$
+```math
 {a+b\over2}g+\sum_ar_a+\sum_bq_b
 \le {S_{AB}\over m_0}.
 \tag{76.36}
-$$
+```
 
 Indeed, if `a>=b`, then
 
-$$
+```math
 {S_{AB}\over b}=ag+\sum_ar_a+{a\over b}\sum_bq_b
-$$
+```
 
 dominates the left side because `a>=(a+b)/2`; the case `b>=a` is symmetric.
 
 Summing (76.34)--(76.35), inserting (76.36) into (76.25), gives the finite inequality
 
-$$
+```math
 \boxed{
 D\ge
 {\sqrt3\over2}(a+b)
@@ -488,41 +488,41 @@ D\ge
 -2.
 }
 \tag{76.37}
-$$
+```
 
 This is the useful form because it charges angular defect only once per train-scale
 shore, not once per crossing.
 
 If
 
-$$
+```math
 a,b\ge\gamma D
 \tag{76.38}
-$$
+```
 
 for one fixed `gamma>0`, then (76.27) gives
 
-$$
+```math
 \boxed{
 D\ge {\sqrt3\over2}(a+b)-{C_{phase}\over\gamma}-2.
 }
 \tag{76.39}
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \boxed{
  a+b
 \le {2\over\sqrt3}
 \left(D+{C_{phase}\over\gamma}+2\right).
 }
 \tag{76.40}
-$$
+```
 
 By AM--GM,
 
-$$
+```math
 \boxed{
  ab
 \le {1\over3}
@@ -530,7 +530,7 @@ $$
 ={D^2\over3}+O_\gamma(D).
 }
 \tag{76.41}
-$$
+```
 
 Thus every linear complete phase-pure grid, even in an arbitrarily holed physical
 grain, obeys the same leading triangular-grid diameter economy as a common-order disk
@@ -544,9 +544,9 @@ obstruction is no longer topological penetration of a complete grid.
 
 The remaining issue is quantitative coverage.  The Fox--Pach theorem gives
 
-$$
+```math
 a,b\ge\gamma D
-$$
+```
 
 for some fixed positive coefficient inherited from the coherent-grain density and the
 absolute pseudosegment constant, but current canonical inputs do not make that

@@ -328,56 +328,56 @@ Let
 
     C_R = {x u_0 + y v_0 : |x| <= R, |y| <= R, |x+y| <= R}
 
-with $u_0=(1,0)$, $v_0=(1/2,\sqrt3/2)$, and let
+with $`u_0=(1,0)`$, $`v_0=(1/2,\sqrt3/2)`$, and let
 
     C_R^(-1) = {x in C_R : dist(x,partial C_R) >= 1}.
 
-For $R>2/\sqrt3$,
+For $`R>2/\sqrt3`$,
 
     C_R^(-1)=C_(R-2/sqrt(3)).
 
-Every unit-separated set $W\subseteq C_R^{(-1)}$ satisfies
+Every unit-separated set $`W\subseteq C_R^{(-1)}`$ satisfies
 
     |W| <= 3R^2 + (3-4sqrt(3))R + 5 - 2sqrt(3).
 
-In particular, for the even integers $R\ge8$, the strict contact-free
-augmentation $Y_R^strict$ of Proposition CR.2 obeys
+In particular, for the even integers $`R\ge8`$, the strict contact-free
+augmentation $`Y_R^strict`$ of Proposition CR.2 obeys
 
     |Y_R^strict| - |W|
       >= (4sqrt(3)-6)R + 2sqrt(3)-3
 
-for every unit-separated $W\subseteq C_R^{(-1)}$. The right-hand side is
-positive and linear in $R$.
+for every unit-separated $`W\subseteq C_R^{(-1)}`$. The right-hand side is
+positive and linear in $`R`$.
 
 #### Proof
 
-The six sides of $C_R$ have inward normal distance $a_0R$ from the
-center, where $a_0=\sqrt3/2$. Moving every supporting line inward by one
-therefore changes the axial radius from $R$ to
+The six sides of $`C_R`$ have inward normal distance $`a_0R`$ from the
+center, where $`a_0=\sqrt3/2`$. Moving every supporting line inward by one
+therefore changes the axial radius from $`R`$ to
 
     R - 1/a_0 = R - 2/sqrt(3).
 
-Their intersection is exactly the inner parallel body $C_R^{(-1)}$.
+Their intersection is exactly the inner parallel body $`C_R^{(-1)}`$.
 
-The area and perimeter of the regular axial hexagon $C_t$ are
+The area and perimeter of the regular axial hexagon $`C_t`$ are
 
     area(C_t)=3a_0 t^2,
     per(C_t)=6t.
 
-Applying the planar Oler inequality to a unit-separated set $W$ in
-$C_t$ gives
+Applying the planar Oler inequality to a unit-separated set $`W`$ in
+$`C_t`$ gives
 
     a_0|W| <= area(C_t) + (sqrt(3)/4) per(C_t) + a_0
            = a_0(3t^2+3t+1).
 
-Thus $|W|\le3t^2+3t+1$. Substituting
-$t=R-2/\sqrt3$ gives
+Thus $`|W|\le3t^2+3t+1`$. Substituting
+$`t=R-2/\sqrt3`$ gives
 
     |W| <= 3R^2 + (3-4sqrt(3))R + 5 - 2sqrt(3).
 
 Proposition CR.2 gives
-$|Y_R^strict|=3R^2-3R+2$. Subtracting the preceding upper bound yields
-the displayed difference. $\square$
+$`|Y_R^strict|=3R^2-3R+2`$. Subtracting the preceding upper bound yields
+the displayed difference. $`\square`$
 
 ## 3. A linear-perimeter, quadratic-area empty-face regression
 

@@ -19,9 +19,9 @@ This is the nonstrict counterpart to Audit.140. It allows exact contacts to rema
 
 Let A be a finite contact-minimal, then actual-diameter-pair-minimal triangle-free global minimizer with diameter D. Put K=conv(A). Let Q be a bounded hull-augmented face cell whose boundary is one source-hull arc and a simple path of actual unit-contact edges. Let W_Q be the vertices of that path and S_Q=(A intersect Q) minus W_Q. Let v be an internal path vertex, so both incident path sides are actual unit contacts. Define
 
-$$
+```math
 N_{Q,v}=\{x\in\operatorname{int}(Q): |x-w|\ge1\text{ for every }w\in W_Q\setminus\{v\}\}.
-$$
+```
 
 Take a deletion set R containing S_Q union {v}; any additional deleted labels form T. Keep the weak guards at every old wall vertex in W_Q minus {v}, including vertices in T. Suppose Y is a finite unit-separated packet in N_{Q,v} with |Y|=|R|, and form A'=(A minus R) union Y. Define:
 
@@ -46,23 +46,23 @@ Write a,b for the two unit path neighbors of v, translate v to the origin, and l
 
 If r>1, x is at least one from every path vertex, including v. If the segment xq first crosses the interior of a unit path side cd at z=(1-s)c+sd, then q and x are each at least one from c and d. The identity
 
-$$
+```math
 |p-z|^2=(1-s)|p-c|^2+s|p-d|^2-s(1-s)
-$$
+```
 
 shows |x-z| and |q-z| are at least sqrt(3)/2. Thus |x-q|>=sqrt(3)>1. If the first exit is at a retained path vertex w other than v, then q is distinct from w because q lies outside Q; both |x-w| and |q-w| are at least one, so |x-q|>=2. If the first exit is at v, then |x-v|>1 and q is a distinct source point with |q-v|>=1, so |x-q|>1.
 
 Now suppose r<=1. The weak guards at a and b imply
 
-$$
+```math
 x\cdot a\le r^2/2,\qquad x\cdot b\le r^2/2.
-$$
+```
 
 If q is outside the interior of K_v, write q=tu with t=|q-v|>=1 and |u|=1. The maximum of x dot u over exterior directions occurs on one of the two boundary rays, so x dot u<=r^2/2. Therefore
 
-$$
+```math
 |x-q|^2=r^2+t^2-2t(x\cdot u)\ge t^2+r^2(1-t)\ge1.
-$$
+```
 
 The final expression is increasing for t>=1 because its derivative is 2t-r^2>=1. Equality in the distance estimate can occur only when t=1 and u is an extremal boundary ray a or b; then q is one of the guarded path neighbors.
 

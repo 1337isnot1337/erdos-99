@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_curvature_degree_identity_2026-09-09.md) · source SHA-256 `3fb5eb35674a57ebea2e781fc782ee8d88d399da176809b3bfdde5b2f0971d37`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 8 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-3A9D6B43EC91","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic equality identifies shell curvature with diameter degree
 
@@ -19,46 +21,46 @@ The CE/DC/AS equality package makes the geometry of every force-hull vertex comp
 
 Let the shell vertices be
 
-$$
+```math
 b_0,b_1,\ldots,b_{q-1}
-$$
+```
 
 in counterclockwise contact-cycle order. Let
 
-$$
+```math
 \varphi_i\in(0,\pi)
-$$
+```
 
 be the exterior turning angle of the convex unit polygon `F` at `b_i`, and let
 
-$$
+```math
 d_i:=\deg_H(b_i)
-$$
+```
 
 be its degree in the full actual diameter graph.
 
 Then
 
-$$
+```math
 \boxed{
 \varphi_i=\frac{\pi}{q}d_i
 \qquad(0\le i<q).
 }
 \tag{CD.1}
-$$
+```
 
 Thus the integer diameter-degree sequence is exactly the curvature sequence of the mechanical shell, measured in quanta `pi/q`.
 
 Equivalently, if `v_i=b_{i+1}-b_i` is the oriented unit side vector, then
 
-$$
+```math
 \boxed{
 \arg v_i-\arg v_{i-1}
 =\frac{\pi}{q}d_i
 \pmod{2\pi},
 }
 \tag{CD.2}
-$$
+```
 
 with the positive representative in `(0,pi)`.
 
@@ -68,13 +70,15 @@ Consequences:
 2. every diameter leaf (`d_i=1`) carries the minimum curvature `pi/q`;
 3. every branching excess `d_i-2>0` is exactly an equal amount of excess turning above the regular value;
 4. the leaf/branch balance
-   $$
+   ```math
    \sum_i(d_i-2)=0
-   $$
+   
+   ```
    is the ordinary total-curvature identity
-   $$
+   ```math
    \sum_i(\varphi_i-2\pi/q)=0.
-   $$
+   
+   ```
 
 This gives a direct bridge between the convex-thrackle caterpillar structure and the Reinhardt sign word: the gaps between consecutive selected side directions of `F` are precisely the diameter degrees.
 
@@ -84,58 +88,59 @@ This gives a direct bridge between the convex-thrackle caterpillar structure and
 
 Fix one terminal `b=b_i` and write
 
-$$
+```math
 p=b_{i-1},
 \qquad
 c=b_{i+1}.
-$$
+```
 
 Both shell sides are unit contacts:
 
-$$
+```math
 |b-p|=|b-c|=1.
-$$
+```
 
 The two contact vectors appearing in KKT equilibrium are
 
-$$
+```math
 b-p,
 \qquad
 b-c.
-$$
+```
 
 At a strictly convex polygon vertex their mutual angle is
 
-$$
+```math
 \pi-\varphi_i.
-$$
+```
 
 Therefore their vector sum has magnitude
 
-$$
+```math
 \begin{aligned}
 |(b-p)+(b-c)|
 &=2\cos\frac{\pi-\varphi_i}{2}\\
 &=2\sin\frac{\varphi_i}{2}.
 \end{aligned}
 \tag{1.1}
-$$
+```
 
 AS gives the same contact coefficient on every shell side:
 
-$$
+```math
 \alpha=\frac{D^2}{q}.
-$$
+```
 
 Hence the total contact reaction at `b` has magnitude
 
-$$
+```math
 \boxed{
 |g_b|
 =\frac{2D^2}{q}
 \sin\frac{\varphi_i}{2}.
 }
 \tag{1.2}
+```
 
 Its direction is the exterior angle bisector at `b`.
 
@@ -145,70 +150,72 @@ Its direction is the exterior angle bisector at `b`.
 
 Let
 
-\[
+```math
 d=d_i=\deg_H(b).
-$$
+```
 
 DC says all `d` diameter edges incident to `b` form one contiguous block in the cyclic projective diameter-direction order. CE says consecutive projective directions are separated by exactly
 
-$$
+```math
 \theta:=\frac\pi q.
 \tag{2.1}
-$$
+```
 
 Orient every incident diameter vector outward at `b`:
 
-$$
+```math
 b-y,
 \qquad y\in N_H(b).
-$$
+```
 
 All of these vectors lie in the strict outward normal cone at `b` by the Target C force-hull geometry, so their actual Euclidean directions use the same lift of the projective block. They are therefore `d` radius-`D` vectors with consecutive angular spacing exactly `theta`.
 
 The vector sum of `d` equally spaced unit vectors with spacing `theta` has magnitude
 
-$$
+```math
 \frac{\sin(d\theta/2)}{\sin(\theta/2)}.
-$$
+```
 
 Thus the unweighted diameter-vector sum has magnitude
 
-$$
+```math
 D\frac{\sin(d\pi/(2q))}{\sin(\pi/(2q))}.
 \tag{2.2}
-$$
+```
 
 AS gives the uniform normalized diameter coefficient
 
-$$
+```math
 \beta=\frac1q.
-$$
+```
 
 Hence the total diameter reaction has magnitude
 
-$$
+```math
 \boxed{
 |g_b|
 =\frac{D}{q}
 \frac{\sin(d\pi/(2q))}{\sin(\pi/(2q))}.
 }
 \tag{2.3}
+```
 
 CE gives
 
-\[
+```math
 2D\sin\frac\pi{2q}=1,
-$$
+```
 
 so (2.3) simplifies to
 
-$$
+```math
 \boxed{
 |g_b|
 =\frac{2D^2}{q}
 \sin\frac{d\pi}{2q}.
 }
 \tag{2.4}
+```
 
 The vector direction is the midpoint direction of the contiguous diameter star.
 
@@ -218,35 +225,38 @@ The vector direction is the midpoint direction of the contiguous diameter star.
 
 The AS stress is an exact KKT equilibrium stress. Therefore the contact and diameter resultants in (1.2) and (2.4) are the same vector, in particular have equal magnitude:
 
-\[
+```math
 \sin\frac{\varphi_i}{2}
 =
 \sin\frac{d_i\pi}{2q}.
 \tag{3.1}
-$$
+```
 
 Both arguments lie strictly between zero and `pi/2`.
 
 - Strict convexity gives
-  $$
+  ```math
   0<\varphi_i/2<\pi/2.
-  $$
+  
+  ```
 - The diameter graph is not a star in the post-ZF regime, so
-  $$
+  ```math
   1\le d_i<q,
-  $$
+  
+  ```
   and hence
-  $$
+  ```math
   0<d_i\pi/(2q)<\pi/2.
-  $$
+  
+  ```
 
 Sine is strictly increasing on this interval. Therefore (3.1) gives
 
-$$
+```math
 \boxed{
 \varphi_i=\frac\pi q d_i.
 }
-$$
+```
 
 This proves CD.1. CD.2 is the definition of exterior turning angle. `square`
 
@@ -260,15 +270,15 @@ RS says the `q` oriented side vectors of `F` select one member from each antipod
 
 Sort those selected side directions in convex boundary order. The regular direction grid has step
 
-$$
+```math
 \frac\pi q.
-$$
+```
 
 By CD.2, the angular gap from side `v_{i-1}` to side `v_i` is
 
-$$
+```math
 \frac\pi q d_i.
-$$
+```
 
 Therefore exactly `d_i` regular direction-grid steps occur between those consecutive selected side directions.
 
@@ -276,19 +286,20 @@ Therefore exactly `d_i` regular direction-grid steps occur between those consecu
 
 The cyclic diameter-degree sequence
 
-$$
+```math
 (d_0,d_1,\ldots,d_{q-1})
-$$
+```
 
 is exactly the cyclic composition of the `2q` regular direction steps determined by the Reinhardt side selection:
 
-$$
+```math
 \boxed{
  d_i\in\mathbb Z_{>0},
  \qquad
  \sum_{i=0}^{q-1}d_i=2q.
 }
 \tag{4.1}
+```
 
 The sum identity is simultaneously
 
@@ -303,27 +314,29 @@ Thus the graph and polygon curvature ledgers coincide term by term, not merely a
 
 Subtract the regular value two:
 
-\[
+```math
 \boxed{
 \varphi_i-\frac{2\pi}{q}
 =\frac\pi q(d_i-2).
 }
 \tag{5.1}
+```
 
 Sum over all vertices:
 
-\[
+```math
 \sum_i(d_i-2)=2h-2q=0.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{
 \sum_{d_i=1}1
 =\sum_{d_i\ge3}(d_i-2).
 }
 \tag{5.2}
+```
 
 for the connected unicyclic diameter graph. This is the familiar leaf/branch excess balance, now with an exact convex-geometric interpretation:
 
@@ -333,9 +346,9 @@ for the connected unicyclic diameter graph. This is the familiar leaf/branch exc
 
 For example the degree pattern
 
-\[
+```math
 3,3,3,1,1,1
-$$
+```
 
 has three positive and three negative curvature quanta and is therefore compatible with the total turning constraint; CD does not falsely exclude such branching Reinhardt shells.
 
@@ -345,26 +358,28 @@ has three positive and three negative curvature quanta and is therefore compatib
 
 The two contact neighbors `p,c` of `b_i` are separated by
 
-$$
+```math
 |p-c|
 =2\sin\frac{\pi-\varphi_i}{2}
 =2\cos\frac{\varphi_i}{2}.
-$$
+```
 
 Using CD.1,
 
-$$
+```math
 \boxed{
 |b_{i-1}-b_{i+1}|
 =2\cos\frac{d_i\pi}{2q}.
 }
 \tag{6.1}
+```
 
 Triangle-freeness requires this distance to be strictly greater than one, because equality would make the two shell contacts at `b_i` part of a unit equilateral triangle. Therefore
 
-\[
+```math
 \boxed{d_i<\frac{2q}{3}.}
 \tag{6.2}
+```
 
 C18 gives a substantially stronger asymptotic degree cap through the diameter-star angle, but (6.2) is an exact shell-local consequence requiring no global container estimate beyond the established equality class.
 
@@ -376,15 +391,15 @@ In the DC difference-body traversal, a run of consecutive transitions that repea
 
 If the run has `r` transitions, the shared terminal has
 
-\[
+```math
 d_i=r+1
-$$
+```
 
 incident diameter edges. CD says the same vertex has turning angle
 
-$$
+```math
 \varphi_i=(r+1)\frac\pi q.
-$$
+```
 
 Thus branching runs in the transition word, high diameter degree, and large local shell curvature are three descriptions of the same discrete defect.
 
@@ -398,9 +413,9 @@ This is the exact graph-geometric bridge needed to combine future Reinhardt sign
 
 All diameter degrees are two. CD gives
 
-$$
+```math
 \varphi_i=2\pi/q
-$$
+```
 
 at every vertex, hence the shell is regular.
 

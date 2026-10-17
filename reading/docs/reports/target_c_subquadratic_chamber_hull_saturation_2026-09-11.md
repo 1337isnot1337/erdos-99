@@ -46,14 +46,14 @@ establishes, within its stated branch, a convex inactive chamber (C_*) with assi
 contact-isolated population (S_*) such that, along the branch, with
 C_*\subseteq F\subseteq\operatorname{conv}A and \operatorname{diam}(C_*)\le D,
 
-$$
+```math
 A_*:=\operatorname{area}(C_*)=\Omega(D^2),
 \qquad
 z_*:=|S_*|={A_*\over a_0}+O(D),
 \qquad
 P_*:=\operatorname{per}(C_*)=O(D),
 \tag{CH.1}
-$$
+```
 
 where (a_0=\sqrt3/2). Every point of (S_*) is an actual source point and is
 contact-isolated in the full source. The chamber is either an exceptional bounded
@@ -62,21 +62,21 @@ contact face or an outer pocket; no point is deleted from the source.
 The Section-77 theorem gives absolute constants (a_{\rm ch},P_{\rm ch},L_{\rm ch}>0)
 such that, after passing to a sufficiently large member of the branch,
 
-$$
+```math
 A_*\ge a_{\rm ch}D^2,qquad P_*\le P_{\rm ch}D,qquad
 a_0z_*\ge A_*-L_{\rm ch}D.
 \tag{CH.2}
-$$
+```
 
 The exact proposed bridge is therefore
 
-$$
+```math
 \text{near-capacity isolated chamber}
 \Longrightarrow
 \text{source-specific geometric stability}
 \Longrightarrow
 \text{finite C-II release or contradiction}.
-$$
+```
 
 The first implication is proved here. The second remains open.
 
@@ -90,10 +90,10 @@ We first isolate the geometric estimate used to turn an (O(D)) area deficit into
 Let (C\subset\mathbb R^2) be a compact convex body with area (A_C>0), perimeter
 (P_C), and inradius (r_C). Then
 
-$$
+```math
 \boxed{r_C\ge {A_C\over P_C}.}
 \tag{CH.3}
-$$
+```
 
 ### Proof
 
@@ -102,101 +102,101 @@ Let (r=r_C), and let (C_{-t}) be the inner parallel body at distance (t), for
 positive-area inner parallel body would allow a larger inscribed disk. The coarea
 formula for the distance to the boundary gives
 
-$$
+```math
 A_C=\int_0^r \operatorname{per}(C_{-t})\,dt.
-$$
+```
 
 Perimeter is monotone under inclusion for convex bodies, so
 
-$$
+```math
 A_C\le rP_C.
-$$
+```
 
-Rearranging proves (CH.3). $\square$
+Rearranging proves (CH.3). $`\square`$
 
 ### Lemma CH.2 (support-gap cap bound)
 
 Let (C) be a convex body with diameter at most (D) and inradius (r_C). Let
 (K\subseteq C) be a convex body. For a unit vector (u), put
 
-$$
+```math
 t(u):=h_C(u)-h_K(u)\ge0.
-$$
+```
 
 For every (0\le s\le\min\{t(u),r_C\}),
 
-$$
+```math
 \boxed{\operatorname{area}(C\setminus K)
 \ge {r_C\over D}\,s^2.}
 \tag{CH.4}
-$$
+```
 
 ### Proof
 
 Choose an inball (B(o,r_C)\subseteq C) and a support point (v\in C) with
 (u\cdot v=h_C(u)). Put
 
-$$
+```math
 s_0=h_C(u)-u\cdot o.
-$$
+```
 
 The support inequality for the inball gives (s_0\ge r_C). Also
 (s_0\le|v-o|\le D).
 Let (w) be a unit vector perpendicular to (u), and set
 
-$$
+```math
 q_+=o+r_Cw,
 \qquad
 q_-=o-r_Cw.
-$$
+```
 
 The triangle (T=\operatorname{conv}\{v,q_+,q_-\}) lies in (C). Its cap cut off by
 the line (u\cdot x=h_C(u)-s_1), for (0\le s_1\le r_C\le s_0), is a triangle of
 height (s_1) and base (2r_Cs_1/s_0), where (s_0=h_C(u)-u\cdot o), hence has area
 
-$$
+```math
 {r_Cs_1^2\over s_0}\ge {r_C\over D}s_1^2.
-$$
+```
 
 Since (s_1\le t(u)), (K) lies in the half-plane (u\cdot x\le h_C(u)-s_1), so this
-cap is contained in (C\setminus K), proving (CH.4). $\square$
+cap is contained in (C\setminus K), proving (CH.4). $`\square`$
 
 ## 3. Oler-saturated chamber hull
 
 Let (K_*:=\operatorname{conv}(S_*)). Because (S_*) is a subset of the globally
 unit-separated source, it is unit-separated. Oler applied to (S_*\subseteq K_*) gives
 
-$$
+```math
 a_0z_*
 \le \operatorname{area}(K_*)+c_0\operatorname{per}(K_*)+a_0,
 \qquad c_0={\sqrt3\over4}.
 \tag{CH.6}
-$$
+```
 
 Since (K_*\subseteq C_*), convex perimeter monotonicity gives
 
-$$
+```math
 \operatorname{per}(K_*)\le P_*.
 \tag{CH.7}
-$$
+```
 
 Combining (CH.2), (CH.6), and (CH.7),
 
-$$
+```math
 \operatorname{area}(C_*)-\operatorname{area}(K_*)
 \le (L_{\rm ch}+c_0P_{\rm ch})D+a_0
 =:M_{\rm ch}D.
 \tag{CH.8}
-$$
+```
 
 Thus (K_*) misses only (O(D)) area from a chamber of area (Omega(D^2)).
 
 By Lemma CH.1 and (CH.2),
 
-$$
+```math
 r(C_*)\ge {a_{\rm ch}\over P_{\rm ch}}D=:\kappa_{\rm ch}D.
 \tag{CH.9}
-$$
+```
 
 For a support direction (u), let (t(u)=h_{C_*}(u)-h_{K_*}(u)). If
 (t(u)>r(C_*)), apply Lemma CH.2 with (s_1=r(C_*)). This gives an area deficit at
@@ -204,15 +204,15 @@ least (r(C_*)^3/D)=\Omega(D^2), using (CH.9), contradicting (CH.8) for large
 (D). Hence (t(u)\le r(C_*)) for every direction eventually. Applying (CH.4) with
 (s_1=t(u)) and (CH.8) then gives
 
-$$
+```math
 t(u)^2
 \le {D\over r(C_*)}\,M_{\rm ch}D
 \le {M_{\rm ch}\over\kappa_{\rm ch}}D,
-$$
+```
 
 uniformly in (u). Therefore
 
-$$
+```math
 \boxed{
 \sup_{u\in S^1}\bigl(h_{C_*}(u)-h_{K_*}(u)\bigr)
 \le C_{\rm ch}\sqrt D,
@@ -220,15 +220,15 @@ $$
 C_{\rm ch}:=\sqrt{M_{\rm ch}/\kappa_{\rm ch}}.
 }
 \tag{CH.10}
-$$
+```
 
 For nested convex bodies, the support-function supremum is their Hausdorff distance.
 Consequently
 
-$$
+```math
 \boxed{d_H(C_*,K_*)\le C_{\rm ch}\sqrt D.}
 \tag{CH.11}
-$$
+```
 
 This is a source-specific stability theorem: the actual isolated source points have a
 convex hull filling the actual inactive chamber to sublinear geometric error.
@@ -237,23 +237,23 @@ convex hull filling the actual inactive chamber to sublinear geometric error.
 
 Let (o_*) be a center of an inball of (C_*). For every unit vector (u),
 
-$$
+```math
 h_{K_*}(u)
 \ge h_{C_*}(u)-C_{\rm ch}\sqrt D
 \ge u\cdot o_*+r(C_*)-C_{\rm ch}\sqrt D.
-$$
+```
 
 The support function of (B(o_*,r(C_*)-C_{\rm ch}\sqrt D)) is the right-hand side.
 For sufficiently large (D), (CH.9) makes this radius positive, and the support
 inequalities imply
 
-$$
+```math
 \boxed{
 B\bigl(o_*,\kappa_{\rm ch}D-C_{\rm ch}\sqrt D\bigr)
 \subseteq K_*\subseteq C_*.
 }
 \tag{CH.12}
-$$
+```
 
 Thus the convex hull of the contact-isolated source points contains a disk whose
 radius is linear in (D), with an explicit (O(\sqrt D)) loss. Every vertex of this
@@ -262,14 +262,14 @@ contact has been inferred.
 
 The same argument also gives
 
-$$
+```math
 \operatorname{diam}(K_*)\ge\operatorname{diam}(C_*)-2C_{\rm ch}\sqrt D,
 \qquad
 \operatorname{area}(K_*)=A_*+O(D).
 \tag{CH.13}
-$$
+```
 
-The diameter statement is only $\Omega(D)$, not a claim that (K_*) contains an
+The diameter statement is only $`\Omega(D)`$, not a claim that (K_*) contains an
 actual diameter pair of the full source.
 
 ## 5. Exact frontier effect on C-II

@@ -38,37 +38,37 @@ The checks below are intentionally independent of the candidate's prose.
 
 The audited inputs are
 
-$$
+```math
 P_V>{53\over625}-o(1)=0.0848-o(1)
-$$
+```
 for retained smallest-leaf O--O pair weight,
 
-$$
+```math
 {\sum_\tau w_\tau d_\tau D\over\sum_\tau w_\tau}
 >{1851\over2500}D-o(D)=0.7404D-o(D),
-$$
+```
 and a total center-phase train count below
 
-$$
+```math
 {1063\over1000}D+o(D)=1.063D+o(D).
-$$
+```
 
 A singleton stopped train is one contact edge incident to no strict rhombus.  Hence it
 has zero crossings in the strict-rhombus train graph and contributes `d_tau=0` to the
 fan numerator.  If `W_ns` is the retained pair weight on non-singleton O--O trains,
 then
 
-$$
+```math
 (1.063D+o(D))W_{ns}
 \ge \sum_\tau w_\tau d_\tau D.
-$$
+```
 Therefore
 
-$$
+```math
 W_{ns}
 >{(0.7404)(0.0848)\over1.063}D-o(D)
 ={196206\over3321875}D-o(D).
-$$
+```
 
 The companion `Fraction` certificate verifies the exact rational value.  No invalid
 operation of deleting singleton vertices from an all-train Mantel graph occurs here;
@@ -86,9 +86,9 @@ the smaller Jordan shore and retracts its two outer terminal occurrences to load
 boundary positions.  In the Type-II near-disk limit, Section 157's two transverse
 diameter signs imply that the shore's normal-angle interval contains a zero of
 
-$$
+```math
 n\mapsto n\cdot Ju_\tau
-$$
+```
 up to a uniform `o(1)` angular error.
 
 For a projective train phase there are exactly two such normal zeros on the oriented
@@ -110,23 +110,23 @@ This is the main measure-theoretic check.
 
 For a train with retained terminal weights `a_tau,b_tau`, the pair weight is
 
-$$
+```math
 w_\tau=\min(a_\tau,b_\tau),
-$$
+```
 so charging the entire pair to either terminal occurrence is always safe:
 
-$$
+```math
 w_\tau\le a_\tau,
 \qquad
 w_\tau\le b_\tau.
-$$
+```
 
 The hostile audit of dominant-orbit routewise retention proves that the retained
 projective occurrence measure is dominated by round loaded-hull perimeter measure:
 
-$$
+```math
 \nu\le d\theta.
-$$
+```
 Equivalently, on the oriented full normal circle the corresponding endpoint measure is
 dominated by `(1/2)dtheta`.  Thus an oriented normal neighborhood whose width tends to
 zero carries `o(D)` retained occurrence weight.  The two antipodal marker
@@ -175,11 +175,11 @@ one simple path in the complement dual tree.
 There are at most two marker chains.  One carries at least half of the surviving
 non-singleton pair weight:
 
-$$
+```math
 {1\over2}{196206\over3321875}D-o(D)
 ={98103\over3321875}D-o(D)
 =0.02953241768\ldots D-o(D).
-$$
+```
 Since each `w_tau<=1`, that chain contains more than `0.0295D-o(D)` distinct trains.
 
 **Verdict:** PASS.
@@ -209,9 +209,9 @@ and translations give zero selected train rates.  Thus `theta=0`.
 
 So
 
-$$
+```math
 \operatorname{rank}M=m.
-$$
+```
 
 Contact isolates do not create a new freedom in this inference; this is the same
 canonical mixed-rigidity statement used by the audited live-backbone theorem, and the
@@ -226,29 +226,29 @@ new proof only weakens how its Euclidean rotation mode is killed.
 On a laminar O--O path every actual diameter row has contiguous signed support.  A
 full-span row has coordinates
 
-$$
+```math
 s_h(r_h\cdot Ju_1,\ldots,r_h\cdot Ju_m).
-$$
+```
 As `r_h` ranges over the plane, all such rows lie in the span of two fixed coordinate
 sequences.  Hence full-span rows contribute rank at most two.  Every proper interval
 row contributes at most one further row dimension.  Full rank therefore gives
 
-$$
+```math
 N_{prop}\ge m-2>0.0295D-o(D).
-$$
+```
 
 If support changes at only `s` internal boundaries, the columns split into `s+1`
 constant-incidence blocks.  On each block every row lies in a two-dimensional
 coordinate span, so
 
-$$
+```math
 m\le2(s+1).
-$$
+```
 Thus
 
-$$
+```math
 s\ge\lceil m/2\rceil-1>0.01475D-o(D).
-$$
+```
 
 For an interval row, starting or ending at one internal boundary means one physical
 diameter endpoint projects to the corresponding layer vertex.  One physical endpoint
@@ -264,37 +264,37 @@ previous audited live-backbone theorem, with only the path length changed.
 
 For internal boundary `i`, put
 
-$$
+```math
 N_i=\#\{h:\varepsilon_{h,i+1}\ne\varepsilon_{hi}\},
 \qquad
 B_i=\sum_h\beta_h|\varepsilon_{h,i+1}-\varepsilon_{hi}|.
-$$
+```
 
 One interval row starts and stops at most once, so
 
-$$
+```math
 \sum_iN_i\le2|H|\le2\pi D.
-$$
+```
 With the normalized positive KKT vector `sum_h beta_h=1`, the same interval variation
 gives
 
-$$
+```math
 \sum_iB_i\le2.
-$$
+```
 
 For `m>(59/2000)D-o(D)`, averaging `N_i+D B_i` and using `pi<355/113` gives
 
-$$
+```math
 {2\pi+2\over59/2000}<281.
-$$
+```
 The companion exact verifier checks the outward rational inequality.  Hence one pair
 has simultaneously
 
-$$
+```math
 N_i<281+o(1),
 \qquad
 B_i<281D^{-1}+o(D^{-1}).
-$$
+```
 
 Averaging only `B_i` yields the separate `<68/D` beta-switch pair.  The candidate does
 **not** conflate these two pairs.

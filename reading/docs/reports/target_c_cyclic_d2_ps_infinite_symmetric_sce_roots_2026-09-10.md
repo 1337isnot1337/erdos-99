@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_ps_infinite_symmetric_sce_roots_2026-09-10.md) · source SHA-256 `8a80632668a313b8bd15d679bff215b1a69f503d503bfa21dca18c795d553fe8`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 23 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-CA0CE458D3C8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=2`, PS: an infinite exact family of symmetric SCE roots
 
@@ -24,44 +26,46 @@ That route is false already for PS, in an infinite exact family.
 
 For every integer
 
-$$
+```math
 k\ge1,
-$$
+```
 
 put
 
-$$
+```math
 \boxed{q=8k+4,\qquad L_A=L_B=4k}
 \tag{PSR.1}
-$$
+```
 
 and choose both staircase words to be
 
-$$
+```math
 \boxed{
 \varepsilon^A=\varepsilon^B=(-,+,+,-)^k.
 }
 \tag{PSR.2}
-$$
+```
 
 Then there exists a diameter parameter
 
-$$
+```math
 D_k>1
-$$
+```
 
 for which the exact SCE equations hold in the genuine PS regime:
 
 1. the first defect cell is parallel,
-   $$
+   ```math
    G_1=\Delta_2:=2\arcsin(1/D_k);
-   $$
+   
+   ```
 2. the second defect cell is strictly short,
-   $$
+   ```math
    2\delta<G_2<\Delta_2,
    \qquad
    \delta:=2\arcsin(1/(2D_k));
-   $$
+   
+   ```
 3. the second midpoint offset is nonzero;
 4. the complete complex SCE closure holds exactly.
 
@@ -75,19 +79,19 @@ The proof is constructive by a scalar intermediate-value argument.
 
 Put
 
-$$
+```math
 z=e^{i\delta}.
-$$
+```
 
 One block of the word `(-,+,+,-)` contributes
 
-$$
+```math
 -1+z+z^2-z^3=(z-1)(1-z^2).
-$$
+```
 
 Repeating the block `k` times gives
 
-$$
+```math
 \begin{aligned}
 P_k(z)
 &=(-1+z+z^2-z^3)\sum_{j=0}^{k-1}z^{4j}\\
@@ -95,10 +99,11 @@ P_k(z)
 &=\boxed{\frac{(z-1)(1-z^{4k})}{1+z^2}.}
 \end{aligned}
 \tag{1.1}
+```
 
 For the admissible range below all relevant sines and cosines are positive. Therefore
 
-\[
+```math
 \boxed{
 P_k(e^{i\delta})
 =
@@ -106,12 +111,13 @@ P_k(e^{i\delta})
 \,e^{i(2k-1/2)\delta}.
 }
 \tag{1.2}
+```
 
 Indeed
 
-\[
+```math
 |z-1|=2\sin(\delta/2)=1/D,
-$$
+```
 
 and the geometric-series phase gives the displayed argument.
 
@@ -121,81 +127,87 @@ and the geometric-series phase gives the displayed argument.
 
 Fix the first cell at the parallel endpoint
 
-$$
+```math
 G_1=\Delta_2.
-$$
+```
 
 Because
 
-$$
+```math
 L_A=L_B=4k,
-$$
+```
 
 the second projective switch gap is forced by the half-circle direction sum:
 
-$$
+```math
 \boxed{
 G_2
 =\pi-8k\delta-\Delta_2.
 }
 \tag{2.1}
+```
 
 The B-direction block begins at
 
-\[
+```math
 \theta_B=4k\delta+\Delta_2.
 \tag{2.2}
+```
 
 The first parallel cell has midpoint offset
 
-\[
+```math
 W_1=0.
-$$
+```
 
 For the second cell put
 
-$$
+```math
 \boxed{
 W(D):=
 \sqrt{1-D^2\sin^2(G_2/2)}.
 }
 \tag{2.3}
+```
 
 Its bisector direction, using the lift whose final B diameter direction is `pi-G_2`, is
 
-\[
+```math
 \boxed{
 \phi_2=\pi-G_2/2
 =\frac\pi2+4k\delta+\frac{\Delta_2}{2}.
 }
 \tag{2.4}
+```
 
 Now insert `P_A=P_B=P_k` into SCE. The two staircase midpoint terms sum to
 
-\[
+```math
 M(D)
 :=\frac i2 e^{i\delta/2}P_k
 \left(1+e^{i\theta_B}\right).
 \tag{2.5}
+```
 
 Using (1.2) and
 
-\[
+```math
 1+e^{i\theta_B}
 =2\cos(\theta_B/2)e^{i\theta_B/2},
-$$
+```
 
 we obtain the exact phase identity
 
-$$
+```math
 \boxed{
 M(D)=\mu_k(D)e^{i\phi_2},
 }
 \tag{2.6}
+```
 
 where
 
-\[
+```math
 \boxed{
 \mu_k(D)
 =
@@ -203,14 +215,16 @@ where
 \cos(2k\delta+\Delta_2/2)}{D\cos\delta}.
 }
 \tag{2.7}
+```
 
 Thus the vector SCE equation is solved by the geometrically correct second-cell sign precisely when
 
-\[
+```math
 \boxed{
 \mu_k(D)=W(D).
 }
 \tag{2.8}
+```
 
 There is no remaining phase equation.
 
@@ -220,69 +234,73 @@ There is no remaining phase equation.
 
 Let `D_-` be the unique solution of
 
-\[
+```math
 \boxed{
 (8k+2)\delta(D_-)+\Delta_2(D_-)=\pi.
 }
 \tag{3.1}
+```
 
 By (2.1), this is exactly the lower switch boundary
 
-\[
+```math
 G_2=2\delta.
-$$
+```
 
 Let `D_+` be the unique solution of
 
-$$
+```math
 \boxed{
 8k\delta(D_+)+2\Delta_2(D_+)=\pi.
 }
 \tag{3.2}
+```
 
 This is exactly the upper switch boundary
 
-\[
+```math
 G_2=\Delta_2.
-$$
+```
 
 Both left sides are continuous and strictly decreasing for `D>1`, from values above `pi` to zero, so both roots exist uniquely.
 
 For every `D>1`,
 
-$$
+```math
 \Delta_2>2\delta,
-$$
+```
 
 because
 
-$$
+```math
 \arcsin(1/D)>2\arcsin(1/(2D)).
-$$
+```
 
 Hence at a common `D`, the left side of (3.1) is strictly smaller than the left side of (3.2). Since both functions decrease in `D`,
 
-$$
+```math
 \boxed{D_-<D_+.}
 \tag{3.3}
+```
 
 For
 
-\[
+```math
 D\in(D_-,D_+),
-$$
+```
 
 we therefore have exactly
 
-$$
+```math
 \boxed{2\delta<G_2<\Delta_2,}
 \tag{3.4}
+```
 
 so the second cell is a genuine short D2C cell and
 
-\[
+```math
 W(D)>0.
-$$
+```
 
 ---
 
@@ -290,88 +308,93 @@ $$
 
 At `D=D_-`, equation (3.1) gives
 
-$$
+```math
 4k\delta+\delta+\Delta_2/2=\pi/2.
 \tag{4.1}
+```
 
 Put
 
-\[
+```math
 a:=2k\delta.
-$$
+```
 
 Then
 
-$$
+```math
 a+\Delta_2/2=\pi/2-a-\delta,
-$$
+```
 
 so
 
-$$
+```math
 \cos(a+\Delta_2/2)=\sin(a+\delta).
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 \mu_k(D_-)
 &=\frac{\sin a\sin(a+\delta)}{D_-\cos\delta}\\
 &=\frac{\cos\delta-\cos(2a+\delta)}{2D_-\cos\delta}.
 \end{aligned}
 \tag{4.2}
+```
 
 Equation (4.1) also gives
 
-\[
+```math
 0<2a+\delta<\pi/2,
-$$
+```
 
 hence
 
-$$
+```math
 \cos(2a+\delta)>0.
-$$
+```
 
 Thus
 
-$$
+```math
 \boxed{
 \mu_k(D_-)<\frac1{2D_-}.
 }
 \tag{4.3}
+```
 
 At the lower cell boundary `G_2=2delta`,
 
-\[
+```math
 \begin{aligned}
 W(D_-)^2
 &=1-D_-^2\sin^2\delta\\
 &=1-\cos^2(\delta/2)\\
 &=\sin^2(\delta/2),
 \end{aligned}
-$$
+```
 
 using
 
-$$
+```math
 2D_-\sin(\delta/2)=1.
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{W(D_-)=\frac1{2D_-}.}
 \tag{4.4}
+```
 
 Combining (4.3)-(4.4),
 
-\[
+```math
 \boxed{
 \mu_k(D_-)-W(D_-)<0.
 }
 \tag{4.5}
+```
 
 ---
 
@@ -379,39 +402,42 @@ Combining (4.3)-(4.4),
 
 At `D=D_+`,
 
-\[
+```math
 G_2=\Delta_2,
-$$
+```
 
 so D2C gives
 
-$$
+```math
 \boxed{W(D_+)=0.}
 \tag{5.1}
+```
 
 Equation (3.2) is
 
-\[
+```math
 8k\delta+2\Delta_2=\pi,
-$$
+```
 
 hence
 
-$$
+```math
 2k\delta+\Delta_2/2=\pi/4.
 \tag{5.2}
+```
 
 Also
 
-\[
+```math
 0<2k\delta<\pi/4.
-$$
+```
 
 Therefore both factors in the numerator of (2.7) are positive and
 
-$$
+```math
 \boxed{\mu_k(D_+)>0=W(D_+).}
 \tag{5.3}
+```
 
 ---
 
@@ -419,41 +445,42 @@ $$
 
 The functions
 
-\[
+```math
 \delta(D),\quad\Delta_2(D),\quad G_2(D),\quad\mu_k(D),\quad W(D)
-$$
+```
 
 are continuous on the closed admissible interval `[D_-,D_+]`.
 
 Sections 4-5 give opposite signs for
 
-$$
+```math
 f_k(D):=\mu_k(D)-W(D)
-$$
+```
 
 at its endpoints. Hence by the intermediate value theorem there is
 
-$$
+```math
 \boxed{D_k\in(D_-,D_+)}
 \tag{6.1}
+```
 
 with
 
-\[
+```math
 f_k(D_k)=0.
-$$
+```
 
 At this root,
 
-$$
+```math
 2\delta<G_2<\Delta_2,
-$$
+```
 
 so `W>0` and the second cell is strictly short. Equation (2.6) gives the exact bisector direction, and choosing the opposite D2C midpoint-offset sign makes
 
-$$
+```math
 M-W e^{i\phi_2}=0.
-$$
+```
 
 This is the complete complex SCE equation.
 

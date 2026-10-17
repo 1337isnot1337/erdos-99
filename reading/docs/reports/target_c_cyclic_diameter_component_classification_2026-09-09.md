@@ -18,9 +18,9 @@
 
 CY leaves three finite cyclic phases
 
-$$
+```math
 (d_H,s_Z)=(0,2),(1,1),(2,0).
-$$
+```
 
 The canonical planar diameter-graph theorem says every component is a caterpillar whose spine is a path or one odd cycle, with at most one unicyclic component. The following elementary thrackle observation sharpens this substantially whenever the full diameter graph is disconnected.
 
@@ -30,29 +30,29 @@ If a planar diameter graph `H` contains an odd cycle, then every edge of `H` bel
 
 Consequently:
 
-$$
+```math
 \boxed{
 d_H=0
 \Longrightarrow
 H\text{ is one odd-unicyclic caterpillar},}
 \tag{DC.1}
-$$
+```
 
-$$
+```math
 \boxed{
 d_H=1
 \Longrightarrow
 H\text{ is one connected spanning tree},}
 \tag{DC.2}
-$$
+```
 
-$$
+```math
 \boxed{
 d_H=2
 \Longrightarrow
 H\text{ is a forest of exactly two tree components}.}
 \tag{DC.3}
-$$
+```
 
 In particular, the “connected-tree subcase” in the existing cyclic tree-cut report TC is not a subcase: it is the entire `d_H=1` phase.
 
@@ -62,15 +62,15 @@ In particular, the “connected-tree subcase” in the existing cyclic tree-cut 
 
 Suppose
 
-$$
+```math
 v_0v_1,\ v_1v_2,\ldots,\ v_{2r}v_0
-$$
+```
 
 is an odd cycle in one component of `H`, and suppose for contradiction that another component contains an edge
 
-$$
+```math
 xy.
-$$
+```
 
 The components are vertex-disjoint, so `xy` shares no endpoint with any cycle edge.
 
@@ -78,9 +78,9 @@ All diameter endpoints lie on the convex force hull. The diameter graph is a geo
 
 Therefore every cycle edge
 
-$$
+```math
 v_iv_{i+1}
-$$
+```
 
 crosses the fixed chord `xy`.
 
@@ -100,29 +100,29 @@ Theorem DC therefore implies that once an odd-unicyclic component exists there a
 
 For a connected odd-unicyclic graph on `q` vertices,
 
-$$
+```math
 h=q,
-$$
+```
 
 so
 
-$$
+```math
 d_H=q-h=0.
-$$
+```
 
 Conversely, if `d_H>0`, no odd cycle exists. The canonical pseudoforest is then a forest.
 
 For a forest on all `q` vertices with `c` connected components,
 
-$$
+```math
 h=q-c,
-$$
+```
 
 so
 
-$$
+```math
 d_H=q-h=c.
-$$
+```
 
 This immediately gives DC.2-DC.3.
 
@@ -132,17 +132,17 @@ This immediately gives DC.2-DC.3.
 
 CY gives
 
-$$
+```math
 d_H=1,
 \qquad
 s_Z=1.
-$$
+```
 
 DC now says the full diameter graph is necessarily one connected spanning tree with
 
-$$
+```math
 h=q-1.
-$$
+```
 
 Therefore all conclusions in the existing TC report that were stated under its connected-tree hypothesis apply to the complete `d_H=1` branch.
 
@@ -151,9 +151,10 @@ In particular:
 1. every full-H diameter edge separates the tree into two connected vertex sets;
 2. each side occupies at most two cyclic intervals on the force-hull order;
 3. LF gives at least
-   $$
+   ```math
    s_Z+1=2
-   $$
+   
+   ```
    full diameter edges joining nonleaf vertices;
 4. whenever such a nonleaf tree edge has zero coefficient at an endpoint of the one-dimensional normalized KKT segment, its two tree-cut sides must both occupy exactly two cyclic intervals;
 5. the four resulting boundary contact-force vectors satisfy the TC reciprocal parallelogram relation.
@@ -168,21 +169,21 @@ This makes TC + WT the exact finite endpoint for `d_H=1`.
 
 CY gives
 
-$$
+```math
 d_H=2,
 \qquad
 s_Z=0,
 \qquad
 h=q-2.
-$$
+```
 
 DC excludes an odd-unicyclic component. Hence `H` is a forest. The forest identity then forces exactly two connected components.
 
 The mixed active graph has
 
-$$
+```math
 |C|+|H|=q+(q-2)=2q-2
-$$
+```
 
 rows and, by CY/CG, rigidity rank `2q-3` with one full-support dependence. Thus it is a rigidity circuit at the realized configuration.
 

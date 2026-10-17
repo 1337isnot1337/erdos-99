@@ -18,33 +18,33 @@
 
 The low-budget weighted-overlap theorem LB154 proves
 
-$$
+```math
 g:=\eta_{grid}=0.00154.
-$$
+```
 
 The audited Section-171 orbit/detour envelope can therefore be rerun with the stronger
 train input.  An exact endpoint certificate gives
 
-$$
+```math
 \boxed{
 \liminf {q-k\over D}
 \ge t_{154}:={4\over9}(\pi+\sqrt{\Delta_2})+0.0016103
 =1.821123837979444\ldots .
 }
 \tag{L154.1}
-$$
+```
 
 where
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3}.
-$$
+```
 
 The corresponding feasible-detour right endpoint is
 
-$$
+```math
 \delta_{154}=0.002853175.
-$$
+```
 
 The scalar endpoint equation has its first numerical zero at
 `0.00161035372745...`, so the certified offset remains safely below the method root.
@@ -56,71 +56,71 @@ The scalar endpoint equation has its first numerical zero at
 Let `T` be the complete stopped-train count, `T_R` the non-singleton rhombic-train
 count, `S=T-T_R` the singleton count, and
 
-$$
+```math
 \rho_{rec}=2S,
 \qquad
 \sigma_R=2T_R-4\sqrt{R_4}.
-$$
+```
 
 Exactly,
 
-$$
+```math
 \rho_{rec}+\sigma_R=2T-4\sqrt{R_4}.
-$$
+```
 
 LB154 gives
 
-$$
+```math
 {T-q/2\over D}\ge2\sqrt{\Delta_2}+g-o(1),
-$$
+```
 
 while `q>=q-k` and `sqrt(R_4)/D -> sqrt(Delta_2)`.  Therefore
 
-$$
+```math
 \boxed{
 \liminf {\rho_{rec}+\sigma_R\over D}
 \ge L_{154}:=t_{154}+2g
 =1.824203837979444\ldots .
 }
 \tag{L154.2}
-$$
+```
 
 After subsequence extraction, at least one of
 
-$$
+```math
 \boxed{
 S\ge0.456050959494861\ldots D-o(D)
 }
 \tag{L154.3}
-$$
+```
 
 or
 
-$$
+```math
 \boxed{
 \sigma_R\ge0.912101918989722\ldots D-o(D)
 }
 \tag{L154.4}
-$$
+```
 
 holds.
 
 On the rhombic branch,
 
-$$
+```math
 M_R={\sigma_R\over8}
 \left(4\sqrt{R_4}+{\sigma_R\over2}\right)
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{
 \liminf {M_R\over D^2}
 \ge0.486298788723598\ldots .
 }
 \tag{L154.5}
-$$
+```
 
 ---
 
@@ -129,41 +129,41 @@ $$
 The exact post-endpoint identity contains `(rho_rec+sigma_R)/10` as a nonnegative
 first-order term.  Hence
 
-$$
+```math
 \boxed{
 \liminf\mu_D
 \ge1.819982567979444\ldots .
 }
 \tag{L154.6}
-$$
+```
 
 The bridge-subtracted form becomes
 
-$$
+```math
 \boxed{
 \sigma_R+2S_E+(b-P_F)
 \ge(L_{154}-o(1))D.
 }
 \tag{L154.7}
-$$
+```
 
 The exact detour-free elimination is algebraic in `g` and gives
 
-$$
+```math
 {\sigma_R+2S_E\over D}
 \ge
 c_{DF,154}+{5\over2}{k\over D}+{Q-f\over D}-o(1),
-$$
+```
 
 with
 
-$$
+```math
 \boxed{
 c_{DF,154}
 =\sqrt{\Delta_2}-\frac\pi4+\frac52g
 =0.170764643466509\ldots .}
 \tag{L154.8}
-$$
+```
 
 ---
 
@@ -171,99 +171,99 @@ $$
 
 The all-train ledger gives
 
-$$
+```math
 \boxed{
 \liminf {f\over D}
 \ge\sqrt{\Delta_2}-\frac\pi4+\frac g2
 =0.167684643466509\ldots .
 }
 \tag{L154.9}
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 \liminf {4f+Q\over D}
 \ge0.838423217332545\ldots .
 }
 \tag{L154.10}
-$$
+```
 
 For
 
-$$
+```math
 J=(b-P_F)+(Q+4f)=2T-P_F,
-$$
+```
 
 use `q>=q-k`, LB154, and `P_F/D->pi`:
 
-$$
+```math
 \boxed{
 \liminf {J\over D}
 \ge j_{154}:=t_{154}+4\sqrt{\Delta_2}+2g-\pi
 =2.491862411845481\ldots .
 }
 \tag{L154.11}
-$$
+```
 
 The exact chamber decomposition `Sigma_ch=J+a+L_add+R_F` gives the same raw chamber
 floor.
 
 The exact identity
 
-$$
+```math
 H={J\over2}+(q-k)-{P_F\over2}
-$$
+```
 
 gives
 
-$$
+```math
 \boxed{
 \liminf {H\over D}
 \ge1.496258717107288\ldots .
 }
 \tag{L154.12}
-$$
+```
 
 Consequently
 
-$$
+```math
 \boxed{
 \liminf {A_{ch}-a_0Z_{ch}\over D}
 \ge0.647899029824413\ldots,
 }
 \tag{L154.13}
-$$
+```
 
-$$
+```math
 \boxed{
 \liminf {\Delta_2D^2-R_4\over D}
 \ge0.748129358553644\ldots,
 }
 \tag{L154.14}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \liminf {m-R_4\over D}
 \ge2.318925685348541\ldots .
 }
 \tag{L154.15}
-$$
+```
 
 The corrected genuine residual allowance moves down to
 
-$$
+```math
 \boxed{
 \limsup {R_F+\Sigma_{ext}\over D}
 \le {3\pi\over2}-t_{154}
 =2.891265142405245\ldots .
 }
 \tag{L154.16}
-$$
+```
 
 These remain compatible; raw chamber slack cannot be compared directly with the full
 source because most of it is mandatory boundary credit.
@@ -275,24 +275,24 @@ source because most of it is mandatory boundary credit.
 On the existing `R_F=o(D)` low-`t` branch, the inherited flat-center population theorem
 uses the same atomic gain and therefore gives
 
-$$
+```math
 {V_{flat}\over D}
 \ge
 \pi+2\sqrt{\Delta_2}+g-{5t\over2}
 +\delta+{\kappa\over2}-o(1).
-$$
+```
 
 On the rhombic side of (L154.3)--(L154.4),
 
-$$
+```math
 {T_R\over D}
 \ge2\sqrt{\Delta_2}+{t+2g\over4}-o(1).
-$$
+```
 
 Combining this with the total-train ceiling and the finite loaded-center payment
 `2|L|<=S` gives
 
-$$
+```math
 \boxed{
 { |U_3|+|U_4|\over D}
 \ge
@@ -300,38 +300,38 @@ $$
 +2\delta+{\kappa\over2}-o(1).
 }
 \tag{L154.17}
-$$
+```
 
 At `t=t154`, `delta=kappa=0`,
 
-$$
+```math
 \boxed{
 \liminf {|U_3|+|U_4|\over D}
 \ge0.264070017621667\ldots .
 }
 \tag{L154.18}
-$$
+```
 
 Thus the existing unloaded-center fork improves to either
 
-$$
+```math
 \boxed{
 \liminf {|H_4|\over D}
 \ge0.0293411130690741\ldots
 }
 \tag{L154.19}
-$$
+```
 
 for pairwise endpoint-disjoint near-active hidden pairs with inherited `o(D)` total
 activation gap, or
 
-$$
+```math
 \boxed{
 \liminf {|E_3|\over D}
 \ge0.0660175044054168\ldots
 }
 \tag{L154.20}
-$$
+```
 
 for distinct positive contacts with inherited `o(D^2)` total normalized KKT weight.
 

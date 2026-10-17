@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_madd_endpoint_paired_pocket_exclusion_2026-09-10.md) · source SHA-256 `55e3d43d49016e396ffe6d3d06837d7d2096a3238e1f5ffa4d23f728e17b0648`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-FD19EF43CE1C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_madd_endpoint_paired_pocket_exclusion_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=6ad172faef837097f34afc137332d543867bdf17; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -20,22 +22,22 @@
 
 The MADD endpoint
 
-$$
+```math
 \lambda_{MADD}=0.5997852332423223371\ldots
-$$
+```
 
 is not asymptotically attainable. Therefore there is an absolute, presently
 nonexplicit constant `eta_pair>0` such that every sufficiently large audited post-ZF
 survivor satisfies
 
-$$
+```math
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
 \lambda_{MADD}+\eta_{pair}.
 }
 \tag{PP.1}
-$$
+```
 
 The new mechanism is geometric. Equality in MA's perimeter lower bound forces the
 normalized force hull to have exactly one missing projective circle interval. Its lift
@@ -51,14 +53,14 @@ capable of carrying the MADD attachment-cell gap.
 
 Assume for contradiction that an unbounded audited survivor sequence satisfies
 
-$$
+```math
 \frac{e_{BB}+2s_C}{D}\to\lambda_{MADD}.
 \tag{1.1}
-$$
+```
 
 The MADD strict minimization gives
 
-$$
+```math
 \boxed{
 \frac hD\to y_*,
 \qquad
@@ -67,40 +69,40 @@ $$
 \frac{P_F}{D}\to p_0(y_*),
 }
 \tag{1.2}
-$$
+```
 
 where
 
-$$
+```math
 p_0(y)=y+2\cos(y/2),
 \qquad
 u(y):=2y-p_0(y)=y-2\cos(y/2),
 \tag{1.3}
-$$
+```
 
 and
 
-$$
+```math
 y_*=1.4937010344306311087\ldots .
-$$
+```
 
 Also
 
-$$
+```math
 \frac{e_{BB}}D\to\lambda_{MADD},
 \qquad
 \frac{s_C}{D}\to0.
 \tag{1.4}
-$$
+```
 
 Put
 
-$$
+```math
 M:=\pi-y_*\in(0,\pi),
 \qquad
 c:=\sin(M/2)=\cos(y_*/2)>0.
 \tag{1.5}
-$$
+```
 
 Numerically `c=0.7338320459683585...`, but only positivity is needed.
 
@@ -114,79 +116,80 @@ of the radius-`1/2` circle.
 
 Let the complementary open intervals on the projective circle have lengths
 
-$$
+```math
 \alpha_1,\alpha_2,\ldots,
 \qquad
 X:=\sum_i\alpha_i\le M.
 \tag{2.1}
-$$
+```
 
 MA gives the exact perimeter formula
 
-$$
+```math
 \operatorname{per}K_\infty
 =
 \pi-X+2\sum_i\sin(\alpha_i/2).
 \tag{2.2}
-$$
+```
 
 For positive `a,b` with `a+b<pi`,
 
-$$
+```math
 \sin(a/2)+\sin(b/2)-\sin((a+b)/2)>0.
 \tag{2.3}
-$$
+```
 
 Therefore repeated merging of positive gaps strictly decreases the sine sum. Hence
 
-$$
+```math
 \sum_i\sin(\alpha_i/2)
 \ge\sin(X/2),
 \tag{2.4}
-$$
+```
 
 with equality only when at most one projective gap has positive length.
 
 Define
 
-$$
+```math
 f(X)=\pi-X+2\sin(X/2).
-$$
+```
 
 For `X>0`,
 
-$$
+```math
 f'(X)=-1+\cos(X/2)<0.
 \tag{2.5}
-$$
+```
 
 Since `X<=M`, (2.2)--(2.5) give
 
-$$
+```math
 \operatorname{per}K_\infty
 \ge f(X)\ge f(M)=p_0(y_*).
 \tag{2.6}
-$$
+```
 
 But (1.2) says the perimeter is exactly `p_0(y_*)`. Thus both inequalities in
 (2.6) are equalities. Consequently
 
-$$
+```math
 \boxed{
 X=M,
 \qquad
 \text{there is exactly one projective missing interval of length }M.
 }
 \tag{2.7}
+```
 
 Its ordinary-circle lift consists of two antipodal missing arcs, each of angular length
 `M`. The boundary of `K_infty` therefore contains two antipodal straight chord sides,
 each of length
 
-\[
+```math
 \boxed{c=\sin(M/2)=\cos(y_*/2).}
 \tag{2.8}
-$$
+```
 
 ---
 
@@ -208,27 +211,27 @@ normalized length tends to the chord length `c`.
 Doing this for the antipodal missing arc gives two distinct force-hull sides
 `s_1,s_2` with
 
-$$
+```math
 \boxed{
 \frac{s_1}{D}\to c,
 \qquad
 \frac{s_2}{D}\to c.
 }
 \tag{3.1}
-$$
+```
 
 Since `cD->infinity`, neither side is a unit contact for large `D`. OP therefore assigns
 each side to a distinct outer pocket. Let the old-contact chain lengths of those two
 pockets be `ell_1,ell_2`. The triangle inequality gives
 
-$$
+```math
 \boxed{
 \frac{\ell_1}{D}\ge c-o(1),
 \qquad
 \frac{\ell_2}{D}\ge c-o(1).
 }
 \tag{3.2}
-$$
+```
 
 This is the extra information absent from the scalar DD bound.
 
@@ -238,42 +241,42 @@ This is the extra information absent from the scalar DD bound.
 
 Let all outer-pocket chain lengths be
 
-$$
+```math
 \ell_1,\ell_2,\ell_3,\ldots
-$$
+```
 
 and put
 
-$$
+```math
 L:=\sum_j\ell_j.
-$$
+```
 
 MADD has
 
-$$
+```math
 \frac{Q+2s_Z}{D}\to0.
-$$
+```
 
 The PC/DD chain identity used in MADD therefore gives
 
-$$
+```math
 \boxed{
 \limsup\frac LD\le2y_*.
 }
 \tag{4.1}
-$$
+```
 
 For nonnegative numbers with total at most `L`, two specified entries at least `cD-o(D)`,
 and `L/D<=2y_*+o(1)`, convexity of `x^3` gives
 
-$$
+```math
 \boxed{
 \limsup\frac{\sum_j\ell_j^3}{D^3}
 \le
 (2y_*-c)^3+c^3.
 }
 \tag{4.2}
-$$
+```
 
 Indeed, after fixing one required entry at its minimum `c`, transferring every
 remaining amount into a single other entry can only increase the sum of cubes. The
@@ -281,11 +284,11 @@ maximal limiting vector is therefore `(2y_*-c,c,0,...)` up to permutation.
 
 The inequality is strictly stronger than the scalar DD relaxation because
 
-$$
+```math
 (2y_*)^3-igl[(2y_*-c)^3+c^3\bigr]
 =6y_*c(2y_*-c)>0.
 \tag{4.3}
-$$
+```
 
 ---
 
@@ -293,45 +296,45 @@ $$
 
 DD's pocketwise estimate is
 
-$$
+```math
 \operatorname{area}(P_j)
 \le
 \frac1{\sqrt6}\ell_j^{3/2}\sqrt{u_j},
 \qquad
 u_j:=\ell_j-s_j\ge0.
 \tag{5.1}
-$$
+```
 
 Cauchy--Schwarz gives the pre-relaxation global form
 
-$$
+```math
 H_{out}
 \le
 \frac1{\sqrt6}
 \left(\sum_j\ell_j^3\right)^{1/2}
 \left(\sum_j\nu_j\right)^{1/2}.
 \tag{5.2}
-$$
+```
 
 OD gives
 
-$$
+```math
 \sum_j\nu_j=b-P_F.
-$$
+```
 
 From ZE and (1.2),
 
-$$
+```math
 \frac{b-P_F}{D}
 \to
 2y_*-p_0(y_*)
 =\nu_*:=\nu(y_*)>0.
 \tag{5.3}
-$$
+```
 
 Combining (4.2), (5.2), and (5.3),
 
-$$
+```math
 \boxed{
 \limsup\frac{H_{out}}{D^2}
 \le
@@ -341,11 +344,11 @@ H_{pair}:=
 \sqrt{\nu_*}.
 }
 \tag{5.4}
-$$
+```
 
 By (4.3),
 
-$$
+```math
 \boxed{
 H_{pair}
 <
@@ -353,16 +356,16 @@ H_{pair}
 =:H_{scalar}.
 }
 \tag{5.5}
-$$
+```
 
 The right side is exactly the scalar DD capacity used to define the MADD crossover.
 
 Also `Q=o(D)` at the endpoint, so CC gives
 
-$$
+```math
 \boxed{A_{exc}=o(D^2).}
 \tag{5.6}
-$$
+```
 
 ---
 
@@ -371,50 +374,50 @@ $$
 MADD defines `lambda_MADD` by simultaneous equality of the MA/JC threshold and the
 scalar DD threshold. Therefore
 
-$$
+```math
 \boxed{
 \Phi(y_*)-rac\pi4\lambda_{MADD}^2
 =H_{scalar}.
 }
 \tag{6.1}
-$$
+```
 
 GU gives the left side as a lower bound for `G/D^2`. Thus
 
-$$
+```math
 \liminf\frac G{D^2}
 \ge H_{scalar}.
 \tag{6.2}
-$$
+```
 
 On the other hand ZG/GU gives
 
-$$
+```math
 G\le H_{out}+A_{exc}+O(D).
-$$
+```
 
 Using (5.4) and (5.6),
 
-$$
+```math
 \limsup\frac G{D^2}
 \le H_{pair}
 <H_{scalar},
 \tag{6.3}
-$$
+```
 
 contradicting (6.2). Hence no MADD endpoint sequence exists. `square`
 
 For scale only,
 
-$$
+```math
 H_{scalar}=0.3401417038662788\ldots,
-$$
+```
 
 while
 
-$$
+```math
 H_{pair}=0.2266716299622857\ldots .
-$$
+```
 
 The normalized cavity loss is about `0.11347`, so the contradiction is not a fragile
 decimal effect.
@@ -471,12 +474,12 @@ cubic-moment capacity problem with **paired lower bounds**.
 
 A sharp theorem of the form
 
-$$
+```math
 \sum_P\ell_P^3
 \le
 \mathcal M(L;\alpha_1,\alpha_2,\ldots)
 < L^3
-$$
+```
 
 combined with the exact circle formulas for perimeter and area would turn PP's
 nonexplicit gap into a substantially stronger explicit feasible-region bound. The

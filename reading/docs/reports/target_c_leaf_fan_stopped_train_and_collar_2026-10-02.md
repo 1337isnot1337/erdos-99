@@ -27,9 +27,9 @@ Use the canonical contact-minimal, then diameter-pair-minimal triangle-free
 global source, with `D>=9`, `C=C_*`, and `H=H_*`. Retain every source point,
 including all contact isolates. Write
 
-$$
+```math
 H=(B,E_H),\quad q=|B|,\quad h=|E_H|,\quad \nu=\nu(H).
-$$
+```
 
 The canonical dependencies are:
 
@@ -51,17 +51,17 @@ The canonical dependencies are:
 
 Here `f` is the number of bounded nonquadrilateral contact faces and
 
-$$
+```math
 Q=\sum_{F\text{ bounded non4}}(\deg F-4),\qquad
 Q=f+g_F,\qquad f\le Q.
-$$
+```
 
 Degrees and endpoints are occurrence-counted. In particular
 
-$$
+```math
 \sum_{F\text{ non4}}\deg F=Q+4f.
 \tag{1}
-$$
+```
 
 The current-main reports `target_c_leaf_fan_outerwalk_fork_2026-10-02.md`
 and `target_c_leaf_fan_inward_spoke_kkt_fork_2026-10-02.md` are unpromoted.
@@ -73,10 +73,10 @@ their broader continuation prose is not a theorem premise.
 **Theorem LF.1.** Let a diameter-`D` planar source contain distinct `a,p,q`
 with `|p-a|=|q-a|=D` and `|p-q|=1`. Put
 
-$$
+```math
 m={p+q\over2},\quad
 R=|m-a|=\sqrt{D^2-1/4},\quad u={m-a\over R}.
-$$
+```
 
 Then `a` uniquely minimizes `u dot x` over the whole source. If `pq` is a
 convex-hull side, it is the only hull side parallel to `pq`.
@@ -85,10 +85,10 @@ convex-hull side, it is the only hull side parallel to `pq`.
 `p=Ru+t/2`, `q=Ru-t/2`. Every source point `x` satisfies both upper bounds
 `|x-p|^2,|x-q|^2<=D^2=R^2+1/4`. Taking their maximum gives
 
-$$
+```math
 |x|^2-2R(u\cdot x)+|t\cdot x|\le0.
 \tag{2}
-$$
+```
 
 If `x!=a`, this forces `u dot x>0`. Thus the opposite supporting face is
 the singleton `{a}`. The supporting face on the `pq` side has direction
@@ -124,10 +124,10 @@ nonleaf-to-nonleaf edges, and let `mu` be their matching number. Their graph
 is a disjoint union of paths, so `m<=2mu`. The `K` component edges augment
 that matching, so `mu+K<=nu`. Consequently
 
-$$
+```math
 P=h-m-K\ge h-2\nu,\qquad S\ge h-3\nu.
 \tag{3}
-$$
+```
 
 In the cyclic case, if no leaves exist the desired `S>=h-3nu` follows
 from `h=2nu+1` and `nu>=1`. If leaves exist on an odd cycle of length `r`,
@@ -138,33 +138,33 @@ one leaf edge and a matching on the cycle with its carrier deleted give
 At most `x_B` distinguished intervals are bad, because each costs at least
 one in `x_B=sum(ell_i-1)`. Hence
 
-$$
+```math
 \boxed{A\ge\max\{0,h-3\nu-x_B\}.}
 \tag{4}
-$$
+```
 
 ### 3.2 Every good fan contact starts a different stopped train
 
 **Theorem LF.2.** In the canonical source,
 
-$$
+```math
 \boxed{A\le2x_B+Q+4f.}
 \tag{5}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{h\le3\nu+3x_B+Q+4f\le3\nu+3x_B+5Q,}
 \tag{6}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{5Q\ge\lceil D\rceil-3\nu-3x_B.}
 \tag{7}
-$$
+```
 
 **Proof.** Each good fan contact is a unit hull side and therefore an
 outer endpoint incidence of a stopped rhombus train. Every contact edge on
@@ -189,10 +189,10 @@ proves (5). Combine (4) and (5), then `f<=Q`, then `h>=ceil(D)`, to obtain
 
 **Corollary LF.3.** A canonical survivor sequence cannot simultaneously have
 
-$$
+```math
 \nu=o(D),\qquad x_B=o(D),\qquad Q=o(D).
 \tag{8}
-$$
+```
 
 In fact, the first two hypotheses force `liminf Q/D>=1/5`.
 This excludes the formerly compatible low-matching, low-outer-excess branch
@@ -202,10 +202,10 @@ The result applies beyond the square-root regime and needs no multiplier floor.
 There is also a finite rank-to-face transport. The exact train count
 `T=h-s_Z+2f`, together with the `A` distinct trains in (4), gives
 
-$$
+```math
 \boxed{s_Z\le2f+3\nu+x_B.}
 \tag{9}
-$$
+```
 
 Thus large mixed surplus under small `nu,x_B` requires many actual exceptional
 faces. It cannot be housed solely in a dimension count without face support.
@@ -216,10 +216,10 @@ faces. It cannot be housed solely in a dimension count without face support.
 vertices `p_-,p_+`, common carrier `a`, and a third contact neighbor `z`.
 For `D>=2`,
 
-$$
+```math
 z\in\operatorname{int}\operatorname{conv}\{a,p_-,p_+\}.
 \tag{10}
-$$
+```
 
 In the canonical source, `z` is unloaded and has contact degree three, four,
 or five. In particular the spoke reaches the actual unloaded contact graph,
@@ -227,25 +227,25 @@ rather than another diameter terminal.
 
 **Proof.** Set `p=0`, `a=-Du`, and choose a tangent `t` so that
 
-$$
+```math
 p_\pm=-\epsilon u\pm\tau t,\quad
 \epsilon={1\over2D},\quad \tau=\sqrt{1-\epsilon^2}.
-$$
+```
 
 Write `z=-ru-st`. The source upper bound `|z-a|<=D` gives `r>=epsilon`;
 separation from both fan neighbors gives
 
-$$
+```math
 \epsilon r+\tau |s|\le1/2.
-$$
+```
 
 Together with `r^2+s^2=1`, these imply
 
-$$
+```math
 r\ge{\epsilon+\sqrt3\tau\over2}>\epsilon,\qquad
 |s|\le{\tau-\sqrt3\epsilon\over2}<1/2.
 \tag{11}
-$$
+```
 
 For example, in angular coordinates the two neighboring contact directions
 are at `+/-acos(epsilon)` from `u`; the third direction must remain inside
@@ -253,18 +253,18 @@ their common 60-degree exclusion cone. This yields (11) directly.
 
 At coordinate `-ru`, the triangle in (10) has half-width
 
-$$
+```math
 \tau{D-r\over D-\epsilon}.
-$$
+```
 
 Here `r<=1<D`. For `D>=2`,
 
-$$
+```math
 \tau\ge{\sqrt{15}\over4},\qquad
 {D-1\over D-1/(2D)}\ge{4\over7},\qquad
 \tau{D-r\over D-\epsilon}\ge{\sqrt{15}\over7}>1/2.
 \tag{12}
-$$
+```
 
 The middle inequality is exactly
 `2(3D-1)(D-2)>=0`. Equations (11)--(12) put `z` strictly inside the triangle.
@@ -280,12 +280,12 @@ positive equilibrium at every internal upper and lower vertex.
 
 Let
 
-$$
+```math
 \theta=2\arcsin{1\over2D},\qquad
 p_i=D(\cos(i\theta),\sin(i\theta)),\qquad
 z_i=p_i-(1,0),\quad -k\le i\le k.
 \tag{13}
-$$
+```
 
 Take `k theta` small, for example the exact packets below. Every consecutive
 quad `p_i,p_{i+1},z_{i+1},z_i` is a strict convex unit rhombus. The full set
@@ -294,36 +294,36 @@ exactly `D`, attained by every `ap_i`.
 
 Set
 
-$$
+```math
 d_i=p_{i+1}-p_i=(-\sin t_i,\cos t_i),\quad
 t_i=(i+1/2)\theta,
-$$
+```
 
 and choose positive `K,L` with `L>K max_i sec(t_i)`. Give upper fan edges
 multiplier `lambda_i=L-K sec(t_i)`, lower fan edges multiplier
 `mu_i=K sec(t_i)`, interior spokes multiplier
 
-$$
+```math
 \gamma_i=K(\tan t_i-\tan t_{i-1})>0,
 \tag{14}
-$$
+```
 
 and upper diameter edges multiplier `beta_i=L/D^2>0`.
 
 The lower vertex equations hold exactly because
 
-$$
+```math
 \mu_{i-1}d_{i-1}-\mu_i d_i=\gamma_i(1,0).
 \tag{15}
-$$
+```
 
 The upper equations then follow from
 
-$$
+```math
 \lambda_{i-1}d_{i-1}-\lambda_i d_i+\gamma_i(1,0)
 =L(d_{i-1}-d_i)={L\over D^2}p_i.
 \tag{16}
-$$
+```
 
 Thus internal upper vertices have exactly the fan-leaf/inward-spoke equilibrium;
 internal lower vertices are positive harmonic degree-three vertices.
@@ -331,12 +331,12 @@ The sum `lambda_i+mu_i=L` is exactly constant despite upper stress variation.
 
 For rational certificates take an integer `s>=8`, put
 
-$$
+```math
 t={1\over4s},\quad
 c={1-t^2\over1+t^2},\quad r={2t\over1+t^2},\quad
 D={1\over2r},\quad k=\lfloor s/8\rfloor.
 \tag{17}
-$$
+```
 
 Then `cos(theta/2)=c`, `sin(theta/2)=r`, and the full rotation matrix,
 all coordinates, and all weights with `K=1,L=2` are rational.
@@ -379,12 +379,12 @@ actual trains, with ordered directions `alpha_i=alpha_0+i theta`,
 `0<=i<g`, and `W=(g-1)theta<=pi/12`. If `R` other actual trains each cross
 all `g` fan trains, the `gR` distinct crossing rhombi satisfy
 
-$$
+```math
 \boxed{\sum_{\text{these rhombi}}(\operatorname{area}-\sqrt3/2)
 \ge {R\theta g(g-1)\over8}
 \ge {Rg(g-1)\over8D}.}
 \tag{18}
-$$
+```
 
 **Proof.** A crossing partner direction has a lift `phi` in
 `(alpha_0+W+pi/3,alpha_0+2pi/3)`, since all its acute projective
@@ -394,10 +394,10 @@ that interval; its minimum over the closed interval is at an endpoint.
 The endpoint values coincide by reversing `i`. Therefore its total excess
 is at least
 
-$$
+```math
 \sum_{i=0}^{g-1}\bigl[\sin(\pi/3+i\theta)-\sqrt3/2\bigr].
 \tag{19}
-$$
+```
 
 For `0<=x<=pi/12`,
 `sin(pi/3+x)-sqrt3/2>=x/4`, since its derivative is at least
@@ -424,14 +424,14 @@ full-core ledger. That combination alone does not contradict it. The following
 explicit family witnesses algebraic compatibility, not an embedded source.
 For an integer `N>=15` divisible by five, set
 
-$$
+```math
 \begin{aligned}
 h&=5N^2,&d_H&=\nu=N,&q&=h+N,&x_B&=0,\\
 f&=Q=N^2-N/5,&s_Z&=2f,&c_I&=1,&e_{BB}&=q,\\
 s_C&=N+2f-3,&k&=N+2f,&D&=q/\pi+1/2.
 \end{aligned}
 \tag{20}
-$$
+```
 
 The identities `h=q-d_H`, `2h-q=x_B+Q+2s_Z`,
 `q-x_B=Q+2k`, and `c_I+e_BB+s_C=q-2+k` all hold exactly.
@@ -442,11 +442,11 @@ incidence-count level: `A=Q+4f`. Also `s_Z=2f`, so (9) is satisfied.
 
 In the limit, `h/D->pi`, `nu=Theta(sqrt(D))`, and
 
-$$
+```math
 {e_{BB}+2s_C-3k\over D}
 ={h-2f-6\over D}\longrightarrow{3\pi\over5}>1.88.
 \tag{21}
-$$
+```
 
 Thus this family lies above the canonical train-coupled floor
 `1.6375621841815...` and its excluded exact endpoint. The hull perimeter
@@ -499,9 +499,9 @@ the source normal form, Woodall, the full train-end charge, or global optimality
 
 The durable new obstruction is physical:
 
-$$
+```math
 \nu=o(D),\ x_B=o(D)\quad\Longrightarrow\quad Q\ge(1/5-o(1))D.
-$$
+```
 
 One closing obligation is now to rule out this **actual stopped-fan-train
 endpoint population** in a completed canonical source, or turn it into a

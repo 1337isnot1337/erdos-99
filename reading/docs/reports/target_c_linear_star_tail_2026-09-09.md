@@ -33,21 +33,21 @@ This does not close the phase, because no lower bound on individual positive `be
 
 Let
 
-$$
+```math
 \delta_D:=2\arcsin\frac1{2D}.
 \tag{1.1}
-$$
+```
 
 If `by` and `bz` are two distinct diameter edges incident to the same vertex `b`, unit separation of `y,z` gives
 
-$$
+```math
 \angle ybz\ge\delta_D.
 \tag{1.2}
-$$
+```
 
 C18 gives the global-minimizer upper cone width
 
-$$
+```math
 \Theta_D:=
 \min\left\{
 \frac\pi3,
@@ -56,7 +56,7 @@ D(5\pi/6-\sqrt3)+4\pi/3+\pi/(2D)
 }{D+1}
 \right\}.
 \tag{1.3}
-$$
+```
 
 All diameter partners of a fixed vertex lie in one angular interval of width at most `Theta_D`.
 
@@ -64,74 +64,74 @@ All diameter partners of a fixed vertex lie in one angular interval of width at 
 
 For every diameter vertex `b`,
 
-$$
+```math
 \boxed{
 \deg_H(b)
 \le
 1+\left\lfloor\frac{\Theta_D}{\delta_D}\right\rfloor.
 }
 \tag{ZV.1}
-$$
+```
 
 ### Proof
 
 Order the `deg_H(b)` rays from `b` to its diameter partners inside the C18 cone. Consecutive rays differ by at least `delta_D` by (1.2). Therefore
 
-$$
+```math
 (\deg_H(b)-1)\delta_D\le\Theta_D.
-$$
+```
 
 Taking the integer part proves ZV.1. QED.
 
 Since
 
-$$
+```math
 D\delta_D\to1,
 \qquad
 \Theta_D\to
 \theta_\infty:=\frac{5\pi}{6}-\sqrt3
 =0.8859430704\ldots,
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{
 \limsup\frac{\Delta(H)}D
 \le
 \theta_\infty.
 }
 \tag{ZV.2}
-$$
+```
 
 ## 2. Every star misses linearly many actual diameter edges
 
 PR #112 proves for every unbounded post-ZF survivor
 
-$$
+```math
 \liminf\frac hD
 \ge
 \tau_*:=1.4781702664\ldots,
 \tag{2.1}
-$$
+```
 
 where `tau_*` is the unique root of
 
-$$
+```math
 \tau=2\cos(\tau/2).
-$$
+```
 
 For a vertex `z`, let
 
-$$
+```math
 H_{\bar z}:=\{e\in H:z\notin e\}.
-$$
+```
 
 Then
 
-$$
+```math
 |H_{\bar z}|=h-\deg_H(z).
-$$
+```
 
 Combine (2.1) and ZV.2.
 
@@ -139,7 +139,7 @@ Combine (2.1) and ZV.2.
 
 Uniformly over the choice of star center,
 
-$$
+```math
 \boxed{
 \liminf
 \frac{\min_z|H_{\bar z}|}{D}
@@ -148,19 +148,19 @@ $$
 =0.5922271960\ldots .
 }
 \tag{ZV.3}
-$$
+```
 
 Thus no post-ZF survivor is even combinatorially close to one diameter star: every vertex misses at least `(0.592227-o(1))D` actual diameter edges.
 
 If in addition `n-v=o(D^2)`, PR #112 gives
 
-$$
+```math
 \liminf h/D\ge1.6542536485\ldots,
-$$
+```
 
 and hence the dense-core tail strengthens to
 
-$$
+```math
 \boxed{
 \liminf
 \frac{\min_z|H_{\bar z}|}{D}
@@ -168,54 +168,54 @@ $$
 0.7683105781\ldots .
 }
 \tag{ZV.4}
-$$
+```
 
 ## 3. Interaction with C66 mechanical stress concentration
 
 For the relative-interior normalized KKT stress, C66 defines
 
-$$
+```math
 \varepsilon:=\sum_{b<k}c_{bk}-1
 =\frac12\operatorname{tr}(\Lambda-L_H)>0
-$$
+```
 
 and proves that there is a diameter vertex `z` such that
 
-$$
+```math
 \sum_{e\ni z}\beta_e
 \ge
 1-C_{66}D\varepsilon,
 \tag{3.1}
-$$
+```
 
 where `C_66=2\pi/\kappa_0` is the absolute constant in C66.21.
 
 Since the total diameter weight is one,
 
-$$
+```math
 \boxed{
 \sum_{e\in H_{\bar z}}\beta_e
 \le C_{66}D\varepsilon.
 }
 \tag{ZV.5}
-$$
+```
 
 Combine this with ZV.3. In the near-zero phase
 
-$$
+```math
 D\varepsilon\to0,
-$$
+```
 
 there are at least `(0.592227-o(1))D` actual off-star edges but their **total** normalized KKT weight tends to zero. In particular their mean coefficient satisfies
 
-$$
+```math
 \boxed{
 \frac{1}{|H_{\bar z}|}
 \sum_{e\in H_{\bar z}}\beta_e
 =O(\varepsilon)=o(1/D).
 }
 \tag{ZV.6}
-$$
+```
 
 This is stronger than saying merely that the full diameter graph is not a star.
 
@@ -223,10 +223,10 @@ This is stronger than saying merely that the full diameter graph is not a star.
 
 Relative-interior support only guarantees
 
-$$
+```math
 \beta_e>0
 \quad(e\in H).
-$$
+```
 
 It gives no configuration-uniform lower bound on a positive coefficient. A growing KKT polytope can therefore, in principle, contain a full-support stress with linearly many coefficients much smaller than `1/D`.
 
@@ -256,9 +256,9 @@ A proof must use more than positivity of KKT coefficients. Natural remaining inp
 
 The direct Level I endpoint remains
 
-$$
+```math
 \boxed{b+Q>2h.}
-$$
+```
 
 The response-side alternative is now narrower:
 

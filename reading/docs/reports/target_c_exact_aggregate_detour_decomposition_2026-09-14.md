@@ -26,26 +26,26 @@ canonical full-core route.
 
 For a canonical full-core Type-II representative, Sections 122–123 give
 
-$$
+```math
  \liminf_{D\to\infty}{1\over D}
  \sum_r(L_r+P_{{\rm exc},r}-2d_r)
  \ge {\pi\over2}(2-\sqrt3),
  \tag{AD.1}
-$$
+```
 
 and
 
-$$
+```math
  \sum_rP_{{\rm exc},r}\le10(e_{BB}-k),
  \qquad k=d_H+s_Z.
  \tag{AD.2}
-$$
+```
 
 The residual was recorded as the aggregate outer detour
 
-$$
+```math
  S_{\rm out}:=\sum_r(L_r-2d_r).
-$$
+```
 
 The candidate chain for this run was
 
@@ -78,67 +78,67 @@ post-ZF C-II representative. For each component use the canonical notation
 
 Put
 
-$$
+```math
  a:=\sum_ra_r,\quad C_{\rm loc}:=\sum_rc_r,
  \quad Q_{\rm loc}:=\sum_rQ_r,\quad F_{\rm loc}:=\sum_rf_r.
-$$
+```
 
 Let `d_tile` be the exact polygon-dissection deficit from Section 123, and let
 `e_BB`, `k`, `s_C`, and `q` have their canonical loaded-hull meanings. Then the
 following are finite identities, with all outer walks occurrence-counted:
 
-$$
+```math
 \boxed{
  S_{\rm out}
  =2\sum_r(a_r-d_r)+2(e_{BB}-k)-2d_{\rm tile}
   -2C_{\rm loc}-Q_{\rm loc}.
 }
 \tag{AD.3}
-$$
+```
 
 After adding the actual exceptional-face perimeters,
 
-$$
+```math
 \boxed{
  \sum_r(L_r+P_{{\rm exc},r}-2d_r)
  =2\sum_r(a_r-d_r)+2(e_{BB}-k)-2d_{\rm tile}
   -2C_{\rm loc}+4F_{\rm loc}.
 }
 \tag{AD.4}
-$$
+```
 
 The degree defect `Q_loc` cancels exactly in (AD.4). Equivalently, with
 
-$$
+```math
  \mu_DD:=e_{BB}+2s_C-3k,
-$$
+```
 
 the detour itself is
 
-$$
+```math
 \boxed{
  S_{\rm out}
  =6q-12-2\mu_DD-4k-2\sum_rd_r
   -4d_{\rm tile}-2C_{\rm loc}-Q_{\rm loc}.
 }
 \tag{AD.5}
-$$
+```
 
 In particular, the exact safe upper bound
 
-$$
+```math
  S_{\rm out}
  \le 2\sum_r(a_r-d_r)+2(e_{BB}-k)
  \tag{AD.6}
-$$
+```
 
 and the equivalent bound
 
-$$
+```math
  S_{\rm out}
  \le 6q-12-2\mu_DD-4k-2\sum_rd_r
  \tag{AD.7}
-$$
+```
 
 follow by discarding only nonnegative terms.
 
@@ -159,33 +159,33 @@ globally injective or simple.
 
 Canonical Section 82 gives, for each induced harmonic graph,
 
-$$
+```math
  L_r+Q_r=4a_r-6-2s_r-2c_r.
  \tag{AD.8}
-$$
+```
 
 Define the nonnegative augmented-cell defect
 
-$$
+```math
  \eta_r:=a_r-3-s_r\ge0.
  \tag{AD.9}
-$$
+```
 
 Substituting `s_r=a_r-3-eta_r` into (AD.8) gives
 
-$$
+```math
  L_r=2a_r+2\eta_r-2c_r-Q_r.
  \tag{AD.10}
-$$
+```
 
 Subtracting `2d_r` and summing yields
 
-$$
+```math
  S_{\rm out}
  =2\sum_r(a_r-d_r)+2\sum_r\eta_r
   -2C_{\rm loc}-Q_{\rm loc}.
  \tag{AD.11}
-$$
+```
 
 No asymptotic estimate or boundary simplification is used here.
 
@@ -193,26 +193,26 @@ No asymptotic estimate or boundary simplification is used here.
 
 Section 123 proves locally, after adding the attachment polygon sides,
 
-$$
+```math
  \eta_r={a_r-T_r+Q_r^+\over2},
  \tag{AD.12}
-$$
+```
 
 where `T_r` is the number of augmented triangular faces and `Q_r^+` is the
 augmented degree-above-four defect. Its exact global dissection identity is
 
-$$
+```math
  e_{BB}-k
  ={1\over2}\sum_r(a_r-T_r+Q_r^+)+d_{\rm tile}.
  \tag{AD.13}
-$$
+```
 
 Therefore
 
-$$
+```math
  \sum_r\eta_r=e_{BB}-k-d_{\rm tile}.
  \tag{AD.14}
-$$
+```
 
 Insert (AD.14) into (AD.11). This proves (AD.3).
 
@@ -223,18 +223,18 @@ claim that a loaded-loaded edge belongs to at most one attachment cell is needed
 
 By definition of `Q_r` and `f_r`,
 
-$$
+```math
  P_{{\rm exc},r}=4f_r+Q_r.
  \tag{AD.15}
-$$
+```
 
 Adding (AD.15) to the componentwise version of (AD.10) gives
 
-$$
+```math
  L_r+P_{{\rm exc},r}-2d_r
  =2(a_r-d_r)+2\eta_r-2c_r+4f_r.
  \tag{AD.16}
-$$
+```
 
 Summation and (AD.14) prove (AD.4). This is why replacing `P_exc` by a coarse
 bound such as `5Q_r` before summation loses an exact cancellation.
@@ -243,48 +243,48 @@ bound such as `5Q_r` before summation loses an exact cancellation.
 
 Section 123 defines
 
-$$
+```math
  d_{\rm tile}=q-2-a+2c_I,
  \tag{AD.17}
-$$
+```
 
 where `c_I` is the number of unloaded positive-contact components. Hence
 
-$$
+```math
  a=q-2+2c_I-d_{\rm tile}.
  \tag{AD.18}
-$$
+```
 
 The pinned ledger is
 
-$$
+```math
  c_I+e_{BB}+s_C=q-2+k.
  \tag{AD.19}
-$$
+```
 
 Eliminating `c_I` in (AD.18) gives
 
-$$
+```math
  a=3q-6+2k-2e_{BB}-2s_C-d_{\rm tile}.
  \tag{AD.20}
-$$
+```
 
 Use `sum_r(a_r-d_r)=a-sum_r d_r` in (AD.3) and substitute (AD.20). The result is
 
-$$
+```math
  S_{\rm out}
  =6q-12+2k-2e_{BB}-4s_C-2\sum_rd_r
   -4d_{\rm tile}-2C_{\rm loc}-Q_{\rm loc}.
  \tag{AD.21}
-$$
+```
 
 Since
 
-$$
+```math
  -2\mu_DD-4k
  =-2(e_{BB}+2s_C-3k)-4k
  =2k-2e_{BB}-4s_C,
-$$
+```
 
 (AD.21) is exactly (AD.5).
 
@@ -293,7 +293,7 @@ $$
 The canonical endpoint can now be restated without treating the outer detour as an
 independent route quantity:
 
-$$
+```math
  \liminf {1\over D}
  \left(
  2\sum_r(a_r-d_r)+2(e_{BB}-k)-2d_{\rm tile}
@@ -302,7 +302,7 @@ $$
  \right)
  \ge {\pi\over2}(2-\sqrt3).
  \tag{AD.22}
-$$
+```
 
 This is an exact source-level tradeoff between attachment geometry and the global
 loaded-hull currency. It identifies three favorable deficits (`d_tile`, `C_loc`,

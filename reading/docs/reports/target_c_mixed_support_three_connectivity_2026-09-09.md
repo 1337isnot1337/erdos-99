@@ -17,18 +17,18 @@
 
 Let
 
-$$
+```math
 G_M:=(V,C\cup H)
-$$
+```
 
 be the mixed equality-bar support on the nonisolated post-C65 core: `C` is the full unit-contact graph on the core and `H` is the full actual diameter graph.  ZF proves the planar bar framework `(G_M,p)` is infinitesimally rigid.  U1 proves the same equality-bar framework is universally rigid.
 
 These two facts together force a graph-theoretic property not previously recorded in the Target C stack:
 
-$$
+```math
 \boxed{G_M\text{ is 3-vertex-connected}.}
 \tag{MC.1}
-$$
+```
 
 The proof is elementary.  A cut vertex gives an infinitesimal rotation of one side.  A two-vertex cut gives a finite reflection of one side across the separator line. Universal rigidity says the reflection can be congruent only if one whole side is collinear with the separator; but such a collinear side then has a transverse infinitesimal flex, contradicting ZF.
 
@@ -42,10 +42,10 @@ Work in the sufficiently large two-dimensional C-II regime.  Distinct source poi
 
 ZF gives
 
-$$
+```math
 \operatorname{rank}R(G_M,p)=2v-3.
 \tag{MC.2}
-$$
+```
 
 Thus `(G_M,p)` has no non-Euclidean infinitesimal flex.
 
@@ -61,43 +61,43 @@ The force hull is two-dimensional, so `p(V)` affinely spans the plane.
 
 Assume a vertex `u` is a cut vertex of `G_M`.  Let `S` be the vertex set of one connected component of
 
-$$
+```math
 G_M-u.
-$$
+```
 
 Because deletion of `u` leaves at least two components, there is at least one vertex outside `S union {u}`.
 
 Define a planar velocity field by
 
-$$
+```math
 v_x=
 \begin{cases}
 J(p_x-p_u),&x\in S,\\
 0,&x\notin S,
 \end{cases}
 \tag{MC.3}
-$$
+```
 
 where `J` is rotation by `pi/2`.
 
 For an edge `xy` with `x,y in S`,
 
-$$
+```math
 v_x-v_y=J(p_x-p_y),
-$$
+```
 
 so
 
-$$
+```math
 (p_x-p_y)\cdot(v_x-v_y)=0.
-$$
+```
 
 For an edge `xu` with `x in S`,
 
-$$
+```math
 (p_x-p_u)\cdot v_x
 =(p_x-p_u)\cdot J(p_x-p_u)=0.
-$$
+```
 
 There are no edges from `S` to the rest of the graph except through `u`.  All remaining edges have both endpoint velocities zero.  Hence MC.3 is an infinitesimal flex of the whole mixed framework.
 
@@ -105,10 +105,10 @@ It is nonzero because `S` contains a vertex distinct from `u`.  It is not an inf
 
 This contradicts ZF. Therefore:
 
-$$
+```math
 \boxed{G_M\text{ is 2-connected}.}
 \tag{MC.4}
-$$
+```
 
 ---
 
@@ -116,17 +116,17 @@ $$
 
 Assume for contradiction that distinct vertices `u,v` form a two-vertex cut. Since the framework is 2-connected, `u` and `v` are distinct positions and every component of
 
-$$
+```math
 G_M-\{u,v\}
-$$
+```
 
 has at least one vertex.
 
 Let
 
-$$
+```math
 \ell:=\operatorname{aff}\{p_u,p_v\}
-$$
+```
 
 be the separator line.  Let `S` be one component of `G_M-{u,v}`.
 
@@ -141,9 +141,9 @@ Every mixed edge retains its length:
 
 Thus
 
-$$
+```math
 (G_M,p^S)
-$$
+```
 
 has exactly the same bar lengths as `(G_M,p)`.
 
@@ -157,17 +157,17 @@ Suppose two distinct components `S,T` of `G_M-{u,v}` each contain a point off `e
 
 The configurations `p` and `p^S` agree pointwise on
 
-$$
+```math
 u,\quad v,
-$$
+```
 
 and on any chosen off-line vertex `t in T`.
 
 The three points
 
-$$
+```math
 p_u,p_v,p_t
-$$
+```
 
 are noncollinear.  A Euclidean isometry fixing three noncollinear planar points is the identity.  Hence any congruence from `p` to `p^S` fixing the vertex labels would have to be the identity on the whole configuration.
 
@@ -189,22 +189,22 @@ Let `T` be a component of `G_M-{u,v}` whose vertices all lie on `ell`.
 
 Choose a unit vector `n` perpendicular to `ell`.  Define velocities
 
-$$
+```math
 w_x=
 \begin{cases}
 \eta_x n,&x\in T,\\
 0,&x\notin T,
 \end{cases}
 \tag{MC.5}
-$$
+```
 
 where the scalars `eta_x` are not all zero.  For example, take one `eta_x=1` and all other `eta` values zero.
 
 Every edge having an endpoint in `T` joins two points on the line `ell`: internal edges of `T` do so by collinearity, and any edge leaving `T` can only end at `u` or `v`, which also lie on `ell`.  Hence every such edge vector is parallel to `ell`, while every velocity difference in MC.5 is perpendicular to `ell`. Therefore
 
-$$
+```math
 (p_i-p_j)\cdot(w_i-w_j)=0
-$$
+```
 
 for every edge incident to `T`.  All other edges have zero endpoint velocities.
 
@@ -226,24 +226,24 @@ Combining with MC.4 proves MC.1.
 
 Every vertex has mixed degree at least three:
 
-$$
+```math
 \boxed{
 \deg_C(x)+\deg_H(x)\ge3
 \qquad(x\in V).
 }
 \tag{MC.6}
-$$
+```
 
 This follows from 3-connectivity.
 
 For an unloaded vertex, `deg_H=0`, so this is consistent with the existing contact-degree lower bounds. For a loaded diameter endpoint `b`, it says
 
-$$
+```math
 \boxed{
 \deg_C(b)\ge3-\deg_H(b).
 }
 \tag{MC.7}
-$$
+```
 
 In particular every diameter-graph leaf has at least two contact neighbors.
 
@@ -265,15 +265,15 @@ This is a useful replacement for several future case splits involving mixed-supp
 
 Now additionally assume
 
-$$
+```math
 s_Z=0.
-$$
+```
 
 ZF gives mixed rigidity rank `2v-3`, while
 
-$$
+```math
 e+h=2v-2.
-$$
+```
 
 Hence the mixed row-dependence space is one-dimensional.  The relative-interior KKT self-stress has every actual contact and every actual diameter coefficient nonzero, so its row dependence has support on **all** edges.
 
@@ -283,24 +283,24 @@ If any proper edge subset were dependent, it would support another nonzero row d
 
 When `s_Z=0`, the mixed graph `G_M=C union H` is a 3-connected circuit of the planar rigidity matroid:
 
-$$
+```math
 \boxed{
 |E(G_M)|=2v-2,
 }
 \tag{MC.8}
-$$
+```
 
 and every proper edge subset is independent in the actual planar rigidity matrix.
 
 Equivalently, for every proper vertex subset `W` with `|W|>=2`,
 
-$$
+```math
 \boxed{
 |E(G_M[W])|
 \le2|W|-3.
 }
 \tag{MC.9}
-$$
+```
 
 Moreover deleting **any one** mixed edge leaves exactly `2v-3` independent rows, hence an infinitesimally rigid planar bar framework.
 

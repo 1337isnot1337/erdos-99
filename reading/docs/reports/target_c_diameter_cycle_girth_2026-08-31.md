@@ -18,7 +18,7 @@ This note turns the Reuleaux-container idea into a theorem about the full diamet
 
 If the diameter graph contains an odd cycle of length `q`, then the cycle vertices are exactly the vertices of a Reuleaux `q`-gon of width `D`, and the **entire source configuration** lies in that Reuleaux polygon.  Firey--Sallee maximal-area theory for Reuleaux polygons then combines with the global minimum-diameter packing inequalities to force an explicit lower bound on `q`:
 
-$$
+```math
 \boxed{
 q>
 \frac{\pi D}{\sqrt{12(2D+1)}}
@@ -26,7 +26,7 @@ q>
 \frac{\pi}{\sqrt{24}}\sqrt D.
 }
 \tag{C17.1}
-$$
+```
 
 Since `D(n)\asymp\sqrt n`, any diameter cycle in a global minimizer has length `\Omega(n^{1/4})`.  In particular no fixed odd diameter cycle can occur for arbitrarily large `n`.
 
@@ -38,10 +38,10 @@ No triangle-free hypothesis is used.
 
 Let `A` be a finite planar set of diameter `D`, and suppose its diameter graph contains a cycle
 
-$$
+```math
 \Gamma=(v_1,v_2,\ldots,v_q,v_1).
 \tag{C17.2}
-$$
+```
 
 The classical planar diameter-graph theorem says every cycle in a planar diameter graph is odd.  Hence `q` is odd.
 
@@ -65,12 +65,12 @@ Apply this after scaling `V(\Gamma)` by `D`.  There is a unique Reuleaux `q`-gon
 
 ### Theorem C17.2 (cycle trapping)
 
-$$
+```math
 \boxed{
 A\subseteq R_\Gamma.
 }
 \tag{C17.3}
-$$
+```
 
 #### Proof
 
@@ -86,65 +86,65 @@ For odd `q\ge3`, Firey and Sallee prove that among all Reuleaux `q`-gons of fixe
 
 For width one its area is
 
-$$
+```math
 \boxed{
 A_q
 =
 \frac12\left(\pi-q\tan\frac{\pi}{2q}\right).
 }
 \tag{C17.4}
-$$
+```
 
 Thus for width `D`,
 
-$$
+```math
 \operatorname{area}(R_\Gamma)
 \le
 A_qD^2.
 \tag{C17.5}
-$$
+```
 
 Every body of constant width `D` has perimeter `\pi D` by Barbier's theorem.  Steiner's formula therefore gives
 
-$$
+```math
 \boxed{
 \operatorname{area}(R_\Gamma+B(0,1/2))
 \le
 A_qD^2+\frac\pi2D+\frac\pi4.
 }
 \tag{C17.6}
-$$
+```
 
 Since `conv A\subseteq R_\Gamma`, the same expression is an upper bound for the source parallel body.
 
 Define the regular-Reuleaux area deficit from the disk of width one:
 
-$$
+```math
 \delta_q
 :=
 \frac\pi4-A_q
 =
 \frac q2\left(\tan\frac{\pi}{2q}-\frac{\pi}{2q}\right)>0.
 \tag{C17.7}
-$$
+```
 
 For `x\ge0`,
 
-$$
+```math
 \tan x-x\ge\frac{x^3}{3}.
 \tag{C17.8}
-$$
+```
 
 Indeed, the difference has derivative `\tan^2x-x^2\ge0` and vanishes at zero.  Consequently
 
-$$
+```math
 \boxed{
 \delta_q
 \ge
 \frac{\pi^3}{48q^2}.
 }
 \tag{C17.9}
-$$
+```
 
 ---
 
@@ -154,85 +154,85 @@ Now let `A` be a global `n`-point minimizer and put `D=D(n)`.
 
 The canonical Fejes Toth finite-packing inequality gives
 
-$$
+```math
 \operatorname{area}(\operatorname{conv}A+B(0,1/2))
 \ge
 \frac{\sqrt3}{2}n.
 \tag{C17.10}
-$$
+```
 
 The canonical strict upper bound
 
-$$
+```math
 D^2<\frac n{\Delta_2},
 \qquad
 \Delta_2=\frac\pi{2\sqrt3},
 \tag{C17.11}
-$$
+```
 
 implies
 
-$$
+```math
 \boxed{
 \operatorname{area}(\operatorname{conv}A+B(0,1/2))
 >
 \frac\pi4D^2.
 }
 \tag{C17.12}
-$$
+```
 
 If the diameter graph contains a `q`-cycle, combine (C17.6) and (C17.12):
 
-$$
+```math
 \frac\pi4D^2
 <
 A_qD^2+\frac\pi2D+\frac\pi4.
-$$
+```
 
 Equivalently,
 
-$$
+```math
 \delta_qD^2
 <
 \frac\pi2D+\frac\pi4.
 \tag{C17.13}
-$$
+```
 
 Using (C17.9),
 
-$$
+```math
 \frac{\pi^3D^2}{48q^2}
 <
 \frac\pi2D+\frac\pi4.
-$$
+```
 
 After simplification,
 
-$$
+```math
 \pi^2D^2<12q^2(2D+1),
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 q>
 \frac{\pi D}{\sqrt{12(2D+1)}}.
 }
 \tag{C17.14}
-$$
+```
 
 This proves the announced bound. `\square`
 
 As `D\to\infty`,
 
-$$
+```math
 q>
 \left(\frac\pi{\sqrt{24}}+o(1)\right)\sqrt D
 =
 (0.64127\ldots+o(1))\sqrt D.
 \tag{C17.15}
-$$
+```
 
 Since the canonical diameter estimates give `D(n)=\Theta(\sqrt n)`, any diameter cycle in global minimizers has length `\Omega(n^{1/4})`.
 
@@ -256,19 +256,19 @@ Hence a KKT boundary-shear obstruction cannot be supported on a fixed-size cycli
 
 There exist absolute constants `\eta>0` and `n_1` such that for every global minimizer with `n\ge n_1`, whenever
 
-$$
+```math
 |b-y|=|b-z|=D(n),
 \qquad y\ne z,
-$$
+```
 
 the angle at `b` satisfies
 
-$$
+```math
 \boxed{
 \angle ybz\le\frac\pi3-\eta.
 }
 \tag{C17.16}
-$$
+```
 
 #### Proof sketch
 

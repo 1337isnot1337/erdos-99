@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_dominant_oo_pair_staircase_2026-09-15.md) · source SHA-256 `df1f92eedf61d6f6e4e20b8bdb2ff55dff3d3c3b73bb22ac70200c5aec6ec33b`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 13 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "0f095a9ea083cc32b0727aead0a5a2a549d5ff37", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_dominant_oo_pair_staircase_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d3d8f51b3a2a2a67c462876231d2bbbdb156724594d88e83f4a5f4f588720aa5"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -20,31 +22,34 @@ Near the actual low-`t` frontier the same bootstrap is much stronger.
 Let `P_OO^dom` denote the retained pair weight of dominant-window complete trains whose
 two terminal occurrences are both selected outer occurrences. Then
 
-$$
+```math
 \boxed{
 t\le1.844
 \Longrightarrow
 {P_{OO}^{dom}\over D}>0.29-o(1),
 }
 \tag{OOS.1}
+```
 
-\[
+```math
 \boxed{
 t\le1.850
 \Longrightarrow
 {P_{OO}^{dom}\over D}>0.21-o(1),
 }
 \tag{OOS.2}
+```
 
 and
 
-\[
+```math
 \boxed{
 t\le1.855
 \Longrightarrow
 {P_{OO}^{dom}\over D}>0.14-o(1).
 }
 \tag{OOS.3}
+```
 
 Together with the existing `t<=1.860` theorem, the useful staircase is therefore
 
@@ -58,9 +63,9 @@ t <= 1.860  -> dominant retained O-O pair weight > 0.074 D
 Since the new residual-coupled floor gives `t>=1.84355`, the first line is nonvacuous:
 any survivor in the narrow live interval
 
-\[
+```math
 1.84355\lesssim t\le1.844
-$$
+```
 
 has a very large dominant O--O family.
 
@@ -70,71 +75,74 @@ has a very large dominant O--O family.
 
 Use
 
-$$
+```math
 t={q-k\over D},
 \qquad
 \kappa={k\over D},
 \qquad
 \delta={d_{out}\over D},
-$$
+```
 
-$$
+```math
 U={9t\over2}-2\pi-2\delta-\kappa/2,
-$$
+```
 
 and the hostile-audited matched floor
 
-$$
+```math
 U\ge C_{76}:=2\sqrt{\Delta_2}+0.0076,
 \qquad
 \Delta_2={\pi\over2\sqrt3}.
-$$
+```
 
 Let
 
-$$
+```math
 F(z)=z-6\sin(z/6),
 \qquad
 m_2(U)={U+\sqrt{8\Delta_2-U^2}\over2},
 \qquad
 r_2(U)=U-m_2(U).
-$$
+```
 
 The audited retained-mass and complement-incidence inequalities give
 
-$$
+```math
 z+p\ge\pi-U-{t+\kappa\over2}+m_2(U)-o(1),
 \tag{OOS.4}
+```
 
-\[
+```math
 p\le
 {\delta-F(z)+r_2(U)^2\over2(1-\delta)}+o(1),
 \tag{OOS.5}
+```
 
 and
 
-\[
+```math
 \delta\ge F(z)-o(1).
 \tag{OOS.6}
+```
 
 Fix an upper endpoint `T`.  Put
 
-\[
+```math
 U_{max}(T)={9T\over2}-2\pi,
 \qquad
 \delta_{max}(T)={U_{max}(T)-C_{76}\over2}.
-$$
+```
 
 If `z>=z_j-o(1)`, then (OOS.6) gives
 
-$$
+```math
 U\le U_j:=U_{max}(T)-2F(z_j)+o(1).
-$$
+```
 
 Since `m_2'(U)<0` and `r_2'(U)>0` on every interval used below, (OOS.4)--(OOS.5) give
 the explicit lower bootstrap
 
-$$
+```math
 z\ge
 \pi-U_j-{T\over2}+m_2(U_j)
 -
@@ -142,6 +150,7 @@ z\ge
  \over2(1-\delta_{max}(T))}
 -o(1).
 \tag{OOS.7}
+```
 
 The companion exact-rational verifier applies this same map at each of the three
 staircase endpoints.
@@ -157,24 +166,26 @@ with two selected outer terminals.
 A train with fewer than two selected terminals contributes at most one unit of retained
 occurrence weight; a train with two contributes at most two.  Hence, finitely,
 
-\[
+```math
 z_DD\le M_D+P_D.
 \tag{OOS.8}
+```
 
 After passing to the train-measure limit and then shrinking the windows,
 
-\[
+```math
 {M_D\over D}\le A+o(1)\le C+o(1)\le U+o(1),
-$$
+```
 
 where `A` is total exact atomic train mass and `C=(T-q/2)/D`. Therefore
 
-$$
+```math
 \boxed{
 {P_{OO}^{dom}\over D}
 \ge z-U-o(1).
 }
 \tag{OOS.9}
+```
 
 No lower bound on dominant orbit mass is misused as an upper bound here.
 
@@ -203,11 +214,11 @@ It certifies
 
 and then
 
-\[
+```math
 U<1.915950,
 \qquad
 z-U>0.29105>0.29.
-$$
+```
 
 This proves (OOS.1).
 
@@ -224,11 +235,11 @@ It certifies
 
 and then
 
-$$
+```math
 U<1.949093,
 \qquad
 z-U>0.21100>0.21.
-$$
+```
 
 This proves (OOS.2).
 
@@ -245,11 +256,11 @@ It certifies
 
 and then
 
-$$
+```math
 U<1.976678,
 \qquad
 z-U>0.14302>0.14.
-$$
+```
 
 This proves (OOS.3).
 
@@ -263,15 +274,16 @@ claimed round constants is a floating-point boundary.
 The dominant exact orbit has at most three projective phase classes.  Partition the
 retained O--O pair weight among them:
 
-$$
+```math
 P_{OO}^{dom}=P_1+P_2+P_3.
-$$
+```
 
 Hence one class satisfies
 
-\[
+```math
 P_i\ge {P_{OO}^{dom}\over3}.
 \tag{OOS.10}
+```
 
 Retained pair weight per complete train is at most one, so the actual train count in
 that class is at least `P_iD-o(D)`.  Trains in one shrinking exact phase window do not
@@ -280,27 +292,30 @@ in the audited complement-bracing theorem applies to them as one noncrossing fam
 
 Consequently the staircase implies the following concrete same-phase families:
 
-\[
+```math
 \boxed{
 t\le1.844
 \Longrightarrow
 \text{some exact phase has }>0.0966D-o(D)
 \text{ dominant O--O trains},}
 \tag{OOS.11}
+```
 
-\[
+```math
 \boxed{
 t\le1.850
 \Longrightarrow
 \text{some exact phase has }>0.0700D-o(D),}
 \tag{OOS.12}
+```
 
-\[
+```math
 \boxed{
 t\le1.855
 \Longrightarrow
 \text{some exact phase has }>0.0466D-o(D).}
 \tag{OOS.13}
+```
 
 The existing broad `0.0740D` total-pair theorem similarly gives a same-phase family
 `>0.0246D-o(D)` throughout `t<=1.860`.

@@ -75,13 +75,13 @@ arcs, with `lambda_A(z)=0, lambda_A(a)=m`. Require `m>=7` and at least one
 actual diameter endpoint on **each** arc in every internal layer
 `j=1,...,m-1`. Let `lambda_B in {0,...,n}` satisfy
 
-$$
+```math
 0<\lambda_A(x)<m\Longrightarrow
 \begin{cases}
 \lambda_B(x)=0,&x\in L,\\
 \lambda_B(x)=n,&x\in U.
 \end{cases} \tag{H1}
-$$
+```
 
 These are the exact rail/four-host consequences, without identifying endpoints
 with contact ports. In particular no value of `lambda_B` on extreme A-layers
@@ -92,44 +92,44 @@ endpoints `L_a,L_b on L`, `U_a,U_b on U`, with A-layers `r-1,r` on each arc.
 The chords `L_a L_b` and `U_a U_b` must be sides of the full source hull, of
 length at most `3/2`. Require actual diameter vectors
 
-$$
+```math
 R_p=U_b-L_a=d_pu+q_pe,\qquad
 R_n=L_b-U_a=d_nu-q_ne,\qquad q_p,q_n>0. \tag{H2}
-$$
+```
 
 Let actual diameter coefficients `beta_h>=0` sum to one. Choose positive
 subcoefficients `w_p<=beta_p,w_n<=beta_n` with
 
-$$
+```math
 w_pq_p=w_nq_n,\qquad
 M=w_p+w_n,\qquad
 \rho={w_pd_p+w_nd_n\over M}<1,\qquad d_p+d_n\ge0. \tag{H3}
-$$
+```
 
 For any one B-cut `k`, orient its crossing diameters from B-layer below `k`
 to B-layer at least `k`, and assume the **actual cut equation**
 
-$$
+```math
 F_k=\sum_{h\text{ crossing }k}\beta_h\widehat R_h=C_kv,
 \quad C_k\ge0,\quad v=cu+se,\quad c\ne0,\ s>0,
 \quad c^2+s^2=1. \tag{H4}
-$$
+```
 
 It is enough to assume (H4) algebraically for the finite bound. In its source
 application it follows by summing vertex KKT when every unit contact crossed
 by this actual train cut has oriented vector `v`. Define
 
-$$
+```math
 Q=\sqrt{D^2-9/4},\qquad T={s\over|c|},\qquad
 \ell={ (m+1)^2\over256(D+m+1)}. \tag{1}
-$$
+```
 
 Let `N` be the total coefficient of A-pivot-empty diameters and put
 
-$$
+```math
 A_r=\sum_{h\text{ crossing pivot }r}\beta_h
              (R_h^{A}\cdot u), \tag{2}
-$$
+```
 
 where `R_h^A` points from the lower A-layer to the higher one. If the pivot
 is an actual unit-contact train cut, (2) equals its total contact stress by
@@ -139,10 +139,10 @@ the exact KKT cut law. No full-source stress kernel is assumed.
 
 The weak-pair estimates give
 
-$$
+```math
 {1\over2}-{1\over4D^2}<d_p,d_n<{3\over2},\qquad
 q_p,q_n\ge Q. \tag{3}
-$$
+```
 
 Here is the additional positivity check, since absolute component bounds alone
 would not suffice. In the earlier report's angle notation
@@ -150,10 +150,10 @@ would not suffice. In the earlier report's angle notation
 `kappa=sqrt(1-1/(4D^2))`, one has
 `D cos A>=kappa`, `cos t>kappa`, `D|sin t|<1/2`, and
 
-$$
+```math
 d_p=D\cos A\cos t-D\sin A\sin t,\qquad
 d_n=D\cos A\cos t+D\sin A\sin t.
-$$
+```
 
 Each first term exceeds `kappa^2`, and each absolute second term is below
 `1/2`. This proves the lower bound in (3). The upper bound and the `Q`
@@ -166,9 +166,9 @@ each hull arc.
 
 Every actual diameter crosses the A-pivot except possibly
 
-$$
+```math
 L_aU_a\quad\text{or}\quad L_bU_b, \tag{4}
-$$
+```
 
 and both exceptions cannot occur. Every pivot-crossing diameter has strictly
 positive A-oriented `u` component. A possible exceptional diameter crosses
@@ -226,9 +226,9 @@ estimate or lower bound on an individual multiplier was used.
 
 A strip of width `t` contains at most
 
-$$
+```math
 4\sqrt{2Dt}+4t+4 \tag{5}
-$$
+```
 
 actual diameter endpoints of a unit-separated diameter-`D` source. A set of
 `b>=8` such endpoints therefore has minimum strip width strictly exceeding
@@ -240,9 +240,9 @@ endpoint `q` at coordinate `x`, interpolate `q_*` between extrema with the
 same coordinate, so `|q-q_*|<=t`. For a diameter partner `p` of `q`, the
 weighted-square identity and the two partner distance bounds give
 
-$$
+```math
 (x-x_0)(x_1-x)\le D^2-|p-q_*|^2\le2Dt.
-$$
+```
 
 Consequently all projections lie within `sqrt(2Dt)` of one of the two
 extrema. Each group lies in a rectangle of sides `sqrt(2Dt),t`. All its
@@ -255,9 +255,9 @@ This proves (5). Substitution of `t<=b^2/[256(D+b)]` into (5) gives at most
 Now let `xy` be **any** diameter with A-levels `0,m`, oriented from `x` to
 `y`. Its axial component obeys
 
-$$
+```math
 \boxed{(y-x)\cdot u>\ell.} \tag{6}
-$$
+```
 
 Choose an endpoint on each internal layer `j<r` on the arc containing `x`,
 and on each layer `j>=r` on the arc containing `y`. (If `x` or `y` is a
@@ -274,21 +274,21 @@ strip of actual endpoints, not a strip of lattice markers or contact ports.
 
 Under (H1)--(H4),
 
-$$
+```math
 \boxed{
 A_r\ \ge\
 {Q M+(Q-\tfrac32 T)N\over T+D/\ell}.
 } \tag{7}
-$$
+```
 
 Proof. Put `b_-` equal to the total coefficient of negative-transverse
 B-crossing diameters. Lemmas 1--3 and positivity of all pivot axial
 components give
 
-$$
+```math
 b_-\le A_r/\ell,
 \qquad |F_k\cdot u|\le A_r+\tfrac32 N. \tag{8}
-$$
+```
 
 The first inequality uses actual full-span support. The second allows either
 B orientation for a pivot-crossing bar and bounds its absolute longitudinal
@@ -300,23 +300,23 @@ The selected weak coefficients contribute at least `QM` to `F_k.e`; the
 possible empty side contributes at least `QN`. All negative rows together
 contribute no less than `-Db_-`; other rows contribute nonnegatively. Hence
 
-$$
+```math
 Q(M+N)\le F_k\cdot e+Db_-
 =T|F_k\cdot u|+Db_-
 \le(T+D/\ell)A_r+\tfrac32 TN.
-$$
+```
 
 This is (7). It does not count a reused correcting diameter once per B-cut.
 
 For a sequence with `m>=c_*D+o(D)`, `M+N>=delta>0`, and projective shore
 angle `pi/3+O(1/D)`, (7) gives
 
-$$
+```math
 \boxed{
 \liminf {A_r\over D}\ge
 {\delta\over\sqrt3+256(1+c_*)/c_*^2}>0.
 } \tag{8a}
-$$
+```
 
 Thus a source theorem giving `A_r=o(D)` in this weak-mass subbranch would
 exclude it. Neither such a bound nor a universal floor on `M` is claimed.
@@ -354,10 +354,10 @@ diameter. Nothing here constructs triangle-free global minimizers.
 
 Set `t=1/k` and
 
-$$
+```math
 D={(1+t^2)^2\over4t},\quad d=1-t^2,\quad q=D-2t,\quad a=2t,
 \quad o=(0,a/2).
-$$
+```
 
 Use the four weak points
 `(-d/2,-q/2),(d/2,q/2),(-d/2,q/2+a),(d/2,-q/2+a)` and reference
@@ -368,18 +368,18 @@ length `D`. These identities are exact.
 Add two asymmetric antipodal circle diameters through `o`, with A-oriented
 unit vectors
 
-$$
+```math
 n_1=(24/25,7/25),\qquad n_2=(5/13,-12/13).
-$$
+```
 
 Give both the same adjacent pivot support as the weak bars. With
 `f_1=(12/13)/(7/25+12/13)` and `f_2=1-f_1`, their A transverse forces
 cancel. Their B-oriented export per unit mass is `D(x_p,y_p)` with
 
-$$
+```math
 x_p=f_1(24/25)-f_2(5/13),\qquad
 y_p=f_1(7/25)+f_2(12/13).
-$$
+```
 
 For `v=(8/17,15/17)=(c,s)` one has `s x_p-c y_p>0`. Mix these bars with
 the weak balanced pair; both packets lie at the same short A interval.
@@ -396,10 +396,10 @@ empty side, equal `eta=1/(100D^4)`.
 Write their total mass as `b_0` and B-resultant as `(X_0,Y_0)`. Choose
 strong packet mass `G` and weak mass `M` by
 
-$$
+```math
 G={c q(1-b_0)+cY_0-sX_0\over D(sx_p-cy_p)+cq},
 \qquad M=1-b_0-G. \tag{9}
-$$
+```
 
 Then the B-cut equation is exact. Each A tree edge has balanced transverse
 flow, so all A equations are exact as well. The pivot includes the strong
@@ -417,10 +417,10 @@ hypotheses from numerical survival.
 
 Suppose an actual source contains an affine unit grid
 
-$$
+```math
 p_{ij}=p_{00}+iu+jv,\quad0\le i\le a,\quad0\le j\le b,
 \quad\pi/3<\angle(u,v)<2\pi/3.
-$$
+```
 
 At each interior vertex, the four displayed grid neighbors exhaust its unit
 contacts. Indeed a new unit neighbor would need angular separation at least
@@ -429,10 +429,10 @@ than `2pi/3`, so such a neighbor cannot fit. The vertex is inside the convex
 hull of its displayed neighbors and cannot be an actual diameter endpoint.
 Its KKT contact equilibrium is consequently
 
-$$
+```math
 (\alpha_{i,j}^{u}-\alpha_{i-1,j}^{u})u+
 (\alpha_{i,j}^{v}-\alpha_{i,j-1}^{v})v=0.
-$$
+```
 
 Linear independence gives equality of the two opposite u stresses and of
 the two opposite v stresses. Thus on each internal grid row `j=1,...,b-1`,
@@ -440,29 +440,29 @@ all `a` u-edge coefficients are one common value `g_j`.
 
 If actual A-train cuts cross the consecutive u columns of this grid, let
 
-$$
+```math
 G_A=\sum_{j=1}^{b-1}g_j.
-$$
+```
 
 Every such cut has **exactly the same** internal-grid stress contribution
 `G_A`. Its full cut reaction satisfies
 
-$$
+```math
 C_i=G_A+E_i,\quad E_i\ge0,
 \qquad G_A\le\min_i C_i,
 \qquad aG_A\le D^2. \tag{10}
-$$
+```
 
 The remainder `E_i` includes all other crossed contacts, including boundary
 grid rows. The trace bound in (10) counts actual distinct grid edges.
 
 Combining (7) with (10), a pivot column of such a grid obeys
 
-$$
+```math
 \boxed{
 E_r\ge {QM+(Q-\tfrac32 T)N\over T+D/\ell}-\min_i C_i.
 } \tag{11}
-$$
+```
 
 The exact difference `C_i-C_j=E_i-E_j` also holds. If the axial pressure is
 concentrated as in Section 6 and an actual grid is realized, its common grid

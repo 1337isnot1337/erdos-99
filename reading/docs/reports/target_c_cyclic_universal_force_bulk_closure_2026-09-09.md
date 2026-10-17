@@ -22,23 +22,23 @@ The earlier FB theorem proved `A subset F` only in the exact Reinhardt `d_H=0` p
 
 For every sufficiently large cyclic primitive survivor, in any of the three phases
 
-$$
+```math
 d_H\in\{0,1,2\},
-$$
+```
 
 the complete source lies in the force hull:
 
-$$
+```math
 \boxed{A\subseteq F.}
 \tag{UFB.1}
-$$
+```
 
 Since the `q` force-hull vertices are source points,
 
-$$
+```math
 \boxed{F=\operatorname{conv}A.}
 \tag{UFB.2}
-$$
+```
 
 Thus the cyclic endpoint has **no external force-hull rattlers in any topology phase**. All contact-isolated source points are strictly interior to the same convex equilateral `q`-gon whose boundary is the positive contact cycle.
 
@@ -53,56 +53,56 @@ The proof compares two incompatible scales:
 
 Let
 
-$$
+```math
 x\in A\setminus F
-$$
+```
 
 and put
 
-$$
+```math
 h:=\operatorname{dist}(x,F)>0.
-$$
+```
 
 Choose a nearest point
 
-$$
+```math
 y\in\partial F.
-$$
+```
 
 The force hull is a strictly convex polygon with every side of length one.
 
 If `y` is a hull vertex, then unit separation gives immediately
 
-$$
+```math
 h=|x-y|\ge1.
 \tag{1.1}
-$$
+```
 
 Otherwise `y` lies in the relative interior of one unit side with endpoints `p_0,p_1`. The segment `xy` is perpendicular to that side. Write the foot coordinate from `p_0` as
 
-$$
+```math
 s=|p_0-y|\in(0,1).
-$$
+```
 
 One endpoint is at tangential distance at most `1/2` from the foot:
 
-$$
+```math
 \min\{s,1-s\}\le\frac12.
-$$
+```
 
 For that endpoint `p`, the right triangle gives
 
-$$
+```math
 |x-p|^2=h^2+|y-p|^2
 \le h^2+\frac14.
-$$
+```
 
 Unit separation requires `|x-p|>=1`. Hence
 
-$$
+```math
 \boxed{h\ge\frac{\sqrt3}{2}.}
 \tag{1.2}
-$$
+```
 
 This lower bound uses only the prescribed unit boundary sides and source separation; no KKT information is needed.
 
@@ -112,84 +112,84 @@ This lower bound uses only the prescribed unit boundary sides and source separat
 
 Let
 
-$$
+```math
 K:=\operatorname{conv}(F\cup\{x\}).
-$$
+```
 
 Since every point of `F` and `x` belongs to the original diameter-`D` source hull,
 
-$$
+```math
 \operatorname{diam}K\le D.
 \tag{2.1}
-$$
+```
 
 Let
 
-$$
+```math
 n:=\frac{x-y}{h}
-$$
+```
 
 be the outward unit normal at the nearest point, and choose a unit tangent `t` perpendicular to `n`.
 
 For an angle `phi` with `|phi|<pi/2`, define
 
-$$
+```math
 u_\phi:=\cos\phi\,n+\sin\phi\,t.
-$$
+```
 
 Nearest-point convexity gives
 
-$$
+```math
 (z-y)\cdot n\le0
 \qquad(z\in F).
 \tag{2.2}
-$$
+```
 
 Also `|z-y|<=D`. Therefore
 
-$$
+```math
 \begin{aligned}
 h_F(u_\phi)
 &=\max_{z\in F} z\cdot u_\phi\\
 &\le y\cdot u_\phi+D|\sin\phi|.
 \end{aligned}
 \tag{2.3}
-$$
+```
 
 On the other hand
 
-$$
+```math
 x\cdot u_\phi
 =y\cdot u_\phi+h\cos\phi,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 h_K(u_\phi)-h_F(u_\phi)
 \ge
 \max\{0,h\cos\phi-D|\sin\phi|\}.}
 \tag{2.4}
-$$
+```
 
 For a planar convex body, Cauchy's support-function perimeter formula is
 
-$$
+```math
 \operatorname{per}(L)
 =\int_0^{2\pi}h_L(u_\theta)\,d\theta.
 \tag{2.5}
-$$
+```
 
 Put
 
-$$
+```math
 a:=\arctan(h/D).
-$$
+```
 
 Integrating (2.4) on `[-a,a]` gives
 
-$$
+```math
 \begin{aligned}
 \operatorname{per}(K)-\operatorname{per}(F)
 &\ge
@@ -198,27 +198,27 @@ $$
 &=\boxed{2\left(\sqrt{D^2+h^2}-D\right).}
 \end{aligned}
 \tag{2.6}
-$$
+```
 
 Combining with (1.2),
 
-$$
+```math
 \boxed{
 \operatorname{per}(K)-q
 \ge
 2\left(\sqrt{D^2+\frac34}-D\right).}
 \tag{2.7}
-$$
+```
 
 In particular,
 
-$$
+```math
 \boxed{
 \operatorname{per}(K)-q
 \ge
 \frac{3}{4D}+O(D^{-3}).}
 \tag{2.8}
-$$
+```
 
 The exact lower bound (2.7), not the expansion, is the proof input.
 
@@ -228,89 +228,89 @@ The exact lower bound (2.7), not the expansion, is the proof input.
 
 For an integer `m>=3`, put
 
-$$
+```math
 U_m(D):=2m\sin\frac\pi{2m}\,D.
 \tag{3.1}
-$$
+```
 
 Reinhardt's universal theorem says every convex `m`-gon of diameter at most `D` has perimeter at most `U_m(D)`.
 
 The polygon `K` has at most `q+1` vertices. The function
 
-$$
+```math
 m\mapsto2m\sin\frac\pi{2m}
-$$
+```
 
 is increasing, so
 
-$$
+```math
 \boxed{
 \operatorname{per}(K)\le U_{q+1}(D).}
 \tag{3.2}
-$$
+```
 
 It remains to estimate the headroom
 
-$$
+```math
 U_{q+1}(D)-q.
-$$
+```
 
 ### 3.1 Existing `q`-gon headroom
 
 Define the Reinhardt equality diameter for `q` sides by
 
-$$
+```math
 D_R(q):=\frac1{2\sin(\pi/(2q))}.
 \tag{3.3}
-$$
+```
 
 Then
 
-$$
+```math
 U_q(D_R(q))=q.
-$$
+```
 
 RP proves in every cyclic phase
 
-$$
+```math
 \pi D-q
 =\frac\pi{24D}+O(D^{-2}).
 \tag{3.4}
-$$
+```
 
 The elementary expansion of (3.3) gives
 
-$$
+```math
 \pi D_R(q)-q
 =\frac{\pi^2}{24q}+O(q^{-3}).
 \tag{3.5}
-$$
+```
 
 Since RP also gives `q=pi D+O(D^-1)`, (3.5) becomes
 
-$$
+```math
 \pi D_R(q)-q
 =\frac\pi{24D}+O(D^{-3}).
 \tag{3.6}
-$$
+```
 
 Subtract (3.6) from (3.4):
 
-$$
+```math
 \boxed{D-D_R(q)=O(D^{-2}).}
 \tag{3.7}
-$$
+```
 
 Therefore
 
-$$
+```math
 \begin{aligned}
 U_q(D)-q
 &=2q\sin\frac\pi{2q}\,[D-D_R(q)]\\
 &=\boxed{O(D^{-2}),}
 \end{aligned}
 \tag{3.8}
-$$
+```
 
 because `2q sin(pi/(2q))=Theta(1)`.
 
@@ -318,43 +318,43 @@ because `2q sin(pi/(2q))=Theta(1)`.
 
 Extend
 
-$$
+```math
 f_D(s):=2s\sin\frac\pi{2s}\,D
-$$
+```
 
 to real `s>1`. Put `z=pi/(2s)`. Differentiation gives
 
-$$
+```math
 f_D'(s)
 =2D(\sin z-z\cos z).
 \tag{3.9}
-$$
+```
 
 For small positive `z`,
 
-$$
+```math
 \sin z-z\cos z=O(z^3).
-$$
+```
 
 On the interval `s in [q,q+1]`, RP gives `s=Theta(D)`, hence
 
-$$
+```math
 f_D'(s)=O(Ds^{-3})=O(D^{-2}).
-$$
+```
 
 The mean value theorem yields
 
-$$
+```math
 \boxed{U_{q+1}(D)-U_q(D)=O(D^{-2}).}
 \tag{3.10}
-$$
+```
 
 Combining (3.8) and (3.10),
 
-$$
+```math
 \boxed{U_{q+1}(D)-q=O(D^{-2}).}
 \tag{3.11}
-$$
+```
 
 ---
 
@@ -362,18 +362,18 @@ $$
 
 If an exterior source point existed, (2.7) and (3.2) would give
 
-$$
+```math
 2\left(\sqrt{D^2+\frac34}-D\right)
 \le
 U_{q+1}(D)-q.
 \tag{4.1}
-$$
+```
 
 The left side is
 
-$$
+```math
 \frac{3}{4D}+O(D^{-3}),
-$$
+```
 
 while the right side is `O(D^-2)` by (3.11).
 
@@ -393,9 +393,9 @@ UFB reproves the earlier FB force-bulk closure without using the Reuleaux comple
 
 DC says the full diameter graph is one spanning tree. UFB now adds
 
-$$
+```math
 F=\operatorname{conv}A.
-$$
+```
 
 Thus the entire quadratic source population is inside the same equilateral force polygon on which TC/WT analyze the KKT endpoints.
 
@@ -403,9 +403,9 @@ Thus the entire quadratic source population is inside the same equilateral force
 
 DC/D2 say the full diameter graph is two ordered caterpillar components on four alternating blocks. UFB again gives
 
-$$
+```math
 F=\operatorname{conv}A.
-$$
+```
 
 So the unique-stress four-block endpoint also has no external population escape.
 
@@ -417,11 +417,11 @@ The previously separate cyclic topology and population programs are now on the s
 
 Because `F=conv A`, Oler applies directly to the complete source in every cyclic phase:
 
-$$
+```math
 \boxed{
 n\le\frac2{\sqrt3}\operatorname{area}(F)+\frac q2+1.}
 \tag{6.1}
-$$
+```
 
 Likewise, every finite disk-packing theorem stated in terms of the convex hull of the center set can now be applied directly to `F` throughout the cyclic endpoint, not only in the exact Reinhardt subphase.
 

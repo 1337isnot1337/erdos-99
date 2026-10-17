@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_minimal_interface_internal_exceptional_perimeter_2026-09-09.md) · source SHA-256 `72f4db1c8e4cdf8ac8ea1f981ba8c473c72d26ed38a531791aa8bb36b4625330`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 13 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-C660BE9C99FE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_minimal_interface_internal_exceptional_perimeter_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=a91a61825625670ae4ff6bb95519769f2362f677; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
@@ -20,7 +22,7 @@
 
 IP used only CE's count lower bound `f>=sqrt(Delta)D`. CE contains a strictly stronger statement at the same endpoint: the total perimeter of all bounded nonquadrilateral contact faces satisfies
 
-$$
+```math
 \boxed{
 K_{exc}:=Q+4f
 \ge(\pi+4\sqrt\Delta-o(1))D,
@@ -28,52 +30,54 @@ K_{exc}:=Q+4f
 \Delta=\frac\pi{2\sqrt3}.
 }
 \tag{EP.1}
+```
 
 Under the minimal loaded-interface equality
 
-\[
+```math
 Q_B=(2+o(1))D,
-$$
+```
 
 CF proves that one central exceptional face `F_*` has
 
-$$
+```math
 k_{F_*}=(2+o(1))D
-$$
+```
 
 and every other loaded-interface exceptional face has total degree excess `o(D)`. The number of those remaining interface faces is therefore `o(D)`, so their total perimeter is also `o(D)` because
 
-$$
+```math
 \sum_{F\ne F_*\atop F\text{ interface}}\deg F
 =4f_{B,\ne *}+(Q_B-Q_{F_*})=o(D).
-$$
+```
 
 Consequently almost all of CE's exceptional perimeter not used by the central face must occur **inside** the harmonic components:
 
-$$
+```math
 \boxed{
 Q_{int}+4f_{int}
 \ge
 (\pi-2+4\sqrt\Delta-o(1))D.
 }
 \tag{EP.2}
+```
 
 Numerically,
 
-\[
+```math
 \pi-2+4\sqrt\Delta
 =4.9508438810\ldots .
-$$
+```
 
 Since `f_int<=Q_int`,
 
-$$
+```math
 Q_{int}+4f_{int}\le5Q_{int},
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 Q_{int}
 \ge
@@ -81,18 +85,19 @@ Q_{int}
 =0.9901687762\ldots D-o(D).
 }
 \tag{EP.3}
+```
 
 This substantially strengthens IP.3's `sqrt(Delta)=0.9523128...` lower bound.
 
 HBd gives the exact near-circle identity
 
-\[
+```math
 Q+2s_C=(\pi+o(1))D.
-$$
+```
 
 With `Q=Q_B+Q_int`, EP.3 yields
 
-$$
+```math
 \boxed{
 s_C
 \le
@@ -102,10 +107,11 @@ s_C
 \right]D+o(D)
 }
 \tag{EP.4}
+```
 
 or, after simplification,
 
-\[
+```math
 \boxed{
 s_C
 \le
@@ -113,23 +119,25 @@ s_C
 =0.07571193869\ldots D+o(D).
 }
 \tag{EP.5}
+```
 
 HBd also gives
 
-\[
+```math
 d_H+s_Z=s_C+o(D),
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 d_H+s_Z\le0.07571193869\ldots D+o(D).}
 \tag{EP.6}
+```
 
 Because `q=(pi+o(1))D` and `d_H=q-h`,
 
-\[
+```math
 \boxed{
 h
 \ge
@@ -139,18 +147,20 @@ h
 =3.0658807149\ldots D-o(D).
 }
 \tag{EP.7}
+```
 
 Thus the diameter graph has at least `97.59%` of the extremal `q` edge count at the minimal-interface endpoint.
 
 The previous pentagon floor remains unchanged and still follows from the joint constraints:
 
-\[
+```math
 \boxed{
 p_5\ge
 (2\sqrt\Delta-\pi+2-o(1))D
 =0.7630329601\ldots D-o(D).
 }
 \tag{EP.8}
+```
 
 The reason EP improves `Q_int` and `s_C` but not the universal pentagon lower bound is that the latter is minimized at the opposite end of the allowed `Q_int` interval.
 
@@ -160,21 +170,21 @@ The reason EP improves `Q_int` and `s_C` but not the universal pentagon lower bo
 
 Let `f_B` count bounded nonquadrilateral faces touching loaded terminals. CF gives
 
-\[
+```math
 Q_{F_*}=(2+o(1))D,
 \qquad
 Q_B-Q_{F_*}=o(D).
-$$
+```
 
 Every other interface exceptional face contributes at least one to `Q_B-Q_{F_*}`, hence
 
-$$
+```math
 f_B-1=o(D).
-$$
+```
 
 For exceptional faces `deg F=4+(deg F-4)`. Therefore
 
-$$
+```math
 \begin{aligned}
 K_{exc,B}
 &:=\sum_{F\text{ interface exc}}\deg F\\
@@ -182,6 +192,7 @@ K_{exc,B}
 &=(2+o(1))D.
 \end{aligned}
 \tag{1.1}
+```
 
 So the central face asymptotically carries the entire interface exceptional perimeter, not only its degree excess.
 
@@ -191,23 +202,23 @@ So the central face asymptotically carries the entire interface exceptional peri
 
 Split
 
-\[
+```math
 K_{exc}=K_{exc,B}+K_{exc,int}.
-$$
+```
 
 For the internal exceptional faces,
 
-$$
+```math
 K_{exc,int}=Q_{int}+4f_{int}.
-$$
+```
 
 CE gives EP.1 and (1.1) gives `K_exc,B=(2+o(1))D`. Hence
 
-$$
+```math
 K_{exc,int}
 \ge
 (\pi+4\sqrt\Delta-2-o(1))D,
-$$
+```
 
 which is EP.2.
 
@@ -217,31 +228,31 @@ which is EP.2.
 
 Every internal exceptional bounded face has degree at least five, so
 
-$$
+```math
 f_{int}\le Q_{int}.
-$$
+```
 
 Then
 
-$$
+```math
 Q_{int}+4f_{int}\le5Q_{int}.
-$$
+```
 
 Combine with EP.2:
 
-$$
+```math
 Q_{int}
 \ge
 \frac{\pi-2+4\sqrt\Delta}{5}D-o(D),
-$$
+```
 
 proving EP.3.
 
 Equality in this scalar minimization forces
 
-$$
+```math
 f_{int}=Q_{int}+o(D),
-$$
+```
 
 so every but `o(D)` units of internal defect are pentagonal in the branch that minimizes `Q_int`. This is only an equality condition, not a global assertion that EP.3 is attained.
 
@@ -251,21 +262,23 @@ so every but `o(D)` units of internal defect are pentagonal in the branch that m
 
 HBd gives exactly
 
-$$
+```math
 Q_{int}+2s_C=(\pi-2+o(1))D
 \tag{4.1}
+```
 
 at minimal interface equality. Inserting EP.3 gives EP.5.
 
 The same relation gives the complementary upper bound
 
-\[
+```math
 Q_{int}\le(\pi-2+o(1))D.
 \tag{4.2}
+```
 
 Thus the internal face-defect coefficient is trapped in the short interval
 
-\[
+```math
 \boxed{
 0.9901687762\ldots
 \le\liminf Q_{int}/D
@@ -273,12 +286,13 @@ Thus the internal face-defect coefficient is trapped in the short interval
 \le1.1415926536\ldots .
 }
 \tag{4.3}
+```
 
 Correspondingly the entire pinned/mixed diameter currency satisfies
 
-\[
+```math
 0\le s_C/D\le0.07571193869\ldots+o(1).
-$$
+```
 
 This is a much narrower equality regime than the original GP/FS interface theorem.
 
@@ -288,38 +302,39 @@ This is a much narrower equality regime than the original GP/FS interface theore
 
 Write `p_5` for the internal pentagon count. As in IP,
 
-$$
+```math
 Q_{int}\ge2f_{int}-p_5,
-$$
+```
 
 so
 
-$$
+```math
 p_5\ge2f_{int}-Q_{int}.
 \tag{5.1}
+```
 
 EP.2 gives
 
-\[
+```math
 f_{int}\ge\frac{\pi-2+4\sqrt\Delta-Q_{int}/D}{4}D-o(D).
-$$
+```
 
 Insert this in (5.1):
 
-$$
+```math
 \frac{p_5}{D}
 \ge
 \frac{\pi-2+4\sqrt\Delta}{2}
 -\frac32\frac{Q_{int}}D-o(1).
-$$
+```
 
 The right side decreases with `Q_int`, so use the upper bound `Q_int/D<=pi-2` from (4.2):
 
-$$
+```math
 \frac{p_5}{D}
 \ge
 2\sqrt\Delta-(\pi-2)-o(1),
-$$
+```
 
 which is EP.8.
 
@@ -331,15 +346,15 @@ The canonical diameter graph is a geometric thrackle and hence a pseudoforest; t
 
 EP.6 gives
 
-$$
+```math
 d_H\le0.07571193869\ldots D+o(D).
-$$
+```
 
 Since `q~pi D`, a minimal-interface survivor has at most about `2.41%` as many tree components as loaded terminals. Either a large fraction of the loaded vertices lies in the possible odd-unicyclic component, or the tree components have average order at least about
 
-$$
+```math
 \frac{\pi}{0.0757119}=41.49
-$$
+```
 
 among vertices not assigned to that cycle component, modulo the distribution between the two classes.
 

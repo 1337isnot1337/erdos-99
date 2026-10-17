@@ -43,18 +43,18 @@ A bounded pentagonal contact face in the canonical full-force-visible core is a 
 strictly convex unit pentagon.  If successive counterclockwise unit sides have positive
 turn `g`, the skipped-vertex diagonal has length
 
-$$
+```math
 2\cos(g/2).
-$$
+```
 
 That diagonal lies in the convex face interior.  If its length were exactly one it
 would be an actual contact chord and the purported pentagon would not be a face.
 Unit separation excludes length below one.  Hence the diagonal is strictly longer
 than one and
 
-$$
+```math
 0<g<2\pi/3.
-$$
+```
 
 The theorem therefore needs no asymptotic diagonal-slack lower bound; only strictness
 is used.
@@ -66,9 +66,9 @@ is used.
 If the projective arc has width `w<=pi/3`, every selected side has axial projection
 magnitude at least
 
-$$
+```math
 c=\cos(w/2)\ge\sqrt3/2.
-$$
+```
 
 For four selected sides in one lift cone, the four-side axial sum is at least `4c`;
 one arbitrary fifth unit vector cannot cancel it because `4c-1>0`.
@@ -77,9 +77,9 @@ For a `3+1` split, the adverse selected minority side may have projection `-1`, 
 merely `-c`, and the arbitrary fifth side may also contribute `-1`.  Even with those
 worst values the sum is at least
 
-$$
+```math
 3c-2\ge3\sqrt3/2-2>0.
-$$
+```
 
 So the proof uses the correct adverse projection bounds.
 
@@ -94,9 +94,9 @@ Assume exactly four projective directions lie in `A` and their oriented lifts sp
 `2+2` between `A_+` and `A_-`.  Since the lifted arcs are antipodal and each has width
 `w`, the two open direction-circle regions separating them each have length at least
 
-$$
+```math
 \pi-w\ge2\pi/3.
-$$
+```
 
 The fifth side's projective direction is outside `A`, hence its oriented direction is
 outside `A_+ union A_-`.  It occupies at most one of those two separating regions.
@@ -117,9 +117,9 @@ This is the only place strict convexity, rather than mere vector closure, is nee
 The existing exact pentagon lattice-phase regression has projective side directions
 converging with multiplicities
 
-$$
+```math
 1,3,1
-$$
+```
 
 on the three triangular-lattice projective axes.  For sufficiently small regression
 parameter, one projective arc of width below `pi/3` contains the middle three side
@@ -143,9 +143,9 @@ forbids this.  Hence `I(F)` has five distinct train vertices.
 The bounded-face endpoint fan says any two trains incident with one bounded face are
 noncrossing.  Therefore there are no hidden internal edges when the proof identifies
 
-$$
+```math
 \sum_{tau\in I(F)}d_R(tau)
-$$
+```
 
 with crossings from `I(F)` to the `T_R-5` external trains.
 
@@ -155,17 +155,17 @@ with crossings from `I(F)` to the `T_R-5` external trains.
 
 For fixed projective direction `phi`, the set
 
-$$
+```math
 C_phi=\{psi:d_proj(phi,psi)>pi/3\}
-$$
+```
 
 is an open arc of length `pi/3` on the projective circle.  A strict-rhombus train
 crossing requires membership in this arc, but membership does not guarantee a
 physical crossing.  The theorem uses only the forward implication
 
-$$
+```math
 \text{actual crossing}\Longrightarrow psi\in C_phi.
-$$
+```
 
 Hence replacing physical crossings by direction-compatible pairs can only increase the
 count, which is the safe direction for the upper bound of three.
@@ -190,9 +190,9 @@ selected blocker `tau` is distinct from `sigma`.
 Summing nondegrees over all train vertices counts every unordered noncrossing train pair
 exactly twice, giving
 
-$$
+```math
 {T_R\choose2}-R_4\ge {T_R(M-2)\over2}.
-$$
+```
 
 The finite `-2` is necessary and was retained.
 

@@ -58,10 +58,10 @@ quarter turn.
 
 For arbitrary angles `theta_i`, set
 
-$$
+```math
  P_\theta(p)=P(p)+\sum_i s_i(p)
  [(\cos\theta_i-1)u+\sin\theta_i Ju].                 \tag{1}
-$$
+```
 
 Every original contact stays exactly unit: its relative vector is either
 unchanged or replaced by the corresponding rotated unit vector. This formula
@@ -71,9 +71,9 @@ It requires actual full-source cutsets; local rhombus directions do not imply it
 For an original diameter `h=xy`, put `r_h=P(y)-P(x)` and
 `epsilon_hi=s_i(y)-s_i(x)`. Define
 
-$$
+```math
  M_{hi}=\epsilon_{hi}(r_h\cdot Ju).
-$$
+```
 
 Assume `rank M=m` and a strictly positive vector `beta` with `beta^T M=0`.
 Both are source specialization hypotheses, not assertions about an arbitrary
@@ -82,17 +82,17 @@ zero first variation in the selected coordinates.
 
 **Theorem 1.** Define
 
-$$
+```math
  \kappa=\min_{\|z\|_\infty=1}\max_h(M_hz),
  \qquad B=Dm+m^2.
-$$
+```
 
 Then `kappa>0`. If all old diameter lengths in (1) stay at most `D`, either
 `theta=0` or
 
-$$
+```math
  \|\theta\|_\infty\ge {2\kappa\over B}.             \tag{2}
-$$
+```
 
 Thus every nontrivial contact-preserving move in these coordinates that does
 not lengthen an old diameter crosses a positive finite angle barrier. This is
@@ -105,26 +105,26 @@ full column rank gives `z=0`. Consequently `max_h M_hz>0` for every nonzero
 
 Put `t=||theta||_infinity` and
 
-$$
+```math
  q_h=\sum_i\epsilon_{hi}
  [(\cos\theta_i-1)u+\sin\theta_i Ju].
-$$
+```
 
 The unit-circle Taylor remainder has norm at most `theta_i^2/2`, for every
 real `theta_i`; this follows by twice integrating the unit-norm second
 derivative. Also `|R_theta u-u|<=|theta|`. Hence
 
-$$
+```math
  |q_h-Ju\sum_i\epsilon_{hi}\theta_i|\le mt^2/2,
  \qquad |q_h|\le mt.
-$$
+```
 
 Therefore
 
-$$
+```math
  |r_h+q_h|^2-D^2
  \ge 2M_h\theta-(Dm+m^2)t^2.
-$$
+```
 
 Choose a row attaining `max_h M_h theta>=kappa t`. If all old diameters
 remain at most `D`, `0>=2kappa t-Bt^2`. For `t>0` this gives (2).
@@ -135,10 +135,10 @@ For a computable conservative bound, put `b_min=min beta_h`,
 `b_sum=sum beta_h`, and let `sigma` be the smallest Euclidean singular value
 of `M`. With `N` rows,
 
-$$
+```math
  \kappa\ge {b_{\min}\sigma\over b_{\rm sum}\sqrt N}.
                                                                \tag{3}
-$$
+```
 
 Indeed some row of `Mz` has absolute value at least `sigma/sqrt(N)` when
 `||z||_infinity=1`. A positive such row directly bounds the maximum; a
@@ -182,9 +182,9 @@ contains train index 2.
 
 The resulting axial cut totals are
 
-$$
+```math
  (A_1,A_2,A_3)=(112/15,151/15,33/5).
-$$
+```
 
 Thus `A_1-A_2=-13/5` and `A_2-A_3=52/15` are nonzero. At each internal
 interface the switching packet consists of the two bars of one support,
@@ -194,27 +194,27 @@ are exact abstract reaction identities, not full-source vertex equilibrium.
 
 Now take `tan(theta/2)=3/20`, so
 
-$$
+```math
  c=391/409,\qquad s=120/409,
  \qquad (u'_1,u'_2,u'_3)=((c,s),(c,-s),(c,s)).
-$$
+```
 
 Every new unit-bar phase stays inside the original empty cell, because
 `s/c=120/391<5/12`. Under the exact interval substitution
 
-$$
+```math
  r'_h=r_h+\sum_{i\in[a_h,b_h]}(u'_i-u),              \tag{4}
-$$
+```
 
 the interval changes are `(-36/409,0)` for the two length-two supports
 and `(-54/409,120/409)` for the length-three support. Every one of the
 six old diameter lengths strictly decreases. The largest squared change
 for the full support is
 
-$$
+```math
  -{96\over409}+{17316\over167281}
  =-{21948\over167281}<0.                           \tag{5}
-$$
+```
 
 The exact verifier checks the remaining five inequalities individually.
 The regression does not contradict Theorem 1: it makes a finite jump,

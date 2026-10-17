@@ -23,17 +23,17 @@ Let
 
 Then
 
-$$
+```math
 \boxed{
 \sum_r|A_r|\le q_{used}+2c_I-2s.}
-$$
+```
 
 Equivalently, if `m_b` is the number of distinct unpinned components attached to a used loaded vertex `b`,
 
-$$
+```math
 \boxed{
 \sum_{b\in B_{used}}(m_b-1)\le2c_I-2s.}
-$$
+```
 
 Thus at most `2c_I-2s` used loaded vertices can belong to multiple attachment sets.
 
@@ -43,16 +43,16 @@ Thus at most `2c_I-2s` used loaded vertices can belong to multiple attachment se
 
 Let
 
-$$
+```math
 B_{used}:=\bigcup_r A_r.
-$$
+```
 
 Construct `J` with bipartition `B_used` and one interior node `x_r` per `I_r`, with edge `b x_r` iff `b in A_r`. Multiple unit contacts between the same loaded vertex and component produce only one incidence edge. Hence
 
-$$
+```math
 |E(J)|=\sum_r|A_r|.
 \tag{C37.1}
-$$
+```
 
 Starting from the plane contact graph, contract a spanning tree inside each `I_r` and delete parallel duplicate attachment edges. Planarity is preserved. The loaded vertices retain their cyclic order on the boundary of `F`.
 
@@ -64,52 +64,52 @@ Let the connected components of `J` containing interior nodes be `J_1,...,J_s`. 
 
 Every loaded vertex of `J_j` lies on the outer face and has positive degree. Because `J_j` is bipartite, its outer-face boundary walk alternates loaded and interior nodes. Every loaded vertex occurs at least once on that walk. Therefore its outer-face walk length `L_j` satisfies
 
-$$
+```math
 L_j\ge2q_j.
 \tag{C37.2}
-$$
+```
 
 Every bounded face walk of the simple bipartite plane graph has length at least four.
 
 Let `f_j` count all faces. Summing face-walk lengths,
 
-$$
+```math
 2e_j\ge L_j+4(f_j-1)
 \ge2q_j+4(f_j-1).
 \tag{C37.3}
-$$
+```
 
 Euler gives
 
-$$
+```math
 q_j+c_j-e_j+f_j=2.
 \tag{C37.4}
-$$
+```
 
 Eliminating `f_j` yields
 
-$$
+```math
 \boxed{e_j\le q_j+2c_j-2.}
 \tag{C37.5}
-$$
+```
 
 Summing over `j` proves:
 
 ### Theorem C37.1
 
-$$
+```math
 \boxed{
 \sum_r|A_r|
 \le q_{used}+2c_I-2s.}
 \tag{C37.6}
-$$
+```
 
 Since C36 gives `|A_r|>=3`, also
 
-$$
+```math
 \boxed{c_I+2s\le q_{used}.}
 \tag{C37.7}
-$$
+```
 
 ---
 
@@ -117,44 +117,44 @@ $$
 
 For a used loaded vertex `b`, let
 
-$$
+```math
 m_b:=|\{r:b\in A_r\}|.
-$$
+```
 
 Then
 
-$$
+```math
 \sum_bm_b=\sum_r|A_r|.
-$$
+```
 
 Every used vertex has `m_b>=1`, so C37.6 gives
 
-$$
+```math
 \boxed{
 \sum_{b\in B_{used}}(m_b-1)
 \le2c_I-2s.}
 \tag{C37.8}
-$$
+```
 
 Therefore the number of used loaded vertices belonging to two or more distinct attachment sets is at most
 
-$$
+```math
 \boxed{2c_I-2s.}
 \tag{C37.9}
-$$
+```
 
 The incidence cyclomatic number is
 
-$$
+```math
 \kappa(J)=|E(J)|-(q_{used}+c_I)+s,
-$$
+```
 
 so C37.6 also gives
 
-$$
+```math
 \boxed{\kappa(J)\le c_I-s.}
 \tag{C37.10}
-$$
+```
 
 ---
 

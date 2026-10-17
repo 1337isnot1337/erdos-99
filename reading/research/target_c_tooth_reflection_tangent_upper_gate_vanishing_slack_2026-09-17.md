@@ -18,110 +18,110 @@ The central-plane reduction initially records a first upper gate only as an orig
 
 Let `p` be the original position of the moving old-inactive vertex, let `v` be the still-fixed source endpoint, let
 
-$$
+```math
 r=p-v,\qquad \ell=|r|,
-$$
+```
 
 and let `tau` be the amount by which `p` has moved when the first upper equality occurs:
 
-$$
+```math
 |r-\tau N|=D,
 \qquad
 0<\tau\le t_D=\delta+D^{-1/3}.
 \tag{VS.1}
-$$
+```
 
 The existing reflection geometry gives
 
-$$
+```math
 0<\delta<h_*={\sqrt{303}\over52},
-$$
+```
 
 and hence
 
-$$
+```math
 \tau\le h_*+D^{-1/3}.
 \tag{VS.2}
-$$
+```
 
 The central-plane theorem already proves
 
-$$
+```math
 D-C_g<\ell<D,
 \qquad C_g={17\over50},
 \tag{VS.3}
-$$
+```
 
 and, for the midpoint `m=(p+v)/2`,
 
-$$
+```math
 |m-o|
 \le L_{g,D}
 :=\sqrt{D\eta_D+\eta_D^2+{C_gD\over2}}
 =(3^{1/8}+o(1))D^{3/4},
 \tag{VS.4}
-$$
+```
 
 where `eta_D=3^(1/4)sqrt D`.
 
 Because the event occurs before the support plane through `o` is crossed,
 
-$$
+```math
 N\cdot(p-o)\ge0.
-$$
+```
 
 Writing `p-o=(m-o)+r/2` gives
 
-$$
+```math
 N\cdot r\ge-2L_{g,D}.
 \tag{VS.5}
-$$
+```
 
 Now square (VS.1):
 
-$$
+```math
 D^2=\ell^2-2\tau N\cdot r+\tau^2.
-$$
+```
 
 Therefore
 
-$$
+```math
 (D-\ell)(D+\ell)
 =\tau^2-2\tau N\cdot r
 \le \tau^2+4\tau L_{g,D}.
 \tag{VS.6}
-$$
+```
 
 Using (VS.2)--(VS.4) and `D+ell>2D-C_g`,
 
-$$
+```math
 \boxed{
 0<D-\ell
 \le
 \left(2h_*3^{1/8}+o(1)\right)D^{-1/4}.
 }
 \tag{VS.7}
-$$
+```
 
 The leading constant is
 
-$$
+```math
 \boxed{
 2h_*3^{1/8}
 =0.768047576501694\ldots .
 }
 \tag{VS.8}
-$$
+```
 
 Thus every `TANGENT-INACTIVE` edge in the current source-wide four-way reduction is actually a `D-o(1)` pair:
 
-$$
+```math
 \boxed{
 D-(0.7680475766\ldots+o(1))D^{-1/4}
 <|p-v|<D.
 }
 \tag{VS.9}
-$$
+```
 
 It retains all the other tangent-braid properties proved in the central-plane theorem: both endpoints are old fully inactive source points, different slow-scale modules give pairwise vertex-disjoint edges, the edges cross pairwise, and all crossings lie in an `O(D/kappa_D)` common central core.
 

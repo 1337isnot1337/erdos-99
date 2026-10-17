@@ -31,11 +31,12 @@ The candidate conclusions are:
 1. Every angle of `P_I` is strictly greater than `pi/6`.
 2. There are fixed `c,alpha>0` such that, eventually and uniformly over
    every nonempty unloaded component,
-   $$
+   ```math
    \operatorname{diam}(P_I)\ge cD,\qquad |A_I|\ge cD/3,\qquad
    \operatorname{area}(P_I)\ge\alpha D^2.
    \tag{UC1}
-   $$
+   
+   ```
    This holds in both C-II branches, without a Type-II premise.
 3. The number of unloaded components is bounded independently of `D`.
    The statement allows no unloaded component; it does not force a
@@ -80,11 +81,12 @@ the inactive-container branch remain open.
 - [Section 58](../targets/target-c/58-full-source-geometry-audit.md),
   `C-FS-GEOM`: one full-source circumcenter `o`, with
   `eta_D=3^(1/4)sqrt(D)` and `r_D=sqrt(D eta_D+eta_D^2)`, such that
-  $$
+  ```math
   D/2-\eta_D<|b-o|<D/2+\eta_D,\qquad
   |(b+k)/2-o|<r_D
   \tag{UC2}
-  $$
+  
+  ```
   for every actual diameter endpoint and pair. In particular both
   `eta_D/D` and `r_D/D` tend to zero. This does not say `F` tends to
   the disk in the inactive-container branch.
@@ -117,10 +119,10 @@ unloaded neighbors remain in `I`, and loaded neighbors belong to `A_I`.
 Suppose the tangent cone of `P_I` at `a` has opening `gamma<=pi/6`.
 For any other unit neighbor `y!=a` of `x`, write `y=t exp(i phi)`.
 Source separation makes `t>0`. Since `|y-x|=1`,
-$$
+```math
 t=2\cos\phi,\qquad y-x=\exp(2i\phi).
 \tag{UC3}
-$$
+```
 With a different initial rotation the last angle has the same doubled
 variation. Every `phi` belongs to the cone's angle interval, so all
 these other unit-contact rays from `x` lie in an arc of opening at
@@ -131,10 +133,10 @@ distance is strictly greater than one: equality would make a unit
 equilateral triangle with `x`. Two unit rays in an arc of opening at
 most `pi/3` have endpoint distance at most one. Contradiction.
 Thus every angle satisfies
-$$
+```math
 \gamma(a)>\pi/6.
 \tag{UC4}
-$$
+```
 The strict 30-degree bound is sharp for geometric positive pinned
 three-stars; those fixtures are not canonical global sources.
 
@@ -142,31 +144,31 @@ three-stars; those fixtures are not canonical global sources.
 
 For each `a in A_I` choose an actual diameter partner `k_a` and put
 `n_a=(a-k_a)/D`, `m_a=(a+k_a)/2`. For every other source point `b`,
-$$
+```math
 n_a\cdot(b-a)\le-|b-a|^2/(2D)<0.
 \tag{UC5}
-$$
+```
 These are strict supporting normals. If `d=diam(P_I)`, then
-$$
+```math
 |n_a-n_b|
 \le 2d/D+4r_D/D=:\xi.
 \tag{UC6}
-$$
+```
 
 Choose one normal `n_0` and let `t` be its quarter-turn. Pick `a`
 minimizing `t dot a` on `A_I`. For `v=b-a!=0`, the strict supports
 at `a,b` and their `xi`-closeness to `n_0` give
-$$
+```math
 |n_0\cdot v|<\xi|v|,\qquad t\cdot v\ge0.
-$$
+```
 If `xi<1` the latter inequality is strict. All outgoing chords from
 `a` lie in a cone of opening at most `2asin(xi)`. If
 `xi<=sin(pi/12)`, that opening is at most `pi/6`, contradicting (UC4).
 Hence
-$$
+```math
 \boxed{d>(D/2)\sin(\pi/12)-2r_D.}
 \tag{UC7}
-$$
+```
 If `xi>=1` this inequality is automatic. No near-disk force-hull
 premise was used.
 
@@ -174,10 +176,10 @@ Every actual attachment lies one unit from `I`. Thus
 `diam(I)>=d-2`, and its contact-graph diameter satisfies
 `delta_I>=d-2`. The exact canonical pinned ledger gives
 `t_I>=delta_I+3>=d+1`. Loaded degree at most three gives
-$$
+```math
 \boxed{|A_I|\ge(d+1)/3.}
 \tag{UC8}
-$$
+```
 One may take any fixed `c<sin(pi/12)/2` in the first two assertions
 of (UC1) for sufficiently large `D`.
 
@@ -202,18 +204,18 @@ convex position and unit-separated. Their convex hull has diameter
 at most `2zeta D` and perimeter at most `2pi zeta D`. With three or
 more vertices, population is at most perimeter; adding two covers
 smaller sets. Consequently
-$$
+```math
 |A_I|/D\le4\pi\zeta+4/D.
-$$
+```
 Letting zeta tend to zero gives `|A_I|=o(D)`, contradicting (UC7)--(UC8).
 
 Thus some fixed `alpha>0` bounds every actual cell area below for all
 sufficiently large `D`. Pairwise interior-disjointness and
 `area(F)<=pi D^2/4` give
-$$
+```math
 \boxed{c_I\le\pi/(4\alpha).}
 \tag{UC9}
-$$
+```
 This is a uniform component bound, not merely an approximation after
 discarding small cells. It allows `c_I=0` and does not constrain the
 number of contact-isolated source points.
@@ -252,9 +254,9 @@ most two. There cannot be just one for sufficiently large `D`.
 Indeed, its single unit-contact force would be nearly tangent:
 for a unit loaded pair `b,a`, chosen strict normals differ by at most
 `2/D+4r_D/D`, and the strict support inequalities give
-$$
+```math
 0<n_b\cdot(b-a)\le2/D+4r_D/D.
-$$
+```
 On the other hand every diameter direction from `b` differs from
 `n_b` by at most `4r_D/D`. Its positive weighted diameter-force
 average, divided by `D sum beta`, has normal component at least
@@ -310,12 +312,12 @@ Every incident actual diameter direction differs from the endpoint's
 radial direction by `O(r_D/D)=o(1)`. Enlarge the arcs by that amount,
 project modulo pi, and use the direction-spacing bound. Counting
 both endpoints conservatively yields, uniformly over faces,
-$$
+```math
 \sum_{\substack{b\in B\\
  \operatorname{dist}(b,f)\le\rho D+\ell_D}}\deg_H(b)
 \le(48\sqrt\rho+o(1))D.
 \tag{UC10}
-$$
+```
 High-degree hubs are included in this incidence count.
 
 A finite version, used by the checker, is also available. If all endpoint
@@ -337,37 +339,37 @@ neighborhood, take `w=rho+sqrt(2S)/D`.
 ### 8.3 The one global face bank gives few exceptional diameter edges
 
 Fix `M=5`. Let `T_M` be the global degree tail, and put
-$$
+```math
 \Psi_b=
 \sum_{\substack{f\text{ in }J_{I_b}^+,\,d(f)>M\\
                 \operatorname{dist}(a_b,f)\le\rho D}}(d(f)-4).
-$$
+```
 Every charged face is within `rho D+ell_D` of `b`. Swap sums and use
 (UC10) and `T_M<=2(e_BB-k)<=3pi D`:
-$$
+```math
 \sum_{b\in B}\deg_H(b)\Psi_b
 \le(144\pi\sqrt\rho+o(1))D^2.
 \tag{UC11}
-$$
+```
 
 The canonical local route bound gives, for every
 `z in I_b intersect closed_ball(a_b,rho D)`,
-$$
+```math
 \operatorname{dist}_C(b,z)
 \le\ell_D+K_M\rho D+B_M+5\Psi_b.
 \tag{UC12}
-$$
+```
 Choose fixed rho with `K_M rho<lambda/4`. Eventually
 `ell_D+B_M<lambda D/4`. Endpoints with `Psi_b<lambda D/20` have
 contact routes of length `<lambda D` to every vertex of their grids.
 
 The number of actual diameter edges with an exceptional endpoint is
 at most the total diameter degree of exceptional endpoints, and hence
-$$
+```math
 \limsup_D D^{-1}\#\{\text{exceptional actual diameter edges}\}
 \le(2880\pi/\lambda)\sqrt\rho.
 \tag{UC13}
-$$
+```
 A sufficiently small fixed rho makes this less than eta. This proves
 the global diameter-to-grid conclusion. It is a count, not a bound
 on the exceptional positive KKT diameter weight.

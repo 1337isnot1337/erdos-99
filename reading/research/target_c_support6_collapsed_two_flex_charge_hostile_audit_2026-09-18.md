@@ -74,16 +74,16 @@ motion is claimed.
 The exact finite verifier passes the incidence and scalar bookkeeping. The theorem is
 supported as a proof-only infinitesimal strengthening:
 
-$$
+```math
 \nu_D\ge {b-f\over2}
  +{1\over4}(\sigma_C-(Q-f))_+-1+2c,
-$$
+```
 
 and hence
 
-$$
+```math
 {\nu_D\over D}>1.1988388040+{\sigma_C\over4D}+{2c\over D}-o(1)
-$$
+```
 
 in the stated live terminal window. It does not close C-II and does not globalize the
 collapsed local nonlinear family.

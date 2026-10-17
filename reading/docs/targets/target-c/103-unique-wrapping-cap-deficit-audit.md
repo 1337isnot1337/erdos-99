@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/103-unique-wrapping-cap-deficit-audit.md) · source SHA-256 `e46de65a5fbdd28f6890f1f4238cf9c546f7e7e1dd24bdd1e5d90ac090467b06`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 # Target C — unique wrapping carrier absorbs the cap deficit
 
 **Date:** 2026-09-12  
@@ -19,26 +21,26 @@ cells except the unique wrapping one are cap type and together occupy at most th
 canonical Section-88 cap capacity `C(mu)`.  The wrapping cell itself must therefore
 carry the full complementary area
 
-$$
+```math
 \boxed{
 \Gamma(\mu):={\pi\over4}-\mathcal C(\mu)>0.
 }
-$$
+```
 
 At the Section-101 value
 
-$$
+```math
 \mu_8=0.9760407652670519821\ldots,
-$$
+```
 
 this gives
 
-$$
+```math
 \boxed{
 \operatorname{area}(P_{\rm wrap})
 \ge(0.2023197554\ldots-o(1))D^2.
 }
-$$
+```
 
 The theorem is independent of the Section-102 phase/corridor endpoint exclusion.  It
 is useful for that route because it gives an explicit quadratic population constant
@@ -52,58 +54,58 @@ for the unique near-endpoint wrapping carrier before any phase-core extraction.
 
 Work in the canonical full-core near-disk Type-II branch.  Let
 
-$$
+```math
 P_{r,D}=\operatorname{conv}(A_{r,D})\subset F_D
-$$
+```
 
 be the harmonic attachment cells.  Canonical Section 83 gives
 
-$$
+```math
 \sum_r\operatorname{area}(P_{r,D})
 ={\pi\over4}D^2-o(D^2),
 \tag{103.1}
-$$
+```
 
 pairwise interior disjointness, and
 
-$$
+```math
 \sum_r\sqrt{\operatorname{area}(P_{r,D})}=O(D).
 \tag{103.2}
-$$
+```
 
 Fix `eta>0` and retain the cells with
 
-$$
+```math
 \operatorname{area}(P_{r,D})\ge\eta D^2.
 \tag{103.3}
-$$
+```
 
 There are uniformly finitely many.  After passing to a subsequence, translate by the
 near-disk center and scale by `D`; every retained cell and its attachment set converge
 in Hausdorff distance:
 
-$$
+```math
 D^{-1}P_{r,D}\to K_r,
 \qquad
 D^{-1}A_{r,D}\to S_r\subset\partial B_{1/2}.
 \tag{103.4}
-$$
+```
 
 Convex-hull continuity gives
 
-$$
+```math
 K_r=\operatorname{conv}(S_r).
 \tag{103.5}
-$$
+```
 
 The positive area floor preserves nonempty interior.  Pairwise interior disjointness
 also passes to the limit, exactly as in canonical Section 88:
 
-$$
+```math
 \operatorname{int}K_r\cap\operatorname{int}K_s=\varnothing
 \qquad(r\ne s).
 \tag{103.6}
-$$
+```
 
 ## 103.2 A wrapping support contains the disk center in the cell interior
 
@@ -112,19 +114,19 @@ type** if it is contained in an open semicircle and **wrapping** otherwise.
 
 Let `S` be wrapping and suppose
 
-$$
+```math
 \operatorname{diam}(\operatorname{conv}S)<1.
 \tag{103.7}
-$$
+```
 
 Then `S` contains no antipodal pair.  Since `S` is not contained in an open
 semicircle, the origin belongs to `conv(S)`.  In fact it belongs to the interior.
 
 Indeed, if
 
-$$
+```math
 0\in\partial\operatorname{conv}(S),
-$$
+```
 
 there is a support line through the origin with `S` in one closed half-plane.  Any
 convex combination of points of `S` equal to zero must then use only points on that
@@ -133,13 +135,14 @@ pair.  Hence `S` would contain both antipodes, contradicting (103.7).
 
 Thus
 
-$$
+```math
 \boxed{
 S\text{ wrapping and }\operatorname{diam}K<1
 \Longrightarrow
 0\in\operatorname{int}K.
 }
 \tag{103.8}
+```
 
 This is also the strict form of the three-anchor Caratheodory step used in Section 88.
 
@@ -149,21 +152,22 @@ Suppose two distinct positive-area macroscopic limits `K_r,K_s` were wrapping.  
 diameters are at most one because both lie in the radius-`1/2` disk; in every
 application below they are bounded by a fixed `mu<1`, so (103.8) applies.  Then
 
-\[
+```math
 0\in\operatorname{int}K_r
 \cap\operatorname{int}K_s,
-$$
+```
 
 contradicting (103.6).
 
 Therefore:
 
-$$
+```math
 \boxed{
 \text{among any finite positive-area macroscopic limit family of diameter }<1,
 \text{ at most one cell is wrapping.}
 }
 \tag{103.9}
+```
 
 No contact-graph argument is involved; this is a direct consequence of the common
 near-circle attachment geometry and cell interior disjointness.
@@ -172,57 +176,58 @@ near-circle attachment geometry and cell interior disjointness.
 
 Fix
 
-\[
+```math
 0<\mu<1
 \tag{103.10}
-$$
+```
 
 and consider a subsequence for which every positive-area macroscopic cell limit
 satisfies
 
-$$
+```math
 \operatorname{diam}(K_r)\le\mu.
 \tag{103.11}
-$$
+```
 
 Every nonwrapping limit is cap type.  Apply canonical Section 88, Lemmas 88.2 and 88.5,
 to the finite subfamily of cap-type limits.  Their minimal support arcs have lengths at
 most
 
-$$
+```math
 \theta_\mu:=2\arcsin\mu<\pi,
-$$
+```
 
 are laminar, and their pairwise interior-disjoint convex hulls have total area at most
 
-$$
+```math
 \boxed{
 \sum_{r\,\mathrm{cap}}\operatorname{area}(K_r)
 \le\mathcal C(\mu),
 }
 \tag{103.12}
+```
 
 where
 
-\[
+```math
 \mathcal C(\mu)
 ={1\over8}
 \left[2\pi-k_\mu\sin\theta_\mu-\sin r_\mu\right],
 \tag{103.13}
-$$
+```
 
-$$
+```math
 k_\mu=\left\lfloor{2\pi\over\theta_\mu}\right\rfloor,
 \qquad
 r_\mu=2\pi-k_\mu\theta_\mu.
-$$
+```
 
 Section 88 proves `C(mu)<pi/4` for every fixed `mu<1`.  Put
 
-$$
+```math
 \Gamma(\mu):={\pi\over4}-\mathcal C(\mu)>0.
 \tag{103.14}
-$$
+```
 
 We now let the macroscopic cutoff `eta` tend to zero. From (103.2), cells of area
 below `eta D^2` carry only `O(sqrt(eta)D^2)` total area. Hence their normalized total
@@ -266,45 +271,47 @@ finite cell label is independent of the macroscopic cutoff.
 
 At the Section-101 threshold
 
-$$
+```math
 \mu_8=0.9760407652670519821\ldots,
 \qquad
 \theta_8=2.7029080296483676832\ldots,
-$$
+```
 
 we have
 
-$$
+```math
 k_{\mu_8}=2,
 \qquad
 r_{\mu_8}=2\pi-2\theta_8=\phi_8.
-$$
+```
 
 Canonical Section 101 records
 
-$$
+```math
 \mathcal C(\mu_8)=0.5830784079\ldots,
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 \Gamma_8
 :={\pi\over4}-\mathcal C(\mu_8)
 =0.2023197554\ldots .
 }
 \tag{103.17}
+```
 
 Consequently, in any subsequential regime in which every positive-area macroscopic
 cell limit has diameter at most `mu_8`, the unique wrapping cell would satisfy
 
-\[
+```math
 \boxed{
 \operatorname{area}(P_{w,D})
 \ge(0.2023197554\ldots-o(1))D^2.
 }
 \tag{103.18}
+```
 
 Section 102 proves that the wrapping equality regime at `mu_8` is itself impossible.
 The utility of (103.18) is therefore as a **stability constant**: in a hypothetical
@@ -312,9 +319,9 @@ near-endpoint countersequence with all macroscopic cell diameters bounded by a f
 `mu>mu_8` close to `mu_8`, continuity of `C(mu)` gives a unique wrapping carrier with
 area
 
-\[
+```math
 (\Gamma(\mu)-o(1))D^2,
-$$
+```
 
 where `Gamma(mu)` remains close to `0.20232`.
 
@@ -323,55 +330,55 @@ where `Gamma(mu)` remains close to `0.20232`.
 The concentration theorem improves the constants available to the Section-90 phase
 core.  Suppose `mu>mu_8` is fixed and close enough that
 
-$$
+```math
 \Gamma(\mu)>0.19.
 \tag{103.19}
-$$
+```
 
 Then the unique wrapping carrier has area at least `(0.19-o(1))D^2`.  Canonical
 Section 83's nonnegative summed local rhombic deficit implies that, along a finite
 macroscopic family, this cell is locally rhombus-saturated.  Hence for all sufficiently
 large members of the subsequence its strict-rhombus population obeys, for example,
 
-$$
+```math
 R_D\ge0.18D^2.
 \tag{103.20}
-$$
+```
 
 Canonical Section 89 gives
 
-$$
+```math
 T_D\le6a_D+O(1).
 \tag{103.21}
-$$
+```
 
 For a wrapping limit with `theta` close to `theta_8`, canonical Section 100 gives
 
-$$
+```math
 {a_D\over D}\le{3\theta-2\pi\over2}+o(1)<1
-$$
+```
 
 throughout some fixed neighborhood of `theta_8`.  Thus one may take the explicit
 coarse local train constant
 
-$$
+```math
 \boxed{T_D\le6D}
 \tag{103.22}
-$$
+```
 
 there.
 
 Canonical Section 68 also gives an explicit phase-defect constant.  From
 
-$$
+```math
 {3\Delta_{train}\over\pi}
 \le(2+\sqrt3)E_4
 <(2+\sqrt3){\sqrt3\over4}\,\pi D,
-$$
+```
 
 we obtain
 
-$$
+```math
 \boxed{
 \Delta_{train}
 < C_{phase}D,
@@ -380,11 +387,12 @@ C_{phase}:={\pi^2\sqrt3(2+\sqrt3)\over12}
 =5.3165104791\ldots .
 }
 \tag{103.23}
+```
 
 Thus the three constants needed by the cell-local Section-90 binning argument can be
 taken, in a sufficiently small fixed neighborhood of the current endpoint, as
 
-\[
+```math
 \boxed{
 r=0.18,
 \qquad
@@ -393,6 +401,7 @@ C_T=6,
 C_{phase}=5.317.
 }
 \tag{103.24}
+```
 
 No numerical strict diameter improvement is claimed here, but these constants remove
 the largest quantitative loss in such a stability calculation.
@@ -417,10 +426,10 @@ pigeonholing argument.
 
 The natural next step is to make Section 102 quantitative: transport the scalar slack
 
-\[
+```math
 \sigma(\theta)
 :=3\theta-2\pi-\sin(\theta/2)-2\sin\theta
-$$
+```
 
 into explicit bounds for
 

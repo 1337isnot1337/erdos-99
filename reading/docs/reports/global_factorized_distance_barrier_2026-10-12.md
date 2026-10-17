@@ -47,26 +47,26 @@ All source labels, including contact isolates, are retained. Suppose there are
 nonnegative weights `a_e` on actual unit contacts `C` and `b_f` on actual diameter
 pairs `H` such that
 
-$$
+```math
 \sum_{e\in C}a_e=\sum_{f\in H}b_f=1,
 \qquad
 \sum_{e\ni i}a_e=\sum_{f\ni i}b_f\quad\text{for every label }i.
 \tag{1}
-$$
+```
 
 Suppose a new Euclidean placement `Q={q_i}` obeys, for every source pair,
 
-$$
+```math
 |q_i-q_j|=s_i s_j |p_i-p_j|,\qquad s_i>0.
 \tag{2}
-$$
+```
 
 Then
 
-$$
+```math
 \frac{\operatorname{diam}Q}{\min_{i\ne j}|q_i-q_j|}\ge D.
 \tag{3}
-$$
+```
 
 In particular, unit normalization of `Q` cannot yield a strict-sub-`D`
 competitor. This is a finite statement, with no smallness restriction, no motion
@@ -77,7 +77,7 @@ interval assumption, and no omission of new active pairs.
 For an old unit pair, its new length is `s_i s_j`; for an old diameter pair,
 its new length is `D s_i s_j`. Taking weighted logarithms gives
 
-$$
+```math
 \begin{aligned}
 \sum_H b_{ij}\log |q_i-q_j|
  -\sum_C a_{ij}\log |q_i-q_j|
@@ -85,7 +85,7 @@ $$
  +\sum_i\left(\sum_{H\ni i}b_f-\sum_{C\ni i}a_e\right)\log s_i\\
  &=\log D.
 \end{aligned}
-$$
+```
 
 Writing `M=max |q_i-q_j|` and `m=min |q_i-q_j|`, both positive, each weighted
 average on the left is bounded above or below by `log M` or `log m`, respectively.
@@ -101,12 +101,12 @@ the old unit pairs remains exactly `D`.
 For each integer `m>=4`, take a regular `m`-gon of side length one. It is
 unit-separated and triangle-free. Its diameter is
 
-$$
+```math
 D_m=\begin{cases}
 1/\sin(\pi/m),&m\text{ even},\\
 \cos(\pi/(2m))/\sin(\pi/m),&m\text{ odd}.
 \end{cases}
-$$
+```
 
 Give each rim edge contact weight `1/m`. Every rim vertex has contact incidence
 `2/m`. For odd `m`, its `m` diameter edges have weight `1/m`, again giving
@@ -127,11 +127,11 @@ This is an obstruction family, not a family of global minimizers.
 For an inversion with center `c` avoiding the finite source and radius parameter
 `R>0`,
 
-$$
+```math
 I(p)=c+R^2\frac{p-c}{|p-c|^2},
 \qquad
 |I(p)-I(q)|=\frac{R^2|p-q|}{|p-c||q-c|}.
-$$
+```
 
 The squared identity follows immediately by expanding the squared norm of the
 displayed difference. Thus (2) holds with `s_i=R/|p_i-c|`. Similarities and
@@ -139,10 +139,10 @@ reflections also have the form (2); compositions preserve the form because the
 positive factors multiply at each label. In the complex plane, a finite-valued
 Möbius transformation has the explicit identity
 
-$$
+```math
 \left|\frac{az_i+b}{cz_i+d}-\frac{az_j+b}{cz_j+d}\right|
 =\frac{|ad-bc|\,|z_i-z_j|}{|cz_i+d|\,|cz_j+d|},
-$$
+```
 
 so it has the same obstruction directly. A source at a pole is not a finite
 Euclidean competitor.
@@ -175,15 +175,15 @@ This is not a converse about planar coordinate realizability.
 For a finite source with `D>1`, build a directed graph with two states `(i,+)`
 and `(i,-)` at every source label. Each contact `ij` contributes arcs
 
-$$
+```math
 (i,+)\longrightarrow(j,-),\qquad(j,+)\longrightarrow(i,-),
-$$
+```
 
 and each diameter pair contributes arcs
 
-$$
+```math
 (i,-)\longrightarrow(j,+),\qquad(j,-)\longrightarrow(i,+).
-$$
+```
 
 Exactly one of the following holds.
 
@@ -195,18 +195,20 @@ Exactly one of the following holds.
    endpoint-factor remetrizations are blocked globally.
 2. The directed graph is acyclic. There are half-integer values `z_i` satisfying
 
-   $$
+   ```math
    z_i+z_j\ge1\quad(ij\in C),\qquad
    z_i+z_j\le-1\quad(ij\in H).
    \tag{4}
-   $$
+   
+   ```
 
    Consequently, for some sufficiently small `lambda>0`, the abstract pair lengths
 
-   $$
+   ```math
    \widetilde d_{ij}=e^{\lambda(z_i+z_j)}|p_i-p_j|
    \tag{5}
-   $$
+   
+   ```
 
    are all at least one and all strictly below `D`. These are actual inequalities
    on the complete finite array, including pairs involving contact isolates. No
@@ -218,9 +220,9 @@ Let `w(s)` be the longest directed-path length from state `s` to a sink. Every a
 `s->t` satisfies `w(s)-w(t)>=1`. The state flip `bar(s)` switches its sign, and
 every arc `s->t` has the reversed flipped arc `bar(t)->bar(s)`. Define
 
-$$
+```math
 z_i=\frac{w(i,+)-w(i,-)}2.
-$$
+```
 
 For a contact arc, averaging its path inequality with the reversed flipped arc
 gives `z_i+z_j>=1`. The same calculation on a diameter arc gives
@@ -249,9 +251,9 @@ For the six-point pentagon-plus-center fixture already recorded in
 actual diameter lies on the outer pentagon. The two-state graph is acyclic.
 An explicit valid choice is
 
-$$
+```math
 z_i=-1/2\text{ on the five rim labels},\qquad z_{\rm center}=3/2.
-$$
+```
 
 Its center-to-rim distances in (5) become `e^lambda`, while all rim distances are
 multiplied by `e^-lambda`. For small positive `lambda`, normalizing by the new

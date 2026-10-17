@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_direct_dominant_complement_energy_allocation_2026-09-15.md) · source SHA-256 `a90f1939bcd03d9410c99795dc75a205e15552b320630661eb1a10e876ba27e5`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 21 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "721ece8fe04ec0a246115d4753086c3e665432b9", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_direct_dominant_complement_energy_allocation_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "952ebdf3a4513227f24f99aa42c2b33f96d1e6317be95ece30ba5b7e72659253"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -23,43 +25,43 @@ mass, then hull-capacity trimming retains at least `K-delta` dominant occurrence
 while the complement argument retains at least `pi-K-N_*` outer-to-outer train pairs.
 The unknown `K` cancels in the sum:
 
-$$
+```math
 \boxed{z+p\ge W:=\pi-\delta-N_*.}
-$$
+```
 
 The dominant retained occurrences pay the additive angular energy
 
-$$
+```math
 F(z)=z-6\sin(z/6),
-$$
+```
 
 and the complement retained pairs pay the disjoint two-sided-bracing energy
 
-$$
+```math
 J(p)=2p-6\sin(p/3).
-$$
+```
 
 Therefore the whole outer detour must satisfy the infimal-convolution bound
 
-$$
+```math
 \boxed{\delta\ge \mathcal E(W)},
 \qquad
 \mathcal E(W):=\min_{z+p=W}\{F(z)+J(p)\}.
-$$
+```
 
 This avoids the double counting that would result from adding the joint-capacity
 function `Phi(K)` to the complement energy.  With the hostile-audited atomic gap
 `g=0.0050`, the new scalar floor is
 
-$$
+```math
 \boxed{\liminf {q-k\over D}\ge1.83236.}
-$$
+```
 
 The scalar zero of this argument is
 
-$$
+```math
 1.8323676277438298975\ldots,
-$$
+```
 
 but only the safely rounded value `1.83236` is claimed.
 
@@ -69,48 +71,48 @@ but only the safely rounded value `1.83236` is claimed.
 
 Pass to a convergent Type-II subsequence and write
 
-$$
+```math
 t={q-k\over D},\qquad
 \kappa={k\over D},\qquad
 \delta={d_{out}\over D}.
-$$
+```
 
 Put
 
-$$
+```math
 \Delta_2={\pi\over2\sqrt3},
 \qquad
 C_0=2\sqrt{\Delta_2}+0.0050.
-$$
+```
 
 Let
 
-$$
+```math
 C={T-q/2\over D}.
-$$
+```
 
 The hostile-audited iterative-pruning theorem gives
 
-$$
+```math
 C\ge C_0-o(1).
-$$
+```
 
 The Section-171 envelope gives
 
-$$
+```math
 C\le U+o(1),
 \qquad
 U={9t\over2}-2\pi-2\delta-{\kappa\over2}.
 \tag{DA.1}
-$$
+```
 
 Hence
 
-$$
+```math
 \boxed{2\delta+{\kappa\over2}\le
 R_{50}(t):={9t\over2}-2\pi-C_0.}
 \tag{DA.2}
-$$
+```
 
 ---
 
@@ -122,30 +124,31 @@ outside those windows.
 
 The orbit/Mantel inequality gives
 
-$$
+```math
 M\ge {4\Delta_2\over C}.
-$$
+```
 
 Since
 
-$$
+```math
 {T\over D}=C+{t+\kappa\over2},
-$$
+```
 
 we obtain
 
-$$
+```math
 N_c\le C+{t+\kappa\over2}-{4\Delta_2\over C}.
-$$
+```
 
 The right side is increasing in `C`, so (DA.1) yields
 
-$$
+```math
 \boxed{
 N_c\le N_*:=
 U+{t+\kappa\over2}-{4\Delta_2\over U}.
 }
 \tag{DA.3}
+```
 
 ---
 
@@ -159,66 +162,70 @@ dominant-orbit windows.
 On loaded-hull route `i`, if `n_i` dominant occurrences are present, retain fractional
 weight
 
-\[
+```math
 m_i=\min\{n_i,s_i\},
-$$
+```
 
 where `s_i` is the loaded-hull side length.  Since
 
-$$
+```math
 (n_i-s_i)_+\le d_i=\ell_i-s_i,
-$$
+```
 
 and `sum d_i=d_out`, the total retained dominant weight `z` obeys
 
-$$
+```math
 \boxed{z\ge K-\delta.}
 \tag{DA.4}
+```
 
 The retained edge occurrences are dominated by the round loaded-hull perimeter
 measure.  The dominant-orbit bathtub theorem therefore gives the **additive edge-energy**
 payment
 
-\[
+```math
 \boxed{E_{dom}\ge F(z),
 \qquad F(z)=z-6\sin(z/6).}
 \tag{DA.5}
+```
 
 ### Complement class
 
 The total outer occurrence density is
 
-\[
+```math
 {b\over D}=\pi+\delta+o(1).
-$$
+```
 
 Thus complement trains carry outer-terminal occurrence mass
 
-$$
+```math
 \pi+\delta-K+o(1).
-$$
+```
 
 A complement train with fewer than two outer terminals contributes at most one such
 occurrence.  Hence the number `P_c` of complement outer-to-outer trains satisfies
 
-$$
+```math
 P_c\ge \pi+\delta-K-N_c-o(1).
-$$
+```
 
 Apply the endpoint-capacity trimming from the complement-bracing theorem.  At most
 `delta+o(1)` pair mass is lost, so the retained complement pair mass `p` satisfies
 
-$$
+```math
 \boxed{p\ge \pi-K-N_c-o(1)
 \ge \pi-K-N_*-o(1).}
 \tag{DA.6}
+```
 
 The three-sector noncrossing/bracing theorem gives the additive terminal-edge payment
 
-\[
+```math
 \boxed{E_{comp}\ge J(p),
 \qquad J(p)=2p-6\sin(p/3)}
 \tag{DA.7}
+```
 
 on the present range `p<1`.
 
@@ -232,48 +239,52 @@ the two selected edge sets are disjoint and their directional-energy payments ad
 
 Equations (DA.4) and (DA.6) imply
 
-\[
+```math
 \begin{aligned}
 z+p
 &\ge (K-\delta)+(\pi-K-N_*)-o(1)\\
 &=\pi-\delta-N_*-o(1).
 \end{aligned}
-$$
+```
 
 If either displayed individual lower bound is negative, replace it by zero.  Since
 `max(a,0)+max(b,0)>=a+b`, the same summed inequality remains valid.  Define
 
-$$
+```math
 \boxed{
 W(t,\delta,\kappa)
 :=\pi-\delta-U-{t+\kappa\over2}+{4\Delta_2\over U}.
 }
 \tag{DA.8}
+```
 
 Then
 
-\[
+```math
 \boxed{z+p\ge W-o(1).}
 \tag{DA.9}
+```
 
 Both `F` and `J` are nonnegative, increasing, and convex on the relevant intervals.
 Thus the least possible disjoint additive energy for total retained mass `W` is
 
-\[
+```math
 \boxed{
 \mathcal E(W)
 :=\min_{\substack{z,p\ge0\\z+p=W}}
 \left[F(z)+J(p)\right].
 }
 \tag{DA.10}
+```
 
 Consequently every survivor satisfies
 
-\[
+```math
 \boxed{
 \delta\ge \mathcal E(W(t,\delta,\kappa)).
 }
 \tag{DA.11}
+```
 
 This is the main new inequality.
 
@@ -288,34 +299,37 @@ of `Phi` already spends total route detour through the capacity constraint
 
 For `0<W<pi`, the minimizing split is interior in the present range.  Write
 
-\[
+```math
 p=W-z.
-$$
+```
 
 Strict convexity gives the unique Euler equation
 
-$$
+```math
 \boxed{
 F'(z)=J'(p),
 }
 \tag{DA.12}
+```
 
 that is,
 
-\[
+```math
 \boxed{
 1-\cos(z/6)=2-2\cos(p/3).
 }
 \tag{DA.13}
+```
 
 The envelope derivative is the common marginal cost
 
-\[
+```math
 \boxed{
 \mathcal E'(W)=
 1-\cos(z/6)=2-2\cos(p/3).
 }
 \tag{DA.14}
+```
 
 This makes the outer feasible-region optimization elementary.
 
@@ -325,35 +339,36 @@ This makes the outer feasible-region optimization elementary.
 
 For fixed `t,delta`, differentiate (DA.8) with respect to `kappa`.  Since
 
-\[
+```math
 {\partial U\over\partial\kappa}=-{1\over2},
-$$
+```
 
 we get
 
-$$
+```math
 \boxed{
 {\partial W\over\partial\kappa}
 ={2\Delta_2\over U^2}>0.
 }
 \tag{DA.15}
+```
 
 Because `mathcal E` is increasing, the contradiction margin
 
-\[
+```math
 \mathcal H(t,\delta,\kappa)
 :=\mathcal E(W(t,\delta,\kappa))-\delta
-$$
+```
 
 is minimized at
 
-$$
+```math
 \kappa=0.
-$$
+```
 
 For fixed `t,kappa`,
 
-$$
+```math
 \boxed{
 {\partial W\over\partial\delta}
 =1+{8\Delta_2\over U^2}
@@ -361,30 +376,32 @@ $$
 =2.9895404540\ldots .
 }
 \tag{DA.16}
+```
 
 On `0<=W<=pi`,
 
-\[
+```math
 \mathcal E'(W)
 \le F'(W)
 \le F'(\pi)
 =1-\frac{\sqrt3}{2}.
-$$
+```
 
 Therefore
 
-$$
+```math
 \frac{\partial\mathcal H}{\partial\delta}
 \le
 \left(1-\frac{\sqrt3}{2}\right)
 \left(1+{8\Delta_2\over C_0^2}\right)-1
 < -0.5994.
 \tag{DA.17}
+```
 
 So `mathcal H` decreases strictly with `delta`.  Under (DA.2), its weakest feasible
 point is therefore
 
-\[
+```math
 \boxed{
 \kappa=0,
 \qquad
@@ -393,34 +410,38 @@ point is therefore
 U=C_0.
 }
 \tag{DA.18}
+```
 
 At this endpoint put
 
-\[
+```math
 \delta_0(t)={R_{50}(t)\over2},
-$$
+```
 
-$$
+```math
 \boxed{
 W_0(t)
 =\pi-\delta_0(t)-C_0-{t\over2}+{4\Delta_2\over C_0}
 =2\pi-{11t\over4}-{C_0\over2}+{4\Delta_2\over C_0}.
 }
 \tag{DA.19}
+```
 
 A survivor requires
 
-\[
+```math
 \boxed{
 H_0(t):=\mathcal E(W_0(t))-\delta_0(t)\le0.
 }
 \tag{DA.20}
+```
 
 Since `W_0'(t)=-11/4`, `delta_0'(t)=9/4`, and `mathcal E'>=0`,
 
-\[
+```math
 H_0'(t)<0.
 \tag{DA.21}
+```
 
 Thus there is at most one crossing.
 
@@ -435,43 +456,45 @@ The Decimal certificate
 solves (DA.13) by monotone bisection and evaluates (DA.20) at 80-digit precision.  It
 finds
 
-\[
+```math
 H_0(1.83236)>1.7\times10^{-5}>0,
-$$
+```
 
 while
 
-$$
+```math
 H_0(1.83237)<-5\times10^{-6}<0.
-$$
+```
 
 The unique scalar root is bracketed at
 
-$$
+```math
 \boxed{
 1.8323676277438298975\ldots .
 }
 \tag{DA.22}
+```
 
 Hence all Type-II survivors in the stated scope satisfy
 
-\[
+```math
 \boxed{
 \liminf_{D\to\infty}{q-k\over D}
 \ge1.83236.
 }
 \tag{DA.23}
+```
 
 This supersedes the `g=0.0050` joint-orbit floor `1.82515` and the earlier separate
 complement-bracing floor.
 
 At the scalar crossing, the minimizing allocation is approximately
 
-\[
+```math
 z=1.61787,
 \qquad
 p=0.57113,
-$$
+```
 
 so both energy mechanisms are genuinely active; the improvement is not obtained by
 throwing either population away.

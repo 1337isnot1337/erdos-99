@@ -25,35 +25,35 @@ the asymptotic case split only.
 
 Use the named proof-only ledgers, with
 
-$$
+```math
 a=q-2+2c_I-d_{tile},\qquad e_{BB}=q-m,
-$$
+```
 
 and put `r_deep=m-T`.  Then
 
-$$
+```math
 A_*:=a-T
 =e_{BB}+r_{deep}+2c_I-2-d_{tile}.
-$$
+```
 
 The augmented-triangle identity is
 
-$$
+```math
 Q_*:=\sum_rQ_r^+
 =Q+u_B-r_{deep}-2(c_I-1)-d_{tile}.
-$$
+```
 
 The loaded-hull identity is `e_BB=Q+2k+u_B`, hence
 
-$$
+```math
 Q_*=e_{BB}-2k-r_{deep}-2c_I+2-d_{tile}.
-$$
+```
 
 Subtracting gives, with no limiting operation,
 
-$$
+```math
 A_*-Q_*=2k+2r_{deep}+4c_I-4.
-$$
+```
 
 Both `d_tile` and `e_BB` cancel exactly.  The nonnegative structural terms used later
 are `k,r_deep,c_I,Q_*\ge0`; no independent sign is assigned to either `A_*` or
@@ -66,24 +66,24 @@ candidate. The algebra has no coefficient or sign error.
 
 The augmented-route lower bound is
 
-$$
+```math
 \liminf D^{-1}\left(\Delta_{ad}+\frac12A_*+3Q_*\right)
 \ge \frac\pi4(2-\sqrt3).
-$$
+```
 
 Substituting `A_*=Q_*+2k+2r_deep+4c_I-4` gives
 
-$$
+```math
 \Delta_{ad}+\frac12A_*+3Q_*
 =\Delta_{ad}+\frac72Q_*+k+r_{deep}+2c_I-2.
-$$
+```
 
 Because Section 75 supplies `c_I=O(D^{2/3})`, the finite `2c_I-2` term is `o(D)`.
 Therefore the displayed first-order inequality with currencies
 
-$$
+```math
 \Delta_{ad},\quad \frac72Q_*,\quad k,\quad r_{deep}
-$$
+```
 
 is valid at the stated proof-only scope.
 
@@ -99,18 +99,18 @@ compatibility inequalities involving that term.
 
 This sign correction does not invalidate the claimed subsequence alternative. Let
 
-$$
+```math
 c_{ret}:={\pi\over4}(2-\sqrt3)>0.
-$$
+```
 
 If at least one of `Q_*/D`, `k/D`, or `r_deep/D` has positive limsup, then one of the
 four named currencies is already linear along a subsequence. Otherwise those three
 nonnegative normalized terms tend to zero along a common further subsequence, and the
 collapsed return inequality itself forces
 
-$$
+```math
 \liminf {\Delta_{ad}\over D}\ge c_{ret}>0.
-$$
+```
 
 Thus the report's conclusion remains correct: after subsequence extraction, at least
 one of `Delta_ad`, `Q_*`, `k`, or `r_deep` has positive linear scale. The proof is the
@@ -119,11 +119,11 @@ dichotomy above, not an assertion that `Delta_ad` is globally nonnegative.
 For the quantitative form, if each of `Q_*/D`, `k/D`, and `r_deep/D` is at most
 `eta` asymptotically, then
 
-$$
+```math
 \liminf\frac{\Delta_{ad}}D
 \ge\frac\pi4(2-\sqrt3)-\frac72\eta-\eta-\eta
 =\frac\pi4(2-\sqrt3)-\frac{11}2\eta,
-$$
+```
 
 with the `2c_I-2` term vanishing. This coefficient is correct and requires no
 independent sign assumption on `Delta_ad`.

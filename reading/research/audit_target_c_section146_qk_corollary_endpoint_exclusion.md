@@ -18,10 +18,11 @@ The source makes two claims downstream of the audited-working structural omnibus
 §§142–146:
 
 1. §146.5 already implies the stronger scalar floor
-   $$
+   ```math
    \liminf (q-k)/D\ge
    c_*={4\over9}(\pi+\sqrt{\pi/(2\sqrt3)});
-   $$
+   
+   ```
 2. no Type-II survivor sequence can attain equality at this floor.
 
 The second claim uses the equality structure of §142 and a new outer-edge direction
@@ -33,25 +34,25 @@ measure argument. The theorem-state remains unchanged.
 
 Audited-working §146.5 is
 
-$$
+```math
 \liminf {1\over D}
 \left(h-{d_H\over9}-{10s_Z\over9}\right)\ge c_*.
-$$
+```
 
 The canonical definitions are
 
-$$
+```math
 d_H=q-h,
 \qquad
 k=d_H+s_Z.
-$$
+```
 
 Therefore exactly
 
-$$
+```math
 q-k=h-s_Z
 =\left(h-{d_H\over9}-{10s_Z\over9}\right)+{k\over9}.
-$$
+```
 
 Since `k>=0`, the claimed `q-k` floor follows immediately. No limit-direction subtlety
 is present because the comparison is pointwise before taking liminf.
@@ -68,60 +69,60 @@ currency in `b+Q=2(q-k)`.
 
 Assume `(q-k)/D -> c_*`. Since
 
-$$
+```math
 q-k=E_D+k/9,
 \qquad
 E_D:=h-d_H/9-10s_Z/9,
-$$
+```
 
 and `liminf E_D/D>=c_*`, nonnegativity of `k` forces
 
-$$
+```math
 k/D\to0.
-$$
+```
 
 Because `k=d_H+s_Z` with both terms nonnegative,
 
-$$
+```math
 d_H/D,s_Z/D\to0,
 \qquad
 h/D,q/D\to c_*.
-$$
+```
 
 Audited-working (146.2) then gives
 
-$$
+```math
 \liminf f/D\ge
 s_*-c_*/4,
 \qquad s_*:=\sqrt{\Delta_2}.
-$$
+```
 
 The algebra
 
-$$
+```math
 s_*-c_*/4=(8s_*-\pi)/9=2c_*-\pi=:\phi_*
-$$
+```
 
 was recomputed and is correct.
 
 The exact ledger
 
-$$
+```math
 b=2h-Q-2s_Z
-$$
+```
 
 and Type-II `per(F)/D->pi`, `per(F)<=b`, yield
 
-$$
+```math
 \limsup Q/D\le2c_*-\pi=\phi_*.
-$$
+```
 
 Since `f<=Q`, both converge to `phi_*`; consequently `Q-f=o(D)` and
 `b/D->pi`. Because `per(F)/D->pi` as well,
 
-$$
+```math
 b-per(F)=o(D).
-$$
+```
 
 No unproved equality classification is used.
 
@@ -133,49 +134,49 @@ No unproved equality classification is used.
 
 The exact stopped-train ledger from §142 is
 
-$$
+```math
 T=q+2f-k=(q-k)+2f.
-$$
+```
 
 Hence at the endpoint
 
-$$
+```math
 T/D\to x=c_*+2\phi_*,
 \qquad
 q/T\to y=c_*/x.
-$$
+```
 
 If `a` denotes the total atomic mass of a weak train-direction limit, §142 proves
 
-$$
+```math
 2s_*\le xa,
 \qquad
 y\le2(1-a).
-$$
+```
 
 The endpoint constants satisfy
 
-$$
+```math
 x(1-y/2)=x-c_*/2=2s_*.
-$$
+```
 
 Therefore
 
-$$
+```math
 2s_*\le xa\le x(1-y/2)=2s_*,
-$$
+```
 
 so both inequalities are equalities and
 
-$$
+```math
 1-a=y/2.
-$$
+```
 
 Thus the non-atomic train population has asymptotic size
 
-$$
+```math
 (1-a)T=(c_*/2+o(1))D.
-$$
+```
 
 This conclusion retains singleton trains because §142 defines `T` as the component
 count of the full auxiliary graph on all positive contact edges, with contact edges
@@ -189,9 +190,9 @@ incident to no strict rhombus represented by singleton paths.
 
 The source defines
 
-$$
+```math
 \nu_D=D^{-1}\sum_{e\in\partial_{out}}\delta_{\phi_e}.
-$$
+```
 
 Its total mass is `b/D->pi`.
 
@@ -201,49 +202,49 @@ contact walk, while every outer-walk vertex lies in the positive core and hence 
 
 For the projected total variation
 
-$$
+```math
 V_D(\theta)=\sum_e|e\cdot n_\theta|,
-$$
+```
 
 a closed walk visiting both support extrema has
 
-$$
+```math
 V_D(\theta)\ge2w_F(\theta).
-$$
+```
 
 Occurrence repetitions do not affect this inequality. Integrating gives
 
-$$
+```math
 \int V_D=2b,
 \qquad
 \int 2w_F=2\operatorname{per}(F).
-$$
+```
 
 Therefore `b-per(F)=o(D)` and the Type-II uniform width convergence imply
 
-$$
+```math
 V_D/D\to2
-$$
+```
 
 in `L^1`.
 
 The uniqueness step is also correct. For the `pi`-periodic kernel
 
-$$
+```math
 g(\theta)=|\cos\theta|,
-$$
+```
 
 one has distributionally
 
-$$
+```math
 g''+g=2\delta_{\pi/2\pmod\pi}.
-$$
+```
 
 Thus if a finite projective measure `nu` has constant cosine transform
 
-$$
+```math
 \int g(\theta-\phi)d\nu(\phi)=2,
-$$
+```
 
 applying `d^2/dtheta^2+1` gives a translate of `nu` equal to Lebesgue measure.
 Hence `nu` itself is Lebesgue measure. This avoids any unproved regularity or Fourier
@@ -265,9 +266,9 @@ two terminal contact edges; each can contribute at most one outer-face occurrenc
 singleton path consists of one contact edge; if it is a bridge, its two face-side
 occurrences may both be outer. Thus in every case
 
-$$
+```math
 \boxed{\text{one stopped train contributes at most two outer-face occurrences}.}
-$$
+```
 
 This is exactly the endpoint-count fact already used in the audited-working proof of
 §142.6.
@@ -276,16 +277,16 @@ Choose finitely many atoms carrying train mass at least `a-epsilon`, and choose 
 disjoint direction neighborhoods with boundaries carrying no limiting train measure.
 Weak convergence gives at most
 
-$$
+```math
 (1-a+O(\epsilon)+o(1))T
-$$
+```
 
 trains outside those neighborhoods. They can supply at most twice that many outer
 occurrences. At the equality endpoint this normalized capacity tends to
 
-$$
+```math
 2(1-a)x=c_*.
-$$
+```
 
 The entire outer walk has normalized length `pi`. Since `pi-c_*>0`, a positive
 normalized mass of outer occurrences must lie in the shrinking atom neighborhoods.
@@ -325,12 +326,12 @@ The theorem does not:
 
 The safe conclusion is:
 
-$$
+```math
 \boxed{
 \text{assuming audited-working §§142–146, no Type-II survivor sequence attains }
 (q-k)/D\to c_*.
 }
-$$
+```
 
 A uniform separation statement requires the usual sequence/diagonal formulation and
 is not assigned a numerical constant here.

@@ -16,9 +16,9 @@
 
 C67 uses the universal unit-separation bound
 
-$$
+```math
 2\arcsin\frac1{2D}
-$$
+```
 
 between distinct projective diameter directions. When the two diameter edges share no endpoint, the exact constant doubles asymptotically and admits a clean finite formula.
 
@@ -26,18 +26,18 @@ between distinct projective diameter directions. When the two diameter edges sha
 
 Let `ac` and `bd` be two vertex-disjoint diameter edges of a unit-separated planar point set of diameter `D>1`. Let
 
-$$
+```math
 \phi\in(0,\pi/2]
-$$
+```
 
 be the acute angle between their supporting lines. Then
 
-$$
+```math
 \boxed{
 \phi\ge4\arcsin\frac1{2D}.
 }
 \tag{ZW.1}
-$$
+```
 
 The bound is sharp as a four-point diameter geometry.
 
@@ -45,110 +45,110 @@ The bound is sharp as a four-point diameter geometry.
 
 Two vertex-disjoint diameter segments cross. Let `p,q` be their directed chord vectors, chosen so that
 
-$$
+```math
 |p|=|q|=D,
 \qquad
 \angle(p,q)=\phi.
-$$
+```
 
 Let the midpoint of the `p` chord be the origin and let `w` be the displacement to the midpoint of the `q` chord. Define
 
-$$
+```math
 d:=\frac{p-q}{2},
 \qquad
 c:=\frac{p+q}{2}.
-$$
+```
 
 Since `|p|=|q|`,
 
-$$
+```math
 d\cdot c=0.
-$$
+```
 
 Put
 
-$$
+```math
 r:=|d|=D\sin\frac\phi2,
 \qquad
 s:=|c|=D\cos\frac\phi2.
-$$
+```
 
 Choose orthogonal coordinates with
 
-$$
+```math
 d=(r,0),
 \qquad
 c=(0,s),
 \qquad
 w=(a,b).
-$$
+```
 
 Up to signs and cyclic relabeling, the four side vectors joining an endpoint of one diameter to an endpoint of the other are
 
-$$
+```math
 w+d,\quad w-d,\quad w+c,\quad w-c.
-$$
+```
 
 Every source distance is at most `D`, so
 
-$$
+```math
 |w+c|\le D,
 \qquad
 |w-c|\le D.
-$$
+```
 
 Squaring both inequalities and taking the larger sign of `b` gives
 
-$$
+```math
 \boxed{
 a^2+b^2+2s|b|\le r^2.}
 \tag{ZW.2}
-$$
+```
 
 In particular
 
-$$
+```math
 |a|\le r.
 \tag{ZW.3}
-$$
+```
 
 Setting `a=0` in the left side of ZW.2 only relaxes the constraint, so the positive root of
 
-$$
+```math
 b^2+2sb=r^2
-$$
+```
 
 gives the universal bound
 
-$$
+```math
 |b|\le\sqrt{s^2+r^2}-s=D-s.
 \tag{ZW.4}
-$$
+```
 
 Unit separation applies to the other opposite pair of cross-side distances:
 
-$$
+```math
 |w+d|\ge1,
 \qquad
 |w-d|\ge1.
-$$
+```
 
 Their smaller squared length is
 
-$$
+```math
 \min\{|w+d|^2,|w-d|^2\}
 =a^2+b^2+r^2-2r|a|.
-$$
+```
 
 Because `|a|<=r`,
 
-$$
+```math
 a^2-2r|a|\le0.
-$$
+```
 
 Using ZW.4,
 
-$$
+```math
 \begin{aligned}
 1
 &\le
@@ -158,13 +158,13 @@ $$
 &=D^2\left[\sin^2\frac\phi2+\left(1-\cos\frac\phi2\right)^2\right]\\
 &=4D^2\sin^2\frac\phi4.
 \end{aligned}
-$$
+```
 
 Therefore
 
-$$
+```math
 \sin\frac\phi4\ge\frac1{2D},
-$$
+```
 
 which proves ZW.1. QED.
 
@@ -172,19 +172,19 @@ which proves ZW.1. QED.
 
 Equality is realized at the level of the four-point distance constraints by taking
 
-$$
+```math
 a=0,
 \qquad
 b=D-s,
 \qquad
 2D\sin(\phi/4)=1.
-$$
+```
 
 Then
 
-$$
+```math
 |w+d|=|w-d|=1,
-$$
+```
 
 one of `|w\pm c|` equals `D`, and the other is at most `D`. Thus the constant cannot be improved from the assumptions `1<=all pair distances<=D` plus two disjoint diameter pairs alone.
 
@@ -194,30 +194,30 @@ No global optimality or KKT hypothesis enters the proof.
 
 As `D->infinity`,
 
-$$
+```math
 4\arcsin\frac1{2D}
 =\frac2D+O(D^{-3}),
-$$
+```
 
 exactly twice the shared-endpoint spacing
 
-$$
+```math
 2\arcsin\frac1{2D}
 =\frac1D+O(D^{-3}).
-$$
+```
 
 Thus matching-like diameter directions consume twice the projective angular budget of a tightly packed star.
 
 For a matching of `m` diameter edges, all pairs are vertex-disjoint, so their projective directions are pairwise separated by ZW.1. Hence
 
-$$
+```math
 \boxed{
 m\le
 \left\lfloor
 \frac{\pi}{4\arcsin(1/(2D))}
 \right\rfloor.}
 \tag{ZW.5}
-$$
+```
 
 Asymptotically this is `m<=(pi/2+o(1))D`, consistent with the classical `q<=pi D` plus `m<=q/2`. The leading constant is therefore sharp at the level of existing shell regressions and does not by itself close C-II.
 

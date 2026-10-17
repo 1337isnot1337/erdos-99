@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_adjacent_switching_caterpillar_2026-09-15.md) · source SHA-256 `6a5e391c6525daff0267cb7dd21ade9cb3817a2ffa0599f14e68614665fea69f`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "48e051057547865926c3045f40d9ab6f2e598461", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_adjacent_switching_caterpillar_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f2a7ef1ab460260cf7aa6358be5955d9f677d03e3f00bf2aa8ccca6e50b52799"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -19,39 +21,41 @@ considerably more structure than an arbitrary finite set.
 
 Choose coherent nested shores for two consecutive cuts,
 
-$$
+```math
 S_i\subset S_{i+1},
-$$
+```
 
 and put
 
-$$
+```math
 L:=S_{i+1}\setminus S_i.
-$$
+```
 
 For an oriented actual diameter edge `h=x_hy_h`, the cut-incidence sign is
 
-$$
+```math
 \varepsilon_{hj}=1_{S_j}(y_h)-1_{S_j}(x_h).
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 \varepsilon_{h,i+1}-\varepsilon_{hi}
 =1_L(y_h)-1_L(x_h).
 }
 \tag{SCF.1}
+```
 
 Hence a diameter row switches between the adjacent cuts if and only if its two
 endpoints lie on opposite sides of the vertex layer `L`:
 
-\[
+```math
 \boxed{
 H_{sw}=\delta_H(L).
 }
 \tag{SCF.2}
+```
 
 Here `H` is the full actual diameter graph and `delta_H(L)` denotes the graph cut.
 In particular `H_sw` is bipartite, with parts `L` and `V(H)\setminus L`.
@@ -65,9 +69,10 @@ thrackles gives the following.
 
 For every adjacent nested O--O cut pair,
 
-\[
+```math
 \boxed{H_{sw}\text{ is a forest, and every nontrivial component is a caterpillar.}}
 \tag{SCF.3}
+```
 
 Equivalently, after deleting the leaves from each switching component, what remains is
 a (possibly empty or single-vertex) path.
@@ -81,14 +86,14 @@ has fewer than `1800+o(1)` edges and is a disjoint union of caterpillars.
 
 Subtract the two cut-incidence signs:
 
-\[
+```math
 \begin{aligned}
 \varepsilon_{h,i+1}-\varepsilon_{hi}
 &=[1_{S_{i+1}}(y_h)-1_{S_i}(y_h)]\\
 &\quad-[1_{S_{i+1}}(x_h)-1_{S_i}(x_h)]\\
 &=1_L(y_h)-1_L(x_h).
 \end{aligned}
-$$
+```
 
 The right side is nonzero exactly when one endpoint belongs to `L` and the other does
 not.  This proves (SCF.1)--(SCF.2).  No geometric approximation or asymptotic limit is
@@ -103,46 +108,46 @@ here.
 
 Suppose a straight-line thrackle contained an even cycle
 
-$$
+```math
 v_1v_2\cdots v_{2k}v_1.
-$$
+```
 
 Fix the cycle edge
 
-$$
+```math
 e=v_1v_2
-$$
+```
 
 and let `ell` be its supporting line.  Every cycle edge
 
-$$
+```math
 v_jv_{j+1},
 \qquad 3\le j\le2k-1,
-$$
+```
 
 is nonadjacent to `e`, so it must cross the segment `e`.  Consequently its two
 endpoints lie in opposite open half-planes bounded by `ell`.  Thus the vertices
 
-$$
+```math
 v_3,v_4,\ldots,v_{2k}
-$$
+```
 
 alternate sides of `ell`.  Because the number of transitions from `v_3` to `v_{2k}`
 is
 
-$$
+```math
 2k-3,
-$$
+```
 
 which is odd, `v_3` and `v_{2k}` lie on opposite sides of `ell`.
 
 But the two cycle edges
 
-$$
+```math
 v_2v_3
 \qquad\text{and}\qquad
 v_{2k}v_1
-$$
+```
 
 are nonadjacent and therefore must meet.  Two segments issuing from the opposite
 endpoints `v_2,v_1` of `e` can cross only if their other endpoints `v_3,v_{2k}` lie in
@@ -163,9 +168,9 @@ theorem.
 
 Consider three distinct edges
 
-$$
+```math
 vw_1,\quad vw_2,\quad vw_3
-$$
+```
 
 incident to one vertex `v` in a straight-line thrackle.  Among the three supporting
 lines, one, say the line through `vw_1`, separates the two rays `vw_2` and `vw_3` into
@@ -199,9 +204,9 @@ For the Pareto-refined pair from
 `target_c_adjacent_cut_pareto_refinement_2026-09-15.md`, the exact opposite two-cut
 multishear has fewer than
 
-$$
+```math
 1800+o(1)
-$$
+```
 
 actual diameter rows with the natural `O(D)` first-derivative scale.  By (SCF.2), those
 rows are precisely the edges of one layer cut of the full diameter graph, and by

@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_unconditional_max_aperture_corridor_t18687_2026-09-17.md) · source SHA-256 `1f31ed3f4ed329b4c5aa4a0d167b62604613e9f4ff8ac3bef1298a1401d7e3cb`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "8d7e7a0d37b5082d06c0871f5e0916ed1ccd21f0", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_unconditional_max_aperture_corridor_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "47710be05dab284d5ec80929df4341d63c7f8197b8c61b30c85524c5ff2799f1"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
@@ -18,29 +20,29 @@ The current fixed-aperture corridor theorem separates a terminal-dominant branch
 
 The near-full paired population has density
 
-$$
+```math
 \nu={113\over10{,}000{,}000}=1.13\times10^{-5}.
-$$
+```
 
 For any fixed projective aperture `rho<gamma_H`, the ordered bilateral theorem says that the number of force pairs with gap below `rho` is at most
 
-$$
+```math
 {\rho\over2}D+o(D).
-$$
+```
 
 Therefore, for every fixed `0<epsilon<1`, choosing
 
-$$
+```math
 \rho_\epsilon=(1-\epsilon)c,
 \qquad
 c:=2\nu={113\over5{,}000{,}000}=2.26\times10^{-5},
-$$
+```
 
 leaves more than
 
-$$
+```math
 \epsilon\nu D-o(D)
-$$
+```
 
 paired centers whose force-pair gap is at least `rho_epsilon`. The narrow pairs form an initial segment in the ordered force population, so the surviving wide pairs form a suffix. Because the paired construction has only `o(D)` physical holes, that wide suffix contains arbitrarily many long consecutive physical interface blocks.
 
@@ -50,23 +52,23 @@ Consequently the no-TB1 branch always contains a fixed-aperture vanishing-mass d
 
 Moreover, diagonalizing `epsilon->0` gives a corridor sequence whose uniform force-pair aperture satisfies
 
-$$
+```math
 \boxed{
 \eta_i\ge c-o(1)
 =2.26\times10^{-5}-o(1)
 }
-$$
+```
 
 at every separator. This is twice the previous full-parent non-TT aperture `nu`.
 
 The corresponding common central-diamond radius is
 
-$$
+```math
 \boxed{
 \left({1\over2}\sin{c\over2}-o(1)\right)D
 =(5.64999999988\ldots\times10^{-6}-o(1))D.
 }
-$$
+```
 
 ---
 
@@ -74,72 +76,72 @@ $$
 
 Use the near-full paired exact-force population on one fixed side of the common hub,
 
-$$
+```math
 i_1<i_2<\cdots<i_N<k,
 \qquad
 N>(\nu-o(1))D,
 \tag{MC.1}
-$$
+```
 
 with
 
-$$
+```math
 \nu={c\over2},
 \qquad
 c={113\over5{,}000{,}000}.
 \tag{MC.2}
-$$
+```
 
 At every paired center let
 
-$$
+```math
 \eta_s
 =d_{\mathbb{RP}^1}([d_s^A],[d_s^B])
 \tag{MC.3}
-$$
+```
 
 be the projective gap of the exact positive force pair.
 
 The ordered bilateral theorem supplies
 
-$$
+```math
 \delta_D=2\arcsin{1\over2D}
 \tag{MC.4}
-$$
+```
 
 and, for every fixed `0<rho<gamma_H`,
 
-$$
+```math
 \boxed{
 N_D^{\rm narrow}(\rho)
 \le {\rho\over2\delta_D}+1.
 }
 \tag{MC.5}
-$$
+```
 
 Since
 
-$$
+```math
 \delta_D\ge{1\over D},
 \tag{MC.6}
-$$
+```
 
 this gives the finite upper bound
 
-$$
+```math
 \boxed{
 N_D^{\rm narrow}(\rho)
 \le {\rho D\over2}+1.
 }
 \tag{MC.7}
-$$
+```
 
 The same theorem proves more than cardinality: all `rho`-narrow pairs form an initial segment of the ordered exact-force population. Hence, after restricting to the paired centers in (MC.1), the pairs with
 
-$$
+```math
 \eta_s\ge\rho
 \tag{MC.8}
-$$
+```
 
 form a suffix in paired-center order.
 
@@ -149,44 +151,44 @@ form a suffix in paired-center order.
 
 Fix
 
-$$
+```math
 0<\epsilon<1
 \tag{MC.9}
-$$
+```
 
 and put
 
-$$
+```math
 \boxed{
 \rho_\epsilon
 =(1-\epsilon)c
 =2(1-\epsilon)\nu.
 }
 \tag{MC.10}
-$$
+```
 
 The constant `c=2.26e-5` is many orders of magnitude below `gamma_H=0.471...`, so the ordered capacity theorem applies.
 
 By (MC.1) and (MC.7), the number `W_D(epsilon)` of paired centers with gap at least `rho_epsilon` satisfies
 
-$$
+```math
 \begin{aligned}
 W_D(\epsilon)
 &\ge N-N_D^{\rm narrow}(\rho_\epsilon)\\
 &>(\nu-o(1))D-(1-\epsilon)\nu D-1.
 \end{aligned}
 \tag{MC.11}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 W_D(\epsilon)
 >(\epsilon\nu-o(1))D.
 }
 \tag{MC.12}
-$$
+```
 
 This estimate is independent of the TT/mixed/OO destination word. In particular:
 
@@ -201,18 +203,18 @@ The factor `2` in the limiting aperture comes exactly from the two-lane narrow-p
 
 Use the construction-level interpretation audited for the near-full paired diagonal. It begins with a consecutive physical one-sided shore `I_D` and obtains the paired population by explicit deletion, with
 
-$$
+```math
 \boxed{
 H_D:=|I_D\setminus P_D|=o(D).
 }
 \tag{MC.13}
-$$
+```
 
 The wide paired centers form a suffix of `P_D`. Take the physical interface interval from the first wide paired center through the last paired center. This interval contains all `W_D(epsilon)` wide centers and at most `H_D` holes. There are no narrow paired centers inside it.
 
 Let `T_D=o(D)` denote the neighborhood-complexity scale on the same diagonal. Choose an integer block length `m_D` so slowly that
 
-$$
+```math
 \boxed{
 m_D\to\infty,
 \qquad
@@ -221,36 +223,36 @@ m_D\to\infty,
 {m_DT_D\over D}\to0.
 }
 \tag{MC.14}
-$$
+```
 
 The holes split the wide suffix into at most `H_D+1` consecutive physical runs. Packing disjoint `m_D`-blocks gives `K_D` blocks with
 
-$$
+```math
 K_Dm_D
 \ge
 W_D(\epsilon)-(H_D+1)(m_D-1).
 \tag{MC.15}
-$$
+```
 
 Using (MC.12) and (MC.14),
 
-$$
+```math
 \boxed{
 K_D
 \ge(\epsilon\nu-o(1)){D\over m_D}
 \to\infty.
 }
 \tag{MC.16}
-$$
+```
 
 Every interface in every one of these blocks is a paired exact-force center with
 
-$$
+```math
 \boxed{
 \eta_i\ge\rho_\epsilon.
 }
 \tag{MC.17}
-$$
+```
 
 ---
 
@@ -258,21 +260,21 @@ $$
 
 Let
 
-$$
+```math
 B_i=\sum_{h\in X_i}\beta_h
 \tag{MC.18}
-$$
+```
 
 be the switching KKT mass at interface `i`. On one side of the common hub the switching sets are edge-disjoint, so
 
-$$
+```math
 \sum_iB_i\le1.
 \tag{MC.19}
-$$
+```
 
 Choose among the `K_D` blocks one block `J_D` minimizing total switching mass. Then
 
-$$
+```math
 \boxed{
 \mathcal B_D:=\sum_{i\in J_D}B_i
 \le {1\over K_D}
@@ -280,28 +282,28 @@ $$
 \to0.
 }
 \tag{MC.20}
-$$
+```
 
 The reaction bound gives
 
-$$
+```math
 \boxed{
 {1\over D}\sum_{i\in J_D}|G_i|
 \le\mathcal B_D\to0.
 }
 \tag{MC.21}
-$$
+```
 
 Write the exact positive two-ray compression as
 
-$$
+```math
 G_i=D(\lambda_i^-d_i^-+\lambda_i^+d_i^+).
 \tag{MC.22}
-$$
+```
 
 Because every pair has gap at least the fixed `rho_epsilon`, the sine-law estimate gives
 
-$$
+```math
 \boxed{
 \sum_{i\in J_D}(\lambda_i^-+\lambda_i^+)
 \le
@@ -309,7 +311,7 @@ $$
 \to0.
 }
 \tag{MC.23}
-$$
+```
 
 Thus fixed aperture, vanishing original KKT mass, and vanishing compressed-force mass coexist without any destination classification.
 
@@ -319,65 +321,66 @@ Thus fixed aperture, vanishing original KKT mass, and vanishing compressed-force
 
 Every interface of `J_D` is exact-antipodal, so its `m_D+1` rows have one exact common phase. The full first-order cancellation kernel is
 
-$$
+```math
 \mathcal K_D
 =
 \left\{a\in\mathbb R^{m_D+1}:\sum_ja_j=0\right\},
 \qquad
 \dim\mathcal K_D=m_D\to\infty.
 \tag{MC.24}
-$$
+```
 
 The direct-sum theorem gives
 
-$$
+```math
 \boxed{
 \left\|D^{-1}L_D(a)\right\|_2
 \ge(\sqrt2\,c_H-o(1))\|a\|_2,
 }
 \tag{MC.25}
-$$
+```
 
 with
 
-$$
+```math
 \sqrt2\,c_H=0.64179823755\ldots .
 \tag{MC.26}
-$$
+```
 
 The adjacent crossing-family drift is below `T_D` at every separator. By (MC.14), the common intersection across the whole block loses only `o(D)` columns. The one-row angular-defect purification then yields a common train family `P_D` with
 
-$$
+```math
 \boxed{|P_D|>(0.6536-o(1))D}
 \tag{MC.27}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 {\pi\over3}<\theta(\tau_j,b)
 ={\pi\over3}+o(1)
 }
 \tag{MC.28}
-$$
+```
 
 uniformly over every row and column of the growing rectangle.
 
 The common initial/final column flanks remain
 
-$$
+```math
 \boxed{
 |P_D^-|,|P_D^+|
 >(0.0647027254265\ldots-o(1))D,
 }
 \tag{MC.29}
+```
 
 with crossing centers below `-0.01D` and above `+0.01D` in row-normal circumcenter coordinates on every row.
 
 Finally the fixed aperture gives a common central disk in every force quadrilateral:
 
-\[
+```math
 \boxed{
 B\!\left(o,
 \left({1\over2}\sin{\rho_\epsilon\over2}-o(1)\right)D
@@ -386,7 +389,7 @@ B\!\left(o,
 \qquad(i\in J_D).
 }
 \tag{MC.30}
-$$
+```
 
 ---
 
@@ -396,10 +399,10 @@ The fixed-`epsilon` theorem is enough for every subsequent compactness argument.
 
 Take any sequence
 
-$$
+```math
 \epsilon_n\downarrow0.
 \tag{MC.31}
-$$
+```
 
 For each `n`, apply Sections 2--5 with `epsilon=epsilon_n` and then choose the source diameter so far out that
 
@@ -410,14 +413,14 @@ For each `n`, apply Sections 2--5 with `epsilon=epsilon_n` and then choose the s
 
 This diagonal extraction gives
 
-$$
+```math
 |J_n|=m_n\to\infty
 \tag{MC.32}
-$$
+```
 
 and a uniform aperture
 
-$$
+```math
 \boxed{
 \inf_{i\in J_n}\eta_i
 \ge\rho_{\epsilon_n}
@@ -425,37 +428,37 @@ $$
 =c-o(1).
 }
 \tag{MC.33}
-$$
+```
 
 The switching and compressed masses still tend to zero because `sin rho_{epsilon_n}->sin c>0`. The common central-diamond radius coefficient tends to
 
-$$
+```math
 \boxed{
 {1\over2}\sin{c\over2}
 =5.649999999879\ldots\times10^{-6},
 }
 \tag{MC.34}
-$$
+```
 
 and the cross-chord endpoint-separation coefficient tends to
 
-$$
+```math
 \boxed{
 \sin{c\over2}
 =1.129999999976\ldots\times10^{-5}.
 }
 \tag{MC.35}
-$$
+```
 
 The limiting compressed-force factor is finite:
 
-$$
+```math
 \boxed{
 {2\over\sin c}
 =88495.5752288\ldots .
 }
 \tag{MC.36}
-$$
+```
 
 Thus the aperture does not have to shrink when the corridor depth diverges.
 

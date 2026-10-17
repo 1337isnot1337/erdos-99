@@ -19,27 +19,27 @@ For the connected internal plane graph `C[I_r]`, write `n,e,L,Q` for vertex coun
 
 Euler and face incidence give
 
-$$
+```math
 e=2n-2-{L+Q\over2}.
-$$
+```
 
 Canonical Section 62 defines
 
-$$
+```math
 r=2n-\delta-2-e.
-$$
+```
 
 Therefore exactly
 
-$$
+```math
 \boxed{r={L+Q\over2}-\delta.}
-$$
+```
 
 Since `Q>=0`,
 
-$$
+```math
 L\le2(\delta+r).
-$$
+```
 
 No equality/stability property of Eppstein's inductive proof is imported.
 
@@ -55,32 +55,32 @@ Delete all bridges that are incident to the unbounded face on both sides and dec
 
 Every perimeter edge of every `U_j` is a unit graph edge with the unbounded face on the other side, and hence contributes an occurrence to the original outer-face walk. An edge occurring twice on the outer walk can only make the occurrence budget larger. Thus
 
-$$
+```math
 \sum_jp_j\le L.
-$$
+```
 
 Apply ordinary planar isoperimetry to each `U_j`:
 
-$$
+```math
 \operatorname{area}(U_j)\le p_j^2/(4\pi).
-$$
+```
 
 Then
 
-$$
+```math
 \sum_j\operatorname{area}(U_j)
 \le {1\over4\pi}\sum_jp_j^2
 \le {1\over4\pi}\left(\sum_jp_j\right)^2
 \le {L^2\over4\pi}.
-$$
+```
 
 This upper-bounds the area of every subfamily of bounded faces, including the internal strict rhombi.
 
 Combining with `L<=2(delta+r)` gives
 
-$$
+```math
 \boxed{A_{4,r}^{int}\le(\delta_r+r_r)^2/\pi.}
-$$
+```
 
 **Verdict:** PASS. Bridges and articulation multiplicities only weaken the bound in the safe direction.
 
@@ -90,30 +90,30 @@ $$
 
 With
 
-$$
+```math
 \eta_r=\delta_r+2-d_r,
-$$
+```
 
 we have
 
-$$
+```math
 \delta_r+r_r=r_r+\eta_r+d_r-2.
-$$
+```
 
 Taking square roots in the nonnegative area inequality gives
 
-$$
+```math
 \sqrt{\pi A_{4,r}^{int}}
 \le r_r+\eta_r+d_r-2,
-$$
+```
 
 and therefore
 
-$$
+```math
 \boxed{
 r_r+\eta_r
 \ge\sqrt{\pi A_{4,r}^{int}}+2-d_r.}
-$$
+```
 
 **Verdict:** PASS.
 
@@ -131,9 +131,9 @@ A strict-rhombus face of the induced harmonic graph `H_r` whose four vertices al
 
 Thus
 
-$$
+```math
 A_{4,r}^{int}\ge A_{4,r}-O(D).
-$$
+```
 
 **Verdict:** PASS.
 
@@ -143,21 +143,21 @@ $$
 
 The hostile-reviewed sharp Section-118 companion uses the same wrapping harmonic carrier throughout its signed-return proof. Its endpoint scalar has
 
-$$
+```math
 A_*=0.4703752868004241\ldots
-$$
+```
 
 and the underlying Section-117 statement is explicitly
 
-$$
+```math
 A_{4,D}/D^2\ge A_*-o(1)
-$$
+```
 
 for the strict-rhombus area of that carrier. The endpoint diameter is
 
-$$
+```math
 d_*/D\to0.9762439137425688\ldots
-$$
+```
 
 on the endpoint countersequence under discussion.
 
@@ -171,28 +171,28 @@ Therefore the Section-151 substitution uses area and diameter of the same physic
 
 Direct evaluation gives
 
-$$
+```math
 \sqrt{\pi A_*}=1.215618174198792\ldots
-$$
+```
 
 and
 
-$$
+```math
 \sqrt{\pi A_*}-\lambda_*
 =0.239374260456223\ldots>0.
-$$
+```
 
 Hence
 
-$$
+```math
 r_*+\eta_*\ge(0.2393742604\ldots-o(1))D.
-$$
+```
 
 Section 150 at the Section-148 lower edge gives both `R_I=o(D)` and `sum eta_r=o(D)`, so
 
-$$
+```math
 r_*+\eta_*\le R_I+\sum_r\eta_r=o(D),
-$$
+```
 
 a contradiction.
 
@@ -208,11 +208,11 @@ The correct next step is a correlated scalar continuation, not a claim that Type
 
 The most useful finite theorem to retain is the carrier inequality
 
-$$
+```math
 \boxed{
 r_r+(\delta_r+2-d_r)
 \ge\sqrt{\pi A_{4,r}^{int}}+2-d_r.}
-$$
+```
 
 It can be inserted into any later branch where a macroscopic carrier supplies a quantitative rhombus-area floor.
 

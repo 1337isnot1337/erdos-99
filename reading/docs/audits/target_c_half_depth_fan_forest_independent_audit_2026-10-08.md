@@ -24,26 +24,26 @@ The quantitative specialization uses canonical full-source geometry `C-FS-GEOM`:
 
 Let a finite source of diameter `D` lie in `B(c,R)`, with `R>=D/2`, and fix an actual diameter pair `pa`. Set `u=(p-a)/D`, `s(x)=u dot (p-x)`, `P=u dot (p-c)`, and `E=sqrt(R^2-D^2/4)`. For `delta>0`, define
 
-$$
+```math
 A(E,\delta)=\begin{cases}
 E^2/\delta+\delta/2,&E\le\delta/2,\\
 E+\delta/4,&E\ge\delta/2,
 \end{cases}\qquad H=P-A(E,\delta).
-$$
+```
 
 **Promoted claim `C-CIRCUMCIRCLE-UPPER-PAIR-SAFETY`.** If `s(x)<H` and translating `x` to `x-delta*u` increases its distance to a fixed source point `y`, then the new distance is strictly below `D`.
 
 Independent derivation: put `t=u dot (x-y)=s(y)-s(x)`. The squared-distance increase is `-2*delta*t+delta^2>0`, hence `t<delta/2`. For the old midpoint `m=(x+y)/2`,
 
-$$
+```math
 u\cdot(m-c)=P-s(x)-t/2>A(E,\delta)-t/2>0.
-$$
+```
 
 The parallelogram identity and `x,y in B(c,R)` give `|x-y|^2/4+|m-c|^2<=R^2`. Substitution into the exact translated squared distance bounds it strictly by
 
-$$
+```math
 F(t)=4R^2-4(A-t/2)^2-2\delta t+\delta^2.
-$$
+```
 
 For `E<=delta/2`, direct completion gives `F(t)=D^2-(t-2E^2/delta)^2<=D^2`. For `E>=delta/2`, `F(delta/2)=D^2` and `F'(t)=4E-delta-2t>=0` for `t<=delta/2`; since the actual `t` is strictly below `delta/2`, `F(t)<=D^2`. The strict midpoint-projection bound makes the actual new squared distance `<F(t)`, proving `<D^2` in both branches. No translated point is assumed to remain in the ball, and every old upper pair is covered.
 
@@ -55,18 +55,18 @@ For the canonical source, define `x -> y` if moving `x` alone by `-delta*u` woul
 
 **Promoted claim `C-CIRCUMCIRCLE-BLOCKER-CLOSURE`.** If `H>0` and `0<delta<2D`, no arrow-closed set `R0` containing `p` can have `s(x)<H` for every `x in R0`. Hence the arrow closure from `p` reaches depth `H`. A first-crossing path has distinct vertices, edge lengths `1<=d_j<=1+delta`, depth increments `Delta s_j>delta/2`, and
 
-$$
+```math
 L_{path}\ge H/(1+\delta),\qquad
 \sum_j(d_j-1)<\delta(H+1+\delta)-L_{path}\delta^2/2.
-$$
+```
 
 Proof reconstruction: translate all labels in a proposed closed `R0` by `-delta*u`, fixing all other labels. Internal pairs are unchanged. Arrow-closure preserves every crossing lower constraint, with old strict pairs remaining strictly above one and old contacts remaining at least one. Thus the new contact graph is a subgraph of the old triangle-free contact graph. For crossing upper pairs, a nonincreasing distance stays at most its old value; an increasing distance is strictly below `D` by Section 2, so no old subdiameter pair becomes a diameter pair. Also `A(E,delta)>=E`, `P<=R`, and `R-E<=D/2`, so `H<=D/2`; the carrier `a` is outside `R0`. The old diameter pair `pa` therefore shortens strictly. If the new diameter is below `D`, global minimality is contradicted. At diameter `D`, either contact count falls, contradicting contact minimality, or it is unchanged and the actual diameter-pair count falls, contradicting the second tie-break. This uses a finite move of all points in `R0`, not separately feasible single-vertex moves.
 
 For the canonical large-source corollary choose `delta=1/D`. By `C-FS-GEOM`, with `L=sqrt(D*eta+eta^2)`, the midpoint estimate gives `P>=D/2-E` and monotonicity of `A` gives
 
-$$
+```math
 H\ge \widehat H:=D/2-2L-1/(4D).
-$$
+```
 
 The finite arithmetic is `L^2/D^2=eta/D+eta^2/D^2 < 4/(3*sqrt(D))+7/(4D) <= 4/300+7/40000 <1/64` for `D>=10000`; hence `L<D/8` and `Hhat>0`. Along any unbounded canonical source sequence, `Hhat/D -> 1/2`. Taking the first crossing of `Hhat` in the same closure proof yields `liminf(path length/D)>=1/2`; the displayed excess inequality yields `limsup sum(d_j-1)<=1/2`.
 

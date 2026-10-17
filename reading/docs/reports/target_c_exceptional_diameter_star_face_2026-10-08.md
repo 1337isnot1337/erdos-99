@@ -46,10 +46,10 @@ the positive contact support.
 Every `b in B_s` has a nonzero diameter reaction. An actual diameter
 partner gives a strict supporting functional at `b`: for `q!=b`,
 
-$$
+```math
 (b-b')\cdot(q-b)\le-|q-b|^2/2<0.
 \tag{DS1}
-$$
+```
 
 Thus a positive combination of the incident diameter vectors cannot
 vanish, and equilibrium gives at least one positive contact at `b`.
@@ -61,10 +61,10 @@ vertex without a positive diameter reaction, equilibrium makes the
 position a weighted average of its positive contact neighbors.
 The finite maximum principle therefore gives
 
-$$
+```math
 \boxed{V(C_s)\subseteq\operatorname{conv}B_s.}
 \tag{DS2}
-$$
+```
 
 This is also the selected harmonic-trapping conclusion in canonical
 [Section 64.3](../targets/target-c/64-extreme-circuit-transfer-audit.md).
@@ -77,11 +77,11 @@ and leaves `b_1,...,b_k`. Write
 `b_i=a+D u_i`, where `u_i` are unit vectors.
 The full source diameter bound gives
 
-$$
+```math
 |u_i-u_j|\le1,
 \qquad \angle(u_i,u_j)\le\pi/3.
 \tag{DS3}
-$$
+```
 
 All leaf directions lie in one arc of width at most `pi/3`. Indeed,
 relative to one leaf they lie in `[-pi/3,pi/3]`; the two angular
@@ -106,29 +106,29 @@ then forces the next unit contact toward `a`. A path cannot stop at
 an unloaded point. Finiteness and source separation force it to
 reach `a`. Consequently
 
-$$
+```math
 D\in\mathbb Z,\qquad
 a+j u_-\in A\quad(0\le j\le D).
 \tag{DS4}
-$$
+```
 
 Apply the same argument to `b_+`. In particular both `a+u_-` and
 `a+u_+` are source points. Their distance is
 
-$$
+```math
 2\sin\!\left({\angle(u_-,u_+)\over2}\right)\le1.
 \tag{DS5}
-$$
+```
 
 A strict inequality violates source separation. Equality makes an
 actual unit equilateral triangle with `a`. Both are excluded.
 Thus:
 
-$$
+```math
 \boxed{\text{A triangle-free source stress supported in a diameter
 star has exactly one positive diameter edge.}}
 \tag{DS6}
-$$
+```
 
 This excludes a two-edge shared-endpoint stress even when it is
 not extreme. It makes no assertion against two disjoint diameter
@@ -141,18 +141,18 @@ If `beta` is supported on `ab` alone, normalization gives
 The preceding line argument forces `D=m in Z` and the unique
 unit chain
 
-$$
+```math
 p_j=a+j(b-a)/m,\qquad 0\le j\le m.
 \tag{DS7}
-$$
+```
 
 At each internal point the two positive contact coefficients are
 equal. Endpoint equilibrium determines their common value:
 
-$$
+```math
 \alpha_{p_jp_{j+1}}=m\quad(0\le j<m).
 \tag{DS8}
-$$
+```
 
 All other contact and diameter coefficients are zero. Conversely,
 if the full source contains DS7 for an actual diameter edge,
@@ -163,10 +163,10 @@ this stress are zero.
 The positive mixed support has `m+1` rows of rank `m`, so it is a
 rigidity-matroid circuit. On its `m+1` vertices,
 
-$$
+```math
 \sigma_*=m-1=D-1.
 \tag{DS9}
-$$
+```
 
 Its scalar energy is
 `m sum_j(z_{j+1}-z_j)^2-(z_m-z_0)^2>=0` by Cauchy.
@@ -182,12 +182,12 @@ two chains from the same hub again violate DS5.
 
 Therefore:
 
-$$
+```math
 \boxed{
 P_0=\varnothing\quad\text{or}\quad P_0=\{s_{\rm chain}\}.
 }
 \tag{DS10}
-$$
+```
 
 The second case occurs exactly when an edge of `E_0` has the full
 straight unit chain DS7 in the actual source. In particular `P_0`
@@ -209,10 +209,10 @@ between two source points of an actual diameter pair, whereas every
 actual diameter endpoint is an exposed source-hull vertex.
 Define the nonnegative affine functional
 
-$$
+```math
 f_r(s)=\sum_{c\ni r}\alpha_c,\qquad F_r=P\cap\{f_r=0\}.
 \tag{DS11}
-$$
+```
 
 Since `f_r(s_chain)=2D>0`, `F_r` is a proper face and
 `F_r intersect P_0` is empty. If `F_r` is empty, deleting `r`
@@ -221,10 +221,10 @@ alone kills every normalized stress. Otherwise
 zero-diameter-reaction faces indexed by `W`. There is
 `U subset W` with `|U|<=s_Z` and
 
-$$
+```math
 F_r\cap\bigcap_{b\in U}F_b=\varnothing.
 \tag{DS12}
-$$
+```
 
 Deleting `R=U union {r}` therefore kills every normalized source
 stress. A reduced-source stress would extend by zero to the displayed
@@ -233,10 +233,10 @@ forces zero contact reaction by DS1.
 
 Thus in both alternatives:
 
-$$
+```math
 \boxed{|R|\le s_Z+1,\qquad |R\setminus W|\le1.}
 \tag{DS13}
-$$
+```
 
 The optional exception is the supplied actual unloaded chain vertex.
 Canonical [Audit.87](../audits/target_c_contact_opening_transversal_independent_audit_2026-10-07.md)

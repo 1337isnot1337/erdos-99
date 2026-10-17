@@ -20,33 +20,33 @@ The train-rate parametrization is exact: opposite sides of a strict rhombus have
 
 Hence
 
-$$
+```math
 \dim\ker R_C=T-\operatorname{rank}C_{\rm face}+2.
-$$
+```
 
 With `T=e-2R` and Euler `e-v=R+f-1`, rank-nullity gives exactly
 
-$$
+```math
 \boxed{2f-\operatorname{rank}C_{\rm face}=\dim\ker R_C^T=:\sigma_C.}
-$$
+```
 
 Canonical mixed rigidity has left nullity `s_Z+1`. Every pure contact self-stress extends by zero diameter coordinates, while the normalized KKT stress has nonzero diameter part. Therefore
 
-$$
+```math
 \boxed{0\le\sigma_C\le s_Z}
-$$
+```
 
 and
 
-$$
+```math
 \boxed{\operatorname{rank}C_{\rm face}\ge 2f-s_Z.}
-$$
+```
 
 For every defect-face set `S`, row dependencies of the restricted matrix extend by zero to row dependencies of the full matrix. Thus
 
-$$
+```math
 |N(S)|\ge \operatorname{rank}C_S\ge 2|S|-\sigma_C\ge2|S|-s_Z.
-$$
+```
 
 The Hall-type expansion claim is valid.
 
@@ -54,15 +54,15 @@ The Hall-type expansion claim is valid.
 
 Outer-to-outer trains are zero columns of `C_face`; the separately audited no-bounded-return theorem is needed only for the converse zero-column identification. Consequently
 
-$$
+```math
 L_{OO}\le T-\operatorname{rank}C_{\rm face}\le h.
-$$
+```
 
 If `f>0`, the coordinate subspace supported only on outer-to-outer trains has trivial intersection with the all-trains rotation line. Mixed rigidity therefore maps this `L_OO`-dimensional non-Euclidean flex space injectively into the `h` diameter first-variation coordinates. KKT stationarity puts the image in the codimension-one hyperplane perpendicular to the positive diameter multiplier vector, so
 
-$$
+```math
 \boxed{L_{OO}\le h-1.}
-$$
+```
 
 This dimension argument is valid.
 
@@ -70,27 +70,27 @@ This dimension argument is valid.
 
 For one outer-to-outer train, the audited finite train primitive supplies a Jordan shore cut whose contact cut is exactly the train, with all crossing contact vectors parallel to one unit vector `u`. Summing positive KKT equilibrium over one shore gives
 
-$$
+```math
 A_\tau u=\sum_{h\pitchfork\tau}\beta_h r_h,
 \qquad A_\tau>0,
 \qquad \beta_h>0.
-$$
+```
 
 Taking the `Ju` component yields zero weighted transverse sum. If the crossing diameter vectors did not occur with both transverse signs, positivity forces every transverse component to vanish. All crossing diameter segments would then be parallel to `u`.
 
 A finite diameter-`D` set has at most one unordered diameter segment in any projective direction: if `b-a=Du` and `d-c=Du`, the two cross-distance bounds imply
 
-$$
+```math
 |Du-v|^2+|Du+v|^2=2D^2+2|v|^2\le2D^2,
-$$
+```
 
 so `v=0`.
 
 Thus the zero-transverse case has exactly one crossing diameter pair, oriented as `Du` by the vector KKT resultant. The exact one-train shear translates one shore by `R_\theta u-u`, preserves every old contact, and changes that crossing diameter to a vector of squared length
 
-$$
+```math
 D^2-2(D-1)(1-\cos\theta)<D^2
-$$
+```
 
 for small nonzero `theta`. Same-shore diameter pairs are unchanged; all old strict noncontacts and nondiameter pairs retain their slack for sufficiently small `theta`. Since canonical C65 exposes every actual diameter pair and contact-isolated points cannot be hidden diameter endpoints, the full source either acquires strictly smaller diameter or the same diameter with fewer actual diameter pairs, contradicting the lexicographic normalization.
 

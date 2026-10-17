@@ -1,6 +1,8 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_macroscopic_rhombic_component_2026-09-09.md) · source SHA-256 `f5b575a2440c34f0299d57bc88230e875d84fbbed6eef3282c131b6b067f6a31`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
+> Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
 <!-- theorem-state: {"artifact_id":"ART-06E93C7155C5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZRC: linear defect forces one quadratic rhombic sea
 
@@ -20,11 +22,11 @@ ZCQ gives a quadratic force-visible core and C42 gives `Omega_eta(D^2)` strict-r
 
 Decompose the strict-rhombus faces by edge adjacency. For each component, its boundary edges are exactly contacts whose other side is the outer face or a bounded nonquadrilateral face. The train decomposition internal to that component gives
 
-$$
+```math
 B_i=2T_i,
 \qquad
 R_i\le T_i^2/4=B_i^2/16,
-$$
+```
 
 where `R_i,T_i,B_i` are its rhombi, stopped trains, and boundary-edge incidences. The global boundary-incidence budget is only `O(D)`.
 
@@ -38,30 +40,31 @@ This turns the low-reset survivor into one genuine macroscopic rhombic sea with 
 
 Let
 
-$$
+```math
 \mathcal R
-$$
+```
 
 be the set of bounded strict-rhombus faces of the force-visible contact core. ZCQ+C42 gives a fixed constant `c_eta>0` such that
 
-$$
+```math
 \boxed{
 R:=|\mathcal R|
 \ge(c_\eta-o(1))D^2.
 }
 \tag{ZRC1}
+```
 
 Make a graph on `mathcal R` by joining two rhombi when they share a contact edge. Let its connected components be
 
-\[
+```math
 \mathcal R_1,\ldots,\mathcal R_s,
-$$
+```
 
 and write
 
-$$
+```math
 R_i:=|\mathcal R_i|.
-$$
+```
 
 For component `i`, let `B_i` be the number of contact edges incident to exactly one rhombus of `mathcal R_i`.
 
@@ -74,22 +77,23 @@ Conversely every rhombus-side incidence with one of those defect faces is a comp
 
 Different rhombic components cannot share a contact edge. Hence
 
-$$
+```math
 \boxed{
 \sum_i B_i
 \le
 E_{def},
 }
 \tag{1.1}
+```
 
 where
 
-\[
+```math
 E_{def}
 :=b+\sum_{F\text{ bounded non4}}\deg F
 =b+Q+4f.
 \tag{1.2}
-$$
+```
 
 ---
 
@@ -97,45 +101,47 @@ $$
 
 The exact post-ZF face identity gives
 
-$$
+```math
 \frac{b+Q}{2}=h-s_Z,
-$$
+```
 
 where now `h=|H|` is the number of actual diameter pairs. Hence
 
-$$
+```math
 b+Q\le2h\le2q.
 \tag{2.1}
-$$
+```
 
 The exact terminal partition
 
-$$
+```math
 q=x_B+f+g_F+2d_H+2s_Z
-$$
+```
 
 gives
 
-$$
+```math
 f\le q.
 \tag{2.2}
-$$
+```
 
 Therefore
 
-$$
+```math
 \boxed{
 E_{def}=b+Q+4f\le6q\le6\pi D.
 }
 \tag{ZRC2}
+```
 
 Thus
 
-\[
+```math
 \boxed{
 \sum_i B_i\le6\pi D.
 }
 \tag{ZRC3}
+```
 
 This is sharper in the post-ZF branch than the older generic C42.4 incidence bound.
 
@@ -147,33 +153,34 @@ Fix one rhombic component `mathcal R_i`.
 
 Let `E_i` be the number of distinct contact edges belonging to at least one face of the component. Face-edge incidence gives
 
-\[
+```math
 4R_i
 =2(E_i-B_i)+B_i,
-$$
+```
 
 so
 
-$$
+```math
 E_i=2R_i+\frac{B_i}{2}.
 \tag{3.1}
-$$
+```
 
 Inside the component, connect opposite contact edges across each rhombus as in DT. There are `E_i` edge-vertices and exactly `2R_i` train links.
 
 DT's monotone-projection argument excludes train cycles even in the presence of holes. Therefore this edge-link graph is a forest of paths. Its number `T_i` of components is
 
-$$
+```math
 T_i=E_i-2R_i.
-$$
+```
 
 Using (3.1),
 
-$$
+```math
 \boxed{
 T_i=\frac{B_i}{2}.
 }
 \tag{ZRC4}
+```
 
 Equivalently, every component train has two boundary contact edges, with all boundary components and holes counted automatically.
 
@@ -190,19 +197,20 @@ The train crossing graph of `mathcal R_i` has
 
 Mantel therefore gives
 
-\[
+```math
 R_i\le\frac{T_i^2}{4}.
-$$
+```
 
 Using ZRC4,
 
-$$
+```math
 \boxed{
 R_i\le\frac{B_i^2}{16},
 \qquad
 B_i\ge4\sqrt{R_i}.
 }
 \tag{ZRC5}
+```
 
 This is valid for an edge-connected rhombic component with arbitrary holes or pinched boundary topology; no simply connected disk hypothesis is used.
 
@@ -212,13 +220,13 @@ This is valid for an edge-connected rhombic component with arbitrary holes or pi
 
 Let
 
-\[
+```math
 M:=\max_i R_i.
-$$
+```
 
 Then
 
-$$
+```math
 \begin{aligned}
 R
 &=\sum_i R_i\\
@@ -227,59 +235,62 @@ R
 &\le\frac{\sqrt M}{4}\sum_iB_i\\
 &\le\frac{3\pi}{2}D\sqrt M,
 \end{aligned}
-$$
+```
 
 where ZRC5 and ZRC3 were used.
 
 Hence
 
-$$
+```math
 \sqrt M
 \ge
 \frac{2R}{3\pi D}.
-$$
+```
 
 By ZRC1,
 
-$$
+```math
 \boxed{
 M
 \ge
 \left(\frac{4c_\eta^2}{9\pi^2}-o(1)\right)D^2.
 }
 \tag{ZRC6}
+```
 
 Choose a component `mathcal R_*` attaining `M`, and write
 
-\[
+```math
 R_*=M,
 \quad B_*=B_i,
 \quad T_*=T_i.
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 R_*=\Omega_\eta(D^2).
 }
 \tag{ZRC7}
+```
 
 By ZRC4-ZRC5,
 
-\[
+```math
 T_*=\frac{B_*}{2}\ge2\sqrt{R_*},
-$$
+```
 
 so
 
-$$
+```math
 \boxed{
 T_*
 \ge
 \left(\frac{4c_\eta}{3\pi}-o(1)\right)D.
 }
 \tag{ZRC8}
+```
 
 Thus one edge-connected pure-rhombic component already carries linear train complexity.
 
@@ -289,30 +300,32 @@ Thus one edge-connected pure-rhombic component already carries linear train comp
 
 ZRI has only
 
-\[
+```math
 o(D^2)
-$$
+```
 
 exceptional strict-rhombus faces globally. Since `R_*=Omega_eta(D^2)`, their intersection with `mathcal R_*` is `o(R_*)`.
 
 Therefore
 
-$$
+```math
 \boxed{
 R_{*,good}=R_*-o(D^2)=R_*-o(R_*)
 }
 \tag{ZRC9}
+```
 
 faces of the macroscopic component each have at least two nonradial boundary contacts with stress below the ZRI weak scale `a_D->0`.
 
 Applying the ZWT assignment argument **inside this one component** gives a linear family of weak-rich component trains. In particular there are constants `c'_eta,k'_eta>0` such that
 
-\[
+```math
 \boxed{
 \text{at least }c'_\eta D\text{ trains of }\mathcal R_*
 \text{ are weak on at least }k'_\eta D\text{ rhombi.}
 }
 \tag{ZRC10}
+```
 
 Using ZEA, a linear subfamily has endpoint-anchored macroscopic weak strips on the boundary of the same rhombic component.
 
@@ -322,10 +335,10 @@ Using ZEA, a linear subfamily has endpoint-anchored macroscopic weak strips on t
 
 The full rhombic component boundary length satisfies
 
-\[
+```math
 B_*\le E_{def}\le6\pi D.
 \tag{7.1}
-$$
+```
 
 Thus the ZCQ/ZRI branch contains one connected quad complex with
 
