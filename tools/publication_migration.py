@@ -17,9 +17,10 @@ FROZEN = ROOT + "frozen-target-c-813-dispositions.jsonl"
 CAPTURE = "f282d53169df4d507117893bfdcc99f663855923"
 BASE = "c6e0394b3152d21075328bf4f26e6c070229bf13"
 SOURCE = "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+STATUS_DOCUMENTS = frozenset({"docs/launch/READINESS.md", "docs/launch/PUBLICATION_AUDIT.md"})
 SUPPORT_CHANGES = frozenset({"tools/check_public.py", "tools/build_artifact_index.py",
                              "docs/state/artifact-index.jsonl", "tools/verify_publication_candidate.py",
-                             "docs/publication/inclusion.json", "tools/audit_public_release.py"})
+                             "docs/publication/inclusion.json", "tools/audit_public_release.py"}) | STATUS_DOCUMENTS
 HISTORICAL_ROOTS = (
     "docs/archive/source-e99-branches/",
     ROOT + "agent-1/payload/",
@@ -180,6 +181,8 @@ def permitted_baseline_changes(read_blob, tree, base):
 
     Proofs and frozen reports cannot be changed by this policy. Every changed
     support file retains an exact old copy. Generated index rows may only grow.
+    The two release-status documents may only prepend a current status section;
+    their complete historical text and regular-file mode must be preserved.
     """
     changed = {path for path, entry in base.items() if tree.get(path) != entry}
     if not changed:
@@ -202,6 +205,14 @@ def permitted_baseline_changes(read_blob, tree, base):
         if (not identity_matches(old_data, row.get("before"), old[0])
                 or not identity_matches(new_data, row.get("after"), new[0])):
             raise ValueError("baseline transformation identity mismatch: " + path)
+        if path in STATUS_DOCUMENTS:
+            if (old[0] != "100644" or new[0] != "100644" or not old_data
+                    or new_data == old_data or not new_data.endswith(old_data)):
+                raise ValueError("release status addition changed historical text or mode: " + path)
+            prefix = new_data[:-len(old_data)]
+            if (not prefix.startswith(b"# Migration completion scope\n\n")
+                    or not prefix.endswith(b"\n\n")):
+                raise ValueError("release status addition needs a distinct leading section: " + path)
         if path.endswith("artifact-index.jsonl"):
             def index(data):
                 rows = [json.loads(line) for line in data.decode().splitlines() if line.strip()]

@@ -45,6 +45,12 @@ deprecation; the source repository and historical working copies remain intact.
 
 ## Verification and integration contract
 
+The six original engineering transformations retain their exact baseline
+archives. Two release-status documents additionally prepend current status
+while preserving their entire historical text and exact original copies.
+The policy permits only those two named document additions and rejects any
+historical-text or mode change. Security scanning and rights checks apply.
+
 The earlier outage, headless object reviews, and diagnostic test results remain
 historical evidence. A working local CPython 3.14.7 environment and a local
 namespace-capable verification route are now available. The

@@ -102,6 +102,40 @@
       "path": "tools/verify_publication_candidate.py",
       "preserved_original": "docs/research/migration/2026-10-16/integration/baseline-originals/tools/verify_publication_candidate.py.source",
       "reason": "Retain raw scanner results and review only exact committed math grouping labels and payload-free negative fixtures."
+    },
+    {
+      "path": "docs/launch/READINESS.md",
+      "preserved_original": "docs/research/migration/2026-10-16/integration/baseline-originals/commits/c6e0394b3152d21075328bf4f26e6c070229bf13/docs/launch/READINESS.md.source",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "27b18757e53ba0263a781bf6eeb3343fea38e764",
+        "sha256": "00424dfff6d427830049becd9523eb2d661c708a56848e43ab3bc46776c01052",
+        "bytes": 6963
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "7c1ae8ff00c59505df42ddfb948a622d88664620",
+        "sha256": "fe8c258f64c6af2cde68aa231e62aa4ac286cb990b4ccb87f359673925ab7ec5",
+        "bytes": 8100
+      },
+      "reason": "Prepend current migration completion and bounded historical-worktree status; preserve the complete baseline document, exact original archive, source rights, and all historical receipts."
+    },
+    {
+      "path": "docs/launch/PUBLICATION_AUDIT.md",
+      "preserved_original": "docs/research/migration/2026-10-16/integration/baseline-originals/commits/c6e0394b3152d21075328bf4f26e6c070229bf13/docs/launch/PUBLICATION_AUDIT.md.source",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "76aa9c4a0fef7a9eb55639ba7be1675c38333949",
+        "sha256": "23555b7f499d4e4525e79748db56a5905a8154ca75476f6594fd68c670d171e8",
+        "bytes": 13233
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "726a1ba711ecdc7f4aa235d84c1d02ab8e03dc2d",
+        "sha256": "fe2d468fbd22b2d3164fd42a7e7d6a21a99b7112bc2e6396b885509cc766bb7b",
+        "bytes": 14370
+      },
+      "reason": "Prepend current migration completion and bounded historical-worktree status; preserve the complete baseline document, exact original archive, source rights, and all historical receipts."
     }
   ],
   "captured_commit": "f282d53169df4d507117893bfdcc99f663855923",

@@ -1,6 +1,4 @@
-# Publication audit and blocker ledger
-
-## Full migration completion scope
+# Migration completion scope
 
 The [current integration status](../research/migration/2026-10-16/integration/STATUS.md)
 accounts for all 4,717 pinned source-main paths: 4,654 exact source identities
@@ -15,8 +13,10 @@ deferred pending explicit owner disposition. Neither repository is made public
 or removed. Exact current Gate 2 results belong in detached receipts naming the
 tested SHA/tree, as required by [migration verification](MIGRATION_VERIFICATION.md)
 and the handoff on [PR #75](https://github.com/1337isnot1337/erdos-99/pull/75).
-Historical results below do not establish a current-commit pass.
+Historical results below do not establish a current-commit pass. The complete
+historical readiness narrative follows unchanged.
 
+# Publication audit and blocker ledger
 
 ## Expanded Target C corpus: exact-commit verification scope
 

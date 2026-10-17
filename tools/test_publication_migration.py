@@ -179,6 +179,41 @@ class BaselinePolicyTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             m.permitted_baseline_changes(objects.__getitem__, tree, base)
 
+    def test_release_status_prefix_preserves_complete_historical_document(self):
+        old = b"# Historical readiness\n\nOriginal scope and rights.\n"
+        new = b"# Migration completion scope\n\nCurrent bounded status.\n\n" + old
+        for path in m.STATUS_DOCUMENTS:
+            with self.subTest(path=path):
+                objects, base, tree, _, _ = self.fixture(path, old, new)
+                self.assertEqual(m.permitted_baseline_changes(objects.__getitem__, tree, base), {path})
+
+    def test_status_identity_record_cannot_authorize_historical_rewrite(self):
+        old = b"# Historical readiness\n\nOriginal scope and rights.\n"
+        prefix = b"# Migration completion scope\n\nCurrent bounded status.\n\n"
+        for new in (prefix + old.replace(b"rights", b"changed rights"),
+                    old + prefix, b"Unmarked addition\n\n" + old):
+            with self.subTest(new=new):
+                objects, base, tree, _, _ = self.fixture("docs/launch/READINESS.md", old, new)
+                with self.assertRaises(ValueError):
+                    m.permitted_baseline_changes(objects.__getitem__, tree, base)
+
+    def test_other_launch_document_cannot_use_status_addition(self):
+        old = b"# Historical scope\n"
+        new = b"# Migration completion scope\n\nCurrent status.\n\n" + old
+        objects, base, tree, _, _ = self.fixture("docs/launch/OTHER.md", old, new)
+        with self.assertRaises(ValueError):
+            m.permitted_baseline_changes(objects.__getitem__, tree, base)
+
+    def test_status_addition_cannot_change_executable_mode(self):
+        old = b"# Historical scope\n"
+        new = b"# Migration completion scope\n\nCurrent status.\n\n" + old
+        objects, base, tree, policy, save = self.fixture("docs/launch/READINESS.md", old, new)
+        tree["docs/launch/READINESS.md"] = ("100755", m.blob_hash(new))
+        policy["baseline_transformations"][0]["after"] = identity(new, "100755")
+        save()
+        with self.assertRaises(ValueError):
+            m.permitted_baseline_changes(objects.__getitem__, tree, base)
+
     def test_index_can_add_unreviewed_rows_but_cannot_change_old_rows(self):
         old_row = dict(path="old.md", status="canonical", canonical=True, claim_ids=["accepted"])
         new_row = dict(path="new.md", status="unreviewed", canonical=False, claim_ids=[], claim_statuses={},
