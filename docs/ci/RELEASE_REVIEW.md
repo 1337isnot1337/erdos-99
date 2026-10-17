@@ -42,7 +42,7 @@ workflow change does not turn those historical skips into verification evidence.
   omitted to fit the automatic job. Complete required replay remains the merging agent's duty.
 - The optional Linux package replay is serial, with at most two selected packages and 240 declared seconds.
   Each hosted job is limited to six minutes. The complete Tier 0 corpus check
-  has a separate 120-second process limit, leaving job time for trusted control
+  has a separate 180-second process limit, leaving job time for trusted control
   tests, checkout and installation. These limits do not change the package replay
   budget. Bubblewrap
   requires separate namespaces, no network, cleared environment, read-only

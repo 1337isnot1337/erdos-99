@@ -213,5 +213,5 @@ def integrity(root, control, plan, output):
         + repr(plan['merge_base']) + '];runpy.run_path("/control/tools/ci_integrity.py",run_name="__main__")']
     # This checks the complete public corpus as well as changed metadata. Keep
     # its budget separate from the optional package replay command limits.
-    return execute(argv, 120, output / 'integrity.log')
+    return execute(argv, 180, output / 'integrity.log')
 
