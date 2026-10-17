@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2168,
-  "math_pairs_normalized": 71621,
+  "source_documents": 2169,
+  "math_pairs_normalized": 71635,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -2173,6 +2173,13 @@
       "reading_path": "reading/docs/audits/target_c_typeii_qk_train_hull_gap_hostile_audit_2026-09-12.md",
       "reading_sha256": "c8e400606895709ac3c2c45794590e4cad34d7a00b2a215d75824b1b3696809a",
       "math_pairs_normalized": 8
+    },
+    {
+      "source": "docs/audits/target_c_typeii_separate_face_floor_recheck_2026-10-17.md",
+      "source_sha256": "eed8dcdebe7b4e0e8598709b8d05d015fe89d1eee98de50ae81f0896b7d960b6",
+      "reading_path": "reading/docs/audits/target_c_typeii_separate_face_floor_recheck_2026-10-17.md",
+      "reading_sha256": "85b3c56c809a820d3b2f6a73af81c25d461730fcac611bfdcdf0a260f3742787",
+      "math_pairs_normalized": 14
     },
     {
       "source": "docs/audits/target_c_typeii_single_cell_inverse_phase_exclusion_independent_audit_2026-10-09.md",
