@@ -47,7 +47,13 @@ workflow change does not turn those historical skips into verification evidence.
   budget. Bubblewrap
   requires separate namespaces, no network, cleared environment, read-only
   source/runtime mounts, and no inherited credentials. Hosted jobs install
-  Bubblewrap when missing. There is no unisolated
+  distro Bubblewrap and AppArmor profiles. When Ubuntu's unprivileged-user-namespace
+  restriction is enabled, they load only the packaged `bwrap-userns-restrict`
+  profile. It permits Bubblewrap setup while its child profile denies capabilities.
+  A trusted-control runtime probe must then pass before checks start. See the
+  [Ubuntu restriction explanation](https://documentation.ubuntu.com/release-notes/24.04/#unprivileged-user-namespace-restrictions)
+  and [Noble updates package contents](https://packages.ubuntu.com/noble-updates/all/apparmor-profiles/filelist).
+  No global security setting is changed. There is no unisolated
   fallback. Commands use argument vectors, with wall/CPU, address-space,
   output-file, core-dump, and descriptor limits.
 - The replay limits are not an aggregate cgroup process/memory budget. Local

@@ -51,10 +51,20 @@ jobs:
           --only-binary=:all: -r control/tools/requirements-integrity-linux-x86_64.lock
       - name: Ensure hosted isolation backend is available
         run: |
-          if ! command -v bwrap >/dev/null 2>&1; then
-            sudo apt-get update
-            sudo apt-get install --yes --no-install-recommends bubblewrap
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends bubblewrap apparmor-profiles
+          if test "$(cat /proc/sys/kernel/apparmor_restrict_unprivileged_userns 2>/dev/null || true)" = '1'; then
+            sudo apparmor_parser -r /usr/share/apparmor/extra-profiles/bwrap-userns-restrict
           fi
+          python3 -I - <<'PY'
+          import sys
+          sys.path.insert(0, "control")
+          from tools.localized_ci.replay import sandbox_unavailable_reason
+          reason = sandbox_unavailable_reason(require_replay_python=True)
+          if reason:
+              raise SystemExit(reason)
+          print("Trusted isolated Python startup passed")
+          PY
       - name: Verify trusted CI control
         working-directory: control
         run: python3 -B -m unittest tools.test_local_ci -q
@@ -125,10 +135,20 @@ jobs:
           --only-binary=:all: -r control/tools/requirements-integrity-linux-x86_64.lock
       - name: Ensure hosted isolation backend is available
         run: |
-          if ! command -v bwrap >/dev/null 2>&1; then
-            sudo apt-get update
-            sudo apt-get install --yes --no-install-recommends bubblewrap
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends bubblewrap apparmor-profiles
+          if test "$(cat /proc/sys/kernel/apparmor_restrict_unprivileged_userns 2>/dev/null || true)" = '1'; then
+            sudo apparmor_parser -r /usr/share/apparmor/extra-profiles/bwrap-userns-restrict
           fi
+          python3 -I - <<'PY'
+          import sys
+          sys.path.insert(0, "control")
+          from tools.localized_ci.replay import sandbox_unavailable_reason
+          reason = sandbox_unavailable_reason(require_replay_python=True)
+          if reason:
+              raise SystemExit(reason)
+          print("Trusted isolated Python startup passed")
+          PY
       - name: Recompute plan and replay selected packages without network
         run: >-
           python3 -B control/tools/local_ci.py --root candidate

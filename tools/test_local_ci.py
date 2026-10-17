@@ -694,6 +694,17 @@ class ProtocolSyntax(unittest.TestCase):
         self.assertNotIn('strategy',workflow['jobs']['replay'])
         for job in workflow['jobs'].values():
             self.assertLessEqual(job['timeout-minutes'],6)
+            setup = next(step for step in job['steps']
+                         if step.get('name') == 'Ensure hosted isolation backend is available')['run']
+            self.assertIn('bubblewrap apparmor-profiles', setup)
+            self.assertIn('if test "$(cat /proc/sys/kernel/apparmor_restrict_unprivileged_userns 2>/dev/null || true)" = \'1\'; then', setup)
+            self.assertIn('sudo apparmor_parser -r /usr/share/apparmor/extra-profiles/bwrap-userns-restrict', setup)
+            self.assertIn('sys.path.insert(0, "control")', setup)
+            self.assertIn('sandbox_unavailable_reason(require_replay_python=True)', setup)
+            self.assertNotIn('candidate', setup)
+            self.assertNotIn('sysctl -w', setup)
+            self.assertNotIn('--share-net', setup)
+            self.assertNotIn('--cap-add', setup)
             for step in job['steps']:
                 if 'uses' in step:
                     self.assertRegex(step['uses'],r'@[0-9a-f]{40}$')
