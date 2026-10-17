@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2168,
-  "math_pairs_normalized": 71621,
+  "source_documents": 2169,
+  "math_pairs_normalized": 71702,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -2152,6 +2152,13 @@
       "reading_path": "reading/docs/audits/target_c_typeii_aggregate_payment_independent_audit_2026-09-14.md",
       "reading_sha256": "c72583aecdca1ce5c767fbefb5b305f64979b3c6d83482826b878392e27b985e",
       "math_pairs_normalized": 5
+    },
+    {
+      "source": "docs/audits/target_c_typeii_face_floor_independent_reconstruction_2026-10-17.md",
+      "source_sha256": "5d7e4018915350c844423d9b67acab8f7e3cb96c591d8de66b4650c780c684ab",
+      "reading_path": "reading/docs/audits/target_c_typeii_face_floor_independent_reconstruction_2026-10-17.md",
+      "reading_sha256": "06a5ebcafc25a0a287ce1077a6567894b457b051b98e8be84c3dfcd63d911105",
+      "math_pairs_normalized": 81
     },
     {
       "source": "docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md",
