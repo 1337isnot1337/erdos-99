@@ -14,13 +14,27 @@ from pathlib import Path
 import sys
 
 from check_migration_union import (AuditError, BASE, Git, ROOT, SOURCE,
-                                   SOURCE_TREE, audit, publication_exclusion, safe_path)
+                                   SOURCE_TREE, audit, digest, publication_exclusion,
+                                   safe_path, source_record)
 
 ARCHIVE = ROOT + "integration/source-main/"
 
 
+def plan_source_record(row: dict) -> tuple[str, tuple[str, str, str]]:
+    """Validate a public repair-plan identity without leaking schema KeyErrors."""
+    if not isinstance(row, dict):
+        raise AuditError("Repair plan items must be source-identity objects")
+    try:
+        return source_record(row)
+    except (KeyError, TypeError) as exc:
+        raise AuditError(f"Incomplete repair source identity: {exc}") from exc
+
+
 def prepare(source: Git, report: dict, expected_source: str = SOURCE,
             expected_tree: str = SOURCE_TREE) -> list[dict]:
+    if (not isinstance(report, dict) or not isinstance(report.get("errors"), list)
+            or not isinstance(report.get("missing"), list)):
+        raise AuditError("Repair report requires errors and missing arrays")
     if report["errors"]:
         raise AuditError("Resolve integrity errors before copying missing source files")
     commit = source.resolve(expected_source)
@@ -30,11 +44,11 @@ def prepare(source: Git, report: dict, expected_source: str = SOURCE,
     entries = source.tree(commit)
     plan = []
     for row in report["missing"]:
-        path = safe_path(row["source_path"])
+        path, expected_identity = plan_source_record(row)
         mode, oid = entries.get(path, (None, None))
         if publication_exclusion(path):
             raise AuditError(f"Reference material cannot enter a repair plan: {path}")
-        if mode not in ("100644", "100755") or (mode, oid) != (row["source_mode"], row["source_blob"]):
+        if mode not in ("100644", "100755") or (mode, oid) != expected_identity[:2]:
             raise AuditError(f"Source identity mismatch: {path}")
         data = source.blob(oid)
         if hashlib.sha256(data).hexdigest() != row["source_sha256"]:
@@ -44,13 +58,21 @@ def prepare(source: Git, report: dict, expected_source: str = SOURCE,
 
 
 def apply_plan(root: Path, plan: list[dict]) -> list[str]:
+    if not isinstance(plan, list):
+        raise AuditError("Repair plan must be a list of source-identity objects")
     root = root.resolve()
     pending = []
     seen = set()
     # Preflight every target before writing any file.
     for item in plan:
-        relative = safe_path(item["destination"])
-        if not relative.startswith(ARCHIVE) or relative in seen:
+        path, (mode, oid, sha256) = plan_source_record(item)
+        data = item.get("data")
+        if (mode not in ("100644", "100755") or not isinstance(data, bytes)
+                or digest("blob", data) != oid or hashlib.sha256(data).hexdigest() != sha256):
+            raise AuditError(f"Repair payload identity mismatch: {path}")
+        relative = safe_path(item.get("destination"))
+        if (relative != ARCHIVE + path + ".source" or relative in seen
+                or publication_exclusion(path)):
             raise AuditError("Repair targets must be unique historical archive paths")
         seen.add(relative)
         target = root / relative
@@ -59,6 +81,8 @@ def apply_plan(root: Path, plan: list[dict]) -> list[str]:
                 break
             if parent.is_symlink():
                 raise AuditError(f"Symlink in repair target: {relative}")
+            if parent != target and parent.exists() and not parent.is_dir():
+                raise AuditError(f"Non-directory repair ancestor: {relative}")
         if target.exists():
             if not target.is_file() or target.read_bytes() != item["data"]:
                 raise AuditError(f"Refusing to overwrite a different file: {relative}")
@@ -114,3 +138,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
