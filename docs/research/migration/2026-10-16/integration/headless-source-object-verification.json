@@ -1,0 +1,106 @@
+{
+  "all_4717_source_dispositions_resolved": true,
+  "candidate_commit": "932d14bd57ec95824cd45714862d78ffec87c278",
+  "candidate_tracked_blob_paths": 7486,
+  "candidate_tree": "edd4db0d69a98b4969c95ea4332edea14c8c7f54",
+  "candidate_tree_truncated": false,
+  "complete_source_ledger_git_blob_sha1": "12575669098ead49084e3d8d5a699519fc43e53c",
+  "complete_source_ledger_sha256": "03917940f24e738ba637d22c4414fc60cf12f754a43ed05b82060d633ea7b4b5",
+  "complete_source_ledger_sha256_independently_recomputed": true,
+  "current_destination_overrides": [
+    {
+      "current_destination": "docs/research/migration/2026-10-16/integration/baseline-originals/tools/build_artifact_index.py.source",
+      "destination_blob": "0f27741a50edef6fce3957d5c1495ea9de45d65b",
+      "destination_bytes": 9165,
+      "destination_mode": "100644",
+      "historical_destination": "tools/build_artifact_index.py",
+      "reason": "The active artifact-index tool changed after the historical source coverage audit; its exact original remains archived.",
+      "source_blob": "0f27741a50edef6fce3957d5c1495ea9de45d65b",
+      "source_path": "tools/build_artifact_index.py",
+      "source_sha256": "66f5bcd98a481c16dd9c01ba2a4b5d6f5b19ebe80c346a19373e25136358d3e3"
+    }
+  ],
+  "deprecation_ready": false,
+  "exact_source_object_identities_resolved": 4654,
+  "executable_checker_rerun_after_environment_loss": false,
+  "existing_reference_checksum_manifests_preserved": 1,
+  "frozen_imports": {
+    "accepted_frozen_transformations_retained": 203,
+    "destination_git_blobs_modes_and_byte_lengths_verified": 813,
+    "destination_sha256_values_cross_checked_against_source_for_identical_blobs": 610,
+    "frozen_ledger_git_blob_sha1": "c0fdf380a6aff37157b5e64e39ed515d99a56d0f",
+    "frozen_ledger_identical_to_baseline": true,
+    "frozen_ledger_utf8_bytes": 3946783,
+    "original_destination_sha256_records_retained": 813,
+    "original_source_bytes_retained_at_frozen_destination": 610,
+    "records_checked": 813,
+    "sources_bound_to_actual_source_tree": 813
+  },
+  "historical_ledger_destinations_still_exact": 4653,
+  "immutable_evidence_objects": [
+    {
+      "git_blob_sha1": "12575669098ead49084e3d8d5a699519fc43e53c",
+      "mode": "100644",
+      "path": "docs/research/migration/2026-10-16/integration/source-main-complete-dispositions.jsonl",
+      "utf8_bytes": 4001340
+    },
+    {
+      "git_blob_sha1": "c0fdf380a6aff37157b5e64e39ed515d99a56d0f",
+      "mode": "100644",
+      "path": "docs/research/migration/2026-10-16/frozen-target-c-813-dispositions.jsonl",
+      "utf8_bytes": 3946783
+    },
+    {
+      "git_blob_sha1": "7e465ddb9ff53fb529200531c25844555ac2d4e4",
+      "mode": "100644",
+      "path": "docs/research/migration/2026-10-16/agent-1/evidence/source-main-three-way-assignment.jsonl",
+      "utf8_bytes": 3038401
+    },
+    {
+      "git_blob_sha1": "92275d3ca0cd358ad03db1dd0d7e95437dc09d35",
+      "mode": "100644",
+      "path": "docs/research/migration/2026-10-16/agent-2/corpus-assignment.jsonl",
+      "utf8_bytes": 4198860
+    },
+    {
+      "git_blob_sha1": "4ca250f2841216f9c600a65d5641d3d7c570b4d3",
+      "mode": "100644",
+      "path": "docs/research/migration/2026-10-16/agent-3/source-main-allocation.jsonl",
+      "utf8_bytes": 2971214
+    }
+  ],
+  "inert_source_main_archive_files": 1282,
+  "limits": [
+    "This receipt verifies actual remote Git object identities and ledger bindings for the stated candidate commit.",
+    "It does not execute the Python source-union checker, research programs, dependency replay, or Gate 2.",
+    "The source payloads' SHA-256 values are cross-checked as preserved metadata; payload SHA-256 hashes are not recomputed in this headless check.",
+    "The complete source ledger describes its original historical audit. One destination changed; the explicit current override binds its preserved original bytes.",
+    "Coverage is for the pinned source main tree. Historical refs, inaccessible worktrees, and source deprecation require their separate evidence.",
+    "Later evidence-only additions require their own commit identification; this receipt does not claim verification of a different tree."
+  ],
+  "mathematical_proof": false,
+  "non_reference_source_paths_preserved": 4653,
+  "payload_sha256_recomputed_after_environment_loss": false,
+  "prior_executable_source_evidence": {
+    "audited_payload_commit": "bad80df13634295c43353a7fd2cc6f61d2192881",
+    "original_layout_replay_files_previously_byte_compared": 4653,
+    "source_record_checkpoint_commit": "8938a8b3cb2ea262b49328e2828462445019fb7d",
+    "source_record_receipt_path": "docs/research/migration/2026-10-16/integration/source-main-preservation-receipt.json"
+  },
+  "reference_exclusions_checked": 63,
+  "release_verified": false,
+  "research_certificate_replay_after_environment_loss": false,
+  "schema_version": "erdos-99-remote-source-preservation/v1",
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "source_git_blob_and_mode_records_match_actual_pinned_tree": true,
+  "source_inventory_count": 3,
+  "source_inventory_records_checked": 14151,
+  "source_objects_missing": [],
+  "source_original_executable_modes_recorded": 27,
+  "source_paths_checked": 4717,
+  "source_repository": "1337isnot1337/e-99",
+  "source_sha256_metadata_agrees_across_all_three_inventories": true,
+  "source_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+  "status": "PASS_REMOTE_OBJECT_AND_LEDGER_BINDINGS",
+  "structural_errors": []
+}
