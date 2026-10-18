@@ -1,0 +1,8 @@
+exact sparse-exceptional stress regression
+R D source_count core_count diameter_edges exceptional/D min_ring_distance^2
+16 32 657 610 8 1/4 512/25
+25 50 1809 1740 10 1/5 1250/41
+36 72 4067 3972 12 1/6 2592/61
+64 128 13723 13564 16 1/8 8192/113
+100 200 34397 34158 20 1/10 20000/181
+256 512 232941 232366 32 1/16 131072/481

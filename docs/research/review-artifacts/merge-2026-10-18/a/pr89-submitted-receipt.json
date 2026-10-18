@@ -1,0 +1,40 @@
+{
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-I",
+    "-O",
+    "-B",
+    "/tmp/erdos99-merge-20261018-review-a/pr89-submitted.py"
+  ],
+  "timeout_seconds": 30,
+  "elapsed_seconds": 3.0257315570000287,
+  "returncode": 0,
+  "stdout_sha256": "536fc5c16377c98961a8240b0450d9b6749667f733c2b35d62998527837638e3",
+  "saved_evidence_equal": true,
+  "status": "passed",
+  "case_count": 34,
+  "primitive_checks": {
+    "minimum_squared_distance_margin": "993/1000000",
+    "primitive_tubes": 9,
+    "segment_metric_comparisons": 441,
+    "sites_per_primitive_tube": 7,
+    "strict_boundary_control": "passed"
+  },
+  "negative_controls": [
+    {
+      "actual_interior_tube": 55,
+      "counterexample_m": 7,
+      "integer_gap_numerator": 55,
+      "mutation": "use the translation-average cost as a pointwise cap",
+      "strict_upper_bound_for_mean_cost": "7260/133"
+    },
+    {
+      "mutation": "omit basis closure",
+      "rejected_by": "sector basis balance fails"
+    },
+    {
+      "mutation": "report an interior-only tube as the full tube",
+      "rejected_by": "advertised ledger differs: tube_exterior"
+    }
+  ]
+}

@@ -6,7 +6,9 @@ Downstream use: A positive result must pay the actual j_* demand; a negative res
 
 Prior evidence:
 - [regression](../research-packages/target-a-fan-tube-ledger/README.md) at `33a4aaa016d0a219e2f9e8e7a92c87ff4aa77afb`: Seed-63 full-tube ledger; the submitted canonical-admissibility claim is corrected in the current package. Admissible optimum 1; relaxed optimum M-1. Remaining: Actual source demand and phase selection are absent.
-- [author-checked](https://github.com/1337isnot1337/erdos-99/blob/aa111eedcd3bc190f991aeaa7f42299948551207/research-packages/target-a-full-tube-fan-ledger/README.md) at `aa111eedcd3bc190f991aeaa7f42299948551207`: Submitted seed-66 fixed-phase ledger and basis-independent upper bound 3; not a sharp all-basis optimization. Remaining: Review before relying on its all-parameter claim; source-demand extraction remains open.
+- [agent-audited](../research-packages/target-a-full-tube-fan-ledger/README.md) at `aa111eedcd3bc190f991aeaa7f42299948551207`: seed-66 fixed-phase ledger and basis-independent upper bound 3; not a sharp all-basis optimization. Integration corrects the stale PR #87 comparison; the seed-66 result is unchanged. Remaining: Actual source-demand extraction and a sharp hexagonal all-basis optimum are not established.
+
+Independent integration reviews: [Target A](../docs/research/review-artifacts/merge-2026-10-18/review-a.txt), [Target B](../docs/research/review-artifacts/merge-2026-10-18/review-b.txt), [Target C](../docs/research/review-artifacts/merge-2026-10-18/review-c.txt).
 
 **Track / priority:** target-a / direct frontier; selection weight 5 (attention only).
 

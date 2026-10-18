@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "/tmp/erdos99-merge-20261018-review-c/independent_adversarial_checks.py"
+  ],
+  "cwd": "/tmp/erdos99-merge-20261018-review-c",
+  "timeout_seconds": 60,
+  "elapsed_seconds": 1.295,
+  "exit_code": 0,
+  "stdout": "{\n  \"reviewer\": \"/root/merge_review_c\",\n  \"method\": \"fresh standard-library exact rational/integer checks; no submitted imports\",\n  \"incidence\": {\n    \"random_seed\": 20261018,\n    \"valid_multigraph_ledgers\": 6201,\n    \"train_loops\": 8612,\n    \"interior_edge_cases\": 562,\n    \"sharp_ledger\": {\n      \"q\": 5,\n      \"f\": 3,\n      \"k\": \"1\",\n      \"c\": 1,\n      \"A\": 5,\n      \"N_inner\": 0\n    },\n    \"failure_controls\": 2\n  },\n  \"sparse_sources\": [\n    {\n      \"R\": 16,\n      \"source_labels\": 657,\n      \"source_pairs\": 215496,\n      \"contacts\": 1166,\n      \"actual_diameter_pairs\": 8,\n      \"all_forces_zero\": true\n    },\n    {\n      \"R\": 17,\n      \"source_labels\": 771,\n      \"source_pairs\": 296835,\n      \"contacts\": 1384,\n      \"actual_diameter_pairs\": 8,\n      \"all_forces_zero\": true\n    },\n    {\n      \"R\": 25,\n      \"source_labels\": 1809,\n      \"source_pairs\": 1635336,\n      \"contacts\": 3384,\n      \"actual_diameter_pairs\": 10,\n      \"all_forces_zero\": true\n    }\n  ],\n  \"capacity_sources\": [\n    {\n      \"m\": 7,\n      \"labels\": 64,\n      \"source_pairs\": 2016,\n      \"contacts\": 112,\n      \"actual_diameter_pairs\": 1,\n      \"strict_cover_samples\": 169,\n      \"slack\": 7\n    },\n    {\n      \"m\": 8,\n      \"labels\": 81,\n      \"source_pairs\": 3240,\n      \"contacts\": 144,\n      \"actual_diameter_pairs\": 1,\n      \"strict_cover_samples\": 169,\n      \"slack\": 8\n    },\n    {\n      \"m\": 12,\n      \"labels\": 169,\n      \"source_pairs\": 14196,\n      \"contacts\": 312,\n      \"actual_diameter_pairs\": 1,\n      \"strict_cover_samples\": 169,\n      \"slack\": 12\n    }\n  ],\n  \"scope\": \"finite checks only; analytic universal steps reconstructed in audit receipt\",\n  \"elapsed_seconds\": 1.268\n}\n",
+  "stderr": ""
+}

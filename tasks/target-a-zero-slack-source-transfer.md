@@ -5,7 +5,9 @@
 Downstream use: The coupling must bound the source-specific Schur demand or yield a same-cardinality competitor. Another arbitrary matching collision does not advance that implication.
 
 Prior evidence:
-- [author-checked](https://github.com/1337isnot1337/erdos-99/blob/2e4a3e1e73877df4f4756fcb4c7d331dcda1327f/docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md) at `2e4a3e1e73877df4f4756fcb4c7d331dcda1327f`: Submitted five-source matching-overlap example: separate matchings do not supply joint source capacity. Remaining: No actual zero-slack source or Schur realization.
+- [agent-audited](../docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md) at `2e4a3e1e73877df4f4756fcb4c7d331dcda1327f`: five-source matching-overlap example: separate matchings do not supply joint source capacity. Remaining: No actual zero-slack source or Schur realization.
+
+Independent integration reviews: [Target A](../docs/research/review-artifacts/merge-2026-10-18/review-a.txt), [Target B](../docs/research/review-artifacts/merge-2026-10-18/review-b.txt), [Target C](../docs/research/review-artifacts/merge-2026-10-18/review-c.txt).
 
 **Track / priority:** target-a / direct frontier; selection weight 4 (attention only).
 

@@ -1,0 +1,62 @@
+{
+  "reviewer": "/root/merge_review_c",
+  "model": "GPT-6 Astra Pro",
+  "completed_utc": "2026-10-18T02:24:55.714304+00:00",
+  "verdict": "PASS",
+  "scope": [
+    "PR93 exact repaired arithmetic file",
+    "PR89 part4 scope correction"
+  ],
+  "files": {
+    "pr93": {
+      "submitted_head": "dfdc8b5747cf0e6cadb1237118a28ea09e087296",
+      "path": "research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py",
+      "submitted_sha256": "83f807afcc05b6cd3adfc6a4a4299d38167045b388082711b28448811bab7d3d",
+      "repaired_sha256": "f78911648fb274ed3ba00d4886a377f399d504e4847016c8f9348672d7ddbc77",
+      "snapshot": "/tmp/erdos99-merge-20261018-review-c/corrections/pr93/research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py",
+      "submitted_checker_replay": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "/tmp/erdos99-merge-20261018-review-c/corrections/pr93/research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py"
+        ],
+        "timeout_seconds": 60,
+        "elapsed_seconds": 0.017,
+        "exit_code": 0,
+        "stdout": "PASS: pi lower bound from exact Machin-series rationals\nPASS: unique-max loss < 0.1865 < gamma_0\nPASS: balancing, deletion, and grid-loss thresholds\nPASS: GPI diameter lower bound > 2.95 and lattice upper bound < 2.21\nScope: numerical margins only; no geometric or graph proof is encoded.\n",
+        "stderr": ""
+      }
+    },
+    "pr89": {
+      "submitted_head": "aa111eedcd3bc190f991aeaa7f42299948551207",
+      "path": "research-packages/target-a-full-tube-fan-ledger/README.md",
+      "submitted_sha256": "2c805c002a7f654cef3e7b8310b27658ec85181069d0208e611cd276122cea23",
+      "repaired_sha256": "c2ba77428425b800a5c3127c6ce8494ed37e42a0a8dccae20c46579bb8de794b",
+      "snapshot": "/tmp/erdos99-merge-20261018-review-c/corrections/pr89/research-packages/target-a-full-tube-fan-ledger/README.md"
+    }
+  },
+  "independent_checker": {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/tmp/erdos99-merge-20261018-review-c/corrections/independent_repair_check.py"
+    ],
+    "timeout_seconds": 60,
+    "elapsed_seconds": 0.023,
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"PASS\",\n  \"Machin_interval\": {\n    \"lower_fraction\": \"3367720447004809249690544948/1071978712185331878662109375\",\n    \"upper_fraction\": \"16351242570542166037227701165133056/5204762161592759090489959716796875\",\n    \"lower_decimal\": \"3.1415926535886022158338233041071950604932354052042\",\n    \"upper_decimal\": \"3.1415926535898358474858753470106798110236099941048\",\n    \"width_fraction\": \"4988934999179205348/4044104243661817475128173828125\",\n    \"width_decimal\": \"1.2336316520520429034847505303745889006047063934697E-12\",\n    \"old_false_lower_above_tight_upper\": \"1190531785039482433025952214289092730133263427902595582753900208556430978842210790666624154206728/34223074628535461354498818562645456864680141236766049505421342205754699060218594620353542268276214599609375\"\n  },\n  \"strict_margin_decimal_displays\": {\n    \"pi_lower_minus_3.14159\": \"0.0000026535886022158338233041071950604932354052042175456\",\n    \"sqrt3_upper_squared_minus_3\": \"6.66601E-7\",\n    \"sqrt_mu0_upper_squared_minus_mu0\": \"5.0249E-10\",\n    \"0.1865_minus_unique_max_loss_upper\": \"0.0000419385684\",\n    \"gamma0_lower_minus_0.1865\": \"0.012171043325270166893306630927391550648868131574646\",\n    \"gamma0_lower_minus_0.198\": \"0.00067104332527016689330663092739155064886813157464631\",\n    \"6e-13_minus_u_plus_delta\": \"9.996E-14\",\n    \"1e-12_minus_balanced_deficit_cap\": \"4.9996E-13\",\n    \"3e-12_minus_deletion_bound\": \"1.9999999999994999999999997499999999998749999999999E-12\",\n    \"0.00601_minus_grid_loss_cap\": \"0.000006\",\n    \"diameter_lower_minus_2.95\": \"0.008361493849607694\",\n    \"2.21_minus_lattice_upper\": \"0.0046841732988753517465259503902694038270248590709247\"\n  },\n  \"strict_margin_exact_fractions\": {\n    \"pi_lower_minus_3.14159\": \"91026895759136142360211/34303318789930620117187500000\",\n    \"sqrt3_upper_squared_minus_3\": \"666601/1000000000000\",\n    \"sqrt_mu0_upper_squared_minus_mu0\": \"50249/100000000000000\",\n    \"0.1865_minus_unique_max_loss_upper\": \"104846421/2500000000000\",\n    \"gamma0_lower_minus_0.1865\": \"327909371743149971456294984959/26941763576038473997524359584000\",\n    \"gamma0_lower_minus_0.198\": \"18079090618707520484764849743/26941763576038473997524359584000\",\n    \"6e-13_minus_u_plus_delta\": \"2499/25000000000000000\",\n    \"1e-12_minus_balanced_deficit_cap\": \"12499/25000000000000000\",\n    \"3e-12_minus_deletion_bound\": \"3999999999997/1999999999999000000000000\",\n    \"0.00601_minus_grid_loss_cap\": \"3/500000\",\n    \"diameter_lower_minus_2.95\": \"4180746924803847/500000000000000000\",\n    \"2.21_minus_lattice_upper\": \"1577498619592071655388474699123086582203045402608377/336772044700144152924354098068042120625431242263623700\"\n  },\n  \"PR89_scope_check\": \"Section-102 optimum1; relaxed Z-perfect optimumM-1, missingM-2 deep columns; hexagonal bound<=3 is independent and not claimed sharp\",\n  \"scope\": \"PR93 repaired arithmetic only; PR89 part4 integration correction only\"\n}\n",
+    "stderr": ""
+  },
+  "merged_PR99_input_pins": [
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/README.md",
+      "sha256": "55309cc95d01366db9825e070c5097e122a75282aeab2d5a587b324cb9e14e7a",
+      "current_main_bytes_match": true
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/TASK.json",
+      "sha256": "3460d921efcaede863995051076bce1ca39bed7ed06e6aeef1402145d0ce35e0",
+      "current_main_bytes_match": true
+    }
+  ],
+  "blockers": [],
+  "canonical_promotion": false
+}

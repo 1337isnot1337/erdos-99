@@ -1,0 +1,6 @@
+{
+  "original_filename": "pr93-repair.diff",
+  "original_sha256": "810f8ceea343022963ebd41957dd2fd13d4face457a7eed0a556d0e53ef16854",
+  "encoding": "utf-8",
+  "text": "--- dfdc8b5747cf0e6cadb1237118a28ea09e087296:research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py\n+++ integration:research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py\n@@ -17,9 +17,9 @@\n \n \n # Machin's identity is pi/4 = 4 atan(1/5) - atan(1/239).\n-# Odd partial sums are lower bounds and even partial sums are upper bounds.\n+# An even number of terms gives a lower bound; an odd number gives an upper bound.\n # Thus this is an exact rational lower bound for pi.\n-pi_lower = 16 * atan_partial(Q(1, 5), 7) - 4 * atan_partial(Q(1, 239), 2)\n+pi_lower = 16 * atan_partial(Q(1, 5), 8) - 4 * atan_partial(Q(1, 239), 3)\n assert pi_lower > Q(314159, 100000)\n \n sqrt3_upper = Q(1732051, 1000000)\n"
+}

@@ -1,0 +1,44 @@
+INDEPENDENT AI-AGENT REVIEW OF INTEGRATION CORRECTIONS
+Reviewer: /root/merge_review_c; GPT-6 Astra Pro
+Verdict: PASS for the two exact file corrections below.
+Independence: I did not author or edit either submitted file or the integration repairs. I reconstructed the decisive arithmetic without using agent B's derivation, and my independent checker imports no submitted code. This is a scoped correction review, not a replacement for the assigned whole-PR reviews.
+
+PR93 — repaired Machin lower bound
+Submitted head: dfdc8b5747cf0e6cadb1237118a28ea09e087296
+File: research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py
+Submitted SHA-256: 83f807afcc05b6cd3adfc6a4a4299d38167045b388082711b28448811bab7d3d
+Repaired SHA-256: f78911648fb274ed3ba00d4886a377f399d504e4847016c8f9348672d7ddbc77
+
+For S_n(x)=sum_{k=0}^{n-1}(-1)^k x^{2k+1}/(2k+1), integration of the finite geometric identity gives
+atan(x)-S_n(x)=(-1)^n integral_0^x t^{2n}/(1+t^2) dt.
+The integral is positive for x>0. Thus an even number n of terms gives a strict lower bound and an odd number gives a strict upper bound. The submitted code used 16 S_7(1/5)-4 S_2(1/239), which is an upper bound and cannot be used as its claimed lower bound. My independent high-order bracket confirms it lies strictly above pi.
+
+Let a=atan(1/5), b=atan(1/239). Double-angle algebra gives tan(2a)=5/12 and tan(4a)=120/119, so tan(4a-b)=1 exactly. Also 0<4a-b<4/5<pi/2; the first inequality follows even from 4(1/5-(1/5)^3/3)-1/239>0. Hence 4a-b=pi/4 on the correct branch. This derives the Machin identity used here.
+
+The repaired lower endpoint is L=16 S_8(1/5)-4 S_3(1/239). An independent upper endpoint is U=16 S_9(1/5)-4 S_4(1/239). The parity signs give L<pi<U. My checker also places a substantially tighter independently formed pair (using orders 16/15 and 17/16) strictly inside this interval. No floating point or stored pi approximation is used in any sign decision.
+
+Exact interval:
+L=3367720447004809249690544948/1071978712185331878662109375.
+U=16351242570542166037227701165133056/5204762161592759090489959716796875.
+U-L=4988934999179205348/4044104243661817475128173828125.
+Decimal displays only: L=3.14159265358860221583382330410719506049..., U=3.14159265358983584748587534701067981102..., width=1.2336316520520429...e-12.
+
+Using L as the denominator lower bound and 1732051/1000000 as the sqrt(3) upper bound gives a conservative upper bound for c=2 sqrt(3)/pi. The independent checker recomputes every submitted inequality as an exact positive rational margin: the pi floor; both square-root bounds; unique-max loss; both gamma floors; the delta/mu coefficient identity; balanced-deficit cap; deleted-train cap; grid-loss cap; diameter lower margin; and lattice upper margin. Representative margins are 0.0000419385684 below the 0.1865 unique-max cap, 0.00067104332527... above the 0.198 gamma floor, 0.008361493849607694 above the 2.95 diameter floor, and 0.004684173298875... below the 2.21 lattice ceiling. The exact fractions for all 12 positive margins are in independent-repair-check-results.txt/json.
+
+Repaired script replay: python corrections/pr93/research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py, standard nonoptimized interpreter, 60-second timeout, exit 0 in 0.017 seconds. It printed all four PASS groups and its numerical-only scope. Own checker: python independent_repair_check.py, 60-second timeout, exit 0 in 0.023 seconds. This correction fixes the bound direction and preserves every strict numerical inequality. It does not audit the geometric GPI/MCP2 argument or promote a theorem.
+
+PR89 — corrected basis-comparison scope in part 4
+Submitted head: aa111eedcd3bc190f991aeaa7f42299948551207
+File: research-packages/target-a-full-tube-fan-ledger/README.md
+Submitted SHA-256: 2c805c002a7f654cef3e7b8310b27658ec85181069d0208e611cd276122cea23
+Repaired SHA-256: c2ba77428425b800a5c3127c6ce8494ed37e42a0a8dccae20c46579bb8de794b
+
+I compared the two edited part-4 paragraphs with the already merged research-packages/target-a-fan-tube-ledger/README.md and TASK.json, specifically the incidence-deep definition, missing-column witness, disjoint source/sink partition, and exact two-class optimization proof. The repaired attribution correctly says that PR99 corrected the earlier PR87 triangular seed-63 scope: Section-102 admissible bases extend the incidence-deep basis and have exact raw optimum 1; unrestricted Z-perfect matchings with the full nonbasis Schur complement have relaxed optimum M-1. The relaxed witness omits { (2,1) } union { (1,j): 2<=j<=M-2 }, exactly M-2 incidence-deep columns. All these columns lie in { i,j>=1, i+j<=M-1 } for M>=5.
+
+The distinction also follows directly from the source ledger. The triangular family has |O|=3M+3, |T_Z|=2M+1 and |T_O|=3, hence raw cut=(M-1)-sum_i min(|C_i|,|O_i|). In the relaxed witness all surviving nonbasis sector counts vanish, attaining M-1. For admissible bases all M+1 nonbasis columns are boundary terminals; at most three are fan vertices, and each survivor has a distinct exterior neighbor in its sector. Thus the sum is M+1-t_Sigma and the raw cut is t_Sigma-2<=1. The admissible predecessor has t_Sigma=3 and attains 1. The altered text states precisely this distinction.
+
+The hexagonal comparison is independent. Its already submitted full counts are |O|=9m+4, |T_Z|=9m-8 and |T_O|=9. The same disjoint-shore identity therefore gives raw cut=3-sum_i min(|C_i|,|O_i|)<=3 at the three specified phases. The repaired text explicitly claims neither a sharp hexagonal optimum nor an attaining basis, and imports neither triangular optimum into that different geometry. The previously stated true deficiency 6m+3 then yields only the existing gap at least 6m. No new hexagonal theorem, source demand, global extraction or canonical promotion is introduced by the correction.
+
+Scope: part 4 attribution and dependency repair only. No replay of the already merged PR99 package or the complete PR89 suite was required or performed by this reviewer. The assigned PR89 reviewer retains responsibility for its full geometry. Exact correction diffs, file snapshots and SHA-256 bindings are beside this receipt.
+
+No blocker remains in either correction. The final integration tree and repository-wide checks remain the merging agent's responsibility.

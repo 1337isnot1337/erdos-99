@@ -1,0 +1,219 @@
+{
+  "schema": "erdos99-independent-agent-merge-review/v1",
+  "date": "2026-10-18",
+  "reviewer_session": "/root/merge_review_b",
+  "model": "GPT-6 Astra Pro (runtime-provided identity)",
+  "independent": true,
+  "no_submitted_proof_or_checker_authorship": true,
+  "main": "db27b736f33b4db288c8a5e227c03c099d59259a",
+  "source_main": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+  "canonical_promotion": false,
+  "level_i": "OPEN",
+  "target_b": "OPEN",
+  "decisions": [
+    {
+      "pr": 86,
+      "head": "a392a910899b06d20df6c7c29010896223ebfa70",
+      "tree": "8cde7cdc2b1db53286c2f4641a735f753d0b1ceb",
+      "verdict": "PASS",
+      "scope": "Abstract disjoint-grid incidence theorem, exact two-grain inventory optima, conditional PC1/PC3 substitution, finite controls; no embedded realization or global closure.",
+      "all_changed_modes": "100644",
+      "files": {
+        "docs/reports/target_b_interface_capacity_2026-10-17.md": {
+          "sha256": "c7942820c07dacbbbb931bec9fe408f15f7574c6c2c4814d18baa67c3cb8d31a",
+          "git_mode_blob": "100644 blob d2cb6dfa0330978a7c1febd2fd6714fd10ce8f9a\tdocs/reports/target_b_interface_capacity_2026-10-17.md"
+        },
+        "docs/state/artifact-index.jsonl": {
+          "sha256": "7d7a2737ef55982a18e49146800d092f3635b821906c17d2ef030a07a24343de",
+          "git_mode_blob": "100644 blob e23310259e5e27571dcf113742b057378f75828c\tdocs/state/artifact-index.jsonl"
+        },
+        "reading/docs/reports/target_b_interface_capacity_2026-10-17.md": {
+          "sha256": "2ee56cab70a50d051bfa9aa368f7f041e8176feebe03b3e499351906c86c303f",
+          "git_mode_blob": "100644 blob d66796edddec92dc92e82a673bb9ed6e0760a257\treading/docs/reports/target_b_interface_capacity_2026-10-17.md"
+        },
+        "reading/manifest.json": {
+          "sha256": "8dad153b1a6e7457a78b7fc75b41a75437f1cfb585e9b7106ab0706ee241cf92",
+          "git_mode_blob": "100644 blob c59a7f028a38bffceb595f726442dfb107a8c1f0\treading/manifest.json"
+        },
+        "research/README.md": {
+          "sha256": "b3b59d0374d31795554253525a81fc63777234c2dc7bc8249d23f1dced9d77af",
+          "git_mode_blob": "100644 blob 6ee35c16549929f1b93c4a697730a582700fba04\tresearch/README.md"
+        },
+        "research/target_b_interface_capacity_2026_10_17.json": {
+          "sha256": "7e36f49b0664e72822d0ec701262bf416332d98575a8122863d692209a831f80",
+          "git_mode_blob": "100644 blob 49cf816834931e93e4bd516748bc9e016289a9ec\tresearch/target_b_interface_capacity_2026_10_17.json"
+        },
+        "research/verify_target_b_interface_capacity_2026_10_17.py": {
+          "sha256": "a7781b2ee7d57bef89ca0a2f7d439e18be10de394caae9695318d84d74cfb65d",
+          "git_mode_blob": "100644 blob c93be19f1cfb3de4fb68d8bf25f59544b8c724cf\tresearch/verify_target_b_interface_capacity_2026_10_17.py"
+        }
+      }
+    },
+    {
+      "pr": 88,
+      "head": "70398c397bfc76e9db65154318ef8a6041458c88",
+      "tree": "f37af51e376dfbb22113b3a547e51b818c201bf9",
+      "verdict": "PASS",
+      "scope": "Primary theorem normalization, independent separable-disk bound, all-global-minimizer N>=153 exclusion, deletion/convex-partition lower bounds, all-size nonglobal regressions.",
+      "all_changed_modes": "100644",
+      "files": {
+        "docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md": {
+          "sha256": "30933b9534a4afc5b7086678b2b86863c717ae9c42a9e1e5f467ea178edccce5",
+          "git_mode_blob": "100644 blob 069950ec241297e0ed813079bb446725fc678336\tdocs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md"
+        },
+        "docs/state/artifact-index.jsonl": {
+          "sha256": "a2fbbe26fa41627f6ea73d8a1e81305c005108029a2bd59dcfff230ed7ec0ae5",
+          "git_mode_blob": "100644 blob 02a66a4888b617cbd47b17155d26bb730f31126f\tdocs/state/artifact-index.jsonl"
+        },
+        "reading/docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md": {
+          "sha256": "ce11fb8fae401aec3ec2d4638938c2ab14d86a08d95b93ae40af817f429e7d8a",
+          "git_mode_blob": "100644 blob fe5f93394d24c6c56e9174d9a330424e6f23811f\treading/docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md"
+        },
+        "reading/manifest.json": {
+          "sha256": "f25005a3dadddb45af6fe9f8e606fbcc27585664b00b810887df576664450585",
+          "git_mode_blob": "100644 blob c599dc98d4bead1f6edfd4a7b4990125850bae7d\treading/manifest.json"
+        },
+        "research/verify_target_b_separable_literature_2026_10_17.py": {
+          "sha256": "bf67833d19a34e9893a29fb03ebe9c4e8c57ad7baf4814988fa03d8582f18c45",
+          "git_mode_blob": "100644 blob 25c88a9db4b491f25285af04abbd1e13e43a57f1\tresearch/verify_target_b_separable_literature_2026_10_17.py"
+        }
+      }
+    },
+    {
+      "pr": 93,
+      "head": "dfdc8b5747cf0e6cadb1237118a28ea09e087296",
+      "tree": "f0f3a600eee06571e717611cd9ed36db0388dd44",
+      "verdict": "CONDITIONAL",
+      "scope": "Fixed-lambda MCP2 and fixed-tau dominant-component GPI proof/scope pass; original exact pi-bound certificate fails pending S8/S3 parity repair.",
+      "all_changed_modes": "100644",
+      "files": {
+        "docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md": {
+          "sha256": "6777fd8c89349c4b9fc8d9f678ffd057babd624a5d56d3c1c092ea2862dc79c8",
+          "git_mode_blob": "100644 blob 1fd835692e4dc462cb5b69e173675baac213a422\tdocs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md"
+        },
+        "docs/state/artifact-index.jsonl": {
+          "sha256": "24a14a64a95503b7605c9cf3ddb5a6c833e5526e7240a7dc67fe7663e0e476d0",
+          "git_mode_blob": "100644 blob ffe3d8d9e87692b7b482741a378795f916c02e4d\tdocs/state/artifact-index.jsonl"
+        },
+        "reading/docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md": {
+          "sha256": "9d8e3017aeb942e39de16187067e2972f5cacf350b731edb6cbe0cd2977bdd81",
+          "git_mode_blob": "100644 blob b8cbd7a1e56b2b8e32fd3f1e3fa91ac8aa1b8423\treading/docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md"
+        },
+        "reading/manifest.json": {
+          "sha256": "b0b2559b4dd119dce5a2b86a2f54d51f6c461df36b11ecd6d33e59bd40d01bc7",
+          "git_mode_blob": "100644 blob f3d193873d075098ed26b6edfc841cc42ba9e2dd\treading/manifest.json"
+        },
+        "research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py": {
+          "sha256": "83f807afcc05b6cd3adfc6a4a4299d38167045b388082711b28448811bab7d3d",
+          "git_mode_blob": "100644 blob 0060922d9bcf2e059bd08d2bbf2f3d28446b8229\tresearch/verify_target_b_gpi_scope_arithmetic_2026_10_17.py"
+        }
+      }
+    },
+    {
+      "pr": 94,
+      "head": "01be955ed9209f1d4a096148e61851837fa190d4",
+      "tree": "dee40fc6b694325ff6117d7f77b5c5928c35f655",
+      "verdict": "PASS",
+      "scope": "Fixed-lambda MCP2, newly independently accepted diagonal MCP2 estimate for 0<kappa<(1-eta)/2, and preserved fixed-tau/dominant-component GPI scope.",
+      "all_changed_modes": "100644",
+      "files": {
+        "docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md": {
+          "sha256": "2e6b7243fcba18e9cdc7da055e5acc9216a9fdd64fbd113af83741f9ff37278f",
+          "git_mode_blob": "100644 blob ed254061bef96764c39768b998152ff80d1bfda6\tdocs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md"
+        },
+        "docs/state/artifact-index.jsonl": {
+          "sha256": "b14889e4c05eea55e4381f9de41778cdcf2b10450c6142cc39cb0a06a3db08c4",
+          "git_mode_blob": "100644 blob 566cc84e804c50daabc8884b90beafa6d709365b\tdocs/state/artifact-index.jsonl"
+        },
+        "reading/docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md": {
+          "sha256": "6f03bc41a9c54c50f3643d14ada279c9bf517a5163cd640ecf7cf999cef3a429",
+          "git_mode_blob": "100644 blob 6b088285a9f4eebd783b0135d6ca3cb29921dbae\treading/docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md"
+        },
+        "reading/manifest.json": {
+          "sha256": "7781953ec710b7ea0deff61ea18aeb5aa9cce567475421c98106fe5c5d74b83f",
+          "git_mode_blob": "100644 blob c74679acd11a94eeb6ac4d5bee0f1b220c03960d\treading/manifest.json"
+        },
+        "research/verify_target_b_gpi_mcp2_quantifier_audit_2026_10_17.py": {
+          "sha256": "b60edb3d3bb57788510dc64f27b5f954319192b8dcf0328b0534b279ea350a60",
+          "git_mode_blob": "100644 blob c1d49339084162618f51c49b138f6fbacebe7924\tresearch/verify_target_b_gpi_mcp2_quantifier_audit_2026_10_17.py"
+        }
+      }
+    }
+  ],
+  "full_replay": "Deferred to root on final integration candidate; not run or claimed passed by this reviewer",
+  "sources": [
+    {
+      "url": "https://www.renyi.hu/~carlos/wegner.pdf",
+      "pin": "Author manuscript 2007-01-02, equation (2), Theorem 1.1, printed pp.2-3",
+      "web_ref": "turn14view0"
+    },
+    {
+      "url": "https://arxiv.org/html/1710.06886v1",
+      "pin": "arXiv v1, Theorem 1, equation (2), definitions and proof",
+      "web_ref": "turn18view0",
+      "limitation": "Versioned PDF reader failed; exact primary HTML theorem was inspected."
+    },
+    {
+      "url": "https://cvgmt.sns.it/media/doc/paper/3321/DLF-final.pdf",
+      "pin": "Final author PDF, Sections 2.3-2.4, equation (1.5), Theorem 3.1, equations (3.4),(3.8)",
+      "web_ref": "turn16view2"
+    }
+  ],
+  "pdf_hash_limitation": "Author-provided downloaded-PDF SHA-256 identities were not independently re-fetched; primary theorem text was checked directly.",
+  "minimal_repairs": [
+    {
+      "pr": 93,
+      "path": "research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py",
+      "finding": "Alternating arctan partial-sum parity is reversed; 16*S7(1/5)-4*S2(1/239) is an upper, not lower bound for pi.",
+      "repair": "Use 16*S8(1/5)-4*S3(1/239), correct even/odd parity comment, rerun and record exact repaired bytes/tree.",
+      "independent_corrected_check": "All GPI margins pass with corrected lower bound and class-size denominator included."
+    }
+  ],
+  "integration_obligations": [
+    {
+      "pr": 86,
+      "obligation": "Distinguish submitted authoring source from integrated execution context; refresh only changed scheduling JSON hashes and metadata; retain original fixture identity. Exact final delta still to be inspected."
+    }
+  ],
+  "evidence": {
+    "review.txt": {
+      "path": "/tmp/erdos99-merge-20261018-review-b/review.txt",
+      "sha256": "35ede532d56c317a2f90aad4074cd25db572d25fed0bce78a79b0290e203ed0f"
+    },
+    "inventory.json": {
+      "path": "/tmp/erdos99-merge-20261018-review-b/inventory.json",
+      "sha256": "1ca38cd5150efd571f0bce7198861f7fc4cc8dcfaf0a2101351e782e0c4c07df"
+    },
+    "scientific-inputs.json": {
+      "path": "/tmp/erdos99-merge-20261018-review-b/scientific-inputs.json",
+      "sha256": "6081a9b1f99e5d51b0734c75ad846ef6616a395725de4d987cad71cb6d7fe180"
+    },
+    "focused-integrity.json": {
+      "path": "/tmp/erdos99-merge-20261018-review-b/focused-integrity.json",
+      "sha256": "ed9f6603de04109b28b56a9311a32624d0e2edb8d3c0470088b0171d1e300067"
+    },
+    "submitted-runs.json": {
+      "path": "/tmp/erdos99-merge-20261018-review-b/submitted-runs.json",
+      "sha256": "54a8fa1527f6dbf64b121ba37ec2cf65f91136c000f1a905f5bc64f2cbcc87e2"
+    },
+    "independent_checks.py": {
+      "path": "/tmp/erdos99-merge-20261018-review-b/independent_checks.py",
+      "sha256": "1cf997d3a78a9efd37b1a4f7e50fc2b4be5061bdeab965b80a65186c4a8fe119"
+    },
+    "independent-run.json": {
+      "path": "/tmp/erdos99-merge-20261018-review-b/independent-run.json",
+      "sha256": "b625be5a5a26334ce03fc7c5cc425dacb27629be30c9a03195c49026e754bdcf"
+    },
+    "independent-results.json": {
+      "path": "/tmp/erdos99-merge-20261018-review-b/independent-results.json",
+      "sha256": "eb0ddd99474667cbcf56ffb4602367ef54fc9e52bb6ecced7dcc44d07d1fc3a6"
+    }
+  },
+  "repair_addendum": {
+    "verdict": "PASS for exact repaired blobs; original-head verdicts retained",
+    "json_path": "/tmp/erdos99-merge-20261018-review-b/repair-addendum.json",
+    "json_sha256": "993129a35adcc592472c321580c2108011f0f38bafa4a6b0e43c5a0e8f2791d6",
+    "text_path": "/tmp/erdos99-merge-20261018-review-b/repair-addendum.txt",
+    "text_sha256": "4c4f33411d45b773101183f155bbf722cf2b6efb4bded5a0282cb4755875dfe0"
+  }
+}

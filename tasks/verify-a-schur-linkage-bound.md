@@ -8,7 +8,9 @@ This scope is complete. Continue with [verify-a-source-capacity-coupling](verify
 
 Prior evidence:
 - [agent-audited](../docs/research/review-artifacts/pr78/independent-audit.txt) at `9f230b2f900bf050a27ce7430ae7b3fed8ef8eda`: The exact finite Schur/linkage domain submitted in PR #78; reviewed before its merge. PR #96 is supplementary reconstruction of the same bytes. Remaining: No canonical promotion or acceptance outside this exact scope.
-- [agent-audited](https://github.com/1337isnot1337/erdos-99/blob/6819b4f862508fe843f7a385e2cff992ecf23420/docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md) at `6819b4f862508fe843f7a385e2cff992ecf23420`: The exact finite Schur/linkage domain submitted in PR #78; reviewed before its merge. PR #96 is supplementary reconstruction of the same bytes. Remaining: No canonical promotion or acceptance outside this exact scope.
+- [agent-audited](../docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md) at `6819b4f862508fe843f7a385e2cff992ecf23420`: The exact finite Schur/linkage domain submitted in PR #78; reviewed before its merge. PR #96 is supplementary reconstruction of the same bytes. Remaining: No canonical promotion or acceptance outside this exact scope.
+
+Independent integration reviews: [Target A](../docs/research/review-artifacts/merge-2026-10-18/review-a.txt), [Target B](../docs/research/review-artifacts/merge-2026-10-18/review-b.txt), [Target C](../docs/research/review-artifacts/merge-2026-10-18/review-c.txt).
 
 **Track / priority:** independent-verification / independent evidence; selection weight 1 (attention only).
 
@@ -48,6 +50,10 @@ Methods: independent max-flow implementation, exact symbolic matrix rank and cro
 - An independently implemented exact verifier with positive cases and meaningful negative controls.
 - A precise mapping from each finite graph condition to the theorem hypothesis it checks and a list of unverified geometric steps.
 
+## Completed finite check and audit
+
+PR #96 supplies a [supplementary reconstruction](../docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md) of the exact PR #78 source. It records 9,216 supports, 234,176 tube/shield cases and five negative controls. The earlier [independent review](../docs/research/review-artifacts/pr78/independent-audit.txt) and merger replay remain the original completed disposition. The integration review reused that exact-source evidence and checked the added narrative and state changes. Actual geometric realization and source-specific surplus remain open.
+
 ## Falsification and stopping
 
 Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.
@@ -57,6 +63,8 @@ Stop if the checker is presented as validating arbitrary canonical response geom
 ## Reproduction
 
 ```sh
+python research/verify_target_a_schur_linkage_2026_10_17.py --check research/target_a_schur_linkage_2026_10_17.json
+python -O research/verify_target_a_schur_linkage_2026_10_17.py --check research/target_a_schur_linkage_2026_10_17.json
 python tools/check_public.py
 python tools/task_context.py verify-a-schur-linkage-bound
 ```

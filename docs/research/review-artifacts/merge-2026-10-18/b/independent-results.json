@@ -1,0 +1,52 @@
+{
+  "PR86": {
+    "inventories": 96,
+    "physical_subsets": 14175,
+    "exact_and_cap_demand_cases_each": 12180,
+    "includes_zero_inventory_and_zero_demand": true
+  },
+  "PR88": {
+    "cutoff_upper": "15928/105",
+    "algebraic_identity_checks": 245,
+    "all_size_proof_is_in_review_receipt": true
+  },
+  "PR93_PR94_graphs": [
+    {
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "all_graphs": 4096,
+      "triangle_free_graphs": 1699
+    },
+    {
+      "shape": [
+        3,
+        2,
+        1
+      ],
+      "all_graphs": 2048,
+      "triangle_free_graphs": 1069
+    },
+    {
+      "shape": [
+        3,
+        2,
+        2
+      ],
+      "all_graphs": 65536,
+      "triangle_free_graphs": 18857
+    }
+  ],
+  "PR93_PR94_constants": {
+    "submitted_PR93_pi_bound_is_above_a_rigorous_upper_bound": true,
+    "minimum_excess_above_pi": "421534669444413588536/12132312730985452425384521484375",
+    "corrected_pi_lower": "3367720447004809249690544948/1071978712185331878662109375",
+    "corrected_all_GPI_margins_pass": true,
+    "diameter_lower_approx": 2.958361493849608,
+    "diameter_upper_including_imbalance_approx": 2.2053158267011246,
+    "diagonal_total_exponent": "11/6",
+    "diagonal_normalized_exponent": "-1/6"
+  }
+}

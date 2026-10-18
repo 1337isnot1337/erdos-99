@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "target-a-full-tube-fan-ledger",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Exact all-m full-tube counting proof for the seed-66 hexagonal contact fan at three specified rational translations, with independent finite geometric replay. The raw full-tube bound is at most 3 over every admissible basis; no sharp hexagonal basis optimum is asserted.",
+    "domain": "Proof: every integer m>=2 at v=(1/1000,2/1000),(1/50,1/25),(1/100,2/25). Replay: m=2,...,12 at these three phases plus m=32 at the first phase; nine primitive tubes and 441 independent rational distance comparisons.",
+    "limitations": "Unreviewed proof candidate and finite evidence. No all-phase/rotation/joint-averaged-surplus/straight-crosscut claim; no source j_*, global response extraction, triangle-free source, Level I closure or canonical promotion. Predecessor proves nonglobality for m>=32."
+  },
+  "result": "Raw tube bound Xi-|T_Z|=6-3m, actual right deficiency=6m+3 and tube rank-cut slack=9m-3; retain 2m globally neighborless collar rows and one additionally isolated sink. At these phases, |T_Z| exceeds the Section-175 mean-cost upper bound for every m>=7, so that averaged estimate cannot be used pointwise. The basis-independent identity bounds every admissible raw tube cut by 3, leaving loss at least 6m.",
+  "remaining_questions": [
+    "Independent AI audit of the all-m interval argument and exact source-pinned package.",
+    "Extract source-specific Xi>=j_*+|T_Z| for an actual canonical source, or construct a full-cardinality strict-diameter competitor."
+  ]
+}

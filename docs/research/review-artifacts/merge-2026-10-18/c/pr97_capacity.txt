@@ -1,0 +1,5 @@
+PASS m=7: n=64, difference_vectors=224, source_pairs=2016, contacts=112, Oler_slack=7; exact integer/radical comparisons
+PASS m=8: n=81, difference_vectors=288, source_pairs=3240, contacts=144, Oler_slack=8; exact integer/radical comparisons
+PASS m=12: n=169, difference_vectors=624, source_pairs=14196, contacts=312, Oler_slack=12; exact integer/radical comparisons
+PASS m=24: n=625, difference_vectors=2400, source_pairs=195000, contacts=1200, Oler_slack=24; exact integer/radical comparisons
+PASS finite algebraic checks; universal claims are proved in the report

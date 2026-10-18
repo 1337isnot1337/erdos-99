@@ -1,0 +1,46 @@
+{
+  "86": {
+    "manifest_added_entries_match": [
+      {
+        "source": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+        "source_hash": "c7942820c07dacbbbb931bec9fe408f15f7574c6c2c4814d18baa67c3cb8d31a",
+        "reading_hash": "2ee56cab70a50d051bfa9aa368f7f041e8176feebe03b3e499351906c86c303f"
+      }
+    ],
+    "diff_check_exit": 0,
+    "all_changed_files_mode_100644": true
+  },
+  "88": {
+    "manifest_added_entries_match": [
+      {
+        "source": "docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md",
+        "source_hash": "30933b9534a4afc5b7086678b2b86863c717ae9c42a9e1e5f467ea178edccce5",
+        "reading_hash": "ce11fb8fae401aec3ec2d4638938c2ab14d86a08d95b93ae40af817f429e7d8a"
+      }
+    ],
+    "diff_check_exit": 0,
+    "all_changed_files_mode_100644": true
+  },
+  "93": {
+    "manifest_added_entries_match": [
+      {
+        "source": "docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md",
+        "source_hash": "6777fd8c89349c4b9fc8d9f678ffd057babd624a5d56d3c1c092ea2862dc79c8",
+        "reading_hash": "9d8e3017aeb942e39de16187067e2972f5cacf350b731edb6cbe0cd2977bdd81"
+      }
+    ],
+    "diff_check_exit": 0,
+    "all_changed_files_mode_100644": true
+  },
+  "94": {
+    "manifest_added_entries_match": [
+      {
+        "source": "docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md",
+        "source_hash": "2e6b7243fcba18e9cdc7da055e5acc9216a9fdd64fbd113af83741f9ff37278f",
+        "reading_hash": "6f03bc41a9c54c50f3643d14ada279c9bf517a5163cd640ecf7cf999cef3a429"
+      }
+    ],
+    "diff_check_exit": 0,
+    "all_changed_files_mode_100644": true
+  }
+}

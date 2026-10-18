@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "catalogue_revision": "public-frontier.8",
-  "reviewed_on": "2026-10-17",
-  "reviewed_base_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+  "catalogue_revision": "public-frontier.9",
+  "reviewed_on": "2026-10-18",
+  "reviewed_base_commit": "db27b736f33b4db288c8a5e227c03c099d59259a",
   "reviewed_state_version": "2026-10-15.publication.2",
   "problem_status": "open",
   "purpose": "Bounded candidate tasks derived from the canonical E99 frontier; not a theorem ledger, novelty index, or work reservation service.",
@@ -68,14 +68,13 @@
       "description": "Exploratory routes that avoid the main A/B/C proof machinery while naming a global endpoint."
     }
   ],
-  "open_pr_snapshot_date": "2026-10-17T22:44:44Z",
+  "open_pr_snapshot_date": "2026-10-18T02:17:40Z",
   "open_pr_snapshot": [
     {
       "number": 98,
       "title": "Add exact zero-slack matching overlap regression",
       "head_sha": "2e4a3e1e73877df4f4756fcb4c7d331dcda1327f",
       "url": "https://github.com/1337isnot1337/erdos-99/pull/98",
-      "updated_at": "2026-10-17T21:55:06Z",
       "markers": {}
     },
     {
@@ -83,7 +82,6 @@
       "title": "Target C: linear Oler slack with zero fixed-wall capacity",
       "head_sha": "beddec1de9620741f2a7baff8584afa0b2bd094f",
       "url": "https://github.com/1337isnot1337/erdos-99/pull/97",
-      "updated_at": "2026-10-17T21:31:41Z",
       "markers": {}
     },
     {
@@ -91,7 +89,6 @@
       "title": "research: independently audit finite Target A Schur/linkage verifier",
       "head_sha": "6819b4f862508fe843f7a385e2cff992ecf23420",
       "url": "https://github.com/1337isnot1337/erdos-99/pull/96",
-      "updated_at": "2026-10-17T21:31:13Z",
       "markers": {}
     },
     {
@@ -99,7 +96,6 @@
       "title": "[Target C] Add sparse exceptional stress-mass regression",
       "head_sha": "058df6dc46ba033597d99d6aa4ec6834810b9eb7",
       "url": "https://github.com/1337isnot1337/erdos-99/pull/95",
-      "updated_at": "2026-10-17T21:30:29Z",
       "markers": {}
     },
     {
@@ -107,7 +103,6 @@
       "title": "research: audit Target B GPI/MCP2 scope",
       "head_sha": "01be955ed9209f1d4a096148e61851837fa190d4",
       "url": "https://github.com/1337isnot1337/erdos-99/pull/94",
-      "updated_at": "2026-10-17T21:26:14Z",
       "markers": {}
     },
     {
@@ -115,15 +110,6 @@
       "title": "research: audit Target B GPI scope and fixed-lambda bounds",
       "head_sha": "dfdc8b5747cf0e6cadb1237118a28ea09e087296",
       "url": "https://github.com/1337isnot1337/erdos-99/pull/93",
-      "updated_at": "2026-10-17T21:26:11Z",
-      "markers": {}
-    },
-    {
-      "number": 92,
-      "title": "audit: reconstruct Target A seed-63 tube ledger",
-      "head_sha": "96e54788d1a42d246dba0a60ab5e8a81fc5aea4a",
-      "url": "https://github.com/1337isnot1337/erdos-99/pull/92",
-      "updated_at": "2026-10-17T21:25:45Z",
       "markers": {}
     },
     {
@@ -131,7 +117,6 @@
       "title": "Independent companion audit: Target C Type-II floor",
       "head_sha": "2d4f2b7930570e989f3f8c76d27fc9aca23f32ac",
       "url": "https://github.com/1337isnot1337/erdos-99/pull/91",
-      "updated_at": "2026-10-17T21:24:49Z",
       "markers": {}
     },
     {
@@ -139,7 +124,6 @@
       "title": "Audit Target C Type-II separate-face floor",
       "head_sha": "3f419d3b6415ade701e00b7fd3dc2a013f8064d6",
       "url": "https://github.com/1337isnot1337/erdos-99/pull/90",
-      "updated_at": "2026-10-17T21:20:04Z",
       "markers": {}
     },
     {
@@ -147,7 +131,6 @@
       "title": "research: exact full-tube ledger for the locked hexagonal fan",
       "head_sha": "aa111eedcd3bc190f991aeaa7f42299948551207",
       "url": "https://github.com/1337isnot1337/erdos-99/pull/89",
-      "updated_at": "2026-10-17T20:52:20Z",
       "markers": {}
     },
     {
@@ -155,15 +138,6 @@
       "title": "research: bound deletions needed for total separability of global minimizers",
       "head_sha": "70398c397bfc76e9db65154318ef8a6041458c88",
       "url": "https://github.com/1337isnot1337/erdos-99/pull/88",
-      "updated_at": "2026-10-17T20:44:22Z",
-      "markers": {}
-    },
-    {
-      "number": 87,
-      "title": "research: exact optimum over bases for the Target A fan tube",
-      "head_sha": "33a4aaa016d0a219e2f9e8e7a92c87ff4aa77afb",
-      "url": "https://github.com/1337isnot1337/erdos-99/pull/87",
-      "updated_at": "2026-10-17T20:44:20Z",
       "markers": {}
     },
     {
@@ -171,7 +145,6 @@
       "title": "research: sharpen Target B shared-interface crossing budget",
       "head_sha": "a392a910899b06d20df6c7c29010896223ebfa70",
       "url": "https://github.com/1337isnot1337/erdos-99/pull/86",
-      "updated_at": "2026-10-17T20:41:42Z",
       "markers": {}
     }
   ],
@@ -262,12 +235,13 @@
         },
         {
           "source_commit": "aa111eedcd3bc190f991aeaa7f42299948551207",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/aa111eedcd3bc190f991aeaa7f42299948551207/research-packages/target-a-full-tube-fan-ledger/README.md",
-          "scope": "Submitted seed-66 fixed-phase ledger and basis-independent upper bound 3; not a sharp all-basis optimization.",
-          "status": "author-checked",
+          "evidence": "research-packages/target-a-full-tube-fan-ledger/README.md",
+          "scope": "seed-66 fixed-phase ledger and basis-independent upper bound 3; not a sharp all-basis optimization. Integration corrects the stale PR #87 comparison; the seed-66 result is unchanged.",
+          "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
-          "remaining": "Review before relying on its all-parameter claim; source-demand extraction remains open.",
-          "first_useful_action": "Use the phase obstruction to specify the joint ledger, rather than optimize another isolated basis."
+          "remaining": "Actual source-demand extraction and a sharp hexagonal all-basis optimum are not established.",
+          "first_useful_action": "Use the phase obstruction to specify the joint ledger, rather than optimize another isolated basis.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-a.txt"
         }
       ],
       "downstream_use": "A positive result must pay the actual j_* demand; a negative result must identify a source hypothesis that rules out the supplied nonglobal regressions.",
@@ -362,12 +336,13 @@
       "existing_checks": [
         {
           "source_commit": "2e4a3e1e73877df4f4756fcb4c7d331dcda1327f",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/2e4a3e1e73877df4f4756fcb4c7d331dcda1327f/docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
-          "scope": "Submitted five-source matching-overlap example: separate matchings do not supply joint source capacity.",
-          "status": "author-checked",
+          "evidence": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+          "scope": "five-source matching-overlap example: separate matchings do not supply joint source capacity.",
+          "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
           "remaining": "No actual zero-slack source or Schur realization.",
-          "first_useful_action": "Review the fixture, then encode the actual source capacities."
+          "first_useful_action": "Use the reviewed fixture to encode the actual source capacities.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-a.txt"
         }
       ],
       "downstream_use": "The coupling must bound the source-specific Schur demand or yield a same-cardinality competitor. Another arbitrary matching collision does not advance that implication.",
@@ -496,7 +471,7 @@
           "claim": "the earlier phase-core and boundary-order reductions do not supply a multi-grain sum"
         }
       ],
-      "starting_experiment": "Review PR #86, then construct one actual rhombic disk with two retained components. Map every physical crossing, shared deleted edge and virtual term into its ledger. Compare the paid lower bound with the exact shell endpoint.",
+      "starting_experiment": "Use the reviewed PR #86 interface budget to construct one actual rhombic disk with two retained components. Map every physical crossing, shared deleted edge and virtual term into its ledger. Compare the paid lower bound with the exact shell endpoint.",
       "expected_evidence": [
         "A proof of a sum inequality with every interface and topology error displayed and a uniform remainder adequate for the exact shell endpoint.",
         "Or an exact finite counterexample to the proposed naive additivity rule, followed by a corrected coupling quantity."
@@ -538,12 +513,13 @@
       "existing_checks": [
         {
           "source_commit": "a392a910899b06d20df6c7c29010896223ebfa70",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/a392a910899b06d20df6c7c29010896223ebfa70/docs/reports/target_b_interface_capacity_2026-10-17.md",
-          "scope": "Submitted shared-interface inequality R >= G + max(p1,p2,p1+p2-K), with finite incidence checks.",
-          "status": "author-checked",
+          "evidence": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+          "scope": "shared-interface inequality R >= G + max(p1,p2,p1+p2-K), with finite incidence checks.",
+          "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
           "remaining": "Geometric realization and payment of virtual mass are not established.",
-          "first_useful_action": "Review the inequality and map it to an actual rhombic disk before using it."
+          "first_useful_action": "Map the reviewed inequality to an actual rhombic disk before using it.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-b.txt"
         }
       ],
       "downstream_use": "The result must show whether the sharp abstract budget can pay the shell inequality on actual geometry. Re-enumerating the abstract counters is complete.",
@@ -899,7 +875,7 @@
           "claim": "do not infer Schur or source-specific nullity from planarity or generic rank alone"
         }
       ],
-      "starting_experiment": "Review PR #95 and retain its sparse-edge full-mass fixture. For one proposed globality-specific lemma, write the exact stress-supported direction and every lower/upper pair inequality. Test inactive upper pairs and finite integration before using edge counts as mass bounds.",
+      "starting_experiment": "Retain the reviewed PR #95 its sparse-edge full-mass fixture. For one proposed globality-specific lemma, write the exact stress-supported direction and every lower/upper pair inequality. Test inactive upper pairs and finite integration before using edge counts as mass bounds.",
       "expected_evidence": [
         "A stress-weighted endpoint-access or face-charge inequality with exact scope and no unproved lower bound on individual stress coefficients.",
         "Or an exact stress family showing why unweighted edge counts cannot control the required mass."
@@ -931,6 +907,7 @@
       "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with a triangle-free endpoint at D with lexicographically fewer contacts/actual-diameter pairs or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
+        "python research/verify_target_c_typeii_sparse_exceptional_stress_2026_10_17.py",
         "python tools/check_public.py",
         "python tools/task_context.py target-c-typeii-stress-mass-access"
       ],
@@ -949,12 +926,13 @@
       "existing_checks": [
         {
           "source_commit": "058df6dc46ba033597d99d6aa4ec6834810b9eb7",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/058df6dc46ba033597d99d6aa4ec6834810b9eb7/docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
-          "scope": "Submitted nonglobal family places all normalized diameter mass on o(D) exceptional edges.",
-          "status": "author-checked",
+          "evidence": "docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
+          "scope": "stationary family without a global-minimality certificate places all normalized diameter mass on o(D) exceptional edges.",
+          "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
           "remaining": "Global minimality is not supplied; a full-source finite descent remains open.",
-          "first_useful_action": "Review the fixture and identify which use of global minimality changes its conclusion."
+          "first_useful_action": "Use the reviewed fixture to identify which use of global minimality changes its conclusion.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-c.txt"
         }
       ],
       "downstream_use": "A result must extract stress-relevant motion or a globality-specific exclusion. An unweighted o(D) exceptional-edge count cannot pay a stress-mass term.",
@@ -1148,12 +1126,13 @@
       "existing_checks": [
         {
           "source_commit": "beddec1de9620741f2a7baff8584afa0b2bd094f",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/beddec1de9620741f2a7baff8584afa0b2bd094f/docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
-          "scope": "Submitted fixed-wall example has linear Oler slack and zero insertion capacity.",
-          "status": "author-checked",
+          "evidence": "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+          "scope": "fixed-wall example has linear Oler slack and zero insertion capacity.",
+          "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
           "remaining": "No universal source extraction or moved-wall restoration theorem.",
-          "first_useful_action": "Review the obstruction and state a concrete permitted wall motion."
+          "first_useful_action": "Use the reviewed obstruction to state a concrete permitted wall motion.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-c.txt"
         }
       ],
       "downstream_use": "The capacity must restore the complete population and reach a valid C-II endpoint. Linear Oler slack alone does not imply even one available site.",
@@ -1280,7 +1259,7 @@
           "claim": "MCP2 uses fixed Section-50 lambda before D tends to infinity"
         }
       ],
-      "starting_experiment": "This exact objective is complete. Read its recorded disposition, then use audit-target-b-gpi-diagonal. Reopen only for a changed source or a named discrepancy.",
+      "starting_experiment": "This exact objective is complete. Read its recorded disposition, then use target-b-multigrain-transfer. Reopen only for a changed source or a named discrepancy.",
       "expected_evidence": [
         "A concise independent derivation with exact quantifier order and a list of conclusions that do not follow.",
         "Or a specific hypothesis gap or algebraic error supported by a reproducible check."
@@ -1306,7 +1285,7 @@
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
       "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
-      "remaining_if_successful": "No further work on this completed source/domain. The separate successor is audit-target-b-gpi-diagonal; the route endpoint remains open.",
+      "remaining_if_successful": "No further work on this completed source/domain. The diagonal audit is also complete; continue with target-b-multigrain-transfer.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
         "python tools/check_public.py",
@@ -1315,21 +1294,23 @@
       "existing_checks": [
         {
           "source_commit": "dfdc8b5747cf0e6cadb1237118a28ea09e087296",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/dfdc8b5747cf0e6cadb1237118a28ea09e087296/docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md",
-          "scope": "Fixed-lambda and fixed-positive-tau scope of the canonical MCP2/GPI chain; no multi-grain or varying-tau conclusion.",
+          "evidence": "docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md",
+          "scope": "Fixed-lambda and fixed-positive-tau scope of the canonical MCP2/GPI chain; no multi-grain or varying-tau conclusion. The integrated arithmetic checker corrects the submitted Machin-series parity.",
           "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
           "remaining": "No canonical promotion or acceptance outside this exact scope.",
-          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with audit-target-b-gpi-diagonal."
+          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with audit-target-b-gpi-diagonal.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-b.txt"
         },
         {
           "source_commit": "01be955ed9209f1d4a096148e61851837fa190d4",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/01be955ed9209f1d4a096148e61851837fa190d4/docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md",
+          "evidence": "docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md",
           "scope": "Fixed-lambda and fixed-positive-tau scope of the canonical MCP2/GPI chain; no multi-grain or varying-tau conclusion.",
           "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
-          "remaining": "PR #94 also contains a distinct unreviewed diagonal estimate, assigned to audit-target-b-gpi-diagonal.",
-          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with audit-target-b-gpi-diagonal."
+          "remaining": "No varying-tau GPI, global multi-grain summation, or full shell endpoint follows.",
+          "first_useful_action": "Continue with target-b-multigrain-transfer; keep every deletion, interface and virtual-area cost.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-b.txt"
         }
       ],
       "investigation": {
@@ -1421,21 +1402,23 @@
       "existing_checks": [
         {
           "source_commit": "3f419d3b6415ade701e00b7fd3dc2a013f8064d6",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/3f419d3b6415ade701e00b7fd3dc2a013f8064d6/docs/audits/target_c_typeii_separate_face_floor_recheck_2026-10-17.md",
+          "evidence": "docs/audits/target_c_typeii_separate_face_floor_recheck_2026-10-17.md",
           "scope": "Canonical full-core Type-II separate-face coefficient reconstruction at the unchanged cited source.",
           "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
           "remaining": "No canonical promotion or acceptance outside this exact scope.",
-          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with target-c-typeii-stress-mass-access."
+          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with target-c-typeii-stress-mass-access.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-c.txt"
         },
         {
           "source_commit": "2d4f2b7930570e989f3f8c76d27fc9aca23f32ac",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/2d4f2b7930570e989f3f8c76d27fc9aca23f32ac/docs/audits/target_c_typeii_face_floor_independent_reconstruction_2026-10-17.md",
+          "evidence": "docs/audits/target_c_typeii_face_floor_independent_reconstruction_2026-10-17.md",
           "scope": "Canonical full-core Type-II separate-face coefficient reconstruction at the unchanged cited source.",
           "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
           "remaining": "No canonical promotion or acceptance outside this exact scope.",
-          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with target-c-typeii-stress-mass-access."
+          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with target-c-typeii-stress-mass-access.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-c.txt"
         }
       ],
       "investigation": {
@@ -1525,12 +1508,13 @@
       "existing_checks": [
         {
           "source_commit": "a392a910899b06d20df6c7c29010896223ebfa70",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/a392a910899b06d20df6c7c29010896223ebfa70/docs/reports/target_b_interface_capacity_2026-10-17.md",
-          "scope": "Submitted shared-interface inequality R >= G + max(p1,p2,p1+p2-K), with finite incidence checks.",
-          "status": "author-checked",
+          "evidence": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+          "scope": "shared-interface inequality R >= G + max(p1,p2,p1+p2-K), with finite incidence checks.",
+          "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
           "remaining": "Geometric realization and payment of virtual mass are not established.",
-          "first_useful_action": "Review the inequality and map it to an actual rhombic disk before using it."
+          "first_useful_action": "Map the reviewed inequality to an actual rhombic disk before using it.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-b.txt"
         }
       ],
       "downstream_use": "Decide whether the abstract sharp examples are geometrically relevant to Target B, and whether a stronger realizable budget is possible.",
@@ -1687,6 +1671,8 @@
       "remaining_if_successful": "No further work on this completed source/domain. The separate successor is verify-a-source-capacity-coupling; the route endpoint remains open.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
+        "python research/verify_target_a_schur_linkage_2026_10_17.py --check research/target_a_schur_linkage_2026_10_17.json",
+        "python -O research/verify_target_a_schur_linkage_2026_10_17.py --check research/target_a_schur_linkage_2026_10_17.json",
         "python tools/check_public.py",
         "python tools/task_context.py verify-a-schur-linkage-bound"
       ],
@@ -1702,12 +1688,13 @@
         },
         {
           "source_commit": "6819b4f862508fe843f7a385e2cff992ecf23420",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/6819b4f862508fe843f7a385e2cff992ecf23420/docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+          "evidence": "docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
           "scope": "The exact finite Schur/linkage domain submitted in PR #78; reviewed before its merge. PR #96 is supplementary reconstruction of the same bytes.",
           "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
           "remaining": "No canonical promotion or acceptance outside this exact scope.",
-          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with verify-a-source-capacity-coupling."
+          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with verify-a-source-capacity-coupling.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-a.txt"
         }
       ],
       "investigation": {
@@ -1802,12 +1789,13 @@
       "existing_checks": [
         {
           "source_commit": "70398c397bfc76e9db65154318ef8a6041458c88",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/70398c397bfc76e9db65154318ef8a6041458c88/docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md",
-          "scope": "Submitted total-separability bound for global minimizers and the necessary linear deletion cost; its hypothesis does not hold for arbitrary triangle-free sources.",
-          "status": "author-checked",
+          "evidence": "docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md",
+          "scope": "total-separability bound for global minimizers and the necessary linear deletion cost; its hypothesis does not hold for arbitrary triangle-free sources.",
+          "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
-          "remaining": "Independent proof review and a valid application to the actual shell or convex-grain decomposition.",
-          "first_useful_action": "Inspect the exact separability and global-normalization hypotheses before seeking a distinct shell estimate."
+          "remaining": "A valid application to the actual shell or convex-grain decomposition remains open.",
+          "first_useful_action": "Inspect the exact separability and global-normalization hypotheses before seeking a distinct shell estimate.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-b.txt"
         }
       ],
       "investigation": {
@@ -2453,7 +2441,7 @@
         "Use the exact canonical dependency audit and current Target B route map.",
         "Do not strengthen the one-component GPI theorem or treat audited-working reports as premises.",
         "The deliverable is an independent scope audit or a precise counterexample to an overbroad paraphrase.",
-        "The diagonal estimate is unreviewed; the common scope audit does not accept it."
+        "The diagonal estimate has an independent scope audit. It supplies no varying-tau GPI or global multi-grain conclusion."
       ],
       "canonical_dependencies": [
         {
@@ -2480,7 +2468,7 @@
           "claim": "MCP2 uses fixed Section-50 lambda before D tends to infinity"
         }
       ],
-      "starting_experiment": "Check out PR #94 at 01be955ed9209f1d4a096148e61851837fa190d4. Independently reconstruct the Section-50/PC3 constants, the graph-diameter and zero-gain-cycle condition, and the sum of angular errors. Test the exponent boundary and reject any use of fixed-tau GPI for tau_D tending to zero.",
+      "starting_experiment": "This exact objective is complete. Read its independent review, then use target-b-multigrain-transfer. Reopen only for a changed source or a named discrepancy.",
       "expected_evidence": [
         "A concise independent derivation with exact quantifier order and a list of conclusions that do not follow.",
         "Or a specific hypothesis gap or algebraic error supported by a reproducible check."
@@ -2506,7 +2494,7 @@
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
       "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
-      "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
+      "remaining_if_successful": "No further work on this completed source/domain. Continue with target-b-multigrain-transfer and retain the exact deletion, interface, and virtual-area terms.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
         "python tools/check_public.py",
@@ -2515,21 +2503,22 @@
       "existing_checks": [
         {
           "source_commit": "01be955ed9209f1d4a096148e61851837fa190d4",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/01be955ed9209f1d4a096148e61851837fa190d4/docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md",
-          "scope": "Separate diagonal estimate beyond the completed fixed-lambda scope audit.",
-          "status": "author-checked",
+          "evidence": "docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md",
+          "scope": "Independent audit of the Section-50/PC3 diagonal estimate for lambda_D=D^(-kappa), 0<kappa<(1-eta)/2, including uniform constants and angular-error summation.",
+          "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
-          "remaining": "Uniform constants, propagation conditions and error summation require independent proof review.",
-          "first_useful_action": "Audit the exact pinned report and its named dependencies."
+          "remaining": "No varying-tau GPI, global multi-grain summation, or full shell endpoint follows.",
+          "first_useful_action": "Continue with target-b-multigrain-transfer; keep every deletion, interface and virtual-area cost.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-b.txt"
         }
       ],
-      "downstream_use": "Decide whether the diagonal estimate is reusable. Then compare its quantitative gain with deletion/interface loss before claiming a shell improvement.",
+      "downstream_use": "The reviewed diagonal controls the stated coherence and deletion errors. Compare those gains with the actual interface and virtual-area costs in target-b-multigrain-transfer.",
       "investigation": {
         "id": "audit-target-b-gpi-diagonal-successor-20261017",
         "source_commit": "01be955ed9209f1d4a096148e61851837fa190d4",
         "domain": "Only the new diagonal estimate in PR #94; the completed fixed-parameter scope audit is prior evidence.",
         "question": "Does PR #94 justify lambda_D=D^(-kappa), 0<kappa<(1-eta)/2, with uniform constants and valid angular-error summation, while keeping GPI restricted to fixed positive tau?",
-        "status": "open"
+        "status": "completed"
       }
     },
     {
@@ -2612,12 +2601,13 @@
         },
         {
           "source_commit": "2e4a3e1e73877df4f4756fcb4c7d331dcda1327f",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/2e4a3e1e73877df4f4756fcb4c7d331dcda1327f/docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
-          "scope": "Submitted separate-matching overlap regression.",
-          "status": "author-checked",
+          "evidence": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+          "scope": "separate-matching overlap regression.",
+          "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
           "remaining": "Actual source realization remains open.",
-          "first_useful_action": "Preserve distinct source capacities and use the fixture as a negative control."
+          "first_useful_action": "Preserve distinct source capacities and use the fixture as a negative control.",
+          "review_evidence": "docs/research/review-artifacts/merge-2026-10-18/review-a.txt"
         }
       ],
       "downstream_use": "Test whether a proposed coupling pays the true joint source demand. The checker must expose which geometric realization hypothesis is still absent.",

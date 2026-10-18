@@ -1,0 +1,70 @@
+INDEPENDENT REVIEW REPAIR ADDENDUM — 2026-10-18
+Reviewer: /root/merge_review_b; GPT-6 Astra Pro
+Verdict: PASS for the exact repaired/integrated blobs listed below.
+
+This resolves the original PR93 arithmetic-certificate condition and the PR86
+current-execution metadata/pin-refresh obligation. The original-head receipt
+remains historically accurate: PR93 dfdc8b5 was CONDITIONAL before correction.
+
+PR93: I compared the actual working-tree bytes with the submitted checker.
+The only changes are the parity comment and S7/S2 becoming S8/S3. Even term
+counts are lower bounds and odd term counts upper bounds, so the repaired
+Machin combination is a genuine lower bound for pi. The corrected submitted
+script exits 0 and all four printed numerical assertion groups pass. My
+separate exact interval calculation already confirmed every displayed margin,
+including the small original-class imbalance in the final lattice upper bound.
+The report adds only a correct integration-correction paragraph. No geometric
+claim, threshold, source hypothesis or fixed-parameter quantifier was changed.
+
+PR86: I compared the script, fixture and report against a392a910. The entire
+enumeration logic is unchanged. Metadata now identifies submitted_source_commit,
+submitted_catalogue_revision, source_hash_scope="current execution checkout",
+and current execution priority/catalogue revisions read from priority-state.json.
+The fixture changes only that metadata, catalogue p7 to p9, and the two
+scheduling JSON source hashes. Every mathematical source hash, complete
+histogram, optimum, control and limitation is unchanged. The provenance
+paragraph accurately preserves the original fixture at its immutable head.
+
+The final live-tree command with --check passes: 30 configurations, 8,336,550
+two-grain states, 15,625 three-grain states, 5,964 exact-I cases and 5,964 cap
+cases, fixture matched. All eleven current fixture hashes were independently
+compared to actual bytes. No new geometric realization or global closure is
+claimed. Both repaired checks ran while their recorded files remained stable.
+
+All four reports therefore have a PASS within the scopes in review.txt after
+this explicitly reviewed local repair. PR88 and PR94 report/checker bytes
+remain identical to their original accepted heads. PR94 PASS includes the new
+diagonal estimate. No canonical theorem lifecycle is changed by this review.
+
+The reviewed worktree was not yet committed. These exact SHA-256 and Git-blob
+identities must be present in the final frozen candidate; root owns that
+commit/tree binding and full theorem-certificate replay. No subsequent material
+change is covered automatically.
+
+Reviewed file identities:
+research/verify_target_b_interface_capacity_2026_10_17.py
+  SHA-256: 8e285768a7ffbd325243231f10ee721e6e128a4766e42a4f61e50906aaafe158
+  Git blob: 4df224a9bb96bd3faa5475a327b291d2bac8fc2b; mode 0o644
+research/target_b_interface_capacity_2026_10_17.json
+  SHA-256: 43b3bc8e405a904206a765e7553d573d6fe3ad6cde0b4d5f27920b4ef51df3c5
+  Git blob: 40fbbec72201f2038a2a719e729b3bf37f887c0f; mode 0o644
+research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py
+  SHA-256: f78911648fb274ed3ba00d4886a377f399d504e4847016c8f9348672d7ddbc77
+  Git blob: e1b86644cddca82c930cfaed318a08af087fe1bf; mode 0o644
+docs/research/agent-task-catalog.json
+  SHA-256: 5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313
+  Git blob: 6b826fcc5015e74317487a419d09d358a92ebcf7; mode 0o644
+docs/research/priority-state.json
+  SHA-256: c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786
+  Git blob: ed8e5c01d75c77a3c420cc3e3b6c4f06a2c38df8; mode 0o644
+docs/reports/target_b_interface_capacity_2026-10-17.md
+  SHA-256: b8242aa0efaea70bc0bd02321785a14d19779a11eef3d13efc487a4ecc6e7179
+  Git blob: 701cdfb05357e02c136704e0b6fc6e9a9132c0d0; mode 0o644
+docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md
+  SHA-256: 1964866139d247a12878cb3a86f7a4eab63f146b13926409010261ce83cfa8dc
+  Git blob: ee8a109d6408311f9f6fa2419f5e2819d73e95bb; mode 0o644
+
+Commands/results and all original/repaired byte identities are preserved in
+repair-addendum.json and repair-runs.json. Review independence remains intact:
+I requested the correction and inspected it, but did not modify submitted
+proofs/checkers or the root worktree.

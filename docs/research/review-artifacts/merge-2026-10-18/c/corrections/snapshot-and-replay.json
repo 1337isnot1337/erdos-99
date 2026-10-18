@@ -1,0 +1,27 @@
+{
+  "pr93": {
+    "submitted_head": "dfdc8b5747cf0e6cadb1237118a28ea09e087296",
+    "path": "research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py",
+    "submitted_sha256": "83f807afcc05b6cd3adfc6a4a4299d38167045b388082711b28448811bab7d3d",
+    "repaired_sha256": "f78911648fb274ed3ba00d4886a377f399d504e4847016c8f9348672d7ddbc77",
+    "snapshot": "/tmp/erdos99-merge-20261018-review-c/corrections/pr93/research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py",
+    "submitted_checker_replay": {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/erdos99-merge-20261018-review-c/corrections/pr93/research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py"
+      ],
+      "timeout_seconds": 60,
+      "elapsed_seconds": 0.017,
+      "exit_code": 0,
+      "stdout": "PASS: pi lower bound from exact Machin-series rationals\nPASS: unique-max loss < 0.1865 < gamma_0\nPASS: balancing, deletion, and grid-loss thresholds\nPASS: GPI diameter lower bound > 2.95 and lattice upper bound < 2.21\nScope: numerical margins only; no geometric or graph proof is encoded.\n",
+      "stderr": ""
+    }
+  },
+  "pr89": {
+    "submitted_head": "aa111eedcd3bc190f991aeaa7f42299948551207",
+    "path": "research-packages/target-a-full-tube-fan-ledger/README.md",
+    "submitted_sha256": "2c805c002a7f654cef3e7b8310b27658ec85181069d0208e611cd276122cea23",
+    "repaired_sha256": "c2ba77428425b800a5c3127c6ce8494ed37e42a0a8dccae20c46579bb8de794b",
+    "snapshot": "/tmp/erdos99-merge-20261018-review-c/corrections/pr89/research-packages/target-a-full-tube-fan-ledger/README.md"
+  }
+}

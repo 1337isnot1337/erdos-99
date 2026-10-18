@@ -1,11 +1,15 @@
 # audit-target-b-gpi-diagonal
 
-**Investigation:** `audit-target-b-gpi-diagonal-successor-20261017`. **Status:** open. Source: `01be955ed9209f1d4a096148e61851837fa190d4`.
+**Investigation:** `audit-target-b-gpi-diagonal-successor-20261017`. **Status:** completed. Source: `01be955ed9209f1d4a096148e61851837fa190d4`.
 
-Downstream use: Decide whether the diagonal estimate is reusable. Then compare its quantitative gain with deletion/interface loss before claiming a shell improvement.
+Downstream use: The reviewed diagonal controls the stated coherence and deletion errors. Compare those gains with the actual interface and virtual-area costs in target-b-multigrain-transfer.
+
+This scope is complete. Continue with [target-b-multigrain-transfer](target-b-multigrain-transfer.md).
 
 Prior evidence:
-- [author-checked](https://github.com/1337isnot1337/erdos-99/blob/01be955ed9209f1d4a096148e61851837fa190d4/docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md) at `01be955ed9209f1d4a096148e61851837fa190d4`: Separate diagonal estimate beyond the completed fixed-lambda scope audit. Remaining: Uniform constants, propagation conditions and error summation require independent proof review.
+- [agent-audited](../docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md) at `01be955ed9209f1d4a096148e61851837fa190d4`: Independent audit of the Section-50/PC3 diagonal estimate for lambda_D=D^(-kappa), 0<kappa<(1-eta)/2, including uniform constants and angular-error summation. Remaining: No varying-tau GPI, global multi-grain summation, or full shell endpoint follows.
+
+Independent integration reviews: [Target A](../docs/research/review-artifacts/merge-2026-10-18/review-a.txt), [Target B](../docs/research/review-artifacts/merge-2026-10-18/review-b.txt), [Target C](../docs/research/review-artifacts/merge-2026-10-18/review-c.txt).
 
 **Track / priority:** independent-audit / independent evidence; selection weight 1 (attention only).
 
@@ -18,7 +22,7 @@ Does PR #94 justify lambda_D=D^(-kappa), 0<kappa<(1-eta)/2, with uniform constan
 - Use the exact canonical dependency audit and current Target B route map.
 - Do not strengthen the one-component GPI theorem or treat audited-working reports as premises.
 - The deliverable is an independent scope audit or a precise counterexample to an overbroad paraphrase.
-- The diagonal estimate is unreviewed; the common scope audit does not accept it.
+- The diagonal estimate has an independent scope audit. It supplies no varying-tau GPI or global multi-grain conclusion.
 
 - [docs/state/theorem-state.yaml](../docs/state/theorem-state.yaml): TB-DENSE-GRID canonical entry and exact scope
 - [docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md](../docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md): promoted MCP2 and GPI statements
@@ -28,7 +32,7 @@ Read the full statements and proofs. Submitted evidence does not supply an accep
 
 ## Approach and first bounded experiment
 
-Check out PR #94 at 01be955ed9209f1d4a096148e61851837fa190d4. Independently reconstruct the Section-50/PC3 constants, the graph-diameter and zero-gain-cycle condition, and the sum of angular errors. Test the exponent boundary and reject any use of fixed-tau GPI for tau_D tending to zero.
+This exact objective is complete. Read its independent review, then use target-b-multigrain-transfer. Reopen only for a changed source or a named discrepancy.
 
 ## Expected evidence
 
@@ -50,6 +54,6 @@ python tools/task_context.py audit-target-b-gpi-diagonal
 
 ## Remaining lemma and limitations
 
-Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.
+No further work on this completed source/domain. Continue with target-b-multigrain-transfer and retain the exact deletion, interface, and virtual-area terms.
 
 No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.

@@ -1,0 +1,47 @@
+INDEPENDENT AI-AGENT MATHEMATICAL REVIEW — PR97
+Verdict: PASS for ordinary research-artifact merge; no canonical promotion.
+Exact head: beddec1de9620741f2a7baff8584afa0b2bd094f
+Exact tree: 0e6b218d9fb1703d9767f0e1a1d0705372664f58
+Submitted parent: e396ea07887dd0528b817ce4e656ff0e6b01f8fb
+Assigned current main: db27b736f33b4db288c8a5e227c03c099d59259a
+Reviewer: /root/merge_review_c; GPT-6 Astra Pro
+Completed UTC: 2026-10-18T02:22:58.862488+00:00
+Scope: Universal-in-integer-m rhombic-grid fixed-coordinate saturation regression with explicit nonglobal witness.
+Independence: Fresh reviewer; did not originate, author, edit, or verify the submitted proof/checker before this assignment. Own independent review checker is separate and imports no submitted code.
+
+INVENTORY AND PROVENANCE
+100644 docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md | SHA-256 e89ab07f491ce279c5466f13b13f32cda18dd0c3267b5694e4fc0dfa5467efb7 | 10083 bytes
+100644 docs/state/artifact-index.jsonl | SHA-256 3147d45b4c2aa1e5fa052d515573e114b8a06787b922a64ab1424adc946d8d0e | 438555 bytes
+100644 reading/docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md | SHA-256 b16f6c247687ca4fa4b20f8b0a5eb55170d644c706c1814522d837200b19448b | 10673 bytes
+100644 reading/manifest.json | SHA-256 bbf4bf076edac60c0a9c97dcd0a0f079f35e8cc6492e84bc8829876e0ad5debc | 930524 bytes
+100644 research/verify_target_c_contact_rhombic_grid_capacity_2026_10_17.py | SHA-256 facd9f5ecf817e13776dd3032c4036602aa9dbd698d9d98fc90d611d8b2fb153 | 3276 bytes
+No deletes, symlinks, submodules, executable changes, shared verifier edits, canonical manifest edits, or claim promotions occur. New artifact rows and embedded markers are noncanonical, unreviewed, with empty claim IDs. Existing artifact records are unchanged. Reading source/output hashes, per-head document/math counts, and exact generated reading bytes were independently checked. Exact patches and the source-reading deltas are saved alongside this receipt. All four parents equal the source pin e396ea; the current state version remains2026-10-15.publication.2. Historical cataloguepublic-frontier.7 is pinned to that base, not asserted to be current.
+
+PR97 PROOF RECONSTRUCTION
+
+For every integer m>=7, d=m^2-6m-3 is positive (d(7)=4; increasing thereafter) and below m^2. d+3(m+1)^2=4m^2 verifies the unit basis. Therefore0<c=sqrt(d)/(2m)<1/2 and s=sqrt(3)(m+1)/(2m)>sqrt(3)/2; angle lies strictly between60 and90 degrees.
+
+For every integer source difference(a,b), squared distance is a^2+b^2+2cab. Axis differences give equality only for unit steps. Same-sign nonzero differences have norm greater than one; opposite signs give(r-t)^2+2rt(1-c)>(r-t)^2+rt>=1. Thus all source pairs are unit-separated and exactly the two coordinate directions are contacts. All(m+1)^2 labels are counted, including boundary and corner labels, with2m(m+1) contacts and minimum degree2; parity gives triangle-freeness.
+
+The actual full hull is the closed parallelogram spanned by mu,mv. Its area is(sqrt(3)/2)(m^2+m), perimeter4m, full source count(m+1)^2. Consequently the population-form Oler allowance is exactly(m^2+m)+2m+1-(m+1)^2=m. This uses the entire source population, not only interior labels. Maximizing the convex squared difference norm on[-m,m]^2 gives D^2=2m^2+m sqrt(d), so sqrt(2)m<D<sqrt(3)m. Area has quadratic scale, perimeter and slack have linear scale in D.
+
+Tile the full closed hull by m^2 unit rhombi, each split along its shorter u-v diagonal. Each triangle has sides1,1,sqrt(2-2c), included angle theta, and circumradius squared(2-2c)/(4(1-c^2))=1/(2(1+c))<1/2. For any barycentric point x in any one triangle and its circumcenter o, weighted squared distances sum(lambda_i|x-w_i|^2)=R_circ^2-|x-o|^2<=R_circ^2. At least one vertex is therefore at distance at most R_circ<1. This continuous argument includes triangle edges, cell edges, and outer boundary. It is not a numerical covering mesh. Hence no point anywhere in the closed hull can be inserted while all existing labels remain fixed.
+
+The square grid of identical cardinality is unit-separated with diameter sqrt(2)m<D. Therefore this particular family is rigorously nonglobal. Its growing slack disproves only the stated fixed-coordinate spare-site inference. It proves no restriction on moving existing labels, equal-cardinality replacement from canonical minimizers, or arbitrary macroscopic containers. Audit.108 is an upper bound on auxiliary additions, which is fully compatible with zero additions; Audit.110 and the prior one-slack regression are not contradicted.
+
+There is no new external literature input: the name Oler refers to the already displayed slack definition; no further packing inequality is needed for this explicit counterexample. The report's exact formulas and all-m proof are sufficient; the finite checker is corroboration only.
+
+REPRODUCTION AND BOUNDED ADVERSARIAL CHECKS
+Command: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /tmp/erdos99-merge-20261018-review-c/pr97/research/verify_target_c_contact_rhombic_grid_capacity_2026_10_17.py
+Cwd: /tmp/erdos99-merge-20261018-review-c
+Timeout: 60 seconds; elapsed: 0.057 seconds; exit: 0. Full output: pr97_capacity.txt.
+The frozen shared facial checker and imported helper match SHA-256 ec287768485076f01b49ea361e7ae08e71206cc1f46a04658c123db883b5cb9e and50160bb3c3d68185a401a6fbeed3d39f5b80aa16d74af43efafd814714300e88. One shared replay produced8 nonglobal fixtures,7252 source pair checks,108 terminal checks,620 single-interior component cancellations, and886 separate-face component cancellations across354 graph selections. It is not a Type-II or optimality certificate.
+
+Own portable checker: python independent_adversarial_checks.py (cwd this receipt directory;60-second timeout; exit0;1.295 seconds wall clock). It imports no submitted module. It independently pairs actual occurrence slots into6201 abstract multigraph ledgers using seed20261018, including8612 train loops and562 cases with interior complementary edges. The exact sharp ledger(q,f,k,c,A,N_i)=(5,3,1,1,5,0) reaches equality3(A+N_i)=5(f-k+c); deleting the finite c correction demonstrably fails. These are arithmetic recipient graphs, not asserted geometric realizations.
+
+For PR95 it independently reconstructs rational coordinates at R=16,17,25, checks all2147667 lower/upper source pairs, checks the complete contact and actual-diameter graphs, triangle-freeness, exact all-coordinate KKT forces, and source endpoint deduplication. The wrong half-multiplier and duplicated-endpoint population controls are detected. For PR97 it directly signs quadratic-field squared distances for19452 full source pairs at m=7,8,12, checks the unique actual diameter pair and all-label slack, and corroborates strict coverage on507 exact rational cell samples. The continuous cover and universal parameter claims are proved analytically above; no mesh proves them. Domain m=6 and closed-angle60-degree triangle controls prevent silently widening the hypotheses.
+
+Metadata check commands included git diff --check e396ea07887dd0528b817ce4e656ff0e6b01f8fb HEAD_SHA for each exact submitted SHA, plus SHA-256 and exact render checks using the submitted-base reading generator. Every command passed. Per-command stdout, exit status, time budget and wall time are preserved in submitted-check-results.json and independent-check-results.json. The structural metadata/premise check is in metadata-and-premise-pins.json. Repository-wide certificate and corpus replay remains deferred to the root merging agent on the final integration candidate; no full-suite pass is asserted here.
+
+DISPOSITION
+No load-bearing blocker or mandatory repair found. Merge as a scoped research/audit artifact after the merging agent's required final integration checks. Retain all explicit fixture and source-domain limits; do not promote any theorem-state entry. PR90 andPR91 audit the same proof mechanism and are not two new theorem results. This receipt is independent AI-agent review, not human peer review. Global source extraction, weighted-stress access, finite lower/upper pair feasibility, same-cardinality restoration, high-face Type-II survivors, and the separate macroscopic-container endpoint remain open.

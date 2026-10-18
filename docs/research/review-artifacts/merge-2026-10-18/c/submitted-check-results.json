@@ -1,0 +1,81 @@
+[
+  {
+    "name": "pr90_coefficients",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/tmp/erdos99-merge-20261018-review-c/pr90/research/verify_target_c_face_floor_coefficients_2026_10_17.py"
+    ],
+    "cwd": "/tmp/erdos99-merge-20261018-review-c",
+    "timeout_seconds": 60,
+    "elapsed_seconds": 0.019,
+    "exit_code": 0,
+    "stdout": "PASS: train-count, coefficient, and incidence identities are exact\nPASS: 25*(22/7)*(7/4) = 275/2 < 162\nPASS: pi/2 + 3*s2/5 = 2.142184010913 > 2*pi/3\nLIMIT: geometric compactness and asymptotic source hypotheses are not checked\n",
+    "stderr": ""
+  },
+  {
+    "name": "pr91_algebra",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/tmp/erdos99-merge-20261018-review-c/pr91/research/verify_target_c_typeii_face_floor_algebra_2026_10_17.py"
+    ],
+    "cwd": "/tmp/erdos99-merge-20261018-review-c",
+    "timeout_seconds": 60,
+    "elapsed_seconds": 0.774,
+    "exit_code": 0,
+    "stdout": "{'status': 'PASS', 'ledger_domain': '1 <= q <= 6; all integral (b,Q,f,f_boundary,Q_inner,c_boundary) satisfying the source identity, face excess bounds, and a nonempty boundary-edge-count interval', 'incidence_ledgers_checked': 66036, 'ledgers_by_q': {1: 28, 2: 301, 3: 1602, 4: 5851, 5: 16867, 6: 41387}, 'exact_strict_comparison': '162 - 25*(22/7)*(7/4) = 49/2 > 0', 'display_only_approximations': {'s2': '0.952312806864', '6s2/5': '1.142775368237', 'pi/2+3s2/5': '2.142184010913', '2pi/3': '2.094395102393'}, 'scope': 'finite incidence arithmetic and rational threshold certificate only'}\n",
+    "stderr": ""
+  },
+  {
+    "name": "pr91_algebra_optimized",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-O",
+      "/tmp/erdos99-merge-20261018-review-c/pr91/research/verify_target_c_typeii_face_floor_algebra_2026_10_17.py"
+    ],
+    "cwd": "/tmp/erdos99-merge-20261018-review-c",
+    "timeout_seconds": 60,
+    "elapsed_seconds": 0.867,
+    "exit_code": 0,
+    "stdout": "{'status': 'PASS', 'ledger_domain': '1 <= q <= 6; all integral (b,Q,f,f_boundary,Q_inner,c_boundary) satisfying the source identity, face excess bounds, and a nonempty boundary-edge-count interval', 'incidence_ledgers_checked': 66036, 'ledgers_by_q': {1: 28, 2: 301, 3: 1602, 4: 5851, 5: 16867, 6: 41387}, 'exact_strict_comparison': '162 - 25*(22/7)*(7/4) = 49/2 > 0', 'display_only_approximations': {'s2': '0.952312806864', '6s2/5': '1.142775368237', 'pi/2+3s2/5': '2.142184010913', '2pi/3': '2.094395102393'}, 'scope': 'finite incidence arithmetic and rational threshold certificate only'}\n",
+    "stderr": ""
+  },
+  {
+    "name": "pr95_stress",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/tmp/erdos99-merge-20261018-review-c/pr95/research/verify_target_c_typeii_sparse_exceptional_stress_2026_10_17.py"
+    ],
+    "cwd": "/tmp/erdos99-merge-20261018-review-c",
+    "timeout_seconds": 60,
+    "elapsed_seconds": 0.217,
+    "exit_code": 0,
+    "stdout": "exact sparse-exceptional stress regression\nR D source_count core_count diameter_edges exceptional/D min_ring_distance^2\n16 32 657 610 8 1/4 512/25\n25 50 1809 1740 10 1/5 1250/41\n36 72 4067 3972 12 1/6 2592/61\n64 128 13723 13564 16 1/8 8192/113\n100 200 34397 34158 20 1/10 20000/181\n256 512 232941 232366 32 1/16 131072/481\n",
+    "stderr": ""
+  },
+  {
+    "name": "pr97_capacity",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/tmp/erdos99-merge-20261018-review-c/pr97/research/verify_target_c_contact_rhombic_grid_capacity_2026_10_17.py"
+    ],
+    "cwd": "/tmp/erdos99-merge-20261018-review-c",
+    "timeout_seconds": 60,
+    "elapsed_seconds": 0.057,
+    "exit_code": 0,
+    "stdout": "PASS m=7: n=64, difference_vectors=224, source_pairs=2016, contacts=112, Oler_slack=7; exact integer/radical comparisons\nPASS m=8: n=81, difference_vectors=288, source_pairs=3240, contacts=144, Oler_slack=8; exact integer/radical comparisons\nPASS m=12: n=169, difference_vectors=624, source_pairs=14196, contacts=312, Oler_slack=12; exact integer/radical comparisons\nPASS m=24: n=625, difference_vectors=2400, source_pairs=195000, contacts=1200, Oler_slack=24; exact integer/radical comparisons\nPASS finite algebraic checks; universal claims are proved in the report\n",
+    "stderr": ""
+  },
+  {
+    "name": "shared_facial",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/tmp/erdos99-merge-20261018-review-c/common/research/verify_target_c_terminal_cancellation_interior_2026_10_08.py"
+    ],
+    "cwd": "/tmp/erdos99-merge-20261018-review-c",
+    "timeout_seconds": 60,
+    "elapsed_seconds": 0.181,
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"PASS\",\n  \"arithmetic\": \"Fraction\",\n  \"nonglobal_contact_fixtures\": 8,\n  \"all_source_lower_pair_checks\": 7252,\n  \"physical_terminal_pair_checks\": 108,\n  \"interior_terminal_occurrences\": 52,\n  \"singleton_trains\": 4,\n  \"repeated_outer_bridge_occurrences\": 8,\n  \"auxiliary_graph_selections\": 354,\n  \"components_checked_outside_interior_vertex\": 620,\n  \"separate_face_graph_selections\": 354,\n  \"separate_face_component_cancellation_checks\": 886,\n  \"scope\": \"finite facial identities only; no Type-II or optimality certificate\"\n}\n",
+    "stderr": ""
+  }
+]
