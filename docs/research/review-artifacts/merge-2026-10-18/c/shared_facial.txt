@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "arithmetic": "Fraction",
+  "nonglobal_contact_fixtures": 8,
+  "all_source_lower_pair_checks": 7252,
+  "physical_terminal_pair_checks": 108,
+  "interior_terminal_occurrences": 52,
+  "singleton_trains": 4,
+  "repeated_outer_bridge_occurrences": 8,
+  "auxiliary_graph_selections": 354,
+  "components_checked_outside_interior_vertex": 620,
+  "separate_face_graph_selections": 354,
+  "separate_face_component_cancellation_checks": 886,
+  "scope": "finite facial identities only; no Type-II or optimality certificate"
+}

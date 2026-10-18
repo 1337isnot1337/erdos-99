@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "baseline_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+  "inputs": [
+    {
+      "path": "docs/targets/target-a/26-tube-shield-sector-balance.md",
+      "sha256": "15e470ca494ddf19b5a7fe80a558b2cff01bab824539a0367a2b628436367798",
+      "identity": "docs/targets/target-a/26-tube-shield-sector-balance.md",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+      "sha256": "0399e4947619293dfda7818c8961c18a48cf762c2f8c5e0d8e956099ca08db29",
+      "identity": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "docs/targets/target-a/29-lens-source-gate-refinements.md",
+      "sha256": "ee1d31457082639f55a90b1474bfc92753c0a7dc4fc828a65bdd2fe5643ca550",
+      "identity": "docs/targets/target-a/29-lens-source-gate-refinements.md",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "docs/reports/target_a_seed066_coembedded_locked_fullrank_2026-10-13.md",
+      "sha256": "4ae3230a57b6222b86a7a18b9e0a148ebc3e21d38afbf6ad30c0ec7dc0cff4fc",
+      "identity": "docs/reports/target_a_seed066_coembedded_locked_fullrank_2026-10-13.md",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "docs/reports/target_a_independent_schur_linkage_2026-10-17.md",
+      "sha256": "abb381e795052fa2d6de401e9f700faf8c8f72aaf860b966fc5d0867f4645045",
+      "identity": "docs/reports/target_a_independent_schur_linkage_2026-10-17.md",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "74262c84658453dbe99752475a54a891203aaa86509acdfd19a3f613f286c4b9",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "sha256": "2103f415963d610bc66f2473c9a057b7ed5bb082febc6c64b5aab90ea46f93b0",
+      "identity": "docs/research/agent-task-catalog.json",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "research-packages/target-a-full-tube-fan-ledger/verify.py",
+      "sha256": "a91e488b03f58b777eb5c9de7e897f7a078315f6ee410fd336082d61d4dbce3e",
+      "identity": "independent-integer-geometric-ledger-checker",
+      "generated_from": []
+    },
+    {
+      "path": "docs/targets/target-a/02-scaffold-and-hall.md",
+      "sha256": "18b0297422f207a1b3afdea166b413ccd86d9a5d9c26d26da9794d3e6ac39548",
+      "identity": "docs/targets/target-a/02-scaffold-and-hall.md",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "docs/targets/target-a/03-source-response.md",
+      "sha256": "b56ef3220026dc503d3dfb43ecf04eeb041a05f8b8944234624806712bfc91a4",
+      "identity": "docs/targets/target-a/03-source-response.md",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "research-packages/target-a-full-tube-fan-ledger/README.md",
+      "sha256": "2c805c002a7f654cef3e7b8310b27658ec85181069d0208e611cd276122cea23",
+      "identity": "complete-all-m-counting-proof",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/target-a-full-tube-fan-ledger/evidence.json",
+      "sha256": "536fc5c16377c98961a8240b0450d9b6749667f733c2b35d62998527837638e3",
+      "identity": "saved-deterministic-geometric-ledger",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}

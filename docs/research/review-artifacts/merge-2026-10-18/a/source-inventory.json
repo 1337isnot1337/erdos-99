@@ -1,0 +1,146 @@
+{
+  "reviewer": "/root/merge_review_a",
+  "model": "GPT-6 Astra Pro",
+  "independence": "Fresh reviewer, no submitted proof/checker authorship or editing",
+  "main": "db27b736f33b4db288c8a5e227c03c099d59259a",
+  "started_utc": "2026-10-18T02:18:51.531729+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "prs": {
+    "89": {
+      "head": "aa111eedcd3bc190f991aeaa7f42299948551207",
+      "tree": "c63622a11a4d44c8635b96320aab54ef30455bfe",
+      "merge_base": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "changed_files": [
+        {
+          "path": "research-packages/target-a-full-tube-fan-ledger/README.md",
+          "sha256": "2c805c002a7f654cef3e7b8310b27658ec85181069d0208e611cd276122cea23",
+          "tree_entry": "100644 blob 9f88732850c4986ddab8feabbc70cab863acfb7f\tresearch-packages/target-a-full-tube-fan-ledger/README.md",
+          "bytes": 20044
+        },
+        {
+          "path": "research-packages/target-a-full-tube-fan-ledger/SOURCES.json",
+          "sha256": "37c6056e3aedf5da2593915914f2d3ba4d745421aa4db560bc64bf7870bfbb8b",
+          "tree_entry": "100644 blob db84b860291325b2d1576c4957f7594e80790610\tresearch-packages/target-a-full-tube-fan-ledger/SOURCES.json",
+          "bytes": 4138
+        },
+        {
+          "path": "research-packages/target-a-full-tube-fan-ledger/TASK.json",
+          "sha256": "2c60f0a8e005473b8a913311e9ecbcae79b38df05f316ac1345705deaa8f8f5c",
+          "tree_entry": "100644 blob 18cdc8ec05cae2b35c890ee567f82eeaa0dfd335\tresearch-packages/target-a-full-tube-fan-ledger/TASK.json",
+          "bytes": 1604
+        },
+        {
+          "path": "research-packages/target-a-full-tube-fan-ledger/VERIFY.json",
+          "sha256": "def4b42a11663efada7e03660c4065fb52eb2180ab43bd7c95e69ac7645ac44d",
+          "tree_entry": "100644 blob 26804f727415eeeaadc0b9a96c67db5fbea1b25e\tresearch-packages/target-a-full-tube-fan-ledger/VERIFY.json",
+          "bytes": 1281
+        },
+        {
+          "path": "research-packages/target-a-full-tube-fan-ledger/evidence.json",
+          "sha256": "536fc5c16377c98961a8240b0450d9b6749667f733c2b35d62998527837638e3",
+          "tree_entry": "100644 blob c92d56db74e86c8196ad9becee2ea2f4e612c776\tresearch-packages/target-a-full-tube-fan-ledger/evidence.json",
+          "bytes": 38110
+        },
+        {
+          "path": "research-packages/target-a-full-tube-fan-ledger/verify.py",
+          "sha256": "a91e488b03f58b777eb5c9de7e897f7a078315f6ee410fd336082d61d4dbce3e",
+          "tree_entry": "100644 blob b651d994634620ae74c21813c3e214de26b6f712\tresearch-packages/target-a-full-tube-fan-ledger/verify.py",
+          "bytes": 18277
+        }
+      ]
+    },
+    "96": {
+      "head": "6819b4f862508fe843f7a385e2cff992ecf23420",
+      "tree": "f7c9c371bfe599b64140bb41e1ba53d51d1f037d",
+      "merge_base": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+          "sha256": "4099a516644885546de892b009d5de269bd908aa773e9713eccc8e76298963bc",
+          "tree_entry": "100644 blob 6684ee294fa5e6647d90402e3cc40e0c397cd8a0\tdocs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+          "bytes": 9022
+        },
+        {
+          "path": "docs/research/agent-task-catalog.json",
+          "sha256": "9411c6a785f7ccd432b943fbbf66b12f94c3b9ffde22f5bd867fb0d75f2a7e08",
+          "tree_entry": "100644 blob 08690a13279f1d4306cccd0505e746556dfcfaf2\tdocs/research/agent-task-catalog.json",
+          "bytes": 123233
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "sha256": "e65bffa6b7a1f7f9cd8e3abc55bf130040913b6e20d921e421b0d279c9936c80",
+          "tree_entry": "100644 blob 4397e9ae6443c66945f5bde7d74678f805b9f795\tdocs/research/priority-state.json",
+          "bytes": 1646
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "sha256": "ad8b72a5cf5378e851f29fc9fd8ebc946ba1dbb0acfa2b43621499153fda12d8",
+          "tree_entry": "100644 blob ffc94543c9f6e8c6c47af8e5192c72dbc7c33702\tdocs/state/artifact-index.jsonl",
+          "bytes": 438539
+        },
+        {
+          "path": "reading/docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+          "sha256": "6650f8c8ccfb07a86adea3cfeab89f805c21b91114228f72a952a73869989926",
+          "tree_entry": "100644 blob bb66b28f901c64a26857e39a4f95feeaf1a5d705\treading/docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+          "bytes": 9355
+        },
+        {
+          "path": "reading/manifest.json",
+          "sha256": "018168d6cf2683171303af5fff72dbff3edadb977f7d218795ac59a4cb6e83f4",
+          "tree_entry": "100644 blob 7bbcc967705ecd0bc46c216041cdd703e3691277\treading/manifest.json",
+          "bytes": 930491
+        },
+        {
+          "path": "tasks/README.md",
+          "sha256": "44e070517b89307c0ef78ee3f552928f691d27a5a99412313d1f8f914e9b34d8",
+          "tree_entry": "100644 blob a61325eaa71f1a99983172f0bd4fc82f43c514ca\ttasks/README.md",
+          "bytes": 8468
+        },
+        {
+          "path": "tasks/verify-a-schur-linkage-bound.md",
+          "sha256": "52fedf9707d87cf748e6253ef08ba315756ea3a756d1e0ca078166bb0a65957d",
+          "tree_entry": "100644 blob f222bc870053918e95f55933244ff1bb1697e92c\ttasks/verify-a-schur-linkage-bound.md",
+          "bytes": 4896
+        }
+      ]
+    },
+    "98": {
+      "head": "2e4a3e1e73877df4f4756fcb4c7d331dcda1327f",
+      "tree": "74192a7db71a52de00b2a281cbc2aff9d4b986a8",
+      "merge_base": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+          "sha256": "585d984a913b92dbe9d7d6dd63d02ad1c77a20f0caa35ff3fa0ffb35274c3502",
+          "tree_entry": "100644 blob 3ea33aa81e4a609e62d3cf2fa3d9d363b11211af\tdocs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+          "bytes": 5702
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "sha256": "ffb50fac00dfdd7e3a1a9e9ae2272d470e15637e716df266acb9b154b3cccfa1",
+          "tree_entry": "100644 blob 86d152b67be80eea109a30106c8fc544c9130de4\tdocs/state/artifact-index.jsonl",
+          "bytes": 438552
+        },
+        {
+          "path": "reading/docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+          "sha256": "21fa16132b8cca86ff92eec283cfc013b15ad09ccc1a2f05c6490733b077480c",
+          "tree_entry": "100644 blob ea1372e7ee2b3c598546a5736d9f22fc9f4a835e\treading/docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+          "bytes": 6090
+        },
+        {
+          "path": "reading/manifest.json",
+          "sha256": "fa570d07bf9c5014e23855e22b31a8a255fc3ab4e51a46cfe1e809b01465fb36",
+          "tree_entry": "100644 blob d4caad8c98dceb9d42ceb02d50f7ab0d79476319\treading/manifest.json",
+          "bytes": 930518
+        },
+        {
+          "path": "research/verify_target_a_zero_slack_matching_overlap_2026_10_17.py",
+          "sha256": "2790ed46f319817a8fb52098cd87c9968836e7676bc73ea003dc885c4e86a723",
+          "tree_entry": "100644 blob 415bcc20deda303916a0e5419659c7445886655e\tresearch/verify_target_a_zero_slack_matching_overlap_2026_10_17.py",
+          "bytes": 5405
+        }
+      ]
+    }
+  }
+}

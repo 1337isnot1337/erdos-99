@@ -5,7 +5,9 @@
 Downstream use: The result must show whether the sharp abstract budget can pay the shell inequality on actual geometry. Re-enumerating the abstract counters is complete.
 
 Prior evidence:
-- [author-checked](https://github.com/1337isnot1337/erdos-99/blob/a392a910899b06d20df6c7c29010896223ebfa70/docs/reports/target_b_interface_capacity_2026-10-17.md) at `a392a910899b06d20df6c7c29010896223ebfa70`: Submitted shared-interface inequality R >= G + max(p1,p2,p1+p2-K), with finite incidence checks. Remaining: Geometric realization and payment of virtual mass are not established.
+- [agent-audited](../docs/reports/target_b_interface_capacity_2026-10-17.md) at `a392a910899b06d20df6c7c29010896223ebfa70`: shared-interface inequality R >= G + max(p1,p2,p1+p2-K), with finite incidence checks. Remaining: Geometric realization and payment of virtual mass are not established.
+
+Independent integration reviews: [Target A](../docs/research/review-artifacts/merge-2026-10-18/review-a.txt), [Target B](../docs/research/review-artifacts/merge-2026-10-18/review-b.txt), [Target C](../docs/research/review-artifacts/merge-2026-10-18/review-c.txt).
 
 **Track / priority:** target-b / direct frontier; selection weight 5 (attention only).
 
@@ -36,7 +38,7 @@ Advances only the stated route obligation; global closure still requires all can
 
 ## Approach and first bounded experiment
 
-Review PR #86, then construct one actual rhombic disk with two retained components. Map every physical crossing, shared deleted edge and virtual term into its ledger. Compare the paid lower bound with the exact shell endpoint.
+Use the reviewed PR #86 interface budget to construct one actual rhombic disk with two retained components. Map every physical crossing, shared deleted edge and virtual term into its ledger. Compare the paid lower bound with the exact shell endpoint.
 
 Methods: grain-by-grain charge transport, two-grain exact model followed by a uniform summation lemma
 

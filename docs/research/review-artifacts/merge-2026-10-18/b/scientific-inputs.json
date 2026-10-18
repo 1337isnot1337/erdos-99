@@ -1,0 +1,56 @@
+{
+  "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+  "review_main": "db27b736f33b4db288c8a5e227c03c099d59259a",
+  "files": [
+    {
+      "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "source_sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+      "matches_review_main": true
+    },
+    {
+      "path": "docs/targets/target-b/README.md",
+      "source_sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+      "matches_review_main": true
+    },
+    {
+      "path": "docs/reports/target_b_dual_tree_dense_grid_extraction_correction_2026-09-05.md",
+      "source_sha256": "1d0efd88648462f9cb8c83a2a4627db9b9760b504684ff88c6d6fe19fe7ce61e",
+      "matches_review_main": true
+    },
+    {
+      "path": "docs/reports/target_b_trimmed_grid_phase_star_exclusion_2026-09-05.md",
+      "source_sha256": "4013536ad4ca97b13f9c0c7d39ca6911cec3f1fc8f1897cf406b5ae3eba3ab86",
+      "matches_review_main": true
+    },
+    {
+      "path": "docs/reports/target_b_balanced_phase_stability_exclusion_2026-09-05.md",
+      "source_sha256": "e97160e75d88c5639f589460dc7b92aecae7856647e63c0cad9d1cd5dcf94e26",
+      "matches_review_main": true
+    },
+    {
+      "path": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+      "source_sha256": "a1ecda90c62bbe13b93a1c4091fb0ec333255a27014c6536a2b03d588608e5fb",
+      "matches_review_main": true
+    },
+    {
+      "path": "docs/reports/target_b_multicomponent_penetration_budget_2026-09-05.md",
+      "source_sha256": "d855c448a3daa7d09962a0e4089aeaf3d50eca15c5ea2dadc10eb6c9bd8ae843",
+      "matches_review_main": true
+    },
+    {
+      "path": "docs/reports/target_b_explicit_general_phase_interpolation_2026-09-05.md",
+      "source_sha256": "966cf3e23f3ac2c3d47875781f702653aec42f7205ff05ba8c3cee59f5b60ae2",
+      "matches_review_main": true
+    },
+    {
+      "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+      "source_sha256": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+      "matches_review_main": true
+    },
+    {
+      "path": "docs/problem/statement.md",
+      "source_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "matches_review_main": true
+    }
+  ]
+}

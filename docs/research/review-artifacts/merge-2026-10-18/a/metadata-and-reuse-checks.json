@@ -1,0 +1,204 @@
+{
+  "pr89_source_pins": [
+    {
+      "path": "docs/targets/target-a/26-tube-shield-sector-balance.md",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "15e470ca494ddf19b5a7fe80a558b2cff01bab824539a0367a2b628436367798",
+      "match": true
+    },
+    {
+      "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "0399e4947619293dfda7818c8961c18a48cf762c2f8c5e0d8e956099ca08db29",
+      "match": true
+    },
+    {
+      "path": "docs/targets/target-a/29-lens-source-gate-refinements.md",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "ee1d31457082639f55a90b1474bfc92753c0a7dc4fc828a65bdd2fe5643ca550",
+      "match": true
+    },
+    {
+      "path": "docs/reports/target_a_seed066_coembedded_locked_fullrank_2026-10-13.md",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "4ae3230a57b6222b86a7a18b9e0a148ebc3e21d38afbf6ad30c0ec7dc0cff4fc",
+      "match": true
+    },
+    {
+      "path": "docs/reports/target_a_independent_schur_linkage_2026-10-17.md",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "abb381e795052fa2d6de401e9f700faf8c8f72aaf860b966fc5d0867f4645045",
+      "match": true
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "match": true
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "74262c84658453dbe99752475a54a891203aaa86509acdfd19a3f613f286c4b9",
+      "match": true
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "2103f415963d610bc66f2473c9a057b7ed5bb082febc6c64b5aab90ea46f93b0",
+      "match": true
+    },
+    {
+      "path": "research-packages/target-a-full-tube-fan-ledger/verify.py",
+      "commit": "aa111eedcd3bc190f991aeaa7f42299948551207",
+      "sha256": "a91e488b03f58b777eb5c9de7e897f7a078315f6ee410fd336082d61d4dbce3e",
+      "match": true
+    },
+    {
+      "path": "docs/targets/target-a/02-scaffold-and-hall.md",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "18b0297422f207a1b3afdea166b413ccd86d9a5d9c26d26da9794d3e6ac39548",
+      "match": true
+    },
+    {
+      "path": "docs/targets/target-a/03-source-response.md",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "b56ef3220026dc503d3dfb43ecf04eeb041a05f8b8944234624806712bfc91a4",
+      "match": true
+    },
+    {
+      "path": "research-packages/target-a-full-tube-fan-ledger/README.md",
+      "commit": "aa111eedcd3bc190f991aeaa7f42299948551207",
+      "sha256": "2c805c002a7f654cef3e7b8310b27658ec85181069d0208e611cd276122cea23",
+      "match": true
+    },
+    {
+      "path": "research-packages/target-a-full-tube-fan-ledger/evidence.json",
+      "commit": "aa111eedcd3bc190f991aeaa7f42299948551207",
+      "sha256": "536fc5c16377c98961a8240b0450d9b6749667f733c2b35d62998527837638e3",
+      "match": true
+    }
+  ],
+  "reading_entries": {
+    "96": {
+      "entry": {
+        "source": "docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+        "source_sha256": "4099a516644885546de892b009d5de269bd908aa773e9713eccc8e76298963bc",
+        "reading_path": "reading/docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+        "reading_sha256": "6650f8c8ccfb07a86adea3cfeab89f805c21b91114228f72a952a73869989926",
+        "math_pairs_normalized": 0
+      },
+      "artifact_entry": {
+        "artifact_id": "ART-358694DA4F4B",
+        "canonical": false,
+        "claim_ids": [],
+        "claim_statuses": {},
+        "depends_on": [],
+        "invalidates": [],
+        "path": "docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+        "status": "unreviewed",
+        "supersedes": [],
+        "target": "target-a"
+      },
+      "aggregate_counts_match": true
+    },
+    "98": {
+      "entry": {
+        "source": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+        "source_sha256": "585d984a913b92dbe9d7d6dd63d02ad1c77a20f0caa35ff3fa0ffb35274c3502",
+        "reading_path": "reading/docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+        "reading_sha256": "21fa16132b8cca86ff92eec283cfc013b15ad09ccc1a2f05c6490733b077480c",
+        "math_pairs_normalized": 32
+      },
+      "artifact_entry": {
+        "artifact_id": "ART-D6EEF46F9598",
+        "canonical": false,
+        "claim_ids": [],
+        "claim_statuses": {},
+        "depends_on": [],
+        "invalidates": [],
+        "path": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+        "status": "unreviewed",
+        "supersedes": [],
+        "target": "target-a"
+      },
+      "aggregate_counts_match": true
+    }
+  },
+  "pr78_reused_bytes": {
+    "docs/reports/target_a_independent_schur_linkage_2026-10-17.md": {
+      "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda": "abb381e795052fa2d6de401e9f700faf8c8f72aaf860b966fc5d0867f4645045",
+      "e396ea07887dd0528b817ce4e656ff0e6b01f8fb": "abb381e795052fa2d6de401e9f700faf8c8f72aaf860b966fc5d0867f4645045",
+      "6819b4f862508fe843f7a385e2cff992ecf23420": "abb381e795052fa2d6de401e9f700faf8c8f72aaf860b966fc5d0867f4645045",
+      "db27b736f33b4db288c8a5e227c03c099d59259a": "abb381e795052fa2d6de401e9f700faf8c8f72aaf860b966fc5d0867f4645045"
+    },
+    "research/verify_target_a_schur_linkage_2026_10_17.py": {
+      "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda": "5a3fbc6f5288f0162ad1dc3419279b53854fa08c5c29cf40619e2838240c6bd9",
+      "e396ea07887dd0528b817ce4e656ff0e6b01f8fb": "5a3fbc6f5288f0162ad1dc3419279b53854fa08c5c29cf40619e2838240c6bd9",
+      "6819b4f862508fe843f7a385e2cff992ecf23420": "5a3fbc6f5288f0162ad1dc3419279b53854fa08c5c29cf40619e2838240c6bd9",
+      "db27b736f33b4db288c8a5e227c03c099d59259a": "5a3fbc6f5288f0162ad1dc3419279b53854fa08c5c29cf40619e2838240c6bd9"
+    },
+    "research/target_a_schur_linkage_2026_10_17.json": {
+      "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda": "fb72c58e16702fb16da72cb6a1aef3a7e17eb932df47619abf5ce66358e3b7a0",
+      "e396ea07887dd0528b817ce4e656ff0e6b01f8fb": "fb72c58e16702fb16da72cb6a1aef3a7e17eb932df47619abf5ce66358e3b7a0",
+      "6819b4f862508fe843f7a385e2cff992ecf23420": "fb72c58e16702fb16da72cb6a1aef3a7e17eb932df47619abf5ce66358e3b7a0",
+      "db27b736f33b4db288c8a5e227c03c099d59259a": "fb72c58e16702fb16da72cb6a1aef3a7e17eb932df47619abf5ce66358e3b7a0"
+    }
+  },
+  "diff_whitespace": {
+    "89": "PASS",
+    "96": "PASS",
+    "98": "PASS"
+  },
+  "main_catalogue": {
+    "revision": "public-frontier.8",
+    "reviewed_base_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+    "existing_checks": [
+      {
+        "source_commit": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
+        "evidence": "docs/research/review-artifacts/pr78/independent-audit.txt",
+        "scope": "The exact finite Schur/linkage domain submitted in PR #78; reviewed before its merge. PR #96 is supplementary reconstruction of the same bytes.",
+        "status": "agent-audited",
+        "state_version": "2026-10-15.publication.2",
+        "remaining": "No canonical promotion or acceptance outside this exact scope.",
+        "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with verify-a-source-capacity-coupling."
+      },
+      {
+        "source_commit": "6819b4f862508fe843f7a385e2cff992ecf23420",
+        "evidence": "https://github.com/1337isnot1337/erdos-99/blob/6819b4f862508fe843f7a385e2cff992ecf23420/docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+        "scope": "The exact finite Schur/linkage domain submitted in PR #78; reviewed before its merge. PR #96 is supplementary reconstruction of the same bytes.",
+        "status": "agent-audited",
+        "state_version": "2026-10-15.publication.2",
+        "remaining": "No canonical promotion or acceptance outside this exact scope.",
+        "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with verify-a-source-capacity-coupling."
+      }
+    ],
+    "open_snapshot_date": "2026-10-17T22:44:44Z"
+  },
+  "pr96_catalogue": {
+    "revision": "public-frontier.8",
+    "reviewed_base_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+    "existing_checks": [
+      {
+        "source_commit": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
+        "evidence": "https://github.com/1337isnot1337/erdos-99/blob/9f230b2f900bf050a27ce7430ae7b3fed8ef8eda/docs/reports/target_a_independent_schur_linkage_2026-10-17.md",
+        "scope": "PR #78 author reports an independent finite rank/linkage and tube-cut checker on all 9,216 declared supports and 234,176 tube/shield cases; this author check is not itself an independent audit.",
+        "status": "author-checked",
+        "state_version": "2026-10-15.publication.2",
+        "remaining": "No geometric shield realization, source-specific global surplus, or strict-diameter competitor is established.",
+        "first_useful_action": "Derive the actual fan surplus or construct a source-preserving strict-D competitor; do not repeat this finite domain."
+      },
+      {
+        "source_commit": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
+        "evidence": "docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+        "scope": "Independent reconstruction of generic Schur minors, transversal-matroid linkages, unit-capacity cuts/contraction, and tube/sector bounds; replayed all 9,216 supports, 234,176 tube/shield cases, and five negative controls.",
+        "status": "agent-audited",
+        "state_version": "2026-10-15.publication.2",
+        "remaining": "The audit is finite/nongeometric; actual shield realization, source surplus, zero-slack transfer, and the global minimizer quantifiers remain open.",
+        "first_useful_action": "Work on the actual-source surplus inequality or a fully checked strict-diameter competitor."
+      }
+    ],
+    "open_snapshot_date": "2026-10-17T21:05:35.743989+00:00"
+  },
+  "reused_audit_sha256": "6285363943687e2e3b803233a0bdff5f9cab0068604a310a434e63ef9f549782"
+}

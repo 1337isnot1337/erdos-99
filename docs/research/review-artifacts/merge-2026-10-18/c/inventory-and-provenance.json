@@ -1,0 +1,148 @@
+{
+  "90": {
+    "head": "3f419d3b6415ade701e00b7fd3dc2a013f8064d6",
+    "tree": "4b93e2ee17474aab6bc91a05cca7e35d10cda3ca",
+    "parent": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+    "files": [
+      {
+        "path": "docs/audits/target_c_typeii_separate_face_floor_recheck_2026-10-17.md",
+        "sha256": "eed8dcdebe7b4e0e8598709b8d05d015fe89d1eee98de50ae81f0896b7d960b6",
+        "bytes": 11121
+      },
+      {
+        "path": "docs/state/artifact-index.jsonl",
+        "sha256": "ce9257f405a36c32635048bd6659ce15fcc987e29d2f0ed2ba412d4b99543027",
+        "bytes": 438542
+      },
+      {
+        "path": "reading/docs/audits/target_c_typeii_separate_face_floor_recheck_2026-10-17.md",
+        "sha256": "85b3c56c809a820d3b2f6a73af81c25d461730fcac611bfdcdf0a260f3742787",
+        "bytes": 11538
+      },
+      {
+        "path": "reading/manifest.json",
+        "sha256": "581ee9207623b22fa44e80afcf547341d75e41918cb534e6ccb740fbad1f613e",
+        "bytes": 930498
+      },
+      {
+        "path": "research/verify_target_c_face_floor_coefficients_2026_10_17.py",
+        "sha256": "0a0507edcd7b925b2315cfc9cab51368fedf6ccc7acf08009345a0369524117d",
+        "bytes": 3020
+      }
+    ],
+    "source_reading_manifest_and_unreviewed_lifecycle": "PASS",
+    "modes": "all new and modified entries 100644; no deletes, executable changes, symlinks, or submodules"
+  },
+  "91": {
+    "head": "2d4f2b7930570e989f3f8c76d27fc9aca23f32ac",
+    "tree": "9d8d6014fc0de81be808d122b542f838113e353e",
+    "parent": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+    "files": [
+      {
+        "path": "docs/audits/target_c_typeii_face_floor_independent_reconstruction_2026-10-17.md",
+        "sha256": "5d7e4018915350c844423d9b67acab8f7e3cb96c591d8de66b4650c780c684ab",
+        "bytes": 13545
+      },
+      {
+        "path": "docs/state/artifact-index.jsonl",
+        "sha256": "8ec24cb9137a3649020df9e6d71655e4273121c32cce481596bb2fce160b0ac7",
+        "bytes": 438552
+      },
+      {
+        "path": "reading/docs/audits/target_c_typeii_face_floor_independent_reconstruction_2026-10-17.md",
+        "sha256": "06a5ebcafc25a0a287ce1077a6567894b457b051b98e8be84c3dfcd63d911105",
+        "bytes": 14095
+      },
+      {
+        "path": "reading/manifest.json",
+        "sha256": "6c9a7c7549d25c4bee8c1ddd098d6b7b87297c4d6cbe79112f8e48c2c672f42c",
+        "bytes": 930518
+      },
+      {
+        "path": "research/verify_target_c_typeii_face_floor_algebra_2026_10_17.py",
+        "sha256": "d5d8697bb933d45002217be782cc3daa87fafdf6b7ebc03510f0571d669da01c",
+        "bytes": 5212
+      }
+    ],
+    "source_reading_manifest_and_unreviewed_lifecycle": "PASS",
+    "modes": "all new and modified entries 100644; no deletes, executable changes, symlinks, or submodules"
+  },
+  "95": {
+    "head": "058df6dc46ba033597d99d6aa4ec6834810b9eb7",
+    "tree": "aef239d469cdf04ded96b1148192cdf662b4d410",
+    "parent": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+    "files": [
+      {
+        "path": "docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
+        "sha256": "01e100022b6755594eab032725198d0a6546aef9f0e9343f016b2ad6edabd231",
+        "bytes": 9425
+      },
+      {
+        "path": "docs/state/artifact-index.jsonl",
+        "sha256": "941285c8d8a80b091d82d6817979d494bfb2503aaaeb5d49a31aa0f6bede778f",
+        "bytes": 438547
+      },
+      {
+        "path": "reading/docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
+        "sha256": "663166cf6b13a2926f59fc2fc7df2968dfafacf076849102dbda9c1774c59ead",
+        "bytes": 10024
+      },
+      {
+        "path": "reading/manifest.json",
+        "sha256": "69b799c15a5c1a1a2241c9c3dff3fd72f3fb8b4d75434921c1f6da20d515814a",
+        "bytes": 930509
+      },
+      {
+        "path": "research/verify_target_c_typeii_sparse_exceptional_stress_2026_10_17.py",
+        "sha256": "34e2b8426bbea826f56c994881055e66cd78ddbec01e0dfec83d85da1263d356",
+        "bytes": 6864
+      },
+      {
+        "path": "tasks/target-c-typeii-stress-mass-access.md",
+        "sha256": "2354f7dca770d9784d6dc41db4d29d053839baf6a245a87b9afcd87b9d1d5472",
+        "bytes": 6743
+      }
+    ],
+    "source_reading_manifest_and_unreviewed_lifecycle": "PASS",
+    "modes": "all new and modified entries 100644; no deletes, executable changes, symlinks, or submodules"
+  },
+  "97": {
+    "head": "beddec1de9620741f2a7baff8584afa0b2bd094f",
+    "tree": "0e6b218d9fb1703d9767f0e1a1d0705372664f58",
+    "parent": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+    "files": [
+      {
+        "path": "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+        "sha256": "e89ab07f491ce279c5466f13b13f32cda18dd0c3267b5694e4fc0dfa5467efb7",
+        "bytes": 10083
+      },
+      {
+        "path": "docs/state/artifact-index.jsonl",
+        "sha256": "3147d45b4c2aa1e5fa052d515573e114b8a06787b922a64ab1424adc946d8d0e",
+        "bytes": 438555
+      },
+      {
+        "path": "reading/docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+        "sha256": "b16f6c247687ca4fa4b20f8b0a5eb55170d644c706c1814522d837200b19448b",
+        "bytes": 10673
+      },
+      {
+        "path": "reading/manifest.json",
+        "sha256": "bbf4bf076edac60c0a9c97dcd0a0f079f35e8cc6492e84bc8829876e0ad5debc",
+        "bytes": 930524
+      },
+      {
+        "path": "research/verify_target_c_contact_rhombic_grid_capacity_2026_10_17.py",
+        "sha256": "facd9f5ecf817e13776dd3032c4036602aa9dbd698d9d98fc90d611d8b2fb153",
+        "bytes": 3276
+      }
+    ],
+    "source_reading_manifest_and_unreviewed_lifecycle": "PASS",
+    "modes": "all new and modified entries 100644; no deletes, executable changes, symlinks, or submodules"
+  },
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "platform": "linux"
+  }
+}

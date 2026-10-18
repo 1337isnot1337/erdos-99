@@ -1,0 +1,366 @@
+Individual receipts and referenced portable checks/logs are preserved under a/. Historical replay commands retain their original paths; use the recorded immutable PR heads for source reproduction.
+
+# Independent AI-agent merge review: PR89, PR96 and PR98
+
+Reviewer: /root/merge_review_a
+Model: OpenAI GPT-6 Astra Pro, as identified by the session instructions.
+Date: 2026-10-18 UTC.
+Review basis: immutable repository objects in 1337isnot1337/erdos-99.
+Pinned current main: db27b736f33b4db288c8a5e227c03c099d59259a.
+Common PR merge base: e396ea07887dd0528b817ce4e656ff0e6b01f8fb.
+State: 2026-10-15.publication.2; priority public-frontier.3.
+
+This is an independent AI mathematical review, not human peer review. I did not
+originate, edit, or supply a load-bearing part of any submitted proof or checker.
+I read exact git objects and ran byte-identical copies outside the repository. I
+did not edit the repository worktree, change GitHub, or run a historical exhaustive
+audit again. The reviewer-owned script is an independently designed check, not a
+replacement or patch to a submitted implementation.
+
+## Verdicts at the submitted heads
+
+PR89 aa111eedcd3bc190f991aeaa7f42299948551207: CONDITIONAL.
+The hexagonal all-m proof, finite evidence and scope pass. Before integration,
+correct the stale PR87 comparison in README part 4: M-1 is the relaxed matching
+optimum, while the corrected Section-102 admissible optimum is 1. The correction
+does not affect the hexagonal count, its own-row admissibility, or its cap 3.
+
+PR96 6819b4f862508fe843f7a385e2cff992ecf23420: PASS for the supplementary finite
+audit and its exact-source mathematical scope. Its principal proof/computation
+already has a qualifying committed exact-source PR78 audit; that evidence is
+reused, not represented as a new exhaustive run. Integration must preserve the
+newer current-main catalogue/reconciliation rather than restore PR96's older
+snapshot or directions. No canonical promotion is requested or supported.
+
+PR98 2e4a3e1e73877df4f4756fcb4c7d331dcda1327f: PASS for the finite rational
+matching-image regression. It is not a canonical zero-slack source or a result
+about every global minimizer. Its stated exclusions are essential and adequate.
+
+Repository-wide corpus/public checks, generated-view reconciliation, and full94
+certificate replay are deferred to the merging agent on the final integration
+candidate. They are not represented here as complete. All three contributions
+leave Level I, A, B and C-II open, with C-I closed.
+
+## Source inventory and provenance
+
+source-inventory.json gives every changed path, exact blob, mode, byte size and
+SHA-256; pr89-diff.txt, pr96-diff.txt and pr98-diff.txt preserve the complete exact
+source diffs. All changed files have mode 100644; no mode changes, symlinks or
+submodules occur. Changes against the common merge base are:
+
+PR89, six additions:
+- research-packages/target-a-full-tube-fan-ledger/README.md
+- research-packages/target-a-full-tube-fan-ledger/SOURCES.json
+- research-packages/target-a-full-tube-fan-ledger/TASK.json
+- research-packages/target-a-full-tube-fan-ledger/VERIFY.json
+- research-packages/target-a-full-tube-fan-ledger/evidence.json
+- research-packages/target-a-full-tube-fan-ledger/verify.py
+
+PR96, three additions and five modifications:
+- A docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md
+- M docs/research/agent-task-catalog.json
+- M docs/research/priority-state.json
+- M docs/state/artifact-index.jsonl
+- A reading/docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md
+- M reading/manifest.json
+- M tasks/README.md
+- M tasks/verify-a-schur-linkage-bound.md
+
+PR98, three additions and two modifications:
+- A docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md
+- M docs/state/artifact-index.jsonl
+- A reading/docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md
+- M reading/manifest.json
+- A research/verify_target_a_zero_slack_matching_overlap_2026_10_17.py
+
+Trees: PR89 c63622a11a4d44c8635b96320aab54ef30455bfe; PR96
+f7c9c371bfe599b64140bb41e1ba53d51d1f037d; PR98
+74192a7db71a52de00b2a281cbc2aff9d4b986a8.
+
+Read current AGENTS.md, docs/REVIEW_POLICY.md, docs/STATE.md, problem statement,
+bottleneck brief, priority state, autoresearch.md, maintainer delta intake, Target A
+route, and the applicable proof modules. The load-bearing interfaces inspected
+were Sections 102 and 113 (deep basis, generic Schur rank and linkages), 173--175
+(coarse Hall, geometric sectors, basis closure, tube interception, shore partition
+and translation averaging), 168.2--168.3 and 176 (the independent source matchings
+and boundary-order defect), and 177.4--177.5 (matched-unit contraction, independent
+matching images and source V-paths). The seed66 report's actual phase, matrix/fan
+and nonglobality proofs were read. This does not claim a new audit of its unrelated
+fixed-hull stress/Oler extremality machinery or of the entire canonical global chain.
+
+PR89 correctly credits the seed66 originators for the hexagonal family, phase
+chamber, full rank, contact fan and nonglobal replacement, and separately credits
+the concurrent PR87 comparison. It declares OpenAI Codex/GPT-6 authorship of new
+reconstruction/code/text and Apache-2.0 licensing. Its checker imports only Python
+standard-library modules and neither reads repository data nor invokes external
+processes or network access. All 13 SOURCES.json identities were recomputed at
+their named commit, or at the PR head for newly created inputs; every digest
+matches. The proof, task and verifier have consistent scoped domains.
+
+PR98 declares its OpenAI Codex/GPT-6 construction and cites Sections 168/176. It
+uses only fractions and itertools and has no file/network/process dependency.
+PR96's first-person original report does not identify an originating reviewer
+session/model. Do not invent that identity or portray its historical replay
+claims as this session's work. Current accepted independent coverage is supplied
+by the identified committed PR78 reviewer and this independently identified
+delta review. This is a provenance limitation of the supplementary report, not
+an absent mathematical review gate.
+
+For PR96 and PR98, all added source/reading SHA-256s, the reading aggregate document
+and normalization counts, and artifact-index records were checked. Both records
+remain canonical:false/status:unreviewed, with no claim IDs or theorem edges. No
+theorem-state manifest claim or canonical lifecycle is modified by these PRs.
+All three exact-base git diff --check commands pass. Detailed results are in
+metadata-and-reuse-checks.json.
+
+## PR89: complete proof/scope reconstruction
+
+The statement concerns every integer m>=2, but only three explicitly supplied
+translations of one hexagonal lattice response fixture. It does not concern every
+translation, source, basis optimum, minimizer, cardinality in the Erdős question,
+or joint phase-averaged population quantity. There is no genuine-source j_*.
+The source contains unit triangles and no contact-isolated labels; all
+3m^2+3m+1 labels are retained in its response calculation.
+
+1. Four radial offsets and the complete collar.
+For v=(a,b), the three inequalities Q(v)<2a+b, Q(v)<a+2b and Q(v)<b-a make
+the offsets (-1,0),(0,-1),(1,-1) strict conflicts, together with (0,0).
+The opposite unit directions have squared length greater than one. Any further
+nonzero triangular-lattice vector has norm at least sqrt(3), and |v|<1/10
+excludes it by the reverse triangle inequality. Thus the local adjacency is
+exhaustive and has no hidden zero/unit equality.
+
+The complete open hull collar includes X_m, the 6m noncorner sites on shell
+m+1, and exactly the three stated negative-facing shell corners. Noncorner
+shell points are sqrt(3)/2 from the old hull and remain strictly within one
+under these translations. At a shell corner the closest old corner stays the
+projection because the adjacent outward products remain positive; the same
+unit-direction test selects the three corners. Points beyond that shell violate
+an axial hull inequality by at least two, so their distance remains above one.
+Hence |Y_in|=3m^2+9m+4; neighborless collar rows are included.
+
+2. Interior rows and actual Schur rank.
+The interior integer indices satisfy -m<=i,j,i+j<=m-1. They give |Z|=3m^2;
+the complement has |C|=3m+1. Matching each interior row to its own unshifted
+source is Section-102 admissible: any source not in this basis has its own
+exterior neighbor, so every incidence-deep column is included. All source
+columns are independent because the own-row square submatrix is triangular
+under i+2j, with every other supported row strictly lower in that functional.
+The interior block has the same property. Thus d_int=0, C=C^partial, and the
+bordered determinant gives rank(S)=3m+1. This rank computation is reconstructed
+directly, not inferred from local locking, density or global optimality.
+
+3. Full tube, including the m=2 boundary case.
+The fan is exactly the union of three complete segments: the length-2m horizontal
+segment, the length-m diagonal, and the short third side of the unit triangle.
+It has 3m+1 unit edges/vertices. The short segment adds no tube rows. The local
+unit-edge tables are exact finite certificates with an explicit exhaustive
+coordinate bound. Their horizontal union has 6m+4 indices; the diagonal union
+has 3m+4. The seven listed intersections are present already at m=2, so the
+full tube has 9m+1 rows. For m>=3, horizontal/diagonal exterior counts are 6/3
+with interior intersection. At m=2, the diagonal count rises to five, while
+two intersecting rows are exterior, leaving the same total nine. Therefore
+|T_O|=9 and |T_Z|=9m-8 for every declared m.
+
+4. Exact sectors and basis closure.
+The sectors can independently be represented by the following convex polygons
+in axial coordinates, avoiding any response-component identification:
+triangle [(0,0),(1,0),(0,1)]; upper left
+[(-m,0),(0,0),(0,1),(1-m,m),(-m,m)]; upper right
+[(1,0),(m,0),(0,m),(1-m,m)]; bottom
+[(-m,0),(0,-m),(m,-m),(m,0)]. Closing the own-row basis deletes exactly the
+fan source vertices and own source indices of T_Z. Exterior own rows do not
+authorize deleting their terminal source: that distinction is important at m=2.
+
+The displayed basis intervals yield, respectively,
+0, (m-1)(m-2)/2, (m-2)(m-3), (3m^2-5m+2)/2, with the m=2/3 empty cases
+handled correctly. Applying all four offsets to every surviving source yields
+the stated disjoint sink sets, of sizes 0,m-1,2m-4,4m-1. Surviving terminal
+sizes are 0,1,2m-2,m. The two originally neighborless collar strips have total
+2m; exactly one further row (-m-1,1) loses its sole source neighbor under basis
+closure. Hence |O_iso|=2m+1, P=2, Q=4m-3 and Xi=6m-2. The raw bound is
+6-3m; the true right deficiency is 6m+3; the rank-cut slack is 9m-3. These
+follow from symbolic interval counts uniformly in m, not extrapolation of a fit.
+
+5. All-admissible-basis cap.
+The disjoint-shore identity is
+Xi-|T_Z|=|O|-|T|-sum_i min(|C_i|,|O_i|).
+For this fixed geometry |O|=9m+4 and |T|=9m+1, so every admissible matching
+has raw bound at most 3. This only uses nonnegativity of the final sum. It does
+not assert attainability or a sharp maximum. Its loss from the true deficiency
+is at least 6m. The identity survives PR99's distinction between canonical and
+relaxed basis classes. The own-row matching really contains the incidence-deep
+basis, unlike the withdrawn seed63 witness.
+
+6. Averaging regression.
+The Section-175 mean bound is U_m=(2*pi+4*(3m+1))/sqrt(3). Using pi<22/7 and
+sqrt(3)>19/11 gives U_m<(924m+792)/133. Subtracting from 9m-8 gives numerator
+273m-1856, positive for every m>=7. At m=7 the actual count is 55 and the
+strict mean upper bound is 7260/133<55. The pi integral in the proof is valid:
+polynomial division gives quotient x^6-4x^5+5x^4-4x^2+4 and remainder -4;
+its integral is 22/7-pi>0. This refutes using an averaged charge pointwise at an
+independently selected phase. It does not refute the mean inequality or imply
+failure of a joint average involving Xi(v) and j_*(v).
+
+### PR89 bounded adversarial checks
+
+The submitted checker was inspected in full and run as a byte-identical copy
+with python -I -O -B, timeout 30 seconds. It exited zero in 3.026 seconds,
+reproducing evidence.json byte-for-byte (SHA-256
+536fc5c16377c98961a8240b0450d9b6749667f733c2b35d62998527837638e3).
+It covers 34 geometric cases, nine primitive tubes, 441 rational comparisons,
+open-tube equality control, omitted basis closure, and misreporting the smaller
+interior-only tube as the full tube. Explicit exceptions remain active under -O.
+The latter control correctly checks input identity, not invalidity of every
+smaller cut. The minimum primitive squared-distance margin is 993/1000000.
+
+The reviewer-owned independent-geometry.py uses Fraction projection onto the
+three long segments, direct convex hull/sector predicates, and independently
+reconstructed radius-two local adjacency. It checks m=2 and m=7 at all three
+phases, plus m=13 and m=32 at the first phase. At m=2 it also compares every
+source/collar pair directly and tests all five single-exchange alternatives to
+the own-row matching that retain the incidence-deep columns, at each phase.
+All 15 such admissible alternative cases have raw bound 0, consistent with cap 3;
+this is not an optimization claim. All eight complete geometric ledgers pass.
+The m=32 check retains 3169 source labels, 3364 collar rows, 280 interior tube
+rows, nine exterior tube rows, 65 isolated exterior survivors and raw bound -90.
+
+### PR89 required repair
+
+Part 4 first describes concurrent PR87 as optimizing over bases, then explicitly
+says its exact optimum is M-1. Current main's merged PR99 corrects that claim.
+Minimum repair: state that the Section-102 incidence-deep admissible optimum is
+1, while M-1 is the relaxed Z-perfect-matching optimum when all unmatched
+columns are retained in the full Schur complement; the relaxed witness omits
+M-2 required deep columns. Keep PR87's source SHA and mathematical credit;
+link the PR99 correction and retain the distinction from this hexagonal fixture.
+Update the local README digest in SOURCES.json. No change to the hexagonal
+formulas or checker is necessary. Re-review the repaired text/digest at the
+integrated immutable head; this is a scope-aware correction, not a new audit
+of all historical mathematics.
+
+## PR96: exact-source reuse and unique delta
+
+The report/checker/saved evidence at PR78 head
+9f230b2f900bf050a27ce7430ae7b3fed8ef8eda are byte-identical at e396, PR96 and
+db27b7. Their hashes respectively are:
+abb381e795052fa2d6de401e9f700faf8c8f72aaf860b966fc5d0867f4645045;
+5a3fbc6f5288f0162ad1dc3419279b53854fa08c5c29cf40619e2838240c6bd9;
+fb72c58e16702fb16da72cb6a1aef3a7e17eb932df47619abf5ce66358e3b7a0.
+
+Reused review: docs/research/review-artifacts/pr78/independent-audit.txt, SHA-256
+6285363943687e2e3b803233a0bdff5f9cab0068604a310a434e63ef9f549782, reviewer
+/root/audit_pr78, thread 01a14b84-2bcb-7320-9373-5d67c5dbeac2. It independently
+inspected the exact source, reimplemented actual sparse-polynomial Schur
+numerators, simple paths and union-find shields, and covered the original finite
+domain plus additional unrestricted supports. That record includes the same
+rank-one 704 count and all five controls. I read the entire record and validated
+its applicability; I did not rerun that completed 9216/234176-case exercise.
+
+PR96 adds no checker or new numerical result. I checked its complete 177-line
+new reconstruction, scope, catalogue changes, task navigation and reading/index
+metadata. The fixed matching gives an invertible generic basis block. Independent
+edge variables prevent distinct determinant matching monomials from cancelling.
+Comparing a matching of B union K with the fixed basis matching produces disjoint
+augmenting K-to-O paths; flipping only those components restores coverage of
+every Z even if the original larger matching omitted some Z. Alternating cycles
+cause no problem. Unit-capacity contraction is valid because every used B is
+entered from its paired Z, whose only outgoing arc is that matched edge.
+
+Tube/shield interception then charges at most |T| paths. A remaining path stays
+in one internal component until its exterior endpoint, and those endpoints give
+a matching in the coarse graph. For shared sinks, the coarse matching number is
+required. Only for disjoint sink sets is it sum min; the report maintains that
+distinction and cancels T_O, not T_Z. Its generic-rank scope is explicit, as are
+the equal-weight specialization, reversed orientation and lost-capacity controls.
+No step transfers an arbitrary finite support into a global geometric source.
+
+The catalogue's author-checked/agent-audited distinction is reasonable, but the
+current main has already reconciled this task as completed and named the
+source-capacity successor. It also has a later open-PR snapshot. Preserve that
+newer state. The added local audit can supplement its exact source links without
+restoring the older catalogue narrative. Normal generated reading/hash merge
+conflicts must be recomputed on the final combined tree.
+
+No fresh exhaustive computation is needed for this unique delta. The original
+historical commands/results in the report are source-reported and agree with
+the committed independent audit. They are not falsely counted as executions
+by /root/merge_review_a. Remaining obligations are unchanged: actual geometric
+shield realization, source-specific surplus, zero-slack coupling and every
+global-minimizer quantifier.
+
+## PR98: exact fixture reconstruction and adversarial scope test
+
+The hull is the counterclockwise triangle with the three listed rational points.
+Its squared pair distances are 289/25,773/100,773/100, so its diameter is 17/5.
+The selected lattice points (0,0),(3,0) lie strictly inside. They lie on the
+horizontal integer row of the triangular lattice and are separated by three.
+
+All ten source-source distances were independently computed. Their minimum is
+629/100>1; their maximum is 361/4, uniquely at a1,a5. Thus the source has
+diameter 19/2 and all five vertices are contact isolates; none is discarded.
+All five lie outside the response triangle. The exact source-neighbor sets of
+x1,x2,x3,y1,y2 are respectively {a1},{a2},{a3},{a1},{a2}. Hence each of the
+two individual saturating matchings is unique. Their images overlap in exactly
+two labels. In the combined graph every matching has size at most three, and
+the X matching attains three. All 32 left subsets were independently checked;
+the maximum Hall deficiency is exactly two. The X-Y conflict squares 2/25 and
+the shared source-Y squares 29/100 validate the two distinct local V-gates.
+The source-label segments are pairwise disjoint and meet the hull boundary;
+their response endpoints are boundary vertices, so no proper interior crossing
+is needed for the canonical meaning of a source gate.
+
+The displayed r=3 is the formula |X|-|A intersect K|, not a proof of a canonical
+capacity statement. Its comparison with 12d+9 is merely consistent. In fact the
+fixture cannot satisfy the full zero-slack assumptions: (1,0) is another interior
+triangular-lattice site but has no source neighbor. Therefore the selected Y
+is not the complete canonical Y_in. Moreover the independently checked scaled
+set A/2 retains all five labels, has minimum squared separation 629/400>1 and
+diameter 19/4, explicitly proving nonglobality. These controls reinforce the
+report's express exclusions; they do not reveal an overclaim in its actual
+finite matching statement. The counterexample attacks only the unsupported
+addition of independent matching counts as disjoint source images, which the
+canonical text already warns against.
+
+The entire submitted 162-line standard-library checker was inspected and run
+with normal python -I -B, timeout 10 seconds. It exited zero in 0.024 seconds
+with all four PASS lines and the explicit incidence-only LIMIT. Its checks use
+assert and must be run without -O; no optimized-Python certification is claimed
+by the source or this review. A code-hardening edit is not required to validate
+the documented normal-Python command. Independent exact checks are included in
+the portable reviewer script, with their squared-distance table in its JSON.
+
+## Commands, environment and bounded evidence
+
+Environment: CPython 3.12.14; Linux 6.18.55 x86_64 with glibc 2.39; Python
+executable /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python.
+No dependency installation, external web source or hosted execution was needed.
+
+Runs (each captured with subprocess timeout, output hash, exit code and elapsed
+time in the corresponding receipt):
+
+python -I -O -B /tmp/erdos99-merge-20261018-review-a/pr89-submitted.py
+  30-second limit; exit 0; 3.026 seconds; exact saved evidence equality.
+
+python -I -B /tmp/erdos99-merge-20261018-review-a/pr98-submitted.py
+  10-second limit; exit 0; 0.024 seconds.
+
+python -I -B /tmp/erdos99-merge-20261018-review-a/independent-geometry.py
+  60-second limit; exit 0; 3.550 seconds; eight full hexagonal cases,
+  15 admissible basis exchanges, exact 32-subset Hall and nonglobality controls.
+  Script SHA-256 09f646b05589b8cdf68399b65005e308a52e2baa965e201745e0e4bf196056b5.
+  Output SHA-256 79323a3a306ec32a381cc41606c4337a2b97a2239a872aabdc99ba721a1a0919.
+
+git diff --check db27b736f33b4db288c8a5e227c03c099d59259a...<each exact PR head>
+  All three exit 0.
+
+Metadata/source checks use git show at the exact commits with SHA-256 hashing,
+JSON parsing, reading-manifest aggregate recomputation and artifact lifecycle
+inspection. Their detailed portable data are in metadata-and-reuse-checks.json.
+No resource stop or unavailable dependency remained. A failed exploratory rg
+used an incorrect historical filename; the actual canonical filenames were then
+read. That navigation miss has no verification or proof significance.
+
+Full proof reconstruction of the scoped new claims and adversarial bridge checks
+are complete. The only scientific wording repair identified is PR89's stale
+comparison; final merged-tree full94/corpus checks belong to the merging agent.

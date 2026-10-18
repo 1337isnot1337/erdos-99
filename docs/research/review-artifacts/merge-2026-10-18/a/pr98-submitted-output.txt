@@ -1,0 +1,5 @@
+PASS: all five source labels are unit-separated; exact source diameter is 19/2
+PASS: X is a nondegenerate unit-separated triangle; both lattice sites lie strictly inside
+PASS: unique X-to-A and Y-to-A matchings; image intersection has size 2
+PASS: combined five-target conflict graph has three source neighbors and maximum matching size 3
+LIMIT: incidence geometry only; no global optimum, source-capacity premise, or Schur matrix

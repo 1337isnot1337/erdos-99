@@ -1,0 +1,48 @@
+INDEPENDENT AI-AGENT MATHEMATICAL REVIEW — PR95
+Verdict: PASS for ordinary research-artifact merge; no canonical promotion.
+Exact head: 058df6dc46ba033597d99d6aa4ec6834810b9eb7
+Exact tree: aef239d469cdf04ded96b1148192cdf662b4d410
+Submitted parent: e396ea07887dd0528b817ce4e656ff0e6b01f8fb
+Assigned current main: db27b736f33b4db288c8a5e227c03c099d59259a
+Reviewer: /root/merge_review_c; GPT-6 Astra Pro
+Completed UTC: 2026-10-18T02:22:58.862488+00:00
+Scope: Universal-in-integer-R rational stationary stress regression at the stated relaxed hypotheses; no global-minimizer certificate.
+Independence: Fresh reviewer; did not originate, author, edit, or verify the submitted proof/checker before this assignment. Own independent review checker is separate and imports no submitted code.
+
+INVENTORY AND PROVENANCE
+100644 docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md | SHA-256 01e100022b6755594eab032725198d0a6546aef9f0e9343f016b2ad6edabd231 | 9425 bytes
+100644 docs/state/artifact-index.jsonl | SHA-256 941285c8d8a80b091d82d6817979d494bfb2503aaaeb5d49a31aa0f6bede778f | 438547 bytes
+100644 reading/docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md | SHA-256 663166cf6b13a2926f59fc2fc7df2968dfafacf076849102dbda9c1774c59ead | 10024 bytes
+100644 reading/manifest.json | SHA-256 69b799c15a5c1a1a2241c9c3dff3fd72f3fb8b4d75434921c1f6da20d515814a | 930509 bytes
+100644 research/verify_target_c_typeii_sparse_exceptional_stress_2026_10_17.py | SHA-256 34e2b8426bbea826f56c994881055e66cd78ddbec01e0dfec83d85da1263d356 | 6864 bytes
+100644 tasks/target-c-typeii-stress-mass-access.md | SHA-256 2354f7dca770d9784d6dc41db4d29d053839baf6a245a87b9afcd87b9d1d5472 | 6743 bytes
+No deletes, symlinks, submodules, executable changes, shared verifier edits, canonical manifest edits, or claim promotions occur. New artifact rows and embedded markers are noncanonical, unreviewed, with empty claim IDs. Existing artifact records are unchanged. Reading source/output hashes, per-head document/math counts, and exact generated reading bytes were independently checked. Exact patches and the source-reading deltas are saved alongside this receipt. All four parents equal the source pin e396ea; the current state version remains2026-10-15.publication.2. Historical cataloguepublic-frontier.7 is pinned to that base, not asserted to be current.
+
+PR95 PROOF RECONSTRUCTION
+
+For every integer R>=16, p=floor(R/sqrt(3))+1 satisfies R/sqrt(3)<p<R. Rational stereographic a=(R^2-p^2)/(R^2+p^2), b=2Rp/(R^2+p^2) satisfy a^2+b^2=1, 0<a<1/2, b>sqrt(3)/2, with b tending to sqrt(3)/2. The only lattice contact differences are plus/minus u,v: for |n|>=2 the vertical component alone exceeds one, and for |n|=1 the nearest competing horizontal offset has norm squared2-2a>1. Removing rows n=-1,0,1 separates the lattice component from the entire central chain by more than one. The radius(R-2) restriction separates it from the ring by at least two.
+
+The stereographic ring with s=floor(sqrt(R)) has exactly4s distinct points after deduplicating cardinal endpoints. Consecutive angular gaps are between1/s and2/s; the minimum chord is at least2R/(pi s)>1 for R>=16. Every ring point outside the two chain endpoints has distance greater than one from the whole central line segment. These comparisons exhaust within-piece and cross-piece pairs. The full contact graph is a disjoint union of square-grid subgraphs, one path, and ring isolates, so it is triangle-free.
+
+All source points lie in the closed radiusR disk; the two chain endpoints are antipodal on it. All remaining lattice/chain points are strictly interior. Diameter equals2R and actual diameter pairs are exactly2s ring antipodes. Every such endpoint has only a path or isolated contact component, so none has same-component two-dimensional grid access. This proves all actual diameter edges are exceptional while their number is o(D).
+
+For objective d and constraints1-distance<=0 and distance-d<=0, place upper multiplier1 on the central antipodal pair and lower multiplier1 on every central unit path edge. Interior forces cancel, endpoint lower and upper gradients cancel, every other full-source coordinate has zero force, and derivative in d is1-sum(lambda)=0. Complementarity and nonnegativity hold. Hence normalized exceptional diameter mass is exactly1; small unweighted cardinality cannot imply small mass under the displayed relaxed conditions. The proof makes no second-order or global-minimality claim.
+
+The fundamental cells have uniformly bounded diameter at most2 and area b. Cell inclusion sandwiches the lattice count between disk areas of radiiR-4 andR, divided by b. Thus the inner count is pi R^2/b+O(R); removing three rows and adding chain/ring changes it by O(R). With b tending to sqrt(3)/2 this gives the stated leading density. Ring gap at most2/s puts a support point within angle1/s of any normal, so its convex hull contains the disk of radiusR cos(1/s). The hull deficit is at most pi R^2 sin^2(1/s)=O(R). No source labels are discarded in either argument.
+
+Scope nuance: the report proves a stationary fixture and explicitly does not certify global minimality or canonical normal form. I do not infer nonglobality solely from absence of a certificate, and do not use the fixture to refute Audit.173. The valid conclusion is failure of a stress-mass implication based only on the stated relaxed geometric and KKT properties. A globality-specific stress-mass bound or a finite full-source competitor is still open.
+
+REPRODUCTION AND BOUNDED ADVERSARIAL CHECKS
+Command: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /tmp/erdos99-merge-20261018-review-c/pr95/research/verify_target_c_typeii_sparse_exceptional_stress_2026_10_17.py
+Cwd: /tmp/erdos99-merge-20261018-review-c
+Timeout: 60 seconds; elapsed: 0.217 seconds; exit: 0. Full output: pr95_stress.txt.
+The frozen shared facial checker and imported helper match SHA-256 ec287768485076f01b49ea361e7ae08e71206cc1f46a04658c123db883b5cb9e and50160bb3c3d68185a401a6fbeed3d39f5b80aa16d74af43efafd814714300e88. One shared replay produced8 nonglobal fixtures,7252 source pair checks,108 terminal checks,620 single-interior component cancellations, and886 separate-face component cancellations across354 graph selections. It is not a Type-II or optimality certificate.
+
+Own portable checker: python independent_adversarial_checks.py (cwd this receipt directory;60-second timeout; exit0;1.295 seconds wall clock). It imports no submitted module. It independently pairs actual occurrence slots into6201 abstract multigraph ledgers using seed20261018, including8612 train loops and562 cases with interior complementary edges. The exact sharp ledger(q,f,k,c,A,N_i)=(5,3,1,1,5,0) reaches equality3(A+N_i)=5(f-k+c); deleting the finite c correction demonstrably fails. These are arithmetic recipient graphs, not asserted geometric realizations.
+
+For PR95 it independently reconstructs rational coordinates at R=16,17,25, checks all2147667 lower/upper source pairs, checks the complete contact and actual-diameter graphs, triangle-freeness, exact all-coordinate KKT forces, and source endpoint deduplication. The wrong half-multiplier and duplicated-endpoint population controls are detected. For PR97 it directly signs quadratic-field squared distances for19452 full source pairs at m=7,8,12, checks the unique actual diameter pair and all-label slack, and corroborates strict coverage on507 exact rational cell samples. The continuous cover and universal parameter claims are proved analytically above; no mesh proves them. Domain m=6 and closed-angle60-degree triangle controls prevent silently widening the hypotheses.
+
+Metadata check commands included git diff --check e396ea07887dd0528b817ce4e656ff0e6b01f8fb HEAD_SHA for each exact submitted SHA, plus SHA-256 and exact render checks using the submitted-base reading generator. Every command passed. Per-command stdout, exit status, time budget and wall time are preserved in submitted-check-results.json and independent-check-results.json. The structural metadata/premise check is in metadata-and-premise-pins.json. Repository-wide certificate and corpus replay remains deferred to the root merging agent on the final integration candidate; no full-suite pass is asserted here.
+
+DISPOSITION
+No load-bearing blocker or mandatory repair found. Merge as a scoped research/audit artifact after the merging agent's required final integration checks. Retain all explicit fixture and source-domain limits; do not promote any theorem-state entry. PR90 andPR91 audit the same proof mechanism and are not two new theorem results. This receipt is independent AI-agent review, not human peer review. Global source extraction, weighted-stress access, finite lower/upper pair feasibility, same-cardinality restoration, high-face Type-II survivors, and the separate macroscopic-container endpoint remain open.

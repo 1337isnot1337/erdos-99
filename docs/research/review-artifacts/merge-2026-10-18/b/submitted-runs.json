@@ -1,0 +1,46 @@
+[
+  {
+    "pr": 86,
+    "cmd": "python research/verify_target_b_interface_capacity_2026_10_17.py --check research/target_b_interface_capacity_2026_10_17.json",
+    "result": {
+      "chunk_id": "cb7b0b",
+      "wall_time_seconds": 0.000031321,
+      "exit_code": 0,
+      "original_token_count": 54,
+      "output": "{\"configurations\": 30, \"exact_inventory_cases\": 5964, \"fixture\": \"matched\", \"status\": \"unreviewed exact finite evidence\", \"three_grain_states\": 15625, \"two_grain_states\": 8336550, \"upper_cap_inventory_cases\": 5964}\n"
+    }
+  },
+  {
+    "pr": 88,
+    "cmd": "python research/verify_target_b_separable_literature_2026_10_17.py",
+    "result": {
+      "chunk_id": "7db811",
+      "wall_time_seconds": 0.000025033,
+      "exit_code": 0,
+      "original_token_count": 156,
+      "output": "{\n  \"result\": \"PASS (finite controls only)\",\n  \"patch_sizes\": \"m=2..64\",\n  \"complete_difference_cases\": 63,\n  \"independent_label_pairs_m_2_to_12\": 44220,\n  \"global_separable_exclusion\": \"n >= 153; analytic proof in report\",\n  \"global_subset_and_partition_bounds\": \"analytic inequalities (5a)-(5b) in report\",\n  \"cutoff_rational_upper\": \"15928/105\",\n  \"failure_controls\": [\n    \"triangle at cosine=1/2\",\n    \"overlap at cosine=3/4\",\n    \"unfilled-hole Euler substitution\"\n  ],\n  \"does_not_certify\": [\n    \"global optimality\",\n    \"jammed source extraction\",\n    \"Target B shell closure\",\n    \"full certificate replay\"\n  ]\n}\n"
+    }
+  },
+  {
+    "pr": 93,
+    "cmd": "python research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py",
+    "result": {
+      "chunk_id": "e0ac00",
+      "wall_time_seconds": 0.000048798,
+      "exit_code": 0,
+      "original_token_count": 73,
+      "output": "PASS: pi lower bound from exact Machin-series rationals\nPASS: unique-max loss < 0.1865 < gamma_0\nPASS: balancing, deletion, and grid-loss thresholds\nPASS: GPI diameter lower bound > 2.95 and lattice upper bound < 2.21\nScope: numerical margins only; no geometric or graph proof is encoded.\n"
+    }
+  },
+  {
+    "pr": 94,
+    "cmd": "python research/verify_target_b_gpi_mcp2_quantifier_audit_2026_10_17.py",
+    "result": {
+      "chunk_id": "61a924",
+      "wall_time_seconds": 0.000029567,
+      "exit_code": 0,
+      "original_token_count": 63,
+      "output": "PASS: GPI decimal margins and fixed-lambda coefficient\nPASS: eta=1/3, kappa=1/4 gives normalized coherence O(D^-1/6)\nPASS: diagonal deletion exponents are eta=1/3 and kappa=1/4\nLIMIT: arithmetic only; geometric and source hypotheses are not checked\n"
+    }
+  }
+]

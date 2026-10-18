@@ -5,7 +5,9 @@
 Downstream use: Decide whether the abstract sharp examples are geometrically relevant to Target B, and whether a stronger realizable budget is possible.
 
 Prior evidence:
-- [author-checked](https://github.com/1337isnot1337/erdos-99/blob/a392a910899b06d20df6c7c29010896223ebfa70/docs/reports/target_b_interface_capacity_2026-10-17.md) at `a392a910899b06d20df6c7c29010896223ebfa70`: Submitted shared-interface inequality R >= G + max(p1,p2,p1+p2-K), with finite incidence checks. Remaining: Geometric realization and payment of virtual mass are not established.
+- [agent-audited](../docs/reports/target_b_interface_capacity_2026-10-17.md) at `a392a910899b06d20df6c7c29010896223ebfa70`: shared-interface inequality R >= G + max(p1,p2,p1+p2-K), with finite incidence checks. Remaining: Geometric realization and payment of virtual mass are not established.
+
+Independent integration reviews: [Target A](../docs/research/review-artifacts/merge-2026-10-18/review-a.txt), [Target B](../docs/research/review-artifacts/merge-2026-10-18/review-b.txt), [Target C](../docs/research/review-artifacts/merge-2026-10-18/review-c.txt).
 
 **Track / priority:** exact-computation / scoped exploration; selection weight 2 (attention only).
 

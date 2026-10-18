@@ -1,0 +1,102 @@
+{
+  "per_head_checks": [
+    {
+      "pr": 90,
+      "reading_exact_generation": "PASS",
+      "normalized_math_pairs": 14,
+      "exact_head_diff_check": "PASS"
+    },
+    {
+      "pr": 91,
+      "reading_exact_generation": "PASS",
+      "normalized_math_pairs": 81,
+      "exact_head_diff_check": "PASS"
+    },
+    {
+      "pr": 95,
+      "reading_exact_generation": "PASS",
+      "normalized_math_pairs": 118,
+      "exact_head_diff_check": "PASS"
+    },
+    {
+      "pr": 97,
+      "reading_exact_generation": "PASS",
+      "normalized_math_pairs": 87,
+      "exact_head_diff_check": "PASS"
+    }
+  ],
+  "premise_pins": [
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "submitted_base_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "current_main_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "unchanged": true
+    },
+    {
+      "path": "docs/targets/target-c/63-loaded-hull-slack-audit.md",
+      "submitted_base_sha256": "1cd190adfdc04aa454ac42c25e6ba85214342617e55f1e57dc793fd420342480",
+      "current_main_sha256": "1cd190adfdc04aa454ac42c25e6ba85214342617e55f1e57dc793fd420342480",
+      "unchanged": true
+    },
+    {
+      "path": "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+      "submitted_base_sha256": "fc60bd6982e741f13d2442a2fa9d16a424f2fc55f60c3e1a1d7f3aba2cc3686f",
+      "current_main_sha256": "fc60bd6982e741f13d2442a2fa9d16a424f2fc55f60c3e1a1d7f3aba2cc3686f",
+      "unchanged": true
+    },
+    {
+      "path": "docs/targets/target-c/68-punctured-packing-phase-audit.md",
+      "submitted_base_sha256": "b43bc3fbdab2918315721fa0c3c7057527fc86057a0c994ac33e8eb493aaccdd",
+      "current_main_sha256": "b43bc3fbdab2918315721fa0c3c7057527fc86057a0c994ac33e8eb493aaccdd",
+      "unchanged": true
+    },
+    {
+      "path": "docs/targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md",
+      "submitted_base_sha256": "409ca3892cce1e5e3b8fa1be9e19dfc173edf9568e0d0cf2b2875703a41bb095",
+      "current_main_sha256": "409ca3892cce1e5e3b8fa1be9e19dfc173edf9568e0d0cf2b2875703a41bb095",
+      "unchanged": true
+    },
+    {
+      "path": "docs/audits/target_c_atomic_track_boundary_cost_independent_audit_2026-10-08.md",
+      "submitted_base_sha256": "dc0f996227a196cba153366e667ac1bf0d900b587d4831cc4fa50db0ac1ee419",
+      "current_main_sha256": "dc0f996227a196cba153366e667ac1bf0d900b587d4831cc4fa50db0ac1ee419",
+      "unchanged": true
+    },
+    {
+      "path": "docs/audits/target_c_atomic_one_end_train_boundary_independent_audit_2026-10-08.md",
+      "submitted_base_sha256": "4501c5afc2eaaafe0f76cc636126db37d5a379115161802289be5a94544f0493",
+      "current_main_sha256": "4501c5afc2eaaafe0f76cc636126db37d5a379115161802289be5a94544f0493",
+      "unchanged": true
+    },
+    {
+      "path": "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md",
+      "submitted_base_sha256": "2abaff04ce431afe7c2857f4a843f1525bafb2a61c4dc38978e2af6629715682",
+      "current_main_sha256": "2abaff04ce431afe7c2857f4a843f1525bafb2a61c4dc38978e2af6629715682",
+      "unchanged": true
+    },
+    {
+      "path": "docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md",
+      "submitted_base_sha256": "60af5da043ca638e6f9740442e18d3d345b2d344cec91dc13cbb933f9ba02936",
+      "current_main_sha256": "60af5da043ca638e6f9740442e18d3d345b2d344cec91dc13cbb933f9ba02936",
+      "unchanged": true
+    },
+    {
+      "path": "docs/audits/target_c_coupled_delaunay_container_transfer_independent_audit_2026-10-07.md",
+      "submitted_base_sha256": "acec71d205448e2f296f65659b28c1e9f784b4ad0f5655804e25e9bb1ed53386",
+      "current_main_sha256": "acec71d205448e2f296f65659b28c1e9f784b4ad0f5655804e25e9bb1ed53386",
+      "unchanged": true
+    },
+    {
+      "path": "docs/audits/target_c_one_deficit_diffuse_strain_independent_audit_2026-10-08.md",
+      "submitted_base_sha256": "37ba24d11db759a2fd59dcf5e0c4f1e0a7bd4c07951e1311dc140ad8aff05d3c",
+      "current_main_sha256": "37ba24d11db759a2fd59dcf5e0c4f1e0a7bd4c07951e1311dc140ad8aff05d3c",
+      "unchanged": true
+    },
+    {
+      "path": "docs/theory/01-local-structure.md",
+      "submitted_base_sha256": "75c539b2281046c49d6c303bda845cb7fb2643d0d9a1106d64e4f737117c54fb",
+      "current_main_sha256": "75c539b2281046c49d6c303bda845cb7fb2643d0d9a1106d64e4f737117c54fb",
+      "unchanged": true
+    }
+  ]
+}

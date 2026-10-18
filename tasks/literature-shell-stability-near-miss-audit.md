@@ -6,7 +6,7 @@ Downstream use: Decide whether a specific external theorem supplies a missing sh
 
 **Track / priority:** literature / scoped exploration; selection weight 1 (attention only).
 
-Prior evidence: [author-checked PR #88](https://github.com/1337isnot1337/erdos-99/blob/70398c397bfc76e9db65154318ef8a6041458c88/docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md). Submitted total-separability bound for global minimizers and the necessary linear deletion cost; its hypothesis does not hold for arbitrary triangle-free sources. Remaining: Independent proof review and a valid application to the actual shell or convex-grain decomposition.
+Prior evidence: [reviewed PR #88](../docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md) at `70398c397bfc76e9db65154318ef8a6041458c88`, with an [independent proof and primary-source audit](../docs/research/review-artifacts/merge-2026-10-18/review-b.txt). The total-separability bound and linear deletion cost hold under their stated hypotheses. Those hypotheses do not follow from triangle-freeness. A valid application to the actual shell or convex-grain decomposition remains open.
 
 ## Exact objective
 

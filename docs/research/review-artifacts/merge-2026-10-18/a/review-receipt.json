@@ -1,0 +1,317 @@
+{
+  "schema": "erdos99-independent-merge-review/v1",
+  "reviewer": "/root/merge_review_a",
+  "model": "OpenAI GPT-6 Astra Pro",
+  "independence": "No originating authorship, proof/checker editing or prior verification overlap; reviewer-owned checks import no submitted code.",
+  "finished_utc": "2026-10-18T02:24:34.326948+00:00",
+  "pinned_main": "db27b736f33b4db288c8a5e227c03c099d59259a",
+  "state_version": "2026-10-15.publication.2",
+  "priority_revision": "public-frontier.3",
+  "verdicts": [
+    {
+      "pr": 89,
+      "head": "aa111eedcd3bc190f991aeaa7f42299948551207",
+      "tree": "c63622a11a4d44c8635b96320aab54ef30455bfe",
+      "merge_base": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "verdict": "CONDITIONAL",
+      "scope": "All-m hexagonal fixture proof at the three specified phases, own-row ledger, all-admissible-basis cap 3, averaging regression, exact finite verifier.",
+      "required_or_integration_actions": [
+        "Correct PR87 comparison to admissible optimum 1 versus relaxed full-Schur optimum M-1; preserve credit and update README source digest."
+      ],
+      "canonical_promotion": false,
+      "changed_files": [
+        {
+          "path": "research-packages/target-a-full-tube-fan-ledger/README.md",
+          "sha256": "2c805c002a7f654cef3e7b8310b27658ec85181069d0208e611cd276122cea23",
+          "tree_entry": "100644 blob 9f88732850c4986ddab8feabbc70cab863acfb7f\tresearch-packages/target-a-full-tube-fan-ledger/README.md",
+          "bytes": 20044
+        },
+        {
+          "path": "research-packages/target-a-full-tube-fan-ledger/SOURCES.json",
+          "sha256": "37c6056e3aedf5da2593915914f2d3ba4d745421aa4db560bc64bf7870bfbb8b",
+          "tree_entry": "100644 blob db84b860291325b2d1576c4957f7594e80790610\tresearch-packages/target-a-full-tube-fan-ledger/SOURCES.json",
+          "bytes": 4138
+        },
+        {
+          "path": "research-packages/target-a-full-tube-fan-ledger/TASK.json",
+          "sha256": "2c60f0a8e005473b8a913311e9ecbcae79b38df05f316ac1345705deaa8f8f5c",
+          "tree_entry": "100644 blob 18cdc8ec05cae2b35c890ee567f82eeaa0dfd335\tresearch-packages/target-a-full-tube-fan-ledger/TASK.json",
+          "bytes": 1604
+        },
+        {
+          "path": "research-packages/target-a-full-tube-fan-ledger/VERIFY.json",
+          "sha256": "def4b42a11663efada7e03660c4065fb52eb2180ab43bd7c95e69ac7645ac44d",
+          "tree_entry": "100644 blob 26804f727415eeeaadc0b9a96c67db5fbea1b25e\tresearch-packages/target-a-full-tube-fan-ledger/VERIFY.json",
+          "bytes": 1281
+        },
+        {
+          "path": "research-packages/target-a-full-tube-fan-ledger/evidence.json",
+          "sha256": "536fc5c16377c98961a8240b0450d9b6749667f733c2b35d62998527837638e3",
+          "tree_entry": "100644 blob c92d56db74e86c8196ad9becee2ea2f4e612c776\tresearch-packages/target-a-full-tube-fan-ledger/evidence.json",
+          "bytes": 38110
+        },
+        {
+          "path": "research-packages/target-a-full-tube-fan-ledger/verify.py",
+          "sha256": "a91e488b03f58b777eb5c9de7e897f7a078315f6ee410fd336082d61d4dbce3e",
+          "tree_entry": "100644 blob b651d994634620ae74c21813c3e214de26b6f712\tresearch-packages/target-a-full-tube-fan-ledger/verify.py",
+          "bytes": 18277
+        }
+      ]
+    },
+    {
+      "pr": 96,
+      "head": "6819b4f862508fe843f7a385e2cff992ecf23420",
+      "tree": "f7c9c371bfe599b64140bb41e1ba53d51d1f037d",
+      "merge_base": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "verdict": "PASS",
+      "scope": "Supplementary finite Schur/linkage proof reconstruction and exact-source metadata delta; prior PR78 review reused.",
+      "required_or_integration_actions": [
+        "Preserve newer main catalogue/reconciliation and successor navigation on integration; original unsigned reviewer identity must not be invented."
+      ],
+      "canonical_promotion": false,
+      "changed_files": [
+        {
+          "path": "docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+          "sha256": "4099a516644885546de892b009d5de269bd908aa773e9713eccc8e76298963bc",
+          "tree_entry": "100644 blob 6684ee294fa5e6647d90402e3cc40e0c397cd8a0\tdocs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+          "bytes": 9022
+        },
+        {
+          "path": "docs/research/agent-task-catalog.json",
+          "sha256": "9411c6a785f7ccd432b943fbbf66b12f94c3b9ffde22f5bd867fb0d75f2a7e08",
+          "tree_entry": "100644 blob 08690a13279f1d4306cccd0505e746556dfcfaf2\tdocs/research/agent-task-catalog.json",
+          "bytes": 123233
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "sha256": "e65bffa6b7a1f7f9cd8e3abc55bf130040913b6e20d921e421b0d279c9936c80",
+          "tree_entry": "100644 blob 4397e9ae6443c66945f5bde7d74678f805b9f795\tdocs/research/priority-state.json",
+          "bytes": 1646
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "sha256": "ad8b72a5cf5378e851f29fc9fd8ebc946ba1dbb0acfa2b43621499153fda12d8",
+          "tree_entry": "100644 blob ffc94543c9f6e8c6c47af8e5192c72dbc7c33702\tdocs/state/artifact-index.jsonl",
+          "bytes": 438539
+        },
+        {
+          "path": "reading/docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+          "sha256": "6650f8c8ccfb07a86adea3cfeab89f805c21b91114228f72a952a73869989926",
+          "tree_entry": "100644 blob bb66b28f901c64a26857e39a4f95feeaf1a5d705\treading/docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+          "bytes": 9355
+        },
+        {
+          "path": "reading/manifest.json",
+          "sha256": "018168d6cf2683171303af5fff72dbff3edadb977f7d218795ac59a4cb6e83f4",
+          "tree_entry": "100644 blob 7bbcc967705ecd0bc46c216041cdd703e3691277\treading/manifest.json",
+          "bytes": 930491
+        },
+        {
+          "path": "tasks/README.md",
+          "sha256": "44e070517b89307c0ef78ee3f552928f691d27a5a99412313d1f8f914e9b34d8",
+          "tree_entry": "100644 blob a61325eaa71f1a99983172f0bd4fc82f43c514ca\ttasks/README.md",
+          "bytes": 8468
+        },
+        {
+          "path": "tasks/verify-a-schur-linkage-bound.md",
+          "sha256": "52fedf9707d87cf748e6253ef08ba315756ea3a756d1e0ca078166bb0a65957d",
+          "tree_entry": "100644 blob f222bc870053918e95f55933244ff1bb1697e92c\ttasks/verify-a-schur-linkage-bound.md",
+          "bytes": 4896
+        }
+      ]
+    },
+    {
+      "pr": 98,
+      "head": "2e4a3e1e73877df4f4756fcb4c7d331dcda1327f",
+      "tree": "74192a7db71a52de00b2a281cbc2aff9d4b986a8",
+      "merge_base": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "verdict": "PASS",
+      "scope": "Exact five-source/two-shore rational matching-image overlap fixture; no canonical zero-slack or global-source result.",
+      "required_or_integration_actions": [],
+      "canonical_promotion": false,
+      "changed_files": [
+        {
+          "path": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+          "sha256": "585d984a913b92dbe9d7d6dd63d02ad1c77a20f0caa35ff3fa0ffb35274c3502",
+          "tree_entry": "100644 blob 3ea33aa81e4a609e62d3cf2fa3d9d363b11211af\tdocs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+          "bytes": 5702
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "sha256": "ffb50fac00dfdd7e3a1a9e9ae2272d470e15637e716df266acb9b154b3cccfa1",
+          "tree_entry": "100644 blob 86d152b67be80eea109a30106c8fc544c9130de4\tdocs/state/artifact-index.jsonl",
+          "bytes": 438552
+        },
+        {
+          "path": "reading/docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+          "sha256": "21fa16132b8cca86ff92eec283cfc013b15ad09ccc1a2f05c6490733b077480c",
+          "tree_entry": "100644 blob ea1372e7ee2b3c598546a5736d9f22fc9f4a835e\treading/docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+          "bytes": 6090
+        },
+        {
+          "path": "reading/manifest.json",
+          "sha256": "fa570d07bf9c5014e23855e22b31a8a255fc3ab4e51a46cfe1e809b01465fb36",
+          "tree_entry": "100644 blob d4caad8c98dceb9d42ceb02d50f7ab0d79476319\treading/manifest.json",
+          "bytes": 930518
+        },
+        {
+          "path": "research/verify_target_a_zero_slack_matching_overlap_2026_10_17.py",
+          "sha256": "2790ed46f319817a8fb52098cd87c9968836e7676bc73ea003dc885c4e86a723",
+          "tree_entry": "100644 blob 415bcc20deda303916a0e5419659c7445886655e\tresearch/verify_target_a_zero_slack_matching_overlap_2026_10_17.py",
+          "bytes": 5405
+        }
+      ]
+    }
+  ],
+  "executions": [
+    {
+      "receipt": "pr89-submitted-receipt.json",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "-O",
+        "-B",
+        "/tmp/erdos99-merge-20261018-review-a/pr89-submitted.py"
+      ],
+      "timeout_seconds": 30,
+      "elapsed_seconds": 3.0257315570000287,
+      "returncode": 0,
+      "stdout_sha256": "536fc5c16377c98961a8240b0450d9b6749667f733c2b35d62998527837638e3",
+      "saved_evidence_equal": true,
+      "status": "passed",
+      "case_count": 34,
+      "primitive_checks": {
+        "minimum_squared_distance_margin": "993/1000000",
+        "primitive_tubes": 9,
+        "segment_metric_comparisons": 441,
+        "sites_per_primitive_tube": 7,
+        "strict_boundary_control": "passed"
+      },
+      "negative_controls": [
+        {
+          "actual_interior_tube": 55,
+          "counterexample_m": 7,
+          "integer_gap_numerator": 55,
+          "mutation": "use the translation-average cost as a pointwise cap",
+          "strict_upper_bound_for_mean_cost": "7260/133"
+        },
+        {
+          "mutation": "omit basis closure",
+          "rejected_by": "sector basis balance fails"
+        },
+        {
+          "mutation": "report an interior-only tube as the full tube",
+          "rejected_by": "advertised ledger differs: tube_exterior"
+        }
+      ]
+    },
+    {
+      "receipt": "pr98-submitted-receipt.json",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "-B",
+        "/tmp/erdos99-merge-20261018-review-a/pr98-submitted.py"
+      ],
+      "timeout_seconds": 10,
+      "elapsed_seconds": 0.023790678000011667,
+      "returncode": 0,
+      "stdout_sha256": "bd7e329a6fbeb60e574601d078db0f8dfb30e5807b4d731b038b530e67c4a134",
+      "output": "PASS: all five source labels are unit-separated; exact source diameter is 19/2\nPASS: X is a nondegenerate unit-separated triangle; both lattice sites lie strictly inside\nPASS: unique X-to-A and Y-to-A matchings; image intersection has size 2\nPASS: combined five-target conflict graph has three source neighbors and maximum matching size 3\nLIMIT: incidence geometry only; no global optimum, source-capacity premise, or Schur matrix\n"
+    },
+    {
+      "receipt": "independent-geometry-receipt.json",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-I",
+        "-B",
+        "/tmp/erdos99-merge-20261018-review-a/independent-geometry.py"
+      ],
+      "timeout_seconds": 60,
+      "elapsed_seconds": 3.5497853770000347,
+      "returncode": 0,
+      "script_sha256": "09f646b05589b8cdf68399b65005e308a52e2baa965e201745e0e4bf196056b5",
+      "stdout_sha256": "79323a3a306ec32a381cc41606c4337a2b97a2239a872aabdc99ba721a1a0919"
+    }
+  ],
+  "reuse": {
+    "pr": 78,
+    "exact_head": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
+    "review_path": "docs/research/review-artifacts/pr78/independent-audit.txt",
+    "review_sha256": "6285363943687e2e3b803233a0bdff5f9cab0068604a310a434e63ef9f549782",
+    "reviewer": "/root/audit_pr78",
+    "source_byte_equality": "Report, checker and evidence match at PR78, e396, PR96 and pinned main.",
+    "exhaustive_replay_repeated": false
+  },
+  "remaining_merge_gates": [
+    "Exact integrated-text resolution of PR89 stale comparison; parent reports correction applied and designated agent C to check it.",
+    "Final integration corpus/public/generated-view checks and full94 certificate replay owned by merging agent."
+  ],
+  "artifacts": [
+    {
+      "path": "review-audit.txt",
+      "sha256": "004c7f86d65fa6f14398bc32a75cdd1adcdb6cd8aae8ad04396d412fd3c1b33c",
+      "bytes": 21961
+    },
+    {
+      "path": "source-inventory.json",
+      "sha256": "fdbf8d01757a261afc6ae4efdf8271ec402284f75ec0968623f942f9bc6c0bb8",
+      "bytes": 7508
+    },
+    {
+      "path": "metadata-and-reuse-checks.json",
+      "sha256": "6f0ae13db09edf2963bc1592c886fb9b11f736f500b6166c5c719f3d4871abc7",
+      "bytes": 10362
+    },
+    {
+      "path": "independent-geometry.py",
+      "sha256": "09f646b05589b8cdf68399b65005e308a52e2baa965e201745e0e4bf196056b5",
+      "bytes": 8645
+    },
+    {
+      "path": "independent-geometry-output.json",
+      "sha256": "79323a3a306ec32a381cc41606c4337a2b97a2239a872aabdc99ba721a1a0919",
+      "bytes": 6457
+    },
+    {
+      "path": "independent-geometry-receipt.json",
+      "sha256": "3664292cc2d497078191f7c0e8cacb6b9fefba9ad1cb0517367c05a443e2456c",
+      "bytes": 446
+    },
+    {
+      "path": "pr89-diff.txt",
+      "sha256": "f96738e697b13f30941d3f06eae501a55233ab54aabc703e05cc4808ebd56013",
+      "bytes": 88316
+    },
+    {
+      "path": "pr96-diff.txt",
+      "sha256": "3e38e2a3dd3136598130d7d6bdff82d4ebb180e87b35f99bb9e7e36d802b158e",
+      "bytes": 32517
+    },
+    {
+      "path": "pr98-diff.txt",
+      "sha256": "81d09a85922f9c224c335c1c3e90129ef221c3519379000b6581f3fb7816d260",
+      "bytes": 22223
+    },
+    {
+      "path": "pr89-submitted-receipt.json",
+      "sha256": "05ae1dbb0758a41ae919f1951a1d45b0329684e63d02e2f699459e95bfe16df6",
+      "bytes": 1173
+    },
+    {
+      "path": "pr89-submitted-output.json",
+      "sha256": "536fc5c16377c98961a8240b0450d9b6749667f733c2b35d62998527837638e3",
+      "bytes": 38110
+    },
+    {
+      "path": "pr98-submitted-receipt.json",
+      "sha256": "2034c4e09fbcdfdae3c94d321a0ac81e91338c431d193bb65b0c6a7e6abcd828",
+      "bytes": 807
+    },
+    {
+      "path": "pr98-submitted-output.txt",
+      "sha256": "bd7e329a6fbeb60e574601d078db0f8dfb30e5807b4d731b038b530e67c4a134",
+      "bytes": 431
+    }
+  ]
+}

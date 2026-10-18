@@ -7,8 +7,10 @@ Downstream use: Retain completed coverage so new workers start at the unresolved
 This scope is complete. Continue with [target-c-typeii-stress-mass-access](target-c-typeii-stress-mass-access.md).
 
 Prior evidence:
-- [agent-audited](https://github.com/1337isnot1337/erdos-99/blob/3f419d3b6415ade701e00b7fd3dc2a013f8064d6/docs/audits/target_c_typeii_separate_face_floor_recheck_2026-10-17.md) at `3f419d3b6415ade701e00b7fd3dc2a013f8064d6`: Canonical full-core Type-II separate-face coefficient reconstruction at the unchanged cited source. Remaining: No canonical promotion or acceptance outside this exact scope.
-- [agent-audited](https://github.com/1337isnot1337/erdos-99/blob/2d4f2b7930570e989f3f8c76d27fc9aca23f32ac/docs/audits/target_c_typeii_face_floor_independent_reconstruction_2026-10-17.md) at `2d4f2b7930570e989f3f8c76d27fc9aca23f32ac`: Canonical full-core Type-II separate-face coefficient reconstruction at the unchanged cited source. Remaining: No canonical promotion or acceptance outside this exact scope.
+- [agent-audited](../docs/audits/target_c_typeii_separate_face_floor_recheck_2026-10-17.md) at `3f419d3b6415ade701e00b7fd3dc2a013f8064d6`: Canonical full-core Type-II separate-face coefficient reconstruction at the unchanged cited source. Remaining: No canonical promotion or acceptance outside this exact scope.
+- [agent-audited](../docs/audits/target_c_typeii_face_floor_independent_reconstruction_2026-10-17.md) at `2d4f2b7930570e989f3f8c76d27fc9aca23f32ac`: Canonical full-core Type-II separate-face coefficient reconstruction at the unchanged cited source. Remaining: No canonical promotion or acceptance outside this exact scope.
+
+Independent integration reviews: [Target A](../docs/research/review-artifacts/merge-2026-10-18/review-a.txt), [Target B](../docs/research/review-artifacts/merge-2026-10-18/review-b.txt), [Target C](../docs/research/review-artifacts/merge-2026-10-18/review-c.txt).
 
 **Track / priority:** independent-audit / independent evidence; selection weight 2 (attention only).
 

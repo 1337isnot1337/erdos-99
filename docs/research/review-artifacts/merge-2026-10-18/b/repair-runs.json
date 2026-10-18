@@ -1,0 +1,71 @@
+{
+  "candidate_commit_status": "Uncommitted integration bytes; root must carry these exact blobs into the frozen candidate SHA.",
+  "base": "db27b736f33b4db288c8a5e227c03c099d59259a",
+  "files": {
+    "research/verify_target_b_interface_capacity_2026_10_17.py": {
+      "sha256": "8e285768a7ffbd325243231f10ee721e6e128a4766e42a4f61e50906aaafe158",
+      "git_blob_sha1": "4df224a9bb96bd3faa5475a327b291d2bac8fc2b",
+      "mode": "0o644"
+    },
+    "research/target_b_interface_capacity_2026_10_17.json": {
+      "sha256": "43b3bc8e405a904206a765e7553d573d6fe3ad6cde0b4d5f27920b4ef51df3c5",
+      "git_blob_sha1": "40fbbec72201f2038a2a719e729b3bf37f887c0f",
+      "mode": "0o644"
+    },
+    "research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py": {
+      "sha256": "f78911648fb274ed3ba00d4886a377f399d504e4847016c8f9348672d7ddbc77",
+      "git_blob_sha1": "e1b86644cddca82c930cfaed318a08af087fe1bf",
+      "mode": "0o644"
+    },
+    "docs/research/agent-task-catalog.json": {
+      "sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+      "git_blob_sha1": "6b826fcc5015e74317487a419d09d358a92ebcf7",
+      "mode": "0o644"
+    },
+    "docs/research/priority-state.json": {
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "git_blob_sha1": "ed8e5c01d75c77a3c420cc3e3b6c4f06a2c38df8",
+      "mode": "0o644"
+    }
+  },
+  "runs": [
+    {
+      "command": [
+        "python",
+        "research/verify_target_b_interface_capacity_2026_10_17.py",
+        "--check",
+        "research/target_b_interface_capacity_2026_10_17.json"
+      ],
+      "cwd": "/workspace/scratch/eae2ea921155/repo",
+      "exit_code": 0,
+      "stdout": "{\"configurations\": 30, \"exact_inventory_cases\": 5964, \"fixture\": \"matched\", \"status\": \"unreviewed exact finite evidence\", \"three_grain_states\": 15625, \"two_grain_states\": 8336550, \"upper_cap_inventory_cases\": 5964}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py"
+      ],
+      "cwd": "/workspace/scratch/eae2ea921155/repo",
+      "exit_code": 0,
+      "stdout": "PASS: pi lower bound from exact Machin-series rationals\nPASS: unique-max loss < 0.1865 < gamma_0\nPASS: balancing, deletion, and grid-loss thresholds\nPASS: GPI diameter lower bound > 2.95 and lattice upper bound < 2.21\nScope: numerical margins only; no geometric or graph proof is encoded.\n",
+      "stderr": ""
+    }
+  ],
+  "unchanged_during_run": true,
+  "changed_source_pins": [
+    "docs/research/agent-task-catalog.json",
+    "docs/research/priority-state.json"
+  ],
+  "all_other_fixture_science_unchanged": true,
+  "original_report_checker_comparison": {
+    "docs/reports/target_b_interface_capacity_2026-10-17.md": false,
+    "research/verify_target_b_interface_capacity_2026_10_17.py": false,
+    "docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md": true,
+    "research/verify_target_b_separable_literature_2026_10_17.py": true,
+    "docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md": false,
+    "research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py": false,
+    "docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md": true,
+    "research/verify_target_b_gpi_mcp2_quantifier_audit_2026_10_17.py": true
+  }
+}

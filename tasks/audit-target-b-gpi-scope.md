@@ -4,11 +4,13 @@
 
 Downstream use: Retain completed coverage so new workers start at the unresolved successor instead of repeating this audit.
 
-This scope is complete. Continue with [audit-target-b-gpi-diagonal](audit-target-b-gpi-diagonal.md).
+This scope is complete. Continue with [target-b-multigrain-transfer](target-b-multigrain-transfer.md).
 
 Prior evidence:
-- [agent-audited](https://github.com/1337isnot1337/erdos-99/blob/dfdc8b5747cf0e6cadb1237118a28ea09e087296/docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md) at `dfdc8b5747cf0e6cadb1237118a28ea09e087296`: Fixed-lambda and fixed-positive-tau scope of the canonical MCP2/GPI chain; no multi-grain or varying-tau conclusion. Remaining: No canonical promotion or acceptance outside this exact scope.
-- [agent-audited](https://github.com/1337isnot1337/erdos-99/blob/01be955ed9209f1d4a096148e61851837fa190d4/docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md) at `01be955ed9209f1d4a096148e61851837fa190d4`: Fixed-lambda and fixed-positive-tau scope of the canonical MCP2/GPI chain; no multi-grain or varying-tau conclusion. Remaining: PR #94 also contains a distinct unreviewed diagonal estimate, assigned to audit-target-b-gpi-diagonal.
+- [agent-audited](../docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md) at `dfdc8b5747cf0e6cadb1237118a28ea09e087296`: Fixed-lambda and fixed-positive-tau scope of the canonical MCP2/GPI chain; no multi-grain or varying-tau conclusion. The integrated arithmetic checker corrects the submitted Machin-series parity. Remaining: No canonical promotion or acceptance outside this exact scope.
+- [agent-audited](../docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md) at `01be955ed9209f1d4a096148e61851837fa190d4`: Fixed-lambda and fixed-positive-tau scope of the canonical MCP2/GPI chain; no multi-grain or varying-tau conclusion. Remaining: No varying-tau GPI, global multi-grain summation, or full shell endpoint follows.
+
+Independent integration reviews: [Target A](../docs/research/review-artifacts/merge-2026-10-18/review-a.txt), [Target B](../docs/research/review-artifacts/merge-2026-10-18/review-b.txt), [Target C](../docs/research/review-artifacts/merge-2026-10-18/review-c.txt).
 
 **Track / priority:** independent-audit / independent evidence; selection weight 2 (attention only).
 
@@ -39,7 +41,7 @@ Advances only the stated route obligation; global closure still requires all can
 
 ## Approach and first bounded experiment
 
-This exact objective is complete. Read its recorded disposition, then use audit-target-b-gpi-diagonal. Reopen only for a changed source or a named discrepancy.
+This exact objective is complete. Read its recorded disposition, then use target-b-multigrain-transfer. Reopen only for a changed source or a named discrepancy.
 
 Methods: independent symbolic derivation, quantifier and dependency audit
 
@@ -65,7 +67,7 @@ The task-context command lists certificate commands for the direct and transitiv
 
 ## Remaining lemma and limitations
 
-No further work on this completed source/domain. The separate successor is audit-target-b-gpi-diagonal; the route endpoint remains open.
+No further work on this completed source/domain. The diagonal audit is also complete; continue with target-b-multigrain-transfer.
 
 No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.
 

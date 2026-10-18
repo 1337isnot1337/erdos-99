@@ -6,7 +6,9 @@ Downstream use: Test whether a proposed coupling pays the true joint source dema
 
 Prior evidence:
 - [agent-audited](../docs/research/review-artifacts/pr78/independent-audit.txt) at `9f230b2f900bf050a27ce7430ae7b3fed8ef8eda`: Completed independent finite Schur/linkage proof and checker audit, with merger-owned replay. Remaining: Actual source-capacity coupling was outside the reviewed domain.
-- [author-checked](https://github.com/1337isnot1337/erdos-99/blob/2e4a3e1e73877df4f4756fcb4c7d331dcda1327f/docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md) at `2e4a3e1e73877df4f4756fcb4c7d331dcda1327f`: Submitted separate-matching overlap regression. Remaining: Actual source realization remains open.
+- [agent-audited](../docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md) at `2e4a3e1e73877df4f4756fcb4c7d331dcda1327f`: separate-matching overlap regression. Remaining: Actual source realization remains open.
+
+Independent integration reviews: [Target A](../docs/research/review-artifacts/merge-2026-10-18/review-a.txt), [Target B](../docs/research/review-artifacts/merge-2026-10-18/review-b.txt), [Target C](../docs/research/review-artifacts/merge-2026-10-18/review-c.txt).
 
 **Track / priority:** independent-verification / independent evidence; selection weight 1 (attention only).
 

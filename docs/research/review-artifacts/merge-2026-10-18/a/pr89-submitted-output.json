@@ -1,0 +1,1867 @@
+{
+  "case_count": 34,
+  "cases": [
+    {
+      "Xi": 10,
+      "cut_slack": 15,
+      "exterior_rows": 22,
+      "fan_edges": 7,
+      "fan_vertices": 7,
+      "globally_isolated_rows": 4,
+      "interior_rows": 12,
+      "isolated_exterior_sinks": 5,
+      "m": 2,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        1,
+        2
+      ],
+      "positive_sink_mass": 5,
+      "positive_terminal_mass": 2,
+      "removed_basis": 10,
+      "response_rows": 34,
+      "right_deficiency_bound": 0,
+      "schur_rank": 7,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 0,
+          "C": 1,
+          "O": 1,
+          "Z": 0
+        },
+        {
+          "B": 0,
+          "C": 2,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 2,
+          "C": 2,
+          "O": 7,
+          "Z": 2
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 19,
+      "true_right_deficiency": 15,
+      "tube_exterior": 9,
+      "tube_interior": 10
+    },
+    {
+      "Xi": 16,
+      "cut_slack": 24,
+      "exterior_rows": 31,
+      "fan_edges": 10,
+      "fan_vertices": 10,
+      "globally_isolated_rows": 6,
+      "interior_rows": 27,
+      "isolated_exterior_sinks": 7,
+      "m": 3,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        1,
+        2
+      ],
+      "positive_sink_mass": 9,
+      "positive_terminal_mass": 2,
+      "removed_basis": 19,
+      "response_rows": 58,
+      "right_deficiency_bound": -3,
+      "schur_rank": 10,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 1,
+          "C": 1,
+          "O": 2,
+          "Z": 1
+        },
+        {
+          "B": 0,
+          "C": 4,
+          "O": 2,
+          "Z": 0
+        },
+        {
+          "B": 7,
+          "C": 3,
+          "O": 11,
+          "Z": 7
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 37,
+      "true_right_deficiency": 21,
+      "tube_exterior": 9,
+      "tube_interior": 19
+    },
+    {
+      "Xi": 22,
+      "cut_slack": 33,
+      "exterior_rows": 40,
+      "fan_edges": 13,
+      "fan_vertices": 13,
+      "globally_isolated_rows": 8,
+      "interior_rows": 48,
+      "isolated_exterior_sinks": 9,
+      "m": 4,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        1,
+        2
+      ],
+      "positive_sink_mass": 13,
+      "positive_terminal_mass": 2,
+      "removed_basis": 28,
+      "response_rows": 88,
+      "right_deficiency_bound": -6,
+      "schur_rank": 13,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 3,
+          "C": 1,
+          "O": 3,
+          "Z": 3
+        },
+        {
+          "B": 2,
+          "C": 6,
+          "O": 4,
+          "Z": 2
+        },
+        {
+          "B": 15,
+          "C": 4,
+          "O": 15,
+          "Z": 15
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 61,
+      "true_right_deficiency": 27,
+      "tube_exterior": 9,
+      "tube_interior": 28
+    },
+    {
+      "Xi": 28,
+      "cut_slack": 42,
+      "exterior_rows": 49,
+      "fan_edges": 16,
+      "fan_vertices": 16,
+      "globally_isolated_rows": 10,
+      "interior_rows": 75,
+      "isolated_exterior_sinks": 11,
+      "m": 5,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        1,
+        2
+      ],
+      "positive_sink_mass": 17,
+      "positive_terminal_mass": 2,
+      "removed_basis": 37,
+      "response_rows": 124,
+      "right_deficiency_bound": -9,
+      "schur_rank": 16,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 6,
+          "C": 1,
+          "O": 4,
+          "Z": 6
+        },
+        {
+          "B": 6,
+          "C": 8,
+          "O": 6,
+          "Z": 6
+        },
+        {
+          "B": 26,
+          "C": 5,
+          "O": 19,
+          "Z": 26
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 91,
+      "true_right_deficiency": 33,
+      "tube_exterior": 9,
+      "tube_interior": 37
+    },
+    {
+      "Xi": 34,
+      "cut_slack": 51,
+      "exterior_rows": 58,
+      "fan_edges": 19,
+      "fan_vertices": 19,
+      "globally_isolated_rows": 12,
+      "interior_rows": 108,
+      "isolated_exterior_sinks": 13,
+      "m": 6,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        1,
+        2
+      ],
+      "positive_sink_mass": 21,
+      "positive_terminal_mass": 2,
+      "removed_basis": 46,
+      "response_rows": 166,
+      "right_deficiency_bound": -12,
+      "schur_rank": 19,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 10,
+          "C": 1,
+          "O": 5,
+          "Z": 10
+        },
+        {
+          "B": 12,
+          "C": 10,
+          "O": 8,
+          "Z": 12
+        },
+        {
+          "B": 40,
+          "C": 6,
+          "O": 23,
+          "Z": 40
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 127,
+      "true_right_deficiency": 39,
+      "tube_exterior": 9,
+      "tube_interior": 46
+    },
+    {
+      "Xi": 40,
+      "cut_slack": 60,
+      "exterior_rows": 67,
+      "fan_edges": 22,
+      "fan_vertices": 22,
+      "globally_isolated_rows": 14,
+      "interior_rows": 147,
+      "isolated_exterior_sinks": 15,
+      "m": 7,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        1,
+        2
+      ],
+      "positive_sink_mass": 25,
+      "positive_terminal_mass": 2,
+      "removed_basis": 55,
+      "response_rows": 214,
+      "right_deficiency_bound": -15,
+      "schur_rank": 22,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 15,
+          "C": 1,
+          "O": 6,
+          "Z": 15
+        },
+        {
+          "B": 20,
+          "C": 12,
+          "O": 10,
+          "Z": 20
+        },
+        {
+          "B": 57,
+          "C": 7,
+          "O": 27,
+          "Z": 57
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 169,
+      "true_right_deficiency": 45,
+      "tube_exterior": 9,
+      "tube_interior": 55
+    },
+    {
+      "Xi": 46,
+      "cut_slack": 69,
+      "exterior_rows": 76,
+      "fan_edges": 25,
+      "fan_vertices": 25,
+      "globally_isolated_rows": 16,
+      "interior_rows": 192,
+      "isolated_exterior_sinks": 17,
+      "m": 8,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        1,
+        2
+      ],
+      "positive_sink_mass": 29,
+      "positive_terminal_mass": 2,
+      "removed_basis": 64,
+      "response_rows": 268,
+      "right_deficiency_bound": -18,
+      "schur_rank": 25,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 21,
+          "C": 1,
+          "O": 7,
+          "Z": 21
+        },
+        {
+          "B": 30,
+          "C": 14,
+          "O": 12,
+          "Z": 30
+        },
+        {
+          "B": 77,
+          "C": 8,
+          "O": 31,
+          "Z": 77
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 217,
+      "true_right_deficiency": 51,
+      "tube_exterior": 9,
+      "tube_interior": 64
+    },
+    {
+      "Xi": 52,
+      "cut_slack": 78,
+      "exterior_rows": 85,
+      "fan_edges": 28,
+      "fan_vertices": 28,
+      "globally_isolated_rows": 18,
+      "interior_rows": 243,
+      "isolated_exterior_sinks": 19,
+      "m": 9,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        1,
+        2
+      ],
+      "positive_sink_mass": 33,
+      "positive_terminal_mass": 2,
+      "removed_basis": 73,
+      "response_rows": 328,
+      "right_deficiency_bound": -21,
+      "schur_rank": 28,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 28,
+          "C": 1,
+          "O": 8,
+          "Z": 28
+        },
+        {
+          "B": 42,
+          "C": 16,
+          "O": 14,
+          "Z": 42
+        },
+        {
+          "B": 100,
+          "C": 9,
+          "O": 35,
+          "Z": 100
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 271,
+      "true_right_deficiency": 57,
+      "tube_exterior": 9,
+      "tube_interior": 73
+    },
+    {
+      "Xi": 58,
+      "cut_slack": 87,
+      "exterior_rows": 94,
+      "fan_edges": 31,
+      "fan_vertices": 31,
+      "globally_isolated_rows": 20,
+      "interior_rows": 300,
+      "isolated_exterior_sinks": 21,
+      "m": 10,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        1,
+        2
+      ],
+      "positive_sink_mass": 37,
+      "positive_terminal_mass": 2,
+      "removed_basis": 82,
+      "response_rows": 394,
+      "right_deficiency_bound": -24,
+      "schur_rank": 31,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 36,
+          "C": 1,
+          "O": 9,
+          "Z": 36
+        },
+        {
+          "B": 56,
+          "C": 18,
+          "O": 16,
+          "Z": 56
+        },
+        {
+          "B": 126,
+          "C": 10,
+          "O": 39,
+          "Z": 126
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 331,
+      "true_right_deficiency": 63,
+      "tube_exterior": 9,
+      "tube_interior": 82
+    },
+    {
+      "Xi": 64,
+      "cut_slack": 96,
+      "exterior_rows": 103,
+      "fan_edges": 34,
+      "fan_vertices": 34,
+      "globally_isolated_rows": 22,
+      "interior_rows": 363,
+      "isolated_exterior_sinks": 23,
+      "m": 11,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        1,
+        2
+      ],
+      "positive_sink_mass": 41,
+      "positive_terminal_mass": 2,
+      "removed_basis": 91,
+      "response_rows": 466,
+      "right_deficiency_bound": -27,
+      "schur_rank": 34,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 45,
+          "C": 1,
+          "O": 10,
+          "Z": 45
+        },
+        {
+          "B": 72,
+          "C": 20,
+          "O": 18,
+          "Z": 72
+        },
+        {
+          "B": 155,
+          "C": 11,
+          "O": 43,
+          "Z": 155
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 397,
+      "true_right_deficiency": 69,
+      "tube_exterior": 9,
+      "tube_interior": 91
+    },
+    {
+      "Xi": 70,
+      "cut_slack": 105,
+      "exterior_rows": 112,
+      "fan_edges": 37,
+      "fan_vertices": 37,
+      "globally_isolated_rows": 24,
+      "interior_rows": 432,
+      "isolated_exterior_sinks": 25,
+      "m": 12,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        1,
+        2
+      ],
+      "positive_sink_mass": 45,
+      "positive_terminal_mass": 2,
+      "removed_basis": 100,
+      "response_rows": 544,
+      "right_deficiency_bound": -30,
+      "schur_rank": 37,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 55,
+          "C": 1,
+          "O": 11,
+          "Z": 55
+        },
+        {
+          "B": 90,
+          "C": 22,
+          "O": 20,
+          "Z": 90
+        },
+        {
+          "B": 187,
+          "C": 12,
+          "O": 47,
+          "Z": 187
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 469,
+      "true_right_deficiency": 75,
+      "tube_exterior": 9,
+      "tube_interior": 100
+    },
+    {
+      "Xi": 10,
+      "cut_slack": 15,
+      "exterior_rows": 22,
+      "fan_edges": 7,
+      "fan_vertices": 7,
+      "globally_isolated_rows": 4,
+      "interior_rows": 12,
+      "isolated_exterior_sinks": 5,
+      "m": 2,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        20,
+        40
+      ],
+      "positive_sink_mass": 5,
+      "positive_terminal_mass": 2,
+      "removed_basis": 10,
+      "response_rows": 34,
+      "right_deficiency_bound": 0,
+      "schur_rank": 7,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 0,
+          "C": 1,
+          "O": 1,
+          "Z": 0
+        },
+        {
+          "B": 0,
+          "C": 2,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 2,
+          "C": 2,
+          "O": 7,
+          "Z": 2
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 19,
+      "true_right_deficiency": 15,
+      "tube_exterior": 9,
+      "tube_interior": 10
+    },
+    {
+      "Xi": 16,
+      "cut_slack": 24,
+      "exterior_rows": 31,
+      "fan_edges": 10,
+      "fan_vertices": 10,
+      "globally_isolated_rows": 6,
+      "interior_rows": 27,
+      "isolated_exterior_sinks": 7,
+      "m": 3,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        20,
+        40
+      ],
+      "positive_sink_mass": 9,
+      "positive_terminal_mass": 2,
+      "removed_basis": 19,
+      "response_rows": 58,
+      "right_deficiency_bound": -3,
+      "schur_rank": 10,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 1,
+          "C": 1,
+          "O": 2,
+          "Z": 1
+        },
+        {
+          "B": 0,
+          "C": 4,
+          "O": 2,
+          "Z": 0
+        },
+        {
+          "B": 7,
+          "C": 3,
+          "O": 11,
+          "Z": 7
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 37,
+      "true_right_deficiency": 21,
+      "tube_exterior": 9,
+      "tube_interior": 19
+    },
+    {
+      "Xi": 22,
+      "cut_slack": 33,
+      "exterior_rows": 40,
+      "fan_edges": 13,
+      "fan_vertices": 13,
+      "globally_isolated_rows": 8,
+      "interior_rows": 48,
+      "isolated_exterior_sinks": 9,
+      "m": 4,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        20,
+        40
+      ],
+      "positive_sink_mass": 13,
+      "positive_terminal_mass": 2,
+      "removed_basis": 28,
+      "response_rows": 88,
+      "right_deficiency_bound": -6,
+      "schur_rank": 13,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 3,
+          "C": 1,
+          "O": 3,
+          "Z": 3
+        },
+        {
+          "B": 2,
+          "C": 6,
+          "O": 4,
+          "Z": 2
+        },
+        {
+          "B": 15,
+          "C": 4,
+          "O": 15,
+          "Z": 15
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 61,
+      "true_right_deficiency": 27,
+      "tube_exterior": 9,
+      "tube_interior": 28
+    },
+    {
+      "Xi": 28,
+      "cut_slack": 42,
+      "exterior_rows": 49,
+      "fan_edges": 16,
+      "fan_vertices": 16,
+      "globally_isolated_rows": 10,
+      "interior_rows": 75,
+      "isolated_exterior_sinks": 11,
+      "m": 5,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        20,
+        40
+      ],
+      "positive_sink_mass": 17,
+      "positive_terminal_mass": 2,
+      "removed_basis": 37,
+      "response_rows": 124,
+      "right_deficiency_bound": -9,
+      "schur_rank": 16,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 6,
+          "C": 1,
+          "O": 4,
+          "Z": 6
+        },
+        {
+          "B": 6,
+          "C": 8,
+          "O": 6,
+          "Z": 6
+        },
+        {
+          "B": 26,
+          "C": 5,
+          "O": 19,
+          "Z": 26
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 91,
+      "true_right_deficiency": 33,
+      "tube_exterior": 9,
+      "tube_interior": 37
+    },
+    {
+      "Xi": 34,
+      "cut_slack": 51,
+      "exterior_rows": 58,
+      "fan_edges": 19,
+      "fan_vertices": 19,
+      "globally_isolated_rows": 12,
+      "interior_rows": 108,
+      "isolated_exterior_sinks": 13,
+      "m": 6,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        20,
+        40
+      ],
+      "positive_sink_mass": 21,
+      "positive_terminal_mass": 2,
+      "removed_basis": 46,
+      "response_rows": 166,
+      "right_deficiency_bound": -12,
+      "schur_rank": 19,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 10,
+          "C": 1,
+          "O": 5,
+          "Z": 10
+        },
+        {
+          "B": 12,
+          "C": 10,
+          "O": 8,
+          "Z": 12
+        },
+        {
+          "B": 40,
+          "C": 6,
+          "O": 23,
+          "Z": 40
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 127,
+      "true_right_deficiency": 39,
+      "tube_exterior": 9,
+      "tube_interior": 46
+    },
+    {
+      "Xi": 40,
+      "cut_slack": 60,
+      "exterior_rows": 67,
+      "fan_edges": 22,
+      "fan_vertices": 22,
+      "globally_isolated_rows": 14,
+      "interior_rows": 147,
+      "isolated_exterior_sinks": 15,
+      "m": 7,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        20,
+        40
+      ],
+      "positive_sink_mass": 25,
+      "positive_terminal_mass": 2,
+      "removed_basis": 55,
+      "response_rows": 214,
+      "right_deficiency_bound": -15,
+      "schur_rank": 22,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 15,
+          "C": 1,
+          "O": 6,
+          "Z": 15
+        },
+        {
+          "B": 20,
+          "C": 12,
+          "O": 10,
+          "Z": 20
+        },
+        {
+          "B": 57,
+          "C": 7,
+          "O": 27,
+          "Z": 57
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 169,
+      "true_right_deficiency": 45,
+      "tube_exterior": 9,
+      "tube_interior": 55
+    },
+    {
+      "Xi": 46,
+      "cut_slack": 69,
+      "exterior_rows": 76,
+      "fan_edges": 25,
+      "fan_vertices": 25,
+      "globally_isolated_rows": 16,
+      "interior_rows": 192,
+      "isolated_exterior_sinks": 17,
+      "m": 8,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        20,
+        40
+      ],
+      "positive_sink_mass": 29,
+      "positive_terminal_mass": 2,
+      "removed_basis": 64,
+      "response_rows": 268,
+      "right_deficiency_bound": -18,
+      "schur_rank": 25,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 21,
+          "C": 1,
+          "O": 7,
+          "Z": 21
+        },
+        {
+          "B": 30,
+          "C": 14,
+          "O": 12,
+          "Z": 30
+        },
+        {
+          "B": 77,
+          "C": 8,
+          "O": 31,
+          "Z": 77
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 217,
+      "true_right_deficiency": 51,
+      "tube_exterior": 9,
+      "tube_interior": 64
+    },
+    {
+      "Xi": 52,
+      "cut_slack": 78,
+      "exterior_rows": 85,
+      "fan_edges": 28,
+      "fan_vertices": 28,
+      "globally_isolated_rows": 18,
+      "interior_rows": 243,
+      "isolated_exterior_sinks": 19,
+      "m": 9,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        20,
+        40
+      ],
+      "positive_sink_mass": 33,
+      "positive_terminal_mass": 2,
+      "removed_basis": 73,
+      "response_rows": 328,
+      "right_deficiency_bound": -21,
+      "schur_rank": 28,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 28,
+          "C": 1,
+          "O": 8,
+          "Z": 28
+        },
+        {
+          "B": 42,
+          "C": 16,
+          "O": 14,
+          "Z": 42
+        },
+        {
+          "B": 100,
+          "C": 9,
+          "O": 35,
+          "Z": 100
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 271,
+      "true_right_deficiency": 57,
+      "tube_exterior": 9,
+      "tube_interior": 73
+    },
+    {
+      "Xi": 58,
+      "cut_slack": 87,
+      "exterior_rows": 94,
+      "fan_edges": 31,
+      "fan_vertices": 31,
+      "globally_isolated_rows": 20,
+      "interior_rows": 300,
+      "isolated_exterior_sinks": 21,
+      "m": 10,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        20,
+        40
+      ],
+      "positive_sink_mass": 37,
+      "positive_terminal_mass": 2,
+      "removed_basis": 82,
+      "response_rows": 394,
+      "right_deficiency_bound": -24,
+      "schur_rank": 31,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 36,
+          "C": 1,
+          "O": 9,
+          "Z": 36
+        },
+        {
+          "B": 56,
+          "C": 18,
+          "O": 16,
+          "Z": 56
+        },
+        {
+          "B": 126,
+          "C": 10,
+          "O": 39,
+          "Z": 126
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 331,
+      "true_right_deficiency": 63,
+      "tube_exterior": 9,
+      "tube_interior": 82
+    },
+    {
+      "Xi": 64,
+      "cut_slack": 96,
+      "exterior_rows": 103,
+      "fan_edges": 34,
+      "fan_vertices": 34,
+      "globally_isolated_rows": 22,
+      "interior_rows": 363,
+      "isolated_exterior_sinks": 23,
+      "m": 11,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        20,
+        40
+      ],
+      "positive_sink_mass": 41,
+      "positive_terminal_mass": 2,
+      "removed_basis": 91,
+      "response_rows": 466,
+      "right_deficiency_bound": -27,
+      "schur_rank": 34,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 45,
+          "C": 1,
+          "O": 10,
+          "Z": 45
+        },
+        {
+          "B": 72,
+          "C": 20,
+          "O": 18,
+          "Z": 72
+        },
+        {
+          "B": 155,
+          "C": 11,
+          "O": 43,
+          "Z": 155
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 397,
+      "true_right_deficiency": 69,
+      "tube_exterior": 9,
+      "tube_interior": 91
+    },
+    {
+      "Xi": 70,
+      "cut_slack": 105,
+      "exterior_rows": 112,
+      "fan_edges": 37,
+      "fan_vertices": 37,
+      "globally_isolated_rows": 24,
+      "interior_rows": 432,
+      "isolated_exterior_sinks": 25,
+      "m": 12,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        20,
+        40
+      ],
+      "positive_sink_mass": 45,
+      "positive_terminal_mass": 2,
+      "removed_basis": 100,
+      "response_rows": 544,
+      "right_deficiency_bound": -30,
+      "schur_rank": 37,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 55,
+          "C": 1,
+          "O": 11,
+          "Z": 55
+        },
+        {
+          "B": 90,
+          "C": 22,
+          "O": 20,
+          "Z": 90
+        },
+        {
+          "B": 187,
+          "C": 12,
+          "O": 47,
+          "Z": 187
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 469,
+      "true_right_deficiency": 75,
+      "tube_exterior": 9,
+      "tube_interior": 100
+    },
+    {
+      "Xi": 10,
+      "cut_slack": 15,
+      "exterior_rows": 22,
+      "fan_edges": 7,
+      "fan_vertices": 7,
+      "globally_isolated_rows": 4,
+      "interior_rows": 12,
+      "isolated_exterior_sinks": 5,
+      "m": 2,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        10,
+        80
+      ],
+      "positive_sink_mass": 5,
+      "positive_terminal_mass": 2,
+      "removed_basis": 10,
+      "response_rows": 34,
+      "right_deficiency_bound": 0,
+      "schur_rank": 7,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 0,
+          "C": 1,
+          "O": 1,
+          "Z": 0
+        },
+        {
+          "B": 0,
+          "C": 2,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 2,
+          "C": 2,
+          "O": 7,
+          "Z": 2
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 19,
+      "true_right_deficiency": 15,
+      "tube_exterior": 9,
+      "tube_interior": 10
+    },
+    {
+      "Xi": 16,
+      "cut_slack": 24,
+      "exterior_rows": 31,
+      "fan_edges": 10,
+      "fan_vertices": 10,
+      "globally_isolated_rows": 6,
+      "interior_rows": 27,
+      "isolated_exterior_sinks": 7,
+      "m": 3,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        10,
+        80
+      ],
+      "positive_sink_mass": 9,
+      "positive_terminal_mass": 2,
+      "removed_basis": 19,
+      "response_rows": 58,
+      "right_deficiency_bound": -3,
+      "schur_rank": 10,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 1,
+          "C": 1,
+          "O": 2,
+          "Z": 1
+        },
+        {
+          "B": 0,
+          "C": 4,
+          "O": 2,
+          "Z": 0
+        },
+        {
+          "B": 7,
+          "C": 3,
+          "O": 11,
+          "Z": 7
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 37,
+      "true_right_deficiency": 21,
+      "tube_exterior": 9,
+      "tube_interior": 19
+    },
+    {
+      "Xi": 22,
+      "cut_slack": 33,
+      "exterior_rows": 40,
+      "fan_edges": 13,
+      "fan_vertices": 13,
+      "globally_isolated_rows": 8,
+      "interior_rows": 48,
+      "isolated_exterior_sinks": 9,
+      "m": 4,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        10,
+        80
+      ],
+      "positive_sink_mass": 13,
+      "positive_terminal_mass": 2,
+      "removed_basis": 28,
+      "response_rows": 88,
+      "right_deficiency_bound": -6,
+      "schur_rank": 13,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 3,
+          "C": 1,
+          "O": 3,
+          "Z": 3
+        },
+        {
+          "B": 2,
+          "C": 6,
+          "O": 4,
+          "Z": 2
+        },
+        {
+          "B": 15,
+          "C": 4,
+          "O": 15,
+          "Z": 15
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 61,
+      "true_right_deficiency": 27,
+      "tube_exterior": 9,
+      "tube_interior": 28
+    },
+    {
+      "Xi": 28,
+      "cut_slack": 42,
+      "exterior_rows": 49,
+      "fan_edges": 16,
+      "fan_vertices": 16,
+      "globally_isolated_rows": 10,
+      "interior_rows": 75,
+      "isolated_exterior_sinks": 11,
+      "m": 5,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        10,
+        80
+      ],
+      "positive_sink_mass": 17,
+      "positive_terminal_mass": 2,
+      "removed_basis": 37,
+      "response_rows": 124,
+      "right_deficiency_bound": -9,
+      "schur_rank": 16,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 6,
+          "C": 1,
+          "O": 4,
+          "Z": 6
+        },
+        {
+          "B": 6,
+          "C": 8,
+          "O": 6,
+          "Z": 6
+        },
+        {
+          "B": 26,
+          "C": 5,
+          "O": 19,
+          "Z": 26
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 91,
+      "true_right_deficiency": 33,
+      "tube_exterior": 9,
+      "tube_interior": 37
+    },
+    {
+      "Xi": 34,
+      "cut_slack": 51,
+      "exterior_rows": 58,
+      "fan_edges": 19,
+      "fan_vertices": 19,
+      "globally_isolated_rows": 12,
+      "interior_rows": 108,
+      "isolated_exterior_sinks": 13,
+      "m": 6,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        10,
+        80
+      ],
+      "positive_sink_mass": 21,
+      "positive_terminal_mass": 2,
+      "removed_basis": 46,
+      "response_rows": 166,
+      "right_deficiency_bound": -12,
+      "schur_rank": 19,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 10,
+          "C": 1,
+          "O": 5,
+          "Z": 10
+        },
+        {
+          "B": 12,
+          "C": 10,
+          "O": 8,
+          "Z": 12
+        },
+        {
+          "B": 40,
+          "C": 6,
+          "O": 23,
+          "Z": 40
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 127,
+      "true_right_deficiency": 39,
+      "tube_exterior": 9,
+      "tube_interior": 46
+    },
+    {
+      "Xi": 40,
+      "cut_slack": 60,
+      "exterior_rows": 67,
+      "fan_edges": 22,
+      "fan_vertices": 22,
+      "globally_isolated_rows": 14,
+      "interior_rows": 147,
+      "isolated_exterior_sinks": 15,
+      "m": 7,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        10,
+        80
+      ],
+      "positive_sink_mass": 25,
+      "positive_terminal_mass": 2,
+      "removed_basis": 55,
+      "response_rows": 214,
+      "right_deficiency_bound": -15,
+      "schur_rank": 22,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 15,
+          "C": 1,
+          "O": 6,
+          "Z": 15
+        },
+        {
+          "B": 20,
+          "C": 12,
+          "O": 10,
+          "Z": 20
+        },
+        {
+          "B": 57,
+          "C": 7,
+          "O": 27,
+          "Z": 57
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 169,
+      "true_right_deficiency": 45,
+      "tube_exterior": 9,
+      "tube_interior": 55
+    },
+    {
+      "Xi": 46,
+      "cut_slack": 69,
+      "exterior_rows": 76,
+      "fan_edges": 25,
+      "fan_vertices": 25,
+      "globally_isolated_rows": 16,
+      "interior_rows": 192,
+      "isolated_exterior_sinks": 17,
+      "m": 8,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        10,
+        80
+      ],
+      "positive_sink_mass": 29,
+      "positive_terminal_mass": 2,
+      "removed_basis": 64,
+      "response_rows": 268,
+      "right_deficiency_bound": -18,
+      "schur_rank": 25,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 21,
+          "C": 1,
+          "O": 7,
+          "Z": 21
+        },
+        {
+          "B": 30,
+          "C": 14,
+          "O": 12,
+          "Z": 30
+        },
+        {
+          "B": 77,
+          "C": 8,
+          "O": 31,
+          "Z": 77
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 217,
+      "true_right_deficiency": 51,
+      "tube_exterior": 9,
+      "tube_interior": 64
+    },
+    {
+      "Xi": 52,
+      "cut_slack": 78,
+      "exterior_rows": 85,
+      "fan_edges": 28,
+      "fan_vertices": 28,
+      "globally_isolated_rows": 18,
+      "interior_rows": 243,
+      "isolated_exterior_sinks": 19,
+      "m": 9,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        10,
+        80
+      ],
+      "positive_sink_mass": 33,
+      "positive_terminal_mass": 2,
+      "removed_basis": 73,
+      "response_rows": 328,
+      "right_deficiency_bound": -21,
+      "schur_rank": 28,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 28,
+          "C": 1,
+          "O": 8,
+          "Z": 28
+        },
+        {
+          "B": 42,
+          "C": 16,
+          "O": 14,
+          "Z": 42
+        },
+        {
+          "B": 100,
+          "C": 9,
+          "O": 35,
+          "Z": 100
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 271,
+      "true_right_deficiency": 57,
+      "tube_exterior": 9,
+      "tube_interior": 73
+    },
+    {
+      "Xi": 58,
+      "cut_slack": 87,
+      "exterior_rows": 94,
+      "fan_edges": 31,
+      "fan_vertices": 31,
+      "globally_isolated_rows": 20,
+      "interior_rows": 300,
+      "isolated_exterior_sinks": 21,
+      "m": 10,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        10,
+        80
+      ],
+      "positive_sink_mass": 37,
+      "positive_terminal_mass": 2,
+      "removed_basis": 82,
+      "response_rows": 394,
+      "right_deficiency_bound": -24,
+      "schur_rank": 31,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 36,
+          "C": 1,
+          "O": 9,
+          "Z": 36
+        },
+        {
+          "B": 56,
+          "C": 18,
+          "O": 16,
+          "Z": 56
+        },
+        {
+          "B": 126,
+          "C": 10,
+          "O": 39,
+          "Z": 126
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 331,
+      "true_right_deficiency": 63,
+      "tube_exterior": 9,
+      "tube_interior": 82
+    },
+    {
+      "Xi": 64,
+      "cut_slack": 96,
+      "exterior_rows": 103,
+      "fan_edges": 34,
+      "fan_vertices": 34,
+      "globally_isolated_rows": 22,
+      "interior_rows": 363,
+      "isolated_exterior_sinks": 23,
+      "m": 11,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        10,
+        80
+      ],
+      "positive_sink_mass": 41,
+      "positive_terminal_mass": 2,
+      "removed_basis": 91,
+      "response_rows": 466,
+      "right_deficiency_bound": -27,
+      "schur_rank": 34,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 45,
+          "C": 1,
+          "O": 10,
+          "Z": 45
+        },
+        {
+          "B": 72,
+          "C": 20,
+          "O": 18,
+          "Z": 72
+        },
+        {
+          "B": 155,
+          "C": 11,
+          "O": 43,
+          "Z": 155
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 397,
+      "true_right_deficiency": 69,
+      "tube_exterior": 9,
+      "tube_interior": 91
+    },
+    {
+      "Xi": 70,
+      "cut_slack": 105,
+      "exterior_rows": 112,
+      "fan_edges": 37,
+      "fan_vertices": 37,
+      "globally_isolated_rows": 24,
+      "interior_rows": 432,
+      "isolated_exterior_sinks": 25,
+      "m": 12,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        10,
+        80
+      ],
+      "positive_sink_mass": 45,
+      "positive_terminal_mass": 2,
+      "removed_basis": 100,
+      "response_rows": 544,
+      "right_deficiency_bound": -30,
+      "schur_rank": 37,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 55,
+          "C": 1,
+          "O": 11,
+          "Z": 55
+        },
+        {
+          "B": 90,
+          "C": 22,
+          "O": 20,
+          "Z": 90
+        },
+        {
+          "B": 187,
+          "C": 12,
+          "O": 47,
+          "Z": 187
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 469,
+      "true_right_deficiency": 75,
+      "tube_exterior": 9,
+      "tube_interior": 100
+    },
+    {
+      "Xi": 190,
+      "cut_slack": 285,
+      "exterior_rows": 292,
+      "fan_edges": 97,
+      "fan_vertices": 97,
+      "globally_isolated_rows": 64,
+      "interior_rows": 3072,
+      "isolated_exterior_sinks": 65,
+      "m": 32,
+      "newly_isolated_rows": 1,
+      "phase_denominator": 1000,
+      "phase_numerators": [
+        1,
+        2
+      ],
+      "positive_sink_mass": 125,
+      "positive_terminal_mass": 2,
+      "removed_basis": 280,
+      "response_rows": 3364,
+      "right_deficiency_bound": -90,
+      "schur_rank": 97,
+      "sectors": [
+        {
+          "B": 0,
+          "C": 0,
+          "O": 0,
+          "Z": 0
+        },
+        {
+          "B": 465,
+          "C": 1,
+          "O": 31,
+          "Z": 465
+        },
+        {
+          "B": 870,
+          "C": 62,
+          "O": 60,
+          "Z": 870
+        },
+        {
+          "B": 1457,
+          "C": 32,
+          "O": 127,
+          "Z": 1457
+        }
+      ],
+      "shield_terminals": 2,
+      "source_points": 3169,
+      "true_right_deficiency": 195,
+      "tube_exterior": 9,
+      "tube_interior": 280
+    }
+  ],
+  "classification": "unreviewed exact finite evidence",
+  "negative_controls": [
+    {
+      "actual_interior_tube": 55,
+      "counterexample_m": 7,
+      "integer_gap_numerator": 55,
+      "mutation": "use the translation-average cost as a pointwise cap",
+      "strict_upper_bound_for_mean_cost": "7260/133"
+    },
+    {
+      "mutation": "omit basis closure",
+      "rejected_by": "sector basis balance fails"
+    },
+    {
+      "mutation": "report an interior-only tube as the full tube",
+      "rejected_by": "advertised ledger differs: tube_exterior"
+    }
+  ],
+  "primitive_checks": {
+    "minimum_squared_distance_margin": "993/1000000",
+    "primitive_tubes": 9,
+    "segment_metric_comparisons": 441,
+    "sites_per_primitive_tube": 7,
+    "strict_boundary_control": "passed"
+  },
+  "status": "passed"
+}

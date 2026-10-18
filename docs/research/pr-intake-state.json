@@ -1,5 +1,447 @@
 {
-  "entries": {},
+  "entries": {
+    "86": {
+      "base_commit": "db27b736f33b4db288c8a5e227c03c099d59259a",
+      "checked_at": "2026-10-18T04:06:06.142309+00:00",
+      "coverage": "Abstract shared-interface theorem and finite incidence inventory; reviewed execution-metadata refresh preserves all mathematical hashes and results.",
+      "evidence": [
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/README.txt",
+          "sha256": "4808766639c26c136e65bfe9c5c85a2e179ed4db29f52db27346441f33b839f2"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/integration.json",
+          "sha256": "e62a12f7e912485daa2715521f894d34679f431b325f9dd562dfe952d057d368"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/review-b.txt",
+          "sha256": "23cac8d0f93e1b994a852ae9a0a5a62c25eb309be9fdf3264212e178651461cf"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/b/repair-addendum.json",
+          "sha256": "993129a35adcc592472c321580c2108011f0f38bafa4a6b0e43c5a0e8f2791d6"
+        }
+      ],
+      "head_sha": "a392a910899b06d20df6c7c29010896223ebfa70",
+      "lane": "validated-research",
+      "policy_version": 1,
+      "reason": "Independent exact-head review is complete; any submitted defect has an explicitly reviewed correction in public integration evidence commit 6fb5e83a74fff944e21e7a6619e890fbee736d44. Fresh connector head inventory checked immediately before this record.",
+      "remaining": "Merge gate: full 94-certificate replay, public corpus, new checker and hosted integrity checks must pass on the final combined candidate. Record their exact commit/tree and results in the aggregate PR before merging. No canonical promotion or unproved global-source transfer is authorized by this receipt.",
+      "review_status": "scope_verified",
+      "status": "ready_to_integrate",
+      "watch_paths": {
+        "docs/reports/target_b_interface_capacity_2026-10-17.md": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/README.txt": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/b/repair-addendum.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/integration.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/review-b.txt": "missing",
+        "research/README.md": "100644 blob 37d19715f80c8f8831c3a89c6d06480059db0c82\tresearch/README.md",
+        "research/target_b_interface_capacity_2026_10_17.json": "missing",
+        "research/verify_target_b_interface_capacity_2026_10_17.py": "missing"
+      },
+      "watch_prs": {}
+    },
+    "88": {
+      "base_commit": "db27b736f33b4db288c8a5e227c03c099d59259a",
+      "checked_at": "2026-10-18T04:06:06.175186+00:00",
+      "coverage": "Primary-source normalization, global-minimizer total-separability/deletion theorem, convex partition and explicit nonglobal finite controls.",
+      "evidence": [
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/README.txt",
+          "sha256": "4808766639c26c136e65bfe9c5c85a2e179ed4db29f52db27346441f33b839f2"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/integration.json",
+          "sha256": "e62a12f7e912485daa2715521f894d34679f431b325f9dd562dfe952d057d368"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/review-b.txt",
+          "sha256": "23cac8d0f93e1b994a852ae9a0a5a62c25eb309be9fdf3264212e178651461cf"
+        }
+      ],
+      "head_sha": "70398c397bfc76e9db65154318ef8a6041458c88",
+      "lane": "validated-research",
+      "policy_version": 1,
+      "reason": "Independent exact-head review is complete; any submitted defect has an explicitly reviewed correction in public integration evidence commit 6fb5e83a74fff944e21e7a6619e890fbee736d44. Fresh connector head inventory checked immediately before this record.",
+      "remaining": "Merge gate: full 94-certificate replay, public corpus, new checker and hosted integrity checks must pass on the final combined candidate. Record their exact commit/tree and results in the aggregate PR before merging. No canonical promotion or unproved global-source transfer is authorized by this receipt.",
+      "review_status": "scope_verified",
+      "status": "ready_to_integrate",
+      "watch_paths": {
+        "docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/README.txt": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/integration.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/review-b.txt": "missing",
+        "research/verify_target_b_separable_literature_2026_10_17.py": "missing"
+      },
+      "watch_prs": {}
+    },
+    "89": {
+      "base_commit": "db27b736f33b4db288c8a5e227c03c099d59259a",
+      "checked_at": "2026-10-18T04:06:06.204094+00:00",
+      "coverage": "Complete all-m, three-phase hexagonal proof and finite checker, plus independent correction of the PR87 comparison; all 13 source inputs retained.",
+      "evidence": [
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/README.txt",
+          "sha256": "4808766639c26c136e65bfe9c5c85a2e179ed4db29f52db27346441f33b839f2"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/integration.json",
+          "sha256": "e62a12f7e912485daa2715521f894d34679f431b325f9dd562dfe952d057d368"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/review-a.txt",
+          "sha256": "4e96a9a6048295988b9a5dbab0e6c6b8bcb43c557ac2c91eaf5278da71e5ec44"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/c/corrections/correction-review-receipt.json",
+          "sha256": "ca11faec0492caf7fd08103a484b2a810e801c5207e42ff06f9a7c5c7a08b46a"
+        }
+      ],
+      "head_sha": "aa111eedcd3bc190f991aeaa7f42299948551207",
+      "lane": "validated-research",
+      "policy_version": 1,
+      "reason": "Independent exact-head review is complete; any submitted defect has an explicitly reviewed correction in public integration evidence commit 6fb5e83a74fff944e21e7a6619e890fbee736d44. Fresh connector head inventory checked immediately before this record.",
+      "remaining": "Merge gate: full 94-certificate replay, public corpus, new checker and hosted integrity checks must pass on the final combined candidate. Record their exact commit/tree and results in the aggregate PR before merging. No canonical promotion or unproved global-source transfer is authorized by this receipt.",
+      "review_status": "scope_verified",
+      "status": "ready_to_integrate",
+      "watch_paths": {
+        "docs/research/review-artifacts/merge-2026-10-18/README.txt": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/c/corrections/correction-review-receipt.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/integration.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/review-a.txt": "missing",
+        "research-packages/target-a-full-tube-fan-ledger/README.md": "missing",
+        "research-packages/target-a-full-tube-fan-ledger/SOURCES.json": "missing",
+        "research-packages/target-a-full-tube-fan-ledger/TASK.json": "missing",
+        "research-packages/target-a-full-tube-fan-ledger/VERIFY.json": "missing",
+        "research-packages/target-a-full-tube-fan-ledger/evidence.json": "missing",
+        "research-packages/target-a-full-tube-fan-ledger/verify.py": "missing"
+      },
+      "watch_prs": {}
+    },
+    "90": {
+      "base_commit": "db27b736f33b4db288c8a5e227c03c099d59259a",
+      "checked_at": "2026-10-18T04:06:06.242628+00:00",
+      "coverage": "Full-core Type-II separate-face reconstruction, coefficients, measure/occurrence arguments and scoped arithmetic controls.",
+      "evidence": [
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/README.txt",
+          "sha256": "4808766639c26c136e65bfe9c5c85a2e179ed4db29f52db27346441f33b839f2"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/integration.json",
+          "sha256": "e62a12f7e912485daa2715521f894d34679f431b325f9dd562dfe952d057d368"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/review-c.txt",
+          "sha256": "1b50d0f9b533c2b99520d8aff2de76cc53f966d794c585b8fa882bd4af220955"
+        }
+      ],
+      "head_sha": "3f419d3b6415ade701e00b7fd3dc2a013f8064d6",
+      "lane": "validated-research",
+      "policy_version": 1,
+      "reason": "Independent exact-head review is complete; any submitted defect has an explicitly reviewed correction in public integration evidence commit 6fb5e83a74fff944e21e7a6619e890fbee736d44. Fresh connector head inventory checked immediately before this record.",
+      "remaining": "Merge gate: full 94-certificate replay, public corpus, new checker and hosted integrity checks must pass on the final combined candidate. Record their exact commit/tree and results in the aggregate PR before merging. No canonical promotion or unproved global-source transfer is authorized by this receipt.",
+      "review_status": "scope_verified",
+      "status": "ready_to_integrate",
+      "watch_paths": {
+        "docs/audits/target_c_typeii_separate_face_floor_recheck_2026-10-17.md": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/README.txt": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/integration.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/review-c.txt": "missing",
+        "research/verify_target_c_face_floor_coefficients_2026_10_17.py": "missing"
+      },
+      "watch_prs": {}
+    },
+    "91": {
+      "base_commit": "db27b736f33b4db288c8a5e227c03c099d59259a",
+      "checked_at": "2026-10-18T04:06:06.267607+00:00",
+      "coverage": "Companion reconstruction of the same Type-II proof, independent incidence arithmetic and scope; no duplicate theorem novelty claim.",
+      "evidence": [
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/README.txt",
+          "sha256": "4808766639c26c136e65bfe9c5c85a2e179ed4db29f52db27346441f33b839f2"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/integration.json",
+          "sha256": "e62a12f7e912485daa2715521f894d34679f431b325f9dd562dfe952d057d368"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/review-c.txt",
+          "sha256": "1b50d0f9b533c2b99520d8aff2de76cc53f966d794c585b8fa882bd4af220955"
+        }
+      ],
+      "head_sha": "2d4f2b7930570e989f3f8c76d27fc9aca23f32ac",
+      "lane": "validated-research",
+      "policy_version": 1,
+      "reason": "Independent exact-head review is complete; any submitted defect has an explicitly reviewed correction in public integration evidence commit 6fb5e83a74fff944e21e7a6619e890fbee736d44. Fresh connector head inventory checked immediately before this record.",
+      "remaining": "Merge gate: full 94-certificate replay, public corpus, new checker and hosted integrity checks must pass on the final combined candidate. Record their exact commit/tree and results in the aggregate PR before merging. No canonical promotion or unproved global-source transfer is authorized by this receipt.",
+      "review_status": "scope_verified",
+      "status": "ready_to_integrate",
+      "watch_paths": {
+        "docs/audits/target_c_typeii_face_floor_independent_reconstruction_2026-10-17.md": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/README.txt": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/integration.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/review-c.txt": "missing",
+        "research/verify_target_c_typeii_face_floor_algebra_2026_10_17.py": "missing"
+      },
+      "watch_prs": {}
+    },
+    "93": {
+      "base_commit": "db27b736f33b4db288c8a5e227c03c099d59259a",
+      "checked_at": "2026-10-18T04:06:06.303242+00:00",
+      "coverage": "Fixed-parameter GPI/MCP2 proof and scope; original checker parity defect preserved in review and corrected S8/S3 bytes independently verified.",
+      "evidence": [
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/README.txt",
+          "sha256": "4808766639c26c136e65bfe9c5c85a2e179ed4db29f52db27346441f33b839f2"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/integration.json",
+          "sha256": "e62a12f7e912485daa2715521f894d34679f431b325f9dd562dfe952d057d368"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/review-b.txt",
+          "sha256": "23cac8d0f93e1b994a852ae9a0a5a62c25eb309be9fdf3264212e178651461cf"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/b/repair-addendum.json",
+          "sha256": "993129a35adcc592472c321580c2108011f0f38bafa4a6b0e43c5a0e8f2791d6"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/c/corrections/correction-review-receipt.json",
+          "sha256": "ca11faec0492caf7fd08103a484b2a810e801c5207e42ff06f9a7c5c7a08b46a"
+        }
+      ],
+      "head_sha": "dfdc8b5747cf0e6cadb1237118a28ea09e087296",
+      "lane": "validated-research",
+      "policy_version": 1,
+      "reason": "Independent exact-head review is complete; any submitted defect has an explicitly reviewed correction in public integration evidence commit 6fb5e83a74fff944e21e7a6619e890fbee736d44. Fresh connector head inventory checked immediately before this record.",
+      "remaining": "Merge gate: full 94-certificate replay, public corpus, new checker and hosted integrity checks must pass on the final combined candidate. Record their exact commit/tree and results in the aggregate PR before merging. No canonical promotion or unproved global-source transfer is authorized by this receipt.",
+      "review_status": "scope_verified",
+      "status": "ready_to_integrate",
+      "watch_paths": {
+        "docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/README.txt": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/b/repair-addendum.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/c/corrections/correction-review-receipt.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/integration.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/review-b.txt": "missing",
+        "research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py": "missing"
+      },
+      "watch_prs": {}
+    },
+    "94": {
+      "base_commit": "db27b736f33b4db288c8a5e227c03c099d59259a",
+      "checked_at": "2026-10-18T04:06:06.335104+00:00",
+      "coverage": "Fixed-parameter scope plus separate independent review of the new diagonal MCP2 estimate, uniform constants, propagation and error summation; no varying-tau GPI.",
+      "evidence": [
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/README.txt",
+          "sha256": "4808766639c26c136e65bfe9c5c85a2e179ed4db29f52db27346441f33b839f2"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/integration.json",
+          "sha256": "e62a12f7e912485daa2715521f894d34679f431b325f9dd562dfe952d057d368"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/review-b.txt",
+          "sha256": "23cac8d0f93e1b994a852ae9a0a5a62c25eb309be9fdf3264212e178651461cf"
+        }
+      ],
+      "head_sha": "01be955ed9209f1d4a096148e61851837fa190d4",
+      "lane": "validated-research",
+      "policy_version": 1,
+      "reason": "Independent exact-head review is complete; any submitted defect has an explicitly reviewed correction in public integration evidence commit 6fb5e83a74fff944e21e7a6619e890fbee736d44. Fresh connector head inventory checked immediately before this record.",
+      "remaining": "Merge gate: full 94-certificate replay, public corpus, new checker and hosted integrity checks must pass on the final combined candidate. Record their exact commit/tree and results in the aggregate PR before merging. No canonical promotion or unproved global-source transfer is authorized by this receipt.",
+      "review_status": "scope_verified",
+      "status": "ready_to_integrate",
+      "watch_paths": {
+        "docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/README.txt": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/integration.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/review-b.txt": "missing",
+        "research/verify_target_b_gpi_mcp2_quantifier_audit_2026_10_17.py": "missing"
+      },
+      "watch_prs": {}
+    },
+    "95": {
+      "base_commit": "db27b736f33b4db288c8a5e227c03c099d59259a",
+      "checked_at": "2026-10-18T04:06:06.366603+00:00",
+      "coverage": "All-parameter stationary sparse-exceptional stress fixture under the stated relaxed hypotheses, complete source/KKT checks; global minimality is uncertified.",
+      "evidence": [
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/README.txt",
+          "sha256": "4808766639c26c136e65bfe9c5c85a2e179ed4db29f52db27346441f33b839f2"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/integration.json",
+          "sha256": "e62a12f7e912485daa2715521f894d34679f431b325f9dd562dfe952d057d368"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/review-c.txt",
+          "sha256": "1b50d0f9b533c2b99520d8aff2de76cc53f966d794c585b8fa882bd4af220955"
+        }
+      ],
+      "head_sha": "058df6dc46ba033597d99d6aa4ec6834810b9eb7",
+      "lane": "validated-research",
+      "policy_version": 1,
+      "reason": "Independent exact-head review is complete; any submitted defect has an explicitly reviewed correction in public integration evidence commit 6fb5e83a74fff944e21e7a6619e890fbee736d44. Fresh connector head inventory checked immediately before this record.",
+      "remaining": "Merge gate: full 94-certificate replay, public corpus, new checker and hosted integrity checks must pass on the final combined candidate. Record their exact commit/tree and results in the aggregate PR before merging. No canonical promotion or unproved global-source transfer is authorized by this receipt.",
+      "review_status": "scope_verified",
+      "status": "ready_to_integrate",
+      "watch_paths": {
+        "docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/README.txt": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/integration.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/review-c.txt": "missing",
+        "research/verify_target_c_typeii_sparse_exceptional_stress_2026_10_17.py": "missing",
+        "tasks/target-c-typeii-stress-mass-access.md": "100644 blob 0ee6304df8067268431979420b6890906d957afd\ttasks/target-c-typeii-stress-mass-access.md"
+      },
+      "watch_prs": {}
+    },
+    "96": {
+      "base_commit": "db27b736f33b4db288c8a5e227c03c099d59259a",
+      "checked_at": "2026-10-18T04:06:06.393966+00:00",
+      "coverage": "Supplementary Schur/linkage reconstruction and state delta; unchanged exact-source PR78 independent evidence reused without claiming a new exhaustive run.",
+      "evidence": [
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/README.txt",
+          "sha256": "4808766639c26c136e65bfe9c5c85a2e179ed4db29f52db27346441f33b839f2"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/integration.json",
+          "sha256": "e62a12f7e912485daa2715521f894d34679f431b325f9dd562dfe952d057d368"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/review-a.txt",
+          "sha256": "4e96a9a6048295988b9a5dbab0e6c6b8bcb43c557ac2c91eaf5278da71e5ec44"
+        }
+      ],
+      "head_sha": "6819b4f862508fe843f7a385e2cff992ecf23420",
+      "lane": "validated-research",
+      "policy_version": 1,
+      "reason": "Independent exact-head review is complete; any submitted defect has an explicitly reviewed correction in public integration evidence commit 6fb5e83a74fff944e21e7a6619e890fbee736d44. Fresh connector head inventory checked immediately before this record.",
+      "remaining": "Merge gate: full 94-certificate replay, public corpus, new checker and hosted integrity checks must pass on the final combined candidate. Record their exact commit/tree and results in the aggregate PR before merging. No canonical promotion or unproved global-source transfer is authorized by this receipt.",
+      "review_status": "scope_verified",
+      "status": "ready_to_integrate",
+      "watch_paths": {
+        "docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md": "missing",
+        "docs/research/agent-task-catalog.json": "100644 blob a544e05deae4bbe013d9cb9c6de9ce0c953e9367\tdocs/research/agent-task-catalog.json",
+        "docs/research/priority-state.json": "100644 blob 4397e9ae6443c66945f5bde7d74678f805b9f795\tdocs/research/priority-state.json",
+        "docs/research/review-artifacts/merge-2026-10-18/README.txt": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/integration.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/review-a.txt": "missing",
+        "tasks/README.md": "100644 blob cbf1cdf05835b40320c9433a115d81e9a7add2c7\ttasks/README.md",
+        "tasks/verify-a-schur-linkage-bound.md": "100644 blob 0c34d84d5ac8fae8586dd3ca55c7bd9f55eb1fc9\ttasks/verify-a-schur-linkage-bound.md"
+      },
+      "watch_prs": {}
+    },
+    "97": {
+      "base_commit": "db27b736f33b4db288c8a5e227c03c099d59259a",
+      "checked_at": "2026-10-18T04:06:06.424031+00:00",
+      "coverage": "All-m fixed-wall zero-capacity and linear Oler-slack result, continuous covering proof, full source labels and explicit nonglobality witness.",
+      "evidence": [
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/README.txt",
+          "sha256": "4808766639c26c136e65bfe9c5c85a2e179ed4db29f52db27346441f33b839f2"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/integration.json",
+          "sha256": "e62a12f7e912485daa2715521f894d34679f431b325f9dd562dfe952d057d368"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/review-c.txt",
+          "sha256": "1b50d0f9b533c2b99520d8aff2de76cc53f966d794c585b8fa882bd4af220955"
+        }
+      ],
+      "head_sha": "beddec1de9620741f2a7baff8584afa0b2bd094f",
+      "lane": "validated-research",
+      "policy_version": 1,
+      "reason": "Independent exact-head review is complete; any submitted defect has an explicitly reviewed correction in public integration evidence commit 6fb5e83a74fff944e21e7a6619e890fbee736d44. Fresh connector head inventory checked immediately before this record.",
+      "remaining": "Merge gate: full 94-certificate replay, public corpus, new checker and hosted integrity checks must pass on the final combined candidate. Record their exact commit/tree and results in the aggregate PR before merging. No canonical promotion or unproved global-source transfer is authorized by this receipt.",
+      "review_status": "scope_verified",
+      "status": "ready_to_integrate",
+      "watch_paths": {
+        "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/README.txt": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/integration.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/review-c.txt": "missing",
+        "research/verify_target_c_contact_rhombic_grid_capacity_2026_10_17.py": "missing"
+      },
+      "watch_prs": {}
+    },
+    "98": {
+      "base_commit": "db27b736f33b4db288c8a5e227c03c099d59259a",
+      "checked_at": "2026-10-18T04:06:06.449262+00:00",
+      "coverage": "Finite rational matching overlap, all five source labels, Hall deficiency and separate-matchings scope; no canonical zero-slack source.",
+      "evidence": [
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/README.txt",
+          "sha256": "4808766639c26c136e65bfe9c5c85a2e179ed4db29f52db27346441f33b839f2"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/integration.json",
+          "sha256": "e62a12f7e912485daa2715521f894d34679f431b325f9dd562dfe952d057d368"
+        },
+        {
+          "commit": "6fb5e83a74fff944e21e7a6619e890fbee736d44",
+          "path": "docs/research/review-artifacts/merge-2026-10-18/review-a.txt",
+          "sha256": "4e96a9a6048295988b9a5dbab0e6c6b8bcb43c557ac2c91eaf5278da71e5ec44"
+        }
+      ],
+      "head_sha": "2e4a3e1e73877df4f4756fcb4c7d331dcda1327f",
+      "lane": "validated-research",
+      "policy_version": 1,
+      "reason": "Independent exact-head review is complete; any submitted defect has an explicitly reviewed correction in public integration evidence commit 6fb5e83a74fff944e21e7a6619e890fbee736d44. Fresh connector head inventory checked immediately before this record.",
+      "remaining": "Merge gate: full 94-certificate replay, public corpus, new checker and hosted integrity checks must pass on the final combined candidate. Record their exact commit/tree and results in the aggregate PR before merging. No canonical promotion or unproved global-source transfer is authorized by this receipt.",
+      "review_status": "scope_verified",
+      "status": "ready_to_integrate",
+      "watch_paths": {
+        "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/README.txt": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/integration.json": "missing",
+        "docs/research/review-artifacts/merge-2026-10-18/review-a.txt": "missing",
+        "research/verify_target_a_zero_slack_matching_overlap_2026_10_17.py": "missing"
+      },
+      "watch_prs": {}
+    }
+  },
   "repository": "1337isnot1337/erdos-99",
   "schema_version": 1
 }

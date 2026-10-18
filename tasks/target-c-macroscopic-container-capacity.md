@@ -5,7 +5,9 @@
 Downstream use: The capacity must restore the complete population and reach a valid C-II endpoint. Linear Oler slack alone does not imply even one available site.
 
 Prior evidence:
-- [author-checked](https://github.com/1337isnot1337/erdos-99/blob/beddec1de9620741f2a7baff8584afa0b2bd094f/docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md) at `beddec1de9620741f2a7baff8584afa0b2bd094f`: Submitted fixed-wall example has linear Oler slack and zero insertion capacity. Remaining: No universal source extraction or moved-wall restoration theorem.
+- [agent-audited](../docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md) at `beddec1de9620741f2a7baff8584afa0b2bd094f`: fixed-wall example has linear Oler slack and zero insertion capacity. Remaining: No universal source extraction or moved-wall restoration theorem.
+
+Independent integration reviews: [Target A](../docs/research/review-artifacts/merge-2026-10-18/review-a.txt), [Target B](../docs/research/review-artifacts/merge-2026-10-18/review-b.txt), [Target C](../docs/research/review-artifacts/merge-2026-10-18/review-c.txt).
 
 **Track / priority:** target-c / direct frontier; selection weight 3 (attention only).
 

@@ -7,8 +7,9 @@ Only open investigations enter the random draw. Completed cards remain available
 by name, with a specific successor. Unknown coverage does not establish novelty.
 
 PR #78 has a completed independent finite audit and merger replay.
-Its global source bridge remains open. Other submitted results retain their
-recorded review status; a completed scope audit does not accept a separate new claim.
+Its global source bridge remains open. PR #96 supplies a [supplementary reconstruction](../docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md).
+The PR #94 diagonal audit is also complete; continue with actual multi-grain transfer.
+Read the [integration reviews](../docs/research/review-artifacts/merge-2026-10-18/review-b.txt) for the accepted scope of the new results.
 
 For controlled batches, assign all producer and reviewer slots in one draw.
 Keep each worker's investigation identity in its handoff.
@@ -41,7 +42,7 @@ Weights allocate attention; they are not success probabilities.
 | [target-c-threshold-packet-cross-shore](target-c-threshold-packet-cross-shore.md) | target-c | open | Under the exact threshold-staircase hypotheses, can the opposite-shore cut equations force exact phase or a uniform aggregate packet-resultant payment, or can boundary/layer rows absorb the internal packet load? |
 | [target-c-capacity-collective-refill](target-c-capacity-collective-refill.md) | target-c | open | Can any fixed-frame vacancy/refill theorem be extracted at sufficient scale from every canonical C-II source to give a same-cardinality competitor or admissible strict endpoint after accounting for exact capacity barriers and every lower and upper pair constraint? |
 | [target-c-branch-aware-atomic-gap](target-c-branch-aware-atomic-gap.md) | target-c | open | Can the unreviewed 0.0071 full-core Type-II matched train-measure gap be propagated through Section 171, outer energy, complement-rhombus incidence, and low-t structure with every exact branch hypothesis retained? |
-| [audit-target-b-gpi-diagonal](audit-target-b-gpi-diagonal.md) | independent-audit | open | Does PR #94 justify lambda_D=D^(-kappa), 0<kappa<(1-eta)/2, with uniform constants and valid angular-error summation, while keeping GPI restricted to fixed positive tau? |
+| [audit-target-b-gpi-diagonal](audit-target-b-gpi-diagonal.md) | independent-audit | completed | Does PR #94 justify lambda_D=D^(-kappa), 0<kappa<(1-eta)/2, with uniform constants and valid angular-error summation, while keeping GPI restricted to fixed positive tau? |
 | [verify-a-source-capacity-coupling](verify-a-source-capacity-coupling.md) | independent-verification | open | Can an exact source-capacitated checker test a proposed Section-168 coupling using both actual incidence maps, without identifying independent matchings? |
 
 [Factorized planar escape](target-c-factorized-planar-escape.md) remains an adjacent research task outside this random catalogue.

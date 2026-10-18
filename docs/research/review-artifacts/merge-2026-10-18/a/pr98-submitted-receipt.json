@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-I",
+    "-B",
+    "/tmp/erdos99-merge-20261018-review-a/pr98-submitted.py"
+  ],
+  "timeout_seconds": 10,
+  "elapsed_seconds": 0.023790678000011667,
+  "returncode": 0,
+  "stdout_sha256": "bd7e329a6fbeb60e574601d078db0f8dfb30e5807b4d731b038b530e67c4a134",
+  "output": "PASS: all five source labels are unit-separated; exact source diameter is 19/2\nPASS: X is a nondegenerate unit-separated triangle; both lattice sites lie strictly inside\nPASS: unique X-to-A and Y-to-A matchings; image intersection has size 2\nPASS: combined five-target conflict graph has three source neighbors and maximum matching size 3\nLIMIT: incidence geometry only; no global optimum, source-capacity premise, or Schur matrix\n"
+}

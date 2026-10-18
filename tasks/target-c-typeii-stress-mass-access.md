@@ -5,7 +5,9 @@
 Downstream use: A result must extract stress-relevant motion or a globality-specific exclusion. An unweighted o(D) exceptional-edge count cannot pay a stress-mass term.
 
 Prior evidence:
-- [author-checked](https://github.com/1337isnot1337/erdos-99/blob/058df6dc46ba033597d99d6aa4ec6834810b9eb7/docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md) at `058df6dc46ba033597d99d6aa4ec6834810b9eb7`: Submitted nonglobal family places all normalized diameter mass on o(D) exceptional edges. Remaining: Global minimality is not supplied; a full-source finite descent remains open.
+- [agent-audited](../docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md) at `058df6dc46ba033597d99d6aa4ec6834810b9eb7`: stationary family without a global-minimality certificate places all normalized diameter mass on o(D) exceptional edges. Remaining: Global minimality is not supplied; a full-source finite descent remains open.
+
+Independent integration reviews: [Target A](../docs/research/review-artifacts/merge-2026-10-18/review-a.txt), [Target B](../docs/research/review-artifacts/merge-2026-10-18/review-b.txt), [Target C](../docs/research/review-artifacts/merge-2026-10-18/review-c.txt).
 
 **Track / priority:** target-c / direct frontier; selection weight 4 (attention only).
 
@@ -38,11 +40,13 @@ Advances only the stated route obligation; global closure still requires all can
 - [docs/targets/target-c/CURRENT.md](../docs/targets/target-c/CURRENT.md): Audit 173 supplies grids/routes but no exceptional stress-mass control, compatible motion, or refill
 - [AGENTS.md](../AGENTS.md): do not infer Schur or source-specific nullity from planarity or generic rank alone
 
+The reviewed [sparse-exceptional stress model](../docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md) has `o(D)` exceptional diameter edges carrying all normalized diameter mass. It retains triangle-freeness, a near-circular hull, leading hexagonal density and exact KKT balance. Global minimality and canonical normal form are not established; it does not refute the canonical Type-II theorem.
+
 Source PR #950 adds an **unreviewed** route candidate: positive-length returns from long-train roots have an `O(D)` length quantile; a positive Type-II subfamily reaches one common coherent grid; and a separate rigidity/Menger linkage runs from loaded attachments to that grid. It does **not** control positive KKT mass on exceptional ports: the report's stress identity yields no uniform price on selected paths. The return and attachment-to-grid families may have disjoint endpoint labels. See the [full track](../docs/research/tracks/target-c-train-returns-rigidity-grid.md) before repeating either route; the next obligation is endpoint overlap or direct flow, then a feasible full-source competitor.
 
 ## Approach and first bounded experiment
 
-Review PR #95 and retain its sparse-edge full-mass fixture. For one proposed globality-specific lemma, write the exact stress-supported direction and every lower/upper pair inequality. Test inactive upper pairs and finite integration before using edge counts as mass bounds.
+Retain the reviewed PR #95 its sparse-edge full-mass fixture. For one proposed globality-specific lemma, write the exact stress-supported direction and every lower/upper pair inequality. Test inactive upper pairs and finite integration before using edge counts as mass bounds.
 
 Methods: weighted incidence and stress-mass accounting, exact finite stress-polytope examples
 
@@ -60,6 +64,7 @@ Stop if the proof assigns equal weight to diameter edges, drops the exceptional 
 ## Reproduction
 
 ```sh
+python research/verify_target_c_typeii_sparse_exceptional_stress_2026_10_17.py
 python tools/check_public.py
 python tools/task_context.py target-c-typeii-stress-mass-access
 ```

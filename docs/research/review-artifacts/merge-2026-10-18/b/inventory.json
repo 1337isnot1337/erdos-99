@@ -1,0 +1,198 @@
+{
+  "86": {
+    "head": "a392a910899b06d20df6c7c29010896223ebfa70",
+    "tree": "8cde7cdc2b1db53286c2f4641a735f753d0b1ceb",
+    "parent": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+    "files": {
+      "docs/reports/target_b_interface_capacity_2026-10-17.md": {
+        "sha256": "c7942820c07dacbbbb931bec9fe408f15f7574c6c2c4814d18baa67c3cb8d31a",
+        "git_mode_blob": "100644 blob d2cb6dfa0330978a7c1febd2fd6714fd10ce8f9a\tdocs/reports/target_b_interface_capacity_2026-10-17.md"
+      },
+      "docs/state/artifact-index.jsonl": {
+        "sha256": "7d7a2737ef55982a18e49146800d092f3635b821906c17d2ef030a07a24343de",
+        "git_mode_blob": "100644 blob e23310259e5e27571dcf113742b057378f75828c\tdocs/state/artifact-index.jsonl"
+      },
+      "reading/docs/reports/target_b_interface_capacity_2026-10-17.md": {
+        "sha256": "2ee56cab70a50d051bfa9aa368f7f041e8176feebe03b3e499351906c86c303f",
+        "git_mode_blob": "100644 blob d66796edddec92dc92e82a673bb9ed6e0760a257\treading/docs/reports/target_b_interface_capacity_2026-10-17.md"
+      },
+      "reading/manifest.json": {
+        "sha256": "8dad153b1a6e7457a78b7fc75b41a75437f1cfb585e9b7106ab0706ee241cf92",
+        "git_mode_blob": "100644 blob c59a7f028a38bffceb595f726442dfb107a8c1f0\treading/manifest.json"
+      },
+      "research/README.md": {
+        "sha256": "b3b59d0374d31795554253525a81fc63777234c2dc7bc8249d23f1dced9d77af",
+        "git_mode_blob": "100644 blob 6ee35c16549929f1b93c4a697730a582700fba04\tresearch/README.md"
+      },
+      "research/target_b_interface_capacity_2026_10_17.json": {
+        "sha256": "7e36f49b0664e72822d0ec701262bf416332d98575a8122863d692209a831f80",
+        "git_mode_blob": "100644 blob 49cf816834931e93e4bd516748bc9e016289a9ec\tresearch/target_b_interface_capacity_2026_10_17.json"
+      },
+      "research/verify_target_b_interface_capacity_2026_10_17.py": {
+        "sha256": "a7781b2ee7d57bef89ca0a2f7d439e18be10de394caae9695318d84d74cfb65d",
+        "git_mode_blob": "100644 blob c93be19f1cfb3de4fb68d8bf25f59544b8c724cf\tresearch/verify_target_b_interface_capacity_2026_10_17.py"
+      }
+    },
+    "source_pins": {
+      "docs/STATE.md": {
+        "expected": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+        "actual_at_head": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+        "current_main": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+        "head_match": true,
+        "changed_on_main": false
+      },
+      "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md": {
+        "expected": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+        "actual_at_head": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+        "current_main": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+        "head_match": true,
+        "changed_on_main": false
+      },
+      "docs/reports/target_b_multicomponent_penetration_budget_2026-09-05.md": {
+        "expected": "d855c448a3daa7d09962a0e4089aeaf3d50eca15c5ea2dadc10eb6c9bd8ae843",
+        "actual_at_head": "d855c448a3daa7d09962a0e4089aeaf3d50eca15c5ea2dadc10eb6c9bd8ae843",
+        "current_main": "d855c448a3daa7d09962a0e4089aeaf3d50eca15c5ea2dadc10eb6c9bd8ae843",
+        "head_match": true,
+        "changed_on_main": false
+      },
+      "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md": {
+        "expected": "a1ecda90c62bbe13b93a1c4091fb0ec333255a27014c6536a2b03d588608e5fb",
+        "actual_at_head": "a1ecda90c62bbe13b93a1c4091fb0ec333255a27014c6536a2b03d588608e5fb",
+        "current_main": "a1ecda90c62bbe13b93a1c4091fb0ec333255a27014c6536a2b03d588608e5fb",
+        "head_match": true,
+        "changed_on_main": false
+      },
+      "docs/reports/target_b_trimmed_grid_phase_star_exclusion_2026-09-05.md": {
+        "expected": "4013536ad4ca97b13f9c0c7d39ca6911cec3f1fc8f1897cf406b5ae3eba3ab86",
+        "actual_at_head": "4013536ad4ca97b13f9c0c7d39ca6911cec3f1fc8f1897cf406b5ae3eba3ab86",
+        "current_main": "4013536ad4ca97b13f9c0c7d39ca6911cec3f1fc8f1897cf406b5ae3eba3ab86",
+        "head_match": true,
+        "changed_on_main": false
+      },
+      "docs/research/agent-task-catalog.json": {
+        "expected": "2103f415963d610bc66f2473c9a057b7ed5bb082febc6c64b5aab90ea46f93b0",
+        "actual_at_head": "2103f415963d610bc66f2473c9a057b7ed5bb082febc6c64b5aab90ea46f93b0",
+        "current_main": "6b6a1bf8b262d6e5018a8cb67b3f1784becfe5953c060f9fb3e606b2d96650e2",
+        "head_match": true,
+        "changed_on_main": true
+      },
+      "docs/research/onboarding-evaluation-2026-10-15.md": {
+        "expected": "1b252282e09a02c2d7af45d3d81fb4b2d0c5a78c0d9cd0fa6c0186f3da10a997",
+        "actual_at_head": "1b252282e09a02c2d7af45d3d81fb4b2d0c5a78c0d9cd0fa6c0186f3da10a997",
+        "current_main": "1b252282e09a02c2d7af45d3d81fb4b2d0c5a78c0d9cd0fa6c0186f3da10a997",
+        "head_match": true,
+        "changed_on_main": false
+      },
+      "docs/research/priority-state.json": {
+        "expected": "74262c84658453dbe99752475a54a891203aaa86509acdfd19a3f613f286c4b9",
+        "actual_at_head": "74262c84658453dbe99752475a54a891203aaa86509acdfd19a3f613f286c4b9",
+        "current_main": "e65bffa6b7a1f7f9cd8e3abc55bf130040913b6e20d921e421b0d279c9936c80",
+        "head_match": true,
+        "changed_on_main": true
+      },
+      "docs/targets/target-b/01-jammed-rhombic-branch.md": {
+        "expected": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+        "actual_at_head": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+        "current_main": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+        "head_match": true,
+        "changed_on_main": false
+      },
+      "docs/targets/target-b/README.md": {
+        "expected": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+        "actual_at_head": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+        "current_main": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+        "head_match": true,
+        "changed_on_main": false
+      },
+      "research/onboarding_two_grain_audit.py": {
+        "expected": "ddad086f6930aaac4a694a42e58719dd7694dda5c3d850fade48d64fca8aa573",
+        "actual_at_head": "ddad086f6930aaac4a694a42e58719dd7694dda5c3d850fade48d64fca8aa573",
+        "current_main": "ddad086f6930aaac4a694a42e58719dd7694dda5c3d850fade48d64fca8aa573",
+        "head_match": true,
+        "changed_on_main": false
+      }
+    },
+    "source_pins_all_match": true
+  },
+  "88": {
+    "head": "70398c397bfc76e9db65154318ef8a6041458c88",
+    "tree": "f37af51e376dfbb22113b3a547e51b818c201bf9",
+    "parent": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+    "files": {
+      "docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md": {
+        "sha256": "30933b9534a4afc5b7086678b2b86863c717ae9c42a9e1e5f467ea178edccce5",
+        "git_mode_blob": "100644 blob 069950ec241297e0ed813079bb446725fc678336\tdocs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md"
+      },
+      "docs/state/artifact-index.jsonl": {
+        "sha256": "a2fbbe26fa41627f6ea73d8a1e81305c005108029a2bd59dcfff230ed7ec0ae5",
+        "git_mode_blob": "100644 blob 02a66a4888b617cbd47b17155d26bb730f31126f\tdocs/state/artifact-index.jsonl"
+      },
+      "reading/docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md": {
+        "sha256": "ce11fb8fae401aec3ec2d4638938c2ab14d86a08d95b93ae40af817f429e7d8a",
+        "git_mode_blob": "100644 blob fe5f93394d24c6c56e9174d9a330424e6f23811f\treading/docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md"
+      },
+      "reading/manifest.json": {
+        "sha256": "f25005a3dadddb45af6fe9f8e606fbcc27585664b00b810887df576664450585",
+        "git_mode_blob": "100644 blob c599dc98d4bead1f6edfd4a7b4990125850bae7d\treading/manifest.json"
+      },
+      "research/verify_target_b_separable_literature_2026_10_17.py": {
+        "sha256": "bf67833d19a34e9893a29fb03ebe9c4e8c57ad7baf4814988fa03d8582f18c45",
+        "git_mode_blob": "100644 blob 25c88a9db4b491f25285af04abbd1e13e43a57f1\tresearch/verify_target_b_separable_literature_2026_10_17.py"
+      }
+    }
+  },
+  "93": {
+    "head": "dfdc8b5747cf0e6cadb1237118a28ea09e087296",
+    "tree": "f0f3a600eee06571e717611cd9ed36db0388dd44",
+    "parent": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+    "files": {
+      "docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md": {
+        "sha256": "6777fd8c89349c4b9fc8d9f678ffd057babd624a5d56d3c1c092ea2862dc79c8",
+        "git_mode_blob": "100644 blob 1fd835692e4dc462cb5b69e173675baac213a422\tdocs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md"
+      },
+      "docs/state/artifact-index.jsonl": {
+        "sha256": "24a14a64a95503b7605c9cf3ddb5a6c833e5526e7240a7dc67fe7663e0e476d0",
+        "git_mode_blob": "100644 blob ffe3d8d9e87692b7b482741a378795f916c02e4d\tdocs/state/artifact-index.jsonl"
+      },
+      "reading/docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md": {
+        "sha256": "9d8e3017aeb942e39de16187067e2972f5cacf350b731edb6cbe0cd2977bdd81",
+        "git_mode_blob": "100644 blob b8cbd7a1e56b2b8e32fd3f1e3fa91ac8aa1b8423\treading/docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md"
+      },
+      "reading/manifest.json": {
+        "sha256": "b0b2559b4dd119dce5a2b86a2f54d51f6c461df36b11ecd6d33e59bd40d01bc7",
+        "git_mode_blob": "100644 blob f3d193873d075098ed26b6edfc841cc42ba9e2dd\treading/manifest.json"
+      },
+      "research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py": {
+        "sha256": "83f807afcc05b6cd3adfc6a4a4299d38167045b388082711b28448811bab7d3d",
+        "git_mode_blob": "100644 blob 0060922d9bcf2e059bd08d2bbf2f3d28446b8229\tresearch/verify_target_b_gpi_scope_arithmetic_2026_10_17.py"
+      }
+    }
+  },
+  "94": {
+    "head": "01be955ed9209f1d4a096148e61851837fa190d4",
+    "tree": "dee40fc6b694325ff6117d7f77b5c5928c35f655",
+    "parent": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+    "files": {
+      "docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md": {
+        "sha256": "2e6b7243fcba18e9cdc7da055e5acc9216a9fdd64fbd113af83741f9ff37278f",
+        "git_mode_blob": "100644 blob ed254061bef96764c39768b998152ff80d1bfda6\tdocs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md"
+      },
+      "docs/state/artifact-index.jsonl": {
+        "sha256": "b14889e4c05eea55e4381f9de41778cdcf2b10450c6142cc39cb0a06a3db08c4",
+        "git_mode_blob": "100644 blob 566cc84e804c50daabc8884b90beafa6d709365b\tdocs/state/artifact-index.jsonl"
+      },
+      "reading/docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md": {
+        "sha256": "6f03bc41a9c54c50f3643d14ada279c9bf517a5163cd640ecf7cf999cef3a429",
+        "git_mode_blob": "100644 blob 6b088285a9f4eebd783b0135d6ca3cb29921dbae\treading/docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md"
+      },
+      "reading/manifest.json": {
+        "sha256": "7781953ec710b7ea0deff61ea18aeb5aa9cce567475421c98106fe5c5d74b83f",
+        "git_mode_blob": "100644 blob c74679acd11a94eeb6ac4d5bee0f1b220c03960d\treading/manifest.json"
+      },
+      "research/verify_target_b_gpi_mcp2_quantifier_audit_2026_10_17.py": {
+        "sha256": "b60edb3d3bb57788510dc64f27b5f954319192b8dcf0328b0534b279ea350a60",
+        "git_mode_blob": "100644 blob c1d49339084162618f51c49b138f6fbacebe7924\tresearch/verify_target_b_gpi_mcp2_quantifier_audit_2026_10_17.py"
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "repository": "1337isnot1337/erdos-99",
+  "base_commit": "db27b736f33b4db288c8a5e227c03c099d59259a",
+  "fresh_open_inventory_source": "GitHub connector REST GET /repos/1337isnot1337/erdos-99/pulls?state=open&per_page=100",
+  "fresh_open_inventory_time": "2026-10-18T02:17:40Z",
+  "original_heads": [
+    {
+      "number": 86,
+      "head_sha": "a392a910899b06d20df6c7c29010896223ebfa70",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/86"
+    },
+    {
+      "number": 88,
+      "head_sha": "70398c397bfc76e9db65154318ef8a6041458c88",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/88"
+    },
+    {
+      "number": 89,
+      "head_sha": "aa111eedcd3bc190f991aeaa7f42299948551207",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/89"
+    },
+    {
+      "number": 90,
+      "head_sha": "3f419d3b6415ade701e00b7fd3dc2a013f8064d6",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/90"
+    },
+    {
+      "number": 91,
+      "head_sha": "2d4f2b7930570e989f3f8c76d27fc9aca23f32ac",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/91"
+    },
+    {
+      "number": 93,
+      "head_sha": "dfdc8b5747cf0e6cadb1237118a28ea09e087296",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/93"
+    },
+    {
+      "number": 94,
+      "head_sha": "01be955ed9209f1d4a096148e61851837fa190d4",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/94"
+    },
+    {
+      "number": 95,
+      "head_sha": "058df6dc46ba033597d99d6aa4ec6834810b9eb7",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/95"
+    },
+    {
+      "number": 96,
+      "head_sha": "6819b4f862508fe843f7a385e2cff992ecf23420",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/96"
+    },
+    {
+      "number": 97,
+      "head_sha": "beddec1de9620741f2a7baff8584afa0b2bd094f",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/97"
+    },
+    {
+      "number": 98,
+      "head_sha": "2e4a3e1e73877df4f4756fcb4c7d331dcda1327f",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/98"
+    }
+  ],
+  "reviewers": [
+    "/root/merge_review_a",
+    "/root/merge_review_b",
+    "/root/merge_review_c"
+  ],
+  "canonical_promotion": false,
+  "theorem_state_unchanged": true,
+  "corrected_prs": [
+    89,
+    93
+  ],
+  "context_pin_refresh_prs": [
+    86,
+    89
+  ],
+  "catalogue_revision": "public-frontier.9",
+  "completed_investigations": [
+    "audit-target-b-gpi-scope",
+    "audit-target-c-typeii-face-floor",
+    "verify-a-schur-linkage-bound",
+    "audit-target-b-gpi-diagonal"
+  ],
+  "reviewed_repair_files": {
+    "research/verify_target_b_interface_capacity_2026_10_17.py": {
+      "sha256": "8e285768a7ffbd325243231f10ee721e6e128a4766e42a4f61e50906aaafe158",
+      "git_blob_sha1": "4df224a9bb96bd3faa5475a327b291d2bac8fc2b",
+      "mode": "0o644"
+    },
+    "research/target_b_interface_capacity_2026_10_17.json": {
+      "sha256": "43b3bc8e405a904206a765e7553d573d6fe3ad6cde0b4d5f27920b4ef51df3c5",
+      "git_blob_sha1": "40fbbec72201f2038a2a719e729b3bf37f887c0f",
+      "mode": "0o644"
+    },
+    "research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py": {
+      "sha256": "f78911648fb274ed3ba00d4886a377f399d504e4847016c8f9348672d7ddbc77",
+      "git_blob_sha1": "e1b86644cddca82c930cfaed318a08af087fe1bf",
+      "mode": "0o644"
+    },
+    "docs/research/agent-task-catalog.json": {
+      "sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+      "git_blob_sha1": "6b826fcc5015e74317487a419d09d358a92ebcf7",
+      "mode": "0o644"
+    },
+    "docs/research/priority-state.json": {
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "git_blob_sha1": "ed8e5c01d75c77a3c420cc3e3b6c4f06a2c38df8",
+      "mode": "0o644"
+    },
+    "docs/reports/target_b_interface_capacity_2026-10-17.md": {
+      "sha256": "b8242aa0efaea70bc0bd02321785a14d19779a11eef3d13efc487a4ecc6e7179",
+      "git_blob_sha1": "701cdfb05357e02c136704e0b6fc6e9a9132c0d0",
+      "mode": "0o644"
+    },
+    "docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md": {
+      "sha256": "1964866139d247a12878cb3a86f7a4eab63f146b13926409010261ce83cfa8dc",
+      "git_blob_sha1": "ee8a109d6408311f9f6fa2419f5e2819d73e95bb",
+      "mode": "0o644"
+    }
+  },
+  "operational_gate": "All source/proof corrections reviewed. Required full94, public corpus, submitted checker and hosted checks must pass on the final integration candidate before merger; exact commit/tree and results are attached to the aggregate PR."
+}

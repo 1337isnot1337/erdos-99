@@ -1,0 +1,343 @@
+INDEPENDENT AI-AGENT MATHEMATICAL REVIEW — ERDOS99 PR86, PR88, PR93, PR94
+Date: 2026-10-18
+Reviewer/session: /root/merge_review_b
+Model: GPT-6 Astra Pro (runtime-provided identity)
+Independence: I did not originate, edit, or verify the submitted proofs/checkers
+before this assigned review. I inspected immutable blobs and wrote only separate
+review files and a fresh independent checker under this /tmp directory. Root
+owns any repair and integration. No GitHub action was performed by this reviewer.
+
+Review main: db27b736f33b4db288c8a5e227c03c099d59259a
+Submitted scientific source: e396ea07887dd0528b817ce4e656ff0e6b01f8fb
+Theorem state: 2026-10-15.publication.2; priority public-frontier.3.
+Read: AGENTS.md, docs/REVIEW_POLICY.md, docs/STATE.md, problem statement,
+bottleneck brief, priority state, autoresearch.md, PR-intake policy, Target B
+route, all four exact submissions, their checkers, fixture and metadata diffs,
+and the scientific prerequisites listed in scientific-inputs.json.
+
+ORIGINAL EXACT-HEAD DECISIONS
+
+PR86 a392a910899b06d20df6c7c29010896223ebfa70 — PASS for the abstract
+incidence theorem, its conditional PC1/PC3 substitution, and exact finite
+evidence. All geometric-realization, source-extraction, positive-gain, virtual
+area and topology limitations must remain. The fixture is source-correct at
+this head. Current-main scheduling pins need an explicit execution-context
+refresh before a live-tree fixture replay; this is an integration obligation,
+not a defect of the submitted mathematical theorem.
+
+PR88 70398c397bfc76e9db65154318ef8a6041458c88 — PASS for the stated primary
+source transfers, independent disk separability bound, every-global-minimizer
+separability exclusion for N >= 153, deletion/convex-partition consequences,
+and the exact nonglobal regressions. No global Target B closure follows.
+
+PR93 dfdc8b5747cf0e6cadb1237118a28ea09e087296 — CONDITIONAL. The proof and
+fixed-parameter scope audit pass, but the claimed exact pi lower-bound
+certificate fails: the checker reverses alternating-series parity. The local
+repair below must be applied and pinned before accepting the repaired artifact.
+The original script exits 0 despite the invalid certified-bound assertion.
+
+PR94 01be955ed9209f1d4a096148e61851837fa190d4 — PASS for fixed-lambda
+summability and the NEW diagonal MCP2 consequence, under the explicit Section-50
+uniform constants and pure-disk/PC3 hypotheses. This is an independent review of
+the new diagonal estimate. The fixed-tau/dominant-component GPI restrictions
+remain. The diagonal result does not yield a varying-tau GPI theorem or a global
+multi-grain shell estimate.
+
+No canonical promotion is proposed or certified by this receipt. Artifact
+merging, task-card completion and theorem lifecycle are distinct. Level I and
+Target B remain open. Full final-tree certificate replay belongs to root.
+
+1. PR86: COMPLETE RECONSTRUCTION AND ATTACKS
+
+Let U be the union of penetration sets X_j. Since grid vertex sets are disjoint,
+each edge lies in at most two X_j. An edge in two sets joins two retained
+components and is therefore deleted. Internal grid edges are in no X_j,
+including those for other components. If b counts double uses and u counts
+unclaimed non-grid edges, disjoint counting gives R=G+sum|X_j|-b+u.
+The restrictions b <= e_del and 2b <= sum|X_j| give both the deletion-budget
+and half-use bounds. U also contains each X_j, giving the maximum-demand bound.
+Real lower demands are allowed; integer demands permit ceiling of the half sum.
+
+For two grids, a cap I <= K only bounds the overlap from above; it cannot
+force any interface edge to exist. This gives cost at least
+max(p1,p2,p1+p2-K). For actual I, all I physical shared edges count whether
+charged or not, and each shore needs at least (pj-I)_+ private edges. The cost
+is I+(p1-I)_++(p2-I)_+. Each stated formula is attained in a simple-edge
+inventory when the explicitly stated slot-capacity conditions hold.
+
+I checked the constructive cap optimizer. For p1 >= p2 and K <= p2,
+I_star=K and cost=p1+p2-K. For K>p2, capacity feasibility gives
+p2 <= I_star <= min(K,p1), so cost=p1. The proposed maximum of three terms
+indeed satisfies these bounds, including zero demand and zero private capacity.
+This proves sharpness in the incidence model; it supplies no planar realization.
+
+For PC3 write c=2/sqrt(3), aj=dj(Mj'+bj'-cD-error_j). The positive part gives
+pj >= aj-(c-1)E_del(Hj). Since sum E_del(Hj) <= 2 e_del, the additive branch
+of the new union bound yields R >= G+sum aj-(2c-1)e_del. The coefficient
+2c-1=4/sqrt(3)-1 is correct. The fixed-lambda summed-error argument is the
+same uniform argument reviewed below. No positive excess is forced by counting.
+
+Adversarial controls: I checked the actual-I/cap distinction, double charges
+outside the deletion ledger, internal-grid exclusion, feasibility when shared
+capacity is insufficient, and zero-demand grids of arbitrary size. The report
+explicitly prevents interpreting finite extremizers as embedded rhombic disks.
+The m=2-grain minimal double-use witness has R=3 but naive sum 4, correctly
+demonstrating only failure of uncorrected addition.
+
+Submitted replay: 30 shore/pruned configurations, 8,336,550 labelled two-grain
+states, 15,625 three-grain states, 5,964 exact-I and 5,964 cap cases, fixture
+matched. Code inspection confirmed independent labelled-state and multinomial
+engines, explicit exceptions (not assert), no network/third-party imports and
+no geometric inference from histogram agreement.
+
+My separate oracle optimizes physical edge subsets before assigning any
+charges, instead of using the submitted five-state histogram. It passes all
+96 inventories S=0..5, T1,T2=0..3, 14,175 physical subsets, and 12,180 exact-I
+plus 12,180 cap-demand cases. This includes degenerate inventories absent from
+the positive-shore submitted domain. See independent_checks.py/results.
+
+2. PR88: PRIMARY SOURCES, GLOBAL QUANTIFIERS AND REGRESSIONS
+
+Primary sources actually inspected:
+(a) K. J. Boroczky and I. Z. Ruzsa, Note on an inequality of Wegner,
+author manuscript January 2, 2007, printed pp. 2-3, equation (2) and Theorem 1.1:
+https://www.renyi.hu/~carlos/wegner.pdf [web ref turn14view0].
+(b) K. Bezdek and Z. Langi, Bounds for totally separable translative packings
+in the plane, arXiv:1710.06886v1, Theorem 1, equation (2), definitions and proof:
+https://arxiv.org/html/1710.06886v1 [web refs turn16view0, turn18view0].
+The versioned PDF reader failed; the versioned primary HTML supplied the theorem.
+(c) L. De Luca and G. Friesecke, final author PDF, Sections 2.3-2.4,
+equation (1.5), Theorem 3.1, equations (3.4),(3.8):
+https://cvgmt.sns.it/media/doc/paper/3321/DLF-final.pdf
+[web refs turn14view2, turn16view1, turn16view2].
+I checked theorem text, not just abstracts or secondary summaries. The report's
+two downloaded-PDF hashes were not independently fetched; they remain author
+provenance assertions. This limitation does not affect the inspected statements.
+
+Normalization is correct. Scaling center separation 1 by 2 gives unit-radius
+disks, center hull 2K and disk hull 2K+B1 of area 4A_K+2P+pi. Wegner then yields
+A_K+P/2 >= a0(N-1)+(2-sqrt(3))W_N/4. Combined with Oler this is exactly the
+positive-part surplus bound claimed; it is far weaker than the desired shell
+bound. For radius 1/2 disks, the minimal circumscribed parallelogram has area 1,
+and Minkowski perimeter is 2P, giving the separable formula N<=A_K+P/2+1.
+The source requires total separability; triangle-free contacts are not enough.
+For HR, unit separation satisfies the final paper's minimum-distance and planar
+bond-range conditions. Elastic/nonbond terms vanish for the HR contact energy.
+The graph face/perimeter/triangulation conventions match the report.
+
+Independent proof reconstruction of the disk subcase: a separator line avoids
+every disk interior, hence all centers lie outside its open width 1 strip.
+The two hull slices at y=+/-1/2 form bases of a contained trapezoid, supplying
+area at least half the sum of the base lengths. The two side boundary arcs
+each span vertical distance 1, supplying total length at least 2. These combine
+to F(L)>=F(L+)+F(L-) for F=A+P/2+1. Hereditary separability and convex area/
+perimeter monotonicity permit induction. Thickening and passing to the limit
+handles a segment hull, point slice or endpoint tangency. No unproved
+crystallization theorem enters this argument.
+
+For every full global minimizer, the Section 36 lattice comparison is strict:
+an open disk with translated lattice count of mean N-1 has nonconstant
+integer-valued count on sets of positive measure, so some translate contains
+N points and diameter strictly below its diameter 2r. Thus D^2<c(N-1).
+Together with isodiametry and P<=pi D, separability implies, for u=N-1,
+(1-a0)u < sqrt(2pi sqrt(3))sqrt(u)/2. Squaring is legitimate for u>0.
+The exact threshold is pi(24+14sqrt(3)); the rational upper 15928/105 is below 152.
+Therefore every global minimizer at every N>=153 is nonseparable. This statement
+does not identify a unit triangle in the remaining nonseparable configurations.
+
+For any separable subset of the same source, the same diameter bound yields
+k>=N-1-pi D^2/4-pi D/2. Substituting the strict lattice upper bound in the
+two indicated ways gives both inequalities (5a), including
+k>pi(2sqrt(3)-3)D^2/12-pi D/2. Hence boundary-order deletion is impossible
+along unbounded global sources. This counts omitted labels; it does not
+authorize dropping them from a competitor. For a finite positive-area convex
+partition, summed cell area is A_K and summed perimeter is P+2T. Applying the
+same center-container inequality to each assigned subset gives exactly (5b).
+No claim is made that canonical grains form such cells or are separable.
+
+All-m witness reconstruction: c_m=(m^2-1)/(2m^2) lies in (0,1/2), and
+q(a,b)-(1-c_m)(a^2+b^2)=c_m(a+b)^2>=0. If both integer coordinates are
+nonzero, q>1; axis contacts are exactly the four unit steps. Thus the square
+contact graph and face/Euler counts hold for all m>=2. Rationalization gives
+m^2(s_m-a0)=(1/2-1/(4m^2))/(s_m+a0)<1/(2sqrt(3)), while the shell target
+is sqrt(3)m. The forced separator for the tangent 0,u pair is x=1/2 and cuts
+the v-disk, proving actual nonseparability. Maximizing the convex pair quadratic
+over the difference square gives D_m^2=3m^2-1; the full square-grid replacement
+has D^2=2m^2. Every source witness is therefore explicitly nonglobal.
+
+The triangular replacement gains exactly m^2 short-diagonal contacts but raises
+the long diagonal. This cleanly separates contact-energy improvement from
+minimum diameter. On a pure rhombic disk, mu=R and the HR identity is just
+Euler counting. With h simple holes and no omitted labels, the paper's graph
+faces fill those holes; chi_g=1 while chi_R=1-h, and mu gains sum(kj-3).
+The resulting identity agrees with the report. Substituting chi_R into the
+paper's original formula would lose 3h, detected by the explicit finite control.
+
+Submitted checker passed 63 all-difference source/competitor sizes and 44,220
+direct label pairs, including triangle, overlap and wrong-Euler negative
+controls. My separate rational checks include large non-submitted m values and
+the exact threshold rationalization. Neither finite run certifies globality.
+
+3. SHARED PR93/94 GPI AND MCP2 AUDIT
+
+I read DT1-DT4, TG1-TG3, balanced tripartite stability, PC1/PC3, MCP1/MCP2,
+GPI, Section 50 and the canonical dependency audit. The ten listed scientific
+inputs are byte-identical between e396... and review main db27... .
+
+Scope is essential: the GPI comparison is within the referenced pure-disk
+global-minimizer setting (or with its strict diameter comparison supplied), one
+component has fixed b/M>=tau>0, o(1) coherence, o(M^2) outside crossing mass,
+R=E+o(M^2), and T=O(M). An arbitrary packing with the same contact data does
+not acquire the global lattice upper bound. A selected Section 50 component
+need not carry the quadratic core, and its degree floor alone cannot supply
+that missing hypothesis. Both PRs preserve this limitation.
+
+Proof reconstruction: the complement dual of disjoint proper crosscuts is a
+tree; a transverse train crosses a simple tree path, and intersections with a
+chosen long path are intervals. Markov and central trimming therefore give
+the claimed complete rectangle without assuming a global path-shaped dual.
+TG1 charges every external separator at least min(k,l)-2 crossings. Fixed
+positive trim fraction first, then the asymptotic limit, then small trim
+fraction ensure genuinely outside separators have o(M) contribution. All
+omitted original trains are paid as arbitrary signed coordinate vectors.
+
+For third-phase cancellation the scalar minimization is
+min_{|x|<=s}(1+t+t^2+(1-t)x+x^2), giving the stated F(s,t).
+The uniform gap from c(s+t) is positive. For a nearly complete largest pair,
+the omitted two-shore mass L<=3sqrt(mu)+mu+o(1) is paid twice in norm;
+squaring safely loses at most 4sqrt(3)L+o(1). At mu0=8e-5 this is below 0.1865,
+while the uniform ideal gap exceeds 0.198, proving the missing-pair floor.
+
+For the graph step, each present BC edge has no common A neighbor, so summing
+over its M A-labels yields Mz<=a x+b y. Thus Delta M^2>= (1-s)x. The missing
+floor gives 1-s<=Delta/(mu0 tau)+o(1). Random a-subsets of A and B retain
+AB,AC,BC edges with probabilities s^2/t,s,s/t; the latter two dominate the
+first. Some balanced restriction therefore has the stated epsilon_bal bound.
+
+The balanced stability proof is complete: after deleting slice-bad vertices,
+a missing AB anchor has almost all C as common neighbors. One of its two
+opposite neighbor classes has size at most sqrt(2epsilon)m. Counting possible
+nonedges yields coefficient at most sqrt(2)+1/2+1<3, so the used 4sqrt(epsilon)
+is safe. Dense-tree extraction then loses at most 6epsilon^(1/4)+4sqrt(epsilon).
+All (M-a)+(b-a) original discarded trains are restored at norm cost at most
+2(1-s)/s. Under a strict liminf contradiction subsequence this gives a lower
+D^2/a^2 above 2.95. Pure-disk Euler counting and the dominant-component
+hypothesis give the incompatible lattice upper below 2.21. The strict
+subsequence margin absorbs all little-oh terms; no limit exchange is required.
+
+Independent adversarial finite check: exhaustive 2x2x2, 3x2x1 and 3x2x2
+tripartite graphs (71,680 total; 21,625 triangle-free) satisfy the weighted
+triple count and a-subset balancing inequality. The balanced controls satisfy
+the squared4sqrt(epsilon) bound. These controls complement the proof; they
+do not replace geometry or the all-size argument.
+
+For fixed lambda, Section 50's deletion count is uniform C_delta D^(2-eta)
++C_T lambda D^2, because each pruned edge is charged once to its first removed
+endpoint. The shortest-path neighborhood argument gives graph diameter
+L0<=ceil(3T/(lambda D)). A root-edge closed walk has at most 2L0+1 edges;
+nonzero gain would require total defect>=pi/3, impossible for sufficiently
+large D. Root-path phase propagation is bounded by L0 D^(-1+eta), uniformly
+over all retained components. There are at most C_T/lambda+1 components.
+
+PC3 has no additional unquantified angular loss: the functional L has fixed
+norm 2/sqrt(3), and unit-vector perturbations of angle<=alpha change its value
+by at most (2/sqrt(3))alpha. Its population multiplier is at most O(T), and
+d_j<=O(T), uniformly. Hence fixed-lambda summed error is o(D^2). Physical
+edges can be charged at most twice, as can deleted component incidences.
+Positive parts may safely be dropped to weaken the lower bound.
+
+4. PR94: NEW DIAGONAL ESTIMATE INDEPENDENTLY ACCEPTED IN SCOPE
+
+For lambda_D=D^(-kappa), D>=1, L0<=(3C_T+1)D^kappa and
+alpha_D<=(3C_T+1)D^(kappa-1+eta). The root-edge cycle defect tends to 0 if
+kappa<1-eta. This proves the gain potential and uniform phase coherence for
+the varying threshold directly, rather than substituting into a fixed-lambda
+little-oh theorem. Eventual small alpha also excludes same-phase physical
+crossings by the strict-rhombic angle restriction.
+
+The number of retained components is at most C_T D^kappa+1. Each PC3 angular
+bracket error is at most a constant times alpha_D T=O(D^(kappa+eta)); multiply
+by d_j=O(D) and sum to obtain O(D^(1+2kappa+eta)). Constants depend only on
+the Section 50 uniform C_T and the fixed functional norm, not on lambda_D or
+the selected component. Rounding and trim-depth offsets are already present
+in the exact finite TG1/PC3 formulation. There is no omitted separate error
+whose summability needs an extra hypothesis.
+
+Thus 0<kappa<(1-eta)/2 makes the total error o(D^2) and also implies the
+zero-gain condition. Meanwhile normalized deletion is
+C_delta D^(-eta)+C_T D^(-kappa)->0. At eta=1/3,kappa=1/4, the total exponent
+is 11/6 and normalized coherence exponent -1/6. The reported estimate is
+conservative; no stronger rate is needed for PASS. Each use remains conditional
+on supplied complete grids in retained components and the pure-disk PC3 setup.
+
+For GPI, a largest-class retained vertex has at most a+b<=2b retained
+neighbors, so fixed lambda implies b/M>=lambda/(2C_T). Along the diagonal,
+this lower bound tends to 0. Fixed-tau GPI cannot be invoked uniformly there,
+and the note correctly declines to do so. The new diagonal statement removes
+only the displayed pruning/coherence losses. It does not create a large grid,
+virtual-area payment, dominant grain or source-preserving competitor.
+
+5. PR93 DEFECT AND MINIMAL REPAIR
+
+File: research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py.
+The alternating arctan series starts x-x^3/3+x^5/5-... . An even number of
+terms is a lower bound; an odd number is an upper bound. The submitted comment
+states the reverse. Its pi_lower=16*S7(1/5)-4*S2(1/239) is an UPPER bound.
+The output nevertheless claims a certified exact lower bound for pi.
+
+Minimal repair requested from root: replace S7 by S8 and S2 by S3, and correct
+the parity comment. Then 16*S8(1/5)-4*S3(1/239)<pi. My fresh interval routine
+gives the exact lower rational
+3367720447004809249690544948/1071978712185331878662109375 > 3.14159.
+The original purported lower bound exceeds the tighter certified upper
+16*S9(1/5)-4*S4(1/239), so this is a demonstrated sign error, not just
+missing certification. My independent code checks that strict comparison.
+
+With the repaired lower bound and the rational sqrt(3) upper bound, all
+submitted margin assertions remain valid. Including the original class-size
+imbalance gives D^2/a^2 lower bound approximately 2.95836149385 and upper
+approximately 2.20531582671. Thus the GPI theorem and the report's numerical
+threshold do not need weakening. The repaired exact bytes/tree still need
+to be recorded; the original exact-head certificate is not retroactively PASS.
+
+PR94's numerical script uses Decimal and a written pi approximation; it openly
+describes decimal-margin checks. It checks the balanced upper baseline rather
+than including the tiny s denominator. This is not used here as a certified
+interval proof. The separate exact checker includes that denominator and
+confirms the stated strict margin.
+
+6. FILES, EXECUTION, INTEGRATION AND LIMITATIONS
+
+All changed file modes in the four exact heads are 100644; no shared runtime,
+CI, theorem registry, manifest claim or canonical theorem-state was modified.
+Each contribution adds its report, reading mirror, unreviewed artifact-index
+entry and reading-manifest entry. PR86 additionally adds its fixture and a
+research README entry. inventory.json records every exact mode, blob and hash.
+focused-integrity.json records matching source/reading hashes and a clean
+git diff HEAD^ HEAD --check for each pinned head.
+
+Submitted commands (executed in raw byte-preserving per-PR snapshot trees):
+PR86: python research/verify_target_b_interface_capacity_2026_10_17.py --check
+      research/target_b_interface_capacity_2026_10_17.json
+PR88: python research/verify_target_b_separable_literature_2026_10_17.py
+PR93: python research/verify_target_b_gpi_scope_arithmetic_2026_10_17.py
+PR94: python research/verify_target_b_gpi_mcp2_quantifier_audit_2026_10_17.py
+All exit 0; PR93's exit 0 is NOT evidence that its mislabeled bound is valid.
+Their exact outputs are preserved in submitted-runs.json.
+
+Independent command: python /tmp/erdos99-merge-20261018-review-b/independent_checks.py
+Exit 0. Results and Python/platform/checker identity are in independent-results.json
+and independent-run.json. It imports no submitted code. The tests are bounded;
+no repository-wide theorem-certificate replay was run by this reviewer.
+
+PR86 integration issue: its eleven source hashes all match submitted a392a910.
+Against db27..., only agent-task-catalog.json and priority-state.json differ;
+all mathematical prerequisite bytes agree. Root plans an explicit metadata
+distinction between submitted source and current execution context, refresh of
+the two scheduling hashes, and retention of the original immutable fixture.
+That metadata/fixture delta requires a final byte-level check after stabilization.
+No regenerated source hash may be falsely represented as a blob from e396... .
+
+Publication readiness additionally depends on root's required final integrated
+tree replay, generated-document checks and exact merge-tree record. Those
+operational obligations do not weaken or replace the mathematical decisions here.
