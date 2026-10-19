@@ -1,4 +1,4 @@
-> Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-midpoint-anchor-atlas.md) · source SHA-256 `22f286f84ac78408c872fe715dc619f24bd5fe891248fb25ca7a2912183a1cd1`.
+> Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-midpoint-anchor-atlas.md) · source SHA-256 `da82d56bdcf33b89a3f99b741926782aefa29083a341af43ee2c95dcc6c1c50f`.
 > [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C midpoint, anchor, and atlas track
@@ -50,6 +50,15 @@ Bounded-deficit pairs therefore have midpoint distance (O_s(D^{2/3})), but
 the report explicitly leaves their number uncontrolled. The
 [midpoint-tail second-referee note](../../audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md)
 records the source proof clarification for its dyadic angular band width.
+
+The destination [near-diameter localization audit](../../audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md)
+independently reconstructs this near-pair component from `C-FS-GEOM` and
+`C-FS-DIAMETER-MIDPOINT-D2-3`. It verifies the endpoint tangent and midpoint
+normal bounds for all `s>=0`, uniformly on `0<=s<=2`, including both boundary
+values. The audit is limited to this component; the destination candidate stays
+unreviewed pending an explicit lifecycle transaction. It does not audit the
+endpoint-tail/moment claims used separately by PR #113 or establish a pair
+count, atlas, or source motion.
 
 ## Positive-leaf anchor strengthening
 

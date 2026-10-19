@@ -1,5 +1,4 @@
 <!-- theorem-state: {"artifact_id":"ART-49E9F78ACC61","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
-<!-- theorem-state: {"artifact_id":"ART-49E9F78ACC61","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
 # Target B: cross-component virtual determinant payment
 
 **Date:** 2026-10-18  

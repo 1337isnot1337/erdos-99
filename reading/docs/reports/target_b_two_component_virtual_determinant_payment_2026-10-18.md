@@ -1,7 +1,6 @@
-> Generated reading edition · [exact source](../../../docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md) · source SHA-256 `c755e9508fc28ae6765eef4e704367deef73ff692e4b397f685b011705967882`.
+> Generated reading edition · [exact source](../../../docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md) · source SHA-256 `af2da1383d673ccfbaddd0f5d99cd30a83dcbd32807f3942553533d6b1d4838e`.
 > [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
-<!-- theorem-state: {"artifact_id":"ART-49E9F78ACC61","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
 <!-- theorem-state: {"artifact_id":"ART-49E9F78ACC61","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
 # Target B: cross-component virtual determinant payment
 

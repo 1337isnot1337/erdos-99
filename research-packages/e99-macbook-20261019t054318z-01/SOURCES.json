@@ -66,6 +66,13 @@
       "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
     },
     {
+      "path": "docs/targets/target-a/03-source-response.md",
+      "sha256": "b56ef3220026dc503d3dfb43ecf04eeb041a05f8b8944234624806712bfc91a4",
+      "identity": "Section 114.2 strict translated-lattice bound used in the separate-envelope calculation",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
       "path": "research-packages/e99-macbook-20261019t054318z-01/verify.py",
       "sha256": "dbb68cf395cd7562dbaf5fb3761e5abb451aad39d7cd2582520a4c5103610774",
       "identity": "verify.py",
