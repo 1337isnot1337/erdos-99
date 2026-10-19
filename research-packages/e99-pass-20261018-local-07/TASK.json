@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-local-07",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Conditional exact propagation of the unreviewed g=0.0071 full-core Type-II matched train gap through the Section 171 endpoint at epsilon=0.0023374 and both imported outer-tooth and long-side energy branches at t=t0.",
+    "domain": "Exact rational endpoint inequalities and branch floors for delta=(9 epsilon/2-g)/2, conditional on the all-train gap, imported Section 171 derivative condition, and physical report's full-core Type-II R_F=o(D) low-t branch with shallow-tooth injectivity or long-side directional-energy hypotheses.",
+    "limitations": "The g=0.0071 train gap and physical branch lemmas remain unreviewed, noncanonical premises. Constants are certified at t=t0; for x=t-t0>0 the recorded branch floors decrease. No source-wide upper bound on x, KKT stress floor, finite competitor, C-II closure, or Level I result is proved."
+  },
+  "result": "Exact rational checker certifies delta=0.00170915, a positive Section 171 endpoint margin greater than 0.18 using a newly recomputed cube-root upper bound 1.111, and both low-residual outer-energy branches. Reusing the old 1.3025 bound gives a negative margin and is rejected by a control.",
+  "remaining_questions": [
+    "Prove or refute the source-wide low-t cap x=t-t0<=0.01; under that changed hypothesis the current two branches give more than 0.0205D-o(D) contacts.",
+    "Convert either directional contact family into a source-wide diameter-stress or strict-diameter conclusion while retaining isolates and all pair constraints."
+  ]
+}

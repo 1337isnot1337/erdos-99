@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+      "identity": "docs/research/agent-task-catalog.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/CURRENT.md",
+      "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+      "identity": "docs/targets/target-c/CURRENT.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+      "identity": "docs/targets/target-c/candidate-registry.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/76-hole-stable-complete-grid-order-diameter-audit.md",
+      "sha256": "8e7bb87b2e2b27c8696bc72558d3b59dc5955b690f6865b0de41f4fb715c453e",
+      "identity": "docs/targets/target-c/76-hole-stable-complete-grid-order-diameter-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md",
+      "sha256": "5185283ec35ab657bb030f75a901e00cdb5fcf1433501e5535143c2ca91bbd6a",
+      "identity": "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md",
+      "sha256": "409ca3892cce1e5e3b8fa1be9e19dfc173edf9568e0d0cf2b2875703a41bb095",
+      "identity": "docs/targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/68-punctured-packing-phase-audit.md",
+      "sha256": "b43bc3fbdab2918315721fa0c3c7057527fc86057a0c994ac33e8eb493aaccdd",
+      "identity": "docs/targets/target-c/68-punctured-packing-phase-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/85-train-boundary-interface-currency-audit.md",
+      "sha256": "8618a1ae469f6f7c63a8afa4ef452f77edfacc3b00479282c977cfc43f28af79",
+      "identity": "docs/targets/target-c/85-train-boundary-interface-currency-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/tracks/target-c-iterative-pruning-atomic-gap.md",
+      "sha256": "c002e2c9ce67f05b16bb433b42f7e62e1924da207df3bad6348f5e7898c3af4d",
+      "identity": "docs/research/tracks/target-c-iterative-pruning-atomic-gap.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "tasks/target-c-branch-aware-atomic-gap.md",
+      "sha256": "54884ee3d1db29e1493c0ce8806733cfda84f992987eaa8970f2ef067d6f518d",
+      "identity": "tasks/target-c-branch-aware-atomic-gap.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_2026-09-15.md",
+      "sha256": "efe39d4523271be966ad4264959f8fa04474df6832d9bcd9fcc5513151b47ba6",
+      "identity": "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_2026-09-15.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/verify_target_c_branch_aware_atomic_gap_0071.py",
+      "sha256": "79ef18464e8d271af7b16b17310ada1d78526d3cfdb6f34ced58f6e52e94466c",
+      "identity": "research/verify_target_c_branch_aware_atomic_gap_0071.py",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/target_c_iterative_minimax_phase_star_atomic_gap_0050_2026-09-14.md",
+      "sha256": "55114bc38cc15a8b531eec230a477f81012065c3478e0e1047ee7b46887857d2",
+      "identity": "research/target_c_iterative_minimax_phase_star_atomic_gap_0050_2026-09-14.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/verify_target_c_iterative_minimax_atomic_gap_0050.py",
+      "sha256": "950db9c17b6174cb9aed68a12f1d486602e3a1438f9ed9a50f1d25d2f5a6d002",
+      "identity": "research/verify_target_c_iterative_minimax_atomic_gap_0050.py",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/target_c_g0050_physical_boundary_propagation_2026-09-14.md",
+      "sha256": "3a9b80bc3444bf010521eba0ed5475487ecd73f2be2b1237ae6743a891181867",
+      "identity": "research/target_c_g0050_physical_boundary_propagation_2026-09-14.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/verify_target_c_g0050_global_propagation.py",
+      "sha256": "253bff11afbab747417286835bfd07c6e4ac7ee5c7bbbc8bd3383e5f3804d905",
+      "identity": "research/verify_target_c_g0050_global_propagation.py",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-local-07/verify.py",
+      "sha256": "1a647aadb02025e9ab34bb0c25ae3d20de87757623014dbc449c051f0975698b",
+      "identity": "exact-g0071-section171-outer-energy-verifier",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}
