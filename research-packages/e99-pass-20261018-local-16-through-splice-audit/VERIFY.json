@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "inputs": [
+    "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+    "research/verify_target_c_dominant_pentagon_through_splicing.py",
+    "docs/audits/target_c_dominant_pentagon_through_splicing_hostile_audit_2026-09-15.md",
+    "docs/targets/target-c/candidate-registry.json",
+    "docs/reports/target_c_bounded_face_convexity_2026-08-31.md",
+    "docs/reports/campaign_defect_train_extension_2026-09-09.md",
+    "research/target_c_phase_star_atomic_gap_0009_2026-09-14.md",
+    "research/target_c_structural_omnibus_hostile_audit_2026-09-12.md",
+    "docs/audits/target_c_phase_atomic_route_surplus_self_audit_2026-09-12.md",
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-c/CURRENT.md",
+    "docs/problem/statement.md",
+    "research-packages/e99-pass-20261018-local-16-through-splice-audit/README.md",
+    "research-packages/e99-pass-20261018-local-16-through-splice-audit/verify.py"
+  ],
+  "domain": "Conditional proof domain: fully force-visible no-container full-core Type-II train-measure branch under strict convex bounded faces, finite stopped-train geometry, no bounded train return or singleton loop, atomic pi/3 phase support, strict-rhombus phase order, and exact endpoint ledgers. Finite replay checks the original six-pattern exact/Decimal regression, metadata-checked source SHA-256 identities, all admissible integer graph-count triples for 1<=M<=350 under 5P<=2M, an excluded-cap counterexample, and exact rational monotonicity controls. Geometry and the all-size proof are reconstructed in README.md; finite execution alone does not prove them.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research/verify_target_c_dominant_pentagon_through_splicing.py"
+      ],
+      "timeout_seconds": 60
+    },
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-local-16-through-splice-audit/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
