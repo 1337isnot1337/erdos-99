@@ -4,10 +4,10 @@
 published head `d17d45aebb04811c920d03f46c50a2337fe19a98`, I reconstructed the
 signed-remainder identity, its implication from PR #117's phase inequality (1),
 and the strict obstruction to verifying the separate-envelope condition. I found
-no algebraic or finite-control defect. The source-specific joint remainder for an
-actual global source remains unbounded, so this does not prove the locked branch,
-Target A, or Level I. This audit is evidence for a maintainer; it changes no claim
-lifecycle or theorem state.
+no algebraic or finite-control defect. This audit establishes no source-specific
+joint remainder for an actual global source, so this report alone does not prove
+the locked branch, Target A, or Level I. This audit is evidence for a maintainer;
+it changes no claim lifecycle or theorem state.
 
 ## Exact question, hypotheses, and affected quantity
 
@@ -204,8 +204,18 @@ proof/checker audit.
 PR #87's seed-63 all-basis full-tube ledger and PR #89's seed-66 fixed-phase
 control are regression predecessors. PR #117 adds the actual-source phase
 criterion. PR #138's distinct contribution is the signed source-area remainder
-and the obstruction to its separate-envelope route. None supplies a source-specific
-lower bound for `R_exact`.
+and the obstruction to its separate-envelope route. Those PRs do not supply a
+source-specific lower bound for `R_exact`.
+
+The final live overlap refresh on 2026-10-19 found open PR #171 at
+`e63dd4d3c1dcf8eb4bf56b47b112a888d3c0af4c`, investigation
+`a-correlated-source-remainder-paired-20261019`, explicitly marked as a
+changed-hypothesis successor. It presents a zero-slack source-collar remainder
+analysis in `docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md`
+(SHA-256 `3add910a66379a6ec6ea28dec3ff3e4ebc0358819930fe07e9854afbeda3378c`).
+That new candidate is outside this exact-head review of PR #138. I did not
+independently reconstruct or replay PR #171, and this report makes no claim about
+its validity or lifecycle.
 
 One source-inventory gap is nonmathematical: PR #138's `SOURCES.json` does not
 list `docs/targets/target-a/03-source-response.md`, which contains Section 114.2,
@@ -215,13 +225,15 @@ check the implication; this audit pins that file in its own `SOURCES.json`. Addi
 the missing source pin would make PR #138's declared input list match its proof
 dependencies more completely.
 
-The remaining lemma is to prove `R_exact>0` for an actual Section-165 source and
-response, or to prove a source-specific obstruction to that joint lower bound. The
-changed hypothesis must retain the actual source `A,H,N`, plateau response `X*`,
-fan, and basis counts; a failed sufficient test alone is inconclusive. Either a
-successful lower bound or a precise obstruction changes only the actual-response
-locked-branch decision through `Xi_Sigma-j_*-|T_Z|`. No result here closes the
-zero-slack branch or the universal global-minimizer quantifiers.
+For the PR #138 path, the remaining lemma is to prove `R_exact>0` for an actual
+Section-165 source and response, or to prove a source-specific obstruction to
+that joint lower bound. The changed hypothesis must retain the actual source
+`A,H,N`, plateau response `X*`, fan, and basis counts; a failed sufficient test
+alone is inconclusive. Either outcome changes only the actual-response
+locked-branch decision through `Xi_Sigma-j_*-|T_Z|`. PR #171 is a distinct live
+zero-slack successor whose claim requires its own exact-head review. No result in
+this package closes that successor, Target A, or the universal global-minimizer
+quantifiers.
 
 No external text or private dependency was used. This audit and its independent
 checker are offered under Apache-2.0. Reviewer: OpenAI Codex, GPT-6 Luna xhigh;

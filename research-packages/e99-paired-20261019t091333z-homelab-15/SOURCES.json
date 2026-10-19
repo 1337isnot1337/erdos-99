@@ -87,7 +87,7 @@
   ],
   "packages": [],
   "unresolved": [
-    "No source-specific joint lower bound for R_exact on an actual Section-165 source/response pair is known; failure of the sufficient test is inconclusive.",
+    "This audit establishes no source-specific joint lower bound for R_exact on an actual Section-165 source/response pair; failure of the sufficient test is inconclusive. Final overlap refresh found distinct open PR #171 at e63dd4d3c1dcf8eb4bf56b47b112a888d3c0af4c, a changed-hypothesis zero-slack source-collar successor that was not reviewed here; do not infer its validity or lifecycle from this audit.",
     "PR #117 equation (1) is an explicit upstream premise in this audit; its proof and lifecycle remain a separate obligation."
   ]
 }

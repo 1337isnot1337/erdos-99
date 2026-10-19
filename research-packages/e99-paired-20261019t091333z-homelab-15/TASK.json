@@ -5,11 +5,11 @@
   "scope": {
     "statement": "Independently audit the exact published PR #138 head d17d45aebb04811c920d03f46c50a2337fe19a98: reconstruct its signed Oler remainder, check every implication under the pinned Section-102/155/165/172/175 hypotheses, replay its exact finite verifier, and independently falsify source/global-scope overclaims.",
     "domain": "Conditional signed-area remainder and separate-envelope obstruction for the actual-response Target A locked branch, with exact finite triangular-lattice and square-grid controls.",
-    "limitations": "The audit treats PR #117 equation (1) as the explicit upstream premise of PR #138 and does not duplicate the independent PR #117 proof/checker audit. No actual Section-165 source/response, three-channel fan, or admissible basis is modeled by the finite controls. No source-specific lower bound for the joint remainder is proved."
+    "limitations": "The audit treats PR #117 equation (1) as the explicit upstream premise of PR #138 and does not duplicate the independent PR #117 proof/checker audit. No actual Section-165 source/response, three-channel fan, or admissible basis is modeled by the finite controls. This artifact proves no source-specific lower bound for the joint remainder. The final live overlap refresh found separate open PR #171 at e63dd4d3c1dcf8eb4bf56b47b112a888d3c0af4c, a changed-hypothesis zero-slack source-collar successor; it is outside this audit and its validity is not assessed here."
   },
   "result": "Conditional pass: the signed-remainder cancellation and strict separate-envelope obstruction are correct under their stated premises. The pinned verifier passes; an independent exact checker also confirms the controls and gives same-cardinality triangle-free square-grid competitors for both deleted-color examples.",
   "remaining_questions": [
-    "Prove a source-specific joint lower bound for R_exact on an actual Section-165 source/response pair, or give a precise obstruction; failure of the sufficient test alone is inconclusive.",
+    "For the PR #138 path, prove a source-specific joint lower bound for R_exact on an actual Section-165 source/response pair, or give a precise obstruction; failure of the sufficient test alone is inconclusive. PR #171 is a separate live changed-hypothesis successor and requires its own exact-head review.",
     "The full PR #117 phase inequality remains an upstream conditional premise here; its exact-head audit and any lifecycle transaction remain separate."
   ]
 }
