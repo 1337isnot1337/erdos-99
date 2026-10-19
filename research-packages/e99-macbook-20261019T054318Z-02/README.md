@@ -218,6 +218,12 @@ bound. This family is a geometric regression, not a global-minimizer example.
   `source-pins.json`; its own limitations explicitly exclude Section-50 degree
   and positive PC1 depth. This report extends that geometric pattern to an
   unbounded two-grid family with the stronger hypotheses and a support ledger.
+- The live draft audit PR [#144](https://github.com/1337isnot1337/erdos-99/pull/144)
+  at exact head `3e00b10e911ea587540aec53c7d0f5ede3b6ab5c` checks PR #131's
+  complete 2-by-2 mask domain. It confirms that its qualifying witnesses are
+  finite L patches with no retained-core or positive-trim hypotheses. The
+  present family extends that finite geometry; it still does not supply
+  canonical source extraction or globality.
 - PR [#103](https://github.com/1337isnot1337/erdos-99/pull/103), exact head
   `4b708e27e9e26f8c163685dfe8b033b6d6369177`, proves a conditional quadratic
   lower bound for cross-component virtual mass on separated angular subsets.
@@ -225,6 +231,10 @@ bound. This family is a geometric regression, not a global-minimizer example.
   `c755e9508fc28ae6765eef4e704367deef73ff692e4b397f685b011705967882`.
   It does not construct the two retained grids or include PC1 depth and the
   support-turning subtraction.
+- The live draft audit PR [#134](https://github.com/1337isnot1337/erdos-99/pull/134)
+  at exact head `6171ec66dfce3ea696a412e3a37bcf7440732088` reports a pass for
+  PR #103's stated conditional implication. It does not test this embedded
+  disk construction or the positive-trim support ledger.
 - The unreviewed seed-84 seamed-grain regression
   (`docs/reports/target_b_seed084_near_disk_seamed_grain_regression_2026-10-13.md`)
   already gives near-disk, fixed-positive-deficit grains with quadratic virtual
