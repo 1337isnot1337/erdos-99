@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-local-02",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Conditional on PR147\u2019s displayed scalable disk ledger, the canonical PC3 positive-part reserve is zero for every trim of either m-by-m component, while the support-corrected proposed scalar payment for V12 has a strictly positive exact residual.",
+    "domain": "Integers m>=12 divisible by four; q=m^2, p=floor(q/sqrt(3))+1, t=p/q, c=(1-t^2)/(1+t^2), s=2t/(1+t^2); PR147 two-grid, one-square-interface family and its listed hull points.",
+    "limitations": "Does not replay PR147\u2019s full geometric verifier, establish source extraction, or prove a global-minimizer counterexample. The PC3 calculation is conditional on the pinned PR147 geometric ledger; no PC3-to-virtual-mass endpoint transfer is proved."
+  },
+  "result": "For every allowed m, D>=2m*sqrt(1+s), so 2D/sqrt(3)>2m>=Mprime+bprime and PC3 contributes zero asymptotically for every trim. The proposed payment residual Q(m)=2(c-2s+sqrt(3))*m^2-4sqrt(3)*m+sqrt(3)-2 is positive for all m>=12. The canonical pure-disk global-minimizer upper window separately excludes this family because G+E>(sqrt(3)/4)B.",
+  "remaining_questions": [
+    "Prove a source-valid allocation/coupling of the PC3 reserve to V12 after H-J=2G, or derive a global-source hypothesis that excludes all PR147-type families without dropping source labels."
+  ]
+}
