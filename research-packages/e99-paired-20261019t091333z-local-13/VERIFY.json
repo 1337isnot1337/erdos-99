@@ -13,7 +13,7 @@
     "docs/research/agent-task-catalog.json",
     "research-packages/e99-paired-20261019t091333z-local-13/verify.py"
   ],
-  "domain": "All real R>=640000, every lattice translation, and every finite global n-point diameter minimizer with D>1280000; one-row replacement, guarded simultaneous row packets, translation averaging, and strict smaller-diameter global comparison are the proof hypotheses.",
+  "domain": "All real R>=640000, a lattice translate selected by population averaging for each R, and every finite global n-point diameter minimizer with D>1280000; the per-translate row-gain estimate, guarded row packets, and strict smaller-diameter global comparison are the proof hypotheses.",
   "environment": {
     "python": "3.14",
     "dependencies": []

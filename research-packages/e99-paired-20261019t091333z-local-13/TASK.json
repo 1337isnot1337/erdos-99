@@ -3,8 +3,8 @@
   "id": "e99-paired-20261019t091333z-local-13",
   "classification": "unreviewed",
   "scope": {
-    "statement": "Destination exact-head audit of the candidate that every translated unit triangular-lattice crop in a closed radius-R disk, for R>=640000, admits a unit-separated replacement with at least pi*R^2/(sqrt(3)/2)+R/160000 labels; consequently every global minimum-diameter n-point unit-separated set with D>1280000 has g_A=n-1-pi*D^2/(2*sqrt(3))>=D/320000.",
-    "domain": "All real R>=640000, every lattice translation, and every finite global n-point diameter minimizer with D>1280000; one-row replacement, guarded simultaneous row packets, translation averaging, and strict smaller-diameter global comparison are the proof hypotheses.",
+    "statement": "Destination exact-head audit of the existence claim: for every real R>=640000, there exists a translated unit triangular-lattice crop in the closed radius-R disk admitting a unit-separated replacement with at least pi*R^2/(sqrt(3)/2)+R/160000 labels; consequently every global minimum-diameter n-point unit-separated set with D>1280000 has g_A=n-1-pi*D^2/(2*sqrt(3))>=D/320000. The uniform row gain holds for each translate, but the absolute population lower bound is asserted only for a translate chosen by averaging.",
+    "domain": "All real R>=640000, a lattice translate selected by population averaging for each R, and every finite global n-point diameter minimizer with D>1280000; the per-translate row-gain estimate, guarded row packets, and strict smaller-diameter global comparison are the proof hypotheses.",
     "limitations": "PASS is limited to this population-reserve claim and the pinned finite checker. No source-specific upper bound, triangle conclusion, C-II endpoint, Level I closure, or theorem-state promotion is established."
   },
   "result": "PASS within scope after independent analytic reconstruction, exact destination hash verification, source finite-checker replay, and separate exact-rational scalar controls; candidate lifecycle remains unreviewed.",

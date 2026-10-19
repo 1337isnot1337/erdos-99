@@ -8,7 +8,7 @@ Investigation: `audit-global-population-boundary-zigzag-pr956-paired-20261019`; 
 
 ## Exact question, hypotheses, and downstream quantity
 
-Let `a0 = sqrt(3)/2` and `a = pi/(2 sqrt(3))`. Does every real `R >= 640000` admit, for **each translate** of the triangular lattice of nearest-neighbor spacing one, a unit-separated replacement of its crop to the closed radius-`R` disk with at least `pi R^2/a0 + R/160000` points? Does this imply that every global minimum-diameter `n`-point unit-separated set of diameter `D > 1280000` satisfies
+Let `a0 = sqrt(3)/2` and `a = pi/(2 sqrt(3))`. For every real `R >= 640000`, does there **exist a translate** of the triangular lattice of nearest-neighbor spacing one whose crop to the closed radius-`R` disk admits a unit-separated replacement with at least `pi R^2/a0 + R/160000` points? The translate is selected by averaging: the uniform row-gain estimate applies to each translate, but it does not give the absolute population lower bound for each translate. Does the existence statement imply that every global minimum-diameter `n`-point unit-separated set of diameter `D > 1280000` satisfies
 
 ```text
 g_A = n - 1 - a D^2 >= D/320000?
