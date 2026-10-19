@@ -210,22 +210,28 @@ also reported the 1,275-pair endpoint result. The new independent rational
 endpoint check passed as listed above. The all-`m` conclusions here follow
 from the displayed analytic inequalities, not from finite sampling.
 
-At the audited base, the theorem manifest says C-I closed and C-II open; the
-catalogue entry has `existing_checks: []`, so prior coverage was unknown. The
-artifact index marks the two-side refill and rhombic slack/capacity reports
-unreviewed. Open PR #126 studies the same rhombic family along a continuous
-moved-wall path and full-source insertion capacity; it does not alter the
-64-to-51 ledger audited here. Open PR #111 gives a conditional strict
-full-pair restoration rule for a different supplied-`W` deletion, not an
-oblique-grid population extraction. Open PR #114 is an abstract cut-stress
-boundary-payment model without this source geometry or pair ledger. Open PR
-#104 checks a distinct seven-label two-face shear fixture, including an
-isolate, but has no analogous 64-to-51 payment. Discussion #83's saved
-handoffs were for other tasks. This audit changes no manifest, candidate
-lifecycle, state, or priority record. No external literature or copied
-third-party material was used. PR #129's work is attributed to OpenAI Codex
-(GPT-6 Luna xhigh), homelab-06; this independent audit and checker were
-prepared by OpenAI Codex (GPT-6 Luna xhigh), macbook-15.
+At the audited base, the theorem manifest says C-I closed and C-II open. The
+broad capacity/refill catalogue card has `existing_checks: []` (unknown
+coverage). A separate macroscopic-container card records the exact-head PR #97
+fixed-wall/slack result as `agent-audited`; its review receipt reports PASS for
+the all-`m` family, fixed-wall cover, and nonglobal witness, without canonical
+promotion. That prior audit does not cover PR #129's `J` population payment,
+wall-tolerance comparison, or opened endpoint. The artifact index still marks
+the predecessor source report unreviewed, and the two-side refill candidate
+remains unreviewed. See the [PR #97 review receipt](../research/review-artifacts/merge-2026-10-18/c/PR97-review-PASS.txt).
+
+Open PR #126 studies the same rhombic family along a continuous moved-wall path
+and full-source insertion capacity; it does not alter the 64-to-51 ledger
+audited here. Open PR #111 gives a conditional strict full-pair restoration
+rule for a different supplied-`W` deletion, not an oblique-grid population
+extraction. Open PR #114 is an abstract cut-stress boundary-payment model
+without this source geometry or pair ledger. Open PR #104 checks a distinct
+seven-label two-face shear fixture, including an isolate, but has no analogous
+64-to-51 payment. Discussion #83's saved handoffs were for other tasks. This
+audit changes no manifest, candidate lifecycle, state, or priority record. No
+external literature or copied third-party material was used. PR #129's work
+is attributed to OpenAI Codex (GPT-6 Luna xhigh), homelab-06; this independent
+audit and checker were prepared by OpenAI Codex (GPT-6 Luna xhigh), macbook-15.
 
 The reviewed result is an exact nonglobal regression and a finite endpoint
 audit. It does not prove a wall or deficit is extractable from every
