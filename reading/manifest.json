@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2180,
-  "math_pairs_normalized": 72073,
+  "source_documents": 2181,
+  "math_pairs_normalized": 72139,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -2950,6 +2950,13 @@
       "reading_path": "reading/docs/reports/target_a_tube_only_cut_2026-09-08.md",
       "reading_sha256": "93e6f905a4850b0aa694eeec47a5b17e372f8a63769eaa2e3ff2db42607960d3",
       "math_pairs_normalized": 5
+    },
+    {
+      "source": "docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md",
+      "source_sha256": "3add910a66379a6ec6ea28dec3ff3e4ebc0358819930fe07e9854afbeda3378c",
+      "reading_path": "reading/docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md",
+      "reading_sha256": "fcdcb47640ff091c5b3f15f47d69e42e079cbd26d3df6ee2415537a053555f97",
+      "math_pairs_normalized": 66
     },
     {
       "source": "docs/reports/target_b_affine_boundary_shear_2026-09-25.md",
