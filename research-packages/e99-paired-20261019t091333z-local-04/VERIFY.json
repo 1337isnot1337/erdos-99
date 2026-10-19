@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/STATE.md",
+    "docs/state/theorem-state.yaml",
+    "docs/research/priority-state.json",
+    "docs/targets/target-c/CURRENT.md",
+    "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+    "research-packages/e99-paired-20261019t091333z-local-04/verify.py"
+  ],
+  "domain": "All integers m>=7 and all theta in [theta_m, pi/2], with a fully labelled (m+1)-by-(m+2) unit-rhombic grid and guard row j=m+1. The continuous path, full pair bounds, cover-radius estimate, and slack formulas are proved analytically; exact integer/quadratic-surd controls check every displacement vector at m=7,8,12,24 and the endpoint ledger.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-local-04/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
