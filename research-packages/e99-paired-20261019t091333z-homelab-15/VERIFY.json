@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "inputs": [
+    "research-packages/e99-paired-20261019t091333z-homelab-15/REVIEW_TARGET.json",
+    "docs/STATE.md",
+    "docs/problem/statement.md",
+    "docs/research/priority-state.json",
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-a/02-scaffold-and-hall.md",
+    "docs/targets/target-a/03-source-response.md",
+    "docs/targets/target-a/08-prescribed-phase-alignment.md",
+    "docs/targets/target-a/17-plateau-response-lift.md",
+    "docs/targets/target-a/24-three-channel-locked-stress.md",
+    "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+    "research-packages/e99-paired-20261019t091333z-homelab-15/verify.py"
+  ],
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-homelab-15/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ],
+  "domain": "Conditional signed-area remainder and separate-envelope obstruction for the actual-response Target A locked branch, with exact finite triangular-lattice and square-grid controls."
+}
