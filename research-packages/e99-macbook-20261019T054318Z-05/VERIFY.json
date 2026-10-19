@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/targets/target-b/README.md",
+    "docs/targets/target-b/01-jammed-rhombic-branch.md",
+    "docs/state/theorem-state.yaml",
+    "docs/research/priority-state.json",
+    "docs/audits/target_b_virtual_zonotope_missing_crossing_audit_2026-09-05.md",
+    "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+    "research-packages/e99-macbook-20261019T054318Z-05/verify.py"
+  ],
+  "domain": "Exact PR #103 analytic implication for a finite pure simply connected strict-rhombic disk, fixed eta and lambda, its train-crossing graph, high-defect-first deletion, and iterative low-degree vertex pruning.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-macbook-20261019T054318Z-05/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

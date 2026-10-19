@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/targets/target-b/README.md",
+      "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+      "identity": "target-b-route",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+      "identity": "section-49-50-route-and-defect-budget",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "target-b-current-lifecycle",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "priority-and-catalogue-revisions",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_b_virtual_zonotope_missing_crossing_audit_2026-09-05.md",
+      "sha256": "4c628764fa370d809601c78f2314caa1bc08794de4588cfb7dd4b59d8adce16d",
+      "identity": "separate-section-26-identity-audit-status",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+      "sha256": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+      "identity": "promoted-target-b-prerequisites-and-scope",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-macbook-20261019T054318Z-05/verify.py",
+      "sha256": "4340d4345b2302de41283992c1a8ec4ee99c9d938dcf72dfef4b6208fc04acf4",
+      "identity": "exact-rational-inequality-and-control-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The audited PR #103 report remains an external immutable source at head 4b708e27e9e26f8c163685dfe8b033b6d6369177 with SHA-256 c755e9508fc28ae6765eef4e704367deef73ff692e4b397f685b011705967882; the original candidate bytes are not duplicated in this audit package."
+  ]
+}
