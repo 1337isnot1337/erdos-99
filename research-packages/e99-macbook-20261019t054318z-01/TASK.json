@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-macbook-20261019t054318z-01",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For an actual Section-165 source/plateau pair and the PR #117 admissible-basis phase criterion, rewrite the criterion as an exact signed remainder using the source Oler slack, source-to-plateau area difference, source perimeter, fan-neighborhood area, and expected basis counts. Show that the separate Oler envelopes cannot certify this criterion.",
+    "domain": "Conditional algebraic implication under the cited canonical Target A hypotheses. Exact source-geometry controls are triangular-lattice hex patches with radii M=1..6 and the M=6, k=3 inner parallel body.",
+    "limitations": "The result does not prove the exact remainder positive for any sufficiently large global source. The M=1..6 full patches are Oler-sharp but contain unit triangles; the M=3,6 deleted-color controls are triangle-free but not global minimizers. None is a plateau response, and no fan or Section-102 basis is modeled. Failure of the sufficient criterion is inconclusive."
+  },
+  "result": "Derived the exact remainder identity and an O(D) sufficient envelope. Separate source and basis Oler bounds make that envelope impossible to verify, so a joint source-specific bound is required. An exact finite source control verifies Oler saturation and the signed parallel-body expansion.",
+  "remaining_questions": [
+    "Prove a source-specific joint lower bound for Omega_H - Delta_H - a0*per(H)/2 + a0*E[d_int+t_Sigma] - A_Sigma, or identify a source-bound term that cannot be controlled under the current hypotheses."
+  ]
+}
