@@ -1,4 +1,4 @@
-> Generated reading edition · [exact source](../../../docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md) · source SHA-256 `e71728dc3c001cc37e7ac2caca4c50d390bb54b054a2438601bd36a8cd7fe951`.
+> Generated reading edition · [exact source](../../../docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md) · source SHA-256 `638ae511c5976fadf526862c92ccf58ae2a85ade2d9ef74e232b31e9aca0da0e`.
 > [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E9A5A4332059","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
@@ -47,9 +47,10 @@ current handoffs concern other scopes. No exact flattening audit was present.
 ## Exact claim and downstream decision
 
 Let `p_1,...,p_n` be distinct points in `R^2` whose affine span is the plane.
-Let `z_1,...,z_q` be vertices of a centered regular simplex, let each source
-label receive one color `c(i)`, and let `t > 0`. The specified lift is
-`(p_i, t z_{c(i)})`. Its affine dimension is at most two exactly when every
+Let `z_1,...,z_q` be vertices of a centered regular unit-edge simplex, let
+each source label receive one color `c(i)`, and let `t > 0`. The specified
+normalized lift is `(p_i, t z_{c(i)})/sqrt(1+t^2)`. The unnormalized lift has
+the same affine rank, but does not itself supply strict metric improvement. Its affine dimension is at most two exactly when every
 column of the centered color-coordinate matrix is in the column space of the
 centered source-coordinate matrix.
 
@@ -71,8 +72,8 @@ different planar endpoint.
 
 Write `P` for the `n x 2` matrix with rows `p_i`, `Z` for the `n x (q-1)`
 matrix with rows `z_{c(i)}`, and `J = I - 11^T/n`. Centering removes the
-translation of the point set, so the lifted affine dimension is
-`rank([JP, t JZ])`. Noncollinearity gives `rank(JP)=2`; positivity of `t`
+translation of the point set, and uniform positive normalization does not
+change affine rank, so the lifted affine dimension is `rank([JP, t JZ])`. Noncollinearity gives `rank(JP)=2`; positivity of `t`
 leaves the span of the color columns unchanged. Therefore
 
 `rank([JP, t JZ]) <= 2  iff  col(JZ) subset col(JP)`.
@@ -101,15 +102,26 @@ boundary `n=3`, a noncollinear source has `col(JP)=1^perp` in `R^3`, as does
 the centered three-color matrix, so the lift can flatten. The obstruction is
 specific to this lift and begins at `n=4`.
 
-When the two-color condition holds, planar realization preserves all lifted
-distances. The strict-competitor consequence additionally needs a finite
-unit-separated source with diameter `D > 1`, a proper contact coloring, and a
-sufficiently small positive parameter: for equal-color
-pairs require `t^2 < min(d_ij^2 - 1)`, with the empty minimum interpreted as
-infinity. Different-color contacts remain unit, equal-color pairs remain
-separated, and every old pair above one contracts; consequently every old
-diameter pair strictly shortens and the full-source diameter falls. The
-criterion alone supplies neither this coloring nor its geometric hypothesis.
+When the two-color condition holds, planar realization preserves all distances
+of the normalized lift. The strict-competitor consequence additionally needs a
+finite unit-separated source with diameter `D > 1`, a proper contact coloring,
+and a sufficiently small positive parameter: for equal-color pairs require
+`t^2 < min(d_ij^2 - 1)`, with the empty minimum interpreted as infinity.
+Properness makes this finite minimum positive. For different colors, the
+unit-edge simplex gives new squared distance `(d_ij^2+t^2)/(1+t^2)`; for equal
+colors it is `d_ij^2/(1+t^2)`. Thus different-color contacts remain unit,
+equal-color pairs remain strictly separated, and every old pair above one
+contracts. In particular the complete squared diameter is at most
+`(D^2+t^2)/(1+t^2) < D^2`. All labels and all pair constraints are retained.
+The criterion alone supplies neither this coloring nor its geometric hypothesis.
+
+Integration clarification: the original audit used the unnormalized lift in
+its definition but then asserted this normalized strict-competitor consequence.
+Without normalization, cross-color squared distances increase by `t^2` and
+equal-color distances are unchanged, so that consequence would be false. The
+rank criterion is invariant under normalization; the metric conclusion here
+uses the normalized unit-edge construction explicitly. Frozen predecessor
+report and checker bytes are unchanged.
 
 ## Adversarial checks and predecessor boundary
 

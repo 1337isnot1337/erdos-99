@@ -1,7 +1,6 @@
 <!-- theorem-state: {"artifact_id":"ART-7B6F9C6B4A70","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Destination exact-head review: positive-leaf anchor boundary distance
 
-<!-- theorem-state: {"artifact_id":"ART-PLACEHOLDER","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 
 ## Disposition
 

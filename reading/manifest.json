@@ -76,9 +76,9 @@
     },
     {
       "source": "docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
-      "source_sha256": "e71728dc3c001cc37e7ac2caca4c50d390bb54b054a2438601bd36a8cd7fe951",
+      "source_sha256": "638ae511c5976fadf526862c92ccf58ae2a85ade2d9ef74e232b31e9aca0da0e",
       "reading_path": "reading/docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
-      "reading_sha256": "3c617ea80c40ce5250e86791bcbea16fbbe63f4bb9db069d8d0f51fc679209cb",
+      "reading_sha256": "d844bd0a239b0931ea6db725c93722235c3148aefff8e852b3985e0de7f39c88",
       "math_pairs_normalized": 0
     },
     {
@@ -1609,9 +1609,9 @@
     },
     {
       "source": "docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
-      "source_sha256": "492b87c9276752cae74f1218b48b07a4200ea0f91f38092b505f55c69a4c9dcf",
+      "source_sha256": "03d3c326141f35f9d93e6ae217273085abceb91240e58b0a3cc88828dd13de95",
       "reading_path": "reading/docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
-      "reading_sha256": "f29ab600fb032e35ac7bea81d233b5c744b60b76f827ee57fc548e1321e4d443",
+      "reading_sha256": "ec17a56f6c3c763873f4f1fa85215cd2ef984a950b59dcfd2901fb0a44cda061",
       "math_pairs_normalized": 11
     },
     {

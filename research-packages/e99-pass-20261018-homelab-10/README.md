@@ -12,7 +12,8 @@ Prepared with AI assistance. The full independent proof reconstruction is in
 ## Exact question and scope
 
 For a noncollinear labelled source `P` and positive lift parameter, the specified
-centered-simplex color lift has affine dimension at most two exactly when its
+normalized unit-edge centered-simplex color lift
+`(p_i,t z_{c(i)})/sqrt(1+t^2)` has affine dimension at most two exactly when its
 centered color-coordinate columns lie in the centered source-plane span. This
 package independently screens the two-color parallel-line characterization and
 the three-color `n=3`/`n>=4` boundary on small rational source sets.
@@ -44,7 +45,8 @@ coordinates, network inputs or package runner are used.
   full-source diameter `D(n)` under unit separation.
 - Changed hypothesis: exhibit a source-derived proper two-coloring whose two
   classes lie on parallel lines, including every isolate. A proof gives an
-  actual planar strict-diameter competitor; a counterexample only blocks this
+  actual planar strict-diameter competitor via the normalized unit-edge lift
+  with positive `t^2` below every same-color separation slack; a counterexample only blocks this
   specified lift for that source and leaves other planar endpoints open.
 - First step/blocker: prove or refute that source-specific coloring condition
   for every sufficiently large triangle-free global minimizer. The current

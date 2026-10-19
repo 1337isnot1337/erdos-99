@@ -1,10 +1,9 @@
-> Generated reading edition · [exact source](../../../docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md) · source SHA-256 `492b87c9276752cae74f1218b48b07a4200ea0f91f38092b505f55c69a4c9dcf`.
+> Generated reading edition · [exact source](../../../docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md) · source SHA-256 `03d3c326141f35f9d93e6ae217273085abceb91240e58b0a3cc88828dd13de95`.
 > [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7B6F9C6B4A70","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Destination exact-head review: positive-leaf anchor boundary distance
 
-<!-- theorem-state: {"artifact_id":"ART-PLACEHOLDER","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 
 ## Disposition
 
