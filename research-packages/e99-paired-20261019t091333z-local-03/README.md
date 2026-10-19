@@ -151,8 +151,12 @@ exactly at `t=1/10`.
 - The offline overlap snapshot had complete pagination for 47 open PRs, 97
   closed PRs, zero Issues, and eight Discussions. Live `gh` checks confirmed
   PRs #104, #135, and #142 still point to the pinned heads on the same base;
-  PR #142 has no review or issue comments. A private overlap refresh is required
-  again before submission.
+  PR #142 has no review or issue comments. The private submission overlap
+  refresh completed at `2026-10-19T09:44:55Z`: 49 PRs, zero Issues, and
+  eight Discussions, all with complete pagination and no warnings. The exact
+  task search found no new investigation match; newly opened PRs #149 and #150
+  audit separate PR #948 array claims. `origin/main` and all three state
+  revisions remained unchanged.
 
 This package was independently derived from the coordinates and pair inequalities;
 it does not copy predecessor proof text or checker code. Exact source coordinates
