@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-homelab-06",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For the exact m>=7 oblique-grid family A_m, wall error is zero and all-label Oler slack is m, yet the interior population deficit K-z is zero while two-side collective refill requires J=2m-1. The family has zero fixed-wall insertion capacity.",
+    "domain": "Exact integer/radical lower and diameter-upper pair checks for m=7,8,12,24, plus the two-side population and tolerance ledger.",
+    "limitations": "The control is nonglobal. It rules out extracting the refill deficit from the listed geometry and scalar Oler data alone; it does not refute extraction from canonical global-minimizer structure or produce a same-cardinality endpoint. No theorem-state promotion is claimed."
+  },
+  "result": "Exact tolerance-aware countertest and complete deletion/target-count ledger; the fixed-frame refill construction supplies K positions for K+J labels, leaving a J-position shortfall.",
+  "remaining_questions": [
+    "Prove or refute extraction of a complete ordered actual unit wall within eta_L and with K-z>=L-1 from every sufficiently large canonical C-II source, counting all contact isolates.",
+    "If extraction fails, construct a source-specific moved-guard, outside-capacity, or nonlocal endpoint with every lower pair and every actual/inactive diameter upper pair checked."
+  ]
+}
