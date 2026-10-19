@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-homelab-08",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Audit the exact destination candidate TARGET-C-PR948-COMPLETE-ARRAY-DIAMETER-FOREST: no odd cycle in the full actual diameter graph of a complete labelled bent strict-rhombic array, and the conditional whole-core (s_Z,d_H) classification.",
+    "domain": "Complete finite labelled arrays P_ij=x_i+y_j with a,c>=1, every index pair an actual distinct source label, unit consecutive row/column edges, consistently oriented strict triangle-free rhombic cells, and all source pair upper bounds; the whole-core corollary additionally assumes the report's canonical contact-minimal then diameter-pair-minimal global-source hypotheses with D>=9 and retains all contact-isolated labels.",
+    "limitations": "No extraction from incomplete contact cores, no isolate transport or deletion, no finite competitor, no C-II or Level I closure, and no theorem promotion. Candidate dependency metadata omits C-FULL-SOURCE-ISOLATE-NORMALIZATION and does not list the local-structure inputs cited in the report."
+  },
+  "result": "PASS at the exact scope, with a dependency-record correction: the analytic complete-array proof reconstructs, and the whole-core corollary follows using the additional canonical isolate-normalization claim.",
+  "remaining_questions": [
+    "Record C-FULL-SOURCE-ISOLATE-NORMALIZATION and the local-structure inputs explicitly before any later lifecycle promotion; these canonical statements are already accepted.",
+    "Extract the complete-array hypothesis from general canonical C-II survivors or prove an endpoint for the complementary incomplete domain while retaining every label and all pair constraints."
+  ]
+}
