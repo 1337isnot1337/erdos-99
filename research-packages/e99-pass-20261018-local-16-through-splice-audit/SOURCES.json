@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+      "sha256": "b567c562312438782fbde9cc62788fc843eccf331c09c2fbe3a9f31b27603b16",
+      "identity": "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/verify_target_c_dominant_pentagon_through_splicing.py",
+      "sha256": "41e8a654c5b7db0452087f578ed0aafba93216200feea74bd73dae88cc4f78c9",
+      "identity": "research/verify_target_c_dominant_pentagon_through_splicing.py",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_dominant_pentagon_through_splicing_hostile_audit_2026-09-15.md",
+      "sha256": "95de9b4e3e2f2e402565af1f88ec3390db4dccd8d62eecb03a59d91139ec08a2",
+      "identity": "docs/audits/target_c_dominant_pentagon_through_splicing_hostile_audit_2026-09-15.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+      "identity": "docs/targets/target-c/candidate-registry.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_bounded_face_convexity_2026-08-31.md",
+      "sha256": "8e8c24f46b2b82678f1a7daf59c12c7e2c182e30a3120a63365513d4c89e116a",
+      "identity": "docs/reports/target_c_bounded_face_convexity_2026-08-31.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/campaign_defect_train_extension_2026-09-09.md",
+      "sha256": "98c25016760f127f1e231eb4b54980d5b75caf3e15302ef74be61472f96d805c",
+      "identity": "docs/reports/campaign_defect_train_extension_2026-09-09.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/target_c_phase_star_atomic_gap_0009_2026-09-14.md",
+      "sha256": "672f28cfbddb736df4cd9079e5ddc2e9b0df7bb81b4924649037cfea68ef8452",
+      "identity": "research/target_c_phase_star_atomic_gap_0009_2026-09-14.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/target_c_structural_omnibus_hostile_audit_2026-09-12.md",
+      "sha256": "fc8f103e34961a9b40e5b81d89850852f66ffa0f8763dc9c85bd9bb4def4ed40",
+      "identity": "research/target_c_structural_omnibus_hostile_audit_2026-09-12.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_phase_atomic_route_surplus_self_audit_2026-09-12.md",
+      "sha256": "467ee66e100ec87a34ddede865b5406736540a26c77fcf219872fc6b51716a1c",
+      "identity": "docs/audits/target_c_phase_atomic_route_surplus_self_audit_2026-09-12.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/CURRENT.md",
+      "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+      "identity": "docs/targets/target-c/CURRENT.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/verify.py",
+      "sha256": "2a68e6a2c453c0857dc9ea06ab543895a03391041286a47053241e780873d02e",
+      "identity": "independent exact integer verifier",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/README.md",
+      "sha256": "6d494af2a79698b695b2eb376d5092deb67828350bdc7fce0f40541182333908",
+      "identity": "conditional exact-head proof reconstruction and scope audit",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}
