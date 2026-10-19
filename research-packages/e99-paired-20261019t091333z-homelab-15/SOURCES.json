@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-15/REVIEW_TARGET.json",
+      "sha256": "28e7829a01c51e0df229a73ba6be4195a4d2db742109f40ef737b505a56f98eb",
+      "identity": "research-packages/e99-paired-20261019t091333z-homelab-15/REVIEW_TARGET.json",
+      "generated_from": []
+    },
+    {
+      "path": "docs/STATE.md",
+      "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+      "identity": "docs/STATE.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/02-scaffold-and-hall.md",
+      "sha256": "18b0297422f207a1b3afdea166b413ccd86d9a5d9c26d26da9794d3e6ac39548",
+      "identity": "docs/targets/target-a/02-scaffold-and-hall.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/03-source-response.md",
+      "sha256": "b56ef3220026dc503d3dfb43ecf04eeb041a05f8b8944234624806712bfc91a4",
+      "identity": "docs/targets/target-a/03-source-response.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/08-prescribed-phase-alignment.md",
+      "sha256": "de6abaaaac9207cb295129edc4b578e5afed484af2baa3038071575330eb1e07",
+      "identity": "docs/targets/target-a/08-prescribed-phase-alignment.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/17-plateau-response-lift.md",
+      "sha256": "07a55cd61e593aa17d68a984982809bd7c4cf6f064c513e7a5cd7226d6fe2777",
+      "identity": "docs/targets/target-a/17-plateau-response-lift.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/24-three-channel-locked-stress.md",
+      "sha256": "8b2605132bd24627a54f06442b69e07c92b50a9d7426bdf12d1cd01dcffc581f",
+      "identity": "docs/targets/target-a/24-three-channel-locked-stress.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+      "sha256": "0399e4947619293dfda7818c8961c18a48cf762c2f8c5e0d8e956099ca08db29",
+      "identity": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-15/verify.py",
+      "sha256": "7676e40edcc8574f6efd39384496c4f0b7e68f6f6f48526cc76391712949131f",
+      "identity": "research-packages/e99-paired-20261019t091333z-homelab-15/verify.py",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "No source-specific joint lower bound for R_exact on an actual Section-165 source/response pair is known; failure of the sufficient test is inconclusive.",
+    "PR #117 equation (1) is an explicit upstream premise in this audit; its proof and lifecycle remain a separate obligation."
+  ]
+}
