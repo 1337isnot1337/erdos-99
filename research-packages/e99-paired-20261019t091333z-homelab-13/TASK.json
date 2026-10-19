@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-homelab-13",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For a finite unit-separated planar source and supplied unit normal, perpendicular tangent, offset, positive squared scales A,B, and diameter D, with s_ij=A(x_i-x_j)^2+B(y_i-y_j)^2 and o_ij=A(x_i+x_j)^2+B(y_i-y_j)^2, a full-label sign assignment has every squared pair distance in [1,D^2) iff no pair has o_ij<1 or s_ij>=D^2 and the graph constraints (opposite when s_ij<1, equal when o_ij>=D^2) are parity-consistent.",
+    "domain": "All unordered pairs of the finite source; every label participates. Exact rational falsification controls enumerate all sign vectors on 400 small-source line/offset/scale instances and five strict-boundary cases.",
+    "limitations": "The theorem decides only supplied parameters and does not extract them for any sufficiently large global minimizer. The finite checks do not prove global optimality, a uniform onset, Level I, or a Target C-II endpoint. The review scope excludes the separate affine-stress, moment, and Steiner claims in source PR #959."
+  },
+  "result": "Independent destination exact-head audit passes for the supplied-parameter iff theorem and declared finite controls; the source candidate remains unreviewed and no canonical promotion is made.",
+  "remaining_questions": [
+    "For every sufficiently large triangle-free global minimizer, derive supplied line, offset, and positive scales whose complete all-pair signed constraint graph is parity-consistent while preserving every lower and strict upper pair bound."
+  ]
+}
