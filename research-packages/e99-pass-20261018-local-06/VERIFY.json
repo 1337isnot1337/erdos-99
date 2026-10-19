@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/state/theorem-state.yaml",
+    "docs/research/tracks/target-c-exact-phase-packet-fork.md",
+    "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md",
+    "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md",
+    "docs/reports/target_c_exact_phase_threshold_cross_shore_packet_resultants_2026-10-02.md",
+    "docs/reports/target_c_exact_phase_threshold_strict_packet_resultants_2026-10-02.md",
+    "docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md",
+    "docs/reports/target_c_exact_phase_threshold_edgewise_kkt_balance_2026-10-02.md",
+    "docs/reports/target_c_exact_phase_threshold_edgewise_flux_packets_2026-10-02.md",
+    "docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md",
+    "research-packages/e99-pass-20261018-local-06/verify.py"
+  ],
+  "domain": "One rational vector-incidence model with D=1, three A-cuts, two B-cuts, seven diameter-length rows, and the tree {(0,2),(0,3),(1,2)}. The checker uses exact fractions.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-local-06/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

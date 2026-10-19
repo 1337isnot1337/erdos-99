@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/tracks/target-c-exact-phase-packet-fork.md",
+      "sha256": "c5d6bac44a0869264692c35897f8c0627941cd50ded421a27cca4454363dc929",
+      "identity": "docs/research/tracks/target-c-exact-phase-packet-fork.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md",
+      "sha256": "631f7fe2d5d950c47bcedd9eabf710fa4b356f9a974db69d64c965cbbbca5ebf",
+      "identity": "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md",
+      "sha256": "5af0523286fc97315a44519797cc7be8c5a0e9083e201d9070e844209052164e",
+      "identity": "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_exact_phase_threshold_cross_shore_packet_resultants_2026-10-02.md",
+      "sha256": "ea206df909c07c2dcaf72c91f836e7f3ac6dd6c743ddd79f44449d57c55b50c1",
+      "identity": "docs/reports/target_c_exact_phase_threshold_cross_shore_packet_resultants_2026-10-02.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_exact_phase_threshold_strict_packet_resultants_2026-10-02.md",
+      "sha256": "204f16bb5b540a2aab2e34f5a3303ac99f21e993edc412a60d17aeb4166a055b",
+      "identity": "docs/reports/target_c_exact_phase_threshold_strict_packet_resultants_2026-10-02.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md",
+      "sha256": "cc0601f888662d1d38acb527823d0cf25661e1e71ebc41e5f165caeb059e331e",
+      "identity": "docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_exact_phase_threshold_edgewise_kkt_balance_2026-10-02.md",
+      "sha256": "71208b1e14d84c69afee63335d12c15c02f690ff2f97fa7e518c5162f519cfbf",
+      "identity": "docs/reports/target_c_exact_phase_threshold_edgewise_kkt_balance_2026-10-02.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_exact_phase_threshold_edgewise_flux_packets_2026-10-02.md",
+      "sha256": "d71238a6a82b780e358ce59614cdb89a397828495c75d6387f3f9452864a1f22",
+      "identity": "docs/reports/target_c_exact_phase_threshold_edgewise_flux_packets_2026-10-02.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md",
+      "sha256": "893bf2f4c2fb80675f47af4ba4d6fb5100c22e2f665124757b8af56f90a710cf",
+      "identity": "docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-local-06/verify.py",
+      "sha256": "fa9ad7dc2e00a7d0d006de101e23cab5ca9628a4e57b0586987fa75f08637d27",
+      "identity": "finite-cut-stress-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The algebraic cut-incidence model has no planar source realization or vertex-level KKT certificate; all-pair source geometry and the C-II endpoint obligation remain open."
+  ]
+}
