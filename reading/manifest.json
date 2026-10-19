@@ -138,6 +138,13 @@
       "math_pairs_normalized": 0
     },
     {
+      "source": "docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md",
+      "source_sha256": "9d53529b58cec2e01c376531a28fa5a90059ecab100302990e5de62737ca4a84",
+      "reading_path": "reading/docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md",
+      "reading_sha256": "581dd611d9814ff4a032426572be04ca185859c0a2bc8eb5ce65ba1f3f39b7d3",
+      "math_pairs_normalized": 0
+    },
+    {
       "source": "docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
       "source_sha256": "4099a516644885546de892b009d5de269bd908aa773e9713eccc8e76298963bc",
       "reading_path": "reading/docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
