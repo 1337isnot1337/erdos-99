@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-local-12",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Independent destination review of GLOBAL-LEVEL-I-ONE-CONTACT-PR955 at commit 7d0a450fe66991036541023f95c44c064a04b6a8.",
+    "domain": "Exact rational spot controls for the pinch-dilate map on a square and the unique-contact contraction on a three-point source; the universal proof and external D(8) premise are analyzed in README.md.",
+    "limitations": "Finite exact controls do not prove the universal analytic statements or Level I. The n=8 regression is conditional on the cited Bezdek-Fodor D(8) value."
+  },
+  "result": "The analytic one-contact arguments and their stated fixed-cardinality consequences have no identified defect; finite exact spot controls pass. No theorem promotion or Level I closure is claimed.",
+  "remaining_questions": [
+    "Prove that for every sufficiently large n the triangle-free unit-separated n-point class does not attain D(n), or construct triangle-free global minimizers for arbitrarily large n."
+  ]
+}
