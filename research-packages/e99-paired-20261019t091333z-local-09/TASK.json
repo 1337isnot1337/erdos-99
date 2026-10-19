@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-local-09",
+  "classification": "conditional",
+  "scope": {
+    "statement": "Independently audit the destination bytes of TARGET-C-PR948-LARGE-ARRAY-BOUNDARY-ATTACHMENT at 7d0a450fe66991036541023f95c44c064a04b6a8, including the complete conditional analytic proof, canonical dependencies, and exact finite controls.",
+    "domain": "For each fixed delta>0, an actual complete strict bent unit-rhombic array with distinct source labels and a,c>=delta D inside a contact-minimal, triangle-free global unit-separated minimum-diameter source has r>=epsilon_delta D distinct noncorner boundary vertices with external unit contacts for all D>=D_delta; epsilon_delta>0 and D_delta are existential. Exact assignment: audit-target-c-pr948-large-array-boundary-attachment-paired-20261019; scope key 2695b70d3a367ac13ef39be2.",
+    "limitations": "PASS applies only to the stated supplied-array theorem and its stated whole-core corollary. No explicit constants, array extraction, endpoint, canonical promotion, C-II closure, or Level I conclusion. Reviewer disclosed early exposure to a prior high-level memory summary and adjacent overlap results."
+  },
+  "result": "PASS at the exact conditional scope: analytic proof reconstruction found no gap; original finite verifier replay and saved-certificate comparison pass.",
+  "remaining_questions": [
+    "Extract an actual complete bent array with both dimensions proportional to D and sublinear external boundary attachments from every relevant canonical survivor, or prove a different source-level endpoint in the complementary regime."
+  ]
+}

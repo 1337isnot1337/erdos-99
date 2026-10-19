@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/reports/target_c_large_array_boundary_attachment_slot02_2026-10-11.md",
+      "sha256": "f2225a9ceebddb2b3318ed948bb94d247f2a61c9e73db80d7ce3567093e037c6",
+      "identity": "docs/reports/target_c_large_array_boundary_attachment_slot02_2026-10-11.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/verify_target_c_large_array_boundary_attachment_2026_10_11.py",
+      "sha256": "3cd1d82fd3d693166b89bd2d3ef08e522d3face7aaa9704ffc297cd5756421a9",
+      "identity": "research/verify_target_c_large_array_boundary_attachment_2026_10_11.py",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/target_c_large_array_boundary_attachment_certificate_2026_10_11.json",
+      "sha256": "40cbdce45f7c718d6623c97fd31643b52850d2d550d080441dd2cb393596e49d",
+      "identity": "research/target_c_large_array_boundary_attachment_certificate_2026_10_11.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/verify_target_c_three_direction_corner_barrier_2026_10_06.py",
+      "sha256": "179f20fb42827f6b3aa3b7afa5b982b16ff4da49abb77373edaf1a48bd514252",
+      "identity": "research/verify_target_c_three_direction_corner_barrier_2026_10_06.py",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/theory/01-local-structure.md",
+      "sha256": "75c539b2281046c49d6c303bda845cb7fb2643d0d9a1106d64e4f737117c54fb",
+      "identity": "docs/theory/01-local-structure.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/58-full-source-geometry-audit.md",
+      "sha256": "f504349650423786a6091ba9b7a8699cd62b7e6b200d2a2ce3a6a34b3d0b473d",
+      "identity": "docs/targets/target-c/58-full-source-geometry-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+      "identity": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+      "sha256": "fc60bd6982e741f13d2442a2fa9d16a424f2fc55f60c3e1a1d7f3aba2cc3686f",
+      "identity": "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/STATE.md",
+      "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+      "identity": "docs/STATE.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+      "identity": "docs/targets/target-c/candidate-registry.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/tracks/target-c-quarter-folds-bent-arrays.md",
+      "sha256": "49e336e2933551af00289be2bf631ece9230613a2127f0b582ca95319348bf50",
+      "identity": "docs/research/tracks/target-c-quarter-folds-bent-arrays.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+      "identity": "docs/research/agent-task-catalog.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/bottleneck-brief.md",
+      "sha256": "90eadcfab8e97d1c294f73950de41102f9bbd6c380ed7f71e2f7495aaa15a5b0",
+      "identity": "docs/research/bottleneck-brief.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-09/verify.py",
+      "sha256": "507a946dee91af06df5d48cc45f56d9796d92bcc6dcf8bca258fdf673a507bf4",
+      "identity": "research-packages/e99-paired-20261019t091333z-local-09/verify.py",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The package static Python closure scan flags the wrapper's file read/subprocess call and the pinned verifier/helper's import/dunder surfaces. Direct replay on the assigned host passed, but isolated package replay was not run."
+  ]
+}
