@@ -27,7 +27,7 @@ def endpoint_7():
     points = {}
     for i, j in sorted(original - deleted):
         if i == m or j == n:
-            # Coordinates are (x, y/sqrt(3)); squared norm is dx^2+3dy^2.
+            # Store rational (x,q) for physical coordinates (x,sqrt(3)*q).
             x, y = F(i) + F(j, 7), F(4 * j, 7)
             kind = "wall"
         else:

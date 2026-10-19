@@ -157,9 +157,10 @@ grid has diameter `sqrt(2)m < D_m`, so `A_m` is nonglobal.
 
 ## Exact opened endpoint at `m=n=7`
 
-In `Q(sqrt(3))` coordinates, write each point as `(x,y/sqrt(3))`; squared
-distances are the rational number `dx^2+3dy^2`. The endpoint retains the top
-and right sides (15 labels), moves all 36 strict-interior labels, and deletes
+Represent each point by rational `(x,q)` for physical coordinates
+`(x,sqrt(3)*q)` in `Q(sqrt(3))`; squared distances are the rational number
+`delta_x^2+3*delta_q^2`. The endpoint retains the top and right sides (15 labels), moves
+all 36 strict-interior labels, and deletes
 
 ```text
 {(i,0): 0<=i<7} union {(0,j): 1<=j<7},
