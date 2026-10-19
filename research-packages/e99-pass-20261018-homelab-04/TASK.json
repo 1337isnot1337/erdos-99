@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-homelab-04",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Each of the six exact PR #95 sparse-exceptional-stress sources is excluded from global minimality of D(N) by a same-cardinality unit-separated packing of strictly smaller diameter.",
+    "domain": "The six finite radii R in {16,25,36,64,100,256}; the comparator is a full rational unit-lattice disk of radius R-1/2.",
+    "limitations": "No claim for other radii or arbitrary canonical Type-II global sources. No stress-mass bound, source-preserving motion, asymptotic exclusion, or canonical promotion."
+  },
+  "result": "All six exact populations fit inside the comparator disk; its diameter is 2R-1 while the fixture diameter is 2R.",
+  "remaining_questions": [
+    "Determine whether global minimality plus the canonical C-II Type-II hypotheses excludes positive KKT diameter mass on the exceptional eta D edges for arbitrary global sources.",
+    "Construct a source-realized same-cardinality endpoint preserving all lower and active/inactive upper constraints, or prove a stronger global comparison theorem.",
+    "Obtain one independent AI-agent audit of this package at its submitted exact head."
+  ]
+}

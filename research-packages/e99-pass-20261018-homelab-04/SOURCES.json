@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md",
+      "sha256": "1abf7b668e28e13ba460b213b9ce152a912c16403e258b61417ee5bf8e06aa3f",
+      "identity": "docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md",
+      "sha256": "2abaff04ce431afe7c2857f4a843f1525bafb2a61c4dc38978e2af6629715682",
+      "identity": "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md",
+      "sha256": "60af5da043ca638e6f9740442e18d3d345b2d344cec91dc13cbb933f9ba02936",
+      "identity": "docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
+      "sha256": "01e100022b6755594eab032725198d0a6546aef9f0e9343f016b2ad6edabd231",
+      "identity": "docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/CURRENT.md",
+      "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+      "identity": "docs/targets/target-c/CURRENT.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-homelab-04/README.md",
+      "sha256": "6829bba101d8c40a71b9307b9cc7b9ad420a677b49f0a05c8216f9ac971fe0a6",
+      "identity": "proof-and-scope-note",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-homelab-04/verify.py",
+      "sha256": "5fac7de0ca55b8ac703a70180bef67b450a988467b7376e1c11403b7f6a3e00d",
+      "identity": "exact-comparator-checker",
+      "generated_from": [
+        "docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md"
+      ]
+    },
+    {
+      "path": "tasks/target-c-typeii-stress-mass-access.md",
+      "sha256": "7ee0df03f1e0c7d68d6bc48e80c05592aa778e2579108679fe27bcdb47c38977",
+      "identity": "tasks/target-c-typeii-stress-mass-access.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}
