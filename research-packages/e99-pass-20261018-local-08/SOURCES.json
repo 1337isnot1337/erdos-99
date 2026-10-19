@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md",
+      "sha256": "54c93dfec11d5b3ef7aea5cb65fc4624c2758e9e911fe9c73fe99f00542e36e1",
+      "identity": "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md",
+      "sha256": "afd5a20ba695bd56ee8306beb1a0f78b961176b2a7b239603670f4e6466814f5",
+      "identity": "docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-local-08/verify.py",
+      "sha256": "09f28f9e6cc50c9ffa9a584c7331aec2349213c82f489febb9afec4d1706fcf0",
+      "identity": "exact-rational-full-pair-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "Independent mathematical audit of the conditional rule is pending.",
+    "No theorem extracts a strict packet meeting this threshold from every canonical C-II source."
+  ]
+}

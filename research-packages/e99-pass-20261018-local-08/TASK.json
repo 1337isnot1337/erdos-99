@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-local-08",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Conditional strict-packet restoration after the canonical supplied-W stress deletion: k replacement labels suffice if the deletion removes a nonisolated contact vertex; otherwise k+1 labels suffice when one extra nonisolated contact vertex is removed. Every new pair must have squared distance strictly between 1 and D^2.",
+    "domain": "One exact rational eleven-label line-chain source with D=9; 55 original pairs, 45 post-deletion pairs, 55 strict-restoration pairs, and 55 weak-restoration pairs. Exact lower and upper bounds, contact/diameter graphs, contact isolates, equilibrium weights, affine dimension, and first-order contact motion.",
+    "limitations": "The packet rule is conditional and gives no packet-existence or source-extraction theorem. The exact fixture is not globally optimal; it proves no eventual, C-II, or Level I claim. New actual-diameter pairs may appear below the old D and must be checked; independent mathematical review remains pending."
+  },
+  "result": "Exact Fraction verifier confirms the stress, supplied-W deletion R={p0}, retained isolate q, every lower and upper pair, and a strict same-cardinality restoration with D'^2=3673/50<81. The deleted old-D pair p0-p9 is replaced at the smaller diameter by p9-q. A weak restore at p0 reintroduces all nine contacts and the old diameter pair.",
+  "remaining_questions": [
+    "Extract a strict full-pair packet meeting the k or k+1 threshold from every sufficiently large canonical C-II source.",
+    "Obtain one independent AI-agent mathematical audit of this exact package head before relying on its general conditional rule."
+  ]
+}
