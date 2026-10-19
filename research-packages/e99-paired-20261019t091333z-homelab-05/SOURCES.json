@@ -32,10 +32,10 @@
     },
     {
       "path": "docs/targets/target-c/candidate-registry.json",
-      "sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+      "sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
       "identity": "docs/targets/target-c/candidate-registry.json",
       "generated_from": [],
-      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+      "commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6"
     },
     {
       "path": "docs/research/priority-state.json",

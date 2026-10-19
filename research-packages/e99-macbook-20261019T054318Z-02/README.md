@@ -156,7 +156,7 @@ The six hull vertices, scaled by `m`, are
 `(-c,-s), (1-c,-s), (1,0), (0,1), (-s,1+c), (-s,c)`.
 
 In this cyclic order their consecutive edge-turn determinants are
-`s, c+s, s+c, s-c, s, s-c`, all positive. The origin lies strictly to the
+`s, s+c, s-c, s, s-c, s+c`, all positive (each determinant carries the common factor `m^2`). The origin lies strictly to the
 left of each oriented edge. The only other distinct corner candidates are the
 four square corners: the origin is interior, and `(1,0)`, `(0,1)`, `(1,1)`
 are convex combinations of the origin and the scaled hull vertices for `m>=12`.
