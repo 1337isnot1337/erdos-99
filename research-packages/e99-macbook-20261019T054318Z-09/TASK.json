@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-macbook-20261019T054318Z-09",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Independently audit the exact PR #111 conditional strict-packet restoration argument, its k versus k+1 cardinality threshold, and all-pair rational fixture.",
+    "domain": "Exact Fraction replay of the pinned eleven-label source, complete pair tables, stress equations, strict restoration and weak-margin/cardinality controls.",
+    "limitations": "The fixture is not proved globally optimal and does not meet the canonical full-rigidity hypotheses. This audit supplies no packet from every canonical C-II source and proves no eventual or Level I claim."
+  },
+  "result": "Independent exact replay confirms 55 source pairs, 45 retained pairs, 55 strict-restoration pairs, the normalized stress, all contact/diameter counts, the old inactive p9-q pair becoming active at D-prime, and weak-margin/cardinality controls. The stated conditional proof is sound under its exact hypotheses.",
+  "remaining_questions": [
+    "Derive from every canonical C-II source a packet of the required cardinality whose internal and full retained-source pair distances are all strictly between 1 and D squared."
+  ]
+}

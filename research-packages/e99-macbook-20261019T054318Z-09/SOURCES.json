@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "canonical finite optimization problem and quantifiers",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md",
+      "sha256": "54c93dfec11d5b3ef7aea5cb65fc4624c2758e9e911fe9c73fe99f00542e36e1",
+      "identity": "canonical supplied-W deletion theorem and exact limits",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md",
+      "sha256": "afd5a20ba695bd56ee8306beb1a0f78b961176b2a7b239603670f4e6466814f5",
+      "identity": "source-independent strict-packet contact-minimality predecessor",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-macbook-20261019T054318Z-09/verify.py",
+      "sha256": "12c485d24d4d32ab2753080e36022322b1cd2699cfbe9d16e5c3fd93b4f4565b",
+      "identity": "independent exact Fraction replay and weak-margin controls",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}
