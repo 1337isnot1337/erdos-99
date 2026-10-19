@@ -15,9 +15,8 @@ changed.
 - Audit target: PR #106 at exact head
   `18c0ffba9a730cb3dc23b711a00c20dd9302c1ac`, based on
   `7d0a450fe66991036541023f95c44c064a04b6a8`.
-- Frozen PR #106 files were read from
-  `/home/user/.local/state/erdos99-pass/macbook-20261019T054318Z/pinned-sources/pr-106/`
-  and their hashes match `source-pins.json`:
+- Frozen PR #106 files were verified against the assignment's per-worker
+  immutable source-pin manifest:
   - `README.md`: `6829bba101d8c40a71b9307b9cc7b9ad420a677b49f0a05c8216f9ac971fe0a6`
   - `SOURCES.json`: `62884eb45b92712f9ba1342f9c9e762600f95a4ba682cc4ba88ae37065019282`
   - `TASK.json`: `1e22c7f829baf4ac112b56db990809aeb7d548de9b1835c53f3affd0ad7a2f4e`
