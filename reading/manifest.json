@@ -1,7 +1,7 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2180,
+  "source_documents": 2181,
   "math_pairs_normalized": 72073,
   "documents": [
     {
@@ -44,6 +44,13 @@
       "source_sha256": "7c5a447531653d49661cddccd3119e7db9149827fead4efbcd119b92dd7a645f",
       "reading_path": "reading/docs/audits/fan_blocker_source_reconciliation_2026-10-15.md",
       "reading_sha256": "33ba1725810ba5b9e0c060f520332959b80a88d8df68404738c4fa6a6c6e1c72",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md",
+      "source_sha256": "5cbef599ca920062cd082a00dfd7199b52e86871993f0d05a780ee549abb5c6c",
+      "reading_path": "reading/docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md",
+      "reading_sha256": "415a43056ffbb1969c78a1cb4f3db0f2be502f2d59a90a103fc32d02dd0ab900",
       "math_pairs_normalized": 0
     },
     {
