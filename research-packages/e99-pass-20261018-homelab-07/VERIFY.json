@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/reports/target_b_interface_capacity_2026-10-17.md",
+    "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+    "docs/targets/target-b/README.md",
+    "research-packages/e99-pass-20261018-homelab-07/verify.py"
+  ],
+  "domain": "All 15 nonempty subsets of a normalized 2-by-2 cell block, with cell adjacency and Euler characteristic checked; the positive exact fixture uses cells {(0,0),(1,0),(0,1)} and basis u=(1,0), v=(5/13,12/13).",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-homelab-07/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
