@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2180,
-  "math_pairs_normalized": 72073,
+  "source_documents": 2181,
+  "math_pairs_normalized": 72160,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -129,6 +129,13 @@
       "reading_path": "reading/docs/audits/target_a_fan_tube_ledger_independent_audit_2026-10-17.md",
       "reading_sha256": "1d576785b22e16e994280faf96f079df2b17b047007a1dd4722304b5e675343e",
       "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md",
+      "source_sha256": "37e978dd20afb49f1ec67b94e00d70a43c5c37c5a06acb8b9c9924866e42a1ee",
+      "reading_path": "reading/docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md",
+      "reading_sha256": "39e47b0b55aa5a5a5f26ca244f00d857e769bf4b3e7ad4c3350acf27df196744",
+      "math_pairs_normalized": 87
     },
     {
       "source": "docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
