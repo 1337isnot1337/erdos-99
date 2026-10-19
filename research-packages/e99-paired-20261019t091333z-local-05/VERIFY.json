@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+    "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+    "docs/audits/target_c_midpoint_and_quantitative_hull_train_independent_audit_2026-10-09.md",
+    "docs/reports/target_c_global_inverse_phase_face_tail_exclusion_2026-10-09.md",
+    "docs/targets/target-c/CURRENT.md",
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-c/candidate-registry.json",
+    "docs/STATE.md",
+    "docs/targets/target-c/58-full-source-geometry-audit.md",
+    "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+    "docs/research/agent-task-catalog.json",
+    "docs/research/priority-state.json",
+    "research-packages/e99-paired-20261019t091333z-local-05/verify.py"
+  ],
+  "domain": "Universal analytic claim over all such global sources and independent partner choices; verify the exact scale and constant inequalities in verify.py only.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-local-05/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
