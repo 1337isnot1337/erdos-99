@@ -5,7 +5,7 @@
     "research-packages/e99-paired-20261019t091333z-homelab-11/pinned-replay.jsonl",
     "research-packages/e99-paired-20261019t091333z-homelab-11/verify.py"
   ],
-  "domain": "Finite unit-separated planar source; nonempty fixed group G0; disjoint moving groups with no old contacts between distinct moving groups; bounded parallel heights; strict contact-release floors; every upper pair and every original-order lower noncontact encoded. Finite replay cases H=30,31,100 plus the candidate symbolic t-to-zero fixture. The package checker validates the captured replay against the pinned JSONL; the original SymPy verifier was separately rerun as recorded in README.md.",
+  "domain": "Finite unit-separated planar source; nonempty fixed group G0; disjoint moving groups with no old contacts between distinct moving groups; bounded parallel heights; strict contact-release floors; every upper pair and every original-order lower noncontact encoded. Finite replay cases H=30,31,100 plus the candidate symbolic t-to-zero fixture. The package checker validates the captured replay against the pinned JSONL; the original SymPy verifier was separately rerun as recorded in README.md. Contact vectors for release floors are r=p-q from the fixed point q to the moving point p, with movement p -> p+s_i v; the inconsistent literal predecessor orientation is excluded.",
   "environment": {
     "python": "3.14",
     "dependencies": []

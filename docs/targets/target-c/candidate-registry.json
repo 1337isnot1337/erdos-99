@@ -3271,7 +3271,8 @@
       },
       "obstructions_and_limits": [
         "The exact source costs must prevent collapse of every contact-bearing group.",
-        "Finite nonglobal sources do not certify canonical optimality or source extraction."
+        "Finite nonglobal sources do not certify canonical optimality or source extraction.",
+        "The frozen report describes its contact vector in the opposite orientation to its formula and verifier. Use r=p-q from fixed q to moving p for movement p -> p+s_i v; only that orientation-corrected statement is scoped in research-packages/e99-paired-20261019t091333z-homelab-11/README.md. The literal inconsistent wording is not accepted, and candidate lifecycle remains unreviewed."
       ],
       "validation": "python3 research/verify_target_c_unequal_height_release_2026_10_10.py --heights 30 31 100 --symbolic-limit; PASS on finite nonglobal sources, all checked source pairs, unequal heights, and independent isolate transport.",
       "next_proof_obligations": [

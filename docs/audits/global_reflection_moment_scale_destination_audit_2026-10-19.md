@@ -1,5 +1,4 @@
 <!-- theorem-state: {"artifact_id":"ART-1FB8B367623B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
-<!-- theorem-state: {"artifact_id":"ART-1FB8B367623B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Exact destination audit: reflected-scale moment obstruction
 
 **Candidate:** `GLOBAL-REFLECTION-MOMENT-SCALE-OBSTRUCTION-PR959`  

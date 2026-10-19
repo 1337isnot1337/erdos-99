@@ -1,7 +1,6 @@
-> Generated reading edition · [exact source](../../../docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md) · source SHA-256 `20b58ed401ac0f853c4bb36e5367b0960cafa5cef6aa05a5557d61a2d5f176fa`.
+> Generated reading edition · [exact source](../../../docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md) · source SHA-256 `d67df4f5bc172522040ebe4e156220056759b8828cf06e7005b4d334f4c75702`.
 > [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
-<!-- theorem-state: {"artifact_id":"ART-1FB8B367623B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- theorem-state: {"artifact_id":"ART-1FB8B367623B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Exact destination audit: reflected-scale moment obstruction
 

@@ -62,9 +62,9 @@
     },
     {
       "source": "docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
-      "source_sha256": "20b58ed401ac0f853c4bb36e5367b0960cafa5cef6aa05a5557d61a2d5f176fa",
+      "source_sha256": "d67df4f5bc172522040ebe4e156220056759b8828cf06e7005b4d334f4c75702",
       "reading_path": "reading/docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
-      "reading_sha256": "e7d4f5a43afd61089e9453ab08c09eba6e6553d733f9f7229bbbc35f99ab9334",
+      "reading_sha256": "59f98d8a5c38bca42c1c5a8bce3bbe437a0bac255c7cf6687614a86612ccb3d0",
       "math_pairs_normalized": 105
     },
     {

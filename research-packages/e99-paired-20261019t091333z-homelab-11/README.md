@@ -1,6 +1,6 @@
 # Independent destination audit: PR #952 unequal-height isolate transport
 
-**Verdict: CONDITIONAL PASS** for the report's strict-floor finite endpoint theorem under its stated supplied-group hypotheses. The shortest-path closure proof and the full-source finite replay are correct within that scope. The missing premise for C-II remains source extraction with at least one contact-bearing group surviving the exact floor closure. This review does not establish that premise, change the candidate's lifecycle, or promote a theorem.
+**Verdict: CONDITIONAL PASS** for the orientation-corrected strict-floor finite endpoint theorem stated below. The frozen report's literal contact-vector orientation has a sign error; it is not validated as written. The shortest-path closure proof and the full-source finite replay are correct within that scope. The missing premise for C-II remains source extraction with at least one contact-bearing group surviving the exact floor closure. This review does not establish that premise, change the candidate's lifecycle, or promote a theorem.
 
 Reviewer: OpenAI Codex session `/root`, GPT-6 Luna xhigh, assigned worker `homelab-11`. This is an AI-agent audit of the destination bytes; it is not an external or human mathematical review.
 
@@ -24,11 +24,29 @@ There is a source-head metadata defect: the destination track, candidate registr
 
 I ran `python scripts/find_overlap.py --task target-c-face-coupled-move --offline --cache /home/cinna/.local/state/erdos99-pass/paired-20261019T091333Z/overlap.json --json` and inspected the exact-candidate matches and broader C-II hits. Live `gh` checks found no prior destination audit of this exact candidate or scope. Discussion #83 contains Target A/B handoffs, not this result. The broad query's PR #108 and #112 matches concern PR #950 return quantiles and endpoint-inclusive cuts. Live PRs #135 and #142 concern the separate seven-label PR #104 fixed-isolate/coupled-shear family; I inspected their full bodies and PR #104's body. Those finite motions are useful neighboring regressions, but they do not audit this supplied-group floor-closure theorem. No duplicate audit was present.
 
+## Orientation erratum and scope of the verdict
+
+The frozen predecessor defines the contact vector in words from moving to fixed,
+but its displayed `|r+s_i v|^2` formula and its verifier use `r=p-q`, from fixed
+to moving. This audit adopts the latter convention explicitly; it does not grant
+PASS to the inconsistent literal wording. With `p` moving and `q` fixed, the
+new separation vector is `(p-q)+s_i v`, so the exact contact slack is
+`s_i(s_i+2r dot v)` and the strict release floor is `max(0,-2r dot v)`.
+
+For a concrete falsification of the old wording, put the moving point at `0`,
+the fixed point at `v`, and take `s=1/2`. The moving-to-fixed vector is `v`, for
+which the old stated formula would give floor zero, but the actual distance is
+`1/2`, violating unit separation. The corrected vector is `-v`, giving floor
+`2` and correctly excluding that move. Reversing the endpoints gives a point
+moving away from its contact and floor zero, as required. The existing finite
+verifier already uses the corrected convention; its bytes and certificate are
+unchanged. The frozen source remains available at the pinned original hash.
+
 ## Exact statement reviewed
 
 Let a finite unit-separated planar source have diameter `D`. Fix a unit vector `v` and perpendicular `Jv`. Partition every source label into a nonempty fixed group `G_0` and disjoint nonempty moving groups `G_1,...,G_r`. Assume no old unit contact joins two different moving groups. Each moving group receives one height `s_i v`, with `s_0=0` and `0 <= s_i <= U_i`, where `U_i>0`. Isolates can be fixed, assigned to a moving group, or placed in their own moving groups; every source label and pair is retained.
 
-For each old contact cut from `G_i` to `G_0`, orient its unit vector `r` from the moving label to the fixed label and define
+For each old contact cut from `G_i` to `G_0`, define `r=p-q` from the fixed label `q` to the moving label `p`, consistently with movement `p -> p+s_i v`, and define
 
 `F_i = max(0, max{-2 r·v over cut contacts})`.
 
