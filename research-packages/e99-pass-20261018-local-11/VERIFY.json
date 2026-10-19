@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md",
+    "docs/targets/target-c/candidate-registry.json",
+    "docs/state/artifact-index.jsonl",
+    "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+    "docs/research/priority-state.json",
+    "research-packages/e99-pass-20261018-local-11/verify.py"
+  ],
+  "domain": "Exact Fraction arithmetic; seven fixed rational planar points; all one- and two-option domains for ordered two-label systems, 125 selected three-label systems, and an empty-class control.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-local-11/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
