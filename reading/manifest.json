@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2180,
-  "math_pairs_normalized": 72073,
+  "source_documents": 2181,
+  "math_pairs_normalized": 72084,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -1522,6 +1522,13 @@
       "reading_path": "reading/docs/audits/target_c_population_excess_two_thirds_independent_audit_2026-10-09.md",
       "reading_sha256": "52052dc6009104d3e60fcd1edba8fa7b7d7831a3955b04ecf04f2d0912ea8964",
       "math_pairs_normalized": 9
+    },
+    {
+      "source": "docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+      "source_sha256": "492b87c9276752cae74f1218b48b07a4200ea0f91f38092b505f55c69a4c9dcf",
+      "reading_path": "reading/docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+      "reading_sha256": "f29ab600fb032e35ac7bea81d233b5c744b60b76f827ee57fc548e1321e4d443",
+      "math_pairs_normalized": 11
     },
     {
       "source": "docs/audits/target_c_positive_leaf_anchor_second_referee_2026-10-10.md",
@@ -10506,9 +10513,9 @@
     },
     {
       "source": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
-      "source_sha256": "ca4abbf69861ee2c367bece626e3715eeaec03cdd837149453ca814d1d74eded",
+      "source_sha256": "22f286f84ac78408c872fe715dc619f24bd5fe891248fb25ca7a2912183a1cd1",
       "reading_path": "reading/docs/research/tracks/target-c-midpoint-anchor-atlas.md",
-      "reading_sha256": "b181460c87ac2e6e07e7f57f9f24a6865abab92fa5036ab98d3a053c104ee9ba",
+      "reading_sha256": "3151aded70108e430069e7dac70586ab7e3de092159a28d7d3eee606ae39c140",
       "math_pairs_normalized": 11
     },
     {
