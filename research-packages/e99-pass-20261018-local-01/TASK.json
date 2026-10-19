@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-local-01",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For the actual Section-165 plateau response and Section-175 locked fan, an admissible-basis population inequality gives an integrated sufficient criterion for Xi(v) >= j_*(v) + |T_Z(v)| at some generic phase.",
+    "domain": "Proof for every actual response satisfying the cited canonical hypotheses; exact finite regression controls use the 18 Section-102-admissible seed-63 ledgers and 34 seed-66 full-tube cases pinned in SOURCES.json.",
+    "limitations": "The sufficient area criterion is not proved for every global source. The seed fixtures have no canonical source demand and are not global-source counterexamples; zero-slack and Level I remain open."
+  },
+  "result": "Proved an exact phase-integrated lower bound for the Section-175 residual, retaining the admissible-basis deep nullity and shield-terminal counts; replayed its pointwise population inequality on corrected predecessor ledgers.",
+  "remaining_questions": [
+    "Derive the sufficient population condition from global source geometry for every sufficiently large actual source, or prove a stronger lower bound for the expected sector sink surplus when that condition fails."
+  ]
+}
