@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-macbook-20261019t054318z-07",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For each of the six exact PR #95 sparse-stress fixtures at R in {16,25,36,64,100,256}, the same-cardinality lattice disk competitor has unit separation and strictly smaller diameter, excluding that fixture from global minimality of D(N_R).",
+    "domain": "Only R in {16,25,36,64,100,256}; exact source populations from PR #95; comparator is the same-basis lattice disk of radius R-1/2, from which exactly N_R points are selected.",
+    "limitations": "No claim for other radii, arbitrary canonical Type-II global sources, a source-preserving motion, an asymptotic exclusion, stress-mass control, C-II closure or canonical promotion."
+  },
+  "result": "The exact source populations are 657, 1809, 4067, 13723, 34397, 232941; comparator counts are 847, 2135, 4543, 14615, 35813, 236625. Every comparator is unit-separated and has diameter at most 2R-1 < 2R.",
+  "remaining_questions": [
+    "For arbitrary canonical Type-II global sources, prove a globality-specific exclusion of positive normalized KKT diameter mass on exceptional actual-diameter edges, or construct a source-realized same-cardinality endpoint preserving all lower and active/inactive upper pairs and contact isolates."
+  ]
+}
