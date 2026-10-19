@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-b/README.md",
+      "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+      "identity": "docs/targets/target-b/README.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+      "identity": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/theory/03-oler-shell.md",
+      "sha256": "a6cf18f38fa01c6969e2aecd8211278a0dcd1530efb190551d815ed0e86c0521",
+      "identity": "docs/theory/03-oler-shell.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+      "sha256": "a1ecda90c62bbe13b93a1c4091fb0ec333255a27014c6536a2b03d588608e5fb",
+      "identity": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+      "sha256": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+      "identity": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/REVIEW_POLICY.md",
+      "sha256": "2d7addd05f8d8cbf360df40db0940f6da9768faf34899a371b47306f3af0f3bd",
+      "identity": "docs/REVIEW_POLICY.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/agent-procedure.md",
+      "sha256": "6c718ede15c0dad1ee955c19b3fdefa730e021ecae080c02be914b59331adf1f",
+      "identity": "docs/research/agent-procedure.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/bottleneck-brief.md",
+      "sha256": "90eadcfab8e97d1c294f73950de41102f9bbd6c380ed7f71e2f7495aaa15a5b0",
+      "identity": "docs/research/bottleneck-brief.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/research-family-status.md",
+      "sha256": "669edba719155f55a435032fc6e9f30b76fde98e26553b2e9a5efc7755e02f28",
+      "identity": "docs/research/research-family-status.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/run-reconciliation-2026-10-17.md",
+      "sha256": "72d092762ad2a53d6e0ae931c5c832b5dcfd38da7306f46fa11ec871c907e2f1",
+      "identity": "docs/research/run-reconciliation-2026-10-17.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+      "sha256": "b8242aa0efaea70bc0bd02321785a14d19779a11eef3d13efc487a4ecc6e7179",
+      "identity": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-16/verify.py",
+      "sha256": "b38be6157bec0f82d87284663447fcd97b4b2c31b2144241739b2c9def76215a",
+      "identity": "independent exact-head audit verifier for PR #147",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}
