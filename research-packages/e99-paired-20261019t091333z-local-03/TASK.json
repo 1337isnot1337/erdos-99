@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-local-03",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For the exact PR142 two-face train and moved isolate, add W_h=(3, h) at h=1 or h=11/10 and move it as W_h(t)=(3+6t/5,h-5t). For every rational 0<t<=1/10, all 28 pairs among the eight retained labels stay at least one apart and strictly below the source diameter; W-A_0 remains the unique actual diameter pair and its squared length decreases.",
+    "domain": "A_i=(i,0), B_i=(i+t,sqrt(1-t^2)) for i=0,1,2; Z=(1,11/5-t); W_h=(3+6t/5,h-5t); h in {1,11/10}; rational t in (0,1/10]. At t=0, W_1 is one exterior unit contact and W_11/10 is a diameter-only exterior attachment. Enumerate every unordered source pair.",
+    "limitations": "Exact finite evidence for two attached eight-label configurations only. It proves no canonical-source extraction, no result for arbitrary exterior attachments, no asymptotic statement, and no C-II or Level I closure. The source fixture is not asserted to be a global minimizer."
+  },
+  "result": "Both variants have a strict sub-D endpoint on 0<t<=1/10. Their source squared diameters are 10 and 1021/100; at t=1/10 the unique actual squared diameters are 24961/2500 and 6309/625, respectively. The exact checker covers all 28 pairs and the contact/diameter counts.",
+  "remaining_questions": [
+    "Extract this or another exterior attachment and its compatible motion from an arbitrary canonical full-source C-II minimizer while checking every source lower and actual or inactive upper pair.",
+    "Determine whether the canonical full-source endpoint route can use such an attachment to contradict global minimality without assuming that a finite nonglobal fixture occurs in a minimizer."
+  ]
+}
