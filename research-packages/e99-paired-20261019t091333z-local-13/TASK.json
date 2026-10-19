@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-local-13",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Destination exact-head audit of the candidate that every translated unit triangular-lattice crop in a closed radius-R disk, for R>=640000, admits a unit-separated replacement with at least pi*R^2/(sqrt(3)/2)+R/160000 labels; consequently every global minimum-diameter n-point unit-separated set with D>1280000 has g_A=n-1-pi*D^2/(2*sqrt(3))>=D/320000.",
+    "domain": "All real R>=640000, every lattice translation, and every finite global n-point diameter minimizer with D>1280000; one-row replacement, guarded simultaneous row packets, translation averaging, and strict smaller-diameter global comparison are the proof hypotheses.",
+    "limitations": "PASS is limited to this population-reserve claim and the pinned finite checker. No source-specific upper bound, triangle conclusion, C-II endpoint, Level I closure, or theorem-state promotion is established."
+  },
+  "result": "PASS within scope after independent analytic reconstruction, exact destination hash verification, source finite-checker replay, and separate exact-rational scalar controls; candidate lifecycle remains unreviewed.",
+  "remaining_questions": [
+    "Prove a source-specific g_A<=cD+o(D) bound with c<1/320000 for every sufficiently large triangle-free global minimizer while retaining every source label, or construct a separate strict-sub-D competitor."
+  ]
+}
