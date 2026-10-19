@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-homelab-02",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Under the Target B source-count convention that every original complex vertex is a source label and all other labels, including contact isolates, are counted in t, cut a finite embedded edge-to-edge rhombic annulus along one simple proper path of ell internal edges joining distinct boundary components. Duplicate both banks and all ell+1 slit vertices, retain every rhombus, keep t fixed as the original outside-label count, and determine the exact change in B+2(t+chi-1).",
+    "domain": "Exact finite incidence and Euler counts for one 6x6 rhombic patch with its central 2x2 block removed and a two-edge slit.",
+    "limitations": "This is relative cell-count bookkeeping, not a source-realized disk or a lower bound on G+E. Slit copies are not new labels. No Target B or Level I closure is established."
+  },
+  "result": "Exact identity: delta V=ell+1, delta M=ell, delta R=0, delta B=2ell, delta chi=1, and delta[B+2(t+chi-1)]=2(ell+1). Boundary-bank length is counted once; an edge-only charge misses the Euler unit, while adding the interface on top of the cut boundary double counts 2ell.",
+  "remaining_questions": [
+    "Find a source-level geometric payment of all ell+1 units that retains original labels, or show the remaining Euler unit cannot be paid under canonical hypotheses.",
+    "No geometric lower bound, source extraction, or global minimizer implication is established."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/targets/target-b/README.md",
+    "docs/targets/target-b/01-jammed-rhombic-branch.md",
+    "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+    "research-packages/e99-paired-20261019t091333z-homelab-02/verify.py"
+  ],
+  "domain": "Exact finite incidence and Euler counts for one 6x6 rhombic patch with its central 2x2 block removed and a two-edge slit.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-homelab-02/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
