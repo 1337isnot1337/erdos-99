@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md",
+    "docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md",
+    "research-packages/e99-pass-20261018-local-08/verify.py"
+  ],
+  "domain": "One exact rational eleven-label line-chain source with D=9; 55 original pairs, 45 post-deletion pairs, 55 strict-restoration pairs, and 55 weak-restoration pairs. Exact lower and upper bounds, contact/diameter graphs, contact isolates, equilibrium weights, affine dimension, and first-order contact motion.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-local-08/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
