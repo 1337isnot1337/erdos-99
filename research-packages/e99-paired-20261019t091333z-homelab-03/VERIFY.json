@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/targets/target-c/CURRENT.md",
+    "research/target_c_open_cell_phase_flux_2026-10-03.md",
+    "research/target_c_open_cell_cut_divergence_condensation_2026-10-03.md",
+    "docs/reports/target_c_open_cell_block_transposition_2026-10-01.md",
+    "research-packages/e99-paired-20261019t091333z-homelab-03/verify.py"
+  ],
+  "domain": "Finite source conditional on the fixed-star complete O-O rectangle, open witness cell, two distinct train phases, positive cut contact masses, exact contact-preserving block transposition, and the predecessor non-grazing estimate for every moving actual diameter.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-homelab-03/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
