@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "research/certificates/target_c_unequal_height_release_2026_10_10.jsonl",
+      "sha256": "2f996f5307f5b237e78074464113d880f7683c9a816601f4874db8f5d81b8f7c",
+      "identity": "pinned candidate certificate",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/pinned-replay.jsonl",
+      "sha256": "2f996f5307f5b237e78074464113d880f7683c9a816601f4874db8f5d81b8f7c",
+      "identity": "captured verifier replay",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/verify.py",
+      "sha256": "264d158cf563ac88b15857abb38dd033b5f4a2570de3c6147703cb78b8eeeae7",
+      "identity": "replay record checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}
