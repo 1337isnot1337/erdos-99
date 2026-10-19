@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+    "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+    "docs/audits/target_c_oler_sharp_separator_independent_audit_2026-10-10.md",
+    "docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md",
+    "docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md",
+    "docs/targets/target-c/69-coherent-grain-interface-audit.md",
+    "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md",
+    "docs/targets/target-c/83-attachment-cell-disjoint-tiling-audit.md",
+    "docs/theory/01-local-structure.md",
+    "docs/state/theorem-state.yaml",
+    "docs/state/STATUS.generated.md",
+    "docs/targets/target-c/CURRENT.md",
+    "docs/targets/target-c/candidate-registry.json",
+    "research-packages/e99-paired-20261019t091333z-homelab-06/verify.py"
+  ],
+  "domain": "All sufficiently large sources in the stated asymptotic sequence; finite checker domain is a rational homothety-crop fixture with eight exact directions and one threshold-breaking control.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-homelab-06/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
