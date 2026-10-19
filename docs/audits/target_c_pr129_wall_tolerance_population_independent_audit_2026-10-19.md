@@ -118,7 +118,18 @@ The two-side refill report gives squared motion gap
 `eta_L=g_L/(4*(L+1))=3/(1000000*L^14*(L+1))`. The conversion is exact. In
 this family `L=2m` and the outer wall equals the reference grid wall, so its
 ordered wall error is exactly zero and hence is strictly below every positive
-`eta_(2m)`. This verifies the tolerance claim needed for this example. It
+`eta_(2m)`. The scale also matches the stated perturbation margin: if a
+reference target-to-wall distance is at most `L+1` and a wall vertex moves by
+at most `eta_L`, expansion of the square gives
+
+```text
+|x-(w+delta)|^2 >= |x-w|^2 - 2(L+1)*eta_L
+                 = |x-w|^2 - g_L/2.
+```
+
+The dropped `|delta|^2` term is nonnegative, so a reference squared gap
+`g_L` retains at least `g_L/2`. This verifies the tolerance scale and the
+zero-error instance needed here. It
 does not re-prove the separate general perturbation and exterior-shielding
 argument for arbitrary nearly matching simple cycles in the predecessor
 two-side theorem.
