@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+      "sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+      "identity": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+      "sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+      "identity": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_oler_sharp_separator_independent_audit_2026-10-10.md",
+      "sha256": "c3432f43913f46dd06a5187b7b47b0c297a7d5ee265a73e8548bd327b152eea9",
+      "identity": "docs/audits/target_c_oler_sharp_separator_independent_audit_2026-10-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md",
+      "sha256": "60af5da043ca638e6f9740442e18d3d345b2d344cec91dc13cbb933f9ba02936",
+      "identity": "docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md",
+      "sha256": "1abf7b668e28e13ba460b213b9ce152a912c16403e258b61417ee5bf8e06aa3f",
+      "identity": "docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/69-coherent-grain-interface-audit.md",
+      "sha256": "29d98eba4843ccf2c67b6122453ae4f1e088a829eb422ebe2493795d258dd5af",
+      "identity": "docs/targets/target-c/69-coherent-grain-interface-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md",
+      "sha256": "5185283ec35ab657bb030f75a901e00cdb5fcf1433501e5535143c2ca91bbd6a",
+      "identity": "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/83-attachment-cell-disjoint-tiling-audit.md",
+      "sha256": "673c14dddf11cf82e39e5b295f499f887bad42149021949871d894ba28b605b1",
+      "identity": "docs/targets/target-c/83-attachment-cell-disjoint-tiling-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/theory/01-local-structure.md",
+      "sha256": "75c539b2281046c49d6c303bda845cb7fb2643d0d9a1106d64e4f737117c54fb",
+      "identity": "docs/theory/01-local-structure.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/STATUS.generated.md",
+      "sha256": "66b7fdd1a548a1c975ce70d7f0ad3c492eca3eb091602ccb1970ac497f925e3c",
+      "identity": "docs/state/STATUS.generated.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/CURRENT.md",
+      "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+      "identity": "docs/targets/target-c/CURRENT.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+      "identity": "docs/targets/target-c/candidate-registry.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-06/verify.py",
+      "sha256": "35858bc9a548bf987325a0c8f9e3f3d40bd06f9fceac6bf6abf1b640b08efd7a",
+      "identity": "scoped-exact-rational-crop-fixture",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The positive-length same-component return-quantile relation TARGET-C-PR950-TRAIN-RETURN-LENGTH-QUANTILE is separate and noncanonical; this package audits common-grid access conditional on that linear return family. The finite fixture does not prove any asymptotic claim."
+  ]
+}
