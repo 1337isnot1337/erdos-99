@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-macbook-20261019T054318Z-16",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Audit the exact embedded two-grain rhombic disk claim in PR #131: enumerate all nonempty masks in its normalized 2-by-2 cell box, prove the minimum physical count under the declared interface-plus-virtual constraint, and independently verify the rational L-patch geometry and ledgers.",
+    "domain": "All 15 nonempty masks in the normalized 2-by-2 cell box, all edge-connected Euler-one disk masks, and all disjoint diagonal crossing choices; exact metric and count/area checks for the representative three-cell L patch.",
+    "limitations": "Finite two-direction model only. No Section-50 retained-core extraction, positive-depth PC1/PC3 application, virtual-area payment, global source realization, or Target B/Level I conclusion."
+  },
+  "result": "The four admissible three-cell L masks are minimal in the declared 2-by-2 domain. The representative rational realization is a unit-separated, triangle-free eight-point set with 3 physical crossings, 2 internal crossings, 1 deleted interface crossing, 1 virtual cross-grain pair, and exact area ledger.",
+  "remaining_questions": [
+    "Can canonical shell hypotheses force two retained Section-50 components with fixed linear-size direction subsets and positive PC1 trim depth, then pay their virtual determinant mass in the full source ledger? The one-crossing fixture supplies neither macroscopic extraction nor virtual-area payment."
+  ]
+}
