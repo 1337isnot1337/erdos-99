@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2180,
-  "math_pairs_normalized": 72073,
+  "source_documents": 2181,
+  "math_pairs_normalized": 72077,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -990,6 +990,13 @@
       "reading_path": "reading/docs/audits/target_c_inactive_saturation_anchoring_hostile_audit_2026-09-12.md",
       "reading_sha256": "c86d8f9ed1d6c277e0091e712a4511a6b3abd10c6a8aaa1b08bc2db78e113edb",
       "math_pairs_normalized": 1
+    },
+    {
+      "source": "docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+      "source_sha256": "36fee0256d57b6e14a75b62d6515b14a198c3cd5d81a53045f16bf362ce3b1f9",
+      "reading_path": "reading/docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+      "reading_sha256": "8a42e9884117a858727ecd528f1fd2c49f41a33192bfcead0809c60a45c6c20d",
+      "math_pairs_normalized": 4
     },
     {
       "source": "docs/audits/target_c_integration_audit_ledger_2026-10-06.md",
