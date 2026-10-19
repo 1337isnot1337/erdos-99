@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-local-09",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Independent proof audit of candidate POPRESERVE-TWELVE-ARC-PR1008 at destination base 7d0a450fe66991036541023f95c44c064a04b6a8: prove the twelve-arc disk population bound and its strict-sub-diameter implication for every global minimizer.",
+    "domain": "All real R>=8192 for the disk comparison; every finite planar unit-separated n-point global diameter minimizer with D>16384 for g_A>=gamma D-sqrt(D)/(4 sqrt(2))-60; exact constants in the stated D>=10^6 consequence.",
+    "limitations": "Audit applies only to the pinned candidate bytes. It establishes no triangle conclusion, source-lattice identification, triangle-free source upper bound, C-II endpoint, Level I closure, optimality of gamma, theorem-state change, or canonical promotion. The new exact checker covers constants, not the analytic proof or all-radius geometry."
+  },
+  "result": "PASS: independent reconstruction found the all-radius packing, averaging, constant, and global-minimizer steps valid at the exact pinned candidate; see README.md.",
+  "remaining_questions": [
+    "For Target C use, derive g_A<=cD+o(D) with fixed c<gamma for every sufficiently large triangle-free global minimizer while retaining all source labels, or construct a source-specific same-cardinality strict-sub-D competitor.",
+    "The candidate registry and theorem-state remain unreviewed and unchanged; any later lifecycle or promotion transaction is separate."
+  ]
+}
