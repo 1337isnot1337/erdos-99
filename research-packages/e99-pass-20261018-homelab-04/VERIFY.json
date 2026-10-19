@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md",
+    "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md",
+    "docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md",
+    "docs/problem/statement.md",
+    "docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
+    "docs/research/priority-state.json",
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-c/CURRENT.md",
+    "research-packages/e99-pass-20261018-homelab-04/README.md",
+    "research-packages/e99-pass-20261018-homelab-04/verify.py",
+    "tasks/target-c-typeii-stress-mass-access.md"
+  ],
+  "domain": "The six finite radii R in {16,25,36,64,100,256}; the comparator is a full rational unit-lattice disk of radius R-1/2.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-homelab-04/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
