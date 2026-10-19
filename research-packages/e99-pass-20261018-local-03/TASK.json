@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-local-03",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For a finite edge-to-edge planar complex of unit rhombi with every edge incident to one or two faces, prove V=R+B/2+chi and n=R+B/2+chi+t, so the exact shell correction is t+chi-1=t+k-h-1.",
+    "domain": "Finite edge-to-edge subsets of the unit rhombic parallelogram tiling; exact integer incidence, Euler, component, hole, and source-count identities.",
+    "limitations": "Does not prove the geometric shell lower bound, a multi-grain/interface transfer, source extraction, global optimality, or any Level I conclusion."
+  },
+  "result": "Independent reconstruction of Target B equation (36.2)'s exact topology-sensitive count identity; reproduced on disk, annulus, disconnected, and outside-label controls.",
+  "remaining_questions": [
+    "Prove G+E >= (sqrt(3)/4)B + (sqrt(3)/2)(t+k-h-1) for the canonical source across grains, interfaces, holes, and outside labels, or construct a full source-preserving strict sub-D competitor."
+  ]
+}
