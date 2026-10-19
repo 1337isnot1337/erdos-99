@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-homelab-10",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Independent exact-head audit of GLOBAL-COLOUR-LIFT-AFFINE-FLATTENING-PR958: for a noncollinear finite planar source, positive lift parameter, and centered regular-simplex color vectors, the specified lift has affine dimension at most two iff every centered color-vector column lies in the centered source-plane column space. Two used colors flatten iff their source classes are parallel level lines; three used colors cannot flatten for n >= 4.",
+    "domain": "Exact centered-matrix rank screens on all noncollinear 3- and 4-point subsets of the 3x3 integer grid with surjective two- or three-color assignments.",
+    "limitations": "Does not derive a two-color proper coloring from a global minimizer, exclude other planar rearrangements, prove any source is globally minimizing, or promote theorem state. The finite screen is not the proof."
+  },
+  "result": "The stated affine-rank criterion and its two-/three-color consequences pass the independent proof reconstruction. Exact finite screens found no counterexample in the declared grid domain.",
+  "remaining_questions": [
+    "Show that an actual sufficiently large triangle-free global minimizer admits a proper two-coloring whose classes lie on two parallel lines, or construct a different planar full-source strict-diameter endpoint; the submitted candidate proves neither."
+  ]
+}

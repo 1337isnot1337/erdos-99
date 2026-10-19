@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "inputs": [
+    "research-packages/e99-pass-20261018-homelab-10/verify.py"
+  ],
+  "domain": "Exact centered-matrix rank screens on all noncollinear 3- and 4-point subsets of the 3x3 integer grid with surjective two- or three-color assignments.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-homelab-10/verify.py"
+      ],
+      "timeout_seconds": 60
+    }
+  ]
+}
