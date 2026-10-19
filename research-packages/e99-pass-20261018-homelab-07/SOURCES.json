@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+      "sha256": "b8242aa0efaea70bc0bd02321785a14d19779a11eef3d13efc487a4ecc6e7179",
+      "identity": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+      "sha256": "a1ecda90c62bbe13b93a1c4091fb0ec333255a27014c6536a2b03d588608e5fb",
+      "identity": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-b/README.md",
+      "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+      "identity": "docs/targets/target-b/README.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-homelab-07/verify.py",
+      "sha256": "9c69b11f0772e06ca5d5eb995dca1e74aaa2b026a43f4df23c80e35359a347c3",
+      "identity": "rational-two-grain-rhombic-disk-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}

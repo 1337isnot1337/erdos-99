@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-homelab-07",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For an explicit three-cell L-shaped rhombic disk made from two rational unit directions, enumerate two disjoint one-cell crossing grains and their exact physical, deleted, and virtual crossing ledger; exhaust normalized 2-by-2 cell masks to verify the minimal three-rhombus witness in this two-direction disk model.",
+    "domain": "All 15 nonempty subsets of a normalized 2-by-2 cell block, with cell adjacency and Euler characteristic checked; the positive exact fixture uses cells {(0,0),(1,0),(0,1)} and basis u=(1,0), v=(5/13,12/13).",
+    "limitations": "Finite two-direction geometry only. Grain size is one crossing, below Section-50 minimum-degree and PC1 positive-trim hypotheses. The result proves no source extraction, asymptotic payment, global minimality, Target B shell bound, or canonical promotion."
+  },
+  "result": "The smallest enumerated embedded two-grain disk has 3 physical rhombi, 2 internal grid crossings, 1 deleted physical interface crossing, 1 virtual cross-grain train pair, and exact saturation R=G+max(I,|X1|,|X2|,|X1|+|X2|-I)=3.",
+  "remaining_questions": [
+    "Can canonical shell hypotheses force two final Section-50 components to contain fixed alpha D and beta D angle-separated train subsets as required by open PR #103, and how does its conditional V_(A,B) bound enter the shell endpoint? The one-cell finite fixture does not meet that macroscopic hypothesis."
+  ]
+}
