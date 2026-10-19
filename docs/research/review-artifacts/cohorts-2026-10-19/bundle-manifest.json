@@ -139,8 +139,8 @@
     "reviews/a-run-logs/pr176-normal.log": "160e6aebbf8e93a478f22f7468c0f9d53b7cb1ccf5b9ddae424962847496e6cc",
     "reviews/a-run-logs/scoped-pr102.md": "4981d0f1c518fdf9c3c3a00afe3fd1fa6f3d797fc8a2482c8828df201c95eacb",
     "reviews/a-run-logs/scoped-pr103.md": "c755e9508fc28ae6765eef4e704367deef73ff692e4b397f685b011705967882",
-    "reviews/a-run-logs/scoped-pr118.md": "5cbef599ca920062cd082a00dfd7199b52e86871993f0d05a780ee549abb5c6c",
-    "reviews/a-run-logs/scoped-pr130.md": "e71728dc3c001cc37e7ac2caca4c50d390bb54b054a2438601bd36a8cd7fe951",
+    "reviews/a-run-logs/scoped-pr118.source.txt": "5cbef599ca920062cd082a00dfd7199b52e86871993f0d05a780ee549abb5c6c",
+    "reviews/a-run-logs/scoped-pr130.source.txt": "e71728dc3c001cc37e7ac2caca4c50d390bb54b054a2438601bd36a8cd7fe951",
     "reviews/a-run-logs/scoped-pr140.md": "a5b8ad6615685784307855df582bfe72ae678339c9faa1d73d31fa22136256c3",
     "reviews/a-run-logs/scoped-pr141.md": "37e978dd20afb49f1ec67b94e00d70a43c5c37c5a06acb8b9c9924866e42a1ee",
     "reviews/a-run-logs/scoped-pr148.md": "9d53529b58cec2e01c376531a28fa5a90059ecab100302990e5de62737ca4a84",
@@ -274,8 +274,10 @@
     "reviews/c-scoped-proof-audits.json": "494f8eb29e4f7ed60d4e443fd0643e70254566ad89f53d3bb1a699b8e08dee66",
     "reviews/c-source-integrity.json": "be6283ae3bd49841b210dd56760b041b92e191893b15ca147ff8af93addd0f45",
     "scope-repairs.json": "2a83a959211e3aa063ef9e5244395bc8c31d6db9bc1115ee7cf81da5b2a11b38",
-    "source-inventory.json": "8707e5e4b8b52ccd1166ce172d42a4c694d77508716e0b46743b802b4633c5d9"
+    "source-inventory.json": "8707e5e4b8b52ccd1166ce172d42a4c694d77508716e0b46743b802b4633c5d9",
+    "source-snapshot-path-map.json": "ad29508574331b1d598b2d6818b4c91a346e304c57bb0c5299d33c1f2ad88a40"
   },
-  "generated_at": "2026-10-19T14:09:53.754117+00:00",
-  "scope": "Evidence source bytes. Absolute original command paths are historical execution context; preserved copies are inside this bundle."
+  "generated_at": "2026-10-19T14:17:35.850184+00:00",
+  "scope": "Evidence source bytes. Absolute original command paths are historical execution context; preserved copies are inside this bundle.",
+  "snapshot_location_map": "source-snapshot-path-map.json"
 }

@@ -1,0 +1,22 @@
+{
+  "renames": [
+    {
+      "original_snapshot": "reviews/a-run-logs/scoped-pr118.md",
+      "preserved_snapshot": "reviews/a-run-logs/scoped-pr118.source.txt",
+      "sha256": "5cbef599ca920062cd082a00dfd7199b52e86871993f0d05a780ee549abb5c6c",
+      "source_head": "6295e0dc87031fe8418bff50bd9923014072df0f",
+      "source_path": "docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md",
+      "reason": "Verbatim historical source snapshot; original relative links remain literal text in their original context. Active source reports retain working links."
+    },
+    {
+      "original_snapshot": "reviews/a-run-logs/scoped-pr130.md",
+      "preserved_snapshot": "reviews/a-run-logs/scoped-pr130.source.txt",
+      "sha256": "e71728dc3c001cc37e7ac2caca4c50d390bb54b054a2438601bd36a8cd7fe951",
+      "source_head": "d44c691183ca3a789a6bedee05ff867220f440ca",
+      "source_path": "docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
+      "reason": "Verbatim historical source snapshot; original relative links remain literal text in their original context. Active source reports retain working links."
+    }
+  ],
+  "scientific_bytes_changed": false,
+  "scope": "Two archived evidence copies relocated; no active mathematical, executable or declared package input changed."
+}
