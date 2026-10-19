@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2180,
-  "math_pairs_normalized": 72073,
+  "source_documents": 2181,
+  "math_pairs_normalized": 72079,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -1543,6 +1543,13 @@
       "reading_path": "reading/docs/audits/target_c_positive_pinned_face_tail_independent_audit_2026-10-08.md",
       "reading_sha256": "43368ad99fc1c23b24132e000ad64c984c16c8d906d4e5204b4bcb5acad1c2b8",
       "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+      "source_sha256": "6289ec80954c7832d22a0ec7746b41632aa255938ee3f6f654cb7158dbca5423",
+      "reading_path": "reading/docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+      "reading_sha256": "811c52eca6d4317d7ba35a753105b8d46e7e4223a22c5c2d0ed72250408ac122",
+      "math_pairs_normalized": 6
     },
     {
       "source": "docs/audits/target_c_primitive_shell_leaf_forcing_promotion_2026-09-12.md",
