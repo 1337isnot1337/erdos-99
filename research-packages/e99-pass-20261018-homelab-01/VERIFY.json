@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-a/20-zero-slack-normalization.md",
+    "docs/targets/target-a/15-two-shadow-planarity.md",
+    "docs/targets/target-a/18-common-neighbor-sdr-regression.md",
+    "docs/targets/target-a/29-lens-source-gate-refinements.md",
+    "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+    "research-packages/e99-pass-20261018-homelab-01/verify.py"
+  ],
+  "domain": "Exact rational squared-distance and matching enumeration on six named points; no search or floating point. The second target shore is a pair in the standard unit triangular lattice.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-homelab-01/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
