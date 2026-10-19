@@ -116,9 +116,27 @@ PASS: parameter, actual-contact, planar-label and unique-contact guards
 
 The checker uses exact rational arithmetic for its finite fixtures and exact Q(sqrt(5)) arithmetic for the regular pentagon. It agrees with the reconstructed proof and rejects malformed-input controls. It does not certify the universal analytic statements, compactness, global optimality of arbitrary sources, the external D(8) theorem, or Level I.
 
+The independent package spot-checker was also run:
+
+~~~text
+flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'python research-packages/e99-paired-20261019t091333z-local-12/verify.py'
+~~~
+
+It checks the pinch-dilate pair ledger and diameter bound on an exact rational square, a strict contraction on a rational three-point exactly-one-contact fixture, and three invalid-input controls. It is a finite regression only.
+
+Package metadata was checked with:
+
+~~~text
+python scripts/research_package.py --package research-packages/e99-paired-20261019t091333z-local-12 --check-only
+~~~
+
+This metadata-only command checks source hashes and declarations; it does not run the package verifier or validate the mathematics. The external D(8) source premise remains listed as unresolved package closure.
+
 ## Disposition
 
 I found no defect in the destination one-contact proof or its stated fixed-n consequences. The n=4, 5, and 8 examples are finite regressions, not an asymptotic counterexample. The exact remaining lemma is to prove that for every sufficiently large n the triangle-free n-point class does not attain D(n), or to construct triangle-free global minimizers for arbitrarily large n. The one-contact result supplies neither outcome.
+
+**Next question:** Can the triangle-free infimum fail to be attained for every sufficiently large n? The downstream decision is Level I, and the exact quantity is whether the triangle-free infimum is attained at D(n). The changed hypothesis must extend beyond exactly one contact to arbitrary triangle-free global minimizers while preserving every source label and pair constraint. A proof of nonattainment establishes Level I; triangle-free global minimizers for unbounded n refute it. A feasible first step is to classify contact configurations that can occur at global minimizers and test whether any source motion has a strict feasible descent. The blocker is that additional contacts can be shortened by the one-contact contraction, so the current proof supplies no such motion.
 
 No theorem manifest, accepted claim lifecycle, candidate registry, priority, generated view, or certificate registration is changed. The candidate retains its existing unreviewed, canonical=false state until a maintainer records disposition under the project review policy. This PR supplies the requested destination audit evidence but does not itself perform a promotion transaction. Required repository-wide theorem-certificate replay is deferred to the merging agent; it is not a validation result of this note.
 

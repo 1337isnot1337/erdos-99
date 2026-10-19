@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md",
+    "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+    "docs/problem/statement.md",
+    "docs/STATE.md",
+    "docs/state/artifact-index.jsonl",
+    "docs/research/priority-state.json",
+    "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+    "docs/targets/target-c/candidate-registry.json",
+    "research-packages/e99-paired-20261019t091333z-local-12/verify.py"
+  ],
+  "domain": "Exact rational spot controls for the pinch-dilate map on a square and the unique-contact contraction on a three-point source; the universal proof and external D(8) premise are analyzed in README.md.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-local-12/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
