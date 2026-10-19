@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-homelab-03",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For the complete two-family unit-rhombic grid P_{M,N}(theta), with M,N>=1 and pi/3<theta<pi/2, contract the actual two-class phase potential toward pi/3 and compute the active diameter derivative; separately rotate the same full source to pi/2 and check every pair.",
+    "domain": "Analytic family P_{M,N}={(i u+j v):0<=i<=M,0<=j<=N}, M,N>=1, |u|=|v|=1, pi/3<theta<pi/2; exact rational replay at M=2,N=1 and cos(theta)=7/25, with phase-contracted endpoint cos(theta)=1/2 and perpendicular endpoint cos(theta)=0.",
+    "limitations": "Finite exact family only. The grid is explicitly nonglobal and is not a first-order-jammed survivor. No conclusion is proved for incomplete train graphs, multiple grains, interfaces, or arbitrary global minimizers."
+  },
+  "result": "The canonical defect-contraction direction increases the unique active diameter on this imbalanced grid. The opposite angle motion to pi/2 preserves all unit-separation constraints and gives a same-cardinality strict-diameter competitor; the rational checker verifies all 15 pairs in the six-point fixture.",
+  "remaining_questions": [
+    "For a source with multiple phase grains or an incomplete crossing graph, find a source-derived direction that strictly decreases every actual active diameter pair, or give an exact nonnegative diameter-stress obstruction."
+  ]
+}

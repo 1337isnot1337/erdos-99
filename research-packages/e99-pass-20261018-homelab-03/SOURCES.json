@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/STATE.md",
+      "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+      "identity": "docs/STATE.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-b/README.md",
+      "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+      "identity": "docs/targets/target-b/README.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+      "identity": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+      "sha256": "43c490a092d644dd42831ec60359701c9c77106f927623c5fd7f0585ba83c83c",
+      "identity": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_trimmed_grid_phase_star_exclusion_2026-09-05.md",
+      "sha256": "4013536ad4ca97b13f9c0c7d39ca6911cec3f1fc8f1897cf406b5ae3eba3ab86",
+      "identity": "docs/reports/target_b_trimmed_grid_phase_star_exclusion_2026-09-05.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/bottleneck-brief.md",
+      "sha256": "90eadcfab8e97d1c294f73950de41102f9bbd6c380ed7f71e2f7495aaa15a5b0",
+      "identity": "docs/research/bottleneck-brief.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-homelab-03/verify.py",
+      "sha256": "4b27abbe0df9d5b841f4c578028861e6eb3d142c692a26c58c63032b59d95f78",
+      "identity": "exact-rational-all-pairs-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}
