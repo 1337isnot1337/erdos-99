@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/20-zero-slack-normalization.md",
+      "sha256": "29050c565c02816f425e09f1a01598e1012b689d0508618465e406cf3918ca40",
+      "identity": "docs/targets/target-a/20-zero-slack-normalization.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/15-two-shadow-planarity.md",
+      "sha256": "06e5080f576dd695f4196adc225525b9f314bf65685fd1f509ce3d15f77de8f8",
+      "identity": "docs/targets/target-a/15-two-shadow-planarity.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/18-common-neighbor-sdr-regression.md",
+      "sha256": "d585a57280fa391816a3354d07af96f618c7e1a3cf640f36d0f8a9445f9c2629",
+      "identity": "docs/targets/target-a/18-common-neighbor-sdr-regression.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/29-lens-source-gate-refinements.md",
+      "sha256": "ee1d31457082639f55a90b1474bfc92753c0a7dc4fc828a65bdd2fe5643ca550",
+      "identity": "docs/targets/target-a/29-lens-source-gate-refinements.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+      "sha256": "585d984a913b92dbe9d7d6dd63d02ad1c77a20f0caa35ff3fa0ffb35274c3502",
+      "identity": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-homelab-01/verify.py",
+      "sha256": "c6677f46f700c1f6c5830f3e711213b33b1857e2978c76d4cff0c47ae67ff28e",
+      "identity": "finite-geometric-regression-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}
