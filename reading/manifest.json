@@ -1,7 +1,7 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2180,
+  "source_documents": 2181,
   "math_pairs_normalized": 72073,
   "documents": [
     {
@@ -44,6 +44,13 @@
       "source_sha256": "7c5a447531653d49661cddccd3119e7db9149827fead4efbcd119b92dd7a645f",
       "reading_path": "reading/docs/audits/fan_blocker_source_reconciliation_2026-10-15.md",
       "reading_sha256": "33ba1725810ba5b9e0c060f520332959b80a88d8df68404738c4fa6a6c6e1c72",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+      "source_sha256": "f2ac8d9ca3fc9f88c371797aaaa4bf219302f9486acb70b9debd0fa14cdb9743",
+      "reading_path": "reading/docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+      "reading_sha256": "8f1d625aab20422207db842aee739398671703fcda7ddaf58b62ccfa22d4fcde",
       "math_pairs_normalized": 0
     },
     {
