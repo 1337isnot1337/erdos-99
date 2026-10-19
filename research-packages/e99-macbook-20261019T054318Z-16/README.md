@@ -134,7 +134,8 @@ xhigh assistance. Reviewer session: `macbook-16`, GPT-6 Luna xhigh, assigned
 independently of the PR #131 producer. This new audit package is contributed
 under Apache-2.0; it does not copy external text or code. Credit for the
 original geometric construction and submitted checker remains with the PR #131
-contributor.
+contributor. The package itself remains classified `unreviewed` pending normal
+repository intake; no manifest claim or theorem state is changed.
 
 Reviewed candidate: PR #131, commit
 `35c3bdb387c714e8a4f51f48e13a6b684cea7151`, tree
@@ -157,7 +158,19 @@ python research-packages/e99-macbook-20261019T054318Z-16/verify.py
 python -O research-packages/e99-macbook-20261019T054318Z-16/verify.py
 ```
 
-The check uses only Python's standard library and exact integers/rationals.
+Both commands were run with CPython 3.12.3 and produced byte-identical output;
+the normal output is recorded in `RESULT.json`. The pinned PR #131 verifier was
+also materialized from its exact source commit, hash-checked, and replayed; its
+output matched its pinned `RESULT.json`. These direct replays use only Python's
+standard library and exact integers/rationals. `VERIFY.json` declares Python
+3.14 for the optional isolated package protocol; that sandbox replay remains a
+separate validation obligation if the host backend supports it.
+
+`python scripts/research_package.py --package
+research-packages/e99-macbook-20261019T054318Z-16 --check-only` returned
+`metadata-valid`, with no unresolved metadata fields. This is a metadata/source
+check and is not the mathematical replay.
+
 The bounded proof says nothing about larger boxes or canonical source
 extraction. Level I, Target B, and C-II remain open; C-I remains closed.
 
