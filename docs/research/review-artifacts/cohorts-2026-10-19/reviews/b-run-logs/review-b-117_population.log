@@ -1,0 +1,17 @@
+{
+  "canonical_implication": "none without proving the population condition in README.md",
+  "classification": "exact finite regression control; not a global-source result",
+  "seed63": {
+    "admissible_ledgers_checked": 18,
+    "minimum_margin": 0,
+    "nonadmissible_relaxed_ledgers_excluded": 18,
+    "pointwise_population_checks": 18
+  },
+  "seed66": {
+    "fixed_phase_cases_checked": 34,
+    "minimum_margin": 2,
+    "pointwise_population_checks": 34
+  },
+  "source_demand": "not supplied by either predecessor fixture",
+  "status": "passed"
+}

@@ -1,0 +1,21 @@
+{
+  "number": 106,
+  "head": "18c0ffba9a730cb3dc23b711a00c20dd9302c1ac",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "24faf59a94d96c48748d9fa81741e644eba3b9a7",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Six exact sparse-stress fixtures are excluded by same-cardinality lattice-disk competitors; exact source and competitor counts and excesses are reported.",
+  "original_coverage": "Six exact sparse-stress fixtures are excluded by same-cardinality lattice-disk competitors; exact source and competitor counts and excesses are reported.",
+  "remaining": " The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/b-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

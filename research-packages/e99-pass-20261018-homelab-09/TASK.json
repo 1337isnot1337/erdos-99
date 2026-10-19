@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-homelab-09",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Audit the exact supplied-packet identity in GLOBAL-JOINT-DIAMETER-COVER-EXCHANGE-PR957 and its consequence for a global minimizer, with G defined iff a cross pair has distance <1 or >=D.",
+    "domain": "All 4096 abstract 3-source/3-packet H/G graph patterns for the formula, plus an exact rational counterexample to allowing extra false edges in G.",
+    "limitations": "Does not construct a successful packet for every sufficiently large triangle-free global minimizer; does not close Level I or promote the candidate. The registry shorthand is conditional on the report's exact iff definition."
+  },
+  "result": "CONDITIONAL audit: the full report's exact iff theorem reconstructs correctly; reading registry 'G contain every conflict' as allowing extra edges is falsified by the rational control.",
+  "remaining_questions": [
+    "Clarify the registry statement to require exactly the conflict edges.",
+    "Correct the stale recorded hash for the historical source-audit file before citing it by that digest.",
+    "Prove universal successful-packet existence for every sufficiently large triangle-free global minimizer, or provide another Level I bridge."
+  ]
+}

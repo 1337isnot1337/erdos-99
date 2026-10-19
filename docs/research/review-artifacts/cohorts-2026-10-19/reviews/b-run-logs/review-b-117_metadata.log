@@ -1,0 +1,2 @@
+usage: research_package.py [-h] --package PACKAGE [--check-only] [--root ROOT]
+research_package.py: error: Command '['git', '-C', '/tmp/review-b-8bc', 'ls-files', '-z', '--cached', '--others', '--exclude-standard']' returned non-zero exit status 128.

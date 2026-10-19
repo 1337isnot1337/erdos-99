@@ -1,0 +1,22 @@
+{
+  "number": 147,
+  "head": "a110c4062443aa55c480cfd353af3f756e565803",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "4e0ef5322368f262c46bfdefe85a58bc1a2a2d83",
+  "original_disposition": "hold",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept as amended in the integration candidate after a separate independent scoped correction audit; the original hold is retained as historical evidence.",
+  "coverage": "Independent reconstruction of the corrected cyclic hull-turn list and the whole scoped hull/PC1 and payment regression. No canonical promotion. Finite cases corroborate the listed instances. General hull turns, areas, support identities and asymptotic payment residual are algebraic claims reconstructed from formulas. This is not a global-minimizer theorem or an endpoint obstruction; no source/canonical theorem is promoted and no full theorem-certificate replay is claimed. Corrected argument/scope and amendment identity: reviews/c-correction-review.json.",
+  "original_coverage": "Direct analytic source geometry and finite exact checker inspected and pass; PR170 independently audits the family. A hull-turn list in the original README is factually wrong though nonloadbearing for most reported quantities.",
+  "remaining": "Finite cases corroborate the listed instances. General hull turns, areas, support identities and asymptotic payment residual are algebraic claims reconstructed from formulas. This is not a global-minimizer theorem or an endpoint obstruction; no source/canonical theorem is promoted and no full theorem-certificate replay is claimed. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/c-correction-review.json"
+  ],
+  "canonical_promotion": false
+}

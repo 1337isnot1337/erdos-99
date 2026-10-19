@@ -1,0 +1,21 @@
+{
+  "number": 162,
+  "head": "456ecf76c17bbf9486601d5268d7c7d82854ee74",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "d318a5054650ada931fe186bf87273d739008565",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Read package AUDIT/TASK/VERIFY/SOURCES. Inverse-phase corrected sequence exclusion is conditional on unextracted global hypotheses; finite controls do not prove universal source closure.",
+  "original_coverage": "Read package AUDIT/TASK/VERIFY/SOURCES. Inverse-phase corrected sequence exclusion is conditional on unextracted global hypotheses; finite controls do not prove universal source closure.",
+  "remaining": "Unextracted source hypotheses and full global endpoint remain. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

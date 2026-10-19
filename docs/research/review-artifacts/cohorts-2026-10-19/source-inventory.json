@@ -1,0 +1,3799 @@
+{
+  "frozen_at": "2026-10-19T13:17:29.140689+00:00",
+  "repository": "1337isnot1337/erdos-99",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "reference_repository": {
+    "repository": "CrocSwap/integer-mult-bounds",
+    "commit": "20ecf2891d80b5acf18d980b2164fb44ea7faa90"
+  },
+  "review_batches": [
+    {
+      "id": 1,
+      "prs": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141
+      ]
+    },
+    {
+      "id": 2,
+      "prs": [
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180
+      ]
+    }
+  ],
+  "pulls": [
+    {
+      "number": 102,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/102",
+      "title": "Target A: exact source-image Hall overlap and full-shore extension limit",
+      "author": "1337isnot1337",
+      "head": "025628b23df11470d4eb87ee981edbf250498691",
+      "source_tree": "2808e89793b8e95a6929cfa92a230fa6a88ecec0",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/reports/target_a_common_source_hall_overlap_2026_10_17.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2d78f162d353f13789dc4ed6f3468ce46ae5bbe5"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "0de8366930df0e370f078c2a9a9599b6de02f0f8"
+        },
+        {
+          "path": "reading/docs/reports/target_a_common_source_hall_overlap_2026_10_17.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "f9a8b9ccc7ea737d1fe3e647b8da870591e8c401"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "8b4e0f3cf5bebc196ce9ac2e60c16aa48b172a24"
+        },
+        {
+          "path": "research/verify_target_a_common_source_overlap_2026_10_17.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "13b91be41dec41f46da2eb77ce472fbc3e0147aa"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 103,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/103",
+      "title": "Target B: pay cross-component determinant mass by high-defect deletions",
+      "author": "1337isnot1337",
+      "head": "4b708e27e9e26f8c163685dfe8b033b6d6369177",
+      "source_tree": "42a5f9f475904b480aad43a55d73f19ac21a194c",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "a0ef2fce1fa9be4f2234113d0a3ba19600b2dcda"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "69f1fa63ca584a418a2af9a8057d457811767868"
+        },
+        {
+          "path": "reading/docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2b9c616f0d0e2281607e4a0f4b153f9d220efb5f"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "5e79731c16d9812d25f7cde20569e3e2bc7e361f"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 104,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/104",
+      "title": "Target C: finite two-face shear cap with retained isolate",
+      "author": "1337isnot1337",
+      "head": "632dd98ae6b093edce27c405e4cf0d77712c2306",
+      "source_tree": "012ec8f43686eebe38afcae3bb314fe4b2c5867a",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-04/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "f70dcebbd8c93ab80f9ea54880d2eb9add05b440"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-04/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "3597a3cf38eef7cbf21c36ab03306528cfba5bdc"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-04/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "de7a1f85740c274fc4f5ffbb0e090e0343911e9b"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-04/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5130083e86e3f49cbab74badf409c0639f1e66fd"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-04/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "aa849a658ac5fd7e870a07f5c7ec58854c044afc"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 105,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/105",
+      "title": "Target C: independent audit of dominant-pentagon through-splicing",
+      "author": "1337isnot1337",
+      "head": "2c0968543d732a73a6f7a7bb8d192a1c1b10438e",
+      "source_tree": "e83952507acea0cc94ee6db78e291a0cf44afe33",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "1b39b8c9e02c07fdcddefd08f8ccbb05dcc20d50"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "fbfc312ba70a61f371fe2cc0388ce74f8ad589c6"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "766000be3275976911cba96e2ace8ea5d955390b"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "eb04934c4c6f9fac03cab169c3ddc6fda46477c9"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "0a27ad376d873c370a717c73d6f43f63583c0d2a"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 106,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/106",
+      "title": "Target C: exclude six sparse-stress fixtures by exact lattice competitors",
+      "author": "1337isnot1337",
+      "head": "18c0ffba9a730cb3dc23b711a00c20dd9302c1ac",
+      "source_tree": "24faf59a94d96c48748d9fa81741e644eba3b9a7",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-04/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "1325ca7bfcc90f17ba96498bb88f2c3a5bf7a6de"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-04/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "697835dcee2aa1079240a97496604b92e09dad90"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-04/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "7f503ea5f4f10cce8a584f8e145cd1c473ce80ae"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-04/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "8fec8f1477bf8663ce246f3240d3ad78f9d7ae28"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-04/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "07f758d3f24c0bcd08dc8dd2627aafeabe007ff2"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 107,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/107",
+      "title": "Target A: exact balanced-triad obstruction to a rigid source relay",
+      "author": "1337isnot1337",
+      "head": "12fbd21a8dbded545743579cf3ac34e2c54f1496",
+      "source_tree": "a4dd8167329f61bd65387b9dd67b0b4114ba6ed6",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-02/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "563fd14fd689e77ff3f6b96b2ea94533b635bc0f"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-02/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2710710860d098e0cee4eae5bec8edd904bcf7b6"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-02/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c0f5c53c10df472f2dde0b6af0ed9b7fda5fe7c8"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-02/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "612a70f6164a8a25646e6bb32923c840db0c72a1"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-02/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "8ac6e97a691ca1ab430259d09deb301fc97cc3aa"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 108,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/108",
+      "title": "Target C: independent audit of PR #950 return quantile",
+      "author": "1337isnot1337",
+      "head": "7bc8336ea20af407359358ae3c90bba1954ca665",
+      "source_tree": "5697604f30503fb4884ebbd066e0074a563ef7ab",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_c_pr950_positive_return_quantile_destination_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "8dd3d8273917957b7128d538f9fdaf7ab344b827"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "84aa2c2eb91b78fea63b4907e1bb9b07fe4ee8c8"
+        },
+        {
+          "path": "reading/docs/audits/target_c_pr950_positive_return_quantile_destination_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d7e1e913db62bbe1b0bdfc9e2c0c6358a43ecd25"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "23720be65afab95eb5dd741e325135e0c3413be5"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 109,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/109",
+      "title": "research: propagate 0.0071 through Section 171 and outer-energy branches",
+      "author": "1337isnot1337",
+      "head": "a1efbcf5f8441dbacee06cf9e53535d9ddc40ccd",
+      "source_tree": "a19e140e535ed324d806a8e53a53159d7bb48a34",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-07/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "01739115897d91f9af77f7c4aeeca730018110f9"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-07/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "fdfc63d532020f3c1a5639603b202ef684b42b44"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-07/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2041212cebdf76c5e56f216894c4587507e65702"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-07/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4870138108f4edc671223b98a57b82f8c59a1e52"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-07/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "1def3591b4f9567f25955d62786e6ba251098571"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 110,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/110",
+      "title": "Target C: independently audit supplied slow-chart port exclusion",
+      "author": "1337isnot1337",
+      "head": "3fc35647bf49de836dfc379b46fbbc604cb971fe",
+      "source_tree": "8e678ca50f38c3376b1858f113684a83ca7a901d",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-12/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "761b6f89c7dcf691489e127f5a7009b7df5f3ec6"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-12/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "323f7930ce75f03a64546c85915d69a8d21822ab"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-12/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "7b17d99366f4b73775b46defbbcaed8d7d85cdf8"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-12/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "eb282806371da5301ea6fef8fa14d282d0e5039d"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-12/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "05ed0bac078dcacdaeba79d0597ecaa072074801"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 111,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/111",
+      "title": "Target C: record strict full-pair restoration after supplied-W deletion",
+      "author": "1337isnot1337",
+      "head": "4ae7399e2595074c0331398fbba9b58c5dea3e73",
+      "source_tree": "0cdbb5dd8792b64793af6034425bae559bba28f2",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-08/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "1065a67815726ac0644b9a5760b5bc57cc86b294"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-08/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "439fda145bbd4c3a9f216fdbe0d4d63bf2fc5966"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-08/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "a4f385e666d3a18c81698e5c58316000613f5bf1"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-08/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "49a7efb97b41d4786d055350d03f9b941dbef6dc"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-08/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d59acdd24e5aaed27270242490b18ebd90ad9d42"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 112,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/112",
+      "title": "Independent conditional audit of PR #950 endpoint-inclusive cut",
+      "author": "1337isnot1337",
+      "head": "fd02d4d36b1953a217680d889ce830f894a41096",
+      "source_tree": "1483c6f34175cdb54bc3e4df9d28d3e63dddc340",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-14/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "9e4b9277cfb3e643b4d04857ead7ad9b5851f442"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-14/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2b16d9fd608a1194a3676be49b288122b63a83fd"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-14/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "3542f637235d011802eace0283debba6710c7fdb"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-14/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "55e0fdc0ce50fd540a39514ca8e6c1cb4e1cc095"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-14/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "58ed0fa4e7014ead3a99266c71d6963670f8cd43"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 113,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/113",
+      "title": "Target C: audit all-edge midpoint moment transfer",
+      "author": "1337isnot1337",
+      "head": "81de74d4ba5099c8572c1c76f6c28ac80d9c642a",
+      "source_tree": "b3816730d53a8322f3bb4fc2ccd31f3baaf9832c",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-11/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "f87b6dc0d5541909572f9e5f6739a76f3bc1711f"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-11/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "12081aec3755fe94acf52758f835d3d722375abb"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-11/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "8d66842d439cb67a247708080e96282394eb6c36"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-11/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "3e64b8d20656c3d451263b35d95a0d897db03946"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-11/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c496f6a1b8f76a69467e0c3dc7a58c99c4622fd9"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 114,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/114",
+      "title": "Target C: exact cut-stress model for boundary payment",
+      "author": "1337isnot1337",
+      "head": "cd33f4c76fd48722f06c03ddc86a05fd5e8f9e51",
+      "source_tree": "dc486670b904a2f7854643d51c9e2ee02e7da32f",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-06/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d39eb13a962fee968a2bc33b87ecf4c0f3929fc8"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-06/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "cf7b191c83720acfdbcc6bd1c51d42de10d55e6d"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-06/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b7a8c4ed32c32b8eb5678c6686750637a0bc63b4"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-06/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "0de7dd2be4c6d292dfa63adec75f48ab145898d2"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-06/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "7b7de88748fb2ffaebca2f63d161f91c63611574"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 115,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/115",
+      "title": "research: audit PR #958 finite palette transversal equivalence",
+      "author": "1337isnot1337",
+      "head": "356cb08229dd0a38bd272d05488f9bc8be9e1313",
+      "source_tree": "86e334de08a815d8b9ccd5c4d002e234cce0475a",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-11/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "e485d2b7f6bc3e673b09d6537540313b5de3d771"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-11/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "709bd83718f6aa0bbe8163a6157602e9672e201a"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-11/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "43f023b93808f36b9f6dffa305be53042d8c1266"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-11/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c04efd1b4ef6be2856868c5dca72bea57b46565a"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-11/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "e4b6b9ef1af60b1eac7515b4b18e807e7cb29310"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 116,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/116",
+      "title": "Independent audit: PR #948 quarter-fold face obstructions",
+      "author": "1337isnot1337",
+      "head": "08442dbb7a3159ef1d0cc7ec966b99d6eced0edd",
+      "source_tree": "0ac694539b50414c552645e1f33963333dea9390",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_c_pr948_quarter_fold_face_obstructions_independent_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4cfe787bef9fbc21e4f56868d069ea2a58781c1a"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "24f54da17a19be931f145bf3ed9d05edaf2e84f9"
+        },
+        {
+          "path": "reading/docs/audits/target_c_pr948_quarter_fold_face_obstructions_independent_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "01d5960e22c6b9e9e1bcb9cf7e89dc93d3844f33"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "5b90f94388e9ff40ad51c5e38bd5f3535a772fa2"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 117,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/117",
+      "title": "Target A: phase-integrated plateau sink surplus",
+      "author": "1337isnot1337",
+      "head": "52a89ded959be4c96db4bdc4622ee73f7f63c3bd",
+      "source_tree": "e83702354916aa3e7be0f8548ede483276de9071",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-01/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "8bb746a92ab92639f94cf22a0ebdd3603fe46f10"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-01/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "26197e87fad985d8ccd981ec742c3dcabc74992f"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-01/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "17baf122844e0d87987320879d95b284558a9394"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-01/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "bf4272352f78fa314647732a33112a00a91efdbf"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-01/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "6b214c927ccf2098856a3209a97e763b1910b7db"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 118,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/118",
+      "title": "Add exact-head audit of PR #958 distance interpolation",
+      "author": "1337isnot1337",
+      "head": "6295e0dc87031fe8418bff50bd9923014072df0f",
+      "source_tree": "19275cead7d53eb9a092dafdaa5c541a0f504447",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "717c209d8b07a9e9b7a586b764abfdfb2218cf7e"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "a0caf7195516969e56c5857690ee9524d969aecf"
+        },
+        {
+          "path": "reading/docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5cb8371e38efa67fc74a384b1e562695f1db2b93"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "d9bcc4791da2f1ddd0467eadb08efcacc5448568"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 119,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/119",
+      "title": "Independent audit: PR950 unloaded rigidity brace under C-ZRF",
+      "author": "1337isnot1337",
+      "head": "b321833ec6a10a1a47fee5c717c6b2d2e4752f7d",
+      "source_tree": "3369773a89cf9a3860cd09d413821bf91b02698d",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "bc9ffc399e4489edddf920463cc2341098d85853"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "fdee85ae11b1087735f5f84e3f56412ed74c6e5d"
+        },
+        {
+          "path": "reading/docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "7f7099c5fde0520257ea7d51f79a48ae8a0b3ed4"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "2662488afdae70a20da7aaa397316660a8466bb5"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 120,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/120",
+      "title": "Target A: geometric obstruction to inherited full-shore Hall equality",
+      "author": "1337isnot1337",
+      "head": "c3718cde305ec74b6dae380292b0bc646cee8f20",
+      "source_tree": "35aeaedb634c90387ff003d0b8464b14786b94b3",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-01/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "e2f03ed78150cb6d7b3d380fb45bc8b454cf9b23"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-01/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "18be9ce4238032c45a480cbf44bb89707875bd0f"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-01/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "3658000cf98ced4f2d55be198fd889eac0f44e43"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-01/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "495891cc833dcb29797af5ad3e83b50320d7a717"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-01/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "7285d0d5d2a041d9e8ee38a78fa3721402cfaaec"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 121,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/121",
+      "title": "Target A: geometric full-shore extension regression",
+      "author": "1337isnot1337",
+      "head": "7f4dac815680da2b8ad6b0623369aeab3a730978",
+      "source_tree": "a40e526d79566eae33dd2006dd4068aee2ee8cd8",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-08/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "70f113a7c978739611c83efcd874dcabfc30a3ed"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-08/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2b09d4c94e905999a6f158a57c5f6115c0bbc331"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-08/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "da3a4d5d6ba16fa6201b257110492322f9c4e62b"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-08/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2f3e8657fa08d824df3ed04daa7cf96d300bda31"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-08/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "8f26c8878681d692e5ccc4acedc281b3af1d9416"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 122,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/122",
+      "title": "Independent agent audit of the twelve-arc population reserve",
+      "author": "1337isnot1337",
+      "head": "05d497cfff0427697a5d716b886accb5cbdf2fc3",
+      "source_tree": "ec5664f35506822b07c54047c6a5986827012147",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-09/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "732f85e17c59790c47140698dacb9c83c0545934"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-09/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "f28ba08933990f71a2f8acf0666f6a86d6b2e45b"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-09/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5c6e28d72d38e258ee4dda8af0cedd560f0cdb38"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-09/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "09f30413ea6c5023c53fa80c659c1e61567e21bf"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-09/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "13408fee9dcac41a1e6e5bb710838d61cb9049d7"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 123,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/123",
+      "title": "audit: exact-head review of PR #957 joint exchange",
+      "author": "1337isnot1337",
+      "head": "c6c61707cd2dc733a305de55ffcd7db4b6df6c8f",
+      "source_tree": "27928060efb1ab86767a53f97bf83d39bcea8959",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-09/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b2ad11b14d86dd70849b9a049de6170eafbb4e60"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-09/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2187ea238c4af37fa3e4de735afb4b277ad985fa"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-09/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "37f0fb6a6952a39ec04a016099304e2782c320c3"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-09/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "e177a21da3bba0f3184bfbaa8a00579194038733"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-09/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "92e7636574d304d311e91629e17c94153cbdea33"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 124,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/124",
+      "title": "Target C: conditionally audit positive-leaf anchor sharpening",
+      "author": "1337isnot1337",
+      "head": "067af10523401461d80a399ef31ba429accc8fc1",
+      "source_tree": "615622fb62b48eeb7e1effc29bfec7e5ed4271c8",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c319d0c9ca4d983e9b3e768f8c0cd26dbf7ee61c"
+        },
+        {
+          "path": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "dedef4a2a9674dbc136dab6781c3132761c3a65b"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "09b39533afdcc277ab8c74791b0caec3a7ae529b"
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "c5fd9ad4c739e30d15fc96161fb50ee5b36e765b"
+        },
+        {
+          "path": "reading/docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "be3e2f8fe6cd91a5452a8d59128b5f124ecc3726"
+        },
+        {
+          "path": "reading/docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "093f54f1ecfdfe0282fe5feb6d30714bf1b54a5d"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "8846f678e88169f10a8011b3cdd4cd034332b989"
+        }
+      ],
+      "changed_file_count": 7,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 125,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/125",
+      "title": "Target B: exact Euler correction for rhombic holes and components",
+      "author": "1337isnot1337",
+      "head": "804f1658e27b424da16535b53bcb825c394c7711",
+      "source_tree": "9c2d7cc6e919afec6b6bf932765957ccefc6faa3",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-03/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "3c8ed73ef46d3b7a4a6f539008441f969643b0fd"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-03/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "488aff3522b5baba78b4b79f459ffad76d6e322d"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-03/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "fab03001154d41d32871fb2f340a4cab15ea1da4"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-03/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "920d4a6393a3009be22cd3ff4043d8baa0af2a96"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-03/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ca75ba41c6bc89abd58f305c73d88ce64a5ca38a"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 126,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/126",
+      "title": "Target C: moving the rhombic wall leaves zero safe capacity",
+      "author": "1337isnot1337",
+      "head": "684429c4780f8a4491cc432ffa2733a31ff867eb",
+      "source_tree": "632c08c0642ca6f68d0bc7b9c75de9ca7743b371",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-05/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "084f016496b977ca3f2b8da5b365497a3d6f6089"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-05/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "f326c21574b4dfc467586f29070893b05c280c3f"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-05/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "512030aabef5b2a4acee42944e027db29af2bc87"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-05/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "449e0dc509689b093532cbf255229dd2c0ca8d5e"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-05/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "1c1e4e074d41adea20d1fcf4dd79eaffa7e5abf0"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 127,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/127",
+      "title": "Audit open-cell phase-flux identity and scope conditions",
+      "author": "1337isnot1337",
+      "head": "6c2b6d7be91c6d6cd5b9e2133c8add94c506bf1f",
+      "source_tree": "47853322a522ccaf73c6ecb78f9355a49a2f069d",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "22274b1bf9b4a8f770f2b47c4b286a53951b2e63"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "11e9bc3d3f8fde21d93b1f5e241deaf0414e8668"
+        },
+        {
+          "path": "reading/docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "33eb02aadfdb9e4480a6bf5ba525d7d825fdb829"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "a287f9d586e1dbc6773d2be856ff3d22d6a79f08"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 128,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/128",
+      "title": "Target B: exact finite phase grid and full-source diameter motion",
+      "author": "1337isnot1337",
+      "head": "e80e7e35b1130d2cc7824468d243f8393434b9b2",
+      "source_tree": "bb7734f87098efc388f1a5bc2701f01f30db7671",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-03/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d5b9052ca03b37db7ee3f1e5d410d757821bbccd"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-03/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "95608248240fc9686ddc09c622d9e3ad8516dec9"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-03/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5229a2433b6c9aa6f633b4f20f90433c7f809ee6"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-03/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b5160c0d604cddf21b6f9712f56dd7a956ecd4a1"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-03/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b36592a12681df3f05711c2366ed691bd74ebe8c"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 129,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/129",
+      "title": "Target C: wall-tolerance refill ledger exposes an unpaid deficit",
+      "author": "1337isnot1337",
+      "head": "f4dc4c6ec3a6bb08097ca9a963336ae454e14229",
+      "source_tree": "412ff6b8d8a8d7af47e653b8f0daf648ac4de67e",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-06/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2d569047981eadce953422d873d05aa44d1084c8"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-06/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4c7a5d824cedd1971bcab2f50d4324623af2b58f"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-06/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "783def9d9d41c76a97240640d03686fd7c58a257"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-06/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "214623f71dadf361265cfc73d81be7cdc57cd9bd"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-06/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "157b9d1bd41b9cee081e960b92cf3ed20a952d9a"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 130,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/130",
+      "title": "Independent audit: PR958 affine colour-lift flattening criterion",
+      "author": "1337isnot1337",
+      "head": "d44c691183ca3a789a6bedee05ff867220f440ca",
+      "source_tree": "d587edff2c17fb759c967f1544671af9ee0902d0",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "a85a9b64fa649399f837a12d802281d6d4c1151e"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "234daf4eda73eb30b5269f43e804ce53ca633d9b"
+        },
+        {
+          "path": "reading/docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "f70e587593ffa283c9b2f195ff5201ebf90a3cd6"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "63b1ded1bfe72b46564b1f4f448e13db26553743"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-10/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "a84d83e5d26eccf3e5ab5d496d78fbc35c910658"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-10/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5ddd56446eddea26795d53ef6748523d40ea04aa"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-10/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b090908dcb0e411bcc96b0b5d963a05052196904"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-10/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ce630c489d5dec26aec6373b9d06854d903527fc"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-10/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4a975f6369f9212f83e3630d7fe81f4ef43351a0"
+        }
+      ],
+      "changed_file_count": 9,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 131,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/131",
+      "title": "Target B: exact embedded two-grain rhombic disk regression",
+      "author": "1337isnot1337",
+      "head": "35c3bdb387c714e8a4f51f48e13a6b684cea7151",
+      "source_tree": "04c670dedd832140193321e8baba880924be750a",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-07/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "3df9a2b3711c16ab16b03bb568914180a1ce52d4"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-07/RESULT.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2892e93d302056fe3a32656c96e8472c473f29d4"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-07/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b72da2cf6cfb770344af232302fba6994a0e0c43"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-07/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ec0ac3f8e87aa8812afc8fe272ddac7cf3de86bf"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-07/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d76f83b652d6c934426d65484debeb626334ee82"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-07/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b866ae37bc3b93a59158561f423877bcb22ee92b"
+        }
+      ],
+      "changed_file_count": 6,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 132,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/132",
+      "title": "Target C: conditional destination audit of the 0.0071 matched gap",
+      "author": "1337isnot1337",
+      "head": "5df95908df0ea6f206b2fed0681a061bf29a0aa3",
+      "source_tree": "988afa3af7c3489a1106134329dd2463af3aff7b",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "798ecc455ac2d35c08ee7983d382f8eb5ab9e6b1"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "7cdeba586d70dd755642b85fb3cd69d397539527"
+        },
+        {
+          "path": "reading/docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2d4289732563548c46f7949b3ed15f66106160d2"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "d60bacd430a2478da21cefb835e614cad311ba36"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 133,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/133",
+      "title": "Independent audit: PR #111 full-pair restoration",
+      "author": "1337isnot1337",
+      "head": "04b30ab0f484c4dce774ff9d400ea38d359dfb25",
+      "source_tree": "66c4662d1e7823bacfb1215b09eb8318bdc4cf59",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-09/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "8c4a26a0314ca84780cc23a71d63bd6dafda0480"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-09/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c17e6495b02fa8924e5f00ad164b509a3ad361bd"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-09/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "271d050112547651ce4e40e2c93cf4af66e97667"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-09/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ad3aec0f64999c5c70e47f318909fcfc7b85562e"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-09/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "baacec1962806aaf5839a51ea033951b26449389"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 134,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/134",
+      "title": "Target B: independent audit of PR 103 determinant payment",
+      "author": "1337isnot1337",
+      "head": "6171ec66dfce3ea696a412e3a37bcf7440732088",
+      "source_tree": "9a973ee7261a8682311660857a8874b40803f186",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-05/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "7d6889692628a1fb54e322b1a264f056db78470a"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-05/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5d5b023ad0e5251201e45da7f41867ddd5a964e4"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-05/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "e6923dd261134c96ce61fb92aecda4a43cf01692"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-05/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "22db847985b1cac59beb630fd65b45cfc4d3385e"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-05/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "1ec9e563cc767d7860e78aac19eb8a2e01f1756c"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 135,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/135",
+      "title": "Audit PR #104's fixed-isolate shear bounds",
+      "author": "1337isnot1337",
+      "head": "daf4e29a0cee53439eb2cb7d747092da2a5e31dd",
+      "source_tree": "e0c566a631f8345e580fe8369543379088c7b604",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-06/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4b1210d698696ee366d222b795ad704f011fe593"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-06/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "fc069126c7b6cc9631b918dd65a70696a20cf88a"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-06/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "212e5ece8445d352cc86f273a0aff41254cb8b4a"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-06/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "7af3fc356806226aa8802b33d2ea424336ec47af"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-06/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "0b2823a53dc1e249554e3ddda4c422b55ff93a09"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 136,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/136",
+      "title": "Audit PR #114 exact cut-stress boundary payment",
+      "author": "1337isnot1337",
+      "head": "7cf4b8517c0f846058a9befda03bf3aa4343e688",
+      "source_tree": "909fad450695ef86013bd93f7c967f4268cdf16e",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-10/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "a73c0137a849f73e88f66cf0c8131af1d618a6cd"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-10/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c88bab22face68d56ee438343867ad162b744a2d"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-10/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "a841ab5790472f199b9c72a927ec13649bff840e"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-10/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "fc8be8f786794608c4286be61cb18440e039c2f9"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-10/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "430b0cc4b5f25dfddbc22983c9cdce1e1cef0b8a"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 137,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/137",
+      "title": "Target C: independently audit six sparse-stress fixture competitors",
+      "author": "1337isnot1337",
+      "head": "73ba295bcf89e12b7d2c7fa94d094fc44e674a3b",
+      "source_tree": "694047ca744619b4be961768ae24bcc955062f8c",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-07/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "e0f0431279f1a935bfc2944c7a0fbfb1b2c09266"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-07/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ddb0cd29e57804504b8f02f10877297c5548cdb5"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-07/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "54328480dc72dfb3f0e3f55abfe8b5801a312f6f"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-07/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "872a36e7d414b2f12c2023602e3cb5f5146a3ef0"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-07/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5802471e56664d1940bba579a4f0d8269411d58a"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 138,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/138",
+      "title": "Target A: Oler remainder stops at correlated source term",
+      "author": "1337isnot1337",
+      "head": "d17d45aebb04811c920d03f46c50a2337fe19a98",
+      "source_tree": "35882f23d0a94527d755eb645b0ff25af243fe11",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-01/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "198c604648152c320638e6f7906f4f8b7da44c63"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-01/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5fcd7b8af0325e15c15e61af7a152e3f5440179a"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-01/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d7889da7baadef9c53fcf716f82f72453173d7ef"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-01/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "35d2f751f9708babc64be2f03826826df61d1d25"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-01/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "43d0d979e8dc612773fb5f552cc2d52b897c6725"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 139,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/139",
+      "title": "Audit Target C near-diameter pair localization on destination main",
+      "author": "1337isnot1337",
+      "head": "c0043e3fb9c75b405e75fa462d5c9f2d1a7f1e85",
+      "source_tree": "156ccc9f009f27a3b032a4f3fcb3e9beaca97348",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4ac98647466f92d6a5ba4ea00bc7b21dfb8c19d7"
+        },
+        {
+          "path": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "2a2ab8f08a73ea51966cdd3424a69766cecc2003"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "ed4d2c0167d1880fcd22872db1e9e6dc25525c77"
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "d697b4fcd88e650565866c97ab20d27b248ecb3a"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 140,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/140",
+      "title": "Independent audit: balanced-triad rigid-relay obstruction (PR #107)",
+      "author": "1337isnot1337",
+      "head": "9183fd057255719a3535bf8f9c5feeec9d711c80",
+      "source_tree": "20aa8e68b868731735e127d9a2d5552d7fab1f8e",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/atomic_boundary_source_reconciliation_2026-10-15.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "37516984a3e8b6e5311267c10ba960dfe299cb2e"
+        },
+        {
+          "path": "docs/audits/original_dirty_worktree_reconciliation_2026-10-15.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "fd3cb4f01079264485c8a0588da3d7030f628a4b"
+        },
+        {
+          "path": "docs/audits/target_a_balanced_triad_relay_independent_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "24907b955a696e64c21a9e87fde0667c2e59adae"
+        },
+        {
+          "path": "docs/audits/target_a_boundary_terminal_common_source_vpaths_audit_2026-09-05.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "1c7162e9fd15649b717f9fe99da81e7e6e6d8012"
+        },
+        {
+          "path": "docs/audits/target_b_explicit_balanced_phase_gap_audit_2026-09-05.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "39e68a63ca2eb30f9e9fb69c7da609a94773b1b6"
+        },
+        {
+          "path": "docs/audits/target_b_explicit_unique_max_phase_gap_audit_2026-09-05.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "dcc4ba890a26fdd8ae950fea7117345186f92a06"
+        },
+        {
+          "path": "docs/audits/target_b_local_virtual_area_interface_audit_2026-09-05.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "03f3566bac8077c1d8e89a2984d7bca467b0d788"
+        },
+        {
+          "path": "docs/audits/target_b_trimmed_grid_phase_star_audit_2026-09-05.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "dc1f28819966173eda2153aaf1054f45f2c45d0a"
+        },
+        {
+          "path": "docs/audits/target_b_virtual_zonotope_missing_crossing_audit_2026-09-05.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "0d688535450b9dfdc1cff8459ab58eb9a4afb31b"
+        },
+        {
+          "path": "docs/reports/activation_fixed_hull_flat_2026-08-30.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "96448a9e4f5983d51910b956c62d842bb6f3ee1a"
+        },
+        {
+          "path": "docs/reports/cage_or_cophased_lattice_shadow_2026-08-30.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "f63d2677167e82d3aa107cd62d236c1c2974c7ad"
+        },
+        {
+          "path": "docs/reports/campaign_boundary_defect_matching_2026-09-09.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "ba40092e5fdeae45f80b621937ad07acac7fd994"
+        },
+        {
+          "path": "docs/reports/campaign_zf_boundary_surplus_collapse_2026-09-09.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "1a7c27d7ae7535a6d87a83aea0bdf9cbf0d08388"
+        },
+        {
+          "path": "docs/reports/campaign_zm_zs_reconciliation_2026-09-09.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "1ad4f6f747d6d57da8e902f42588c08d03cf9bbd"
+        },
+        {
+          "path": "docs/reports/erdos_problem_99_2026-08-30_active-boundary-audit.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "ff83decf7c719492ee20392d3681d075457fdeb4"
+        },
+        {
+          "path": "docs/reports/erdos_problem_99_2026-08-30_phase-cover-stability.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "5bc1a0634b653e9232aa5f537da0aefe4c2ca247"
+        },
+        {
+          "path": "docs/reports/erdos_problem_99_CHAT_HANDOFF_2026-08-26.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "d49b2ff8e659096cc2e6ccfbe20f6a3cef114f8a"
+        },
+        {
+          "path": "docs/reports/erdos_problem_99_complete_working_report_SYNTHESIZED.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "0f37fe799bba73ac57d840d243cb399a57144b6e"
+        },
+        {
+          "path": "docs/reports/five_block_local_optimality_2026-08-30.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "50fd92a657ac971a601634e4b0a47b5cd2ecbdf6"
+        },
+        {
+          "path": "docs/reports/full_source_growing_lattice_population_reserve_2026-10-08.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "a1c7357fcad7c759c3b9db53c1a41f3db9ea37b7"
+        },
+        {
+          "path": "docs/reports/global_attainment_and_triangle_free_infimum_2026-10-11.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "23a48952006cac5b3a6bfdaf9b47f775576b12f1"
+        },
+        {
+          "path": "docs/reports/global_discrete_isometry_blocker_closure_2026-10-12.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "d3c1215e891cc29c96c77f1a3c4959d48de947c4"
+        },
+        {
+          "path": "docs/reports/global_isolate_forest_normalization_2026-10-11.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "0f76f40b0fb252ba9d6559ffd301b3336bbda2f4"
+        },
+        {
+          "path": "docs/reports/global_local_lex_normalization_and_crystalline_obstruction_2026-10-11.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "13f8ba217959db348a40d87bd37a4d06527d74dd"
+        },
+        {
+          "path": "docs/reports/global_nonexpanding_rhombus_mesh_obstruction_2026-10-13.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "591650763d97769b9d00ff16aaeb35f2f159d1f6"
+        },
+        {
+          "path": "docs/reports/global_periodic_release_and_diameter_transfer_2026-10-11.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "b00d3006f1a14a0963301e2bf220529c472c599a"
+        },
+        {
+          "path": "docs/reports/local_hat_matching_regression_2026-08-30.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "be3919cea4fe14e99c54d7ac813e4e35281c186b"
+        },
+        {
+          "path": "docs/reports/near_extremal_activation_monomer_regression_2026-08-30.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "c50d0f54154aeb8c451f73cd8aefa01d727d9a48"
+        },
+        {
+          "path": "docs/reports/open_cell_staircase_finite_preservation_2026-10-15.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "f2c5a83efc116667c0884cccc1240d821afedb5f"
+        },
+        {
+          "path": "docs/reports/repository_state_and_sol_prompt_review_2026-09-10.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "03930ee7ce81c099daafda7ce851365911bf474b"
+        },
+        {
+          "path": "docs/reports/repository_theorem_state_cleanup_2026-09-11.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "30bb8cdb2389f14a817f6cc51946599631f96e15"
+        },
+        {
+          "path": "docs/reports/source_scaffold_response_transport_2026-08-30.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "4a0109f69aa508e104af3bd52f7b77865d9be19f"
+        },
+        {
+          "path": "docs/reports/target_a_boundary_terminal_common_source_vpaths_2026-09-05.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "e6af75a6749429e91e662ed2cd383ddeb5cbb76e"
+        },
+        {
+          "path": "docs/reports/target_a_contracted_contact_shield_hall_2026-09-04.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "01c2522bbb9cbe710390a46753db6299adc3a783"
+        },
+        {
+          "path": "docs/reports/target_a_inner_source_capacity_defect_bound_2026-09-05.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "8dfadc69fe4ab5a3c4bceb62e596519ef8448277"
+        },
+        {
+          "path": "docs/reports/target_a_right_deficiency_geometric_tube_2026-09-05.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "c350d445da62d00d275a56e8626eda5c2657b964"
+        },
+        {
+          "path": "docs/reports/target_a_sector_deficit_duality_2026-09-04.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "74c21a93c4a822d0e354c46df0f849584f88c5e1"
+        },
+        {
+          "path": "docs/reports/target_a_slot05_one_arm_source_sector_rank_cap_2026-10-10.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "c309cd5197b7d4fa6b50cb16d0777548018f4191"
+        },
+        {
+          "path": "docs/reports/target_a_thin_shield_sector_population_2026-09-04.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "c0eb8c8d1d045988a3bfab9ce635e78eabf80669"
+        },
+        {
+          "path": "docs/reports/target_b_affine_boundary_shear_2026-09-25.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "541df351b3d2d3c762a60ff4e114a8fa787e735b"
+        },
+        {
+          "path": "docs/reports/target_b_disk_clipped_oblique_scalar_regression_2026-09-25.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "8dc20a92c6e70124db0cbaa94ca4dc1091a4d481"
+        },
+        {
+          "path": "docs/reports/target_b_explicit_balanced_phase_gap_2026-09-05.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "d906331c2c8d266467e20761603ce1d0369237dd"
+        },
+        {
+          "path": "docs/reports/target_b_fourbar_singleton_endpoint_exclusion_2026-10-03.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "7d1176252c11df1d6aa34a7254873c7ab50af137"
+        },
+        {
+          "path": "docs/reports/target_b_fractional_balanced_grain_exclusion_2026-09-05.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "63dd726b5f9069c588d66dfdc23fff48e9b677e2"
+        },
+        {
+          "path": "docs/reports/target_b_multigrain_interface_perimeter_2026-09-05.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "c2e619a498e86264a169e8b553e5833bdaf560da"
+        },
+        {
+          "path": "docs/reports/target_b_source_diameter_cover_refill_2026-09-25.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "d37ee468e9506dfa747beebf22474fd0e42b96a9"
+        },
+        {
+          "path": "docs/reports/target_b_two_max_phase_stability_exclusion_2026-09-05.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "456f2649db00b27cead0a7e801d71aff5b495ba4"
+        },
+        {
+          "path": "docs/reports/target_c_collective_shallow_wall_packet_release_2026-10-08.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "675360d1f4f7ca7117cb7a281e79967ab5750932"
+        },
+        {
+          "path": "docs/reports/target_c_full_source_delaunay_strain_and_branching_2026-10-08.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "b9ac04dec71ac0ba9b5b55488067ba554c32009a"
+        },
+        {
+          "path": "docs/reports/target_c_full_source_voronoi_defect_spacing_debit_2026-10-08.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "95d4ac78d221e03f6771ed40284ac6a67bd7fe4a"
+        },
+        {
+          "path": "docs/reports/target_c_half_depth_fan_forest_and_weight_budget_2026-10-08.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "2f7c8bbfb5cd5b0ec6e2fb6c27004e90d08967ee"
+        },
+        {
+          "path": "docs/reports/target_c_isolate_normalization_core_diameter_replacement_2026-10-07.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "9944d2738515f5c18a07de83bc133fa9fc5d4675"
+        },
+        {
+          "path": "docs/reports/target_c_quadratic_core_cap_extraction_deep_returns_2026-10-08.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "0b1763fd3420b94a36b9b3a00b199898b747cb35"
+        },
+        {
+          "path": "docs/reports/target_c_shell_fold_collar_transport_2026-10-08.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "ef811d2748afd99c8ddf528a72562e413ae89986"
+        },
+        {
+          "path": "docs/reports/target_c_two_wave_shell_fold_two_isolate_obstruction_2026-10-08.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "9bea8ae9724c18189483e089291e4af27d5f3336"
+        },
+        {
+          "path": "docs/reports/toeout_kuperberg_improvement_2026-08-30.md",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "5055bc204479c1b44e1202804db103ad190b7fe9"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "c06c76eb082679f21e4dfae4e516c1f233adefc2"
+        },
+        {
+          "path": "research/verify_target_a_balanced_triad_relay_audit_2026_10_19.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "eeaa5b9605784056f5375707ea733ba6428097d0"
+        }
+      ],
+      "changed_file_count": 58,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 141,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/141",
+      "title": "Independent audit of PR #117 phase-integrated sink criterion",
+      "author": "1337isnot1337",
+      "head": "51328362b97eaaa264eeecc022bbe93bfd1a561a",
+      "source_tree": "c47dc1e9193810701a326b18b7daa52cb5f5310a",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c555a50adc7c2a0825991f2f59c4c81773c093cc"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "9e6c30f3516658dacb0e9681593201db15da17a2"
+        },
+        {
+          "path": "reading/docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d57c19cf6afb908acd9a1cb0f4ef4126f262503b"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "1dcf0cf1d2480942c7c567ab18f38082a1e735fb"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 142,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/142",
+      "title": "Target C: coupled shear moves PR #104 isolate below D",
+      "author": "1337isnot1337",
+      "head": "6dfe8c78ed50eaf96c21bfd7e03235878d12d36a",
+      "source_tree": "5594a91c15aa79dcd9e65b3c68b677cb8929eb9e",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-03/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "770a5bb76185ccecaf38e3d4ba5903de497177d6"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-03/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ca56fe86eb1957dcd565ed2f6506feebca9458d9"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-03/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d177596c7faec9565bc85977f84dd0c1d6406442"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-03/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d11ee51ff7c7468fac26b5c902f1ac75a7dae6c3"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-03/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4ae947b7b0ecf22826b584116f26685cb7ee69a9"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 143,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/143",
+      "title": "Independent audit: PR #129 wall tolerance and population ledger",
+      "author": "1337isnot1337",
+      "head": "b6e60e8b0c8efa8675b143b1c10bdf2e1d5fe488",
+      "source_tree": "95dd2661a10efa7291a73692857acf134a6a417a",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_c_pr129_wall_tolerance_population_independent_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "af095d95eb96d1a5875ca270f5e12f51d75965ce"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "9b6f64a0171b3ceead2ab5bd96e4fc6c95d151f0"
+        },
+        {
+          "path": "reading/docs/audits/target_c_pr129_wall_tolerance_population_independent_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "f3d61cdf89da10c828281d9c962b46af38b56d6f"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "4d8b1296d47f3310aeafbd0694c0ec3937da95e3"
+        },
+        {
+          "path": "research/verify_target_c_pr129_wall_tolerance_population_audit_2026_10_19.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "f2ef89c8e1a037f7ce321a6a24b1856657dce4c2"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 144,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/144",
+      "title": "Independent audit of PR #131 two-grain interface fixture",
+      "author": "1337isnot1337",
+      "head": "3e00b10e911ea587540aec53c7d0f5ede3b6ab5c",
+      "source_tree": "467e9bd743a81f1a7e988b51c0b052e6e6b6e450",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-16/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d593e86aacb2ae3ac8d9516d38a362d73964a889"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-16/RESULT.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "83b46b1fabdd134a3e0de5ae304109a1e49ac91d"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-16/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c71ec1a006c3a6dc8da44fea8ccb12edaecca040"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-16/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "a3e169b8b4f4d178dcdc2a3c2f4dd7541d8205fe"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-16/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b42d464b893d21e658406914b36802b1a9367bdc"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-16/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2cd1dd5a604082fce06b40f691c135eec67a2a2f"
+        }
+      ],
+      "changed_file_count": 6,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 145,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/145",
+      "title": "Independent audit: Target B Euler correction and strict n-1 shell bound",
+      "author": "1337isnot1337",
+      "head": "908db6f22151301bac4a19a2dd9474fc368bfeeb",
+      "source_tree": "1c73cfcf12672cfbcfca0d0d94eb09442733bdfb",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-13/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "aeeab413ca775a039fee29fca825259d72606545"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-13/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ed6141cab697bfe4def2905c130c4fdcd7ce99c3"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-13/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b7e79477f7ed2f7157bb9924e13a6f9eb41dcc53"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-13/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "9c6a18914d1052502c3c8aa53265ecbca6fad163"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-13/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "36be78969d88eae72d025aac703f137b459681be"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 146,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/146",
+      "title": "Independent audit: PR #128 finite phase-grid endpoint",
+      "author": "1337isnot1337",
+      "head": "d85cc940519044d7381a7382cc3c6d2f0c404d5c",
+      "source_tree": "acb3c1dd9c14de265190ce748a995ad04e7f2c32",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-14/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "780951ec58c1bbb349d5f503b7a05c6cc08fc25f"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-14/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "56980d032c1b54f808db754bed78754ad1808057"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-14/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "85bb77426cbe7841593bdf33620baa93893d6a28"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-14/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2f737821b69aab7ac4f762a6798fa531dabb6d13"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-14/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ed239db2cb4b43b7525f295b86c72eeb359050b9"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 147,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/147",
+      "title": "Target B: scalable two-grid disk with positive PC1 trim",
+      "author": "1337isnot1337",
+      "head": "a110c4062443aa55c480cfd353af3f756e565803",
+      "source_tree": "4e0ef5322368f262c46bfdefe85a58bc1a2a2d83",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-02/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "76ca8d44ab67eb44d53091d644206d56a78c76ea"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-02/RESULT.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ef87743755a5ec85f0f147b46cd50e4f407f4c3a"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-02/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "677ca4231dc6c7b690ace3ec831d837d3f30aa0e"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-02/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "6288fb7ea7c6b145f1c10e276042533ea1043b28"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-02/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "667fb981849b68c15ec04824b6bf9045485e57b3"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-02/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d1911fb2ee3fedf3957cc24487dfb15eef1511be"
+        }
+      ],
+      "changed_file_count": 6,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 148,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/148",
+      "title": "Audit PR #120 and #121 geometric full-shore restrictions",
+      "author": "1337isnot1337",
+      "head": "bda9381cefaf9cff39855ac8653ff6134050918d",
+      "source_tree": "a664f808647571f18013de55d278121b954f91d4",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "0ac0b5ee7605a6ae2b3b1a915533d4029fe32820"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "1f95bac11ef06a5e2ee3f58053c905b653cc2453"
+        },
+        {
+          "path": "reading/docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "58c8afb0681128a50dd41c806a0595915ad9b61b"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "6ad73cf98b9849be71918d0353f653a6191fa3f1"
+        },
+        {
+          "path": "research/verify_pr120_pr121_full_shore_audit_2026_10_19.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c51613c1ab14499dd9515e191018824d408cfa1a"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 149,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/149",
+      "title": "Independent audit: PR #948 large-array boundary attachment",
+      "author": "1337isnot1337",
+      "head": "5053e17987b1aa72173f4a656213532536b24933",
+      "source_tree": "d3de03063c22eb814da66e1a6629eaf28c7f0050",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-09/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "9a801ad449c0a396044389c982261c9a45b58aef"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-09/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "a23c3c63b42fdc644704cd20b4b9070867b8a5ba"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-09/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "7c4e04304486f6653bdf9fe9422d84c08ed6f810"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-09/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "95b1a908db4591c45f2b8155ef1db36ebca32086"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-09/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "6839f3fbc3db2e579649d488241e3b7f60002ac4"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 150,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/150",
+      "title": "Independent audit: PR #948 complete-array diameter forest",
+      "author": "1337isnot1337",
+      "head": "51016e9a86212e2cc74be1092861ddf00bbf8f3c",
+      "source_tree": "5ab23f05d24994e4c19d3db3ae7f9115bde66de8",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-08/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ebc5738c9ecd6f6ba171040026f9cba486e886b8"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-08/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "523ea6a862584fd4751f57cf86de5a1ccbcf18f6"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-08/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "857680e94cb68e8d11d671e4b8035cc29ab848aa"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-08/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ca9fd4721ed5eb0f7b5f5e6276a52a651fca6cb0"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-08/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "9a73abca1a60a1c6a64c279b5246ee198a1beb5c"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 151,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/151",
+      "title": "Independent destination audit of PR959 reflected-scale parity criterion",
+      "author": "1337isnot1337",
+      "head": "0a96997d44b88fd49b0e62d3c73ea0cd48f8042c",
+      "source_tree": "fe9e774c840f143e1c41cd29c213b0cd0f41515d",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-13/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5d94c373201158498e168dcf755833aedeca6ea9"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-13/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c83d049d007c6390d4aab9344fc77273b6a0b59b"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-13/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "9b4cc68b1f5097df0a848331bc69dab3ddfcbc2d"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-13/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "88aa76601aafecd3f00f9787b5b212d5f0855a4b"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-13/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "69f01883ed98ec4accfa425a6af91225775ce1cb"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 152,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/152",
+      "title": "Target C: one movable guard row still has zero insertion capacity",
+      "author": "1337isnot1337",
+      "head": "c53c1b2ee5a3480f9f06304c519df9ac6e7784d1",
+      "source_tree": "dcded3b499d9862ada59057ef96d9c18784e33f7",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-04/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "f3910af43e458de66babebb43afd6e8bd36a0b49"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-04/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "6a78d31094322c4d984edd74f96db7f9f7ee05b9"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-04/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "3049983a17c83417f6b70632d10f850cb75f8bae"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-04/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "7a4e38a0abdf4fbdd079d274b1ac771039167328"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-04/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "7a7aa5718d1207790016a26822c2108a00f008a7"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 153,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/153",
+      "title": "Audit PR #952 unequal-height floor closure on destination main",
+      "author": "1337isnot1337",
+      "head": "0b3f19b643387da8ea3f583945d1fef220e30b02",
+      "source_tree": "16f9f6331ae882e54ff520eb578783baf4144c77",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-11/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "3bd6feda489e4cad05d9222b676d6bdd4ac2fea7"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-11/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "005a355ee9907d3e941ed90de1e35954fdf0d2ee"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-11/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4a076378b3db428a112f29252997b45b153566d5"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-11/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4a7ba23cb75137c60fd0c2f8d15a69c3bf0d2b98"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-11/pinned-replay.jsonl",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b9ab168021b2ea6592777748bc633bc449c4a57a"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-11/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "43155944d4d97658815ee23ad05b673c82b01cb9"
+        }
+      ],
+      "changed_file_count": 6,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 154,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/154",
+      "title": "Target A: pathwise obstruction to continuous balanced-triad strain",
+      "author": "1337isnot1337",
+      "head": "85bfde3bb5d07312a38de24b19d08e1b009f36dd",
+      "source_tree": "a295cd75cb12b4dd86757f353e03e9467b312754",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-01/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "444f95853b571083f616db41d8309031fa604c6a"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-01/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c5c2bb77e8ea1cce7c684d3ce4c9c6afbcc4b961"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-01/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "0eba5b88eb71fc2feb2d47317ab5740e88a12548"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-01/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d6a09ee297345490205074a9b745b1f729957b19"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-01/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4d65495f6c1c39fbcc6c0f1415be654ff3f5adf3"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 155,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/155",
+      "title": "Add support-aware two-cut stress sign fork",
+      "author": "1337isnot1337",
+      "head": "4492507beafbe5496823e7ee7151d7557aa3bca4",
+      "source_tree": "994e271900d46d72fc7a8a7a09122118b9c28611",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-03/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5a4050d843c46bba1746ff291353c3e5d0745c5f"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-03/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5d7f6be142b979369ac1b05d6b2b0964feaf721a"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-03/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "933aeb4d69dbdc3d1e041f1ffb89a4d597ba636b"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-03/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "aa5e29889154a2bd586b0e021da04a4b05bb51ae"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-03/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "6de2dd68f2414f9e53ac6d671ddecca7746efbcf"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 156,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/156",
+      "title": "Destination audit: PR #956 boundary-zigzag linear reserve",
+      "author": "1337isnot1337",
+      "head": "b347d8c3cd1f3dd554874d971386481f244e0787",
+      "source_tree": "4445efe1a699cb7d79b6b3b45e4336f411bbf09c",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-13/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "27c190da640f4a86afb483151f325356621d85e9"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-13/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "8d7ab4e23151fcd4cfccafa9fd1fa8b17560e624"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-13/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c7d72aee35d081533af1441bcaae7ec0ec4c6b23"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-13/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "87c8ca16be3a0f8e3411aebb122a77dc90147160"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-13/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "10ad3307586f910a0179e2ab2396da69ed40edf1"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 157,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/157",
+      "title": "Independent audit: Target C inclusive-floor locked release",
+      "author": "1337isnot1337",
+      "head": "58229f8218d1a0c48c7b1981b9e6cde47cfb0bd8",
+      "source_tree": "069a0a1617e630ac066d17caa0d8d283dd8791fa",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2d9c9c30768c422dd9b006e3b01e634f2fe53acb"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "d1e1b1bf5b9b26c8b67dbc3452f10fd19ed6bb9e"
+        },
+        {
+          "path": "reading/docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "428cce1aacb04d2d3ff89af00d49326725c88b58"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "7a7d55e9678b7adf5db67f900d7e09a79cdb81f7"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 158,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/158",
+      "title": "Audit Target C diameter midpoint tails at destination main",
+      "author": "1337isnot1337",
+      "head": "44743498eb0bd669e3198d93356ae8c5e9dc0d59",
+      "source_tree": "b995635519a506cfadc8c9078d01bc03dfaaff9d",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-05/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "f2a5885c7e644c898280b98c36cac39b52a30c78"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-05/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c15f30897f49a825a8937544627353fbf10e3e67"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-05/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ab6a671fd302d08f833eff2ee6e7a660856c988e"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-05/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "65abc9f84dac12fac5d2bf04a25be2ef5c5a2209"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-05/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c417f534e13f3f80d436e114fd6ad09922aed8ad"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 159,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/159",
+      "title": "Audit PR #960 factor graph alternative at destination head",
+      "author": "1337isnot1337",
+      "head": "277d2d021e8268d90869a09945ac69b04bc18cc2",
+      "source_tree": "eac8e1e7f15cdbd08a400d5f8916e1f87c9821b7",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "50610415913dce092ef56890e8ad6acce8e7c0ad"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "85ed7f40423e5e7e354d576348ee447be9b0931c"
+        },
+        {
+          "path": "reading/docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "13b25fe9cb9943bab238dc40d3911cdbda5f123c"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "7094d7d0d5353a2f9de271d888e463a628afddd2"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 160,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/160",
+      "title": "audit: PASS PR #142 coupled-isolate finite move",
+      "author": "1337isnot1337",
+      "head": "0f63b5b01c2e9f6b97fd50154c63dccc36162ac3",
+      "source_tree": "c14ccdedcebf41acb06621730134433d0a35617a",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-16/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "751eb6558645a0fb7f39a501f747f1bfb8326756"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-16/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "8463ec22258d9a8996f99060c1e0bf73ed46afc1"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-16/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2bd7574c88833671e4a97773c4f0df7c03de65cd"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-16/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2bf42ab5e126baa6443b8ee9af28a769e720b5bd"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-16/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "7d63f69ed6e3ecd55214d23ff2e2f34f2dc2a330"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 161,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/161",
+      "title": "Audit target C one-pin near-triangular plateau at destination main",
+      "author": "1337isnot1337",
+      "head": "3d816bec313a9f2bd303a958622d4128276e8685",
+      "source_tree": "015ecb52db360ee5198490aa69229ff2aba8fd53",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-05/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b0a148c2035c88bffad208dfe06c60a8ac7c71bb"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-05/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "017f084ce58b2fd53cf313751b3c47dab2d86be8"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-05/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "735bae3e58760cfac9415c7a17c6f6c6779a85c4"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-05/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "05ecd858b37145a8c3b71a333fc67fc8e9c8e7e6"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-05/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "971d0a2aceac8ceda137748057d155f5effbf730"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 162,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/162",
+      "title": "Independent destination audit of PR #947 inverse-phase face-tail correction",
+      "author": "1337isnot1337",
+      "head": "456ecf76c17bbf9486601d5268d7c7d82854ee74",
+      "source_tree": "d318a5054650ada931fe186bf87273d739008565",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-06/AUDIT.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "fba433f6a4bbb5d8a1cf614408e9bda31ac6f78d"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-06/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "e351dd533ba155c37a15a8acefb9fd70ae8c4bc2"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-06/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "13eb2654bb0570b14eefcae73305faed511224c0"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-06/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "f7b91444faaba0196e94207fb8c81e901932b5f7"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-06/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b9ec86603fb82d973575fdced7197a97ff856629"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-06/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "3e76527916bf6d79e5479c43d8a2f218a277837f"
+        }
+      ],
+      "changed_file_count": 6,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 163,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/163",
+      "title": "Conditional audit of PR950 attachment-grid linkage",
+      "author": "1337isnot1337",
+      "head": "70eac9a6eba9cc2c254c44ae0e72058d88a6d75c",
+      "source_tree": "f913670d5cf7d0f98082c553ec42b211eaa43af0",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-07/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "fa8d5ff66edbf0ce76aab6dbc69b5fbd3bc5bbac"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-07/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "9e0e4204aeaf8c10ae5bcc26aefc3f3bbf7d9a79"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-07/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "bc2c334d9b1f63bea547157ce2871fa9cffd3ddf"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-07/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "e20ec32970b57ff519f5e7f3eb5881d122ced9c1"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-07/evidence.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ec0f518763baf10b9683db6b5044e771e5224bd3"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-07/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "58ed0fa4e7014ead3a99266c71d6963670f8cd43"
+        }
+      ],
+      "changed_file_count": 6,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 164,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/164",
+      "title": "Target C: exact exterior attachments permit coupled-shear descent",
+      "author": "1337isnot1337",
+      "head": "de51a6e55c576343be6ece5b8f5a688adc0074fa",
+      "source_tree": "1d39087987dd82e21b8a69f1b7003bc1bf98aad7",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-03/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4803ccdc7a6784a9a9a9e483498a570764d94943"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-03/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "03f25347ebcc25f5c6e8e80cd9a0427ea3415283"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-03/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2732f9b86a11c692fe9a6094d73ec333f987ea80"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-03/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "324eb675e9fe884e1d8dc8a167aef7709d7df7e0"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-03/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "bf1ee330c575efe8fce5a05fa098f12626d15efd"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 165,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/165",
+      "title": "Target B: exact annular slit-excision ledger",
+      "author": "1337isnot1337",
+      "head": "8a8fc613f98ad667ad8299eb14ec75e7041523ec",
+      "source_tree": "2c097f9b27ade940336d1d49482c949993a19bc2",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-02/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4f9e7d9f03ae58a9c193a5d9bfff3f3f5cd5fc2c"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-02/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "40e08ebcd08593a6a2d76e5960c316922332b531"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-02/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5373521cf8a5a17a3b1529f4a0d60ece53f4796f"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-02/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "de5b32a277724d2b1ef23911da222d7c9343c9bc"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-02/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "04ccaf3339480b7cc073cab4262b72acc8bbb1d2"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 166,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/166",
+      "title": "Audit destination one-contact approximation proof (PR #955)",
+      "author": "1337isnot1337",
+      "head": "62fcdcf8dc869dc7a59eb9665035222c5b2cf7db",
+      "source_tree": "0f16de79a3dcd3e4a20a7df0ad42667c26e20665",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-12/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "aaaec3cee145890362f0f3419c6e2b71ae3c0757"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-12/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "6b5d7aec4efea0a3d2b5eb7cd358820923e6af60"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-12/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d373f19d49e3e5e27b4dae71b48c626b7acbb65b"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-12/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "1666d3bc7e5ed767ae81c560d3a6901e9a8b1fc4"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-12/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "074040c8f52e24b8d5042a51fb7d6ed33ed538b3"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 167,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/167",
+      "title": "Target B: PR147 family has zero PC3 payment reserve",
+      "author": "1337isnot1337",
+      "head": "7dcdd58a9e394e848c0f79c567d9ee6a97441834",
+      "source_tree": "dae81c2e40368bbfe8c067373a16e7d85171f717",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-02/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "7099a2a515680cf1e830557a9263b1a870b7934a"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-02/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ce6ec8cee5548f3a2517462edcfd5c4364f080d2"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-02/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d1b7a28544486d7ba965d2001bfccec28ebd7c90"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-02/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "cb2f5fb54f322f36ca87be3328e7bed2fabf7d80"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-02/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d301f21e338f325525cab081d116462511c4db60"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 168,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/168",
+      "title": "Add exact-head audit of PR959 reflected-scale moment obstruction",
+      "author": "1337isnot1337",
+      "head": "36c1e99ca90b7600e44cb416864bc6fe2aeeb1f1",
+      "source_tree": "a5105f64ca60d25f4767f97320c8ff31519d3dc0",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "a32b2c15b80e650bde114cfb28ed39238a1380a0"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "f341a055668c84b82aa7de26fff9429b922e70d5"
+        },
+        {
+          "path": "reading/docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "919d95accb7780d7d65b0c9eabbffcd97777d6eb"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "6ba9074cefd5454c7541bedc45d07b16b5a1e31a"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 169,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/169",
+      "title": "Independent destination audit: PR #955 annular matching candidate",
+      "author": "1337isnot1337",
+      "head": "1481fb372734f583177541260c49bd7671e8fc35",
+      "source_tree": "95e69b32f9eade911ed3e6255514a25d039896b8",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-12/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "e8c9085a4e5a6801366a77ec7f7c44d57758e74f"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-12/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "8dccbeb8841241d4ee93bf944f1d2f3eac2e304b"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-12/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4a7aa991b95c4467085a037b7333330f69e71ddc"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-12/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "3220356a85f6ec8fd9d74d91513c948f30fe8f57"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-12/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "4153f72047c931fdc75b24c764ab80e9e0e39935"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 170,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/170",
+      "title": "Add independent exact-head audit of Target B PR #147",
+      "author": "1337isnot1337",
+      "head": "1aa26046438d0cce249ecf6948a8ad9bde1936e3",
+      "source_tree": "1f7a83850324520c63f93a906fa85298871704f4",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-16/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "3669d398cdda1d5dc0e332be7a456c55a72f02a8"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-16/RESULT.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2fd58439beb63db4f5ff7f80704ad264a7abe3a0"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-16/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "0a6b2511bc0d181f9e5d20d5a8b07258a9774a2b"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-16/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "8cb4e34a2fde6b858468f52f1ae23595a1bddb29"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-16/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "13b6077df0d1e1515e1bf5ef3064257a9be703d0"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-16/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "f7ebe4c9ab7ec032772258eb70ed04a6f8ffcfe1"
+        }
+      ],
+      "changed_file_count": 6,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 171,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/171",
+      "title": "Target A: zero-slack source collar remainder",
+      "author": "1337isnot1337",
+      "head": "e63dd4d3c1dcf8eb4bf56b47b112a888d3c0af4c",
+      "source_tree": "929e2657f6f48fbde536d4566b34617ee1dc215f",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ab1fb964c0fd3b46e0597ccbc219a693b327908a"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "062cd58fafef62802caafc2edc0b872e36a170b7"
+        },
+        {
+          "path": "reading/docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5cb9cf26e3b201d6100183795ef9bbf4852927db"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "e615635bf89871e9c92159a2642e94ca4bc1a403"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 172,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/172",
+      "title": "Conditional annular packet from safe-core vacancy",
+      "author": "1337isnot1337",
+      "head": "1e4907faaec3acd5c267a42cab04ab4a07443387",
+      "source_tree": "bd6e0a61a74e4b053aac9ebd7ce6a5d4effd83d9",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-04/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "99ceb784ebddf7e182e98cc18f6d26db02c6ad76"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-04/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "cf5bf08aabeb21413415e16217d57111e013e5bd"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-04/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "6c80664a5f7128d987f7c9aac082bb47913686c4"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-04/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b8a4f2a80b4d784e59efa16f24a7c8bc2e1b716e"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-04/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "8d4adab53ecd6a262501d8c93e40e5a74bdd4440"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 173,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/173",
+      "title": "Independent audit: PR #950 Type-II common-grid access",
+      "author": "1337isnot1337",
+      "head": "2170444e326e08d462b77f69d87c5b12124c243b",
+      "source_tree": "4b93b72b0efff484b54a562fd2242a74dd437e77",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-06/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b6718265452239d95e54101f29f4bc439811f120"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-06/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "51d943e1f0c768110e83e628b679ff744acc5d5d"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-06/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "3f599de392b62a275704d4e37e9e463296c2322d"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-06/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2067c80410758fd65ddbe02a5b7a550a11be8f62"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-06/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "8c0c2477ebc3afb5a9ce5a27508f32d8f9ff5ba8"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 174,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/174",
+      "title": "Independent destination audit: PR #948 deep-face persistence and isolate deficit",
+      "author": "1337isnot1337",
+      "head": "91f3d847a2d9e46d29bfa75d9a6a75c4e733ddf6",
+      "source_tree": "72216d3a0d34eed336746998ad127b5c52596bef",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-07/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "1254776cdf24021995f4c491ad930ebf786d3d8b"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-07/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "776ac5bfe68fb81e8bc7e018af16a72255f092bc"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-07/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "edb6a9b533d0058f1cc84f98549b42382a0afdfd"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-07/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "1f303680ee8fe058e43481709329d79de677e33b"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-07/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "c6d53c282230e12f9f0301adbdb82e373566381b"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 175,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/175",
+      "title": "Independent audit: destination PR #948 rigid-cycle pinned stress",
+      "author": "1337isnot1337",
+      "head": "45104cfa58c69551201475679ea35ec247a8d8f8",
+      "source_tree": "03b1d2817be2cd0b62a3aefa7c6c01de8a1f5159",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-08/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "50b9545839bf73c4f67c4704484bff3516379b27"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-08/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "030754f5ce2547a41a5012f9afd5a846a4707ab0"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-08/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "1f3a399508bfc4b0cf0f2281d6ee837444eaf40d"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-08/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "2599af11dcf9cd025b25c86ed902236d79bc0a1a"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-08/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "ea575c2363a727340120bbda670c95ab444d729a"
+        }
+      ],
+      "changed_file_count": 5,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 176,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/176",
+      "title": "Independent audit: PR #138 Oler remainder",
+      "author": "1337isnot1337",
+      "head": "62a366b501472aa22d42a7fcc8e175747c0cc179",
+      "source_tree": "12f8deb9b111a2b2756f1681289e06bee6eb2861",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-15/README.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "29515f3995a9b664c4d45f00125955c77eb103bb"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-15/REVIEW_TARGET.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "9d687861f195c725ad3b8f12b48708c2d2169dc9"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-15/SOURCES.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "b748afeaf6ba213012ff4146513963fdac242624"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-15/TASK.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "9ec8f8a035d0d7a41216bd057e2c6d205938da3a"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-15/VERIFY.json",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d030eaac20b54908940711e3886e45dedd1ff6c1"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-15/verify.py",
+          "status": "added",
+          "mode": "100644",
+          "blob": "cdd9d6075505514b3b1a29a5e5b82ee404edc498"
+        }
+      ],
+      "changed_file_count": 6,
+      "draft_at_freeze": false
+    },
+    {
+      "number": 177,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/177",
+      "title": "Independent destination audit of PR #952 loaded-anchor upper box",
+      "author": "1337isnot1337",
+      "head": "3eb24c410dc7a207992aab80fff26a2ddba13d28",
+      "source_tree": "548660be8a19664db19a55a6a1c5f28a18f70997",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_c_pr952_loaded_anchor_upper_box_independent_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "13734359d5bf38c7b700f767c709929c689a7965"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "d70b646a9c92f5a79689c6817aea864513ee4713"
+        },
+        {
+          "path": "reading/docs/audits/target_c_pr952_loaded_anchor_upper_box_independent_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "a5a215050203991d2e7e546fadaa772ea9cc3ba2"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "130a9270c8a453cd935a2cfe64c195436a351dfd"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 178,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/178",
+      "title": "Independent destination audit of global factor-balance obstruction",
+      "author": "1337isnot1337",
+      "head": "c020c941f1d86cd174164950134ac1f3c9d05a96",
+      "source_tree": "77fde5d01da28c083168eaa5b3914ca16d123374",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/global_factor_balance_obstruction_destination_independent_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "3d585983814cff43bfe6a9f11eac5d98f401f84a"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "fec7886b1d96d9d009b60fffaddbec3f7d3d8936"
+        },
+        {
+          "path": "reading/docs/audits/global_factor_balance_obstruction_destination_independent_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "f6a32889a17b209833063f1c4d79f972f000890c"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "5c794a9bbb8d8775daa9cae8dc922519fd9d2d3b"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 179,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/179",
+      "title": "Independent destination audit of PR #952 component anchoring",
+      "author": "1337isnot1337",
+      "head": "48eb6a6caabbf97d4bc681d4a8c2bdd674bfd802",
+      "source_tree": "28d8c55974373579a1eb321f918e351522872cf0",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_c_pr952_component_anchor_stress_gain_destination_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "5f96c51359029a6d784f0dd6a893b42ab9e7bcc0"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "3c6dedad44d6cd35d4d1a3ea1ad14227c268a615"
+        },
+        {
+          "path": "reading/docs/audits/target_c_pr952_component_anchor_stress_gain_destination_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "6827b7818eec13532cd81455427a19ce2d720ca9"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "e6fb2233068e1d36ad4d1cc7c7e753911bb398ae"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    },
+    {
+      "number": 180,
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/180",
+      "title": "Independent destination audit: PR #952 owner common-release implication",
+      "author": "1337isnot1337",
+      "head": "22aa2fc4ae96f1109f6001e9add49d9c70c26b83",
+      "source_tree": "dcfd1788d7e9a7aed6748f0df7d4989e7fcffb0f",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files": [
+        {
+          "path": "docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "286eb6c152e150324a1aa7cd0d7f1ef700123d3f"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "4787cf264a83604cdfdcd34abab4f76a796f677b"
+        },
+        {
+          "path": "reading/docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+          "status": "added",
+          "mode": "100644",
+          "blob": "d108d35b732d37d84994b044df0ca2504193c80f"
+        },
+        {
+          "path": "reading/manifest.json",
+          "status": "modified",
+          "mode": "100644",
+          "blob": "586dbdee49f5ae1c4cfd9d53344d89963cb58aaa"
+        }
+      ],
+      "changed_file_count": 4,
+      "draft_at_freeze": true
+    }
+  ]
+}

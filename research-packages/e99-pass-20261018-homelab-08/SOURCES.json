@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/targets/target-a/20-zero-slack-normalization.md",
+      "sha256": "29050c565c02816f425e09f1a01598e1012b689d0508618465e406cf3918ca40",
+      "identity": "docs/targets/target-a/20-zero-slack-normalization.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+      "sha256": "585d984a913b92dbe9d7d6dd63d02ad1c77a20f0caa35ff3fa0ffb35274c3502",
+      "identity": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-homelab-08/verify.py",
+      "sha256": "2ec4345444c2e71dd4a867f4476682fba9012e8896d3055738dd098f0039fdcb",
+      "identity": "exact-rational-geometric-full-shore-extension-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The fixture does not realize the Section-168 source-capacity endpoint |A^0|=alpha_1(H), and the mathematical result has not received an independent agent audit."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/reports/global_boundary_zigzag_linear_reserve_2026-10-11.md",
+    "docs/targets/target-c/candidate-registry.json",
+    "docs/targets/target-c/CURRENT.md",
+    "docs/problem/statement.md",
+    "docs/state/theorem-state.yaml",
+    "docs/state/artifact-index.jsonl",
+    "docs/theory/03-oler-shell.md",
+    "docs/audits/pr956_autonomous_proof_audit_2026-10-15.md",
+    "docs/research/priority-state.json",
+    "docs/research/agent-task-catalog.json",
+    "research-packages/e99-paired-20261019t091333z-local-13/verify.py"
+  ],
+  "domain": "All real R>=640000, a lattice translate selected by population averaging for each R, and every finite global n-point diameter minimizer with D>1280000; the per-translate row-gain estimate, guarded row packets, and strict smaller-diameter global comparison are the proof hypotheses.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-local-13/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

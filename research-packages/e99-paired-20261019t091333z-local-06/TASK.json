@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-local-06",
+  "classification": "conditional",
+  "scope": {
+    "statement": "Independently audit the corrected inverse-phase face-tail sequence exclusion at the exact destination main bytes.",
+    "domain": "Unbounded canonical post-ZF C-II sequences with one per-source unit triangular frame, fixed K/D actual-contact edge error, and lim_{M->infinity} limsup_{D->infinity} T_M(D)/D=0.",
+    "limitations": "The result assumes both global hypotheses, retains contact isolates in the full source, and proves only q=o(D) under those hypotheses. It gives no global chart, premise extraction, source motion, strict-D competitor, C-II closure, or Level I closure."
+  },
+  "result": "Independent proof reconstruction found the corrected diagonal-cutoff and radius-D^(3/4) patch argument valid. The finite checker covers source pins and scalar exponent identities only, not the analytic theorem.",
+  "remaining_questions": [
+    "Extract both global phase and vanishing face-tail premises from every sufficiently large canonical triangle-free global minimizer, or construct a source-specific competitor without them."
+  ]
+}

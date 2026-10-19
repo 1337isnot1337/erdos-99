@@ -1,0 +1,22 @@
+{
+  "number": 140,
+  "head": "9183fd057255719a3535bf8f9c5feeec9d711c80",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "20aa8e68b868731735e127d9a2d5552d7fab1f8e",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Direct report proof review; exact audit verifier passes on frozen and integration tree; 55 pre-existing changed docs/reports restored byte-identically to baseline.",
+  "original_coverage": "Direct report proof review; exact audit verifier passes on frozen and integration tree; 55 pre-existing changed docs/reports restored byte-identically to baseline.",
+  "remaining": "55 originals restored by 8f291fb; index and reading view regenerated; rechecked at 173b3dd. Full certificate replay deferred. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/a-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

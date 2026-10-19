@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
+    "tasks/target-c-typeii-stress-mass-access.md",
+    "research-packages/e99-macbook-20261019t054318z-07/README.md",
+    "research-packages/e99-macbook-20261019t054318z-07/verify.py"
+  ],
+  "domain": "Only R in {16,25,36,64,100,256}; exact source populations from PR #95; comparator is the same-basis lattice disk of radius R-1/2, from which exactly N_R points are selected.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-macbook-20261019t054318z-07/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

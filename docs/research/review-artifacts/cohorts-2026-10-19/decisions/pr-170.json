@@ -1,0 +1,21 @@
+{
+  "number": 170,
+  "head": "1aa26046438d0cce249ecf6948a8ad9bde1936e3",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "1f7a83850324520c63f93a906fa85298871704f4",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Independent verifier passes m=12,16,20,24 and analytically proves all m>=12 divisible by four; checks pairwise distances, contact graph, boundary cycle, hull support, Section-50.1 filter, pruning, trim and payment signs.",
+  "original_coverage": "Independent verifier passes m=12,16,20,24 and analytically proves all m>=12 divisible by four; checks pairwise distances, contact graph, boundary cycle, hull support, Section-50.1 filter, pruning, trim and payment signs.",
+  "remaining": "Archive partially reviewed; root owns full certificate replay. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/STATE.md",
+    "docs/targets/target-a/README.md",
+    "docs/targets/target-a/10-quantitative-kuperberg-rate.md",
+    "docs/targets/target-a/12-toeout-kuperberg-improvement.md",
+    "docs/targets/target-a/13-five-block-local-optimality.md",
+    "docs/targets/target-a/14-sharp-symmetric-five-block.md",
+    "research-packages/e99-paired-20261019t091333z-homelab-01/verify.py"
+  ],
+  "domain": "Any finite labelled planar source with a point p and three fixed unit-contact anchors forming a balanced 120-degree triad; p(t) is continuous from p and preserves the three lower bounds. This includes an affine strain of a support containing p when anchors remain fixed. The checker covers the exact four-label fixture and two-anchor failure control only.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-homelab-01/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

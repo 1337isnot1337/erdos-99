@@ -1,4 +1,4 @@
-> Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-midpoint-anchor-atlas.md) · source SHA-256 `ca4abbf69861ee2c367bece626e3715eeaec03cdd837149453ca814d1d74eded`.
+> Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-midpoint-anchor-atlas.md) · source SHA-256 `da82d56bdcf33b89a3f99b741926782aefa29083a341af43ee2c95dcc6c1c50f`.
 > [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C midpoint, anchor, and atlas track
@@ -51,6 +51,15 @@ the report explicitly leaves their number uncontrolled. The
 [midpoint-tail second-referee note](../../audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md)
 records the source proof clarification for its dyadic angular band width.
 
+The destination [near-diameter localization audit](../../audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md)
+independently reconstructs this near-pair component from `C-FS-GEOM` and
+`C-FS-DIAMETER-MIDPOINT-D2-3`. It verifies the endpoint tangent and midpoint
+normal bounds for all `s>=0`, uniformly on `0<=s<=2`, including both boundary
+values. The audit is limited to this component; the destination candidate stays
+unreviewed pending an explicit lifecycle transaction. It does not audit the
+endpoint-tail/moment claims used separately by PR #113 or establish a pair
+count, atlas, or source motion.
+
 ## Positive-leaf anchor strengthening
 
 [Audit.247](../../audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md)
@@ -65,8 +74,11 @@ KKT normals, and a full-source inner-ball contraction. It gives boundary
 localization only: no vacancy, packet, source motion, or capacity payment.
 
 The [positive-leaf second-referee note](../../audits/target_c_positive_leaf_anchor_second_referee_2026-10-10.md)
-records a source reconstruction. It does not count as the destination's
-required independent AI-agent audit of an exact destination commit.
+records a source reconstruction. The [destination exact-head review](../../audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md)
+checks the cone-to-boundary-contraction implication at `7d0a450` conditionally
+on the near-diameter endpoint estimates for deficits 0 and 2. Those estimates
+remain unreviewed and noncanonical here, so the accepted anchor rate remains
+`O(D^(-1/2))`; no destination claim is promoted by this audit.
 
 ## Supplied slow-chart coverage
 

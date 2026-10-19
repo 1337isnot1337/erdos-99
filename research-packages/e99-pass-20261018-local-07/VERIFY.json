@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/state/theorem-state.yaml",
+    "docs/research/priority-state.json",
+    "docs/research/agent-task-catalog.json",
+    "docs/targets/target-c/CURRENT.md",
+    "docs/targets/target-c/candidate-registry.json",
+    "docs/targets/target-c/76-hole-stable-complete-grid-order-diameter-audit.md",
+    "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md",
+    "docs/targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md",
+    "docs/targets/target-c/68-punctured-packing-phase-audit.md",
+    "docs/targets/target-c/85-train-boundary-interface-currency-audit.md",
+    "docs/research/tracks/target-c-iterative-pruning-atomic-gap.md",
+    "tasks/target-c-branch-aware-atomic-gap.md",
+    "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_2026-09-15.md",
+    "research/verify_target_c_branch_aware_atomic_gap_0071.py",
+    "research/target_c_iterative_minimax_phase_star_atomic_gap_0050_2026-09-14.md",
+    "research/verify_target_c_iterative_minimax_atomic_gap_0050.py",
+    "research/target_c_g0050_physical_boundary_propagation_2026-09-14.md",
+    "research/verify_target_c_g0050_global_propagation.py",
+    "research-packages/e99-pass-20261018-local-07/verify.py"
+  ],
+  "domain": "Exact rational endpoint inequalities and branch floors for delta=(9 epsilon/2-g)/2, conditional on the all-train gap, imported Section 171 derivative condition, and physical report's full-core Type-II R_F=o(D) low-t branch with shallow-tooth injectivity or long-side directional-energy hypotheses.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-local-07/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

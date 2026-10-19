@@ -1,0 +1,3546 @@
+{
+  "reviewer": "/root/review_b",
+  "scope": "Group B assigned 26 PRs, finite C moves/capacity and related audits; plus separate amendment review for PR117/121 and PR124/139 registry reconciliation at 8bc3d8f10ecf7204078f8db66005dfc0551263c6.",
+  "evidence_complete": true,
+  "integration_commit_for_special_audits": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+  "metadata_repin_validation_commit": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+  "metadata_repin_validation": {
+    "result": "PASS",
+    "summary": "4 B-package repin rows across PR115, PR149 and PR172: old hashes match original named blobs; new hashes match exact 8bc metadata blobs; final SOURCES pins match repin rows. README/TASK/VERIFY/checker blobs were unchanged between 8bc and 173. 20 distinct B package metadata checks passed at 173; these are metadata checks and do not replace direct source/math review.",
+    "script": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-repins.py",
+    "log_glob": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-meta-*.log"
+  },
+  "correction_review": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-correction-review.json",
+  "prs": [
+    {
+      "number": 104,
+      "title": "Target C: finite two-face shear cap with retained isolate",
+      "head": "632dd98ae6b093edce27c405e4cf0d77712c2306",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-pass-20261018-local-04/README.md",
+          "research-packages/e99-pass-20261018-local-04/SOURCES.json",
+          "research-packages/e99-pass-20261018-local-04/TASK.json",
+          "research-packages/e99-pass-20261018-local-04/VERIFY.json",
+          "research-packages/e99-pass-20261018-local-04/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-pass-20261018-local-04/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-04/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-04/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-04/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-04/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 5,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_archive",
+      "coverage": "Finite seven-label two-face shear with fixed retained isolate; enumerates all 21 pairs and bounds feasible shear by |c|<=21/100, with endpoint third diameter and outside failure.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-local-04/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "632dd98ae6b093edce27c405e4cf0d77712c2306",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.017,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr104-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "tasks/target-c-face-coupled-move.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "42bb06a04b2704ac2230b1d209667e13019bb00a10451e79ea536eba722a3a83",
+          "identity": "tasks/target-c-face-coupled-move.md"
+        },
+        {
+          "path": "docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "f89b587fe6aa451666666b347bbe0ef31cab5b1da98b4d373ad0bcb7b5e6ef5e",
+          "identity": "docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "identity": "docs/targets/target-c/CURRENT.md"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-04/verify.py",
+          "commit": null,
+          "sha256": "640c20aae56868c62296be31dafb6a7c84488332def10b8d8ff503c85ff6ca2b",
+          "identity": "exact-pair-ledger-verifier"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "No source extraction or canonical move; this is a finite obstruction/cap only."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 106,
+      "title": "Target C: exclude six sparse-stress fixtures by exact lattice competitors",
+      "head": "18c0ffba9a730cb3dc23b711a00c20dd9302c1ac",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-pass-20261018-homelab-04/README.md",
+          "research-packages/e99-pass-20261018-homelab-04/SOURCES.json",
+          "research-packages/e99-pass-20261018-homelab-04/TASK.json",
+          "research-packages/e99-pass-20261018-homelab-04/VERIFY.json",
+          "research-packages/e99-pass-20261018-homelab-04/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-04/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-04/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-04/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-04/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-04/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 11,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_archive",
+      "coverage": "Six exact sparse-stress fixtures are excluded by same-cardinality lattice-disk competitors; exact source and competitor counts and excesses are reported.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-homelab-04/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "18c0ffba9a730cb3dc23b711a00c20dd9302c1ac",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 3.973,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr106-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "1abf7b668e28e13ba460b213b9ce152a912c16403e258b61417ee5bf8e06aa3f",
+          "identity": "docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md"
+        },
+        {
+          "path": "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "2abaff04ce431afe7c2857f4a843f1525bafb2a61c4dc38978e2af6629715682",
+          "identity": "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md"
+        },
+        {
+          "path": "docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "60af5da043ca638e6f9740442e18d3d345b2d344cec91dc13cbb933f9ba02936",
+          "identity": "docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md"
+        },
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "01e100022b6755594eab032725198d0a6546aef9f0e9343f016b2ad6edabd231",
+          "identity": "docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md"
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "identity": "docs/research/priority-state.json"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "identity": "docs/state/theorem-state.yaml"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "identity": "docs/targets/target-c/CURRENT.md"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-04/README.md",
+          "commit": null,
+          "sha256": "6829bba101d8c40a71b9307b9cc7b9ad420a677b49f0a05c8216f9ac971fe0a6",
+          "identity": "proof-and-scope-note"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-04/verify.py",
+          "commit": null,
+          "sha256": "5fac7de0ca55b8ac703a70180bef67b450a988467b7376e1c11403b7f6a3e00d",
+          "identity": "exact-comparator-checker"
+        },
+        {
+          "path": "tasks/target-c-typeii-stress-mass-access.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "7ee0df03f1e0c7d68d6bc48e80c05592aa778e2579108679fe27bcdb47c38977",
+          "identity": "tasks/target-c-typeii-stress-mass-access.md"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "The result covers six fixtures, not a source-independent theorem."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 111,
+      "title": "Target C: record strict full-pair restoration after supplied-W deletion",
+      "head": "4ae7399e2595074c0331398fbba9b58c5dea3e73",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-pass-20261018-local-08/README.md",
+          "research-packages/e99-pass-20261018-local-08/SOURCES.json",
+          "research-packages/e99-pass-20261018-local-08/TASK.json",
+          "research-packages/e99-pass-20261018-local-08/VERIFY.json",
+          "research-packages/e99-pass-20261018-local-08/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-pass-20261018-local-08/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-08/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-08/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-08/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-08/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 4,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_scoped",
+      "coverage": "Conditional full-pair restoration after deleting supplied p0 from a ten-chain plus pinned q: supplied r=(8/5,11/10) restores strict pair distances in (1,81), with diameter squared 3673/50.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-local-08/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "4ae7399e2595074c0331398fbba9b58c5dea3e73",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.023,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr111-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "54c93dfec11d5b3ef7aea5cb65fc4624c2758e9e911fe9c73fe99f00542e36e1",
+          "identity": "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md"
+        },
+        {
+          "path": "docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "afd5a20ba695bd56ee8306beb1a0f78b961176b2a7b239603670f4e6466814f5",
+          "identity": "docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-08/verify.py",
+          "commit": null,
+          "sha256": "09f28f9e6cc50c9ffa9a584c7331aec2349213c82f489febb9afec4d1706fcf0",
+          "identity": "exact-rational-full-pair-checker"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Requires the supplied source configuration, stress, deletion, and insertion hypotheses; not a universal repair existence theorem."
+      ],
+      "open_obligations": [
+        "Do not promote the conditional instance to source extraction or a global move."
+      ],
+      "necessary_repairs": [
+        "Do not promote the conditional instance to source extraction or a global move."
+      ],
+      "evidence_complete": true
+    },
+    {
+      "number": 114,
+      "title": "Target C: exact cut-stress model for boundary payment",
+      "head": "cd33f4c76fd48722f06c03ddc86a05fd5e8f9e51",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-pass-20261018-local-06/README.md",
+          "research-packages/e99-pass-20261018-local-06/SOURCES.json",
+          "research-packages/e99-pass-20261018-local-06/TASK.json",
+          "research-packages/e99-pass-20261018-local-06/VERIFY.json",
+          "research-packages/e99-pass-20261018-local-06/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-pass-20261018-local-06/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-06/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-06/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-06/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-06/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 12,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_archive",
+      "coverage": "Exact algebraic cut-stress calculation in an abstract two-shore boundary-payment model, including cut vectors, packet balance, determinant, shear and work.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-local-06/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "cd33f4c76fd48722f06c03ddc86a05fd5e8f9e51",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.019,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr114-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "identity": "docs/state/theorem-state.yaml"
+        },
+        {
+          "path": "docs/research/tracks/target-c-exact-phase-packet-fork.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c5d6bac44a0869264692c35897f8c0627941cd50ded421a27cca4454363dc929",
+          "identity": "docs/research/tracks/target-c-exact-phase-packet-fork.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "631f7fe2d5d950c47bcedd9eabf710fa4b356f9a974db69d64c965cbbbca5ebf",
+          "identity": "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "5af0523286fc97315a44519797cc7be8c5a0e9083e201d9070e844209052164e",
+          "identity": "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_cross_shore_packet_resultants_2026-10-02.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "ea206df909c07c2dcaf72c91f836e7f3ac6dd6c743ddd79f44449d57c55b50c1",
+          "identity": "docs/reports/target_c_exact_phase_threshold_cross_shore_packet_resultants_2026-10-02.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_strict_packet_resultants_2026-10-02.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "204f16bb5b540a2aab2e34f5a3303ac99f21e993edc412a60d17aeb4166a055b",
+          "identity": "docs/reports/target_c_exact_phase_threshold_strict_packet_resultants_2026-10-02.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cc0601f888662d1d38acb527823d0cf25661e1e71ebc41e5f165caeb059e331e",
+          "identity": "docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_edgewise_kkt_balance_2026-10-02.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "71208b1e14d84c69afee63335d12c15c02f690ff2f97fa7e518c5162f519cfbf",
+          "identity": "docs/reports/target_c_exact_phase_threshold_edgewise_kkt_balance_2026-10-02.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_edgewise_flux_packets_2026-10-02.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "d71238a6a82b780e358ce59614cdb89a397828495c75d6387f3f9452864a1f22",
+          "identity": "docs/reports/target_c_exact_phase_threshold_edgewise_flux_packets_2026-10-02.md"
+        },
+        {
+          "path": "docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "893bf2f4c2fb80675f47af4ba4d6fb5100c22e2f665124757b8af56f90a710cf",
+          "identity": "docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-06/verify.py",
+          "commit": null,
+          "sha256": "fa9ad7dc2e00a7d0d006de101e23cab5ca9628a4e57b0586987fa75f08637d27",
+          "identity": "finite-cut-stress-checker"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "No planar/global source realization is supplied."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 115,
+      "title": "research: audit PR #958 finite palette transversal equivalence",
+      "head": "356cb08229dd0a38bd272d05488f9bc8be9e1313",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-pass-20261018-local-11/README.md",
+          "research-packages/e99-pass-20261018-local-11/SOURCES.json",
+          "research-packages/e99-pass-20261018-local-11/TASK.json",
+          "research-packages/e99-pass-20261018-local-11/VERIFY.json",
+          "research-packages/e99-pass-20261018-local-11/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-pass-20261018-local-11/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-11/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-11/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-11/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-11/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 7,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_scoped",
+      "coverage": "Finite palette-transversal equivalence under the stated exact constraints, with verifier controls.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-local-11/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "356cb08229dd0a38bd272d05488f9bc8be9e1313",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.04,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr115-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "docs/reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "e0ac1c388070ae91c00e716d1b511924978c029ba90797a6ba562b12e811450c",
+          "identity": "docs/reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md"
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "identity": "docs/targets/target-c/candidate-registry.json"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "16fee2414ff89dd20393936eba0dc8467b13b05ab0321193cfd9c64545265a90",
+          "identity": "docs/state/artifact-index.jsonl"
+        },
+        {
+          "path": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "d32fa3e8b2d267d28e2963f653671989aee7584c5e456ca5e3730a7d8fa0b90a",
+          "identity": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md"
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "identity": "docs/research/priority-state.json"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-11/verify.py",
+          "commit": null,
+          "sha256": "521015f1184589c52271f5c0b499cdf689ad0d024e62229745252d0041e5dcf6",
+          "identity": "research-packages/e99-pass-20261018-local-11/verify.py"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Applies to the finite palette model only; does not establish a global source move."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 116,
+      "title": "Independent audit: PR #948 quarter-fold face obstructions",
+      "head": "08442dbb7a3159ef1d0cc7ec966b99d6eced0edd",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 4,
+        "assignment_path_count": 4,
+        "github_changed_files": 4,
+        "git_diff_count": 4,
+        "full_path_inventory_match": true,
+        "paths": [
+          "docs/audits/target_c_pr948_quarter_fold_face_obstructions_independent_audit_2026-10-18.md",
+          "docs/state/artifact-index.jsonl",
+          "reading/docs/audits/target_c_pr948_quarter_fold_face_obstructions_independent_audit_2026-10-18.md",
+          "reading/manifest.json"
+        ],
+        "modes": [
+          {
+            "path": "docs/audits/target_c_pr948_quarter_fold_face_obstructions_independent_audit_2026-10-18.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "reading/docs/audits/target_c_pr948_quarter_fold_face_obstructions_independent_audit_2026-10-18.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "reading/manifest.json",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 0,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "source-only audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Independent report on PR948 quarter-fold face obstructions; source-only audit, with no new extraction or endpoint theorem.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_artifact_index.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "08442dbb7a3159ef1d0cc7ec966b99d6eced0edd",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.286,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr116-artifact-index.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_reading_edition.py --check",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "08442dbb7a3159ef1d0cc7ec966b99d6eced0edd",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 20.75,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr116-reading-edition.log"
+        }
+      ],
+      "source_bindings": {
+        "audit_artifact": {
+          "path": "docs/audits/target_c_pr948_quarter_fold_face_obstructions_independent_audit_2026-10-18.md",
+          "revision": "08442dbb7a3159ef1d0cc7ec966b99d6eced0edd",
+          "sha256": "26858163f940698327ceb560f48e18135d14d2d5a5cb5e7a2555007652c8f8c0",
+          "git_blob": "4cfe787bef9fbc21e4f56868d069ea2a58781c1a",
+          "artifact_id": "ART-D1153290BF46",
+          "canonical": false,
+          "status": "unreviewed"
+        },
+        "reviewed_inputs": [
+          {
+            "path": "docs/reports/target_c_quarter_fold_face_obstructions_slot02_2026-10-10.md",
+            "revision": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "sha256": "e441995708568951a3dd5eafcd162bf398669a46eaab99c91f142efc46e18f2f",
+            "git_blob": "5bd64db4c7e9dcad18e20bb820fb5adab24785e5"
+          },
+          {
+            "path": "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+            "revision": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "sha256": "ced2ae1bb3ee3834f0a36d5869d25c7aedc0e447df2c8bb17013cf1d4a0a7d89",
+            "git_blob": "55a505dda56672c174372f71a725de5471e93589"
+          },
+          {
+            "path": "research/target_c_quarter_fold_face_obstructions_certificate_2026_10_10.json",
+            "revision": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "sha256": "0ebf7367629a7555ce379b77f11af81b63d9e973eb0b84fd9a5eaee0512a3857",
+            "git_blob": "fad23c6de526520582ca54f079138ef1ade31e87"
+          }
+        ]
+      },
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Historical proof reconstruction was not repeated; source scope follows the cited report and canonical interfaces."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 124,
+      "title": "Target C: conditionally audit positive-leaf anchor sharpening",
+      "head": "067af10523401461d80a399ef31ba429accc8fc1",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 7,
+        "assignment_path_count": 7,
+        "github_changed_files": 7,
+        "git_diff_count": 7,
+        "full_path_inventory_match": true,
+        "paths": [
+          "docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+          "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+          "docs/state/artifact-index.jsonl",
+          "docs/targets/target-c/candidate-registry.json",
+          "reading/docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+          "reading/docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+          "reading/manifest.json"
+        ],
+        "modes": [
+          {
+            "path": "docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "docs/targets/target-c/candidate-registry.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "reading/docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "reading/docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "reading/manifest.json",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 0,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "source-only audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Independent destination review of PR #124 positive-leaf anchor sharpening: assuming PR #139 near-diameter localization at s=0 and s=2, the full-source KKT cone and an inner-ball contraction imply dist(a, partial K_D)=O(D^(-2/3)). This is conditional; PR #139 localization is a separate unreviewed candidate. No endpoint-tail/moment or full diameter-edge transfer, vacancy, packet, source motion, or theorem promotion is included.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_artifact_index.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "067af10523401461d80a399ef31ba429accc8fc1",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.383,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr124-artifact-index.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_reading_edition.py --check",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "067af10523401461d80a399ef31ba429accc8fc1",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 23.82,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr124-reading-edition.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-124-ee8-metadata.py",
+          "working_tree": "frozen integration commit ee8f9df94a8a1043098482386bbbc6a893214330 via git show",
+          "head": "ee8f9df94a8a1043098482386bbbc6a893214330",
+          "exit_code": 0,
+          "result": "PASS; verified single correct marker, artifact-index identity/status, and source/generated reading hashes after removing ART-PLACEHOLDER.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-124-ee8-metadata.log"
+        }
+      ],
+      "source_bindings": {
+        "report": {
+          "path": "docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+          "revision": "067af10523401461d80a399ef31ba429accc8fc1",
+          "sha256": "492b87c9276752cae74f1218b48b07a4200ea0f91f38092b505f55c69a4c9dcf",
+          "git_blob": "c319d0c9ca4d983e9b3e768f8c0cd26dbf7ee61c",
+          "artifact_id": "ART-7B6F9C6B4A70",
+          "canonical": false,
+          "status": "unreviewed"
+        },
+        "reviewed_inputs": [
+          {
+            "candidate": "TARGET-C-POSITIVE-LEAF-ANCHOR-D23-PR947",
+            "source_pr": 947,
+            "head": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+            "status": "unreviewed strengthening candidate"
+          },
+          {
+            "candidate": "TARGET-C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND-PR947",
+            "audit_pr": 139,
+            "audit_report": "docs/audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md",
+            "audit_revision": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+            "audit_git_blob": "4ac98647466f92d6a5ba4ea00bc7b21dfb8c19d7",
+            "status": "candidate unreviewed; localization component audit PASS",
+            "audit_pr_head": "c0043e3fb9c75b405e75fa462d5c9f2d1a7f1e85"
+          },
+          {
+            "canonical_claim": "C-FS-GEOM",
+            "role": "full-source circumradius bound R<=D/2+3^(1/4)*sqrt(D)"
+          },
+          {
+            "canonical_claim": "C-FS-DIAMETER-MIDPOINT-D2-3",
+            "role": "endpoint tangent estimate and actual diameter normal estimate at s=0"
+          }
+        ]
+      },
+      "dependencies_and_evidence_reuse": "Reconstructed the conditional geometry from PR #124 exact-head prose and canonical interfaces. The near-diameter estimates for the same source at s=0 and s=2 are a separate PR #139 result and are used only as premises; PR #139 independently reviews the localization component for all s>=0, but its candidate lifecycle remains unreviewed and its companion endpoint-tail/moment/full-diameter transfer claims are excluded. No full historical proof-chain reconstruction was performed. The independent C-review record for PR #139 also preserves the all-s>=0 scope and the endpoint hypotheses; B relied on that bounded localization result only as the stated antecedent.",
+      "scope_limitations": [
+        "Conditional on the PR #139 endpoint-tangent bounds at s=0 and s=2; this audit does not re-prove the near-diameter candidate.",
+        "Only the positive-leaf cone-to-boundary-contraction implication is covered; no count, vacancy, packet, source-realized move, or global result.",
+        "The exact PR head contains a second theorem-state marker with ART-PLACEHOLDER. The generator validates only the first-line marker; integration cleanup is tracked separately.",
+        "No full historical canonical proof chain was reconstructed."
+      ],
+      "open_obligations": [
+        "Keep both candidate lifecycles unreviewed/noncanonical; independently establish the complete near-diameter candidate before relying on its premise for adoption.",
+        "Connect boundary localization to a source-realized move with every label and pair constraint."
+      ],
+      "necessary_repairs": [],
+      "evidence_complete": true,
+      "integration_metadata_repair_validation": {
+        "commit": "ee8f9df94a8a1043098482386bbbc6a893214330",
+        "result": "PASS; exact integration diff removes only the duplicate ART-PLACEHOLDER theorem-state comment; mathematical prose is unchanged. Exactly one valid ART-7B6F9C6B4A70 marker remains, artifact index and reading manifest hashes match, and candidate remains unreviewed/noncanonical.",
+        "script": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-124-ee8-metadata.py",
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-124-ee8-metadata.log"
+      }
+    },
+    {
+      "number": 126,
+      "title": "Target C: moving the rhombic wall leaves zero safe capacity",
+      "head": "684429c4780f8a4491cc432ffa2733a31ff867eb",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-pass-20261018-homelab-05/README.md",
+          "research-packages/e99-pass-20261018-homelab-05/SOURCES.json",
+          "research-packages/e99-pass-20261018-homelab-05/TASK.json",
+          "research-packages/e99-pass-20261018-homelab-05/VERIFY.json",
+          "research-packages/e99-pass-20261018-homelab-05/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-05/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-05/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-05/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-05/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-05/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 7,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_archive",
+      "coverage": "For every m>=7 the moving rhombic wall source has (m+1)^2 labels and zero safe insertion capacity: tiling plus circumradius^2<=1/2 covers the full container by unit neighborhoods, while Oler slack grows quadratically.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-homelab-05/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "684429c4780f8a4491cc432ffa2733a31ff867eb",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 254.589,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr126-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "e89ab07f491ce279c5466f13b13f32cda18dd0c3267b5694e4fc0dfa5467efb7",
+          "identity": "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "identity": "docs/state/theorem-state.yaml"
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "identity": "docs/research/priority-state.json"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "identity": "docs/targets/target-c/CURRENT.md"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-05/README.md",
+          "commit": null,
+          "sha256": "86a42da1149d131c2808ff79304812b179c67d7074f14ffdf5011e6c703f3933",
+          "identity": "proof-and-scope"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-05/verify.py",
+          "commit": null,
+          "sha256": "f4f1cb6ed06e8920d7e99f258e364386af04c01aa02f8dc99a59eaa567291ab0",
+          "identity": "exact-finite-checker"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "The all-m proof is conditional on the stated rhombic family and does not prove global source extraction."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 127,
+      "title": "Audit open-cell phase-flux identity and scope conditions",
+      "head": "6c2b6d7be91c6d6cd5b9e2133c8add94c506bf1f",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 4,
+        "assignment_path_count": 4,
+        "github_changed_files": 4,
+        "git_diff_count": 4,
+        "full_path_inventory_match": true,
+        "paths": [
+          "docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+          "docs/state/artifact-index.jsonl",
+          "reading/docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+          "reading/manifest.json"
+        ],
+        "modes": [
+          {
+            "path": "docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "reading/docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "reading/manifest.json",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 0,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "source-only audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Independent audit of the open-cell phase-flux identity; sign and inverse-D consequences are conditional on positive moving-diameter stress, non-grazing/source-window hypotheses and the cited Section 90 window.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_artifact_index.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "6c2b6d7be91c6d6cd5b9e2133c8add94c506bf1f",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.386,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr127-artifact-index.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_reading_edition.py --check",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "6c2b6d7be91c6d6cd5b9e2133c8add94c506bf1f",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 34.119,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr127-reading-edition.log"
+        }
+      ],
+      "source_bindings": {
+        "audit_artifact": {
+          "path": "docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+          "revision": "6c2b6d7be91c6d6cd5b9e2133c8add94c506bf1f",
+          "sha256": "ea3731cafd66ec6c53bcda70f3bc780c1ff277598ede3459d6ee0658ba16c4b8",
+          "git_blob": "22274b1bf9b4a8f770f2b47c4b286a53951b2e63",
+          "artifact_id": "ART-A4A2978EC0A3",
+          "canonical": false,
+          "status": "unreviewed"
+        },
+        "reviewed_inputs": [
+          {
+            "path": "research/target_c_open_cell_phase_flux_2026-10-03.md",
+            "revision": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "sha256": "82bcf72417a4e622cc72a2b52f7d4ae30b169a8970343d2a8ed7a9713f21ad1a",
+            "git_blob": "82411a0aad446f1f59461b4d45e061a5e9f87404"
+          }
+        ]
+      },
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "No global theorem; inherited proof chain is not reconstructed end-to-end."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 129,
+      "title": "Target C: wall-tolerance refill ledger exposes an unpaid deficit",
+      "head": "f4dc4c6ec3a6bb08097ca9a963336ae454e14229",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-pass-20261018-homelab-06/README.md",
+          "research-packages/e99-pass-20261018-homelab-06/SOURCES.json",
+          "research-packages/e99-pass-20261018-homelab-06/TASK.json",
+          "research-packages/e99-pass-20261018-homelab-06/VERIFY.json",
+          "research-packages/e99-pass-20261018-homelab-06/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-06/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-06/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-06/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-06/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-06/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 5,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_archive",
+      "coverage": "Wall-tolerance/refill ledger for the oblique grid family; at m=7 deleting 13 leaves 51 labels and 1,275 pairs, with exact maximum squared distance 84, exposing an unpaid deficit.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-homelab-06/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "f4dc4c6ec3a6bb08097ca9a963336ae454e14229",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 54.966,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr129-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "e89ab07f491ce279c5466f13b13f32cda18dd0c3267b5694e4fc0dfa5467efb7",
+          "identity": "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md"
+        },
+        {
+          "path": "docs/reports/target_c_two_side_polynomial_collective_refill_2026-10-05.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "f6b75c01c629bbb4aa33a825f50ff991061f0b20622743af45a8174f03c81b25",
+          "identity": "docs/reports/target_c_two_side_polynomial_collective_refill_2026-10-05.md"
+        },
+        {
+          "path": "docs/reports/target_c_triangular_two_pin_strict_capacity_2026-10-05.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "ac83868db308eefa21e107a2fb733c0803aa0c8dd849ae302e6a3d26d1642085",
+          "identity": "docs/reports/target_c_triangular_two_pin_strict_capacity_2026-10-05.md"
+        },
+        {
+          "path": "docs/reports/target_c_unit_pentagon_perimeter_capacity_2026-10-05.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "6ece09aac79da36dee38b049531de339ce8a2ec2e41e9dc773221be330d3c674",
+          "identity": "docs/reports/target_c_unit_pentagon_perimeter_capacity_2026-10-05.md"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-06/verify.py",
+          "commit": null,
+          "sha256": "da1f3fe7582f0259c1bf47ce751402c5d98febb17991d32056d76be534cb2f97",
+          "identity": "exact-finite-endpoint-ledger-checker"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "No 13-label payback or global existence statement."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 132,
+      "title": "Target C: conditional destination audit of the 0.0071 matched gap",
+      "head": "5df95908df0ea6f206b2fed0681a061bf29a0aa3",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 4,
+        "assignment_path_count": 4,
+        "github_changed_files": 4,
+        "git_diff_count": 4,
+        "full_path_inventory_match": true,
+        "paths": [
+          "docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+          "docs/state/artifact-index.jsonl",
+          "reading/docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+          "reading/manifest.json"
+        ],
+        "modes": [
+          {
+            "path": "docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "reading/docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "reading/manifest.json",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 0,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "source-only audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Conditional destination audit of the branch-aware 0.0071 atomic gap, relying on the stated pair-payment premise.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_artifact_index.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "5df95908df0ea6f206b2fed0681a061bf29a0aa3",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.447,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr132-artifact-index.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_reading_edition.py --check",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "5df95908df0ea6f206b2fed0681a061bf29a0aa3",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 27.977,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr132-reading-edition.log"
+        }
+      ],
+      "source_bindings": {
+        "audit_artifact": {
+          "path": "docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+          "revision": "5df95908df0ea6f206b2fed0681a061bf29a0aa3",
+          "sha256": "37f2b8d87b41fa81528f318ba211d8e0db7dd24cedc9c31f32e5523615d9fe9e",
+          "git_blob": "798ecc455ac2d35c08ee7983d382f8eb5ab9e6b1",
+          "artifact_id": "ART-1E42497B8891",
+          "canonical": false,
+          "status": "unreviewed"
+        },
+        "reviewed_inputs": [
+          {
+            "path": "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_2026-09-15.md",
+            "revision": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "sha256": "efe39d4523271be966ad4264959f8fa04474df6832d9bcd9fcc5513151b47ba6"
+          },
+          {
+            "path": "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_hostile_audit_2026-09-15.md",
+            "revision": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "sha256": "0ecc90b876a568aa8ee9b57ad700fab712237083a8a072af4d19c3f91a480ba9"
+          },
+          {
+            "path": "research/verify_target_c_branch_aware_atomic_gap_0071.py",
+            "revision": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "sha256": "79ef18464e8d271af7b16b17310ada1d78526d3cfdb6f34ced58f6e52e94466c"
+          },
+          {
+            "path": "research/verify_target_c_branch_aware_atomic_gap_0071_pi_enclosure.py",
+            "revision": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "sha256": "f16635e93ffb5dc33d227eee6a44f6d721f6a503627fb43ec31bdf9c895f9009"
+          }
+        ]
+      },
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "The pair-payment premise is not independently established here; no theorem promotion."
+      ],
+      "open_obligations": [
+        "Keep the premise explicit in any downstream use."
+      ],
+      "necessary_repairs": [
+        "Keep the premise explicit in any downstream use."
+      ],
+      "evidence_complete": true
+    },
+    {
+      "number": 133,
+      "title": "Independent audit: PR #111 full-pair restoration",
+      "head": "04b30ab0f484c4dce774ff9d400ea38d359dfb25",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-macbook-20261019T054318Z-09/README.md",
+          "research-packages/e99-macbook-20261019T054318Z-09/SOURCES.json",
+          "research-packages/e99-macbook-20261019T054318Z-09/TASK.json",
+          "research-packages/e99-macbook-20261019T054318Z-09/VERIFY.json",
+          "research-packages/e99-macbook-20261019T054318Z-09/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-09/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-09/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-09/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-09/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-09/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 4,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_scoped",
+      "coverage": "Independent exact audit of PR111 deletion/restoration source, stress, restored velocities and strict pair constraints.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019T054318Z-09/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "04b30ab0f484c4dce774ff9d400ea38d359dfb25",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.031,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr133-verify.log",
+          "note": "VERIFY.json repeats the identical command; one invocation was run because the second is duplicate evidence."
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "canonical finite optimization problem and quantifiers"
+        },
+        {
+          "path": "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "54c93dfec11d5b3ef7aea5cb65fc4624c2758e9e911fe9c73fe99f00542e36e1",
+          "identity": "canonical supplied-W deletion theorem and exact limits"
+        },
+        {
+          "path": "docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "afd5a20ba695bd56ee8306beb1a0f78b961176b2a7b239603670f4e6466814f5",
+          "identity": "source-independent strict-packet contact-minimality predecessor"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-09/verify.py",
+          "commit": null,
+          "sha256": "12c485d24d4d32ab2753080e36022322b1cd2699cfbe9d16e5c3fd93b4f4565b",
+          "identity": "independent exact Fraction replay and weak-margin controls"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Shares PR111’s supplied-instance scope; no universal repair claim."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 135,
+      "title": "Audit PR #104's fixed-isolate shear bounds",
+      "head": "daf4e29a0cee53439eb2cb7d747092da2a5e31dd",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-macbook-20261019T054318Z-06/README.md",
+          "research-packages/e99-macbook-20261019T054318Z-06/SOURCES.json",
+          "research-packages/e99-macbook-20261019T054318Z-06/TASK.json",
+          "research-packages/e99-macbook-20261019T054318Z-06/VERIFY.json",
+          "research-packages/e99-macbook-20261019T054318Z-06/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-06/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-06/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-06/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-06/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-06/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 9,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_scoped",
+      "coverage": "Independent exact audit of PR104 fixed-isolate shear bounds and all-pair derivation.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019T054318Z-06/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "daf4e29a0cee53439eb2cb7d747092da2a5e31dd",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.023,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr135-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "tasks/target-c-face-coupled-move.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "42bb06a04b2704ac2230b1d209667e13019bb00a10451e79ea536eba722a3a83",
+          "identity": "tasks/target-c-face-coupled-move.md"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "identity": "docs/state/theorem-state.yaml"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "identity": "docs/targets/target-c/CURRENT.md"
+        },
+        {
+          "path": "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "b367f28f9caa567c8b44655bd03947f2cf6948d1503a7aed72b2828f1597af13",
+          "identity": "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md"
+        },
+        {
+          "path": "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "54c93dfec11d5b3ef7aea5cb65fc4624c2758e9e911fe9c73fe99f00542e36e1",
+          "identity": "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md"
+        },
+        {
+          "path": "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "2abaff04ce431afe7c2857f4a843f1525bafb2a61c4dc38978e2af6629715682",
+          "identity": "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md"
+        },
+        {
+          "path": "docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "f89b587fe6aa451666666b347bbe0ef31cab5b1da98b4d373ad0bcb7b5e6ef5e",
+          "identity": "docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-06/verify.py",
+          "commit": null,
+          "sha256": "94d7da2f0e750aa3601cf545793c3a0e639db1276578f76cda6a9b4313da09ab",
+          "identity": "independent exact audit verifier"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Same finite fixture and assumptions as PR104; no canonical move or global extraction."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 136,
+      "title": "Audit PR #114 exact cut-stress boundary payment",
+      "head": "7cf4b8517c0f846058a9befda03bf3aa4343e688",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-macbook-20261019T054318Z-10/README.md",
+          "research-packages/e99-macbook-20261019T054318Z-10/SOURCES.json",
+          "research-packages/e99-macbook-20261019T054318Z-10/TASK.json",
+          "research-packages/e99-macbook-20261019T054318Z-10/VERIFY.json",
+          "research-packages/e99-macbook-20261019T054318Z-10/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-10/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-10/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-10/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-10/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-10/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 16,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_scoped",
+      "coverage": "Independent reconstruction of PR114 cut rows, A/B cuts, packet balance, shear/work and perturbation controls.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019T054318Z-10/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "7cf4b8517c0f846058a9befda03bf3aa4343e688",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.025,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr136-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "identity": "docs/state/theorem-state.yaml"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "identity": "docs/targets/target-c/CURRENT.md"
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "identity": "docs/research/priority-state.json"
+        },
+        {
+          "path": "docs/research/bottleneck-brief.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "90eadcfab8e97d1c294f73950de41102f9bbd6c380ed7f71e2f7495aaa15a5b0",
+          "identity": "docs/research/bottleneck-brief.md"
+        },
+        {
+          "path": "docs/research/tracks/target-c-exact-phase-packet-fork.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c5d6bac44a0869264692c35897f8c0627941cd50ded421a27cca4454363dc929",
+          "identity": "docs/research/tracks/target-c-exact-phase-packet-fork.md"
+        },
+        {
+          "path": "tasks/target-c-threshold-packet-cross-shore.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "2f7f041f18b20f8f7b2ddcb972abcf4b1e35b5d79575e350f8779fce36f490fc",
+          "identity": "tasks/target-c-threshold-packet-cross-shore.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "631f7fe2d5d950c47bcedd9eabf710fa4b356f9a974db69d64c965cbbbca5ebf",
+          "identity": "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "5af0523286fc97315a44519797cc7be8c5a0e9083e201d9070e844209052164e",
+          "identity": "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_edgewise_kkt_balance_2026-10-02.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "71208b1e14d84c69afee63335d12c15c02f690ff2f97fa7e518c5162f519cfbf",
+          "identity": "docs/reports/target_c_exact_phase_threshold_edgewise_kkt_balance_2026-10-02.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_edgewise_flux_packets_2026-10-02.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "d71238a6a82b780e358ce59614cdb89a397828495c75d6387f3f9452864a1f22",
+          "identity": "docs/reports/target_c_exact_phase_threshold_edgewise_flux_packets_2026-10-02.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_cross_shore_packet_resultants_2026-10-02.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "ea206df909c07c2dcaf72c91f836e7f3ac6dd6c743ddd79f44449d57c55b50c1",
+          "identity": "docs/reports/target_c_exact_phase_threshold_cross_shore_packet_resultants_2026-10-02.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_strict_packet_resultants_2026-10-02.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "204f16bb5b540a2aab2e34f5a3303ac99f21e993edc412a60d17aeb4166a055b",
+          "identity": "docs/reports/target_c_exact_phase_threshold_strict_packet_resultants_2026-10-02.md"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cc0601f888662d1d38acb527823d0cf25661e1e71ebc41e5f165caeb059e331e",
+          "identity": "docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md"
+        },
+        {
+          "path": "docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "893bf2f4c2fb80675f47af4ba4d6fb5100c22e2f665124757b8af56f90a710cf",
+          "identity": "docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-10/verify.py",
+          "commit": null,
+          "sha256": "c30b04964c8f0ca061a242fca97f6c763363c576c9f84a76baf9f37e1e9285b7",
+          "identity": "independent exact cut-stress auditor"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Abstract model only; no source realization."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 137,
+      "title": "Target C: independently audit six sparse-stress fixture competitors",
+      "head": "73ba295bcf89e12b7d2c7fa94d094fc44e674a3b",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-macbook-20261019t054318z-07/README.md",
+          "research-packages/e99-macbook-20261019t054318z-07/SOURCES.json",
+          "research-packages/e99-macbook-20261019t054318z-07/TASK.json",
+          "research-packages/e99-macbook-20261019t054318z-07/VERIFY.json",
+          "research-packages/e99-macbook-20261019t054318z-07/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-macbook-20261019t054318z-07/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019t054318z-07/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019t054318z-07/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019t054318z-07/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019t054318z-07/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 5,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_scoped",
+      "coverage": "Independent exact rational audit of PR106’s six lattice competitor fixtures, including q-bound and finite enumeration.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019t054318z-07/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "73ba295bcf89e12b7d2c7fa94d094fc44e674a3b",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.547,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr137-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "canonical D(n) definition and globality criterion"
+        },
+        {
+          "path": "docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "01e100022b6755594eab032725198d0a6546aef9f0e9343f016b2ad6edabd231",
+          "identity": "PR #95 exact source construction and population formula"
+        },
+        {
+          "path": "tasks/target-c-typeii-stress-mass-access.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "7ee0df03f1e0c7d68d6bc48e80c05592aa778e2579108679fe27bcdb47c38977",
+          "identity": "current route limitations and remaining global-source bridge"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-07/README.md",
+          "commit": null,
+          "sha256": "69da13cc1a5c89966d0a9385f53cc43d432568b02799f4aa112681f2bf33b798",
+          "identity": "independent exact audit and scope note"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-07/verify.py",
+          "commit": null,
+          "sha256": "400218c3b4aac849ff1f8d165da78ca9c15e2b6938bb75b01fb5819dba48d7df",
+          "identity": "independent integer-arithmetic replay and failure controls"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Only six specified fixtures; no universal sparse-stress exclusion."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 142,
+      "title": "Target C: coupled shear moves PR #104 isolate below D",
+      "head": "6dfe8c78ed50eaf96c21bfd7e03235878d12d36a",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-macbook-20261019T054318Z-03/README.md",
+          "research-packages/e99-macbook-20261019T054318Z-03/SOURCES.json",
+          "research-packages/e99-macbook-20261019T054318Z-03/TASK.json",
+          "research-packages/e99-macbook-20261019T054318Z-03/VERIFY.json",
+          "research-packages/e99-macbook-20261019T054318Z-03/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-03/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-03/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-03/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-03/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-03/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 7,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_archive",
+      "coverage": "For rational t in (0,1/10], coupled shear moves PR104’s isolate below D; all 21 pairs are checked and D_t^2=1+(11/5-t)^2.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019T054318Z-03/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "6dfe8c78ed50eaf96c21bfd7e03235878d12d36a",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.033,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr142-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "canonical problem statement"
+        },
+        {
+          "path": "tasks/target-c-face-coupled-move.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "42bb06a04b2704ac2230b1d209667e13019bb00a10451e79ea536eba722a3a83",
+          "identity": "assigned Target C finite-move question and pair constraints"
+        },
+        {
+          "path": "docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "f89b587fe6aa451666666b347bbe0ef31cab5b1da98b4d373ad0bcb7b5e6ef5e",
+          "identity": "canonical finite endpoint criterion"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "identity": "current Target C full-core and macroscopic branch obligations"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "identity": "canonical theorem state and claim lifecycle"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-03/README.md",
+          "commit": null,
+          "sha256": "8b153a1241828aec64a980389e3f43ad33f86a67da17df594bb8d915b8113630",
+          "identity": "complete exact interval proof and limitations"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-03/verify.py",
+          "commit": null,
+          "sha256": "1c1bcfa4058ffc9789d01738e9b59cb97d183e242545a4812fc24bbeebb38ef0",
+          "identity": "independent rational interval and falsification verifier"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Finite seven-label ladder only; no global source extraction."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 143,
+      "title": "Independent audit: PR #129 wall tolerance and population ledger",
+      "head": "b6e60e8b0c8efa8675b143b1c10bdf2e1d5fe488",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "docs/audits/target_c_pr129_wall_tolerance_population_independent_audit_2026-10-19.md",
+          "docs/state/artifact-index.jsonl",
+          "reading/docs/audits/target_c_pr129_wall_tolerance_population_independent_audit_2026-10-19.md",
+          "reading/manifest.json",
+          "research/verify_target_c_pr129_wall_tolerance_population_audit_2026_10_19.py"
+        ],
+        "modes": [
+          {
+            "path": "docs/audits/target_c_pr129_wall_tolerance_population_independent_audit_2026-10-19.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "reading/docs/audits/target_c_pr129_wall_tolerance_population_independent_audit_2026-10-19.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "reading/manifest.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research/verify_target_c_pr129_wall_tolerance_population_audit_2026_10_19.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 0,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "source-only audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Independent exact audit of PR129’s m=7 endpoint, checking all 1,275 pairs and maximum squared distance 84.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_artifact_index.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "b6e60e8b0c8efa8675b143b1c10bdf2e1d5fe488",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.494,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr143-artifact-index.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_reading_edition.py --check",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "b6e60e8b0c8efa8675b143b1c10bdf2e1d5fe488",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 25.384,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr143-reading-edition.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-143-independent.py",
+          "working_tree": "standalone Fraction reconstruction from PR #143 exact report coordinates; no repository source edits",
+          "head": "b6e60e8b0c8efa8675b143b1c10bdf2e1d5fe488",
+          "exit_code": 0,
+          "result": "PASS; reconstructed 51 labels and all 1,275 pairs; minimum squared distance 1; maximum 84 attained only by retained wall pair ((0,7),(7,0)); all 1,170 pairs involving moved labels are strictly above 1; all pairs <= original D^2=112.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-143-independent.log"
+        }
+      ],
+      "source_bindings": {
+        "audit_artifact": {
+          "path": "docs/audits/target_c_pr129_wall_tolerance_population_independent_audit_2026-10-19.md",
+          "revision": "b6e60e8b0c8efa8675b143b1c10bdf2e1d5fe488",
+          "sha256": "15fa3cba3b9d99da32de3a7768c7d1581c375fd35627562c7cbeafc12ef3fbcd",
+          "git_blob": "af095d95eb96d1a5875ca270f5e12f51d75965ce",
+          "artifact_id": "ART-CD743297DD2F",
+          "canonical": false,
+          "status": "unreviewed"
+        },
+        "reviewed_inputs": [
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-06/README.md",
+            "revision": "f4dc4c6ec3a6bb08097ca9a963336ae454e14229",
+            "sha256": "13a0382b95d92eb95c8a3cf51b8b190e0aca43e63682c40fb164dd7882b2a7ac"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-06/SOURCES.json",
+            "revision": "f4dc4c6ec3a6bb08097ca9a963336ae454e14229",
+            "sha256": "9df08c42bc8de2d7eefe1c6ed9941eefb77647d69a60a68bea6681c10c215ef7"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-06/TASK.json",
+            "revision": "f4dc4c6ec3a6bb08097ca9a963336ae454e14229",
+            "sha256": "36656f1a9651485438874376ee7dac47996deee6b51db16096463a7a09f2173e"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-06/VERIFY.json",
+            "revision": "f4dc4c6ec3a6bb08097ca9a963336ae454e14229",
+            "sha256": "4c65ccf3aa1f7037f805f41ccecacafea509c7d8dbc2c584834d48d3679de5f4"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-06/verify.py",
+            "revision": "f4dc4c6ec3a6bb08097ca9a963336ae454e14229",
+            "sha256": "da1f3fe7582f0259c1bf47ce751402c5d98febb17991d32056d76be534cb2f97"
+          }
+        ]
+      },
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Finite endpoint only; unpaid refill deficit remains."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 149,
+      "title": "Independent audit: PR #948 large-array boundary attachment",
+      "head": "5053e17987b1aa72173f4a656213532536b24933",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-paired-20261019t091333z-local-09/README.md",
+          "research-packages/e99-paired-20261019t091333z-local-09/SOURCES.json",
+          "research-packages/e99-paired-20261019t091333z-local-09/TASK.json",
+          "research-packages/e99-paired-20261019t091333z-local-09/VERIFY.json",
+          "research-packages/e99-paired-20261019t091333z-local-09/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-09/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-09/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-09/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-09/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-09/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 17,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_scoped",
+      "coverage": "Independent analytic report for PR948 large-array boundary attachment, scoped to complete bent rhombic arrays with a,c>=delta D and boundary attachment lower bound r>=epsilon delta D.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-local-09/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "5053e17987b1aa72173f4a656213532536b24933",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.138,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr149-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/reports/target_c_large_array_boundary_attachment_slot02_2026-10-11.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "f2225a9ceebddb2b3318ed948bb94d247f2a61c9e73db80d7ce3567093e037c6",
+          "identity": "docs/reports/target_c_large_array_boundary_attachment_slot02_2026-10-11.md"
+        },
+        {
+          "path": "research/verify_target_c_large_array_boundary_attachment_2026_10_11.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "3cd1d82fd3d693166b89bd2d3ef08e522d3face7aaa9704ffc297cd5756421a9",
+          "identity": "research/verify_target_c_large_array_boundary_attachment_2026_10_11.py"
+        },
+        {
+          "path": "research/target_c_large_array_boundary_attachment_certificate_2026_10_11.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "40cbdce45f7c718d6623c97fd31643b52850d2d550d080441dd2cb393596e49d",
+          "identity": "research/target_c_large_array_boundary_attachment_certificate_2026_10_11.json"
+        },
+        {
+          "path": "research/verify_target_c_three_direction_corner_barrier_2026_10_06.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "179f20fb42827f6b3aa3b7afa5b982b16ff4da49abb77373edaf1a48bd514252",
+          "identity": "research/verify_target_c_three_direction_corner_barrier_2026_10_06.py"
+        },
+        {
+          "path": "docs/theory/01-local-structure.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "75c539b2281046c49d6c303bda845cb7fb2643d0d9a1106d64e4f737117c54fb",
+          "identity": "docs/theory/01-local-structure.md"
+        },
+        {
+          "path": "docs/targets/target-c/58-full-source-geometry-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "f504349650423786a6091ba9b7a8699cd62b7e6b200d2a2ce3a6a34b3d0b473d",
+          "identity": "docs/targets/target-c/58-full-source-geometry-audit.md"
+        },
+        {
+          "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+          "identity": "docs/targets/target-c/57-zr-zf-rigidity-audit.md"
+        },
+        {
+          "path": "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "fc60bd6982e741f13d2442a2fa9d16a424f2fc55f60c3e1a1d7f3aba2cc3686f",
+          "identity": "docs/targets/target-c/67-rhombus-population-transport-audit.md"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "identity": "docs/state/theorem-state.yaml"
+        },
+        {
+          "path": "docs/STATE.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+          "identity": "docs/STATE.md"
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "identity": "docs/research/priority-state.json"
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "identity": "docs/targets/target-c/candidate-registry.json"
+        },
+        {
+          "path": "docs/research/tracks/target-c-quarter-folds-bent-arrays.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "49e336e2933551af00289be2bf631ece9230613a2127f0b582ca95319348bf50",
+          "identity": "docs/research/tracks/target-c-quarter-folds-bent-arrays.md"
+        },
+        {
+          "path": "docs/research/agent-task-catalog.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "identity": "docs/research/agent-task-catalog.json"
+        },
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "docs/research/bottleneck-brief.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "90eadcfab8e97d1c294f73950de41102f9bbd6c380ed7f71e2f7495aaa15a5b0",
+          "identity": "docs/research/bottleneck-brief.md"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-09/verify.py",
+          "commit": null,
+          "sha256": "507a946dee91af06df5d48cc45f56d9796d92bcc6dcf8bca258fdf673a507bf4",
+          "identity": "research-packages/e99-paired-20261019t091333z-local-09/verify.py"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Does not establish full-source extraction or a global result; finite verifier is supplementary to report proof."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 150,
+      "title": "Independent audit: PR #948 complete-array diameter forest",
+      "head": "51016e9a86212e2cc74be1092861ddf00bbf8f3c",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-paired-20261019t091333z-homelab-08/README.md",
+          "research-packages/e99-paired-20261019t091333z-homelab-08/SOURCES.json",
+          "research-packages/e99-paired-20261019t091333z-homelab-08/TASK.json",
+          "research-packages/e99-paired-20261019t091333z-homelab-08/VERIFY.json",
+          "research-packages/e99-paired-20261019t091333z-homelab-08/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-08/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-08/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-08/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-08/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-08/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 16,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_scoped",
+      "coverage": "Independent complete-array diameter-forest audit of PR948 with its stated boundary and array hypotheses.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-homelab-08/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "51016e9a86212e2cc74be1092861ddf00bbf8f3c",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.117,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr150-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/STATE.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+          "identity": "docs/STATE.md"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "identity": "docs/state/theorem-state.yaml"
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "identity": "docs/research/priority-state.json"
+        },
+        {
+          "path": "docs/research/agent-task-catalog.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "identity": "docs/research/agent-task-catalog.json"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "identity": "docs/targets/target-c/CURRENT.md"
+        },
+        {
+          "path": "docs/research/tracks/target-c-quarter-folds-bent-arrays.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "49e336e2933551af00289be2bf631ece9230613a2127f0b582ca95319348bf50",
+          "identity": "docs/research/tracks/target-c-quarter-folds-bent-arrays.md"
+        },
+        {
+          "path": "docs/reports/target_c_complete_array_diameter_forest_slot02_2026-10-11.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "2050d7aa775b47ac0ebe01cbd2994b8848661b28c31876718621af10b7eda259",
+          "identity": "docs/reports/target_c_complete_array_diameter_forest_slot02_2026-10-11.md"
+        },
+        {
+          "path": "research/verify_target_c_complete_array_diameter_forest_2026_10_11.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cfd237cc3b09bfa96cddfa95d6685edd3350675cd4779423996ee63fcea9283e",
+          "identity": "research/verify_target_c_complete_array_diameter_forest_2026_10_11.py"
+        },
+        {
+          "path": "research/target_c_complete_array_diameter_forest_certificate_2026_10_11.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "43d3542d64ff2f52f4c3e70e7b3968078b8beeaec4604ff5709988b68a6587f9",
+          "identity": "research/target_c_complete_array_diameter_forest_certificate_2026_10_11.json"
+        },
+        {
+          "path": "research/verify_target_c_three_direction_corner_barrier_2026_10_06.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "179f20fb42827f6b3aa3b7afa5b982b16ff4da49abb77373edaf1a48bd514252",
+          "identity": "research/verify_target_c_three_direction_corner_barrier_2026_10_06.py"
+        },
+        {
+          "path": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "3dce8109e6ce8c8e78c31121e38fb9773db34aa19af26e817bb2d718d6864fbd",
+          "identity": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md"
+        },
+        {
+          "path": "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "fc60bd6982e741f13d2442a2fa9d16a424f2fc55f60c3e1a1d7f3aba2cc3686f",
+          "identity": "docs/targets/target-c/67-rhombus-population-transport-audit.md"
+        },
+        {
+          "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+          "identity": "docs/targets/target-c/57-zr-zf-rigidity-audit.md"
+        },
+        {
+          "path": "docs/theory/01-local-structure.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "75c539b2281046c49d6c303bda845cb7fb2643d0d9a1106d64e4f737117c54fb",
+          "identity": "docs/theory/01-local-structure.md"
+        },
+        {
+          "path": "docs/audits/target_c_isolate_normalization_independent_audit_2026-10-08.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "bfcb8f58c6419b62692405ff440cd9fc650fb6263bbcb676cb17fb69935f4153",
+          "identity": "docs/audits/target_c_isolate_normalization_independent_audit_2026-10-08.md"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-08/verify.py",
+          "commit": null,
+          "sha256": "cfc3c80185821fce1f3a1d9c3e1c8e2ef5175be58d5c2632e32e613966c13ee9",
+          "identity": "pinned-destination-replay-checker"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "No canonical source extraction or global theorem; report scope is conditional complete-array geometry."
+      ],
+      "open_obligations": [
+        "Before any future lifecycle promotion, add C-FULL-SOURCE-ISOLATE-NORMALIZATION as an explicit candidate-registry dependency for the whole-core corollary; this review does not audit that inherited canonical proof end-to-end."
+      ],
+      "necessary_repairs": [
+        "Dependency-record correction is required before future canonical promotion; no registry edit is required for this source-only archive intake."
+      ],
+      "evidence_complete": true
+    },
+    {
+      "number": 151,
+      "title": "Independent destination audit of PR959 reflected-scale parity criterion",
+      "head": "0a96997d44b88fd49b0e62d3c73ea0cd48f8042c",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-paired-20261019t091333z-homelab-13/README.md",
+          "research-packages/e99-paired-20261019t091333z-homelab-13/SOURCES.json",
+          "research-packages/e99-paired-20261019t091333z-homelab-13/TASK.json",
+          "research-packages/e99-paired-20261019t091333z-homelab-13/VERIFY.json",
+          "research-packages/e99-paired-20261019t091333z-homelab-13/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-13/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-13/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-13/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-13/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-13/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 6,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_archive",
+      "coverage": "Exact reflected-scale parity criterion: same-sign/opposite-sign cost comparison plus boundary-slack forcing; XOR consistency is equivalent to feasible parity choices.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-homelab-13/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "0a96997d44b88fd49b0e62d3c73ea0cd48f8042c",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.184,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr151-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "docs/reports/global_reflected_scale_competitors_2026-10-12.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "63f9abd9de3a50d6d52a5ca37354ef6e461425250fea379bd928fe6a6e7dff35",
+          "identity": "docs/reports/global_reflected_scale_competitors_2026-10-12.md"
+        },
+        {
+          "path": "research/verify_global_reflected_scale_2026_10_12.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "caef9c87b7773aa1089ec845d30b35fb09bd70bde5f0264a128b51fc7f531403",
+          "identity": "research/verify_global_reflected_scale_2026_10_12.py"
+        },
+        {
+          "path": "docs/audits/pr959_autonomous_proof_audit_2026-10-15.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "30ce4ddc5721a402f0b98080c48d7c0ae5cecbf4b0e27393300983ec60ad34f1",
+          "identity": "docs/audits/pr959_autonomous_proof_audit_2026-10-15.md"
+        },
+        {
+          "path": "docs/research/tracks/global-reflected-scale-capacity-pr959.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "4312297cee845524b50bea4989ca8536dc17329ee7a289d834853b2680ff3035",
+          "identity": "docs/research/tracks/global-reflected-scale-capacity-pr959.md"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-13/verify.py",
+          "commit": null,
+          "sha256": "4eb16069315ed06096a5156ac68a68fece1ad192bf38feba7c9c202023be32d7",
+          "identity": "independent-audit-checker"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Finite criterion/implementation only; does not show a source realizes the requisite graph."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 152,
+      "title": "Target C: one movable guard row still has zero insertion capacity",
+      "head": "c53c1b2ee5a3480f9f06304c519df9ac6e7784d1",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-paired-20261019t091333z-local-04/README.md",
+          "research-packages/e99-paired-20261019t091333z-local-04/SOURCES.json",
+          "research-packages/e99-paired-20261019t091333z-local-04/TASK.json",
+          "research-packages/e99-paired-20261019t091333z-local-04/VERIFY.json",
+          "research-packages/e99-paired-20261019t091333z-local-04/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-04/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-04/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-04/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-04/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-04/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 7,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_archive",
+      "coverage": "For every m>=7, a moving-wall rectangular endpoint with one exterior guard row has (m+1)(m+2) labels, all-pairs bounds and zero safe insertion capacity; Oler slack is quadratic.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-local-04/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "c53c1b2ee5a3480f9f06304c519df9ac6e7784d1",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.029,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr152-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "docs/STATE.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+          "identity": "docs/STATE.md"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "identity": "docs/state/theorem-state.yaml"
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "identity": "docs/research/priority-state.json"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "identity": "docs/targets/target-c/CURRENT.md"
+        },
+        {
+          "path": "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "e89ab07f491ce279c5466f13b13f32cda18dd0c3267b5694e4fc0dfa5467efb7",
+          "identity": "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-04/verify.py",
+          "commit": null,
+          "sha256": "7abce62d13750e8d386a547bd8a9babde65e27e8b9031f00a2584f44e45e7861",
+          "identity": "exact guard-row difference checker"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Applies to the specified family, not a canonical source extraction."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 155,
+      "title": "Add support-aware two-cut stress sign fork",
+      "head": "4492507beafbe5496823e7ee7151d7557aa3bca4",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-paired-20261019t091333z-homelab-03/README.md",
+          "research-packages/e99-paired-20261019t091333z-homelab-03/SOURCES.json",
+          "research-packages/e99-paired-20261019t091333z-homelab-03/TASK.json",
+          "research-packages/e99-paired-20261019t091333z-homelab-03/VERIFY.json",
+          "research-packages/e99-paired-20261019t091333z-homelab-03/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-03/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-03/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-03/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-03/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-03/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 6,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_scoped",
+      "coverage": "Abstract support-complete convex average over all stress-reachable actual diameter edges; zero-multiplier edges require an explicit sign branch, and all moving diameter rows shortening forces a near-active pair under endpoint minimality hypotheses.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-homelab-03/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "4492507beafbe5496823e7ee7151d7557aa3bca4",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.023,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr155-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "identity": "docs/targets/target-c/CURRENT.md"
+        },
+        {
+          "path": "research/target_c_open_cell_phase_flux_2026-10-03.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "82bcf72417a4e622cc72a2b52f7d4ae30b169a8970343d2a8ed7a9713f21ad1a",
+          "identity": "research/target_c_open_cell_phase_flux_2026-10-03.md"
+        },
+        {
+          "path": "research/target_c_open_cell_cut_divergence_condensation_2026-10-03.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "1107f74e245baa872595cd8c8ac6860ec55d22e72796d36108229b261a66cf05",
+          "identity": "research/target_c_open_cell_cut_divergence_condensation_2026-10-03.md"
+        },
+        {
+          "path": "docs/reports/target_c_open_cell_block_transposition_2026-10-01.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "1f2c7c2c133b4acfdb5c562579bb34956c32fb1d20bbed9cd71d322973a2730b",
+          "identity": "docs/reports/target_c_open_cell_block_transposition_2026-10-01.md"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-03/verify.py",
+          "commit": null,
+          "sha256": "f104eace9f499d755119b92b2049732085c09f8ad05b06fe891826bdd46e0776",
+          "identity": "draft-checker"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Abstract stress/endpoint implication only; no planar source realization or global proof."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 160,
+      "title": "audit: PASS PR #142 coupled-isolate finite move",
+      "head": "0f63b5b01c2e9f6b97fd50154c63dccc36162ac3",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-paired-20261019t091333z-local-16/README.md",
+          "research-packages/e99-paired-20261019t091333z-local-16/SOURCES.json",
+          "research-packages/e99-paired-20261019t091333z-local-16/TASK.json",
+          "research-packages/e99-paired-20261019t091333z-local-16/VERIFY.json",
+          "research-packages/e99-paired-20261019t091333z-local-16/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-16/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-16/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-16/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-16/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-16/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 9,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_scoped",
+      "coverage": "Independent exact audit of PR142 coupled shear, with rational range and strict pair bounds.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-local-16/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "0f63b5b01c2e9f6b97fd50154c63dccc36162ac3",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.024,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr160-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "tasks/target-c-face-coupled-move.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "42bb06a04b2704ac2230b1d209667e13019bb00a10451e79ea536eba722a3a83",
+          "identity": "tasks/target-c-face-coupled-move.md"
+        },
+        {
+          "path": "docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "f89b587fe6aa451666666b347bbe0ef31cab5b1da98b4d373ad0bcb7b5e6ef5e",
+          "identity": "docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "identity": "docs/targets/target-c/CURRENT.md"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "identity": "docs/state/theorem-state.yaml"
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "identity": "docs/research/priority-state.json"
+        },
+        {
+          "path": "docs/research/agent-task-catalog.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "identity": "docs/research/agent-task-catalog.json"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-16/README.md",
+          "commit": null,
+          "sha256": "f4a46dd7b882f614d246849a512c53e9cb641e4c7eea450cf2083e0f57f5580f",
+          "identity": "research-packages/e99-paired-20261019t091333z-local-16/README.md"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-16/verify.py",
+          "commit": null,
+          "sha256": "d2601af30254dc206e47be4003110f1d557a071a9e9706c760b98ee562d21a43",
+          "identity": "research-packages/e99-paired-20261019t091333z-local-16/verify.py"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Same finite family as PR142; README proof supplies monotonicity argument, while checker does not separately assert y>0."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 164,
+      "title": "Target C: exact exterior attachments permit coupled-shear descent",
+      "head": "de51a6e55c576343be6ece5b8f5a688adc0074fa",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-paired-20261019t091333z-local-03/README.md",
+          "research-packages/e99-paired-20261019t091333z-local-03/SOURCES.json",
+          "research-packages/e99-paired-20261019t091333z-local-03/TASK.json",
+          "research-packages/e99-paired-20261019t091333z-local-03/VERIFY.json",
+          "research-packages/e99-paired-20261019t091333z-local-03/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-03/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-03/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-03/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-03/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-03/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 5,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_archive",
+      "coverage": "Exact finite eight-label paths with exterior point W_h for h=1 or 11/10; all 28 pairs, with one variant adding a contact and one none, each retaining unique source diameter and strict shorter endpoint.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-local-03/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "de51a6e55c576343be6ece5b8f5a688adc0074fa",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.028,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr164-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "docs/STATE.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+          "identity": "docs/STATE.md"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "identity": "docs/targets/target-c/CURRENT.md"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "identity": "docs/state/theorem-state.yaml"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-03/verify.py",
+          "commit": null,
+          "sha256": "dcb1c2e7be02b24c0c9e0d2cbfd72965d85302cb570acfbf5d68a8086dc567bf",
+          "identity": "exact eight-label all-pairs interval verifier"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "Finite examples only; no global move."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 168,
+      "title": "Add exact-head audit of PR959 reflected-scale moment obstruction",
+      "head": "36c1e99ca90b7600e44cb416864bc6fe2aeeb1f1",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 4,
+        "assignment_path_count": 4,
+        "github_changed_files": 4,
+        "git_diff_count": 4,
+        "full_path_inventory_match": true,
+        "paths": [
+          "docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+          "docs/state/artifact-index.jsonl",
+          "reading/docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+          "reading/manifest.json"
+        ],
+        "modes": [
+          {
+            "path": "docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "reading/docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "reading/manifest.json",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 0,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "source-only audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Asymptotic reflected-scale moment obstruction under the report’s exact scaling and weak-limit assumptions; does not imply a strict lower-order gain or source extraction.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_artifact_index.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "36c1e99ca90b7600e44cb416864bc6fe2aeeb1f1",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.392,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr168-artifact-index.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_reading_edition.py --check",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "36c1e99ca90b7600e44cb416864bc6fe2aeeb1f1",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 27.967,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr168-reading-edition.log"
+        }
+      ],
+      "source_bindings": {
+        "audit_artifact": {
+          "path": "docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+          "revision": "36c1e99ca90b7600e44cb416864bc6fe2aeeb1f1",
+          "sha256": "20b58ed401ac0f853c4bb36e5367b0960cafa5cef6aa05a5557d61a2d5f176fa",
+          "git_blob": "a32b2c15b80e650bde114cfb28ed39238a1380a0",
+          "artifact_id": "ART-1FB8B367623B",
+          "canonical": false,
+          "status": "unreviewed"
+        },
+        "reviewed_inputs": [
+          {
+            "path": "docs/reports/global_reflection_moment_obstruction_2026-10-12.md",
+            "revision": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "sha256": "4e3e129da1129a659fae627fb7467beb557ca2f5ef4b45563e1666f84d0c7454"
+          },
+          {
+            "path": "research/verify_global_reflected_scale_2026_10_12.py",
+            "revision": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "sha256": "caef9c87b7773aa1089ec845d30b35fb09bd70bde5f0264a128b51fc7f531403"
+          },
+          {
+            "path": "docs/audits/pr959_autonomous_proof_audit_2026-10-15.md",
+            "revision": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "sha256": "30ce4ddc5721a402f0b98080c48d7c0ae5cecbf4b0e27393300983ec60ad34f1"
+          }
+        ]
+      },
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "No canonical promotion; full historical proof reconstruction not performed.",
+        "The report repeats the same valid theorem-state marker twice. The artifact-index generator validates the first line, and exact-head artifact-index and reading-edition checks passed; no artifact ambiguity was observed. Optional hygiene cleanup only."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    },
+    {
+      "number": 172,
+      "title": "Conditional annular packet from safe-core vacancy",
+      "head": "1e4907faaec3acd5c267a42cab04ab4a07443387",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory": {
+        "api_changed_files": 5,
+        "assignment_path_count": 5,
+        "github_changed_files": 5,
+        "git_diff_count": 5,
+        "full_path_inventory_match": true,
+        "paths": [
+          "research-packages/e99-paired-20261019t091333z-homelab-04/README.md",
+          "research-packages/e99-paired-20261019t091333z-homelab-04/SOURCES.json",
+          "research-packages/e99-paired-20261019t091333z-homelab-04/TASK.json",
+          "research-packages/e99-paired-20261019t091333z-homelab-04/VERIFY.json",
+          "research-packages/e99-paired-20261019t091333z-homelab-04/verify.py"
+        ],
+        "modes": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-04/README.md",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-04/SOURCES.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-04/TASK.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-04/VERIFY.json",
+            "mode": "100644",
+            "type": "blob"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-04/verify.py",
+            "mode": "100644",
+            "type": "blob"
+          }
+        ]
+      },
+      "static_integrity": {
+        "head_ref_matches_immutable_sha": true,
+        "json_python_parse_errors": [],
+        "source_pin_count": 9,
+        "source_pin_errors": [],
+        "result": "PASS",
+        "evidence": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json"
+      },
+      "lane": "finite/conditional research archive",
+      "disposition": "accept_scoped",
+      "coverage": "Conditional annular-packet lemma: if safe core Y is separated and |Y|>=tau(G_D(A)), annular graph is G_D(A) plus isolated Y and M_D=n+|Y|-tau>=n; finite fixture has zero vacancy.",
+      "actual_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-homelab-04/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "1e4907faaec3acd5c267a42cab04ab4a07443387",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.034,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr172-verify.log"
+        }
+      ],
+      "source_bindings": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "identity": "docs/problem/statement.md"
+        },
+        {
+          "path": "docs/STATE.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+          "identity": "docs/STATE.md"
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "identity": "docs/research/priority-state.json"
+        },
+        {
+          "path": "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "29fd04ba2a8f31ac93ab2b91b9d4a267e227c9348a894f37adcd3e6986be7b3d",
+          "identity": "docs/research/tracks/global-level-i-attainment-annular-matching.md"
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "identity": "docs/targets/target-c/candidate-registry.json"
+        },
+        {
+          "path": "docs/reports/global_annular_matching_competitor_2026-10-11.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "c564b3577562e3aeec1bf4ea2e7a800e4014fad6d5ebe7a2844daad6a3d61e5c",
+          "identity": "docs/reports/global_annular_matching_competitor_2026-10-11.md"
+        },
+        {
+          "path": "research/global_annular_matching_2026_10_11.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "b7ea9aa0e49a390575b8576c0b4eb9e931967a68174408b18d8ffb93687d4c08",
+          "identity": "research/global_annular_matching_2026_10_11.json"
+        },
+        {
+          "path": "docs/audits/target_c_triangle_free_lattice_competitor_reserve_independent_audit_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "sha256": "5134f4c246286fec50530e0c6855d6b370ed2b2252e8918680b8a0e1b177aa4a",
+          "identity": "docs/audits/target_c_triangle_free_lattice_competitor_reserve_independent_audit_2026-10-10.md"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-04/verify.py",
+          "commit": null,
+          "sha256": "b70049a688e01467ba86919dbb8dfd58838617aca1a161c4a6f78addb877c787",
+          "identity": "safe-core exact-control verifier"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Exact underlying PR/result reuse is limited to the named audit targets in coverage; no full historical canonical proof chain was reconstructed. Source pins and immutable identities were checked independently.",
+      "scope_limitations": [
+        "No proof that global sources supply such a core; no extraction theorem."
+      ],
+      "open_obligations": [],
+      "necessary_repairs": [],
+      "evidence_complete": true
+    }
+  ],
+  "final_metadata_repin_validation": {
+    "commit": "e185b58bfffa27be92d4ec91d919f1aa4f939725",
+    "result": "PASS",
+    "rows_checked": 3,
+    "rows": [
+      {
+        "package": "research-packages/e99-paired-20261019t091333z-homelab-04",
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "old_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+        "new_commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+        "old_sha_matches": true,
+        "new_sha_matches": true,
+        "final_sources_pin_matches": true
+      },
+      {
+        "package": "research-packages/e99-paired-20261019t091333z-local-09",
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "old_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+        "new_commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+        "old_sha_matches": true,
+        "new_sha_matches": true,
+        "final_sources_pin_matches": true
+      },
+      {
+        "package": "research-packages/e99-pass-20261018-local-11",
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "old_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+        "new_commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+        "old_sha_matches": true,
+        "new_sha_matches": true,
+        "final_sources_pin_matches": true
+      }
+    ],
+    "script": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-final-repins.py",
+    "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-final-repins.log"
+  },
+  "candidate_lifecycle_recheck": {
+    "commits": [
+      "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+      "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+      "e185b58bfffa27be92d4ec91d919f1aa4f939725",
+      "ee8f9df94a8a1043098482386bbbc6a893214330"
+    ],
+    "result": "PASS; PR124 positive-leaf sharpening remains an unreviewed strengthening candidate and PR139 near-diameter localization remains unreviewed; weaker canonical O(D^(-1/2)) bound retained. PR153 remains unreviewed with explicit orientation warning. No theorem-state or canonical lifecycle promotion.",
+    "script": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-registry-reconcile.py",
+    "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-registry-reconcile.log"
+  },
+  "frozen_tree_source_pin_validation": {
+    "commit": "ee8f9df94a8a1043098482386bbbc6a893214330",
+    "tree": "71881be5f594870350c2128c1b0d45d0e1dea4dc",
+    "result": "PASS",
+    "packages_checked": 20,
+    "input_rows_checked": 167,
+    "repin_packages_checked": 3,
+    "basis": "Every assigned B package SOURCES.json input SHA-256 matched both its named commit (where present) and the frozen ee8 tree. All three B-assigned final-metadata repins authenticated old and new registry hashes and each package has exactly one final pin to commit 2d5aa36f01ac131b791b9b6a745e8c963f4a363c with the expected SHA. The pin check is provenance/integrity evidence, not a replay of inherited proofs.",
+    "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-ee8-source-pins.py",
+    "script": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-ee8-source-pins.py",
+    "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-ee8-source-pins.log"
+  },
+  "snapshot_ready": true,
+  "snapshot_readiness_basis": "All 26 assigned PR dossiers are complete; 17 accept_scoped proof audits and separate corrected-scope audits for PRs 117, 121, and 153 are persisted; exact-head, inventory, source binding, lifecycle, and ee8 pin evidence are present; every referenced B-run log/script path exists under reviews/b-run-logs."
+}

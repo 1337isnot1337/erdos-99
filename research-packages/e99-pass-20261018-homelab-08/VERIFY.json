@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/targets/target-a/20-zero-slack-normalization.md",
+    "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+    "docs/problem/statement.md",
+    "research-packages/e99-pass-20261018-homelab-08/verify.py"
+  ],
+  "domain": "Rational finite source/response incidences in a triangular lattice basis, complete three-site Y_in, two full-shore matchings, inherited restriction comparison, segment disjointness, and explicit |A|<alpha_1(H) witness.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-homelab-08/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

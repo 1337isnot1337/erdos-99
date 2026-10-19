@@ -1,0 +1,271 @@
+{
+  "pr": 156,
+  "original_head": "b347d8c3cd1f3dd554874d971386481f244e0787",
+  "frozen_ref": "b347d8c3cd1f3dd554874d971386481f244e0787",
+  "frozen_ref_matches": true,
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "github_file_count": 5,
+  "github_path_set_matches_git_base_diff": true,
+  "github_git_blob_matches": true,
+  "files": [
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/README.md",
+      "github_blob": "27c190da640f4a86afb483151f325356621d85e9",
+      "git_blob": "27c190da640f4a86afb483151f325356621d85e9",
+      "blob_match": true,
+      "status": "added"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/SOURCES.json",
+      "github_blob": "8d7ab4e23151fcd4cfccafa9fd1fa8b17560e624",
+      "git_blob": "8d7ab4e23151fcd4cfccafa9fd1fa8b17560e624",
+      "blob_match": true,
+      "status": "added"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/TASK.json",
+      "github_blob": "c7d72aee35d081533af1441bcaae7ec0ec4c6b23",
+      "git_blob": "c7d72aee35d081533af1441bcaae7ec0ec4c6b23",
+      "blob_match": true,
+      "status": "added"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/VERIFY.json",
+      "github_blob": "87c8ca16be3a0f8e3411aebb122a77dc90147160",
+      "git_blob": "87c8ca16be3a0f8e3411aebb122a77dc90147160",
+      "blob_match": true,
+      "status": "added"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/verify.py",
+      "github_blob": "10ad3307586f910a0179e2ab2396da69ed40edf1",
+      "git_blob": "10ad3307586f910a0179e2ab2396da69ed40edf1",
+      "blob_match": true,
+      "status": "added"
+    }
+  ],
+  "correction_commit": "07c727b4dd454bf1e295d5b6498ca9aad19547cc",
+  "correction_tree": "e1b8900161c9db4662d74d5a11b8ec18085141c3",
+  "correction_descends_from_original": null,
+  "correction_is_ancestor_of_final": null,
+  "correction_ancestry_checks": {
+    "orig_to_corr_exit": 0,
+    "corr_to_final_exit": 0
+  },
+  "original_to_corrected_package_diff": [
+    "research-packages/e99-paired-20261019t091333z-local-13/README.md",
+    "research-packages/e99-paired-20261019t091333z-local-13/SOURCES.json",
+    "research-packages/e99-paired-20261019t091333z-local-13/TASK.json",
+    "research-packages/e99-paired-20261019t091333z-local-13/VERIFY.json"
+  ],
+  "final_commit": "e185b58bfffa27be92d4ec91d919f1aa4f939725",
+  "corrected_and_final_metadata": {
+    "07c727b4dd454bf1e295d5b6498ca9aad19547cc": {
+      "task_domain_equals_verify_domain": true,
+      "verify_inputs_equal_source_paths": true,
+      "classification": "unreviewed",
+      "canonical_claims": [],
+      "pins": [
+        {
+          "path": "docs/reports/global_boundary_zigzag_linear_reserve_2026-10-11.md",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5613444ab0f885161ffb81f31ef52f14d9c9a2c7a7fdfc6e7d43734cb4770e5d",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "5613444ab0f885161ffb81f31ef52f14d9c9a2c7a7fdfc6e7d43734cb4770e5d",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "declared_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+          "declared_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/problem/statement.md",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "declared_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+          "declared_sha256": "d94838372b5105633349e522634bd2040cfd19364a1fc62e00c9fa14b8da6bc1",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "d94838372b5105633349e522634bd2040cfd19364a1fc62e00c9fa14b8da6bc1",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/theory/03-oler-shell.md",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "a6cf18f38fa01c6969e2aecd8211278a0dcd1530efb190551d815ed0e86c0521",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "a6cf18f38fa01c6969e2aecd8211278a0dcd1530efb190551d815ed0e86c0521",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/audits/pr956_autonomous_proof_audit_2026-10-15.md",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "31dfded403d64727212311037b24e7c0b2dce05f3a51d9bd11eca9dd5123da00",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "31dfded403d64727212311037b24e7c0b2dce05f3a51d9bd11eca9dd5123da00",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/research/agent-task-catalog.json",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-13/verify.py",
+          "declared_commit": null,
+          "declared_sha256": "7704cfa01c865f151bb44cca72d82323a48ca3c7599f28ae747403304b3104b6",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "7704cfa01c865f151bb44cca72d82323a48ca3c7599f28ae747403304b3104b6",
+          "current_tree_hash_matches": true
+        }
+      ],
+      "readme_exists_phrase": false,
+      "readme_uniform_gain_every_translate": true,
+      "readme_absolute_count_for_selected_average_translate": true,
+      "verify_sha256": "7704cfa01c865f151bb44cca72d82323a48ca3c7599f28ae747403304b3104b6",
+      "verify_equal_to_corrected_source": true
+    },
+    "e185b58bfffa27be92d4ec91d919f1aa4f939725": {
+      "task_domain_equals_verify_domain": true,
+      "verify_inputs_equal_source_paths": true,
+      "classification": "unreviewed",
+      "canonical_claims": [],
+      "pins": [
+        {
+          "path": "docs/reports/global_boundary_zigzag_linear_reserve_2026-10-11.md",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5613444ab0f885161ffb81f31ef52f14d9c9a2c7a7fdfc6e7d43734cb4770e5d",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "5613444ab0f885161ffb81f31ef52f14d9c9a2c7a7fdfc6e7d43734cb4770e5d",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "declared_commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+          "declared_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/problem/statement.md",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "declared_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+          "declared_sha256": "d94838372b5105633349e522634bd2040cfd19364a1fc62e00c9fa14b8da6bc1",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "d94838372b5105633349e522634bd2040cfd19364a1fc62e00c9fa14b8da6bc1",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/theory/03-oler-shell.md",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "a6cf18f38fa01c6969e2aecd8211278a0dcd1530efb190551d815ed0e86c0521",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "a6cf18f38fa01c6969e2aecd8211278a0dcd1530efb190551d815ed0e86c0521",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/audits/pr956_autonomous_proof_audit_2026-10-15.md",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "31dfded403d64727212311037b24e7c0b2dce05f3a51d9bd11eca9dd5123da00",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "31dfded403d64727212311037b24e7c0b2dce05f3a51d9bd11eca9dd5123da00",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "docs/research/agent-task-catalog.json",
+          "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "current_tree_hash_matches": true
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-13/verify.py",
+          "declared_commit": null,
+          "declared_sha256": "7704cfa01c865f151bb44cca72d82323a48ca3c7599f28ae747403304b3104b6",
+          "declared_commit_hash_matches": true,
+          "current_tree_hash": "7704cfa01c865f151bb44cca72d82323a48ca3c7599f28ae747403304b3104b6",
+          "current_tree_hash_matches": true
+        }
+      ],
+      "readme_exists_phrase": false,
+      "readme_uniform_gain_every_translate": true,
+      "readme_absolute_count_for_selected_average_translate": true,
+      "verify_sha256": "7704cfa01c865f151bb44cca72d82323a48ca3c7599f28ae747403304b3104b6",
+      "verify_equal_to_corrected_source": true
+    }
+  },
+  "source_report_sha256": "5613444ab0f885161ffb81f31ef52f14d9c9a2c7a7fdfc6e7d43734cb4770e5d",
+  "source_report_git_blob": "5466a7454b469077c0f8532aaff93884680014e0",
+  "source_finite_checker_sha256": "7742036006a6c2ffda5932a628092550d3b05e85d1f1320adddf71e23befc821",
+  "source_finite_checker_git_blob": "530f3c7a0047ba599ceccc1ee8f40e60a4c723d8"
+}

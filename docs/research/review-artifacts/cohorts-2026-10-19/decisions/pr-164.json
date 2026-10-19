@@ -1,0 +1,21 @@
+{
+  "number": 164,
+  "head": "de51a6e55c576343be6ece5b8f5a688adc0074fa",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "1d39087987dd82e21b8a69f1b7003bc1bf98aad7",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Exact finite eight-label paths with exterior point W_h for h=1 or 11/10; all 28 pairs, with one variant adding a contact and one none, each retaining unique source diameter and strict shorter endpoint.",
+  "original_coverage": "Exact finite eight-label paths with exterior point W_h for h=1 or 11/10; all 28 pairs, with one variant adding a contact and one none, each retaining unique source diameter and strict shorter endpoint.",
+  "remaining": " The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/b-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

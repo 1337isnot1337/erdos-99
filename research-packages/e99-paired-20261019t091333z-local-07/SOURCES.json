@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+      "sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+      "identity": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+      "sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+      "identity": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+      "identity": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/verify.py",
+      "sha256": "c47f7878280e1ea47e8de0231199d6a91006543a74bd388c1ead414e58daf4aa",
+      "identity": "PR 112 exact finite brace and endpoint-cut control, copied unchanged",
+      "generated_from": []
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "identity": "destination lifecycle and exact candidate relations",
+      "generated_from": [],
+      "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+    },
+    {
+      "path": "docs/research/tracks/target-c-train-returns-rigidity-grid.md",
+      "identity": "current route and remaining linkage obligation",
+      "generated_from": [],
+      "sha256": "5152bc5fdc6c1a17322ef36449474fb566362e7da5a54a98e25475a9a3fc9e0f",
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/README.md",
+      "identity": "independent destination audit and scope",
+      "generated_from": [],
+      "sha256": "e1ca1cfe90c4d181dae98e6a8d9fe15bd15fdd5a559102de7ca1a19131d3b4fe"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/evidence.json",
+      "identity": "exact finite control output and pinned checker provenance",
+      "generated_from": [],
+      "sha256": "6fef2c8f7cc4e3b3c43d727be51756768a50a3a337adde05232ef360a7986e92"
+    },
+    {
+      "path": "docs/reports/target_c_full_cell_common_grid_preservation_2026-10-15.md",
+      "identity": "unreviewed source-main full-cell linkage variant, comparison only",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "sha256": "07036803e35a5cf4848d32b6e868edcc30ea883e60349f2f2eaf90ff4e7c3c5f"
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The common-grid extraction candidate remains outside this audit and unreviewed.",
+    "The conclusion is conditional on canonical C-ZRF at its recorded nonisolated-core scope; C-ZRF itself is not re-audited here."
+  ]
+}

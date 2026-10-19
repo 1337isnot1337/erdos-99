@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "tasks/target-c-face-coupled-move.md",
+    "docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md",
+    "docs/targets/target-c/CURRENT.md",
+    "docs/state/theorem-state.yaml",
+    "docs/research/priority-state.json",
+    "docs/research/agent-task-catalog.json",
+    "research-packages/e99-paired-20261019t091333z-local-16/README.md",
+    "research-packages/e99-paired-20261019t091333z-local-16/verify.py"
+  ],
+  "domain": "The exact seven labels from PR #104, with v_(i,j)=i(1,0)+j(t,sqrt(1-t^2)) for i=0,1,2 and j=0,1, and z=(1,11/5-t), for rational 0<t<=1/10.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-local-16/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

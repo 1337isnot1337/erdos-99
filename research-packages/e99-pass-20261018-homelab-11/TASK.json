@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-homelab-11",
+  "classification": "conditional",
+  "scope": {
+    "statement": "Transfer partner-uniform endpoint midpoint tail and first/second moments to every edge of the complete actual C-II diameter graph by an injection into distinct endpoints.",
+    "domain": "Finite canonical C-II sources with D in the upstream endpoint-estimate range; the proof covers all actual diameter edges, and the finite verifier exercises the two stated Woodall graph forms only.",
+    "limitations": "Conditional on the upstream endpoint midpoint estimates and generic Woodall classification. Does not bound stress-weighted sums or near-diameter pair counts, extract a source set, construct a finite motion, or close C-II or Level I."
+  },
+  "result": "The full actual diameter graph itself is a straight-line thrackle. Woodall topology gives either a caterpillar forest or one odd cycle with pendant leaves, yielding an injective edge-to-endpoint assignment and termwise tail/moment domination.",
+  "remaining_questions": [
+    "Independently audit the upstream full-source endpoint midpoint tail and moment estimates at the destination's exact candidate bytes."
+  ]
+}

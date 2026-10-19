@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-homelab-12",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "At destination main 7d0a450fe66991036541023f95c44c064a04b6a8, independently audit only GLOBAL-LEVEL-I-ANNULAR-MATCHING-PR955: the strict-sub-D vertex-cover identity; rotating-wedge bipartite deletion and matching-cover bound; the explicit annular error; and the conditional translated-lattice O_c(1) refinement.",
+    "domain": "Finite unit-separated X in B(o,S), D>0, delta>0, S=D/2+delta<D/sqrt(2), conflict edges at distance >=D, closed V_ann={D-S<=|x-o|<=S}; additionally D-S>1/2 for the area bound, and Audit 245 translation-uniform O(r^(2/3)) circle-count premise for the optional lattice refinement.",
+    "limitations": "No global-minimizer packet construction, source/scaffold transport, Level I or C-II closure, asymptotic reserve improvement, or theorem-state/candidate promotion. The lattice refinement is conditional on canonical Audit 245."
+  },
+  "result": "Independent destination audit PASS for the exact finite/geometric claims and conditional lattice corollary; candidate lifecycle remains unreviewed and no promotion is made.",
+  "remaining_questions": [
+    "For every sufficiently large triangle-free global minimizer A of diameter D, construct an admissible comparison packet X with M_D(X)>=|A|, proving any required source/scaffold transport and all cardinality and separation conditions, or establish eventual nonattainment by another route."
+  ]
+}

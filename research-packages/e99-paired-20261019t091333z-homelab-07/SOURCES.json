@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/reports/target_c_deep_face_persistence_and_isolate_transport_slot02_2026-10-10.md",
+      "sha256": "7c1927a90124a376017a62a784d51851b478a9dd17efacb76505722d85bf3e37",
+      "identity": "docs/reports/target_c_deep_face_persistence_and_isolate_transport_slot02_2026-10-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/verify_target_c_deep_face_transport_2026_10_10.py",
+      "sha256": "53cfc3d7ec915b5a5b903580f64b936473b5c86c1f223b8f0d23cef1a097cc7c",
+      "identity": "research/verify_target_c_deep_face_transport_2026_10_10.py",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/target_c_deep_face_transport_certificate_2026_10_10.json",
+      "sha256": "51aee524684833326c94c5a4457d8ddc7afb4784759a4ec7761a6a03f2047ad7",
+      "identity": "research/target_c_deep_face_transport_certificate_2026_10_10.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+      "sha256": "ced2ae1bb3ee3834f0a36d5869d25c7aedc0e447df2c8bb17013cf1d4a0a7d89",
+      "identity": "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-07/verify.py",
+      "sha256": "385031ced4a0fc44bebc9b7d15f43e9ea8ff488716e21f473208345673637139",
+      "identity": "draft-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "Outside isolate capacity or source-derived endpoint existence remains open.",
+    "Required repository-wide theorem-certificate replay is deferred to the merging agent."
+  ]
+}

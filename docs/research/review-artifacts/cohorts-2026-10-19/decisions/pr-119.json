@@ -1,0 +1,22 @@
+{
+  "number": 119,
+  "head": "b321833ec6a10a1a47fee5c717c6b2d2e4752f7d",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "3369773a89cf9a3860cd09d413821bf91b02698d",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Reviewed report scope and exact conditional dependency on C-ZRF; unloaded rigidity brace does not imply candidate promotion or source-wide closure.",
+  "original_coverage": "Reviewed report scope and exact conditional dependency on C-ZRF; unloaded rigidity brace does not imply candidate promotion or source-wide closure.",
+  "remaining": "Candidate remains unreviewed; source extraction and later endpoint lemma remain. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/c-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

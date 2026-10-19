@@ -1,0 +1,21 @@
+{
+  "number": 158,
+  "head": "44743498eb0bd669e3198d93356ae8c5e9dc0d59",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "b995635519a506cfadc8c9078d01bc03dfaaff9d",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Read package files; midpoint-tail result uses scale-sensitive angular window a/(2D) and explicitly remains conditional on C-FS premises; it does not imply stress-weighted bounds.",
+  "original_coverage": "Read package files; midpoint-tail result uses scale-sensitive angular window a/(2D) and explicitly remains conditional on C-FS premises; it does not imply stress-weighted bounds.",
+  "remaining": "Source-family extraction and stress-weighted bound remain open. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-macbook-20261019T054318Z-06",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Independently audit the exact seven-label fixed-isolate common-shear claim in PR #104: determine its full feasible interval and count contacts, actual diameter pairs, and unit triangles including both activation endpoints.",
+    "domain": "The six labels v_(i,j)=i(1,0)+j(c,s), i=0,1,2 and j=0,1, with s=sqrt(1-c^2)>=0, plus the fixed label z=(1,11/5); compare every unordered pair against the source lower bound 1 and fixed diameter D=sqrt(146/25).",
+    "limitations": "Finite exact audit of the pinned motion family only. It does not realize the family in a canonical source, move the isolate, test other motion modes or replacements, or prove C-II, A, B, or Level I. No theorem lifecycle is promoted."
+  },
+  "result": "The exact feasible interval is |c|<=21/100. Interior counts are (|C|,|H|,triangles)=(7,2,0); both endpoints have (7,3,0). The relevant inactive upper pair has squared distance 6 at c=+/-1/4, and the c=+/-1/2 controls have 9 contacts and 4 unit triangles.",
+  "remaining_questions": [
+    "For every canonical full-core C-II source, can a face/train motion move a diameter-setting contact isolate while preserving all old lower bounds and all active and inactive upper bounds, so that the existing same-cardinality endpoint criterion is met?"
+  ]
+}

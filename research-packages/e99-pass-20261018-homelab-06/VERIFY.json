@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+    "docs/reports/target_c_two_side_polynomial_collective_refill_2026-10-05.md",
+    "docs/reports/target_c_triangular_two_pin_strict_capacity_2026-10-05.md",
+    "docs/reports/target_c_unit_pentagon_perimeter_capacity_2026-10-05.md",
+    "research-packages/e99-pass-20261018-homelab-06/verify.py"
+  ],
+  "domain": "Exact integer/radical lower and diameter-upper pair checks for m=7,8,12,24, plus the two-side population and tolerance ledger.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-homelab-06/verify.py"
+      ],
+      "timeout_seconds": 90
+    }
+  ]
+}

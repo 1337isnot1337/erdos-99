@@ -1,0 +1,26 @@
+v00-v10 source_d2=     1 family_d2=[1,1] same row
+v00-v20 source_d2=     4 family_d2=[4,4] same row
+v00-v01 source_d2=     1 family_d2=[1,1] same-column contact
+v00-v11 source_d2=     2 family_d2=[79/50,121/50] cross row k=1
+v00-v21 source_d2=     5 family_d2=[104/25,146/25] cross row k=2
+v00-z   source_d2=146/25 family_d2=[146/25,146/25] exact isolate-to-bottom
+v10-v20 source_d2=     1 family_d2=[1,1] same row
+v10-v01 source_d2=     2 family_d2=[79/50,121/50] cross row k=-1
+v10-v11 source_d2=     1 family_d2=[1,1] same-column contact
+v10-v21 source_d2=     2 family_d2=[79/50,121/50] cross row k=1
+v10-z   source_d2=121/25 family_d2=[121/25,121/25] exact isolate-to-bottom
+v20-v01 source_d2=     5 family_d2=[104/25,146/25] cross row k=-2
+v20-v11 source_d2=     2 family_d2=[79/50,121/50] cross row k=-1
+v20-v21 source_d2=     1 family_d2=[1,1] same-column contact
+v20-z   source_d2=146/25 family_d2=[146/25,146/25] exact isolate-to-bottom
+v01-v11 source_d2=     1 family_d2=[1,1] same row
+v01-v21 source_d2=     4 family_d2=[4,4] same row
+v01-z   source_d2= 61/25 family_d2=[36/25,2977/1000] isolate-to-top algebraic bound
+v11-v21 source_d2=     1 family_d2=[1,1] same row
+v11-z   source_d2= 36/25 family_d2=[36/25,2977/1000] isolate-to-top algebraic bound
+v21-z   source_d2= 61/25 family_d2=[36/25,2977/1000] isolate-to-top algebraic bound
+PASS: 21 source pairs; 7 contacts; 2 actual diameter pairs at c=0
+PASS: all lower and upper pairs for |c| <= 21/100
+PASS: open interval leaves (|C|,|H|)=(7,2) unchanged
+PASS: either boundary adds one diameter pair; outside violates D
+PASS: invalid-upper and unit-triangle controls detected

@@ -1,0 +1,6 @@
+source_squared_distance=29/16; X_squared_distance=61/32; Y_squared_distance=1
+source_neighborhoods=c:{a,b},u:{b},o:{a,b},v:{b}
+full_shore_saturating_matchings=unique_on_X_and_Y
+restricted_hall_deficiency=0; min_free_overlap=0; inherited_overlap=1
+result=PASS_LOCAL_GEOMETRIC_EXTENSION_COUNTERMODEL
+limitation=no_fixed_hull_capacity_or_plateau_response_claim

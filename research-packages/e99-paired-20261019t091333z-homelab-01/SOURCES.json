@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/STATE.md",
+      "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+      "identity": "docs/STATE.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/README.md",
+      "sha256": "2865f3e52893aaf6b7d0ad45a4133894896698241f9de9cb3a5e74251c64aa1a",
+      "identity": "docs/targets/target-a/README.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/10-quantitative-kuperberg-rate.md",
+      "sha256": "84014aee1e919d5c9e930817a84746e50831c0475d95d93cc100290c90efc96e",
+      "identity": "docs/targets/target-a/10-quantitative-kuperberg-rate.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/12-toeout-kuperberg-improvement.md",
+      "sha256": "e4f5620b9f4a4ebe2fd46e1fda47adcd3bb0c435812f3dd4f59da373fa157592",
+      "identity": "docs/targets/target-a/12-toeout-kuperberg-improvement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/13-five-block-local-optimality.md",
+      "sha256": "f1a389e994ffd428b83a721a7d18d833bd35b5ab4a078bc3c611619b194bb7ad",
+      "identity": "docs/targets/target-a/13-five-block-local-optimality.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/14-sharp-symmetric-five-block.md",
+      "sha256": "296af3860efef18e844eaada048e6709c29decedb7e070ced580b223d3e0ddd3",
+      "identity": "docs/targets/target-a/14-sharp-symmetric-five-block.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-01/verify.py",
+      "sha256": "f125a6fbe345627e3192d2a8d16651689cca7739e31b34f636f1919181d79cca",
+      "identity": "exact-Qsqrt3-fixture-and-control-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "Independent mathematical audit of the pathwise proof is pending; verify.py checks only the exact fixture and two-anchor control.",
+    "No canonical Target A source embedding or payment into the Schur or diameter endpoint is proved.",
+    "Affine strains fixing the triad-bearing label while moving other support labels remain open."
+  ]
+}

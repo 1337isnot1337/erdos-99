@@ -1,0 +1,21 @@
+{
+  "number": 142,
+  "head": "6dfe8c78ed50eaf96c21bfd7e03235878d12d36a",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "5594a91c15aa79dcd9e65b3c68b677cb8929eb9e",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "For rational t in (0,1/10], coupled shear moves PR104\u2019s isolate below D; all 21 pairs are checked and D_t^2=1+(11/5-t)^2.",
+  "original_coverage": "For rational t in (0,1/10], coupled shear moves PR104\u2019s isolate below D; all 21 pairs are checked and D_t^2=1+(11/5-t)^2.",
+  "remaining": " The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/b-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

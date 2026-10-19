@@ -1,0 +1,6 @@
+PASS: exact cut/gluing count on the embedded 6x6-minus-2x2 rhombic annulus
+before: V=48 M=80 R=32 B=32 chi=0 k=1 h=1 boundary_components=2 tau=-1 bracket=30
+after:  V=51 M=82 R=32 B=36 chi=1 k=1 h=0 boundary_components=1 tau=0 bracket=36
+slit: ell=2, delta_B=4, delta_chi=1, delta_bracket=6=2*(ell+1)
+controls: each deleted edge contributes its two boundary occurrences once; edge-only payment leaves +2; adding the interface again double counts it
+source-count control: fixed t raises formal n by ell+1; forcing fixed n would require t'=-3, which is not an outside-label count

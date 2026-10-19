@@ -1,0 +1,4 @@
+PASS: all six exact source distances are 1 or 3 in Q(sqrt(3))
+PASS: balanced triad and second-moment identities hold exactly
+PASS: deleting one anchor admits the full-pair-feasible path control
+LIMIT: universal direction and continuous-path claims are proved in README.md

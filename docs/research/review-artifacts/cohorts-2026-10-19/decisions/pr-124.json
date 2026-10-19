@@ -1,0 +1,22 @@
+{
+  "number": 124,
+  "head": "067af10523401461d80a399ef31ba429accc8fc1",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "615622fb62b48eeb7e1effc29bfec7e5ed4271c8",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Independent destination review of PR #124 positive-leaf anchor sharpening: assuming PR #139 near-diameter localization at s=0 and s=2, the full-source KKT cone and an inner-ball contraction imply dist(a, partial K_D)=O(D^(-2/3)). This is conditional; PR #139 localization is a separate unreviewed candidate. No endpoint-tail/moment or full diameter-edge transfer, vacancy, packet, source motion, or theorem promotion is included.",
+  "original_coverage": "Independent destination review of PR #124 positive-leaf anchor sharpening: assuming PR #139 near-diameter localization at s=0 and s=2, the full-source KKT cone and an inner-ball contraction imply dist(a, partial K_D)=O(D^(-2/3)). This is conditional; PR #139 localization is a separate unreviewed candidate. No endpoint-tail/moment or full diameter-edge transfer, vacancy, packet, source motion, or theorem promotion is included.",
+  "remaining": "Keep both candidate lifecycles unreviewed/noncanonical; independently establish the complete near-diameter candidate before relying on its premise for adoption.; Connect boundary localization to a source-realized move with every label and pair constraint. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/b-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/b-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

@@ -1,0 +1,22 @@
+{
+  "number": 130,
+  "head": "d44c691183ca3a789a6bedee05ff867220f440ca",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "d587edff2c17fb759c967f1544671af9ee0902d0",
+  "original_disposition": "hold",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept as amended in the integration candidate after a separate independent scoped correction audit; the original hold is retained as historical evidence.",
+  "coverage": "The corrected affine-rank criterion, two-/three-colour consequences, and normalized metric endpoint implication are valid under the stated hypotheses. This is a scoped mathematical review only; it does not review the whole historical PR958 proof, establish the source-side colouring premise, authorize a merge, or promote a theorem. Corrected argument/scope and amendment identity: reviews/c-pr130-correction-review.json.",
+  "original_coverage": "Core affine-rank/flattening criterion reconstructed, but the claimed strict full-source competitor is false as written: the frozen report uses the unnormalized lift, which leaves same-color distances unchanged and increases cross-color squared distances. The exact finite checker covers only rank screens and does not test this metric claim. See a-scoped-proof-audits.json; original head remains held.",
+  "remaining": "Establish a source-derived proper two-colouring of every label, including isolates, with parallel classes for a relevant global minimizer, or construct another full-label planar endpoint preserving every lower and upper pair constraint.; Retain unreviewed/noncanonical lifecycle status; no theorem-state transaction or theorem promotion is supported by this correction review. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/c-pr130-correction-review.json"
+  ],
+  "canonical_promotion": false
+}

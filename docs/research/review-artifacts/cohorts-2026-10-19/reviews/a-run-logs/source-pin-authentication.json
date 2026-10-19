@@ -1,0 +1,182 @@
+{
+  "frozen_package_pins": [
+    {
+      "number": 107,
+      "package": "research-packages/e99-pass-20261018-local-02",
+      "pin_count": 6,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 117,
+      "package": "research-packages/e99-pass-20261018-local-01",
+      "pin_count": 16,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 120,
+      "package": "research-packages/e99-pass-20261018-homelab-01",
+      "pin_count": 7,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 121,
+      "package": "research-packages/e99-pass-20261018-homelab-08",
+      "pin_count": 4,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 122,
+      "package": "research-packages/e99-pass-20261018-local-09",
+      "pin_count": 5,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 123,
+      "package": "research-packages/e99-pass-20261018-homelab-09",
+      "pin_count": 6,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 125,
+      "package": "research-packages/e99-pass-20261018-local-03",
+      "pin_count": 6,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 128,
+      "package": "research-packages/e99-pass-20261018-homelab-03",
+      "pin_count": 8,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 130,
+      "package": "research-packages/e99-pass-20261018-homelab-10",
+      "pin_count": 1,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 131,
+      "package": "research-packages/e99-pass-20261018-homelab-07",
+      "pin_count": 4,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 138,
+      "package": "research-packages/e99-macbook-20261019t054318z-01",
+      "pin_count": 10,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 144,
+      "package": "research-packages/e99-macbook-20261019T054318Z-16",
+      "pin_count": 7,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 145,
+      "package": "research-packages/e99-macbook-20261019t054318z-13",
+      "pin_count": 5,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 146,
+      "package": "research-packages/e99-macbook-20261019T054318Z-14",
+      "pin_count": 7,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 147,
+      "package": "research-packages/e99-macbook-20261019T054318Z-02",
+      "pin_count": 10,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 154,
+      "package": "research-packages/e99-paired-20261019t091333z-homelab-01",
+      "pin_count": 8,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 165,
+      "package": "research-packages/e99-paired-20261019t091333z-homelab-02",
+      "pin_count": 4,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 167,
+      "package": "research-packages/e99-paired-20261019t091333z-local-02",
+      "pin_count": 5,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 170,
+      "package": "research-packages/e99-paired-20261019t091333z-homelab-16",
+      "pin_count": 15,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    },
+    {
+      "number": 176,
+      "package": "research-packages/e99-paired-20261019t091333z-homelab-15",
+      "pin_count": 12,
+      "all_hashes_match": true,
+      "verify_paths_match": true,
+      "problems": []
+    }
+  ],
+  "integration_metadata_repins_for_group_a": [
+    {
+      "number": 123,
+      "package": "research-packages/e99-pass-20261018-homelab-09",
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "old_pin_exact": true,
+      "integration_pin_exact": true,
+      "integration_ref": "173b3dd14fa784f65f80bb9485b0f72ed1a36916"
+    },
+    {
+      "number": 122,
+      "package": "research-packages/e99-pass-20261018-local-09",
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "old_pin_exact": true,
+      "integration_pin_exact": true,
+      "integration_ref": "173b3dd14fa784f65f80bb9485b0f72ed1a36916"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-local-08",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Independent exact-destination audit of TARGET-C-PR948-RIGID-CYCLE-PINNED-STRESS: positive pinned-net identity, rigid-cycle core and isolate persistence, isolate-capacity obstruction, and conditional old-stress core upper certificate.",
+    "domain": "At the pinned destination bytes 7d0a450fe66991036541023f95c44c064a04b6a8, for the report hypotheses: a simple old unit-contact cycle carried pointwise by one isometry; for full-source conclusions, same cardinality, unit separation, diameter at most D, and exact old contact graph; for the outer-walk certificate, the exact separate positive/negative sign-balance condition at every core vertex outside O.",
+    "limitations": "Conditional claims only. Lemma 3.1 should explicitly require positive-weight connection of every free component to a pin; both applications provide it. No globally feasible endpoint, universal source extraction, source-wide isolate reserve, canonical promotion, C-II closure, or Level I closure. The package metadata audit also leaves static Python import/capability closure unresolved, and the direct finite-control replay passed, but the package isolated-replay static closure remains unresolved."
+  },
+  "result": "The candidate passes at the stated conditional scopes after an explicit groundedness clarification to Lemma 3.1. The exact finite-control replay passed with byte-for-byte certificate agreement; the destination candidate remains unreviewed. Isolated package replay remains unauthorized because static import/capability closure is unresolved.",
+  "remaining_questions": [
+    "Prove that every relevant canonical source yields a nonconstant integrated fold with pointwise rigid-face conditions and the required old-stress sign balance, while preserving all lower and actual/inactive upper pair constraints.",
+    "Place every contact-isolated source label simultaneously with strict lower guards and complete upper bounds, or produce another same-cardinality source-level competitor."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "metadata-valid",
+  "package": "research-packages/e99-pass-20261018-local-06",
+  "classification": "unreviewed",
+  "unresolved": [
+    "The algebraic cut-incidence model has no planar source realization or vertex-level KKT certificate; all-pair source geometry and the C-II endpoint obligation remain open."
+  ],
+  "declared_seconds": 30,
+  "declared_package_dependencies": [],
+  "full_verified": false,
+  "replay_authorized": false,
+  "executed_commands": false,
+  "limits": "Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay."
+}

@@ -1,0 +1,21 @@
+{
+  "number": 105,
+  "head": "2c0968543d732a73a6f7a7bb8d192a1c1b10438e",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "e83952507acea0cc94ee6db78e291a0cf44afe33",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Read README/TASK/VERIFY/SOURCES/checker; metadata/source pins valid. Proof is explicitly conditional through-splicing with full-core Type-II hypotheses; no source extraction, finite global closure, or theorem promotion.",
+  "original_coverage": "Read README/TASK/VERIFY/SOURCES/checker; metadata/source pins valid. Proof is explicitly conditional through-splicing with full-core Type-II hypotheses; no source extraction, finite global closure, or theorem promotion.",
+  "remaining": "No canonical promotion; prove source-level extraction and full-source bridge separately. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

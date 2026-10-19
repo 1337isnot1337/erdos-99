@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/reports/global_joint_diameter_cover_exchange_2026-10-12.md",
+    "research/verify_global_joint_exchange_2026_10_12.py",
+    "docs/targets/target-c/candidate-registry.json",
+    "docs/problem/statement.md",
+    "docs/audits/pr957_autonomous_proof_audit_2026-10-15.md",
+    "research-packages/e99-pass-20261018-homelab-09/verify.py"
+  ],
+  "domain": "All 4096 abstract 3-source/3-packet H/G graph patterns for the formula, plus an exact rational counterexample to allowing extra false edges in G.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-homelab-09/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

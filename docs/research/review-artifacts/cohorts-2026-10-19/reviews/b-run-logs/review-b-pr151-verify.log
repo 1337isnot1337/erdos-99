@@ -1,0 +1,2 @@
+PASS: 400 exact small-source cases; {'feasible': 97, 'lower-forbidden': 94, 'upper-forbidden': 119, 'parity-inconsistent': 90}; 91 paired-edge cases; 38 cycle-only parity failures
+PASS: exact lower/upper boundary cases, including a contradictory parallel-edge pair

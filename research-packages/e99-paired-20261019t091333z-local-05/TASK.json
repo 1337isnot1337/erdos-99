@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-local-05",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For every noncollinear global minimum-diameter unit-separated source with D >= 216, choose one actual diameter partner for every actual diameter endpoint. About the full-source hull minimum-enclosing-circle center, audit the uniform tail #{p: |m_p-o| >= s} <= C D^2/s^2 for s >= 4*3^(1/4)*sqrt(D), and the O(D^(3/2)) first and O(D^2 log D) second unweighted midpoint moments.",
+    "domain": "Universal analytic claim over all such global sources and independent partner choices; verify the exact scale and constant inequalities in verify.py only.",
+    "limitations": "No finite verifier encodes the support-function proof. This package audits endpoint midpoints only, gives no stress-weighted bound or stress-relevant set, and does not assess the separate near-diameter or actual-edge-transfer claims. Destination claim lifecycle remains unreviewed; no theorem promotion is performed."
+  },
+  "result": "The corrected destination band count with angular windows of width a/(2D) reconstructs the claimed tail and moments from C-FS-GEOM and C-FS-DIAMETER-MIDPOINT-D2-3. Exact scale checks pass; the universal geometry remains analytic evidence, not a finite-checker result.",
+  "remaining_questions": [
+    "Derive stress-weighted midpoint control or a canonical stress-relevant endpoint set from the unweighted tail while retaining all source labels; this is needed before the broad stress-extraction route can use the localization."
+  ]
+}

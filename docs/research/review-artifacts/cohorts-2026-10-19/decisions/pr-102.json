@@ -1,0 +1,22 @@
+{
+  "number": 102,
+  "head": "025628b23df11470d4eb87ee981edbf250498691",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "2808e89793b8e95a6929cfa92a230fa6a88ecec0",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Direct analytic reconstruction plus exact finite checker inspection and pass; rational PR98 fixture independently recomputed. Source extraction into one global minimizer is not proved.",
+  "original_coverage": "Direct analytic reconstruction plus exact finite checker inspection and pass; rational PR98 fixture independently recomputed. Source extraction into one global minimizer is not proved.",
+  "remaining": "no all-historical-dependency audit; no canonical promotion. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/a-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

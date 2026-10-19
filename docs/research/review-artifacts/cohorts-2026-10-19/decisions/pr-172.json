@@ -1,0 +1,22 @@
+{
+  "number": 172,
+  "head": "1e4907faaec3acd5c267a42cab04ab4a07443387",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "bd6e0a61a74e4b053aac9ebd7ce6a5d4effd83d9",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Conditional annular-packet lemma: if safe core Y is separated and |Y|>=tau(G_D(A)), annular graph is G_D(A) plus isolated Y and M_D=n+|Y|-tau>=n; finite fixture has zero vacancy.",
+  "original_coverage": "Conditional annular-packet lemma: if safe core Y is separated and |Y|>=tau(G_D(A)), annular graph is G_D(A) plus isolated Y and M_D=n+|Y|-tau>=n; finite fixture has zero vacancy.",
+  "remaining": " The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/b-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/b-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

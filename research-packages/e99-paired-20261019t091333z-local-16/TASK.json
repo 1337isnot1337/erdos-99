@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-local-16",
+  "classification": "regression",
+  "scope": {
+    "statement": "Independent proof reconstruction and exact full-pair audit of PR #142's coupled shear and moving-isolate lemma at head 6dfe8c78ed50eaf96c21bfd7e03235878d12d36a.",
+    "domain": "The exact seven labels from PR #104, with v_(i,j)=i(1,0)+j(t,sqrt(1-t^2)) for i=0,1,2 and j=0,1, and z=(1,11/5-t), for rational 0<t<=1/10.",
+    "limitations": "PASS applies only to the finite seven-label lemma. No canonical full-source extraction, uniform large-cardinality statement, universal global-minimizer conclusion, C-II closure or Level I conclusion is proved. No theorem-state or accepted claim lifecycle is changed."
+  },
+  "result": "All 21 source and path pairs satisfy the required lower and upper bounds; the path keeps seven triangle-free unit contacts and has actual diameter squared 1+(11/5-t)^2<146/25, with two endpoint pairs at the new diameter.",
+  "remaining_questions": [
+    "Extract this nonzero shear and isolate displacement from every relevant canonical full-source face/train component while preserving all lower and active/inactive upper pair bounds and all source labels, or prove an obstruction to that extraction."
+  ]
+}

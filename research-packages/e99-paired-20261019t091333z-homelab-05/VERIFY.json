@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/audits/target_c_one_pin_restoration_gap_capacity_plateau_independent_audit_2026-10-10.md",
+    "docs/audits/target_c_one_boundary_pin_oblique_refill_independent_audit_2026-10-09.md",
+    "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-c/candidate-registry.json",
+    "docs/research/priority-state.json",
+    "docs/problem/statement.md",
+    "research-packages/e99-paired-20261019t091333z-homelab-05/verify.py"
+  ],
+  "domain": "Seven exact rational-coordinate endpoint fixtures at phi=2 atan(577351/1000000), with m,n in {(3,3),(3,4),(4,3),(4,4),(3,6),(5,5),(6,3)}; the analytic report separately reconstructs the universal fixed-frame claim.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-homelab-05/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

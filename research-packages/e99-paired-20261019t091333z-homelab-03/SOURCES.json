@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/CURRENT.md",
+      "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+      "identity": "docs/targets/target-c/CURRENT.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/target_c_open_cell_phase_flux_2026-10-03.md",
+      "sha256": "82bcf72417a4e622cc72a2b52f7d4ae30b169a8970343d2a8ed7a9713f21ad1a",
+      "identity": "research/target_c_open_cell_phase_flux_2026-10-03.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/target_c_open_cell_cut_divergence_condensation_2026-10-03.md",
+      "sha256": "1107f74e245baa872595cd8c8ac6860ec55d22e72796d36108229b261a66cf05",
+      "identity": "research/target_c_open_cell_cut_divergence_condensation_2026-10-03.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_open_cell_block_transposition_2026-10-01.md",
+      "sha256": "1f2c7c2c133b4acfdb5c562579bb34956c32fb1d20bbed9cd71d322973a2730b",
+      "identity": "docs/reports/target_c_open_cell_block_transposition_2026-10-01.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-03/verify.py",
+      "sha256": "f104eace9f499d755119b92b2049732085c09f8ad05b06fe891826bdd46e0776",
+      "identity": "draft-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The exact algebra controls do not certify a planar source, a complete lower/upper pair ledger for a moved source, or the source-derived sign of structurally zero moving diameters."
+  ]
+}

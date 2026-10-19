@@ -1,0 +1,5 @@
+PASS: exact initial pair and diameter checks for m=(7, 8, 12, 24); 3536 nonzero difference vectors checked
+PASS: contact counts, D_m^2=2m^2+m*sqrt(d_m), and exact slack identities
+PASS: maximum path cover radius squared is 1/2 < 1
+PASS: out-of-range cosine 3/4 fails; |u-v|^2=1/2 < 1
+Scope: finite arithmetic controls only; the all-m continuous-angle cover proof is in README.md

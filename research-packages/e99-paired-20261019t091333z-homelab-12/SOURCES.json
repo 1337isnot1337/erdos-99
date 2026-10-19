@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/global_annular_matching_competitor_2026-10-11.md",
+      "sha256": "c564b3577562e3aeec1bf4ea2e7a800e4014fad6d5ebe7a2844daad6a3d61e5c",
+      "identity": "docs/reports/global_annular_matching_competitor_2026-10-11.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/global_annular_matching_2026_10_11.json",
+      "sha256": "b7ea9aa0e49a390575b8576c0b4eb9e931967a68174408b18d8ffb93687d4c08",
+      "identity": "research/global_annular_matching_2026_10_11.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/certificates/global_annular_matching_proofs_2026_10_16.json",
+      "sha256": "8fc15a005e26116edbfe4f7040d8ef5a9d571e0e033c1beef8b790ae630b295b",
+      "identity": "research/certificates/global_annular_matching_proofs_2026_10_16.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/verify_global_annular_matching_2026_10_11.py",
+      "sha256": "4cf5b2a2c6caf787ce92a892dabb694d9ffce13ab621e724820759635cc8fb8b",
+      "identity": "research/verify_global_annular_matching_2026_10_11.py",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+      "sha256": "69a42884e36eacc29fc987dd004bc2570bcc174402aad2ced478b1bf03f8e63f",
+      "identity": "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_triangle_free_lattice_competitor_reserve_independent_audit_2026-10-10.md",
+      "sha256": "5134f4c246286fec50530e0c6855d6b370ed2b2252e8918680b8a0e1b177aa4a",
+      "identity": "docs/audits/target_c_triangle_free_lattice_competitor_reserve_independent_audit_2026-10-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "identity": "docs/targets/target-c/candidate-registry.json",
+      "generated_from": [],
+      "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+      "sha256": "29fd04ba2a8f31ac93ab2b91b9d4a267e227c9348a894f37adcd3e6986be7b3d",
+      "identity": "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+      "identity": "docs/research/agent-task-catalog.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-12/verify.py",
+      "sha256": "dac1fde72b6a2186be196a1b4d03944425f4e9eb0fe4088e9353f06a74d4ea42",
+      "identity": "package-integrity-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The conservative package scanner cannot close the pinned existing verifier source for isolated replay (stdlib/filesystem capabilities); its exact direct replay passed under the required host lock, but optional isolated package replay remains unrun."
+  ]
+}

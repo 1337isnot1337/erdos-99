@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2180,
-  "math_pairs_normalized": 72073,
+  "source_documents": 2203,
+  "math_pairs_normalized": 72495,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -44,6 +44,41 @@
       "source_sha256": "7c5a447531653d49661cddccd3119e7db9149827fead4efbcd119b92dd7a645f",
       "reading_path": "reading/docs/audits/fan_blocker_source_reconciliation_2026-10-15.md",
       "reading_sha256": "33ba1725810ba5b9e0c060f520332959b80a88d8df68404738c4fa6a6c6e1c72",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/global_factor_balance_obstruction_destination_independent_audit_2026-10-19.md",
+      "source_sha256": "bdfdc5a9aea3a6440037e5859760f644e9aef5432e814d53de9c52b312225a72",
+      "reading_path": "reading/docs/audits/global_factor_balance_obstruction_destination_independent_audit_2026-10-19.md",
+      "reading_sha256": "0d283a91b5e724b5997b5cfb2439b4a928e524f3c471006dc8b62ebd976b7ff6",
+      "math_pairs_normalized": 5
+    },
+    {
+      "source": "docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+      "source_sha256": "f2ac8d9ca3fc9f88c371797aaaa4bf219302f9486acb70b9debd0fa14cdb9743",
+      "reading_path": "reading/docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+      "reading_sha256": "8f1d625aab20422207db842aee739398671703fcda7ddaf58b62ccfa22d4fcde",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+      "source_sha256": "d67df4f5bc172522040ebe4e156220056759b8828cf06e7005b4d334f4c75702",
+      "reading_path": "reading/docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+      "reading_sha256": "59f98d8a5c38bca42c1c5a8bce3bbe437a0bac255c7cf6687614a86612ccb3d0",
+      "math_pairs_normalized": 105
+    },
+    {
+      "source": "docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md",
+      "source_sha256": "5cbef599ca920062cd082a00dfd7199b52e86871993f0d05a780ee549abb5c6c",
+      "reading_path": "reading/docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md",
+      "reading_sha256": "415a43056ffbb1969c78a1cb4f3db0f2be502f2d59a90a103fc32d02dd0ab900",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
+      "source_sha256": "638ae511c5976fadf526862c92ccf58ae2a85ade2d9ef74e232b31e9aca0da0e",
+      "reading_path": "reading/docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
+      "reading_sha256": "d844bd0a239b0931ea6db725c93722235c3148aefff8e852b3985e0de7f39c88",
       "math_pairs_normalized": 0
     },
     {
@@ -117,6 +152,13 @@
       "math_pairs_normalized": 0
     },
     {
+      "source": "docs/audits/target_a_balanced_triad_relay_independent_audit_2026-10-19.md",
+      "source_sha256": "a5b8ad6615685784307855df582bfe72ae678339c9faa1d73d31fa22136256c3",
+      "reading_path": "reading/docs/audits/target_a_balanced_triad_relay_independent_audit_2026-10-19.md",
+      "reading_sha256": "f71938d0041f384e3fc237b4567e85a757e8f6b0b80d687bd7760ccc6da13d1f",
+      "math_pairs_normalized": 7
+    },
+    {
       "source": "docs/audits/target_a_boundary_terminal_common_source_vpaths_audit_2026-09-05.md",
       "source_sha256": "0f5b5c6d078206831c55993931b7267664f781883518cedf7c8d1fd92754c7ed",
       "reading_path": "reading/docs/audits/target_a_boundary_terminal_common_source_vpaths_audit_2026-09-05.md",
@@ -128,6 +170,20 @@
       "source_sha256": "6b77be6470e83aa1ccb6dc725c42c93a1c6e47b54ae6b1a0dd9cc014ff2eb078",
       "reading_path": "reading/docs/audits/target_a_fan_tube_ledger_independent_audit_2026-10-17.md",
       "reading_sha256": "1d576785b22e16e994280faf96f079df2b17b047007a1dd4722304b5e675343e",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md",
+      "source_sha256": "37e978dd20afb49f1ec67b94e00d70a43c5c37c5a06acb8b9c9924866e42a1ee",
+      "reading_path": "reading/docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md",
+      "reading_sha256": "39e47b0b55aa5a5a5f26ca244f00d857e769bf4b3e7ad4c3350acf27df196744",
+      "math_pairs_normalized": 87
+    },
+    {
+      "source": "docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md",
+      "source_sha256": "9d53529b58cec2e01c376531a28fa5a90059ecab100302990e5de62737ca4a84",
+      "reading_path": "reading/docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md",
+      "reading_sha256": "581dd611d9814ff4a032426572be04ca185859c0a2bc8eb5ce65ba1f3f39b7d3",
       "math_pairs_normalized": 0
     },
     {
@@ -360,6 +416,13 @@
       "reading_path": "reading/docs/audits/target_c_bounded_variation_lattice_endpoint_count_independent_audit_2026-10-09.md",
       "reading_sha256": "6b3a74ecdb0596b1d45f026a50a298fe660e7dcd9abfa24fe3ec67eec94f6c8e",
       "math_pairs_normalized": 9
+    },
+    {
+      "source": "docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+      "source_sha256": "37f2b8d87b41fa81528f318ba211d8e0db7dd24cedc9c31f32e5523615d9fe9e",
+      "reading_path": "reading/docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+      "reading_sha256": "b6523f46be272cb44c13e417386fe7b939cc2165c85ad7e297c27036e18aebb5",
+      "math_pairs_normalized": 0
     },
     {
       "source": "docs/audits/target_c_bridge_subtracted_isoperimetry_hostile_audit_2026-09-13.md",
@@ -992,6 +1055,13 @@
       "math_pairs_normalized": 1
     },
     {
+      "source": "docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+      "source_sha256": "36fee0256d57b6e14a75b62d6515b14a198c3cd5d81a53045f16bf362ce3b1f9",
+      "reading_path": "reading/docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+      "reading_sha256": "8a42e9884117a858727ecd528f1fd2c49f41a33192bfcead0809c60a45c6c20d",
+      "math_pairs_normalized": 4
+    },
+    {
       "source": "docs/audits/target_c_integration_audit_ledger_2026-10-06.md",
       "source_sha256": "419094328bcdc323235da0c475836528201f60811409fc5665e581b5e933a17f",
       "reading_path": "reading/docs/audits/target_c_integration_audit_ledger_2026-10-06.md",
@@ -1179,6 +1249,13 @@
       "reading_path": "reading/docs/audits/target_c_mu_one_cell_concentration_independent_audit_2026-09-14.md",
       "reading_sha256": "f37263bf5333335fb2b9315c9afc600d045541bc7b9afb4be154a6e8b514862b",
       "math_pairs_normalized": 2
+    },
+    {
+      "source": "docs/audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md",
+      "source_sha256": "51d3aabe93b7cc90172ad1238119f4e4590d227044d1807e054b5701900a25b9",
+      "reading_path": "reading/docs/audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md",
+      "reading_sha256": "e856d519ec5ac06b9651b741f67754f948c5e674ec8e6beaec2bb39b4ba44461",
+      "math_pairs_normalized": 12
     },
     {
       "source": "docs/audits/target_c_near_port_conditional_promotion_audit_2026-10-08.md",
@@ -1419,6 +1496,13 @@
       "math_pairs_normalized": 67
     },
     {
+      "source": "docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+      "source_sha256": "ea3731cafd66ec6c53bcda70f3bc780c1ff277598ede3459d6ee0658ba16c4b8",
+      "reading_path": "reading/docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+      "reading_sha256": "53fd3c76ba4fbefcb2959771b9e92a6416b1cef1d2f6d7a275cac1f98b73d16a",
+      "math_pairs_normalized": 4
+    },
+    {
       "source": "docs/audits/target_c_original_family_outer_owner_capacity_independent_audit_2026-10-07.md",
       "source_sha256": "9cdb02fea1dfe4bc62a212f6c918d53bff4e467f307a5a6e8e935d5d1deb3cc3",
       "reading_path": "reading/docs/audits/target_c_original_family_outer_owner_capacity_independent_audit_2026-10-07.md",
@@ -1524,6 +1608,13 @@
       "math_pairs_normalized": 9
     },
     {
+      "source": "docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+      "source_sha256": "03d3c326141f35f9d93e6ae217273085abceb91240e58b0a3cc88828dd13de95",
+      "reading_path": "reading/docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+      "reading_sha256": "ec17a56f6c3c763873f4f1fa85215cd2ef984a950b59dcfd2901fb0a44cda061",
+      "math_pairs_normalized": 11
+    },
+    {
       "source": "docs/audits/target_c_positive_leaf_anchor_second_referee_2026-10-10.md",
       "source_sha256": "08a363adb26216a9d5893891bae50d597b309341d7b146c97311a3b7b7102257",
       "reading_path": "reading/docs/audits/target_c_positive_leaf_anchor_second_referee_2026-10-10.md",
@@ -1543,6 +1634,55 @@
       "reading_path": "reading/docs/audits/target_c_positive_pinned_face_tail_independent_audit_2026-10-08.md",
       "reading_sha256": "43368ad99fc1c23b24132e000ad64c984c16c8d906d4e5204b4bcb5acad1c2b8",
       "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_c_pr129_wall_tolerance_population_independent_audit_2026-10-19.md",
+      "source_sha256": "15fa3cba3b9d99da32de3a7768c7d1581c375fd35627562c7cbeafc12ef3fbcd",
+      "reading_path": "reading/docs/audits/target_c_pr129_wall_tolerance_population_independent_audit_2026-10-19.md",
+      "reading_sha256": "7a8537593b6b16749681b0048ae3d920dd6e413ad6cb3c579f49abb790fb2665",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_c_pr948_quarter_fold_face_obstructions_independent_audit_2026-10-18.md",
+      "source_sha256": "26858163f940698327ceb560f48e18135d14d2d5a5cb5e7a2555007652c8f8c0",
+      "reading_path": "reading/docs/audits/target_c_pr948_quarter_fold_face_obstructions_independent_audit_2026-10-18.md",
+      "reading_sha256": "72c46d4859cdeb02146d148a414b53d69424fc56e2da47388b014c5ff0133989",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_c_pr950_positive_return_quantile_destination_audit_2026-10-18.md",
+      "source_sha256": "0b0bdfbaf912fe015f48bf0b4c37b12b4889a39b70593cbbac2b336bc3ab7894",
+      "reading_path": "reading/docs/audits/target_c_pr950_positive_return_quantile_destination_audit_2026-10-18.md",
+      "reading_sha256": "df36f251253300e5b5d48c52411e68834797c43a7cf4cf74e0a54ea37d09c869",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+      "source_sha256": "f1df6dde4d2aba248ff0ca926bd3bb8aff22ad180e16512aee31292de0cd42ad",
+      "reading_path": "reading/docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+      "reading_sha256": "9be39605695f5b62239b3f90f5c3ce0fc1bafdb15c27d07ca0849b57dfee712b",
+      "math_pairs_normalized": 18
+    },
+    {
+      "source": "docs/audits/target_c_pr952_component_anchor_stress_gain_destination_audit_2026-10-19.md",
+      "source_sha256": "863f6ec863db8285e3813118a7fc06f62d41d6b0dbf0aeee47d237a66d3ef390",
+      "reading_path": "reading/docs/audits/target_c_pr952_component_anchor_stress_gain_destination_audit_2026-10-19.md",
+      "reading_sha256": "566317991c694431168f2a27dc7cc0d340afde687be9d2645393f9b1d004de5f",
+      "math_pairs_normalized": 87
+    },
+    {
+      "source": "docs/audits/target_c_pr952_loaded_anchor_upper_box_independent_audit_2026-10-19.md",
+      "source_sha256": "28607516f5ffd04bbca104c6331973b336f6cc144b97c09672ce0f999f999511",
+      "reading_path": "reading/docs/audits/target_c_pr952_loaded_anchor_upper_box_independent_audit_2026-10-19.md",
+      "reading_sha256": "7131321eaa486ac63be767f70dc112cf129185cabce42b484a73a46ca9f9e2dc",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+      "source_sha256": "6289ec80954c7832d22a0ec7746b41632aa255938ee3f6f654cb7158dbca5423",
+      "reading_path": "reading/docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+      "reading_sha256": "811c52eca6d4317d7ba35a753105b8d46e7e4223a22c5c2d0ed72250408ac122",
+      "math_pairs_normalized": 6
     },
     {
       "source": "docs/audits/target_c_primitive_shell_leaf_forcing_promotion_2026-09-12.md",
@@ -2882,6 +3022,13 @@
       "math_pairs_normalized": 0
     },
     {
+      "source": "docs/reports/target_a_common_source_hall_overlap_2026_10_17.md",
+      "source_sha256": "4981d0f1c518fdf9c3c3a00afe3fd1fa6f3d797fc8a2482c8828df201c95eacb",
+      "reading_path": "reading/docs/reports/target_a_common_source_hall_overlap_2026_10_17.md",
+      "reading_sha256": "8172aa0d828ceb93dcaa34e244c4f746451caded11b16069388817ea80633ae3",
+      "math_pairs_normalized": 0
+    },
+    {
       "source": "docs/reports/target_a_contracted_contact_shield_hall_2026-09-04.md",
       "source_sha256": "9432d5c127259871743106117155c3875a554ce9c6cba070ca7b3990ae192e87",
       "reading_path": "reading/docs/reports/target_a_contracted_contact_shield_hall_2026-09-04.md",
@@ -2950,6 +3097,13 @@
       "reading_path": "reading/docs/reports/target_a_tube_only_cut_2026-09-08.md",
       "reading_sha256": "93e6f905a4850b0aa694eeec47a5b17e372f8a63769eaa2e3ff2db42607960d3",
       "math_pairs_normalized": 5
+    },
+    {
+      "source": "docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md",
+      "source_sha256": "3add910a66379a6ec6ea28dec3ff3e4ebc0358819930fe07e9854afbeda3378c",
+      "reading_path": "reading/docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md",
+      "reading_sha256": "fcdcb47640ff091c5b3f15f47d69e42e079cbd26d3df6ee2415537a053555f97",
+      "math_pairs_normalized": 66
     },
     {
       "source": "docs/reports/target_b_affine_boundary_shear_2026-09-25.md",
@@ -3097,6 +3251,13 @@
       "reading_path": "reading/docs/reports/target_b_trimmed_grid_phase_star_exclusion_2026-09-05.md",
       "reading_sha256": "8260e7410e2cab1b9f99808dd437c732f8083d6ee8e5019c8ff87fdf5e2f9679",
       "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md",
+      "source_sha256": "af2da1383d673ccfbaddd0f5d99cd30a83dcbd32807f3942553533d6b1d4838e",
+      "reading_path": "reading/docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md",
+      "reading_sha256": "33a809bf1d9edf839ce5bbcf7fb0d2f71a22dd503a27ea39e414b36cd6b834b0",
+      "math_pairs_normalized": 10
     },
     {
       "source": "docs/reports/target_b_two_max_phase_stability_exclusion_2026-09-05.md",
@@ -10506,9 +10667,9 @@
     },
     {
       "source": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
-      "source_sha256": "ca4abbf69861ee2c367bece626e3715eeaec03cdd837149453ca814d1d74eded",
+      "source_sha256": "da82d56bdcf33b89a3f99b741926782aefa29083a341af43ee2c95dcc6c1c50f",
       "reading_path": "reading/docs/research/tracks/target-c-midpoint-anchor-atlas.md",
-      "reading_sha256": "b181460c87ac2e6e07e7f57f9f24a6865abab92fa5036ab98d3a053c104ee9ba",
+      "reading_sha256": "4afb8aa156e6e829737cd56832b7f367a585fa0d5f0dd7145279ffdbea99aeab",
       "math_pairs_normalized": 11
     },
     {

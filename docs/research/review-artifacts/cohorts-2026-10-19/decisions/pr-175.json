@@ -1,0 +1,21 @@
+{
+  "number": 175,
+  "head": "45104cfa58c69551201475679ea35ec247a8d8f8",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "03b1d2817be2cd0b62a3aefa7c6c01de8a1f5159",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Read package; rigid-cycle pinned-stress correction is conditional on exact grounding hypotheses; the applications state those hypotheses, with finite controls only.",
+  "original_coverage": "Read package; rigid-cycle pinned-stress correction is conditional on exact grounding hypotheses; the applications state those hypotheses, with finite controls only.",
+  "remaining": "No source-wide stress extraction or canonical lifecycle change. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

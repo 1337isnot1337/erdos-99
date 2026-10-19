@@ -1,0 +1,115 @@
+{
+  "reviewer": "/root/review_c",
+  "reviewer_identity": "OpenAI Codex GPT-6 Luna xhigh",
+  "independent_of_originating_proof_and_checker_authors": true,
+  "review_type": "independent scoped review of the PR130 correction to its affine-colour-lift audit",
+  "evidence_complete": true,
+  "verdict": "accept_scoped",
+  "verdict_boundary": "The corrected affine-rank criterion, two-/three-colour consequences, and normalized metric endpoint implication are valid under the stated hypotheses. This is a scoped mathematical review only; it does not review the whole historical PR958 proof, establish the source-side colouring premise, authorize a merge, or promote a theorem.",
+  "repair_provenance": "Agent A identified the normalization inconsistency and supplied a repair; this reviewer independently reconstructed the amended rank and metric arguments from the exact amended text and source definitions, then ran separate exact finite controls. The repair origin is disclosed; no other reviewer's conclusion is used as the proof here.",
+  "objects": {
+    "pull_request": 130,
+    "assigned_original_head": "d44c691183ca3a789a6bedee05ff867220f440ca",
+    "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "amended_commit": "ee8f9df94a8a1043098482386bbbc6a893214330",
+    "amended_tree": "71881be5f594870350c2128c1b0d45d0e1dea4dc",
+    "amended_commit_parent": "e185b58bfffa27be92d4ec91d919f1aa4f939725",
+    "reviewed_claim": "For noncollinear finite planar P and t>0, the normalized lift (p_i,t z_c(i))/sqrt(1+t^2), with centered regular unit-edge simplex colors, has affine dimension at most two iff centered color columns lie in the centered source-plane span; exactly two used colors flatten iff their classes are distinct parallel level lines; exactly three used colors cannot flatten for n>=4. When the two-color condition and a proper contact coloring hold, a sufficiently small positive t preserves all pair lower bounds and strictly reduces the full-source diameter.",
+    "exact_commit_scope": [
+      "docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
+      "research-packages/e99-pass-20261018-homelab-10/README.md",
+      "research-packages/e99-pass-20261018-homelab-10/TASK.json"
+    ],
+    "other_commit_changes": [
+      "The correction commit also removes placeholder theorem-state frontmatter from the PR124 target-C audit and regenerates its reading view plus reading/manifest.json. These are outside the PR130 mathematical scope."
+    ]
+  },
+  "predecessor_assessment": {
+    "original_head_status": "The original PR130 audit used the unnormalized lift (p_i,t z_c(i)) while asserting a strict metric-descent consequence that requires normalized scaling. Its rank criterion remains valid because scalar normalization does not change affine rank, but the original metric implication was unsupported and fails on the exact rectangle control below.",
+    "correction_effect": "At ee8f9df the audit, README and TASK explicitly specify the normalized unit-edge lift. The audit now gives the same-colour and different-colour squared-distance formulas, the same-colour slack condition, and a strict diameter bound. The finite checker source is unchanged."
+  },
+  "hypotheses_and_scope": [
+    "P has n distinct points and affine span R^2, so rank(JP)=2, where J=I-11^T/n.",
+    "t>0; the simplex vertices used for distinct colours have pairwise distance one and are centered.",
+    "The three-colour rank statement assumes exactly three distinct simplex vertices are used; the two-colour characterization assumes exactly two nonempty classes.",
+    "The metric endpoint is conditional on a finite unit-separated source with diameter D>1, an actual proper contact colouring of every label (including isolates), and two colour classes lying on parallel lines so the prescribed lift is planarizable.",
+    "For the metric endpoint, choose t^2 below every same-colour noncontact slack d_ij^2-1; since the source is finite and the contact colouring is proper, each such slack is positive."
+  ],
+  "proof_reconstruction": {
+    "rank_criterion": "Let P be n×2 and Z be the n×(q-1) matrix of assigned simplex coordinates. The centered coordinate matrix of the normalized lift is (1/sqrt(1+t^2))[JP,tJZ]. The scalar factor does not change rank. Since rank(JP)=2 and t>0, rank([JP,tJZ])<=2 iff every column of JZ belongs to col(JP), equivalently JZ=JPA for some A. Removing centering gives Z=PA+1b^T, exactly an affine map on source points. Conversely that affine map gives the column inclusion and rank at most two.",
+    "two_colours": "With two distinct used simplex vertices, rank(JZ)=1, hence A in JZ=JPA has rank one because JP has full column rank. The associated affine map has parallel affine-line fibers, and the two color classes lie on distinct fibers. Conversely, two nonempty classes lying on distinct parallel lines are level sets of an affine scalar functional; an affine rescaling maps those two levels to the two simplex vertices. This includes a singleton class: its parallel fiber is distinct from the other class's line when the source is noncollinear.",
+    "three_colours": "Three used regular-simplex vertices are affinely independent, so rank(JZ)=2. Then rank(A)=2 and the associated affine map is injective. Each of the three color vertices has at most one source preimage, hence n<=3. At n=3 with all three colors used, the noncollinear source and the three simplex vertices each have centered span 1-perp in R^3, so the inclusion holds and the lift flattens. Thus for n>=4 this specified three-color lift cannot flatten.",
+    "normalized_metric_endpoint": "For a pair with source squared distance d^2, the normalized lifted squared distance is d^2/(1+t^2) for equal colors, and (d^2+t^2)/(1+t^2)=1+(d^2-1)/(1+t^2) for different colors. Properness puts every unit contact in different colors, where it remains exactly one. Different-color noncontacts stay strictly above one. Equal-color pairs are all noncontacts; choosing t^2<min_same(d^2-1) keeps them strictly above one. For all pairs d^2<=D^2, so new D'^2<= (D^2+t^2)/(1+t^2)<D^2 when D>1 and t>0. The rank result places the lifted labels in an affine plane; identifying that plane isometrically with R^2 preserves all computed distances."
+  },
+  "falsification_and_countercontrols": {
+    "unnormalized_rectangle": {
+      "evidence": "reviews/c-pr130-negative-control.py and reviews/c-pr130-rectangle-negative-control.json",
+      "source": "P={(0,0),(1,0),(0,2),(1,2)}, colors=(0,1,0,1), z_0=-1/2,z_1=1/2, t=1/2. The added color coordinate satisfies t z=x/2-1/4, so the unnormalized lift is already affine-flat of rank two.",
+      "normalized_result": "Source D^2=5 and same-color slack min=3. With t^2=1/4, the normalized pair squares are contacts 1, same-color vertical pairs 16/5, and cross-color diagonals 21/5. Thus minimum squared distance is 1 and D'^2=21/5<5.",
+      "unnormalized_result": "Equal-color distances stay unchanged; cross-color contacts change from squared distance 1 to 5/4 and diagonals from 5 to 21/4. Hence the unnormalized lift does not preserve contact lengths and increases the diameter; rank flattening alone cannot support the metric conclusion.",
+      "result": "Exact Fraction assertions pass; this is a countercontrol to the predecessor's unnormalized metric inference and a positive control for the corrected normalized endpoint."
+    },
+    "finite_rank_screen": "The amended exact package verifier checked all noncollinear 3-/4-point subsets of the 3x3 integer grid: 1,764 two-colour four-point assignments, of which 240 flatten, with rank iff parallel-level-line agreement; 456 surjective three-colour triples all flatten; and 4,536 surjective three-colour four-point assignments none flatten. This is a finite control, not the universal proof.",
+    "inherited_finite_endpoint_screen": "The frozen source checker passed exact full-source rational fixtures for square, rectangle, triangle and an isolate; centered-Gram ranks; square rank-three and affine-coloured rectangle rank-two lift controls; normalized planar endpoint checks; endpoint-only semantics; and rejection of diameter-only contraction. It does not test source global optimality."
+  },
+  "source_binding": {
+    "base_source_report": {
+      "path": "docs/reports/global_colouring_lift_and_planar_rank_barrier_2026-10-12.md",
+      "base_sha256": "ab1fc0f0d2cdd3b1f72b801a7b873d56f5db6bed68bfd231f29d88b5945538bc",
+      "matches_audit_pin": true,
+      "status": "Source report already states the normalized lift; its bytes are unchanged from the base through amended commit."
+    },
+    "frozen_source_checker": {
+      "path": "research/verify_global_colouring_lift_rank_2026_10_12.py",
+      "sha256": "c1099da22d605d61de95c987f576116985d9bea02a68517da26ec0ab65c63b72",
+      "matches_audit_pin": true,
+      "unchanged_from_original_head_to_amendment": true
+    },
+    "new_package_checker": {
+      "path": "research-packages/e99-pass-20261018-homelab-10/verify.py",
+      "sha256": "307a943442736010f4f66fee09f15cffca84159b657c6fafbaae6cd3750fbcd3",
+      "matches_SOURCES_json": true,
+      "unchanged_from_original_head_to_amendment": true
+    },
+    "other_pinned_source": {
+      "path": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+      "base_sha256": "d32fa3e8b2d267d28e2963f653671989aee7584c5e456ca5e3730a7d8fa0b90a",
+      "matches_audit_pin": true
+    },
+    "corrected_artifact_sha256": "638ae511c5976fadf526862c92ccf58ae2a85ade2d9ef74e232b31e9aca0da0e",
+    "amendment_diff": "PR130 math changes are confined to the destination audit, README and TASK statement; verify.py, VERIFY.json and SOURCES.json are unchanged from original PR130 head d44c691. Base source report, frozen checker and prior audit remain byte-identical. No theorem authority file (docs/STATE.md, docs/state/theorem-state.yaml, docs/research/priority-state.json) changes from e185b58 to ee8f9df."
+  },
+  "commands_and_results": [
+    {
+      "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-homelab-10/verify.py",
+      "result": "PASS, return code 0 in 0.316s; exact finite counts as above.",
+      "log": "reviews/c-pr130-run-logs/package_finite_screen.json"
+    },
+    {
+      "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python scripts/research_package.py --package research-packages/e99-pass-20261018-homelab-10 --check-only",
+      "result": "PASS metadata-valid, return code 0 in 0.065s; reports executed_commands=false and full_verified=false, so not counted as a replay.",
+      "log": "reviews/c-pr130-run-logs/package_check_only.json"
+    },
+    {
+      "command": "flock -n /home/cinna/.local/state/erdos99-host-compute.lock /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research/verify_global_colouring_lift_rank_2026_10_12.py",
+      "result": "PASS, return code 0 in 0.267s under single-threaded numerical-library environment; root-owned full suite was not waited on or claimed.",
+      "log": "reviews/c-pr130-source-checker.json"
+    },
+    {
+      "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python reviews/c-pr130-negative-control.py",
+      "result": "PASS exact Fraction assertions; normalized and unnormalized rectangle outcomes recorded above.",
+      "log": "reviews/c-pr130-rectangle-negative-control.json"
+    }
+  ],
+  "scientific_limitations": [
+    "The proof is for this specified affine color lift, not for arbitrary planar rearrangements.",
+    "The audit does not prove that any global minimizer has a proper two-colouring whose classes are parallel lines, and it does not establish a global minimizer or contradict D(n) for a concrete source.",
+    "The rank package's grid screen and the inherited finite checker are finite regressions only; they do not establish universal statements or source-side extraction.",
+    "The original broad historical PR958 claims, other routes, and all inherited premises were not re-audited here."
+  ],
+  "remaining_obligations": [
+    "Establish a source-derived proper two-colouring of every label, including isolates, with parallel classes for a relevant global minimizer, or construct another full-label planar endpoint preserving every lower and upper pair constraint.",
+    "Retain unreviewed/noncanonical lifecycle status; no theorem-state transaction or theorem promotion is supported by this correction review."
+  ],
+  "integration_scope_note": "The amended candidate/audit remains unreviewed and canonical=false; the corrected local proof does not close the E99 global bridge. Root owns any repository-wide replay and integration decision."
+}

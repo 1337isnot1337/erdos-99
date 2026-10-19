@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/targets/target-b/README.md",
+      "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+      "identity": "target-b-route-scope",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+      "identity": "section-50-retained-core-hypothesis",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+      "sha256": "a1ecda90c62bbe13b93a1c4091fb0ec333255a27014c6536a2b03d588608e5fb",
+      "identity": "pc1-positive-trim-hypotheses",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+      "sha256": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+      "identity": "audited-pc1-scope",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+      "sha256": "b8242aa0efaea70bc0bd02321785a14d19779a11eef3d13efc487a4ecc6e7179",
+      "identity": "predecessor-shared-interface-formula",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/review-artifacts/merge-2026-10-18/review-b.txt",
+      "sha256": "23cac8d0f93e1b994a852ae9a0a5a62c25eb309be9fdf3264212e178651461cf",
+      "identity": "agent-review-of-pr86-predecessor",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-macbook-20261019T054318Z-16/verify.py",
+      "sha256": "0a78c95fd1d61938100d05f2ee46e5432e2b1cfed1d27d1fbc6184a46409c8d4",
+      "identity": "independent-rational-l-patch-and-mask-enumerator",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}

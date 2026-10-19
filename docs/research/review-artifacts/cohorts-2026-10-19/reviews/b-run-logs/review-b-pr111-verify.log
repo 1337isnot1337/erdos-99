@@ -1,0 +1,41 @@
+{
+  "contact_isolates_before_deletion": [
+    "q"
+  ],
+  "deleted_source_actual_old_D_pairs": [],
+  "deleted_source_pair_count": 45,
+  "new_D_prime_squared": "3673/50",
+  "new_D_prime_strictly_below_old_D": true,
+  "new_actual_D_prime_pairs": [
+    "p9-q"
+  ],
+  "old_D_pairs_removed": [
+    "p0-p9"
+  ],
+  "source_D_squared": "81",
+  "source_actual_D_pairs": [
+    "p0-p9"
+  ],
+  "source_contacts": 9,
+  "source_label_count": 11,
+  "source_pair_count": 55,
+  "stress_affine_dimension": 0,
+  "stress_beta_09": "1",
+  "stress_deletion_R": [
+    "p0"
+  ],
+  "stress_each_alpha": "9",
+  "strict_restored_contact_isolates": [
+    "q",
+    "r"
+  ],
+  "strict_restored_contacts": 8,
+  "strict_restored_pair_count": 55,
+  "supplied_W": [
+    "p0"
+  ],
+  "weak_restore_contacts": 9,
+  "weak_restore_old_D_pairs": [
+    "p0-p9"
+  ]
+}

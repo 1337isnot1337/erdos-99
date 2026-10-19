@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-homelab-03",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For a nonempty normalized nonnegative KKT stress polytope, choose one stress positive on exactly the union of stress-reachable actual diameter edges. On the two-cut slab, positive-support flux gives a sign table only for that support; a full one-sign escape follows only if every structurally zero moving actual diameter has the shortening sign.",
+    "domain": "Finite source conditional on the fixed-star complete O-O rectangle, open witness cell, two distinct train phases, positive cut contact masses, exact contact-preserving block transposition, and the predecessor non-grazing estimate for every moving actual diameter.",
+    "limitations": "No source extraction, no sign theorem for structurally zero moving rows, no all-pair endpoint, no global-minimizer family, and no canonical promotion."
+  },
+  "result": "Exact support-aware conditional fork; zero-support adverse rows remain a separate full-graph obstruction.",
+  "remaining_questions": [
+    "Derive the sign of every structurally zero moving actual diameter from canonical source geometry, or exhibit a source-realized adverse row with the complete lower/upper pair ledger."
+  ]
+}

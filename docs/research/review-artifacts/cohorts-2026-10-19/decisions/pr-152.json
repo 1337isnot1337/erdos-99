@@ -1,0 +1,21 @@
+{
+  "number": 152,
+  "head": "c53c1b2ee5a3480f9f06304c519df9ac6e7784d1",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "dcded3b499d9862ada59057ef96d9c18784e33f7",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "For every m>=7, a moving-wall rectangular endpoint with one exterior guard row has (m+1)(m+2) labels, all-pairs bounds and zero safe insertion capacity; Oler slack is quadratic.",
+  "original_coverage": "For every m>=7, a moving-wall rectangular endpoint with one exterior guard row has (m+1)(m+2) labels, all-pairs bounds and zero safe insertion capacity; Oler slack is quadratic.",
+  "remaining": " The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/b-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

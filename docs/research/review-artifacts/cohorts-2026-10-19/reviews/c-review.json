@@ -1,0 +1,1614 @@
+{
+  "reviewer": "review_c",
+  "reviewer_identity": "/root/review_c, GPT-6 Luna xhigh",
+  "independent_of_originating_proof_and_checker_authors": true,
+  "review_context": {
+    "worktree": "/home/cinna/.local/state/erdos99-merge/20261019/review-c",
+    "assigned_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "historical_proof_scope": "Exact-head intake and scoped contribution review. Archive acceptance means metadata/provenance/scope intake and no known objection; it is not a full historical proof audit. Direct audit reports were reviewed as scoped evidence and remain unreviewed/noncanonical; no theorem is promoted.",
+    "integration_metadata_repins": "reviews/c-repin-checks.json: C-assignment package pins checked against old bytes, designated new metadata bytes, and integration tree 173b3dd14fa784f65f80bb9485b0f72ed1a36916; 16/16 match. Root reports the later 18-pin manifest from 8bc3 to 2d5aa36 as metadata-only with no proof changes; not independently replayed here.",
+    "generated_views": "reviews/c-generated-view-audit.json: all eight generated reading views corresponding to assigned audit reports match their manifests and source-hash header; #139 audit report has no generated reading-view entry. All indexed reports remain unreviewed and canonical=false.",
+    "correction_review_147": "reviews/c-correction-review.json: corrected package at integration checkpoint 173b3dd... independently reconstructs exact hull turns, hull and PC1 ledger, and replays exact verifier.",
+    "root_repair_153": "Original assigned #153 remains hold; correction commit 2d5aa36f01ac131b791b9b6a745e8c963f4a363c fixes wording/hypothesis scope and references frozen source/checker. Reviewer B owns amended-head independent audit; no corrected-head acceptance is claimed here.",
+    "final_metadata_repin_review": "reviews/c-final-repin-review.json: all 18 rows authenticate old 8bc candidate-registry hash, new 2d5 hash, final e185 hash, and corresponding current package SOURCES records. Between 2d5 and final e185 only those 18 SOURCES files change. The 173b-to-2d5 interval includes previously reported #153/#156 scientific scope corrections and is not mislabeled metadata-only."
+  },
+  "evidence_complete": true,
+  "review_count": 26,
+  "reviews": [
+    {
+      "number": 105,
+      "title": "Target C: independent audit of dominant-pentagon through-splicing",
+      "head": "2c0968543d732a73a6f7a7bb8d192a1c1b10438e",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "1b39b8c9e02c07fdcddefd08f8ccbb05dcc20d50",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "fbfc312ba70a61f371fe2cc0388ce74f8ad589c6",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "766000be3275976911cba96e2ace8ea5d955390b",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "eb04934c4c6f9fac03cab169c3ddc6fda46477c9",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "0a27ad376d873c370a717c73d6f43f63583c0d2a",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read README/TASK/VERIFY/SOURCES/checker; metadata/source pins valid. Proof is explicitly conditional through-splicing with full-core Type-II hypotheses; no source extraction, finite global closure, or theorem promotion.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-1.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "No canonical promotion; prove source-level extraction and full-source bridge separately.",
+      "remaining_obligations": "No canonical promotion; prove source-level extraction and full-source bridge separately."
+    },
+    {
+      "number": 108,
+      "title": "Target C: independent audit of PR #950 return quantile",
+      "head": "7bc8336ea20af407359358ae3c90bba1954ca665",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 4,
+        "github_inventory_count": 4,
+        "actual_diff_count": 4,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "docs/audits/target_c_pr950_positive_return_quantile_destination_audit_2026-10-18.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "8dd3d8273917957b7128d538f9fdaf7ab344b827",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "84aa2c2eb91b78fea63b4907e1bb9b07fe4ee8c8",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/docs/audits/target_c_pr950_positive_return_quantile_destination_audit_2026-10-18.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "d7e1e913db62bbe1b0bdfc9e2c0c6358a43ecd25",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/manifest.json",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "23720be65afab95eb5dd741e325135e0c3413be5",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "destination audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Reviewed exact report scope, hypotheses, dependencies, conclusion, and lifecycle: positive-return quantile follows from its named canonical inputs; it excludes common-grid/attachment and retains candidate as unreviewed.",
+      "checks_and_logs": [
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json",
+        "reviews/c-generated-view-audit.json",
+        "reviews/c-scoped-proof-audits.json"
+      ],
+      "scientific_limitations": "Next: common-grid access/attachment and endpoint-safe competitor remain separate.",
+      "remaining_obligations": "Next: common-grid access/attachment and endpoint-safe competitor remain separate."
+    },
+    {
+      "number": 109,
+      "title": "research: propagate 0.0071 through Section 171 and outer-energy branches",
+      "head": "a1efbcf5f8441dbacee06cf9e53535d9ddc40ccd",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-pass-20261018-local-07/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "01739115897d91f9af77f7c4aeeca730018110f9",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-07/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "fdfc63d532020f3c1a5639603b202ef684b42b44",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-07/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "2041212cebdf76c5e56f216894c4587507e65702",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-07/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "4870138108f4edc671223b98a57b82f8c59a1e52",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-07/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "1def3591b4f9567f25955d62786e6ba251098571",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read all package files; conditional propagation at exact t=t0, no finite/global claim. Metadata/source pins valid.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-1.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "Source selection and uniform/global quantifiers remain unresolved.",
+      "remaining_obligations": "Source selection and uniform/global quantifiers remain unresolved."
+    },
+    {
+      "number": 110,
+      "title": "Target C: independently audit supplied slow-chart port exclusion",
+      "head": "3fc35647bf49de836dfc379b46fbbc604cb971fe",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-12/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "761b6f89c7dcf691489e127f5a7009b7df5f3ec6",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-12/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "323f7930ce75f03a64546c85915d69a8d21822ab",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-12/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "7b17d99366f4b73775b46defbbcaed8d7d85cdf8",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-12/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "eb282806371da5301ea6fef8fa14d282d0e5039d",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-12/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "05ed0bac078dcacdaeba79d0597ecaa072074801",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read all package files; slow-chart port exclusion conditional on supplied fixed atlas; no atlas extraction. Arithmetic verifier scope is finite exponent arithmetic only.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-1.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "Extract source atlas or prove a separate source-wide bridge; candidate stays unreviewed.",
+      "remaining_obligations": "Extract source atlas or prove a separate source-wide bridge; candidate stays unreviewed."
+    },
+    {
+      "number": 112,
+      "title": "Independent conditional audit of PR #950 endpoint-inclusive cut",
+      "head": "fd02d4d36b1953a217680d889ce830f894a41096",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-pass-20261018-local-14/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "9e4b9277cfb3e643b4d04857ead7ad9b5851f442",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-14/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "2b16d9fd608a1194a3676be49b288122b63a83fd",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-14/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "3542f637235d011802eace0283debba6710c7fdb",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-14/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "55e0fdc0ce50fd540a39514ca8e6c1cb4e1cc095",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-14/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "58ed0fa4e7014ead3a99266c71d6963670f8cd43",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read all package files; endpoint-inclusive cut audit has explicit brace/Menger premises, and its finite 21-grid control is not a universal theorem.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-1.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "Source-level endpoint/competitor obligation remains open.",
+      "remaining_obligations": "Source-level endpoint/competitor obligation remains open."
+    },
+    {
+      "number": 113,
+      "title": "Target C: audit all-edge midpoint moment transfer",
+      "head": "81de74d4ba5099c8572c1c76f6c28ac80d9c642a",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-11/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "f87b6dc0d5541909572f9e5f6739a76f3bc1711f",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-11/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "12081aec3755fe94acf52758f835d3d722375abb",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-11/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "8d66842d439cb67a247708080e96282394eb6c36",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-11/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "3e64b8d20656c3d451263b35d95a0d897db03946",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-11/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "c496f6a1b8f76a69467e0c3dc7a58c99c4622fd9",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read all package files; all-edge midpoint moment transfer is conditional on straight-line thrackle/Woodall inputs, distinct from a stress-graph bound.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-1.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "Upstream midpoint-tail/source extraction bridge remains separate.",
+      "remaining_obligations": "Upstream midpoint-tail/source extraction bridge remains separate."
+    },
+    {
+      "number": 119,
+      "title": "Independent audit: PR950 unloaded rigidity brace under C-ZRF",
+      "head": "b321833ec6a10a1a47fee5c717c6b2d2e4752f7d",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 4,
+        "github_inventory_count": 4,
+        "actual_diff_count": 4,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "bc9ffc399e4489edddf920463cc2341098d85853",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "fdee85ae11b1087735f5f84e3f56412ed74c6e5d",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "7f7099c5fde0520257ea7d51f79a48ae8a0b3ed4",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/manifest.json",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "2662488afdae70a20da7aaa397316660a8466bb5",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "destination audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Reviewed report scope and exact conditional dependency on C-ZRF; unloaded rigidity brace does not imply candidate promotion or source-wide closure.",
+      "checks_and_logs": [
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json",
+        "reviews/c-generated-view-audit.json",
+        "reviews/c-scoped-proof-audits.json"
+      ],
+      "scientific_limitations": "Candidate remains unreviewed; source extraction and later endpoint lemma remain.",
+      "remaining_obligations": "Candidate remains unreviewed; source extraction and later endpoint lemma remain."
+    },
+    {
+      "number": 134,
+      "title": "Target B: independent audit of PR 103 determinant payment",
+      "head": "6171ec66dfce3ea696a412e3a37bcf7440732088",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-05/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "7d6889692628a1fb54e322b1a264f056db78470a",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-05/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "5d5b023ad0e5251201e45da7f41867ddd5a964e4",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-05/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "e6923dd261134c96ce61fb92aecda4a43cf01692",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-05/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "22db847985b1cac59beb630fd65b45cfc4d3385e",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-05/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "1ec9e563cc767d7860e78aac19eb8a2e01f1756c",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read all package files; determinant-payment statement is conditional. Pinned source report identified at exact source commit; no source-wide payment/geometry conclusion.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-1.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "No source extraction, finite competitor, or canonical promotion.",
+      "remaining_obligations": "No source extraction, finite competitor, or canonical promotion."
+    },
+    {
+      "number": 139,
+      "title": "Audit Target C near-diameter pair localization on destination main",
+      "head": "c0043e3fb9c75b405e75fa462d5c9f2d1a7f1e85",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 4,
+        "github_inventory_count": 4,
+        "actual_diff_count": 4,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "docs/audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "4ac98647466f92d6a5ba4ea00bc7b21dfb8c19d7",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "2a2ab8f08a73ea51966cdd3424a69766cecc2003",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "ed4d2c0167d1880fcd22872db1e9e6dc25525c77",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/targets/target-c/candidate-registry.json",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "d697b4fcd88e650565866c97ab20d27b248ecb3a",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "audit plus registry/track update",
+      "disposition": "accept_scoped",
+      "coverage": "Original assigned head c0043e3 contained the destination report plus candidate/track/artifact edits; direct algebra checked at exact head: from |h'|<6D^(2/3), integrating along a support tilt gives |h(u)-h(v)| <= 6D^(2/3)|u-v| and then the audit’s midpoint-normal localization bound under its stated bounded-cap/near-diameter hypotheses. Candidate remained unreviewed/noncanonical. The original registry next-obligation wording was independently reconciled later at integration 8bc3d8f: PASS at s=0,2 is recorded while candidate lifecycle stays unreviewed and source-realized movement remains open.",
+      "checks_and_logs": [
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json",
+        "reviews/c-generated-view-audit.json",
+        "reviews/c-scoped-proof-audits.json"
+      ],
+      "scientific_limitations": "Original-head result is only the stated support-energy localization conditional on the supplied pair/support hypotheses; it does not establish an actual source move or endpoint/global-minimum contradiction. Separately, integration reconciliation at 8bc3d8f corrected the PR124 candidate next-obligation wording without changing its unreviewed, noncanonical status.",
+      "remaining_obligations": "Still needed: a source-realized move or other endpoint satisfying all lower/upper pair constraints and closing the global-minimum contradiction. Registry wording reconciliation is complete at integration 8bc3d8f; it is not evidence of canonical promotion."
+    },
+    {
+      "number": 153,
+      "title": "Audit PR #952 unequal-height floor closure on destination main",
+      "head": "0b3f19b643387da8ea3f583945d1fef220e30b02",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 6,
+        "github_inventory_count": 6,
+        "actual_diff_count": 6,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-11/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "3bd6feda489e4cad05d9222b676d6bdd4ac2fea7",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-11/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "005a355ee9907d3e941ed90de1e35954fdf0d2ee",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-11/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "4a076378b3db428a112f29252997b45b153566d5",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-11/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "4a7ba23cb75137c60fd0c2f8d15a69c3bf0d2b98",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-11/pinned-replay.jsonl",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "b9ab168021b2ea6592777748bc633bc449c4a57a",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-11/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "43155944d4d97658815ee23ad05b673c82b01cb9",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional package; repair required",
+      "disposition": "hold",
+      "coverage": "Read README/TASK/VERIFY/SOURCES and checker. Strict-floor algebra is inconsistent as assigned: prose defines r moving-to-fixed while the formula r+s_i v, slack s_i(s_i+2r·v), and floor max(0,-2r·v) require r=moving-minus-fixed. Exact 1D countercontrol: x_moving=0, y_fixed=1, v=+1; stated r=+1 gives F=0, so s=1/2 is admitted although actual distance becomes 1/2 (squared slack -3/4). The package verifier only checks captured replay bytes, not orientation algebra.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-2.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "Publish a scoped erratum reversing orientation wording to moving-minus-fixed (or consistently negate formula/floor), preserve frozen source bytes, update coverage/checker description, and independently recheck amended exact scope before acceptance.",
+      "remaining_obligations": "Publish a scoped erratum reversing orientation wording to moving-minus-fixed (or consistently negate formula/floor), preserve frozen source bytes, update coverage/checker description, and independently recheck amended exact scope before acceptance.",
+      "repair_required": "Original assigned head 0b3f19b has a sign convention contradiction. Root reports correction commit 2d5aa36f01ac131b791b9b6a745e8c963f4a363c with explicit orientation correction and conditional scope; reviewer B owns amended-head audit. Original #153 stays hold until that independent correction review resolves it.",
+      "repair_reference": {
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+        "reviewer": "review_b",
+        "status": "amended head pending independent review"
+      }
+    },
+    {
+      "number": 156,
+      "title": "Destination audit: PR #956 boundary-zigzag linear reserve",
+      "head": "b347d8c3cd1f3dd554874d971386481f244e0787",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-13/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "27c190da640f4a86afb483151f325356621d85e9",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-13/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "8d7ab4e23151fcd4cfccafa9fd1fa8b17560e624",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-13/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "c7d72aee35d081533af1441bcaae7ec0ec4c6b23",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-13/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "87c8ca16be3a0f8e3411aebb122a77dc90147160",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-13/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "10ad3307586f910a0179e2ab2396da69ed40edf1",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional package; repair required",
+      "disposition": "hold",
+      "coverage": "Read original README/TASK/VERIFY/SOURCES/checker. Averaging gives existence of a translate with count at least mean; it does not give that bound for every translate. Original task/README overstate absolute reserve for each translate. Per-translate row-gain result can remain. Parent reports amendment 07c727b narrows statement to existence of averaging-selected translate; amended complete contribution reviewed by reviewer A, not counted as this exact-head review.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-2.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "Replace original assigned head with amended exact head or issue source-bound erratum consistently narrowing README, TASK.scope and VERIFY.domain to existence of the selected translate; keep row-gain statement distinct; re-audit amended contribution.",
+      "remaining_obligations": "Replace original assigned head with amended exact head or issue source-bound erratum consistently narrowing README, TASK.scope and VERIFY.domain to existence of the selected translate; keep row-gain statement distinct; re-audit amended contribution.",
+      "repair_required": "Original assigned head b347d8c overstates an averaging argument as a per-translate absolute reserve. Root reports narrowed amendment 07c727b4dd454bf1e295d5b6498ca9aad19547cc; reviewer A owns amended contribution review. Original #156 remains hold.",
+      "repair_reference": {
+        "commit": "07c727b4dd454bf1e295d5b6498ca9aad19547cc",
+        "reviewer": "review_a",
+        "status": "amended contribution review reported; original head remains repair-required"
+      }
+    },
+    {
+      "number": 157,
+      "title": "Independent audit: Target C inclusive-floor locked release",
+      "head": "58229f8218d1a0c48c7b1981b9e6cde47cfb0bd8",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 4,
+        "github_inventory_count": 4,
+        "actual_diff_count": 4,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "2d9c9c30768c422dd9b006e3b01e634f2fe53acb",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "d1e1b1bf5b9b26c8b67dbc3452f10fd19ed6bb9e",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "428cce1aacb04d2d3ff89af00d49326725c88b58",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/manifest.json",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "7a7d55e9678b7adf5db67f900d7e09a79cdb81f7",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "destination audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Reviewed exact audit scope and conditional inclusive-floor closure. The report separates floor equality from strict-floor route; canonical candidates remain unreviewed.",
+      "checks_and_logs": [
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json",
+        "reviews/c-generated-view-audit.json",
+        "reviews/c-scoped-proof-audits.json"
+      ],
+      "scientific_limitations": "No extraction/noncollapse theorem; lifecycle unchanged.",
+      "remaining_obligations": "No extraction/noncollapse theorem; lifecycle unchanged."
+    },
+    {
+      "number": 158,
+      "title": "Audit Target C diameter midpoint tails at destination main",
+      "head": "44743498eb0bd669e3198d93356ae8c5e9dc0d59",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-05/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "f2a5885c7e644c898280b98c36cac39b52a30c78",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-05/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "c15f30897f49a825a8937544627353fbf10e3e67",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-05/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "ab6a671fd302d08f833eff2ee6e7a660856c988e",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-05/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "65abc9f84dac12fac5d2bf04a25be2ef5c5a2209",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-05/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "c417f534e13f3f80d436e114fd6ad09922aed8ad",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read package files; midpoint-tail result uses scale-sensitive angular window a/(2D) and explicitly remains conditional on C-FS premises; it does not imply stress-weighted bounds.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-2.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "Source-family extraction and stress-weighted bound remain open.",
+      "remaining_obligations": "Source-family extraction and stress-weighted bound remain open."
+    },
+    {
+      "number": 159,
+      "title": "Audit PR #960 factor graph alternative at destination head",
+      "head": "277d2d021e8268d90869a09945ac69b04bc18cc2",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 4,
+        "github_inventory_count": 4,
+        "actual_diff_count": 4,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "50610415913dce092ef56890e8ad6acce8e7c0ad",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "85ed7f40423e5e7e354d576348ee447be9b0931c",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "13b25fe9cb9943bab238dc40d3911cdbda5f123c",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/manifest.json",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "7094d7d0d5353a2f9de271d888e463a628afddd2",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "destination audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Read complete graph-dichotomy report: alternating cycle yields balanced incidence weights; acyclic case gives half-integral separator, and finite strict inactive margins permit a source-specific small factor perturbation. Complete pair array is required. Report includes planar six-point counterexample showing array may have Gram rank 3; no planar embedding/source-wide conclusion.",
+      "checks_and_logs": [
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json",
+        "reviews/c-generated-view-audit.json",
+        "reviews/c-scoped-proof-audits.json"
+      ],
+      "scientific_limitations": "Planar same-cardinality full-source bridge remains open; no promotion.",
+      "remaining_obligations": "Planar same-cardinality full-source bridge remains open; no promotion."
+    },
+    {
+      "number": 161,
+      "title": "Audit target C one-pin near-triangular plateau at destination main",
+      "head": "3d816bec313a9f2bd303a958622d4128276e8685",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-05/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "b0a148c2035c88bffad208dfe06c60a8ac7c71bb",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-05/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "017f084ce58b2fd53cf313751b3c47dab2d86be8",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-05/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "735bae3e58760cfac9415c7a17c6f6c6779a85c4",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-05/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "05ecd858b37145a8c3b71a333fc67fc8e9c8e7e6",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-05/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "971d0a2aceac8ceda137748057d155f5effbf730",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional fixed-frame archive",
+      "disposition": "accept_archive",
+      "coverage": "Read package README proof/reproduction scope: fixed (m,n), frame-dependent epsilon; Groemer equality and restored-pin displacement gap yield weak upper bound, canonical strict refill supplies lower bound. No uniform wall interval, moved wall, outside sites, or source extraction.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-2.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "Global C-II source extraction and moved-wall/outside capacity remain unresolved.",
+      "remaining_obligations": "Global C-II source extraction and moved-wall/outside capacity remain unresolved."
+    },
+    {
+      "number": 162,
+      "title": "Independent destination audit of PR #947 inverse-phase face-tail correction",
+      "head": "456ecf76c17bbf9486601d5268d7c7d82854ee74",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 6,
+        "github_inventory_count": 6,
+        "actual_diff_count": 6,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-06/AUDIT.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "fba433f6a4bbb5d8a1cf614408e9bda31ac6f78d",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-06/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "e351dd533ba155c37a15a8acefb9fd70ae8c4bc2",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-06/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "13eb2654bb0570b14eefcae73305faed511224c0",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-06/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "f7b91444faaba0196e94207fb8c81e901932b5f7",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-06/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "b9ec86603fb82d973575fdced7197a97ff856629",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-06/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "3e76527916bf6d79e5479c43d8a2f218a277837f",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read package AUDIT/TASK/VERIFY/SOURCES. Inverse-phase corrected sequence exclusion is conditional on unextracted global hypotheses; finite controls do not prove universal source closure.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-2.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "Unextracted source hypotheses and full global endpoint remain.",
+      "remaining_obligations": "Unextracted source hypotheses and full global endpoint remain."
+    },
+    {
+      "number": 163,
+      "title": "Conditional audit of PR950 attachment-grid linkage",
+      "head": "70eac9a6eba9cc2c254c44ae0e72058d88a6d75c",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 6,
+        "github_inventory_count": 6,
+        "actual_diff_count": 6,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-07/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "fa8d5ff66edbf0ce76aab6dbc69b5fbd3bc5bbac",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-07/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "9e0e4204aeaf8c10ae5bcc26aefc3f3bbf7d9a79",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-07/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "bc2c334d9b1f63bea547157ce2871fa9cffd3ddf",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-07/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "e20ec32970b57ff519f5e7f3eb5881d122ced9c1",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-07/evidence.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "ec0f518763baf10b9683db6b5044e771e5224bd3",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-07/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "58ed0fa4e7014ead3a99266c71d6963670f8cd43",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read package files; common-grid access conditionally derives coherent grid reach from a linear return family and canonical-cell hypotheses. It explicitly claims no overlap/congestion/payment/source motion and depends on unreviewed PR108 candidate.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-2.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "PR108 is not canonical; no endpoint-safe competitor/source extraction.",
+      "remaining_obligations": "PR108 is not canonical; no endpoint-safe competitor/source extraction."
+    },
+    {
+      "number": 166,
+      "title": "Audit destination one-contact approximation proof (PR #955)",
+      "head": "62fcdcf8dc869dc7a59eb9665035222c5b2cf7db",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-12/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "aaaec3cee145890362f0f3419c6e2b71ae3c0757",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-12/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "6b5d7aec4efea0a3d2b5eb7cd358820923e6af60",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-12/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "d373f19d49e3e5e27b4dae71b48c626b7acbb65b",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-12/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "1666d3bc7e5ed767ae81c560d3a6901e9a8b1fc4",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-12/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "074040c8f52e24b8d5042a51fb7d6ed33ed538b3",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read one-contact proof audit package: pinch/dilate preserves labels and unit separation, compactness/restricted infimum equivalence and exactly-one-contact descent are scoped correctly. n=8 consequence is explicitly conditional on external Bezdek–Fodor D(8) premise; no eventual nonattainment follows.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-2.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "Classify arbitrary multi-contact canonical minimizers or prove eventual nonattainment; no Level I closure.",
+      "remaining_obligations": "Classify arbitrary multi-contact canonical minimizers or prove eventual nonattainment; no Level I closure."
+    },
+    {
+      "number": 169,
+      "title": "Independent destination audit: PR #955 annular matching candidate",
+      "head": "1481fb372734f583177541260c49bd7671e8fc35",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-12/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "e8c9085a4e5a6801366a77ec7f7c44d57758e74f",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-12/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "8dccbeb8841241d4ee93bf944f1d2f3eac2e304b",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-12/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "4a7aa991b95c4467085a037b7333330f69e71ddc",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-12/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "3220356a85f6ec8fd9d74d91513c948f30fe8f57",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-12/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "4153f72047c931fdc75b24c764ab80e9e0e39935",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read package proof: strict-sub-D vertex-cover reduction, wedge removal, annular error, and lattice refinement stay conditional; no claimed candidate extraction from canonical source.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-2.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "Canonical source extraction/bridge remains open.",
+      "remaining_obligations": "Canonical source extraction/bridge remains open."
+    },
+    {
+      "number": 173,
+      "title": "Independent audit: PR #950 Type-II common-grid access",
+      "head": "2170444e326e08d462b77f69d87c5b12124c243b",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-06/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "b6718265452239d95e54101f29f4bc439811f120",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-06/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "51d943e1f0c768110e83e628b679ff744acc5d5d",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-06/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "3f599de392b62a275704d4e37e9e463296c2322d",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-06/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "2067c80410758fd65ddbe02a5b7a550a11be8f62",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-06/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "8c0c2477ebc3afb5a9ce5a27508f32d8f9ff5ba8",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read package; common-grid access result conditional on unreviewed same-component return-quantile family. Derivation concerns coherent-cell count and does not prove routes are disjoint or supply a finite move.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-2.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "Dependency candidate remains unreviewed; no endpoint/overlap/competitor closure.",
+      "remaining_obligations": "Dependency candidate remains unreviewed; no endpoint/overlap/competitor closure."
+    },
+    {
+      "number": 174,
+      "title": "Independent destination audit: PR #948 deep-face persistence and isolate deficit",
+      "head": "91f3d847a2d9e46d29bfa75d9a6a75c4e733ddf6",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-07/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "1254776cdf24021995f4c491ad930ebf786d3d8b",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-07/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "776ac5bfe68fb81e8bc7e018af16a72255f092bc",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-07/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "edb6a9b533d0058f1cc84f98549b42382a0afdfd",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-07/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "1f303680ee8fe058e43481709329d79de677e33b",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-07/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "c6d53c282230e12f9f0301adbdb82e373566381b",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read package; deep-face persistence/isolate-deficit claim keeps explicit min-|H| tie-break and full-source boundary image hypotheses. Finite checks are controls only.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-2.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "No all-source extraction or endpoint closure.",
+      "remaining_obligations": "No all-source extraction or endpoint closure."
+    },
+    {
+      "number": 175,
+      "title": "Independent audit: destination PR #948 rigid-cycle pinned stress",
+      "head": "45104cfa58c69551201475679ea35ec247a8d8f8",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 5,
+        "github_inventory_count": 5,
+        "actual_diff_count": 5,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-08/README.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "50b9545839bf73c4f67c4704484bff3516379b27",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-08/SOURCES.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "030754f5ce2547a41a5012f9afd5a846a4707ab0",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-08/TASK.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "1f3a399508bfc4b0cf0f2281d6ee837444eaf40d",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-08/VERIFY.json",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "2599af11dcf9cd025b25c86ed902236d79bc0a1a",
+            "mode": "100644"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-08/verify.py",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "ea575c2363a727340120bbda670c95ab444d729a",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "conditional archive",
+      "disposition": "accept_archive",
+      "coverage": "Read package; rigid-cycle pinned-stress correction is conditional on exact grounding hypotheses; the applications state those hypotheses, with finite controls only.",
+      "checks_and_logs": [
+        "reviews/c-package-checks-2.json",
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json"
+      ],
+      "scientific_limitations": "No source-wide stress extraction or canonical lifecycle change.",
+      "remaining_obligations": "No source-wide stress extraction or canonical lifecycle change."
+    },
+    {
+      "number": 177,
+      "title": "Independent destination audit of PR #952 loaded-anchor upper box",
+      "head": "3eb24c410dc7a207992aab80fff26a2ddba13d28",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 4,
+        "github_inventory_count": 4,
+        "actual_diff_count": 4,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "docs/audits/target_c_pr952_loaded_anchor_upper_box_independent_audit_2026-10-19.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "13734359d5bf38c7b700f767c709929c689a7965",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "d70b646a9c92f5a79689c6817aea864513ee4713",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/docs/audits/target_c_pr952_loaded_anchor_upper_box_independent_audit_2026-10-19.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "a5a215050203991d2e7e546fadaa772ea9cc3ba2",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/manifest.json",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "130a9270c8a453cd935a2cfe64c195436a351dfd",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "destination audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Reviewed exact scope and report reconstruction: supplied loaded-anchor upper-box hypotheses imply its stated upper safety/count; report does not derive anchor family from all canonical C-II sources and does not prove lower closure/source endpoint.",
+      "checks_and_logs": [
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json",
+        "reviews/c-generated-view-audit.json",
+        "reviews/c-scoped-proof-audits.json"
+      ],
+      "scientific_limitations": "Exact remaining lemma is source-wide family extraction and full-source lower/upper feasible endpoint.",
+      "remaining_obligations": "Exact remaining lemma is source-wide family extraction and full-source lower/upper feasible endpoint."
+    },
+    {
+      "number": 178,
+      "title": "Independent destination audit of global factor-balance obstruction",
+      "head": "c020c941f1d86cd174164950134ac1f3c9d05a96",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 4,
+        "github_inventory_count": 4,
+        "actual_diff_count": 4,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "docs/audits/global_factor_balance_obstruction_destination_independent_audit_2026-10-19.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "3d585983814cff43bfe6a9f11eac5d98f401f84a",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "fec7886b1d96d9d009b60fffaddbec3f7d3d8936",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/docs/audits/global_factor_balance_obstruction_destination_independent_audit_2026-10-19.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "f6a32889a17b209833063f1c4d79f972f000890c",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/manifest.json",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "5c794a9bbb8d8775daa9cae8dc922519fd9d2d3b",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "destination audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Reviewed exact conditional factor-balance obstruction statement, full-pair scope, and lifecycle; logged weighted identities obstruct separable factor improvement, while convex-hull alternative is only formal array/convex statement. It does not realize an array as planar coordinates or source competitor.",
+      "checks_and_logs": [
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json",
+        "reviews/c-generated-view-audit.json",
+        "reviews/c-scoped-proof-audits.json"
+      ],
+      "scientific_limitations": "Planar source realization/full-source competitor remains open.",
+      "remaining_obligations": "Planar source realization/full-source competitor remains open."
+    },
+    {
+      "number": 179,
+      "title": "Independent destination audit of PR #952 component anchoring",
+      "head": "48eb6a6caabbf97d4bc681d4a8c2bdd674bfd802",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 4,
+        "github_inventory_count": 4,
+        "actual_diff_count": 4,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "docs/audits/target_c_pr952_component_anchor_stress_gain_destination_audit_2026-10-19.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "5f96c51359029a6d784f0dd6a893b42ab9e7bcc0",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "3c6dedad44d6cd35d4d1a3ea1ad14227c268a615",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/docs/audits/target_c_pr952_component_anchor_stress_gain_destination_audit_2026-10-19.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "6827b7818eec13532cd81455427a19ce2d720ca9",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/manifest.json",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "e6fb2233068e1d36ad4d1cc7c7e753911bb398ae",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "destination audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Reviewed component anchoring/stress-gain audit scope and exact supplied-family hypotheses. It expressly leaves stable owner extraction, unary avoidance, and strict admissibility open; sampled finite regression is not source-family proof.",
+      "checks_and_logs": [
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json",
+        "reviews/c-generated-view-audit.json",
+        "reviews/c-scoped-proof-audits.json"
+      ],
+      "scientific_limitations": "Extract a subfamily-stable owner family surviving all full-source cuts/unaries or provide a source-compatible replacement.",
+      "remaining_obligations": "Extract a subfamily-stable owner family surviving all full-source cuts/unaries or provide a source-compatible replacement."
+    },
+    {
+      "number": 180,
+      "title": "Independent destination audit: PR #952 owner common-release implication",
+      "head": "22aa2fc4ae96f1109f6001e9add49d9c70c26b83",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "recorded_count": 4,
+        "github_inventory_count": 4,
+        "actual_diff_count": 4,
+        "count_matches": true,
+        "inventory_matches": true,
+        "paths": [
+          {
+            "path": "docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "286eb6c152e150324a1aa7cd0d7f1ef700123d3f",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/state/artifact-index.jsonl",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "4787cf264a83604cdfdcd34abab4f76a796f677b",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+            "git_status": "A",
+            "github_status": "added",
+            "github_blob": "d108d35b732d37d84994b044df0ca2504193c80f",
+            "mode": "100644"
+          },
+          {
+            "path": "reading/manifest.json",
+            "git_status": "M",
+            "github_status": "modified",
+            "github_blob": "586dbdee49f5ae1c4cfd9d53344d89963cb58aaa",
+            "mode": "100644"
+          }
+        ]
+      },
+      "lane": "destination audit report",
+      "disposition": "accept_scoped",
+      "coverage": "Reviewed owner common-release audit and its explicit notation correction. Its equations use r=moving-minus-fixed; two source-report phrases describe the reverse vector. Correcting the arrow wording preserves the displayed algebra; AB all-binary branch relies on separate unreviewed gain claim, and CT/UCC/IM retain supplied-family/unary hypotheses. No canonical source extraction.",
+      "checks_and_logs": [
+        "reviews/c-baseline-audit.json",
+        "reviews/c-source-integrity.json",
+        "reviews/c-generated-view-audit.json",
+        "reviews/c-scoped-proof-audits.json"
+      ],
+      "scientific_limitations": "Preserve original report bytes; make a source-bound notation erratum if relying on prose, audit all-binary weighted-gain dependency separately; source extraction/unary-avoidance remain.",
+      "remaining_obligations": "Preserve original report bytes; make a source-bound notation erratum if relying on prose, audit all-binary weighted-gain dependency separately; source extraction/unary-avoidance remain."
+    }
+  ],
+  "pending": [
+    "Root full theorem-certificate suite and final integration review remain owned by /root; they are not claimed as part of this independent intake."
+  ],
+  "scoped_proof_audits": "reviews/c-scoped-proof-audits.json"
+}

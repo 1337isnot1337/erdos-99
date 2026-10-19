@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/targets/target-b/README.md",
+    "docs/targets/target-b/01-jammed-rhombic-branch.md",
+    "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+    "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+    "docs/reports/target_b_interface_capacity_2026-10-17.md",
+    "docs/research/review-artifacts/merge-2026-10-18/review-b.txt",
+    "research-packages/e99-macbook-20261019T054318Z-16/verify.py"
+  ],
+  "domain": "All 15 nonempty masks in the normalized 2-by-2 cell box, all edge-connected Euler-one disk masks, and all disjoint diagonal crossing choices; exact metric and count/area checks for the representative three-cell L patch.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-macbook-20261019T054318Z-16/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

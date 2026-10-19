@@ -1,0 +1,21 @@
+{
+  "number": 153,
+  "title": "Audit PR #952 unequal-height floor closure on destination main",
+  "head": "0b3f19b643387da8ea3f583945d1fef220e30b02",
+  "origin_pr_head": "0b3f19b643387da8ea3f583945d1fef220e30b02",
+  "head_matches": true,
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "github_changed_files": 6,
+  "api_inventory_count": 6,
+  "git_inventory_count": 6,
+  "full_inventory_match": true,
+  "paths": [
+    "research-packages/e99-paired-20261019t091333z-homelab-11/README.md",
+    "research-packages/e99-paired-20261019t091333z-homelab-11/SOURCES.json",
+    "research-packages/e99-paired-20261019t091333z-homelab-11/TASK.json",
+    "research-packages/e99-paired-20261019t091333z-homelab-11/VERIFY.json",
+    "research-packages/e99-paired-20261019t091333z-homelab-11/pinned-replay.jsonl",
+    "research-packages/e99-paired-20261019t091333z-homelab-11/verify.py"
+  ]
+}

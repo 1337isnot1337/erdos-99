@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/audits/target_c_slow_chart_contact_port_cover_independent_audit_2026-10-10.md",
+    "docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md",
+    "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+    "docs/audits/target_c_slow_chart_double_port_count_independent_audit_2026-10-09.md",
+    "docs/audits/target_c_slow_chart_near_boundary_count_independent_audit_2026-10-09.md",
+    "docs/audits/target_c_bounded_variation_contact_port_counts_independent_audit_2026-10-09.md",
+    "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+    "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-c/candidate-registry.json",
+    "docs/STATE.md",
+    "docs/research/priority-state.json",
+    "research-packages/e99-pass-20261018-homelab-12/verify.py",
+    "research-packages/e99-pass-20261018-homelab-12/README.md"
+  ],
+  "domain": "Asymptotic exponent arithmetic for D->infinity, fixed J,K, canonical positive-leaf anchor error O(D^(-1/2)), canonical slow-chart boundary and double-port counts, and canonical post-ZF C-ZRF/C-WOODALL endpoint counts at launch base 7d0a450fe66991036541023f95c44c064a04b6a8.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-homelab-12/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

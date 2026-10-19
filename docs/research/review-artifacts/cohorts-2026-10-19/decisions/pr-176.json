@@ -1,0 +1,21 @@
+{
+  "number": 176,
+  "head": "62a366b501472aa22d42a7fcc8e175747c0cc179",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "12f8deb9b111a2b2756f1681289e06bee6eb2861",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Analytic identities and separate-envelope obstruction reconstructed; exact source count, Oler-slack and area-gap finite controls pass.",
+  "original_coverage": "Analytic identities and separate-envelope obstruction reconstructed; exact source count, Oler-slack and area-gap finite controls pass.",
+  "remaining": "PR138 metadata pin corrected at 8f291fb; no all-historical dependency audit. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

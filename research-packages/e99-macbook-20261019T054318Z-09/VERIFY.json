@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md",
+    "docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md",
+    "research-packages/e99-macbook-20261019T054318Z-09/verify.py"
+  ],
+  "domain": "Exact Fraction replay of the pinned eleven-label source, complete pair tables, stress equations, strict restoration and weak-margin/cardinality controls.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-macbook-20261019T054318Z-09/verify.py"
+      ],
+      "timeout_seconds": 30
+    },
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-macbook-20261019T054318Z-09/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

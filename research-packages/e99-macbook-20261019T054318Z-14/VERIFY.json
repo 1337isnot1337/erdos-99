@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/targets/target-b/01-jammed-rhombic-branch.md",
+    "docs/targets/target-b/README.md",
+    "tasks/target-b-phase-deficit-competitor.md",
+    "docs/RESEARCH_WORKFLOW.md",
+    "docs/REVIEW_POLICY.md",
+    "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+    "research-packages/e99-macbook-20261019T054318Z-14/verify.py"
+  ],
+  "domain": "All M,N>=1 complete unit-rhombic grids with pi/3<theta<pi/2, including every integer label difference and every same-cardinality label on both angle paths; exact six-label fixture M=2,N=1, cos(theta)=7/25.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-macbook-20261019T054318Z-14/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

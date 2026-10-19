@@ -1,0 +1,21 @@
+{
+  "number": 165,
+  "head": "8a8fc613f98ad667ad8299eb14ec75e7041523ec",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "2c097f9b27ade940336d1d49482c949993a19bc2",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Checker implementation and proof reconstructed; explicit 6x6-minus-2x2 annulus fixture passes exact incidence, boundary-cycle and Euler controls.",
+  "original_coverage": "Checker implementation and proof reconstructed; explicit 6x6-minus-2x2 annulus fixture passes exact incidence, boundary-cycle and Euler controls.",
+  "remaining": "Archive partially reviewed; no global source theorem. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

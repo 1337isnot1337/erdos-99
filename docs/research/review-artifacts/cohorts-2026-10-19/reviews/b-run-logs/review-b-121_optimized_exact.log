@@ -1,0 +1,8 @@
+PASS: exact rational source, response, and complete lattice incidences
+PASS: |A|=11; minimum source squared distance is 13/12; A is triangle-free
+PASS: K+B subset H; complete Y_in has 3 lattice sites; both full shores saturate
+PASS: chosen full-shore restrictions inherit overlap 1
+PASS: the restricted shores admit a joint assignment with overlap 0
+PASS: a coordinated pair of full-shore matchings also removes this restriction overlap
+PASS: strict-distance boundary and duplicate-source controls
+LIMIT: alpha_1(H) >= 25 > |A|=11; zero-slack capacity endpoint is not realized

@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/reports/target_c_global_inverse_phase_face_tail_exclusion_2026-10-09.md",
+      "sha256": "5061a85a1810c8626123837d7901b3aa7ef1d1db3216a207ca67aaedcb18eb43",
+      "identity": "source proof, Sections 17.1-17.2",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+      "sha256": "a815cfd48e4f208a1891b853726897069909704fa0f359dad9f828c12668d797",
+      "identity": "published destination audit bytes and scope",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+      "sha256": "1a9ab31c0fa492cc56b4c625b279654a69005ad2d531a02da553b707da2a3d52",
+      "identity": "prior source second-referee record",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+      "sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+      "identity": "source PR transaction and disposition",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+      "sha256": "3dce8109e6ce8c8e78c31121e38fb9773db34aa19af26e817bb2d718d6864fbd",
+      "identity": "straight-line-thrackle classification application",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+      "identity": "active-diameter-row scope and retained isolates",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/CURRENT.md",
+      "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+      "identity": "current C-II endpoint and open status",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "canonical lifecycle and dependencies",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "problem quantifiers and source definition",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-homelab-11/README.md",
+      "sha256": "8978fdb8bf304e9c42d2c8b720cce6583ba16fc32c958d907aa616ed92505f86",
+      "identity": "independent conditional proof audit",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-homelab-11/verify.py",
+      "sha256": "8f9ccd493d18b995ac3a0bbd8b1560d2b5e37c16c9e8b15ea586795d41b73386",
+      "identity": "finite endpoint-injection bookkeeping regression",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The upstream endpoint midpoint tail and moment estimates remain a separate unreviewed destination candidate; this package proves only their conditional transfer to all actual diameter edges."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+    "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+    "docs/reports/target_c_full_cell_common_grid_preservation_2026-10-15.md",
+    "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+    "docs/targets/target-c/CURRENT.md",
+    "docs/targets/target-c/candidate-registry.json",
+    "docs/state/theorem-state.yaml",
+    "docs/research/priority-state.json",
+    "research-packages/e99-pass-20261018-local-14/verify.py"
+  ],
+  "domain": "Enumerates all 2^21 vertex deletion sets on a finite 3x3 square-lattice contact fixture, after checking its componentwise brace on every connected unloaded subset; includes a path separator control where the brace fails.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-local-14/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

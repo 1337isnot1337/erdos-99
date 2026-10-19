@@ -1,0 +1,429 @@
+{
+  "reviewer": {
+    "agent": "/root/review_a",
+    "model": "GPT-6 Luna xhigh",
+    "independent_of_contributions": true
+  },
+  "baseline": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "created": "2026-10-19",
+  "scope": "Substantive proof reconstructions for the eight original A-group accept_scoped records. Exact frozen heads are dictionary keys. The original PR130 is now held pending independent review of its correction. No broad checker reruns were performed; existing exact logs are referenced.",
+  "records_by_exact_frozen_head": {
+    "025628b23df11470d4eb87ee981edbf250498691": {
+      "pr": 102,
+      "exact_frozen_head": "025628b23df11470d4eb87ee981edbf250498691",
+      "current_disposition": "accept_scoped",
+      "review_scope": "Two-shore Hall overlap identity and its conditional Section-177 source-gate implication.",
+      "primary_source_artifact": {
+        "path": "docs/reports/target_a_common_source_hall_overlap_2026_10_17.md",
+        "sha256_at_exact_head": "4981d0f1c518fdf9c3c3a00afe3fd1fa6f3d797fc8a2482c8828df201c95eacb",
+        "git_blob": "2d78f162d353f13789dc4ed6f3468ce46ae5bbe5",
+        "artifact_metadata": {
+          "artifact_id": "ART-E6CEB840E77E",
+          "canonical": false,
+          "claim_ids": [],
+          "claim_statuses": {},
+          "index": "docs/state/artifact-index.jsonl",
+          "status": "unreviewed",
+          "target": "target-a"
+        },
+        "explicit_commit_references_in_report": [
+          "7d0a450fe66991036541023f95c44c064a04b6a8"
+        ],
+        "generated_reading_paths_in_same_PR": [
+          "reading/docs/reports/target_a_common_source_hall_overlap_2026_10_17.md"
+        ],
+        "generated_reading_is_not_scientific_source": true
+      },
+      "hypotheses_and_quantifiers": "Finite disjoint labelled left shores C and O and source shore A; each of C and O separately admits a shore-saturating matching into A. No joint saturation of C union O is assumed. For any such pair of matchings, their common image size is at least delta=|C|+|O|-nu_A(C disjoint-union O); among arbitrary separate saturating matchings of the restricted shores, the minimum equals delta.",
+      "independent_reconstruction": "For any pair of saturating maps M_C,M_O, let I be the union of their source images. Choose one matched demand edge for each distinct source in I. This is a matching in the combined graph, so |I|<=nu; inclusion-exclusion gives overlap=|C|+|O|-|I|>=delta. Conversely take a maximum combined matching of size nu and restrict to each shore. Extend each partial matching to saturate its own shore. Each augmenting path ends at a previously unused source and leaves every previously occupied source occupied, so the union of final images still contains the nu sources of the original matching. The first bound forces union size exactly nu, hence overlap=delta. Hall maximum deficiency gives delta=max_U(|U|-|N(U)|)_+.",
+      "downstream_interface_reconstructed": "For restrictions of any full-shore saturating matchings to C=C^partial and O, the same lower bound L>=delta holds. Under the inherited Section-177 V-gate path-interference bound of at most nine other paths per gate, greedy selection gives at least ceil(L/10)>=ceil(delta/10) gates. The boundary-band estimate nu<=20d+25 yields delta>=|C|+|O|-20d-25 and hence a stronger incidence-specific floor than the old nonnegative population floor when positive.",
+      "falsification_controls": [
+        "Explicit full-shore extension graph with sources {a,b}, restricted c,o adjacent to both, and other full-shore vertices u,v adjacent only to b: each full matching is forced to use a on the restriction, giving inherited overlap 1 although delta=0; the free restricted minimum is 0. This rejects equality for inherited full matching restrictions, not the lower bound.",
+        "Direct enumeration covered 98,212 independently saturable incidence graphs across six shore/source sizes; 22,266 had positive forced overlap; source-image mask minima, combined-matching DP, and Hall-subset deficiency agreed.",
+        "Exact rational PR98 geometry had three source neighbors for five demand vertices and delta=overlap=2; the fixture is nonglobal and does not meet zero-slack hull capacity."
+      ],
+      "commands_and_results": {
+        "submitted_or_changed_verifier": true,
+        "path": "research/verify_target_a_common_source_overlap_2026_10_17.py",
+        "source_head": "025628b23df11470d4eb87ee981edbf250498691",
+        "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research/verify_target_a_common_source_overlap_2026_10_17.py'",
+        "exit_code": 0,
+        "result": "PASS",
+        "seconds": 0.82,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr102-normal.log",
+        "scope_note": "Finite regression controls only; analytic statement reconstructed separately."
+      },
+      "source_and_quantifier_caveats": "The general graph identity is proved. Its Target-A use requires the actual full shores and restricted shores to be defined with strict distance <1 and the Section-177 crossing/interference lemma. It does not establish Schur rank loss, shield avoidance, source-gate extraction from a global optimum, or the Section-168 zero-slack hypotheses.",
+      "unchecked_inherited_dependencies": [
+        "Sections 168.2, 177.5B, and the geometric gate-interference proof were not fully re-audited here.",
+        "No construction links the abstract Hall deficiency to a source-specific Schur matrix or canonical global minimizer."
+      ],
+      "coverage_status": "Reconstructed the combinatorial identity and conditional interface algebra directly; exact graph and rational controls are logged. No global source theorem."
+    },
+    "4b708e27e9e26f8c163685dfe8b033b6d6369177": {
+      "pr": 103,
+      "exact_frozen_head": "4b708e27e9e26f8c163685dfe8b033b6d6369177",
+      "current_disposition": "accept_scoped",
+      "review_scope": "Conditional quadratic lower bound on cross-component noncrossing determinant mass after physical-edge accounting.",
+      "primary_source_artifact": {
+        "path": "docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md",
+        "sha256_at_exact_head": "c755e9508fc28ae6765eef4e704367deef73ff692e4b397f685b011705967882",
+        "git_blob": "a0ef2fce1fa9be4f2234113d0a3ba19600b2dcda",
+        "artifact_metadata": {
+          "artifact_id": "ART-49E9F78ACC61",
+          "canonical": false,
+          "claim_ids": [],
+          "claim_statuses": {},
+          "index": "docs/state/artifact-index.jsonl",
+          "status": "unreviewed",
+          "target": "target-b"
+        },
+        "explicit_commit_references_in_report": [
+          "7d0a450fe66991036541023f95c44c064a04b6a8"
+        ],
+        "generated_reading_paths_in_same_PR": [
+          "reading/docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md"
+        ],
+        "generated_reading_is_not_scientific_source": true
+      },
+      "hypotheses_and_quantifiers": "Finite pure simply connected strict-rhombic disk with diameter D; the Section-50.1 order removes high-defect crossings first, then low-degree vertices. H1,H2 are distinct components of the final retained graph. Select subsets A\u2282H1,B\u2282H2 with |A|\u2265\u03b1D, |B|\u2265\u03b2D for fixed \u03b1,\u03b2>0, and directions within \u03b5 of centers \u03c61,\u03c62 with s=|sin(\u03c61\u2212\u03c62)|>2\u03b5. Conclusion: V_AB\u2265\u03b1\u03b2(s\u22122\u03b5)D\u00b2\u2212C\u03b4D^(2\u2212\u03b7), hence for sufficiently large D, V_AB\u2265(1/2)\u03b1\u03b2(s\u22122\u03b5)D\u00b2 and is a submass of global missing-crossing M.",
+      "independent_reconstruction": "Partition A\u00d7B into physical crossing pairs and noncrossing pairs. By the strict-rhombic pseudoline property, each train pair crosses at most once; the Section-26.4 zonotope identity assigns |det(u\u03c4,u\u03c3)| to either class, so total determinant equals V_AB+W_AB. If a crossing joined vertices surviving in distinct final components, it could not have been removed during vertex pruning (both endpoints survive); if it was not initially high-defect-deleted it would remain an edge and join the components. Therefore each cross-component physical crossing lies in E_hi, and its unit-rhombus determinant is \u22641, giving W_AB\u2264|E_hi|\u2264C\u03b4D^(2\u2212\u03b7). With angle lifts, |sin| is 1-Lipschitz, so each cross-pair determinant is \u2265s\u22122\u03b5. Summing \u03b1\u03b2D\u00b2 pairs and subtracting W proves the bound. For fixed positive coefficient, D^(2\u2212\u03b7)=o(D\u00b2), yielding the half-coefficient asymptotic.",
+      "falsification_controls": [
+        "If s=0 or s\u22642\u03b5, the coefficient is nonpositive and the lemma is deliberately vacuous.",
+        "If either subset is sublinear rather than bounded below by fixed \u03b1D or \u03b2D, no positive quadratic term follows.",
+        "Charging all pruned edges would introduce O(\u03bbD\u00b2) and break the stated estimate; the proof relies on both endpoints being final retained vertices, so only E_hi can separate them.",
+        "No changed executable verifier; direct proof is the control."
+      ],
+      "commands_and_results": {
+        "submitted_or_changed_verifier": false,
+        "result": "no executable verifier changed in this PR; proof audited directly",
+        "log": null
+      },
+      "integration_repair": {
+        "commit": "8f291fb240c44a90392388c74ee958f2103b35a7",
+        "issue": "Original report begins with a duplicated identical theorem-state metadata header. Integration removes one; generated index/reading synchronized.",
+        "recheck_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-repair-scope.json"
+      },
+      "source_and_quantifier_caveats": "The angularly separated macroscopic subsets are assumptions, not extracted from Section 50.1. The estimate for |E_hi| and the strict-rhombic crossing-at-most-once property are inherited canonical-model inputs. A positive V_AB lower bound is not shown to survive the support-depth subtraction or imply the Target-B endpoint.",
+      "unchecked_inherited_dependencies": [
+        "Section 26.4 determinant/area identity and train pseudoline geometry.",
+        "Section 50.1 high-defect deletion count C\u03b4D^(2\u2212\u03b7).",
+        "No proof that canonical shells force two fixed linear-size direction-separated components."
+      ],
+      "coverage_status": "Direct algebraic proof reconstruction; no contribution-specific executable verifier. Acceptance is scoped to this conditional lemma and applies only after the exact report-header repair."
+    },
+    "6295e0dc87031fe8418bff50bd9923014072df0f": {
+      "pr": 118,
+      "exact_frozen_head": "6295e0dc87031fe8418bff50bd9923014072df0f",
+      "current_disposition": "accept_scoped",
+      "review_scope": "Squared-distance interpolation metric, Euclidean realization, and affine-rank obstruction to planar realization.",
+      "primary_source_artifact": {
+        "path": "docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md",
+        "sha256_at_exact_head": "5cbef599ca920062cd082a00dfd7199b52e86871993f0d05a780ee549abb5c6c",
+        "git_blob": "717c209d8b07a9e9b7a586b764abfdfb2218cf7e",
+        "artifact_metadata": {
+          "artifact_id": "ART-529F1202FE2E",
+          "canonical": false,
+          "claim_ids": [],
+          "claim_statuses": {},
+          "index": "docs/state/artifact-index.jsonl",
+          "status": "unreviewed",
+          "target": "shared"
+        },
+        "explicit_commit_references_in_report": [
+          "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "927961c6a25c0044de5bf9258bda79e1de4c9ce6",
+          "db766e0e25b562054df26aeec7e627d5a579dd6d",
+          "f623b43b9895a325b12710d6770eb8968d42a39a"
+        ],
+        "generated_reading_paths_in_same_PR": [
+          "reading/docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md"
+        ],
+        "generated_reading_is_not_scientific_source": true
+      },
+      "hypotheses_and_quantifiers": "Finite planar pairwise-distinct labels p_i with all d_ij>=1, D>1, and 0<\u03bb<1. Define d_ii prime=0 and for i\u2260j, d_ij prime squared=1+\u03bb(d_ij\u00b2\u22121). Every contact remains exactly one, every noncontact is strictly above one and shortens, and Dprime\u00b2=1+\u03bb(D\u00b2\u22121)<D\u00b2. Scope is this metric, not every planar endpoint.",
+      "independent_reconstruction": "A regular unit simplex r_i in R^(n\u22121) gives q_i=(sqrt(\u03bb)p_i,sqrt(1\u2212\u03bb)r_i); its squared distances are \u03bbd\u00b2+(1\u2212\u03bb)=1+\u03bb(d\u00b2\u22121). For \u0394prime=\u03bb\u0394+(1\u2212\u03bb)(11\u1d40\u2212I), J=I\u221211\u1d40/n and G=\u2212J\u0394J/2, double-centering gives Gprime=\u03bbG+(1\u2212\u03bb)J/2. It annihilates 1 and is positive definite on 1\u22a5 because x\u1d40Gprime x=\u03bb|P\u1d40x|\u00b2+(1\u2212\u03bb)|x|\u00b2/2>0. Therefore rank is exactly n\u22121; every Euclidean realization has affine dimension n\u22121. The diagonal convention is essential: the scalar interpolation applies only off diagonal.",
+      "falsification_controls": [
+        "At n=3 the rank is two, so the same-cardinality planar realization strictly improves a global minimizer with D>1; this consequence uses global minimality only at the endpoint.",
+        "At n\u22654 rank exceeds two, so this particular metric cannot be realized in the plane; it says nothing against a different planar rearrangement.",
+        "Exact report fixtures at \u03bb=3/5 give ranks 3,3,2,4 for square, rectangle, right-triangle, and a five-point square with an isolated contact vertex. They support the formulas but are finite."
+      ],
+      "commands_and_results": {
+        "submitted_or_changed_verifier": false,
+        "result": "Report-only PR; no changed executable code or separate per-PR verifier run in this Group-A audit. The frozen report documents a prior exact checker run; this is recorded as submission evidence, not independently re-executed here."
+      },
+      "source_and_quantifier_caveats": "The universal conclusion is the exact affine-rank obstruction for this constructed Euclidean metric. It is not a planar path, a planar full-source endpoint for n\u22654, a density argument, or a source-to-scaffold identification.",
+      "unchecked_inherited_dependencies": [
+        "Underlying problem isomorphism and global minimizer definitions were not re-audited.",
+        "PR958 color lift/flattening, palette certificates, and PR960 material are expressly out of scope."
+      ],
+      "coverage_status": "Direct proof reconstruction and scope boundary; no code changed and no global theorem conclusion."
+    },
+    "d44c691183ca3a789a6bedee05ff867220f440ca": {
+      "pr": 130,
+      "exact_frozen_head": "d44c691183ca3a789a6bedee05ff867220f440ca",
+      "original_head_disposition": "hold",
+      "review_scope": "Affine criterion for flattening the specified simplex-color lift; the submitted audit also claims a strict full-source competitor.",
+      "primary_source_artifact": {
+        "path": "docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
+        "sha256_at_exact_head": "e71728dc3c001cc37e7ac2caca4c50d390bb54b054a2438601bd36a8cd7fe951",
+        "git_blob": "a85a9b64fa649399f837a12d802281d6d4c1151e",
+        "artifact_metadata": {
+          "artifact_id": "ART-E9A5A4332059",
+          "canonical": false,
+          "claim_ids": [],
+          "claim_statuses": {},
+          "index": "docs/state/artifact-index.jsonl",
+          "status": "unreviewed",
+          "target": "shared"
+        },
+        "explicit_commit_references_in_report": [
+          "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+          "7d0a450fe66991036541023f95c44c064a04b6a8"
+        ],
+        "generated_reading_paths_in_same_PR": [
+          "reading/docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md"
+        ],
+        "generated_reading_is_not_scientific_source": true
+      },
+      "hypotheses_and_quantifiers": "P is a noncollinear labelled source in R\u00b2; each label receives one of q centered regular-simplex colors; t>0. For the unnormalized lift (p_i,t z_c), rank of its centered coordinate matrix is \u22642 exactly when col(JZ)\u2282col(JP). The latter criterion is algebraically valid. The exact frozen report and README additionally infer a small-parameter strict diameter competitor from the two-color case.",
+      "independent_reconstruction": "Let J=I\u221211\u1d40/n. The lift has affine rank rank[JP,tJZ]. Since rank(JP)=2 and t>0, this is \u22642 iff JZ=JP A for some 2\u00d7(q\u22121) matrix A. Undoing J says z_c is an affine image of p_i, proving the criterion both ways. For two distinct colors, rank(JZ)=1, hence rank(A)=1 and the affine fibers are parallel lines; conversely two classes on distinct parallel lines are level sets of an affine scalar functional mapping to the two color vertices. For three colors, rank(JZ)=2 forces A rank2 and affine injectivity, so each color has at most one preimage and n\u22643; at n=3 noncollinearity gives flattening. These are sound rank/flattening statements.",
+      "blocking_defect": "The submitted strict-competitor paragraph applies the unnormalized lift (p_i,t z_c) but then asserts every old noncontact contracts and gives only t\u00b2<min_same-color(d_ij\u00b2\u22121). For this unnormalized lift, same-color squared distances remain d_ij\u00b2 while different-color squared distances become d_ij\u00b2+t\u00b2 (regular simplex edge one); thus cross-color contacts become >1 and diameter can increase. The stated strict full-source unit-separated competitor does not follow from the submitted formula. The exact source PR958 route instead uses normalized p_i(t)=(p_i,t z_c)/sqrt(1+t\u00b2): cross-color dprime\u00b2=(d\u00b2+t\u00b2)/(1+t\u00b2), same-color dprime\u00b2=d\u00b2/(1+t\u00b2); proper coloring plus t\u00b2<min_same-color(d\u00b2\u22121) keeps all lower bounds and every d>1 contracts. Uniform normalization leaves affine rank unchanged, so this is a plausible exact repair, but it is not an independent review of the amended package.",
+      "falsification_controls": [
+        "The checker\u2019s rank counts (1764 two-color assignments; 240 flattenable; 456 surjective three-color noncollinear triples flatten; 0 of 4536 four-point assignments flatten) are finite affine-rank controls only.",
+        "Inherited square control has lift rank three; the parallel-column rectangle rank-two case tests the flattening criterion. Neither checks the incorrect unnormalized distance/contraction inference.",
+        "Direct formula countercheck above falsifies the submitted strict-competitor inference for any cross-color contact."
+      ],
+      "commands_and_results": {
+        "submitted_or_changed_verifier": true,
+        "path": "research-packages/e99-pass-20261018-homelab-10/verify.py",
+        "source_head": "d44c691183ca3a789a6bedee05ff867220f440ca",
+        "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-homelab-10/verify.py'",
+        "exit_code": 0,
+        "result": "PASS",
+        "seconds": 0.32,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr130-normal.log",
+        "scope_note": "Finite regression controls only; analytic statement reconstructed separately."
+      },
+      "correction_reference": {
+        "commit": "ee8f9df94a8a1043098482386bbbc6a893214330",
+        "scope": "Root states the amendment explicitly normalizes the unit-edge lift in audit/README/TASK and supplies both pair formulas and small-t proof. Reviewer C is assigned the independent complete corrected audit. This record remains about frozen original head only; no amended bytes reviewed here."
+      },
+      "source_and_quantifier_caveats": "The affine-rank criterion survives multiplication of the whole lifted configuration by a nonzero scalar. The downstream metric implication does not survive omitting normalization. Package verifier PASS is not evidence of strict contraction. Keep original head held until corrected contribution review is complete.",
+      "unchecked_inherited_dependencies": [
+        "The PR958 source report\u2019s normalized four-dimensional construction and contact coloring are not fully re-audited here.",
+        "No source-derived two-color parallel-line coloring is established for any global minimizer."
+      ],
+      "coverage_status": "Core rank criterion reconstructed and accepted in isolation; submitted PR as a whole is held because the claimed strict competitor is unsupported by its stated lift."
+    },
+    "9183fd057255719a3535bf8f9c5feeec9d711c80": {
+      "pr": 140,
+      "exact_frozen_head": "9183fd057255719a3535bf8f9c5feeec9d711c80",
+      "current_disposition": "accept_scoped",
+      "review_scope": "Balanced triad fixed-anchor interface obstruction and exact four-label endpoint fixture.",
+      "primary_source_artifact": {
+        "path": "docs/audits/target_a_balanced_triad_relay_independent_audit_2026-10-19.md",
+        "sha256_at_exact_head": "a5b8ad6615685784307855df582bfe72ae678339c9faa1d73d31fa22136256c3",
+        "git_blob": "24907b955a696e64c21a9e87fde0667c2e59adae",
+        "artifact_metadata": {
+          "artifact_id": "ART-C9D48BD05340",
+          "canonical": false,
+          "claim_ids": [],
+          "claim_statuses": {},
+          "index": "docs/state/artifact-index.jsonl",
+          "status": "unreviewed",
+          "target": "target-a"
+        },
+        "explicit_commit_references_in_report": [
+          "12fbd21a8dbded545743579cf3ac34e2c54f1496",
+          "7d0a450fe66991036541023f95c44c064a04b6a8"
+        ],
+        "generated_reading_paths_in_same_PR": [],
+        "generated_reading_is_not_scientific_source": true
+      },
+      "hypotheses_and_quantifiers": "Three fixed exterior anchors q_i satisfy |p\u2212q_i|=1 with normals n_i=p\u2212q_i, pairwise dot \u22121/2. A component point p is translated by t while all three anchors remain fixed. General theorem: no nonzero translation with 0<|t|<1 preserves all three lower bounds. Separate fixture claim: with the three leaves fixed, the full lower and diameter-upper pair ledger admits no nonzero endpoint.",
+      "independent_reconstruction": "The 120-degree triad gives \u03a3n_i=0 and \u03a3n_i n_i\u1d40=(3/2)I. For unit u, x_i=n_i\u00b7u have \u03a3x_i=0 and \u03a3x_i\u00b2=3/2. If all x_i>\u22121/2, x_i\u00b2\u2264x_i/2+1/2 with equality only x_i=1; summing would force all x_i=1, impossible. Hence some x_i\u2264\u22121/2; applying to \u2212u gives some x_i\u22651/2. For t=ru, a moved unit contact changes squared length by r\u00b2+2r x_i, so a lower bound forces r\u22651. This proves only the small-motion obstruction. In the fixture, p=(0,0), leaves are the three unit normals, all leaf-leaf squares are 3, so D\u00b2=3. Upper bounds on all three p-leaf pairs give x_i\u22641/r\u2212r/2; some x_i\u22651/2 implies r\u22641. At r=1 all x_i must be within [\u22121/2,1/2], forcing \u03a3x_i\u00b2\u22643/4, contradiction. Hence only t=0 satisfies the complete fixture ledger.",
+      "falsification_controls": [
+        "Removing q0 and translating p by (1/10,0) gives remaining squares 111/100,111/100,3; so three contacts matter.",
+        "At unit translation t=(\u22121,0), all lower bounds pass but p\u2212q0 square is 4>3; this confirms the separate active upper constraint.",
+        "Checker uses exact Q(sqrt(3)) on every pair; observed output confirms six pairs in [1,3], balanced normals and controls."
+      ],
+      "commands_and_results": {
+        "submitted_or_changed_verifier": true,
+        "path": "research/verify_target_a_balanced_triad_relay_audit_2026_10_19.py",
+        "source_head": "9183fd057255719a3535bf8f9c5feeec9d711c80",
+        "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research/verify_target_a_balanced_triad_relay_audit_2026_10_19.py'",
+        "exit_code": 0,
+        "result": "PASS",
+        "seconds": 0.03,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr140-normal.log",
+        "scope_note": "Finite regression controls only; analytic statement reconstructed separately."
+      },
+      "integration_repair": {
+        "commit": "8f291fb240c44a90392388c74ee958f2103b35a7",
+        "scope_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-repair-scope.json",
+        "collateral": "All 55 preexisting audit/report files were restored byte-for-byte to baseline; generated index/reading reconciled. The independent new report and checker remain."
+      },
+      "source_and_quantifier_caveats": "The generic translation lemma has lower bounds only and excludes 0<r<1. The complete fixture endpoint contradiction uses active diameter upper bounds and is not a global-source theorem. No moving anchors, rotations, internal deformation, multiple components, or contact isolates outside this fixture are controlled.",
+      "unchecked_inherited_dependencies": [
+        "No proof that an actual Target-A monomer has three fixed balanced exterior unit contacts.",
+        "No source embedding, W(d) bound, Schur/tube payment, or source-wide extraction.",
+        "The exact-collateral repair was checked; the 55 scientific source documents were not independently reread."
+      ],
+      "coverage_status": "Direct proof reconstruction of the new audit\u2019s two stated local claims plus exact verifier output. Scoped acceptance is contingent on integration restoration of collateral metadata changes."
+    },
+    "51328362b97eaaa264eeecc022bbe93bfd1a561a": {
+      "pr": 141,
+      "exact_frozen_head": "51328362b97eaaa264eeecc022bbe93bfd1a561a",
+      "current_disposition": "accept_scoped",
+      "review_scope": "Conditional phase-integrated sink implication audited for PR117, including the finite measurable joint basis/matching selector.",
+      "primary_source_artifact": {
+        "path": "docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md",
+        "sha256_at_exact_head": "37e978dd20afb49f1ec67b94e00d70a43c5c37c5a06acb8b9c9924866e42a1ee",
+        "git_blob": "c555a50adc7c2a0825991f2f59c4c81773c093cc",
+        "artifact_metadata": {
+          "artifact_id": "ART-118DFF33EB07",
+          "canonical": false,
+          "claim_ids": [],
+          "claim_statuses": {},
+          "index": "docs/state/artifact-index.jsonl",
+          "status": "unreviewed",
+          "target": "target-a"
+        },
+        "explicit_commit_references_in_report": [
+          "52a89ded959be4c96db4bdc4622ee73f7f63c3bd",
+          "7d0a450fe66991036541023f95c44c064a04b6a8"
+        ],
+        "generated_reading_paths_in_same_PR": [
+          "reading/docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md"
+        ],
+        "generated_reading_is_not_scientific_source": true
+      },
+      "hypotheses_and_quantifiers": "Actual plateau response X*, hull K*, source A of N labels, fixed three-channel fan Sigma, Section-102 admissible basis extending the restricted deep-column basis, Section-113 matching \u03bc0, Section-165 placement K*+B\u2282H, and Section-174/175 partitions. The claim is only: if condition (2) holds, some generic phase satisfies Xi\u03a3\u2265j*+|T_Z|. It does not establish condition (2) for an actual source.",
+      "independent_reconstruction": "On a bounded half-open lattice cell F, only finitely many lattice sites can enter the bounded response/collar sets. Membership predicates are Borel; boundary and strict distance-one equality loci have measure zero. The admissible triples (restricted basis, full basis B, matching \u03bc0) are finite and their matching/basis predicates are Borel; lexicographically choosing the first gives Borel fibers. This joint choice is necessary because \u03bc0 determines the basis-closed shield and thus C_i,O_i,Xi. Pointwise, Xi=|O_iso|+\u03a3(|O_i|\u2212|C_i|)_+\u2265|O|\u2212|T_O|\u2212\u03a3|C_i|. Partition identities give \u03a3|C_i|=|C^\u2202|\u2212t\u03a3 and |C^\u2202|=m*\u2212|Z|\u2212d_int. Subtracting j*+|T_Z| gives R(v)\u2265|O|+|Y0|+|Z|\u2212N\u2212|T_O|\u2212|T_Z|+d_int+t\u03a3. Lattice-cell averaging gives E|Z|=area(K*)/a0, E(|O|+|Y0|)=(area(K*+tB)\u2212areaK*)/a0, and E(|T_Z|+|T_O|)=A\u03a3/a0 because the unit tube around fixed Sigma lies inside K*+B and is partitioned into interior Z and first-collar O sites. Thus E R\u2265[area(K*+tB)\u2212A\u03a3]/a0\u2212N+E[d_int+t\u03a3]. Section 175.5\u2019s connected unit-edge tube bound gives A\u03a3\u2264\u03c0+2e. Condition (2) therefore implies a0 E R>\u2212a0, or E R>\u22121. Since R is integer-valued, if every generic phase had R<0 then R\u2264\u22121 almost everywhere; contradiction. Hence some generic phase has R\u22650.",
+      "falsification_controls": [
+        "Original PR117 used a measurable basis but omitted the auxiliary \u03bc0 needed for shield sets; this audit explicitly adds joint finite lexicographic selection. A bare B selector does not suffice.",
+        "Full-shore partitions and basis closure are required for the exact |B_i|=|Z_i| balance; depth-only matching does not justify it.",
+        "The row checks in the submitted PR117 finite evidence use 18 admissible seed-63 ledgers, exclude 18 inadmissible relaxed records, and test 34 seed-66 cases; recorded minimum margins are 0 and 2. These controls do not prove the area average or condition (2).",
+        "Dropping E[d_int+t\u03a3] gives an area-only sufficient condition independent of selector choices but stronger than the full stated condition."
+      ],
+      "commands_and_results": {
+        "submitted_or_changed_verifier": false,
+        "result": "PR141 is report-only; no standalone verifier or changed executable code. Its report records prior package and predecessor runs; these finite controls were not rerun in this scoped proof audit."
+      },
+      "source_and_quantifier_caveats": "The integration is conditional on a fixed fan, actual plateau response, partitions and admissible matching. The basis/matching selector is phase-dependent but Borel; the fan is not reselected by phase. This is a sufficient condition, not a source theorem; if condition (2) fails it is inconclusive.",
+      "unchecked_inherited_dependencies": [
+        "Sections 102, 113, 165, 172, 174, and 175 are used as stated; their complete source proofs were not re-audited.",
+        "No proof that any global source satisfies condition (2); no canonical promotion."
+      ],
+      "coverage_status": "Reconstructed the conditional pointwise count, translation averages, integer threshold, and selector interface. Finite predecessor runs are supporting controls only."
+    },
+    "bda9381cefaf9cff39855ac8653ff6134050918d": {
+      "pr": 148,
+      "exact_frozen_head": "bda9381cefaf9cff39855ac8653ff6134050918d",
+      "current_disposition": "accept_scoped",
+      "review_scope": "Two exact local regressions against arbitrary inherited full-shore matching restrictions being Hall-optimal.",
+      "primary_source_artifact": {
+        "path": "docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md",
+        "sha256_at_exact_head": "9d53529b58cec2e01c376531a28fa5a90059ecab100302990e5de62737ca4a84",
+        "git_blob": "0ac0b5ee7605a6ae2b3b1a915533d4029fe32820",
+        "artifact_metadata": {
+          "artifact_id": "ART-8B174A3EC107",
+          "canonical": false,
+          "claim_ids": [],
+          "claim_statuses": {},
+          "index": "docs/state/artifact-index.jsonl",
+          "status": "unreviewed",
+          "target": "target-a"
+        },
+        "explicit_commit_references_in_report": [
+          "025628b23df11470d4eb87ee981edbf250498691",
+          "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "7f4dac815680da2b8ad6b0623369aeab3a730978",
+          "c3718cde305ec74b6dae380292b0bc646cee8f20"
+        ],
+        "generated_reading_paths_in_same_PR": [
+          "reading/docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md"
+        ],
+        "generated_reading_is_not_scientific_source": true
+      },
+      "hypotheses_and_quantifiers": "Strict conflict is squared distance <1. For each fixture, compare any specified full-shore saturating matching restrictions on C,O with free restricted assignments and \u03b4_A(C,O)=|C|+|O|\u2212\u03bd_A(C\u2294O). These examples reject equality of inherited overlap to the free restricted minimum; they do not reject the PR102 lower bound overlap\u2265\u03b4.",
+      "independent_reconstruction": "PR120 has A={a,b}, full shores X={c,u},Y={o,v}, with u and v each adjacent only to b and c,o adjacent to both. Thus both full matchings are forced (c\u2212a,u\u2212b) and (o\u2212a,v\u2212b); restrictions overlap at a. Yet the restricted graph has \u03bd=2 and \u03b4=0, and c\u2212a,o\u2212b has zero overlap. All coordinates and squared-distance rows in the report are rational; unit separation holds within A,X,Y; matching segments are disjoint within each full matching. H=conv(A) is a segment, its raw \u03b11(H)=2 is incidental, K+B cannot fit in H, Y is not complete Y_in, and A is not a global n=2 optimum. PR121 uses x=(1/3,1/3) in triangular coordinates and complete Y_in={(0,0),(1,0),(0,1)}: q(u,v)=u\u00b2+uv+v\u00b2<1 with x offset (1/3,1/3) forces integer u,v\u2208{0,1}; the fourth candidate (1,1) has radius\u00b24/3. Exact source rows give strict neighborhoods x:{a1,a2,b,c}, y0:{a1,a3,b}, y1:{b,c}, y2:{a2,c}. Four X and seven Y matchings exist. A displayed choice overlaps at a1 although \u03b4=0; coordinated choices x\u2212a2 and y0\u2212a3 remove the overlap. Its source is triangle-free and K+B\u2282H, but a Cartesian 5x5 grid fits the hexagon after the exact center-offset bound |g\u2212x|\u2264sqrt8+1/sqrt3<4<3sqrt3, so \u03b11(H)\u226525>11=|A|. It is not Section-168 zero-slack/global source.",
+      "falsification_controls": [
+        "PR120 strict rows, unique matching enumeration, and pairwise segment orientation; log confirms inherited overlap 1, free minimum 0.",
+        "PR121 complete open-disk lattice search, full-shore matching counts (4 and 7), segment-disjoint selected matchings, coordinated zero-overlap alternative, and 5x5 capacity grid; log confirms source min squared distance 13/12 and no exact-unit edges.",
+        "The code\u2019s former origin/hexagon-center presentation omitted a center shift. The audit repairs the capacity proof by triangle inequality; integration PR121 separately has exact checker controls |g|<3, |x|<1, 16<27."
+      ],
+      "commands_and_results": {
+        "submitted_or_changed_verifier": true,
+        "path": "research/verify_pr120_pr121_full_shore_audit_2026_10_19.py",
+        "source_head": "bda9381cefaf9cff39855ac8653ff6134050918d",
+        "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research/verify_pr120_pr121_full_shore_audit_2026_10_19.py'",
+        "exit_code": 0,
+        "result": "PASS",
+        "seconds": 0.04,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr148-normal.log",
+        "scope_note": "Finite regression controls only; analytic statement reconstructed separately."
+      },
+      "source_and_quantifier_caveats": "These are finite local countermodels to arbitrary matching inheritance. PR120 is degenerate and non-global; PR121 has full local Y_in but capacity gap \u226514. Neither supplies full Section-168 hypotheses, canonical C^partial/O, or source Schur data. PR102\u2019s Hall lower bound remains valid and permits \u03b4=0.",
+      "unchecked_inherited_dependencies": [
+        "The abstract PR102 theorem is used as a benchmark, not re-proved in this audit.",
+        "No global source capacity extraction or conclusion about coordinated choices under all Section-168 hypotheses."
+      ],
+      "coverage_status": "Direct reconstruction of coordinates, strict incidence, matching counts, capacity and scope limits; exact independent checker passed."
+    },
+    "e63dd4d3c1dcf8eb4bf56b47b112a888d3c0af4c": {
+      "pr": 171,
+      "exact_frozen_head": "e63dd4d3c1dcf8eb4bf56b47b112a888d3c0af4c",
+      "current_disposition": "accept_scoped",
+      "review_scope": "Source-capacity upper bound on the unit-collar area remainder and exact correlation identity; no sign conclusion.",
+      "primary_source_artifact": {
+        "path": "docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md",
+        "sha256_at_exact_head": "3add910a66379a6ec6ea28dec3ff3e4ebc0358819930fe07e9854afbeda3378c",
+        "git_blob": "ab1fb964c0fd3b46e0597ccbc219a693b327908a",
+        "artifact_metadata": {
+          "artifact_id": "ART-3277611F6658",
+          "canonical": false,
+          "claim_ids": [],
+          "claim_statuses": {},
+          "index": "docs/state/artifact-index.jsonl",
+          "status": "unreviewed",
+          "target": "target-a"
+        },
+        "explicit_commit_references_in_report": [
+          "025628b23df11470d4eb87ee981edbf250498691",
+          "2e4a3e1e73877df4f4756fcb4c7d331dcda1327f",
+          "52a89ded959be4c96db4bdc4622ee73f7f63c3bd",
+          "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "d17d45aebb04811c920d03f46c50a2337fe19a98"
+        ],
+        "generated_reading_paths_in_same_PR": [
+          "reading/docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md"
+        ],
+        "generated_reading_is_not_scientific_source": true
+      },
+      "hypotheses_and_quantifiers": "Only the Section-168 zero-slack branch: A0\u2282H is triangle-free global optimum with M=\u03b11(H), D(M)=D; actual plateau K* has K*+B\u2282H; retain actual response/fan and a PR141-style measurable joint basis/matching selector. Let L\u03c1=K*+\u03c1B, t=(D\u2212diamK*)/2>1, and source-cardinality-adjusted PR138 remainder R_exact=area(L_t)\u2212a0(M\u22121)+a0B0\u2212A\u03a3.",
+      "independent_reconstruction": "For generic v, Y1=(\u039b+v)\u2229int L1 is unit-separated and lies in H, so |Y1(v)|\u2264\u03b11(H)=M pointwise. Integrating over a fundamental cell yields area(L1)/a0\u2264M. Define \u03c31=a0M\u2212area(L1)\u22650. Steiner gives area(L_t)\u2212area(L1)=(t\u22121)per(K*)+\u03c0(t\u00b2\u22121). Substitution yields R_exact=a0+(t\u22121)per(K*)+\u03c0(t\u00b2\u22121)\u2212\u03c31+a0B0\u2212A\u03a3, hence the valid upper bound obtained by omitting \u2212\u03c31. From \u03a9_H=areaH+(a0/2)per(H)\u2212a0(M\u22121), and \u0394_H,1=areaH\u2212area(L1), direct rearrangement gives \u03c31=a0+\u0394_H,1+(a0/2)per(H)\u2212\u03a9_H. With \u0394_H=\u0394_H,1\u2212[(t\u22121)per(K*)+\u03c0(t\u00b2\u22121)], substitution reproduces the exact decomposition. Therefore R_exact>0 is equivalent to inequality (8), which requires an upper bound on \u03c31; zero-slack capacity proves only \u03c31\u22650.",
+      "falsification_controls": [
+        "If any phase had |Y1|>M, it would contradict maximum unit-separated capacity; the lattice-cell integral computes the exact mean area.",
+        "Using area(L_t)\u2264a0M would be an invalid extension: Section168 placement contains L1 only; the outer annulus L_t\\L1 is not source-covered by the matching.",
+        "The finite triangular patch has M=6 full patch 127 labels, thinned triangle-free source 85, \u03a9=21sqrt3, K3+B\u2282H6 and exact \u0394; it checks signs/identities only and is not a global minimizer, plateau optimum, or fan instance."
+      ],
+      "commands_and_results": {
+        "submitted_or_changed_verifier": false,
+        "result": "Report-only analytic proof; no standalone verifier and no verifier run in Group A. Algebra and Steiner identities checked directly; finite arithmetic example was not rerun."
+      },
+      "source_and_quantifier_caveats": "Equation (5) is an upper bound on the exact remainder, not a lower bound and not a counterexample. Equation (8) is the additional strict inequality needed for positivity. Failure of the sufficient test is inconclusive.",
+      "unchecked_inherited_dependencies": [
+        "Section168 zero-slack source and matching conclusions, Section165 placement, PR138 remainder identity and Section155 geometry are assumed, not fully audited here.",
+        "PR117 integrated implication is not reproved; PR141 selector clarification is used.",
+        "No bound controls \u03c31 from above or makes the exact remainder positive."
+      ],
+      "coverage_status": "Direct algebraic reconstruction and interface check; only unit collar follows from source capacity. No actual-source sign or theorem closure."
+    }
+  },
+  "global_limits": [
+    "This scoped audit does not replay theorem certificates or fully audit historical dependencies.",
+    "Archive/scoped intake is not canonical promotion; theorem state and candidate lifecycle remain controlled by repository authority."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "number": 123,
+  "head": "c6c61707cd2dc733a305de55ffcd7db4b6df6c8f",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "27928060efb1ab86767a53f97bf83d39bcea8959",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Finite 3-source/3-packet enumeration and rational false-edge control pass; conditional proof directly reviewed.",
+  "original_coverage": "Finite 3-source/3-packet enumeration and rational false-edge control pass; conditional proof directly reviewed.",
+  "remaining": "Conditional source caveats remain open; repin verified at 173b3dd; no all-history audit. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

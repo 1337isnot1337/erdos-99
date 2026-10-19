@@ -1,0 +1,6 @@
+PASS: six explicit triangular-lattice patches are unit-separated and Oler-sharp
+PASS: M=3,6 two-color sources are triangle-free with exact populations and Oler slack
+PASS: inner parallel-body signed area identity at M=6, k=3
+CONTROL: Delta_H = (-54) + (81/2)*sqrt(3) + (-9)*pi
+PASS: independent envelope method has strict gap at least 2+e for e>=0
+LIMIT: the triangle-free control is not a global optimum or plateau response; no fan or Section-102 basis is modeled

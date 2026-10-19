@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/STATE.md",
+    "docs/state/theorem-state.yaml",
+    "docs/research/priority-state.json",
+    "docs/research/agent-task-catalog.json",
+    "docs/targets/target-c/CURRENT.md",
+    "docs/research/tracks/target-c-quarter-folds-bent-arrays.md",
+    "docs/reports/target_c_complete_array_diameter_forest_slot02_2026-10-11.md",
+    "research/verify_target_c_complete_array_diameter_forest_2026_10_11.py",
+    "research/target_c_complete_array_diameter_forest_certificate_2026_10_11.json",
+    "research/verify_target_c_three_direction_corner_barrier_2026_10_06.py",
+    "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+    "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+    "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+    "docs/theory/01-local-structure.md",
+    "docs/audits/target_c_isolate_normalization_independent_audit_2026-10-08.md",
+    "research-packages/e99-paired-20261019t091333z-homelab-08/verify.py"
+  ],
+  "domain": "Complete finite labelled arrays P_ij=x_i+y_j with a,c>=1, every index pair an actual distinct source label, unit consecutive row/column edges, consistently oriented strict triangle-free rhombic cells, and all source pair upper bounds; the whole-core corollary additionally assumes the report's canonical contact-minimal then diameter-pair-minimal global-source hypotheses with D>=9 and retains all contact-isolated labels.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-homelab-08/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

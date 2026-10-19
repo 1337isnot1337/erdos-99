@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-local-02",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For a rigid support translation with a boundary label p having three fixed exterior unit contacts at balanced 120-degree normals, every nonzero translation with length below one violates a retained source lower bound. The exact four-label K1,3 fixture also has no nonzero endpoint satisfying all six unit lower bounds and all six diameter upper bounds.",
+    "domain": "Exact four-label source fixture and lower/upper pair controls; universal translation cone under the stated balanced-triad hypotheses.",
+    "limitations": "Does not prove that the motif occurs in a canonical Target A monomer domain, does not cover moving anchors, multiple moving components, rotations, internal deformation, contact isolates, or the global minimizer quantifiers, and supplies no Schur or diameter endpoint."
+  },
+  "result": "Exact balanced-triad obstruction and full-pair fixture audit, proved in README.md and checked by verify.py.",
+  "remaining_questions": [
+    "Extract or refute this fixed balanced triad at an actual gap-facing source label in a globally derived Target A monomer domain.",
+    "If an anchor moves, audit every newly changed source lower pair and every active or inactive diameter upper pair before claiming a support gain."
+  ]
+}

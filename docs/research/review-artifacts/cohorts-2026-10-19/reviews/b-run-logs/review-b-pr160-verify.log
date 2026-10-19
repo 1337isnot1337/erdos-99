@@ -1,0 +1,4 @@
+PASS: all 21 source pairs; contacts=7, D-pairs=2
+PASS: all 21 retained path pairs; contacts=7, classes={'same-row': 6, 'vertical': 3, 'cross-row': 6, 'bottom-endpoint': 2, 'bottom-middle': 1, 'top': 3}
+PASS: strict path diameter is 1+(11/5-t)^2; at t=1/10 it is 541/100
+PASS: fixed-isolate, inactive-upper, lower-separation and unit-triangle controls

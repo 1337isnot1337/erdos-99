@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-macbook-20261019T054318Z-10",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Independently reconstruct the exact finite cut sums and boundary-versus-internal work ledger in published PR #114, then test boundary-row removal, weakened internal B support, and a separate positive-multiplier corruption.",
+    "domain": "One rational vector-incidence model at PR #114 head cd33f4c76fd48722f06c03ddc86a05fd5e8f9e51, with three A cuts, two B cuts, seven unit rows, positive diameter multipliers, and support tree {(0,2),(0,3),(1,2)}.",
+    "limitations": "No planar point realization, hull order, contact endpoints, individual contact rows, vertex-level equilibrium, complete all-pairs source ledger, global minimizer, asymptotic family, or C-II endpoint is supplied. The result audits cut-incidence scope only."
+  },
+  "result": "The exact B resultants are (-11/5,276/65) and (14/5,276/65), with determinant -276/13. The shear vector is (-1,0); internal work is -48/13 and boundary-row work is +48/13. The reference row contributes zero.",
+  "remaining_questions": [
+    "Determine whether these support and payment data can be embedded in a full planar threshold source with vertex-level contact equilibrium and every required source-pair constraint.",
+    "If source geometry excludes the model, prove the exact source-specific restriction that excludes its boundary payment; if it admits it, identify the additional global argument needed beyond cut equations."
+  ]
+}

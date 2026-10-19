@@ -1,0 +1,3758 @@
+{
+  "inventory": [
+    {
+      "number": 105,
+      "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/README.md",
+      "api_sha": "1b39b8c9e02c07fdcddefd08f8ccbb05dcc20d50",
+      "head_blob": "1b39b8c9e02c07fdcddefd08f8ccbb05dcc20d50",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 105,
+      "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/SOURCES.json",
+      "api_sha": "fbfc312ba70a61f371fe2cc0388ce74f8ad589c6",
+      "head_blob": "fbfc312ba70a61f371fe2cc0388ce74f8ad589c6",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 105,
+      "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/TASK.json",
+      "api_sha": "766000be3275976911cba96e2ace8ea5d955390b",
+      "head_blob": "766000be3275976911cba96e2ace8ea5d955390b",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 105,
+      "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/VERIFY.json",
+      "api_sha": "eb04934c4c6f9fac03cab169c3ddc6fda46477c9",
+      "head_blob": "eb04934c4c6f9fac03cab169c3ddc6fda46477c9",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 105,
+      "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/verify.py",
+      "api_sha": "0a27ad376d873c370a717c73d6f43f63583c0d2a",
+      "head_blob": "0a27ad376d873c370a717c73d6f43f63583c0d2a",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 108,
+      "path": "docs/audits/target_c_pr950_positive_return_quantile_destination_audit_2026-10-18.md",
+      "api_sha": "8dd3d8273917957b7128d538f9fdaf7ab344b827",
+      "head_blob": "8dd3d8273917957b7128d538f9fdaf7ab344b827",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 108,
+      "path": "docs/state/artifact-index.jsonl",
+      "api_sha": "84aa2c2eb91b78fea63b4907e1bb9b07fe4ee8c8",
+      "head_blob": "84aa2c2eb91b78fea63b4907e1bb9b07fe4ee8c8",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 108,
+      "path": "reading/docs/audits/target_c_pr950_positive_return_quantile_destination_audit_2026-10-18.md",
+      "api_sha": "d7e1e913db62bbe1b0bdfc9e2c0c6358a43ecd25",
+      "head_blob": "d7e1e913db62bbe1b0bdfc9e2c0c6358a43ecd25",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 108,
+      "path": "reading/manifest.json",
+      "api_sha": "23720be65afab95eb5dd741e325135e0c3413be5",
+      "head_blob": "23720be65afab95eb5dd741e325135e0c3413be5",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 109,
+      "path": "research-packages/e99-pass-20261018-local-07/README.md",
+      "api_sha": "01739115897d91f9af77f7c4aeeca730018110f9",
+      "head_blob": "01739115897d91f9af77f7c4aeeca730018110f9",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 109,
+      "path": "research-packages/e99-pass-20261018-local-07/SOURCES.json",
+      "api_sha": "fdfc63d532020f3c1a5639603b202ef684b42b44",
+      "head_blob": "fdfc63d532020f3c1a5639603b202ef684b42b44",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 109,
+      "path": "research-packages/e99-pass-20261018-local-07/TASK.json",
+      "api_sha": "2041212cebdf76c5e56f216894c4587507e65702",
+      "head_blob": "2041212cebdf76c5e56f216894c4587507e65702",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 109,
+      "path": "research-packages/e99-pass-20261018-local-07/VERIFY.json",
+      "api_sha": "4870138108f4edc671223b98a57b82f8c59a1e52",
+      "head_blob": "4870138108f4edc671223b98a57b82f8c59a1e52",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 109,
+      "path": "research-packages/e99-pass-20261018-local-07/verify.py",
+      "api_sha": "1def3591b4f9567f25955d62786e6ba251098571",
+      "head_blob": "1def3591b4f9567f25955d62786e6ba251098571",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 110,
+      "path": "research-packages/e99-pass-20261018-homelab-12/README.md",
+      "api_sha": "761b6f89c7dcf691489e127f5a7009b7df5f3ec6",
+      "head_blob": "761b6f89c7dcf691489e127f5a7009b7df5f3ec6",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 110,
+      "path": "research-packages/e99-pass-20261018-homelab-12/SOURCES.json",
+      "api_sha": "323f7930ce75f03a64546c85915d69a8d21822ab",
+      "head_blob": "323f7930ce75f03a64546c85915d69a8d21822ab",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 110,
+      "path": "research-packages/e99-pass-20261018-homelab-12/TASK.json",
+      "api_sha": "7b17d99366f4b73775b46defbbcaed8d7d85cdf8",
+      "head_blob": "7b17d99366f4b73775b46defbbcaed8d7d85cdf8",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 110,
+      "path": "research-packages/e99-pass-20261018-homelab-12/VERIFY.json",
+      "api_sha": "eb282806371da5301ea6fef8fa14d282d0e5039d",
+      "head_blob": "eb282806371da5301ea6fef8fa14d282d0e5039d",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 110,
+      "path": "research-packages/e99-pass-20261018-homelab-12/verify.py",
+      "api_sha": "05ed0bac078dcacdaeba79d0597ecaa072074801",
+      "head_blob": "05ed0bac078dcacdaeba79d0597ecaa072074801",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 112,
+      "path": "research-packages/e99-pass-20261018-local-14/README.md",
+      "api_sha": "9e4b9277cfb3e643b4d04857ead7ad9b5851f442",
+      "head_blob": "9e4b9277cfb3e643b4d04857ead7ad9b5851f442",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 112,
+      "path": "research-packages/e99-pass-20261018-local-14/SOURCES.json",
+      "api_sha": "2b16d9fd608a1194a3676be49b288122b63a83fd",
+      "head_blob": "2b16d9fd608a1194a3676be49b288122b63a83fd",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 112,
+      "path": "research-packages/e99-pass-20261018-local-14/TASK.json",
+      "api_sha": "3542f637235d011802eace0283debba6710c7fdb",
+      "head_blob": "3542f637235d011802eace0283debba6710c7fdb",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 112,
+      "path": "research-packages/e99-pass-20261018-local-14/VERIFY.json",
+      "api_sha": "55e0fdc0ce50fd540a39514ca8e6c1cb4e1cc095",
+      "head_blob": "55e0fdc0ce50fd540a39514ca8e6c1cb4e1cc095",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 112,
+      "path": "research-packages/e99-pass-20261018-local-14/verify.py",
+      "api_sha": "58ed0fa4e7014ead3a99266c71d6963670f8cd43",
+      "head_blob": "58ed0fa4e7014ead3a99266c71d6963670f8cd43",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 113,
+      "path": "research-packages/e99-pass-20261018-homelab-11/README.md",
+      "api_sha": "f87b6dc0d5541909572f9e5f6739a76f3bc1711f",
+      "head_blob": "f87b6dc0d5541909572f9e5f6739a76f3bc1711f",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 113,
+      "path": "research-packages/e99-pass-20261018-homelab-11/SOURCES.json",
+      "api_sha": "12081aec3755fe94acf52758f835d3d722375abb",
+      "head_blob": "12081aec3755fe94acf52758f835d3d722375abb",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 113,
+      "path": "research-packages/e99-pass-20261018-homelab-11/TASK.json",
+      "api_sha": "8d66842d439cb67a247708080e96282394eb6c36",
+      "head_blob": "8d66842d439cb67a247708080e96282394eb6c36",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 113,
+      "path": "research-packages/e99-pass-20261018-homelab-11/VERIFY.json",
+      "api_sha": "3e64b8d20656c3d451263b35d95a0d897db03946",
+      "head_blob": "3e64b8d20656c3d451263b35d95a0d897db03946",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 113,
+      "path": "research-packages/e99-pass-20261018-homelab-11/verify.py",
+      "api_sha": "c496f6a1b8f76a69467e0c3dc7a58c99c4622fd9",
+      "head_blob": "c496f6a1b8f76a69467e0c3dc7a58c99c4622fd9",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 119,
+      "path": "docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+      "api_sha": "bc9ffc399e4489edddf920463cc2341098d85853",
+      "head_blob": "bc9ffc399e4489edddf920463cc2341098d85853",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 119,
+      "path": "docs/state/artifact-index.jsonl",
+      "api_sha": "fdee85ae11b1087735f5f84e3f56412ed74c6e5d",
+      "head_blob": "fdee85ae11b1087735f5f84e3f56412ed74c6e5d",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 119,
+      "path": "reading/docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+      "api_sha": "7f7099c5fde0520257ea7d51f79a48ae8a0b3ed4",
+      "head_blob": "7f7099c5fde0520257ea7d51f79a48ae8a0b3ed4",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 119,
+      "path": "reading/manifest.json",
+      "api_sha": "2662488afdae70a20da7aaa397316660a8466bb5",
+      "head_blob": "2662488afdae70a20da7aaa397316660a8466bb5",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 134,
+      "path": "research-packages/e99-macbook-20261019T054318Z-05/README.md",
+      "api_sha": "7d6889692628a1fb54e322b1a264f056db78470a",
+      "head_blob": "7d6889692628a1fb54e322b1a264f056db78470a",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 134,
+      "path": "research-packages/e99-macbook-20261019T054318Z-05/SOURCES.json",
+      "api_sha": "5d5b023ad0e5251201e45da7f41867ddd5a964e4",
+      "head_blob": "5d5b023ad0e5251201e45da7f41867ddd5a964e4",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 134,
+      "path": "research-packages/e99-macbook-20261019T054318Z-05/TASK.json",
+      "api_sha": "e6923dd261134c96ce61fb92aecda4a43cf01692",
+      "head_blob": "e6923dd261134c96ce61fb92aecda4a43cf01692",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 134,
+      "path": "research-packages/e99-macbook-20261019T054318Z-05/VERIFY.json",
+      "api_sha": "22db847985b1cac59beb630fd65b45cfc4d3385e",
+      "head_blob": "22db847985b1cac59beb630fd65b45cfc4d3385e",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 134,
+      "path": "research-packages/e99-macbook-20261019T054318Z-05/verify.py",
+      "api_sha": "1ec9e563cc767d7860e78aac19eb8a2e01f1756c",
+      "head_blob": "1ec9e563cc767d7860e78aac19eb8a2e01f1756c",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 139,
+      "path": "docs/audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md",
+      "api_sha": "4ac98647466f92d6a5ba4ea00bc7b21dfb8c19d7",
+      "head_blob": "4ac98647466f92d6a5ba4ea00bc7b21dfb8c19d7",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 139,
+      "path": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+      "api_sha": "2a2ab8f08a73ea51966cdd3424a69766cecc2003",
+      "head_blob": "2a2ab8f08a73ea51966cdd3424a69766cecc2003",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 139,
+      "path": "docs/state/artifact-index.jsonl",
+      "api_sha": "ed4d2c0167d1880fcd22872db1e9e6dc25525c77",
+      "head_blob": "ed4d2c0167d1880fcd22872db1e9e6dc25525c77",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 139,
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "api_sha": "d697b4fcd88e650565866c97ab20d27b248ecb3a",
+      "head_blob": "d697b4fcd88e650565866c97ab20d27b248ecb3a",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 153,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/README.md",
+      "api_sha": "3bd6feda489e4cad05d9222b676d6bdd4ac2fea7",
+      "head_blob": "3bd6feda489e4cad05d9222b676d6bdd4ac2fea7",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 153,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/SOURCES.json",
+      "api_sha": "005a355ee9907d3e941ed90de1e35954fdf0d2ee",
+      "head_blob": "005a355ee9907d3e941ed90de1e35954fdf0d2ee",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 153,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/TASK.json",
+      "api_sha": "4a076378b3db428a112f29252997b45b153566d5",
+      "head_blob": "4a076378b3db428a112f29252997b45b153566d5",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 153,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/VERIFY.json",
+      "api_sha": "4a7ba23cb75137c60fd0c2f8d15a69c3bf0d2b98",
+      "head_blob": "4a7ba23cb75137c60fd0c2f8d15a69c3bf0d2b98",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 153,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/pinned-replay.jsonl",
+      "api_sha": "b9ab168021b2ea6592777748bc633bc449c4a57a",
+      "head_blob": "b9ab168021b2ea6592777748bc633bc449c4a57a",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 153,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/verify.py",
+      "api_sha": "43155944d4d97658815ee23ad05b673c82b01cb9",
+      "head_blob": "43155944d4d97658815ee23ad05b673c82b01cb9",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 156,
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/README.md",
+      "api_sha": "27c190da640f4a86afb483151f325356621d85e9",
+      "head_blob": "27c190da640f4a86afb483151f325356621d85e9",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 156,
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/SOURCES.json",
+      "api_sha": "8d7ab4e23151fcd4cfccafa9fd1fa8b17560e624",
+      "head_blob": "8d7ab4e23151fcd4cfccafa9fd1fa8b17560e624",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 156,
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/TASK.json",
+      "api_sha": "c7d72aee35d081533af1441bcaae7ec0ec4c6b23",
+      "head_blob": "c7d72aee35d081533af1441bcaae7ec0ec4c6b23",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 156,
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/VERIFY.json",
+      "api_sha": "87c8ca16be3a0f8e3411aebb122a77dc90147160",
+      "head_blob": "87c8ca16be3a0f8e3411aebb122a77dc90147160",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 156,
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/verify.py",
+      "api_sha": "10ad3307586f910a0179e2ab2396da69ed40edf1",
+      "head_blob": "10ad3307586f910a0179e2ab2396da69ed40edf1",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 157,
+      "path": "docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+      "api_sha": "2d9c9c30768c422dd9b006e3b01e634f2fe53acb",
+      "head_blob": "2d9c9c30768c422dd9b006e3b01e634f2fe53acb",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 157,
+      "path": "docs/state/artifact-index.jsonl",
+      "api_sha": "d1e1b1bf5b9b26c8b67dbc3452f10fd19ed6bb9e",
+      "head_blob": "d1e1b1bf5b9b26c8b67dbc3452f10fd19ed6bb9e",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 157,
+      "path": "reading/docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+      "api_sha": "428cce1aacb04d2d3ff89af00d49326725c88b58",
+      "head_blob": "428cce1aacb04d2d3ff89af00d49326725c88b58",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 157,
+      "path": "reading/manifest.json",
+      "api_sha": "7a7d55e9678b7adf5db67f900d7e09a79cdb81f7",
+      "head_blob": "7a7d55e9678b7adf5db67f900d7e09a79cdb81f7",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 158,
+      "path": "research-packages/e99-paired-20261019t091333z-local-05/README.md",
+      "api_sha": "f2a5885c7e644c898280b98c36cac39b52a30c78",
+      "head_blob": "f2a5885c7e644c898280b98c36cac39b52a30c78",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 158,
+      "path": "research-packages/e99-paired-20261019t091333z-local-05/SOURCES.json",
+      "api_sha": "c15f30897f49a825a8937544627353fbf10e3e67",
+      "head_blob": "c15f30897f49a825a8937544627353fbf10e3e67",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 158,
+      "path": "research-packages/e99-paired-20261019t091333z-local-05/TASK.json",
+      "api_sha": "ab6a671fd302d08f833eff2ee6e7a660856c988e",
+      "head_blob": "ab6a671fd302d08f833eff2ee6e7a660856c988e",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 158,
+      "path": "research-packages/e99-paired-20261019t091333z-local-05/VERIFY.json",
+      "api_sha": "65abc9f84dac12fac5d2bf04a25be2ef5c5a2209",
+      "head_blob": "65abc9f84dac12fac5d2bf04a25be2ef5c5a2209",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 158,
+      "path": "research-packages/e99-paired-20261019t091333z-local-05/verify.py",
+      "api_sha": "c417f534e13f3f80d436e114fd6ad09922aed8ad",
+      "head_blob": "c417f534e13f3f80d436e114fd6ad09922aed8ad",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 159,
+      "path": "docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+      "api_sha": "50610415913dce092ef56890e8ad6acce8e7c0ad",
+      "head_blob": "50610415913dce092ef56890e8ad6acce8e7c0ad",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 159,
+      "path": "docs/state/artifact-index.jsonl",
+      "api_sha": "85ed7f40423e5e7e354d576348ee447be9b0931c",
+      "head_blob": "85ed7f40423e5e7e354d576348ee447be9b0931c",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 159,
+      "path": "reading/docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+      "api_sha": "13b25fe9cb9943bab238dc40d3911cdbda5f123c",
+      "head_blob": "13b25fe9cb9943bab238dc40d3911cdbda5f123c",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 159,
+      "path": "reading/manifest.json",
+      "api_sha": "7094d7d0d5353a2f9de271d888e463a628afddd2",
+      "head_blob": "7094d7d0d5353a2f9de271d888e463a628afddd2",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 161,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-05/README.md",
+      "api_sha": "b0a148c2035c88bffad208dfe06c60a8ac7c71bb",
+      "head_blob": "b0a148c2035c88bffad208dfe06c60a8ac7c71bb",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 161,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-05/SOURCES.json",
+      "api_sha": "017f084ce58b2fd53cf313751b3c47dab2d86be8",
+      "head_blob": "017f084ce58b2fd53cf313751b3c47dab2d86be8",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 161,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-05/TASK.json",
+      "api_sha": "735bae3e58760cfac9415c7a17c6f6c6779a85c4",
+      "head_blob": "735bae3e58760cfac9415c7a17c6f6c6779a85c4",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 161,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-05/VERIFY.json",
+      "api_sha": "05ecd858b37145a8c3b71a333fc67fc8e9c8e7e6",
+      "head_blob": "05ecd858b37145a8c3b71a333fc67fc8e9c8e7e6",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 161,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-05/verify.py",
+      "api_sha": "971d0a2aceac8ceda137748057d155f5effbf730",
+      "head_blob": "971d0a2aceac8ceda137748057d155f5effbf730",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 162,
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/AUDIT.md",
+      "api_sha": "fba433f6a4bbb5d8a1cf614408e9bda31ac6f78d",
+      "head_blob": "fba433f6a4bbb5d8a1cf614408e9bda31ac6f78d",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 162,
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/README.md",
+      "api_sha": "e351dd533ba155c37a15a8acefb9fd70ae8c4bc2",
+      "head_blob": "e351dd533ba155c37a15a8acefb9fd70ae8c4bc2",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 162,
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/SOURCES.json",
+      "api_sha": "13eb2654bb0570b14eefcae73305faed511224c0",
+      "head_blob": "13eb2654bb0570b14eefcae73305faed511224c0",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 162,
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/TASK.json",
+      "api_sha": "f7b91444faaba0196e94207fb8c81e901932b5f7",
+      "head_blob": "f7b91444faaba0196e94207fb8c81e901932b5f7",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 162,
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/VERIFY.json",
+      "api_sha": "b9ec86603fb82d973575fdced7197a97ff856629",
+      "head_blob": "b9ec86603fb82d973575fdced7197a97ff856629",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 162,
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/verify.py",
+      "api_sha": "3e76527916bf6d79e5479c43d8a2f218a277837f",
+      "head_blob": "3e76527916bf6d79e5479c43d8a2f218a277837f",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 163,
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/README.md",
+      "api_sha": "fa8d5ff66edbf0ce76aab6dbc69b5fbd3bc5bbac",
+      "head_blob": "fa8d5ff66edbf0ce76aab6dbc69b5fbd3bc5bbac",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 163,
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/SOURCES.json",
+      "api_sha": "9e0e4204aeaf8c10ae5bcc26aefc3f3bbf7d9a79",
+      "head_blob": "9e0e4204aeaf8c10ae5bcc26aefc3f3bbf7d9a79",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 163,
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/TASK.json",
+      "api_sha": "bc2c334d9b1f63bea547157ce2871fa9cffd3ddf",
+      "head_blob": "bc2c334d9b1f63bea547157ce2871fa9cffd3ddf",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 163,
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/VERIFY.json",
+      "api_sha": "e20ec32970b57ff519f5e7f3eb5881d122ced9c1",
+      "head_blob": "e20ec32970b57ff519f5e7f3eb5881d122ced9c1",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 163,
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/evidence.json",
+      "api_sha": "ec0f518763baf10b9683db6b5044e771e5224bd3",
+      "head_blob": "ec0f518763baf10b9683db6b5044e771e5224bd3",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 163,
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/verify.py",
+      "api_sha": "58ed0fa4e7014ead3a99266c71d6963670f8cd43",
+      "head_blob": "58ed0fa4e7014ead3a99266c71d6963670f8cd43",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 166,
+      "path": "research-packages/e99-paired-20261019t091333z-local-12/README.md",
+      "api_sha": "aaaec3cee145890362f0f3419c6e2b71ae3c0757",
+      "head_blob": "aaaec3cee145890362f0f3419c6e2b71ae3c0757",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 166,
+      "path": "research-packages/e99-paired-20261019t091333z-local-12/SOURCES.json",
+      "api_sha": "6b5d7aec4efea0a3d2b5eb7cd358820923e6af60",
+      "head_blob": "6b5d7aec4efea0a3d2b5eb7cd358820923e6af60",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 166,
+      "path": "research-packages/e99-paired-20261019t091333z-local-12/TASK.json",
+      "api_sha": "d373f19d49e3e5e27b4dae71b48c626b7acbb65b",
+      "head_blob": "d373f19d49e3e5e27b4dae71b48c626b7acbb65b",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 166,
+      "path": "research-packages/e99-paired-20261019t091333z-local-12/VERIFY.json",
+      "api_sha": "1666d3bc7e5ed767ae81c560d3a6901e9a8b1fc4",
+      "head_blob": "1666d3bc7e5ed767ae81c560d3a6901e9a8b1fc4",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 166,
+      "path": "research-packages/e99-paired-20261019t091333z-local-12/verify.py",
+      "api_sha": "074040c8f52e24b8d5042a51fb7d6ed33ed538b3",
+      "head_blob": "074040c8f52e24b8d5042a51fb7d6ed33ed538b3",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 169,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-12/README.md",
+      "api_sha": "e8c9085a4e5a6801366a77ec7f7c44d57758e74f",
+      "head_blob": "e8c9085a4e5a6801366a77ec7f7c44d57758e74f",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 169,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-12/SOURCES.json",
+      "api_sha": "8dccbeb8841241d4ee93bf944f1d2f3eac2e304b",
+      "head_blob": "8dccbeb8841241d4ee93bf944f1d2f3eac2e304b",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 169,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-12/TASK.json",
+      "api_sha": "4a7aa991b95c4467085a037b7333330f69e71ddc",
+      "head_blob": "4a7aa991b95c4467085a037b7333330f69e71ddc",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 169,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-12/VERIFY.json",
+      "api_sha": "3220356a85f6ec8fd9d74d91513c948f30fe8f57",
+      "head_blob": "3220356a85f6ec8fd9d74d91513c948f30fe8f57",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 169,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-12/verify.py",
+      "api_sha": "4153f72047c931fdc75b24c764ab80e9e0e39935",
+      "head_blob": "4153f72047c931fdc75b24c764ab80e9e0e39935",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 173,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-06/README.md",
+      "api_sha": "b6718265452239d95e54101f29f4bc439811f120",
+      "head_blob": "b6718265452239d95e54101f29f4bc439811f120",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 173,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-06/SOURCES.json",
+      "api_sha": "51d943e1f0c768110e83e628b679ff744acc5d5d",
+      "head_blob": "51d943e1f0c768110e83e628b679ff744acc5d5d",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 173,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-06/TASK.json",
+      "api_sha": "3f599de392b62a275704d4e37e9e463296c2322d",
+      "head_blob": "3f599de392b62a275704d4e37e9e463296c2322d",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 173,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-06/VERIFY.json",
+      "api_sha": "2067c80410758fd65ddbe02a5b7a550a11be8f62",
+      "head_blob": "2067c80410758fd65ddbe02a5b7a550a11be8f62",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 173,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-06/verify.py",
+      "api_sha": "8c0c2477ebc3afb5a9ce5a27508f32d8f9ff5ba8",
+      "head_blob": "8c0c2477ebc3afb5a9ce5a27508f32d8f9ff5ba8",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 174,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-07/README.md",
+      "api_sha": "1254776cdf24021995f4c491ad930ebf786d3d8b",
+      "head_blob": "1254776cdf24021995f4c491ad930ebf786d3d8b",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 174,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-07/SOURCES.json",
+      "api_sha": "776ac5bfe68fb81e8bc7e018af16a72255f092bc",
+      "head_blob": "776ac5bfe68fb81e8bc7e018af16a72255f092bc",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 174,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-07/TASK.json",
+      "api_sha": "edb6a9b533d0058f1cc84f98549b42382a0afdfd",
+      "head_blob": "edb6a9b533d0058f1cc84f98549b42382a0afdfd",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 174,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-07/VERIFY.json",
+      "api_sha": "1f303680ee8fe058e43481709329d79de677e33b",
+      "head_blob": "1f303680ee8fe058e43481709329d79de677e33b",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 174,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-07/verify.py",
+      "api_sha": "c6d53c282230e12f9f0301adbdb82e373566381b",
+      "head_blob": "c6d53c282230e12f9f0301adbdb82e373566381b",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 175,
+      "path": "research-packages/e99-paired-20261019t091333z-local-08/README.md",
+      "api_sha": "50b9545839bf73c4f67c4704484bff3516379b27",
+      "head_blob": "50b9545839bf73c4f67c4704484bff3516379b27",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 175,
+      "path": "research-packages/e99-paired-20261019t091333z-local-08/SOURCES.json",
+      "api_sha": "030754f5ce2547a41a5012f9afd5a846a4707ab0",
+      "head_blob": "030754f5ce2547a41a5012f9afd5a846a4707ab0",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 175,
+      "path": "research-packages/e99-paired-20261019t091333z-local-08/TASK.json",
+      "api_sha": "1f3a399508bfc4b0cf0f2281d6ee837444eaf40d",
+      "head_blob": "1f3a399508bfc4b0cf0f2281d6ee837444eaf40d",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 175,
+      "path": "research-packages/e99-paired-20261019t091333z-local-08/VERIFY.json",
+      "api_sha": "2599af11dcf9cd025b25c86ed902236d79bc0a1a",
+      "head_blob": "2599af11dcf9cd025b25c86ed902236d79bc0a1a",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 175,
+      "path": "research-packages/e99-paired-20261019t091333z-local-08/verify.py",
+      "api_sha": "ea575c2363a727340120bbda670c95ab444d729a",
+      "head_blob": "ea575c2363a727340120bbda670c95ab444d729a",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 177,
+      "path": "docs/audits/target_c_pr952_loaded_anchor_upper_box_independent_audit_2026-10-19.md",
+      "api_sha": "13734359d5bf38c7b700f767c709929c689a7965",
+      "head_blob": "13734359d5bf38c7b700f767c709929c689a7965",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 177,
+      "path": "docs/state/artifact-index.jsonl",
+      "api_sha": "d70b646a9c92f5a79689c6817aea864513ee4713",
+      "head_blob": "d70b646a9c92f5a79689c6817aea864513ee4713",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 177,
+      "path": "reading/docs/audits/target_c_pr952_loaded_anchor_upper_box_independent_audit_2026-10-19.md",
+      "api_sha": "a5a215050203991d2e7e546fadaa772ea9cc3ba2",
+      "head_blob": "a5a215050203991d2e7e546fadaa772ea9cc3ba2",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 177,
+      "path": "reading/manifest.json",
+      "api_sha": "130a9270c8a453cd935a2cfe64c195436a351dfd",
+      "head_blob": "130a9270c8a453cd935a2cfe64c195436a351dfd",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 178,
+      "path": "docs/audits/global_factor_balance_obstruction_destination_independent_audit_2026-10-19.md",
+      "api_sha": "3d585983814cff43bfe6a9f11eac5d98f401f84a",
+      "head_blob": "3d585983814cff43bfe6a9f11eac5d98f401f84a",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 178,
+      "path": "docs/state/artifact-index.jsonl",
+      "api_sha": "fec7886b1d96d9d009b60fffaddbec3f7d3d8936",
+      "head_blob": "fec7886b1d96d9d009b60fffaddbec3f7d3d8936",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 178,
+      "path": "reading/docs/audits/global_factor_balance_obstruction_destination_independent_audit_2026-10-19.md",
+      "api_sha": "f6a32889a17b209833063f1c4d79f972f000890c",
+      "head_blob": "f6a32889a17b209833063f1c4d79f972f000890c",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 178,
+      "path": "reading/manifest.json",
+      "api_sha": "5c794a9bbb8d8775daa9cae8dc922519fd9d2d3b",
+      "head_blob": "5c794a9bbb8d8775daa9cae8dc922519fd9d2d3b",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 179,
+      "path": "docs/audits/target_c_pr952_component_anchor_stress_gain_destination_audit_2026-10-19.md",
+      "api_sha": "5f96c51359029a6d784f0dd6a893b42ab9e7bcc0",
+      "head_blob": "5f96c51359029a6d784f0dd6a893b42ab9e7bcc0",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 179,
+      "path": "docs/state/artifact-index.jsonl",
+      "api_sha": "3c6dedad44d6cd35d4d1a3ea1ad14227c268a615",
+      "head_blob": "3c6dedad44d6cd35d4d1a3ea1ad14227c268a615",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 179,
+      "path": "reading/docs/audits/target_c_pr952_component_anchor_stress_gain_destination_audit_2026-10-19.md",
+      "api_sha": "6827b7818eec13532cd81455427a19ce2d720ca9",
+      "head_blob": "6827b7818eec13532cd81455427a19ce2d720ca9",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 179,
+      "path": "reading/manifest.json",
+      "api_sha": "e6fb2233068e1d36ad4d1cc7c7e753911bb398ae",
+      "head_blob": "e6fb2233068e1d36ad4d1cc7c7e753911bb398ae",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 180,
+      "path": "docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+      "api_sha": "286eb6c152e150324a1aa7cd0d7f1ef700123d3f",
+      "head_blob": "286eb6c152e150324a1aa7cd0d7f1ef700123d3f",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 180,
+      "path": "docs/state/artifact-index.jsonl",
+      "api_sha": "4787cf264a83604cdfdcd34abab4f76a796f677b",
+      "head_blob": "4787cf264a83604cdfdcd34abab4f76a796f677b",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 180,
+      "path": "reading/docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+      "api_sha": "d108d35b732d37d84994b044df0ca2504193c80f",
+      "head_blob": "d108d35b732d37d84994b044df0ca2504193c80f",
+      "mode": "100644",
+      "match": true
+    },
+    {
+      "number": 180,
+      "path": "reading/manifest.json",
+      "api_sha": "586dbdee49f5ae1c4cfd9d53344d89963cb58aaa",
+      "head_blob": "586dbdee49f5ae1c4cfd9d53344d89963cb58aaa",
+      "mode": "100644",
+      "match": true
+    }
+  ],
+  "packages": [
+    {
+      "number": 105,
+      "id": "e99-pass-20261018-local-16-through-splice-audit",
+      "task_id": "e99-pass-20261018-local-16-through-splice-audit",
+      "classification": "unreviewed",
+      "task_scope": {
+        "statement": "Conditional independent proof audit of the pinned dominant-pentagon through-splicing candidate: convex all-dominant pentagons give a directed splice forest whose simple quotient crossing graph yields E_D <= M_D^2/4 - P_D^2/2 + O(D), d >= p^2/2, and the stated K allocation inequality.",
+        "domain": "Conditional proof domain: fully force-visible no-container full-core Type-II train-measure branch under strict convex bounded faces, finite stopped-train geometry, no bounded train return or singleton loop, atomic pi/3 phase support, strict-rhombus phase order, and exact endpoint ledgers. Finite replay checks the original six-pattern exact/Decimal regression, metadata-checked source SHA-256 identities, all admissible integer graph-count triples for 1<=M<=350 under 5P<=2M, an excluded-cap counterexample, and exact rational monotonicity controls. Geometry and the all-size proof are reconstructed in README.md; finite execution alone does not prove them.",
+        "limitations": "No extraction from every canonical global minimizer, uniform onset, physical contact or source-realized move, finite endpoint, stronger t floor, C-II closure or Level I closure. Candidate lifecycle and theorem state remain unchanged; all source labels and universal minimizer quantifiers remain outside this conditional train lemma."
+      },
+      "source_inputs": [
+        {
+          "path": "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "b567c562312438782fbde9cc62788fc843eccf331c09c2fbe3a9f31b27603b16",
+          "actual_sha256": "b567c562312438782fbde9cc62788fc843eccf331c09c2fbe3a9f31b27603b16",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+          "generated_from": []
+        },
+        {
+          "path": "research/verify_target_c_dominant_pentagon_through_splicing.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41e8a654c5b7db0452087f578ed0aafba93216200feea74bd73dae88cc4f78c9",
+          "actual_sha256": "41e8a654c5b7db0452087f578ed0aafba93216200feea74bd73dae88cc4f78c9",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/verify_target_c_dominant_pentagon_through_splicing.py",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_dominant_pentagon_through_splicing_hostile_audit_2026-09-15.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "95de9b4e3e2f2e402565af1f88ec3390db4dccd8d62eecb03a59d91139ec08a2",
+          "actual_sha256": "95de9b4e3e2f2e402565af1f88ec3390db4dccd8d62eecb03a59d91139ec08a2",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_dominant_pentagon_through_splicing_hostile_audit_2026-09-15.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "actual_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/candidate-registry.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/reports/target_c_bounded_face_convexity_2026-08-31.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "8e8c24f46b2b82678f1a7daf59c12c7e2c182e30a3120a63365513d4c89e116a",
+          "actual_sha256": "8e8c24f46b2b82678f1a7daf59c12c7e2c182e30a3120a63365513d4c89e116a",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/target_c_bounded_face_convexity_2026-08-31.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/reports/campaign_defect_train_extension_2026-09-09.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "98c25016760f127f1e231eb4b54980d5b75caf3e15302ef74be61472f96d805c",
+          "actual_sha256": "98c25016760f127f1e231eb4b54980d5b75caf3e15302ef74be61472f96d805c",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/campaign_defect_train_extension_2026-09-09.md",
+          "generated_from": []
+        },
+        {
+          "path": "research/target_c_phase_star_atomic_gap_0009_2026-09-14.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "672f28cfbddb736df4cd9079e5ddc2e9b0df7bb81b4924649037cfea68ef8452",
+          "actual_sha256": "672f28cfbddb736df4cd9079e5ddc2e9b0df7bb81b4924649037cfea68ef8452",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/target_c_phase_star_atomic_gap_0009_2026-09-14.md",
+          "generated_from": []
+        },
+        {
+          "path": "research/target_c_structural_omnibus_hostile_audit_2026-09-12.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "fc8f103e34961a9b40e5b81d89850852f66ffa0f8763dc9c85bd9bb4def4ed40",
+          "actual_sha256": "fc8f103e34961a9b40e5b81d89850852f66ffa0f8763dc9c85bd9bb4def4ed40",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/target_c_structural_omnibus_hostile_audit_2026-09-12.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_phase_atomic_route_surplus_self_audit_2026-09-12.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "467ee66e100ec87a34ddede865b5406736540a26c77fcf219872fc6b51716a1c",
+          "actual_sha256": "467ee66e100ec87a34ddede865b5406736540a26c77fcf219872fc6b51716a1c",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_phase_atomic_route_surplus_self_audit_2026-09-12.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/theorem-state.yaml",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "actual_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/CURRENT.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "actual_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/problem/statement.md",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/verify.py",
+          "commit": "2c0968543d732a73a6f7a7bb8d192a1c1b10438e",
+          "declared_sha256": "2a68e6a2c453c0857dc9ea06ab543895a03391041286a47053241e780873d02e",
+          "actual_sha256": "2a68e6a2c453c0857dc9ea06ab543895a03391041286a47053241e780873d02e",
+          "mode": "100644",
+          "match": true,
+          "identity": "independent exact integer verifier",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/README.md",
+          "commit": "2c0968543d732a73a6f7a7bb8d192a1c1b10438e",
+          "declared_sha256": "6d494af2a79698b695b2eb376d5092deb67828350bdc7fce0f40541182333908",
+          "actual_sha256": "6d494af2a79698b695b2eb376d5092deb67828350bdc7fce0f40541182333908",
+          "mode": "100644",
+          "match": true,
+          "identity": "conditional exact-head proof reconstruction and scope audit",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+          "research/verify_target_c_dominant_pentagon_through_splicing.py",
+          "docs/audits/target_c_dominant_pentagon_through_splicing_hostile_audit_2026-09-15.md",
+          "docs/targets/target-c/candidate-registry.json",
+          "docs/reports/target_c_bounded_face_convexity_2026-08-31.md",
+          "docs/reports/campaign_defect_train_extension_2026-09-09.md",
+          "research/target_c_phase_star_atomic_gap_0009_2026-09-14.md",
+          "research/target_c_structural_omnibus_hostile_audit_2026-09-12.md",
+          "docs/audits/target_c_phase_atomic_route_surplus_self_audit_2026-09-12.md",
+          "docs/state/theorem-state.yaml",
+          "docs/targets/target-c/CURRENT.md",
+          "docs/problem/statement.md",
+          "research-packages/e99-pass-20261018-local-16-through-splice-audit/README.md",
+          "research-packages/e99-pass-20261018-local-16-through-splice-audit/verify.py"
+        ],
+        "domain": "Conditional proof domain: fully force-visible no-container full-core Type-II train-measure branch under strict convex bounded faces, finite stopped-train geometry, no bounded train return or singleton loop, atomic pi/3 phase support, strict-rhombus phase order, and exact endpoint ledgers. Finite replay checks the original six-pattern exact/Decimal regression, metadata-checked source SHA-256 identities, all admissible integer graph-count triples for 1<=M<=350 under 5P<=2M, an excluded-cap counterexample, and exact rational monotonicity controls. Geometry and the all-size proof are reconstructed in README.md; finite execution alone does not prove them.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research/verify_target_c_dominant_pentagon_through_splicing.py"
+            ],
+            "timeout_seconds": 60
+          },
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-pass-20261018-local-16-through-splice-audit/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 109,
+      "id": "e99-pass-20261018-local-07",
+      "task_id": "e99-pass-20261018-local-07",
+      "classification": "unreviewed",
+      "task_scope": {
+        "statement": "Conditional exact propagation of the unreviewed g=0.0071 full-core Type-II matched train gap through the Section 171 endpoint at epsilon=0.0023374 and both imported outer-tooth and long-side energy branches at t=t0.",
+        "domain": "Exact rational endpoint inequalities and branch floors for delta=(9 epsilon/2-g)/2, conditional on the all-train gap, imported Section 171 derivative condition, and physical report's full-core Type-II R_F=o(D) low-t branch with shallow-tooth injectivity or long-side directional-energy hypotheses.",
+        "limitations": "The g=0.0071 train gap and physical branch lemmas remain unreviewed, noncanonical premises. Constants are certified at t=t0; for x=t-t0>0 the recorded branch floors decrease. No source-wide upper bound on x, KKT stress floor, finite competitor, C-II closure, or Level I result is proved."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "actual_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/problem/statement.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/theorem-state.yaml",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "actual_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/priority-state.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/agent-task-catalog.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "actual_sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/agent-task-catalog.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "actual_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/CURRENT.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "actual_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/candidate-registry.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/76-hole-stable-complete-grid-order-diameter-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "8e7bb87b2e2b27c8696bc72558d3b59dc5955b690f6865b0de41f4fb715c453e",
+          "actual_sha256": "8e7bb87b2e2b27c8696bc72558d3b59dc5955b690f6865b0de41f4fb715c453e",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/76-hole-stable-complete-grid-order-diameter-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5185283ec35ab657bb030f75a901e00cdb5fcf1433501e5535143c2ca91bbd6a",
+          "actual_sha256": "5185283ec35ab657bb030f75a901e00cdb5fcf1433501e5535143c2ca91bbd6a",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "409ca3892cce1e5e3b8fa1be9e19dfc173edf9568e0d0cf2b2875703a41bb095",
+          "actual_sha256": "409ca3892cce1e5e3b8fa1be9e19dfc173edf9568e0d0cf2b2875703a41bb095",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/68-punctured-packing-phase-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "b43bc3fbdab2918315721fa0c3c7057527fc86057a0c994ac33e8eb493aaccdd",
+          "actual_sha256": "b43bc3fbdab2918315721fa0c3c7057527fc86057a0c994ac33e8eb493aaccdd",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/68-punctured-packing-phase-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/85-train-boundary-interface-currency-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "8618a1ae469f6f7c63a8afa4ef452f77edfacc3b00479282c977cfc43f28af79",
+          "actual_sha256": "8618a1ae469f6f7c63a8afa4ef452f77edfacc3b00479282c977cfc43f28af79",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/85-train-boundary-interface-currency-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/tracks/target-c-iterative-pruning-atomic-gap.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c002e2c9ce67f05b16bb433b42f7e62e1924da207df3bad6348f5e7898c3af4d",
+          "actual_sha256": "c002e2c9ce67f05b16bb433b42f7e62e1924da207df3bad6348f5e7898c3af4d",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/tracks/target-c-iterative-pruning-atomic-gap.md",
+          "generated_from": []
+        },
+        {
+          "path": "tasks/target-c-branch-aware-atomic-gap.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "54884ee3d1db29e1493c0ce8806733cfda84f992987eaa8970f2ef067d6f518d",
+          "actual_sha256": "54884ee3d1db29e1493c0ce8806733cfda84f992987eaa8970f2ef067d6f518d",
+          "mode": "100644",
+          "match": true,
+          "identity": "tasks/target-c-branch-aware-atomic-gap.md",
+          "generated_from": []
+        },
+        {
+          "path": "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_2026-09-15.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "efe39d4523271be966ad4264959f8fa04474df6832d9bcd9fcc5513151b47ba6",
+          "actual_sha256": "efe39d4523271be966ad4264959f8fa04474df6832d9bcd9fcc5513151b47ba6",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_2026-09-15.md",
+          "generated_from": []
+        },
+        {
+          "path": "research/verify_target_c_branch_aware_atomic_gap_0071.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "79ef18464e8d271af7b16b17310ada1d78526d3cfdb6f34ced58f6e52e94466c",
+          "actual_sha256": "79ef18464e8d271af7b16b17310ada1d78526d3cfdb6f34ced58f6e52e94466c",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/verify_target_c_branch_aware_atomic_gap_0071.py",
+          "generated_from": []
+        },
+        {
+          "path": "research/target_c_iterative_minimax_phase_star_atomic_gap_0050_2026-09-14.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "55114bc38cc15a8b531eec230a477f81012065c3478e0e1047ee7b46887857d2",
+          "actual_sha256": "55114bc38cc15a8b531eec230a477f81012065c3478e0e1047ee7b46887857d2",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/target_c_iterative_minimax_phase_star_atomic_gap_0050_2026-09-14.md",
+          "generated_from": []
+        },
+        {
+          "path": "research/verify_target_c_iterative_minimax_atomic_gap_0050.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "950db9c17b6174cb9aed68a12f1d486602e3a1438f9ed9a50f1d25d2f5a6d002",
+          "actual_sha256": "950db9c17b6174cb9aed68a12f1d486602e3a1438f9ed9a50f1d25d2f5a6d002",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/verify_target_c_iterative_minimax_atomic_gap_0050.py",
+          "generated_from": []
+        },
+        {
+          "path": "research/target_c_g0050_physical_boundary_propagation_2026-09-14.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "3a9b80bc3444bf010521eba0ed5475487ecd73f2be2b1237ae6743a891181867",
+          "actual_sha256": "3a9b80bc3444bf010521eba0ed5475487ecd73f2be2b1237ae6743a891181867",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/target_c_g0050_physical_boundary_propagation_2026-09-14.md",
+          "generated_from": []
+        },
+        {
+          "path": "research/verify_target_c_g0050_global_propagation.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "253bff11afbab747417286835bfd07c6e4ac7ee5c7bbbc8bd3383e5f3804d905",
+          "actual_sha256": "253bff11afbab747417286835bfd07c6e4ac7ee5c7bbbc8bd3383e5f3804d905",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/verify_target_c_g0050_global_propagation.py",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-07/verify.py",
+          "commit": "a1efbcf5f8441dbacee06cf9e53535d9ddc40ccd",
+          "declared_sha256": "1a647aadb02025e9ab34bb0c25ae3d20de87757623014dbc449c051f0975698b",
+          "actual_sha256": "1a647aadb02025e9ab34bb0c25ae3d20de87757623014dbc449c051f0975698b",
+          "mode": "100644",
+          "match": true,
+          "identity": "exact-g0071-section171-outer-energy-verifier",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/problem/statement.md",
+          "docs/state/theorem-state.yaml",
+          "docs/research/priority-state.json",
+          "docs/research/agent-task-catalog.json",
+          "docs/targets/target-c/CURRENT.md",
+          "docs/targets/target-c/candidate-registry.json",
+          "docs/targets/target-c/76-hole-stable-complete-grid-order-diameter-audit.md",
+          "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md",
+          "docs/targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md",
+          "docs/targets/target-c/68-punctured-packing-phase-audit.md",
+          "docs/targets/target-c/85-train-boundary-interface-currency-audit.md",
+          "docs/research/tracks/target-c-iterative-pruning-atomic-gap.md",
+          "tasks/target-c-branch-aware-atomic-gap.md",
+          "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_2026-09-15.md",
+          "research/verify_target_c_branch_aware_atomic_gap_0071.py",
+          "research/target_c_iterative_minimax_phase_star_atomic_gap_0050_2026-09-14.md",
+          "research/verify_target_c_iterative_minimax_atomic_gap_0050.py",
+          "research/target_c_g0050_physical_boundary_propagation_2026-09-14.md",
+          "research/verify_target_c_g0050_global_propagation.py",
+          "research-packages/e99-pass-20261018-local-07/verify.py"
+        ],
+        "domain": "Exact rational endpoint inequalities and branch floors for delta=(9 epsilon/2-g)/2, conditional on the all-train gap, imported Section 171 derivative condition, and physical report's full-core Type-II R_F=o(D) low-t branch with shallow-tooth injectivity or long-side directional-energy hypotheses.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-pass-20261018-local-07/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 110,
+      "id": "e99-pass-20261018-homelab-12",
+      "task_id": "e99-pass-20261018-homelab-12",
+      "classification": "unreviewed",
+      "task_scope": {
+        "statement": "Independently reconstruct the combined O_{J,K}(D^(4/5)) count of positive-stress leaf ports and same-chart double ports under a fixed supplied slow-chart atlas, and verify q>=h>=ceil(D) yields D-O(D^(4/5)) uncovered loaded endpoints.",
+        "domain": "Asymptotic exponent arithmetic for D->infinity, fixed J,K, canonical positive-leaf anchor error O(D^(-1/2)), canonical slow-chart boundary and double-port counts, and canonical post-ZF C-ZRF/C-WOODALL endpoint counts at launch base 7d0a450fe66991036541023f95c44c064a04b6a8.",
+        "limitations": "The executable verifier checks exponent arithmetic only. The analytic geometry is independently reconstructed but not machine proved. No atlas extraction, source motion, strict-diameter competitor, full-source pair ledger for a moved endpoint, C-II closure, Level I closure, or theorem promotion is claimed."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/audits/target_c_slow_chart_contact_port_cover_independent_audit_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "4f40354d0af913209245992c18e88680ccf65973d68265ef085c32d4329a9391",
+          "actual_sha256": "4f40354d0af913209245992c18e88680ccf65973d68265ef085c32d4329a9391",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_slow_chart_contact_port_cover_independent_audit_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c46e90b1975345be2704b4df3085d63f5b84b15402ae6f9214a49faa3e3f32f7",
+          "actual_sha256": "c46e90b1975345be2704b4df3085d63f5b84b15402ae6f9214a49faa3e3f32f7",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "actual_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_slow_chart_double_port_count_independent_audit_2026-10-09.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "169d0e52f0900e5898e17fb9d131b5c437f5d5d190897d1d03e8727080297b3b",
+          "actual_sha256": "169d0e52f0900e5898e17fb9d131b5c437f5d5d190897d1d03e8727080297b3b",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_slow_chart_double_port_count_independent_audit_2026-10-09.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_slow_chart_near_boundary_count_independent_audit_2026-10-09.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "1fb54ff015d16d89fa8177e261487d9fba2fa872aa96508a24ce5006253554cc",
+          "actual_sha256": "1fb54ff015d16d89fa8177e261487d9fba2fa872aa96508a24ce5006253554cc",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_slow_chart_near_boundary_count_independent_audit_2026-10-09.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_bounded_variation_contact_port_counts_independent_audit_2026-10-09.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "26bbd0d6babd39504c188af493cb43ef5b6d9c3a89c202857f044f1b426bcaeb",
+          "actual_sha256": "26bbd0d6babd39504c188af493cb43ef5b6d9c3a89c202857f044f1b426bcaeb",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_bounded_variation_contact_port_counts_independent_audit_2026-10-09.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+          "actual_sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "3dce8109e6ce8c8e78c31121e38fb9773db34aa19af26e817bb2d718d6864fbd",
+          "actual_sha256": "3dce8109e6ce8c8e78c31121e38fb9773db34aa19af26e817bb2d718d6864fbd",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/theorem-state.yaml",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "actual_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/candidate-registry.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/STATE.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+          "actual_sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/STATE.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "actual_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/priority-state.json",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-12/verify.py",
+          "commit": "3fc35647bf49de836dfc379b46fbbc604cb971fe",
+          "declared_sha256": "79f9cc71dc7dfd6d3837542990a976bf7e42ce15cb1d35776744fb57e47c3a9d",
+          "actual_sha256": "79f9cc71dc7dfd6d3837542990a976bf7e42ce15cb1d35776744fb57e47c3a9d",
+          "mode": "100644",
+          "match": true,
+          "identity": "exact-exponent-verifier",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-12/README.md",
+          "commit": "3fc35647bf49de836dfc379b46fbbc604cb971fe",
+          "declared_sha256": "be2add3631caaf4d145335c13122f970875339dd6c078b47c8a87b5879da2374",
+          "actual_sha256": "be2add3631caaf4d145335c13122f970875339dd6c078b47c8a87b5879da2374",
+          "mode": "100644",
+          "match": true,
+          "identity": "independent-audit-report",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/audits/target_c_slow_chart_contact_port_cover_independent_audit_2026-10-10.md",
+          "docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md",
+          "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "docs/audits/target_c_slow_chart_double_port_count_independent_audit_2026-10-09.md",
+          "docs/audits/target_c_slow_chart_near_boundary_count_independent_audit_2026-10-09.md",
+          "docs/audits/target_c_bounded_variation_contact_port_counts_independent_audit_2026-10-09.md",
+          "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+          "docs/state/theorem-state.yaml",
+          "docs/targets/target-c/candidate-registry.json",
+          "docs/STATE.md",
+          "docs/research/priority-state.json",
+          "research-packages/e99-pass-20261018-homelab-12/verify.py",
+          "research-packages/e99-pass-20261018-homelab-12/README.md"
+        ],
+        "domain": "Asymptotic exponent arithmetic for D->infinity, fixed J,K, canonical positive-leaf anchor error O(D^(-1/2)), canonical slow-chart boundary and double-port counts, and canonical post-ZF C-ZRF/C-WOODALL endpoint counts at launch base 7d0a450fe66991036541023f95c44c064a04b6a8.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-pass-20261018-homelab-12/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 112,
+      "id": "e99-pass-20261018-local-14",
+      "task_id": "e99-pass-20261018-local-14",
+      "classification": "conditional",
+      "task_scope": {
+        "statement": "Conditional audit of candidate TARGET-C-PR950-ENDPOINT-INCLUSIVE-CUT-REPAIR: if every connected unloaded core subset U has |delta_C(U)| >= diam(U)+2, source contact degrees are at most five, A_I contains every loaded neighbor of the unloaded component I, and the common grid X_D is a connected subset of I, then every endpoint-inclusive A_I-to-X_D separator S satisfies diam(X_D) <= 5|S|.",
+        "domain": "Enumerates all 2^21 vertex deletion sets on a finite 3x3 square-lattice contact fixture, after checking its componentwise brace on every connected unloaded subset; includes a path separator control where the brace fails.",
+        "limitations": "The unloaded-set brace and source/grid extraction remain separate unreviewed obligations. No attachment-label overlap, finite competitor, canonical promotion, C-II closure or Level I closure is claimed."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+          "actual_sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+          "actual_sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/reports/target_c_full_cell_common_grid_preservation_2026-10-15.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "07036803e35a5cf4848d32b6e868edcc30ea883e60349f2f2eaf90ff4e7c3c5f",
+          "actual_sha256": "07036803e35a5cf4848d32b6e868edcc30ea883e60349f2f2eaf90ff4e7c3c5f",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/target_c_full_cell_common_grid_preservation_2026-10-15.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+          "actual_sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "actual_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/CURRENT.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "actual_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/candidate-registry.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/theorem-state.yaml",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "actual_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/priority-state.json",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-14/verify.py",
+          "commit": "fd02d4d36b1953a217680d889ce830f894a41096",
+          "declared_sha256": "c47f7878280e1ea47e8de0231199d6a91006543a74bd388c1ead414e58daf4aa",
+          "actual_sha256": "c47f7878280e1ea47e8de0231199d6a91006543a74bd388c1ead414e58daf4aa",
+          "mode": "100644",
+          "match": true,
+          "identity": "independent-finite-cut-control",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "docs/reports/target_c_full_cell_common_grid_preservation_2026-10-15.md",
+          "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "docs/targets/target-c/CURRENT.md",
+          "docs/targets/target-c/candidate-registry.json",
+          "docs/state/theorem-state.yaml",
+          "docs/research/priority-state.json",
+          "research-packages/e99-pass-20261018-local-14/verify.py"
+        ],
+        "domain": "Enumerates all 2^21 vertex deletion sets on a finite 3x3 square-lattice contact fixture, after checking its componentwise brace on every connected unloaded subset; includes a path separator control where the brace fails.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-pass-20261018-local-14/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 113,
+      "id": "e99-pass-20261018-homelab-11",
+      "task_id": "e99-pass-20261018-homelab-11",
+      "classification": "conditional",
+      "task_scope": {
+        "statement": "Transfer partner-uniform endpoint midpoint tail and first/second moments to every edge of the complete actual C-II diameter graph by an injection into distinct endpoints.",
+        "domain": "Finite canonical C-II sources with D in the upstream endpoint-estimate range; the proof covers all actual diameter edges, and the finite verifier exercises the two stated Woodall graph forms only.",
+        "limitations": "Conditional on the upstream endpoint midpoint estimates and generic Woodall classification. Does not bound stress-weighted sums or near-diameter pair counts, extract a source set, construct a finite motion, or close C-II or Level I."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/reports/target_c_global_inverse_phase_face_tail_exclusion_2026-10-09.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5061a85a1810c8626123837d7901b3aa7ef1d1db3216a207ca67aaedcb18eb43",
+          "actual_sha256": "5061a85a1810c8626123837d7901b3aa7ef1d1db3216a207ca67aaedcb18eb43",
+          "mode": "100644",
+          "match": true,
+          "identity": "source proof, Sections 17.1-17.2",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "a815cfd48e4f208a1891b853726897069909704fa0f359dad9f828c12668d797",
+          "actual_sha256": "a815cfd48e4f208a1891b853726897069909704fa0f359dad9f828c12668d797",
+          "mode": "100644",
+          "match": true,
+          "identity": "published destination audit bytes and scope",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "1a9ab31c0fa492cc56b4c625b279654a69005ad2d531a02da553b707da2a3d52",
+          "actual_sha256": "1a9ab31c0fa492cc56b4c625b279654a69005ad2d531a02da553b707da2a3d52",
+          "mode": "100644",
+          "match": true,
+          "identity": "prior source second-referee record",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "actual_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "mode": "100644",
+          "match": true,
+          "identity": "source PR transaction and disposition",
+          "generated_from": []
+        },
+        {
+          "path": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "3dce8109e6ce8c8e78c31121e38fb9773db34aa19af26e817bb2d718d6864fbd",
+          "actual_sha256": "3dce8109e6ce8c8e78c31121e38fb9773db34aa19af26e817bb2d718d6864fbd",
+          "mode": "100644",
+          "match": true,
+          "identity": "straight-line-thrackle classification application",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+          "actual_sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+          "mode": "100644",
+          "match": true,
+          "identity": "active-diameter-row scope and retained isolates",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "actual_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "mode": "100644",
+          "match": true,
+          "identity": "current C-II endpoint and open status",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "canonical lifecycle and dependencies",
+          "generated_from": []
+        },
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "actual_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "mode": "100644",
+          "match": true,
+          "identity": "problem quantifiers and source definition",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-11/README.md",
+          "commit": "81de74d4ba5099c8572c1c76f6c28ac80d9c642a",
+          "declared_sha256": "8978fdb8bf304e9c42d2c8b720cce6583ba16fc32c958d907aa616ed92505f86",
+          "actual_sha256": "8978fdb8bf304e9c42d2c8b720cce6583ba16fc32c958d907aa616ed92505f86",
+          "mode": "100644",
+          "match": true,
+          "identity": "independent conditional proof audit",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-11/verify.py",
+          "commit": "81de74d4ba5099c8572c1c76f6c28ac80d9c642a",
+          "declared_sha256": "8f9ccd493d18b995ac3a0bbd8b1560d2b5e37c16c9e8b15ea586795d41b73386",
+          "actual_sha256": "8f9ccd493d18b995ac3a0bbd8b1560d2b5e37c16c9e8b15ea586795d41b73386",
+          "mode": "100644",
+          "match": true,
+          "identity": "finite endpoint-injection bookkeeping regression",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/reports/target_c_global_inverse_phase_face_tail_exclusion_2026-10-09.md",
+          "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+          "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+          "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+          "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "docs/targets/target-c/CURRENT.md",
+          "docs/state/theorem-state.yaml",
+          "docs/problem/statement.md",
+          "research-packages/e99-pass-20261018-homelab-11/README.md",
+          "research-packages/e99-pass-20261018-homelab-11/verify.py"
+        ],
+        "domain": "Finite canonical C-II sources with D in the upstream endpoint-estimate range; the proof covers all actual diameter edges, and the finite verifier exercises the two stated Woodall graph forms only.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-pass-20261018-homelab-11/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 134,
+      "id": "e99-macbook-20261019T054318Z-05",
+      "task_id": "e99-macbook-20261019T054318Z-05",
+      "classification": "conditional",
+      "task_scope": {
+        "statement": "For two distinct final Section-50.1 components with fixed linear-size direction subsets in arcs of radius epsilon and center separation s=|sin(phi_1-phi_2)|>2 epsilon, prove V_AB >= alpha beta (s-2 epsilon)D^2-C_delta D^(2-eta), conditional on sum_e delta_e <= C_delta D.",
+        "domain": "Exact PR #103 analytic implication for a finite pure simply connected strict-rhombic disk, fixed eta and lambda, its train-crossing graph, high-defect-first deletion, and iterative low-degree vertex pruning.",
+        "limitations": "Does not establish the supplied total-defect estimate, separated angular-subset extraction, the global zonotope identity, shell transfer, global minimality, or Level I. The arithmetic verifier checks formulas and scale controls only."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/targets/target-b/README.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+          "actual_sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+          "mode": "100644",
+          "match": true,
+          "identity": "target-b-route",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+          "actual_sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+          "mode": "100644",
+          "match": true,
+          "identity": "section-49-50-route-and-defect-budget",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "target-b-current-lifecycle",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "actual_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "mode": "100644",
+          "match": true,
+          "identity": "priority-and-catalogue-revisions",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_b_virtual_zonotope_missing_crossing_audit_2026-09-05.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "4c628764fa370d809601c78f2314caa1bc08794de4588cfb7dd4b59d8adce16d",
+          "actual_sha256": "4c628764fa370d809601c78f2314caa1bc08794de4588cfb7dd4b59d8adce16d",
+          "mode": "100644",
+          "match": true,
+          "identity": "separate-section-26-identity-audit-status",
+          "generated_from": []
+        },
+        {
+          "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+          "actual_sha256": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+          "mode": "100644",
+          "match": true,
+          "identity": "promoted-target-b-prerequisites-and-scope",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-05/verify.py",
+          "commit": "6171ec66dfce3ea696a412e3a37bcf7440732088",
+          "declared_sha256": "4340d4345b2302de41283992c1a8ec4ee99c9d938dcf72dfef4b6208fc04acf4",
+          "actual_sha256": "4340d4345b2302de41283992c1a8ec4ee99c9d938dcf72dfef4b6208fc04acf4",
+          "mode": "100644",
+          "match": true,
+          "identity": "exact-rational-inequality-and-control-checker",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/targets/target-b/README.md",
+          "docs/targets/target-b/01-jammed-rhombic-branch.md",
+          "docs/state/theorem-state.yaml",
+          "docs/research/priority-state.json",
+          "docs/audits/target_b_virtual_zonotope_missing_crossing_audit_2026-09-05.md",
+          "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+          "research-packages/e99-macbook-20261019T054318Z-05/verify.py"
+        ],
+        "domain": "Exact PR #103 analytic implication for a finite pure simply connected strict-rhombic disk, fixed eta and lambda, its train-crossing graph, high-defect-first deletion, and iterative low-degree vertex pruning.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-macbook-20261019T054318Z-05/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 153,
+      "id": "e99-paired-20261019t091333z-homelab-11",
+      "task_id": "e99-paired-20261019t091333z-homelab-11",
+      "classification": "conditional",
+      "task_scope": {
+        "statement": "Audit the destination candidate TARGET-C-PR952-UNEQUAL-HEIGHT-ISOLATE-TRANSPORT at exact commit 7d0a450fe66991036541023f95c44c064a04b6a8. Reconstruct the strict-floor shortest-path support theorem for supplied disjoint moving groups with no cross-group old contacts, all source-pair upper/lower constraints, and retained isolates; replay the finite certificate.",
+        "domain": "Finite unit-separated planar source; nonempty fixed group G0; disjoint moving groups with no old contacts between distinct moving groups; bounded parallel heights; strict contact-release floors; every upper pair and every original-order lower noncontact encoded. Finite replay cases H=30,31,100 plus the candidate symbolic t-to-zero fixture. The package checker validates the captured replay against the pinned JSONL; the original SymPy verifier was separately rerun as recorded in README.md.",
+        "limitations": "No canonical group extraction or noncollapse theorem is proved; the imported candidate remains unreviewed in the destination registry; no theorem state or claim lifecycle is changed."
+      },
+      "source_inputs": [
+        {
+          "path": "research/certificates/target_c_unequal_height_release_2026_10_10.jsonl",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "2f996f5307f5b237e78074464113d880f7683c9a816601f4874db8f5d81b8f7c",
+          "actual_sha256": "2f996f5307f5b237e78074464113d880f7683c9a816601f4874db8f5d81b8f7c",
+          "mode": "100644",
+          "match": true,
+          "identity": "pinned candidate certificate",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-11/pinned-replay.jsonl",
+          "commit": "0b3f19b643387da8ea3f583945d1fef220e30b02",
+          "declared_sha256": "2f996f5307f5b237e78074464113d880f7683c9a816601f4874db8f5d81b8f7c",
+          "actual_sha256": "2f996f5307f5b237e78074464113d880f7683c9a816601f4874db8f5d81b8f7c",
+          "mode": "100644",
+          "match": true,
+          "identity": "captured verifier replay",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-11/verify.py",
+          "commit": "0b3f19b643387da8ea3f583945d1fef220e30b02",
+          "declared_sha256": "264d158cf563ac88b15857abb38dd033b5f4a2570de3c6147703cb78b8eeeae7",
+          "actual_sha256": "264d158cf563ac88b15857abb38dd033b5f4a2570de3c6147703cb78b8eeeae7",
+          "mode": "100644",
+          "match": true,
+          "identity": "replay record checker",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "research/certificates/target_c_unequal_height_release_2026_10_10.jsonl",
+          "research-packages/e99-paired-20261019t091333z-homelab-11/pinned-replay.jsonl",
+          "research-packages/e99-paired-20261019t091333z-homelab-11/verify.py"
+        ],
+        "domain": "Finite unit-separated planar source; nonempty fixed group G0; disjoint moving groups with no old contacts between distinct moving groups; bounded parallel heights; strict contact-release floors; every upper pair and every original-order lower noncontact encoded. Finite replay cases H=30,31,100 plus the candidate symbolic t-to-zero fixture. The package checker validates the captured replay against the pinned JSONL; the original SymPy verifier was separately rerun as recorded in README.md.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-paired-20261019t091333z-homelab-11/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 156,
+      "id": "e99-paired-20261019t091333z-local-13",
+      "task_id": "e99-paired-20261019t091333z-local-13",
+      "classification": "unreviewed",
+      "task_scope": {
+        "statement": "Destination exact-head audit of the candidate that every translated unit triangular-lattice crop in a closed radius-R disk, for R>=640000, admits a unit-separated replacement with at least pi*R^2/(sqrt(3)/2)+R/160000 labels; consequently every global minimum-diameter n-point unit-separated set with D>1280000 has g_A=n-1-pi*D^2/(2*sqrt(3))>=D/320000.",
+        "domain": "All real R>=640000, every lattice translation, and every finite global n-point diameter minimizer with D>1280000; one-row replacement, guarded simultaneous row packets, translation averaging, and strict smaller-diameter global comparison are the proof hypotheses.",
+        "limitations": "PASS is limited to this population-reserve claim and the pinned finite checker. No source-specific upper bound, triangle conclusion, C-II endpoint, Level I closure, or theorem-state promotion is established."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/reports/global_boundary_zigzag_linear_reserve_2026-10-11.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5613444ab0f885161ffb81f31ef52f14d9c9a2c7a7fdfc6e7d43734cb4770e5d",
+          "actual_sha256": "5613444ab0f885161ffb81f31ef52f14d9c9a2c7a7fdfc6e7d43734cb4770e5d",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/global_boundary_zigzag_linear_reserve_2026-10-11.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "actual_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/candidate-registry.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "actual_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/CURRENT.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "actual_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/problem/statement.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/theorem-state.yaml",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16fee2414ff89dd20393936eba0dc8467b13b05ab0321193cfd9c64545265a90",
+          "actual_sha256": "16fee2414ff89dd20393936eba0dc8467b13b05ab0321193cfd9c64545265a90",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/artifact-index.jsonl",
+          "generated_from": []
+        },
+        {
+          "path": "docs/theory/03-oler-shell.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "a6cf18f38fa01c6969e2aecd8211278a0dcd1530efb190551d815ed0e86c0521",
+          "actual_sha256": "a6cf18f38fa01c6969e2aecd8211278a0dcd1530efb190551d815ed0e86c0521",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/theory/03-oler-shell.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/pr956_autonomous_proof_audit_2026-10-15.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "31dfded403d64727212311037b24e7c0b2dce05f3a51d9bd11eca9dd5123da00",
+          "actual_sha256": "31dfded403d64727212311037b24e7c0b2dce05f3a51d9bd11eca9dd5123da00",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/pr956_autonomous_proof_audit_2026-10-15.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "actual_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/priority-state.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/agent-task-catalog.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "actual_sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/agent-task-catalog.json",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-13/verify.py",
+          "commit": "b347d8c3cd1f3dd554874d971386481f244e0787",
+          "declared_sha256": "7704cfa01c865f151bb44cca72d82323a48ca3c7599f28ae747403304b3104b6",
+          "actual_sha256": "7704cfa01c865f151bb44cca72d82323a48ca3c7599f28ae747403304b3104b6",
+          "mode": "100644",
+          "match": true,
+          "identity": "exact rational audit controls",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/reports/global_boundary_zigzag_linear_reserve_2026-10-11.md",
+          "docs/targets/target-c/candidate-registry.json",
+          "docs/targets/target-c/CURRENT.md",
+          "docs/problem/statement.md",
+          "docs/state/theorem-state.yaml",
+          "docs/state/artifact-index.jsonl",
+          "docs/theory/03-oler-shell.md",
+          "docs/audits/pr956_autonomous_proof_audit_2026-10-15.md",
+          "docs/research/priority-state.json",
+          "docs/research/agent-task-catalog.json",
+          "research-packages/e99-paired-20261019t091333z-local-13/verify.py"
+        ],
+        "domain": "All real R>=640000, every lattice translation, and every finite global n-point diameter minimizer with D>1280000; one-row replacement, guarded simultaneous row packets, translation averaging, and strict smaller-diameter global comparison are the proof hypotheses.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-paired-20261019t091333z-local-13/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 158,
+      "id": "e99-paired-20261019t091333z-local-05",
+      "task_id": "e99-paired-20261019t091333z-local-05",
+      "classification": "unreviewed",
+      "task_scope": {
+        "statement": "For every noncollinear global minimum-diameter unit-separated source with D >= 216, choose one actual diameter partner for every actual diameter endpoint. About the full-source hull minimum-enclosing-circle center, audit the uniform tail #{p: |m_p-o| >= s} <= C D^2/s^2 for s >= 4*3^(1/4)*sqrt(D), and the O(D^(3/2)) first and O(D^2 log D) second unweighted midpoint moments.",
+        "domain": "Universal analytic claim over all such global sources and independent partner choices; verify the exact scale and constant inequalities in verify.py only.",
+        "limitations": "No finite verifier encodes the support-function proof. This package audits endpoint midpoints only, gives no stress-weighted bound or stress-relevant set, and does not assess the separate near-diameter or actual-edge-transfer claims. Destination claim lifecycle remains unreviewed; no theorem promotion is performed."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "a815cfd48e4f208a1891b853726897069909704fa0f359dad9f828c12668d797",
+          "actual_sha256": "a815cfd48e4f208a1891b853726897069909704fa0f359dad9f828c12668d797",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "1a9ab31c0fa492cc56b4c625b279654a69005ad2d531a02da553b707da2a3d52",
+          "actual_sha256": "1a9ab31c0fa492cc56b4c625b279654a69005ad2d531a02da553b707da2a3d52",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_midpoint_and_quantitative_hull_train_independent_audit_2026-10-09.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "cd008165a6d2587f1dcdb03453048ded333ac9c9075cc409d8fc243f4ecb4495",
+          "actual_sha256": "cd008165a6d2587f1dcdb03453048ded333ac9c9075cc409d8fc243f4ecb4495",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_midpoint_and_quantitative_hull_train_independent_audit_2026-10-09.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/reports/target_c_global_inverse_phase_face_tail_exclusion_2026-10-09.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5061a85a1810c8626123837d7901b3aa7ef1d1db3216a207ca67aaedcb18eb43",
+          "actual_sha256": "5061a85a1810c8626123837d7901b3aa7ef1d1db3216a207ca67aaedcb18eb43",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/target_c_global_inverse_phase_face_tail_exclusion_2026-10-09.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "actual_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/CURRENT.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/theorem-state.yaml",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "actual_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/candidate-registry.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/STATE.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+          "actual_sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/STATE.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/58-full-source-geometry-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "f504349650423786a6091ba9b7a8699cd62b7e6b200d2a2ce3a6a34b3d0b473d",
+          "actual_sha256": "f504349650423786a6091ba9b7a8699cd62b7e6b200d2a2ce3a6a34b3d0b473d",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/58-full-source-geometry-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "ca4abbf69861ee2c367bece626e3715eeaec03cdd837149453ca814d1d74eded",
+          "actual_sha256": "ca4abbf69861ee2c367bece626e3715eeaec03cdd837149453ca814d1d74eded",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/agent-task-catalog.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "actual_sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/agent-task-catalog.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "actual_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/priority-state.json",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-05/verify.py",
+          "commit": "44743498eb0bd669e3198d93356ae8c5e9dc0d59",
+          "declared_sha256": "390675f5365d04e0c521795c9387ac29e986b67b3907e336ff51560651554e6d",
+          "actual_sha256": "390675f5365d04e0c521795c9387ac29e986b67b3907e336ff51560651554e6d",
+          "mode": "100644",
+          "match": true,
+          "identity": "finite-scale-checker",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+          "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+          "docs/audits/target_c_midpoint_and_quantitative_hull_train_independent_audit_2026-10-09.md",
+          "docs/reports/target_c_global_inverse_phase_face_tail_exclusion_2026-10-09.md",
+          "docs/targets/target-c/CURRENT.md",
+          "docs/state/theorem-state.yaml",
+          "docs/targets/target-c/candidate-registry.json",
+          "docs/STATE.md",
+          "docs/targets/target-c/58-full-source-geometry-audit.md",
+          "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+          "docs/research/agent-task-catalog.json",
+          "docs/research/priority-state.json",
+          "research-packages/e99-paired-20261019t091333z-local-05/verify.py"
+        ],
+        "domain": "Universal analytic claim over all such global sources and independent partner choices; verify the exact scale and constant inequalities in verify.py only.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-paired-20261019t091333z-local-05/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 161,
+      "id": "e99-paired-20261019t091333z-homelab-05",
+      "task_id": "e99-paired-20261019t091333z-homelab-05",
+      "classification": "unreviewed",
+      "task_scope": {
+        "statement": "For each fixed m,n>=3, deleting p_(1,0) and retaining all other boundary grid labels leaves weak and strict interior capacities exactly (m-1)(n-1) for pi/3<phi<pi/3+epsilon_(m,n), for some frame-dependent epsilon_(m,n)>0.",
+        "domain": "Seven exact rational-coordinate endpoint fixtures at phi=2 atan(577351/1000000), with m,n in {(3,3),(3,4),(4,3),(4,4),(3,6),(5,5),(6,3)}; the analytic report separately reconstructs the universal fixed-frame claim.",
+        "limitations": "No uniform epsilon in growing frames, no exterior capacity bound, no moved-wall conclusion, no source-wall extraction, no global-minimizer or C-II endpoint conclusion. Candidate lifecycle is not promoted."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/audits/target_c_one_pin_restoration_gap_capacity_plateau_independent_audit_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "ce709b3988db6bae2b1deb5aacc0d5ed755e86bf7781e77e167e6203b0702f7c",
+          "actual_sha256": "ce709b3988db6bae2b1deb5aacc0d5ed755e86bf7781e77e167e6203b0702f7c",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_one_pin_restoration_gap_capacity_plateau_independent_audit_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_one_boundary_pin_oblique_refill_independent_audit_2026-10-09.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "580e60cea139b5e83c5aa51df2120eaafe84e665b8a0f3bcebb69a8575d7a319",
+          "actual_sha256": "580e60cea139b5e83c5aa51df2120eaafe84e665b8a0f3bcebb69a8575d7a319",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_one_boundary_pin_oblique_refill_independent_audit_2026-10-09.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "actual_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "mode": "100644",
+          "match": true,
+          "identity": "c828d282def62a7913e3c89ff7d8f87337bf8a5b",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/theorem-state.yaml",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "actual_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/candidate-registry.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "actual_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/priority-state.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "actual_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/problem/statement.md",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-05/verify.py",
+          "commit": "3d816bec313a9f2bd303a958622d4128276e8685",
+          "declared_sha256": "2bf433f63aadc4fa59f05fd4e337496993b745f46c6c544ba78f461a97da34d7",
+          "actual_sha256": "2bf433f63aadc4fa59f05fd4e337496993b745f46c6c544ba78f461a97da34d7",
+          "mode": "100644",
+          "match": true,
+          "identity": "independent-exact-finite-checker",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/audits/target_c_one_pin_restoration_gap_capacity_plateau_independent_audit_2026-10-10.md",
+          "docs/audits/target_c_one_boundary_pin_oblique_refill_independent_audit_2026-10-09.md",
+          "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "docs/state/theorem-state.yaml",
+          "docs/targets/target-c/candidate-registry.json",
+          "docs/research/priority-state.json",
+          "docs/problem/statement.md",
+          "research-packages/e99-paired-20261019t091333z-homelab-05/verify.py"
+        ],
+        "domain": "Seven exact rational-coordinate endpoint fixtures at phi=2 atan(577351/1000000), with m,n in {(3,3),(3,4),(4,3),(4,4),(3,6),(5,5),(6,3)}; the analytic report separately reconstructs the universal fixed-frame claim.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-paired-20261019t091333z-homelab-05/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 162,
+      "id": "e99-paired-20261019t091333z-local-06",
+      "task_id": "e99-paired-20261019t091333z-local-06",
+      "classification": "conditional",
+      "task_scope": {
+        "statement": "Independently audit the corrected inverse-phase face-tail sequence exclusion at the exact destination main bytes.",
+        "domain": "Unbounded canonical post-ZF C-II sequences with one per-source unit triangular frame, fixed K/D actual-contact edge error, and lim_{M->infinity} limsup_{D->infinity} T_M(D)/D=0.",
+        "limitations": "The result assumes both global hypotheses, retains contact isolates in the full source, and proves only q=o(D) under those hypotheses. It gives no global chart, premise extraction, source motion, strict-D competitor, C-II closure, or Level I closure."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "9ed749f51f560af597875fc9fb7c2647395ce47a970583a9e3349df6f8e2bb38",
+          "actual_sha256": "9ed749f51f560af597875fc9fb7c2647395ce47a970583a9e3349df6f8e2bb38",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "158394e6106e12d46cb1a404e24cfabf3df629849b2956004c2bc0a1beabed78",
+          "actual_sha256": "158394e6106e12d46cb1a404e24cfabf3df629849b2956004c2bc0a1beabed78",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "actual_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "fc60bd6982e741f13d2442a2fa9d16a424f2fc55f60c3e1a1d7f3aba2cc3686f",
+          "actual_sha256": "fc60bd6982e741f13d2442a2fa9d16a424f2fc55f60c3e1a1d7f3aba2cc3686f",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+          "actual_sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_bounded_variation_lattice_endpoint_count_independent_audit_2026-10-09.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "2febf2285cd099800de7e54221754bb5ebad9ca133edf23f6c26f9195b3d578c",
+          "actual_sha256": "2febf2285cd099800de7e54221754bb5ebad9ca133edf23f6c26f9195b3d578c",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_bounded_variation_lattice_endpoint_count_independent_audit_2026-10-09.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "3dce8109e6ce8c8e78c31121e38fb9773db34aa19af26e817bb2d718d6864fbd",
+          "actual_sha256": "3dce8109e6ce8c8e78c31121e38fb9773db34aa19af26e817bb2d718d6864fbd",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/theorem-state.yaml",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "actual_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/candidate-registry.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "actual_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/priority-state.json",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-06/AUDIT.md",
+          "commit": "456ecf76c17bbf9486601d5268d7c7d82854ee74",
+          "declared_sha256": "ef5c9d1ede960b6057229801b81cdcb393cb46552ac411444183f0af0e023da1",
+          "actual_sha256": "ef5c9d1ede960b6057229801b81cdcb393cb46552ac411444183f0af0e023da1",
+          "mode": "100644",
+          "match": true,
+          "identity": "research-packages/e99-paired-20261019t091333z-local-06/AUDIT.md",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-06/README.md",
+          "commit": "456ecf76c17bbf9486601d5268d7c7d82854ee74",
+          "declared_sha256": "3359560a76ea2b56a9260cd13a7f9ff089c1d5933436d638e83eb41a95aca296",
+          "actual_sha256": "3359560a76ea2b56a9260cd13a7f9ff089c1d5933436d638e83eb41a95aca296",
+          "mode": "100644",
+          "match": true,
+          "identity": "research-packages/e99-paired-20261019t091333z-local-06/README.md",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-06/verify.py",
+          "commit": "456ecf76c17bbf9486601d5268d7c7d82854ee74",
+          "declared_sha256": "da90727d0c350597bbd5d3169d717bf12bcbb63aaa6cc7b4d0ac8133ab6ab964",
+          "actual_sha256": "da90727d0c350597bbd5d3169d717bf12bcbb63aaa6cc7b4d0ac8133ab6ab964",
+          "mode": "100644",
+          "match": true,
+          "identity": "research-packages/e99-paired-20261019t091333z-local-06/verify.py",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md",
+          "docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md",
+          "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+          "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "docs/audits/target_c_bounded_variation_lattice_endpoint_count_independent_audit_2026-10-09.md",
+          "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+          "docs/state/theorem-state.yaml",
+          "docs/targets/target-c/candidate-registry.json",
+          "docs/research/priority-state.json",
+          "research-packages/e99-paired-20261019t091333z-local-06/AUDIT.md",
+          "research-packages/e99-paired-20261019t091333z-local-06/README.md",
+          "research-packages/e99-paired-20261019t091333z-local-06/verify.py"
+        ],
+        "domain": "Unbounded canonical post-ZF C-II sequences with one per-source unit triangular frame, fixed K/D actual-contact edge error, and lim_{M->infinity} limsup_{D->infinity} T_M(D)/D=0.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-paired-20261019t091333z-local-06/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 163,
+      "id": "e99-paired-20261019t091333z-local-07",
+      "task_id": "e99-paired-20261019t091333z-local-07",
+      "classification": "conditional",
+      "task_scope": {
+        "statement": "Independently audit TARGET-C-PR950-ATTACHMENT-GRID-LINKAGE at destination main: under the common connected Type-II grid, complete loaded attachment set, triangle-free core, unloaded-set brace, endpoint-inclusive cut hypotheses, and full-source unit separation, derive a linear family of distinct-endpoint vertex-disjoint actual-contact paths and its full-source Oler length quantile.",
+        "domain": "Asymptotic D -> infinity Type-II quadratic-core sequences with a source-realized connected grid X_D of Euclidean diameter at least gamma D for fixed gamma > 0; the brace |delta_C(U)| >= diam(U)+2 for each connected unloaded core set; maximum contact degree five; all actual loaded neighbors in A_I; full-source finite Oler. The executable finite control is a 3x3 square-lattice fixture checking all 218 connected subsets and all 2^21 vertex deletions; it does not prove source extraction or the asymptotic statement.",
+        "limitations": "Conditional audit only. The common-grid extraction is an unreviewed candidate dependency. No train-return label overlap, root-to-grid flow, stress-mass payment, finite motion, same-cardinality competitor, C-II closure, or Level I closure follows. Contact isolates remain in the full-source Oler count and outside the core rigidity matrix."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+          "actual_sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+          "actual_sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+          "actual_sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/theorem-state.yaml",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "actual_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/priority-state.json",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-07/verify.py",
+          "commit": "70eac9a6eba9cc2c254c44ae0e72058d88a6d75c",
+          "declared_sha256": "c47f7878280e1ea47e8de0231199d6a91006543a74bd388c1ead414e58daf4aa",
+          "actual_sha256": "c47f7878280e1ea47e8de0231199d6a91006543a74bd388c1ead414e58daf4aa",
+          "mode": "100644",
+          "match": true,
+          "identity": "PR 112 exact finite brace and endpoint-cut control, copied unchanged",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "actual_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "mode": "100644",
+          "match": true,
+          "identity": "destination lifecycle and exact candidate relations",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/tracks/target-c-train-returns-rigidity-grid.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5152bc5fdc6c1a17322ef36449474fb566362e7da5a54a98e25475a9a3fc9e0f",
+          "actual_sha256": "5152bc5fdc6c1a17322ef36449474fb566362e7da5a54a98e25475a9a3fc9e0f",
+          "mode": "100644",
+          "match": true,
+          "identity": "current route and remaining linkage obligation",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-07/README.md",
+          "commit": "70eac9a6eba9cc2c254c44ae0e72058d88a6d75c",
+          "declared_sha256": "e1ca1cfe90c4d181dae98e6a8d9fe15bd15fdd5a559102de7ca1a19131d3b4fe",
+          "actual_sha256": "e1ca1cfe90c4d181dae98e6a8d9fe15bd15fdd5a559102de7ca1a19131d3b4fe",
+          "mode": "100644",
+          "match": true,
+          "identity": "independent destination audit and scope",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-07/evidence.json",
+          "commit": "70eac9a6eba9cc2c254c44ae0e72058d88a6d75c",
+          "declared_sha256": "6fef2c8f7cc4e3b3c43d727be51756768a50a3a337adde05232ef360a7986e92",
+          "actual_sha256": "6fef2c8f7cc4e3b3c43d727be51756768a50a3a337adde05232ef360a7986e92",
+          "mode": "100644",
+          "match": true,
+          "identity": "exact finite control output and pinned checker provenance",
+          "generated_from": []
+        },
+        {
+          "path": "docs/reports/target_c_full_cell_common_grid_preservation_2026-10-15.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "07036803e35a5cf4848d32b6e868edcc30ea883e60349f2f2eaf90ff4e7c3c5f",
+          "actual_sha256": "07036803e35a5cf4848d32b6e868edcc30ea883e60349f2f2eaf90ff4e7c3c5f",
+          "mode": "100644",
+          "match": true,
+          "identity": "unreviewed source-main full-cell linkage variant, comparison only",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "docs/state/theorem-state.yaml",
+          "docs/research/priority-state.json",
+          "research-packages/e99-paired-20261019t091333z-local-07/verify.py",
+          "docs/targets/target-c/candidate-registry.json",
+          "docs/research/tracks/target-c-train-returns-rigidity-grid.md",
+          "research-packages/e99-paired-20261019t091333z-local-07/README.md",
+          "research-packages/e99-paired-20261019t091333z-local-07/evidence.json",
+          "docs/reports/target_c_full_cell_common_grid_preservation_2026-10-15.md"
+        ],
+        "domain": "Asymptotic D -> infinity Type-II quadratic-core sequences with a source-realized connected grid X_D of Euclidean diameter at least gamma D for fixed gamma > 0; the brace |delta_C(U)| >= diam(U)+2 for each connected unloaded core set; maximum contact degree five; all actual loaded neighbors in A_I; full-source finite Oler. The executable finite control is a 3x3 square-lattice fixture checking all 218 connected subsets and all 2^21 vertex deletions; it does not prove source extraction or the asymptotic statement.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-paired-20261019t091333z-local-07/verify.py"
+            ],
+            "timeout_seconds": 180
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 166,
+      "id": "e99-paired-20261019t091333z-local-12",
+      "task_id": "e99-paired-20261019t091333z-local-12",
+      "classification": "unreviewed",
+      "task_scope": {
+        "statement": "Independent destination review of GLOBAL-LEVEL-I-ONE-CONTACT-PR955 at commit 7d0a450fe66991036541023f95c44c064a04b6a8.",
+        "domain": "Exact rational spot controls for the pinch-dilate map on a square and the unique-contact contraction on a three-point source; the universal proof and external D(8) premise are analyzed in README.md.",
+        "limitations": "Finite exact controls do not prove the universal analytic statements or Level I. The n=8 regression is conditional on the cited Bezdek-Fodor D(8) value."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "944b5b3e155586f0edc78e22eeb9bdfb3f954e4e7cbfbd51afa2f2768c125d58",
+          "actual_sha256": "944b5b3e155586f0edc78e22eeb9bdfb3f954e4e7cbfbd51afa2f2768c125d58",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "69a42884e36eacc29fc987dd004bc2570bcc174402aad2ced478b1bf03f8e63f",
+          "actual_sha256": "69a42884e36eacc29fc987dd004bc2570bcc174402aad2ced478b1bf03f8e63f",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "actual_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/problem/statement.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/STATE.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+          "actual_sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/STATE.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16fee2414ff89dd20393936eba0dc8467b13b05ab0321193cfd9c64545265a90",
+          "actual_sha256": "16fee2414ff89dd20393936eba0dc8467b13b05ab0321193cfd9c64545265a90",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/artifact-index.jsonl",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "actual_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/priority-state.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "29fd04ba2a8f31ac93ab2b91b9d4a267e227c9348a894f37adcd3e6986be7b3d",
+          "actual_sha256": "29fd04ba2a8f31ac93ab2b91b9d4a267e227c9348a894f37adcd3e6986be7b3d",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "actual_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/candidate-registry.json",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-12/verify.py",
+          "commit": "62fcdcf8dc869dc7a59eb9665035222c5b2cf7db",
+          "declared_sha256": "362007f602fd3ae08acd33fdc8963d5ada9189ab2c214ef930187484587c8804",
+          "actual_sha256": "362007f602fd3ae08acd33fdc8963d5ada9189ab2c214ef930187484587c8804",
+          "mode": "100644",
+          "match": true,
+          "identity": "research-packages/e99-paired-20261019t091333z-local-12/verify.py",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md",
+          "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+          "docs/problem/statement.md",
+          "docs/STATE.md",
+          "docs/state/artifact-index.jsonl",
+          "docs/research/priority-state.json",
+          "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+          "docs/targets/target-c/candidate-registry.json",
+          "research-packages/e99-paired-20261019t091333z-local-12/verify.py"
+        ],
+        "domain": "Exact rational spot controls for the pinch-dilate map on a square and the unique-contact contraction on a three-point source; the universal proof and external D(8) premise are analyzed in README.md.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-paired-20261019t091333z-local-12/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 169,
+      "id": "e99-paired-20261019t091333z-homelab-12",
+      "task_id": "e99-paired-20261019t091333z-homelab-12",
+      "classification": "unreviewed",
+      "task_scope": {
+        "statement": "At destination main 7d0a450fe66991036541023f95c44c064a04b6a8, independently audit only GLOBAL-LEVEL-I-ANNULAR-MATCHING-PR955: the strict-sub-D vertex-cover identity; rotating-wedge bipartite deletion and matching-cover bound; the explicit annular error; and the conditional translated-lattice O_c(1) refinement.",
+        "domain": "Finite unit-separated X in B(o,S), D>0, delta>0, S=D/2+delta<D/sqrt(2), conflict edges at distance >=D, closed V_ann={D-S<=|x-o|<=S}; additionally D-S>1/2 for the area bound, and Audit 245 translation-uniform O(r^(2/3)) circle-count premise for the optional lattice refinement.",
+        "limitations": "No global-minimizer packet construction, source/scaffold transport, Level I or C-II closure, asymptotic reserve improvement, or theorem-state/candidate promotion. The lattice refinement is conditional on canonical Audit 245."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "actual_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/problem/statement.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/reports/global_annular_matching_competitor_2026-10-11.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c564b3577562e3aeec1bf4ea2e7a800e4014fad6d5ebe7a2844daad6a3d61e5c",
+          "actual_sha256": "c564b3577562e3aeec1bf4ea2e7a800e4014fad6d5ebe7a2844daad6a3d61e5c",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/global_annular_matching_competitor_2026-10-11.md",
+          "generated_from": []
+        },
+        {
+          "path": "research/global_annular_matching_2026_10_11.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "b7ea9aa0e49a390575b8576c0b4eb9e931967a68174408b18d8ffb93687d4c08",
+          "actual_sha256": "b7ea9aa0e49a390575b8576c0b4eb9e931967a68174408b18d8ffb93687d4c08",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/global_annular_matching_2026_10_11.json",
+          "generated_from": []
+        },
+        {
+          "path": "research/certificates/global_annular_matching_proofs_2026_10_16.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "8fc15a005e26116edbfe4f7040d8ef5a9d571e0e033c1beef8b790ae630b295b",
+          "actual_sha256": "8fc15a005e26116edbfe4f7040d8ef5a9d571e0e033c1beef8b790ae630b295b",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/certificates/global_annular_matching_proofs_2026_10_16.json",
+          "generated_from": []
+        },
+        {
+          "path": "research/verify_global_annular_matching_2026_10_11.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "4cf5b2a2c6caf787ce92a892dabb694d9ffce13ab621e724820759635cc8fb8b",
+          "actual_sha256": "4cf5b2a2c6caf787ce92a892dabb694d9ffce13ab621e724820759635cc8fb8b",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/verify_global_annular_matching_2026_10_11.py",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "69a42884e36eacc29fc987dd004bc2570bcc174402aad2ced478b1bf03f8e63f",
+          "actual_sha256": "69a42884e36eacc29fc987dd004bc2570bcc174402aad2ced478b1bf03f8e63f",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_triangle_free_lattice_competitor_reserve_independent_audit_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5134f4c246286fec50530e0c6855d6b370ed2b2252e8918680b8a0e1b177aa4a",
+          "actual_sha256": "5134f4c246286fec50530e0c6855d6b370ed2b2252e8918680b8a0e1b177aa4a",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_triangle_free_lattice_competitor_reserve_independent_audit_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "actual_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/candidate-registry.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/theorem-state.yaml",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "29fd04ba2a8f31ac93ab2b91b9d4a267e227c9348a894f37adcd3e6986be7b3d",
+          "actual_sha256": "29fd04ba2a8f31ac93ab2b91b9d4a267e227c9348a894f37adcd3e6986be7b3d",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "actual_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/priority-state.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/agent-task-catalog.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "actual_sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/agent-task-catalog.json",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-12/verify.py",
+          "commit": "1481fb372734f583177541260c49bd7671e8fc35",
+          "declared_sha256": "dac1fde72b6a2186be196a1b4d03944425f4e9eb0fe4088e9353f06a74d4ea42",
+          "actual_sha256": "dac1fde72b6a2186be196a1b4d03944425f4e9eb0fe4088e9353f06a74d4ea42",
+          "mode": "100644",
+          "match": true,
+          "identity": "package-integrity-checker",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/problem/statement.md",
+          "docs/reports/global_annular_matching_competitor_2026-10-11.md",
+          "research/global_annular_matching_2026_10_11.json",
+          "research/certificates/global_annular_matching_proofs_2026_10_16.json",
+          "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+          "docs/audits/target_c_triangle_free_lattice_competitor_reserve_independent_audit_2026-10-10.md",
+          "docs/targets/target-c/candidate-registry.json",
+          "docs/state/theorem-state.yaml",
+          "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+          "docs/research/priority-state.json",
+          "docs/research/agent-task-catalog.json",
+          "research/verify_global_annular_matching_2026_10_11.py",
+          "research-packages/e99-paired-20261019t091333z-homelab-12/verify.py"
+        ],
+        "domain": "Finite unit-separated X in B(o,S), D>0, delta>0, S=D/2+delta<D/sqrt(2), conflict edges at distance >=D, closed V_ann={D-S<=|x-o|<=S}; additionally D-S>1/2 for the area bound, and Audit 245 translation-uniform O(r^(2/3)) circle-count premise for the optional lattice refinement.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-paired-20261019t091333z-homelab-12/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 173,
+      "id": "e99-paired-20261019t091333z-homelab-06",
+      "task_id": "e99-paired-20261019t091333z-homelab-06",
+      "classification": "unreviewed",
+      "task_scope": {
+        "statement": "In the canonical Type-II quadratic-core sequence, a linear family of distinct actual return attachments in one unloaded component has actual contact routes of fewer than lambda*D edges to every vertex of one common coherent grid, for fixed positive epsilon, lambda, phase tolerance and face-tail radius.",
+        "domain": "All sufficiently large sources in the stated asymptotic sequence; finite checker domain is a rational homothety-crop fixture with eight exact directions and one threshold-breaking control.",
+        "limitations": "Conditional on the separate noncanonical positive-return-quantile input. Does not prove endpoint overlap, disjoint/congestion-bounded continuations, stress payment, a finite competitor, C-II closure, or Level I closure."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+          "actual_sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+          "actual_sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_oler_sharp_separator_independent_audit_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c3432f43913f46dd06a5187b7b47b0c297a7d5ee265a73e8548bd327b152eea9",
+          "actual_sha256": "c3432f43913f46dd06a5187b7b47b0c297a7d5ee265a73e8548bd327b152eea9",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_oler_sharp_separator_independent_audit_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "60af5da043ca638e6f9740442e18d3d345b2d344cec91dc13cbb933f9ba02936",
+          "actual_sha256": "60af5da043ca638e6f9740442e18d3d345b2d344cec91dc13cbb933f9ba02936",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "1abf7b668e28e13ba460b213b9ce152a912c16403e258b61417ee5bf8e06aa3f",
+          "actual_sha256": "1abf7b668e28e13ba460b213b9ce152a912c16403e258b61417ee5bf8e06aa3f",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/69-coherent-grain-interface-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "29d98eba4843ccf2c67b6122453ae4f1e088a829eb422ebe2493795d258dd5af",
+          "actual_sha256": "29d98eba4843ccf2c67b6122453ae4f1e088a829eb422ebe2493795d258dd5af",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/69-coherent-grain-interface-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "5185283ec35ab657bb030f75a901e00cdb5fcf1433501e5535143c2ca91bbd6a",
+          "actual_sha256": "5185283ec35ab657bb030f75a901e00cdb5fcf1433501e5535143c2ca91bbd6a",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/83-attachment-cell-disjoint-tiling-audit.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "673c14dddf11cf82e39e5b295f499f887bad42149021949871d894ba28b605b1",
+          "actual_sha256": "673c14dddf11cf82e39e5b295f499f887bad42149021949871d894ba28b605b1",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/83-attachment-cell-disjoint-tiling-audit.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/theory/01-local-structure.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "75c539b2281046c49d6c303bda845cb7fb2643d0d9a1106d64e4f737117c54fb",
+          "actual_sha256": "75c539b2281046c49d6c303bda845cb7fb2643d0d9a1106d64e4f737117c54fb",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/theory/01-local-structure.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/theorem-state.yaml",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/STATUS.generated.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "66b7fdd1a548a1c975ce70d7f0ad3c492eca3eb091602ccb1970ac497f925e3c",
+          "actual_sha256": "66b7fdd1a548a1c975ce70d7f0ad3c492eca3eb091602ccb1970ac497f925e3c",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/STATUS.generated.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "actual_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/CURRENT.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "actual_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/candidate-registry.json",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-06/verify.py",
+          "commit": "2170444e326e08d462b77f69d87c5b12124c243b",
+          "declared_sha256": "35858bc9a548bf987325a0c8f9e3f3d40bd06f9fceac6bf6abf1b640b08efd7a",
+          "actual_sha256": "35858bc9a548bf987325a0c8f9e3f3d40bd06f9fceac6bf6abf1b640b08efd7a",
+          "mode": "100644",
+          "match": true,
+          "identity": "scoped-exact-rational-crop-fixture",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "docs/audits/target_c_oler_sharp_separator_independent_audit_2026-10-10.md",
+          "docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md",
+          "docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md",
+          "docs/targets/target-c/69-coherent-grain-interface-audit.md",
+          "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md",
+          "docs/targets/target-c/83-attachment-cell-disjoint-tiling-audit.md",
+          "docs/theory/01-local-structure.md",
+          "docs/state/theorem-state.yaml",
+          "docs/state/STATUS.generated.md",
+          "docs/targets/target-c/CURRENT.md",
+          "docs/targets/target-c/candidate-registry.json",
+          "research-packages/e99-paired-20261019t091333z-homelab-06/verify.py"
+        ],
+        "domain": "All sufficiently large sources in the stated asymptotic sequence; finite checker domain is a rational homothety-crop fixture with eight exact directions and one threshold-breaking control.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-paired-20261019t091333z-homelab-06/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 174,
+      "id": "e99-paired-20261019t091333z-homelab-07",
+      "task_id": "e99-paired-20261019t091333z-homelab-07",
+      "classification": "unreviewed",
+      "task_scope": {
+        "statement": "Under the canonical full-source exact-graph quarter-fold hypotheses, deep faces persist and a rigid-boundary intrusion forces an isolate-capacity deficit.",
+        "domain": "Analytic face degrees m >= 5; saved exact arithmetic encloses the C_m floors for m=5..32, with rational full-pair transport and intrusion guardrails.",
+        "limitations": "Requires the report canonical source choice (minimum |C| then |H|), positive contact weights, and the stated isometric boundary image. Does not construct an endpoint, bound outside capacity, or close C-II/Level I."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/reports/target_c_deep_face_persistence_and_isolate_transport_slot02_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "7c1927a90124a376017a62a784d51851b478a9dd17efacb76505722d85bf3e37",
+          "actual_sha256": "7c1927a90124a376017a62a784d51851b478a9dd17efacb76505722d85bf3e37",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/target_c_deep_face_persistence_and_isolate_transport_slot02_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "research/verify_target_c_deep_face_transport_2026_10_10.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "53cfc3d7ec915b5a5b903580f64b936473b5c86c1f223b8f0d23cef1a097cc7c",
+          "actual_sha256": "53cfc3d7ec915b5a5b903580f64b936473b5c86c1f223b8f0d23cef1a097cc7c",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/verify_target_c_deep_face_transport_2026_10_10.py",
+          "generated_from": []
+        },
+        {
+          "path": "research/target_c_deep_face_transport_certificate_2026_10_10.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "51aee524684833326c94c5a4457d8ddc7afb4784759a4ec7761a6a03f2047ad7",
+          "actual_sha256": "51aee524684833326c94c5a4457d8ddc7afb4784759a4ec7761a6a03f2047ad7",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/target_c_deep_face_transport_certificate_2026_10_10.json",
+          "generated_from": []
+        },
+        {
+          "path": "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "ced2ae1bb3ee3834f0a36d5869d25c7aedc0e447df2c8bb17013cf1d4a0a7d89",
+          "actual_sha256": "ced2ae1bb3ee3834f0a36d5869d25c7aedc0e447df2c8bb17013cf1d4a0a7d89",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-07/verify.py",
+          "commit": "91f3d847a2d9e46d29bfa75d9a6a75c4e733ddf6",
+          "declared_sha256": "385031ced4a0fc44bebc9b7d15f43e9ea8ff488716e21f473208345673637139",
+          "actual_sha256": "385031ced4a0fc44bebc9b7d15f43e9ea8ff488716e21f473208345673637139",
+          "mode": "100644",
+          "match": true,
+          "identity": "draft-checker",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/reports/target_c_deep_face_persistence_and_isolate_transport_slot02_2026-10-10.md",
+          "research/verify_target_c_deep_face_transport_2026_10_10.py",
+          "research/target_c_deep_face_transport_certificate_2026_10_10.json",
+          "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+          "research-packages/e99-paired-20261019t091333z-homelab-07/verify.py"
+        ],
+        "domain": "Analytic face degrees m >= 5; saved exact arithmetic encloses the C_m floors for m=5..32, with rational full-pair transport and intrusion guardrails.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-paired-20261019t091333z-homelab-07/verify.py"
+            ],
+            "timeout_seconds": 30
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    },
+    {
+      "number": 175,
+      "id": "e99-paired-20261019t091333z-local-08",
+      "task_id": "e99-paired-20261019t091333z-local-08",
+      "classification": "unreviewed",
+      "task_scope": {
+        "statement": "Independent exact-destination audit of TARGET-C-PR948-RIGID-CYCLE-PINNED-STRESS: positive pinned-net identity, rigid-cycle core and isolate persistence, isolate-capacity obstruction, and conditional old-stress core upper certificate.",
+        "domain": "At the pinned destination bytes 7d0a450fe66991036541023f95c44c064a04b6a8, for the report hypotheses: a simple old unit-contact cycle carried pointwise by one isometry; for full-source conclusions, same cardinality, unit separation, diameter at most D, and exact old contact graph; for the outer-walk certificate, the exact separate positive/negative sign-balance condition at every core vertex outside O.",
+        "limitations": "Conditional claims only. Lemma 3.1 should explicitly require positive-weight connection of every free component to a pin; both applications provide it. No globally feasible endpoint, universal source extraction, source-wide isolate reserve, canonical promotion, C-II closure, or Level I closure. The package metadata audit also leaves static Python import/capability closure unresolved, and the direct finite-control replay passed, but the package isolated-replay static closure remains unresolved."
+      },
+      "source_inputs": [
+        {
+          "path": "docs/reports/target_c_rigid_cycle_pinned_stress_and_arc_stars_slot02_2026-10-10.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "a3c36980e3710fc84b318a90a987aaf98940a6384a7e6681cfc60d3b6e4be783",
+          "actual_sha256": "a3c36980e3710fc84b318a90a987aaf98940a6384a7e6681cfc60d3b6e4be783",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/reports/target_c_rigid_cycle_pinned_stress_and_arc_stars_slot02_2026-10-10.md",
+          "generated_from": []
+        },
+        {
+          "path": "research/verify_target_c_rigid_cycle_pinned_stress_2026_10_10.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c6e8793f9a06cd0d3c337c537ca04dc4d75173a92eb98c16329f2a374d212302",
+          "actual_sha256": "c6e8793f9a06cd0d3c337c537ca04dc4d75173a92eb98c16329f2a374d212302",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/verify_target_c_rigid_cycle_pinned_stress_2026_10_10.py",
+          "generated_from": []
+        },
+        {
+          "path": "research/target_c_rigid_cycle_pinned_stress_certificate_2026_10_10.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "6d620fe5baa1a27fccdd34dffddb16cd33e984faeaa44d1cd58d18f5842b41cf",
+          "actual_sha256": "6d620fe5baa1a27fccdd34dffddb16cd33e984faeaa44d1cd58d18f5842b41cf",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/target_c_rigid_cycle_pinned_stress_certificate_2026_10_10.json",
+          "generated_from": []
+        },
+        {
+          "path": "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "ced2ae1bb3ee3834f0a36d5869d25c7aedc0e447df2c8bb17013cf1d4a0a7d89",
+          "actual_sha256": "ced2ae1bb3ee3834f0a36d5869d25c7aedc0e447df2c8bb17013cf1d4a0a7d89",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+          "generated_from": []
+        },
+        {
+          "path": "research/verify_target_c_deep_face_transport_2026_10_10.py",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "53cfc3d7ec915b5a5b903580f64b936473b5c86c1f223b8f0d23cef1a097cc7c",
+          "actual_sha256": "53cfc3d7ec915b5a5b903580f64b936473b5c86c1f223b8f0d23cef1a097cc7c",
+          "mode": "100644",
+          "match": true,
+          "identity": "research/verify_target_c_deep_face_transport_2026_10_10.py",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "actual_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/candidate-registry.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "actual_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/state/theorem-state.yaml",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/56-ci-restored-frontier.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "7289f07ee1afbf24584c8c6a7d8c7df20a63598e86f5aa106eb657f530c1d551",
+          "actual_sha256": "7289f07ee1afbf24584c8c6a7d8c7df20a63598e86f5aa106eb657f530c1d551",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/56-ci-restored-frontier.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/theory/01-local-structure.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "75c539b2281046c49d6c303bda845cb7fb2643d0d9a1106d64e4f737117c54fb",
+          "actual_sha256": "75c539b2281046c49d6c303bda845cb7fb2643d0d9a1106d64e4f737117c54fb",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/theory/01-local-structure.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_rigid_face_isolate_transport_independent_audit_2026-10-09.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "46f52688a330d693376ce9bea6fe5f9987f08396654851e62ffde157e5e85e74",
+          "actual_sha256": "46f52688a330d693376ce9bea6fe5f9987f08396654851e62ffde157e5e85e74",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_rigid_face_isolate_transport_independent_audit_2026-10-09.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_face_coupled_quarter_fold_independent_audit_2026-10-07.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "82b34c2e361173130069d179b6922c783fece4d613de2b670c27befc925c3a2e",
+          "actual_sha256": "82b34c2e361173130069d179b6922c783fece4d613de2b670c27befc925c3a2e",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_face_coupled_quarter_fold_independent_audit_2026-10-07.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/audits/target_c_finite_mixed_core_rigidity_independent_audit_2026-10-07.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "7abe5490ec53f3aab6fea5918db9a9f1869f2b7d483552a83c9f7cddc3e93cba",
+          "actual_sha256": "7abe5490ec53f3aab6fea5918db9a9f1869f2b7d483552a83c9f7cddc3e93cba",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/audits/target_c_finite_mixed_core_rigidity_independent_audit_2026-10-07.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/tracks/target-c-quarter-folds-bent-arrays.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "49e336e2933551af00289be2bf631ece9230613a2127f0b582ca95319348bf50",
+          "actual_sha256": "49e336e2933551af00289be2bf631ece9230613a2127f0b582ca95319348bf50",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/tracks/target-c-quarter-folds-bent-arrays.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "actual_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/targets/target-c/CURRENT.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/STATE.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+          "actual_sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/STATE.md",
+          "generated_from": []
+        },
+        {
+          "path": "docs/research/priority-state.json",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "actual_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/research/priority-state.json",
+          "generated_from": []
+        },
+        {
+          "path": "docs/problem/statement.md",
+          "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "declared_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "actual_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+          "mode": "100644",
+          "match": true,
+          "identity": "docs/problem/statement.md",
+          "generated_from": []
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-08/verify.py",
+          "commit": "45104cfa58c69551201475679ea35ec247a8d8f8",
+          "declared_sha256": "901731a6a7cf5b112a176436e3c99f0b033994cd4ab083b1783cd2e12ac09373",
+          "actual_sha256": "901731a6a7cf5b112a176436e3c99f0b033994cd4ab083b1783cd2e12ac09373",
+          "mode": "100644",
+          "match": true,
+          "identity": "hash-pinned destination finite-control replay wrapper",
+          "generated_from": []
+        }
+      ],
+      "verify": {
+        "version": 1,
+        "inputs": [
+          "docs/reports/target_c_rigid_cycle_pinned_stress_and_arc_stars_slot02_2026-10-10.md",
+          "research/verify_target_c_rigid_cycle_pinned_stress_2026_10_10.py",
+          "research/target_c_rigid_cycle_pinned_stress_certificate_2026_10_10.json",
+          "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+          "research/verify_target_c_deep_face_transport_2026_10_10.py",
+          "docs/targets/target-c/candidate-registry.json",
+          "docs/state/theorem-state.yaml",
+          "docs/targets/target-c/56-ci-restored-frontier.md",
+          "docs/theory/01-local-structure.md",
+          "docs/audits/target_c_rigid_face_isolate_transport_independent_audit_2026-10-09.md",
+          "docs/audits/target_c_face_coupled_quarter_fold_independent_audit_2026-10-07.md",
+          "docs/audits/target_c_finite_mixed_core_rigidity_independent_audit_2026-10-07.md",
+          "docs/research/tracks/target-c-quarter-folds-bent-arrays.md",
+          "docs/targets/target-c/CURRENT.md",
+          "docs/STATE.md",
+          "docs/research/priority-state.json",
+          "docs/problem/statement.md",
+          "research-packages/e99-paired-20261019t091333z-local-08/verify.py"
+        ],
+        "domain": "At the pinned destination bytes 7d0a450fe66991036541023f95c44c064a04b6a8, for the report hypotheses: a simple old unit-contact cycle carried pointwise by one isometry; for full-source conclusions, same cardinality, unit separation, diameter at most D, and exact old contact graph; for the outer-walk certificate, the exact separate positive/negative sign-balance condition at every core vertex outside O.",
+        "environment": {
+          "python": "3.14",
+          "dependencies": []
+        },
+        "commands": [
+          {
+            "argv": [
+              "{python}",
+              "research-packages/e99-paired-20261019t091333z-local-08/verify.py"
+            ],
+            "timeout_seconds": 120
+          }
+        ]
+      },
+      "modes": {
+        "TASK": "100644",
+        "SOURCES": "100644",
+        "VERIFY": "100644"
+      }
+    }
+  ],
+  "failures": []
+}

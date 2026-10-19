@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/audits/target_c_slow_chart_contact_port_cover_independent_audit_2026-10-10.md",
+      "sha256": "4f40354d0af913209245992c18e88680ccf65973d68265ef085c32d4329a9391",
+      "identity": "docs/audits/target_c_slow_chart_contact_port_cover_independent_audit_2026-10-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md",
+      "sha256": "c46e90b1975345be2704b4df3085d63f5b84b15402ae6f9214a49faa3e3f32f7",
+      "identity": "docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+      "sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+      "identity": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_slow_chart_double_port_count_independent_audit_2026-10-09.md",
+      "sha256": "169d0e52f0900e5898e17fb9d131b5c437f5d5d190897d1d03e8727080297b3b",
+      "identity": "docs/audits/target_c_slow_chart_double_port_count_independent_audit_2026-10-09.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_slow_chart_near_boundary_count_independent_audit_2026-10-09.md",
+      "sha256": "1fb54ff015d16d89fa8177e261487d9fba2fa872aa96508a24ce5006253554cc",
+      "identity": "docs/audits/target_c_slow_chart_near_boundary_count_independent_audit_2026-10-09.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_bounded_variation_contact_port_counts_independent_audit_2026-10-09.md",
+      "sha256": "26bbd0d6babd39504c188af493cb43ef5b6d9c3a89c202857f044f1b426bcaeb",
+      "identity": "docs/audits/target_c_bounded_variation_contact_port_counts_independent_audit_2026-10-09.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+      "identity": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+      "sha256": "3dce8109e6ce8c8e78c31121e38fb9773db34aa19af26e817bb2d718d6864fbd",
+      "identity": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "identity": "docs/targets/target-c/candidate-registry.json",
+      "generated_from": [],
+      "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+    },
+    {
+      "path": "docs/STATE.md",
+      "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+      "identity": "docs/STATE.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-homelab-12/verify.py",
+      "sha256": "79f9cc71dc7dfd6d3837542990a976bf7e42ce15cb1d35776744fb57e47c3a9d",
+      "identity": "exact-exponent-verifier",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-homelab-12/README.md",
+      "sha256": "be2add3631caaf4d145335c13122f970875339dd6c078b47c8a87b5879da2374",
+      "identity": "independent-audit-report",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The curved-boundary capacity, positive-leaf anchor localization, slow-chart double-port theorem, and C-ZRF/C-WOODALL inputs are analytically cited at the pinned base; this package does not mechanically prove them.",
+    "No fixed J,K chart atlas is extracted from every canonical C-II source, and no source-level finite competitor is constructed."
+  ]
+}

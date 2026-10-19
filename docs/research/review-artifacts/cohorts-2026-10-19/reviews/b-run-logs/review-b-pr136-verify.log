@@ -1,0 +1,9 @@
+PASS: exact seven-row A/B support and cut reconstruction
+A cuts: ((Fraction(23, 1), Fraction(0, 1)), (Fraction(309, 13), Fraction(0, 1)), (Fraction(18, 1), Fraction(0, 1)))
+B cuts: ((Fraction(-11, 5), Fraction(276, 65)), (Fraction(14, 5), Fraction(276, 65)))
+internal load: (Fraction(0, 1), Fraction(24, 13)) B determinant: -276/13
+shear: (Fraction(-1, 1), Fraction(0, 1)) work ledger: {'internal': Fraction(-48, 13), 'boundary': Fraction(48, 13), 'reference': Fraction(0, 1), 'other': Fraction(0, 1)}
+control 1 row removal: ((Fraction(1, 1), Fraction(24, 13)), (Fraction(14, 5), Fraction(276, 65))) shear (Fraction(-9, 25), Fraction(-12, 25))
+control 2 weakened support: ((Fraction(-11, 5), Fraction(276, 65)), (Fraction(207, 65), Fraction(216, 65))) shear (Fraction(-14, 13), Fraction(12, 65))
+control 3 positive-stress corruption: ((Fraction(-11, 5), Fraction(276, 65)), (Fraction(17, 5), Fraction(328, 65))) shear (Fraction(-28, 25), Fraction(-4, 25))
+Scope: finite incidence/stress model; no source realization or global optimality

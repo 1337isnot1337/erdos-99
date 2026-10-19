@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/targets/target-b/README.md",
+      "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+      "identity": "docs/targets/target-b/README.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+      "identity": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+      "sha256": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+      "identity": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-02/verify.py",
+      "sha256": "55c4285f2993a0f7eecda1bbf6678e6414570edd03a3185acceee082c0cd4483",
+      "identity": "exact-conditional-arithmetic-checker",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-02/README.md",
+      "sha256": "f3ffe00e9d709e92c0fa7e14387bbc10c8a0f35bbde1282fc342e6416c40836c",
+      "identity": "conditional-PC3-payment-obstruction",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The PR147 geometry is an unreviewed pinned conditional input; this checker does not replay its full geometry verifier.",
+    "No theorem transfers the PC3 physical-crossing reserve to V12 after the support-turning subtraction H-J=2G."
+  ]
+}

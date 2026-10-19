@@ -1,0 +1,668 @@
+{
+  "reviewer": "/root/review_b",
+  "lane": "Independent scoped mathematical review notes; each item is conditional/finite archive evidence only, not theorem promotion.",
+  "basis": "Exact assigned PR heads, package README or audit report bytes, source interfaces, and the command results cross-referenced from b-review.json. The records distinguish direct verifier runs from report-level and artifact-generation checks.",
+  "historical_proof_reconstruction": "No full inherited canonical proof chain was replayed. Each record states load-bearing hypotheses and inherited premises left unchecked.",
+  "pr124_pr139_mapping": "PR124 is the conditional positive-leaf cone-to-boundary-contraction implication. PR139 is the separate near-diameter localization premise. Both candidate lifecycles remain unreviewed/noncanonical.",
+  "reviews": [
+    {
+      "number": 111,
+      "head": "4ae7399e2595074c0331398fbba9b58c5dea3e73",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Target C: record strict full-pair restoration after supplied-W deletion",
+      "scope_review": "Conditional full-pair restoration rule after the supplied-W stress deletion, plus one exact rational noncanonical fixture.",
+      "hypotheses": [
+        "A is an n-label global minimizer first contact-minimal and then actual-diameter-pair-minimal; every label, including contact isolates, remains in the ledger.",
+        "R is the supplied deletion from the canonical stress-transversal result. If R contains a contact vertex, insert k=|R| labels; if R contains only isolates, also delete an outside contact vertex and insert k+1 labels.",
+        "Every packet-internal and packet-to-retained squared distance is strictly in (1,D^2)."
+      ],
+      "independent_proof_reconstruction": "Cardinality is preserved. Old retained pairs are unchanged; every new pair lies strictly between both bounds, so no new contact or old-D pair is introduced. The removed nonisolated contact vertex deletes at least one old edge; the contact graph can only lose edges and remains triangle-free. If the endpoint diameter is below D, global minimality at n is contradicted. If it remains D, the first lexicographic tie-break (contact count) is contradicted; the second diameter-pair tie-break is not needed. At D, the actual-diameter graph is the old induced graph on retained labels; at D' < D, newly active pairs may occur and must be separately recorded, but do not affect the strict diameter contradiction.",
+      "falsification_and_controls": "The exact 11-label fixture has p_i=(i,0), i=0..9, q=(1/2,11/10), D^2=81, nine path contacts, one D-pair, and q is a contact isolate. Deleting p0 removes the sole old-D pair; r=(8/5,11/10) restores 11 labels with every new pair strict, eight contacts, max 3673/50, and new endpoint pair p9-q. Controls: restoring p0 itself restores contact and D; weak upper margin r_w=(32/5,36/5) creates a new pair at old D; one-for-one replacement of isolate q does not reduce contacts; deleting without packet changes cardinality; the k+1 fallback deletes q and p0 and restores both.",
+      "unchecked_inherited_dependencies_and_limits": "The exact fixture is not globally optimal and its collinear core does not satisfy canonical rigidity hypotheses. Audit.171 supplied-W deletion and global source hypotheses are conditional inputs; no theorem supplies a strict packet for every canonical source.",
+      "evidence_note": "Exact-head package verifier rerun PASS; see b-review actual command/log. This independent record reconstructs the implication, not a source-extraction theorem.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-local-08/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "4ae7399e2595074c0331398fbba9b58c5dea3e73",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.023,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr111-verify.log"
+        }
+      ]
+    },
+    {
+      "number": 115,
+      "head": "356cb08229dd0a38bd272d05488f9bc8be9e1313",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "research: audit PR #958 finite palette transversal equivalence",
+      "scope_review": "Finite equivalence between a strict complete-label endpoint and an independent transversal of the precisely defined conflict graph.",
+      "hypotheses": [
+        "Finite planar option set O_i for every label, n>=2; strict endpoint requires 1<=|y_i-y_j|<D for all distinct labels.",
+        "Same-label options form a clique; cross-label conflicts are exactly distances <1 or >=D. Empty option classes make both sides false."
+      ],
+      "independent_proof_reconstruction": "An endpoint chooses one option per label and avoids all conflict edges, hence is an independent transversal. Conversely, the transversal chooses exactly one per class; absence of conflict means each cross-label distance is neither <1 nor >=D, so trichotomy gives [1,D). This encoding includes all labels and makes distance 1 allowable and distance D forbidden. A source-global-minimum contradiction follows only if option sets exist for every source label.",
+      "falsification_and_controls": "The exact checker exercises 784 ordered two-label palettes from seven rational points, 125 selected three-label palettes, empty classes, and boundary cases with squared distances 1, 4 at D=2, 1/4, and 9/4. The proof handles general finite palettes; these are regressions only. The published core-only predecessor replay is reported in the README, while this review directly reran the exact-head package verifier.",
+      "unchecked_inherited_dependencies_and_limits": "No source-to-palette construction or universal palette theorem is supplied. Historical 132/175-label external coordinate files were unavailable; no colour-lift, interval-arithmetic, or source-exhaustion route is re-audited. The lifecycle remains unreviewed.",
+      "evidence_note": "Exact-head package verifier PASS; complete option sets and any source-global contradiction remain unproved.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-local-11/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "356cb08229dd0a38bd272d05488f9bc8be9e1313",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.04,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr115-verify.log"
+        }
+      ]
+    },
+    {
+      "number": 116,
+      "head": "08442dbb7a3159ef1d0cc7ec966b99d6eced0edd",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Independent audit: PR #948 quarter-fold face obstructions",
+      "scope_review": "Conditional PR948 quarter-fold obstruction report: reflex contact release, exact-graph eight-face exclusion, and short-arc count reduction; no integrated source endpoint.",
+      "hypotheses": [
+        "Finite unit-separated source with a simple bounded actual contact face and global/contact-minimal normalization for the contact-release contradiction.",
+        "For the eight-face exclusion, a full placement retains the exact old contact graph, is unit-separated, and has diameter <=D; canonical strict/weak transformed-hull covers apply.",
+        "For short-arc counts, the face is convex with four arcs of at least two edges and the folded boundary remains lower-feasible and triangle-free."
+      ],
+      "independent_proof_reconstruction": "At a reflex vertex, the contact-free sector has angle >pi, so the complementary cone of incident unit-neighbor vectors has width <pi. A small displacement opposite its bisector gives negative dot product with each contact vector, opening every unit edge; noncontacts and upper pairs stay feasible by finite slack. The vertex is not a diameter endpoint (diameter endpoints are uniquely exposed), so contact deletion contradicts contact-minimality unless diameter decreases. For the eight-face fold, determinant signs make transitions strictly clockwise; convexity forces same-sign turns flat, leaving a parallelogram if the fold is nonconstant. Any bowed arc gives a nonconvex actual face after exact graph preservation and strict hull cover, contradicting contact release; flat reverse-fold plus weak cover excludes interior labels. For four arcs with turns T_i, adding adjacent transition inequalities yields T_i<pi/3; chord lengths obey (sqrt(3)/2)r_i<L_i<=r_i. Equal opposite chord lengths then exclude unequal opposite counts through total degree 18, so odd convex faces of degree <=17 have constant signs.",
+      "falsification_and_controls": "The report records exact rational/Q(sqrt(15)) verifier and certificate byte comparisons; finite cases include bowed and straight mixed 8-cycles, a diameter switch, odd 21-cycle, and all arc-count vectors through degree 18. The 21-cycle is explicitly nonglobal (25-site square-grid competitor D^2<=32<58), so it blocks extrapolation. The current reviewer ran artifact-index and reading-edition checks only; those are publication checks, not the analytic verifier.",
+      "unchecked_inherited_dependencies_and_limits": "Canonical endpoint extremality, local minimum-face, hull-cover and global-minimality inputs are inherited; no all-label nonaffine assignment is constructed. Scope excludes changed-contact endpoints, larger odd faces beginning at degree 19, inactive-upper control outside stated branch, and global source extraction. No full historical proof chain replay.",
+      "evidence_note": "Exact report was read and proof reconstructed; this PR changes report/index/reading artifacts only. Report’s own exact verifier runs are attributed to that report, not claimed as this reviewer’s replay.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_artifact_index.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "08442dbb7a3159ef1d0cc7ec966b99d6eced0edd",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.286,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr116-artifact-index.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_reading_edition.py --check",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "08442dbb7a3159ef1d0cc7ec966b99d6eced0edd",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 20.75,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr116-reading-edition.log"
+        }
+      ]
+    },
+    {
+      "number": 124,
+      "head": "067af10523401461d80a399ef31ba429accc8fc1",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Target C: conditionally audit positive-leaf anchor sharpening",
+      "scope_review": "Conditional positive-leaf anchor boundary-distance implication; report is PR #124. The antecedent near-diameter localization is PR #139 and is a separate unreviewed candidate.",
+      "hypotheses": [
+        "Noncollinear full-source global minimum-diameter source with D large; actual diameter endpoint p with unique actual unit neighbor a.",
+        "Positive coefficient alpha>0 on contact pa in a normalized full-source KKT stress and nonnegative coefficients on actual diameter partners.",
+        "Full-source circumradius R<=D/2+eta, eta=3^(1/4)*sqrt(D).",
+        "The PR #139 endpoint-direction estimates hold for the same source at s=0 and s=2; all source labels including isolates constrain K_D."
+      ],
+      "independent_proof_reconstruction": "Set n=p-a, |n|=1, and nu=(p-x)/d. For d>=D-2, PR #139 supplies transverse |(p-c)·Jnu|=O(D^(2/3)); the circumradius gives longitudinal (p-c)·nu>=d-R>=D/2-eta-2, positive for large D. The direction nu and all actual diameter normals therefore lie within epsilon=O(D^(-1/3)) of e=(p-c)/|p-c|. From alpha*n=sum beta_y(p-y), alpha>0 and beta_y>=0, n is in the positive cone of diameter normals in this arc, so n·nu>=cos(2epsilon)=1-O(D^(-2/3)). Then |a-x|^2=(d-1)^2+2d(1-n·nu) gives |a-x|<=d-1+O(D^(-2/3)) on d>=D-2; d<D-2 is covered by |a-x|<=d+1<D-1. Hence |a-x|<=D-1+delta uniformly for every source label. For the boundary step, any actual diameter midpoint z has |x-z|<=sqrt(3)D/2 by the parallelogram identity; thus K_D=intersection of all disks radius D-1 contains a ball of radius r=(1-sqrt(3)/2)D-1. Support of W_D=intersection of all radius-D disks plus K_D+B(0,1) subset W_D gives h_KD(n)<=n·a. Contract a toward z by theta=r/(r+delta): q=theta a+(1-theta)z satisfies every disk radius D-1 inequality because theta*delta=(1-theta)*r. Thus q in K_D and dist(a,partial K_D)<=|a-q|=delta/(r+delta)|a-z|=O(D^(-2/3)).",
+      "falsification_and_controls": "Checked short-pair branch d<D-2 separately; angle cone aperture <pi makes the positive hull valid; alpha>0 and beta>=0 are essential; contraction is checked against every label, including isolates. No counterexample found to this conditional implication. Exact PR-head audit report includes these checks. PR124 has a duplicate second theorem-state marker ART-PLACEHOLDER at its PR head; the report diff to integration ee8f9df94a8a1043098482386bbbc6a893214330 removes only this marker, with no mathematical prose change; independent artifact-index and reading-manifest checks pass there.",
+      "unchecked_inherited_dependencies_and_limits": "Do not count PR #139 source proof as independently established by this PR #124 audit: PR #139 localization is assumed at s=0,2. The candidate is still unreviewed; no endpoint-tail/moment or full diameter-edge transfer, no source extraction, no vacancy or movement, and no promotion of O(D^-2/3). The weaker canonical O(D^-1/2) remains authoritative. Full inherited canonical proof chain not replayed.",
+      "evidence_note": "PR124 mathematical reconstruction is conditional on PR139. C reviewer exact-head PR139 record c0043e3 confirms only the all-s>=0 endpoint/midpoint localization, including s=0,2, and preserves its unreviewed lifecycle. PR124 duplicate marker was removed at ee8; independent metadata/hash check PASS. No candidate promotion.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_artifact_index.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "067af10523401461d80a399ef31ba429accc8fc1",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.383,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr124-artifact-index.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_reading_edition.py --check",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "067af10523401461d80a399ef31ba429accc8fc1",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 23.82,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr124-reading-edition.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-124-ee8-metadata.py",
+          "working_tree": "frozen integration commit ee8f9df94a8a1043098482386bbbc6a893214330 via git show",
+          "head": "ee8f9df94a8a1043098482386bbbc6a893214330",
+          "exit_code": 0,
+          "result": "PASS; verified single correct marker, artifact-index identity/status, and source/generated reading hashes after removing ART-PLACEHOLDER.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-124-ee8-metadata.log"
+        }
+      ]
+    },
+    {
+      "number": 127,
+      "head": "6c2b6d7be91c6d6cd5b9e2133c8add94c506bf1f",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Audit open-cell phase-flux identity and scope conditions",
+      "scope_review": "Exact open-cell phase-flux identity and conditional sign/endpoint consequences.",
+      "hypotheses": [
+        "Finite cut-balance identity A_i u(theta_i)=sum_{a_h<i<=b_h} beta_h r_h with coherent phase lifts.",
+        "Sign classification requires positive KKT weight on every moving actual diameter and non-grazing finite-change estimate.",
+        "Inverse-D endpoint branch additionally requires fixed-star complete O-O slab motion, Section-90 window |u_q-u_p|<=4K/D, and contact-minimal then diameter-pair-minimal source."
+      ],
+      "independent_proof_reconstruction": "Orient each cut-crossing row by sign(r_h·J u(mu)) and weight it by f_h=beta_h|r_h·J u(mu)|. Dotting cut balance with J u(mu) gives prefix divergence Phi(P_i;mu)=A_i sin(theta_i-mu). For S=P_q minus P_p and midpoint mu=(theta_p+theta_q)/2, subtraction gives exact F_out-F_in=(A_p+A_q)sin((theta_q-theta_p)/2); its slab work equals -2(A_p+A_q)t^2. With full positive support, t>0 gives both signs iff F_in>0, otherwise all moving rows shorten; t<0 is symmetric. Source ideals/sinks then force the phase-order condition if the inherited endpoint theorem excludes the inactive near-pair witness.",
+      "falsification_and_controls": "Removing full positivity breaks the full-graph equivalence: a zero-weight incoming geometric diameter has opposite finite length sign while F_in=0. Dropping the Section-90 phase window and taking phase gap pi/3 gives |u_q-u_p|=1, not O(1/D). Prior finite regressions are consistent but lack vertex KKT/global-minimality; direct reviewer ran artifact-index and reading-edition checks, not those source regressions.",
+      "unchecked_inherited_dependencies_and_limits": "The full-support positive multipliers, non-grazing bound, contact-preserving predecessor block motion, endpoint ledger and Section-90 constant are inherited from earlier proof; they are not re-audited end-to-end. Candidate lifecycle remains unreviewed and no global endpoint is found.",
+      "evidence_note": "Exact algebra reconstructed. Finite regressions in the report are not treated as an analytic verifier.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_artifact_index.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "6c2b6d7be91c6d6cd5b9e2133c8add94c506bf1f",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.386,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr127-artifact-index.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_reading_edition.py --check",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "6c2b6d7be91c6d6cd5b9e2133c8add94c506bf1f",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 34.119,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr127-reading-edition.log"
+        }
+      ]
+    },
+    {
+      "number": 132,
+      "head": "5df95908df0ea6f206b2fed0681a061bf29a0aa3",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Target C: conditional destination audit of the 0.0071 matched gap",
+      "scope_review": "Conditional branch-aware 0.0071 atomic train-measure floor under the pair-payment premise and strict-rhombus graph application.",
+      "hypotheses": [
+        "Assume A<=2s+g for g=0.0071, K=2/sqrt(3), s=sqrt(Delta_2), dominant pi/3 orbit with mass W, and triangle-free three-phase masses C>=U>=V.",
+        "Conditional iterative-pruning pair theorem for each leaf family is an explicit unreviewed input; canonical full-core train framework and strict-rhombus crossing transfer also required."
+      ],
+      "independent_proof_reconstruction": "Generic orbit-square bound gives W>=4s^2/(2s+g); Mantel on residual orbits yields 0<=delta=W^2/4-E<=d0=s*g+g^2/4. Put z=C-W/2, so |z|<=sqrt(delta). Missing pair masses x,y satisfy C e(U,V)<=Vx+Uy, equivalently a*x+b*y<=h=delta-z^2 for a=1-V/C,b=1-U/C. The pair theorem bounds each overload e_L=(C+L-K)_+ by sqrt(10)*sqrt(missing_L) in its strong branch and sqrt(29/2)*sqrt(missing_L) always; cap gives C<K and both leaves are in the strong branch up to explicit z_*. Define F_U=C+U-lambda sqrt(x), F_V=C+V-lambda sqrt(y). Pair bounds say both <=K, while weighted averaging, Cauchy, missing-pair inequality, and UV<=(U+V)^2/4 give max(F_U,F_V)>=3W/4+z/2-lambda sqrt(h*(W+2z)/(W+6z)). Substitute W>=W0, h<=d0-z^2 and use branch-safe coefficient on both sides of z_*; interval certificate says the lower bound exceeds K throughout feasible z, contradiction. Thus A>2s+0.0071; canonical exposed-hull comparison transfers to (T-q/2)/D. Strict-rhombus application must run on its own graph, not delete singleton trains; sigma_R=2T_R-4sqrt(R4), R4/D^2->Delta_2 yields liminf sigma_R/D>=0.0142.",
+      "falsification_and_controls": "Audit checks zero-mass leaf (e_L=0 since C<K), both leaf ratios at branch boundary, positive/negative z, denominator W+6z positivity, intervals crossing z_*, and strict-rhombus transfer. Report verifier uses a mesh over [-0.083,0.083] containing |z|<=sqrt(d0), and weaker coefficient on intervals touching switch. The PR adds an audit report; direct reviewer ran generated artifact-index/reading checks, not a new interval verifier.",
+      "unchecked_inherited_dependencies_and_limits": "Unreviewed pair-payment candidate inversion-cover, iterative-deletion and global crossing-order argument remain the decisive premise. Dominant three-phase/full-core framework and strict-rhombus application are inherited. No source-wide extraction, KKT weight floor, finite competitor, C-II or Level I closure.",
+      "evidence_note": "Report-level proof reconstruction is conditional; no lifecycle promotion. Preserve the 0.0071 derivation as distinct from the 0.0050 Section-171 output.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_artifact_index.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "5df95908df0ea6f206b2fed0681a061bf29a0aa3",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.447,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr132-artifact-index.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_reading_edition.py --check",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "5df95908df0ea6f206b2fed0681a061bf29a0aa3",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 27.977,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr132-reading-edition.log"
+        }
+      ]
+    },
+    {
+      "number": 133,
+      "head": "04b30ab0f484c4dce774ff9d400ea38d359dfb25",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Independent audit: PR #111 full-pair restoration",
+      "scope_review": "Independent exact audit of PR111 supplied-instance stress, deletion, cardinality repair and complete pair constraints.",
+      "hypotheses": [
+        "Same conditional packet rule and exact 11-label fixture as PR111; no universal packet-existence statement."
+      ],
+      "independent_proof_reconstruction": "Independently reconstructs source p_i=(i,0), q=(1/2,11/10), D^2=81 and stress beta_09=1, alpha_i=9. Deleting p0 removes the old D row and leaves eight independent contact columns, while q remains in all checks. Inserting r=(8/5,11/10) preserves n=11; all 55 pairs are checked, contacts drop 9 to 8, and max distance²=3673/50. Strict new upper pairs preclude creating an old-D edge; p9-q is correctly the new endpoint diameter at lower D'. The abstract k versus k+1 rule follows by exact pair feasibility and the contact-minimal/global-minimal alternatives.",
+      "falsification_and_controls": "Separate exact Fraction verifier does not import PR111 verifier. It checks source/delete/restore pair tables, force balance, rank 9 and normalized rank 10; controls restore p0, use a weak upper-bound point creating new D, replace only an isolate, omit a packet (wrong cardinality), and use the k+1 fallback. Exact-head verifier passed.",
+      "unchecked_inherited_dependencies_and_limits": "The finite source is not globally optimal and collinear core lacks the canonical rigidity hypotheses; Audit.171 deletion and canonical global-source quantifiers remain inherited. No universal packet extraction.",
+      "evidence_note": "Paired audit reuses PR111 input instance only; verification is independent and exact-head.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019T054318Z-09/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "04b30ab0f484c4dce774ff9d400ea38d359dfb25",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.031,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr133-verify.log",
+          "note": "VERIFY.json repeats the identical command; one invocation was run because the second is duplicate evidence."
+        }
+      ]
+    },
+    {
+      "number": 135,
+      "head": "daf4e29a0cee53439eb2cb7d747092da2a5e31dd",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Audit PR #104's fixed-isolate shear bounds",
+      "scope_review": "Independent exact audit of PR104 fixed-isolate seven-label shear family.",
+      "hypotheses": [
+        "Six unit-rhombus labels v_(i,j)=i(1,0)+j(c,s), i=0,1,2 and j=0,1, plus fixed isolate z=(1,11/5); c in the common shear interval and s=sqrt(1-c^2)."
+      ],
+      "independent_proof_reconstruction": "Enumerate seven disjoint pair classes (21 pairs). The largest parameter-sensitive upper pair has squared length 5+4|c|; imposing <=146/25 is equivalent to |c|<=21/100. All four horizontal and three equal-index cross-row contacts stay at 1. Remaining train pairs stay within old D; isolate-to-top pairs are bounded using 97/100<s<=1 and 6/5<=11/5-s<123/100, giving <2977/1000<146/25. The two isolate-to-bottom diameter pairs stay at D in the interior; one new inactive upper pair reaches D at each shear endpoint, so actual diameter-pair count rises from two to three at either endpoint.",
+      "falsification_and_controls": "Independent verifier rebuilds all 21 distances and radical bounds. At |c|=1/4 an inactive upper pair exceeds D; at |c|=1/2 the contact graph gains two edges and four unit triangles. Direct exact-head package verifier passed.",
+      "unchecked_inherited_dependencies_and_limits": "Only this fixed-isolate finite family; no canonical move or global source extraction. The source checker only asserts positive triangles in its negative control; independent audit supplies stronger exact control.",
+      "evidence_note": "Paired independent audit of PR104; finite fixture only.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019T054318Z-06/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "daf4e29a0cee53439eb2cb7d747092da2a5e31dd",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.023,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr135-verify.log"
+        }
+      ]
+    },
+    {
+      "number": 136,
+      "head": "7cf4b8517c0f846058a9befda03bf3aa4343e688",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Audit PR #114 exact cut-stress boundary payment",
+      "scope_review": "Exact cut-incidence algebra in PR114 abstract two-shore boundary-payment model.",
+      "hypotheses": [
+        "Submitted finite row incidence supports, unit row vectors, positive diameter multipliers, edgewise A-packet balance, and full B-support of internal packet."
+      ],
+      "independent_proof_reconstruction": "Recompute every cut sum from seven rows. A-cut resultants are (23,0), (309/13,0), (18,0). B-cut vectors are Q1=(-11/5,276/65), Q2=(14/5,276/65); determinant -276/13, and Q1/5-Q2/5=(-1,0). Boundary-row work is +48/13, internal packet work -48/13, and reference row cancels, so total work is exactly zero. This disproves any inference from the listed cut equations alone that B phase must be exact or boundary payment impossible.",
+      "falsification_and_controls": "Removing e02- breaks A-packet transverse balance and shear vector; weakening e12- B support changes Q2 and shear; changing positive beta(e02+) from 3 to 4 also breaks exact balance. Independent checker recomputes rather than trusts stored totals; exact-head verifier passed.",
+      "unchecked_inherited_dependencies_and_limits": "There is no planar realization, shared point-pair endpoints, vertex equilibrium, full all-pairs ledger, hull order, or global-minimality certificate. It is a cut-only model, not a source counterexample.",
+      "evidence_note": "Paired audit checks the exact PR114 row model only; no source-geometric implication.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019T054318Z-10/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "7cf4b8517c0f846058a9befda03bf3aa4343e688",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.025,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr136-verify.log"
+        }
+      ]
+    },
+    {
+      "number": 137,
+      "head": "73ba295bcf89e12b7d2c7fa94d094fc44e674a3b",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Target C: independently audit six sparse-stress fixture competitors",
+      "scope_review": "Exact finite exclusion of six PR95 sparse-stress fixtures from global minimization by same-cardinality lattice-disk competitors.",
+      "hypotheses": [
+        "R in {16,25,36,64,100,256}; source union is lattice core, central chain, rational boundary ring, with all labels counted.",
+        "The source report supplies unit separation; the candidate comparator is a fresh configuration allowed by the definition of D(N)."
+      ],
+      "independent_proof_reconstruction": "For u=(1,0), v=(a_R,b_R) unit with 0<a_R<1/2, any nonzero lattice difference has Q=m^2+n^2+2a mn>=1: same-sign terms are immediate; opposite signs satisfy Q>(x-y)^2+xy>=1. Comparator Y_R is all lattice sites in radius R-1/2. Since Q>(m^2+n^2)/2, enumeration is finitely contained in [-2R,2R]^2, and exact integer cross-multiplication counts it. The six comparator populations exceed N_R; choose N_R points retaining 0,u. All lie in radius R-1/2, so diameter<=2R-1<2R, strictly below source. Ring intersects chain exactly at ±Ru and population counts include all labels.",
+      "falsification_and_controls": "Checker verifies ring radius/intersection, population formula, disk counts and all lattice separation. Failure controls require strict diameter improvement, enough capacity, and closed-disk boundary convention; all six exact counts pass. Direct exact-head package verifier passed.",
+      "unchecked_inherited_dependencies_and_limits": "Only six exact fixture radii. No arbitrary Type-II stress exclusion, source-preserving movement, or asymptotic exclusion. Source proof of source separation is reused from pinned PR95 report; not re-audited.",
+      "evidence_note": "Paired exact audit PR106 of PR95 fixtures; same-cardinality comparator conclusion is independent finite evidence.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019t054318z-07/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "73ba295bcf89e12b7d2c7fa94d094fc44e674a3b",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.547,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr137-verify.log"
+        }
+      ]
+    },
+    {
+      "number": 143,
+      "head": "b6e60e8b0c8efa8675b143b1c10bdf2e1d5fe488",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Independent audit: PR #129 wall tolerance and population ledger",
+      "scope_review": "Independent exact review of PR129 finite m=7 deleted-wall endpoint and population shortfall.",
+      "hypotheses": [
+        "m=7 oblique grid frame with u=(1,0), v=(1/7,4sqrt(3)/7), L=14, epsilon=1/(10L^4), t=1/(100L^3).",
+        "Retain top/right walls and move 36 strict-interior labels by -t*lambda_ij*(u+v); delete 13 bottom/left labels."
+      ],
+      "independent_proof_reconstruction": "Represent coordinates as (x,q) for (x,sqrt(3)q), so each squared distance is rational dx^2+3dq^2. 15 retained wall labels plus 36 moved labels give 51; exhaustive pairs are 1,275. Direct independent Fraction reconstruction found min²=1, max²=84 attained by (0,7),(7,0), all <= original D_7²=112; all 1,170 pairs involving moved labels are strictly >1. The endpoint is feasible at 51 labels but lacks 13 labels relative to the 64-label source, so cannot challenge D(64).",
+      "falsification_and_controls": "New exact independent script checks all pair counts, lower and upper bounds, exact max and attaining pair; PASS. The PR129 source verifier also passed earlier in this review, while the report additionally explains the verifier did not itself assert max=84. Documentation generation checks passed at exact PR143 head.",
+      "unchecked_inherited_dependencies_and_limits": "No refill argument or 64-point competitor is supplied; only finite m=7 endpoint. General wall tolerance/exterior-shielding lemma is inherited and not proved for arbitrary nearly matching cycles.",
+      "evidence_note": "Independent exact pair script and log are included in b-run-logs; source defect/fix status remains archive-only.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_artifact_index.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "b6e60e8b0c8efa8675b143b1c10bdf2e1d5fe488",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.494,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr143-artifact-index.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_reading_edition.py --check",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "b6e60e8b0c8efa8675b143b1c10bdf2e1d5fe488",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 25.384,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr143-reading-edition.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-143-independent.py",
+          "working_tree": "standalone Fraction reconstruction from PR #143 exact report coordinates; no repository source edits",
+          "head": "b6e60e8b0c8efa8675b143b1c10bdf2e1d5fe488",
+          "exit_code": 0,
+          "result": "PASS; reconstructed 51 labels and all 1,275 pairs; minimum squared distance 1; maximum 84 attained only by retained wall pair ((0,7),(7,0)); all 1,170 pairs involving moved labels are strictly above 1; all pairs <= original D^2=112.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-143-independent.log"
+        }
+      ]
+    },
+    {
+      "number": 149,
+      "head": "5053e17987b1aa72173f4a656213532536b24933",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Independent audit: PR #948 large-array boundary attachment",
+      "scope_review": "Conditional PR948 large-array boundary attachment theorem for complete bent rhombic arrays with both dimensions >=delta D.",
+      "hypotheses": [
+        "Actual full-source labelled complete array p_ij=z+x_i+y_j with distinct labels, unit consecutive row/column edges, strict rhombic faces, and a,c>=delta D.",
+        "Triangle-free contact-minimal global source; r counts distinct noncorner boundary vertices attached by unit contact to outside labels.",
+        "Canonical full-source circumradius and local positive-spanning/exposure facts apply."
+      ],
+      "independent_proof_reconstruction": "Direction windows give only designated internal grid contacts. Opposite three-ray boundary stars with nonzero turn have exactly one non-positive-spanning vertex, hence one diameter endpoint; zero turn would make both endpoints midpoints and violates extremality. If r/D tended to zero along D->infinity, normalized piecewise-linear array paths have bounded Lipschitz constants and a subsequential limit. Good star indices are vanishing-gap meshes, forcing each path point onto one of two fixed radius-1/2 lens circles. Cell determinants enforce strict transverse monotonicity, so a path cannot switch lens circles. At the common limiting corner, tangent lines of the two circle paths must coincide, but limiting row/column angle window [pi/3,2pi/3] excludes parallel and antiparallel tangents. Contradiction yields existential epsilon_delta,D_delta with r>=epsilon_delta D. Whole-core corollary uses shape bound D<14a,14c to set delta=1/14 and contradict r=0 for D>=15.",
+      "falsification_and_controls": "Finite verifier has 81 bent-array fixtures, 2,916 lower pairs, 486 determinant checks, 174 lens identities, 420 circle-chord identities, 21 tangent identities and 625 star cases. Checks exercise angle boundaries, zero turn, corner continuity and exact coefficient. It does not encode compactness or global optimality; package verifier is a wrapper around pinned replay. Review exposure: high-level memory summary mentioned route before reconstruction; proof was then re-derived from exact destination report.",
+      "unchecked_inherited_dependencies_and_limits": "Canonical FS geometry, local contact extremality/positive-spanning theorem, and ZF/diameter endpoint consequences are inherited. Candidate registry overincludes C-RHOMBUS-POP, not used. No arbitrary source array extraction, no endpoint or C-II closure.",
+      "evidence_note": "Report proof is at conditional complete-array scope; package checks do not prove its compactness argument.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-local-09/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "5053e17987b1aa72173f4a656213532536b24933",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.138,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr149-verify.log"
+        }
+      ]
+    },
+    {
+      "number": 150,
+      "head": "51016e9a86212e2cc74be1092861ddf00bbf8f3c",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Independent audit: PR #948 complete-array diameter forest",
+      "scope_review": "Complete-array diameter-forest theorem; conditional whole-positive-contact-core corollary.",
+      "hypotheses": [
+        "Finite planar complete labelled P_ij=x_i+y_j array with every pair of index points distinct, unit row/column sides, consistently oriented strict triangle-free rhombi, diameter D.",
+        "Whole-core corollary further assumes canonical contact-minimal then diameter-pair-minimal source, array is entire nonisolated contact core, and every source label including isolates is retained."
+      ],
+      "independent_proof_reconstruction": "Strict cells place all row and column directions in separated narrow projective windows. Unique support at a diameter endpoint excludes both interior indices, creating X/Y bank edge classes; same-row/column D edges and X-Y crossings are ruled out by parallelogram norm identity and separated normals, leaving only opposite-corner diagonals as cross-bank edges. Three consecutive D steps force each path-direction angle strictly between neighbors; hence directions are monotone and alternating path lengths satisfy even/odd span bounds. Opposite bank paths of opposite parity cannot have equal endpoint displacement, excluding any simple mixed odd cycle. The diameter graph is a straight-line thrackle; canonical Woodall then makes the no-odd-cycle graph a caterpillar forest. For the whole core, strict-angle estimates prove contact graph is exactly rectangular grid, e=2v-2-(a+c); local exposure/positive-spanning loads q=a+c+2 boundary vertices. Canonical defect identities give d_H+s_Z=2; odd-cycle exclusion forces d_H>0 and ZF gives s_Z>=0, leaving (s_Z,d_H)=(0,2) or (1,1).",
+      "falsification_and_controls": "Report verifier checks 81 finite strict rhombus fixtures, all pair separation, path-angle algebra, and diameter graph controls; direct exact-head package verifier passed. The proof also separately handles one-cell dimensions and angle-limit cases.",
+      "unchecked_inherited_dependencies_and_limits": "The report explicitly uses canonical C-FULL-SOURCE-ISOLATE-NORMALIZATION to rule out diameter pairs involving contact isolates in the whole-core corollary; this dependency is absent from the candidate registry canonical_claims list. Record it before any lifecycle promotion. Local structure Lemma 5.1/Theorem 6.1 and Woodall/ZRF remain inherited. No source-array extraction or global theorem. Candidate registry omits C-FULL-SOURCE-ISOLATE-NORMALIZATION used by the whole-core corollary; record this dependency before any future lifecycle promotion. No registry edit is needed for source-only archive intake.",
+      "evidence_note": "Complete-array theorem reconstructed; registry dependency omission is documentation repair, not a counterexample. Keep candidate lifecycle unreviewed.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-homelab-08/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "51016e9a86212e2cc74be1092861ddf00bbf8f3c",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.117,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr150-verify.log"
+        }
+      ]
+    },
+    {
+      "number": 155,
+      "head": "4492507beafbe5496823e7ee7151d7557aa3bca4",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Add support-aware two-cut stress sign fork",
+      "scope_review": "Support-aware extension of two-cut flux argument, conditional on source block-transposition hypotheses; no actual endpoint constructed.",
+      "hypotheses": [
+        "Convex feasible normalized KKT stress set K, complete actual diameter graph H, support H_supp of edges positive in some feasible stress, positive boundary cut masses.",
+        "Fixed-star complete O-O rectangle, phases in same open direction cell, exact contact-preserving slab translation, and non-grazing |n_h·w|>Ds/2 for every moving actual diameter."
+      ],
+      "independent_proof_reconstruction": "Average one positive-boundary stress and finitely many witness stresses (one per h in H_supp) to obtain a feasible normalized stress positive on all reachable support and zero structurally outside it. Restrict the exact PR127 flux identity to H_supp: Fout+−Fin+=(A_p+A_q)t. If t>0, Fin+>0 means both signs occur on positive support; if Fin+=0, those rows are all outgoing; t<0 is symmetric. Explicitly inspect H minus H_supp: an adverse zero-multiplier lengthening row prevents full-graph one-sign inference; if every such row shortens, all moving actual diameters shorten. Then |r_h+Delta|²−D²=−2s(n_h·w)+s²<0. If no previously strict full-source pair reaches a lower or upper boundary, preserved contacts and triangle-freeness plus diameter/contact lexicographic normalization contradict minimality. Therefore some strict pair must approach a boundary within s: 1<|xy|<=1+s or D-s<=|xy|<D.",
+      "falsification_and_controls": "Exact rational checker covers finite stress averaging, both sign orientations, an adverse structural-zero row, and squared-distance finite-change formula. It uses abstract rows and supplies no Euclidean realization. Review records earlier exposure to PR127 phase-flux audit; this is an extension, not a second independent audit of PR127.",
+      "unchecked_inherited_dependencies_and_limits": "Does not derive source stress, remove adverse zero-support rows, or certify source geometry/globality/non-grazing inherited from predecessor block theorem. Section-90 s<=4K/D is needed only for inverse-D scale. No endpoint feasibility; all labels and lower/upper constraints remain to be checked.",
+      "evidence_note": "Exact-head package verifier passed; theorem statement remains conditional.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-homelab-03/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "4492507beafbe5496823e7ee7151d7557aa3bca4",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.023,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr155-verify.log"
+        }
+      ]
+    },
+    {
+      "number": 160,
+      "head": "0f63b5b01c2e9f6b97fd50154c63dccc36162ac3",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "audit: PASS PR #142 coupled-isolate finite move",
+      "scope_review": "Independent exact audit of PR142 coupled shear moving a fixed isolate in a seven-label source.",
+      "hypotheses": [
+        "For 0<t<=1/10, train v_(i,j)=i(1,0)+j(t,sqrt(1-t²)), i=0,1,2, j=0,1; isolate z_t=(1,11/5-t); retain every label."
+      ],
+      "independent_proof_reconstruction": "Enumerate 15 train pairs: four horizontal and three vertical contacts at 1; same-row length-2 pairs at 4; cross-row index gap 1 has 2±2t in [9/5,11/5]; gap 2 has 5±4t in [23/5,27/5]. Isolate-bottom squared distances are y² or 1+y² with y=11/5-t; isolate-top distances have lower 121/100 and upper <26741/10000<146/25. Hence all 21 pairs remain in [1,146/25), old ladder contacts remain, both old isolate-to-bottom diameter pairs shorten, and exact new max is 1+(11/5-t)² (541/100 at t=0.1), so endpoint diameter strictly decreases.",
+      "falsification_and_controls": "Fixed-isolate t=0.1 control retains old two diameter pairs; inactive-upper, lower-separation, and unit-triangle controls fail as expected. Exact-head package verifier passed. README proves top-pair inequalities; checker does not separately assert y>0, noted as limitation.",
+      "unchecked_inherited_dependencies_and_limits": "Only seven-label finite family. No global source extraction, large-cardinality rule, or candidate promotion.",
+      "evidence_note": "Independent audit of PR142; exact rational parameter bounds and full pair ledger.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-local-16/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "0f63b5b01c2e9f6b97fd50154c63dccc36162ac3",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.024,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr160-verify.log"
+        }
+      ]
+    },
+    {
+      "number": 168,
+      "head": "36c1e99ca90b7600e44cb416864bc6fe2aeeb1f1",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Add exact-head audit of PR959 reflected-scale moment obstruction",
+      "scope_review": "Asymptotic reflected-scale moment obstruction under exact full-source hypotheses; excludes fixed macroscopic anisotropic scales on this one-step route only.",
+      "hypotheses": [
+        "Unit-separated source sequence D_j->infinity and n_j/D_j²->pi/(2sqrt(3)); a feasible actual planar reflected endpoint retains all labels, lower pair bounds, and diameter <=(1+o(1))D_j.",
+        "Oler finite inequality, perimeter <=pi D for diameter-D hull, and equality case of isodiametric inequality."
+      ],
+      "independent_proof_reconstruction": "Oler gives normalized hull area >=pi/4-o(1), while isodiametric inequality caps it at pi/4; compactness forces each hull limit to be the centered radius-1/2 disk. Local Oler bounds on a finite rectangular partition dominate each weak limit empirical measure by area/(sqrt(3)/2); matching total mass forces uniform disk measure, hence moment convergence for sources and endpoints. Disk isotropy gives E X²=E Y²=1/16, E X²Y²=1/384, E XY²=0. Tangent scale B_j then tends 1. For normal map q_x=sign*sqrt(A_j)|X-gamma_j|+offset, variance bound V_j>=A_j Var(|X-gamma_j|) controls A_j. Bounded gamma subsequences give limiting equations A(s+gamma²)=s+m² and A(t+gamma²s)=t+m²s; elimination yields (A-1)(t-s²)=0 with t-s²=-1/768, hence A=1. For |gamma|->infty, variance and bounded endpoint diameter force one sign eventually; the map is then affine and V_j->A_js, again A_j->1. Thus every subsequence yields A_j,B_j->1.",
+      "falsification_and_controls": "The proof explicitly handles bounded/unbounded offsets and arbitrary label signs; no symmetry of varying lines is assumed. Report completes fixed-region Oler-to-weak-limit step by partitioning rectangles. Direct reviewer ran artifact-index and reading checks only, not a new numerical verifier. The report repeats the same valid theorem-state marker twice; the artifact-index generator validates line 1, and artifact-index plus reading-edition checks passed, so no artifact ambiguity was observed.",
+      "unchecked_inherited_dependencies_and_limits": "Uses canonical Oler inequality and isodiametric equality; no rate or source extraction. Does not imply strict lower-order improvement, nonattainment, triangle conclusion or a global-minimality assumption. Candidate remains unreviewed.",
+      "evidence_note": "Mathematical report audit only; the exact moment argument is asymptotic under stated density and feasible-endpoint assumptions.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_artifact_index.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "36c1e99ca90b7600e44cb416864bc6fe2aeeb1f1",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.392,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr168-artifact-index.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python tools/build_reading_edition.py --check",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "36c1e99ca90b7600e44cb416864bc6fe2aeeb1f1",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 27.967,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr168-reading-edition.log"
+        }
+      ]
+    },
+    {
+      "number": 172,
+      "head": "1e4907faaec3acd5c267a42cab04ab4a07443387",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "disposition": "accept_scoped",
+      "title": "Conditional annular packet from safe-core vacancy",
+      "scope_review": "Conditional safe-core vacancy to annular-packet contradiction for a finite full-source unit-separated set.",
+      "hypotheses": [
+        "A has n labels, diameter D and Jung disk centered o radius R=D/sqrt(3); G_D(A) contains every actual D-pair and tau_D(A) is its minimum vertex-cover number.",
+        "There is a safe core Y with |Y|>=tau_D(A), Y subset open B(o,D-R), distinct Y-pairs and every Y-A pair at distance >=1.",
+        "Use pinned PR955 annular identity M_D(X)=|X|-tau(G_D(X))."
+      ],
+      "independent_proof_reconstruction": "Set X=A union Y. Since Y sits within D-R of center and A within R, every Y-A distance is <D; Y-Y distances are <2(D-R)<D. Thus G_D(X) is exactly G_D(A) plus |Y| isolated vertices; no source label is removed, and all new lower/upper pairs are checked. Then M_D(X)=n+|Y|-tau_D(A)>=n, so the annular packet contains an n-label unit-separated subset of diameter <D, contradicting global minimality. Therefore every global source must fail the sufficient vacancy condition for each Jung center; the lemma does not show it is satisfied.",
+      "falsification_and_controls": "Verifier exercises exact nonglobal controls including PR955 D=8 packet and an acute Delaunay triangle example with zero vacancy. It checks a finite lattice-site coverage certificate and a deliberately missing-site control. Exact-head package verifier passed; finite examples do not establish vacancy for global sources.",
+      "unchecked_inherited_dependencies_and_limits": "PR955 annular identity and Jung radius bound are inherited; no source-dependent lower bound on vacancy or tau, no use of stronger reserve. No extraction theorem, C-II or Level I closure.",
+      "evidence_note": "Conditional lemma only; all labels including contact isolates are retained.",
+      "direct_commands": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.py",
+          "result": "PASS; exact immutable head, base/merge-base, API and git inventory, modes, source pins, JSON/JSONL and Python syntax checked for all 26 assigned PRs.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-integrity.json",
+          "exit_code": 0
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-homelab-04/verify.py",
+          "working_tree": "/home/cinna/.local/state/erdos99-merge/20261019/review-b",
+          "head": "1e4907faaec3acd5c267a42cab04ab4a07443387",
+          "exit_code": 0,
+          "result": "PASS",
+          "elapsed_seconds": 0.034,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-pr172-verify.log"
+        }
+      ]
+    }
+  ],
+  "pr139_cross_review": {
+    "assigned_head": "c0043e3fb9c75b405e75fa462d5c9f2d1a7f1e85",
+    "review_file": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/c-review.json",
+    "record": "PR #139 row",
+    "independent_reviewer": "/root/review_c",
+    "scope": "PR139 supports endpoint-tangent and midpoint-normal localization for every s>=0, including s=0,2; excludes companion endpoint-tail/moment and full diameter-edge transfer; candidate remains unreviewed/noncanonical."
+  }
+}

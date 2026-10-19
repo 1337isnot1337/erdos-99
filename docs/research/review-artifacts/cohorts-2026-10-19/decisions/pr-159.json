@@ -1,0 +1,22 @@
+{
+  "number": 159,
+  "head": "277d2d021e8268d90869a09945ac69b04bc18cc2",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "eac8e1e7f15cdbd08a400d5f8916e1f87c9821b7",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Read complete graph-dichotomy report: alternating cycle yields balanced incidence weights; acyclic case gives half-integral separator, and finite strict inactive margins permit a source-specific small factor perturbation. Complete pair array is required. Report includes planar six-point counterexample showing array may have Gram rank 3; no planar embedding/source-wide conclusion.",
+  "original_coverage": "Read complete graph-dichotomy report: alternating cycle yields balanced incidence weights; acyclic case gives half-integral separator, and finite strict inactive margins permit a source-specific small factor perturbation. Complete pair array is required. Report includes planar six-point counterexample showing array may have Gram rank 3; no planar embedding/source-wide conclusion.",
+  "remaining": "Planar same-cardinality full-source bridge remains open; no promotion. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/c-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

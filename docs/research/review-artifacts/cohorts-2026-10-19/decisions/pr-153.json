@@ -1,0 +1,22 @@
+{
+  "number": 153,
+  "head": "0b3f19b643387da8ea3f583945d1fef220e30b02",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "16f9f6331ae882e54ff520eb578783baf4144c77",
+  "original_disposition": "hold",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept as amended in the integration candidate after a separate independent scoped correction audit; the original hold is retained as historical evidence.",
+  "coverage": "Read the complete amended README, TASK.json, VERIFY.json, SOURCES.json, unchanged package checker, unchanged pinned replay, source candidate report, original verifier interfaces and candidate-registry warning. Reconstructed the contact-floor and pair-constraint graph argument, maximal-support proof, endpoint feasibility and lexicographic contradiction. Independently ran an exact Fraction orientation countercontrol; validated all package and candidate artifact hashes against their pinned commits. The package-local checker and metadata checker were run at the frozen amended commit. Independent replay of the original SymPy verifier is still pending the shared compute lock. Corrected argument/scope and amendment identity: reviews/b-pr153-correction-review.json.",
+  "original_coverage": "Read README/TASK/VERIFY/SOURCES and checker. Strict-floor algebra is inconsistent as assigned: prose defines r moving-to-fixed while the formula r+s_i v, slack s_i(s_i+2r\u00b7v), and floor max(0,-2r\u00b7v) require r=moving-minus-fixed. Exact 1D countercontrol: x_moving=0, y_fixed=1, v=+1; stated r=+1 gives F=0, so s=1/2 is admitted although actual distance becomes 1/2 (squared slack -3/4). The package verifier only checks captured replay bytes, not orientation algebra.",
+  "remaining": "Derive canonical source groups/direction/bounds satisfying the hypotheses while retaining every label and pair.; Prove at least one contact-bearing group survives closure, or supply a source-specific exact collapse certificate and a new argument.; Correct the 39-character source-head pointer in the older candidate provenance/track metadata before relying on that pointer as an exact source pin; destination artifact byte pins are separately verified. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/b-pr153-correction-review.json"
+  ],
+  "canonical_promotion": false
+}

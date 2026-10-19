@@ -1,0 +1,6 @@
+PASS: source census has 21 pairs, 7 contacts, 2 actual D-pairs
+PASS: coupled path checks all 21 pairs for 0<t<=1/10 with 7 contacts
+PASS: every path pair is >=1 and <146/25; D_t^2=1+(11/5-t)^2
+PASS: t=1/10 gives D_t^2=541/100, set by the two isolate-bottom endpoints
+PASS: fixed-isolate c=1/10 control retains the old two diameter pairs
+PASS: inactive-upper, lower-separation, and unit-triangle controls fail as expected

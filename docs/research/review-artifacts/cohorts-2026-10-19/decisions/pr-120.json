@@ -1,0 +1,21 @@
+{
+  "number": 120,
+  "head": "c3718cde305ec74b6dae380292b0bc646cee8f20",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "35aeaedb634c90387ff003d0b8464b14786b94b3",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Coordinates, exact rational pair distances, complete strict neighborhoods, all shore matchings, disjoint segment controls, and Hall values directly reconstructed; package verifier passes.",
+  "original_coverage": "Coordinates, exact rational pair distances, complete strict neighborhoods, all shore matchings, disjoint segment controls, and Hall values directly reconstructed; package verifier passes.",
+  "remaining": "Archive remains partially reviewed; root owns complete certificate replay. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

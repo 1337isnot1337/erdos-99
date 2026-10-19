@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "baseline_commit": "76d7ab38e5302249b92a849e6bfc96f925553c8b",
+  "inputs": [
+    {
+      "path": "docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md",
+      "sha256": "944b5b3e155586f0edc78e22eeb9bdfb3f954e4e7cbfbd51afa2f2768c125d58",
+      "identity": "docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+      "sha256": "69a42884e36eacc29fc987dd004bc2570bcc174402aad2ced478b1bf03f8e63f",
+      "identity": "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/STATE.md",
+      "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+      "identity": "docs/STATE.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/artifact-index.jsonl",
+      "sha256": "d94838372b5105633349e522634bd2040cfd19364a1fc62e00c9fa14b8da6bc1",
+      "identity": "docs/state/artifact-index.jsonl",
+      "generated_from": [],
+      "commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+      "sha256": "29fd04ba2a8f31ac93ab2b91b9d4a267e227c9348a894f37adcd3e6986be7b3d",
+      "identity": "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "identity": "docs/targets/target-c/candidate-registry.json",
+      "generated_from": [],
+      "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-12/verify.py",
+      "sha256": "362007f602fd3ae08acd33fdc8963d5ada9189ab2c214ef930187484587c8804",
+      "identity": "research-packages/e99-paired-20261019t091333z-local-12/verify.py",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The external Bezdek-Fodor D(8) theorem is a conditional premise; the publisher full-text endpoint was inaccessible in this review."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "commit": "ee8f9df94a8a1043098482386bbbc6a893214330",
+  "checks": {
+    "exactly_one_theorem_state_marker": true,
+    "first_marker_matches_artifact_index": true,
+    "artifact_still_unreviewed_noncanonical": true,
+    "reading_manifest_source_hash_matches": true,
+    "reading_manifest_reading_hash_matches": true,
+    "artifact_index_path_and_id_match": true
+  },
+  "result": "PASS"
+}

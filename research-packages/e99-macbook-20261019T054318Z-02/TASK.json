@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-macbook-20261019T054318Z-02",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "An explicit scalable family of pure strict-rhombic disks has two distinct Section-50.1 retained K_(m,m) train components, positive PC1 trim depth in each, one high-defect physical interface crossing, and cross-component virtual determinant mass 2(1+c)m^2-1. The tempting unit-for-unit scalar payment by the deleted interface determinant, the support-corrected shell quantity, and the full boundary allowance fails for all sufficiently large m.",
+    "domain": "m>=12 divisible by four; q=m^2, p=floor(q/sqrt(3))+1, t=p/q, c=(1-t^2)/(1+t^2), s=2t/(1+t^2); vectors x=(1,0), y=(0,1), v=(-c,-s), u=(-s,c); two m-by-m rhombus grids plus the one-square interface. Exact verifier cases m=12,16,20.",
+    "limitations": "A geometric regression, not a global minimizer or counterexample to the Target-B endpoint. It falsifies only the stated direct scalar-payment rule. Positive PC1 depth holds but its diameter excess is zero. It does not establish or exclude a source-specific component/support coupling for canonical global minimizers, global source extraction, GPI globalization, topology transfer, or Level I."
+  },
+  "result": "Exact ledger: R=2m^2+1, B=8m, two Section-50 components each K_(m,m) with min degree m, one deleted high-defect interface crossing, d=m/4-2>0, PC1 excess 0, V_12=2(1+c)m^2-1, G=m^2-1, H=(4+2c)m^2-2, J=2(1+c)m^2=V_12+1. The corrected shell quantity 2E+H-J is only 2m^2+O(1), so adding the interface determinant and O(m) boundary allowance still leaves an m^2+O(m) deficit against V_12.",
+  "remaining_questions": [
+    "For canonical global minimizers, prove an endpoint-ready coupling of V_12 to a component-compatible support-turning correction after J is subtracted, or derive a globality-specific condition that excludes this family while preserving positive PC1 depth. The present disks are nonglobal and do not answer that source-extraction question."
+  ]
+}

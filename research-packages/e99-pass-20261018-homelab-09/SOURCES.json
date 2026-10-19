@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/reports/global_joint_diameter_cover_exchange_2026-10-12.md",
+      "sha256": "b804a22586186c7162cbff4f028b0b2ec3185e0353f9eb47dcd7d77e57a7e8cd",
+      "identity": "docs/reports/global_joint_diameter_cover_exchange_2026-10-12.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/verify_global_joint_exchange_2026_10_12.py",
+      "sha256": "86b4f68c0510a7b3d2fea81456728751c3946daf7adcc6ae85a4af13d86f98a8",
+      "identity": "research/verify_global_joint_exchange_2026_10_12.py",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "identity": "docs/targets/target-c/candidate-registry.json",
+      "generated_from": [],
+      "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+    },
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/pr957_autonomous_proof_audit_2026-10-15.md",
+      "sha256": "a7b0ba682d107135802294b5dc2a70022955f2a90fecada17c0234874f7f00a7",
+      "identity": "docs/audits/pr957_autonomous_proof_audit_2026-10-15.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-homelab-09/verify.py",
+      "sha256": "82a133d7eb49bfa5fe8865118d6fb9e71e58c743c7fc9adea7d277c043b5f854",
+      "identity": "independent-small-graph-audit-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The report does not establish successful-packet existence for every sufficiently large triangle-free global minimizer.",
+    "The candidate registry's shortened cross-graph wording needs clarification to require exactly the conflict edges.",
+    "The registry's recorded digest for the historical source-audit file does not match the bytes at the pinned destination head."
+  ]
+}

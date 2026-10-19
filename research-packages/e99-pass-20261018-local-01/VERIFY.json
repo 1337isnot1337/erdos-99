@@ -1,0 +1,35 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-local-01/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ],
+  "domain": "Proof for every actual response satisfying the cited canonical hypotheses; exact finite regression controls use the 18 Section-102-admissible seed-63 ledgers and 34 seed-66 full-tube cases pinned in SOURCES.json.",
+  "environment": {
+    "dependencies": [],
+    "python": "3.14"
+  },
+  "inputs": [
+    "docs/STATE.md",
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-a/02-scaffold-and-hall.md",
+    "docs/targets/target-a/03-source-response.md",
+    "docs/targets/target-a/08-prescribed-phase-alignment.md",
+    "docs/targets/target-a/17-plateau-response-lift.md",
+    "docs/targets/target-a/24-three-channel-locked-stress.md",
+    "docs/targets/target-a/26-tube-shield-sector-balance.md",
+    "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+    "research-packages/e99-pass-20261018-local-01/verify.py",
+    "research-packages/target-a-fan-tube-ledger/README.md",
+    "research-packages/target-a-fan-tube-ledger/evidence.json",
+    "research-packages/target-a-fan-tube-ledger/verify.py",
+    "research-packages/target-a-full-tube-fan-ledger/README.md",
+    "research-packages/target-a-full-tube-fan-ledger/evidence.json",
+    "research-packages/target-a-full-tube-fan-ledger/verify.py"
+  ],
+  "version": 1
+}

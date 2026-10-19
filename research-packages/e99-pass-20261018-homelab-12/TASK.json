@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-homelab-12",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Independently reconstruct the combined O_{J,K}(D^(4/5)) count of positive-stress leaf ports and same-chart double ports under a fixed supplied slow-chart atlas, and verify q>=h>=ceil(D) yields D-O(D^(4/5)) uncovered loaded endpoints.",
+    "domain": "Asymptotic exponent arithmetic for D->infinity, fixed J,K, canonical positive-leaf anchor error O(D^(-1/2)), canonical slow-chart boundary and double-port counts, and canonical post-ZF C-ZRF/C-WOODALL endpoint counts at launch base 7d0a450fe66991036541023f95c44c064a04b6a8.",
+    "limitations": "The executable verifier checks exponent arithmetic only. The analytic geometry is independently reconstructed but not machine proved. No atlas extraction, source motion, strict-diameter competitor, full-source pair ledger for a moved endpoint, C-II closure, Level I closure, or theorem promotion is claimed."
+  },
+  "result": "Independent reconstruction supports the conditional combined covered-endpoint bound from canonical inputs. The proposed O(D^(-2/3)) leaf-anchor candidate is unnecessary because canonical O(D^(-1/2)) localization already yields D^(4/5)+D^(1/2)=O(D^(4/5)). The candidate and this review artifact remain unreviewed.",
+  "remaining_questions": [
+    "Can one extract a fixed J,K slow-chart atlas from every canonical C-II source, or construct a same-cardinality full-source competitor from the linearly many endpoints uncovered by the two counted port classes?"
+  ]
+}

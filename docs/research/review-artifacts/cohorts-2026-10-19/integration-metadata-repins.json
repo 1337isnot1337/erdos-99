@@ -1,0 +1,178 @@
+[
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-homelab-06",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-pass-20261018-homelab-09",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-pass-20261018-homelab-12",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-local-08",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-pass-20261018-local-16-through-splice-audit",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-local-12",
+    "path": "docs/state/artifact-index.jsonl",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16fee2414ff89dd20393936eba0dc8467b13b05ab0321193cfd9c64545265a90",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "d94838372b5105633349e522634bd2040cfd19364a1fc62e00c9fa14b8da6bc1"
+  },
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-local-12",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-pass-20261018-local-11",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-pass-20261018-local-11",
+    "path": "docs/state/artifact-index.jsonl",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16fee2414ff89dd20393936eba0dc8467b13b05ab0321193cfd9c64545265a90",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "d94838372b5105633349e522634bd2040cfd19364a1fc62e00c9fa14b8da6bc1"
+  },
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-local-09",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-local-13",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-local-13",
+    "path": "docs/state/artifact-index.jsonl",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16fee2414ff89dd20393936eba0dc8467b13b05ab0321193cfd9c64545265a90",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "d94838372b5105633349e522634bd2040cfd19364a1fc62e00c9fa14b8da6bc1"
+  },
+  {
+    "package": "research-packages/e99-pass-20261018-local-09",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-local-05",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-local-05",
+    "path": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "ca4abbf69861ee2c367bece626e3715eeaec03cdd837149453ca814d1d74eded",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "da82d56bdcf33b89a3f99b741926782aefa29083a341af43ee2c95dcc6c1c50f"
+  },
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-homelab-05",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-pass-20261018-local-07",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-pass-20261018-local-14",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-local-07",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-homelab-04",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-homelab-12",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  },
+  {
+    "package": "research-packages/e99-paired-20261019t091333z-local-06",
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "old_sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+    "new_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "new_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104"
+  }
+]

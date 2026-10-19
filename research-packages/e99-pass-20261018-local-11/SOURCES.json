@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md",
+      "sha256": "e0ac1c388070ae91c00e716d1b511924978c029ba90797a6ba562b12e811450c",
+      "identity": "docs/reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "identity": "docs/targets/target-c/candidate-registry.json",
+      "generated_from": [],
+      "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+    },
+    {
+      "path": "docs/state/artifact-index.jsonl",
+      "sha256": "d94838372b5105633349e522634bd2040cfd19364a1fc62e00c9fa14b8da6bc1",
+      "identity": "docs/state/artifact-index.jsonl",
+      "generated_from": [],
+      "commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6"
+    },
+    {
+      "path": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+      "sha256": "d32fa3e8b2d267d28e2963f653671989aee7584c5e456ca5e3730a7d8fa0b90a",
+      "identity": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-local-11/verify.py",
+      "sha256": "521015f1184589c52271f5c0b499cdf689ad0d024e62229745252d0041e5dcf6",
+      "identity": "research-packages/e99-pass-20261018-local-11/verify.py",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "No universal source-derived palette or independent-transversal theorem is established; finite palette controls do not close the global-minimizer bridge."
+  ]
+}

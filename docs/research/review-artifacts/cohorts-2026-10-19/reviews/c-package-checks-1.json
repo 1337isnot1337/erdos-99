@@ -1,0 +1,95 @@
+{
+  "python": "Python 3.14.8",
+  "rows": [
+    {
+      "number": 105,
+      "head": "2c0968543d732a73a6f7a7bb8d192a1c1b10438e",
+      "package": "e99-pass-20261018-local-16-through-splice-audit",
+      "cmd": [
+        "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python",
+        "scripts/research_package.py",
+        "--package",
+        "research-packages/e99-pass-20261018-local-16-through-splice-audit",
+        "--check-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"metadata-valid\",\n  \"package\": \"research-packages/e99-pass-20261018-local-16-through-splice-audit\",\n  \"classification\": \"unreviewed\",\n  \"unresolved\": [],\n  \"declared_seconds\": 90,\n  \"declared_package_dependencies\": [],\n  \"full_verified\": false,\n  \"replay_authorized\": false,\n  \"executed_commands\": false,\n  \"limits\": \"Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "number": 109,
+      "head": "a1efbcf5f8441dbacee06cf9e53535d9ddc40ccd",
+      "package": "e99-pass-20261018-local-07",
+      "cmd": [
+        "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python",
+        "scripts/research_package.py",
+        "--package",
+        "research-packages/e99-pass-20261018-local-07",
+        "--check-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"metadata-valid\",\n  \"package\": \"research-packages/e99-pass-20261018-local-07\",\n  \"classification\": \"unreviewed\",\n  \"unresolved\": [],\n  \"declared_seconds\": 30,\n  \"declared_package_dependencies\": [],\n  \"full_verified\": false,\n  \"replay_authorized\": false,\n  \"executed_commands\": false,\n  \"limits\": \"Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "number": 110,
+      "head": "3fc35647bf49de836dfc379b46fbbc604cb971fe",
+      "package": "e99-pass-20261018-homelab-12",
+      "cmd": [
+        "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python",
+        "scripts/research_package.py",
+        "--package",
+        "research-packages/e99-pass-20261018-homelab-12",
+        "--check-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"metadata-valid\",\n  \"package\": \"research-packages/e99-pass-20261018-homelab-12\",\n  \"classification\": \"unreviewed\",\n  \"unresolved\": [\n    \"No fixed J,K chart atlas is extracted from every canonical C-II source, and no source-level finite competitor is constructed.\",\n    \"The curved-boundary capacity, positive-leaf anchor localization, slow-chart double-port theorem, and C-ZRF/C-WOODALL inputs are analytically cited at the pinned base; this package does not mechanically prove them.\"\n  ],\n  \"declared_seconds\": 30,\n  \"declared_package_dependencies\": [],\n  \"full_verified\": false,\n  \"replay_authorized\": false,\n  \"executed_commands\": false,\n  \"limits\": \"Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "number": 112,
+      "head": "fd02d4d36b1953a217680d889ce830f894a41096",
+      "package": "e99-pass-20261018-local-14",
+      "cmd": [
+        "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python",
+        "scripts/research_package.py",
+        "--package",
+        "research-packages/e99-pass-20261018-local-14",
+        "--check-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"metadata-valid\",\n  \"package\": \"research-packages/e99-pass-20261018-local-14\",\n  \"classification\": \"conditional\",\n  \"unresolved\": [],\n  \"declared_seconds\": 30,\n  \"declared_package_dependencies\": [],\n  \"full_verified\": false,\n  \"replay_authorized\": false,\n  \"executed_commands\": false,\n  \"limits\": \"Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "number": 113,
+      "head": "81de74d4ba5099c8572c1c76f6c28ac80d9c642a",
+      "package": "e99-pass-20261018-homelab-11",
+      "cmd": [
+        "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python",
+        "scripts/research_package.py",
+        "--package",
+        "research-packages/e99-pass-20261018-homelab-11",
+        "--check-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"metadata-valid\",\n  \"package\": \"research-packages/e99-pass-20261018-homelab-11\",\n  \"classification\": \"conditional\",\n  \"unresolved\": [\n    \"The upstream endpoint midpoint tail and moment estimates remain a separate unreviewed destination candidate; this package proves only their conditional transfer to all actual diameter edges.\"\n  ],\n  \"declared_seconds\": 30,\n  \"declared_package_dependencies\": [],\n  \"full_verified\": false,\n  \"replay_authorized\": false,\n  \"executed_commands\": false,\n  \"limits\": \"Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "number": 134,
+      "head": "6171ec66dfce3ea696a412e3a37bcf7440732088",
+      "package": "e99-macbook-20261019T054318Z-05",
+      "cmd": [
+        "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python",
+        "scripts/research_package.py",
+        "--package",
+        "research-packages/e99-macbook-20261019T054318Z-05",
+        "--check-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"metadata-valid\",\n  \"package\": \"research-packages/e99-macbook-20261019T054318Z-05\",\n  \"classification\": \"conditional\",\n  \"unresolved\": [\n    \"The audited PR #103 report remains an external immutable source at head 4b708e27e9e26f8c163685dfe8b033b6d6369177 with SHA-256 c755e9508fc28ae6765eef4e704367deef73ff692e4b397f685b011705967882; the original candidate bytes are not duplicated in this audit package.\"\n  ],\n  \"declared_seconds\": 30,\n  \"declared_package_dependencies\": [],\n  \"full_verified\": false,\n  \"replay_authorized\": false,\n  \"executed_commands\": false,\n  \"limits\": \"Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay.\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

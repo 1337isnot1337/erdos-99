@@ -1,0 +1,50 @@
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+      "positive_leaf_status_kept_unreviewed_strengthening": true,
+      "positive_leaf_validation_conditional_on_pr139": true,
+      "near_diameter_status_unreviewed": true,
+      "near_diameter_scope_all_s_including_endpoints": true,
+      "no_promotion_or_state_change": true
+    },
+    {
+      "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+      "positive_leaf_status_kept_unreviewed_strengthening": true,
+      "positive_leaf_validation_conditional_on_pr139": true,
+      "near_diameter_status_unreviewed": true,
+      "near_diameter_scope_all_s_including_endpoints": true,
+      "no_promotion_or_state_change": true
+    },
+    {
+      "commit": "e185b58bfffa27be92d4ec91d919f1aa4f939725",
+      "positive_leaf_status_kept_unreviewed_strengthening": true,
+      "positive_leaf_validation_conditional_on_pr139": true,
+      "near_diameter_status_unreviewed": true,
+      "near_diameter_scope_all_s_including_endpoints": true,
+      "no_promotion_or_state_change": true
+    },
+    {
+      "commit": "ee8f9df94a8a1043098482386bbbc6a893214330",
+      "positive_leaf_status_kept_unreviewed_strengthening": true,
+      "positive_leaf_validation_conditional_on_pr139": true,
+      "near_diameter_status_unreviewed": true,
+      "near_diameter_scope_all_s_including_endpoints": true,
+      "no_promotion_or_state_change": true
+    },
+    {
+      "pr139_head": "c0043e3fb9c75b405e75fa462d5c9f2d1a7f1e85",
+      "report_says_all_s_ge_0": true,
+      "report_explicit_s0_s2": true,
+      "report_excludes_companion_claims": true,
+      "candidate_not_promoted": true
+    },
+    {
+      "pr124_marker_repair_at_ee8": true,
+      "artifact_unreviewed_noncanonical_at_ee8": true,
+      "reading_source_hash_matches": true,
+      "reading_generated_hash_matches": true
+    }
+  ]
+}

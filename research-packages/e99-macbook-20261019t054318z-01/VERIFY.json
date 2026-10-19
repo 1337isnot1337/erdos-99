@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/STATE.md",
+    "docs/research/priority-state.json",
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-a/02-scaffold-and-hall.md",
+    "docs/targets/target-a/08-prescribed-phase-alignment.md",
+    "docs/targets/target-a/17-plateau-response-lift.md",
+    "docs/targets/target-a/24-three-channel-locked-stress.md",
+    "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+    "research/target_a_one_source_arm_per_contact_edge_2026-10-03.md",
+    "docs/targets/target-a/03-source-response.md",
+    "research-packages/e99-macbook-20261019t054318z-01/verify.py"
+  ],
+  "domain": "Conditional algebraic implication under the cited canonical Target A hypotheses. Exact source-geometry controls are triangular-lattice hex patches with radii M=1..6 and the M=6, k=3 inner parallel body.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-macbook-20261019t054318z-01/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

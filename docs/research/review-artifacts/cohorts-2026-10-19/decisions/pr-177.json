@@ -1,0 +1,22 @@
+{
+  "number": 177,
+  "head": "3eb24c410dc7a207992aab80fff26a2ddba13d28",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "548660be8a19664db19a55a6a1c5f28a18f70997",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Reviewed exact scope and report reconstruction: supplied loaded-anchor upper-box hypotheses imply its stated upper safety/count; report does not derive anchor family from all canonical C-II sources and does not prove lower closure/source endpoint.",
+  "original_coverage": "Reviewed exact scope and report reconstruction: supplied loaded-anchor upper-box hypotheses imply its stated upper safety/count; report does not derive anchor family from all canonical C-II sources and does not prove lower closure/source endpoint.",
+  "remaining": "Exact remaining lemma is source-wide family extraction and full-source lower/upper feasible endpoint. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/c-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

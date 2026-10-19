@@ -1,0 +1,22 @@
+{
+  "number": 178,
+  "head": "c020c941f1d86cd174164950134ac1f3c9d05a96",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "77fde5d01da28c083168eaa5b3914ca16d123374",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Reviewed exact conditional factor-balance obstruction statement, full-pair scope, and lifecycle; logged weighted identities obstruct separable factor improvement, while convex-hull alternative is only formal array/convex statement. It does not realize an array as planar coordinates or source competitor.",
+  "original_coverage": "Reviewed exact conditional factor-balance obstruction statement, full-pair scope, and lifecycle; logged weighted identities obstruct separable factor improvement, while convex-hull alternative is only formal array/convex statement. It does not realize an array as planar coordinates or source competitor.",
+  "remaining": "Planar source realization/full-source competitor remains open. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/c-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-homelab-05",
+  "classification": "regression",
+  "scope": {
+    "statement": "For every integer m>=7 and every angle theta from arccos(sqrt(m^2-6m-3)/(2m)) to pi/2, rotate one generator wall of the fully labelled (m+1)-by-(m+1) rhombic source coherently. Every source pair remains unit-separated and at most the initial diameter, the unit-contact graph stays the bipartite grid, and the moved container has zero strict-safe insertion capacity, even though all-label Oler slack grows from m to (2/sqrt(3)-1)m^2.",
+    "domain": "All integers m>=7 and the continuous angle interval theta in [theta_m,pi/2], proved analytically; exact checker for m=7,8,12,24 enumerates every integer difference vector and runs exact cover/slack controls plus an out-of-range-angle negative control.",
+    "limitations": "Unreviewed nonglobal geometric regression. No extraction from a canonical C-II source, no claim that all wall motions have zero capacity, and no Level I closure. The finite checker samples sizes; the universal angle and all-m result rests on the proof in README.md."
+  },
+  "result": "A source-wide feasible wall path can increase all-label Oler slack to quadratic order in diameter while the full moved source strictly covers its entire convex container by unit neighborhoods, so no insertion site is available.",
+  "remaining_questions": [
+    "Extract a nonuniform guard or multi-cell motion from an actual canonical macroscopic container and check every retained source label, lower pair, actual-diameter upper pair, and population requirement."
+  ]
+}

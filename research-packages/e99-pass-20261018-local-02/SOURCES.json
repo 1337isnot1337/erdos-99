@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/10-quantitative-kuperberg-rate.md",
+      "sha256": "84014aee1e919d5c9e930817a84746e50831c0475d95d93cc100290c90efc96e",
+      "identity": "docs/targets/target-a/10-quantitative-kuperberg-rate.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/12-toeout-kuperberg-improvement.md",
+      "sha256": "e4f5620b9f4a4ebe2fd46e1fda47adcd3bb0c435812f3dd4f59da373fa157592",
+      "identity": "docs/targets/target-a/12-toeout-kuperberg-improvement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/13-five-block-local-optimality.md",
+      "sha256": "f1a389e994ffd428b83a721a7d18d833bd35b5ab4a078bc3c611619b194bb7ad",
+      "identity": "docs/targets/target-a/13-five-block-local-optimality.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-a/14-sharp-symmetric-five-block.md",
+      "sha256": "296af3860efef18e844eaada048e6709c29decedb7e070ced580b223d3e0ddd3",
+      "identity": "docs/targets/target-a/14-sharp-symmetric-five-block.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-local-02/verify.py",
+      "sha256": "21006b00b22e72a6ecca45e222ee356b400693ab3ac5a3cc71095bc3fe7cb82c",
+      "identity": "draft-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The balanced-triad motif has not been extracted from any canonical Target A monomer domain.",
+    "No global source-to-Schur or same-cardinality diameter endpoint follows from this finite interface result."
+  ]
+}

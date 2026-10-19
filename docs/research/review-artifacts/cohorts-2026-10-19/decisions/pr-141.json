@@ -1,0 +1,22 @@
+{
+  "number": 141,
+  "head": "51328362b97eaaa264eeecc022bbe93bfd1a561a",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "c47dc1e9193810701a326b18b7daa52cb5f5310a",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Detailed conditional proof and selector reconstruction reviewed; no verifier submitted.",
+  "original_coverage": "Detailed conditional proof and selector reconstruction reviewed; no verifier submitted.",
+  "remaining": "Referenced by PR171; integration repair 8bc3d8f implements selector clarification. Full certificate replay deferred. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/a-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "tasks/target-c-face-coupled-move.md",
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-c/CURRENT.md",
+    "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+    "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md",
+    "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md",
+    "docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md",
+    "research-packages/e99-macbook-20261019T054318Z-06/verify.py"
+  ],
+  "domain": "The six labels v_(i,j)=i(1,0)+j(c,s), i=0,1,2 and j=0,1, with s=sqrt(1-c^2)>=0, plus the fixed label z=(1,11/5); compare every unordered pair against the source lower bound 1 and fixed diameter D=sqrt(146/25).",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-macbook-20261019T054318Z-06/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

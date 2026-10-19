@@ -1,0 +1,50 @@
+{
+  "repository": "1337isnot1337/erdos-99",
+  "review_mode": "already-published-exact-head",
+  "pull_request": 138,
+  "head": "d17d45aebb04811c920d03f46c50a2337fe19a98",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "artifacts": [
+    {
+      "path": "research-packages/e99-macbook-20261019t054318z-01/README.md",
+      "sha256": "f96ef081c91c7c3779c3b8ec99109bb7722a6d3460d39b64509d632974b3ac52",
+      "git_blob": "198c604648152c320638e6f7906f4f8b7da44c63"
+    },
+    {
+      "path": "research-packages/e99-macbook-20261019t054318z-01/SOURCES.json",
+      "sha256": "e34176a31310b6ccc0a427300b8e1048ceb378a4fb7352bb0560ae534ca2e6c6",
+      "git_blob": "5fcd7b8af0325e15c15e61af7a152e3f5440179a"
+    },
+    {
+      "path": "research-packages/e99-macbook-20261019t054318z-01/TASK.json",
+      "sha256": "61c6300f349854d15a60801e51478747809391cfa3c28f71d33fc1dd1a9afaff",
+      "git_blob": "d7889da7baadef9c53fcf716f82f72453173d7ef"
+    },
+    {
+      "path": "research-packages/e99-macbook-20261019t054318z-01/VERIFY.json",
+      "sha256": "2d660ad3f669f863bef079fb65d3494d29726a10cf0972441e0b9ed09167b271",
+      "git_blob": "35d2f751f9708babc64be2f03826826df61d1d25"
+    },
+    {
+      "path": "research-packages/e99-macbook-20261019t054318z-01/verify.py",
+      "sha256": "dbb68cf395cd7562dbaf5fb3761e5abb451aad39d7cd2582520a4c5103610774",
+      "git_blob": "43d0d979e8dc612773fb5f552cc2d52b897c6725"
+    }
+  ],
+  "upstream_premise": {
+    "pull_request": 117,
+    "head": "52a89ded959be4c96db4bdc4622ee73f7f63c3bd",
+    "artifacts_used_for_statement": [
+      {
+        "path": "research-packages/e99-pass-20261018-local-01/README.md",
+        "sha256": "27d223939702a6e0ce72adcdeedd173201ef4a6ae9e0a98a5a2c64b61a5b5cfb",
+        "git_blob": "8bb746a92ab92639f94cf22a0ebdd3603fe46f10"
+      },
+      {
+        "path": "research-packages/e99-pass-20261018-local-01/verify.py",
+        "sha256": "7265f783cf0a5ebcb7c26169b50796ff7af900a39e086fa3d1560959d0a2b920",
+        "git_blob": "6b214c927ccf2098856a3209a97e763b1910b7db"
+      }
+    ]
+  }
+}

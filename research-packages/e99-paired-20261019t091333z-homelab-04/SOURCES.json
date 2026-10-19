@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/STATE.md",
+      "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+      "identity": "docs/STATE.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+      "sha256": "29fd04ba2a8f31ac93ab2b91b9d4a267e227c9348a894f37adcd3e6986be7b3d",
+      "identity": "docs/research/tracks/global-level-i-attainment-annular-matching.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "identity": "docs/targets/target-c/candidate-registry.json",
+      "generated_from": [],
+      "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+    },
+    {
+      "path": "docs/reports/global_annular_matching_competitor_2026-10-11.md",
+      "sha256": "c564b3577562e3aeec1bf4ea2e7a800e4014fad6d5ebe7a2844daad6a3d61e5c",
+      "identity": "docs/reports/global_annular_matching_competitor_2026-10-11.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/global_annular_matching_2026_10_11.json",
+      "sha256": "b7ea9aa0e49a390575b8576c0b4eb9e931967a68174408b18d8ffb93687d4c08",
+      "identity": "research/global_annular_matching_2026_10_11.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_triangle_free_lattice_competitor_reserve_independent_audit_2026-10-10.md",
+      "sha256": "5134f4c246286fec50530e0c6855d6b370ed2b2252e8918680b8a0e1b177aa4a",
+      "identity": "docs/audits/target_c_triangle_free_lattice_competitor_reserve_independent_audit_2026-10-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-04/verify.py",
+      "sha256": "b70049a688e01467ba86919dbb8dfd58838617aca1a161c4a6f78addb877c787",
+      "identity": "safe-core exact-control verifier",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "No proof that sufficiently large triangle-free global minimizers satisfy the safe-core vacancy condition.",
+    "This conditional lemma and finite nonglobal control do not establish universal packet existence or Level I closure."
+  ]
+}

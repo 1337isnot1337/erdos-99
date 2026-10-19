@@ -1,0 +1,106 @@
+{
+  "source_references": [
+    {
+      "original_execution_snapshot": "reviews/a-run-logs/scoped-pr118.md",
+      "former_bundled_copy": "reviews/a-run-logs/scoped-pr118.source.txt",
+      "sha256": "5cbef599ca920062cd082a00dfd7199b52e86871993f0d05a780ee549abb5c6c",
+      "git_blob": "717c209d8b07a9e9b7a586b764abfdfb2218cf7e",
+      "source_commit": "6295e0dc87031fe8418bff50bd9923014072df0f",
+      "source_path": "docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md",
+      "source_url": "https://github.com/1337isnot1337/erdos-99/blob/6295e0dc87031fe8418bff50bd9923014072df0f/docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md"
+    },
+    {
+      "original_execution_snapshot": "reviews/a-run-logs/scoped-pr130.md",
+      "former_bundled_copy": "reviews/a-run-logs/scoped-pr130.source.txt",
+      "sha256": "e71728dc3c001cc37e7ac2caca4c50d390bb54b054a2438601bd36a8cd7fe951",
+      "git_blob": "a85a9b64fa649399f837a12d802281d6d4c1151e",
+      "source_commit": "d44c691183ca3a789a6bedee05ff867220f440ca",
+      "source_path": "docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
+      "source_url": "https://github.com/1337isnot1337/erdos-99/blob/d44c691183ca3a789a6bedee05ff867220f440ca/docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md"
+    },
+    {
+      "original_execution_snapshot": "reviews/a-run-logs/scoped-pr102.md",
+      "former_bundled_copy": "reviews/a-run-logs/scoped-pr102.source.txt",
+      "sha256": "4981d0f1c518fdf9c3c3a00afe3fd1fa6f3d797fc8a2482c8828df201c95eacb",
+      "git_blob": "2d78f162d353f13789dc4ed6f3468ce46ae5bbe5",
+      "source_commit": "025628b23df11470d4eb87ee981edbf250498691",
+      "source_path": "docs/reports/target_a_common_source_hall_overlap_2026_10_17.md",
+      "source_url": "https://github.com/1337isnot1337/erdos-99/blob/025628b23df11470d4eb87ee981edbf250498691/docs/reports/target_a_common_source_hall_overlap_2026_10_17.md"
+    },
+    {
+      "original_execution_snapshot": "reviews/a-run-logs/scoped-pr103.md",
+      "former_bundled_copy": "reviews/a-run-logs/scoped-pr103.source.txt",
+      "sha256": "c755e9508fc28ae6765eef4e704367deef73ff692e4b397f685b011705967882",
+      "git_blob": "a0ef2fce1fa9be4f2234113d0a3ba19600b2dcda",
+      "source_commit": "4b708e27e9e26f8c163685dfe8b033b6d6369177",
+      "source_path": "docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md",
+      "source_url": "https://github.com/1337isnot1337/erdos-99/blob/4b708e27e9e26f8c163685dfe8b033b6d6369177/docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md"
+    },
+    {
+      "original_execution_snapshot": "reviews/a-run-logs/scoped-pr140.md",
+      "former_bundled_copy": "reviews/a-run-logs/scoped-pr140.source.txt",
+      "sha256": "a5b8ad6615685784307855df582bfe72ae678339c9faa1d73d31fa22136256c3",
+      "git_blob": "24907b955a696e64c21a9e87fde0667c2e59adae",
+      "source_commit": "9183fd057255719a3535bf8f9c5feeec9d711c80",
+      "source_path": "docs/audits/target_a_balanced_triad_relay_independent_audit_2026-10-19.md",
+      "source_url": "https://github.com/1337isnot1337/erdos-99/blob/9183fd057255719a3535bf8f9c5feeec9d711c80/docs/audits/target_a_balanced_triad_relay_independent_audit_2026-10-19.md"
+    },
+    {
+      "original_execution_snapshot": "reviews/a-run-logs/scoped-pr141.md",
+      "former_bundled_copy": "reviews/a-run-logs/scoped-pr141.source.txt",
+      "sha256": "37e978dd20afb49f1ec67b94e00d70a43c5c37c5a06acb8b9c9924866e42a1ee",
+      "git_blob": "c555a50adc7c2a0825991f2f59c4c81773c093cc",
+      "source_commit": "51328362b97eaaa264eeecc022bbe93bfd1a561a",
+      "source_path": "docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md",
+      "source_url": "https://github.com/1337isnot1337/erdos-99/blob/51328362b97eaaa264eeecc022bbe93bfd1a561a/docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md"
+    },
+    {
+      "original_execution_snapshot": "reviews/a-run-logs/scoped-pr148.md",
+      "former_bundled_copy": "reviews/a-run-logs/scoped-pr148.source.txt",
+      "sha256": "9d53529b58cec2e01c376531a28fa5a90059ecab100302990e5de62737ca4a84",
+      "git_blob": "0ac0b5ee7605a6ae2b3b1a915533d4029fe32820",
+      "source_commit": "bda9381cefaf9cff39855ac8653ff6134050918d",
+      "source_path": "docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md",
+      "source_url": "https://github.com/1337isnot1337/erdos-99/blob/bda9381cefaf9cff39855ac8653ff6134050918d/docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md"
+    },
+    {
+      "original_execution_snapshot": "reviews/a-run-logs/scoped-pr171.md",
+      "former_bundled_copy": "reviews/a-run-logs/scoped-pr171.source.txt",
+      "sha256": "3add910a66379a6ec6ea28dec3ff3e4ebc0358819930fe07e9854afbeda3378c",
+      "git_blob": "ab1fb964c0fd3b46e0597ccbc219a693b327908a",
+      "source_commit": "e63dd4d3c1dcf8eb4bf56b47b112a888d3c0af4c",
+      "source_path": "docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md",
+      "source_url": "https://github.com/1337isnot1337/erdos-99/blob/e63dd4d3c1dcf8eb4bf56b47b112a888d3c0af4c/docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md"
+    },
+    {
+      "original_execution_snapshot": "reviews/b-run-logs/review-b-139-report.md",
+      "former_bundled_copy": "reviews/b-run-logs/review-b-139-report.source.txt",
+      "sha256": "51d3aabe93b7cc90172ad1238119f4e4590d227044d1807e054b5701900a25b9",
+      "git_blob": "4ac98647466f92d6a5ba4ea00bc7b21dfb8c19d7",
+      "source_commit": "c0043e3fb9c75b405e75fa462d5c9f2d1a7f1e85",
+      "source_path": "docs/audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md",
+      "source_url": "https://github.com/1337isnot1337/erdos-99/blob/c0043e3fb9c75b405e75fa462d5c9f2d1a7f1e85/docs/audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md"
+    },
+    {
+      "original_execution_snapshot": "reviews/b-run-logs/review-b-153-README.md",
+      "former_bundled_copy": "reviews/b-run-logs/review-b-153-README.source.txt",
+      "sha256": "e4aba72b8dc1943cd335733fbeb6d26c64c39d8195b5fa31beb06a95fcbb0bda",
+      "git_blob": "532925f3f21ead9483adf4281d3cebd5d7712420",
+      "source_commit": "9af10973d0a1f050fd8a3dc1dba26213c7d0555e",
+      "source_path": "research-packages/e99-paired-20261019t091333z-homelab-11/README.md",
+      "source_url": "https://github.com/1337isnot1337/erdos-99/blob/9af10973d0a1f050fd8a3dc1dba26213c7d0555e/research-packages/e99-paired-20261019t091333z-homelab-11/README.md"
+    },
+    {
+      "original_execution_snapshot": "reviews/b-run-logs/review-b-153-original-verifier.py",
+      "former_bundled_copy": "reviews/b-run-logs/review-b-153-original-verifier.py",
+      "sha256": "7e96eaa6884dac9640358065430d426060dddfafca5a087a14ec831d3fb68a42",
+      "git_blob": "6ef4cb3f5ea7644b467411c09394e3fb6b379532",
+      "source_commit": "9af10973d0a1f050fd8a3dc1dba26213c7d0555e",
+      "source_path": "research/verify_target_c_unequal_height_release_2026_10_10.py",
+      "source_url": "https://github.com/1337isnot1337/erdos-99/blob/9af10973d0a1f050fd8a3dc1dba26213c7d0555e/research/verify_target_c_unequal_height_release_2026_10_10.py"
+    }
+  ],
+  "scientific_bytes_changed": false,
+  "scope": "Eleven redundant source copies are referenced by immutable Git commit/path/blob/SHA256 instead of republished as active reading pages or relocated code. The originals remain reachable in preserved PR ancestry.",
+  "materialization": "git show SOURCE_COMMIT:SOURCE_PATH yields exactly the recorded bytes. Historical execution paths and earlier bundle paths are locators, not runnable copies in the current evidence directory."
+}

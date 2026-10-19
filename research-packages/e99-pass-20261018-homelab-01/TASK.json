@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-homelab-01",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "A local geometric full-shore extension countermodel: the unique saturating full-shore matchings can induce restricted image overlap larger than the combined Hall defect on the restricted shores.",
+    "domain": "Exact rational squared-distance and matching enumeration on six named points; no search or floating point. The second target shore is a pair in the standard unit triangular lattice.",
+    "limitations": "Does not satisfy or establish the Section-168 fixed-hull global-capacity, plateau-endpoint, complete Y_in, or collar hypotheses; no Schur conclusion."
+  },
+  "result": "Exact finite regression with restricted Hall defect 0 and inherited full-shore image overlap 1.",
+  "remaining_questions": [
+    "Determine whether actual Section-168 global source-capacity and plateau-collar hypotheses force overlap above the PR-102 Hall lower bound or admit a matching geometric counterexample."
+  ]
+}

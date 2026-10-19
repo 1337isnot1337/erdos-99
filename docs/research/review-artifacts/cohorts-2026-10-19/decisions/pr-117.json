@@ -1,0 +1,22 @@
+{
+  "number": 117,
+  "head": "52a89ded959be4c96db4bdc4622ee73f7f63c3bd",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "e83702354916aa3e7be0f8548ede483276de9071",
+  "original_disposition": "hold",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept as amended in the integration candidate after a separate independent scoped correction audit; the original hold is retained as historical evidence.",
+  "coverage": "Read the complete amended README/proof, TASK.json, VERIFY.json, SOURCES.json, and verifier; checked the Section 174/175 sector identities and Section 165 phase definitions; independently derived the pointwise and averaged implications; replayed the package and both predecessor verifiers, including the 18 admissible seed-63 rows, exclusion of all 18 non-admissible relaxed rows, and 34 seed-66 rows. Corrected argument/scope and amendment identity: reviews/b-correction-review.json.",
+  "original_coverage": "Analytic inequalities and exact integer threshold reconstructed; finite verifier passes but verifies saved 18 seed-63 and 34 seed-66 controls, not the universal averaging proof.",
+  "remaining": "Derive criterion (2), or a stronger expected sector-sink lower bound, from every relevant global source while retaining all source labels and the actual plateau response.; Retain the stated nonempty Section-102/174 admissible-pair hypothesis in any use of the measurable selector. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/b-correction-review.json"
+  ],
+  "canonical_promotion": false
+}

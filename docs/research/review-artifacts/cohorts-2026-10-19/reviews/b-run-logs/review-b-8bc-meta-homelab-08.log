@@ -1,0 +1,14 @@
+{
+  "status": "metadata-valid",
+  "package": "research-packages/e99-pass-20261018-homelab-08",
+  "classification": "unreviewed",
+  "unresolved": [
+    "The fixture does not realize the Section-168 source-capacity endpoint |A^0|=alpha_1(H), and the mathematical result has not received an independent agent audit."
+  ],
+  "declared_seconds": 30,
+  "declared_package_dependencies": [],
+  "full_verified": false,
+  "replay_authorized": false,
+  "executed_commands": false,
+  "limits": "Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay."
+}

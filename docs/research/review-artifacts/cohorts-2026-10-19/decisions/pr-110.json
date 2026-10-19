@@ -1,0 +1,21 @@
+{
+  "number": 110,
+  "head": "3fc35647bf49de836dfc379b46fbbc604cb971fe",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "8e678ca50f38c3376b1858f113684a83ca7a901d",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Read all package files; slow-chart port exclusion conditional on supplied fixed atlas; no atlas extraction. Arithmetic verifier scope is finite exponent arithmetic only.",
+  "original_coverage": "Read all package files; slow-chart port exclusion conditional on supplied fixed atlas; no atlas extraction. Arithmetic verifier scope is finite exponent arithmetic only.",
+  "remaining": "Extract source atlas or prove a separate source-wide bridge; candidate stays unreviewed. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

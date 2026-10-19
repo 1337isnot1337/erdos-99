@@ -1,0 +1,22 @@
+{
+  "number": 149,
+  "head": "5053e17987b1aa72173f4a656213532536b24933",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "d3de03063c22eb814da66e1a6629eaf28c7f0050",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Independent analytic report for PR948 large-array boundary attachment, scoped to complete bent rhombic arrays with a,c>=delta D and boundary attachment lower bound r>=epsilon delta D.",
+  "original_coverage": "Independent analytic report for PR948 large-array boundary attachment, scoped to complete bent rhombic arrays with a,c>=delta D and boundary attachment lower bound r>=epsilon delta D.",
+  "remaining": " The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/b-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/b-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

@@ -1,0 +1,6 @@
+OK: exact m=3, n=2 support-incidence cut-stress model
+A cut resultants: (23,0), (309/13,0), (18,0)
+B cut resultants: (-11/5,276/65), (14/5,276/65)
+internal variation: -48/13; boundary-row payment: +48/13
+controls: missing boundary row and weakened internal support rejected
+Scope: algebraic cut equations only; no planar source realization

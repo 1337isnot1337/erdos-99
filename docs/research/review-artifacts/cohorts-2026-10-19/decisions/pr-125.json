@@ -1,0 +1,21 @@
+{
+  "number": 125,
+  "head": "804f1658e27b424da16535b53bcb825c394c7711",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "9c2d7cc6e919afec6b6bf932765957ccefc6faa3",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Topology/Euler proof inspected; checker passes on disk/annulus/disconnected fixtures. Hole count in code is inferred as components-chi, not an independent complement flood-fill.",
+  "original_coverage": "Topology/Euler proof inspected; checker passes on disk/annulus/disconnected fixtures. Hole count in code is inferred as components-chi, not an independent complement flood-fill.",
+  "remaining": "Archive partially reviewed; full certificate replay deferred. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

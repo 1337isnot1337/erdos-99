@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-local-04",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For every integer m>=7, extend PR #126's rhombic source by one adjacent exterior row of labels and move all rows coherently through theta in [theta_m, pi/2], where cos(theta_m)=sqrt(m^2-6m-3)/(2m). Every source and guard label is retained; all pairs stay unit-separated and at most the guarded source's initial actual diameter. Yet the strict-safe insertion capacity in the moving convex hull is zero throughout, while all-label Oler slack grows from m+1 to (2/sqrt(3)-1)m(m+1). The square endpoint is a same-cardinality strict-diameter competitor for this nonglobal family.",
+    "domain": "All integers m>=7 and all theta in [theta_m, pi/2], with a fully labelled (m+1)-by-(m+2) unit-rhombic grid and guard row j=m+1. The continuous path, full pair bounds, cover-radius estimate, and slack formulas are proved analytically; exact integer/quadratic-surd controls check every displacement vector at m=7,8,12,24 and the endpoint ledger.",
+    "limitations": "Unreviewed nonglobal regression. The guard's cap is the guarded source's own initial diameter; assigning PR #126's smaller unguarded cap makes the adjacent extra row infeasible at the start. The result only proves zero strict-safe insertion capacity for this coherent rhombic family and does not rule out nonuniform or multi-cell motion, extract a source from a canonical C-II minimizer, or close C-II or Level I."
+  },
+  "result": "The movable exterior guard row and all core labels remain strictly covered by source unit neighborhoods throughout the coherent path, even as Oler slack becomes quadratic. Every guard label is retained in an exact same-cardinality strict-sub-D endpoint.",
+  "remaining_questions": [
+    "Does an explicitly source-extracted nonuniform motion of the exterior guard row and core produce positive strict-safe capacity while satisfying every lower and actual or inactive diameter upper pair?",
+    "Can any such guarded motion be extracted from every sufficiently large canonical triangle-free C-II global minimizer, counting all contact-isolated source labels?"
+  ]
+}

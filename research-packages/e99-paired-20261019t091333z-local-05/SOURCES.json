@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+      "sha256": "a815cfd48e4f208a1891b853726897069909704fa0f359dad9f828c12668d797",
+      "identity": "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+      "sha256": "1a9ab31c0fa492cc56b4c625b279654a69005ad2d531a02da553b707da2a3d52",
+      "identity": "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_midpoint_and_quantitative_hull_train_independent_audit_2026-10-09.md",
+      "sha256": "cd008165a6d2587f1dcdb03453048ded333ac9c9075cc409d8fc243f4ecb4495",
+      "identity": "docs/audits/target_c_midpoint_and_quantitative_hull_train_independent_audit_2026-10-09.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_global_inverse_phase_face_tail_exclusion_2026-10-09.md",
+      "sha256": "5061a85a1810c8626123837d7901b3aa7ef1d1db3216a207ca67aaedcb18eb43",
+      "identity": "docs/reports/target_c_global_inverse_phase_face_tail_exclusion_2026-10-09.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/CURRENT.md",
+      "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+      "identity": "docs/targets/target-c/CURRENT.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "identity": "docs/targets/target-c/candidate-registry.json",
+      "generated_from": [],
+      "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+    },
+    {
+      "path": "docs/STATE.md",
+      "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+      "identity": "docs/STATE.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/58-full-source-geometry-audit.md",
+      "sha256": "f504349650423786a6091ba9b7a8699cd62b7e6b200d2a2ce3a6a34b3d0b473d",
+      "identity": "docs/targets/target-c/58-full-source-geometry-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+      "sha256": "da82d56bdcf33b89a3f99b741926782aefa29083a341af43ee2c95dcc6c1c50f",
+      "identity": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+      "generated_from": [],
+      "commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+      "identity": "docs/research/agent-task-catalog.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-05/verify.py",
+      "sha256": "390675f5365d04e0c521795c9387ac29e986b67b3907e336ff51560651554e6d",
+      "identity": "finite-scale-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The finite checker covers scale and coefficient arithmetic only; the universal support-function proof remains analytic evidence.",
+    "Destination candidate lifecycle remains unreviewed; no promotion is part of this audit."
+  ]
+}

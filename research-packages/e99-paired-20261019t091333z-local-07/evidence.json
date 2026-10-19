@@ -1,0 +1,35 @@
+{
+  "checker_source": {
+    "repository": "1337isnot1337/erdos-99",
+    "pull_request": 112,
+    "head": "fd02d4d36b1953a217680d889ce830f894a41096",
+    "path": "research-packages/e99-pass-20261018-local-14/verify.py",
+    "sha256": "c47f7878280e1ea47e8de0231199d6a91006543a74bd388c1ead414e58daf4aa",
+    "copied_unchanged_for_replay": true
+  },
+  "run": {
+    "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock python /tmp/e99_pr112_cut_verifier.py",
+    "exit_code": 0
+  },
+  "result": {
+    "fixture_vertices": 21,
+    "loaded_attachments": 12,
+    "connected_unloaded_subsets": 218,
+    "deletion_sets": 2097152,
+    "separators": 101250,
+    "partial_terminal_deletions": 100736,
+    "full_attachment_deletions": 512,
+    "full_grid_deletions": 4096,
+    "grid_splitting_cuts": 42920,
+    "both_terminal_sets_remaining": 96643,
+    "deleting_a_diametral_endpoint": 97200,
+    "missing_brace_control": {
+      "diameter": 6,
+      "separator_size": 1,
+      "five_times_separator_size": 5,
+      "unloaded_boundary": 1,
+      "unloaded_diameter_plus_two": 7
+    }
+  },
+  "scope": "Finite control of brace and endpoint-inclusive separator accounting on this square-lattice fixture only; not an asymptotic proof or source extraction."
+}

@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md",
+      "sha256": "9ed749f51f560af597875fc9fb7c2647395ce47a970583a9e3349df6f8e2bb38",
+      "identity": "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md",
+      "sha256": "158394e6106e12d46cb1a404e24cfabf3df629849b2956004c2bc0a1beabed78",
+      "identity": "docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+      "sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+      "identity": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+      "sha256": "fc60bd6982e741f13d2442a2fa9d16a424f2fc55f60c3e1a1d7f3aba2cc3686f",
+      "identity": "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+      "identity": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_bounded_variation_lattice_endpoint_count_independent_audit_2026-10-09.md",
+      "sha256": "2febf2285cd099800de7e54221754bb5ebad9ca133edf23f6c26f9195b3d578c",
+      "identity": "docs/audits/target_c_bounded_variation_lattice_endpoint_count_independent_audit_2026-10-09.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+      "sha256": "3dce8109e6ce8c8e78c31121e38fb9773db34aa19af26e817bb2d718d6864fbd",
+      "identity": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "identity": "docs/targets/target-c/candidate-registry.json",
+      "generated_from": [],
+      "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/AUDIT.md",
+      "sha256": "ef5c9d1ede960b6057229801b81cdcb393cb46552ac411444183f0af0e023da1",
+      "identity": "research-packages/e99-paired-20261019t091333z-local-06/AUDIT.md",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/README.md",
+      "sha256": "3359560a76ea2b56a9260cd13a7f9ff089c1d5933436d638e83eb41a95aca296",
+      "identity": "research-packages/e99-paired-20261019t091333z-local-06/README.md",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/verify.py",
+      "sha256": "da90727d0c350597bbd5d3169d717bf12bcbb63aaa6cc7b4d0ac8133ab6ab964",
+      "identity": "research-packages/e99-paired-20261019t091333z-local-06/verify.py",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The finite checker verifies three frozen artifact hashes and exponent arithmetic only; it does not verify the analytic sequence proof or extract its hypotheses."
+  ]
+}

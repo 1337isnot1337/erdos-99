@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-b/README.md",
+      "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+      "identity": "docs/targets/target-b/README.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+      "identity": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+      "sha256": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+      "identity": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+      "sha256": "a1ecda90c62bbe13b93a1c4091fb0ec333255a27014c6536a2b03d588608e5fb",
+      "identity": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_multicomponent_penetration_budget_2026-09-05.md",
+      "sha256": "d855c448a3daa7d09962a0e4089aeaf3d50eca15c5ea2dadc10eb6c9bd8ae843",
+      "identity": "docs/reports/target_b_multicomponent_penetration_budget_2026-09-05.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+      "sha256": "b8242aa0efaea70bc0bd02321785a14d19779a11eef3d13efc487a4ecc6e7179",
+      "identity": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_b_seed084_near_disk_seamed_grain_regression_2026-10-13.md",
+      "sha256": "f7cfb96f91950723b9dae50da2abd6a190376d1011986d2bc2dc7283444ac938",
+      "identity": "docs/reports/target_b_seed084_near_disk_seamed_grain_regression_2026-10-13.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-macbook-20261019T054318Z-02/verify.py",
+      "sha256": "78b07279168ce3aad0ee261e16f847a99b68132729e897a0b9c07bd311f478b0",
+      "identity": "macbook-02-scalable-two-grain-exact-ledger-verifier",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}

@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/STATE.md",
+      "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+      "identity": "docs/STATE.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+      "identity": "docs/research/priority-state.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+      "identity": "docs/research/agent-task-catalog.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/CURRENT.md",
+      "sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+      "identity": "docs/targets/target-c/CURRENT.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/research/tracks/target-c-quarter-folds-bent-arrays.md",
+      "sha256": "49e336e2933551af00289be2bf631ece9230613a2127f0b582ca95319348bf50",
+      "identity": "docs/research/tracks/target-c-quarter-folds-bent-arrays.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_complete_array_diameter_forest_slot02_2026-10-11.md",
+      "sha256": "2050d7aa775b47ac0ebe01cbd2994b8848661b28c31876718621af10b7eda259",
+      "identity": "docs/reports/target_c_complete_array_diameter_forest_slot02_2026-10-11.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/verify_target_c_complete_array_diameter_forest_2026_10_11.py",
+      "sha256": "cfd237cc3b09bfa96cddfa95d6685edd3350675cd4779423996ee63fcea9283e",
+      "identity": "research/verify_target_c_complete_array_diameter_forest_2026_10_11.py",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/target_c_complete_array_diameter_forest_certificate_2026_10_11.json",
+      "sha256": "43d3542d64ff2f52f4c3e70e7b3968078b8beeaec4604ff5709988b68a6587f9",
+      "identity": "research/target_c_complete_array_diameter_forest_certificate_2026_10_11.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research/verify_target_c_three_direction_corner_barrier_2026_10_06.py",
+      "sha256": "179f20fb42827f6b3aa3b7afa5b982b16ff4da49abb77373edaf1a48bd514252",
+      "identity": "research/verify_target_c_three_direction_corner_barrier_2026_10_06.py",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+      "sha256": "3dce8109e6ce8c8e78c31121e38fb9773db34aa19af26e817bb2d718d6864fbd",
+      "identity": "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+      "sha256": "fc60bd6982e741f13d2442a2fa9d16a424f2fc55f60c3e1a1d7f3aba2cc3686f",
+      "identity": "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+      "identity": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/theory/01-local-structure.md",
+      "sha256": "75c539b2281046c49d6c303bda845cb7fb2643d0d9a1106d64e4f737117c54fb",
+      "identity": "docs/theory/01-local-structure.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/audits/target_c_isolate_normalization_independent_audit_2026-10-08.md",
+      "sha256": "bfcb8f58c6419b62692405ff440cd9fc650fb6263bbcb676cb17fb69935f4153",
+      "identity": "docs/audits/target_c_isolate_normalization_independent_audit_2026-10-08.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-08/verify.py",
+      "sha256": "cfc3c80185821fce1f3a1d9c3e1c8e2ef5175be58d5c2632e32e613966c13ee9",
+      "identity": "pinned-destination-replay-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}

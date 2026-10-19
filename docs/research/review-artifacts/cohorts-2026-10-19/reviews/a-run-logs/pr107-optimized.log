@@ -1,0 +1,5 @@
+PASS: exact four-label fixture has three unit contacts and three diameter pairs
+PASS: balanced normals and isotropic second moment verified in Q(sqrt(3))
+PASS: two-anchor control admits a nonzero full-pair-feasible displacement
+PASS: three-anchor boundary control meets lower bounds but violates diameter
+PASS: checked fixture identities match the hypotheses of the all-direction proof

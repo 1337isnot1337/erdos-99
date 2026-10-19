@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/targets/target-b/README.md",
+    "docs/targets/target-b/01-jammed-rhombic-branch.md",
+    "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+    "docs/problem/statement.md",
+    "docs/STATE.md",
+    "research-packages/e99-pass-20261018-local-03/verify.py"
+  ],
+  "domain": "Finite edge-to-edge subsets of the unit rhombic parallelogram tiling; exact integer incidence, Euler, component, hole, and source-count identities.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-local-03/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

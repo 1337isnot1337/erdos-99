@@ -1,0 +1,1115 @@
+{
+  "reviewer": "review_b",
+  "scope": "assigned 26 PR immutable-head static integrity",
+  "results": [
+    {
+      "number": 104,
+      "head": "632dd98ae6b093edce27c405e4cf0d77712c2306",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-04/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-04/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-04/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-04/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-04/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 5,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 106,
+      "head": "18c0ffba9a730cb3dc23b711a00c20dd9302c1ac",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-04/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-04/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-04/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-04/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-04/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 11,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 111,
+      "head": "4ae7399e2595074c0331398fbba9b58c5dea3e73",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-08/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-08/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-08/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-08/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-08/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 4,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 114,
+      "head": "cd33f4c76fd48722f06c03ddc86a05fd5e8f9e51",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-06/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-06/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-06/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-06/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-06/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 12,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 115,
+      "head": "356cb08229dd0a38bd272d05488f9bc8be9e1313",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-pass-20261018-local-11/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-11/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-11/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-11/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-local-11/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 7,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 116,
+      "head": "08442dbb7a3159ef1d0cc7ec966b99d6eced0edd",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 4,
+      "assignment_count": 4,
+      "github_inventory_count": 4,
+      "git_inventory_count": 4,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "docs/audits/target_c_pr948_quarter_fold_face_obstructions_independent_audit_2026-10-18.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "reading/docs/audits/target_c_pr948_quarter_fold_face_obstructions_independent_audit_2026-10-18.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "reading/manifest.json",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 0,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 124,
+      "head": "067af10523401461d80a399ef31ba429accc8fc1",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 7,
+      "assignment_count": 7,
+      "github_inventory_count": 7,
+      "git_inventory_count": 7,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "reading/docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "reading/docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "reading/manifest.json",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 0,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 126,
+      "head": "684429c4780f8a4491cc432ffa2733a31ff867eb",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-05/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-05/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-05/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-05/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-05/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 7,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 127,
+      "head": "6c2b6d7be91c6d6cd5b9e2133c8add94c506bf1f",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 4,
+      "assignment_count": 4,
+      "github_inventory_count": 4,
+      "git_inventory_count": 4,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "reading/docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "reading/manifest.json",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 0,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 129,
+      "head": "f4dc4c6ec3a6bb08097ca9a963336ae454e14229",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-06/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-06/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-06/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-06/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-pass-20261018-homelab-06/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 5,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 132,
+      "head": "5df95908df0ea6f206b2fed0681a061bf29a0aa3",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 4,
+      "assignment_count": 4,
+      "github_inventory_count": 4,
+      "git_inventory_count": 4,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "reading/docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "reading/manifest.json",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 0,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 133,
+      "head": "04b30ab0f484c4dce774ff9d400ea38d359dfb25",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-09/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-09/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-09/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-09/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-09/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 4,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 135,
+      "head": "daf4e29a0cee53439eb2cb7d747092da2a5e31dd",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-06/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-06/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-06/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-06/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-06/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 9,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 136,
+      "head": "7cf4b8517c0f846058a9befda03bf3aa4343e688",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-10/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-10/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-10/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-10/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-10/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 16,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 137,
+      "head": "73ba295bcf89e12b7d2c7fa94d094fc44e674a3b",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-07/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-07/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-07/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-07/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019t054318z-07/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 5,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 142,
+      "head": "6dfe8c78ed50eaf96c21bfd7e03235878d12d36a",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-03/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-03/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-03/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-03/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-macbook-20261019T054318Z-03/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 7,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 143,
+      "head": "b6e60e8b0c8efa8675b143b1c10bdf2e1d5fe488",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "docs/audits/target_c_pr129_wall_tolerance_population_independent_audit_2026-10-19.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "reading/docs/audits/target_c_pr129_wall_tolerance_population_independent_audit_2026-10-19.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "reading/manifest.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research/verify_target_c_pr129_wall_tolerance_population_audit_2026_10_19.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 0,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 149,
+      "head": "5053e17987b1aa72173f4a656213532536b24933",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-09/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-09/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-09/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-09/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-09/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 17,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 150,
+      "head": "51016e9a86212e2cc74be1092861ddf00bbf8f3c",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-08/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-08/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-08/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-08/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-08/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 16,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 151,
+      "head": "0a96997d44b88fd49b0e62d3c73ea0cd48f8042c",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-13/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-13/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-13/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-13/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-13/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 6,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 152,
+      "head": "c53c1b2ee5a3480f9f06304c519df9ac6e7784d1",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-04/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-04/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-04/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-04/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-04/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 7,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 155,
+      "head": "4492507beafbe5496823e7ee7151d7557aa3bca4",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-03/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-03/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-03/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-03/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-03/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 6,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 160,
+      "head": "0f63b5b01c2e9f6b97fd50154c63dccc36162ac3",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-16/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-16/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-16/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-16/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-16/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 9,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 164,
+      "head": "de51a6e55c576343be6ece5b8f5a688adc0074fa",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-03/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-03/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-03/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-03/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-local-03/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 5,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 168,
+      "head": "36c1e99ca90b7600e44cb416864bc6fe2aeeb1f1",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 4,
+      "assignment_count": 4,
+      "github_inventory_count": 4,
+      "git_inventory_count": 4,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "reading/docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "reading/manifest.json",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 0,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    },
+    {
+      "number": 172,
+      "head": "1e4907faaec3acd5c267a42cab04ab4a07443387",
+      "head_ref_match": true,
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "changed_files_api": 5,
+      "assignment_count": 5,
+      "github_inventory_count": 5,
+      "git_inventory_count": 5,
+      "inventory_match": true,
+      "modes": [
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-04/README.md",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-04/SOURCES.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-04/TASK.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-04/VERIFY.json",
+          "mode": "100644",
+          "type": "blob"
+        },
+        {
+          "path": "research-packages/e99-paired-20261019t091333z-homelab-04/verify.py",
+          "mode": "100644",
+          "type": "blob"
+        }
+      ],
+      "json_jsonl_python_parse_errors": [],
+      "source_pin_count": 9,
+      "source_pin_errors": [],
+      "static_integrity_pass": true
+    }
+  ],
+  "all_pass": true
+}

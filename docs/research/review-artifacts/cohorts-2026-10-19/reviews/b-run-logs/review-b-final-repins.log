@@ -1,0 +1,33 @@
+{
+  "rows_checked": 3,
+  "checks": [
+    {
+      "package": "research-packages/e99-paired-20261019t091333z-homelab-04",
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "old_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+      "new_commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+      "old_sha_matches": true,
+      "new_sha_matches": true,
+      "final_sources_pin_matches": true
+    },
+    {
+      "package": "research-packages/e99-paired-20261019t091333z-local-09",
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "old_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+      "new_commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+      "old_sha_matches": true,
+      "new_sha_matches": true,
+      "final_sources_pin_matches": true
+    },
+    {
+      "package": "research-packages/e99-pass-20261018-local-11",
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "old_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+      "new_commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+      "old_sha_matches": true,
+      "new_sha_matches": true,
+      "final_sources_pin_matches": true
+    }
+  ],
+  "all_pass": true
+}

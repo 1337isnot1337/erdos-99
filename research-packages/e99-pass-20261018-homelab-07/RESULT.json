@@ -1,0 +1,203 @@
+{
+  "area_ledger": {
+    "deleted_physical": "12/13",
+    "internal": "24/13",
+    "physical_rhombus_area": "36/13",
+    "total_train_pair_determinant": "48/13",
+    "virtual": "12/13"
+  },
+  "arithmetic": "integers and fractions.Fraction only",
+  "basis": {
+    "u": [
+      1,
+      0
+    ],
+    "v": [
+      "5/13",
+      "12/13"
+    ]
+  },
+  "cells": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "grain_ledger": {
+    "Q1": [
+      "A0",
+      "B1"
+    ],
+    "Q2": [
+      "A1",
+      "B0"
+    ],
+    "actual_interface_bound": 3,
+    "actual_physical_interface_I": 1,
+    "bound_if_virtual_count_were_added": 4,
+    "deleted_physical_interface_edges": 1,
+    "internal_grid_count_G": 2,
+    "penetration_counts_X1_X2": [
+      1,
+      1
+    ],
+    "physical_crossing_count_R": 3,
+    "upper_cap_bound_at_K_equal_I": 3,
+    "virtual_crossgrain_pairs": 1
+  },
+  "limitations": [
+    "finite two-direction lattice disk only",
+    "one-crossing components fail asymptotic Section-50 minimum-degree and PC1 positive-depth hypotheses",
+    "no source extraction, global-minimizer or shell-stability conclusion"
+  ],
+  "metric": {
+    "acute_angle_cosine": "5/13",
+    "determinant_per_unlike_train_pair": "12/13",
+    "long_diagonal_squared_length": "36/13",
+    "minimum_squared_separation": "1",
+    "short_diagonal_squared_length": "16/13",
+    "unit_side_squared_length": "1"
+  },
+  "minimal_patch_enumeration": {
+    "cell_masks": 15,
+    "disk_masks": 13,
+    "minimum_physical_rhombi": 3,
+    "minimum_witnesses": [
+      {
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "interface_physical": 1,
+        "physical_cells": 3,
+        "selected_grains": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "virtual_crossgrain": 1
+      },
+      {
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "interface_physical": 1,
+        "physical_cells": 3,
+        "selected_grains": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "virtual_crossgrain": 1
+      },
+      {
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "interface_physical": 1,
+        "physical_cells": 3,
+        "selected_grains": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "virtual_crossgrain": 1
+      },
+      {
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "interface_physical": 1,
+        "physical_cells": 3,
+        "selected_grains": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "virtual_crossgrain": 1
+      }
+    ],
+    "two_grain_candidates": 4
+  },
+  "status": "PASS: exact finite embedded rhombic-disk regression",
+  "topology": {
+    "boundary_unit_edges": 8,
+    "edges": 10,
+    "euler_characteristic": 1,
+    "rhombi": 3,
+    "unit_contact_edges": 10,
+    "unit_contact_triangles": 0,
+    "vertices": 8
+  }
+}

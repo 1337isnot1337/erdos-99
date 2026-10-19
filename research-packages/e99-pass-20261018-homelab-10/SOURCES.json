@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "research-packages/e99-pass-20261018-homelab-10/verify.py",
+      "sha256": "307a943442736010f4f66fee09f15cffca84159b657c6fafbaae6cd3750fbcd3",
+      "identity": "independent-exact-finite-screen",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}

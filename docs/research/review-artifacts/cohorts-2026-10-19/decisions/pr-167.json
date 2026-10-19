@@ -1,0 +1,21 @@
+{
+  "number": 167,
+  "head": "7dcdd58a9e394e848c0f79c567d9ee6a97441834",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "dae81c2e40368bbfe8c067373a16e7d85171f717",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Exact rational/surd checker passes m=12,16,20,24; analytic monotonicity/formula supports all stated m. Does not replay PR147 geometry.",
+  "original_coverage": "Exact rational/surd checker passes m=12,16,20,24; analytic monotonicity/formula supports all stated m. Does not replay PR147 geometry.",
+  "remaining": "No global endpoint conclusion; archive partially reviewed; parent may retain this conditional artifact with PR147 repair caveat. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

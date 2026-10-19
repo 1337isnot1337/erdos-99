@@ -1,0 +1,2 @@
+PASS: formula equals direct independent-set enumeration in 4096 all 3-source/3-packet H/G graph patterns
+PASS: exact iff conflict definition predicts 2; adding two false cross edges predicts 1 for a true maximum of 2
