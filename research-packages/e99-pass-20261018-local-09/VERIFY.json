@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-c/candidate-registry.json",
+    "docs/reports/population_reserve_independent_reconstruction_2026-10-15.md",
+    "research-packages/e99-pass-20261018-local-09/verify.py"
+  ],
+  "domain": "All real R>=8192 for the disk comparison; every finite planar unit-separated n-point global diameter minimizer with D>16384 for g_A>=gamma D-sqrt(D)/(4 sqrt(2))-60; exact constants in the stated D>=10^6 consequence.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-local-09/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

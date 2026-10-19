@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "identity": "docs/state/theorem-state.yaml",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+      "identity": "docs/targets/target-c/candidate-registry.json",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/population_reserve_independent_reconstruction_2026-10-15.md",
+      "sha256": "280ad14b9ab8e265903cdbb55970934b6cde112e9fda511c9d361fa261b322eb",
+      "identity": "docs/reports/population_reserve_independent_reconstruction_2026-10-15.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-local-09/verify.py",
+      "sha256": "caa746a8996dfe131a2709b3a875f45cf79d78b3b7579d78da0b0de38fc762ba",
+      "identity": "exact-constant-audit",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}
