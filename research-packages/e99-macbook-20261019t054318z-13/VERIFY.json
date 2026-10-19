@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/targets/target-b/README.md",
+    "docs/targets/target-b/01-jammed-rhombic-branch.md",
+    "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+    "docs/problem/statement.md",
+    "research-packages/e99-macbook-20261019t054318z-13/verify.py"
+  ],
+  "domain": "Finite planar edge-to-edge complexes of unit rhombi with disjoint interiors, one or two incident faces per edge, and no dangling 1-cells. The source-count identity additionally assumes every complex vertex is a source label and t counts the remaining source labels; the canonical unit-separated source excludes nonvertex points from a unit rhombus.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-macbook-20261019t054318z-13/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
