@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/targets/target-a/10-quantitative-kuperberg-rate.md",
+    "docs/targets/target-a/12-toeout-kuperberg-improvement.md",
+    "docs/targets/target-a/13-five-block-local-optimality.md",
+    "docs/targets/target-a/14-sharp-symmetric-five-block.md",
+    "research-packages/e99-pass-20261018-local-02/verify.py"
+  ],
+  "domain": "Exact four-label source fixture and lower/upper pair controls; universal translation cone under the stated balanced-triad hypotheses.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-local-02/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
