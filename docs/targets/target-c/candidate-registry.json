@@ -1123,11 +1123,12 @@
         "This is boundary localization only; it produces no vacancy, packet, or actual movement."
       ],
       "validation": {
-        "status": "preserved; destination mathematical audit not performed",
-        "scope": "Analytic proof plus source second-referee record; no finite verifier encodes the direction-cone and inner-ball contraction argument. Source PR PASS/promote language is historical evidence and does not alter destination status."
+        "status": "conditional exact-head destination review recorded at 7d0a450fe66991036541023f95c44c064a04b6a8; near-diameter premise remains unreviewed",
+        "scope": "The positive-leaf cone-to-boundary-contraction implication is independently reconstructed conditional on TARGET-C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND-PR947 at s=0 and s=2. That premise remains unreviewed and noncanonical; no finite verifier encodes the analytic argument. See docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md."
       },
       "next_proof_obligations": [
-        "Audit the analytic strengthening at an exact destination head and connect the boundary-localized anchor to a source-realized move."
+        "Independently audit TARGET-C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND-PR947 at an exact destination head, including the endpoint transverse bounds for s=0 and s=2.",
+        "After that dependency is resolved, connect the boundary-localized anchor to a source-realized move."
       ],
       "provenance": {
         "source_repository": "https://github.com/1337isnot1337/e-99",

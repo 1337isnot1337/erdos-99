@@ -1,4 +1,4 @@
-> Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-midpoint-anchor-atlas.md) · source SHA-256 `ca4abbf69861ee2c367bece626e3715eeaec03cdd837149453ca814d1d74eded`.
+> Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-midpoint-anchor-atlas.md) · source SHA-256 `22f286f84ac78408c872fe715dc619f24bd5fe891248fb25ca7a2912183a1cd1`.
 > [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C midpoint, anchor, and atlas track
@@ -65,8 +65,11 @@ KKT normals, and a full-source inner-ball contraction. It gives boundary
 localization only: no vacancy, packet, source motion, or capacity payment.
 
 The [positive-leaf second-referee note](../../audits/target_c_positive_leaf_anchor_second_referee_2026-10-10.md)
-records a source reconstruction. It does not count as the destination's
-required independent AI-agent audit of an exact destination commit.
+records a source reconstruction. The [destination exact-head review](../../audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md)
+checks the cone-to-boundary-contraction implication at `7d0a450` conditionally
+on the near-diameter endpoint estimates for deficits 0 and 2. Those estimates
+remain unreviewed and noncanonical here, so the accepted anchor rate remains
+`O(D^(-1/2))`; no destination claim is promoted by this audit.
 
 ## Supplied slow-chart coverage
 

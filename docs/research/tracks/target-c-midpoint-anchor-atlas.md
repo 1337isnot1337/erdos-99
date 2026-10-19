@@ -62,8 +62,11 @@ KKT normals, and a full-source inner-ball contraction. It gives boundary
 localization only: no vacancy, packet, source motion, or capacity payment.
 
 The [positive-leaf second-referee note](../../audits/target_c_positive_leaf_anchor_second_referee_2026-10-10.md)
-records a source reconstruction. It does not count as the destination's
-required independent AI-agent audit of an exact destination commit.
+records a source reconstruction. The [destination exact-head review](../../audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md)
+checks the cone-to-boundary-contraction implication at `7d0a450` conditionally
+on the near-diameter endpoint estimates for deficits 0 and 2. Those estimates
+remain unreviewed and noncanonical here, so the accepted anchor rate remains
+`O(D^(-1/2))`; no destination claim is promoted by this audit.
 
 ## Supplied slow-chart coverage
 
