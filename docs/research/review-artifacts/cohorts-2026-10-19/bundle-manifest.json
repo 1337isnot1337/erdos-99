@@ -1,6 +1,6 @@
 {
   "sha256": {
-    "README.txt": "09d98d6acae241961a6253c4f060716314b75faf86ad31bb96bcf1df557a31d4",
+    "README.txt": "49aef6253002b01b5c4245c6e3c3fe9c7bac06baa18b0ae5761b8620fab41aa3",
     "checks/artifact-index-tests.log": "e586fc0f3bb2a05f4c80f07d1b4c6171e830592f6c7aaf70d4af3b0aa3ebd072",
     "checks/ci-plan.json": "35858805d857f38357b18d803dfeafd12819bca200ea3b4a18c35439c6974d85",
     "checks/final-artifact-index.log": "b081e1654ca75abe0b28b4d0a1c89236e4569ee1df0273748d962a0853f86c7e",
@@ -137,14 +137,6 @@
     "reviews/a-run-logs/pr167-normal.log": "ca7e09b4be5d62f4b12a3b5d8b04b06cce96798e5de2abc6bffb8c76adfbbd63",
     "reviews/a-run-logs/pr170-normal.log": "3c7879a16b1e7840d186470094cca050c7da76c4703d90ebfec4d86a1eb3771c",
     "reviews/a-run-logs/pr176-normal.log": "160e6aebbf8e93a478f22f7468c0f9d53b7cb1ccf5b9ddae424962847496e6cc",
-    "reviews/a-run-logs/scoped-pr102.source.txt": "4981d0f1c518fdf9c3c3a00afe3fd1fa6f3d797fc8a2482c8828df201c95eacb",
-    "reviews/a-run-logs/scoped-pr103.source.txt": "c755e9508fc28ae6765eef4e704367deef73ff692e4b397f685b011705967882",
-    "reviews/a-run-logs/scoped-pr118.source.txt": "5cbef599ca920062cd082a00dfd7199b52e86871993f0d05a780ee549abb5c6c",
-    "reviews/a-run-logs/scoped-pr130.source.txt": "e71728dc3c001cc37e7ac2caca4c50d390bb54b054a2438601bd36a8cd7fe951",
-    "reviews/a-run-logs/scoped-pr140.source.txt": "a5b8ad6615685784307855df582bfe72ae678339c9faa1d73d31fa22136256c3",
-    "reviews/a-run-logs/scoped-pr141.source.txt": "37e978dd20afb49f1ec67b94e00d70a43c5c37c5a06acb8b9c9924866e42a1ee",
-    "reviews/a-run-logs/scoped-pr148.source.txt": "9d53529b58cec2e01c376531a28fa5a90059ecab100302990e5de62737ca4a84",
-    "reviews/a-run-logs/scoped-pr171.source.txt": "3add910a66379a6ec6ea28dec3ff3e4ebc0358819930fe07e9854afbeda3378c",
     "reviews/a-run-logs/source-pin-authentication.json": "cd1f4e4f2ee0db83fa5fb4648b3179e26d38245ab35fa218558bb141f141580c",
     "reviews/a-run-logs/syntax-check.json": "0c74dbec0e48fe8160abbb670a29f600687ac27ab47ae7170c1ccb4e8e3c5d8c",
     "reviews/a-run-logs/verifier-runs.json": "e9a8400ca6f9accfbfbc8c2dbb7d9adb8799034884db0c01c6069524a2d6d22f",
@@ -168,17 +160,14 @@
     "reviews/b-run-logs/review-b-121_optimized_exact.log": "5f3b595e21975a63e9cdd374998e59b69540b962a8a37fdbed74ac18fe3659e1",
     "reviews/b-run-logs/review-b-124-ee8-metadata.log": "0ddd4b9e9cbf7221a522deed0f86621c52142ea1e35f147152995b5e87f26232",
     "reviews/b-run-logs/review-b-124-ee8-metadata.py": "152f03724312bfe2e60daf5b256bc159234227eca0da40cf5ec1040e3ea47cb0",
-    "reviews/b-run-logs/review-b-139-report.source.txt": "51d3aabe93b7cc90172ad1238119f4e4590d227044d1807e054b5701900a25b9",
     "reviews/b-run-logs/review-b-143-independent.log": "3fb73dae492e1742b2158b253787568ff64c9939f68996c33f3cb667571aba92",
     "reviews/b-run-logs/review-b-143-independent.py": "9e2b6e08b0f74ff839a69af7206462952cc7a203811d21855aa370d8f563bd6e",
-    "reviews/b-run-logs/review-b-153-README.source.txt": "e4aba72b8dc1943cd335733fbeb6d26c64c39d8195b5fa31beb06a95fcbb0bda",
     "reviews/b-run-logs/review-b-153-TASK.json": "01b032c61a1d93923d95cc7c4db29f0720fa7b877e029c57e704d985062ffd86",
     "reviews/b-run-logs/review-b-153-VERIFY.json": "f90d990971829ef4f30bbb69905fbd30a24e4b3dadb9ac42066a5d638ac61fb7",
     "reviews/b-run-logs/review-b-153-countercontrol.log": "89578c4de138b4097289fb3ec337230ebb8af2e4b25c7a1b05893dd37eefac2c",
     "reviews/b-run-logs/review-b-153-countercontrol.py": "2de1857179452ecef4d3c36464d9907f8f741bedf8c66a9028fcc1b9ef50f0dd",
     "reviews/b-run-logs/review-b-153-identity.log": "2e7e4ab525fde979e7aeac49cefd33875e95bf3ea36a55daaee2ea27b52e8e56",
     "reviews/b-run-logs/review-b-153-identity.py": "db546c153f5b756f800b7415b46807038d252dab5eb4c93c4e5ce7073f95c632",
-    "reviews/b-run-logs/review-b-153-original-verifier.py": "7e96eaa6884dac9640358065430d426060dddfafca5a087a14ec831d3fb68a42",
     "reviews/b-run-logs/review-b-153-package-metadata.log": "27f597b839f238ef121e38ba7e26298d7d7213590f7f1852fa4ee5aa07d4675c",
     "reviews/b-run-logs/review-b-153-package-verify.log": "2df44a2ab7603a286c24522d68d16e94a5d39f6af7ebb8584272859c6206f393",
     "reviews/b-run-logs/review-b-153-package-verify.py": "264d158cf563ac88b15857abb38dd033b5f4a2570de3c6147703cb78b8eeeae7",
@@ -275,9 +264,10 @@
     "reviews/c-source-integrity.json": "be6283ae3bd49841b210dd56760b041b92e191893b15ca147ff8af93addd0f45",
     "scope-repairs.json": "2a83a959211e3aa063ef9e5244395bc8c31d6db9bc1115ee7cf81da5b2a11b38",
     "source-inventory.json": "8707e5e4b8b52ccd1166ce172d42a4c694d77508716e0b46743b802b4633c5d9",
-    "source-snapshot-path-map.json": "31c211b219aa104474eaf0be43377f1d4cec5d9fdebcf9e1fe6c392e8dcef646"
+    "source-snapshot-path-map.json": "54285bc915dd1f5a318141028fab1599215783612178894dbac7b982c2b7a23a"
   },
-  "generated_at": "2026-10-19T14:22:35.565385+00:00",
+  "generated_at": "2026-10-19T14:27:40.169795+00:00",
   "scope": "Evidence source bytes. Absolute original command paths are historical execution context; preserved copies are inside this bundle.",
-  "snapshot_location_map": "source-snapshot-path-map.json"
+  "snapshot_location_map": "source-snapshot-path-map.json",
+  "source_reference_map": "source-snapshot-path-map.json"
 }

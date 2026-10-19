@@ -100,3 +100,13 @@ math candidate do not change any mathematical source or executable input.
 Only branches with merged/closed heads, no advanced remote head and no open-PR
 use are eligible for the existing guarded cleanup workflow. Dirty worktrees and
 unpublished local commits are preserved.
+
+Verbatim input-source references
+
+Eleven redundant report/README/verifier copies used during review are represented
+by source-snapshot-path-map.json: exact Git commit/path/blob, SHA-256 and a direct
+immutable source link. Their original bytes remain reachable in the preserved
+PR ancestry. This avoids treating copied historical Markdown as new reading pages
+or a relocated verifier as a new executable with missing relative helpers.
+Independent audit notes, adversarial scripts, stdout logs and their hashes remain
+in this bundle. Materialize an input with git show SOURCE_COMMIT:SOURCE_PATH.
