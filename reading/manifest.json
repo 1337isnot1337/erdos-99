@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2180,
-  "math_pairs_normalized": 72073,
+  "source_documents": 2181,
+  "math_pairs_normalized": 72083,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -3097,6 +3097,13 @@
       "reading_path": "reading/docs/reports/target_b_trimmed_grid_phase_star_exclusion_2026-09-05.md",
       "reading_sha256": "8260e7410e2cab1b9f99808dd437c732f8083d6ee8e5019c8ff87fdf5e2f9679",
       "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md",
+      "source_sha256": "c755e9508fc28ae6765eef4e704367deef73ff692e4b397f685b011705967882",
+      "reading_path": "reading/docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md",
+      "reading_sha256": "57123c22ad0ea290ecee4046f57d1a1c15c22af2957086c32d654bf6c43c8d53",
+      "math_pairs_normalized": 10
     },
     {
       "source": "docs/reports/target_b_two_max_phase_stability_exclusion_2026-09-05.md",
