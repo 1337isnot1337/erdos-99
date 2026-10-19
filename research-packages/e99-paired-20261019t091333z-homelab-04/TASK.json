@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-homelab-04",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For a source A of diameter D inside a Jung disk B(o,D/sqrt(3)), if the open safe core B(o,D-D/sqrt(3)) contains a unit-separated set Y at distance at least 1 from every source label with |Y| at least the minimum vertex-cover size of the full actual-diameter graph G_D(A), then X=A union Y is an admissible annular packet with M_D(X)>=|A|.",
+    "domain": "Exact investigation global-annular-source-packet-paired-20261019, scope key b0e191c537f21698e04eeb1f; broad catalogue card global-joint-phase-source-extraction. Exact integer and Fraction reconstruction of the pinned D=8 phase-(1/4,1/4) packet and its 63-label deformation, plus a two-label positive conditional fixture. No global source is simulated.",
+    "limitations": "No proof that any sufficiently large triangle-free global minimizer has the safe-core vacancy condition. The exact D=8 source is nonglobal. The lemma establishes no universal extraction, theorem promotion, C-II result, or Level I closure."
+  },
+  "result": "Proved the conditional safe-core packet lemma and an exact positive toy control; reconstructed a positive-excess triangle-free nonglobal control where safe-core vacancy is zero and the actual-diameter graph has an edge.",
+  "remaining_questions": [
+    "For a sufficiently large triangle-free global minimizer, can the Jung safe-core unit-packing vacancy be bounded below by the full actual-diameter vertex-cover number, or must it be strictly smaller?"
+  ]
+}
