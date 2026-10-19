@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+    "docs/state/theorem-state.yaml",
+    "docs/research/priority-state.json",
+    "docs/targets/target-c/CURRENT.md",
+    "research-packages/e99-pass-20261018-homelab-05/README.md",
+    "research-packages/e99-pass-20261018-homelab-05/verify.py"
+  ],
+  "domain": "All integers m>=7 and the continuous angle interval theta in [theta_m,pi/2], proved analytically; exact checker for m=7,8,12,24 enumerates every integer difference vector and runs exact cover/slack controls plus an out-of-range-angle negative control.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-homelab-05/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
