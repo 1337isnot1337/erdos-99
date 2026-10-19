@@ -72,9 +72,12 @@ not an obstruction to coordinating the choices.
 ## Source-capacity falsification and limitation
 
 The fixture does **not** meet Section 168.2's essential condition
-`|A^0|=alpha_1(H)`. The `5x5` Cartesian unit grid centered at `x` lies in `H`:
-its points have squared radius at most `8`, while the inscribed-radius squared is
-`27`. Thus `alpha_1(H)>=25>11=|A|`. The source-realization test reaches the
+`|A^0|=alpha_1(H)`. Use the `5x5` Cartesian unit grid about the origin,
+with coordinates in `{-2,-1,0,1,2}^2`. The hexagon is centered at the Cartesian
+point `x=(1/2,sqrt(3)/6)`. Each grid point `g` obeys `|g|<=sqrt(8)<3`, while
+`|x|^2=1/3<1`. The triangle inequality gives `|g-x|<4<3sqrt(3)` because
+`16<27`, placing every point inside the hexagon's inscribed disk. Thus
+`alpha_1(H)>=25>11=|A|`. The source-realization test reaches the
 geometric incidence layer but fails the actual zero-slack capacity endpoint.
 
 This gap is deliberate and explicit. There is no concrete coordinate fixture in

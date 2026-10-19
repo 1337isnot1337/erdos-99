@@ -19,9 +19,21 @@ K^*=\operatorname{conv}X^*$ be the actual right-endpoint plateau optimum, with
 $|X^*|=m^*$ and diameter $d=D(m^*)$, and set $t=(D-d)/2>1$. In the actual-response locked
 branch use its canonical three-channel contact fan $\Sigma\subset X^*$, fixed while
 the lattice phase varies. For each generic triangular-lattice translate $v$, choose
-a measurable Section-102 admissible basis: a basis of the restricted deep-column
-matroid extended to a basis of the full interior-row matroid (a lexicographically
-least choice suffices). Do not substitute the superseded depth-only matching test.
+jointly a Section-102 admissible basis and the compatible auxiliary perfect
+matching $\mu_0(v)$ used in Section 174 to define the sector sets. The basis is a
+basis of the restricted deep-column matroid extended to a basis of the full
+interior-row matroid. Do not substitute the superseded depth-only matching test.
+
+Use one fixed lexicographic order on the candidate labelled pairs
+$(B,\mu_0)$ and select the first admissible pair at each generic phase. There are
+only finitely many candidate labels over a fixed fundamental cell, since the
+source neighborhood is bounded. Admissibility is given by finite incidence,
+distance and rank conditions on the phase-dependent data, hence each pair's
+admissibility set is Borel. The finite lexicographic selector has Borel fibers;
+nonemptiness is supplied by the stated Section-102/174 hypotheses. Consequently
+the selected basis, matching and all sector counts below are measurable. Selecting
+a measurable basis alone would not establish measurability of matching-dependent
+$C_i,O_i$ or $\Xi_\Sigma$.
 
 Use the Section-175 sets $Z(v),O(v),Y_0(v),T_\Sigma(v),T_Z(v),T_O(v),C_i(v),O_i(v),
 O_{\rm iso}(v)$, and define

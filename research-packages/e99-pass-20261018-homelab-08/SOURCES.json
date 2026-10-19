@@ -25,7 +25,7 @@
     },
     {
       "path": "research-packages/e99-pass-20261018-homelab-08/verify.py",
-      "sha256": "c087949713318a11f16300ba5f491aa70c7c415b5b912d35c9679892a12281f8",
+      "sha256": "2ec4345444c2e71dd4a867f4476682fba9012e8896d3055738dd098f0039fdcb",
       "identity": "exact-rational-geometric-full-shore-extension-checker",
       "generated_from": []
     }

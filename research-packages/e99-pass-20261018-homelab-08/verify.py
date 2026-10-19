@@ -216,17 +216,23 @@ def main():
         "duplicate-source matching control was not rejected",
     )
 
-    # Source-capacity falsification: a 5x5 Cartesian unit grid centered at x is
-    # in H because its radius squared is at most 8<27.  It has 25 labels, while
-    # A has only 11.  Hence this fixture is not the Section-168 zero-slack
-    # endpoint A^0 with |A^0|=alpha_1(H).
+    # Source-capacity falsification uses the Cartesian grid about the origin.
+    # H is centered at x, whose Cartesian coordinates are (1/2,sqrt(3)/6).
+    # For every grid point g, |g| <= sqrt(8) < 3 and |x|^2 = 1/3 < 1.
+    # Thus |g-x| < 4 < 3*sqrt(3), since 16 < 27: the grid lies in H.
+    # Its 25 labels exceed |A|=11, excluding the zero-slack capacity endpoint.
     grid = [(F(i), F(j)) for i in range(-2, 3) for j in range(-2, 3)]
     grid_distances2 = [cart_norm2(sub(p, r)) for p, r in combinations(grid, 2)]
     grid_radii2 = [cart_norm2(point) for point in grid]
     require(len(sources) == 11, "unexpected source count")
     require(len(grid) == 25 and len(grid) > len(sources), "capacity witness count is invalid")
     require(min(grid_distances2) >= 1, "Cartesian capacity witness is not unit-separated")
-    require(max(grid_radii2) == 8 and max(grid_radii2) < 27, "Cartesian capacity witness does not fit in H")
+    require(max(grid_radii2) == 8, "unexpected Cartesian grid radius")
+    require(norm2(x) == F(1, 3), "unexpected displacement of the hexagon center")
+    require(
+        max(grid_radii2) < 9 and norm2(x) < 1 and F(16) < 27,
+        "triangle-inequality bound does not place the Cartesian grid in H",
+    )
 
     print("PASS: exact rational source, response, and complete lattice incidences")
     print("PASS: |A|=11; minimum source squared distance is 13/12; A is triangle-free")

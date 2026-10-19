@@ -1123,12 +1123,12 @@
         "This is boundary localization only; it produces no vacancy, packet, or actual movement."
       ],
       "validation": {
-        "status": "conditional exact-head destination review recorded at 7d0a450fe66991036541023f95c44c064a04b6a8; near-diameter premise remains unreviewed",
-        "scope": "The positive-leaf cone-to-boundary-contraction implication is independently reconstructed conditional on TARGET-C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND-PR947 at s=0 and s=2. That premise remains unreviewed and noncanonical; no finite verifier encodes the analytic argument. See docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md."
+        "status": "conditional positive-leaf component review recorded; destination near-diameter component audit PASS recorded in PR #139; candidate lifecycle remains unreviewed",
+        "scope": "The positive-leaf cone-to-boundary-contraction implication is reconstructed conditional on TARGET-C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND-PR947 at s=0 and s=2. PR #139 records an independent destination PASS for those localization bounds; both candidate lifecycles remain unreviewed/noncanonical, and the stronger anchor exponent has not been promoted. See docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md and docs/audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md."
       },
       "next_proof_obligations": [
-        "Independently audit TARGET-C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND-PR947 at an exact destination head, including the endpoint transverse bounds for s=0 and s=2.",
-        "After that dependency is resolved, connect the boundary-localized anchor to a source-realized move."
+        "If canonical adoption is proposed, perform the explicit theorem-state transaction with exact source-bound review; no adoption occurs in this integration.",
+        "Connect the boundary-localized anchor to a source-realized move with all source labels and pair constraints."
       ],
       "provenance": {
         "source_repository": "https://github.com/1337isnot1337/e-99",
