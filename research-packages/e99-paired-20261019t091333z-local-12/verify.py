@@ -72,7 +72,7 @@ require(max(after.values()) <= max(before.values()) / (1 - 2 * t) ** 2, "diamete
 single_contact = [(F(-1, 2), F(0)), (F(1, 2), F(0)), (F(0), F(2))]
 descend(single_contact, pair, F(1, 10))
 
-expect_rejected(lambda: pinch(square, (0, 2), F(1, 4)), "noncontact accepted")
+expect_rejected(lambda: pinch(square, (0, 3), F(1, 4)), "noncontact accepted")
 expect_rejected(lambda: pinch(square, pair, F(1, 2)), "endpoint pinch accepted")
 expect_rejected(lambda: descend(square, pair, F(1, 10)), "multiple-contact descent accepted")
 print("PASS: exact Fraction pinch and one-contact descent; all pair and diameter checks; three negative controls. No Level I proof.")
