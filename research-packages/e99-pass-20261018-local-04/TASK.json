@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-local-04",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For a six-vertex, two-face unit-rhombus train with a fixed seventh contact isolate, the full-source common-shear family is feasible exactly for |cos(theta)| <= 21/100; interior shears preserve (|C|,|H|)=(7,2), the boundary adds a diameter pair, and further shear violates an upper pair.",
+    "domain": "Seven explicit labels v_(i,j)=i(1,0)+j(c,s), i=0,1,2 and j=0,1, plus z=(1,11/5), with c in [-1,1], s=sqrt(1-c^2)>=0, and every unordered pair checked.",
+    "limitations": "Exact finite regression only. This source is not claimed to be globally minimizing or canonical. No other motion, source extraction, replacement, asymptotic consequence, or theorem promotion is established."
+  },
+  "result": "Verified exact 21-pair ledger and sharp shear cap for the stated finite family; no strict-D or lexicographic improvement occurs in this family.",
+  "remaining_questions": [
+    "Can a canonical full-core C-II face-coupled motion transport its diameter-setting contact isolates with the train while preserving every old lower and actual or inactive upper pair constraint?"
+  ]
+}
