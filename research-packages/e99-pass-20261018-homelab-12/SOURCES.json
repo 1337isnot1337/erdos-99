@@ -67,10 +67,10 @@
     },
     {
       "path": "docs/targets/target-c/candidate-registry.json",
-      "sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
       "identity": "docs/targets/target-c/candidate-registry.json",
       "generated_from": [],
-      "commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6"
+      "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
     },
     {
       "path": "docs/STATE.md",
