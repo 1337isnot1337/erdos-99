@@ -124,6 +124,14 @@ flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'python research-
 
 It checks the pinch-dilate pair ledger and diameter bound on an exact rational square, a strict contraction on a rational three-point exactly-one-contact fixture, and three invalid-input controls. It is a finite regression only.
 
+Observed output:
+
+~~~text
+PASS: exact Fraction pinch and one-contact descent; all pair and diameter checks; three negative controls. No Level I proof.
+~~~
+
+During development, the first negative control used square pair (0,2), which is itself a side contact and was correctly accepted. I changed it to diagonal (0,3); the final three rejection controls now pass.
+
 Package metadata was checked with:
 
 ~~~text
