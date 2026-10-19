@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-b/README.md",
+    "docs/targets/target-b/01-jammed-rhombic-branch.md",
+    "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+    "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+    "docs/reports/target_b_multicomponent_penetration_budget_2026-09-05.md",
+    "docs/reports/target_b_interface_capacity_2026-10-17.md",
+    "docs/reports/target_b_seed084_near_disk_seamed_grain_regression_2026-10-13.md",
+    "research-packages/e99-macbook-20261019T054318Z-02/verify.py"
+  ],
+  "domain": "m>=12 divisible by four; q=m^2, p=floor(q/sqrt(3))+1, t=p/q, c=(1-t^2)/(1+t^2), s=2t/(1+t^2); vectors x=(1,0), y=(0,1), v=(-c,-s), u=(-s,c); two m-by-m rhombus grids plus the one-square interface. Exact verifier cases m=12,16,20.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-macbook-20261019T054318Z-02/verify.py"
+      ],
+      "timeout_seconds": 60
+    }
+  ]
+}
