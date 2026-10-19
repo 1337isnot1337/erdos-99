@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "tasks/target-c-face-coupled-move.md",
+    "docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md",
+    "docs/targets/target-c/CURRENT.md",
+    "docs/state/theorem-state.yaml",
+    "research-packages/e99-macbook-20261019T054318Z-03/README.md",
+    "research-packages/e99-macbook-20261019T054318Z-03/verify.py"
+  ],
+  "domain": "Two adjacent unit rhombi v_(i,j)=i(1,0)+j(c,s), i=0,1,2 and j=0,1, plus z=(1+u,11/5+v); specialize u=0, v=-t, c=t, s=sqrt(1-t^2), 0<t<=1/10, retaining all seven labels and checking all unordered pairs.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-macbook-20261019T054318Z-03/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

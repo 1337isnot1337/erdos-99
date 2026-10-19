@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-macbook-20261019T054318Z-03",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For the exact seven-label PR104 source, the coupled path c=t, z=(1,11/5-t) is a same-cardinality strict-sub-D competitor for every 0<t<=1/10, with all 21 lower and upper pair constraints checked.",
+    "domain": "Two adjacent unit rhombi v_(i,j)=i(1,0)+j(c,s), i=0,1,2 and j=0,1, plus z=(1+u,11/5+v); specialize u=0, v=-t, c=t, s=sqrt(1-t^2), 0<t<=1/10, retaining all seven labels and checking all unordered pairs.",
+    "limitations": "This is a finite exact result for the PR104 fixture and proves that seven-label source is nonglobal. It proves no extraction of the motion from a canonical C-II source, universal minimizer statement, asymptotic result, or Level I closure."
+  },
+  "result": "The full-source diameter squared along the path is 1+(11/5-t)^2<146/25, with exactly seven unit contacts and a triangle-free ladder graph. At t=1/10 the diameter squared is 541/100.",
+  "remaining_questions": [
+    "Derive a nonzero isolate displacement and common train shear satisfying every full-source lower and upper pair bound from a canonical C-II source, or prove a source-specific obstruction to such extraction."
+  ]
+}
