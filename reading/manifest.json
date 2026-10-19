@@ -369,6 +369,13 @@
       "math_pairs_normalized": 9
     },
     {
+      "source": "docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+      "source_sha256": "37f2b8d87b41fa81528f318ba211d8e0db7dd24cedc9c31f32e5523615d9fe9e",
+      "reading_path": "reading/docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+      "reading_sha256": "b6523f46be272cb44c13e417386fe7b939cc2165c85ad7e297c27036e18aebb5",
+      "math_pairs_normalized": 0
+    },
+    {
       "source": "docs/audits/target_c_bridge_subtracted_isoperimetry_hostile_audit_2026-09-13.md",
       "source_sha256": "a2c848097bc70da72a5de10902482f771dca386c9038b2cc51d729a0cd288694",
       "reading_path": "reading/docs/audits/target_c_bridge_subtracted_isoperimetry_hostile_audit_2026-09-13.md",
