@@ -67,7 +67,7 @@
     },
     {
       "path": "research-packages/e99-macbook-20261019T054318Z-02/verify.py",
-      "sha256": "7a9b5bac370f3ba455b2d5239fb50b5d32ec4787cccec01caa7f64a4c8385bf8",
+      "sha256": "78b07279168ce3aad0ee261e16f847a99b68132729e897a0b9c07bd311f478b0",
       "identity": "macbook-02-scalable-two-grain-exact-ledger-verifier",
       "generated_from": []
     }

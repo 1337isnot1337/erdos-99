@@ -30,6 +30,25 @@ def sqdist(a: Point, b: Point) -> F:
     return (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2
 
 
+def positive_quadratic_surd(a: F, b: F) -> bool:
+    """Decide exactly whether a+b*sqrt(3)>0 for rational a,b."""
+    if a == 0:
+        return b > 0
+    if b == 0:
+        return a > 0
+    if a > 0 and b > 0:
+        return True
+    if a < 0 and b < 0:
+        return False
+    if a > 0:  # a - |b| sqrt(3)
+        return a * a > 3 * b * b
+    return 3 * b * b > a * a  # |b| sqrt(3) - |a|
+
+
+def quadratic_surd_text(a: F, b: F) -> str:
+    return f"{a} + ({b})*sqrt(3)"
+
+
 def edge(a: Point, b: Point) -> tuple[Point, Point]:
     return tuple(sorted((a, b)))
 
@@ -257,6 +276,24 @@ def verify_one(m: int) -> dict:
     if turning != cross_total:
         raise AssertionError("support turning does not equal the cross determinant sum")
 
+    # Keep the triangular reference area and boundary allowance in Q(sqrt(3)),
+    # then decide both the proposed payment inequality and shell-upper control
+    # with exact rational sign comparisons.
+    face_excess_a = 2 * s * m * m + 1
+    face_excess_b = -(F(m * m) + F(1, 2))
+    endpoint_a = 2 * (convexification + face_excess_a)
+    endpoint_b = 2 * face_excess_b
+    if (endpoint_a, endpoint_b) != (2 * (1 + 2 * s) * m * m, F(-(2 * m * m + 1))):
+        raise AssertionError("shell endpoint does not equal 2(G+E)")
+    payment_residual_a = cross_virtual - 1 - endpoint_a
+    payment_residual_b = -endpoint_b - 4 * m
+    if not positive_quadratic_surd(payment_residual_a, payment_residual_b):
+        raise AssertionError("the displayed scalar payment counterexample failed")
+    shell_margin_a = convexification + face_excess_a
+    shell_margin_b = face_excess_b - 2 * m
+    if not positive_quadratic_surd(shell_margin_a, shell_margin_b):
+        raise AssertionError("the disk did not violate the global-minimizer shell upper bound")
+
     # Section 50.1 with eta=1/2 and lambda=1/4: D<4m makes every post-cut
     # degree m survive pruning. The m-by-m PC1 grids have d=m/4-2>0, while
     # |U+V|<=m<=D, so their PC1 excess is exactly zero.
@@ -296,6 +333,11 @@ def verify_one(m: int) -> dict:
         "convexification_G": f"{convexification.numerator}/{convexification.denominator}",
         "support_depth_H": f"{support_depth.numerator}/{support_depth.denominator}",
         "support_turning_J": f"{turning.numerator}/{turning.denominator}",
+        "face_area_excess_E": quadratic_surd_text(face_excess_a, face_excess_b),
+        "scalar_payment_residual": quadratic_surd_text(payment_residual_a, payment_residual_b),
+        "scalar_payment_rule_fails_exactly": True,
+        "global_shell_upper_margin": quadratic_surd_text(shell_margin_a, shell_margin_b),
+        "global_shell_upper_violated": True,
         "J_equals_total_cross_determinant": turning == cross_total,
         "J_equals_V_plus_deleted_interface_area": turning == cross_virtual + 1,
         "minimum_squared_separation": str(minimum),

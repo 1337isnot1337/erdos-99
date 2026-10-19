@@ -259,8 +259,9 @@ globally optimal.
 
 The exact verifier uses only the standard library and rational arithmetic. It
 checks `m=12,16,20`, including every source pair, contact triangle, face,
-train-track equivalence, crossing component, determinant sum, hull area and
-boundary support depth. Run:
+train-track equivalence, crossing component, determinant sum, hull area,
+boundary support depth, and exact signs in `Q(sqrt(3))` for the scalar-payment
+residual and global-shell-upper margin. It uses no floating-point geometry. Run:
 
 ```sh
 python research-packages/e99-macbook-20261019T054318Z-02/verify.py
