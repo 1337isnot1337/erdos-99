@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2180,
-  "math_pairs_normalized": 72073,
+  "source_documents": 2181,
+  "math_pairs_normalized": 72091,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -1543,6 +1543,13 @@
       "reading_path": "reading/docs/audits/target_c_positive_pinned_face_tail_independent_audit_2026-10-08.md",
       "reading_sha256": "43368ad99fc1c23b24132e000ad64c984c16c8d906d4e5204b4bcb5acad1c2b8",
       "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+      "source_sha256": "f1df6dde4d2aba248ff0ca926bd3bb8aff22ad180e16512aee31292de0cd42ad",
+      "reading_path": "reading/docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+      "reading_sha256": "9be39605695f5b62239b3f90f5c3ce0fc1bafdb15c27d07ca0849b57dfee712b",
+      "math_pairs_normalized": 18
     },
     {
       "source": "docs/audits/target_c_primitive_shell_leaf_forcing_promotion_2026-09-12.md",
