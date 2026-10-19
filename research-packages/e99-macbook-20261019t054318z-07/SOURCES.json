@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "canonical D(n) definition and globality criterion",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
+      "sha256": "01e100022b6755594eab032725198d0a6546aef9f0e9343f016b2ad6edabd231",
+      "identity": "PR #95 exact source construction and population formula",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "tasks/target-c-typeii-stress-mass-access.md",
+      "sha256": "7ee0df03f1e0c7d68d6bc48e80c05592aa778e2579108679fe27bcdb47c38977",
+      "identity": "current route limitations and remaining global-source bridge",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-macbook-20261019t054318z-07/README.md",
+      "sha256": "69da13cc1a5c89966d0a9385f53cc43d432568b02799f4aa112681f2bf33b798",
+      "identity": "independent exact audit and scope note",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/e99-macbook-20261019t054318z-07/verify.py",
+      "sha256": "400218c3b4aac849ff1f8d165da78ca9c15e2b6938bb75b01fb5819dba48d7df",
+      "identity": "independent integer-arithmetic replay and failure controls",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}
