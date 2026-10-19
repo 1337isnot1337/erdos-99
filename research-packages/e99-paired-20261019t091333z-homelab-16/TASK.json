@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-homelab-16",
+  "classification": "regression",
+  "scope": {
+    "statement": "Independent exact-head audit of PR #147 at a110c4062443aa55c480cfd353af3f756e565803: reconstruct the scalable pure-disk family and verify that its stated positive PC1 trim, Section-50.1 retention, support ledger, and scalar-payment failure are correct.",
+    "domain": "All integers m>=12 divisible by four for the analytic family; exact independent arithmetic replay at m=12,16,20,24 and exact source replay at m=12,16,20.",
+    "limitations": "The constructed disks violate the necessary strict global-minimizer shell upper bound. No global minimizer, source-valid support-turning allocation, strict-diameter competitor, canonical theorem promotion, or Level I conclusion is established."
+  },
+  "result": "PASS for the stated geometric regression only. A nonload-bearing hull-turn sequence correction and a gap in the source verifier's direct filter/topology assertions are recorded in README.md; this audit independently checks them.",
+  "remaining_questions": [
+    "Prove a source-valid allocation coupling retained cross-component virtual determinant mass V12 to the signed residual after global support turning J is subtracted, or identify a global-minimizer condition that excludes this geometry while retaining positive trim."
+  ]
+}

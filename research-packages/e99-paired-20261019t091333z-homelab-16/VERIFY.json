@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-b/README.md",
+    "docs/targets/target-b/01-jammed-rhombic-branch.md",
+    "docs/theory/03-oler-shell.md",
+    "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+    "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+    "research-packages/e99-paired-20261019t091333z-homelab-16/verify.py",
+    "docs/REVIEW_POLICY.md",
+    "docs/research/agent-procedure.md",
+    "docs/research/bottleneck-brief.md",
+    "docs/research/priority-state.json",
+    "docs/research/research-family-status.md",
+    "docs/research/run-reconciliation-2026-10-17.md",
+    "docs/reports/target_b_interface_capacity_2026-10-17.md"
+  ],
+  "domain": "All integers m>=12 divisible by four for the analytic family; exact independent arithmetic replay at m=12,16,20,24 and exact source replay at m=12,16,20.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-homelab-16/verify.py"
+      ],
+      "timeout_seconds": 120
+    }
+  ]
+}
