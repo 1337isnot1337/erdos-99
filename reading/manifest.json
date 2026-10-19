@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2180,
-  "math_pairs_normalized": 72073,
+  "source_documents": 2181,
+  "math_pairs_normalized": 72077,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -1417,6 +1417,13 @@
       "reading_path": "reading/docs/audits/target_c_open_cell_full_width_anchor_return_fork_audit_2026-10-04.md",
       "reading_sha256": "9f868b921adce6af1b1079a4d5ee0690996f1a8f22180ba53de449f32d65de77",
       "math_pairs_normalized": 67
+    },
+    {
+      "source": "docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+      "source_sha256": "ea3731cafd66ec6c53bcda70f3bc780c1ff277598ede3459d6ee0658ba16c4b8",
+      "reading_path": "reading/docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+      "reading_sha256": "53fd3c76ba4fbefcb2959771b9e92a6416b1cef1d2f6d7a275cac1f98b73d16a",
+      "math_pairs_normalized": 4
     },
     {
       "source": "docs/audits/target_c_original_family_outer_owner_capacity_independent_audit_2026-10-07.md",
