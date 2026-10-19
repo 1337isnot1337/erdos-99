@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-local-06",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "An exact finite two-shore cut-stress model with the m=3 paired staircase has positive edgewise-balanced unit rows, full B support on the internal packet, positive internal cross-shore load, nonexact B contact phase, and exact first-order payment by A-boundary rows.",
+    "domain": "One rational vector-incidence model with D=1, three A-cuts, two B-cuts, seven diameter-length rows, and the tree {(0,2),(0,3),(1,2)}. The checker uses exact fractions.",
+    "limitations": "No planar point realization, hull order, contact endpoints, vertex-level KKT conditions, all-pair source constraints, asymptotic family, global minimizer, or C-II endpoint is supplied. The result only shows that the stated cut equations and row-level stress data do not force B exact phase."
+  },
+  "result": "The A cut resultants are (23,0), (309/13,0), and (18,0); the B cut resultants are (-11/5,276/65) and (14/5,276/65). Internal shear work is -48/13 and the two A-boundary rows pay +48/13 exactly.",
+  "remaining_questions": [
+    "Determine whether these boundary and layer support classes can occur in a full planar threshold source satisfying every source-pair constraint and vertex-level KKT equation.",
+    "If the source geometry excludes this algebraic payment, prove a source-specific quantitative restriction on boundary-row stress or phase switching; otherwise build a complete source-realized endpoint obstruction."
+  ]
+}
