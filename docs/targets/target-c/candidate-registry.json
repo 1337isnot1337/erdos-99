@@ -1018,8 +1018,8 @@
         "Near-diameter localization does not control how many such pairs occur."
       ],
       "validation": {
-        "status": "preserved; destination mathematical audit not performed",
-        "scope": "Analytic report and source second-referee record; no finite verifier for the all-source inequalities. Source PR PASS/promote language is historical evidence and does not alter destination status."
+        "status": "destination audit PASS for the near-diameter localization component at base 7d0a450fe66991036541023f95c44c064a04b6a8; candidate lifecycle remains unreviewed",
+        "scope": "The audit reconstructs the endpoint tangent and midpoint normal estimates from C-FS-GEOM and C-FS-DIAMETER-MIDPOINT-D2-3 for all s>=0, explicitly including s=0 and s=2. It does not audit the companion endpoint-tail/moment or full diameter-edge transfer claims, and no finite verifier encodes the analytic inequalities. See docs/audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md."
       },
       "next_proof_obligations": [
         "Find a source-level counting or replacement argument that uses this localization without assuming an unproved global atlas."
