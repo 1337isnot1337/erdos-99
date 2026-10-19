@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/reports/target_c_rigid_cycle_pinned_stress_and_arc_stars_slot02_2026-10-10.md",
+    "research/verify_target_c_rigid_cycle_pinned_stress_2026_10_10.py",
+    "research/target_c_rigid_cycle_pinned_stress_certificate_2026_10_10.json",
+    "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+    "research/verify_target_c_deep_face_transport_2026_10_10.py",
+    "docs/targets/target-c/candidate-registry.json",
+    "docs/state/theorem-state.yaml",
+    "docs/targets/target-c/56-ci-restored-frontier.md",
+    "docs/theory/01-local-structure.md",
+    "docs/audits/target_c_rigid_face_isolate_transport_independent_audit_2026-10-09.md",
+    "docs/audits/target_c_face_coupled_quarter_fold_independent_audit_2026-10-07.md",
+    "docs/audits/target_c_finite_mixed_core_rigidity_independent_audit_2026-10-07.md",
+    "docs/research/tracks/target-c-quarter-folds-bent-arrays.md",
+    "docs/targets/target-c/CURRENT.md",
+    "docs/STATE.md",
+    "docs/research/priority-state.json",
+    "docs/problem/statement.md",
+    "research-packages/e99-paired-20261019t091333z-local-08/verify.py"
+  ],
+  "domain": "At the pinned destination bytes 7d0a450fe66991036541023f95c44c064a04b6a8, for the report hypotheses: a simple old unit-contact cycle carried pointwise by one isometry; for full-source conclusions, same cardinality, unit separation, diameter at most D, and exact old contact graph; for the outer-walk certificate, the exact separate positive/negative sign-balance condition at every core vertex outside O.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-local-08/verify.py"
+      ],
+      "timeout_seconds": 120
+    }
+  ]
+}
