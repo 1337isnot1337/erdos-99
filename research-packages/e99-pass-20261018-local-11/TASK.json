@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-local-11",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For a finite label set of size n>=2, finite planar option sets O_i and real D, a selection with every cross-label distance in [1,D) exists iff the graph with same-label edges and cross-label conflicts d<1 or d>=D has an independent transversal.",
+    "domain": "Exact Fraction arithmetic; seven fixed rational planar points; all one- and two-option domains for ordered two-label systems, 125 selected three-label systems, and an empty-class control.",
+    "limitations": "Checks only the equivalence and its boundary conventions. Does not derive palettes for canonical global minimizers, audit interval arithmetic, or verify the external 132/175-coordinate controls."
+  },
+  "result": "Independent proof reconstruction establishes the stated finite equivalence; exact rational boundary regressions agree with direct pair checks. Candidate remains unreviewed and no theorem-state is changed.",
+  "remaining_questions": [
+    "Derive complete finite planar palettes with a transversal for every sufficiently large triangle-free global minimizer, or prove another complete-source strict-diameter contradiction."
+  ]
+}
