@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/reports/global_reflected_scale_competitors_2026-10-12.md",
+    "research/verify_global_reflected_scale_2026_10_12.py",
+    "docs/audits/pr959_autonomous_proof_audit_2026-10-15.md",
+    "docs/research/tracks/global-reflected-scale-capacity-pr959.md",
+    "research-packages/e99-paired-20261019t091333z-homelab-13/verify.py"
+  ],
+  "domain": "All unordered pairs of the finite source; every label participates. Exact rational falsification controls enumerate all sign vectors on 400 small-source line/offset/scale instances and five strict-boundary cases.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-homelab-13/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
