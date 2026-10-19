@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-macbook-20261019T054318Z-14",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For the complete grid P={i*u+j*v: 0<=i<=M, 0<=j<=N}, M,N>=1, and unit vectors with pi/3<theta<pi/2, audit whether rotating theta continuously to pi/2 preserves every full-source lower pair bound and strictly lowers the exact maximum pair distance, while rotation toward pi/3 has the opposite diameter sign.",
+    "domain": "All M,N>=1 complete unit-rhombic grids with pi/3<theta<pi/2, including every integer label difference and every same-cardinality label on both angle paths; exact six-label fixture M=2,N=1, cos(theta)=7/25.",
+    "limitations": "Finite complete-grid geometry only. No transfer to incomplete or multi-grain sources, arbitrary jammed configurations, global minimizers, sufficiently large cardinalities, or Level I. The canonical theorem lifecycle remains unchanged."
+  },
+  "result": "Independent algebraic reconstruction proves the non-axis lower bound, exact maximum-pair formula, full active/inactive upper-pair evolution, and opposite sign of phase contraction. Exact replay checks the 15 pairs of the rational fixture and 57,024 bounded label-difference cases.",
+  "remaining_questions": [
+    "Find a source-derived deformation for an incomplete or multi-grain Target B survivor that preserves every lower pair and controls every actual active diameter pair."
+  ]
+}
