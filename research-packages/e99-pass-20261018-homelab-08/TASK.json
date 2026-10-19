@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-homelab-08",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "An exact rational Euclidean fixture has unit-separated X and a source A inside H with K+B contained in H, and the complete triangular-lattice Y_in. A chosen pair of saturating full-shore matchings has inherited restricted source-image overlap 1, while the restricted shores admit a disjoint joint assignment with overlap 0.",
+    "domain": "Rational finite source/response incidences in a triangular lattice basis, complete three-site Y_in, two full-shore matchings, inherited restriction comparison, segment disjointness, and explicit |A|<alpha_1(H) witness.",
+    "limitations": "The source set has 11 labels while an explicit 25-point unit-separated grid lies in H, so it is not the Section-168 zero-slack capacity endpoint |A^0|=alpha_1(H). The fixture establishes no global optimality, plateau equality, canonical C^partial/O, Schur matrix, rank inequality, or Level I conclusion."
+  },
+  "result": "Geometric local realization of the inherited full-shore restriction mismatch; exact capacity falsification prevents application to the actual Section-168 zero-slack branch.",
+  "remaining_questions": [
+    "Determine whether source-capacity maximality and triangle-free global optimality force a compatible choice of full-shore matchings, or realize the mismatch at a capacity-maximal source."
+  ]
+}
