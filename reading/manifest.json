@@ -1,7 +1,7 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2180,
+  "source_documents": 2181,
   "math_pairs_normalized": 72073,
   "documents": [
     {
@@ -128,6 +128,13 @@
       "source_sha256": "6b77be6470e83aa1ccb6dc725c42c93a1c6e47b54ae6b1a0dd9cc014ff2eb078",
       "reading_path": "reading/docs/audits/target_a_fan_tube_ledger_independent_audit_2026-10-17.md",
       "reading_sha256": "1d576785b22e16e994280faf96f079df2b17b047007a1dd4722304b5e675343e",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md",
+      "source_sha256": "9d53529b58cec2e01c376531a28fa5a90059ecab100302990e5de62737ca4a84",
+      "reading_path": "reading/docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md",
+      "reading_sha256": "581dd611d9814ff4a032426572be04ca185859c0a2bc8eb5ce65ba1f3f39b7d3",
       "math_pairs_normalized": 0
     },
     {
