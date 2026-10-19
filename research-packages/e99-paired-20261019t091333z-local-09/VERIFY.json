@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "domain": "For each fixed delta>0, an actual complete strict bent unit-rhombic array with distinct source labels and a,c>=delta D inside a contact-minimal, triangle-free global unit-separated minimum-diameter source has r>=epsilon_delta D distinct noncorner boundary vertices with external unit contacts for all D>=D_delta; epsilon_delta>0 and D_delta are existential. Exact assignment: audit-target-c-pr948-large-array-boundary-attachment-paired-20261019; scope key 2695b70d3a367ac13ef39be2.",
+  "inputs": [
+    "docs/reports/target_c_large_array_boundary_attachment_slot02_2026-10-11.md",
+    "research/verify_target_c_large_array_boundary_attachment_2026_10_11.py",
+    "research/target_c_large_array_boundary_attachment_certificate_2026_10_11.json",
+    "research/verify_target_c_three_direction_corner_barrier_2026_10_06.py",
+    "docs/theory/01-local-structure.md",
+    "docs/targets/target-c/58-full-source-geometry-audit.md",
+    "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+    "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+    "docs/state/theorem-state.yaml",
+    "docs/STATE.md",
+    "docs/research/priority-state.json",
+    "docs/targets/target-c/candidate-registry.json",
+    "docs/research/tracks/target-c-quarter-folds-bent-arrays.md",
+    "docs/research/agent-task-catalog.json",
+    "docs/problem/statement.md",
+    "docs/research/bottleneck-brief.md",
+    "research-packages/e99-paired-20261019t091333z-local-09/verify.py"
+  ],
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-local-09/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
