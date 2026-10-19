@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+    "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+    "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+    "docs/state/theorem-state.yaml",
+    "docs/research/priority-state.json",
+    "research-packages/e99-paired-20261019t091333z-local-07/verify.py",
+    "docs/targets/target-c/candidate-registry.json",
+    "docs/research/tracks/target-c-train-returns-rigidity-grid.md",
+    "research-packages/e99-paired-20261019t091333z-local-07/README.md",
+    "research-packages/e99-paired-20261019t091333z-local-07/evidence.json",
+    "docs/reports/target_c_full_cell_common_grid_preservation_2026-10-15.md"
+  ],
+  "domain": "Asymptotic D -> infinity Type-II quadratic-core sequences with a source-realized connected grid X_D of Euclidean diameter at least gamma D for fixed gamma > 0; the brace |delta_C(U)| >= diam(U)+2 for each connected unloaded core set; maximum contact degree five; all actual loaded neighbors in A_I; full-source finite Oler. The executable finite control is a 3x3 square-lattice fixture checking all 218 connected subsets and all 2^21 vertex deletions; it does not prove source extraction or the asymptotic statement.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-paired-20261019t091333z-local-07/verify.py"
+      ],
+      "timeout_seconds": 180
+    }
+  ]
+}

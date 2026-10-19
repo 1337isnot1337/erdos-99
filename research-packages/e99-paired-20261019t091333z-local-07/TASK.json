@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-local-07",
+  "classification": "conditional",
+  "scope": {
+    "statement": "Independently audit TARGET-C-PR950-ATTACHMENT-GRID-LINKAGE at destination main: under the common connected Type-II grid, complete loaded attachment set, triangle-free core, unloaded-set brace, endpoint-inclusive cut hypotheses, and full-source unit separation, derive a linear family of distinct-endpoint vertex-disjoint actual-contact paths and its full-source Oler length quantile.",
+    "domain": "Asymptotic D -> infinity Type-II quadratic-core sequences with a source-realized connected grid X_D of Euclidean diameter at least gamma D for fixed gamma > 0; the brace |delta_C(U)| >= diam(U)+2 for each connected unloaded core set; maximum contact degree five; all actual loaded neighbors in A_I; full-source finite Oler. The executable finite control is a 3x3 square-lattice fixture checking all 218 connected subsets and all 2^21 vertex deletions; it does not prove source extraction or the asymptotic statement.",
+    "limitations": "Conditional audit only. The common-grid extraction is an unreviewed candidate dependency. No train-return label overlap, root-to-grid flow, stress-mass payment, finite motion, same-cardinality competitor, C-II closure, or Level I closure follows. Contact isolates remain in the full-source Oler count and outside the core rigidity matrix."
+  },
+  "result": "Conditional PASS: every endpoint-inclusive separator has size at least diam(X_D)/5, hence vertex Menger gives (gamma/5-o(1))D distinct-endpoint disjoint actual-contact paths; full-source Oler gives the stated O(D) length quantile.",
+  "remaining_questions": [
+    "Prove positive-density overlap of the train-return and attachment-to-grid endpoint labels, or a direct source-wide flow bound from selected train roots to the common grid; then construct a same-cardinality endpoint checking every lower and active or inactive upper pair constraint while retaining every source label."
+  ]
+}
