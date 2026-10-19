@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "baseline_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "inputs": [
+    {
+      "path": "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+      "sha256": "e89ab07f491ce279c5466f13b13f32cda18dd0c3267b5694e4fc0dfa5467efb7",
+      "identity": "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_two_side_polynomial_collective_refill_2026-10-05.md",
+      "sha256": "f6b75c01c629bbb4aa33a825f50ff991061f0b20622743af45a8174f03c81b25",
+      "identity": "docs/reports/target_c_two_side_polynomial_collective_refill_2026-10-05.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_triangular_two_pin_strict_capacity_2026-10-05.md",
+      "sha256": "ac83868db308eefa21e107a2fb733c0803aa0c8dd849ae302e6a3d26d1642085",
+      "identity": "docs/reports/target_c_triangular_two_pin_strict_capacity_2026-10-05.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "docs/reports/target_c_unit_pentagon_perimeter_capacity_2026-10-05.md",
+      "sha256": "6ece09aac79da36dee38b049531de339ce8a2ec2e41e9dc773221be330d3c674",
+      "identity": "docs/reports/target_c_unit_pentagon_perimeter_capacity_2026-10-05.md",
+      "generated_from": [],
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8"
+    },
+    {
+      "path": "research-packages/e99-pass-20261018-homelab-06/verify.py",
+      "sha256": "da1f3fe7582f0259c1bf47ce751402c5d98febb17991d32056d76be534cb2f97",
+      "identity": "exact-finite-endpoint-ledger-checker",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": [
+    "The predecessor reports and their universal analytic proofs remain unreviewed; this package reconstructs only the formulas needed for its noncanonical countertest.",
+    "Canonical extraction of the complete wall and deficit K-z>=m+n-1 remains open."
+  ]
+}
