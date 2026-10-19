@@ -1,0 +1,5 @@
+2x2 disk: {'R': 4, 'B': 8, 'V': 9, 'M': 12, 'chi': 1, 'k': 1, 'h': 0, 't': 0, 'n': 9, 'correction': 0, 'rhs_bracket': 8}
+4x4 rhombic patch minus central 2x2 hole: {'R': 12, 'B': 24, 'V': 24, 'M': 36, 'chi': 0, 'k': 1, 'h': 1, 't': 0, 'n': 24, 'correction': -1, 'rhs_bracket': 22}
+two vertex-disjoint single rhombi: {'R': 2, 'B': 8, 'V': 8, 'M': 8, 'chi': 2, 'k': 2, 'h': 0, 't': 0, 'n': 8, 'correction': 1, 'rhs_bracket': 10}
+same annulus with two outside source labels: {'R': 12, 'B': 24, 'V': 24, 'M': 36, 'chi': 0, 'k': 1, 'h': 1, 't': 2, 'n': 26, 'correction': 1, 'rhs_bracket': 26}
+PASS: exact face incidence, Euler, hole/component signs, and outside-label term

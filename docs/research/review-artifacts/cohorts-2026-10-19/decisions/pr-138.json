@@ -1,0 +1,21 @@
+{
+  "number": 138,
+  "head": "d17d45aebb04811c920d03f46c50a2337fe19a98",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "35882f23d0a94527d755eb645b0ff25af243fe11",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Analytic identity and bounds directly reconstructed; finite exact hexagonal controls pass. PR176 independent conditional audit covers the omitted source pin and the separate-envelope limit.",
+  "original_coverage": "Analytic identity and bounds directly reconstructed; finite exact hexagonal controls pass. PR176 independent conditional audit covers the omitted source pin and the separate-envelope limit.",
+  "remaining": "Acceptance applies only to repaired integration tree after exact source-pin repair; my scoped recheck confirms baseline SHA-256 b56ef3220026dc503d3dfb43ecf04eeb041a05f8b8944234624806712bfc91a4 and current declaration. No source-specific positive lower bound; full replay deferred. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

@@ -1,0 +1,2208 @@
+{
+  "reviewer": {
+    "agent": "/root/review_a",
+    "model": "GPT-6 Luna xhigh",
+    "independent_of_contributions": true
+  },
+  "group": "A",
+  "baseline": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "evidence_complete": true,
+  "coverage_note": "All 27 exact frozen PR heads inventoried and reviewed within the stated lanes. Every submitted Python verifier was inspected before execution and run single-threaded under the host compute lock; every package source pin and VERIFY input set was authenticated. PR103/138/140 integration repairs were rechecked directly; corrected PR117/121/147 remain held in this independent record pending the separately identified B/C corrected-contribution reviews. Full theorem-certificate replay is owned by root. Historical dependencies not explicitly named were not fully audited. No canonical promotion. Detailed source-level reconstructions for eight original scoped records are in a-scoped-proof-audits.json; frozen PR130 is a hold, pending reviewer C independent correction audit.",
+  "evidence_directory": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs",
+  "records": [
+    {
+      "number": 102,
+      "exact_head": "025628b23df11470d4eb87ee981edbf250498691",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "shared_target_a_hall_identity",
+      "disposition": "accept_scoped",
+      "coverage": "Direct analytic reconstruction plus exact finite checker inspection and pass; rational PR98 fixture independently recomputed. Source extraction into one global minimizer is not proved.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research/verify_target_a_common_source_overlap_2026_10_17.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.82,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr102-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "explicit_report_bindings_or_provenance": [
+          {
+            "path": "docs/reports/target_a_common_source_hall_overlap_2026_10_17.md",
+            "sha256_at_exact_head": "4981d0f1c518fdf9c3c3a00afe3fd1fa6f3d797fc8a2482c8828df201c95eacb",
+            "git_blob": "2d78f162d353f13789dc4ed6f3468ce46ae5bbe5",
+            "artifact_metadata": {
+              "artifact_id": "ART-E6CEB840E77E",
+              "canonical": false,
+              "claim_ids": [],
+              "claim_statuses": {},
+              "index": "docs/state/artifact-index.jsonl",
+              "status": "unreviewed",
+              "target": "target-a"
+            },
+            "explicit_commit_references_in_report": [
+              "7d0a450fe66991036541023f95c44c064a04b6a8"
+            ],
+            "generated_reading_paths_in_same_PR": [
+              "reading/docs/reports/target_a_common_source_hall_overlap_2026_10_17.md"
+            ],
+            "generated_reading_is_not_scientific_source": true
+          }
+        ],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Sections 168, 175, 177 and PR98 rational incidence fixture. The report itself distinguishes inherited full-shore restrictions from freely chosen restrictions.",
+      "source_claim_caveats": "The rational geometry is nonglobal and does not satisfy Section 168 zero-slack hull capacity; abstract Hall currency does not imply Schur rank loss, shield avoidance, or source extraction.",
+      "remaining_obligations": "Full theorem-certificate replay deferred to root; no all-historical-dependency audit; no canonical promotion.",
+      "exact_repair": null
+    },
+    {
+      "number": 103,
+      "exact_head": "4b708e27e9e26f8c163685dfe8b033b6d6369177",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 4,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 4,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "shared_target_b_determinant_payment",
+      "disposition": "accept_scoped",
+      "coverage": "Direct analytic proof review. No submitted executable verifier. Generated artifact index and reading edition checked; corrected integration report has exactly one theorem-state header.",
+      "commands_and_results": [
+        {
+          "command": "git diff --name-only 7d0a450fe66991036541023f95c44c064a04b6a8...4b708e27e9e26f8c163685dfe8b033b6d6369177; compare path set/count/blob ids/modes with prs/103.json",
+          "result": "PASS",
+          "exit_code": 0,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+        }
+      ],
+      "source_bindings": {
+        "explicit_report_bindings_or_provenance": [
+          {
+            "path": "docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md",
+            "sha256_at_exact_head": "c755e9508fc28ae6765eef4e704367deef73ff692e4b397f685b011705967882",
+            "git_blob": "a0ef2fce1fa9be4f2234113d0a3ba19600b2dcda",
+            "artifact_metadata": {
+              "artifact_id": "ART-49E9F78ACC61",
+              "canonical": false,
+              "claim_ids": [],
+              "claim_statuses": {},
+              "index": "docs/state/artifact-index.jsonl",
+              "status": "unreviewed",
+              "target": "target-b"
+            },
+            "explicit_commit_references_in_report": [
+              "7d0a450fe66991036541023f95c44c064a04b6a8"
+            ],
+            "generated_reading_paths_in_same_PR": [
+              "reading/docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md"
+            ],
+            "generated_reading_is_not_scientific_source": true
+          }
+        ],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Uses the supplied two-component setup and PR86 interface-capacity report for context; does not derive the components or directions from a canonical source.",
+      "source_claim_caveats": "Conditional interface lemma only; extraction and endpoint closure remain unproved. Original PR head had the same theorem-state header duplicated at the start of the new report.",
+      "remaining_obligations": "Duplicate header removed in integration commit 8f291fb and rechecked at 173b3dd; full certificate replay deferred to root.",
+      "exact_repair": "Original head had duplicate identical theorem-state header at start of new report docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md. Integration commit 8f291fb removes one; at 173b3dd the report has exactly one header; generated index/reading views are synchronized.",
+      "integration_rechecks": {
+        "commit": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+        "scope_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-repair-scope.json",
+        "note": "At integration 173, the added report starts with exactly one theorem-state header; artifact index and generated reading views synchronized."
+      }
+    },
+    {
+      "number": 107,
+      "exact_head": "12fbd21a8dbded545743579cf3ac34e2c54f1496",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_research_package",
+      "disposition": "accept_archive",
+      "coverage": "Analytic directional-cone proof inspected; exact four-label ledger and two-anchor positive-motion control pass in normal and -O modes.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-local-02/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.04,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr107-normal.log"
+        },
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python -O research-packages/e99-pass-20261018-local-02/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.03,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr107-optimized.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-pass-20261018-local-02/SOURCES.json",
+        "pin_count": 6,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/problem/statement.md",
+            "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/problem/statement.md"
+          },
+          {
+            "path": "docs/targets/target-a/10-quantitative-kuperberg-rate.md",
+            "sha256": "84014aee1e919d5c9e930817a84746e50831c0475d95d93cc100290c90efc96e",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/10-quantitative-kuperberg-rate.md"
+          },
+          {
+            "path": "docs/targets/target-a/12-toeout-kuperberg-improvement.md",
+            "sha256": "e4f5620b9f4a4ebe2fd46e1fda47adcd3bb0c435812f3dd4f59da373fa157592",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/12-toeout-kuperberg-improvement.md"
+          },
+          {
+            "path": "docs/targets/target-a/13-five-block-local-optimality.md",
+            "sha256": "f1a389e994ffd428b83a721a7d18d833bd35b5ab4a078bc3c611619b194bb7ad",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/13-five-block-local-optimality.md"
+          },
+          {
+            "path": "docs/targets/target-a/14-sharp-symmetric-five-block.md",
+            "sha256": "296af3860efef18e844eaada048e6709c29decedb7e070ced580b223d3e0ddd3",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/14-sharp-symmetric-five-block.md"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-02/verify.py",
+            "sha256": "21006b00b22e72a6ecca45e222ee356b400693ab3ac5a3cc71095bc3fe7cb82c",
+            "commit": "12fbd21a8dbded545743579cf3ac34e2c54f1496",
+            "identity": "draft-checker"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins baseline problem/Target A geometry at 7d0a450; new checker and README source hashes match frozen head.",
+      "source_claim_caveats": "Finite fixture and translation obstruction only; no canonical triad extraction, no global minimizer conclusion, and no full audit of historical Target A dependencies.",
+      "remaining_obligations": "Full certificate replay deferred to root; archive remains partially reviewed.",
+      "exact_repair": null
+    },
+    {
+      "number": 117,
+      "exact_head": "52a89ded959be4c96db4bdc4622ee73f7f63c3bd",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_target_a_phase_reserve_package",
+      "disposition": "hold",
+      "coverage": "Analytic inequalities and exact integer threshold reconstructed; finite verifier passes but verifies saved 18 seed-63 and 34 seed-66 controls, not the universal averaging proof.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-local-01/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.03,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr117-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-pass-20261018-local-01/SOURCES.json",
+        "pin_count": 16,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/STATE.md",
+            "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/STATE.md"
+          },
+          {
+            "path": "docs/state/theorem-state.yaml",
+            "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/state/theorem-state.yaml"
+          },
+          {
+            "path": "docs/targets/target-a/02-scaffold-and-hall.md",
+            "sha256": "18b0297422f207a1b3afdea166b413ccd86d9a5d9c26d26da9794d3e6ac39548",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/02-scaffold-and-hall.md"
+          },
+          {
+            "path": "docs/targets/target-a/03-source-response.md",
+            "sha256": "b56ef3220026dc503d3dfb43ecf04eeb041a05f8b8944234624806712bfc91a4",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/03-source-response.md"
+          },
+          {
+            "path": "docs/targets/target-a/08-prescribed-phase-alignment.md",
+            "sha256": "de6abaaaac9207cb295129edc4b578e5afed484af2baa3038071575330eb1e07",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/08-prescribed-phase-alignment.md"
+          },
+          {
+            "path": "docs/targets/target-a/17-plateau-response-lift.md",
+            "sha256": "07a55cd61e593aa17d68a984982809bd7c4cf6f064c513e7a5cd7226d6fe2777",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/17-plateau-response-lift.md"
+          },
+          {
+            "path": "docs/targets/target-a/24-three-channel-locked-stress.md",
+            "sha256": "8b2605132bd24627a54f06442b69e07c92b50a9d7426bdf12d1cd01dcffc581f",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/24-three-channel-locked-stress.md"
+          },
+          {
+            "path": "docs/targets/target-a/26-tube-shield-sector-balance.md",
+            "sha256": "15e470ca494ddf19b5a7fe80a558b2cff01bab824539a0367a2b628436367798",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/26-tube-shield-sector-balance.md"
+          },
+          {
+            "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+            "sha256": "0399e4947619293dfda7818c8961c18a48cf762c2f8c5e0d8e956099ca08db29",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-01/verify.py",
+            "sha256": "7265f783cf0a5ebcb7c26169b50796ff7af900a39e086fa3d1560959d0a2b920",
+            "commit": "52a89ded959be4c96db4bdc4622ee73f7f63c3bd",
+            "identity": "research-packages/e99-pass-20261018-local-01/verify.py"
+          },
+          {
+            "path": "research-packages/target-a-fan-tube-ledger/README.md",
+            "sha256": "55309cc95d01366db9825e070c5097e122a75282aeab2d5a587b324cb9e14e7a",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "research-packages/target-a-fan-tube-ledger/README.md"
+          },
+          {
+            "path": "research-packages/target-a-fan-tube-ledger/evidence.json",
+            "sha256": "a50f8ed5dd71243b7db653d058a93b964dd1a6462d8dc95e488f2cdabec1fba3",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "research-packages/target-a-fan-tube-ledger/evidence.json"
+          },
+          {
+            "path": "research-packages/target-a-fan-tube-ledger/verify.py",
+            "sha256": "9bb3ff34ec011f2b3748c6857d631701e194d07a6d8d38af00fbc1f3a74d9bd8",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "research-packages/target-a-fan-tube-ledger/verify.py"
+          },
+          {
+            "path": "research-packages/target-a-full-tube-fan-ledger/README.md",
+            "sha256": "c2ba77428425b800a5c3127c6ce8494ed37e42a0a8dccae20c46579bb8de794b",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "research-packages/target-a-full-tube-fan-ledger/README.md"
+          },
+          {
+            "path": "research-packages/target-a-full-tube-fan-ledger/evidence.json",
+            "sha256": "536fc5c16377c98961a8240b0450d9b6749667f733c2b35d62998527837638e3",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "research-packages/target-a-full-tube-fan-ledger/evidence.json"
+          },
+          {
+            "path": "research-packages/target-a-full-tube-fan-ledger/verify.py",
+            "sha256": "a91e488b03f58b777eb5c9de7e897f7a078315f6ee410fd336082d61d4dbce3e",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "research-packages/target-a-full-tube-fan-ledger/verify.py"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Sections 102, 174, 175; uses jointly chosen admissible basis and auxiliary matching to define matching-dependent sector counts.",
+      "source_claim_caveats": "Frozen README selected a measurable basis but did not specify measurable auxiliary matching mu_0 needed for C_i/O_i/Xi_Sigma. A basis selector alone does not establish these functions measurable.",
+      "remaining_obligations": "Original frozen head requires repair. Integration repair 8bc3d8f specifies a finite lexicographic joint (basis,mu_0) selector and Borel fibers; reviewer B is independently auditing the corrected contribution. No canonical promotion or full historic dependency audit.",
+      "exact_repair": "Original head does not specify measurable auxiliary matching mu_0. Integration commit 8bc3d8f adds finite lexicographic joint selector (B,mu_0) and Borel fibers; reviewer B audits corrected contribution.",
+      "integration_rechecks": {
+        "commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+        "scope_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-repair-scope.json",
+        "focused_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-pr117.log",
+        "independent_corrected_contribution_review": "reviewer B"
+      }
+    },
+    {
+      "number": 118,
+      "exact_head": "6295e0dc87031fe8418bff50bd9923014072df0f",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 4,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 4,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "shared_exact_head_audit",
+      "disposition": "accept_scoped",
+      "coverage": "Report proof checked: centered Gram identity and interpolation; endpoint rank consequence limited to n<=3. No verifier submitted.",
+      "commands_and_results": [
+        {
+          "command": "git diff --name-only 7d0a450fe66991036541023f95c44c064a04b6a8...6295e0dc87031fe8418bff50bd9923014072df0f; compare path set/count/blob ids/modes with prs/118.json",
+          "result": "PASS",
+          "exit_code": 0,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+        }
+      ],
+      "source_bindings": {
+        "explicit_report_bindings_or_provenance": [
+          {
+            "path": "docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md",
+            "sha256_at_exact_head": "5cbef599ca920062cd082a00dfd7199b52e86871993f0d05a780ee549abb5c6c",
+            "git_blob": "717c209d8b07a9e9b7a586b764abfdfb2218cf7e",
+            "artifact_metadata": {
+              "artifact_id": "ART-529F1202FE2E",
+              "canonical": false,
+              "claim_ids": [],
+              "claim_statuses": {},
+              "index": "docs/state/artifact-index.jsonl",
+              "status": "unreviewed",
+              "target": "shared"
+            },
+            "explicit_commit_references_in_report": [
+              "7d0a450fe66991036541023f95c44c064a04b6a8",
+              "927961c6a25c0044de5bf9258bda79e1de4c9ce6",
+              "db766e0e25b562054df26aeec7e627d5a579dd6d",
+              "f623b43b9895a325b12710d6770eb8968d42a39a"
+            ],
+            "generated_reading_paths_in_same_PR": [
+              "reading/docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md"
+            ],
+            "generated_reading_is_not_scientific_source": true
+          }
+        ],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins PR958 report and prior source-side audit in the audit report; the report records exact destination hashes. PR130 audits the distinct color-lift route and does not duplicate this check.",
+      "source_claim_caveats": "Explicitly excludes PR958 color lift, flattening, palette certificates, and PR960 additions. No full audit of PR958 historical dependencies.",
+      "remaining_obligations": "Full certificate replay deferred to root; generated views checked at frozen inventory scope.",
+      "exact_repair": null
+    },
+    {
+      "number": 120,
+      "exact_head": "c3718cde305ec74b6dae380292b0bc646cee8f20",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_geometric_regression_package",
+      "disposition": "accept_archive",
+      "coverage": "Coordinates, exact rational pair distances, complete strict neighborhoods, all shore matchings, disjoint segment controls, and Hall values directly reconstructed; package verifier passes.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-homelab-01/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.03,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr120-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-pass-20261018-homelab-01/SOURCES.json",
+        "pin_count": 7,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/state/theorem-state.yaml",
+            "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/state/theorem-state.yaml"
+          },
+          {
+            "path": "docs/targets/target-a/20-zero-slack-normalization.md",
+            "sha256": "29050c565c02816f425e09f1a01598e1012b689d0508618465e406cf3918ca40",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/20-zero-slack-normalization.md"
+          },
+          {
+            "path": "docs/targets/target-a/15-two-shadow-planarity.md",
+            "sha256": "06e5080f576dd695f4196adc225525b9f314bf65685fd1f509ce3d15f77de8f8",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/15-two-shadow-planarity.md"
+          },
+          {
+            "path": "docs/targets/target-a/18-common-neighbor-sdr-regression.md",
+            "sha256": "d585a57280fa391816a3354d07af96f618c7e1a3cf640f36d0f8a9445f9c2629",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/18-common-neighbor-sdr-regression.md"
+          },
+          {
+            "path": "docs/targets/target-a/29-lens-source-gate-refinements.md",
+            "sha256": "ee1d31457082639f55a90b1474bfc92753c0a7dc4fc828a65bdd2fe5643ca550",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/29-lens-source-gate-refinements.md"
+          },
+          {
+            "path": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+            "sha256": "585d984a913b92dbe9d7d6dd63d02ad1c77a20f0caa35ff3fa0ffb35274c3502",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-01/verify.py",
+            "sha256": "c6677f46f700c1f6c5830f3e711213b33b1857e2978c76d4cff0c47ae67ff28e",
+            "commit": "c3718cde305ec74b6dae380292b0bc646cee8f20",
+            "identity": "finite-geometric-regression-checker"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins baseline source statement and target documentation; audit PR148 independently rechecks this regression.",
+      "source_claim_caveats": "Nonglobal local counterexample. For H=conv(A), alpha_1(H)=|A|=2 only under the stated segment interpretation, while K+B/global hypotheses fail.",
+      "remaining_obligations": "Archive remains partially reviewed; root owns complete certificate replay.",
+      "exact_repair": null
+    },
+    {
+      "number": 121,
+      "exact_head": "7f4dac815680da2b8ad6b0623369aeab3a730978",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_geometric_regression_package",
+      "disposition": "hold",
+      "coverage": "Original finite verifier passes but omitted proof that its origin-centered grid lies in H. PR148 analytically repairs that specific inclusion with sqrt(8)+1/sqrt(3)<4<3sqrt(3).",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-homelab-08/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.03,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr121-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-pass-20261018-homelab-08/SOURCES.json",
+        "pin_count": 4,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/targets/target-a/20-zero-slack-normalization.md",
+            "sha256": "29050c565c02816f425e09f1a01598e1012b689d0508618465e406cf3918ca40",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/20-zero-slack-normalization.md"
+          },
+          {
+            "path": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+            "sha256": "585d984a913b92dbe9d7d6dd63d02ad1c77a20f0caa35ff3fa0ffb35274c3502",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md"
+          },
+          {
+            "path": "docs/problem/statement.md",
+            "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/problem/statement.md"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-08/verify.py",
+            "sha256": "c087949713318a11f16300ba5f491aa70c7c415b5b912d35c9679892a12281f8",
+            "commit": "7f4dac815680da2b8ad6b0623369aeab3a730978",
+            "identity": "exact-rational-geometric-full-shore-extension-checker"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins original frozen source and prior Target A notes; PR148 audit directly checks original exact heads.",
+      "source_claim_caveats": "Original checker asserted max |g|^2=8<27, which compares radii about different centers: H is centered at x=(1/2,sqrt(3)/6), not the origin.",
+      "remaining_obligations": "Original requires repair. Integration commit 8bc3d8f adds |g|<3, |x|<1, 16<27 triangle bound, preserves original coordinates, refreshes checker pin; focused corrected verifier passes. Reviewer B is independently auditing corrected contribution.",
+      "exact_repair": "Original verifier used max |g|^2=8<27 about origin but H is centered at x=(1/2,sqrt(3)/6). Integration commit 8bc3d8f preserves grid coordinates and proves |g|<3, |x|<1, 4^2<27; refreshes verifier digest. Corrected focused run passes; reviewer B audits correction.",
+      "integration_rechecks": {
+        "commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+        "scope_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-repair-scope.json",
+        "focused_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-pr121.log",
+        "independent_corrected_contribution_review": "reviewer B"
+      }
+    },
+    {
+      "number": 122,
+      "exact_head": "05d497cfff0427697a5d716b886accb5cbdf2fc3",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_audit_package",
+      "disposition": "accept_archive",
+      "coverage": "Analytic geometry/population/averaging reconstructed; exact rational endpoint checker passes and checks constants/threshold. Does not re-run full historical source proof.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-local-09/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.04,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr122-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-pass-20261018-local-09/SOURCES.json",
+        "pin_count": 5,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/problem/statement.md",
+            "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/problem/statement.md"
+          },
+          {
+            "path": "docs/state/theorem-state.yaml",
+            "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/state/theorem-state.yaml"
+          },
+          {
+            "path": "docs/targets/target-c/candidate-registry.json",
+            "sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-c/candidate-registry.json"
+          },
+          {
+            "path": "docs/reports/population_reserve_independent_reconstruction_2026-10-15.md",
+            "sha256": "280ad14b9ab8e265903cdbb55970934b6cde112e9fda511c9d361fa261b322eb",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/population_reserve_independent_reconstruction_2026-10-15.md"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-09/verify.py",
+            "sha256": "caa746a8996dfe131a2709b3a875f45cf79d78b3b7579d78da0b0de38fc762ba",
+            "commit": "05d497cfff0427697a5d716b886accb5cbdf2fc3",
+            "identity": "exact-constant-audit"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins PR1008/source package artifacts and candidate registry; source pins validated. Frozen candidate-registry pin is updated in integration to current bytes at 8bc3d8f.",
+      "source_claim_caveats": "Does not prove successful-packet existence for every sufficiently large triangle-free global minimizer; candidate remains unreviewed and noncanonical.",
+      "remaining_obligations": "Repin verified in 173b3dd; archive partially reviewed; full certificate replay deferred.",
+      "exact_repair": null
+    },
+    {
+      "number": 123,
+      "exact_head": "c6c61707cd2dc733a305de55ffcd7db4b6df6c8f",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_conditional_audit_package",
+      "disposition": "accept_archive",
+      "coverage": "Finite 3-source/3-packet enumeration and rational false-edge control pass; conditional proof directly reviewed.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-homelab-09/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.23,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr123-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-pass-20261018-homelab-09/SOURCES.json",
+        "pin_count": 6,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/reports/global_joint_diameter_cover_exchange_2026-10-12.md",
+            "sha256": "b804a22586186c7162cbff4f028b0b2ec3185e0353f9eb47dcd7d77e57a7e8cd",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/global_joint_diameter_cover_exchange_2026-10-12.md"
+          },
+          {
+            "path": "research/verify_global_joint_exchange_2026_10_12.py",
+            "sha256": "86b4f68c0510a7b3d2fea81456728751c3946daf7adcc6ae85a4af13d86f98a8",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "research/verify_global_joint_exchange_2026_10_12.py"
+          },
+          {
+            "path": "docs/targets/target-c/candidate-registry.json",
+            "sha256": "16b1c0e7c6eb747a954d7310a526543c28a62d7f99206a5537c0c61c83b0f081",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-c/candidate-registry.json"
+          },
+          {
+            "path": "docs/problem/statement.md",
+            "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/problem/statement.md"
+          },
+          {
+            "path": "docs/audits/pr957_autonomous_proof_audit_2026-10-15.md",
+            "sha256": "a7b0ba682d107135802294b5dc2a70022955f2a90fecada17c0234874f7f00a7",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/audits/pr957_autonomous_proof_audit_2026-10-15.md"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-09/verify.py",
+            "sha256": "82a133d7eb49bfa5fe8865118d6fb9e71e58c743c7fc9adea7d277c043b5f854",
+            "commit": "c6c61707cd2dc733a305de55ffcd7db4b6df6c8f",
+            "identity": "independent-small-graph-audit-checker"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins PR957 audit/report and baseline candidate registry. The original registry pin matches the frozen baseline; integration repins to current registry bytes at 8bc3d8f.",
+      "source_claim_caveats": "Registry shorthand admitting extra cross-conflict edges invalidates the value; the audit identifies the need to say exactly the conflict edges and notes a stale historical source-audit digest. The package does not silently repair or promote that registry claim.",
+      "remaining_obligations": "Conditional source caveats remain open; repin verified at 173b3dd; no all-history audit.",
+      "exact_repair": null
+    },
+    {
+      "number": 125,
+      "exact_head": "804f1658e27b424da16535b53bcb825c394c7711",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_topology_identity_package",
+      "disposition": "accept_archive",
+      "coverage": "Topology/Euler proof inspected; checker passes on disk/annulus/disconnected fixtures. Hole count in code is inferred as components-chi, not an independent complement flood-fill.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-local-03/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.03,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr125-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-pass-20261018-local-03/SOURCES.json",
+        "pin_count": 6,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/targets/target-b/README.md",
+            "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/README.md"
+          },
+          {
+            "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+            "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/01-jammed-rhombic-branch.md"
+          },
+          {
+            "path": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+            "sha256": "43c490a092d644dd42831ec60359701c9c77106f927623c5fd7f0585ba83c83c",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md"
+          },
+          {
+            "path": "docs/problem/statement.md",
+            "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/problem/statement.md"
+          },
+          {
+            "path": "docs/STATE.md",
+            "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/STATE.md"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-local-03/verify.py",
+            "sha256": "520ceea1c852e8be43b7924bf26308853578f75f245a8c8066950c8357c16585",
+            "commit": "804f1658e27b424da16535b53bcb825c394c7711",
+            "identity": "finite-exact-euler-checker"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Uses finite embedded rhombic examples and stated source-label convention; PR145 independently audits the identity.",
+      "source_claim_caveats": "Strict n-1 lattice comparison gives one shell side but no lower endpoint or global theorem.",
+      "remaining_obligations": "Archive partially reviewed; full certificate replay deferred.",
+      "exact_repair": null
+    },
+    {
+      "number": 128,
+      "exact_head": "e80e7e35b1130d2cc7824468d243f8393434b9b2",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_finite_phase_grid_package",
+      "disposition": "accept_archive",
+      "coverage": "Exact path-pair controls and perpendicular strict competitor analytically reviewed; verifier passes finite arithmetic and boundary controls.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-homelab-03/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.03,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr128-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-pass-20261018-homelab-03/SOURCES.json",
+        "pin_count": 8,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/problem/statement.md",
+            "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/problem/statement.md"
+          },
+          {
+            "path": "docs/STATE.md",
+            "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/STATE.md"
+          },
+          {
+            "path": "docs/targets/target-b/README.md",
+            "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/README.md"
+          },
+          {
+            "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+            "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/01-jammed-rhombic-branch.md"
+          },
+          {
+            "path": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+            "sha256": "43c490a092d644dd42831ec60359701c9c77106f927623c5fd7f0585ba83c83c",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md"
+          },
+          {
+            "path": "docs/reports/target_b_trimmed_grid_phase_star_exclusion_2026-09-05.md",
+            "sha256": "4013536ad4ca97b13f9c0c7d39ca6911cec3f1fc8f1897cf406b5ae3eba3ab86",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_trimmed_grid_phase_star_exclusion_2026-09-05.md"
+          },
+          {
+            "path": "docs/research/bottleneck-brief.md",
+            "sha256": "90eadcfab8e97d1c294f73950de41102f9bbd6c380ed7f71e2f7495aaa15a5b0",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/research/bottleneck-brief.md"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-03/verify.py",
+            "sha256": "4b27abbe0df9d5b841f4c578028861e6eb3d142c692a26c58c63032b59d95f78",
+            "commit": "e80e7e35b1130d2cc7824468d243f8393434b9b2",
+            "identity": "exact-rational-all-pairs-checker"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins baseline Target B notes; PR146 independently reconstructs same finite endpoint.",
+      "source_claim_caveats": "The construction is not a global minimizer or source-extraction proof.",
+      "remaining_obligations": "Archive partially reviewed; full certificate replay deferred.",
+      "exact_repair": null
+    },
+    {
+      "number": 130,
+      "exact_head": "d44c691183ca3a789a6bedee05ff867220f440ca",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 9,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 9,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "shared_color_lift_audit",
+      "disposition": "hold",
+      "coverage": "Core affine-rank/flattening criterion reconstructed, but the claimed strict full-source competitor is false as written: the frozen report uses the unnormalized lift, which leaves same-color distances unchanged and increases cross-color squared distances. The exact finite checker covers only rank screens and does not test this metric claim. See a-scoped-proof-audits.json; original head remains held.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-homelab-10/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.32,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr130-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-pass-20261018-homelab-10/SOURCES.json",
+        "pin_count": 1,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-10/verify.py",
+            "sha256": "307a943442736010f4f66fee09f15cffca84159b657c6fafbaae6cd3750fbcd3",
+            "commit": "d44c691183ca3a789a6bedee05ff867220f440ca",
+            "identity": "independent-exact-finite-screen"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [
+          {
+            "path": "docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
+            "sha256_at_exact_head": "e71728dc3c001cc37e7ac2caca4c50d390bb54b054a2438601bd36a8cd7fe951",
+            "git_blob": "a85a9b64fa649399f837a12d802281d6d4c1151e",
+            "artifact_metadata": {
+              "artifact_id": "ART-E9A5A4332059",
+              "canonical": false,
+              "claim_ids": [],
+              "claim_statuses": {},
+              "index": "docs/state/artifact-index.jsonl",
+              "status": "unreviewed",
+              "target": "shared"
+            },
+            "explicit_commit_references_in_report": [
+              "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+              "7d0a450fe66991036541023f95c44c064a04b6a8"
+            ],
+            "generated_reading_paths_in_same_PR": [
+              "reading/docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md"
+            ],
+            "generated_reading_is_not_scientific_source": true
+          }
+        ],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins PR958 source report/audit with explicit source head and hashes; PR118\u2019s squared-distance audit explicitly excludes this route.",
+      "source_claim_caveats": "Original frozen report defines (p_i,t z_c) without normalization while asserting strict contraction. For this formula, same-color squared distances stay d^2 and different-color squared distances become d^2+t^2; contacts in different colors cease to be contacts and the diameter can increase. The proposed normalized formulas are documented as a repair direction only; this reviewer did not independently review the amended head.",
+      "remaining_obligations": "Independent mathematical review of corrected contribution on amendment ee8f9df94a8a1043098482386bbbc6a893214330 is assigned to reviewer C; no canonical promotion. Full certificate replay remains root-owned.",
+      "exact_repair": {
+        "commit": "ee8f9df94a8a1043098482386bbbc6a893214330",
+        "required_scope": "Normalize (p_i,t z_c) by sqrt(1+t^2); show same-color dprime^2=d^2/(1+t^2), different-color dprime^2=(d^2+t^2)/(1+t^2), use proper coloring plus t^2<min_same_color(d^2-1) to preserve all lower bounds and strictly contract every noncontact. Reviewer C owns independent complete corrected-head audit; not reviewed here."
+      },
+      "independent_correction_review": "separate reviewer C audit; excluded from this record"
+    },
+    {
+      "number": 131,
+      "exact_head": "35c3bdb387c714e8a4f51f48e13a6b684cea7151",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 6,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 6,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_embedded_two_grain_package",
+      "disposition": "accept_archive",
+      "coverage": "Exact point-pair and incidence checker passes; PR144 independent audit reconstructs 15-mask domain, metric and interface ledger.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-homelab-07/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.04,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr131-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-pass-20261018-homelab-07/SOURCES.json",
+        "pin_count": 4,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+            "sha256": "b8242aa0efaea70bc0bd02321785a14d19779a11eef3d13efc487a4ecc6e7179",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_interface_capacity_2026-10-17.md"
+          },
+          {
+            "path": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+            "sha256": "a1ecda90c62bbe13b93a1c4091fb0ec333255a27014c6536a2b03d588608e5fb",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md"
+          },
+          {
+            "path": "docs/targets/target-b/README.md",
+            "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/README.md"
+          },
+          {
+            "path": "research-packages/e99-pass-20261018-homelab-07/verify.py",
+            "sha256": "9c69b11f0772e06ca5d5eb995dca1e74aaa2b026a43f4df23c80e35359a347c3",
+            "commit": "35c3bdb387c714e8a4f51f48e13a6b684cea7151",
+            "identity": "rational-two-grain-rhombic-disk-checker"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins baseline problem/Target B sources and exact package outputs.",
+      "source_claim_caveats": "Finite fixture only; no macroscopic retained-core, PC1, or global minimizer conclusion.",
+      "remaining_obligations": "Archive partially reviewed; full certificate replay deferred.",
+      "exact_repair": null
+    },
+    {
+      "number": 138,
+      "exact_head": "d17d45aebb04811c920d03f46c50a2337fe19a98",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_conditional_oler_remainder_package",
+      "disposition": "accept_archive",
+      "coverage": "Analytic identity and bounds directly reconstructed; finite exact hexagonal controls pass. PR176 independent conditional audit covers the omitted source pin and the separate-envelope limit.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019t054318z-01/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.07,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr138-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-macbook-20261019t054318z-01/SOURCES.json",
+        "pin_count": 10,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/STATE.md",
+            "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/STATE.md"
+          },
+          {
+            "path": "docs/research/priority-state.json",
+            "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/research/priority-state.json"
+          },
+          {
+            "path": "docs/state/theorem-state.yaml",
+            "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/state/theorem-state.yaml"
+          },
+          {
+            "path": "docs/targets/target-a/02-scaffold-and-hall.md",
+            "sha256": "18b0297422f207a1b3afdea166b413ccd86d9a5d9c26d26da9794d3e6ac39548",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/02-scaffold-and-hall.md"
+          },
+          {
+            "path": "docs/targets/target-a/08-prescribed-phase-alignment.md",
+            "sha256": "de6abaaaac9207cb295129edc4b578e5afed484af2baa3038071575330eb1e07",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/08-prescribed-phase-alignment.md"
+          },
+          {
+            "path": "docs/targets/target-a/17-plateau-response-lift.md",
+            "sha256": "07a55cd61e593aa17d68a984982809bd7c4cf6f064c513e7a5cd7226d6fe2777",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/17-plateau-response-lift.md"
+          },
+          {
+            "path": "docs/targets/target-a/24-three-channel-locked-stress.md",
+            "sha256": "8b2605132bd24627a54f06442b69e07c92b50a9d7426bdf12d1cd01dcffc581f",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/24-three-channel-locked-stress.md"
+          },
+          {
+            "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+            "sha256": "0399e4947619293dfda7818c8961c18a48cf762c2f8c5e0d8e956099ca08db29",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md"
+          },
+          {
+            "path": "research/target_a_one_source_arm_per_contact_edge_2026-10-03.md",
+            "sha256": "572671d08cdc4592f1d73a2af1d123b996b15ee46e4936bec53bf2c238022621",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "Related noncanonical zero-slack source-gate report"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019t054318z-01/verify.py",
+            "sha256": "dbb68cf395cd7562dbaf5fb3761e5abb451aad39d7cd2582520a4c5103610774",
+            "commit": "d17d45aebb04811c920d03f46c50a2337fe19a98",
+            "identity": "verify.py"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "PR117 phase inequality and Section 155 hypotheses; exact conditional package provenance. PR176 independently audits it.",
+      "source_claim_caveats": "Original SOURCES/VERIFY omitted docs/targets/target-a/03-source-response.md (Section 114.2 strict translated-lattice bound); root added exact baseline pin b56ef322... and VERIFY entry in 8f291fb. Original frozen head alone is not archive-complete.",
+      "remaining_obligations": "Acceptance applies only to repaired integration tree after exact source-pin repair; my scoped recheck confirms baseline SHA-256 b56ef3220026dc503d3dfb43ecf04eeb041a05f8b8944234624806712bfc91a4 and current declaration. No source-specific positive lower bound; full replay deferred.",
+      "exact_repair": "Original SOURCES.json/VERIFY.json omitted docs/targets/target-a/03-source-response.md. Integration commit 8f291fb adds baseline commit 7d0a450fe66991036541023f95c44c064a04b6a8, SHA-256 b56ef3220026dc503d3dfb43ecf04eeb041a05f8b8944234624806712bfc91a4 to SOURCES and the path to VERIFY; corrected source pin and verifier recheck pass.",
+      "integration_rechecks": {
+        "commit": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+        "scope_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-repair-scope.json",
+        "focused_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-pr138.log"
+      }
+    },
+    {
+      "number": 140,
+      "exact_head": "9183fd057255719a3535bf8f9c5feeec9d711c80",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 58,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 58,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "shared_target_a_audit_report",
+      "disposition": "accept_scoped",
+      "coverage": "Direct report proof review; exact audit verifier passes on frozen and integration tree; 55 pre-existing changed docs/reports restored byte-identically to baseline.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research/verify_target_a_balanced_triad_relay_audit_2026_10_19.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.03,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr140-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "explicit_report_bindings_or_provenance": [
+          {
+            "path": "docs/audits/target_a_balanced_triad_relay_independent_audit_2026-10-19.md",
+            "sha256_at_exact_head": "a5b8ad6615685784307855df582bfe72ae678339c9faa1d73d31fa22136256c3",
+            "git_blob": "24907b955a696e64c21a9e87fde0667c2e59adae",
+            "artifact_metadata": {
+              "artifact_id": "ART-C9D48BD05340",
+              "canonical": false,
+              "claim_ids": [],
+              "claim_statuses": {},
+              "index": "docs/state/artifact-index.jsonl",
+              "status": "unreviewed",
+              "target": "target-a"
+            },
+            "explicit_commit_references_in_report": [
+              "12fbd21a8dbded545743579cf3ac34e2c54f1496",
+              "7d0a450fe66991036541023f95c44c064a04b6a8"
+            ],
+            "generated_reading_paths_in_same_PR": [],
+            "generated_reading_is_not_scientific_source": true
+          }
+        ],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins PR107 exact source head and report hash; new independent checker is in research/. Generated artifact-index/reading edition is generated metadata, not new scientific source.",
+      "source_claim_caveats": "PR140 original head added a theorem-state header to 55 pre-existing frozen docs/audits/reports; these were unrelated collateral changes. Core new audit and verifier are scoped; no global triad extraction.",
+      "remaining_obligations": "55 originals restored by 8f291fb; index and reading view regenerated; rechecked at 173b3dd. Full certificate replay deferred.",
+      "exact_repair": "Original head prepended theorem-state metadata to 55 pre-existing docs/audits and docs/reports files. Integration 8f291fb restored all 55 to baseline bytes and regenerated artifact index/reading; at 173b3dd the new report has one index record and manifest source hash matches. Reading edition is intentionally transformed (math normalization), not byte-identical to source.",
+      "integration_rechecks": {
+        "commit": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+        "scope_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-repair-scope.json",
+        "focused_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-pr140.log"
+      }
+    },
+    {
+      "number": 141,
+      "exact_head": "51328362b97eaaa264eeecc022bbe93bfd1a561a",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 4,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 4,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "shared_phase_selector_audit",
+      "disposition": "accept_scoped",
+      "coverage": "Detailed conditional proof and selector reconstruction reviewed; no verifier submitted.",
+      "commands_and_results": [
+        {
+          "command": "git diff --name-only 7d0a450fe66991036541023f95c44c064a04b6a8...51328362b97eaaa264eeecc022bbe93bfd1a561a; compare path set/count/blob ids/modes with prs/141.json",
+          "result": "PASS",
+          "exit_code": 0,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+        }
+      ],
+      "source_bindings": {
+        "explicit_report_bindings_or_provenance": [
+          {
+            "path": "docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md",
+            "sha256_at_exact_head": "37e978dd20afb49f1ec67b94e00d70a43c5c37c5a06acb8b9c9924866e42a1ee",
+            "git_blob": "c555a50adc7c2a0825991f2f59c4c81773c093cc",
+            "artifact_metadata": {
+              "artifact_id": "ART-118DFF33EB07",
+              "canonical": false,
+              "claim_ids": [],
+              "claim_statuses": {},
+              "index": "docs/state/artifact-index.jsonl",
+              "status": "unreviewed",
+              "target": "target-a"
+            },
+            "explicit_commit_references_in_report": [
+              "52a89ded959be4c96db4bdc4622ee73f7f63c3bd",
+              "7d0a450fe66991036541023f95c44c064a04b6a8"
+            ],
+            "generated_reading_paths_in_same_PR": [
+              "reading/docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md"
+            ],
+            "generated_reading_is_not_scientific_source": true
+          }
+        ],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Audits exact PR117 source head and uses Section 102/174 admissibility premises.",
+      "source_claim_caveats": "Does not establish source area criterion (2) for any canonical/global source; conditional premise only.",
+      "remaining_obligations": "Referenced by PR171; integration repair 8bc3d8f implements selector clarification. Full certificate replay deferred.",
+      "exact_repair": null
+    },
+    {
+      "number": 144,
+      "exact_head": "3e00b10e911ea587540aec53c7d0f5ede3b6ab5c",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 6,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 6,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_independent_audit_package",
+      "disposition": "accept_archive",
+      "coverage": "Exact package checker passes; all 15 mask domains and point/interface geometry reconstructed.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019T054318Z-16/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.04,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr144-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-macbook-20261019T054318Z-16/SOURCES.json",
+        "pin_count": 7,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/targets/target-b/README.md",
+            "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "target-b-route-scope"
+          },
+          {
+            "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+            "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "section-50-retained-core-hypothesis"
+          },
+          {
+            "path": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+            "sha256": "a1ecda90c62bbe13b93a1c4091fb0ec333255a27014c6536a2b03d588608e5fb",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "pc1-positive-trim-hypotheses"
+          },
+          {
+            "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+            "sha256": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "audited-pc1-scope"
+          },
+          {
+            "path": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+            "sha256": "b8242aa0efaea70bc0bd02321785a14d19779a11eef3d13efc487a4ecc6e7179",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "predecessor-shared-interface-formula"
+          },
+          {
+            "path": "docs/research/review-artifacts/merge-2026-10-18/review-b.txt",
+            "sha256": "23cac8d0f93e1b994a852ae9a0a5a62c25eb309be9fdf3264212e178651461cf",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "agent-review-of-pr86-predecessor"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-16/verify.py",
+            "sha256": "0a78c95fd1d61938100d05f2ee46e5432e2b1cfed1d27d1fbc6184a46409c8d4",
+            "commit": "3e00b10e911ea587540aec53c7d0f5ede3b6ab5c",
+            "identity": "independent-rational-l-patch-and-mask-enumerator"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins PR131 exact package and baseline source hashes.",
+      "source_claim_caveats": "No global retained-core or endpoint result.",
+      "remaining_obligations": "Archive partially reviewed; full certificate replay deferred.",
+      "exact_repair": null
+    },
+    {
+      "number": 145,
+      "exact_head": "908db6f22151301bac4a19a2dd9474fc368bfeeb",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_independent_audit_package",
+      "disposition": "accept_archive",
+      "coverage": "Proof and independent checker reviewed; checker separately traverses graph topology; upper shell side only.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019t054318z-13/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.03,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr145-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-macbook-20261019t054318z-13/SOURCES.json",
+        "pin_count": 5,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/targets/target-b/README.md",
+            "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/README.md"
+          },
+          {
+            "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+            "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/01-jammed-rhombic-branch.md"
+          },
+          {
+            "path": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+            "sha256": "43c490a092d644dd42831ec60359701c9c77106f927623c5fd7f0585ba83c83c",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md"
+          },
+          {
+            "path": "docs/problem/statement.md",
+            "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/problem/statement.md"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019t054318z-13/verify.py",
+            "sha256": "04fdec57b6129598d675edebd5a2cc0dcba5cc11b92631ea68598950d6e0ab4d",
+            "commit": "908db6f22151301bac4a19a2dd9474fc368bfeeb",
+            "identity": "independent-euler-control-checker"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins PR125 exact package; source-label convention explicitly stated.",
+      "source_claim_caveats": "No lower shell estimate or global theorem.",
+      "remaining_obligations": "Archive partially reviewed; full certificate replay deferred.",
+      "exact_repair": null
+    },
+    {
+      "number": 146,
+      "exact_head": "d85cc940519044d7381a7382cc3c6d2f0c404d5c",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_independent_audit_package",
+      "disposition": "accept_archive",
+      "coverage": "Analytic construction and exact checker pass; independent proof corroborates pair-distance controls.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019T054318Z-14/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 1.36,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr146-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-macbook-20261019T054318Z-14/SOURCES.json",
+        "pin_count": 7,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+            "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/01-jammed-rhombic-branch.md"
+          },
+          {
+            "path": "docs/targets/target-b/README.md",
+            "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/README.md"
+          },
+          {
+            "path": "tasks/target-b-phase-deficit-competitor.md",
+            "sha256": "a5675f9add46e6d4c9550a4d2e1d0e16fc4ef4634825ff703fa445764654cb57",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "tasks/target-b-phase-deficit-competitor.md"
+          },
+          {
+            "path": "docs/RESEARCH_WORKFLOW.md",
+            "sha256": "20c62e9558f29af4e415f3a1236e751ceb49bfff9ff4d8a51b9205cf4e7ff7f4",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/RESEARCH_WORKFLOW.md"
+          },
+          {
+            "path": "docs/REVIEW_POLICY.md",
+            "sha256": "2d7addd05f8d8cbf360df40db0940f6da9768faf34899a371b47306f3af0f3bd",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/REVIEW_POLICY.md"
+          },
+          {
+            "path": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+            "sha256": "43c490a092d644dd42831ec60359701c9c77106f927623c5fd7f0585ba83c83c",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "Target B phase-cut orientation prerequisite"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-14/verify.py",
+            "sha256": "98a1d7cca72c3129fe4978ca3fecb6db1580b63b829a03f1f26fe466c0a7db34",
+            "commit": "d85cc940519044d7381a7382cc3c6d2f0c404d5c",
+            "identity": "independent exact finite audit verifier"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins PR128 frozen package and baseline notes.",
+      "source_claim_caveats": "Finite family and endpoint only; not global.",
+      "remaining_obligations": "Archive partially reviewed; full certificate replay deferred.",
+      "exact_repair": null
+    },
+    {
+      "number": 147,
+      "exact_head": "a110c4062443aa55c480cfd353af3f756e565803",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 6,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 6,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_scalable_disk_regression_package",
+      "disposition": "hold",
+      "coverage": "Direct analytic source geometry and finite exact checker inspected and pass; PR170 independently audits the family. A hull-turn list in the original README is factually wrong though nonloadbearing for most reported quantities.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019T054318Z-02/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 2.57,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr147-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-macbook-20261019T054318Z-02/SOURCES.json",
+        "pin_count": 10,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/problem/statement.md",
+            "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/problem/statement.md"
+          },
+          {
+            "path": "docs/state/theorem-state.yaml",
+            "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/state/theorem-state.yaml"
+          },
+          {
+            "path": "docs/targets/target-b/README.md",
+            "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/README.md"
+          },
+          {
+            "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+            "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/01-jammed-rhombic-branch.md"
+          },
+          {
+            "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+            "sha256": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md"
+          },
+          {
+            "path": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+            "sha256": "a1ecda90c62bbe13b93a1c4091fb0ec333255a27014c6536a2b03d588608e5fb",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md"
+          },
+          {
+            "path": "docs/reports/target_b_multicomponent_penetration_budget_2026-09-05.md",
+            "sha256": "d855c448a3daa7d09962a0e4089aeaf3d50eca15c5ea2dadc10eb6c9bd8ae843",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_multicomponent_penetration_budget_2026-09-05.md"
+          },
+          {
+            "path": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+            "sha256": "b8242aa0efaea70bc0bd02321785a14d19779a11eef3d13efc487a4ecc6e7179",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_interface_capacity_2026-10-17.md"
+          },
+          {
+            "path": "docs/reports/target_b_seed084_near_disk_seamed_grain_regression_2026-10-13.md",
+            "sha256": "f7cfb96f91950723b9dae50da2abd6a190376d1011986d2bc2dc7283444ac938",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_seed084_near_disk_seamed_grain_regression_2026-10-13.md"
+          },
+          {
+            "path": "research-packages/e99-macbook-20261019T054318Z-02/verify.py",
+            "sha256": "78b07279168ce3aad0ee261e16f847a99b68132729e897a0b9c07bd311f478b0",
+            "commit": "a110c4062443aa55c480cfd353af3f756e565803",
+            "identity": "macbook-02-scalable-two-grain-exact-ledger-verifier"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "PR147 original checker and PR170 audit; PR167 arithmetic is conditional on this geometry.",
+      "source_claim_caveats": "Original README sequence `s,c+s,s+c,s-c,s,s-c` is wrong for listed cyclic hull. Correct sequence is m^2*(s,s+c,s-c,s,s-c,s+c). Original checker computes convex hull from finite points and does not directly assert this tuple or boundary-cycle/Section-50.1 checks; PR170 supplies independent exact checks.",
+      "remaining_obligations": "Integration repair at 173b3dd corrects sequence; because I supplied correction direction, final independent correction acceptance is reserved to agent C. Keep original PR head held pending that review; no global minimizer conclusion.",
+      "exact_repair": "Original README hull-turn list s,c+s,s+c,s-c,s,s-c is wrong for its listed cyclic vertices. Corrected at 173b3dd to m^2*(s,s+c,s-c,s,s-c,s+c), which follows by direct determinant expansion and matches PR170 independent exact audit. Because reviewer A supplied this correction direction, agent C must independently review corrected contribution; original head remains held.",
+      "integration_rechecks": {
+        "commit": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+        "scope_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-repair-scope.json",
+        "focused_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-pr147.log",
+        "independent_corrected_contribution_review": "agent C"
+      }
+    },
+    {
+      "number": 148,
+      "exact_head": "bda9381cefaf9cff39855ac8653ff6134050918d",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "shared_geometric_shore_audit",
+      "disposition": "accept_scoped",
+      "coverage": "Direct audit report and verifier inspected and run; PR121 centered-grid inclusion analytically repaired in audit, then integration package repair independently focused-run.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research/verify_pr120_pr121_full_shore_audit_2026_10_19.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.04,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr148-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "explicit_report_bindings_or_provenance": [
+          {
+            "path": "docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md",
+            "sha256_at_exact_head": "9d53529b58cec2e01c376531a28fa5a90059ecab100302990e5de62737ca4a84",
+            "git_blob": "0ac0b5ee7605a6ae2b3b1a915533d4029fe32820",
+            "artifact_metadata": {
+              "artifact_id": "ART-8B174A3EC107",
+              "canonical": false,
+              "claim_ids": [],
+              "claim_statuses": {},
+              "index": "docs/state/artifact-index.jsonl",
+              "status": "unreviewed",
+              "target": "target-a"
+            },
+            "explicit_commit_references_in_report": [
+              "025628b23df11470d4eb87ee981edbf250498691",
+              "7d0a450fe66991036541023f95c44c064a04b6a8",
+              "7f4dac815680da2b8ad6b0623369aeab3a730978",
+              "c3718cde305ec74b6dae380292b0bc646cee8f20"
+            ],
+            "generated_reading_paths_in_same_PR": [
+              "reading/docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md"
+            ],
+            "generated_reading_is_not_scientific_source": true
+          }
+        ],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins exact PR120 and PR121 heads; uses PR102 abstract Hall comparison as benchmark without reproving it.",
+      "source_claim_caveats": "Local regressions only; PR120 degenerates to segment hull and PR121 fails zero-slack source capacity. No Section-168 global extraction.",
+      "remaining_obligations": "No global closure; full certificate replay deferred.",
+      "exact_repair": null
+    },
+    {
+      "number": 154,
+      "exact_head": "85bfde3bb5d07312a38de24b19d08e1b009f36dd",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_pathwise_triad_package",
+      "disposition": "accept_archive",
+      "coverage": "Universal direction projection-moment proof reconstructed; exact finite triad fixture and two-anchor failure control pass.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-homelab-01/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.05,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr154-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-paired-20261019t091333z-homelab-01/SOURCES.json",
+        "pin_count": 8,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/problem/statement.md",
+            "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/problem/statement.md"
+          },
+          {
+            "path": "docs/STATE.md",
+            "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/STATE.md"
+          },
+          {
+            "path": "docs/targets/target-a/README.md",
+            "sha256": "2865f3e52893aaf6b7d0ad45a4133894896698241f9de9cb3a5e74251c64aa1a",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/README.md"
+          },
+          {
+            "path": "docs/targets/target-a/10-quantitative-kuperberg-rate.md",
+            "sha256": "84014aee1e919d5c9e930817a84746e50831c0475d95d93cc100290c90efc96e",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/10-quantitative-kuperberg-rate.md"
+          },
+          {
+            "path": "docs/targets/target-a/12-toeout-kuperberg-improvement.md",
+            "sha256": "e4f5620b9f4a4ebe2fd46e1fda47adcd3bb0c435812f3dd4f59da373fa157592",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/12-toeout-kuperberg-improvement.md"
+          },
+          {
+            "path": "docs/targets/target-a/13-five-block-local-optimality.md",
+            "sha256": "f1a389e994ffd428b83a721a7d18d833bd35b5ab4a078bc3c611619b194bb7ad",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/13-five-block-local-optimality.md"
+          },
+          {
+            "path": "docs/targets/target-a/14-sharp-symmetric-five-block.md",
+            "sha256": "296af3860efef18e844eaada048e6709c29decedb7e070ced580b223d3e0ddd3",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/14-sharp-symmetric-five-block.md"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-01/verify.py",
+            "sha256": "f125a6fbe345627e3192d2a8d16651689cca7739e31b34f636f1919181d79cca",
+            "commit": "85bfde3bb5d07312a38de24b19d08e1b009f36dd",
+            "identity": "exact-Qsqrt3-fixture-and-control-checker"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "PR107 exact four-label predecessor; PR140 independent rigid-translation audit. Scope extends only the triad-bearing label.",
+      "source_claim_caveats": "Does not rule out affine strain fixing p while moving other labels; no canonical monomer-domain triad extraction or Target A embedding.",
+      "remaining_obligations": "Archive partially reviewed; full certificate replay deferred.",
+      "exact_repair": null
+    },
+    {
+      "number": 165,
+      "exact_head": "8a8fc613f98ad667ad8299eb14ec75e7041523ec",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_annular_slit_euler_ledger",
+      "disposition": "accept_archive",
+      "coverage": "Checker implementation and proof reconstructed; explicit 6x6-minus-2x2 annulus fixture passes exact incidence, boundary-cycle and Euler controls.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-homelab-02/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.04,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr165-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-paired-20261019t091333z-homelab-02/SOURCES.json",
+        "pin_count": 4,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/targets/target-b/README.md",
+            "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/README.md"
+          },
+          {
+            "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+            "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/01-jammed-rhombic-branch.md"
+          },
+          {
+            "path": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+            "sha256": "43c490a092d644dd42831ec60359701c9c77106f927623c5fd7f0585ba83c83c",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-02/verify.py",
+            "sha256": "f908f027a9cab82e4d4b16880667a01fb049250f73f9fa0e3042a3a806851b4f",
+            "commit": "8a8fc613f98ad667ad8299eb14ec75e7041523ec",
+            "identity": "standalone-exact-checker"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Uses constructed embedded rhombic annulus; no external source proof dependency.",
+      "source_claim_caveats": "Topological ledger only. Reusing doubled interface and separate cut-boundary terms double-counts; fixing the original source count would require negative outside-label count in fixture.",
+      "remaining_obligations": "Archive partially reviewed; no global source theorem.",
+      "exact_repair": null
+    },
+    {
+      "number": 167,
+      "exact_head": "7dcdd58a9e394e848c0f79c567d9ee6a97441834",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 5,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 5,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_conditional_pc3_arithmetic_package",
+      "disposition": "accept_archive",
+      "coverage": "Exact rational/surd checker passes m=12,16,20,24; analytic monotonicity/formula supports all stated m. Does not replay PR147 geometry.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-local-02/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.04,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr167-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-paired-20261019t091333z-local-02/SOURCES.json",
+        "pin_count": 5,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/targets/target-b/README.md",
+            "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/README.md"
+          },
+          {
+            "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+            "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/01-jammed-rhombic-branch.md"
+          },
+          {
+            "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+            "sha256": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-02/verify.py",
+            "sha256": "55c4285f2993a0f7eecda1bbf6678e6414570edd03a3185acceee082c0cd4483",
+            "commit": "7dcdd58a9e394e848c0f79c567d9ee6a97441834",
+            "identity": "exact-conditional-arithmetic-checker"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-local-02/README.md",
+            "sha256": "f3ffe00e9d709e92c0fa7e14387bbc10c8a0f35bbde1282fc342e6416c40836c",
+            "commit": "7dcdd58a9e394e848c0f79c567d9ee6a97441834",
+            "identity": "conditional-PC3-payment-obstruction"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Explicitly conditional on PR147 geometry; PR170 independently reconstructs it, and PR147 README turn-list repair is in 173b3dd.",
+      "source_claim_caveats": "Finite runs alone do not prove universal m; universality uses displayed exact formulas and slope/parameter bounds. Original PR147 citation has nonloadbearing wrong turn list now corrected in integration.",
+      "remaining_obligations": "No global endpoint conclusion; archive partially reviewed; parent may retain this conditional artifact with PR147 repair caveat.",
+      "exact_repair": null
+    },
+    {
+      "number": 170,
+      "exact_head": "1aa26046438d0cce249ecf6948a8ad9bde1936e3",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 6,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 6,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_independent_geometry_audit_package",
+      "disposition": "accept_archive",
+      "coverage": "Independent verifier passes m=12,16,20,24 and analytically proves all m>=12 divisible by four; checks pairwise distances, contact graph, boundary cycle, hull support, Section-50.1 filter, pruning, trim and payment signs.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-homelab-16/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 5.86,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr170-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-paired-20261019t091333z-homelab-16/SOURCES.json",
+        "pin_count": 15,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "docs/problem/statement.md",
+            "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/problem/statement.md"
+          },
+          {
+            "path": "docs/state/theorem-state.yaml",
+            "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/state/theorem-state.yaml"
+          },
+          {
+            "path": "docs/targets/target-b/README.md",
+            "sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/README.md"
+          },
+          {
+            "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+            "sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-b/01-jammed-rhombic-branch.md"
+          },
+          {
+            "path": "docs/theory/03-oler-shell.md",
+            "sha256": "a6cf18f38fa01c6969e2aecd8211278a0dcd1530efb190551d815ed0e86c0521",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/theory/03-oler-shell.md"
+          },
+          {
+            "path": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+            "sha256": "a1ecda90c62bbe13b93a1c4091fb0ec333255a27014c6536a2b03d588608e5fb",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md"
+          },
+          {
+            "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+            "sha256": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md"
+          },
+          {
+            "path": "docs/REVIEW_POLICY.md",
+            "sha256": "2d7addd05f8d8cbf360df40db0940f6da9768faf34899a371b47306f3af0f3bd",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/REVIEW_POLICY.md"
+          },
+          {
+            "path": "docs/research/agent-procedure.md",
+            "sha256": "6c718ede15c0dad1ee955c19b3fdefa730e021ecae080c02be914b59331adf1f",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/research/agent-procedure.md"
+          },
+          {
+            "path": "docs/research/bottleneck-brief.md",
+            "sha256": "90eadcfab8e97d1c294f73950de41102f9bbd6c380ed7f71e2f7495aaa15a5b0",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/research/bottleneck-brief.md"
+          },
+          {
+            "path": "docs/research/priority-state.json",
+            "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/research/priority-state.json"
+          },
+          {
+            "path": "docs/research/research-family-status.md",
+            "sha256": "669edba719155f55a435032fc6e9f30b76fde98e26553b2e9a5efc7755e02f28",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/research/research-family-status.md"
+          },
+          {
+            "path": "docs/research/run-reconciliation-2026-10-17.md",
+            "sha256": "72d092762ad2a53d6e0ae931c5c832b5dcfd38da7306f46fa11ec871c907e2f1",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/research/run-reconciliation-2026-10-17.md"
+          },
+          {
+            "path": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+            "sha256": "b8242aa0efaea70bc0bd02321785a14d19779a11eef3d13efc487a4ecc6e7179",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/reports/target_b_interface_capacity_2026-10-17.md"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-16/verify.py",
+            "sha256": "b38be6157bec0f82d87284663447fcd97b4b2c31b2144241739b2c9def76215a",
+            "commit": "1aa26046438d0cce249ecf6948a8ad9bde1936e3",
+            "identity": "independent exact-head audit verifier for PR #147"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Audits frozen PR147 exact source head; report records the corrected hull-turn sequence.",
+      "source_claim_caveats": "Its finite verifier samples four m values; the all-m result rests on analytic formulas in the README. No global minimizer claim.",
+      "remaining_obligations": "Archive partially reviewed; root owns full certificate replay.",
+      "exact_repair": null
+    },
+    {
+      "number": 171,
+      "exact_head": "e63dd4d3c1dcf8eb4bf56b47b112a888d3c0af4c",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 4,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 4,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "shared_source_area_remainder_identity",
+      "disposition": "accept_scoped",
+      "coverage": "Report-only analytic algebra and Steiner/area identities directly checked; no standalone verifier.",
+      "commands_and_results": [
+        {
+          "command": "git diff --name-only 7d0a450fe66991036541023f95c44c064a04b6a8...e63dd4d3c1dcf8eb4bf56b47b112a888d3c0af4c; compare path set/count/blob ids/modes with prs/171.json",
+          "result": "PASS",
+          "exit_code": 0,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+        }
+      ],
+      "source_bindings": {
+        "explicit_report_bindings_or_provenance": [
+          {
+            "path": "docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md",
+            "sha256_at_exact_head": "3add910a66379a6ec6ea28dec3ff3e4ebc0358819930fe07e9854afbeda3378c",
+            "git_blob": "ab1fb964c0fd3b46e0597ccbc219a693b327908a",
+            "artifact_metadata": {
+              "artifact_id": "ART-3277611F6658",
+              "canonical": false,
+              "claim_ids": [],
+              "claim_statuses": {},
+              "index": "docs/state/artifact-index.jsonl",
+              "status": "unreviewed",
+              "target": "target-a"
+            },
+            "explicit_commit_references_in_report": [
+              "025628b23df11470d4eb87ee981edbf250498691",
+              "2e4a3e1e73877df4f4756fcb4c7d331dcda1327f",
+              "52a89ded959be4c96db4bdc4622ee73f7f63c3bd",
+              "7d0a450fe66991036541023f95c44c064a04b6a8",
+              "d17d45aebb04811c920d03f46c50a2337fe19a98"
+            ],
+            "generated_reading_paths_in_same_PR": [
+              "reading/docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md"
+            ],
+            "generated_reading_is_not_scientific_source": true
+          }
+        ],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "PR117 joint selector audit PR141; PR138 exact remainder; explicit README hashes for both predecessor packages.",
+      "source_claim_caveats": "Proves no sign for source term sigma_1 and no source-specific upper/lower bound; result is an identity, not positivity of remainder.",
+      "remaining_obligations": "No source conclusion or Level I closure; full certificate replay deferred.",
+      "exact_repair": null
+    },
+    {
+      "number": 176,
+      "exact_head": "62a366b501472aa22d42a7fcc8e175747c0cc179",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "inventory_count": 6,
+      "inventory_match": {
+        "frozen_ref_equal": true,
+        "merge_base_is_base": true,
+        "github_git_assignment_path_sets_equal": true,
+        "blob_ids_equal_github_file_sha": true,
+        "no_mode_changes": true,
+        "count": 6,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/inventory-authentication.json"
+      },
+      "lane": "isolated_independent_oler_audit_package",
+      "disposition": "accept_archive",
+      "coverage": "Analytic identities and separate-envelope obstruction reconstructed; exact source count, Oler-slack and area-gap finite controls pass.",
+      "commands_and_results": [
+        {
+          "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-paired-20261019t091333z-homelab-15/verify.py'",
+          "exit_code": 0,
+          "result": "PASS",
+          "seconds": 0.04,
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr176-normal.log"
+        }
+      ],
+      "source_bindings": {
+        "declaration": "research-packages/e99-paired-20261019t091333z-homelab-15/SOURCES.json",
+        "pin_count": 12,
+        "all_frozen_hashes_match_declared_source_commit_or_head": true,
+        "VERIFY_input_paths_equal_SOURCES_inputs": true,
+        "inputs": [
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-15/REVIEW_TARGET.json",
+            "sha256": "28e7829a01c51e0df229a73ba6be4195a4d2db742109f40ef737b505a56f98eb",
+            "commit": "62a366b501472aa22d42a7fcc8e175747c0cc179",
+            "identity": "research-packages/e99-paired-20261019t091333z-homelab-15/REVIEW_TARGET.json"
+          },
+          {
+            "path": "docs/STATE.md",
+            "sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/STATE.md"
+          },
+          {
+            "path": "docs/problem/statement.md",
+            "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/problem/statement.md"
+          },
+          {
+            "path": "docs/research/priority-state.json",
+            "sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/research/priority-state.json"
+          },
+          {
+            "path": "docs/state/theorem-state.yaml",
+            "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/state/theorem-state.yaml"
+          },
+          {
+            "path": "docs/targets/target-a/02-scaffold-and-hall.md",
+            "sha256": "18b0297422f207a1b3afdea166b413ccd86d9a5d9c26d26da9794d3e6ac39548",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/02-scaffold-and-hall.md"
+          },
+          {
+            "path": "docs/targets/target-a/03-source-response.md",
+            "sha256": "b56ef3220026dc503d3dfb43ecf04eeb041a05f8b8944234624806712bfc91a4",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/03-source-response.md"
+          },
+          {
+            "path": "docs/targets/target-a/08-prescribed-phase-alignment.md",
+            "sha256": "de6abaaaac9207cb295129edc4b578e5afed484af2baa3038071575330eb1e07",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/08-prescribed-phase-alignment.md"
+          },
+          {
+            "path": "docs/targets/target-a/17-plateau-response-lift.md",
+            "sha256": "07a55cd61e593aa17d68a984982809bd7c4cf6f064c513e7a5cd7226d6fe2777",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/17-plateau-response-lift.md"
+          },
+          {
+            "path": "docs/targets/target-a/24-three-channel-locked-stress.md",
+            "sha256": "8b2605132bd24627a54f06442b69e07c92b50a9d7426bdf12d1cd01dcffc581f",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/24-three-channel-locked-stress.md"
+          },
+          {
+            "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+            "sha256": "0399e4947619293dfda7818c8961c18a48cf762c2f8c5e0d8e956099ca08db29",
+            "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+            "identity": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md"
+          },
+          {
+            "path": "research-packages/e99-paired-20261019t091333z-homelab-15/verify.py",
+            "sha256": "7676e40edcc8574f6efd39384496c4f0b7e68f6f6f48526cc76391712949131f",
+            "commit": "62a366b501472aa22d42a7fcc8e175747c0cc179",
+            "identity": "research-packages/e99-paired-20261019t091333z-homelab-15/verify.py"
+          }
+        ],
+        "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/source-pin-authentication.json",
+        "explicit_report_bindings_or_provenance": [],
+        "generated_views_are_not_scientific_sources": true
+      },
+      "dependencies_and_reuse": "Pins PR138 original package and all declared Target A source docs; separately identifies the missing Section 114.2 source-response pin.",
+      "source_claim_caveats": "Does not prove R_exact<=0 for actual source; only shows separate-envelope sufficient test cannot close. PR138 itself remains conditional on PR117 and Section 155.",
+      "remaining_obligations": "PR138 metadata pin corrected at 8f291fb; no all-historical dependency audit.",
+      "exact_repair": null
+    }
+  ],
+  "summary_counts": {
+    "total": 27,
+    "accept_archive": 16,
+    "accept_scoped": 7,
+    "hold": 4
+  }
+}

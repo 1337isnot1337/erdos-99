@@ -1,0 +1,3577 @@
+{
+  "candidate": "ee8f9df94a8a1043098482386bbbc6a893214330",
+  "tree": "71881be5f594870350c2128c1b0d45d0e1dea4dc",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "heads_reachable": 79,
+  "changed_file_rows": 445,
+  "canonical_inputs_unchanged": [
+    "docs/STATE.md",
+    "docs/state/theorem-state.yaml",
+    "docs/state/theorem-state.schema.json",
+    "research/certificates.json",
+    "docs/research/priority-state.json"
+  ],
+  "scope": "Original heads and credit retained. Metadata, derived views and explicitly reviewed amendments differ as listed; this is not mathematical promotion.",
+  "source_files": [
+    {
+      "pr": 102,
+      "path": "docs/reports/target_a_common_source_hall_overlap_2026_10_17.md",
+      "authored_blob": "2d78f162d353f13789dc4ed6f3468ce46ae5bbe5",
+      "integrated_blob": "2d78f162d353f13789dc4ed6f3468ce46ae5bbe5",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 102,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "0de8366930df0e370f078c2a9a9599b6de02f0f8",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 102,
+      "path": "reading/docs/reports/target_a_common_source_hall_overlap_2026_10_17.md",
+      "authored_blob": "f9a8b9ccc7ea737d1fe3e647b8da870591e8c401",
+      "integrated_blob": "f9a8b9ccc7ea737d1fe3e647b8da870591e8c401",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 102,
+      "path": "reading/manifest.json",
+      "authored_blob": "8b4e0f3cf5bebc196ce9ac2e60c16aa48b172a24",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 102,
+      "path": "research/verify_target_a_common_source_overlap_2026_10_17.py",
+      "authored_blob": "13b91be41dec41f46da2eb77ce472fbc3e0147aa",
+      "integrated_blob": "13b91be41dec41f46da2eb77ce472fbc3e0147aa",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 103,
+      "path": "docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md",
+      "authored_blob": "a0ef2fce1fa9be4f2234113d0a3ba19600b2dcda",
+      "integrated_blob": "e5e47288859ee459d1e1925a527599166f028615",
+      "identical": false,
+      "adaptation": "Deduplicate identical theorem metadata header; mathematical prose unchanged."
+    },
+    {
+      "pr": 103,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "69f1fa63ca584a418a2af9a8057d457811767868",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 103,
+      "path": "reading/docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md",
+      "authored_blob": "2b9c616f0d0e2281607e4a0f4b153f9d220efb5f",
+      "integrated_blob": "b5f4bd214f3b0b8ee299d130a82066b493b10acc",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 103,
+      "path": "reading/manifest.json",
+      "authored_blob": "5e79731c16d9812d25f7cde20569e3e2bc7e361f",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 104,
+      "path": "research-packages/e99-pass-20261018-local-04/README.md",
+      "authored_blob": "f70dcebbd8c93ab80f9ea54880d2eb9add05b440",
+      "integrated_blob": "f70dcebbd8c93ab80f9ea54880d2eb9add05b440",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 104,
+      "path": "research-packages/e99-pass-20261018-local-04/SOURCES.json",
+      "authored_blob": "3597a3cf38eef7cbf21c36ab03306528cfba5bdc",
+      "integrated_blob": "3597a3cf38eef7cbf21c36ab03306528cfba5bdc",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 104,
+      "path": "research-packages/e99-pass-20261018-local-04/TASK.json",
+      "authored_blob": "de7a1f85740c274fc4f5ffbb0e090e0343911e9b",
+      "integrated_blob": "de7a1f85740c274fc4f5ffbb0e090e0343911e9b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 104,
+      "path": "research-packages/e99-pass-20261018-local-04/VERIFY.json",
+      "authored_blob": "5130083e86e3f49cbab74badf409c0639f1e66fd",
+      "integrated_blob": "5130083e86e3f49cbab74badf409c0639f1e66fd",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 104,
+      "path": "research-packages/e99-pass-20261018-local-04/verify.py",
+      "authored_blob": "aa849a658ac5fd7e870a07f5c7ec58854c044afc",
+      "integrated_blob": "aa849a658ac5fd7e870a07f5c7ec58854c044afc",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 105,
+      "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/README.md",
+      "authored_blob": "1b39b8c9e02c07fdcddefd08f8ccbb05dcc20d50",
+      "integrated_blob": "1b39b8c9e02c07fdcddefd08f8ccbb05dcc20d50",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 105,
+      "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/SOURCES.json",
+      "authored_blob": "fbfc312ba70a61f371fe2cc0388ce74f8ad589c6",
+      "integrated_blob": "73c647f01edacd33779fd7826115de9d2e508fa9",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 105,
+      "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/TASK.json",
+      "authored_blob": "766000be3275976911cba96e2ace8ea5d955390b",
+      "integrated_blob": "766000be3275976911cba96e2ace8ea5d955390b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 105,
+      "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/VERIFY.json",
+      "authored_blob": "eb04934c4c6f9fac03cab169c3ddc6fda46477c9",
+      "integrated_blob": "eb04934c4c6f9fac03cab169c3ddc6fda46477c9",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 105,
+      "path": "research-packages/e99-pass-20261018-local-16-through-splice-audit/verify.py",
+      "authored_blob": "0a27ad376d873c370a717c73d6f43f63583c0d2a",
+      "integrated_blob": "0a27ad376d873c370a717c73d6f43f63583c0d2a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 106,
+      "path": "research-packages/e99-pass-20261018-homelab-04/README.md",
+      "authored_blob": "1325ca7bfcc90f17ba96498bb88f2c3a5bf7a6de",
+      "integrated_blob": "1325ca7bfcc90f17ba96498bb88f2c3a5bf7a6de",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 106,
+      "path": "research-packages/e99-pass-20261018-homelab-04/SOURCES.json",
+      "authored_blob": "697835dcee2aa1079240a97496604b92e09dad90",
+      "integrated_blob": "697835dcee2aa1079240a97496604b92e09dad90",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 106,
+      "path": "research-packages/e99-pass-20261018-homelab-04/TASK.json",
+      "authored_blob": "7f503ea5f4f10cce8a584f8e145cd1c473ce80ae",
+      "integrated_blob": "7f503ea5f4f10cce8a584f8e145cd1c473ce80ae",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 106,
+      "path": "research-packages/e99-pass-20261018-homelab-04/VERIFY.json",
+      "authored_blob": "8fec8f1477bf8663ce246f3240d3ad78f9d7ae28",
+      "integrated_blob": "8fec8f1477bf8663ce246f3240d3ad78f9d7ae28",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 106,
+      "path": "research-packages/e99-pass-20261018-homelab-04/verify.py",
+      "authored_blob": "07f758d3f24c0bcd08dc8dd2627aafeabe007ff2",
+      "integrated_blob": "07f758d3f24c0bcd08dc8dd2627aafeabe007ff2",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 107,
+      "path": "research-packages/e99-pass-20261018-local-02/README.md",
+      "authored_blob": "563fd14fd689e77ff3f6b96b2ea94533b635bc0f",
+      "integrated_blob": "563fd14fd689e77ff3f6b96b2ea94533b635bc0f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 107,
+      "path": "research-packages/e99-pass-20261018-local-02/SOURCES.json",
+      "authored_blob": "2710710860d098e0cee4eae5bec8edd904bcf7b6",
+      "integrated_blob": "2710710860d098e0cee4eae5bec8edd904bcf7b6",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 107,
+      "path": "research-packages/e99-pass-20261018-local-02/TASK.json",
+      "authored_blob": "c0f5c53c10df472f2dde0b6af0ed9b7fda5fe7c8",
+      "integrated_blob": "c0f5c53c10df472f2dde0b6af0ed9b7fda5fe7c8",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 107,
+      "path": "research-packages/e99-pass-20261018-local-02/VERIFY.json",
+      "authored_blob": "612a70f6164a8a25646e6bb32923c840db0c72a1",
+      "integrated_blob": "612a70f6164a8a25646e6bb32923c840db0c72a1",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 107,
+      "path": "research-packages/e99-pass-20261018-local-02/verify.py",
+      "authored_blob": "8ac6e97a691ca1ab430259d09deb301fc97cc3aa",
+      "integrated_blob": "8ac6e97a691ca1ab430259d09deb301fc97cc3aa",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 108,
+      "path": "docs/audits/target_c_pr950_positive_return_quantile_destination_audit_2026-10-18.md",
+      "authored_blob": "8dd3d8273917957b7128d538f9fdaf7ab344b827",
+      "integrated_blob": "8dd3d8273917957b7128d538f9fdaf7ab344b827",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 108,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "84aa2c2eb91b78fea63b4907e1bb9b07fe4ee8c8",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 108,
+      "path": "reading/docs/audits/target_c_pr950_positive_return_quantile_destination_audit_2026-10-18.md",
+      "authored_blob": "d7e1e913db62bbe1b0bdfc9e2c0c6358a43ecd25",
+      "integrated_blob": "d7e1e913db62bbe1b0bdfc9e2c0c6358a43ecd25",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 108,
+      "path": "reading/manifest.json",
+      "authored_blob": "23720be65afab95eb5dd741e325135e0c3413be5",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 109,
+      "path": "research-packages/e99-pass-20261018-local-07/README.md",
+      "authored_blob": "01739115897d91f9af77f7c4aeeca730018110f9",
+      "integrated_blob": "01739115897d91f9af77f7c4aeeca730018110f9",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 109,
+      "path": "research-packages/e99-pass-20261018-local-07/SOURCES.json",
+      "authored_blob": "fdfc63d532020f3c1a5639603b202ef684b42b44",
+      "integrated_blob": "a570918c43be3afb9e8217699e9ce7c2f4322f91",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 109,
+      "path": "research-packages/e99-pass-20261018-local-07/TASK.json",
+      "authored_blob": "2041212cebdf76c5e56f216894c4587507e65702",
+      "integrated_blob": "2041212cebdf76c5e56f216894c4587507e65702",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 109,
+      "path": "research-packages/e99-pass-20261018-local-07/VERIFY.json",
+      "authored_blob": "4870138108f4edc671223b98a57b82f8c59a1e52",
+      "integrated_blob": "4870138108f4edc671223b98a57b82f8c59a1e52",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 109,
+      "path": "research-packages/e99-pass-20261018-local-07/verify.py",
+      "authored_blob": "1def3591b4f9567f25955d62786e6ba251098571",
+      "integrated_blob": "1def3591b4f9567f25955d62786e6ba251098571",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 110,
+      "path": "research-packages/e99-pass-20261018-homelab-12/README.md",
+      "authored_blob": "761b6f89c7dcf691489e127f5a7009b7df5f3ec6",
+      "integrated_blob": "761b6f89c7dcf691489e127f5a7009b7df5f3ec6",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 110,
+      "path": "research-packages/e99-pass-20261018-homelab-12/SOURCES.json",
+      "authored_blob": "323f7930ce75f03a64546c85915d69a8d21822ab",
+      "integrated_blob": "3ff4393f8ad9c15727587397e79ed9a4a5be3fbc",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 110,
+      "path": "research-packages/e99-pass-20261018-homelab-12/TASK.json",
+      "authored_blob": "7b17d99366f4b73775b46defbbcaed8d7d85cdf8",
+      "integrated_blob": "7b17d99366f4b73775b46defbbcaed8d7d85cdf8",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 110,
+      "path": "research-packages/e99-pass-20261018-homelab-12/VERIFY.json",
+      "authored_blob": "eb282806371da5301ea6fef8fa14d282d0e5039d",
+      "integrated_blob": "eb282806371da5301ea6fef8fa14d282d0e5039d",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 110,
+      "path": "research-packages/e99-pass-20261018-homelab-12/verify.py",
+      "authored_blob": "05ed0bac078dcacdaeba79d0597ecaa072074801",
+      "integrated_blob": "05ed0bac078dcacdaeba79d0597ecaa072074801",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 111,
+      "path": "research-packages/e99-pass-20261018-local-08/README.md",
+      "authored_blob": "1065a67815726ac0644b9a5760b5bc57cc86b294",
+      "integrated_blob": "1065a67815726ac0644b9a5760b5bc57cc86b294",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 111,
+      "path": "research-packages/e99-pass-20261018-local-08/SOURCES.json",
+      "authored_blob": "439fda145bbd4c3a9f216fdbe0d4d63bf2fc5966",
+      "integrated_blob": "439fda145bbd4c3a9f216fdbe0d4d63bf2fc5966",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 111,
+      "path": "research-packages/e99-pass-20261018-local-08/TASK.json",
+      "authored_blob": "a4f385e666d3a18c81698e5c58316000613f5bf1",
+      "integrated_blob": "a4f385e666d3a18c81698e5c58316000613f5bf1",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 111,
+      "path": "research-packages/e99-pass-20261018-local-08/VERIFY.json",
+      "authored_blob": "49a7efb97b41d4786d055350d03f9b941dbef6dc",
+      "integrated_blob": "49a7efb97b41d4786d055350d03f9b941dbef6dc",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 111,
+      "path": "research-packages/e99-pass-20261018-local-08/verify.py",
+      "authored_blob": "d59acdd24e5aaed27270242490b18ebd90ad9d42",
+      "integrated_blob": "d59acdd24e5aaed27270242490b18ebd90ad9d42",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 112,
+      "path": "research-packages/e99-pass-20261018-local-14/README.md",
+      "authored_blob": "9e4b9277cfb3e643b4d04857ead7ad9b5851f442",
+      "integrated_blob": "9e4b9277cfb3e643b4d04857ead7ad9b5851f442",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 112,
+      "path": "research-packages/e99-pass-20261018-local-14/SOURCES.json",
+      "authored_blob": "2b16d9fd608a1194a3676be49b288122b63a83fd",
+      "integrated_blob": "962f7247163a21c1f21a8ca017f69571fb0b6027",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 112,
+      "path": "research-packages/e99-pass-20261018-local-14/TASK.json",
+      "authored_blob": "3542f637235d011802eace0283debba6710c7fdb",
+      "integrated_blob": "3542f637235d011802eace0283debba6710c7fdb",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 112,
+      "path": "research-packages/e99-pass-20261018-local-14/VERIFY.json",
+      "authored_blob": "55e0fdc0ce50fd540a39514ca8e6c1cb4e1cc095",
+      "integrated_blob": "55e0fdc0ce50fd540a39514ca8e6c1cb4e1cc095",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 112,
+      "path": "research-packages/e99-pass-20261018-local-14/verify.py",
+      "authored_blob": "58ed0fa4e7014ead3a99266c71d6963670f8cd43",
+      "integrated_blob": "58ed0fa4e7014ead3a99266c71d6963670f8cd43",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 113,
+      "path": "research-packages/e99-pass-20261018-homelab-11/README.md",
+      "authored_blob": "f87b6dc0d5541909572f9e5f6739a76f3bc1711f",
+      "integrated_blob": "f87b6dc0d5541909572f9e5f6739a76f3bc1711f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 113,
+      "path": "research-packages/e99-pass-20261018-homelab-11/SOURCES.json",
+      "authored_blob": "12081aec3755fe94acf52758f835d3d722375abb",
+      "integrated_blob": "12081aec3755fe94acf52758f835d3d722375abb",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 113,
+      "path": "research-packages/e99-pass-20261018-homelab-11/TASK.json",
+      "authored_blob": "8d66842d439cb67a247708080e96282394eb6c36",
+      "integrated_blob": "8d66842d439cb67a247708080e96282394eb6c36",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 113,
+      "path": "research-packages/e99-pass-20261018-homelab-11/VERIFY.json",
+      "authored_blob": "3e64b8d20656c3d451263b35d95a0d897db03946",
+      "integrated_blob": "3e64b8d20656c3d451263b35d95a0d897db03946",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 113,
+      "path": "research-packages/e99-pass-20261018-homelab-11/verify.py",
+      "authored_blob": "c496f6a1b8f76a69467e0c3dc7a58c99c4622fd9",
+      "integrated_blob": "c496f6a1b8f76a69467e0c3dc7a58c99c4622fd9",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 114,
+      "path": "research-packages/e99-pass-20261018-local-06/README.md",
+      "authored_blob": "d39eb13a962fee968a2bc33b87ecf4c0f3929fc8",
+      "integrated_blob": "d39eb13a962fee968a2bc33b87ecf4c0f3929fc8",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 114,
+      "path": "research-packages/e99-pass-20261018-local-06/SOURCES.json",
+      "authored_blob": "cf7b191c83720acfdbcc6bd1c51d42de10d55e6d",
+      "integrated_blob": "cf7b191c83720acfdbcc6bd1c51d42de10d55e6d",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 114,
+      "path": "research-packages/e99-pass-20261018-local-06/TASK.json",
+      "authored_blob": "b7a8c4ed32c32b8eb5678c6686750637a0bc63b4",
+      "integrated_blob": "b7a8c4ed32c32b8eb5678c6686750637a0bc63b4",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 114,
+      "path": "research-packages/e99-pass-20261018-local-06/VERIFY.json",
+      "authored_blob": "0de7dd2be4c6d292dfa63adec75f48ab145898d2",
+      "integrated_blob": "0de7dd2be4c6d292dfa63adec75f48ab145898d2",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 114,
+      "path": "research-packages/e99-pass-20261018-local-06/verify.py",
+      "authored_blob": "7b7de88748fb2ffaebca2f63d161f91c63611574",
+      "integrated_blob": "7b7de88748fb2ffaebca2f63d161f91c63611574",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 115,
+      "path": "research-packages/e99-pass-20261018-local-11/README.md",
+      "authored_blob": "e485d2b7f6bc3e673b09d6537540313b5de3d771",
+      "integrated_blob": "e485d2b7f6bc3e673b09d6537540313b5de3d771",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 115,
+      "path": "research-packages/e99-pass-20261018-local-11/SOURCES.json",
+      "authored_blob": "709bd83718f6aa0bbe8163a6157602e9672e201a",
+      "integrated_blob": "4b623f9130e81a872ab4bac7ad65b3aee8da3d76",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 115,
+      "path": "research-packages/e99-pass-20261018-local-11/TASK.json",
+      "authored_blob": "43f023b93808f36b9f6dffa305be53042d8c1266",
+      "integrated_blob": "43f023b93808f36b9f6dffa305be53042d8c1266",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 115,
+      "path": "research-packages/e99-pass-20261018-local-11/VERIFY.json",
+      "authored_blob": "c04efd1b4ef6be2856868c5dca72bea57b46565a",
+      "integrated_blob": "c04efd1b4ef6be2856868c5dca72bea57b46565a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 115,
+      "path": "research-packages/e99-pass-20261018-local-11/verify.py",
+      "authored_blob": "e4b6b9ef1af60b1eac7515b4b18e807e7cb29310",
+      "integrated_blob": "e4b6b9ef1af60b1eac7515b4b18e807e7cb29310",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 116,
+      "path": "docs/audits/target_c_pr948_quarter_fold_face_obstructions_independent_audit_2026-10-18.md",
+      "authored_blob": "4cfe787bef9fbc21e4f56868d069ea2a58781c1a",
+      "integrated_blob": "4cfe787bef9fbc21e4f56868d069ea2a58781c1a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 116,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "24f54da17a19be931f145bf3ed9d05edaf2e84f9",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 116,
+      "path": "reading/docs/audits/target_c_pr948_quarter_fold_face_obstructions_independent_audit_2026-10-18.md",
+      "authored_blob": "01d5960e22c6b9e9e1bcb9cf7e89dc93d3844f33",
+      "integrated_blob": "01d5960e22c6b9e9e1bcb9cf7e89dc93d3844f33",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 116,
+      "path": "reading/manifest.json",
+      "authored_blob": "5b90f94388e9ff40ad51c5e38bd5f3535a772fa2",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 117,
+      "path": "research-packages/e99-pass-20261018-local-01/README.md",
+      "authored_blob": "8bb746a92ab92639f94cf22a0ebdd3603fe46f10",
+      "integrated_blob": "bae70d5b3a8b1a3e6a562eed76f1c3269deecdf0",
+      "identical": false,
+      "adaptation": "Joint measurable basis and auxiliary matching selector, independently corrected review B."
+    },
+    {
+      "pr": 117,
+      "path": "research-packages/e99-pass-20261018-local-01/SOURCES.json",
+      "authored_blob": "26197e87fad985d8ccd981ec742c3dcabc74992f",
+      "integrated_blob": "26197e87fad985d8ccd981ec742c3dcabc74992f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 117,
+      "path": "research-packages/e99-pass-20261018-local-01/TASK.json",
+      "authored_blob": "17baf122844e0d87987320879d95b284558a9394",
+      "integrated_blob": "17baf122844e0d87987320879d95b284558a9394",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 117,
+      "path": "research-packages/e99-pass-20261018-local-01/VERIFY.json",
+      "authored_blob": "bf4272352f78fa314647732a33112a00a91efdbf",
+      "integrated_blob": "bf4272352f78fa314647732a33112a00a91efdbf",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 117,
+      "path": "research-packages/e99-pass-20261018-local-01/verify.py",
+      "authored_blob": "6b214c927ccf2098856a3209a97e763b1910b7db",
+      "integrated_blob": "6b214c927ccf2098856a3209a97e763b1910b7db",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 118,
+      "path": "docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md",
+      "authored_blob": "717c209d8b07a9e9b7a586b764abfdfb2218cf7e",
+      "integrated_blob": "717c209d8b07a9e9b7a586b764abfdfb2218cf7e",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 118,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "a0caf7195516969e56c5857690ee9524d969aecf",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 118,
+      "path": "reading/docs/audits/global_squared_distance_interpolation_pr958_independent_audit_2026-10-18.md",
+      "authored_blob": "5cb8371e38efa67fc74a384b1e562695f1db2b93",
+      "integrated_blob": "5cb8371e38efa67fc74a384b1e562695f1db2b93",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 118,
+      "path": "reading/manifest.json",
+      "authored_blob": "d9bcc4791da2f1ddd0467eadb08efcacc5448568",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 119,
+      "path": "docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+      "authored_blob": "bc9ffc399e4489edddf920463cc2341098d85853",
+      "integrated_blob": "bc9ffc399e4489edddf920463cc2341098d85853",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 119,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "fdee85ae11b1087735f5f84e3f56412ed74c6e5d",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 119,
+      "path": "reading/docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+      "authored_blob": "7f7099c5fde0520257ea7d51f79a48ae8a0b3ed4",
+      "integrated_blob": "7f7099c5fde0520257ea7d51f79a48ae8a0b3ed4",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 119,
+      "path": "reading/manifest.json",
+      "authored_blob": "2662488afdae70a20da7aaa397316660a8466bb5",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 120,
+      "path": "research-packages/e99-pass-20261018-homelab-01/README.md",
+      "authored_blob": "e2f03ed78150cb6d7b3d380fb45bc8b454cf9b23",
+      "integrated_blob": "e2f03ed78150cb6d7b3d380fb45bc8b454cf9b23",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 120,
+      "path": "research-packages/e99-pass-20261018-homelab-01/SOURCES.json",
+      "authored_blob": "18be9ce4238032c45a480cbf44bb89707875bd0f",
+      "integrated_blob": "18be9ce4238032c45a480cbf44bb89707875bd0f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 120,
+      "path": "research-packages/e99-pass-20261018-homelab-01/TASK.json",
+      "authored_blob": "3658000cf98ced4f2d55be198fd889eac0f44e43",
+      "integrated_blob": "3658000cf98ced4f2d55be198fd889eac0f44e43",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 120,
+      "path": "research-packages/e99-pass-20261018-homelab-01/VERIFY.json",
+      "authored_blob": "495891cc833dcb29797af5ad3e83b50320d7a717",
+      "integrated_blob": "495891cc833dcb29797af5ad3e83b50320d7a717",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 120,
+      "path": "research-packages/e99-pass-20261018-homelab-01/verify.py",
+      "authored_blob": "7285d0d5d2a041d9e8ee38a78fa3721402cfaaec",
+      "integrated_blob": "7285d0d5d2a041d9e8ee38a78fa3721402cfaaec",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 121,
+      "path": "research-packages/e99-pass-20261018-homelab-08/README.md",
+      "authored_blob": "70f113a7c978739611c83efcd874dcabfc30a3ed",
+      "integrated_blob": "819df107f49daee6f949b22321b8e26df9e7d6c9",
+      "identical": false,
+      "adaptation": "Correct centered capacity bound using original grid; exact checker and self-pin updated, independently corrected review B."
+    },
+    {
+      "pr": 121,
+      "path": "research-packages/e99-pass-20261018-homelab-08/SOURCES.json",
+      "authored_blob": "2b09d4c94e905999a6f158a57c5f6115c0bbc331",
+      "integrated_blob": "8d3d78df2474c12c3bef96f8d322f259ac83c44f",
+      "identical": false,
+      "adaptation": "Correct centered capacity bound using original grid; exact checker and self-pin updated, independently corrected review B."
+    },
+    {
+      "pr": 121,
+      "path": "research-packages/e99-pass-20261018-homelab-08/TASK.json",
+      "authored_blob": "da3a4d5d6ba16fa6201b257110492322f9c4e62b",
+      "integrated_blob": "da3a4d5d6ba16fa6201b257110492322f9c4e62b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 121,
+      "path": "research-packages/e99-pass-20261018-homelab-08/VERIFY.json",
+      "authored_blob": "2f3e8657fa08d824df3ed04daa7cf96d300bda31",
+      "integrated_blob": "2f3e8657fa08d824df3ed04daa7cf96d300bda31",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 121,
+      "path": "research-packages/e99-pass-20261018-homelab-08/verify.py",
+      "authored_blob": "8f26c8878681d692e5ccc4acedc281b3af1d9416",
+      "integrated_blob": "0390b95099ebc26823923e1ecb878f5f7f397e31",
+      "identical": false,
+      "adaptation": "Correct centered capacity bound using original grid; exact checker and self-pin updated, independently corrected review B."
+    },
+    {
+      "pr": 122,
+      "path": "research-packages/e99-pass-20261018-local-09/README.md",
+      "authored_blob": "732f85e17c59790c47140698dacb9c83c0545934",
+      "integrated_blob": "732f85e17c59790c47140698dacb9c83c0545934",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 122,
+      "path": "research-packages/e99-pass-20261018-local-09/SOURCES.json",
+      "authored_blob": "f28ba08933990f71a2f8acf0666f6a86d6b2e45b",
+      "integrated_blob": "8b7f8f7935976723658314bd93c04c3ec2e56c37",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 122,
+      "path": "research-packages/e99-pass-20261018-local-09/TASK.json",
+      "authored_blob": "5c6e28d72d38e258ee4dda8af0cedd560f0cdb38",
+      "integrated_blob": "5c6e28d72d38e258ee4dda8af0cedd560f0cdb38",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 122,
+      "path": "research-packages/e99-pass-20261018-local-09/VERIFY.json",
+      "authored_blob": "09f30413ea6c5023c53fa80c659c1e61567e21bf",
+      "integrated_blob": "09f30413ea6c5023c53fa80c659c1e61567e21bf",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 122,
+      "path": "research-packages/e99-pass-20261018-local-09/verify.py",
+      "authored_blob": "13408fee9dcac41a1e6e5bb710838d61cb9049d7",
+      "integrated_blob": "13408fee9dcac41a1e6e5bb710838d61cb9049d7",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 123,
+      "path": "research-packages/e99-pass-20261018-homelab-09/README.md",
+      "authored_blob": "b2ad11b14d86dd70849b9a049de6170eafbb4e60",
+      "integrated_blob": "b2ad11b14d86dd70849b9a049de6170eafbb4e60",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 123,
+      "path": "research-packages/e99-pass-20261018-homelab-09/SOURCES.json",
+      "authored_blob": "2187ea238c4af37fa3e4de735afb4b277ad985fa",
+      "integrated_blob": "5bd8a448739f293be7a63cc9a09a20af38980b7a",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 123,
+      "path": "research-packages/e99-pass-20261018-homelab-09/TASK.json",
+      "authored_blob": "37f0fb6a6952a39ec04a016099304e2782c320c3",
+      "integrated_blob": "37f0fb6a6952a39ec04a016099304e2782c320c3",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 123,
+      "path": "research-packages/e99-pass-20261018-homelab-09/VERIFY.json",
+      "authored_blob": "e177a21da3bba0f3184bfbaa8a00579194038733",
+      "integrated_blob": "e177a21da3bba0f3184bfbaa8a00579194038733",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 123,
+      "path": "research-packages/e99-pass-20261018-homelab-09/verify.py",
+      "authored_blob": "92e7636574d304d311e91629e17c94153cbdea33",
+      "integrated_blob": "92e7636574d304d311e91629e17c94153cbdea33",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 124,
+      "path": "docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+      "authored_blob": "c319d0c9ca4d983e9b3e768f8c0cd26dbf7ee61c",
+      "integrated_blob": "40a1e6cbfd3265c33564ecc37079c93464794718",
+      "identical": false,
+      "adaptation": "Remove second placeholder theorem-state header; mathematical prose unchanged."
+    },
+    {
+      "pr": 124,
+      "path": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+      "authored_blob": "dedef4a2a9674dbc136dab6781c3132761c3a65b",
+      "integrated_blob": "1418dded6d004a1540dd9755b384bdff7f2f4ea1",
+      "identical": false,
+      "adaptation": "Combine PR124/139 dependency wording with PR153 orientation warning; lifecycle remains unreviewed and noncanonical."
+    },
+    {
+      "pr": 124,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "09b39533afdcc277ab8c74791b0caec3a7ae529b",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 124,
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "authored_blob": "c5fd9ad4c739e30d15fc96161fb50ee5b36e765b",
+      "integrated_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "identical": false,
+      "adaptation": "Combine PR124/139 dependency wording with PR153 orientation warning; lifecycle remains unreviewed and noncanonical."
+    },
+    {
+      "pr": 124,
+      "path": "reading/docs/audits/target_c_positive_leaf_anchor_destination_review_2026-10-18.md",
+      "authored_blob": "be3e2f8fe6cd91a5452a8d59128b5f124ecc3726",
+      "integrated_blob": "9393f01b1bdfb1b8b250942094047b695d43709e",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 124,
+      "path": "reading/docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+      "authored_blob": "093f54f1ecfdfe0282fe5feb6d30714bf1b54a5d",
+      "integrated_blob": "ad45d2057cd4774b871e1ded67773dbb896243e8",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 124,
+      "path": "reading/manifest.json",
+      "authored_blob": "8846f678e88169f10a8011b3cdd4cd034332b989",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 125,
+      "path": "research-packages/e99-pass-20261018-local-03/README.md",
+      "authored_blob": "3c8ed73ef46d3b7a4a6f539008441f969643b0fd",
+      "integrated_blob": "3c8ed73ef46d3b7a4a6f539008441f969643b0fd",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 125,
+      "path": "research-packages/e99-pass-20261018-local-03/SOURCES.json",
+      "authored_blob": "488aff3522b5baba78b4b79f459ffad76d6e322d",
+      "integrated_blob": "488aff3522b5baba78b4b79f459ffad76d6e322d",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 125,
+      "path": "research-packages/e99-pass-20261018-local-03/TASK.json",
+      "authored_blob": "fab03001154d41d32871fb2f340a4cab15ea1da4",
+      "integrated_blob": "fab03001154d41d32871fb2f340a4cab15ea1da4",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 125,
+      "path": "research-packages/e99-pass-20261018-local-03/VERIFY.json",
+      "authored_blob": "920d4a6393a3009be22cd3ff4043d8baa0af2a96",
+      "integrated_blob": "920d4a6393a3009be22cd3ff4043d8baa0af2a96",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 125,
+      "path": "research-packages/e99-pass-20261018-local-03/verify.py",
+      "authored_blob": "ca75ba41c6bc89abd58f305c73d88ce64a5ca38a",
+      "integrated_blob": "ca75ba41c6bc89abd58f305c73d88ce64a5ca38a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 126,
+      "path": "research-packages/e99-pass-20261018-homelab-05/README.md",
+      "authored_blob": "084f016496b977ca3f2b8da5b365497a3d6f6089",
+      "integrated_blob": "084f016496b977ca3f2b8da5b365497a3d6f6089",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 126,
+      "path": "research-packages/e99-pass-20261018-homelab-05/SOURCES.json",
+      "authored_blob": "f326c21574b4dfc467586f29070893b05c280c3f",
+      "integrated_blob": "f326c21574b4dfc467586f29070893b05c280c3f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 126,
+      "path": "research-packages/e99-pass-20261018-homelab-05/TASK.json",
+      "authored_blob": "512030aabef5b2a4acee42944e027db29af2bc87",
+      "integrated_blob": "512030aabef5b2a4acee42944e027db29af2bc87",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 126,
+      "path": "research-packages/e99-pass-20261018-homelab-05/VERIFY.json",
+      "authored_blob": "449e0dc509689b093532cbf255229dd2c0ca8d5e",
+      "integrated_blob": "449e0dc509689b093532cbf255229dd2c0ca8d5e",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 126,
+      "path": "research-packages/e99-pass-20261018-homelab-05/verify.py",
+      "authored_blob": "1c1e4e074d41adea20d1fcf4dd79eaffa7e5abf0",
+      "integrated_blob": "1c1e4e074d41adea20d1fcf4dd79eaffa7e5abf0",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 127,
+      "path": "docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+      "authored_blob": "22274b1bf9b4a8f770f2b47c4b286a53951b2e63",
+      "integrated_blob": "22274b1bf9b4a8f770f2b47c4b286a53951b2e63",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 127,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "11e9bc3d3f8fde21d93b1f5e241deaf0414e8668",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 127,
+      "path": "reading/docs/audits/target_c_open_cell_phase_flux_independent_audit_2026-10-18.md",
+      "authored_blob": "33eb02aadfdb9e4480a6bf5ba525d7d825fdb829",
+      "integrated_blob": "33eb02aadfdb9e4480a6bf5ba525d7d825fdb829",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 127,
+      "path": "reading/manifest.json",
+      "authored_blob": "a287f9d586e1dbc6773d2be856ff3d22d6a79f08",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 128,
+      "path": "research-packages/e99-pass-20261018-homelab-03/README.md",
+      "authored_blob": "d5b9052ca03b37db7ee3f1e5d410d757821bbccd",
+      "integrated_blob": "d5b9052ca03b37db7ee3f1e5d410d757821bbccd",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 128,
+      "path": "research-packages/e99-pass-20261018-homelab-03/SOURCES.json",
+      "authored_blob": "95608248240fc9686ddc09c622d9e3ad8516dec9",
+      "integrated_blob": "95608248240fc9686ddc09c622d9e3ad8516dec9",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 128,
+      "path": "research-packages/e99-pass-20261018-homelab-03/TASK.json",
+      "authored_blob": "5229a2433b6c9aa6f633b4f20f90433c7f809ee6",
+      "integrated_blob": "5229a2433b6c9aa6f633b4f20f90433c7f809ee6",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 128,
+      "path": "research-packages/e99-pass-20261018-homelab-03/VERIFY.json",
+      "authored_blob": "b5160c0d604cddf21b6f9712f56dd7a956ecd4a1",
+      "integrated_blob": "b5160c0d604cddf21b6f9712f56dd7a956ecd4a1",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 128,
+      "path": "research-packages/e99-pass-20261018-homelab-03/verify.py",
+      "authored_blob": "b36592a12681df3f05711c2366ed691bd74ebe8c",
+      "integrated_blob": "b36592a12681df3f05711c2366ed691bd74ebe8c",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 129,
+      "path": "research-packages/e99-pass-20261018-homelab-06/README.md",
+      "authored_blob": "2d569047981eadce953422d873d05aa44d1084c8",
+      "integrated_blob": "2d569047981eadce953422d873d05aa44d1084c8",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 129,
+      "path": "research-packages/e99-pass-20261018-homelab-06/SOURCES.json",
+      "authored_blob": "4c7a5d824cedd1971bcab2f50d4324623af2b58f",
+      "integrated_blob": "4c7a5d824cedd1971bcab2f50d4324623af2b58f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 129,
+      "path": "research-packages/e99-pass-20261018-homelab-06/TASK.json",
+      "authored_blob": "783def9d9d41c76a97240640d03686fd7c58a257",
+      "integrated_blob": "783def9d9d41c76a97240640d03686fd7c58a257",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 129,
+      "path": "research-packages/e99-pass-20261018-homelab-06/VERIFY.json",
+      "authored_blob": "214623f71dadf361265cfc73d81be7cdc57cd9bd",
+      "integrated_blob": "214623f71dadf361265cfc73d81be7cdc57cd9bd",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 129,
+      "path": "research-packages/e99-pass-20261018-homelab-06/verify.py",
+      "authored_blob": "157b9d1bd41b9cee081e960b92cf3ed20a952d9a",
+      "integrated_blob": "157b9d1bd41b9cee081e960b92cf3ed20a952d9a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 130,
+      "path": "docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
+      "authored_blob": "a85a9b64fa649399f837a12d802281d6d4c1151e",
+      "integrated_blob": "2e47cd940ecd1b19f39645bebead428a35f539cb",
+      "identical": false,
+      "adaptation": "Explicit normalized unit-edge colour lift and complete squared-distance small-parameter argument; independent amendment audit C."
+    },
+    {
+      "pr": 130,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "234daf4eda73eb30b5269f43e804ce53ca633d9b",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 130,
+      "path": "reading/docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
+      "authored_blob": "f70e587593ffa283c9b2f195ff5201ebf90a3cd6",
+      "integrated_blob": "052800c17078932e9df6268118ac0cc6c28375f7",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 130,
+      "path": "reading/manifest.json",
+      "authored_blob": "63b1ded1bfe72b46564b1f4f448e13db26553743",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 130,
+      "path": "research-packages/e99-pass-20261018-homelab-10/README.md",
+      "authored_blob": "a84d83e5d26eccf3e5ab5d496d78fbc35c910658",
+      "integrated_blob": "50f3f068360715da67cbd62bcb9b1b8417013af4",
+      "identical": false,
+      "adaptation": "Explicit normalized unit-edge colour lift and complete squared-distance small-parameter argument; independent amendment audit C."
+    },
+    {
+      "pr": 130,
+      "path": "research-packages/e99-pass-20261018-homelab-10/SOURCES.json",
+      "authored_blob": "5ddd56446eddea26795d53ef6748523d40ea04aa",
+      "integrated_blob": "5ddd56446eddea26795d53ef6748523d40ea04aa",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 130,
+      "path": "research-packages/e99-pass-20261018-homelab-10/TASK.json",
+      "authored_blob": "b090908dcb0e411bcc96b0b5d963a05052196904",
+      "integrated_blob": "ecdef40e320560779a73bc1e522b784e1f1f7ba3",
+      "identical": false,
+      "adaptation": "Explicit normalized unit-edge colour lift and complete squared-distance small-parameter argument; independent amendment audit C."
+    },
+    {
+      "pr": 130,
+      "path": "research-packages/e99-pass-20261018-homelab-10/VERIFY.json",
+      "authored_blob": "ce630c489d5dec26aec6373b9d06854d903527fc",
+      "integrated_blob": "ce630c489d5dec26aec6373b9d06854d903527fc",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 130,
+      "path": "research-packages/e99-pass-20261018-homelab-10/verify.py",
+      "authored_blob": "4a975f6369f9212f83e3630d7fe81f4ef43351a0",
+      "integrated_blob": "4a975f6369f9212f83e3630d7fe81f4ef43351a0",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 131,
+      "path": "research-packages/e99-pass-20261018-homelab-07/README.md",
+      "authored_blob": "3df9a2b3711c16ab16b03bb568914180a1ce52d4",
+      "integrated_blob": "3df9a2b3711c16ab16b03bb568914180a1ce52d4",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 131,
+      "path": "research-packages/e99-pass-20261018-homelab-07/RESULT.json",
+      "authored_blob": "2892e93d302056fe3a32656c96e8472c473f29d4",
+      "integrated_blob": "2892e93d302056fe3a32656c96e8472c473f29d4",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 131,
+      "path": "research-packages/e99-pass-20261018-homelab-07/SOURCES.json",
+      "authored_blob": "b72da2cf6cfb770344af232302fba6994a0e0c43",
+      "integrated_blob": "b72da2cf6cfb770344af232302fba6994a0e0c43",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 131,
+      "path": "research-packages/e99-pass-20261018-homelab-07/TASK.json",
+      "authored_blob": "ec0ac3f8e87aa8812afc8fe272ddac7cf3de86bf",
+      "integrated_blob": "ec0ac3f8e87aa8812afc8fe272ddac7cf3de86bf",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 131,
+      "path": "research-packages/e99-pass-20261018-homelab-07/VERIFY.json",
+      "authored_blob": "d76f83b652d6c934426d65484debeb626334ee82",
+      "integrated_blob": "d76f83b652d6c934426d65484debeb626334ee82",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 131,
+      "path": "research-packages/e99-pass-20261018-homelab-07/verify.py",
+      "authored_blob": "b866ae37bc3b93a59158561f423877bcb22ee92b",
+      "integrated_blob": "b866ae37bc3b93a59158561f423877bcb22ee92b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 132,
+      "path": "docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+      "authored_blob": "798ecc455ac2d35c08ee7983d382f8eb5ab9e6b1",
+      "integrated_blob": "798ecc455ac2d35c08ee7983d382f8eb5ab9e6b1",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 132,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "7cdeba586d70dd755642b85fb3cd69d397539527",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 132,
+      "path": "reading/docs/audits/target_c_branch_aware_atomic_gap_0071_destination_independent_audit_2026-10-18.md",
+      "authored_blob": "2d4289732563548c46f7949b3ed15f66106160d2",
+      "integrated_blob": "2d4289732563548c46f7949b3ed15f66106160d2",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 132,
+      "path": "reading/manifest.json",
+      "authored_blob": "d60bacd430a2478da21cefb835e614cad311ba36",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 133,
+      "path": "research-packages/e99-macbook-20261019T054318Z-09/README.md",
+      "authored_blob": "8c4a26a0314ca84780cc23a71d63bd6dafda0480",
+      "integrated_blob": "8c4a26a0314ca84780cc23a71d63bd6dafda0480",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 133,
+      "path": "research-packages/e99-macbook-20261019T054318Z-09/SOURCES.json",
+      "authored_blob": "c17e6495b02fa8924e5f00ad164b509a3ad361bd",
+      "integrated_blob": "c17e6495b02fa8924e5f00ad164b509a3ad361bd",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 133,
+      "path": "research-packages/e99-macbook-20261019T054318Z-09/TASK.json",
+      "authored_blob": "271d050112547651ce4e40e2c93cf4af66e97667",
+      "integrated_blob": "271d050112547651ce4e40e2c93cf4af66e97667",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 133,
+      "path": "research-packages/e99-macbook-20261019T054318Z-09/VERIFY.json",
+      "authored_blob": "ad3aec0f64999c5c70e47f318909fcfc7b85562e",
+      "integrated_blob": "ad3aec0f64999c5c70e47f318909fcfc7b85562e",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 133,
+      "path": "research-packages/e99-macbook-20261019T054318Z-09/verify.py",
+      "authored_blob": "baacec1962806aaf5839a51ea033951b26449389",
+      "integrated_blob": "baacec1962806aaf5839a51ea033951b26449389",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 134,
+      "path": "research-packages/e99-macbook-20261019T054318Z-05/README.md",
+      "authored_blob": "7d6889692628a1fb54e322b1a264f056db78470a",
+      "integrated_blob": "7d6889692628a1fb54e322b1a264f056db78470a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 134,
+      "path": "research-packages/e99-macbook-20261019T054318Z-05/SOURCES.json",
+      "authored_blob": "5d5b023ad0e5251201e45da7f41867ddd5a964e4",
+      "integrated_blob": "5d5b023ad0e5251201e45da7f41867ddd5a964e4",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 134,
+      "path": "research-packages/e99-macbook-20261019T054318Z-05/TASK.json",
+      "authored_blob": "e6923dd261134c96ce61fb92aecda4a43cf01692",
+      "integrated_blob": "e6923dd261134c96ce61fb92aecda4a43cf01692",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 134,
+      "path": "research-packages/e99-macbook-20261019T054318Z-05/VERIFY.json",
+      "authored_blob": "22db847985b1cac59beb630fd65b45cfc4d3385e",
+      "integrated_blob": "22db847985b1cac59beb630fd65b45cfc4d3385e",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 134,
+      "path": "research-packages/e99-macbook-20261019T054318Z-05/verify.py",
+      "authored_blob": "1ec9e563cc767d7860e78aac19eb8a2e01f1756c",
+      "integrated_blob": "1ec9e563cc767d7860e78aac19eb8a2e01f1756c",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 135,
+      "path": "research-packages/e99-macbook-20261019T054318Z-06/README.md",
+      "authored_blob": "4b1210d698696ee366d222b795ad704f011fe593",
+      "integrated_blob": "4b1210d698696ee366d222b795ad704f011fe593",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 135,
+      "path": "research-packages/e99-macbook-20261019T054318Z-06/SOURCES.json",
+      "authored_blob": "fc069126c7b6cc9631b918dd65a70696a20cf88a",
+      "integrated_blob": "fc069126c7b6cc9631b918dd65a70696a20cf88a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 135,
+      "path": "research-packages/e99-macbook-20261019T054318Z-06/TASK.json",
+      "authored_blob": "212e5ece8445d352cc86f273a0aff41254cb8b4a",
+      "integrated_blob": "212e5ece8445d352cc86f273a0aff41254cb8b4a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 135,
+      "path": "research-packages/e99-macbook-20261019T054318Z-06/VERIFY.json",
+      "authored_blob": "7af3fc356806226aa8802b33d2ea424336ec47af",
+      "integrated_blob": "7af3fc356806226aa8802b33d2ea424336ec47af",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 135,
+      "path": "research-packages/e99-macbook-20261019T054318Z-06/verify.py",
+      "authored_blob": "0b2823a53dc1e249554e3ddda4c422b55ff93a09",
+      "integrated_blob": "0b2823a53dc1e249554e3ddda4c422b55ff93a09",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 136,
+      "path": "research-packages/e99-macbook-20261019T054318Z-10/README.md",
+      "authored_blob": "a73c0137a849f73e88f66cf0c8131af1d618a6cd",
+      "integrated_blob": "a73c0137a849f73e88f66cf0c8131af1d618a6cd",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 136,
+      "path": "research-packages/e99-macbook-20261019T054318Z-10/SOURCES.json",
+      "authored_blob": "c88bab22face68d56ee438343867ad162b744a2d",
+      "integrated_blob": "c88bab22face68d56ee438343867ad162b744a2d",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 136,
+      "path": "research-packages/e99-macbook-20261019T054318Z-10/TASK.json",
+      "authored_blob": "a841ab5790472f199b9c72a927ec13649bff840e",
+      "integrated_blob": "a841ab5790472f199b9c72a927ec13649bff840e",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 136,
+      "path": "research-packages/e99-macbook-20261019T054318Z-10/VERIFY.json",
+      "authored_blob": "fc8be8f786794608c4286be61cb18440e039c2f9",
+      "integrated_blob": "fc8be8f786794608c4286be61cb18440e039c2f9",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 136,
+      "path": "research-packages/e99-macbook-20261019T054318Z-10/verify.py",
+      "authored_blob": "430b0cc4b5f25dfddbc22983c9cdce1e1cef0b8a",
+      "integrated_blob": "430b0cc4b5f25dfddbc22983c9cdce1e1cef0b8a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 137,
+      "path": "research-packages/e99-macbook-20261019t054318z-07/README.md",
+      "authored_blob": "e0f0431279f1a935bfc2944c7a0fbfb1b2c09266",
+      "integrated_blob": "e0f0431279f1a935bfc2944c7a0fbfb1b2c09266",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 137,
+      "path": "research-packages/e99-macbook-20261019t054318z-07/SOURCES.json",
+      "authored_blob": "ddb0cd29e57804504b8f02f10877297c5548cdb5",
+      "integrated_blob": "ddb0cd29e57804504b8f02f10877297c5548cdb5",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 137,
+      "path": "research-packages/e99-macbook-20261019t054318z-07/TASK.json",
+      "authored_blob": "54328480dc72dfb3f0e3f55abfe8b5801a312f6f",
+      "integrated_blob": "54328480dc72dfb3f0e3f55abfe8b5801a312f6f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 137,
+      "path": "research-packages/e99-macbook-20261019t054318z-07/VERIFY.json",
+      "authored_blob": "872a36e7d414b2f12c2023602e3cb5f5146a3ef0",
+      "integrated_blob": "872a36e7d414b2f12c2023602e3cb5f5146a3ef0",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 137,
+      "path": "research-packages/e99-macbook-20261019t054318z-07/verify.py",
+      "authored_blob": "5802471e56664d1940bba579a4f0d8269411d58a",
+      "integrated_blob": "5802471e56664d1940bba579a4f0d8269411d58a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 138,
+      "path": "research-packages/e99-macbook-20261019t054318z-01/README.md",
+      "authored_blob": "198c604648152c320638e6f7906f4f8b7da44c63",
+      "integrated_blob": "198c604648152c320638e6f7906f4f8b7da44c63",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 138,
+      "path": "research-packages/e99-macbook-20261019t054318z-01/SOURCES.json",
+      "authored_blob": "5fcd7b8af0325e15c15e61af7a152e3f5440179a",
+      "integrated_blob": "253bbac86ee8a7eca5adf1f062b8148c1c2782e3",
+      "identical": false,
+      "adaptation": "Add missing Section114.2 dependency pin and matching VERIFY input."
+    },
+    {
+      "pr": 138,
+      "path": "research-packages/e99-macbook-20261019t054318z-01/TASK.json",
+      "authored_blob": "d7889da7baadef9c53fcf716f82f72453173d7ef",
+      "integrated_blob": "d7889da7baadef9c53fcf716f82f72453173d7ef",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 138,
+      "path": "research-packages/e99-macbook-20261019t054318z-01/VERIFY.json",
+      "authored_blob": "35d2f751f9708babc64be2f03826826df61d1d25",
+      "integrated_blob": "f146a52ed72b4fb40245687658d219d71cb27b4c",
+      "identical": false,
+      "adaptation": "Add missing Section114.2 dependency pin and matching VERIFY input."
+    },
+    {
+      "pr": 138,
+      "path": "research-packages/e99-macbook-20261019t054318z-01/verify.py",
+      "authored_blob": "43d0d979e8dc612773fb5f552cc2d52b897c6725",
+      "integrated_blob": "43d0d979e8dc612773fb5f552cc2d52b897c6725",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 139,
+      "path": "docs/audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md",
+      "authored_blob": "4ac98647466f92d6a5ba4ea00bc7b21dfb8c19d7",
+      "integrated_blob": "4ac98647466f92d6a5ba4ea00bc7b21dfb8c19d7",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 139,
+      "path": "docs/research/tracks/target-c-midpoint-anchor-atlas.md",
+      "authored_blob": "2a2ab8f08a73ea51966cdd3424a69766cecc2003",
+      "integrated_blob": "1418dded6d004a1540dd9755b384bdff7f2f4ea1",
+      "identical": false,
+      "adaptation": "Combine PR124/139 dependency wording with PR153 orientation warning; lifecycle remains unreviewed and noncanonical."
+    },
+    {
+      "pr": 139,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "ed4d2c0167d1880fcd22872db1e9e6dc25525c77",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 139,
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "authored_blob": "d697b4fcd88e650565866c97ab20d27b248ecb3a",
+      "integrated_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "identical": false,
+      "adaptation": "Combine PR124/139 dependency wording with PR153 orientation warning; lifecycle remains unreviewed and noncanonical."
+    },
+    {
+      "pr": 140,
+      "path": "docs/audits/atomic_boundary_source_reconciliation_2026-10-15.md",
+      "authored_blob": "37516984a3e8b6e5311267c10ba960dfe299cb2e",
+      "integrated_blob": "fe1c376f43b990ea37ae0938c76b3d5f45853e93",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/audits/original_dirty_worktree_reconciliation_2026-10-15.md",
+      "authored_blob": "fd3cb4f01079264485c8a0588da3d7030f628a4b",
+      "integrated_blob": "15ca9f4e4a654711dd1b1eb1d7b0f7cb4d87eeb2",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/audits/target_a_balanced_triad_relay_independent_audit_2026-10-19.md",
+      "authored_blob": "24907b955a696e64c21a9e87fde0667c2e59adae",
+      "integrated_blob": "24907b955a696e64c21a9e87fde0667c2e59adae",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 140,
+      "path": "docs/audits/target_a_boundary_terminal_common_source_vpaths_audit_2026-09-05.md",
+      "authored_blob": "1c7162e9fd15649b717f9fe99da81e7e6e6d8012",
+      "integrated_blob": "8e516c53c6a8dd4e61d239b61bb8fa56b56242e2",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/audits/target_b_explicit_balanced_phase_gap_audit_2026-09-05.md",
+      "authored_blob": "39e68a63ca2eb30f9e9fb69c7da609a94773b1b6",
+      "integrated_blob": "c38e13a26f99a4dc1e48702327847f2b3e894c22",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/audits/target_b_explicit_unique_max_phase_gap_audit_2026-09-05.md",
+      "authored_blob": "dcc4ba890a26fdd8ae950fea7117345186f92a06",
+      "integrated_blob": "5482c02672817b86d6f0ae74257320eabdff973a",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/audits/target_b_local_virtual_area_interface_audit_2026-09-05.md",
+      "authored_blob": "03f3566bac8077c1d8e89a2984d7bca467b0d788",
+      "integrated_blob": "3bedf0c849b18d2b2bb6d2462b935c35266e1258",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/audits/target_b_trimmed_grid_phase_star_audit_2026-09-05.md",
+      "authored_blob": "dc1f28819966173eda2153aaf1054f45f2c45d0a",
+      "integrated_blob": "4057b8af9c19f01240e48735b2f1dea20bc3c988",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/audits/target_b_virtual_zonotope_missing_crossing_audit_2026-09-05.md",
+      "authored_blob": "0d688535450b9dfdc1cff8459ab58eb9a4afb31b",
+      "integrated_blob": "1a831b2a505b76ceb0ba83f3c0a56567d5790efe",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/activation_fixed_hull_flat_2026-08-30.md",
+      "authored_blob": "96448a9e4f5983d51910b956c62d842bb6f3ee1a",
+      "integrated_blob": "c990e2ae4c4bb3689c8a30eb2ebe041f82109a96",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/cage_or_cophased_lattice_shadow_2026-08-30.md",
+      "authored_blob": "f63d2677167e82d3aa107cd62d236c1c2974c7ad",
+      "integrated_blob": "4d62773055ac081015f336d1c84e71523195f56d",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/campaign_boundary_defect_matching_2026-09-09.md",
+      "authored_blob": "ba40092e5fdeae45f80b621937ad07acac7fd994",
+      "integrated_blob": "df64fe3394f9397e8ff8d215ed1f00141acafc9a",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/campaign_zf_boundary_surplus_collapse_2026-09-09.md",
+      "authored_blob": "1a7c27d7ae7535a6d87a83aea0bdf9cbf0d08388",
+      "integrated_blob": "cea333a6b778f792e50672cd36d049771efa1d6b",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/campaign_zm_zs_reconciliation_2026-09-09.md",
+      "authored_blob": "1ad4f6f747d6d57da8e902f42588c08d03cf9bbd",
+      "integrated_blob": "dbaeb29c7151baf22b6e36f6339f2cc4c4f0505b",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/erdos_problem_99_2026-08-30_active-boundary-audit.md",
+      "authored_blob": "ff83decf7c719492ee20392d3681d075457fdeb4",
+      "integrated_blob": "98c04ba28f71aa2987794a2b1e538c553e3839ac",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/erdos_problem_99_2026-08-30_phase-cover-stability.md",
+      "authored_blob": "5bc1a0634b653e9232aa5f537da0aefe4c2ca247",
+      "integrated_blob": "20337fcab4bd3f180c25a94983568ba5741ed314",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/erdos_problem_99_CHAT_HANDOFF_2026-08-26.md",
+      "authored_blob": "d49b2ff8e659096cc2e6ccfbe20f6a3cef114f8a",
+      "integrated_blob": "d2f441a579eaa9dfd2cdddff022c705f36f0cfec",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/erdos_problem_99_complete_working_report_SYNTHESIZED.md",
+      "authored_blob": "0f37fe799bba73ac57d840d243cb399a57144b6e",
+      "integrated_blob": "335fd8a1ee67d137580929b58c6baae281a89f13",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/five_block_local_optimality_2026-08-30.md",
+      "authored_blob": "50fd92a657ac971a601634e4b0a47b5cd2ecbdf6",
+      "integrated_blob": "0fe2dfb97b29d6f8dcf03d46c46762bdd098afb5",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/full_source_growing_lattice_population_reserve_2026-10-08.md",
+      "authored_blob": "a1c7357fcad7c759c3b9db53c1a41f3db9ea37b7",
+      "integrated_blob": "a9ecff677a4970715cafb044f5d77a15d057551f",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/global_attainment_and_triangle_free_infimum_2026-10-11.md",
+      "authored_blob": "23a48952006cac5b3a6bfdaf9b47f775576b12f1",
+      "integrated_blob": "9ac0a4f528a9af4704659851aefcb0607ea70716",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/global_discrete_isometry_blocker_closure_2026-10-12.md",
+      "authored_blob": "d3c1215e891cc29c96c77f1a3c4959d48de947c4",
+      "integrated_blob": "b880905345469f82b7b7e3929f71a4d99fd44bd2",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/global_isolate_forest_normalization_2026-10-11.md",
+      "authored_blob": "0f76f40b0fb252ba9d6559ffd301b3336bbda2f4",
+      "integrated_blob": "1f8ddf054dbe52f1474fd9430fe9ac16d216b3f0",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/global_local_lex_normalization_and_crystalline_obstruction_2026-10-11.md",
+      "authored_blob": "13f8ba217959db348a40d87bd37a4d06527d74dd",
+      "integrated_blob": "29d46a6d93907a24e7c6e9f19782507b5cef1e52",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/global_nonexpanding_rhombus_mesh_obstruction_2026-10-13.md",
+      "authored_blob": "591650763d97769b9d00ff16aaeb35f2f159d1f6",
+      "integrated_blob": "0fb3352043063fe4af4b3112a29b79eb537eb898",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/global_periodic_release_and_diameter_transfer_2026-10-11.md",
+      "authored_blob": "b00d3006f1a14a0963301e2bf220529c472c599a",
+      "integrated_blob": "bf46f5126d6974bc27fab664fd6b21728ca88e07",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/local_hat_matching_regression_2026-08-30.md",
+      "authored_blob": "be3919cea4fe14e99c54d7ac813e4e35281c186b",
+      "integrated_blob": "7f03db1dbdf4fdca8ab86a3407d9ceb361f31df7",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/near_extremal_activation_monomer_regression_2026-08-30.md",
+      "authored_blob": "c50d0f54154aeb8c451f73cd8aefa01d727d9a48",
+      "integrated_blob": "739e3b36765bee0f97e7bd909a019e85c3c8b5b8",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/open_cell_staircase_finite_preservation_2026-10-15.md",
+      "authored_blob": "f2c5a83efc116667c0884cccc1240d821afedb5f",
+      "integrated_blob": "709f1affff107149cef9de0b886e4783cb3fe5bc",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/repository_state_and_sol_prompt_review_2026-09-10.md",
+      "authored_blob": "03930ee7ce81c099daafda7ce851365911bf474b",
+      "integrated_blob": "178b8aa6163fa58aba0d1a1f457cc0751f6176f1",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/repository_theorem_state_cleanup_2026-09-11.md",
+      "authored_blob": "30bb8cdb2389f14a817f6cc51946599631f96e15",
+      "integrated_blob": "a69fe331f2c98218b268580301946f1d1d704c88",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/source_scaffold_response_transport_2026-08-30.md",
+      "authored_blob": "4a0109f69aa508e104af3bd52f7b77865d9be19f",
+      "integrated_blob": "eb97e31763ac2bdb0917eb98c5b72dc0c50dd385",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_a_boundary_terminal_common_source_vpaths_2026-09-05.md",
+      "authored_blob": "e6af75a6749429e91e662ed2cd383ddeb5cbb76e",
+      "integrated_blob": "cc2d888fffcacb53e99d6978b2949d582e115cf9",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_a_contracted_contact_shield_hall_2026-09-04.md",
+      "authored_blob": "01c2522bbb9cbe710390a46753db6299adc3a783",
+      "integrated_blob": "6e3ed325120716db48d194768329231e1c9a735d",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_a_inner_source_capacity_defect_bound_2026-09-05.md",
+      "authored_blob": "8dfadc69fe4ab5a3c4bceb62e596519ef8448277",
+      "integrated_blob": "269ce704e2727cfa8640d691213151986adc2469",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_a_right_deficiency_geometric_tube_2026-09-05.md",
+      "authored_blob": "c350d445da62d00d275a56e8626eda5c2657b964",
+      "integrated_blob": "e74ec36e52f74d59e781cc2d7e555f1047be3597",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_a_sector_deficit_duality_2026-09-04.md",
+      "authored_blob": "74c21a93c4a822d0e354c46df0f849584f88c5e1",
+      "integrated_blob": "e2cce4a636eb90381595e57274683a05a0c6b347",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_a_slot05_one_arm_source_sector_rank_cap_2026-10-10.md",
+      "authored_blob": "c309cd5197b7d4fa6b50cb16d0777548018f4191",
+      "integrated_blob": "4eafa4766c5c8dc01e4635639591e1f77f961897",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_a_thin_shield_sector_population_2026-09-04.md",
+      "authored_blob": "c0eb8c8d1d045988a3bfab9ce635e78eabf80669",
+      "integrated_blob": "3dfd2c79195f924b645bd81d20a16206edfad262",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_b_affine_boundary_shear_2026-09-25.md",
+      "authored_blob": "541df351b3d2d3c762a60ff4e114a8fa787e735b",
+      "integrated_blob": "de12c010d949e1c03acb57e1e6b2488df3ad16cb",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_b_disk_clipped_oblique_scalar_regression_2026-09-25.md",
+      "authored_blob": "8dc20a92c6e70124db0cbaa94ca4dc1091a4d481",
+      "integrated_blob": "8760794789a34ac2213fbb47c73019297d97ae48",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_b_explicit_balanced_phase_gap_2026-09-05.md",
+      "authored_blob": "d906331c2c8d266467e20761603ce1d0369237dd",
+      "integrated_blob": "99ac94991fb03707f59aa05eca175515dd753455",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_b_fourbar_singleton_endpoint_exclusion_2026-10-03.md",
+      "authored_blob": "7d1176252c11df1d6aa34a7254873c7ab50af137",
+      "integrated_blob": "d786d7fd1526bbace375e59d23a357772b68d418",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_b_fractional_balanced_grain_exclusion_2026-09-05.md",
+      "authored_blob": "63dd726b5f9069c588d66dfdc23fff48e9b677e2",
+      "integrated_blob": "f7de0afa2de02e738148f712ccea6a82094e3210",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_b_multigrain_interface_perimeter_2026-09-05.md",
+      "authored_blob": "c2e619a498e86264a169e8b553e5833bdaf560da",
+      "integrated_blob": "6b274907be5eb9ce9eb4f16b938e77a8d8653c04",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_b_source_diameter_cover_refill_2026-09-25.md",
+      "authored_blob": "d37ee468e9506dfa747beebf22474fd0e42b96a9",
+      "integrated_blob": "7c5780a3dd8ee951082c5e4461ca153a07dff892",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_b_two_max_phase_stability_exclusion_2026-09-05.md",
+      "authored_blob": "456f2649db00b27cead0a7e801d71aff5b495ba4",
+      "integrated_blob": "ebbe9be74eab4cecde795819c36e75418105bf0a",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_c_collective_shallow_wall_packet_release_2026-10-08.md",
+      "authored_blob": "675360d1f4f7ca7117cb7a281e79967ab5750932",
+      "integrated_blob": "44dc84346e9c0d9c042b95338b68bc481b22bfa5",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_c_full_source_delaunay_strain_and_branching_2026-10-08.md",
+      "authored_blob": "b9ac04dec71ac0ba9b5b55488067ba554c32009a",
+      "integrated_blob": "9a02816dbf94530c6852a7990934414459f16467",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_c_full_source_voronoi_defect_spacing_debit_2026-10-08.md",
+      "authored_blob": "95d4ac78d221e03f6771ed40284ac6a67bd7fe4a",
+      "integrated_blob": "c8a52da981ed8af8c37209fe92e5362a28ca6495",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_c_half_depth_fan_forest_and_weight_budget_2026-10-08.md",
+      "authored_blob": "2f7c8bbfb5cd5b0ec6e2fb6c27004e90d08967ee",
+      "integrated_blob": "105cf1552c6d8f498b65f6bc5a7f684b2990ba85",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_c_isolate_normalization_core_diameter_replacement_2026-10-07.md",
+      "authored_blob": "9944d2738515f5c18a07de83bc133fa9fc5d4675",
+      "integrated_blob": "78660f2c2957c03bbbb06547a98085fb19062812",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_c_quadratic_core_cap_extraction_deep_returns_2026-10-08.md",
+      "authored_blob": "0b1763fd3420b94a36b9b3a00b199898b747cb35",
+      "integrated_blob": "11c280e7fcf0120cabe53cd2ca2b9577ce423486",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_c_shell_fold_collar_transport_2026-10-08.md",
+      "authored_blob": "ef811d2748afd99c8ddf528a72562e413ae89986",
+      "integrated_blob": "713ac3b59f76307ea0d59cce8bdf3ed4886a7e29",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/target_c_two_wave_shell_fold_two_isolate_obstruction_2026-10-08.md",
+      "authored_blob": "9bea8ae9724c18189483e089291e4af27d5f3336",
+      "integrated_blob": "9f534f4b695940f556dd70fd259cf71713f2e986",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/reports/toeout_kuperberg_improvement_2026-08-30.md",
+      "authored_blob": "5055bc204479c1b44e1202804db103ad190b7fe9",
+      "integrated_blob": "717d818865951716d3c5b8379e91f8845a2e9d32",
+      "identical": false,
+      "adaptation": "Restore55 frozen predecessor documents to base bytes; preserve new audit/checker."
+    },
+    {
+      "pr": 140,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "c06c76eb082679f21e4dfae4e516c1f233adefc2",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 140,
+      "path": "research/verify_target_a_balanced_triad_relay_audit_2026_10_19.py",
+      "authored_blob": "eeaa5b9605784056f5375707ea733ba6428097d0",
+      "integrated_blob": "eeaa5b9605784056f5375707ea733ba6428097d0",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 141,
+      "path": "docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md",
+      "authored_blob": "c555a50adc7c2a0825991f2f59c4c81773c093cc",
+      "integrated_blob": "c555a50adc7c2a0825991f2f59c4c81773c093cc",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 141,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "9e6c30f3516658dacb0e9681593201db15da17a2",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 141,
+      "path": "reading/docs/audits/target_a_pr117_phase_integrated_sinks_independent_audit_2026-10-19.md",
+      "authored_blob": "d57c19cf6afb908acd9a1cb0f4ef4126f262503b",
+      "integrated_blob": "d57c19cf6afb908acd9a1cb0f4ef4126f262503b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 141,
+      "path": "reading/manifest.json",
+      "authored_blob": "1dcf0cf1d2480942c7c567ab18f38082a1e735fb",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 142,
+      "path": "research-packages/e99-macbook-20261019T054318Z-03/README.md",
+      "authored_blob": "770a5bb76185ccecaf38e3d4ba5903de497177d6",
+      "integrated_blob": "770a5bb76185ccecaf38e3d4ba5903de497177d6",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 142,
+      "path": "research-packages/e99-macbook-20261019T054318Z-03/SOURCES.json",
+      "authored_blob": "ca56fe86eb1957dcd565ed2f6506feebca9458d9",
+      "integrated_blob": "ca56fe86eb1957dcd565ed2f6506feebca9458d9",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 142,
+      "path": "research-packages/e99-macbook-20261019T054318Z-03/TASK.json",
+      "authored_blob": "d177596c7faec9565bc85977f84dd0c1d6406442",
+      "integrated_blob": "d177596c7faec9565bc85977f84dd0c1d6406442",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 142,
+      "path": "research-packages/e99-macbook-20261019T054318Z-03/VERIFY.json",
+      "authored_blob": "d11ee51ff7c7468fac26b5c902f1ac75a7dae6c3",
+      "integrated_blob": "d11ee51ff7c7468fac26b5c902f1ac75a7dae6c3",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 142,
+      "path": "research-packages/e99-macbook-20261019T054318Z-03/verify.py",
+      "authored_blob": "4ae947b7b0ecf22826b584116f26685cb7ee69a9",
+      "integrated_blob": "4ae947b7b0ecf22826b584116f26685cb7ee69a9",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 143,
+      "path": "docs/audits/target_c_pr129_wall_tolerance_population_independent_audit_2026-10-19.md",
+      "authored_blob": "af095d95eb96d1a5875ca270f5e12f51d75965ce",
+      "integrated_blob": "af095d95eb96d1a5875ca270f5e12f51d75965ce",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 143,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "9b6f64a0171b3ceead2ab5bd96e4fc6c95d151f0",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 143,
+      "path": "reading/docs/audits/target_c_pr129_wall_tolerance_population_independent_audit_2026-10-19.md",
+      "authored_blob": "f3d61cdf89da10c828281d9c962b46af38b56d6f",
+      "integrated_blob": "f3d61cdf89da10c828281d9c962b46af38b56d6f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 143,
+      "path": "reading/manifest.json",
+      "authored_blob": "4d8b1296d47f3310aeafbd0694c0ec3937da95e3",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 143,
+      "path": "research/verify_target_c_pr129_wall_tolerance_population_audit_2026_10_19.py",
+      "authored_blob": "f2ef89c8e1a037f7ce321a6a24b1856657dce4c2",
+      "integrated_blob": "f2ef89c8e1a037f7ce321a6a24b1856657dce4c2",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 144,
+      "path": "research-packages/e99-macbook-20261019T054318Z-16/README.md",
+      "authored_blob": "d593e86aacb2ae3ac8d9516d38a362d73964a889",
+      "integrated_blob": "d593e86aacb2ae3ac8d9516d38a362d73964a889",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 144,
+      "path": "research-packages/e99-macbook-20261019T054318Z-16/RESULT.json",
+      "authored_blob": "83b46b1fabdd134a3e0de5ae304109a1e49ac91d",
+      "integrated_blob": "83b46b1fabdd134a3e0de5ae304109a1e49ac91d",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 144,
+      "path": "research-packages/e99-macbook-20261019T054318Z-16/SOURCES.json",
+      "authored_blob": "c71ec1a006c3a6dc8da44fea8ccb12edaecca040",
+      "integrated_blob": "c71ec1a006c3a6dc8da44fea8ccb12edaecca040",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 144,
+      "path": "research-packages/e99-macbook-20261019T054318Z-16/TASK.json",
+      "authored_blob": "a3e169b8b4f4d178dcdc2a3c2f4dd7541d8205fe",
+      "integrated_blob": "a3e169b8b4f4d178dcdc2a3c2f4dd7541d8205fe",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 144,
+      "path": "research-packages/e99-macbook-20261019T054318Z-16/VERIFY.json",
+      "authored_blob": "b42d464b893d21e658406914b36802b1a9367bdc",
+      "integrated_blob": "b42d464b893d21e658406914b36802b1a9367bdc",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 144,
+      "path": "research-packages/e99-macbook-20261019T054318Z-16/verify.py",
+      "authored_blob": "2cd1dd5a604082fce06b40f691c135eec67a2a2f",
+      "integrated_blob": "2cd1dd5a604082fce06b40f691c135eec67a2a2f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 145,
+      "path": "research-packages/e99-macbook-20261019t054318z-13/README.md",
+      "authored_blob": "aeeab413ca775a039fee29fca825259d72606545",
+      "integrated_blob": "aeeab413ca775a039fee29fca825259d72606545",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 145,
+      "path": "research-packages/e99-macbook-20261019t054318z-13/SOURCES.json",
+      "authored_blob": "ed6141cab697bfe4def2905c130c4fdcd7ce99c3",
+      "integrated_blob": "ed6141cab697bfe4def2905c130c4fdcd7ce99c3",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 145,
+      "path": "research-packages/e99-macbook-20261019t054318z-13/TASK.json",
+      "authored_blob": "b7e79477f7ed2f7157bb9924e13a6f9eb41dcc53",
+      "integrated_blob": "b7e79477f7ed2f7157bb9924e13a6f9eb41dcc53",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 145,
+      "path": "research-packages/e99-macbook-20261019t054318z-13/VERIFY.json",
+      "authored_blob": "9c6a18914d1052502c3c8aa53265ecbca6fad163",
+      "integrated_blob": "9c6a18914d1052502c3c8aa53265ecbca6fad163",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 145,
+      "path": "research-packages/e99-macbook-20261019t054318z-13/verify.py",
+      "authored_blob": "36be78969d88eae72d025aac703f137b459681be",
+      "integrated_blob": "36be78969d88eae72d025aac703f137b459681be",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 146,
+      "path": "research-packages/e99-macbook-20261019T054318Z-14/README.md",
+      "authored_blob": "780951ec58c1bbb349d5f503b7a05c6cc08fc25f",
+      "integrated_blob": "780951ec58c1bbb349d5f503b7a05c6cc08fc25f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 146,
+      "path": "research-packages/e99-macbook-20261019T054318Z-14/SOURCES.json",
+      "authored_blob": "56980d032c1b54f808db754bed78754ad1808057",
+      "integrated_blob": "56980d032c1b54f808db754bed78754ad1808057",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 146,
+      "path": "research-packages/e99-macbook-20261019T054318Z-14/TASK.json",
+      "authored_blob": "85bb77426cbe7841593bdf33620baa93893d6a28",
+      "integrated_blob": "85bb77426cbe7841593bdf33620baa93893d6a28",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 146,
+      "path": "research-packages/e99-macbook-20261019T054318Z-14/VERIFY.json",
+      "authored_blob": "2f737821b69aab7ac4f762a6798fa531dabb6d13",
+      "integrated_blob": "2f737821b69aab7ac4f762a6798fa531dabb6d13",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 146,
+      "path": "research-packages/e99-macbook-20261019T054318Z-14/verify.py",
+      "authored_blob": "ed239db2cb4b43b7525f295b86c72eeb359050b9",
+      "integrated_blob": "ed239db2cb4b43b7525f295b86c72eeb359050b9",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 147,
+      "path": "research-packages/e99-macbook-20261019T054318Z-02/README.md",
+      "authored_blob": "76ca8d44ab67eb44d53091d644206d56a78c76ea",
+      "integrated_blob": "6f12af285bb9ccebb32f7637438a7f7117e98a07",
+      "identical": false,
+      "adaptation": "Correct ordered cyclic determinant tuple; checker unchanged; independent corrected review C."
+    },
+    {
+      "pr": 147,
+      "path": "research-packages/e99-macbook-20261019T054318Z-02/RESULT.json",
+      "authored_blob": "ef87743755a5ec85f0f147b46cd50e4f407f4c3a",
+      "integrated_blob": "ef87743755a5ec85f0f147b46cd50e4f407f4c3a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 147,
+      "path": "research-packages/e99-macbook-20261019T054318Z-02/SOURCES.json",
+      "authored_blob": "677ca4231dc6c7b690ace3ec831d837d3f30aa0e",
+      "integrated_blob": "677ca4231dc6c7b690ace3ec831d837d3f30aa0e",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 147,
+      "path": "research-packages/e99-macbook-20261019T054318Z-02/TASK.json",
+      "authored_blob": "6288fb7ea7c6b145f1c10e276042533ea1043b28",
+      "integrated_blob": "6288fb7ea7c6b145f1c10e276042533ea1043b28",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 147,
+      "path": "research-packages/e99-macbook-20261019T054318Z-02/VERIFY.json",
+      "authored_blob": "667fb981849b68c15ec04824b6bf9045485e57b3",
+      "integrated_blob": "667fb981849b68c15ec04824b6bf9045485e57b3",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 147,
+      "path": "research-packages/e99-macbook-20261019T054318Z-02/verify.py",
+      "authored_blob": "d1911fb2ee3fedf3957cc24487dfb15eef1511be",
+      "integrated_blob": "d1911fb2ee3fedf3957cc24487dfb15eef1511be",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 148,
+      "path": "docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md",
+      "authored_blob": "0ac0b5ee7605a6ae2b3b1a915533d4029fe32820",
+      "integrated_blob": "0ac0b5ee7605a6ae2b3b1a915533d4029fe32820",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 148,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "1f95bac11ef06a5e2ee3f58053c905b653cc2453",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 148,
+      "path": "reading/docs/audits/target_a_pr120_pr121_geometric_full_shores_audit_2026-10-19.md",
+      "authored_blob": "58c8afb0681128a50dd41c806a0595915ad9b61b",
+      "integrated_blob": "58c8afb0681128a50dd41c806a0595915ad9b61b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 148,
+      "path": "reading/manifest.json",
+      "authored_blob": "6ad73cf98b9849be71918d0353f653a6191fa3f1",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 148,
+      "path": "research/verify_pr120_pr121_full_shore_audit_2026_10_19.py",
+      "authored_blob": "c51613c1ab14499dd9515e191018824d408cfa1a",
+      "integrated_blob": "c51613c1ab14499dd9515e191018824d408cfa1a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 149,
+      "path": "research-packages/e99-paired-20261019t091333z-local-09/README.md",
+      "authored_blob": "9a801ad449c0a396044389c982261c9a45b58aef",
+      "integrated_blob": "9a801ad449c0a396044389c982261c9a45b58aef",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 149,
+      "path": "research-packages/e99-paired-20261019t091333z-local-09/SOURCES.json",
+      "authored_blob": "a23c3c63b42fdc644704cd20b4b9070867b8a5ba",
+      "integrated_blob": "f16a7732d983aa8137d8fc459b21004f868674cd",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 149,
+      "path": "research-packages/e99-paired-20261019t091333z-local-09/TASK.json",
+      "authored_blob": "7c4e04304486f6653bdf9fe9422d84c08ed6f810",
+      "integrated_blob": "7c4e04304486f6653bdf9fe9422d84c08ed6f810",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 149,
+      "path": "research-packages/e99-paired-20261019t091333z-local-09/VERIFY.json",
+      "authored_blob": "95b1a908db4591c45f2b8155ef1db36ebca32086",
+      "integrated_blob": "95b1a908db4591c45f2b8155ef1db36ebca32086",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 149,
+      "path": "research-packages/e99-paired-20261019t091333z-local-09/verify.py",
+      "authored_blob": "6839f3fbc3db2e579649d488241e3b7f60002ac4",
+      "integrated_blob": "6839f3fbc3db2e579649d488241e3b7f60002ac4",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 150,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-08/README.md",
+      "authored_blob": "ebc5738c9ecd6f6ba171040026f9cba486e886b8",
+      "integrated_blob": "ebc5738c9ecd6f6ba171040026f9cba486e886b8",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 150,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-08/SOURCES.json",
+      "authored_blob": "523ea6a862584fd4751f57cf86de5a1ccbcf18f6",
+      "integrated_blob": "523ea6a862584fd4751f57cf86de5a1ccbcf18f6",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 150,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-08/TASK.json",
+      "authored_blob": "857680e94cb68e8d11d671e4b8035cc29ab848aa",
+      "integrated_blob": "857680e94cb68e8d11d671e4b8035cc29ab848aa",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 150,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-08/VERIFY.json",
+      "authored_blob": "ca9fd4721ed5eb0f7b5f5e6276a52a651fca6cb0",
+      "integrated_blob": "ca9fd4721ed5eb0f7b5f5e6276a52a651fca6cb0",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 150,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-08/verify.py",
+      "authored_blob": "9a73abca1a60a1c6a64c279b5246ee198a1beb5c",
+      "integrated_blob": "9a73abca1a60a1c6a64c279b5246ee198a1beb5c",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 151,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-13/README.md",
+      "authored_blob": "5d94c373201158498e168dcf755833aedeca6ea9",
+      "integrated_blob": "5d94c373201158498e168dcf755833aedeca6ea9",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 151,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-13/SOURCES.json",
+      "authored_blob": "c83d049d007c6390d4aab9344fc77273b6a0b59b",
+      "integrated_blob": "c83d049d007c6390d4aab9344fc77273b6a0b59b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 151,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-13/TASK.json",
+      "authored_blob": "9b4cc68b1f5097df0a848331bc69dab3ddfcbc2d",
+      "integrated_blob": "9b4cc68b1f5097df0a848331bc69dab3ddfcbc2d",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 151,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-13/VERIFY.json",
+      "authored_blob": "88aa76601aafecd3f00f9787b5b212d5f0855a4b",
+      "integrated_blob": "88aa76601aafecd3f00f9787b5b212d5f0855a4b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 151,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-13/verify.py",
+      "authored_blob": "69f01883ed98ec4accfa425a6af91225775ce1cb",
+      "integrated_blob": "69f01883ed98ec4accfa425a6af91225775ce1cb",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 152,
+      "path": "research-packages/e99-paired-20261019t091333z-local-04/README.md",
+      "authored_blob": "f3910af43e458de66babebb43afd6e8bd36a0b49",
+      "integrated_blob": "f3910af43e458de66babebb43afd6e8bd36a0b49",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 152,
+      "path": "research-packages/e99-paired-20261019t091333z-local-04/SOURCES.json",
+      "authored_blob": "6a78d31094322c4d984edd74f96db7f9f7ee05b9",
+      "integrated_blob": "6a78d31094322c4d984edd74f96db7f9f7ee05b9",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 152,
+      "path": "research-packages/e99-paired-20261019t091333z-local-04/TASK.json",
+      "authored_blob": "3049983a17c83417f6b70632d10f850cb75f8bae",
+      "integrated_blob": "3049983a17c83417f6b70632d10f850cb75f8bae",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 152,
+      "path": "research-packages/e99-paired-20261019t091333z-local-04/VERIFY.json",
+      "authored_blob": "7a4e38a0abdf4fbdd079d274b1ac771039167328",
+      "integrated_blob": "7a4e38a0abdf4fbdd079d274b1ac771039167328",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 152,
+      "path": "research-packages/e99-paired-20261019t091333z-local-04/verify.py",
+      "authored_blob": "7a7aa5718d1207790016a26822c2108a00f008a7",
+      "integrated_blob": "7a7aa5718d1207790016a26822c2108a00f008a7",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 153,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/README.md",
+      "authored_blob": "3bd6feda489e4cad05d9222b676d6bdd4ac2fea7",
+      "integrated_blob": "532925f3f21ead9483adf4281d3cebd5d7712420",
+      "identical": false,
+      "adaptation": "Orientation erratum r=p-q in new conditional audit/TASK/VERIFY; frozen source and certificate untouched; independent corrected review B."
+    },
+    {
+      "pr": 153,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/SOURCES.json",
+      "authored_blob": "005a355ee9907d3e941ed90de1e35954fdf0d2ee",
+      "integrated_blob": "005a355ee9907d3e941ed90de1e35954fdf0d2ee",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 153,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/TASK.json",
+      "authored_blob": "4a076378b3db428a112f29252997b45b153566d5",
+      "integrated_blob": "e1f259fc57224c1496eb902e614db98a4f973c32",
+      "identical": false,
+      "adaptation": "Orientation erratum r=p-q in new conditional audit/TASK/VERIFY; frozen source and certificate untouched; independent corrected review B."
+    },
+    {
+      "pr": 153,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/VERIFY.json",
+      "authored_blob": "4a7ba23cb75137c60fd0c2f8d15a69c3bf0d2b98",
+      "integrated_blob": "75d85ce2d82f572337819db335ad129708a33da8",
+      "identical": false,
+      "adaptation": "Orientation erratum r=p-q in new conditional audit/TASK/VERIFY; frozen source and certificate untouched; independent corrected review B."
+    },
+    {
+      "pr": 153,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/pinned-replay.jsonl",
+      "authored_blob": "b9ab168021b2ea6592777748bc633bc449c4a57a",
+      "integrated_blob": "b9ab168021b2ea6592777748bc633bc449c4a57a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 153,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-11/verify.py",
+      "authored_blob": "43155944d4d97658815ee23ad05b673c82b01cb9",
+      "integrated_blob": "43155944d4d97658815ee23ad05b673c82b01cb9",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 154,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-01/README.md",
+      "authored_blob": "444f95853b571083f616db41d8309031fa604c6a",
+      "integrated_blob": "444f95853b571083f616db41d8309031fa604c6a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 154,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-01/SOURCES.json",
+      "authored_blob": "c5c2bb77e8ea1cce7c684d3ce4c9c6afbcc4b961",
+      "integrated_blob": "c5c2bb77e8ea1cce7c684d3ce4c9c6afbcc4b961",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 154,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-01/TASK.json",
+      "authored_blob": "0eba5b88eb71fc2feb2d47317ab5740e88a12548",
+      "integrated_blob": "0eba5b88eb71fc2feb2d47317ab5740e88a12548",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 154,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-01/VERIFY.json",
+      "authored_blob": "d6a09ee297345490205074a9b745b1f729957b19",
+      "integrated_blob": "d6a09ee297345490205074a9b745b1f729957b19",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 154,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-01/verify.py",
+      "authored_blob": "4d65495f6c1c39fbcc6c0f1415be654ff3f5adf3",
+      "integrated_blob": "4d65495f6c1c39fbcc6c0f1415be654ff3f5adf3",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 155,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-03/README.md",
+      "authored_blob": "5a4050d843c46bba1746ff291353c3e5d0745c5f",
+      "integrated_blob": "5a4050d843c46bba1746ff291353c3e5d0745c5f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 155,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-03/SOURCES.json",
+      "authored_blob": "5d7f6be142b979369ac1b05d6b2b0964feaf721a",
+      "integrated_blob": "5d7f6be142b979369ac1b05d6b2b0964feaf721a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 155,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-03/TASK.json",
+      "authored_blob": "933aeb4d69dbdc3d1e041f1ffb89a4d597ba636b",
+      "integrated_blob": "933aeb4d69dbdc3d1e041f1ffb89a4d597ba636b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 155,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-03/VERIFY.json",
+      "authored_blob": "aa5e29889154a2bd586b0e021da04a4b05bb51ae",
+      "integrated_blob": "aa5e29889154a2bd586b0e021da04a4b05bb51ae",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 155,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-03/verify.py",
+      "authored_blob": "6de2dd68f2414f9e53ac6d671ddecca7746efbcf",
+      "integrated_blob": "6de2dd68f2414f9e53ac6d671ddecca7746efbcf",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 156,
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/README.md",
+      "authored_blob": "27c190da640f4a86afb483151f325356621d85e9",
+      "integrated_blob": "458ae1593c583217effeafabc97b38b306c61df5",
+      "identical": false,
+      "adaptation": "Existence of averaging-selected translate replaces false every-translate absolute count; independent corrected review A."
+    },
+    {
+      "pr": 156,
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/SOURCES.json",
+      "authored_blob": "8d7ab4e23151fcd4cfccafa9fd1fa8b17560e624",
+      "integrated_blob": "cb7012bc527a74900e2bbec8f974e9b95130094d",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 156,
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/TASK.json",
+      "authored_blob": "c7d72aee35d081533af1441bcaae7ec0ec4c6b23",
+      "integrated_blob": "b084255513057f1a3d84197c48760fcd5c70cf71",
+      "identical": false,
+      "adaptation": "Existence of averaging-selected translate replaces false every-translate absolute count; independent corrected review A."
+    },
+    {
+      "pr": 156,
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/VERIFY.json",
+      "authored_blob": "87c8ca16be3a0f8e3411aebb122a77dc90147160",
+      "integrated_blob": "39475e09578d8171f6e7e9fb3cea6392fbb7592d",
+      "identical": false,
+      "adaptation": "Existence of averaging-selected translate replaces false every-translate absolute count; independent corrected review A."
+    },
+    {
+      "pr": 156,
+      "path": "research-packages/e99-paired-20261019t091333z-local-13/verify.py",
+      "authored_blob": "10ad3307586f910a0179e2ab2396da69ed40edf1",
+      "integrated_blob": "10ad3307586f910a0179e2ab2396da69ed40edf1",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 157,
+      "path": "docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+      "authored_blob": "2d9c9c30768c422dd9b006e3b01e634f2fe53acb",
+      "integrated_blob": "2d9c9c30768c422dd9b006e3b01e634f2fe53acb",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 157,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "d1e1b1bf5b9b26c8b67dbc3452f10fd19ed6bb9e",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 157,
+      "path": "reading/docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+      "authored_blob": "428cce1aacb04d2d3ff89af00d49326725c88b58",
+      "integrated_blob": "428cce1aacb04d2d3ff89af00d49326725c88b58",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 157,
+      "path": "reading/manifest.json",
+      "authored_blob": "7a7d55e9678b7adf5db67f900d7e09a79cdb81f7",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 158,
+      "path": "research-packages/e99-paired-20261019t091333z-local-05/README.md",
+      "authored_blob": "f2a5885c7e644c898280b98c36cac39b52a30c78",
+      "integrated_blob": "f2a5885c7e644c898280b98c36cac39b52a30c78",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 158,
+      "path": "research-packages/e99-paired-20261019t091333z-local-05/SOURCES.json",
+      "authored_blob": "c15f30897f49a825a8937544627353fbf10e3e67",
+      "integrated_blob": "740456f04cf809867dfa09f758b7d8a048e47500",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 158,
+      "path": "research-packages/e99-paired-20261019t091333z-local-05/TASK.json",
+      "authored_blob": "ab6a671fd302d08f833eff2ee6e7a660856c988e",
+      "integrated_blob": "ab6a671fd302d08f833eff2ee6e7a660856c988e",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 158,
+      "path": "research-packages/e99-paired-20261019t091333z-local-05/VERIFY.json",
+      "authored_blob": "65abc9f84dac12fac5d2bf04a25be2ef5c5a2209",
+      "integrated_blob": "65abc9f84dac12fac5d2bf04a25be2ef5c5a2209",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 158,
+      "path": "research-packages/e99-paired-20261019t091333z-local-05/verify.py",
+      "authored_blob": "c417f534e13f3f80d436e114fd6ad09922aed8ad",
+      "integrated_blob": "c417f534e13f3f80d436e114fd6ad09922aed8ad",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 159,
+      "path": "docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+      "authored_blob": "50610415913dce092ef56890e8ad6acce8e7c0ad",
+      "integrated_blob": "50610415913dce092ef56890e8ad6acce8e7c0ad",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 159,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "85ed7f40423e5e7e354d576348ee447be9b0931c",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 159,
+      "path": "reading/docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+      "authored_blob": "13b25fe9cb9943bab238dc40d3911cdbda5f123c",
+      "integrated_blob": "13b25fe9cb9943bab238dc40d3911cdbda5f123c",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 159,
+      "path": "reading/manifest.json",
+      "authored_blob": "7094d7d0d5353a2f9de271d888e463a628afddd2",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 160,
+      "path": "research-packages/e99-paired-20261019t091333z-local-16/README.md",
+      "authored_blob": "751eb6558645a0fb7f39a501f747f1bfb8326756",
+      "integrated_blob": "751eb6558645a0fb7f39a501f747f1bfb8326756",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 160,
+      "path": "research-packages/e99-paired-20261019t091333z-local-16/SOURCES.json",
+      "authored_blob": "8463ec22258d9a8996f99060c1e0bf73ed46afc1",
+      "integrated_blob": "8463ec22258d9a8996f99060c1e0bf73ed46afc1",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 160,
+      "path": "research-packages/e99-paired-20261019t091333z-local-16/TASK.json",
+      "authored_blob": "2bd7574c88833671e4a97773c4f0df7c03de65cd",
+      "integrated_blob": "2bd7574c88833671e4a97773c4f0df7c03de65cd",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 160,
+      "path": "research-packages/e99-paired-20261019t091333z-local-16/VERIFY.json",
+      "authored_blob": "2bf42ab5e126baa6443b8ee9af28a769e720b5bd",
+      "integrated_blob": "2bf42ab5e126baa6443b8ee9af28a769e720b5bd",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 160,
+      "path": "research-packages/e99-paired-20261019t091333z-local-16/verify.py",
+      "authored_blob": "7d63f69ed6e3ecd55214d23ff2e2f34f2dc2a330",
+      "integrated_blob": "7d63f69ed6e3ecd55214d23ff2e2f34f2dc2a330",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 161,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-05/README.md",
+      "authored_blob": "b0a148c2035c88bffad208dfe06c60a8ac7c71bb",
+      "integrated_blob": "b0a148c2035c88bffad208dfe06c60a8ac7c71bb",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 161,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-05/SOURCES.json",
+      "authored_blob": "017f084ce58b2fd53cf313751b3c47dab2d86be8",
+      "integrated_blob": "5b47a7de6fce8300b070d3dfc35061a2794113db",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 161,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-05/TASK.json",
+      "authored_blob": "735bae3e58760cfac9415c7a17c6f6c6779a85c4",
+      "integrated_blob": "735bae3e58760cfac9415c7a17c6f6c6779a85c4",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 161,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-05/VERIFY.json",
+      "authored_blob": "05ecd858b37145a8c3b71a333fc67fc8e9c8e7e6",
+      "integrated_blob": "05ecd858b37145a8c3b71a333fc67fc8e9c8e7e6",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 161,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-05/verify.py",
+      "authored_blob": "971d0a2aceac8ceda137748057d155f5effbf730",
+      "integrated_blob": "971d0a2aceac8ceda137748057d155f5effbf730",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 162,
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/AUDIT.md",
+      "authored_blob": "fba433f6a4bbb5d8a1cf614408e9bda31ac6f78d",
+      "integrated_blob": "fba433f6a4bbb5d8a1cf614408e9bda31ac6f78d",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 162,
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/README.md",
+      "authored_blob": "e351dd533ba155c37a15a8acefb9fd70ae8c4bc2",
+      "integrated_blob": "e351dd533ba155c37a15a8acefb9fd70ae8c4bc2",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 162,
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/SOURCES.json",
+      "authored_blob": "13eb2654bb0570b14eefcae73305faed511224c0",
+      "integrated_blob": "eebe4a6d8a638f4e4ac468d4ad2f1e083ea9e676",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 162,
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/TASK.json",
+      "authored_blob": "f7b91444faaba0196e94207fb8c81e901932b5f7",
+      "integrated_blob": "f7b91444faaba0196e94207fb8c81e901932b5f7",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 162,
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/VERIFY.json",
+      "authored_blob": "b9ec86603fb82d973575fdced7197a97ff856629",
+      "integrated_blob": "b9ec86603fb82d973575fdced7197a97ff856629",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 162,
+      "path": "research-packages/e99-paired-20261019t091333z-local-06/verify.py",
+      "authored_blob": "3e76527916bf6d79e5479c43d8a2f218a277837f",
+      "integrated_blob": "3e76527916bf6d79e5479c43d8a2f218a277837f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 163,
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/README.md",
+      "authored_blob": "fa8d5ff66edbf0ce76aab6dbc69b5fbd3bc5bbac",
+      "integrated_blob": "fa8d5ff66edbf0ce76aab6dbc69b5fbd3bc5bbac",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 163,
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/SOURCES.json",
+      "authored_blob": "9e0e4204aeaf8c10ae5bcc26aefc3f3bbf7d9a79",
+      "integrated_blob": "c331c3896a3b046a4cf06436a1837c98b68c09b0",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 163,
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/TASK.json",
+      "authored_blob": "bc2c334d9b1f63bea547157ce2871fa9cffd3ddf",
+      "integrated_blob": "bc2c334d9b1f63bea547157ce2871fa9cffd3ddf",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 163,
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/VERIFY.json",
+      "authored_blob": "e20ec32970b57ff519f5e7f3eb5881d122ced9c1",
+      "integrated_blob": "e20ec32970b57ff519f5e7f3eb5881d122ced9c1",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 163,
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/evidence.json",
+      "authored_blob": "ec0f518763baf10b9683db6b5044e771e5224bd3",
+      "integrated_blob": "ec0f518763baf10b9683db6b5044e771e5224bd3",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 163,
+      "path": "research-packages/e99-paired-20261019t091333z-local-07/verify.py",
+      "authored_blob": "58ed0fa4e7014ead3a99266c71d6963670f8cd43",
+      "integrated_blob": "58ed0fa4e7014ead3a99266c71d6963670f8cd43",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 164,
+      "path": "research-packages/e99-paired-20261019t091333z-local-03/README.md",
+      "authored_blob": "4803ccdc7a6784a9a9a9e483498a570764d94943",
+      "integrated_blob": "4803ccdc7a6784a9a9a9e483498a570764d94943",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 164,
+      "path": "research-packages/e99-paired-20261019t091333z-local-03/SOURCES.json",
+      "authored_blob": "03f25347ebcc25f5c6e8e80cd9a0427ea3415283",
+      "integrated_blob": "03f25347ebcc25f5c6e8e80cd9a0427ea3415283",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 164,
+      "path": "research-packages/e99-paired-20261019t091333z-local-03/TASK.json",
+      "authored_blob": "2732f9b86a11c692fe9a6094d73ec333f987ea80",
+      "integrated_blob": "2732f9b86a11c692fe9a6094d73ec333f987ea80",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 164,
+      "path": "research-packages/e99-paired-20261019t091333z-local-03/VERIFY.json",
+      "authored_blob": "324eb675e9fe884e1d8dc8a167aef7709d7df7e0",
+      "integrated_blob": "324eb675e9fe884e1d8dc8a167aef7709d7df7e0",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 164,
+      "path": "research-packages/e99-paired-20261019t091333z-local-03/verify.py",
+      "authored_blob": "bf1ee330c575efe8fce5a05fa098f12626d15efd",
+      "integrated_blob": "bf1ee330c575efe8fce5a05fa098f12626d15efd",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 165,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-02/README.md",
+      "authored_blob": "4f9e7d9f03ae58a9c193a5d9bfff3f3f5cd5fc2c",
+      "integrated_blob": "4f9e7d9f03ae58a9c193a5d9bfff3f3f5cd5fc2c",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 165,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-02/SOURCES.json",
+      "authored_blob": "40e08ebcd08593a6a2d76e5960c316922332b531",
+      "integrated_blob": "40e08ebcd08593a6a2d76e5960c316922332b531",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 165,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-02/TASK.json",
+      "authored_blob": "5373521cf8a5a17a3b1529f4a0d60ece53f4796f",
+      "integrated_blob": "5373521cf8a5a17a3b1529f4a0d60ece53f4796f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 165,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-02/VERIFY.json",
+      "authored_blob": "de5b32a277724d2b1ef23911da222d7c9343c9bc",
+      "integrated_blob": "de5b32a277724d2b1ef23911da222d7c9343c9bc",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 165,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-02/verify.py",
+      "authored_blob": "04ccaf3339480b7cc073cab4262b72acc8bbb1d2",
+      "integrated_blob": "04ccaf3339480b7cc073cab4262b72acc8bbb1d2",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 166,
+      "path": "research-packages/e99-paired-20261019t091333z-local-12/README.md",
+      "authored_blob": "aaaec3cee145890362f0f3419c6e2b71ae3c0757",
+      "integrated_blob": "aaaec3cee145890362f0f3419c6e2b71ae3c0757",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 166,
+      "path": "research-packages/e99-paired-20261019t091333z-local-12/SOURCES.json",
+      "authored_blob": "6b5d7aec4efea0a3d2b5eb7cd358820923e6af60",
+      "integrated_blob": "70148dd40c8a46161a24d0c8fee479c155e36e8f",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 166,
+      "path": "research-packages/e99-paired-20261019t091333z-local-12/TASK.json",
+      "authored_blob": "d373f19d49e3e5e27b4dae71b48c626b7acbb65b",
+      "integrated_blob": "d373f19d49e3e5e27b4dae71b48c626b7acbb65b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 166,
+      "path": "research-packages/e99-paired-20261019t091333z-local-12/VERIFY.json",
+      "authored_blob": "1666d3bc7e5ed767ae81c560d3a6901e9a8b1fc4",
+      "integrated_blob": "1666d3bc7e5ed767ae81c560d3a6901e9a8b1fc4",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 166,
+      "path": "research-packages/e99-paired-20261019t091333z-local-12/verify.py",
+      "authored_blob": "074040c8f52e24b8d5042a51fb7d6ed33ed538b3",
+      "integrated_blob": "074040c8f52e24b8d5042a51fb7d6ed33ed538b3",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 167,
+      "path": "research-packages/e99-paired-20261019t091333z-local-02/README.md",
+      "authored_blob": "7099a2a515680cf1e830557a9263b1a870b7934a",
+      "integrated_blob": "7099a2a515680cf1e830557a9263b1a870b7934a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 167,
+      "path": "research-packages/e99-paired-20261019t091333z-local-02/SOURCES.json",
+      "authored_blob": "ce6ec8cee5548f3a2517462edcfd5c4364f080d2",
+      "integrated_blob": "ce6ec8cee5548f3a2517462edcfd5c4364f080d2",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 167,
+      "path": "research-packages/e99-paired-20261019t091333z-local-02/TASK.json",
+      "authored_blob": "d1b7a28544486d7ba965d2001bfccec28ebd7c90",
+      "integrated_blob": "d1b7a28544486d7ba965d2001bfccec28ebd7c90",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 167,
+      "path": "research-packages/e99-paired-20261019t091333z-local-02/VERIFY.json",
+      "authored_blob": "cb2f5fb54f322f36ca87be3328e7bed2fabf7d80",
+      "integrated_blob": "cb2f5fb54f322f36ca87be3328e7bed2fabf7d80",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 167,
+      "path": "research-packages/e99-paired-20261019t091333z-local-02/verify.py",
+      "authored_blob": "d301f21e338f325525cab081d116462511c4db60",
+      "integrated_blob": "d301f21e338f325525cab081d116462511c4db60",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 168,
+      "path": "docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+      "authored_blob": "a32b2c15b80e650bde114cfb28ed39238a1380a0",
+      "integrated_blob": "d5e82ca5ae52ddf9e2b3f4f9c5f256425061be32",
+      "identical": false,
+      "adaptation": "Deduplicate identical theorem metadata header; mathematical prose unchanged."
+    },
+    {
+      "pr": 168,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "f341a055668c84b82aa7de26fff9429b922e70d5",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 168,
+      "path": "reading/docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+      "authored_blob": "919d95accb7780d7d65b0c9eabbffcd97777d6eb",
+      "integrated_blob": "6e7091903662621eeb2efc7b92bb9b92a1d9af48",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 168,
+      "path": "reading/manifest.json",
+      "authored_blob": "6ba9074cefd5454c7541bedc45d07b16b5a1e31a",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 169,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-12/README.md",
+      "authored_blob": "e8c9085a4e5a6801366a77ec7f7c44d57758e74f",
+      "integrated_blob": "e8c9085a4e5a6801366a77ec7f7c44d57758e74f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 169,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-12/SOURCES.json",
+      "authored_blob": "8dccbeb8841241d4ee93bf944f1d2f3eac2e304b",
+      "integrated_blob": "80e8a09cc6386c05ec63f85cf6a0d21e54d2577a",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 169,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-12/TASK.json",
+      "authored_blob": "4a7aa991b95c4467085a037b7333330f69e71ddc",
+      "integrated_blob": "4a7aa991b95c4467085a037b7333330f69e71ddc",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 169,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-12/VERIFY.json",
+      "authored_blob": "3220356a85f6ec8fd9d74d91513c948f30fe8f57",
+      "integrated_blob": "3220356a85f6ec8fd9d74d91513c948f30fe8f57",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 169,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-12/verify.py",
+      "authored_blob": "4153f72047c931fdc75b24c764ab80e9e0e39935",
+      "integrated_blob": "4153f72047c931fdc75b24c764ab80e9e0e39935",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 170,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-16/README.md",
+      "authored_blob": "3669d398cdda1d5dc0e332be7a456c55a72f02a8",
+      "integrated_blob": "3669d398cdda1d5dc0e332be7a456c55a72f02a8",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 170,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-16/RESULT.json",
+      "authored_blob": "2fd58439beb63db4f5ff7f80704ad264a7abe3a0",
+      "integrated_blob": "2fd58439beb63db4f5ff7f80704ad264a7abe3a0",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 170,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-16/SOURCES.json",
+      "authored_blob": "0a6b2511bc0d181f9e5d20d5a8b07258a9774a2b",
+      "integrated_blob": "0a6b2511bc0d181f9e5d20d5a8b07258a9774a2b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 170,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-16/TASK.json",
+      "authored_blob": "8cb4e34a2fde6b858468f52f1ae23595a1bddb29",
+      "integrated_blob": "8cb4e34a2fde6b858468f52f1ae23595a1bddb29",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 170,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-16/VERIFY.json",
+      "authored_blob": "13b6077df0d1e1515e1bf5ef3064257a9be703d0",
+      "integrated_blob": "13b6077df0d1e1515e1bf5ef3064257a9be703d0",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 170,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-16/verify.py",
+      "authored_blob": "f7ebe4c9ab7ec032772258eb70ed04a6f8ffcfe1",
+      "integrated_blob": "f7ebe4c9ab7ec032772258eb70ed04a6f8ffcfe1",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 171,
+      "path": "docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md",
+      "authored_blob": "ab1fb964c0fd3b46e0597ccbc219a693b327908a",
+      "integrated_blob": "ab1fb964c0fd3b46e0597ccbc219a693b327908a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 171,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "062cd58fafef62802caafc2edc0b872e36a170b7",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 171,
+      "path": "reading/docs/reports/target_a_zero_slack_unit_collar_remainder_2026-10-19.md",
+      "authored_blob": "5cb9cf26e3b201d6100183795ef9bbf4852927db",
+      "integrated_blob": "5cb9cf26e3b201d6100183795ef9bbf4852927db",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 171,
+      "path": "reading/manifest.json",
+      "authored_blob": "e615635bf89871e9c92159a2642e94ca4bc1a403",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 172,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-04/README.md",
+      "authored_blob": "99ceb784ebddf7e182e98cc18f6d26db02c6ad76",
+      "integrated_blob": "99ceb784ebddf7e182e98cc18f6d26db02c6ad76",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 172,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-04/SOURCES.json",
+      "authored_blob": "cf5bf08aabeb21413415e16217d57111e013e5bd",
+      "integrated_blob": "9a088846a98c1a95a990dbf634935928acf8ab0d",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 172,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-04/TASK.json",
+      "authored_blob": "6c80664a5f7128d987f7c9aac082bb47913686c4",
+      "integrated_blob": "6c80664a5f7128d987f7c9aac082bb47913686c4",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 172,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-04/VERIFY.json",
+      "authored_blob": "b8a4f2a80b4d784e59efa16f24a7c8bc2e1b716e",
+      "integrated_blob": "b8a4f2a80b4d784e59efa16f24a7c8bc2e1b716e",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 172,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-04/verify.py",
+      "authored_blob": "8d4adab53ecd6a262501d8c93e40e5a74bdd4440",
+      "integrated_blob": "8d4adab53ecd6a262501d8c93e40e5a74bdd4440",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 173,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-06/README.md",
+      "authored_blob": "b6718265452239d95e54101f29f4bc439811f120",
+      "integrated_blob": "b6718265452239d95e54101f29f4bc439811f120",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 173,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-06/SOURCES.json",
+      "authored_blob": "51d943e1f0c768110e83e628b679ff744acc5d5d",
+      "integrated_blob": "3af0a90d223ba3d9c0be5833b4f660f74397976c",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 173,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-06/TASK.json",
+      "authored_blob": "3f599de392b62a275704d4e37e9e463296c2322d",
+      "integrated_blob": "3f599de392b62a275704d4e37e9e463296c2322d",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 173,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-06/VERIFY.json",
+      "authored_blob": "2067c80410758fd65ddbe02a5b7a550a11be8f62",
+      "integrated_blob": "2067c80410758fd65ddbe02a5b7a550a11be8f62",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 173,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-06/verify.py",
+      "authored_blob": "8c0c2477ebc3afb5a9ce5a27508f32d8f9ff5ba8",
+      "integrated_blob": "8c0c2477ebc3afb5a9ce5a27508f32d8f9ff5ba8",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 174,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-07/README.md",
+      "authored_blob": "1254776cdf24021995f4c491ad930ebf786d3d8b",
+      "integrated_blob": "1254776cdf24021995f4c491ad930ebf786d3d8b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 174,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-07/SOURCES.json",
+      "authored_blob": "776ac5bfe68fb81e8bc7e018af16a72255f092bc",
+      "integrated_blob": "776ac5bfe68fb81e8bc7e018af16a72255f092bc",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 174,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-07/TASK.json",
+      "authored_blob": "edb6a9b533d0058f1cc84f98549b42382a0afdfd",
+      "integrated_blob": "edb6a9b533d0058f1cc84f98549b42382a0afdfd",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 174,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-07/VERIFY.json",
+      "authored_blob": "1f303680ee8fe058e43481709329d79de677e33b",
+      "integrated_blob": "1f303680ee8fe058e43481709329d79de677e33b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 174,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-07/verify.py",
+      "authored_blob": "c6d53c282230e12f9f0301adbdb82e373566381b",
+      "integrated_blob": "c6d53c282230e12f9f0301adbdb82e373566381b",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 175,
+      "path": "research-packages/e99-paired-20261019t091333z-local-08/README.md",
+      "authored_blob": "50b9545839bf73c4f67c4704484bff3516379b27",
+      "integrated_blob": "50b9545839bf73c4f67c4704484bff3516379b27",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 175,
+      "path": "research-packages/e99-paired-20261019t091333z-local-08/SOURCES.json",
+      "authored_blob": "030754f5ce2547a41a5012f9afd5a846a4707ab0",
+      "integrated_blob": "2df96f4e9c5ae8c9159009236161866ed93ac3e4",
+      "identical": false,
+      "adaptation": "Authenticate and refresh mutable catalog/index/track source pins. See both repin manifests."
+    },
+    {
+      "pr": 175,
+      "path": "research-packages/e99-paired-20261019t091333z-local-08/TASK.json",
+      "authored_blob": "1f3a399508bfc4b0cf0f2281d6ee837444eaf40d",
+      "integrated_blob": "1f3a399508bfc4b0cf0f2281d6ee837444eaf40d",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 175,
+      "path": "research-packages/e99-paired-20261019t091333z-local-08/VERIFY.json",
+      "authored_blob": "2599af11dcf9cd025b25c86ed902236d79bc0a1a",
+      "integrated_blob": "2599af11dcf9cd025b25c86ed902236d79bc0a1a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 175,
+      "path": "research-packages/e99-paired-20261019t091333z-local-08/verify.py",
+      "authored_blob": "ea575c2363a727340120bbda670c95ab444d729a",
+      "integrated_blob": "ea575c2363a727340120bbda670c95ab444d729a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 176,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-15/README.md",
+      "authored_blob": "29515f3995a9b664c4d45f00125955c77eb103bb",
+      "integrated_blob": "29515f3995a9b664c4d45f00125955c77eb103bb",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 176,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-15/REVIEW_TARGET.json",
+      "authored_blob": "9d687861f195c725ad3b8f12b48708c2d2169dc9",
+      "integrated_blob": "9d687861f195c725ad3b8f12b48708c2d2169dc9",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 176,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-15/SOURCES.json",
+      "authored_blob": "b748afeaf6ba213012ff4146513963fdac242624",
+      "integrated_blob": "b748afeaf6ba213012ff4146513963fdac242624",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 176,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-15/TASK.json",
+      "authored_blob": "9ec8f8a035d0d7a41216bd057e2c6d205938da3a",
+      "integrated_blob": "9ec8f8a035d0d7a41216bd057e2c6d205938da3a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 176,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-15/VERIFY.json",
+      "authored_blob": "d030eaac20b54908940711e3886e45dedd1ff6c1",
+      "integrated_blob": "d030eaac20b54908940711e3886e45dedd1ff6c1",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 176,
+      "path": "research-packages/e99-paired-20261019t091333z-homelab-15/verify.py",
+      "authored_blob": "cdd9d6075505514b3b1a29a5e5b82ee404edc498",
+      "integrated_blob": "cdd9d6075505514b3b1a29a5e5b82ee404edc498",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 177,
+      "path": "docs/audits/target_c_pr952_loaded_anchor_upper_box_independent_audit_2026-10-19.md",
+      "authored_blob": "13734359d5bf38c7b700f767c709929c689a7965",
+      "integrated_blob": "13734359d5bf38c7b700f767c709929c689a7965",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 177,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "d70b646a9c92f5a79689c6817aea864513ee4713",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 177,
+      "path": "reading/docs/audits/target_c_pr952_loaded_anchor_upper_box_independent_audit_2026-10-19.md",
+      "authored_blob": "a5a215050203991d2e7e546fadaa772ea9cc3ba2",
+      "integrated_blob": "a5a215050203991d2e7e546fadaa772ea9cc3ba2",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 177,
+      "path": "reading/manifest.json",
+      "authored_blob": "130a9270c8a453cd935a2cfe64c195436a351dfd",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 178,
+      "path": "docs/audits/global_factor_balance_obstruction_destination_independent_audit_2026-10-19.md",
+      "authored_blob": "3d585983814cff43bfe6a9f11eac5d98f401f84a",
+      "integrated_blob": "3d585983814cff43bfe6a9f11eac5d98f401f84a",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 178,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "fec7886b1d96d9d009b60fffaddbec3f7d3d8936",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 178,
+      "path": "reading/docs/audits/global_factor_balance_obstruction_destination_independent_audit_2026-10-19.md",
+      "authored_blob": "f6a32889a17b209833063f1c4d79f972f000890c",
+      "integrated_blob": "f6a32889a17b209833063f1c4d79f972f000890c",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 178,
+      "path": "reading/manifest.json",
+      "authored_blob": "5c794a9bbb8d8775daa9cae8dc922519fd9d2d3b",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 179,
+      "path": "docs/audits/target_c_pr952_component_anchor_stress_gain_destination_audit_2026-10-19.md",
+      "authored_blob": "5f96c51359029a6d784f0dd6a893b42ab9e7bcc0",
+      "integrated_blob": "5f96c51359029a6d784f0dd6a893b42ab9e7bcc0",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 179,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "3c6dedad44d6cd35d4d1a3ea1ad14227c268a615",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 179,
+      "path": "reading/docs/audits/target_c_pr952_component_anchor_stress_gain_destination_audit_2026-10-19.md",
+      "authored_blob": "6827b7818eec13532cd81455427a19ce2d720ca9",
+      "integrated_blob": "6827b7818eec13532cd81455427a19ce2d720ca9",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 179,
+      "path": "reading/manifest.json",
+      "authored_blob": "e6fb2233068e1d36ad4d1cc7c7e753911bb398ae",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 180,
+      "path": "docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+      "authored_blob": "286eb6c152e150324a1aa7cd0d7f1ef700123d3f",
+      "integrated_blob": "286eb6c152e150324a1aa7cd0d7f1ef700123d3f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 180,
+      "path": "docs/state/artifact-index.jsonl",
+      "authored_blob": "4787cf264a83604cdfdcd34abab4f76a796f677b",
+      "integrated_blob": "1b2fd91941bb29bc5382d46ae87383bdedc06682",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    },
+    {
+      "pr": 180,
+      "path": "reading/docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+      "authored_blob": "d108d35b732d37d84994b044df0ca2504193c80f",
+      "integrated_blob": "d108d35b732d37d84994b044df0ca2504193c80f",
+      "identical": true,
+      "adaptation": null
+    },
+    {
+      "pr": 180,
+      "path": "reading/manifest.json",
+      "authored_blob": "586dbdee49f5ae1c4cfd9d53344d89963cb58aaa",
+      "integrated_blob": "aa7c6a773126e9f9ad66d60968cc04e0b1b35ebb",
+      "identical": false,
+      "adaptation": "Derived view regenerated for combined source tree; original remains in source ancestry."
+    }
+  ]
+}

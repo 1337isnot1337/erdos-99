@@ -1,0 +1,23 @@
+{
+  "number": 139,
+  "head": "c0043e3fb9c75b405e75fa462d5c9f2d1a7f1e85",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "156ccc9f009f27a3b032a4f3fcb3e9beaca97348",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Original assigned head c0043e3 contained the destination report plus candidate/track/artifact edits; direct algebra checked at exact head: from |h'|<6D^(2/3), integrating along a support tilt gives |h(u)-h(v)| <= 6D^(2/3)|u-v| and then the audit\u2019s midpoint-normal localization bound under its stated bounded-cap/near-diameter hypotheses. Candidate remained unreviewed/noncanonical. The original registry next-obligation wording was independently reconciled later at integration 8bc3d8f: PASS at s=0,2 is recorded while candidate lifecycle stays unreviewed and source-realized movement remains open.",
+  "original_coverage": "Original assigned head c0043e3 contained the destination report plus candidate/track/artifact edits; direct algebra checked at exact head: from |h'|<6D^(2/3), integrating along a support tilt gives |h(u)-h(v)| <= 6D^(2/3)|u-v| and then the audit\u2019s midpoint-normal localization bound under its stated bounded-cap/near-diameter hypotheses. Candidate remained unreviewed/noncanonical. The original registry next-obligation wording was independently reconciled later at integration 8bc3d8f: PASS at s=0,2 is recorded while candidate lifecycle stays unreviewed and source-realized movement remains open.",
+  "remaining": "The source-realized atlas/motion, endpoint-tail moments and complete diameter-edge transfer remain outside this component audit. Candidate lifecycle stays unreviewed. Original registry-wording reconciliation is resolved in the integration and independently checked in b-correction-review.json; that is not theorem promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/c-scoped-proof-audits.json",
+    "reviews/b-correction-review.json"
+  ],
+  "canonical_promotion": false
+}

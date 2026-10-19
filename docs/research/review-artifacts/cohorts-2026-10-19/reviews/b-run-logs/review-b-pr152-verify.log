@@ -1,0 +1,9 @@
+PASS m=7: population=72 including 8 guard labels, all 254 displacement vectors, contacts=127, D0^2=113+(m + 1)*sqrt(4), Dend^2=113
+PASS m=8: population=90 including 9 guard labels, all 322 displacement vectors, contacts=161, D0^2=145+(m + 1)*sqrt(13), Dend^2=145
+PASS m=12: population=182 including 13 guard labels, all 674 displacement vectors, contacts=337, D0^2=313+(m + 1)*sqrt(69), Dend^2=313
+PASS m=24: population=650 including 25 guard labels, all 2498 displacement vectors, contacts=1249, D0^2=1201+(m + 1)*sqrt(429), Dend^2=1201
+PASS: 3748 initial displacement checks; full path bounds follow from the proof
+PASS: endpoint retains every label and obeys the initial diameter cap
+PASS: exact Oler slack endpoints and strict cover-radius bound
+PASS: cosine 3/4 negative control violates unit separation
+Scope: sampled exact checks corroborate the universal formulas proved in README.md

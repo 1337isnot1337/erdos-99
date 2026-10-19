@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "flock",
+    "-n",
+    "/home/cinna/.local/state/erdos99-host-compute.lock",
+    "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python",
+    "research/verify_global_colouring_lift_rank_2026_10_12.py"
+  ],
+  "returncode": 0,
+  "duration_seconds": 0.267,
+  "timed_out": false,
+  "stdout": "PASS full-source lift square {\"labels\": 4, \"pairs\": 6, \"old_D2\": \"2\", \"lifted_D2\": \"200/101\"}\nPASS full-source lift rectangle {\"labels\": 4, \"pairs\": 6, \"old_D2\": \"61/25\", \"lifted_D2\": \"245/101\"}\nPASS full-source lift right_triangle {\"labels\": 3, \"pairs\": 3, \"old_D2\": \"2\", \"lifted_D2\": \"200/101\"}\nPASS full-source lift square_and_isolate {\"labels\": 5, \"pairs\": 10, \"old_D2\": \"37/4\", \"lifted_D2\": \"926/101\"}\nPASS uniform Gram interpolation rank 4 labels 3\nPASS uniform Gram interpolation rank 4 labels 3\nPASS uniform Gram interpolation rank 3 labels 2\nPASS uniform Gram interpolation rank 5 labels 4\nPASS colour-lift ranks: square 3, affine-coloured rectangle 2\nPASS actual planar flattening 245/101\nPASS valid nonlocal endpoint despite intermediate collision {\"labels\": 2, \"pairs_checked\": 1, \"t\": \"1\", \"minimum_squared_distance\": \"2\", \"source_D2\": \"16\", \"endpoint_D2\": \"2\", \"unit_separated\": true, \"strict_diameter_improvement\": true, \"planar_strict_competitor\": true, \"source_global_optimality\": \"not checked\"}\nPASS rejecting diameter-only contraction\nPASS exact finite certificates; no global optimality or Level I conclusion\n",
+  "stderr": "",
+  "lock_mode": "nonblocking flock; did not wait for root-owned full suite"
+}

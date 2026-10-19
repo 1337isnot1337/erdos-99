@@ -1,0 +1,14 @@
+{
+  "additive_only_odd_cycle_guardrail": "PASS",
+  "complete_array_fixtures": 81,
+  "complete_array_pair_checks": 2916,
+  "exact_destination_inputs": 16,
+  "path_fixtures_per_bank": [
+    57,
+    57
+  ],
+  "scope": "finite reproducibility only; universal analytic proof remains in README",
+  "sixty_degree_boundary_control": "PASS",
+  "source_hashes": "PASS",
+  "source_verifier": "PASS (exit 0; replay JSON equals saved certificate)"
+}

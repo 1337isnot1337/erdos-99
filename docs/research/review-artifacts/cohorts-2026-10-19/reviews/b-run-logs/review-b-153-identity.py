@@ -1,0 +1,4 @@
+import json,subprocess
+repo='/home/cinna/.local/state/erdos99-merge/20261019/review-b'; meta=json.load(open('/home/cinna/.local/state/erdos99-merge/20261019/prs/153.json')); p=meta['pull']; head=p['head']['sha']; base=p['base']['sha']; paths=sorted(f['filename'] for f in meta['files'])
+ref=subprocess.check_output(['git','rev-parse','origin/pr/153'],cwd=repo,text=True).strip(); mb=subprocess.check_output(['git','merge-base',base,head],cwd=repo,text=True).strip(); gitpaths=sorted(subprocess.check_output(['git','diff','--name-only',base,head],cwd=repo,text=True).splitlines())
+print(json.dumps({'number':153,'title':p['title'],'head':head,'origin_pr_head':ref,'head_matches':head==ref,'base':base,'merge_base':mb,'github_changed_files':p['changed_files'],'api_inventory_count':len(paths),'git_inventory_count':len(gitpaths),'full_inventory_match':paths==gitpaths,'paths':paths},indent=2))

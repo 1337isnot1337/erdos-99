@@ -1,0 +1,175 @@
+{
+  "arithmetic": "integer and Fraction only",
+  "enumeration": {
+    "admissible_two_grain_masks": 4,
+    "edge_connected_euler_one_disk_masks": 13,
+    "minimum_physical_rhombi": 3,
+    "minimum_witnesses": [
+      {
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "grains": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "physical_count": 3,
+        "physical_interface_count": 1,
+        "virtual_crossgrain_count": 1
+      },
+      {
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "grains": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "physical_count": 3,
+        "physical_interface_count": 1,
+        "virtual_crossgrain_count": 1
+      },
+      {
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "grains": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "physical_count": 3,
+        "physical_interface_count": 1,
+        "virtual_crossgrain_count": 1
+      },
+      {
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "grains": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "physical_count": 3,
+        "physical_interface_count": 1,
+        "virtual_crossgrain_count": 1
+      }
+    ],
+    "nonempty_masks": 15
+  },
+  "falsification_controls": {
+    "adjacent_two_cell_mask_shares_train": true,
+    "filling_missing_corner_removes_virtual_slot": true,
+    "removing_bridge_rejected_as_disk": true
+  },
+  "grain_ledger": {
+    "actual_interface_rhs": 3,
+    "areas": {
+      "complete_potential": "48/13",
+      "deleted_physical": "12/13",
+      "internal": "24/13",
+      "physical": "36/13",
+      "virtual": "12/13"
+    },
+    "deleted_physical_interface_I": 1,
+    "deleted_physical_interface_edges": 1,
+    "internal_grid_crossings_G": 2,
+    "penetration_counts": [
+      1,
+      1
+    ],
+    "penetration_union_count": 1,
+    "physical_crossings_R": 3,
+    "rhs_if_virtual_were_added_without_payment": 4,
+    "upper_cap_rhs_at_K_equals_I": 3,
+    "virtual_crossgrain_count": 1
+  },
+  "metric": {
+    "boundary_unit_edges": 8,
+    "diameter_squared": "85/13",
+    "long_diagonal_squared": "36/13",
+    "minimum_squared_separation": "1",
+    "point_pairs_checked": 28,
+    "rhombus_area": "12/13",
+    "same_direction_pair_determinants": [
+      "0",
+      "0"
+    ],
+    "shared_cell_edges": 2,
+    "short_diagonal_squared": "16/13",
+    "tile_boundary_edges": 10,
+    "unit_contact_triangles": 0,
+    "unit_contacts": 10,
+    "unlike_direction_pair_determinant": "12/13",
+    "vertices": 8
+  },
+  "scope_limit": "2-by-2 box only; no global source or canonical Target B inference",
+  "status": "PASS: independent bounded finite-model audit"
+}

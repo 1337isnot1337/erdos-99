@@ -1,0 +1,5 @@
+2x2 disk: {'R': 4, 'B': 8, 'V': 9, 'M': 12, 'chi': 1, 'k': 1, 'h': 0, 't': 0, 'n': 9, 't+chi-1': 0, 'sqrt3_rhs_coefficient': '2'}
+4x4 patch minus central 2x2 hole: {'R': 12, 'B': 24, 'V': 24, 'M': 36, 'chi': 0, 'k': 1, 'h': 1, 't': 0, 'n': 24, 't+chi-1': -1, 'sqrt3_rhs_coefficient': '11/2'}
+two vertex-disjoint rhombi: {'R': 2, 'B': 8, 'V': 8, 'M': 8, 'chi': 2, 'k': 2, 'h': 0, 't': 0, 'n': 8, 't+chi-1': 1, 'sqrt3_rhs_coefficient': '5/2'}
+annulus plus two outside labels: {'R': 12, 'B': 24, 'V': 24, 'M': 36, 'chi': 0, 'k': 1, 'h': 1, 't': 2, 'n': 26, 't+chi-1': 1, 'sqrt3_rhs_coefficient': '13/2'}
+PASS: incidence, Euler signs, source count, and shell coefficient controls

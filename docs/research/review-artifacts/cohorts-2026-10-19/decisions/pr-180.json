@@ -1,0 +1,22 @@
+{
+  "number": 180,
+  "head": "22aa2fc4ae96f1109f6001e9add49d9c70c26b83",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "dcfd1788d7e9a7aed6748f0df7d4989e7fcffb0f",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Reviewed owner common-release audit and its explicit notation correction. Its equations use r=moving-minus-fixed; two source-report phrases describe the reverse vector. Correcting the arrow wording preserves the displayed algebra; AB all-binary branch relies on separate unreviewed gain claim, and CT/UCC/IM retain supplied-family/unary hypotheses. No canonical source extraction.",
+  "original_coverage": "Reviewed owner common-release audit and its explicit notation correction. Its equations use r=moving-minus-fixed; two source-report phrases describe the reverse vector. Correcting the arrow wording preserves the displayed algebra; AB all-binary branch relies on separate unreviewed gain claim, and CT/UCC/IM retain supplied-family/unary hypotheses. No canonical source extraction.",
+  "remaining": "Preserve original report bytes; make a source-bound notation erratum if relying on prose, audit all-binary weighted-gain dependency separately; source extraction/unary-avoidance remain. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/c-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

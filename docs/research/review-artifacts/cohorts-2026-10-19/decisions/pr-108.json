@@ -1,0 +1,22 @@
+{
+  "number": 108,
+  "head": "7bc8336ea20af407359358ae3c90bba1954ca665",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "5697604f30503fb4884ebbd066e0074a563ef7ab",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Reviewed exact report scope, hypotheses, dependencies, conclusion, and lifecycle: positive-return quantile follows from its named canonical inputs; it excludes common-grid/attachment and retains candidate as unreviewed.",
+  "original_coverage": "Reviewed exact report scope, hypotheses, dependencies, conclusion, and lifecycle: positive-return quantile follows from its named canonical inputs; it excludes common-grid/attachment and retains candidate as unreviewed.",
+  "remaining": "Next: common-grid access/attachment and endpoint-safe competitor remain separate. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/c-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

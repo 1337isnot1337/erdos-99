@@ -1,0 +1,16 @@
+{
+  "name": "package_check_only",
+  "argv": [
+    "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python",
+    "scripts/research_package.py",
+    "--package",
+    "research-packages/e99-pass-20261018-homelab-10",
+    "--check-only"
+  ],
+  "cwd": "/home/cinna/.local/state/erdos99-merge/20261019/review-c",
+  "returncode": 0,
+  "duration_seconds": 0.065,
+  "stdout": "{\n  \"status\": \"metadata-valid\",\n  \"package\": \"research-packages/e99-pass-20261018-homelab-10\",\n  \"classification\": \"unreviewed\",\n  \"unresolved\": [],\n  \"declared_seconds\": 60,\n  \"declared_package_dependencies\": [],\n  \"full_verified\": false,\n  \"replay_authorized\": false,\n  \"executed_commands\": false,\n  \"limits\": \"Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay.\"\n}\n",
+  "stderr": "",
+  "timed_out": false
+}

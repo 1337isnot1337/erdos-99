@@ -1,0 +1,21 @@
+{
+  "number": 174,
+  "head": "91f3d847a2d9e46d29bfa75d9a6a75c4e733ddf6",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "72216d3a0d34eed336746998ad127b5c52596bef",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Read package; deep-face persistence/isolate-deficit claim keeps explicit min-|H| tie-break and full-source boundary image hypotheses. Finite checks are controls only.",
+  "original_coverage": "Read package; deep-face persistence/isolate-deficit claim keeps explicit min-|H| tie-break and full-source boundary image hypotheses. Finite checks are controls only.",
+  "remaining": "No all-source extraction or endpoint closure. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

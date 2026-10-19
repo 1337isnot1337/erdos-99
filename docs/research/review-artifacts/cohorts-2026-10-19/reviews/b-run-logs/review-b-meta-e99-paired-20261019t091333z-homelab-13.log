@@ -1,0 +1,19 @@
+{
+  "status": "metadata-valid",
+  "package": "research-packages/e99-paired-20261019t091333z-homelab-13",
+  "classification": "unreviewed",
+  "unresolved": [
+    "Optional isolated replay remains unauthorized by static dependency analysis; the focused checker and pinned source verifier were run directly and their exact outcomes are recorded in the audit.",
+    "research-packages/e99-paired-20261019t091333z-homelab-13/verify.py: dynamic capability __debug__",
+    "research-packages/e99-paired-20261019t091333z-homelab-13/verify.py: dynamic capability __name__",
+    "research/verify_global_reflected_scale_2026_10_12.py: dynamic capability __debug__",
+    "research/verify_global_reflected_scale_2026_10_12.py: dynamic capability __name__",
+    "research/verify_global_reflected_scale_2026_10_12.py: unresolved import dataclasses"
+  ],
+  "declared_seconds": 30,
+  "declared_package_dependencies": [],
+  "full_verified": false,
+  "replay_authorized": false,
+  "executed_commands": false,
+  "limits": "Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay."
+}

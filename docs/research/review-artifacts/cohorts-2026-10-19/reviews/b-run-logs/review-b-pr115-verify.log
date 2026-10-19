@@ -1,0 +1,5 @@
+PASS exact boundary controls: d=1 allowed, d=D forbidden, below-one forbidden, below-D allowed
+PASS 784 ordered two-label palettes and 2401 direct assignments
+PASS 125 selected three-label palettes and 512 direct assignments
+PASS empty label class admits neither endpoint nor transversal
+SCOPE: finite regression controls only; the general equivalence is proved in README.md

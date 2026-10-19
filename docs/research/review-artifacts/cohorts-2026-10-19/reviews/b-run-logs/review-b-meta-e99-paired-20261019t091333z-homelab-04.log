@@ -1,0 +1,16 @@
+{
+  "status": "metadata-valid",
+  "package": "research-packages/e99-paired-20261019t091333z-homelab-04",
+  "classification": "unreviewed",
+  "unresolved": [
+    "No proof that sufficiently large triangle-free global minimizers satisfy the safe-core vacancy condition.",
+    "This conditional lemma and finite nonglobal control do not establish universal packet existence or Level I closure.",
+    "research-packages/e99-paired-20261019t091333z-homelab-04/verify.py: dynamic capability __debug__"
+  ],
+  "declared_seconds": 30,
+  "declared_package_dependencies": [],
+  "full_verified": false,
+  "replay_authorized": false,
+  "executed_commands": false,
+  "limits": "Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay."
+}

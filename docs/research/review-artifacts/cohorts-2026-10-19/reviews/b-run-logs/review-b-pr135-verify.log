@@ -1,0 +1,28 @@
+v00-v10 class=same-row-adjacent         source_d2=1 family_enclosure=[1,1]
+v00-v20 class=same-row-separated        source_d2=4 family_enclosure=[4,4]
+v00-v01 class=cross-row-same-index      source_d2=1 family_enclosure=[1,1]
+v00-v11 class=cross-row-abs-delta-1     source_d2=2 family_enclosure=[79/50,121/50]
+v00-v21 class=cross-row-abs-delta-2     source_d2=5 family_enclosure=[104/25,146/25]
+v00-z   class=z-to-bottom               source_d2=146/25 family_enclosure=[146/25,146/25]
+v10-v20 class=same-row-adjacent         source_d2=1 family_enclosure=[1,1]
+v10-v01 class=cross-row-abs-delta-1     source_d2=2 family_enclosure=[79/50,121/50]
+v10-v11 class=cross-row-same-index      source_d2=1 family_enclosure=[1,1]
+v10-v21 class=cross-row-abs-delta-1     source_d2=2 family_enclosure=[79/50,121/50]
+v10-z   class=z-to-bottom               source_d2=121/25 family_enclosure=[121/25,121/25]
+v20-v01 class=cross-row-abs-delta-2     source_d2=5 family_enclosure=[104/25,146/25]
+v20-v11 class=cross-row-abs-delta-1     source_d2=2 family_enclosure=[79/50,121/50]
+v20-v21 class=cross-row-same-index      source_d2=1 family_enclosure=[1,1]
+v20-z   class=z-to-bottom               source_d2=146/25 family_enclosure=[146/25,146/25]
+v01-v11 class=same-row-adjacent         source_d2=1 family_enclosure=[1,1]
+v01-v21 class=same-row-separated        source_d2=4 family_enclosure=[4,4]
+v01-z   class=z-to-top                  source_d2=61/25 family_enclosure=[36/25,2977/1000]
+v11-v21 class=same-row-adjacent         source_d2=1 family_enclosure=[1,1]
+v11-z   class=z-to-top                  source_d2=36/25 family_enclosure=[36/25,2977/1000]
+v21-z   class=z-to-top                  source_d2=61/25 family_enclosure=[36/25,2977/1000]
+PASS: all 21 pair classes and source distances independently reconstructed
+PASS: exact radical enclosure proves all full-source lower/upper bounds
+PASS: feasible interval is exactly |c| <= 21/100
+PASS: interior counts are (|C|, |H|, triangles) = (7, 2, 0)
+PASS: both activation endpoints have counts (7, 3, 0)
+PASS: both outside-upper controls have d^2=6 > D^2
+PASS: both unit-triangle controls have (9 contacts, 4 triangles)

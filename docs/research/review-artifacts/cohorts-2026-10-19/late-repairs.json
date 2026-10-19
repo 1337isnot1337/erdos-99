@@ -1,0 +1,21 @@
+{
+  "candidate": "ee8f9df94a8a1043098482386bbbc6a893214330",
+  "repairs": [
+    {
+      "pr": 124,
+      "kind": "remove-second-placeholder-metadata-marker",
+      "scientific_prose_changed": false
+    },
+    {
+      "pr": 130,
+      "kind": "explicit-normalized-unit-edge-lift-and-squared-distance-consequence",
+      "paths": [
+        "docs/audits/independent_global_colour_lift_flattening_audit_2026-10-18.md",
+        "research-packages/e99-pass-20261018-homelab-10/README.md",
+        "research-packages/e99-pass-20261018-homelab-10/TASK.json"
+      ],
+      "checker_changed": false,
+      "independent_correction_review": "reviews/c-pr130-correction-review.json"
+    }
+  ]
+}

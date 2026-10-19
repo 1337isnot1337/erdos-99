@@ -1,0 +1,22 @@
+{
+  "number": 157,
+  "head": "58229f8218d1a0c48c7b1981b9e6cde47cfb0bd8",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "069a0a1617e630ac066d17caa0d8d283dd8791fa",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Reviewed exact audit scope and conditional inclusive-floor closure. The report separates floor equality from strict-floor route; canonical candidates remain unreviewed.",
+  "original_coverage": "Reviewed exact audit scope and conditional inclusive-floor closure. The report separates floor equality from strict-floor route; canonical candidates remain unreviewed.",
+  "remaining": "No extraction/noncollapse theorem; lifecycle unchanged. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/c-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

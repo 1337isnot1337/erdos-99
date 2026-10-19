@@ -1,0 +1,9 @@
+independent exact audit of six PR #106 same-cardinality comparators
+R p core chain ring source_N comparator_N excess boundary_points diameter_upper
+16 10 610 33 16 657 847 190 0 31
+25 15 1740 51 20 1809 2135 326 0 49
+36 21 3972 73 24 4067 4543 476 0 71
+64 37 13564 129 32 13723 14615 892 0 127
+100 58 34158 201 40 34397 35813 1416 0 199
+256 148 232366 513 64 232941 236625 3684 0 511
+PASS: all six source populations, separation checks, cardinality controls, and strict-diameter comparisons

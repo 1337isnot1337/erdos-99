@@ -1,0 +1,22 @@
+{
+  "number": 116,
+  "head": "08442dbb7a3159ef1d0cc7ec966b99d6eced0edd",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "0ac694539b50414c552645e1f33963333dea9390",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Independent report on PR948 quarter-fold face obstructions; source-only audit, with no new extraction or endpoint theorem.",
+  "original_coverage": "Independent report on PR948 quarter-fold face obstructions; source-only audit, with no new extraction or endpoint theorem.",
+  "remaining": " The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/b-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/b-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

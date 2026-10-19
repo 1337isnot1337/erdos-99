@@ -1,0 +1,21 @@
+{
+  "number": 163,
+  "head": "70eac9a6eba9cc2c254c44ae0e72058d88a6d75c",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "f913670d5cf7d0f98082c553ec42b211eaa43af0",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Read package files; common-grid access conditionally derives coherent grid reach from a linear return family and canonical-cell hypotheses. It explicitly claims no overlap/congestion/payment/source motion and depends on unreviewed PR108 candidate.",
+  "original_coverage": "Read package files; common-grid access conditionally derives coherent grid reach from a linear return family and canonical-cell hypotheses. It explicitly claims no overlap/congestion/payment/source motion and depends on unreviewed PR108 candidate.",
+  "remaining": "PR108 is not canonical; no endpoint-safe competitor/source extraction. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

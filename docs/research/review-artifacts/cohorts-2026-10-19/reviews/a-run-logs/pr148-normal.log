@@ -1,0 +1,11 @@
+PR120: exact strict rows and unique full-shore matchings verified
+PR120: unit-separated A/X/Y; both matching segment pairs disjoint
+PR120: restricted Hall defect 0; inherited overlap 1; free minimum overlap 0
+PR120: for H=conv(A), raw alpha_1(H)=|A|=2; K+B and globality still fail
+PR121: exact strict rows and complete three-site Y_in verified
+PR121: source minimum squared distance 13/12; selected Y segments disjoint
+PR121: full matching counts X=4, Y_in=7; selected pair overlap 1, defect 0
+PR121: coordinated full-shore alternative has restricted overlap 0
+PR121: no exact-unit source/shore incidence; Y_in uses the strict open disk
+PR121: 5x5 grid proves alpha_1(H)>=25>|A|=11 after exact center-distance repair
+LIMIT: these are local regressions; neither supplies Section-168 global source extraction

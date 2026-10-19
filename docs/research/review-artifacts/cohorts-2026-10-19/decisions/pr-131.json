@@ -1,0 +1,21 @@
+{
+  "number": 131,
+  "head": "35c3bdb387c714e8a4f51f48e13a6b684cea7151",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "04c670dedd832140193321e8baba880924be750a",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Exact point-pair and incidence checker passes; PR144 independent audit reconstructs 15-mask domain, metric and interface ledger.",
+  "original_coverage": "Exact point-pair and incidence checker passes; PR144 independent audit reconstructs 15-mask domain, metric and interface ledger.",
+  "remaining": "Archive partially reviewed; full certificate replay deferred. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

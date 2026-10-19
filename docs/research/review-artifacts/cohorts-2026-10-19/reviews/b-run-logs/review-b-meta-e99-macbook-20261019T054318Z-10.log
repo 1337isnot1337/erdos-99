@@ -1,0 +1,15 @@
+{
+  "status": "metadata-valid",
+  "package": "research-packages/e99-macbook-20261019T054318Z-10",
+  "classification": "unreviewed",
+  "unresolved": [
+    "The PR #114 row system is audited only as finite abstract incidence and stress data; no planar source realization, vertex-level contact equilibrium, all-pairs source ledger, or global minimizer is certified.",
+    "Whether full threshold-source geometry excludes or realizes the boundary payment remains open."
+  ],
+  "declared_seconds": 30,
+  "declared_package_dependencies": [],
+  "full_verified": false,
+  "replay_authorized": false,
+  "executed_commands": false,
+  "limits": "Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay."
+}

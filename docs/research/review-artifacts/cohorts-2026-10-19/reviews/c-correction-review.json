@@ -1,0 +1,96 @@
+{
+  "reviewer": "review_c",
+  "reviewer_identity": "/root/review_c, GPT-6 Luna xhigh",
+  "independent_from_correction_author": true,
+  "subject": {
+    "pr": 147,
+    "original_pr_head": "a110c4062443aa55c480cfd353af3f756e565803",
+    "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "package": "research-packages/e99-macbook-20261019T054318Z-02",
+    "amended_integration_commit": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+    "parent_integration_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "review_scope": "Independent reconstruction of the corrected cyclic hull-turn list and the whole scoped hull/PC1 and payment regression. No canonical promotion."
+  },
+  "identity_and_source_binding": {
+    "changed_package_paths_since_parent": [
+      "research-packages/e99-macbook-20261019T054318Z-02/README.md"
+    ],
+    "only_corrected_line": "The README cyclic determinant list changed from s,c+s,s+c,s-c,s,s-c to s,s+c,s-c,s,s-c,s+c, with common m^2 factor stated.",
+    "package_sha256": {
+      "README.md": "be9e3d20274c4580a7af516a992977ab556640df5c5d65f9792cdb2ac1197981",
+      "SOURCES.json": "e2f006373c8ddca790c08a8beb9dd07c5d008629e5f5f724abe9c40abbeabc9e",
+      "TASK.json": "1ca3f47279e288f2e0688bc1316ee94d818895ea734f10bcf89e811fdc6bbe4b",
+      "VERIFY.json": "f29bb301765a445753d72890279f96f2bcc39c9c3aa9ff59e16c35cb1eaf068e",
+      "verify.py": "78b07279168ce3aad0ee261e16f847a99b68132729e897a0b9c07bd311f478b0"
+    },
+    "verifier_sha256_matches_SOURCES_pin": "78b07279168ce3aad0ee261e16f847a99b68132729e897a0b9c07bd311f478b0",
+    "verifier_unchanged_in_package_diff": true,
+    "source_inputs_and_checker_unchanged": true,
+    "source_baseline": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "source_integrity": "SOURCES.json and the pinned source files were left unchanged; integration metadata repins affect other C-package metadata and do not change this package proof/checker."
+  },
+  "independent_reconstruction": {
+    "scaled_vertices_cyclic_order": [
+      "(-c,-s)",
+      "(1-c,-s)",
+      "(1,0)",
+      "(0,1)",
+      "(-s,1+c)",
+      "(-s,c)"
+    ],
+    "directed_edges": [
+      "(1,0)",
+      "(c,s)",
+      "(-1,1)",
+      "(-s,c)",
+      "(0,-1)",
+      "(s-c,-s-c)"
+    ],
+    "consecutive_turn_determinants_without_common_m2": [
+      "s",
+      "s+c",
+      "s-c",
+      "s",
+      "s-c",
+      "s+c"
+    ],
+    "positivity": "For m>=12 divisible by four, t=floor(m^2/sqrt(3))+1 over m^2 satisfies 1/sqrt(3)<t<1/sqrt(3)+1/m^2; theta=2 atan(t), c=cos(theta)<1/2, s=sin(theta)>sqrt(3)/2. Thus each listed determinant is positive: s>0, s+c>0, and s-c>sqrt(3)/2-1/2>0.",
+    "origin_left_of_each_edge_without_common_m2": [
+      "s",
+      "s",
+      "1",
+      "s",
+      "s",
+      "1"
+    ],
+    "hull_and_PC1_identities": {
+      "shoelace_hull_area": "(1+2s)m^2",
+      "physical_rhombus_area_S": "2 s m^2+1",
+      "convexification_G": "m^2-1",
+      "support_depth_H": "(4+2c)m^2-2",
+      "support_turning_J": "H-2G=2(1+c)m^2",
+      "cross_component_total": "Q_12=2(1+c)m^2",
+      "physical_interface_crossing": "P_12=1",
+      "virtual_cross_component_mass": "V_12=2(1+c)m^2-1",
+      "trim_depth_for_k=l=m/4": "d=m/4-2>0",
+      "PC1_diameter_excess": "Each trimmed vector sum has norm <=m/2, so |U+V|<=m<=D and d(|U+V|-D)_+=0."
+    },
+    "scoped_payment_conclusion": {
+      "endpoint_quantity": "2E+H-J=2(1+2s-sqrt(3))m^2-sqrt(3)",
+      "scalar_payment_residual": "V_12-[P_12+(2E+H-J)+4sqrt(3)m]=2(c-2s+sqrt(3))m^2-4sqrt(3)m+sqrt(3)-2=m^2-O(m)>0 for sufficiently large m.",
+      "interpretation": "This defeats the proposed unit-for-unit scalar payment even with positive PC1 depth; the package explicitly does not contradict the shell endpoint, since G+E>2sqrt(3)m for m>=12. The family is a geometric regression, not a global minimizer or endpoint obstruction."
+    }
+  },
+  "focused_verification": [
+    {
+      "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-macbook-20261019T054318Z-02/verify.py (exact verifier bytes streamed from git show 173b3dd...)",
+      "working_tree": "own detached review-c worktree; exact commit bytes",
+      "exit_code": 0,
+      "result": "PASS on exact-rational cases m=12,16,20; checks six-vertex hull, G=m^2-1, H=(4+2c)m^2-2, J=2(1+c)m^2, Q12=V12+1, positive scalar-payment residual, shell margin, positive PC1 depths [1,2,3], zero PC1 diagonal excess, and unit separation/contact controls.",
+      "log": "reviews/c-correction-verifier-173b3dd.json"
+    }
+  ],
+  "limitations": "Finite cases corroborate the listed instances. General hull turns, areas, support identities and asymptotic payment residual are algebraic claims reconstructed from formulas. This is not a global-minimizer theorem or an endpoint obstruction; no source/canonical theorem is promoted and no full theorem-certificate replay is claimed.",
+  "disposition": "accept_archive",
+  "archive_lifecycle": "Conditional geometric regression; remains partially_reviewed, noncanonical and not promoted. Exact corrected hull-turn list is internally consistent with unchanged geometry and verifier."
+}

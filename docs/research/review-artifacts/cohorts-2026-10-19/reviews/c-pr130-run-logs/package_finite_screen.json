@@ -1,0 +1,13 @@
+{
+  "name": "package_finite_screen",
+  "argv": [
+    "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python",
+    "research-packages/e99-pass-20261018-homelab-10/verify.py"
+  ],
+  "cwd": "/home/cinna/.local/state/erdos99-merge/20261019/review-c",
+  "returncode": 0,
+  "duration_seconds": 0.316,
+  "stdout": "{\"arithmetic\": \"exact fractions; barycentric color coordinates\", \"grid\": \"3x3 integer points\", \"scope\": \"finite regression only; no global minimizer conclusion\", \"three_colour\": {\"flattenable_at_n3\": 456, \"flattenable_at_n4\": 0, \"noncollinear_four_point_assignments\": 4536, \"noncollinear_three_point_assignments\": 456}, \"two_colour\": {\"assignments\": 1764, \"flattenable\": 240, \"rank_iff_parallel_level_lines\": true}}\n",
+  "stderr": "",
+  "timed_out": false
+}

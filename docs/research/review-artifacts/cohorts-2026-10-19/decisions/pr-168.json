@@ -1,0 +1,22 @@
+{
+  "number": 168,
+  "head": "36c1e99ca90b7600e44cb416864bc6fe2aeeb1f1",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "a5105f64ca60d25f4767f97320c8ff31519d3dc0",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Asymptotic reflected-scale moment obstruction under the report\u2019s exact scaling and weak-limit assumptions; does not imply a strict lower-order gain or source extraction.",
+  "original_coverage": "Asymptotic reflected-scale moment obstruction under the report\u2019s exact scaling and weak-limit assumptions; does not imply a strict lower-order gain or source extraction.",
+  "remaining": " The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/b-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/b-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

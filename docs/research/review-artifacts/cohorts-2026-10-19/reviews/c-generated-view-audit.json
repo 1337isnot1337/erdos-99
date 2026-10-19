@@ -1,0 +1,172 @@
+{
+  "reviewer": "review_c",
+  "audit_reports": 9,
+  "generated_views_verified": 8,
+  "all_manifest_bindings_match": true,
+  "records": [
+    {
+      "number": 108,
+      "head": "7bc8336ea20af407359358ae3c90bba1954ca665",
+      "source": "docs/audits/target_c_pr950_positive_return_quantile_destination_audit_2026-10-18.md",
+      "source_sha256": "0b0bdfbaf912fe015f48bf0b4c37b12b4889a39b70593cbbac2b336bc3ab7894",
+      "artifact_index": {
+        "artifact_id": "ART-AA8F6FF70E4D",
+        "canonical": false,
+        "status": "unreviewed"
+      },
+      "generated_view": {
+        "path": "reading/docs/audits/target_c_pr950_positive_return_quantile_destination_audit_2026-10-18.md",
+        "manifest_source_sha256": "0b0bdfbaf912fe015f48bf0b4c37b12b4889a39b70593cbbac2b336bc3ab7894",
+        "source_hash_matches": true,
+        "manifest_reading_sha256": "df36f251253300e5b5d48c52411e68834797c43a7cf4cf74e0a54ea37d09c869",
+        "view_hash_matches": true,
+        "reader_header_binds_source_sha256": true
+      }
+    },
+    {
+      "number": 119,
+      "head": "b321833ec6a10a1a47fee5c717c6b2d2e4752f7d",
+      "source": "docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+      "source_sha256": "f1df6dde4d2aba248ff0ca926bd3bb8aff22ad180e16512aee31292de0cd42ad",
+      "artifact_index": {
+        "artifact_id": "ART-8E0E780DA596",
+        "canonical": false,
+        "status": "unreviewed"
+      },
+      "generated_view": {
+        "path": "reading/docs/audits/target_c_pr950_unloaded_rigidity_brace_independent_audit_2026-10-18.md",
+        "manifest_source_sha256": "f1df6dde4d2aba248ff0ca926bd3bb8aff22ad180e16512aee31292de0cd42ad",
+        "source_hash_matches": true,
+        "manifest_reading_sha256": "9be39605695f5b62239b3f90f5c3ce0fc1bafdb15c27d07ca0849b57dfee712b",
+        "view_hash_matches": true,
+        "reader_header_binds_source_sha256": true
+      }
+    },
+    {
+      "number": 139,
+      "head": "c0043e3fb9c75b405e75fa462d5c9f2d1a7f1e85",
+      "source": "docs/audits/target_c_near_diameter_pair_midpoint_destination_audit_2026-10-19.md",
+      "source_sha256": "51d3aabe93b7cc90172ad1238119f4e4590d227044d1807e054b5701900a25b9",
+      "artifact_index": {
+        "artifact_id": "ART-1B9F2DE82E9E",
+        "canonical": false,
+        "status": "unreviewed"
+      },
+      "generated_view": null
+    },
+    {
+      "number": 157,
+      "head": "58229f8218d1a0c48c7b1981b9e6cde47cfb0bd8",
+      "source": "docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+      "source_sha256": "36fee0256d57b6e14a75b62d6515b14a198c3cd5d81a53045f16bf362ce3b1f9",
+      "artifact_index": {
+        "artifact_id": "ART-1535587A6849",
+        "canonical": false,
+        "status": "unreviewed"
+      },
+      "generated_view": {
+        "path": "reading/docs/audits/target_c_inclusive_floor_locked_release_independent_audit_2026-10-19.md",
+        "manifest_source_sha256": "36fee0256d57b6e14a75b62d6515b14a198c3cd5d81a53045f16bf362ce3b1f9",
+        "source_hash_matches": true,
+        "manifest_reading_sha256": "8a42e9884117a858727ecd528f1fd2c49f41a33192bfcead0809c60a45c6c20d",
+        "view_hash_matches": true,
+        "reader_header_binds_source_sha256": true
+      }
+    },
+    {
+      "number": 159,
+      "head": "277d2d021e8268d90869a09945ac69b04bc18cc2",
+      "source": "docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+      "source_sha256": "f2ac8d9ca3fc9f88c371797aaaa4bf219302f9486acb70b9debd0fa14cdb9743",
+      "artifact_index": {
+        "artifact_id": "ART-82430C245D1E",
+        "canonical": false,
+        "status": "unreviewed"
+      },
+      "generated_view": {
+        "path": "reading/docs/audits/global_factorized_graph_alternative_destination_audit_2026-10-19.md",
+        "manifest_source_sha256": "f2ac8d9ca3fc9f88c371797aaaa4bf219302f9486acb70b9debd0fa14cdb9743",
+        "source_hash_matches": true,
+        "manifest_reading_sha256": "8f1d625aab20422207db842aee739398671703fcda7ddaf58b62ccfa22d4fcde",
+        "view_hash_matches": true,
+        "reader_header_binds_source_sha256": true
+      }
+    },
+    {
+      "number": 177,
+      "head": "3eb24c410dc7a207992aab80fff26a2ddba13d28",
+      "source": "docs/audits/target_c_pr952_loaded_anchor_upper_box_independent_audit_2026-10-19.md",
+      "source_sha256": "28607516f5ffd04bbca104c6331973b336f6cc144b97c09672ce0f999f999511",
+      "artifact_index": {
+        "artifact_id": "ART-15B269A89E1C",
+        "canonical": false,
+        "status": "unreviewed"
+      },
+      "generated_view": {
+        "path": "reading/docs/audits/target_c_pr952_loaded_anchor_upper_box_independent_audit_2026-10-19.md",
+        "manifest_source_sha256": "28607516f5ffd04bbca104c6331973b336f6cc144b97c09672ce0f999f999511",
+        "source_hash_matches": true,
+        "manifest_reading_sha256": "7131321eaa486ac63be767f70dc112cf129185cabce42b484a73a46ca9f9e2dc",
+        "view_hash_matches": true,
+        "reader_header_binds_source_sha256": true
+      }
+    },
+    {
+      "number": 178,
+      "head": "c020c941f1d86cd174164950134ac1f3c9d05a96",
+      "source": "docs/audits/global_factor_balance_obstruction_destination_independent_audit_2026-10-19.md",
+      "source_sha256": "bdfdc5a9aea3a6440037e5859760f644e9aef5432e814d53de9c52b312225a72",
+      "artifact_index": {
+        "artifact_id": "ART-4497C74058D9",
+        "canonical": false,
+        "status": "unreviewed"
+      },
+      "generated_view": {
+        "path": "reading/docs/audits/global_factor_balance_obstruction_destination_independent_audit_2026-10-19.md",
+        "manifest_source_sha256": "bdfdc5a9aea3a6440037e5859760f644e9aef5432e814d53de9c52b312225a72",
+        "source_hash_matches": true,
+        "manifest_reading_sha256": "0d283a91b5e724b5997b5cfb2439b4a928e524f3c471006dc8b62ebd976b7ff6",
+        "view_hash_matches": true,
+        "reader_header_binds_source_sha256": true
+      }
+    },
+    {
+      "number": 179,
+      "head": "48eb6a6caabbf97d4bc681d4a8c2bdd674bfd802",
+      "source": "docs/audits/target_c_pr952_component_anchor_stress_gain_destination_audit_2026-10-19.md",
+      "source_sha256": "863f6ec863db8285e3813118a7fc06f62d41d6b0dbf0aeee47d237a66d3ef390",
+      "artifact_index": {
+        "artifact_id": "ART-718A099744A6",
+        "canonical": false,
+        "status": "unreviewed"
+      },
+      "generated_view": {
+        "path": "reading/docs/audits/target_c_pr952_component_anchor_stress_gain_destination_audit_2026-10-19.md",
+        "manifest_source_sha256": "863f6ec863db8285e3813118a7fc06f62d41d6b0dbf0aeee47d237a66d3ef390",
+        "source_hash_matches": true,
+        "manifest_reading_sha256": "566317991c694431168f2a27dc7cc0d340afde687be9d2645393f9b1d004de5f",
+        "view_hash_matches": true,
+        "reader_header_binds_source_sha256": true
+      }
+    },
+    {
+      "number": 180,
+      "head": "22aa2fc4ae96f1109f6001e9add49d9c70c26b83",
+      "source": "docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+      "source_sha256": "6289ec80954c7832d22a0ec7746b41632aa255938ee3f6f654cb7158dbca5423",
+      "artifact_index": {
+        "artifact_id": "ART-BD5F4180D5EE",
+        "canonical": false,
+        "status": "unreviewed"
+      },
+      "generated_view": {
+        "path": "reading/docs/audits/target_c_pr952_owner_common_release_independent_audit_2026-10-19.md",
+        "manifest_source_sha256": "6289ec80954c7832d22a0ec7746b41632aa255938ee3f6f654cb7158dbca5423",
+        "source_hash_matches": true,
+        "manifest_reading_sha256": "811c52eca6d4317d7ba35a753105b8d46e7e4223a22c5c2d0ed72250408ac122",
+        "view_hash_matches": true,
+        "reader_header_binds_source_sha256": true
+      }
+    }
+  ]
+}

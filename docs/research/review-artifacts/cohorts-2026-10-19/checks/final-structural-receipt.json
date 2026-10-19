@@ -1,0 +1,87 @@
+{
+  "candidate": "e185b58bfffa27be92d4ec91d919f1aa4f939725",
+  "tree": "0ace0c8411ee62b6318e7a4dce9d285ee2325d6d",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "time": "2026-10-19T13:48:27.556490+00:00",
+  "python": "3.14.8",
+  "commands": [
+    {
+      "name": "public",
+      "command": [
+        "python",
+        "tools/check_public.py"
+      ],
+      "exit_code": 0,
+      "log": "final-public.log"
+    },
+    {
+      "name": "artifact-index",
+      "command": [
+        "python",
+        "tools/build_artifact_index.py"
+      ],
+      "exit_code": 0,
+      "log": "final-artifact-index.log"
+    },
+    {
+      "name": "reading",
+      "command": [
+        "python",
+        "tools/build_reading_edition.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "final-reading.log"
+    },
+    {
+      "name": "diff-whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "7d0a450fe66991036541023f95c44c064a04b6a8",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "log": "final-diff-whitespace.log"
+    }
+  ],
+  "full_registered_certificates": {
+    "command": [
+      "python",
+      "tools/run_theorem_certificates.py"
+    ],
+    "exit_code": 0,
+    "passed": 94,
+    "registered": 94,
+    "log": "final-full-certificates.log",
+    "sha256": "4a66cf0c37fa795b067f36dff78db095d01e82a58a5a83f559ca3ecf75822c60"
+  },
+  "environment": {
+    "python": "3.14.8",
+    "dependencies": {
+      "attrs": "26.1.0",
+      "jsonschema": "4.26.0",
+      "jsonschema-specifications": "2025.9.1",
+      "mpmath": "1.3.0",
+      "numpy": "2.5.4",
+      "PyYAML": "6.0.3",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.9.1",
+      "scipy": "1.18.1",
+      "sympy": "1.14.0"
+    },
+    "threads": 1,
+    "platform": "Linux-7.2.10-arch1-1-x86_64-with-glibc2.44",
+    "verification_environment": "isolated local venv with bin prepended to PATH"
+  },
+  "generator_tests": {
+    "artifact_index": 7,
+    "reading_edition": 20,
+    "commands": [
+      "python tools/test_artifact_index.py",
+      "python -m unittest discover -s tools -p test_reading_edition.py"
+    ],
+    "scope": "Existing tooling tests. Tool and generator code unchanged in this intake; preserved earlier run logs."
+  }
+}

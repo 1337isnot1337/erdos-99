@@ -1,0 +1,21 @@
+{
+  "number": 169,
+  "head": "1481fb372734f583177541260c49bd7671e8fc35",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "95e69b32f9eade911ed3e6255514a25d039896b8",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Read package proof: strict-sub-D vertex-cover reduction, wedge removal, annular error, and lattice refinement stay conditional; no claimed candidate extraction from canonical source.",
+  "original_coverage": "Read package proof: strict-sub-D vertex-cover reduction, wedge removal, annular error, and lattice refinement stay conditional; no claimed candidate extraction from canonical source.",
+  "remaining": "Canonical source extraction/bridge remains open. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

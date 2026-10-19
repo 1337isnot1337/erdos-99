@@ -1,0 +1,8 @@
+exact PR #95 globality exclusion by a same-basis lattice disk
+R source_N disk_radius comparator_N excess comparator_diameter
+16 657 31/2 847 190 31
+25 1809 49/2 2135 326 49
+36 4067 71/2 4543 476 71
+64 13723 127/2 14615 892 127
+100 34397 199/2 35813 1416 199
+256 232941 511/2 236625 3684 511

@@ -1,0 +1,304 @@
+{
+  "reviewer": {
+    "agent": "/root/review_a",
+    "model": "GPT-6 Luna xhigh",
+    "independent_of_original_contribution": true,
+    "independent_of_correction_author": true
+  },
+  "purpose": "Independent audit of the corrected PR156 integration contribution, per root request. I did not read reviewer C\u2019s proposed verdict and did not supply the correction direction.",
+  "subject": {
+    "pr": 156,
+    "title": "Destination audit: PR #956 boundary-zigzag linear reserve",
+    "original_frozen_head": "b347d8c3cd1f3dd554874d971386481f244e0787",
+    "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "package_path": "research-packages/e99-paired-20261019t091333z-local-13",
+    "original_head_disposition": "hold",
+    "corrected_contribution_disposition": "accept_archive",
+    "corrected_integration_commit": "07c727b4dd454bf1e295d5b6498ca9aad19547cc",
+    "corrected_tree": "e1b8900161c9db4662d74d5a11b8ec18085141c3",
+    "final_integration_commit": "e185b58bfffa27be92d4ec91d919f1aa4f939725",
+    "final_registry_repin_commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+    "candidate_classification": "unreviewed",
+    "canonical_promotion": false
+  },
+  "inventory_authentication": {
+    "frozen_ref_matches_original_head": true,
+    "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "github_count": 5,
+    "github_path_set_matches_git": true,
+    "all_github_blob_ids_match": true,
+    "files": [
+      {
+        "path": "research-packages/e99-paired-20261019t091333z-local-13/README.md",
+        "github_blob": "27c190da640f4a86afb483151f325356621d85e9",
+        "git_blob": "27c190da640f4a86afb483151f325356621d85e9",
+        "blob_match": true,
+        "status": "added"
+      },
+      {
+        "path": "research-packages/e99-paired-20261019t091333z-local-13/SOURCES.json",
+        "github_blob": "8d7ab4e23151fcd4cfccafa9fd1fa8b17560e624",
+        "git_blob": "8d7ab4e23151fcd4cfccafa9fd1fa8b17560e624",
+        "blob_match": true,
+        "status": "added"
+      },
+      {
+        "path": "research-packages/e99-paired-20261019t091333z-local-13/TASK.json",
+        "github_blob": "c7d72aee35d081533af1441bcaae7ec0ec4c6b23",
+        "git_blob": "c7d72aee35d081533af1441bcaae7ec0ec4c6b23",
+        "blob_match": true,
+        "status": "added"
+      },
+      {
+        "path": "research-packages/e99-paired-20261019t091333z-local-13/VERIFY.json",
+        "github_blob": "87c8ca16be3a0f8e3411aebb122a77dc90147160",
+        "git_blob": "87c8ca16be3a0f8e3411aebb122a77dc90147160",
+        "blob_match": true,
+        "status": "added"
+      },
+      {
+        "path": "research-packages/e99-paired-20261019t091333z-local-13/verify.py",
+        "github_blob": "10ad3307586f910a0179e2ab2396da69ed40edf1",
+        "git_blob": "10ad3307586f910a0179e2ab2396da69ed40edf1",
+        "blob_match": true,
+        "status": "added"
+      }
+    ],
+    "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr156-correction-authentication.json"
+  },
+  "original_head_issue_and_exact_repair": {
+    "issue": "Original README asked whether every translate had absolute population at least pi*R^2/a0 + R/160000. The row argument proves only a uniform relative increment. Averaging yields an absolute baseline at least the mean for some selected translate, not for each translate.",
+    "required_repair": "State existence of a translate selected by population averaging for each R; state the per-translate result only as relative row gain. Make README, TASK.scope.statement/domain, and VERIFY.domain agree.",
+    "repair_applied": "README, TASK.json, SOURCES.json, and VERIFY.json changed between frozen PR head and corrected integration; verify.py remained byte-identical. README now distinguishes the row-gain statement for every translate from the absolute population count for the averaged translate. The corrected statement also keeps the every-global-minimizer conclusion conditional on D>1280000.",
+    "package_path_diff_from_original_to_correction": [
+      "research-packages/e99-paired-20261019t091333z-local-13/README.md",
+      "research-packages/e99-paired-20261019t091333z-local-13/SOURCES.json",
+      "research-packages/e99-paired-20261019t091333z-local-13/TASK.json",
+      "research-packages/e99-paired-20261019t091333z-local-13/VERIFY.json"
+    ],
+    "final_tree_delta_after_correction": [
+      "SOURCES.json only; registry pin updated for current-tree equality after orientation metadata refresh. No proof prose, task domain, verifier code, or theorem-state input changed."
+    ],
+    "original_readme_exact_claim": "for each translate ... with at least pi R^2/a0 + R/160000 points",
+    "corrected_scope": "for every real R>=640000 there exists an averaged translate with that absolute count; each translate gets only the R/160000 row increment."
+  },
+  "corrected_claim": {
+    "existence": "For every real R>=640000, there exists a translate of the unit triangular lattice whose closed radius-R disk crop can be replaced by a unit-separated packing of at least pi*R^2/a0 + R/160000 labels, where a0=sqrt(3)/2.",
+    "downstream_implication": "Every global minimum-diameter n-point unit-separated set with D>1280000 satisfies g_A=n-1-pi*D^2/(2*sqrt(3)) >= D/320000.",
+    "not_established": [
+      "source-specific upper bound g_A<=cD+o(D) for c<1/320000",
+      "source-realized deformation or deletion",
+      "triangle conclusion",
+      "C-II endpoint",
+      "Level I closure"
+    ],
+    "lifecycle": "Candidate remains unreviewed; no canonical promotion or theorem-state change."
+  },
+  "independent_mathematical_reconstruction": {
+    "row_packet": "For h=19/20, integer interval length L=B-A, insert (A+1+i*h,y+eta_i) for i=0..floor((L-2)/h), with alternating eta=1/6 and 1/2. Insertions count at least (L-2)/h; at most L+1 row labels are removed, so net gain >=(L-59)/19. L>=65 forces a positive integer net gain >=1.",
+    "within_and_cross_row_separation": "Adjacent packet squared distance is (19/20)^2+(1/3)^2=3649/3600>1; nonadjacent horizontal gap is >=19/10. A lower lattice row is vertically >=a0+1/6>1 away. The packet stays in [A+1,B-1], endpoints are guarded, and retained same/higher-row labels have positive vertical gap and horizontal separation. The disk roof condition places every insertion in the closed disk.",
+    "qualifying_rows": "Let delta=1/200 and f(z)=sqrt(R^2-z^2). Select lattice rows y satisfying f(delta R)<=y and y+a0<=f(delta R/2). Put u=f(y+a0), v=f(y+1/2), A=ceil(u), B=floor(v). On these arcs |f'(z)|>=sqrt(1-delta^2)/delta>199; a0-1/2>1/3. The mean-value theorem gives v-u>199/3, inward rounding loses <2, hence L>193/3>64 and integer L>=65.",
+    "simultaneous_rows_and_count": "The roof-height bands for distinct selected rows are disjoint; f is strictly decreasing, so their horizontal intervals are disjoint. Packets remain one unit inside interval endpoints and hence distinct packets have horizontal gap at least 2. If Delta=f(delta R/2)-f(delta R), the row count K>=Delta/a0-2>=Delta-2. Rationalizing or integrating z/R gives Delta>=3*delta^2*R/8=3R/320000, hence K>=3R/320000-2>=R/160000 for R>=640000. Thus every translate gains at least that many labels, without an absolute baseline claim for every translate.",
+    "averaging_quantifier": "Translation averaging over a fundamental parallelogram of area a0 gives mean original crop count pi*R^2/a0. Therefore at least one translate has baseline count at least the mean. Apply the uniform row replacement to that selected translate to obtain the absolute existential count.",
+    "global_minimum_step": "For any 640000<=R<D/2, the constructed packing has diameter <=2R<D. If it had at least n labels, an n-point subset would contradict global minimality, so its integer population is <=n-1. Combining with the existential lower bound and taking R upward to D/2 gives n-1>=pi*D^2/(4a0)+D/320000=pi*D^2/(2sqrt(3))+D/320000. Strictness D>1280000 ensures the comparison interval is nonempty. Continuity justifies the limiting endpoint.",
+    "quantifier_review": "README, TASK statement/domain, and VERIFY domain all use the same existential averaged-translate claim. The remaining sentence \u201cevery translate gains\u201d is specifically the relative row increment, immediately distinguished from the absolute population bound supplied by averaging. I found no residual universal absolute-count wording."
+  },
+  "metadata_and_source_bindings": {
+    "correction_ancestry": {
+      "original_to_correction_exit": 0,
+      "correction_to_final_exit": 0
+    },
+    "domain_equal_between_TASK_and_VERIFY_at_correction_and_final": {
+      "07c727b4dd454bf1e295d5b6498ca9aad19547cc": true,
+      "e185b58bfffa27be92d4ec91d919f1aa4f939725": true
+    },
+    "verify_input_paths_equal_SOURCES_paths_at_correction_and_final": {
+      "07c727b4dd454bf1e295d5b6498ca9aad19547cc": true,
+      "e185b58bfffa27be92d4ec91d919f1aa4f939725": true
+    },
+    "final_source_pin_count": 11,
+    "all_final_declared_pins_match_declared_commit_and_final_tree": true,
+    "final_source_pins": [
+      {
+        "path": "docs/reports/global_boundary_zigzag_linear_reserve_2026-10-11.md",
+        "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+        "declared_sha256": "5613444ab0f885161ffb81f31ef52f14d9c9a2c7a7fdfc6e7d43734cb4770e5d",
+        "declared_commit_hash_matches": true,
+        "current_tree_hash": "5613444ab0f885161ffb81f31ef52f14d9c9a2c7a7fdfc6e7d43734cb4770e5d",
+        "current_tree_hash_matches": true
+      },
+      {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "declared_commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+        "declared_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "declared_commit_hash_matches": true,
+        "current_tree_hash": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "current_tree_hash_matches": true
+      },
+      {
+        "path": "docs/targets/target-c/CURRENT.md",
+        "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+        "declared_sha256": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+        "declared_commit_hash_matches": true,
+        "current_tree_hash": "fcdd994fa66dd9f69566ec69d92daa7752a9ab449f0ecdbfb1f26895db7eb9fd",
+        "current_tree_hash_matches": true
+      },
+      {
+        "path": "docs/problem/statement.md",
+        "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+        "declared_sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+        "declared_commit_hash_matches": true,
+        "current_tree_hash": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+        "current_tree_hash_matches": true
+      },
+      {
+        "path": "docs/state/theorem-state.yaml",
+        "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+        "declared_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+        "declared_commit_hash_matches": true,
+        "current_tree_hash": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+        "current_tree_hash_matches": true
+      },
+      {
+        "path": "docs/state/artifact-index.jsonl",
+        "declared_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+        "declared_sha256": "d94838372b5105633349e522634bd2040cfd19364a1fc62e00c9fa14b8da6bc1",
+        "declared_commit_hash_matches": true,
+        "current_tree_hash": "d94838372b5105633349e522634bd2040cfd19364a1fc62e00c9fa14b8da6bc1",
+        "current_tree_hash_matches": true
+      },
+      {
+        "path": "docs/theory/03-oler-shell.md",
+        "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+        "declared_sha256": "a6cf18f38fa01c6969e2aecd8211278a0dcd1530efb190551d815ed0e86c0521",
+        "declared_commit_hash_matches": true,
+        "current_tree_hash": "a6cf18f38fa01c6969e2aecd8211278a0dcd1530efb190551d815ed0e86c0521",
+        "current_tree_hash_matches": true
+      },
+      {
+        "path": "docs/audits/pr956_autonomous_proof_audit_2026-10-15.md",
+        "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+        "declared_sha256": "31dfded403d64727212311037b24e7c0b2dce05f3a51d9bd11eca9dd5123da00",
+        "declared_commit_hash_matches": true,
+        "current_tree_hash": "31dfded403d64727212311037b24e7c0b2dce05f3a51d9bd11eca9dd5123da00",
+        "current_tree_hash_matches": true
+      },
+      {
+        "path": "docs/research/priority-state.json",
+        "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+        "declared_sha256": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+        "declared_commit_hash_matches": true,
+        "current_tree_hash": "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+        "current_tree_hash_matches": true
+      },
+      {
+        "path": "docs/research/agent-task-catalog.json",
+        "declared_commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+        "declared_sha256": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+        "declared_commit_hash_matches": true,
+        "current_tree_hash": "5ee1a7272c9ce44829f0ba9e5d766a6a3d9967e74e5c8784f1208f22a6781313",
+        "current_tree_hash_matches": true
+      },
+      {
+        "path": "research-packages/e99-paired-20261019t091333z-local-13/verify.py",
+        "declared_commit": null,
+        "declared_sha256": "7704cfa01c865f151bb44cca72d82323a48ca3c7599f28ae747403304b3104b6",
+        "declared_commit_hash_matches": true,
+        "current_tree_hash": "7704cfa01c865f151bb44cca72d82323a48ca3c7599f28ae747403304b3104b6",
+        "current_tree_hash_matches": true
+      }
+    ],
+    "candidate_registry_only_final_repin": {
+      "path": "docs/targets/target-c/candidate-registry.json",
+      "old_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+      "old_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "new_commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+      "new_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "reason": "Current-tree metadata pin refresh after orientation metadata update; candidate proof/domain/checker unchanged. Final SOURCES pin is exact at its declared commit and matches current tree."
+    },
+    "source_report": {
+      "path": "docs/reports/global_boundary_zigzag_linear_reserve_2026-10-11.md",
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "sha256": "5613444ab0f885161ffb81f31ef52f14d9c9a2c7a7fdfc6e7d43734cb4770e5d",
+      "git_blob": "5466a7454b469077c0f8532aaff93884680014e0"
+    },
+    "source_finite_checker": {
+      "path": "research/verify_global_boundary_zigzag_2026_10_11.py",
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "sha256": "7742036006a6c2ffda5932a628092550d3b05e85d1f1320adddf71e23befc821",
+      "git_blob": "530f3c7a0047ba599ceccc1ee8f40e60a4c723d8",
+      "provenance_caveat": "README explicitly pins this finite checker, but PR156 SOURCES/VERIFY do not declare it as an input and package VERIFY does not invoke it. It is separately source-reviewed and replayed as corroborative finite evidence, not treated as part of the universal proof.",
+      "README_declares_exact_hash": true
+    },
+    "checker_sha256_at_correction_and_final": {
+      "correction": "7704cfa01c865f151bb44cca72d82323a48ca3c7599f28ae747403304b3104b6",
+      "final": "7704cfa01c865f151bb44cca72d82323a48ca3c7599f28ae747403304b3104b6",
+      "code_unchanged": true
+    },
+    "classification_and_canonical_state": {
+      "classification": "unreviewed",
+      "canonical_claims": [],
+      "no_promotion": true
+    },
+    "candidate_lifecycle_rechecked_at_final_tree": {
+      "candidate_id": "GLOBAL-POPULATION-BOUNDARY-ZIGZAG-PR956",
+      "status": "unreviewed",
+      "canonical_claims": [],
+      "theorem_state_input_pinned_to_baseline": true,
+      "classification": "unreviewed"
+    }
+  },
+  "dependencies_and_reuse": "Primary mathematical source is the pinned PR #956 boundary-zigzag reserve report and its existing finite checker. Context pins also include target-c current state, problem statement, theorem state, Oler shell, prior PR956 audit, priority state, task catalog, candidate registry, artifact index, and this package checker. Those historical source documents were hash-authenticated but their complete proof chains were not re-audited; this is partial intake coverage. The package\u2019s actual reserve proof is reconstructed above. No dependency is promoted.",
+  "execution_evidence": {
+    "runner_manifest": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr156-correction-verifier-runs.json",
+    "authentication_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr156-correction-authentication.json",
+    "runs": [
+      {
+        "name": "package",
+        "source_ref": "07c727b4dd454bf1e295d5b6498ca9aad19547cc",
+        "path": "research-packages/e99-paired-20261019t091333z-local-13/verify.py",
+        "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python -c '\"'\"'import subprocess; p='\"'\"'\"'\"'\"'\"'\"'\"'research-packages/e99-paired-20261019t091333z-local-13/verify.py'\"'\"'\"'\"'\"'\"'\"'\"'; b=subprocess.check_output(['\"'\"'\"'\"'\"'\"'\"'\"'git'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'show'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'07c727b4dd454bf1e295d5b6498ca9aad19547cc:'\"'\"'\"'\"'\"'\"'\"'\"'+p]); exec(compile(b.decode(),p,'\"'\"'\"'\"'\"'\"'\"'\"'exec'\"'\"'\"'\"'\"'\"'\"'\"'),{'\"'\"'\"'\"'\"'\"'\"'\"'__name__'\"'\"'\"'\"'\"'\"'\"'\"':'\"'\"'\"'\"'\"'\"'\"'\"'__main__'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'__file__'\"'\"'\"'\"'\"'\"'\"'\"':p})'\"'\"''",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "result": "PASS",
+        "seconds": 0.06,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr156-package.log",
+        "output": "PASS: exact rational height, slope, width, and row-gain controls\nPASS: radius threshold equality and just-below negative control\nPASS: strict D/2 comparison onset and deletion-ledger negative control\n"
+      },
+      {
+        "name": "source-finite",
+        "source_ref": "7d0a450fe66991036541023f95c44c064a04b6a8",
+        "path": "research/verify_global_boundary_zigzag_2026_10_11.py",
+        "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python -c '\"'\"'import subprocess; p='\"'\"'\"'\"'\"'\"'\"'\"'research/verify_global_boundary_zigzag_2026_10_11.py'\"'\"'\"'\"'\"'\"'\"'\"'; b=subprocess.check_output(['\"'\"'\"'\"'\"'\"'\"'\"'git'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'show'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'7d0a450fe66991036541023f95c44c064a04b6a8:'\"'\"'\"'\"'\"'\"'\"'\"'+p]); exec(compile(b.decode(),p,'\"'\"'\"'\"'\"'\"'\"'\"'exec'\"'\"'\"'\"'\"'\"'\"'\"'),{'\"'\"'\"'\"'\"'\"'\"'\"'__name__'\"'\"'\"'\"'\"'\"'\"'\"':'\"'\"'\"'\"'\"'\"'\"'\"'__main__'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'__file__'\"'\"'\"'\"'\"'\"'\"'\"':p})'\"'\"''",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "result": "PASS",
+        "seconds": 5.21,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr156-source-finite.log",
+        "output": "PASS: 289 sign controls and five outward square-root bounds\nR=640000, t=(0,0): packets=6, deleted=620, inserted=641, gain=21, minimum packet gain=2, retained-neighbor checks=6437\nR=1000000, t=(0,0): packets=9, deleted=873, inserted=900, gain=27, minimum packet gain=2, retained-neighbor checks=9041\nR=1000000, t=(1/7,2/9): packets=10, deleted=957, inserted=991, gain=34, minimum packet gain=2, retained-neighbor checks=9964\nR=2000000, t=(3/11,5/13): packets=21, deleted=2034, inserted=2108, gain=74, minimum packet gain=2, retained-neighbor checks=21196\nR=10000000, t=(2/17,1/19): packets=108, deleted=10442, inserted=10820, gain=378, minimum packet gain=2, retained-neighbor checks=108843\nPASS: 154 simultaneous packets across 5 examples; 15460 contained inserted labels; 155481 exact retained-lattice neighbor checks; total net gain=534.\nPASS: exact 38-class packet-lattice membership for all 15460 inserted labels; the unchanged triangular lattice is class 39.\nAll arithmetic is rational or exact Q(sqrt(3)). Scope: finite packet certificates; the all-radius linear reserve is an analytic candidate, not an audited Level I proof.\n"
+      },
+      {
+        "name": "source-optimized-guard",
+        "source_ref": "7d0a450fe66991036541023f95c44c064a04b6a8",
+        "path": "research/verify_global_boundary_zigzag_2026_10_11.py",
+        "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python -O -c '\"'\"'import subprocess; p='\"'\"'\"'\"'\"'\"'\"'\"'research/verify_global_boundary_zigzag_2026_10_11.py'\"'\"'\"'\"'\"'\"'\"'\"'; b=subprocess.check_output(['\"'\"'\"'\"'\"'\"'\"'\"'git'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'show'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'7d0a450fe66991036541023f95c44c064a04b6a8:'\"'\"'\"'\"'\"'\"'\"'\"'+p]); exec(compile(b.decode(),p,'\"'\"'\"'\"'\"'\"'\"'\"'exec'\"'\"'\"'\"'\"'\"'\"'\"'),{'\"'\"'\"'\"'\"'\"'\"'\"'__name__'\"'\"'\"'\"'\"'\"'\"'\"':'\"'\"'\"'\"'\"'\"'\"'\"'__main__'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'__file__'\"'\"'\"'\"'\"'\"'\"'\"':p})'\"'\"''",
+        "exit_code": 1,
+        "expected_exit_code": 1,
+        "result": "PASS",
+        "seconds": 0.07,
+        "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr156-source-optimized-guard.log",
+        "output": "Run without -O: this exact checker requires assertions\n"
+      }
+    ]
+  },
+  "coverage": "Partial scoped audit: exact frozen inventory, corrected-source and final-pin/domain equality, independent analytic proof reconstruction, checker source inspection and focused runs. The source finite checker supplies finite exact controls only. Root owns full certificate replay. No complete audit of all historical dependencies, no global source extraction or canonical promotion.",
+  "remaining_obligations": [
+    "Root\u2019s full theorem-certificate replay and integration checks remain separate.",
+    "No source-specific g_A upper estimate or source-realized competitor is proved.",
+    "Candidate remains unreviewed; no canonical promotion."
+  ],
+  "evidence_complete": true,
+  "evidence_directory": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs",
+  "lane": "isolated_research_package",
+  "corrected_contribution_review_status": "partially_reviewed_archive_intake"
+}

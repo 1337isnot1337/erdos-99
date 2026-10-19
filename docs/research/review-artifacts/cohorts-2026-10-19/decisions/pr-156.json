@@ -1,0 +1,22 @@
+{
+  "number": 156,
+  "head": "b347d8c3cd1f3dd554874d971386481f244e0787",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "4445efe1a699cb7d79b6b3b45e4336f411bbf09c",
+  "original_disposition": "hold",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept as amended in the integration candidate after a separate independent scoped correction audit; the original hold is retained as historical evidence.",
+  "coverage": "Partial scoped audit: exact frozen inventory, corrected-source and final-pin/domain equality, independent analytic proof reconstruction, checker source inspection and focused runs. The source finite checker supplies finite exact controls only. Root owns full certificate replay. No complete audit of all historical dependencies, no global source extraction or canonical promotion. Corrected argument/scope and amendment identity: reviews/a-correction-review.json.",
+  "original_coverage": "Read original README/TASK/VERIFY/SOURCES/checker. Averaging gives existence of a translate with count at least mean; it does not give that bound for every translate. Original task/README overstate absolute reserve for each translate. Per-translate row-gain result can remain. Parent reports amendment 07c727b narrows statement to existence of averaging-selected translate; amended complete contribution reviewed by reviewer A, not counted as this exact-head review.",
+  "remaining": "Root\u2019s full theorem-certificate replay and integration checks remain separate.; No source-specific g_A upper estimate or source-realized competitor is proved.; Candidate remains unreviewed; no canonical promotion. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/a-correction-review.json"
+  ],
+  "canonical_promotion": false
+}

@@ -1,0 +1,8 @@
+PASS m=7: n=64, all_pairs=2016, lower/upper pairs exact, contacts=112, Oler_slack=7, wall_error=0<eta_(2m), K=z=36, deficit=0, required=13, target_shortfall=13
+PASS m=8: n=81, all_pairs=3240, lower/upper pairs exact, contacts=144, Oler_slack=8, wall_error=0<eta_(2m), K=z=49, deficit=0, required=15, target_shortfall=15
+PASS m=12: n=169, all_pairs=14196, lower/upper pairs exact, contacts=312, Oler_slack=12, wall_error=0<eta_(2m), K=z=121, deficit=0, required=23, target_shortfall=23
+PASS m=24: n=625, all_pairs=195000, lower/upper pairs exact, contacts=1200, Oler_slack=24, wall_error=0<eta_(2m), K=z=529, deficit=0, required=47, target_shortfall=47
+PASS exact opened-wall endpoint: source=64, deleted_wall=13, endpoint=51, lower/upper pairs=1275/1275, target-involving strict pairs=1170, contacts=14, max_squared=84 < D_source^2=112
+  max-diameter pair: (('wall', 0, 7), ('wall', 7, 0))
+  cardinality funding shortfall: 13 labels
+PASS finite source-pair and endpoint-ledger controls; universal claims use the README proof

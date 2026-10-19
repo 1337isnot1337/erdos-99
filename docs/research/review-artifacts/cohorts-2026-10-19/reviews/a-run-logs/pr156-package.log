@@ -1,0 +1,3 @@
+PASS: exact rational height, slope, width, and row-gain controls
+PASS: radius threshold equality and just-below negative control
+PASS: strict D/2 comparison onset and deletion-ledger negative control

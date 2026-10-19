@@ -1,0 +1,108 @@
+{
+  "source_vertices": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "2"
+    ],
+    [
+      "1",
+      "2"
+    ]
+  ],
+  "colors": [
+    0,
+    1,
+    0,
+    1
+  ],
+  "unit_edge_simplex_coordinates": {
+    "color0": "-1/2",
+    "color1": "1/2"
+  },
+  "t": "1/2",
+  "t_squared": "1/4",
+  "source_diameter_squared": "5",
+  "same_color_separation_slack_min": "3",
+  "pairs": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "source_d2": "1",
+      "same_color": false,
+      "normalized_d2": "1",
+      "unnormalized_d2": "5/4"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "source_d2": "4",
+      "same_color": true,
+      "normalized_d2": "16/5",
+      "unnormalized_d2": "4"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "source_d2": "5",
+      "same_color": false,
+      "normalized_d2": "21/5",
+      "unnormalized_d2": "21/4"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "source_d2": "5",
+      "same_color": false,
+      "normalized_d2": "21/5",
+      "unnormalized_d2": "21/4"
+    },
+    {
+      "pair": [
+        1,
+        3
+      ],
+      "source_d2": "4",
+      "same_color": true,
+      "normalized_d2": "16/5",
+      "unnormalized_d2": "4"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "source_d2": "1",
+      "same_color": false,
+      "normalized_d2": "1",
+      "unnormalized_d2": "5/4"
+    }
+  ],
+  "normalized_minimum_squared_distance": "1",
+  "normalized_diameter_squared": "21/5",
+  "normalized_strict_diameter_drop": true,
+  "normalized_all_pairs_unit_separated": true,
+  "unnormalized_minimum_squared_distance": "5/4",
+  "unnormalized_diameter_squared": "21/4",
+  "unnormalized_unit_contact_preservation": false,
+  "unnormalized_diameter_improved": false,
+  "affine_flattening": {
+    "reason": "z=x-1/2, so the added coordinate t*z is affine in x",
+    "affine_rank": 2
+  }
+}

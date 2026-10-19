@@ -1,0 +1,22 @@
+{
+  "number": 133,
+  "head": "04b30ab0f484c4dce774ff9d400ea38d359dfb25",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "66c4662d1e7823bacfb1215b09eb8318bdc4cf59",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Independent exact audit of PR111 deletion/restoration source, stress, restored velocities and strict pair constraints.",
+  "original_coverage": "Independent exact audit of PR111 deletion/restoration source, stress, restored velocities and strict pair constraints.",
+  "remaining": " The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/b-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/b-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

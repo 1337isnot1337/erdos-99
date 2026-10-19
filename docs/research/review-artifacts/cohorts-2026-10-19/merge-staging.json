@@ -1,0 +1,656 @@
+[
+  {
+    "number": 102,
+    "source_head": "025628b23df11470d4eb87ee981edbf250498691",
+    "integration_commit": "3b774d59ea77cd86433843d9adc0ad0df2e27993",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 103,
+    "source_head": "4b708e27e9e26f8c163685dfe8b033b6d6369177",
+    "integration_commit": "1fc92de12d88ec639f187c95858efca01c0c0d94",
+    "generated_conflicts_resolved_for_regeneration": [
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 104,
+    "source_head": "632dd98ae6b093edce27c405e4cf0d77712c2306",
+    "integration_commit": "e6801c4b08e0307ab2bf6a214ecdcab76d20c1bc",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 105,
+    "source_head": "2c0968543d732a73a6f7a7bb8d192a1c1b10438e",
+    "integration_commit": "cd617bf2e7330e6c3609b38f4011f19f5f32c117",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 106,
+    "source_head": "18c0ffba9a730cb3dc23b711a00c20dd9302c1ac",
+    "integration_commit": "53026d054bf4c6414cc1e3075a45c67dd61ba302",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 107,
+    "source_head": "12fbd21a8dbded545743579cf3ac34e2c54f1496",
+    "integration_commit": "d14a7aad5c8bfadc526f67ff5522de165a660a9e",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 108,
+    "source_head": "7bc8336ea20af407359358ae3c90bba1954ca665",
+    "integration_commit": "8130d0f6416c2c06c469b553d1a4e7425012a8ed",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 109,
+    "source_head": "a1efbcf5f8441dbacee06cf9e53535d9ddc40ccd",
+    "integration_commit": "73836152757589fc4c02b6951c3066181996d5ec",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 110,
+    "source_head": "3fc35647bf49de836dfc379b46fbbc604cb971fe",
+    "integration_commit": "83c3179d556aabb609a55563a5f2e29cc629be72",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 111,
+    "source_head": "4ae7399e2595074c0331398fbba9b58c5dea3e73",
+    "integration_commit": "75a7d1a180872b106e1b539f238058c3e4be8ce9",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 112,
+    "source_head": "fd02d4d36b1953a217680d889ce830f894a41096",
+    "integration_commit": "a29ac87fa99a1066b1d6690671652eb1f1158032",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 113,
+    "source_head": "81de74d4ba5099c8572c1c76f6c28ac80d9c642a",
+    "integration_commit": "b213e3c069b35b7ecce95984d095036327cb12f1",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 114,
+    "source_head": "cd33f4c76fd48722f06c03ddc86a05fd5e8f9e51",
+    "integration_commit": "a7d824c29abec0e1192aa2e6c5e00599285be110",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 115,
+    "source_head": "356cb08229dd0a38bd272d05488f9bc8be9e1313",
+    "integration_commit": "83dea5ad56ec2f9322289875f5c06ee3c4cb17b0",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 116,
+    "source_head": "08442dbb7a3159ef1d0cc7ec966b99d6eced0edd",
+    "integration_commit": "37c6b99d3cc7d94d5cfdfb69ef36b2ae96b36ab4",
+    "generated_conflicts_resolved_for_regeneration": [
+      "docs/state/artifact-index.jsonl",
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 117,
+    "source_head": "52a89ded959be4c96db4bdc4622ee73f7f63c3bd",
+    "integration_commit": "ac96878422e2fd91b75001743cd654888a632965",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 118,
+    "source_head": "6295e0dc87031fe8418bff50bd9923014072df0f",
+    "integration_commit": "4c51bea1ba4b01599c094499e9e70939f87543a3",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 119,
+    "source_head": "b321833ec6a10a1a47fee5c717c6b2d2e4752f7d",
+    "integration_commit": "2a1940af603b0888e9325190fc56faff9fdf6427",
+    "generated_conflicts_resolved_for_regeneration": [
+      "docs/state/artifact-index.jsonl",
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 120,
+    "source_head": "c3718cde305ec74b6dae380292b0bc646cee8f20",
+    "integration_commit": "f5ab0b068b55ef425a97645f32933ec893533af0",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 121,
+    "source_head": "7f4dac815680da2b8ad6b0623369aeab3a730978",
+    "integration_commit": "1c8cd689ff409709f5fd9f5775167fd20ee750a3",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 122,
+    "source_head": "05d497cfff0427697a5d716b886accb5cbdf2fc3",
+    "integration_commit": "9f36392b964b4dff2e5db8c7e375d2786e85dbd0",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 123,
+    "source_head": "c6c61707cd2dc733a305de55ffcd7db4b6df6c8f",
+    "integration_commit": "681c2d3a8e20fd3c1e811c5f45183107655026e4",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 124,
+    "source_head": "067af10523401461d80a399ef31ba429accc8fc1",
+    "integration_commit": "238cae331f073c2508e6413f98a4de21997fa48f",
+    "generated_conflicts_resolved_for_regeneration": [
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 125,
+    "source_head": "804f1658e27b424da16535b53bcb825c394c7711",
+    "integration_commit": "2cfa64b5243eaeaa805d1e582ca10b2ea1a973bb",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 126,
+    "source_head": "684429c4780f8a4491cc432ffa2733a31ff867eb",
+    "integration_commit": "db74b926da575e49c2b31334c7a8951569baa34d",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 127,
+    "source_head": "6c2b6d7be91c6d6cd5b9e2133c8add94c506bf1f",
+    "integration_commit": "9e1d62ae6687e0f2e819bbcd36c6cc5e79f0622f",
+    "generated_conflicts_resolved_for_regeneration": [
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 128,
+    "source_head": "e80e7e35b1130d2cc7824468d243f8393434b9b2",
+    "integration_commit": "5fd7a109a7b06c052fbdae612ffb0751b097c894",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 129,
+    "source_head": "f4dc4c6ec3a6bb08097ca9a963336ae454e14229",
+    "integration_commit": "c03233b8c90ee715dffe14cf499d7abcc3dd4ade",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 130,
+    "source_head": "d44c691183ca3a789a6bedee05ff867220f440ca",
+    "integration_commit": "3e18ec8760642bec8781b7b6ea17b878939bad78",
+    "generated_conflicts_resolved_for_regeneration": [
+      "docs/state/artifact-index.jsonl",
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 131,
+    "source_head": "35c3bdb387c714e8a4f51f48e13a6b684cea7151",
+    "integration_commit": "da86ec5ebf8869ead597faaa77752779c1ff83be",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 132,
+    "source_head": "5df95908df0ea6f206b2fed0681a061bf29a0aa3",
+    "integration_commit": "40daba56a23169d3cb80fe0f4dfa86e5c0abe4db",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 133,
+    "source_head": "04b30ab0f484c4dce774ff9d400ea38d359dfb25",
+    "integration_commit": "3bb4e0173606b8e05489228eeb55e1d25bc467a9",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 134,
+    "source_head": "6171ec66dfce3ea696a412e3a37bcf7440732088",
+    "integration_commit": "342cc08beb870584e9a1c165b5496016deebfbe0",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 135,
+    "source_head": "daf4e29a0cee53439eb2cb7d747092da2a5e31dd",
+    "integration_commit": "8c9ffb9f209cfd47f7febcc59752b510e678994c",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 136,
+    "source_head": "7cf4b8517c0f846058a9befda03bf3aa4343e688",
+    "integration_commit": "2f82f4d75535b3f84d0ce9dcb13e3492127420e4",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 137,
+    "source_head": "73ba295bcf89e12b7d2c7fa94d094fc44e674a3b",
+    "integration_commit": "b34127f7a2f9fc8a049e4bb3ac9260446d043bea",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 138,
+    "source_head": "d17d45aebb04811c920d03f46c50a2337fe19a98",
+    "integration_commit": "af59852d1c0d3c5c48e6e31ca70e9f3f371b13be",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 139,
+    "source_head": "c0043e3fb9c75b405e75fa462d5c9f2d1a7f1e85",
+    "integration_commit": "2b4e949ae676103c105e79c317fb4b04bcc31251",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 140,
+    "source_head": "9183fd057255719a3535bf8f9c5feeec9d711c80",
+    "integration_commit": "e0b39169fa6f48b7ca5b44c234ac36204ddfb709",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": [
+      "docs/audits/atomic_boundary_source_reconciliation_2026-10-15.md",
+      "docs/audits/original_dirty_worktree_reconciliation_2026-10-15.md",
+      "docs/audits/target_a_boundary_terminal_common_source_vpaths_audit_2026-09-05.md",
+      "docs/audits/target_b_explicit_balanced_phase_gap_audit_2026-09-05.md",
+      "docs/audits/target_b_explicit_unique_max_phase_gap_audit_2026-09-05.md",
+      "docs/audits/target_b_local_virtual_area_interface_audit_2026-09-05.md",
+      "docs/audits/target_b_trimmed_grid_phase_star_audit_2026-09-05.md",
+      "docs/audits/target_b_virtual_zonotope_missing_crossing_audit_2026-09-05.md",
+      "docs/reports/activation_fixed_hull_flat_2026-08-30.md",
+      "docs/reports/cage_or_cophased_lattice_shadow_2026-08-30.md",
+      "docs/reports/campaign_boundary_defect_matching_2026-09-09.md",
+      "docs/reports/campaign_zf_boundary_surplus_collapse_2026-09-09.md",
+      "docs/reports/campaign_zm_zs_reconciliation_2026-09-09.md",
+      "docs/reports/erdos_problem_99_2026-08-30_active-boundary-audit.md",
+      "docs/reports/erdos_problem_99_2026-08-30_phase-cover-stability.md",
+      "docs/reports/erdos_problem_99_CHAT_HANDOFF_2026-08-26.md",
+      "docs/reports/erdos_problem_99_complete_working_report_SYNTHESIZED.md",
+      "docs/reports/five_block_local_optimality_2026-08-30.md",
+      "docs/reports/full_source_growing_lattice_population_reserve_2026-10-08.md",
+      "docs/reports/global_attainment_and_triangle_free_infimum_2026-10-11.md",
+      "docs/reports/global_discrete_isometry_blocker_closure_2026-10-12.md",
+      "docs/reports/global_isolate_forest_normalization_2026-10-11.md",
+      "docs/reports/global_local_lex_normalization_and_crystalline_obstruction_2026-10-11.md",
+      "docs/reports/global_nonexpanding_rhombus_mesh_obstruction_2026-10-13.md",
+      "docs/reports/global_periodic_release_and_diameter_transfer_2026-10-11.md",
+      "docs/reports/local_hat_matching_regression_2026-08-30.md",
+      "docs/reports/near_extremal_activation_monomer_regression_2026-08-30.md",
+      "docs/reports/open_cell_staircase_finite_preservation_2026-10-15.md",
+      "docs/reports/repository_state_and_sol_prompt_review_2026-09-10.md",
+      "docs/reports/repository_theorem_state_cleanup_2026-09-11.md",
+      "docs/reports/source_scaffold_response_transport_2026-08-30.md",
+      "docs/reports/target_a_boundary_terminal_common_source_vpaths_2026-09-05.md",
+      "docs/reports/target_a_contracted_contact_shield_hall_2026-09-04.md",
+      "docs/reports/target_a_inner_source_capacity_defect_bound_2026-09-05.md",
+      "docs/reports/target_a_right_deficiency_geometric_tube_2026-09-05.md",
+      "docs/reports/target_a_sector_deficit_duality_2026-09-04.md",
+      "docs/reports/target_a_slot05_one_arm_source_sector_rank_cap_2026-10-10.md",
+      "docs/reports/target_a_thin_shield_sector_population_2026-09-04.md",
+      "docs/reports/target_b_affine_boundary_shear_2026-09-25.md",
+      "docs/reports/target_b_disk_clipped_oblique_scalar_regression_2026-09-25.md",
+      "docs/reports/target_b_explicit_balanced_phase_gap_2026-09-05.md",
+      "docs/reports/target_b_fourbar_singleton_endpoint_exclusion_2026-10-03.md",
+      "docs/reports/target_b_fractional_balanced_grain_exclusion_2026-09-05.md",
+      "docs/reports/target_b_multigrain_interface_perimeter_2026-09-05.md",
+      "docs/reports/target_b_source_diameter_cover_refill_2026-09-25.md",
+      "docs/reports/target_b_two_max_phase_stability_exclusion_2026-09-05.md",
+      "docs/reports/target_c_collective_shallow_wall_packet_release_2026-10-08.md",
+      "docs/reports/target_c_full_source_delaunay_strain_and_branching_2026-10-08.md",
+      "docs/reports/target_c_full_source_voronoi_defect_spacing_debit_2026-10-08.md",
+      "docs/reports/target_c_half_depth_fan_forest_and_weight_budget_2026-10-08.md",
+      "docs/reports/target_c_isolate_normalization_core_diameter_replacement_2026-10-07.md",
+      "docs/reports/target_c_quadratic_core_cap_extraction_deep_returns_2026-10-08.md",
+      "docs/reports/target_c_shell_fold_collar_transport_2026-10-08.md",
+      "docs/reports/target_c_two_wave_shell_fold_two_isolate_obstruction_2026-10-08.md",
+      "docs/reports/toeout_kuperberg_improvement_2026-08-30.md"
+    ]
+  },
+  {
+    "number": 141,
+    "source_head": "51328362b97eaaa264eeecc022bbe93bfd1a561a",
+    "integration_commit": "a2048372b4b6ce5bdabf45390a981ef62a4f1deb",
+    "generated_conflicts_resolved_for_regeneration": [
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 142,
+    "source_head": "6dfe8c78ed50eaf96c21bfd7e03235878d12d36a",
+    "integration_commit": "cac25ecac5759ab275e60c39c48ebf3ad44813db",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 143,
+    "source_head": "b6e60e8b0c8efa8675b143b1c10bdf2e1d5fe488",
+    "integration_commit": "9bc69f0e264f98bf1a223814937c104450e93258",
+    "generated_conflicts_resolved_for_regeneration": [
+      "docs/state/artifact-index.jsonl",
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 144,
+    "source_head": "3e00b10e911ea587540aec53c7d0f5ede3b6ab5c",
+    "integration_commit": "9f21c53f5484b23b74c0397c6286f7036228ff46",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 145,
+    "source_head": "908db6f22151301bac4a19a2dd9474fc368bfeeb",
+    "integration_commit": "26ff6bfeb4e2011be742a42025c8802a358dac10",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 146,
+    "source_head": "d85cc940519044d7381a7382cc3c6d2f0c404d5c",
+    "integration_commit": "3ca323d1637b3acb1a541d93e5e04751d90f79bf",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 147,
+    "source_head": "a110c4062443aa55c480cfd353af3f756e565803",
+    "integration_commit": "2e51bde9dfd5bdbf662f4db67af3e1cc97b1ed77",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 148,
+    "source_head": "bda9381cefaf9cff39855ac8653ff6134050918d",
+    "integration_commit": "4dc3b8cadb482251087f50fdbd7c068d3f4312a9",
+    "generated_conflicts_resolved_for_regeneration": [
+      "docs/state/artifact-index.jsonl"
+    ],
+    "restored_preexisting_source_bytes": [],
+    "integration_note": "Disabled rename detection: inventories contain no renames; avoids fetching irrelevant unavailable historical rename-candidate blob."
+  },
+  {
+    "number": 149,
+    "source_head": "5053e17987b1aa72173f4a656213532536b24933",
+    "integration_commit": "f4b725b3d3f6171f3d29eeddd7a508201aa872b4",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 150,
+    "source_head": "51016e9a86212e2cc74be1092861ddf00bbf8f3c",
+    "integration_commit": "3cb3083f21c729f62aee80f3f8497a09f9ba985f",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 151,
+    "source_head": "0a96997d44b88fd49b0e62d3c73ea0cd48f8042c",
+    "integration_commit": "88f4436462411272484865cac8ce86adf313b308",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 152,
+    "source_head": "c53c1b2ee5a3480f9f06304c519df9ac6e7784d1",
+    "integration_commit": "f0c7746f5d1c5b4ca9b0471c1343f2d9fcd876de",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 153,
+    "source_head": "0b3f19b643387da8ea3f583945d1fef220e30b02",
+    "integration_commit": "620496bfba0c49dea66fddc32e3a28070f059c44",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 154,
+    "source_head": "85bfde3bb5d07312a38de24b19d08e1b009f36dd",
+    "integration_commit": "43521c1712d4df94fd378685433dec024ba5f627",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 155,
+    "source_head": "4492507beafbe5496823e7ee7151d7557aa3bca4",
+    "integration_commit": "35eb7e2b0b0e6ef71a29534fe5fa91e305d8d475",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 156,
+    "source_head": "b347d8c3cd1f3dd554874d971386481f244e0787",
+    "integration_commit": "2d7bdef7b227fc02ee45460480d416b43b402c56",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 157,
+    "source_head": "58229f8218d1a0c48c7b1981b9e6cde47cfb0bd8",
+    "integration_commit": "33009566f2dc518cfe06801b9f08586058a336bd",
+    "generated_conflicts_resolved_for_regeneration": [
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 158,
+    "source_head": "44743498eb0bd669e3198d93356ae8c5e9dc0d59",
+    "integration_commit": "599fd2eeae3a1ca0a0d956a962a398e3230f9a45",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 159,
+    "source_head": "277d2d021e8268d90869a09945ac69b04bc18cc2",
+    "integration_commit": "e185ac99a3eaa2d7ae665c4ca215a435905294c4",
+    "generated_conflicts_resolved_for_regeneration": [
+      "docs/state/artifact-index.jsonl",
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 160,
+    "source_head": "0f63b5b01c2e9f6b97fd50154c63dccc36162ac3",
+    "integration_commit": "9a244c72d9fa2ca7b53ad56c024e7c9a25bdb7ce",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 161,
+    "source_head": "3d816bec313a9f2bd303a958622d4128276e8685",
+    "integration_commit": "35ce1d4c13ccff45ea9810efed929ba2749c3b39",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 162,
+    "source_head": "456ecf76c17bbf9486601d5268d7c7d82854ee74",
+    "integration_commit": "87884988a6ae3ab5f50247f9981055a32ea6ba5b",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 163,
+    "source_head": "70eac9a6eba9cc2c254c44ae0e72058d88a6d75c",
+    "integration_commit": "c80a7bc66273e016e951c791816ea53de8a184e4",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 164,
+    "source_head": "de51a6e55c576343be6ece5b8f5a688adc0074fa",
+    "integration_commit": "05bb63a2f2418dcd5378aeb6d17c12d985ec30ae",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 165,
+    "source_head": "8a8fc613f98ad667ad8299eb14ec75e7041523ec",
+    "integration_commit": "dc36107d4637b2073757e759126d6c0a499da217",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 166,
+    "source_head": "62fcdcf8dc869dc7a59eb9665035222c5b2cf7db",
+    "integration_commit": "8bd987ff304f6103b29c565e412477c7fa9dfd06",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 167,
+    "source_head": "7dcdd58a9e394e848c0f79c567d9ee6a97441834",
+    "integration_commit": "698c9c277d79dd4f23310ac55f14ed59e31872b8",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 168,
+    "source_head": "36c1e99ca90b7600e44cb416864bc6fe2aeeb1f1",
+    "integration_commit": "8ce3f82dd8d64c138b1626e64c6e3bce508a4300",
+    "generated_conflicts_resolved_for_regeneration": [
+      "docs/state/artifact-index.jsonl",
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 169,
+    "source_head": "1481fb372734f583177541260c49bd7671e8fc35",
+    "integration_commit": "e448f23e0b2f4014bf6838d2d82bb75bcc9ab963",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 170,
+    "source_head": "1aa26046438d0cce249ecf6948a8ad9bde1936e3",
+    "integration_commit": "a2289d4fdb18839378062570b76a99b9191ec308",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 171,
+    "source_head": "e63dd4d3c1dcf8eb4bf56b47b112a888d3c0af4c",
+    "integration_commit": "d19b38bfc7352483bcc17fd22894b5ec3ff783a4",
+    "generated_conflicts_resolved_for_regeneration": [
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 172,
+    "source_head": "1e4907faaec3acd5c267a42cab04ab4a07443387",
+    "integration_commit": "0c6df1058dae0621a0913a5fc401a976c361310e",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 173,
+    "source_head": "2170444e326e08d462b77f69d87c5b12124c243b",
+    "integration_commit": "c954b0b127720cbafdc7b9dc1cb8c628178e47dc",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 174,
+    "source_head": "91f3d847a2d9e46d29bfa75d9a6a75c4e733ddf6",
+    "integration_commit": "d711143152805f74af84e6da9709a329b465b512",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 175,
+    "source_head": "45104cfa58c69551201475679ea35ec247a8d8f8",
+    "integration_commit": "4d3984eb4a0b93626b11bff049449b1f15f4c0fb",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 176,
+    "source_head": "62a366b501472aa22d42a7fcc8e175747c0cc179",
+    "integration_commit": "47f7d2e0bbe3f4d897639bc36fcb83b713855e1e",
+    "generated_conflicts_resolved_for_regeneration": [],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 177,
+    "source_head": "3eb24c410dc7a207992aab80fff26a2ddba13d28",
+    "integration_commit": "26f9882f08ca223b611514e66f528cfa5e341665",
+    "generated_conflicts_resolved_for_regeneration": [
+      "docs/state/artifact-index.jsonl",
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 178,
+    "source_head": "c020c941f1d86cd174164950134ac1f3c9d05a96",
+    "integration_commit": "f7ce7dfd14c52a1161a227bdd56f7ac6fa95777a",
+    "generated_conflicts_resolved_for_regeneration": [
+      "docs/state/artifact-index.jsonl",
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 179,
+    "source_head": "48eb6a6caabbf97d4bc681d4a8c2bdd674bfd802",
+    "integration_commit": "1b889e47827e5cfb0a8bffcc1bd301aec7baddf3",
+    "generated_conflicts_resolved_for_regeneration": [
+      "docs/state/artifact-index.jsonl",
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  },
+  {
+    "number": 180,
+    "source_head": "22aa2fc4ae96f1109f6001e9add49d9c70c26b83",
+    "integration_commit": "0b2372116e4b7d789cc3ff954346f5b3d747746b",
+    "generated_conflicts_resolved_for_regeneration": [
+      "docs/state/artifact-index.jsonl",
+      "reading/manifest.json"
+    ],
+    "restored_preexisting_source_bytes": []
+  }
+]

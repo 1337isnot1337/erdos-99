@@ -1,0 +1,22 @@
+{
+  "number": 148,
+  "head": "bda9381cefaf9cff39855ac8653ff6134050918d",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "a664f808647571f18013de55d278121b954f91d4",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Direct audit report and verifier inspected and run; PR121 centered-grid inclusion analytically repaired in audit, then integration package repair independently focused-run.",
+  "original_coverage": "Direct audit report and verifier inspected and run; PR121 centered-grid inclusion analytically repaired in audit, then integration package repair independently focused-run.",
+  "remaining": "No global closure; full certificate replay deferred. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/a-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

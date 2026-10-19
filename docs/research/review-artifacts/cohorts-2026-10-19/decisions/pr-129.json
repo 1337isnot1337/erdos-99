@@ -1,0 +1,21 @@
+{
+  "number": 129,
+  "head": "f4dc4c6ec3a6bb08097ca9a963336ae454e14229",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "412ff6b8d8a8d7af47e653b8f0daf648ac4de67e",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Wall-tolerance/refill ledger for the oblique grid family; at m=7 deleting 13 leaves 51 labels and 1,275 pairs, with exact maximum squared distance 84, exposing an unpaid deficit.",
+  "original_coverage": "Wall-tolerance/refill ledger for the oblique grid family; at m=7 deleting 13 leaves 51 labels and 1,275 pairs, with exact maximum squared distance 84, exposing an unpaid deficit.",
+  "remaining": " The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/b-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

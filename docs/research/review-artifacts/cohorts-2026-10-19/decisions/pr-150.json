@@ -1,0 +1,22 @@
+{
+  "number": 150,
+  "head": "51016e9a86212e2cc74be1092861ddf00bbf8f3c",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "5ab23f05d24994e4c19d3db3ae7f9115bde66de8",
+  "original_disposition": "accept_scoped",
+  "disposition": "accept_scoped",
+  "lane": "validated-research",
+  "review_status": "scope_verified",
+  "reason": "Accept scoped contribution as validated-research within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Independent complete-array diameter-forest audit of PR948 with its stated boundary and array hypotheses.",
+  "original_coverage": "Independent complete-array diameter-forest audit of PR948 with its stated boundary and array hypotheses.",
+  "remaining": "Before any future lifecycle promotion, add C-FULL-SOURCE-ISOLATE-NORMALIZATION as an explicit candidate-registry dependency for the whole-core corollary; this review does not audit that inherited canonical proof end-to-end. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/b-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/b-scoped-proof-audits.json"
+  ],
+  "canonical_promotion": false
+}

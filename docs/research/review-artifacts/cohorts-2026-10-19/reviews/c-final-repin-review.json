@@ -1,0 +1,551 @@
+{
+  "reviewer": "review_c",
+  "final_commit": "e185b58bfffa27be92d4ec91d919f1aa4f939725",
+  "final_tree": "0ace0c8411ee62b6318e7a4dce9d285ee2325d6d",
+  "manifest": "/home/cinna/.local/state/erdos99-merge/20261019/final-metadata-repins.json",
+  "manifest_rows": 18,
+  "all_old_new_final_catalog_hashes_match": true,
+  "records": [
+    {
+      "package": "research-packages/e99-paired-20261019t091333z-homelab-04",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "dc4c33dd717db6463830b5efdaa0dc6ba92e759342d5cb47b2298fda64497ae3"
+    },
+    {
+      "package": "research-packages/e99-paired-20261019t091333z-homelab-05",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "9e5cd3871e2f61647b49587a04e1febd9bac436ac67f382b4c7fe11168dbb2ce"
+    },
+    {
+      "package": "research-packages/e99-paired-20261019t091333z-homelab-06",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "3b9a399e1a0077ef088e31bb06f429b0300379f96438a0e832942ba89218ccf9"
+    },
+    {
+      "package": "research-packages/e99-paired-20261019t091333z-homelab-12",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "6735c70c106ed6070cad673d9d1bc1c6efeddc4c44c1f7b0d7f9ea385e096c1d"
+    },
+    {
+      "package": "research-packages/e99-paired-20261019t091333z-local-05",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "9e12bdf455dd9d54ce8d9e922973ce14792becb2733279ac1379efe92147c77d"
+    },
+    {
+      "package": "research-packages/e99-paired-20261019t091333z-local-06",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "3de0f1137bca1151424dba841d7c5e6b7910c4edef2d55152b9d10ad82619cbd"
+    },
+    {
+      "package": "research-packages/e99-paired-20261019t091333z-local-07",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "identity": "destination lifecycle and exact candidate relations",
+        "generated_from": [],
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "3103c2bed219d95ab93ba8434aa79bb9a0ce955e65b7a4c1dfd4d798e793b97a"
+    },
+    {
+      "package": "research-packages/e99-paired-20261019t091333z-local-08",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "1c17183dbb51cfc66d3a450cd73862b86f85e4502666da59da1cda3637a78998"
+    },
+    {
+      "package": "research-packages/e99-paired-20261019t091333z-local-09",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "92c0673f575f2aa1a51e3252b018a18db557e80458904486d8a2b3bf1dd02fe1"
+    },
+    {
+      "package": "research-packages/e99-paired-20261019t091333z-local-12",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "8d7549c6a95e44138a0faa617c0ca56618459dfbf0501038043b5fa2438a954e"
+    },
+    {
+      "package": "research-packages/e99-paired-20261019t091333z-local-13",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "c2b4c3cb48e8c3e083d651a8fefeb9ea85c1cc4c36cc14fb897549d3e4664a13"
+    },
+    {
+      "package": "research-packages/e99-pass-20261018-homelab-09",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "6d44c02989af09fa6476d099bc58d77ee78238a5015a7aba8ce2e87069258436"
+    },
+    {
+      "package": "research-packages/e99-pass-20261018-homelab-12",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "142ac436d5aebb7338c43d350f4f64add76a3b1d18ea956911af76ee6718a15e"
+    },
+    {
+      "package": "research-packages/e99-pass-20261018-local-07",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "ff25e243a07c95865a17726fc35a62d90c72fc28ad17c6d1fbb28861ee9154a8"
+    },
+    {
+      "package": "research-packages/e99-pass-20261018-local-09",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "8b16b6b503f4e80a2a33f8dbb5fe003e5bc3226b43b6b7929299db4a8a141436"
+    },
+    {
+      "package": "research-packages/e99-pass-20261018-local-11",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "1fd94f0ea268182a667bc25c03f85d3f064100f368a9c00e4d246a7c936b1eca"
+    },
+    {
+      "package": "research-packages/e99-pass-20261018-local-14",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "316ffccd7a228915beed8f75ff6d884a0ed2546cf6cb72201f0b6fe7d46ece96"
+    },
+    {
+      "package": "research-packages/e99-pass-20261018-local-16-through-splice-audit",
+      "pin_path": "docs/targets/target-c/candidate-registry.json",
+      "old_expected_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_actual_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+      "old_match": true,
+      "old_blob": "dcc5be561dda5b62ca2b193b9a7da27925e5aad1",
+      "new_expected_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_actual_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "new_match": true,
+      "new_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "final_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+      "final_matches_new": true,
+      "final_blob": "d9661934fe0d5418eb73535a79a07e4285ce8fbd",
+      "current_sources_record": {
+        "path": "docs/targets/target-c/candidate-registry.json",
+        "sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+        "identity": "docs/targets/target-c/candidate-registry.json",
+        "generated_from": [],
+        "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c"
+      },
+      "sources_pin_matches": true,
+      "sources_sha256": "740a0c6c4fda7d8d2de2a64fc95aab7582282f6a952394a6feba6809433d0b30"
+    }
+  ],
+  "catalog": {
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "old_commit_sha256": "26c566229e6fb51452e12af2b6b5a0db75660c9b6936195bd6a1a75984a02104",
+    "new_commit_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+    "final_commit_sha256": "46f1a244f9ea3db874e2ca7918bdbd46a1697efc096bb6f2b8ee0a4af66d93a5",
+    "new_equals_final": true,
+    "old_to_new_only_change": "The single #153 candidate-registry entry appends a scope warning that the frozen report vector orientation is inconsistent, identifies the orientation-corrected statement in the package report, rejects literal inconsistent wording, and preserves lifecycle unreviewed. No other parsed registry field/entry changed.",
+    "old_to_new_semantic_check": {
+      "changed_registry_entries": [
+        35
+      ],
+      "candidate_id": "TARGET-C-PR952-UNEQUAL-HEIGHT-ISOLATE-TRANSPORT",
+      "only_changed_field": "obstructions_and_limits gains one warning about the frozen vector-orientation mismatch and identifies the corrected package statement; every other field and registry entry is unchanged.",
+      "status": "unreviewed",
+      "canonical": false
+    }
+  },
+  "final_diff_from_repin_commit": {
+    "from": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+    "to": "e185b58bfffa27be92d4ec91d919f1aa4f939725",
+    "changed_paths": [
+      "M\tresearch-packages/e99-paired-20261019t091333z-homelab-04/SOURCES.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-homelab-05/SOURCES.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-homelab-06/SOURCES.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-homelab-12/SOURCES.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-local-05/SOURCES.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-local-06/SOURCES.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-local-07/SOURCES.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-local-08/SOURCES.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-local-09/SOURCES.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-local-12/SOURCES.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-local-13/SOURCES.json",
+      "M\tresearch-packages/e99-pass-20261018-homelab-09/SOURCES.json",
+      "M\tresearch-packages/e99-pass-20261018-homelab-12/SOURCES.json",
+      "M\tresearch-packages/e99-pass-20261018-local-07/SOURCES.json",
+      "M\tresearch-packages/e99-pass-20261018-local-09/SOURCES.json",
+      "M\tresearch-packages/e99-pass-20261018-local-11/SOURCES.json",
+      "M\tresearch-packages/e99-pass-20261018-local-14/SOURCES.json",
+      "M\tresearch-packages/e99-pass-20261018-local-16-through-splice-audit/SOURCES.json"
+    ],
+    "all_changes_are_declared_package_SOURCES_repin": true,
+    "proof_or_checker_files_changed": false,
+    "interpretation": "From 2d5aa36 to final e185b58, exactly the 18 declared package SOURCES.json files change to point at candidate-registry SHA256 46f1a244... with commit 2d5aa36. No proof, checker, generated-view, or canonical-authority file changes in that interval."
+  },
+  "canonical_authority_unchanged": [
+    {
+      "path": "docs/STATE.md",
+      "sha256_old_new_final": [
+        "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+        "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+        "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6"
+      ],
+      "identical": true
+    },
+    {
+      "path": "docs/state/theorem-state.yaml",
+      "sha256_old_new_final": [
+        "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+        "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+        "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802"
+      ],
+      "identical": true
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "sha256_old_new_final": [
+        "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+        "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786",
+        "c7685bb88d6ac626c746bc3a3b42dedf26d9d92a41b40e54b2135c3ff6b49786"
+      ],
+      "identical": true
+    }
+  ],
+  "interpretation": "All 18 old pins authenticate candidate-registry bytes at 8bc3d8f, all new pins authenticate bytes at 2d5aa36, and each final e185b58 SOURCES.json contains the new hash/commit pin; candidate-registry bytes at e185 match 2d5aa36. Registry semantics change only by one #153 warning and preserve lifecycle unreviewed. Authority files are byte-identical across 8bc3d8f, 2d5aa36, e185b58. The 173b-to-2d5 interval also includes known #153/#156 package scope corrections, separate from the final repin, and no extra mathematical audit of those amendments is claimed in this metadata review.",
+  "pre_final_amendment_delta": {
+    "from": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+    "to": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+    "changed_paths": [
+      "M\tdocs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+      "M\tdocs/targets/target-c/candidate-registry.json",
+      "M\treading/docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+      "M\treading/manifest.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-homelab-11/README.md",
+      "M\tresearch-packages/e99-paired-20261019t091333z-homelab-11/TASK.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-homelab-11/VERIFY.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-local-13/README.md",
+      "M\tresearch-packages/e99-paired-20261019t091333z-local-13/TASK.json",
+      "M\tresearch-packages/e99-paired-20261019t091333z-local-13/VERIFY.json"
+    ],
+    "classification": {
+      "known_scientific_scope_corrections": [
+        "research-packages/e99-paired-20261019t091333z-homelab-11/README.md",
+        "research-packages/e99-paired-20261019t091333z-homelab-11/TASK.json",
+        "research-packages/e99-paired-20261019t091333z-homelab-11/VERIFY.json",
+        "research-packages/e99-paired-20261019t091333z-local-13/README.md",
+        "research-packages/e99-paired-20261019t091333z-local-13/TASK.json",
+        "research-packages/e99-paired-20261019t091333z-local-13/VERIFY.json"
+      ],
+      "registry_warning": [
+        "docs/targets/target-c/candidate-registry.json"
+      ],
+      "reader_provenance_regeneration": [
+        "docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+        "reading/docs/audits/global_reflection_moment_scale_destination_audit_2026-10-19.md",
+        "reading/manifest.json"
+      ]
+    },
+    "note": "This interval includes the already known #153 sign correction and #156 translate-scope narrowing; it is not characterized as metadata-only. The two package corrections have separate reviewers (B and A)."
+  }
+}

@@ -1,0 +1,4 @@
+PASS: safe-core conditional packet arithmetic
+positive exact control: {'source_labels': 2, 'vacancy_labels': 1, 'cover': 1, 'M_D_lower_bound': 2}
+nonglobal annular control: {'packet_labels': 67, 'halo_labels': 15, 'conflicts': 8, 'deleted_cover': 4, 'source_labels': 63, 'contact_edges': 106, 'actual_diameter_edges': 2, 'actual_diameter_cover': 2, 'diameter_squared': '5193/82', 'strict_same_cardinality_control_squared': '63', 'reserve_lower_bound': '16883/4879', 'safe_core_lattice_sites': 57, 'safe_core_vacancy': 0}
+The nonglobal control has positive scalar excess but zero safe-core vacancy; no conclusion about global sources follows.

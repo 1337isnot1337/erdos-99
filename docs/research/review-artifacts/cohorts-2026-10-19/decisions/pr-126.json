@@ -1,0 +1,21 @@
+{
+  "number": 126,
+  "head": "684429c4780f8a4491cc432ffa2733a31ff867eb",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "632c08c0642ca6f68d0bc7b9c75de9ca7743b371",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "For every m>=7 the moving rhombic wall source has (m+1)^2 labels and zero safe insertion capacity: tiling plus circumradius^2<=1/2 covers the full container by unit neighborhoods, while Oler slack grows quadratically.",
+  "original_coverage": "For every m>=7 the moving rhombic wall source has (m+1)^2 labels and zero safe insertion capacity: tiling plus circumradius^2<=1/2 covers the full container by unit neighborhoods, while Oler slack grows quadratically.",
+  "remaining": " The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/b-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

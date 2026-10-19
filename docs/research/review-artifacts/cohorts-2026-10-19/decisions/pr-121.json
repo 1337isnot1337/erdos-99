@@ -1,0 +1,22 @@
+{
+  "number": 121,
+  "head": "7f4dac815680da2b8ad6b0623369aeab3a730978",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "a40e526d79566eae33dd2006dd4068aee2ee8cd8",
+  "original_disposition": "hold",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept as amended in the integration candidate after a separate independent scoped correction audit; the original hold is retained as historical evidence.",
+  "coverage": "Read the complete amended README, checker, TASK.json, VERIFY.json, and SOURCES.json; independently recomputed the exact local source distances and matching overlap, exhaustively enumerated all seven valid full Y-shore assignments and four full X-shore assignments, checked pairwise segment disjointness for the selected Y matching, strict-boundary behavior, and the Cartesian capacity witness. Corrected argument/scope and amendment identity: reviews/b-correction-review.json.",
+  "original_coverage": "Original finite verifier passes but omitted proof that its origin-centered grid lies in H. PR148 analytically repairs that specific inclusion with sqrt(8)+1/sqrt(3)<4<3sqrt(3).",
+  "remaining": "Determine whether capacity-maximality and triangle-free global optimality force compatible full-shore matchings, or construct a matching-overlap mismatch at a true capacity endpoint. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/a-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json",
+    "reviews/b-correction-review.json"
+  ],
+  "canonical_promotion": false
+}

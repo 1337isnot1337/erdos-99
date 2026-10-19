@@ -1,0 +1,7 @@
+PASS: independent exact patch counts, hex hulls, pair separation, and Oler slacks
+PASS: two-residue argument certifies the M=3,6 retained sources are triangle-free
+PASS: square-grid competitors: 25 labels with d^2<=32<36; 85 labels with d^2<=104<144
+PASS: signed parallel-body expansion; the M=6 control has Delta_H<0
+PASS: exact signed-remainder cancellation and strict separate-envelope gap
+CONTROL: Delta_H = -54 + (81/2)*sqrt(3) + (-9)*pi
+LIMIT: no actual Section-165 optimum, fan, admissible basis, or source-specific lower bound is modeled

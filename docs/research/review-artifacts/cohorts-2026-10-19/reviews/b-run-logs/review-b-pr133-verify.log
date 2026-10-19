@@ -1,0 +1,55 @@
+{
+  "controls": {
+    "isolate_only_k_packet_keeps_nine_contacts": true,
+    "k_plus_one_fallback_contacts": 8,
+    "shortfall_labels": 10,
+    "weak_lower_restores_source": true,
+    "weak_upper_new_old_D_pair": [
+      "p1",
+      "rweak"
+    ]
+  },
+  "deletion": {
+    "contact_isolates": [
+      "q"
+    ],
+    "contacts": 8,
+    "labels": 10,
+    "old_D_pairs": [],
+    "pairs": 45
+  },
+  "source": {
+    "D_squared": "81",
+    "actual_diameter_pairs": [
+      [
+        "p0",
+        "p9"
+      ]
+    ],
+    "contact_isolates": [
+      "q"
+    ],
+    "contacts": 9,
+    "equilibrium_rank": 9,
+    "labels": 11,
+    "normalized_rank": 10,
+    "pairs": 55
+  },
+  "strict_restoration": {
+    "D_prime_squared": "3673/50",
+    "actual_D_prime_pairs": [
+      [
+        "p9",
+        "q"
+      ]
+    ],
+    "contact_isolates": [
+      "q",
+      "r"
+    ],
+    "contacts": 8,
+    "labels": 11,
+    "pairs": 55
+  },
+  "verdict": "exact fixture and stated conditional implications pass; no source-wide packet extraction is proved"
+}

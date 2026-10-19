@@ -1,0 +1,242 @@
+{
+  "all_m_proof": {
+    "Q_lower_bound_at_12": "584259897/10737800",
+    "all_m_domain": "integers m >= 12; construction uses multiples of four",
+    "coefficient_lower_bound": "6425087/6711125",
+    "discrete_increment_lower_bound": "228211313/13422250",
+    "globality_exclusion_increment_lower_bound": "10767/500",
+    "globality_exclusion_lower_bound_at_12": "203083/2000"
+  },
+  "cases": [
+    {
+      "2E_plus_H_minus_J": [
+        "152352/193",
+        "-289"
+      ],
+      "D_squared_lower": "207936/193",
+      "G": "143",
+      "H": "138142/193",
+      "J": "82944/193",
+      "P12": "1",
+      "PC3_positive_part": "zero eventually; the o(D) remainder is smaller than the linear gap",
+      "Q12": "82944/193",
+      "Q_positive": true,
+      "V12": "82751/193",
+      "c": "95/193",
+      "deleted_interface_crossings": 1,
+      "global_M": "82751/193",
+      "global_minimizer_upper_violated": true,
+      "internal_physical_crossings": 288,
+      "m": 12,
+      "p": 84,
+      "payment_residual_Q": [
+        "-69794/193",
+        "241"
+      ],
+      "physical_determinant_mass_S": "48577/193",
+      "raw_H_payment_residual": [
+        "-152738/193",
+        "241"
+      ],
+      "raw_H_would_appear_to_pay": true,
+      "rhombi_R": 289,
+      "s": "168/193",
+      "t": "7/12",
+      "total_determinant_mass_S_plus_M": "131328/193",
+      "trim_depth": 1,
+      "trimmed_shore_sum": 12
+    },
+    {
+      "2E_plus_H_minus_J": [
+        "7647744/5465",
+        "-513"
+      ],
+      "D_squared_lower": "10445824/5465",
+      "G": "255",
+      "H": "6981454/5465",
+      "J": "4194304/5465",
+      "P12": "1",
+      "PC3_positive_part": "zero eventually; the o(D) remainder is smaller than the linear gap",
+      "Q12": "4194304/5465",
+      "Q_positive": true,
+      "V12": "4188839/5465",
+      "c": "2727/5465",
+      "deleted_interface_crossings": 1,
+      "global_M": "4188839/5465",
+      "global_minimizer_upper_violated": true,
+      "internal_physical_crossings": 512,
+      "m": 16,
+      "p": 148,
+      "payment_residual_Q": [
+        "-692874/1093",
+        "449"
+      ],
+      "physical_determinant_mass_S": "2430297/5465",
+      "raw_H_payment_residual": [
+        "-7658674/5465",
+        "449"
+      ],
+      "raw_H_would_appear_to_pay": true,
+      "rhombi_R": 513,
+      "s": "4736/5465",
+      "t": "37/64",
+      "total_determinant_mass_S_plus_M": "6619136/5465",
+      "trim_depth": 2,
+      "trimmed_shore_sum": 16
+    },
+    {
+      "2E_plus_H_minus_J": [
+        "466368800/213361",
+        "-801"
+      ],
+      "D_squared_lower": "637057600/213361",
+      "G": "399",
+      "H": "426262078/213361",
+      "J": "256000000/213361",
+      "P12": "1",
+      "PC3_positive_part": "zero eventually; the o(D) remainder is smaller than the linear gap",
+      "Q12": "256000000/213361",
+      "Q_positive": true,
+      "V12": "255786639/213361",
+      "c": "106639/213361",
+      "deleted_interface_crossings": 1,
+      "global_M": "255786639/213361",
+      "global_minimizer_upper_violated": true,
+      "internal_physical_crossings": 800,
+      "m": 20,
+      "p": 231,
+      "payment_residual_Q": [
+        "-210795522/213361",
+        "721"
+      ],
+      "physical_determinant_mass_S": "148053361/213361",
+      "raw_H_payment_residual": [
+        "-466795522/213361",
+        "721"
+      ],
+      "raw_H_would_appear_to_pay": true,
+      "rhombi_R": 801,
+      "s": "184800/213361",
+      "t": "231/400",
+      "total_determinant_mass_S_plus_M": "403840000/213361",
+      "trim_depth": 3,
+      "trimmed_shore_sum": 20
+    },
+    {
+      "2E_plus_H_minus_J": [
+        "17207424/5465",
+        "-1153"
+      ],
+      "D_squared_lower": "23503104/5465",
+      "G": "575",
+      "H": "15721934/5465",
+      "J": "9437184/5465",
+      "P12": "1",
+      "PC3_positive_part": "zero eventually; the o(D) remainder is smaller than the linear gap",
+      "Q12": "9437184/5465",
+      "Q_positive": true,
+      "V12": "9431719/5465",
+      "c": "2727/5465",
+      "deleted_interface_crossings": 1,
+      "global_M": "9431719/5465",
+      "global_minimizer_upper_violated": true,
+      "internal_physical_crossings": 1152,
+      "m": 24,
+      "p": 333,
+      "payment_residual_Q": [
+        "-1556234/1093",
+        "1057"
+      ],
+      "physical_determinant_mass_S": "5461337/5465",
+      "raw_H_payment_residual": [
+        "-17218354/5465",
+        "1057"
+      ],
+      "raw_H_would_appear_to_pay": true,
+      "rhombi_R": 1153,
+      "s": "4736/5465",
+      "t": "37/64",
+      "total_determinant_mass_S_plus_M": "14893056/5465",
+      "trim_depth": 4,
+      "trimmed_shore_sum": 24
+    },
+    {
+      "2E_plus_H_minus_J": [
+        "1865475200/213361",
+        "-3201"
+      ],
+      "D_squared_lower": "2548230400/213361",
+      "G": "1599",
+      "H": "1706328478/213361",
+      "J": "1024000000/213361",
+      "P12": "1",
+      "PC3_positive_part": "zero eventually; the o(D) remainder is smaller than the linear gap",
+      "Q12": "1024000000/213361",
+      "Q_positive": true,
+      "V12": "1023786639/213361",
+      "c": "106639/213361",
+      "deleted_interface_crossings": 1,
+      "global_M": "1023786639/213361",
+      "global_minimizer_upper_violated": true,
+      "internal_physical_crossings": 3200,
+      "m": 40,
+      "p": 924,
+      "payment_residual_Q": [
+        "-841901922/213361",
+        "3041"
+      ],
+      "physical_determinant_mass_S": "591573361/213361",
+      "raw_H_payment_residual": [
+        "-1865901922/213361",
+        "3041"
+      ],
+      "raw_H_would_appear_to_pay": true,
+      "rhombi_R": 3201,
+      "s": "184800/213361",
+      "t": "231/400",
+      "total_determinant_mass_S_plus_M": "1615360000/213361",
+      "trim_depth": 8,
+      "trimmed_shore_sum": 40
+    },
+    {
+      "2E_plus_H_minus_J": [
+        "1821495380000/33334769",
+        "-20001"
+      ],
+      "D_squared_lower": "2488190760000/33334769",
+      "G": "9999",
+      "H": "1666628710462/33334769",
+      "J": "1000000000000/33334769",
+      "P12": "1",
+      "PC3_positive_part": "zero eventually; the o(D) remainder is smaller than the linear gap",
+      "Q12": "1000000000000/33334769",
+      "Q_positive": true,
+      "V12": "999966665231/33334769",
+      "c": "16665231/33334769",
+      "deleted_interface_crossings": 1,
+      "global_M": "999966665231/33334769",
+      "global_minimizer_upper_violated": true,
+      "internal_physical_crossings": 20000,
+      "m": 100,
+      "p": 5774,
+      "payment_residual_Q": [
+        "-821562049538/33334769",
+        "19601"
+      ],
+      "physical_determinant_mass_S": "577433334769/33334769",
+      "raw_H_payment_residual": [
+        "-1821562049538/33334769",
+        "19601"
+      ],
+      "raw_H_would_appear_to_pay": true,
+      "rhombi_R": 20001,
+      "s": "28870000/33334769",
+      "t": "2887/5000",
+      "total_determinant_mass_S_plus_M": "1577400000000/33334769",
+      "trim_depth": 23,
+      "trimmed_shore_sum": 100
+    }
+  ],
+  "scope": "Conditional on PR147's displayed geometric ledger; does not replay its unit-separation/topology verifier or prove global-source extraction.",
+  "status": "PASS: exact PR147 PC3-threshold and scalar-payment arithmetic"
+}

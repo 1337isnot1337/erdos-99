@@ -1,0 +1,38 @@
+[
+  {
+    "name": "package",
+    "source_ref": "07c727b4dd454bf1e295d5b6498ca9aad19547cc",
+    "path": "research-packages/e99-paired-20261019t091333z-local-13/verify.py",
+    "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python -c '\"'\"'import subprocess; p='\"'\"'\"'\"'\"'\"'\"'\"'research-packages/e99-paired-20261019t091333z-local-13/verify.py'\"'\"'\"'\"'\"'\"'\"'\"'; b=subprocess.check_output(['\"'\"'\"'\"'\"'\"'\"'\"'git'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'show'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'07c727b4dd454bf1e295d5b6498ca9aad19547cc:'\"'\"'\"'\"'\"'\"'\"'\"'+p]); exec(compile(b.decode(),p,'\"'\"'\"'\"'\"'\"'\"'\"'exec'\"'\"'\"'\"'\"'\"'\"'\"'),{'\"'\"'\"'\"'\"'\"'\"'\"'__name__'\"'\"'\"'\"'\"'\"'\"'\"':'\"'\"'\"'\"'\"'\"'\"'\"'__main__'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'__file__'\"'\"'\"'\"'\"'\"'\"'\"':p})'\"'\"''",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "result": "PASS",
+    "seconds": 0.06,
+    "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr156-package.log",
+    "output": "PASS: exact rational height, slope, width, and row-gain controls\nPASS: radius threshold equality and just-below negative control\nPASS: strict D/2 comparison onset and deletion-ledger negative control\n"
+  },
+  {
+    "name": "source-finite",
+    "source_ref": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "path": "research/verify_global_boundary_zigzag_2026_10_11.py",
+    "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python -c '\"'\"'import subprocess; p='\"'\"'\"'\"'\"'\"'\"'\"'research/verify_global_boundary_zigzag_2026_10_11.py'\"'\"'\"'\"'\"'\"'\"'\"'; b=subprocess.check_output(['\"'\"'\"'\"'\"'\"'\"'\"'git'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'show'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'7d0a450fe66991036541023f95c44c064a04b6a8:'\"'\"'\"'\"'\"'\"'\"'\"'+p]); exec(compile(b.decode(),p,'\"'\"'\"'\"'\"'\"'\"'\"'exec'\"'\"'\"'\"'\"'\"'\"'\"'),{'\"'\"'\"'\"'\"'\"'\"'\"'__name__'\"'\"'\"'\"'\"'\"'\"'\"':'\"'\"'\"'\"'\"'\"'\"'\"'__main__'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'__file__'\"'\"'\"'\"'\"'\"'\"'\"':p})'\"'\"''",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "result": "PASS",
+    "seconds": 5.21,
+    "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr156-source-finite.log",
+    "output": "PASS: 289 sign controls and five outward square-root bounds\nR=640000, t=(0,0): packets=6, deleted=620, inserted=641, gain=21, minimum packet gain=2, retained-neighbor checks=6437\nR=1000000, t=(0,0): packets=9, deleted=873, inserted=900, gain=27, minimum packet gain=2, retained-neighbor checks=9041\nR=1000000, t=(1/7,2/9): packets=10, deleted=957, inserted=991, gain=34, minimum packet gain=2, retained-neighbor checks=9964\nR=2000000, t=(3/11,5/13): packets=21, deleted=2034, inserted=2108, gain=74, minimum packet gain=2, retained-neighbor checks=21196\nR=10000000, t=(2/17,1/19): packets=108, deleted=10442, inserted=10820, gain=378, minimum packet gain=2, retained-neighbor checks=108843\nPASS: 154 simultaneous packets across 5 examples; 15460 contained inserted labels; 155481 exact retained-lattice neighbor checks; total net gain=534.\nPASS: exact 38-class packet-lattice membership for all 15460 inserted labels; the unchanged triangular lattice is class 39.\nAll arithmetic is rational or exact Q(sqrt(3)). Scope: finite packet certificates; the all-radius linear reserve is an analytic candidate, not an audited Level I proof.\n"
+  },
+  {
+    "name": "source-optimized-guard",
+    "source_ref": "7d0a450fe66991036541023f95c44c064a04b6a8",
+    "path": "research/verify_global_boundary_zigzag_2026_10_11.py",
+    "command": "flock -x /home/cinna/.local/state/erdos99-host-compute.lock -c 'exec timeout 120s env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python -O -c '\"'\"'import subprocess; p='\"'\"'\"'\"'\"'\"'\"'\"'research/verify_global_boundary_zigzag_2026_10_11.py'\"'\"'\"'\"'\"'\"'\"'\"'; b=subprocess.check_output(['\"'\"'\"'\"'\"'\"'\"'\"'git'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'show'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'7d0a450fe66991036541023f95c44c064a04b6a8:'\"'\"'\"'\"'\"'\"'\"'\"'+p]); exec(compile(b.decode(),p,'\"'\"'\"'\"'\"'\"'\"'\"'exec'\"'\"'\"'\"'\"'\"'\"'\"'),{'\"'\"'\"'\"'\"'\"'\"'\"'__name__'\"'\"'\"'\"'\"'\"'\"'\"':'\"'\"'\"'\"'\"'\"'\"'\"'__main__'\"'\"'\"'\"'\"'\"'\"'\"','\"'\"'\"'\"'\"'\"'\"'\"'__file__'\"'\"'\"'\"'\"'\"'\"'\"':p})'\"'\"''",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "result": "PASS",
+    "seconds": 0.07,
+    "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/pr156-source-optimized-guard.log",
+    "output": "Run without -O: this exact checker requires assertions\n"
+  }
+]

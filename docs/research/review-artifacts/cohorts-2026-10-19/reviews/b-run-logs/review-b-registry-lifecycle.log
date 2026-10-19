@@ -1,0 +1,148 @@
+{
+  "all_unreviewed_or_unreviewed_strengthening": true,
+  "snapshots": [
+    {
+      "commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+      "entries": [
+        {
+          "candidate_id": "TARGET-C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND-PR947",
+          "status": "unreviewed",
+          "source_lifecycle": "Source PR proposes a canonical all-source localization claim; not adopted.",
+          "not_claimed": [
+            "a count of near-diameter pairs",
+            "stress weights",
+            "source motion or endpoint extraction",
+            "C-II closure"
+          ],
+          "obstructions_and_limits": [
+            "Near-diameter localization does not control how many such pairs occur."
+          ]
+        },
+        {
+          "candidate_id": "TARGET-C-POSITIVE-LEAF-ANCHOR-D23-PR947",
+          "status": "unreviewed strengthening candidate; destination keeps the weaker canonical bound",
+          "source_lifecycle": "Source PR proposes strengthening the existing canonical claim from O(D^(-1/2)) to O(D^(-2/3)); destination statement remains unchanged.",
+          "not_claimed": [
+            "interior vacancy or packet",
+            "source motion or local capacity",
+            "a sharper port-count exponent",
+            "C-II or Level I closure"
+          ],
+          "obstructions_and_limits": [
+            "This is boundary localization only; it produces no vacancy, packet, or actual movement."
+          ]
+        },
+        {
+          "candidate_id": "TARGET-C-PR952-UNEQUAL-HEIGHT-ISOLATE-TRANSPORT",
+          "status": "unreviewed",
+          "source_lifecycle": "Unreviewed candidate in frozen open source PR #952; the destination theorem-state remains authoritative.",
+          "not_claimed": [
+            "The finite common-height obstruction does not exclude unequal heights or isolate transport.",
+            "Rational enclosure failure is not an exact algebraic infeasibility certificate.",
+            "No canonical extraction, nonempty support, or C-II/Level I closure."
+          ],
+          "obstructions_and_limits": [
+            "The exact source costs must prevent collapse of every contact-bearing group.",
+            "Finite nonglobal sources do not certify canonical optimality or source extraction."
+          ]
+        }
+      ]
+    },
+    {
+      "commit": "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+      "entries": [
+        {
+          "candidate_id": "TARGET-C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND-PR947",
+          "status": "unreviewed",
+          "source_lifecycle": "Source PR proposes a canonical all-source localization claim; not adopted.",
+          "not_claimed": [
+            "a count of near-diameter pairs",
+            "stress weights",
+            "source motion or endpoint extraction",
+            "C-II closure"
+          ],
+          "obstructions_and_limits": [
+            "Near-diameter localization does not control how many such pairs occur."
+          ]
+        },
+        {
+          "candidate_id": "TARGET-C-POSITIVE-LEAF-ANCHOR-D23-PR947",
+          "status": "unreviewed strengthening candidate; destination keeps the weaker canonical bound",
+          "source_lifecycle": "Source PR proposes strengthening the existing canonical claim from O(D^(-1/2)) to O(D^(-2/3)); destination statement remains unchanged.",
+          "not_claimed": [
+            "interior vacancy or packet",
+            "source motion or local capacity",
+            "a sharper port-count exponent",
+            "C-II or Level I closure"
+          ],
+          "obstructions_and_limits": [
+            "This is boundary localization only; it produces no vacancy, packet, or actual movement."
+          ]
+        },
+        {
+          "candidate_id": "TARGET-C-PR952-UNEQUAL-HEIGHT-ISOLATE-TRANSPORT",
+          "status": "unreviewed",
+          "source_lifecycle": "Unreviewed candidate in frozen open source PR #952; the destination theorem-state remains authoritative.",
+          "not_claimed": [
+            "The finite common-height obstruction does not exclude unequal heights or isolate transport.",
+            "Rational enclosure failure is not an exact algebraic infeasibility certificate.",
+            "No canonical extraction, nonempty support, or C-II/Level I closure."
+          ],
+          "obstructions_and_limits": [
+            "The exact source costs must prevent collapse of every contact-bearing group.",
+            "Finite nonglobal sources do not certify canonical optimality or source extraction.",
+            "The frozen report describes its contact vector in the opposite orientation to its formula and verifier. Use r=p-q from fixed q to moving p for movement p -> p+s_i v; only that orientation-corrected statement is scoped in research-packages/e99-paired-20261019t091333z-homelab-11/README.md. The literal inconsistent wording is not accepted, and candidate lifecycle remains unreviewed."
+          ]
+        }
+      ]
+    },
+    {
+      "commit": "e185b58bfffa27be92d4ec91d919f1aa4f939725",
+      "entries": [
+        {
+          "candidate_id": "TARGET-C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND-PR947",
+          "status": "unreviewed",
+          "source_lifecycle": "Source PR proposes a canonical all-source localization claim; not adopted.",
+          "not_claimed": [
+            "a count of near-diameter pairs",
+            "stress weights",
+            "source motion or endpoint extraction",
+            "C-II closure"
+          ],
+          "obstructions_and_limits": [
+            "Near-diameter localization does not control how many such pairs occur."
+          ]
+        },
+        {
+          "candidate_id": "TARGET-C-POSITIVE-LEAF-ANCHOR-D23-PR947",
+          "status": "unreviewed strengthening candidate; destination keeps the weaker canonical bound",
+          "source_lifecycle": "Source PR proposes strengthening the existing canonical claim from O(D^(-1/2)) to O(D^(-2/3)); destination statement remains unchanged.",
+          "not_claimed": [
+            "interior vacancy or packet",
+            "source motion or local capacity",
+            "a sharper port-count exponent",
+            "C-II or Level I closure"
+          ],
+          "obstructions_and_limits": [
+            "This is boundary localization only; it produces no vacancy, packet, or actual movement."
+          ]
+        },
+        {
+          "candidate_id": "TARGET-C-PR952-UNEQUAL-HEIGHT-ISOLATE-TRANSPORT",
+          "status": "unreviewed",
+          "source_lifecycle": "Unreviewed candidate in frozen open source PR #952; the destination theorem-state remains authoritative.",
+          "not_claimed": [
+            "The finite common-height obstruction does not exclude unequal heights or isolate transport.",
+            "Rational enclosure failure is not an exact algebraic infeasibility certificate.",
+            "No canonical extraction, nonempty support, or C-II/Level I closure."
+          ],
+          "obstructions_and_limits": [
+            "The exact source costs must prevent collapse of every contact-bearing group.",
+            "Finite nonglobal sources do not certify canonical optimality or source extraction.",
+            "The frozen report describes its contact vector in the opposite orientation to its formula and verifier. Use r=p-q from fixed q to moving p for movement p -> p+s_i v; only that orientation-corrected statement is scoped in research-packages/e99-paired-20261019t091333z-homelab-11/README.md. The literal inconsistent wording is not accepted, and candidate lifecycle remains unreviewed."
+          ]
+        }
+      ]
+    }
+  ]
+}

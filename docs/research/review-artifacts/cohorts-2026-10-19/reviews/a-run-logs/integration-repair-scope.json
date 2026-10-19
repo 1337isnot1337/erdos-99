@@ -1,0 +1,112 @@
+{
+  "integration_commit": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+  "tree": "187e117be3748c6a190a69795c677a4c9dc59e53",
+  "checks": [
+    {
+      "pr": 103,
+      "check": "single leading theorem-state header after repair",
+      "result": "PASS",
+      "header_count": 1,
+      "path": "docs/reports/target_b_two_component_virtual_determinant_payment_2026-10-18.md"
+    },
+    {
+      "pr": 138,
+      "check": "Section 114.2 source hash pin and VERIFY path are exact",
+      "result": "PASS",
+      "path": "docs/targets/target-a/03-source-response.md",
+      "commit": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "sha256": "b56ef3220026dc503d3dfb43ecf04eeb041a05f8b8944234624806712bfc91a4",
+      "verify_input": true
+    },
+    {
+      "pr": 140,
+      "check": "all 55 modified preexisting audit/report files are baseline-identical; new report is indexed and generated reading manifest source/reading hashes match",
+      "result": "PASS",
+      "preexisting_docs_reports": 55,
+      "baseline_identical": 55,
+      "new_report": "docs/audits/target_a_balanced_triad_relay_independent_audit_2026-10-19.md",
+      "new_report_sha256": "a5b8ad6615685784307855df582bfe72ae678339c9faa1d73d31fa22136256c3",
+      "artifact_index_records": 1,
+      "reading_path": "reading/docs/audits/target_a_balanced_triad_relay_independent_audit_2026-10-19.md",
+      "reading_sha256": "f71938d0041f384e3fc237b4567e85a757e8f6b0b80d687bd7760ccc6da13d1f",
+      "manifest_hashes_match": true,
+      "generated_reading_is_not_scientific_source": true
+    },
+    {
+      "pr": 117,
+      "check": "repair specifies joint basis/auxiliary matching selection and finite Borel fibers",
+      "result": "PASS",
+      "README": "research-packages/e99-pass-20261018-local-01/README.md"
+    },
+    {
+      "pr": 121,
+      "check": "repaired grid enclosure uses exact triangle inequality and verifier pin matches",
+      "result": "PASS",
+      "checker_sha256": "2ec4345444c2e71dd4a867f4476682fba9012e8896d3055738dd098f0039fdcb",
+      "declared_sha256": "2ec4345444c2e71dd4a867f4476682fba9012e8896d3055738dd098f0039fdcb",
+      "README_controls": [
+        "|g|<=sqrt(8)<3",
+        "|x|^2=1/3<1",
+        "|g-x|<4<3sqrt(3)",
+        "16<27"
+      ],
+      "checker_controls": [
+        "max(grid_radii2)<9",
+        "norm2(x)<1",
+        "F(16)<27"
+      ]
+    },
+    {
+      "pr": 147,
+      "check": "corrected README turn sequence agrees with PR170 direct exact determinant assertion",
+      "result": "PASS",
+      "repair_ref": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+      "README_turn_sequence": "s, s+c, s-c, s, s-c, s+c",
+      "checker": "PR170 verify.py",
+      "checker_assertion": "turns == normalized_turns and all(z > 0 for z in turns)",
+      "sequence_in_checker": true,
+      "coverage_note": "PR147 finite hull verifier does not itself assert this tuple; PR170 directly derives turns from hull edges and checks the exact list."
+    },
+    {
+      "pr": 117,
+      "check": "focused integration-repair verifier",
+      "result": "PASS",
+      "source_ref": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+      "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-pr117.log",
+      "log_exists": true
+    },
+    {
+      "pr": 121,
+      "check": "focused integration-repair verifier",
+      "result": "PASS",
+      "source_ref": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+      "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-pr121.log",
+      "log_exists": true
+    },
+    {
+      "pr": 138,
+      "check": "focused integration-repair verifier",
+      "result": "PASS",
+      "source_ref": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+      "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-pr138.log",
+      "log_exists": true
+    },
+    {
+      "pr": 140,
+      "check": "focused integration-repair verifier",
+      "result": "PASS",
+      "source_ref": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+      "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-pr140.log",
+      "log_exists": true
+    },
+    {
+      "pr": 147,
+      "check": "focused integration-repair verifier",
+      "result": "PASS",
+      "source_ref": "173b3dd14fa784f65f80bb9485b0f72ed1a36916",
+      "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/a-run-logs/integration-pr147.log",
+      "log_exists": true
+    }
+  ],
+  "note": "This log reviews only the stated integration repairs. Original frozen-head concerns remain explicitly recorded in their per-PR records; full theorem-certificate replay is owned by root; no canonical promotion."
+}

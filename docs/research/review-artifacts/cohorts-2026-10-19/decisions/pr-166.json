@@ -1,0 +1,21 @@
+{
+  "number": 166,
+  "head": "62fcdcf8dc869dc7a59eb9665035222c5b2cf7db",
+  "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+  "source_tree": "0f16de79a3dcd3e4a20a7df0ad42667c26e20665",
+  "original_disposition": "accept_archive",
+  "disposition": "accept_archive",
+  "lane": "archive",
+  "review_status": "partially_reviewed",
+  "reason": "Accept scoped contribution as archive within the documented source-preservation adaptations; original authorship and ancestry are retained.",
+  "coverage": "Read one-contact proof audit package: pinch/dilate preserves labels and unit separation, compactness/restricted infimum equivalence and exactly-one-contact descent are scoped correctly. n=8 consequence is explicitly conditional on external Bezdek\u2013Fodor D(8) premise; no eventual nonattainment follows.",
+  "original_coverage": "Read one-contact proof audit package: pinch/dilate preserves labels and unit separation, compactness/restricted infimum equivalence and exactly-one-contact descent are scoped correctly. n=8 consequence is explicitly conditional on external Bezdek\u2013Fodor D(8) premise; no eventual nonattainment follows.",
+  "remaining": "Classify arbitrary multi-contact canonical minimizers or prove eventual nonattainment; no Level I closure. The integration PR final exact-commit full94 replay must close the full-suite handoff before merge; inherited proof dependencies and global-source bridges outside the stated audit remain unproved or unaudited. No canonical promotion.",
+  "evidence": [
+    "reviews/c-review.json",
+    "source-inventory.json",
+    "final-source-preservation.json",
+    "checks/final-structural-receipt.json"
+  ],
+  "canonical_promotion": false
+}

@@ -1,0 +1,3 @@
+PASS: 98212 independently saturable finite incidence graphs; 22266 with positive unavoidable overlap
+PASS: full-shore extension control has free-shore overlap 0 but forced full-shore overlap 1
+PASS: rational source fixture C=3, O=2, unavoidable overlap=2

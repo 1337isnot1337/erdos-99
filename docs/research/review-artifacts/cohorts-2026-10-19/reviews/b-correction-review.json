@@ -1,0 +1,217 @@
+{
+  "reviewer": "review_b",
+  "independent_from_correction_author": true,
+  "review_context": {
+    "integration_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+    "scope": "Independent scope-aware audit of amended PR117 and PR121 package contents at the frozen integration commit. This is conditional/finite research acceptance only; no canonical promotion or full theorem-suite replay is claimed.",
+    "reviewer_a_disclosure": "Reviewer A identified the original defects and supplied correction directions. This reviewer did not supply either correction and independently re-read the complete amended materials, reconstructed their decisive implications, and ran the checks listed below. Reviewer A's work is not counted as independent verification of the amended steps.",
+    "historical_proof_reconstruction": "Not performed for the full inherited Target A proof chain. The review reconstructs the new decisive implications and checks the cited interfaces; Sections 102, 165, 174, and 175 remain relied-on inputs rather than being re-audited end-to-end."
+  },
+  "reviews": [
+    {
+      "number": 117,
+      "title": "Target A: phase-integrated plateau sink surplus",
+      "head": "52a89ded959be4c96db4bdc4622ee73f7f63c3bd",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "integration_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "github_changed_files": 5,
+        "api_inventory_count": 5,
+        "git_diff_inventory_count": 5,
+        "full_path_inventory_matches": true,
+        "paths": [
+          "research-packages/e99-pass-20261018-local-01/README.md",
+          "research-packages/e99-pass-20261018-local-01/SOURCES.json",
+          "research-packages/e99-pass-20261018-local-01/TASK.json",
+          "research-packages/e99-pass-20261018-local-01/VERIFY.json",
+          "research-packages/e99-pass-20261018-local-01/verify.py"
+        ]
+      },
+      "amendment_audit": {
+        "changed_at_integration_since_pr_head": [
+          "research-packages/e99-pass-20261018-local-01/README.md"
+        ],
+        "original_issue_and_repair": "The original prose selected a measurable phase-dependent Section-102 basis but did not make the phase-dependent auxiliary perfect matching used by Section 174 part of the selector. Matching-dependent sector sets C_i, O_i, and Xi therefore were not shown measurable by selecting a basis alone. The amended proof fixes one lexicographic order on the finite labelled pairs (B, mu_0), selects the first admissible pair, and explains why each admissibility fiber and the resulting sector counts are Borel.",
+        "corrected_selector_review": "For a fixed bounded fundamental cell, the finite source neighborhood and lattice rows give finitely many candidate labelled bases and matchings. Strict incidence/distance conditions and finite rank/matching conditions define Borel admissibility sets; finite lexicographic selection therefore has Borel fibers. The stated Section-102/174 admissibility hypotheses supply a nonempty pair at every generic phase. This makes Xi and the basis-count integrand measurable; they are bounded on the cell, so the translation expectations used in the proof are defined.",
+        "decisive_implication_reconstruction": "From Xi=|O_iso|+sum_i(|O_i|-|C_i|)_+, obtain Xi >= |O|-|T_O|-sum_i|C_i| using the stated exterior-sink partition. With |C^partial|=m*-|Z|-d_int and sum_i|C_i|=|C^partial|-t_Sigma, plus T_Z disjoint-union T_O=T_Sigma, derive Xi-j*-|T_Z| >= |O|+|Y_0|+|Z|-|T_Sigma|-N+d_int+t_Sigma. Translation averaging gives E|Z|=area(K*)/a0, E(|O|+|Y_0|)=(area(K*+tB)-area(K*))/a0, and E|T_Sigma|=A_Sigma/a0. This reconstructs the displayed inequality (1). The residual is integer-valued; if no generic phase has residual >=0, its mean is <=-1. Thus any strict lower bound >-1 forces one phase with Xi>=j*+|T_Z|. Substituting A_Sigma<=pi+2e yields the stated sufficient criterion (2). The implication is valid under the cited Section-102/174/175 and actual-response hypotheses.",
+        "source_bindings": {
+          "baseline": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "SOURCES_json": "All declared SHA-256 pins and immutable baseline commits pass the package metadata/source-pin checker at the frozen integration commit.",
+          "principal_interfaces": [
+            "docs/targets/target-a/02-scaffold-and-hall.md",
+            "docs/targets/target-a/03-source-response.md",
+            "docs/targets/target-a/08-prescribed-phase-alignment.md",
+            "docs/targets/target-a/17-plateau-response-lift.md",
+            "docs/targets/target-a/24-three-channel-locked-stress.md",
+            "docs/targets/target-a/26-tube-shield-sector-balance.md",
+            "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+            "research-packages/target-a-fan-tube-ledger/{README.md,evidence.json,verify.py}",
+            "research-packages/target-a-full-tube-fan-ledger/{README.md,evidence.json,verify.py}"
+          ]
+        }
+      },
+      "lane": "conditional source-only research archive",
+      "verdict": "accept_scoped",
+      "coverage": "Read the complete amended README/proof, TASK.json, VERIFY.json, SOURCES.json, and verifier; checked the Section 174/175 sector identities and Section 165 phase definitions; independently derived the pointwise and averaged implications; replayed the package and both predecessor verifiers, including the 18 admissible seed-63 rows, exclusion of all 18 non-admissible relaxed rows, and 34 seed-66 rows.",
+      "checks": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/e99-pass-20261018-local-01/verify.py",
+          "working_tree": "detached checkout at integration commit 8bc3d8f10ecf7204078f8db66005dfc0551263c6 (temporary checkout; exact immutable commit retained)",
+          "exit_code": 0,
+          "result": "PASS; 18 admissible seed-63 checks, all 18 relaxed controls excluded, 34 seed-66 checks; minimum pointwise margins 0 and 2; no canonical source demand supplied.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-117_population.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/target-a-fan-tube-ledger/verify.py",
+          "working_tree": "detached checkout at integration commit 8bc3d8f10ecf7204078f8db66005dfc0551263c6 (temporary checkout; exact immutable commit retained)",
+          "exit_code": 0,
+          "result": "PASS; predecessor ledger and admissibility controls replayed.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-117_seed63_predecessor.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python research-packages/target-a-full-tube-fan-ledger/verify.py",
+          "working_tree": "detached checkout at integration commit 8bc3d8f10ecf7204078f8db66005dfc0551263c6 (temporary checkout; exact immutable commit retained)",
+          "exit_code": 0,
+          "result": "PASS; 34 full-tube predecessor cases and stated finite negative controls replayed.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-117_seed66_predecessor.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python scripts/research_package.py --package research-packages/e99-pass-20261018-local-01 --check-only",
+          "working_tree": "detached metadata-check checkout at integration commit 8bc3d8f10ecf7204078f8db66005dfc0551263c6 (temporary checkout; exact immutable commit retained)",
+          "exit_code": 0,
+          "result": "metadata-valid; no unresolved inputs; full_verified=false; no replay was authorized or claimed by the metadata planner.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-8bc-meta-local-01.log"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Reused only the exact pinned seed-63 and seed-66 predecessor inputs because the amended checker names those same evidence ledgers and scopes. Their runs validate the finite pointwise identity and controls, not phase-integrated source demand or criterion (2).",
+      "scope_limitations": [
+        "The predecessor fixtures do not supply canonical N or j_* and are not global-source counterexamples.",
+        "The sufficient area/population criterion is not proved for every sufficiently large global source.",
+        "No zero-slack branch, Target A closure, or Level I theorem follows.",
+        "The full historical proof chain behind the cited canonical hypotheses was not reconstructed in this review."
+      ],
+      "open_obligations": [
+        "Derive criterion (2), or a stronger expected sector-sink lower bound, from every relevant global source while retaining all source labels and the actual plateau response.",
+        "Retain the stated nonempty Section-102/174 admissible-pair hypothesis in any use of the measurable selector."
+      ],
+      "necessary_repairs": []
+    },
+    {
+      "number": 121,
+      "title": "Target A: geometric full-shore extension regression",
+      "head": "7f4dac815680da2b8ad6b0623369aeab3a730978",
+      "base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "merge_base": "7d0a450fe66991036541023f95c44c064a04b6a8",
+      "integration_commit": "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+      "identity_check": {
+        "origin_pr_head_matches_assigned_immutable_sha": true,
+        "github_changed_files": 5,
+        "api_inventory_count": 5,
+        "git_diff_inventory_count": 5,
+        "full_path_inventory_matches": true,
+        "paths": [
+          "research-packages/e99-pass-20261018-homelab-08/README.md",
+          "research-packages/e99-pass-20261018-homelab-08/SOURCES.json",
+          "research-packages/e99-pass-20261018-homelab-08/TASK.json",
+          "research-packages/e99-pass-20261018-homelab-08/VERIFY.json",
+          "research-packages/e99-pass-20261018-homelab-08/verify.py"
+        ]
+      },
+      "amendment_audit": {
+        "changed_at_integration_since_pr_head": [
+          "research-packages/e99-pass-20261018-homelab-08/README.md",
+          "research-packages/e99-pass-20261018-homelab-08/SOURCES.json",
+          "research-packages/e99-pass-20261018-homelab-08/verify.py"
+        ],
+        "original_issue_and_repair": "The original README claimed a 5x5 Cartesian unit grid centered at x was contained in H by comparing its radius squared 8 to the hexagon's inradius squared 27, while the checker actually constructed the Cartesian grid about the origin. The amendment aligns prose and checker: it records x=(1/2,sqrt(3)/6) in Cartesian coordinates, |x|^2=1/3, |g|^2<=8, then uses |g-x|<sqrt(8)+1<4<3sqrt(3), with 16<27. The checker now verifies each exact premise of this triangle-inequality containment certificate.",
+        "decisive_implication_reconstruction": "In triangular coordinates q(u,v)=u^2+uv+v^2 is the exact squared Euclidean metric. The eleven sources (five local labels plus six regular-hexagon vertices) have minimum pairwise q=13/12>1; local sources lie within radius 3sqrt(3) of x, and the six vertices have hull H, so A is unit-separated, triangle-free, contained in H, and K+B subset H. The complete lattice shore for K={x} is {(0,0),(1,0),(0,1)}; the coordinate completing-square bound makes the finite enumeration exhaustive. The selected full-shore matchings are valid and the three Y-matching segments are pairwise disjoint. Restricting to C={x}, O={y0}, the selected pair both maps to a1, giving overlap 1; alternate strict conflicts x-a2 and y0-a3 use distinct labels, giving achievable overlap 0. A coordinated alternative pair of full-shore matchings also attains zero, so this disproves only the universal claim that arbitrary inherited full-shore choices preserve the restricted minimum. Separately, the 25-point Cartesian grid is unit-separated and lies in the inscribed disk of H, proving alpha_1(H)>=25>|A|=11. Thus the fixture is not the Section-168 zero-slack endpoint.",
+        "source_bindings": {
+          "baseline": "7d0a450fe66991036541023f95c44c064a04b6a8",
+          "SOURCES_json": "All declared source pins pass the package metadata/source-pin checker at 8bc. The source-capacity limitation is now explicitly checked against the actual origin-centered Cartesian grid and the offset hexagon center.",
+          "principal_interfaces": [
+            "docs/targets/target-a/20-zero-slack-normalization.md (Section 168.2 full-shore Hall statement and capacity endpoint)",
+            "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+            "docs/problem/statement.md"
+          ]
+        }
+      },
+      "lane": "finite source-only research archive",
+      "verdict": "accept_archive",
+      "coverage": "Read the complete amended README, checker, TASK.json, VERIFY.json, and SOURCES.json; independently recomputed the exact local source distances and matching overlap, exhaustively enumerated all seven valid full Y-shore assignments and four full X-shore assignments, checked pairwise segment disjointness for the selected Y matching, strict-boundary behavior, and the Cartesian capacity witness.",
+      "checks": [
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python -I -O -B research-packages/e99-pass-20261018-homelab-08/verify.py",
+          "working_tree": "detached checkout at integration commit 8bc3d8f10ecf7204078f8db66005dfc0551263c6 (temporary checkout; exact immutable commit retained)",
+          "exit_code": 0,
+          "result": "PASS; exact rational incidence, chosen overlap 1, restricted disjoint assignment 0, coordinated full-shore alternative, strict-distance and duplicate-source controls; reports alpha_1(H)>=25>|A|=11.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-121_optimized_exact.log"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python /home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-121-independent.py",
+          "working_tree": "Independent temporary exact-rational control script; sources taken from amended README coordinates.",
+          "exit_code": 0,
+          "result": "PASS; 11 sources, minimum squared source distance 13/12; seven valid full Y-shore matchings, four full X-shore assignments; minimum restricted overlap over all pairs is zero; selected Y segments disjoint; 25-point Cartesian grid has minimum squared spacing 1 and maximum radius squared 8.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-121-independent.log",
+          "script": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-121-independent.py"
+        },
+        {
+          "command": "/home/cinna/.local/state/erdos99-pass/20261018-luna-xhigh/venv/bin/python scripts/research_package.py --package research-packages/e99-pass-20261018-homelab-08 --check-only",
+          "working_tree": "detached metadata-check checkout at integration commit 8bc3d8f10ecf7204078f8db66005dfc0551263c6 (temporary checkout; exact immutable commit retained)",
+          "exit_code": 0,
+          "result": "metadata-valid; unresolved status correctly retains the unproved source-capacity endpoint and independent mathematical audit; full_verified=false; no replay was authorized or claimed by the metadata planner.",
+          "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-8bc-meta-homelab-08.log"
+        }
+      ],
+      "dependencies_and_evidence_reuse": "Uses only the exact baseline Section 168 route and the cited older PR98 regression as contextual evidence. No predecessor numerical result is reused to prove this fixture. The independent exact-rational enumeration is computed from the amended coordinate table.",
+      "scope_limitations": [
+        "The fixture does not realize |A^0|=alpha_1(H); the capacity witness establishes alpha_1(H)>=25 while |A|=11.",
+        "There is no global optimum, plateau equality, canonical C^partial or O, actual Schur matrix, source-specific rank inequality, or asymptotic conclusion.",
+        "A counterexample to every arbitrary inherited matching choice does not rule out a compatible coordinated pair; the fixture explicitly exhibits one.",
+        "The cited historical Section 168 proof chain was not reconstructed end-to-end."
+      ],
+      "open_obligations": [
+        "Determine whether capacity-maximality and triangle-free global optimality force compatible full-shore matchings, or construct a matching-overlap mismatch at a true capacity endpoint."
+      ],
+      "necessary_repairs": []
+    }
+  ],
+  "candidate_registry_reconciliation_at_8bc": {
+    "path": "docs/targets/target-c/candidate-registry.json",
+    "commits_checked": [
+      "8bc3d8f10ecf7204078f8db66005dfc0551263c6",
+      "2d5aa36f01ac131b791b9b6a745e8c963f4a363c",
+      "e185b58bfffa27be92d4ec91d919f1aa4f939725",
+      "ee8f9df94a8a1043098482386bbbc6a893214330"
+    ],
+    "pr124_candidate": {
+      "candidate_id": "TARGET-C-POSITIVE-LEAF-ANCHOR-D23-PR947",
+      "status": "unreviewed strengthening candidate; destination keeps the weaker canonical bound",
+      "lifecycle": "Source proposes sharpening the canonical O(D^(-1/2)) positive-leaf anchor statement to O(D^(-2/3)); adoption not performed.",
+      "accepted_component_scope": "PR #124 report proves only the cone-to-boundary-contraction implication conditional on PR #139 near-diameter localization at s=0 and s=2. The stronger exponent is not promoted.",
+      "open_obligations": [
+        "Independently establish the full near-diameter premise before any adoption.",
+        "Connect boundary localization to a full-source movement with all labels and pair constraints."
+      ]
+    },
+    "pr139_candidate": {
+      "candidate_id": "TARGET-C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND-PR947",
+      "status": "unreviewed",
+      "lifecycle": "Source PR proposes canonical all-source localization; destination has not adopted it.",
+      "accepted_component_scope": "PR #139 destination audit passes endpoint-tangent and midpoint-normal localization only for all s>=0, explicitly including s=0 and s=2. It excludes companion endpoint-tail/moment and full diameter-edge transfer claims.",
+      "open_obligation": "Source-level counting or replacement argument must use localization without assuming an unproved global atlas.",
+      "audit_pr_head": "c0043e3fb9c75b405e75fa462d5c9f2d1a7f1e85",
+      "independent_review_record": "c-review.json PR #139 row; C reviewer confirms the support-energy localization scope, preserves unreviewed candidate lifecycle and excludes source-realized movement.",
+      "exact_report_git_blob": "4ac98647466f92d6a5ba4ea00bc7b21dfb8c19d7"
+    },
+    "verdict": "Exact registry reconciliation is correctly attributed: PR #124 is the conditional positive-leaf implication; PR #139 is the near-diameter localization premise. Both candidates remain unreviewed/noncanonical, and the weaker canonical O(D^(-1/2)) bound remains authoritative; no theorem-state change or exponent promotion.",
+    "pr124_metadata_repair_at_ee8": {
+      "commit": "ee8f9df94a8a1043098482386bbbc6a893214330",
+      "result": "PASS; removed only duplicate ART-PLACEHOLDER theorem-state marker, kept main valid marker and noncanonical lifecycle; reading source/generated hashes independently verified.",
+      "log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-124-ee8-metadata.log"
+    },
+    "candidate_lifecycle_check_log": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-registry-reconcile.log",
+    "candidate_lifecycle_check_script": "/home/cinna/.local/state/erdos99-merge/20261019/reviews/b-run-logs/review-b-registry-reconcile.py"
+  }
+}

@@ -1,0 +1,4 @@
+PASS independent exact recomputation: sources=11, min_source_distance2=13/12, full_Y_matchings=7, full_X_assignments=4
+PASS selected inherited overlap=1; minimum over all full-shore matching pairs on C,O is 0
+PASS chosen Y matching segments pairwise disjoint; distance-one response pair is excluded under strict <1
+PASS Cartesian grid has 25 points, min distance2=1, max radius2=8; triangle bound gives alpha_1(H)>=25>11

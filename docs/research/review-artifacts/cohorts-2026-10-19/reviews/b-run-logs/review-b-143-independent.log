@@ -1,0 +1,1 @@
+{'labels': 51, 'pairs': 1275, 'min_squared_distance': '1', 'max_squared_distance': '84', 'max_pairs': [((0, 7), (7, 0), Fraction(84, 1))], 'moved_pair_count': 1170, 'min_moved_pair_squared_distance': '4861543482086321817921/4861502986181632000000', 'all_upper_le_original_112': True}
