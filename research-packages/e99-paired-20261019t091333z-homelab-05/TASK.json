@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-homelab-05",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For each fixed m,n>=3, deleting p_(1,0) and retaining all other boundary grid labels leaves weak and strict interior capacities exactly (m-1)(n-1) for pi/3<phi<pi/3+epsilon_(m,n), for some frame-dependent epsilon_(m,n)>0.",
+    "domain": "Seven exact rational-coordinate endpoint fixtures at phi=2 atan(577351/1000000), with m,n in {(3,3),(3,4),(4,3),(4,4),(3,6),(5,5),(6,3)}; the analytic report separately reconstructs the universal fixed-frame claim.",
+    "limitations": "No uniform epsilon in growing frames, no exterior capacity bound, no moved-wall conclusion, no source-wall extraction, no global-minimizer or C-II endpoint conclusion. Candidate lifecycle is not promoted."
+  },
+  "result": "PASS: the compactness/equality and restored-pin displacement-gap argument establishes the weak upper bound; the audited canonical oblique refill supplies the strict lower bound. Existing destination candidate remains unreviewed.",
+  "remaining_questions": [
+    "Derive moved-wall or exterior-capacity control for a wall extracted from every canonical C-II source."
+  ]
+}
