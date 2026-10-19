@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-C2F63299233C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "751fe693bb6a0629efd2fe93584337c857766a08", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/audits/atomic_boundary_source_reconciliation_2026-10-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4756e6808ffd42c242caa414d2056a7412f9e00a2125d184e71ddc182137c5b2"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

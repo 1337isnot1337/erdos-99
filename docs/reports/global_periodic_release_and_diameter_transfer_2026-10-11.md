@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-1FC8B0FF87EB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "8ee7966fb6a367784f7729fdc256898ac0464718", "source_branch_refs": ["refs/heads/research/sol/global-e99-20261011"], "source_commit": "f75b300c5d2804d4da83f317c79fef142398581c", "source_lifecycle": "unreviewed", "source_path": "docs/reports/global_periodic_release_and_diameter_transfer_2026-10-11.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "7f317cc5be49952c5837d0ee634f96f5821b489a3196dee554612fcdffe7cf56"} -->
 
 > **Imported unreviewed branch research.** Source branch status is historical only; no destination claim is promoted.

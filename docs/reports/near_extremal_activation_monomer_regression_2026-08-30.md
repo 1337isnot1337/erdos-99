@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-E31022AD52AD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "fd54d3d528e314324bd036b36848f770a4c17420", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/near_extremal_activation_monomer_regression_2026-08-30.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "cabd91445a431a35b35c9d0f26fb5ca9187ae9a16260f46729f607635eb0902e"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

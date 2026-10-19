@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-A3611120283E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "cbc775b76361534ecc4238598ef0784680b68733", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "3d4d6024cb5892580103450162b07cdaf1b513c7", "source_lifecycle": "unreviewed", "source_path": "docs/reports/full_source_growing_lattice_population_reserve_2026-10-08.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f166831af97d452701b9084ade15817df707d59e2d7e7299605928de37381c73"} -->
 
 > **Imported unreviewed branch research.** Source branch status is historical only; no destination claim is promoted.

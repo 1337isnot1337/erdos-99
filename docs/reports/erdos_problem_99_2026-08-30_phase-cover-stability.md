@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-E1196A93C7AE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ffb27942a58c68d4c22b5c2d82778a96b4ed49ff", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/erdos_problem_99_2026-08-30_phase-cover-stability.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6fe37d39bf85846c4c2807e1704d577bab0bc9298a4d2576ecec41cc4ec50867"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

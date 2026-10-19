@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-D5418BDB3929","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4a7d719b193c84929596d6949c826bfcb4ab976e", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/cage_or_cophased_lattice_shadow_2026-08-30.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "eea65be7a640e1e005d8df9f1bc2343d621f494e4ef85c08ccd38df9407a0678"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

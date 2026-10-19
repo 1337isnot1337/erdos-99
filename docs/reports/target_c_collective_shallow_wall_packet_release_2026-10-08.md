@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-1F81D1284C37","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "4469222d68a1eebc4511bebe5f321011d4dfd335", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "4583329a0eebd5b489f34185ec4ebdc16cabd353", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_c_collective_shallow_wall_packet_release_2026-10-08.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "1eab31772c03aabae60944b5de4b718ed81a70d128698dee4c49c209e521fe2e"} -->
 
 > **Imported unreviewed branch research.** Source branch status is historical only; no destination claim is promoted.

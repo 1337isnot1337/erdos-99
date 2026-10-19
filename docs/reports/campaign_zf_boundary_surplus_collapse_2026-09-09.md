@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-699376642925","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "5a5ed7f0a22bb4e03f425a56e5bb5e5653f10f0e", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/campaign_zf_boundary_surplus_collapse_2026-09-09.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "db3a308c35695981c7e64a133a00b0b87eae53b2c51d0c95b3abdf04c9787c56"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

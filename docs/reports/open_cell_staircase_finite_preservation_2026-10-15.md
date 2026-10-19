@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-F68EF50582F0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cf77d6e61f0fabe413242ecd15533e5e41d1223a", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/open_cell_staircase_finite_preservation_2026-10-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ec81b7e426ad59ead886875f9caf4afae0b2838617e36cbcecea9907802c3105"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

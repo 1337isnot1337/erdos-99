@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-72ADA92A753D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e407548de3570f86857f4d60faedd411deba4a12", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/global_discrete_isometry_blocker_closure_2026-10-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f6cad41fcd649de78fedb1ec01e68351b2ca6b81ddf1a9ba7777d08e3313dc64"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

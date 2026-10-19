@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-6D44C11AB3C9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4062632c468675ad34416163aecd88256b80501f", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_a_sector_deficit_duality_2026-09-04.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b9ea4ebd455b04fc036935c23a43b68d3b99d9fa02b8a9b6903022db0d295b11"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

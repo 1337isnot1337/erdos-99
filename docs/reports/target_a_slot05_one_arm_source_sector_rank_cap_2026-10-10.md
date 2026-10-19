@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-A147C6EC06FA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "3ac4fe9047a0e9471837782d37257e9beb58cfc8", "source_head": "7be6a6b746e9cf6ea18145248b652c7a0f206dc4", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_a_slot05_one_arm_source_sector_rank_cap_2026-10-10.md", "source_pr": 953, "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "af9a6a671e5d7cd97a8884dc6d711fe415752821baa39f2d5894dd3965e8291c"} -->
 
 > **Imported unreviewed source research.** PR #953 is not a theorem promotion; current destination theorem state remains authoritative.

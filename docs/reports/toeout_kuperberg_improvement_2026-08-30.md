@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-17E6DFD94523","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1f07ce132fc995e07443acaae9b27fbcf37d1cbe", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/toeout_kuperberg_improvement_2026-08-30.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "307798c012e15aca45a07700899dbed71dce0d7fdeb223ffc7fff5cab9016e0c"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

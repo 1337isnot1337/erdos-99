@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-7AB06A34561C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "10b96629ea26d8b37576a943f4edd442b89380c4", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "4a2505e7adfef864f0fd572aa4ff3366b734bf55", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_c_full_source_delaunay_strain_and_branching_2026-10-08.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "5d3308597879966a95a03bc58ff8c3dea92827c5a9efe93ade5d1f3a0c25b1ae"} -->
 
 > **Imported unreviewed branch research.** Source branch status is historical only; no destination claim is promoted.

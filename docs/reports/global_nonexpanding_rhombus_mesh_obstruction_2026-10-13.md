@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-8A33E2B8AC27","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "58b9ebcd96253241332b445086ff6c224c6ba77b", "source_head": "3a80b4bd2d75a439835ab26a863521816a0f39d1", "source_lifecycle": "unreviewed", "source_path": "docs/reports/global_nonexpanding_rhombus_mesh_obstruction_2026-10-13.md", "source_pr": 967, "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "8375175cc2dacc94dcf5fcd97af1ffe461dce2bc6a01281fff28fc25616bed79"} -->
 
 > **Imported unreviewed source research.** PR #967 is not a theorem promotion; current destination theorem state remains authoritative.

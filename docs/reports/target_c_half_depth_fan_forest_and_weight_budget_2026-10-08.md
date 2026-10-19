@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-C330BC243CEE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "55c270a34f4c0c7b8f0cac272e8b7944bb85f84f", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "3d52e70f706100af0fee6bd730b4a21209181054", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_c_half_depth_fan_forest_and_weight_budget_2026-10-08.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "78c1d8c3860e2a60f4e75c29103e0818790bc9358ef22f640c2da7f7e7d8f37f"} -->
 
 > **Imported unreviewed branch research.** Source branch status is historical only; no destination claim is promoted.

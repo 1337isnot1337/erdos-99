@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-20E79C5E3109","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b88f368fb5ea6de46e7fc5501041f30dfb7d0a00", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/campaign_zm_zs_reconciliation_2026-09-09.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2fe94bc98736952b5abc87b8c255344938df2ca112d221a543cd303943344712"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

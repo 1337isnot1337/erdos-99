@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-F620C8674E24","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "4844913807b6e907541ca446a0a36a673fdc2d45", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "eca2414c17be705857e3922d9302393e7bd0265f", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_c_quadratic_core_cap_extraction_deep_returns_2026-10-08.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "35cedb4005ef51cf38b12ee1fc672b33a7a7f4ee428a93758b1f4376fa2cead3"} -->
 
 > **Imported unreviewed branch research.** Source branch status is historical only; no destination claim is promoted.

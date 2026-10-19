@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-1D0D5A9F10D2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "5a930f477d866610f72811b0e8e187539cbf210f", "source_branch_refs": ["refs/heads/research/sol/global-e99-20261011"], "source_commit": "834219c1e2a0c2d43e710e714853ffb27c9023ad", "source_lifecycle": "unreviewed", "source_path": "docs/reports/global_attainment_and_triangle_free_infimum_2026-10-11.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c54b4a7cf5720823e0a83257664601681b8a04c614c67e20d86ff03d680cf9aa"} -->
 
 > **Imported unreviewed branch research.** Source branch status is historical only; no destination claim is promoted.

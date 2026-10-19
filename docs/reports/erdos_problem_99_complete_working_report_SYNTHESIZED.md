@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-36F89DBB7B5A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d9dd602abec9573b286732c169c2156e22c1dcf2", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/erdos_problem_99_complete_working_report_SYNTHESIZED.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "5bd000f7dfac62b57d6b59d2b0fc92f21482d1d2ecc97810e7c19b16c0f20103"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

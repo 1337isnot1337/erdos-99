@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-175CA0CF3FCF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3f69d98d0803c82844fd6c413b772892bd83b1e5", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/audits/target_b_virtual_zonotope_missing_crossing_audit_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "af48aa4feb2ba30e7d37e87bf9786232327e6fafd3ff7747d549b4bc343b370e"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

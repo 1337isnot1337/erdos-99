@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-FD2A689DA95D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "9bc09c9e640ee1daff9e2f213fca5b069ef2b2e5", "source_branch_refs": ["refs/heads/research/sol/global-e99-20261011"], "source_commit": "a17f1755b254d1bdbcd165394a929050cd4c2f69", "source_lifecycle": "unreviewed", "source_path": "docs/reports/global_isolate_forest_normalization_2026-10-11.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0e7618d91157ee39d74703124263323dae149967af7e990f909831f885d63090"} -->
 
 > **Imported unreviewed branch research.** Source branch status is historical only; no destination claim is promoted.

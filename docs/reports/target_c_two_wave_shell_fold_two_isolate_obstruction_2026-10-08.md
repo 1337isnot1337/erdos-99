@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-011400819300","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "48434d0d86142ec03e94ffe7a4b7d9d34ed6ffc0", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "8d524f86d10df71b39e332d03f059e98a1aed4e7", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_c_two_wave_shell_fold_two_isolate_obstruction_2026-10-08.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b0ef35a4607440f592f383aaab5595c586806b22c316c2134a6fcf7df5efb46f"} -->
 
 > **Imported unreviewed branch research.** Source branch status is historical only; no destination claim is promoted.

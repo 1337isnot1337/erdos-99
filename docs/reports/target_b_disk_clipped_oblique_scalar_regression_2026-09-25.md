@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-5B58E456D291","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c3a82a9c8705b3ff0cdf2f18d7c996ef13d607a4", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_b_disk_clipped_oblique_scalar_regression_2026-09-25.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c6fcd30308d63dffb7b50ff2821c4b554ab4824b602f05b4b25da9919a4ec53b"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-85C3818FCC1E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c6b3e504cfdc211d1af85c8bc46124e95d6197a6", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_b_two_max_phase_stability_exclusion_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ffc992d0bda71d5f1ae457384f8a396e1ddfe0c6f03812ae53909584181bcca9"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

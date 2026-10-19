@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-83E453302322","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "90ff88cb59e4220d6e38b99325275880dc3cce49", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/local_hat_matching_regression_2026-08-30.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2eae21e5629d0c085918014d76dab21e0be370fd396a90ec48f63e8179e43485"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

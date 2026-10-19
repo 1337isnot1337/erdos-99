@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-26F0F39C3C93","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "31796fed42be2694877e22e67606a4226058748d", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/erdos_problem_99_CHAT_HANDOFF_2026-08-26.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "04cbbba44daa7abd12ff91b9b051d25ae33a44c44bd3c507f94ae45cad463f1c"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.

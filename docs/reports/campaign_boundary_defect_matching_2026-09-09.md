@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-A367F8F44DF0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e6f881a1276f3e2196b3ef6d807b1c31add508c5", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/campaign_boundary_defect_matching_2026-09-09.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2667ff491b48b847cc633833a74c629894fffca1a153b75b149514c03d3e868d"} -->
 
 > **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.
