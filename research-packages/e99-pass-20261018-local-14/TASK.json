@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-pass-20261018-local-14",
+  "classification": "conditional",
+  "scope": {
+    "statement": "Conditional audit of candidate TARGET-C-PR950-ENDPOINT-INCLUSIVE-CUT-REPAIR: if every connected unloaded core subset U has |delta_C(U)| >= diam(U)+2, source contact degrees are at most five, A_I contains every loaded neighbor of the unloaded component I, and the common grid X_D is a connected subset of I, then every endpoint-inclusive A_I-to-X_D separator S satisfies diam(X_D) <= 5|S|.",
+    "domain": "Enumerates all 2^21 vertex deletion sets on a finite 3x3 square-lattice contact fixture, after checking its componentwise brace on every connected unloaded subset; includes a path separator control where the brace fails.",
+    "limitations": "The unloaded-set brace and source/grid extraction remain separate unreviewed obligations. No attachment-label overlap, finite competitor, canonical promotion, C-II closure or Level I closure is claimed."
+  },
+  "result": "Conditional PASS for the endpoint-inclusive separator implication; the published proof's componentwise brace and quotient-path accounting cover terminal deletion, grid splitting and same-component diametral endpoints.",
+  "remaining_questions": [
+    "Prove or independently audit the componentwise unloaded-set brace at the exact source scope.",
+    "Establish positive-density overlap between the train-return and attachment-to-grid loaded-label sets."
+  ]
+}
