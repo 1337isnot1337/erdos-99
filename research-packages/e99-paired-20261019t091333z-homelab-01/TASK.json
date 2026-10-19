@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "id": "e99-paired-20261019t091333z-homelab-01",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "For any finite source containing a point p with three fixed unit-contact anchors whose normals form a balanced 120-degree triad, every continuous motion of p preserving those three lower bounds is constant.",
+    "domain": "Any finite labelled planar source with a point p and three fixed unit-contact anchors forming a balanced 120-degree triad; p(t) is continuous from p and preserves the three lower bounds. This includes an affine strain of a support containing p when anchors remain fixed. The checker covers the exact four-label fixture and two-anchor failure control only.",
+    "limitations": "Does not rule out affine strains fixing p and moving other support labels, extract the triad from a canonical Target A source, or prove any global-minimizer statement or endpoint."
+  },
+  "result": "Exact pathwise obstruction: a continuous fixed-anchor balanced-triad motion cannot move its triad-bearing label; the proof uses only the three lower constraints.",
+  "remaining_questions": [
+    "Determine whether a continuous affine strain fixing p can move other labels in an actual Target A source while satisfying every lower pair and every active or inactive diameter upper pair.",
+    "Extract or refute the fixed balanced triad at an actual gap-facing Target A source label and prove its payment into the canonical Schur or diameter endpoint."
+  ]
+}
