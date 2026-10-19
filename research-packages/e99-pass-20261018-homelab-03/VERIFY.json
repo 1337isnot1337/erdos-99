@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/STATE.md",
+    "docs/targets/target-b/README.md",
+    "docs/targets/target-b/01-jammed-rhombic-branch.md",
+    "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+    "docs/reports/target_b_trimmed_grid_phase_star_exclusion_2026-09-05.md",
+    "docs/research/bottleneck-brief.md",
+    "research-packages/e99-pass-20261018-homelab-03/verify.py"
+  ],
+  "domain": "Analytic family P_{M,N}={(i u+j v):0<=i<=M,0<=j<=N}, M,N>=1, |u|=|v|=1, pi/3<theta<pi/2; exact rational replay at M=2,N=1 and cos(theta)=7/25, with phase-contracted endpoint cos(theta)=1/2 and perpendicular endpoint cos(theta)=0.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/e99-pass-20261018-homelab-03/verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
