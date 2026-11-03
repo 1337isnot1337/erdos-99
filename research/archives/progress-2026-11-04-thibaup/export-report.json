@@ -1,0 +1,20 @@
+{
+  "included_files": 4731,
+  "omitted_files": 122,
+  "omitted_reasons": {
+    "operational bytecode cache; not a source research artifact": 91,
+    "third-party Lean source excerpt; pinned retrieval metadata retained instead": 3,
+    "third-party full-text paper extraction; reference only": 3,
+    "third-party paper or page image; reference only, no redistribution clearance asserted": 25
+  },
+  "payload_bytes": 58180507,
+  "policy": "No binary/base64 payloads. Private home paths, emails, private chat and local service URLs, credentials and private execution metadata are redacted. Known full third-party source extracts are omitted. This is a bounded scan, not a universal privacy or rights guarantee.",
+  "shard_files": 40,
+  "source_files": 4853,
+  "source_tree_sha256": "ba8d6c07727d1648c174db73944d4a45ddd0e11ae8752cff5d5283709656485d",
+  "transformations": {
+    "private_home_path": 3108,
+    "third_party_excerpt": 3
+  },
+  "transformed_files": 1759
+}
