@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2203,
-  "math_pairs_normalized": 72495,
+  "source_documents": 2207,
+  "math_pairs_normalized": 72497,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -11475,6 +11475,34 @@
       "source_sha256": "6b6d68aec160f82c749497121bce26a1d0ea6e3e077f2833af32730f85300dbe",
       "reading_path": "reading/research/TARGET_C_POST123_NAMESPACE_2026-09-12.md",
       "reading_sha256": "161f4de695dd40ec639b202000573067597b740d870a32e8366d37a4b25b4dce",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "research/archives/progress-2026-11-04-thibaup/NOTICE.md",
+      "source_sha256": "c77d2fcbd76c4053ea455f6264f6e466c43dfacf3b2382008c337f0dfcece0db",
+      "reading_path": "reading/research/archives/progress-2026-11-04-thibaup/NOTICE.md",
+      "reading_sha256": "69e2ff03884ff266358722c5f52f37db01937b0200e2f129cb3349b573a08c25",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "research/archives/progress-2026-11-04-thibaup/PROGRESS.md",
+      "source_sha256": "e19360503ae5e5648bc9a337797a1193122adc7494df80c9d6292c9e623cc632",
+      "reading_path": "reading/research/archives/progress-2026-11-04-thibaup/PROGRESS.md",
+      "reading_sha256": "2746e484f00e17b1b1d1f7b850d87fbdcb84948ff5be1677f160b680200d822a",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "research/archives/progress-2026-11-04-thibaup/README.md",
+      "source_sha256": "1427401a6a7c97166b8754244078188a44c5570c3622bc1dcef50eefeed8dea2",
+      "reading_path": "reading/research/archives/progress-2026-11-04-thibaup/README.md",
+      "reading_sha256": "49be01096a21cfc00d6c81e986c6ac634816684da557c6e42fa076b79f8e11ec",
+      "math_pairs_normalized": 2
+    },
+    {
+      "source": "research/archives/progress-2026-11-04-thibaup/VERIFICATION.md",
+      "source_sha256": "02283d8b74202db93f78ae9fe804920ec1094d5231160e03b77f8190092b028b",
+      "reading_path": "reading/research/archives/progress-2026-11-04-thibaup/VERIFICATION.md",
+      "reading_sha256": "611edf1f2671ddfe0a15591f701a4412ba58cc8dae92c8f0837796825c82f7ac",
       "math_pairs_normalized": 0
     },
     {
