@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "baseline_commit": "b05cd57b15252fe99577de3edb0b73070e79544f",
+  "inputs": [
+    {
+      "path": "docs/problem/statement.md",
+      "sha256": "cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d",
+      "identity": "docs/problem/statement.md",
+      "commit": "b05cd57b15252fe99577de3edb0b73070e79544f",
+      "generated_from": []
+    },
+    {
+      "path": "docs/reports/global_two_copy_similarity_obstruction_2026-10-12.md",
+      "sha256": "b74d8e057fdeb64e3b26eb760058b4165ea68cf86e7d7efd814ab2dde9beb982",
+      "identity": "docs/reports/global_two_copy_similarity_obstruction_2026-10-12.md",
+      "commit": "b05cd57b15252fe99577de3edb0b73070e79544f",
+      "generated_from": []
+    },
+    {
+      "path": "docs/reports/global_convexity_exit_barrier_2026-10-12.md",
+      "sha256": "690421f3df83c23f72f57359a024afece7449c7069b2effab73ae049c98e5e31",
+      "identity": "docs/reports/global_convexity_exit_barrier_2026-10-12.md",
+      "commit": "b05cd57b15252fe99577de3edb0b73070e79544f",
+      "generated_from": []
+    },
+    {
+      "path": "docs/reports/population_reserve_independent_reconstruction_2026-10-15.md",
+      "sha256": "280ad14b9ab8e265903cdbb55970934b6cde112e9fda511c9d361fa261b322eb",
+      "identity": "docs/reports/population_reserve_independent_reconstruction_2026-10-15.md",
+      "commit": "b05cd57b15252fe99577de3edb0b73070e79544f",
+      "generated_from": []
+    },
+    {
+      "path": "docs/targets/target-c/58-full-source-geometry-audit.md",
+      "sha256": "f504349650423786a6091ba9b7a8699cd62b7e6b200d2a2ce3a6a34b3d0b473d",
+      "identity": "docs/targets/target-c/58-full-source-geometry-audit.md",
+      "commit": "b05cd57b15252fe99577de3edb0b73070e79544f",
+      "generated_from": []
+    },
+    {
+      "path": "docs/reports/global_discrete_isometry_blocker_closure_2026-10-12.md",
+      "sha256": "ab286686679068ae782e79149ce4420e41e43c0f9fd371a214d62c2a87bbee99",
+      "identity": "docs/reports/global_discrete_isometry_blocker_closure_2026-10-12.md",
+      "commit": "b05cd57b15252fe99577de3edb0b73070e79544f",
+      "generated_from": []
+    },
+    {
+      "path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "sha256": "754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06",
+      "identity": "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "commit": "b05cd57b15252fe99577de3edb0b73070e79544f",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/radial-diameter-competitor/README.md",
+      "sha256": "47c213a7364c2be4b86985f2a8fb9430db497c3f0cd9ba296e933b6acd1b8cbc",
+      "identity": "research-packages/radial-diameter-competitor/README.md",
+      "commit": "6acad14f2915b5a9bc1d1b7ce5250a49d14128db",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/radial-diameter-competitor/check.py",
+      "sha256": "dd33151c3064adc6d1c095928aad12c8e92899f337178944e7e84598b1ead64e",
+      "identity": "research-packages/radial-diameter-competitor/check.py",
+      "commit": "6acad14f2915b5a9bc1d1b7ce5250a49d14128db",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}

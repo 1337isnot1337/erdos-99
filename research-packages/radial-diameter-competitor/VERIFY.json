@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/problem/statement.md",
+    "docs/reports/global_two_copy_similarity_obstruction_2026-10-12.md",
+    "docs/reports/global_convexity_exit_barrier_2026-10-12.md",
+    "docs/reports/population_reserve_independent_reconstruction_2026-10-15.md",
+    "docs/targets/target-c/58-full-source-geometry-audit.md",
+    "docs/reports/global_discrete_isometry_blocker_closure_2026-10-12.md",
+    "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+    "research-packages/radial-diameter-competitor/README.md",
+    "research-packages/radial-diameter-competitor/check.py"
+  ],
+  "domain": "All rim pairs at odd sizes 33, 65, 129 and 257, plus the occupied-source and refilled-cut fixtures specified in check.py.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/radial-diameter-competitor/check.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}

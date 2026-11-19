@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2203,
-  "math_pairs_normalized": 72495,
+  "source_documents": 2204,
+  "math_pairs_normalized": 72731,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -11497,6 +11497,13 @@
       "reading_path": "reading/research/audit_target_c_section146_qk_corollary_endpoint_exclusion.md",
       "reading_sha256": "0eccf8c7876d3e2a630e8f288aa1654bbfc9ed60bd96b5bd4472db129a9e0726",
       "math_pairs_normalized": 31
+    },
+    {
+      "source": "research/boundary-lattice-capacity/README.md",
+      "source_sha256": "5bb339b4f863869464a7bfb365105b85a0e6a68c16d1c51f7d6a2f4a427913cf",
+      "reading_path": "reading/research/boundary-lattice-capacity/README.md",
+      "reading_sha256": "70450abce6bd15f429532de679a5d0779cfa7d5e4d1fc4f4922d1065b8605955",
+      "math_pairs_normalized": 236
     },
     {
       "source": "research/global_capacity_run_2026_10_12.md",

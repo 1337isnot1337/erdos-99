@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "radial-diameter-competitor",
+  "classification": "unreviewed",
+  "scope": {
+    "statement": "Check the finite radial replacements and path examples in the November 17 research note.",
+    "domain": "All rim pairs at odd sizes 33, 65, 129 and 257, plus the occupied-source and refilled-cut fixtures specified in check.py.",
+    "limitations": "The finite cases do not establish the general path arguments or the existence of a strict competitor for every sufficiently large triangle-free minimizer."
+  },
+  "result": "The checker bounds every rim pair and verifies all 21 pairs in each of the two planar fixtures.",
+  "remaining_questions": [
+    "Can the path constraints force an exact unit triangle or a feasible improvement for every sufficiently large triangle-free global minimizer?"
+  ]
+}
